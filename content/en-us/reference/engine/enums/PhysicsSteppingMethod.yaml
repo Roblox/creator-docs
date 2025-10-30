@@ -12,7 +12,7 @@ deprecation_message: ''
 items:
   - name: Default
     summary: |
-      The current default is Fixed.
+      The current default is `Adaptive`.
     value: 0
     tags: []
     deprecation_message: ''

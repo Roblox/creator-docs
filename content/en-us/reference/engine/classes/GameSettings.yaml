@@ -14,7 +14,7 @@ inherits:
   - Instance
 tags:
   - NotCreatable
-  - Settings
+  - Service
   - NotReplicated
   - NotBrowsable
 deprecation_message: ''

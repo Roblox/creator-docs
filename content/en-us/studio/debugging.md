@@ -245,7 +245,7 @@ In addition to the debugger, Studio offers additional debugging tools for you to
 
 ### Command Bar
 
-The [Command](../studio/ui-overview.md#command) bar allows you to run Luau commands while the experience is running. It is available in Studio from the **Window**&nbsp;⟩ **Script** menu and in the [Developer Console](../studio/developer-console.md).
+The [Command Bar](../studio/ui-overview.md#command-bar) allows you to run Luau commands while the experience is running. It is available in Studio from the **Window**&nbsp;⟩ **Script** menu and in the [Developer Console](../studio/developer-console.md).
 
 ### Developer Console
 

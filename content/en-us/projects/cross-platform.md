@@ -109,7 +109,9 @@ All UI elements should be [positioned](../ui/position-and-size.md#position) and 
 
 ### Screen size adaptation
 
-<BetaAlert betaName="New Display Size API" leadIn="Adapt UI to various display sizes by checking and listening for changes to the viewport display size. The following functionality is currently in beta and can be enabled through " leadOut="." components={props.components} />
+<Alert severity="success">
+Adapt UI to various display sizes by checking and listening for changes to the viewport display size.
+</Alert>
 
 With a multitude of possible screen sizes accessible to the Roblox platform, attempting to predict screen size by pixels often leads to misinterpretation. To assist in determining a player's screen size to adapt the size/position of UI elements, Roblox provides the read‑only `Class.GuiService.ViewportDisplaySize|ViewportDisplaySize` property which represents the internally‑categorized rendering size of the viewport.
 

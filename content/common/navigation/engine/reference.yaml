@@ -916,6 +916,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/DraggerService.yaml
                 ignoreTranslation: true
+              - title: EncodingService
+                path: /reference/engine/classes/EncodingService
+                type: engineapi
+                source: /reference/engine/classes/EncodingService.yaml
+                ignoreTranslation: true
               - title: EulerRotationCurve
                 path: /reference/engine/classes/EulerRotationCurve
                 type: engineapi

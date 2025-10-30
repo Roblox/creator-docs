@@ -1,6 +1,6 @@
 ---
 title: Attributes and signals
-description: 
+description: Attributes and signals define the player and server data used in matchmaking, including both Roblox-provided signals and custom signals you can create.
 ---
 
 ## Existing attributes
@@ -112,65 +112,53 @@ The following are Roblox-defined signals derived based on Roblox attributes:
 
 A numerical signal that compares the average ages of players on a server to the joining player's age. This signal has a max relevant difference of 25. The signal score is inversely related to the age difference, meaning lower age differences have higher scores.
 
-```lua
-ageDifferenceSignalScore = 1 - min(25, ageDifference) / 25, where
-ageDifference = abs(avgServerAge - joiningPlayerAge)
-```
+$\text{ageDifferenceSignalScore} = 1 - \min(25, \text{ageDifference}) / 25$
+
+where
+
+$\text{ageDifference} = |\text{avgServerAge} - \text{joiningPlayerAge}|$
 
 ### Device Type
 
 A categorical signal that measures the ratio of players on the server with the same device type as the joining player. Device types include: Computer, mobile device, tablet, console, and VR device.
 
-```lua
-deviceTypeSignalScore = (# players with same device as joining player) / (# players on the server)
-```
+$\text{deviceTypeSignalScore} = \text{\# players with same device as joining player} / \text{\# players on the server}$
 
 ### Friends
 
 A preferred player is a player who is either connections with the joining player or who shares the same IP address as the joining player. The Friends signal is a categorical signal with a score of 1 when there is a preferred player in the server and a score of 0 when there are no preferred players on the server.
 
-```lua
-friendsSignalScore = hasFriends ? 1 : 0
-```
+$\text{friendsSignalScore} = \text{hasFriends} \ {?} \ 1 : 0$
 
 The Friends signal can also be considered a numerical signal with a maximum relevant value of 1.
 
-```lua
-friendsSignalScore = min(# preferred players in server, 1) / 1
-```
+$\text{friendsSignalScore} = \min(\text{\# preferred players in server}, 1) / 1$
 
 ### Language
 
 A categorical signal that measures the ratio of players on the server who share the same language setting as the joining player.
 
-```lua
-languageSignalScore = (# players with same language setting as joining player) / (# players on the server)
-```
+$\text{languageSignalScore} = \text{\# players with same language setting as joining player} / \text{\# players on the server}$
 
 ### Latency
 
 A numerical signal that measures the estimated ping time in milliseconds of the joining player if they were to play on a server. This signal has a max relevant value of 250 milliseconds. The signal score is inversely related to the ping, meaning lower ping values have higher scores.
 
-```lua
-latencySignalScore = 1 - min(250, estimatedPingMs) / 250
-```
+$\text{latencySignalScore} = 1 - \min(250, \text{estimatedPingMs}) / 250$
 
 ### Occupancy
 
 A numerical signal that measures the ratio of players on the server to the capacity of the server.
 
-```lua
-occupancySignalScore = (# players in server) / serverCapacity
-```
+$\text{occupancySignalScore} = \text{\# players in server} / \text{serverCapacity}$
 
 ### Play History
 
 The Play History attribute value is the log-10 number of minutes a player has played in a universe in the past 28 days. This numerical signal compares the average log-10 Play History value of players in the server to the joining player's Play History value. This signal has a max relevant difference of 4.6. The signal score is inversely related to the play history difference, meaning lower play history differences have higher scores.
 
-```lua
-playHistorySignalScore = 1 - min(4.6, playHistoryDifference / 4.6), where
-playHistoryDifference = abs(avgServerPlayHistory - joiningPlayerPlayHistory)
-```
+$\text{playHistorySignalScore} = 1 - \min(4.6, \text{playHistoryDifference} / 4.6)$, where
+
+$\text{playHistoryDifference} = |\text{avgServerPlayHistory} - \text{joiningPlayerPlayHistory}|$
 
 ### Voice Chat
 
@@ -178,9 +166,7 @@ A player can have voice chat enabled or disabled. The Voice Chat signal is a cat
 
 If a place has voice chat disabled, the Voice Chat signal's weight is 0.
 
-```lua
-voiceChatSignalScore = (# players with same voice chat setting as joining player) / (# players on the server)
-```
+$\text{voiceChatSignalScore} = \text{\# players with same voice chat setting as joining player} / \text{\# players on the server}$
 
 ## Custom attributes
 
@@ -385,9 +371,9 @@ The score is 1 when the server's attribute value (for example, Game Mode) is equ
 
 ```lua title="Joining player formula for server categorical signal"
 if server_{attribute_name} == joining_player_{attribute_name} then
-	return 1 
+	return 1
 else
-	return 0 
+	return 0
 end
 ```
 
@@ -408,7 +394,7 @@ The score is 1 when the server's attribute value is equal to a constant value of
 
 ```lua title="Constant value formula for server categorical signal"
 if server_{attribute_name} == constant_value then
-	return 1 
+	return 1
 else
 	return 0
 end

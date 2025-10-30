@@ -29,15 +29,15 @@ When applicable, you can calculate an unknown directional vector (`rayDirection`
 
 1. The origin plus a directional vector indicate the ray's destination:
 
-   <i>rayOrigin</i> + <i>rayDirection</i> = <i>rayDestination</i>
+   $\text{rayOrigin} + \text{rayDirection} = \text{rayDestination}$
 
-2. Subtract <i>rayOrigin</i> from both sides of the equation:
+2. Subtract $\text{rayOrigin}$ from both sides of the equation:
 
-   <i>rayOrigin</i> + <i>rayDirection</i> &minus; <i>rayOrigin</i> = <i>rayDestination</i> &minus; <i>rayOrigin</i>
+   $\text{rayOrigin} + \text{rayDirection} - \text{rayOrigin} = \text{rayDestination} - \text{rayOrigin}$
 
 3. The ray's direction equals the destination minus the origin:
 
-   <i>rayDirection</i> = <i>rayDestination</i> &minus; <i>rayOrigin</i>
+   $\text{rayDirection} = \text{rayDestination} - \text{rayOrigin}$
 
 ```lua highlight="4"
 local Workspace = game:GetService("Workspace")

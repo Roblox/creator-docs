@@ -41,7 +41,7 @@ We are building one of the world's largest immersive platforms with 85.3M global
 Roblox's GDP <Typography variant="captionHeader" color="info">⑷ </Typography> has grown to become as large as that of some countries. Our success is directly tied to the success of our creators. Roblox earns money by selling Robux which users spend in‑experience and on items and assets in our marketplaces, all created by you.
 
 <p><Typography variant="h5" color="primary">We exist to serve our community</Typography></p>
-We're always searching for new ways to increase creators' earnings. In 2024, our creator community earned $923 million. We've paid our developer community $3.3 billion since 2018.
+We're always searching for new ways to increase creators' earnings. In 2024, our creator community earned \$923 million. We've paid our developer community \$3.3 billion since 2018.
 
 <p><Typography variant="h5" color="primary">As a result, creators can focus on creating</Typography></p>
 We are seeing healthy growth across creators and studios of varying sizes. Since 2019, the average annual earnings of the top 10 and top 1000 creators has increased by ~5.5 and ~6.8 times, respectively.&nbsp;<Typography variant="captionHeader" color="info">⑸</Typography><br /><br />
@@ -52,7 +52,7 @@ We are seeing healthy growth across creators and studios of varying sizes. Since
 <figcaption><Typography variant="captionHeader" color="info">⑵</Typography> Payouts for the year ended December&nbsp;31,&nbsp;2024.</figcaption>
 <figcaption><Typography variant="captionHeader" color="info">⑶</Typography> Based on readily available public data for daily active users of virtual worlds.</figcaption>
 <figcaption><Typography variant="captionHeader" color="info">⑷</Typography> Measured based on Roblox's annual bookings, which measures total economic activity on our platform.</figcaption>
-<figcaption><Typography variant="captionHeader" color="info">⑸</Typography> Of the millions of creators monetizing on Roblox, over 24,500 were part of our DevEx program, with the median creator participating in DevEx receiving $1,575 USD during the twelve months ended December&nbsp;31,&nbsp;2024.</figcaption>
+<figcaption><Typography variant="captionHeader" color="info">⑸</Typography> Of the millions of creators monetizing on Roblox, over 24,500 were part of our DevEx program, with the median creator participating in DevEx receiving \$1,575 USD during the twelve months ended December&nbsp;31,&nbsp;2024.</figcaption>
 
 ## Develop an experience
 
@@ -243,7 +243,7 @@ After purchasing a Limited, there is up to a 30‑day holding period when the it
 
 ## Create and sell Studio plugins and models
 
-You can create and sell Studio [plugins](../studio/plugins.md) and [models](../parts/models.md) to the creator community through the [Creator Store](../production/creator-store.md). A [plugin](../studio/plugins.md) is an extension that adds additional functionality to Studio, and a [model](../parts/models.md) is a reusable asset type. You can offer both to other creators on the [Creator Store](../production/creator-store.md) for free, or you can sell them for **United States Dollars** (the minimum price is $4.99 for plugins and $2.99 for models). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information, see [Sell on the Creator Store](../production/sell-on-creator-store.md).
+You can create and sell Studio [plugins](../studio/plugins.md) and [models](../parts/models.md) to the creator community through the [Creator Store](../production/creator-store.md). A [plugin](../studio/plugins.md) is an extension that adds additional functionality to Studio, and a [model](../parts/models.md) is a reusable asset type. You can offer both to other creators on the [Creator Store](../production/creator-store.md) for free, or you can sell them for **United States Dollars** (the minimum price is \$4.99 for plugins and \$2.99 for models). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information, see [Sell on the Creator Store](../production/sell-on-creator-store.md).
 
 ## Join the Creator Affiliate Program
 
@@ -258,7 +258,7 @@ The [Creator Affiliate Program](https://create.roblox.com/affiliate) is a pilot 
 - Earn revenue in Robux whenever new users create a Roblox account and purchase Robux using your affiliate link. A new user is someone who doesn't already have an alternative Roblox account.
 - Exchange your Robux earnings for real-world money using the Developer Exchange program.
 
-When a user creates a Roblox account using your affiliate link and then buys Robux, you can receive up to 50% of the value of their Robux purchases during their first six months on the platform, for a maximum revenue of $100 USD per new user. For example, if a new user joins Roblox and purchases $100 USD of Robux, you can earn up to $50 USD, minus certain fees like taxes and VAT.
+When a user creates a Roblox account using your affiliate link and then buys Robux, you can receive up to 50% of the value of their Robux purchases during their first six months on the platform, for a maximum revenue of \$100 USD per new user. For example, if a new user joins Roblox and purchases \$100 USD of Robux, you can earn up to \$50 USD, minus certain fees like taxes and VAT.
 
 You receive your revenue in Robux, which you can exchange for real-world money through Developer Exchange.
 

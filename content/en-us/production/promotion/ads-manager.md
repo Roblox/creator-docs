@@ -31,7 +31,7 @@ Before you can create and manage ads on Roblox, you must first add a payment met
 
 1. Go to **Payment Settings** in the Ads Manager.
 2. Choose one of the two available payment methods.
-   1. **Credit or Debit Card**: Credit or debit cards are available for users 18 and above. A temporary $1.00 USD hold will be placed on the card and refunded after verification is complete within 7 business days.
+   1. **Credit or Debit Card**: Credit or debit cards are available for users 18 and above. A temporary \$1.00 USD hold will be placed on the card and refunded after verification is complete within 7 business days.
    2. **Robux Ad Credit**: Converting Robux into ad credits to fund your campaigns is available for all users 13 and up.
 
 ### Convert Robux to ad credits
@@ -396,9 +396,9 @@ All eligible ads participate in a **second price auction**. The ad with the high
 3. The ads are placed into an auction.
 4. The ad with the highest eCPM value wins the auction.
 5. The winning ad is displayed to the player.
-6. You are charged the bid amount of the second highest price, plus one cent ($0.01).
+6. You are charged the bid amount of the second highest price, plus one cent (\$0.01).
 
-For example, you want to display your ad on a website so you submit a bid of $10. Another advertiser submits a bid of $12 for their own ad and wins the auction because their bid is higher. They're then charged $10.01, which is the price of the second highest bid (in this case, your bid) plus one cent.
+For example, you want to display your ad on a website so you submit a bid of \$10. Another advertiser submits a bid of \$12 for their own ad and wins the auction because their bid is higher. They're then charged \$10.01, which is the price of the second highest bid (in this case, your bid) plus one cent.
 
 <h5 style={{marginTop: '36px'}}>Genre targeting</h5>
 

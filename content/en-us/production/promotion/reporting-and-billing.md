@@ -362,7 +362,7 @@ The ads billing tool charges you for ad placements on Roblox using the payment m
 ### Credit and debit cards
 
 <Alert severity = 'warning'>
-For first-time credit card users, $5 USD will be charged upon campaign submission and used toward your first bill. Any unused balance will be refunded.
+For first-time credit card users, \$5 USD will be charged upon campaign submission and used toward your first bill. Any unused balance will be refunded.
 </Alert>
 
 You can get charged at two different points when you use a credit or debit card:
@@ -370,11 +370,11 @@ You can get charged at two different points when you use a credit or debit card:
 - When you reach your payment threshold
 - On the first of the month if the payment threshold isn't reached
 
-The ad spend daily limit of credit and debit cards is $300 USD.
+The ad spend daily limit of credit and debit cards is \$300 USD.
 
-The payment threshold for Roblox advertisers is $100 USD. Whenever an advertiser account accrues a balance of $100 through advertising on Roblox, the payment method on file is charged. If the payment threshold is not reached by the end of the month, the remaining outstanding balance is paid instead.
+The payment threshold for Roblox advertisers is \$100 USD. Whenever an advertiser account accrues a balance of \$100 through advertising on Roblox, the payment method on file is charged. If the payment threshold is not reached by the end of the month, the remaining outstanding balance is paid instead.
 
-For example, if your account reaches the $100 payment threshold on May 7th due to their campaign parameters, your payment method gets charged $100 on May 7th. If you accrue less than $100, your payment method gets charged the amount at the monthly billing cycle's close.
+For example, if your account reaches the \$100 payment threshold on May 7th due to their campaign parameters, your payment method gets charged \$100 on May 7th. If you accrue less than \$100, your payment method gets charged the amount at the monthly billing cycle's close.
 
 <img src="../../assets/promotion/ads-manager/Payment-Activity-1.png" width="780" />
 

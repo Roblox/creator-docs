@@ -642,29 +642,6 @@ properties:
       [Adaptive Timestepping](../../../physics/adaptive-timestepping.md) for
       details.
 
-      <table>
-          <thead>
-              <tr>
-                  <th>Option</th>
-                  <th>Description</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td><b>Adaptive</b></td>
-                  <td>The engine attempts to assign optimal simulation rates for individual assemblies of either 240 Hz, 120 Hz, or 60 Hz. This setting is optimized for performance.</td>
-              </tr>
-              <tr>
-                  <td><b>Fixed</b></td>
-                  <td>All simulated assemblies inside the workspace will advance forward at 240 Hz. This option is best for optimal stability and simulation accuracy.</td>
-              </tr>
-              <tr>
-                  <td><b>Default</b></td>
-                  <td>The current default is <b>Fixed</b>.</td>
-              </tr>
-          </tbody>
-      </table>
-
       Note that when assemblies of different simulation rates become connected
       via `Class.Constraint|Constraints` or collisions, the combined mechanism
       will default to the highest simulation rate for stability.

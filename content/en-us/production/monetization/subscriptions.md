@@ -342,9 +342,9 @@ Other relevant functions are available in `Class.MarketplaceService`:
 
 ## Earn with subscriptions
 
-Subscriptions are priced in local currency, but you earn Robux at a rate of US $0.01 to 1 Robux according to the base platform price you selected for the subscription after platform fees. Roblox takes a 30% platform fee for the first month only, meaning that you receive the full subscription earnings from the second month onward. This revenue split is consistent across all platforms.
+Subscriptions are priced in local currency, but you earn Robux at a rate of US \$0.01 to 1 Robux according to the base platform price you selected for the subscription after platform fees. Roblox takes a 30% platform fee for the first month only, meaning that you receive the full subscription earnings from the second month onward. This revenue split is consistent across all platforms.
 
-For example, if a user subscribes at the base price of US $9.99 (desktop) or $12.99 (mobile):
+For example, if a user subscribes at the base price of US \$9.99 (desktop) or \$12.99 (mobile):
 
 - **First month:** The creator of the subscription receives `999 * .7 = 699` (desktop) or `1299 * .7 = 909` (mobile).
 - **Second month onward:** The creator of the subscription receives `999 = 999` (desktop) or `1299 = 1299` (mobile).

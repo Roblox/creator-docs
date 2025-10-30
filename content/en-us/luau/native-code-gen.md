@@ -111,7 +111,7 @@ Every natively-compiled script consumes memory. When the size of compiled code r
 To monitor the native code size of individual functions and scripts:
 
 1. Make sure you're in **Server** view through the [client/server toggle](../studio/testing-modes.md#toggle-clientserver) button.
-2. Invoke `debug.dumpcodesize()` from the [Command](../studio/ui-overview.md#command) bar.
+2. Invoke `debug.dumpcodesize()` from the [Command Bar](../studio/ui-overview.md#command-bar).
 
 In the [Output](../studio/output.md) window, you'll see the total number of scripts and functions that have been natively compiled up to the point of invocation, the memory consumed by their native code, and the native code size limit. Following the summary, you'll see a table for every natively‑compiled script in descending order of code size.
 

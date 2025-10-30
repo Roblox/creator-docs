@@ -20,7 +20,7 @@ import BetaAlert from '../includes/beta-features/beta-alert.md'
 
 ## Studio features
 
-In Studio, Assistant consists of a large language model (LLM) that generates code and a run-command module (similar to the existing [Command](../studio/ui-overview.md#command) bar) that runs code. As a result, Assistant can act directly on your data model, such as inserting and modifying objects, writing and inserting scripts, and automating repetitive tasks like modifying properties in bulk.
+In Studio, Assistant consists of a large language model (LLM) that generates code and a run-command module (similar to the existing [Command&nbsp;Bar](../studio/ui-overview.md#command-bar)) that runs code. As a result, Assistant can act directly on your data model, such as inserting and modifying objects, writing and inserting scripts, and automating repetitive tasks like modifying properties in bulk.
 
 For a more in-depth look at what Assistant can do and how to use it, see the [Prompt guide and examples](prompt-engineering.md) and the following Roblox Staff livestream for tips, tricks, and inspiration.
 

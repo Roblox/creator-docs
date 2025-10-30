@@ -185,11 +185,9 @@ Different weights can also make matchmaking choose different servers. The follow
 
 The server score is calculated by the following weighted sum formula, which sums a server's weighted signal scores:
 
-```lua
-ServerScore
-  = WeightedSignalScore_1 + WeightedSignalScore_2 + ... + WeightedSignalScore_n
-  = Weight_1 * SignalScore_1 + Weight_2 * SignalScore_2 + ... + Weight_n * SignalScore_n
-```
+$\text{ServerScore} = \text{WeightedSignalScore}_1 + \text{WeightedSignalScore}_2 + \ldots + \text{WeightedSignalScore}_n$
+
+$\phantom{\text{ServerScore}} = \text{Weight}_1 \times \text{SignalScore}_1 + \text{Weight}_2 \times \text{SignalScore}_2 + \ldots + \text{Weight}_n \times \text{SignalScore}_n$
 
 ### Matchmaking configurations
 
@@ -258,15 +256,15 @@ Signals normalize attribute values to be numbers between 0 and 1. Numerical sign
 
 The Age signal measures the difference between the average age of players in the server and the joining player's age.
 
-`ageDifference = abs(avgServerAge - joiningPlayerAge)`
+$$\text{ageDifference} = |\text{avgServerAge} - \text{joiningPlayerAge}|$$
 
 Servers with age differences beyond 25 are all considered equally incompatible with the player. For example, an age difference of 25 is no worse for a player than an age difference of 26, so both values should take the signal score to 0. In this case, 25 is considered the normalizing factor.
 
-`normAgeDifference = min(1, abs(avgServerAge - joiningPlayerAge) / 25)`
+$$\text{normAgeDifference} = \min(1, |\text{avgServerAge} - \text{joiningPlayerAge}| / 25)$$
 
 The signal score is inversely related to the age difference, meaning that the signal score is higher when the age difference is smaller.
 
-`ageDifferenceSignalScore = 1 - normAgeDifference`
+$$\text{ageDifferenceSignalScore} = 1 - \text{normAgeDifference}$$
 
 The following table shows Age signal scores with two different normalizing factors:
 

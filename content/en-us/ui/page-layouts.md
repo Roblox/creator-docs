@@ -27,13 +27,13 @@ task.wait(2)
 pageLayout:Previous()
 ```
 
-If you want to view pages while editing in Studio, you can use the [Command](../studio/ui-overview.md#command) bar to navigate from one page to another, letting you review where you need to make changes without having to play your experience each time.
+If you want to view pages while editing in Studio, you can use the [Command Bar](../studio/ui-overview.md#command-bar) to navigate from one page to another, letting you review where you need to make changes without having to play your experience each time.
 
 1. In the [Explorer](../studio/explorer.md) window hierarchy, select the `Class.UIPageLayout` object.
 
    <img src="../assets/studio/explorer/UIPageLayout.png" width="320" />
 
-2. Open the [Command](../studio/ui-overview.md#command) bar.
+2. Open the [Command Bar](../studio/ui-overview.md#command-bar).
 3. Input any of the following commands and press <kbd>Enter</kbd>.
 
    <table>

@@ -130,7 +130,7 @@ You'll receive a [commission](../../marketplace/marketplace-fees-and-commissions
 
 ### Plugins and Models
 
-A [plugin](../../studio/plugins.md) is an extension that adds additional functionality to Studio, and a [model](../../parts/models.md) is a reusable asset type. You can offer both to other creators on the [Creator Store](../../production/creator-store.md) for free, or you can sell them for **United States Dollars** (the minimum price is $4.99 for plugins and $2.99 for models). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information on selling plugins and models, see [Sell on the Creator Store](../sell-on-creator-store.md).
+A [plugin](../../studio/plugins.md) is an extension that adds additional functionality to Studio, and a [model](../../parts/models.md) is a reusable asset type. You can offer both to other creators on the [Creator Store](../../production/creator-store.md) for free, or you can sell them for **United States Dollars** (the minimum price is \$4.99 for plugins and \$2.99 for models). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information on selling plugins and models, see [Sell on the Creator Store](../sell-on-creator-store.md).
 
 <Alert severity="warning">
    There is a 30 day escrow hold for each purchase. Roblox holds your share of the sale for 30 days, starting from the date of sale.

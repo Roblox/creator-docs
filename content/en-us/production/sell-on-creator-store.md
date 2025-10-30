@@ -108,7 +108,7 @@ Once Stripe confirms your information and creates your seller account, you can s
 
 ### Pricing
 
-You can set prices on the [Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Plugin). Plugins have a minimum price of $4.99 and maximum price of $249.99. Models will have a minimum price of $2.99 and maximum price of $249.99. If an asset may not offer value at the minimum price, you can always offer it for free.
+You can set prices on the [Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Plugin). Plugins have a minimum price of \$4.99 and maximum price of \$249.99. Models will have a minimum price of \$2.99 and maximum price of \$249.99. If an asset may not offer value at the minimum price, you can always offer it for free.
 
 You cannot set USD prices in Studio.
 

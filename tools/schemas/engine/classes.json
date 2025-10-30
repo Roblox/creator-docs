@@ -10,9 +10,7 @@
     },
     "type": {
       "description": "the type of the API (class, datatype, enum, global, library). Automated.",
-      "enum": [
-        "class"
-      ]
+      "enum": ["class"]
     },
     "memory_category": {
       "description": "Defines where the class appears in the Memory tab of the Developer Console. Automated.",
@@ -37,6 +35,13 @@
     },
     "inherits": {
       "description": "Defines which classes this class inherits from. String list.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "descendants": {
+      "description": "Defines which classes this inherits this class. String list.",
       "type": "array",
       "items": {
         "type": "string"
@@ -96,10 +101,7 @@
                 "$ref": "#/definitions/__schema1"
               }
             },
-            "required": [
-              "read",
-              "write"
-            ]
+            "required": ["read", "write"]
           },
           "thread_safety": {
             "$ref": "#/definitions/__schema2"
@@ -121,10 +123,7 @@
                 "type": "boolean"
               }
             },
-            "required": [
-              "can_load",
-              "can_save"
-            ]
+            "required": ["can_load", "can_save"]
           },
           "capabilities": {
             "$ref": "#/definitions/__schema3"
@@ -345,6 +344,7 @@
     "description",
     "code_samples",
     "inherits",
+    "descendants",
     "tags",
     "deprecation_message",
     "properties",
@@ -399,12 +399,7 @@
     "__schema2": {
       "$id": "thread_safety",
       "description": "Thread safety of this item. Enum. Automated.",
-      "enum": [
-        "Unsafe",
-        "ReadSafe",
-        "Safe",
-        "ReadOnly"
-      ]
+      "enum": ["Unsafe", "ReadSafe", "Safe", "ReadOnly"]
     },
     "__schema3": {
       "$id": "capabilities",
@@ -451,11 +446,7 @@
             "type": "string"
           }
         },
-        "required": [
-          "name",
-          "type",
-          "summary"
-        ]
+        "required": ["name", "type", "summary"]
       }
     },
     "__schema5": {
@@ -474,10 +465,7 @@
             "type": "string"
           }
         },
-        "required": [
-          "type",
-          "summary"
-        ]
+        "required": ["type", "summary"]
       }
     }
   }

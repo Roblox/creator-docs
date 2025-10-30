@@ -131,6 +131,49 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: SocialService:GetExperienceEventAsync
+    summary: |
+      Returns details for the specified experience event or `nil` if it is
+      unavailable.
+    description: |
+      `GetExperienceEventAsync()` yields until the request completes and then
+      returns a dictionary describing the requested event. The dictionary
+      contains the following fields:
+
+      - `Id` (string)
+      - `Title` (string)
+      - `Description` (string)
+      - `StartTime` (`Class.DateTime`)
+      - `EndTime` (`Class.DateTime`)
+      - `HasStarted` (boolean)
+      - `HasEnded` (boolean)
+      - `Status` (`Enum.ExperienceEventStatus`)
+      - `UserRsvpStatus` (`Enum.RsvpStatus` or `nil`)
+
+      If the event cannot be found, belongs to a different experience, or the
+      response is malformed, this method returns `nil`. Requests may also fail
+      with a `HttpError <status>` message if the service returns an unexpected
+      error code.
+    code_samples:
+      - SocialService-GetUpcomingExperienceEventsAsync
+    parameters:
+      - name: eventId
+        type: string
+        default:
+        summary: |
+          The string identifier of the event to retrieve. Must correspond to an
+          event in the current experience.
+    returns:
+      - type: Dictionary?
+        summary: |
+          A dictionary describing the event, or `nil` if the event does not
+          exist, belongs to another experience, or is otherwise unavailable.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: SocialService:GetPartyAsync
     summary: |
       Returns an array of dictionaries containing data for all members of the
@@ -235,6 +278,35 @@ methods:
           A table of `Class.Player` objects whose `Class.Player.PartyId`
           property matches the passed `partyId`.
     tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: SocialService:GetUpcomingExperienceEventsAsync
+    summary: |
+      Returns active and upcoming experience events for the current experience.
+    description: |
+      `GetUpcomingExperienceEventsAsync()` yields while the client requests data
+      for the current experience and then returns an array of dictionaries, each
+      with the same structure described in
+      `Class.SocialService:GetExperienceEventAsync()|GetExperienceEventAsync()`.
+      The array includes only events that are currently active or have not yet
+      ended, excluding cancelled, moderated, or unpublished events. Results are
+      sorted so the soonest start time appears first.
+
+      If the service indicates there are no matching events, this method returns
+      an empty array. Requests may raise a `HttpError <status>` message if the
+      service returns an unexpected error code.
+    code_samples:
+      - SocialService-GetUpcomingExperienceEventsAsync
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          An array of dictionaries describing each active or upcoming event in
+          the current experience, ordered by soonest start time first.
+    tags:
+      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

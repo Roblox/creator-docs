@@ -1312,6 +1312,122 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: Instance:QueryDescendants
+    summary: ''
+    description: |
+      This object method returns an array which contains the descendants of that
+      object matching the provided `selector` string. The `selector` string can
+      include multiple selectors and combinators to match characteristics such
+      as the class name, instance name, hierarchy relationships, as well as
+      specific values of instance properties and attributes. The `selector`
+      grammar is similar to the one used in `Class.StyleRule` with only a few
+      differences regarding which parts of the grammar are supported or not.
+
+      ##### Selectors
+
+      <table>
+      <thead>
+        <tr>
+          <th>Selector</th>
+          <th>Description</th>
+          <th>Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>ClassName</code></td>
+          <td>Matches instances of the specified class in a <code>Class.Object:IsA()</code> relationship.</td>
+          <td><code>SpotLight</code><br /><code>ImageButton</code><br /><code>Part</code></td>
+        </tr>
+        <tr>
+          <td><code>.Tag</code></td>
+          <td>Matches instances tagged with a <code>Class.CollectionService</code> tag.</td>
+          <td><code>.Fruit</code><br /><code>.IntenseLight</code></td>
+        </tr>
+        <tr>
+          <td><code>#Name</code></td>
+          <td>Matches instances of a specific <code>Class.Instance.Name</code>.</td>
+          <td><code>#RedTree</code><br /><code>#CloseButton</code></td>
+        </tr>
+        <tr>
+          <td><code>[property = value]</code></td>
+          <td>Matches instances which have the specified property and that property has the specified value. Boolean, number, and string values are supported. Letters, numbers, <code>_</code>, and <code>-</code> can be used without putting the value in quotation marks.
+          </td>
+          <td><code>[CanCollide = false]</code><br />
+          <code>[Brightness = "0.5"]</code><br />
+          <code>[Name = Folder10]</code><br />
+          <code>[Name = "Part.10"]</code></td>
+        </tr>
+        <tr>
+          <td width="30%"><code>[$attribute = value]</code></td>
+          <td>Matches instances which have the specified attribute and that attribute has the specified value. Same limitations apply as for property selectors.</td>
+          <td width="30%"><code>[$MyAttribute = 10]</code></td>
+        </tr>
+      </tbody>
+      </table>
+
+      Note that selectors can be combined. For example,
+      `Model.Apple[$Kind = "Red"][$State = 4]` will match instances which are a
+      `Class.Model` with a tag `Apple` set and which have a `Kind` attribute
+      equal to string `"Red"` as well as a `State` attribute equal to `4`.
+
+      ##### Combinators
+
+      <table>
+      <thead>
+        <tr>
+          <th>Combinator</th>
+          <th>Description</th>
+          <th>Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>&gt;</code></td>
+          <td>Matches instances that are <b>direct children</b> of the previous filter matches.</td>
+          <td><code>Part &gt; .SwordHandle</code></td>
+        </tr>
+        <tr>
+          <td><code>&gt;&gt;</code></td>
+          <td>Matches instances that are <b>descendants</b> of the previous filter matches.</td>
+          <td><code>Model &gt;&gt; .TreeOnFire</code></td>
+        </tr>
+        <tr>
+          <td width="10%"><code>,</code></td>
+          <td>Specifies a list of multiple independent selectors for the descendant query.</td>
+          <td width="50%"><code>Part.TagA, Part[$UseForce = true]</code></td>
+        </tr>
+      </tbody>
+      </table>
+
+      Note that the default first filter is a descendant combinator `>>`. If the
+      selector starts with a `>`, only children are visited; for example
+      `>Part.Apple` selects **direct children** which are a `Class.Part` and
+      have a tag `Apple`.
+
+      The default combinator can also be specified explicitly, as in
+      `>>SpotLight.Red` is the same as `SpotLight.Red`.
+
+      Only elements matching the filter are placed in the array. For example,
+      `>#ExistingChild, >#MissingChild, >#AnotherExistingChild` will return an
+      array with two elements and there will be no `nil` for the missing child.
+    code_samples: []
+    parameters:
+      - name: selector
+        type: string
+        default:
+        summary: |
+          Selector string used to filter elements.
+    returns:
+      - type: Instances
+        summary: |
+          An array of instances (empty if nothing matched the selector).
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: Instance:Remove
     summary: |
       Sets the object's `Parent` to `nil`, and does the same for all its

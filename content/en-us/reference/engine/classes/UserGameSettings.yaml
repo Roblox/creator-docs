@@ -29,7 +29,7 @@ inherits:
   - Instance
 tags:
   - NotCreatable
-  - UserSettings
+  - Service
   - NotReplicated
 deprecation_message: ''
 properties:

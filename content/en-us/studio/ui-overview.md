@@ -144,7 +144,7 @@ In the upper-right corner of the 3D viewport, you can quickly toggle or set comm
 
 <img src="../assets/studio/general/Visualization-Options.png" width="780" alt="A close up view of the 3D viewport with the Visualization Options button indicated in the upper-right corner." />
 
-## Common windows
+## Frequently-used tools
 
 Commonly used windows include the [Explorer](../studio/explorer.md), the [Properties](../studio/properties.md) window, [Asset Manager](../projects/assets/manager.md), [Toolbox](../projects/assets/toolbox.md), and others.
 
@@ -178,11 +178,23 @@ The [Toolbox](../projects/assets/toolbox.md), accessible from Studio's **Window*
 
 The [Output](../studio/output.md) window, accessible from Studio's **Window** menu or **Script** tab, displays errors captured from running scripts, messages from Roblox Engine, messages from calls to `Global.LuaGlobals.print()`, and errors from calls to `Global.RobloxGlobals.warn()`.
 
-### Command
+### Command Bar
 
-The **Command** bar, accessible from Studio's **Script** tab toolbar or the **Window**&nbsp;⟩ **Script** menu, lets you execute Luau code outside of scripts. Similar to a terminal, pressing <kbd>↑</kbd> or <kbd>↓</kbd> while using the command bar navigates up and down among previously-executed commands. Clicking the small arrow on the right side similarly reveals a list of previously-executed commands.
+The **Command Bar**, accessible from Studio's **Script** tab toolbar or the **Window**&nbsp;⟩ **Script** menu, lets you execute Luau code outside of scripts. To quickly jump to the command bar at any time, press <kbd>Ctrl</kbd><kbd>9</kbd> (Windows) or <kbd>⌘</kbd><kbd>9</kbd> (Mac).
 
-To quickly jump to the **Command** bar at any time, press <kbd>Ctrl</kbd><kbd>9</kbd> (Windows) or <kbd>⌘</kbd><kbd>9</kbd> (Mac).
+<BetaAlert betaName="Advanced Command Bar" leadIn="Most of the features outlined below are in beta and must be enabled through " leadOut="." components={props.components} />
+
+<img src="../assets/studio/general/Command-Bar.png" width="840" />
+
+Features include:
+
+- **Multiline editing** — Press <kbd>Enter</kbd> to insert new lines while typing. The bar starts with 2 lines, grows up to 10 lines as new lines are inserted, and shrinks as lines are deleted. When you're ready to run/execute the contents of the bar, click the **Run** button or use the shortcut <kbd>Ctrl</kbd><kbd>Enter</kbd> (<kbd>⌘</kbd><kbd>Enter</kbd>).
+
+- **Command history** — The last 10 executed commands are visible by clicking the **History** button and navigating to the **Recent** tab. Clicking on a command in the list loads it into the bar, or you can navigate the list with <kbd>↑</kbd>/<kbd>↓</kbd> and insert the highlighted command with <kbd>Enter</kbd>. Alternatively, you can scrub through commands with <Typography noWrap><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>↑</kbd>/<kbd>↓</kbd></Typography> when the command bar is selected.
+
+- **Saved commands** — You can explicitly save commands with the **Save** button or the default shortcut <kbd>Ctrl</kbd><kbd>B</kbd> (<kbd>⌘</kbd><kbd>B</kbd>). Saved commands can be accessed through the **Saved** tab in the popup list, and the mechanics of loading saved commands from the list are the same as those in the command history.
+
+- **Script Editor integration** — The command bar is an embedded script editor and supports a wide subset of Studio's [Script Editor](./script-editor.md) features, including [autocomplete](./script-editor.md#autocomplete-features), Luau [linting](https://luau.org/lint), [go&nbsp;to declaration](./script-editor.md#go-to-declaration), [function filter](./script-editor.md#script-function-filter), [Code Assist](./script-editor.md#code-assist), and [multi‑cursor](./script-editor.md#multi-cursor).
 
 ## Layout customization
 
