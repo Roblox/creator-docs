@@ -1402,7 +1402,7 @@ properties:
       `Class.BasePart.CFrame|CFrame` is set instead.
 
       [1]: https://en.wikipedia.org/wiki/Euler_angles
-      [2]: https://en.wikipedia.org/wiki/Euler_angles#Tait-Bryan_angles
+      [2]: https://en.wikipedia.org/wiki/Euler_angles#Tait–Bryan_angles
 
       When setting this property, any `Class.Weld|Welds` or
       `Class.Motor6D|Motor6Ds` connected to this part will have the matching
