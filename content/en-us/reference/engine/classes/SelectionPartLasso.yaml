@@ -15,6 +15,7 @@ description: |
 code_samples: []
 inherits:
   - SelectionLasso
+descendants: []
 tags:
   - Deprecated
 deprecation_message: |

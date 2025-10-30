@@ -15,6 +15,11 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - RunningAverageItemDouble
+  - RunningAverageItemInt
+  - RunningAverageTimeIntervalItem
+  - TotalCountTimeIntervalItem
 tags:
   - NotCreatable
 deprecation_message: ''

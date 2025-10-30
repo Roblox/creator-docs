@@ -54,6 +54,11 @@ code_samples:
   - Model-Instantiation
 inherits:
   - PVInstance
+descendants:
+  - Actor
+  - BackpackItem
+  - Status
+  - WorldRoot
 tags: []
 deprecation_message: ''
 properties:

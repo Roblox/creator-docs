@@ -16,6 +16,7 @@ description: |
 code_samples: []
 inherits:
   - BackpackItem
+descendants: []
 tags:
   - Deprecated
 deprecation_message: |

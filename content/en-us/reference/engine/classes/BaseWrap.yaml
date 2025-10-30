@@ -14,6 +14,10 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - WrapDeformer
+  - WrapLayer
+  - WrapTarget
 tags:
   - NotCreatable
 deprecation_message: ''

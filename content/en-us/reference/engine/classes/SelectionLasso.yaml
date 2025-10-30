@@ -15,6 +15,9 @@ description: |
 code_samples: []
 inherits:
   - GuiBase3d
+descendants:
+  - SelectionPartLasso
+  - SelectionPointLasso
 tags:
   - NotCreatable
 deprecation_message: ''

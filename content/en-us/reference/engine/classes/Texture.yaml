@@ -28,6 +28,7 @@ description: |
 code_samples: []
 inherits:
   - Decal
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

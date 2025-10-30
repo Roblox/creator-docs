@@ -15,6 +15,11 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - AtmosphereSensor
+  - BuoyancySensor
+  - ControllerSensor
+  - FluidForceSensor
 tags:
   - NotCreatable
 deprecation_message: ''

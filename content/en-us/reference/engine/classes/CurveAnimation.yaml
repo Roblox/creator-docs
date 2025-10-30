@@ -62,6 +62,7 @@ description: |
 code_samples: []
 inherits:
   - AnimationClip
+descendants: []
 tags: []
 deprecation_message: ''
 properties: []

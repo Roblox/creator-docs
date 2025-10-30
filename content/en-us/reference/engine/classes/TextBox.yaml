@@ -65,6 +65,7 @@ code_samples:
   - TextBox-Secret-Word
 inherits:
   - GuiObject
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

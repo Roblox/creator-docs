@@ -38,6 +38,7 @@ code_samples:
   - Build-UI-Table
 inherits:
   - UIGridStyleLayout
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

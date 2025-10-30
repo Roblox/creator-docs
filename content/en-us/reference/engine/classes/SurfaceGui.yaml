@@ -43,6 +43,7 @@ description: |
 code_samples: []
 inherits:
   - SurfaceGuiBase
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

@@ -26,6 +26,7 @@ code_samples:
   - SoundService-Reverb-System
 inherits:
   - Instance
+descendants: []
 tags:
   - NotCreatable
   - Service

@@ -27,6 +27,7 @@ description: |
 code_samples: []
 inherits:
   - BodyMover
+descendants: []
 tags:
   - Deprecated
 deprecation_message: |

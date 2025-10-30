@@ -14,6 +14,8 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - Tween
 tags:
   - NotCreatable
   - NotBrowsable

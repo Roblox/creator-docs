@@ -30,6 +30,7 @@ code_samples:
   - AnimationController
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties: []

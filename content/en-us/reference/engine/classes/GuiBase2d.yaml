@@ -13,6 +13,9 @@ description: |
 code_samples: []
 inherits:
   - GuiBase
+descendants:
+  - GuiObject
+  - LayerCollector
 tags:
   - NotCreatable
   - NotBrowsable

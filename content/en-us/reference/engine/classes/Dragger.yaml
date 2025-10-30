@@ -15,6 +15,7 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: |
   This class has been deprecated, as it does not work well with

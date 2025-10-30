@@ -29,6 +29,7 @@ description: |
 code_samples: []
 inherits:
   - UIConstraint
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

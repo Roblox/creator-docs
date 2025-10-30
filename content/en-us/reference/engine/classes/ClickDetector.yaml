@@ -54,6 +54,8 @@ code_samples:
   - Part-Anchored-Toggle
 inherits:
   - Instance
+descendants:
+  - DragDetector
 tags: []
 deprecation_message: ''
 properties:

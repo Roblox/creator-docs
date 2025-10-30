@@ -34,6 +34,7 @@ description: |
 code_samples: []
 inherits:
   - ManualSurfaceJointInstance
+descendants: []
 tags:
   - Deprecated
 deprecation_message: ''

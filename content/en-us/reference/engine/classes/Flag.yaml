@@ -21,6 +21,7 @@ description: |
 code_samples: []
 inherits:
   - Tool
+descendants: []
 tags:
   - Deprecated
 deprecation_message: |

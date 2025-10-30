@@ -16,6 +16,7 @@ description: |
 code_samples: []
 inherits:
   - Constraint
+descendants: []
 tags:
   - NotBrowsable
 deprecation_message: ''

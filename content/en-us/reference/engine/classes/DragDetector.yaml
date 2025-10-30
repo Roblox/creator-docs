@@ -38,6 +38,7 @@ description: |
 code_samples: []
 inherits:
   - ClickDetector
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

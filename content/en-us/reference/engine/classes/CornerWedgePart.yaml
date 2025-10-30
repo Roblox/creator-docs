@@ -11,6 +11,7 @@ description: |
 code_samples: []
 inherits:
   - BasePart
+descendants: []
 tags: []
 deprecation_message: ''
 properties: []

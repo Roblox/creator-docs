@@ -26,6 +26,13 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - BloomEffect
+  - BlurEffect
+  - ColorCorrectionEffect
+  - ColorGradingEffect
+  - DepthOfFieldEffect
+  - SunRaysEffect
 tags:
   - NotCreatable
 deprecation_message: ''

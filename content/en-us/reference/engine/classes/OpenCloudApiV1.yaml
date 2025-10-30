@@ -10,10 +10,14 @@ description: ''
 code_samples: []
 inherits:
   - Instance
+descendants: []
 tags:
   - NotCreatable
   - NotReplicated
-deprecation_message: ''
+deprecation_message: |
+  This class is deprecated and should not be used for new work. Use
+  `Class.HttpService` instead and see the
+  [In-experience HTTP requests guide](../../../cloud-services/http-service.md).
 properties: []
 methods:
   - name: OpenCloudApiV1:CreateModel

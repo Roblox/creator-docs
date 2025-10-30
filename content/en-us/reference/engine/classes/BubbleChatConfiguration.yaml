@@ -13,6 +13,7 @@ description: |
 code_samples: []
 inherits:
   - TextChatConfigurations
+descendants: []
 tags:
   - NotCreatable
 deprecation_message: ''

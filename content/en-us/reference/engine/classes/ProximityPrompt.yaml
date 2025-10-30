@@ -68,6 +68,7 @@ code_samples:
   - healing-proximity-prompt
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

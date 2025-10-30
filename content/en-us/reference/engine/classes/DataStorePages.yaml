@@ -18,6 +18,7 @@ code_samples:
   - OrderedDataStore-Basics
 inherits:
   - Pages
+descendants: []
 tags:
   - NotCreatable
   - NotReplicated

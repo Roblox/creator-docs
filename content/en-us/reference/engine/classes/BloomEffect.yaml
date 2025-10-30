@@ -25,6 +25,7 @@ description: |
 code_samples: []
 inherits:
   - PostEffect
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

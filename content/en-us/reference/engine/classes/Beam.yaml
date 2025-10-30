@@ -44,6 +44,7 @@ code_samples:
   - Creating-a-Beam-From-Scratch
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

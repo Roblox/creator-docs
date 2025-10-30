@@ -36,6 +36,8 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - Bone
 tags: []
 deprecation_message: ''
 properties:

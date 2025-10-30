@@ -21,6 +21,9 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - BubbleChatMessageProperties
+  - ChatWindowMessageProperties
 tags: []
 deprecation_message: ''
 properties:

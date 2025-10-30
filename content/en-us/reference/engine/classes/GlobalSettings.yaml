@@ -23,6 +23,7 @@ description: |
 code_samples: []
 inherits:
   - GenericSettings
+descendants: []
 tags:
   - NotCreatable
   - NotBrowsable

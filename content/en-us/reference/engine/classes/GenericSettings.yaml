@@ -12,6 +12,9 @@ description: |
 code_samples: []
 inherits:
   - ServiceProvider
+descendants:
+  - GlobalSettings
+  - UserSettings
 tags:
   - NotCreatable
 deprecation_message: ''

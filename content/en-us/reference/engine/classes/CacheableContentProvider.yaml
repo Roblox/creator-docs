@@ -16,6 +16,11 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - HSRDataContentProvider
+  - MeshContentProvider
+  - SlimContentProvider
+  - SolidModelContentProvider
 tags:
   - NotCreatable
   - Service

@@ -16,6 +16,7 @@ description: |
 code_samples: []
 inherits:
   - StyleBase
+descendants: []
 tags: []
 deprecation_message: ''
 properties: []

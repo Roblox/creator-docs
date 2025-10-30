@@ -60,6 +60,7 @@ description: |
 code_samples: []
 inherits:
   - UIGridStyleLayout
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

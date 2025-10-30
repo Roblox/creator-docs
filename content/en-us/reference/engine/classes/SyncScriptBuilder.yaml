@@ -10,6 +10,7 @@ description: ''
 code_samples: []
 inherits:
   - ScriptBuilder
+descendants: []
 tags:
   - NotCreatable
   - NotReplicated

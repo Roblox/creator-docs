@@ -30,6 +30,8 @@ code_samples:
   - FileMesh-Offset-and-Scale
 inherits:
   - DataModelMesh
+descendants:
+  - SpecialMesh
 tags: []
 deprecation_message: ''
 properties:

@@ -12,6 +12,7 @@ description: |
 code_samples: []
 inherits:
   - ScreenGui
+descendants: []
 tags:
   - Deprecated
 deprecation_message: |

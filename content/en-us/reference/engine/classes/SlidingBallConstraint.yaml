@@ -47,6 +47,9 @@ description: |
 code_samples: []
 inherits:
   - Constraint
+descendants:
+  - CylindricalConstraint
+  - PrismaticConstraint
 tags:
   - NotCreatable
 deprecation_message: ''

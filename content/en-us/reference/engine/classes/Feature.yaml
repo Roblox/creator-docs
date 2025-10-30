@@ -12,6 +12,9 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - Hole
+  - MotorFeature
 tags:
   - NotCreatable
 deprecation_message: ''

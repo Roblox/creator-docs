@@ -17,6 +17,7 @@ description: |
 code_samples: []
 inherits:
   - CharacterAppearance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

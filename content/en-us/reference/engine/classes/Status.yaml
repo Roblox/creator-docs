@@ -13,6 +13,7 @@ description: |
 code_samples: []
 inherits:
   - Model
+descendants: []
 tags:
   - NotCreatable
   - Deprecated

@@ -90,6 +90,7 @@ code_samples:
   - ContextActionService-Tool-Reload
 inherits:
   - Instance
+descendants: []
 tags:
   - NotCreatable
   - Service

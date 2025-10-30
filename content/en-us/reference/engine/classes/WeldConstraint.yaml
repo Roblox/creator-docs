@@ -48,6 +48,7 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

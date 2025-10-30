@@ -19,6 +19,7 @@ code_samples:
   - creating-a-part-with-a-basic-trail
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

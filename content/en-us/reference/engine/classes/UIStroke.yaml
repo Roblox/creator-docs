@@ -32,6 +32,7 @@ description: |
 code_samples: []
 inherits:
   - UIComponent
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

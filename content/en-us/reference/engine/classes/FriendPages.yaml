@@ -41,6 +41,7 @@ code_samples:
   - print-roblox-friends
 inherits:
   - Pages
+descendants: []
 tags:
   - NotCreatable
   - NotReplicated

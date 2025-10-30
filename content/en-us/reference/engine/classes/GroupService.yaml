@@ -29,6 +29,7 @@ code_samples:
   - Group-Ally-Enemy-Checker
 inherits:
   - Instance
+descendants: []
 tags:
   - NotCreatable
   - Service

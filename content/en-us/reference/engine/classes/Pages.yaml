@@ -14,6 +14,20 @@ code_samples:
   - pages-iterator
 inherits:
   - Instance
+descendants:
+  - AudioPages
+  - BanHistoryPages
+  - CatalogPages
+  - DataStoreKeyPages
+  - DataStoreListingPages
+  - DataStorePages
+  - DataStoreVersionPages
+  - FriendPages
+  - InventoryPages
+  - MemoryStoreHashMapPages
+  - OutfitPages
+  - StandardPages
+  - RecommendationPages
 tags:
   - NotCreatable
   - NotReplicated

@@ -58,6 +58,7 @@ code_samples:
   - Party-Team-Integration
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

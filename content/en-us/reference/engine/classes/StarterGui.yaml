@@ -30,6 +30,7 @@ description: |
 code_samples: []
 inherits:
   - BasePlayerGui
+descendants: []
 tags:
   - NotCreatable
   - Service

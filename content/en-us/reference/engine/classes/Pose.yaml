@@ -45,6 +45,7 @@ code_samples:
   - Keyframe-Reset-Poses
 inherits:
   - PoseBase
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

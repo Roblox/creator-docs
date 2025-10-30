@@ -21,6 +21,7 @@ code_samples:
   - UserGameSettings-Listener
 inherits:
   - GenericSettings
+descendants: []
 tags:
   - NotCreatable
 deprecation_message: ''

@@ -19,6 +19,7 @@ description: |
 code_samples: []
 inherits:
   - GuiBase3d
+descendants: []
 tags:
   - Deprecated
 deprecation_message: |

@@ -54,6 +54,7 @@ code_samples:
   - Simple-ModuleScript-Usage
 inherits:
   - LuaSourceContainer
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

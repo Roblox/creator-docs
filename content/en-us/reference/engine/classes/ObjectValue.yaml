@@ -32,6 +32,7 @@ code_samples:
   - ObjectValue-Example
 inherits:
   - ValueBase
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

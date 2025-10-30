@@ -23,6 +23,8 @@ code_samples:
   - Sword-Tool-Example
 inherits:
   - BackpackItem
+descendants:
+  - Flag
 tags: []
 deprecation_message: ''
 properties:

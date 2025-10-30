@@ -14,6 +14,9 @@ description: |
 code_samples: []
 inherits:
   - GuiBase3d
+descendants:
+  - HandleAdornment
+  - SelectionSphere
 tags:
   - NotCreatable
 deprecation_message: ''

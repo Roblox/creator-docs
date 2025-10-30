@@ -22,6 +22,7 @@ description: |
 code_samples: []
 inherits:
   - SoundEffect
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

@@ -45,6 +45,7 @@ description: |
 code_samples: []
 inherits:
   - Constraint
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

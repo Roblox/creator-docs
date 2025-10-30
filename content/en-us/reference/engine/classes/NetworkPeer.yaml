@@ -12,6 +12,9 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - NetworkClient
+  - NetworkServer
 tags:
   - NotCreatable
   - NotBrowsable

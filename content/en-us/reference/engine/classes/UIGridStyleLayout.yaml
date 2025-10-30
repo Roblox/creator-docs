@@ -12,6 +12,11 @@ description: |
 code_samples: []
 inherits:
   - UILayout
+descendants:
+  - UIGridLayout
+  - UIListLayout
+  - UIPageLayout
+  - UITableLayout
 tags:
   - NotCreatable
   - NotBrowsable

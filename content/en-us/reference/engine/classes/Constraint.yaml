@@ -15,6 +15,25 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - AlignOrientation
+  - AlignPosition
+  - AngularVelocity
+  - AnimationConstraint
+  - BallSocketConstraint
+  - HingeConstraint
+  - LineForce
+  - LinearVelocity
+  - PlaneConstraint
+  - RigidConstraint
+  - RodConstraint
+  - RopeConstraint
+  - SlidingBallConstraint
+  - SpringConstraint
+  - Torque
+  - TorsionSpringConstraint
+  - UniversalConstraint
+  - VectorForce
 tags:
   - NotCreatable
 deprecation_message: ''

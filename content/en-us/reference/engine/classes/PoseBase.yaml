@@ -12,6 +12,9 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - NumberPose
+  - Pose
 tags:
   - NotCreatable
 deprecation_message: ''

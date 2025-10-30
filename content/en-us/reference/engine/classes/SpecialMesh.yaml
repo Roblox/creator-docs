@@ -62,6 +62,7 @@ code_samples:
   - Mesh-VertexColor
 inherits:
   - FileMesh
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

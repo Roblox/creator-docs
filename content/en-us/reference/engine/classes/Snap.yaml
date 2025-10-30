@@ -35,6 +35,7 @@ description: |
 code_samples: []
 inherits:
   - JointInstance
+descendants: []
 tags:
   - Deprecated
 deprecation_message: ''

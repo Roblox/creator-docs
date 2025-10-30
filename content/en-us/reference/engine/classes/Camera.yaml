@@ -47,6 +47,7 @@ description: |
 code_samples: []
 inherits:
   - PVInstance
+descendants: []
 tags:
   - NotReplicated
 deprecation_message: ''
