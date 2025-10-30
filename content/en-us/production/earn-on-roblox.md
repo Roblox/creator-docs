@@ -24,7 +24,7 @@ This page provides information about different ways to earn on Roblox and how to
 
 ## Economy powered by creators
 
-We are building one of the world's largest immersive platforms with 85.3M global daily active users (DAUs) in 17 languages across 180 countries, available across platforms including mobile, desktop, consoles, and VR headsets. In 2024, approximately 60% of our daily active users were 13 and over, and users aged 17 and over accounted for 44% of our daily active users. In 2024, our community visited over 14 million experiences, and in the fourth quarter of 2024 alone, users spent 18.7 billion hours on our platform.
+We are building one of the world's largest immersive platforms with 151.5M global daily active users (DAUs) in 17 languages across 180 countries, available across platforms including mobile, desktop, consoles, and VR headsets. In 2024, approximately 60% of our daily active users were 13 and over, and users aged 17 and over accounted for 44% of our daily active users. In 2024, our community visited over 14 million experiences. In the third quarter of 2025 alone, users spent 39.6 billion hours on our platform.
 
 <GridContainer numColumns="2">
 <figure>
@@ -48,7 +48,7 @@ We are seeing healthy growth across creators and studios of varying sizes. Since
 
 <img src="../assets/monetization/earning/Monetization-Growth-CAGR.png" width="800" />
 
-<figcaption><Typography variant="captionHeader" color="info">⑴</Typography> DAUs as of the quarter ended June&nbsp;30,&nbsp;2025.</figcaption>
+<figcaption><Typography variant="captionHeader" color="info">⑴</Typography> DAUs as of the quarter ended September&nbsp;30,&nbsp;2025.</figcaption>
 <figcaption><Typography variant="captionHeader" color="info">⑵</Typography> Payouts for the year ended December&nbsp;31,&nbsp;2024.</figcaption>
 <figcaption><Typography variant="captionHeader" color="info">⑶</Typography> Based on readily available public data for daily active users of virtual worlds.</figcaption>
 <figcaption><Typography variant="captionHeader" color="info">⑷</Typography> Measured based on Roblox's annual bookings, which measures total economic activity on our platform.</figcaption>
@@ -64,7 +64,7 @@ Building successful content takes time and effort, but there is low risk and low
 Unlike other platforms where you wait days or weeks for approvals, you can modify your Roblox experiences and publish immediately in multiple languages and on all popular platforms&nbsp;&mdash; iOS, Android, Mac, Windows, PlayStation, and Xbox.
 
 <h5>Platform-driven discovery and rapid viral growth</h5>
-Our platform, with 85.3 million daily active users (DAUs) during 2024 now able to see and join experiences with no additional downloads required, provides opportunity for rapid growth. Creators can take advantage of our organic channels, our rich social graph and network effect, seamless exploration between experiences and our cost effective [Roblox&nbsp;ads](../production/promotion/advertise-on-roblox.md).
+Our platform, with 151.5 million daily active users (DAUs) now able to see and join experiences with no additional downloads required, provides opportunity for rapid growth. Creators can take advantage of our organic channels, our rich social graph and network effect, seamless exploration between experiences and our cost effective [Roblox&nbsp;ads](../production/promotion/advertise-on-roblox.md).
 
 <h5>Rapid iteration and scaling with no upfront costs</h5>
 With your content live and in front of lots of users, we provide a rapid and rich feedback loop on how users are engaging with your work. This feedback loop is facilitated both by our integrated [analytics](../production/analytics/index.md) system and by our monetization mechanisms. On the cost side, we handle infrastructure hosting, storage, customer support, localization, payment processing, moderation, and platform costs. You do not have to worry about standing up multiplayer servers or scaling them as your experience goes viral. Off Roblox, you often have to take care of these expenses and manage these operations yourself.
@@ -175,7 +175,7 @@ Once you've developed an experience, you can earn through the following methods:
 #### In-experience purchases
 
 - [Subscriptions](./monetization/subscriptions.md) within experiences offer you the ability to earn from your experience through subscription-based offerings and business models.
-- [Developer Products](../production/monetization/developer-products.md) which are items or abilities that a user can purchase, such as in-experience currency.
+- [Developer Products](../production/monetization/developer-products.md), which are items or abilities that a user can purchase, such as in-experience currency.
 - [Passes](../production/monetization/game-passes.md) for access to special privileges within an experience, such as entry to a restricted area or a permanent power‑up. When you sell your own passes in your experience, you earn 70% of the Robux spent. You can also sell passes within your experience that were made by other creators; in this case, you earn a 10% affiliate fee on the Robux spent within your experience, and the original creator of the pass earns 60%.
 - [Private servers](../production/monetization/private-servers.md) for users to play with just connections (subscription-based access fees).
 
