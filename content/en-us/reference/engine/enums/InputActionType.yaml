@@ -4,10 +4,10 @@
 
 name: InputActionType
 type: enum
-summary: |-
+summary: |
   This enum is used by `Class.InputAction.Type` to determine which input data
   type the `Class.InputAction` will receive.
-description: |-
+description: |
   This enum is used by `Class.InputAction.Type` to determine which input data
   type the `Class.InputAction` will receive.
 code_samples: []
@@ -15,7 +15,7 @@ tags: []
 deprecation_message: ''
 items:
   - name: Bool
-    summary: |-
+    summary: |
       The `Class.InputAction` will receive boolean values from button inputs,
       for example `true`/`false` on press/release from inputs such as
       `Enum.KeyCode.ButtonA` or `Enum.KeyCode.E`. This setting also exposes the
@@ -26,7 +26,7 @@ items:
     tags: []
     deprecation_message: ''
   - name: Direction1D
-    summary: |-
+    summary: |
       The `Class.InputAction` will receive numerical values, generally from
       analog gamepad triggers such as `Enum.KeyCode.ButtonL2` or
       `Enum.KeyCode.ButtonR2`. This setting also exposes the
@@ -37,7 +37,7 @@ items:
     tags: []
     deprecation_message: ''
   - name: Direction2D
-    summary: |-
+    summary: |
       The `Class.InputAction` will receive `Datatype.Vector2` values, generally
       from thumbstick inputs such as `Enum.KeyCode.Thumbstick1` and
       `Enum.KeyCode.Thumbstick2`. This setting also exposes the
@@ -49,7 +49,7 @@ items:
     tags: []
     deprecation_message: ''
   - name: Direction3D
-    summary: |-
+    summary: |
       The `Class.InputAction` will receive `Datatype.Vector3` values from inputs
       assigned to the `Class.InputBinding.Up|Up`,
       `Class.InputBinding.Down|Down`, `Class.InputBinding.Left|Left`,
@@ -61,9 +61,10 @@ items:
     tags: []
     deprecation_message: ''
   - name: ViewportPosition
-    summary: |-
-      The `Class.InputAction` will receive `Datatype.Vector2` values representing
-      the absolute pixel (**X**, **Y**) coordinates of a pointer input in the viewport.
+    summary: |
+      The `Class.InputAction` will receive `Datatype.Vector2` values
+      representing the absolute pixel (**X**, **Y**) coordinates of a pointer
+      input in the viewport.
     value: 4
     tags: []
     deprecation_message: ''
