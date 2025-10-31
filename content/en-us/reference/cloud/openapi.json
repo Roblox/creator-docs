@@ -45940,7 +45940,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "packageID",
+            "name": "packageId",
             "description": "The asset ID of the package",
             "required": true,
             "schema": {
@@ -52100,8 +52100,7 @@
             "description": "The circle thumbnail output parameter, true or false",
             "schema": {
               "type": "boolean",
-              "enum": ["true", "false"],
-              "default": "false"
+              "default": false
             }
           }
         ],
@@ -52261,8 +52260,7 @@
             "description": "The circle thumbnail output parameter, true or false",
             "schema": {
               "type": "boolean",
-              "enum": ["true", "false"],
-              "default": "false"
+              "default": false
             }
           }
         ],
@@ -52346,8 +52344,7 @@
             "description": "The circle thumbnail output parameter, true or false",
             "schema": {
               "type": "boolean",
-              "enum": ["true", "false"],
-              "default": "false"
+              "default": false
             }
           }
         ],
@@ -52436,8 +52433,7 @@
             "description": "The circle thumbnail output parameter, true or false",
             "schema": {
               "type": "boolean",
-              "enum": ["true", "false"],
-              "default": "false"
+              "default": false
             }
           }
         ],
@@ -52526,8 +52522,7 @@
             "description": "The circle thumbnail output parameter, true or false",
             "schema": {
               "type": "boolean",
-              "enum": ["true", "false"],
-              "default": "false"
+              "default": false
             }
           }
         ],
@@ -52619,8 +52614,7 @@
             "description": "The circle thumbnail output parameter, true or false",
             "schema": {
               "type": "boolean",
-              "enum": ["true", "false"],
-              "default": "false"
+              "default": false
             }
           }
         ],
@@ -52734,8 +52728,7 @@
             "description": "The circle thumbnail output parameter, true or false",
             "schema": {
               "type": "boolean",
-              "enum": ["true", "false"],
-              "default": "false"
+              "default": false
             }
           }
         ],
@@ -52846,8 +52839,7 @@
             "description": "The circle thumbnail output parameter, true or false",
             "schema": {
               "type": "boolean",
-              "enum": ["true", "false"],
-              "default": "false"
+              "default": false
             }
           }
         ],
@@ -52935,8 +52927,7 @@
             "description": "The circle thumbnail output parameter, true or false",
             "schema": {
               "type": "boolean",
-              "enum": ["true", "false"],
-              "default": "false"
+              "default": false
             }
           }
         ],
@@ -53042,8 +53033,7 @@
             "description": "The circle thumbnail output parameter, true or false",
             "schema": {
               "type": "boolean",
-              "enum": ["true", "false"],
-              "default": "false"
+              "default": false
             }
           }
         ],
@@ -53150,8 +53140,7 @@
             "description": "The circle thumbnail output parameter, true or false",
             "schema": {
               "type": "boolean",
-              "enum": ["true", "false"],
-              "default": "false"
+              "default": false
             }
           }
         ],
@@ -53300,8 +53289,7 @@
             "description": "The circle thumbnail output parameter, true or false",
             "schema": {
               "type": "boolean",
-              "enum": ["true", "false"],
-              "default": "false"
+              "default": false
             }
           }
         ],
@@ -53402,8 +53390,7 @@
             "description": "The circle thumbnail output parameter, true or false",
             "schema": {
               "type": "boolean",
-              "enum": ["true", "false"],
-              "default": "false"
+              "default": false
             }
           }
         ],
@@ -53544,8 +53531,7 @@
             "description": "The circle thumbnail output parameter, true or false",
             "schema": {
               "type": "boolean",
-              "enum": ["true", "false"],
-              "default": "false"
+              "default": false
             }
           }
         ],
@@ -53720,7 +53706,7 @@
             }
           },
           {
-            "in": "query",
+            "in": "path",
             "name": "filterType",
             "description": "E.g. is output circular",
             "required": true,
@@ -53819,9 +53805,10 @@
             }
           },
           {
-            "in": "query",
+            "in": "path",
             "name": "filterType",
             "description": "E.g. is output circular",
+            "required": true,
             "schema": {
               "type": "string"
             }
