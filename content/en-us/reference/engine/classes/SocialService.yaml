@@ -231,9 +231,10 @@ methods:
       </tbody>
       </table>
 
-      Note that this service does not work during playtesting in Roblox Studio;
-      to test aspects of your experience using it, you must publish the
-      experience and play it in the Roblox application.
+      To test this service in your experience, use the
+      [Party Simulator](../../../studio/testing-modes.md#party-simulation) in
+      Roblox Studio or publish the experience and play it in the Roblox
+      application.
     code_samples:
       - SocialService-GetPartyAsync
     parameters:
@@ -262,9 +263,10 @@ methods:
       method behaves similarly to `Class.Players:GetPlayers()` but filters the
       results to include only those players belonging to the specified party.
 
-      Note that this service does not work during playtesting in Roblox Studio;
-      to test aspects of your experience using it, you must publish the
-      experience and play it in the Roblox application.
+      To test this service in your experience, use the
+      [Party Simulator](../../../studio/testing-modes.md#party-simulation) in
+      Roblox Studio or publish the experience and play it in the Roblox
+      application.
     code_samples:
       - SocialService-GetPlayersByPartyId
       - Party-Team-Integration
