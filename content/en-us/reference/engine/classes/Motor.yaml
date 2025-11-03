@@ -12,6 +12,8 @@ description: |
 code_samples: []
 inherits:
   - JointInstance
+descendants:
+  - Motor6D
 tags: []
 deprecation_message: ''
 properties:

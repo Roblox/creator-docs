@@ -22,6 +22,9 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - DataStore
+  - OrderedDataStore
 tags:
   - NotCreatable
   - NotReplicated

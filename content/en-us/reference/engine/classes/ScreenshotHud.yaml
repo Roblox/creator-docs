@@ -26,6 +26,7 @@ code_samples:
   - ScreenshotHud
 inherits:
   - Instance
+descendants: []
 tags:
   - NotCreatable
   - NotReplicated

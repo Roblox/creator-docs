@@ -12,6 +12,10 @@ description: |
 code_samples: []
 inherits:
   - UIComponent
+descendants:
+  - UIAspectRatioConstraint
+  - UISizeConstraint
+  - UITextSizeConstraint
 tags:
   - NotCreatable
 deprecation_message: ''

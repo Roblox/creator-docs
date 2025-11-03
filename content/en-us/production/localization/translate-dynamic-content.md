@@ -229,8 +229,8 @@ In the following example, an experience has the following number related entries
     <td>&#123;race_time:fixed} segundos	</td>
   </tr>
   <tr>
-    <td>$&#123;1:num} cash and &#123;2:int} jewels	</td>
-    <td>$&#123;1:num} dinero y &#123;2:int} joyas	</td>
+    <td>&#36;&#123;1:num} cash and &#123;2:int} jewels	</td>
+    <td>&#36;&#123;1:num} dinero y &#123;2:int} joyas	</td>
   </tr>
 </tbody>
 </table>
@@ -250,8 +250,8 @@ If a user has their locale set to **es**, the translation output displays as fol
     <td>75,20 segundos</td>
   </tr>
   <tr>
-    <td>$2500.5 cash and 99.8 jewels</td>
-    <td>$2.500,50 dinero y 100 joyas</td>
+    <td>&#36;2500.5 cash and 99.8 jewels</td>
+    <td>&#36;2.500,50 dinero y 100 joyas</td>
   </tr>
 </tbody>
 </table>

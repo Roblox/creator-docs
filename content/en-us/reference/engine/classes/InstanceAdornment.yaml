@@ -11,6 +11,8 @@ description: ''
 code_samples: []
 inherits:
   - GuiBase3d
+descendants:
+  - SelectionBox
 tags:
   - NotCreatable
 deprecation_message: ''

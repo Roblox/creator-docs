@@ -15,6 +15,9 @@ description: |
 code_samples: []
 inherits:
   - JointInstance
+descendants:
+  - ManualGlue
+  - ManualWeld
 tags:
   - NotCreatable
   - Deprecated

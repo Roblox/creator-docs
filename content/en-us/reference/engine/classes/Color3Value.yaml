@@ -13,6 +13,7 @@ code_samples:
   - Set-Color3Value
 inherits:
   - ValueBase
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

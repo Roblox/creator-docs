@@ -56,6 +56,7 @@ code_samples:
   - GenerationService-StarterPlayerScripts-WithSuggestedSize
 inherits:
   - Instance
+descendants: []
 tags:
   - NotCreatable
   - Service

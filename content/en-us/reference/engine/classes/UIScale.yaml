@@ -16,6 +16,7 @@ code_samples:
   - UI-Scale-Demo
 inherits:
   - UIComponent
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

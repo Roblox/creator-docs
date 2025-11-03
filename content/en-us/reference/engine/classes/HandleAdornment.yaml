@@ -14,6 +14,14 @@ description: |
 code_samples: []
 inherits:
   - PVAdornment
+descendants:
+  - BoxHandleAdornment
+  - ConeHandleAdornment
+  - CylinderHandleAdornment
+  - ImageHandleAdornment
+  - LineHandleAdornment
+  - SphereHandleAdornment
+  - WireframeHandleAdornment
 tags:
   - NotCreatable
 deprecation_message: ''

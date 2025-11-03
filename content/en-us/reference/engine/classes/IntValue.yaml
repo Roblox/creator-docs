@@ -33,6 +33,7 @@ description: |
 code_samples: []
 inherits:
   - ValueBase
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

@@ -28,6 +28,9 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - Accessory
+  - Hat
 tags: []
 deprecation_message: ''
 properties:

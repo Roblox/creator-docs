@@ -16,6 +16,7 @@ code_samples:
   - printing-search-audio-result-titles
 inherits:
   - Pages
+descendants: []
 tags:
   - NotCreatable
   - NotReplicated

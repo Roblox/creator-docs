@@ -52,6 +52,7 @@ code_samples:
   - Explosion-Instantiation
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

@@ -25,6 +25,14 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - BodyAngularVelocity
+  - BodyForce
+  - BodyGyro
+  - BodyPosition
+  - BodyThrust
+  - BodyVelocity
+  - RocketPropulsion
 tags:
   - NotCreatable
   - Deprecated

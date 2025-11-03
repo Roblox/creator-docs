@@ -23,7 +23,7 @@ If you're a 13+ [ID verified](https://en.help.roblox.com/hc/en-us/articles/44072
 Videos that don't meet these requirements are rejected. Alpha channels are not supported and will be ignored. When uploading videos, consider the following:
 
 - Each video upload costs 2,000 Robux.
-- You can upload a maximum of 10 videos a day.
+- You can upload a maximum of 20 videos a day.
 
 ## Play videos
 

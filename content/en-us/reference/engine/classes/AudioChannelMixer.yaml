@@ -20,6 +20,7 @@ code_samples:
   - audio-wiring---splitting-mixing
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

@@ -19,6 +19,7 @@ code_samples:
   - DataModel1
 inherits:
   - ServiceProvider
+descendants: []
 tags:
   - NotCreatable
 deprecation_message: ''

@@ -26,6 +26,7 @@ code_samples:
   - PluginMouse-Get
 inherits:
   - Mouse
+descendants: []
 tags:
   - NotCreatable
 deprecation_message: ''

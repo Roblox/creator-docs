@@ -5844,6 +5844,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/VideoError.yaml
         ignoreTranslation: true
+      - title: VideoSampleSize
+        path: /reference/engine/enums/VideoSampleSize
+        type: engineapi
+        source: /reference/engine/enums/VideoSampleSize.yaml
+        ignoreTranslation: true
       - title: ViewMode
         path: /reference/engine/enums/ViewMode
         type: engineapi

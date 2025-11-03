@@ -23,6 +23,7 @@ code_samples:
   - KeyframeSequenceProvider-RegisterKeyframeSequence
 inherits:
   - Instance
+descendants: []
 tags:
   - NotCreatable
   - Service

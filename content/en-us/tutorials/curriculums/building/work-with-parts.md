@@ -54,7 +54,7 @@ To insert a part for your first platform:
 
 1. In the **Home** or **Model** tab's toolbar, click-hold the small arrow in the lower‑right corner of the **Part** inserter tool to reveal the part type dropdown (do not simply click the button since a basic click inserts a part without opening the picker menu).
 
-   <img src="../../../assets/tutorials/building-lesson/Part-Picker.png" alt="A close-up view of the part picker." width="800" />
+   <img src="../../../assets/tutorials/building-lesson/part-picker.png" alt="A close-up view of the part picker." width="800" />
 
 1. From the dropdown menu, select the part shape you want for your first platform. The part displays at the exact center of your camera view.
 

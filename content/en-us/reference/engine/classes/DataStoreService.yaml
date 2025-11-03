@@ -21,6 +21,7 @@ code_samples:
   - DataStore-Budget
 inherits:
   - Instance
+descendants: []
 tags:
   - NotCreatable
   - Service

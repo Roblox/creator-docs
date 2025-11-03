@@ -13,6 +13,9 @@ description: |
 code_samples: []
 inherits:
   - CharacterAppearance
+descendants:
+  - Pants
+  - Shirt
 tags:
   - NotCreatable
 deprecation_message: ''

@@ -17,6 +17,7 @@ code_samples:
   - Plugin-Global-Receive
 inherits:
   - Instance
+descendants: []
 tags:
   - NotCreatable
 deprecation_message: ''

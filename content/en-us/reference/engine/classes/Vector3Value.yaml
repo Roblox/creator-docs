@@ -15,6 +15,7 @@ code_samples:
   - Storing-Vector2-inside-Vector3Value
 inherits:
   - ValueBase
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

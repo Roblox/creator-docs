@@ -33,6 +33,7 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:
@@ -834,9 +835,10 @@ properties:
       `Class.SocialService:GetPartyAsync()` to access information about a
       player's party and its members.
 
-      Note that this service does not work during playtesting in Roblox Studio;
-      to test aspects of your experience using it, you must publish the
-      experience and play it in the Roblox application.
+      To test this service in your experience, use the
+      [Party Simulator](../../../studio/testing-modes.md#party-simulation) in
+      Roblox Studio or publish the experience and play it in the Roblox
+      application.
     code_samples:
       - Player-PartyId
     type: string

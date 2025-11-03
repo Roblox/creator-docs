@@ -24,6 +24,7 @@ code_samples:
   - Tween-Creation
 inherits:
   - TweenBase
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

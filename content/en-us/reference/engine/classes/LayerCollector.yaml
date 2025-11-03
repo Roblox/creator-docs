@@ -21,6 +21,11 @@ description: |
 code_samples: []
 inherits:
   - GuiBase2d
+descendants:
+  - BillboardGui
+  - PluginGui
+  - ScreenGui
+  - SurfaceGuiBase
 tags:
   - NotCreatable
   - NotBrowsable

@@ -36,6 +36,7 @@ code_samples:
   - ContentProvider1
 inherits:
   - Instance
+descendants: []
 tags:
   - NotCreatable
   - Service

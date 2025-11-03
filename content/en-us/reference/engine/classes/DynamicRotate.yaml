@@ -12,6 +12,9 @@ description: |
 code_samples: []
 inherits:
   - JointInstance
+descendants:
+  - RotateP
+  - RotateV
 tags:
   - NotCreatable
 deprecation_message: ''

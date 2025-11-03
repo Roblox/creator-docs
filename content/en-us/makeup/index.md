@@ -149,6 +149,26 @@ A comprehensive `.zip` folder of Maya assets, including multiple reference heads
 </Card>
 </Grid>
 
+  <Grid item xs={12} md={6} lg={4} style={{ padding: 6, display: 'flex' }}>
+    <Card style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <CardContent style={{ flexGrow: 1 }}>
+
+<center>FBX / GLTF template reference files</center>
+<figure>
+<center> <img src="../assets/makeup/resources/Fbx-Thumbnail.png" width="100%" /> </center>
+</figure>
+<figure>
+A comprehensive `.zip` folder of `.fbx` and `.gltf` assets, including multiple reference heads pre-configured for testing in the Makeup test place or for authoring your own makeup. <br /><br />Includes both Cage and Reference Mesh Head templates.
+</figure>
+</CardContent>
+
+<CardActions style={{bottom: 0, width: '100%'}}>
+<Button href="../assets/makeup/resources/Makeup-Reference-Fbx-Gltf.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+</CardActions>
+
+</Card>
+</Grid>
+
 </Grid>
 
 ### Template textures

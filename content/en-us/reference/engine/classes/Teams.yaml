@@ -51,6 +51,7 @@ code_samples:
   - Team-Kill-Check
 inherits:
   - Instance
+descendants: []
 tags:
   - NotCreatable
   - Service

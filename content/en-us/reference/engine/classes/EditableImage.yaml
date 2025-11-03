@@ -69,6 +69,7 @@ description: |
 code_samples: []
 inherits:
   - Object
+descendants: []
 tags:
   - NotCreatable
 deprecation_message: ''

@@ -46,6 +46,7 @@ code_samples:
   - OpenCloud-via-HttpService
 inherits:
   - Instance
+descendants: []
 tags:
   - NotCreatable
   - Service

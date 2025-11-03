@@ -18,6 +18,16 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - ChorusSoundEffect
+  - CompressorSoundEffect
+  - DistortionSoundEffect
+  - EchoSoundEffect
+  - EqualizerSoundEffect
+  - FlangeSoundEffect
+  - PitchShiftSoundEffect
+  - ReverbSoundEffect
+  - TremoloSoundEffect
 tags:
   - NotCreatable
 deprecation_message: ''

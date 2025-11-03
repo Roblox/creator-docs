@@ -26,6 +26,9 @@ description: |
 code_samples: []
 inherits:
   - GuiObject
+descendants:
+  - ImageButton
+  - TextButton
 tags:
   - NotCreatable
   - NotBrowsable

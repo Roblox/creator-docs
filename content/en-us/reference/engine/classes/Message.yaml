@@ -16,6 +16,8 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - Hint
 tags:
   - Deprecated
 deprecation_message: |

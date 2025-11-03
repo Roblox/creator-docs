@@ -21,6 +21,7 @@ description: |
 code_samples: []
 inherits:
   - WorldRoot
+descendants: []
 tags: []
 deprecation_message: ''
 properties: []

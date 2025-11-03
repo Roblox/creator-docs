@@ -22,6 +22,7 @@ description: |
 code_samples: []
 inherits:
   - Message
+descendants: []
 tags:
   - Deprecated
 deprecation_message: |

@@ -14,6 +14,7 @@ description: |
 code_samples: []
 inherits:
   - CacheableContentProvider
+descendants: []
 tags:
   - NotCreatable
   - Service

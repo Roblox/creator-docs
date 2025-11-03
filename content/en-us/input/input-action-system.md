@@ -52,6 +52,10 @@ An `Class.InputAction` can be of several variations depending on its `Class.Inpu
 			<td>`Enum.InputActionType|Direction3D`</td>
 			<td>3D directional movement like an airborne vehicle that can levitate up/down, accelerate/decelerate, and drift left/right.</td>
 		</tr>
+		<tr>
+			<td>`Enum.InputActionType|ViewportPosition`</td>
+			<td>2D viewport coordinates like mouse input, such as for custom cursors or raycasting to select world objects.</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -133,7 +137,7 @@ The `Class.InputAction` instance has three built-in **events** to handle player 
 - `Class.InputAction.Released|Released` — This event fires only when the input action's `Class.InputAction.Type|Type` is set to `Enum.InputActionType|Bool`, and only when the state transitions from `true` to `false`.
 - `Class.InputAction.StateChanged|StateChanged` — This event fires for all input action types whenever the state changes, except if the state attempts to transition to the same state.
 
-Depending on the input action's `Class.InputAction.Type|Type` (`Enum.InputActionType|Bool`, `Enum.InputActionType|Direction1D`, `Enum.InputActionType|Direction2D`, or `Enum.InputActionType|Direction3D`) and the general input type coming from a child `Class.InputBinding` (key/button/tap, analog trigger, thumbstick, etc.), different values are returned to the `Class.InputAction.Pressed|Pressed`, `Class.InputAction.Released|Released`, and `Class.InputAction.StateChanged|StateChanged` event handlers. Examine the following tables to better understand the correlation.
+Depending on the input action's `Class.InputAction.Type|Type` (`Enum.InputActionType|Bool`, `Enum.InputActionType|Direction1D`, `Enum.InputActionType|Direction2D`, `Enum.InputActionType|Direction3D`, or `Enum.InputActionType|ViewportPosition`) and the general input type coming from a child `Class.InputBinding` (key/button/tap, analog trigger, thumbstick, etc.), different values are returned to the `Class.InputAction.Pressed|Pressed`, `Class.InputAction.Released|Released`, and `Class.InputAction.StateChanged|StateChanged` event handlers. Examine the following tables to better understand the correlation.
 
 <Tabs>
 <TabItem label="Bool">
@@ -231,6 +235,25 @@ The `Enum.InputActionType|Direction3D` type is best for 3D directional movement 
 <tr>
 <td>Boolean inputs from keyboard keys or basic mouse/gamepad buttons through the binding's `Class.InputBinding.Up|Up`, `Class.InputBinding.Down|Down`, `Class.InputBinding.Left|Left`, `Class.InputBinding.Right|Right`, `Class.InputBinding.Forward|Forward`, and `Class.InputBinding.Backward|Backward` properties.</td>
 <td><ul style={{marginBottom: -16}}><li>`Class.InputAction.StateChanged|StateChanged` event:<ul><li style={{marginBottom: -16}}>`Datatype.Vector3` of <Typography noWrap>`(0, 1, 0)`</Typography> (pressed) or <Typography noWrap>`(0, 0, 0)`</Typography> (released) through the `Class.InputBinding.Up|Up` property</li><li style={{marginBottom: -16}}>`Datatype.Vector3` of <Typography noWrap>`(0, -1, 0)`</Typography> (pressed) or <Typography noWrap>`(0, 0, 0)`</Typography> (released) through the `Class.InputBinding.Down|Down` property</li><li style={{marginBottom: -16}}>`Datatype.Vector3` of <Typography noWrap>`(-1, 0, 0)`</Typography> (pressed) or <Typography noWrap>`(0, 0, 0)`</Typography> (released) through the `Class.InputBinding.Left|Left` property</li><li style={{marginBottom: -16}}>`Datatype.Vector3` of <Typography noWrap>`(1, 0, 0)`</Typography> (pressed) or <Typography noWrap>`(0, 0, 0)`</Typography> (released) through the `Class.InputBinding.Right|Right` property</li><li style={{marginBottom: -16}}>`Datatype.Vector3` of <Typography noWrap>`(0, 0, 1)`</Typography> (pressed) or <Typography noWrap>`(0, 0, 0)`</Typography> (released) through the `Class.InputBinding.Forward|Forward` property</li><li>`Datatype.Vector3` of <Typography noWrap>`(0, 0, -1)`</Typography> (pressed) or <Typography noWrap>`(0, 0, 0)`</Typography> (released) through the `Class.InputBinding.Backward|Backward` property</li></ul></li></ul></td>
+</tr>
+</tbody>
+</table>
+
+</TabItem>
+<TabItem label="ViewportPosition">
+The `Enum.InputActionType|ViewportPosition` type is best for 2D absolute viewport coordinates of a pointer-like input such as mouse, which can be used for features like custom cursors or selecting 2D and 3D objects.
+
+<table>
+<thead>
+	<tr>
+		<th>Valid Input Types on `Class.InputBinding|InputBindings`</th>
+		<th>Returned to the `Class.InputAction` Event(s)</th>
+	</tr>
+</thead>
+<tbody>
+<tr>
+<td width="40%">Variable input amounts from pointer inputs such as a mouse (`Enum.KeyCode|MousePosition`).</td>
+<td><ul style={{marginBottom: -16}}><li>`Class.InputAction.StateChanged|StateChanged` event:<ul><li>`Datatype.Vector2` between <Typography noWrap>`(0, 0)`</Typography> and the maximum absolute <Typography noWrap>`(X, Y)`</Typography> pixel size in the viewport.</li></ul></li></ul></td>
 </tr>
 </tbody>
 </table>

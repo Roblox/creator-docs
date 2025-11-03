@@ -15,6 +15,7 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:
@@ -213,6 +214,37 @@ properties:
       This property must be less than or equal to
       `Class.InputBinding.PressedThreshold|PressedThreshold` or else it will be
       clamped to `Class.InputBinding.PressedThreshold|PressedThreshold`.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Input
+  - name: InputBinding.ResponseCurve
+    summary: |
+      Numerical value to configure scaling for more precise thumbstick aiming.
+    description: |
+      A numerical value to control the sensitivity of gamepad thumbstick input
+      by applying a quadratic response curve. Commonly used for camera control
+      to make small thumbstick inputs more precise, while ramping up quickly to
+      allow for large movements with higher magnitude input.
+
+      Ranges between `1` to `10`, with higher values providing a more intense
+      curve. Default is `1`, at which input is returned exactly as received.
+
+      Only applicable when the parent action's `Class.InputAction.Type|Type` is
+      `Enum.InputActionType|Direction2D` and the
+      `Class.InputBinding.KeyCode|KeyCode` is
+      `Enum.KeyCode.Thumbstick1|Thumbstick1` or
+      `Enum.KeyCode.Thumbstick2|Thumbstick2`.
     code_samples: []
     type: float
     tags: []

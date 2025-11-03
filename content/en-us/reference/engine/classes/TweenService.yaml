@@ -39,6 +39,7 @@ code_samples:
   - Tween-Pausing
 inherits:
   - Instance
+descendants: []
 tags:
   - NotCreatable
   - Service

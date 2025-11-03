@@ -27,6 +27,7 @@ description: |
 code_samples: []
 inherits:
   - Accoutrement
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

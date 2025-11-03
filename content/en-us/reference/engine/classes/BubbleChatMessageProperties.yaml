@@ -10,6 +10,7 @@ description: ''
 code_samples: []
 inherits:
   - TextChatMessageProperties
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

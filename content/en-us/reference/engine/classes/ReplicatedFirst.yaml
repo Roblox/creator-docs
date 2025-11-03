@@ -50,6 +50,7 @@ code_samples:
   - Custom-Loading-Screen
 inherits:
   - Instance
+descendants: []
 tags:
   - NotCreatable
   - Service

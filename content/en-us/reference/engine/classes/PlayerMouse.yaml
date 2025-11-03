@@ -27,6 +27,7 @@ code_samples:
   - PlayerMouse
 inherits:
   - Mouse
+descendants: []
 tags:
   - NotCreatable
 deprecation_message: ''

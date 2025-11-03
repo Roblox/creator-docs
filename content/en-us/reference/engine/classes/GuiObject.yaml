@@ -30,6 +30,16 @@ description: |
 code_samples: []
 inherits:
   - GuiBase2d
+descendants:
+  - CanvasGroup
+  - Frame
+  - GuiButton
+  - GuiLabel
+  - ScrollingFrame
+  - TextBox
+  - VideoDisplay
+  - VideoFrame
+  - ViewportFrame
 tags:
   - NotCreatable
   - NotBrowsable

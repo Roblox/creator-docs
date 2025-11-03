@@ -60,3 +60,11 @@ items:
     value: 3
     tags: []
     deprecation_message: ''
+  - name: ViewportPosition
+    summary: |
+      The `Class.InputAction` will receive `Datatype.Vector2` values
+      representing the absolute pixel (**X**, **Y**) coordinates of a pointer
+      input in the viewport.
+    value: 4
+    tags: []
+    deprecation_message: ''

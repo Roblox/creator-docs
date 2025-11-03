@@ -22,6 +22,7 @@ code_samples:
   - audio-wiring---text-to-speech
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

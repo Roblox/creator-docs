@@ -38,6 +38,7 @@ code_samples:
   - KeyframeSequence-Instantiation
 inherits:
   - AnimationClip
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

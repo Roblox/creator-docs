@@ -1547,6 +1547,62 @@ items:
     value: 1017
     tags: []
     deprecation_message: ''
+  - name: Thumbstick1Up
+    summary: |
+      Up vector on the gamepad primary thumbstick. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
+    value: 1018
+    tags: []
+    deprecation_message: ''
+  - name: Thumbstick1Down
+    summary: |
+      Down vector on the gamepad primary thumbstick. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
+    value: 1019
+    tags: []
+    deprecation_message: ''
+  - name: Thumbstick1Left
+    summary: |
+      Left vector on the gamepad primary thumbstick. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
+    value: 1020
+    tags: []
+    deprecation_message: ''
+  - name: Thumbstick1Right
+    summary: |
+      Right vector on the gamepad primary thumbstick. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
+    value: 1021
+    tags: []
+    deprecation_message: ''
+  - name: Thumbstick2Up
+    summary: |
+      Up vector on the gamepad secondary thumbstick. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
+    value: 1022
+    tags: []
+    deprecation_message: ''
+  - name: Thumbstick2Down
+    summary: |
+      Down vector on the gamepad secondary thumbstick. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
+    value: 1023
+    tags: []
+    deprecation_message: ''
+  - name: Thumbstick2Left
+    summary: |
+      Left vector on the gamepad secondary thumbstick. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
+    value: 1024
+    tags: []
+    deprecation_message: ''
+  - name: Thumbstick2Right
+    summary: |
+      Right vector on the gamepad secondary thumbstick. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
+    value: 1025
+    tags: []
+    deprecation_message: ''
   - name: MouseLeftButton
     summary: ''
     value: 1026
@@ -1590,3 +1646,10 @@ items:
       - Deprecated
     deprecation_message: |
       This enum is deprecated and flagged for removal.
+  - name: MousePosition
+    summary: |
+      The position of a mouse in the viewport. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
+    value: 1033
+    tags: []
+    deprecation_message: ''

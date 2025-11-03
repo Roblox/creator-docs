@@ -27,6 +27,8 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - StarterCharacterScripts
 tags:
   - NotCreatable
 deprecation_message: ''

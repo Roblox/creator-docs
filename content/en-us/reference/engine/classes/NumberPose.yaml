@@ -37,6 +37,7 @@ description: |
 code_samples: []
 inherits:
   - PoseBase
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

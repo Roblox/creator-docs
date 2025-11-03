@@ -12,6 +12,8 @@ description: |
 code_samples: []
 inherits:
   - Pages
+descendants:
+  - EmotesPages
 tags:
   - NotCreatable
   - NotReplicated

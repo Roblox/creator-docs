@@ -29,6 +29,7 @@ code_samples:
   - OrderedDataStore-Basics
 inherits:
   - GlobalDataStore
+descendants: []
 tags:
   - NotCreatable
   - NotReplicated

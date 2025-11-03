@@ -36,6 +36,7 @@ code_samples:
   - creating-a-pluginaction-and-pluginmenu
 inherits:
   - Instance
+descendants: []
 tags:
   - NotCreatable
   - NotReplicated

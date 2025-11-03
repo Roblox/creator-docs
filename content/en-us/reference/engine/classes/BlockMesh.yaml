@@ -35,6 +35,7 @@ code_samples:
   - BlockMesh-Instantiation
 inherits:
   - BevelMesh
+descendants: []
 tags: []
 deprecation_message: ''
 properties: []

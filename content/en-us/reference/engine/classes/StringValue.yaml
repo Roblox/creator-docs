@@ -23,6 +23,7 @@ code_samples:
   - Changed-Event
 inherits:
   - ValueBase
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

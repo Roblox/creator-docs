@@ -18,6 +18,7 @@ description: |
 code_samples: []
 inherits:
   - HandlesBase
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

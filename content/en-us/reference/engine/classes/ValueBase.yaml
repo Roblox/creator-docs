@@ -12,6 +12,20 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - BinaryStringValue
+  - BoolValue
+  - BrickColorValue
+  - CFrameValue
+  - Color3Value
+  - DoubleConstrainedValue
+  - IntConstrainedValue
+  - IntValue
+  - NumberValue
+  - ObjectValue
+  - RayValue
+  - StringValue
+  - Vector3Value
 tags:
   - NotCreatable
 deprecation_message: ''

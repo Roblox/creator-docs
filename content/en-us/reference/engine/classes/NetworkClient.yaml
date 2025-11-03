@@ -11,6 +11,7 @@ description: |
 code_samples: []
 inherits:
   - NetworkPeer
+descendants: []
 tags:
   - NotCreatable
   - Service

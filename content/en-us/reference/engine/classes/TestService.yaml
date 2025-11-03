@@ -198,6 +198,7 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants: []
 tags:
   - Service
 deprecation_message: ''

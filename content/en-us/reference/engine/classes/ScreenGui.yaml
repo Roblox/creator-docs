@@ -30,6 +30,8 @@ description: |
 code_samples: []
 inherits:
   - LayerCollector
+descendants:
+  - GuiMain
 tags: []
 deprecation_message: ''
 properties:

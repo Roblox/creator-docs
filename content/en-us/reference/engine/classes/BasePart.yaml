@@ -48,6 +48,13 @@ description: |
 code_samples: []
 inherits:
   - PVInstance
+descendants:
+  - CornerWedgePart
+  - FormFactorPart
+  - Terrain
+  - TriangleMeshPart
+  - TrussPart
+  - VehicleSeat
 tags:
   - NotCreatable
   - NotBrowsable

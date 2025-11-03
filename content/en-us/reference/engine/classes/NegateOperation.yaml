@@ -23,6 +23,7 @@ description: |
 code_samples: []
 inherits:
   - PartOperation
+descendants: []
 tags: []
 deprecation_message: ''
 properties: []

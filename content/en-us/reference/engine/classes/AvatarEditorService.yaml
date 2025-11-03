@@ -35,6 +35,7 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants: []
 tags:
   - NotCreatable
   - Service

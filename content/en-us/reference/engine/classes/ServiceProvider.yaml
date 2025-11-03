@@ -16,6 +16,9 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - DataModel
+  - GenericSettings
 tags:
   - NotCreatable
   - NotBrowsable

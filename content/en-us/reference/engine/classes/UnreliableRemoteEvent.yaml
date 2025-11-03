@@ -54,6 +54,7 @@ description: |
 code_samples: []
 inherits:
   - BaseRemoteEvent
+descendants: []
 tags: []
 deprecation_message: ''
 properties: []

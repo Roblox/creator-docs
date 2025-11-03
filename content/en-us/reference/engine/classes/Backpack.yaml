@@ -44,6 +44,7 @@ code_samples:
   - Backpack-Give-Tool
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties: []

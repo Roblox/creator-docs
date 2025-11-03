@@ -10,6 +10,8 @@ description: ''
 code_samples: []
 inherits:
   - SensorBase
+descendants:
+  - ControllerPartSensor
 tags:
   - NotCreatable
 deprecation_message: ''

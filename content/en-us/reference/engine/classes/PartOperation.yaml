@@ -13,6 +13,10 @@ description: |
 code_samples: []
 inherits:
   - TriangleMeshPart
+descendants:
+  - IntersectOperation
+  - NegateOperation
+  - UnionOperation
 tags: []
 deprecation_message: ''
 properties:

@@ -230,8 +230,8 @@ In this example, the experience has a localization table with the following entr
   </tr>
   <tr>
     <td>Key_Prize_2</td>
-    <td>$&#123;AmountCash:fixed} cash and &#123;NumJewels:int} jewels</td>
-    <td>$&#123;AmountCash:fixed} dinero y &#123;NumJewels:int} joyas</td>
+    <td>&#36;&#123;AmountCash:fixed} cash and &#123;NumJewels:int} jewels</td>
+    <td>&#36;&#123;AmountCash:fixed} dinero y &#123;NumJewels:int} joyas</td>
   </tr>
 </tbody>
 </table>

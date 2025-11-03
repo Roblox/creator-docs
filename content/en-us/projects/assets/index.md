@@ -3,7 +3,7 @@ title: Assets
 description: An overview of how assets work on the platform.
 ---
 
-Almost everything in Roblox is represented as a cloud-based asset with a unique corresponding ID. This ID is typically in the form of `rbxassetid://[ID]`, which gets applied to various instances as a property that's appropriate for that particular asset type. For example, `Class.Texture`, `Class.MeshPart`, and `Class.Sound` instances reference image, mesh, and audio assets through their respective `Class.Texture.TextureID|TextureID`, `Class.MeshPart.MeshID|MeshID`, and `Class.Sound.SoundID|SoundID` properties.
+Almost everything in Roblox is represented as a cloud-based asset with a unique corresponding ID. This ID is typically in the form of `rbxassetid://[ID]`, which gets applied to various instances as a property that's appropriate for that particular asset type. For example, `Class.Texture`, `Class.MeshPart`, and `Class.AudioPlayer` instances reference image, mesh, and audio assets through their respective `Class.Texture.ColorMapContent|ColorMapContent`, `Class.MeshPart.MeshId|MeshId`, and `Class.AudioPlayer.Asset|Asset` properties.
 
 <GridContainer numColumns="3">
 	<figure>
@@ -114,7 +114,7 @@ The Roblox Engine supports several custom URI schemes for referencing content st
 
 ### rbxassetid
 
-`rbxassetid` points to a user-uploaded asset on Roblox. This format is a common standard for properties such as `Class.Decal.Texture`, `Class.ParticleEmitter.Texture`, and `Class.Sound.SoundId`.
+`rbxassetid` points to a user-uploaded asset on Roblox. This format is a common standard for properties such as `Class.Decal.ColorMapContent`, `Class.ParticleEmitter.Texture`, and `Class.AudioPlayer.Asset`.
 
 <GridContainer numColumns="3">
   <figure>

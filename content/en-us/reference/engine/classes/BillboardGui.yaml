@@ -51,6 +51,7 @@ description: |
 code_samples: []
 inherits:
   - LayerCollector
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

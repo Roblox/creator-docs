@@ -49,6 +49,7 @@ code_samples:
   - listening-to-keyframemarkers
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:
