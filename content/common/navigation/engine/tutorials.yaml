@@ -57,6 +57,8 @@ navigation:
         path: /tutorials/use-case-tutorials/audio/add-voice-chat
       - title: Text-to-speech
         path: /tutorials/use-case-tutorials/audio/add-text-to-speech
+      - title: Speech-to-text
+        path: /tutorials/use-case-tutorials/audio/speech-to-text
   - title: Lighting
     section:
       - title: Indoor environments

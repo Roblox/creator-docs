@@ -257,6 +257,22 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+ <img src="../../assets/tutorials/UCT-Overview/Voice-Chat.png" />
+ </div>
+   <Typography variant='body1' >Add voice chat</Typography>
+     <div style={{marginTop:16}}>
+       <a underline="none" href="./audio/add-voice-chat.md">
+       <Button variant="contained" color="secondary" size='large'
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
+       </a>
+     </div>
+ </Grid>
+ </Grid>
+
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+ <div class="container"
+ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Text-to-Speech.png" />
  </div>
    <Typography variant='body1' >Add text-to-speech</Typography>
@@ -273,11 +289,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
- <img src="../../assets/tutorials/UCT-Overview/Voice-Chat.png" />
+ <img src="../../assets/tutorials/UCT-Overview/Text-to-Speech.png" />
  </div>
-   <Typography variant='body1' >Add voice chat</Typography>
+   <Typography variant='body1' >Add speech-to-text</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./audio/add-voice-chat.md">
+       <a underline="none" href="./audio/speech-to-text.md">
        <Button variant="contained" color="secondary" size='large'
        style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
@@ -677,22 +693,6 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
      </div>
  </Grid>
  </Grid>
-
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
- <div class="container"
- style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
- <img src="../../assets/tutorials/UCT-Overview/Saving-Data.png" />
- </div>
-   <Typography variant='body1' >Save data</Typography>
-     <div style={{marginTop:16}}>
-       <a underline="none" href="../../tutorials/use-case-tutorials/data-storage/save-player-data.md">
-       <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
-       </a>
-     </div>
- </Grid>
- </Grid>
 </Grid>
 
 <BaseAccordion>
@@ -791,6 +791,58 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
 - [Mouse and keyboard input](../../input/mouse-and-keyboard.md)
 - [Mobile input](../../input/mobile.md)
 - [Gamepad input](../../input/gamepad.md)
+
+</AccordionDetails>
+</BaseAccordion>
+
+<Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Data storage</Typography>
+
+<div style={{marginBottom: 24}}>
+**Data stores** are a service you can use to save and load persistent player data across different game sessions. They store important information, like a player's progress or inventory, and allow you to retrieve it for the player next time they join your experience. Without data stores, your players would lose all of their progress every time they left the game.
+</div>
+
+<Grid container spacing={2} style={{marginBottom: 24}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+ <div class="container"
+ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+ <img src="../../assets/tutorials/UCT-Overview/Score-Bars.png" />
+ </div>
+   <Typography variant='body1' >Save player data</Typography>
+     <div style={{marginTop:16}}>
+       <a underline="none" href="../../tutorials/use-case-tutorials/data-storage/save-player-data.md">
+       <Button variant="contained" color="secondary" size='large'
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
+       </a>
+     </div>
+ </Grid>
+ </Grid>
+
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+ <div class="container"
+ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+ <img src="../../assets/tutorials/UCT-Overview/Saving-Data.png" />
+ </div>
+   <Typography variant='body1' >Create a custom leaderboard</Typography>
+     <div style={{marginTop:16}}>
+       <a underline="none" href="../../tutorials/use-case-tutorials/data-storage/create-leaderboard.md">
+       <Button variant="contained" color="secondary" size='large'
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
+       </a>
+     </div>
+ </Grid>
+ </Grid>
+</Grid>
+
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant="h5">Related docs</Typography>
+</AccordionSummary>
+<AccordionDetails>
+
+- [Data stores vs memory stores](../../cloud-services/data-stores-vs-memory-stores.md)
+- [Data stores](../../cloud-services/data-stores/index.md)
 
 </AccordionDetails>
 </BaseAccordion>

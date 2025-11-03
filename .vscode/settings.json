@@ -550,5 +550,6 @@
     "worldstep",
     "worldsteps",
     "yieldable"
-  ]
+  ],
+  "git.ignoreLimitWarning": true
 }
