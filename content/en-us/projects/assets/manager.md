@@ -64,7 +64,7 @@ Behavior of dragging-and-dropping into the 3D viewport varies by asset type:
 <tbody>
   <tr>
     <td>**Image**</td>
-    <td>If hovering over a valid parent object like a `Class.BasePart`, creates a new `Class.Decal` inside that parent with its `Class.Decal.Texture|Texture` property preset to the asset ID.</td>
+    <td>If hovering over a valid parent object like a `Class.BasePart`, creates a new `Class.Decal` inside that parent with its `Class.Decal.ColorMapContent|ColorMapContent` property preset to the asset ID.</td>
   </tr>
   <tr>
     <td>**Mesh**</td>

@@ -192,7 +192,7 @@ Note that each property doesn't follow the actual time of day, and they will not
 
 ### GeographicLatitude
 
-The `Class.Lighting.GeographicLatitude|GeographicLatitude` property represents the geographic latitude in degrees. Note that while this property changes the position of the sun and moon, it does not change the [`ClockTime`](#clocktime-and-timeofday) and [`TimeOfDay`](#clocktime-and-timeofday) properties.
+The `Class.Lighting.GeographicLatitude|GeographicLatitude` property represents the geographic latitude in degrees. Note that while this property changes the position of the sun and moon, it does not change the `Class.Lighting.ClockTime|ClockTime` and `Class.Lighting.TimeOfDay|TimeOfDay` properties.
 
 <video src="../assets/lighting-and-effects/lighting-properties/Geographic-Latitude.mp4" controls width="800" alt="Video showing GeographicLatitude property changing across 360 degrees"></video>
 

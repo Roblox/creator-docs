@@ -10,7 +10,7 @@
       "post": {
         "tags": ["SecretsStoreApiService"],
         "summary": "Create Secret",
-        "description": "Creates a new secret. A maximum of 500 secrets per universe is allowed.\n\nOnly the owner of the universe can create secrets. For group-owned universes, only the group owner can create secrets.\n\nTo encrypt the secret:\n1. Get the public key using the Get Public Key endpoint\n2. Encrypt your secret using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
+        "description": "Creates a new secret. A maximum of 500 secrets per universe is allowed.\n            \nOnly the owner of the universe can create secrets. For group-owned universes, only the group owner or authorized\nmembers can create secrets.\n            \nTo encrypt the secret:\n1. Get the public key using the Get Public Key endpoint\n2. Encrypt your secret using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
         "parameters": [
           {
             "name": "universeId",
@@ -107,7 +107,7 @@
       "get": {
         "tags": ["SecretsStoreApiService"],
         "summary": "List Secrets",
-        "description": "Lists all secrets defined for a universe.\nSecret content is not returned for security reasons - only metadata such as ID, domain, creation and update timestamps are included.\n\nOnly the owner of the universe can list secrets. For group-owned universes, only the group owner can list secrets.",
+        "description": "Lists all secrets defined for a universe.\nSecret content is not returned for security reasons - only metadata such as ID, domain, creation and update timestamps are included.\n\nOnly the owner of the universe can list secrets. For group-owned universes, only the group owner or authorized\nmembers can list secrets.",
         "parameters": [
           {
             "name": "universeId",
@@ -204,7 +204,7 @@
       "patch": {
         "tags": ["SecretsStoreApiService"],
         "summary": "Update Secret",
-        "description": "Updates an existing secret.\n\nOnly the owner of the universe can update secrets. For group-owned universes, only the group owner can update secrets.\n\nOnly the secret content, key_id, and domain can be updated - the secret ID cannot be changed.\n\nTo encrypt the updated secret:\n1. Get the current public key using the GetPublicKey endpoint\n2. Encrypt your new secret content using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
+        "description": "Updates an existing secret.\n\nOnly the owner of the universe can update secrets. For group-owned universes, only the group owner or authorized\nmembers can update secrets.\n\nOnly the secret content, key_id, and domain can be updated - the secret ID cannot be changed.\n\nTo encrypt the updated secret:\n1. Get the current public key using the GetPublicKey endpoint\n2. Encrypt your new secret content using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
         "parameters": [
           {
             "name": "universeId",
@@ -310,7 +310,7 @@
       "delete": {
         "tags": ["SecretsStoreApiService"],
         "summary": "Delete Secret",
-        "description": "Permanently deletes a secret from a universe.\n\nOnly the owner of the universe can delete secrets. For group-owned universes, only the group owner can delete secrets.\n\nThis operation is irreversible. Make sure you no longer need the secret before deleting it.",
+        "description": "Permanently deletes a secret from a universe.\n\nOnly the owner of the universe can delete secrets. For group-owned universes, only the group owner or authorized\nmembers can delete secrets.\n\nThis operation is irreversible. Make sure you no longer need the secret before deleting it.",
         "parameters": [
           {
             "name": "universeId",
@@ -401,7 +401,7 @@
       "get": {
         "tags": ["SecretsStoreApiService"],
         "summary": "Get Public Key",
-        "description": "Retrieves the public key for a universe. You need this key to encrypt secret content \nbefore sending it to Roblox.\n\nOnly the owner of the universe can retrieve the public key. For group-owned universes, only the group owner can retrieve the public key.\n\nThe secret id field is static and always returns \"public-key\".\n\nThe returned public key in the secret field is universe-specific and derived from a master key using the universe ID.\nUse this key with LibSodium sealed box encryption to encrypt your secret content before \ncreating or updating secrets.\n\nInclude the key_id from the public key response in the request to create or update a secret.",
+        "description": "Retrieves the public key for a universe. You need this key to encrypt secret content \nbefore sending it to Roblox.\n\nOnly the owner of the universe can retrieve the public key. For group-owned universes, only the group owner or\nauthorized members can retrieve the public key.\n\nThe secret id field is static and always returns \"public-key\".\n\nThe returned public key in the secret field is universe-specific and derived from a master key using the universe ID.\nUse this key with LibSodium sealed box encryption to encrypt your secret content before \ncreating or updating secrets.\n\nInclude the key_id from the public key response in the request to create or update a secret.",
         "parameters": [
           {
             "name": "universeId",

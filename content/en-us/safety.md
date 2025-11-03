@@ -30,7 +30,7 @@ If you want to gate parts of your experience to identity-verified players, you c
 
 ### Use text filter on all user communications
 
-You should [filter](./ui/text-filtering.md) all user-generated text that is visible to other players. This includes custom chat, signs, pet names, or anything a player can type. The `Class.TextService` is essential for this. Use `Class.TextService.FilterStringAsync()` to prevent inappropriate language and the sharing of personally identifiable information.
+You should [filter](./ui/text-filtering.md) all user-generated text that is visible to other players. This includes signs, pet names, or anything a player can type. The `Class.TextService` is essential for this. Use `Class.TextService.FilterStringAsync()` to prevent inappropriate language and the sharing of personally identifiable information.
 
 Roblox actively moderates the content of experiences to make sure they meet Community Standards. If Roblox receives reports or automatically detects that your experience doesn't apply text filtering, then the system may remove the experience until you add filtering.
 

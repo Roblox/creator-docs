@@ -1886,24 +1886,6 @@ properties:
     capabilities:
       - Animation
 methods:
-  - name: HumanoidRigDescription:Automap
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: character
-        type: Instance
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Safe
-    capabilities:
-      - Animation
   - name: HumanoidRigDescription:GetJointFromName
     summary: ''
     description: ''

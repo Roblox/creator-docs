@@ -31,7 +31,7 @@ While Automatic Skinning Transfer often works better than manual skinning, there
 
 ### Special skinning transfer joints
 
-Automatic skinning transfer may not work well for certain detailed accessory types, like eyelashes. To get a more controlled skinning transfer result, you have the option to skin accessory geometry to one of two specially named joints: `RBX_Leader` and `RBX_Follower`.
+Automatic skinning transfer may not work well for certain detailed accessory types, like eyelashes or eyebrows. To get a more controlled skinning transfer result, you have the option to skin accessory geometry to one of two specially named joints: `RBX_Leader` and `RBX_Follower`.
 
 <Alert severity = 'info'>
 It's best to create these joints/bones directly beneath the Root joint in your hierarchy for simplicity and clarity. These joints/bones won't be detected as a part of your character model's R15 rig on import.
@@ -49,6 +49,19 @@ For eyelashes, good candidates for RBX_Leader are the ones that are intended to 
 <figure>
   <img alt="Screenshot of vertices assigned as follower." src="../../assets/avatar/dynamic-heads/creating-face-accessories/Vertices-Group-Follower.png" />
   <figcaption>Vertices of an eyelash assigned to a RBX_Follower bone vertex group.</figcaption>
+</figure>
+</GridContainer>
+
+For eyebrows, good candidates for RBX_Leader are vertices along the edges that span the browline.
+
+<GridContainer numColumns="2">
+<figure>
+  <img alt="Screenshot of vertices assigned as leader." src="../../assets/avatar/dynamic-heads/creating-face-accessories/Eyebrows-Follower-Vertices.png" />
+  <figcaption>Vertices of an eyebrow assigned to a RBX_Leader bone vertex group.</figcaption>
+</figure>
+<figure>
+  <img alt="Screenshot of vertices assigned as follower." src="../../assets/avatar/dynamic-heads/creating-face-accessories/Eyebrows-Leader-Vertices.png" />
+  <figcaption>Vertices of an eyebrow assigned to a RBX_Follower bone vertex group.</figcaption>
 </figure>
 </GridContainer>
 

@@ -44177,7 +44177,7 @@
       "post": {
         "tags": ["Groups"],
         "summary": "Creates a new group.",
-        "description": "This endpoint will charge Robux for the group purchase.\r\nHttp status code 413 is thrown when the group icon file size is too large.",
+        "description": "This endpoint will charge Robux for the group purchase.\r\nAccepts \"icon\" and \"coverPhoto\" in Files object. Defaults to first file if \"icon\" is not present.\r\nHttp status code 413 is thrown when the group icon file size is too large.",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -44226,7 +44226,7 @@
             }
           },
           "400": {
-            "description": "13: The name is invalid.\r\n15: The group icon is invalid.\r\n16: The group icon is missing from the request.\r\n18: The description is too long.\r\n19: The name is too long.\r\n20: The name has been taken."
+            "description": "13: The name is invalid.\r\n15: The group icon is invalid.\r\n16: The group icon is missing from the request.\r\n18: The description is too long.\r\n19: The name is too long.\r\n20: The name has been taken.\r\n46: Invalid file format or dimensions for group cover photo."
           },
           "401": {
             "description": "0: Authorization has been denied for this request."
@@ -48464,7 +48464,6 @@
     },
     "/legacy-localization-tables/v1/localization-table/tables/{tableId}": {
       "get": {
-        "tags": ["Localization"],
         "summary": "Get table information by the id of the table.",
         "parameters": [
           {
@@ -48529,10 +48528,7 @@
           {
             "name": "legacy-universe:manage"
           }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_legacy_localization_tables_v1_localization_table_tables__tableId_"
-        }
+        ]
       },
       "patch": {
         "tags": ["Localization"],
@@ -53911,7 +53907,6 @@
     },
     "/v1/trades/{tradeStatusType}": {
       "get": {
-        "tags": ["Trades"],
         "summary": "Fetches a list of the authenticated user's trades.",
         "parameters": [
           {
@@ -53991,10 +53986,7 @@
           {
             "roblox-legacy-cookie": []
           }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/features/trades#/default/get_v1_trades__tradeStatusType_"
-        }
+        ]
       }
     },
     "/v1/trades/{tradeStatusType}/count": {
@@ -60237,6 +60229,100 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/GamePasses_ListGamePassConfigsByUniverse"
         }
+      }
+    },
+    "/asset-permissions-api/v1/assets/permissions#AssetPermissionsApi": {
+      "patch": {
+        "summary": "Grant a subject permission to multiple assets.\n            \nAuthorization is required to grant permissions to the subject and asset IDs in the request.",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchGrantPermissionsRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchGrantPermissionsRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchGrantPermissionsRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchGrantPermissionsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BatchGrantPermissionsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetPermissionsApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetPermissionsApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetPermissionsApi.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "asset-permissions:write"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     }
   },
@@ -68083,6 +68169,13 @@
               "$ref": "#/components/schemas/Roblox.Catalog.Api.BundleItemDetailModelV2"
             }
           },
+          "timedOptions": {
+            "description": "The timed options for the item.\r\nTODO(klee): Will be moved to CatalogSearchDetailedResponseItem when we support timed options within game engine.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Catalog.Api.TimedOption"
+            }
+          },
           "id": {
             "format": "int64",
             "description": "The Item Id.",
@@ -68568,6 +68661,27 @@
           "shortName": {
             "description": "Subcategory short name.",
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Catalog.Api.TimedOption": {
+        "description": "Defines a timed option for a catalog item.",
+        "type": "object",
+        "properties": {
+          "days": {
+            "format": "int32",
+            "description": "The days for the timed option.",
+            "type": "integer"
+          },
+          "price": {
+            "format": "int64",
+            "description": "The price for the timed option.",
+            "type": "integer"
+          },
+          "selected": {
+            "description": "To indicate if this option is selected by the client.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -74184,6 +74298,20 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Groups.Api.GroupChannelPermissionsModel": {
+        "description": "A model for communication channel permissions.",
+        "type": "object",
+        "properties": {
+          "channelId": {
+            "description": "Group Channel Id",
+            "type": "string"
+          },
+          "groupForumsPermissions": {
+            "$ref": "#/components/schemas/Roblox.Groups.Api.GroupForumsPermissionsModel"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Groups.Api.GroupConfigurationDisplayOptionsResponse": {
         "description": "A response model for group configuration",
         "type": "object",
@@ -74229,6 +74357,15 @@
             "format": "int32",
             "description": "The maximum file size of the group icon in megabytes",
             "type": "integer"
+          },
+          "coverPhotoMaxFileSizeMb": {
+            "format": "int32",
+            "description": "The maximum file size of the group cover photo in megabytes",
+            "type": "integer"
+          },
+          "validCoverPhotoDimensions": {
+            "description": "The valid dimensions of the group cover photo in CSV format",
+            "type": "string"
           },
           "cost": {
             "format": "int64",
@@ -74426,6 +74563,10 @@
           "viewAuditLogs": {
             "description": "View audit logs permission",
             "type": "boolean"
+          },
+          "bypassSlowmode": {
+            "description": "Bypass slowmode permission.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -74479,6 +74620,13 @@
           },
           "permissions": {
             "$ref": "#/components/schemas/Roblox.Groups.Api.GroupPermissionsModel"
+          },
+          "channelPermissions": {
+            "description": "The users's permissions for each communication channel in the group",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Groups.Api.GroupChannelPermissionsModel"
+            }
           },
           "areGroupGamesVisible": {
             "description": "Whether group games are visible",
@@ -75526,6 +75674,9 @@
                 "type": "boolean"
               },
               "ViewKeywordBlockList": {
+                "type": "boolean"
+              },
+              "BypassSlowmode": {
                 "type": "boolean"
               }
             },
@@ -81760,7 +81911,7 @@
             "format": "int64"
           },
           "code": {
-            "$ref": "#/components/schemas/AssetPermissions.ErrorCode"
+            "$ref": "#/components/schemas/AssetPermissionsApi.ErrorCode"
           }
         },
         "additionalProperties": false,
@@ -81937,6 +82088,47 @@
         ],
         "type": "string",
         "description": "Enum representing enabled features for this particular game pass."
+      },
+      "AssetPermissionsApi.Error": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/AssetPermissionsApi.ErrorCode"
+          },
+          "message": {
+            "type": "string",
+            "description": "The human readable error message.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The error object for results."
+      },
+      "AssetPermissionsApi.ErrorCode": {
+        "enum": [
+          "UnknownError",
+          "InvalidRequest",
+          "AssetNotFound",
+          "CannotManageAsset",
+          "PublicAssetCannotBeGrantedTo",
+          "CannotManageSubject",
+          "SubjectNotFound",
+          "AssetTypeNotEnabled",
+          "PermissionLimitReached",
+          "DependenciesLimitReached"
+        ],
+        "type": "string",
+        "description": "Enums for customized error code in error responses."
+      },
+      "AssetPermissionsApi.ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/AssetPermissionsApi.Error"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The error object for responses."
       }
     },
     "requestBodies": {
@@ -82307,7 +82499,167 @@
       "x-roblox-tag-info": {
         "path": "accounts",
         "content": "Lists all HTTP APIs for working with accounts, including legacy APIs for account information, settings, authentication, games, inventory, notifications, private messages, and two-step verification.",
-        "ordering": []
+        "ordering": [
+          "/v1/birthdate",
+          "/v1/description",
+          "/v1/description",
+          "/v1/email/verify",
+          "/v1/gender",
+          "/v1/gender",
+          "/v1/metadata",
+          "/v1/phone",
+          "/v1/phone",
+          "/v1/phone/delete",
+          "/v1/phone/resend",
+          "/v1/phone/verify",
+          "/v1/promotion-channels",
+          "/v1/promotion-channels",
+          "/v1/star-code-affiliates",
+          "/v1/star-code-affiliates",
+          "/v1/star-code-affiliates",
+          "/v1/users/{userId}/promotion-channels",
+          "/v1/users/{userId}/roblox-badges",
+          "/v1/xbox-live/consecutive-login-days",
+          "/v1/account/settings/account-country",
+          "/v1/account/settings/account-country",
+          "/v1/account/settings/metadata",
+          "/v1/email",
+          "/v1/email",
+          "/v1/email",
+          "/v1/email/verify#AccountSettingsApi",
+          "/v1/themes/{consumerType}/{consumerId}",
+          "/v1/themes/{consumerType}/{consumerId}",
+          "/v1/themes/types",
+          "/v1/trade-privacy",
+          "/v1/trade-privacy",
+          "/v1/trade-value",
+          "/v1/trade-value",
+          "/v1/account/pin",
+          "/v1/account/pin",
+          "/v1/account/pin",
+          "/v1/account/pin",
+          "/v1/account/pin/lock",
+          "/v1/account/pin/unlock",
+          "/v1/auth/metadata",
+          "/v1/client-assertion",
+          "/v1/external/{identityProviderId}/sso/oauth/callback",
+          "/v1/external/{identityProviderId}/sso/oauth/init",
+          "/v1/external/access",
+          "/v1/external/login",
+          "/v1/external/loginAndLink",
+          "/v1/external/signup",
+          "/v1/external/unlink",
+          "/v1/identity-verification/login",
+          "/v1/identity/initialize-login",
+          "/v1/login",
+          "/v1/login/linked",
+          "/v1/logout",
+          "/v1/logoutfromallsessionsandreauthenticate",
+          "/v1/metadata#AuthenticationApi",
+          "/v1/passkey/DeleteCredentialBatch",
+          "/v1/passkey/finish-preauth-registration",
+          "/v1/passkey/FinishRegistration",
+          "/v1/passkey/ListCredentials",
+          "/v1/passkey/start-authentication-by-user",
+          "/v1/passkey/start-preauth-registration",
+          "/v1/passkey/StartAuthentication",
+          "/v1/passkey/StartRegistration",
+          "/v1/passwords/validate",
+          "/v1/passwords/validate",
+          "/v1/recovery/metadata",
+          "/v1/revert/account",
+          "/v1/revert/account",
+          "/v1/session/refresh",
+          "/v1/signup",
+          "/v1/signup/linked",
+          "/v1/social/{provider}/disconnect",
+          "/v1/social/connected-providers",
+          "/v1/user/passwords/change",
+          "/v1/username",
+          "/v1/usernames",
+          "/v1/usernames/recover",
+          "/v1/usernames/validate",
+          "/v1/usernames/validate",
+          "/v1/validators/email",
+          "/v1/validators/recommendedUsernameFromDisplayName",
+          "/v1/validators/recommendedUsernameFromDisplayName",
+          "/v1/validators/username",
+          "/v1/validators/username",
+          "/v1/xbox/connection",
+          "/v1/xbox/disconnect",
+          "/v1/xbox/get-login-consecutive-days",
+          "/v1/xbox/translate",
+          "/v2/auth/metadata",
+          "/v2/identity-verification/login",
+          "/v2/login",
+          "/v2/login/linked",
+          "/v2/logout",
+          "/v2/logoutfromallsessionsandreauthenticate",
+          "/v2/metadata",
+          "/v2/passwords/current-status",
+          "/v2/passwords/reset",
+          "/v2/passwords/reset",
+          "/v2/passwords/reset/send",
+          "/v2/passwords/reset/verify",
+          "/v2/passwords/validate",
+          "/v2/passwords/validate",
+          "/v2/recovery/metadata",
+          "/v2/revert/account",
+          "/v2/revert/account",
+          "/v2/session/refresh",
+          "/v2/signup",
+          "/v2/signup/linked",
+          "/v2/user/passwords/change",
+          "/v2/username",
+          "/v2/usernames",
+          "/v2/usernames/recover",
+          "/v2/usernames/validate",
+          "/v2/usernames/validate",
+          "/v3/logout",
+          "/v3/users/{userId}/two-step-verification/login",
+          "/v1/games/multiget-playability-status",
+          "/v1/users/{userId}/can-view-inventory",
+          "/v2/push-notifications/get-destinations",
+          "/v1/announcements",
+          "/v1/announcements/metadata",
+          "/v1/messages",
+          "/v1/messages/{messageId}",
+          "/v1/messages/archive",
+          "/v1/messages/mark-read",
+          "/v1/messages/mark-unread",
+          "/v1/messages/unarchive",
+          "/v1/messages/unread/count",
+          "/v1/metadata#TwoStepVerificationApi",
+          "/v1/users/{userId}/challenges/authenticator/verify",
+          "/v1/users/{userId}/challenges/cross-device/retract",
+          "/v1/users/{userId}/challenges/cross-device/retry",
+          "/v1/users/{userId}/challenges/cross-device/verify",
+          "/v1/users/{userId}/challenges/email/send-code",
+          "/v1/users/{userId}/challenges/email/verify",
+          "/v1/users/{userId}/challenges/passkey/verify-finish",
+          "/v1/users/{userId}/challenges/passkey/verify-start",
+          "/v1/users/{userId}/challenges/password/verify",
+          "/v1/users/{userId}/challenges/recovery-codes/verify",
+          "/v1/users/{userId}/challenges/security-key/verify-finish",
+          "/v1/users/{userId}/challenges/security-key/verify-start",
+          "/v1/users/{userId}/challenges/sms/send-code",
+          "/v1/users/{userId}/challenges/sms/verify",
+          "/v1/users/{userId}/configuration",
+          "/v1/users/{userId}/configuration/authenticator/disable",
+          "/v1/users/{userId}/configuration/authenticator/enable",
+          "/v1/users/{userId}/configuration/authenticator/enable-verify",
+          "/v1/users/{userId}/configuration/email/disable",
+          "/v1/users/{userId}/configuration/email/enable",
+          "/v1/users/{userId}/configuration/security-key/disable",
+          "/v1/users/{userId}/configuration/security-key/enable",
+          "/v1/users/{userId}/configuration/security-key/enable-verify",
+          "/v1/users/{userId}/configuration/security-key/list",
+          "/v1/users/{userId}/configuration/sms/disable",
+          "/v1/users/{userId}/configuration/sms/enable",
+          "/v1/users/{userId}/recovery-codes",
+          "/v1/users/{userId}/recovery-codes/clear",
+          "/v1/users/{userId}/recovery-codes/regenerate"
+        ]
       }
     },
     {
@@ -82317,17 +82669,82 @@
         "path": "assets",
         "content": "Lists all HTTP APIs for working with assets, such as creating, retrieving, updating, and archiving them.",
         "ordering": [
-          "Assets_CreateAsset",
-          "Assets_GetAsset",
-          "Assets_UpdateAsset",
-          "Assets_ArchiveAsset",
-          "Assets_RestoreAsset",
-          "listAssetVersions",
-          "Assets_RollbackAssetVersion",
-          "Assets_GetAssetVersion",
-          "Assets_GetOperation",
-          "Cloud_GenerateSpeechAsset",
-          "Cloud_ListAssetQuotas"
+          "/assets/v1/assets",
+          "/assets/v1/assets/{assetId}",
+          "/assets/v1/assets/{assetId}",
+          "/assets/v1/assets/{assetId}:archive",
+          "/assets/v1/assets/{assetId}:restore",
+          "/assets/v1/assets/{assetId}/versions",
+          "/assets/v1/assets/{assetId}/versions:rollback",
+          "/assets/v1/assets/{assetId}/versions/{versionNumber}",
+          "/assets/v1/operations/{operationId}",
+          "/cloud/v2/universes/{universe_id}:generateSpeechAsset",
+          "/cloud/v2/users/{user_id}/asset-quotas",
+          "/legacy-localization-tables/v1/localization-table/tables/{assetId}",
+          "/legacy-publish/v1/badges/{badgeId}/icon",
+          "/toolbox-service/v2/assets:search",
+          "/toolbox-service/v2/assets/{id}",
+          "/asset-permissions-api/v1/assets/permissions",
+          "/v1/alias/{alias}",
+          "/v1/asset",
+          "/v1/assetId/{assetId}",
+          "/v1/assetId/{assetId}/version/{versionNumber}",
+          "/v1/assets/batch",
+          "/v1/marAssetHash/{marAssetHash}/marCheckSum/{marCheckSum}",
+          "/v2/alias/{alias}",
+          "/v2/asset",
+          "/v2/assetId/{assetId}",
+          "/v2/assetId/{assetId}/version/{versionNumber}",
+          "/v2/assets/batch",
+          "/v2/marAssetHash/{marAssetHash}/marCheckSum/{marCheckSum}",
+          "/v1/users/{userId}/currently-wearing",
+          "/v1/asset-to-category",
+          "/v1/asset-to-subcategory",
+          "/v1/assets/{assetId}/bundles",
+          "/v1/bundles/{bundleId}/details",
+          "/v1/bundles/{bundleId}/recommendations",
+          "/v1/bundles/details",
+          "/v1/catalog/items/details",
+          "/v1/categories",
+          "/v1/favorites/assets/{assetId}/count",
+          "/v1/favorites/bundles/{bundleId}/count",
+          "/v1/favorites/users/{userId}/assets/{assetId}/favorite",
+          "/v1/favorites/users/{userId}/assets/{assetId}/favorite",
+          "/v1/favorites/users/{userId}/assets/{assetId}/favorite",
+          "/v1/favorites/users/{userId}/bundles/{bundleId}/favorite",
+          "/v1/favorites/users/{userId}/bundles/{bundleId}/favorite",
+          "/v1/favorites/users/{userId}/bundles/{bundleId}/favorite",
+          "/v1/favorites/users/{userId}/favorites/{assetTypeId}/assets",
+          "/v1/favorites/users/{userId}/favorites/{subtypeId}/bundles",
+          "/v1/subcategories",
+          "/v1/topic/get-topics",
+          "/v1/users/{userId}/bundles",
+          "/v1/users/{userId}/bundles/{bundleType}",
+          "/v2/search/items/details",
+          "/v1/assets/voting",
+          "/v1/plugins",
+          "/v1/plugins/{pluginId}",
+          "/v1/user/groups/canmanagegamesoritems",
+          "/v2/assets/{id}/versions",
+          "/v1/users/{userId}/items/{itemType}/{itemTargetId}",
+          "/v2/assets/{assetId}/owners",
+          "/v2/inventory/asset/{assetId}",
+          "/v2/users/{userId}/inventory",
+          "/v1/creations/get-asset-details",
+          "/v1/creations/get-assets",
+          "/v1/item-tags",
+          "/v1/item-tags",
+          "/v1/item-tags/{itemTagId}",
+          "/v1/item-tags/metadata",
+          "/v1/tags",
+          "/v1/tags/prefix-search",
+          "/v1/asset-quotas",
+          "/v1/audio/verify",
+          "/v1/games/{gameId}/thumbnail/image",
+          "/v1/plugins/{pluginId}/icon",
+          "/v1/asset-thumbnail-animated",
+          "/v1/assets#ThumbnailsApi",
+          "/v1/assets-thumbnail-3d"
         ]
       }
     },
@@ -82337,7 +82754,62 @@
       "x-roblox-tag-info": {
         "path": "avatars",
         "content": "Lists all HTTP APIs for working with avatars, such as generating thumbnails, creating outfits, and more.",
-        "ordering": ["Cloud_GenerateUserThumbnail"]
+        "ordering": [
+          "/cloud/v2/users/{user_id}:generateThumbnail",
+          "/v1/avatar",
+          "/v1/avatar-rules",
+          "/v1/avatar/metadata",
+          "/v1/avatar/redraw-thumbnail",
+          "/v1/avatar/set-body-colors",
+          "/v1/avatar/set-player-avatar-type",
+          "/v1/avatar/set-scales",
+          "/v1/avatar/set-wearing-assets",
+          "/v1/game-start-info",
+          "/v1/outfits/{userOutfitId}/delete",
+          "/v1/outfits/{userOutfitId}/details",
+          "/v1/users/{userId}/avatar",
+          "/v1/users/{userId}/currently-wearing",
+          "/v1/users/{userId}/outfits",
+          "/v2/avatar/avatar",
+          "/v2/avatar/set-body-colors",
+          "/v2/avatar/set-wearing-assets",
+          "/v2/avatar/users/{userId}/avatar",
+          "/v2/avatar/users/{userId}/outfits",
+          "/v2/outfits/{userOutfitId}",
+          "/v2/outfits/{userOutfitId}/update",
+          "/v2/outfits/create",
+          "/v3/outfits/{userOutfitId}",
+          "/v3/outfits/{userOutfitId}/details",
+          "/v3/outfits/create",
+          "/v1/asset-to-category",
+          "/v1/asset-to-subcategory",
+          "/v1/assets/{assetId}/bundles",
+          "/v1/bundles/{bundleId}/details",
+          "/v1/bundles/{bundleId}/recommendations",
+          "/v1/bundles/details",
+          "/v1/catalog/items/details",
+          "/v1/categories",
+          "/v1/favorites/assets/{assetId}/count",
+          "/v1/favorites/bundles/{bundleId}/count",
+          "/v1/favorites/users/{userId}/assets/{assetId}/favorite",
+          "/v1/favorites/users/{userId}/assets/{assetId}/favorite",
+          "/v1/favorites/users/{userId}/assets/{assetId}/favorite",
+          "/v1/favorites/users/{userId}/bundles/{bundleId}/favorite",
+          "/v1/favorites/users/{userId}/bundles/{bundleId}/favorite",
+          "/v1/favorites/users/{userId}/bundles/{bundleId}/favorite",
+          "/v1/favorites/users/{userId}/favorites/{assetTypeId}/assets",
+          "/v1/favorites/users/{userId}/favorites/{subtypeId}/bundles",
+          "/v1/subcategories",
+          "/v1/topic/get-topics",
+          "/v1/users/{userId}/bundles",
+          "/v1/users/{userId}/bundles/{bundleType}",
+          "/v2/search/items/details",
+          "/v1/bundles/thumbnails",
+          "/v1/users/avatar",
+          "/v1/users/avatar-3d",
+          "/v1/users/avatar-bust",
+          "/v1/users/avatar-headshot"
+        ]
       }
     },
     {
@@ -82346,7 +82818,31 @@
       "x-roblox-tag-info": {
         "path": "badges",
         "content": "Lists all HTTP APIs for working with badges, such as creating them and updating their translations.",
-        "ordering": []
+        "ordering": [
+          "/legacy-badges/v1/badges/{badgeId}",
+          "/legacy-badges/v1/universes/{universeId}/badges",
+          "/legacy-game-internationalization/v1/badges/{badgeId}/description/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/badges/{badgeId}/icons",
+          "/legacy-game-internationalization/v1/badges/{badgeId}/icons/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/badges/{badgeId}/icons/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/badges/{badgeId}/name-description",
+          "/legacy-game-internationalization/v1/badges/{badgeId}/name-description/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/badges/{badgeId}/name-description/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/badges/{badgeId}/name/language-codes/{languageCode}",
+          "/legacy-publish/v1/badges/{badgeId}/icon",
+          "/v1/users/{userId}/roblox-badges",
+          "/v1/badges/{badgeId}",
+          "/v1/badges/{badgeId}",
+          "/v1/badges/metadata",
+          "/v1/universes/{universeId}/badges",
+          "/v1/universes/{universeId}/badges",
+          "/v1/universes/{universeId}/free-badges-quota",
+          "/v1/user/badges/{badgeId}",
+          "/v1/users/{userId}/badges",
+          "/v1/users/{userId}/badges/{badgeId}/awarded-date",
+          "/v1/users/{userId}/badges/awarded-dates",
+          "/v1/badges/icons"
+        ]
       }
     },
     {
@@ -82356,13 +82852,21 @@
         "path": "bans-and-blocks",
         "content": "Lists all HTTP APIs for working with bans and blocks, such as listing and updating user restrictions.",
         "ordering": [
-          "Cloud_ListUserRestrictions__Using_Universes",
-          "Cloud_GetUserRestriction__Using_Universes_Places",
-          "Cloud_UpdateUserRestriction__Using_Universes_Places",
-          "Cloud_ListUserRestrictions",
-          "Cloud_ListUserRestrictionLogs",
-          "Cloud_GetUserRestriction__Using_Universes",
-          "Cloud_UpdateUserRestriction__Using_Universes"
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions/{user_restriction_id}",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions/{user_restriction_id}",
+          "/cloud/v2/universes/{universe_id}/user-restrictions",
+          "/cloud/v2/universes/{universe_id}/user-restrictions:listLogs",
+          "/cloud/v2/universes/{universe_id}/user-restrictions/{user_restriction_id}",
+          "/cloud/v2/universes/{universe_id}/user-restrictions/{user_restriction_id}",
+          "/v1/groups/{groupId}/bans",
+          "/v1/groups/{groupId}/bans/{userId}",
+          "/v1/groups/{groupId}/bans/{userId}",
+          "/v1/groups/{groupId}/bans/{userId}",
+          "/v1/groups/{groupId}/blocked-keywords",
+          "/v1/groups/{groupId}/blocked-keywords",
+          "/v1/groups/{groupId}/blocked-keywords/{keywordId}",
+          "/v1/groups/{groupId}/blocked-keywords/{keywordId}"
         ]
       }
     },
@@ -82373,9 +82877,11 @@
         "path": "creator-store",
         "content": "Lists all HTTP APIs for working with the Creator Store.",
         "ordering": [
-          "Cloud_CreateCreatorStoreProduct",
-          "Cloud_GetCreatorStoreProduct",
-          "Cloud_UpdateCreatorStoreProduct"
+          "/cloud/v2/creator-store-products",
+          "/cloud/v2/creator-store-products/{creator_store_product_id}",
+          "/cloud/v2/creator-store-products/{creator_store_product_id}",
+          "/toolbox-service/v2/assets:search",
+          "/toolbox-service/v2/assets/{id}"
         ]
       }
     },
@@ -82386,10 +82892,19 @@
         "path": "developer-products",
         "content": "Lists all HTTP APIs for working with developer products.",
         "ordering": [
-          "DeveloperProducts_CreateDeveloperProductV2",
-          "DeveloperProducts_UpdateDeveloperProductV2",
-          "DeveloperProducts_GetDeveloperProductConfigV2",
-          "DeveloperProducts_ListDeveloperProductConfigsByUniverseV2"
+          "/developer-products/v2/universes/{universeId}/developer-products",
+          "/developer-products/v2/universes/{universeId}/developer-products/{productId}",
+          "/developer-products/v2/universes/{universeId}/developer-products/{productId}/creator",
+          "/developer-products/v2/universes/{universeId}/developer-products/creator",
+          "/legacy-game-internationalization/v1/developer-products/{developerProductId}/description/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/developer-products/{developerProductId}/icons",
+          "/legacy-game-internationalization/v1/developer-products/{developerProductId}/icons/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/developer-products/{developerProductId}/icons/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/developer-products/{developerProductId}/name-description",
+          "/legacy-game-internationalization/v1/developer-products/{developerProductId}/name-description/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/developer-products/{developerProductId}/name-description/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/developer-products/{developerProductId}/name/language-codes/{languageCode}",
+          "/v1/developer-products/icons"
         ]
       }
     },
@@ -82399,7 +82914,34 @@
       "x-roblox-tag-info": {
         "path": "friends",
         "content": "Lists all HTTP APIs for working with connections, such as declining all connection requests or retrieving a connection list.",
-        "ordering": ["Presence_GetUserPresences"]
+        "ordering": [
+          "/v1/contacts/{targetContactId}/request-friendship",
+          "/v1/metadata#FriendsApi",
+          "/v1/my/friends/count",
+          "/v1/my/friends/refresh-qr-session",
+          "/v1/my/friends/requests",
+          "/v1/my/new-friend-requests",
+          "/v1/my/new-friend-requests/count",
+          "/v1/my/trusted-friends/{userId}/status",
+          "/v1/user/{userId}/multiget-are-friends",
+          "/v1/user/{userId}/multiget-are-trusted-friends",
+          "/v1/user/friend-requests/count",
+          "/v1/user/friend-requests/decline-all",
+          "/v1/users/{requesterUserId}/accept-friend-request",
+          "/v1/users/{requesterUserId}/decline-friend-request",
+          "/v1/users/{senderUserId}/accept-friend-request-with-token",
+          "/v1/users/{targetUserId}/request-friendship",
+          "/v1/users/{targetUserId}/unfriend",
+          "/v1/users/{userId}/friends",
+          "/v1/users/{userId}/friends/count",
+          "/v1/users/{userId}/friends/find",
+          "/v1/users/{userId}/friends/inactive",
+          "/v1/users/{userId}/friends/online",
+          "/v1/users/{userId}/friends/search",
+          "/v1/users/{userId}/friends/statuses",
+          "/v1/users/{userId}/friends/groups/roles",
+          "/v1/presence/users"
+        ]
       }
     },
     {
@@ -82409,10 +82951,20 @@
         "path": "game-passes",
         "content": "Lists all HTTP APIs for working with game passes.",
         "ordering": [
-          "GamePasses_CreateGamePass",
-          "GamePasses_UpdateGamePass",
-          "GamePasses_GetGamePassConfig",
-          "GamePasses_ListGamePassConfigsByUniverse"
+          "/game-passes/v1/universes/{universeId}/game-passes",
+          "/game-passes/v1/universes/{universeId}/game-passes/{gamePassId}",
+          "/game-passes/v1/universes/{universeId}/game-passes/{gamePassId}/creator",
+          "/game-passes/v1/universes/{universeId}/game-passes/creator",
+          "/legacy-game-internationalization/v1/game-passes/{gamePassId}/description/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/game-passes/{gamePassId}/icons",
+          "/legacy-game-internationalization/v1/game-passes/{gamePassId}/icons/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/game-passes/{gamePassId}/icons/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/game-passes/{gamePassId}/name-description",
+          "/legacy-game-internationalization/v1/game-passes/{gamePassId}/name-description/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/game-passes/{gamePassId}/name-description/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/game-passes/{gamePassId}/name/language-codes/{languageCode}",
+          "/v1/games/{universeId}/game-passes",
+          "/v1/game-passes"
         ]
       }
     },
@@ -82422,7 +82974,12 @@
       "x-roblox-tag-info": {
         "path": "generative-ai",
         "content": "Lists all HTTP APIs related to Generative AI and LLMs on Open Cloud.",
-        "ordering": ["Cloud_TranslateText", "Cloud_GenerateSpeechAsset"]
+        "ordering": [
+          "/cloud/v2/universes/{universe_id}:translateText",
+          "/cloud/v2/universes/{universe_id}:generateSpeechAsset",
+          "/open-eval-api/v1/eval",
+          "/open-eval-api/v1/eval-records/{jobId}"
+        ]
       }
     },
     {
@@ -82432,15 +82989,106 @@
         "path": "groups",
         "content": "Lists all HTTP APIs for working with groups, including accepting join requests and listing group memberships.",
         "ordering": [
-          "Cloud_GetGroup",
-          "Cloud_ListGroupJoinRequests",
-          "Cloud_AcceptGroupJoinRequest",
-          "Cloud_DeclineGroupJoinRequest",
-          "Cloud_ListGroupMemberships",
-          "Cloud_UpdateGroupMembership",
-          "Cloud_ListGroupRoles",
-          "Cloud_GetGroupRole",
-          "Cloud_GetGroupShout"
+          "/cloud/v2/groups/{group_id}",
+          "/cloud/v2/groups/{group_id}/join-requests",
+          "/cloud/v2/groups/{group_id}/join-requests/{join_request_id}:accept",
+          "/cloud/v2/groups/{group_id}/join-requests/{join_request_id}:decline",
+          "/cloud/v2/groups/{group_id}/memberships",
+          "/cloud/v2/groups/{group_id}/memberships/{membership_id}",
+          "/cloud/v2/groups/{group_id}/roles",
+          "/cloud/v2/groups/{group_id}/roles/{role_id}",
+          "/cloud/v2/groups/{group_id}/shout",
+          "/legacy-develop/v1/user/groups/canmanage",
+          "/legacy-groups/v1/groups/{groupId}/audit-log",
+          "/legacy-groups/v1/groups/{groupId}/description",
+          "/legacy-groups/v1/groups/{groupId}/notification-preference",
+          "/legacy-groups/v1/groups/{groupId}/settings",
+          "/legacy-groups/v1/groups/{groupId}/settings",
+          "/legacy-groups/v1/groups/{groupId}/status",
+          "/legacy-groups/v1/groups/policies",
+          "/legacy-groups/v1/user/groups/pending",
+          "/v1/groups/{groupId}/universes",
+          "/v1/user/groups/canmanagegamesoritems",
+          "/v1/vip-servers/{id}/permissions",
+          "/v2/groups/{groupId}/games",
+          "/v2/groups/{groupId}/gamesV2",
+          "/v1/featured-content/event",
+          "/v1/featured-content/event",
+          "/v1/featured-content/event",
+          "/v1/groups/{groupId}",
+          "/v1/groups/{groupId}/change-owner",
+          "/v1/groups/{groupId}/claim-ownership",
+          "/v1/groups/{groupId}/join-requests",
+          "/v1/groups/{groupId}/join-requests",
+          "/v1/groups/{groupId}/join-requests",
+          "/v1/groups/{groupId}/join-requests/users/{userId}",
+          "/v1/groups/{groupId}/join-requests/users/{userId}",
+          "/v1/groups/{groupId}/join-requests/users/{userId}",
+          "/v1/groups/{groupId}/membership",
+          "/v1/groups/{groupId}/name",
+          "/v1/groups/{groupId}/name-history",
+          "/v1/groups/{groupId}/payout-restriction",
+          "/v1/groups/{groupId}/payouts",
+          "/v1/groups/{groupId}/payouts",
+          "/v1/groups/{groupId}/payouts/recurring",
+          "/v1/groups/{groupId}/relationships/{groupRelationshipType}",
+          "/v1/groups/{groupId}/relationships/{groupRelationshipType}/{relatedGroupId}",
+          "/v1/groups/{groupId}/relationships/{groupRelationshipType}/{relatedGroupId}",
+          "/v1/groups/{groupId}/relationships/{groupRelationshipType}/requests",
+          "/v1/groups/{groupId}/relationships/{groupRelationshipType}/requests",
+          "/v1/groups/{groupId}/relationships/{groupRelationshipType}/requests",
+          "/v1/groups/{groupId}/relationships/{groupRelationshipType}/requests/{relatedGroupId}",
+          "/v1/groups/{groupId}/relationships/{groupRelationshipType}/requests/{relatedGroupId}",
+          "/v1/groups/{groupId}/roles",
+          "/v1/groups/{groupId}/roles/{roleSetId}/permissions",
+          "/v1/groups/{groupId}/roles/{roleSetId}/permissions",
+          "/v1/groups/{groupId}/roles/{roleSetId}/users",
+          "/v1/groups/{groupId}/roles/guest/permissions",
+          "/v1/groups/{groupId}/roles/permissions",
+          "/v1/groups/{groupId}/rolesets/{rolesetId}",
+          "/v1/groups/{groupId}/rolesets/{rolesetId}",
+          "/v1/groups/{groupId}/rolesets/create",
+          "/v1/groups/{groupId}/social-links",
+          "/v1/groups/{groupId}/social-links",
+          "/v1/groups/{groupId}/social-links/{socialLinkId}",
+          "/v1/groups/{groupId}/social-links/{socialLinkId}",
+          "/v1/groups/{groupId}/users",
+          "/v1/groups/{groupId}/users",
+          "/v1/groups/{groupId}/users/{userId}",
+          "/v1/groups/{groupId}/users/{userId}",
+          "/v1/groups/{groupId}/users/{userId}/permissions",
+          "/v1/groups/{groupId}/wall/posts",
+          "/v1/groups/{groupId}/wall/posts",
+          "/v1/groups/{groupId}/wall/posts/{postId}",
+          "/v1/groups/{groupId}/wall/subscribe",
+          "/v1/groups/{groupId}/wall/users/{userId}/posts",
+          "/v1/groups/configuration/metadata",
+          "/v1/groups/create",
+          "/v1/groups/icon",
+          "/v1/groups/metadata",
+          "/v1/groups/search",
+          "/v1/groups/search/lookup",
+          "/v1/groups/search/metadata",
+          "/v1/roles",
+          "/v1/user/groups/primary",
+          "/v1/user/groups/primary",
+          "/v1/users/{userId}/friends/groups/roles",
+          "/v1/users/{userId}/groups/primary/role",
+          "/v1/users/{userId}/groups/roles",
+          "/v1/groups/{groupId}/bans",
+          "/v1/groups/{groupId}/bans/{userId}",
+          "/v1/groups/{groupId}/bans/{userId}",
+          "/v1/groups/{groupId}/bans/{userId}",
+          "/v1/groups/{groupId}/blocked-keywords",
+          "/v1/groups/{groupId}/blocked-keywords",
+          "/v1/groups/{groupId}/blocked-keywords/{keywordId}",
+          "/v1/groups/{groupId}/blocked-keywords/{keywordId}",
+          "/v1/groups/{groupId}/emotes",
+          "/v2/groups",
+          "/v2/groups/{groupId}/wall/posts",
+          "/v2/groups/{groupId}/wall/posts",
+          "/v2/users/{userId}/groups/roles",
+          "/v1/groups/icons"
         ]
       }
     },
@@ -82450,7 +83098,42 @@
       "x-roblox-tag-info": {
         "path": "interactions",
         "content": "Lists all HTTP APIs for interactions, such as getting all universes a user has followed or retrieving favorites.",
-        "ordering": []
+        "ordering": [
+          "/legacy-followings/v1/users/{userId}/universes",
+          "/legacy-followings/v1/users/{userId}/universes/{universeId}",
+          "/legacy-followings/v1/users/{userId}/universes/{universeId}",
+          "/legacy-followings/v1/users/{userId}/universes/{universeId}/status",
+          "/legacy-followings/v2/users/{userId}/universes",
+          "/v1/favorites/assets/{assetId}/count",
+          "/v1/favorites/bundles/{bundleId}/count",
+          "/v1/favorites/users/{userId}/assets/{assetId}/favorite",
+          "/v1/favorites/users/{userId}/assets/{assetId}/favorite",
+          "/v1/favorites/users/{userId}/assets/{assetId}/favorite",
+          "/v1/favorites/users/{userId}/bundles/{bundleId}/favorite",
+          "/v1/favorites/users/{userId}/bundles/{bundleId}/favorite",
+          "/v1/favorites/users/{userId}/bundles/{bundleId}/favorite",
+          "/v1/favorites/users/{userId}/favorites/{assetTypeId}/assets",
+          "/v1/favorites/users/{userId}/favorites/{subtypeId}/bundles",
+          "/v1/users/{userId}/bundles",
+          "/v1/users/{userId}/bundles/{bundleType}",
+          "/v1/assets/voting",
+          "/v1/user/following-exists",
+          "/v1/users/{targetUserId}/follow",
+          "/v1/users/{targetUserId}/followers",
+          "/v1/users/{targetUserId}/followers/count",
+          "/v1/users/{targetUserId}/followings",
+          "/v1/users/{targetUserId}/followings/count",
+          "/v1/users/{targetUserId}/unfollow",
+          "/v1/games/{universeId}/favorites",
+          "/v1/games/{universeId}/favorites",
+          "/v1/games/{universeId}/favorites/count",
+          "/v1/games/{universeId}/user-votes",
+          "/v1/games/{universeId}/votes",
+          "/v1/games/{universeId}/votes/user",
+          "/v1/games/votes",
+          "/v2/users/{userId}/favorite/games",
+          "/v1/users/{userId}/categories/favorites"
+        ]
       }
     },
     {
@@ -82459,7 +83142,23 @@
       "x-roblox-tag-info": {
         "path": "inventories",
         "content": "Lists all HTTP APIs for working with user inventories, such as listing items or adding items to collections.",
-        "ordering": ["Cloud_ListInventoryItems"]
+        "ordering": [
+          "/cloud/v2/users/{user_id}/inventory-items",
+          "/v1/collections/items/{itemType}/{itemTargetId}",
+          "/v1/collections/items/{itemType}/{itemTargetId}",
+          "/v1/packages/{packageId}/assets",
+          "/v1/users/{userId}/assets/collectibles",
+          "/v1/users/{userId}/can-view-inventory",
+          "/v1/users/{userId}/categories",
+          "/v1/users/{userId}/categories/favorites",
+          "/v1/users/{userId}/items/{itemType}/{itemTargetId}",
+          "/v1/users/{userId}/items/{itemType}/{itemTargetId}/is-owned",
+          "/v1/users/{userId}/places/inventory",
+          "/v2/assets/{assetId}/owners",
+          "/v2/inventory/asset/{assetId}",
+          "/v2/users/{userId}/inventory",
+          "/v2/users/{userId}/inventory/{assetTypeId}"
+        ]
       }
     },
     {
@@ -82468,7 +83167,98 @@
       "x-roblox-tag-info": {
         "path": "localization",
         "content": "Lists all HTTP APIs for working with localizations, such as updating localized descriptions for badges, game passes, or developer products.",
-        "ordering": []
+        "ordering": [
+          "/legacy-game-internationalization/v1/badges/{badgeId}/description/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/badges/{badgeId}/icons",
+          "/legacy-game-internationalization/v1/badges/{badgeId}/icons/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/badges/{badgeId}/icons/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/badges/{badgeId}/name-description",
+          "/legacy-game-internationalization/v1/badges/{badgeId}/name-description/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/badges/{badgeId}/name-description/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/badges/{badgeId}/name/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/developer-products/{developerProductId}/description/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/developer-products/{developerProductId}/icons",
+          "/legacy-game-internationalization/v1/developer-products/{developerProductId}/icons/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/developer-products/{developerProductId}/icons/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/developer-products/{developerProductId}/name-description",
+          "/legacy-game-internationalization/v1/developer-products/{developerProductId}/name-description/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/developer-products/{developerProductId}/name-description/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/developer-products/{developerProductId}/name/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/game-icon/games/{gameId}",
+          "/legacy-game-internationalization/v1/game-icon/games/{gameId}/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/game-icon/games/{gameId}/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/game-passes/{gamePassId}/description/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/game-passes/{gamePassId}/icons",
+          "/legacy-game-internationalization/v1/game-passes/{gamePassId}/icons/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/game-passes/{gamePassId}/icons/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/game-passes/{gamePassId}/name-description",
+          "/legacy-game-internationalization/v1/game-passes/{gamePassId}/name-description/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/game-passes/{gamePassId}/name-description/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/game-passes/{gamePassId}/name/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/alt-text",
+          "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/image",
+          "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/{imageId}",
+          "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/order",
+          "/legacy-game-internationalization/v1/name-description/games/{gameId}",
+          "/legacy-game-internationalization/v1/name-description/games/translation-history",
+          "/legacy-game-internationalization/v1/source-language/games/{gameId}",
+          "/legacy-game-internationalization/v1/supported-languages/games/{gameId}",
+          "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/automatic-translation-status",
+          "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/languages/{languageCode}/automatic-translation-status",
+          "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/languages/{languageCode}/universe-display-info-automatic-translation-settings",
+          "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/universe-display-info-automatic-translation-settings",
+          "/legacy-localization-tables/v1/autolocalization/games/{gameId}/autolocalizationtable",
+          "/legacy-localization-tables/v1/autolocalization/games/{gameId}/settings",
+          "/legacy-localization-tables/v1/autolocalization/metadata",
+          "/legacy-localization-tables/v1/localization-table/limits",
+          "/legacy-localization-tables/v1/localization-table/tables/{assetId}",
+          "/legacy-localization-tables/v1/localization-table/tables/{assetId}",
+          "/legacy-localization-tables/v1/localization-table/tables/{tableId}",
+          "/legacy-localization-tables/v1/localization-table/tables/{tableId}/entries",
+          "/legacy-localization-tables/v1/localization-table/tables/{tableId}/entries/translation-history",
+          "/legacy-localization-tables/v1/localization-table/tables/{tableId}/entry-count",
+          "/v1/user/currency",
+          "/v1/autolocalization/games/{gameId}/autolocalizationtable",
+          "/v1/autolocalization/games/{gameId}/autolocalizationtable",
+          "/v1/autolocalization/games/{gameId}/settings",
+          "/v1/autolocalization/metadata",
+          "/v1/automatic-translation/games/{gameId}/feature-status",
+          "/v1/automatic-translation/games/{gameId}/quota",
+          "/v1/automatic-translation/languages/{languageCode}/target-languages",
+          "/v1/game-localization-status/{gameId}/translation-counts",
+          "/v1/game-localization-status/translation-counts-for-language-or-locale",
+          "/v1/game-thumbnails/games/{gameId}/images",
+          "/v1/localizationtable/gametables/{gameId}",
+          "/v1/name-description/games/{gameId}",
+          "/v1/name-description/metadata",
+          "/v1/source-language/games/{gameId}",
+          "/v1/supported-languages/games/{gameId}",
+          "/v1/supported-languages/metadata",
+          "/v1/translation-analytics/games/{gameId}/download-translation-analytics-report",
+          "/v1/translation-analytics/games/{gameId}/request-translation-analytics-report",
+          "/v1/translation-analytics/metadata",
+          "/v1/ui-configurations",
+          "/v1/user-localization-settings/universe/{universeId}",
+          "/v1/user-localization-settings/universe/{universeId}",
+          "/v1/country-regions",
+          "/v1/locales",
+          "/v1/locales/set-show-roblox-translations",
+          "/v1/locales/set-user-supported-locale",
+          "/v1/locales/supported-locales",
+          "/v1/locales/supported-locales-for-creators",
+          "/v1/locales/user-locale",
+          "/v1/locales/user-localization-locus-supported-locales",
+          "/v1/auto-localization-table/games/{gameId}/assets-generation-request",
+          "/v1/auto-localization-table/games/{gameId}/auto-scrape-cleanup-request",
+          "/v1/auto-localization-table/games/{gameId}/ingestion",
+          "/v1/localization-table/metadata",
+          "/v1/localization-table/tables",
+          "/v1/localization-table/tables/{tableId}/entries/translation-feedback",
+          "/v1/game-localization-roles/games/{gameId}",
+          "/v1/game-localization-roles/games/{gameId}/current-user/roles",
+          "/v1/game-localization-roles/games/{gameId}/roles/{role}/assignees",
+          "/v1/game-localization-roles/roles/{role}/current-user"
+        ]
       }
     },
     {
@@ -82478,11 +83268,11 @@
         "path": "luau-execution",
         "content": "Lists all HTTP APIs for Luau execution, which lets you run scripts on a specific version of a place.",
         "ordering": [
-          "Cloud_CreateLuauExecutionSessionTaskBinaryInput",
-          "Cloud_CreateLuauExecutionSessionTask__Using_Universes",
-          "Cloud_CreateLuauExecutionSessionTask__Using_Universes_Places",
-          "Cloud_GetLuauExecutionSessionTask",
-          "Cloud_ListLuauExecutionSessionTaskLogs"
+          "/cloud/v2/universes/{universe_id}/luau-execution-session-task-binary-inputs",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/luau-execution-session-tasks",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-session-tasks",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}/logs"
         ]
       }
     },
@@ -82492,7 +83282,53 @@
       "x-roblox-tag-info": {
         "path": "metadata",
         "content": "Lists all HTTP APIs for metadata, such as auto-localization configuration information or authorization metadata.",
-        "ordering": []
+        "ordering": [
+          "/legacy-localization-tables/v1/autolocalization/metadata",
+          "/legacy-localization-tables/v1/localization-table/limits",
+          "/v1/metadata",
+          "/v1/auth/metadata",
+          "/v1/metadata#AuthenticationApi",
+          "/v1/recovery/metadata",
+          "/v2/auth/metadata",
+          "/v2/metadata",
+          "/v2/passwords/reset",
+          "/v2/recovery/metadata",
+          "/v1/avatar/metadata",
+          "/v1/badges/metadata",
+          "/v1/categories",
+          "/v1/subcategories",
+          "/v1/client-version/{binaryType}",
+          "/v1/installer-cdns",
+          "/v1/mobile-client-version",
+          "/v2/client-version/{binaryType}",
+          "/v2/client-version/{binaryType}/channel/{channelName}",
+          "/v2/compression-dictionaries",
+          "/v2/compression-dictionaries/{dictionarySha256}",
+          "/v2/ota-version/{binaryType}",
+          "/v2/user-channel",
+          "/v1/metadata#FriendsApi",
+          "/v1/autolocalization/metadata",
+          "/v1/name-description/metadata",
+          "/v1/supported-languages/metadata",
+          "/v1/translation-analytics/metadata",
+          "/v1/ui-configurations",
+          "/v1/vip-servers/{id}",
+          "/v1/groups/configuration/metadata",
+          "/v1/groups/metadata",
+          "/v1/groups/search/metadata",
+          "/v1/item-tags/metadata",
+          "/v1/locales/set-user-supported-locale",
+          "/v1/locales/supported-locales",
+          "/v1/locales/supported-locales-for-creators",
+          "/v1/locales/user-localization-locus-supported-locales",
+          "/v1/autolocalization/metadata#LocalizationTablesApi",
+          "/v1/localization-table/metadata",
+          "/v2/push-notifications/chrome-manifest",
+          "/v2/push-notifications/get-current-device-destination",
+          "/v2/push-notifications/metadata",
+          "/v2/stream-notifications/metadata",
+          "/v1/metadata#TwoStepVerificationApi"
+        ]
       }
     },
     {
@@ -82501,7 +83337,24 @@
       "x-roblox-tag-info": {
         "path": "notifications",
         "content": "Lists all HTTP APIs for working with notifications, such as creating user notifications or modifying push settings.",
-        "ordering": ["Cloud_CreateUserNotification"]
+        "ordering": [
+          "/cloud/v2/users/{user_id}/notifications",
+          "/v2/push-notifications/chrome-manifest",
+          "/v2/push-notifications/deregister-all-devices",
+          "/v2/push-notifications/deregister-current-device",
+          "/v2/push-notifications/deregister-current-device-ios-pushkit",
+          "/v2/push-notifications/get-current-device-destination",
+          "/v2/push-notifications/get-destinations",
+          "/v2/push-notifications/metadata",
+          "/v2/push-notifications/register-android-native",
+          "/v2/push-notifications/register-ios-native",
+          "/v2/push-notifications/register-ios-pushkit",
+          "/v2/stream-notifications/clear-unread",
+          "/v2/stream-notifications/get-latest-game-updates",
+          "/v2/stream-notifications/get-recent",
+          "/v2/stream-notifications/metadata",
+          "/v2/stream-notifications/unread-count"
+        ]
       }
     },
     {
@@ -82511,19 +83364,29 @@
         "path": "places",
         "content": "Lists all HTTP APIs for working with places. You can update instances, get children for a given instance in the place, and more.",
         "ordering": [
-          "Cloud_GetPlace",
-          "Cloud_UpdatePlace",
-          "Cloud_GetInstance",
-          "Cloud_UpdateInstance",
-          "Cloud_ListInstanceChildren",
-          "Cloud_CreateLuauExecutionSessionTask__Using_Universes",
-          "Cloud_ListUserRestrictions__Using_Universes",
-          "Cloud_GetUserRestriction__Using_Universes_Places",
-          "Cloud_UpdateUserRestriction__Using_Universes_Places",
-          "Cloud_CreateLuauExecutionSessionTask__Using_Universes_Places",
-          "Cloud_GetLuauExecutionSessionTask",
-          "Cloud_ListLuauExecutionSessionTaskLogs",
-          "Places_CreatePlaceVersionApiKey"
+          "/cloud/v2/universes/{universe_id}/places/{place_id}",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/instances/{instance_id}",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/instances/{instance_id}",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/instances/{instance_id}:listChildren",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/luau-execution-session-tasks",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions/{user_restriction_id}",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions/{user_restriction_id}",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-session-tasks",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}/logs",
+          "/legacy-develop/v1/places/{placeId}/teamcreate/active_session/members",
+          "/legacy-develop/v2/teamtest/{placeId}",
+          "/universes/v1/{universeId}/places/{placeId}/versions",
+          "/v1/places/{placeId}",
+          "/v1/places/{placeId}",
+          "/v1/universes/{universeId}/places",
+          "/v2/places/{placeId}",
+          "/v2/places/{placeId}",
+          "/v1/games/{placeId}/servers/{serverType}",
+          "/v1/games/multiget-place-details",
+          "/v1/users/{userId}/places/inventory"
         ]
       }
     },
@@ -82533,7 +83396,18 @@
       "x-roblox-tag-info": {
         "path": "private-servers",
         "content": "Lists all HTTP APIs for working with private servers, including listing them and updating access settings.",
-        "ordering": []
+        "ordering": [
+          "/v1/universes/{universeId}/configuration/vip-servers",
+          "/v1/games/{placeId}/private-servers",
+          "/v1/games/vip-servers/{universeId}",
+          "/v1/private-servers/enabled-in-universe/{universeId}",
+          "/v1/private-servers/my-private-servers",
+          "/v1/vip-server/can-invite/{userId}",
+          "/v1/vip-servers/{id}",
+          "/v1/vip-servers/{id}",
+          "/v1/vip-servers/{id}/permissions",
+          "/v1/vip-servers/{id}/subscription"
+        ]
       }
     },
     {
@@ -82542,7 +83416,18 @@
       "x-roblox-tag-info": {
         "path": "sponsored-campaigns",
         "content": "Lists all HTTP APIs for working with sponsored campaigns.",
-        "ordering": []
+        "ordering": [
+          "/v2/sponsored-campaigns",
+          "/v2/sponsored-campaigns/create",
+          "/v2/sponsored-campaigns/eligible-asset-type-ids",
+          "/v2/sponsored-campaigns/eligible-campaign-targets",
+          "/v2/sponsored-campaigns/multi-get-can-user-sponsor",
+          "/v2/sponsored-campaigns/stop",
+          "/v2/sponsored-games",
+          "/v2/sponsored-games/create",
+          "/v2/sponsored-games/stop",
+          "/v2/sponsored-games/universes"
+        ]
       }
     },
     {
@@ -82552,53 +83437,53 @@
         "path": "storage",
         "content": "Lists all HTTP APIs for working with data stores and memory stores.",
         "ordering": [
-          "Cloud_ListDataStores",
-          "Cloud_DeleteDataStore",
-          "Cloud_UndeleteDataStore",
-          "Cloud_SnapshotDataStores",
-          "Cloud_ListDataStoreEntries__Using_Universes",
-          "Cloud_CreateDataStoreEntry__Using_Universes",
-          "Cloud_DeleteDataStoreEntry__Using_Universes_DataStores",
-          "Cloud_GetDataStoreEntry__Using_Universes_DataStores",
-          "Cloud_UpdateDataStoreEntry__Using_Universes_DataStores",
-          "Cloud_IncrementDataStoreEntry__Using_Universes_DataStores",
-          "Cloud_ListDataStoreEntryRevisions__Using_Universes_DataStores",
-          "Cloud_ListDataStoreEntries__Using_Universes_DataStores",
-          "Cloud_CreateDataStoreEntry__Using_Universes_DataStores",
-          "Cloud_DeleteDataStoreEntry__Using_Universes_DataStores_Scopes",
-          "Cloud_GetDataStoreEntry__Using_Universes_DataStores_Scopes",
-          "Cloud_UpdateDataStoreEntry__Using_Universes_DataStores_Scopes",
-          "Cloud_IncrementDataStoreEntry__Using_Universes_DataStores_Scopes",
-          "Cloud_ListDataStoreEntryRevisions__Using_Universes_DataStores_Scopes",
-          "Cloud_FlushMemoryStore",
-          "Cloud_CreateMemoryStoreQueueItem",
-          "Cloud_DiscardMemoryStoreQueueItems",
-          "Cloud_ReadMemoryStoreQueueItems",
-          "Cloud_ListMemoryStoreSortedMapItems",
-          "Cloud_CreateMemoryStoreSortedMapItem",
-          "Cloud_DeleteMemoryStoreSortedMapItem",
-          "Cloud_GetMemoryStoreSortedMapItem",
-          "Cloud_UpdateMemoryStoreSortedMapItem",
-          "Cloud_ListOrderedDataStoreEntries",
-          "Cloud_CreateOrderedDataStoreEntry",
-          "Cloud_DeleteOrderedDataStoreEntry",
-          "Cloud_GetOrderedDataStoreEntry",
-          "Cloud_UpdateOrderedDataStoreEntry",
-          "Cloud_IncrementOrderedDataStoreEntry",
-          "Datastores_ListDatastoresAsync",
-          "Entries_ListKeysAsync",
-          "Entries_DeleteEntryAsync",
-          "Entries_GetEntryAsync",
-          "Entries_SetEntryAsync",
-          "Entries_IncrementEntryAsync",
-          "Entries_ListEntryVersionsAsync",
-          "Entries_GetEntryVersionAsync",
-          "OrderedDataStores_ListEntries",
-          "OrderedDataStores_CreateEntry",
-          "OrderedDataStores_DeleteEntry",
-          "OrderedDataStores_GetEntry",
-          "OrderedDataStores_UpdateEntry",
-          "OrderedDataStores_IncrementEntry"
+          "/cloud/v2/universes/{universe_id}/data-stores",
+          "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}",
+          "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}:undelete",
+          "/cloud/v2/universes/{universe_id}/data-stores:snapshot",
+          "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries",
+          "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries",
+          "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}",
+          "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}",
+          "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}",
+          "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}:increment",
+          "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}:listRevisions",
+          "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries",
+          "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries",
+          "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}",
+          "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}",
+          "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}",
+          "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}:increment",
+          "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}:listRevisions",
+          "/cloud/v2/universes/{universe_id}/memory-store:flush",
+          "/cloud/v2/universes/{universe_id}/memory-store/queues/{queue_id}/items",
+          "/cloud/v2/universes/{universe_id}/memory-store/queues/{queue_id}/items:discard",
+          "/cloud/v2/universes/{universe_id}/memory-store/queues/{queue_id}/items:read",
+          "/cloud/v2/universes/{universe_id}/memory-store/sorted-maps/{sorted_map_id}/items",
+          "/cloud/v2/universes/{universe_id}/memory-store/sorted-maps/{sorted_map_id}/items",
+          "/cloud/v2/universes/{universe_id}/memory-store/sorted-maps/{sorted_map_id}/items/{item_id}",
+          "/cloud/v2/universes/{universe_id}/memory-store/sorted-maps/{sorted_map_id}/items/{item_id}",
+          "/cloud/v2/universes/{universe_id}/memory-store/sorted-maps/{sorted_map_id}/items/{item_id}",
+          "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries",
+          "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries",
+          "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries/{entry_id}",
+          "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries/{entry_id}",
+          "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries/{entry_id}",
+          "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries/{entry_id}:increment",
+          "/datastores/v1/universes/{universeId}/standard-datastores",
+          "/datastores/v1/universes/{universeId}/standard-datastores/datastore/entries",
+          "/datastores/v1/universes/{universeId}/standard-datastores/datastore/entries/entry",
+          "/datastores/v1/universes/{universeId}/standard-datastores/datastore/entries/entry",
+          "/datastores/v1/universes/{universeId}/standard-datastores/datastore/entries/entry",
+          "/datastores/v1/universes/{universeId}/standard-datastores/datastore/entries/entry/increment",
+          "/datastores/v1/universes/{universeId}/standard-datastores/datastore/entries/entry/versions",
+          "/datastores/v1/universes/{universeId}/standard-datastores/datastore/entries/entry/versions/version",
+          "/ordered-data-stores/v1/universes/{universeId}/orderedDataStores/{orderedDataStore}/scopes/{scope}/entries",
+          "/ordered-data-stores/v1/universes/{universeId}/orderedDataStores/{orderedDataStore}/scopes/{scope}/entries",
+          "/ordered-data-stores/v1/universes/{universeId}/orderedDataStores/{orderedDataStore}/scopes/{scope}/entries/{entry}",
+          "/ordered-data-stores/v1/universes/{universeId}/orderedDataStores/{orderedDataStore}/scopes/{scope}/entries/{entry}",
+          "/ordered-data-stores/v1/universes/{universeId}/orderedDataStores/{orderedDataStore}/scopes/{scope}/entries/{entry}",
+          "/ordered-data-stores/v1/universes/{universeId}/orderedDataStores/{orderedDataStore}/scopes/{scope}/entries/{entry}:increment"
         ]
       }
     },
@@ -82608,7 +83493,14 @@
       "x-roblox-tag-info": {
         "path": "team-create",
         "content": "Lists all HTTP APIs for working with Team Create.",
-        "ordering": []
+        "ordering": [
+          "/legacy-develop/v1/places/{placeId}/teamcreate/active_session/members",
+          "/legacy-develop/v1/universes/{universeId}/teamcreate",
+          "/legacy-develop/v1/universes/{universeId}/teamcreate",
+          "/legacy-develop/v1/universes/{universeId}/teamcreate/memberships",
+          "/legacy-develop/v1/universes/multiget/teamcreate",
+          "/legacy-develop/v2/teamtest/{placeId}"
+        ]
       }
     },
     {
@@ -82617,7 +83509,40 @@
       "x-roblox-tag-info": {
         "path": "thumbnails",
         "content": "Lists all HTTP APIs for generating, retrieving, and updating thumbnails.",
-        "ordering": ["Cloud_GenerateUserThumbnail"]
+        "ordering": [
+          "/cloud/v2/users/{user_id}:generateThumbnail",
+          "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/alt-text",
+          "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/image",
+          "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/{imageId}",
+          "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/order",
+          "/legacy-publish/v1/badges/{badgeId}/icon",
+          "/v1/avatar/redraw-thumbnail",
+          "/v1/games/{universeId}/media",
+          "/v2/games/{universeId}/media",
+          "/v1/groups/icon",
+          "/v1/games/{gameId}/thumbnail/image",
+          "/v1/asset-thumbnail-animated",
+          "/v1/assets#ThumbnailsApi",
+          "/v1/assets-thumbnail-3d",
+          "/v1/badges/icons",
+          "/v1/batch",
+          "/v1/bundles/thumbnails",
+          "/v1/developer-products/icons",
+          "/v1/game-passes",
+          "/v1/games/{universeId}/thumbnails",
+          "/v1/games/icons",
+          "/v1/games/multiget/thumbnails",
+          "/v1/groups/icons",
+          "/v1/places/gameicons",
+          "/v1/users/avatar",
+          "/v1/users/avatar-3d",
+          "/v1/users/avatar-bust",
+          "/v1/users/avatar-headshot",
+          "/v1/users/outfit-3d",
+          "/v1/users/outfits",
+          "/v1/resize/{hash}/{width}/{height}/{type}/{format}/{filterType}",
+          "/v1/secureresize/{thumbPrint}/{hash}/{width}/{height}/{type}/{format}/{filterType}"
+        ]
       }
     },
     {
@@ -82626,7 +83551,17 @@
       "x-roblox-tag-info": {
         "path": "trades",
         "content": "Lists all HTTP APIs for trades.",
-        "ordering": []
+        "ordering": [
+          "/v1/trades/{tradeId}",
+          "/v1/trades/{tradeId}/decline",
+          "/v1/trades/{tradeId}",
+          "/v1/trades/{tradeStatusType}/count",
+          "/v1/trades/expire-outdated",
+          "/v1/trades/metadata",
+          "/v1/users/{userId}/can-trade-with",
+          "/v2/trades/{tradeId}",
+          "/v2/users/{userId}/tradableItems"
+        ]
       }
     },
     {
@@ -82636,24 +83571,131 @@
         "path": "universes",
         "content": "Lists all HTTP APIs for working with universes, including restarting servers and getting user subscriptions.",
         "ordering": [
-          "Cloud_GetUniverse",
-          "Cloud_UpdateUniverse",
-          "Cloud_PublishUniverseMessage",
-          "Cloud_RestartUniverseServers",
-          "Cloud_GetPlace",
-          "Cloud_UpdatePlace",
-          "Cloud_GetInstance",
-          "Cloud_UpdateInstance",
-          "Cloud_ListInstanceChildren",
-          "Cloud_ListUserRestrictions__Using_Universes",
-          "Cloud_GetUserRestriction__Using_Universes_Places",
-          "Cloud_UpdateUserRestriction__Using_Universes_Places",
-          "Cloud_ListUserRestrictions",
-          "Cloud_ListUserRestrictionLogs",
-          "Cloud_GetUserRestriction__Using_Universes",
-          "Cloud_UpdateUserRestriction__Using_Universes",
-          "CrossServerMessaging_Publish",
-          "Places_CreatePlaceVersionApiKey"
+          "/cloud/v2/universes/{universe_id}",
+          "/cloud/v2/universes/{universe_id}",
+          "/cloud/v2/universes/{universe_id}:publishMessage",
+          "/cloud/v2/universes/{universe_id}:restartServers",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/instances/{instance_id}",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/instances/{instance_id}",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/instances/{instance_id}:listChildren",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions/{user_restriction_id}",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions/{user_restriction_id}",
+          "/cloud/v2/universes/{universe_id}/user-restrictions",
+          "/cloud/v2/universes/{universe_id}/user-restrictions:listLogs",
+          "/cloud/v2/universes/{universe_id}/user-restrictions/{user_restriction_id}",
+          "/cloud/v2/universes/{universe_id}/user-restrictions/{user_restriction_id}",
+          "/legacy-badges/v1/universes/{universeId}/badges",
+          "/legacy-develop/v1/places/{placeId}/teamcreate/active_session/members",
+          "/legacy-develop/v1/universes/{universeId}/activate",
+          "/legacy-develop/v1/universes/{universeId}/deactivate",
+          "/legacy-develop/v1/universes/{universeId}/permissions",
+          "/legacy-develop/v1/universes/{universeId}/teamcreate",
+          "/legacy-develop/v1/universes/{universeId}/teamcreate",
+          "/legacy-develop/v1/universes/{universeId}/teamcreate/memberships",
+          "/legacy-develop/v1/universes/multiget/permissions",
+          "/legacy-develop/v1/universes/multiget/teamcreate",
+          "/legacy-followings/v1/users/{userId}/universes",
+          "/legacy-followings/v1/users/{userId}/universes/{universeId}",
+          "/legacy-followings/v1/users/{userId}/universes/{universeId}",
+          "/legacy-followings/v1/users/{userId}/universes/{universeId}/status",
+          "/legacy-followings/v2/users/{userId}/universes",
+          "/legacy-game-internationalization/v1/game-icon/games/{gameId}",
+          "/legacy-game-internationalization/v1/game-icon/games/{gameId}/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/game-icon/games/{gameId}/language-codes/{languageCode}",
+          "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/alt-text",
+          "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/image",
+          "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/{imageId}",
+          "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/order",
+          "/legacy-game-internationalization/v1/name-description/games/{gameId}",
+          "/legacy-game-internationalization/v1/name-description/games/translation-history",
+          "/legacy-game-internationalization/v1/source-language/games/{gameId}",
+          "/legacy-game-internationalization/v1/supported-languages/games/{gameId}",
+          "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/automatic-translation-status",
+          "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/languages/{languageCode}/automatic-translation-status",
+          "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/languages/{languageCode}/universe-display-info-automatic-translation-settings",
+          "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/universe-display-info-automatic-translation-settings",
+          "/legacy-localization-tables/v1/autolocalization/games/{gameId}/autolocalizationtable",
+          "/legacy-localization-tables/v1/autolocalization/games/{gameId}/settings",
+          "/messaging-service/v1/universes/{universeId}/topics/{topic}",
+          "/universes/v1/{universeId}/places/{placeId}/versions",
+          "/v1/game-start-info",
+          "/v1/universes/{universeId}/badges",
+          "/v1/universes/{universeId}/free-badges-quota",
+          "/v1/gametemplates",
+          "/v1/groups/{groupId}/universes",
+          "/v1/universes/{universeId}",
+          "/v1/universes/{universeId}/configuration",
+          "/v1/universes/{universeId}/configuration",
+          "/v1/universes/{universeId}/configuration/vip-servers",
+          "/v1/universes/{universeId}/places",
+          "/v1/universes/multiget",
+          "/v1/user/groups/canmanagegamesoritems",
+          "/v1/user/universes",
+          "/v2/universes/{universeId}/configuration",
+          "/v1/universes/{universeId}/stats",
+          "/v1/universe-payout-history",
+          "/v1/autolocalization/games/{gameId}/autolocalizationtable",
+          "/v1/autolocalization/games/{gameId}/autolocalizationtable",
+          "/v1/autolocalization/games/{gameId}/settings",
+          "/v1/automatic-translation/games/{gameId}/feature-status",
+          "/v1/automatic-translation/games/{gameId}/quota",
+          "/v1/game-localization-status/{gameId}/translation-counts",
+          "/v1/game-localization-status/translation-counts-for-language-or-locale",
+          "/v1/game-thumbnails/games/{gameId}/images",
+          "/v1/localizationtable/gametables/{gameId}",
+          "/v1/name-description/games/{gameId}",
+          "/v1/source-language/games/{gameId}",
+          "/v1/supported-languages/games/{gameId}",
+          "/v1/translation-analytics/games/{gameId}/download-translation-analytics-report",
+          "/v1/translation-analytics/games/{gameId}/request-translation-analytics-report",
+          "/v1/user-localization-settings/universe/{universeId}",
+          "/v1/user-localization-settings/universe/{universeId}",
+          "/v2/supported-languages/games/{gameId}",
+          "/v1/games",
+          "/v1/games/{placeId}/private-servers",
+          "/v1/games/{placeId}/servers/{serverType}",
+          "/v1/games/{universeId}/favorites",
+          "/v1/games/{universeId}/favorites",
+          "/v1/games/{universeId}/favorites/count",
+          "/v1/games/{universeId}/game-passes",
+          "/v1/games/{universeId}/media",
+          "/v1/games/{universeId}/user-votes",
+          "/v1/games/{universeId}/votes",
+          "/v1/games/{universeId}/votes/user",
+          "/v1/games/games-product-info",
+          "/v1/games/multiget-place-details",
+          "/v1/games/multiget-playability-status",
+          "/v1/games/recommendations/game/{universeId}",
+          "/v1/games/vip-servers/{universeId}",
+          "/v1/games/votes",
+          "/v1/private-servers/enabled-in-universe/{universeId}",
+          "/v1/private-servers/my-private-servers",
+          "/v1/vip-servers/{id}",
+          "/v1/vip-servers/{id}",
+          "/v1/vip-servers/{id}/permissions",
+          "/v1/vip-servers/{id}/subscription",
+          "/v2/games/{universeId}/media",
+          "/v2/groups/{groupId}/games",
+          "/v2/groups/{groupId}/gamesV2",
+          "/v2/users/{userId}/favorite/games",
+          "/v2/users/{userId}/games",
+          "/v1/users/{userId}/places/inventory",
+          "/v1/auto-localization-table/games/{gameId}/assets-generation-request",
+          "/v1/auto-localization-table/games/{gameId}/auto-scrape-cleanup-request",
+          "/v1/auto-localization-table/games/{gameId}/ingestion",
+          "/v2/stream-notifications/get-latest-game-updates",
+          "/v1/games/{gameId}/thumbnail/image",
+          "/v1/games/{universeId}/thumbnails",
+          "/v1/games/icons",
+          "/v1/games/multiget/thumbnails",
+          "/v1/places/gameicons",
+          "/v1/game-localization-roles/games/{gameId}",
+          "/v1/game-localization-roles/games/{gameId}/current-user/roles",
+          "/v1/game-localization-roles/games/{gameId}/roles/{role}/assignees",
+          "/v1/game-localization-roles/roles/{role}/current-user"
         ]
       }
     },
@@ -82663,7 +83705,28 @@
       "x-roblox-tag-info": {
         "path": "user-profiles",
         "content": "Lists all HTTP APIs for user profiles, such as updating user descriptions and retrieving badges.",
-        "ordering": ["Presence_GetUserPresences"]
+        "ordering": [
+          "/v1/description",
+          "/v1/description",
+          "/v1/metadata",
+          "/v1/promotion-channels",
+          "/v1/users/{userId}/promotion-channels",
+          "/v1/users/{userId}/roblox-badges",
+          "/v1/xbox-live/consecutive-login-days",
+          "/v1/avatar/redraw-thumbnail",
+          "/v1/users/{userId}/avatar",
+          "/v1/users/{userId}/currently-wearing",
+          "/v1/users/{userId}/badges",
+          "/v1/user/groups/primary",
+          "/v1/user/groups/primary",
+          "/v1/users/{userId}/groups/primary/role",
+          "/v1/users/{userId}/premium-upsell-precheck",
+          "/v1/users/{userId}/validate-membership",
+          "/v1/presence/users",
+          "/v1/users/{userId}",
+          "/v1/users/{userId}/display-names",
+          "/v1/users/{userId}/username-history"
+        ]
       }
     },
     {
@@ -82673,20 +83736,98 @@
         "path": "users",
         "content": "Lists all HTTP APIs for working with users, such as getting user subscriptions or all universes a user is following.",
         "ordering": [
-          "Cloud_ListUserRestrictions__Using_Universes",
-          "Cloud_GetUserRestriction__Using_Universes_Places",
-          "Cloud_UpdateUserRestriction__Using_Universes_Places",
-          "Cloud_GetSubscription",
-          "Cloud_ListUserRestrictions",
-          "Cloud_ListUserRestrictionLogs",
-          "Cloud_GetUserRestriction__Using_Universes",
-          "Cloud_UpdateUserRestriction__Using_Universes",
-          "Cloud_GetUser",
-          "Cloud_GenerateUserThumbnail",
-          "Cloud_ListAssetQuotas",
-          "Cloud_ListInventoryItems",
-          "Cloud_CreateUserNotification",
-          "Presence_GetUserPresences"
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions/{user_restriction_id}",
+          "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions/{user_restriction_id}",
+          "/cloud/v2/universes/{universe_id}/subscription-products/{subscription_product_id}/subscriptions/{subscription_id}",
+          "/cloud/v2/universes/{universe_id}/user-restrictions",
+          "/cloud/v2/universes/{universe_id}/user-restrictions:listLogs",
+          "/cloud/v2/universes/{universe_id}/user-restrictions/{user_restriction_id}",
+          "/cloud/v2/universes/{universe_id}/user-restrictions/{user_restriction_id}",
+          "/cloud/v2/users/{user_id}",
+          "/cloud/v2/users/{user_id}:generateThumbnail",
+          "/cloud/v2/users/{user_id}/asset-quotas",
+          "/cloud/v2/users/{user_id}/inventory-items",
+          "/cloud/v2/users/{user_id}/notifications",
+          "/legacy-develop/v1/user/groups/canmanage",
+          "/legacy-followings/v1/users/{userId}/universes",
+          "/legacy-followings/v1/users/{userId}/universes/{universeId}",
+          "/legacy-followings/v1/users/{userId}/universes/{universeId}",
+          "/legacy-followings/v1/users/{userId}/universes/{universeId}/status",
+          "/legacy-followings/v2/users/{userId}/universes",
+          "/legacy-groups/v1/user/groups/pending",
+          "/v1/users/{userId}/promotion-channels",
+          "/v1/users/{userId}/roblox-badges",
+          "/v1/users/{userId}/avatar",
+          "/v1/users/{userId}/currently-wearing",
+          "/v1/users/{userId}/outfits",
+          "/v2/avatar/users/{userId}/avatar",
+          "/v2/avatar/users/{userId}/outfits",
+          "/v1/users/{userId}/badges",
+          "/v1/users/{userId}/badges/{badgeId}/awarded-date",
+          "/v1/users/{userId}/badges/awarded-dates",
+          "/v1/favorites/users/{userId}/assets/{assetId}/favorite",
+          "/v1/favorites/users/{userId}/assets/{assetId}/favorite",
+          "/v1/favorites/users/{userId}/assets/{assetId}/favorite",
+          "/v1/favorites/users/{userId}/bundles/{bundleId}/favorite",
+          "/v1/favorites/users/{userId}/bundles/{bundleId}/favorite",
+          "/v1/favorites/users/{userId}/bundles/{bundleId}/favorite",
+          "/v1/favorites/users/{userId}/favorites/{assetTypeId}/assets",
+          "/v1/favorites/users/{userId}/favorites/{subtypeId}/bundles",
+          "/v1/users/{userId}/bundles",
+          "/v1/users/{userId}/bundles/{bundleType}",
+          "/v1/contacts/metadata",
+          "/v1/user/get-tags",
+          "/v1/user/tag",
+          "/v1/user/tag/validate",
+          "/v1/user/groups/canmanagegamesoritems",
+          "/v1/users/{targetUserId}/followers",
+          "/v1/users/{targetUserId}/followers/count",
+          "/v1/users/{targetUserId}/followings",
+          "/v1/users/{targetUserId}/followings/count",
+          "/v1/users/{userId}/friends",
+          "/v1/users/{userId}/friends/count",
+          "/v1/users/{userId}/friends/find",
+          "/v1/users/{userId}/friends/inactive",
+          "/v1/users/{userId}/friends/online",
+          "/v1/users/{userId}/friends/search",
+          "/v1/users/{userId}/friends/statuses",
+          "/v1/vip-server/can-invite/{userId}",
+          "/v2/users/{userId}/favorite/games",
+          "/v2/users/{userId}/games",
+          "/v1/groups/{groupId}/join-requests/users/{userId}",
+          "/v1/groups/{groupId}/join-requests/users/{userId}",
+          "/v1/groups/{groupId}/join-requests/users/{userId}",
+          "/v1/groups/{groupId}/users",
+          "/v1/groups/{groupId}/users",
+          "/v1/groups/{groupId}/users/{userId}",
+          "/v1/groups/{groupId}/users/{userId}",
+          "/v1/groups/{groupId}/users/{userId}/permissions",
+          "/v1/users/{userId}/friends/groups/roles",
+          "/v1/users/{userId}/groups/primary/role",
+          "/v1/users/{userId}/groups/roles",
+          "/v2/users/{userId}/groups/roles",
+          "/v1/users/{userId}/assets/collectibles",
+          "/v1/users/{userId}/can-view-inventory",
+          "/v1/users/{userId}/categories",
+          "/v1/users/{userId}/categories/favorites",
+          "/v1/users/{userId}/items/{itemType}/{itemTargetId}",
+          "/v1/users/{userId}/items/{itemType}/{itemTargetId}/is-owned",
+          "/v1/users/{userId}/places/inventory",
+          "/v2/assets/{assetId}/owners",
+          "/v2/users/{userId}/inventory",
+          "/v2/users/{userId}/inventory/{assetTypeId}",
+          "/v1/users/{userId}/premium-upsell-precheck",
+          "/v1/users/{userId}/validate-membership",
+          "/v1/presence/users",
+          "/v1/game-localization-roles/games/{gameId}/roles/{role}/assignees",
+          "/v1/usernames/users",
+          "/v1/users",
+          "/v1/users/{userId}",
+          "/v1/users/{userId}/display-names",
+          "/v1/users/{userId}/display-names/validate",
+          "/v1/users/{userId}/username-history",
+          "/v1/users/search"
         ]
       }
     }

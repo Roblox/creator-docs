@@ -12,6 +12,10 @@ description: |
   class provides a single **Input** pin that can be connected to other pins via
   `Class.Wire|Wires`.
 
+  Roblox uses the following formula to throttle requests for this API based on
+  the number of players in your experience:
+  `max requests per minute per experience = 1 + (5 * number_of_concurrent_users)`.
+
   For more information, see
   [Speech-to-text](../../../audio/objects.md#speech-to-text).
 code_samples:

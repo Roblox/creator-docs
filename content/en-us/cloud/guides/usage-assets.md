@@ -175,7 +175,7 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
           <li>Up to 4096x2160 resolution.</li>
           <li>Up to 3.75 GB.</li>
           <li>Currently, only English, Spanish, Portuguese, Indonesian, Chinese (simplified and traditional), Japanese, and/or Korean audio and text are allowed.</li>
-          <li>Up to 10 uploads per day if you're 13+ and ID-verified.</li>
+          <li>Up to 20 uploads per day if you're 13+ and ID-verified.</li>
         </ul>
       </td>
     </tr>
