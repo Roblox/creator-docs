@@ -722,3 +722,4 @@ https://en.wikipedia.org/wiki/MD5
 https://en.wikipedia.org/wiki/SHA-1
 https://en.wikipedia.org/wiki/SHA-2
 https://en.wikipedia.org/wiki/WebSocket
+https://www.youtube-nocookie.com/embed/j6OPA95-1O0

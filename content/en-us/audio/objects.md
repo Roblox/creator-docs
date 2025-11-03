@@ -28,6 +28,7 @@ To play audio within your experience, it's important to understand the role of e
 - An `Class.AudioDeviceOutput` is a **physical hardware device** within the real world, such as a speaker or headphones.
 - An `Class.AudioDeviceInput` is a **physical microphone** within the real world.
 - The `Class.AudioTextToSpeech` object converts **text to audio** using an artificial human voice.
+- The `Class.AudioSpeechToText` object converts **spoken audio to text**.
 - A `Class.Wire` **carries audio streams** from one audio object to another.
 
 How you pair these audio objects together depends on if you want to emit audio directly to the player's speaker or headphones or from objects in the 3D space. The following sections detail both scenarios.
@@ -50,15 +51,15 @@ To demonstrate how to configure these audio objects in Studio for 2D audio, the 
 
 To play non-directional audio:
 
-1. In the **Explorer** window, navigate to **SoundService**, then
-   1. Insert an **AudioPlayer** object to create an audio source.
-   1. Insert an **AudioDeviceOutput** object to create a speaker that plays throughout the experience.
-   1. Insert a **Wire** object to connect the stream from the audio player to the speaker.
-1. Select the **AudioPlayer**, then in the **Properties** window,
+1. In the **Explorer** window, go to **SoundService** and insert the following:
+   1. An **AudioPlayer** object to create an audio source.
+   1. An **AudioDeviceOutput** object to create a speaker that plays throughout the experience.
+   1. A **Wire** object to connect the stream from the audio player to the speaker.
+1. In the **Properties** window of the **AudioPlayer** object:
    1. Set **AssetID** to a valid audio asset ID. If you don't have your own custom audio, you can find free-to-use audio assets in the Creator Store.
    1. Enable **Looping** if you want your audio to continuously repeat.
    1. Set **Volume** to the unit of amplitude you want to play your audio.
-1. Select the **Wire**, then in the **Properties** window,
+1. In the **Properties** window of the **Wire** object:
    1. Set **SourceInstance** to the **AudioPlayer** to specify that you want to play the audio within this specific audio player.
    1. Set **TargetInstance** to the **AudioDeviceOutput** to specify that you want to play the audio from this specific speaker.
 
@@ -99,21 +100,21 @@ To play positional audio:
    When you set **ListenerLocation** to either **Character** or **Camera**, the engine automatically creates an `Class.AudioDeviceOutput` object under `Class.SoundService` at runtime.
    </Alert>
 
-1. In the **Explorer** window, navigate to the 3D object that you want to emit audio, then:
-   1. Insert an **AudioPlayer** object to create an audio source.
-   1. Insert an **AudioEmitter** object to emit a positional stream from the 3D object.
-   1. Insert a **Wire** object to connect the stream from the audio player to the audio emitter.
-1. Select the **AudioPlayer**, then in the **Properties** window,
+1. In the **Explorer** window, go to the 3D object that you want to emit audio and insert the following:
+   1. An **AudioPlayer** object to create an audio source.
+   1. An **AudioEmitter** object to emit a positional stream from the 3D object.
+   1. A **Wire** object to connect the stream from the audio player to the audio emitter.
+1. In the **Properties** window of the **AudioPlayer** object:
    1. Set **AssetID** to a valid audio asset ID. If you don't have your own custom audio, you can find free-to-use audio assets in the Creator Store.
    1. Enable **Looping** if you want your audio to continuously repeat.
    1. Set **Volume** to the unit of amplitude you want to play your audio.
-1. Select the **AudioEmitter**, then in the **Properties** window, set **DistanceAttenuation** to a volume-over-distance curve that determines how loudly the listener hears the emitter according to the distance between them.
+1. In the **Properties** window of the **AudioEmitter** object, set **DistanceAttenuation** to a volume-over-distance curve that determines how loudly the listener hears the emitter according to the distance between them.
 
    For example, the following curve decreases the audio's volume in half when the listener is 50 studs away from the emitter, then it sharply decreases the volume to zero when the listener is 70 studs away.
 
    <img src="../assets/audio/audio-objects/DistanceAttenuation.png" width="60%" />
 
-1. Select the **Wire**, then in the **Properties** window,
+1. In the **Properties** window of the **Wire** object:
    1. Set **SourceInstance** to the **AudioPlayer** to specify that you want to play the audio within this specific audio player.
    1. Set **TargetInstance** to the **AudioEmitter** to specify that you want to play the audio from this specific audio emitter.
 
@@ -149,11 +150,11 @@ To demonstrate how to configure these audio objects in Studio for 2D TTS audio, 
 
 To play 2D text-to-speech audio:
 
-1. In the **Explorer** window, navigate to **SoundService**, then
-   1. Insert an **AudioTextToSpeech** object to create an audio speech generator.
-   1. Insert an **AudioDeviceOutput** object to create a speaker that plays throughout the experience.
-   1. Insert a **Wire** object to connect the stream from the audio speech generator to the speaker.
-1. Select the **AudioTextToSpeech** object, then in the **Properties** window,
+1. In the **Explorer** window, go to **SoundService** and insert the following:
+   1. An **AudioTextToSpeech** object to create an audio speech generator.
+   1. An **AudioDeviceOutput** object to create a speaker that plays throughout the experience.
+   1. A **Wire** object to connect the stream from the audio speech generator to the speaker.
+1. In the **Properties** window of the **AudioTextToSpeech** object:
    1. Set **Text** to anything you want the voice to say. There is a limit of 300 characters per request.
    1. Set **VoiceId** to a number between `1` and `10`, depending on which artificial voice you want to use in the following table.
 
@@ -232,7 +233,7 @@ To play 2D text-to-speech audio:
       <br></br>
 
    1. Set **Volume** to the unit of amplitude you want to play your audio.
-1. Select the **Wire**, then in the **Properties** window,
+1. In the **Properties** window of the **Wire** object:
    1. Set **SourceInstance** to the **AudioTextToSpeech** to specify that you want to play the audio within this specific audio speech generator.
    1. Set **TargetInstance** to the **AudioDeviceOutput** to specify that you want to play the audio from this specific speaker.
 
@@ -264,11 +265,11 @@ To play 3D text-to-speech audio:
    When you set **ListenerLocation** to either **Character** or **Camera**, the engine automatically creates an `Class.AudioDeviceOutput` object under `Class.SoundService` at runtime.
    </Alert>
 
-1. In the **Explorer** window, navigate to the 3D object that you want to emit audio, then:
-   1. Insert an **AudioTextToSpeech** object to create an audio speech generator.
-   1. Insert an **AudioEmitter** object to emit a positional stream from the 3D object.
-   1. Insert a **Wire** object to connect the stream from the audio speech generator to the audio emitter.
-1. Select the **AudioTextToSpeech** object, then in the **Properties** window,
+1. In the **Explorer** window, go to the 3D object that you want to emit audio and insert the following:
+   1. Aan **AudioTextToSpeech** object to create an audio speech generator.
+   1. An **AudioEmitter** object to emit a positional stream from the 3D object.
+   1. A **Wire** object to connect the stream from the audio speech generator to the audio emitter.
+1. In the **Properties** window of the **AudioTextToSpeech** object:
    1. Set **Text** to anything you want the voice to say. There is a limit of 300 characters per request.
    1. Set **VoiceId** to a number between `1` and `10`, depending on which artificial voice you want to use in the following table.
 
@@ -347,13 +348,13 @@ To play 3D text-to-speech audio:
       <br></br>
 
    1. Set **Volume** to the unit of amplitude you want to play your audio.
-1. Select the **AudioEmitter**, then in the **Properties** window, set **DistanceAttenuation** to a volume-over-distance curve that determines how loudly the listener hears the emitter according to the distance between them.
+1. In the **Properties** window of the of the **AudioEmitter**, set **DistanceAttenuation** to a volume-over-distance curve that determines how loudly the listener hears the emitter according to the distance between them.
 
    For example, the following curve decreases the audio's volume in half when the listener is 50 studs away from the emitter, then it sharply decreases the volume to zero when the listener is 70 studs away.
 
    <img src="../assets/audio/audio-objects/DistanceAttenuation.png" width="60%" />
 
-1. Select the **Wire**, then in the **Properties** window,
+1. In the **Properties** window of the **Wire** object:
    1. Set **SourceInstance** to the **AudioTextToSpeech** to specify that you want to play the audio within this specific audio speech generator.
    1. Set **TargetInstance** to the **AudioEmitter** to specify that you want to play the audio from this specific audio emitter.
 
@@ -361,6 +362,63 @@ To play 3D text-to-speech audio:
 </Tabs>
 
 From here, you can trigger your TTS audio with scripts. For code sample references for TTS audio, including how to configure context-aware TTS that adapts in relation to the player, the state of their environment, or gameplay status, see the [Add text-to-speech](../tutorials/use-case-tutorials/audio/add-text-to-speech.md) tutorial.
+
+### Speech-to-text
+
+<Alert severity="warning">
+All audio for `Class.AudioSpeechToText` objects must adhere to Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846).
+</Alert>
+
+**Speech-to-text** (**STT**) is a form of technology that automatically generates text strings from speech sounds. This type of audio requires three audio objects:
+
+- A text generator to load and convert audio into text.
+- A physical hardware device like a microphone to capture the audio input.
+- A wire to carry the audio stream from the input device to the text generator.
+
+All of these audio objects work together to generate STT text in response to player actions. For example, if the player is wearing a headset while playing an experience with their laptop:
+
+- The `Class.AudioDeviceInput` captures the player's speech, as spoken into their microphone and as a stream of audio.
+- A `Class.Wire` carries the audio stream from the `Class.AudioDeviceInput` to the `Class.AudioSpeechToText`.
+- The `Class.AudioSpeechToText` converts the player's speech into text.
+- The game reads this text and performs an action, such as displaying the spoken text on the screen or opening a door at the player's command.
+
+<img src="../assets/audio/audio-objects/STT-Audio-Diagram.png" width="100%" />
+
+To implement speech-to-text in your experience:
+
+1. Enable the use of the latest API for voice.
+    1. In the **Explorer** window, select the **VoiceChatService**.
+    2. In the **Properties** window, set **UseAudioApi** to **Enabled**.
+2. In the **Explorer** window, go to **SoundService** and insert the following:
+      1. An **AudioDeviceInput** to capture speech.
+      2. An **AudioSpeechToText** to convert the speech into text.
+      3. A **Wire** to carry the stream from the audio device input to the STT instance.
+3. In the **Properties** window of the **AudioSpeechToText** object, set the **Enabled** state to on.
+4. In the **Properties** window of the **Wire** object:
+      1. Set **SourceInstance** to your new **AudioDeviceInput** to specify that you want the wire to carry audio from this specific audio instance.
+      2. Set **TargetInstance** to your new **AudioSpeechToText** to specify that you want the wire to carry audio to this specific audio instance.
+5. Set the **Player** property of the audio device input to the local player at runtime with `audioDeviceInput.Player = game.Players.LocalPlayer`. This tells Roblox which user's microphone to capture audio from.
+
+<Alert severity="info">
+By default, enabling the microphone also enables spatial voice chat in your experience. If you want players to use speech-to-text without broadcasting their voice to other players, turn off the **EnableDefaultVoice** property under **VoiceChatService**.
+</Alert>
+
+After setting up STT in your experience, you can trigger it with scripts. For code sample references, see the [Add speech-to-text](../tutorials/use-case-tutorials/audio/speech-to-text.md) tutorial.
+
+<h5 style={{marginTop: '36px'}}>Filter for similar words</h5>
+
+When you implement STT in your experience, you might want to improve matching accuracy by filtering for words that sound similar to the words you actually want the player to say. To do this, you can compare the words recognized by `AudioSpeechToText` with known word lists:
+
+1. Sanitize and tokenize the `Text` output of `AudioSpeechToText` to create a table of lowercase strings that can be parsed and compared.
+      1. Remove punctuation characters.
+      2. Convert the entire string to lowercase.
+      3. Split the string by whitespace to produce a table of words.
+2. Generate candidate tables to prepare your strings for comparison.
+      1. Sanitize and tokenize each reference string.
+      2. Store these processed words in a separate table.
+3. Compare and match the words in both tables to recognize the speech inputs that are close to your target phrases, even if they include small variations.
+      - For simple checks, check if the strings are the exact same.
+      - For more flexible matching, you can write custom logic to accept substitutions (like "colour" instead of "color") or match a subset of words and calculate a similarity score.
 
 ## Customize audio
 

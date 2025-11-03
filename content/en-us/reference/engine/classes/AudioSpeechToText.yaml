@@ -52,9 +52,7 @@ properties:
     summary: |
       The text resulting from the conversion of speech audio.
     description: |
-      The text resulting from the conversion of speech audio. Text accumulates
-      until it hits a limit of 280 characters, and then old text is dropped to
-      make room for new text.
+      The text resulting from the conversion of speech audio.
     code_samples: []
     type: string
     tags: []

@@ -19,9 +19,10 @@ Roblox offers many different types of [audio objects](../audio/objects.md) that 
 - The `Class.AudioDeviceOutput` object is a **physical hardware device** within the real world, such as a speaker or headphones.
 - The `Class.AudioDeviceInput` object is a **physical microphone** within the real world.
 - The `Class.AudioTextToSpeech` object converts **text to audio** using an artificial voice.
+- The `Class.AudioSpeechToText` object converts **audio to text**.
 - `Class.Wire|Wires` carry audio streams from one object to another.
 
-Using these objects, you can either set audio to play automatically at runtime, or trigger it to play from scripts. For practical applications of these audio objects, see the [Add 2D audio](../tutorials/use-case-tutorials/audio/add-2D-audio.md), [Add 3D audio](../tutorials/use-case-tutorials/audio/add-3D-audio.md), [Add text-to-speech](../tutorials/use-case-tutorials/audio/add-text-to-speech.md), and [Add voice chat](../tutorials/use-case-tutorials/audio/add-voice-chat.md) tutorials.
+Using these objects, you can either set audio to play automatically at runtime, or trigger it to play from scripts. For practical applications of these audio objects, see the [Add 2D audio](../tutorials/use-case-tutorials/audio/add-2D-audio.md), [Add 3D audio](../tutorials/use-case-tutorials/audio/add-3D-audio.md), [Add text-to-speech](../tutorials/use-case-tutorials/audio/add-text-to-speech.md), [Add speech-to-text](../tutorials/use-case-tutorials/audio/speech-to-text.md), and [Add voice chat](../tutorials/use-case-tutorials/audio/add-voice-chat.md) tutorials.
 
 ## Audio effects
 

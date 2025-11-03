@@ -11,6 +11,12 @@ navigation:
   - title: Error report
     path: /production/analytics/error-report
 
+  - heading: Adjust and experiment
+  - title: Configs
+    path: /production/configs
+  - title: Experiments
+    path: /production/experiments
+
   - heading: Dashboards
   - title: Overview
     path: /production/analytics/analytics-dashboard
