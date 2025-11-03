@@ -345,7 +345,7 @@ tell the client how many coins it has, you can call the following and let the
 client subscribe to it via the `PlayerDataClient.updated` event.
 
 ```lua
-PlayerDataServer:setValue(player, "coins", 5)
+PlayerDataServer.setValue(player, "coins", 5)
 ```
 
 Of course, this is only useful for server-to-client replication and for values that you want to persist between sessions, but this applies to a surprising number of cases in the project, including:
