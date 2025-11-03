@@ -20,7 +20,7 @@ Engagement signals from sponsored ads, search, charts, friends, teleport, notifi
 
 **Ranking (stage 2)**: The ranking stage takes the input from the retrieval stage and selects the most relevant experiences to be ranked in a personalized way and shown to each user. There is also some exploration besides the relevancy ranking to users. How far your game goes and how much organic distribution it gets depends entirely on the engagement of users who come through Recommended for You.
 
-We do not count the engagement or monetization of users first acquired from ads, friends, or social media in the ranking stage of Recommended for You.
+We do not count the engagement or monetization of users first acquired from ads, friends, Today's Picks, search, social media, or any other source in the ranking stage of Recommended for You.
 
 ### Key signals
 
