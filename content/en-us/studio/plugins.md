@@ -132,7 +132,7 @@ end)
 As with [models](../parts/models.md), [meshes](../parts/meshes.md), [images](../parts/textures-decals.md), and [animations](../animation/editor.md#creating-an-animation), you can distribute plugins to Roblox to make them easy to reuse from the [Toolbox](../projects/assets/toolbox.md). You can choose to make them publicly available to all other creators on the [Creator Store](../production/creator-store.md), or to distribute them privately for your own use. If you choose to distribute your plugin publicly, you can set a price at which to sell it to other creators.
 
 <Alert severity="info">
-The only way to distribute and set a price for a plugin is through the Creator Dashboard. You can always upload a plugin using this process and monetize it later from the dashboard. If you are under 13, you will not be able to monetise your plugin. For instructions on this process, see [Distributing Assets](../production/creator-store.md#through-creator-dashboard).
+The only way to distribute and set a price for a plugin is through the Creator Dashboard. You can always upload a plugin using this process and, if age-verified, monetize it later from the dashboard. For instructions on this process, see [Distributing Assets](../production/creator-store.md#through-creator-dashboard).
 </Alert>
 
 To distribute a plugin:
