@@ -94,11 +94,11 @@ navigation:
   - title: Users
     path: /cloud/features/users
   - title: '' # doesn't show anywhere
-    path: /cloud/features-revamp/
+    path: /cloud/reference/features/
     type: cloudfeature
     source: /reference/cloud/openapi.json
   - title: '' # doesn't show anywhere
-    path: /cloud/domains/
+    path: /cloud/reference/domains/
     type: clouddomain
     source: /reference/cloud/openapi.json
   - heading: Open Cloud API Reference

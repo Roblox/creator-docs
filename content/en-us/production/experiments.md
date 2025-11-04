@@ -205,6 +205,8 @@ For convenience, the results page lets you replace the default config value with
 
   ![Insufficient MDE screen during creation.](../assets/analytics/configs/experiment-mde.png)
 
+- **Start with a hypothesis.** Rather than just changing a variable and checking the results, write a cause-and-effect statement about what you changed, what you expect to happen, and why. As you experiment more and more, having a set of written hypotheses to accompany your results can help clarify your thinking and spark new ideas for experiments.
+
 - **Let experiments run for their full durations.** The novelty effect (temporary interest in a change not because it's better, but because it's new) can heavily skew early results, sometimes causing them to swing in and out of statistical significance. Ending experiments early increases the odds of you taking premature action based on anomalous spikes that more data would have smoothed out or even contradicted.
 
 - **Don't act without statistical significance.** Even seemingly large changes in player behavior might not be statistically significant, generally due to small sample size. If a change isn't statistically significant, ignore it.

@@ -78,7 +78,7 @@ properties:
       Interactive Model, or SLIM, model (a composite of all child parts of the
       model) renders at progressively lower resolutions at distances based on
       the streaming radius. This greatly improves visual quality over
-      `StreamingMesh`.
+      `Enum.ModelLevelOfDetail|StreamingMesh`.
 
       When set to `Enum.ModelLevelOfDetail|Disabled` or
       `Enum.ModelLevelOfDetail|Automatic`, lower resolution meshes will not be
@@ -174,18 +174,18 @@ properties:
   - name: Model.Scale
     summary: |
       Editor-only property used to scale the model around its pivot. Setting
-      this property will move the scale as though `Model/ScaleTo` was called on
-      it.
+      this property will move the scale as though `Class.Model:ScaleTo()` was
+      called on it.
     description: |
       Setting this property in the Properties window will scale the model as
-      though `Model/ScaleTo` was called on it, scaling all descendant Instances
-      in the model, such as materials, images, and the 3D geometry of parts, so
-      that the model has the specified scale factor relative to its original
-      size.
+      though `Class.Model:ScaleTo()` was called on it, scaling all descendant
+      Instances in the model, such as materials, images, and the 3D geometry of
+      parts, so that the model has the specified scale factor relative to its
+      original size.
 
       This property is only available in Studio and will throw an error if used
-      in a `Script` or `LocalScript`. `Model/ScaleTo` and `Model/GetScale`
-      should be used from scripts.
+      in a `Class.Script` or `Class.LocalScript`. `Class.Model:ScaleTo()` and
+      `Class.Model:GetScale()` should be used from scripts.
     code_samples: []
     type: float
     tags:
@@ -484,27 +484,30 @@ methods:
   - name: Model:GetScale
     summary: |
       Returns the canonical scale of the model, which defaults to 1 for newly
-      created models and will change as it is scaled via `Model/ScaleTo`.
+      created models and will change as it is scaled via
+      `Class.Model:ScaleTo()`.
     description: |
       Models contain a persistent canonical scale factor, which starts out at 1
       for newly created models and changes as the model is scaled by calling
-      `Model/ScaleTo`. This function returns the current canonical scale factor
-      of the model.
+      `Class.Model:ScaleTo()`. This function returns the current canonical scale
+      factor of the model.
 
       The current scale factor does not _directly_ impact the size of Instances
       under the model. It is used for content authoring and scripting purposes
       to remember how the model has been scaled relative to its original size.
 
       Within a given session, the model will cache the precise original size
-      information of the descendant Instances after the first `Model/ScaleTo`
-      call. This means that calling `ScaleTo(x)` followed by `ScaleTo(1)` will
-      get you back _exactly_ the original configuration of the model with no
-      floating point drift. Avoiding floating point drift is the motivation for
-      having a Scale**To** function instead of a Scale**By** function.
+      information of the descendant Instances after the first
+      `Class.Model:ScaleTo()` call. This means that calling
+      `Class.Model:ScaleTo()|ScaleTo(x)` followed by
+      `Class.Model:ScaleTo()|ScaleTo(1)` will get you back _exactly_ the
+      original configuration of the model with no floating point drift. Avoiding
+      floating point drift is the motivation for having a Scale**To** function
+      instead of a Scale**By** function.
 
       The scale factor does impact engine behavior in one way: The scale factor
       of a model will be applied to joint offsets of
-      `Class.Animation|animations` played on an `Class.AnimationController`
+      `Class.Animation|Animations` played on an `Class.AnimationController`
       under that model, so that animated rigs will correctly play back
       animations even when scaled.
     code_samples:
@@ -673,10 +676,10 @@ methods:
       properties which are scaled:
 
       - The length of joints like `Class.WeldConstraint|WeldConstraints`, and
-        `Class.Rope|Ropes`
-      - Physical velocities and forces like `Hinge.MaxServoTorque`
+        `Class.RopeConstraint`
+      - Physical velocities and forces like `Class.HingeConstraint`
       - Visual properties like sizes of particle emitters
-      - Other length properties like `Sound.RollOffMinDistance`
+      - Other length properties like `Class.Sound.RollOffMinDistance`
     code_samples: []
     parameters:
       - name: newScaleFactor
