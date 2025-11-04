@@ -1391,11 +1391,7 @@ methods:
         type: AssetTypeVerification
         default: Default
         summary: |
-          ⚠️ The default value for this parameter will change from
-          `Enum.AssetTypeVerification.ClientOnly|ClientOnly` to
-          `Enum.AssetTypeVerification.Always|Always` after 10/20/2025. See
-          [here](https://devforum.roblox.com/t/potential-action-required-update-for-humanoiddescription-apis/3982903)
-          for details.
+          The asset type verification mode.
     returns:
       - type: ()
         summary: ''
@@ -1437,11 +1433,7 @@ methods:
         type: AssetTypeVerification
         default: Default
         summary: |
-          ⚠️ The default value for this parameter will change from
-          `Enum.AssetTypeVerification.ClientOnly|ClientOnly` to
-          `Enum.AssetTypeVerification.Always|Always` after 10/20/2025. See
-          [here](https://devforum.roblox.com/t/potential-action-required-update-for-humanoiddescription-apis/3982903)
-          for details.
+          The asset type verification mode.
     returns:
       - type: ()
         summary: ''

@@ -16,7 +16,7 @@ Recommended for You is designed to personalize content, connecting users with ex
 
 **Retrieval (stage 1)**: Roblox has millions of experiences, and we need a way to figure out which ones to show to a particular user, personalized to them. Our system selects a subset of experiences that each user might enjoy playing based on signals like engagement, retention, monetization, and friend plays.
 
-Engagement signals from sponsored ads, search, charts, friends, teleport, notifications, and other social media sharing can accelerate your consideration for organic distribution. Experiences that have even a small number of people playing can signal to our system that the experience is worth distributing to more users who might find the game enjoyable through Recommended for You.
+Engagement signals from sponsored ads, Today's Picks, search, Charts, friends, teleport, notifications, and other social media sharing can accelerate your consideration for organic distribution. Experiences that have even a small number of people playing can signal to our system that the experience is worth distributing to more users who might find the game enjoyable through Recommended for You.
 
 **Ranking (stage 2)**: The ranking stage takes the input from the retrieval stage and selects the most relevant experiences to be ranked in a personalized way and shown to each user. There is also some exploration besides the relevancy ranking to users. How far your game goes and how much organic distribution it gets depends entirely on the engagement of users who come through Recommended for You.
 

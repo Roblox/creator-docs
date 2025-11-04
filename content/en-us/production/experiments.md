@@ -203,7 +203,7 @@ For convenience, the results page lets you replace the default config value with
 
   Roblox calculates MDE using your goal metric and number of players per variant, which is based on daily active users, rollout percentage, experiment duration, and variant splits. If the MDE is too high for your goal metric (for example, more than 100%), it's unlikely you can reach statistical significance. Experiences with fewer than 1,000 daily active users might struggle to get useful data from experiments.
 
-  <img src="../assets/analytics/configs/experiment-mde.png" alt="Insufficient MDE screen during creation." width="300" />
+  ![Insufficient MDE screen during creation.](../assets/analytics/configs/experiment-mde.png)
 
 - **Let experiments run for their full durations.** The novelty effect (temporary interest in a change not because it's better, but because it's new) can heavily skew early results, sometimes causing them to swing in and out of statistical significance. Ending experiments early increases the odds of you taking premature action based on anomalous spikes that more data would have smoothed out or even contradicted.
 
