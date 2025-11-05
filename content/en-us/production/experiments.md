@@ -141,6 +141,11 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 - You must call `Class.ConfigService:GetConfigForPlayerAsync()|GetConfigForPlayerAsync()` separately for each player; `Class.ConfigService:GetConfigAsync()|GetConfigAsync()` does not apply experiments.
 - After you call `Class.ConfigSnapshot:GetValue()|GetValue()` on a player-specific snapshot, the player associated with the snapshot is enrolled in the experiment for that key and that key only. All subsequent calls to the method return the same control or variant for the duration of the experiment. Only the first call is random.
+
+  <Alert severity="success">
+  Wait to call `Class.ConfigSnapshot:GetValue()|GetValue()` until you need it. Calling `Class.ConfigSnapshot:GetValue()|GetValue()` too early can cause you to enroll players who never interact with the part of the experience you're experimenting on.
+  </Alert>
+
 - Enrollment in experiments isn't limited to new users. Even if a user previously received a value from `Class.ConfigService:GetConfigAsync()|GetConfigAsync()`, you can still enroll them in an experiement using a player-specific snapshot from `Class.ConfigService:GetConfigForPlayerAsync()|GetConfigForPlayerAsync()`.
 - If a key in a player-specific snapshot doesn't have an active experiment, `Class.ConfigSnapshot:GetValue()|GetValue()` returns the standard config value (or nil if it has no value).
 
@@ -207,10 +212,12 @@ For convenience, the results page lets you replace the default config value with
 
 - **Don't act without statistical significance.** Even seemingly large changes in player behavior might not be statistically significant, generally due to small sample size. If a change isn't statistically significant, ignore it.
 
-- **Avoid changes during experiments**. Major bugs of course need fixes, but changes to experience content can impact player behavior and invalidate your results, even if the changes **seem** unrelated to your experiment.
+- **Avoid changes during experiments**. Major bugs of course need fixes, but changes to experience content can impact player behavior and invalidate your results, even if the changes **seem** unrelated to your experiment. Similarly, only run experiments simultaneously if you're confident they won't interact with each other.
 
 - **Use confidence intervals for deep dives** into metrics and to check for borderline cases of statistical significance. If the confidence interval is too wide, the metric might never reach statistical significance.
 
 - If one metric is significantly up and another significantly down, you have to **decide whether the trade-off is worth it**, possibly in conjunction with other statistically significant movements.
 
 - Experiments provide strong signal, but **statistical significance deals in probabilities, not certainties**—hence the confidence interval. Data variability, sample size, and magnitude of the change all impact the probability of detecting whether a variant affected player behavior. Any action you take based on the results of an experiment should be balanced against qualitative data like player feedback and your overall vision for the experience.
+
+- **Document your findings and decisions.** Even if you don't use them to run additional experiments, having a body of knowledge and evidence can inform how you design your experiences.

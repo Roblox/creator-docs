@@ -1604,29 +1604,29 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: BrickColor.Red
-    summary: Returns the "Bright Red" `Datatype.BrickColor`.
-    description: Returns the "Bright Red" `Datatype.BrickColor`.
+    summary: Returns the "Bright red" `Datatype.BrickColor`.
+    description: Returns the "Bright red" `Datatype.BrickColor`.
     parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: BrickColor.Yellow
-    summary: Returns the "Bright Yellow" `Datatype.BrickColor`.
-    description: Returns the "Bright Yellow" `Datatype.BrickColor`.
+    summary: Returns the "Bright yellow" `Datatype.BrickColor`.
+    description: Returns the "Bright yellow" `Datatype.BrickColor`.
     parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: BrickColor.Green
-    summary: Returns the "Dark Green" `Datatype.BrickColor`.
-    description: Returns the "Dark Green" `Datatype.BrickColor`.
+    summary: Returns the "Dark green" `Datatype.BrickColor`.
+    description: Returns the "Dark green" `Datatype.BrickColor`.
     parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: BrickColor.Blue
-    summary: Returns the "Bright Blue" `Datatype.BrickColor`.
-    description: Returns the "Bright Blue" `Datatype.BrickColor`.
+    summary: Returns the "Bright blue" `Datatype.BrickColor`.
+    description: Returns the "Bright blue" `Datatype.BrickColor`.
     parameters: []
     code_samples: []
     tags: []
