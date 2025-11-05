@@ -136,7 +136,7 @@ To "break" the tangents so that each can be moved independently of the other, ho
 <img src="../assets/ui/2D-paths/Path-Example-Break-Tangents.png" width="800" alt="Diagram illustrating how the tangents of a control point are broken by right-clicking it and selecting Break Tangents." />
 
 <Alert severity="info">
-To re-establish mirror behavior, hover over and right‑click the associated control point, then select **Mirror&nbsp;Tangents** from the contextual menu. Note that you will **not** see an immediate change in the path after re‑establishing mirror behavior, as the system cannot predict which tangent point you want to begin mirroring. Mirror behavior will resume only once you [drag to adjust](#adjusting-tangents) one of the tangent markers.
+To re-establish mirror behavior, hover over and right‑click the associated control point, then select **Mirror&nbsp;Tangents** from the contextual menu. Note that you will **not** see an immediate change in the path after re‑establishing mirror behavior, as the system cannot predict which tangent point you want to begin mirroring. Mirror behavior will resume only once you [drag to adjust](#adjust-tangents) one of the tangent markers.
 </Alert>
 
 ## Path visual properties

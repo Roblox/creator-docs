@@ -59,7 +59,7 @@ By default, an invite prompt for the player shows a menu of their connections wi
   <tr>
     <td>`Class.ExperienceInviteOptions.InviteMessageId|InviteMessageId`</td>
     <td>string</td>
-    <td>Asset ID that maps to a **Notification** asset type. This asset is used to store/localize a custom string for the invite notification that connections receive. See [Setting Notification Options](#setting-notification-options) for details.</td>
+    <td>Asset ID that maps to a **Notification** asset type. This asset is used to store/localize a custom string for the invite notification that connections receive. See [Setting Notification Options](#set-notification-options) for details.</td>
   </tr>
   <tr>
     <td>`Class.ExperienceInviteOptions.LaunchData|LaunchData`</td>

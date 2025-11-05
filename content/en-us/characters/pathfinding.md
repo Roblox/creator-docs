@@ -395,7 +395,7 @@ end
 ```
 
 <Alert severity="error">
-Currently, `Class.Model|Models` containing a `Class.Humanoid` instance, including typical player characters, will **not** be considered for path [computation](#computing-the-path) or path blockage, although the agent may still be blocked by those models physically.
+Currently, `Class.Model|Models` containing a `Class.Humanoid` instance, including typical player characters, will **not** be considered for path [computation](#compute-the-path) or path blockage, although the agent may still be blocked by those models physically.
 </Alert>
 
 ## Pathfinding modifiers

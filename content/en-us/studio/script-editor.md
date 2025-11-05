@@ -14,7 +14,7 @@ The **Script Editor** in Studio is the primary tool for scripting on Roblox. It'
 The Script Editor supports all types of [scripts](../scripting/index.md) and opens automatically when you create a new script or double-click an existing script in the [Explorer](../studio/explorer.md) window.
 
 <Alert severity="success">
-You can [customize](#editor-settings) the Script Editor to suit your preferences and workflows, including font family/size, formatting behavior, and colors for syntax highlighting. You can also toggle features such as [autocomplete](#autocomplete), [signature help](#signature-help), and [script analysis](#script-analysis).
+You can [customize](#editor-settings) the Script Editor to suit your preferences and workflows, including font family/size, formatting behavior, and colors for syntax highlighting. You can also toggle features such as [autocomplete](#autocomplete-features), and [script analysis](#script-analysis).
 </Alert>
 
 ## Autocomplete features

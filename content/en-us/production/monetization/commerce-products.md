@@ -145,7 +145,7 @@ To create a commerce product:
 
   </AccordionDetails>
   </BaseAccordion>
-4. Double-check the details of your products and click **Preview** to preview the product listing for each product. For details on what this page contains and how it's populated, see [Customizing the Product Detail Page](#customizing-the-product-detail-page). Click **Submit for review**.
+4. Double-check the details of your products and click **Preview** to preview the product listing for each product. For details on what this page contains and how it's populated, see [Customizing the Product Detail Page](#product-detail-page). Click **Submit for review**.
 5. The status of your newly created commerce products is **Pending** as the product awaits moderation and potential bundling fee processing. You can hover over the information icon to see which tasks are pending.
    1. **Moderation**
        1. If your commerce product is found to violate Roblox community standards, you will see the **Status** of the commerce product change to **Moderated**.

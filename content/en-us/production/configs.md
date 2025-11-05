@@ -3,10 +3,6 @@ title: Experience configs
 description: Configs let you update in-game values without restarting your servers.
 ---
 
-<Alert severity="success">
-Configs and experiments are rolling out soon to all users.
-</Alert>
-
 **Experience configs** let you update in-game values in real-time without restarting servers:
 
 - Turn features on and off, such as enabling or disabling a new onboarding dungeon.

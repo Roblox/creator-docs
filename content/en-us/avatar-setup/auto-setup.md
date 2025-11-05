@@ -41,7 +41,7 @@ Auto-setup supports the conversion of following asset types from a base `Class.M
   </tr>
   <tr>
     <td>Accessory</td>
-    <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet's auto-setup's supported [accessory inputs](./auto-setup-requirements.md#accessories). <br /> <br />Must [bundle](#bundle-multiple-assets) with an avatar body `Class.Model` for auto-setup.</td>
+    <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet's auto-setup's supported [accessory inputs](./auto-setup-requirements.md#accessories). <br /> <br />Must [bundle](./auto-setup-requirements.md#bundle-multiple-assets) with an avatar body `Class.Model` for auto-setup.</td>
     <td>`Class.Accessory` that includes all expected [rigid accessory components](../art/accessories/index.md#components-of-a-rigid-accessory).</td>
   </tr>
   <tr>

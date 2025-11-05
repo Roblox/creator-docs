@@ -181,7 +181,7 @@ When factoring physical properties, the engine prioritizes more granular per-par
 <Grid container spacing={2} alignItems="center">
 	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-High.png" width="50" style={{float:"right"}} /></Grid>
 	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}>
-	Custom physical properties of the [material override](#setting-overrides) of the part's material.
+	Custom physical properties of the [material override](#set-overrides) of the part's material.
 	</Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">

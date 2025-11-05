@@ -128,7 +128,7 @@ To automatically update package copies:
 1. In the **Properties** window, enable the **AutoUpdate** property. If you have [nested packages](#nested-packages), this property only applies to the highest-level parent package, meaning automatic updates only occur when the **parent** package is updated.
 
 <Alert severity="warning">
-Automatic updating does not apply to [modified](#modifying-packages) package copies. Once you modify a package instance, its **AutoUpdate** property becomes disabled and is ignored.
+Automatic updating does not apply to [modified](#modify-packages) package copies. Once you modify a package instance, its **AutoUpdate** property becomes disabled and is ignored.
 </Alert>
 
 ## Share and access levels

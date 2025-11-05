@@ -3,10 +3,6 @@ title: Experiments
 description: Experiments let you run A/B tests within your experiences.
 ---
 
-<Alert severity="success">
-Configs and experiments are rolling out soon to all users.
-</Alert>
-
 **Experiments** let you run in-game and matchmaking A/B tests to measure the causal impact of changes to your experience. For example, you can show different onboarding experiences to different players and measure the difference in playtime, retention, and other key performance indicators.
 
 Experiments are excellent for measuring the following:

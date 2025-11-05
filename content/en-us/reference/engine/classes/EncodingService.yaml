@@ -124,7 +124,7 @@ methods:
       None of these hashes are password hashing algorithms. They were designed
       to be fast to execute, whereas password hashing should never be fast. You
       shouldn't use this function for computing password hashes that will be
-      stored or used to derive keys from passwords.
+      stored, or for deriving keys from passwords.
     code_samples: []
     parameters:
       - name: input
@@ -162,7 +162,7 @@ methods:
       None of these hashes are password hashing algorithms. They were designed
       to be fast to execute, whereas password hashing should never be fast. You
       shouldn't use this function for computing password hashes that will be
-      stored or used to derive keys from passwords.
+      stored, or for deriving keys from passwords.
     code_samples: []
     parameters:
       - name: input

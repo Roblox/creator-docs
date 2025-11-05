@@ -15,7 +15,7 @@ The sculpting instructions utilize the following Sculpting tools:
 - **Elastic Deform** - Similar to Grab, but adds an organic stretch and elasticity to the neighboring vertices.
 
 <Alert severity='info'>
-You can use Blender's other sculpting tools, though it's important to use a tool that aligns with the [Non-Destructive Modeling](#non-destructive-modeling) concepts to preserve the vertices of the model.
+You can use Blender's other sculpting tools, though it's important to use a tool that aligns with the [Non-Destructive Modeling](./modeling-best-practices.md#non-destructive-modeling) concepts to preserve the vertices of the model.
 </Alert>
 
 To begin sculpting the head:

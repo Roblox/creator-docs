@@ -16,7 +16,7 @@ By understanding how to make non-destructive sculpting changes to the head, the 
 </GridContainer>
 
 <Alert severity = "error">
-When editing templates, **don't delete or add vertices to your character body**. This ensures that your character's skinning and facial animation data remains unaltered and fully functional. See [Best Practices](#best-practices) for additional information on customizing your character body without breaking the underlying structure of the avatar template.
+When editing templates, **don't delete or add vertices to your character body**. This ensures that your character's skinning and facial animation data remains unaltered and fully functional.
 </Alert>
 
 ## Non-destructive modeling

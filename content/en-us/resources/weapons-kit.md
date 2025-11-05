@@ -455,7 +455,9 @@ You can configure physical projectiles for any weapon, along with `Sounds`, `Bea
 </tbody>
 </table>
 
-- <span id="shoteffect-descendants"></span>Descendants of the specified **ShotEffect** noted in the previous section
+#### ShotEffect Descendants
+
+Descendants of the specified **ShotEffect** noted in the previous section
 
 <table>
 <tbody>

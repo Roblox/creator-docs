@@ -49,7 +49,7 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
    <tbody>
      <tr>
        <td>**Add or remove group members**</td>
-       <td>Members with this role can [invite](#inviting-members) and [remove](#removing-members) other members.</td>
+       <td>Members with this role can [invite](#invite-members) and [remove](#remove-members) other members.</td>
      </tr>
      <tr>
        <td>**Add or remove [role] role members**</td>
@@ -80,19 +80,19 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
    <tbody>
      <tr>
       <td>**Play all group experiences**</td>
-      <td>Members with this role can play all experiences owned by the group, whether they're private or public. Optionally available as a [per‑experience permission][per_experience_permission].</td>
+      <td>Members with this role can play all experiences owned by the group, whether they're private or public. Optionally available as a [per‑experience permission](../production/publishing/publish-experiences-and-places.md#configure-experiences).</td>
      </tr>
      <tr>
        <td>**Edit all group experiences**</td>
-       <td>Members with this role can edit all experiences and [assets](../projects/assets/index.md) owned by the group. Does not include editing an experience outside of a [collaborative](../projects/collaboration.md) session or saving a place from one experience into another experience. Optionally available as a [per‑experience permission][per_experience_permission].</td>
+       <td>Members with this role can edit all experiences and [assets](../projects/assets/index.md) owned by the group. Does not include editing an experience outside of a [collaborative](../projects/collaboration.md) session or saving a place from one experience into another experience. Optionally available as a [per‑experience permission](../production/publishing/publish-experiences-and-places.md#configure-experiences).</td>
      </tr>
      <tr>
        <td>**Edit & publish all group experiences**</td>
-       <td>Members with this role can both edit experiences, as above, and also publish experiences to Roblox. Optionally available as a [per‑experience permission][per_experience_permission].</td>
+       <td>Members with this role can both edit experiences, as above, and also publish experiences to Roblox. Optionally available as a [per‑experience permission](../production/publishing/publish-experiences-and-places.md#configure-experiences).</td>
      </tr>
      <tr>
        <td>**View all analytics for group experiences**</td>
-       <td>Members with this role can access the [analytics](../production/analytics/index.md) of all experiences owned by the group, even if they don't have edit access. Optionally available as a [per‑experience permission][per_experience_permission].</td>
+       <td>Members with this role can access the [analytics](../production/analytics/index.md) of all experiences owned by the group, even if they don't have edit access. Optionally available as a [per‑experience permission](../production/publishing/publish-experiences-and-places.md#configure-experiences).</td>
      </tr>
      <tr>
        <td>**Create and configure share links**</td>
@@ -289,5 +289,3 @@ Group members with permission to edit all group experiences can enable the [Plac
 - Confirm that each member is [assigned the appropriate role](#assign-roles).
 - Check that each group role has the correct [permissions](#roles-and-permissions).
 - Confirm that the [Place Copying](../production/publishing/publish-experiences-and-places.md#allow-copying) setting is disabled before private assets are added.
-
-[per_experience_permission]: ../production/publishing/publish-experiences-and-places.md#configure-experiences

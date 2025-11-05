@@ -253,7 +253,7 @@ Each NPC includes a `Class.Configuration` object within its hierarchy which acts
   <tr>
     <td>AttackMode</td>
     <td>`Class.NumberValue`</td>
-    <td>Specifies what the soldier will attack, based on the [tagging system](#assigning-tags). This applies for Soldier kits only.</td>
+    <td>Specifies what the soldier will attack, based on the [tagging system](#assign-tags). This applies for Soldier kits only.</td>
   </tr>
   <tr>
     <td>AttackRadius</td>

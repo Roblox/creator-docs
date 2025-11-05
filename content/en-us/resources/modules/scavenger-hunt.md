@@ -304,7 +304,7 @@ Overrides default client-side configuration options through the following keys/v
 	</tr>
 	<tr>
 		<td>`useRegions`</td>
-		<td>Instead of [tokens](#using-tokens), use [regions](#using-regions).</td>
+		<td>Instead of [tokens](#use-tokens), use [regions](#use-regions).</td>
 		<td>false</td>
 	</tr>
 </tbody>

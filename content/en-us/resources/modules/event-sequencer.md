@@ -847,7 +847,7 @@ Informs the framework of any modules, UI objects, connections, etc. which are cr
   ```
 
 <Alert severity="warning">
-While **inform** is critical for [seeking](#seek-and-switch-scenes) support, you should only use it to inform the framework of any module, UI object, connection, etc. that is created/initialized during the [OnRun](#onrun) lifecycle hook. If you want to reference something throughout the entirety of the scene, simply initialize it in [OnSetup](#onsetup) and clean it up in [OnEndScene](#onendscene).
+While **inform** is critical for [seeking](#seek-scenes) support, you should only use it to inform the framework of any module, UI object, connection, etc. that is created/initialized during the [OnRun](#onrun) lifecycle hook. If you want to reference something throughout the entirety of the scene, simply initialize it in [OnSetup](#onsetup) and clean it up in [OnEndScene](#onendscene).
 </Alert>
 
 ### Functions

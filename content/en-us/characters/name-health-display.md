@@ -172,7 +172,7 @@ By default, a humanoid's display name matches the user's Roblox account **Displa
 
 ### Set directly
 
-You can set the `Class.Humanoid.DisplayName|DisplayName` property of any `Class.Humanoid` instance which you gain reference to through a `Class.Script`, such as the [team&nbsp;customization](#team-customization-script) example, or directly on an [NPC](#npc-characters) character's **Humanoid** object.
+You can set the `Class.Humanoid.DisplayName|DisplayName` property of any `Class.Humanoid` instance which you gain reference to through a `Class.Script`, such as the [team&nbsp;customization](#user-avatars) example, or directly on an [NPC](#npc-characters) character's **Humanoid** object.
 
 ### Set through user input
 
