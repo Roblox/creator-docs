@@ -34,7 +34,8 @@ methods:
     returns:
       - type: Dictionary?
         summary: ''
-    tags: []
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -51,7 +52,8 @@ methods:
     returns:
       - type: Array
         summary: ''
-    tags: []
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -72,7 +74,8 @@ methods:
     returns:
       - type: Array
         summary: ''
-    tags: []
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

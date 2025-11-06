@@ -23,8 +23,7 @@ code_samples:
 inherits:
   - Instance
 descendants: []
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
 properties:
   - name: AudioSpeechToText.Enabled

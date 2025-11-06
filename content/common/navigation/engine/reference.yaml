@@ -3256,6 +3256,11 @@ navigation:
             type: engineapi
             source: /reference/engine/classes/TerrainWriteOperation.yaml
             ignoreTranslation: true
+          - title: VideoSampler
+            path: /reference/engine/classes/VideoSampler
+            type: engineapi
+            source: /reference/engine/classes/VideoSampler.yaml
+            ignoreTranslation: true
           - title: WebStreamClient
             path: /reference/engine/classes/WebStreamClient
             type: engineapi

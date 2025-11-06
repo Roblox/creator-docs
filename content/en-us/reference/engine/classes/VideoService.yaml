@@ -17,6 +17,41 @@ tags:
   - Service
 deprecation_message: ''
 properties: []
-methods: []
+methods:
+  - name: VideoService:CreateVideoSamplerAsync
+    summary: |
+      Creates a `Class.VideoSampler` that samples frames from the provided video
+      content.
+    description: |
+      Creates a `Class.VideoSampler` that samples frames from the provided video
+      content.
+    code_samples: []
+    parameters:
+      - name: content
+        type: Content
+        default:
+        summary: |
+          The video content to sample from.
+      - name: options
+        type: Dictionary?
+        default:
+        summary: |
+          Options table for creating the `Class.VideoSampler`:
+
+          - `Size` – A `Enum.VideoSampleSize` value that determines the
+            resolution of textures produced by the `Class.VideoSampler`.
+            Defaults to `Enum.VideoSampleSize.Small`. Use the smallest
+            resolution that meets your needs to minimize memory usage and
+            improve sampling performance.
+    returns:
+      - type: VideoSampler
+        summary: |
+          The created `Class.VideoSampler`.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
 events: []
 callbacks: []

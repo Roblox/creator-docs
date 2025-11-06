@@ -14,6 +14,7 @@ descendants: []
 tags:
   - NotCreatable
   - NotReplicated
+  - Deprecated
 deprecation_message: |
   This class is deprecated and should not be used for new work. Use
   `Class.HttpService` instead and see the
@@ -33,6 +34,7 @@ methods:
       - type: OpenCloudModel
         summary: ''
     tags:
+      - Deprecated
       - CustomLuaState
     deprecation_message: ''
     security: None
@@ -56,6 +58,7 @@ methods:
         summary: ''
     tags:
       - Yields
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
