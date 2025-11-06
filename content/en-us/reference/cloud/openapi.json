@@ -10068,6 +10068,7 @@
         }
       },
       "post": {
+        "tags": ["Accounts"],
         "summary": "Update the user's birthdate",
         "requestBody": {
           "content": {
@@ -10126,7 +10127,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/accounts#/default/post_v1_birthdate"
+        }
       }
     },
     "/v1/description": {
@@ -11426,12 +11430,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -11484,12 +11488,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -11646,12 +11650,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -11892,12 +11896,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -11955,12 +11959,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -20553,7 +20557,7 @@
         }
       },
       "post": {
-        "tags": ["Badges"],
+        "tags": ["Badges", "Universes"],
         "summary": "Creates a new badge.",
         "parameters": [
           {
@@ -21028,6 +21032,7 @@
     },
     "/v1/badges/{badgeId}/icon": {
       "post": {
+        "tags": ["Assets", "Thumbnails"],
         "summary": "Overwrites a badge icon with a new one.",
         "parameters": [
           {
@@ -21100,7 +21105,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/assets#/default/post_v1_badges__badgeId__icon"
+        }
       }
     },
     "/v1/user/badges/{badgeId}": {
@@ -23909,6 +23917,7 @@
     },
     "/v2/teamtest/{placeId}": {
       "delete": {
+        "tags": ["Places", "Team Create"],
         "summary": "Close a game instance that is being used for team testing",
         "parameters": [
           {
@@ -23967,7 +23976,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/places#/default/delete_v2_teamtest__placeId_"
+        }
       }
     },
     "/v1/assets/voting": {
@@ -24258,6 +24270,7 @@
     },
     "/v1/places/{placeId}/teamcreate/active_session/members": {
       "get": {
+        "tags": ["Places", "Team Create", "Universes"],
         "summary": "List of users in the active Team Create session",
         "parameters": [
           {
@@ -24334,7 +24347,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/places#/default/get_v1_places__placeId__teamcreate_active_session_members"
+        }
       }
     },
     "/v1/plugins": {
@@ -24711,6 +24727,7 @@
     },
     "/v1/universes/{universeId}/permissions": {
       "get": {
+        "tags": ["Universes"],
         "summary": "Returns list of granted and declined permissions related to the universe with the id universeId for authenticated user",
         "parameters": [
           {
@@ -24759,7 +24776,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/universes#/default/get_v1_universes__universeId__permissions"
+        }
       }
     },
     "/v1/universes/{universeId}/places": {
@@ -24997,6 +25017,7 @@
     },
     "/v1/universes/{universeId}/teamcreate": {
       "get": {
+        "tags": ["Team Create", "Universes"],
         "summary": "Gets TeamCreate settings for an Roblox.Platform.Universes.IUniverse.",
         "parameters": [
           {
@@ -25048,9 +25069,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/team-create#/default/get_v1_universes__universeId__teamcreate"
+        }
       },
       "patch": {
+        "tags": ["Team Create", "Universes"],
         "summary": "Edit team create settings for a universe.",
         "description": "Enables, or disables team create for a universe.",
         "parameters": [
@@ -25106,7 +25131,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/team-create#/default/patch_v1_universes__universeId__teamcreate"
+        }
       }
     },
     "/v1/universes/multiget": {
@@ -25241,6 +25269,7 @@
     },
     "/v1/universes/multiget/permissions": {
       "get": {
+        "tags": ["Universes"],
         "summary": "Returns an array of granted and declined permissions related to the universes with the ids in ids for the authenticated user.",
         "description": "If a universe can not be found for a given ID (such as -1) it will be skipped.",
         "parameters": [
@@ -25294,7 +25323,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/universes#/default/get_v1_universes_multiget_permissions"
+        }
       }
     },
     "/legacy-develop/v1/universes/multiget/teamcreate": {
@@ -25373,6 +25405,7 @@
     },
     "/v1/universes/multiget/teamcreate": {
       "get": {
+        "tags": ["Team Create", "Universes"],
         "summary": "Gets TeamCreate settings for multiple universes specified by Ids",
         "parameters": [
           {
@@ -25425,7 +25458,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/team-create#/default/get_v1_universes_multiget_teamcreate"
+        }
       }
     },
     "/legacy-develop/v1/user/groups/canmanage": {
@@ -25485,6 +25521,7 @@
     },
     "/v1/user/groups/canmanage": {
       "get": {
+        "tags": ["Groups", "Users"],
         "summary": "Gets a list of Groups that a user can manage.",
         "responses": {
           "200": {
@@ -25518,7 +25555,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/groups#/default/get_v1_user_groups_canmanage"
+        }
       }
     },
     "/v1/user/groups/canmanagegamesoritems": {
@@ -25849,6 +25889,7 @@
     },
     "/v1/universes/{universeId}/activate": {
       "post": {
+        "tags": ["Universes"],
         "summary": "Activates a universes.",
         "parameters": [
           {
@@ -25900,7 +25941,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/universes#/default/post_v1_universes__universeId__activate"
+        }
       }
     },
     "/legacy-develop/v1/universes/{universeId}/deactivate": {
@@ -25978,6 +26022,7 @@
     },
     "/v1/universes/{universeId}/deactivate": {
       "post": {
+        "tags": ["Universes"],
         "summary": "Deactivates a universe.",
         "parameters": [
           {
@@ -26029,7 +26074,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/universes#/default/post_v1_universes__universeId__deactivate"
+        }
       }
     },
     "/v1/plugins/{pluginId}": {
@@ -26189,6 +26237,7 @@
     },
     "/v1/universes/{universeId}/teamcreate/memberships": {
       "delete": {
+        "tags": ["Team Create", "Universes"],
         "summary": "Removes a user from a TeamCreate permissions list.",
         "parameters": [
           {
@@ -26243,7 +26292,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/team-create#/default/delete_v1_universes__universeId__teamcreate_memberships"
+        }
       }
     },
     "/v1/user/currency": {
@@ -26527,6 +26579,7 @@
     },
     "/v1/users/{userId}/universes": {
       "get": {
+        "tags": ["Interactions", "Universes", "Users"],
         "summary": "Gets all the followings between a user with userId and universes",
         "parameters": [
           {
@@ -26581,7 +26634,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/interactions#/default/get_v1_users__userId__universes"
+        }
       }
     },
     "/legacy-followings/v1/users/{userId}/universes/{universeId}/status": {
@@ -26666,6 +26722,7 @@
     },
     "/v1/users/{userId}/universes/{universeId}/status": {
       "get": {
+        "tags": ["Interactions", "Universes", "Users"],
         "summary": "Gets the status of a following relationship between a user and a universe.",
         "parameters": [
           {
@@ -26724,7 +26781,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/interactions#/default/get_v1_users__userId__universes__universeId__status"
+        }
       }
     },
     "/legacy-followings/v1/users/{userId}/universes/{universeId}": {
@@ -26890,6 +26950,7 @@
     },
     "/v1/users/{userId}/universes/{universeId}": {
       "post": {
+        "tags": ["Interactions", "Universes", "Users"],
         "summary": "Creates the following between a user with userId and universe with universeId",
         "parameters": [
           {
@@ -26951,9 +27012,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/interactions#/default/post_v1_users__userId__universes__universeId_"
+        }
       },
       "delete": {
+        "tags": ["Interactions", "Universes", "Users"],
         "summary": "Deletes the following between a user with userId and universe with universeId",
         "parameters": [
           {
@@ -27012,7 +27077,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/interactions#/default/delete_v1_users__userId__universes__universeId_"
+        }
       }
     },
     "/legacy-followings/v2/users/{userId}/universes": {
@@ -27087,6 +27155,7 @@
     },
     "/v2/users/{userId}/universes": {
       "get": {
+        "tags": ["Interactions", "Universes", "Users"],
         "summary": "Gets all universes followed by a user.",
         "parameters": [
           {
@@ -27135,7 +27204,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/interactions#/default/get_v2_users__userId__universes"
+        }
       }
     },
     "/v1/metadata#FriendsApi": {
@@ -27242,7 +27314,6 @@
             "schema": {
               "type": "integer",
               "format": "int32",
-              "enum": [10, 18, 25, 50, 100],
               "default": 10
             }
           },
@@ -27256,12 +27327,12 @@
           },
           {
             "in": "query",
-            "name": "sortOrder",
-            "description": "Sorted by scoring requests based on request time, mutual friends, and request origin",
+            "name": "friendRequestSort",
             "schema": {
-              "type": "string",
-              "enum": ["Asc", "Desc"],
-              "default": "Desc"
+              "type": "integer",
+              "format": "int32",
+              "enum": [0, 1, 2],
+              "default": 1
             }
           }
         ],
@@ -29172,7 +29243,7 @@
     },
     "/v1/autolocalization/metadata": {
       "get": {
-        "tags": ["Localization", "Metadata"],
+        "tags": ["Metadata"],
         "summary": "Metadata for AutoLocalization Configuration",
         "responses": {
           "200": {
@@ -29210,7 +29281,7 @@
         ],
         "description": "Use the Autolocalization controller in LocalizationTables API",
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_autolocalization_metadata"
+          "url": "https://create.roblox.com/docs/cloud/features/metadata#/default/get_v1_autolocalization_metadata"
         }
       }
     },
@@ -29508,6 +29579,7 @@
     },
     "/v1/badges/{badgeId}/icons": {
       "get": {
+        "tags": ["Badges", "Localization"],
         "summary": "Get all icons for a badge",
         "parameters": [
           {
@@ -29582,7 +29654,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/badges#/default/get_v1_badges__badgeId__icons"
+        }
       }
     },
     "/legacy-game-internationalization/v1/badges/{badgeId}/name-description": {
@@ -29658,6 +29733,7 @@
     },
     "/v1/badges/{badgeId}/name-description": {
       "get": {
+        "tags": ["Badges", "Localization"],
         "parameters": [
           {
             "in": "path",
@@ -29707,7 +29783,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/badges#/default/get_v1_badges__badgeId__name_description"
+        }
       }
     },
     "/legacy-game-internationalization/v1/developer-products/{developerProductId}/icons": {
@@ -29808,6 +29887,7 @@
     },
     "/v1/developer-products/{developerProductId}/icons": {
       "get": {
+        "tags": ["Developer products", "Localization"],
         "summary": "Get all icons for a developer product",
         "parameters": [
           {
@@ -29882,7 +29962,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/get_v1_developer_products__developerProductId__icons"
+        }
       }
     },
     "/legacy-game-internationalization/v1/developer-products/{developerProductId}/name-description": {
@@ -29960,6 +30043,7 @@
     },
     "/v1/developer-products/{developerProductId}/name-description": {
       "get": {
+        "tags": ["Developer products", "Localization"],
         "summary": "Get all names and descriptions of a developer product",
         "parameters": [
           {
@@ -30011,7 +30095,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/get_v1_developer_products__developerProductId__name_description"
+        }
       }
     },
     "/legacy-game-internationalization/v1/game-icon/games/{gameId}": {
@@ -30112,6 +30199,7 @@
     },
     "/v1/game-icon/games/{gameId}": {
       "get": {
+        "tags": ["Localization", "Universes"],
         "summary": "Get all icons for a game",
         "parameters": [
           {
@@ -30186,7 +30274,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_game_icon_games__gameId_"
+        }
       }
     },
     "/v1/game-localization-status/{gameId}/translation-counts": {
@@ -30427,6 +30518,7 @@
     },
     "/v1/game-passes/{gamePassId}/icons": {
       "get": {
+        "tags": ["Game passes", "Localization"],
         "summary": "Get all icons for a game pass",
         "parameters": [
           {
@@ -30501,7 +30593,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/get_v1_game_passes__gamePassId__icons"
+        }
       }
     },
     "/legacy-game-internationalization/v1/game-passes/{gamePassId}/name-description": {
@@ -30579,6 +30674,7 @@
     },
     "/v1/game-passes/{gamePassId}/name-description": {
       "get": {
+        "tags": ["Game passes", "Localization"],
         "summary": "Get all names and descriptions of a game pass",
         "parameters": [
           {
@@ -30630,7 +30726,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/get_v1_game_passes__gamePassId__name_description"
+        }
       }
     },
     "/v1/game-thumbnails/games/{gameId}/images": {
@@ -30762,6 +30861,7 @@
         }
       },
       "patch": {
+        "tags": ["Localization", "Universes"],
         "summary": "Updates a game's name and/or description in multiple languages.",
         "parameters": [
           {
@@ -30832,7 +30932,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_name_description_games__gameId_"
+        }
       }
     },
     "/legacy-game-internationalization/v1/name-description/games/{gameId}": {
@@ -31022,6 +31125,7 @@
         }
       },
       "patch": {
+        "tags": ["Localization", "Universes"],
         "summary": "Sets the source language of a game",
         "parameters": [
           {
@@ -31088,7 +31192,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_source_language_games__gameId_"
+        }
       }
     },
     "/legacy-game-internationalization/v1/source-language/games/{gameId}": {
@@ -31181,6 +31288,7 @@
     },
     "/v1/source-language/games/{gameId}/language-with-locales": {
       "get": {
+        "tags": ["Localization"],
         "summary": "Gets the source language of a game",
         "parameters": [
           {
@@ -31225,7 +31333,10 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}]
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_source_language_games__gameId__language_with_locales"
+        }
       }
     },
     "/v1/supported-languages/games/{gameId}": {
@@ -31286,6 +31397,7 @@
         }
       },
       "patch": {
+        "tags": ["Localization", "Universes"],
         "summary": "Add or remove supported languages for a game.",
         "parameters": [
           {
@@ -31362,7 +31474,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_supported_languages_games__gameId_"
+        }
       }
     },
     "/legacy-game-internationalization/v1/supported-languages/games/{gameId}": {
@@ -31541,6 +31656,7 @@
     },
     "/v1/supported-languages/games/{gameId}/automatic-translation-status": {
       "get": {
+        "tags": ["Localization", "Universes"],
         "summary": "Get the automatic translation status of supported languages for a game.",
         "parameters": [
           {
@@ -31595,11 +31711,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_supported_languages_games__gameId__automatic_translation_status"
+        }
       }
     },
     "/v1/supported-languages/games/{gameId}/in-experience-language-selection": {
       "get": {
+        "tags": ["Localization"],
         "summary": "Get the user's in-experience language selector languages for a game.",
         "parameters": [
           {
@@ -31648,7 +31768,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_supported_languages_games__gameId__in_experience_language_selection"
+        }
       }
     },
     "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/universe-display-info-automatic-translation-settings": {
@@ -31729,6 +31852,7 @@
     },
     "/v1/supported-languages/games/{gameId}/universe-display-info-automatic-translation-settings": {
       "get": {
+        "tags": ["Localization", "Universes"],
         "summary": "Get UniverseDisplayInfo automatic translation settings.",
         "parameters": [
           {
@@ -31783,7 +31907,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_supported_languages_games__gameId__universe_display_info_automatic_translation_settings"
+        }
       }
     },
     "/v1/supported-languages/metadata": {
@@ -32156,7 +32283,7 @@
     },
     "/v1/autolocalization/games/{gameId}/autolocalizationtable": {
       "post": {
-        "tags": ["Localization", "Universes"],
+        "tags": ["Localization"],
         "parameters": [
           {
             "in": "path",
@@ -32211,7 +32338,7 @@
         }
       },
       "patch": {
-        "tags": ["Localization", "Universes"],
+        "tags": ["Localization"],
         "parameters": [
           {
             "in": "path",
@@ -32463,6 +32590,7 @@
     },
     "/v1/badges/{badgeId}/icons/language-codes/{languageCode}": {
       "post": {
+        "tags": ["Badges", "Localization"],
         "summary": "Update a badge's icon",
         "parameters": [
           {
@@ -32535,9 +32663,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/badges#/default/post_v1_badges__badgeId__icons_language_codes__languageCode_"
+        }
       },
       "delete": {
+        "tags": ["Badges", "Localization"],
         "summary": "Delete a localized icon from a badge",
         "parameters": [
           {
@@ -32604,7 +32736,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/badges#/default/delete_v1_badges__badgeId__icons_language_codes__languageCode_"
+        }
       }
     },
     "/legacy-game-internationalization/v1/developer-products/{developerProductId}/icons/language-codes/{languageCode}": {
@@ -32789,6 +32924,7 @@
     },
     "/v1/developer-products/{developerProductId}/icons/language-codes/{languageCode}": {
       "post": {
+        "tags": ["Developer products", "Localization"],
         "summary": "Update a developer product's icon",
         "parameters": [
           {
@@ -32861,9 +32997,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/post_v1_developer_products__developerProductId__icons_language_codes__languageCode_"
+        }
       },
       "delete": {
+        "tags": ["Developer products", "Localization"],
         "summary": "Delete a localized icon from a developer product",
         "parameters": [
           {
@@ -32930,7 +33070,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/delete_v1_developer_products__developerProductId__icons_language_codes__languageCode_"
+        }
       }
     },
     "/legacy-game-internationalization/v1/game-icon/games/{gameId}/language-codes/{languageCode}": {
@@ -33115,6 +33258,7 @@
     },
     "/v1/game-icon/games/{gameId}/language-codes/{languageCode}": {
       "post": {
+        "tags": ["Localization", "Universes"],
         "summary": "Update a game's icon",
         "parameters": [
           {
@@ -33187,9 +33331,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/post_v1_game_icon_games__gameId__language_codes__languageCode_"
+        }
       },
       "delete": {
+        "tags": ["Localization", "Universes"],
         "summary": "Delete a localized icon from a game",
         "parameters": [
           {
@@ -33256,7 +33404,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/delete_v1_game_icon_games__gameId__language_codes__languageCode_"
+        }
       }
     },
     "/legacy-game-internationalization/v1/game-passes/{gamePassId}/icons/language-codes/{languageCode}": {
@@ -33441,6 +33592,7 @@
     },
     "/v1/game-passes/{gamePassId}/icons/language-codes/{languageCode}": {
       "post": {
+        "tags": ["Game passes", "Localization"],
         "summary": "Update a game pass's icon",
         "parameters": [
           {
@@ -33513,9 +33665,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/post_v1_game_passes__gamePassId__icons_language_codes__languageCode_"
+        }
       },
       "delete": {
+        "tags": ["Game passes", "Localization"],
         "summary": "Delete a localized icon from a game pass",
         "parameters": [
           {
@@ -33582,7 +33738,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/delete_v1_game_passes__gamePassId__icons_language_codes__languageCode_"
+        }
       }
     },
     "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/alt-text": {
@@ -33694,6 +33853,7 @@
     },
     "/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/alt-text": {
       "post": {
+        "tags": ["Localization", "Thumbnails", "Universes"],
         "summary": "Updates the game thumbnail alt text.",
         "parameters": [
           {
@@ -33779,7 +33939,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/post_v1_game_thumbnails_games__gameId__language_codes__languageCode__alt_text"
+        }
       }
     },
     "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/image": {
@@ -33878,6 +34041,7 @@
     },
     "/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/image": {
       "post": {
+        "tags": ["Localization", "Thumbnails", "Universes"],
         "summary": "Uploads the game thumbnail.",
         "parameters": [
           {
@@ -33950,7 +34114,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/post_v1_game_thumbnails_games__gameId__language_codes__languageCode__image"
+        }
       }
     },
     "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/order": {
@@ -34056,6 +34223,7 @@
     },
     "/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/order": {
       "post": {
+        "tags": ["Localization", "Thumbnails", "Universes"],
         "summary": "Orders the specified image Ids for the game thumbnails.",
         "parameters": [
           {
@@ -34135,7 +34303,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/post_v1_game_thumbnails_games__gameId__language_codes__languageCode__images_order"
+        }
       }
     },
     "/legacy-game-internationalization/v1/name-description/games/translation-history": {
@@ -34223,6 +34394,7 @@
     },
     "/v1/name-description/games/translation-history": {
       "post": {
+        "tags": ["Localization", "Universes"],
         "summary": "Gets the history for name or description in a provided language.",
         "requestBody": {
           "content": {
@@ -34284,7 +34456,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/post_v1_name_description_games_translation_history"
+        }
       }
     },
     "/v1/translation-analytics/games/{gameId}/request-translation-analytics-report": {
@@ -34365,7 +34540,7 @@
     },
     "/v1/autolocalization/games/{gameId}/settings": {
       "patch": {
-        "tags": ["Localization", "Universes"],
+        "tags": ["Localization"],
         "summary": "Sets a game's auto-localization related settings",
         "parameters": [
           {
@@ -34550,6 +34725,7 @@
     },
     "/v1/badges/{badgeId}/description/language-codes/{languageCode}": {
       "patch": {
+        "tags": ["Badges", "Localization"],
         "summary": "Update localized description of a badge",
         "parameters": [
           {
@@ -34632,7 +34808,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/badges#/default/patch_v1_badges__badgeId__description_language_codes__languageCode_"
+        }
       }
     },
     "/legacy-game-internationalization/v1/badges/{badgeId}/name-description/language-codes/{languageCode}": {
@@ -34827,6 +35006,7 @@
     },
     "/v1/badges/{badgeId}/name-description/language-codes/{languageCode}": {
       "delete": {
+        "tags": ["Badges", "Localization"],
         "summary": "Delete localized name and description of a badge",
         "parameters": [
           {
@@ -34893,9 +35073,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/badges#/default/delete_v1_badges__badgeId__name_description_language_codes__languageCode_"
+        }
       },
       "patch": {
+        "tags": ["Badges", "Localization"],
         "summary": "Update localized name and description of a badge",
         "parameters": [
           {
@@ -34978,7 +35162,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/badges#/default/patch_v1_badges__badgeId__name_description_language_codes__languageCode_"
+        }
       }
     },
     "/legacy-game-internationalization/v1/badges/{badgeId}/name/language-codes/{languageCode}": {
@@ -35087,6 +35274,7 @@
     },
     "/v1/badges/{badgeId}/name/language-codes/{languageCode}": {
       "patch": {
+        "tags": ["Badges", "Localization"],
         "summary": "Update localized name of a badge",
         "parameters": [
           {
@@ -35169,7 +35357,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/badges#/default/patch_v1_badges__badgeId__name_language_codes__languageCode_"
+        }
       }
     },
     "/legacy-game-internationalization/v1/developer-products/{developerProductId}/description/language-codes/{languageCode}": {
@@ -35278,6 +35469,7 @@
     },
     "/v1/developer-products/{developerProductId}/description/language-codes/{languageCode}": {
       "patch": {
+        "tags": ["Developer products", "Localization"],
         "summary": "Update localized description of a developer product",
         "parameters": [
           {
@@ -35360,7 +35552,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/patch_v1_developer_products__developerProductId__description_language_codes__languageCode_"
+        }
       }
     },
     "/legacy-game-internationalization/v1/developer-products/{developerProductId}/name-description/language-codes/{languageCode}": {
@@ -35555,6 +35750,7 @@
     },
     "/v1/developer-products/{developerProductId}/name-description/language-codes/{languageCode}": {
       "delete": {
+        "tags": ["Developer products", "Localization"],
         "summary": "Delete localized name and description of a developer product",
         "parameters": [
           {
@@ -35621,9 +35817,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/delete_v1_developer_products__developerProductId__name_description_language_codes__languageCode_"
+        }
       },
       "patch": {
+        "tags": ["Developer products", "Localization"],
         "summary": "Update localized name and description of a developer product",
         "parameters": [
           {
@@ -35706,7 +35906,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/patch_v1_developer_products__developerProductId__name_description_language_codes__languageCode_"
+        }
       }
     },
     "/legacy-game-internationalization/v1/developer-products/{developerProductId}/name/language-codes/{languageCode}": {
@@ -35815,6 +36018,7 @@
     },
     "/v1/developer-products/{developerProductId}/name/language-codes/{languageCode}": {
       "patch": {
+        "tags": ["Developer products", "Localization"],
         "summary": "Update localized name of a developer product",
         "parameters": [
           {
@@ -35897,7 +36101,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/patch_v1_developer_products__developerProductId__name_language_codes__languageCode_"
+        }
       }
     },
     "/legacy-game-internationalization/v1/game-passes/{gamePassId}/description/language-codes/{languageCode}": {
@@ -36003,6 +36210,7 @@
     },
     "/v1/game-passes/{gamePassId}/description/language-codes/{languageCode}": {
       "patch": {
+        "tags": ["Game passes", "Localization"],
         "summary": "Update localized description of a game pass",
         "parameters": [
           {
@@ -36082,7 +36290,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/patch_v1_game_passes__gamePassId__description_language_codes__languageCode_"
+        }
       }
     },
     "/legacy-game-internationalization/v1/game-passes/{gamePassId}/name-description/language-codes/{languageCode}": {
@@ -36271,6 +36482,7 @@
     },
     "/v1/game-passes/{gamePassId}/name-description/language-codes/{languageCode}": {
       "delete": {
+        "tags": ["Game passes", "Localization"],
         "summary": "Delete localized name and description of a game pass",
         "parameters": [
           {
@@ -36334,9 +36546,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/delete_v1_game_passes__gamePassId__name_description_language_codes__languageCode_"
+        }
       },
       "patch": {
+        "tags": ["Game passes", "Localization"],
         "summary": "Update localized name and description of a game pass",
         "parameters": [
           {
@@ -36416,7 +36632,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/patch_v1_game_passes__gamePassId__name_description_language_codes__languageCode_"
+        }
       }
     },
     "/legacy-game-internationalization/v1/game-passes/{gamePassId}/name/language-codes/{languageCode}": {
@@ -36522,6 +36741,7 @@
     },
     "/v1/game-passes/{gamePassId}/name/language-codes/{languageCode}": {
       "patch": {
+        "tags": ["Game passes", "Localization"],
         "summary": "Update localized name of a game pass",
         "parameters": [
           {
@@ -36601,7 +36821,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/patch_v1_game_passes__gamePassId__name_language_codes__languageCode_"
+        }
       }
     },
     "/v1/localizationtable/gametables/{gameId}": {
@@ -36777,6 +37000,7 @@
     },
     "/v1/supported-languages/games/{gameId}/languages/{languageCode}/automatic-translation-status": {
       "patch": {
+        "tags": ["Localization", "Universes"],
         "summary": "Enable or disable automatic translation for a game and language.",
         "parameters": [
           {
@@ -36856,7 +37080,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_supported_languages_games__gameId__languages__languageCode__automatic_translation_status"
+        }
       }
     },
     "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/languages/{languageCode}/universe-display-info-automatic-translation-settings": {
@@ -36962,6 +37189,7 @@
     },
     "/v1/supported-languages/games/{gameId}/languages/{languageCode}/universe-display-info-automatic-translation-settings": {
       "patch": {
+        "tags": ["Localization", "Universes"],
         "summary": "Update the switch which controls if the UniverseDisplayInformation should be automatically translated.",
         "parameters": [
           {
@@ -37041,7 +37269,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_supported_languages_games__gameId__languages__languageCode__universe_display_info_automatic_translation_settings"
+        }
       }
     },
     "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/{imageId}": {
@@ -37141,6 +37372,7 @@
     },
     "/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/{imageId}": {
       "delete": {
+        "tags": ["Localization", "Thumbnails", "Universes"],
         "summary": "Deletes the game thumbnail.",
         "parameters": [
           {
@@ -37214,7 +37446,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/delete_v1_game_thumbnails_games__gameId__language_codes__languageCode__images__imageId_"
+        }
       }
     },
     "/v2/games/{universeId}/media": {
@@ -39875,6 +40110,7 @@
     },
     "/v1/groups/{groupId}/audit-log": {
       "get": {
+        "tags": ["Groups"],
         "summary": "Gets the Group's audit log",
         "parameters": [
           {
@@ -40040,7 +40276,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/groups#/default/get_v1_groups__groupId__audit_log"
+        }
       }
     },
     "/v1/groups/{groupId}/bans": {
@@ -42223,6 +42462,7 @@
     },
     "/v1/groups/{groupId}/settings": {
       "get": {
+        "tags": ["Groups"],
         "summary": "Gets the Group's settings",
         "parameters": [
           {
@@ -42274,9 +42514,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/groups#/default/get_v1_groups__groupId__settings"
+        }
       },
       "patch": {
+        "tags": ["Groups"],
         "summary": "Updates the group's settings",
         "parameters": [
           {
@@ -42347,7 +42591,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/groups#/default/patch_v1_groups__groupId__settings"
+        }
       }
     },
     "/v1/groups/{groupId}/social-links": {
@@ -43301,6 +43548,7 @@
     },
     "/v1/user/groups/pending": {
       "get": {
+        "tags": ["Groups", "Users"],
         "summary": "Gets groups that the authenticated user has requested to join",
         "responses": {
           "200": {
@@ -43334,7 +43582,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/groups#/default/get_v1_user_groups_pending"
+        }
       }
     },
     "/v1/users/{userId}/friends/groups/roles": {
@@ -44343,6 +44594,7 @@
     },
     "/v1/groups/policies": {
       "post": {
+        "tags": ["Groups"],
         "summary": "Gets group policy info used for compliance.",
         "requestBody": {
           "content": {
@@ -44397,7 +44649,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/groups#/default/post_v1_groups_policies"
+        }
       }
     },
     "/v1/user/groups/primary": {
@@ -44748,6 +45003,7 @@
     },
     "/v1/groups/{groupId}/description": {
       "patch": {
+        "tags": ["Groups"],
         "summary": "Updates the groups description",
         "parameters": [
           {
@@ -44815,7 +45071,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/groups#/default/patch_v1_groups__groupId__description"
+        }
       }
     },
     "/v1/groups/{groupId}/name": {
@@ -45001,6 +45260,7 @@
     },
     "/v1/groups/{groupId}/notification-preference": {
       "patch": {
+        "tags": ["Groups"],
         "summary": "Updates the group's settings",
         "parameters": [
           {
@@ -45074,7 +45334,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/groups#/default/patch_v1_groups__groupId__notification_preference"
+        }
       }
     },
     "/v1/groups/{groupId}/rolesets/{rolesetId}": {
@@ -45485,6 +45748,7 @@
     },
     "/v1/groups/{groupId}/status": {
       "patch": {
+        "tags": ["Groups"],
         "summary": "Sets group status",
         "parameters": [
           {
@@ -45552,7 +45816,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/groups#/default/patch_v1_groups__groupId__status"
+        }
       }
     },
     "/v1/groups/{groupId}/users/{userId}": {
@@ -47967,7 +48234,7 @@
     },
     "/v1/autolocalization/metadata#LocalizationTablesApi": {
       "get": {
-        "tags": ["Metadata"],
+        "tags": ["Localization", "Metadata"],
         "summary": "Metadata for AutoLocalization Configuration",
         "responses": {
           "200": {
@@ -48003,7 +48270,7 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/features/metadata#/default/get_v1_autolocalization_metadata"
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_autolocalization_metadata"
         }
       }
     },
@@ -48064,6 +48331,7 @@
     },
     "/v1/localization-table/limits": {
       "get": {
+        "tags": ["Localization", "Metadata"],
         "summary": "Get limits for translation table entries operations",
         "responses": {
           "200": {
@@ -48097,7 +48365,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_localization_table_limits"
+        }
       }
     },
     "/legacy-localization-tables/v1/localization-table/limits": {
@@ -48197,6 +48468,7 @@
     },
     "/v1/localization-table/tables/{assetId}": {
       "get": {
+        "tags": ["Assets", "Localization"],
         "summary": "Get table information by the assetId of the table.",
         "parameters": [
           {
@@ -48248,7 +48520,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/assets#/default/get_v1_localization_table_tables__assetId_"
+        }
       }
     },
     "/legacy-localization-tables/v1/localization-table/tables/{assetId}": {
@@ -48380,6 +48655,7 @@
         ]
       },
       "patch": {
+        "tags": ["Localization"],
         "summary": "Updates the tables contents based on what is provided.",
         "parameters": [
           {
@@ -48459,7 +48735,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_localization_table_tables__tableId_"
+        }
       }
     },
     "/legacy-localization-tables/v1/localization-table/tables/{tableId}": {
@@ -48632,6 +48911,7 @@
     },
     "/v1/localization-table/tables/{tableId}/entries": {
       "get": {
+        "tags": ["Localization"],
         "summary": "Gets a batch of entries for a table.",
         "parameters": [
           {
@@ -48710,7 +48990,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_localization_table_tables__tableId__entries"
+        }
       }
     },
     "/legacy-localization-tables/v1/localization-table/tables/{tableId}/entries": {
@@ -48815,6 +49098,7 @@
     },
     "/v1/localization-table/tables/{tableId}/entry-count": {
       "get": {
+        "tags": ["Localization"],
         "summary": "Gets the number of entries in the specified table",
         "parameters": [
           {
@@ -48884,7 +49168,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_localization_table_tables__tableId__entry_count"
+        }
       }
     },
     "/legacy-localization-tables/v1/localization-table/tables/{tableId}/entry-count": {
@@ -49121,6 +49408,7 @@
     },
     "/v1/autolocalization/games/{gameId}/autolocalizationtable#LocalizationTablesApi": {
       "post": {
+        "tags": ["Localization", "Universes"],
         "parameters": [
           {
             "in": "path",
@@ -49167,7 +49455,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/post_v1_autolocalization_games__gameId__autolocalizationtable"
+        }
       },
       "patch": {
         "parameters": [
@@ -49455,6 +49746,7 @@
     },
     "/v1/localization-table/tables/{tableId}/entries/translation-history": {
       "post": {
+        "tags": ["Localization"],
         "summary": "Gets the translation history for each entry passed in.",
         "parameters": [
           {
@@ -49537,7 +49829,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/post_v1_localization_table_tables__tableId__entries_translation_history"
+        }
       }
     },
     "/legacy-localization-tables/v1/localization-table/tables/{tableId}/entries/translation-history": {
@@ -49712,6 +50007,7 @@
     },
     "/v1/autolocalization/games/{gameId}/settings#LocalizationTablesApi": {
       "patch": {
+        "tags": ["Localization", "Universes"],
         "summary": "Sets a game's auto-localization related settings",
         "parameters": [
           {
@@ -49782,7 +50078,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_autolocalization_games__gameId__settings"
+        }
       }
     },
     "/legacy-localization-tables/v1/autolocalization/games/{gameId}/settings": {
@@ -51523,6 +51822,7 @@
     },
     "/v1/audio": {
       "post": {
+        "tags": ["Assets"],
         "summary": "Published an audio file and returns the new asset info.",
         "requestBody": {
           "content": {
@@ -51581,7 +51881,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/assets#/default/post_v1_audio"
+        }
       }
     },
     "/v1/audio/verify": {
@@ -51735,6 +52038,7 @@
     },
     "/v1/badges/{badgeId}/icon#PublishApi": {
       "post": {
+        "tags": ["Assets", "Badges", "Thumbnails"],
         "summary": "Overwrites a badge icon with a new one.",
         "parameters": [
           {
@@ -51796,7 +52100,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/assets#/default/post_v1_badges__badgeId__icon"
+        }
       }
     },
     "/v1/games/{gameId}/thumbnail/image": {
@@ -54319,6 +54626,7 @@
     },
     "/v2/users/{userId}/can-trade-with": {
       "get": {
+        "tags": ["Trades"],
         "summary": "Checks if the user can trade with a specific user.",
         "parameters": [
           {
@@ -54363,7 +54671,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/trades#/default/get_v2_users__userId__can_trade_with"
+        }
       }
     },
     "/v2/users/{userId}/tradableItems": {
@@ -54512,6 +54823,7 @@
     },
     "/v2/users/me/can-trade": {
       "get": {
+        "tags": ["Trades"],
         "summary": "Checks if the calling user can trade with others.",
         "responses": {
           "200": {
@@ -54545,7 +54857,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/trades#/default/get_v2_users_me_can_trade"
+        }
       }
     },
     "/v1/game-localization-roles/games/{gameId}/current-user/roles": {
@@ -54570,12 +54885,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_System.String_"
+                  "$ref": "#/components/schemas/TranslationRolesApi.Roblox.Web.WebAPI.Models.ApiArrayResponse_System.String_"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_System.String_"
+                  "$ref": "#/components/schemas/TranslationRolesApi.Roblox.Web.WebAPI.Models.ApiArrayResponse_System.String_"
                 }
               }
             }
@@ -56993,6 +57308,7 @@
     },
     "/v1/birthdate#UsersApi": {
       "get": {
+        "tags": ["Accounts"],
         "summary": "Get the user's birthdate",
         "responses": {
           "200": {
@@ -57029,11 +57345,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/accounts#/default/get_v1_birthdate"
+        }
       }
     },
     "/v1/description#UsersApi": {
       "get": {
+        "tags": ["Accounts"],
         "summary": "Get the user's description",
         "responses": {
           "200": {
@@ -57070,9 +57390,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/accounts#/default/get_v1_description"
+        }
       },
       "post": {
+        "tags": ["Accounts"],
         "summary": "Update the user's description",
         "requestBody": {
           "content": {
@@ -57134,7 +57458,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/accounts#/default/post_v1_description"
+        }
       }
     },
     "/v1/display-names/validate": {
@@ -57202,6 +57529,7 @@
     },
     "/v1/gender#UsersApi": {
       "get": {
+        "tags": ["Accounts"],
         "summary": "Get the user's gender",
         "responses": {
           "200": {
@@ -57238,9 +57566,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/accounts#/default/get_v1_gender"
+        }
       },
       "post": {
+        "tags": ["Accounts"],
         "summary": "Update the user's gender",
         "requestBody": {
           "content": {
@@ -57299,7 +57631,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/accounts#/default/post_v1_gender"
+        }
       }
     },
     "/v1/users/{userId}": {
@@ -57515,6 +57850,7 @@
     },
     "/v1/users/authenticated": {
       "get": {
+        "tags": ["Accounts"],
         "summary": "Gets the minimal authenticated user.",
         "responses": {
           "200": {
@@ -57548,11 +57884,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/accounts#/default/get_v1_users_authenticated"
+        }
       }
     },
     "/v1/users/authenticated/age-bracket": {
       "get": {
+        "tags": ["Accounts"],
         "summary": "Gets the age bracket of the authenticated user.",
         "responses": {
           "200": {
@@ -57586,11 +57926,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/accounts#/default/get_v1_users_authenticated_age_bracket"
+        }
       }
     },
     "/v1/users/authenticated/country-code": {
       "get": {
+        "tags": ["Accounts"],
         "summary": "Gets the country code of the authenticated user.",
         "responses": {
           "200": {
@@ -57624,11 +57968,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/accounts#/default/get_v1_users_authenticated_country_code"
+        }
       }
     },
     "/v1/users/authenticated/roles": {
       "get": {
+        "tags": ["Accounts"],
         "summary": "Gets the (public) roles of the authenticated user, such as `\"Soothsayer\"` and `\"BetaTester\"`.",
         "responses": {
           "200": {
@@ -57662,7 +58010,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/accounts#/default/get_v1_users_authenticated_roles"
+        }
       }
     },
     "/v1/users/search": {
@@ -57949,6 +58300,7 @@
     },
     "/toolbox-service/v1/saves": {
       "get": {
+        "tags": ["Creator Store"],
         "summary": "Gets saves from a collection.",
         "parameters": [
           {
@@ -58090,9 +58442,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/creator-store#/default/get_toolbox_service_v1_saves"
+        }
       },
       "post": {
+        "tags": ["Creator Store"],
         "summary": "Creates a save.",
         "requestBody": {
           "content": {
@@ -58209,9 +58565,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/creator-store#/default/post_toolbox_service_v1_saves"
+        }
       },
       "delete": {
+        "tags": ["Creator Store"],
         "summary": "Deletes a save.",
         "parameters": [
           {
@@ -58294,11 +58654,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/creator-store#/default/delete_toolbox_service_v1_saves"
+        }
       }
     },
     "/toolbox-service/v1/saves:bulkDelete": {
       "post": {
+        "tags": ["Creator Store"],
         "summary": "Bulk deletes saves.\r\nMax of 5000 saves per request.",
         "requestBody": {
           "content": {
@@ -58400,7 +58764,10 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}]
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/creator-store#/default/post_toolbox_service_v1_saves_bulkDelete"
+        }
       }
     },
     "/toolbox-service/v2/assets:search": {
@@ -60231,6 +60598,1049 @@
         }
       }
     },
+    "/cloud/v2/universes/{universeId}/secrets": {
+      "get": {
+        "tags": ["Universes"],
+        "summary": "List Secrets",
+        "description": "Lists all secrets defined for a universe.\nSecret content is not returned for security reasons - only metadata such as ID, domain, creation and update timestamps are included.\n\nOnly the owner of the universe can list secrets. For group-owned universes, only the group owner can list secrets.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Number of secrets to return per page (1-500, default 10)",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "description": "Pagination cursor from previous response",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretPaginatedList"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.secret:read",
+            "description": "Required"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/universes#/default/get_cloud_v2_universes__universeId__secrets"
+        }
+      },
+      "post": {
+        "tags": ["Universes"],
+        "summary": "Create Secret",
+        "description": "Creates a new secret. A maximum of 500 secrets per universe is allowed.\n\nOnly the owner of the universe can create secrets. For group-owned universes, only the group owner can create secrets.\n\nTo encrypt the secret:\n1. Get the public key using the Get Public Key endpoint\n2. Encrypt your secret using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The secret to create with encrypted content",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Secret"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Secret"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.secret:write",
+            "description": "Required"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/universes#/default/post_cloud_v2_universes__universeId__secrets"
+        }
+      }
+    },
+    "/secrets/v1/universes/{universeId}/secrets": {
+      "get": {
+        "summary": "List Secrets",
+        "description": "Lists all secrets defined for a universe.\nSecret content is not returned for security reasons - only metadata such as ID, domain, creation and update timestamps are included.\n\nOnly the owner of the universe can list secrets. For group-owned universes, only the group owner can list secrets.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Number of secrets to return per page (1-500, default 10)",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "description": "Pagination cursor from previous response",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretPaginatedList"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.secret:read",
+            "description": "Required"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "Create Secret",
+        "description": "Creates a new secret. A maximum of 500 secrets per universe is allowed.\n\nOnly the owner of the universe can create secrets. For group-owned universes, only the group owner can create secrets.\n\nTo encrypt the secret:\n1. Get the public key using the Get Public Key endpoint\n2. Encrypt your secret using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The secret to create with encrypted content",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Secret"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Secret"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.secret:write",
+            "description": "Required"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
+    "/secrets/v1/rcc/universes/{universeId}/secrets": {
+      "get": {
+        "summary": "List Secrets",
+        "description": "Lists all secrets defined for a universe.\nSecret content is not returned for security reasons - only metadata such as ID, domain, creation and update timestamps are included.\n\nOnly the owner of the universe can list secrets. For group-owned universes, only the group owner can list secrets.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Number of secrets to return per page (1-500, default 10)",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "description": "Pagination cursor from previous response",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretPaginatedList"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.secret:read",
+            "description": "Required"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": []
+      }
+    },
+    "/rcc/cloud/v2/universes/{universeId}/secrets": {
+      "get": {
+        "summary": "List Secrets",
+        "description": "Lists all secrets defined for a universe.\nSecret content is not returned for security reasons - only metadata such as ID, domain, creation and update timestamps are included.\n\nOnly the owner of the universe can list secrets. For group-owned universes, only the group owner can list secrets.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Number of secrets to return per page (1-500, default 10)",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "description": "Pagination cursor from previous response",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretPaginatedList"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.secret:read",
+            "description": "Required"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": []
+      }
+    },
+    "/cloud/v2/universes/{universeId}/secrets/{secretId}": {
+      "delete": {
+        "tags": ["Universes"],
+        "summary": "Delete Secret",
+        "description": "Permanently deletes a secret from a universe.\n\nOnly the owner of the universe can delete secrets. For group-owned universes, only the group owner can delete secrets.\n\nThis operation is irreversible. Make sure you no longer need the secret before deleting it.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "secretId",
+            "in": "path",
+            "description": "The ID of the secret to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.secret:write",
+            "description": "Required"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/universes#/default/delete_cloud_v2_universes__universeId__secrets__secretId_"
+        }
+      },
+      "patch": {
+        "tags": ["Universes"],
+        "summary": "Update Secret",
+        "description": "Updates an existing secret.\n\nOnly the owner of the universe can update secrets. For group-owned universes, only the group owner can update secrets.\n\nOnly the secret content, key_id, and domain can be updated - the secret ID cannot be changed.\n\nTo encrypt the updated secret:\n1. Get the current public key using the GetPublicKey endpoint\n2. Encrypt your new secret content using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "secretId",
+            "in": "path",
+            "description": "The ID of the secret to update",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The updated secret data with encrypted content",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Secret"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Secret"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.secret:write",
+            "description": "Required"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/universes#/default/patch_cloud_v2_universes__universeId__secrets__secretId_"
+        }
+      }
+    },
+    "/secrets/v1/universes/{universeId}/secrets/{secretId}": {
+      "delete": {
+        "summary": "Delete Secret",
+        "description": "Permanently deletes a secret from a universe.\n\nOnly the owner of the universe can delete secrets. For group-owned universes, only the group owner can delete secrets.\n\nThis operation is irreversible. Make sure you no longer need the secret before deleting it.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "secretId",
+            "in": "path",
+            "description": "The ID of the secret to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.secret:write",
+            "description": "Required"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      },
+      "patch": {
+        "summary": "Update Secret",
+        "description": "Updates an existing secret.\n\nOnly the owner of the universe can update secrets. For group-owned universes, only the group owner can update secrets.\n\nOnly the secret content, key_id, and domain can be updated - the secret ID cannot be changed.\n\nTo encrypt the updated secret:\n1. Get the current public key using the GetPublicKey endpoint\n2. Encrypt your new secret content using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "secretId",
+            "in": "path",
+            "description": "The ID of the secret to update",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The updated secret data with encrypted content",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Secret"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Secret"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.secret:write",
+            "description": "Required"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
+    "/cloud/v2/universes/{universeId}/secrets/public-key": {
+      "get": {
+        "tags": ["Universes"],
+        "summary": "Get Public Key",
+        "description": "Retrieves the public key for a universe. You need this key to encrypt secret content \nbefore sending it to Roblox.\n\nOnly the owner of the universe can retrieve the public key. For group-owned universes, only the group owner can retrieve the public key.\n\nThe secret id field is static and always returns \"public-key\".\n\nThe returned public key in the secret field is universe-specific and derived from a master key using the universe ID.\nUse this key with LibSodium sealed box encryption to encrypt your secret content before \ncreating or updating secrets.\n\nInclude the key_id from the public key response in the request to create or update a secret.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Secret"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.secret:read",
+            "description": "Required"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/universes#/default/get_cloud_v2_universes__universeId__secrets_public_key"
+        }
+      }
+    },
+    "/secrets/v1/universes/{universeId}/secrets/public-key": {
+      "get": {
+        "summary": "Get Public Key",
+        "description": "Retrieves the public key for a universe. You need this key to encrypt secret content \nbefore sending it to Roblox.\n\nOnly the owner of the universe can retrieve the public key. For group-owned universes, only the group owner can retrieve the public key.\n\nThe secret id field is static and always returns \"public-key\".\n\nThe returned public key in the secret field is universe-specific and derived from a master key using the universe ID.\nUse this key with LibSodium sealed box encryption to encrypt your secret content before \ncreating or updating secrets.\n\nInclude the key_id from the public key response in the request to create or update a secret.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Secret"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.secret:read",
+            "description": "Required"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
     "/asset-permissions-api/v1/assets/permissions#AssetPermissionsApi": {
       "patch": {
         "summary": "Grant a subject permission to multiple assets.\n            \nAuthorization is required to grant permissions to the subject and asset IDs in the request.",
@@ -61190,6 +62600,11 @@
             "example": true,
             "type": "boolean",
             "description": "Can view blocked words"
+          },
+          "bypassSlowMode": {
+            "example": true,
+            "type": "boolean",
+            "description": "can bypass slow mode"
           }
         },
         "description": "Represents the permissions on a role."
@@ -61868,7 +63283,7 @@
             "description": "Upload the binary input object using this URI."
           }
         },
-        "description": "Represents a large binary input that can be given to a\n`LuauExecutionSessionTask`.\n\nEach `LuauExecutionSessionTaskBinaryInput` is associated with a presigned URL\nwhich can be used to upload an arbitrary object. After uploading the object,\nthe path of the `LuauExecutionSessionTaskBinaryInput` can be passed when\ncreating a `LuauExecutionSessionTask` to make the object available to the\ntask.\n\nWithin the task, the contents of the object are made available within a table\npassed as the first agument to the script, with the key `BinaryInput`. The\nfollowing example demonstrates how to retrieve the data:\n\n```\nlocal taskInput: LuauExecutionTaskInput = ({...})[1]\nlocal buf: buffer = taskInput.BinaryInput\n```\n\nEach `LuauExecutionSessionTaskBinaryInput` is valid for 15 minutes from the\ntime of creation. Within that time, in desired, you can use it to create\nmultiple tasks for the same universe.\n\nThe uploaded binary object must be no larger than 100 MiB.",
+        "description": "Represents a large binary input that can be given to a\n`LuauExecutionSessionTask`.\n\nEach `LuauExecutionSessionTaskBinaryInput` is associated with a presigned URL\nwhich can be used to upload an arbitrary object. After uploading the object,\nthe path of the `LuauExecutionSessionTaskBinaryInput` can be passed when\ncreating a `LuauExecutionSessionTask` to make the object available to the\ntask.\n\nWithin the task, the contents of the object are made available within a table\npassed as the first argument to the script, with the key `BinaryInput`. The\nfollowing example demonstrates how to retrieve the data:\n\n```\nlocal taskInput: LuauExecutionTaskInput = ({...})[1]\nlocal buf: buffer = taskInput.BinaryInput\n```\n\nEach `LuauExecutionSessionTaskBinaryInput` is valid for 15 minutes from the\ntime of creation. Within that time, in desired, you can use it to create\nmultiple tasks for the same universe.\n\nThe uploaded binary object must be no larger than 100 MiB.",
         "x-aep-resource": {
           "patterns": [
             "universes/{universe_id}/luau-execution-session-task-binary-inputs/{luau_execution_session_task_binary_input_id}"
@@ -63997,7 +65412,8 @@
             "description": "Whether password is required for updating email",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountSettings.Api.Models.AccountsSettingsMetadataModel": {
         "description": "A model containing website metadata for avatars",
@@ -64024,7 +65440,8 @@
             "description": "Enables/disables the section in the account parental controls page where you can set the content control settings",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountSettings.Api.Models.Response.AccountCountrySettingsResponse": {
         "description": "",
@@ -64033,10 +65450,12 @@
           "value": {
             "$ref": "#/components/schemas/Roblox.AccountSettings.Api.Models.Response.UserAccountCountry"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountSettings.Api.Models.Response.UpdateAccountCountryResponse": {
-        "type": "object"
+        "type": "object",
+        "additionalProperties": false
       },
       "Roblox.AccountSettings.Api.Models.Response.UserAccountCountry": {
         "description": "",
@@ -64063,7 +65482,8 @@
             "description": "",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountSettings.Api.SendVerifyEmailRequest": {
         "description": "Request model for sending a verify email request",
@@ -64077,7 +65497,8 @@
             "description": "Whether the request is coming from ads site",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountSettings.Api.ThemeConfigurationRequest": {
         "description": "Response model for get user's theme type",
@@ -64087,7 +65508,8 @@
             "description": "theme Type",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountSettings.Api.ThemeConfigurationResponse": {
         "description": "Response model for get user's theme type",
@@ -64097,7 +65519,8 @@
             "description": "theme Type",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountSettings.Api.TradePrivacyResponse": {
         "description": "Response model for getting the user's trade privacy settings",
@@ -64107,7 +65530,8 @@
             "description": "The current trade privacy setting for the current user",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountSettings.Api.TradePrivacyUpdateResponse": {
         "description": "Response model for updating the user's trade privacy settings",
@@ -64131,7 +65555,8 @@
             "enum": [0, 1],
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountSettings.Api.TradeValueRequest": {
         "description": "Request model for trade value setting update",
@@ -64143,7 +65568,8 @@
             "enum": [0, 1, 2, 3, 4],
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountSettings.Api.TradeValueResponse": {
         "description": "Response model for getting the user's trade value settings",
@@ -64153,7 +65579,8 @@
             "description": "The current trade value setting for the current user",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountSettings.Api.UpdateAccountCountryRequest": {
         "description": "Request Model for updating a user's account country",
@@ -64164,7 +65591,8 @@
             "description": "The targetCountryId",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountSettings.Api.UpdateEmailRequest": {
         "description": "Request model for updating an email",
@@ -64186,7 +65614,8 @@
             "description": "Whether the request is coming from ads site.",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountSettings.Api.UpdateTradePrivacyRequest": {
         "description": "Request model for trade privacy setting update",
@@ -64198,10 +65627,8 @@
             "enum": [0, 1, 2, 3, 4, 5, 6, 7],
             "type": "integer"
           }
-        }
-      },
-      "AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
-        "type": "object"
+        },
+        "additionalProperties": false
       },
       "Roblox.Web.WebAPI.Models.ApiArrayResponse_System.String_": {
         "type": "object",
@@ -64212,7 +65639,8 @@
               "type": "string"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AdConfiguration.Api.CreateSponsoredGameV2Request": {
         "description": "A request model for creating a sponsored game",
@@ -64784,13 +66212,13 @@
       "Roblox.Web.Assets.AssetContentRepresentationSpecifier": {
         "type": "object",
         "properties": {
-          "format": {
+          "Format": {
             "type": "string"
           },
-          "majorVersion": {
+          "MajorVersion": {
             "type": "string"
           },
-          "fidelity": {
+          "Fidelity": {
             "type": "string"
           }
         },
@@ -79561,6 +80989,17 @@
           }
         }
       },
+      "TranslationRolesApi.Roblox.Web.WebAPI.Models.ApiArrayResponse_System.String_": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
       "Roblox.TwoStepVerification.Api.ClearRecoveryCodesRequest": {
         "description": "Request information needed to clear existing recovery codes.",
         "type": "object",
@@ -82089,6 +83528,95 @@
         "type": "string",
         "description": "Enum representing enabled features for this particular game pass."
       },
+      "SecretsStoreService.ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {}
+      },
+      "Secret": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The user-specified secret name. Examples: \"aws\", \"gcp\", \"discord\".\n\nStatic when getting the public key for a universe.\n\nMust be alphanumeric or underscore, 1-64 characters, not starting with a number.",
+            "nullable": true
+          },
+          "secret": {
+            "type": "string",
+            "description": "The binary secret content. Examples: API key content (text), private keys.\n\nWhen created, the secret must be encrypted using LibSodium sealed box and encoded in base64 with the universe's public key.\n\nContains the public key when getting the public key for a universe.",
+            "format": "byte",
+            "nullable": true
+          },
+          "key_id": {
+            "type": "string",
+            "description": "Encryption key identifier. Identifies the key that was used to encrypt the secret content.",
+            "nullable": true
+          },
+          "domain": {
+            "type": "string",
+            "description": "The domain wildcard that restricts the purpose of the key. \n\nYou can restrict the URLs callable via HttpService to a specific domain, e.g. \"api.example.com\" or \"*.myservice.org\".\n\nAn empty or null domain means that the secret is a private key and cannot be transformed with addPrefix/addSuffix or sent as a header or URL.\n\nIn order to make the secret accessible for all domains, use \"*\"",
+            "nullable": true
+          },
+          "create_time": {
+            "type": "string",
+            "description": "Date and time when the secret was originally created.",
+            "nullable": true
+          },
+          "update_time": {
+            "type": "string",
+            "description": "Date and time when the secret was last updated",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Universe-specific secret, identified by `id`, and belonging to a specific `environment`."
+      },
+      "SecretPaginatedList": {
+        "type": "object",
+        "properties": {
+          "secrets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Secret"
+            },
+            "description": "Gets the actual list of items to return",
+            "nullable": true
+          },
+          "nextPageCursor": {
+            "type": "string",
+            "description": "Gets the cursor where the pagination stopped after fetching `data`.\n`null` if there is no more data available.",
+            "nullable": true
+          },
+          "previousPageCursor": {
+            "type": "string",
+            "description": "Gets the cursor pointing at the previous page. `null` when it's\nthe first page.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Wrapper for the paginated collection output.\nComplies with the REST conventions, containing\nnext/previous page, and a data field containing the actual list.\n            \nNeeded only to simplify JSON serialization, and can technically\nbe AutoMapper-ed from the EaaS or any other data provider."
+      },
       "AssetPermissionsApi.Error": {
         "type": "object",
         "properties": {
@@ -82520,6 +84048,16 @@
           "/v1/users/{userId}/promotion-channels",
           "/v1/users/{userId}/roblox-badges",
           "/v1/xbox-live/consecutive-login-days",
+          "/v1/birthdate#UsersApi",
+          "/v1/birthdate",
+          "/v1/description#UsersApi",
+          "/v1/description#UsersApi",
+          "/v1/gender#UsersApi",
+          "/v1/gender#UsersApi",
+          "/v1/users/authenticated",
+          "/v1/users/authenticated/age-bracket",
+          "/v1/users/authenticated/country-code",
+          "/v1/users/authenticated/roles",
           "/v1/account/settings/account-country",
           "/v1/account/settings/account-country",
           "/v1/account/settings/metadata",
@@ -82681,7 +84219,10 @@
           "/cloud/v2/universes/{universe_id}:generateSpeechAsset",
           "/cloud/v2/users/{user_id}/asset-quotas",
           "/legacy-localization-tables/v1/localization-table/tables/{assetId}",
+          "/v1/localization-table/tables/{assetId}",
           "/legacy-publish/v1/badges/{badgeId}/icon",
+          "/v1/badges/{badgeId}/icon#PublishApi",
+          "/v1/badges/{badgeId}/icon",
           "/toolbox-service/v2/assets:search",
           "/toolbox-service/v2/assets/{id}",
           "/asset-permissions-api/v1/assets/permissions",
@@ -82739,6 +84280,7 @@
           "/v1/tags",
           "/v1/tags/prefix-search",
           "/v1/asset-quotas",
+          "/v1/audio",
           "/v1/audio/verify",
           "/v1/games/{gameId}/thumbnail/image",
           "/v1/plugins/{pluginId}/icon",
@@ -82820,21 +84362,30 @@
         "content": "Lists all HTTP APIs for working with badges, such as creating them and updating their translations.",
         "ordering": [
           "/legacy-badges/v1/badges/{badgeId}",
+          "/v1/badges/{badgeId}",
           "/legacy-badges/v1/universes/{universeId}/badges",
+          "/v1/universes/{universeId}/badges",
           "/legacy-game-internationalization/v1/badges/{badgeId}/description/language-codes/{languageCode}",
+          "/v1/badges/{badgeId}/description/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/badges/{badgeId}/icons",
+          "/v1/badges/{badgeId}/icons",
           "/legacy-game-internationalization/v1/badges/{badgeId}/icons/language-codes/{languageCode}",
+          "/v1/badges/{badgeId}/icons/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/badges/{badgeId}/icons/language-codes/{languageCode}",
+          "/v1/badges/{badgeId}/icons/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/badges/{badgeId}/name-description",
+          "/v1/badges/{badgeId}/name-description",
           "/legacy-game-internationalization/v1/badges/{badgeId}/name-description/language-codes/{languageCode}",
+          "/v1/badges/{badgeId}/name-description/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/badges/{badgeId}/name-description/language-codes/{languageCode}",
+          "/v1/badges/{badgeId}/name-description/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/badges/{badgeId}/name/language-codes/{languageCode}",
+          "/v1/badges/{badgeId}/name/language-codes/{languageCode}",
           "/legacy-publish/v1/badges/{badgeId}/icon",
+          "/v1/badges/{badgeId}/icon#PublishApi",
           "/v1/users/{userId}/roblox-badges",
           "/v1/badges/{badgeId}",
-          "/v1/badges/{badgeId}",
           "/v1/badges/metadata",
-          "/v1/universes/{universeId}/badges",
           "/v1/universes/{universeId}/badges",
           "/v1/universes/{universeId}/free-badges-quota",
           "/v1/user/badges/{badgeId}",
@@ -82881,7 +84432,11 @@
           "/cloud/v2/creator-store-products/{creator_store_product_id}",
           "/cloud/v2/creator-store-products/{creator_store_product_id}",
           "/toolbox-service/v2/assets:search",
-          "/toolbox-service/v2/assets/{id}"
+          "/toolbox-service/v2/assets/{id}",
+          "/toolbox-service/v1/saves",
+          "/toolbox-service/v1/saves",
+          "/toolbox-service/v1/saves",
+          "/toolbox-service/v1/saves:bulkDelete"
         ]
       }
     },
@@ -82897,13 +84452,21 @@
           "/developer-products/v2/universes/{universeId}/developer-products/{productId}/creator",
           "/developer-products/v2/universes/{universeId}/developer-products/creator",
           "/legacy-game-internationalization/v1/developer-products/{developerProductId}/description/language-codes/{languageCode}",
+          "/v1/developer-products/{developerProductId}/description/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/developer-products/{developerProductId}/icons",
+          "/v1/developer-products/{developerProductId}/icons",
           "/legacy-game-internationalization/v1/developer-products/{developerProductId}/icons/language-codes/{languageCode}",
+          "/v1/developer-products/{developerProductId}/icons/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/developer-products/{developerProductId}/icons/language-codes/{languageCode}",
+          "/v1/developer-products/{developerProductId}/icons/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/developer-products/{developerProductId}/name-description",
+          "/v1/developer-products/{developerProductId}/name-description",
           "/legacy-game-internationalization/v1/developer-products/{developerProductId}/name-description/language-codes/{languageCode}",
+          "/v1/developer-products/{developerProductId}/name-description/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/developer-products/{developerProductId}/name-description/language-codes/{languageCode}",
+          "/v1/developer-products/{developerProductId}/name-description/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/developer-products/{developerProductId}/name/language-codes/{languageCode}",
+          "/v1/developer-products/{developerProductId}/name/language-codes/{languageCode}",
           "/v1/developer-products/icons"
         ]
       }
@@ -82956,13 +84519,21 @@
           "/game-passes/v1/universes/{universeId}/game-passes/{gamePassId}/creator",
           "/game-passes/v1/universes/{universeId}/game-passes/creator",
           "/legacy-game-internationalization/v1/game-passes/{gamePassId}/description/language-codes/{languageCode}",
+          "/v1/game-passes/{gamePassId}/description/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/game-passes/{gamePassId}/icons",
+          "/v1/game-passes/{gamePassId}/icons",
           "/legacy-game-internationalization/v1/game-passes/{gamePassId}/icons/language-codes/{languageCode}",
+          "/v1/game-passes/{gamePassId}/icons/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/game-passes/{gamePassId}/icons/language-codes/{languageCode}",
+          "/v1/game-passes/{gamePassId}/icons/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/game-passes/{gamePassId}/name-description",
+          "/v1/game-passes/{gamePassId}/name-description",
           "/legacy-game-internationalization/v1/game-passes/{gamePassId}/name-description/language-codes/{languageCode}",
+          "/v1/game-passes/{gamePassId}/name-description/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/game-passes/{gamePassId}/name-description/language-codes/{languageCode}",
+          "/v1/game-passes/{gamePassId}/name-description/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/game-passes/{gamePassId}/name/language-codes/{languageCode}",
+          "/v1/game-passes/{gamePassId}/name/language-codes/{languageCode}",
           "/v1/games/{universeId}/game-passes",
           "/v1/game-passes"
         ]
@@ -82999,14 +84570,23 @@
           "/cloud/v2/groups/{group_id}/roles/{role_id}",
           "/cloud/v2/groups/{group_id}/shout",
           "/legacy-develop/v1/user/groups/canmanage",
+          "/v1/user/groups/canmanage",
           "/legacy-groups/v1/groups/{groupId}/audit-log",
+          "/v1/groups/{groupId}/audit-log",
           "/legacy-groups/v1/groups/{groupId}/description",
+          "/v1/groups/{groupId}/description",
           "/legacy-groups/v1/groups/{groupId}/notification-preference",
+          "/v1/groups/{groupId}/notification-preference",
           "/legacy-groups/v1/groups/{groupId}/settings",
+          "/v1/groups/{groupId}/settings",
           "/legacy-groups/v1/groups/{groupId}/settings",
+          "/v1/groups/{groupId}/settings",
           "/legacy-groups/v1/groups/{groupId}/status",
+          "/v1/groups/{groupId}/status",
           "/legacy-groups/v1/groups/policies",
+          "/v1/groups/policies",
           "/legacy-groups/v1/user/groups/pending",
+          "/v1/user/groups/pending",
           "/v1/groups/{groupId}/universes",
           "/v1/user/groups/canmanagegamesoritems",
           "/v1/vip-servers/{id}/permissions",
@@ -83100,10 +84680,15 @@
         "content": "Lists all HTTP APIs for interactions, such as getting all universes a user has followed or retrieving favorites.",
         "ordering": [
           "/legacy-followings/v1/users/{userId}/universes",
+          "/v1/users/{userId}/universes",
           "/legacy-followings/v1/users/{userId}/universes/{universeId}",
+          "/v1/users/{userId}/universes/{universeId}",
           "/legacy-followings/v1/users/{userId}/universes/{universeId}",
+          "/v1/users/{userId}/universes/{universeId}",
           "/legacy-followings/v1/users/{userId}/universes/{universeId}/status",
+          "/v1/users/{userId}/universes/{universeId}/status",
           "/legacy-followings/v2/users/{userId}/universes",
+          "/v2/users/{userId}/universes",
           "/v1/favorites/assets/{assetId}/count",
           "/v1/favorites/bundles/{bundleId}/count",
           "/v1/favorites/users/{userId}/assets/{assetId}/favorite",
@@ -83169,59 +84754,107 @@
         "content": "Lists all HTTP APIs for working with localizations, such as updating localized descriptions for badges, game passes, or developer products.",
         "ordering": [
           "/legacy-game-internationalization/v1/badges/{badgeId}/description/language-codes/{languageCode}",
+          "/v1/badges/{badgeId}/description/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/badges/{badgeId}/icons",
+          "/v1/badges/{badgeId}/icons",
           "/legacy-game-internationalization/v1/badges/{badgeId}/icons/language-codes/{languageCode}",
+          "/v1/badges/{badgeId}/icons/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/badges/{badgeId}/icons/language-codes/{languageCode}",
+          "/v1/badges/{badgeId}/icons/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/badges/{badgeId}/name-description",
+          "/v1/badges/{badgeId}/name-description",
           "/legacy-game-internationalization/v1/badges/{badgeId}/name-description/language-codes/{languageCode}",
+          "/v1/badges/{badgeId}/name-description/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/badges/{badgeId}/name-description/language-codes/{languageCode}",
+          "/v1/badges/{badgeId}/name-description/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/badges/{badgeId}/name/language-codes/{languageCode}",
+          "/v1/badges/{badgeId}/name/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/developer-products/{developerProductId}/description/language-codes/{languageCode}",
+          "/v1/developer-products/{developerProductId}/description/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/developer-products/{developerProductId}/icons",
+          "/v1/developer-products/{developerProductId}/icons",
           "/legacy-game-internationalization/v1/developer-products/{developerProductId}/icons/language-codes/{languageCode}",
+          "/v1/developer-products/{developerProductId}/icons/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/developer-products/{developerProductId}/icons/language-codes/{languageCode}",
+          "/v1/developer-products/{developerProductId}/icons/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/developer-products/{developerProductId}/name-description",
+          "/v1/developer-products/{developerProductId}/name-description",
           "/legacy-game-internationalization/v1/developer-products/{developerProductId}/name-description/language-codes/{languageCode}",
+          "/v1/developer-products/{developerProductId}/name-description/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/developer-products/{developerProductId}/name-description/language-codes/{languageCode}",
+          "/v1/developer-products/{developerProductId}/name-description/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/developer-products/{developerProductId}/name/language-codes/{languageCode}",
+          "/v1/developer-products/{developerProductId}/name/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/game-icon/games/{gameId}",
+          "/v1/game-icon/games/{gameId}",
           "/legacy-game-internationalization/v1/game-icon/games/{gameId}/language-codes/{languageCode}",
+          "/v1/game-icon/games/{gameId}/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/game-icon/games/{gameId}/language-codes/{languageCode}",
+          "/v1/game-icon/games/{gameId}/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/game-passes/{gamePassId}/description/language-codes/{languageCode}",
+          "/v1/game-passes/{gamePassId}/description/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/game-passes/{gamePassId}/icons",
+          "/v1/game-passes/{gamePassId}/icons",
           "/legacy-game-internationalization/v1/game-passes/{gamePassId}/icons/language-codes/{languageCode}",
+          "/v1/game-passes/{gamePassId}/icons/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/game-passes/{gamePassId}/icons/language-codes/{languageCode}",
+          "/v1/game-passes/{gamePassId}/icons/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/game-passes/{gamePassId}/name-description",
+          "/v1/game-passes/{gamePassId}/name-description",
           "/legacy-game-internationalization/v1/game-passes/{gamePassId}/name-description/language-codes/{languageCode}",
+          "/v1/game-passes/{gamePassId}/name-description/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/game-passes/{gamePassId}/name-description/language-codes/{languageCode}",
+          "/v1/game-passes/{gamePassId}/name-description/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/game-passes/{gamePassId}/name/language-codes/{languageCode}",
+          "/v1/game-passes/{gamePassId}/name/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/alt-text",
+          "/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/alt-text",
           "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/image",
+          "/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/image",
           "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/{imageId}",
+          "/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/{imageId}",
           "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/order",
+          "/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/order",
           "/legacy-game-internationalization/v1/name-description/games/{gameId}",
+          "/v1/name-description/games/{gameId}",
           "/legacy-game-internationalization/v1/name-description/games/translation-history",
+          "/v1/name-description/games/translation-history",
           "/legacy-game-internationalization/v1/source-language/games/{gameId}",
+          "/v1/source-language/games/{gameId}",
           "/legacy-game-internationalization/v1/supported-languages/games/{gameId}",
+          "/v1/supported-languages/games/{gameId}",
           "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/automatic-translation-status",
+          "/v1/supported-languages/games/{gameId}/automatic-translation-status",
           "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/languages/{languageCode}/automatic-translation-status",
+          "/v1/supported-languages/games/{gameId}/languages/{languageCode}/automatic-translation-status",
           "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/languages/{languageCode}/universe-display-info-automatic-translation-settings",
+          "/v1/supported-languages/games/{gameId}/languages/{languageCode}/universe-display-info-automatic-translation-settings",
           "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/universe-display-info-automatic-translation-settings",
+          "/v1/supported-languages/games/{gameId}/universe-display-info-automatic-translation-settings",
           "/legacy-localization-tables/v1/autolocalization/games/{gameId}/autolocalizationtable",
+          "/v1/autolocalization/games/{gameId}/autolocalizationtable#LocalizationTablesApi",
           "/legacy-localization-tables/v1/autolocalization/games/{gameId}/settings",
+          "/v1/autolocalization/games/{gameId}/settings#LocalizationTablesApi",
           "/legacy-localization-tables/v1/autolocalization/metadata",
+          "/v1/autolocalization/metadata#LocalizationTablesApi",
           "/legacy-localization-tables/v1/localization-table/limits",
+          "/v1/localization-table/limits",
           "/legacy-localization-tables/v1/localization-table/tables/{assetId}",
+          "/v1/localization-table/tables/{assetId}",
           "/legacy-localization-tables/v1/localization-table/tables/{assetId}",
+          "/v1/localization-table/tables/{assetId}",
           "/legacy-localization-tables/v1/localization-table/tables/{tableId}",
+          "/v1/localization-table/tables/{tableId}",
           "/legacy-localization-tables/v1/localization-table/tables/{tableId}/entries",
+          "/v1/localization-table/tables/{tableId}/entries",
           "/legacy-localization-tables/v1/localization-table/tables/{tableId}/entries/translation-history",
+          "/v1/localization-table/tables/{tableId}/entries/translation-history",
           "/legacy-localization-tables/v1/localization-table/tables/{tableId}/entry-count",
+          "/v1/localization-table/tables/{tableId}/entry-count",
           "/v1/user/currency",
           "/v1/autolocalization/games/{gameId}/autolocalizationtable",
           "/v1/autolocalization/games/{gameId}/autolocalizationtable",
           "/v1/autolocalization/games/{gameId}/settings",
-          "/v1/autolocalization/metadata",
           "/v1/automatic-translation/games/{gameId}/feature-status",
           "/v1/automatic-translation/games/{gameId}/quota",
           "/v1/automatic-translation/languages/{languageCode}/target-languages",
@@ -83240,6 +84873,8 @@
           "/v1/ui-configurations",
           "/v1/user-localization-settings/universe/{universeId}",
           "/v1/user-localization-settings/universe/{universeId}",
+          "/v1/source-language/games/{gameId}/language-with-locales",
+          "/v1/supported-languages/games/{gameId}/in-experience-language-selection",
           "/v1/country-regions",
           "/v1/locales",
           "/v1/locales/set-show-roblox-translations",
@@ -83284,7 +84919,9 @@
         "content": "Lists all HTTP APIs for metadata, such as auto-localization configuration information or authorization metadata.",
         "ordering": [
           "/legacy-localization-tables/v1/autolocalization/metadata",
+          "/v1/autolocalization/metadata#LocalizationTablesApi",
           "/legacy-localization-tables/v1/localization-table/limits",
+          "/v1/localization-table/limits",
           "/v1/metadata",
           "/v1/auth/metadata",
           "/v1/metadata#AuthenticationApi",
@@ -83321,7 +84958,6 @@
           "/v1/locales/supported-locales",
           "/v1/locales/supported-locales-for-creators",
           "/v1/locales/user-localization-locus-supported-locales",
-          "/v1/autolocalization/metadata#LocalizationTablesApi",
           "/v1/localization-table/metadata",
           "/v2/push-notifications/chrome-manifest",
           "/v2/push-notifications/get-current-device-destination",
@@ -83377,7 +85013,9 @@
           "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}",
           "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}/logs",
           "/legacy-develop/v1/places/{placeId}/teamcreate/active_session/members",
+          "/v1/places/{placeId}/teamcreate/active_session/members",
           "/legacy-develop/v2/teamtest/{placeId}",
+          "/v2/teamtest/{placeId}",
           "/universes/v1/{universeId}/places/{placeId}/versions",
           "/v1/places/{placeId}",
           "/v1/places/{placeId}",
@@ -83495,11 +85133,17 @@
         "content": "Lists all HTTP APIs for working with Team Create.",
         "ordering": [
           "/legacy-develop/v1/places/{placeId}/teamcreate/active_session/members",
+          "/v1/places/{placeId}/teamcreate/active_session/members",
           "/legacy-develop/v1/universes/{universeId}/teamcreate",
+          "/v1/universes/{universeId}/teamcreate",
           "/legacy-develop/v1/universes/{universeId}/teamcreate",
+          "/v1/universes/{universeId}/teamcreate",
           "/legacy-develop/v1/universes/{universeId}/teamcreate/memberships",
+          "/v1/universes/{universeId}/teamcreate/memberships",
           "/legacy-develop/v1/universes/multiget/teamcreate",
-          "/legacy-develop/v2/teamtest/{placeId}"
+          "/v1/universes/multiget/teamcreate",
+          "/legacy-develop/v2/teamtest/{placeId}",
+          "/v2/teamtest/{placeId}"
         ]
       }
     },
@@ -83512,10 +85156,16 @@
         "ordering": [
           "/cloud/v2/users/{user_id}:generateThumbnail",
           "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/alt-text",
+          "/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/alt-text",
           "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/image",
+          "/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/image",
           "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/{imageId}",
+          "/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/{imageId}",
           "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/order",
+          "/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/order",
           "/legacy-publish/v1/badges/{badgeId}/icon",
+          "/v1/badges/{badgeId}/icon#PublishApi",
+          "/v1/badges/{badgeId}/icon",
           "/v1/avatar/redraw-thumbnail",
           "/v1/games/{universeId}/media",
           "/v2/games/{universeId}/media",
@@ -83552,14 +85202,16 @@
         "path": "trades",
         "content": "Lists all HTTP APIs for trades.",
         "ordering": [
+          "/v2/users/{userId}/can-trade-with",
+          "/v2/users/me/can-trade",
+          "/v1/users/{userId}/can-trade-with",
+          "/v2/trades/{tradeId}",
           "/v1/trades/{tradeId}",
           "/v1/trades/{tradeId}/decline",
           "/v1/trades/{tradeId}",
           "/v1/trades/{tradeStatusType}/count",
           "/v1/trades/expire-outdated",
           "/v1/trades/metadata",
-          "/v1/users/{userId}/can-trade-with",
-          "/v2/trades/{tradeId}",
           "/v2/users/{userId}/tradableItems"
         ]
       }
@@ -83588,39 +85240,76 @@
           "/cloud/v2/universes/{universe_id}/user-restrictions/{user_restriction_id}",
           "/cloud/v2/universes/{universe_id}/user-restrictions/{user_restriction_id}",
           "/legacy-badges/v1/universes/{universeId}/badges",
+          "/v1/universes/{universeId}/badges",
           "/legacy-develop/v1/places/{placeId}/teamcreate/active_session/members",
+          "/v1/places/{placeId}/teamcreate/active_session/members",
           "/legacy-develop/v1/universes/{universeId}/activate",
+          "/v1/universes/{universeId}/activate",
           "/legacy-develop/v1/universes/{universeId}/deactivate",
+          "/v1/universes/{universeId}/deactivate",
           "/legacy-develop/v1/universes/{universeId}/permissions",
+          "/v1/universes/{universeId}/permissions",
           "/legacy-develop/v1/universes/{universeId}/teamcreate",
+          "/v1/universes/{universeId}/teamcreate",
           "/legacy-develop/v1/universes/{universeId}/teamcreate",
+          "/v1/universes/{universeId}/teamcreate",
           "/legacy-develop/v1/universes/{universeId}/teamcreate/memberships",
+          "/v1/universes/{universeId}/teamcreate/memberships",
           "/legacy-develop/v1/universes/multiget/permissions",
+          "/v1/universes/multiget/permissions",
           "/legacy-develop/v1/universes/multiget/teamcreate",
+          "/v1/universes/multiget/teamcreate",
           "/legacy-followings/v1/users/{userId}/universes",
+          "/v1/users/{userId}/universes",
           "/legacy-followings/v1/users/{userId}/universes/{universeId}",
+          "/v1/users/{userId}/universes/{universeId}",
           "/legacy-followings/v1/users/{userId}/universes/{universeId}",
+          "/v1/users/{userId}/universes/{universeId}",
           "/legacy-followings/v1/users/{userId}/universes/{universeId}/status",
+          "/v1/users/{userId}/universes/{universeId}/status",
           "/legacy-followings/v2/users/{userId}/universes",
+          "/v2/users/{userId}/universes",
           "/legacy-game-internationalization/v1/game-icon/games/{gameId}",
+          "/v1/game-icon/games/{gameId}",
           "/legacy-game-internationalization/v1/game-icon/games/{gameId}/language-codes/{languageCode}",
+          "/v1/game-icon/games/{gameId}/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/game-icon/games/{gameId}/language-codes/{languageCode}",
+          "/v1/game-icon/games/{gameId}/language-codes/{languageCode}",
           "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/alt-text",
+          "/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/alt-text",
           "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/image",
+          "/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/image",
           "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/{imageId}",
+          "/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/{imageId}",
           "/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/order",
+          "/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/order",
           "/legacy-game-internationalization/v1/name-description/games/{gameId}",
+          "/v1/name-description/games/{gameId}",
           "/legacy-game-internationalization/v1/name-description/games/translation-history",
+          "/v1/name-description/games/translation-history",
           "/legacy-game-internationalization/v1/source-language/games/{gameId}",
+          "/v1/source-language/games/{gameId}",
           "/legacy-game-internationalization/v1/supported-languages/games/{gameId}",
+          "/v1/supported-languages/games/{gameId}",
           "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/automatic-translation-status",
+          "/v1/supported-languages/games/{gameId}/automatic-translation-status",
           "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/languages/{languageCode}/automatic-translation-status",
+          "/v1/supported-languages/games/{gameId}/languages/{languageCode}/automatic-translation-status",
           "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/languages/{languageCode}/universe-display-info-automatic-translation-settings",
+          "/v1/supported-languages/games/{gameId}/languages/{languageCode}/universe-display-info-automatic-translation-settings",
           "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/universe-display-info-automatic-translation-settings",
+          "/v1/supported-languages/games/{gameId}/universe-display-info-automatic-translation-settings",
           "/legacy-localization-tables/v1/autolocalization/games/{gameId}/autolocalizationtable",
+          "/v1/autolocalization/games/{gameId}/autolocalizationtable#LocalizationTablesApi",
           "/legacy-localization-tables/v1/autolocalization/games/{gameId}/settings",
+          "/v1/autolocalization/games/{gameId}/settings#LocalizationTablesApi",
           "/messaging-service/v1/universes/{universeId}/topics/{topic}",
           "/universes/v1/{universeId}/places/{placeId}/versions",
+          "/cloud/v2/universes/{universeId}/secrets/public-key",
+          "/cloud/v2/universes/{universeId}/secrets",
+          "/cloud/v2/universes/{universeId}/secrets",
+          "/cloud/v2/universes/{universeId}/secrets/{secretId}",
+          "/cloud/v2/universes/{universeId}/secrets/{secretId}",
           "/v1/game-start-info",
           "/v1/universes/{universeId}/badges",
           "/v1/universes/{universeId}/free-badges-quota",
@@ -83637,9 +85326,6 @@
           "/v2/universes/{universeId}/configuration",
           "/v1/universes/{universeId}/stats",
           "/v1/universe-payout-history",
-          "/v1/autolocalization/games/{gameId}/autolocalizationtable",
-          "/v1/autolocalization/games/{gameId}/autolocalizationtable",
-          "/v1/autolocalization/games/{gameId}/settings",
           "/v1/automatic-translation/games/{gameId}/feature-status",
           "/v1/automatic-translation/games/{gameId}/quota",
           "/v1/game-localization-status/{gameId}/translation-counts",
@@ -83750,12 +85436,19 @@
           "/cloud/v2/users/{user_id}/inventory-items",
           "/cloud/v2/users/{user_id}/notifications",
           "/legacy-develop/v1/user/groups/canmanage",
+          "/v1/user/groups/canmanage",
           "/legacy-followings/v1/users/{userId}/universes",
+          "/v1/users/{userId}/universes",
           "/legacy-followings/v1/users/{userId}/universes/{universeId}",
+          "/v1/users/{userId}/universes/{universeId}",
           "/legacy-followings/v1/users/{userId}/universes/{universeId}",
+          "/v1/users/{userId}/universes/{universeId}",
           "/legacy-followings/v1/users/{userId}/universes/{universeId}/status",
+          "/v1/users/{userId}/universes/{universeId}/status",
           "/legacy-followings/v2/users/{userId}/universes",
+          "/v2/users/{userId}/universes",
           "/legacy-groups/v1/user/groups/pending",
+          "/v1/user/groups/pending",
           "/v1/users/{userId}/promotion-channels",
           "/v1/users/{userId}/roblox-badges",
           "/v1/users/{userId}/avatar",

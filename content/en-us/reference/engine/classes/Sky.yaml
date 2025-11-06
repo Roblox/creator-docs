@@ -172,8 +172,10 @@ properties:
     description: |
       Changes the orientation of the skybox surfaces. This property takes a
       `Datatype.Vector3` of degree values in the typical **XYZ** order, but
-      rotation is **applied** first around the **Y** axis, then **X**, and then
-      **Z** to allow for predictable control over complex movements.
+      applies rotation **first** around the **Y** axis. After applying the Y
+      axis rotation, the orientation is applied to the **X** and **Z** axes to
+      allow for predictable control over complex movements. Your camera and
+      object orientation can affect how this rotation appears to be applied.
 
       An easy way to script an orientation animation is to spin around the **Y**
       axis (keeping the horizon level), then tilt this axis by setting **X** and

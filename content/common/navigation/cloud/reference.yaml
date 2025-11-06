@@ -39,6 +39,17 @@ navigation:
       - title: Reference
         path: /cloud/auth/oauth2-reference
   - heading: Features
+  - title: '' # doesn't show anywhere
+    path: /cloud/reference/features/
+    type: cloudfeature
+    source: /reference/cloud/openapi.json
+  - heading: Domains
+  - title: '' # doesn't show anywhere
+    path: /cloud/reference/domains/
+    type: clouddomain
+    source: /reference/cloud/openapi.json
+
+  - heading: Features
   - title: Accounts
     path: /cloud/features/accounts
   - title: Assets
@@ -93,14 +104,6 @@ navigation:
     path: /cloud/features/user-profiles
   - title: Users
     path: /cloud/features/users
-  - title: '' # doesn't show anywhere
-    path: /cloud/reference/features/
-    type: cloudfeature
-    source: /reference/cloud/openapi.json
-  - title: '' # doesn't show anywhere
-    path: /cloud/reference/domains/
-    type: clouddomain
-    source: /reference/cloud/openapi.json
   - heading: Open Cloud API Reference
   - title: Cloud
     section:

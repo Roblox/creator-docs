@@ -7738,6 +7738,11 @@
             "example": true,
             "type": "boolean",
             "description": "Can view blocked words"
+          },
+          "bypassSlowMode": {
+            "example": true,
+            "type": "boolean",
+            "description": "can bypass slow mode"
           }
         },
         "description": "Represents the permissions on a role."
@@ -8416,7 +8421,7 @@
             "description": "Upload the binary input object using this URI."
           }
         },
-        "description": "Represents a large binary input that can be given to a\n`LuauExecutionSessionTask`.\n\nEach `LuauExecutionSessionTaskBinaryInput` is associated with a presigned URL\nwhich can be used to upload an arbitrary object. After uploading the object,\nthe path of the `LuauExecutionSessionTaskBinaryInput` can be passed when\ncreating a `LuauExecutionSessionTask` to make the object available to the\ntask.\n\nWithin the task, the contents of the object are made available within a table\npassed as the first agument to the script, with the key `BinaryInput`. The\nfollowing example demonstrates how to retrieve the data:\n\n```\nlocal taskInput: LuauExecutionTaskInput = ({...})[1]\nlocal buf: buffer = taskInput.BinaryInput\n```\n\nEach `LuauExecutionSessionTaskBinaryInput` is valid for 15 minutes from the\ntime of creation. Within that time, in desired, you can use it to create\nmultiple tasks for the same universe.\n\nThe uploaded binary object must be no larger than 100 MiB.",
+        "description": "Represents a large binary input that can be given to a\n`LuauExecutionSessionTask`.\n\nEach `LuauExecutionSessionTaskBinaryInput` is associated with a presigned URL\nwhich can be used to upload an arbitrary object. After uploading the object,\nthe path of the `LuauExecutionSessionTaskBinaryInput` can be passed when\ncreating a `LuauExecutionSessionTask` to make the object available to the\ntask.\n\nWithin the task, the contents of the object are made available within a table\npassed as the first argument to the script, with the key `BinaryInput`. The\nfollowing example demonstrates how to retrieve the data:\n\n```\nlocal taskInput: LuauExecutionTaskInput = ({...})[1]\nlocal buf: buffer = taskInput.BinaryInput\n```\n\nEach `LuauExecutionSessionTaskBinaryInput` is valid for 15 minutes from the\ntime of creation. Within that time, in desired, you can use it to create\nmultiple tasks for the same universe.\n\nThe uploaded binary object must be no larger than 100 MiB.",
         "x-aep-resource": {
           "patterns": [
             "universes/{universe_id}/luau-execution-session-task-binary-inputs/{luau_execution_session_task_binary_input_id}"
