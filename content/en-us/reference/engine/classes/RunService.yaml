@@ -49,8 +49,8 @@ description: |
         <td><code>true</code></td>
         <td><code>false</code></td>
         <td></td>
-        <td></td>
-        <td></td>
+        <td><code>true</code></td>
+        <td><code>false</code></td>
       </tr>
       <tr>
         <td>Live Server</td>
@@ -58,8 +58,8 @@ description: |
         <td><code>false</code></td>
         <td><code>true</code></td>
         <td></td>
-        <td></td>
-        <td></td>
+        <td><code>true</code></td>
+        <td><code>false</code></td>
       </tr>
       <tr>
         <td>Edit Mode</td>
@@ -84,16 +84,16 @@ description: |
         <td><code>true</code></td>
         <td><code>true</code></td>
         <td><code>true</code></td>
+        <td><code>true</code></td>
         <td><code>false</code></td>
-        <td><code>true</code></td>
-        <td><code>true</code></td>
+        <td><code>false</code></td>
       </tr>
       <tr>
         <td>Play Mode (Client)</td>
         <td><code>true</code></td>
         <td><code>true</code></td>
         <td><code>false</code></td>
-        <td><code>false</code></td>
+        <td></td>
         <td><code>true</code></td>
         <td><code>false</code></td>
       </tr>
@@ -102,16 +102,16 @@ description: |
         <td><code>true</code></td>
         <td><code>false</code></td>
         <td><code>true</code></td>
+        <td></td>
+        <td><code>true</code></td>
         <td><code>false</code></td>
-        <td><code>true</code></td>
-        <td><code>true</code></td>
       </tr>
       <tr>
         <td>Team Test (Player)</td>
         <td><code>true</code></td>
         <td><code>true</code></td>
         <td><code>false</code></td>
-        <td><code>false</code></td>
+        <td></td>
         <td><code>true</code></td>
         <td><code>false</code></td>
       </tr>
@@ -120,7 +120,7 @@ description: |
         <td><code>false</code></td>
         <td><code>false</code></td>
         <td><code>true</code></td>
-        <td><code>false</code></td>
+        <td></td>
         <td><code>true</code></td>
         <td><code>false</code></td>
       </tr>
