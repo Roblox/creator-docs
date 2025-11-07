@@ -25,7 +25,7 @@ description: |
   `Class.RunService.PostSimulation|PostSimulation`, and
   `Class.RunService.Heartbeat|Heartbeat`. Selecting the proper event to use for
   any case is important, so you should read
-  [Task Scheduler](../../../studio/microprofiler/task-scheduler.md) to make an
+  [Task Scheduler](../../../performance-optimization/microprofiler/task-scheduler.md#runservice) to make an
   informed decision.
 
   ##### Context Test Results
