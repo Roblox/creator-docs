@@ -124,6 +124,15 @@ description: |
         <td><code>true</code></td>
         <td><code>false</code></td>
       </tr>
+      <tr>
+        <td>Luau Execution</td>
+        <td><code>false</code></td>
+        <td><code>false</code></td>
+        <td><code>true</code></td>
+        <td></td>
+        <td><code>false</code></td>
+        <td><code>false</code></td>
+      </tr>
     </tbody>
   </table>
 code_samples: []
