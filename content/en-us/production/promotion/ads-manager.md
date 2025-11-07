@@ -121,7 +121,7 @@ An **ad campaign** is a coordinated series of ads designed to achieve a specific
 Before launching your campaign and submitting it to Roblox for moderation and approval, you'll be able to [review the campaign details](#review-the-campaign).
 
 <Alert severity="warning">
-   Advertising paid experiences and restricted (17+) experiences is only available with sponsored and search ads.
+   Advertising paid experiences and Restricted (18+) experiences is only available with sponsored and search ads.
 </Alert>
 
 ### Define the campaign
@@ -129,7 +129,7 @@ Before launching your campaign and submitting it to Roblox for moderation and ap
 Campaigns are defined by their **campaign objective** and **budgeting and scheduling** parameters. Campaign objectives are divided into three categories:
 
 - **Awareness**: Campaigns focused on awareness show image or autoplaying video ads to increase awareness of your brand within an experience.
-- **Visits**: Campaigns focused on visits aim to attract people to your experience on Roblox. These can take the form of either **sponsored experiences** on the Home page or **immersive ads** placed within portal ad units in experiences. You can't promote 17+ experiences using the **Visits** objective.
+- **Visits**: Campaigns focused on visits aim to attract people to your experience on Roblox. These can take the form of either **sponsored experiences** on the Home page or **immersive ads** placed within portal ad units in experiences. You can't promote experiences with Restricted content maturity labels using the **Visits** objective.
 - **Video Views**: Campaigns focused on 15-second click-to-play video views to engage audiences in-experience.
 
 Budgeting and scheduling parameters control campaign spending and duration. There are two different types of budgets:
@@ -190,7 +190,7 @@ To define an ad set:
      <tr>
        <td>**Full Inventory**</td>
        <td>Minimal, mild, moderate, restricted</td>
-       <td>13+, except in 17+ experiences where users must be 17+ and ID-verified</td>
+       <td>13+, except in Restricted experiences where users must be 18+ and age-verified</td>
      </tr>
      <tr>
        <td>**Standard Inventory**</td>

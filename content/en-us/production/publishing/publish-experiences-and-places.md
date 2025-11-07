@@ -310,10 +310,10 @@ You can enable strong language and relax the text chat filter in your experience
 
 <img src="../../assets/publishing/experiences-places-assets/Maturity-Label-Strong-Language.jpg" width="780" alt="Label indicating the experience contains strong language" />
 
-Regardless of whether or not you activate the toggle, players do not face moderation consequences just for using strong language in chat or voice in 17+ games, but they cannot violate [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410#safety) and [Terms of Use](https://www.roblox.com/info/terms). For example, players can type an expletive if they are scared by a monster, but they cannot abuse another player using strong language or otherwise.
+Regardless of whether or not you activate the toggle, players do not face moderation consequences just for using strong language in chat or voice in experiences with Restricted content maturity labels, but they cannot violate [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410#safety) and [Terms of Use](https://www.roblox.com/info/terms). For example, players can type an expletive if they are scared by a monster, but they cannot abuse another player using strong language or otherwise.
 
 <Alert severity="warning">
-In-experience assets and experience metadata cannot contain strong language, even if the toggle is on and your experience is rated 17+. If you include strong language in your assets or experience page, your experience will be moderated.
+In-experience assets and experience metadata cannot contain strong language, even if the toggle is on and your experience has a Restricted content maturity label. If you include strong language in your assets or experience page, your experience will be moderated.
 </Alert>
 
 To allow strong language between players in text chat within your experience:

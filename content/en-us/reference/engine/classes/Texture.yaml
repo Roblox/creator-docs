@@ -5,26 +5,26 @@
 name: Texture
 type: class
 memory_category: GraphicsTexture
-summary: |
-  A Texture object applies a repeating texture to the face of a
-  `Class.BasePart`.
-description: |
+summary: Applies a repeating image texture to the face of a parent `Class.BasePart`.
+description: |-
   A `Class.Texture` object applies a repeating image texture to the face of a
-  `Class.BasePart`. Which face the image is applied to is dependent on the
-  `Class.FaceInstance.Face` property.
-
-  Unlike `Class.Decal|Decals`, the image applied by a `Class.Texture` will
-  repeat when the `Class.BasePart` is resized. The size of the repeating
-  textures is determined by the `Class.Texture.StudsPerTileU|StudsPerTileU` and
+  parent `Class.BasePart`. The affected face is dependent on the
+  `Class.Texture.Face|Face` property. Unlike `Class.Decal|Decals`, the texture
+  applied by a `Class.Texture` will repeat when the parent `Class.BasePart` is
+  resized, with the size of the repeating textures determined by the
+  `Class.Texture.StudsPerTileU|StudsPerTileU` and
   `Class.Texture.StudsPerTileV|StudsPerTileV` properties.
 
-  The applied image is determined by the `Class.Decal.Texture|Texture` property.
-  For information on how to upload images, see
-  [Assets](../../../projects/assets/index.md).
+  The applied image texture is determined by its
+  `Class.Texture.ColorMapContent|ColorMapContent` property. For details on how to
+  upload images, see [asset
+  management](../../../projects/assets/index.md#asset-management).
 
-  See also `Class.Decal` for non-repeating surface images, and
-  `Class.SurfaceGui` to apply UI elements to in‑experience
-  `Class.BasePart|BaseParts`.
+  For more information, review [textures and decals](../../../parts/textures-decals.md). See also:
+
+  - `Class.Decal` for non-repeating surface images.
+  - `Class.MeshPart.TextureContent` to apply an image texture to a `Class.MeshPart`.
+  - `Class.SurfaceGui` to apply an `Class.ImageLabel` or `Class.ImageButton` to an in-experience 3D object.
 code_samples: []
 inherits:
   - Decal
@@ -33,13 +33,13 @@ tags: []
 deprecation_message: ''
 properties:
   - name: Texture.OffsetStudsU
-    summary: |
+    summary: |-
       Determines the offset in studs of the rendered texture's horizontal
       coordinate.
-    description: |
-      `Class.Texture.OffsetStudsU|OffsetStudsU` determines how far the rendered
-      texture is offset on the horizontal axis, in studs, as visualized
-      [here](../../../parts/textures-decals.md#offsetting-textures).
+    description: |-
+      This property determines how far the rendered texture is offset on the
+      horizontal axis, in studs, as visualized
+      [here](../../../parts/textures-decals.md#offset-textures).
 
       See also `Class.Texture.OffsetStudsV|OffsetStudsV`.
     code_samples: []
@@ -57,13 +57,13 @@ properties:
     capabilities:
       - Basic
   - name: Texture.OffsetStudsV
-    summary: |
+    summary: |-
       Determines the offset in studs of the rendered texture's vertical
       coordinate.
-    description: |
-      `Class.Texture.OffsetStudsV|OffsetStudsV` determines how far the rendered
-      texture is offset on the vertical axis, in studs, as visualized
-      [here](../../../parts/textures-decals.md#offsetting-textures).
+    description: |-
+      This property determines how far the rendered texture is offset on the vertical
+      axis, in studs, as visualized
+      [here](../../../parts/textures-decals.md#offset-textures).
 
       See also `Class.Texture.OffsetStudsU|OffsetStudsU`.
     code_samples: []
@@ -81,10 +81,10 @@ properties:
     capabilities:
       - Basic
   - name: Texture.StudsPerTileU
-    summary: |
+    summary: |-
       Sets the horizontal size, in studs, of the tiled image applied by the
       `Class.Texture`.
-    description: |
+    description: |-
       Sets the horizontal size, in studs, of the tiled image applied by the
       `Class.Texture`.
 
@@ -115,10 +115,10 @@ properties:
     capabilities:
       - Basic
   - name: Texture.StudsPerTileV
-    summary: |
+    summary: |-
       Sets the vertical size, in studs, of the tiled image applied by the
       `Class.Texture`.
-    description: |
+    description: |-
       Sets the vertical size, in studs, of the tiled image applied by the
       `Class.Texture`.
 

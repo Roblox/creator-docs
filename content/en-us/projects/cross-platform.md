@@ -160,14 +160,9 @@ You should also consider the distribution and relative positioning of elements w
 Ensure that all text is legible on all screens. Also make sure all UI has [sufficient contrast](../production/publishing/accessibility.md#color-contrast) and that [nothing relies solely on color](../production/publishing/accessibility.md#color-non-reliance) to distinguish an action or outcome.
 </Alert>
 
-Even with UI elements [properly sized](#position-and-size) across all device screen sizes, the overall experience should meet [accessibility standards](../production/publishing/accessibility.md) for players with impaired vision or color blindness. Text size can factor heavily into the legibility of text‑based UI, so it's recommended to use the `Class.TextLabel.TextScaled` or `Class.TextButton.TextScaled` properties to automatically scale text up its parent's bounds. You should include a [text size constraint](../ui/size-modifiers.md#text-size) to ensure text doesn't become illegible (too&nbsp;small) or visually too large on larger screens like 4K&nbsp;TVs.
+Even with UI elements [properly sized](#position-and-size) across all device screen sizes, the overall experience should meet [accessibility standards](../production/publishing/accessibility.md) for players with impaired vision or color blindness. Text size can factor heavily into the legibility of text‑based UI, so you should include a [text size constraint](../ui/size-modifiers.md#text-size) to ensure text doesn't become illegible (too&nbsp;small) or visually too large on larger screens like 4K&nbsp;TVs.
 
 For more tips on accessibility, see [here](../production/publishing/accessibility.md).
-
-<figure>
-<img src="../assets/publishing/cross-platform/TextScaled-Sizing.png" width="840" />
-<figcaption>Resized `Class.TextLabel` objects with `Class.TextLabel.TextScaled|TextScaled` property enabled</figcaption>
-</figure>
 
 ## Final tips & tricks
 

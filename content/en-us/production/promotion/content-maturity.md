@@ -25,14 +25,14 @@ If an experience does not have accurate or all content maturity information, Rob
 You can generate content maturity information by filling out the **Maturity & Compliance Questionnaire**, which contains a set of questions about the type of content players can possibly encounter within your experience, as well as how frequently it occurs. Your answers give Roblox an understanding of the content in your experience and ensure that the experience is available to the appropriate audience.
 
 <Alert severity="warning">
-   If your experience is going to have [Restricted content](https://en.help.roblox.com/hc/articles/15869919570708), it must first receive a Restricted maturity label so that its content is restricted to ID-verified players who are at least 17 years old. You must not add any restricted content to your experience before adding content maturity information.
+   If your experience is going to have [Restricted content](https://en.help.roblox.com/hc/articles/15869919570708), it must first receive a Restricted maturity label so that its content is restricted to age-verified players who are at least 18 years old. You must not add any restricted content to your experience before adding content maturity information.
 </Alert>
 
 As you are completing the questionnaire, **base your answers on the most mature or extreme content players can encounter within your experience**. You can retake the questionnaire and generate a new maturity label at any time to accurately reflect the content in your experience. For restricted experiences, you can't change the maturity, but you can update its content descriptors.
 
 To generate content maturity information:
 
-1. **(Optional)** If you want your experience to include restricted content, confirm you are at least 17 years old by [verifying your account](../../production/publishing/account-verification.md) so the questionnaire can ask questions to generate the Restricted maturity label.
+1. **(Optional)** If you want your experience to include restricted content, confirm you are at least 18 years old by [verifying your account](../../production/publishing/account-verification.md) so the questionnaire can ask questions to generate the Restricted maturity label.
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and click on the thumbnail of the experience you want to generate content maturity information for. The experience's **Overview** page displays.
 1. In the left-hand navigation, navigate to the **Audience** section, then select **Maturity & Compliance**.
 1. If you've never taken the questionnaire before, read the notes and details, then click **Start** to proceed. If you've previously completed the questionnaire, the **Questionnaire Completed** page displays, but you can click the **Restart** button to start over.
@@ -42,7 +42,7 @@ To generate content maturity information:
    Please review your experience and confirm that your answers accurately reflect the content of your experience. If you intentionally misrepresent your experience, you may be subject to [moderation consequences](#content-maturity-moderation).
    </Alert>
 
-1. If you need to modify a previous answer, click the **Edit** button, otherwise click the **Submit** button to immediately publish the content maturity information to the experience's main page. If your experience receives a Restricted maturity label, servers running the experience restart to remove all players except those ID-verified as 17+, and Studio removes all creators from any active [collaboration](../../projects/collaboration.md) session except those ID-verified as 17+.
+1. If you need to modify a previous answer, click the **Edit** button, otherwise click the **Submit** button to immediately publish the content maturity information to the experience's main page. If your experience receives a Restricted maturity label, servers running the experience restart to remove all players except those age-verified as 18+, and Studio removes all creators from any active [collaboration](../../projects/collaboration.md) session except those age-verified as 18+.
 
 As long as your experience doesn't have a Restricted maturity label, if you believe that your content maturity information doesn't match your intended audience, you can update the content in your experience so that your experience is appropriate for your target audience, then resubmit the questionnaire. To learn how you can dynamically adjust the content of your experience for different audiences, see the `Class.PolicyService` API reference.
 
@@ -119,7 +119,7 @@ If your experience contains violence, you must specify the violence's maximum le
   </tr>
   <tr>
     <td>**Restricted**</td>
-    <td>Graphic and realistic-looking depictions of violence and/or death that do not violate the [Restricted Content Policy](https://en.help.roblox.com/hc/en-us/articles/15869919570708-Roblox-17-Policy-Standards), such as non-real world beheadings/decapitation, impalement, hangings, dismemberment, mutilation, severed/severing body parts, presence of organs, maiming, disfiguration, and electrocution.<br></br><br></br>**Experiences with strong violence are only available to ID-verified players that are at least 17 years old.**</td>
+    <td>Graphic and realistic-looking depictions of violence and/or death that do not violate the [Restricted Content Policy](https://en.help.roblox.com/hc/en-us/articles/15869919570708-Roblox-17-Policy-Standards), such as non-real world beheadings/decapitation, impalement, hangings, dismemberment, mutilation, severed/severing body parts, presence of organs, maiming, disfiguration, and electrocution.<br></br><br></br>**Experiences with strong violence are only available to age-verified players that are at least 18 years old.**</td>
     <td></td>
   </tr>
 </tbody>
@@ -226,7 +226,7 @@ If you answer realistic for question 2, you must also specify the blood's maximu
   </tr>
   <tr>
     <td>**Heavy**</td>
-    <td>The bloodshed is significant, such as pools of blood, gushing blood, and up-close blood spatter.<br></br><br></br>**Experiences with heavy, realistic blood are only available to ID-verified players that are at least 17 years old.**</td>
+    <td>The bloodshed is significant, such as pools of blood, gushing blood, and up-close blood spatter.<br></br><br></br>**Experiences with heavy, realistic blood are only available to age-verified players that are at least 18 years old.**</td>
     <td></td>
   </tr>
 </tbody>
@@ -355,10 +355,10 @@ You do **not** need to report depictions of, and/or references to, items or acti
 
 Strong language is vulgar and obscene language that is not used to harass, discriminate, incite violence, or threaten others, or used in a sexual context. For example, strong language content could be depictions of a non-playable character (NPC) using obscenity like the "f-word" that is not directed towards another character or group of people (e.g. "f* off").
 
-If your experience includes strong language, you must disclose it within the Maturity & Compliance Questionnaire. Experiences that include strong language are only available to ID-verified players that are at least 17 years old.
+If your experience includes strong language, you must disclose it within the Maturity & Compliance Questionnaire. Experiences that include strong language are only available to age-verified players that are at least 18 years old.
 
 <Alert severity="info">
-   If you want to enable strong language in player communication aside from content for your 17+ experiences, see [Publish experiences and places](../../production/publishing/publish-experiences-and-places.md#creator-dashboard).
+   If you want to enable strong language in player communication aside from content for your experiences with Restricted content maturity labels, see [Publish experiences and places](../../production/publishing/publish-experiences-and-places.md#creator-dashboard).
 </Alert>
 
 ### Romantic themes
@@ -373,13 +373,13 @@ To understand this question, it's important to understand three different defini
   - They are designed for one person or for a very small number of people to engage in private activities, such as a bathroom stall, bedroom, or small tent.
 - Settings intended for adults are settings that are designed to cater to adult clientele. These settings are often legally restricted to individuals who have reached the age of majority and are otherwise deemed inappropriate or unsuitable for minors, such as clubs or bars.
 
-If your experience includes romantic themes and/or primarily takes place in private spaces or settings intended for adults, you must disclose it within the Maturity & Compliance Questionnaire, and it will only be available to ID-verified players that are at least 17 years old.
+If your experience includes romantic themes and/or primarily takes place in private spaces or settings intended for adults, you must disclose it within the Maturity & Compliance Questionnaire, and it will only be available to age-verified players that are at least 18 years old.
 
 ### Alcohol
 
 **Question 1: Does this experience depict, reference, or include use of alcohol?**
 
-Alcohol is an intoxicating adult beverage. If your experience includes, depicts, or references alcohol, or depicts adult business and locations that provide or sell alcohol, such as characters drinking alcohol at a bar, you must disclose it within the Maturity & Compliance Questionnaire. Experiences that depict alcohol are only available to ID-verified players that are at least 17 years old.
+Alcohol is an intoxicating adult beverage. If your experience includes, depicts, or references alcohol, or depicts adult business and locations that provide or sell alcohol, such as characters drinking alcohol at a bar, you must disclose it within the Maturity & Compliance Questionnaire. Experiences that depict alcohol are only available to age-verified players that are at least 18 years old.
 
 ### Social hangout
 
@@ -396,7 +396,7 @@ If your experience is a social hangout, you must specify if it includes private 
 - They are designed for activities that are personal and secluded, such as sleeping, changing clothes, or bathing.
 - They are designed for one person or for a very small number of people, such as a bathroom stall, bedroom, or small tent.
 
-If your experience is a social hangout that includes private spaces, you must disclose it within the Maturity & Compliance Questionnaire. Social hangouts without private spaces are only available to players that are at least 13 years old, and social hangouts with private spaces are only available to ID-verified players that are at least 17 years old.
+If your experience is a social hangout that includes private spaces, you must disclose it within the Maturity & Compliance Questionnaire. Social hangouts without private spaces are only available to players that are at least 13 years old, and social hangouts with private spaces are only available to age-verified players that are at least 18 years old.
 
 ### Free-form user creation
 

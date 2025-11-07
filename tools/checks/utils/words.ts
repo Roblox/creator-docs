@@ -58,6 +58,7 @@ export const ALLOWED_PROFANE_WORDS_LIST = [
   'poop',
   'sex',
   'sexy',
+  'vomit'
 ];
 const ALLOWED_PROFANE_WORDS_SET = new Set(ALLOWED_PROFANE_WORDS_LIST);
 
