@@ -44,7 +44,7 @@ description: |
     </thead>
   <tbody>
       <tr>
-        <td>Live Player</td>
+        <td>Live (Client)</td>
         <td><code>false</code></td>
         <td><code>true</code></td>
         <td><code>false</code></td>
@@ -53,7 +53,7 @@ description: |
         <td><code>false</code></td>
       </tr>
       <tr>
-        <td>Live Server</td>
+        <td>Live (Server)</td>
         <td><code>false</code></td>
         <td><code>false</code></td>
         <td><code>true</code></td>
@@ -62,7 +62,7 @@ description: |
         <td><code>false</code></td>
       </tr>
       <tr>
-        <td>Edit Mode</td>
+        <td>Edit</td>
         <td><code>true</code></td>
         <td><code>true</code></td>
         <td><code>true</code></td>
@@ -107,7 +107,7 @@ description: |
         <td><code>false</code></td>
       </tr>
       <tr>
-        <td>Team Test (Player)</td>
+        <td>Team Test (Client)</td>
         <td><code>true</code></td>
         <td><code>true</code></td>
         <td><code>false</code></td>
