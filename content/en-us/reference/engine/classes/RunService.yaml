@@ -82,11 +82,11 @@ description: |
       <tr>
         <td>Run Mode</td>
         <td><code>true</code></td>
-        <td><code>true</code></td>
-        <td><code>true</code></td>
-        <td><code>true</code></td>
         <td><code>false</code></td>
-        <td><code>false</code></td>
+        <td><code>true</code></td>
+        <td></td>
+        <td><code>true</code></td>
+        <td><code>true</code></td>
       </tr>
       <tr>
         <td>Play Mode (Client)</td>
