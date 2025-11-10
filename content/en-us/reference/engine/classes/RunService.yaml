@@ -117,7 +117,7 @@ description: |
       </tr>
       <tr>
         <td>Team Test (Server)</td>
-        <td><code>false</code></td>
+        <td><code>true</code></td>
         <td><code>false</code></td>
         <td><code>true</code></td>
         <td></td>
