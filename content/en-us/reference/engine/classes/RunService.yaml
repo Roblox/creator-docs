@@ -25,7 +25,7 @@ description: |
   `Class.RunService.PostSimulation|PostSimulation`, and
   `Class.RunService.Heartbeat|Heartbeat`. Selecting the proper event to use for
   any case is important, so you should read
-  [Task Scheduler](../../../studio/microprofiler/task-scheduler.md) to make an
+  [Task Scheduler](../../../performance-optimization/microprofiler/task-scheduler.md#runservice) to make an
   informed decision.
 
   ##### Context Test Results
@@ -44,25 +44,25 @@ description: |
     </thead>
   <tbody>
       <tr>
-        <td>Live Player</td>
+        <td>Live (Client)</td>
         <td><code>false</code></td>
         <td><code>true</code></td>
         <td><code>false</code></td>
         <td></td>
-        <td></td>
-        <td></td>
+        <td><code>true</code></td>
+        <td><code>false</code></td>
       </tr>
       <tr>
-        <td>Live Server</td>
+        <td>Live (Server)</td>
         <td><code>false</code></td>
         <td><code>false</code></td>
         <td><code>true</code></td>
         <td></td>
-        <td></td>
-        <td></td>
+        <td><code>true</code></td>
+        <td><code>false</code></td>
       </tr>
       <tr>
-        <td>Edit Mode</td>
+        <td>Edit</td>
         <td><code>true</code></td>
         <td><code>true</code></td>
         <td><code>true</code></td>
@@ -84,16 +84,16 @@ description: |
         <td><code>true</code></td>
         <td><code>true</code></td>
         <td><code>true</code></td>
+        <td><code>true</code></td>
         <td><code>false</code></td>
-        <td><code>true</code></td>
-        <td><code>true</code></td>
+        <td><code>false</code></td>
       </tr>
       <tr>
         <td>Play Mode (Client)</td>
         <td><code>true</code></td>
         <td><code>true</code></td>
         <td><code>false</code></td>
-        <td><code>false</code></td>
+        <td></td>
         <td><code>true</code></td>
         <td><code>false</code></td>
       </tr>
@@ -102,16 +102,16 @@ description: |
         <td><code>true</code></td>
         <td><code>false</code></td>
         <td><code>true</code></td>
+        <td></td>
+        <td><code>true</code></td>
         <td><code>false</code></td>
-        <td><code>true</code></td>
-        <td><code>true</code></td>
       </tr>
       <tr>
-        <td>Team Test (Player)</td>
+        <td>Team Test (Client)</td>
         <td><code>true</code></td>
         <td><code>true</code></td>
         <td><code>false</code></td>
-        <td><code>false</code></td>
+        <td></td>
         <td><code>true</code></td>
         <td><code>false</code></td>
       </tr>
@@ -120,8 +120,17 @@ description: |
         <td><code>false</code></td>
         <td><code>false</code></td>
         <td><code>true</code></td>
+        <td></td>
+        <td><code>true</code></td>
+        <td><code>false</code></td>
+      </tr>
+      <tr>
+        <td>Luau Execution</td>
+        <td><code>false</code></td>
         <td><code>false</code></td>
         <td><code>true</code></td>
+        <td></td>
+        <td><code>false</code></td>
         <td><code>false</code></td>
       </tr>
     </tbody>
