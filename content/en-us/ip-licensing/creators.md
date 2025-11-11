@@ -3,9 +3,13 @@ title: IP licensing for creators
 description: How to use IP licensing as a creator.
 ---
 
-Creating experiences using popular IP can make your content more recognizable to users and help you reach new audiences that already know and love certain characters, settings, and storylines.
+Creating experiences using approved popular IP can make your content more recognizable to users and help you reach new audiences that already know and love certain characters, settings, and storylines.
 
-As a creator, you can either receive offers directly from IP holders or browse the Licenses catalog and apply to use an available IP in your experience.
+As a creator, you can browse the [Licenses catalog](https://create.roblox.com/explore/licenses) and apply to use an available IP in your experience. A license allows you to create a full Roblox experience based on an IP while following the conditions and revenue share outlined by the IP holder.
+
+<Alert severity="warning">
+  Roblox takes intellectual property infringement very seriously. Publishing content on Roblox that uses someone else's IP rights without permission violates the [Roblox Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use) and might result in the removal of the content and your Roblox account.
+</Alert>
 
 ## Explore licenses
 
@@ -96,7 +100,7 @@ To view all of your offers and license agreements, go to **Intellectual Property
     <td>All license offers that IP holders have sent you.</td>
   </tr>
   <tr>
-    <td>**My Requests**</td>
+    <td>**Requests**</td>
     <td>All license applications that you have sent to IP holders.</td>
   </tr>
   <tr>
@@ -104,7 +108,7 @@ To view all of your offers and license agreements, go to **Intellectual Property
     <td>All active license agreements between you and IP holders.</td>
   </tr>
   <tr>
-    <td>**Inactive**</td>
+    <td>**Archived**</td>
     <td>All archived offers or license agreements between you and IP holders.</td>
   </tr>
 </tbody>
@@ -113,14 +117,14 @@ To view all of your offers and license agreements, go to **Intellectual Property
 ## Review a license offer
 
 <Alert severity="error">
-  Any license offer you receive from an IP holder automatically becomes active after 7 days. **You must dispute the offer to reject it.**
+  Any license offer you receive from an IP holder automatically becomes active after 14 days. **You must dispute the offer to reject it.**
 </Alert>
 
 IP holders can reach out and make a license offer directly to your experience. This can happen if Roblox detects that your experience has a high likelihood of making prominent use of a registered IP.
 
 After you receive an offer, you can review the offer details and either:
 
-- Do nothing and wait for the offer to be automatically accepted after 7 days.
+- Do nothing and wait for the offer to be automatically accepted after 14 days.
 - [Dispute the offer](#dispute-the-offer).
 
 ### Dispute the offer
@@ -138,7 +142,7 @@ To dispute a license offer:
 6. Review and accept the legal agreements.
 7. Click **Dispute**. The IP holder can then accept or reject your offer dispute.
 
-If the IP holder accepts your dispute, you will not enter into an agreement with them. However, if the IP holder rejects your dispute, you will receive their license offer again. After you receive their offer a second time, you can either wait 7 days for the offer to automatically become active or dispute the offer one final time.
+If the IP holder accepts your dispute, you will not enter into an agreement with them. However, if the IP holder rejects your dispute, you will receive their license offer again. After you receive their offer a second time, you can either wait 14 days for the offer to automatically become active or dispute the offer one final time.
 
 If you submit a second and final dispute, you will not enter into an agreement with the IP holder. Instead, the offer will be archived, and the IP holder might choose to pursue a [DMCA claim](../production/publishing/dmca-guidelines.md) separately.
 

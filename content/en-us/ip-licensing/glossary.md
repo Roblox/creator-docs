@@ -16,8 +16,16 @@ description: Glossary of IP licensing terms.
     <td>An IP represents a franchise or body of creative works that can be made available for licensing.</td>
   </tr>
   <tr>
-    <td>**IP holder**</td>
+    <td>**IP holder/rights holder**</td>
     <td>The entity that is the licensor for the creative work, brand, or franchise being registered.</td>
+  </tr>
+  <tr>
+    <td>**IP library**</td>
+    <td>A list of all of your IP families; a library of text and images that Roblox uses to identify the IP.</td>
+  </tr>
+  <tr>
+    <td>**IP family**</td>
+    <td>The entity of the IP being registered. For example, "Batman Universe" or "Sherlock Holmes". <br /><br /> We recommend you only create one IP family per IP.</td>
   </tr>
   <tr>
     <td>**License catalog**</td>
@@ -30,6 +38,22 @@ description: Glossary of IP licensing terms.
   <tr>
     <td>**IP license**</td>
     <td>A set of terms and conditions that defines how a particular IP can be used by creators to build experiences on Roblox. IP holders can create several licenses per IP family (for example, "Batman Universe Full License", "20% Revenue Share License", or "Minimal Maturity License").</td>
+  </tr>
+  <tr>
+    <td>**Primary keyword**</td>
+    <td>The official name of your IP. For example, "Batman".</td>
+  </tr>
+  <tr>
+    <td>**Secondary keywords**</td>
+    <td>A list of words or phrases that represent characters, objects, places, or elements related to your IP. For example, "Gotham City", "Robin", and "Batmobile".</td>
+  </tr>
+  <tr>
+    <td>**Private license**</td>
+    <td>A private license is only available to creators that the IP holder reaches out to directly.</td>
+  </tr>
+  <tr>
+    <td>**Public license**</td>
+    <td>A public license is visible to all creators in the Licenses page.</td>
   </tr>
   <tr>
     <td>**Revenue share rate**</td>
