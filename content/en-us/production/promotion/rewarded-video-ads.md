@@ -202,7 +202,9 @@ The new placement populates on the Placement table with a unique **Placement ID*
 
 ## Exclude likely spenders
 
-Based on past behavior and purchasing habits, certain users are more likely to make purchases in your experience. To reduce your risk of losing revenue, you can exclude users who have purchased 5 or more developer products in your experience from seeing rewarded video ads.
+Based on past behavior and purchasing habits, certain users are more likely to make purchases in your experience. To reduce your risk of losing revenue, you can exclude users who are likely to spend in your experience from seeing rewarded video ads.
+
+We recommend that you only enable this setting if you plan to let users choose between watching a video ad and purchasing the reward from that ad. If the reward you're offering through the video ad is unique and isn't available for purchase, we recommend that you do not enable this setting.
 
 To prevent likely spenders from seeing rewarded video ads:
 

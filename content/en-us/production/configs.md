@@ -42,6 +42,17 @@ For more information about working with configs in your scripts, see [Add config
 
 Editing a config is no different from creating one. Click the **Edit** button and update the value and description as-desired.
 
+### Limits
+
+Config values have the following limits by type.
+
+Type | Maximum size
+:--- | :---
+String | 100,000 characters
+Number | ±1.7976931348623157e+308, ±2^53 for exact integer representations
+Boolean | N/A
+JSON | 100,000 characters
+
 ## Publish configs
 
 After you create a config, it moves to a **staged** state so that you can test it before it becomes publicly available. Staged changes are available to you and your team in Studio play sessions, not to players in live experiences. The **Configs** page on Creator Hub shows all active and staged changes.

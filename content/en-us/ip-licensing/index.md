@@ -11,7 +11,7 @@ verticalLayout: true,
 content: [
 {
 description: "One of the most significant ways for creators to expand their reach is to tap into the established fanbases of beloved global IP. We've seen major success when creators and IP holders partner, and we are building an ecosystem that supports licensing for rights holders at scale across Roblox. Our vision is to empower all creators to easily partner with the franchises they love and bring the franchises' licensed IP into their experiences.",
-video: "https://www.youtube-nocookie.com/embed/4zoH0Qqq3BE",
+video: "https://www.youtube-nocookie.com/embed/4zoH0Qqq3BE?rel=0&loop=1",
 }
 ]
 },
@@ -75,7 +75,7 @@ links: [
 {
 title: "Kodansha IPs now available",
 description: "During RDC 2025, Roblox CEO Dave Baszucki and Kodansha CEO Yoshinobu Noma announced major additions to our Licenses catalog including Kodansha's Blue Lock and That Time I Got Reincarnated as a Slime.",
-video: "https://www.youtube-nocookie.com/embed/PVlCHE9pc50?si=VHpSJVeXiqTJFb-k&start=2373",
+video: "https://www.youtube-nocookie.com/embed/PVlCHE9pc50?si=VHpSJVeXiqTJFb-k&start=2373?rel=0&loop=1",
 links: [
 { text: "Read", href: "https://corp.roblox.com/newsroom/2025/09/roblox-rdc-2025" }
 ]
@@ -91,7 +91,7 @@ links: [
 {
 title: "The Evolution of IP on Roblox",
 description: "Learn how intellectual property works on Roblox, our vision for easier IP-based creations, and the innovative technologies that make it all possible.",
-video: "https://www.youtube-nocookie.com/embed/2HotST5mF3A",
+video: "https://www.youtube-nocookie.com/embed/2HotST5mF3A?rel=0&loop=1",
 links: [
 { text: "Read", href: "https://corp.roblox.com/newsroom/2025/09/roblox-rdc-2025" }
 ]
