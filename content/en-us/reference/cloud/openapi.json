@@ -40773,6 +40773,7 @@
     },
     "/v1/groups/{groupId}/configuration": {
       "get": {
+        "tags": ["Groups"],
         "summary": "Gets group configuration information",
         "parameters": [
           {
@@ -40825,7 +40826,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/groups#/default/get_v1_groups__groupId__configuration"
+        }
       }
     },
     "/v1/groups/{groupId}/emotes": {
@@ -61716,100 +61720,6 @@
           }
         ]
       }
-    },
-    "/asset-permissions-api/v1/assets/permissions#AssetPermissionsApi": {
-      "patch": {
-        "summary": "Grant a subject permission to multiple assets.\n            \nAuthorization is required to grant permissions to the subject and asset IDs in the request.",
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/BatchGrantPermissionsRequest"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/BatchGrantPermissionsRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/BatchGrantPermissionsRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/BatchGrantPermissionsRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BatchGrantPermissionsResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AssetPermissionsApi.ErrorResponse"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AssetPermissionsApi.ErrorResponse"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AssetPermissionsApi.ErrorResponse"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "asset-permissions:write"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          },
-          {
-            "roblox-api-key": []
-          }
-        ]
-      }
     }
   },
   "components": {
@@ -70539,7 +70449,7 @@
             "type": "boolean"
           },
           "assetsManifest": {
-            "description": "",
+            "description": "Inlined assets manifest for the LuaApp OTA.",
             "type": "object",
             "additionalProperties": {
               "type": "string"
@@ -83451,7 +83361,7 @@
             "format": "int64"
           },
           "code": {
-            "$ref": "#/components/schemas/AssetPermissionsApi.ErrorCode"
+            "$ref": "#/components/schemas/AssetPermissions.ErrorCode"
           }
         },
         "additionalProperties": false,
@@ -83717,47 +83627,6 @@
         },
         "additionalProperties": false,
         "description": "Wrapper for the paginated collection output.\nComplies with the REST conventions, containing\nnext/previous page, and a data field containing the actual list.\n            \nNeeded only to simplify JSON serialization, and can technically\nbe AutoMapper-ed from the EaaS or any other data provider."
-      },
-      "AssetPermissionsApi.Error": {
-        "type": "object",
-        "properties": {
-          "code": {
-            "$ref": "#/components/schemas/AssetPermissionsApi.ErrorCode"
-          },
-          "message": {
-            "type": "string",
-            "description": "The human readable error message.",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "The error object for results."
-      },
-      "AssetPermissionsApi.ErrorCode": {
-        "enum": [
-          "UnknownError",
-          "InvalidRequest",
-          "AssetNotFound",
-          "CannotManageAsset",
-          "PublicAssetCannotBeGrantedTo",
-          "CannotManageSubject",
-          "SubjectNotFound",
-          "AssetTypeNotEnabled",
-          "PermissionLimitReached",
-          "DependenciesLimitReached"
-        ],
-        "type": "string",
-        "description": "Enums for customized error code in error responses."
-      },
-      "AssetPermissionsApi.ErrorResponse": {
-        "type": "object",
-        "properties": {
-          "error": {
-            "$ref": "#/components/schemas/AssetPermissionsApi.Error"
-          }
-        },
-        "additionalProperties": false,
-        "description": "The error object for responses."
       }
     },
     "requestBodies": {
@@ -84688,15 +84557,11 @@
           "groups_post_v1_groups_policies",
           "get_legacy_groups_v1_user_groups_pending",
           "groups_get_v1_user_groups_pending",
-          "develop_get_v1_groups__groupId__universes",
-          "develop_get_v1_user_groups_canmanagegamesoritems",
-          "games_patch_v1_vip_servers__id__permissions",
-          "games_get_v2_groups__groupId__games",
-          "games_get_v2_groups__groupId__gamesV2",
           "groups_delete_v1_featured_content_event",
           "groups_get_v1_featured_content_event",
           "groups_post_v1_featured_content_event",
           "groups_get_v1_groups__groupId_",
+          "groups_get_v1_groups__groupId__configuration",
           "groups_post_v1_groups__groupId__change_owner",
           "groups_post_v1_groups__groupId__claim_ownership",
           "groups_delete_v1_groups__groupId__join_requests",
@@ -84769,7 +84634,12 @@
           "groups_get_v2_groups__groupId__wall_posts",
           "groups_post_v2_groups__groupId__wall_posts",
           "groups_get_v2_users__userId__groups_roles",
-          "thumbnails_get_v1_groups_icons"
+          "thumbnails_get_v1_groups_icons",
+          "develop_get_v1_groups__groupId__universes",
+          "develop_get_v1_user_groups_canmanagegamesoritems",
+          "games_patch_v1_vip_servers__id__permissions",
+          "games_get_v2_groups__groupId__games",
+          "games_get_v2_groups__groupId__gamesV2"
         ]
       }
     },

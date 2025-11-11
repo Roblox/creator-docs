@@ -326,7 +326,7 @@ Each queue has a limit of 30 requests. When the limit of a queue is reached, req
 
 <Tabs>
 <TabItem label="Server limits">
-  Each server is allowed a certain number of data store requests based on the request type and number of users. Use `Class.DataStoreService:GetRequestBudgetForRequestType()|GetRequestBudgetForRequestType()` to confirm the number of data store requests that the current place can make.
+  Each server is allowed a certain number of data store requests based on the request type and number of users. Servers often receive a one-time allotment of additional requests when they first start up. Use `Class.DataStoreService:GetRequestBudgetForRequestType()|GetRequestBudgetForRequestType()` to confirm the number of data store requests that the current place can make.
 
   For each request type, the limit is shared among all listed functions.
 
