@@ -14,19 +14,18 @@ authenticate to Open Cloud on your behalf.
 
 ## Create API keys
 
-You can create and configure API keys for your individually-owned
-experiences or [group-owned](../../projects/groups.md) experiences.
+<Alert severity="warning">
+Group API keys are being deprecated and will not be supported after January 30, 2026. All references to API keys in the text below refer to user-owned keys.
+</Alert>
 
-You must be the group owner or assigned to a role within the group that has the
-API key admin permission in order to create an API key for your group. A group
-member can only create an API key with the same resource access permissions of
-their role. For example, only group members with the **Create and edit group
-experiences** permission can create an API key that can publish a place file.
+You can create and configure API keys to access your resources. An API key's access is determined by the permissions of the user who owns it. This means it can generally access any resource the user has permissions for, including their individual experiences and any [group-owned](../../projects/groups.md) experiences where they have the appropriate role. Some scopes can be restricted to specific experiences, but not all.
+
+For details on how to create API keys for managing group resources, see the [Create API Keys for Managing Group-owned Resources](#create-api-keys-for-managing-group-owned-resources) section below.
 
 To create an API key:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-1. **(Optional)** Click the **Creator Hub** dropdown to select a group if you are creating the API key for a group.
+
 1. In the left navigation menu, select **Open Cloud** &rarr; [API Keys](https://create.roblox.com/dashboard/credentials?activeTab=ApiKeysTab).
 1. Click the **Create API Key** button.
 1. Enter a unique name for your API key. Use a name that can help you recall the
@@ -36,13 +35,9 @@ To create an API key:
    System** menu. Repeat this step if
    you need to add multiple APIs to the key.
 
-   <Alert severity="info">
-   Certain permissions, generally those with the `legacy` prefix, aren't available for group-owned API keys. To add those permissions and send requests to the associated endpoints, you must use a user-owned API key.
-   </Alert>
-
 1. If applicable, select the experience that you want to access with the API key.
 
-   For user-owned API keys, you have the option to disable **Restrict by Experience**. When disabled, your API key has access to all of your user-owned experiences and any group-owned experiences that you have the correct permissions for, including experiences created in the future.
+   You can optionally disable **Restrict by Experience**. When disabled, your API key has access to all of your user-owned experiences and any group-owned experiences where you have the appropriate permissions, including any experiences you create in the future.
 
 1. From the **Select Operations** dropdown, select the operations that you
    want to enable for the API key.
@@ -76,39 +71,35 @@ To create an API key:
 your application. Never share it with untrusted parties, such as anyone outside
 of your development team. </Alert>
 
-## Group-owned API key permissions
+## Create API Keys for Managing Group-owned Resources
 
-Group owners can manage group-owned API key permissions for group members to
-have different levels of control of API keys based on their [roles and
-permissions](../../projects/groups.md#roles-and-permissions) within the group.
-There are also situations that automatically revoke API key management
-permissions for group members.
+An API key grants access to all resources the user account has permissions for, including personal experiences outside of the group. If you use your personal account's API key for group automation and that key is compromised, other resources you may have access to are also at risk.
 
-### Permissions granting
+To prevent this, we **strongly recommend** creating a separate API key on a dedicated alternate account with access strictly limited to the target group. This new account dedicated for automation purposes should only be given access to the target group and granted the minimal permissions required for its task.
 
-As a group owner, you can grant the **Manage all API keys** permission
-to roles within your group. Members with this permission have all the
-permissions that a group owner has for API keys, including the ability to
-create, view, edit, revoke, and audit all of the group's API keys.
+1. Create a new, dedicated Roblox account for your automation.
+1. Invite the new account to your group.
+1. Assign it a group role with the minimum permissions required for its task (e.g., only "Create and edit group experiences").
+1. Log into the new account and follow the steps in the section above to [create an API key](#create-api-keys).
+1. Use the generated API key for group resource automation.
 
-You can also grant the **Manage own API keys** permission to roles within your
-group. This allows members to only create and view keys owned by them rather
-than being able to manage others' keys.
+## Best Practices For Managing API Keys
 
-### Permissions invalidation
+API keys are sensitive credentials that should be kept secure to prevent unauthorized access to your data. Here are some best practices for managing API keys.
 
-There are multiple situations that automatically revoke a group member's
-permission to manage group API keys:
+- **Create separate keys for each application**: Create separate API keys for each application or use case to isolate access and reduce the impact if a key is compromised.
 
-- The member is assigned to a different role that doesn't have the permission.
-  This can happen during a transfer of the group ownership.
-- The member's permission is disabled on their currently assigned role.
-- The member leaves or is removed from the group.
-- The member's account is under moderation by Roblox.
+- **Select the minimum permissions needed**: When configuring scopes, select the minimum permissions necessary for the key's intended use. For those scopes that allow you to restrict scope access by experience, limit access to only the specific experiences that are needed.
 
-In any of these cases, API keys generated by that user are given the **Revoked**
-[status](#api-key-status). To use these keys again, the group owner or a member
-with the **Manage all API keys** permission must regenerate the keys.
+- **Use IP Address restrictions**: Restrict API key access to specific IP addresses or CIDR ranges to prevent unauthorized usage from unknown locations. Do not use IP Address restrictions when using your API key in Roblox places to ensure your key can be used with Roblox servers.
+
+- **Set expiration dates**: For short-term use cases, configure expiration dates to automatically disable keys after a set period, reducing the risk if a key is compromised. Setting expiration dates is not recommended for longer-term use cases unless you have a key rotation process in place, as your automation may unexpectedly fail when the key expires.
+
+- **Use dedicated alternate accounts for group resource management**: Use a dedicated account with minimal permissions for group resource management, as detailed in the [Create API Keys for Managing Group-owned Resources](#create-api-keys-for-managing-group-owned-resources) section.
+
+- **Store API keys securely**: Never store API keys directly in your source code, version control systems, or scripts where they could be exposed. Prefer using a secrets management system for storing and controlling access to your keys. In Roblox places, you should use [Secrets Store](cloud-services/secrets).
+
+- **Do not share API Keys through public channels**: Never share API keys through public communication channels, forums, or social media. Only share keys through secure, private channels with trusted team members. Limit access to who you share your keys with to minimize the blast radius if a key is compromised.
 
 ## CIDR format
 

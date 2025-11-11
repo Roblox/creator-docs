@@ -43,7 +43,10 @@ To create your license listing:
     3. Under **Experience eligibility**, select the criteria you want experiences to meet in order to apply to use the license. Creators whose experiences don't meet these requirements aren't eligible to apply to use your IP. To allow all creators to apply, leave the default values.
         - For **Minimum average last 7 daily active users (DAU)**, choose between no requirement, greater than 1,000 DAU, or grater than 25,000 DAU.
         - For **Maximum maturity rating**, choose between minimal, mild, moderate, and restricted. See [Maturity labels](../production/promotion/content-maturity.md#questionnaire-categories) for more information about different maturity ratings.
-    4. Under **Guidelines and restrictions**, upload a file with all guidelines and restrictions you want creators to follow when using your IP to build experiences. This file must describe what creators are and aren't allowed to do with your IP.
+    4. Under **Guidelines and restrictions**:
+        1. Enter the scope of your IP license. Include general background about the IP and clarify if any parts of the IP can or cannot be referenced by creators in their experience.
+        2. Under **Content standards**, set the rules that creators must follow when using your IP.
+        3. (Optional) Under **Brand guidelines**, upload a file to provide creators with creative direction.
     5. Under **Privacy**, select one of the following:
         - **Public** to make the license listing public and visible to all creators. This option also allows all eligible creators to apply to use the license.
         - **Private** to make the license only available to creators that you reach out to directly and that have experiences that match your IP.
@@ -60,7 +63,7 @@ After you have created a license listing, you can go to **My licenses** ⟩ **[I
 - To add new licenses to the listing, click **Add license**.
 
 <Alert severity="warning">
-  You **cannot** change the revenue share rate you set after you create a license listing.
+  Once your license has a pending, inquired, or active agreement, you **cannot** change the revenue share rate.
 </Alert>
 
 <Alert severity="info">

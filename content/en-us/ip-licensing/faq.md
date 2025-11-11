@@ -58,7 +58,7 @@ description: Frequently asked questions about IP licensing tools.
 
   <dt>**How do I communicate with IP holders I have an agreement with?**</dt>
   <dd><p />
-    IP holders can ask Roblox to contact you if they want to request any changes to a licensed experience. You'll receive a notification from Roblox to ensure that you can make any necessary changes to your experience. 
+    IP holders can ask Roblox to contact you if they want to request any changes to a licensed experience. You'll receive a notification from Roblox to ensure that you can make any necessary changes to your experience.
   <p /></dd><br />
 
   <dt>**How will I be notified if a license changes?**</dt>
@@ -78,7 +78,7 @@ description: Frequently asked questions about IP licensing tools.
 
   <dt>**What protections do I have as a creator from an IP owner who is trying to inaccurately claim IP in my experience?**</dt>
   <dd><p />
-    If you believe an IP owner has inaccurately offered a license for your experience, you have 7 days to dispute the offer. When you dispute an offer, you can select from a set of reasons that tell the IP owner why the license isn't needed.
+    If you believe an IP owner has inaccurately offered a license for your experience, you have 14 days to dispute the offer. When you dispute an offer, you can select from a set of reasons that tell the IP owner why the license isn't needed.
   <p /></dd><br />
 
   <dt>**Can an IP license agreement ever be cancelled?**</dt>
