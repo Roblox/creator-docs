@@ -41,7 +41,7 @@ Before implementing rewarded video ads, consider where inside your experience yo
 
 To implement rewarded video ads:
 
-1. Make sure you meet the [eligibility requirements](#eligibility-requirements), including being 18+ years of age, having an ID-verified Roblox account, and have a public experience with at least 2 thousand unique visitors per month.
+1. Make sure you meet the [eligibility requirements](#eligibility-requirements), including being 13+ years of age, having an ID-verified Roblox account, and have a public experience with at least 2 thousand unique visitors per month.
 2. [Enable rewarded video ads in Studio](#video-ad-setup).
 3. Choose the item you want to reward users with for watching the ad. You can select an existing developer product or create a brand new one.
 4. Create [client-side](#client-side-implementation) and [server-side](#server-side-implementation) scripts. The client-side script checks if a video ad is available to be played to the user, while the server-side script turns a developer product into a reward, shows the user the video ad, and grants the user their reward.

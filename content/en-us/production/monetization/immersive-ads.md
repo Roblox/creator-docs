@@ -85,7 +85,7 @@ Experiences must meet the following criteria to be eligible to be an ad publishe
 - Your account must have **2-factor authentication (2FA)** enabled.
   - For group-owned experiences, this requirement applies to the owner of the group.
   - If a publisher disables 2FA, they will lose eligibility.
-- You must be **18+ years of age**.
+- You must be **13+ years of age**.
   - For group-owned experiences, this requirement applies to the owner of the group.
 - Your account must be [ID-verified](../publishing/account-verification.md).
   - For group-owned experiences, this requirement applies to the owner of the group.
