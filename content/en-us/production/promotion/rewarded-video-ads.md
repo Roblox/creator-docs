@@ -3,6 +3,10 @@ title: Rewarded video ads
 description: Immersive ads allow you insert ad units into your experience that programmatically serve ad content.
 ---
 
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/-HYByqvW2uc" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br /><br />
+
 With rewarded video ads, you can implement a reward mechanism inside your experience to incentivize users to watch click-to-play video ads. A rewarded video is a full-screen ad that lasts anywhere from 6 to 30 seconds and that rewards the user with an item after they have finished watching it.
 
 Rewarded video ads let you:
