@@ -101,8 +101,8 @@ methods:
       <tr>
       <td><code>IsContentSharingAllowed</code></td>
       <td>Boolean</td>
-      <td>Any experience that allows users to share content off platform.</td>
-      <td>When <code>true</code>, the player is allowed to share content using APIs which open external sharing flows such as <code>Class.CaptureService:PromptShareCapture()|PromptShareCapture()</code>.</td>
+      <td>Any feature in the experience that enables users to create content (e.g. text, images, video, audio) that other users can see in the experience or allows user to share content within experiences.</td>
+      <td>When <code>true</code>, the player can use features related to sharing UGC within an experience, such as uploading a screen capture, sharing a video, or posting an image to a content feed that other users can see.</td>
       </tr>
       <tr>
       <td><code>IsEligibleToPurchaseCommerceProduct</code></td>
@@ -134,7 +134,7 @@ methods:
       <td>Any experience that is available in China.</td>
       <td>When <code>true</code>, an experience should enforce compliance changes. See <a href="https://devforum.roblox.com/t/new-programs-available-roblox-china-licensed-to-operate/1023361">this forum post</a> for more information.</td>
       </tr>
-       	</tbody>
+      </tbody>
       </table>
 
       ##### Exceptions

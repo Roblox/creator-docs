@@ -5,8 +5,9 @@
 name: Texture
 type: class
 memory_category: GraphicsTexture
-summary: Applies a repeating image texture to the face of a parent `Class.BasePart`.
-description: |-
+summary: |
+  Applies a repeating image texture to the face of a parent `Class.BasePart`.
+description: |
   A `Class.Texture` object applies a repeating image texture to the face of a
   parent `Class.BasePart`. The affected face is dependent on the
   `Class.Texture.Face|Face` property. Unlike `Class.Decal|Decals`, the texture
@@ -16,15 +17,18 @@ description: |-
   `Class.Texture.StudsPerTileV|StudsPerTileV` properties.
 
   The applied image texture is determined by its
-  `Class.Texture.ColorMapContent|ColorMapContent` property. For details on how to
-  upload images, see [asset
-  management](../../../projects/assets/index.md#asset-management).
+  `Class.Texture.ColorMapContent|ColorMapContent` property. For details on how
+  to upload images, see
+  [asset management](../../../projects/assets/index.md#asset-management).
 
-  For more information, review [textures and decals](../../../parts/textures-decals.md). See also:
+  For more information, review
+  [textures and decals](../../../parts/textures-decals.md). See also:
 
   - `Class.Decal` for non-repeating surface images.
-  - `Class.MeshPart.TextureContent` to apply an image texture to a `Class.MeshPart`.
-  - `Class.SurfaceGui` to apply an `Class.ImageLabel` or `Class.ImageButton` to an in-experience 3D object.
+  - `Class.MeshPart.TextureContent` to apply an image texture to a
+    `Class.MeshPart`.
+  - `Class.SurfaceGui` to apply an `Class.ImageLabel` or `Class.ImageButton` to
+    an in-experience 3D object.
 code_samples: []
 inherits:
   - Decal
@@ -33,10 +37,10 @@ tags: []
 deprecation_message: ''
 properties:
   - name: Texture.OffsetStudsU
-    summary: |-
+    summary: |
       Determines the offset in studs of the rendered texture's horizontal
       coordinate.
-    description: |-
+    description: |
       This property determines how far the rendered texture is offset on the
       horizontal axis, in studs, as visualized
       [here](../../../parts/textures-decals.md#offset-textures).
@@ -57,12 +61,12 @@ properties:
     capabilities:
       - Basic
   - name: Texture.OffsetStudsV
-    summary: |-
+    summary: |
       Determines the offset in studs of the rendered texture's vertical
       coordinate.
-    description: |-
-      This property determines how far the rendered texture is offset on the vertical
-      axis, in studs, as visualized
+    description: |
+      This property determines how far the rendered texture is offset on the
+      vertical axis, in studs, as visualized
       [here](../../../parts/textures-decals.md#offset-textures).
 
       See also `Class.Texture.OffsetStudsU|OffsetStudsU`.
@@ -81,10 +85,10 @@ properties:
     capabilities:
       - Basic
   - name: Texture.StudsPerTileU
-    summary: |-
+    summary: |
       Sets the horizontal size, in studs, of the tiled image applied by the
       `Class.Texture`.
-    description: |-
+    description: |
       Sets the horizontal size, in studs, of the tiled image applied by the
       `Class.Texture`.
 
@@ -115,10 +119,10 @@ properties:
     capabilities:
       - Basic
   - name: Texture.StudsPerTileV
-    summary: |-
+    summary: |
       Sets the vertical size, in studs, of the tiled image applied by the
       `Class.Texture`.
-    description: |-
+    description: |
       Sets the vertical size, in studs, of the tiled image applied by the
       `Class.Texture`.
 

@@ -17,6 +17,7 @@ inherits:
 descendants:
   - AudioPages
   - BanHistoryPages
+  - CapturesPages
   - CatalogPages
   - DataStoreKeyPages
   - DataStoreListingPages

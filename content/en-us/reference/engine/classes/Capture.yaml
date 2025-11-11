@@ -5,7 +5,9 @@
 name: Capture
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  A class which defines a piece of content, such as a screnshot or video, taken
+  in-experience.
 description: ''
 code_samples: []
 inherits:
@@ -17,7 +19,115 @@ tags:
   - NotCreatable
   - NotReplicated
 deprecation_message: ''
-properties: []
+properties:
+  - name: Capture.CaptureTime
+    summary: ''
+    description: ''
+    code_samples: []
+    type: DateTime
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+  - name: Capture.SourceUniverseId
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int64
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+  - name: Capture.SourcePlaceId
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int64
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+  - name: Capture.CaptureType
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CaptureType
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+  - name: Capture.LocalId
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+  - name: Capture.FilePathString
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
 methods: []
 events: []
 callbacks: []

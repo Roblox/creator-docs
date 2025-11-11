@@ -5,8 +5,10 @@
 name: ScreenshotCapture
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A child class of `Class.Capture` for screenshots.
+description: |
+  A child class of `Class.Capture` for screenshots.
 code_samples: []
 inherits:
   - Capture

@@ -682,24 +682,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-  - name: StarterPlayer.RagdollDeath
-    summary: ''
-    description: ''
-    code_samples: []
-    type: boolean
-    tags:
-      - NotBrowsable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Character
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Players
   - name: StarterPlayer.UserEmotesEnabled
     summary: |
       Determines if user-owned emotes are loaded when loading avatars.

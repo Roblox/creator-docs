@@ -9,22 +9,23 @@ summary: |
   GroupService is a service that allows developers to fetch information about a
   Roblox group from within a game.
 description: |
-  GroupService is a service that allows developers to fetch information about a
-  Roblox group from within a game.
+  `GroupService` is a service that allows developers to fetch information about
+  a Roblox group from within a game.
 
-  Basic information on the group, including it's name, description, owner, roles
+  Basic information on the group, including its name, description, owner, roles
   and emblem can be fetched using `Class.GroupService:GetGroupInfoAsync()`.
   Lists of a group's allies and enemies can be fetched using
   `Class.GroupService:GetAlliesAsync()` and
   `Class.GroupService:GetEnemiesAsync()`.
 
-  GroupService can also be used to fetch a list of group's a player is a member
-  of, using `Class.GroupService:GetGroupsAsync()`. Note, developers wishing to
-  verify if a player is in a group should use the `Class.Player:IsInGroup()`
-  function rather than `Class.GroupService:GetGroupsAsync()`.
+  `GroupService` can also be used to fetch a list of groups a player is a member
+  of, using `Class.GroupService:GetGroupsAsync()`. If you wish to verify if a
+  player is in a group, use the `Class.Player:IsInGroup()` method rather than
+  `Class.GroupService:GetGroupsAsync()`.
 
   The service has a number of useful applications, such as detecting if a player
-  is an ally or enemy upon joining the game.
+  is an ally or enemy upon joining the game, or prompting a player to join a
+  group using the `Class.GroupService:PromptJoinAsync()` method.
 code_samples:
   - Group-Ally-Enemy-Checker
 inherits:

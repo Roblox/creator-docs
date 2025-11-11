@@ -11,37 +11,44 @@ tags: []
 deprecation_message: ''
 items:
   - name: AddReaction
-    summary: ''
+    summary: |
+      The user added a reaction to the item, such as a "like".
     value: 0
     tags: []
     deprecation_message: ''
   - name: RemoveReaction
-    summary: ''
+    summary: |
+      The user removed a reaction from the item.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Share
-    summary: ''
+    summary: |
+      The user shared the item.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Report
-    summary: ''
+    summary: |
+      The user created an abuse report of the item.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Comment
-    summary: ''
+    summary: |
+      The user commented on the item.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Play
-    summary: ''
+    summary: |
+      The user joined an experience through the item.
     value: 5
     tags: []
     deprecation_message: ''
   - name: Purchase
-    summary: ''
+    summary: |
+      The user made a purchase from the item.
     value: 6
     tags: []
     deprecation_message: ''

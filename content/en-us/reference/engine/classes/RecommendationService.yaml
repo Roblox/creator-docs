@@ -5,8 +5,19 @@
 name: RecommendationService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A service that provides an interface for developers to manage and display
+  personalized content recommendations.
+description: |
+  **RecommendationService** provides an interface for developers to manage and
+  display personalized content recommendations. It supports creating,
+  retrieving, updating, and deleting recommendation items, as well as generating
+  lists of recommended content for users. Additionally, it includes
+  functionality for logging user interactions, such as views and actions, to
+  help refine and improve recommendation quality.
+
+  Note: `RecommendationService` is currently available for free, but its pricing
+  model might change in the future.
 code_samples: []
 inherits:
   - Instance
@@ -19,13 +30,69 @@ properties: []
 methods:
   - name: RecommendationService:GenerateItemListAsync
     summary: ''
-    description: ''
-    code_samples: []
+    description: |
+      This function returns a paginated list of recommended items based on a
+      given request. The request can specify criteria such as configuration
+      name, location, and page size to tailor the recommendations. It returns a
+      `Class.RecommendationPages` object that can be used to iterate through the
+      list of items.
+
+      The `ConfigName` parameter determines how the recommendation engine ranks
+      and returns items. For example, you can have configurations that optimize
+      for views, likes, or purchases. For the ranking to be effective, you must
+      ensure that you are logging the corresponding user interactions using
+      `Class.RecommendationService.LogImpressionEvent|LogImpressionEvent` and
+      `Class.RecommendationService.LogActionEvent|LogActionEvent`.
+
+      Supported `ConfigName` are:
+
+      - `MaximizeTimespent`: Optimizes recommendations to prioritize content
+        that engages users for longer periods.
+      - `MaximizeReactions`: Optimizes recommendations to highlight content that
+        generates the most user reactions, such as likes and favorites.
+      - `MaximizeEngagement`: Optimizes recommendations through a balanced
+        approach that considers multiple engagement signals, including quality
+        views and reactions. This config is designed to highlight content that
+        performs well across different engagement areas.
+      - `PlayerSpecific`: Returns public items created by the player specified
+        in the request and sorted by the most recent creation time. To use this
+        config, you must pass the `UserId` in the `CustomContexts`.
+      - `RecentlyAdded`: Returns items sorted by how recent they are, and
+        displays the most recently added public content first.
+      - `MaximizeJoins`: (Coming soon) Optimizes recommendations to prioritize
+        game joins. This config is currently only available for Roblox Moments.
+      - `PlayerOwnedItems`: Displays the user's own creations sorted by creation
+        time. This config requires user authentication because it displays
+        private items. This config is only available on the **client**.
+
+      This function can be called from both the **server** and the **client**.
+      When called from the server, you must pass the `UserId` in the
+      `CustomContexts`.
+    code_samples:
+      - GenerateItemListAsync-example
     parameters:
       - name: generateRecommendationItemListRequest
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          A dictionary containing the following fields:
+
+          - `ConfigName` &mdash; A unique ID for the specific configuration.
+            This determines how the candidates are ranked.
+          - `LocationId` &mdash; A developer-defined string that specifies the
+            location where the recommendation is used, such as "For_you" or
+            "Lobby." This parameter will not affect the items returned, and can
+            help you track the performance of multiple recommendation features
+            within your experience. Recommendation metrics for each individual
+            location will be displayed in the Creator Hub. `LocationId` **must**
+            be a string.
+          - `PageSize` &mdash; The number of items returned for each page.
+          - `BoostCustomTags` &mdash; A list of string tags. Any item with this
+            tag will be boosted in ranking. Note: only supports boosting one tag
+            now.
+          - `CustomContexts` &mdash; A table of key-value pairs used to pass in
+            additional context data for ranking. For example, `UserId` for a
+            Server script.
     returns:
       - type: RecommendationPages
         summary: ''
@@ -35,27 +102,100 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: RecommendationService:GetRecommendationItemAsync
+    summary: ''
+    description: |
+      This function returns a single recommendation item by its `ItemId`. This
+      is useful for getting the details of a specific item without having to
+      fetch a whole list.
+
+      This function can be called only from the **server**.
+    code_samples:
+      - GetRecommendationItemAsync-example
+    parameters:
+      - name: itemId
+        type: string
+        default:
+        summary: |
+          The ID of the item to retrieve.
+    returns:
+      - type: Dictionary
+        summary: |
+          A dictionary representing the recommendation item with the following
+          fields:
+
+          - `ItemId` &mdash; The unique ID for the item.
+          - `ReferenceId` &mdash; The developer-provided ID for the item.
+          - `TracingId` &mdash; An ID for tracking recommendation sessions. This
+            will be empty when fetching a single item directly.
+          - `Creator` &mdash; A table containing the `CreatorId` and
+            `CreatorType`.
+          - `Attributes` &mdash; A list of content attributes associated with
+            the item.
+          - `CustomTags` &mdash; A list of custom string tags.
+          - `Visibility` &mdash; An enum of type
+            `Enum.RecommendationItemVisibility|RecommendationItemVisibility`.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: RecommendationService:LogActionEvent
     summary: ''
-    description: ''
-    code_samples: []
+    description: |
+      This function logs a user action on a recommended item, such as a "like,"
+      "share," or "purchase." It requires the `itemId` of the item and a
+      `tracingId` from the GenerateItemListAsync response to link the action to
+      a specific recommendation context. Additional details about the action can
+      be provided in the `actionEventDetails` dictionary.
+
+      Logging actions is essential for recommendation configurations that rank
+      items based on user engagement such as number of likes or purchases.
+
+      This function can only be called from the **client**.
+
+      **Note:** Only `LogActionEvent` calls in production actually log actions.
+      Calling this function in Studio doesn't have any effect; you can call it
+      as many times as you want when testing.
+    code_samples:
+      - LogActionEvent-example
     parameters:
       - name: actionType
         type: RecommendationActionType
         default:
-        summary: ''
+        summary: |
+          The enum for the type of action.
       - name: itemId
         type: string
         default:
-        summary: ''
+        summary: |
+          The item ID returned from registration and
+          `Class.RecommendationService.GenerateItemListAsync|GenerateItemListAsync`.
       - name: tracingId
         type: string
         default:
-        summary: ''
+        summary: |
+          The tracing ID returned from the
+          `Class.RecommendationService.GenerateItemListAsync|GenerateItemListAsync`
+          response. Each item has a `TracingId`.
       - name: actionEventDetails
         type: Dictionary
         default: nil
-        summary: ''
+        summary: |
+          A dictionary containing the following fields:
+
+          - `Weight` &mdash; A number representing the weight of the action.
+            Default is 1.
+          - `DestinationPlaceId` &mdash; The ID of the place the user was sent
+            to after the action. Used for
+            `Enum.RecommendationActionType.Play|Play`.
+          - `CommentText` &mdash; Any text associated with the action, such as a
+            comment. Used for `Enum.RecommendationActionType.Comment|Comment`.
+          - `ReactionType` &mdash; A string describing the type of reaction, for
+            example, "like" or "dislike". Used for
+            `Enum.RecommendationActionType.AddReaction|AddReaction` or
+            `Enum.RecommendationActionType.RemoveReaction|RemoveReaction`.
     returns:
       - type: ()
         summary: ''
@@ -66,25 +206,56 @@ methods:
     capabilities: []
   - name: RecommendationService:LogImpressionEvent
     summary: ''
-    description: ''
-    code_samples: []
+    description: |
+      This function logs an impression event, such as a user viewing a
+      recommended item. It requires the `itemId` and a `tracingId` to associate
+      the impression with the recommendation context. Details like view duration
+      and position can be passed in the `impressionEventDetails` dictionary to
+      provide more context for the recommendation engine.
+
+      Logging impressions, especially `Duration`, is critical for recommendation
+      configurations that rank items based on view time.
+
+      This function can only be called from the **client**.
+
+      **Note:** Only `LogImpressionEvent` calls in production actually log
+      impressions. Calling this function in Studio doesn't have any effect; you
+      can call it as many times as you want when testing.
+    code_samples:
+      - LogImpressionEvent-example
     parameters:
       - name: impressionType
         type: RecommendationImpressionType
         default:
-        summary: ''
+        summary: |
+          The enum for the type of the impression.
       - name: itemId
         type: string
         default:
-        summary: ''
+        summary: |
+          The item ID returned from registration and
+          `Class.RecommendationService.GenerateItemListAsync|GenerateItemListAsync`.
       - name: tracingId
         type: string
         default:
-        summary: ''
+        summary: |
+          The tracing ID returned from the
+          `Class.RecommendationService.GenerateItemListAsync|GenerateItemListAsync`
+          response. Each item has a `TracingId`.
       - name: impressionEventDetails
         type: Dictionary
         default: nil
-        summary: ''
+        summary: |
+          A dictionary containing the following fields:
+
+          - `Duration` &mdash; The duration of the impression in seconds.
+          - `Weight` &mdash; A number representing the weight of the impression.
+            Default is 1.
+          - `ItemPosition` &mdash; The position of the item in the
+            recommendation list.
+          - `DepartureIntent` &mdash; The `Enum.RecommendationDepartureIntent`
+            indicating the user's intent when leaving a view. For example,
+            `Positive` if the view is considered good.
     returns:
       - type: ()
         summary: ''
@@ -95,20 +266,73 @@ methods:
     capabilities: []
   - name: RecommendationService:RegisterItemAsync
     summary: ''
-    description: ''
-    code_samples: []
+    description: |
+      This function registers a new item to be included in recommendations. It
+      requires a `player` object and a `registerRecommendationItemsRequest`
+      dictionary containing details about the item, such as its content type,
+      reference ID, and custom tags. It returns a dictionary with the `ItemId`
+      and the `ReferenceId` of the newly registered item.
+
+      The `ItemId` is a unique ID returned by the `RecommendationService`. All
+      functions in the `RecommendationService` use the `ItemId` as input and
+      output.
+
+      The `ReferenceId` is a developer-provided identifier for an item. To make
+      sure that this reference ID is unique, we recommend that you use a UUID.
+      You can use this reference ID as a key to store rendering-specific
+      metadata in a data store.
+
+      When you register an item, you should only provide information that is
+      relevant for ranking and recommendations. All other data needed for
+      rendering should be stored separately in, for example, a data store. This
+      approach decouples the recommendation logic from the rendering process,
+      and results in a system that is more modular and easier to maintain.
+
+      `Attributes` is a list of content attributes associated with the item.
+      Each attribute in the list can contain the following fields:
+
+      - `AssetId` &mdash; The ID of an asset, such as an image or video.
+      - `Text` &mdash; A short text string, like a title.
+      - `Description` &mdash; A longer text description for the attribute.
+      - `SeekStartTime` / `SeekEndTime` &mdash; The start and end times for
+        seeking within video content.
+      - `TrimStartTime` / `TrimEndTime` &mdash; The start and end times for
+        trimming video content.
+
+      This function can only be called from the **server**.
+    code_samples:
+      - RegisterItemAsync-example
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The player who created the item.
       - name: registerRecommendationItemsRequest
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          A dictionary containing the following fields:
+
+          - `ContentType` &mdash; The `Enum.RecommendationItemContentType`
+            specifying the type of content. Type is defined in a generic way.
+            For example, you can use `Static` for images, `Dynamic` for videos,
+            and `Interactive` for 3D models that support interaction.
+          - `ReferenceId` &mdash; The developer-defined string that uniquely
+            identifies the item.
+          - `Duration` &mdash; The duration of the content in seconds.
+          - `Attributes` &mdash; The table of attributes for the item, such as
+            `AssetId` or `Description`.
+          - `CustomTags` &mdash; The list of string tags for filtering and
+            boosting.
+          - `Visibility` &mdash; The
+            `Enum.RecommendationItemVisibility|RecommendationItemVisibility`
+            enum that controls the item's visibility, such as `Public` or
+            `Private`.
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          A table with only two fields: `ItemId` and `ReferenceId`.
     tags:
       - Yields
     deprecation_message: ''
@@ -117,16 +341,29 @@ methods:
     capabilities: []
   - name: RecommendationService:RemoveItemAsync
     summary: ''
-    description: ''
-    code_samples: []
+    description: |
+      This function removes an item from the recommendation system. It takes the
+      `itemId` of the item to be deleted as a parameter.
+
+      This function can be called from both the **server** and the **client**,
+      with the following limitations:
+
+      - When called from the server, it can only remove items registered under
+        the same `universeId`.
+      - When called from the client, it can only remove items registered by the
+        current `player`.
+    code_samples:
+      - RemoveItemAsync-example
     parameters:
       - name: itemId
         type: string
         default:
-        summary: ''
+        summary: |
+          The itemId to remove.
     returns:
       - type: ()
-        summary: ''
+        summary: |
+          No return value.
     tags:
       - Yields
     deprecation_message: ''
@@ -135,16 +372,47 @@ methods:
     capabilities: []
   - name: RecommendationService:UpdateItemAsync
     summary: ''
-    description: ''
-    code_samples: []
+    description: |
+      This function updates the attributes of an existing recommendation item.
+      It takes an `updateRecommendationItemRequest` dictionary containing the
+      `itemId` and the fields to be updated. Any fields not included in the
+      request will remain unchanged.
+
+      Items with their
+      `Enum.RecommendationItemVisibility|RecommendationItemVisibility` set to
+      `Private` are not recommended to other users, but they can still be
+      returned when a user requests their own creations by using the
+      `ConfigName` of `PlayerOwnedItems`.
+
+      In Roblox Moments, moderated items are set to `Private`. While this
+      prevents other users from seeing them, the item creator can still see
+      these moderated items and check their moderation status in their **My
+      Moments** tab.
+
+      This function can only be called from the **server**.
+    code_samples:
+      - UpdateItemAsync-example
     parameters:
       - name: updateRecommendationItemRequest
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          A dictionary containing the following fields:
+
+          - `ItemId` &mdash; The ID of the item to update.
+          - `ReferenceId` &mdash; The new developer-defined string to identify
+            the item.
+          - `Creator` &mdash; The new creator for the item. Creator is a table
+            containing two fields: `CreatorId: number` and
+            `CreatorType: Enum.CreatorType`.
+          - `Duration` &mdash; The new duration for the content in seconds.
+          - `Visibility` &mdash; The new visibility setting for the item.
+          - `Attributes` &mdash; The new table of attributes for the item.
+          - `CustomTags` &mdash; The new list of string tags.
     returns:
       - type: ()
-        summary: ''
+        summary: |
+          No return value.
     tags:
       - Yields
     deprecation_message: ''

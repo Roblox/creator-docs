@@ -2,23 +2,18 @@
 # To submit a bug report on the content, see
 # https://devforum.roblox.com/c/bug-reports/documentation-issues/72
 
-name: RecommendationImpressionType
+name: CaptureGalleryPermission
 type: enum
 summary: ''
-description: ''
+description: |
+  Used to specify the scope of permissions for accessing the user's capture
+  gallery.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
-  - name: View
-    summary: |
-      A complete view of the item.
+  - name: ReadAndUpload
+    summary: ''
     value: 0
-    tags: []
-    deprecation_message: ''
-  - name: NotViewable
-    summary: |
-      The item has failed to render.
-    value: 1
     tags: []
     deprecation_message: ''

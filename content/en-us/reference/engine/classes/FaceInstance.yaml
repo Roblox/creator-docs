@@ -5,8 +5,10 @@
 name: FaceInstance
 type: class
 memory_category: Instances
-summary: An abstract class from which the `Class.Decal` and `Class.Texture` classes inherit.
-description: |-
+summary: |
+  An abstract class from which the `Class.Decal` and `Class.Texture` classes
+  inherit.
+description: |
   `Class.FaceInstance` is an abstract class from which the `Class.Decal` and
   `Class.Texture` classes inherit.
 code_samples: []
@@ -20,8 +22,10 @@ tags:
 deprecation_message: ''
 properties:
   - name: FaceInstance.Face
-    summary: Sets which face of the parent `Class.BasePart` the object appears on.
-    description: Sets which face of the parent `Class.BasePart` the object appears on.
+    summary: |
+      Sets which face of the parent `Class.BasePart` the object appears on.
+    description: |
+      Sets which face of the parent `Class.BasePart` the object appears on.
     code_samples: []
     type: NormalId
     tags: []

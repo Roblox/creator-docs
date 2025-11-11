@@ -1394,15 +1394,18 @@ methods:
       This method returns the player's rank in the group as an integer between
       `0` and `255`, where `0` is a non-member and `255` is the group's owner.
 
-      Using this in a `Class.Script`, as opposed to a `Class.LocalScript`, will
-      not get you the most up-to-date information. If a player leaves a group
-      while they are in the experience, `GetRankInGroup()` will still think
-      they're in that group until they leave. However, this does not happen when
-      used with a `Class.LocalScript` because the method caches results, so
-      multiple calls of `GetRankInGroup()` on the same player with the same
-      group ID will yield the same result as when the method was first called
-      with the given group ID. The caching behavior is on a per-peer basis: a
-      server does not share the same cache as a client.
+      This call may not yield the most up-to-date information. If a player
+      leaves a group while they are in the experience, `GetRankInGroup()` will
+      still think they're in that group until they leave. However, this does not
+      happen when used with a `Class.LocalScript` because the method caches
+      results, so multiple calls of `GetRankInGroup()` on the same player with
+      the same group ID will yield the same result as when the method was first
+      called with the given group ID. The caching behavior is on a per-peer
+      basis: a server does not share the same cache as a client.
+
+      When a player joins a group in-experience due to a call to
+      `Class.GroupService:PromptJoinAsync()`, any cached value for that player
+      will be cleared on the client where the prompt was shown.
     code_samples:
       - Player-GetRankInGroup1
     parameters:
@@ -1430,15 +1433,18 @@ methods:
       This method returns the player's role in the group as a string, or `Guest`
       if the player isn't part of the group.
 
-      Using this in a `Class.Script`, as opposed to a `Class.LocalScript`, will
-      not get you the most up-to-date information. If a player leaves a group
-      while they are in the experience, `GetRoleInGroup()` will still think
-      they're in that group until they leave. However, this does not happen when
-      used with a `Class.LocalScript` because the method caches results, so
-      multiple calls of `GetRoleInGroup()` on the same player with the same
-      group ID will yield the same result as when the method was first called
-      with the given group ID. The caching behavior is on a per-peer basis: a
-      server does not share the same cache as a client.
+      This call may not yield the most up-to-date information. If a player
+      leaves a group while they are in the experience, `GetRoleInGroup()` will
+      still think they're in that group until they leave. However, this does not
+      happen when used with a `Class.LocalScript` because the method caches
+      results, so multiple calls of `GetRoleInGroup()` on the same player with
+      the same group ID will yield the same result as when the method was first
+      called with the given group ID. The caching behavior is on a per-peer
+      basis: a server does not share the same cache as a client.
+
+      When a player joins a group in-experience due to a call to
+      `Class.GroupService:PromptJoinAsync()`, any cached value for that player
+      will be cleared on the client where the prompt was shown.
     code_samples:
       - Player-GetRoleInGroup1
     parameters:
@@ -1548,15 +1554,18 @@ methods:
       This method sends a request to Roblox asking whether a player is a member
       of a group, given the ID of that group.
 
-      Using this in a `Class.Script`, as opposed to a `Class.LocalScript`, will
-      not get you the most up-to-date information. If a player leaves a group
-      while they are in the experience, `IsInGroup()` will still think they're
-      in that group until they leave. However, this does not happen when used
-      with a `Class.LocalScript` because the method caches results, so multiple
-      calls of `IsInGroup()` on the same player with the same group ID will
-      yield the same result as when the method was first called with the given
-      group ID. The caching behavior is on a per-peer basis: a server does not
-      share the same cache as a client.
+      This call may not yield the most up-to-date information. If a player
+      leaves a group while they are in the experience, `IsInGroup()` will still
+      think they're in that group until they leave. However, this does not
+      happen when used with a `Class.LocalScript` because the method caches
+      results, so multiple calls of `IsInGroup()` on the same player with the
+      same group ID will yield the same result as when the method was first
+      called with the given group ID. The caching behavior is on a per-peer
+      basis: a server does not share the same cache as a client.
+
+      When a player joins a group in-experience due to a call to
+      `Class.GroupService:PromptJoinAsync()`, any cached value for that player
+      will be cleared on the client where the prompt was shown.
     code_samples: []
     parameters:
       - name: groupId

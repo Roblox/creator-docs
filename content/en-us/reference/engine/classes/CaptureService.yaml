@@ -104,9 +104,8 @@ methods:
       The `launchData` will be available in the `launchData` field for users who
       join through the invite link.
 
-      To avoid an error when calling this method, first call
-      `Class.PolicyService:GetPolicyInfoForPlayerAsync()` and check that
-      `IsContentSharingAllowed` is true in the returned dictionary.
+      For users or devices who are not eligible to use share sheets, this method
+      prompts them to download the capture instead.
     code_samples: []
     parameters:
       - name: captureContent
@@ -226,6 +225,92 @@ methods:
       - type: ()
         summary: ''
     tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: CaptureService:PromptCaptureGalleryPermissionAsync
+    summary: ''
+    description: |
+      This client-side function prompts a user for permission to access their
+      local captures. Once they have accepted or rejected the prompt, it returns
+      a boolean representing their choice. This function is a necessary
+      prerequisite to `ReadCapturesFromGalleryAsync` and `UploadCaptureAsync`,
+      as both of these require gallery permissions to work.
+    code_samples:
+      - PromptCaptureGalleryPermissionAsync-example
+    parameters:
+      - name: captureGalleryPermission
+        type: CaptureGalleryPermission
+        default:
+        summary: |
+          An `Enum.CaptureGalleryPermission` representing the type of access for
+          which the user will be prompted.
+    returns:
+      - type: boolean
+        summary: |
+          A boolean representing whether or not the user has allowed access to
+          their captures.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: CaptureService:ReadCapturesFromGalleryAsync
+    summary: ''
+    description: |
+      This client-side function returns a paginated list of captures from the
+      user's gallery as a `Class.CapturesPages` object, which can be used to
+      iterate through the captures. The results can be filtered by capture type
+      with the `captureTypeFilters` parameter. If this parameter isn't provided,
+      the function returns all captures.
+
+      Note: At the moment, this function will only return captures taken the
+      experience where it is called.
+    code_samples:
+      - ReadCapturesFromGalleryAsync-example
+    parameters:
+      - name: captureTypeFilters
+        type: Array
+        default: '{}'
+        summary: |
+          An array of `Enum.CaptureType`.
+    returns:
+      - type: Tuple
+        summary: |
+          Tuple of (result: `Enum.ReadCapturesFromGalleryResult`, capturesPages:
+          `Class.CapturesPages`)
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: CaptureService:UploadCaptureAsync
+    summary: ''
+    description: |
+      This client-side function uploads a capture, like one retrieved from
+      `ReadCapturesFromGalleryAsync`, to the asset system. It returns a tuple of
+      the result and the asset ID. For video capture types, there is an upload
+      limit of 20 videos per day per user.
+
+      Note: This function can take up to several minutes to finish executing,
+      and the user will need to remain in the experience.
+    code_samples:
+      - UploadCaptureAsync-example
+    parameters:
+      - name: capture
+        type: Capture
+        default:
+        summary: |
+          a capture object of type `Class.Capture`
+    returns:
+      - type: Tuple
+        summary: |
+          Tuple of (result: `Enum.UploadCaptureResult`, assetId: `number`)
+    tags:
+      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

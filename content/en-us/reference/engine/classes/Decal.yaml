@@ -5,22 +5,27 @@
 name: Decal
 type: class
 memory_category: GraphicsTexture
-summary: Applies an image texture to a face of a parent `Class.BasePart`.
-description: |-
+summary: |
+  Applies an image texture to a face of a parent `Class.BasePart`.
+description: |
   The `Class.Decal` object applies an image texture to a face of a parent
-  `Class.BasePart`. The affected face is dependent on the `Class.Decal.Face|Face`
-  property, and the size of the decal is dependent on the size of the face.
+  `Class.BasePart`. The affected face is dependent on the
+  `Class.Decal.Face|Face` property, and the size of the decal is dependent on
+  the size of the face.
 
   The applied image texture is determined by its
-  `Class.Decal.ColorMapContent|ColorMapContent`
-  property. For details on how to upload images, see [asset
-  management](../../../projects/assets/index.md#asset-management).
+  `Class.Decal.ColorMapContent|ColorMapContent` property. For details on how to
+  upload images, see
+  [asset management](../../../projects/assets/index.md#asset-management).
 
-  For more information, review [textures and decals](../../../parts/textures-decals.md). See also:
+  For more information, review
+  [textures and decals](../../../parts/textures-decals.md). See also:
 
   - `Class.Texture` for repeating surface images.
-  - `Class.MeshPart.TextureContent` to apply an image texture to a `Class.MeshPart`.
-  - `Class.SurfaceGui` to apply an `Class.ImageLabel` or `Class.ImageButton` to an in-experience 3D object.
+  - `Class.MeshPart.TextureContent` to apply an image texture to a
+    `Class.MeshPart`.
+  - `Class.SurfaceGui` to apply an `Class.ImageLabel` or `Class.ImageButton` to
+    an in-experience 3D object.
 code_samples: []
 inherits:
   - FaceInstance
@@ -30,12 +35,13 @@ tags: []
 deprecation_message: ''
 properties:
   - name: Decal.Color3
-    summary: The `Datatype.Color3` tint of the `Class.Decal`.
-    description: |-
-      The `Datatype.Color3` tint of the `Class.Decal`. Note that this property only
-      sets the **tint** of the decal rather than the color; unless the image
-      associated with the `Class.Decal` was originally pure white, then the color
-      cannot be freely changed using this property.
+    summary: |
+      The `Datatype.Color3` tint of the `Class.Decal`.
+    description: |
+      The `Datatype.Color3` tint of the `Class.Decal`. Note that this property
+      only sets the **tint** of the decal rather than the color; unless the
+      image associated with the `Class.Decal` was originally pure white, then
+      the color cannot be freely changed using this property.
     code_samples:
       - Decal-Color3
     type: Color3
@@ -52,13 +58,15 @@ properties:
     capabilities:
       - Basic
   - name: Decal.ColorMap
-    summary: Content ID that determines the color and opacity of the surface.
-    description: |-
+    summary: |
+      Content ID that determines the color and opacity of the surface.
+    description: |
       This property takes a content ID to determine the color and opacity of the
       surface. This texture is sometimes called the **albedo** texture.
     code_samples: []
     type: ContentId
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -71,13 +79,17 @@ properties:
     capabilities:
       - Basic
   - name: Decal.ColorMapContent
-    summary: '`Datatype.Content` object that determines the color and opacity of the surface.'
-    description: |-
+    summary: |
+      `Datatype.Content` object that determines the color and opacity of the
+      surface.
+    description: |
       This property takes a `Datatype.Content` object to determine the color and
-      opacity of the surface. This texture is sometimes called the **albedo** texture.
+      opacity of the surface. This texture is sometimes called the **albedo**
+      texture.
     code_samples: []
     type: Content
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -90,15 +102,19 @@ properties:
     capabilities:
       - Basic
   - name: Decal.LocalTransparencyModifier
-    summary: Acts as a multiplier for the decal's `Class.Decal.Transparency|Transparency` property. The effects are only visible to the local player.
-    description: |-
-      Acts as a multiplier for the decal's `Class.Decal.Transparency|Transparency`
-      property. The effect is only visible to the
-      `Class.Players.LocalPlayer|LocalPlayer`  and will not replicate to the server.
+    summary: |
+      Acts as a multiplier for the decal's
+      `Class.Decal.Transparency|Transparency` property. The effects are only
+      visible to the local player.
+    description: |
+      Acts as a multiplier for the decal's
+      `Class.Decal.Transparency|Transparency` property. The effect is only
+      visible to the `Class.Players.LocalPlayer|LocalPlayer` and will not
+      replicate to the server.
 
-      When this property is set to `1`, the `Class.Decal` will be
-      completely invisible regardless of its original transparency. When it is
-      set to `0`, the decal's rendered transparency will match the
+      When this property is set to `1`, the `Class.Decal` will be completely
+      invisible regardless of its original transparency. When it is set to `0`,
+      the decal's rendered transparency will match the
       `Class.Decal.Transparency|Transparency` value.
     code_samples: []
     type: float
@@ -223,15 +239,15 @@ properties:
       - Basic
   - name: Decal.Shiny
     summary: ''
-    description: |-
-      This property dictates how shiny the decal is. It takes a value between `0` and
-      `1`, where `1` is "fully shiny."
+    description: |
+      This property dictates how shiny the decal is. It takes a value between
+      `0` and `1`, where `1` is "fully shiny."
     code_samples: []
     type: float
     tags:
       - NotReplicated
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This non-functional property is deprecated and should not be used in new
       work.
     security:
@@ -246,7 +262,7 @@ properties:
       - Basic
   - name: Decal.Specular
     summary: ''
-    description: |-
+    description: |
       Sets the specularity, which is how the surface responds to light being
       shined on it.
     code_samples: []
@@ -254,7 +270,7 @@ properties:
     tags:
       - NotReplicated
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This property no longer functions correctly and is deprecated. It should
       not be used in new work.
     security:
@@ -268,12 +284,16 @@ properties:
     capabilities:
       - Basic
   - name: Decal.Texture
-    summary: The content ID of the image to be applied by the `Class.Decal`.
-    description: The content ID of the image to be applied by the `Class.Decal`.
+    summary: |
+      The content ID of the image to be applied by the `Class.Decal`.
+    description: |
+      The content ID of the image to be applied by the `Class.Decal`.
     code_samples: []
     type: ContentId
     tags: []
-    deprecation_message: This property has been deprecated. Use `Class.Decal.ColorMapContent|ColorMapContent` for future work.
+    deprecation_message: |
+      This property has been deprecated. Use
+      `Class.Decal.ColorMapContent|ColorMapContent` for future work.
     security:
       read: None
       write: None
@@ -285,15 +305,18 @@ properties:
     capabilities:
       - Basic
   - name: Decal.TextureContent
-    summary: The texture content displayed by the `Class.Decal`.
-    description: |-
-      The texture content displayed by the `Class.Decal`. Supports [asset
-      URIs](../../../projects/assets/index.md#asset-uris) and `Class.EditableImage`
-      objects.
+    summary: |
+      The texture content displayed by the `Class.Decal`.
+    description: |
+      The texture content displayed by the `Class.Decal`. Supports
+      [asset URIs](../../../projects/assets/index.md#asset-uris) and
+      `Class.EditableImage` objects.
     code_samples: []
     type: Content
     tags: []
-    deprecation_message: This property has been deprecated. Use `Class.Decal.ColorMapContent|ColorMapContent` for future work.
+    deprecation_message: |
+      This property has been deprecated. Use
+      `Class.Decal.ColorMapContent|ColorMapContent` for future work.
     security:
       read: None
       write: None
@@ -322,13 +345,15 @@ properties:
     capabilities:
       - Basic
   - name: Decal.Transparency
-    summary: Determines the transparency of the `Class.Decal`.
-    description: |-
+    summary: |
+      Determines the transparency of the `Class.Decal`.
+    description: |
       Determines the transparency of the `Class.Decal` with `0` being completely
       opaque and `1` completely transparent.
 
-      Note that `Class.Decal.LocalTransparencyModifier|LocalTransparencyModifier` acts
-      as a **multiplier** for this transparency level and should be used when the
+      Note that
+      `Class.Decal.LocalTransparencyModifier|LocalTransparencyModifier` acts as
+      a **multiplier** for this transparency level and should be used when the
       transparency of the decal is likely to be changed by another script.
     code_samples: []
     type: float
@@ -345,12 +370,13 @@ properties:
     capabilities:
       - Basic
   - name: Decal.UVOffset
-    summary: Shifts the UV coordinates by adding an offset before texture mapping.
-    description: |-
-      This property controls the UV coordinate translation. The `Datatype.Vector2.X|X`
-      value (**U**&nbsp;offset) and `Datatype.Vector2.Y|Y` value
-      (**V**&nbsp;offset) are added to every corresponding UV coordinate during
-      texture mapping.
+    summary: |
+      Shifts the UV coordinates by adding an offset before texture mapping.
+    description: |
+      This property controls the UV coordinate translation. The
+      `Datatype.Vector2.X|X` value (**U**&nbsp;offset) and
+      `Datatype.Vector2.Y|Y` value (**V**&nbsp;offset) are added to every
+      corresponding UV coordinate during texture mapping.
     code_samples: []
     type: Vector2
     tags: []
@@ -366,8 +392,9 @@ properties:
     capabilities:
       - Basic
   - name: Decal.UVScale
-    summary: Stretches or compresses the UV coordinates by multiplying a scale factor.
-    description: |-
+    summary: |
+      Stretches or compresses the UV coordinates by multiplying a scale factor.
+    description: |
       This property controls the scale applied to the horizontal and vertical
       coordinates. The `Datatype.Vector2.X|X` value (**U**&nbsp;scale) and
       `Datatype.Vector2.Y|Y` value (**V**&nbsp;scale) are multiplied by every
@@ -387,18 +414,19 @@ properties:
     capabilities:
       - Basic
   - name: Decal.ZIndex
-    summary: |-
+    summary: |
       Determines the rendering order when multiple decals are assigned the same
       face.
-    description: |-
+    description: |
       This property determines the order in which decals on the same
-      `Class.Decal.Face|Face` of a `Class.BasePart` are rendered. Lower values are
-      rendered first, so a decal with a higher `ZIndex` renders on top of those with a
-      lower `ZIndex`.
+      `Class.Decal.Face|Face` of a `Class.BasePart` are rendered. Lower values
+      are rendered first, so a decal with a higher `ZIndex` renders on top of
+      those with a lower `ZIndex`.
 
       If you're unsure whether you'll need to layer a decal between two
-      already-existing decals in the future, use larger separations between `ZIndex`
-      values such as `10` or `100` to ensure space for future decals between.
+      already-existing decals in the future, use larger separations between
+      `ZIndex` values such as `10` or `100` to ensure space for future decals
+      between.
     code_samples: []
     type: int
     tags: []

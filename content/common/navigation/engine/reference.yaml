@@ -3266,7 +3266,7 @@ navigation:
             type: engineapi
             source: /reference/engine/classes/WebStreamClient.yaml
             ignoreTranslation: true
-  - title: Data Types
+  - title: Data types
     path: /reference/engine/datatypes
     source: /reference/engine/datatypes.md
     section:
@@ -3949,6 +3949,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/CameraType.yaml
         ignoreTranslation: true
+      - title: CaptureGalleryPermission
+        path: /reference/engine/enums/CaptureGalleryPermission
+        type: engineapi
+        source: /reference/engine/enums/CaptureGalleryPermission.yaml
+        ignoreTranslation: true
       - title: CaptureType
         path: /reference/engine/enums/CaptureType
         type: engineapi
@@ -4483,6 +4488,11 @@ navigation:
         path: /reference/engine/enums/GraphicsOptimizationMode
         type: engineapi
         source: /reference/engine/enums/GraphicsOptimizationMode.yaml
+        ignoreTranslation: true
+      - title: GroupMembershipStatus
+        path: /reference/engine/enums/GroupMembershipStatus
+        type: engineapi
+        source: /reference/engine/enums/GroupMembershipStatus.yaml
         ignoreTranslation: true
       - title: GuiState
         path: /reference/engine/enums/GuiState
@@ -5149,15 +5159,30 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/RaycastFilterType.yaml
         ignoreTranslation: true
+      - title: ReadCapturesFromGalleryResult
+        path: /reference/engine/enums/ReadCapturesFromGalleryResult
+        type: engineapi
+        source: /reference/engine/enums/ReadCapturesFromGalleryResult.yaml
+        ignoreTranslation: true
       - title: RecommendationActionType
         path: /reference/engine/enums/RecommendationActionType
         type: engineapi
         source: /reference/engine/enums/RecommendationActionType.yaml
         ignoreTranslation: true
+      - title: RecommendationDepartureIntent
+        path: /reference/engine/enums/RecommendationDepartureIntent
+        type: engineapi
+        source: /reference/engine/enums/RecommendationDepartureIntent.yaml
+        ignoreTranslation: true
       - title: RecommendationImpressionType
         path: /reference/engine/enums/RecommendationImpressionType
         type: engineapi
         source: /reference/engine/enums/RecommendationImpressionType.yaml
+        ignoreTranslation: true
+      - title: RecommendationItemContentType
+        path: /reference/engine/enums/RecommendationItemContentType
+        type: engineapi
+        source: /reference/engine/enums/RecommendationItemContentType.yaml
         ignoreTranslation: true
       - title: RecommendationItemVisibility
         path: /reference/engine/enums/RecommendationItemVisibility
@@ -5788,6 +5813,11 @@ navigation:
         path: /reference/engine/enums/UITheme
         type: engineapi
         source: /reference/engine/enums/UITheme.yaml
+        ignoreTranslation: true
+      - title: UploadCaptureResult
+        path: /reference/engine/enums/UploadCaptureResult
+        type: engineapi
+        source: /reference/engine/enums/UploadCaptureResult.yaml
         ignoreTranslation: true
       - title: UsageContext
         path: /reference/engine/enums/UsageContext

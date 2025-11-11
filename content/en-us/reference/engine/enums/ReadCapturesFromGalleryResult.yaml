@@ -2,23 +2,22 @@
 # To submit a bug report on the content, see
 # https://devforum.roblox.com/c/bug-reports/documentation-issues/72
 
-name: RecommendationImpressionType
+name: ReadCapturesFromGalleryResult
 type: enum
 summary: ''
-description: ''
+description: |
+  Represents the result of reading captures from a user's gallery.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
-  - name: View
-    summary: |
-      A complete view of the item.
+  - name: Success
+    summary: ''
     value: 0
     tags: []
     deprecation_message: ''
-  - name: NotViewable
-    summary: |
-      The item has failed to render.
+  - name: NeedPermission
+    summary: ''
     value: 1
     tags: []
     deprecation_message: ''

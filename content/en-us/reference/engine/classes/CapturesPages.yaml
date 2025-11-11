@@ -2,18 +2,18 @@
 # To submit a bug report on the content, see
 # https://devforum.roblox.com/c/bug-reports/documentation-issues/72
 
-name: RecommendationPages
+name: CapturesPages
 type: class
 memory_category: Instances
 summary: |
   A special version of the `Class.Pages` class returned by
-  `Class.RecommendationService.GenerateItemListAsync|GenerateItemListAsync`.
+  `Class.CaptureService.ReadCapturesFromGalleryAsync`.
 description: |
   A special version of the `Class.Pages` class returned by
-  `Class.RecommendationService.GenerateItemListAsync|GenerateItemListAsync`. See
-  the following code sample for reference on the returned data format.
+  `Class.CaptureService.ReadCapturesFromGalleryAsync`. See the following code
+  sample for reference on the returned data format.
 code_samples:
-  - printing-generate-recommendation-lists
+  - ReadCapturesFromGalleryAsync-example
 inherits:
   - Pages
 descendants: []

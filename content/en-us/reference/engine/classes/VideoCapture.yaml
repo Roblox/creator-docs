@@ -5,8 +5,10 @@
 name: VideoCapture
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A child class of `Class.Capture` for videos.
+description: |
+  A child class of `Class.Capture` for videos.
 code_samples: []
 inherits:
   - Capture
