@@ -20,7 +20,7 @@ Group API keys are being deprecated and will not be supported after January 30, 
 
 You can create and configure API keys to access your resources. An API key's access is determined by the permissions of the user who owns it. This means it can generally access any resource the user has permissions for, including their individual experiences and any [group-owned](../../projects/groups.md) experiences where they have the appropriate role. Some scopes can be restricted to specific experiences, but not all.
 
-For details on how to create API keys for managing group resources, see the [Create API Keys for Managing Group-owned Resources](#create-api-keys-for-managing-group-owned-resources) section below.
+For details on how to create API keys for managing group resources, see the [Create API keys for managing group-owned resources](#create-api-keys-for-managing-group-owned-resources) section below.
 
 To create an API key:
 
@@ -46,10 +46,6 @@ To create an API key:
 
    For a list of all scopes and the APIs they support, see [Scopes](../reference/scopes.md).
 
-   <Alert severity="warning">
-   For security reasons, give each API key the minimum number of required permissions. If an API key leaks, this principle of least privilege ensures that only a subset of your resources are compromised.
-   </Alert>
-
 1. **(Optional)** In the **Security** section, explicitly restrict IP access to the key using [CIDR
    notation](#cidr-format). You can find
    the IP address of your local machine and add it to the **Accepted IP
@@ -71,16 +67,16 @@ To create an API key:
 your application. Never share it with untrusted parties, such as anyone outside
 of your development team. </Alert>
 
-## Create API Keys for Managing Group-owned Resources
+## Create API keys for managing group-owned resources
 
-An API key grants access to all resources the user account has permissions for, including personal experiences outside of the group. If you use your personal account's API key for group automation and that key is compromised, other resources you may have access to are also at risk.
+An API key grants access to all resources the user account has permissions for, including personal experiences outside of the group. If you use your personal account's API key for group automation and that key is compromised, other resources you have access to are also at risk.
 
 To prevent this, we **strongly recommend** creating a separate API key on a dedicated alternate account with access strictly limited to the target group. This new account dedicated for automation purposes should only be given access to the target group and granted the minimal permissions required for its task.
 
 1. Create a new, dedicated Roblox account for your automation.
 1. Invite the new account to your group.
 1. Assign it a group role with the minimum permissions required for its task (e.g., only "Create and edit group experiences").
-1. Log into the new account and follow the steps in the section above to [create an API key](#create-api-keys).
+1. Log in to the new account and follow the steps in the section above to [create an API key](#create-api-keys).
 1. Use the generated API key for group resource automation.
 
 ## Best Practices For Managing API Keys
@@ -91,15 +87,15 @@ API keys are sensitive credentials that should be kept secure to prevent unautho
 
 - **Select the minimum permissions needed**: When configuring scopes, select the minimum permissions necessary for the key's intended use. For those scopes that allow you to restrict scope access by experience, limit access to only the specific experiences that are needed.
 
-- **Use IP Address restrictions**: Restrict API key access to specific IP addresses or CIDR ranges to prevent unauthorized usage from unknown locations. Do not use IP Address restrictions when using your API key in Roblox places to ensure your key can be used with Roblox servers.
+- **Use IP address restrictions**: Restrict API key access to specific IP addresses or CIDR ranges to prevent unauthorized usage from unknown locations. Do not use IP address restrictions when using your API key in Roblox places to ensure your key can be used with Roblox servers.
 
-- **Set expiration dates**: For short-term use cases, configure expiration dates to automatically disable keys after a set period, reducing the risk if a key is compromised. Setting expiration dates is not recommended for longer-term use cases unless you have a key rotation process in place, as your automation may unexpectedly fail when the key expires.
+- **Set expiration dates**: For short-term use cases, configure expiration dates to automatically disable keys after a set period, reducing the risk if a key is compromised. Setting expiration dates is not recommended for longer-term use cases unless you have a key rotation process in place, as your automation can unexpectedly fail when the key expires.
 
-- **Use dedicated alternate accounts for group resource management**: Use a dedicated account with minimal permissions for group resource management, as detailed in the [Create API Keys for Managing Group-owned Resources](#create-api-keys-for-managing-group-owned-resources) section.
+- **Use dedicated alternate accounts for group resource management**: Use a dedicated account with minimal permissions for group resource management, as detailed in the [Create API keys for managing group-owned resources](#create-api-keys-for-managing-group-owned-resources) section.
 
-- **Store API keys securely**: Never store API keys directly in your source code, version control systems, or scripts where they could be exposed. Prefer using a secrets management system for storing and controlling access to your keys. In Roblox places, you should use [Secrets Store](cloud-services/secrets).
+- **Store API keys securely**: Never store API keys directly in your source code, version control systems, or scripts where they could be exposed. Use a secrets management system for storing and controlling access to your keys. In Roblox places, use a [Secrets Store](cloud-services/secrets).
 
-- **Do not share API Keys through public channels**: Never share API keys through public communication channels, forums, or social media. Only share keys through secure, private channels with trusted team members. Limit access to who you share your keys with to minimize the blast radius if a key is compromised.
+- **Do not share API keys through public channels**: Never share API keys through public communication channels, forums, or social media. Only share keys through secure, private channels with trusted team members. Limit access to who you share your keys with to minimize the blast radius if a key is compromised.
 
 ## CIDR format
 
