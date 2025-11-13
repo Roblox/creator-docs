@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Simple Snake Game</title>
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; background:#111; color:#eee; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; height:100vh; }
+    #game-wrap { margin-top:16px; display:flex; flex-direction:column; align-items:center; }
+    canvas { background:#0b0b0b; border:4px solid #222; border-radius:8px; touch-action: none; }
+    #info { margin-top:8px; display:flex; gap:12px; align-items:center; }
+    button { padding:8px 12px; border-radius:6px; border: none; background:#2b8; color:#052; font-weight:700; }
+    .controls { margin-top:12px; display:flex; gap:8px; }
+    .dir-btn { width:56px; height:56px; border-radius:8px; background:#222; color:#fff; border:2px solid #444; font-size:18px; }
+    #score { font-size:18px; }
+    #overlay { position:fixed; left:0; right:0; top:0; bottom:0; display:flex; align-items:center; justify-content:center; pointer-events:none; }
+    #message { pointer-events:auto; background:rgba(0,0,0,0.75); padding:18px; border-radius:12px; border:2px solid #444; color:#fff; text-align:center; max-width:90%; }
+  </style>
+</head>
+<body>
+  <h1>Snake — सरल खेल</h1>
+  <div id="game-wrap">
+    <canvas id="game" width="360" height="360"></canvas>
+    <div id="info">
+      <div id="score">Score: 0</div>
+      <button id="restart">Start / Restart</button>
+    </div>
+
+    <!-- मोबाइल के लिए दिशा बटन -->
+    <div class="controls" id="mobile-controls" aria-hidden="false">
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <button class="dir-btn" id="up">▲</button>
+        <div style="display:flex; gap:8px; justify-content:center;">
+          <button class="dir-btn" id="left">◀</button>
+          <button class="dir-btn" id="right">▶</button>
+        </div>
+        <button class="dir-btn" id="down">▼</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="overlay"><div id="message" style="display:none"></div></div>
+
+<script>
+/*
+  Simple Snake game
+  - Arrow keys / WASD control
+  - Mobile touch buttons available
+  - Food appears randomly
+  - Wall collision ends game
+*/
+
+const canvas = document.getElementById('game');
+const ctx = canvas.getContext('2d');
+const scoreEl = document.getElementById('score');
+const restartBtn = document.getElementById('restart');
+const messageBox = document.getElementById('message');
+
+const gridSize = 18; // number of cells per row/col approx (canvas 360 so cell ~20)
+const cellSize = Math.floor(canvas.width / gridSize);
+let snake = [];
+let dir = { x: 1, y: 0 }; // प्रारंभिक दिक्‍शन: दाहिने
+let food = null;
+let gameInterval = null;
+let speed = 120; // ms per tick (छोटी value = तेज)
+let running = false;
+let score = 0;
+
+// initialize / restart
+function init() {
+  snake = [
+    { x: Math.floor(gridSize/2), y: Math.floor(gridSize/2) },
+    { x: Math.floor(gridSize/2)-1, y: Math.floor(gridSize/2) },
+    { x: Math.floor(gridSize/2)-2, y: Math.floor(gridSize/2) }
+  ];
+  dir = { x: 1, y: 0 };
+  placeFood();
+  score = 0;
+  scoreEl.textContent = 'Score: ' + score;
+  running = true;
+  message('');
+  if (gameInterval) clearInterval(gameInterval);
+  gameInterval = setInterval(tick, speed);
+}
+
+// फूड जगह सेट करना
+function placeFood(){
+  while(true){
+    const x = Math.floor(Math.random()*gridSize);
+    const y = Math.floor(Math.random()*gridSize);
+    if (!snake.some(s => s.x===x && s.y===y)) { food = {x,y}; break; }
+  }
+}
+
+// गेम टुक (टिक)
+function tick(){
+  // अगले हेड का स्थान
+  const head = { x: snake[0].x + dir.x, y: snake[0].y + dir.y };
+
+  // दीवार से टकराना?
+  if (head.x < 0 || head.x >= gridSize || head.y < 0 || head.y >= gridSize) {
+    gameOver('You hit the wall!');
+    return;
+  }
+  // खुद से टकराना?
+  if (snake.some(s => s.x===head.x && s.y===head.y)) {
+    gameOver('You ran into yourself!');
+    return;
+  }
+
+  snake.unshift(head);
+
+  // खाना मिला?
+  if (food && head.x===food.x && head.y===food.y) {
+    score += 10;
+    scoreEl.textContent = 'Score: ' + score;
+    placeFood();
+    // हर 50 स्कोर पर तेज़ी (उदाहरण)
+    if (score % 50 === 0 && speed > 40) {
+      speed -= 10;
+      clearInterval(gameInterval);
+      gameInterval = setInterval(tick, speed);
+    }
+  } else {
+    snake.pop(); // आगे बढ़ो और पुच्छ छोटा करो
+  }
+
+  draw();
+}
+
+function draw(){
+  // साफ़ कैनवास
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  // ग्रिड बैकग्राउंड (हल्का)
+  // (optional) - हम रंग न बदलें ताकि सादा रहे
+
+  // खाना ड्रा करो
+  if (food) {
+    ctx.fillStyle = '#e74c3c';
+    ctx.fillRect(food.x*cellSize+2, food.y*cellSize+2, cellSize-4, cellSize-4);
+  }
+
+  // स्नेक ड्रा करो
+  for (let i=0; i<snake.length; i++){
+    const s = snake[i];
+    if (i===0) ctx.fillStyle = '#6ae'; else ctx.fillStyle = '#39a';
+    ctx.fillRect(s.x*cellSize+1, s.y*cellSize+1, cellSize-2, cellSize-2);
+  }
+}
+
+function gameOver(text){
+  running = false;
+  clearInterval(gameInterval);
+  showMessage(text + ' — Score: ' + score + '. Restart करें।');
+}
+
+// UI संदेश दिखाना
+function showMessage(txt){
+  messageBox.style.display = 'block';
+  messageBox.textContent = txt;
+}
+function message(txt){
+  if (!txt) { messageBox.style.display = 'none'; messageBox.textContent = ''; }
+  else showMessage(txt);
+}
+
+// कीबोर्ड कंट्रोल
+window.addEventListener('keydown', (e) => {
+  const key = e.key;
+  if (key === 'ArrowUp' || key==='w' || key==='W') setDir(0,-1);
+  if (key === 'ArrowDown' || key==='s' || key==='S') setDir(0,1);
+  if (key === 'ArrowLeft' || key==='a' || key==='A') setDir(-1,0);
+  if (key === 'ArrowRight' || key==='d' || key==='D') setDir(1,0);
+});
+
+// मोबाइल बटन्स
+document.getElementById('up').addEventListener('touchstart', e => { e.preventDefault(); setDir(0,-1); });
+document.getElementById('down').addEventListener('touchstart', e => { e.preventDefault(); setDir(0,1); });
+document.getElementById('left').addEventListener('touchstart', e => { e.preventDefault(); setDir(-1,0); });
+document.getElementById('right').addEventListener('touchstart', e => { e.preventDefault(); setDir(1,0); });
+
+document.getElementById('up').addEventListener('mousedown', () => setDir(0,-1));
+document.getElementById('down').addEventListener('mousedown', () => setDir(0,1));
+document.getElementById('left').addEventListener('mousedown', () => setDir(-1,0));
+document.getElementById('right').addEventListener('mousedown', () => setDir(1,0));
+
+// टच स्वाइप सपोर्ट (सिंपल)
+let touchStart = null;
+canvas.addEventListener('touchstart', (e) => {
+  const t = e.touches[0];
+  touchStart = { x: t.clientX, y: t.clientY };
+}, {passive:true});
+canvas.addEventListener('touchend', (e) => {
+  if (!touchStart) return;
+  const t = (e.changedTouches && e.changedTouches[0]) || null;
+  if (!t) { touchStart=null; return; }
+  const dx = t.clientX - touchStart.x;
+  const dy = t.clientY - touchStart.y;
+  if (Math.abs(dx) > Math.abs(dy)) {
+    if (dx > 30) setDir(1,0);
+    else if (dx < -30) setDir(-1,0);
+  } else {
+    if (dy > 30) setDir(0,1);
+    else if (dy < -30) setDir(0,-1);
+  }
+  touchStart = null;
+}, {passive:true});
+
+// दिशा सेट करते समय उल्टी चाल से बचें (right -> left सीधे न हो)
+function setDir(x,y){
+  if (!running) return; // गेम बंद हो तो दिशा बदलना न दें
+  // उल्टी जांचें
+  if (snake.length > 1) {
+    const neck = snake[1];
+    const head = snake[0];
+    if (head.x + x === neck.x && head.y + y === neck.y) return;
+  }
+  dir = { x, y };
+}
+
+// रिस्टार्ट बटन
+restartBtn.addEventListener('click', () => {
+  init();
+});
+
+// पहली बार ड्रॉ
+draw();
+message('Start पर दबाएँ।');
+
+</script>
+</body>
+</html>
