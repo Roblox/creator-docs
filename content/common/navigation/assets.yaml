@@ -68,6 +68,8 @@ navigation:
   
   - title: 3D Importer
     path: /art/modeling/3d-importer
+  - title: Reimport
+    path: /art/modeling/reimport
   - title: glTF Export
     path: /art/modeling/gltf-export
   - title: Roblox Blender plugin
