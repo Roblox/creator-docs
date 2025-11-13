@@ -2009,6 +2009,11 @@ navigation:
                     type: engineapi
                     source: /reference/engine/classes/BanHistoryPages.yaml
                     ignoreTranslation: true
+                  - title: CapturesPages
+                    path: /reference/engine/classes/CapturesPages
+                    type: engineapi
+                    source: /reference/engine/classes/CapturesPages.yaml
+                    ignoreTranslation: true
                   - title: CatalogPages
                     path: /reference/engine/classes/CatalogPages
                     type: engineapi
@@ -2362,11 +2367,6 @@ navigation:
                 path: /reference/engine/classes/ReflectionMetadataYieldFunctions
                 type: engineapi
                 source: /reference/engine/classes/ReflectionMetadataYieldFunctions.yaml
-                ignoreTranslation: true
-              - title: ReflectionService
-                path: /reference/engine/classes/ReflectionService
-                type: engineapi
-                source: /reference/engine/classes/ReflectionService.yaml
                 ignoreTranslation: true
               - title: RemoteDebuggerServer
                 path: /reference/engine/classes/RemoteDebuggerServer

@@ -236,7 +236,6 @@ descendants:
   - ProximityPrompt
   - ProximityPromptService
   - PublishService
-  - ReflectionService
   - RemoteDebuggerServer
   - RemoteFunction
   - RenderingTest

@@ -19,42 +19,7 @@ tags:
   - NotReplicated
   - NotBrowsable
 deprecation_message: ''
-properties:
-  - name: GameSettings.VideoCaptureEnabled
-    summary: |
-      Toggles whether or not video capture is enabled.
-    description: |
-      Toggles whether or not video capture is enabled.
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Video
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: GameSettings.VideoRecording
-    summary: ''
-    description: ''
-    code_samples: []
-    type: boolean
-    tags:
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxEngineSecurity
-    thread_safety: ReadSafe
-    category: Video
-    serialization:
-      can_load: true
-      can_save: false
-    capabilities: []
+properties: []
 methods: []
 events: []
 callbacks: []

@@ -10,9 +10,8 @@
     },
     "type": {
       "description": "the type of the API (class, datatype, enum, global, library). Automated.",
-      "enum": [
-        "enum"
-      ]
+      "type": "string",
+      "enum": ["enum"]
     },
     "summary": {
       "$comment": "Summary of the enum to appear in Script Editor Autocomplete.",
@@ -81,11 +80,8 @@
             "type": "boolean"
           }
         },
-        "required": [
-          "name",
-          "summary",
-          "value"
-        ]
+        "required": ["name", "summary", "value"],
+        "additionalProperties": false
       }
     }
   },
@@ -104,6 +100,7 @@
       "description": "Tags for this item, such as Deprecated. String list. Automated.",
       "type": "array",
       "items": {
+        "type": "string",
         "enum": [
           "NotCreatable",
           "NotBrowsable",

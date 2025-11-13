@@ -27,9 +27,9 @@ description: |
   As stated, `Class.BindableFunction|BindableFunctions` do not allow for
   communication between the server and clients. If you are looking for this
   functionality, use a `Class.RemoteFunction` as outlined in
-  [Remote Events and Callbacks](../../../scripting/events/remote.md).
+  [Remote events and callbacks](../../../scripting/events/remote.md).
 
-  See [Custom Events and Callbacks](../../../scripting/events/custom.md) for
+  See [Bindable events and callbacks](../../../scripting/events/bindable.md) for
   code samples and further details on `Class.BindableFunction`.
 
   #### Parameter Limitations
@@ -38,7 +38,7 @@ description: |
   others can be passed as a parameter when a `Class.BindableFunction` is
   invoked, as well as Luau types such as numbers, strings, and booleans,
   although you should carefully explore the
-  [limitations](../../../scripting/events/custom.md#argument-limitations).
+  [limitations](../../../scripting/events/bindable.md#argument-limitations).
 code_samples: []
 inherits:
   - Instance
@@ -63,14 +63,14 @@ methods:
       others can be passed as a parameter to
       `Class.BindableFunction:Invoke()|Invoke()`, as well as Luau types such as
       numbers, strings, and booleans, although you should carefully explore the
-      [limitations](../../../scripting/events/custom.md#argument-limitations).
+      [limitations](../../../scripting/events/bindable.md#argument-limitations).
 
       Only one function can be bound to
       `Class.BindableFunction:Invoke()|Invoke()` at a time. If you assign
       multiple functions, only the last one assigned will be used.
 
-      See [Custom Events and Callbacks](../../../scripting/events/custom.md) for
-      code samples and further details on
+      See [Bindable events and callbacks](../../../scripting/events/bindable.md)
+      for code samples and further details on
       `Class.BindableFunction:Invoke()|Invoke()`.
     code_samples: []
     parameters:
@@ -104,8 +104,8 @@ callbacks:
       is found and, if it is never set, the script that invoked it will not
       resume execution.
 
-      See [Custom Events and Callbacks](../../../scripting/events/custom.md) for
-      code samples and further details on
+      See [Bindable events and callbacks](../../../scripting/events/bindable.md)
+      for code samples and further details on
       `Class.BindableFunction.OnInvoke|OnInvoke`.
     code_samples: []
     parameters:
@@ -124,3 +124,4 @@ callbacks:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    writeCapabilities: []

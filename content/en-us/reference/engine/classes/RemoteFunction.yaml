@@ -192,6 +192,7 @@ callbacks:
     thread_safety: Unsafe
     capabilities:
       - RemoteEvent
+    writeCapabilities: []
   - name: RemoteFunction.OnServerInvoke
     summary: |
       Callback for when the `Class.RemoteFunction` is invoked with
@@ -229,3 +230,4 @@ callbacks:
     thread_safety: Unsafe
     capabilities:
       - RemoteEvent
+    writeCapabilities: []

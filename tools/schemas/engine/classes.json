@@ -10,6 +10,7 @@
     },
     "type": {
       "description": "the type of the API (class, datatype, enum, global, library). Automated.",
+      "type": "string",
       "enum": ["class"]
     },
     "memory_category": {
@@ -101,7 +102,8 @@
                 "$ref": "#/definitions/__schema1"
               }
             },
-            "required": ["read", "write"]
+            "required": ["read", "write"],
+            "additionalProperties": false
           },
           "thread_safety": {
             "$ref": "#/definitions/__schema2"
@@ -123,7 +125,8 @@
                 "type": "boolean"
               }
             },
-            "required": ["can_load", "can_save"]
+            "required": ["can_load", "can_save"],
+            "additionalProperties": false
           },
           "capabilities": {
             "$ref": "#/definitions/__schema3"
@@ -142,7 +145,8 @@
           "category",
           "serialization",
           "capabilities"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "methods": {
@@ -205,7 +209,8 @@
           "security",
           "thread_safety",
           "capabilities"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "events": {
@@ -260,7 +265,8 @@
           "deprecation_message",
           "security",
           "capabilities"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "callbacks": {
@@ -332,7 +338,8 @@
           "security",
           "thread_safety",
           "capabilities"
-        ]
+        ],
+        "additionalProperties": false
       }
     }
   },
@@ -352,12 +359,14 @@
     "events",
     "callbacks"
   ],
+  "additionalProperties": false,
   "definitions": {
     "__schema0": {
       "$id": "tags",
       "description": "Tags for this item, such as Deprecated. String list. Automated.",
       "type": "array",
       "items": {
+        "type": "string",
         "enum": [
           "NotCreatable",
           "NotBrowsable",
@@ -380,6 +389,7 @@
     "__schema1": {
       "$id": "security_tag",
       "description": "Security tag for this item. Enum. Automated.",
+      "type": "string",
       "enum": [
         "None",
         "Plugin",
@@ -399,6 +409,7 @@
     "__schema2": {
       "$id": "thread_safety",
       "description": "Thread safety of this item. Enum. Automated.",
+      "type": "string",
       "enum": ["Unsafe", "ReadSafe", "Safe", "ReadOnly"]
     },
     "__schema3": {
@@ -446,7 +457,8 @@
             "type": "string"
           }
         },
-        "required": ["name", "type", "summary"]
+        "required": ["name", "type", "summary"],
+        "additionalProperties": false
       }
     },
     "__schema5": {
@@ -465,7 +477,8 @@
             "type": "string"
           }
         },
-        "required": ["type", "summary"]
+        "required": ["type", "summary"],
+        "additionalProperties": false
       }
     }
   }

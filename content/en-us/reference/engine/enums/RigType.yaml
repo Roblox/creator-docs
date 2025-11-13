@@ -21,12 +21,12 @@ items:
   - name: Custom
     summary: |
       A rig type of Custom.
-    value: 1
+    value: 2
     tags: []
     deprecation_message: ''
   - name: None
     summary: |
       A rig type of None.
-    value: 2
+    value: 3
     tags: []
     deprecation_message: ''

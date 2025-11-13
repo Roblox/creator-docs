@@ -84,6 +84,17 @@ properties:
     code_samples: []
     tags: []
     deprecation_message: ''
+  - name: OverlapParams.Tolerance
+    type: number
+    summary: |
+      Slightly increases the volume of the boundary-querying operation.
+    description: |
+      Slightly increases the volume of the boundary-querying operation, clamped
+      between `0` and `0.05` studs.
+    default:
+    code_samples: []
+    tags: []
+    deprecation_message: ''
   - name: OverlapParams.RespectCanCollide
     type: bool
     summary: |

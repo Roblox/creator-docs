@@ -10,9 +10,8 @@
     },
     "type": {
       "description": "the type of the API (class, datatype, enum, global, library). Automated.",
-      "enum": [
-        "library"
-      ]
+      "type": "string",
+      "enum": ["library"]
     },
     "summary": {
       "$comment": "Summary of the library to appear in Script Editor Autocomplete.",
@@ -78,7 +77,8 @@
           "description",
           "code_samples",
           "deprecation_message"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "functions": {
@@ -136,11 +136,8 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "name",
-                "type",
-                "summary"
-              ]
+              "required": ["name", "type", "summary"],
+              "additionalProperties": false
             }
           },
           "returns": {
@@ -159,10 +156,8 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "type",
-                "summary"
-              ]
+              "required": ["type", "summary"],
+              "additionalProperties": false
             }
           },
           "code_samples": {
@@ -191,7 +186,8 @@
           "parameters",
           "returns",
           "code_samples"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "tags": {
@@ -209,12 +205,14 @@
     "properties",
     "functions"
   ],
+  "additionalProperties": false,
   "definitions": {
     "__schema0": {
       "$id": "tags",
       "description": "Tags for this item, such as Deprecated. String list. Automated.",
       "type": "array",
       "items": {
+        "type": "string",
         "enum": [
           "NotCreatable",
           "NotBrowsable",

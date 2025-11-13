@@ -540,6 +540,7 @@ callbacks:
     thread_safety: Unsafe
     capabilities:
       - Chat
+    writeCapabilities: []
   - name: TextChatService.OnChatWindowAdded
     summary: |
       Called when a new message is about to be displayed in the chat window.
@@ -578,6 +579,7 @@ callbacks:
     thread_safety: Unsafe
     capabilities:
       - Chat
+    writeCapabilities: []
   - name: TextChatService.OnIncomingMessage
     summary: |
       Called when `Class.TextChatService` is receiving an incoming message.
@@ -620,3 +622,4 @@ callbacks:
     thread_safety: Unsafe
     capabilities:
       - Chat
+    writeCapabilities: []

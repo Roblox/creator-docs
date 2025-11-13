@@ -25,8 +25,8 @@ description: |
   `Class.RunService.PostSimulation|PostSimulation`, and
   `Class.RunService.Heartbeat|Heartbeat`. Selecting the proper event to use for
   any case is important, so you should read
-  [Task Scheduler](../../../performance-optimization/microprofiler/task-scheduler.md#runservice) to make an
-  informed decision.
+  [Task Scheduler](../../../performance-optimization/microprofiler/task-scheduler.md)
+  to make an informed decision.
 
   ##### Context Test Results
 
@@ -44,25 +44,25 @@ description: |
     </thead>
   <tbody>
       <tr>
-        <td>Live (Client)</td>
+        <td>Live Player</td>
         <td><code>false</code></td>
         <td><code>true</code></td>
         <td><code>false</code></td>
         <td></td>
-        <td><code>true</code></td>
-        <td><code>false</code></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
-        <td>Live (Server)</td>
+        <td>Live Server</td>
         <td><code>false</code></td>
         <td><code>false</code></td>
         <td><code>true</code></td>
         <td></td>
-        <td><code>true</code></td>
-        <td><code>false</code></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
-        <td>Edit</td>
+        <td>Edit Mode</td>
         <td><code>true</code></td>
         <td><code>true</code></td>
         <td><code>true</code></td>
@@ -82,9 +82,9 @@ description: |
       <tr>
         <td>Run Mode</td>
         <td><code>true</code></td>
-        <td><code>false</code></td>
         <td><code>true</code></td>
-        <td></td>
+        <td><code>true</code></td>
+        <td><code>false</code></td>
         <td><code>true</code></td>
         <td><code>true</code></td>
       </tr>
@@ -93,7 +93,7 @@ description: |
         <td><code>true</code></td>
         <td><code>true</code></td>
         <td><code>false</code></td>
-        <td></td>
+        <td><code>false</code></td>
         <td><code>true</code></td>
         <td><code>false</code></td>
       </tr>
@@ -102,35 +102,26 @@ description: |
         <td><code>true</code></td>
         <td><code>false</code></td>
         <td><code>true</code></td>
-        <td></td>
-        <td><code>true</code></td>
         <td><code>false</code></td>
+        <td><code>true</code></td>
+        <td><code>true</code></td>
       </tr>
       <tr>
-        <td>Team Test (Client)</td>
+        <td>Team Test (Player)</td>
         <td><code>true</code></td>
         <td><code>true</code></td>
         <td><code>false</code></td>
-        <td></td>
+        <td><code>false</code></td>
         <td><code>true</code></td>
         <td><code>false</code></td>
       </tr>
       <tr>
         <td>Team Test (Server)</td>
-        <td><code>true</code></td>
-        <td><code>false</code></td>
-        <td><code>true</code></td>
-        <td></td>
-        <td><code>true</code></td>
-        <td><code>false</code></td>
-      </tr>
-      <tr>
-        <td>Luau Execution</td>
         <td><code>false</code></td>
         <td><code>false</code></td>
         <td><code>true</code></td>
-        <td></td>
         <td><code>false</code></td>
+        <td><code>true</code></td>
         <td><code>false</code></td>
       </tr>
     </tbody>

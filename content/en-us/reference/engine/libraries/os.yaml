@@ -303,8 +303,8 @@ functions:
     description: |
       Returns how many seconds have passed since the Unix epoch (1 January 1970,
       00:00:00), under current UTC time. If provided a table formatted similarly
-      to that returned by `Library.os.date()`, it will return the number of
-      seconds since that time instead.
+      to that returned by `Library.os.date()`, it returns the number of seconds
+      from the Unix epoch to that time instead.
 
       Note that the returned time uses the device's local clock. Most operating
       systems automatically sync their local time against online time servers,

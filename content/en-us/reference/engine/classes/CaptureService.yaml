@@ -292,11 +292,16 @@ methods:
     description: |
       This client-side function uploads a capture, like one retrieved from
       `ReadCapturesFromGalleryAsync`, to the asset system. It returns a tuple of
-      the result and the asset ID. For video capture types, there is an upload
-      limit of 20 videos per day per user.
+      the result and the asset ID.
 
-      Note: This function can take up to several minutes to finish executing,
-      and the user will need to remain in the experience.
+      Notes:
+
+      - This function will only work properly if the Maturity and Compliance
+        questionnaire has been filled out for the experience.
+      - For video capture types, there is an upload limit of 20 videos per day
+        per user.
+      - This function can take up to several minutes to finish executing, and
+        the user will need to remain in the experience.
     code_samples:
       - UploadCaptureAsync-example
     parameters:

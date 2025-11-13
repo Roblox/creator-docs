@@ -76,3 +76,4 @@ callbacks:
     thread_safety: Unsafe
     capabilities:
       - InternalTest
+    writeCapabilities: []

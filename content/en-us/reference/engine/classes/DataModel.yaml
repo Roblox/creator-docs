@@ -1017,3 +1017,4 @@ callbacks:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    writeCapabilities: []

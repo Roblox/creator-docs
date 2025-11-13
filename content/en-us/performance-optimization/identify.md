@@ -32,7 +32,7 @@ Roblox has a number of tools for identifying performance issues, some of which a
     <td>Live sessions, Studio testing</td>
   </tr>
   <tr>
-    <td>Performance Stats Bar</td>
+    <td>Performance Stats bar</td>
     <td>A toolbar with basic performance statistics, including memory consumption, CPU, GPU, network data sent and received, and ping time.</td>
     <td>In-experience</td>
     <td><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F7</kbd> (<kbd>⌘</kbd><kbd>⌥</kbd><kbd>F7</kbd>)</td>
@@ -115,7 +115,7 @@ High memory usage is not necessarily indicative of a problem, but some indicatio
 - A significant percentage of client crashes showing in the **Performance Dashboard**, particularly a sudden uptick that coincides with an update. Some number of crashes are expected, but you should investigate if your crash rates increase above 2-3%.
 - A crash occurs while testing on a device that you want your experience to support.
 
-A significant portion of an experience's memory consumption on the client are from assets, such as images, meshes, and audio files, loaded into memory. In the **Developer Console**, check the following labels under **PlaceMemory**:
+A significant portion of an experience's memory consumption on the client are from assets, such as images, meshes, and audio files, loaded into memory. In the Developer Console, check the following labels under **PlaceMemory**:
 
 - **GraphicsMeshParts** - Graphics memory consumed by meshes.
 - **GraphicsTexture** - Graphics memory consumed by textures.
@@ -137,3 +137,19 @@ end)
 ```
 
 For additional insight, enable **Print Join Size Breakdown** from the **Network** tab of [Studio Settings](../studio/setup.md#customization) to print the top 20 instances by size and a percentage breakdown by instance type when you start the experience in Studio.
+
+## Ping
+
+The two primary measurements of ping (latency) are **network ping** and **data ping**.
+
+Network ping is the round-trip time measured from when the client sends a network data packet to when it receives the server's echo reply. It is similar to what would be reported as `time` by the general purpose ping network utility.
+
+Network ping is visible in the **Performance Stats** bar. It is mostly affected by the length of the network path between the client and server and is outside your control.
+
+Data ping is the round-trip time measured from when the client sends data reliably through the replication system to when it receives an echo reply from the server's replication system. It includes time spent in both the client's and server's replication queues, along with TCP-like retransmissions of lost or corrupted packets.
+
+Data ping is similar to sending a reliable remote event from the client, receiving it on the server, and then sending a reliable remote event from the server to the client in response. Because data ping also includes time spent on the network between the client and server, it is greater than or equal to network ping.
+
+Average data ping for all players connected to a server is visible in the **Server Stats** tab of the Developer Console. Data ping for an individual client is visible using <kbd>Shift</kbd><kbd>F3</kbd> to display network debug stats.
+
+Data ping is affected by both the network path and by replication queueing delays. When the server generates replication data faster than the network can send it (or faster than the client can process it), data must wait in replication queues. Some difference between data ping and network ping is normal due to both network retransmissions and the way network data is processed by the Roblox app. However, if data ping is significantly higher than network ping, use the [MicroProfiler](./microprofiler/network.md) to view network traffic. For optimization suggestions, see [Networking and replication](./improve.md#networking-and-replication).

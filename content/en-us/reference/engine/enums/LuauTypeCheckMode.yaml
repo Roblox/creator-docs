@@ -12,16 +12,16 @@ deprecation_message: ''
 items:
   - name: NoCheck
     summary: ''
-    value: 0
+    value: 1
     tags: []
     deprecation_message: ''
   - name: Nonstrict
     summary: ''
-    value: 1
+    value: 2
     tags: []
     deprecation_message: ''
   - name: Strict
     summary: ''
-    value: 2
+    value: 3
     tags: []
     deprecation_message: ''

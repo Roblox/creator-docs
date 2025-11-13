@@ -10,9 +10,8 @@
     },
     "type": {
       "description": "the type of the API (class, datatype, enum, global, library). Automated.",
-      "enum": [
-        "datatype"
-      ]
+      "type": "string",
+      "enum": ["datatype"]
     },
     "summary": {
       "$comment": "Summary of the data type to appear in Script Editor Autocomplete.",
@@ -88,7 +87,8 @@
           "description",
           "parameters",
           "code_samples"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "constants": {
@@ -132,12 +132,8 @@
             "type": "string"
           }
         },
-        "required": [
-          "name",
-          "summary",
-          "description",
-          "code_samples"
-        ]
+        "required": ["name", "summary", "description", "code_samples"],
+        "additionalProperties": false
       }
     },
     "properties": {
@@ -203,7 +199,8 @@
           "description",
           "code_samples",
           "deprecation_message"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "methods": {
@@ -257,7 +254,8 @@
           "parameters",
           "returns",
           "deprecation_message"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "functions": {
@@ -310,7 +308,8 @@
           "parameters",
           "returns",
           "code_samples"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "math_operations": {
@@ -370,15 +369,12 @@
           "type_b",
           "return_type",
           "code_samples"
-        ]
+        ],
+        "additionalProperties": false
       }
     }
   },
-  "required": [
-    "summary",
-    "description",
-    "code_samples"
-  ],
+  "required": ["summary", "description", "code_samples"],
   "additionalProperties": {},
   "definitions": {
     "__schema0": {
@@ -386,6 +382,7 @@
       "description": "Tags for this item, such as Deprecated. String list. Automated.",
       "type": "array",
       "items": {
+        "type": "string",
         "enum": [
           "NotCreatable",
           "NotBrowsable",
@@ -442,11 +439,8 @@
             "type": "string"
           }
         },
-        "required": [
-          "name",
-          "type",
-          "summary"
-        ]
+        "required": ["name", "type", "summary"],
+        "additionalProperties": false
       }
     },
     "__schema2": {
@@ -465,10 +459,8 @@
             "type": "string"
           }
         },
-        "required": [
-          "type",
-          "summary"
-        ]
+        "required": ["type", "summary"],
+        "additionalProperties": false
       }
     }
   }
