@@ -66,10 +66,6 @@ Your Extended Services account can be in one of the following statuses:
 
 ## Enable a service
 
-<Alert severity="warning">
-  Extended Services is currently only available for the [Memory stores service](./memory-stores/index.md).
-</Alert>
-
 To enable a service:
 
 1. Go to **Extended Services**.
