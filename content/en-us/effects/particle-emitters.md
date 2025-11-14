@@ -393,23 +393,6 @@ Particle flipbook textures let you animate a particle's texture over its lifetim
 
 <video src="../assets/lighting-and-effects/particle-emitter/Flipbook.mp4" controls width="800" alt="Flipbook looping over the four particles in its texture"></video>
 
-To use particle flipbooks, the texture's dimensions must be divisible by the number of frames in the layout grid. If the texture's dimensions are not compatible with the layout grid size, a warning appears next to the `Class.ParticleEmitter.FlipbookLayout|FlipbookLayout` property in the [Properties](../studio/properties.md) window.
-
-<GridContainer numColumns="2">
-	<figure>
-		<Alert severity="success">
-		<AlertTitle style={{paddingBottom: '8px'}}>Compatible flipbook texture size</AlertTitle>
-		An example compatible texture is 1024&times;1024 in size with a `Enum.ParticleFlipbookLayout.Grid4x4|Grid4x4` layout, since the texture's dimensions are divisible by 4 and each frame becomes 256&times;256. Similarly, a 1024&times;512 texture with a custom layout of 8&times;4 is compatible because 1024 is divisible by 8 and 512 is divisible by 4.
-		</Alert>
-	</figure>
-	<figure>
-		<Alert severity="error">
-		<AlertTitle style={{paddingBottom: '8px'}}>Incompatible flipbook texture size</AlertTitle>
-		An example incompatible texture is 100&times;100 in size with a `Enum.ParticleFlipbookLayout.Grid8x8|Grid8x8` layout, since the texture's dimensions are not evenly divisible by 8 and the frames cannot be divided evenly. Similarly, a 1024&times;1024 texture with a custom layout of 10&times;10 is incompatible because 1024 is not evenly divisible by 10.
-		</Alert>
-	</figure>
-</GridContainer>
-
 The flipbook texture can have a frame layout of 2×2, 4×4, 8×8, or custom. For example, the following 1024×1024 image has an 8×8 layout, so it's suitable for a 64‑frame animation.
 
 <img src="../assets/lighting-and-effects/particle-emitter/8x8-Explosion.png" width="512" alt="Sample texture for particle flipbooks" />
@@ -424,11 +407,11 @@ Features with custom textures such as flipbooks cost memory to render. If you us
 
 Once you've specified a valid flipbook [texture](#texture) for the emitter's `Class.ParticleEmitter.Texture|Texture` property, the `Class.ParticleEmitter.FlipbookLayout|FlipbookLayout` property determines the layout of the texture. It can be any value of the `Enum.ParticleFlipbookLayout` enum:
 
-- **None** &mdash; Disable flipbook features and use the texture as a single static texture over the particle's lifetime.
-- **Grid2x2** &mdash; 2&times;2 frames for a 4-frame animation.
-- **Grid4x4** &mdash; 4&times;4 frames for a 16-frame animation.
-- **Grid8x8** &mdash; 8&times;8 frames for a 64-frame animation.
-- **Custom** &mdash; A custom grid size defined by `Class.ParticleEmitter.FlipbookSizeX|FlipbookSizeX` and `Class.ParticleEmitter.FlipbookSizeY|FlipbookSizeY`.
+- `Enum.ParticleFlipbookLayout|None` &mdash; Disable flipbook features and use the texture as a single static texture over the particle's lifetime.
+- `Enum.ParticleFlipbookLayout|Grid2x2` &mdash; 2&times;2 frames for a 4-frame animation.
+- `Enum.ParticleFlipbookLayout|Grid4x4` &mdash; 4&times;4 frames for a 16-frame animation.
+- `Enum.ParticleFlipbookLayout|Grid8x8` &mdash; 8&times;8 frames for a 64-frame animation.
+- `Enum.ParticleFlipbookLayout|Custom` &mdash; A custom grid size defined by `Class.ParticleEmitter.FlipbookSizeX|FlipbookSizeX` and `Class.ParticleEmitter.FlipbookSizeY|FlipbookSizeY`.
 
 To further customize the flipbook behavior, you can adjust the following properties:
 

@@ -11,6 +11,10 @@ You can use up to three **custom fields** to filter your [economy](./economy-eve
 
 The `customFields` parameter is a dictionary that lets you send up to three custom values using the provided `Enum.AnalyticsCustomFieldKeys` as keys by accessing them as `Enum.AnalyticsCustomFieldKeys.CustomField{01, 02, 03}.Name`. Anything other than `CustomField01.Name`, `CustomField02.Name`, and `CustomField03.Name` is ignored. You can have up to 8,000 unique combinations of values across the three custom fields.
 
+<Alert severity="info">
+The **values** assigned to custom fields must be **strings**. If you need to log another data type like a boolean or number, pass it in string format.
+</Alert>
+
 Using a fantasy-related experience as an example, you can track an economy event regarding equipment type, player class, and level with the following:
 
 ```lua title="Tracking Custom Fields"

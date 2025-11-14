@@ -182,7 +182,7 @@ The [Output](../studio/output.md) window, accessible from Studio's **Window** me
 
 The **Command Bar**, accessible from Studio's **Script** tab toolbar or the **Window**&nbsp;⟩ **Script** menu, lets you execute Luau code outside of scripts. To quickly jump to the command bar at any time, press <kbd>Ctrl</kbd><kbd>9</kbd> (Windows) or <kbd>⌘</kbd><kbd>9</kbd> (Mac).
 
-<BetaAlert betaName="Advanced Command Bar" leadIn="Most of the features outlined below are in beta and must be enabled through " leadOut="." components={props.components} />
+<BetaAlert betaName="Multi-line Command Bar" leadIn="Most of the features outlined below are in beta and must be enabled through " leadOut="." components={props.components} />
 
 <img src="../assets/studio/general/Command-Bar.png" width="840" />
 

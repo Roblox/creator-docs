@@ -3,13 +3,7 @@ title: Text chat overview
 description: TextChatService lets players communicate with each other using text-based messages in live sessions.
 ---
 
-Roblox offers text-based messaging between players in live sessions through `Class.TextChatService`. This service has its standard functionality, but also provides a set of methods and events for extending and customizing chat, such as delivering messages based on [customized requirements](#conditionally-deliver-messages), adding special permissions or moderation to specific players, and creating [custom commands](./examples/custom-text-chat-commands.md) to execute specific actions.
-
-## Top-level configuration
-
-`Class.TextChatService` is a singleton class is responsible for managing the overall chat system, including handling chat message filtering, moderation, and user permissions. Use properties like `Class.TextChatService.CreateDefaultTextChannels|CreateDefaultTextChannels` and `Class.TextChatService.CreateDefaultCommands|CreateDefaultCommands` to enable or disable default chat channels and commands, which `Class.TextChatService` creates at runtime.
-
-![Default chat channels and commands at runtime.](../assets/players/in-experience-text-chat/chat-channel-command.png)
+Roblox offers text-based messaging between players in live sessions through `Class.TextChatService`, a singleton class responsible for managing the overall chat system, including chat message filtering, moderation, and user permissions. This service has its standard functionality and also provides a set of methods and events for extending and customizing chat, such as delivering messages based on [customized requirements](#conditionally-deliver-messages), adding special permissions or moderation to specific players, and creating [custom commands](./examples/custom-text-chat-commands.md) to execute specific actions.
 
 ## UI configuration
 
