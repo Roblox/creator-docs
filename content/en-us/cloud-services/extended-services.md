@@ -65,6 +65,7 @@ Your Extended Services account can be in one of the following statuses:
 </table>
 
 ## Enable a service
+
 To enable a service:
 
 1. Go to **Extended Services**.
