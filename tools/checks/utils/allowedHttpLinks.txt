@@ -136,6 +136,7 @@ https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/d
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/datastores-api/v1.json
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/messaging-service/v1.json
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/universes-api/v1.json
+https://github.com/Roblox/data-stores-batch-processor-cli
 https://github.com/Roblox/roact/
 https://github.com/Roblox/roblox-blender-plugin
 https://github.com/OpenAPITools/openapi-generator
