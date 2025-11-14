@@ -40015,7 +40015,11 @@
                 "AcceptCommerceProductBundlingFee",
                 "SetCommerceProductInactive",
                 "ConnectMerchant",
-                "DisconnectMerchant"
+                "DisconnectMerchant",
+                "JoinGroup",
+                "LeaveGroup",
+                "UpdateGroupIcon",
+                "UpdateGroupCoverPhoto"
               ]
             }
           },
@@ -40202,7 +40206,11 @@
                 "AcceptCommerceProductBundlingFee",
                 "SetCommerceProductInactive",
                 "ConnectMerchant",
-                "DisconnectMerchant"
+                "DisconnectMerchant",
+                "JoinGroup",
+                "LeaveGroup",
+                "UpdateGroupIcon",
+                "UpdateGroupCoverPhoto"
               ]
             }
           },
@@ -66583,6 +66591,9 @@
           },
           "passkeyRegistrationSucceeded": {
             "type": "boolean"
+          },
+          "shouldAutoLoginFromRecovery": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -66755,7 +66766,7 @@
         "properties": {
           "code": {
             "format": "int32",
-            "description": " ['ValidPassword' = 0, 'WeakPasswordError' = 1, 'ShortPasswordError' = 2, 'PasswordSameAsUsernameError' = 3, 'ForbiddenPasswordError' = 4, 'DumbStringsError' = 5]",
+            "description": " ['ValidPassword' = 0, 'WeakPasswordError' = 1, 'PasswordLengthError' = 2, 'PasswordSameAsUsernameError' = 3, 'ForbiddenPasswordError' = 4, 'DumbStringsError' = 5]",
             "enum": [0, 1, 2, 3, 4, 5],
             "type": "integer"
           },
@@ -69437,7 +69448,7 @@
               24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40,
               41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
               59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
-              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87
+              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90
             ],
             "type": "integer"
           },
@@ -69612,7 +69623,7 @@
               24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40,
               41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
               59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
-              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87
+              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90
             ],
             "type": "integer"
           },
@@ -74388,6 +74399,10 @@
           },
           "genre_l2": {
             "description": "The game subgenre from experience-genres-service",
+            "type": "string"
+          },
+          "untranslated_genre_l1": {
+            "description": "The game genre from experience-genres-service untranslated",
             "type": "string"
           },
           "isAllGenre": {

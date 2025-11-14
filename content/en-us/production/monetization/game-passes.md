@@ -201,6 +201,41 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
+## Promote a pass
+
+<Alert severity="info">
+Promoted passes are given to users for free.
+</Alert>
+
+To help more users discover your experience, you can opt-in to have your passes featured on Roblox's [Buy Robux](https://www.roblox.com/upgrades/robux) page. Opting-in to promote your passes can help increase the time and Robux users spend in your experience. There is no limit to the number of passes you can promote.
+
+Users are shown passes that are relevant to their gameplay history and engagement on the platform. They are not shown passes that they already own.
+
+<img src="../../assets/monetization/game-passes/PromotedPass.png" width="60%" />
+
+When users purchase an eligible Robux package, they receive the promoted pass and are prompted to claim their pass by joining your experience.
+
+<img src="../../assets/monetization/game-passes/PromotedPass2.png" width="60%" />
+
+<Alert severity="info">
+For best results, we recommend that you create a unique pass specifically for the **Buy Robux** page.
+</Alert>
+
+To opt-in to promote one of your passes:
+
+1. Go to **Monetization** ⟩ **Passes**.
+2. Select the pass you want to promote.
+3. Select **Promotions**.
+4. Enable **Include this item in the bonus pool**.
+5. Click **Save Changes**. The pass is shown to relevant users in the **Buy Robux** page.
+
+The promoted pass:
+
+- Can be off-sale or on-sale. If they're on-sale, their Robux value must be greater than 49 Robux and less than 801 Robux.
+- Must include a thumbnail.
+- Cannot grant [paid random items](./virtual-items.md#randomized-virtual-items).
+- Must comply with the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
+
 ## Pass analytics
 
 Use pass analytics to analyze the success of individual passes, identify trends, and forecast potential future earnings.
@@ -210,6 +245,8 @@ With analytics, you can:
 - View your top passes over a selected time period.
 - Showcase up to eight top-selling items on a time-series graph to analyze overall sales and net revenue.
 - Monitor your catalog and sort items by sales and net revenue.
+- View how many passes were acquired by users through promotion on the **Buy Robux** page.
+- View how many users joined your experience after acquiring the pass through the **Buy Robux** page.
 
 To access pass analytics:
 

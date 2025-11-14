@@ -28,7 +28,9 @@ To access the Data Stores Manager:
 <br/>
 <br/>
 
-The **Summary** section of the Data Stores Manager page includes the **Total Size** and the **Storage Limit** of your data stores. The Total Size is calculated by adding the number of bytes consumed by all existing keys in your experience, and the Storage Limit is calculated based on your experience's lifetime user count. For more information about storage limits, see [Limits](./error-codes-and-limits.md#limits).
+The **Summary** section of the Data Stores Manager page includes the **Total Size** and the **Storage Limit** of your data stores. Total Size is calculated by adding the number of bytes consumed by all existing keys in your experience, and Storage Limit is calculated based on your experience's lifetime user count. For more information about storage limits, see [Limits](./error-codes-and-limits.md#limits).
+
+If your Total Size exceeds your Storage Limit, your **Est. Monthly Costs** will populate in your Summary and show an estimation of the impact of the usage that has gone over your quota. For tips on how to reduce your storage consumption, see [Best practices](./best-practices.md).
 
 ## View data stores and keys
 
@@ -41,10 +43,10 @@ The **Data Stores** list displays the name, size, and number of keys for all dat
 To further drill down into each specific data store, you can:
 
 - Select a data store from the data store list to display a list of all keys in that data store.
-- Enter a prefix in the search bar to filter the list of keys.
-- Toggle **Display scopes** to view the scope before each key name.
+- Enter a prefix in the search bar to filter the list of keys. The prefix must start with the scope name.
 - Select a key entry to display that key's value, metadata, version history, status, and when it was last updated.
-- Select a key entry, select a version under **Version History**, and click **Compare Version** to compare the current key entry version with the version you selected.
+- Select both a key entry and a version, and click **Compare versions** to compare the current key entry version with the version you selected.
+- Select a previous version of a key and click **Revert** to go back to that version. You must have Edit permissions to do this. Reverting to a previous version conditionally updates the list and writes a new version with the value of the version you have previously selected.
 
 <img src="./../../assets/data/data-store/Data-Stores-Manager-Compare-Versions.png" alt="Comparison of two key entries in a data store." />
 

@@ -9,8 +9,8 @@ Extended Services is a solution that lets you manage service usage and payment b
 
 To use Extended Services, your Roblox account must:
 
-- Be [ID-verified](../production/publishing/account-verification.md#verify-through-government-id).
-- Be located in the United States.
+- Be [ID-verified](../production/publishing/account-verification.md#verify-through-government-id) and 18+ years old.
+- Be located in a [supported country](#supported-countries).
 - Have a valid email address associated with it.
 - Not currently be banned or moderated.
 - Accept and comply with the [terms of service](https://en.help.roblox.com/hc/articles/37967848292500).
@@ -109,15 +109,151 @@ See the following table for Extended Services pricing.
   </tr>
   <tr>
     <td style={{border: 'none'}}>Request units</td>
-    <td style={{border: 'none'}}>1000 + (CCU x 120) request units</td>
+    <td style={{border: 'none'}}>1000 + (CCU x 120) request units per minute</td>
     <td style={{border: 'none'}}>$0.003 / 1M request units</td>
   </tr>
   <tr>
     <td style={{paddingBottom: '24px'}}>Storage</td>
     <td style={{paddingBottom: '24px'}}>64KB + (CCU x 1.2KB)</td>
-    <td style={{paddingBottom: '24px'}}>$0.10 / GB Hours&sup1;</td>
+    <td style={{paddingBottom: '24px'}}>$0.10 / GB per Hour&sup1;</td>
+  </tr>
+    <tr>
+    <td style={{border: 'none'}}><a href="https://create.roblox.com/docs/audio/objects#text-to-speech" style={{color: 'inherit', textDecoration: 'underline'}}><strong>Text-to-speech</strong></a></td>
+  </tr>
+  <tr>
+    <td style={{paddingBottom: '24px'}}>Requests</td>
+    <td style={{paddingBottom: '24px'}}>1 + (CCU x 6) requests per minute</td>
+    <td style={{paddingBottom: '24px'}}>$5.00 / 1M requests</td>
+  </tr>
+    <tr>
+    <td style={{border: 'none'}}><a href="https://create.roblox.com/docs/cloud-services/data-stores" style={{color: 'inherit', textDecoration: 'underline'}}><strong>Access to standard data stores</strong> (coming soon)</a></td>
+  </tr>
+  <tr>
+    <td style={{border: 'none'}}>Get</td>
+    <td style={{border: 'none'}}>250 + (CCU * 40) requests per minute</td>
+    <td style={{border: 'none'}}>$0.08 / 1M requests</td>
+  </tr>
+  <tr>
+    <td style={{border: 'none'}}>Set</td>
+    <td style={{border: 'none'}}>250 + (CCU * 20) requests per minute</td>
+    <td style={{border: 'none'}}>$0.80 / 1M requests</td>
+  </tr>
+    <tr>
+    <td style={{border: 'none'}}>List</td>
+    <td style={{border: 'none'}}>10 + (CCU * 2) requests per minute</td>
+    <td style={{border: 'none'}}>$0.60 / 1M requests</td>
+  </tr>
+    <tr>
+    <td style={{border: 'none'}}>Remove</td>
+    <td style={{border: 'none'}}>100 + (CCU * 40) requests per minute</td>
+    <td style={{border: 'none'}}>$0.80 / 1M requests</td>
+  </tr>
+  <tr>
+    <td style={{border: 'none'}}><a href="https://create.roblox.com/docs/cloud-services/data-stores" style={{color: 'inherit', textDecoration: 'underline'}}><strong>Access to ordered data stores</strong> (coming soon)</a></td>
+  </tr>
+  <tr>
+    <td style={{border: 'none'}}>Get</td>
+    <td style={{border: 'none'}}>250 + (CCU * 40) requests per minute</td>
+    <td style={{border: 'none'}}>$0.08 / 1M requests</td>
+  </tr>
+  <tr>
+    <td style={{border: 'none'}}>Set</td>
+    <td style={{border: 'none'}}>250 + (CCU * 20) requests per minute</td>
+    <td style={{border: 'none'}}>$0.25 / 1M requests</td>
+  </tr>
+    <tr>
+    <td style={{border: 'none'}}>GetSorted</td>
+    <td style={{border: 'none'}}>100 + (CCU * 2) requests per minute</td>
+    <td style={{border: 'none'}}>$0.32 / 1M requests</td>
+  </tr>
+    <tr>
+    <td style={{border: 'none'}}>Remove</td>
+    <td style={{border: 'none'}}>100 + (CCU * 40) requests per minute</td>
+    <td style={{border: 'none'}}>$0.25 / 1M requests</td>
+  </tr>
+  <tr>
+    <td style={{border: 'none'}}><a href="https://create.roblox.com/docs/cloud-services/data-stores" style={{color: 'inherit', textDecoration: 'underline'}}><strong>Data store storage</strong> (coming soon)</a></td>
+  </tr>
+  <tr>
+    <td style={{paddingBottom: '24px'}}>Storage</td>
+    <td style={{paddingBottom: '24px'}}>100 MB + (1MB * Lifetime Players) GB per Month</td>
+    <td style={{paddingBottom: '24px'}}>$0.12 / GB per Month</td>
   </tr>
 </tbody>
 </table>
 
-<figcaption>&sup1; GB Hours = the storage consumption multiplied by the amount of time. For example, 100GB Hours might equate to "100GB x 1 hour" or "200GB x 0.5 hours".</figcaption>
+<figcaption>&sup1; GB per Hour = the storage consumption multiplied by the amount of time. For example, 100GB Hours might equate to "100GB x 1 hour" or "200GB x 0.5 hours".</figcaption>
+
+## Supported countries
+
+Extended Services is available in the following countries.
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3">Country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Australia</td>
+      <td>Germany</td>
+      <td>Poland</td>
+    </tr>
+    <tr>
+      <td>Austria</td>
+      <td>Hong Kong</td>
+      <td>Portugal</td>
+    </tr>
+    <tr>
+      <td>Belgium</td>
+      <td>Hungary</td>
+      <td>Romania</td>
+    </tr>
+    <tr>
+      <td>Brazil</td>
+      <td>Ireland</td>
+      <td>Singapore</td>
+    </tr>
+    <tr>
+      <td>Bulgaria</td>
+      <td>Italy</td>
+      <td>Slovakia</td>
+    </tr>
+    <tr>
+      <td>Croatia</td>
+      <td>Latvia</td>
+      <td>Slovenia</td>
+    </tr>
+    <tr>
+      <td>Cyprus</td>
+      <td>Lithuania</td>
+      <td>South Africa</td>
+    </tr>
+    <tr>
+      <td>Czechia</td>
+      <td>Malta</td>
+      <td>Spain</td>
+    </tr>
+    <tr>
+      <td>Denmark</td>
+      <td>Mexico</td>
+      <td>Sweden</td>
+    </tr>
+    <tr>
+      <td>Estonia</td>
+      <td>Netherlands</td>
+      <td>Switzerland</td>
+    </tr>
+    <tr>
+      <td>Finland</td>
+      <td>New Zealand</td>
+      <td>Thailand</td>
+    </tr>
+    <tr>
+      <td>France</td>
+      <td>Norway</td>
+      <td>United States</td>
+    </tr>
+  </tbody>
+</table>
