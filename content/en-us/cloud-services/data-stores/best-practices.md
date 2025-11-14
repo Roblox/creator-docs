@@ -41,7 +41,7 @@ If your experience exceeds your storage limits, you can:
 
 - **Delete unused data stores.** If you're testing or have temporary stores, deleting them regularly helps maintain healthy storage usage. When you delete a data store, it can take Roblox up to 30 days to process your request.
 - **Delete individual keys.** This is useful when you need to remove temporary items or a certain player's data.
-- **Use the Batch Processor.** In cases when deleting data manually isn't efficient, you can use the Batch Processor or the Open Cloud Data Stores API to delete data in bulk.
+- **Use the Batch Processor.** In cases when deleting data manually isn't efficient, you can use the [Batch Processor](https://github.com/Roblox/data-stores-batch-processor-cli) or the Open Cloud Data Stores API to delete data in bulk.
 
 ### Use data store versions instead of new keys
 
