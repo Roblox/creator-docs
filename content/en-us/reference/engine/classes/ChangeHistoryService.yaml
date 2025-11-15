@@ -13,7 +13,7 @@ description: |
   to undo and redo changes that their plugins make to experiences by recording.
   Before making changes, a plugin should call
   `Class.ChangeHistoryService:TryBeginRecording()`, and remember the string identifier
-  it returns. Then after making changes, the Plugin should calls
+  it returns. Then after making changes, the plugin should call
   `Class.ChangeHistoryService:FinishRecording()` with that string identifier and
   `Enum.FinishRecordingOperation` to complete the recording.
 
