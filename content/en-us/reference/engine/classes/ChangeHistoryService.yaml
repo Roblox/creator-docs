@@ -223,7 +223,8 @@ methods:
 
       **This method will return `nil` if it fails to begin a recording**. Recordings
       fail if the plugin already has a recording in progress, or if the user is
-      in a solo playtest. A recording in progress can be ended by calling
+      in a solo playtest. An unintentional recording in progress will not be stopped
+      by restarting the plugin, instead it can be ended by calling
        `Class.ChangeHistoryService.FinishRecording()|FinishRecording()` with
        any string and `Enum.FinishRecordingOperation.Cancel` from the plugin.
 
