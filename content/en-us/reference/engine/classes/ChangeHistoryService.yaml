@@ -221,7 +221,7 @@ methods:
       returned recording identifier to complete the recording and update the
       undo/redo stack.
 
-      This method will return `nil` if it **fails to begin a recording**. Recordings
+      **This method will return `nil` if it fails to begin a recording**. Recordings
       fail if the plugin already has a recording in progress, or if the user is
       in a solo playtest. A recording in progress can be ended by calling
        `Class.ChangeHistoryService.FinishRecording()|FinishRecording()` with
