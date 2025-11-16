@@ -673,11 +673,11 @@ methods:
       gravity vector. The vector is determined by the device's orientation
       relative to the real-world force of gravity. For example:
 
-      - `Datatype.Vector3|Vector3.new(0, 0, -9.18)` if the device is perfectly
+      - `Datatype.Vector3|Vector3.new(0, 0, -1)` if the device is perfectly
         upright (portrait)
-      - `Datatype.Vector3|Vector3.new(9.81, 0, 0)` if the left side of the
+      - `Datatype.Vector3|Vector3.new(1, 0, 0)` if the left side of the
         device is pointing down
-      - `Datatype.Vector3|Vector3.new(0, -9.81, 0)` if the back of the device is
+      - `Datatype.Vector3|Vector3.new(0, -1, 0)` if the back of the device is
         pointing down
 
       Gravity is only tracked for devices with an enabled gyroscope as queried
