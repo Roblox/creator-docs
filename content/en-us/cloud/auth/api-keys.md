@@ -15,7 +15,7 @@ authenticate to Open Cloud on your behalf.
 ## Create API keys
 
 <Alert severity="warning">
-Group API keys are being deprecated and will not be supported after January 30, 2026. All references to API keys in the text below refer to user-owned keys.
+All references to API keys in the text below refer to user-owned keys.
 </Alert>
 
 You can create and configure API keys to access your resources. An API key's access is determined by the permissions of the user who owns it. This means it can generally access any resource the user has permissions for, including their individual experiences and any [group-owned](../../projects/groups.md) experiences where they have the appropriate role. Some scopes can be restricted to specific experiences, but not all.

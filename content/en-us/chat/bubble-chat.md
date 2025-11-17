@@ -426,7 +426,7 @@ TextChatService.OnBubbleAdded = function(message: TextChatMessage, adornee: Inst
 			uiGradient.Color = ColorSequence.new(Color3.fromRGB(110, 4, 0), Color3.fromRGB(0, 0, 0))
 			uiGradient.Rotation = 90
 			uiGradient.Parent = bubbleProperties
-			
+
 			return bubbleProperties
 		end
 	end
@@ -440,6 +440,10 @@ end
 You might want to display a chat bubble when players haven't sent a message, such as with NPCs. Use the `Class.TextChatService:DisplayBubble` method to manually display a chat bubble.
 
 Customization of these bubbles is the same as the customization of the bubbles that are automatically displayed when Players send messages through TextChannels using the [`Class.TextChatService.OnBubbleAdded` callback](#per-bubble-customization).
+
+<Alert severity="success">
+To generate speech or other text using an LLM, see the `Class.TextGenerator` class.
+</Alert>
 
 ### NPC bubbles
 

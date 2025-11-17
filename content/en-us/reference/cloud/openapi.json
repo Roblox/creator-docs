@@ -41,7 +41,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -113,7 +113,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -211,7 +211,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -1058,7 +1058,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-docs": {
           "category": "Universes and places",
@@ -1141,7 +1141,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -1253,7 +1253,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -1328,7 +1328,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -1443,7 +1443,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -1540,7 +1540,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -1624,7 +1624,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -1700,7 +1700,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -1801,7 +1801,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -1895,7 +1895,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -2017,7 +2017,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -2141,7 +2141,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -2247,7 +2247,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -2340,7 +2340,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -2425,7 +2425,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -2535,7 +2535,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -2638,7 +2638,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -2769,7 +2769,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -2930,7 +2930,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -3090,7 +3090,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -3168,7 +3168,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -3270,7 +3270,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -3383,7 +3383,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -3479,7 +3479,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -3562,7 +3562,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -3637,7 +3637,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -3737,7 +3737,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -3820,7 +3820,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -3942,7 +3942,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -4048,7 +4048,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -4141,7 +4141,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -4226,7 +4226,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -4336,7 +4336,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -4439,7 +4439,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
@@ -4514,7 +4514,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-docs": {
           "category": "Universes and places",
@@ -4606,7 +4606,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -4704,7 +4704,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -4812,7 +4812,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -5010,7 +5010,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -5107,7 +5107,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
@@ -5198,7 +5198,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
@@ -5324,7 +5324,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
@@ -5425,7 +5425,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -5537,7 +5537,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -5679,7 +5679,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -5882,7 +5882,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
@@ -5964,7 +5964,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
@@ -6081,7 +6081,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
@@ -6185,7 +6185,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-rate-limits": {
           "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
@@ -6352,7 +6352,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -6434,7 +6434,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -6582,7 +6582,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -6874,7 +6874,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -6985,7 +6985,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-docs": {
           "category": "Users and groups",
@@ -9111,7 +9111,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/assets#/default/Assets_GetAsset"
@@ -9246,7 +9246,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/assets#/default/Assets_UpdateAsset"
@@ -9510,7 +9510,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/assets#/default/Assets_GetAssetVersion"
@@ -9613,7 +9613,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/assets#/default/listAssetVersions"
@@ -9909,7 +9909,7 @@
         ],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/universes#/default/CrossServerMessaging_Publish"
@@ -46357,7 +46357,8 @@
                 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39,
                 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55,
                 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73,
-                74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87
+                74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89,
+                90
               ]
             }
           },
@@ -47084,14 +47085,14 @@
             "schema": {
               "type": "array",
               "items": {
-                "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87]",
+                "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90]",
                 "enum": [
                   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21,
                   22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38,
                   39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53,
                   54, 55, 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70,
                   71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85,
-                  86, 87
+                  86, 87, 88, 89, 90
                 ]
               }
             }
@@ -59319,7 +59320,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": true
+          "apiKeyWithHttpService": false
         },
         "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
@@ -60690,7 +60691,7 @@
       "get": {
         "tags": ["Universes"],
         "summary": "List Secrets",
-        "description": "Lists all secrets defined for a universe.\nSecret content is not returned for security reasons - only metadata such as ID, domain, creation and update timestamps are included.\n\nOnly the owner of the universe can list secrets. For group-owned universes, only the group owner can list secrets.",
+        "description": "Lists all secrets defined for a universe.\nSecret content is not returned for security reasons - only metadata such as ID, domain, creation and update timestamps are included.\n\nOnly the owner of the universe can list secrets. For group-owned universes, only the group owner or authorized\nmembers can list secrets.",
         "parameters": [
           {
             "name": "universeId",
@@ -60788,7 +60789,7 @@
       "post": {
         "tags": ["Universes"],
         "summary": "Create Secret",
-        "description": "Creates a new secret. A maximum of 500 secrets per universe is allowed.\n\nOnly the owner of the universe can create secrets. For group-owned universes, only the group owner can create secrets.\n\nTo encrypt the secret:\n1. Get the public key using the Get Public Key endpoint\n2. Encrypt your secret using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
+        "description": "Creates a new secret. A maximum of 500 secrets per universe is allowed.\n            \nOnly the owner of the universe can create secrets. For group-owned universes, only the group owner or authorized\nmembers can create secrets.\n            \nTo encrypt the secret:\n1. Get the public key using the Get Public Key endpoint\n2. Encrypt your secret using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
         "parameters": [
           {
             "name": "universeId",
@@ -60889,7 +60890,7 @@
     "/secrets/v1/universes/{universeId}/secrets": {
       "get": {
         "summary": "List Secrets",
-        "description": "Lists all secrets defined for a universe.\nSecret content is not returned for security reasons - only metadata such as ID, domain, creation and update timestamps are included.\n\nOnly the owner of the universe can list secrets. For group-owned universes, only the group owner can list secrets.",
+        "description": "Lists all secrets defined for a universe.\nSecret content is not returned for security reasons - only metadata such as ID, domain, creation and update timestamps are included.\n\nOnly the owner of the universe can list secrets. For group-owned universes, only the group owner or authorized\nmembers can list secrets.",
         "parameters": [
           {
             "name": "universeId",
@@ -60970,7 +60971,7 @@
       },
       "post": {
         "summary": "Create Secret",
-        "description": "Creates a new secret. A maximum of 500 secrets per universe is allowed.\n\nOnly the owner of the universe can create secrets. For group-owned universes, only the group owner can create secrets.\n\nTo encrypt the secret:\n1. Get the public key using the Get Public Key endpoint\n2. Encrypt your secret using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
+        "description": "Creates a new secret. A maximum of 500 secrets per universe is allowed.\n            \nOnly the owner of the universe can create secrets. For group-owned universes, only the group owner or authorized\nmembers can create secrets.\n            \nTo encrypt the secret:\n1. Get the public key using the Get Public Key endpoint\n2. Encrypt your secret using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
         "parameters": [
           {
             "name": "universeId",
@@ -61055,7 +61056,7 @@
     "/secrets/v1/rcc/universes/{universeId}/secrets": {
       "get": {
         "summary": "List Secrets",
-        "description": "Lists all secrets defined for a universe.\nSecret content is not returned for security reasons - only metadata such as ID, domain, creation and update timestamps are included.\n\nOnly the owner of the universe can list secrets. For group-owned universes, only the group owner can list secrets.",
+        "description": "Lists all secrets defined for a universe.\nSecret content is not returned for security reasons - only metadata such as ID, domain, creation and update timestamps are included.\n\nOnly the owner of the universe can list secrets. For group-owned universes, only the group owner or authorized\nmembers can list secrets.",
         "parameters": [
           {
             "name": "universeId",
@@ -61134,7 +61135,7 @@
     "/rcc/cloud/v2/universes/{universeId}/secrets": {
       "get": {
         "summary": "List Secrets",
-        "description": "Lists all secrets defined for a universe.\nSecret content is not returned for security reasons - only metadata such as ID, domain, creation and update timestamps are included.\n\nOnly the owner of the universe can list secrets. For group-owned universes, only the group owner can list secrets.",
+        "description": "Lists all secrets defined for a universe.\nSecret content is not returned for security reasons - only metadata such as ID, domain, creation and update timestamps are included.\n\nOnly the owner of the universe can list secrets. For group-owned universes, only the group owner or authorized\nmembers can list secrets.",
         "parameters": [
           {
             "name": "universeId",
@@ -61214,7 +61215,7 @@
       "delete": {
         "tags": ["Universes"],
         "summary": "Delete Secret",
-        "description": "Permanently deletes a secret from a universe.\n\nOnly the owner of the universe can delete secrets. For group-owned universes, only the group owner can delete secrets.\n\nThis operation is irreversible. Make sure you no longer need the secret before deleting it.",
+        "description": "Permanently deletes a secret from a universe.\n\nOnly the owner of the universe can delete secrets. For group-owned universes, only the group owner or authorized\nmembers can delete secrets.\n\nThis operation is irreversible. Make sure you no longer need the secret before deleting it.",
         "parameters": [
           {
             "name": "universeId",
@@ -61306,7 +61307,7 @@
       "patch": {
         "tags": ["Universes"],
         "summary": "Update Secret",
-        "description": "Updates an existing secret.\n\nOnly the owner of the universe can update secrets. For group-owned universes, only the group owner can update secrets.\n\nOnly the secret content, key_id, and domain can be updated - the secret ID cannot be changed.\n\nTo encrypt the updated secret:\n1. Get the current public key using the GetPublicKey endpoint\n2. Encrypt your new secret content using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
+        "description": "Updates an existing secret.\n\nOnly the owner of the universe can update secrets. For group-owned universes, only the group owner or authorized\nmembers can update secrets.\n\nOnly the secret content, key_id, and domain can be updated - the secret ID cannot be changed.\n\nTo encrypt the updated secret:\n1. Get the current public key using the GetPublicKey endpoint\n2. Encrypt your new secret content using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
         "parameters": [
           {
             "name": "universeId",
@@ -61416,7 +61417,7 @@
     "/secrets/v1/universes/{universeId}/secrets/{secretId}": {
       "delete": {
         "summary": "Delete Secret",
-        "description": "Permanently deletes a secret from a universe.\n\nOnly the owner of the universe can delete secrets. For group-owned universes, only the group owner can delete secrets.\n\nThis operation is irreversible. Make sure you no longer need the secret before deleting it.",
+        "description": "Permanently deletes a secret from a universe.\n\nOnly the owner of the universe can delete secrets. For group-owned universes, only the group owner or authorized\nmembers can delete secrets.\n\nThis operation is irreversible. Make sure you no longer need the secret before deleting it.",
         "parameters": [
           {
             "name": "universeId",
@@ -61491,7 +61492,7 @@
       },
       "patch": {
         "summary": "Update Secret",
-        "description": "Updates an existing secret.\n\nOnly the owner of the universe can update secrets. For group-owned universes, only the group owner can update secrets.\n\nOnly the secret content, key_id, and domain can be updated - the secret ID cannot be changed.\n\nTo encrypt the updated secret:\n1. Get the current public key using the GetPublicKey endpoint\n2. Encrypt your new secret content using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
+        "description": "Updates an existing secret.\n\nOnly the owner of the universe can update secrets. For group-owned universes, only the group owner or authorized\nmembers can update secrets.\n\nOnly the secret content, key_id, and domain can be updated - the secret ID cannot be changed.\n\nTo encrypt the updated secret:\n1. Get the current public key using the GetPublicKey endpoint\n2. Encrypt your new secret content using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
         "parameters": [
           {
             "name": "universeId",
@@ -61586,7 +61587,7 @@
       "get": {
         "tags": ["Universes"],
         "summary": "Get Public Key",
-        "description": "Retrieves the public key for a universe. You need this key to encrypt secret content \nbefore sending it to Roblox.\n\nOnly the owner of the universe can retrieve the public key. For group-owned universes, only the group owner can retrieve the public key.\n\nThe secret id field is static and always returns \"public-key\".\n\nThe returned public key in the secret field is universe-specific and derived from a master key using the universe ID.\nUse this key with LibSodium sealed box encryption to encrypt your secret content before \ncreating or updating secrets.\n\nInclude the key_id from the public key response in the request to create or update a secret.",
+        "description": "Retrieves the public key for a universe. You need this key to encrypt secret content \nbefore sending it to Roblox.\n\nOnly the owner of the universe can retrieve the public key. For group-owned universes, only the group owner or\nauthorized members can retrieve the public key.\n\nThe secret id field is static and always returns \"public-key\".\n\nThe returned public key in the secret field is universe-specific and derived from a master key using the universe ID.\nUse this key with LibSodium sealed box encryption to encrypt your secret content before \ncreating or updating secrets.\n\nInclude the key_id from the public key response in the request to create or update a secret.",
         "parameters": [
           {
             "name": "universeId",
@@ -61667,7 +61668,7 @@
     "/secrets/v1/universes/{universeId}/secrets/public-key": {
       "get": {
         "summary": "Get Public Key",
-        "description": "Retrieves the public key for a universe. You need this key to encrypt secret content \nbefore sending it to Roblox.\n\nOnly the owner of the universe can retrieve the public key. For group-owned universes, only the group owner can retrieve the public key.\n\nThe secret id field is static and always returns \"public-key\".\n\nThe returned public key in the secret field is universe-specific and derived from a master key using the universe ID.\nUse this key with LibSodium sealed box encryption to encrypt your secret content before \ncreating or updating secrets.\n\nInclude the key_id from the public key response in the request to create or update a secret.",
+        "description": "Retrieves the public key for a universe. You need this key to encrypt secret content \nbefore sending it to Roblox.\n\nOnly the owner of the universe can retrieve the public key. For group-owned universes, only the group owner or\nauthorized members can retrieve the public key.\n\nThe secret id field is static and always returns \"public-key\".\n\nThe returned public key in the secret field is universe-specific and derived from a master key using the universe ID.\nUse this key with LibSodium sealed box encryption to encrypt your secret content before \ncreating or updating secrets.\n\nInclude the key_id from the public key response in the request to create or update a secret.",
         "parameters": [
           {
             "name": "universeId",
@@ -77902,13 +77903,13 @@
           },
           "assetType": {
             "format": "int32",
-            "description": "The asset type id of asset with id Roblox.Inventory.Api.V2.UserAssetItemModelV2.AssetId. ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87]",
+            "description": "The asset type id of asset with id Roblox.Inventory.Api.V2.UserAssetItemModelV2.AssetId. ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90]",
             "enum": [
               1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21, 22,
               24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40,
               41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
               59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
-              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87
+              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90
             ],
             "type": "integer"
           },

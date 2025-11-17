@@ -1142,7 +1142,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Actor
+      - type: Actor?
         summary: |
           The `Class.Actor` found.
     tags: []

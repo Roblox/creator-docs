@@ -31,6 +31,11 @@ methods:
       save it to their **Captures** gallery within the experience's main menu.
       Instead, a temporary `contentId` is created to identify the new capture.
 
+      Note that any screenshots taken by this method will not be accessible via
+      `Class.CaptureService:ReadCapturesFromGalleryAsync()|ReadCapturesFromGalleryAsync()`
+      or be uploadable via
+      `Class.CaptureService:UploadCaptureAsync()|UploadCaptureAsync()`.
+
       The `onCaptureReady` callback can be used to prompt the user to save or
       share the screenshot:
 
@@ -261,13 +266,18 @@ methods:
     summary: ''
     description: |
       This client-side function returns a paginated list of captures from the
-      user's gallery as a `Class.CapturesPages` object, which can be used to
-      iterate through the captures. The results can be filtered by capture type
-      with the `captureTypeFilters` parameter. If this parameter isn't provided,
-      the function returns all captures.
+      user's gallery as a `Class.CapturesPages` object sorted
+      reverse-chronologically, which can be used to iterate through the
+      captures. The results can be filtered by capture type with the
+      `captureTypeFilters` parameter. If this parameter isn't provided, the
+      function returns all captures.
 
-      Note: At the moment, this function will only return captures taken the
-      experience where it is called.
+      Currently, this method will only return captures taken in the experience
+      where it is called. Additionally, captures taken with
+      `Class.CaptureService:CaptureScreenshot()|CaptureScreenshot()` and
+      subsequently saved with
+      `Class.CaptureService:PromptSaveCapturesToGallery()|PromptSaveCapturesToGallery()`
+      will not be returned by this method.
     code_samples:
       - ReadCapturesFromGalleryAsync-example
     parameters:
