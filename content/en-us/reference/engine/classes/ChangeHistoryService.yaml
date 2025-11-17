@@ -11,10 +11,11 @@ summary: |
 description: |
   Plugin developers **must** use `Class.ChangeHistoryService` to tell Studio how
   to undo and redo changes that their plugins make to experiences by recording.
-  Before making changes, a plugin calls
-  `Class.ChangeHistoryService:TryBeginRecording()`, remembering the identifier
-  it assigns, then after making changes, the Plugin calls
-  `Class.ChangeHistoryService:FinishRecording()` to complete the recording.
+  Before making changes, a plugin should call
+  `Class.ChangeHistoryService:TryBeginRecording()`, and remember the string identifier
+  it returns. Then after making changes, the plugin should call
+  `Class.ChangeHistoryService:FinishRecording()` with that string identifier and
+  `Enum.FinishRecordingOperation` to complete the recording.
 
   Plugins may also programmatically invoke an undo or redo through
   `Class.ChangeHistoryService:Undo()` or `Class.ChangeHistoryService:Redo()`.
@@ -43,10 +44,14 @@ methods:
         type: string
         default:
         summary: |
-          Identifies the recording from the previous call to
+          This is the string returned by a previous call to
+          `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()`,
+          and is used to identify which recording to finish. This identifier
+          is **not the same** as the *name* of the action passed to
           `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()`.
+
           If the operation is
-          `Enum.ChangeHistoryService.FinishRecordingOperation.Cancel`, this
+          `Enum.FinishRecordingOperation.Cancel`, this
           value is ignored, and the recording is determined by context.
       - name: operation
         type: FinishRecordingOperation
@@ -211,14 +216,17 @@ methods:
       **must** call it prior to making changes to avoid future warnings or
       errors.
 
-      When the recording is completed, you call
+      When the recording is completed, you should call
       `Class.ChangeHistoryService.FinishRecording()|FinishRecording()` with the
       returned recording identifier to complete the recording and update the
       undo/redo stack.
 
-      This method will return `nil` if it fails to begin a recording. Recordings
+      **This method will return `nil` if it fails to begin a recording**. Recordings
       fail if the plugin already has a recording in progress, or if the user is
-      in a solo playtest.
+      in a solo playtest. An unintentional recording in progress will not be stopped
+      by restarting the plugin, instead it can be ended by calling
+       `Class.ChangeHistoryService.FinishRecording()|FinishRecording()` with
+       any string and `Enum.FinishRecordingOperation.Cancel` from the plugin.
 
       You may use
       `Class.ChangeHistoryService.IsRecordingInProgress()|IsRecordingInProgress()`
