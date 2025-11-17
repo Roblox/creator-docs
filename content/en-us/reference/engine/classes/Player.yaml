@@ -1403,6 +1403,9 @@ methods:
       called with the given group ID. The caching behavior is on a per-peer
       basis: a server does not share the same cache as a client.
 
+      When a player joins a group in-experience due to a call to
+      `Class.GroupService:PromptJoinAsync()`, any cached value for that player
+      will be cleared on the client where the prompt was shown.
     code_samples:
       - Player-GetRankInGroup1
     parameters:

@@ -2368,6 +2368,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/ReflectionMetadataYieldFunctions.yaml
                 ignoreTranslation: true
+              - title: ReflectionService
+                path: /reference/engine/classes/ReflectionService
+                type: engineapi
+                source: /reference/engine/classes/ReflectionService.yaml
+                ignoreTranslation: true
               - title: RemoteDebuggerServer
                 path: /reference/engine/classes/RemoteDebuggerServer
                 type: engineapi
