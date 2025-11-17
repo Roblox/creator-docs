@@ -80,7 +80,7 @@ You can specify languages by their language code or locale ID. Refer to the foll
     <td>nl-nl</td>
   </tr>
   <tr>
-    <td>English (English)</td>
+    <td>English</td>
     <td>en</td>
     <td>en-us</td>
   </tr>
@@ -100,7 +100,7 @@ You can specify languages by their language code or locale ID. Refer to the foll
     <td>fi-fi</td>
   </tr>
   <tr>
-    <td>French (Français)</td>
+    <td>French</td>
     <td>fr</td>
     <td>fr-fr</td>
   </tr>
@@ -180,7 +180,7 @@ You can specify languages by their language code or locale ID. Refer to the foll
     <td>pl-pl</td>
   </tr>
   <tr>
-    <td>Portuguese (Português)</td>
+    <td>Portuguese</td>
     <td>pt</td>
     <td>pt-br</td>
   </tr>
@@ -215,7 +215,7 @@ You can specify languages by their language code or locale ID. Refer to the foll
     <td>sl-sl</td>
   </tr>
   <tr>
-    <td>Spanish (Español)</td>
+    <td>Spanish</td>
     <td>es</td>
     <td>es-es</td>
   </tr>
