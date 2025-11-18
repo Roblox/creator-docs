@@ -48,12 +48,13 @@ description: |
 
   #### Limitations
 
-  As a performance limit, Studio only displays 31 simultaneous `Class.Highlight`
-  instances on the client at a time. If you exceed this limit, the additional
-  instances are silently ignored. Note that while a `Class.Highlight` with
-  `Class.Highlight.Enabled|Enabled` set to `false` doesn't display, it still
-  takes one of the 31 available slots, so if you plan to permanently disable a
-  `Class.Highlight` instance, it's best to delete it rather than disable it.
+  As a performance limit, Studio only displays 255 simultaneous
+  `Class.Highlight` instances on the client at a time. If you exceed this limit,
+  the additional instances are silently ignored. Note that while a
+  `Class.Highlight` with `Class.Highlight.Enabled|Enabled` set to `false`
+  doesn't display, it still takes one of the 255 available slots, so if you plan
+  to permanently disable a `Class.Highlight` instance, it's best to delete it
+  rather than disable it.
 code_samples: []
 inherits:
   - Instance
@@ -139,7 +140,7 @@ properties:
     description: |
       Sets whether or not the highlight is enabled. This does not impact
       performance, but disabled `Class.Highlight` instances will still take one
-      of the 31 available slots. If you plan to permanently disable a
+      of the 255 available slots. If you plan to permanently disable a
       `Class.Highlight` instance, it's best to delete it rather than disable it.
     code_samples: []
     type: boolean

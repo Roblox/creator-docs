@@ -236,6 +236,7 @@ descendants:
   - ProximityPrompt
   - ProximityPromptService
   - PublishService
+  - ReflectionService
   - RemoteDebuggerServer
   - RemoteFunction
   - RenderingTest
@@ -1142,7 +1143,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Actor
+      - type: Actor?
         summary: |
           The `Class.Actor` found.
     tags: []

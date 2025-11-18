@@ -8,8 +8,13 @@ memory_category: Instances
 summary: |
   A container object for a single boolean value.
 description: |
-  An instance which is used to hold a boolean value. The value can be used for
-  many things, including to communicate between scripts.
+  Stores a single boolean value. The value can be used for many things,
+  including to communicate between scripts.
+
+  Like all `Class.ValueBase` objects, this single value is stored in the
+  `Class.BoolValue.Value|Value` property. The `Changed` event fires with the new
+  value being stored in the object, instead of a string representing the
+  property being changed.
 code_samples: []
 inherits:
   - ValueBase
@@ -39,21 +44,14 @@ methods: []
 events:
   - name: BoolValue.Changed
     summary: |
-      Fired whenever the `Class.BoolValue.Value` of the BoolValue is changed.
+      Fires whenever the `Class.BoolValue.Value` is changed.
     description: |
-      Fired whenever the `Class.BoolValue.Value` of the `Class.BoolValue` is
-      changed. It will run with the new value being stored in the argument
-      object, instead of a string representing the property being changed.
+      Fires whenever the `Class.BoolValue.Value` changes. It runs with the new
+      value being stored in the argument object, instead of a string
+      representing the property being changed.
 
-      This event, like other changed events, can be used to track when an
-      BoolValue changes and to track the different values that it may change to.
-
-      For instance, this may be useful in games that rely on BoolValues to track
-      game states and values, such as switch or enabled states.
-
-      Equivalent changed events exist for similar objects, such as
-      `Class.NumberValue` and `Class.StringValue`, depending on what object type
-      best suits the need.
+      Listening for the `Changed` signal can be useful in games that use
+      `BoolValues` to track switch or enabled states.
     code_samples:
       - BoolValue-Changed1
     parameters:

@@ -6,7 +6,7 @@ description: Reimport allows you to update an existing custom mesh and textures 
 <Alert severity = 'info'>
 Reimport is currently in beta. Enable the Reimport beta by navigating to **File** > **Beta Features** and enable **Reimport**.
 
-For latest information on updates and limitations, see the DevForum Announcement.
+For latest information on updates and limitations, see the [DevForum Announcement](https://devforum.roblox.com/t/studio-beta-reimport-one-click-updates-for-imported-3d-content/4068650).
 </Alert>
 
 **Reimport** allows you to update existing custom models and their textures from an external 3D file. Unlike regular [import](./3d-importer.md#import-files), which creates brand new instances, the reimport function updates existing objects non-destructively to help support the iterative nature of 3D development.

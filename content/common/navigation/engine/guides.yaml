@@ -288,8 +288,6 @@ navigation:
         path: /characters/name-health-display
       - title: R6 to R15 adapter
         path: /characters/r6-to-r15-adapter
-      - title: Generate text
-        path: /characters/generate-text
   - title: Players
     path: /players/
     section:

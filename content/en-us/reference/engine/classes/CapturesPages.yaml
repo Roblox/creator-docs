@@ -10,7 +10,7 @@ summary: |
   `Class.CaptureService.ReadCapturesFromGalleryAsync`.
 description: |
   A special version of the `Class.Pages` class returned by
-  `Class.CaptureService.ReadCapturesFromGalleryAsync`. See the following code
+  `Class.CaptureService:ReadCapturesFromGalleryAsync()`. See the following code
   sample for reference on the returned data format.
 code_samples:
   - ReadCapturesFromGalleryAsync-example

@@ -8,28 +8,27 @@ memory_category: Instances
 summary: |
   A container object for a single integer.
 description: |
-  An **IntValue** stores a single signed
-  [64-bit integer](../../../luau/numbers.md#int64). The highest allowed value is
-  2^63-1 or around 9.2 quintillion (9.2^18); attempting to store larger numbers
-  will cause [integer overflow](https://en.wikipedia.org/wiki/Integer_overflow).
-  The lowest allowed value is -2^63 or about -9.2 quintillion. Practically,
-  however, working with integers larger than 2^53 (9.0^15) will cause loss of
-  precision since Luau uses double-precision floating-point to store numbers.
+  Stores a single signed [64-bit integer](../../../luau/numbers.md#int64). The
+  highest allowed value is 2^63-1 or around 9.2 quintillion (9.2^18). Attempting
+  to store larger numbers causes an
+  [integer overflow](https://en.wikipedia.org/wiki/Integer_overflow). The lowest
+  allowed value is -2^63. Practically, however, working with integers larger
+  than 2^53 (9^15) causes loss of precision since Luau uses double-precision
+  floating-point to store numbers.
 
-  Note that it's possible to store values between 2^53 and 2^63-1 via the
+  It's possible to store values between 2^53 and 2^63-1 using the
   [Properties](../../../studio/properties.md) window since it uses strings to
-  pass data to the engine, but manipulating large values via Luau scripts will
-  result in loss of precision and rounding as mentioned above.
+  pass data to the engine, but manipulating large values via Luau scripts
+  results in loss of precision and rounding as mentioned above.
 
   The main advantage of using **IntValue** lies in its rounding of values to the
   nearest integer, with halfway cases rounded away from 0. For values outside of
-  this range, use a `Class.NumberValue` instead. Like all `Class.ValueBase`
-  objects, this single value is stored in the `Class.ValueBase.Value|Value`
-  property.
+  this range, use `Class.NumberValue` instead.
 
-  The `Class.IntValue.Changed|Changed` event for this (and other objects like
-  it) will run with the new value being stored in the object, instead of a
-  string representing the property being changed.
+  Like all `Class.ValueBase` objects, this single value is stored in the
+  `Class.IntValue.Value|Value` property. The `Changed` event fires with the new
+  value being stored in the object, instead of a string representing the
+  property being changed.
 code_samples: []
 inherits:
   - ValueBase
@@ -61,13 +60,12 @@ events:
     summary: |
       Fires whenever the `Class.IntValue.Value` is changed.
     description: |
-      This event fires whenever the `Class.IntValue.Value` is changed. It will
-      run with the new value being stored in the argument object, instead of a
-      string representing the property being changed.
+      Fires whenever the `Class.IntValue.Value` changes. It runs with the new
+      value being stored in the argument object, instead of a string
+      representing the property being changed.
 
-      Equivalent change events exist for similar objects such as
-      `Class.NumberValue` and `Class.StringValue`, depending on what object type
-      best suits the need.
+      Listening for the `Changed` signal can be useful in games that use
+      `IntValues` to track values like leaderboard statistics or item prices.
     code_samples:
       - IntValue-Changed1
     parameters:

@@ -15,7 +15,8 @@ description: |
   Roblox uses the following formula to throttle requests for this API based on
   the number of players in your experience:
   `max requests per minute per experience = 1 + (6 * number_of_concurrent_users)`.
-  If needed, you can purchase additional usage with [Extended Services](../../../cloud-services/extended-services.md).
+  You can purchase additional usage using
+  [Extended Services](../../../cloud-services/extended-services.md).
 
   For a more in-depth look, see
   [Text-to-speech](../../../audio/objects.md#text-to-speech).

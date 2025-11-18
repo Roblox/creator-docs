@@ -6,9 +6,9 @@ name: ValueBase
 type: class
 memory_category: Instances
 summary: |
-  Base class of all 'Value Instance' objects.
+  Base class of all "value instance" objects.
 description: |
-  Base class of all 'Value Instance' objects.
+  Base class of all "value instance" objects.
 code_samples: []
 inherits:
   - Instance

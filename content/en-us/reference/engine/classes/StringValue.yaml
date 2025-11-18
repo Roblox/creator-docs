@@ -8,17 +8,17 @@ memory_category: Instances
 summary: |
   A container object for a single string.
 description: |
-  A StringValue is an object whose purpose is to store a single
-  [Luau string](https://luau.org/syntax#string-literals). The length of the
-  string can't be more than 200,000 characters (this will cause a "String too
-  long" error). Like all "-Value" objects, this single value is stored in the
-  Value property. The Changed event for this (and other objects like it) will
-  fire with the new value being stored in the object, instead of a string
-  representing the property being changed.
+  Stores a single [Luau string](https://luau.org/syntax#string-literals). The
+  length of the string can't be more than 200,000 characters; anything longer
+  causes a `String too long` error.
 
-  If the string is too long to be displayed in the Value field within Properties
-  window, it will partially show the string contents followed by an ellipsis
-  (...).
+  If the string is too long to be displayed in the **Value** field within the
+  **Properties** window, it shows partial string contents and an ellipsis (...).
+
+  Like all `Class.ValueBase` objects, this single value is stored in the
+  `Class.StringValue.Value|Value` property. The `Changed` event fires with the
+  new value being stored in the object, instead of a string representing the
+  property being changed.
 code_samples:
   - Changed-Event
 inherits:
@@ -49,22 +49,14 @@ methods: []
 events:
   - name: StringValue.Changed
     summary: |
-      Fired whenever `Class.StringValue.Value` is changed.
+      Fires whenever `Class.StringValue.Value` is changed.
     description: |
-      Fired whenever the `Class.StringValue.Value` of the `Class.StringValue` is
-      changed. It will run with the new value being stored in the argument
-      object, instead of a string representing the property being changed.
+      Fires whenever the `Class.IntValue.Value` changes. It runs with the new
+      value being stored in the argument object, instead of a string
+      representing the property being changed.
 
-      This event, like other changed events, can be used to track when an
-      StringValue changes and to track the different values that it may change
-      to.
-
-      For instance, this may be useful in games that rely on StringValues to
-      track values such as NPC or item names.
-
-      Equivalent changed events exist for similar objects, such as
-      `Class.NumberValue` and `Class.BoolValue`, depending on what object type
-      best suits the need.
+      Listening for the `Changed` signal can be useful in games that use
+      `StringValues` to track values like NPC names or item descriptions.
     code_samples:
       - how-to-use-stringvalue-changed
     parameters:

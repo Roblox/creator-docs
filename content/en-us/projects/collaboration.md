@@ -161,7 +161,9 @@ To quickly jump to a location in the workspace or to the exact line in a script 
 
 ## Comments
 
-Roblox Studio has a **comments** feature that lets you pinpoint an object in the 3D viewport and start a conversation with your collaborators, leave to‑do notes, and more. Comments update in real‑time which lets you and your team receive and respond to feedback without disrupting your workflow in Studio.
+Roblox Studio has a **comments** feature that lets you pinpoint an object in the 3D viewport and start a conversation with your collaborators, leave to‑do notes, and more. Comments update in real‑time which lets you and your team receive and respond to feedback without disrupting your workflow in Studio. You can also receive personalized [notifications](#notifications) to help you stay on top of feedback, even when you're not using Studio.
+
+### Workflow
 
 To create a comment, click the **Comment** button on the right side of Studio's mezzanine (keyboard shortcut <kbd>C</kbd>).
 
@@ -183,6 +185,20 @@ Comments appear in the **Comments** window, accessible from Studio's **Window**&
 - Resolve comments as you and your team address them. After you resolve a comment, it disappears from both the viewport and the main list, but it isn't completely gone; you can always un‑resolve it later.
 
 <img src="../assets/studio/collaboration/Comments-Window.png" width="360" />
+
+### Notifications
+
+To help you stay on top of feedback even when you're not using Studio, you'll receive an **email digest** that recaps all recent activity. Each email digest provides a simple overview of comment activity per place, including:
+
+- When someone mentions (tags) you in a comment, for example `@username`.
+- When someone comments in a thread that you previously replied to or were mentioned in.
+- When someone resolves a thread that you previously replied to or were mentioned in.
+
+From within the email overview, simply click **View in Studio** to go directly to the conversation in Roblox Studio.
+
+<Alert severity="info">
+You're always in control of both the type and source of comments which make up email digests. Mentions and reply notifications are on by default, while resolution notifications are off. You can also unsubscribe from a specific place or thread if you don't need updates.
+</Alert>
 
 ## Collaborative scripting
 

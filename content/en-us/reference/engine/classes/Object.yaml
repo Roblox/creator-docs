@@ -6,11 +6,11 @@ name: Object
 type: class
 memory_category: Instances
 summary: |
-  Object is the base class for all classes in the Roblox class hierarchy.
+  `Object` is the base class for all classes in the Roblox class hierarchy.
 description: |
-  Object is the base class for all classes in the Roblox class hierarchy. Every
-  other class that the Roblox Engine defines inherits all of the members of
-  Object. It is not possible to directly create Object.
+  `Object` is the base class for all classes in the Roblox class hierarchy.
+  Every other class that the Roblox Engine defines inherits all of the members
+  of `Object`. It is not possible to directly create an `Object`.
 code_samples: []
 inherits: []
 descendants:
@@ -229,13 +229,13 @@ methods:
 events:
   - name: Object.Changed
     summary: |
-      Fired immediately after a property of the object changes, with some
+      Fires immediately after a property of the object changes, with some
       limitations.
     description: |
-      This event fires immediately after an object property is changed and it
-      works with most use cases (see limitations below). The new value of a
-      changed property is **not** passed in as a parameter, so it must be
-      accessed by using `object[property]`. For example:
+      This event fires immediately after an object property is changed, with
+      some exceptions (see below). The new value of a changed property is
+      **not** passed as a parameter. Instead, you can access it using
+      `object[property]`:
 
       ```
       object.Changed:Connect(function(property)
@@ -243,16 +243,20 @@ events:
       end)
       ```
 
-      If you are only interested in listening to the change of one specific
-      property, consider using the
-      `Class.Object:GetPropertyChangedSignal()|GetPropertyChangedSignal()`
-      method instead.
+      - If you are only interested in listening for changes to one specific
+        property, consider using the
+        `Class.Object:GetPropertyChangedSignal()|GetPropertyChangedSignal()`
+        method instead.
+      - To listen for changes in attributes, see
+        `Class.Instance:GetAttributeChangedSignal()` and
+        `Class.Instance.AttributeChanged`.
+      - To detect when children are added or removed, see
+        `Class.Instance.ChildAdded` and `Class.Instance.ChildRemoved`.
 
       For `Class.ValueBase` objects such as `Class.IntValue` and
       `Class.StringValue`, this event only fires when the object's `Value`
       property changes. To detect other changes in `Class.ValueBase` objects,
-      use `Class.Object:GetPropertyChangedSignal()|GetPropertyChangedSignal()`
-      instead.
+      use `Class.Object:GetPropertyChangedSignal()|GetPropertyChangedSignal()`.
 
       #### Limitations
 
@@ -264,11 +268,15 @@ events:
       `Class.BasePart.Orientation|Orientation` properties of a `Class.BasePart`
       change due to gravity. To detect changes in these properties, consider
       using a physics-based event like `Class.RunService.PreSimulation`.
+      Similarly, the `Changed` event does not fire when
+      `Class.BasePart.AssemblyMass|AssemblyMass` updates due to a change in
+      material, size, or density for a welded part (but the event does fire for
+      `Class.BasePart.Mass|Mass` if you modify a part's size).
 
-      Additionally, this event may not fire on every modification of properties
-      that change very frequently, and/or it may not fire for such properties at
-      all. It's recommended that you carefully test for property changes that
-      impact game logic.
+      For properties that change frequently, the `Changed` event might not fire
+      for every modification, or it might not fire at all. **If a property
+      change impacts your game logic, test carefully** to ensure the event is
+      firing as you expect.
     code_samples:
       - Changed-Event
       - Change-Detector

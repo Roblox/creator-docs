@@ -282,6 +282,57 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: TeleportService:PromptExperienceDetailsAsync
+    summary: |
+      Prompts a `Class.Player` with information about the specified experience.
+      The player can choose to teleport to the target experience through the
+      prompt.
+    description: |
+      Prompts the specified `Class.Player` with information of the specified
+      experience. The prompt includes the experience name, creator name,
+      maturity rating, etc. The prompt also includes a **Join** button which the
+      player can use to be teleported to the target experience. If the player is
+      ineligible to join the target experience, the button will be disabled.
+
+      Any teleport failures after the player clicks the **Join** button will
+      also fire `Class.TeleportService.TeleportInitFailed` providing a reason
+      for the failure.
+
+      #### Limitations
+
+      - For security purposes, teleporting a user from your experience to
+        another experience owned by others fails by default. See
+        [here](../../../projects/teleport.md#enable-cross-experience-teleportation)
+        for steps to enable cross-experience teleportation.
+      - This function currently can only be called from the client with
+        `Class.Players.LocalPlayer` as the `player` parameter.
+      - The join button will always be disabled during Studio playtesting; to
+        test aspects of your experience using it, you must publish the
+        experience and play it in the Roblox application.
+    code_samples:
+      - present-experience-details-page
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` to be presented the prompt.
+      - name: universeId
+        type: int64
+        default:
+        summary: |
+          `Class.DataModel.UniverseId` of the experience to be presented to the
+          `Class.Player`
+    returns:
+      - type: PromptExperienceDetailsResult
+        summary: |
+          `Enum.PromptExperienceDetailsResult`
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: TeleportService:ReserveServer
     summary: |
       Returns an access code that can be used to teleport players to a reserved

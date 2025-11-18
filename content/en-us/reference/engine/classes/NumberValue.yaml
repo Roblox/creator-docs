@@ -8,8 +8,8 @@ memory_category: Instances
 summary: |
   A container object for a single double-precision floating point number.
 description: |
-  A `NumberValue` is an object whose purpose is to store a single
-  [Luau number](https://luau.org/syntax#number-literals), defined to be
+  Store a single [Luau number](https://luau.org/syntax#number-literals), defined
+  to be
   [double-precision floating point number](https://en.wikipedia.org/wiki/Double-precision_floating-point_format),
   or more commonly known as a **double**. This stores a number in 64 bits (8
   bytes) using the IEEE 754 representation (1 sign bit, 11 exponent bits and 52
@@ -17,9 +17,10 @@ description: |
   &PlusMinus;1.7976931348623157e+308, with a range of &PlusMinus;2^53 for exact
   integer representations.
 
-  Like all `Value` objects, this object stores a single value in the `Value`
-  property. The `Changed` event fires with the new value being stored in the
-  object, instead of a string representing the property being changed.
+  Like all `Class.ValueBase` objects, this single value is stored in the
+  `Class.NumberValue.Value|Value` property. The `Changed` event fires with the
+  new value being stored in the object, instead of a string representing the
+  property being changed.
 code_samples:
   - Changed-Event
 inherits:
@@ -50,20 +51,14 @@ methods: []
 events:
   - name: NumberValue.Changed
     summary: |
-      Fired whenever the `Class.NumberValue.Value` is changed.
+      Fires whenever the `Class.NumberValue.Value` is changed.
     description: |
-      This event fires whenever the `Class.NumberValue.Value` property changes.
+      Fires whenever the `Class.NumberValue.Value` changes. It runs with the new
+      value being stored in the argument object, instead of a string
+      representing the property being changed.
 
-      This event, like other changed events, can be used to track when an
-      `NumberValue` changes and to track the different values that it may change
-      to.
-
-      For instance, this event can be useful in games that rely on
-      `NumberValues` to track game states and values, such as item IDs.
-
-      Equivalent changed events exist for similar objects, such as
-      `Class.ObjectValue` and `Class.StringValue`, depending on what object type
-      best suits the need.
+      Listening for the `Changed` signal can be useful in games that use
+      `NumberValues` to track values like leaderboard statistics or item prices.
     code_samples:
       - NumberValue-Changed1
     parameters:
@@ -71,7 +66,7 @@ events:
         type: double
         default:
         summary: |
-          The value after the change.
+          The new value after the change.
     tags: []
     deprecation_message: ''
     security: None
