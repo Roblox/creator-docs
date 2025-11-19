@@ -41,9 +41,10 @@ properties:
       `Class.UserInputService:GetDeviceAcceleration()|GetDeviceAcceleration()`
       method or track when the device's acceleration changes through the
       `Class.UserInputService.DeviceAccelerationChanged|DeviceAccelerationChanged`
-      event.
-    code_samples:
-      - UserInputService-DeviceGravityChanged
+      event. You can also query and track gravity through
+      `Class.UserInputService:GetDeviceGravity()|GetDeviceGravity()` and
+      `Class.UserInputService.DeviceGravityChanged|DeviceGravityChanged`.
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -671,22 +672,14 @@ methods:
     description: |
       This method returns an `Class.InputObject` describing the device's current
       gravity vector. The vector is determined by the device's orientation
-      relative to the real-world force of gravity. For example:
+      relative to the real-world force of gravity.
 
-      - `Datatype.Vector3|Vector3.new(0, 0, -9.18)` if the device is perfectly
-        upright (portrait)
-      - `Datatype.Vector3|Vector3.new(9.81, 0, 0)` if the left side of the
-        device is pointing down
-      - `Datatype.Vector3|Vector3.new(0, -9.81, 0)` if the back of the device is
-        pointing down
-
-      Gravity is only tracked for devices with an enabled gyroscope as queried
-      through `Class.UserInputService.GyroscopeEnabled|GyroscopeEnabled`.
-
-      To track when the device's gravity changes, use the
+      Gravity is only tracked for devices with an enabled accelerometer as
+      queried through
+      `Class.UserInputService.AccelerometerEnabled|AccelerometerEnabled`. To
+      track when the device's gravity changes, use the
       `Class.UserInputService.DeviceGravityChanged|DeviceGravityChanged` event.
-    code_samples:
-      - UserInputService-GetDeviceGravity
+    code_samples: []
     parameters: []
     returns:
       - type: InputObject
@@ -1584,8 +1577,7 @@ events:
       A device's gravity vector represent the force of gravity on each of the
       device's **X**, **Y**, and **Z** axes. While gravity never changes, the
       force it exerts on each axis changes when the device rotates and changes
-      orientation. The force value exerted on each axis is a unit vector ranging
-      from `-1` to `1`.
+      orientation.
 
       If the device has an enabled accelerometer, you can use the
       `Class.UserInputService:GetDeviceGravity()|GetDeviceGravity()` method to

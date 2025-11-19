@@ -221,8 +221,12 @@ properties:
       can_save: true
     capabilities: []
   - name: SoundService.VolumetricAudio
-    summary: ''
-    description: ''
+    summary: |
+      `Enum.VolumetricAudio` setting to determine if volumetric audio is
+      enabled.
+    description: |
+      `Enum.VolumetricAudio` setting to determine if
+      [volumetric audio](/sound/objects.md#volumetric) is enabled.
     code_samples: []
     type: VolumetricAudio
     tags:

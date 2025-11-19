@@ -106,6 +106,10 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
        <td>**Configure bans for all group experiences**</td>
        <td>Members with this role can ban and manage banned users for all experiences owned by the group.</td>
      </tr>
+	 <tr>
+       <td>**View, create, update, and delete secrets for all group experiences**</td>
+       <td>Members with this role can see the list of secrets and can create, update, and delete secrets for all experiences owned by the group. Optionally available as a [per‑experience permission](../production/publishing/publish-experiences-and-places.md#configure-experiences).</td>
+     </tr>
    </tbody>
    <thead>
      <tr>

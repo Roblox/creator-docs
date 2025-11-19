@@ -3,15 +3,15 @@ title: Experiences and places
 description: Explains how to create, publish, and configure experiences.
 ---
 
-<figure>
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/_RxK6l2y7Ac" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure><br />
-
 When you open Studio and create a new **experience**, your project starts with a single **place** that players load into when they first join the experience. Experiences can have one or multiple places that each contain all components for that portion of the experience, including its specific environment, 3D objects, and scripts.
 
 <Alert severity="info">
 Places are comparable to scenes in Unity or maps in Unreal Engine.
 </Alert>
+
+<figure>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/_RxK6l2y7Ac" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
 
 Many creators create additional places within an experience to organize assets for different gameplay areas. For example, if you want players to join a dungeon before [teleporting](../../projects/teleport.md) to either a vast desert or spooky island, you can organize the assets for each area into their own place.
 
@@ -326,7 +326,9 @@ To allow strong language between players in text chat within your experience:
 
 When you publish an updated version of an experience to Roblox, players aren't immediately removed from old versions of the experience. Instead, you can migrate players to the updated version by restarting all of your outdated servers.
 
-If you don't restart servers, players will transition to the new version of the experience as the servers running old versions eventually empty and shut down. This option is non‑disruptive, but your player base might be playing different versions of the experience for a prolonged period of time.
+If you don't restart servers, players transition to the new version of the experience as the servers running old versions eventually empty and shut down. This option is non‑disruptive, but your player base might be playing different versions of the experience for a prolonged period of time; if your underlying player data format changes, you should probably restart servers.
+
+For time-sensitive updates, you might prefer to deploy early, hide content behind a [config](../configs.md), and then change the config value to release your new content.
 
 ### Restart servers
 

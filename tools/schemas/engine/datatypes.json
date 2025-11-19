@@ -322,6 +322,10 @@
             "description": "The math operation symbol. String.",
             "type": "string"
           },
+          "operation": {
+            "description": "The math operation symbol. String.",
+            "type": "string"
+          },
           "summary": {
             "description": "A single sentence overview of the math operation. String.",
             "type": "string"

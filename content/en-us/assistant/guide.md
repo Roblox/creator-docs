@@ -14,10 +14,6 @@ import BetaAlert from '../includes/beta-features/beta-alert.md'
 - Create materials to restyle your objects
 - Generate 3D objects to populate your scene
 
-<Alert severity="info" style={{marginBottom: '36px'}}>
-   Assistant is built with [Meta Llama 3](https://llama.meta.com/llama3/license/).
-</Alert>
-
 ## Studio features
 
 In Studio, Assistant consists of a large language model (LLM) that generates code and a run-command module (similar to the existing [Command&nbsp;Bar](../studio/ui-overview.md#command-bar)) that runs code. As a result, Assistant can act directly on your data model, such as inserting and modifying objects, writing and inserting scripts, and automating repetitive tasks like modifying properties in bulk.

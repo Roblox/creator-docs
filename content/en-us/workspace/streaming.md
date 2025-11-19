@@ -447,7 +447,9 @@ In some cases, it's necessary to detect when an object streams in or out and rea
 
 ## Model level of detail
 
-<BetaAlert betaName="SLIM" leadIn="SLIM meshes are currently in Studio beta. Enable them through " leadOut="." components={props.components} />
+<Alert severity="success">
+SLIM meshes are currently in client beta for Windows and macOS.
+</Alert>
 
 When streaming is enabled, `Class.Model|Models` outside of the currently streamed area are not visible by default. However, you can instruct the engine to render lightweight "SLIM" meshes or low resolution "imposter" meshes for models that are not present on clients. You control this behavior through each model's `Class.Model.LevelOfDetail|LevelOfDetail` property.
 
@@ -480,7 +482,6 @@ When streaming is enabled, `Class.Model|Models` outside of the currently streame
       <td>**SLIM**</td>
       <td>
         Display a composite mesh of all child parts in the model when the original model is not present on the client. Roblox automatically generates many SLIM (Scalable Lightweight Interactive Model) meshes for the model and uses progressively less complex ones as distance from the camera increases.
-        - During the Studio beta, you must enable [Team Create](../projects/collaboration.md) in your experience for Roblox to generate SLIM meshes.
         - Visual quality is superior to imposter meshes, with comparable performance.
         - Whether SLIM meshes display at all depends on the position of the **character**. The quality level of SLIM meshes depends on the position of the **camera**.
         - SLIM currently only supports models with static meshes, not skinned meshes, avatars, or animations.

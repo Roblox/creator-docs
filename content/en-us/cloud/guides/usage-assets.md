@@ -189,15 +189,13 @@ The API supports both first-party use with [API key authorization](../auth/api-k
 
 ### API keys
 
-To use the API in your own scripts or tools, you need to [create an API key](../auth/api-keys.md#create-api-keys) for authorization and security. To manage assets that you own individually, create the API key under your account. To manage group-owned assets, create the API key under the target group. For more information on group-owned API keys, see [Group-owned API key permissions](../auth/api-keys.md#group-owned-api-key-permissions).
-
-Once you create an API key, you can't switch its ownership between individuals or groups, so if you create an API key under your own account, you can't use it for managing group assets.
+To use the API in your own scripts or tools, you need to [create an API key](../auth/api-keys.md#create-api-keys) for authorization and security.
 
 <Alert severity="warning">
-To create an API key for a group or create a group asset, you must have the corresponding permissions. For more information on granting group permissions, see [Group roles and permissions](../../projects/groups.md#roles-and-permissions).
+To create an API key for managing group assets, you must have the corresponding permissions. For more information on granting group permissions, see [Group roles and permissions](../../projects/groups.md#roles-and-permissions).
 </Alert>
 
-Regardless of whether you are creating the API key for yourself or your group, make sure to add the following permissions:
+When creating an API key, make sure to add the following permissions:
 
 1. Add **assets** to **Access Permissions**.
 1. Add **Read** and **Write** operation permissions to your selected experience, depending on the required scopes of the endpoints you plan to call.

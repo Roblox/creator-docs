@@ -6,18 +6,23 @@ name: ChangeHistoryService
 type: class
 memory_category: Instances
 summary: |
-  **Must** be used by plugins to communicate to Studio how to undo and redo the
-  changes which they make to the experience.
+  Service which **must** be used by plugins to communicate to Studio how to undo
+  and redo the changes which they make to the experience.
 description: |
   Plugin developers **must** use `Class.ChangeHistoryService` to tell Studio how
   to undo and redo changes that their plugins make to experiences by recording.
-  Before making changes, a plugin calls
-  `Class.ChangeHistoryService:TryBeginRecording()`, remembering the identifier
-  it assigns, then after making changes, the Plugin calls
-  `Class.ChangeHistoryService:FinishRecording()` to complete the recording.
+
+  Before making changes, a plugin should call
+  `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()` and
+  remember the string identifier it returns. Then, after making changes, the
+  plugin should call
+  `Class.ChangeHistoryService:FinishRecording()|FinishRecording()` with that
+  string identifier and `Enum.FinishRecordingOperation` to complete the
+  recording.
 
   Plugins may also programmatically invoke an undo or redo through
-  `Class.ChangeHistoryService:Undo()` or `Class.ChangeHistoryService:Redo()`.
+  `Class.ChangeHistoryService:Undo()|Undo()` or
+  `Class.ChangeHistoryService:Redo()|Redo()`.
 
   `Class.ChangeHistoryService` is not enabled at runtime, so calling its methods
   in a running experience has no effect.
@@ -43,11 +48,13 @@ methods:
         type: string
         default:
         summary: |
-          Identifies the recording from the previous call to
+          The string returned by a previous call to
+          `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()`,
+          used to identify which recording to finish. This identifier is **not
+          the same** as the `name` of the action passed to
           `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()`.
-          If the operation is
-          `Enum.ChangeHistoryService.FinishRecordingOperation.Cancel`, this
-          value is ignored, and the recording is determined by context.
+          If the operation is `Enum.FinishRecordingOperation.Cancel`, this value
+          is ignored, and the recording is determined by context.
       - name: operation
         type: FinishRecordingOperation
         default:
@@ -150,12 +157,12 @@ methods:
     capabilities: []
   - name: ChangeHistoryService:SetEnabled
     summary: |
-      Sets whether or not the ChangeHistoryService is enabled.
+      Sets whether or not `Class.ChangeHistoryService` is enabled.
     description: |
-      Sets whether or not the ChangeHistoryService is enabled. When set to
-      false, the undo/redo list is cleared, and does not repopulate. When set to
-      true again, the original list is not restored, but further operations
-      append to the list once more
+      Sets whether or not the `Class.ChangeHistoryService` is enabled. When set
+      to `false`, the undo/redo list is cleared and does not repopulate. When
+      set to `true` again, the original list is not restored, but further
+      operations append to the list once more.
     code_samples: []
     parameters:
       - name: state
@@ -174,16 +181,13 @@ methods:
     summary: |
       Sets a new waypoint which can be used as an undo or redo point.
     description: |
-      This method will be **deprecated soon** in favor of
-      `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()`.
-
       `Class.ChangeHistoryService` tracks plugin history as a stream of property
       changes. `Class.ChangeHistoryService:SetWaypoint()|SetWaypoint()` creates
       a cut in that stream of property changes so that the undo and redo actions
       know where to stop.
 
       By convention, user-invoked actions in Studio **must** call
-      `Class.ChangeHistoryService:SetWaypoint()|SetWaypoint()` _after_
+      `Class.ChangeHistoryService:SetWaypoint()|SetWaypoint()` **after**
       completing their set of changes to the experience. Calling it **before** a
       set of changes may clean up another misbehaving plugin which failed to set
       a waypoint, but it's a poor reason to justify such usage in your own
@@ -199,7 +203,9 @@ methods:
       - type: ()
         summary: ''
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      This method will be deprecated soon in favor of
+      `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()`.
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
@@ -211,14 +217,18 @@ methods:
       **must** call it prior to making changes to avoid future warnings or
       errors.
 
-      When the recording is completed, you call
+      When the recording is completed, call
       `Class.ChangeHistoryService.FinishRecording()|FinishRecording()` with the
       returned recording identifier to complete the recording and update the
       undo/redo stack.
 
-      This method will return `nil` if it fails to begin a recording. Recordings
-      fail if the plugin already has a recording in progress, or if the user is
-      in a solo playtest.
+      **This method will return** `nil` **if it fails to begin a recording.**
+      Recordings fail if the plugin already has a recording in progress, or if
+      the user is in a solo playtest. An unintentional recording in progress
+      will not be stopped by restarting the plugin; instead it can be ended by
+      calling `Class.ChangeHistoryService.FinishRecording()|FinishRecording()`
+      with any string and `Enum.FinishRecordingOperation.Cancel` from the
+      plugin.
 
       You may use
       `Class.ChangeHistoryService.IsRecordingInProgress()|IsRecordingInProgress()`
@@ -323,11 +333,10 @@ events:
     capabilities: []
   - name: ChangeHistoryService.OnRedo
     summary: |
-      Fired when the user reverses the undo command. Waypoint describes the type
-      action that has been redone.
+      Fired when the user reverses the undo command.
     description: |
-      Fired when the user reverses the undo command. Waypoint describes the type
-      action that has been redone.
+      Fired when the user reverses the undo command. `waypoint` describes the
+      type action that has been redone.
     code_samples: []
     parameters:
       - name: waypoint
@@ -340,10 +349,9 @@ events:
     capabilities: []
   - name: ChangeHistoryService.OnUndo
     summary: |
-      Fired when the user undoes an action in studio. Waypoint describes the
-      type action that has been undone.
+      Fired when the user undoes an action in studio.
     description: |
-      Fired when the user undoes an action in studio. Waypoint describes the
+      Fired when the user undoes an action in studio. `waypoint` describes the
       type action that has been undone.
     code_samples: []
     parameters:
