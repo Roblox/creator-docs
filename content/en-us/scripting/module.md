@@ -149,7 +149,7 @@ local Switch = require(ReplicatedStorage:WaitForChild("Switch"))
 
 Switch.Changed:Connect(function(newState)
   print("Switch state is now", newState)
-end
+end)
 
 -- Test the flipping a few times
 task.wait(1)
