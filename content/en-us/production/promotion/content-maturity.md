@@ -363,7 +363,7 @@ If your experience includes strong language, you must disclose it within the Mat
 
 ### Romantic themes
 
-**Question 1: Does this experience depict or reference romantic themes and/or primarily take place in private spaces (e.g. shower stalls, hotel rooms) or settings intended for adults (e.g. clubs, bars)?**
+**Question 1: Does this experience depict or reference (including in the title) romantic themes and/or primarily take place in private spaces (e.g. shower stalls, hotel rooms) or settings intended for adults (e.g. clubs, bars)?**
 
 To understand this question, it's important to understand three different definitions:
 
@@ -373,7 +373,7 @@ To understand this question, it's important to understand three different defini
   - They are designed for one person or for a very small number of people to engage in private activities, such as a bathroom stall, bedroom, or small tent.
 - Settings intended for adults are settings that are designed to cater to adult clientele. These settings are often legally restricted to individuals who have reached the age of majority and are otherwise deemed inappropriate or unsuitable for minors, such as clubs or bars.
 
-If your experience includes romantic themes and/or primarily takes place in private spaces or settings intended for adults, you must disclose it within the Maturity & Compliance Questionnaire, and it will only be available to age-verified players that are at least 18 years old.
+If your experience includes (including in the title) romantic themes and/or primarily takes place in private spaces or settings intended for adults, you must disclose it within the Maturity & Compliance Questionnaire, and it will only be available to age-verified players that are at least 18 years old.
 
 ### Alcohol
 
@@ -385,7 +385,7 @@ Alcohol is an intoxicating adult beverage. If your experience includes, depicts,
 
 **Question 1: Is the primary theme or activity of this experience a social hangout?**
 
-Social hangouts are experiences in which the primary theme or activity is to chat or interact with other players with voice or text either as themselves or as their avatar. While this applies to vibe games, socializing spaces, and supportive places like sad rooms, it does not apply to roleplay and/or life simulation experiences where players adopt various roles like teacher or police officer, or are provided with items to role-play with.
+Social hangouts are experiences where the primary theme or activity is to talk to or interact with other players using voice or text chat. This includes hangouts, vibe games, socializing spaces, and supportive places like sad rooms. It does not apply to experiences where the primary theme or activity is roleplay. To be considered a roleplay experience, the roleplay components, such as adopting a new role and using in-game items to play your role with, must be central to the experience. Note that if your title or description includes content referencing social hangouts, your experience will be classified as a social hangout. If this is inaccurate, please update your title or description and re-take the questionnaire.
 
 If your experience is a social hangout, you must disclose it within the Maturity & Compliance Questionnaire.
 

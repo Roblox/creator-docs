@@ -900,6 +900,11 @@
         },
         "description": "Represents an asset."
       },
+      "AssetPrivacy": {
+        "type": "string",
+        "description": "The privacy setting of the asset. Requested asset privacy is only applicable to asset types that allow privacy override. For more details see [Asset Privacy](../../../projects/assets/privacy.md).",
+        "enum": ["default", "restricted", "openUse"]
+      },
       "AssetVersion": {
         "type": "object",
         "properties": {
@@ -923,6 +928,12 @@
       "CreationContext": {
         "type": "object",
         "properties": {
+          "assetPrivacy": {
+            "$ref": "#/components/schemas/AssetPrivacy",
+            "description": "Desired privacy setting for the asset on creation. Only applies to asset types that support privacy override.",
+            "required": false,
+            "writeOnly": true
+          },
           "creator": {
             "$ref": "#/components/schemas/Creator",
             "required": true

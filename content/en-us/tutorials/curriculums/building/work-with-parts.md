@@ -52,7 +52,7 @@ To insert a part for your first platform:
    If you want more control over where the part inserts into the 3D space, use your mouse to zoom in and center your view where you want to insert your part.
    </Alert>
 
-1. In the **Home** or **Model** tab's toolbar, click-hold the small arrow in the lower‑right corner of the **Part** inserter tool to reveal the part type dropdown (do not simply click the button since a basic click inserts a part without opening the picker menu).
+1. In the **Home** or **Model** tab's toolbar, click the small arrow next to the **Part** inserter tool to reveal the dropdown.
 
    <img src="../../../assets/tutorials/building-lesson/part-picker.png" alt="A close-up view of the part picker." width="800" />
 

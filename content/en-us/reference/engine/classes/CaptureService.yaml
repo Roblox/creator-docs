@@ -5,14 +5,12 @@
 name: CaptureService
 type: class
 memory_category: Instances
-summary: |
-  A service which provides control over screenshot and video capture features.
-description: |
+summary: A service which provides control over screenshot and video capture features.
+description: |-
   `CaptureService` is a client-side service that allows developers to control
-  how the screenshot and video capture feature integrates with their
-  experiences. It can be used to include preset moments where a capture is
-  automatically taken for a user, and that user can then save, share, or delete
-  the capture.
+  how the screenshot and video capture feature integrates with their experiences.
+  It can be used to include preset moments where a capture is automatically
+  taken for a user, and that user can then save, share, or delete the capture.
 code_samples: []
 inherits:
   - Instance
@@ -24,17 +22,13 @@ deprecation_message: ''
 properties: []
 methods:
   - name: CaptureService:CaptureScreenshot
-    summary: |
-      Takes a screenshot and provides a temporary `contentId` to identify it.
-    description: |
+    summary: Takes a screenshot and provides a temporary `contentId` to identify it.
+    description: |-
       This method captures a screenshot for the user but does not immediately
       save it to their **Captures** gallery within the experience's main menu.
       Instead, a temporary `contentId` is created to identify the new capture.
 
-      Note that any screenshots taken by this method will not be accessible via
-      `Class.CaptureService:ReadCapturesFromGalleryAsync()|ReadCapturesFromGalleryAsync()`
-      or be uploadable via
-      `Class.CaptureService:UploadCaptureAsync()|UploadCaptureAsync()`.
+      Note that any screenshots taken by this method will not be accessible via `Class.CaptureService:ReadCapturesFromGalleryAsync()|ReadCapturesFromGalleryAsync()` or be uploadable via `Class.CaptureService:UploadCaptureAsync()|UploadCaptureAsync()`.
 
       The `onCaptureReady` callback can be used to prompt the user to save or
       share the screenshot:
@@ -56,7 +50,7 @@ methods:
       - name: onCaptureReady
         type: Function
         default:
-        summary: |
+        summary: |-
           A callback function that is called with the `contentId` of the new
           capture once it is ready.
     returns:
@@ -67,26 +61,44 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: CaptureService:PromptCaptureGalleryPermissionAsync
+    summary: ''
+    description: This client-side function prompts a user for permission to access their local captures. Once they have accepted or rejected the prompt, it returns a boolean representing their choice. This function is a necessary prerequisite to `ReadCapturesFromGalleryAsync` and `UploadCaptureAsync`, as both of these require gallery permissions to work.
+    code_samples:
+      - PromptCaptureGalleryPermissionAsync-example
+    parameters:
+      - name: captureGalleryPermission
+        type: CaptureGalleryPermission
+        default:
+        summary: An `Enum.CaptureGalleryPermission` representing the type of access for which the user will be prompted.
+    returns:
+      - type: boolean
+        summary: A boolean representing whether or not the user has allowed access to their captures.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: CaptureService:PromptSaveCapturesToGallery
-    summary: |
-      Prompts the user to save specified captures to their gallery.
-    description: |
+    summary: Prompts the user to save specified captures to their gallery.
+    description: |-
       This method prompts the user to save the captures identified by the
-      provided `contentIds` to their **Captures** gallery within the
-      experience's main menu.
+      provided `contentIds` or `Class.Capture` objects to their **Captures** 
+      gallery within the experience's main menu.
     code_samples: []
     parameters:
       - name: captures
         type: Array
         default:
-        summary: ''
+        summary: An array of content IDs and/or `Class.Capture` objects.
       - name: resultCallback
         type: Function
         default:
-        summary: |
+        summary: |-
           A callback function that will be invoked with a dictionary mapping
-          each `contentId` to a boolean indicating if the user accepted saving
-          that capture.
+          each `contentId` and/or `Class.Capture` object to a boolean indicating if the user 
+          accepted saving that capture.
     returns:
       - type: ()
         summary: ''
@@ -96,42 +108,58 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: CaptureService:PromptShareCapture
-    summary: |
-      Prompts the user to share a specified capture.
-    description: |
+    summary: Prompts the user to share a specified capture.
+    description: |-
       This method prompts the user to share the capture identified by the
-      provided `contentId` using the native share sheet on their device.
+      provided `contentId` or `Class.Capture` object using the native share sheet on their device.
 
-      The capture is shared along with an invite link to the experience when
-      supported. Not all devices support including both a screenshot or video
+      The capture is shared along with an invite link to the experience
+      when supported. Not all devices support including both a screenshot or video
       and an invite link.
 
       The `launchData` will be available in the `launchData` field for users who
       join through the invite link.
 
-      For users or devices who are not eligible to use share sheets, this method
-      prompts them to download the capture instead.
+      For users or devices who are not eligible to use share sheets, this method prompts them to download the capture instead.
+
+      ```lua
+      local CaptureService = game:GetService("CaptureService")
+
+      local function onShareAccepted()
+      	print("Capture share was accepted!")
+      end
+
+      local function onShareDenied()
+      	print("Capture share was denied!")
+      end
+
+      local onCaptureReady = function(result, videoCapture)
+      	if videoCapture then
+      		local captureContent = Content.fromObject(videoCapture)
+      		CaptureService:PromptShareCapture(captureContent, "launchData" , onShareAccepted, onShareDenied)
+      	end
+      end
+
+      CaptureService:StartVideoCaptureAsync(onCaptureReady, {})
+      ```
     code_samples: []
     parameters:
       - name: captureContent
         type: Content
         default:
-        summary: ''
+        summary: A `Datatype.Content` containing a `contentId` or `Class.Capture` object.
       - name: launchData
         type: string
         default:
-        summary: |
-          An optional string to include as launch data in the invite link.
+        summary: An optional string to include as launch data in the invite link.
       - name: onAcceptedCallback
         type: Function
         default:
-        summary: |
-          An optional callback function invoked if the user accepts sharing.
+        summary: An optional callback function invoked if the user accepts sharing.
       - name: onDeniedCallback
         type: Function
         default:
-        summary: |
-          An optional callback function invoked if the user denies sharing.
+        summary: An optional callback function invoked if the user denies sharing.
     returns:
       - type: ()
         summary: ''
@@ -140,18 +168,40 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: CaptureService:ReadCapturesFromGalleryAsync
+    summary: ''
+    description: |-
+      This client-side function returns a paginated list of captures from the user's gallery as a `Class.CapturesPages` object sorted reverse-chronologically, which can be used to iterate through the captures. The results can be filtered by capture type with the `captureTypeFilters` parameter. If this parameter isn't provided, the function returns all captures.
+
+      Currently, this method will only return captures taken in the experience where it is called. Additionally, captures taken with `Class.CaptureService:CaptureScreenshot()|CaptureScreenshot()` and subsequently saved with `Class.CaptureService:PromptSaveCapturesToGallery()|PromptSaveCapturesToGallery()` will not be returned by this method.
+    code_samples:
+      - ReadCapturesFromGalleryAsync-example
+    parameters:
+      - name: captureTypeFilters
+        type: Array
+        default: '{}'
+        summary: An array of `Enum.CaptureType`.
+    returns:
+      - type: Tuple
+        summary: 'Tuple of (result: `Enum.ReadCapturesFromGalleryResult`, capturesPages: `Class.CapturesPages`)'
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: CaptureService:StartVideoCaptureAsync
-    summary: |
-      Initiates a video capture recording.
-    description: |
+    summary: Initiates a video capture recording.
+    description: |-
       This method initiates a video capture recording. The recording will
-      continue until the
-      `Class.CaptureService:StopVideoCapture()|StopVideoCapture()` method is
-      called, or when 30 seconds have passed, whichever comes first. During the
-      video recording, all user voices are muted.
+      continue until the `Class.CaptureService:StopVideoCapture()|StopVideoCapture()`
+      method is called, or when 30 seconds have passed, whichever comes first.
+      During the video recording, all user voices are muted.
 
       The `onCaptureReady` callback can be used to prompt the user to save or
       share the video capture.
+
+      The `captureParams` parameter is currently non-operational.
 
       ```lua
       local CaptureService = game:GetService("CaptureService")
@@ -181,7 +231,7 @@ methods:
       - name: onCaptureReady
         type: Function
         default:
-        summary: ''
+        summary: A callback function that is called on video capture completion with a `Enum.VideoCaptureResult` and, if successful, a `Class.VideoCapture`.
       - name: captureParams
         type: Dictionary
         default: nil
@@ -196,10 +246,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: CaptureService:StopVideoCapture
-    summary: |
-      Ends a video capture initiated by
-      `Class.CaptureService:StartVideoCaptureAsync()|StartVideoCaptureAsync()`.
-    description: |
+    summary: Ends a video capture initiated by `Class.CaptureService:StartVideoCaptureAsync()|StartVideoCaptureAsync()`.
+    description: |-
       This method ends a video capture that was started by the
       `Class.CaptureService:StartVideoCaptureAsync()|StartVideoCaptureAsync()`
       method.
@@ -234,96 +282,25 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-  - name: CaptureService:PromptCaptureGalleryPermissionAsync
-    summary: ''
-    description: |
-      This client-side function prompts a user for permission to access their
-      local captures. Once they have accepted or rejected the prompt, it returns
-      a boolean representing their choice. This function is a necessary
-      prerequisite to `ReadCapturesFromGalleryAsync` and `UploadCaptureAsync`,
-      as both of these require gallery permissions to work.
-    code_samples:
-      - PromptCaptureGalleryPermissionAsync-example
-    parameters:
-      - name: captureGalleryPermission
-        type: CaptureGalleryPermission
-        default:
-        summary: |
-          An `Enum.CaptureGalleryPermission` representing the type of access for
-          which the user will be prompted.
-    returns:
-      - type: boolean
-        summary: |
-          A boolean representing whether or not the user has allowed access to
-          their captures.
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: CaptureService:ReadCapturesFromGalleryAsync
-    summary: ''
-    description: |
-      This client-side function returns a paginated list of captures from the
-      user's gallery as a `Class.CapturesPages` object sorted
-      reverse-chronologically, which can be used to iterate through the
-      captures. The results can be filtered by capture type with the
-      `captureTypeFilters` parameter. If this parameter isn't provided, the
-      function returns all captures.
-
-      Currently, this method will only return captures taken in the experience
-      where it is called. Additionally, captures taken with
-      `Class.CaptureService:CaptureScreenshot()|CaptureScreenshot()` and
-      subsequently saved with
-      `Class.CaptureService:PromptSaveCapturesToGallery()|PromptSaveCapturesToGallery()`
-      will not be returned by this method.
-    code_samples:
-      - ReadCapturesFromGalleryAsync-example
-    parameters:
-      - name: captureTypeFilters
-        type: Array
-        default: '{}'
-        summary: |
-          An array of `Enum.CaptureType`.
-    returns:
-      - type: Tuple
-        summary: |
-          Tuple of (result: `Enum.ReadCapturesFromGalleryResult`, capturesPages:
-          `Class.CapturesPages`)
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
   - name: CaptureService:UploadCaptureAsync
     summary: ''
-    description: |
-      This client-side function uploads a capture, like one retrieved from
-      `ReadCapturesFromGalleryAsync`, to the asset system. It returns a tuple of
-      the result and the asset ID.
+    description: |-
+      This client-side function uploads a capture, like one retrieved from `ReadCapturesFromGalleryAsync`, to the asset system. It returns a tuple of the result and the asset ID.
 
       Notes:
-
-      - This function will only work properly if the Maturity and Compliance
-        questionnaire has been filled out for the experience.
-      - For video capture types, there is an upload limit of 20 videos per day
-        per user.
-      - This function can take up to several minutes to finish executing, and
-        the user will need to remain in the experience.
+      - This function will only work properly if the Maturity and Compliance questionnaire has been filled out for the experience.
+      - For video capture types, there is an upload limit of 20 videos per day per user.
+      - This function can take up to several minutes to finish executing, and the user will need to remain in the experience.
     code_samples:
       - UploadCaptureAsync-example
     parameters:
       - name: capture
         type: Capture
         default:
-        summary: |
-          a capture object of type `Class.Capture`
+        summary: a capture object of type `Class.Capture`
     returns:
       - type: Tuple
-        summary: |
-          Tuple of (result: `Enum.UploadCaptureResult`, assetId: `number`)
+        summary: 'Tuple of (result: `Enum.UploadCaptureResult`, assetId: `number`)'
     tags:
       - Yields
     deprecation_message: ''
@@ -332,12 +309,11 @@ methods:
     capabilities: []
 events:
   - name: CaptureService.CaptureBegan
-    summary: |
-      Fires immediately before a capture begins.
-    description: |
+    summary: Fires immediately before a capture begins.
+    description: |-
       This event fires right before a new capture is taken. It can be used to
-      customize the capture experience, for example by hiding certain GUI
-      elements.
+      customize the capture experience, for example by hiding
+      certain GUI elements.
     code_samples: []
     parameters:
       - name: captureType
@@ -349,12 +325,11 @@ events:
     security: None
     capabilities: []
   - name: CaptureService.CaptureEnded
-    summary: |
-      Fires after a capture finishes.
-    description: |
-      This event fires after a new capture completes. It can be used to restore
-      any changes made when the `Class.CaptureService.CaptureBegan|CaptureBegan`
-      event fired.
+    summary: Fires after a capture finishes.
+    description: |-
+      This event fires after a new capture completes. It can be used
+      to restore any changes made when the
+      `Class.CaptureService.CaptureBegan|CaptureBegan` event fired.
     code_samples: []
     parameters:
       - name: captureType
@@ -376,15 +351,14 @@ events:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This event has been superseded by the
       `Class.CaptureService.UserCaptureSaved|UserCaptureSaved` event.
     security: None
     capabilities: []
   - name: CaptureService.UserCaptureSaved
-    summary: |
-      Fires when the user saves a capture.
-    description: |
+    summary: Fires when the user saves a capture.
+    description: |-
       This event fires when the user saves a screenshot using the Roblox
       screenshot capture UI. It can be used for analytics or to prompt the user
       to share their capture.
@@ -393,8 +367,7 @@ events:
       - name: captureContentId
         type: ContentId
         default:
-        summary: |
-          The `contentId` identifying the screenshot that the user saved.
+        summary: The `contentId` identifying the screenshot that the user saved.
     tags: []
     deprecation_message: ''
     security: None

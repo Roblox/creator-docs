@@ -192,9 +192,56 @@ For each Roblox game server, there is a limit of 500 HTTP requests per minute. E
 
 For detailed information about Open Cloud rate limits, authentication-based rate limiting, and best practices, see [Rate Limits](/cloud/reference/rate-limits).
 
+## Best practices
+
+To optimize your `Class.HttpService` usage and avoid exceeding the limits, apply the following best practices:
+
+- **Handle errors gracefully**. Web requests can fail for many reasons. Use `Global.LuaGlobals.pcall()` and have a plan for when requests fail. Furthermore, strictly validate and sanitize all received data from external APIs, ensuring correct data where you can.
+
+- Use [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff) to stay below limits.
+
+  If a request returns a recoverable error, instead of immediately retrying, wait for two seconds, then four, eights, etc. between attempts. This helps limit congestion and improves the chance of a successful request by giving the endpoint time to "cool off."
+
+- Aggregate and send data in bulk.
+
+  When possible, it's recommended to let your server collect all necessary data in order to send one HTTP request, rather than multiple small requests. For example, if you are sending an HTTP request for every player in your server, check if the API has a bulk/batch endpoint and, if so, collect the information from all players and send it all in one request.
+  
+  In some cases you may have to use `Class.HttpService:RequestAsync()` to include data in the body of the request.
+
+- **Use HTTP/2 endpoints**. HTTP/2 provides significant performance benefits through features such as header compression and request/response multiplexing over a single connection. `Class.HttpService` automatically uses HTTP/2 when available. Note that the HTTP/2 specification requires all header names to be sent in lowercase.
+
+## Observability
+
+The **Observability Dashboard** provides insights and analytics for monitoring and troubleshooting your `Class.HttpService` usage. The dashboard features two primary charts: **Request Count** which tracks the volume of `Class.HttpService` requests from your experience, and **Response Time** which measures the latency for endpoints to respond.
+
+The available dimensions for filtering and breakdown are defined as follows:
+
+<h3>Request Type</h3>
+
+- `GET`
+- `POST`
+- `PUT`
+- `PATCH`
+- `DELETE`
+- `Other` (for non-specified request types)
+
+<h3>Status</h3>
+
+- Success (HTTP 1xx and 2xx status codes)
+- Redirect (HTTP 3xx status codes)
+- 400 (Bad Request)
+- 401 (Unauthorized)
+- 403 (Forbidden)
+- 404 (Not Found)
+- 429 (Too Many Requests)
+- 500 (Internal Server Error)
+- 503 (Service Unavailable)
+- ExternalError (any other non-specified error codes returned from the external service)
+- InternalError (an issue returned from `Class.HttpService` within Roblox)
+
+The **Response Time** chart is not correlated with status data. If you select "Status" as a breakdown or filter, this chart will not display data.
+
 ## Additional considerations
 
-- Web requests can fail for many reasons. Use `Global.LuaGlobals.pcall()` and have a plan for when
-  requests fail.
 - Requests should provide a secure form of authentication, such as a pre-shared secret key, so that bad actors cannot pose as one of your Roblox game servers.
 - Be aware of the general capacity and rate-limiting policies of the web servers to which requests are being sent.
