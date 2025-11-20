@@ -32,6 +32,23 @@ descendants: []
 tags: []
 deprecation_message: ''
 properties:
+  - name: Sound.AudioContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Asset
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - LegacySound
   - name: Sound.ChannelCount
     summary: ''
     description: ''
@@ -191,6 +208,54 @@ properties:
       can_save: false
     capabilities:
       - LegacySound
+  - name: Sound.isPlaying
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This deprecated property is a variant of `Class.Sound.IsPlaying` which
+      should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - LegacySound
+  - name: Sound.Looped
+    summary: |
+      Sets whether or not the `Class.Sound` repeats once it has finished
+      playing.
+    description: |
+      This sets whether or not the `Class.Sound` repeats once it has finished
+      playing. Looped sounds are suitable for a range of applications including
+      music and background ambient sounds.
+
+      The `Class.Sound.DidLoop|DidLoop` event can be used to track the number of
+      times as sound has looped.
+    code_samples:
+      - Sound-Looping-2
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Playback
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - LegacySound
   - name: Sound.LoopRegion
     summary: |
       A range denoting a desired loop start and loop end within the
@@ -227,32 +292,6 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Regions
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - LegacySound
-  - name: Sound.Looped
-    summary: |
-      Sets whether or not the `Class.Sound` repeats once it has finished
-      playing.
-    description: |
-      This sets whether or not the `Class.Sound` repeats once it has finished
-      playing. Looped sounds are suitable for a range of applications including
-      music and background ambient sounds.
-
-      The `Class.Sound.DidLoop|DidLoop` event can be used to track the number of
-      times as sound has looped.
-    code_samples:
-      - Sound-Looping-2
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Playback
     serialization:
       can_load: true
       can_save: true
@@ -349,33 +388,6 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities:
-      - LegacySound
-  - name: Sound.PlayOnRemove
-    summary: |
-      When `true`, the `Class.Sound` will play when it is removed from the
-      experience.
-    description: |
-      When `true`, the `Class.Sound` will play when it is removed from the
-      experience by parenting the `Class.Sound` or one if its ancestors to
-      `nil`. This means all of the following will cause the sound to play when
-      `Class.Sound.PlayOnRemove|PlayOnRemove` is `true`:
-
-      - `sound:Destroy()`
-      - `sound.Parent = nil`
-      - `sound.Parent.Parent = nil`
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
     capabilities:
       - LegacySound
   - name: Sound.PlaybackLoudness
@@ -520,6 +532,33 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Playback
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - LegacySound
+  - name: Sound.PlayOnRemove
+    summary: |
+      When `true`, the `Class.Sound` will play when it is removed from the
+      experience.
+    description: |
+      When `true`, the `Class.Sound` will play when it is removed from the
+      experience by parenting the `Class.Sound` or one if its ancestors to
+      `nil`. This means all of the following will cause the sound to play when
+      `Class.Sound.PlayOnRemove|PlayOnRemove` is `true`:
+
+      - `sound:Destroy()`
+      - `sound.Parent = nil`
+      - `sound.Parent.Parent = nil`
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
     serialization:
       can_load: true
       can_save: true
@@ -738,28 +777,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-  - name: Sound.isPlaying
-    summary: ''
-    description: ''
-    code_samples: []
-    type: boolean
-    tags:
-      - ReadOnly
-      - NotReplicated
-      - Deprecated
-    deprecation_message: |
-      This deprecated property is a variant of `Class.Sound.IsPlaying` which
-      should be used instead.
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities:
-      - LegacySound
 methods:
   - name: Sound:Pause
     summary: |
@@ -782,6 +799,23 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - LegacySound
+  - name: Sound:pause
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Sound:Pause()` which
+      should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - LegacySound
   - name: Sound:Play
     summary: |
       Plays the `Class.Sound`.
@@ -798,6 +832,23 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - LegacySound
+  - name: Sound:play
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Sound:Play()` which should
+      be used instead.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -836,40 +887,6 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - LegacySound
-  - name: Sound:pause
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.Sound:Pause()` which
-      should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - LegacySound
-  - name: Sound:play
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.Sound:Play()` which should
-      be used instead.
     security: None
     thread_safety: Unsafe
     capabilities:

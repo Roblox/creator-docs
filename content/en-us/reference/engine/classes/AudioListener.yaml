@@ -24,6 +24,23 @@ descendants: []
 tags: []
 deprecation_message: ''
 properties:
+  - name: AudioListener.AcousticSimulationEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Simulation
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
   - name: AudioListener.AngleAttenuation
     summary: |
       Represents how the perceived volume of the emitted sound changes based on
@@ -99,6 +116,23 @@ properties:
       write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Listening
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+  - name: AudioListener.PositionOverride
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
+    thread_safety: ReadSafe
+    category: Data
     serialization:
       can_load: true
       can_save: true

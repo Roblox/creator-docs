@@ -410,6 +410,27 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
+  - name: Instance.archivable
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This deprecated property is a variant of `Class.Instance.Archivable` which
+      should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: false
+    capabilities: []
   - name: Instance.Capabilities
     summary: |
       The set of capabilities allowed to be used for scripts inside this
@@ -619,27 +640,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-  - name: Instance.archivable
-    summary: ''
-    description: ''
-    code_samples: []
-    type: boolean
-    tags:
-      - Hidden
-      - NotReplicated
-      - Deprecated
-    deprecation_message: |
-      This deprecated property is a variant of `Class.Instance.Archivable` which
-      should be used instead.
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: false
-    capabilities: []
 methods:
   - name: Instance:AddTag
     summary: |
@@ -673,6 +673,25 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: Instance:children
+    summary: |
+      Returns an array of the object's children.
+    description: |
+      The children function returns an array of the object's children.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Instances
+        summary: |
+          Array of child objects/instances.
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.Instance:GetChildren()` which
+      should be used in all new work.
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -761,6 +780,23 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - CreateInstances
+  - name: Instance:clone
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Instance:Clone()` which
+      should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - CreateInstances
   - name: Instance:Destroy
     summary: |
       Sets the `Class.Instance.Parent` property to `nil`, locks the
@@ -813,6 +849,22 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: Instance:destroy
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Instance:Destroy()` which
+      should be used instead.
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -1028,6 +1080,30 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+  - name: Instance:findFirstChild
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+      - name: recursive
+        type: boolean
+        default: false
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Instance:FindFirstChild()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
     capabilities: []
   - name: Instance:FindFirstChildOfClass
     summary: |
@@ -1329,6 +1405,22 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
+  - name: Instance:getChildren
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Instances
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Instance:GetChildren()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: Instance:GetDebugId
     summary: |
       Returns a coded string of the debug ID used internally by Roblox.
@@ -1628,6 +1720,26 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
+  - name: Instance:isDescendantOf
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: ancestor
+        type: Instance
+        default:
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Instance:IsDescendantOf()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: Instance:IsPropertyModified
     summary: |
       Returns `true` if the value stored in the specified property is not equal
@@ -1812,6 +1924,22 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: Instance:remove
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Instance:Remove()` which
+      has also been deprecated. Neither function should be used in new work.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: Instance:RemoveTag
     summary: |
       Removes a tag from the instance.
@@ -1976,134 +2104,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-  - name: Instance:children
-    summary: |
-      Returns an array of the object's children.
-    description: |
-      The children function returns an array of the object's children.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Instances
-        summary: |
-          Array of child objects/instances.
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This item has been superseded by `Class.Instance:GetChildren()` which
-      should be used in all new work.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: Instance:clone
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Instance
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.Instance:Clone()` which
-      should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - CreateInstances
-  - name: Instance:destroy
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.Instance:Destroy()` which
-      should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: Instance:findFirstChild
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: name
-        type: string
-        default:
-        summary: ''
-      - name: recursive
-        type: boolean
-        default: false
-        summary: ''
-    returns:
-      - type: Instance
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.Instance:FindFirstChild()`
-      which should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: Instance:getChildren
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Instances
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.Instance:GetChildren()`
-      which should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: Instance:isDescendantOf
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: ancestor
-        type: Instance
-        default:
-        summary: ''
-    returns:
-      - type: boolean
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.Instance:IsDescendantOf()`
-      which should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: Instance:remove
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.Instance:Remove()` which
-      has also been deprecated. Neither function should be used in new work.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
 events:
   - name: Instance.AncestryChanged
     summary: |
@@ -2211,6 +2211,22 @@ events:
           The `Class.Instance` that has been added.
     tags: []
     deprecation_message: ''
+    security: None
+    capabilities: []
+  - name: Instance.childAdded
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: child
+        type: Instance
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated event is a variant of `Class.Instance.ChildAdded` which
+      should be used instead.
     security: None
     capabilities: []
   - name: Instance.ChildRemoved
@@ -2382,22 +2398,6 @@ events:
     parameters: []
     tags: []
     deprecation_message: ''
-    security: None
-    capabilities: []
-  - name: Instance.childAdded
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: child
-        type: Instance
-        default:
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated event is a variant of `Class.Instance.ChildAdded` which
-      should be used instead.
     security: None
     capabilities: []
 callbacks: []

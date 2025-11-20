@@ -315,6 +315,22 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: Model:breakJoints
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Model:BreakJoints()` which
+      should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: Model:GetBoundingBox
     summary: |
       Returns a description of a volume that contains all parts of a Model.
@@ -565,6 +581,42 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: Model:makeJoints
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Model:MakeJoints()` which
+      should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: Model:move
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: location
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.Model:MoveTo()` which should be
+      used in all new work
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: Model:MoveTo
     summary: |
       Moves the `Class.Model.PrimaryPart|PrimaryPart` to the given position. If
@@ -599,6 +651,26 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: Model:moveTo
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: location
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Model:MoveTo()` which
+      should be used instead.
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -778,78 +850,6 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: Model:breakJoints
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.Model:BreakJoints()` which
-      should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: Model:makeJoints
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.Model:MakeJoints()` which
-      should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: Model:move
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: location
-        type: Vector3
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This item has been superseded by `Class.Model:MoveTo()` which should be
-      used in all new work
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: Model:moveTo
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: location
-        type: Vector3
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.Model:MoveTo()` which
-      should be used instead.
     security: None
     thread_safety: Unsafe
     capabilities: []

@@ -261,6 +261,23 @@ properties:
       can_save: true
     capabilities:
       - UI
+  - name: ProximityPrompt.MaxIndicatorDistance
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
   - name: ProximityPrompt.ObjectText
     summary: |
       An optional property that determines the object name text shown to the
@@ -429,6 +446,26 @@ methods:
     capabilities:
       - UI
 events:
+  - name: ProximityPrompt.IndicatorHidden
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - UI
+  - name: ProximityPrompt.IndicatorShown
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - UI
   - name: ProximityPrompt.PromptButtonHoldBegan
     summary: |
       Triggered when a player begins holding down the
@@ -502,29 +539,6 @@ events:
     security: None
     capabilities:
       - UI
-  - name: ProximityPrompt.TriggerEnded
-    summary: |
-      Triggers when `Class.ProximityPrompt.KeyboardKeyCode|key`/button is
-      released, for longer events where the user is required to hold down the
-      button.
-    description: |
-      This event is triggered when the
-      `Class.ProximityPrompt.KeyboardKeyCode|key`/button is released, for longer
-      events where the user is required to hold down the button (e.g. heal
-      another player over time.)
-    code_samples: []
-    parameters:
-      - name: playerWhoTriggered
-        type: Player
-        default:
-        summary: |
-          The `Class.Player` who released the key/button, ending the trigger
-          event.
-    tags: []
-    deprecation_message: ''
-    security: None
-    capabilities:
-      - UI
   - name: ProximityPrompt.Triggered
     summary: |
       Triggered when the prompt
@@ -543,6 +557,29 @@ events:
         default:
         summary: |
           The `Class.Player` who triggered the prompt.
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - UI
+  - name: ProximityPrompt.TriggerEnded
+    summary: |
+      Triggers when `Class.ProximityPrompt.KeyboardKeyCode|key`/button is
+      released, for longer events where the user is required to hold down the
+      button.
+    description: |
+      This event is triggered when the
+      `Class.ProximityPrompt.KeyboardKeyCode|key`/button is released, for longer
+      events where the user is required to hold down the button (e.g. heal
+      another player over time.)
+    code_samples: []
+    parameters:
+      - name: playerWhoTriggered
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` who released the key/button, ending the trigger
+          event.
     tags: []
     deprecation_message: ''
     security: None

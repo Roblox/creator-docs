@@ -169,6 +169,23 @@ events:
     security: None
     capabilities:
       - Input
+  - name: ClickDetector.mouseClick
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: playerWhoClicked
+        type: Player
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated event is a variant of `Class.ClickDetector.MouseClick`,
+      which should be used instead.
+    security: None
+    capabilities:
+      - Input
   - name: ClickDetector.MouseHoverEnter
     summary: |
       Fires when the parent of a `Class.ClickDetector` or `Class.DragDetector`
@@ -249,23 +266,6 @@ events:
           of a `Class.ClickDetector` or `Class.DragDetector`.
     tags: []
     deprecation_message: ''
-    security: None
-    capabilities:
-      - Input
-  - name: ClickDetector.mouseClick
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: playerWhoClicked
-        type: Player
-        default:
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated event is a variant of `Class.ClickDetector.MouseClick`,
-      which should be used instead.
     security: None
     capabilities:
       - Input

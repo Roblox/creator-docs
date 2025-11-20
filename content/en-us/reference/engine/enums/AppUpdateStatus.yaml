@@ -40,3 +40,8 @@ items:
     value: 5
     tags: []
     deprecation_message: ''
+  - name: AvailableBetaProgram
+    summary: ''
+    value: 6
+    tags: []
+    deprecation_message: ''

@@ -62,6 +62,31 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: PhysicsService:CollisionGroupsAreCollidable
+    summary: |
+      Returns whether the two groups will collide.
+    description: |
+      Returns whether the two specified collision groups will collide. This
+      method will also return true if either of the groups are unregistered, as
+      the default collision mask collides with all groups.
+    code_samples: []
+    parameters:
+      - name: name1
+        type: string
+        default:
+        summary: ''
+      - name: name2
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: PhysicsService:CollisionGroupSetCollidable
     summary: |
       Sets the collision status between two groups.
@@ -87,31 +112,6 @@ methods:
         summary: ''
     returns:
       - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: PhysicsService:CollisionGroupsAreCollidable
-    summary: |
-      Returns whether the two groups will collide.
-    description: |
-      Returns whether the two specified collision groups will collide. This
-      method will also return true if either of the groups are unregistered, as
-      the default collision mask collides with all groups.
-    code_samples: []
-    parameters:
-      - name: name1
-        type: string
-        default:
-        summary: ''
-      - name: name2
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''

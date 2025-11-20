@@ -52,6 +52,86 @@ tags:
   - NotReplicated
 deprecation_message: ''
 properties:
+  - name: Camera.CameraSubject
+    summary: |
+      The `Class.Humanoid` or `Class.BasePart` that is the `Class.Camera`
+      subject.
+    description: |
+      `CameraSubject` accepts a variety of `Class.Instance|Instances`. The
+      default camera scripts respond differently to the available settings:
+
+      - By default, the camera scripts follow the local character's
+        `Class.Humanoid`, factoring in the humanoid's current state and
+        `Class.Humanoid.CameraOffset`.
+
+      - When set to a `Class.BasePart`, the camera scripts follow its position,
+        with a vertical offset in the case of `Class.VehicleSeat|VehicleSeats`.
+
+      `CameraSubject` cannot be set to `nil`. Attempting to do so will revert it
+      to its previous value.
+
+      To restore `CameraSubject` to its default value, set it to the local
+      character's `Class.Humanoid`:
+
+      ```lua
+      local Players = game:GetService("Players")
+      local Workspace = game:GetService("Workspace")
+
+      local localPlayer = Players.LocalPlayer
+      local camera = Workspace.CurrentCamera
+
+      local function resetCameraSubject()
+      	if camera and localPlayer.Character then
+      		local humanoid = localPlayer.Character:FindFirstChildWhichIsA("Humanoid")
+      		if humanoid then
+      			camera.CameraSubject = humanoid
+      		end
+      	end
+      end
+      ```
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Camera.CameraType
+    summary: |
+      Specifies the `Enum.CameraType` to be read by the camera scripts.
+    description: |
+      The default Roblox camera scripts have several built-in behaviors. Setting
+      this property toggles between the various `Enum.CameraType` behaviors.
+      Note that some camera types require a valid
+      `Class.Camera.CameraSubject|CameraSubject` to work correctly.
+
+      The default camera scripts will not move or update the camera if
+      `CameraType` is set to `Enum.CameraType.Scriptable`. For more information
+      on positioning and orienting the camera manually, see
+      `Class.Camera.CFrame|CFrame`.
+
+      For all `CameraType` settings **except** `Enum.CameraType.Scriptable`, the
+      `Class.Camera.CameraSubject|CameraSubject` property represents the object
+      whose position the camera's `Class.Camera.Focus|Focus` is set to.
+    code_samples: []
+    type: CameraType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: Camera.CFrame
     summary: |
       The `Datatype.CFrame` of the `Class.Camera`, defining its position and
@@ -135,86 +215,6 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: Camera.CameraSubject
-    summary: |
-      The `Class.Humanoid` or `Class.BasePart` that is the `Class.Camera`
-      subject.
-    description: |
-      `CameraSubject` accepts a variety of `Class.Instance|Instances`. The
-      default camera scripts respond differently to the available settings:
-
-      - By default, the camera scripts follow the local character's
-        `Class.Humanoid`, factoring in the humanoid's current state and
-        `Class.Humanoid.CameraOffset`.
-
-      - When set to a `Class.BasePart`, the camera scripts follow its position,
-        with a vertical offset in the case of `Class.VehicleSeat|VehicleSeats`.
-
-      `CameraSubject` cannot be set to `nil`. Attempting to do so will revert it
-      to its previous value.
-
-      To restore `CameraSubject` to its default value, set it to the local
-      character's `Class.Humanoid`:
-
-      ```lua
-      local Players = game:GetService("Players")
-      local Workspace = game:GetService("Workspace")
-
-      local localPlayer = Players.LocalPlayer
-      local camera = Workspace.CurrentCamera
-
-      local function resetCameraSubject()
-      	if camera and localPlayer.Character then
-      		local humanoid = localPlayer.Character:FindFirstChildWhichIsA("Humanoid")
-      		if humanoid then
-      			camera.CameraSubject = humanoid
-      		end
-      	end
-      end
-      ```
-    code_samples: []
-    type: Instance
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Camera
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: Camera.CameraType
-    summary: |
-      Specifies the `Enum.CameraType` to be read by the camera scripts.
-    description: |
-      The default Roblox camera scripts have several built-in behaviors. Setting
-      this property toggles between the various `Enum.CameraType` behaviors.
-      Note that some camera types require a valid
-      `Class.Camera.CameraSubject|CameraSubject` to work correctly.
-
-      The default camera scripts will not move or update the camera if
-      `CameraType` is set to `Enum.CameraType.Scriptable`. For more information
-      on positioning and orienting the camera manually, see
-      `Class.Camera.CFrame|CFrame`.
-
-      For all `CameraType` settings **except** `Enum.CameraType.Scriptable`, the
-      `Class.Camera.CameraSubject|CameraSubject` property represents the object
-      whose position the camera's `Class.Camera.Focus|Focus` is set to.
-    code_samples: []
-    type: CameraType
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Camera
     serialization:
       can_load: true
       can_save: true
@@ -371,6 +371,26 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: Camera.focus
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is a deprecated variant of `Class.Camera.Focus|Focus` which
+      should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+    capabilities: []
   - name: Camera.HeadLocked
     summary: |
       Toggles whether the camera will automatically track the head motion of a
@@ -516,41 +536,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-  - name: Camera.VRTiltAndRollEnabled
-    summary: |
-      Toggles whether to apply tilt and roll from the
-      `Class.Camera.CFrame|CFrame` property while the player is using a VR
-      device.
-    description: |
-      This property toggles whether to apply tilt and roll from the
-      `Class.Camera.CFrame|CFrame` property while the player is using a VR
-      device.
-
-      To prevent motion sickness, the horizon should remain level. Tilting and
-      rolling the player's view while using a VR device can cause a disconnect
-      between the player's physical space and the virtual space they are
-      viewing. Changing the apparent downwards direction can cause players to
-      lose balance or experience dizziness.
-
-      For these reasons, it is generally advisable to leave this property
-      disabled, unless you have extensively tested your experience for these
-      effects. Even with tilt and roll enabled, you may want to ensure the
-      player always has a stable reference frame, such as the interior of a
-      vehicle or a floor that can help the player ground themselves in their
-      physical space.
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
   - name: Camera.ViewportSize
     summary: |
       The dimensions of the device safe area on a Roblox client.
@@ -599,17 +584,32 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-  - name: Camera.focus
-    summary: ''
-    description: ''
+  - name: Camera.VRTiltAndRollEnabled
+    summary: |
+      Toggles whether to apply tilt and roll from the
+      `Class.Camera.CFrame|CFrame` property while the player is using a VR
+      device.
+    description: |
+      This property toggles whether to apply tilt and roll from the
+      `Class.Camera.CFrame|CFrame` property while the player is using a VR
+      device.
+
+      To prevent motion sickness, the horizon should remain level. Tilting and
+      rolling the player's view while using a VR device can cause a disconnect
+      between the player's physical space and the virtual space they are
+      viewing. Changing the apparent downwards direction can cause players to
+      lose balance or experience dizziness.
+
+      For these reasons, it is generally advisable to leave this property
+      disabled, unless you have extensively tested your experience for these
+      effects. Even with tilt and roll enabled, you may want to ensure the
+      player always has a stable reference frame, such as the interior of a
+      vehicle or a floor that can help the player ground themselves in their
+      physical space.
     code_samples: []
-    type: CFrame
-    tags:
-      - NotReplicated
-      - Deprecated
-    deprecation_message: |
-      This property is a deprecated variant of `Class.Camera.Focus|Focus` which
-      should be used instead.
+    type: boolean
+    tags: []
+    deprecation_message: ''
     security:
       read: None
       write: None
@@ -617,7 +617,7 @@ properties:
     category: Data
     serialization:
       can_load: true
-      can_save: false
+      can_save: true
     capabilities: []
 methods:
   - name: Camera:GetLargestCutoffDistance

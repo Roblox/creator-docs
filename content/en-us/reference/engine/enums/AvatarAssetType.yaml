@@ -249,3 +249,18 @@ items:
     value: 79
     tags: []
     deprecation_message: ''
+  - name: FaceMakeup
+    summary: ''
+    value: 88
+    tags: []
+    deprecation_message: ''
+  - name: LipMakeup
+    summary: ''
+    value: 89
+    tags: []
+    deprecation_message: ''
+  - name: EyeMakeup
+    summary: ''
+    value: 90
+    tags: []
+    deprecation_message: ''

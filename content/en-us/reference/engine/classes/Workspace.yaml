@@ -299,22 +299,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-  - name: Workspace.FallHeightEnabled
-    summary: ''
-    description: ''
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: PluginSecurity
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
   - name: Workspace.FallenPartsDestroyHeight
     summary: |
       Determines the height at which falling `Class.BasePart|BaseParts` and
@@ -338,6 +322,22 @@ properties:
       command bar, or the properties window in Studio.
     code_samples: []
     type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Workspace.FallHeightEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -815,36 +815,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-  - name: Workspace.StreamOutBehavior
-    summary: |
-      Configures how the engine decides when to Stream content away from
-      players.
-    description: |
-      The **StreamOutBehavior** controls where content will be unloaded from the
-      `Class.Player.ReplicationFocus|ReplicationFocus` based on device Memory
-      Conditions, or based on Streaming Radius.
-
-      See also:
-
-      - `Class.Workspace.StreamingEnabled` which controls whether content
-        streaming is enabled
-      - `Class.Workspace.StreamingMinRadius`
-      - `Class.Workspace.StreamingTargetRadius`
-      - `Class.Workspace.StreamingIntegrityMode`
-    code_samples: []
-    type: StreamOutBehavior
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Streaming
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
   - name: Workspace.StreamingEnabled
     summary: |
       Whether content streaming is enabled for the place.
@@ -960,6 +930,36 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: Workspace.StreamOutBehavior
+    summary: |
+      Configures how the engine decides when to Stream content away from
+      players.
+    description: |
+      The **StreamOutBehavior** controls where content will be unloaded from the
+      `Class.Player.ReplicationFocus|ReplicationFocus` based on device Memory
+      Conditions, or based on Streaming Radius.
+
+      See also:
+
+      - `Class.Workspace.StreamingEnabled` which controls whether content
+        streaming is enabled
+      - `Class.Workspace.StreamingMinRadius`
+      - `Class.Workspace.StreamingTargetRadius`
+      - `Class.Workspace.StreamingIntegrityMode`
+    code_samples: []
+    type: StreamOutBehavior
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Streaming
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: Workspace.Terrain
     summary: |
       A reference to the `Class.Terrain` object parented to the
@@ -988,23 +988,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-  - name: Workspace.TouchEventsUseCollisionGroups
-    summary: ''
-    description: ''
-    code_samples: []
-    type: RolloutState
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
   - name: Workspace.TouchesUseCollisionGroups
     summary: |
       Determines whether `Class.BasePart|parts` in different groups set to not
@@ -1020,6 +1003,23 @@ properties:
       information on the behavior of CanTouch, please visit its property page.
     code_samples: []
     type: boolean
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Workspace.TouchEventsUseCollisionGroups
+    summary: ''
+    description: ''
+    code_samples: []
+    type: RolloutState
     tags:
       - NotScriptable
     deprecation_message: ''

@@ -53,6 +53,27 @@ properties:
       can_save: true
     capabilities:
       - Physics
+  - name: BodyAngularVelocity.angularvelocity
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This deprecated property is a variant of
+      `Class.BodyAngularVelocity.AngularVelocity` which should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: false
+    capabilities:
+      - Physics
   - name: BodyAngularVelocity.MaxTorque
     summary: |
       Determines the limit of torque that may be exerted on each world axis.
@@ -74,50 +95,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities:
-      - Physics
-  - name: BodyAngularVelocity.P
-    summary: |
-      Determines how aggressive of a torque is applied in reaching the goal
-      angular velocity.
-    description: |
-      This property determines how much power is used while applying torque in
-      order to reach the goal
-      `Class.BodyAngularVelocity.AngularVelocity|AngularVelocity`. The higher
-      this value, the more power will be used and the faster it will be used.
-    code_samples: []
-    type: float
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Goals
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Physics
-  - name: BodyAngularVelocity.angularvelocity
-    summary: ''
-    description: ''
-    code_samples: []
-    type: Vector3
-    tags:
-      - NotReplicated
-      - Deprecated
-    deprecation_message: |
-      This deprecated property is a variant of
-      `Class.BodyAngularVelocity.AngularVelocity` which should be used instead.
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Goals
-    serialization:
-      can_load: true
-      can_save: false
     capabilities:
       - Physics
   - name: BodyAngularVelocity.maxTorque
@@ -143,6 +120,29 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Physics
+  - name: BodyAngularVelocity.P
+    summary: |
+      Determines how aggressive of a torque is applied in reaching the goal
+      angular velocity.
+    description: |
+      This property determines how much power is used while applying torque in
+      order to reach the goal
+      `Class.BodyAngularVelocity.AngularVelocity|AngularVelocity`. The higher
+      this value, the more power will be used and the faster it will be used.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: true
     capabilities:
       - Physics
 methods: []

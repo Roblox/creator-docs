@@ -824,49 +824,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-  - name: EditableMesh:GetFaceUVs
-    summary: |
-      Returns the face's UV IDs for the vertices on the face.
-    description: |
-      Returns the face's UV IDs for the vertices on the face.
-    code_samples: []
-    parameters:
-      - name: faceId
-        type: int64
-        default:
-        summary: |
-          Face ID for which to get the UV IDs.
-    returns:
-      - type: Array
-        summary: |
-          List of UV IDs used for the vertices on the given face.
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: EditableMesh:GetFaceVertices
-    summary: |
-      Returns the face's vertex IDs.
-    description: |
-      Returns the face's vertex IDs.
-    code_samples: []
-    parameters:
-      - name: faceId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: Array
-        summary: |
-          List of vertex IDs around the given face.
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
   - name: EditableMesh:GetFaces
     summary: |
       Returns all faces of the mesh.
@@ -973,6 +930,49 @@ methods:
       - type: Array
         summary: |
           List of face IDs that use the provided UV ID.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: EditableMesh:GetFaceUVs
+    summary: |
+      Returns the face's UV IDs for the vertices on the face.
+    description: |
+      Returns the face's UV IDs for the vertices on the face.
+    code_samples: []
+    parameters:
+      - name: faceId
+        type: int64
+        default:
+        summary: |
+          Face ID for which to get the UV IDs.
+    returns:
+      - type: Array
+        summary: |
+          List of UV IDs used for the vertices on the given face.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: EditableMesh:GetFaceVertices
+    summary: |
+      Returns the face's vertex IDs.
+    description: |
+      Returns the face's vertex IDs.
+    code_samples: []
+    parameters:
+      - name: faceId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: |
+          List of vertex IDs around the given face.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -1179,6 +1179,27 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: EditableMesh:GetVertexBones
+    summary: |
+      Returns all bone IDs that are associated with the vertex for skinning.
+    description: |
+      Returns all bone IDs that are associated with the vertex for skinning.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Vertex ID for which to get the associated bones.
+    returns:
+      - type: Array
+        summary: |
+          Bone IDs associated with the vertex for skinning.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: EditableMesh:GetVertexBoneWeights
     summary: |
       Returns skinning blend weights for each bone that is associated with the
@@ -1198,27 +1219,6 @@ methods:
         summary: |
           Skinning blend weights for each bone that is associated with the
           vertex.
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: EditableMesh:GetVertexBones
-    summary: |
-      Returns all bone IDs that are associated with the vertex for skinning.
-    description: |
-      Returns all bone IDs that are associated with the vertex for skinning.
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: |
-          Vertex ID for which to get the associated bones.
-    returns:
-      - type: Array
-        summary: |
-          Bone IDs associated with the vertex for skinning.
     tags: []
     deprecation_message: ''
     security: None
@@ -1298,6 +1298,28 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: EditableMesh:GetVertexFaces
+    summary: |
+      Returns the face IDs of the faces attached to the given vertex.
+    description: |
+      Returns the face IDs of the faces attached to the given vertex.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Stable vertex ID to find faces for.
+    returns:
+      - type: Array
+        summary: |
+          Array of face IDs attached to the given vertex.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: EditableMesh:GetVertexFaceUV
     summary: |
       Returns the UV ID of a vertex/face pair.
@@ -1320,28 +1342,6 @@ methods:
         summary: |
           Stable UV ID of the vertex/face pair.
     tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: EditableMesh:GetVertexFaces
-    summary: |
-      Returns the face IDs of the faces attached to the given vertex.
-    description: |
-      Returns the face IDs of the faces attached to the given vertex.
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: |
-          Stable vertex ID to find faces for.
-    returns:
-      - type: Array
-        summary: |
-          Array of face IDs attached to the given vertex.
-    tags:
-      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -2097,40 +2097,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-  - name: EditableMesh:SetVertexBoneWeights
-    summary: |
-      Sets skinning blend weights for each bone associated with the vertex.
-    description: |
-      Sets skinning blend weights for each bone associated with the vertex.
-
-      Corresponds with the bone IDs used in
-      `Class.EditableMesh:SetVertexBones()|SetVertexBones()`. In other words,
-      `Class.EditableMesh:GetVertexBoneWeights()|GetVertexBoneWeights(vertexId)[i]`
-      is the weight on this vertex for
-      `Class.EditableMesh:GetVertexBones()|GetVertexBones(vertexId)[i]`.
-
-      This method should be called after calling
-      `Class.EditableMesh:SetVertexBones()|SetVertexBones()`.
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: |
-          Vertex ID on which to set skinning blend weights.
-      - name: boneWeights
-        type: Array
-        default:
-        summary: |
-          Skinning blend weights to set on the vertex.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
   - name: EditableMesh:SetVertexBones
     summary: |
       Assign a list of bones with the vertex for skinning.
@@ -2158,6 +2124,40 @@ methods:
         default:
         summary: |
           Bone IDs to use with this vertex for skinning.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: EditableMesh:SetVertexBoneWeights
+    summary: |
+      Sets skinning blend weights for each bone associated with the vertex.
+    description: |
+      Sets skinning blend weights for each bone associated with the vertex.
+
+      Corresponds with the bone IDs used in
+      `Class.EditableMesh:SetVertexBones()|SetVertexBones()`. In other words,
+      `Class.EditableMesh:GetVertexBoneWeights()|GetVertexBoneWeights(vertexId)[i]`
+      is the weight on this vertex for
+      `Class.EditableMesh:GetVertexBones()|GetVertexBones(vertexId)[i]`.
+
+      This method should be called after calling
+      `Class.EditableMesh:SetVertexBones()|SetVertexBones()`.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Vertex ID on which to set skinning blend weights.
+      - name: boneWeights
+        type: Array
+        default:
+        summary: |
+          Skinning blend weights to set on the vertex.
     returns:
       - type: ()
         summary: ''

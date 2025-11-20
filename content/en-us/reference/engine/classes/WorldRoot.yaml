@@ -229,6 +229,38 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: WorldRoot:findPartOnRay
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: ray
+        type: Ray
+        default:
+        summary: ''
+      - name: ignoreDescendantsInstance
+        type: Instance
+        default: nil
+        summary: ''
+      - name: terrainCellsAreCubes
+        type: boolean
+        default: false
+        summary: ''
+      - name: ignoreWater
+        type: boolean
+        default: false
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.WorldRoot:FindPartOnRay()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: WorldRoot:FindPartOnRayWithIgnoreList
     summary: |
       Returns the first `Class.BasePart` or `Class.Terrain` cell intersecting
@@ -379,6 +411,34 @@ methods:
       This function has been deprecated. Use
       `Class.WorldRoot:GetPartBoundsInBox()` along with `Datatype.OverlapParams`
       for new work.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: WorldRoot:findPartsInRegion3
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: region
+        type: Region3
+        default:
+        summary: ''
+      - name: ignoreDescendantsInstance
+        type: Instance
+        default: nil
+        summary: ''
+      - name: maxParts
+        type: int
+        default: 20
+        summary: ''
+    returns:
+      - type: Instances
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of
+      `Class.WorldRoot:FindPartsInRegion3()` which should be used instead.
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -1002,66 +1062,6 @@ methods:
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
-  - name: WorldRoot:findPartOnRay
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: ray
-        type: Ray
-        default:
-        summary: ''
-      - name: ignoreDescendantsInstance
-        type: Instance
-        default: nil
-        summary: ''
-      - name: terrainCellsAreCubes
-        type: boolean
-        default: false
-        summary: ''
-      - name: ignoreWater
-        type: boolean
-        default: false
-        summary: ''
-    returns:
-      - type: Tuple
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.WorldRoot:FindPartOnRay()`
-      which should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: WorldRoot:findPartsInRegion3
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: region
-        type: Region3
-        default:
-        summary: ''
-      - name: ignoreDescendantsInstance
-        type: Instance
-        default: nil
-        summary: ''
-      - name: maxParts
-        type: int
-        default: 20
-        summary: ''
-    returns:
-      - type: Instances
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of
-      `Class.WorldRoot:FindPartsInRegion3()` which should be used instead.
-    security: None
     thread_safety: Unsafe
     capabilities: []
 events: []

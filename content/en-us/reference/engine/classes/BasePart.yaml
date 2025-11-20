@@ -519,41 +519,25 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-  - name: BasePart.CFrame
-    summary: |
-      Determines the position and orientation of the `Class.BasePart` in the
-      world.
-    description: |
-      The `CFrame` property determines both the position and orientation of the
-      `Class.BasePart` in the world. It acts as an arbitrary reference location
-      on the geometry, but `Class.BasePart.ExtentsCFrame|ExtentsCFrame`
-      represents the actual `Datatype.CFrame` of its physical center.
-
-      When setting `CFrame` on a part, other joined parts are also moved
-      relative to the part, but it is recommended that you use
-      `Class.PVInstance:PivotTo()` to move an entire model, such as when
-      teleporting a player's character.
-
-      Unlike setting `Class.BasePart.Position`, setting `CFrame` will always
-      move the part to the exact given `Datatype.CFrame`; in other words: **no
-      overlap checking is done** and the physics solver will attempt to resolve
-      any overlap unless both parts are `Class.BasePart.Anchored|Anchored`.
-
-      For keeping track of positions relative to a part's `Datatype.CFrame`, an
-      `Class.Attachment` may be useful.
-    code_samples:
-      - Setting-Part-CFrame
-    type: CFrame
-    tags: []
-    deprecation_message: ''
+  - name: BasePart.brickColor
+    summary: ''
+    description: ''
+    code_samples: []
+    type: BrickColor
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This deprecated property is an old Camel Case variant of the Pascal Case
+      `Class.BasePart.BrickColor`, which should be used instead.
     security:
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Transform
+    category: Appearance
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
     capabilities: []
   - name: BasePart.CanCollide
     summary: |
@@ -704,6 +688,42 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+  - name: BasePart.CFrame
+    summary: |
+      Determines the position and orientation of the `Class.BasePart` in the
+      world.
+    description: |
+      The `CFrame` property determines both the position and orientation of the
+      `Class.BasePart` in the world. It acts as an arbitrary reference location
+      on the geometry, but `Class.BasePart.ExtentsCFrame|ExtentsCFrame`
+      represents the actual `Datatype.CFrame` of its physical center.
+
+      When setting `CFrame` on a part, other joined parts are also moved
+      relative to the part, but it is recommended that you use
+      `Class.PVInstance:PivotTo()` to move an entire model, such as when
+      teleporting a player's character.
+
+      Unlike setting `Class.BasePart.Position`, setting `CFrame` will always
+      move the part to the exact given `Datatype.CFrame`; in other words: **no
+      overlap checking is done** and the physics solver will attempt to resolve
+      any overlap unless both parts are `Class.BasePart.Anchored|Anchored`.
+
+      For keeping track of positions relative to a part's `Datatype.CFrame`, an
+      `Class.Attachment` may be useful.
+    code_samples:
+      - Setting-Part-CFrame
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Transform
+    serialization:
+      can_load: true
+      can_save: true
     capabilities: []
   - name: BasePart.CollisionGroup
     summary: |
@@ -1544,32 +1564,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-  - name: BasePart.ResizeIncrement
-    summary: |
-      Describes the smallest change in size allowable by the
-      `Class.BasePart:Resize()|Resize()` method.
-    description: |
-      The `ResizeIncrement` property is a read-only property that describes the
-      smallest change in size allowable by the
-      `Class.BasePart:Resize()|Resize()` method. It differs between
-      implementations of the `Class.BasePart` abstract class; for instance,
-      `Class.Part` has this set to `1` while `Class.TrussPart` has this set to
-      `2` since individual truss sections are 2&times;2&times;2 in size.
-    code_samples: []
-    type: int
-    tags:
-      - ReadOnly
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities: []
   - name: BasePart.ResizeableFaces
     summary: |
       Describes the faces on which a part may be resized.
@@ -1590,6 +1584,32 @@ properties:
     code_samples:
       - Resize-Handles
     type: Faces
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+  - name: BasePart.ResizeIncrement
+    summary: |
+      Describes the smallest change in size allowable by the
+      `Class.BasePart:Resize()|Resize()` method.
+    description: |
+      The `ResizeIncrement` property is a read-only property that describes the
+      smallest change in size allowable by the
+      `Class.BasePart:Resize()|Resize()` method. It differs between
+      implementations of the `Class.BasePart` abstract class; for instance,
+      `Class.Part` has this set to `1` while `Class.TrussPart` has this set to
+      `2` since individual truss sections are 2&times;2&times;2 in size.
+    code_samples: []
+    type: int
     tags:
       - ReadOnly
       - NotReplicated
@@ -1727,6 +1747,32 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: BasePart.Rotation
+    summary: |
+      The rotation of the part in degrees for the three axes.
+    description: |
+      The rotation of the part in degrees for the three axes.
+
+      When setting this property, any `Class.Weld|Welds` or
+      `Class.Motor6D|Motor6Ds` connected to this part will have the matching
+      `Class.JointInstance.C0|C0` or `Class.JointInstance.C1|C1` property
+      updated to allow the part to move relative to any other parts it is joined
+      to. `Class.WeldConstraint|WeldConstraints` will also be temporarily
+      disabled and re-enabled during the move.
+    code_samples: []
+    type: Vector3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+    capabilities: []
   - name: BasePart.RotVelocity
     summary: |
       Determines a part's change in orientation over time.
@@ -1756,32 +1802,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
-  - name: BasePart.Rotation
-    summary: |
-      The rotation of the part in degrees for the three axes.
-    description: |
-      The rotation of the part in degrees for the three axes.
-
-      When setting this property, any `Class.Weld|Welds` or
-      `Class.Motor6D|Motor6Ds` connected to this part will have the matching
-      `Class.JointInstance.C0|C0` or `Class.JointInstance.C1|C1` property
-      updated to allow the part to move relative to any other parts it is joined
-      to. `Class.WeldConstraint|WeldConstraints` will also be temporarily
-      disabled and re-enabled during the move.
-    code_samples: []
-    type: Vector3
-    tags:
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: false
     capabilities: []
   - name: BasePart.Size
     summary: |
@@ -2108,26 +2128,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-  - name: BasePart.brickColor
-    summary: ''
-    description: ''
-    code_samples: []
-    type: BrickColor
-    tags:
-      - NotReplicated
-      - Deprecated
-    deprecation_message: |
-      This deprecated property is an old Camel Case variant of the Pascal Case
-      `Class.BasePart.BrickColor`, which should be used instead.
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Appearance
-    serialization:
-      can_load: true
-      can_save: false
-    capabilities: []
 methods:
   - name: BasePart:AngularAccelerationToTorque
     summary: ''
@@ -2287,6 +2287,22 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: BasePart:breakJoints
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.BasePart:BreakJoints()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: BasePart:CanCollideWith
     summary: |
       Returns whether the parts can collide with each other.
@@ -2426,6 +2442,22 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+  - name: BasePart:getMass
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: float
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This Camel Case property has been deprecated in favor of its Pascal Case
+      variant, `Class.BasePart:GetMass()`.
+    security: None
+    thread_safety: Unsafe
     capabilities: []
   - name: BasePart:GetNetworkOwner
     summary: |
@@ -2726,6 +2758,22 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: BasePart:makeJoints
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.BasePart:MakeJoints()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: BasePart:Resize
     summary: |
       Changes the size of an object just like using the Studio resize tool.
@@ -2749,6 +2797,30 @@ methods:
           Whether the part is resized.
     tags: []
     deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: BasePart:resize
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: normalId
+        type: NormalId
+        default:
+        summary: ''
+      - name: deltaAmount
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.BasePart:Resize()` which
+      should be used instead.
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -2958,78 +3030,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - CSG
-  - name: BasePart:breakJoints
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.BasePart:BreakJoints()`
-      which should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: BasePart:getMass
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: float
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This Camel Case property has been deprecated in favor of its Pascal Case
-      variant, `Class.BasePart:GetMass()`.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: BasePart:makeJoints
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.BasePart:MakeJoints()`
-      which should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: BasePart:resize
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: normalId
-        type: NormalId
-        default:
-        summary: ''
-      - name: deltaAmount
-        type: int
-        default:
-        summary: ''
-    returns:
-      - type: boolean
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.BasePart:Resize()` which
-      should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
 events:
   - name: BasePart.LocalSimulationTouched
     summary: ''
@@ -3078,29 +3078,6 @@ events:
       should be used instead.
     security: None
     capabilities: []
-  - name: BasePart.TouchEnded
-    summary: |
-      Fires when a part stops touching another part as a result of physical
-      movement.
-    description: |
-      Fires when a part stops touching another part under similar conditions to
-      those of `Class.BasePart.Touched`.
-
-      This event works in conjunction with
-      `Class.Workspace.TouchesUseCollisionGroups` to specify whether
-      [collision groups](../../../workspace/collisions.md#collision-filtering)
-      are acknowledged for detection.
-    code_samples:
-      - Touching-Parts-Count
-    parameters:
-      - name: otherPart
-        type: BasePart
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    capabilities: []
   - name: BasePart.Touched
     summary: |
       Fires when a part touches another part as a result of physical movement.
@@ -3129,6 +3106,29 @@ events:
         default:
         summary: |
           The other part that came in contact with the given part.
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities: []
+  - name: BasePart.TouchEnded
+    summary: |
+      Fires when a part stops touching another part as a result of physical
+      movement.
+    description: |
+      Fires when a part stops touching another part under similar conditions to
+      those of `Class.BasePart.Touched`.
+
+      This event works in conjunction with
+      `Class.Workspace.TouchesUseCollisionGroups` to specify whether
+      [collision groups](../../../workspace/collisions.md#collision-filtering)
+      are acknowledged for detection.
+    code_samples:
+      - Touching-Parts-Count
+    parameters:
+      - name: otherPart
+        type: BasePart
+        default:
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None

@@ -207,6 +207,23 @@ properties:
       can_save: true
     capabilities:
       - Players
+  - name: StarterPlayer.CharacterBreakJointsOnDeath
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Character
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Players
   - name: StarterPlayer.CharacterJumpHeight
     summary: |
       Determines the starting value of `Class.Humanoid.JumpHeight` for
@@ -363,6 +380,24 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Character
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Players
+  - name: StarterPlayer.CreateDefaultPlayerModule
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Controls
     serialization:
       can_load: true
       can_save: true
@@ -640,8 +675,7 @@ properties:
     description: ''
     code_samples: []
     type: CharacterControlMode
-    tags:
-      - NotBrowsable
+    tags: []
     deprecation_message: ''
     security:
       read: None

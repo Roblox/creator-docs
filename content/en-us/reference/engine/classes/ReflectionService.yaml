@@ -210,7 +210,7 @@ methods:
       		-- The category under which the property is listed in Studio.
       		Category: string,
       		-- A message indicating that the property is deprecated, if applicable.
-      		DeprecationMessage: string?,
+      		DepreciationMessage: string?,
       		-- The order in which the property appears in Studio.
       		LayoutOrder: number,
       	}?,

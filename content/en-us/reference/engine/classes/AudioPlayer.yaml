@@ -66,6 +66,23 @@ properties:
       can_save: false
     capabilities:
       - Audio
+  - name: AudioPlayer.AudioContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Asset
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
   - name: AudioPlayer.AutoLoad
     summary: |
       Controls whether `Class.AudioPlayer.Asset|Asset` loads automatically once
@@ -82,6 +99,23 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Asset
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+  - name: AudioPlayer.AutoPlay
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Playback
     serialization:
       can_load: true
       can_save: true
@@ -151,6 +185,28 @@ properties:
       can_save: true
     capabilities:
       - Audio
+  - name: AudioPlayer.Looping
+    summary: |
+      Controls whether this `Class.AudioPlayer` loops.
+    description: |
+      Controls whether this `Class.AudioPlayer` loops when exceeding the end of
+      its `Class.AudioPlayer.TimeLength|TimeLength`,
+      `Class.AudioPlayer.LoopRegion|LoopRegion`, or
+      `Class.AudioPlayer.PlaybackRegion|PlaybackRegion`.
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Playback
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
   - name: AudioPlayer.LoopRegion
     summary: |
       A range, in seconds, denoting a desired loop start and loop end within the
@@ -191,28 +247,6 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Regions
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Audio
-  - name: AudioPlayer.Looping
-    summary: |
-      Controls whether this `Class.AudioPlayer` loops.
-    description: |
-      Controls whether this `Class.AudioPlayer` loops when exceeding the end of
-      its `Class.AudioPlayer.TimeLength|TimeLength`,
-      `Class.AudioPlayer.LoopRegion|LoopRegion`, or
-      `Class.AudioPlayer.PlaybackRegion|PlaybackRegion`.
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Playback
     serialization:
       can_load: true
       can_save: true

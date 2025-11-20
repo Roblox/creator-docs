@@ -81,6 +81,22 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: IncrementalPatchBuilder.UseFileLevelCompressionInsteadOfChunk
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: IncrementalPatchBuilder.ZstdCompression
     summary: ''
     description: ''

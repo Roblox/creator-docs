@@ -58,6 +58,22 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: ProximityPromptService.MaxIndicatorsVisible
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: ProximityPromptService.MaxPromptsVisible
     summary: |
       Maximum number of `Class.ProximityPrompt|ProximityPrompts` that will be
@@ -80,6 +96,32 @@ properties:
     capabilities: []
 methods: []
 events:
+  - name: ProximityPromptService.IndicatorHidden
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: prompt
+        type: ProximityPrompt
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities: []
+  - name: ProximityPromptService.IndicatorShown
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: prompt
+        type: ProximityPrompt
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities: []
   - name: ProximityPromptService.PromptButtonHoldBegan
     summary: |
       Triggers when the player begins holding down the
@@ -169,6 +211,31 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
+  - name: ProximityPromptService.PromptTriggered
+    summary: |
+      Triggers when the user interacts with this prompt.
+    description: |
+      This event triggers when the player completes interaction with a prompt,
+      either when the `Class.ProximityPrompt.KeyboardKeyCode|KeyboardKeyCode`
+      key/button is pressed, or after a specified amount of time holding the
+      key/button if the prompt's
+      `Class.ProximityPrompt.HoldDuration|HoldDuration` is non-zero.
+    code_samples: []
+    parameters:
+      - name: prompt
+        type: ProximityPrompt
+        default:
+        summary: |
+          The prompt that the player interacts with.
+      - name: playerWhoTriggered
+        type: Player
+        default:
+        summary: |
+          The interacting player.
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities: []
   - name: ProximityPromptService.PromptTriggerEnded
     summary: |
       Triggers when the player stops holding down the
@@ -191,31 +258,6 @@ events:
         default:
         summary: |
           The player that releases the key/button.
-    tags: []
-    deprecation_message: ''
-    security: None
-    capabilities: []
-  - name: ProximityPromptService.PromptTriggered
-    summary: |
-      Triggers when the user interacts with this prompt.
-    description: |
-      This event triggers when the player completes interaction with a prompt,
-      either when the `Class.ProximityPrompt.KeyboardKeyCode|KeyboardKeyCode`
-      key/button is pressed, or after a specified amount of time holding the
-      key/button if the prompt's
-      `Class.ProximityPrompt.HoldDuration|HoldDuration` is non-zero.
-    code_samples: []
-    parameters:
-      - name: prompt
-        type: ProximityPrompt
-        default:
-        summary: |
-          The prompt that the player interacts with.
-      - name: playerWhoTriggered
-        type: Player
-        default:
-        summary: |
-          The interacting player.
     tags: []
     deprecation_message: ''
     security: None

@@ -15,18 +15,12 @@ description: |
   also features methods for common vector operations, such as
   `Datatype.Vector3:Cross()|Cross()` and `Datatype.Vector3:Dot()|Dot()`.
 
+  Alternatively to `Datatype.Vector3`, consider using the methods and properties
+  of the `Library.vector` library.
+
   Some example usages of `Datatype.Vector3` are the
   `Class.BasePart.Position|Position`, `Class.BasePart.Rotation|Rotation`, and
   `Class.BasePart.Size|Size` of parts, for example:
-
-  Note that `Datatype.Vector3`, unlike atomic data types such as
-  `Datatype.Vector2` or `Datatype.CFrame`, acts as a **value** type. This means
-  that `Datatype.Vector3` values that were created separately but hold the same
-  value will be compared equally, and the result of
-  `Global.LuaGlobals.rawequal()` on such vectors will be `true`.
-
-  Alternatively to `Datatype.Vector3`, consider using the methods and properties
-  of the `Library.vector` library.
 
   ```lua
   local Workspace = game:GetService("Workspace")

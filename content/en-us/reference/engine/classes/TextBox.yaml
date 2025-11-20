@@ -1028,6 +1028,30 @@ methods:
     capabilities:
       - UI
 events:
+  - name: TextBox.Focused
+    summary: |
+      Fires when the `Class.TextBox` gains focus.
+    description: |
+      Fires when the `Class.TextBox` gains focus - typically when a client
+      clicks/taps on a `TextBox` to begin text entry. This also fires if a
+      `TextBox` forces focus on the user.
+
+      It can be used alongside `Class.TextBox.FocusLost` to track when a TextBox
+      gains and loses focus.
+
+      See also the `Class.UserInputService.TextBoxFocused` and
+      `Class.UserInputService.TextBoxFocusReleased` for similar functions that
+      rely on the UserInputService service.
+
+      This event will only fire when used in a `Class.LocalScript`.
+    code_samples:
+      - TextBox-Focus
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - UI
   - name: TextBox.FocusLost
     summary: |
       Fires when the client lets their focus leave the `Class.TextBox`.
@@ -1060,30 +1084,6 @@ events:
         summary: |
           An `Class.InputObject` instance indicating the type of input that
           caused the `TextBox` to lose focus.
-    tags: []
-    deprecation_message: ''
-    security: None
-    capabilities:
-      - UI
-  - name: TextBox.Focused
-    summary: |
-      Fires when the `Class.TextBox` gains focus.
-    description: |
-      Fires when the `Class.TextBox` gains focus - typically when a client
-      clicks/taps on a `TextBox` to begin text entry. This also fires if a
-      `TextBox` forces focus on the user.
-
-      It can be used alongside `Class.TextBox.FocusLost` to track when a TextBox
-      gains and loses focus.
-
-      See also the `Class.UserInputService.TextBoxFocused` and
-      `Class.UserInputService.TextBoxFocusReleased` for similar functions that
-      rely on the UserInputService service.
-
-      This event will only fire when used in a `Class.LocalScript`.
-    code_samples:
-      - TextBox-Focus
-    parameters: []
     tags: []
     deprecation_message: ''
     security: None

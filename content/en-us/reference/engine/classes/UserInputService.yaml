@@ -41,10 +41,9 @@ properties:
       `Class.UserInputService:GetDeviceAcceleration()|GetDeviceAcceleration()`
       method or track when the device's acceleration changes through the
       `Class.UserInputService.DeviceAccelerationChanged|DeviceAccelerationChanged`
-      event. You can also query and track gravity through
-      `Class.UserInputService:GetDeviceGravity()|GetDeviceGravity()` and
-      `Class.UserInputService.DeviceGravityChanged|DeviceGravityChanged`.
-    code_samples: []
+      event.
+    code_samples:
+      - UserInputService-DeviceGravityChanged
     type: boolean
     tags:
       - ReadOnly
@@ -535,6 +534,25 @@ properties:
       can_save: true
     capabilities:
       - Input
+  - name: UserInputService.TouchScreenEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities:
+      - Input
   - name: UserInputService.UserHeadCFrame
     summary: |
       Describes the orientation and position of a user's head, if they are
@@ -672,14 +690,22 @@ methods:
     description: |
       This method returns an `Class.InputObject` describing the device's current
       gravity vector. The vector is determined by the device's orientation
-      relative to the real-world force of gravity.
+      relative to the real-world force of gravity. For example:
 
-      Gravity is only tracked for devices with an enabled accelerometer as
-      queried through
-      `Class.UserInputService.AccelerometerEnabled|AccelerometerEnabled`. To
-      track when the device's gravity changes, use the
+      - `Datatype.Vector3|Vector3.new(0, 0, -9.18)` if the device is perfectly
+        upright (portrait)
+      - `Datatype.Vector3|Vector3.new(9.81, 0, 0)` if the left side of the
+        device is pointing down
+      - `Datatype.Vector3|Vector3.new(0, -9.81, 0)` if the back of the device is
+        pointing down
+
+      Gravity is only tracked for devices with an enabled gyroscope as queried
+      through `Class.UserInputService.GyroscopeEnabled|GyroscopeEnabled`.
+
+      To track when the device's gravity changes, use the
       `Class.UserInputService.DeviceGravityChanged|DeviceGravityChanged` event.
-    code_samples: []
+    code_samples:
+      - UserInputService-GetDeviceGravity
     parameters: []
     returns:
       - type: InputObject
@@ -1577,7 +1603,8 @@ events:
       A device's gravity vector represent the force of gravity on each of the
       device's **X**, **Y**, and **Z** axes. While gravity never changes, the
       force it exerts on each axis changes when the device rotates and changes
-      orientation.
+      orientation. The force value exerted on each axis is a unit vector ranging
+      from `-1` to `1`.
 
       If the device has an enabled accelerometer, you can use the
       `Class.UserInputService:GetDeviceGravity()|GetDeviceGravity()` method to
@@ -1868,31 +1895,6 @@ events:
     security: None
     capabilities:
       - Input
-  - name: UserInputService.TextBoxFocusReleased
-    summary: |
-      Fires when the client loses focus on a `Class.TextBox`.
-    description: |
-      This event fires when the client loses focus on a `Class.TextBox`,
-      typically when a user stops text entry by pressing <kbd>Enter</kbd> or
-      clicking/touching elsewhere on the screen. Can be used alongside
-      `Class.UserInputService.TextBoxFocused|TextBoxFocused` to track when a
-      `Class.TextBox` gains focus.
-
-      See also `Class.UserInputService:GetFocusedTextBox()|GetFocusedTextBox()`,
-      `Class.TextBox.Focused`, and `Class.TextBox.FocusLost`.
-    code_samples:
-      - UserInputService-TextBoxFocused
-    parameters:
-      - name: textboxReleased
-        type: TextBox
-        default:
-        summary: |
-          The `Class.TextBox` that lost focus.
-    tags: []
-    deprecation_message: ''
-    security: None
-    capabilities:
-      - Input
   - name: UserInputService.TextBoxFocused
     summary: |
       Fires when the client focuses on a `Class.TextBox`.
@@ -1914,6 +1916,31 @@ events:
         default:
         summary: |
           The `Class.TextBox` that gained focus.
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - Input
+  - name: UserInputService.TextBoxFocusReleased
+    summary: |
+      Fires when the client loses focus on a `Class.TextBox`.
+    description: |
+      This event fires when the client loses focus on a `Class.TextBox`,
+      typically when a user stops text entry by pressing <kbd>Enter</kbd> or
+      clicking/touching elsewhere on the screen. Can be used alongside
+      `Class.UserInputService.TextBoxFocused|TextBoxFocused` to track when a
+      `Class.TextBox` gains focus.
+
+      See also `Class.UserInputService:GetFocusedTextBox()|GetFocusedTextBox()`,
+      `Class.TextBox.Focused`, and `Class.TextBox.FocusLost`.
+    code_samples:
+      - UserInputService-TextBoxFocused
+    parameters:
+      - name: textboxReleased
+        type: TextBox
+        default:
+        summary: |
+          The `Class.TextBox` that lost focus.
     tags: []
     deprecation_message: ''
     security: None
@@ -2398,6 +2425,22 @@ events:
     security: None
     capabilities:
       - Input
+  - name: UserInputService.WindowFocused
+    summary: |
+      Fires when the window of the Roblox client gains focus on the user's
+      screen.
+    description: |
+      This event fires when the window of the Roblox client gains focus,
+      typically when it is maximized or actively opened by the user. Can be used
+      alongside `Class.UserInputService.WindowFocusReleased|WindowFocusReleased`
+      to track when the client loses focus on a user's screen.
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - Input
   - name: UserInputService.WindowFocusReleased
     summary: |
       Fires when the window of the Roblox client loses focus on the user's
@@ -2410,22 +2453,6 @@ events:
     code_samples:
       - UserInputService-Window-Focus-Client
       - UserInputService-Window-Focus-Server
-    parameters: []
-    tags: []
-    deprecation_message: ''
-    security: None
-    capabilities:
-      - Input
-  - name: UserInputService.WindowFocused
-    summary: |
-      Fires when the window of the Roblox client gains focus on the user's
-      screen.
-    description: |
-      This event fires when the window of the Roblox client gains focus,
-      typically when it is maximized or actively opened by the user. Can be used
-      alongside `Class.UserInputService.WindowFocusReleased|WindowFocusReleased`
-      to track when the client loses focus on a user's screen.
-    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''

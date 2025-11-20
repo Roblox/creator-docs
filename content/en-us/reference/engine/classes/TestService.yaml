@@ -610,6 +610,23 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: TestService:isFeatureEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: TestService:Message
     summary: |
       Prints Test message, followed by text to the output, in blue text.
@@ -750,23 +767,6 @@ methods:
         summary: ''
     returns:
       - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: TestService:isFeatureEnabled
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: name
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''

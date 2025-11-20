@@ -38,11 +38,47 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-  - name: Capture.SourceUniverseId
+  - name: Capture.CaptureType
     summary: ''
     description: ''
     code_samples: []
-    type: int64
+    type: CaptureType
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+  - name: Capture.FilePathString
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+  - name: Capture.LocalId
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
     tags:
       - ReadOnly
       - NotReplicated
@@ -74,11 +110,11 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-  - name: Capture.CaptureType
+  - name: Capture.SourceUniverseId
     summary: ''
     description: ''
     code_samples: []
-    type: CaptureType
+    type: int64
     tags:
       - ReadOnly
       - NotReplicated
@@ -86,42 +122,6 @@ properties:
     security:
       read: None
       write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: true
-    capabilities: []
-  - name: Capture.LocalId
-    summary: ''
-    description: ''
-    code_samples: []
-    type: string
-    tags:
-      - ReadOnly
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: true
-    capabilities: []
-  - name: Capture.FilePathString
-    summary: ''
-    description: ''
-    code_samples: []
-    type: string
-    tags:
-      - ReadOnly
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Data
     serialization:

@@ -1402,6 +1402,10 @@ methods:
       the same group ID will yield the same result as when the method was first
       called with the given group ID. The caching behavior is on a per-peer
       basis: a server does not share the same cache as a client.
+
+      When a player joins a group in-experience due to a call to
+      `Class.GroupService:PromptJoinAsync()`, any cached value for that player
+      will be cleared on the client where the prompt was shown.
     code_samples:
       - Player-GetRankInGroup1
     parameters:
@@ -1543,6 +1547,28 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+  - name: Player:isFriendsWith
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Player:IsFriendsWith()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
   - name: Player:IsInGroup
     summary: |
       Checks whether a player is a member of a group with the given ID.
@@ -1663,6 +1689,28 @@ methods:
       This item is deprecated, as it may have been used for a now obsolete data
       persistence method. Please save and load player data using
       `Class.DataStoreService` for new work.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+  - name: Player:loadBoolean
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Player:LoadBoolean()`
+      which has also been deprecated. Neither function should be used in new
+      work.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -1822,6 +1870,28 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+  - name: Player:loadInstance
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Player:LoadInstance()`
+      which has also been deprecated. Neither function should be used in new
+      work.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
   - name: Player:LoadNumber
     summary: |
       Returns a number value that was previously saved to the player.
@@ -1850,6 +1920,27 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+  - name: Player:loadNumber
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: double
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Player:LoadNumber()` which
+      has also been deprecated. Neither function should be used in new work.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
   - name: Player:LoadString
     summary: |
       Returns a string value that was previously saved to the player.
@@ -1873,6 +1964,27 @@ methods:
       This item is deprecated, as it may have been used for a now obsolete data
       persistence method. Please save and load player data using
       `Class.DataStoreService` for new work.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+  - name: Player:loadString
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is a deprecated variant of `Class.Player:LoadString()` which
+      has also been deprecated. Neither function should be used in new work.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -2023,6 +2135,32 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+  - name: Player:saveBoolean
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+      - name: value
+        type: boolean
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is a deprecated variant of `Class.Player:SaveBoolean()`
+      which has also been deprecated. Neither function should be used in new
+      work.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
   - name: Player:SaveInstance
     summary: |
       Saves an instance which can be loaded again at a later time.
@@ -2050,6 +2188,32 @@ methods:
       This item is deprecated, as it may have been used for a now obsolete data
       persistence method. Please save and load player data using
       `Class.DataStoreService` for new work.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+  - name: Player:saveInstance
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+      - name: value
+        type: Instance
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is a deprecated variant of `Class.Player:SaveInstance()`
+      which has also been deprecated. Neither function should be used in new
+      work.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -2085,6 +2249,31 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+  - name: Player:saveNumber
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+      - name: value
+        type: double
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is a deprecated variant of `Class.Player:SaveNumber()` which
+      has also been deprecated. Neither function should be used in new work.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
   - name: Player:SaveString
     summary: |
       Saves a string value that can be loaded again at a later time.
@@ -2112,6 +2301,31 @@ methods:
       This item is deprecated, as it may have been used for a now obsolete data
       persistence method. Please save and load player data using
       `Class.DataStoreService` for new work.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+  - name: Player:saveString
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+      - name: value
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is a deprecated variant of `Class.Player:SaveString()` which
+      has also been deprecated. Neither function should be used in new work.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -2196,216 +2410,6 @@ methods:
       This item is deprecated, as it may have been used for a now obsolete data
       persistence method. Please save and load player data using
       `Class.DataStoreService` for new work.
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-  - name: Player:isFriendsWith
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: userId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: boolean
-        summary: ''
-    tags:
-      - Yields
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.Player:IsFriendsWith()`
-      which should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-  - name: Player:loadBoolean
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: key
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: boolean
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.Player:LoadBoolean()`
-      which has also been deprecated. Neither function should be used in new
-      work.
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-  - name: Player:loadInstance
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: key
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: Instance
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.Player:LoadInstance()`
-      which has also been deprecated. Neither function should be used in new
-      work.
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-  - name: Player:loadNumber
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: key
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: double
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.Player:LoadNumber()` which
-      has also been deprecated. Neither function should be used in new work.
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-  - name: Player:loadString
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: key
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: string
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This function is a deprecated variant of `Class.Player:LoadString()` which
-      has also been deprecated. Neither function should be used in new work.
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-  - name: Player:saveBoolean
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: key
-        type: string
-        default:
-        summary: ''
-      - name: value
-        type: boolean
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This function is a deprecated variant of `Class.Player:SaveBoolean()`
-      which has also been deprecated. Neither function should be used in new
-      work.
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-  - name: Player:saveInstance
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: key
-        type: string
-        default:
-        summary: ''
-      - name: value
-        type: Instance
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This function is a deprecated variant of `Class.Player:SaveInstance()`
-      which has also been deprecated. Neither function should be used in new
-      work.
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-  - name: Player:saveNumber
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: key
-        type: string
-        default:
-        summary: ''
-      - name: value
-        type: double
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This function is a deprecated variant of `Class.Player:SaveNumber()` which
-      has also been deprecated. Neither function should be used in new work.
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-  - name: Player:saveString
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: key
-        type: string
-        default:
-        summary: ''
-      - name: value
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This function is a deprecated variant of `Class.Player:SaveString()` which
-      has also been deprecated. Neither function should be used in new work.
     security: None
     thread_safety: Unsafe
     capabilities:

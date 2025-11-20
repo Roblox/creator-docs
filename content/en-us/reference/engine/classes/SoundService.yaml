@@ -32,6 +32,22 @@ tags:
   - Service
 deprecation_message: ''
 properties:
+  - name: SoundService.AcousticSimulationEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: SoundService.AmbientReverb
     summary: |
       The ambient sound environment preset used by `Class.SoundService`.
@@ -221,12 +237,8 @@ properties:
       can_save: true
     capabilities: []
   - name: SoundService.VolumetricAudio
-    summary: |
-      `Enum.VolumetricAudio` setting to determine if volumetric audio is
-      enabled.
-    description: |
-      `Enum.VolumetricAudio` setting to determine if
-      [volumetric audio](/sound/objects.md#volumetric) is enabled.
+    summary: ''
+    description: ''
     code_samples: []
     type: VolumetricAudio
     tags:

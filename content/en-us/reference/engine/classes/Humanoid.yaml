@@ -85,6 +85,31 @@ properties:
       can_save: true
     capabilities:
       - Avatar
+  - name: Humanoid.AutomaticScalingEnabled
+    summary: |
+      When Enabled, AutomaticScalingEnabled causes the size of the character to
+      change in response to the values in the humanoid's child scale values
+      changing.
+    description: |
+      The Humanoid has six child scale values including `BodyDepthScale`,
+      `BodyHeightScale`, `BodyProportionScale`, `BodyTypeScale`,
+      `BodyWidthScale`, `HeadScale`. Changing the value of any of these causes
+      the character's body parts and accessories to change size, but only if
+      `AutomaticScalingEnabled` is true.
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Game
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Avatar
   - name: Humanoid.AutoRotate
     summary: |
       AutoRotate sets whether or not the Humanoid will automatically rotate to
@@ -135,31 +160,6 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Control
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Avatar
-  - name: Humanoid.AutomaticScalingEnabled
-    summary: |
-      When Enabled, AutomaticScalingEnabled causes the size of the character to
-      change in response to the values in the humanoid's child scale values
-      changing.
-    description: |
-      The Humanoid has six child scale values including `BodyDepthScale`,
-      `BodyHeightScale`, `BodyProportionScale`, `BodyTypeScale`,
-      `BodyWidthScale`, `HeadScale`. Changing the value of any of these causes
-      the character's body parts and accessories to change size, but only if
-      `AutomaticScalingEnabled` is true.
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Game
     serialization:
       can_load: true
       can_save: true
@@ -717,6 +717,27 @@ properties:
       can_save: true
     capabilities:
       - Avatar
+  - name: Humanoid.maxHealth
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This deprecated property is a variant of `Class.Humanoid.MaxHealth` which
+      should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Game
+    serialization:
+      can_load: true
+      can_save: false
+    capabilities:
+      - Avatar
   - name: Humanoid.MaxSlopeAngle
     summary: |
       The maximum slope angle that a humanoid can walk on without slipping.
@@ -880,6 +901,31 @@ properties:
       can_save: true
     capabilities:
       - Avatar
+  - name: Humanoid.RightLeg
+    summary: |
+      A reference to the humanoid's _Right Leg_ part.
+    description: |
+      A reference to the humanoid's _Right Leg_ part. The value of this property
+      will always be `nil` if the humanoid's RigType is set to R15.
+    code_samples: []
+    type: BasePart
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This instance only works with the old R6 rig. It will not work with the
+      R15 rig and should not be used in new work not using the R6 rig.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+    capabilities:
+      - Avatar
   - name: Humanoid.RigType
     summary: |
       Describes whether this `Class.Humanoid` is utilizing the legacy R6
@@ -908,31 +954,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities:
-      - Avatar
-  - name: Humanoid.RightLeg
-    summary: |
-      A reference to the humanoid's _Right Leg_ part.
-    description: |
-      A reference to the humanoid's _Right Leg_ part. The value of this property
-      will always be `nil` if the humanoid's RigType is set to R15.
-    code_samples: []
-    type: BasePart
-    tags:
-      - Hidden
-      - NotReplicated
-      - Deprecated
-    deprecation_message: |
-      This instance only works with the old R6 rig. It will not work with the
-      R15 rig and should not be used in new work not using the R6 rig.
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: false
     capabilities:
       - Avatar
   - name: Humanoid.RootPart
@@ -1229,27 +1250,6 @@ properties:
     category: Control
     serialization:
       can_load: false
-      can_save: false
-    capabilities:
-      - Avatar
-  - name: Humanoid.maxHealth
-    summary: ''
-    description: ''
-    code_samples: []
-    type: float
-    tags:
-      - NotReplicated
-      - Deprecated
-    deprecation_message: |
-      This deprecated property is a variant of `Class.Humanoid.MaxHealth` which
-      should be used instead.
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Game
-    serialization:
-      can_load: true
       can_save: false
     capabilities:
       - Avatar
@@ -1894,6 +1894,27 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
+  - name: Humanoid:loadAnimation
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: animation
+        type: Animation
+        default:
+        summary: ''
+    returns:
+      - type: AnimationTrack
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated method is a variant of `Class.Humanoid:LoadAnimation()`.
+      `Class.Animator:LoadAnimation()` should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Avatar
   - name: Humanoid:Move
     summary: |
       Causes the `Class.Humanoid` to walk in the given direction.
@@ -2234,6 +2255,27 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
+  - name: Humanoid:takeDamage
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: amount
+        type: float
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated method is a variant of `Class.Humanoid:TakeDamage()`,
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Avatar
   - name: Humanoid:UnequipTools
     summary: |
       Unequips any `Class.Tool` currently equipped by the `Class.Humanoid`.
@@ -2258,48 +2300,6 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Avatar
-  - name: Humanoid:loadAnimation
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: animation
-        type: Animation
-        default:
-        summary: ''
-    returns:
-      - type: AnimationTrack
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated method is a variant of `Class.Humanoid:LoadAnimation()`.
-      `Class.Animator:LoadAnimation()` should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Avatar
-  - name: Humanoid:takeDamage
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: amount
-        type: float
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated method is a variant of `Class.Humanoid:TakeDamage()`,
-      which should be used instead.
     security: None
     thread_safety: Unsafe
     capabilities:

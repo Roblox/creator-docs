@@ -18,6 +18,62 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: ModerationService:BindReviewableContentEventProcessor
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: priority
+        type: int
+        default:
+        summary: ''
+      - name: callback
+        type: Function
+        default:
+        summary: ''
+    returns:
+      - type: RBXScriptConnection
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: ModerationService:CreateReviewableContentAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: config
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: ModerationService:CreateReviewableContentKey
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: content
+        type: Content
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: ModerationService:InternalCreateReviewableContentAsync
     summary: ''
     description: ''

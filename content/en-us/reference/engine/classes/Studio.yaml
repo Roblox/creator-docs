@@ -19,23 +19,6 @@ tags:
   - NotReplicated
 deprecation_message: ''
 properties:
-  - name: Studio."TODO" Color
-    summary: ''
-    description: ''
-    code_samples: []
-    type: Color3
-    tags:
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Script Editor Colors
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities: []
   - name: Studio."function" Color
     summary: ''
     description: ''
@@ -88,6 +71,23 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio."self" Color
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+  - name: Studio."TODO" Color
     summary: ''
     description: ''
     code_samples: []
@@ -322,22 +322,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-  - name: Studio.AutoResumeSyncOnPlaceOpen
-    summary: ''
-    description: ''
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: RobloxEngineSecurity
-      write: RobloxEngineSecurity
-    thread_safety: ReadSafe
-    category: Directories
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
   - name: Studio.AutocompleteAcceptanceBehavior
     summary: ''
     description: ''
@@ -366,6 +350,38 @@ properties:
       write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Studio.AutoResumeSyncOnPlaceOpen
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
+    thread_safety: ReadSafe
+    category: Directories
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Studio.AutoUpdateEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Updates
     serialization:
       can_load: true
       can_save: true
@@ -785,6 +801,38 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+  - name: Studio.DefaultInstancesDir
+    summary: ''
+    description: ''
+    code_samples: []
+    type: QDir
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
+    thread_safety: ReadSafe
+    category: Directories
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Studio.DefaultScriptSyncFileType
+    summary: ''
+    description: ''
+    code_samples: []
+    type: DefaultScriptSyncFileType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Directories
+    serialization:
+      can_load: true
+      can_save: true
     capabilities: []
   - name: Studio.DeprecatedObjectsShown
     summary: |
@@ -1210,6 +1258,22 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: Studio.EnableFindOnType
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: Studio.EnableIndentationRulers
     summary: ''
     description: ''
@@ -1238,6 +1302,22 @@ properties:
       write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Studio.EnableStudioStreaming
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Streaming
     serialization:
       can_load: true
       can_save: true
@@ -1623,6 +1703,22 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: Studio.LoadInternalPlugins
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: Studio.LoadUserPluginsInRunModes
     summary: ''
     description: ''
@@ -1743,6 +1839,22 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+  - name: Studio.MaxFindReplaceAllResults
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
     capabilities: []
   - name: Studio.Maximum Output Lines
     summary: |
@@ -2550,6 +2662,22 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: Studio.Show plus button on hover in Explorer
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Explorer
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: Studio.Show Singly Selected Attachment Parent Frame
     summary: ''
     description: ''
@@ -2578,22 +2706,6 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Script Editor
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: Studio.Show plus button on hover in Explorer
-    summary: ''
-    description: ''
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Explorer
     serialization:
       can_load: true
       can_save: true

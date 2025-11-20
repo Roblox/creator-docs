@@ -50,6 +50,22 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: UserGameSettings.BadgeVisible
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: UserGameSettings.CameraMode
     summary: ''
     description: ''
@@ -326,6 +342,54 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: UserGameSettings.PeoplePageLayout
+    summary: ''
+    description: ''
+    code_samples: []
+    type: PeoplePageLayout
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: UserGameSettings.PlayerListVisible
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: UserGameSettings.PlayerNamesEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: UserGameSettings.RCCProfilerRecordFrameRate
     summary: ''
     description: ''
@@ -532,6 +596,22 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: UserGameSettings.VignetteEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: UserGameSettings.VREnabled
     summary: ''
     description: ''
@@ -565,22 +645,6 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.VRSmoothRotationEnabled
-    summary: ''
-    description: ''
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: UserGameSettings.VignetteEnabled
     summary: ''
     description: ''
     code_samples: []

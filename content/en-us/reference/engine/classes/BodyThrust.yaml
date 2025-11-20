@@ -50,6 +50,27 @@ properties:
       can_save: true
     capabilities:
       - Physics
+  - name: BodyThrust.force
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is a deprecated variant of `Class.BodyThrust.Force|Force`
+      which should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: false
+    capabilities:
+      - Physics
   - name: BodyThrust.Location
     summary: |
       Determines the relative position where the `Class.BodyThrust.Force|Force`
@@ -70,27 +91,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities:
-      - Physics
-  - name: BodyThrust.force
-    summary: ''
-    description: ''
-    code_samples: []
-    type: Vector3
-    tags:
-      - NotReplicated
-      - Deprecated
-    deprecation_message: |
-      This property is a deprecated variant of `Class.BodyThrust.Force|Force`
-      which should be used instead.
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Goals
-    serialization:
-      can_load: true
-      can_save: false
     capabilities:
       - Physics
   - name: BodyThrust.location

@@ -194,6 +194,23 @@ properties:
       can_save: true
     capabilities:
       - UI
+  - name: VideoFrame.VideoContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Video
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
   - name: VideoFrame.Volume
     summary: |
       Indicates how loud the `Class.VideoFrame.Video` is currently playing back.

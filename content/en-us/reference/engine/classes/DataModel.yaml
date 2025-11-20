@@ -215,6 +215,30 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
+  - name: DataModel.lighting
+    summary: |
+      Refers to the game's `Class.Lighting` service.
+    description: |
+      This property was once used to get the game's `Class.Lighting` service.
+    code_samples: []
+    type: Instance
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by
+      `Class.ServiceProvider:GetService()|game:GetService("Lighting")`, which
+      should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
   - name: DataModel.MatchmakingType
     summary: |
       Represents how players in the server are handled by matchmaking.
@@ -480,30 +504,6 @@ properties:
       - ReadOnly
       - NotReplicated
     deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities: []
-  - name: DataModel.lighting
-    summary: |
-      Refers to the game's `Class.Lighting` service.
-    description: |
-      This property was once used to get the game's `Class.Lighting` service.
-    code_samples: []
-    type: Instance
-    tags:
-      - ReadOnly
-      - NotReplicated
-      - Deprecated
-    deprecation_message: |
-      This item has been superseded by
-      `Class.ServiceProvider:GetService()|game:GetService("Lighting")`, which
-      should be used instead.
     security:
       read: None
       write: None

@@ -207,6 +207,27 @@ events:
     security: None
     capabilities:
       - Basic
+  - name: SkateboardPlatform.equipped
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: humanoid
+        type: Instance
+        default:
+        summary: ''
+      - name: skateboardController
+        type: Instance
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated event is a variant of `Class.SkateboardPlatform.Equipped`
+      which has also been deprecated. Neither event should be used in new work.
+    security: None
+    capabilities:
+      - Basic
   - name: SkateboardPlatform.MoveStateChanged
     summary: |
       Fired when the SkateboardPlatform's
@@ -256,27 +277,6 @@ events:
       supported by Roblox. Developers looking to create skateboards or similar
       vehicles are advised to program their own systems. Additionally, the
       `Class.VehicleSeat` object can be used to quickly create simple vehicles.
-    security: None
-    capabilities:
-      - Basic
-  - name: SkateboardPlatform.equipped
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: humanoid
-        type: Instance
-        default:
-        summary: ''
-      - name: skateboardController
-        type: Instance
-        default:
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated event is a variant of `Class.SkateboardPlatform.Equipped`
-      which has also been deprecated. Neither event should be used in new work.
     security: None
     capabilities:
       - Basic

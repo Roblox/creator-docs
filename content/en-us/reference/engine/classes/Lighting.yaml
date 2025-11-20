@@ -649,6 +649,23 @@ methods:
     thread_safety: Safe
     capabilities:
       - Environment
+  - name: Lighting:getMinutesAfterMidnight
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: double
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This method is a deprecated variant of
+      `Class.Lighting:GetMinutesAfterMidnight()` which should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Environment
   - name: Lighting:GetMoonDirection
     summary: |
       Returns a `Datatype.Vector3` representing the direction of the moon.
@@ -765,23 +782,6 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Environment
-  - name: Lighting:getMinutesAfterMidnight
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: double
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This method is a deprecated variant of
-      `Class.Lighting:GetMinutesAfterMidnight()` which should be used instead.
     security: None
     thread_safety: Unsafe
     capabilities:

@@ -20,6 +20,51 @@ items:
     value: 1
     tags: []
     deprecation_message: ''
+  - name: ConnectErrors
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: AlreadyConnected
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: NoFreeIncomingConnections
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: ConnectionBanned
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: InvalidPassword
+    summary: ''
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: IncompatibleProtocolVersion
+    summary: ''
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: IPRecentlyConnected
+    summary: ''
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: OurSystemRequiresSecurity
+    summary: ''
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: SecurityKeyMismatch
+    summary: ''
+    value: 10
+    tags: []
+    deprecation_message: ''
   - name: DisconnectErrors
     summary: ''
     value: 256
@@ -258,6 +303,26 @@ items:
   - name: AndroidEmulatorKick
     summary: ''
     value: 305
+    tags: []
+    deprecation_message: ''
+  - name: AndroidRootedKick
+    summary: ''
+    value: 306
+    tags: []
+    deprecation_message: ''
+  - name: ScreentimeLockoutKick
+    summary: ''
+    value: 307
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectionNotification
+    summary: ''
+    value: 308
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectVerboselyModeratedGame
+    summary: ''
+    value: 309
     tags: []
     deprecation_message: ''
   - name: PlacelaunchErrors

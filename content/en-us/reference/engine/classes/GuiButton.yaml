@@ -355,4 +355,18 @@ events:
     security: None
     capabilities:
       - UI
+  - name: GuiButton.SecondaryActivated
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: inputObject
+        type: InputObject
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - UI
 callbacks: []

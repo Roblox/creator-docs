@@ -60,6 +60,27 @@ properties:
       can_save: true
     capabilities:
       - Physics
+  - name: BodyGyro.cframe
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is a deprecated variant of `Class.BodyGyro.CFrame` which
+      should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: false
+    capabilities:
+      - Physics
   - name: BodyGyro.D
     summary: |
       Determines the amount of dampening to use in reaching the goal
@@ -110,6 +131,27 @@ properties:
       can_save: true
     capabilities:
       - Physics
+  - name: BodyGyro.maxTorque
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is a deprecated variant of `Class.BodyGyro.MaxTorque` which
+      should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: false
+    capabilities:
+      - Physics
   - name: BodyGyro.P
     summary: |
       Determines how aggressive of a torque is applied in reaching the goal
@@ -130,48 +172,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities:
-      - Physics
-  - name: BodyGyro.cframe
-    summary: ''
-    description: ''
-    code_samples: []
-    type: CFrame
-    tags:
-      - NotReplicated
-      - Deprecated
-    deprecation_message: |
-      This property is a deprecated variant of `Class.BodyGyro.CFrame` which
-      should be used instead.
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Goals
-    serialization:
-      can_load: true
-      can_save: false
-    capabilities:
-      - Physics
-  - name: BodyGyro.maxTorque
-    summary: ''
-    description: ''
-    code_samples: []
-    type: Vector3
-    tags:
-      - NotReplicated
-      - Deprecated
-    deprecation_message: |
-      This property is a deprecated variant of `Class.BodyGyro.MaxTorque` which
-      should be used instead.
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Goals
-    serialization:
-      can_load: true
-      can_save: false
     capabilities:
       - Physics
 methods: []

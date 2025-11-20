@@ -58,6 +58,27 @@ properties:
       can_save: true
     capabilities:
       - Physics
+  - name: BodyVelocity.maxForce
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is a deprecated variant of `Class.BodyVelocity.MaxForce`
+      which should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: false
+    capabilities:
+      - Physics
   - name: BodyVelocity.P
     summary: |
       Determines how aggressive of a force is applied in reaching the goal
@@ -103,27 +124,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities:
-      - Physics
-  - name: BodyVelocity.maxForce
-    summary: ''
-    description: ''
-    code_samples: []
-    type: Vector3
-    tags:
-      - NotReplicated
-      - Deprecated
-    deprecation_message: |
-      This property is a deprecated variant of `Class.BodyVelocity.MaxForce`
-      which should be used instead.
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Goals
-    serialization:
-      can_load: true
-      can_save: false
     capabilities:
       - Physics
   - name: BodyVelocity.velocity

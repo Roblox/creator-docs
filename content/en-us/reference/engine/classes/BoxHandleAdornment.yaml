@@ -21,6 +21,24 @@ descendants: []
 tags: []
 deprecation_message: ''
 properties:
+  - name: BoxHandleAdornment.Shading
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AdornShading
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+      - UI
   - name: BoxHandleAdornment.Size
     summary: |
       The size of the adornment.

@@ -4089,6 +4089,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/CompletionTriggerKind.yaml
         ignoreTranslation: true
+      - title: CompositeValueCurveType
+        path: /reference/engine/enums/CompositeValueCurveType
+        type: engineapi
+        source: /reference/engine/enums/CompositeValueCurveType.yaml
+        ignoreTranslation: true
       - title: CompressionAlgorithm
         path: /reference/engine/enums/CompressionAlgorithm
         type: engineapi

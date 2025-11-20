@@ -258,28 +258,6 @@ events:
     security: PluginSecurity
     capabilities:
       - UI
-  - name: PluginGui.WindowFocusReleased
-    summary: |
-      Fires when the user stops interacting with the window of the PluginGui.
-    description: |
-      **WindowFocusReleased** fires immediately when the user stops interacting
-      with the PluginGui's window, usually by clicking on something not in the
-      window. This functions works similarly to the similarly-named
-      `Class.UserInputService.WindowFocusReleased` event.
-
-      If focus is moving to another `Class.PluginGui` while the user had this
-      PluginGui in focus, then this event fires before the other's
-      `Class.PluginGui.WindowFocused|WindowFocused` event. However, if the main
-      game window is being put in focus, this event fires **after**
-      `Class.UserInputService.WindowFocused`.
-    code_samples:
-      - plugingui-focus
-    parameters: []
-    tags: []
-    deprecation_message: ''
-    security: PluginSecurity
-    capabilities:
-      - UI
   - name: PluginGui.WindowFocused
     summary: |
       Fires when the user begins interacting with the window of the PluginGui.
@@ -295,6 +273,28 @@ events:
       `Class.PluginGui.WindowFocusReleased|WindowFocusReleased` event. However,
       if the main game window was in focus, this event fires **after**
       `Class.UserInputService.WindowFocusReleased`.
+    code_samples:
+      - plugingui-focus
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    capabilities:
+      - UI
+  - name: PluginGui.WindowFocusReleased
+    summary: |
+      Fires when the user stops interacting with the window of the PluginGui.
+    description: |
+      **WindowFocusReleased** fires immediately when the user stops interacting
+      with the PluginGui's window, usually by clicking on something not in the
+      window. This functions works similarly to the similarly-named
+      `Class.UserInputService.WindowFocusReleased` event.
+
+      If focus is moving to another `Class.PluginGui` while the user had this
+      PluginGui in focus, then this event fires before the other's
+      `Class.PluginGui.WindowFocused|WindowFocused` event. However, if the main
+      game window is being put in focus, this event fires **after**
+      `Class.UserInputService.WindowFocused`.
     code_samples:
       - plugingui-focus
     parameters: []

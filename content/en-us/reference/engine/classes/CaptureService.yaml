@@ -63,17 +63,26 @@ methods:
     capabilities: []
   - name: CaptureService:PromptCaptureGalleryPermissionAsync
     summary: ''
-    description: This client-side function prompts a user for permission to access their local captures. Once they have accepted or rejected the prompt, it returns a boolean representing their choice. This function is a necessary prerequisite to `ReadCapturesFromGalleryAsync` and `UploadCaptureAsync`, as both of these require gallery permissions to work.
+    description: |
+      This client-side function prompts a user for permission to access their
+      local captures. Once they have accepted or rejected the prompt, it returns
+      a boolean representing their choice. This function is a necessary
+      prerequisite to `ReadCapturesFromGalleryAsync` and `UploadCaptureAsync`,
+      as both of these require gallery permissions to work.
     code_samples:
       - PromptCaptureGalleryPermissionAsync-example
     parameters:
       - name: captureGalleryPermission
         type: CaptureGalleryPermission
         default:
-        summary: An `Enum.CaptureGalleryPermission` representing the type of access for which the user will be prompted.
+        summary: |
+          An `Enum.CaptureGalleryPermission` representing the type of access for
+          which the user will be prompted.
     returns:
       - type: boolean
-        summary: A boolean representing whether or not the user has allowed access to their captures.
+        summary: |
+          A boolean representing whether or not the user has allowed access to
+          their captures.
     tags:
       - Yields
     deprecation_message: ''
@@ -84,21 +93,22 @@ methods:
     summary: Prompts the user to save specified captures to their gallery.
     description: |-
       This method prompts the user to save the captures identified by the
-      provided `contentIds` or `Class.Capture` objects to their **Captures** 
+      provided `contentIds` or `Class.Capture` objects to their **Captures**
       gallery within the experience's main menu.
     code_samples: []
     parameters:
       - name: captures
         type: Array
         default:
-        summary: An array of content IDs and/or `Class.Capture` objects.
+        summary: |
+          An array of content IDs and/or `Class.Capture` objects.
       - name: resultCallback
         type: Function
         default:
         summary: |-
           A callback function that will be invoked with a dictionary mapping
-          each `contentId` and/or `Class.Capture` object to a boolean indicating if the user 
-          accepted saving that capture.
+          each `contentId` and/or `Class.Capture` object to a boolean indicating
+          if the user accepted saving that capture.
     returns:
       - type: ()
         summary: ''
@@ -111,7 +121,8 @@ methods:
     summary: Prompts the user to share a specified capture.
     description: |-
       This method prompts the user to share the capture identified by the
-      provided `contentId` or `Class.Capture` object using the native share sheet on their device.
+      provided `contentId` or `Class.Capture` object using the native share
+      sheet on their device.
 
       The capture is shared along with an invite link to the experience
       when supported. Not all devices support including both a screenshot or video
@@ -120,7 +131,8 @@ methods:
       The `launchData` will be available in the `launchData` field for users who
       join through the invite link.
 
-      For users or devices who are not eligible to use share sheets, this method prompts them to download the capture instead.
+      For users or devices who are not eligible to use share sheets, this method
+      prompts them to download the capture instead.
 
       ```lua
       local CaptureService = game:GetService("CaptureService")
@@ -147,7 +159,9 @@ methods:
       - name: captureContent
         type: Content
         default:
-        summary: A `Datatype.Content` containing a `contentId` or `Class.Capture` object.
+        summary: |
+          A `Datatype.Content` containing a `contentId` or `Class.Capture`
+          object.
       - name: launchData
         type: string
         default:
@@ -170,20 +184,33 @@ methods:
     capabilities: []
   - name: CaptureService:ReadCapturesFromGalleryAsync
     summary: ''
-    description: |-
-      This client-side function returns a paginated list of captures from the user's gallery as a `Class.CapturesPages` object sorted reverse-chronologically, which can be used to iterate through the captures. The results can be filtered by capture type with the `captureTypeFilters` parameter. If this parameter isn't provided, the function returns all captures.
+    description: |
+      This client-side function returns a paginated list of captures from the
+      user's gallery as a `Class.CapturesPages` object sorted
+      reverse-chronologically, which can be used to iterate through the
+      captures. The results can be filtered by capture type with the
+      `captureTypeFilters` parameter. If this parameter isn't provided, the
+      function returns all captures.
 
-      Currently, this method will only return captures taken in the experience where it is called. Additionally, captures taken with `Class.CaptureService:CaptureScreenshot()|CaptureScreenshot()` and subsequently saved with `Class.CaptureService:PromptSaveCapturesToGallery()|PromptSaveCapturesToGallery()` will not be returned by this method.
+      Currently, this method will only return captures taken in the experience
+      where it is called. Additionally, captures taken with
+      `Class.CaptureService:CaptureScreenshot()|CaptureScreenshot()` and
+      subsequently saved with
+      `Class.CaptureService:PromptSaveCapturesToGallery()|PromptSaveCapturesToGallery()`
+      will not be returned by this method.
     code_samples:
       - ReadCapturesFromGalleryAsync-example
     parameters:
       - name: captureTypeFilters
         type: Array
         default: '{}'
-        summary: An array of `Enum.CaptureType`.
+        summary: |
+          An array of `Enum.CaptureType`.
     returns:
       - type: Tuple
-        summary: 'Tuple of (result: `Enum.ReadCapturesFromGalleryResult`, capturesPages: `Class.CapturesPages`)'
+        summary: |
+          Tuple of (result: `Enum.ReadCapturesFromGalleryResult`, capturesPages:
+          `Class.CapturesPages`)
     tags:
       - Yields
     deprecation_message: ''
@@ -231,7 +258,9 @@ methods:
       - name: onCaptureReady
         type: Function
         default:
-        summary: A callback function that is called on video capture completion with a `Enum.VideoCaptureResult` and, if successful, a `Class.VideoCapture`.
+        summary: |
+          A callback function that is called on video capture completion with a
+          `Enum.VideoCaptureResult` and, if successful, a `Class.VideoCapture`.
       - name: captureParams
         type: Dictionary
         default: nil

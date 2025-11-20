@@ -25,14 +25,13 @@ descendants: []
 tags: []
 deprecation_message: ''
 properties:
-  - name: ValueCurve.ValueType
+  - name: ValueCurve.Length
     summary: |
-      Read-only value indicating the type held in this curve.
+      Number of keys in the value curve.
     description: |
-      Read-only value indicating the type held in this curve, or the string
-      `"Nil"` if there are no keys.
+      Number of keys in the value curve.
     code_samples: []
-    type: string
+    type: int
     tags:
       - ReadOnly
       - NotReplicated
@@ -47,13 +46,14 @@ properties:
       can_save: true
     capabilities:
       - Basic
-  - name: ValueCurve.Length
+  - name: ValueCurve.ValueType
     summary: |
-      Number of keys in the value curve.
+      Read-only value indicating the type held in this curve.
     description: |
-      Number of keys in the value curve.
+      Read-only value indicating the type held in this curve, or the string
+      `"Nil"` if there are no keys.
     code_samples: []
-    type: int
+    type: string
     tags:
       - ReadOnly
       - NotReplicated

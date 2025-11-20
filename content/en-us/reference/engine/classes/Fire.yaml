@@ -205,26 +205,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-  - name: Fire.TimeScale
-    summary: |
-      Controls the speed of the particle effect.
-    description: |
-      A value between `0` and `1` than controls the speed of the particle
-      effect. `1` runs at normal speed, `0.5` runs at half speed, and `0`
-      freezes time.
-    code_samples: []
-    type: float
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
   - name: Fire.size
     summary: ''
     description: ''
@@ -244,6 +224,26 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+  - name: Fire.TimeScale
+    summary: |
+      Controls the speed of the particle effect.
+    description: |
+      A value between `0` and `1` than controls the speed of the particle
+      effect. `1` runs at normal speed, `0.5` runs at half speed, and `0`
+      freezes time.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
     capabilities: []
 methods: []
 events: []

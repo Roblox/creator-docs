@@ -16,7 +16,23 @@ tags:
   - Service
   - NotReplicated
 deprecation_message: ''
-properties: []
+properties:
+  - name: MicroProfilerService.ContextLabel
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
 methods: []
 events: []
 callbacks: []

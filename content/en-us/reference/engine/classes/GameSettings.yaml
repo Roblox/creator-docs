@@ -19,7 +19,24 @@ tags:
   - NotReplicated
   - NotBrowsable
 deprecation_message: ''
-properties: []
+properties:
+  - name: GameSettings.VideoCaptureEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Video
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
 methods: []
 events: []
 callbacks: []

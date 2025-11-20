@@ -105,6 +105,24 @@ properties:
     capabilities:
       - Basic
       - UI
+  - name: CylinderHandleAdornment.Shading
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AdornShading
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+      - UI
 methods: []
 events: []
 callbacks: []

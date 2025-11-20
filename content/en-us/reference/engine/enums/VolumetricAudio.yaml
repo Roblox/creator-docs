@@ -4,30 +4,24 @@
 
 name: VolumetricAudio
 type: enum
-summary: |
-  Enum used with `Class.SoundService.VolumetricAudio`.
-description: |
-  Enum used with `Class.SoundService.VolumetricAudio` to determine whether
-  volumetric audio is enabled or disabled.
+summary: ''
+description: ''
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Disabled
-    summary: |
-      Volumetric audio is disabled.
+    summary: ''
     value: 0
     tags: []
     deprecation_message: ''
   - name: Automatic
-    summary: |
-      Volumetric audio is in the default state, currently `Disabled`.
+    summary: ''
     value: 1
     tags: []
     deprecation_message: ''
   - name: Enabled
-    summary: |
-      Volumetric audio is enabled.
+    summary: ''
     value: 2
     tags: []
     deprecation_message: ''

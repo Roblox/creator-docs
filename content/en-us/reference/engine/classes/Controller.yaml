@@ -47,44 +47,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-  - name: Controller:GetButton
-    summary: |
-      Returns whether or not Button is being pressed.
-    description: |
-      Returns whether or not Button is being pressed.
-    code_samples: []
-    parameters:
-      - name: button
-        type: Button
-        default:
-        summary: ''
-    returns:
-      - type: boolean
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: Controller:UnbindButton
-    summary: |
-      Removes the bind on button.
-    description: |
-      Removes the bind on button.
-    code_samples: []
-    parameters:
-      - name: button
-        type: Button
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
   - name: Controller:bindButton
     summary: ''
     description: ''
@@ -109,6 +71,25 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: Controller:GetButton
+    summary: |
+      Returns whether or not Button is being pressed.
+    description: |
+      Returns whether or not Button is being pressed.
+    code_samples: []
+    parameters:
+      - name: button
+        type: Button
+        default:
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: Controller:getButton
     summary: ''
     description: ''
@@ -126,6 +107,25 @@ methods:
     deprecation_message: |
       This function is a deprecated variant of `Class.Controller:GetButton()`
       which should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: Controller:UnbindButton
+    summary: |
+      Removes the bind on button.
+    description: |
+      Removes the bind on button.
+    code_samples: []
+    parameters:
+      - name: button
+        type: Button
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []

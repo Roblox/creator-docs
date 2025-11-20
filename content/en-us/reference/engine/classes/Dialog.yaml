@@ -141,25 +141,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-  - name: Dialog.InUse
-    summary: |
-      If true, this dialog is being used by at least one player.
-    description: |
-      If true, this dialog is being used by at least one player.
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities:
-      - UI
   - name: Dialog.InitialPrompt
     summary: |
       Sets the first sentence that the dialog will show to the player, once a
@@ -179,6 +160,25 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+  - name: Dialog.InUse
+    summary: |
+      If true, this dialog is being used by at least one player.
+    description: |
+      If true, this dialog is being used by at least one player.
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
     capabilities:
       - UI
   - name: Dialog.Purpose

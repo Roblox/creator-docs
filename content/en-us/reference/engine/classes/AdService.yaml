@@ -40,41 +40,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-  - name: AdService:ShowVideoAd
-    summary: |
-      Show mobile video advertisements.
-    description: |
-      Show mobile video advertisements.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      `Class.AdService.ShowVideoAd|ShowVideoAd` has been decommissioned and is
-      no longer operational.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: AdService:UnregisterAdOpportunity
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: instance
-        type: Instance
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
   - name: AdService:GetAdAvailabilityNowAsync
     summary: |
       Checks if a video ad is available to be played to the current user inside
@@ -152,6 +117,41 @@ methods:
         summary: ''
     tags:
       - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: AdService:ShowVideoAd
+    summary: |
+      Show mobile video advertisements.
+    description: |
+      Show mobile video advertisements.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      `Class.AdService.ShowVideoAd|ShowVideoAd` has been decommissioned and is
+      no longer operational.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: AdService:UnregisterAdOpportunity
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: instance
+        type: Instance
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

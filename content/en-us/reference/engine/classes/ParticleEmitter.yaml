@@ -289,6 +289,45 @@ properties:
       can_save: true
     capabilities:
       - Basic
+  - name: ParticleEmitter.FlipbookMode
+    summary: |
+      Determines the type of the flipbook animation. Must be Loop, OneShot,
+      PingPong, or Random.
+    description: |
+      The **FlipbookMode** property determines the type of the flipbook
+      animation. It can be any value of the `Enum.ParticleFlipbookMode` enum:
+
+      - **Loop** &ndash; Continuously play through all frames, starting back at
+        the first frame after playing the last.
+      - **OneShot** &ndash; Play through the animation only once across the
+        particle's lifetime. With this setting, the
+        `Class.ParticleEmitter.FlipbookFramerate|FlipbookFramerate` property
+        doesn't apply; instead, the framerate is determined by the particle's
+        `Class.ParticleEmitter.Lifetime|Lifetime` divided evenly by the number
+        of frames in the animation. **OneShot** animations are useful for clear
+        non-repeating animations, such as an explosion that creates a puff of
+        smoke and then fades out.
+      - **PingPong** &ndash; Play from the first to the last frame, then in
+        reverse from the last to the first, repeating throughout the
+        `Class.ParticleEmitter.Lifetime|Lifetime` of the particle.
+      - **Random** &ndash; Play the frames in a random order,
+        blending/crossfading from one frame to the next. This can be useful for
+        organic particle textures at low framerates, such as stars slowly
+        twinkling between subtly different shapes.
+    code_samples: []
+    type: ParticleFlipbookMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Flipbook
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
   - name: ParticleEmitter.FlipbookSizeX
     summary: |
       Defines the number of horizontal frames in a custom flipbook layout.
@@ -321,45 +360,6 @@ properties:
       `Enum.ParticleFlipbookLayout.Custom|Custom`.
     code_samples: []
     type: int
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Flipbook
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Basic
-  - name: ParticleEmitter.FlipbookMode
-    summary: |
-      Determines the type of the flipbook animation. Must be Loop, OneShot,
-      PingPong, or Random.
-    description: |
-      The **FlipbookMode** property determines the type of the flipbook
-      animation. It can be any value of the `Enum.ParticleFlipbookMode` enum:
-
-      - **Loop** &ndash; Continuously play through all frames, starting back at
-        the first frame after playing the last.
-      - **OneShot** &ndash; Play through the animation only once across the
-        particle's lifetime. With this setting, the
-        `Class.ParticleEmitter.FlipbookFramerate|FlipbookFramerate` property
-        doesn't apply; instead, the framerate is determined by the particle's
-        `Class.ParticleEmitter.Lifetime|Lifetime` divided evenly by the number
-        of frames in the animation. **OneShot** animations are useful for clear
-        non-repeating animations, such as an explosion that creates a puff of
-        smoke and then fades out.
-      - **PingPong** &ndash; Play from the first to the last frame, then in
-        reverse from the last to the first, repeating throughout the
-        `Class.ParticleEmitter.Lifetime|Lifetime` of the particle.
-      - **Random** &ndash; Play the frames in a random order,
-        blending/crossfading from one frame to the next. This can be useful for
-        organic particle textures at low framerates, such as stars slowly
-        twinkling between subtly different shapes.
-    code_samples: []
-    type: ParticleFlipbookMode
     tags: []
     deprecation_message: ''
     security:
@@ -594,6 +594,33 @@ properties:
       can_save: true
     capabilities:
       - Basic
+  - name: ParticleEmitter.Rotation
+    summary: |
+      Determines the range of rotations in degrees for newly emitted particles.
+    description: |
+      The **Rotation** property determines the range of rotations in degrees for
+      newly emitted particles, measured in degrees. Positive values are in the
+      clockwise direction. This property is commonly set to `[0, 360]` to
+      provide a completely random rotation to new particles.
+      `Class.ParticleEmitter.RotSpeed|RotSpeed` also influences the rotation of
+      a particle over its lifetime.
+
+      Changes to this value only affect new particles; existing particles
+      maintain the rotation at which they were originally emitted.
+    code_samples: []
+    type: NumberRange
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Emission
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
   - name: ParticleEmitter.RotSpeed
     summary: |
       Determines the range of angular speeds of emitted particles, measured in
@@ -610,33 +637,6 @@ properties:
       at all, since the angle of rotation is synchronized with the software
       render speed. For example, if particles rotate at exactly 360 degrees
       every frame, there will be no apparent change in rotation.
-    code_samples: []
-    type: NumberRange
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Emission
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Basic
-  - name: ParticleEmitter.Rotation
-    summary: |
-      Determines the range of rotations in degrees for newly emitted particles.
-    description: |
-      The **Rotation** property determines the range of rotations in degrees for
-      newly emitted particles, measured in degrees. Positive values are in the
-      clockwise direction. This property is commonly set to `[0, 360]` to
-      provide a completely random rotation to new particles.
-      `Class.ParticleEmitter.RotSpeed|RotSpeed` also influences the rotation of
-      a particle over its lifetime.
-
-      Changes to this value only affect new particles; existing particles
-      maintain the rotation at which they were originally emitted.
     code_samples: []
     type: NumberRange
     tags: []

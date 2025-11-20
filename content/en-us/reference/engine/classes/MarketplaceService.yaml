@@ -430,6 +430,39 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: MarketplaceService:GetUsersPriceLevelsAsync
+    summary: |
+      Returns the regionalized price level of a user, representing the
+      recommended price for an item in their regional market.
+    description: |
+      Returns the regionalized price level of a user, representing the
+      recommended price for an item in their regional market. For example, a
+      price level of 100 means that the suggested price for that user (based on
+      their region and purchasing power) is 100 Robux.
+
+      See
+      [Protect your trades and gifts](../../../production/monetization/regional-pricing.md#protect-your-trades-and-gifts)
+      for more information.
+    code_samples:
+      - MarketplaceService-GetUsersPriceLevelAsync
+    parameters:
+      - name: userIds
+        type: Array
+        default:
+        summary: |
+          An array of user IDs.
+    returns:
+      - type: Array
+        summary: |
+          Returns an array of `PriceLevelInfo` objects with a dictionary where
+          the keys are user IDs (strings) and their values are the corresponding
+          price levels (integers between 1 and 1000).
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: MarketplaceService:GetUserSubscriptionDetailsAsync
     summary: |
       Returns a table that contains the details of the user's subscription for a
@@ -703,39 +736,6 @@ methods:
     returns:
       - type: Dictionary
         summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: MarketplaceService:GetUsersPriceLevelsAsync
-    summary: |
-      Returns the regionalized price level of a user, representing the
-      recommended price for an item in their regional market.
-    description: |
-      Returns the regionalized price level of a user, representing the
-      recommended price for an item in their regional market. For example, a
-      price level of 100 means that the suggested price for that user (based on
-      their region and purchasing power) is 100 Robux.
-
-      See
-      [Protect your trades and gifts](../../../production/monetization/regional-pricing.md#protect-your-trades-and-gifts)
-      for more information.
-    code_samples:
-      - MarketplaceService-GetUsersPriceLevelAsync
-    parameters:
-      - name: userIds
-        type: Array
-        default:
-        summary: |
-          An array of user IDs.
-    returns:
-      - type: Array
-        summary: |
-          Returns an array of `PriceLevelInfo` objects with a dictionary where
-          the keys are user IDs (strings) and their values are the corresponding
-          price levels (integers between 1 and 1000).
     tags:
       - Yields
     deprecation_message: ''
@@ -1085,6 +1085,42 @@ methods:
       - type: ()
         summary: ''
     tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: MarketplaceService:RankProductsAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: productIdentifiers
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: MarketplaceService:RecommendTopProductsAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: infoTypes
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

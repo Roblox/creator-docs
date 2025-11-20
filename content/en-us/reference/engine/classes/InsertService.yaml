@@ -541,6 +541,27 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: InsertService:loadAsset
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: assetId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This function is a deprecated variant of `Class.InsertService:LoadAsset()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: InsertService:LoadAssetVersion
     summary: |
       Returns a model inserted into `Class.InsertService` containing the asset
@@ -561,27 +582,6 @@ methods:
     tags:
       - Yields
     deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: InsertService:loadAsset
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: assetId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: Instance
-        summary: ''
-    tags:
-      - Yields
-      - Deprecated
-    deprecation_message: |
-      This function is a deprecated variant of `Class.InsertService:LoadAsset()`
-      which should be used instead.
     security: None
     thread_safety: Unsafe
     capabilities: []
