@@ -166,7 +166,7 @@ To develop a system where users can edit the `Class.MeshPart` instances on an av
               local bodyPartTexture = AssetService:CreateEditableImageAsync(meshPart.TextureID)
 
               local relativePos = meshPart.CFrame:PointToWorldSpace(raycastHitPos)
-              local direction = (game.Workspace.CurrentCamera.CFrame.Position - relativePos).Unit
+              local direction = (workspace.CurrentCamera.CFrame.Position - relativePos).Unit
 
               local projectionParams: ProjectionParams = {
                   Direction = meshPart.CFrame:VectorToObjectSpace(direction),
