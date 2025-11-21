@@ -48,10 +48,6 @@ Now that you know where the part is, the part's location needs to be translated 
    workspace.PracticePart
    ```
 
-    <Alert severity="info">
-    A long way to get to Workspace would be `game.Workspace`. However, needing to access Workspace is so common that Roblox made the keyword `workspace` as a shortcut.
-    </Alert>
-
 ### Change a property with code
 
 You'll use an RGB value to change the part's color. Computers use **RGB values**, the combination of red, green, and blue, to create all the colors on your screen.
