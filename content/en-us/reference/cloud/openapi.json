@@ -19894,7 +19894,7 @@
       "post": {
         "tags": ["Avatars"],
         "summary": "Updates the contents of the outfit.",
-        "description": "Fails if the user does not own any of the assetIds or if they are not wearable asset types.",
+        "description": "Fails if the user does not own any of the assetIds or if they are not wearable asset types.\n\nPlease use PATCH v3/outfits/{userOutfitId}",
         "parameters": [
           {
             "in": "path",
@@ -19939,6 +19939,7 @@
             "description": "6: An error occurred while trying to update the outfit"
           }
         },
+        "deprecated": true,
         "servers": [
           {
             "url": "https://avatar.roblox.com"
@@ -19953,7 +19954,7 @@
       "post": {
         "tags": ["Avatars"],
         "summary": "Creates a new outfit.",
-        "description": "Fails if any of the assetIds are not owned by the user, or not wearable types.\r\nThe name property of the request is optional as one will be auto-generated when the request has a null name.",
+        "description": "Fails if any of the assetIds are not owned by the user, or not wearable types.\r\nThe name property of the request is optional as one will be auto-generated when the request has a null name.\n\nplease use v3/outfits/create",
         "requestBody": {
           "content": {
             "application/json": {
@@ -19999,6 +20000,7 @@
             "description": "6: An error occurred while creating the outfit"
           }
         },
+        "deprecated": true,
         "servers": [
           {
             "url": "https://avatar.roblox.com"
@@ -61611,6 +61613,1345 @@
           }
         ]
       }
+    },
+    "/matchmaking-api/v1/client-status": {
+      "get": {
+        "tags": ["Matchmaking"],
+        "summary": "Get the client-status",
+        "requestBody": {
+          "description": "ClientStatusGetRequest",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientStatusGetRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientStatusGetRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientStatusGetRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientStatusGetRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/get_matchmaking_api_v1_client_status"
+        }
+      },
+      "post": {
+        "tags": ["Matchmaking"],
+        "summary": "Set the client-status",
+        "requestBody": {
+          "description": "ClientStatusSetRequest",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientStatusSetRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientStatusSetRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientStatusSetRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientStatusSetRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/post_matchmaking_api_v1_client_status"
+        }
+      }
+    },
+    "/matchmaking-api/v1/game-instances/shutdown": {
+      "post": {
+        "tags": ["Matchmaking"],
+        "summary": "Shutdown game instances.",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShutdownGameInstancesRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShutdownGameInstancesRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShutdownGameInstancesRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShutdownGameInstancesRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ShutdownGameInstancesResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/post_matchmaking_api_v1_game_instances_shutdown"
+        }
+      }
+    },
+    "/matchmaking-api/v1/game-instances/shutdown-all": {
+      "post": {
+        "tags": ["Matchmaking"],
+        "summary": "Shutdown all game instances.",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "PlaceId": {
+                    "type": "integer",
+                    "description": "The place ID to shut down.",
+                    "format": "int64"
+                  },
+                  "ReplaceInstances": {
+                    "type": "boolean",
+                    "description": "Whether to replace instances or not."
+                  }
+                }
+              },
+              "encoding": {
+                "PlaceId": {
+                  "style": "form"
+                },
+                "ReplaceInstances": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ShutdownAllGameInstancesResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/post_matchmaking_api_v1_game_instances_shutdown_all"
+        }
+      }
+    },
+    "/matchmaking-api/v1/game-instances/forecast-update": {
+      "post": {
+        "summary": "Forecast the outcome of launching an update",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ForecastUpdateRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ForecastUpdateRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ForecastUpdateRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ForecastUpdateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForecastUpdateResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}]
+      }
+    },
+    "/matchmaking-api/v1/game-instances/launch-update": {
+      "post": {
+        "summary": "Launch a game update",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LaunchUpdateRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LaunchUpdateRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LaunchUpdateRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LaunchUpdateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LaunchUpdateResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}]
+      }
+    },
+    "/matchmaking-api/v1/game-instances/get-update-status": {
+      "get": {
+        "summary": "Get the rollout status of an update",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUpdateStatusResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}]
+      }
+    },
+    "/matchmaking-api/v1/matchmaking/player-attribute": {
+      "post": {
+        "tags": ["Matchmaking"],
+        "summary": "Create a PlayerAttributeDefinition.",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMatchmakingPlayerAttributeDefinitionRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMatchmakingPlayerAttributeDefinitionRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMatchmakingPlayerAttributeDefinitionRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMatchmakingPlayerAttributeDefinitionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateMatchmakingPlayerAttributeDefinitionResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/post_matchmaking_api_v1_matchmaking_player_attribute"
+        }
+      }
+    },
+    "/matchmaking-api/v1/matchmaking/player-attribute/{attributeId}": {
+      "delete": {
+        "tags": ["Matchmaking"],
+        "summary": "Delete the PlayerAttributeDefinition specified by attributeId.",
+        "parameters": [
+          {
+            "name": "attributeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteMatchmakingPlayerAttributeDefinitionResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/delete_matchmaking_api_v1_matchmaking_player_attribute__attributeId_"
+        }
+      },
+      "patch": {
+        "tags": ["Matchmaking"],
+        "summary": "Update the PlayerAttributeDefinition specified by attributeId.",
+        "parameters": [
+          {
+            "name": "attributeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMatchmakingPlayerAttributeDefinitionRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMatchmakingPlayerAttributeDefinitionRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMatchmakingPlayerAttributeDefinitionRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMatchmakingPlayerAttributeDefinitionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateMatchmakingPlayerAttributeDefinitionResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/patch_matchmaking_api_v1_matchmaking_player_attribute__attributeId_"
+        }
+      }
+    },
+    "/matchmaking-api/v1/matchmaking/player-attributes/{universeId}": {
+      "get": {
+        "tags": ["Matchmaking"],
+        "summary": "List all PlayerAttributeDefinitions of a universe.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListMatchmakingPlayerAttributeDefinitionsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/get_matchmaking_api_v1_matchmaking_player_attributes__universeId_"
+        }
+      }
+    },
+    "/matchmaking-api/v1/matchmaking/server-attribute": {
+      "post": {
+        "tags": ["Matchmaking"],
+        "summary": "Create a ServerAttributeDefinition.",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMatchmakingServerAttributeDefinitionRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMatchmakingServerAttributeDefinitionRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMatchmakingServerAttributeDefinitionRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMatchmakingServerAttributeDefinitionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateMatchmakingServerAttributeDefinitionResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/post_matchmaking_api_v1_matchmaking_server_attribute"
+        }
+      }
+    },
+    "/matchmaking-api/v1/matchmaking/server-attribute/{attributeId}": {
+      "delete": {
+        "tags": ["Matchmaking"],
+        "summary": "Delete the ServerAttributeDefinition specified by attributeId.",
+        "parameters": [
+          {
+            "name": "attributeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteMatchmakingServerAttributeDefinitionResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/delete_matchmaking_api_v1_matchmaking_server_attribute__attributeId_"
+        }
+      },
+      "patch": {
+        "tags": ["Matchmaking"],
+        "summary": "Update the ServerAttributeDefinition specified by attributeId.",
+        "parameters": [
+          {
+            "name": "attributeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMatchmakingServerAttributeDefinitionRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMatchmakingServerAttributeDefinitionRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMatchmakingServerAttributeDefinitionRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMatchmakingServerAttributeDefinitionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateMatchmakingServerAttributeDefinitionResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/patch_matchmaking_api_v1_matchmaking_server_attribute__attributeId_"
+        }
+      }
+    },
+    "/matchmaking-api/v1/matchmaking/server-attributes/{universeId}": {
+      "get": {
+        "tags": ["Matchmaking"],
+        "summary": "List all ServerAttributeDefinitions of a universe.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListMatchmakingServerAttributeDefinitionsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/get_matchmaking_api_v1_matchmaking_server_attributes__universeId_"
+        }
+      }
+    },
+    "/matchmaking-api/v1/matchmaking/universe/{universeId}/feature-flags": {
+      "get": {
+        "tags": ["Matchmaking"],
+        "summary": "Gets feature flags for a customized matchmaking for a given universe.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetMatchmakingCustomizationFeatureFlagsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/get_matchmaking_api_v1_matchmaking_universe__universeId__feature_flags"
+        }
+      }
+    },
+    "/matchmaking-api/v1/matchmaking/scoring-configuration": {
+      "post": {
+        "tags": ["Matchmaking"],
+        "summary": "Creates a matchmaking scoring configuration.",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMatchmakingScoringConfigurationRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMatchmakingScoringConfigurationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMatchmakingScoringConfigurationRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMatchmakingScoringConfigurationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateMatchmakingScoringConfigurationResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/post_matchmaking_api_v1_matchmaking_scoring_configuration"
+        }
+      }
+    },
+    "/matchmaking-api/v1/matchmaking/scoring-configuration/{scoringConfigurationId}": {
+      "get": {
+        "tags": ["Matchmaking"],
+        "summary": "Updates a matchmaking scoring configuration.",
+        "parameters": [
+          {
+            "name": "scoringConfigurationId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetMatchmakingScoringConfigurationResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/get_matchmaking_api_v1_matchmaking_scoring_configuration__scoringConfigurationId_"
+        }
+      },
+      "delete": {
+        "tags": ["Matchmaking"],
+        "summary": "Deletes a matchmaking scoring configuration.",
+        "parameters": [
+          {
+            "name": "scoringConfigurationId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteMatchmakingScoringConfigurationResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/delete_matchmaking_api_v1_matchmaking_scoring_configuration__scoringConfigurationId_"
+        }
+      },
+      "patch": {
+        "tags": ["Matchmaking"],
+        "summary": "Updates a matchmaking scoring configuration.",
+        "parameters": [
+          {
+            "name": "scoringConfigurationId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMatchmakingScoringConfigurationRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMatchmakingScoringConfigurationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMatchmakingScoringConfigurationRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMatchmakingScoringConfigurationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateMatchmakingScoringConfigurationResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/patch_matchmaking_api_v1_matchmaking_scoring_configuration__scoringConfigurationId_"
+        }
+      }
+    },
+    "/matchmaking-api/v1/matchmaking/scoring-configuration/{scoringConfigurationId}/signals": {
+      "post": {
+        "tags": ["Matchmaking"],
+        "summary": "Creates a matchmaking scoring configuration signal.",
+        "parameters": [
+          {
+            "name": "scoringConfigurationId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCustomMatchmakingSignalRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCustomMatchmakingSignalRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCustomMatchmakingSignalRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCustomMatchmakingSignalRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateCustomMatchmakingSignalResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/post_matchmaking_api_v1_matchmaking_scoring_configuration__scoringConfigurationId__signals"
+        }
+      }
+    },
+    "/matchmaking-api/v1/matchmaking/scoring-configuration/{scoringConfigurationId}/signals/{signalName}": {
+      "delete": {
+        "tags": ["Matchmaking"],
+        "summary": "Deletes a matchmaking scoring configuration custom signal.",
+        "parameters": [
+          {
+            "name": "scoringConfigurationId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "signalName",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteCustomMatchmakingSignalResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/delete_matchmaking_api_v1_matchmaking_scoring_configuration__scoringConfigurationId__signals__signalName_"
+        }
+      },
+      "patch": {
+        "tags": ["Matchmaking"],
+        "summary": "Updates a matchmaking scoring configuration signal.",
+        "parameters": [
+          {
+            "name": "scoringConfigurationId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "signalName",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCustomMatchmakingSignalRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCustomMatchmakingSignalRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCustomMatchmakingSignalRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCustomMatchmakingSignalRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateCustomMatchmakingSignalResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/patch_matchmaking_api_v1_matchmaking_scoring_configuration__scoringConfigurationId__signals__signalName_"
+        }
+      }
+    },
+    "/matchmaking-api/v1/matchmaking/scoring-configuration/place": {
+      "post": {
+        "tags": ["Matchmaking"],
+        "summary": "Sets a matchmaking scoring configuration for a place.",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetPlaceMatchmakingScoringConfigurationRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetPlaceMatchmakingScoringConfigurationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetPlaceMatchmakingScoringConfigurationRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetPlaceMatchmakingScoringConfigurationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SetMatchmakingScoringConfigurationResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/post_matchmaking_api_v1_matchmaking_scoring_configuration_place"
+        }
+      }
+    },
+    "/matchmaking-api/v1/matchmaking/scoring-configuration/place/{placeId}": {
+      "delete": {
+        "tags": ["Matchmaking"],
+        "summary": "Removes the matchmaking scoring configuration for a place.",
+        "parameters": [
+          {
+            "name": "placeId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RemovePlaceMatchmakingScoringConfigurationResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/delete_matchmaking_api_v1_matchmaking_scoring_configuration_place__placeId_"
+        }
+      }
+    },
+    "/matchmaking-api/v1/matchmaking/scoring-configurations/{universeId}": {
+      "get": {
+        "tags": ["Matchmaking"],
+        "summary": "List all matchmaking scoring configurations for a universe.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListMatchmakingScoringConfigurationsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/get_matchmaking_api_v1_matchmaking_scoring_configurations__universeId_"
+        }
+      }
+    },
+    "/matchmaking-api/v1/matchmaking/scoring-configurations/{universeId}/places": {
+      "get": {
+        "tags": ["Matchmaking"],
+        "summary": "List all places with a matchmaking scoring configuration for a universe.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListPlaceMatchmakingScoringConfigurationsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/get_matchmaking_api_v1_matchmaking_scoring_configurations__universeId__places"
+        }
+      }
+    },
+    "/matchmaking-api/v1/matchmaking/scoring-configuration/default-weights": {
+      "get": {
+        "tags": ["Matchmaking"],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetMatchmakingScoringDefaultWeightsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/matchmaking#/default/get_matchmaking_api_v1_matchmaking_scoring_configuration_default_weights"
+        }
+      }
+    },
+    "/matchmaking-api/v1/matchmaking/scoring-configuration/generate-mock-servers": {
+      "get": {
+        "parameters": [
+          {
+            "name": "count",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "capacity",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 6
+            }
+          },
+          {
+            "name": "playerAge",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 25
+            }
+          },
+          {
+            "name": "playerPlayHistory",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double",
+              "default": 2
+            }
+          },
+          {
+            "name": "isPlayerVoiceChatEnabled",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenerateMockServerSignalValuesResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}]
+      }
     }
   },
   "components": {
@@ -67783,6 +69124,15 @@
           "scale": {
             "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AssetScale"
           },
+          "headShape": {
+            "format": "int32",
+            "description": "Head Shape selected for the asset id.\r\nApplicable for dynamic head assets.",
+            "enum": [
+              0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+              19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32
+            ],
+            "type": "integer"
+          },
           "version": {
             "format": "int32",
             "description": "Client-authoritative meta model format version\r\n- default is always 1",
@@ -67823,6 +69173,10 @@
             "format": "date-time",
             "description": "For rental assets only. (Future) ownership expiration time of the asset.",
             "type": "string"
+          },
+          "isSwappable": {
+            "description": "If the \"Id\" is swappable, applicable for DH assets.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -83527,6 +84881,1441 @@
         },
         "additionalProperties": false,
         "description": "Wrapper for the paginated collection output.\nComplies with the REST conventions, containing\nnext/previous page, and a data field containing the actual list.\n            \nNeeded only to simplify JSON serialization, and can technically\nbe AutoMapper-ed from the EaaS or any other data provider."
+      },
+      "AttributeAggregationFunction": {
+        "enum": ["Invalid", "Average", "Median", "Sum"],
+        "type": "string",
+        "description": "Matchmaking attribute aggregation function type."
+      },
+      "ClientStatusGetRequest": {
+        "type": "object",
+        "properties": {
+          "browserTrackerId": {
+            "type": "integer",
+            "description": "The client's browser tracker id.",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Get Client Status request."
+      },
+      "ClientStatusSetRequest": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "The client's status to send.",
+            "nullable": true
+          },
+          "browserTrackerId": {
+            "type": "integer",
+            "description": "The client's browser tracker id.",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Set Client Status request."
+      },
+      "CreateCustomMatchmakingSignalRequest": {
+        "type": "object",
+        "properties": {
+          "scoringConfigurationId": {
+            "type": "string",
+            "description": "The ID of the scoring configuration that has the signal to be created.",
+            "nullable": true
+          },
+          "signalConfiguration": {
+            "$ref": "#/components/schemas/CustomSignalConfiguration"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request to create a custom matchmaking signal."
+      },
+      "CreateCustomMatchmakingSignalResponse": {
+        "type": "object",
+        "properties": {
+          "scoringConfiguration": {
+            "$ref": "#/components/schemas/MatchmakingScoringConfiguration"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response to create a custom matchmaking signal."
+      },
+      "CreateMatchmakingPlayerAttributeDefinitionRequest": {
+        "type": "object",
+        "properties": {
+          "universeId": {
+            "type": "integer",
+            "description": "UniverseId for the new PlayerAttributeDefinition.",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the new rule.",
+            "nullable": true
+          },
+          "dataType": {
+            "$ref": "#/components/schemas/MatchmakingAttributeDataType"
+          },
+          "defaultValue": {
+            "$ref": "#/components/schemas/MatchmakingAttributeValue"
+          },
+          "attributeValueLocation": {
+            "$ref": "#/components/schemas/MatchmakingAttributeValueLocation"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request to create a new MatchmakingPlayerAttributeDefinition."
+      },
+      "CreateMatchmakingPlayerAttributeDefinitionResponse": {
+        "type": "object",
+        "properties": {
+          "playerAttributeDefinition": {
+            "$ref": "#/components/schemas/MatchmakingPlayerAttributeDefinition"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The response for creating a matchmaking player attribute definition."
+      },
+      "CreateMatchmakingScoringConfigurationRequest": {
+        "type": "object",
+        "properties": {
+          "universeId": {
+            "type": "integer",
+            "description": "UniverseId for the new matchmaking scoring configuraiton.",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the scoring configuration.",
+            "nullable": true
+          },
+          "matchmakingSignalWeights": {
+            "type": "object",
+            "properties": {
+              "Invalid": {
+                "type": "number",
+                "format": "double"
+              },
+              "Occupancy": {
+                "type": "number",
+                "format": "double"
+              },
+              "Age": {
+                "type": "number",
+                "format": "double"
+              },
+              "Language": {
+                "type": "number",
+                "format": "double"
+              },
+              "Latency": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreferredPlayers": {
+                "type": "number",
+                "format": "double"
+              },
+              "VoiceChat": {
+                "type": "number",
+                "format": "double"
+              },
+              "DeviceType": {
+                "type": "number",
+                "format": "double"
+              },
+              "PlayHistory": {
+                "type": "number",
+                "format": "double"
+              },
+              "TextChat": {
+                "type": "number",
+                "format": "double"
+              }
+            },
+            "additionalProperties": false,
+            "description": "The desired set of weights for each matchmaking signal.",
+            "nullable": true
+          },
+          "customSignalWeights": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number",
+              "format": "double",
+              "nullable": true
+            },
+            "description": "The desired set of weights for custom signals. It is a map from custom signal name to its weight.",
+            "nullable": true
+          },
+          "template": {
+            "$ref": "#/components/schemas/MatchmakingScoringConfigurationTemplate"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request to create a matchmaking scoring configuration."
+      },
+      "CreateMatchmakingScoringConfigurationResponse": {
+        "type": "object",
+        "properties": {
+          "scoringConfiguration": {
+            "$ref": "#/components/schemas/MatchmakingScoringConfiguration"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response to create a matchmaking scoring configuration."
+      },
+      "CreateMatchmakingServerAttributeDefinitionRequest": {
+        "type": "object",
+        "properties": {
+          "universeId": {
+            "type": "integer",
+            "description": "UniverseId for the new PlayerAttributeDefinition.",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the new rule.",
+            "nullable": true
+          },
+          "dataType": {
+            "$ref": "#/components/schemas/MatchmakingAttributeDataType"
+          },
+          "defaultValue": {
+            "$ref": "#/components/schemas/MatchmakingServerAttributeDefaultValue"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request to create a new ServerAttributeDefinition."
+      },
+      "CreateMatchmakingServerAttributeDefinitionResponse": {
+        "type": "object",
+        "properties": {
+          "playerAttributeDefinition": {
+            "$ref": "#/components/schemas/MatchmakingServerAttributeDefinition"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The response for creating a matchmaking server attribute definition."
+      },
+      "CustomSignalConfiguration": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the signal.",
+            "nullable": true
+          },
+          "weight": {
+            "type": "number",
+            "description": "The weight of the signal.",
+            "format": "double",
+            "nullable": true
+          },
+          "customSignalType": {
+            "$ref": "#/components/schemas/CustomSignalType"
+          },
+          "playerCategoricalSignalConfiguration": {
+            "$ref": "#/components/schemas/PlayerCategoricalSignalConfiguration"
+          },
+          "serverCategoricalSignalConfiguration": {
+            "$ref": "#/components/schemas/ServerCategoricalSignalConfiguration"
+          },
+          "serverNumericalSignalConfiguration": {
+            "$ref": "#/components/schemas/ServerNumericalSignalConfiguration"
+          },
+          "playerNumericalSignalConfiguration": {
+            "$ref": "#/components/schemas/PlayerNumericalSignalConfiguration"
+          },
+          "description": {
+            "type": "string",
+            "description": "A text description of the custom signal.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The custom signal configuration using a developer created attribute."
+      },
+      "CustomSignalType": {
+        "enum": [
+          "Invalid",
+          "PlayerCategorical",
+          "ServerCategorical",
+          "ServerNumerical",
+          "PlayerNumerical"
+        ],
+        "type": "string",
+        "description": "The custom signal type."
+      },
+      "DataStoreLocation": {
+        "type": "object",
+        "properties": {
+          "dataStoreName": {
+            "type": "string",
+            "description": "The DataStore name.",
+            "nullable": true
+          },
+          "scope": {
+            "type": "string",
+            "description": "The scope of the key in DataStore.",
+            "nullable": true
+          },
+          "keyTemplate": {
+            "type": "string",
+            "description": "The key of a DataStore value, with {UserId} replaced by the player's actual ID when fetching values.",
+            "nullable": true
+          },
+          "valuePath": {
+            "type": "string",
+            "description": "A JSON path to a value if it lives in a JSON object.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Describes where an attribute value exists in DataStore."
+      },
+      "DeleteCustomMatchmakingSignalResponse": {
+        "type": "object",
+        "properties": {
+          "scoringConfiguration": {
+            "$ref": "#/components/schemas/MatchmakingScoringConfiguration"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response to delete a custom matchmaking signal."
+      },
+      "DeleteMatchmakingPlayerAttributeDefinitionResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "description": "The response for deleting a matchmaking player attribute definition."
+      },
+      "DeleteMatchmakingScoringConfigurationResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "description": "Response to delete a matchmaking scoring configuration."
+      },
+      "DeleteMatchmakingServerAttributeDefinitionResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "description": "The response for deleting a matchmaking server attribute definition."
+      },
+      "ForecastUpdateRequest": {
+        "type": "object",
+        "properties": {
+          "universeId": {
+            "type": "integer",
+            "description": "The Universe ID to update.",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false,
+        "description": "ForecastUpdateRequest is used to request an update to the forecast of a Place in a Universe."
+      },
+      "ForecastUpdateResponse": {
+        "type": "object",
+        "properties": {
+          "placeSummaries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PlaceSummaryForGameUpdate"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "ForecastUpdateResponse is used to return information about the forecasted update of a place."
+      },
+      "GameUpdateStatus": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "universeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "closeOldVersionsOnly": {
+            "type": "boolean"
+          },
+          "bleedOffEndTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "placeUpdateStatuses": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/PlaceUpdateStatus"
+            },
+            "nullable": true
+          },
+          "bleedOffServers": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GenerateMockServerSignalValuesResponse": {
+        "type": "object",
+        "properties": {
+          "exampleGameSignalValues": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MockServerSignalValues"
+            },
+            "description": "The mock server signal values.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response for generating mock server signal values."
+      },
+      "GetMatchmakingCustomizationFeatureFlagsResponse": {
+        "type": "object",
+        "properties": {
+          "featureFlags": {
+            "$ref": "#/components/schemas/MatchmakingCustomizationFeatureFlags"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response to get matchmaking customization feature flags."
+      },
+      "GetMatchmakingScoringConfigurationResponse": {
+        "type": "object",
+        "properties": {
+          "scoringConfiguration": {
+            "$ref": "#/components/schemas/MatchmakingScoringConfiguration"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response to get the matchmaking scoring configuration."
+      },
+      "GetMatchmakingScoringDefaultWeightsResponse": {
+        "type": "object",
+        "properties": {
+          "weights": {
+            "type": "object",
+            "properties": {
+              "Invalid": {
+                "type": "number",
+                "format": "double"
+              },
+              "Occupancy": {
+                "type": "number",
+                "format": "double"
+              },
+              "Age": {
+                "type": "number",
+                "format": "double"
+              },
+              "Language": {
+                "type": "number",
+                "format": "double"
+              },
+              "Latency": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreferredPlayers": {
+                "type": "number",
+                "format": "double"
+              },
+              "VoiceChat": {
+                "type": "number",
+                "format": "double"
+              },
+              "DeviceType": {
+                "type": "number",
+                "format": "double"
+              },
+              "PlayHistory": {
+                "type": "number",
+                "format": "double"
+              },
+              "TextChat": {
+                "type": "number",
+                "format": "double"
+              }
+            },
+            "additionalProperties": false,
+            "description": "The weights of the current default matchmaking scoring weights.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response containing the weights of the current default matchmaking scoring weights"
+      },
+      "GetUpdateStatusResponse": {
+        "type": "object",
+        "properties": {
+          "updateStatusList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GameUpdateStatus"
+            },
+            "description": "The status of the game update.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Get Update Status response."
+      },
+      "LaunchUpdateRequest": {
+        "type": "object",
+        "properties": {
+          "universeId": {
+            "type": "integer",
+            "description": "The Universe ID to update.",
+            "format": "int64"
+          },
+          "placeIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "description": "The place IDs to update. If none are specified, we will update all active Places in the Universe",
+            "nullable": true
+          },
+          "closeOldVersionsOnly": {
+            "type": "boolean",
+            "description": "If true (default in UI), we will only migrate players from servers running old PlaceVersions.\r\nIf false, we will migrate all players"
+          },
+          "bleedOffServers": {
+            "type": "boolean",
+            "description": "If true (default in UI), we will stop matchmaking to servers but keep them up before shutting them down, allowing\r\n players to naturally migrate to the newer version.\r\nIf false, we will immediately start shutting down servers"
+          },
+          "bleedOffDurationMinutes": {
+            "type": "integer",
+            "description": "If BleedOffServers=true, how long will we allow old servers to stay up before shutting them down.\r\nValid values: 1 - 60 minutes",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Launch Update Request. Contains specification for how update should roll out"
+      },
+      "LaunchUpdateResponse": {
+        "type": "object",
+        "properties": {
+          "updateId": {
+            "type": "string",
+            "description": "An ID for UI to query status of this update",
+            "format": "uuid"
+          },
+          "numPlayersToBeKicked": {
+            "type": "integer",
+            "description": "How many players are playing in servers that will be shut down according to the update configuration",
+            "format": "int32"
+          },
+          "instancesToBeClosed": {
+            "type": "integer",
+            "description": "How many game instances will be closed according to the update configuration",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Launch Update response."
+      },
+      "ListMatchmakingPlayerAttributeDefinitionsResponse": {
+        "type": "object",
+        "properties": {
+          "playerAttributeSchema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MatchmakingPlayerAttributeDefinition"
+            },
+            "description": "All PlayerAttributeDefinitions for a universe.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The response for listing matchmaking player attribute definitions."
+      },
+      "ListMatchmakingScoringConfigurationsResponse": {
+        "type": "object",
+        "properties": {
+          "scoringConfigurations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MatchmakingScoringConfiguration"
+            },
+            "description": "The scoring configurations.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response to list matchmaking scoring configurations in a universe."
+      },
+      "ListMatchmakingServerAttributeDefinitionsResponse": {
+        "type": "object",
+        "properties": {
+          "serverAttributeSchema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MatchmakingServerAttributeDefinition"
+            },
+            "description": "All ServerAttributeDefinitions for a universe.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The response for listing matchmaking server attribute definitions."
+      },
+      "ListPlaceMatchmakingScoringConfigurationsResponse": {
+        "type": "object",
+        "properties": {
+          "placeScoringConfigurations": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/MatchmakingScoringConfiguration"
+            },
+            "description": "The scoring configurations for places.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response to list all places with scoring configuration in a universe."
+      },
+      "MatchmakingAttributeAggregation": {
+        "type": "object",
+        "properties": {
+          "aggregationFunction": {
+            "$ref": "#/components/schemas/AttributeAggregationFunction"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Matchmaking attribute aggregation object for matchmaking rules."
+      },
+      "MatchmakingAttributeDataType": {
+        "enum": ["Invalid", "Bool", "Number", "String"],
+        "type": "string",
+        "description": "Data type of a matchmaking attribute. Can be a bool, number, or string."
+      },
+      "MatchmakingAttributeReference": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The id of the attribute.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Matchmaking attribute reference object for matchmaking rules."
+      },
+      "MatchmakingAttributeValue": {
+        "type": "object",
+        "properties": {
+          "boolValue": {
+            "type": "boolean",
+            "description": "Bool value of the attribute. One of BoolValue, NumericValue, or StringValue must be set.",
+            "nullable": true
+          },
+          "numericValue": {
+            "type": "number",
+            "description": "Double value of the attribute. One of BoolValue, NumericValue, or StringValue must be set.",
+            "format": "double",
+            "nullable": true
+          },
+          "stringValue": {
+            "type": "string",
+            "description": "String value of the attribute. One of BoolValue, NumericValue, or StringValue must be set.",
+            "nullable": true
+          },
+          "type": {
+            "$ref": "#/components/schemas/MatchmakingAttributeValueType"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Matchmaking attribute value object for matchmaking rules."
+      },
+      "MatchmakingAttributeValueLocation": {
+        "type": "object",
+        "properties": {
+          "locationCase": {
+            "$ref": "#/components/schemas/MatchmakingAttributeValueLocationCase"
+          },
+          "dataStoreLocation": {
+            "$ref": "#/components/schemas/DataStoreLocation"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Describes where an attribute value exists."
+      },
+      "MatchmakingAttributeValueLocationCase": {
+        "enum": ["Invalid", "DataStoreLocation"],
+        "type": "string",
+        "description": "The storage solution used for this MatchmakingPlayerAttributeDefinition."
+      },
+      "MatchmakingAttributeValueType": {
+        "enum": ["Invalid", "Bool", "Number", "String"],
+        "type": "string",
+        "description": "Matchmaking attribute value type."
+      },
+      "MatchmakingCategoricalAttributeComparisonType": {
+        "enum": ["Invalid", "EqualityToPlayer", "EqualityToConstant"],
+        "type": "string",
+        "description": "The categorical attribute comparison type for matchmaking."
+      },
+      "MatchmakingCustomizationFeatureFlags": {
+        "type": "object",
+        "properties": {
+          "isMatchmakingCustomizationAllowed": {
+            "type": "boolean",
+            "description": "If matchmaking customization is allowed for this universe"
+          },
+          "isMatchmakingCustomizationExperimentsAllowed": {
+            "type": "boolean",
+            "description": "If matchmaking customization experiments are allowed for this universe"
+          },
+          "isMatchmakingTextChatSignalEnabled": {
+            "type": "boolean",
+            "description": "Whether text chat signal is enabled for Custom Matchmaking."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Matchmaking object for universe feature flags controlling matchmaking customization."
+      },
+      "MatchmakingNumericalAttributeComparisonType": {
+        "enum": [
+          "Invalid",
+          "AbsoluteDifferentToPlayer",
+          "AbsoluteDifferentToConstant"
+        ],
+        "type": "string",
+        "description": "The numerical attribute comparison type for matchmaking."
+      },
+      "MatchmakingPlayerAttributeDefinition": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The id of the attribute.",
+            "nullable": true
+          },
+          "universeId": {
+            "type": "integer",
+            "description": "The universe id of the attribute.",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the attribute.",
+            "nullable": true
+          },
+          "dataType": {
+            "$ref": "#/components/schemas/MatchmakingAttributeDataType"
+          },
+          "defaultValue": {
+            "$ref": "#/components/schemas/MatchmakingAttributeValue"
+          },
+          "attributeValueLocation": {
+            "$ref": "#/components/schemas/MatchmakingAttributeValueLocation"
+          },
+          "createdTime": {
+            "type": "string",
+            "description": "The aggregation function of the attribute.",
+            "format": "date-time"
+          },
+          "updatedTime": {
+            "type": "string",
+            "description": "The time the attribute was last updated.",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Describes a player attribute definition for matchmaking."
+      },
+      "MatchmakingScoringConfiguration": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The id of the scoring configuration.",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the scoring configuration. It needs to be unique within a universe.",
+            "nullable": true
+          },
+          "signalWeights": {
+            "type": "object",
+            "properties": {
+              "Invalid": {
+                "$ref": "#/components/schemas/MatchmakingSignalWeightConfiguration"
+              },
+              "Occupancy": {
+                "$ref": "#/components/schemas/MatchmakingSignalWeightConfiguration"
+              },
+              "Age": {
+                "$ref": "#/components/schemas/MatchmakingSignalWeightConfiguration"
+              },
+              "Language": {
+                "$ref": "#/components/schemas/MatchmakingSignalWeightConfiguration"
+              },
+              "Latency": {
+                "$ref": "#/components/schemas/MatchmakingSignalWeightConfiguration"
+              },
+              "PreferredPlayers": {
+                "$ref": "#/components/schemas/MatchmakingSignalWeightConfiguration"
+              },
+              "VoiceChat": {
+                "$ref": "#/components/schemas/MatchmakingSignalWeightConfiguration"
+              },
+              "DeviceType": {
+                "$ref": "#/components/schemas/MatchmakingSignalWeightConfiguration"
+              },
+              "PlayHistory": {
+                "$ref": "#/components/schemas/MatchmakingSignalWeightConfiguration"
+              },
+              "TextChat": {
+                "$ref": "#/components/schemas/MatchmakingSignalWeightConfiguration"
+              }
+            },
+            "additionalProperties": false,
+            "description": "The signal weights for the scoring configuration.",
+            "nullable": true
+          },
+          "customSignals": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/CustomSignalConfiguration"
+            },
+            "description": "The custom signals part of this place's scoring configuration.",
+            "nullable": true
+          },
+          "createdTime": {
+            "type": "string",
+            "description": "The scoring configuration's created time.",
+            "format": "date-time"
+          },
+          "updatedTime": {
+            "type": "string",
+            "description": "The scoring configuration's updated time.",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The custom scoring configuration for matchmaking."
+      },
+      "MatchmakingScoringConfigurationTemplate": {
+        "enum": ["NotApplicable", "UseDefault"],
+        "type": "string",
+        "description": "A predefined template used for creating matchmaking scoring configuration."
+      },
+      "MatchmakingServerAttributeDefaultValue": {
+        "type": "object",
+        "properties": {
+          "sourceCase": {
+            "$ref": "#/components/schemas/MatchmakingServerAttributeDefaultValueSourceCase"
+          },
+          "constant": {
+            "$ref": "#/components/schemas/MatchmakingAttributeValue"
+          },
+          "playerAttributeReference": {
+            "$ref": "#/components/schemas/MatchmakingAttributeReference"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Describes how the server attribute value should be derived"
+      },
+      "MatchmakingServerAttributeDefaultValueSourceCase": {
+        "enum": ["Invalid", "Constant", "PlayerAttributeReference"],
+        "type": "string",
+        "description": "The storage solution used for this MatchmakingPlayerAttributeDefinition."
+      },
+      "MatchmakingServerAttributeDefinition": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The id of the attribute.",
+            "nullable": true
+          },
+          "universeId": {
+            "type": "integer",
+            "description": "The universe id of the attribute.",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the attribute.",
+            "nullable": true
+          },
+          "dataType": {
+            "$ref": "#/components/schemas/MatchmakingAttributeDataType"
+          },
+          "defaultValue": {
+            "$ref": "#/components/schemas/MatchmakingServerAttributeDefaultValue"
+          },
+          "createdTime": {
+            "type": "string",
+            "description": "The aggregation function of the attribute.",
+            "format": "date-time"
+          },
+          "updatedTime": {
+            "type": "string",
+            "description": "The time the attribute was last updated.",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Describes a player attribute definition for matchmaking."
+      },
+      "MatchmakingSignalCurveType": {
+        "enum": ["Invalid", "PositiveLinear", "NegativeLinear"],
+        "type": "string",
+        "description": "The signal curve type for matchmaking."
+      },
+      "MatchmakingSignalType": {
+        "enum": [
+          "Invalid",
+          "Occupancy",
+          "Age",
+          "Language",
+          "Latency",
+          "PreferredPlayers",
+          "VoiceChat",
+          "DeviceType",
+          "PlayHistory",
+          "TextChat"
+        ],
+        "type": "string",
+        "description": "The default signal types matchmaking uses."
+      },
+      "MatchmakingSignalWeightConfiguration": {
+        "type": "object",
+        "properties": {
+          "weight": {
+            "type": "number",
+            "description": "Weight of signal.",
+            "format": "double"
+          },
+          "signalType": {
+            "$ref": "#/components/schemas/MatchmakingSignalType"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The signal weight configuration for matchmaking."
+      },
+      "MockServerSignalValues": {
+        "type": "object",
+        "properties": {
+          "capacity": {
+            "type": "integer",
+            "description": "The capacity of the mock server.",
+            "format": "int32"
+          },
+          "occupancy": {
+            "type": "integer",
+            "description": "The occupancy of the mock server.",
+            "format": "int32"
+          },
+          "hasPreferredPlayers": {
+            "type": "boolean",
+            "description": "If the game has preferred players."
+          },
+          "playerAge": {
+            "type": "integer",
+            "description": "The joining player's age.",
+            "format": "int32"
+          },
+          "serverAveragePlayerAge": {
+            "type": "integer",
+            "description": "The server's age for the mock server.",
+            "format": "int32"
+          },
+          "commonLanguagePlayers": {
+            "type": "integer",
+            "description": "The number of player's in the mock server that have a common language.",
+            "format": "int32"
+          },
+          "latency": {
+            "type": "integer",
+            "description": "The latency of the mock server.",
+            "format": "int32"
+          },
+          "commonDevicePlayers": {
+            "type": "integer",
+            "description": "The number of player's in the mock server that have a common device.",
+            "format": "int32"
+          },
+          "playerPlayHistory": {
+            "type": "number",
+            "description": "The joining player's play history. The value is a log10 transformation of the player's playtime in minutes during last 28 days.",
+            "format": "double"
+          },
+          "serverAveragePlayHistory": {
+            "type": "number",
+            "description": "The server's play history for the mock server.",
+            "format": "double"
+          },
+          "commonVoicePlayers": {
+            "type": "integer",
+            "description": "The number of player's in the mock server that have voice chat enabled.",
+            "format": "int32",
+            "nullable": true
+          },
+          "commonTextChatPlayers": {
+            "type": "integer",
+            "description": "The number of player's in the mock server that can commonly text chat with the joining player.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Mock server signal values."
+      },
+      "PlaceSummaryForGameUpdate": {
+        "type": "object",
+        "properties": {
+          "placeId": {
+            "type": "integer",
+            "description": "Place ID of the place to be updated.",
+            "format": "int64"
+          },
+          "playersToBeKicked": {
+            "type": "integer",
+            "description": "Number of players to be kicked from the place during the game update.",
+            "format": "int32"
+          },
+          "totalPlayers": {
+            "type": "integer",
+            "description": "Total number of players in the place.",
+            "format": "int32"
+          },
+          "instancesToBeClosed": {
+            "type": "integer",
+            "description": "Number of instances to be closed for the place during the game update.",
+            "format": "int32"
+          },
+          "totalInstances": {
+            "type": "integer",
+            "description": "Total number of instances for the place.",
+            "format": "int32"
+          },
+          "placeVersion": {
+            "type": "integer",
+            "description": "Lastest version of the place to be updated.",
+            "format": "int32"
+          },
+          "lastUpdated": {
+            "type": "string",
+            "description": "The timestamp of the last update to the place summary.",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Summary of a place for a game update."
+      },
+      "PlaceUpdateStatus": {
+        "type": "object",
+        "properties": {
+          "placeId": {
+            "type": "integer",
+            "description": "The placeId of the game update",
+            "format": "int64"
+          },
+          "phase": {
+            "type": "string",
+            "description": "Which phase is the update in: BleedOff, Migrate, or Done",
+            "nullable": true
+          },
+          "startTime": {
+            "type": "string",
+            "description": "When the update started",
+            "format": "date-time"
+          },
+          "endTime": {
+            "type": "string",
+            "description": "When the update is expected to end, or null if it has not ended yet",
+            "format": "date-time",
+            "nullable": true
+          },
+          "startPlayersToBeKicked": {
+            "type": "integer",
+            "description": "Number of players in the game update initially, before any players are kicked",
+            "format": "int32"
+          },
+          "startInstancesToBeClosed": {
+            "type": "integer",
+            "description": "Number of instances that will be closed during the game update",
+            "format": "int32"
+          },
+          "numPlayersToBeKicked": {
+            "type": "integer",
+            "description": "How many players are remaining in instances that will be shut down according to the update configuration",
+            "format": "int32"
+          },
+          "instancesToBeClosed": {
+            "type": "integer",
+            "description": "Number of places that will be updated",
+            "format": "int32"
+          },
+          "placeVersion": {
+            "type": "integer",
+            "description": "The version of the place that is being updated",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Container for the status of a game update."
+      },
+      "PlayerCategoricalSignalConfiguration": {
+        "type": "object",
+        "properties": {
+          "playerAttribute": {
+            "$ref": "#/components/schemas/MatchmakingAttributeReference"
+          },
+          "curveType": {
+            "$ref": "#/components/schemas/MatchmakingSignalCurveType"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The player categorical signal configuration."
+      },
+      "PlayerNumericalSignalConfiguration": {
+        "type": "object",
+        "properties": {
+          "playerAttribute": {
+            "$ref": "#/components/schemas/MatchmakingAttributeReference"
+          },
+          "aggregation": {
+            "$ref": "#/components/schemas/MatchmakingAttributeAggregation"
+          },
+          "comparisonType": {
+            "$ref": "#/components/schemas/MatchmakingNumericalAttributeComparisonType"
+          },
+          "maxRelevantDifference": {
+            "type": "number",
+            "description": "The maximum relevant difference for this signal.",
+            "format": "double",
+            "nullable": true
+          },
+          "constantValue": {
+            "type": "number",
+            "description": "The constant value for this signal to be compared to.",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The player numerical signal configuration."
+      },
+      "RemovePlaceMatchmakingScoringConfigurationResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "description": "Response to remove scoring configuration for a place."
+      },
+      "ServerCategoricalSignalConfiguration": {
+        "type": "object",
+        "properties": {
+          "serverAttribute": {
+            "$ref": "#/components/schemas/MatchmakingAttributeReference"
+          },
+          "comparisonType": {
+            "$ref": "#/components/schemas/MatchmakingCategoricalAttributeComparisonType"
+          },
+          "playerAttribute": {
+            "$ref": "#/components/schemas/MatchmakingAttributeReference"
+          },
+          "constantValue": {
+            "type": "string",
+            "description": "The constant value for this signal to be compared to.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The server categorical signal configuration."
+      },
+      "ServerNumericalSignalConfiguration": {
+        "type": "object",
+        "properties": {
+          "serverAttribute": {
+            "$ref": "#/components/schemas/MatchmakingAttributeReference"
+          },
+          "comparisonType": {
+            "$ref": "#/components/schemas/MatchmakingNumericalAttributeComparisonType"
+          },
+          "maxRelevantDifference": {
+            "type": "number",
+            "description": "The maximum relevant difference for this signal.",
+            "format": "double",
+            "nullable": true
+          },
+          "constantValue": {
+            "type": "number",
+            "description": "The constant value for this signal to be compared to.",
+            "format": "double",
+            "nullable": true
+          },
+          "playerAttribute": {
+            "$ref": "#/components/schemas/MatchmakingAttributeReference"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The server numerical signal configuration."
+      },
+      "SetMatchmakingScoringConfigurationResponse": {
+        "type": "object",
+        "properties": {
+          "scoringConfiguration": {
+            "$ref": "#/components/schemas/MatchmakingScoringConfiguration"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response to set the matchmaking scoring configuration."
+      },
+      "SetPlaceMatchmakingScoringConfigurationRequest": {
+        "type": "object",
+        "properties": {
+          "placeId": {
+            "type": "integer",
+            "description": "The place ID of the desired scoring configuration to set.",
+            "format": "int64"
+          },
+          "scoringConfigurationId": {
+            "type": "string",
+            "description": "The ID of the scoring configuration.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request to set the matchmaking scoring configuration for a place."
+      },
+      "ShutdownAllGameInstancesResponse": {
+        "type": "object",
+        "properties": {
+          "placeId": {
+            "type": "integer",
+            "description": "The place ID to shut down.",
+            "format": "int64"
+          },
+          "replaceInstances": {
+            "type": "boolean",
+            "description": "Whether to replace instances or not."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Shutdown All Game Instances response."
+      },
+      "ShutdownGameInstancesRequest": {
+        "type": "object",
+        "properties": {
+          "placeId": {
+            "type": "integer",
+            "description": "The place ID to shut down.",
+            "format": "int64"
+          },
+          "privateServerId": {
+            "type": "integer",
+            "description": "The private server ID.",
+            "format": "int64",
+            "nullable": true
+          },
+          "gameId": {
+            "type": "string",
+            "description": "The game ID.",
+            "format": "uuid",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Shutdown Game Instance request."
+      },
+      "ShutdownGameInstancesResponse": {
+        "type": "object",
+        "properties": {
+          "placeId": {
+            "type": "integer",
+            "description": "The place ID to shut down.",
+            "format": "int64"
+          },
+          "privateServerId": {
+            "type": "integer",
+            "description": "The private server ID.",
+            "format": "int64",
+            "nullable": true
+          },
+          "gameId": {
+            "type": "string",
+            "description": "The game ID.",
+            "format": "uuid",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Shutdown Game Instance response."
+      },
+      "UpdateCustomMatchmakingSignalRequest": {
+        "type": "object",
+        "properties": {
+          "scoringConfigurationId": {
+            "type": "string",
+            "description": "The ID of the scoring configuration.",
+            "nullable": true
+          },
+          "signalConfiguration": {
+            "$ref": "#/components/schemas/CustomSignalConfiguration"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request to update a custom matchmaking signal."
+      },
+      "UpdateCustomMatchmakingSignalResponse": {
+        "type": "object",
+        "properties": {
+          "scoringConfiguration": {
+            "$ref": "#/components/schemas/MatchmakingScoringConfiguration"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response to update a custom matchmaking signal."
+      },
+      "UpdateMatchmakingPlayerAttributeDefinitionRequest": {
+        "type": "object",
+        "properties": {
+          "attributeId": {
+            "type": "string",
+            "description": "Id of the attribute to update.",
+            "nullable": true
+          },
+          "defaultValue": {
+            "$ref": "#/components/schemas/MatchmakingAttributeValue"
+          },
+          "attributeValueLocation": {
+            "$ref": "#/components/schemas/MatchmakingAttributeValueLocation"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request model for updating a PlayerAttributeDefinition."
+      },
+      "UpdateMatchmakingPlayerAttributeDefinitionResponse": {
+        "type": "object",
+        "properties": {
+          "playerAttributeDefinition": {
+            "$ref": "#/components/schemas/MatchmakingPlayerAttributeDefinition"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The response for updating a matchmaking player attribute definition."
+      },
+      "UpdateMatchmakingScoringConfigurationRequest": {
+        "type": "object",
+        "properties": {
+          "scoringConfigurationId": {
+            "type": "string",
+            "description": "The ID of the scoring configuration to be updated.",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the scoring configuration.",
+            "nullable": true
+          },
+          "matchmakingSignalWeights": {
+            "type": "object",
+            "properties": {
+              "Invalid": {
+                "type": "number",
+                "format": "double"
+              },
+              "Occupancy": {
+                "type": "number",
+                "format": "double"
+              },
+              "Age": {
+                "type": "number",
+                "format": "double"
+              },
+              "Language": {
+                "type": "number",
+                "format": "double"
+              },
+              "Latency": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreferredPlayers": {
+                "type": "number",
+                "format": "double"
+              },
+              "VoiceChat": {
+                "type": "number",
+                "format": "double"
+              },
+              "DeviceType": {
+                "type": "number",
+                "format": "double"
+              },
+              "PlayHistory": {
+                "type": "number",
+                "format": "double"
+              },
+              "TextChat": {
+                "type": "number",
+                "format": "double"
+              }
+            },
+            "additionalProperties": false,
+            "description": "The desired set of weights for each matchmaking signal.",
+            "nullable": true
+          },
+          "customSignalWeights": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number",
+              "format": "double",
+              "nullable": true
+            },
+            "description": "The desired set of weights for custom signals. It is a map from custom signal name to its weight.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request to update a custom matchmaking signal."
+      },
+      "UpdateMatchmakingScoringConfigurationResponse": {
+        "type": "object",
+        "properties": {
+          "scoringConfiguration": {
+            "$ref": "#/components/schemas/MatchmakingScoringConfiguration"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response to update a matchmaking scoring configuration."
+      },
+      "UpdateMatchmakingServerAttributeDefinitionRequest": {
+        "type": "object",
+        "properties": {
+          "attributeId": {
+            "type": "string",
+            "description": "Id of the attribute to update.",
+            "nullable": true
+          },
+          "defaultValue": {
+            "$ref": "#/components/schemas/MatchmakingServerAttributeDefaultValue"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request model to update an exising ServerAttributeDefinition."
+      },
+      "UpdateMatchmakingServerAttributeDefinitionResponse": {
+        "type": "object",
+        "properties": {
+          "playerAttributeDefinition": {
+            "$ref": "#/components/schemas/MatchmakingServerAttributeDefinition"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The response for updating a matchmaking server attribute definition."
       }
     },
     "requestBodies": {
@@ -84778,6 +87567,41 @@
           "Cloud_CreateLuauExecutionSessionTask__Using_Universes_Places",
           "Cloud_GetLuauExecutionSessionTask",
           "Cloud_ListLuauExecutionSessionTaskLogs"
+        ]
+      }
+    },
+    {
+      "name": "Matchmaking",
+      "description": "HTTP APIs for matchmaking on Roblox Cloud.",
+      "x-roblox-tag-info": {
+        "path": "matchmaking",
+        "content": "Lists all HTTP APIs for working with matchmaking.",
+        "ordering": [
+          "post_matchmaking_api_v1_client_status",
+          "get_matchmaking_api_v1_client_status",
+          "post_matchmaking_api_v1_game_instances_shutdown",
+          "post_matchmaking_api_v1_game_instances_shutdown_all",
+          "post_matchmaking_api_v1_matchmaking_player_attribute",
+          "patch_matchmaking_api_v1_matchmaking_player_attribute__attributeId_",
+          "delete_matchmaking_api_v1_matchmaking_player_attribute__attributeId_",
+          "get_matchmaking_api_v1_matchmaking_player_attributes__universeId_",
+          "post_matchmaking_api_v1_matchmaking_server_attribute",
+          "patch_matchmaking_api_v1_matchmaking_server_attribute__attributeId_",
+          "delete_matchmaking_api_v1_matchmaking_server_attribute__attributeId_",
+          "get_matchmaking_api_v1_matchmaking_server_attributes__universeId_",
+          "get_matchmaking_api_v1_matchmaking_universe__universeId__feature_flags",
+          "post_matchmaking_api_v1_matchmaking_scoring_configuration",
+          "get_matchmaking_api_v1_matchmaking_scoring_configuration__scoringConfigurationId_",
+          "patch_matchmaking_api_v1_matchmaking_scoring_configuration__scoringConfigurationId_",
+          "delete_matchmaking_api_v1_matchmaking_scoring_configuration__scoringConfigurationId_",
+          "post_matchmaking_api_v1_matchmaking_scoring_configuration__scoringConfigurationId__signals",
+          "patch_matchmaking_api_v1_matchmaking_scoring_configuration__scoringConfigurationId__signals__signalName_",
+          "delete_matchmaking_api_v1_matchmaking_scoring_configuration__scoringConfigurationId__signals__signalName_",
+          "post_matchmaking_api_v1_matchmaking_scoring_configuration_place",
+          "delete_matchmaking_api_v1_matchmaking_scoring_configuration_place__placeId_",
+          "get_matchmaking_api_v1_matchmaking_scoring_configurations__universeId_",
+          "get_matchmaking_api_v1_matchmaking_scoring_configurations__universeId__places",
+          "get_matchmaking_api_v1_matchmaking_scoring_configuration_default_weights"
         ]
       }
     },
