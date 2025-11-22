@@ -263,7 +263,14 @@ properties:
       - UI
   - name: ProximityPrompt.MaxIndicatorDistance
     summary: ''
-    description: ''
+    description: |
+      This property determines the maximum distance a Player's
+      `Class.Player.Character|character` can be from the `Class.ProximityPrompt`
+      for the prompt's indicator to appear.
+      <Alert severity="warning">
+      Proximity Prompt Indicators are still in beta.
+      This property won't be visible unless you enable Proximity Prompt Indicators in the Studio Beta features.
+      </Alert>
     code_samples: []
     type: float
     tags: []
