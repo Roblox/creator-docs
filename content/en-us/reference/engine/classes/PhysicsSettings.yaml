@@ -145,7 +145,7 @@ properties:
       	</tr>
       	<tr>
       		<td bgcolor="#00FF00"></td>
-      		<td>Free Fall Body</td>
+      		<td>Free-fall Body</td>
       		<td>Physics Body that is freely moving with no physical contact.</td>
       	</tr>
       	<tr>
