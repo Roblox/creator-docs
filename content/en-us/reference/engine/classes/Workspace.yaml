@@ -1144,7 +1144,7 @@ methods:
       #### What is physics throttling?
 
       Physics throttling occurs when the physics engine detects it cannot keep
-      up with the game in realtime. When physics is being throttled, it will
+      up with the game in real time. When physics is being throttled, it will
       update less frequently causing `Class.BasePart|BaseParts` to appear to
       move slower.
 
