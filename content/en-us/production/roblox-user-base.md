@@ -53,7 +53,7 @@ Engaging experiences will generate a lot of **organic traffic** through word of 
 
 Roblox culture represents the dominant gaming, social, and consumer culture of the future. It has its own vocabulary, memes, celebrities, and even myths. Understanding the culture is essential to understanding your users.
 
-The sharing of **community-generated content** is the foundation of Roblox culture. Users see developers as celebrity peers. Iteration happens fast, leveraging real time user feedback. Because of the prominent role of organic, word-of-mouth traffic for success on Roblox, **communicating with users is critical**.
+The sharing of **community-generated content** is the foundation of Roblox culture. Users see developers as celebrity peers. Iteration happens fast, leveraging real-time user feedback. Because of the prominent role of organic, word-of-mouth traffic for success on Roblox, **communicating with users is critical**.
 
 ### Glossary
 
