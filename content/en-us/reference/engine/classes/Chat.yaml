@@ -21,7 +21,7 @@ tags:
   - Service
   - NotReplicated
 deprecation_message: |
-  This class is deprecated. Use `Class.TextChatService` instead.
+  This class is deprecated. Use `Class.TextService` or `Class.TextChatService` instead.
 properties:
   - name: Chat.BubbleChatEnabled
     summary: |
