@@ -9,7 +9,7 @@ summary: |
   Houses the Luau code responsible for running the legacy chat system.
 description: |
   The **Chat** service houses the Luau code responsible for running the
-  [legacy chat system](../../../chat/in-experience-text-chat#migrate-from-legacy-chat). Similar to
+  [legacy chat system](../../../chat/in-experience-text-chat.md#migrate-from-legacy-chat). Similar to
   `Class.StarterPlayerScripts`, default objects like `Class.Script|Scripts` and
   `Class.ModuleScript|ModuleScripts` are inserted into the service.
 code_samples: []
