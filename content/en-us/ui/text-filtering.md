@@ -31,7 +31,7 @@ Text can be gathered and/or displayed to users in a variety of scenarios, includ
 In the context of `Class.TextBox` input, the following example gathers input on the `Class.TextBox.FocusLost|FocusLost` event and sends it to the server through a `Class.RemoteEvent`. On the server, it is filtered first through `Class.TextService:FilterStringAsync()|FilterStringAsync()` and then `Class.TextFilterResult:GetNonChatStringForBroadcastAsync()|GetNonChatStringForBroadcastAsync()` with the intention that the text will be displayed to all users on a server‑side object such as a `Class.SurfaceGui` in the 3D world.
 
 <Alert severity="warning">
-Do not filter text in real-time "per character entered" into a `Class.TextBox`, as doing so yields for text that's only visible to the user typing it. Instead, filter the entered text **after** the user submits it.
+Do not filter text in real time "per character entered" into a `Class.TextBox`, as doing so yields for text that's only visible to the user typing it. Instead, filter the entered text **after** the user submits it.
 </Alert>
 
 ```lua title="Filtering Text Input - Client Script"
@@ -40,7 +40,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local textBox = script.Parent
 textBox.ClearTextOnFocus = false
 textBox.PlaceholderText = "..."
-textBox.TextXAlignment = Enum.TextXAlignment.Left 
+textBox.TextXAlignment = Enum.TextXAlignment.Left
 textBox.TextScaled = true
 
 -- RemoteEvent to send text input to server for filtering

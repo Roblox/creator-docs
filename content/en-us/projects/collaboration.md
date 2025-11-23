@@ -161,7 +161,7 @@ To quickly jump to a location in the workspace or to the exact line in a script 
 
 ## Comments
 
-Roblox Studio has a **comments** feature that lets you pinpoint an object in the 3D viewport and start a conversation with your collaborators, leave to‑do notes, and more. Comments update in real‑time which lets you and your team receive and respond to feedback without disrupting your workflow in Studio. You can also receive personalized [notifications](#notifications) to help you stay on top of feedback, even when you're not using Studio.
+Roblox Studio has a **comments** feature that lets you pinpoint an object in the 3D viewport and start a conversation with your collaborators, leave to-do notes, and more. Comments update in real time which lets you and your team receive and respond to feedback without disrupting your workflow in Studio. You can also receive personalized [notifications](#notifications) to help you stay on top of feedback, even when you're not using Studio.
 
 ### Workflow
 
@@ -202,7 +202,7 @@ You're always in control of both the type and source of comments which make up e
 
 ## Collaborative scripting
 
-In a collaborative session, you can code together in real-time through [live scripting](#live-scripting), or you can [draft](#drafts-mode) scripts in a more focused environment before committing them to a collaborator‑shared repository.
+In a collaborative session, you can code together in real time through [live scripting](#live-scripting), or you can [draft](#drafts-mode) scripts in a more focused environment before committing them to a collaborator-shared repository.
 
 ### Live scripting
 

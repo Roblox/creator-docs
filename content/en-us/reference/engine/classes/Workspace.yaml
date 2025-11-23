@@ -1133,10 +1133,10 @@ methods:
   - name: Workspace:GetPhysicsThrottling
     summary: |
       Returns an integer, between 0 and 100, representing the percentage of
-      real-time that physics simulation is currently being throttled to.
+      real time that physics simulation is currently being throttled to.
     description: |
       Returns an integer, between 0 and 100, representing the percentage of
-      real-time that physics simulation is currently being throttled to.
+      real time that physics simulation is currently being throttled to.
 
       This function can be used to determine whether, and to what degree,
       physics throttling is occurring.

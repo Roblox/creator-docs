@@ -85,7 +85,7 @@ Use the following controls to get fine-grain control on your cage edits:
 - Symmetrical and mirror edits along X-axis.
 - Brush with radius and falloff controls.
 - Brush falloff visualization over the vertices.
-- Ability to hide or display equipped layered clothing items. Layered clothing will update in real-time in the **Avatar Setup** tool's preview window
+- Ability to hide or display equipped layered clothing items. Layered clothing will update in real time in the **Avatar Setup** tool's preview window
 
 <Alert severity = 'warning'>
 Major cage edits may require returning to your third-party modeling tool, making your cage adjustments, and then re-exporting the asset.
