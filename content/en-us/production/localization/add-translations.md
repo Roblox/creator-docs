@@ -28,6 +28,44 @@ To translate text through the localization page:
 You cannot make edits to an existing source's <b>Key</b>, <b>Context</b> or <b>Example</b> fields through the localization settings page. To add or edit a source's <b>Key</b>, <b>Context,</b> or <b>Example</b> fields, you can remove and re-add the entry on the Localization page with these fields included, or make the edits directly with [file upload](#with-file-upload).
 </Alert>
 
+#### Add locale-specific translations
+
+Some languages may have regional differences in terms or spelling, such as "soccer" and "football". These are considered locales within languages. Currently, Roblox supports adding translations for the following locales:
+
+|Locale Name|Locale ID|
+| --- | --- |
+|English (United States)|en-us|
+|English (United Kingdom)|en-gb|
+|French (France)|fr-fr|
+|French (Canada)|fr-ca|
+|Portuguese (Brazil)|pt-br|
+|Portuguese (Portugal)|pt-pt|
+|Spanish (Spain)|es-es|
+|Spanish (Mexico)|es-mx|
+
+For languages that have Roblox-supported locales, you'll see subheadings under the parent language for global and locale-specific translations.
+
+   <img src="../../assets/localization/Locale-Left-Nav.png" width="65%"
+   />
+
+Add translations that are universal for that language (not specific to a locale) to the "Global" section, and add locale-specific translations to the corresponding sections. If a locale-specific translation is present, it overrides what is in the "Global" section for users in that locale.
+
+   <img src="../../assets/localization/Locale-Translation.png" width="100%"
+   />
+
+You can also add locale-specific translations for your experience source language if they are supported.
+
+   <img src="../../assets/localization/Locale-Source.png" width="100%"
+   />
+
+<Alert severity = 'warning'>
+If the source language of your experience is English, French, Portuguese, or Spanish, locale-specific translation overrides for experiences names and descriptions are not currently available for these locales:
+- English (United States)
+- French (France)
+- Portuguese (Brazil)
+- Spanish (Spain)
+</Alert>
+
 #### Add experience information translations
 
 You can modify experience information, such as the name, description, icon, and thumbnails, by updating the localization table:
