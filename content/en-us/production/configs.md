@@ -3,7 +3,7 @@ title: Experience configs
 description: Configs let you update in-game values without restarting your servers.
 ---
 
-**Experience configs** let you update in-game values in real-time without restarting servers:
+**Experience configs** let you update in-game values in real time without restarting servers:
 
 - Turn features on and off, such as enabling or disabling a new onboarding dungeon.
 - Tune in-game values like boss health, experience gain, or item prices.

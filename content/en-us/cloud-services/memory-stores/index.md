@@ -49,7 +49,7 @@ When users join the experience, the additional memory quota is available immedia
 
 After your experience hits the memory size quota, any API requests that increase the memory size always fail. Requests that decrease or don't change the memory size still succeed.
 
-With the [observability](../../cloud-services/memory-stores/observability.md) dashboard, you can view the memory size quota of your experience in real-time using the **Memory Usage** chart.
+With the [observability](../../cloud-services/memory-stores/observability.md) dashboard, you can view the memory size quota of your experience in real time using the **Memory Usage** chart.
 
 ### API request limits
 
@@ -75,7 +75,7 @@ Most API calls only consume one request unit, with a few exceptions:
 
 The requests quota is also applied on the experience level instead of the server level. This provides flexibility to allocate the requests among servers as long as the total request rate does not exceed the quota. If you exceed the quota, you receive an error response when the service throttles your requests.
 
-With the [observability](../../cloud-services/memory-stores/observability.md) feature available, you can view the request unit quota of your experience in real-time.
+With the [observability](../../cloud-services/memory-stores/observability.md) feature available, you can view the request unit quota of your experience in real time.
 
 ### Data structure size limits
 

@@ -64,7 +64,7 @@ After creating a data store, you're able to reference this same data store acros
 
 Data stores are made up of keys, which identify data, and values, which store data. Unlike standard data stores, ordered data stores let you sort data by **value**, which makes them ideal for creating things like leaderboards.
 
-Each entry in an ordered data store is stored under a unique key that you can rank and sort numerically, and then retrieve in ascending or descending order based on the stored numerical values. This means that you can use ordered data stores to, for example, show a top 3 list that updates in real-time as players in your experience collect more gold.
+Each entry in an ordered data store is stored under a unique key that you can rank and sort numerically, and then retrieve in ascending or descending order based on the stored numerical values. This means that you can use ordered data stores to, for example, show a top 3 list that updates in real time as players in your experience collect more gold.
 
 <table>
 <thead>
