@@ -87,15 +87,15 @@ To set the **supported** languages:
 
 ## Automatic translations
 
-Roblox's automatic translation tool is available on any experience and allows you to immediately begin localizing the strings in your experience and broadening your potential audience. In many cases, you can start making significant progress on your localization journey using automatic translations before adding [custom translations](#custom-translations) or working with [manual translators](#work-with-translators).
+Roblox's automatic translation tool is available on any experience and allows you to immediately begin localizing the strings in your experience and broadening your potential audience. In many cases, you can start making significant progress on your localization journey using automatic translations before adding [manual translations](#manual-translations) or working with [translators](#work-with-translators).
 
 For more information on enabling automatic translations in your experience, see [Automatic translations](../../production/localization/automatic-translations.md).
 
-## Custom translations
+## Manual translations
 
 Apply various customizations to your translations to improve and expand your experience's localization. You, or any assigned translator, can manually add and modify translations to your experience's translation table. You can also access this table programmatically, allowing you to create contextual translations, switch out images or assets based on language, or even manually display translations from a different language.
 
-For more information on custom translation use-cases, see [Translate in-experience content](../../production/localization/custom-translations.md).
+For more information on custom translation use-cases, see [Translate in-experience content](../../production/localization/manual-translations.md).
 
 ## Work with translators
 

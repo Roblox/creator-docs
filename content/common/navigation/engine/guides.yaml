@@ -589,16 +589,15 @@ navigation:
         path: /production/promotion/share-links
 
   - title: Localization
-    path: /production/localization/
     section:
+      - title: Overview
+        path: /production/localization/
       - title: Automatic translation
         section:
           - title: Overview
             path: /production/localization/automatic-translations
           - title: Translate dynamic content
             path: /production/localization/auto-translate-dynamic-content
-      - title: Overview
-        path: /production/localization/custom-translations
       - title: Manual translations
         section:
           - title: Overview

@@ -11,7 +11,7 @@ Automatic translation works by first [collecting strings](#enable-automatic-text
 
 After collecting these strings, you can [enable translations](#enable-translations) for your experience to automatically display the captured strings for users who have their default language settings set to the translated language.
 
-Automatic translation only provides automated translations for blank entries on the localization table and doesn't override any existing translations, including any [custom translations](../localization/custom-translations.md) made by a developer or translator. For example, if you manually clear a translation for an entry, the tool assumes that you don't want to translate that entry.
+Automatic translation only provides automated translations for blank entries on the localization table and doesn't override any existing translations, including any [manual translations](../localization/manual-translations.md) made by a developer or translator. For example, if you manually clear a translation for an entry, the tool assumes that you don't want to translate that entry.
 
 ## Enable automatic text capture
 
