@@ -263,7 +263,8 @@ properties:
       - UI
   - name: ProximityPrompt.MaxIndicatorDistance
     summary: ''
-    description: ''
+    description: |
+      This property determines the maximum distance a player's `Class.Player.Character|Character` can be from the `Class.ProximityPrompt` for the prompt's indicator to appear. Indicators show where nearby prompts are, so you can help guide players to interactable objects or reduce the clutter of many nearby items. Note that proximity prompt indicators are in beta and won't be visible unless you enable **Proximity Prompt Indicators** in Studio's beta features.
     code_samples: []
     type: float
     tags: []
