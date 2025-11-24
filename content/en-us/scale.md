@@ -2,7 +2,6 @@
 title: Reach a massive global audience
 description: Learn how to scale on Roblox.
 hideInPageNavigation: true
-hideBreadcrumbs: true
 ---
 
 export const sections = [

@@ -2,7 +2,6 @@
 title: Resources
 description: Get all the resources you need to build characters and accessories.
 hideInPageNavigation: true
-hideBreadcrumbs: true
 ---
 
 The following downloadable files are available for your use:

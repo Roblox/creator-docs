@@ -1,15 +1,16 @@
 navigation:
-  - heading: Overview
-  - title: Get started
+  - title: Overview
     path: /production/analytics/
+
   - title: Insights
     path: /production/analytics/insights
 
-  - heading: Monitor
-  - title: Performance
-    path: /production/analytics/performance
-  - title: Error report
-    path: /production/analytics/error-report
+  - title: Monitor
+    section:
+      - title: Performance
+        path: /production/analytics/performance
+      - title: Error report
+        path: /production/analytics/error-report
 
   - heading: Adjust and experiment
   - title: Configs
@@ -35,14 +36,15 @@ navigation:
   - title: Bans
     path: /production/bans
 
-  - heading: Event types
-  - title: Overview
-    path: /production/analytics/event-types
-  - title: Economy events
-    path: /production/analytics/economy-events
-  - title: Funnel events
-    path: /production/analytics/funnel-events
-  - title: Custom events
-    path: /production/analytics/custom-events
-  - title: Custom fields
-    path: /production/analytics/custom-fields
+  - title: Event types
+    section:
+      - title: Overview
+        path: /production/analytics/event-types
+      - title: Economy events
+        path: /production/analytics/economy-events
+      - title: Funnel events
+        path: /production/analytics/funnel-events
+      - title: Custom events
+        path: /production/analytics/custom-events
+      - title: Custom fields
+        path: /production/analytics/custom-fields

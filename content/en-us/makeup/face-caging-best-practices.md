@@ -1,7 +1,6 @@
 ---
 title: Face caging best practices
 description: Tips on optimizing facial cages for use with makeup assets.
-hideBreadcrumbs: true
 ---
 
 <Alert severity ='warning'>

@@ -3,16 +3,7 @@ navigation:
   - heading: Overview
   - title: Get started
     path: /experiences
-  - title: Tutorials
-    navigation: /engine/tutorials.yaml
-    path: /tutorials
-  - title: Resources
-    navigation: /engine/resources.yaml
-    path: /samples
-  - title: Engine API reference
-    path: /reference/engine
-    navigation: /engine/reference.yaml
-  - heading: Guides
+  - heading: Create
   - title: Overview
     path: /creation
   - title: Projects
@@ -557,11 +548,186 @@ navigation:
     path: /unity
   - title: Roblox for Unreal developers
     path: /unreal
-#  - title: Publish
-    # section:
-      # - title: Accessories
-      #   section:
-      #   - title: Publishing
-      #     path: /production/publishing/publishing-to-marketplace
-      #   - title: Avatar Marketplace Thumbnails
-      #     path: /production/publishing/marketplace-thumbnails
+  #  - title: Publish
+  # section:
+  # - title: Accessories
+  #   section:
+  #   - title: Publishing
+  #     path: /production/publishing/publishing-to-marketplace
+  #   - title: Avatar Marketplace Thumbnails
+  #     path: /production/publishing/marketplace-thumbnails
+
+  - heading: Scale
+  - title: Overview
+    path: /scale
+  - title: Discovery
+    path: /discovery
+    section:
+      - title: Charts page
+        section:
+          - title: Genres
+            path: /production/publishing/experience-genres
+          - title: Icons
+            path: /production/publishing/experience-icons
+          - title: Thumbnails
+            path: /production/publishing/thumbnails
+          - title: Badges
+            path: /production/publishing/badges
+      - title: Deep links
+        path: /production/promotion/deeplinks
+      - title: Events
+        path: /production/promotion/experience-events
+      - title: Player invite prompts
+        path: /production/promotion/invite-prompts
+      - title: Connection referral system
+        path: /production/promotion/referral-system
+      - title: Notifications
+        path: /production/promotion/experience-notifications
+      - title: Social media links
+        path: /production/promotion/social-media-links
+      - title: Share links
+        path: /production/promotion/share-links
+
+  - title: Localization
+    path: /production/localization/
+    section:
+      - title: Automatic translation
+        section:
+          - title: Overview
+            path: /production/localization/automatic-translations
+          - title: Translate dynamic content
+            path: /production/localization/auto-translate-dynamic-content
+      - title: Custom translation
+        path: /production/localization/custom-translations
+        section:
+          - title: Overview
+            path: /production/localization/custom-translations
+          - title: Cloud localization table
+            path: /production/localization/manual-translations
+          - title: Dynamic content
+            path: /production/localization/translate-dynamic-content
+          - title: Scripting
+            path: /production/localization/localize-with-scripting
+      - title: Work with translators
+        path: /production/localization/work-with-translators
+      - title: Language codes
+        path: /production/localization/language-codes
+
+  - title: Game design
+    path: /production/game-design/
+    section:
+      - title: Design your experience
+        section:
+          - title: Design for Roblox
+            path: /production/game-design/design-for-roblox
+          - title: Roblox user base
+            path: /production/roblox-user-base
+          - title: Core loops
+            path: /production/game-design/core-loops
+          - title: Prototyping
+            path: /production/game-design/prototyping
+
+      - title: Build your experience
+        section:
+          - title: Onboarding
+            path: /production/game-design/onboarding
+          - title: Onboarding techniques
+            path: /production/game-design/onboarding-techniques
+          - title: Quest design
+            path: /production/game-design/introduction-to-quest-design
+          - title: UI and UX
+            path: /production/game-design/ui-ux-design
+          - title: Adaptive design guidelines
+            path: /production/publishing/adaptive-design
+            section:
+              - title: Overview
+                path: /production/publishing/adaptive-design
+              - title: Console
+                path: /production/publishing/console-guidelines
+              - title: VR
+                path: /production/publishing/vr-guidelines
+      - title: Monetize your experience
+        section:
+          - title: Monetization
+            path: /production/game-design/monetization-foundations
+          - title: Season passes
+            path: /production/game-design/season-pass-design
+          - title: Starter packs
+            path: /production/game-design/starter-pack-design
+          - title: Subscriptions
+            path: /production/game-design/subscription-design
+          - title: Contextual purchases
+            path: /production/game-design/contextual-purchases
+          - title: Virtual economies
+            path: /production/game-design/balance-virtual-economies
+
+      - title: Support your experience
+        section:
+          - title: LiveOps essentials
+            path: /production/game-design/liveops-essentials
+          - title: LiveOps planning
+            path: /production/game-design/liveops-planning
+          - title: Analytics essentials
+            path: /production/game-design/analytics-essentials
+          - title: Content updates
+            path: /production/game-design/content-updates
+
+  - heading: Monetize
+  - title: Overview
+    path: /monetize-experiences
+  - title: Earn
+    path: /production/monetization/
+    section:
+      - title: Creator Rewards
+        path: /creator-rewards
+      - title: Private servers
+        path: /production/monetization/private-servers
+      - title: Subscriptions
+        path: /production/monetization/subscriptions
+      - title: Passes
+        path: /production/monetization/game-passes
+      - title: Developer products
+        path: /production/monetization/developer-products
+      - title: Commerce products
+        path: /production/monetization/commerce-products
+      - title: Paid access in Robux
+        path: /production/monetization/paid-access-robux
+      - title: Paid access in local currency
+        path: /production/monetization/paid-access-local-currency
+      - title: Price optimization
+        path: /production/monetization/price-optimization
+      - title: Regional Pricing
+        path: /production/monetization/regional-pricing
+
+  - title: License
+    path: /ip-licensing/
+    section:
+      - title: Get started
+        path: /ip-licensing/get-started
+      - title: License Manager
+        path: /ip-licensing/license-manager
+      - title: Rights Manager
+        path: /production/publishing/rights-manager
+      - title: IP licensing for creators
+        path: /ip-licensing/creators
+      - title: Creator FAQ
+        path: /ip-licensing/faq
+      - title: Glossary
+        path: /ip-licensing/glossary
+
+  - title: Advertise
+    section:
+      - title: Ads Manager
+        path: /production/promotion/ads-manager
+      - title: Reporting and billing
+        path: /production/promotion/reporting-and-billing
+      - title: Roblox-served ads vs. independent ads
+        path: /production/promotion/advertise-on-roblox
+      - title: Immersive ads
+        path: /production/monetization/immersive-ads
+      - title: Rewarded video ads
+        path: /production/promotion/rewarded-video-ads
+      - title: Search ads
+        path: /production/promotion/search-ads
+      - title: Advertising standards
+        path: /production/promotion/comply-with-advertising-standards

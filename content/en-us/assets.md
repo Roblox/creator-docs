@@ -2,7 +2,6 @@
 title: Create and access millions of assets
 description: Learn how to create and sell assets on Roblox.
 hideInPageNavigation: true
-hideBreadcrumbs: true
 ---
 
 export const sections = [

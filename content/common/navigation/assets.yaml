@@ -19,6 +19,9 @@ navigation:
     path: /projects/assets/privacy
   - title: Creator Store
     path: /production/creator-store
+  - title: Monetize plugins
+    path: /production/sell-on-creator-store
+
   - heading: Creation tools
   - title: Studio
     path: /art/overview-studio
@@ -29,7 +32,7 @@ navigation:
       - title: Blender
         path: /art/blender
       - title: Reaper
-        path: /art/reaper        
+        path: /art/reaper
   - title: In-experience
     path: /projects/assets/in-experience-asset-creation
   - heading: 3D Art
@@ -65,7 +68,7 @@ navigation:
         path: /art/characters/export-avatar-animations-from-maya
       - title: Head animation
         path: /art/characters/facial-animation/animate-heads
-  
+
   - title: 3D Importer
     path: /art/modeling/3d-importer
   - title: Reimport

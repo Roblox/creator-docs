@@ -2,7 +2,6 @@
 title: Modeling project files and references
 description: Download various modeling-related project files and reference files.
 hideInPageNavigation: true
-hideBreadcrumbs: true
 ---
 
 The following `.fbx`, `.blend`, and `.ma` project files are available to use as templates or as reference:

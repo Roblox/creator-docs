@@ -3,7 +3,6 @@ title: Learn about Studio
 description: Learn the basics of creating an account, downloading Studio, and navigating its UI.
 next: /tutorials/curriculums/studio/create-account
 hideInPageNavigation: true
-hideBreadcrumbs: true
 ---
 
 <>

@@ -1,7 +1,6 @@
 ---
 title: Rigid accessories
 description: Rigid accessories are basic 3D cosmetics users can equip and wear on their avatar character.
-hideBreadcrumbs: true
 ---
 
 <Grid container spacing={2} style={{ marginBottom: 24, width: '100%' }}>

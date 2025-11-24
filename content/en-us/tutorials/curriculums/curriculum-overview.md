@@ -2,7 +2,6 @@
 title: Advanced curriculum paths
 description: An overview of creation curriculum paths covering topics like modeling, scripting, and gameplay logic.
 hideInPageNavigation: true
-hideBreadcrumbs: true
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/DKzFkn7q8MQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

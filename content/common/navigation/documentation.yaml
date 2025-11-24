@@ -1,12 +1,13 @@
 columns:
-  - - title: Overview
+  - - title: Learn
       path: /
-    - title: Create
-      path: /platform
       items:
-        - title: Overview
-          navigation: /platform.yaml
-          path: /platform
+        - title: Studio
+          path: /studio/
+          navigation: /engine/studio.yaml
+        - title: Analytics
+          path: /production/analytics/
+          navigation: /scale/analytics.yaml
         - title: Experiences
           navigation: /engine/guides.yaml
           path: /experiences
@@ -16,63 +17,24 @@ columns:
         - title: Assets
           navigation: /assets.yaml
           path: /assets
-        - title: Open Cloud
+        - title: Engine API
+          path: /reference/engine
+          navigation: /engine/reference.yaml
+        - title: Open Cloud API
           navigation: /cloud/reference.yaml
           path: /cloud/
-
-    # # SCALE NAV REWORK
-    - title: Scale
-      path: /scale/
-      items:
-        - title: Overview
-          navigation: /scale/overview.yaml
-          path: /scale/
-        - title: Discovery
-          navigation: /scale/discovery.yaml
-          path: /discovery/
-        - title: Localization
-          navigation: /scale/localization.yaml
-          path: /production/localization/
-        - title: Analytics
-          navigation: /scale/analytics.yaml
-          path: /production/analytics/
-        - title: Design
-          navigation: /scale/design.yaml
-          path: /production/game-design/
-    #   # SCALE NAV REWORK
-
-    # MONETIZE NAV REWORK
-    - title: Monetize
-      path: /monetize/
-      items:
-        - title: Overview
-          navigation: /monetize/overview.yaml
-          path: /monetize
-        - title: Experiences
-          navigation: /monetize/experiences.yaml
-          path: /monetize-experiences
-        - title: Avatar
-          navigation: /monetize/avatar.yaml
-          path: /monetize-avatar
-        - title: Assets
-          navigation: /monetize/assets.yaml
-          path: /production/sell-on-creator-store
-      # MONETIZE NAV REWORK
-
-    # EDUCATION NAV REWORK
-    - title: Education
-      path:  /education/educator-onboarding/landing
-      items:
-        - title: Overview
+        - title: Tutorials
+          navigation: /engine/tutorials.yaml
+          path: /tutorials
+        - title: Samples and Projects
+          navigation: /engine/resources.yaml
+          path: /samples
+        - title: Creator programs
+          path: /creator-programs/
+          navigation: /programs.yaml
+        - title: Platform
+          path: /platform
+          navigation: /platform.yaml
+        - title: Education
           navigation: /education.yaml
-          path:  /education/educator-onboarding/landing
-      # EDUCATION NAV REWORK
-
-    # COURSES NAV REWORK
-    - title: Courses
-      path: /courses
-      items:
-        - title: All Courses
-          navigation: /courses/courses.yaml
-          path: /courses
-      # COURSES NAV REWORK
+          path: /education/educator-onboarding/landing

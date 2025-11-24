@@ -3,7 +3,6 @@ title: Intro to animation
 description: Learn the basics of animating characters.
 next: /tutorials/curriculums/animator/get-started
 hideInPageNavigation: true
-hideBreadcrumbs: true
 ---
 
 <>

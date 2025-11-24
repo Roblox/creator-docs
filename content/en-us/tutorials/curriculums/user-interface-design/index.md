@@ -3,7 +3,6 @@ title: User interface design curriculum
 description: Learn best practices for creating user interfaces, including displaying critical information and implementing an art style.
 next: /tutorials/curriculums/user-interface-design/choose-an-art-style
 hideInPageNavigation: true
-hideBreadcrumbs: true
 ---
 
 <>

@@ -1,7 +1,6 @@
 ---
 title: 3D art and Studio
 description: An overview of fundamental 3D art tools, concepts, workflows, and resources for Roblox Studio.
-hideBreadcrumbs: true
 ---
 
 [Roblox Studio](../studio/setup.md) includes free powerful 3D creation tools that enable you to effectively contribute to asset creation, world building, and more. Whether you are just getting started, or are looking for a refresher on Studio tools, this guide provides an overview on using Studio for 3D art creation.

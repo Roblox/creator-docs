@@ -1,7 +1,6 @@
 ---
 title: Makeup
 description: Makeup is a cosmetic look made up of multiple facial textures and optional eyebrow and eyelashes.
-hideBreadcrumbs: true
 ---
 
 **Makeup** is a cosmetic look available for Roblox characters that allows additional expression, allowing you to add elements like eyeshadow, lipstick, scars, glitter, and blush. This feature uses a combination of specialized facial textures and optional eyebrow and eyelash mesh assets.

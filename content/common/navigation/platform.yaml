@@ -1,36 +1,18 @@
 navigation:
   - heading: Platform
-  - title: Overview
-    path: /platform
+
   - title: Get started
     path: /get-started
-  - title: Studio
-    path: /studio/
-    navigation: /engine/studio.yaml
-  - title: Assistant
-    path: /assistant/overview
-  - title: Engine API reference
-    path: https://create.roblox.com/docs/reference/engine
-  - title: Open Cloud
-    path: /cloud/
-  - title: Creator Hub
-    path: /creator-hub
-  - heading: Community
-  - title: Learn on YouTube
-    path: https://www.youtube.com/@RobloxLearn
-  - title: Get help on the forum
-    path: https://devforum.roblox.com/c/help-and-feedback/54
-  - title: Read product announcements
-    path: https://devforum.roblox.com/c/updates/announcements/36
-  - title: Creator programs
-    path: /creator-programs/
-    navigation: /programs.yaml
-
-  - title: For educators
-    path: /education/educator-onboarding/landing
-
-  - heading: Guidelines and policies
-  - title: General
+  - title: Create
+    path: /platform
+  - title: Scale
+    path: /scale
+  - title: Monetize
+    path: /monetize
+    section:
+      - title: Earn on Roblox
+        path: /production/earn-on-roblox
+  - title: Guidelines and Policies
     section:
       - title: Safety on Roblox
         path: /safety
@@ -46,13 +28,3 @@ navigation:
         path: /production/publishing/account-verification
       - title: Group guidelines
         path: /projects/group-guidelines
-  - title: Marketplace
-    section:
-      - title: Marketplace policy
-        path: /marketplace/marketplace-policy
-      - title: Intellectual property
-        path: /marketplace/intellectual-property
-      - title: Moderation
-        path: /marketplace/moderation
-      - title: FAQ
-        path: /marketplace/frequently-asked-questions

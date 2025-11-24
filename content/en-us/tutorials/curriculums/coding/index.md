@@ -3,7 +3,6 @@ title: Intro to coding
 description: Learn the basics of coding for experiences.
 next: /tutorials/curriculums/coding/get-started
 hideInPageNavigation: true
-hideBreadcrumbs: true
 ---
 
 <>

@@ -2,12 +2,9 @@ navigation:
   - heading: Overview
   - title: Get started
     path: /avatar/
-  - title: Tutorials
-    navigation: /avatar/tutorials.yaml
-    path: /avatar/tutorials
   - title: Resources
     path: /avatar/resources
-  - heading: Guides
+  - heading: Create
   - title: Classic clothing
     section:
       - title: Overview
@@ -132,3 +129,27 @@ navigation:
     path: /avatar/in-experience-creation
   - title: Photo-to-Avatar generation
     path: /avatar/avatar-generation
+
+  - heading: Monetize
+  - title: Overview
+    path: /monetize-avatar
+  - title: Fees and commissions
+    path: /marketplace/marketplace-fees-and-commissions
+  - title: In-experience sales
+    path: /production/monetization/avatar-items
+  - title: In-experience creation
+    path: /production/monetization/avatar-creation-token
+  - title: Sponsor items
+    path: /production/promotion/sponsor-items
+  - title: Randomized items
+    path: /production/monetization/virtual-items
+
+  - heading: Policies and Guidelines
+  - title: Marketplace policy
+    path: /marketplace/marketplace-policy
+  - title: Intellectual property
+    path: /marketplace/intellectual-property
+  - title: Moderation
+    path: /marketplace/moderation
+  - title: FAQ
+    path: /marketplace/frequently-asked-questions

@@ -1,7 +1,6 @@
 ---
 title: Import into Studio
 description: Makeup is a cosmetic look made up of multiple facial textures and optional eyebrow and eyelashes.
-hideBreadcrumbs: true
 ---
 
 <Alert severity ='warning'>

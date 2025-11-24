@@ -1,6 +1,3 @@
-backTo:
-  title: Back to experiences
-  path: /experiences/
 navigation:
   - heading: Get started
   - title: Overview
@@ -131,6 +128,27 @@ navigation:
         path: /tutorials/use-case-tutorials/data-storage/save-player-data
       - title: Create a custom leaderboard
         path: /tutorials/use-case-tutorials/data-storage/create-leaderboard
+  - title: Avatar items
+    section:
+      - title: Create accessories from an existing model
+        path: /art/accessories/from-existing
+      - title: Rig and cage an existing model
+        path: /art/accessories/rig-and-cage-existing-models
+      - title: Create basic heads
+        path: /art/characters/facial-animation/create-basic-heads
+      - title: Create face accessories
+        path: /art/characters/facial-animation/create-face-accessories
+      - title: Publish eyebrows and eyelashes
+        path: /art/accessories/publish-eyebrows-eyelashes
+      - title: Test characters
+        path: /art/characters/testing/
+        section:
+          - title: Overview
+            path: /art/characters/testing/
+          - title: In Blender
+            path: /art/characters/testing/blender
+          - title: In Studio
+            path: /art/characters/testing/studio
   - heading: Advanced paths
   - title: Overview
     path: /tutorials/curriculums/curriculum-overview
@@ -143,3 +161,13 @@ navigation:
   - title: User interface design
     path: /tutorials/curriculums/user-interface-design/
     navigation: /engine/tutorials-ui.yaml
+  # avatar/tutorials content needs to move somewhere
+  - title: Rigid accessories
+    path: /art/accessories/creating-rigid/
+    navigation: /avatar/tutorials-accessories.yaml
+  - title: Clothing
+    path: /art/accessories/creating
+    navigation: /avatar/tutorials-clothing.yaml
+  - title: Bodies
+    path: /art/characters/creating
+    navigation: /avatar/tutorials-bodies.yaml

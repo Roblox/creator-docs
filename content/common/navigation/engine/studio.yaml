@@ -1,7 +1,4 @@
 defaultType: markdown
-backTo:
-  title: Back to platform
-  path: /platform
 navigation:
   - heading: Roblox Studio
   - title: Overview

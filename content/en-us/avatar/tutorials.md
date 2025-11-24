@@ -2,7 +2,6 @@
 title: Tutorials
 description: Get all the tutorials you need to build characters and accessories.
 hideInPageNavigation: true
-hideBreadcrumbs: true
 ---
 
 Learn how to create assets with structured tutorials that walks through each creation step from modeling in a third-party tool to importing in Studio.

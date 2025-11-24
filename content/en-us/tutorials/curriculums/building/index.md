@@ -3,7 +3,6 @@ title: Intro to building
 description: Learn the basics of building experiences.
 next: /tutorials/curriculums/building/get-started
 hideInPageNavigation: true
-hideBreadcrumbs: true
 ---
 
 <>

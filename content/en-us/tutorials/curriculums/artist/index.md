@@ -3,7 +3,6 @@ title: Intro to VFX art
 description: Learn the basics of creating special effects for experiences.
 next: /tutorials/curriculums/artist/get-started
 hideInPageNavigation: true
-hideBreadcrumbs: true
 ---
 
 <>

@@ -1,6 +1,3 @@
-backTo:
-  title: Back to platform
-  path: /platform
 navigation:
   - heading: Educator training
   - title: Educator onboarding
@@ -54,7 +51,7 @@ navigation:
             path: /education/lesson-plans/digital-citizenship/finishing-projects
   - title: Activity lessons
     section:
-      - title: Intro to Building 
+      - title: Intro to Building
         path: /education/lesson-plans/build-an-obby-lesson
       - title: Roblox animations
         path: /education/lesson-plans/animate-in-roblox-lesson

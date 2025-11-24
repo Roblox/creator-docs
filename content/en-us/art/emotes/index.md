@@ -1,7 +1,6 @@
 ---
 title: Emotes
 description: All Roblox users are represented by an avatar character which can be customized with body parts, accessories, and clothes from the Marketplace or within experiences.
-hideBreadcrumbs: true
 ---
 
 **Emotes** are short animations that an avatar performs, making it easier to communicate and celebrate with others, enhancing the experience to feel more social and more lively.

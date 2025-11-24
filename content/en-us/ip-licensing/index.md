@@ -2,7 +2,6 @@
 title: Use Iconic IP on Roblox
 description: Learn how to scale on Roblox.
 hideInPageNavigation: true
-hideBreadcrumbs: true
 ---
 
 export const sections = [

@@ -1,7 +1,5 @@
-backTo:
-  title: Back to platform
-  path: /platform
 navigation:
+  - heading: Creator Programs
   - title: Overview
     path: /creator-programs/
   - title: Brand Developer Directory

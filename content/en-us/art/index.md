@@ -2,7 +2,6 @@
 title: 3D art in Roblox
 description: An overview of 3D art tools, resources, and workflows for creators of all experience levels.
 hideInPageNavigation: true
-hideBreadcrumbs: true
 ---
 
 3D art in Roblox refers to the creation and integration of models, environments, effects, sounds, and more to create an engaging and immersive experience. 3D artists bring the world, objects, and characters to life with a variety of tools and techniques using Roblox Studio and external applications.
