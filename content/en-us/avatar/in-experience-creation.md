@@ -7,7 +7,7 @@ description: Explains how to use AvatarCreationService to prompt users to create
 The following guide applies to creators who are familiar with scripting and Roblox Studio and intend to develop experiences that allow user-generated avatar items.
 </Alert>
 
-You can publish an experience that allows players to create, customize, and purchase avatar bodies in realtime. When purchased, these custom bodies save directly to the player's Roblox inventory, allowing players to equip and wear the custom avatars in other experiences.
+You can publish an experience that allows players to create, customize, and purchase avatar bodies in real time. When purchased, these custom bodies save directly to the player's Roblox inventory, allowing players to equip and wear the custom avatars in other experiences.
 
 Experience owners that implement in-experience avatar creation benefit from [Marketplace commissions](../marketplace/marketplace-fees-and-commissions.md#commissions) as both **creator** of the avatar item and **experience owner**. If an asset created in-experience is inspected, the item provides a link to the original experience it was created.
 

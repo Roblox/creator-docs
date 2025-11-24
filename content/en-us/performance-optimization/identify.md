@@ -47,7 +47,7 @@ Roblox has a number of tools for identifying performance issues, some of which a
   </tr>
   <tr>
     <td>[Performance Dashboard](../production/analytics/performance.md)</td>
-    <td>A dashboard with aggregate charts for client and server memory usage, client frame rate, server heartbeat, and crash rates in real-time. It's helpful for analyzing performance patterns over time. See [Monitoring Performance](./monitor.md).</td>
+    <td>A dashboard with aggregate charts for client and server memory usage, client frame rate, server heartbeat, and crash rates in real time. It's helpful for analyzing performance patterns over time. See [Monitoring Performance](./monitor.md).</td>
     <td>Creator Dashboard</td>
     <td>N/A</td>
     <td>Live sessions</td>

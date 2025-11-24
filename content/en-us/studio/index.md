@@ -94,7 +94,7 @@ export const sections = [
   },
   {
     title: "Collaborative at its core",
-    description: "Studio lets you collaboratively create in real-time, with small or large teams alike.",
+    description: "Studio lets you collaboratively create in real time, with small or large teams alike.",
     links: [
       { text: "Learn how to scale", href: "./scale" },
       { text: "Learn how to monetize", href: "./monetize" }

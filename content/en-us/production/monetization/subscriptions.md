@@ -373,7 +373,7 @@ To view refunding information of individual users, use `Class.MarketplaceService
 
 ## Subscription analytics
 
-**Subscription analytics** help you gauge the success of individual subscriptions, identify trends, and forecast potential future earnings. Subscriptions are added to the subscriptions analytics page after the first time they're activated and are not removed when they're deactivated or deleted. You can access ready-made analytics through the Creator Dashboard, or you can capture subscription updates in real-time using webhooks.
+**Subscription analytics** help you gauge the success of individual subscriptions, identify trends, and forecast potential future earnings. Subscriptions are added to the subscriptions analytics page after the first time they're activated and are not removed when they're deactivated or deleted. You can access ready-made analytics through the Creator Dashboard, or you can capture subscription updates in real time using webhooks.
 
 ### Through Creator Dashboard
 
@@ -403,4 +403,4 @@ This information is visible in the form of charts based on a date range under th
 
 ### Through webhooks
 
-The Cloud API Webhook feature includes triggers for four subscription events: cancelled, purchased, refunded and renewed. These notifications fire immediately, so you can respond in real-time or create your own custom analytics. For more information on how to set up a webhook, see [Webhook notifications](../../cloud/webhooks/webhook-notifications.md).
+The Cloud API Webhook feature includes triggers for four subscription events: cancelled, purchased, refunded and renewed. These notifications fire immediately, so you can respond in real time or create your own custom analytics. For more information on how to set up a webhook, see [Webhook notifications](../../cloud/webhooks/webhook-notifications.md).

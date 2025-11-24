@@ -21,7 +21,7 @@ tools and resources to suit your needs.
     </td>
     <td>
       <a href="../../projects/collaboration.md"><h4>Live collaboration</h4></a>
-      <p>Collaboratively build worlds and edit scripts in real-time using Roblox Studio. Multiple students can work together to design a virtual city or solve a scripting exercise.</p>
+      <p>Collaboratively build worlds and edit scripts in real time using Roblox Studio. Multiple students can work together to design a virtual city or solve a scripting exercise.</p>
     </td>
   </tr>
   <tr>
