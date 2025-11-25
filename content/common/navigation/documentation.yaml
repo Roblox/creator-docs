@@ -26,7 +26,7 @@ columns:
         - title: Tutorials
           navigation: /engine/tutorials.yaml
           path: /tutorials
-        - title: Samples and Projects
+        - title: Samples and projects
           navigation: /engine/resources.yaml
           path: /samples
         - title: Creator programs

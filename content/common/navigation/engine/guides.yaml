@@ -25,7 +25,7 @@ navigation:
           - title: Instance streaming
             path: /workspace/streaming
       - title: Manage
-        path: /production/publishing/publish-experiences-and-places
+        path: /projects/experience-ownership-transfer
         section:
           - title: Experience ownership transfer
             path: /projects/experience-ownership-transfer
@@ -573,8 +573,6 @@ navigation:
             path: /production/publishing/thumbnails
           - title: Badges
             path: /production/publishing/badges
-      - title: Deep links
-        path: /production/promotion/deeplinks
       - title: Events
         path: /production/promotion/experience-events
       - title: Player invite prompts
@@ -594,7 +592,7 @@ navigation:
         path: /production/localization/
       - title: Automatic translation
         section:
-          - title: Overview
+          - title: Enable automatic translations
             path: /production/localization/automatic-translations
           - title: Translate dynamic content
             path: /production/localization/auto-translate-dynamic-content
@@ -608,6 +606,10 @@ navigation:
             path: /production/localization/remove-content
           - title: Add translations
             path: /production/localization/add-translations
+          - title: Dynamic content
+            path: /production/localization/translate-dynamic-content
+      - title: Scripting
+        path: /production/localization/localize-with-scripting
       - title: Work with translators
         path: /production/localization/work-with-translators
       - title: Language codes

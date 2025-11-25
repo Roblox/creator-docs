@@ -5,14 +5,12 @@ navigation:
     path: /get-started
   - title: Create
     path: /platform
-  - title: Scale
-    path: /scale
   - title: Monetize
     path: /monetize
     section:
       - title: Earn on Roblox
         path: /production/earn-on-roblox
-  - title: Guidelines and Policies
+  - title: Guidelines and policies
     section:
       - title: Safety on Roblox
         path: /safety
