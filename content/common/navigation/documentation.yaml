@@ -2,12 +2,6 @@ columns:
   - - title: Learn
       path: /
       items:
-        - title: Studio
-          path: /studio/
-          navigation: /engine/studio.yaml
-        - title: Analytics
-          path: /production/analytics/
-          navigation: /scale/analytics.yaml
         - title: Experiences
           navigation: /engine/guides.yaml
           path: /experiences
@@ -23,18 +17,24 @@ columns:
         - title: Open Cloud API
           navigation: /cloud/reference.yaml
           path: /cloud/
+        - title: Studio
+          path: /studio/
+          navigation: /engine/studio.yaml
+        - title: Analytics
+          path: /production/analytics/
+          navigation: /scale/analytics.yaml
         - title: Tutorials
           navigation: /engine/tutorials.yaml
           path: /tutorials
         - title: Samples and projects
           navigation: /engine/resources.yaml
           path: /samples
-        - title: Creator programs
-          path: /creator-programs/
-          navigation: /programs.yaml
         - title: Platform
           path: /platform
           navigation: /platform.yaml
+        - title: Creator programs
+          path: /creator-programs/
+          navigation: /programs.yaml
         - title: Education
           navigation: /education.yaml
           path: /education/educator-onboarding/landing
