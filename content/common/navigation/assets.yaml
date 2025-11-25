@@ -19,7 +19,7 @@ navigation:
     path: /projects/assets/privacy
   - title: Creator Store
     path: /production/creator-store
-  - title: Monetize plugins
+  - title: Monetize models and plugins
     path: /production/sell-on-creator-store
 
   - heading: Creation tools

@@ -5,6 +5,8 @@ navigation:
     path: /get-started
   - title: Create
     path: /platform
+  - title: Scale
+    path: /scale
   - title: Monetize
     path: /monetize
     section:

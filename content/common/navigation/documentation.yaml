@@ -11,6 +11,9 @@ columns:
         - title: Assets
           navigation: /assets.yaml
           path: /assets
+        - title: Samples and projects
+          navigation: /engine/resources.yaml
+          path: /samples
         - title: Engine API
           path: /reference/engine
           navigation: /engine/reference.yaml
@@ -22,16 +25,13 @@ columns:
           navigation: /engine/studio.yaml
         - title: Analytics
           path: /production/analytics/
-          navigation: /scale/analytics.yaml
-        - title: Tutorials
-          navigation: /engine/tutorials.yaml
-          path: /tutorials
-        - title: Samples and projects
-          navigation: /engine/resources.yaml
-          path: /samples
+          navigation: analytics.yaml
         - title: Platform
           path: /platform
           navigation: /platform.yaml
+        - title: Tutorials
+          navigation: /engine/tutorials.yaml
+          path: /tutorials
         - title: Creator programs
           path: /creator-programs/
           navigation: /programs.yaml

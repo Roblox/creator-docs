@@ -1,4 +1,5 @@
 navigation:
+  - heading: Analytics
   - title: Overview
     path: /production/analytics/
 

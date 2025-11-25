@@ -1,0 +1,117 @@
+navigation:
+  - heading: Scale
+  # - title: Overview
+  #   path: /scale-experiences
+  - title: Discovery
+    path: /discovery
+    section:
+      - title: Charts page
+        section:
+          - title: Genres
+            path: /production/publishing/experience-genres
+          - title: Icons
+            path: /production/publishing/experience-icons
+          - title: Thumbnails
+            path: /production/publishing/thumbnails
+          - title: Badges
+            path: /production/publishing/badges
+      - title: Events
+        path: /production/promotion/experience-events
+      - title: Player invite prompts
+        path: /production/promotion/invite-prompts
+      - title: Connection referral system
+        path: /production/promotion/referral-system
+      - title: Notifications
+        path: /production/promotion/experience-notifications
+      - title: Social media links
+        path: /production/promotion/social-media-links
+      - title: Share links
+        path: /production/promotion/share-links
+
+  - title: Localization
+    section:
+      - title: Overview
+        path: /production/localization/
+      - title: Automatic translation
+        section:
+          - title: Enable automatic translations
+            path: /production/localization/automatic-translations
+          - title: Translate dynamic content
+            path: /production/localization/auto-translate-dynamic-content
+      - title: Manual translations
+        section:
+          - title: Overview
+            path: /production/localization/manual-translations
+          - title: Add source content
+            path: /production/localization/add-source-content
+          - title: Remove content
+            path: /production/localization/remove-content
+          - title: Add translations
+            path: /production/localization/add-translations
+          - title: Dynamic content
+            path: /production/localization/translate-dynamic-content
+      - title: Scripting
+        path: /production/localization/localize-with-scripting
+      - title: Work with translators
+        path: /production/localization/work-with-translators
+      - title: Language codes
+        path: /production/localization/language-codes
+
+  - title: Game design
+    path: /production/game-design/
+    section:
+      - title: Design your experience
+        section:
+          - title: Design for Roblox
+            path: /production/game-design/design-for-roblox
+          - title: Roblox user base
+            path: /production/roblox-user-base
+          - title: Core loops
+            path: /production/game-design/core-loops
+          - title: Prototyping
+            path: /production/game-design/prototyping
+
+      - title: Build your experience
+        section:
+          - title: Onboarding
+            path: /production/game-design/onboarding
+          - title: Onboarding techniques
+            path: /production/game-design/onboarding-techniques
+          - title: Quest design
+            path: /production/game-design/introduction-to-quest-design
+          - title: UI and UX
+            path: /production/game-design/ui-ux-design
+          - title: Adaptive design guidelines
+            path: /production/publishing/adaptive-design
+            section:
+              - title: Overview
+                path: /production/publishing/adaptive-design
+              - title: Console
+                path: /production/publishing/console-guidelines
+              - title: VR
+                path: /production/publishing/vr-guidelines
+      - title: Monetize your experience
+        section:
+          - title: Monetization
+            path: /production/game-design/monetization-foundations
+          - title: Season passes
+            path: /production/game-design/season-pass-design
+          - title: Starter packs
+            path: /production/game-design/starter-pack-design
+          - title: Subscriptions
+            path: /production/game-design/subscription-design
+          - title: Contextual purchases
+            path: /production/game-design/contextual-purchases
+          - title: Virtual economies
+            path: /production/game-design/balance-virtual-economies
+
+      - title: Support your experience
+        section:
+          - title: LiveOps essentials
+            path: /production/game-design/liveops-essentials
+          - title: LiveOps planning
+            path: /production/game-design/liveops-planning
+          - title: Analytics essentials
+            path: /production/game-design/analytics-essentials
+          - title: Content updates
+            path: /production/game-design/content-updates
