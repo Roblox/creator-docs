@@ -204,7 +204,7 @@ Maturity and compliance information consists of two components:
 - **Maturity label** — Indicates the level of maturity suitable for the experience according to child development research and industry standards. For more information, see Age Recommendations.
 - **Content descriptors** — Indicates what type of content is within an experience, such as realistic depictions of blood or paid item trading.
 
-Roblox strongly recommends that you fill out the Maturity & Compliance questionnaire for each of your experiences so that they're available to the largest appropriate audience possible. Roblox does not recommend experiences without content maturity information to players under 13 years old. In addition, if your experience doesn't have Content Maturity information but it does contain [restricted content](https://en.help.roblox.com/hc/en-us/articles/15869919570708), the experience will be moderated.
+Roblox requires you to fill out the Maturity & Compliance questionnaire for each of your experiences so that they're available to players. In addition, if your experience doesn't have Content Maturity information but it does contain [restricted content](https://en.help.roblox.com/hc/en-us/articles/15869919570708), the experience will be moderated.
 
 <Alert severity="info">
 For step-by-step instructions on how to fill out the questionnaire, see [content maturity & compliance](../promotion/content-maturity.md).
@@ -221,7 +221,7 @@ To release your experience to the public:
 
    <img src="../../assets/creator-dashboard/Options-Button-Experience-Private.png" width="200" />
 
-1. <Chip label="RECOMMENDED" size="small" variant="outlined" color="success" /> Generate [Content maturity and compliance](#generate-content-descriptors) information so the experience is available to the appropriate audience. If you do not do this step, Roblox does not show your experience to players under 13 years old.
+1. <Chip label="RECOMMENDED" size="small" variant="outlined" color="success" /> Generate [Content maturity and compliance](#generate-content-descriptors) information so the experience is available to the appropriate audience. If you do not do this step, Roblox does not show your experience players.
 
 ### Set age and geography restrictions
 
