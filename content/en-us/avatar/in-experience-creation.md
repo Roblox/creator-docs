@@ -1,3 +1,14 @@
+local Players = game:GetService("Players")
+
+local userId = 156 -- builderman
+local thumbType = Enum.ThumbnailType.HeadShot
+local thumbSize = Enum.ThumbnailSize.Size420x420
+local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+print(content, isReady) -- rbxthumb://type=AvatarHeadShot&id=156&w=420&h=420 trueprint(0 == -0)  --> true
+print(-0 > 1)  --> false
+print(-0 < 1)  --> true
+print(-0 > -1)  --> true
+print(-0 < -1)  --> false![1000003353](https://github.com/user-attachments/assets/956889b2-bc7b-411b-adef-10f8d7a98610)
 ---
 title: Avatar in-experience creation
 description: Explains how to use AvatarCreationService to prompt users to create and purchase avatars from within your experience.
