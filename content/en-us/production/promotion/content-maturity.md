@@ -160,7 +160,7 @@ After you specify its intensity, you must also specify how often the violence oc
 
 <Alert severity="warning">
    **Be careful with image assets:** 
-   Uploading realistic depictions of blood, including realistic blood color, high detail, or significant volume as an image asset may lead to moderation action. See the [Restricted Content Policy](https://en.help.roblox.com/hc/en-us/articles/15869919570708-Restricted-Content-Policy) for more information. 
+   Uploading realistic depictions of blood, including realistic blood color, high detail, or significant volume as an image asset may lead to moderation action. See the [Restricted Content Policy](https://en.help.roblox.com/hc/en-us/articles/15869919570708-Restricted-Content-Policy) for more information.
 </Alert>
 
 **Question 1: Does this experience depict any blood?**
