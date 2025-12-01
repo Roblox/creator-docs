@@ -4,19 +4,26 @@
 
 name: AuthorityMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Enum used with `Class.Workspace.AuthorityMode`.
+description: |
+  Enum used with `Class.Workspace.AuthorityMode`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Server
-    summary: ''
+    summary: |
+      The server is the authority for all instances and calls to
+      `Class.BasePart:SetNetworkOwner()` will fail.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Automatic
-    summary: ''
+    summary: |
+      Traditional distributed authority model where, for each instance, the
+      engine decides whether the server or a client should be the authority;
+      `Class.BasePart:SetNetworkOwner()` can be used to influence the decision.
     value: 1
     tags: []
     deprecation_message: ''

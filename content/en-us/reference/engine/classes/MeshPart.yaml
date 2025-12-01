@@ -111,7 +111,7 @@ properties:
       `Class.EditableMesh` objects.
 
       Note that this property cannot be changed directly by scripts, as the
-      collision geometry of the mesh cannot be recomputed in real time. See
+      collision geometry of the mesh cannot be recomputed in realtime. See
       `Class.AssetService:CreateMeshPartAsync()` as a method to create a new
       `Class.MeshPart` from a given `Datatype.Content` with a specified
       `Class.MeshPart.CollisionFidelity|CollisionFidelity`.
@@ -144,7 +144,7 @@ properties:
       `Class.MeshPart.MeshContent|MeshContent`.
 
       Note that this property cannot be changed directly by scripts, as the
-      collision geometry of the mesh cannot be recomputed in real time. See
+      collision geometry of the mesh cannot be recomputed in realtime. See
       `Class.AssetService:CreateMeshPartAsync()` as a method to create a new
       `Class.MeshPart` from a given `Datatype.Content` with a specified
       `Class.MeshPart.CollisionFidelity|CollisionFidelity`.

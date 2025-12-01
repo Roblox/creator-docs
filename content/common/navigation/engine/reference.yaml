@@ -5076,6 +5076,16 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/PositionAlignmentMode.yaml
         ignoreTranslation: true
+      - title: PredictionMode
+        path: /reference/engine/enums/PredictionMode
+        type: engineapi
+        source: /reference/engine/enums/PredictionMode.yaml
+        ignoreTranslation: true
+      - title: PredictionStatus
+        path: /reference/engine/enums/PredictionStatus
+        type: engineapi
+        source: /reference/engine/enums/PredictionStatus.yaml
+        ignoreTranslation: true
       - title: PreferredInput
         path: /reference/engine/enums/PreferredInput
         type: engineapi
@@ -5470,6 +5480,11 @@ navigation:
         path: /reference/engine/enums/Status
         type: engineapi
         source: /reference/engine/enums/Status.yaml
+        ignoreTranslation: true
+      - title: StepFrequency
+        path: /reference/engine/enums/StepFrequency
+        type: engineapi
+        source: /reference/engine/enums/StepFrequency.yaml
         ignoreTranslation: true
       - title: StreamingIntegrityMode
         path: /reference/engine/enums/StreamingIntegrityMode

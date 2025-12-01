@@ -14890,6 +14890,384 @@
         }
       }
     },
+    "/asset-delivery-api/v1/assetId/{assetId}": {
+      "get": {
+        "tags": ["Assets"],
+        "summary": "Retrieves an asset by its ID with OpenCloud auth.",
+        "description": "Returns an object containing a `location` property which is a temporary CDN URL for the asset content. All asset types are supported.\r\nYou should request that URL with the `Accept-Encoding: gzip` header and decompress the result if the response is gzipped. If you are using cURL, the `--compressed` flag will automate these steps for you.\r\nThis endpoint is expected to be called with API key authentication through `apis.roblox.com/asset-delivery-api/v1/assetId/{assetId}`.\r\nWhile you are able to make requests to this endpoint with Cookie authentication via `assetdelivery.roblox.com/v1/openCloud/assetId/{assetId}`, we highly discourage use this way.\r\nExpect unannounced removal of this second route in the future.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "assetId",
+            "description": "The ID of the asset to retrieve.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept-Encoding",
+            "description": "The Accept-Encoding header value specifying compression formats (e.g., \"gzip, deflate\"). Defaults to \"gzip, deflate\" if not provided.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Roblox-Place-Id",
+            "description": "The Roblox-Place-Id header value identifying the place making the request.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "header",
+            "name": "AssetType",
+            "description": "The AssetType header value specifying the expected asset type.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept",
+            "description": "The Accept header value specifying the preferred response content type.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "AssetFormat",
+            "description": "The AssetFormat header value specifying the desired asset format. Overridden by robloxAssetFormat if both are provided.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Roblox-AssetFormat",
+            "description": "The Roblox-AssetFormat header value specifying the preferred Roblox-specific asset format. Takes precedence over assetFormat.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "skipSigningScripts",
+            "description": "Whether to skip script signing for the returned asset. Used for script assets that don't require signing.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "in": "query",
+            "name": "clientInsert",
+            "description": "Set to 1 to indicate this is a client insert request.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "scriptinsert",
+            "description": "Set to 1 to indicate this is a script insert request.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "modulePlaceId",
+            "description": "The place ID of the module making the request.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "query",
+            "name": "serverplaceid",
+            "description": "The server place ID making the request.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "query",
+            "name": "expectedAssetType",
+            "description": "The expected asset type as a fallback when assetType header is not provided.",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "in": "query",
+            "name": "doNotFallbackToBaselineRepresentation",
+            "description": "Whether to prevent fallback to baseline representation when specific content representations are not available.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "in": "query",
+            "name": "contentRepresentationPriorityList",
+            "description": "Base64URL-encoded JSON string specifying the priority list of desired content representations (format, version, fidelity).",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "in": "query",
+            "name": "accessContext",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          }
+        },
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/assets#/default/get_asset_delivery_api_v1_assetId__assetId_"
+        }
+      }
+    },
+    "/asset-delivery-api/v1/assetId/{assetId}/version/{versionNumber}": {
+      "get": {
+        "tags": ["Assets"],
+        "summary": "Retrieves an asset by its ID and version number with OpenCloud auth.",
+        "description": "Refer to the assetId endpoint for details on usage.\r\nThis endpoint is expected to be called with API key authentication through `apis.roblox.com/asset-delivery-api/v1/assetId/{assetId}/version/{versionNumber}`.\r\nWhile you are able to make requests to this endpoint with Cookie authentication via `assetdelivery.roblox.com/v1/openCloud/assetId/{assetId}/version/{versionNumber}`, we highly discourage use this way.\r\nExpect unannounced removal of this second route in the future.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "assetId",
+            "description": "The ID of the asset to retrieve.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "path",
+            "name": "versionNumber",
+            "description": "The version number of the asset to retrieve.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept-Encoding",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Roblox-Place-Id",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "header",
+            "name": "AssetType",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "AssetFormat",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Roblox-AssetFormat",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "skipSigningScripts",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "in": "query",
+            "name": "clientInsert",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "scriptinsert",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "modulePlaceId",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "query",
+            "name": "serverplaceid",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "query",
+            "name": "expectedAssetType",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "in": "query",
+            "name": "doNotFallbackToBaselineRepresentation",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "in": "query",
+            "name": "contentRepresentationPriorityList",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "in": "query",
+            "name": "accessContext",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          }
+        },
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/assets#/default/get_asset_delivery_api_v1_assetId__assetId__version__versionNumber_"
+        }
+      }
+    },
     "/v3/logout": {
       "post": {
         "tags": ["Accounts"],
@@ -20985,6 +21363,25 @@
               "type": "integer",
               "format": "int64"
             }
+          },
+          {
+            "in": "header",
+            "name": "RequestUserIdIsInGameServer",
+            "description": "Whether the user with the request userId is present in the game server.",
+            "required": true,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Roblox-Place-Id",
+            "description": "Place identifier of the requesting place.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
           }
         ],
         "responses": {
@@ -21037,6 +21434,25 @@
                 "format": "int64",
                 "type": "integer"
               }
+            }
+          },
+          {
+            "in": "header",
+            "name": "RequestUserIdIsInGameServer",
+            "description": "Whether the user with the request userId is present in the game server.",
+            "required": true,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Roblox-Place-Id",
+            "description": "Place identifier of the requesting place.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
             }
           }
         ],
@@ -49588,6 +50004,7 @@
         }
       },
       "patch": {
+        "tags": ["Localization"],
         "parameters": [
           {
             "in": "path",
@@ -49649,7 +50066,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_autolocalization_games__gameId__autolocalizationtable"
+        }
       }
     },
     "/legacy-localization-tables/v1/autolocalization/games/{gameId}/autolocalizationtable": {
@@ -57597,6 +58017,7 @@
     },
     "/v1/display-names/validate": {
       "get": {
+        "tags": ["Users"],
         "summary": "Validate a display name for a new user.",
         "parameters": [
           {
@@ -57655,7 +58076,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/users#/default/get_v1_display_names_validate"
+        }
       }
     },
     "/v1/gender#UsersApi": {
@@ -60931,6 +61355,7 @@
     },
     "/secrets/v1/universes/{universeId}/secrets": {
       "get": {
+        "tags": ["Universes"],
         "summary": "List Secrets",
         "description": "Lists all secrets defined for a universe.\nSecret content is not returned for security reasons - only metadata such as ID, domain, creation and update timestamps are included.\n\nOnly the owner of the universe can list secrets. For group-owned universes, only the group owner or authorized\nmembers can list secrets.",
         "parameters": [
@@ -61009,9 +61434,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/universes#/default/get_secrets_v1_universes__universeId__secrets"
+        }
       },
       "post": {
+        "tags": ["Universes"],
         "summary": "Create Secret",
         "description": "Creates a new secret. A maximum of 500 secrets per universe is allowed.\n            \nOnly the owner of the universe can create secrets. For group-owned universes, only the group owner or authorized\nmembers can create secrets.\n            \nTo encrypt the secret:\n1. Get the public key using the Get Public Key endpoint\n2. Encrypt your secret using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
         "parameters": [
@@ -61092,7 +61521,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/universes#/default/post_secrets_v1_universes__universeId__secrets"
+        }
       }
     },
     "/cloud/v2/universes/{universeId}/secrets/{secretId}": {
@@ -61300,6 +61732,7 @@
     },
     "/secrets/v1/universes/{universeId}/secrets/{secretId}": {
       "delete": {
+        "tags": ["Universes"],
         "summary": "Delete Secret",
         "description": "Permanently deletes a secret from a universe.\n\nOnly the owner of the universe can delete secrets. For group-owned universes, only the group owner or authorized\nmembers can delete secrets.\n\nThis operation is irreversible. Make sure you no longer need the secret before deleting it.",
         "parameters": [
@@ -61372,9 +61805,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/universes#/default/delete_secrets_v1_universes__universeId__secrets__secretId_"
+        }
       },
       "patch": {
+        "tags": ["Universes"],
         "summary": "Update Secret",
         "description": "Updates an existing secret.\n\nOnly the owner of the universe can update secrets. For group-owned universes, only the group owner or authorized\nmembers can update secrets.\n\nOnly the secret content, key_id, and domain can be updated - the secret ID cannot be changed.\n\nTo encrypt the updated secret:\n1. Get the current public key using the GetPublicKey endpoint\n2. Encrypt your new secret content using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
         "parameters": [
@@ -61464,7 +61901,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/universes#/default/patch_secrets_v1_universes__universeId__secrets__secretId_"
+        }
       }
     },
     "/cloud/v2/universes/{universeId}/secrets/public-key": {
@@ -61551,6 +61991,7 @@
     },
     "/secrets/v1/universes/{universeId}/secrets/public-key": {
       "get": {
+        "tags": ["Universes"],
         "summary": "Get Public Key",
         "description": "Retrieves the public key for a universe. You need this key to encrypt secret content \nbefore sending it to Roblox.\n\nOnly the owner of the universe can retrieve the public key. For group-owned universes, only the group owner or\nauthorized members can retrieve the public key.\n\nThe secret id field is static and always returns \"public-key\".\n\nThe returned public key in the secret field is universe-specific and derived from a master key using the universe ID.\nUse this key with LibSodium sealed box encryption to encrypt your secret content before \ncreating or updating secrets.\n\nInclude the key_id from the public key response in the request to create or update a secret.",
         "parameters": [
@@ -61611,7 +62052,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/universes#/default/get_secrets_v1_universes__universeId__secrets_public_key"
+        }
       }
     },
     "/matchmaking-api/v1/client-status": {
@@ -83235,6 +83679,11 @@
             "description": "The time the asset was last updated.",
             "format": "date-time",
             "nullable": true
+          },
+          "categoryPath": {
+            "type": "string",
+            "description": "Category Path of the asset, if it exists.\r\ne.g. \"3d__characters\"",
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -86886,7 +87335,9 @@
           "patch_asset_permissions_api_v1_assets_permissions",
           "assetdelivery_get_v1_alias__alias_",
           "assetdelivery_get_v1_asset",
+          "get_asset_delivery_api_v1_assetId__assetId_",
           "assetdelivery_get_v1_assetId__assetId_",
+          "get_asset_delivery_api_v1_assetId__assetId__version__versionNumber_",
           "assetdelivery_get_v1_assetId__assetId__version__versionNumber_",
           "assetdelivery_post_v1_assets_batch",
           "assetdelivery_get_v1_marAssetHash__marAssetHash__marCheckSum__marCheckSum_",
@@ -87498,6 +87949,7 @@
           "localizationtables_get_v1_autolocalization_metadata",
           "get_legacy_localization_tables_v1_localization_table_limits",
           "localizationtables_get_v1_localization_table_limits",
+          "localizationtables_patch_v1_autolocalization_games__gameId__autolocalizationtable",
           "get_legacy_localization_tables_v1_localization_table_tables__assetId_",
           "localizationtables_get_v1_localization_table_tables__assetId_",
           "get_legacy_localization_tables_v1_localization_table_tables__tableId_",
@@ -88004,6 +88456,11 @@
           "post_cloud_v2_universes__universeId__secrets",
           "patch_cloud_v2_universes__universeId__secrets__secretId_",
           "delete_cloud_v2_universes__universeId__secrets__secretId_",
+          "get_secrets_v1_universes__universeId__secrets",
+          "post_secrets_v1_universes__universeId__secrets",
+          "patch_secrets_v1_universes__universeId__secrets__secretId_",
+          "delete_secrets_v1_universes__universeId__secrets__secretId_",
+          "get_secrets_v1_universes__universeId__secrets_public_key",
           "avatar_get_v1_game_start_info",
           "badges_get_v1_universes__universeId__badges",
           "badges_get_v1_universes__universeId__free_badges_quota",
@@ -88210,8 +88667,9 @@
           "users_post_v1_usernames_users",
           "users_post_v1_users",
           "users_get_v1_users__userId_",
-          "users_patch_v1_users__userId__display_names",
+          "users_get_v1_display_names_validate",
           "users_get_v1_users__userId__display_names_validate",
+          "users_patch_v1_users__userId__display_names",
           "users_get_v1_users__userId__username_history",
           "users_get_v1_users_search"
         ]

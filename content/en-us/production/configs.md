@@ -134,9 +134,11 @@ end)
 
 ### Error handling
 
-In rare cases when the config fails to load, `Class.ConfigService:GetConfigAsync()` returns a snapshot with the `Error` field set. `GetValue()` returns nil for all keys in this snapshot. These snapshots attempt to reconnect and fire the `UpdateAvailable` event when they successfully load.
+In rare cases when the config fails to load and has never been loaded before, `Class.ConfigService:GetConfigAsync()` throws an error.
 
-How you handle this uncommon situation is up to you. You can check for nil values and have fallback values in your code, show the player an error and wait for the snapshot to reconnect, or some other solution.
+If `Class.ConfigService` loses connection to the Roblox servers after it was previously loaded, `Class.ConfigService:GetConfigAsync()` returns a snapshot with the latest available values. These snapshots attempt to reconnect and fire the `UpdateAvailable` event when they successfully load new updates.
+
+How you handle these uncommon situations is up to you. You can wrap the call in a `Global.LuaGlobals.pcall()` and have fallback values in your code, show the player an error and wait for the snapshot to reconnect, or some other solution.
 
 ## Test configs
 

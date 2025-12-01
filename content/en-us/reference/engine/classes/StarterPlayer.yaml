@@ -91,8 +91,20 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.AvatarJointUpgrade
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether avatars spawn with AnimationConstraint joints for
+      physical simulation.
+    description: |
+      This property controls the rollout state of new AnimationConstraint joints
+      in avatars. When Disabled, avatars spawn with legacy
+      `Class.Motor6D|Motor6Ds` connecting their limbs. When Enabled, avatars
+      spawn with `Class.AnimationConstraint|AnimationConstraints` and
+      `Class.BallSocketConstraint|BallSocketConstraints` connecting their limbs.
+      This makes it easier to write scripts that enable physical simulation,
+      like arm strength and ragdoll falling down.
+
+      For more info see the
+      [devforum announcement](https://devforum.roblox.com/t/studio-beta-avatar-joint-upgrade-enabling-physically-simulated-characters/3266099).
     code_samples: []
     type: RolloutState
     tags:
@@ -208,8 +220,16 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.CharacterBreakJointsOnDeath
-    summary: ''
-    description: ''
+    summary: |
+      Determines the starting value of `Class.Humanoid.BreakJointsOnDeath` for
+      `Class.Player.Character`.
+    description: |
+      This property determines the starting value of
+      `Class.Humanoid.BreakJointsOnDeath` for a player's
+      `Class.Player.Character`.
+
+      Note, `Class.StarterPlayer.AvatarJointUpgrade` must be enabled for
+      CharacterBreakJointsOnDeath to take effect.
     code_samples: []
     type: boolean
     tags: []
@@ -386,8 +406,14 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.CreateDefaultPlayerModule
-    summary: ''
-    description: ''
+    summary: |
+      Controls how the default player module and related scripts are handled.
+    description: |
+      This property is only visible when
+      `Class.Workspace.PlayerScriptsUseInputActionSystem` is enabled. When set
+      to `true` (default), the `PlayerModule` injection point occurs at
+      `Class.StarterPlayer`. When set to `false`, the default camera and control
+      scripts will not be added to the place.
     code_samples: []
     type: boolean
     tags:

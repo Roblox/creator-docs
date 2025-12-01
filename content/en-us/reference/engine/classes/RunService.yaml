@@ -18,7 +18,7 @@ description: |
   server scripts. Furthermore, `Class.RunService:IsStudio()|IsStudio()` can be
   used to add special behaviors for in‑Studio testing.
 
-  `RunService` also houses events that allow your code to adhere to Roblox's
+  `RunService` also houses events that allow your code to adhere to the engine's
   frame‑by‑frame loop, such as `Class.RunService.PreRender|PreRender`,
   `Class.RunService.PreAnimation|PreAnimation`,
   `Class.RunService.PreSimulation|PreSimulation`,
@@ -228,8 +228,8 @@ methods:
       The `priority` of the binding is an integer; it determines when during the
       render step to call the custom function. The lower this number, the sooner
       the custom function will be called. If two bindings have the same
-      priority, the Roblox Engine will randomly pick one to run first. The
-      default Roblox control scripts run with these specific priorities:
+      priority, the engine will randomly pick one to run first. The default
+      control scripts run with these specific priorities:
 
       - Player Input: `100`
       - Camera Controls: `200` For convenience; the `Enum.RenderPriority` enum
@@ -245,7 +245,7 @@ methods:
       local RunService = game:GetService("RunService")
 
       local function beforeCamera(delta)
-      	-- Code in here will run before the default Roblox camera script
+      	-- Code in here will run before the default camera script
       end
 
       RunService:BindToRenderStep("Before camera", Enum.RenderPriority.Camera.Value - 1, beforeCamera)
@@ -280,7 +280,7 @@ methods:
           Priority of the binding as an integer; it determines when during the
           render step to call the custom function. The lower this number, the
           sooner the custom function will be called. If two bindings have the
-          same priority the Roblox Engine will randomly pick one to run first.
+          same priority, the engine will randomly pick one to run first.
       - name: function
         type: Function
         default:
@@ -288,6 +288,84 @@ methods:
           The custom function being bound.
     returns:
       - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Basic
+  - name: RunService:BindToSimulation
+    summary: |
+      Binds a custom function to be called at a fixed frequency which is
+      independent of the frame rate.
+    description: |
+      `BindToSimulation()` binds a custom function to be called at a fixed
+      frequency which is independent of the frame rate. In the server authority
+      model, bound functions will also get called when the client needs to
+      resimulate. This method is only available when
+      `Class.Workspace.UseFixedSimulation` is enabled.
+
+      Note that since the bound function is meant for physics controllers and
+      prediction, an error will trigger if you read or write from unsynchronized
+      properties or call an unsynchronized method. This error is meant to help
+      guide you in writing a pure, synchronized simulation.
+
+      To synchronize inaccessible properties, you should store the relevant data
+      in [attributes](../../../studio/properties.md#instance-attributes) and
+      update the relevant property in
+      `Class.RunService.PostSimulation|PostSimulation` or
+      `Class.RunService.RenderStepped|RenderStepped` by reading from attributes.
+      This will leverage attribute synchronization to keep the property fully
+      synchronized through the rollback mechanism.
+    code_samples:
+      - RunService-BindToSimulation
+    parameters:
+      - name: function
+        type: Function
+        default:
+        summary: |
+          The function to call. This function will be passed one parameter
+          called `deltaTime` which shows how much time passed between the
+          beginning of the previous simulation step and the beginning of the
+          current simulation step.
+      - name: frequency
+        type: StepFrequency
+        default: Hz60
+        summary: |
+          Optional `Enum.StepFrequency` value indicating the frequency at which
+          to call the bound function. If not provided, the default frequency
+          will be used.
+    returns:
+      - type: RBXScriptConnection
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Basic
+  - name: RunService:GetPredictionStatus
+    summary: |
+      Checks the `Enum.PredictionStatus` of a specific context instance, useful
+      for debugging scripts affecting multiple instances where some might be
+      predicted and others might not.
+    description: |
+      Clients can use this method to check the `Enum.PredictionStatus` of a
+      specific context instance, useful for debugging scripts affecting multiple
+      instances (vehicle controllers, custom physics, etc.) where some might be
+      predicted and others might not. This method is also useful for debugging
+      and observing the effects of `Enum.PredictionMode.Automatic` prediction
+      mode.
+    code_samples: []
+    parameters:
+      - name: context
+        type: Instance
+        default:
+        summary: |
+          The `Class.Instance` for which to check prediction status.
+    returns:
+      - type: PredictionStatus
         summary: ''
     tags: []
     deprecation_message: ''
@@ -487,6 +565,36 @@ methods:
     tags: []
     deprecation_message: ''
     security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities:
+      - Basic
+  - name: RunService:SetPredictionMode
+    summary: |
+      Sets the prediction mode for an `Class.Instance` to an
+      `Enum.PredictionMode` value.
+    description: |
+      Sets the prediction mode for an `Class.Instance` (`context`) to an
+      `Enum.PredictionMode` value. Mismatches between the physics properties or
+      attributes for predicted instances will cause a rollback and resimulation
+      on the client. Can only be called on the client.
+    code_samples: []
+    parameters:
+      - name: context
+        type: Instance
+        default:
+        summary: |
+          The `Class.Instance` for which to set the prediction mode.
+      - name: mode
+        type: PredictionMode
+        default:
+        summary: |
+          The `Enum.PredictionMode` to set for the context instance.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
     thread_safety: Unsafe
     capabilities:
       - Basic

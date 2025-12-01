@@ -51,7 +51,7 @@ You can also visit your experience's [error report](./error-report.md) to see if
 
 ## Event tracking limitations
 
-The following limitations apply when tracking your events with `Class.AnalyticsService`. Limitations reset daily. You will be able to send new events the next day once you stop sending previous events.
+The following limitations apply when tracking your events with `Class.AnalyticsService`. Limitations reset daily. You will be able to send new events the next day once you stop sending previous events. Each event remains visible on the Creator Dashboard and automatically rolls off after 90 days from the last data received.
 
 <Alert severity = 'warning'>
 You can leverage [custom fields](./custom-fields.md) to additionally filter your analytic events.

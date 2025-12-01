@@ -30,7 +30,7 @@ description: |
 
   Within Studio, use
   `Class.HttpService:CreateWebStreamClient()|CreateWebStreamClient()` to process
-  data in real time from servers that support streaming protocols such as
+  data in real-time from servers that support streaming protocols such as
   [SSE](https://en.wikipedia.org/wiki/Server-sent_events),
   [chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding),
   and [WebSockets](https://en.wikipedia.org/wiki/WebSocket). You can connect
