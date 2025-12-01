@@ -94,7 +94,7 @@ if success and productInfo then
 end
 ```
 
-Use `Class.MarketplaceService:PromptPurchase()|PromptPurchase()` to prompt a pass purchase if the user doesn't already have the pass in their inventory. You can call this function when a user performs actions like pressing a button or talking to a vendor NPC.
+Use `Class.MarketplaceService:PromptGamePassPurchase()|PromptGamePassPurchase()` to prompt a pass purchase if the user doesn't already have the pass in their inventory. You can call this function when a user performs actions like pressing a button or talking to a vendor NPC.
 
 ```lua
 local MarketplaceService = game:GetService("MarketplaceService")
@@ -126,7 +126,7 @@ local function promptPurchase()
 end
 ```
 
-Use `Class.MarketplaceService:PromptGamePassPurchaseFinished()|PromptGamePassPurchaseFinished()` to handle a completed pass prompt and purchase and assign the user the privileges associated with the pass.
+Use `Class.MarketplaceService.PromptGamePassPurchaseFinished|PromptGamePassPurchaseFinished` to handle a completed pass prompt and purchase and assign the user the privileges associated with the pass.
 
 Place the script inside the `Class.ServerScriptService` so that the server handles the user's pass privileges.
 
