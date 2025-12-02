@@ -25,7 +25,7 @@ In order to create a seller account, you must meet the following Roblox eligibil
 
 - Your Roblox account must be **verified** with a [government ID](./publishing/account-verification.md#verify-through-government-id).
 - Your Roblox account must not have been recently **banned** for any reason.
-- You must be either **18** years of age or older, or **13-17** years of age with **parental consent**.
+- You must be either **18** years of age or older, or **13-17** years of age with **parental consent**. A parent/guardian (18+) must review and agree to the Creator Store terms, and parent/guardian information must be entered on the Stripe form.
 - You must reside in [one of the countries supported](https://stripe.com/docs/connect/cross-border-payouts) by our third-party payments provider.
 
 Due to restrictions, selling on the Creator Store is only available within certain regions. Seller onboarding is not yet supported in countries such as Brazil, China, India, or Russia.
