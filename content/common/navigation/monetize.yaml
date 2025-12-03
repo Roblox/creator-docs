@@ -40,7 +40,7 @@ navigation:
             path: /production/publishing/rights-manager
       - title: IP licensing for creators
         path: /ip-licensing/creators
-      - title: FAQ
+      - title: FAQ and guidelines
         path: /ip-licensing/faq
       - title: Glossary
         path: /ip-licensing/glossary
