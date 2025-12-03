@@ -14,8 +14,7 @@ deprecation_message: ''
 items:
   - name: Server
     summary: |
-      The server is the authority for all instances and calls to
-      `Class.BasePart:SetNetworkOwner()` will fail.
+      Server authority with client side prediction and rollback is enabled.
     value: 0
     tags: []
     deprecation_message: ''

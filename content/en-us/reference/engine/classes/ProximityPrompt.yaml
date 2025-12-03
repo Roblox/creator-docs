@@ -139,7 +139,7 @@ properties:
       - UI
   - name: ProximityPrompt.Enabled
     summary: |
-      Whether this prompt should be shown.
+      Whether or not this prompt should be shown.
     description: |
       This property indicates whether or this `Class.ProximityPrompt` should be
       shown.

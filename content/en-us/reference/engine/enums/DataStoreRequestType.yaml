@@ -76,3 +76,94 @@ items:
     value: 8
     tags: []
     deprecation_message: ''
+  - name: StandardRead
+    summary: |
+      This request type is not yet active,
+      `Class.DataStoreService:GetRequestBudgetForRequestType()|GetRequestBudgetForRequestType()`
+      with this enum will return `0`.<br /><br /> Refers to
+      `Class.DataStore:GetAsync()|GetAsync()`,
+      `Class.DataStore:GetVersionAsync()|GetVersionAsync()`,
+      `Class.DataStore:GetVersionAtTimeAsync()|GetVersionAtTimeAsync()`, and the
+      read of `Class.DataStore:UpdateAsync()|UpdateAsync()` for
+      `Class.DataStore|DataStore`.
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: StandardWrite
+    summary: |
+      This request type is not yet active,
+      `Class.DataStoreService:GetRequestBudgetForRequestType()|GetRequestBudgetForRequestType()`
+      with this enum will return `0`.<br /><br /> Refers to
+      `Class.DataStore:SetAsync()|SetAsync()`,
+      `Class.DataStore:IncrementAsync()|IncrementAsync()`, and the write of
+      `Class.DataStore:UpdateAsync()|UpdateAsync()` for
+      `Class.DataStore|DataStore`.
+    value: 10
+    tags: []
+    deprecation_message: ''
+  - name: StandardList
+    summary: |
+      This request type is not yet active,
+      `Class.DataStoreService:GetRequestBudgetForRequestType()|GetRequestBudgetForRequestType()`
+      with this enum will return `0`.<br /><br /> Refers to
+      `Class.DataStoreService:ListDataStoresAsync()|ListDataStoresAsync()`, and
+      `Class.DataStore:ListKeysAsync()|ListKeysAsync()` and
+      `Class.DataStore:ListVersionsAsync()|ListVersionsAsync()` for
+      `Class.DataStore|DataStore`.
+    value: 11
+    tags: []
+    deprecation_message: ''
+  - name: StandardRemove
+    summary: |
+      This request type is not yet active,
+      `Class.DataStoreService:GetRequestBudgetForRequestType()|GetRequestBudgetForRequestType()`
+      with this enum will return `0`.<br /><br /> Refers to
+      `Class.DataStore:RemoveAsync()|RemoveAsync()` for
+      `Class.DataStore|DataStore`.
+    value: 12
+    tags: []
+    deprecation_message: ''
+  - name: OrderedRead
+    summary: |
+      This request type is not yet active,
+      `Class.DataStoreService:GetRequestBudgetForRequestType()|GetRequestBudgetForRequestType()`
+      with this enum will return `0`.<br /><br /> Refers to
+      `Class.OrderedDataStore:GetAsync()|GetAsync()` and the read of
+      `Class.OrderedDataStore:UpdateAsync()|UpdateAsync()` for
+      `Class.OrderedDataStore|OrderedDataStore`.
+    value: 13
+    tags: []
+    deprecation_message: ''
+  - name: OrderedWrite
+    summary: |
+      This request type is not yet active,
+      `Class.DataStoreService:GetRequestBudgetForRequestType()|GetRequestBudgetForRequestType()`
+      with this enum will return `0`.<br /><br /> Refers to
+      `Class.OrderedDataStore:SetAsync()|SetAsync()`,
+      `Class.OrderedDataStore:IncrementAsync()|IncrementAsync()`, and the write
+      of `Class.OrderedDataStore:UpdateAsync()|UpdateAsync()` for
+      `Class.OrderedDataStore|OrderedDataStore`.
+    value: 14
+    tags: []
+    deprecation_message: ''
+  - name: OrderedList
+    summary: |
+      This request type is not yet active,
+      `Class.DataStoreService:GetRequestBudgetForRequestType()|GetRequestBudgetForRequestType()`
+      with this enum will return `0`.<br /><br /> Refers to
+      `Class.OrderedDataStore:GetSortedAsync()|GetSortedAsync()` for
+      `Class.OrderedDataStore|OrderedDataStore`.
+      GetRequestBudgetForRequestType()`with this enum will return`0`.
+    value: 15
+    tags: []
+    deprecation_message: ''
+  - name: OrderedRemove
+    summary: |
+      This request type is not yet active,
+      `Class.DataStoreService:GetRequestBudgetForRequestType()|GetRequestBudgetForRequestType()`
+      with this enum will return `0`.<br /><br /> Refers to
+      `Class.OrderedDataStore:RemoveAsync()|RemoveAsync()` for
+      `Class.OrderedDataStore|OrderedDataStore`.
+    value: 16
+    tags: []
+    deprecation_message: ''
