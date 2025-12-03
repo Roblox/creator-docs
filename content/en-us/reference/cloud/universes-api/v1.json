@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Place publishing",
-    "description": "You can send and receive the following request and response payloads to publish and update your places on Roblox. For information on the usage of the API, see the [usage guide](../../../cloud/guides/usage-place-publishing.md).",
+    "description": "You can send and receive the following request and response payloads to publish and update your places on Roblox. For information on the usage of the API, see the [usage guide](/cloud/guides/usage-place-publishing.md).",
     "version": "v1",
     "x-roblox-extensions-version": "1.0.0"
   },
@@ -24,7 +24,7 @@
             "name": "universeId",
             "in": "path",
             "required": true,
-            "description": "The identifier of the experience in which you want to publish your place to. You can [copy your experience's Universe ID](../../../cloud/guides/usage-place-publishing.md#publishing-a-place) on **Creator Dashboard**.",
+            "description": "The identifier of the experience in which you want to publish your place to. You can [copy your experience's Universe ID](/cloud/guides/usage-place-publishing.md#publishing-a-place) on **Creator Dashboard**.",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -34,7 +34,7 @@
             "name": "placeId",
             "in": "path",
             "required": true,
-            "description": "The identifier of your place. See [Publishing places with API keys](../../../cloud/guides/usage-place-publishing.md) on obtaining a Place ID.",
+            "description": "The identifier of your place. See [Publishing places with API keys](/cloud/guides/usage-place-publishing.md) on obtaining a Place ID.",
             "schema": {
               "type": "integer",
               "format": "int64"

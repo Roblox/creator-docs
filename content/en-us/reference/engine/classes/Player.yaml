@@ -1153,68 +1153,7 @@ methods:
   - name: Player:GetFriendsOnline
     summary: |
       Returns a dictionary of online connections.
-    description: |
-      This function returns a dictionary array of online connections, using a 30
-      second cache. In the returned array, some fields are only present for
-      certain location types; for example, `PlaceId` won't be present when
-      `LocationType` is `0` (mobile website).
-
-      <table>
-          <thead>
-              <tr>
-                  <th>Name</th>
-                  <th>Type</th>
-                  <th>Description</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td><code>VisitorId</code></td>
-                  <td>number</td>
-                  <td>The <code>Class.Player.UserId|UserId</code> of the connection.</td>
-              </tr>
-              <tr>
-                  <td><code>UserName</code></td>
-                  <td>string</td>
-                  <td>The username of the connection.</td>
-              </tr>
-              <tr>
-                  <td><code>DisplayName</code></td>
-                  <td>string</td>
-                  <td>The <code>Class.Player.DisplayName|DisplayName</code> of the connection.</td>
-              </tr>
-              <tr>
-                  <td><code>LastOnline</code></td>
-                  <td>string</td>
-                  <td>When the connection was last online.</td>
-              </tr>
-              <tr>
-                  <td><code>IsOnline</code></td>
-                  <td>boolean</td>
-                  <td>If the connection is currently online.</td>
-              </tr>
-              <tr>
-                  <td><code>LastLocation</code></td>
-                  <td>string</td>
-                  <td>The name of the connection's current location.</td>
-              </tr>
-              <tr>
-                  <td><code>PlaceId</code></td>
-                  <td>number</td>
-                  <td>The place ID of the connection's last location.</td>
-              </tr>
-              <tr>
-                  <td><code>GameId</code></td>
-                  <td>string</td>
-                  <td>The <code>Class.DataModel.JobId</code> of the connection's last location.</td>
-              </tr>
-              <tr>
-                  <td><code>LocationType</code></td>
-                  <td>number</td>
-                  <td>The location type of the connection's last location.</td>
-              </tr>
-          </tbody>
-      </table>
+    description: ''
     code_samples:
       - how-to-get-a-list-of-online-friends
     parameters:
@@ -1390,22 +1329,7 @@ methods:
   - name: Player:GetRankInGroup
     summary: |
       Returns the player's rank in the group as an integer.
-    description: |
-      This method returns the player's rank in the group as an integer between
-      `0` and `255`, where `0` is a non-member and `255` is the group's owner.
-
-      This call may not yield the most up-to-date information. If a player
-      leaves a group while they are in the experience, `GetRankInGroup()` will
-      still think they're in that group until they leave. However, this does not
-      happen when used with a `Class.LocalScript` because the method caches
-      results, so multiple calls of `GetRankInGroup()` on the same player with
-      the same group ID will yield the same result as when the method was first
-      called with the given group ID. The caching behavior is on a per-peer
-      basis: a server does not share the same cache as a client.
-
-      When a player joins a group in-experience due to a call to
-      `Class.GroupService:PromptJoinAsync()`, any cached value for that player
-      will be cleared on the client where the prompt was shown.
+    description: ''
     code_samples:
       - Player-GetRankInGroup1
     parameters:
@@ -1429,22 +1353,7 @@ methods:
     summary: |
       Returns the player's role in the group as a string, or `Guest` if the
       player isn't part of the group.
-    description: |
-      This method returns the player's role in the group as a string, or `Guest`
-      if the player isn't part of the group.
-
-      This call may not yield the most up-to-date information. If a player
-      leaves a group while they are in the experience, `GetRoleInGroup()` will
-      still think they're in that group until they leave. However, this does not
-      happen when used with a `Class.LocalScript` because the method caches
-      results, so multiple calls of `GetRoleInGroup()` on the same player with
-      the same group ID will yield the same result as when the method was first
-      called with the given group ID. The caching behavior is on a per-peer
-      basis: a server does not share the same cache as a client.
-
-      When a player joins a group in-experience due to a call to
-      `Class.GroupService:PromptJoinAsync()`, any cached value for that player
-      will be cleared on the client where the prompt was shown.
+    description: ''
     code_samples:
       - Player-GetRoleInGroup1
     parameters:
@@ -1522,11 +1431,7 @@ methods:
     summary: |
       Checks whether a player is a connection of the user with the given
       `Class.Player.UserId`.
-    description: |
-      This method sends a request to Roblox asking whether a player is a
-      connection of another user, given the `Class.Player.UserId|UserId` of that
-      user. This method caches results so multiple calls on the same player with
-      the same `userId` may not yield the most up-to-date result.
+    description: ''
     code_samples:
       - Player-IsFriendsWith1
     parameters:
@@ -1572,22 +1477,7 @@ methods:
   - name: Player:IsInGroup
     summary: |
       Checks whether a player is a member of a group with the given ID.
-    description: |
-      This method sends a request to Roblox asking whether a player is a member
-      of a group, given the ID of that group.
-
-      This call may not yield the most up-to-date information. If a player
-      leaves a group while they are in the experience, `IsInGroup()` will still
-      think they're in that group until they leave. However, this does not
-      happen when used with a `Class.LocalScript` because the method caches
-      results, so multiple calls of `IsInGroup()` on the same player with the
-      same group ID will yield the same result as when the method was first
-      called with the given group ID. The caching behavior is on a per-peer
-      basis: a server does not share the same cache as a client.
-
-      When a player joins a group in-experience due to a call to
-      `Class.GroupService:PromptJoinAsync()`, any cached value for that player
-      will be cleared on the client where the prompt was shown.
+    description: ''
     code_samples: []
     parameters:
       - name: groupId
@@ -1719,34 +1609,7 @@ methods:
     summary: |
       Creates a new character for the player, removing the old one. Also clears
       the player's `Class.Backpack` and `Class.PlayerGui`.
-    description: |
-      This method creates a new character for the player, removing the old one.
-      It also clears the player's `Class.Backpack` and `Class.PlayerGui`. This
-      is useful in cases where you want to reload the character without killing
-      the player, such as when you want to load a new character appearance after
-      changing the player's
-      `Class.Player.CharacterAppearance|CharacterAppearance`.
-
-      After calling `LoadCharacter()` for an individual player, it is not
-      recommended to call it again for the same player until after that player's
-      `Class.Player.CharacterAppearanceLoaded|CharacterAppearanceLoaded` event
-      has fired.
-
-      #### Character Loading Event Order
-
-      Calling the `LoadCharacter()` method on any `Player` fires events in the
-      following order:
-
-      1. The character appearance initializes.
-      2. The character rig builds and scales.
-      3. The character moves to the spawn location.
-      4. `Class.Player.Character` sets.
-      5. `Class.Object.Changed` fires on the `Class.Player` with a value of
-         `Character`.
-      6. The character's `Class.Instance.Parent|Parent` sets to the
-         `Class.DataModel`.
-      7. `Class.Player.CharacterAdded` fires.
-      8. `Class.Player.CharacterAppearanceLoaded` fires.
+    description: ''
     code_samples:
       - Player-LoadCharacter1
     parameters: []
@@ -1809,19 +1672,7 @@ methods:
     summary: |
       Spawns a player character with everything equipped in the passed in
       `Class.HumanoidDescription`.
-    description: |
-      This method spawns a player character with everything equipped in the
-      passed in `Class.HumanoidDescription`.
-
-      After calling this method for an individual player, it is not recommended
-      to call it again for the same player until after that player's
-      `Class.Player.CharacterAppearanceLoaded|CharacterAppearanceLoaded` event
-      has fired.
-
-      See also
-      [HumanoidDescription System](../../../characters/appearance.md#humanoiddescription),
-      an article which explains the humanoid description system in greater
-      detail and provides several scripting examples.
+    description: ''
     code_samples:
       - spawn-characters-with-humanoiddescription
     parameters:

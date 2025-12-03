@@ -5,8 +5,16 @@
 name: ConfigSnapshot
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A snapshot of configuration values at a given version. Can be player-specific.
+description: |
+  An object with the configuration values at a specific version. A snapshot can
+  be targeted to a single player to apply experimentation values. This is
+  returned by `Class.ConfigService:GetConfigAsync()` and
+  `Class.ConfigService:GetConfigForPlayerAsync()`.
+
+  For more information, see
+  [Experience configs](../../../production/configs.md).
 code_samples: []
 inherits:
   - Object
@@ -17,8 +25,10 @@ tags:
 deprecation_message: ''
 properties:
   - name: ConfigSnapshot.Error
-    summary: ''
-    description: ''
+    summary: |
+      Populated if snapshot was in an error state.
+    description: |
+      Populated if snapshot was in an error state.
     code_samples: []
     type: ConfigSnapshotErrorState
     tags:
@@ -35,8 +45,12 @@ properties:
       can_save: true
     capabilities: []
   - name: ConfigSnapshot.Outdated
-    summary: ''
-    description: ''
+    summary: |
+      If true, indicates the snapshot is outdated and can be refreshed to newer
+      values.
+    description: |
+      If true, indicates the snapshot is outdated and can be refreshed to newer
+      values.
     code_samples: []
     type: boolean
     tags:
@@ -54,42 +68,57 @@ properties:
     capabilities: []
 methods:
   - name: ConfigSnapshot:GetValue
-    summary: ''
-    description: ''
+    summary: |
+      Returns the value for the given key.
+    description: |
+      Returns the value for the provided key in the snapshot.
     code_samples: []
     parameters:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          Key of the configuration to get the value for.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The value of the configuration for the given key.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: ConfigSnapshot:GetValueChangedSignal
-    summary: ''
-    description: ''
+    summary: |
+      Returns a signal that fires when the value for the given key changes due
+      to a refresh.
+    description: |
+      Returns a signal that fires when the value for the provided key changes
+      after calling `Class.ConfigSnapshot:Refresh()`.
     code_samples: []
     parameters:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          Key of the configuration to get the change signal for.
     returns:
       - type: RBXScriptSignal
-        summary: ''
+        summary: |
+          A `DataType.RBXScriptSignal` that fires when the value for the given
+          key changes upon refresh.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: ConfigSnapshot:Refresh
-    summary: ''
-    description: ''
+    summary: |
+      Refreshes the snapshot to the latest configuration values.
+    description: |
+      Refreshes the snapshot to the latest configuration values from the
+      service. If not called, the snapshot will continue to reflect the values
+      at the time it was created or last refreshed.
     code_samples: []
     parameters: []
     returns:
@@ -102,8 +131,12 @@ methods:
     capabilities: []
 events:
   - name: ConfigSnapshot.UpdateAvailable
-    summary: ''
-    description: ''
+    summary: |
+      Fires when a newer version of the configuration is available.
+    description: |
+      Fires when a newer version of the configuration is available than the
+      current snapshot. You can perform validation and/or call
+      `Class.ConfigSnapshot:Refresh()` to update to the latest values.
     code_samples: []
     parameters: []
     tags: []

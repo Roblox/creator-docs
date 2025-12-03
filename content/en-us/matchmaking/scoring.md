@@ -232,6 +232,10 @@ The Roblox default configuration includes the following signals and weights:
     <td>1</td>
   </tr>
   <tr>
+    <td>Text Chat</td>
+    <td>1</td>
+  </tr>
+  <tr>
     <td>Device Type</td>
     <td>0</td>
   </tr>

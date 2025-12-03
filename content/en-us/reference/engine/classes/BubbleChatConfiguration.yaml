@@ -146,7 +146,7 @@ properties:
     description: |
       `Datatype.Font` of the bubble text. Default is `Enum.Font.GothamMedium`.
     code_samples: []
-    type: Font
+    type: Enum.Font
     tags:
       - Hidden
     deprecation_message: ''
@@ -168,7 +168,7 @@ properties:
       `Class.BubbleChatConfiguration.Font` but allows setting fonts that don't
       exist in `Enum.Font`.
     code_samples: []
-    type: Font
+    type: Datatype.Font
     tags: []
     deprecation_message: ''
     security:

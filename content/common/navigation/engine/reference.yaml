@@ -2728,6 +2728,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/StudioService.yaml
                 ignoreTranslation: true
+              - title: StudioTestService
+                path: /reference/engine/classes/StudioTestService
+                type: engineapi
+                source: /reference/engine/classes/StudioTestService.yaml
+                ignoreTranslation: true
               - title: StudioTheme
                 path: /reference/engine/classes/StudioTheme
                 type: engineapi

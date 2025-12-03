@@ -416,7 +416,7 @@ Each experience is allowed a certain number of data store requests based on the 
     <tr>
       <td><b>RemoveVersion (deprecated)</b></td>
       <td>`Class.DataStore:RemoveVersionAsync()|RemoveVersionAsync()`</td>
-      <td>5 + rccPlayers × 2</td>
+      <td>5 + concurrentUsers × 2</td>
     </tr>
   </tbody>
   </table>

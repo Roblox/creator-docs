@@ -1132,11 +1132,11 @@ methods:
     capabilities: []
   - name: Workspace:GetPhysicsThrottling
     summary: |
-      Returns an integer, between 0 and 100, representing the percentage of
-      real-time that physics simulation is currently being throttled to.
+      Returns an integer, between 0 and 100, representing the percentage of real
+      time that physics simulation is currently being throttled to.
     description: |
-      Returns an integer, between 0 and 100, representing the percentage of
-      real-time that physics simulation is currently being throttled to.
+      Returns an integer, between 0 and 100, representing the percentage of real
+      time that physics simulation is currently being throttled to.
 
       This function can be used to determine whether, and to what degree,
       physics throttling is occurring.
@@ -1144,7 +1144,7 @@ methods:
       #### What is physics throttling?
 
       Physics throttling occurs when the physics engine detects it cannot keep
-      up with the game in realtime. When physics is being throttled, it will
+      up with the game in real time. When physics is being throttled, it will
       update less frequently causing `Class.BasePart|BaseParts` to appear to
       move slower.
 
@@ -1181,7 +1181,7 @@ methods:
     returns:
       - type: int
         summary: |
-          The percentage of real-time that physics simulation is currently being
+          The percentage of real time that physics simulation is currently being
           throttled to.
     tags: []
     deprecation_message: ''

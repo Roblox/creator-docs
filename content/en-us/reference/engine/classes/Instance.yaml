@@ -360,6 +360,7 @@ descendants:
   - ScriptEditorService
   - SelectionHighlightManager
   - Studio
+  - StudioTestService
   - StudioTheme
   - TeamCreateService
   - VRStatusService
@@ -1793,7 +1794,7 @@ methods:
       grammar is similar to the one used in `Class.StyleRule` with only a few
       differences regarding which parts of the grammar are supported or not.
 
-      ##### Selectors
+      #### Selectors
 
       <table>
       <thead>
@@ -1833,6 +1834,21 @@ methods:
           <td>Matches instances which have the specified attribute and that attribute has the specified value. Same limitations apply as for property selectors.</td>
           <td width="30%"><code>[$MyAttribute = 10]</code></td>
         </tr>
+        <tr>
+          <td width="30%"><code>[$attribute]</code></td>
+          <td>Matches instances which have the specified attribute set.</td>
+          <td width="30%"><code>[$MyAttribute]</code></td>
+        </tr>
+        <tr>
+          <td width="30%"><code>:not(complex-selector-list)</code></td>
+          <td>Pseudo-class selector that matches instances which do <b>not</b> match any of the specified selectors.</td>
+          <td width="30%">See examples below</td>
+        </tr>
+        <tr>
+          <td width="30%"><code>:has(relative-selector-list)</code></td>
+          <td>Pseudo-class selector that matches instances which contain an instance matching the specified selector.</td>
+          <td width="30%">See examples below</td>
+        </tr>
       </tbody>
       </table>
 
@@ -1841,7 +1857,7 @@ methods:
       `Class.Model` with a tag `Apple` set and which have a `Kind` attribute
       equal to string `"Red"` as well as a `State` attribute equal to `4`.
 
-      ##### Combinators
+      #### Combinators
 
       <table>
       <thead>
@@ -1881,6 +1897,44 @@ methods:
       Only elements matching the filter are placed in the array. For example,
       `>#ExistingChild, >#MissingChild, >#AnotherExistingChild` will return an
       array with two elements and there will be no `nil` for the missing child.
+
+      #### Pseudo-class selectors
+
+      ##### :not(complex-selector-list)
+
+      This pseudo-class selector allows selecting instances which do **not**
+      match any of the selectors inside. It performs a negation of the
+      selectors.
+
+      Starting with the simple cases: it is possible to query instances that do
+      not match the specified class using `:not(SpotLight)`, or instances which
+      do not have an attribute set using `:not([$MyAttribute])`.
+
+      The expression inside is a list of complex selectors, so it is possible to
+      filter based on multiple conditions. For example,
+      `:not(SpotLight, PointLight)` will select all instances that are not a
+      `Class.SpotLight` or a `Class.PointLight`. This can also be written as
+      `:not(SpotLight):not(PointLight)`.
+
+      You can also use selectors with combinators. For example, given that the
+      expression `Model > .Red` will select all descendants that are a child of
+      a `Class.Model` and have a 'Red' tag, `:not(Model > .Red)` will select all
+      descendants except for those.
+
+      ##### :has(relative-selector-list)
+
+      This pseudo-class selector allows selecting instances based on which
+      instances they contain inside. The selector list is evaluated relative to
+      each instance.
+
+      For example `:has(Tool)` will select all descendants which contain 'Tool'
+      as their own descendant.
+
+      To see the difference, consider the expression `SpotLight > .Red` which
+      selects descendants with the 'Red' tag that are a child of a `SpotLight`.
+      Using `SpotLight:has(> .Red)`, it is possible to select descendants that
+      are `SpotLight` instances and **contain** an instance with the 'Red' tag
+      inside.
     code_samples: []
     parameters:
       - name: selector

@@ -5,8 +5,17 @@
 name: ConfigService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A game service that gives access to in-experience configuration with updates
+  in real time.
+description: |
+  **ConfigService** exposes methods for getting `Class.ConfigSnapshot` objects.
+  Configs can only be accessed by game servers, so you can't use
+  `Class.ConfigService` within client scripts.
+
+  See [Experience configs](../../../production/configs.md) for an in-depth guide
+  on managing keys, deploying real-time updates, error handling, limits, and
+  more.
 code_samples: []
 inherits:
   - Instance
@@ -19,14 +28,19 @@ deprecation_message: ''
 properties: []
 methods:
   - name: ConfigService:ClearTestingValue
-    summary: ''
-    description: ''
+    summary: |
+      Clears current testing value for the given key.
+    description: |
+      Removes a testing override created by the
+      `Class.ConfigService:SetTestingValue()|SetTestingValue()` function. The
+      actual configured value will be returned after calling this function.
     code_samples: []
     parameters:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          Key of the configuration to clear testing value for.
     returns:
       - type: ()
         summary: ''
@@ -36,13 +50,24 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: ConfigService:GetConfigAsync
-    summary: ''
-    description: ''
+    summary: |
+      Retrieves a snapshot of the latest configuration.
+    description: |
+      This function retrieves the latest available configuration as a
+      `Class.ConfigSnapshot` instance without player targeting. Snapshots can be
+      refreshed to the latest values by calling
+      `Class.ConfigSnapshot:Refresh()`.
+
+      Experiments are not applied since there is no player context.
+
+      If configuration fails to load and there is no previously available
+      configuration, this function throws an error.
     code_samples: []
     parameters: []
     returns:
       - type: ConfigSnapshot
-        summary: ''
+        summary: |
+          A `Class.ConfigSnapshot` instance with the latest configuration.
     tags:
       - Yields
     deprecation_message: ''
@@ -50,17 +75,29 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: ConfigService:GetConfigForPlayerAsync
-    summary: ''
-    description: ''
+    summary: |
+      Retrieves a snapshot of the latest configuration for a specific player.
+    description: |
+      Retrieves the latest available configuration as a `Class.ConfigSnapshot`
+      instance targeting to the given player. Snapshots can be refreshed to the
+      latest values by calling `Class.ConfigSnapshot:Refresh()`.
+
+      This function applies all experiments running for the player.
+
+      If configuration fails to load and there is no previously available
+      configuration, this function throws an error.
     code_samples: []
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The player to get the configuration for.
     returns:
       - type: ConfigSnapshot
-        summary: ''
+        summary: |
+          A `Class.ConfigSnapshot` instance with the latest configuration
+          targeted to the player.
     tags:
       - Yields
     deprecation_message: ''
@@ -68,18 +105,28 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: ConfigService:SetTestingValue
-    summary: ''
-    description: ''
+    summary: |
+      Sets a testing override for the given key.
+    description: |
+      Sets a testing override for the specified configuration key in the current
+      server instance. When a testing value is set, calls to
+      `Class.ConfigSnapshot:GetValue()` for that key will return the testing
+      value instead of the actual configured value.
+
+      Testing values can be cleared by calling the
+      `Class.ConfigService:ClearTestingValue()|ClearTestingValue()` function.
     code_samples: []
     parameters:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          Key of the configuration to override with a testing value.
       - name: value
         type: Variant
         default:
-        summary: ''
+        summary: |
+          Value to set as the testing override.
     returns:
       - type: ()
         summary: ''

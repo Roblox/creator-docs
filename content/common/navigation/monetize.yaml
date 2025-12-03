@@ -29,20 +29,24 @@ navigation:
   - title: License
     path: /ip-licensing/
     section:
-      - title: Get started
+      - title: Tools for IP holders
         path: /ip-licensing/get-started
-      - title: License Manager
-        path: /ip-licensing/license-manager
-      - title: Rights Manager
-        path: /production/publishing/rights-manager
+        section:
+          - title: Get started
+            path: /ip-licensing/get-started
+          - title: License Manager
+            path: /ip-licensing/license-manager
+          - title: Rights Manager
+            path: /production/publishing/rights-manager
       - title: IP licensing for creators
         path: /ip-licensing/creators
-      - title: Creator FAQ
+      - title: FAQ
         path: /ip-licensing/faq
       - title: Glossary
         path: /ip-licensing/glossary
 
   - title: Advertise
+    path: /production/promotion/ads-manager
     section:
       - title: Ads Manager
         path: /production/promotion/ads-manager

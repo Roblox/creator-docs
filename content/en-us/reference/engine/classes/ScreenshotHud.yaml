@@ -164,7 +164,7 @@ properties:
     description: |
       The `Datatype.Font` used for the experience name in the overlay.
     code_samples: []
-    type: Font
+    type: Enum.Font
     tags:
       - Hidden
       - Deprecated

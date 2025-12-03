@@ -9,9 +9,10 @@ summary: |
   Houses the Luau code responsible for running the legacy chat system.
 description: |
   The **Chat** service houses the Luau code responsible for running the
-  [legacy chat system](../../../chat/in-experience-text-chat.md#migrate-from-legacy-chat). Similar to
-  `Class.StarterPlayerScripts`, default objects like `Class.Script|Scripts` and
-  `Class.ModuleScript|ModuleScripts` are inserted into the service.
+  [legacy chat system](../../../chat/in-experience-text-chat.md#migrate-from-legacy-chat).
+  Similar to `Class.StarterPlayerScripts`, default objects like
+  `Class.Script|Scripts` and `Class.ModuleScript|ModuleScripts` are inserted
+  into the service.
 code_samples: []
 inherits:
   - Instance
@@ -21,7 +22,7 @@ tags:
   - Service
   - NotReplicated
 deprecation_message: |
-  This class is deprecated. Use `Class.TextService` or `Class.TextChatService` instead.
+  This class is deprecated. Use `Class.TextChatService` instead.
 properties:
   - name: Chat.BubbleChatEnabled
     summary: |

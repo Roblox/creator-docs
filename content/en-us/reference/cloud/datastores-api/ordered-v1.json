@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Ordered data stores (beta)",
-    "description": "This page includes reference documentation for working with the Open Cloud v1 API for ordered data stores. For information on using the v2 API, see the [usage guide](../../../cloud/guides/data-stores/index.md).",
+    "description": "This page includes reference documentation for working with the Open Cloud v1 API for ordered data stores. For information on using the v2 API, see the [usage guide](/cloud/guides/data-stores/index.md).",
     "version": "0.0.1",
     "x-roblox-extensions-version": "1.0.0"
   },
@@ -41,7 +41,7 @@
           {
             "name": "scope",
             "in": "path",
-            "description": "The name of the data store scope. See [Scopes](../../../cloud/guides/data-stores/request-handling.md#scopes).",
+            "description": "The name of the data store scope. See [Scopes](/cloud/guides/data-stores/request-handling.md#scopes).",
             "required": true,
             "schema": {
               "type": "string"
@@ -75,7 +75,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "The range of qualifying values of entries to return. See [Filters](../../../cloud/guides/data-stores/request-handling.md#filters).",
+            "description": "The range of qualifying values of entries to return. See [Filters](/cloud/guides/data-stores/request-handling.md#filters).",
             "schema": {
               "type": "string"
             }
@@ -117,7 +117,7 @@
           }
         ],
         "x-roblox-rate-limits": {
-          "description": "See [Throttling](../../../cloud/guides/data-stores/throttling.md)."
+          "description": "See [Throttling](/cloud/guides/data-stores/throttling.md)."
         },
         "x-roblox-alternatives": [
           {
@@ -154,7 +154,7 @@
           {
             "name": "scope",
             "in": "path",
-            "description": "The name of the data store scope. See [Scopes](../../../cloud/guides/data-stores/request-handling.md#scopes).",
+            "description": "The name of the data store scope. See [Scopes](/cloud/guides/data-stores/request-handling.md#scopes).",
             "required": true,
             "schema": {
               "type": "string"
@@ -219,7 +219,7 @@
           }
         ],
         "x-roblox-rate-limits": {
-          "description": "See [Throttling](../../../cloud/guides/data-stores/throttling.md)."
+          "description": "See [Throttling](/cloud/guides/data-stores/throttling.md)."
         },
         "x-roblox-alternatives": [
           {
@@ -258,7 +258,7 @@
           {
             "name": "scope",
             "in": "path",
-            "description": "The name of the data store scope. See [Scopes](../../../cloud/guides/data-stores/request-handling.md#scopes).",
+            "description": "The name of the data store scope. See [Scopes](/cloud/guides/data-stores/request-handling.md#scopes).",
             "required": true,
             "schema": {
               "type": "string"
@@ -313,7 +313,7 @@
           }
         ],
         "x-roblox-rate-limits": {
-          "description": "See [Throttling](../../../cloud/guides/data-stores/throttling.md)."
+          "description": "See [Throttling](/cloud/guides/data-stores/throttling.md)."
         },
         "x-roblox-alternatives": [
           {
@@ -350,7 +350,7 @@
           {
             "name": "scope",
             "in": "path",
-            "description": "The name of the data store scope. See [Scopes](../../../cloud/guides/data-stores/request-handling.md#scopes).",
+            "description": "The name of the data store scope. See [Scopes](/cloud/guides/data-stores/request-handling.md#scopes).",
             "required": true,
             "schema": {
               "type": "string"
@@ -398,7 +398,7 @@
           }
         ],
         "x-roblox-rate-limits": {
-          "description": "See [Throttling](../../../cloud/guides/data-stores/throttling.md)."
+          "description": "See [Throttling](/cloud/guides/data-stores/throttling.md)."
         },
         "x-roblox-alternatives": [
           {
@@ -435,7 +435,7 @@
           {
             "name": "scope",
             "in": "path",
-            "description": "The name of the data store scope. See [Scopes](../../../cloud/guides/data-stores/request-handling.md#scopes).",
+            "description": "The name of the data store scope. See [Scopes](/cloud/guides/data-stores/request-handling.md#scopes).",
             "required": true,
             "schema": {
               "type": "string"
@@ -453,7 +453,7 @@
           {
             "name": "allow_missing",
             "in": "query",
-            "description": "The flag to allow the creation of an entry if the entry doesn't exist. See [Allow missing flags](../../../cloud/guides/data-stores/request-handling.md.md#allow-missing-flags).",
+            "description": "The flag to allow the creation of an entry if the entry doesn't exist. See [Allow missing flags](/cloud/guides/data-stores/request-handling.md.md#allow-missing-flags).",
             "schema": {
               "type": "boolean"
             }
@@ -511,7 +511,7 @@
           }
         ],
         "x-roblox-rate-limits": {
-          "description": "See [Throttling](../../../cloud/guides/data-stores/throttling.md)."
+          "description": "See [Throttling](/cloud/guides/data-stores/throttling.md)."
         },
         "x-roblox-alternatives": [
           {
@@ -550,7 +550,7 @@
           {
             "name": "scope",
             "in": "path",
-            "description": "The name of the data store scope. See [Scopes](../../../cloud/guides/data-stores/request-handling.md#scopes).",
+            "description": "The name of the data store scope. See [Scopes](/cloud/guides/data-stores/request-handling.md#scopes).",
             "required": true,
             "schema": {
               "type": "string"
@@ -615,7 +615,7 @@
           }
         ],
         "x-roblox-rate-limits": {
-          "description": "See [Throttling](../../../cloud/guides/data-stores/throttling.md)."
+          "description": "See [Throttling](/cloud/guides/data-stores/throttling.md)."
         },
         "x-roblox-alternatives": [
           {

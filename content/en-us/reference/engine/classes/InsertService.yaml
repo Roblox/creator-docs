@@ -212,37 +212,7 @@ methods:
   - name: InsertService:GetFreeDecals
     summary: |
       Retrieves a list of free Decals from the Catalog.
-    description: |
-      The GetFreeDecals function retrieves a list of free `Class.Decal|Decals`
-      from the Catalog. The return type for this method is very odd, as it
-      returns a single table wrapped in a table.
-
-      The best way to explain it is to show a visual of the array returned:
-
-      ```lua
-      [1] = {
-      	CurrentStartIndex = 1, -- This can vary depending on the page you input.
-      	TotalCount = 21, -- Always 21.
-      	Results = {
-      		-- All parameters here are pseudo. They can vary depending on the asset.
-      		[1] = {
-      			Name = "Asset Name",
-      			AssetId = 0000000,
-      			AssetVersionId = 0000000,
-      			CreatorName = "Roblox",
-      		},
-      		-- [2], [3], and so on... up to [21]
-      	},
-      }
-      ```
-
-      An example for iterating over this list has been provided at the bottom of
-      this page.
-
-      Additionally, if you want to insert `Class.Model|Models` instead, you can
-      use the `Class.InsertService:GetFreeModels()` function.
-
-      _Note:_ The page argument starts at 0. So Page 1 = 0, Page 2 = 1, etc.
+    description: ''
     code_samples:
       - InsertService-GetFreeDecals1
     parameters:
@@ -269,35 +239,7 @@ methods:
   - name: InsertService:GetFreeModels
     summary: |
       Retrieves a list of Free Models from the Catalog.
-    description: |
-      The GetFreeModels function retrieves a list of Free `Class.Model|Models`
-      from the Catalog. The return type for this method is very odd, as it
-      returns a single table wrapped in a table.
-
-      The best way to explain it is to show a visual of the array returned:
-
-      ```lua
-      [1] = {
-      	CurrentStartIndex = 1, -- This can vary depending on the page you input.
-      	TotalCount = 21, -- Always 21.
-      	Results = {
-      		-- All parameters here are pseudo. They can vary depending on the asset.
-      		[1] = {
-      			Name = "Asset Name",
-      			AssetId = 0000000,
-      			AssetVersionId = 0000000,
-      			CreatorName = "Roblox",
-          		}
-          		-- [2], [3], and so on... up to [21]
-          	}
-      }
-      ```
-
-      An example for iterating over this list has been provided at the bottom of
-      this page.
-
-      Additionally, if you would like to insert free `Class.Decal|Decals`, you
-      can use the `Class.InsertService:GetFreeDecals()` function.
+    description: ''
     code_samples:
       - InsertService-GetFreeModels1
     parameters:

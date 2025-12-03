@@ -30,27 +30,7 @@ methods:
   - name: BadgeService:AwardBadge
     summary: |
       Award a badge to a player given the ID of each.
-    description: |
-      Grants a `Class.Player` a badge with the `Class.Player.UserId|UserId` and
-      the badge ID. Rate limit: **50 + 35 \* [number of users] per minute**. In
-      order to successfully award a badge:
-
-      - The player must be presently connected to the game.
-      - The player must not already have the badge (note that a player may
-        delete an awarded badge from their profile and be awarded the badge
-        again).
-      - The badge must be awarded from a server-side `Class.Script` or a
-        `Class.ModuleScript` eventually required by a `Class.Script`, not from a
-        `Class.LocalScript`.
-      - The badge must be awarded in a place that is part of the game associated
-        with the badge.
-      - The badge must be enabled; check this using the `IsEnabled` property of
-        the badge fetched through `Class.BadgeService:GetBadgeInfoAsync()`.
-
-      See also:
-
-      - `Class.BadgeService:GetBadgeInfoAsync()`
-      - `Class.BadgeService:UserHasBadgeAsync()`
+    description: ''
     code_samples:
       - badges---awarding-a-badge
     parameters:

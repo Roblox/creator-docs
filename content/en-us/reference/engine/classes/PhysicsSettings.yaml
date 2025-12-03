@@ -140,12 +140,12 @@ properties:
       	</tr>
       	<tr>
       		<td bgcolor="#FF0000"></td>
-      		<td>Real Time Body</td>
+      		<td>Real-Time Body</td>
       		<td>Physics Body that is always simulated in real time, and is never throttled. Used for Humanoids.</td>
       	</tr>
       	<tr>
       		<td bgcolor="#00FF00"></td>
-      		<td>Free Fall Body</td>
+      		<td>Free-Fall Body</td>
       		<td>Physics Body that is freely moving with no physical contact.</td>
       	</tr>
       	<tr>
@@ -316,7 +316,7 @@ properties:
       	</tr>
       	<tr>
       		<td bgcolor="#CC6500"></td>
-      		<td>Real Time Contact</td>
+      		<td>Real-Time Contact</td>
       		<td>Contact point that was made with a real-time physics body. This applies to tripped <code>Class.Humanoid</code>.</td>
       	</tr>
       	<tr>

@@ -298,6 +298,18 @@ methods:
       - `TrimStartTime` / `TrimEndTime` &mdash; The start and end times for
         trimming video content.
 
+      Common Error Codes:
+
+      - **HTTP 403 (Forbidden)** &mdash; This error can occur when you call
+        `RegisterItemAsync` from Studio. Even if you run it as a server script
+        in Studio, the request is not issued from a Roblox server. To resolve
+        this, publish your experience and run it in the Roblox client.
+      - **HTTP 400 (Bad Request)** &mdash; This error indicates that a parameter
+        is malformed. A common cause is the `Attributes` table exceeding its
+        size limit. If you encounter a 400 error and have a large `Attributes`
+        table, try reducing its size. Remember to only include attributes that
+        are relevant for ranking.
+
       This function can only be called from the **server**.
     code_samples:
       - RegisterItemAsync-example

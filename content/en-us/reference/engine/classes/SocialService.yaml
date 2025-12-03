@@ -404,37 +404,7 @@ methods:
     capabilities: []
   - name: SocialService:PromptLinkSharing
     summary: ''
-    description: |
-      This call is restricted to server scripts. After a link is successfully
-      generated, the target player will either be prompted to open a share sheet
-      with the generated link, or the link will be copied directly to the
-      clipboard if share sheet functionality is not available to the player.
-
-      ```lua
-      local HttpService = game:GetService("HttpService")
-      local SocialService = game:GetService("SocialService")
-
-      local success, result  = pcall(function()
-      	local data = {
-          	promoCode = "j7du67"
-      	}
-
-      	local launchData = HttpService:JSONEncode(data)
-
-      	local LinkSharingOptions = {
-      		ExpirationSeconds = 20000,
-      		PreviewTitle = "Awesome Game",
-      		PreviewDescription = "Lets play together",
-      		LaunchData = launchData,
-      	}
-
-      	return SocialService:PromptLinkSharing(player, LinkSharingOptions)
-      end)
-
-      if not success or result ~= Enum.PromptLinkSharingResult.Success then
-      	warn("PromptLinkSharing failed:", tostring(result))
-      end
-      ```
+    description: ''
     code_samples: []
     parameters:
       - name: player
