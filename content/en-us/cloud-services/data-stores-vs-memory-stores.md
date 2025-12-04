@@ -71,6 +71,33 @@ Although memory stores store temporary data, they also support permanent feature
 </tbody>
 </table>
 
+## When to use configs
+
+[Configs](../production/configs.md) let you update in-game variables in real time without restarting servers. They are ideal for feature flags and any in-game values you hope to tune over time or [experiment](../production/experiments.md) with.
+
+- Configs are read-only from within an experience—you modify them on Creator Hub or in Roblox Studio—so they don't serve the same use cases as data stores and memory stores.
+- Changes to configs deploy over the course of five minutes; they're not instantaneous like data and memory stores.
+
+<table>
+<thead>
+  <td width="15%"></td>
+  <td width="50%">**Configs**</td>
+</thead>
+<tbody>
+  <tr>
+    <td>**Data type**</td>
+    <td>Numbers, strings, booleans, and JSON objects.</td>
+  </tr>
+  <tr>
+    <td rowspan="2">**Common use cases**</td>
+    <td>Enabling a new dungeon, disabling a limited-time game mode, starting a holiday event</td>
+  </tr>
+  <tr>
+    <td>Enemy health, weapon damage, item prices, experience multipliers, welcome messages</td>
+  </tr>
+</tbody>
+</table>
+
 ## When to use in-memory storage in Luau
 
 You can use in-memory storage in Luau to store temporary data that needs to be accessed with minimal latency and without the cost of making external service calls to data stores or memory stores. There are no extra steps required to set up in-memory storage as it's already built in by default in Lua.
