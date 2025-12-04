@@ -85,6 +85,7 @@ descendants:
   - Clouds
   - CollectionService
   - CommerceService
+  - CompositeValueCurve
   - ConfigService
   - Configuration
   - Constraint

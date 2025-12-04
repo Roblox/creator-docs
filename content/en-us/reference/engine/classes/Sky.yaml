@@ -70,6 +70,23 @@ properties:
       can_save: true
     capabilities:
       - Environment
+  - name: Sky.MoonTextureContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Environment
   - name: Sky.MoonTextureId
     summary: |
       The texture of the moon while using this skybox.
@@ -77,6 +94,23 @@ properties:
       The texture of the moon while using this skybox.
     code_samples: []
     type: ContentId
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Environment
+  - name: Sky.SkyboxBackContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
     tags: []
     deprecation_message: ''
     security:
@@ -127,6 +161,40 @@ properties:
       can_save: true
     capabilities:
       - Environment
+  - name: Sky.SkyboxDownContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Environment
+  - name: Sky.SkyboxFrontContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Environment
   - name: Sky.SkyboxFt
     summary: |
       Asset ID for the front surface of the skybox.
@@ -134,6 +202,23 @@ properties:
       Asset ID for the front surface of the skybox.
     code_samples: []
     type: ContentId
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Environment
+  - name: Sky.SkyboxLeftContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
     tags: []
     deprecation_message: ''
     security:
@@ -215,6 +300,23 @@ properties:
       can_save: true
     capabilities:
       - Environment
+  - name: Sky.SkyboxRightContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Environment
   - name: Sky.SkyboxRt
     summary: |
       Asset ID for the right surface of the skybox.
@@ -241,6 +343,23 @@ properties:
       Asset ID for the top surface of the skybox.
     code_samples: []
     type: ContentId
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Environment
+  - name: Sky.SkyboxUpContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
     tags: []
     deprecation_message: ''
     security:
@@ -280,6 +399,23 @@ properties:
       The perceived angular size of the sun while using this skybox, in degrees.
     code_samples: []
     type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Environment
+  - name: Sky.SunTextureContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
     tags: []
     deprecation_message: ''
     security:

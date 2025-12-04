@@ -600,6 +600,29 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: Workspace.NextGenerationReplication
+    summary: |
+      When `true`, enables an alternate replication system that alters and
+      improves how properties are replicated under the hood.
+    description: |
+      When `true`, enables an alternate replication system that alters and
+      improves how properties are replicated under the hood; note that when
+      `true`, you should not rely on the ordering of property replication and
+      remote events.
+    code_samples: []
+    type: RolloutState
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: Workspace.PathfindingUseImprovedSearch
     summary: ''
     description: ''
@@ -666,6 +689,28 @@ properties:
     description: ''
     code_samples: []
     type: PlayerCharacterDestroyBehavior
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Workspace.PlayerScriptsUseInputActionSystem
+    summary: |
+      Controls internal behavior of the built-in `Class.Player` scripts.
+    description: |
+      When `true`, updates the built-in `Class.Player` scripts to a new system
+      where they live under `Class.StarterPlayer`, use the
+      [Input Action System](../../../input/input-action-system.md), and allow
+      the server to process player inputs.
+    code_samples: []
+    type: RolloutState
     tags:
       - NotScriptable
     deprecation_message: ''
@@ -1019,6 +1064,33 @@ properties:
   - name: Workspace.TouchEventsUseCollisionGroups
     summary: ''
     description: ''
+    code_samples: []
+    type: RolloutState
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Workspace.UseFixedSimulation
+    summary: |
+      When `true`, enables `Class.RunService:BindToSimulation()` which calls a
+      function at a fixed frequency, updates physics stepping logic, and makes
+      the `Global.RobloxGlobals.time()` function return the fixed stepped frame
+      time.
+    description: |
+      When `true`, enables `Class.RunService:BindToSimulation()` which calls a
+      function at a fixed frequency. Also updates physics stepping logic such
+      that character controller updates and joint transforms are performed at a
+      fixed frequency rather than once per frame, as well as makes the
+      `Global.RobloxGlobals.time()` function return the fixed stepped frame
+      time.
     code_samples: []
     type: RolloutState
     tags:

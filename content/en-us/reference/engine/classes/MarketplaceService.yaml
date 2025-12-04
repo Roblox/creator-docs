@@ -814,9 +814,14 @@ methods:
     capabilities: []
   - name: MarketplaceService:RankProductsAsync
     summary: |
-      Takes a list of product IDs and returns a personalized ordered list of those products.
+      Takes a list of product IDs and returns a personalized ordered list of
+      those products.
     description: |
-      Takes a list of product IDs and returns a personalized ordered list of those products.
+      Takes a list of product IDs and returns a personalized ordered list of
+      those products.
+
+      This API has a client-side throttling limit of 10 requests per minute. If
+      you exceed this limit, wait 60 seconds and make the request again.
     code_samples:
       - MarketplaceService-RankProductsSample
     parameters:
@@ -824,32 +829,41 @@ methods:
         type: Array
         default:
         summary: |
-          An array of objects identifying the products you want to rank. This array can include up to 50 items.
+          An array of objects identifying the products you want to rank. This
+          array can include up to 50 items.
 
           Each `ProductIdentifier` has:
 
-          - `Enum.InfoType|InfoType`: Enum.InfoType
-              - Must be either `Enum.InfoType.GamePass` or `Enum.InfoType.Product`.
+          - `Enum.InfoType`: Enum.InfoType
+            - Must be either `Enum.InfoType.GamePass` or
+              `Enum.InfoType.Product`.
           - `Id`: number
-              - The ID of the game pass or developer product.
+            - The ID of the game pass or developer product.
 
           ```lua
           local ProductIdentifier = {
-            InfoType = Enum.InfoType.GamePass,
-            Id = 123456
+          	InfoType = Enum.InfoType.GamePass,
+          	Id = 123456
           }
           ```
     returns:
-      - type: Array
+      - type: ''
         summary: |
-          Returns the array of ranked items in a personalized order for the current user.
+          The array of ranked items in a personalized order for the current
+          user.
 
           Each array has:
 
           - `ProductIdentifier`
-              - The corresponding ID from the input array.
+      - type: ''
+        summary: |
+          The corresponding ID from the input array.
+
           - `ProductInfo`
-              - The standard product info dictionary returned by `Class.MarketplaceService.GetProductInfo|GetProductInfo`.
+      - type: ''
+        summary: |
+          The standard product info dictionary returned by
+          `Class.MarketplaceService.GetProductInfo|GetProductInfo`.
     tags:
       - Yields
     deprecation_message: ''
@@ -858,9 +872,16 @@ methods:
     capabilities: []
   - name: MarketplaceService:RecommendTopProductsAsync
     summary: |
-      Takes an array of `Enum.InfoType` and returns up to 50 items representing the products a user is most likely to engage with and purchase.
+      - Takes an array of `Enum.InfoType` and returns up to 50 items
+        representing the products a user is most likely to engage with and
+        purchase.
     description: |
-      Takes an array of `Enum.InfoType` and returns up to 50 items representing the products a user is most likely to engage with and purchase.
+      Takes an array of `Enum.InfoType` and returns up to 50 items representing
+      the products a user is most likely to engage with and purchase. If no
+      recommendations can be determined, the method returns an empty list.
+
+      This API has a client-side throttling limit of 5 requests per minute. If
+      you exceed this limit, wait 60 seconds and make the request again.
     code_samples:
       - MarketplaceService-RecommendTopProductsSample
     parameters:
@@ -868,22 +889,24 @@ methods:
         type: Array
         default:
         summary: |
-          An array of `Enum.InfoType` values specifying the types of product to retrieve recommendations for.
+          An array of `Enum.InfoType` values specifying the types of product to
+          retrieve recommendations for.
 
-          Supported `InfoTypes`:  `Enum.InfoType.GamePass`, `Enum.InfoType.Product`.
+          Supported `InfoTypes`: `Enum.InfoType.GamePass`,
+          `Enum.InfoType.Product`.
 
           ```lua
           local infoTypes = {
-            Enum.InfoType.GamePass,
-            Enum.InfoType.Product
+          	Enum.InfoType.GamePass,
+          	Enum.InfoType.Product
           }
           ```
     returns:
       - type: Array
         summary: |
-          Returns a ranked list of up to 50 items the user is most likely to engage with, based on the provided `InfoTypes`.
-          
-          If no recommendations can be determined, the method returns an empty list.
+          A ranked list of up to 50 items the user is most likely to engage
+          with, based on the provided `InfoTypes`. If no recommendations can be
+          determined, the method returns an empty list.
     tags:
       - Yields
     deprecation_message: ''

@@ -570,6 +570,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/CommerceService.yaml
                 ignoreTranslation: true
+              - title: CompositeValueCurve
+                path: /reference/engine/classes/CompositeValueCurve
+                type: engineapi
+                source: /reference/engine/classes/CompositeValueCurve.yaml
+                ignoreTranslation: true
               - title: ConfigService
                 path: /reference/engine/classes/ConfigService
                 type: engineapi

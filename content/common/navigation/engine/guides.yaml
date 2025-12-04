@@ -271,6 +271,8 @@ navigation:
         path: /characters/
       - title: Appearance
         path: /characters/appearance
+      - title: Adaptive Animation
+        path: /characters/adaptive-animation
       - title: Emotes
         path: /characters/emotes
       - title: Pathfinding
