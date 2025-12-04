@@ -246,6 +246,10 @@ end
 
 ### Display your top passes
 
+<Alert severity="info">
+If your experience has had no item sales in the past 28 days, `RecommendTopProductsAsync` returns an empty list. At least one purchase within the last 28 days is required for this API to generate recommendations.
+</Alert>
+
 `Class.MarketplaceService.RecommendTopProductsAsync|RecommendTopProductsAsync` takes an array of `Enum.InfoType|InfoType` values and returns up to 50 items a user is most likely to engage with and purchase. You can use this method to create a "Top Picks" section in your in-experience store.
 
 If no recommendations can be determined, `RecommendTopProductsAsync` returns 0 items. Any passes that the user already owns are also not returned.

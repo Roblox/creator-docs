@@ -14,7 +14,7 @@ deprecation_message: ''
 items:
   - name: Server
     summary: |
-      Server authority with client side prediction and rollback is enabled.
+      Server authority with client side prediction and rollback enabled.
     value: 0
     tags: []
     deprecation_message: ''

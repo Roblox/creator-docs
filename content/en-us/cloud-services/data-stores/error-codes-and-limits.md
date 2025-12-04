@@ -378,9 +378,14 @@ Each queue has a limit of 30 requests. When the limit of a queue is reached, req
   </table>
 </TabItem>
 <TabItem label="Future experience limits">
-  The server limits will be replaced by experience-level limits starting in 2026.
 
-Each experience is allowed a certain number of data store requests based on the data store type, request type, and number of concurrent users. For each data store type and request type, the limit is shared among all listed functions.
+  <Alert severity="info">
+  Server limits will be replaced by experience-level limits starting in 2026.
+  </Alert>
+
+  Each experience is allowed a certain number of data store requests based on the data store type, request type, and number of concurrent users. For each data store type and request type, the limit is shared among all listed functions.
+  
+  Note that `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` will consume from both the read and write request limits.
 
   <h5>Standard data stores</h5>
 
@@ -395,7 +400,7 @@ Each experience is allowed a certain number of data store requests based on the 
   <tbody>
     <tr>
       <td><b>Read</b></td>
-      <td>`Class.DataStore:GetAsync()|GetAsync()`<br></br>`Class.DataStore:GetVersionAsync()|GetVersionAsync()`<br></br>`Class.DataStore:GetVersionAtTimeAsync()|GetVersionAtTimeAsync()`</td>
+      <td>`Class.DataStore:GetAsync()|GetAsync()`<br></br>`Class.DataStore:GetVersionAsync()|GetVersionAsync()`<br></br>`Class.DataStore:GetVersionAtTimeAsync()|GetVersionAtTimeAsync()`<br></br>`Class.DataStore:UpdateAsync()|UpdateAsync()`</td>
       <td>250 + concurrentUsers × 40</td>
     </tr>
     <tr>
@@ -434,7 +439,7 @@ Each experience is allowed a certain number of data store requests based on the 
   <tbody>
     <tr>
       <td><b>Read</b></td>
-      <td>`Class.OrderedDataStore:GetAsync()|GetAsync()`</td>
+      <td>`Class.OrderedDataStore:GetAsync()|GetAsync()`<br></br>`Class.OrderedDataStore:UpdateAsync()|UpdateAsync()`</td>
       <td>250 + concurrentUsers × 40</td>
     </tr>
     <tr>

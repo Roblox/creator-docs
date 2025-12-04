@@ -337,7 +337,13 @@ end
 
 ### Display your top developer products
 
+<Alert severity="info">
+If your experience has had no item sales in the past 28 days, `RecommendTopProductsAsync` returns an empty list. At least one purchase within the last 28 days is required for this API to generate recommendations.
+</Alert>
+
 `Class.MarketplaceService.RecommendTopProductsAsync|RecommendTopProductsAsync` takes an array of `Enum.InfoType|InfoType` values and returns up to 50 items a user is most likely to engage with and purchase. You can use this method to create a "Top Picks" section in your in-experience store.
+
+If no recommendations can be determined, `RecommendTopProductsAsync` returns 0 items.
 
 	<figcaption>Example: A "Top Picks" tab in an in-experience store</figcaption>
   <img src="../../assets/monetization/developer-products/StoreTopPicks.png" alt="Top Picks tab of an in-experience store." width="90%" />
