@@ -694,8 +694,7 @@ methods:
   - name: TestService:Run
     summary: |
       Runs scripts which are parented to TestService.
-    description: |
-      Runs scripts which are parented to TestService.
+    description: ''
     code_samples: []
     parameters: []
     returns:

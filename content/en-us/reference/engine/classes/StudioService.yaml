@@ -370,14 +370,7 @@ methods:
     summary: |
       Prompts the current Studio user to select one file to add as a
       `Class.File`.
-    description: |
-      This function prompts the current Studio user to select one file, which
-      will then be loaded as a `Class.File`.
-
-      See also:
-
-      - `Class.StudioService:PromptImportFiles()`, the same function but for
-        loading a list of files instead of a single file
+    description: ''
     code_samples: []
     parameters:
       - name: fileTypeFilter
@@ -404,16 +397,7 @@ methods:
     summary: |
       Prompts the current Studio user to select files to add as
       `Class.File|Files`.
-    description: |
-      This function prompts the current Studio user to select one or more files,
-      which will then be loaded as `Class.File|Files`.
-
-      Throws an error if the fileTypeFilter was an empty list.
-
-      See also:
-
-      - `Class.StudioService:PromptImportFile()`, the same function but for
-        loading a single file instead of a list of files
+    description: ''
     code_samples: []
     parameters:
       - name: fileTypeFilter

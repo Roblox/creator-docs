@@ -34,9 +34,13 @@ When reviewing charts or filtering:
 - Similarly, P10 refers to the 10th percentile. If P10 server heartbeat is 40, then 10% of servers are running at or below 40 FPS.
 - P50 is the median. Half of all values fall above it, half below.
 
-<Alert severity="info">
-Percentile values are calculated smallest to largest, so for metrics where lower numbers are better (e.g. server CPU time), P10 represents the "best case" and P90 the "worst case" rather than the other way around.
-</Alert>
+To help identify the source of a regression, you can break down all client performance metrics by **Place Version** and compare your latest update against previous versions.
+
+To filter by place version, select **Place Version** in the **Breakdown by** drop-down menu. The charts will automatically update to show your newest version alongside all earlier versions. You can also use the main filter menu to isolate the newest place version across the entire dashboard.
+
+With this breakdown, you can quickly see whether your latest release has changes such as lower frame rates or an increase in out-of-memory exits compared to earlier versions.
+
+<img src="../../assets/analytics/performance/perf-place-version-filter.png" alt="A view of the Break Down by Version Filter menu."  />
 
 ## Client charts
 
@@ -64,7 +68,15 @@ The **Client** tab includes the following charts, all of which are broken down b
         </tr>
         <tr>
             <td>Client crash rate</td>
-            <td>Line graph showing client crash rate by device type. Spikes in crash rate, particularly following an update to the experience, often indicate an issue.</td>
+            <td>Line graph showing client crashes, divided by ended sessions by device type. Spikes in crash rate, particularly following an update to the experience, often indicate an issue.</td>
+        </tr>
+        <tr>
+            <td>Unexpected out-of-memory exits</td>
+            <td>Line graph showing how often users crash due to out-of-memory errors, or exit via low memory warning. While this chart might not cover all out-of-memory crashes due to telemetry limitations, it is directionally accurate. A spike after an update indicates a regression in memory usage that causes your users to crash.</td>
+        </tr>
+        <tr>
+            <td>Client crash count</td>
+            <td>Line graph showing the crash rate count by device type. If you have noisy crash rate data due to low sample size, we recommend monitoring the crash rate count as well.</td>
         </tr>
         <tr>
             <td>Client memory usage</td>
@@ -76,6 +88,14 @@ The **Client** tab includes the following charts, all of which are broken down b
         </tr>
     </tbody>
 </table>
+
+### How to analyze client crash rate
+
+Client crash rate measures the number of crashes divided by the number of ended sessions. When the number of ended sessions is low, crash rate breakdowns can become unstable. In these cases, the chart will show a dashed line instead of a solid line, indicating that the data point is noisy and that the crash rate might vary. If you see a dashed line on your chart, we recommend checking the total crash count instead of the client crash rate.
+
+<img src="../../assets/analytics/performance/perf-client-crashes.png" alt="A view of the client crashes dashboard."  />
+
+If you have memory issues, check out the [Performance optimization guide](../../performance-optimization/index.md).
 
 ## Server charts
 
@@ -149,3 +169,49 @@ If you spot a potential problem, use the following steps to remediate and fix it
    - The [MicroProfiler](../../performance-optimization/microprofiler/index.md) for viewing unoptimized portions of your experience visually.
 
 4. Gather user feedback from your community.
+
+## Client API calls after join
+
+<Alert severity="info">
+This metric is only available for experiences with an extremely high number of daily active users (DAU), typically five million or more.
+</Alert>
+
+The **Client API Calls in First 60s After Join** metric measures the total number of requests (API calls) your experience makes to Roblox services during the critical first minute after a user successfully joins.
+
+These calls happen automatically for every user who joins, so monitoring this metric can help you understand load-time efficiency and backend performance.
+
+### Access the metric
+
+1. Navigate to your experience overview on the Creator Hub.
+2. On the **Snapshot** graph, click **Explore**.
+3. In the **Select a metric** dropdown, choose **Client API Calls in First 60s After Join**.
+
+![Graph of the client API calls metric](../../assets/analytics/performance/client-api-calls.png)
+
+### Monitor the metric
+
+The primary goal during the first 60 seconds of a game join is to stream and load your experience's assets (meshes, images, sounds, etc.). Ideally, the asset delivery service is the most-called API during this key time span.
+
+The metric is updated hourly so that you can quickly check it after publishing a new version of your experience.
+
+<table>
+    <thead>
+        <tr>
+            <td>Condition</td>
+            <td>Implication</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Asset delivery is the most-hit API.</td>
+            <td><strong>Efficient.</strong> Your experience is correctly prioritizing the loading of necessary assets.</td>
+            <td>Continue monitoring.</td>
+        </tr>
+        <tr>
+            <td>A different service (e.g. inventory, friends, or users) is the most-hit API.</td>
+            <td><strong>Potential inefficiency or bug.</strong> Your experience is executing heavy, non-critical API calls too early in the join sequence, potentially delaying the load process.</td>
+            <td>Investigate and refactor the scripts that execute during the initial join to prioritize asset loading.</td>
+        </tr>
+    </tbody>
+</table>

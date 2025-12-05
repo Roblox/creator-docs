@@ -137,7 +137,7 @@ properties:
       Font used to render text in the channel tabs. Default is
       `Enum.Font.BuilderSansBold`.
     code_samples: []
-    type: Font
+    type: Datatype.Font
     tags: []
     deprecation_message: ''
     security:

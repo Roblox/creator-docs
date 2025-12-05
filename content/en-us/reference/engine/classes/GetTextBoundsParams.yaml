@@ -29,7 +29,7 @@ properties:
       Not to be confused with `Enum.Font`. This is an object that you can create
       using `Datatype.Font.new()`.
     code_samples: []
-    type: Font
+    type: Datatype.Font
     tags: []
     deprecation_message: ''
     security:

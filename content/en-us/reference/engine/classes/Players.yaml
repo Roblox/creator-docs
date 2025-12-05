@@ -496,10 +496,7 @@ methods:
     summary: |
       Returns a character `Class.Model` equipped with everything specified in
       the passed in `Class.HumanoidDescription`.
-    description: |
-      Returns a character `Class.Model` equipped with everything specified in
-      the passed in `Class.HumanoidDescription`, and is R6 or R15 as specified
-      by `rigType`.
+    description: ''
     code_samples:
       - create-humanoid-model-from-description
     parameters:
@@ -534,10 +531,7 @@ methods:
     summary: |
       Returns a character Model set-up with everything equipped to match the
       avatar of the user specified by the passed in userId.
-    description: |
-      Returns a character Model set-up with everything equipped to match the
-      avatar of the user specified by the passed in userId. This includes
-      whether that character is currently R6 or R15.
+    description: ''
     code_samples:
       - create-humanoid-model-from-userid
     parameters:
@@ -809,11 +803,7 @@ methods:
     summary: |
       Returns the HumanoidDescription for a specified outfit, which will be set
       with the parts/colors/Animations etc of the outfit.
-    description: |
-      Returns the HumanoidDescription for a specified outfitId, which will be
-      set with the parts/colors/Animations etc of the outfit. An outfit can be
-      one created by a user, or it can be the outfit for a bundle created by
-      Roblox.
+    description: ''
     code_samples:
       - get-humanoiddescription-from-outfitid
     parameters:
@@ -839,10 +829,7 @@ methods:
     summary: |
       Returns a HumanoidDescription which specifies everything equipped for the
       avatar of the user specified by the passed in userId.
-    description: |
-      Returns a HumanoidDescription which specifies everything equipped for the
-      avatar of the user specified by the passed in userId. Also includes scales
-      and body colors.
+    description: ''
     code_samples:
       - get-humanoiddescription-from-userid
     parameters:

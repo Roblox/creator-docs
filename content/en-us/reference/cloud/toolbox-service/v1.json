@@ -611,6 +611,11 @@
             "description": "The time the asset was last updated.",
             "format": "date-time",
             "nullable": true
+          },
+          "categoryPath": {
+            "type": "string",
+            "description": "Category Path of the asset, if it exists.\r\ne.g. \"3d__characters\"",
+            "nullable": true
           }
         },
         "additionalProperties": false,

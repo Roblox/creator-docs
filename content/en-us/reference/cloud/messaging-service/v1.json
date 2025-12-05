@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Messaging Service",
-    "description": "This page contains reference documentation for the Open Cloud v1 Messaging Service API, which can broadcast messages across all servers in your experience.\n\nThe v2 API has its own version of the [Publish Message](/cloud/reference/Universe#Cloud_PublishUniverseMessage) method. For information on using the v2 method, see the [Messaging usage guide](../../../cloud/guides/usage-messaging.md).",
+    "description": "This page contains reference documentation for the Open Cloud v1 Messaging Service API, which can broadcast messages across all servers in your experience.\n\nThe v2 API has its own version of the [Publish Message](/cloud/reference/Universe#Cloud_PublishUniverseMessage) method. For information on using the v2 method, see the [Messaging usage guide](/cloud/guides/usage-messaging.md).",
     "version": "v1",
     "x-roblox-extensions-version": "1.0.0"
   },
@@ -18,13 +18,13 @@
         "operationId": "CrossServerMessaging_Publish",
         "x-roblox-cloud-api-operation-name": "Publish a Message",
         "x-roblox-stability": "BETA",
-        "description": "Publish a message to a pre-defined topic of an experience, with the size of the message up to 1,024 characters (1 KB). Requires the **Publish** permission for API keys and the **universe-messaging-service:publish** scope for OAuth 2.0 apps. See [Cross-server messaging](../../../cloud-services/cross-server-messaging.md#subscribe-users-to-receive-messages) for defining and subscribing users to a topic.",
+        "description": "Publish a message to a pre-defined topic of an experience, with the size of the message up to 1,024 characters (1 KB). Requires the **Publish** permission for API keys and the **universe-messaging-service:publish** scope for OAuth 2.0 apps. See [Cross-server messaging](/cloud-services/cross-server-messaging.md#subscribe-users-to-receive-messages) for defining and subscribing users to a topic.",
         "parameters": [
           {
             "name": "universeId",
             "in": "path",
             "required": true,
-            "description": "The identifier of the experience in which you want to send your messages to. You can [copy your experience's Universe ID](../../../cloud/guides/usage-messaging.md#publishing-messages-to-live-servers) on **Creator Dashboard**.",
+            "description": "The identifier of the experience in which you want to send your messages to. You can [copy your experience's Universe ID](/cloud/guides/usage-messaging.md#publishing-messages-to-live-servers) on **Creator Dashboard**.",
             "schema": {
               "type": "integer",
               "format": "int64"

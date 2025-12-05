@@ -58,6 +58,11 @@ To use data for matchmaking that Roblox doesn't automatically include in its def
     <td>Numerical</td>
     <td>The number of players in a server.</td>
   </tr>
+  <tr>
+    <td>**Player Text Chat Group**</td>
+    <td>Categorical</td>
+    <td>The player's text chat group where they can text chat together.</td>
+  </tr>
 </tbody>
 </table>
 
@@ -104,6 +109,10 @@ The following are Roblox-defined signals derived based on Roblox attributes:
   <tr>
     <td>[**Voice Chat**](#voice-chat)</td>
     <td>The ratio of players in the server with voice chat enabled.</td>
+  </tr>
+  <tr>
+    <td>[**Text Chat**](#text-chat)</td>
+    <td>The ratio of players in the server who can text chat with the joining player together.</td>
   </tr>
 </tbody>
 </table>
@@ -167,6 +176,12 @@ A player can have voice chat enabled or disabled. The Voice Chat signal is a cat
 If a place has voice chat disabled, the Voice Chat signal's weight is 0.
 
 $\text{voiceChatSignalScore} = \text{\# players with same voice chat setting as joining player} / \text{\# players on the server}$
+
+### Text Chat
+
+A categorical signal that measures the ratio of players on the server who can text chat with the joining player together in common.
+
+$\text{textChatSignalScore} = \text{\# players can text with the joining player in common } / \text{\# players on the server}$
 
 ## Custom attributes
 

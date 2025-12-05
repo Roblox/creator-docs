@@ -6,9 +6,9 @@ name: TextChatMessage
 type: class
 memory_category: Instances
 summary: |
-  Immutable data object representing a text chat message.
+  A data object representing a text chat message.
 description: |
-  Immutable data object representing a text chat message.
+  A data object representing a text chat message.
 
   To learn more about using TextChatMessages, see
   [In-Experience Text Chat](../../../chat/in-experience-text-chat.md).

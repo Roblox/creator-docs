@@ -1,15 +1,17 @@
 ---
-title: Frequently asked questions
-description: Frequently asked questions about IP licensing tools.
+title: FAQ and guidelines
+description: Frequently asked questions and guidelines about IP licensing tools.
 ---
+
+## Frequently asked questions
 
 <dl>
   <dt>**What are copyrights and trademarks?**</dt>
   <dd><p />
-    Copyrights and trademarks are types of IP:
+    Copyrights and trademarks are types of IP.
 
-    - Copyright: Protects original works of authorship like stories, music, art, movies, TV shows, etc.
-    - Trademark: Protects something that functions as a way to identify a company's products or services, like product names ("Nike", "Coca-Cola"), logos, slogans, and even certain sounds.
+    - A copyright protects original works of authorship like stories, music, art, movies, TV shows, etc.
+    - A trademark protects something that functions as a way to identify a company's products or services, like product names ("Nike", "Coca-Cola"), logos, slogans, and even certain sounds.
   <p /></dd><br />
 
   <dt>**What information is shared with IP owners if I apply for a license?**</dt>
@@ -88,3 +90,13 @@ description: Frequently asked questions about IP licensing tools.
     During that time, you should work to remove the IP from your experience or take down the experience entirely. Following the notice period, the terms and any revenue share will immediately be removed from the experience.
   <p /></dd><br />
 </dl>
+
+## Communication guidelines
+
+Whether you're an IP holder communicating with a creator or a creator communicating with an IP holder, you must follow these communication guidelines to prevent your message from being moderated:
+
+- Do not attempt to negotiate or discuss licensing terms
+- Do not request financial or personal information
+- Do not use foul or harmful language
+- Do not use legal or threatening language that could be considered harassing for a 13+ audience
+- Do not make requests to connect with the creator or IP holder outside of Roblox

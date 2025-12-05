@@ -1,0 +1,64 @@
+navigation:
+  - heading: Monetize
+  - title: Overview
+    path: /monetize-experiences
+  - title: Earn
+    path: /production/monetization/
+    section:
+      - title: Creator Rewards
+        path: /creator-rewards
+      - title: Private servers
+        path: /production/monetization/private-servers
+      - title: Subscriptions
+        path: /production/monetization/subscriptions
+      - title: Passes
+        path: /production/monetization/game-passes
+      - title: Developer products
+        path: /production/monetization/developer-products
+      - title: Commerce products
+        path: /production/monetization/commerce-products
+      - title: Paid access in Robux
+        path: /production/monetization/paid-access-robux
+      - title: Paid access in local currency
+        path: /production/monetization/paid-access-local-currency
+      - title: Price optimization
+        path: /production/monetization/price-optimization
+      - title: Regional Pricing
+        path: /production/monetization/regional-pricing
+
+  - title: License
+    path: /ip-licensing/
+    section:
+      - title: Tools for IP holders
+        path: /ip-licensing/get-started
+        section:
+          - title: Get started
+            path: /ip-licensing/get-started
+          - title: License Manager
+            path: /ip-licensing/license-manager
+          - title: Rights Manager
+            path: /production/publishing/rights-manager
+      - title: IP licensing for creators
+        path: /ip-licensing/creators
+      - title: FAQ and guidelines
+        path: /ip-licensing/faq
+      - title: Glossary
+        path: /ip-licensing/glossary
+
+  - title: Advertise
+    path: /production/promotion/ads-manager
+    section:
+      - title: Ads Manager
+        path: /production/promotion/ads-manager
+      - title: Reporting and billing
+        path: /production/promotion/reporting-and-billing
+      - title: Roblox-served ads vs. independent ads
+        path: /production/promotion/advertise-on-roblox
+      - title: Immersive ads
+        path: /production/monetization/immersive-ads
+      - title: Rewarded video ads
+        path: /production/promotion/rewarded-video-ads
+      - title: Search ads
+        path: /production/promotion/search-ads
+      - title: Advertising standards
+        path: /production/promotion/comply-with-advertising-standards

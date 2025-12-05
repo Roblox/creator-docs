@@ -160,7 +160,7 @@ After you specify its intensity, you must also specify how often the violence oc
 
 **Question 1: Does this experience depict any blood?**
 
-Blood is the red liquid that flows through human and animal bodies that's essential to life.  If your experience includes blood, including within any [asset type](../../projects/assets/index.md#asset-types), you must disclose it within the Maturity & Compliance Questionnaire.
+Blood is the red liquid that flows through human and animal bodies that's essential to life. If your experience includes blood, including within any [asset type](../../projects/assets/index.md#asset-types), you must disclose it within the Maturity & Compliance Questionnaire.
 
 **Question 2: How realistic is the blood?**
 

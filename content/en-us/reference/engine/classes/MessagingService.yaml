@@ -19,7 +19,8 @@ description: |
   [Cross-Server Messaging](../../../cloud-services/cross-server-messaging.md)
   explores how to communicate between servers in greater detail.
 
-  If you want to publish ad-hoc messages to live game servers, you can use the
+  If you want to publish ad-hoc messages to live game servers, or publish across
+  experiences, you can use the
   [Open Cloud APIs](../../../cloud/guides/usage-messaging.md).
 
   #### Limitations

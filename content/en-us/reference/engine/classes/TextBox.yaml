@@ -162,7 +162,7 @@ properties:
     code_samples:
       - Cycle-Font
       - Show-All-Fonts
-    type: Font
+    type: Enum.Font
     tags:
       - Hidden
       - NotReplicated
@@ -188,7 +188,7 @@ properties:
       setting FontFace, the Font is set to the corresponding enum value, or to
       `Enum.Font.Unknown` if there are no matches.
     code_samples: []
-    type: Font
+    type: Datatype.Font
     tags: []
     deprecation_message: ''
     security:

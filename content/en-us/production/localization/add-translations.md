@@ -74,7 +74,7 @@ You can modify experience information, such as the name, description, icon, and 
 2. In the **Target Languages** menu on the left, select the target language you want to add a translation to.
 3. Select the **Information** tab at the top of the page.
 
-   1. For Name and Description fields, input the desired translation and click **Save**.
+   1. For Name and Description fields, input the desired translation and click **Save**. Note that if you save an empty string here, it will be saved as a manual edit signaling that the text should not be translated. In this case, users in the target language will see the source string.
 
       <img src="../../assets/localization/Portal-Adding-Information.png" width="100%"
       />

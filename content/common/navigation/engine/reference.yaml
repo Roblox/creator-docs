@@ -570,6 +570,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/CommerceService.yaml
                 ignoreTranslation: true
+              - title: CompositeValueCurve
+                path: /reference/engine/classes/CompositeValueCurve
+                type: engineapi
+                source: /reference/engine/classes/CompositeValueCurve.yaml
+                ignoreTranslation: true
               - title: ConfigService
                 path: /reference/engine/classes/ConfigService
                 type: engineapi
@@ -2727,6 +2732,11 @@ navigation:
                 path: /reference/engine/classes/StudioService
                 type: engineapi
                 source: /reference/engine/classes/StudioService.yaml
+                ignoreTranslation: true
+              - title: StudioTestService
+                path: /reference/engine/classes/StudioTestService
+                type: engineapi
+                source: /reference/engine/classes/StudioTestService.yaml
                 ignoreTranslation: true
               - title: StudioTheme
                 path: /reference/engine/classes/StudioTheme
@@ -5076,6 +5086,16 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/PositionAlignmentMode.yaml
         ignoreTranslation: true
+      - title: PredictionMode
+        path: /reference/engine/enums/PredictionMode
+        type: engineapi
+        source: /reference/engine/enums/PredictionMode.yaml
+        ignoreTranslation: true
+      - title: PredictionStatus
+        path: /reference/engine/enums/PredictionStatus
+        type: engineapi
+        source: /reference/engine/enums/PredictionStatus.yaml
+        ignoreTranslation: true
       - title: PreferredInput
         path: /reference/engine/enums/PreferredInput
         type: engineapi
@@ -5470,6 +5490,11 @@ navigation:
         path: /reference/engine/enums/Status
         type: engineapi
         source: /reference/engine/enums/Status.yaml
+        ignoreTranslation: true
+      - title: StepFrequency
+        path: /reference/engine/enums/StepFrequency
+        type: engineapi
+        source: /reference/engine/enums/StepFrequency.yaml
         ignoreTranslation: true
       - title: StreamingIntegrityMode
         path: /reference/engine/enums/StreamingIntegrityMode

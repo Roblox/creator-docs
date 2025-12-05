@@ -94,7 +94,7 @@ if success and productInfo then
 end
 ```
 
-Use `Class.MarketplaceService:PromptPurchase()|PromptPurchase()` to prompt a pass purchase if the user doesn't already have the pass in their inventory. You can call this function when a user performs actions like pressing a button or talking to a vendor NPC.
+Use `Class.MarketplaceService:PromptGamePassPurchase()|PromptGamePassPurchase()` to prompt a pass purchase if the user doesn't already have the pass in their inventory. You can call this function when a user performs actions like pressing a button or talking to a vendor NPC.
 
 ```lua
 local MarketplaceService = game:GetService("MarketplaceService")
@@ -126,7 +126,7 @@ local function promptPurchase()
 end
 ```
 
-Use `Class.MarketplaceService:PromptGamePassPurchaseFinished()|PromptGamePassPurchaseFinished()` to handle a completed pass prompt and purchase and assign the user the privileges associated with the pass.
+Use `Class.MarketplaceService.PromptGamePassPurchaseFinished|PromptGamePassPurchaseFinished` to handle a completed pass prompt and purchase and assign the user the privileges associated with the pass.
 
 Place the script inside the `Class.ServerScriptService` so that the server handles the user's pass privileges.
 
@@ -149,7 +149,7 @@ MarketplaceService.PromptGamePassPurchaseFinished:Connect(onPromptPurchaseFinish
 ```
 
 <Alert severity="warning">
-Although Roblox itself does **not** record the purchase history of developer products by specific users, you can request to [download sales data](../../production/analytics/analytics-dashboard.md#sales-data). If you want to track user-specific purchase history, it's your responsibility to [store the data](../../cloud-services/data-stores/index.md).
+Although Roblox itself does **not** record the purchase history of passes by specific users, you can request to [download sales data](../../production/analytics/analytics-dashboard.md#sales-data). If you want to track user-specific purchase history, it's your responsibility to [store the data](../../cloud-services/data-stores/index.md).
 </Alert>
 
 ### Outside your experience
@@ -199,6 +199,87 @@ end
 
 -- Connect PlayerAdded events to the function
 Players.PlayerAdded:Connect(onPlayerAdded)
+```
+
+## Personalize your in-experience store
+
+You can use product intelligence APIs to sort and recommend passes to users. Personalizing your in-experience store helps surface the most relevant items to each user, boosting engagement and revenue. By tailoring passes to user preferences, you can improve their discovery, increase conversion rates, and unlock new monetization opportunities.
+
+### Rank passes for sale
+
+`Class.MarketplaceService.RankProductsAsync|RankProductsAsync` takes in a list of product IDs and returns a personalized ordered list of those products. You can use this method to provide your users with personalized item recommendations in your in-experience store.
+
+<Alert severity="warning">
+Because `RankProductsAsync` has a strict rate limit, you should load recommendations once at game join instead of calling it repeatedly.
+</Alert>
+
+	<figcaption>Example: Three "Powers" items ranked for the user</figcaption>
+  <img src="../../assets/monetization/developer-products/RankedItems.png" alt="Three items ranked for the user." width="80%" />
+
+```lua
+local MarketplaceService = game:GetService("MarketplaceService")
+
+-- Create an array of products you want to rank
+local productIdentifiers = {
+    {InfoType = Enum.InfoType.GamePass, Id = 123},
+    {InfoType = Enum.InfoType.Product, Id = 456},
+    {InfoType = Enum.InfoType.Product, Id = 789}
+}
+
+-- Make a protected call to handle errors
+local success, rankedProducts = pcall(function()
+    return MarketplaceService:RankProductsAsync(productIdentifiers)
+end)
+
+if not success then
+    error("Failed to rank products")
+end
+
+-- Load the returned items into the store
+for i, rankedItem in ipairs(rankedProducts) do
+    local productIdentifier = rankedItem.ProductIdentifier
+    local productInfo = rankedItem.ProductInfo
+    -- ...
+    -- Logic to add products into store
+end
+```
+
+### Display your top passes
+
+<Alert severity="info">
+If your experience has had no item sales in the past 28 days, `RecommendTopProductsAsync` returns an empty list. At least one purchase within the last 28 days is required for this API to generate recommendations.
+</Alert>
+
+`Class.MarketplaceService.RecommendTopProductsAsync|RecommendTopProductsAsync` takes an array of `Enum.InfoType|InfoType` values and returns up to 50 items a user is most likely to engage with and purchase. You can use this method to create a "Top Picks" section in your in-experience store.
+
+If no recommendations can be determined, `RecommendTopProductsAsync` returns 0 items. Any passes that the user already owns are also not returned.
+
+	<figcaption>Example: A "Top Picks" tab in an in-experience store</figcaption>
+  <img src="../../assets/monetization/developer-products/StoreTopPicks.png" alt="Top Picks tab of an in-experience store." width="90%" />
+
+```lua
+local MarketplaceService = game:GetService("MarketplaceService")
+
+-- Create an array of product types you want to include in the recommendations -- This example includes both passes and developer products
+local productTypes = {Enum.InfoType.GamePass, Enum.InfoType.Product}
+
+-- Make a protected call to handle errors
+local success, topRankedItems = pcall(function()
+    return MarketplaceService:RecommendTopProductsAsync(productTypes)
+end)
+
+if not success then
+    error("Failed to rank products")
+end
+
+-- Load the returned items into the store
+-- Make sure to filter out any ineligible items from topRankedItems such as passes the user can no longer purchase
+for i, rankedItem in ipairs(topRankedItems) do
+    local productIdentifier = rankedItem.ProductIdentifier
+    local productInfo = rankedItem.ProductInfo
+    -- ...
+    -- Logic to add products into store
+end
 ```
 
 ## Promote a pass

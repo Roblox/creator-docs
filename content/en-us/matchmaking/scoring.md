@@ -205,10 +205,14 @@ The Roblox default configuration includes the following signals and weights:
 <tbody>
   <tr>
     <td>Friends</td>
-    <td>10</td>
+    <td>15</td>
   </tr>
   <tr>
     <td>Latency</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Text Chat</td>
     <td>3</td>
   </tr>
   <tr>
@@ -220,11 +224,11 @@ The Roblox default configuration includes the following signals and weights:
     <td>2</td>
   </tr>
   <tr>
-    <td>Age</td>
-    <td>1</td>
+    <td>Language</td>
+    <td>2</td>
   </tr>
   <tr>
-    <td>Language</td>
+    <td>Age</td>
     <td>1</td>
   </tr>
   <tr>

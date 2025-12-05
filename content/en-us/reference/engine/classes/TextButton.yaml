@@ -92,7 +92,7 @@ properties:
       `Class.TextButton.FontFace|FontFace` property.
     code_samples:
       - Show-All-Fonts
-    type: Font
+    type: Enum.Font
     tags:
       - Hidden
       - NotReplicated
@@ -119,7 +119,7 @@ properties:
       font is set to the corresponding `Enum.Font` value or to
       `Enum.Font.Unknown` if there are no matches.
     code_samples: []
-    type: Font
+    type: Datatype.Font
     tags: []
     deprecation_message: ''
     security:

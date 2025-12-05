@@ -563,8 +563,11 @@ methods:
 
       ##### Limitations
 
-      The current limitation for sending and receiving HTTP requests is 500
-      requests per minute. Requests over this threshold will fail.
+      The current limitation for sending and receiving **external** HTTP
+      requests is 500 requests per minute. There is also a separate limit of
+      2500 requests per minute for
+      [Open Cloud requests](../../../cloud-services/http-service.md#use-with-open-cloud).
+      Requests over these thresholds will fail.
     code_samples:
       - sending-an-http-request
       - OpenCloud-via-HttpService

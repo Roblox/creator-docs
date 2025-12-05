@@ -292,7 +292,7 @@ methods:
         summary: |
           The integer representing the font size used.
       - name: font
-        type: Font
+        type: Enum.Font
         default:
         summary: |
           The font used.
@@ -323,7 +323,7 @@ methods:
         default:
         summary: ''
       - name: font
-        type: Font
+        type: Datatype.Font
         default:
         summary: ''
     returns:

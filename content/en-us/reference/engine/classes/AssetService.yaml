@@ -535,8 +535,7 @@ methods:
   - name: AssetService:GetAssetIdsForPackage
     summary: |
       Returns an array of asset IDs that are contained in a specified package.
-    description: |
-      Returns an array of asset IDs that are contained in a specified package.
+    description: ''
     code_samples: []
     parameters:
       - name: packageAssetId
@@ -856,32 +855,7 @@ methods:
   - name: AssetService:SearchAudio
     summary: |
       Finds audio assets matching a variety of search criteria.
-    description: |
-      Returns a `Class.AudioPages` object containing the result of the given
-      search. Will not return fields with empty values.
-
-      Note that this method has a low HTTP request limit and can throw an error,
-      so it should always be wrapped in `pcall()` for error handling. Possible
-      error messages include:
-
-      <table>
-        <thead>
-      	<tr>
-      		<th>Error Message</th>
-      		<th>Reason</th>
-      	</tr>
-        </thead>
-        <tbody>
-      	<tr>
-      		<td>HTTP 429 (Too Many Requests)</td>
-      		<td><code>Class.AssetService:SearchAudio()</code> has been called too many times.</td>
-      	</tr>
-      	<tr>
-      		<td>Unexpected type for data, expected array got null</td>
-      		<td>The keyword argument was filtered.</td>
-      	</tr>
-        </tbody>
-      </table>
+    description: ''
     code_samples:
       - printing-search-audio-result-titles
     parameters:

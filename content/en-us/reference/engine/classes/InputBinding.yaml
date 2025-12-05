@@ -397,6 +397,23 @@ properties:
       can_save: true
     capabilities:
       - Input
+  - name: InputBinding.Vector3Scale
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Input
 methods: []
 events: []
 callbacks: []

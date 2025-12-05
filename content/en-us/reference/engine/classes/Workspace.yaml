@@ -164,22 +164,23 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.AuthorityMode
-    summary: ''
-    description: ''
+    summary: |
+      Sets the server authority mode.
+    description: |
+      Sets the server authority mode. See `Enum.AuthorityMode` for options.
     code_samples: []
     type: AuthorityMode
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Server Authority
     serialization:
       can_load: true
       can_save: true
-    capabilities:
-      - InternalTest
+    capabilities: []
   - name: Workspace.AvatarUnificationMode
     summary: ''
     description: ''
@@ -304,11 +305,11 @@ properties:
       Determines the height at which falling `Class.BasePart|BaseParts` and
       their ancestor `Class.Model|Models` are removed from `Class.Workspace`.
     description: |
-      This property determines the height at which the Roblox Engine
-      automatically removes falling `Class.BasePart|BaseParts` and their
-      ancestor `Class.Model|Models` from `Class.Workspace` by parenting them to
-      `nil`. This is to prevent parts that have fallen off the map from
-      continuing to fall forever.
+      This property determines the height at which the engine automatically
+      removes falling `Class.BasePart|BaseParts` and their ancestor
+      `Class.Model|Models` from `Class.Workspace` by parenting them to `nil`.
+      This is to prevent parts that have fallen off the map from continuing to
+      fall forever.
 
       If a part removed due to this behavior is the last part in a
       `Class.Model`, that model will also be removed. This applies to all model
@@ -599,6 +600,29 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: Workspace.NextGenerationReplication
+    summary: |
+      When `true`, enables an alternate replication system that alters and
+      improves how properties are replicated under the hood.
+    description: |
+      When `true`, enables an alternate replication system that alters and
+      improves how properties are replicated under the hood; note that when
+      `true`, you should not rely on the ordering of property replication and
+      remote events.
+    code_samples: []
+    type: RolloutState
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: Workspace.PathfindingUseImprovedSearch
     summary: ''
     description: ''
@@ -665,6 +689,28 @@ properties:
     description: ''
     code_samples: []
     type: PlayerCharacterDestroyBehavior
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Workspace.PlayerScriptsUseInputActionSystem
+    summary: |
+      Controls internal behavior of the built-in `Class.Player` scripts.
+    description: |
+      When `true`, updates the built-in `Class.Player` scripts to a new system
+      where they live under `Class.StarterPlayer`, use the
+      [Input Action System](../../../input/input-action-system.md), and allow
+      the server to process player inputs.
+    code_samples: []
+    type: RolloutState
     tags:
       - NotScriptable
     deprecation_message: ''
@@ -1032,6 +1078,33 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: Workspace.UseFixedSimulation
+    summary: |
+      When `true`, enables `Class.RunService:BindToSimulation()` which calls a
+      function at a fixed frequency, updates physics stepping logic, and makes
+      the `Global.RobloxGlobals.time()` function return the fixed stepped frame
+      time.
+    description: |
+      When `true`, enables `Class.RunService:BindToSimulation()` which calls a
+      function at a fixed frequency. Also updates physics stepping logic such
+      that character controller updates and joint transforms are performed at a
+      fixed frequency rather than once per frame, as well as makes the
+      `Global.RobloxGlobals.time()` function return the fixed stepped frame
+      time.
+    code_samples: []
+    type: RolloutState
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: Workspace.UseNewLuauTypeSolver
     summary: ''
     description: ''
@@ -1108,17 +1181,16 @@ methods:
       print(Workspace:GetNumAwakeParts())
       ```
 
-      #### Sleeping vs Awake Parts
-
-      In order to ensure good performance, Roblox sets `BaseParts` in which
-      physics are not being applied to a 'sleeping' state.
-      `Class.BasePart|BaseParts` with `Class.BasePart.Anchored` set to true, for
-      example, will always be sleeping as physics doesn't apply to them. When a
-      force is applied to a non anchored `Class.BasePart`, an 'awake' state will
-      be applied. Whilst a `Class.BasePart` is awake the Roblox physics engine
-      will perform continuous calculations to ensure physical forces interact
-      correctly with the part. Once the `Class.BasePart` is no longer subject to
-      physical forces, it will revert to a 'sleeping' state.
+      In order to ensure good performance, the engine sets
+      `Class.BasePart|BaseParts` in which physics are not being applied to a
+      "sleeping" state. `Class.BasePart|BaseParts` with
+      `Class.BasePart.Anchored` set to `true`, for example, will always be
+      sleeping as physics doesn't apply to them. When a force is applied to a
+      non‑anchored `Class.BasePart`, an "awake" state will be applied. Whilst a
+      `Class.BasePart` is awake, the physics engine will perform continuous
+      calculations to ensure physical forces interact correctly with the part.
+      Once the `Class.BasePart` is no longer subject to physical forces, it will
+      revert to a "sleeping" state.
     code_samples: []
     parameters: []
     returns:
@@ -1132,11 +1204,11 @@ methods:
     capabilities: []
   - name: Workspace:GetPhysicsThrottling
     summary: |
-      Returns an integer, between 0 and 100, representing the percentage of
-      real time that physics simulation is currently being throttled to.
+      Returns an integer, between 0 and 100, representing the percentage of real
+      time that physics simulation is currently being throttled to.
     description: |
-      Returns an integer, between 0 and 100, representing the percentage of
-      real time that physics simulation is currently being throttled to.
+      Returns an integer, between 0 and 100, representing the percentage of real
+      time that physics simulation is currently being throttled to.
 
       This function can be used to determine whether, and to what degree,
       physics throttling is occurring.
@@ -1181,7 +1253,7 @@ methods:
     returns:
       - type: int
         summary: |
-          The percentage of real-time that physics simulation is currently being
+          The percentage of real time that physics simulation is currently being
           throttled to.
     tags: []
     deprecation_message: ''
@@ -1294,7 +1366,7 @@ methods:
       `Enum.JointCreationMode|Enum.JointCreationMode.Surface`, has the same
       behavior which equates to Join Always
 
-      This function is used by the Roblox Studio Move tool when the user
+      This function is used by the Roblox Studio **Move** tool when the user
       finishes moving a selection. In conjunction with
       `Class.Plugin:GetJoinMode()` and `Class.Workspace:UnjoinFromOutsiders()`
       it can be used to retain join functionality when developing custom studio
@@ -1432,11 +1504,11 @@ methods:
       other), only between these `Class.BasePart|BaseParts` and other
       `Class.BasePart|BaseParts` not in the array.
 
-      This function is used by the Roblox Studio Move tool when the user starts
-      moving a selection. In conjunction with `Class.Plugin:GetJoinMode()` and
-      `Class.Workspace:JoinToOutsiders()` it can be used to retain join
-      functionality when developing custom Studio build tools. See the snippets
-      below for an example.
+      This function is used by the Roblox Studio **Move** tool when the user
+      starts moving a selection. In conjunction with
+      `Class.Plugin:GetJoinMode()` and `Class.Workspace:JoinToOutsiders()` it
+      can be used to retain join functionality when developing custom Studio
+      build tools. See the snippets below for an example.
 
       ```
       local Workspace = game:GetService("Workspace")
@@ -1478,12 +1550,9 @@ methods:
       of `Class.BasePart|BaseParts` currently in the `Class.Workspace`.
     description: |
       Positions and zooms the `Class.Workspace.CurrentCamera` to show the extent
-      of `Class.BasePart|BaseParts` currently in the `Class.Workspace`.
-
-      This function was used in the, now removed, 'Zoom To Extents' button in
-      Roblox Studio. It exhibits similar behavior to the 'Zoom To' (F shortcut)
-      feature, however it shows the extents of the `Class.Workspace` rather than
-      the currently selected object.
+      of `Class.BasePart|BaseParts` currently in the `Class.Workspace`. It
+      exhibits similar behavior to the "focus" command but it shows the extents
+      of the `Class.Workspace` rather than the currently selected object.
 
       This function cannot be used in scripts but will function in the command
       bar or plugins.

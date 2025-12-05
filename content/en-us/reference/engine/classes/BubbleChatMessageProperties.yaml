@@ -58,7 +58,7 @@ properties:
     description: |
       Font of the bubble text in `Datatype.Font`.
     code_samples: []
-    type: Font
+    type: Datatype.Font
     tags: []
     deprecation_message: ''
     security:

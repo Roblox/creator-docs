@@ -19,7 +19,7 @@ Before using price optimization, you should use the [dynamic price check tool](#
 
 <img src="../../assets/monetization/price-optimization/Price-Optimization-Example.png" />
 
-You can combine price optimization with **Regional Pricing** for your passes to reach a wider audience and build a more accessible and inclusive global economy. For more information about setting region-specific prices, see [Regional Pricing](./regional-pricing.md).
+You can combine price optimization with **Regional Pricing** to reach a wider audience and build a more accessible and inclusive global economy. For more information about setting region-specific prices, see [Regional Pricing](./regional-pricing.md).
 
 ## Check for dynamic pricing
 

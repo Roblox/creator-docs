@@ -139,7 +139,7 @@ properties:
       - UI
   - name: ProximityPrompt.Enabled
     summary: |
-      Whether this prompt should be shown.
+      Whether or not this prompt should be shown.
     description: |
       This property indicates whether or this `Class.ProximityPrompt` should be
       shown.
@@ -263,8 +263,7 @@ properties:
       - UI
   - name: ProximityPrompt.MaxIndicatorDistance
     summary: ''
-    description: |
-      This property determines the maximum distance a player's `Class.Player.Character|Character` can be from the `Class.ProximityPrompt` for the prompt's indicator to appear. Indicators show where nearby prompts are, so you can help guide players to interactable objects or reduce the clutter of many nearby items. Note that proximity prompt indicators are in beta and won't be visible unless you enable **Proximity Prompt Indicators** in Studio's beta features.
+    description: ''
     code_samples: []
     type: float
     tags: []
@@ -511,7 +510,7 @@ events:
       - UI
   - name: ProximityPrompt.PromptHidden
     summary: |
-      Triggers when the prompt becomes hidden.
+      Triggers when the `Class.ProximityPrompt|prompt` becomes hidden.
     description: |
       This event triggers when the `Class.ProximityPrompt|prompt` becomes
       hidden. This event is triggered client-side for `LocalScripts`.
