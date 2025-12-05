@@ -847,22 +847,16 @@ methods:
           }
           ```
     returns:
-      - type: ''
+      - type: Array
         summary: |
           The array of ranked items in a personalized order for the current
           user.
 
           Each array has:
 
-          - `ProductIdentifier`
-      - type: ''
-        summary: |
-          The corresponding ID from the input array.
+          - `ProductIdentifier`: The corresponding ID from the input array.
 
-          - `ProductInfo`
-      - type: ''
-        summary: |
-          The standard product info dictionary returned by
+          - `ProductInfo`: The standard product info dictionary returned by
           `Class.MarketplaceService.GetProductInfo|GetProductInfo`.
     tags:
       - Yields
