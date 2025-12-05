@@ -494,11 +494,22 @@ Roblox relies on the information you provide in the Maturity & Compliance Questi
   - If your experience otherwise has inaccurate content maturity information according to its content, Roblox may remove the maturity label (or only some or all descriptors if the maturity label is Restricted) from your experience. If an experience does not have content maturity information, Roblox restricts the playability of the experience on the platform for all players.
   - If you repeatedly include inaccurate content maturity information, **your experience and/or account is subject to moderation consequences**.
 
-If receive a moderation action and believe Roblox made a mistake, you can appeal the decision:
+If your experience receives a moderation action and you believe Roblox made a mistake, you can appeal the decision:
 
-   1. Navigate to [roblox.com/support](http://roblox.com/support).
-   1. After you confirm your contact information and device type,
-      1. Set **Type of help category** to **Moderation**. A new dropdown menu displays.
-      1. Set **Help Subcategory Type** to **I was wrongly moderated for other content I created**.
-      1. In the input field, describe why the moderation action was a mistake.
-   1. Click the **Continue** button to submit your appeal.
+1. If you are the owner of a user-owned experience or the group owner of a group-owned experience, navigate to [roblox.com/report-appeals](https://www.roblox.com/report-appeals#/).
+1. Select the violation you want to appeal.
+1. Click the **Request Appeal** button.
+1. **(Recommended)** In the text field, describe why the moderation action was a mistake.
+1. Click **Send** to submit your appeal.
+
+Even if the violation does not appear on the **Violations & Appeals** page, you can appeal the decision:
+
+1. Click **Support** (appeal something not shown).
+1. Confirm your contact information and device type,
+1. Set **Type of help category** to **Appeal a Decision**.
+1. Set **Help Subcategory Type** to **I was wrongly moderated for other content I created**.
+1. Input your experience ID into the **Asset ID** field.
+1. In the **Please describe your issue** field, describe why the moderation action was a mistake.
+1. Click **Continue** to submit your appeal.
+
+If your appeal is accepted, **Appeal accepted** is shown under your violation when you click on it.
