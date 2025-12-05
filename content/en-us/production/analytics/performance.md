@@ -169,3 +169,49 @@ If you spot a potential problem, use the following steps to remediate and fix it
    - The [MicroProfiler](../../performance-optimization/microprofiler/index.md) for viewing unoptimized portions of your experience visually.
 
 4. Gather user feedback from your community.
+
+## Client API calls after join
+
+<Alert severity="info">
+This metric is only available for experiences with an extremely high number of daily active users (DAU), typically five million or more.
+</Alert>
+
+The **Client API Calls in First 60s After Join** metric measures the total number of requests (API calls) your experience makes to Roblox services during the critical first minute after a user successfully joins.
+
+These calls happen automatically for every user who joins, so monitoring this metric can help you understand load-time efficiency and backend performance.
+
+### Access the metric
+
+1. Navigate to your experience overview on the Creator Hub.
+2. On the **Snapshot** graph, click **Explore**.
+3. In the **Select a metric** dropdown, choose **Client API Calls in First 60s After Join**.
+
+![Graph of the client API calls metric](../../assets/analytics/performance/client-api-calls.png)
+
+### Monitor the metric
+
+The primary goal during the first 60 seconds of a game join is to stream and load your experience's assets (meshes, images, sounds, etc.). Ideally, the asset delivery service is the most-called API during this key time span.
+
+The metric is updated hourly so that you can quickly check it after publishing a new version of your experience.
+
+<table>
+    <thead>
+        <tr>
+            <td>Condition</td>
+            <td>Implication</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Asset delivery is the most-hit API.</td>
+            <td><strong>Efficient.</strong> Your experience is correctly prioritizing the loading of necessary assets.</td>
+            <td>Continue monitoring.</td>
+        </tr>
+        <tr>
+            <td>A different service (e.g. inventory, friends, or users) is the most-hit API.</td>
+            <td><strong>Potential inefficiency or bug.</strong> Your experience is executing heavy, non-critical API calls too early in the join sequence, potentially delaying the load process.</td>
+            <td>Investigate and refactor the scripts that execute during the initial join to prioritize asset loading.</td>
+        </tr>
+    </tbody>
+</table>
