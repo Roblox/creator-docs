@@ -855,9 +855,8 @@ methods:
           Each array has:
 
           - `ProductIdentifier`: The corresponding ID from the input array.
-
           - `ProductInfo`: The standard product info dictionary returned by
-          `Class.MarketplaceService.GetProductInfo|GetProductInfo`.
+            `Class.MarketplaceService.GetProductInfo|GetProductInfo`.
     tags:
       - Yields
     deprecation_message: ''

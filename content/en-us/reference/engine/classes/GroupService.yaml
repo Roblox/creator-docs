@@ -310,5 +310,39 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: GroupService:PromptJoinAsync
+    summary: |
+      Prompts the local `Class.Player` to join a specified Roblox group via a
+      native modal.
+    description: |
+      `PromptJoinAsync()` displays a prompt to the local player through which
+      they may join the specified Roblox group. The group must exist and the
+      player must meet the eligibility criteria to join. If the player is
+      ineligible, this method will return `Enum.GroupMembershipStatus.None`.
+
+      Note that you can use `Class.Player:IsInGroup()` to check the player's
+      current membership status before calling this method.
+    code_samples:
+      - GroupService-PromptJoinAsync1
+    parameters:
+      - name: groupId
+        type: int64
+        default:
+        summary: |
+          ID of the group to prompt the player to join. This must be a valid
+          group ID.
+    returns:
+      - type: GroupMembershipStatus
+        summary: |
+          `Enum.GroupMembershipStatus` indicating the player's group membership
+          status after the prompt is closed. If the player closes the prompt
+          without joining, this will return `Enum.GroupMembershipStatus.None` or
+          their previous status if they were already a member.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
 events: []
 callbacks: []
