@@ -212,7 +212,7 @@ To release your experience to the public:
 
    <img src="../../assets/creator-dashboard/Options-Button-Experience-Private.png" width="200" />
 
-1. <Chip label="RECOMMENDED" size="small" variant="outlined" color="success" /> Generate [Content maturity and compliance](#generate-content-descriptors) information so the experience is available to the appropriate audience. If you do not do this step, Roblox does not show your experience players.
+1. <Chip label="IMPORTANT" size="small" variant="outlined" color="warning" /> Generate [content maturity and compliance](#generate-content-descriptors) information to ensure the experience is available to the appropriate audience.
 
 ### Set age and geography restrictions
 
