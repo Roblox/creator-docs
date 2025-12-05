@@ -199,16 +199,7 @@ You can configure most experience and place-level settings from the [Creator Das
 
 The **Maturity & Compliance Questionnaire** contains a set of questions about the type of content players can possibly encounter within your experience, as well as how frequently it occurs. Your answers give Roblox an understanding of the content in your experience and ensure that the experience is available to the appropriate audience on the [Home](https://www.roblox.com/home) and [Discover](https://www.roblox.com/discover) pages according to each player's age group and regional content policies.
 
-Maturity and compliance information consists of two components:
-
-- **Maturity label** — Indicates the level of maturity suitable for the experience according to child development research and industry standards. For more information, see Age Recommendations.
-- **Content descriptors** — Indicates what type of content is within an experience, such as realistic depictions of blood or paid item trading.
-
-Roblox strongly recommends that you fill out the Maturity & Compliance questionnaire for each of your experiences so that they're available to the largest appropriate audience possible. Roblox does not recommend experiences without content maturity information to players under 13 years old. In addition, if your experience doesn't have Content Maturity information but it does contain [restricted content](https://en.help.roblox.com/hc/en-us/articles/15869919570708), the experience will be moderated.
-
-<Alert severity="info">
 For step-by-step instructions on how to fill out the questionnaire, see [content maturity & compliance](../promotion/content-maturity.md).
-</Alert>
 
 ### Release to the public
 
@@ -221,7 +212,7 @@ To release your experience to the public:
 
    <img src="../../assets/creator-dashboard/Options-Button-Experience-Private.png" width="200" />
 
-1. <Chip label="RECOMMENDED" size="small" variant="outlined" color="success" /> Generate [Content maturity and compliance](#generate-content-descriptors) information so the experience is available to the appropriate audience. If you do not do this step, Roblox does not show your experience to players under 13 years old.
+1. <Chip label="IMPORTANT" size="small" variant="outlined" color="warning" /> Generate [content maturity and compliance](#generate-content-descriptors) information to ensure the experience is available to the appropriate audience.
 
 ### Set age and geography restrictions
 
