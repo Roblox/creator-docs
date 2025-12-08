@@ -261,7 +261,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
     <td>Reduce the use of decals on complex meshes.</td>
   </tr>
   <tr>
-    <td>Shadows</td>
+    <td>Scene/Shadows</td>
     <td>Shadow recalculation in the scene, usually performed on dynamic scenes and typical gameplay. Parts regardless of transparency cast shadows under the assumption that they contain decals. Not performed at quality levels below 4.</td>
     <td>If this step takes too long, consider disabling `Class.BasePart.CastShadow` for complex meshes, parts with high partial transparency, and less important instances. Fully transparent parts that don't have decals or need decal shadows should have CastShadow disabled. See [Improving Performance](../../performance-optimization/improve.md#mitigation-4).</td>
   </tr>
