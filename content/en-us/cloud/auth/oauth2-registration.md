@@ -16,8 +16,8 @@ You can only register apps for individual accounts or groups that you own.
 
 To register an app:
 
-1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), go to the [OAuth 2.0 apps](https://create.roblox.com/dashboard/credentials?activeTab=OAuthTab) page.
-1. Click the **Create OAuth 2.0 App** button.
+1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), go to the [OAuth 2.0 Apps](https://create.roblox.com/dashboard/credentials?activeTab=OAuthTab) page.
+1. Click the **Create App** button.
 1. Enter a valid and globally unique **Application Name**.
 1. Read and agree to the **Roblox Terms of Service** and click **Create**.
 1. Copy and store the **Client ID** and **Secret** in a secure place. After

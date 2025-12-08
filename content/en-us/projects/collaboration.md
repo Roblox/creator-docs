@@ -50,7 +50,8 @@ For [group](../projects/groups.md) experiences, only the group owner or members 
 <TabItem label="All group experiences">
 If you're the group owner or a member with sufficient permissions, you can configure collaboration across **all** group experiences, for example grant **Edit** permission to an "Audio&nbsp;Artist" group role so they can fine-tune audio playback across multiple group experiences.
 
-1. From the [Creator Dashboard](https://create.roblox.com/dashboard/creations), select the group from the **View As** dropdown menu and navigate to **Collaboration** &rang; **Roles**.
+1. From the [Creator Dashboard](https://create.roblox.com/dashboard/creations), expand the account switcher in the upper‑left and select the group.
+1. Expand the account switcher again, select **Settings** under the group's name, then select **Roles**.
 1. Enable [Edit all group experiences](../projects/groups.md#roles-and-permissions) for roles that should have editing permission. Remember to click **Save Changes** for each role that you change.
 
    In Studio's **Manage Collaborators** window for any group-owned experience, eligible roles display **Edit** permission but are muted to indicate that you can't change the permission level from Studio.

@@ -12,7 +12,7 @@ The memory stores observability dashboard is available for any experience using 
 To access the dashboard:
 
 1. Navigate to the [Creations](https://create.roblox.com/dashboard/creations) page on the **Creator Dashboard**.
-2. Under the **Creator Hub** dropdown, select your account or the group owning the target experience.
+2. Expand the account switcher in the upper-left and select your account or the group owning the target experience.
 3. Select the experience.
 4. In the **Monitoring** dropdown, select **Memory Stores**.
 

@@ -26,8 +26,8 @@ You can access your experience's localization settings through the Creator Dashb
 
 You can also access your experience's localization settings in the on your [Creations](https://create.roblox.com/dashboard/creations) page:
 
-1. Navigate to your Creator Dashboard [Creations](https://create.roblox.com/dashboard/creations).
-2. In the Experiences tab, find your experience and select the **&ctdot;** button.
+1. Navigate to your [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+2. In the **Experiences** tab, find your experience and select the **&ctdot;** button.
 3. Select **Configure Localization**.
 
    <img

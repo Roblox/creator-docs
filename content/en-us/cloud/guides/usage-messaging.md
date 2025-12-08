@@ -57,7 +57,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 After [setting up](#set-up-a-topic-for-messaging) a topic, publish a message to your experience's live servers:
 
-1. [Create an API key](../auth/api-keys.md#create-api-keys) on [Creator Dashboard](https://create.roblox.com/dashboard/credentials) and copy it somewhere safe. Make sure you perform the following settings:
+1. [Create an API key](../auth/api-keys.md#create-api-keys) on [Creator Dashboard](https://create.roblox.com/dashboard/credentials?activeTab=ApiKeysTab) and copy it somewhere safe. Make sure you perform the following settings:
 
    1. Add **messaging-service** to **Access Permissions**.
    2. Select an experience, and add the **universe-messaging-service:publish** operation.

@@ -48,7 +48,7 @@ If you're setting up webhooks and handling personal data, ensure they comply wit
 
 To set up a webhook:
 
-1. Navigate to the [Webhooks](https://create.roblox.com/settings/webhooks) section of the Creator Dashboard.
+1. On the [Creator Dashboard](https://create.roblox.com/dashboard/creations), access the [Webhooks](https://create.roblox.com/settings/webhooks) page.
 1. Click the **Add Webhook** button.
 1. Complete the configuration fields:
    1. **Webhook URL** - Specify the URL where you want to receive notifications. For more information on the requirements, see [Set up webhook URLs](#set-up-webhook-urls).

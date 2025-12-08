@@ -22,7 +22,7 @@ Each token requires a **Creation Advance** and a **Creation Fee**. The advance i
 To create a token:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-2. Use the **View as** selection on the top left to ensure that the appropriate group or user is selected.
+2. Expand the account switcher in the upper‑left and ensure that the appropriate user or group is selected.
 3. In **Creations** ⟩ **Experiences**, select your experience.
 4. On the left panel, navigate to **Monetization** ⟩ **Avatar Creation Tokens**.
 5. Click **Create Token**.

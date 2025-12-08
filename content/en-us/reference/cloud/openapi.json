@@ -7126,10 +7126,11 @@
             "maxInPeriod": 5000
           }
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/DataStore/Cloud_ListDataStores"
           }
         ],
         "x-roblox-engine-usability": {
@@ -7272,14 +7273,16 @@
             "maxInPeriod": 5000
           }
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/DataStoreEntry/Cloud_ListDataStoreEntries__Using_Universes"
           },
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/DataStoreEntry/Cloud_ListDataStoreEntries__Using_Universes_DataStores"
           }
         ],
         "x-roblox-engine-usability": {
@@ -7424,14 +7427,16 @@
             "maxInPeriod": 5000
           }
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/DataStoreEntry/Cloud_GetDataStoreEntry__Using_Universes_DataStores"
           },
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/DataStoreEntry/Cloud_GetDataStoreEntry__Using_Universes_DataStores_Scopes"
           }
         ],
         "x-roblox-engine-usability": {
@@ -7590,14 +7595,16 @@
             "maxInPeriod": 5000
           }
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/DataStoreEntry/Cloud_UpdateDataStoreEntry__Using_Universes_DataStores"
           },
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/DataStoreEntry/Cloud_UpdateDataStoreEntry__Using_Universes_DataStores_Scopes"
           }
         ],
         "x-roblox-engine-usability": {
@@ -7684,14 +7691,16 @@
             "maxInPeriod": 5000
           }
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}",
-            "httpMethod": "DELETE"
+            "httpMethod": "DELETE",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/DataStoreEntry/Cloud_DeleteDataStoreEntry__Using_Universes_DataStores"
           },
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}",
-            "httpMethod": "DELETE"
+            "httpMethod": "DELETE",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/DataStoreEntry/Cloud_DeleteDataStoreEntry__Using_Universes_DataStores_Scopes"
           }
         ],
         "x-roblox-engine-usability": {
@@ -7873,14 +7882,16 @@
             "maxInPeriod": 5000
           }
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}:increment",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/DataStoreEntry/Cloud_IncrementDataStoreEntry__Using_Universes_DataStores"
           },
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}:increment",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/DataStoreEntry/Cloud_IncrementDataStoreEntry__Using_Universes_DataStores_Scopes"
           }
         ],
         "x-roblox-engine-usability": {
@@ -8037,14 +8048,16 @@
             "maxInPeriod": 5000
           }
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/DataStoreEntry/Cloud_GetDataStoreEntry__Using_Universes_DataStores"
           },
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/DataStoreEntry/Cloud_GetDataStoreEntry__Using_Universes_DataStores_Scopes"
           }
         ],
         "x-roblox-engine-usability": {
@@ -8201,14 +8214,16 @@
             "maxInPeriod": 5000
           }
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}:listRevisions",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/DataStoreEntry/Cloud_ListDataStoreEntryRevisions__Using_Universes_DataStores"
           },
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}:listRevisions",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/DataStoreEntry/Cloud_ListDataStoreEntryRevisions__Using_Universes_DataStores_Scopes"
           }
         ],
         "x-roblox-engine-usability": {
@@ -8332,10 +8347,11 @@
             "maxInPeriod": 500
           }
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/OrderedDataStoreEntry/Cloud_ListOrderedDataStoreEntries"
           }
         ],
         "x-roblox-engine-usability": {
@@ -8446,10 +8462,11 @@
             "maxInPeriod": 500
           }
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/OrderedDataStoreEntry/Cloud_CreateOrderedDataStoreEntry"
           }
         ],
         "x-roblox-engine-usability": {
@@ -8552,10 +8569,11 @@
             "maxInPeriod": 500
           }
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries/{entry_id}",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/OrderedDataStoreEntry/Cloud_GetOrderedDataStoreEntry"
           }
         ],
         "x-roblox-engine-usability": {
@@ -8649,10 +8667,11 @@
             "maxInPeriod": 500
           }
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries/{entry_id}",
-            "httpMethod": "DELETE"
+            "httpMethod": "DELETE",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/OrderedDataStoreEntry/Cloud_DeleteOrderedDataStoreEntry"
           }
         ],
         "x-roblox-engine-usability": {
@@ -8774,10 +8793,11 @@
             "maxInPeriod": 500
           }
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries/{entry_id}",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/OrderedDataStoreEntry/Cloud_UpdateOrderedDataStoreEntry"
           }
         ],
         "x-roblox-engine-usability": {
@@ -8890,10 +8910,11 @@
             "maxInPeriod": 500
           }
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries/{entry_id}:increment",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/storage#/OrderedDataStoreEntry/Cloud_IncrementOrderedDataStoreEntry"
           }
         ],
         "x-roblox-engine-usability": {
@@ -10060,10 +10081,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/accounts#/default/get_v1_birthdate"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://users.roblox.com/v1/birthdate",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/accounts#/default/get_v1_birthdate"
           }
         ]
       },
@@ -10178,10 +10200,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/accounts#/default/get_v1_description"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://users.roblox.com/v1/description",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/accounts#/default/get_v1_description"
           }
         ]
       },
@@ -10254,10 +10277,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/accounts#/default/post_v1_description"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://users.roblox.com/v1/description",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/accounts#/default/post_v1_description"
           }
         ]
       }
@@ -10307,10 +10331,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/accounts#/default/get_v1_gender"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://users.roblox.com/v1/gender",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/accounts#/default/get_v1_gender"
           }
         ]
       },
@@ -10380,10 +10405,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/accounts#/default/post_v1_gender"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://users.roblox.com/v1/gender",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/accounts#/default/post_v1_gender"
           }
         ]
       }
@@ -19948,10 +19974,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/avatars#/default/post_v1_avatar_set_wearing_assets"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://avatar.roblox.com/v2/avatar/set-wearing-assets",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/avatars#/default/post_v2_avatar_set_wearing_assets"
           }
         ]
       }
@@ -20354,10 +20381,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/avatars#/default/post_v2_outfits__userOutfitId__update"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://avatar.roblox.com/v3/outfits/{userOutfitId}",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/avatars#/default/patch_v3_outfits__userOutfitId_"
           }
         ]
       }
@@ -20421,10 +20449,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/avatars#/default/post_v2_outfits_create"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://avatar.roblox.com/v3/outfits/create",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/avatars#/default/post_v3_outfits_create"
           }
         ]
       }
@@ -20487,10 +20516,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/avatars#/default/patch_v2_outfits__userOutfitId_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://avatar.roblox.com/v3/outfits/{userOutfitId}",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/avatars#/default/patch_v3_outfits__userOutfitId_"
           }
         ]
       }
@@ -20806,10 +20836,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/badges#/default/patch_v1_badges__badgeId_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-badges/v1/badges/{badgeId}",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/badges#/default/patch_legacy_badges_v1_badges__badgeId_"
           }
         ]
       }
@@ -21135,10 +21166,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/badges#/default/post_v1_universes__universeId__badges"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-badges/v1/universes/{universeId}/badges",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/badges#/default/post_legacy_badges_v1_universes__universeId__badges"
           }
         ]
       }
@@ -24144,10 +24176,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/assets#/default/get_v2_assets__id__versions"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/assets/v1/assets/{assetId}",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/assets#/default/Assets_GetAsset"
           }
         ]
       }
@@ -24509,10 +24542,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/places#/default/delete_v2_teamtest__placeId_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-develop/v2/teamtest/{placeId}",
-            "httpMethod": "DELETE"
+            "httpMethod": "DELETE",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/places#/default/delete_legacy_develop_v2_teamtest__placeId_"
           }
         ]
       }
@@ -24574,10 +24608,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/assets#/default/get_v1_assets_voting"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/toolbox-service/v2/assets/{id}",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/assets#/default/get_toolbox_service_v2_assets__id_"
           }
         ]
       }
@@ -24892,10 +24927,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/places#/default/get_v1_places__placeId__teamcreate_active_session_members"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-develop/v1/places/{placeId}/teamcreate/active_session/members",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/places#/default/get_legacy_develop_v1_places__placeId__teamcreate_active_session_members"
           }
         ]
       }
@@ -25327,10 +25363,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/universes#/default/get_v1_universes__universeId__permissions"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-develop/v1/universes/{universeId}/permissions",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/universes#/default/get_legacy_develop_v1_universes__universeId__permissions"
           }
         ]
       }
@@ -25626,10 +25663,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/team-create#/default/get_v1_universes__universeId__teamcreate"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-develop/v1/universes/{universeId}/teamcreate",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/team-create#/default/get_legacy_develop_v1_universes__universeId__teamcreate"
           }
         ]
       },
@@ -25694,10 +25732,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/team-create#/default/patch_v1_universes__universeId__teamcreate"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-develop/v1/universes/{universeId}/teamcreate",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/team-create#/default/patch_legacy_develop_v1_universes__universeId__teamcreate"
           }
         ]
       }
@@ -25892,10 +25931,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/universes#/default/get_v1_universes_multiget_permissions"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-develop/v1/universes/multiget/permissions",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/universes#/default/get_legacy_develop_v1_universes_multiget_permissions"
           }
         ]
       }
@@ -26033,10 +26073,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/team-create#/default/get_v1_universes_multiget_teamcreate"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-develop/v1/universes/multiget/teamcreate",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/team-create#/default/get_legacy_develop_v1_universes_multiget_teamcreate"
           }
         ]
       }
@@ -26136,10 +26177,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/groups#/default/get_v1_user_groups_canmanage"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-develop/v1/user/groups/canmanage",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/groups#/default/get_legacy_develop_v1_user_groups_canmanage"
           }
         ]
       }
@@ -26528,10 +26570,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/universes#/default/post_v1_universes__universeId__activate"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-develop/v1/universes/{universeId}/activate",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/universes#/default/post_legacy_develop_v1_universes__universeId__activate"
           }
         ]
       }
@@ -26667,10 +26710,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/universes#/default/post_v1_universes__universeId__deactivate"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-develop/v1/universes/{universeId}/deactivate",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/universes#/default/post_legacy_develop_v1_universes__universeId__deactivate"
           }
         ]
       }
@@ -26891,10 +26935,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/team-create#/default/delete_v1_universes__universeId__teamcreate_memberships"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-develop/v1/universes/{universeId}/teamcreate/memberships",
-            "httpMethod": "DELETE"
+            "httpMethod": "DELETE",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/team-create#/default/delete_legacy_develop_v1_universes__universeId__teamcreate_memberships"
           }
         ]
       }
@@ -27239,10 +27284,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/interactions#/default/get_v1_users__userId__universes"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-followings/v1/users/{userId}/universes",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/interactions#/default/get_legacy_followings_v1_users__userId__universes"
           }
         ]
       }
@@ -27392,10 +27438,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/interactions#/default/get_v1_users__userId__universes__universeId__status"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-followings/v1/users/{userId}/universes/{universeId}/status",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/interactions#/default/get_legacy_followings_v1_users__userId__universes__universeId__status"
           }
         ]
       }
@@ -27629,10 +27676,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/interactions#/default/post_v1_users__userId__universes__universeId_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-followings/v1/users/{userId}/universes/{universeId}",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/interactions#/default/post_legacy_followings_v1_users__userId__universes__universeId_"
           }
         ]
       },
@@ -27700,10 +27748,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/interactions#/default/delete_v1_users__userId__universes__universeId_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-followings/v1/users/{userId}/universes/{universeId}",
-            "httpMethod": "DELETE"
+            "httpMethod": "DELETE",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/interactions#/default/delete_legacy_followings_v1_users__userId__universes__universeId_"
           }
         ]
       }
@@ -27833,10 +27882,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/interactions#/default/get_v2_users__userId__universes"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-followings/v2/users/{userId}/universes",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/interactions#/default/get_legacy_followings_v2_users__userId__universes"
           }
         ]
       }
@@ -29914,10 +29964,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/metadata#/default/get_v1_autolocalization_metadata"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-localization-tables/v1/autolocalization/metadata",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/get_legacy_localization_tables_v1_autolocalization_metadata"
           }
         ]
       }
@@ -30295,10 +30346,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/badges#/default/get_v1_badges__badgeId__icons"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/badges/{badgeId}/icons",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/badges#/default/get_legacy_game_internationalization_v1_badges__badgeId__icons"
           }
         ]
       }
@@ -30430,10 +30482,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/badges#/default/get_v1_badges__badgeId__name_description"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/badges/{badgeId}/name-description",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/badges#/default/get_legacy_game_internationalization_v1_badges__badgeId__name_description"
           }
         ]
       }
@@ -30615,10 +30668,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/get_v1_developer_products__developerProductId__icons"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/developer-products/{developerProductId}/icons",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/developer-products#/default/get_legacy_game_internationalization_v1_developer_products__developerProductId__icons"
           }
         ]
       }
@@ -30754,10 +30808,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/get_v1_developer_products__developerProductId__name_description"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/developer-products/{developerProductId}/name-description",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/developer-products#/default/get_legacy_game_internationalization_v1_developer_products__developerProductId__name_description"
           }
         ]
       }
@@ -30939,10 +30994,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_game_icon_games__gameId_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/game-icon/games/{gameId}",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/get_legacy_game_internationalization_v1_game_icon_games__gameId_"
           }
         ]
       }
@@ -31264,10 +31320,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/get_v1_game_passes__gamePassId__icons"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/game-passes/{gamePassId}/icons",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/game-passes#/default/get_legacy_game_internationalization_v1_game_passes__gamePassId__icons"
           }
         ]
       }
@@ -31403,10 +31460,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/get_v1_game_passes__gamePassId__name_description"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/game-passes/{gamePassId}/name-description",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/game-passes#/default/get_legacy_game_internationalization_v1_game_passes__gamePassId__name_description"
           }
         ]
       }
@@ -31615,10 +31673,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_name_description_games__gameId_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/name-description/games/{gameId}",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_legacy_game_internationalization_v1_name_description_games__gameId_"
           }
         ]
       }
@@ -31881,10 +31940,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_source_language_games__gameId_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/source-language/games/{gameId}",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_legacy_game_internationalization_v1_source_language_games__gameId_"
           }
         ]
       }
@@ -32169,10 +32229,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_supported_languages_games__gameId_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/supported-languages/games/{gameId}",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_legacy_game_internationalization_v1_supported_languages_games__gameId_"
           }
         ]
       }
@@ -32412,10 +32473,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_supported_languages_games__gameId__automatic_translation_status"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/supported-languages/games/{gameId}/automatic-translation-status",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/get_legacy_game_internationalization_v1_supported_languages_games__gameId__automatic_translation_status"
           }
         ]
       }
@@ -32614,10 +32676,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_supported_languages_games__gameId__universe_display_info_automatic_translation_settings"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/supported-languages/games/{gameId}/universe-display-info-automatic-translation-settings",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/get_legacy_game_internationalization_v1_supported_languages_games__gameId__universe_display_info_automatic_translation_settings"
           }
         ]
       }
@@ -33045,10 +33108,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/post_v1_autolocalization_games__gameId__autolocalizationtable"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-localization-tables/v1/autolocalization/games/{gameId}/autolocalizationtable",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/post_legacy_localization_tables_v1_autolocalization_games__gameId__autolocalizationtable"
           }
         ]
       },
@@ -33121,10 +33185,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_autolocalization_games__gameId__autolocalizationtable"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://localizationtables.roblox.com/v1/autolocalization/games/{gameId}/autolocalizationtable",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_autolocalization_games__gameId__autolocalizationtable"
           }
         ]
       }
@@ -33388,10 +33453,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/badges#/default/post_v1_badges__badgeId__icons_language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/badges/{badgeId}/icons/language-codes/{languageCode}",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/badges#/default/post_legacy_game_internationalization_v1_badges__badgeId__icons_language_codes__languageCode_"
           }
         ]
       },
@@ -33467,10 +33533,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/badges#/default/delete_v1_badges__badgeId__icons_language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/badges/{badgeId}/icons/language-codes/{languageCode}",
-            "httpMethod": "DELETE"
+            "httpMethod": "DELETE",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/badges#/default/delete_legacy_game_internationalization_v1_badges__badgeId__icons_language_codes__languageCode_"
           }
         ]
       }
@@ -33734,10 +33801,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/post_v1_developer_products__developerProductId__icons_language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/developer-products/{developerProductId}/icons/language-codes/{languageCode}",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/developer-products#/default/post_legacy_game_internationalization_v1_developer_products__developerProductId__icons_language_codes__languageCode_"
           }
         ]
       },
@@ -33813,10 +33881,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/delete_v1_developer_products__developerProductId__icons_language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/developer-products/{developerProductId}/icons/language-codes/{languageCode}",
-            "httpMethod": "DELETE"
+            "httpMethod": "DELETE",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/developer-products#/default/delete_legacy_game_internationalization_v1_developer_products__developerProductId__icons_language_codes__languageCode_"
           }
         ]
       }
@@ -34080,10 +34149,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/post_v1_game_icon_games__gameId__language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/game-icon/games/{gameId}/language-codes/{languageCode}",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/post_legacy_game_internationalization_v1_game_icon_games__gameId__language_codes__languageCode_"
           }
         ]
       },
@@ -34159,10 +34229,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/delete_v1_game_icon_games__gameId__language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/game-icon/games/{gameId}/language-codes/{languageCode}",
-            "httpMethod": "DELETE"
+            "httpMethod": "DELETE",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/delete_legacy_game_internationalization_v1_game_icon_games__gameId__language_codes__languageCode_"
           }
         ]
       }
@@ -34426,10 +34497,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/post_v1_game_passes__gamePassId__icons_language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/game-passes/{gamePassId}/icons/language-codes/{languageCode}",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/game-passes#/default/post_legacy_game_internationalization_v1_game_passes__gamePassId__icons_language_codes__languageCode_"
           }
         ]
       },
@@ -34505,10 +34577,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/delete_v1_game_passes__gamePassId__icons_language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/game-passes/{gamePassId}/icons/language-codes/{languageCode}",
-            "httpMethod": "DELETE"
+            "httpMethod": "DELETE",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/game-passes#/default/delete_legacy_game_internationalization_v1_game_passes__gamePassId__icons_language_codes__languageCode_"
           }
         ]
       }
@@ -34712,10 +34785,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/post_v1_game_thumbnails_games__gameId__language_codes__languageCode__alt_text"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/alt-text",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/post_legacy_game_internationalization_v1_game_thumbnails_games__gameId__language_codes__languageCode__alt_text"
           }
         ]
       }
@@ -34893,10 +34967,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/post_v1_game_thumbnails_games__gameId__language_codes__languageCode__image"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/image",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/post_legacy_game_internationalization_v1_game_thumbnails_games__gameId__language_codes__languageCode__image"
           }
         ]
       }
@@ -35088,10 +35163,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/post_v1_game_thumbnails_games__gameId__language_codes__languageCode__images_order"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/order",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/post_legacy_game_internationalization_v1_game_thumbnails_games__gameId__language_codes__languageCode__images_order"
           }
         ]
       }
@@ -35247,10 +35323,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/post_v1_name_description_games_translation_history"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/name-description/games/translation-history",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/post_legacy_game_internationalization_v1_name_description_games_translation_history"
           }
         ]
       }
@@ -35410,10 +35487,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_autolocalization_games__gameId__settings"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-localization-tables/v1/autolocalization/games/{gameId}/settings",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_legacy_localization_tables_v1_autolocalization_games__gameId__settings"
           }
         ]
       }
@@ -35611,10 +35689,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/badges#/default/patch_v1_badges__badgeId__description_language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/badges/{badgeId}/description/language-codes/{languageCode}",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/badges#/default/patch_legacy_game_internationalization_v1_badges__badgeId__description_language_codes__languageCode_"
           }
         ]
       }
@@ -35882,10 +35961,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/badges#/default/delete_v1_badges__badgeId__name_description_language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/badges/{badgeId}/name-description/language-codes/{languageCode}",
-            "httpMethod": "DELETE"
+            "httpMethod": "DELETE",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/badges#/default/delete_legacy_game_internationalization_v1_badges__badgeId__name_description_language_codes__languageCode_"
           }
         ]
       },
@@ -35977,10 +36057,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/badges#/default/patch_v1_badges__badgeId__name_description_language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/badges/{badgeId}/name-description/language-codes/{languageCode}",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/badges#/default/patch_legacy_game_internationalization_v1_badges__badgeId__name_description_language_codes__languageCode_"
           }
         ]
       }
@@ -36178,10 +36259,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/badges#/default/patch_v1_badges__badgeId__name_language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/badges/{badgeId}/name/language-codes/{languageCode}",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/badges#/default/patch_legacy_game_internationalization_v1_badges__badgeId__name_language_codes__languageCode_"
           }
         ]
       }
@@ -36379,10 +36461,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/patch_v1_developer_products__developerProductId__description_language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/developer-products/{developerProductId}/description/language-codes/{languageCode}",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/developer-products#/default/patch_legacy_game_internationalization_v1_developer_products__developerProductId__description_language_codes__languageCode_"
           }
         ]
       }
@@ -36650,10 +36733,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/delete_v1_developer_products__developerProductId__name_description_language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/developer-products/{developerProductId}/name-description/language-codes/{languageCode}",
-            "httpMethod": "DELETE"
+            "httpMethod": "DELETE",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/developer-products#/default/delete_legacy_game_internationalization_v1_developer_products__developerProductId__name_description_language_codes__languageCode_"
           }
         ]
       },
@@ -36745,10 +36829,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/patch_v1_developer_products__developerProductId__name_description_language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/developer-products/{developerProductId}/name-description/language-codes/{languageCode}",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/developer-products#/default/patch_legacy_game_internationalization_v1_developer_products__developerProductId__name_description_language_codes__languageCode_"
           }
         ]
       }
@@ -36946,10 +37031,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/patch_v1_developer_products__developerProductId__name_language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/developer-products/{developerProductId}/name/language-codes/{languageCode}",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/developer-products#/default/patch_legacy_game_internationalization_v1_developer_products__developerProductId__name_language_codes__languageCode_"
           }
         ]
       }
@@ -37141,10 +37227,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/patch_v1_game_passes__gamePassId__description_language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/game-passes/{gamePassId}/description/language-codes/{languageCode}",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/game-passes#/default/patch_legacy_game_internationalization_v1_game_passes__gamePassId__description_language_codes__languageCode_"
           }
         ]
       }
@@ -37403,10 +37490,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/delete_v1_game_passes__gamePassId__name_description_language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/game-passes/{gamePassId}/name-description/language-codes/{languageCode}",
-            "httpMethod": "DELETE"
+            "httpMethod": "DELETE",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/game-passes#/default/delete_legacy_game_internationalization_v1_game_passes__gamePassId__name_description_language_codes__languageCode_"
           }
         ]
       },
@@ -37495,10 +37583,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/patch_v1_game_passes__gamePassId__name_description_language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/game-passes/{gamePassId}/name-description/language-codes/{languageCode}",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/game-passes#/default/patch_legacy_game_internationalization_v1_game_passes__gamePassId__name_description_language_codes__languageCode_"
           }
         ]
       }
@@ -37690,10 +37779,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/patch_v1_game_passes__gamePassId__name_language_codes__languageCode_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/game-passes/{gamePassId}/name/language-codes/{languageCode}",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/game-passes#/default/patch_legacy_game_internationalization_v1_game_passes__gamePassId__name_language_codes__languageCode_"
           }
         ]
       }
@@ -37955,10 +38045,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_supported_languages_games__gameId__languages__languageCode__automatic_translation_status"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/supported-languages/games/{gameId}/languages/{languageCode}/automatic-translation-status",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_legacy_game_internationalization_v1_supported_languages_games__gameId__languages__languageCode__automatic_translation_status"
           }
         ]
       }
@@ -38150,10 +38241,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_supported_languages_games__gameId__languages__languageCode__universe_display_info_automatic_translation_settings"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/supported-languages/games/{gameId}/languages/{languageCode}/universe-display-info-automatic-translation-settings",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_legacy_game_internationalization_v1_supported_languages_games__gameId__languages__languageCode__universe_display_info_automatic_translation_settings"
           }
         ]
       }
@@ -38333,10 +38425,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/delete_v1_game_thumbnails_games__gameId__language_codes__languageCode__images__imageId_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/{imageId}",
-            "httpMethod": "DELETE"
+            "httpMethod": "DELETE",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/delete_legacy_game_internationalization_v1_game_thumbnails_games__gameId__language_codes__languageCode__images__imageId_"
           }
         ]
       }
@@ -38481,6 +38574,15 @@
         "servers": [
           {
             "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -38770,6 +38872,14 @@
                 "format": "int64",
                 "type": "integer"
               }
+            }
+          },
+          {
+            "in": "query",
+            "name": "languageCode",
+            "description": "The HTML language code [optional].",
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -39239,10 +39349,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/get_v1_games__universeId__game_passes"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/game-passes/v1/universes/{universeId}/game-passes",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/game-passes#/default/GamePasses_CreateGamePass"
           }
         ]
       }
@@ -39296,10 +39407,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/thumbnails#/default/get_v1_games__universeId__media"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://games.roblox.com/v2/games/{universeId}/media",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/thumbnails#/default/get_v2_games__universeId__media"
           }
         ]
       }
@@ -39368,10 +39480,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/interactions#/default/get_v1_games__universeId__votes"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://games.roblox.com/v1/games/votes",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/interactions#/default/get_v1_games_votes"
           }
         ]
       }
@@ -40426,8 +40539,99 @@
             "schema": {
               "type": "integer",
               "format": "int32",
-              "enum": [0, 1, 2],
-              "default": 0
+              "enum": [1, 2, 4],
+              "default": 1
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "The number of results per request.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "enum": [10, 25, 50, 100],
+              "default": 10
+            }
+          },
+          {
+            "in": "query",
+            "name": "cursor",
+            "description": "The paging cursor for the previous or next page.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sortOrder",
+            "description": "The order the results are sorted in.",
+            "schema": {
+              "type": "string",
+              "enum": ["Asc", "Desc"],
+              "default": "Asc"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Groups.Api.Models.Response.GroupExperienceResponse_"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Groups.Api.Models.Response.GroupExperienceResponse_"
+                }
+              }
+            }
+          },
+          "501": {
+            "description": "47: Code path is not implemented."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
+    "/v2/groups/{groupId}/games#GroupsApi": {
+      "get": {
+        "summary": "Gets experiences created by the specified group id.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "groupId",
+            "description": "The group Id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "query",
+            "name": "accessFilter",
+            "description": "The access type of the experiences.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "enum": [1, 2, 4],
+              "default": 1
             }
           },
           {
@@ -40960,16 +41164,18 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/groups#/default/get_v1_groups__groupId_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/groups/{group_id}",
             "httpMethod": "GET",
-            "description": "For core group information."
+            "description": "For core group information.",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/groups#/Group/Cloud_GetGroup"
           },
           {
             "url": "https://apis.roblox.com/cloud/v2/groups/{group_id}/shout",
             "httpMethod": "GET",
-            "description": "For the group shout information"
+            "description": "For the group shout information",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/groups#/GroupShout/Cloud_GetGroupShout"
           }
         ]
       }
@@ -41341,10 +41547,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/groups#/default/get_v1_groups__groupId__audit_log"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-groups/v1/groups/{groupId}/audit-log",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/groups#/default/get_legacy_groups_v1_groups__groupId__audit_log"
           }
         ]
       }
@@ -43646,10 +43853,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/groups#/default/get_v1_groups__groupId__settings"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-groups/v1/groups/{groupId}/settings",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/groups#/default/get_legacy_groups_v1_groups__groupId__settings"
           }
         ]
       },
@@ -43729,10 +43937,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/groups#/default/patch_v1_groups__groupId__settings"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-groups/v1/groups/{groupId}/settings",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/groups#/default/patch_legacy_groups_v1_groups__groupId__settings"
           }
         ]
       }
@@ -44729,10 +44938,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/groups#/default/get_v1_user_groups_pending"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-groups/v1/user/groups/pending",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/groups#/default/get_legacy_groups_v1_user_groups_pending"
           }
         ]
       }
@@ -45799,10 +46009,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/groups#/default/post_v1_groups_policies"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-groups/v1/groups/policies",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/groups#/default/post_legacy_groups_v1_groups_policies"
           }
         ]
       }
@@ -46227,10 +46438,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/groups#/default/patch_v1_groups__groupId__description"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-groups/v1/groups/{groupId}/description",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/groups#/default/patch_legacy_groups_v1_groups__groupId__description"
           }
         ]
       }
@@ -46496,10 +46708,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/groups#/default/patch_v1_groups__groupId__notification_preference"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-groups/v1/groups/{groupId}/notification-preference",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/groups#/default/patch_legacy_groups_v1_groups__groupId__notification_preference"
           }
         ]
       }
@@ -46984,10 +47197,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/groups#/default/patch_v1_groups__groupId__status"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-groups/v1/groups/{groupId}/status",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/groups#/default/patch_legacy_groups_v1_groups__groupId__status"
           }
         ]
       }
@@ -47422,10 +47636,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/inventories#/default/get_v1_packages__packageId__assets"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://catalog.roblox.com/v1/bundles/{bundleId}/details",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/assets#/default/get_v1_bundles__bundleId__details"
           }
         ]
       }
@@ -48587,6 +48802,9 @@
           "400": {
             "description": "1: No item tag Ids requested\r\n2: Too many item tag Ids requested\r\n3: Invalid item id\r\n6: Invalid item namespace"
           },
+          "404": {
+            "description": "10: The endpoint was not found"
+          },
           "429": {
             "description": "7: Too many requests"
           }
@@ -48652,6 +48870,9 @@
           "403": {
             "description": "0: Token Validation Failed\r\n5: The current user is missing permissions for the endpoint"
           },
+          "404": {
+            "description": "10: The endpoint was not found"
+          },
           "429": {
             "description": "7: Too many requests"
           }
@@ -48693,6 +48914,9 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "10: The endpoint was not found"
           }
         },
         "servers": [
@@ -48752,6 +48976,9 @@
           },
           "400": {
             "description": "1: No tag Ids requested\r\n2: Too many tag Ids requested"
+          },
+          "404": {
+            "description": "7: The endpoint was not found"
           },
           "429": {
             "description": "3: Too many requests"
@@ -48825,6 +49052,9 @@
           },
           "403": {
             "description": "4: This endpoint is not yet enabled for the current user"
+          },
+          "404": {
+            "description": "7: The endpoint was not found"
           },
           "429": {
             "description": "3: Too many requests"
@@ -48962,6 +49192,9 @@
           },
           "403": {
             "description": "0: Token Validation Failed\r\n5: The current user is missing permissions for the endpoint"
+          },
+          "404": {
+            "description": "10: The endpoint was not found"
           },
           "429": {
             "description": "7: Too many requests"
@@ -49449,10 +49682,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_autolocalization_metadata"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-localization-tables/v1/autolocalization/metadata",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/get_legacy_localization_tables_v1_autolocalization_metadata"
           }
         ]
       }
@@ -49552,10 +49786,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_localization_table_limits"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-localization-tables/v1/localization-table/limits",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/get_legacy_localization_tables_v1_localization_table_limits"
           }
         ]
       }
@@ -49713,10 +49948,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/assets#/default/get_v1_localization_table_tables__assetId_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-localization-tables/v1/localization-table/tables/{assetId}",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/assets#/default/get_legacy_localization_tables_v1_localization_table_tables__assetId_"
           }
         ]
       }
@@ -49852,10 +50088,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_localization_table_tables__tableId_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-localization-tables/v1/localization-table/tables/{tableId}",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/get_legacy_localization_tables_v1_localization_table_tables__tableId_"
           }
         ]
       },
@@ -49944,10 +50181,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_localization_table_tables__tableId_"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-localization-tables/v1/localization-table/tables/{tableId}",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_legacy_localization_tables_v1_localization_table_tables__tableId_"
           }
         ]
       }
@@ -50209,10 +50447,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_localization_table_tables__tableId__entries"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-localization-tables/v1/localization-table/tables/{tableId}/entries",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/get_legacy_localization_tables_v1_localization_table_tables__tableId__entries"
           }
         ]
       }
@@ -50393,10 +50632,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_localization_table_tables__tableId__entry_count"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-localization-tables/v1/localization-table/tables/{tableId}/entry-count",
-            "httpMethod": "GET"
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/get_legacy_localization_tables_v1_localization_table_tables__tableId__entry_count"
           }
         ]
       }
@@ -50686,10 +50926,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/post_v1_autolocalization_games__gameId__autolocalizationtable"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-localization-tables/v1/autolocalization/games/{gameId}/autolocalizationtable",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/post_legacy_localization_tables_v1_autolocalization_games__gameId__autolocalizationtable"
           }
         ]
       },
@@ -51070,10 +51311,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/post_v1_localization_table_tables__tableId__entries_translation_history"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-localization-tables/v1/localization-table/tables/{tableId}/entries/translation-history",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/post_legacy_localization_tables_v1_localization_table_tables__tableId__entries_translation_history"
           }
         ]
       }
@@ -51325,10 +51567,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_autolocalization_games__gameId__settings"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-localization-tables/v1/autolocalization/games/{gameId}/settings",
-            "httpMethod": "PATCH"
+            "httpMethod": "PATCH",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_legacy_localization_tables_v1_autolocalization_games__gameId__settings"
           }
         ]
       }
@@ -53353,10 +53596,11 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/assets#/default/post_v1_badges__badgeId__icon"
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/legacy-publish/v1/badges/{badgeId}/icon",
-            "httpMethod": "POST"
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/features/assets#/default/post_legacy_publish_v1_badges__badgeId__icon"
           }
         ]
       }
@@ -67251,16 +67495,6 @@
         },
         "description": "A list of Entries in the parent collection."
       },
-      "Any": {
-        "type": "object",
-        "properties": {
-          "@type": {
-            "type": "string",
-            "description": "The type of the serialized message."
-          }
-        },
-        "description": "Contains an arbitrary serialized message along with a `@type` that describes the type of the serialized message."
-      },
       "Asset": {
         "type": "object",
         "properties": {
@@ -67404,9 +67638,6 @@
             "type": "string",
             "description": "The server-assigned resource path. The default format is `operations/{operation_id}`."
           },
-          "metadata": {
-            "$ref": "#/components/schemas/Any"
-          },
           "done": {
             "type": "boolean",
             "description": "If `false`, the operation is still in progress. If `true`, the operation is completed."
@@ -67415,7 +67646,7 @@
             "$ref": "#/components/schemas/OCV1.Assets.Status"
           },
           "response": {
-            "$ref": "#/components/schemas/Any"
+            "$ref": "#/components/schemas/Asset"
           }
         },
         "description": "This resource represents a long-running operation that is the result of a network API call."
@@ -67464,13 +67695,6 @@
           "message": {
             "type": "string",
             "description": "The error message."
-          },
-          "details": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Any"
-            },
-            "description": "A list of messages carrying error details."
           }
         },
         "description": "The logical error model explaining the error status."
@@ -71847,6 +72071,15 @@
           },
           "type": {
             "type": "string"
+          },
+          "supportsHeadShapes": {
+            "description": "Whether the bundle item supports head shapes.",
+            "type": "boolean"
+          },
+          "assetType": {
+            "format": "int32",
+            "description": "The asset type of the bundle item, if it's an asset.",
+            "type": "integer"
           }
         },
         "additionalProperties": false
@@ -71855,10 +72088,6 @@
         "description": "The is the beta (non game-engine) version of BundleItemDetailModel for internal consumption on Roblox web and universal-app.",
         "type": "object",
         "properties": {
-          "assetType": {
-            "format": "int32",
-            "type": "integer"
-          },
           "owned": {
             "type": "boolean"
           },
@@ -71871,6 +72100,15 @@
           },
           "type": {
             "type": "string"
+          },
+          "supportsHeadShapes": {
+            "description": "Whether the bundle item supports head shapes.",
+            "type": "boolean"
+          },
+          "assetType": {
+            "format": "int32",
+            "description": "The asset type of the bundle item, if it's an asset.",
+            "type": "integer"
           }
         },
         "additionalProperties": false
@@ -72064,6 +72302,10 @@
             "format": "int32",
             "description": "Quantity limit for how many instances a user can buy.",
             "type": "integer"
+          },
+          "supportsHeadShapes": {
+            "description": "Whether the item supports head shapes.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -72080,7 +72322,7 @@
             }
           },
           "timedOptions": {
-            "description": "The timed options for the item.\r\nTODO(klee): Will be moved to CatalogSearchDetailedResponseItem when we support timed options within game engine.",
+            "description": "The timed options for the item.",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Roblox.Catalog.Api.TimedOption"
@@ -72232,6 +72474,10 @@
             "format": "int32",
             "description": "Quantity limit for how many instances a user can buy.",
             "type": "integer"
+          },
+          "supportsHeadShapes": {
+            "description": "Whether the item supports head shapes.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -82903,6 +83149,10 @@
           "isCircular": {
             "description": "Is the thumbnail circular shape",
             "type": "boolean"
+          },
+          "accessContext": {
+            "description": "Access context for asset permission checks (only relevant for Asset thumbnail types)",
+            "type": "string"
           }
         },
         "additionalProperties": false
