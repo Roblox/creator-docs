@@ -24,6 +24,13 @@ navigation:
             path: /projects/client-server
           - title: Instance streaming
             path: /workspace/streaming
+          - title: Server authority
+            path: /projects/server-authority/
+            section:
+              - title: Overview
+                path: /projects/server-authority/
+              - title: Advanced techniques
+                path: /projects/server-authority/techniques
       - title: Manage
         path: /projects/experience-ownership-transfer
         section:

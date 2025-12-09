@@ -5,10 +5,10 @@
 name: StarterPlayer
 type: class
 memory_category: Instances
-summary: |
+summary: |-
   A service which allows the defaults of properties in the `Class.Player` object
   to be set.
-description: |
+description: |-
   A service which allows the defaults of properties in the `Class.Player` object
   to be set. When a player enters the server, each property of the player object
   is set to the current value of the corresponding property in
@@ -34,10 +34,10 @@ tags:
 deprecation_message: ''
 properties:
   - name: StarterPlayer.AllowCustomAnimations
-    summary: |
+    summary: |-
       Describes the current game's permission levels regarding custom avatar
       animations from the website.
-    description: |
+    description: |-
       This property describes the current game's permission levels regarding
       custom avatar `Class.Animation|Animations` from the website.
 
@@ -62,10 +62,10 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.AutoJumpEnabled
-    summary: |
+    summary: |-
       Sets whether the character will automatically jump when hitting an
       obstacle on a mobile device.
-    description: |
+    description: |-
       This property sets whether the character will automatically jump when
       hitting an obstacle on a mobile device.
 
@@ -91,20 +91,15 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.AvatarJointUpgrade
-    summary: |
-      Controls whether avatars spawn with AnimationConstraint joints for
-      physical simulation.
-    description: |
-      This property controls the rollout state of new AnimationConstraint joints
-      in avatars. When Disabled, avatars spawn with legacy
-      `Class.Motor6D|Motor6Ds` connecting their limbs. When Enabled, avatars
-      spawn with `Class.AnimationConstraint|AnimationConstraints` and
-      `Class.BallSocketConstraint|BallSocketConstraints` connecting their limbs.
-      This makes it easier to write scripts that enable physical simulation,
-      like arm strength and ragdoll falling down.
+    summary: Controls whether avatars spawn with AnimationConstraint joints for physical simulation.
+    description: |-
+      This property controls the rollout state of new AnimationConstraint joints in avatars.
+      When Disabled, avatars spawn with legacy `Class.Motor6D|Motor6Ds` connecting their limbs.
+      When Enabled, avatars spawn with `Class.AnimationConstraint|AnimationConstraints` and
+      `Class.BallSocketConstraint|BallSocketConstraints` connecting their limbs. This makes it easier
+      to write scripts that enable physical simulation, like arm strength and ragdoll falling down.
 
-      For more info see the
-      [devforum announcement](https://devforum.roblox.com/t/studio-beta-avatar-joint-upgrade-enabling-physically-simulated-characters/3266099).
+      For more info see the [devforum announcement](https://devforum.roblox.com/t/studio-beta-avatar-joint-upgrade-enabling-physically-simulated-characters/3266099).
     code_samples: []
     type: RolloutState
     tags:
@@ -123,10 +118,10 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.CameraMaxZoomDistance
-    summary: |
+    summary: |-
       The maximum distance the player's default camera is allowed to zoom out in
       studs.
-    description: |
+    description: |-
       This property sets the maximum distance in studs the camera can be from
       the character with the default cameras.
 
@@ -151,10 +146,10 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.CameraMinZoomDistance
-    summary: |
+    summary: |-
       The minimum distance in studs the player's default camera is allowed to
       zoom in.
-    description: |
+    description: |-
       This property sets the minimum distance in studs the camera can be from
       the character with the default cameras.
 
@@ -179,9 +174,8 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.CameraMode
-    summary: |
-      Changes the default camera's mode to either first or third person.
-    description: |
+    summary: Changes the default camera's mode to either first or third person.
+    description: |-
       Sets the default value for `Class.Player.CameraMode` for each player in
       the game. The camera has two modes:
 
@@ -220,16 +214,15 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.CharacterBreakJointsOnDeath
-    summary: |
+    summary: |-
       Determines the starting value of `Class.Humanoid.BreakJointsOnDeath` for
       `Class.Player.Character`.
-    description: |
-      This property determines the starting value of
-      `Class.Humanoid.BreakJointsOnDeath` for a player's
-      `Class.Player.Character`.
+    description: |-
+      This property determines the starting value of `Class.Humanoid.BreakJointsOnDeath`
+      for a player's `Class.Player.Character`.
 
-      Note, `Class.StarterPlayer.AvatarJointUpgrade` must be enabled for
-      CharacterBreakJointsOnDeath to take effect.
+      Note, `Class.StarterPlayer.AvatarJointUpgrade` must be enabled for CharacterBreakJointsOnDeath
+      to take effect.
     code_samples: []
     type: boolean
     tags: []
@@ -245,10 +238,10 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.CharacterJumpHeight
-    summary: |
+    summary: |-
       Determines the starting value of `Class.Humanoid.JumpHeight` for
       `Class.Player.Character`.
-    description: |
+    description: |-
       This property determines the starting value of `Class.Humanoid.JumpHeight`
       for a player's `Class.Player.Character`. The value of this property
       defaults to 7.2 studs.
@@ -275,10 +268,10 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.CharacterJumpPower
-    summary: |
+    summary: |-
       Determines the starting value of `Class.Humanoid.JumpPower` for
       `Class.Player.Character`.
-    description: |
+    description: |-
       This property determines the starting value of `Class.Humanoid.JumpPower`
       for a player's `Class.Player.Character`. The value of this property
       defaults to 50 and when applied to the player's `Class.Humanoid` it will
@@ -306,10 +299,10 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.CharacterMaxSlopeAngle
-    summary: |
+    summary: |-
       Determines the starting value of `Class.Humanoid.MaxSlopeAngle` for
       `Class.Player.Character`.
-    description: |
+    description: |-
       This property determines the starting value of
       `Class.Humanoid.MaxSlopeAngle` for a player's `Class.Player.Character`. It
       defaults to 89°, so humanoids can climb pretty much any slope they want by
@@ -334,10 +327,10 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.CharacterUseJumpPower
-    summary: |
+    summary: |-
       Determines the starting state of `Class.Humanoid.UseJumpPower` for
       `Class.Player.Character`.
-    description: |
+    description: |-
       `CharacterUseJumpPower` determines the starting value of
       `Class.Humanoid.UseJumpPower` for a player's `Class.Player.Character`.
       Toggling it will change which property is visible in the properties
@@ -363,10 +356,10 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.CharacterWalkSpeed
-    summary: |
+    summary: |-
       Determines the starting value of `Class.Humanoid.WalkSpeed` for
       `Class.Player.Character`.
-    description: |
+    description: |-
       This property determines the starting value of `Class.Humanoid.WalkSpeed`
       for a player's `Class.Player.Character`. This property defaults to 16.
 
@@ -406,14 +399,8 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.CreateDefaultPlayerModule
-    summary: |
-      Controls how the default player module and related scripts are handled.
-    description: |
-      This property is only visible when
-      `Class.Workspace.PlayerScriptsUseInputActionSystem` is enabled. When set
-      to `true` (default), the `PlayerModule` injection point occurs at
-      `Class.StarterPlayer`. When set to `false`, the default camera and control
-      scripts will not be added to the place.
+    summary: Controls how the default player module and related scripts are handled.
+    description: This property is only visible when `Class.Workspace.PlayerScriptsUseInputActionSystem` is enabled. When set to `true` (default), the `PlayerModule` injection point occurs at `Class.StarterPlayer`. When set to `false`, the default camera and control scripts will not be added to the place.
     code_samples: []
     type: boolean
     tags:
@@ -430,10 +417,10 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.DevCameraOcclusionMode
-    summary: |
+    summary: |-
       Sets how the default camera handles objects between the camera and the
       player.
-    description: |
+    description: |-
       Defines how the default camera scripts handle objects between the camera
       and the camera subject. Applies to all players as they join the experience
       and can't be changed for individual players.
@@ -455,9 +442,8 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.DevComputerCameraMovementMode
-    summary: |
-      Lets you overwrite the player's camera mode on a computer.
-    description: |
+    summary: Lets you overwrite the player's camera mode on a computer.
+    description: |-
       This property lets you overwrite the player's camera mode on a computer.
 
       If set to `Enum.DevComputerCameraMovementMode|UserChoice`, the player's
@@ -481,9 +467,8 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.DevComputerMovementMode
-    summary: |
-      Lets you overwrite the player's movement mode on a computer.
-    description: |
+    summary: Lets you overwrite the player's movement mode on a computer.
+    description: |-
       This property lets you overwrite the player's movement mode on a computer.
 
       If set to `Enum.DevComputerMovementMode|UserChoice`, the player's movement
@@ -506,9 +491,8 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.DevTouchCameraMovementMode
-    summary: |
-      Lets you overwrite the player's camera mode on a touch-enabled device.
-    description: |
+    summary: Lets you overwrite the player's camera mode on a touch-enabled device.
+    description: |-
       This property lets you overwrite the player's camera mode on a
       touch-enabled device.
 
@@ -534,9 +518,8 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.DevTouchMovementMode
-    summary: |
-      Lets you overwrite the player's movement mode on a touch-enabled device.
-    description: |
+    summary: Lets you overwrite the player's movement mode on a touch-enabled device.
+    description: |-
       This property lets you overwrite the player's movement mode on a
       touch-enabled device.
 
@@ -579,9 +562,8 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.EnableMouseLockOption
-    summary: |
-      Determines if a player can toggle mouse lock by default.
-    description: |
+    summary: Determines if a player can toggle mouse lock by default.
+    description: |-
       This property determines if a player can toggle mouse lock by default.
 
       Mouselock will lock the player's cursor to the center of the screen.
@@ -609,10 +591,10 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.HealthDisplayDistance
-    summary: |
+    summary: |-
       Sets the distance at which this player will see other `Class.Humanoid`
       health bars. If set to 0, the health bars will not be displayed.
-    description: |
+    description: |-
       This property sets the distance in studs at which this player will see
       other `Class.Humanoid` health bars. If set to 0, the health bars will not
       be displayed. This property is set to 100 studs by default.
@@ -638,9 +620,8 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.LoadCharacterAppearance
-    summary: |
-      Whether or not the appearance of a player's character should be loaded.
-    description: |
+    summary: Whether or not the appearance of a player's character should be loaded.
+    description: |-
       This property sets whether or not the appearance of a player's character
       should be loaded.
 
@@ -672,10 +653,10 @@ properties:
     capabilities:
       - Players
   - name: 'StarterPlayer.LoadCharacterLayeredClothing '
-    summary: |
+    summary: |-
       Indicates whether characters spawning into an experience will have layered
       clothing accessories equipped on them.
-    description: |
+    description: |-
       Indicates whether characters spawning into an experience will have layered
       clothing accessories equipped on them (Although
       `Class.Workspace.MeshPartHeadsAndAccessories` also need to be enabled in
@@ -701,7 +682,8 @@ properties:
     description: ''
     code_samples: []
     type: CharacterControlMode
-    tags: []
+    tags:
+      - NotBrowsable
     deprecation_message: ''
     security:
       read: None
@@ -714,10 +696,10 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.NameDisplayDistance
-    summary: |
+    summary: |-
       Sets the distance at which this player will see other `Class.Humanoid`
       names.
-    description: |
+    description: |-
       Sets the distance at which this player will see other `Class.Humanoid`
       names. If set to `0`, names are hidden. This property is set to `100`
       studs by default.
@@ -743,9 +725,8 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.UserEmotesEnabled
-    summary: |
-      Determines if user-owned emotes are loaded when loading avatars.
-    description: |
+    summary: Determines if user-owned emotes are loaded when loading avatars.
+    description: |-
       This property determines if user-owned emotes are loaded when loading
       avatars. Setting this property to `false` disables loading. Developers can
       set the property in Studio directly.

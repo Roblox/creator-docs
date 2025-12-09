@@ -4,49 +4,39 @@
 
 name: StepFrequency
 type: enum
-summary: |
-  Enum used with `Class.RunService:BindToSimulation()` to indicate the frequency
-  at which the bound function is called.
-description: |
-  Enum used with `Class.RunService:BindToSimulation()` to indicate the frequency
-  at which the bound function is called.
+summary: Enum used with `Class.RunService:BindToSimulation()` to indicate the frequency at which the bound function is called.
+description: Enum used with `Class.RunService:BindToSimulation()` to indicate the frequency at which the bound function is called.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Hz60
-    summary: |
-      The bound function is called at 60 Hz.
+    summary: The bound function is called at 60 Hz.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Hz30
-    summary: |
-      The bound function is called at 30 Hz.
+    summary: The bound function is called at 30 Hz.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Hz15
-    summary: |
-      The bound function is called at 15 Hz.
+    summary: The bound function is called at 15 Hz.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Hz10
-    summary: |
-      The bound function is called at 10 Hz.
+    summary: The bound function is called at 10 Hz.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Hz5
-    summary: |
-      The bound function is called at 5 Hz.
+    summary: The bound function is called at 5 Hz.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Hz1
-    summary: |
-      The bound function is called at 1 Hz.
+    summary: The bound function is called at 1 Hz.
     value: 5
     tags: []
     deprecation_message: ''
