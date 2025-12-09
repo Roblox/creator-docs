@@ -3,7 +3,7 @@
   "info": {
     "title": "Cloud API",
     "description": "The Roblox Open Cloud v2 API. This is a subset of endpoints that Roblox\nprovides. See https://create.roblox.com/docs/cloud/open-cloud for more\ndetails.",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "x-roblox-extensions-version": "1.0.0"
   },
   "servers": [
@@ -46,7 +46,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "creator-store-product:write"
           }
         ],
@@ -116,7 +115,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "creator-store-product:read"
           }
         ],
@@ -212,7 +210,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "creator-store-product:write"
           }
         ],
@@ -377,7 +374,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "group:read"
           }
         ],
@@ -460,7 +456,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "group:write"
           }
         ],
@@ -543,7 +538,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "group:write"
           }
         ],
@@ -727,7 +721,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "group:write"
           }
         ],
@@ -1120,7 +1113,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe:write"
           }
         ],
@@ -1237,7 +1229,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe-datastores.control:list"
           }
         ],
@@ -1310,7 +1301,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe-datastores.control:delete"
           }
         ],
@@ -1423,7 +1413,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe-datastores.objects:list"
           }
         ],
@@ -1518,7 +1507,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe-datastores.objects:create"
           }
         ],
@@ -1600,7 +1588,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe-datastores.objects:read"
           }
         ],
@@ -1674,7 +1661,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe-datastores.objects:delete"
           }
         ],
@@ -1773,7 +1759,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe-datastores.objects:update"
           }
         ],
@@ -1865,11 +1850,9 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe-datastores.objects:create"
           },
           {
-            "description": "Required",
             "name": "universe-datastores.objects:update"
           }
         ],
@@ -1985,7 +1968,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe-datastores.versions:list"
           }
         ],
@@ -2107,7 +2089,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe-datastores.objects:list"
           }
         ],
@@ -2211,7 +2192,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe-datastores.objects:create"
           }
         ],
@@ -2302,7 +2282,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe-datastores.objects:read"
           }
         ],
@@ -2385,7 +2364,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe-datastores.objects:delete"
           }
         ],
@@ -2493,7 +2471,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe-datastores.objects:update"
           }
         ],
@@ -2594,11 +2571,9 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe-datastores.objects:create"
           },
           {
-            "description": "Required",
             "name": "universe-datastores.objects:update"
           }
         ],
@@ -2723,7 +2698,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe-datastores.versions:list"
           }
         ],
@@ -2806,7 +2780,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe-datastores.control:delete"
           }
         ],
@@ -2880,7 +2853,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe-datastores.control:snapshot"
           }
         ],
@@ -2947,7 +2919,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.place.luau-execution-session:write"
           }
         ],
@@ -3029,7 +3000,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "memory-store.queue:add"
           }
         ],
@@ -3105,7 +3075,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "memory-store.queue:discard"
           }
         ],
@@ -3205,7 +3174,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "memory-store.queue:dequeue"
           }
         ],
@@ -3316,7 +3284,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "memory-store.sorted-map:read"
           }
         ],
@@ -3410,7 +3377,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "memory-store.sorted-map:write"
           }
         ],
@@ -3491,7 +3457,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "memory-store.sorted-map:read"
           }
         ],
@@ -3564,7 +3529,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "memory-store.sorted-map:write"
           }
         ],
@@ -3662,7 +3626,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "memory-store.sorted-map:write"
           }
         ],
@@ -3743,7 +3706,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "memory-store:flush"
           }
         ],
@@ -3870,7 +3832,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.ordered-data-store.scope.entry:read"
           }
         ],
@@ -3974,7 +3935,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.ordered-data-store.scope.entry:write"
           }
         ],
@@ -4065,7 +4025,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.ordered-data-store.scope.entry:read"
           }
         ],
@@ -4148,7 +4107,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.ordered-data-store.scope.entry:write"
           }
         ],
@@ -4256,7 +4214,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.ordered-data-store.scope.entry:write"
           }
         ],
@@ -4357,7 +4314,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.ordered-data-store.scope.entry:write"
           }
         ],
@@ -4513,7 +4469,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.place:write"
           }
         ],
@@ -4609,7 +4564,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.place.instance:read"
           }
         ],
@@ -4715,7 +4669,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.place.instance:write"
           }
         ],
@@ -4827,7 +4780,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.place.instance:read"
           }
         ],
@@ -4909,7 +4861,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.place.luau-execution-session:write"
           }
         ],
@@ -5015,7 +4966,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.user-restriction:read"
           }
         ],
@@ -5104,7 +5054,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.user-restriction:read"
           }
         ],
@@ -5228,7 +5177,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.user-restriction:write"
           }
         ],
@@ -5316,7 +5264,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.place.luau-execution-session:write"
           }
         ],
@@ -5426,11 +5373,9 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.place.luau-execution-session:read"
           },
           {
-            "description": "Required",
             "name": "universe.place.luau-execution-session:write"
           }
         ],
@@ -5566,11 +5511,9 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.place.luau-execution-session:read"
           },
           {
-            "description": "Required",
             "name": "universe.place.luau-execution-session:write"
           }
         ],
@@ -5665,11 +5608,9 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe:write"
           },
           {
-            "description": "Required",
             "name": "universe.subscription-product.subscription:read"
           }
         ],
@@ -5776,7 +5717,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.user-restriction:read"
           }
         ],
@@ -5856,7 +5796,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.user-restriction:read"
           }
         ],
@@ -5971,7 +5910,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.user-restriction:write"
           }
         ],
@@ -6073,7 +6011,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe.user-restriction:read"
           }
         ],
@@ -6151,7 +6088,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe:write"
           }
         ],
@@ -6225,7 +6161,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe-messaging-service:publish"
           }
         ],
@@ -6305,7 +6240,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe:write"
           }
         ],
@@ -6392,7 +6326,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "universe:write"
           }
         ],
@@ -6554,7 +6487,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "asset:read"
           }
         ],
@@ -6735,7 +6667,6 @@
         },
         "x-roblox-scopes": [
           {
-            "description": "Required",
             "name": "user.user-notification:write"
           }
         ],

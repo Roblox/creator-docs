@@ -1348,11 +1348,108 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
+  - name: Humanoid:ApplyDescriptionAsync
+    summary: |
+      Makes the character's look match that of the passed in
+      `Class.HumanoidDescription`.
+    description: |
+      This yielding method makes the character's look match that of the passed
+      in `Class.HumanoidDescription`. A copy of the passed
+      `Class.HumanoidDescription` is cached as the `Class.HumanoidDescription`
+      for the `Class.Humanoid`.
+
+      This method is optimized through making the assumption that only this
+      method is used to change the appearance of the character, and no changes
+      are made through other means between calls. If changes are made to the
+      character between calls, then this method may not make the character
+      reflect the passed in `Class.HumanoidDescription` accurately. If you want
+      to use this method in conjunction with other means of updating the
+      character, `Class.Humanoid:ApplyDescriptionReset()` will always ensure the
+      character reflects the passed in `Class.HumanoidDescription`.
+
+      #### See Also
+
+      - `Class.Humanoid:GetAppliedDescription()` which returns the
+        `Class.HumanoidDescription` currently applied to the humanoid.
+      - `Class.Players:GetHumanoidDescriptionFromUserId()` which returns a
+        `Class.HumanoidDescription` describing the avatar for the passed in
+        user.
+      - `Class.Players:GetHumanoidDescriptionFromOutfitId()` which returns a
+        `Class.HumanoidDescription` whose parameters are initialized to match
+        that of the passed in server-side outfit asset.
+      - `Class.Player:LoadCharacterWithHumanoidDescription()` which spawns a
+        player with the look from the passed in `Class.HumanoidDescription`.
+    code_samples: []
+    parameters:
+      - name: humanoidDescription
+        type: HumanoidDescription
+        default:
+        summary: |
+          The `Class.HumanoidDescription` instance which you want to set the
+          character to match.
+      - name: assetTypeVerification
+        type: AssetTypeVerification
+        default: Default
+        summary: |
+          The asset type verification mode.
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Avatar
   - name: Humanoid:ApplyDescription
     summary: |
       Makes the character's look match that of the passed in
       `Class.HumanoidDescription`.
     description: ''
+    code_samples: []
+    parameters:
+      - name: humanoidDescription
+        type: HumanoidDescription
+        default:
+        summary: |
+          The `Class.HumanoidDescription` instance which you want to set the
+          character to match.
+      - name: assetTypeVerification
+        type: AssetTypeVerification
+        default: Default
+        summary: |
+          The asset type verification mode.
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Avatar
+  - name: Humanoid:ApplyDescriptionResetAsync
+    summary: |
+      Makes the character's look match that of the passed in
+      `Class.HumanoidDescription`, even after external changes.
+    description: |
+      This yielding method makes the character's look match that of the passed
+      in `Class.HumanoidDescription`, even after external changes. A copy of the
+      passed `Class.HumanoidDescription` is cached as the
+      `Class.HumanoidDescription` for the `Class.Humanoid`.
+
+      This method will always ensure the character reflects the passed in
+      `Class.HumanoidDescription`, even if changes have been made to the
+      character not using the `Class.HumanoidDescription` system (for example
+      not using `Class.Humanoid:ApplyDescriptionReset()|ApplyDescriptionReset()`
+      or `Class.Humanoid:ApplyDescription()|ApplyDescription()`). This is in
+      contrast to `Class.Humanoid:ApplyDescription()|ApplyDescription()` which
+      is optimized and may incorrectly apply a `Class.HumanoidDescription` if
+      the character has been changed by means other than through the
+      `Class.HumanoidDescription` system.
     code_samples: []
     parameters:
       - name: humanoidDescription
@@ -1399,6 +1496,7 @@ methods:
         summary: ''
     tags:
       - Yields
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -1993,6 +2091,31 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
+  - name: Humanoid:PlayEmoteAsync
+    summary: |
+      Plays emotes and returns if was successfully ran.
+    description: |
+      If the emote could not be played because the emoteName is not found in the
+      HumanoidDescription, this method will give an error. The method will
+      return true to indicate that the emote was played successfully.
+    code_samples: []
+    parameters:
+      - name: emoteName
+        type: string
+        default:
+        summary: |
+          name of the emote to play.
+    returns:
+      - type: boolean
+        summary: |
+          successfully played.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Avatar
   - name: Humanoid:PlayEmote
     summary: |
       Plays emotes and returns if was successfully ran.
@@ -2010,6 +2133,7 @@ methods:
           successfully played.
     tags:
       - Yields
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

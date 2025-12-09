@@ -236,7 +236,11 @@ methods:
             projection will blend color values.
           - `Decal` (`EditableImage`) as the image used for projection.
           - `FadeAngle` (number) as the angle in degrees for the projection
-            edges to fall off.
+            edges to start to fall off. The projection will be fully faded out
+            at 90 degrees. An angle of 0 means fading starts immediately at 0
+            degrees and an angle of 90 means no fading but instead a hard edge
+            at 90 degrees. An angle of 70 degrees would mean the projection
+            starts to fade at 70 degrees and is fully faded out at 90 degrees.
           - `BlendIntensity` (number) as the value between `0` and `1` which
             controls how much of the projection is blended into the resulting
             image.

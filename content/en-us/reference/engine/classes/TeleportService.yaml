@@ -333,6 +333,74 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: TeleportService:ReserveServerAsync
+    summary: |
+      Returns an access code that can be used to teleport players to a reserved
+      server, along with the `Class.DataModel.PrivateServerId` for it.
+    description: |
+      This function returns an access code that can be used to teleport players
+      to a reserved server, along with the server's
+      `Class.DataModel.PrivateServerId`. It can only be called on the server.
+
+      #### Reserved Servers
+
+      You can access reserved servers using:
+
+      - `Class.TeleportService:TeleportAsync()` with the
+        `Class.TeleportOptions.ReservedServerAccessCode` parameter.
+      - `Class.TeleportService:TeleportToPrivateServer()`, with the access code
+        `ReserveServer` returns.
+        - A server is started when the access code is first used.
+        - Access codes remain valid indefinitely, meaning reserved servers can
+          still be joined if no game server is running (in this case a new
+          server will be started).
+
+      You can see if the current server is a reserved server by using the
+      following code:
+
+      ```lua
+      local isReserved = game.PrivateServerId ~= "" and game.PrivateServerOwnerId == 0
+      ```
+
+      The `Class.DataModel.PrivateServerId` is constant across all server
+      instances associated with the server access code, the
+      `Class.DataModel.JobId` is not.
+
+      #### Studio Limitation
+
+      Note that this service does not work during playtesting in Roblox Studio;
+      to test aspects of your experience using it, you must publish the
+      experience and play it in the Roblox application.
+
+      #### Cross-Platform Play
+
+      Players on Xbox and PlayStation with cross‑play disabled will arrive in a
+      different server than players with cross‑play enabled. This can cause
+      multiple game servers with the same
+      `Class.DataModel.PrivateServerId|PrivateServerId` to exist. You can use
+      `Class.DataModel.MatchmakingType` to differentiate these game servers.
+    code_samples:
+      - TeleportService-ReserveServer1
+      - teleportservice-teleport-to-a-reserved-server-via-chat
+    parameters:
+      - name: placeId
+        type: int64
+        default:
+        summary: |
+          The `Class.DataModel.PlaceId` of the place the reserved server is
+          being created for.
+    returns:
+      - type: Tuple
+        summary: |
+          The server access code required by
+          `Class.TeleportService:TeleportToPrivateServer()` and the
+          `Class.DataModel.PrivateServerId` for the reserved server.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: TeleportService:ReserveServer
     summary: |
       Returns an access code that can be used to teleport players to a reserved
@@ -356,6 +424,7 @@ methods:
           `Class.DataModel.PrivateServerId` for the reserved server.
     tags:
       - Yields
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

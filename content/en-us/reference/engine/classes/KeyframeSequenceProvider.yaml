@@ -34,6 +34,34 @@ deprecation_message: |
   instead.
 properties: []
 methods:
+  - name: KeyframeSequenceProvider:GetAnimationsAsync
+    summary: |
+      This function returns an `Class.InventoryPages` object which can be used
+      to iterate over animations owned by a specific user.
+    description: |
+      This function returns an `Class.InventoryPages` object which can be used
+      to iterate over animations owned by a specific user.
+
+      This function has a number of potential uses, such as allowing users to
+      browse and import animations into a custom animation plugin.
+    code_samples:
+      - KeyframeSequenceProvider-GetAnimations
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: |
+          The user ID of the user.
+    returns:
+      - type: Instance
+        summary: |
+          An `Class.InventoryPages` of animations.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: KeyframeSequenceProvider:GetAnimations
     summary: |
       This function returns an `Class.InventoryPages` object which can be used
@@ -53,6 +81,7 @@ methods:
           An `Class.InventoryPages` of animations.
     tags:
       - Yields
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
