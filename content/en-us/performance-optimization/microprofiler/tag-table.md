@@ -3,13 +3,13 @@ title: Tag reference
 description: A list of tags for the MicroProfiler.
 ---
 
-The following is a list of common tags in the MicroProfiler, grouped by category. Understanding these tags can help you identify problematic code in your experience. The tables contain tag label, descriptions, and advice for improving performance and optimizing your experience.
+The following is a list of common tags in the [MicroProfiler](./index.md), grouped by category. Understanding these tags can help you identify problematic code in your experience. The tables contain tag label, descriptions, and advice for improving performance and optimizing your experience.
 
 ## Sleep
 
 When threads aren't actively performing tasks, they enter a sleep state, with tags to indicate how long the thread was sleeping. At any given time, it's extremely common for most worker threads to be in a sleep state.
 
-## AI/Navigation
+## Navigation
 
 <table>
 <thead>
@@ -22,15 +22,15 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
 <tbody>
   <tr>
     <td>rasterizeTile</td>
-    <td>Updates navigation tiles needed for a pathfinding request, usually followed by computePath which requires those tiles be up-to-date. Follows NavigationJob/preprocess on the main thread.</td>
+    <td>Updates navigation tiles needed for a pathfinding request, usually followed by **computePath** which requires those tiles be up-to-date. Follows **NavigationJob/preprocess** on the main thread.</td>
     <td>Reduce the number of pathfinding tile invalidations, as this causes those paths to need recomputing. This is caused by non-navigable parts moving.</td>
   </tr>
   <tr>
     <td>computePath</td>
     <td>
-    Calculates paths, typically after `rasterizeTile`.
+    Calculates paths, typically after **rasterizeTile**.
     </td>
-    <td>Reduce the number and world extents of `ComputePath` calls. Try reusing paths for multiple agents if they are expected to start/end from approximately similar locations.</td>
+    <td>Reduce the number and world extents of `Class.Path:ComputeAsync()` calls. Try reusing paths for multiple agents if they are expected to start/end from approximately similar locations.</td>
   </tr>
   <tr>
     <td>preprocess/getPrimitivesOverlapping</td>
@@ -40,7 +40,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
 </tbody>
 </table>
 
-## Animation and Humanoids
+## Animation and humanoids
 
 <table>
 <thead>
@@ -54,12 +54,12 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <td>Simulation/gameStepped</td>
     <td>Processing of experience-specific objects such as `Class.Humanoid|Humanoids`, `Class.Animation|Animations` and heartbeat callbacks.</td>
-    <td>See gameStepped labels below.</td>
+    <td>See **gameStepped** labels below.</td>
   </tr>
   <tr>
     <td>Simulation/gameStepped/stepHumanoid</td>
     <td>`Class.Humanoid` state changes and movement.</td>
-    <td>Reduce the amount of `Class.Humanoid|Humanoids` or humanoids with `Class.Humanoid.EvaluateStateMachine` enabled. Disable `Humanoid` states on NPCs that don't need them, such as `Enum.HumanoidStateType|Climbing` or `Enum.HumanoidStateType|Swimming`. Reduce callbacks to `Class.Humanoid.StateChanged` or state changes such as `Class.Humanoid.Running` or `Class.Humanoid.Died`.</td>
+    <td>Reduce the amount of `Class.Humanoid|Humanoids` or humanoids with `Class.Humanoid.EvaluateStateMachine` enabled. Disable `Class.Humanoid` states on NPCs that don't need them, such as `Enum.HumanoidStateType|Climbing` or `Enum.HumanoidStateType|Swimming`. Reduce callbacks to `Class.Humanoid.StateChanged` or state changes such as `Class.Humanoid.Running|Running` or `Class.Humanoid.Died|Died`.</td>
   </tr>
   <tr>
     <td>Simulation/gameStepped/stepAnimation</td>
@@ -69,7 +69,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <td>Simulation/gameStepped/RunService.Stepped</td>
     <td>Runs functions connected to the `Class.RunService.Stepped` event.</td>
-    <td>Reduce the amount or workload of functions connected to this event. Consider delaying or replacing expensive calculations. Consider spreading computation across multiple frames.</td>
+    <td>Reduce the amount or workload of functions connected to this event. Consider delaying or replacing expensive calculations and/or consider spreading computation across multiple frames.</td>
   </tr>
 </tbody>
 </table>
@@ -88,7 +88,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <td>Sound</td>
     <td>Processes acoustic simulation and updates sounds in active playback.</td>
-    <td>See Sound labels below.</td>
+    <td>See **Sound** labels below.</td>
   </tr>
   <tr>
     <td>Sound/stepInstances</td>
@@ -126,18 +126,18 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   </tr>
   <tr>
     <td>Allocate Bandwidth and Run Senders/Dispatch StreamJob</td>
-    <td>Sends corresponding specific regions to specific clients in the "Streaming" feature.</td>
+    <td>Sends corresponding specific regions to specific clients in the streaming feature.</td>
     <td>Reduce the minimum and target streaming radii.</td>
   </tr>
   <tr>
     <td>Allocate Bandwidth and Run Senders/Dispatch Data Senders</td>
-    <td>Sends property changes, remote event invocations, Humanoid state changes, animation state changes, and replication of new instances.</td>
+    <td>Sends property changes, remote event invocations, `Class.Humanoid` state changes, animation state changes, and replication of new instances.</td>
     <td>Reduce the number of replicated changes to the data model.</td>
   </tr>
   <tr>
     <td>Replicator SendCluster</td>
-    <td>Sends Terrain data to clients.</td>
-    <td>Reduce the amount or size of Terrain changes.</td>
+    <td>Sends [Terrain](../../parts/terrain.md) data to clients.</td>
+    <td>Reduce the amount or size of [Terrain](../../parts/terrain.md) changes.</td>
   </tr>
   <tr>
     <td>ModelCompleteness Mega Job</td>
@@ -146,7 +146,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   </tr>
   <tr>
     <td>deserializePacket</td>
-    <td>Low-level network packet processing. Prepares for Replicator ProcessPackets.</td>
+    <td>Low-level network packet processing. Prepares for **Replicator/ProcessPackets**.</td>
     <td>Send fewer or smaller updates.</td>
   </tr>
 </tbody>
@@ -166,7 +166,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <td>Prepare</td>
     <td>Information is gathered from the main thread and updates various data structures used for rendering.</td>
-    <td>See Prepare labels below.</td>
+    <td>See **Prepare** labels below.</td>
   </tr>
   <tr>
     <td>Prepare/Pass3dAdorn</td>
@@ -195,18 +195,18 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   </tr>
   <tr>
     <td>Prepare/UpdatePrepare/updateInstancedClusters</td>
-    <td>Updates geometry that uses instanced rendering such as parts. Labels "Clusters" and "Instances" indicate the number updated.</td>
+    <td>Updates geometry that uses instanced rendering such as parts. Labels **Clusters** and **Instances** indicate the number updated.</td>
     <td>Reduce work that implicitly updates the bounding box of the part, such as `Class.BasePart.CFrame`, `Class.BasePart.Size`, or `Class.Motor6D.Transform`. Creative property updates such as `Class.Bone.Transform` can help.</td>
   </tr>
   <tr>
     <td>Perform</td>
     <td>When actual rendering commands are created and issued.</td>
-    <td>See Perform labels below.</td>
+    <td>See **Perform** labels below.</td>
   </tr>
   <tr>
     <td>Perform/fillGuiVertices</td>
-    <td>Fills buffers with UI vertices to prepare for rendering. "gui count" label indicates the amount of `Class.LayerCollector|LayerCollectors` visible in the frame.</td>
-    <td>If the cost is high, reduce the amount, density, and space taken by UI elements. If there are too many `Process GuiEffect` labels, consider reducing the use of `Class.UIGradient` and `Class.UICorner` on text labels.</td>
+    <td>Fills buffers with UI vertices to prepare for rendering. **gui count** label indicates the amount of `Class.LayerCollector|LayerCollectors` visible in the frame.</td>
+    <td>If the cost is high, reduce the amount, density, and space taken by UI elements. If there are too many **Process GuiEffect** labels, consider reducing the use of `Class.UIGradient` and `Class.UICorner` on text labels.</td>
   </tr>
   <tr>
     <td>Perform/Scene/queryFrustumOrdered</td>
@@ -237,8 +237,8 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   </tr>
   <tr>
     <td>Perform/Scene/UI</td>
-    <td>UI rendering. In Id_Screen, there is a label with the number of batches, materials and triangles used.</td>
-    <td>Reduce the number of visible UI elements. Using `CanvasGroups` can help at the expense of increased memory use.</td>
+    <td>UI rendering. In **Id_Screen**, there is a label with the number of batches, materials and triangles used.</td>
+    <td>Reduce the number of visible UI elements. Using `Class.CanvasGroup|CanvasGroups` can help at the expense of increased memory use.</td>
   </tr>
   <tr>
     <td>Perform/Scene/UpdateView/updateParticles, updateParticleBoundings</td>
@@ -247,12 +247,12 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   </tr>
   <tr>
     <td>Scene/Id_Opaque, RenderView/Id_Opaque</td>
-    <td>Parts in the scene with an overall transparency of 0.01 or lower.</td>
+    <td>Parts in the scene with an overall transparency of `0.01` or lower.</td>
     <td>Reduce the use and density of parts.</td>
   </tr>
   <tr>
     <td>Scene/Id_Transparent, RenderView/Id_Transparent</td>
-    <td>Parts in the scene with an overall transparency between 0.01 and 1.</td>
+    <td>Parts in the scene with an overall transparency between `0.01` and `1`.</td>
     <td>Reduce the use of partial transparency.</td>
   </tr>
   <tr>
@@ -263,7 +263,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <td>Scene/Shadows</td>
     <td>Shadow recalculation in the scene, usually performed on dynamic scenes and typical gameplay. Parts regardless of transparency cast shadows under the assumption that they contain decals. Not performed at quality levels below 4.</td>
-    <td>If this step takes too long, consider disabling `Class.BasePart.CastShadow` for complex meshes, parts with high partial transparency, and less important instances. Fully transparent parts that don't have decals or need decal shadows should have CastShadow disabled. See [Improving Performance](../../performance-optimization/improve.md#mitigation-4).</td>
+    <td>If this step takes too long, consider disabling `Class.BasePart.CastShadow` for complex meshes, parts with high partial transparency, and less important instances. Fully transparent parts that don't have decals or need decal shadows should have `Class.BasePart.CastShadow` disabled. See [Improving Performance](../../performance-optimization/improve.md#mitigation-4).</td>
   </tr>
   <tr>
     <td>Perform/Present</td>
@@ -360,8 +360,8 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   </tr>
   <tr>
     <td>Simulation/physicsSteppedTotal/physicsStepped/worldStep/stepWorld **OR** stepWorldThrottled</td>
-    <td>Solves physics equations relating to connectors, buoyancy and `Class.Humanoid|Humanoids`. When the engine is overloaded and unable to simulate everything in real time, some steps may be throttled (stepWorldThrottled) and only "real-time assemblies" such as `Class.Humanoid|Humanoids` are simulated.</td>
-    <td>Depends on where the time is going based on the following three phases: stepContacts: narrow phase collision detection geometry tests. Solver step: integrate time and resolve collisions and other constraints updateBroadphase: update positions of assemblies in collision detection system and find possibly colliding narrow phase pairs.</td>
+    <td>Solves physics equations relating to connectors, buoyancy and `Class.Humanoid|Humanoids`. When the engine is overloaded and unable to simulate everything in real time, some steps may be throttled (**stepWorldThrottled**) and only "real-time assemblies" such as `Class.Humanoid|Humanoids` are simulated.</td>
+    <td>Depends on where the time is going based on the following three phases: **stepContacts**: narrow phase collision detection geometry tests. **Solver step**: integrate time and resolve collisions and other constraints **updateBroadphase**: update positions of assemblies in collision detection system and find possibly colliding narrow phase pairs.</td>
   </tr>
   <tr>
     <td>notifyMovingAssemblies</td>
@@ -375,17 +375,17 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   </tr>
   <tr>
     <td>Simulation/handleFallenParts</td>
-    <td>Removes parts that have fallen below Workspace/FallenPartsDestroyHeight.</td>
+    <td>Removes parts that have fallen below `Class.Workspace.FallenPartsDestroyHeight`.</td>
     <td>Lower the destroy height or reduce the amount of parts that fall to the destroy height.</td>
   </tr>
   <tr>
     <td>Heartbeat/heartbeatInternal/workspaceOnHeartbeat/updateVisuallySleeping</td>
-    <td>Second part of notifyMovingAssemblies.</td>
+    <td>Second part of **notifyMovingAssemblies**.</td>
     <td></td>
   </tr>
   <tr>
     <td>Heartbeat/RunService.Heartbeat</td>
-    <td>Runs functions connected to the `Class.RunService.Heartbeat` `event.Talk` to simulation and scripts contacts. Current description is generic enough to be not wrong</td>
+    <td>Runs functions connected to the `Class.RunService.Heartbeat` event to simulation and scripts contacts. Current description is generic enough to be not wrong.</td>
     <td>Reduce the amount or workload of functions connected to `Class.RunService.Heartbeat`.</td>
   </tr>
   <tr>
@@ -424,18 +424,18 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   </tr>
   <tr>
     <td>Heartbeat/TweenService</td>
-    <td>In the server, TweenService runs in Heartbeat instead of PreRender.</td>
+    <td>In the server, `Class.TweenService` runs in `Class.RunService.Heartbeat` instead of `Class.RunService.PreRender`.</td>
     <td>Reduce the number of objects being tweened using `Class.TweenService` and ensure callbacks do as little work as possible.</td>
   </tr>
   <tr>
     <td>Render/PreRender/UpdateUILayouts</td>
     <td>Updates position and size for UI elements on all enabled `Class.LayerCollector|LayerCollectors`.</td>
-    <td>See UpdateUILayouts labels below.</td>
+    <td>See **UpdateUILayouts** labels below.</td>
   </tr>
   <tr>
     <td>Render/PreRender/UpdateUILayouts/Rebuild Z-order list</td>
-    <td>Sorts the z-order of UI elements (internal term not to be confused with `Class.GuiObject.ZIndex`) to prevent tearing of UI elements.</td>
-    <td>Reduce the amount of UI elements with the same `Class.GuiObject.ZIndex`. </td>
+    <td>Sorts the Z-order of UI elements (internal term not to be confused with `Class.GuiObject.ZIndex`) to prevent tearing of UI elements.</td>
+    <td>Reduce the amount of UI elements with the same `Class.GuiObject.ZIndex`.</td>
   </tr>
   <tr>
     <td>Render/PreRender/UpdateUILayouts/Layout</td>
