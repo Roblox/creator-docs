@@ -17,7 +17,7 @@ The [UserNotification](/cloud/reference/UserNotification) resource lets you send
 
 To send an experience notification to a user:
 
-1. [Create a notification string](../../production/promotion/experience-notifications.md#create-a-notification-string) in the [Creator Dashboard](https://create.roblox.com/dashboard/creations). This step must be done in the Creator Dashboard; there's no Open Cloud API for it.
+1. [Create a notification string](../../production/promotion/experience-notifications.md#create-a-notification-string) in the [Creator Dashboard](https://create.roblox.com/dashboard/creations) (this step must be done in the Creator Dashboard; there's no Open Cloud API for it).
 1. Form the request:
    1. Copy the API key to the `x-api-key` request header.
    1. Copy the notification string asset ID as the value of the `payload.message_id` property.

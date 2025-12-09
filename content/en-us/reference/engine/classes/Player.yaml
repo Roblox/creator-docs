@@ -1303,12 +1303,12 @@ methods:
       - Players
   - name: Player:GetNetworkPing
     summary: |
-      Returns the isolated network latency in seconds.
+      Returns the round-trip, isolated network latency in seconds.
     description: |
-      Returns the isolated network latency of the player in seconds. "Ping" is a
-      measurement of the time taken for data to be sent from the client to the
-      server, then back again. It doesn't involve data deserialization or
-      processing.
+      Returns the round-trip, isolated network latency of the player in seconds.
+      "Ping" is a measurement of the time taken for data to be sent from the
+      client to the server, then back again. It doesn't involve data
+      deserialization or processing.
 
       For client-side `Class.LocalScript|LocalScripts`, this function can only
       be called on the `Class.Players.LocalPlayer`. This function is useful in

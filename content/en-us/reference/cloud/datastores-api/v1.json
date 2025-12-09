@@ -109,7 +109,7 @@
         "x-roblox-rate-limits": {
           "description": "See [Throttling](/cloud/guides/data-stores/throttling.md)."
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores",
             "httpMethod": "GET"
@@ -241,7 +241,7 @@
         "x-roblox-rate-limits": {
           "description": "See [Throttling](/cloud/guides/data-stores/throttling.md)."
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries",
             "httpMethod": "GET"
@@ -379,7 +379,7 @@
         "x-roblox-rate-limits": {
           "description": "See [Throttling](/cloud/guides/data-stores/throttling.md)."
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}",
             "httpMethod": "GET"
@@ -539,7 +539,7 @@
         "x-roblox-rate-limits": {
           "description": "See [Throttling](/cloud/guides/data-stores/throttling.md)."
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}",
             "httpMethod": "PATCH"
@@ -627,7 +627,7 @@
         "x-roblox-rate-limits": {
           "description": "See [Throttling](/cloud/guides/data-stores/throttling.md)."
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}",
             "httpMethod": "DELETE"
@@ -810,7 +810,7 @@
         "x-roblox-rate-limits": {
           "description": "See [Throttling](/cloud/guides/data-stores/throttling.md)."
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}:increment",
             "httpMethod": "POST"
@@ -960,7 +960,7 @@
             "maxInPeriod": 5000
           }
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}",
             "httpMethod": "GET"
@@ -1110,7 +1110,7 @@
         "x-roblox-rate-limits": {
           "description": "See [Throttling](/cloud/guides/data-stores/throttling.md)."
         },
-        "x-roblox-alternatives": [
+        "x-roblox-recommended-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}:listRevisions",
             "httpMethod": "GET"

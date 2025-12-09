@@ -24,9 +24,7 @@ For details on how to create API keys for managing group resources, see the [Cre
 
 To create an API key:
 
-1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-
-1. In the left navigation menu, select **Open Cloud** &rarr; [API Keys](https://create.roblox.com/dashboard/credentials?activeTab=ApiKeysTab).
+1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), go to the [API Keys](https://create.roblox.com/dashboard/credentials?activeTab=ApiKeysTab) page.
 1. Click the **Create API Key** button.
 1. Enter a unique name for your API key. Use a name that can help you recall the
    purpose later, such as `PLACE_PUBLISHING_KEY` for publishing places to your

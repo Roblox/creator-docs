@@ -254,28 +254,6 @@ Roblox offers various programs for creators on the platform to provide additiona
 <Card variant="filled" style={{height: "100%"}}>
 <CardContent>
 
-<h4>Notable Translators Program</h4>
-<figure>
-<Chip
-        color="success"
-        label="Status: Open"
-        size="medium"
-        variant="filled"/>
-</figure>
-<Typography variant='body1'>Skilled community translators offering services to other Roblox creators</Typography>
-</CardContent>
-<CardActions>
-<Button href="/creator-programs/notable-translators" variant="contained" color="secondary" size='large'>Learn More</Button>
-</CardActions>
-</Card>
-</Grid>
-</Grid>
-
-<Grid item container Medium={12} Large={4} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
-<Grid item container wrap="nowrap" direction="column">
-<Card variant="filled" style={{height: "100%"}}>
-<CardContent>
-
 <h4>Roblox Developers Conference</h4>
 <figure>
 <Chip

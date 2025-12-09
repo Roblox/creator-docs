@@ -827,16 +827,6 @@
   },
   "components": {
     "schemas": {
-      "Any": {
-        "type": "object",
-        "properties": {
-          "@type": {
-            "type": "string",
-            "description": "The type of the serialized message."
-          }
-        },
-        "description": "Contains an arbitrary serialized message along with a `@type` that describes the type of the serialized message."
-      },
       "Asset": {
         "type": "object",
         "properties": {
@@ -980,9 +970,6 @@
             "type": "string",
             "description": "The server-assigned resource path. The default format is `operations/{operation_id}`."
           },
-          "metadata": {
-            "$ref": "#/components/schemas/Any"
-          },
           "done": {
             "type": "boolean",
             "description": "If `false`, the operation is still in progress. If `true`, the operation is completed."
@@ -991,7 +978,7 @@
             "$ref": "#/components/schemas/Status"
           },
           "response": {
-            "$ref": "#/components/schemas/Any"
+            "$ref": "#/components/schemas/Asset"
           }
         },
         "description": "This resource represents a long-running operation that is the result of a network API call."
@@ -1040,13 +1027,6 @@
           "message": {
             "type": "string",
             "description": "The error message."
-          },
-          "details": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Any"
-            },
-            "description": "A list of messages carrying error details."
           }
         },
         "description": "The logical error model explaining the error status."

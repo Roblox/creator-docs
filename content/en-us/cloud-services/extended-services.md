@@ -25,7 +25,7 @@ If you meet all of the [eligibility requirements](#eligibility-requirements), yo
 
 To unlock and use Extended Services:
 
-1. In the Creator Dashboard, go to Creations and select an experience.
+1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), go to **Creations** and select an experience.
 2. Go to **Extended Services**.
 3. If you haven't entered your account details and payment information yet, click **Add missing information** on the top banner.
     1. Enter your account information. The **Account type**, **Tax ID type**, and **Tax ID** fields are optional.

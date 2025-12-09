@@ -7,8 +7,8 @@ The Notable Translators Program (Pilot) aims to give more visibility to dedicate
 
 <figure>
 <Chip
-    color="success"
-    label="Status: Open"
+    color="error"
+    label="Status: Deprecated"
     size="medium"
     variant="filled" />
 </figure>

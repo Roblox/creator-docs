@@ -27,6 +27,8 @@ There are three Luau type inference modes that can be set on the first line of a
 
 The `--!nonstrict` and `--!strict` modes control how strict the type checker is with inferring and checking types for variables and functions. Any type mismatches in scripts are highlighted in the [Script Editor](../studio/script-editor.md) and surfaced as warnings in the [Script Analysis](../studio/script-editor.md#script-analysis) window.
 
+To set a default mode for all scripts that you can override as needed, see `Class.Workspace.LuauTypeCheckMode`.
+
 ## Types
 
 A type annotation can be defined using the `:` operator after a local variable, followed by a type definition. By default, in `nonstrict` mode, all variables are assigned the type `any`.

@@ -47,9 +47,9 @@ You can only complete this process if you are the group owner.
 To restrict your group mesh, image, and decal assets on creation through the Asset Privacy beta:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-1. Near the top-left of the page, click the **View As** dropdown, then select your group.
-1. In the left-hand navigation, navigate to **Collaboration** ⟩ **Group Profile**.
-1. In the **Asset Privacy** section, enable the **Opt-in to restrict assets on creation** toggle. Every non-avatar asset your group creates is now restricted by default.
+1. In the upper-left, expand the account switcher and select your group.
+1. Expand the account switcher again, select **Settings** under the group's name, then select **Group Profile**.
+1. In the **Asset Privacy** section, enable the **Allow restricted assets on creation** toggle. Every non-avatar asset your group creates is now restricted by default.
 
   </TabItem>
 </Tabs>
