@@ -273,7 +273,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <td>Perform/Present/waitUntilCompleted</td>
     <td>Waits for the GPU to finish rendering the previous frame.</td>
-    <td>If this is generally happening a lot then the amount of things rendered is too high. The Frame Rate Manager helps with balancing this, but if it remains high, try following performance advice from the individual Scene tags.</td>
+    <td>If this is generally happening a lot then the amount of things rendered is too high. The Frame Rate Manager helps with balancing this, but if it remains high, try following performance advice from the individual **Scene** tags.</td>
   </tr>
   <tr>
     <td>LoadImage</td>
