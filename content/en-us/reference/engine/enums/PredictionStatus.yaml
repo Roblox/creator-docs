@@ -4,27 +4,37 @@
 
 name: PredictionStatus
 type: enum
-summary: Enum used with `Class.RunService:GetPredictionStatus()` to check the status of a specific instance.
-description: |-
-  Enum used with `Class.RunService:GetPredictionStatus()` to check the status of a specific instance.
+summary: |
+  Enum used with `Class.RunService:GetPredictionStatus()` to check the status of
+  a specific instance.
+description: |
+  Enum used with `Class.RunService:GetPredictionStatus()` to check the status of
+  a specific instance.
 
-  This prediction status can be used to determine whether any associated scripts should run. If the status is `Authoritative` or `Predicted`, such scripts should run, since the local node is either the authority for the instance or is predicting it. If the status is `None`, such scripts do not need to run.
+  This prediction status can be used to determine whether any associated scripts
+  should run. If the status is `Authoritative` or `Predicted`, such scripts
+  should run, since the local node is either the authority for the instance or
+  is predicting it. If the status is `None`, such scripts do not need to run.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Authoritative
-    summary: This instance is authoritative.
+    summary: |
+      This instance is authoritative.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Predicted
-    summary: This instance is being predicted.
+    summary: |
+      This instance is being predicted.
     value: 1
     tags: []
     deprecation_message: ''
   - name: None
-    summary: The instance will not be resimulated; classic simulation rules apply instead.
+    summary: |
+      The instance will not be resimulated; classic simulation rules apply
+      instead.
     value: 2
     tags: []
     deprecation_message: ''

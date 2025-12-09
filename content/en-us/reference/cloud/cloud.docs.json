@@ -8489,9 +8489,9 @@
         "type": "object",
         "properties": {
           "path": {
-            "example": "universes/123/memory-store/queues/some-memory-store-queue-id/items/some-memory-store-queue-item-id",
+            "example": "cloud/v2/universes/123/memory-store/queues/some-memory-store-queue-id/items/some-memory-store-queue-item-id",
             "type": "string",
-            "description": "The resource path of the memory store queue item.\n\nFormat:\n`universes/{universe_id}/memory-store/queues/{memory_store_queue_id}/items/{memory_store_queue_item_id}`"
+            "description": "The resource path of the memory store queue item.\n\nFormat:\n`cloud/v2/universes/{universe_id}/memory-store/queues/{memory_store_queue_id}/items/{memory_store_queue_item_id}`"
           },
           "data": {
             "$ref": "#/components/schemas/GoogleProtobufValue",
@@ -8539,9 +8539,9 @@
         "type": "object",
         "properties": {
           "path": {
-            "example": "universes/123/memory-store/sorted-maps/some-memory-store-sorted-map-id/items/some-memory-store-sorted-map-item-id",
+            "example": "cloud/v2/universes/123/memory-store/sorted-maps/some-memory-store-sorted-map-id/items/some-memory-store-sorted-map-item-id",
             "type": "string",
-            "description": "The resource path of the memory store sorted map item.\n\nFormat:\n`universes/{universe_id}/memory-store/sorted-maps/{memory_store_sorted_map_id}/items/{memory_store_sorted_map_item_id}`"
+            "description": "The resource path of the memory store sorted map item.\n\nFormat:\n`cloud/v2/universes/{universe_id}/memory-store/sorted-maps/{memory_store_sorted_map_id}/items/{memory_store_sorted_map_item_id}`"
           },
           "value": {
             "$ref": "#/components/schemas/GoogleProtobufValue",

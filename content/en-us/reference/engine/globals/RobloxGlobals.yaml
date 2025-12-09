@@ -288,6 +288,9 @@ functions:
       Returns the amount of time, in seconds, that has elapsed since the current
       game instance started running. If the current game instance is not
       running, this will be `0`.
+
+      If `Class.Workspace.AuthorityMode` is `Enum.AuthorityMode.Server`, this
+      value is synchronized between client and server.
     parameters: []
     returns:
       - type: number

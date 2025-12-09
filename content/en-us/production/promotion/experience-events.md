@@ -208,3 +208,39 @@ To announce an update:
 	 </table>
 
 [creatordashboard]: https://create.roblox.com/dashboard/creations
+
+## Off-Platform Featuring program
+
+The **Off-Platform Featuring** program extends your event's visibility beyond Roblox to global off-platform audiences. Through this program, selected events may appear on external platforms such as the App Store, Google Play Store, and Roblox marketing channels.
+
+![Examples of how your event might look off-platform.](../../assets/promotion/experience-events/off-platform-featuring.png)
+
+### Creator Benefits
+
+- Expanded player discovery and installs through app store visibility.
+- Increased returning players and retention.
+- Performance reporting once the campaign concludes.
+
+### Eligibility
+
+To be considered for the program, submitted events must meet the following criteria:
+
+- The submitting creator must be **13 years of age** or older with an email address linked to their account.
+- The submission must represent a **time-limited event or significant experience update** (for example, seasonal content, feature update, collaboration, anniversary, or live moment).
+- The event must be **submitted at least 14 days prior to the event start** and must be set to public and active while the event is live.
+- All event metadata, including title, description, schedule, and thumbnails, must be **complete, accurate, and aligned** with the event's content.
+- The event and its assets must comply with Roblox [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) and content guidelines.
+- Selections are based on performance signals (DAU growth, playtime, retention, monetization), current trends, and seasonal alignment.
+
+### How it works
+
+1. On the [Creator Hub](https://create.roblox.com/), navigate to your experience. Then choose **Events & Updates**.
+1. Click **Create Event or Update**.
+1. While creating your event, select the **Submit for Featuring** toggle.
+
+   <img src="../../assets/promotion/experience-events/submit-for-featuring.png" width="700" alt="Submit for Featuring toggle." />
+
+1. Roblox's marketing teams review eligible submissions.
+1. If selected, you will be notified and asked to provide event-specific art assets.
+1. Selected events are featured on global surfaces and app stores.
+1. After the event ends, you receive a performance report summarizing how many views and interactions your event generated off-platform.

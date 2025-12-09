@@ -6,22 +6,18 @@ name: SoundService
 type: class
 memory_category: Instances
 summary: |
-  A service that determines various aspects of how `Class.Sound|Sounds` play in
-  the experience.
+  A service that determines various aspects of how the audio engine works. Most
+  of its properties affect how `Class.Sound|Sounds` play in the experience.
 description: |
-  A service that determines various aspects of how `Class.Sound|Sounds` play in
-  the experience. `Class.SoundService` is also often used to store
+  A service that determines various aspects of how the audio engine works. Most
+  of its properties affect how `Class.Sound|Sounds` play in the experience,
+  while others affect the behavior of instances in the advanced audio system
+  such as `Class.AudioPlayer|AudioPlayers` and
+  `Class.AudioEmitter|AudioEmitters`.
+
+  `Class.SoundService` is also often used to store
   `Class.SoundGroup|SoundGroups`, although this is not mandatory for groups to
   work.
-
-  `Class.SoundService` properties such as
-  `Class.SoundService.AmbientReverb|AmbientReverb`,
-  `Class.SoundService.DistanceFactor|DistanceFactor`,
-  `Class.SoundService.DopplerScale|DopplerScale` and
-  `Class.SoundService.RolloffScale|RolloffScale` can be used to change how all
-  `Class.Sound|Sounds` play in the experience, and the
-  `Class.SoundService:SetListener()|SetListener()` function allows you to set
-  the position from where sounds are heard.
 code_samples:
   - SoundService-Reverb-System
 inherits:
@@ -33,8 +29,21 @@ tags:
 deprecation_message: ''
 properties:
   - name: SoundService.AcousticSimulationEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether acoustic simulation is enabled globally in the advanced
+      audio system.
+    description: |
+      Determines at a global level whether sound from
+      `Class.AudioEmitter|AudioEmitters` and
+      `Class.AudioListener|AudioListeners` should automatically implement
+      features of acoustic simulation, such as occlusion (being muffled through
+      walls), diffraction (bending around corners), and reverberation (echoing
+      off of walls).
+
+      If set to `false`, these instances will not simulate these features,
+      regardless of their individual
+      `Class.AudioEmitter.AcousticSimulationEnabled|AcousticSimulationEnabled`
+      settings.
     code_samples: []
     type: boolean
     tags: []
@@ -50,29 +59,21 @@ properties:
     capabilities: []
   - name: SoundService.AmbientReverb
     summary: |
-      The ambient sound environment preset used by `Class.SoundService`.
+      The ambient sound environment preset applied to all `Class.Sound|Sounds`.
     description: |
+      A reverb preset that should be applied to all `Class.Sound|Sounds` in the
+      experience.
+
       Each `Enum.ReverbType` option for this property corresponds to a preset
       available in the FMOD sound engine. For example, when
       `Class.SoundService.AmbientReverb|AmbientReverb` is set to
-      `Enum.ReverbType.Hangar`, sound will reverberate differently to simulate
-      being in a large enclosed space.
+      `Enum.ReverbType.Hangar`, `Class.Sound|Sounds` will have reverb applied to
+      simulate being in a large enclosed space.
 
-      Changing `Class.SoundService.AmbientReverb|AmbientReverb` affects the
-      following properties used by Roblox's sound engine.
-
-      - Reverberation decay time.
-      - Initial reflection delay time.
-      - Late reverberation delay time relative to initial reflection.
-      - Reference high frequency.
-      - High-frequency to mid-frequency decay time ratio.
-      - Value that controls the echo density in the late reverberation decay.
-      - Value that controls the modal density in the late reverberation decay.
-      - Reference low frequency.
-      - Relative room effect level at low frequencies.
-      - Relative room effect level at high frequencies.
-      - Early reflections level relative to room effect.
-      - Room effect level at mid frequencies.
+      Note that this only affects `Class.Sound|Sounds` and **not** instances in
+      the advanced audio system such as `Class.AudioPlayer|AudioPlayers` and
+      `Class.AudioEmitter|AudioEmitters`. See `Class.AudioReverb` for a way to
+      apply reverb in that system.
     code_samples: []
     type: ReverbType
     tags: []
@@ -87,8 +88,16 @@ properties:
       can_save: true
     capabilities: []
   - name: SoundService.CharacterSoundsUseNewApi
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether the default character sounds will use instances in the
+      advanced audio system vs. `Class.Sound|Sounds`.
+    description: |
+      Determines which set of instances core scripts will use to create default
+      character sounds. If set to `Enum.RolloutState.Enabled`, it will use
+      instances in the advanced audio system such as
+      `Class.AudioPlayer|AudioPlayers` and `Class.AudioEmitter|AudioEmitters`.
+      If set to `Enum.RolloutState.Disabled`, it will use instances in the
+      legacy sound system such as `Class.Sound|Sounds`.
     code_samples: []
     type: RolloutState
     tags: []
@@ -107,8 +116,12 @@ properties:
       Determines where (if anywhere) to place an `Class.AudioListener` by
       default.
     description: |
-      Determines where to place an `Class.AudioListener` by default. See
-      `Enum.ListenerLocation` for detailed descriptions of each option.
+      Determines where to place an `Class.AudioListener` by default. The
+      `Class.AudioListener` will automatically be wired to a
+      `Class.AudioDeviceOutput` and will have an empty
+      `Class.AudioListener.InteractionGroup` set.
+
+      See `Enum.ListenerLocation` for detailed descriptions of each option.
     code_samples: []
     type: ListenerLocation
     tags: []
@@ -125,21 +138,25 @@ properties:
   - name: SoundService.DistanceFactor
     summary: |
       The number of studs to be considered a meter by `Class.SoundService` when
-      calculating volume attenuation of `Class.Sound|Sounds` parented to a
-      `Class.BasePart` or `Class.Attachment`.
+      simulating the Doppler effect for `Class.Sound|Sounds`.
     description: |
       The number of studs to be considered a meter by `Class.SoundService` when
-      calculating volume attenuation of `Class.Sound|Sounds` parented to a
-      `Class.BasePart` or `Class.Attachment`.
+      simulating the Doppler effect for `Class.Sound|Sounds`. This impacts any
+      `Class.Sound` parented to a `Class.BasePart` or `Class.Attachment`.
 
       By default, this property is `3.33`, meaning that a meter is considered
-      3.33 studs for the purposes of volume attenuation. The greater the
-      `Class.SoundService.DistanceFactor|DistanceFactor`, the more gradually
-      sound will attenuate.
+      3.33 studs for the purposes of simulating the Doppler effect. The greater
+      the `Class.SoundService.DistanceFactor|DistanceFactor`, the faster the
+      listener has to travel relative to `Class.Sound|Sounds` in order to
+      experience the same Doppler shift.
 
-      It's recommended that you only change this property if your experience
-      uses a different scale. For example, when using larger custom characters,
-      you may want to reduce `Class.SoundService.DistanceFactor|DistanceFactor`.
+      It's recommended that you only change this property if the objects in your
+      experience are scaled differently from what they represent. For example,
+      if your character is meant to be very small (but is normal-sized in the
+      engine), you may want to increase `Class.SoundService.DistanceFactor`.
+
+      Note that this does not impact the behavior of instances in the advanced
+      audio system, such as `Class.AudioPlayer` or `Class.AudioEmitter`.
     code_samples: []
     type: float
     tags: []
@@ -159,14 +176,18 @@ properties:
       effect.
     description: |
       This property determines the degree to which the pitch of a `Class.Sound`
-      varies due to the Doppler effect, a phenomenon whereby the pitch of a
-      sound changes as the source and observer of the sound move further away or
-      closer together. Only affects `Class.Sound|Sounds` that are parented to a
-      `Class.BasePart` or `Class.Attachment`.
+      varies due to the Doppler effect. This impacts any `Class.Sound` parented
+      to a `Class.BasePart` or `Class.Attachment`.
 
-      Increasing this value exaggerates the impact of the Doppler effect,
+      The Doppler effect is a phenomenon whereby the pitch of a sound changes as
+      the source and observer of the sound move further away or closer together,
+      which is stronger the more quickly they are moving. Increasing
+      `Class.SoundService.DopplerScale` exaggerates the impact of this effect,
       whereas decreasing it minimizes it. By default, the value of this property
       is `1`.
+
+      Note that this does not impact the behavior of instances in the advanced
+      audio system, such as `Class.AudioPlayer` or `Class.AudioEmitter`.
     code_samples: []
     type: float
     tags: []
@@ -207,22 +228,28 @@ properties:
     capabilities: []
   - name: SoundService.RolloffScale
     summary: |
-      Sets how fast `Class.Sound` volume attenuates.
+      Determines how fast the volume of a `Class.Sound` attenuates beyond its
+      `Class.Sound.RollOffMinDistance`.
     description: |
-      Sets how fast `Class.Sound` volume attenuates. The higher the
-      `Class.SoundService.RolloffScale|RolloffScale`, the more rapidly a sound's
-      volume will attenuate as the distance between the listener and the sound
-      increases.
+      Determines how fast the volume of a spatialized `Class.Sound` attenuates.
+      This impacts any `Class.Sound` parented to a `Class.BasePart` or
+      `Class.Attachment`.
 
-      Note that this property only applies to `Class.Sound|Sounds` whose
-      `Class.Sound.RollOffMode|RollOffMode` property is set to
-      `Enum.RollOffMode.Inverse|Inverse` (default) or
-      `Enum.RollOffMode.InverseTapered|InverseTapered`.
-      `Enum.RollOffMode.Linear|Linear` and
-      `Enum.RollOffMode.LinearSquare|LinearSquare` modes use a different
-      attenuation model which is not influenced by this property. This property
-      also has no impact on `Class.Sound|Sounds` which are not parented to a
-      `Class.BasePart` or `Class.Attachment`.
+      A higher `Class.SoundService.RolloffScale|RolloffScale` means the volume
+      of a `Class.Sound` will attenuate more rapidly as the distance between the
+      listener and the `Class.Sound|Sound` grows. More precisely, the volume of
+      the `Class.Sound` will still start attenuating at a distance equal to
+      `Class.Sound.RollOffMinDistance`, but the attenuation curve will be
+      steeper or more gradual based on the value of
+      `Class.SoundService.RolloffScale|RolloffScale`. Note that the
+      `Class.Sound` will still be inaudible past its the
+      `Class.Sound.RollOffMaxDistance` regardless of the value of
+      `Class.SoundService.RolloffScale`.
+
+      Note that this property does not affect the behavior of instances in the
+      advanced audio system, such as `Class.AudioEmitter`. See
+      `Class.AudioEmitter:SetDistanceAttenuation` for a way to apply custom
+      attenuation in that system.
     code_samples: []
     type: float
     tags: []
@@ -237,8 +264,21 @@ properties:
       can_save: true
     capabilities: []
   - name: SoundService.VolumetricAudio
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether certain spatialized `Class.Sound|Sounds` emit
+      volumetrically, throughout the space of their parent object.
+    description: |
+      Determines whether any `Class.Sound|Sounds` parented to a `Class.Part`
+      emit volumetrically. If set to `Enum.VolumetricAudio.Enabled`, the
+      `Class.Sound` will simulate being emitted from every point in the interior
+      of the `Class.Part`. If set to `Enum.VolumetricAudio.Disabled`, the
+      `Class.Sound` will only emit from a single point in the center of the
+      `Class.Part`.
+
+      Note that this does not impact `Class.Sound|Sounds` parented to other
+      objects, such as `Class.Attachment|Attachments` or
+      `Class.MeshPart|MeshParts`. This also does not impact the behavior of
+      instances in the advanced audio system such as `Class.AudioEmitter`.
     code_samples: []
     type: VolumetricAudio
     tags:
@@ -256,65 +296,73 @@ properties:
 methods:
   - name: SoundService:GetListener
     summary: |
-      Returns the current `Class.SoundService` listener type and what is set as
-      the listener.
+      Returns the current listener type used by `Class.Sound|Sounds`, as well as
+      what that listener is currently set to.
     description: |
-      This method returns the `Class.SoundService` current listener type and
-      what is set as the listener, meaning the point from which audio in the
-      experience is "heard" by the player. By default, the listener is set to
-      `Class.Workspace.CurrentCamera`. The listener can be changed using
+      Returns the current listener type used by `Class.Sound|Sounds` and what
+      object or position that listener is currently set to. This is the point
+      from which `Class.Sound` audio in the experience is heard by the player.
+      By default, the listener is set to `Class.Workspace.CurrentCamera`. The
+      listener can be changed using
       `Class.SoundService:SetListener()|SetListener()`.
 
-      The first result returned is the listener's `Enum.ListenerType` and the
-      second result is dependent on that type:
-
-      <table>
-          <thead>
-              <tr>
-                  <th>Listener Type</th>
-                  <th>Description</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td><code>Enum.ListenerType.Camera</code></td>
-                  <td>Does not return a listener object as <code>Class.Workspace.CurrentCamera|CurrentCamera</code> is always used.</td>
-              </tr>
-              <tr>
-                  <td><code>Enum.ListenerType.CFrame</code></td>
-                  <td>Returns the <code>Datatype.CFrame</code> used in <code>Class.SoundService:SetListener()|SetListener()</code>.</td>
-              </tr>
-              <tr>
-                  <td><code>Enum.ListenerType.ObjectPosition</code></td>
-                  <td>Returns the <code>Class.BasePart</code> used in <code>Class.SoundService:SetListener()|SetListener()</code>.</td>
-              </tr>
-              <tr>
-                  <td><code>Enum.ListenerType.ObjectCFrame</code></td>
-                  <td>Returns the <code>Class.BasePart</code> used in <code>Class.SoundService:SetListener()|SetListener()</code>.</td>
-              </tr>
-          </tbody>
-      </table>
+      Note that this does not affect the listener location when using the
+      advanced audio system. See `Class.AudioListener` for a way to set the
+      listener location in that system.
     code_samples: []
     parameters: []
     returns:
       - type: Tuple
         summary: |
-          The current `Enum.ListenerType` and what the listener has been set to.
-          Listener can be a `Class.BasePart`, a `Datatype.CFrame`, or `nil`.
+          A table containing two results. The first result is the listener's
+          `Enum.ListenerType` and the second result is dependent on that type:
+
+          <table>
+                <thead>
+          	  <tr>
+          	      <th>Listener Type</th>
+          	      <th>Description</th>
+          	  </tr>
+                </thead>
+                <tbody>
+          	  <tr>
+          	      <td><code>Enum.ListenerType.Camera</code></td>
+          	      <td>Does not return a listener object as <code>Class.Workspace.CurrentCamera|CurrentCamera</code> is always used.</td>
+          	  </tr>
+          	  <tr>
+          	      <td><code>Enum.ListenerType.CFrame</code></td>
+          	      <td>Returns the <code>Datatype.CFrame</code> used in <code>Class.SoundService:SetListener()|SetListener()</code>.</td>
+          	  </tr>
+          	  <tr>
+          	      <td><code>Enum.ListenerType.ObjectPosition</code></td>
+          	      <td>Returns the <code>Class.BasePart</code> used in <code>Class.SoundService:SetListener()|SetListener()</code>.</td>
+          	  </tr>
+          	  <tr>
+          	      <td><code>Enum.ListenerType.ObjectCFrame</code></td>
+          	      <td>Returns the <code>Class.BasePart</code> used in <code>Class.SoundService:SetListener()|SetListener()</code>.</td>
+          	  </tr>
+                </tbody>
+          </table>
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: SoundService:OpenAttenuationCurveEditor
-    summary: ''
-    description: ''
+    summary: |
+      Opens the attenuation curve editor in Studio for the provided
+      `Class.AudioEmitter` or `Class.AudioListener` instances.
+    description: |
+      Opens the attenuation curve editor in Studio for the provided
+      `Class.AudioEmitter` or `Class.AudioListener` instances.
     code_samples: []
     parameters:
       - name: selectedCurveObjects
         type: Instances
         default:
-        summary: ''
+        summary: |
+          A list of `Class.AudioEmitter|AudioEmitters` or
+          `Class.AudioListener|AudioListeners`.
     returns:
       - type: ()
         summary: ''
@@ -324,14 +372,20 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: SoundService:OpenDirectionalCurveEditor
-    summary: ''
-    description: ''
+    summary: |
+      Opens the directional curve editor in Studio for the provided
+      `Class.AudioEmitter` or `Class.AudioListener` instances.
+    description: |
+      Opens the directional curve editor in Studio for the provided
+      `Class.AudioEmitter` or `Class.AudioListener` instances.
     code_samples: []
     parameters:
       - name: selectedCurveObjects
         type: Instances
         default:
-        summary: ''
+        summary: |
+          A list of `Class.AudioEmitter|AudioEmitters` or
+          `Class.AudioListener|AudioListeners`.
     returns:
       - type: ()
         summary: ''
@@ -342,13 +396,19 @@ methods:
     capabilities: []
   - name: SoundService:PlayLocalSound
     summary: |
-      Plays a `Class.Sound` locally, meaning the sound will only be heard by the
-      client calling this method, regardless of where it's parented to.
+      Plays a copy of a `Class.Sound` locally, such that it will only be heard
+      by the client calling this method.
     description: |
-      Plays a `Class.Sound` locally, meaning the sound will only be heard by the
-      client calling this method, regardless of where it's parented to. This
-      method is most useful for playing a `Class.Sound` locally in the Studio
-      client, for instance in a `Class.Script` for a `Class.Plugin`.
+      Plays a copy of a `Class.Sound` locally. The `Class.Sound` will only be
+      heard by the client calling this method, regardless of where it's parented
+      to.
+
+      Some properties of the `Class.Sound` will be carried over into the copy.
+      These include its `Class.Sound.Volume`, `Class.Sound.TimePosition`,
+      `Class.Sound.PlaybackSpeed`, and any spatialization and effects that are
+      applied to it, including through `Class.Sound.SoundGroup|SoundGroups`.
+      Properties that do not affect the copy include `Class.Sound.Looped` and
+      `Class.SoundService.AmbientReverb`.
     code_samples: []
     parameters:
       - name: sound
@@ -366,18 +426,18 @@ methods:
     capabilities: []
   - name: SoundService:SetListener
     summary: |
-      Sets the listener for the `Class.SoundService`.
+      Sets the listener used by `Class.Sound|Sounds`.
     description: |
-      Sets the listener used by the client, meaning the point from which audio
-      in the experience is "heard" by the player. For `Class.Sound|Sounds`
-      parented to a `Class.BasePart` or `Class.Attachment`, the listener
-      influences the volume and left/right balance of a playing sound.
+      Sets the listener type for any `Class.Sound|Sounds` in the experience,
+      which defines the point from which `Class.Sound` audio in the experience
+      is heard by the player. For `Class.Sound|Sounds` parented to a
+      `Class.BasePart` or `Class.Attachment`, the listener influences the volume
+      and left/right balance of a playing sound. By default, this listener is
+      set to `Class.Workspace.CurrentCamera`.
 
-      By default, the listener is set to `Class.Workspace.CurrentCamera`, but a
-      range of different types of listeners can be used.
-
-      The listener can be retrieved using
-      `Class.SoundService:GetListener()|GetListener()`.
+      Note that this does not affect the listener location when using the
+      advanced audio system. See `Class.AudioListener` for a way to set the
+      listener location in that system.
     code_samples: []
     parameters:
       - name: listenerType

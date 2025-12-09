@@ -27872,6 +27872,55 @@
         }
       }
     },
+    "/v1/my/friends/{userId}/check-qr-session": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "description": "user Id that shows the qr code",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://friends.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
     "/v1/my/friends/count": {
       "get": {
         "tags": ["Connections"],
@@ -59839,7 +59888,25 @@
                 }
               ],
               "description": "The category to sort the saves by.",
-              "default": "DateSaved"
+              "default": "DateSaved",
+              "x-enumNames": [
+                "Name",
+                "Creator",
+                "Ratings",
+                "TargetType",
+                "DateSaved",
+                "LastModified",
+                "Price"
+              ],
+              "x-enum-varnames": [
+                "Name",
+                "Creator",
+                "Ratings",
+                "TargetType",
+                "DateSaved",
+                "LastModified",
+                "Price"
+              ]
             }
           },
           {
@@ -59853,7 +59920,9 @@
                 }
               ],
               "description": "Represents the direction in which to sort the results",
-              "default": "None"
+              "default": "None",
+              "x-enumNames": ["None", "Ascending", "Descending"],
+              "x-enum-varnames": ["None", "Ascending", "Descending"]
             }
           },
           {
@@ -60078,7 +60147,25 @@
                   "$ref": "#/components/schemas/SearchCategoryType"
                 }
               ],
-              "description": "This represents a \"subset\" of Toolbox.Service.CategoryType options and represent the full set\r\nof \"categories\" (or asset types) that can be searched upon from the toolbox search API."
+              "description": "This represents a \"subset\" of Toolbox.Service.CategoryType options and represent the full set\r\nof \"categories\" (or asset types) that can be searched upon from the toolbox search API.",
+              "x-enumNames": [
+                "Audio",
+                "Model",
+                "Decal",
+                "Plugin",
+                "MeshPart",
+                "Video",
+                "FontFamily"
+              ],
+              "x-enum-varnames": [
+                "Audio",
+                "Model",
+                "Decal",
+                "Plugin",
+                "MeshPart",
+                "Video",
+                "FontFamily"
+              ]
             }
           },
           {
@@ -60281,7 +60368,25 @@
                   "$ref": "#/components/schemas/SearchCategoryType"
                 }
               ],
-              "description": "This represents a \"subset\" of Toolbox.Service.CategoryType options and represent the full set\r\nof \"categories\" (or asset types) that can be searched upon from the toolbox search API."
+              "description": "This represents a \"subset\" of Toolbox.Service.CategoryType options and represent the full set\r\nof \"categories\" (or asset types) that can be searched upon from the toolbox search API.",
+              "x-enumNames": [
+                "Audio",
+                "Model",
+                "Decal",
+                "Plugin",
+                "MeshPart",
+                "Video",
+                "FontFamily"
+              ],
+              "x-enum-varnames": [
+                "Audio",
+                "Model",
+                "Decal",
+                "Plugin",
+                "MeshPart",
+                "Video",
+                "FontFamily"
+              ]
             }
           },
           {
@@ -60390,7 +60495,9 @@
                 }
               ],
               "description": "Represents the direction in which to sort the results",
-              "default": "None"
+              "default": "None",
+              "x-enumNames": ["None", "Ascending", "Descending"],
+              "x-enum-varnames": ["None", "Ascending", "Descending"]
             }
           },
           {
@@ -60404,7 +60511,25 @@
                 }
               ],
               "description": "The category to sort the search results by.",
-              "default": "Relevance"
+              "default": "Relevance",
+              "x-enumNames": [
+                "Relevance",
+                "Trending",
+                "Top",
+                "AudioDuration",
+                "CreateTime",
+                "UpdatedTime",
+                "Ratings"
+              ],
+              "x-enum-varnames": [
+                "Relevance",
+                "Trending",
+                "Top",
+                "AudioDuration",
+                "CreateTime",
+                "UpdatedTime",
+                "Ratings"
+              ]
             }
           },
           {
@@ -60543,7 +60668,9 @@
                 }
               ],
               "description": "This view controls which fields are populated in the search response. A lighter\r\nview will result in faster response times and higher reliability.",
-              "default": "Core"
+              "default": "Core",
+              "x-enumNames": ["IDs", "Core", "Full"],
+              "x-enum-varnames": ["IDs", "Core", "Full"]
             }
           },
           {
@@ -60557,7 +60684,9 @@
                 }
               ],
               "description": "Represents which music chart to pull entries from, if any",
-              "default": "None"
+              "default": "None",
+              "x-enumNames": ["None", "Current", "Week", "Month", "Year"],
+              "x-enum-varnames": ["None", "Current", "Week", "Month", "Year"]
             }
           }
         ],
@@ -64348,6 +64477,14 @@
               "type": "integer",
               "format": "int64"
             }
+          },
+          {
+            "name": "Roblox-Api-Key",
+            "in": "header",
+            "description": "Api Key (UUID).",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -66112,9 +66249,9 @@
         "type": "object",
         "properties": {
           "path": {
-            "example": "universes/123/memory-store/queues/some-memory-store-queue-id/items/some-memory-store-queue-item-id",
+            "example": "cloud/v2/universes/123/memory-store/queues/some-memory-store-queue-id/items/some-memory-store-queue-item-id",
             "type": "string",
-            "description": "The resource path of the memory store queue item.\n\nFormat:\n`universes/{universe_id}/memory-store/queues/{memory_store_queue_id}/items/{memory_store_queue_item_id}`"
+            "description": "The resource path of the memory store queue item.\n\nFormat:\n`cloud/v2/universes/{universe_id}/memory-store/queues/{memory_store_queue_id}/items/{memory_store_queue_item_id}`"
           },
           "data": {
             "$ref": "#/components/schemas/GoogleProtobufValue",
@@ -66162,9 +66299,9 @@
         "type": "object",
         "properties": {
           "path": {
-            "example": "universes/123/memory-store/sorted-maps/some-memory-store-sorted-map-id/items/some-memory-store-sorted-map-item-id",
+            "example": "cloud/v2/universes/123/memory-store/sorted-maps/some-memory-store-sorted-map-id/items/some-memory-store-sorted-map-item-id",
             "type": "string",
-            "description": "The resource path of the memory store sorted map item.\n\nFormat:\n`universes/{universe_id}/memory-store/sorted-maps/{memory_store_sorted_map_id}/items/{memory_store_sorted_map_item_id}`"
+            "description": "The resource path of the memory store sorted map item.\n\nFormat:\n`cloud/v2/universes/{universe_id}/memory-store/sorted-maps/{memory_store_sorted_map_id}/items/{memory_store_sorted_map_item_id}`"
           },
           "value": {
             "$ref": "#/components/schemas/GoogleProtobufValue",
@@ -84840,7 +84977,9 @@
               }
             ],
             "description": "The type of audio (Music or SoundEffect).",
-            "deprecated": true
+            "deprecated": true,
+            "x-enumNames": ["Music", "SoundEffect"],
+            "x-enum-varnames": ["Music", "SoundEffect"]
           },
           "artist": {
             "type": "string",
@@ -84897,7 +85036,25 @@
                 "$ref": "#/components/schemas/SearchCategoryType"
               }
             ],
-            "description": "The type of asset being saved"
+            "description": "The type of asset being saved",
+            "x-enumNames": [
+              "Audio",
+              "Model",
+              "Decal",
+              "Plugin",
+              "MeshPart",
+              "Video",
+              "FontFamily"
+            ],
+            "x-enum-varnames": [
+              "Audio",
+              "Model",
+              "Decal",
+              "Plugin",
+              "MeshPart",
+              "Video",
+              "FontFamily"
+            ]
           },
           "targetId": {
             "type": "integer",
@@ -85079,7 +85236,25 @@
                 "$ref": "#/components/schemas/SearchCategoryType"
               }
             ],
-            "description": "The type of asset being deleted"
+            "description": "The type of asset being deleted",
+            "x-enumNames": [
+              "Audio",
+              "Model",
+              "Decal",
+              "Plugin",
+              "MeshPart",
+              "Video",
+              "FontFamily"
+            ],
+            "x-enum-varnames": [
+              "Audio",
+              "Model",
+              "Decal",
+              "Plugin",
+              "MeshPart",
+              "Video",
+              "FontFamily"
+            ]
           },
           "targetId": {
             "type": "integer",
@@ -85210,7 +85385,33 @@
       "LinkType": {
         "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         "type": "integer",
-        "format": "int32"
+        "format": "int32",
+        "x-enumNames": [
+          "Invalid",
+          "Facebook",
+          "Twitter",
+          "Youtube",
+          "Twitch",
+          "Discord",
+          "Github",
+          "Guilded",
+          "Roblox",
+          "Devforum",
+          "TryInExperience"
+        ],
+        "x-enum-varnames": [
+          "Invalid",
+          "Facebook",
+          "Twitter",
+          "Youtube",
+          "Twitch",
+          "Discord",
+          "Github",
+          "Guilded",
+          "Roblox",
+          "Devforum",
+          "TryInExperience"
+        ]
       },
       "MeshPart": {
         "type": "object",
@@ -85286,12 +85487,30 @@
       "ModelInstanceType": {
         "enum": ["Script", "MeshPart", "Decal", "Animation", "Audio", "Tool"],
         "type": "string",
-        "description": "A list of model instance types. See Toolbox.Service.Models.Internal.InstanceCounts and [Instance](https://create.roblox.com/docs/reference/engine/classes/Instance) for more details."
+        "description": "A list of model instance types. See Toolbox.Service.Models.Internal.InstanceCounts and [Instance](https://create.roblox.com/docs/reference/engine/classes/Instance) for more details.",
+        "x-enumNames": [
+          "Script",
+          "MeshPart",
+          "Decal",
+          "Animation",
+          "Audio",
+          "Tool"
+        ],
+        "x-enum-varnames": [
+          "Script",
+          "MeshPart",
+          "Decal",
+          "Animation",
+          "Audio",
+          "Tool"
+        ]
       },
       "ModelSubType": {
         "enum": ["Ad", "MaterialPack", "Package"],
         "type": "string",
-        "description": "The supported model subtypes."
+        "description": "The supported model subtypes.",
+        "x-enumNames": ["Ad", "MaterialPack", "Package"],
+        "x-enum-varnames": ["Ad", "MaterialPack", "Package"]
       },
       "ToolboxService.Money": {
         "type": "object",
@@ -85338,7 +85557,9 @@
       "MusicChartType": {
         "enum": ["None", "Current", "Week", "Month", "Year"],
         "type": "string",
-        "description": "Represents which music chart to pull entries from, if any"
+        "description": "Represents which music chart to pull entries from, if any",
+        "x-enumNames": ["None", "Current", "Week", "Month", "Year"],
+        "x-enum-varnames": ["None", "Current", "Week", "Month", "Year"]
       },
       "ObjectMeshSummary": {
         "type": "object",
@@ -85471,12 +85692,32 @@
           "Price"
         ],
         "type": "string",
-        "description": "The category to sort the saves by."
+        "description": "The category to sort the saves by.",
+        "x-enumNames": [
+          "Name",
+          "Creator",
+          "Ratings",
+          "TargetType",
+          "DateSaved",
+          "LastModified",
+          "Price"
+        ],
+        "x-enum-varnames": [
+          "Name",
+          "Creator",
+          "Ratings",
+          "TargetType",
+          "DateSaved",
+          "LastModified",
+          "Price"
+        ]
       },
       "SearchAudioTypeModel": {
         "enum": ["Music", "SoundEffect"],
         "type": "string",
-        "description": "Represents audio type values that will be properly displayed in Swagger UI."
+        "description": "Represents audio type values that will be properly displayed in Swagger UI.",
+        "x-enumNames": ["Music", "SoundEffect"],
+        "x-enum-varnames": ["Music", "SoundEffect"]
       },
       "SearchCategoryType": {
         "enum": [
@@ -85489,7 +85730,25 @@
           "FontFamily"
         ],
         "type": "string",
-        "description": "This represents a \"subset\" of Toolbox.Service.CategoryType options and represent the full set\r\nof \"categories\" (or asset types) that can be searched upon from the toolbox search API."
+        "description": "This represents a \"subset\" of Toolbox.Service.CategoryType options and represent the full set\r\nof \"categories\" (or asset types) that can be searched upon from the toolbox search API.",
+        "x-enumNames": [
+          "Audio",
+          "Model",
+          "Decal",
+          "Plugin",
+          "MeshPart",
+          "Video",
+          "FontFamily"
+        ],
+        "x-enum-varnames": [
+          "Audio",
+          "Model",
+          "Decal",
+          "Plugin",
+          "MeshPart",
+          "Video",
+          "FontFamily"
+        ]
       },
       "SearchCreatorStoreAssetsResponse": {
         "type": "object",
@@ -85534,7 +85793,9 @@
       "SearchView": {
         "enum": ["IDs", "Core", "Full"],
         "type": "string",
-        "description": "This view controls which fields are populated in the search response. A lighter\r\nview will result in faster response times and higher reliability."
+        "description": "This view controls which fields are populated in the search response. A lighter\r\nview will result in faster response times and higher reliability.",
+        "x-enumNames": ["IDs", "Core", "Full"],
+        "x-enum-varnames": ["IDs", "Core", "Full"]
       },
       "SocialLinkModel": {
         "type": "object",
@@ -85545,7 +85806,33 @@
                 "$ref": "#/components/schemas/LinkType"
               }
             ],
-            "description": "Gets or sets the link type."
+            "description": "Gets or sets the link type.",
+            "x-enumNames": [
+              "Invalid",
+              "Facebook",
+              "Twitter",
+              "Youtube",
+              "Twitch",
+              "Discord",
+              "Github",
+              "Guilded",
+              "Roblox",
+              "Devforum",
+              "TryInExperience"
+            ],
+            "x-enum-varnames": [
+              "Invalid",
+              "Facebook",
+              "Twitter",
+              "Youtube",
+              "Twitch",
+              "Discord",
+              "Github",
+              "Guilded",
+              "Roblox",
+              "Devforum",
+              "TryInExperience"
+            ]
           },
           "url": {
             "type": "string",
@@ -85573,12 +85860,32 @@
           "Ratings"
         ],
         "type": "string",
-        "description": "The category to sort the search results by."
+        "description": "The category to sort the search results by.",
+        "x-enumNames": [
+          "Relevance",
+          "Trending",
+          "Top",
+          "AudioDuration",
+          "CreateTime",
+          "UpdatedTime",
+          "Ratings"
+        ],
+        "x-enum-varnames": [
+          "Relevance",
+          "Trending",
+          "Top",
+          "AudioDuration",
+          "CreateTime",
+          "UpdatedTime",
+          "Ratings"
+        ]
       },
       "SortDirection": {
         "enum": ["None", "Ascending", "Descending"],
         "type": "string",
-        "description": "Represents the direction in which to sort the results"
+        "description": "Represents the direction in which to sort the results",
+        "x-enumNames": ["None", "Ascending", "Descending"],
+        "x-enum-varnames": ["None", "Ascending", "Descending"]
       },
       "SoundEffect": {
         "type": "object",
@@ -89714,108 +90021,108 @@
       "description": "HTTP APIs for working with users on Roblox Cloud, including inventory items, restrictions, subscriptions, and more.",
       "x-roblox-tag-info": {
         "path": "users",
-        "content": "Lists all HTTP APIs for working with users, such as getting user subscriptions or all universes a user is following.",
+        "content": "Lists all HTTP APIs for working with users, such as getting user information or all universes a user is following.",
         "ordering": [
-          "Cloud_ListUserRestrictions__Using_Universes",
-          "Cloud_GetUserRestriction__Using_Universes_Places",
-          "Cloud_UpdateUserRestriction__Using_Universes_Places",
-          "Cloud_GetSubscription",
-          "Cloud_ListUserRestrictions",
-          "Cloud_ListUserRestrictionLogs",
-          "Cloud_GetUserRestriction__Using_Universes",
-          "Cloud_UpdateUserRestriction__Using_Universes",
+          "users_get_v1_users_search",
+          "users_post_v1_usernames_users",
+          "users_post_v1_users",
           "Cloud_GetUser",
-          "Cloud_GenerateUserThumbnail",
-          "Cloud_ListAssetQuotas",
-          "Cloud_ListInventoryItems",
-          "Cloud_CreateUserNotification",
-          "get_legacy_develop_v1_user_groups_canmanage",
-          "develop_get_v1_user_groups_canmanage",
-          "get_legacy_followings_v1_users__userId__universes",
-          "followings_get_v1_users__userId__universes",
-          "delete_legacy_followings_v1_users__userId__universes__universeId_",
-          "followings_delete_v1_users__userId__universes__universeId_",
-          "post_legacy_followings_v1_users__userId__universes__universeId_",
-          "followings_post_v1_users__userId__universes__universeId_",
-          "get_legacy_followings_v1_users__userId__universes__universeId__status",
-          "followings_get_v1_users__userId__universes__universeId__status",
-          "get_legacy_followings_v2_users__userId__universes",
-          "followings_get_v2_users__userId__universes",
-          "get_legacy_groups_v1_user_groups_pending",
-          "groups_get_v1_user_groups_pending",
+          "users_get_v1_users__userId_",
+          "Presence_GetUserPresences",
+          "premiumfeatures_get_v1_users__userId__premium_upsell_precheck",
+          "premiumfeatures_get_v1_users__userId__validate_membership",
           "accountinformation_get_v1_users__userId__promotion_channels",
-          "accountinformation_get_v1_users__userId__roblox_badges",
-          "avatar_get_v1_users__userId__avatar",
+          "users_get_v1_display_names_validate",
+          "users_get_v1_users__userId__display_names_validate",
+          "users_get_v1_users__userId__username_history",
+          "users_patch_v1_users__userId__display_names",
           "avatar_get_v1_users__userId__currently_wearing",
-          "avatar_get_v1_users__userId__outfits",
           "avatar_get_v2_avatar_users__userId__avatar",
+          "avatar_get_v1_users__userId__avatar",
           "avatar_get_v2_avatar_users__userId__outfits",
+          "avatar_get_v1_users__userId__outfits",
+          "Cloud_ListInventoryItems",
+          "inventory_get_v1_users__userId__can_view_inventory",
+          "inventory_get_v1_users__userId__assets_collectibles",
+          "inventory_get_v1_users__userId__items__itemType___itemTargetId__is_owned",
+          "inventory_get_v1_users__userId__items__itemType___itemTargetId_",
+          "inventory_get_v1_users__userId__places_inventory",
+          "inventory_get_v2_users__userId__inventory",
+          "inventory_get_v2_users__userId__inventory__assetTypeId_",
+          "inventory_get_v1_users__userId__categories",
+          "inventory_get_v1_users__userId__categories_favorites",
+          "accountinformation_get_v1_users__userId__roblox_badges",
           "badges_get_v1_users__userId__badges",
-          "badges_get_v1_users__userId__badges__badgeId__awarded_date",
           "badges_get_v1_users__userId__badges_awarded_dates",
-          "catalog_delete_v1_favorites_users__userId__assets__assetId__favorite",
-          "catalog_get_v1_favorites_users__userId__assets__assetId__favorite",
-          "catalog_post_v1_favorites_users__userId__assets__assetId__favorite",
-          "catalog_delete_v1_favorites_users__userId__bundles__bundleId__favorite",
-          "catalog_get_v1_favorites_users__userId__bundles__bundleId__favorite",
-          "catalog_post_v1_favorites_users__userId__bundles__bundleId__favorite",
+          "badges_get_v1_users__userId__badges__badgeId__awarded_date",
+          "Cloud_ListAssetQuotas",
+          "Cloud_GenerateUserThumbnail",
+          "inventory_get_v2_assets__assetId__owners",
           "catalog_get_v1_favorites_users__userId__favorites__assetTypeId__assets",
-          "catalog_get_v1_favorites_users__userId__favorites__subtypeId__bundles",
+          "catalog_post_v1_favorites_users__userId__assets__assetId__favorite",
+          "catalog_get_v1_favorites_users__userId__assets__assetId__favorite",
+          "catalog_delete_v1_favorites_users__userId__assets__assetId__favorite",
           "catalog_get_v1_users__userId__bundles",
           "catalog_get_v1_users__userId__bundles__bundleType_",
-          "contacts_get_v1_contacts_metadata",
-          "contacts_post_v1_user_get_tags",
-          "contacts_post_v1_user_tag",
-          "contacts_get_v1_user_tag_validate",
-          "develop_get_v1_user_groups_canmanagegamesoritems",
+          "catalog_get_v1_favorites_users__userId__favorites__subtypeId__bundles",
+          "catalog_post_v1_favorites_users__userId__bundles__bundleId__favorite",
+          "catalog_get_v1_favorites_users__userId__bundles__bundleId__favorite",
+          "catalog_delete_v1_favorites_users__userId__bundles__bundleId__favorite",
+          "friends_get_v1_users__userId__friends",
+          "friends_get_v1_users__userId__friends_find",
+          "friends_get_v1_users__userId__friends_search",
+          "friends_get_v1_users__userId__friends_statuses",
+          "friends_get_v1_users__userId__friends_online",
+          "friends_get_v1_users__userId__friends_inactive",
+          "friends_get_v1_users__userId__friends_count",
           "friends_get_v1_users__targetUserId__followers",
           "friends_get_v1_users__targetUserId__followers_count",
           "friends_get_v1_users__targetUserId__followings",
           "friends_get_v1_users__targetUserId__followings_count",
-          "friends_get_v1_users__userId__friends",
-          "friends_get_v1_users__userId__friends_count",
-          "friends_get_v1_users__userId__friends_find",
-          "friends_get_v1_users__userId__friends_inactive",
-          "friends_get_v1_users__userId__friends_online",
-          "friends_get_v1_users__userId__friends_search",
-          "friends_get_v1_users__userId__friends_statuses",
-          "games_get_v1_vip_server_can_invite__userId_",
-          "games_get_v2_users__userId__favorite_games",
-          "games_get_v2_users__userId__games",
-          "groups_delete_v1_groups__groupId__join_requests_users__userId_",
-          "groups_get_v1_groups__groupId__join_requests_users__userId_",
-          "groups_post_v1_groups__groupId__join_requests_users__userId_",
+          "contacts_get_v1_contacts_metadata",
+          "contacts_post_v1_user_get_tags",
+          "contacts_get_v1_user_tag_validate",
+          "contacts_post_v1_user_tag",
+          "get_legacy_followings_v1_users__userId__universes",
+          "followings_get_v1_users__userId__universes",
+          "post_legacy_followings_v1_users__userId__universes__universeId_",
+          "followings_post_v1_users__userId__universes__universeId_",
+          "get_legacy_followings_v1_users__userId__universes__universeId__status",
+          "followings_get_v1_users__userId__universes__universeId__status",
+          "delete_legacy_followings_v1_users__userId__universes__universeId_",
+          "followings_delete_v1_users__userId__universes__universeId_",
+          "get_legacy_followings_v2_users__userId__universes",
+          "followings_get_v2_users__userId__universes",
+          "get_legacy_develop_v1_user_groups_canmanage",
+          "develop_get_v1_user_groups_canmanage",
+          "groups_get_v1_users__userId__friends_groups_roles",
           "groups_get_v1_groups__groupId__users",
           "groups_post_v1_groups__groupId__users",
-          "groups_delete_v1_groups__groupId__users__userId_",
-          "groups_patch_v1_groups__groupId__users__userId_",
-          "groups_get_v1_groups__groupId__users__userId__permissions",
-          "groups_get_v1_users__userId__friends_groups_roles",
           "groups_get_v1_users__userId__groups_primary_role",
-          "groups_get_v1_users__userId__groups_roles",
           "groups_get_v2_users__userId__groups_roles",
-          "inventory_get_v1_users__userId__assets_collectibles",
-          "inventory_get_v1_users__userId__can_view_inventory",
-          "inventory_get_v1_users__userId__categories",
-          "inventory_get_v1_users__userId__categories_favorites",
-          "inventory_get_v1_users__userId__items__itemType___itemTargetId_",
-          "inventory_get_v1_users__userId__items__itemType___itemTargetId__is_owned",
-          "inventory_get_v1_users__userId__places_inventory",
-          "inventory_get_v2_assets__assetId__owners",
-          "inventory_get_v2_users__userId__inventory",
-          "inventory_get_v2_users__userId__inventory__assetTypeId_",
-          "premiumfeatures_get_v1_users__userId__premium_upsell_precheck",
-          "premiumfeatures_get_v1_users__userId__validate_membership",
-          "Presence_GetUserPresences",
-          "translationroles_get_v1_game_localization_roles_games__gameId__roles__role__assignees",
-          "users_post_v1_usernames_users",
-          "users_post_v1_users",
-          "users_get_v1_users__userId_",
-          "users_get_v1_display_names_validate",
-          "users_get_v1_users__userId__display_names_validate",
-          "users_patch_v1_users__userId__display_names",
-          "users_get_v1_users__userId__username_history",
-          "users_get_v1_users_search"
+          "groups_get_v1_users__userId__groups_roles",
+          "get_legacy_groups_v1_user_groups_pending",
+          "groups_get_v1_user_groups_pending",
+          "groups_get_v1_groups__groupId__join_requests_users__userId_",
+          "groups_post_v1_groups__groupId__join_requests_users__userId_",
+          "groups_delete_v1_groups__groupId__join_requests_users__userId_",
+          "groups_delete_v1_groups__groupId__users__userId_",
+          "groups_get_v1_groups__groupId__users__userId__permissions",
+          "groups_patch_v1_groups__groupId__users__userId_",
+          "develop_get_v1_user_groups_canmanagegamesoritems",
+          "games_get_v1_vip_server_can_invite__userId_",
+          "games_get_v2_users__userId__games",
+          "games_get_v2_users__userId__favorite_games",
+          "Cloud_ListUserRestrictions",
+          "Cloud_ListUserRestrictions__Using_Universes",
+          "Cloud_GetUserRestriction__Using_Universes",
+          "Cloud_GetUserRestriction__Using_Universes_Places",
+          "Cloud_UpdateUserRestriction__Using_Universes",
+          "Cloud_UpdateUserRestriction__Using_Universes_Places",
+          "Cloud_ListUserRestrictionLogs",
+          "Cloud_CreateUserNotification",
+          "Cloud_GetSubscription",
+          "translationroles_get_v1_game_localization_roles_games__gameId__roles__role__assignees"
         ]
       }
     }
