@@ -5,21 +5,16 @@ description: Get comprehensive API reference documentation for Open Cloud.
 
 With Open Cloud, you can access Roblox resources through standard [REST](https://en.wikipedia.org/wiki/REST) APIs, which lets you build everything from command line automation tools to complex web apps. You can update experiences, restart servers, work with your data stores and memory stores, manage user restrictions, list inventory items, and much, much more.
 
-## About this reference
+This reference is broken into two sections:
 
-This reference documentation is broken into two sections:
+- A [section that separates endpoints by feature](/cloud/reference/features/accounts) (Avatars, Game Passes, Users, etc.)
+- A [section that separates endpoints by domain](/cloud/reference/domains/apis) (base URL)
 
-- A [section that separates endpoints by feature](./features/accounts.md) (Avatars, Game Passes, Users, etc.)
-- A [section that separates endpoints by authentication type](./api/toolbox-service.md) (Open Cloud or cookie-based)
+**Both sections** contain the full list of available API endpoints. We recommend the [features section](/cloud/reference/features/accounts) since it helps consolidate endpoints by use case, but experienced Open Cloud developers might prefer to browse by domain.
 
-**Both sections** contain the full list of available API endpoints; use whichever helps you find what you need.
+- Whenever possible, use endpoints that support [API keys](./auth/api-keys.md) or [OAuth 2.0](./auth/oauth2-overview.md) for authentication. They have strong stability guarantees and receive regular updates.
 
-Whenever possible, use the Open Cloud APIs. These APIs support HTTPS and use [API keys](./auth/api-keys.md) or [OAuth 2.0](./auth/oauth2-overview.md) for authentication. They have strong stability guarantees and regular releases.
-
-- Open Cloud v2 APIs use certain resource-oriented design patterns. For more information, see [Patterns](./reference/patterns.md).
-- Some other Open Cloud APIs share similar resource-oriented patterns, but are not guaranteed to strictly follow all of them.
-
-Legacy APIs use cookie-based authentication, can incorporate breaking changes without notice, and have minimal stability guarantees. We don't recommend them for production applications.
+- Legacy APIs use cookie-based authentication, can incorporate breaking changes without notice, and have minimal stability guarantees. We don't recommend them for production applications.
 
 <Alert severity="info">
 Roblox also offers [webhooks](./webhooks/webhook-notifications.md), which can notify your applications when certain events occur, such as refunds or changes to subscriptions.
