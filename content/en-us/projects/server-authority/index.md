@@ -5,6 +5,12 @@ description: The server authority model lets you build responsive cheat-free com
 
 import BetaAlert from '../../includes/beta-features/beta-alert.md'
 
+<BetaAlert betaName="Server Authority Core API" leadIn="The server authority model and its associated APIs are currently in beta. Enable them in Studio through " leadOut="." components={props.components} />
+
+<Alert severity="error">
+As this feature is currently in beta, you should **not** publish a server‑authoritative game. Your players' clients will not yet have support for server authority APIs, so the published game will not work correctly.
+</Alert>
+
 In a **server authority model**, the server is the single **source of truth** for the entire game state, and clients are only trusted to report their own inputs. This architecture is the core netcode foundation of a fair, competitive experience because it prevents entire classes of cheating like flyhacks or speedhacks by never trusting a client to report its own position or game state.
 
 ## Advantages
@@ -26,8 +32,6 @@ Mispredictions are a **normal and expected** part of the server authority archit
 </Alert>
 
 ## Setup
-
-<BetaAlert betaName="Server Authority Core API" leadIn="The server authority model and its associated APIs are currently in beta. Enable them in Studio through " leadOut="." components={props.components} />
 
 As the server authority model requires certain other engine technologies to function correctly, you must first set the following properties on the `Class.Workspace` object in the [Explorer](../../studio/explorer.md):
 
@@ -256,7 +260,7 @@ In addition to this documentation, the following game templates can help you get
     <figcaption>Racing</figcaption>
   </figure>
 	<figure>
-    <a href="https://www.roblox.com/games/110687099504272/Soccer-League-Server-Authority-Template"><img src="../../assets/misc/SA-Icon-Soccer.jpg" /></a>
+    <a href="https://www.roblox.com/games/110687099504272/Soccer-Server-Authority-Template"><img src="../../assets/misc/SA-Icon-Soccer.jpg" /></a>
     <figcaption>Soccer</figcaption>
   </figure>
 	<figure>

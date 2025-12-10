@@ -9,6 +9,10 @@ This guide covers advanced techniques for creating high-quality, smooth, multipl
 
 <BetaAlert betaName="Server Authority Core API" leadIn="The server authority model and its associated APIs are currently in beta. Enable them in Studio through " leadOut="." components={props.components} />
 
+<Alert severity="error">
+As this feature is currently in beta, you should **not** publish a server‑authoritative game. Your players' clients will not yet have support for server authority APIs, so the published game will not work correctly.
+</Alert>
+
 ## Position smoothing
 
 You can visually smooth out the position of mispredicted synchronized objects by rendering a different object than what is being simulated.
@@ -51,7 +55,7 @@ RunService.RenderStepped:Connect(function(deltaTime: number)
 end)
 ```
 
-The [Soccer League](https://www.roblox.com/games/110687099504272/Soccer-League-Server-Authority-Template) example experience uses a variation of this technique to more intelligently turn on and off position smoothing for the soccer ball. Specifically, the soccer ball only smooths its position when the simulated ball has "jumped" far enough away from the rendered ball. This approach provides the best of both worlds: the soccer ball has no visual latency under normal conditions, and the experience smoothly interpolates its position only after the simulated ball has unexpectedly jumped to a new location, likely due to a network artifact or server‑side change.
+The [Soccer](https://www.roblox.com/games/110687099504272/Soccer-Server-Authority-Template) example experience uses a variation of this technique to more intelligently turn on and off position smoothing for the soccer ball. Specifically, the soccer ball only smooths its position when the simulated ball has "jumped" far enough away from the rendered ball. This approach provides the best of both worlds: the soccer ball has no visual latency under normal conditions, and the experience smoothly interpolates its position only after the simulated ball has unexpectedly jumped to a new location, likely due to a network artifact or server‑side change.
 
 ## Animations, sounds, and visual effects
 
