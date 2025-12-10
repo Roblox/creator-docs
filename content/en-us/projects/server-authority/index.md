@@ -257,7 +257,7 @@ In addition to this documentation, the following game templates can help you get
   </figure>
 	<figure>
     <a href="https://www.roblox.com/games/110687099504272/Soccer-League-Server-Authority-Template"><img src="../../assets/misc/SA-Icon-Soccer.jpg" /></a>
-    <figcaption>Soccer League</figcaption>
+    <figcaption>Soccer</figcaption>
   </figure>
 	<figure>
     <a href="https://www.roblox.com/games/90572444221193/Laser-Tag-Server-Authority-Template"><img src="../../assets/misc/SA-Icon-Laser-Tag.jpg" /></a>
