@@ -64,6 +64,7 @@ When caging your clothing items, use these important universal guidelines:
 
 - You must follow the [naming conventions](../../art/accessories/clothing-specifications.md#cage-meshes) for the clothing geometry and the cage.
 - Many caging issues start from incorrect outer cage setup. See [working with outer cages](#working-with-outer-cages) for specific details.
+- Do not modify areas of your cage that are unrelated to the clothing item you are caging. For example, do not modify the inner or outer cages of the lower leg areas when caging a t-shirt.
 - Review any specific best practices for [form-fitting clothes](#caging-form-fitting-clothing), [bulky clothes](#caging-bulky-clothing-items), and [clothing with protrusions](#caging-protrusions).
 - If troubleshooting any issues, review [common issues](#common-issues) to help identify problematic clothing items or specific validation errors.
 

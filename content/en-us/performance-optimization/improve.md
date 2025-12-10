@@ -250,6 +250,7 @@ comes with a significant computation cost.
 - **Playing animations on a large number of NPCs from the server** - NPC
   animations that run on the server need to be simulated on the server and replicated
   to the client. This can be unnecessary overhead.
+- **Performing unnecessary size and scale changes** - Size/scale changes cause FastCluster to be rebuilt. Try to reduce this during gameplay if you are seeing FastCluster-related performance issues. Similarly, other property changes might also cause FastCluster to be rebuilt, so in general reduce these changes as much as possible.
 
 ### Mitigation
 
@@ -387,6 +388,10 @@ same `MeshId` are handled in a single draw call when:
   times, which can hurt performance. For more information on identifying and
   fixing this issue, see
   [Delete layered transparencies](../tutorials/curriculums/environmental-art/optimize-your-experience.md#delete-layered-transparencies).
+
+- **Unnecessary skinned MeshPart movement** - Skinned MeshParts that are part of a Model without a Humanoid are grouped using spatially-organized FastClusters. When these MeshParts move, they must be continually added to and removed from these spatial clusters, forcing the clusters to be rebuilt and impacting performance.
+  - A highly effective workaround is to embed a Humanoid within the Model. The presence of a Humanoid overrides the default spatial clustering behavior, mandating the use of a single, unified FastCluster for the entire Model. Consequently, position updates no longer necessitate cluster rebuilds, thus mitigating the performance bottleneck. This technique should be reserved exclusively for MeshParts with expected movement, as it may introduce memory overhead and negate the benefits of spatial optimization. We recommend always profile your experience after making these types of changes. See [Humanoid performance tips](#humanoids) for additional information.
+- **Too many parts in a `Class.Model`** - Too many parts in a Model could cause rebuilds more often due to the potential for a part's property to change leading to requiring a full rebuild. Find the right balance of parts in a Model when it is using FastCluster.
 
 ### Mitigation
 
