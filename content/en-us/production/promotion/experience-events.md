@@ -215,12 +215,6 @@ The **Off-Platform Featuring** program extends your event's visibility beyond Ro
 
 ![Examples of how your event might look off-platform.](../../assets/promotion/experience-events/off-platform-featuring.png)
 
-### Creator Benefits
-
-- Expanded player discovery and installs through app store visibility.
-- Increased returning players and retention.
-- Performance reporting once the campaign concludes.
-
 ### Eligibility
 
 To be considered for the program, submitted events must meet the following criteria:
@@ -241,6 +235,11 @@ To be considered for the program, submitted events must meet the following crite
    <img src="../../assets/promotion/experience-events/submit-for-featuring.png" width="700" alt="Submit for Featuring toggle." />
 
 1. Roblox's marketing teams review eligible submissions.
-1. If selected, you will be notified and asked to provide event-specific art assets.
-1. Selected events are featured on global surfaces and app stores.
+
+   - The best events run for 7-30 days and highlight something new or time-limited for players.
+   - High-quality visuals and clear metadata improve the odds of selection.
+   - Avoid making changes to your event after submitting it. Changes might affect eligibility or delay the review.
+
+1. If selected, you will be notified and asked to provide event-specific art assets. Due to submission volume, we can't provide feedback on why an event wasn't selected.
+1. Selected events are featured on global surfaces and app stores at no cost to you.
 1. After the event ends, you receive a performance report summarizing how many views and interactions your event generated off-platform.

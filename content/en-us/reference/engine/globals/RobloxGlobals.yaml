@@ -4,8 +4,9 @@
 
 name: Roblox globals
 type: global
-summary: Built-in functions and constants unique to Roblox.
-description: |-
+summary: |
+  Built-in functions and constants unique to Roblox.
+description: |
   Roblox provides several unique built-in functions and variables in its
   embedding of Luau. These are only found on Roblox and are not packaged by
   default with Luau or Lua.
@@ -14,8 +15,9 @@ code_samples: []
 properties:
   - name: Enum
     type: Enums
-    summary: Contains all Enum objects.
-    description: |-
+    summary: |
+      Contains all Enum objects.
+    description: |
       A reference to the Enums data type, which stores all of the available
       enums that can be used on Roblox.
     tags: []
@@ -23,10 +25,10 @@ properties:
     deprecation_message: ''
   - name: game
     type: DataModel
-    summary: |-
+    summary: |
       Refers to the DataModel singleton, the root instance of a place's
       hierarchy.
-    description: |-
+    description: |
       A reference to the `Class.DataModel`, which is the root Instance of
       Roblox's parent/child hierarchy.
     tags: []
@@ -34,10 +36,10 @@ properties:
     deprecation_message: ''
   - name: plugin
     type: Plugin
-    summary: |-
+    summary: |
       Refers to a Plugin singleton when the code is run in the context of a
       Studio plugin.
-    description: |-
+    description: |
       A reference to the `Class.Plugin` object that represents the plugin being
       run from this `Class.Script`. This reference exists only in the context
       where a script is executed as a plugin and is not passed to
@@ -53,10 +55,10 @@ properties:
     deprecation_message: ''
   - name: shared
     type: Array
-    summary: |-
+    summary: |
       A table shared between all code running at the same execution context
       level.
-    description: |-
+    description: |
       A table that is shared across all scripts that share the same execution
       context level. This serves the exact same purpose as `_G`.
     tags: []
@@ -64,10 +66,10 @@ properties:
     deprecation_message: ''
   - name: script
     type: LuaSourceContainer
-    summary: |-
+    summary: |
       A reference to the LuaSourceContainer object (Script, LocalScript, or
       ModuleScript) that is executing this code.
-    description: |-
+    description: |
       A reference to the script object that is executing the code you are
       writing. It can be either a `Class.Script`, a `Class.LocalScript`, or a
       `Class.ModuleScript`. This variable is not available when executing code
@@ -77,10 +79,10 @@ properties:
     deprecation_message: ''
   - name: workspace
     type: Workspace
-    summary: |-
+    summary: |
       A reference to the Workspace service, which contains all of the physical
       components of a place.
-    description: |-
+    description: |
       A reference to the `Class.Workspace` service, which contains all of the
       physical components of a Roblox world.
     tags: []
@@ -88,10 +90,10 @@ properties:
     deprecation_message: ''
 functions:
   - name: delay
-    summary: |-
+    summary: |
       Schedules a function to be called on the next Heartbeat after the given
       duration (in seconds) has passed, with throttling.
-    description: |-
+    description: |
       Schedules a function to be executed after `delayTime` seconds have passed,
       without yielding the current thread. This function allows multiple Luau
       threads to be executed in parallel from the same stack. The delay will
@@ -103,13 +105,13 @@ functions:
       - name: delayTime
         type: number
         default:
-        summary: |-
+        summary: |
           The amount of time that this function will be queued before being
           executed.
       - name: callback
         type: function
         default:
-        summary: |-
+        summary: |
           The function that will be executed once `delayTime` seconds have
           passed.
     returns:
@@ -118,14 +120,14 @@ functions:
     tags:
       - Deprecated
     code_samples: []
-    deprecation_message: |-
+    deprecation_message: |
       This method has been superseded by `Library.task.delay()` and should not
       be used for future work.
   - name: DebuggerManager
-    summary: |-
+    summary: |
       Refers to the legacy `DebuggerManager` class which acts as an interface
       for the Luau debugger feature.
-    description: |-
+    description: |
       Returns the legacy `DebuggerManager` class which acts as an interface for
       Roblox's Luau debugger feature.
 
@@ -138,14 +140,14 @@ functions:
     tags:
       - Deprecated
     code_samples: []
-    deprecation_message: |-
+    deprecation_message: |
       The `DebuggerManager` is obsolete and serves little to no use case for
       developers.
   - name: elapsedTime
-    summary: |-
+    summary: |
       Returns the amount of time in seconds that the current instance of Roblox
       has been running for.
-    description: |-
+    description: |
       Returns how much time has elapsed since the current instance of Roblox was
       started. In Roblox Studio, this begins counting up from the moment Roblox
       Studio starts running, not just when opening a place.
@@ -157,10 +159,10 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: PluginManager
-    summary: |-
+    summary: |
       Refers to the PluginManager, a deprecated singleton that was previously
       required to create plugins.
-    description: |-
+    description: |
       Returns the `Class.PluginManager` which is a deprecated singleton that was
       previously required to create plugins. It still has applicable uses, such
       as if you need to create a Plugin object from Roblox Studio's command bar.
@@ -172,10 +174,10 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: printidentity
-    summary: |-
+    summary: |
       Prints "Current identity is X", where X corresponds to the current
       thread's security context level.
-    description: |-
+    description: |
       Prints `Current identity is [ID]` to the output, where [ID] corresponds to
       the current thread's security context level.
     parameters:
@@ -191,10 +193,10 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: settings
-    summary: |-
+    summary: |
       Returns the `Class.GlobalSettings` object, which can be used to access
       settings objects that configure Roblox Studio's behavior.
-    description: |-
+    description: |
       Returns the `Class.GlobalSettings` object, which can be used to access the
       settings objects that are used in Roblox Studio's settings menu.
     parameters: []
@@ -205,10 +207,10 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: spawn
-    summary: |-
+    summary: |
       Calls a function immediately through the engine scheduler, with
       throttling.
-    description: |-
+    description: |
       Runs the specified callback function in a separate thread, without
       yielding the current thread.
 
@@ -231,19 +233,21 @@ functions:
       - name: callback
         type: function
         default:
-        summary: The function that will be executed.
+        summary: |
+          The function that will be executed.
     returns:
       - type: ()
         summary: ''
     tags:
       - Deprecated
     code_samples: []
-    deprecation_message: |-
+    deprecation_message: |
       This method has been superseded by `Library.task.spawn()` and should not
       be used for future work.
   - name: stats
-    summary: Returns the Stats service.
-    description: |-
+    summary: |
+      Returns the Stats service.
+    description: |
       Returns the `Class.Stats` service. It is preferred that developers use
       `Class.ServiceProvider:GetService()` to retrieve it instead.
     parameters: []
@@ -255,10 +259,10 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: tick
-    summary: |-
+    summary: |
       Returns the amount of time in seconds since the Unix epoch according to
       this device's time.
-    description: |-
+    description: |
       Returns how much time has elapsed, in seconds, since the Unix epoch, on
       the current local session's computer. The Unix epoch is represented by
       00:00:00 on 1 January 1970.
@@ -277,10 +281,10 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: time
-    summary: |-
+    summary: |
       Returns the amount of time in seconds that has elapsed since the current
       game instance started running.
-    description: |-
+    description: |
       Returns the amount of time, in seconds, that has elapsed since the current
       game instance started running. If the current game instance is not
       running, this will be `0`.
@@ -295,10 +299,10 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: typeof
-    summary: |-
+    summary: |
       Returns the type of the given object as a string, also supporting
       Roblox-specific types (e.g. Vector3).
-    description: |-
+    description: |
       Returns the type of the object specified, as a string. This function is
       more accurate than Luau's native `type` function, as it does not denote
       Roblox-specific types as `userdata`.
@@ -306,7 +310,8 @@ functions:
       - name: object
         type: Variant
         default:
-        summary: The Luau type that will have its type checked.
+        summary: |
+          The Luau type that will have its type checked.
     returns:
       - type: string
         summary: ''
@@ -314,10 +319,10 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: UserSettings
-    summary: |-
+    summary: |
       Returns the UserSettings object, which is used to read information from
       the current user's game menu settings.
-    description: |-
+    description: |
       Returns the `Class.UserSettings` object, which is used to read information
       from the current user's game menu settings.
     parameters: []
@@ -328,10 +333,10 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: version
-    summary: |-
+    summary: |
       Returns the current version of Roblox as a string, which includes the
       generation, version, patch and commit.
-    description: |-
+    description: |
       Returns the current version of Roblox as a string. The integers in the
       version string are separated by periods, and each integers represent the
       following, in order:
@@ -350,10 +355,10 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: wait
-    summary: |-
+    summary: |
       Yields the current thread until the specified amount of time in seconds
       have elapsed, with throttling.
-    description: |-
+    description: |
       Yields the current thread until the specified amount of seconds have
       elapsed.
 
@@ -368,7 +373,8 @@ functions:
       - name: seconds
         type: number
         default: 0.03
-        summary: Specifies how long the thread should yield for.
+        summary: |
+          Specifies how long the thread should yield for.
     returns:
       - type: number
         summary: ''
@@ -377,14 +383,14 @@ functions:
     tags:
       - Deprecated
     code_samples: []
-    deprecation_message: |-
+    deprecation_message: |
       This method has been superseded by `Library.task.wait()` and should not be
       used for future work.
   - name: warn
-    summary: |-
+    summary: |
       Behaves similarly to print, except with more distinct formatting (yellow);
       intended for messages which describe potential problems.
-    description: |-
+    description: |
       Behaves identically to Luau's print function, except the output is styled
       as a warning, with yellow text and a timestamp. This function accepts any
       number of arguments, and will attempt to convert them into strings which
@@ -393,7 +399,7 @@ functions:
       - name: params
         type: Tuple
         default:
-        summary: |-
+        summary: |
           This function accepts any number of arguments, and will attempt to
           convert them into strings which will then be joined together with
           spaces between them.
@@ -404,10 +410,10 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: ypcall
-    summary: |-
+    summary: |
       Legacy function to work around an old task scheduling limitation of
       `Global.LuaGlobals.pcall()`.
-    description: |-
+    description: |
       Legacy function to work around an old task scheduling limitation of
       `Global.LuaGlobals.pcall()`; should not be used for new work (use
       `Global.LuaGlobals.pcall()` instead).
@@ -415,7 +421,8 @@ functions:
       - name: f
         type: function
         default:
-        summary: The function to be called in protected mode.
+        summary: |
+          The function to be called in protected mode.
       - name: args
         type: Tuple
         default:

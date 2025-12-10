@@ -5,12 +5,12 @@
 name: Sound
 type: class
 memory_category: Internal
-summary: |-
+summary: |
   An object that emits sound. This object can be placed within a
   `Class.BasePart` or `Class.Attachment` to emit a sound from a particular
   position within a place or world, or it can be attached elsewhere to play the
   sound at a constant volume throughout the entire place.
-description: |-
+description: |
   `Class.Sound` is an object that emits sound. When placed in a `Class.BasePart`
   or an `Class.Attachment`, this object will emit its sound from that part's
   `Class.BasePart.Position` or the attachment's
@@ -70,11 +70,11 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.EmitterSize
-    summary: |-
+    summary: |
       The minimum distance, in studs, at which a 3D `Class.Sound` (direct child
       of a `Class.BasePart` or `Class.Attachment`) will begin to attenuate
       (decrease in volume).
-    description: |-
+    description: |
       The minimum distance, in studs, at which a 3D `Class.Sound` (direct child
       of a `Class.BasePart` or `Class.Attachment`) will begin to attenuate
       (decrease in volume).
@@ -82,20 +82,21 @@ properties:
       Sounds parented to a `Class.BasePart` or `Class.Attachment` that are
       descendants of the `Class.Workspace` are considered 3D sounds and their
       volume while playing is dependent on the distance between the client's
-      sound listener (`Class.Camera` position by default) and the sound's
-      parent. Two properties influence this behavior `EmitterSize` and
-      `Class.Sound.RollOffMode|RollOffMode`.
+      sound listener (`Class.Camera` position by default) and the Sound's
+      parent. Two properties influence this behavior EmitterSize and
+      `Class.Sound.RollOffMode`.
 
       The way the `Class.Sound` attenuates (fades out) after the distance
-      between the listener and the sound exceeds the `EmitterSize` is determined
-      by `Class.Sound.RollOffMode|RollOffMode`.
-    code_samples: []
+      between the listener and the sound exceeds the EmitterSize is determined
+      by RollOffMode.
+    code_samples:
+      - Sound-3D-Parent
     type: float
     tags:
       - Deprecated
-    deprecation_message: |-
-      This property has been deprecated in favor of `Class.Sound.RollOffMinDistance|RollOffMinDistance`
-      and `Class.Sound.RollOffMaxDistance|RollOffMaxDistance` which should be used instead in new
+    deprecation_message: |
+      This property has deprecated in favor of `Class.Sound.RollOffMinDistance`
+      and `Class.Sound.RollOffMaxDistance` which should be used instead in new
       work.
     security:
       read: None
@@ -108,10 +109,10 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.IsLoaded
-    summary: |-
+    summary: |
       This property is `true` when the `Class.Sound` has loaded from Roblox
       servers and is ready to play.
-    description: |-
+    description: |
       This property is `true` when the `Class.Sound` has loaded from Roblox
       servers and is ready to play. You can use this property and the
       `Class.Sound.Loaded|Loaded` event to verify a sound has loaded before
@@ -151,16 +152,16 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.IsPaused
-    summary: |-
+    summary: |
       Read-only property which returns `true` when the `Class.Sound` is not
       playing.
-    description: |-
+    description: |
       This read-only property returns `true` when the `Class.Sound` is not
       playing. Note that it can return `true` if a sound has been paused using
       `Class.Sound:Pause()|Pause()`, if it has been stopped using
       `Class.Sound:Stop()|Stop()`, or the sound has never been played.
 
-      As `IsPaused` is read-only, it cannot be used to stop
+      As `Class.Sound.IsPaused|IsPaused` is read-only, it cannot be used to stop
       the sound; `Class.Sound:Stop()|Stop()` or `Class.Sound:Pause()|Pause()`
       should be used instead.
     code_samples:
@@ -182,11 +183,12 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.IsPlaying
-    summary: Read-only property which returns `true` when the `Class.Sound` is playing.
-    description: |-
+    summary: |
+      Read-only property which returns `true` when the `Class.Sound` is playing.
+    description: |
       This read-only property returns true when the `Class.Sound` is playing.
 
-      As `IsPlaying` is read-only, it cannot be used to
+      As `Class.Sound.IsPlaying|IsPlaying` is read-only, it cannot be used to
       play the sound; `Class.Sound:Play()|Play()` should be used instead.
     code_samples:
       - Sound-IsPlaying-IsPaused
@@ -215,7 +217,7 @@ properties:
       - ReadOnly
       - NotReplicated
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This deprecated property is a variant of `Class.Sound.IsPlaying` which
       should be used instead.
     security:
@@ -229,10 +231,10 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.Looped
-    summary: |-
+    summary: |
       Sets whether or not the `Class.Sound` repeats once it has finished
       playing.
-    description: |-
+    description: |
       This sets whether or not the `Class.Sound` repeats once it has finished
       playing. Looped sounds are suitable for a range of applications including
       music and background ambient sounds.
@@ -255,10 +257,10 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.LoopRegion
-    summary: |-
+    summary: |
       A range denoting a desired loop start and loop end within the
       `Class.Sound.PlaybackRegion|PlaybackRegion`, in seconds.
-    description: |-
+    description: |
       A range denoting a desired loop start and loop end within the
       `Class.Sound.PlaybackRegion|PlaybackRegion`, in seconds.
 
@@ -296,19 +298,38 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.MaxDistance
-    summary: |-
+    summary: |
       The maximum distance, in studs, a client's listener can be from the
-      sound's origin and still hear it. Only applies to sounds
-      parented to a `Class.BasePart` or `Class.Attachment` (3D sounds).
-    description: |-
+      `Class.Sound|Sound\s` origin and still hear it. Only applies to Sounds
+      parented to a `Class.Part` or `Class.Attachment` (3D sounds).
+    description: |
       The maximum distance, in studs, a client's listener can be from the
-      sound's origin and still hear it. Only applies to sounds parented to
-      a `Class.BasePart` or `Class.Attachment` (3D sounds).
-    code_samples: []
+      `Class.Sound` origin and still hear it. Only applies to Sounds parented to
+      a `Class.Part` or `Class.Attachment` (3D sounds).
+
+      How MaxDistance impacts the attenuation of a sound (manner in which it
+      fades out) is dependent on the `Class.Sound.RollOffMode` property. When
+      RollOffMode is set to use an inverse type distance model (Inverse or
+      InverseTapered) the MaxDistance will not effect the attenuation of the
+      sound. This means that low values for MaxDistance will cause the sound to
+      abruptly cut off when the listener reaches the MaxDistance. In most cases
+      this is not desirable and developers are advised not to use low
+      MaxDistance values.
+
+      When RollOffMode is set to a linear type distance model (Linear or
+      LinearSquared) the sound will attenuate between `Class.Sound.EmitterSize`
+      and MaxDistance (with playback volume reaching zero at MaxDistance). This
+      is less realistic, but in some cases allows attenuation to be handled in a
+      more intuitive way.
+    code_samples:
+      - Sound-MaxDistance
     type: float
     tags:
       - Deprecated
-    deprecation_message: This property has been deprecated in favor of `Class.Sound.RollOffMaxDistance|RollOffMaxDistance` which should be used instead in new work.
+    deprecation_message: |
+      This property has deprecated in favor of `Class.Sound.RollOffMinDistance`
+      and `Class.Sound.RollOffMaxDistance` which should be used instead in new
+      work.
     security:
       read: None
       write: None
@@ -320,10 +341,11 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.MinDistance
-    summary: |-
-      The minimum distance, in studs, at which a 3D `Class.Sound` (direct child of a
-      `Class.BasePart` or `Class.Attachment`) will begin to attenuate. Effectively, the emitter size.
-    description: |-
+    summary: |
+      The minimum distance at which a 3D `Class.Sound` (direct child of a
+      `Class.BasePart` or `Class.Attachment`) will begin to attenuate.
+      Effectively, the emitter size.
+    description: |
       The minimum distance at which a 3D `Class.Sound` (direct child of a
       `Class.BasePart` or `Class.Attachment`) will begin to attenuate.
       Effectively, the emitter size.
@@ -331,7 +353,9 @@ properties:
     type: float
     tags:
       - Deprecated
-    deprecation_message: This property has been deprecated in favor of `Class.Sound.RollOffMinDistance|RollOffMinDistance` which should be used instead in new work.
+    deprecation_message: |
+      MinDistance has been superseded by `Class.Sound.EmitterSize`, whose name
+      better describes this properties behavior.
     security:
       read: None
       write: None
@@ -343,17 +367,19 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.Pitch
-    summary: |-
+    summary: |
       Sets how high pitched and fast a `Class.Sound` is when it is played. The
       greater the integer, the higher and faster the `Class.Sound` is.
-    description: |-
+    description: |
       Sets how high pitched and fast a `Class.Sound` is when it is played. The
       greater the integer, the higher and faster the sound is.
     code_samples: []
     type: float
     tags:
       - Deprecated
-    deprecation_message: This property has been deprecated in favor of `Class.Sound.PlaybackSpeed|PlaybackSpeed` whose name suits the behavior better.
+    deprecation_message: |
+      This property has been deprecated in favor of `Class.Sound.PlaybackSpeed`
+      whose name suits the behavior better.
     security:
       read: None
       write: None
@@ -365,10 +391,10 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.PlaybackLoudness
-    summary: |-
+    summary: |
       A number between `0` and `1000` indicating how loud the `Class.Sound` is
       currently playing back.
-    description: |-
+    description: |
       A number between `0` and `1000` indicating how loud the `Class.Sound` is
       currently playing back. This property reflects the amplitude of the
       sound's playback in the instance of time it is read.
@@ -390,10 +416,10 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.PlaybackRegion
-    summary: |-
+    summary: |
       A range denoting a desired start and stop time within the
       `Class.Sound.TimeLength|TimeLength`, in seconds.
-    description: |-
+    description: |
       A range denoting a desired start and stop time within the
       `Class.Sound.TimeLength|TimeLength`, in seconds.
 
@@ -428,15 +454,15 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.PlaybackRegionsEnabled
-    summary: |-
+    summary: |
       If `true`, this property gives your `Class.Sound` access to the
       `Class.Sound.PlaybackRegion|PlaybackRegion` and
-      `Class.Sound.LoopRegion|LoopRegion` properties which can more accurately
+      `Class.Sound.LoopRegion|LoopRegion` properties which can more-accurately
       control its playback.
-    description: |-
+    description: |
       If `true`, this property gives your `Class.Sound` access to the
       `Class.Sound.PlaybackRegion|PlaybackRegion` and
-      `Class.Sound.LoopRegion|LoopRegion` properties which can more accurately
+      `Class.Sound.LoopRegion|LoopRegion` properties which can more-accurately
       control its playback.
     code_samples: []
     type: boolean
@@ -453,10 +479,10 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.PlaybackSpeed
-    summary: |-
+    summary: |
       Determines the speed at which a `Class.Sound` will play, with higher
       values causing the sound to play faster and at a higher pitch.
-    description: |-
+    description: |
       Determines the speed at which a `Class.Sound` will play, with higher
       values causing the sound to play faster and at a higher pitch.
     code_samples:
@@ -476,8 +502,9 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.Playing
-    summary: Indicates whether the `Class.Sound` is currently playing.
-    description: |-
+    summary: |
+      Indicates whether the `Class.Sound` is currently playing.
+    description: |
       Indicates whether the `Class.Sound` is currently playing. This can be
       toggled, and this property will always replicate.
 
@@ -511,10 +538,10 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.PlayOnRemove
-    summary: |-
+    summary: |
       When `true`, the `Class.Sound` will play when it is removed from the
       experience.
-    description: |-
+    description: |
       When `true`, the `Class.Sound` will play when it is removed from the
       experience by parenting the `Class.Sound` or one if its ancestors to
       `nil`. This means all of the following will cause the sound to play when
@@ -538,16 +565,16 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.RollOffMaxDistance
-    summary: |-
+    summary: |
       The maximum distance, in studs, a client's listener can be from the
       sound's origin and still hear it. Only applies to `Class.Sound|Sounds`
       parented to a `Class.BasePart` or `Class.Attachment`.
-    description: |-
+    description: |
       The maximum distance, in studs, a client's listener can be from the
       sound's origin and still hear it. Only applies to `Class.Sound|Sounds`
       parented to a `Class.BasePart` or `Class.Attachment`.
 
-      How `RollOffMaxDistance` impacts the
+      How `Class.Sound.RollOffMaxDistance|RollOffMaxDistance` impacts the
       attenuation of a sound (manner in which it fades out) is dependent on the
       `Class.Sound.RollOffMode|RollOffMode` property.
     code_samples: []
@@ -565,16 +592,16 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.RollOffMinDistance
-    summary: |-
+    summary: |
       The minimum distance, in studs, at which a `Class.Sound` which is parented
       to a `Class.BasePart` or `Class.Attachment` will begin to attenuate
       (decrease in volume).
-    description: |-
+    description: |
       The minimum distance, in studs, at which a `Class.Sound` which is parented
       to a `Class.BasePart` or `Class.Attachment` will begin to attenuate
       (decrease in volume).
 
-      How `RollOffMinDistance` impacts the
+      How `Class.Sound.RollOffMinDistance|RollOffMinDistance` impacts the
       attenuation of a sound (manner in which it fades out) is dependent on the
       `Class.Sound.RollOffMode|RollOffMode` property.
     code_samples: []
@@ -592,11 +619,11 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.RollOffMode
-    summary: |-
+    summary: |
       Controls how the volume of a `Class.Sound` which is parented to a
       `Class.BasePart` or `Class.Attachment` attenuates (fades out) as the
       distance between the listener and parent changes.
-    description: |-
+    description: |
       This property controls how the volume of a `Class.Sound` which is parented
       to a `Class.BasePart` or `Class.Attachment` attenuates (fades out) as the
       distance between the listener and parent changes.
@@ -617,8 +644,10 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.SoundGroup
-    summary: The `Class.SoundGroup` that is linked to this `Class.Sound`.
-    description: The `Class.SoundGroup` that is linked to this `Class.Sound`.
+    summary: |
+      The `Class.SoundGroup` that is linked to this `Class.Sound`.
+    description: |
+      The `Class.SoundGroup` that is linked to this `Class.Sound`.
     code_samples: []
     type: SoundGroup
     tags: []
@@ -634,8 +663,9 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.SoundId
-    summary: Content ID of the sound file to associate with the `Class.Sound`.
-    description: |-
+    summary: |
+      Content ID of the sound file to associate with the `Class.Sound`.
+    description: |
       This property is the content ID of the sound file to associate with the
       `Class.Sound`. See [Audio Assets](../../../audio/assets.md) for more
       information.
@@ -654,8 +684,9 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.TimeLength
-    summary: The length of the `Class.Sound` in seconds.
-    description: |-
+    summary: |
+      The length of the `Class.Sound` in seconds.
+    description: |
       The length of the `Class.Sound` in seconds. If the `Class.Sound` is not
       loaded, this value will be `0`.
 
@@ -680,10 +711,10 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.TimePosition
-    summary: |-
+    summary: |
       Progress of the `Class.Sound` in seconds. Can be changed to move the
       playback position of the `Class.Sound` both before and during playback.
-    description: |-
+    description: |
       This property reflects the progress of the `Class.Sound` in seconds. It
       can be changed to move the playback position of the sound both before and
       during playback.
@@ -695,8 +726,17 @@ properties:
       `Class.Sound.Looped|Looped`.
 
       Note that setting `Class.Sound.TimePosition|TimePosition` to a value
-      greater than `Class.Sound.TimeLength|TimeLength` in a `Class.Sound.Looped|Looped` track will cause it to wrap
-      around. For example, if the sound's `Class.Sound.TimeLength|TimeLength` is `10` and you set `Class.Sound.TimePosition|TimePosition` to `12`, playback will begin at 2 seconds in.
+      greater than the length in a looped track will not cause it to wrap
+      around. If that behavior is desired, consider the following code snippet:
+
+      ```
+      local newPosition = 1.5
+
+      if newPosition >= sound.TimeLength then
+      	newPosition = newPosition - sound.TimeLength
+      end
+      sound.TimePosition = newPosition
+      ```
     code_samples:
       - Sound-TimePosition
     type: double
@@ -714,8 +754,9 @@ properties:
     capabilities:
       - LegacySound
   - name: Sound.Volume
-    summary: The volume of the `Class.Sound`.
-    description: |-
+    summary: |
+      The volume of the `Class.Sound`.
+    description: |
       The volume of the `Class.Sound`. Can be set between `0` and `10` and
       defaults to `0.5`.
 
@@ -738,8 +779,9 @@ properties:
       - LegacySound
 methods:
   - name: Sound:Pause
-    summary: Pauses playback of the `Class.Sound` if it is playing.
-    description: |-
+    summary: |
+      Pauses playback of the `Class.Sound` if it is playing.
+    description: |
       This method pauses playback of the `Class.Sound` if it is playing, setting
       `Class.Sound.Playing|Playing` to `false`. Unlike
       `Class.Sound:Stop()|Stop()`, it does not reset
@@ -767,7 +809,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This deprecated function is a variant of `Class.Sound:Pause()` which
       should be used instead.
     security: None
@@ -775,8 +817,9 @@ methods:
     capabilities:
       - LegacySound
   - name: Sound:Play
-    summary: Plays the `Class.Sound`.
-    description: |-
+    summary: |
+      Plays the `Class.Sound`.
+    description: |
       This method plays the `Class.Sound` and sets
       `Class.Sound.TimePosition|TimePosition` to the last value set by a script
       (or `0` if it has not been set), then sets `Class.Sound.Playing|Playing`
@@ -803,7 +846,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This deprecated function is a variant of `Class.Sound:Play()` which should
       be used instead.
     security: None
@@ -811,8 +854,9 @@ methods:
     capabilities:
       - LegacySound
   - name: Sound:Resume
-    summary: Resumes the `Class.Sound`.
-    description: |-
+    summary: |
+      Resumes the `Class.Sound`.
+    description: |
       This method resumes the `Class.Sound` and sets
       `Class.Sound.Playing|Playing` to `true`. Does not alter
       `Class.Sound.TimePosition|TimePosition` and thus can be used to resume
@@ -830,8 +874,9 @@ methods:
     capabilities:
       - LegacySound
   - name: Sound:Stop
-    summary: Stops the `Class.Sound`.
-    description: |-
+    summary: |
+      Stops the `Class.Sound`.
+    description: |
       This method stops the `Class.Sound` and sets `Class.Sound.Playing|Playing`
       to `false`, then sets `Class.Sound.TimePosition|TimePosition` to `0`.
     code_samples:
@@ -856,7 +901,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This deprecated function is a variant of `Class.Sound:Stop()` which should
       be used instead.
     security: None
@@ -865,8 +910,9 @@ methods:
       - LegacySound
 events:
   - name: Sound.DidLoop
-    summary: Fires whenever the `Class.Sound` loops.
-    description: |-
+    summary: |
+      Fires whenever the `Class.Sound` loops.
+    description: |
       Fires whenever the `Class.Sound` loops. Returns `soundId` and
       `numOfTimesLooped`, giving the content ID of the sound and the number of
       times looped respectively.
@@ -880,19 +926,22 @@ events:
       - name: soundId
         type: string
         default:
-        summary: The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that looped.
+        summary: |
+          The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that looped.
       - name: numOfTimesLooped
         type: int
         default:
-        summary: The number of times the `Class.Sound` has looped.
+        summary: |
+          The number of times the `Class.Sound` has looped.
     tags: []
     deprecation_message: ''
     security: None
     capabilities:
       - LegacySound
   - name: Sound.Ended
-    summary: Fires when the `Class.Sound` has completed playback and stopped.
-    description: |-
+    summary: |
+      Fires when the `Class.Sound` has completed playback and stopped.
+    description: |
       Fires when the `Class.Sound` has completed playback and stopped. This
       event is often used to destroy a sound when it has completed playback:
 
@@ -912,15 +961,17 @@ events:
       - name: soundId
         type: string
         default:
-        summary: The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that has ended.
+        summary: |
+          The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that has ended.
     tags: []
     deprecation_message: ''
     security: None
     capabilities:
       - LegacySound
   - name: Sound.Loaded
-    summary: Fires when the `Class.Sound` is loaded.
-    description: |-
+    summary: |
+      Fires when the `Class.Sound` is loaded.
+    description: |
       Fires when the `Class.Sound` is loaded.
 
       As this event only fires at the time the sound is loaded, it's recommended
@@ -932,17 +983,18 @@ events:
       - name: soundId
         type: string
         default:
-        summary: The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that loaded.
+        summary: |
+          The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that loaded.
     tags: []
     deprecation_message: ''
     security: None
     capabilities:
       - LegacySound
   - name: Sound.Paused
-    summary: |-
+    summary: |
       Fires whenever the `Class.Sound` is paused using
       `Class.Sound:Pause()|Pause()`.
-    description: |-
+    description: |
       Fires whenever the `Class.Sound` is paused using
       `Class.Sound:Pause()|Pause()`.
     code_samples:
@@ -951,7 +1003,7 @@ events:
       - name: soundId
         type: string
         default:
-        summary: |-
+        summary: |
           The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that was
           paused.
     tags: []
@@ -960,10 +1012,10 @@ events:
     capabilities:
       - LegacySound
   - name: Sound.Played
-    summary: |-
+    summary: |
       Fires whenever the `Class.Sound` is played using
       `Class.Sound:Play()|Play()`.
-    description: |-
+    description: |
       Fires whenever the `Class.Sound` is played using
       `Class.Sound:Play()|Play()`. This event will **not** fire if the
       `Class.Sound` is played due to `Class.Sound.PlayOnRemove|PlayOnRemove`
@@ -974,7 +1026,7 @@ events:
       - name: soundId
         type: string
         default:
-        summary: |-
+        summary: |
           The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that was
           played.
     tags: []
@@ -983,10 +1035,10 @@ events:
     capabilities:
       - LegacySound
   - name: Sound.Resumed
-    summary: |-
+    summary: |
       Fires when the `Class.Sound` is resumed using
       `Class.Sound:Resume()|Resume()`.
-    description: |-
+    description: |
       Fires when the `Class.Sound` is resumed using
       `Class.Sound:Resume()|Resume()`.
     code_samples:
@@ -995,17 +1047,18 @@ events:
       - name: soundId
         type: string
         default:
-        summary: The `Class.Sound.SoundId|SoundId` of the `Class.Sound` being resumed.
+        summary: |
+          The `Class.Sound.SoundId|SoundId` of the `Class.Sound` being resumed.
     tags: []
     deprecation_message: ''
     security: None
     capabilities:
       - LegacySound
   - name: Sound.Stopped
-    summary: |-
+    summary: |
       Fires when the `Class.Sound` is stopped through using
       `Class.Sound:Stop()|Stop()`.
-    description: |-
+    description: |
       Fires when the `Class.Sound` is stopped through using
       `Class.Sound:Stop()|Stop()`. Destroying a sound while it is playing will
       not cause this event to fire.
@@ -1015,7 +1068,8 @@ events:
       - name: soundId
         type: string
         default:
-        summary: The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that stopped.
+        summary: |
+          The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that stopped.
     tags: []
     deprecation_message: ''
     security: None
