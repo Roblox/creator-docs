@@ -26,7 +26,7 @@ To create an event, you must have the [Edit all group experiences](../../project
 
 1. Select an event **category** that most accurately describes your event. The category may be shown alongside your event thumbnail in certain places on Roblox.
 
-1. Enter the event title, subtitle, and description. The description is optional but it can help provide additional information about the details of your event. If you supply a description, it should follow general [best practices](../../production/publishing/publish-experiences-and-places.md#metadata-best-practices) and accurately portray the event, including:
+1. Enter the event title, subtitle, and description. The description is optional but it can help provide additional information about the details of your event. If you supply a description, it should follow general [best practices](../../production/publishing/publish-experiences-and-places.md#publish-experiences) and accurately portray the event, including:
 
    - A summary of the event and how it relates to the overall experience. If you're using the event to promote a major experience update, summarize the key updates.
 

@@ -33,7 +33,7 @@ If you previously set the maximum number of players in a place to more than 50, 
 1. In the **Max Players** field, enter any number less than or equal to 50.
 1. Click the **Save** button and then [publish](../production/publishing/publish-experiences-and-places.md) to save the changes.
 
-When you update the maximum number of players in a place to fewer than 50, there may be servers already configured to a different, higher number. Since those servers won't support Voice Chat, it's recommended to [restart servers](../production/publishing/publish-experiences-and-places.md#restart-servers).
+When you update the maximum number of players in a place to fewer than 50, there may be servers already configured to a different, higher number. Since those servers won't support Voice Chat, it's recommended to [restart servers](../projects/update-experiences.md#restart-servers).
 
 ### Customize voice behavior
 
@@ -165,7 +165,7 @@ To disable Voice Chat for a specific place within an experience:
    <img src="../assets/studio/explorer/VoiceChatService.png" width="320" alt="VoiceChatService in Explorer hierarchy" />
 
 3. With `Class.VoiceChatService` selected, disable `Class.VoiceChatService.EnableDefaultVoice|EnableDefaultVoice` in the **Properties** window.
-4. Publish the place to save the changes and [restart servers](../production/publishing/publish-experiences-and-places.md#restart-servers) to ensure the change takes effect for all servers currently running your experience.
+4. Publish the place to save the changes and [restart servers](../projects/update-experiences.md#restart-servers) to ensure the change takes effect for all servers currently running your experience.
 
 ## Check status
 

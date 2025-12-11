@@ -109,7 +109,7 @@ Quick actions are accessible by right-clicking an asset name/tile and selecting 
   </tr>
   <tr>
     <td>**Remove From Game**</td>
-    <td>Completely removes the place from the experience. Not applicable to the [starting place](../../production/publishing/publish-experiences-and-places.md#change-the-start-place).</td>
+    <td>Completely removes the place from the experience. Not applicable to the [starting place](../../production/publishing/publish-experiences-and-places.md#change-start-place).</td>
   </tr>
 </tbody>
 </table>
@@ -473,7 +473,7 @@ Quick actions are accessible by right‑clicking an asset name/tile and selectin
   </tr>
 	<tr>
     <td>**Remove&nbsp;From Experience**</td>
-    <td>Completely removes the place from the experience. Not applicable to the [starting place](../../production/publishing/publish-experiences-and-places.md#start-place).</td>
+    <td>Completely removes the place from the experience. Not applicable to the [starting place](../../production/publishing/publish-experiences-and-places.md#change-start-place).</td>
   </tr>
 	<tr>
     <td>**Copy Asset ID**</td>

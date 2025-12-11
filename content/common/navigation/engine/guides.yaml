@@ -13,6 +13,13 @@ navigation:
         path: /projects/
       - title: Experiences and places
         path: /production/publishing/publish-experiences-and-places
+        section:
+          - title: Create and publish
+            path: /production/publishing/publish-experiences-and-places
+          - title: Configure
+            path: /projects/configure-experiences
+          - title: Release updates
+            path: /projects/update-experiences
       - title: Cross-platform development
         path: /projects/cross-platform
       - title: Architecture

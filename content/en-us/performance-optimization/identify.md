@@ -101,7 +101,7 @@ These numbers use powers of 2, so 1 GiB refers to 2^30 bytes and 1 MiB to 2^20 b
 
 For example, a server with 30 connected players has approximately 9.18 GiB of total memory. Servers gain memory when players connect, but **don't** lose it when players disconnect. If 10 players leave, the server still has 9.18 GiB of memory rather than shrinking to 8.2 GiB.
 
-When servers shut down (for example, when they are empty or as part of the [update process](../production/publishing/publish-experiences-and-places.md#update-experiences)), their replacements start with the base amount of memory and begin scaling up as players connect.
+When servers shut down (for example, when they are empty or as part of the [update process](../projects/update-experiences.md)), their replacements start with the base amount of memory and begin scaling up as players connect.
 
 ## Client memory
 

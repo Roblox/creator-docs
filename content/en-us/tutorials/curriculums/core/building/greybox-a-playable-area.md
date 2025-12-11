@@ -124,6 +124,10 @@ To insert a cylinder part for your first platform:
 
 1. Use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate your cylinder until it's a large, flat surface in the middle of your island. For more information on these tools, see [Transform parts](../../../../parts/index.md#transform-parts).
 
+   <Alert severity="success">
+   To manipulate individual parts, select them in the Explorer. If you select a part in the viewport, it selects the entire model.
+   </Alert>
+
    <img src="../../../../assets/studio/general/Toolbar-Transform-Tools.png" alt="Transform tools indicated in Studio's toolbar." width="800" />
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/First-Platform.jpg" alt="A large cylinder object partially sticking out of an island surrounded by water." width="80%" />

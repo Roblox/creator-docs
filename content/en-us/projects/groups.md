@@ -85,23 +85,23 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
    <tbody>
      <tr>
       <td width="40%">**Playtest all group experiences**</td>
-      <td>Members with this role can play all experiences owned by the group, whether they're private or public. Optionally available as a [per‑experience permission](../production/publishing/publish-experiences-and-places.md#configure-experiences).</td>
+      <td>Members with this role can play all experiences owned by the group, whether they're private or public. Optionally available as a [per‑experience permission](./configure-experiences.md).</td>
      </tr>
      <tr>
        <td>**Edit all group experiences**</td>
-       <td>Members with this role can edit all experiences and [assets](../projects/assets/index.md) owned by the group and use all features in the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Does not include editing an experience outside of a [collaborative](../projects/collaboration.md) session or saving a place from one experience into another experience. Optionally available as a [per‑experience permission](../production/publishing/publish-experiences-and-places.md#configure-experiences).</td>
+       <td>Members with this role can edit all experiences and [assets](../projects/assets/index.md) owned by the group and use all features in the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Does not include editing an experience outside of a [collaborative](../projects/collaboration.md) session or saving a place from one experience into another experience. Optionally available as a [per‑experience permission](./configure-experiences.md).</td>
      </tr>
      <tr>
        <td>**Edit and publish all group experiences**</td>
-       <td>Members with this role can both edit experiences, as above, and also publish experiences to Roblox. Optionally available as a [per‑experience permission](../production/publishing/publish-experiences-and-places.md#configure-experiences).</td>
+       <td>Members with this role can both edit experiences, as above, and also publish experiences to Roblox. Optionally available as a [per‑experience permission](./configure-experiences.md).</td>
      </tr>
      <tr>
        <td>**Monetize all group experiences**</td>
-       <td>Members with this role can manage monetization products such as [passes](../production/monetization/game-passes.md), [developer products](../production/monetization/developer-products.md), [subscriptions](../production/monetization/subscriptions.md), and more. Optionally available as a [per‑experience permission](../production/publishing/publish-experiences-and-places.md#configure-experiences).</td>
+       <td>Members with this role can manage monetization products such as [passes](../production/monetization/game-passes.md), [developer products](../production/monetization/developer-products.md), [subscriptions](../production/monetization/subscriptions.md), and more. Optionally available as a [per‑experience permission](./configure-experiences.md).</td>
      </tr>
      <tr>
        <td>**View all analytics for group experiences**</td>
-       <td>Members with this role can access the [analytics](../production/analytics/index.md) of all experiences owned by the group, even if they don't have edit access. Optionally available as a [per‑experience permission](../production/publishing/publish-experiences-and-places.md#configure-experiences).</td>
+       <td>Members with this role can access the [analytics](../production/analytics/index.md) of all experiences owned by the group, even if they don't have edit access. Optionally available as a [per‑experience permission](./configure-experiences.md).</td>
      </tr>
      <tr>
        <td>**Create and configure share links**</td>
@@ -117,7 +117,7 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
      </tr>
      <tr>
        <td>**List, create, update, and delete secrets for all group experiences**</td>
-       <td>Members with this role can see the list of [secrets](../cloud-services/secrets.md) and can create, update, and delete secrets for all experiences owned by the group. Optionally available as a [per‑experience permission](../production/publishing/publish-experiences-and-places.md#configure-experiences).</td>
+       <td>Members with this role can see the list of [secrets](../cloud-services/secrets.md) and can create, update, and delete secrets for all experiences owned by the group. Optionally available as a [per‑experience permission](./configure-experiences.md).</td>
      </tr>
    </tbody>
    </table>
@@ -211,15 +211,15 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
    <tbody>
      <tr>
       <td width="40%">**View data stores for all group experiences**</td>
-      <td>Members with this role can view data stores for all group experiences through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md), but they cannot delete data. Optionally available as a [per‑experience permission](../production/publishing/publish-experiences-and-places.md#configure-experiences).</td>
+      <td>Members with this role can view data stores for all group experiences through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md), but they cannot delete data. Optionally available as a [per‑experience permission](./configure-experiences.md).</td>
      </tr>
      <tr>
       <td>**Edit data stores for all group experiences**</td>
-      <td>Members with this role can delete specific keys within data stores for all group experiences through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Optionally available as a [per‑experience permission](../production/publishing/publish-experiences-and-places.md#configure-experiences).</td>
+      <td>Members with this role can delete specific keys within data stores for all group experiences through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Optionally available as a [per‑experience permission](./configure-experiences.md).</td>
      </tr>
      <tr>
       <td>**Delete data stores for all group experiences**</td>
-      <td>Members with this role can delete entire data stores for all group experiences through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Optionally available as a [per‑experience permission](../production/publishing/publish-experiences-and-places.md#configure-experiences).</td>
+      <td>Members with this role can delete entire data stores for all group experiences through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Optionally available as a [per‑experience permission](./configure-experiences.md).</td>
      </tr>
    </tbody>
    </table>
@@ -363,8 +363,8 @@ Group members with the **View group activity history** permission can view detai
 
 ## Intellectual property protection
 
-Group members with permission to edit all group experiences can enable the [Place Copying](../production/publishing/publish-experiences-and-places.md#allow-copying) setting for a creation, potentially allowing the entire Roblox community to copy it and use assets within it. To help protect intellectual property in a group, the owner or members with sufficient permissions should:
+Group members with permission to edit all group experiences can enable the [Place Copying](./configure-experiences.md#allow-copying) setting for a creation, potentially allowing the entire Roblox community to copy it and use assets within it. To help protect intellectual property in a group, the owner or members with sufficient permissions should:
 
 - Confirm that each member is [assigned the appropriate role](#manage-roles).
 - Check that each group role has the correct [permissions](#roles-and-permissions).
-- Confirm that the [place copying](../production/publishing/publish-experiences-and-places.md#allow-copying) setting is disabled before private assets are added.
+- Confirm that the [Place Copying](./configure-experiences.md#allow-copying) setting is disabled before private assets are added.

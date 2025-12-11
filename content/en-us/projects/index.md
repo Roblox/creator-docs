@@ -7,7 +7,9 @@ A Roblox project is a collection of [places](#places), [assets](#assets), [setti
 
 ## Places
 
-Experiences on Roblox are made up of individual **places**, comparable to scenes in Unity or maps in Unreal Engine. Each place contains all components for that portion of the experience, including its specific environment, parts, meshes, scripts, and user interface. See [Experiences and places](../production/publishing/publish-experiences-and-places.md) for details on creating and managing experiences.
+Experiences on Roblox are made up of individual **places**, comparable to scenes in Unity or maps in Unreal Engine. Each place contains all components for that portion of the experience, including its specific environment, parts, meshes, scripts, and user interface.
+
+See the pages for [creating and publishing](../production/publishing/publish-experiences-and-places.md), [configuring](./configure-experiences.md), and [updating](./update-experiences.md) experiences and places for details.
 
 <figure>
 <img src="../assets/publishing/experiences-places-assets/Experience-Hierarchy.png" alt="An experience grouping of three individual places with unique environments." width="800" />
@@ -57,7 +59,7 @@ Experience settings are managed from the [Creator Dashboard](https://create.robl
 
 - **Basic Info** &mdash; Basic information about the experience, such as its name, description, and genre. Much of the information here is used in your experience's listing.
 - **Communication** &mdash; Settings which enable eligible users to use [voice chat](../chat/voice-chat.md) or animate their avatar via their camera within your experience.
-- **Permissions** &mdash; Configures who can access your experience. New experiences begin as **private** and can only be edited and joined by you and members of your [group](../projects/groups.md) with the correct permissions. When appropriate, you can [release](../production/publishing/publish-experiences-and-places.md#release-to-the-public) the experience to the public.
+- **Permissions** &mdash; Configures who can access your experience. New experiences begin as **private** and can only be edited and joined by you and members of your [group](../projects/groups.md) with the correct permissions. When appropriate, you can [release](../production/publishing/publish-experiences-and-places.md#make-experience-public) the experience to the public.
 - **Monetization** &mdash; Options for earning revenue from your experience, as outlined in [Monetization](../production/monetization/index.md).
 - **Localization** &mdash; Configuration for different [languages and regions](../production/localization/index.md).
 - **Avatar** &mdash; Settings related to avatars, such as avatar scaling and

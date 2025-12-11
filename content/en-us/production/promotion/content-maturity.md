@@ -358,7 +358,7 @@ Strong language is vulgar and obscene language that is not used to harass, discr
 If your experience includes strong language, you must disclose it within the Maturity & Compliance Questionnaire. Experiences that include strong language are only available to age-verified players that are at least 18 years old.
 
 <Alert severity="info">
-   If you want to enable strong language in player communication aside from content for your experiences with Restricted content maturity labels, see [Publish experiences and places](../../production/publishing/publish-experiences-and-places.md#creator-dashboard).
+   If you want to enable strong language in player communication aside from content for your experiences with **Restricted** content maturity labels, see [here](../../projects/configure-experiences.md#allow-strong-language).
 </Alert>
 
 ### Romantic themes

@@ -90,7 +90,7 @@ To upload your asset:
    </figure>
    </GridContainer>
 
-5. Once validation completes successfully, an item description dialog displays. Fill out the following fields and follow [metadata best practices](../production/publishing/publish-experiences-and-places.md#metadata-best-practices) when possible.
+5. Once validation completes successfully, an item description dialog displays. Fill out the following fields and follow [metadata best practices](../production/publishing/publish-experiences-and-places.md#publish-experiences) when possible.
 
    - **Title**: The name of your asset in the Marketplace.
    - **Description**: This description of your asset in the Marketplace.
@@ -145,7 +145,7 @@ Before publishing your asset, it's important to consider if you want to sell you
 
 ### Metadata
 
-You can adjust the metadata for any of your creations at any time. Keep in mind that the metadata, such as the title and description, should follow [general best practices](../production/publishing/publish-experiences-and-places.md#metadata-best-practices) to avoid moderation and improve discoverability.
+You can adjust the metadata for any of your creations at any time. Keep in mind that the metadata, such as the title and description, should follow [general best practices](../production/publishing/publish-experiences-and-places.md#publish-experiences) to avoid moderation and improve discoverability.
 
 <img src="../assets/publishing/marketplace/Manage-Item-Page.png" alt="Manage Item page with example asset." width="80%" />
 
