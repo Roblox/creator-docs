@@ -45,7 +45,7 @@ When Studio opens up the template, you now have `Place1` that represents your ov
 
 When you publish an experience, Roblox stores the data model of your start place as a `.rblx` file in the cloud. This is an important process because it connects the experience to your account, allowing you to access and work on it from any computer.
 
-By default, new experiences are set to **private**, meaning that they are only accessible to you as the creator, to users with **Edit** or **Playtest** access, and to group members with the appropriate [roles and permissions](../../projects/groups.md#roles-and-permissions). When you are ready to go live to everyone, you can [release your experience to the public](#make-experience-public).
+By default, new experiences are set to **private**, meaning that they are only accessible to you as the creator, to users with **Edit** or **Playtest** access, and to group members with the appropriate [roles and permissions](../../projects/groups.md#roles-and-permissions). When you are ready to go live to everyone, you can [release your experience to the public](#make-experience-public) and optionally mark it as a beta.
 
 <Alert severity="info">
 When creating and collaborating on experiences as part of a [group](../../projects/groups.md), the ability for group members to playtest/edit/publish experiences is, by default, dependent on their role permissions. However, group owners or members with sufficient permissions can adjust access on a per‑experience level. For more info, see [configure experiences](../../projects/configure-experiences.md).
@@ -169,19 +169,19 @@ To change the start place:
 ### Make experience public
 
 <Alert severity="warning">
-   **These requirements will go into effect on December 17, 2025.**
+**These requirements will go into effect on December 17, 2025.**
 
-   Before making a new experience public — or updating an existing public experience — you must meet **at least one** of the following requirements:
+Before making a new experience public—or updating an existing public experience—you must meet **at least one** of the following requirements:
 
-   - Have an account that is [ID-verified](./account-verification.md#verify-through-government-id) **OR**
-   - Have made a purchase using real currency or a gift card since January 1, 2025
+- Have an account that is [ID-verified](./account-verification.md#verify-through-government-id) **or**
+- Have made a purchase using real currency or a gift card since January 1, 2025
 
-   You must also complete the [content maturity & compliance](../promotion/content-maturity.md) questionnaire for this specific experience.
+You must also complete the [content maturity & compliance](../promotion/content-maturity.md) questionnaire for this specific experience.
 
-   These requirements apply to both **publishing a new experience** and **making updates to an existing public experience**, such as:
+These requirements apply to both **publishing a new experience** and **making updates to an existing public experience**, such as:
 
-   - Using **Publish to** or **Publish as** in Studio
-   - Publishing a new version of a place within an existing experience
+- Using **Publish to** or **Publish as** in Studio
+- Publishing a new version of a place within an existing experience
 </Alert>
 
 <Alert severity="info">
@@ -195,18 +195,24 @@ By default, new experiences are set to **private**, meaning that they are only a
 To update your experience's privacy settings:
 
 1. In the [Creator Dashboard][creatordashboard], select the experience you want to make public.
-2. Go to **Configure** ⟩ **Settings**.
-3. Under **Privacy**, select **Public**.
-4. Click **Save Changes**.
+1. Go to **Configure** ⟩ **Settings**.
+1. Under **Privacy**, select **Public**.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Choose **Enable Beta mode** to omit the experience from **Recommended For You** in the Roblox client. Beta experiences are still public, but have more limited reach and exposure.
+
+   <Alert severity="success">
+   To widen your audience while still remaining in beta, click **Create campaign** to set up a sponsored ad. To learn more, see [Ads Manager](../../production/promotion/ads-manager.md). If you enable sponsored ads, the experience analytics charts might show some users from **Recommended For You**.
+   </Alert>
+
+1. Click **Save Changes**.
 
 After you make your experience public, you can choose the scope of your audience:
 
 1. In the [Creator Dashboard][creatordashboard], select the experience you want to specify the audience for.
-2. Go to **Audience** ⟩ **Access Settings**.
-3. Under **Join**, select one of the following options: 
+1. Go to **Audience** ⟩ **Access Settings**.
+1. Under **Join**, select one of the following options:
    - **Public** — available to all users on Roblox.
    - **Connections** — available only to the experience owner's connections. This option only appears for non–group-owned experiences.
    - **Community members** — available only to group members. This option only appears for group-owned experiences.
-4. Click **Save Changes**.
+1. Click **Save Changes**.
 
 [creatordashboard]: https://create.roblox.com/dashboard/creations
