@@ -112,6 +112,8 @@ To keep your memory usage pattern optimal and avoid hitting the [limits](#limits
 
   It's often easier to manage data in smaller structures rather than storing everything in one large data structure. This approach can also help avoid usage and rate limits. For example, if you have a sorted map that uses prefixes for its keys, consider separating each prefix into its own sorted map. For an especially popular experience, you might even separate users into multiple maps based on the last digits of their user IDs.
 
+- [Shard](../../cloud-services/memory-stores/best-practices.md) frequently accessed keys in hash maps with multiple copies of the key to distribute load.
+
 - Compress stored values.
 
   For example, consider using the [LZW](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch) algorithm to reduce the stored value size.
@@ -260,6 +262,8 @@ The following table lists and describes the recommended solution for each respon
           <li>Follow the [best practices](#best-practices), including:</li>
             <ul>
               <li>Sharding your data structures if you receive a significant amount of **DataStructureRequestsOverLimit**/**PartitionRequestsOverLimit** responses.</li>
+              <li>Sharding your hash map keys if you receive a significant amount of **PartitionRequestsOverLimit** responses on hash map calls.</li>
+              <li>Reducing or batching calls to specific data structures or hash map keys if you see **PartitionRequestsOverLimit** responses.</li>
               <li>Implement an exponential backoff for finding a reasonable rate of requests to send.</li>
             </ul>
         </ul>

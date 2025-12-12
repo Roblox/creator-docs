@@ -48,7 +48,7 @@ Asset libraries are collections of assets you can place into a central location 
 
 Each of these 3D assets are either a single `Class.MeshPart` object, or a `Class.Model` object that stores multiple `Class.MeshPart` objects, and they use custom materials or physically-based rendering (PBR) textures that allow you to represent realistic shading and lighting. For more information on this process, see [Materials - Custom Materials](../../../../parts/materials.md#custom-materials) and [PBR Textures](../../../../art/modeling/surface-appearance.md).
 
-You can add the library to your inventory within Studio by clicking the **Add to Inventory** link in the following component. Once assets are within your inventory, you can reuse them in any project on the platform.
+**If you are logged in on Creator Hub**, you can add the library to your inventory within Studio by clicking the **Add to Inventory** link in the following component. You can then reuse these assets in any project on the platform.
 
 <BrowseSampleCard href='https://create.roblox.com/store/asset/14238769242' description='Create the completed version of the Core sample experience with these art assets. Includes six 3D assets and two custom materials.' title='Core Curriculum Library' assetId={14238769242}  />
 

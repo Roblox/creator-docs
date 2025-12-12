@@ -301,7 +301,7 @@ During a collaborative session, Studio automatically saves the project to the cl
 
 ## Revert to previous versions
 
-The owner of an experience can revert changes made by other editors. See [here](../production/publishing/publish-experiences-and-places.md#revert-to-previous-versions) for instructions.
+The owner of an experience can revert changes made by other editors. See [here](../projects/configure-experiences.md#access-version-history) for instructions.
 
 <Alert severity="error">
 Be careful when reverting changes. If anyone is currently editing the experience in a collaborative session, their changes may still auto‑save and overwrite the revert action. To ensure that nobody else is editing the place when you revert, [disable collaboration](#disable-collaboration).

@@ -5,7 +5,7 @@ description: Provides information on the moderation policy and process for Marke
 
 When uploading an asset to the Marketplace, the Moderation team reviews the item before you can sell the item. This process can take up to 24 hours. After approval, Roblox sets your item as "Ready To Sell" in the Creator Dashboard or within Studio.
 
-To ensure that your asset has the best chance of successfully clearing moderation, make sure your asset adheres to the [Marketplace Policy](../marketplace/marketplace-policy.md) and that the metadata, such as the title and description, follow [general best practices](../production/publishing/publish-experiences-and-places.md#metadata-best-practices).
+To ensure that your asset has the best chance of successfully clearing moderation, make sure your asset adheres to the [Marketplace Policy](../marketplace/marketplace-policy.md) and that the metadata, such as the title and description, follow [general best practices](../production/publishing/publish-experiences-and-places.md#publish-experiences).
 
 Moderations can happen after the item passes initial moderation. If Roblox removes an item with sales, Roblox refunds anyone who purchased the item and cancels any pending payments for that item.
 

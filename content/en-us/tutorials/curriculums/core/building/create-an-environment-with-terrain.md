@@ -106,9 +106,9 @@ To create the water around the island:
 
    <img src="../../../../assets/studio/terrain-editor/Edit-Tab-Fill.png" alt="Studio's Terrain Editor window with both the Edit tab and Fill button highlighted." width="360" />
 
-1. In the **Selection Settings** section,
-   1. Set **Position** to `0, -15, 0` to ensure the water fills below the top of the island.
+1. In the **Selection Settings** section:
    1. Set **Size** to `1800, 5, 1800` to ensure the water fills toward the horizon of your experience.
+   1. Set **Position** to `0, -15, 0` to ensure the water fills below the top of the island.
 1. In the **Material Settings** section, configure the tool with the following settings:
 
    <GridContainer numColumns="2">
@@ -122,7 +122,7 @@ To create the water around the island:
      </Grid>
    </GridContainer>
 
-1. Click the **Apply** button. Water generates around the island.
+1. Click the **Replace** button. Water generates around the island.
 
    <video controls loop muted>
    <source src="../../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Filling-Water.mp4" />

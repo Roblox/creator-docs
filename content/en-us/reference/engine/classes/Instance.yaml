@@ -576,6 +576,25 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
+  - name: Instance.PredictionMode
+    summary: ''
+    description: ''
+    code_samples: []
+    type: PredictionMode
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
   - name: Instance.RobloxLocked
     summary: |
       A deprecated property that used to protect `Class.CoreGui` objects.

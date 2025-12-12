@@ -47,7 +47,7 @@ One strategy to increase engagement-based payouts is to encourage [Premium](http
 
 Remember that Premium membership should not be a "requirement" to enjoy an experience. When implementing incentives for Premium members, it's highly recommended that you follow these best practices:
 
-- Honestly and accurately describe the benefits of upgrading within the experience's [description](../../production/publishing/publish-experiences-and-places.md#experience-description).
+- Honestly and accurately describe the benefits of upgrading within the experience's [description](../../production/publishing/publish-experiences-and-places.md#publish-experiences).
 - Do not promise Robux or other out-of-experience rewards that you don't control.
 - Do not show the modal as a "paywall" when non-Premium members enter the experience.
 - Consider offering exclusive merch to Premium members, but do not give them a tactical gameplay advantage over others, such as an array of ultra-powerful weapons that non-Premium members can't compete against.

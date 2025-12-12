@@ -21,6 +21,8 @@ Sharding is the process of storing a set of related data across multiple data st
 
 The key challenge to sharding is finding a way to spread the data across multiple data structures in a way that maintains the same functionality as the original.
 
+For hash maps, although the data structure is already partitioned, sharding is done by spreading the requests among several keys.
+
 ### Sharding a sorted map
 
 To shard a sorted map, consider splitting your data into alphabetic subsections with character ranges. For example, assume that you only have keys with the first letter from A-Z, and you believe four sorted maps is sufficient for your current use case and future growth:
@@ -166,3 +168,5 @@ Hash maps do not have individual memory or item count limits and are automatical
 For example, consider an experience with a hash map of game data, stored as the value of a single key named `metadata`. If this metadata contains a nested object with information such as place ID, player count, and more, every time the metadata is needed, you have no choice but to call `GetAsync("metadata")` and retrieve the entire object. In this case, all requests go to a single key and therefore a single partition.
 
 Rather than storing all metadata as a single, nested object, the better approach is to store each field as its own key so that the hash map can take advantage of automatic sharding. If you need separation between metadata and the rest of the hash map, add a naming prefix (e.g. `metadata_user_count` rather than just `user_count`).
+
+Additionally, if one or few keys is being accessed frequently, it's important to shard these calls among a lot of keys. For example, if all game servers must retrieve a value from one hash map key you may run into partition throttling. To prevent this you can spread those calls among several keys with the same value until partition throttling no longer occurs.

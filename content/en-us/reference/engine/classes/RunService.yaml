@@ -155,26 +155,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-  - name: RunService.FrameNumber
-    summary: ''
-    description: ''
-    code_samples: []
-    type: int64
-    tags:
-      - ReadOnly
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Server Authority
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities:
-      - Basic
-      - InternalTest
   - name: RunService.RunState
     summary: ''
     description: ''

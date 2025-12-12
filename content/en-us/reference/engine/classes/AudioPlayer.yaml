@@ -105,8 +105,16 @@ properties:
     capabilities:
       - Audio
   - name: AudioPlayer.AutoPlay
-    summary: ''
-    description: ''
+    summary: |
+      Denotes whether this `Class.AudioPlayer` starts playing as soon as it
+      spawns in for the first time.
+    description: |
+      Denotes whether this `Class.AudioPlayer` starts playing as soon as it
+      enters the `Class.DataModel` for the first time. This only applies to
+      `Class.AudioPlayer|AudioPlayers` that are created or deserialized locally,
+      and does not apply to `Class.AudioPlayer|AudioPlayers` generated via
+      replication. This property is primarily used at edit time in Studio to
+      have an `Class.AudioPlayer` begin when entering a play session.
     code_samples: []
     type: boolean
     tags: []

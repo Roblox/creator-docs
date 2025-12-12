@@ -13,6 +13,13 @@ navigation:
         path: /projects/
       - title: Experiences and places
         path: /production/publishing/publish-experiences-and-places
+        section:
+          - title: Create and publish
+            path: /production/publishing/publish-experiences-and-places
+          - title: Configure
+            path: /projects/configure-experiences
+          - title: Release updates
+            path: /projects/update-experiences
       - title: Cross-platform development
         path: /projects/cross-platform
       - title: Architecture
@@ -24,6 +31,13 @@ navigation:
             path: /projects/client-server
           - title: Instance streaming
             path: /workspace/streaming
+          - title: Server authority
+            path: /projects/server-authority/
+            section:
+              - title: Overview
+                path: /projects/server-authority/
+              - title: Advanced techniques
+                path: /projects/server-authority/techniques
       - title: Manage
         path: /projects/experience-ownership-transfer
         section:

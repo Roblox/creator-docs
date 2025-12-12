@@ -137,7 +137,7 @@ To launch the limited time test, we advise developers to advertise the event. De
 
 ### Open access beta
 
-If developers are confident their experience is playable by the general public, but may be lacking content, polish, and quality of life features, an open access beta is feasible. To launch an open beta, the experience is set to public, allowing any Roblox user to play. This program is then conducted for one to two months before launch.
+If developers are confident their experience is playable by the general public, but may be lacking content, polish, and quality of life features, an open access beta is feasible. To launch an open beta, set the experience to public, which allows any Roblox user to play. If you enable **Beta mode**, the experience doesn't show up under **Recommended For You**.
 
 Some recommendations for running an open access beta are below.
 
