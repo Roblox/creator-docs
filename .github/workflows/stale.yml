@@ -1,4 +1,4 @@
-name: 'Stale'
+run-name: 'Stale'
 on:
   schedule:
     # 8 is Midnight Pacific Standard Time
@@ -18,7 +18,12 @@ jobs:
           days-before-issue-stale: -1
           days-before-issue-close: -1
           # Pull Requests
-          stale-pr-message: >-
+       local AnalyticsService = game:GetService("AnalyticsService")
+
+AnalyticsService:LogCustomEvent(
+    player,
+    "MissionStarted" -- Event name
+)   stale-pr-message: >-
             This pull request has been inactive for 14 days. If there's no activity in the next 7 days, it will be automatically closed. To keep it open, please comment or push new commits. Alternatively, add the label `do-not-close` to exempt it from auto-closing. 🫡 🙏
           close-pr-message: >-
             This pull request has been inactive for 21 days and is now being closed automatically. If it's still relevant, feel free to reopen it or start a new one. To prevent this in the future, you can add the `do-not-close` label to exempt it from automatic closure. Thank you! 🫡 🙏
