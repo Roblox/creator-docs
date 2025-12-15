@@ -23,7 +23,7 @@ events:
   - name: NetworkClient.ConnectionAccepted
     summary: |
       Fired when the client successfully connects to a server. Returns a string
-      showing the server's IP and Port, and the client's
+      showing the server's IP and port, and the client's
       `Class.ClientReplicator`.
     description: |
       Fired when the client successfully connects to a server. Returns a string
@@ -34,11 +34,13 @@ events:
       - name: peer
         type: string
         default:
-        summary: ''
+        summary: |
+          The server's IP and port.
       - name: replicator
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The client's `Class.ClientReplicator`.
     tags: []
     deprecation_message: ''
     security: None
@@ -53,15 +55,13 @@ events:
       - name: peer
         type: string
         default:
-        summary: ''
+        summary: |
+          The server's IP and port.
       - name: code
         type: int
         default:
-        summary: ''
-      - name: reason
-        type: string
-        default:
-        summary: ''
+        summary: |
+          The error code representing why the client failed to connect.
     tags: []
     deprecation_message: ''
     security: None

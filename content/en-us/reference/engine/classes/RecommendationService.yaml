@@ -48,6 +48,12 @@ methods:
         that engages users for longer periods.
       - `MaximizeReactions`: Optimizes recommendations to highlight content that
         generates the most user reactions, such as likes and favorites.
+      - `MaximizePlays`: Optimizes recommendations to prioritize content that
+        generates the most `Play` actions. To use this configuration
+        effectively, you must log both impressions and `Play` actions. It's
+        recommended to filter for "quality" plays (for example play duration
+        greater than 60 seconds) before logging to reduce noise and improve the
+        system's learning accuracy.
       - `MaximizeEngagement`: Optimizes recommendations through a balanced
         approach that considers multiple engagement signals, including quality
         views and reactions. This config is designed to highlight content that
@@ -58,7 +64,9 @@ methods:
       - `RecentlyAdded`: Returns items sorted by how recent they are, and
         displays the most recently added public content first.
       - `MaximizeJoins`: (Coming soon) Optimizes recommendations to prioritize
-        game joins. This config is currently only available for Roblox Moments.
+        game joins. This configuration is currently exclusive to Roblox Moments
+        and focuses on maximizing interactions leading to a teleport. In
+        contrast, `MaximizePlays` is purely optimizing `Play` actions.
       - `PlayerOwnedItems`: Displays the user's own creations sorted by creation
         time. This config requires user authentication because it displays
         private items. This config is only available on the **client**.
@@ -271,6 +279,14 @@ methods:
       dictionary containing details about the item, such as its content type,
       reference ID, and custom tags. It returns a dictionary with the `ItemId`
       and the `ReferenceId` of the newly registered item.
+
+      When selecting a `ContentType`, choose the type that best represents your
+      item. Note that different content types are not ranked against each other
+      directly. Instead, they are mixed into the final recommendation list based
+      on a configured ratio. For example, a configuration might display one
+      `Static` item for every ten items. If your experience only features a
+      single type of content, ensure that all registered items share the same
+      `ContentType`.
 
       The `ItemId` is a unique ID returned by the `RecommendationService`. All
       functions in the `RecommendationService` use the `ItemId` as input and

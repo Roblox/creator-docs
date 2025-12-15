@@ -42,7 +42,8 @@ items:
     deprecation_message: ''
   - name: Play
     summary: |
-      The user joined an experience through the item.
+      The user joined an experience through the item, or played a mini-game
+      associated with the item.
     value: 5
     tags: []
     deprecation_message: ''

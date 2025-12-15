@@ -557,10 +557,11 @@ For more information on streaming options and their benefits, see [Streaming pro
 - **Asset duplication** - A common mistake is to upload the same asset multiple times resulting in different asset IDs. This can lead to the same content being loaded into memory multiple times.
 - **Excessive asset volume** - Even when assets are not identical, there are cases when opportunities to reuse the same asset and save memory are missed.
 - **Audio files** - Audio files can be a surprising contributor to memory usage, particularly if you load all of them into the client at once rather than only loading what you need for a portion of the experience. For strategies, see [Load times](#load-times).
-- **High resolution textures** - Graphics memory consumption for a texture is unrelated to the size of the texture on the disk, but rather the number of pixels in the texture.
-  - For example, a 1024x1024 pixel texture consumes four times the graphics memory of a 512x512 texture.
-  - Images uploaded to Roblox are transcoded to a fixed format, so there is no memory benefit to uploading images in a color model associated with fewer bytes per pixel. Similarly, compressing images prior to upload or removing the alpha channel from images that don't need it can decrease image size on disk, but either doesn't improve or only minimally improves memory usage. Although the engine automatically downscales texture resolution on some devices, the extent of the downscale depends on the device characteristics, and excessive texture resolution can still cause problems.
-  - You can identify the graphics memory consumption for a given texture by expanding the **GraphicsTexture** category in the **Developer Console**.
+- **High resolution textures** - Graphics memory consumption for a texture is unrelated to the size of the texture on the disk; the number of pixels in the texture determines memory usage. For example, a 1024x1024 pixel texture consumes four times the graphics memory of a 512x512 texture.
+
+  Images uploaded to Roblox are transcoded to a fixed format, so there is no memory benefit to uploading images in a color model associated with fewer bytes per pixel. Similarly, compressing images prior to upload or removing the alpha channel from images that don't need it can decrease image size on disk, but doesn't improve memory usage.
+
+  As an experience loads, the engine automatically starts with lower quality textures and then ramps up quality based on available device memory, distance from the camera, amount of screen-space that the texture takes up, and other factors. Even still, strategically sizing your textures can improve memory usage in your experience.
 
 ### Mitigation
 

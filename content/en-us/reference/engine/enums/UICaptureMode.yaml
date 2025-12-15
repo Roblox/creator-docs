@@ -4,19 +4,23 @@
 
 name: UICaptureMode
 type: enum
-summary: ''
+summary: |
+  Used to determine what UI elements should be captured with
+  `Class.CaptureService`.
 description: ''
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: All
-    summary: ''
+    summary: |
+      Capture all UI elements.
     value: 0
     tags: []
     deprecation_message: ''
   - name: None
-    summary: ''
+    summary: |
+      Capture no UI elements.
     value: 1
     tags: []
     deprecation_message: ''

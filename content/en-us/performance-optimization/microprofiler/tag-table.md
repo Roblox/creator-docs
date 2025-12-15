@@ -16,7 +16,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance Advice</th>
+    <th>Performance advice</th>
   </tr>
 </thead>
 <tbody>
@@ -47,7 +47,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance Advice</th>
+    <th>Performance advice</th>
   </tr>
 </thead>
 <tbody>
@@ -69,7 +69,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <td>Simulation/gameStepped/RunService.Stepped</td>
     <td>Runs functions connected to the `Class.RunService.Stepped` event.</td>
-    <td>Reduce the amount or workload of functions connected to this event. Consider delaying or replacing expensive calculations and/or consider spreading computation across multiple frames.</td>
+    <td>Reduce the amount or workload of functions connected to this event. Consider delaying or replacing expensive calculations or spreading computation across multiple frames.</td>
   </tr>
 </tbody>
 </table>
@@ -81,7 +81,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance Advice</th>
+    <th>Performance advice</th>
   </tr>
 </thead>
 <tbody>
@@ -105,7 +105,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance Advice</th>
+    <th>Performance advice</th>
   </tr>
 </thead>
 <tbody>
@@ -137,7 +137,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <td>Replicator SendCluster</td>
     <td>Sends [Terrain](../../parts/terrain.md) data to clients.</td>
-    <td>Reduce the amount or size of [Terrain](../../parts/terrain.md) changes.</td>
+    <td>Reduce the amount or size of terrain changes.</td>
   </tr>
   <tr>
     <td>ModelCompleteness Mega Job</td>
@@ -159,7 +159,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance notes</th>
+    <th>Performance advice</th>
   </tr>
 </thead>
 <tbody>
@@ -226,7 +226,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <td>Perform/Scene/computeLightingPerform/ShadowMapSystem</td>
     <td>Updates shadow maps. Not performed at quality levels below 4.</td>
-    <td>Reduce the number of lights. You can also use `Class.Light.Shadows` and `Class.BasePart.CastShadow` to disable shadow casting on less important instances. See [Improving Performance](../../performance-optimization/improve.md#mitigation-4).</td>
+    <td>Reduce the number of lights. You can also use `Class.Light.Shadows` and `Class.BasePart.CastShadow` to disable shadow casting on less important instances. See [Improve performance](../../performance-optimization/improve.md#mitigation-4).</td>
   </tr>
   <tr>
   </tr>
@@ -263,7 +263,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <td>Scene/Shadows</td>
     <td>Shadow recalculation in the scene, usually performed on dynamic scenes and typical gameplay. Parts regardless of transparency cast shadows under the assumption that they contain decals. Not performed at quality levels below 4.</td>
-    <td>If this step takes too long, consider disabling `Class.BasePart.CastShadow` for complex meshes, parts with high partial transparency, and less important instances. Fully transparent parts that don't have decals or need decal shadows should have `Class.BasePart.CastShadow` disabled. See [Improving Performance](../../performance-optimization/improve.md#mitigation-4).</td>
+    <td>If this step takes too long, consider disabling `Class.BasePart.CastShadow` for complex meshes, parts with high partial transparency, and less important instances. Fully transparent parts that don't have decals or need decal shadows should have `Class.BasePart.CastShadow` disabled. See [Improve performance](../../performance-optimization/improve.md#mitigation-4).</td>
   </tr>
   <tr>
     <td>Perform/Present</td>
@@ -290,7 +290,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance Advice</th>
+    <th>Performance advice</th>
   </tr>
 </thead>
 <tbody>
@@ -317,7 +317,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <td>Heartbeat/RunService.Heartbeat</td>
     <td>Runs functions connected to the `Class.RunService.Heartbeat` event.</td>
-    <td>Reduce the amount or workload of functions connected to this event. Consider delaying or replacing expensive calculations. Consider spreading computation across multiple frames.</td>
+    <td>Reduce the amount or workload of functions connected to this event. Consider delaying or replacing expensive calculations or spreading computation across multiple frames.</td>
   </tr>
 </tbody>
 </table>
@@ -329,7 +329,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance Advice</th>
+    <th>Performance advice</th>
   </tr>
 </thead>
 <tbody>
@@ -408,7 +408,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance Advice</th>
+    <th>Performance advice</th>
   </tr>
 </thead>
 <tbody>
