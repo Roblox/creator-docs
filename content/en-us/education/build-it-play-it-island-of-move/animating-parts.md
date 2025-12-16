@@ -247,7 +247,7 @@ partToScale.Touched:Connect(onPartTouch)
 
 Parts can transition colors by tweening with Color3 values. For instance, enemies or destructible objects can flash colors to give feedback that they've been hit or clicked.
 
-<video controls src="../../assets/education/build-it-play-it-island-of-move-intermediate/showScaleTween.mp4" width="100%"></video>
+<video controls src="../../assets/education/build-it-play-it-island-of-move-intermediate/showTweenColor.mp4" width="100%"></video>
 
 ```lua
 -- Tween an object's color upon click and destroy it after 3 clicks
