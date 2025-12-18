@@ -239,9 +239,9 @@ comes with a significant computation cost.
   enabled. Disable any that are not needed for your NPCs. For
   example, unless your NPC is going to climb ladders, it's safe to disable
   the `Enum.HumanoidStateType.Climbing|Climbing` state.
-- **Instantiating, modifying, and respawning models with Humanoids frequently**
-  - This can be intensive for the engine to process, particularly if these models use **Layered clothing**. This also can be particularly problematic in experiences where avatars respawn often.
-  - In the **MicroProfiler**, lengthy **updateInvalidatedFastClusters** tags
+- **Instantiating, modifying, and respawning models with `Class.Humanoid|Humanoids` or [skinned](../art/modeling/rigging.md) `Class.MeshPart|MeshParts` frequently**
+  - This can be intensive for the engine to process, particularly if these models use **layered clothing**. This also can be particularly problematic in experiences where avatars respawn often.
+  - In the MicroProfiler, lengthy **updateInvalidatedFastClusters** tags
     (over 4 ms) are often a signal that avatar instantiation/modification is
     triggering excessive invalidations.
 - **Using Humanoids in cases where they are not required** - Static NPCs that do

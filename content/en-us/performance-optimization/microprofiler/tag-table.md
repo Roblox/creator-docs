@@ -185,8 +185,8 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   </tr>
   <tr>
     <td>Prepare/UpdatePrepare/updateInvalidatedFastClusters</td>
-    <td>Prepares "FastCluster" geometries used to render `Class.Humanoid|Humanoids`. Labels specify the number of parts, vertices, and size of vertices.</td>
-    <td>Reduce visual changes to `Class.Humanoid|Humanoids`. This includes `Class.BasePart.Transparency` and `Class.BasePart.LocalTransparencyModifier`.</td>
+    <td>Prepares "FastCluster" geometries used to render `Class.Humanoid|Humanoids` and [skinned](../../art/modeling/rigging.md) `Class.MeshPart|MeshParts`. Labels specify the number of parts, vertices, and size of vertices.</td>
+    <td>Reduce visual changes to models with `Class.Humanoid|Humanoids` or skinned `Class.MeshPart|MeshParts`.</td>
   </tr>
   <tr>
     <td>Prepare/UpdatePrepare/updateDynamicParts</td>

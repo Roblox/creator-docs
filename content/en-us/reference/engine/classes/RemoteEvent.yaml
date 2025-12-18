@@ -34,7 +34,17 @@ description: |
   See [Remote events and callbacks](../../../scripting/events/remote.md) for
   code samples and further details.
 
-  #### Parameter Limitations
+  #### Throttling
+
+  Remote events are subject to rate limits when sent from the client to the
+  server with the `Class.RemoteEvent:FireServer()|FireServer()` method.
+  `Class.RemoteEvent|RemoteEvents` and
+  `Class.UnreliableRemoteEvent|UnreliableRemoteEvents` both have a limit of
+  approximately 500 requests per second, per client. This limit is **shared
+  among all remote events of the same type**. To avoid throttling and latency
+  issues, limit recurring remote events whenever possible.
+
+  #### Parameter limitations
 
   Any type of Roblox object (`Datatype.Enum`, `Class.Instance`, etc.) can be
   passed as a parameter when a `Class.RemoteEvent` is fired, as well as Luau
