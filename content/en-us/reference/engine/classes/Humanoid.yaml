@@ -1144,7 +1144,8 @@ properties:
         thumbstick is moved just a gradual degree from center.
       - You can freeze a humanoid in place by setting
         `Class.Humanoid.WalkSpeed|WalkSpeed` to 0; this prevents the controlling
-        player from moving it through the default movement mechanisms.
+        player from moving it through the default movement mechanisms. 
+        Note that Humanoid.WalkSpeed is a client-replicated property. Since it can be modified locally, it should not be used as a security mechanism or as the sole method for preventing Humanoid movement.
       - The default animation script scales a humanoid's movement animations
         based on how fast it is moving relative to the default speed of 16
         studs/second.
