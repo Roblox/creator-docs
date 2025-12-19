@@ -305,27 +305,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-  - name: CaptureService:TakeCapture
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: onCaptureReady
-        type: Function
-        default:
-        summary: ''
-      - name: captureParams
-        type: Dictionary
-        default: nil
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
   - name: CaptureService:UploadCaptureAsync
     summary: ''
     description: |

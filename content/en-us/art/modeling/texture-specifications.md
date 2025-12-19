@@ -15,7 +15,7 @@ See the following requirements when creating your own basic and advanced texture
 
 - **File formats** — File formats for textures that are uploaded separately in Studio must be submitted as a `.png`, `.jpg`, `.tga`, or `.bmp`.
 
-- **Resolution** — Roblox supports up to 1024×1024 pixel texture resolutions. To optimize for performance, you may consider using smaller resolutions. Use the following general guidance:
+- **Resolution** — Roblox supports up to 4096x4096 pixel texture resolutions (4K). As an experience loads, the engine automatically starts with lower quality versions of the texture and ramps up quality based on device resources. Even still, manually sizing textures before you upload them can improve memory usage in some situations. Consider the following general guidance:
 
   - For smaller 5×5 stud objects, use 256×256 texture resolutions.
   - For medium 10×10 stud objects, use 512×512 texture resolutions.

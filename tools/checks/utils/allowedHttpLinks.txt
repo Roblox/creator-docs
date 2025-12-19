@@ -710,6 +710,7 @@ https://youtube.com/playlist?list=PLuEQ5BB-Z1PJ8Du1rJ_JaMpW1W_G2T_lm
 https://www.youtube.com/watch?v=7DXTQcA9G_A
 https://github.com/Roblox/cryo
 https://github.com/Roblox/dash
+https://github.com/Roblox/otter
 https://github.com/Roblox/luau-regexp
 https://github.com/Roblox/luau-polyfill
 https://github.com/roblox/luau-tag-utils

@@ -169,8 +169,6 @@ To change the start place:
 ### Make experience public
 
 <Alert severity="warning">
-**These requirements will go into effect on December 17, 2025.**
-
 Before making a new experience public—or updating an existing public experience—you must meet **at least one** of the following requirements:
 
 - Have an account that is [ID-verified](./account-verification.md#verify-through-government-id) **or**

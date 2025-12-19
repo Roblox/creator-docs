@@ -92,10 +92,8 @@ The following memory values in the **Developer Console** can indicate a problem 
   objects. After a user leaves an experience, the engine doesn't automatically
   destroy their representative `Class.Player` object and character model, so
   connections to the `Class.Player` object and instances under the character
-  model, such as `Player.CharacterAdded`, still consume memory if you don't
-  disconnect them in your scripts. This can result in very significant memory
-  leaks over time on the server as hundreds of users join and leave the
-  experience.
+  model, such as `Class.Player.CharacterAdded|CharacterAdded`, still consume memory if you don't disconnect them in your scripts.
+	This can result in very significant memory leaks over time on the server as hundreds of users join and leave the experience.
 
 - **Tables** - Inserting objects into tables but not removing them when they are
   no longer needed causes unnecessary memory consumption, especially for tables
@@ -114,15 +112,16 @@ The following memory values in the **Developer Console** can indicate a problem 
 
 To clean up all used values for preventing memory leaks:
 
-- **Disconnect all connections** - Go through your code base make sure each
+- **Disconnect all connections** - Go through your codebase and make sure each
   connection is cleaned up via one of the following paths:
-  - Disconnecting manually using the `Disconnect()` function.
-  - Destroying the instance the event belongs to with the `Destroy()` function.
+  - Disconnecting manually using the `Datatype.RBXScriptConnection:Disconnect()|Disconnect()` function.
+  - Destroying the instance the event belongs to with the `Class.Instance:Destroy()|Destroy()` function.
   - Destroying the script object that the connection traces back to.
 
 - **Remove player objects and characters after leaving** - Enable `Class.Workspace.PlayerCharacterDestroyBehavior` to automatically destroy player objects and character models after a user leaves. If you prefer, you can instead clean them up manually:
 
    ```lua title="Example player and character cleanup"
+	 local Players = game:GetService("Players")
    Players.PlayerAdded:Connect(function(player)
      player.CharacterRemoving:Connect(function(character)
        task.defer(character.Destroy, character)
@@ -239,10 +238,10 @@ comes with a significant computation cost.
   cost to leaving certain `Enum.HumanoidStateType|HumanoidStateTypes`
   enabled. Disable any that are not needed for your NPCs. For
   example, unless your NPC is going to climb ladders, it's safe to disable
-  the `Climbing` state.
-- **Instantiating, modifying, and respawning models with Humanoids frequently**
-  - This can be intensive for the engine to process, particularly if these models use **Layered clothing**. This also can be particularly problematic in experiences where avatars respawn often.
-  - In the **MicroProfiler**, lengthy **updateInvalidatedFastClusters** tags
+  the `Enum.HumanoidStateType.Climbing|Climbing` state.
+- **Instantiating, modifying, and respawning models with `Class.Humanoid|Humanoids` or [skinned](../art/modeling/rigging.md) `Class.MeshPart|MeshParts` frequently**
+  - This can be intensive for the engine to process, particularly if these models use **layered clothing**. This also can be particularly problematic in experiences where avatars respawn often.
+  - In the MicroProfiler, lengthy **updateInvalidatedFastClusters** tags
     (over 4 ms) are often a signal that avatar instantiation/modification is
     triggering excessive invalidations.
 - **Using Humanoids in cases where they are not required** - Static NPCs that do
@@ -277,8 +276,7 @@ comes with a significant computation cost.
   in range, and cull them when users leave their range.
 - **Avoid making changes to the avatar hierarchy after it is instantiated** - Certain modifications to an avatar hierarchy have significant performance implications. Some optimizations are available:
   - For custom procedural animations, don't update the `Class.JointInstance.C0` and `Class.JointInstance.C1` properties. Instead, update the `Class.Motor6D.Transform` property.
-  - If you need to attach any `BasePart` objects to the avatar, do so outside of
-    the hierarchy of the avatar `Model`.
+  - If you need to attach any `Class.BasePart` objects to the avatar, do so outside the hierarchy of the avatar `Class.Model`.
 
 ### MicroProfiler scopes
 
@@ -319,11 +317,9 @@ The more objects that need to be drawn in your scene in a given frame, the more
 draw calls are made to the GPU. However, the Roblox Engine utilizes a process
 called _instancing_ to collapse identical meshes with the same texture
 characteristics into a single draw call. Specifically, multiple meshes with the
-same `MeshId` are handled in a single draw call when:
+same `Class.MeshPart.MeshContent|MeshContent` are handled in a single draw call when:
 
-- `Class.SurfaceAppearance|SurfaceAppearances` are identical.
-`Class.MeshPart.TextureID|TextureIDs` are identical when
-`Class.SurfaceAppearance` doesn't exist.
+- `Class.SurfaceAppearance|SurfaceAppearances` are identical if present, otherwise when `Class.MeshPart.TextureContent|TextureContents` are identical.
 - Materials are identical when both `Class.SurfaceAppearance` and
   `Class.MeshPart.TextureID` don't exist.
 
@@ -351,8 +347,7 @@ same `MeshId` are handled in a single draw call when:
   same name that use different mesh IDs:
 
   ```lua
-  local Workspace = game:GetService("Workspace")
-  for _, descendant in Workspace:GetDescendants() do
+  for _,descendant in workspace:GetDescendants() do
     if descendant:IsA("MeshPart") then
       print(descendant.Name .. ", " .. descendant.MeshId)
     end
@@ -376,7 +371,7 @@ same `MeshId` are handled in a single draw call when:
   draw calls, the number of triangles in a scene does influence how long a frame
   takes to render. Scenes with a very large number of very complex meshes are a
   common problem, as are scenes with the `Class.MeshPart.RenderFidelity` property set
-  to `Enum.RenderFidelity.Precise` on too many meshes.
+  to `Enum.RenderFidelity.Precise|Precise` on too many meshes.
 
 - **Excessive shadow casting** - Handling shadows is an expensive process, and
   maps that contain a high number and density of light objects that cast shadows
@@ -411,8 +406,7 @@ same `MeshId` are handled in a single draw call when:
   environments, you might be able to implement a room or portal system and
   manually cull objects to further reduce draw calls or overall computational
   load.
-- **Reducing render fidelity** - Set render fidelity to **Automatic** or
-  **Performance**. This allows meshes to fall back to less complex
+- **Reducing render fidelity** - Set `Class.MeshPart.RenderFidelity` to `Enum.RenderFidelity.Automatic|Automatic` or `Enum.RenderFidelity.Performance|Performance`. This allows meshes to fall back to less complex
   alternatives, which can reduce the number of polygons that need to be drawn.
 - **Disabling shadow casting on appropriate parts and light objects** - The
   Roblox engine automatically degrades shadow quality as client graphics quality
@@ -547,14 +541,14 @@ The highest impact mechanism available to creators to improve client memory usag
 
 ### Instance streaming
 
-Instance streaming selectively loads out parts of the data model that are not required, which can lead to considerably reduced load time and increase the client's ability to prevent crashes when it comes under memory pressure.
+Instance streaming selectively loads out parts of the data model that are not required, which can lead to considerably reduced load times and increase the client's ability to prevent crashes when it comes under memory pressure.
 
 If you are encountering memory issues and have instance streaming disabled, consider updating your experience to support it, particularly if your 3D world is large. Instance streaming is based on distance in 3D space, so larger worlds naturally benefit more from it.
 
 If instance streaming is enabled, you can increase the aggressiveness of it. For example, consider:
 
-- Reducing use the persistent **StreamingIntegrity**.
-- Reducing the **streaming radius**.
+- Reducing use of `Enum.ModelStreamingMode.Persistent` where possible. You may need to update your scripts if you're using it as a compatibility measure.
+- Reducing the `Workspace.StreamingMinRadius` and `Workspace.StreamingTargetRadius`.
 
 For more information on streaming options and their benefits, see [Streaming properties](../workspace/streaming.md#streaming-properties).
 
@@ -563,10 +557,11 @@ For more information on streaming options and their benefits, see [Streaming pro
 - **Asset duplication** - A common mistake is to upload the same asset multiple times resulting in different asset IDs. This can lead to the same content being loaded into memory multiple times.
 - **Excessive asset volume** - Even when assets are not identical, there are cases when opportunities to reuse the same asset and save memory are missed.
 - **Audio files** - Audio files can be a surprising contributor to memory usage, particularly if you load all of them into the client at once rather than only loading what you need for a portion of the experience. For strategies, see [Load times](#load-times).
-- **High resolution textures** - Graphics memory consumption for a texture is unrelated to the size of the texture on the disk, but rather the number of pixels in the texture.
-  - For example, a 1024x1024 pixel texture consumes four times the graphics memory of a 512x512 texture.
-  - Images uploaded to Roblox are transcoded to a fixed format, so there is no memory benefit to uploading images in a color model associated with fewer bytes per pixel. Similarly, compressing images prior to upload or removing the alpha channel from images that don't need it can decrease image size on disk, but either doesn't improve or only minimally improves memory usage. Though the engine automatically downscales texture resolution on some devices, the extent of the downscale depends on the device characteristics, and excessive texture resolution can still cause problems.
-  - You can identify the graphics memory consumption for a given texture by expanding the **GraphicsTexture** category in the **Developer Console**.
+- **High resolution textures** - Graphics memory consumption for a texture is unrelated to the size of the texture on the disk; the number of pixels in the texture determines memory usage. For example, a 1024x1024 pixel texture consumes four times the graphics memory of a 512x512 texture.
+
+  Images uploaded to Roblox are transcoded to a fixed format, so there is no memory benefit to uploading images in a color model associated with fewer bytes per pixel. Similarly, compressing images prior to upload or removing the alpha channel from images that don't need it can decrease image size on disk, but doesn't improve memory usage.
+
+  As an experience loads, the engine automatically starts with lower quality textures and then ramps up quality based on available device memory, distance from the camera, amount of screen-space that the texture takes up, and other factors. Even still, strategically sizing your textures can improve memory usage in your experience.
 
 ### Mitigation
 
@@ -587,7 +582,9 @@ Many experiences implement custom loading screens and use the `Class.ContentProv
 
 The advantage of this approach is that it lets you ensure important parts of your experience are fully loaded without pop-in. However, a common mistake is overutilizing this method to preload more assets than are actually required.
 
-An example of a bad practice is loading the entire `Class.Workspace`. While this might prevent texture pop-in, it significantly increases load time.
+An example of a bad practice is loading the entire `Class.Workspace`. While this might prevent texture pop-in, it significantly increases load times.
+
+Another similar practice is utilising `Class.ContentProvider.RequestQueueSize` to ensure that all requested assets have finished loading. However, this presents the same issue of significantly increased load times, while also being an unreliable method due to its fluctuating nature.
 
 Instead, only use `Class.ContentProvider:PreloadAsync()` in necessary situations, which include:
 
