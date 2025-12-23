@@ -3,10 +3,6 @@ title: UI drag detectors
 description: UI drag detectors facilitate and encourage interaction with 2D user interface elements in an experience, such as sliders and spinners.
 ---
 
-import BetaAlert from '../includes/beta-features/beta-alert.md'
-
-<BetaAlert betaName="UIDragDetectors" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
-
 The `Class.UIDragDetector` instance facilitates and encourages interaction with 2D user interface elements in an experience, such as sliders, spinners, and more. Key features include:
 
 - Place a `Class.UIDragDetector` under any `Class.GuiObject` instance to make it draggable via all user inputs without a single line of code.
