@@ -28,7 +28,9 @@ We are building one of the world's largest immersive platforms with 151.5M globa
 
 <GridContainer numColumns="2">
 <figure>
-<img src="../assets/monetization/earning/Economy-Stats-DAU.png" width="394" alt="Roblox economy stats: Daily Active Users" style={{marginBottom:'0'}} />
+<img src="../assets/monetization/earning/Economy-Stats-DAU.png" width="394" alt="Roblox 100000000
+  
+  economy stats: Daily Active Users" style={{marginBottom:'0'}} />
 <center><Typography variant="captionHeader" color="info">⑴</Typography></center>
 </figure>
 <figure>
