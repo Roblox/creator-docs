@@ -1,6 +1,5 @@
----
-title: Create avatar items
-description: Create and upload avatar characters, clothing, and accessories to the Roblox Marketplace.
+Cook and deliver the food
+
 
 hideInPageNavigation: true
 ---
@@ -266,16 +265,4 @@ key={btnIndex}
 style={{ marginTop: 16, marginRight: 24 }}
 variant="contained"
 color="secondary"
-size="large"
-href={button.href} >
-{button.text}
-</Button>
-))}
-</div>
-</Grid>
-);
-})}
-</Grid>
-)}
-</Grid>
-))}
+size="larg
