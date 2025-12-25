@@ -5,7 +5,7 @@ description: Animation Capture in the Animation Editor allows you to generate hi
 
 import BetaAlert from '../includes/beta-features/beta-alert.md'
 
-You can record or upload video content to the [Animation Editor](../animation/editor.md) to quickly capture movement and expressions as animation keyframes. These tools can create unique and realistic animations within minutes while providing access to the animation keyframes for additional adjustments.
+You can record or upload custom video content to the [Animation Editor](../animation/editor.md) to quickly capture movement and expressions as animation keyframes. These tools can create unique and realistic animations within minutes while providing access to the animation keyframes for additional adjustments.
 
 The animation capture tools allow you to:
 
