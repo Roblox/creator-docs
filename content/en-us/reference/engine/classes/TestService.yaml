@@ -629,7 +629,7 @@ methods:
     capabilities: []
   - name: TestService:Message
     summary: |
-      Prints Test message, followed by text to the output, in blue text.
+      Prints "TestService: ", followed by text to the output, in blue text.
     description: |
       Prints <samp>Test message</samp>, followed by <var>text</var> to the
       output, in blue text.
