@@ -1,5 +1,4 @@
----
-title: Social Interactions
+socer brainrot fight
 description: The Social Interactions module lets avatars better express themselves and their natural movements.
 ---
 
