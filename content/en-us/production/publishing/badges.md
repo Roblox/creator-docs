@@ -87,7 +87,7 @@ A badge's ID is its unique identifier. You'll need this ID when implementing wor
 
 ### Award badges
 
-You can award badges to players throughout your experience by calling the `Class.BadgeService:AwardBadge()` method in a server-side `Class.Script`. `Class.BadgeService:GetBadgeInfoAsync()` returns properties of the badge, including `IsEnabled` which confirms whether or not the badge can be awarded to a player. You can enable or disable a badge from the **Configure Badge** form on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+You can award badges to players throughout your experience by calling the `Class.BadgeService:AwardBadgeAsync()` method in a server-side `Class.Script`. `Class.BadgeService:GetBadgeInfoAsync()` returns properties of the badge, including `IsEnabled` which confirms whether or not the badge can be awarded to a player. You can enable or disable a badge from the **Configure Badge** form on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 
 The following is an example of a safe function for awarding badges to players.
 
@@ -101,7 +101,7 @@ local function awardBadge(player, badgeId)
     -- Confirm that badge can be awarded
     if badgeInfo.IsEnabled then
       -- Award badge
-      local awarded, errorMessage = pcall(BadgeService.AwardBadge, BadgeService, player.UserId, badgeId)
+      local awarded, errorMessage = pcall(BadgeService.AwardBadgeAsync, BadgeService, player.UserId, badgeId)
       if not awarded then
         warn("Error while awarding badge:", errorMessage)
       end
