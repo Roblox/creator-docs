@@ -1,6 +1,6 @@
----
-title: Experience events and updates
-description: Explore how to create and promote time-based events for your experience, as well as announce experience updates to opted-in users.
+2026 upd 2
+new year new fear
+ 5 new floors 1 new boss and one new cave theme 
 ---
 
 As part of your [promotional](../../production/promotion/index.md) initiatives, the integrated **events** system lets you create time‑based events for your experience. Players can discover your events on the experience's detail page and through an [event details page](#event-details-page), and they can opt into [notifications](#streampush-notifications) that they'll receive when your event begins.
