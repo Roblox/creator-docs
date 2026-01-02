@@ -190,7 +190,7 @@ methods:
 
       See also:
 
-      - `Class.BadgeService:AwardBadge()`
+      - `Class.BadgeService:AwardBadgeAsync()`
       - `Class.BadgeService:UserHasBadgeAsync()`
     code_samples:
       - getbadgeinfoasync
@@ -355,7 +355,7 @@ methods:
 
       - `Class.BadgeService:CheckUserBadgesAsync()`
       - `Class.BadgeService:GetBadgeInfoAsync()`
-      - `Class.BadgeService:AwardBadge()`
+      - `Class.BadgeService:AwardBadgeAsync()`
     code_samples:
       - badges---checking-earned-badges
     parameters:
