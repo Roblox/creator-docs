@@ -1,4 +1,4 @@
-# Contributing
+###### Contributing
 
 This page provides more detailed instructions on the offline contribution process. Due to the size of this repository, we highly recommend using the online options outlined in [README.md](README.md).
 
