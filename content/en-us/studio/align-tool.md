@@ -1,4 +1,4 @@
----
+please do
 title: Align tool
 description: The Align tool lets you align objects or groups of objects along the X, Y, or Z axes.
 ---
