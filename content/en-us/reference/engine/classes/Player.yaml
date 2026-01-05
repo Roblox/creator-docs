@@ -1642,7 +1642,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Player:IsFriendsWith()`
+      which should be used instead.
     security: None
     thread_safety: Unsafe
     capabilities:
