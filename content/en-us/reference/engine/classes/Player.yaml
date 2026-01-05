@@ -1647,28 +1647,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-  - name: Player:isFriendsWith
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: userId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: boolean
-        summary: ''
-    tags:
-      - Yields
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.Player:IsFriendsWith()`
-      which should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
+
   - name: Player:IsInGroupAsync
     summary: |
       Checks whether a player is a member of a group with the given ID.
