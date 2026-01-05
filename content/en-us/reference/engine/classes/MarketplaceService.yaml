@@ -89,6 +89,294 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: MarketplaceService:GetProductInfoAsync
+    summary: |
+      Returns the product information of an asset using its asset ID.
+    description: |
+      This method provides information about an asset,
+      [developer product](../../../production/monetization/developer-products.md),
+      or [pass](../../../production/monetization/game-passes.md) based on the
+      asset ID and the `Enum.InfoType`. If an item with the given ID does not
+      exist, this method throws an error.
+
+      Information about the queried item is provided in a dictionary with the
+      following keys. Note that not all information is provided or necessarily
+      relevant for the kind of product you're querying.
+
+      <table size="small">
+      	<thead>
+      	  <tr>
+      	    <th>Key</th>
+      	    <th>Type</th>
+      	    <th>Description</th>
+      	  </tr>
+      	</thead>
+        <tbody>
+      	<tr>
+      	  <td><code>Name</code></td>
+      	  <td>string</td>
+      	  <td>The name shown on the asset's page.</td>
+        </tr>
+      	<tr>
+      	  <td><code>Description</code></td>
+      	  <td>string</td>
+      	  <td>The description shown on the asset's page; can be <code>nil</code> if blank.</td>
+        </tr>
+      	<tr>
+      	  <td><code>PriceInRobux</code></td>
+      	  <td>number</td>
+      	  <td>The cost of purchasing the asset using Robux.</td>
+        </tr>
+        <tr>
+      	  <td><code>ProductId</code></td>
+      	  <td>number</td>
+      	  <td>The product ID if <code>Enum.InfoType</code> is <code>Product</code>.</td>
+        </tr>
+        <tr>
+      	  <td><code>ProductType</code></td>
+      	  <td>string</td>
+      	  <td>A string describing what the product is. Not to be confused with <code>Enum.MarketplaceProductType</code>.</td>
+        </tr>
+      	<tr>
+      	  <td><code>Created</code></td>
+      	  <td>string</td>
+      	  <td>Timestamp of when the asset was created, for example <code>2022-01-02T10:30:45Z</code>. Formatted using ISO 8601.</td>
+        </tr>
+      	<tr>
+      	  <td><code>Updated</code></td>
+      	  <td>string</td>
+      	  <td>Timestamp of when the asset was last updated by its creator, for example <code>2022-02-12T11:22:15Z</code>. Formatted using ISO 8601.</td>
+        </tr>
+      	<tr>
+      	  <td><code>ContentRatingTypeId</code></td>
+      	  <td>number</td>
+      	  <td>Indicates whether the item is marked as 13+ in catalog.</td>
+        </tr>
+      	<tr>
+      	  <td><code>MinimumMembershipLevel</code></td>
+      	  <td>number</td>
+      	  <td>The minimum subscription level necessary to purchase the item.</td>
+        </tr>
+      	<tr>
+      	  <td><code>IsPublicDomain</code></td>
+      	  <td>boolean</td>
+      	  <td>Describes whether the asset can be taken for free.</td>
+        </tr>
+        <tr>
+      	  <td><code>TargetId</code></td>
+      	  <td>number</td>
+      	  <td>The ID of the product or asset.</td>
+        </tr>
+        </tbody>
+      </table>
+
+      ##### Creator Information
+
+      <table size="small">
+        <thead>
+      	  <tr>
+      	    <th>Key</th>
+      	    <th>Type</th>
+      	    <th>Description</th>
+      	  </tr>
+      	</thead>
+        <tbody>
+      	<tr>
+      	  <td><code>Creator</code></td>
+      	  <td>table</td>
+      	  <td>Dictionary table of information describing the creator of the asset, containing the following fields:</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>CreatorType</code>: Either <code>User</code> or <code>Group</code>.</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>CreatorTargetId</code>: The ID of the creator user or group.</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>HasVerifiedBadge</code>: Boolean of whether the creator has a verified badge.</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>Name</code>: The name/username of the creator.</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>Id</code>: Use <code>CreatorTargetId</code> instead.</td>
+        </tr>
+        </tbody>
+      </table>
+
+      ##### Asset Information
+
+      <table size="small">
+        <thead>
+      	  <tr>
+      	    <th>Key</th>
+      	    <th>Type</th>
+      	    <th>Description</th>
+      	  </tr>
+      	</thead>
+        <tbody>
+      	<tr>
+      	  <td><code>AssetId</code></td>
+      	  <td>number</td>
+      	  <td>The asset ID if <code>Enum.InfoType</code> is <code>Asset</code>.</td>
+        </tr>
+      	<tr>
+      	  <td><code>AssetTypeId</code></td>
+      	  <td>number</td>
+      	  <td>The type of asset. See <code>Enum.AssetType</code> for the asset type ID numbers.</td>
+        </tr>
+        <tr>
+      	  <td><code>IconImageAssetId</code></td>
+      	  <td>number</td>
+      	  <td>The asset ID of the product's icon, or <code>0</code> if there isn't one.</td>
+        </tr>
+      	<tr>
+      	  <td><code>IsForSale</code></td>
+      	  <td>boolean</td>
+      	  <td>Describes whether the asset is purchasable.</td>
+        </tr>
+      	<tr>
+      	  <td><code>IsLimited</code></td>
+      	  <td>boolean</td>
+      	  <td>Describes whether the asset is a Roblox Limited that is no longer (if ever) sold.</td>
+        </tr>
+      	<tr>
+      	  <td><code>IsLimitedUnique</code></td>
+      	  <td>boolean</td>
+      	  <td>Describes whether the asset is a unique Roblox Limited ("Limited&nbsp;U") item that only has a fixed number sold.</td>
+        </tr>
+      	<tr>
+      	  <td><code>IsNew</code></td>
+      	  <td>boolean</td>
+      	  <td>Describes whether the asset is marked as "new" in the catalog.</td>
+        </tr>
+      	<tr>
+      	  <td><code>Remaining</code></td>
+      	  <td>number</td>
+      	  <td>The remaining number of times a limited unique item may be sold.</td>
+        </tr>
+      	<tr>
+      	  <td><code>Sales</code></td>
+      	  <td>number</td>
+      	  <td>The number of times the asset has been sold.</td>
+        </tr>
+        </tbody>
+      </table>
+
+      ##### Collectibles Information
+
+      <table size="small">
+        <thead>
+      	  <tr>
+      	    <th>Key</th>
+      	    <th>Type</th>
+      	    <th>Description</th>
+      	  </tr>
+      	</thead>
+        <tbody>
+        <tr>
+      	  <td><code>CollectibleItemId</code></td>
+      	  <td>string</td>
+      	  <td>The unique item ID of the collectible.</td>
+        </tr>
+      	<tr>
+      	  <td><code>CollectibleProductId</code></td>
+      	  <td>string</td>
+      	  <td>The unique product ID of the collectible.</td>
+        </tr>
+        <tr>
+      	  <td><code>CollectiblesItemDetails</code></td>
+      	  <td>table</td>
+      	  <td>Dictionary table of information describing the collectible, containing the following fields:</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>CollectibleLowestAvailableResaleItemInstanceId</code>: The unique item instance ID of the lowest available resale for the collectible.</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>CollectibleLowestAvailableResaleProductId</code>: The unique product ID of the lowest available resale for the collectible.</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>CollectibleLowestResalePrice</code>: The lowest resale price for the collectible in Robux.</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>IsForSale</code>: Boolean of whether the collectible is available for sale (not resale).</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>IsLimited</code>: Boolean of whether or not the collectible is limited.</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>TotalQuantity</code>: The total quantity of the collectible available for purchase (not resale).</td>
+        </tr>
+        </tbody>
+      </table>
+
+      ##### Sale Location Settings
+
+      <table size="small">
+        <thead>
+      	  <tr>
+      	    <th>Key</th>
+      	    <th>Type</th>
+      	    <th>Description</th>
+      	  </tr>
+      	</thead>
+        <tbody>
+      	<tr>
+      	  <td><code>CanBeSoldInThisGame</code></td>
+      	  <td>boolean</td>
+      	  <td>Describes whether the asset is purchasable in the current experience.</td>
+        </tr>
+        <tr>
+      	  <td><code>SaleLocation</code></td>
+      	  <td>table</td>
+      	  <td>Dictionary table of information describing where the item can be sold, containing the following fields:</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+      	  <td><code>SaleLocationType</code>: The type of sale location setting. See <code>Enum.ProductLocationRestriction</code> for the sale location setting ID numbers.</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+      	  <td><code>UniverseIds</code>: Array table of universes in which the item can be sold (not currently implemented).</td>
+        </tr>
+        </tbody>
+      </table>
+    code_samples:
+      - MarketplaceService-GetProductInfo1
+    parameters:
+      - name: assetId
+        type: int64
+        default:
+        summary: |
+          The asset ID of the specified product.
+      - name: infoType
+        type: InfoType
+        default: Asset
+        summary: |
+          An `Enum.InfoType` enum value specifying the type of information being
+          retrieved.
+    returns:
+      - type: Dictionary
+        summary: |
+          A dictionary containing information about the queried item, described
+          in the previous tables.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: MarketplaceService:GetSubscriptionProductInfoAsync
     summary: |
       Returns the product information of a subscription for the given

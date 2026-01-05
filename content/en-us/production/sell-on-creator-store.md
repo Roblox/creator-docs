@@ -9,12 +9,6 @@ In order to set any USD prices and sell your assets, you must have a **seller ac
 
 Once you have a seller account, **you can set USD prices** for your plugins from their asset configuration pages and sell them on the Creator Store.
 
-<Alert severity="warning">
-
-If you previously listed plugins for sale with Robux pricing, these will now have been taken off sale. If you want to relist them for sale, you must create a seller account and set USD pricing.
-
-</Alert>
-
 ## Requirements
 
 Roblox's eligibility requirements for sellers, customers, and assets are stricter than previous requirements for selling and buying with Robux. Even if you're have previously sold on the Creator Store, you will only be able to continue doing so if you meet these requirements, create a seller account, and set USD prices.
