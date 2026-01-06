@@ -204,6 +204,32 @@ To create a rewarded video ad placement:
 
 The new placement populates on the Placement table with a unique **Placement ID**. You can use this Placement ID in the `Class.AdService.ShowRewardedVideoAsync|ShowRewardedVideoAsync` method to differentiate between and track metrics for the individual video ads inside your experience.
 
+## Ad opportunities
+
+Use `Class.AdService.RegisterAdOpportunityAsync|RegisterAdOpportunityAsync` to track how many times a user has the opportunity to watch a rewarded video ad, and the rate at which they actually watch the video ad.
+
+You can provide a Placement ID as an optional parameter to track metrics for individual ad opportunities in your experience.
+
+```lua title="Code example for tracking ad opportunities"
+local AdService = game:GetService("AdService")
+local playerGui = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+
+-- Create the ScreenGui and the Button
+local screenGui = Instance.new("ScreenGui", playerGui)
+local adButton = Instance.new("TextButton", screenGui)
+
+-- Register the button with AdService
+local success, err = pcall(function()
+-- The second parameter is an optional Placement ID (UUID) parameter generated in the Creator Hub.
+-- If you choose not to provide a Placement ID, the ad opportunity is tracked under the default placement.
+  AdService:RegisterAdOpportunityAsync(adButton, "123e4567-e89b-12d3-a456-426614174000")
+end)
+
+if not success then
+  warn("Failed to register ad opportunity:", err)
+end
+```
+
 ## Exclude likely spenders
 
 Based on past behavior and purchasing habits, certain users are more likely to make purchases in your experience. To reduce your risk of losing revenue, you can exclude users who are likely to spend in your experience from seeing rewarded video ads.
@@ -271,7 +297,7 @@ To access your rewarded video ad metrics:
   </tr>
   <tr>
     <td>**Ad Opportunities**</td>
-    <td>The number opportunities users had to watch a video ad. Use this metric to track how many times a user had the chance to watch a video ad and the rate at which they actually took that chance and watched the ad. <br /><br /> Different lines show you this metric for different ad placements inside the experience.</td>
+    <td>The number of opportunities users had to watch a video ad. Use this metric to track how many times a user had the chance to watch a video ad and the rate at which they actually took that chance and watched the ad. <br /><br /> Different lines show you this metric for different ad placements inside the experience.</td>
   </tr>
   <tr>
     <td>**Impressions**</td>
