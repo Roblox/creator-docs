@@ -11,7 +11,7 @@ future releases. All Open Cloud endpoints also support
 
 <Alert severity="info">
 For complete implementation guides and information on OAuth 2.0, including a
-sample app, see the [OAuth 2.0 Overview](../auth/oauth2-overview.md).
+sample app, see the [OAuth 2.0 overview](../auth/oauth2-overview.md).
 </Alert>
 
 This document describes endpoints that you call to implement the OAuth 2.0

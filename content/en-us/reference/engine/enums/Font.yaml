@@ -5,9 +5,8 @@
 name: Font
 type: enum
 summary: ''
-description: |
-  The `Enum.Font` enum is used in `Class.TextBox`, `Class.TextLabel`, and
-  `Class.TextButton` to determine how the GUI element will render its text.
+description: |-
+  The `Font` enum is used in `Class.TextBox`, `Class.TextLabel`, `Class.TextButton`, and similar GUI objects to determine how the element will render its text.
 
   See also `Datatype.Font` as a newer alternative to this enum which
   encapsulates fonts as a datatype and provides access to more fonts than this
@@ -17,329 +16,279 @@ tags: []
 deprecation_message: ''
 items:
   - name: Legacy
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Legacy.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Legacy.png" />
     value: 0
     tags: []
     deprecation_message: ''
   - name: Arial
-    summary: |
-      Arial has been removed from Roblox. Using Arial will map to Arimo.
+    summary: '`Arial` has been removed. Using it will map to the `Arimo` font family of the `Datatype.Font` data type.'
     value: 1
     tags: []
     deprecation_message: ''
   - name: ArialBold
-    summary: |
-      Arial has been removed from Roblox. Using Arial will map to Arimo.
+    summary: '`ArialBold` has been removed. Using it will map to the `Arimo` font family of the `Datatype.Font` data type.'
     value: 2
     tags: []
     deprecation_message: ''
   - name: SourceSans
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/SourceSans.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/SourceSans.png" />
     value: 3
     tags: []
     deprecation_message: ''
   - name: SourceSansBold
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/SourceSansBold.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/SourceSansBold.png" />
     value: 4
     tags: []
     deprecation_message: ''
   - name: SourceSansLight
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/SourceSansLight.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/SourceSansLight.png" />
     value: 5
     tags: []
     deprecation_message: ''
   - name: SourceSansItalic
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/SourceSansItalic.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/SourceSansItalic.png" />
     value: 6
     tags: []
     deprecation_message: ''
   - name: Bodoni
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Bodoni.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Bodoni.png" />
     value: 7
     tags: []
     deprecation_message: ''
   - name: Garamond
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Garamond.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Garamond.png" />
     value: 8
     tags: []
     deprecation_message: ''
   - name: Cartoon
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Cartoon.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Cartoon.png" />
     value: 9
     tags: []
     deprecation_message: ''
   - name: Code
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Code.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Code.png" />
     value: 10
     tags: []
     deprecation_message: ''
   - name: Highway
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Highway.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Highway.png" />
     value: 11
     tags: []
     deprecation_message: ''
   - name: SciFi
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/SciFi.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/SciFi.png" />
     value: 12
     tags: []
     deprecation_message: ''
   - name: Arcade
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Arcade.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Arcade.png" />
     value: 13
     tags: []
     deprecation_message: ''
   - name: Fantasy
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Fantasy.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Fantasy.png" />
     value: 14
     tags: []
     deprecation_message: ''
   - name: Antique
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Antique.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Antique.png" />
     value: 15
     tags: []
     deprecation_message: ''
   - name: SourceSansSemibold
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/SourceSansSemibold.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/SourceSansSemibold.png" />
     value: 16
     tags: []
     deprecation_message: ''
   - name: Gotham
-    summary: |
-      Gotham has been removed from Roblox. Using Gotham will map to Montserrat.
+    summary: '`Gotham` has been removed. Using it will map to the `Montserrat` font family of the `Datatype.Font` data type.'
     value: 17
     tags: []
     deprecation_message: ''
   - name: GothamMedium
-    summary: |
-      Gotham has been removed from Roblox. Using Gotham will map to Montserrat.
+    summary: '`GothamMedium` has been removed. Using it will map to the `Montserrat` font family of the `Datatype.Font` data type.'
     value: 18
     tags: []
     deprecation_message: ''
   - name: GothamBold
-    summary: |
-      Gotham has been removed from Roblox. Using Gotham will map to Montserrat.
+    summary: '`GothamBold` has been removed. Using it will map to the `Montserrat` font family of the `Datatype.Font` data type.'
     value: 19
     tags: []
     deprecation_message: ''
   - name: GothamBlack
-    summary: |
-      Gotham has been removed from Roblox. Using Gotham will map to Montserrat.
+    summary: '`GothamBlack` has been removed. Using it will map to the `Montserrat` font family of the `Datatype.Font` data type.'
     value: 20
     tags: []
     deprecation_message: ''
   - name: AmaticSC
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/AmaticSC.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/AmaticSC.png" />
     value: 21
     tags: []
     deprecation_message: ''
   - name: Bangers
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Bangers.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Bangers.png" />
     value: 22
     tags: []
     deprecation_message: ''
   - name: Creepster
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Creepster.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Creepster.png" />
     value: 23
     tags: []
     deprecation_message: ''
   - name: DenkOne
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/DenkOne.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/DenkOne.png" />
     value: 24
     tags: []
     deprecation_message: ''
   - name: Fondamento
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Fondamento.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Fondamento.png" />
     value: 25
     tags: []
     deprecation_message: ''
   - name: FredokaOne
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/FredokaOne.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/FredokaOne.png" />
     value: 26
     tags: []
     deprecation_message: ''
   - name: GrenzeGotisch
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/GrenzeGotisch.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/GrenzeGotisch.png" />
     value: 27
     tags: []
     deprecation_message: ''
   - name: IndieFlower
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/IndieFlower.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/IndieFlower.png" />
     value: 28
     tags: []
     deprecation_message: ''
   - name: JosefinSans
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/JosefinSans.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/JosefinSans.png" />
     value: 29
     tags: []
     deprecation_message: ''
   - name: Jura
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Jura.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Jura.png" />
     value: 30
     tags: []
     deprecation_message: ''
   - name: Kalam
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Kalam.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Kalam.png" />
     value: 31
     tags: []
     deprecation_message: ''
   - name: LuckiestGuy
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/LuckiestGuy.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/LuckiestGuy.png" />
     value: 32
     tags: []
     deprecation_message: ''
   - name: Merriweather
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Merriweather.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Merriweather.png" />
     value: 33
     tags: []
     deprecation_message: ''
   - name: Michroma
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Michroma.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Michroma.png" />
     value: 34
     tags: []
     deprecation_message: ''
   - name: Nunito
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Nunito.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Nunito.png" />
     value: 35
     tags: []
     deprecation_message: ''
   - name: Oswald
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Oswald.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Oswald.png" />
     value: 36
     tags: []
     deprecation_message: ''
   - name: PatrickHand
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/PatrickHand.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/PatrickHand.png" />
     value: 37
     tags: []
     deprecation_message: ''
   - name: PermanentMarker
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/PermanentMarker.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/PermanentMarker.png" />
     value: 38
     tags: []
     deprecation_message: ''
   - name: Roboto
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Roboto.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Roboto.png" />
     value: 39
     tags: []
     deprecation_message: ''
   - name: RobotoCondensed
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/RobotoCondensed.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/RobotoCondensed.png" />
     value: 40
     tags: []
     deprecation_message: ''
   - name: RobotoMono
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/RobotoMono.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/RobotoMono.png" />
     value: 41
     tags: []
     deprecation_message: ''
   - name: Sarpanch
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Sarpanch.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Sarpanch.png" />
     value: 42
     tags: []
     deprecation_message: ''
   - name: SpecialElite
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/SpecialElite.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/SpecialElite.png" />
     value: 43
     tags: []
     deprecation_message: ''
   - name: TitilliumWeb
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/TitilliumWeb.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/TitilliumWeb.png" />
     value: 44
     tags: []
     deprecation_message: ''
   - name: Ubuntu
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Ubuntu.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Ubuntu.png" />
     value: 45
     tags: []
     deprecation_message: ''
   - name: BuilderSans
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/BuilderSans.png" />
+    summary: |-
+      <img src="../../../assets/engine-api/enums/Font/BuilderSans.png" />
 
       See [Builder Font License](../../../resources/builder-font-license.md).
     value: 46
     tags: []
     deprecation_message: ''
   - name: BuilderSansMedium
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/BuilderSansMedium.png" />
+    summary: |-
+      <img src="../../../assets/engine-api/enums/Font/BuilderSansMedium.png" />
 
       See [Builder Font License](../../../resources/builder-font-license.md).
     value: 47
     tags: []
     deprecation_message: ''
   - name: BuilderSansBold
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/BuilderSansBold.png" />
+    summary: |-
+      <img src="../../../assets/engine-api/enums/Font/BuilderSansBold.png" />
 
       See [Builder Font License](../../../resources/builder-font-license.md).
     value: 48
     tags: []
     deprecation_message: ''
   - name: BuilderSansExtraBold
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/BuilderSansExtraBold.png" />
+    summary: |-
+      <img src="../../../assets/engine-api/enums/Font/BuilderSansExtraBold.png" />
 
       See [Builder Font License](../../../resources/builder-font-license.md).
     value: 49
     tags: []
     deprecation_message: ''
   - name: Arimo
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Arimo.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/Arimo.png" />
     value: 50
     tags: []
     deprecation_message: ''
   - name: ArimoBold
-    summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/ArimoBold.png" />
+    summary: <img src="../../../assets/engine-api/enums/Font/ArimoBold.png" />
     value: 51
     tags: []
     deprecation_message: ''
   - name: Unknown
-    summary: |
-      Set when the `Class.TextLabel.FontFace` property is set to a
-      `Datatype.Font` that has no corresponding enum value.
+    summary: Set when the GUI object's font face is set to a `Datatype.Font` that has no corresponding enum value.
     value: 100
     tags: []
     deprecation_message: ''

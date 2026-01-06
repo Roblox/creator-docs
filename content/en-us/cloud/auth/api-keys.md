@@ -51,19 +51,16 @@ To create an API key:
    access. If you don't have a fixed IP, or you are using the API key only in a
    local environment, you can leave the `Restrict IP addresses` toggle unchecked to allow any IP to use your API key.
 
-1. **(Optional)**: To add additional protection for your resources, set an
-   explicit expiration date so your key automatically stops working after that
-   date.
-1. Click the **Save and Generate key** button.
-1. Copy and save the API key string to a secure location that is **not** a
-   public repository of your code.
-1. Check your created API key on the
+1. **(Optional)**: To add additional protection for your resources, set an expiration date for your key.
+1. Click the **Save & Generate key** button.
+1. Copy and save the API key string to a secure location, **not** a public repository for your code.
+1. Verify the status of your API key on the
    [API Extensions](https://create.roblox.com/dashboard/credentials) page of **Creator
    Dashboard**.
 
-<Alert severity="warning"> The API key string is equivalent to the password of
-your application. Never share it with untrusted parties, such as anyone outside
-of your development team. </Alert>
+<Alert severity="warning">
+The API key string is equivalent to a password for your application. Never share it with untrusted parties, such as anyone outside of your development team.
+</Alert>
 
 ## Create API keys for managing group-owned resources
 

@@ -16,6 +16,7 @@ To begin, you should enable **Plugin Debugging Enabled** in the **Studio** secti
 ```lua title="AddEmptyScript Plugin"
 local ChangeHistoryService = game:GetService("ChangeHistoryService")
 local Selection = game:GetService("Selection")
+local ServerScriptService = game:GetService("ServerScriptService")
 
 -- Create a new toolbar section and Plugins menu folder titled "Custom"
 local toolbar = plugin:CreateToolbar("Custom")
@@ -28,7 +29,7 @@ newScriptButton.ClickableWhenViewportHidden = true
 
 local function onPluginButtonClicked()
 	local selectedObjects = Selection:Get()
-	local parent = game:GetService("ServerScriptService")
+	local parent = ServerScriptService
 	if #selectedObjects > 0 then
 		parent = selectedObjects[1]
 	end

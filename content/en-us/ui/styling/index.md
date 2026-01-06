@@ -3,10 +3,6 @@ title: UI styling
 description: Explore how stylesheets let you declare and globally apply overrides to UI instance properties.
 ---
 
-import BetaAlert from '../../includes/beta-features/beta-alert.md'
-
-<BetaAlert betaName="UI Styling" leadIn="UI styling and related workflows are currently in beta and must be enabled through " leadOut="." components={props.components} />
-
 UI styling is a Roblox solution to stylesheets, [similar to CSS](css-comparisons.md), that lets you declare and globally apply overrides to UI instance properties. This engine‑level support is the foundation for the [Style&nbsp;Editor](./editor.md) and the end‑to‑end token pipeline.
 
 ## Concepts

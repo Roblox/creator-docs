@@ -30,7 +30,7 @@ Certain text is **not** considered chat:
 - Writing a post on a bulletin board
 - Any user-generated text unrelated to a conversation
 
-For communication shared by users that can be seen by other users, even if it doesn't need to go through `Class.TextChatService`, you must ensure it goes through a [text filter](../ui/text-filtering.md).
+For communication shared by users that can be seen by other users, even if it doesn't need to go through `Class.TextChatService`, you must ensure it goes through a [text filter](../ui/text-filtering.md). It's recommended to add a rate limit of 1 minute for any UGC text field that might be used by players to conduct a conversation. See [rate‑limited text inputs](./examples/rate-limit-public-text-inputs.md) for an example on how to set up rate limiting for text input fields.
 
 ## Requirements
 

@@ -3,8 +3,6 @@ title: Create interactive UI
 description: Learn how to build interactive UI and connect stateful scripts to power it.
 ---
 
-import BetaAlert from '../../../includes/beta-features/beta-alert.md'
-
 A **HUD** (**Heads-Up Display**) in your experience commonly displays non‑interactive UI elements such as the health meter demonstrated in [Create HUD meters](../ui/create-hud-meters.md). Atop this, almost every experience requires **interactive** UI such as buttons that respond to player activation, animate when activated, tween in/out menus with other interactive controls, etc.
 
 <img src="../../../assets/tutorials/interactive-ui/Intro.png" width="840" alt="In-game view showing a settings button and settings menu with volume sliders." />
@@ -74,8 +72,6 @@ To construct the settings button:
    <img src="../../../assets/tutorials/interactive-ui/Settings-Button-Design-Finalized.png" width="840" alt="Final settings button in top-center of the screen." />
 
 ## Create the settings menu
-
-<BetaAlert betaName="UIDragDetectors" leadIn="To construct the interactive sliders in this section, enable " leadOut="." components={props.components} />
 
 The new [settings button](#create-the-settings-button) will be scripted to toggle a settings menu open and closed, giving players on‑demand access to settings or other information. In this tutorial, the menu will contain interactive sliders to adjust the volume levels of background audio and sound effects independently.
 
@@ -230,8 +226,6 @@ Directly to the right of the [icon](#slider-icon), the interactive portion of th
 With the [slider container](#range-frame) constructed, you can now create a **draggable handle** for players to interact with during gameplay.
 
 <img src="../../../assets/tutorials/interactive-ui/Settings-Menu-Design-Slider-Handle.png" width="840" alt="Interactive slider handle positioned within range frame." />
-
-<BetaAlert betaName="UIDragDetectors" leadIn="To complete the interactive handle in this section, remember to enable " leadOut="." components={props.components} />
 
 1. Insert a new `Class.Frame` into the **SliderFrame** container and rename it to **Handle**.
 

@@ -4,69 +4,182 @@
 
 name: Font
 type: datatype
-summary: |
-  Describes the font used to render text.
-description: |
-  Describes the **font** used to render text. Every font consists of a **font
-  family** (like Source Sans Pro), a **weight** like `Enum.FontWeight.Bold`, and
-  a **style** like `Enum.FontStyle.Italic`.
+summary: Describes the font used to render text.
+description: |-
+  Describes the font used to render text. Every font consists of a **font family**,
+  a **weight** like `Enum.FontWeight.Bold`, and a **style** like
+  `Enum.FontStyle.Italic`.
 
   Font families are a type of asset, like images or meshes. Each font family
-  contains a number of font faces, and each face has a different weight and
-  style.
+  contains a number of font faces, and each face has a different weight and style.
 
   `Datatype.Font` is used by the `Class.TextLabel.FontFace`,
-  `Class.TextButton.FontFace`, and `Class.TextBox.FontFace` properties.
-
+  `Class.TextButton.FontFace`, `Class.TextBox.FontFace`, and similar properties.
   See also `Enum.Font` as an older alternative to this datatype that is required
-  by some methods and properties (note that most fonts cannot be represented
-  with this enum).
+  by some methods and properties.
 
-  #### Font List
-
-  | Name               | Asset ID                                          | Weights                                                                       |
-  | ------------------ | ------------------------------------------------- | ----------------------------------------------------------------------------- |
-  | Accanthis ADF Std  | `rbxasset://fonts/families/AccanthisADFStd.json`  | Regular                                                                       |
-  | Amatic SC          | `rbxasset://fonts/families/AmaticSC.json`         | Regular, Bold                                                                 |
-  | Arial              | `rbxasset://fonts/families/Arial.json`            | Regular, Bold                                                                 |
-  | Arial (Legacy)     | `rbxasset://fonts/families/LegacyArial.json`      | Regular, Bold                                                                 |
-  | Arimo              | `rbxasset://fonts/families/Arimo.json`            | Regular, Medium, Semi Bold, Bold                                              |
-  | Balthazar          | `rbxasset://fonts/families/Balthazar.json`        | Regular                                                                       |
-  | Bangers            | `rbxasset://fonts/families/Bangers.json`          | Regular                                                                       |
-  | Builder Sans       | `rbxasset://fonts/families/BuilderSans.json`      | Thin, Light, Regular, medium, Semi Bold, Bold, Extra Bold                     |
-  | Comic Neue Angular | `rbxasset://fonts/families/ComicNeueAngular.json` | Bold                                                                          |
-  | Creepster          | `rbxasset://fonts/families/Creepster.json`        | Regular                                                                       |
-  | Denk One           | `rbxasset://fonts/families/DenkOne.json`          | Regular                                                                       |
-  | Fondamento         | `rbxasset://fonts/families/Fondamento.json`       | Regular                                                                       |
-  | Fredoka One        | `rbxasset://fonts/families/FredokaOne.json`       | Regular                                                                       |
-  | Gotham SSm         | `rbxasset://fonts/families/GothamSSm.json`        | Book, Medium, Bold, Black                                                     |
-  | Grenze Gotisch     | `rbxasset://fonts/families/GrenzeGotisch.json`    | Thin, Extra Light, Light, Regular, Medium, Semi Bold, Bold, Extra Bold, Black |
-  | Guru               | `rbxasset://fonts/families/Guru.json`             | Regular                                                                       |
-  | Highway Gothic     | `rbxasset://fonts/families/HighwayGothic.json`    | Regular                                                                       |
-  | Inconsolata        | `rbxasset://fonts/families/Inconsolata.json`      | Extra Light, Light, Regular, Medium, Semi Bold, Bold, Extra Bold, Black       |
-  | Indie Flower       | `rbxasset://fonts/families/IndieFlower.json`      | Regular                                                                       |
-  | Josefin Sans       | `rbxasset://fonts/families/JosefinSans.json`      | Thin, Extra Light, Light, Regular, Medium, Semi Bold, Bold                    |
-  | Jura               | `rbxasset://fonts/families/Jura.json`             | Light, Regular, Medium, Semi Bold, Bold                                       |
-  | Kalam              | `rbxasset://fonts/families/Kalam.json`            | Light, Regular, Bold                                                          |
-  | Luckiest Guy       | `rbxasset://fonts/families/LuckiestGuy.json`      | Regular                                                                       |
-  | Merriweather       | `rbxasset://fonts/families/Merriweather.json`     | Light, Regular, Bold, Black                                                   |
-  | Michroma           | `rbxasset://fonts/families/Michroma.json`         | Regular                                                                       |
-  | Montserrat         | `rbxasset://fonts/families/Montserrat.json`       | Thin, Extra Light, Light, Regular, Mediu, Semi Bold, Bold, Black              |
-  | Nunito             | `rbxasset://fonts/families/Nunito.json`           | Extra Light, Light, Regular, Semi Bold, Bold, Extra Bold, Black               |
-  | Oswald             | `rbxasset://fonts/families/Oswald.json`           | Extra Light, Light, Regular, Medium, Semi Bold, Bold                          |
-  | Patrick Hand       | `rbxasset://fonts/families/PatrickHand.json`      | Regular                                                                       |
-  | Permanent Marker   | `rbxasset://fonts/families/PermanentMarker.json`  | Regular                                                                       |
-  | Press Start 2P     | `rbxasset://fonts/families/PressStart2P.json`     | Regular                                                                       |
-  | Roboto             | `rbxasset://fonts/families/Roboto.json`           | Thin, Light, Regular, Medium, Bold, Black                                     |
-  | Roboto Condensed   | `rbxasset://fonts/families/RobotoCondensed.json`  | Light, Regular, Bold                                                          |
-  | Roboto Mono        | `rbxasset://fonts/families/RobotoMono.json`       | Thin, Extra Light, Light, Regular, Medium, Semi Bold, Bold                    |
-  | Roman Antique      | `rbxasset://fonts/families/RomanAntique.json`     | Regular                                                                       |
-  | Sarpanch           | `rbxasset://fonts/families/Sarpanch.json`         | Regular, Medium, Semi Bold, Bold, Extra Bold, Black                           |
-  | Source Sans Pro    | `rbxasset://fonts/families/SourceSansPro.json`    | Extra Light, Light, Regular, Semi Bold, Bold, Black                           |
-  | Special Elite      | `rbxasset://fonts/families/SpecialElite.json`     | Regular                                                                       |
-  | Titillium Web      | `rbxasset://fonts/families/TitilliumWeb.json`     | Extra Light, Light, Regular, Semi Bold, Bold, Black                           |
-  | Ubuntu             | `rbxasset://fonts/families/Ubuntu.json`           | Light, Regular, Medium, Bold                                                  |
-  | Zekton             | `rbxasset://fonts/families/Zekton.json`           | Regular                                                                       |
+  <table size="small">
+  <thead>
+  <tr>
+    <th width="25%">Name</th>
+    <th width="75%">Asset ID / Weights / Appearance</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Accanthis ADF Std</td>
+    <td><code>rbxasset://fonts/families/AccanthisADFStd.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Accanthis-ADF-Std.png" /></td>
+  </tr>
+  <tr>
+    <td>Amatic SC</td>
+    <td><code>rbxasset://fonts/families/AmaticSC.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Amatic-SC.png" /></td>
+  </tr>
+  <tr>
+    <td>Arimo</td>
+    <td><code>rbxasset://fonts/families/Arimo.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Arimo.png" /></td>
+  </tr>
+  <tr>
+    <td>Balthazar</td>
+    <td><code>rbxasset://fonts/families/Balthazar.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Balthazar.png" /></td>
+  </tr>
+  <tr>
+    <td>Bangers</td>
+    <td><code>rbxasset://fonts/families/Bangers.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Bangers.png" /></td>
+  </tr>
+  <tr>
+    <td>Builder Sans</td>
+    <td><code>rbxasset://fonts/families/BuilderSans.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Builder-Sans.png" /></td>
+  </tr>
+  <tr>
+    <td>Comic Neue Angular</td>
+    <td><code>rbxasset://fonts/families/ComicNeueAngular.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Comic-Neue-Angular.png" /></td>
+  </tr>
+  <tr>
+    <td>Creepster</td>
+    <td><code>rbxasset://fonts/families/Creepster.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Creepster.png" /></td>
+  </tr>
+  <tr>
+    <td>Denk One</td>
+    <td><code>rbxasset://fonts/families/DenkOne.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Denk-One.png" /></td>
+  </tr>
+  <tr>
+    <td>Fondamento</td>
+    <td><code>rbxasset://fonts/families/Fondamento.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Fondamento.png" /></td>
+  </tr>
+  <tr>
+    <td>Fredoka One</td>
+    <td><code>rbxasset://fonts/families/FredokaOne.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Fredoka-One.png" /></td>
+  </tr>
+  <tr>
+    <td>Grenze Gotisch</td>
+    <td><code>rbxasset://fonts/families/GrenzeGotisch.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Grenze-Gotisch.png" /></td>
+  </tr>
+  <tr>
+    <td>Guru</td>
+    <td><code>rbxasset://fonts/families/Guru.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Guru.png" /></td>
+  </tr>
+  <tr>
+    <td>Highway Gothic</td>
+    <td><code>rbxasset://fonts/families/HighwayGothic.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Highway-Gothic.png" /></td>
+  </tr>
+  <tr>
+    <td>Inconsolata</td>
+    <td><code>rbxasset://fonts/families/Inconsolata.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Inconsolata.png" /></td>
+  </tr>
+  <tr>
+    <td>Indie Flower</td>
+    <td><code>rbxasset://fonts/families/IndieFlower.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Indie-Flower.png" /></td>
+  </tr>
+  <tr>
+    <td>Josefin Sans</td>
+    <td><code>rbxasset://fonts/families/JosefinSans.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Josefin-Sans.png" /></td>
+  </tr>
+  <tr>
+    <td>Jura</td>
+    <td><code>rbxasset://fonts/families/Jura.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Jura.png" /></td>
+  </tr>
+  <tr>
+    <td>Kalam</td>
+    <td><code>rbxasset://fonts/families/Kalam.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Kalam.png" /></td>
+  </tr>
+  <tr>
+    <td>Luckiest Guy</td>
+    <td><code>rbxasset://fonts/families/LuckiestGuy.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Luckiest-Guy.png" /></td>
+  </tr>
+  <tr>
+    <td>Merriweather</td>
+    <td><code>rbxasset://fonts/families/Merriweather.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Merriweather.png" /></td>
+  </tr>
+  <tr>
+    <td>Michroma</td>
+    <td><code>rbxasset://fonts/families/Michroma.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Michroma.png" /></td>
+  </tr>
+  <tr>
+    <td>Montserrat</td>
+    <td><code>rbxasset://fonts/families/Montserrat.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Montserrat.png" /></td>
+  </tr>
+  <tr>
+    <td>Nunito</td>
+    <td><code>rbxasset://fonts/families/Nunito.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Nunito.png" /></td>
+  </tr>
+  <tr>
+    <td>Oswald</td>
+    <td><code>rbxasset://fonts/families/Oswald.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Oswald.png" /></td>
+  </tr>
+  <tr>
+    <td>Patrick Hand</td>
+    <td><code>rbxasset://fonts/families/PatrickHand.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Patrick-Hand.png" /></td>
+  </tr>
+  <tr>
+    <td>Permanent Marker</td>
+    <td><code>rbxasset://fonts/families/PermanentMarker.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Permanent-Marker.png" /></td>
+  </tr>
+  <tr>
+    <td>Press Start 2P</td>
+    <td><code>rbxasset://fonts/families/PressStart2P.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Press-Start-2P.png" /></td>
+  </tr>
+  <tr>
+    <td>Roboto</td>
+    <td><code>rbxasset://fonts/families/Roboto.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Roboto.png" /></td>
+  </tr>
+  <tr>
+    <td>Roboto Condensed</td>
+    <td><code>rbxasset://fonts/families/RobotoCondensed.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Roboto-Condensed.png" /></td>
+  </tr>
+  <tr>
+    <td>Roboto Mono</td>
+    <td><code>rbxasset://fonts/families/RobotoMono.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Roboto-Mono.png" /></td>
+  </tr>
+  <tr>
+    <td>Roman Antique</td>
+    <td><code>rbxasset://fonts/families/RomanAntique.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Roman-Antique.png" /></td>
+  </tr>
+  <tr>
+    <td>Sarpanch</td>
+    <td><code>rbxasset://fonts/families/Sarpanch.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Sarpanch.png" /></td>
+  </tr>
+  <tr>
+    <td>Source Sans Pro</td>
+    <td><code>rbxasset://fonts/families/SourceSansPro.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Source-Sans-Pro.png" /></td>
+  </tr>
+  <tr>
+    <td>Special Elite</td>
+    <td><code>rbxasset://fonts/families/SpecialElite.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Special-Elite.png" /></td>
+  </tr>
+  <tr>
+    <td>Titillium Web</td>
+    <td><code>rbxasset://fonts/families/TitilliumWeb.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Titillium-Web.png" /></td>
+  </tr>
+  <tr>
+    <td>Ubuntu</td>
+    <td><code>rbxasset://fonts/families/Ubuntu.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Ubuntu.png" /></td>
+  </tr>
+  <tr>
+    <td>Zekton</td>
+    <td><code>rbxasset://fonts/families/Zekton.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Zekton.png" /></td>
+  </tr>
+  </tbody>
+  </table>
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -98,62 +211,170 @@ constructors:
     description: |-
       Creates a `Datatype.Font` from an `Enum.Font` value. Throws an error when called with `Enum.Font.Unknown`.
 
-      The following table indicates the family, weight, and style associated with each `Enum.Font`.
+      The following table indicates how each `Enum.Font` value maps to a font `Datatype.Font.Family|Family`.
 
-      | Font Enum            | Family                                            | Weight    | Style  |
-      | -------------------- | ------------------------------------------------- | --------  | ------ |
-      | AmaticSC             | `rbxasset://fonts/families/AmaticSC.json`         | Regular   | Normal |
-      | Antique              | `rbxasset://fonts/families/RomanAntique.json`     | Regular   | Normal |
-      | Arcade               | `rbxasset://fonts/families/PressStart2P.json`     | Regular   | Normal |
-      | Arial                | `rbxasset://fonts/families/Arial.json`            | Regular   | Normal |
-      | ArialBold            | `rbxasset://fonts/families/Arial.json`            | Bold      | Normal |
-      | Arimo                | `rbxasset://fonts/families/Arimo.json`            | Regular   | Normal |
-      | ArimoBold            | `rbxasset://fonts/families/Arimo.json`            | Bold      | Normal |
-      | Bangers              | `rbxasset://fonts/families/Bangers.json`          | Regular   | Normal |
-      | Bodoni               | `rbxasset://fonts/families/AccanthisADFStd.json`  | Regular   | Normal |
-      | BuilderSans          | `rbxasset://fonts/families/BuilderSans.json`      | Regular   | Normal |
-      | BuilderSansMedium    | `rbxasset://fonts/families/BuilderSans.json`      | Medium    | Normal |
-      | BuilderSansBold      | `rbxasset://fonts/families/BuilderSans.json`      | Bold      | Normal |
-      | BuilderSansExtraBold | `rbxasset://fonts/families/BuilderSans.json`      | ExtraBold | Normal |
-      | Cartoon              | `rbxasset://fonts/families/ComicNeueAngular.json` | Regular   | Normal |
-      | Code                 | `rbxasset://fonts/families/Inconsolata.json`      | Regular   | Normal |
-      | Creepster            | `rbxasset://fonts/families/Creepster.json`        | Regular   | Normal |
-      | DenkOne              | `rbxasset://fonts/families/DenkOne.json`          | Regular   | Normal |
-      | Fantasy              | `rbxasset://fonts/families/Balthazar.json`        | Regular   | Normal |
-      | Fondamento           | `rbxasset://fonts/families/Fondamento.json`       | Regular   | Normal |
-      | FredokaOne           | `rbxasset://fonts/families/FredokaOne.json`       | Regular   | Normal |
-      | Garamond             | `rbxasset://fonts/families/Guru.json`             | Regular   | Normal |
-      | Gotham               | `rbxasset://fonts/families/GothamSSm.json`        | Regular   | Normal |
-      | GothamBlack          | `rbxasset://fonts/families/GothamSSm.json`        | Heavy     | Normal |
-      | GothamBold           | `rbxasset://fonts/families/GothamSSm.json`        | Bold      | Normal |
-      | GothamMedium         | `rbxasset://fonts/families/GothamSSm.json`        | Medium    | Normal |
-      | GrenzeGotisch        | `rbxasset://fonts/families/GrenzeGotisch.json`    | Regular   | Normal |
-      | Highway              | `rbxasset://fonts/families/HighwayGothic.json`    | Regular   | Normal |
-      | IndieFlower          | `rbxasset://fonts/families/IndieFlower.json`      | Regular   | Normal |
-      | JosefinSans          | `rbxasset://fonts/families/JosefinSans.json`      | Regular   | Normal |
-      | Jura                 | `rbxasset://fonts/families/Jura.json`             | Regular   | Normal |
-      | Kalam                | `rbxasset://fonts/families/Kalam.json`            | Regular   | Normal |
-      | Legacy               | `rbxasset://fonts/families/LegacyArial.json`      | Regular   | Normal |
-      | LuckiestGuy          | `rbxasset://fonts/families/LuckiestGuy.json`      | Regular   | Normal |
-      | Merriweather         | `rbxasset://fonts/families/Merriweather.json`     | Regular   | Normal |
-      | Michroma             | `rbxasset://fonts/families/Michroma.json`         | Regular   | Normal |
-      | Nunito               | `rbxasset://fonts/families/Nunito.json`           | Regular   | Normal |
-      | Oswald               | `rbxasset://fonts/families/Oswald.json`           | Regular   | Normal |
-      | PatrickHand          | `rbxasset://fonts/families/PatrickHand.json`      | Regular   | Normal |
-      | PermanentMarker      | `rbxasset://fonts/families/PermanentMarker.json`  | Regular   | Normal |
-      | Roboto               | `rbxasset://fonts/families/Roboto.json`           | Regular   | Normal |
-      | RobotoCondensed      | `rbxasset://fonts/families/RobotoCondensed.json`  | Regular   | Normal |
-      | RobotoMono           | `rbxasset://fonts/families/RobotoMono.json`       | Regular   | Normal |
-      | Sarpanch             | `rbxasset://fonts/families/Sarpanch.json`         | Regular   | Normal |
-      | SciFi                | `rbxasset://fonts/families/Zekton.json`           | Regular   | Normal |
-      | SourceSans           | `rbxasset://fonts/families/SourceSansPro.json`    | Regular   | Normal |
-      | SourceSansBold       | `rbxasset://fonts/families/SourceSansPro.json`    | Bold      | Normal |
-      | SourceSansItalic     | `rbxasset://fonts/families/SourceSansPro.json`    | Regular   | Italic |
-      | SourceSansLight      | `rbxasset://fonts/families/SourceSansPro.json`    | Light     | Normal |
-      | SourceSansSemibold   | `rbxasset://fonts/families/SourceSansPro.json`    | SemiBold  | Normal |
-      | SpecialElite         | `rbxasset://fonts/families/SpecialElite.json`     | Regular   | Normal |
-      | TitilliumWeb         | `rbxasset://fonts/families/TitilliumWeb.json`     | Regular   | Normal |
-      | Ubuntu               | `rbxasset://fonts/families/Ubuntu.json`           | Regular   | Normal |
+      <table size="small">
+      <thead>
+      <tr>
+        <th>Font Enums</th>
+        <th>Equivalent Family</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><code>Enum.Font.AmaticSC|AmaticSC</code></td>
+        <td><code>rbxasset://fonts/families/AmaticSC.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Antique|Antique</code></td>
+        <td><code>rbxasset://fonts/families/RomanAntique.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Arcade|Arcade</code></td>
+        <td><code>rbxasset://fonts/families/PressStart2P.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Arimo|Arimo</code>, <code>Enum.Font.ArimoBold|ArimoBold</code></td>
+        <td><code>rbxasset://fonts/families/Arimo.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Bangers|Bangers</code></td>
+        <td><code>rbxasset://fonts/families/Bangers.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Bodoni|Bodoni</code></td>
+        <td><code>rbxasset://fonts/families/AccanthisADFStd.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.BuilderSans|BuilderSans</code>, <code>Enum.Font.BuilderSansMedium|BuilderSansMedium</code>, <code>Enum.Font.BuilderSansBold|BuilderSansBold</code>, <code>Enum.Font.BuilderSansExtraBold|BuilderSansExtraBold</code></td>
+        <td><code>rbxasset://fonts/families/BuilderSans.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Cartoon|Cartoon</code></td>
+        <td><code>rbxasset://fonts/families/ComicNeueAngular.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Code|Code</code></td>
+        <td><code>rbxasset://fonts/families/Inconsolata.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Creepster|Creepster</code></td>
+        <td><code>rbxasset://fonts/families/Creepster.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.DenkOne|DenkOne</code></td>
+        <td><code>rbxasset://fonts/families/DenkOne.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Fantasy|Fantasy</code></td>
+        <td><code>rbxasset://fonts/families/Balthazar.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Fondamento|Fondamento</code></td>
+        <td><code>rbxasset://fonts/families/Fondamento.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.FredokaOne|FredokaOne</code></td>
+        <td><code>rbxasset://fonts/families/FredokaOne.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Garamond|Garamond</code></td>
+        <td><code>rbxasset://fonts/families/Guru.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.GrenzeGotisch|GrenzeGotisch</code></td>
+        <td><code>rbxasset://fonts/families/GrenzeGotisch.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Highway|Highway</code></td>
+        <td><code>rbxasset://fonts/families/HighwayGothic.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.IndieFlower|IndieFlower</code></td>
+        <td><code>rbxasset://fonts/families/IndieFlower.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.JosefinSans|JosefinSans</code></td>
+        <td><code>rbxasset://fonts/families/JosefinSans.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Jura|Jura</code></td>
+        <td><code>rbxasset://fonts/families/Jura.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Kalam|Kalam</code></td>
+        <td><code>rbxasset://fonts/families/Kalam.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Legacy|Legacy</code></td>
+        <td><code>rbxasset://fonts/families/LegacyArial.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.LuckiestGuy|LuckiestGuy</code></td>
+        <td><code>rbxasset://fonts/families/LuckiestGuy.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Merriweather|Merriweather</code></td>
+        <td><code>rbxasset://fonts/families/Merriweather.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Michroma|Michroma</code></td>
+        <td><code>rbxasset://fonts/families/Michroma.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Nunito|Nunito</code></td>
+        <td><code>rbxasset://fonts/families/Nunito.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Oswald|Oswald</code></td>
+        <td><code>rbxasset://fonts/families/Oswald.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.PatrickHand|PatrickHand</code></td>
+        <td><code>rbxasset://fonts/families/PatrickHand.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.PermanentMarker|PermanentMarker</code></td>
+        <td><code>rbxasset://fonts/families/PermanentMarker.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Roboto|Roboto</code></td>
+        <td><code>rbxasset://fonts/families/Roboto.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.RobotoCondensed|RobotoCondensed</code></td>
+        <td><code>rbxasset://fonts/families/RobotoCondensed.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.RobotoMono|RobotoMono</code></td>
+        <td><code>rbxasset://fonts/families/RobotoMono.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Sarpanch|Sarpanch</code></td>
+        <td><code>rbxasset://fonts/families/Sarpanch.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.SciFi|SciFi</code></td>
+        <td><code>rbxasset://fonts/families/Zekton.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.SourceSans|SourceSans</code>, <code>Enum.Font.SourceSansBold|SourceSansBold</code>, <code>Enum.Font.SourceSansItalic|SourceSansItalic</code>, <code>Enum.Font.SourceSansLight|SourceSansLight</code>, <code>Enum.Font.SourceSansSemibold|SourceSansSemibold</code></td>
+        <td><code>rbxasset://fonts/families/SourceSansPro.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.SpecialElite|SpecialElite</code></td>
+        <td><code>rbxasset://fonts/families/SpecialElite.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.TitilliumWeb|TitilliumWeb</code></td>
+        <td><code>rbxasset://fonts/families/TitilliumWeb.json</code></td>
+      </tr>
+      <tr>
+        <td><code>Enum.Font.Ubuntu|Ubuntu</code></td>
+        <td><code>rbxasset://fonts/families/Ubuntu.json</code></td>
+      </tr>
+      </tbody>
+      </table>
     parameters:
       - name: font
         type: Font
@@ -164,9 +385,9 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: Font.fromName
-    summary: Creates a Font from a name like `FredokaOne`.
+    summary: Creates a `Datatype.Font` from a name like `FredokaOne`.
     description: |-
-      This is a convenience method for creating fonts from the content folder. The name you pass in will be converted into an asset ID like `rbxasset://fonts/families/YourFontNameHere.json`.
+      This is a convenience method for creating fonts from the content folder. The name you pass in will be converted into an asset ID like `rbxasset://fonts/families/BuilderSans.json`.
 
       The name can only contain alphabetical characters, digits, `_` (underscore), and `-` (hyphen). It can't contain any spaces.
     parameters:
@@ -187,7 +408,7 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: Font.fromId
-    summary: Creates a Font from a numerical asset ID.
+    summary: Creates a `Datatype.Font` from a numerical asset ID.
     description: This is a convenience method for creating fonts from an asset ID number.
     parameters:
       - name: id
@@ -210,9 +431,8 @@ constants: []
 properties:
   - name: Font.Family
     type: Content
-    summary: |
-      The asset ID for the font family.
-    description: |
+    summary: The asset ID for the font family.
+    description: |-
       The asset ID for the font family. These start with either `rbxasset://` or
       `rbxassetid://`.
     default:
@@ -221,12 +441,11 @@ properties:
     deprecation_message: ''
   - name: Font.Weight
     type: FontWeight
-    summary: |
-      How thick the text is.
-    description: |
+    summary: How thick the text is.
+    description: |-
       How thick the text is. The default value is `Enum.FontWeight.Regular`.
 
-      When set, `Datatype.Font.Bold` is updated. Bold is true if the weight is
+      When set, `Datatype.Font.Bold` is updated and becomes `true` if the weight is
       `Enum.FontWeight.SemiBold` or thicker.
     default:
     code_samples: []
@@ -234,22 +453,18 @@ properties:
     deprecation_message: ''
   - name: Font.Style
     type: FontStyle
-    summary: |
-      Whether the font is italic.
-    description: |
-      Whether the font is italic. The default value is `Enum.FontStyle.Normal`.
-      The font can be made italic (_like this_) using `Enum.FontStyle.Italic`.
+    summary: Whether the font is italic.
+    description: Whether the font is italic. The default value is `Enum.FontStyle.Normal`.
     default:
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Font.Bold
     type: bool
-    summary: |
-      Whether the font is bold.
-    description: |
+    summary: Whether the font is bold.
+    description: |-
       Whether the font is bold. Sets `Datatype.Font.Weight` to
-      `Enum.FontWeight.Bold` when true, and `Enum.FontWeight.Regular` otherwise.
+      `Enum.FontWeight.Bold` when `true`, or to `Enum.FontWeight.Regular` otherwise.
     default:
     code_samples: []
     tags: []

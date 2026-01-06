@@ -3,10 +3,6 @@ title: CSS Comparisons
 description: Explore how CSS concepts map to Roblox UI styling concepts.
 ---
 
-import BetaAlert from '../../includes/beta-features/beta-alert.md'
-
-<BetaAlert betaName="UI Styling" leadIn="UI styling and related workflows are currently in beta and must be enabled through " leadOut="." components={props.components} />
-
 Most CSS concepts map to Roblox styling concepts. The following examples show how CSS and HTML align with Luau and Roblox classes/properties.
 
 To test each of the following Luau script examples:

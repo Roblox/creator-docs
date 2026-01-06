@@ -3,10 +3,6 @@ title: UI styling compatibility
 description: Outlines all of the classes and associated properties which can be styled.
 ---
 
-import BetaAlert from '../../includes/beta-features/beta-alert.md'
-
-<BetaAlert betaName="UI Styling" leadIn="UI styling and related workflows are currently in beta and must be enabled through " leadOut="." components={props.components} />
-
 The following tables outline all of the classes and associated properties which can be styled. Additional support may be added over time, so please bookmark this page for reference.
 
 ## UI objects

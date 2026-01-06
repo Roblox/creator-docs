@@ -3,8 +3,6 @@ title: Skyboxes
 description: Skyboxes are cubes made up of six individual images that create an immersive background.
 ---
 
-import BetaAlert from '../includes/beta-features/beta-alert.md'
-
 A **skybox** is a cube made up of six individual images that create an immersive sky background in an experience. When the images are designed to be perfectly aligned with each other, the skybox appears to be panoramic without the impression of being inside a cube. This makes experiences feel larger than they really are, and it adds depth to your atmosphere, such as simulating deep space or underwater environments.
 
 Additionally, the `Class.Sky` object includes celestial bodies such as a sun, moon, and stars which dynamically appear, rise, and set based on the
@@ -60,8 +58,6 @@ To disable all celestial bodies, you can toggle off the `Class.Sky.CelestialBodi
 </Alert>
 
 ## Orientation
-
-<BetaAlert betaName="Skybox Orientation" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
 
 The `Class.Sky.SkyboxOrientation|SkyboxOrientation` property changes the orientation of the skybox surfaces. The property takes a `Datatype.Vector3` of degree values in the typical **XYZ** order, but rotation is **applied** first around the **Y** axis, then **X**, and then **Z** to allow for predictable control over complex movements.
 

@@ -21,6 +21,42 @@ descendants: []
 tags: []
 deprecation_message: ''
 properties:
+  - name: MaterialVariant.AlphaMode
+    summary: |
+      Determines how the alpha channel of the `Class.MaterialVariant.ColorMap`
+      is used.
+    description: |
+      This property determines how the alpha channel of the
+      `Class.MaterialVariant.ColorMap` is used.
+
+      When set to `Enum.AlphaMode|Transparency` and the
+      `Class.MeshPart.Transparency` is set to `0`, opaque pixels in the
+      `Class.MaterialVariant.ColorMap|ColorMap` renders as completely opaque in
+      the 3D scene. This combination works better with depth-based effects and
+      occlusion.
+
+      When set to `Enum.AlphaMode|Transparency` and the
+      `Class.MeshPart.Transparency` is set to at least `0.02`, a different
+      blending method is used that can better represent smooth transparency
+      gradients and soft edges. This combination does not support all effects
+      and occlusion may not be perfect.
+
+      For more information, see
+      [Alpha modes](../../../art/modeling/surface-appearance.md#alpha-modes).
+    code_samples: []
+    type: AlphaMode
+    tags:
+      - NotBrowsable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: MaterialVariant.BaseMaterial
     summary: |
       Category Material this variant belongs to.

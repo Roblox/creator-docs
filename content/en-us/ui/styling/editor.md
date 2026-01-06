@@ -3,10 +3,6 @@ title: Style Editor
 description: Explore the built-in Style Editor, a comprehensive tool that allows you to create, manage, and apply UI styles for Roblox experiences.
 ---
 
-import BetaAlert from '../../includes/beta-features/beta-alert.md'
-
-<BetaAlert betaName="UI Styling" leadIn="UI styling and related workflows are currently in beta and must be enabled through " leadOut="." components={props.components} />
-
 The built-in **Style Editor** is a comprehensive tool that allows you to create, manage, and apply UI styles for Roblox experiences through a combination of [tokens](#style-tokens), [design sheets](#design-sheets), [style rules](#style-rules), and [themes](#style-themes).
 
 <figure>

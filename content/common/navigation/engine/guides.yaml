@@ -468,7 +468,8 @@ navigation:
                 path: /chat/examples/simple-custom-frontend-ui
               - title: Custom chat commands
                 path: /chat/examples/custom-text-chat-commands
-
+              - title: Rate-limited text inputs
+                path: /chat/examples/rate-limit-public-text-inputs
   - title: Matchmaking
     path: /matchmaking/
     section:
