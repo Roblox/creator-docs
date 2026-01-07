@@ -4,8 +4,10 @@
 
 name: FontWeight
 type: enum
-summary: Describes how thick a `Datatype.Font` is.
-description: Describes how thick a `Datatype.Font` is. Used by `Datatype.Font.Weight`.
+summary: |
+  Describes how thick a `Datatype.Font` is.
+description: |
+  Describes how thick a `Datatype.Font` is. Used by `Datatype.Font.Weight`.
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -26,7 +28,8 @@ items:
     tags: []
     deprecation_message: ''
   - name: Regular
-    summary: The default thickness for text.
+    summary: |
+      The default thickness for text.
     value: 400
     tags: []
     deprecation_message: ''

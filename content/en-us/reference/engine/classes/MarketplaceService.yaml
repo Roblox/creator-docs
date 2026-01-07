@@ -59,36 +59,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-  - name: MarketplaceService:GetProductInfo
-    summary: |
-      Returns the product information of an asset using its asset ID.
-    description: ''
-    code_samples:
-      - MarketplaceService-GetProductInfo1
-    parameters:
-      - name: assetId
-        type: int64
-        default:
-        summary: |
-          The asset ID of the specified product.
-      - name: infoType
-        type: InfoType
-        default: Asset
-        summary: |
-          An `Enum.InfoType` enum value specifying the type of information being
-          retrieved.
-    returns:
-      - type: Dictionary
-        summary: |
-          A dictionary containing information about the queried item, described
-          in the previous tables.
-    tags:
-      - Yields
-      - Deprecated
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
   - name: MarketplaceService:GetProductInfoAsync
     summary: |
       Returns the product information of an asset using its asset ID.
@@ -373,6 +343,36 @@ methods:
           in the previous tables.
     tags:
       - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: MarketplaceService:GetProductInfo
+    summary: |
+      Returns the product information of an asset using its asset ID.
+    description: ''
+    code_samples:
+      - MarketplaceService-GetProductInfo1
+    parameters:
+      - name: assetId
+        type: int64
+        default:
+        summary: |
+          The asset ID of the specified product.
+      - name: infoType
+        type: InfoType
+        default: Asset
+        summary: |
+          An `Enum.InfoType` enum value specifying the type of information being
+          retrieved.
+    returns:
+      - type: Dictionary
+        summary: |
+          A dictionary containing information about the queried item, described
+          in the previous tables.
+    tags:
+      - Yields
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -772,36 +772,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-  - name: MarketplaceService:PlayerOwnsAsset
-    summary: |
-      Returns whether the given user has the given asset.
-    description: ''
-    code_samples:
-      - MarketplaceService-PlayerOwnsAsset1
-    parameters:
-      - name: player
-        type: Instance
-        default:
-        summary: |
-          The `Class.Player` whose inventory is tested for ownership of the
-          given asset.
-      - name: assetId
-        type: int64
-        default:
-        summary: |
-          The asset ID for which the given player's inventory is tested.
-    returns:
-      - type: boolean
-        summary: |
-          Indicates whether the given player's inventory contains the given
-          asset.
-    tags:
-      - Yields
-      - Deprecated
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
   - name: MarketplaceService:PlayerOwnsAssetAsync
     summary: |
       Returns whether the given user has the given asset.
@@ -846,29 +816,29 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-  - name: MarketplaceService:PlayerOwnsBundle
+  - name: MarketplaceService:PlayerOwnsAsset
     summary: |
-      Returns whether the given player owns the given bundle.
+      Returns whether the given user has the given asset.
     description: ''
     code_samples:
-      - MarketplaceService-PlayerOwnsBundle1
+      - MarketplaceService-PlayerOwnsAsset1
     parameters:
       - name: player
-        type: Player
+        type: Instance
         default:
         summary: |
           The `Class.Player` whose inventory is tested for ownership of the
-          given bundle.
-      - name: bundleId
+          given asset.
+      - name: assetId
         type: int64
         default:
         summary: |
-          The bundle ID for which the given player's inventory is tested.
+          The asset ID for which the given player's inventory is tested.
     returns:
       - type: boolean
         summary: |
           Indicates whether the given player's inventory contains the given
-          bundle.
+          asset.
     tags:
       - Yields
       - Deprecated
@@ -904,6 +874,36 @@ methods:
           bundle.
     tags:
       - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: MarketplaceService:PlayerOwnsBundle
+    summary: |
+      Returns whether the given player owns the given bundle.
+    description: ''
+    code_samples:
+      - MarketplaceService-PlayerOwnsBundle1
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` whose inventory is tested for ownership of the
+          given bundle.
+      - name: bundleId
+        type: int64
+        default:
+        summary: |
+          The bundle ID for which the given player's inventory is tested.
+    returns:
+      - type: boolean
+        summary: |
+          Indicates whether the given player's inventory contains the given
+          bundle.
+    tags:
+      - Yields
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

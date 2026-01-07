@@ -9,191 +9,204 @@ summary: |
   A service used by Roblox to run controlled tests of the engine. It is
   available for developers to use, to a limited degree.
 description: |
-  The TestService is a service used by Roblox internally to run analytical tests
-  on their engine. It makes it possible to write sophisticated tests right
-  inside a game.
+  `TestService` is a service used by Roblox internally to run analytical tests
+  on the engine.
 
-  ## Macros
-
-  Scripts that are executed inside of the TestService (via
+  Scripts that are executed inside of `TestService` (via
   `Class.TestService:Run()`) have access to special macros that directly invoke
-  functions under the TestService. Macros are essentially substitutions for
-  large blocks of code that shouldn't need to be rewritten each time you want to
-  call them.
+  functions under the service. Macros are essentially substitutions for large
+  blocks of code that shouldn't need to be rewritten each time you want to call
+  them.
 
-  ### RBX_CHECK
+  #### RBX_CHECK
 
   This macro does tests with calls to the `Class.TestService:Check()` function.
 
-  <table>
+  <table size="small">
+    <thead>
   	<tr>
   		<th>Macro</th>
   		<th>Test Condition</th>
   	</tr>
+    </thead>
+    <tbody>
   	<tr>
-  		<td>RBX_CHECK(cond)</td>
-  		<td>cond == true</td>
+  		<td><code>RBX_CHECK(cond)</code></td>
+  		<td><code>cond == true</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_CHECK_MESSAGE(cond, failMsg)</td>
-  		<td>cond == true</td>
+  		<td><code>RBX_CHECK_MESSAGE(cond, failMsg)</code></td>
+  		<td><code>cond == true</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_CHECK_THROW(CODE)</td>
-  		<td>pcall(function() CODE end) == false</td>
+  		<td><code>RBX_CHECK_THROW(CODE)</code></td>
+  		<td><code>pcall(function() CODE end) == false</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_CHECK_NO_THROW(CODE)</td>
-  		<td>pcall(function() CODE end) == true</td>
+  		<td><code>RBX_CHECK_NO_THROW(CODE)</code></td>
+  		<td><code>pcall(function() CODE end) == true</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_CHECK_EQUAL(a,b)</td>
-  		<td>a == b</td>
+  		<td><code>RBX_CHECK_EQUAL(a, b)</code></td>
+  		<td><code>a == b</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_CHECK_NE(a,b)</td>
-  		<td>a ~= b</td>
+  		<td><code>RBX_CHECK_NE(a, b)</code></td>
+  		<td><code>a ~= b</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_CHECK_GE(a,b)</td>
-  		<td>a &gt;= b</td>
+  		<td><code>RBX_CHECK_GE(a, b)</code></td>
+  		<td><code>a &gt;= b</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_CHECK_LE(a,b)</td>
-  		<td>a &lt;= b</td>
+  		<td><code>RBX_CHECK_LE(a, b)</code></td>
+  		<td><code>a &lt;= b</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_CHECK_GT(a,b)</td>
-  		<td>a &gt; b</td>
+  		<td><code>RBX_CHECK_GT(a, b)</code></td>
+  		<td><code>a &gt; b</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_CHECK_LT(a,b)</td>
-  		<td>a &lt; b</td>
+  		<td><code>RBX_CHECK_LT(a, b)</code></td>
+  		<td><code>a &lt; b</code></td>
   	</tr>
+    </tbody>
   </table>
 
-  ### RBX_REQUIRE
+  #### RBX_REQUIRE
 
   This macro does tests with calls to the `Class.TestService:Require()`
   function.
 
-  <table>
+  <table size="small">
+    <thead>
   	<tr>
   		<th>Macro</th>
   		<th>Test Condition</th>
   	</tr>
+    </thead>
+    <tbody>
   	<tr>
-  		<td>RBX_REQUIRE(cond)</td>
-  		<td>cond == true</td>
+  		<td><code>RBX_REQUIRE(cond)</code></td>
+  		<td><code>cond == true</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_REQUIRE_MESSAGE(cond, failMsg)</td>
-  		<td>cond == true</td>
+  		<td><code>RBX_REQUIRE_MESSAGE(cond, failMsg)</code></td>
+  		<td><code>cond == true</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_REQUIRE_THROW(CODE)</td>
-  		<td>pcall(function() CODE end) == false</td>
+  		<td><code>RBX_REQUIRE_THROW(CODE)</code></td>
+  		<td><code>pcall(function() CODE end) == false</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_REQUIRE_NO_THROW(CODE)</td>
-  		<td>pcall(function() CODE end) == true</td>
+  		<td><code>RBX_REQUIRE_NO_THROW(CODE)</code></td>
+  		<td><code>pcall(function() CODE end) == true</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_REQUIRE_EQUAL(a,b)</td>
-  		<td>a == b</td>
+  		<td><code>RBX_REQUIRE_EQUAL(a, b)</code></td>
+  		<td><code>a == b</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_REQUIRE_NE(a,b)</td>
-  		<td>a ~= b</td>
+  		<td><code>RBX_REQUIRE_NE(a, b)</code></td>
+  		<td><code>a ~= b</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_REQUIRE_GE(a,b)</td>
-  		<td>a &gt;= b</td>
+  		<td><code>RBX_REQUIRE_GE(a, b)</code></td>
+  		<td><code>a &gt;= b</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_REQUIRE_LE(a,b)</td>
-  		<td>a &lt;= b</td>
+  		<td><code>RBX_REQUIRE_LE(a, b)</code></td>
+  		<td><code>a &lt;= b</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_REQUIRE_GT(a,b)</td>
-  		<td>a &gt; b</td>
+  		<td><code>RBX_REQUIRE_GT(a, b)</code></td>
+  		<td><code>a &gt; b</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_REQUIRE_LT(a,b)</td>
-  		<td>a &lt; b</td>
+  		<td><code>RBX_REQUIRE_LT(a, b)</code></td>
+  		<td><code>a &lt; b</code></td>
   	</tr>
+    </tbody>
   </table>
 
-  ### RBX_WARN
+  #### RBX_WARN
 
   This macro does tests with calls to the `Class.TestService:Warn()` function.
 
-  <table>
+  <table size="small">
+    <thead>
   	<tr>
   		<th>Macro</th>
   		<th>Test Condition</th>
   	</tr>
+    </thead>
+    <tbody>
   	<tr>
-  		<td>RBX_WARN(cond)</td>
-  		<td>cond == true</td>
+  		<td><code>RBX_WARN(cond)</code></td>
+  		<td><code>cond == true</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_WARN_MESSAGE(cond, failMsg)</td>
-  		<td>cond == true</td>
+  		<td><code>RBX_WARN_MESSAGE(cond, failMsg)</code></td>
+  		<td><code>cond == true</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_WARN_THROW(CODE)</td>
-  		<td>pcall(function() CODE end) == false</td>
+  		<td><code>RBX_WARN_THROW(CODE)</code></td>
+  		<td><code>pcall(function() CODE end) == false</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_WARN_NO_THROW(CODE)</td>
-  		<td>pcall(function() CODE end) == true</td>
+  		<td><code>RBX_WARN_NO_THROW(CODE)</code></td>
+  		<td><code>pcall(function() CODE end) == true</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_WARN_EQUAL(a,b)</td>
-  		<td>a == b</td>
+  		<td><code>RBX_WARN_EQUAL(a, b)</code></td>
+  		<td><code>a == b</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_WARN_NE(a,b)</td>
-  		<td>a ~= b</td>
+  		<td><code>RBX_WARN_NE(a, b)</code></td>
+  		<td><code>a ~= b</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_WARN_GE(a,b)</td>
-  		<td>a &gt;= b</td>
+  		<td><code>RBX_WARN_GE(a, b)</code></td>
+  		<td><code>a &gt;= b</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_WARN_LE(a,b)</td>
-  		<td>a &lt;= b</td>
+  		<td><code>RBX_WARN_LE(a, b)</code></td>
+  		<td><code>a &lt;= b</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_WARN_GT(a,b)</td>
-  		<td>a &gt; b</td>
+  		<td><code>RBX_WARN_GT(a, b)</code></td>
+  		<td><code>a &gt; b</code></td>
   	</tr>
   	<tr>
-  		<td>RBX_WARN_LT(a,b)</td>
-  		<td>a &lt; b</td>
+  		<td><code>RBX_WARN_LT(a, b)</code></td>
+  		<td><code>a &lt; b</code></td>
   	</tr>
+    </tbody>
   </table>
 
-  ### Additional Macros
+  #### Additional Macros
 
-  <table>
+  <table size="small">
+  <thead>
   <tr>
   <th>Macro</th>
   <th>Description</th>
   </tr>
+  </thead>
+  <tbody>
   <tr>
-  <td>RBX_ERROR(msg)</td>
+  <td><code>RBX_ERROR(msg)</code></td>
   <td>Directly calls the <code>Class.TestService:Error()</code> function.</td>
   </tr>
   <tr>
-  <td>RBX_FAIL(msg)</td>
+  <td><code>RBX_FAIL(msg)</code></td>
   <td>Directly calls the <code>Class.TestService:Fail()</code> function.</td>
   </tr>
   <tr>
-  <td>RBX_MESSAGE(msg)</td>
+  <td><code>RBX_MESSAGE(msg)</code></td>
   <td>Directly calls the <code>Class.TestService:Message()</code> function.</td>
   </tr>
+  </tbody>
   </table>
 code_samples: []
 inherits:
@@ -205,10 +218,10 @@ deprecation_message: ''
 properties:
   - name: TestService.AutoRuns
     summary: |
-      If set to true, the game will start running when the TestService's
+      If set to `true`, the game will start running when the service's
       `Class.TestService:Run()` method is called.
     description: |
-      If set to true, the game will start running when the TestService's
+      If set to `true`, the game will start running when the service's
       `Class.TestService:Run()` method is called.
     code_samples: []
     type: boolean
@@ -263,20 +276,18 @@ properties:
     capabilities: []
   - name: TestService.ExecuteWithStudioRun
     summary: |
-      When set to true, the TestService will be executed when using the _Run_
+      When set to `true`, `TestService` will be executed when using the **Run**
       action in Roblox Studio.
     description: |
-      When set to true, the TestService will be executed when using the _Run_
+      When set to `true`, `TestService` will be executed when using the **Run**
       action in Roblox Studio.
 
-      Note:
-
-      - If the `Class.TestService.NumberOfPlayers` property is set to a value
-        above 0, running the game will open `NumberOfPlayers + 1` studio
-        windows, where one window is a server, and the rest are players
-        connected to that server.
-      - Try to keep this value within a rational range (1 to 8 players at most),
-        or else your computer's CPU will get overloaded.
+      Note that if the `Class.TestService.NumberOfPlayers|NumberOfPlayers`
+      property is set to a value above `0`, running the game will open
+      `NumberOfPlayers + 1` Studio windows where one window is a server and the
+      rest are players connected to that server. Try to keep this value within a
+      rational range (1 to 8 players) or else your computer's CPU will get
+      overloaded.
     code_samples: []
     type: boolean
     tags: []
@@ -474,13 +485,12 @@ properties:
 methods:
   - name: TestService:Check
     summary: |
-      Prints result of condition to output.
+      Prints result of a condition to the output.
     description: |
-      If condition is true, prints "Check passed: ", followed by description to
-      the output, in blue text. Otherwise, prints "Check failed: ", again,
-      followed by description, but in red text.
-    code_samples:
-      - TestService-Check1
+      If `condition` is `true`, prints `Check passed:` followed by `description`
+      to the output in blue text. Otherwise, prints `Check failed:` followed by
+      `description` in red text.
+    code_samples: []
     parameters:
       - name: condition
         type: boolean
@@ -508,12 +518,10 @@ methods:
     capabilities: []
   - name: TestService:Checkpoint
     summary: |
-      Prints "Test checkpoint: ", followed by text, to the output, in blue text.
+      Prints `Test checkpoint:` followed by a string to the output in blue text.
     description: |
-      Prints "<samp>Test checkpoint: </samp>", followed by <var>text</var>, to
-      the output, in blue text.
-    code_samples:
-      - TestService-Checkpoint1
+      Prints `Test checkpoint:` followed by `text` to the output in blue text.
+    code_samples: []
     parameters:
       - name: text
         type: string
@@ -537,11 +545,10 @@ methods:
     capabilities: []
   - name: TestService:Done
     summary: |
-      Prints Testing Done to the output, in blue text.
+      Prints `Testing Done` to the output in blue text.
     description: |
-      Prints <samp>Testing Done</samp> to the output, in blue text.
-    code_samples:
-      - TestService-Done1
+      Prints `Testing Done` to the output in blue text.
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -553,11 +560,11 @@ methods:
     capabilities: []
   - name: TestService:Error
     summary: |
-      Prints a red message to the output, prefixed by `TestService: `.
+      Prints a red error message to the output, prefixed by `TestService: `.
     description: |
-      Prints a red message to the output, prefixed by `TestService: `.
-    code_samples:
-      - TestService-Error1
+      Prints a red error message (`description`) to the output, prefixed by
+      `TestService: `.
+    code_samples: []
     parameters:
       - name: description
         type: string
@@ -581,13 +588,11 @@ methods:
     capabilities: []
   - name: TestService:Fail
     summary: |
-      Indicates a fatal error in a TestService run. If this is called inside of
-      a script running inside of the TestService, this will initiate a
-      breakpoint on the line that invoked the error.
+      Indicates a fatal error in a `TestService` run.
     description: |
-      Indicates a fatal error in a TestService run. If this is called inside of
-      a script running inside of the TestService, this will initiate a
-      breakpoint on the line that invoked the error.
+      Indicates a fatal error in a `TestService` run. If this is called inside
+      of a script running inside the service, it will initiate a breakpoint on
+      the line that invoked the error.
     code_samples: []
     parameters:
       - name: description
@@ -629,12 +634,10 @@ methods:
     capabilities: []
   - name: TestService:Message
     summary: |
-      Prints Test message, followed by text to the output, in blue text.
+      Prints `TestService:` followed by a string to the output in blue text.
     description: |
-      Prints <samp>Test message</samp>, followed by <var>text</var> to the
-      output, in blue text.
-    code_samples:
-      - TestService-Message1
+      Prints `TestService:` followed by `text` to the output in blue text.
+    code_samples: []
     parameters:
       - name: text
         type: string
@@ -658,14 +661,12 @@ methods:
     capabilities: []
   - name: TestService:Require
     summary: |
-      Prints whether a condition is true along with description text.
+      Prints whether a condition is true along with a description string.
     description: |
-      If `condition` is true, prints `Require passed: `, followed by
-      `description`, to the output in blue text. Otherwise, prints
-      `Require failed. Test ended: `, followed by `description`, to the output
-      in red text.
-    code_samples:
-      - TestService-Require1
+      If `condition` is `true`, prints `Require passed:` followed by
+      `description` to the output in blue text. Otherwise prints
+      `Require failed. Test ended:` followed by `description` in red text.
+    code_samples: []
     parameters:
       - name: condition
         type: boolean
@@ -693,9 +694,9 @@ methods:
     capabilities: []
   - name: TestService:RunAsync
     summary: |
-      Runs scripts which are parented to TestService.
+      Runs scripts which are parented to `TestService`.
     description: |
-      Runs scripts which are parented to TestService.
+      Runs scripts which are parented to `TestService`.
     code_samples: []
     parameters: []
     returns:
@@ -709,7 +710,7 @@ methods:
     capabilities: []
   - name: TestService:Run
     summary: |
-      Runs scripts which are parented to TestService.
+      Runs scripts which are parented to `TestService`.
     description: ''
     code_samples: []
     parameters: []
@@ -756,14 +757,12 @@ methods:
       - InternalTest
   - name: TestService:Warn
     summary: |
-      Prints if a condition is true, otherwise prints a warning.
+      Prints if a condition is `true`, otherwise prints a warning.
     description: |
-      If <var>condition</var> is true, prints <samp>Warning passed: </samp>,
-      followed by <var>description</var>, to the output, in blue text.
-      Otherwise, prints <samp>Warning: </samp>, followed by
-      <var>description</var>, to the output, in yellow text.
-    code_samples:
-      - TestService-Warn1
+      If `condition` is `true`, prints `Warning passed:` followed by
+      `description` to the output in blue text. Otherwise prints `Warning:`
+      followed by `description` to the output in yellow text.
+    code_samples: []
     parameters:
       - name: condition
         type: boolean
@@ -792,9 +791,9 @@ methods:
 events:
   - name: TestService.ServerCollectConditionalResult
     summary: |
-      Fired when the server should collect a conditional test result.
+      Fires when the server should collect a conditional test result.
     description: |
-      Fired when the server should collect a conditional test result.
+      Fires when the server should collect a conditional test result.
     code_samples: []
     parameters:
       - name: condition
@@ -819,9 +818,9 @@ events:
     capabilities: []
   - name: TestService.ServerCollectResult
     summary: |
-      Fired when the server should collect a test result.
+      Fires when the server should collect a test result.
     description: |
-      Fired when the server should collect a test result.
+      Fires when the server should collect a test result.
     code_samples: []
     parameters:
       - name: text

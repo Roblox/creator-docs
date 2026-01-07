@@ -6,7 +6,7 @@ name: Capture
 type: class
 memory_category: Instances
 summary: |
-  A class which defines a piece of content, such as a screnshot or video, taken
+  A class which defines a piece of content, such as a screenshot or video, taken
   in-experience.
 description: ''
 code_samples: []

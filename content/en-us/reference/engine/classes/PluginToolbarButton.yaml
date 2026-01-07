@@ -7,14 +7,16 @@ type: class
 memory_category: Instances
 summary: ''
 description: |
-  A PluginToolbarButton is an object created by the
+  A `PluginToolbarButton` object is created through the
   `Class.PluginToolbar:CreateButton()` function. It allows the user to initiate
   a single, one-off action in Roblox Studio through the
-  `Class.PluginToolbarButton.Click|Click` event.
+  `Class.PluginToolbarButton.Click|Click` event. Toolbar buttons can also be
+  assigned a keyboard shortcut through Studio's **File**&nbsp;⟩ **Customize
+  Shortcuts** window.
 
   When pressed, the `Class.PluginToolbarButton.Click|Click` event fires. A
   button will also remain in the pressed state, which may be set manually using
-  `Class.PluginToolbarButton:SetActive()|SetActive`. Upon plugin activation
+  `Class.PluginToolbarButton:SetActive()|SetActive()`. Upon plugin activation
   (`Class.Plugin:Activate()`), buttons in all other
   `Class.PluginToolbar|PluginToolbars` will be toggled off. If all buttons in a
   toolbar are off, the toolbar's plugin is deactivated
@@ -24,8 +26,8 @@ description: |
   `Class.PluginToolbarButton.Enabled|Enabled` property were false. Disabled
   buttons are desaturated and do not respond to user clicks. By setting
   `Class.PluginToolbarButton.ClickableWhenViewportHidden|ClickableWhenViewportHidden`
-  to true, you can allow plugin buttons to remain clickable (such as during
-  script editing).
+  to true, you can allow plugin buttons to remain clickable, such as during
+  script editing.
 code_samples: []
 inherits:
   - Instance
@@ -36,18 +38,18 @@ deprecation_message: ''
 properties:
   - name: PluginToolbarButton.ClickableWhenViewportHidden
     summary: |
-      Determines whether the button can be clicked when the game viewport is
-      hidden, such as while editing a script in a different Studio tab.
+      Determines whether the button can be clicked when the 3D viewport is
+      hidden, such as when a `Class.Script` is being edited in another tab.
     description: |
-      **ClickableWhenViewportHidden** determines whether a PluginToolbarButton
-      may be clicked while the game viewport is hidden, such as when a
-      `Class.Script` is being edited in another tab.
+      This property determines whether a `Class.PluginToolbarButton` may be
+      clicked while the 3D viewport is hidden, such as when a `Class.Script` is
+      being edited in another tab.
 
-      Typically, this property is good to enable if an action triggered by a
+      Typically, this property should be enabled if an action triggered by a
       plugin button's `Class.PluginToolbarButton.Click|Click` event doesn't
-      occur in the game world (Workspace). For example, a button that opens a
-      widget should have this property be true, as showing a widget is visible
-      to the user even if the game view isn't visible.
+      occur in the 3D world (`Class.Workspace`). For example, a button that
+      opens a widget should have this property as `true`, since showing a widget
+      is visible to the user even if the 3D view isn't visible.
     code_samples: []
     type: boolean
     tags:
@@ -66,11 +68,10 @@ properties:
     summary: |
       Determines whether the button is clickable in general.
     description: |
-      **Enabled** determines whether a button is clickable in general. When this
-      property is false, the button will be greyed out and unclickable,
-      preventing the user from firing the
-      `Class.PluginToolbarButton.Click|Click` event. Buttons are enabled by
-      default.
+      This property determines whether a button is clickable in general. When
+      `false`, the button will be greyed out and unclickable, preventing the
+      user from firing the `Class.PluginToolbarButton.Click|Click` event.
+      Buttons are enabled by default.
 
       When re-enabling this property, the plugin button's state won't be
       remembered from the previous state in which the user left the button in.
@@ -82,13 +83,12 @@ properties:
       Plugins should disable their buttons when the button action isn't relevant
       in the current context. For example, a plugin button that assigns random
       colors to selected should not be enabled when the selection contains no
-      parts. See the code samples for more information.
+      parts.
 
-      See also:
-
-      - `Class.PluginToolbarButton.ClickableWhenViewportHidden|ClickableWhenViewportHidden`,
-        which determines whether a button is clickable when the game view is
-        hidden (and not just in general)
+      See also
+      `Class.PluginToolbarButton.ClickableWhenViewportHidden|ClickableWhenViewportHidden`
+      which determines whether a button is clickable when the game view is
+      hidden (and not just in general).
     code_samples:
       - brickcolor-randomizer-plugin
     type: boolean
@@ -108,8 +108,8 @@ properties:
     summary: |
       Determines what icon should represent the button.
     description: |
-      **Icon** determines what `Datatype.Content|icon` should be shown for the
-      button in the plugin toolbar. When this property is not set, the button
+      This property determines which `Datatype.Content` should be shown for the
+      button's icon in the toolbar. When this property is not set, the button
       will instead use the button's text given by
       `Class.PluginToolbar:CreateButton()`.
     code_samples: []
@@ -156,12 +156,11 @@ events:
     summary: |
       Fires when the user presses and releases their cursor on the button.
     description: |
-      **Click** fires when the PluginToolbarButton is pressed and released by
-      the user.
+      This event fires when the `Class.PluginToolbarButton` is pressed and
+      released by the user.
 
-      Clicking a PluginToolbarButton causes the state of the button to toggle.
-      Call `Class.PluginToolbarButton:SetActive()|SetActive` to manually set the
-      state of the button.
+      See also `Class.PluginToolbarButton:SetActive()|SetActive()` to manually
+      set the state of the button.
     code_samples:
       - plugintoolbarbutton-click
     parameters: []

@@ -7,21 +7,9 @@ type: class
 memory_category: Instances
 summary: ''
 description: |
-  A PluginToolbar is an object created by using the
-  `Class.Plugin:CreateToolbar()` method. It is used to create
-  `Class.PluginToolbarButton|PluginToolbarButtons` using the
-  `Class.PluginToolbar:CreateButton()|CreateButton` function. In general, it is
-  good practice for a plugin to use **one and only one** uniquely named toolbar
-  for all of its buttons. In Studio, toolbars are rendered under the **Plugins**
-  tab.
-
-  The following code sample creates a basic toolbar with one button. It should
-  be run as a Studio plugin, not as a `Class.Script`.
-
-  ```
-  local toolbar = plugin:CreateToolbar("Three Wise Monkeys")
-  local button = toolbar:CreateButton("Mizaru", "See No Evil", "rbxassetid://2778270261")
-  ```
+  A `PluginToolbar` object is created by calling the
+  `Class.Plugin:CreateToolbar()` method and is used to contain
+  `Class.PluginToolbarButton|PluginToolbarButtons`.
 code_samples: []
 inherits:
   - Instance
@@ -57,14 +45,12 @@ methods:
         type: string
         default:
         summary: |
-          The asset ID (e.g. rbxassetid://1507949215) of the icon displayed in
-          the button.
+          The asset ID of the icon displayed in the button.
       - name: text
         type: string
         default:
         summary: |
-          Text displayed under the button icon. Optional. If this field is not
-          provided, the **ID** will be used instead.
+          Optional text displayed under the button icon.
     returns:
       - type: PluginToolbarButton
         summary: |

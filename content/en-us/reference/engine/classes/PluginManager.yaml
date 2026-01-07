@@ -7,12 +7,10 @@ type: class
 memory_category: Instances
 summary: ''
 description: |
-  A singleton class used to create `Class.Plugin|Plugins`. This has been
-  superseded by the [Plugins](../../../studio/plugins.md) but it can be used to
-  create plugins with the command bar.
-
-  The PluginManager object can be retrieved using the deprecated
-  `Class.PluginManager|PluginManager()` function.
+  `PluginManager` is a deprecated singleton that was previously required to
+  create plugins. It still has some applicable uses, such as if you need to
+  create a `Class.Plugin` object from Studio's
+  [Command Bar](../../../studio/ui-overview.md#command-bar).
 code_samples: []
 inherits:
   - Instance
@@ -41,13 +39,12 @@ methods:
     capabilities: []
   - name: PluginManager:ExportPlace
     summary: |
-      Exports the place to an .OBJ file that is saved to the path chosen by the
-      user in a file save dialogue (the `filePath` argument is ignored).
+      Exports the place to an `.obj` file that is saved to the path chosen by
+      the user in a file save dialogue.
     description: |
-      ExportPlace will export all geometry in the place to an .OBJ file. The
-      file is saved to the path chosen by the user in a file save dialogue (the
-      `filePath` argument is ignored). This function does the same thing as the
-      **File &gt; Advanced &gt; Export as Obj** menu option.
+      This method exports all geometry in the place to an `.obj` file. The file
+      is saved to the path chosen by the user in a file save dialogue (the
+      `filePath` argument is ignored).
     code_samples: []
     parameters:
       - name: filePath
@@ -64,15 +61,12 @@ methods:
     capabilities: []
   - name: PluginManager:ExportSelection
     summary: |
-      Exports the current `Class.Selection` to an .OBJ file that is saved to the
-      path chosen by the user in a file save dialogue (the `filePath` argument
-      is ignored).
+      Exports the current `Class.Selection` to an `.obj` file that is saved to
+      the path chosen by the user in a file save dialogue.
     description: |
-      ExportSelection will export all geometry in the current `Class.Selection`
-      to an .OBJ file. The file is saved to the path chosen by the user in a
-      file save dialogue (the `filePath` argument is ignored). This function
-      does the same thing as the **Export Selection...** right-click menu option
-      in the Explorer.
+      This method exports all geometry in the current `Class.Selection` to an
+      `.obj` file. The file is saved to the path chosen by the user in a file
+      save dialogue (the `filePath` argument is ignored).
     code_samples: []
     parameters:
       - name: filePath

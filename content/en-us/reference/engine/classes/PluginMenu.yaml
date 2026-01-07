@@ -9,29 +9,10 @@ summary: |
   A context menu that can be shown in Studio. Displays a list of
   `Class.PluginAction|PluginActions` and supports submenus.
 description: |
-  A context menu that can be shown in Studio. Displays a list of
-  `Class.PluginAction|PluginActions` and supports submenus. **PluginMenu** must
-  be created using the `Class.Plugin:CreatePluginMenu()` method in order to work
-  as expected.
-
-  #### See Also
-
-  - `Class.PluginAction`, an object that represents a generic performable action
-    in Roblox Studio, with no directly associated `Toolbar` or `Enum.Button`.
-  - `Class.Plugin:CreatePluginAction()` which creates a `Class.PluginAction`.
-  - `Class.PluginMenu.Title` which is the text to be displayed when used as a
-    submenu.
-  - `Class.PluginMenu.Icon` which is the icon to be displayed when used as a
-    submenu.
-  - `Class.PluginMenu:AddAction()` which adds the given action to the menu.
-  - `Class.PluginMenu:AddNewAction()` which creates a temporary action that is
-    hidden from Studio's customize shortcuts window.
-  - `Class.PluginMenu:AddMenu()` which adds the given menu as a separator.
-  - `Class.PluginMenu:AddSeparator()` which adds a separator between items in
-    the menu
-  - `Class.PluginMenu:Clear()` which clears the menu.
-  - `Class.PluginMenu:ShowAsync()` which shows the menu at the mouse cursor and
-    yields until either an item is selected or the menu is closed.
+  `PluginMenu` represents a context menu which can be shown in Studio to display
+  a list of `Class.PluginAction|PluginActions` and which also supports submenus.
+  A `PluginMenu` must be created using the `Class.Plugin:CreatePluginMenu()`
+  method in order to work as expected.
 code_samples:
   - creating-a-pluginaction-and-pluginmenu
 inherits:
@@ -44,12 +25,11 @@ deprecation_message: ''
 properties:
   - name: PluginMenu.Icon
     summary: |
-      The icon to be displayed when used as a sub menu.
+      The icon to be displayed when used as a submenu.
     description: |
-      This property determines the icon to be displayed when used as a sub menu.
+      This property determines the icon to be displayed when used as a submenu.
       It defaults to an empty string `""`.
-    code_samples:
-      - creating-a-pluginaction-and-pluginmenu
+    code_samples: []
     type: string
     tags:
       - NotReplicated
@@ -65,13 +45,12 @@ properties:
     capabilities: []
   - name: PluginMenu.Title
     summary: |
-      The text to be displayed when used as a sub menu.
+      The text to be displayed when used as a submenu.
     description: |
       This property determines the text to be displayed when a
-      `Class.PluginMenu` is used as a sub menu. It defaults to an empty string
+      `Class.PluginMenu` is used as a submenu. It defaults to an empty string
       `""`.
-    code_samples:
-      - creating-a-pluginaction-and-pluginmenu
+    code_samples: []
     type: string
     tags:
       - NotReplicated
@@ -91,8 +70,7 @@ methods:
       Adds the given action to the menu.
     description: |
       Adds the given action to the menu.
-    code_samples:
-      - creating-a-pluginaction-and-pluginmenu
+    code_samples: []
     parameters:
       - name: action
         type: Instance
@@ -112,15 +90,14 @@ methods:
       Adds the given menu as a separator.
     description: |
       Adds the given menu as a separator.
-    code_samples:
-      - creating-a-pluginaction-and-pluginmenu
+    code_samples: []
     parameters:
       - name: menu
         type: Instance
         default:
         summary: |
-          The menu to add as a sub menu. Uses its `Class.PluginMenu.Title` and
-          `Class.PluginMenu.Icon` to display.
+          The menu to add as a submenu. Uses its `Class.PluginMenu.Title|Title`
+          and `Class.PluginMenu.Icon|Icon` to display.
     returns:
       - type: ()
         summary: ''
@@ -134,16 +111,16 @@ methods:
       Creates a temporary action that is hidden from Studio's customize
       shortcuts window.
     description: |
-      Creates a temporary action that is hidden from Studio's customize
-      shortcuts window.
-    code_samples:
-      - creating-a-pluginaction-and-pluginmenu
+      Creates a temporary action that is hidden from Studio's **File**&nbsp;⟩
+      **Customize Shortcuts** window.
+    code_samples: []
     parameters:
       - name: actionId
         type: string
         default:
         summary: |
-          Must be a unique string that identifies this PluginAction from others.
+          Must be a unique string that identifies this `Class.PluginAction` from
+          others.
       - name: text
         type: string
         default:
@@ -168,8 +145,7 @@ methods:
       Adds a separator between items in the menu.
     description: |
       Adds a separator between items in the menu.
-    code_samples:
-      - creating-a-pluginaction-and-pluginmenu
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -202,8 +178,7 @@ methods:
       Shows the menu at the mouse cursor. It yields until either an item is
       selected or the menu is closed. The selected action fires its
       `Class.PluginAction.Triggered` event.
-    code_samples:
-      - creating-a-pluginaction-and-pluginmenu
+    code_samples: []
     parameters: []
     returns:
       - type: Instance

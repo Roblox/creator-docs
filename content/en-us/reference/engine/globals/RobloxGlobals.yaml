@@ -160,12 +160,13 @@ functions:
     deprecation_message: ''
   - name: PluginManager
     summary: |
-      Refers to the PluginManager, a deprecated singleton that was previously
-      required to create plugins.
+      Refers to the `Class.PluginManager`, a deprecated singleton that was
+      previously required to create plugins.
     description: |
       Returns the `Class.PluginManager` which is a deprecated singleton that was
-      previously required to create plugins. It still has applicable uses, such
-      as if you need to create a Plugin object from Roblox Studio's command bar.
+      previously required to create plugins. It still has some applicable uses,
+      such as if you need to create a `Class.Plugin` object from Studio's
+      [Command Bar](../../../studio/ui-overview.md#command-bar).
     parameters: []
     returns:
       - type: PluginManager

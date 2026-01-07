@@ -1134,8 +1134,8 @@ properties:
     description: |
       This property describes how quickly the `Class.Humanoid` is able to walk,
       in studs per second. It defaults to the value of
-      `Class.StarterPlayer.CharacterWalkSpeed` (16), meaning a player character
-      can move 16 studs in any direction each second.
+      `Class.StarterPlayer.CharacterWalkSpeed` (`16`), meaning a player
+      character can move 16 studs in any direction each second.
 
       #### Notes
 
@@ -1143,8 +1143,12 @@ properties:
         slower than its `Class.Humanoid.WalkSpeed|WalkSpeed` if the controlling
         thumbstick is moved just a gradual degree from center.
       - You can freeze a humanoid in place by setting
-        `Class.Humanoid.WalkSpeed|WalkSpeed` to 0; this prevents the controlling
-        player from moving it through the default movement mechanisms.
+        `Class.Humanoid.WalkSpeed|WalkSpeed` to `0`, effectively preventing the
+        controlling player from moving it through the default movement
+        mechanisms. Note, however, that `Class.Humanoid.WalkSpeed|WalkSpeed` is
+        a client‑replicated property which can be modified locally, so it should
+        **not** be used as a security mechanism or as the sole method for
+        preventing humanoid movement.
       - The default animation script scales a humanoid's movement animations
         based on how fast it is moving relative to the default speed of 16
         studs/second.
@@ -1169,34 +1173,23 @@ properties:
       A reference to a part whose position is trying to be reached by a
       humanoid.
     description: |
-      WalkToPart is a reference to a part that the Humanoid is trying to reach.
-      This property is normally set when a part is passed as the 2nd argument of
-      the Humanoid's `Class.Humanoid:MoveTo()` function.
+      `WalkToPart` is a reference to a `Class.BasePart` that the humanoid is
+      trying to reach, after having been prompted to do so via the
+      `Class.Humanoid:MoveTo()|MoveTo()` method.
 
-      When WalkToPart is set and a humanoid is actively trying to reach the
-      part, it will keep updating its Vector3 goal to be the position of the
-      part, plus the `Class.Humanoid.WalkToPoint` translated in object space
-      relative to the rotation of the part.
-
-      This can be described in Luau as:
+      When `WalkToPart` is set and a humanoid is actively trying to reach the
+      part, it will keep updating its `Datatype.Vector3` goal to be the position
+      of the part, plus the `Class.Humanoid.WalkToPoint|WalkToPoint` translated
+      in object space relative to the rotation of the part. This can be
+      described in Luau as:
 
       ```lua
-      goal = humanoid.WalkToPart.CFrame:pointToObjectSpace(humanoid.WalkToPoint)
+      goal = humanoid.WalkToPart.CFrame:PointToObjectSpace(humanoid.WalkToPoint)
       ```
 
-      #### Caveats
-
-      - Setting the value of WalkToPart isn't sufficient enough to make a
-        humanoid start following a part.
-      - The Humanoid is prompted to start attempting to reach a goal when the
-        value of WalkToPoint is changed.
-      - This may be changed in the future.
-      - The _reach goal_ state of a humanoid will timeout after 8 seconds if it
-        doesn't reach its goal.
-      - This is done so that NPCs won't get stuck waiting for
-        `Class.Humanoid.MoveToFinished` to fire.
-      - If you don't want this to happen, you should repeatedly call MoveTo so
-        that the timeout will keep resetting.
+      Note that simply setting the value of `WalkToPart` is not sufficient to
+      make a humanoid start "following" a part. Call
+      `Class.Humanoid:MoveTo()|MoveTo()` to initiate movement.
     code_samples: []
     type: BasePart
     tags: []
@@ -1216,30 +1209,19 @@ properties:
       The position that a humanoid is trying to reach, after a call to
       `Class.Humanoid:MoveTo()` is made.
     description: |
-      WalkToPoint describes the 3D position in space that a humanoid is trying
-      to reach, after having been prompted to do so by the Humanoid's
-      `Class.Humanoid:MoveTo()` function.
+      `WalkToPoint` describes the 3D position in space that a humanoid is trying
+      to reach, after having been prompted to do so via the
+      `Class.Humanoid:MoveTo()|MoveTo()` method.
 
-      If a humanoid's `Class.Humanoid.WalkToPart` is set, the goal is set by
-      transforming WalkToPoint relative to the parts position and rotation. If
-      WalkToPart is not set, then the humanoid will try to reach the 3D position
-      specified by WalkToPoint directly.
+      If a humanoid's `Class.Humanoid.WalkToPart|WalkToPart` is set, the goal is
+      set by transforming `WalkToPoint` relative to the part's position and
+      rotation. Otherwise, the humanoid will try to reach the 3D position
+      specified by `WalkToPoint` directly.
 
-      #### Caveats
-
-      - The value of WalkToPoint must be changed to a different value in order
-        for the humanoid to start walking towards it.
-      - If you want to make a humanoid walk to `0,0,0`, you should use the
-        Humanoid's MoveTo function.
-      - This may be changed in the future.
-      - The _reach goal_ state of a humanoid will timeout after 8 seconds if it
-        doesn't reach its goal.
-      - This is done so that NPCs won't get stuck waiting for
-        `Class.Humanoid.MoveToFinished` to fire.
-      - If you don't want this to happen, you should repeatedly call MoveTo so
-        that the timeout will keep resetting.
-    code_samples:
-      - humanoid-moveto-without-time-out
+      Note that simply setting the value of `WalkToPoint` is not sufficient to
+      make a humanoid start moving toward a point. Call
+      `Class.Humanoid:MoveTo()|MoveTo()` to initiate movement.
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -2033,42 +2015,38 @@ methods:
       setting the `Class.Humanoid.WalkToPoint` and `Class.Humanoid.WalkToPart`
       properties.
     description: |
-      This method causes the `Class.Humanoid` to attempt to walk to the given
-      location by setting the `Class.Humanoid.WalkToPoint` and
-      `Class.Humanoid.WalkToPart` properties.
+      This method causes the `Class.Humanoid` to attempt to walk to a given
+      location by setting the `Class.Humanoid.WalkToPoint|WalkToPoint` and
+      `Class.Humanoid.WalkToPart|WalkToPart` properties, corresponding to the
+      `location` and `part` parameters.
 
-      The _location_ and _part_ parameters correspond with what
-      `Class.Humanoid.WalkToPoint` and `Class.Humanoid.WalkToPart` will be set
-      to.
+      If the `part` parameter is specified, the `Class.Humanoid` will still
+      attempt to walk to the `location` parameter's point. However, if the
+      `part` moves, the point will move to be at the same position **relative to
+      the part**.
 
-      If the _part_ parameter is specified, the `Class.Humanoid` will still
-      attempt to walk to the point. However, if the part moves then the point
-      the `Class.Humanoid` is walking to will move to be at the same position
-      **relative to the part**. If the _part_ parameter is not specified, then
-      the position the `Class.Humanoid` is walking to will not change.
-
-      The _reach goal_ state of a humanoid will timeout after 8 seconds if it
-      doesn't reach its goal. This is done so that NPCs won't get stuck waiting
-      for `Class.Humanoid.MoveToFinished` to fire. If you don't want this to
-      happen, you should repeatedly call MoveTo so that the timeout will keep
-      resetting.
+      Note that the movement operation will time out after 8 seconds if the
+      humanoid doesn't reach its goal (this timeout exists so that humanoids do
+      not get stuck waiting for `Class.Humanoid.MoveToFinished|MoveToFinished`
+      to fire). If you don't want this to happen, call `MoveTo()` at a repeated
+      interval so that the timeout keeps resetting.
 
       `Class.Humanoid:MoveTo()|MoveTo()` ends if any of the following conditions
       apply:
 
-      - The character arrives at its destination. There is a ~1 stud threshold
+      - The character arrives at its destination, assuming a ~1 stud threshold
         to account for various humanoid speeds and framerates.
 
-      - The character gets stuck and the eight-second timer expires.
+      - The character gets stuck and the timer expires.
 
-      - The value of either `Class.Humanoid.WalkToPoint` or
-        `Class.Humanoid.WalkToPart` changes.
+      - The value of either `Class.Humanoid.WalkToPoint|WalkToPoint` or
+        `Class.Humanoid.WalkToPart|WalkToPart` changes.
 
-      - A script calls `Class.Humanoid:Move()` with a new `moveDirection`
+      - A script calls `Class.Humanoid:Move()|Move()` with a new `moveDirection`
         parameter.
 
       - A script changes the `Class.BasePart.CFrame|CFrame` property of the
-        `Class.Humanoid.RootPart|RootPart`.
+        humanoid's `Class.Humanoid.RootPart|RootPart`.
     code_samples:
       - humanoid-moveto-without-time-out
     parameters:

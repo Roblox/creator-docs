@@ -30,6 +30,7 @@ properties:
       `Class.WorldRoot` or no `Class.Part` being found to use as the floor for a
       `Class.GroundController`, it will remain set and the
       `Class.ControllerManager` will attempt to activate it in the next frame.
+      This property can be set to `nil` to disable the physics controller.
     code_samples: []
     type: ControllerBase
     tags: []

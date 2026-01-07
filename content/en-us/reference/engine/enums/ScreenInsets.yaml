@@ -54,7 +54,9 @@ items:
       cutouts and Roblox core UI elements like the experience controls. Unlike
       `CoreUISafeInsets`, this area's position and size is dynamic and is
       limited to the space available within the top bar area itself, outside of
-      `CoreUISafeInsets`.
+      `CoreUISafeInsets`. See the `Class.GuiService.TopbarInset` property which
+      represents the absolute size and position of the unobstructed area within
+      the top bar space.
     value: 3
     tags: []
     deprecation_message: ''

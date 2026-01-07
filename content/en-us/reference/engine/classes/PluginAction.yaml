@@ -7,14 +7,14 @@ type: class
 memory_category: Instances
 summary: ''
 description: |
-  PluginAction is an object that represents a generic performable action in
-  Roblox Studio, with no directly associated `Toolbar` or `Enum.Button`. In
-  Roblox Studio, they can be assigned a keyboard shortcut under
-  `File → Advanced → Customize Shortcuts...`, and they can also be added to the
-  Quick Access Toolbar.
+  `PluginAction` represents a generic performable action in Studio with no
+  directly‑associated `Class.PluginToolbarButton`. If
+  `Class.PluginAction.AllowBinding|AllowBinding` is `true`, the action can be
+  assigned a keyboard shortcut through Studio's **File**&nbsp;⟩ **Customize
+  Shortcuts** window.
 
-  PluginActions must be created using the `Class.Plugin:CreatePluginAction()`
-  function in order to work as expected.
+  A `PluginAction` must be created using the `Class.Plugin:CreatePluginAction()`
+  method in order to work as expected.
 code_samples: []
 inherits:
   - Instance
@@ -46,16 +46,12 @@ properties:
     capabilities: []
   - name: PluginAction.AllowBinding
     summary: |
-      Whether the `Class.PluginAction` will be hidden from Studio's shortcuts
-      view.
+      Determines whether the action can be assigned a keyboard shortcut in
+      Studio.
     description: |
-      This property determines whether the `Class.PluginAction` will be hidden
-      from Studio's shortcuts view. Useful for contextual actions. It defaults
-      to true.
-
-      See also:
-
-      - `Class.Plugin.CreatePluginAction`, creates a PluginAction
+      This property determines whether the action can be assigned a keyboard
+      shortcut through Studio's **File**&nbsp;⟩ **Customize Shortcuts** window.
+      Default is `true`.
     code_samples: []
     type: boolean
     tags:
@@ -73,10 +69,10 @@ properties:
     capabilities: []
   - name: PluginAction.StatusTip
     summary: |
-      The description of the action, when viewing it from the keyboard shortcuts
+      The description of the action when viewing it from the keyboard shortcuts
       window in Roblox Studio.
     description: |
-      The description of the action, when viewing it from the keyboard shortcuts
+      The description of the action when viewing it from the keyboard shortcuts
       window in Roblox Studio.
     code_samples: []
     type: string
@@ -116,13 +112,10 @@ methods: []
 events:
   - name: PluginAction.Triggered
     summary: |
-      Fires when the action is triggered. This can be done by either activating
-      the action from the Quick Access Toolbar, or by using the keyboard
-      shortcut that was bound to it.
+      Fires when the action is triggered.
     description: |
-      Fires when the action is triggered. This can be done by either activating
-      the action from the Quick Access Toolbar, or by using the keyboard
-      shortcut that was bound to it.
+      Fires when the action is triggered, typically through the keyboard
+      shortcut that it was bound to.
     code_samples: []
     parameters: []
     tags: []

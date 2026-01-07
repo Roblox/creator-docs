@@ -1570,9 +1570,8 @@ methods:
     summary: |
       Returns whether a player is connections with the specified user.
     description: |
-      This function was once used to return whether a player is best connections
-      with the specified user, but the best connection feature has since been
-      removed.
+      This function was once used to return whether a player is best friends
+      with the specified user, but the feature has since been removed.
     code_samples: []
     parameters:
       - name: userId
@@ -1586,8 +1585,8 @@ methods:
       - Yields
       - Deprecated
     deprecation_message: |
-      This function is obsolete because the Best Friends feature was removed.
-      Use `Class.Player:IsFriendsWith()` instead.
+      This function is obsolete because the "best friends" feature was removed.
+      Use `Class.Player:IsFriendsWithAsync()` instead.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -1601,8 +1600,7 @@ methods:
       connection of another user, given the `Class.Player.UserId|UserId` of that
       user. This method caches results so multiple calls on the same player with
       the same `userId` may not yield the most up-to-date result.
-    code_samples:
-      - Player-IsFriendsWith1
+    code_samples: []
     parameters:
       - name: userId
         type: int64
@@ -1626,8 +1624,7 @@ methods:
       Checks whether a player is a connection of the user with the given
       `Class.Player.UserId`.
     description: ''
-    code_samples:
-      - Player-IsFriendsWith1
+    code_samples: []
     parameters:
       - name: userId
         type: int64
@@ -1642,7 +1639,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by the `Class.Player:IsFriendsWithAsync()`
+      method which should be used for new work.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -1663,8 +1662,8 @@ methods:
       - Yields
       - Deprecated
     deprecation_message: |
-      This deprecated function is a variant of `Class.Player:IsFriendsWith()`
-      which should be used instead.
+      This method has been superseded by the `Class.Player:IsFriendsWithAsync()`
+      method which should be used for new work.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -1863,7 +1862,7 @@ methods:
       1. The character appearance initializes.
       2. The character rig builds and scales.
       3. The character moves to the spawn location.
-      4. `Class.Player.Character` sets.
+      4. `Class.Player.Character` sets, automatically removing old character.
       5. `Class.Object.Changed` fires on the `Class.Player` with a value of
          `Character`.
       6. The character's `Class.Instance.Parent|Parent` sets to the

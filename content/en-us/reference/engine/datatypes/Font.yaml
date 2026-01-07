@@ -4,14 +4,16 @@
 
 name: Font
 type: datatype
-summary: Describes the font used to render text.
-description: |-
-  Describes the font used to render text. Every font consists of a **font family**,
-  a **weight** like `Enum.FontWeight.Bold`, and a **style** like
+summary: |
+  Describes the font used to render text.
+description: |
+  Describes the font used to render text. Every font consists of a **font
+  family**, a **weight** like `Enum.FontWeight.Bold`, and a **style** like
   `Enum.FontStyle.Italic`.
 
   Font families are a type of asset, like images or meshes. Each font family
-  contains a number of font faces, and each face has a different weight and style.
+  contains a number of font faces, and each face has a different weight and
+  style.
 
   `Datatype.Font` is used by the `Class.TextLabel.FontFace`,
   `Class.TextButton.FontFace`, `Class.TextBox.FontFace`, and similar properties.
@@ -431,8 +433,9 @@ constants: []
 properties:
   - name: Font.Family
     type: Content
-    summary: The asset ID for the font family.
-    description: |-
+    summary: |
+      The asset ID for the font family.
+    description: |
       The asset ID for the font family. These start with either `rbxasset://` or
       `rbxassetid://`.
     default:
@@ -441,30 +444,35 @@ properties:
     deprecation_message: ''
   - name: Font.Weight
     type: FontWeight
-    summary: How thick the text is.
-    description: |-
+    summary: |
+      How thick the text is.
+    description: |
       How thick the text is. The default value is `Enum.FontWeight.Regular`.
 
-      When set, `Datatype.Font.Bold` is updated and becomes `true` if the weight is
-      `Enum.FontWeight.SemiBold` or thicker.
+      When set, `Datatype.Font.Bold` is updated and becomes `true` if the weight
+      is `Enum.FontWeight.SemiBold` or thicker.
     default:
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Font.Style
     type: FontStyle
-    summary: Whether the font is italic.
-    description: Whether the font is italic. The default value is `Enum.FontStyle.Normal`.
+    summary: |
+      Whether the font is italic.
+    description: |
+      Whether the font is italic. The default value is `Enum.FontStyle.Normal`.
     default:
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Font.Bold
     type: bool
-    summary: Whether the font is bold.
-    description: |-
+    summary: |
+      Whether the font is bold.
+    description: |
       Whether the font is bold. Sets `Datatype.Font.Weight` to
-      `Enum.FontWeight.Bold` when `true`, or to `Enum.FontWeight.Regular` otherwise.
+      `Enum.FontWeight.Bold` when `true`, or to `Enum.FontWeight.Regular`
+      otherwise.
     default:
     code_samples: []
     tags: []
