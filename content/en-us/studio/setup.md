@@ -31,7 +31,7 @@ Create immersive 3D experiences on Roblox with **Roblox Studio**, a free applica
 
 You can customize Studio to suit your workflow across various levels:
 
-- [Configure the toolbar](../studio/ui-overview.md#toolbar-and-mezzanine) with custom tabs, reorganize tools within custom tabs, hide infrequently used tabs, and more.
+- [Configure the toolbar](../studio/ui-overview.md#toolbar-and-mezzanine) with custom tabs, reorganize tools within custom tabshide infrequently used tabs, and more.
 - Customize the [window layout](../studio/ui-overview.md#layout-customization) to best suit your workflows.
 - View/edit Studio shortcuts and bind actions without defaults through **File**&nbsp;⟩ **Customize&nbsp;Shortcuts**.
 - Access a wide array of **Studio Settings** (<kbd>Alt</kbd><kbd>S</kbd> on Windows; <kbd>⌥</kbd><kbd>S</kbd> on Mac). Locate known settings by typing keywords into the search field at the top of the window, for example `theme` to locate the setting for dark theme or light theme.
