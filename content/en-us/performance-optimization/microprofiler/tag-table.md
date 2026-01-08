@@ -439,7 +439,10 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   </tr>
   <tr>
     <td>Render/PreRender/UpdateUILayouts/Layout</td>
-    <td>Updates position and size for UI elements in an individual `Class.LayerCollector`</td>
+    <td>
+      Updates position and size for UI elements in an individual `Class.LayerCollector`.<br><br>
+      Can contain a label, with info about the involved UI, along with the amount of Relayouts, Updates and Resizes.
+    </td>
     <td>Reduce the amount of UI elements being resized or repositioned, such as those managed by `Class.UILayout` and those tweened with `Class.TweenService`, `Class.GuiObject:TweenSize()`, or `Class.GuiObject:TweenPosition()`. Consider using fixed sizes for `Class.BillboardGui|BillboardGuis`.</td>
   </tr>
 </tbody>
