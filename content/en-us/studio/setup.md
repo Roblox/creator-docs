@@ -1,3 +1,19 @@
+pqpqlqlllp
+kqp
+qlqq
+
+q
+q
+q
+
+q
+q
+q
+wr
+
+t
+d
+e
 ---
 title: Roblox Studio setup
 description: Explains how to install Roblox Studio on your system.
