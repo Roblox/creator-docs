@@ -65,9 +65,12 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: AdService:RegisterAdOpportunityAsync
-    summary: ''
+    summary: |
+      Tracks how many times a user had the chance to watch a video ad and the
+      rate at which they actually watched the ad.
     description: ''
-    code_samples: []
+    code_samples:
+      - AdService-RegisterAdOpportunityAsync
     parameters:
       - name: instance
         type: Instance
@@ -76,7 +79,10 @@ methods:
       - name: placementId
         type: int64?
         default:
-        summary: ''
+        summary: |
+          The ID of the placement of the rewarded video ad inside the
+          experience. Allows for reporting on the performance of individual ad
+          placements.
     returns:
       - type: ()
         summary: ''

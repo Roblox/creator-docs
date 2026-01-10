@@ -50,7 +50,7 @@ methods:
         summary: |
           The `Class.Player` that the avatar is being set up for.
       - name: model
-        type: Model
+        type: Dictionary
         default:
         summary: |
           The humanoid `Class.Model` that will be set up as an avatar.
