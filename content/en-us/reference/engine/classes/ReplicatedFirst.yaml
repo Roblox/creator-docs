@@ -29,7 +29,7 @@ description: |
   means code for custom loading screens or other ReplicatedFirst uses can be ran
   at the earliest possible point.
 
-  There a number of key considerations developers need to remember when running
+  There are a number of key considerations developers need to remember when running
   `Class.LocalScript|LocalScripts` in ReplicatedFirst.
 
   - Its contents replicate before anything else in the game, meaning
