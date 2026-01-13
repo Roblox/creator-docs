@@ -54,8 +54,13 @@ navigation:
             path: /projects/collaboration
           - title: Activity history
             path: /projects/activity-history
-      - title: External tools
-        path: /projects/external-tools
+      - title: File-based workflows
+        path: /scripting/sync
+        section:
+          - title: Script Sync
+            path: /scripting/sync
+          - title: Third-party tools
+            path: /projects/external-tools
   - title: 3D workspace
     path: /workspace/
     section:
