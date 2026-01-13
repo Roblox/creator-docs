@@ -27364,6 +27364,14 @@
             "url": "https://economy.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/localization#economy_get_v1_user_currency"
         }
@@ -67067,7 +67075,32 @@
       },
       "RestartUniverseServersRequest": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "placeIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "description": "The place IDs to update. If none are specified, all active places in the\nuniverse will be updated."
+          },
+          "closeAllVersions": {
+            "example": true,
+            "type": "boolean",
+            "description": "If true, players from servers running both old and new place versions will\nbe restarted. If false, restarts all active servers for a specific universe \nif and only if a new version of the experience has been published."
+          },
+          "bleedOffServers": {
+            "example": true,
+            "type": "boolean",
+            "description": "If true, matchmaking to servers will stop, but servers will stay up for bleed_off_duration_minutes before shutting down.\nThis setting gives players time to naturally migrate to the newer version.\nIf false, servers will immediately start shutting down."
+          },
+          "bleedOffDurationMinutes": {
+            "example": 10,
+            "type": "integer",
+            "description": "If bleed_off_servers is true, how long (in minutes) old servers are allowed\nto stay up before shutting them down. Valid values: 1-60 minutes.",
+            "format": "int32"
+          }
+        },
         "description": "Restarts all of the universe's servers."
       },
       "RestartUniverseServersResponse": {
@@ -88412,6 +88445,10 @@
             "type": "string",
             "description": "The timestamp of the last update to the place summary.",
             "format": "date-time"
+          },
+          "isInUniverse": {
+            "type": "boolean",
+            "description": "Indicates whether the place is still part of the universe.\r\nA place may have active games but is no longer in the universe if it has been removed from the universe."
           }
         },
         "additionalProperties": false,
