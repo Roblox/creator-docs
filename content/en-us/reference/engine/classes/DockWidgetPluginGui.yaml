@@ -11,7 +11,7 @@ description: |
   inside a dockable Roblox Studio window. It is used to create widgets similar
   to the built-in **Animation Editor** and **Terrain Tools**.
 
-  This GUI can be created using `Class.Plugin:CreateDockWidgetPluginGui()`.
+  This GUI can be created using `Class.Plugin:CreateDockWidgetPluginGuiAsync()`.
 code_samples: []
 inherits:
   - PluginGui

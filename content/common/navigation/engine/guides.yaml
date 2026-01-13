@@ -363,8 +363,6 @@ navigation:
         path: /ui/on-screen-containers
       - title: In-experience UI
         path: /ui/in-experience-containers
-      - title: Accessibility guidelines
-        path: /production/publishing/accessibility
       - title: UI objects
         section:
           - title: Labels

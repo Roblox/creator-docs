@@ -7,7 +7,7 @@ type: enum
 summary: ''
 description: |
   Used to represent the possible information formats returnable by
-  `Class.MarketplaceService:GetProductInfo()`.
+  `Class.MarketplaceService:GetProductInfoAsync()`.
 code_samples: []
 tags: []
 deprecation_message: ''

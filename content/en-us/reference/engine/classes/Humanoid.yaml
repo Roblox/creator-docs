@@ -285,9 +285,9 @@ properties:
       #### Player Character Loading
 
       When players load their character, either automatically or through the use
-      of `Class.Player:LoadCharacter()|LoadCharacter()`, the Humanoid that is
-      created by the engine will have its `DisplayName` property set to the
-      player's `DisplayName` property.
+      of `Class.Player:LoadCharacterAsync()|LoadCharacterAsync()`, the Humanoid
+      that is created by the engine will have its `DisplayName` property set to
+      the player's `DisplayName` property.
 
       #### StarterCharacter and StarterHumanoid
 
@@ -1346,21 +1346,21 @@ methods:
       character between calls, then this method may not make the character
       reflect the passed in `Class.HumanoidDescription` accurately. If you want
       to use this method in conjunction with other means of updating the
-      character, `Class.Humanoid:ApplyDescriptionReset()` will always ensure the
-      character reflects the passed in `Class.HumanoidDescription`.
+      character, `Class.Humanoid:ApplyDescriptionResetAsync()` will always
+      ensure the character reflects the passed in `Class.HumanoidDescription`.
 
       #### See Also
 
       - `Class.Humanoid:GetAppliedDescription()` which returns the
         `Class.HumanoidDescription` currently applied to the humanoid.
-      - `Class.Players:GetHumanoidDescriptionFromUserId()` which returns a
+      - `Class.Players:GetHumanoidDescriptionFromUserIdAsync()` which returns a
         `Class.HumanoidDescription` describing the avatar for the passed in
         user.
-      - `Class.Players:GetHumanoidDescriptionFromOutfitId()` which returns a
-        `Class.HumanoidDescription` whose parameters are initialized to match
+      - `Class.Players:GetHumanoidDescriptionFromOutfitIdAsync()` which returns
+        a `Class.HumanoidDescription` whose parameters are initialized to match
         that of the passed in server-side outfit asset.
-      - `Class.Player:LoadCharacterWithHumanoidDescription()` which spawns a
-        player with the look from the passed in `Class.HumanoidDescription`.
+      - `Class.Player:LoadCharacterWithHumanoidDescriptionAsync()` which spawns
+        a player with the look from the passed in `Class.HumanoidDescription`.
     code_samples: []
     parameters:
       - name: humanoidDescription
@@ -1426,11 +1426,13 @@ methods:
       This method will always ensure the character reflects the passed in
       `Class.HumanoidDescription`, even if changes have been made to the
       character not using the `Class.HumanoidDescription` system (for example
-      not using `Class.Humanoid:ApplyDescriptionReset()|ApplyDescriptionReset()`
-      or `Class.Humanoid:ApplyDescription()|ApplyDescription()`). This is in
-      contrast to `Class.Humanoid:ApplyDescription()|ApplyDescription()` which
-      is optimized and may incorrectly apply a `Class.HumanoidDescription` if
-      the character has been changed by means other than through the
+      not using
+      `Class.Humanoid:ApplyDescriptionResetAsync()|ApplyDescriptionResetAsync()`
+      or `Class.Humanoid:ApplyDescriptionAsync()|ApplyDescriptionAsync()`). This
+      is in contrast to
+      `Class.Humanoid:ApplyDescriptionAsync()|ApplyDescriptionAsync()` which is
+      optimized and may incorrectly apply a `Class.HumanoidDescription` if the
+      character has been changed by means other than through the
       `Class.HumanoidDescription` system.
     code_samples: []
     parameters:
@@ -1632,18 +1634,19 @@ methods:
       This method returns a copy of the humanoid's cached
       `Class.HumanoidDescription` which describes its current look. This can be
       used to quickly determine a character's look and to assign their look to
-      other characters using the `Class.Humanoid:ApplyDescription()` method.
+      other characters using the `Class.Humanoid:ApplyDescriptionAsync()`
+      method.
 
       #### See Also
 
-      - `Class.Players:GetHumanoidDescriptionFromUserId()` which returns a
+      - `Class.Players:GetHumanoidDescriptionFromUserIdAsync()` which returns a
         `Class.HumanoidDescription` describing the avatar for the passed in
         user.
-      - `Class.Players:GetHumanoidDescriptionFromOutfitId()` which returns a
-        `Class.HumanoidDescription` whose parameters are initialized to match
+      - `Class.Players:GetHumanoidDescriptionFromOutfitIdAsync()` which returns
+        a `Class.HumanoidDescription` whose parameters are initialized to match
         that of the passed in server-side outfit asset.
-      - `Class.Player:LoadCharacterWithHumanoidDescription()` which spawns a
-        player with the look from the passed in `Class.HumanoidDescription`.
+      - `Class.Player:LoadCharacterWithHumanoidDescriptionAsync()` which spawns
+        a player with the look from the passed in `Class.HumanoidDescription`.
     code_samples: []
     parameters: []
     returns:

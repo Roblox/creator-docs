@@ -335,7 +335,7 @@ properties:
   - name: DataModel.PrivateServerId
     summary: |
       Describes the private server ID of the server, if the server is a private
-      server or a `Class.TeleportService:ReserveServer()|reserved server`.
+      server or a `Class.TeleportService:ReserveServerAsync()|reserved server`.
     description: |
       This property describes the private server ID of the server, if the server
       is a private server.
@@ -350,7 +350,7 @@ properties:
       - [Private servers](../../../production/monetization/private-servers.md)
         that users can purchase from the games page
       - Reserved servers, private servers created by the developer using
-        `Class.TeleportService:ReserveServer()`
+        `Class.TeleportService:ReserveServerAsync()`
 
       #### PrivateServerId vs JobId
 
@@ -370,7 +370,7 @@ properties:
 
       - `Class.DataModel.PrivateServerOwnerId`, a property describing the owner
         of a private server
-      - `Class.TeleportService:ReserveServer()`, a function which creates a
+      - `Class.TeleportService:ReserveServerAsync()`, a function which creates a
         reserved server
     code_samples:
       - detecting-private-servers
@@ -424,7 +424,8 @@ properties:
       See also:
 
       - `Class.DataModel.PrivateServerId`, a property describing the unique ID
-        of private and `Class.TeleportService:ReserveServer()|reserved servers`
+        of private and
+        `Class.TeleportService:ReserveServerAsync()|reserved servers`
     code_samples:
       - detecting-private-servers
     type: int64

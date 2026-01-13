@@ -102,7 +102,8 @@ methods:
 
       See also:
 
-      - `Class.Plugin:CreateDockWidgetPluginGui()` to create a `Class.PluginGui`
+      - `Class.Plugin:CreateDockWidgetPluginGuiAsync()` to create a
+        `Class.PluginGui`
       - `Class.DataModel:BindToClose()`, which can be used to bind a function to
         the game ending and should not be confused with this function
     code_samples: []

@@ -17,13 +17,13 @@ description: |
 
   `Class.MarketplaceService` also has methods that fetch information about
   [developer products](../../../production/monetization/developer-products.md)
-  (`Class.MarketplaceService:GetProductInfo()|GetProductInfo` and
+  (`Class.MarketplaceService:GetProductInfoAsync()|GetProductInfoAsync` and
   `Class.MarketplaceService:GetDeveloperProductsAsync()|GetDeveloperProductsAsync`),
   [passes](../../../production/monetization/game-passes.md)
   (`Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync()`),
   and other assets
-  (`Class.MarketplaceService:PlayerOwnsAsset()|PlayerOwnsAsset`,
-  `Class.MarketplaceService:PlayerOwnsBundle()|PlayerOwnsBundle`).
+  (`Class.MarketplaceService:PlayerOwnsAssetAsync()|PlayerOwnsAssetAsync`,
+  `Class.MarketplaceService:PlayerOwnsBundleAsync()|PlayerOwnsBundleAsync`).
 
   Understanding `Class.MarketplaceService` is the first step towards learning to
   [monetize](../../../production/monetization/index.md) an experience on Roblox,
@@ -1223,7 +1223,7 @@ methods:
 
           - `ProductIdentifier`: The corresponding ID from the input array.
           - `ProductInfo`: The standard product info dictionary returned by
-            `Class.MarketplaceService.GetProductInfo|GetProductInfo`.
+            `Class.MarketplaceService.GetProductInfoAsync|GetProductInfoAsync`.
     tags:
       - Yields
     deprecation_message: ''
@@ -1331,8 +1331,9 @@ events:
       **OK**.
 
       Note: This is not a trusted event from the client. To check if the user
-      owns the items purchased, use `Class.MarketplaceService.PlayerOwnsAsset`
-      or `Class.MarketplaceService.PlayerOwnsBundle`.
+      owns the items purchased, use
+      `Class.MarketplaceService.PlayerOwnsAssetAsync` or
+      `Class.MarketplaceService.PlayerOwnsBundleAsync`.
     code_samples: []
     parameters:
       - name: player

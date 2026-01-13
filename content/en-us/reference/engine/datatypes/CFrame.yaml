@@ -763,6 +763,15 @@ methods:
       transformed from object to world space. Equivalent to:
 
       `CFrame * cf`
+
+      ```lua
+      local cf = CFrame.new(5, 10, 0)
+
+      local offset = CFrame.new(0, 2, 0)
+
+      -- Output world space of offset CFrame relative to calling CFrame
+      print(cf:ToWorldSpace(offset))  --> 5, 12, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1
+      ```
     parameters:
       - name: ...
         type: Tuple<CFrame>
@@ -803,6 +812,15 @@ methods:
       transformed from object to world space. Equivalent to:
 
       `CFrame * v3`
+
+      ```lua
+      local cf = CFrame.new(5, 10, 0)
+
+      -- Output core world space of the CFrame
+      print(cf:PointToWorldSpace())  --> 5, 10, 0
+      -- Output world space of a Vector3 (0, 4, 0) relative to the CFrame (object space)
+      print(cf:PointToWorldSpace(Vector3.new(0, 4, 0)))  --> 5, 14, 0
+      ```
     parameters:
       - name: ...
         type: Tuple<Vector3>

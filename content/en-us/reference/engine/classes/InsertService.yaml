@@ -213,9 +213,9 @@ methods:
     summary: |
       Retrieves a list of free Decals from the Catalog.
     description: |
-      The GetFreeDecals function retrieves a list of free `Class.Decal|Decals`
-      from the Catalog. The return type for this method is very odd, as it
-      returns a single table wrapped in a table.
+      The GetFreeDecalsAsync function retrieves a list of free
+      `Class.Decal|Decals` from the Catalog. The return type for this method is
+      very odd, as it returns a single table wrapped in a table.
 
       The best way to explain it is to show a visual of the array returned:
 
@@ -240,7 +240,7 @@ methods:
       this page.
 
       Additionally, if you want to insert `Class.Model|Models` instead, you can
-      use the `Class.InsertService:GetFreeModels()` function.
+      use the `Class.InsertService:GetFreeModelsAsync()` function.
 
       _Note:_ The page argument starts at 0. So Page 1 = 0, Page 2 = 1, etc.
     code_samples:
@@ -298,9 +298,9 @@ methods:
     summary: |
       Retrieves a list of Free Models from the Catalog.
     description: |
-      The GetFreeModels function retrieves a list of Free `Class.Model|Models`
-      from the Catalog. The return type for this method is very odd, as it
-      returns a single table wrapped in a table.
+      The GetFreeModelsAsync function retrieves a list of Free
+      `Class.Model|Models` from the Catalog. The return type for this method is
+      very odd, as it returns a single table wrapped in a table.
 
       The best way to explain it is to show a visual of the array returned:
 
@@ -325,7 +325,7 @@ methods:
       this page.
 
       Additionally, if you would like to insert free `Class.Decal|Decals`, you
-      can use the `Class.InsertService:GetFreeDecals()` function.
+      can use the `Class.InsertService:GetFreeDecalsAsync()` function.
     code_samples:
       - InsertService-GetFreeModels1
     parameters:

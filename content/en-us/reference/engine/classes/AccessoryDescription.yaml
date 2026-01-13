@@ -12,7 +12,7 @@ description: |
   **AccessoryDescription** is an object that stores the description for an
   `Class.Accessory`. It is meant to be placed underneath a
   `Class.HumanoidDescription` in order to work with
-  `Class.Humanoid:ApplyDescription()`.
+  `Class.Humanoid:ApplyDescriptionAsync()`.
 code_samples: []
 inherits:
   - Instance
@@ -90,8 +90,8 @@ properties:
       Whether the `Class.Accessory` is layered or rigid.
     description: |
       Whether the `Class.Accessory` is layered or rigid. This will be updated
-      after calling `Class.Humanoid:ApplyDescription()` if this property doesn't
-      match the actual `Class.Accessory` contents.
+      after calling `Class.Humanoid:ApplyDescriptionAsync()` if this property
+      doesn't match the actual `Class.Accessory` contents.
     code_samples: []
     type: boolean
     tags: []

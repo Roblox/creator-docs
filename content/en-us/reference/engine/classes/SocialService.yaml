@@ -442,11 +442,11 @@ methods:
       		LaunchData = launchData,
       	}
 
-      	return SocialService:PromptLinkSharing(player, LinkSharingOptions)
+      	return SocialService:PromptLinkSharingAsync(player, LinkSharingOptions)
       end)
 
       if not success or result ~= Enum.PromptLinkSharingResult.Success then
-      	warn("PromptLinkSharing failed:", tostring(result))
+      	warn("PromptLinkSharingAsync failed:", tostring(result))
       end
       ```
     code_samples: []
@@ -731,7 +731,7 @@ callbacks:
         summary: |
           Table including the `PlaceId` and `ReservedServerAccessCode` keys
           whose values are the `Class.DataModel.PlaceId` and the server access
-          code returned by `Class.TeleportService:ReserveServer()`,
+          code returned by `Class.TeleportService:ReserveServerAsync()`,
           respectively.
     tags: []
     deprecation_message: ''
