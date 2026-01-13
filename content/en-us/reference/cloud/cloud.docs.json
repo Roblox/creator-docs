@@ -6089,12 +6089,18 @@
         "x-roblox-scopes": [
           {
             "name": "universe:write"
+          },
+          {
+            "name": "asset:read"
+          },
+          {
+            "name": "asset:write"
           }
         ],
         "x-roblox-docs": {
           "category": "Universes and places",
           "methodProperties": {
-            "scopes": ["universe:write"]
+            "scopes": ["universe:write", "asset:read", "asset:write"]
           },
           "resource": {
             "$ref": "#/components/schemas/Universe",
@@ -9764,10 +9770,11 @@
               "universe.user-restriction:read": "universe.user-restriction:read",
               "universe.user-restriction:write": "universe.user-restriction:write",
               "universe.subscription-product.subscription:read": "universe.subscription-product.subscription:read",
+              "asset:read": "asset:read",
+              "asset:write": "asset:write",
               "universe-messaging-service:publish": "universe-messaging-service:publish",
               "user.advanced:read": "user.advanced:read",
               "user.social:read": "user.social:read",
-              "asset:read": "asset:read",
               "user.inventory-item:read": "user.inventory-item:read",
               "user.user-notification:write": "user.user-notification:write"
             }
