@@ -346,6 +346,7 @@ descendants:
   - DraftsService
   - DraggerService
   - File
+  - InstanceFileSyncService
   - PlacesService
   - PluginManagementService
   - ReflectionMetadata

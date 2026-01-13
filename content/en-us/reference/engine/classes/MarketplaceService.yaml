@@ -1284,19 +1284,18 @@ methods:
 
       #### Caching Behavior
 
-      The results of this function are remembered so that repeated calls are
-      returned faster.
+      The results of this function are cached so that repeated calls are
+      returned faster. When the
+      `Class.MarketplaceService.PromptGamePassPurchaseFinished|PromptGamePassPurchaseFinished`
+      event fires, the cache gets updated to reflect the latest ownership state
+      of the associated game pass.
 
-      This function always returns true when the user first enters a server
-      after purchasing the pass.
+      If the user purchases a game pass outside of the experience while
+      remaining in the same session, the cache is eventually updated, but this
+      process might take several minutes to propagate.
 
-      If the user has purchased the pass inside an experience through
-      `Class.MarketplaceService:PromptGamePassPurchase()|PromptGamePassPurchase`,
-      the
-      `Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync()`
-      function might return false because of caching behavior. Alternatively,
-      the function might return true even after the user has deleted the pass
-      from their inventory.
+      When a user first enters a server after purchasing a game pass, this
+      functions always returns true.
     code_samples: []
     parameters:
       - name: userId
@@ -1437,10 +1436,16 @@ events:
           Indicates if the user pressed **OK** (true), **Cancel** (false) on the
           purchase prompt, or if the purchase prompt errored (false).
 
-          This might not accurately reflect if the purchase itself has been
-          successfully processed. Use
+          When `PromptGamePassPurchaseFinished` fires, it updates the cache used
+          by
           `Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync()`
-          as ownership confirmation.
+          to reflect the current ownership state.
+
+          `PromptGamePassPurchaseFinished` should only be listened to in a
+          server script. When used on the server, values such as `wasPurchased`
+          reflect the final outcome of the purchase attempt. When used in a
+          local script, these values should not be relied on for validation or
+          game logic.
     tags: []
     deprecation_message: ''
     security: None
