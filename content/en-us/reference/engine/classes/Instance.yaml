@@ -346,6 +346,7 @@ descendants:
   - DraftsService
   - DraggerService
   - File
+  - InstanceFileSyncService
   - PlacesService
   - PluginManagementService
   - ReflectionMetadata
@@ -1816,145 +1817,110 @@ methods:
 
       #### Selectors
 
-      <table>
-      <thead>
-        <tr>
-          <th>Selector</th>
-          <th>Description</th>
-          <th>Examples</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>ClassName</code></td>
-          <td>Matches instances of the specified class in a <code>Class.Object:IsA()</code> relationship.</td>
-          <td><code>SpotLight</code><br /><code>ImageButton</code><br /><code>Part</code></td>
-        </tr>
-        <tr>
-          <td><code>.Tag</code></td>
-          <td>Matches instances tagged with a <code>Class.CollectionService</code> tag.</td>
-          <td><code>.Fruit</code><br /><code>.IntenseLight</code></td>
-        </tr>
-        <tr>
-          <td><code>#Name</code></td>
-          <td>Matches instances of a specific <code>Class.Instance.Name</code>.</td>
-          <td><code>#RedTree</code><br /><code>#CloseButton</code></td>
-        </tr>
-        <tr>
-          <td><code>[property = value]</code></td>
-          <td>Matches instances which have the specified property and that property has the specified value. Boolean, number, and string values are supported. Letters, numbers, <code>_</code>, and <code>-</code> can be used without putting the value in quotation marks.
-          </td>
-          <td><code>[CanCollide = false]</code><br />
-          <code>[Brightness = "0.5"]</code><br />
-          <code>[Name = Folder10]</code><br />
-          <code>[Name = "Part.10"]</code></td>
-        </tr>
-        <tr>
-          <td width="30%"><code>[$attribute = value]</code></td>
-          <td>Matches instances which have the specified attribute and that attribute has the specified value. Same limitations apply as for property selectors.</td>
-          <td width="30%"><code>[$MyAttribute = 10]</code></td>
-        </tr>
-        <tr>
-          <td width="30%"><code>[$attribute]</code></td>
-          <td>Matches instances which have the specified attribute set.</td>
-          <td width="30%"><code>[$MyAttribute]</code></td>
-        </tr>
-        <tr>
-          <td width="30%"><code>:not(complex-selector-list)</code></td>
-          <td>Pseudo-class selector that matches instances which do <b>not</b> match any of the specified selectors.</td>
-          <td width="30%">See examples below</td>
-        </tr>
-        <tr>
-          <td width="30%"><code>:has(relative-selector-list)</code></td>
-          <td>Pseudo-class selector that matches instances which contain an instance matching the specified selector.</td>
-          <td width="30%">See examples below</td>
-        </tr>
-      </tbody>
-      </table>
+      - `ClassName` — Matches instances of the specified class in a
+        `Class.Object:IsA()` relationship.
+      - `.Tag` — Matches instances tagged with a `Class.CollectionService` tag.
+      - `#Name` — Matches instances of a specific `Class.Instance.Name`.
+      - `[property = value]` — Matches instances which have the specified
+        property and that property has the specified value. Boolean, number, and
+        string values are supported. Letters, numbers, `_`, and `-` can be used
+        without putting the value in quotation marks.
+      - `[$attribute]` — Matches instances which have the specified
+        [attribute](../../../studio/properties.md#instance-attributes) set.
+      - `[$attribute = value]` — Matches instances which have the specified
+        attribute **and** that attribute has the specified value. Same
+        limitations apply as for property selectors.
 
-      Note that selectors can be combined. For example,
-      `Model.Apple[$Kind = "Red"][$State = 4]` will match instances which are a
-      `Class.Model` with a tag `Apple` set and which have a `Kind` attribute
-      equal to string `"Red"` as well as a `State` attribute equal to `4`.
+      Selectors can also be combined. For example,
+      `Model.Apple[$Variety = Fuji][$Flavor = 4]` will match instances which are
+      a `Class.Model` tagged as `Apple` and which have a `Variety` attribute
+      equal to `Fuji` as well as a `Flavor` attribute equal to `4`.
+
+      ```lua
+      local Workspace = game:GetService("Workspace")
+
+      -- Get all MeshPart descendants
+      print(Workspace:QueryDescendants("MeshPart"))
+
+      -- Get all descendants tagged as "Fruit"
+      print(Workspace:QueryDescendants(".Fruit"))
+
+      -- Get all descendants with the name "RedTree"
+      print(Workspace:QueryDescendants("#RedTree"))
+
+      -- Get all descendants with CanCollide property set to false
+      print(Workspace:QueryDescendants("[CanCollide = false]"))
+
+      -- Get all descendants with a "FuelCapacity" attribute assigned
+      print(Workspace:QueryDescendants("[$FuelCapacity]"))
+      -- Get all descendants with a "FuelCapacity" attribute set to 75
+      print(Workspace:QueryDescendants("[$FuelCapacity = 75]"))
+      ```
 
       #### Combinators
 
-      <table>
-      <thead>
-        <tr>
-          <th>Combinator</th>
-          <th>Description</th>
-          <th>Examples</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>&gt;</code></td>
-          <td>Matches instances that are <b>direct children</b> of the previous filter matches.</td>
-          <td><code>Part &gt; .SwordHandle</code></td>
-        </tr>
-        <tr>
-          <td><code>&gt;&gt;</code></td>
-          <td>Matches instances that are <b>descendants</b> of the previous filter matches.</td>
-          <td><code>Model &gt;&gt; .TreeOnFire</code></td>
-        </tr>
-        <tr>
-          <td width="10%"><code>,</code></td>
-          <td>Specifies a list of multiple independent selectors for the descendant query.</td>
-          <td width="50%"><code>Part.TagA, Part[$UseForce = true]</code></td>
-        </tr>
-      </tbody>
-      </table>
+      Combinators let you mix basic selectors to match deeper hierarchy
+      relationships.
 
-      Note that the default first filter is a descendant combinator `>>`. If the
-      selector starts with a `>`, only children are visited; for example
-      `>Part.Apple` selects **direct children** which are a `Class.Part` and
-      have a tag `Apple`.
+      - `>` — Matches instances that are **direct children** of the previous
+        filter matches.
 
-      The default combinator can also be specified explicitly, as in
-      `>>SpotLight.Red` is the same as `SpotLight.Red`.
+      - `>>` — Matches instances that are **descendants** of the previous filter
+        matches. This is the default first filter, meaning that `SpotLight.Red`
+        is the same as `>> SpotLight.Red`.
 
-      Only elements matching the filter are placed in the array. For example,
-      `>#ExistingChild, >#MissingChild, >#AnotherExistingChild` will return an
-      array with two elements and there will be no `nil` for the missing child.
+      - `,` — Specifies a list of multiple independent selectors for the
+        descendant query. Only elements matching the filter are placed in the
+        returned array; `nil` will not be included for non‑matches in a query
+        list.
+
+      ```lua
+      local Workspace = game:GetService("Workspace")
+
+      -- Get direct children of any Model that are tagged as "SwordPart"
+      print(Workspace:QueryDescendants("Model > .SwordPart"))
+
+      -- Get direct children which are a Part and are tagged as "Apple"
+      print(Workspace:QueryDescendants("> Part.Apple"))
+
+      -- Get descendants of any Model with an attribute "OnFire" set to true
+      print(Workspace:QueryDescendants("Model >> [$OnFire = true]"))
+
+      -- Get MeshPart descendants tagged as "SwordPart" OR with an attribute "OnFire" set to true
+      print(Workspace:QueryDescendants("MeshPart.SwordPart, MeshPart[$OnFire = true]"))
+      ```
 
       #### Pseudo-class selectors
 
-      ##### :not(complex-selector-list)
+      - `:not(complex-selector-list)` — Allows selecting instances which do
+        **not** match any of the selectors inside, effectively performing a
+        negation of the selectors. Since the expression inside is a list of
+        complex selectors, it's possible to filter based on multiple conditions.
 
-      This pseudo-class selector allows selecting instances which do **not**
-      match any of the selectors inside. It performs a negation of the
-      selectors.
+      - `:has(relative-selector-list)` — Allows selecting instances based on
+        which instances they contain inside. The selector list is evaluated
+        relative to each instance.
 
-      Starting with the simple cases: it is possible to query instances that do
-      not match the specified class using `:not(SpotLight)`, or instances which
-      do not have an attribute set using `:not([$MyAttribute])`.
+      ```lua
+      local Workspace = game:GetService("Workspace")
 
-      The expression inside is a list of complex selectors, so it is possible to
-      filter based on multiple conditions. For example,
-      `:not(SpotLight, PointLight)` will select all instances that are not a
-      `Class.SpotLight` or a `Class.PointLight`. This can also be written as
-      `:not(SpotLight):not(PointLight)`.
+      -- Get all descendants which are NOT of class SpotLight
+      print(Workspace:QueryDescendants(":not(SpotLight)"))
+      -- Get all descendants which are NOT of class SpotLight OR PointLight
+      print(Workspace:QueryDescendants(":not(SpotLight, PointLight)"))
+      -- Get all descendants which do NOT have an attribute "OnFire"
+      print(Workspace:QueryDescendants(":not([$OnFire])"))
+      -- Get all descendants EXCEPT children of a Model tagged as "SwordPart"
+      print(Workspace:QueryDescendants(":not(Model > .SwordPart)"))
 
-      You can also use selectors with combinators. For example, given that the
-      expression `Model > .Red` will select all descendants that are a child of
-      a `Class.Model` and have a 'Red' tag, `:not(Model > .Red)` will select all
-      descendants except for those.
+      -- Get descendants which contain a Tool instance as their own descendant
+      print(Workspace:QueryDescendants(":has(Tool)"))
+      -- Get MeshPart descendants which contain a direct child tagged as "SwordPart"
+      print(Workspace:QueryDescendants("MeshPart:has(> .SwordPart)"))
 
-      ##### :has(relative-selector-list)
-
-      This pseudo-class selector allows selecting instances based on which
-      instances they contain inside. The selector list is evaluated relative to
-      each instance.
-
-      For example `:has(Tool)` will select all descendants which contain 'Tool'
-      as their own descendant.
-
-      To see the difference, consider the expression `SpotLight > .Red` which
-      selects descendants with the 'Red' tag that are a child of a `SpotLight`.
-      Using `SpotLight:has(> .Red)`, it is possible to select descendants that
-      are `SpotLight` instances and **contain** an instance with the 'Red' tag
-      inside.
+      -- Get MeshPart descendants with direct children NOT of SurfaceAppearance or Texture class
+      print(Workspace:QueryDescendants("MeshPart:has(> :not(SurfaceAppearance, Texture))"))
+      ```
     code_samples: []
     parameters:
       - name: selector

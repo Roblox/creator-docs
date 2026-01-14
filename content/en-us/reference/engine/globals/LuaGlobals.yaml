@@ -527,6 +527,7 @@ functions:
       - Paths with the `./` prefix begin resolution at `script.Parent`.
       - Paths with the `../` prefix begin resolution at `script.Parent.Parent`.
       - Paths with the `@self/` prefix begin resolution at `script`.
+      - Paths with the `@game/` prefix begin resolution at `game`.
       - Each non-prefix component in a given path corresponds to a child
         instance of the previous component. The exception to this is the `..`
         component, which corresponds to the parent of the previous component.

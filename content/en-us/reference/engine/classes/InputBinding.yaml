@@ -30,7 +30,7 @@ properties:
       `Class.InputAction`. Only applies when the parent action's
       `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction3D`, in
       which case the dispatched value will be a `Datatype.Vector3` with its
-      `Datatype.Vector3.Z|Z` component between `0` and `-1`.
+      `Datatype.Vector3.Z|Z` component between `0` and `1`.
     code_samples: []
     type: KeyCode
     tags: []
@@ -96,7 +96,7 @@ properties:
       `Class.InputAction`. Only applies when the parent action's
       `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction3D`, in
       which case the dispatched value will be a `Datatype.Vector3` with its
-      `Datatype.Vector3.Z|Z` component between `0` and `1`.
+      `Datatype.Vector3.Z|Z` component between `0` and `-1`.
     code_samples: []
     type: KeyCode
     tags: []

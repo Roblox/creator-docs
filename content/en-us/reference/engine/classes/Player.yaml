@@ -204,7 +204,8 @@ properties:
 
       Attempting to set the property after the character has spawned will not
       change the character; you must call
-      `Class.Player:LoadCharacter()|LoadCharacter()` to load the new appearance.
+      `Class.Player:LoadCharacterAsync()|LoadCharacterAsync()` to load the new
+      appearance.
     code_samples: []
     type: boolean
     tags: []
@@ -229,7 +230,7 @@ properties:
       simulating the player's avatar in-experience. The model is parented to the
       `Class.Workspace` but it may be moved. It is automatically loaded when
       `Class.Players.CharacterAutoLoads` is `true` and it can be manually loaded
-      otherwise using `Class.Player:LoadCharacter()|LoadCharacter()`.
+      otherwise using `Class.Player:LoadCharacterAsync()|LoadCharacterAsync()`.
 
       Initially this property is `nil` and it is set when the player's character
       first spawns. Use the `Class.Player.CharacterAdded|CharacterAdded` event
@@ -281,7 +282,8 @@ properties:
 
       Attempting to set the property after the character has spawned will not
       change the character, you must call
-      `Class.Player:LoadCharacter()|LoadCharacter()` to load the new appearance.
+      `Class.Player:LoadCharacterAsync()|LoadCharacterAsync()` to load the new
+      appearance.
     code_samples: []
     type: string
     tags:
@@ -592,9 +594,10 @@ properties:
         single instance to have identical names. If you need a globally unique
         identifier for a player, use `Class.Player.UserId|UserId` instead.
 
-      - Characters generated with `Class.Player:LoadCharacter()|LoadCharacter()`
-        or by the Roblox engine will have their `Class.Humanoid.DisplayName`
-        property assigned to the `Class.Player.DisplayName` property.
+      - Characters generated with
+        `Class.Player:LoadCharacterAsync()|LoadCharacterAsync()` or by the
+        Roblox engine will have their `Class.Humanoid.DisplayName` property
+        assigned to the `Class.Player.DisplayName` property.
 
       - Display names may have unicode characters in the string. See
         `Library.utf8|UTF-8` for more information on how to work with strings
@@ -1419,13 +1422,13 @@ methods:
       `0` and `255`, where `0` is a non-member and `255` is the group's owner.
 
       This call may not yield the most up-to-date information. If a player
-      leaves a group while they are in the experience, `GetRankInGroup()` will
-      still think they're in that group until they leave. However, this does not
-      happen when used with a `Class.LocalScript` because the method caches
-      results, so multiple calls of `GetRankInGroup()` on the same player with
-      the same group ID will yield the same result as when the method was first
-      called with the given group ID. The caching behavior is on a per-peer
-      basis: a server does not share the same cache as a client.
+      leaves a group while they are in the experience, `GetRankInGroupAsync()`
+      will still think they're in that group until they leave. However, this
+      does not happen when used with a `Class.LocalScript` because the method
+      caches results, so multiple calls of `GetRankInGroupAsync()` on the same
+      player with the same group ID will yield the same result as when the
+      method was first called with the given group ID. The caching behavior is
+      on a per-peer basis: a server does not share the same cache as a client.
 
       When a player joins a group in-experience due to a call to
       `Class.GroupService:PromptJoinAsync()`, any cached value for that player
@@ -1482,13 +1485,13 @@ methods:
       if the player isn't part of the group.
 
       This call may not yield the most up-to-date information. If a player
-      leaves a group while they are in the experience, `GetRoleInGroup()` will
-      still think they're in that group until they leave. However, this does not
-      happen when used with a `Class.LocalScript` because the method caches
-      results, so multiple calls of `GetRoleInGroup()` on the same player with
-      the same group ID will yield the same result as when the method was first
-      called with the given group ID. The caching behavior is on a per-peer
-      basis: a server does not share the same cache as a client.
+      leaves a group while they are in the experience, `GetRoleInGroupAsync()`
+      will still think they're in that group until they leave. However, this
+      does not happen when used with a `Class.LocalScript` because the method
+      caches results, so multiple calls of `GetRoleInGroupAsync()` on the same
+      player with the same group ID will yield the same result as when the
+      method was first called with the given group ID. The caching behavior is
+      on a per-peer basis: a server does not share the same cache as a client.
 
       When a player joins a group in-experience due to a call to
       `Class.GroupService:PromptJoinAsync()`, any cached value for that player
@@ -1676,11 +1679,11 @@ methods:
       of a group, given the ID of that group.
 
       This call may not yield the most up-to-date information. If a player
-      leaves a group while they are in the experience, `IsInGroup()` will still
-      think they're in that group until they leave. However, this does not
+      leaves a group while they are in the experience, `IsInGroupAsync()` will
+      still think they're in that group until they leave. However, this does not
       happen when used with a `Class.LocalScript` because the method caches
-      results, so multiple calls of `IsInGroup()` on the same player with the
-      same group ID will yield the same result as when the method was first
+      results, so multiple calls of `IsInGroupAsync()` on the same player with
+      the same group ID will yield the same result as when the method was first
       called with the given group ID. The caching behavior is on a per-peer
       basis: a server does not share the same cache as a client.
 
@@ -1849,15 +1852,15 @@ methods:
       changing the player's
       `Class.Player.CharacterAppearance|CharacterAppearance`.
 
-      After calling `LoadCharacter()` for an individual player, it is not
+      After calling `LoadCharacterAsync()` for an individual player, it is not
       recommended to call it again for the same player until after that player's
       `Class.Player.CharacterAppearanceLoaded|CharacterAppearanceLoaded` event
       has fired.
 
       #### Character Loading Event Order
 
-      Calling the `LoadCharacter()` method on any `Player` fires events in the
-      following order:
+      Calling the `LoadCharacterAsync()` method on any `Player` fires events in
+      the following order:
 
       1. The character appearance initializes.
       2. The character rig builds and scales.
@@ -1913,8 +1916,8 @@ methods:
       This is useful when giving a player's character an asset from the Roblox
       catalog, such as a hat or piece of gear.
 
-      It is similar to `Class.Player:LoadCharacter()`, except it does not reload
-      the entire character instance, StarterGear, or `Class.PlayerGui`.
+      It is similar to `Class.Player:LoadCharacterAsync()`, except it does not
+      reload the entire character instance, StarterGear, or `Class.PlayerGui`.
 
       Note:
 
@@ -2607,8 +2610,8 @@ events:
     description: |
       This event fires when a player's character spawns or respawns. It fires
       soon after setting `Class.Player.Character|Character` to a non-`nil` value
-      or calling `Class.Player:LoadCharacter()|LoadCharacter()`, which is before
-      the character is parented to the `Class.Workspace`.
+      or calling `Class.Player:LoadCharacterAsync()|LoadCharacterAsync()`, which
+      is before the character is parented to the `Class.Workspace`.
 
       This can be used alongside the
       `Class.Player.CharacterRemoving|CharacterRemoving` event which fires right

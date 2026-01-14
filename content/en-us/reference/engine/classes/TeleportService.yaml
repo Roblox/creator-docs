@@ -179,8 +179,8 @@ methods:
       - It is possible for this function to throw an error, hence developers
         should wrap it in a `Global.LuaGlobals.pcall()` (see example below)
       - As this function returns the JobId of the server and not the access code
-        returned by `Class.TeleportService:ReserveServer()`, the ID returned is
-        not appropriate for use with reserved servers.
+        returned by `Class.TeleportService:ReserveServerAsync()`, the ID
+        returned is not appropriate for use with reserved servers.
 
       #### Studio Limitation
 
@@ -349,7 +349,7 @@ methods:
       - `Class.TeleportService:TeleportAsync()` with the
         `Class.TeleportOptions.ReservedServerAccessCode` parameter.
       - `Class.TeleportService:TeleportToPrivateServer()`, with the access code
-        `ReserveServer` returns.
+        `ReserveServerAsync` returns.
         - A server is started when the access code is first used.
         - Access codes remain valid indefinitely, meaning reserved servers can
           still be joined if no game server is running (in this case a new
@@ -820,7 +820,7 @@ methods:
   - name: TeleportService:TeleportToPrivateServer
     summary: |
       Teleport a group of `Class.Player|Players` to a reserved server created
-      using `Class.TeleportService:ReserveServer()`.
+      using `Class.TeleportService:ReserveServerAsync()`.
     description: |
       This method should not be used for new work; the numerous teleport
       functions have been combined into a single method,
@@ -840,7 +840,7 @@ methods:
         default:
         summary: |
           The reserved server access code returned by
-          `Class.TeleportService:ReserveServer()`.
+          `Class.TeleportService:ReserveServerAsync()`.
       - name: players
         type: Instances
         default:

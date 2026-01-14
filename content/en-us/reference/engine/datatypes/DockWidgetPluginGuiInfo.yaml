@@ -9,8 +9,8 @@ summary: |
 description: |
   The `Datatype.DockWidgetPluginGuiInfo` data type describes details for a
   `Class.DockWidgetPluginGui`. This data type is used when constructing a
-  `Class.PluginGui` via the plugin's `Class.Plugin:CreateDockWidgetPluginGui()`
-  method.
+  `Class.PluginGui` via the plugin's
+  `Class.Plugin:CreateDockWidgetPluginGuiAsync()` method.
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -77,7 +77,7 @@ properties:
       enabled state of a `Class.PluginGui` being created with this
       `Datatype.DockWidgetPluginGuiInfo`. The previously saved enabled state is
       loaded based on the `pluginGuiId` argument of
-      `Class.Plugin:CreateDockWidgetPluginGui()`.
+      `Class.Plugin:CreateDockWidgetPluginGuiAsync()`.
     default:
     code_samples: []
     tags: []

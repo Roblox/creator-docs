@@ -92,8 +92,8 @@ properties:
 
       If this property is disabled (false), player
       `Class.Player.Character|characters` will not spawn until the
-      `Class.Player:LoadCharacter()` function is called for each `Class.Player`,
-      including when players join the experience.
+      `Class.Player:LoadCharacterAsync()` function is called for each
+      `Class.Player`, including when players join the experience.
 
       This can be useful in experiences where players have finite lives, such as
       competitive games in which players do not respawn until a game round ends.

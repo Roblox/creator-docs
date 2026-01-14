@@ -19,7 +19,7 @@ description: |
   `Class.StarterGui` are automatically copied into the player's
   `Class.PlayerGui`. Note that if `Class.Players.CharacterAutoLoads` is set to
   `false`, the character will not spawn and `Class.StarterGui` contents will not
-  be copied until `Class.Player:LoadCharacter()` is called. If
+  be copied until `Class.Player:LoadCharacterAsync()` is called. If
   `Class.StarterGui.ResetPlayerGuiOnSpawn` is set to `true`, then every time the
   player's character respawns, all of the contents of that player's
   `Class.PlayerGui` are cleared and replaced with the contents of

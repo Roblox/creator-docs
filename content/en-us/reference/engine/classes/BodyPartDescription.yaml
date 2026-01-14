@@ -12,7 +12,7 @@ description: |
   **BodyPartDescription** is an object that stores the description for an
   avatar's body parts, such as the `Class.BodyPartDescription.Color|Color`. It
   is meant to be placed underneath a `Class.HumanoidDescription` in order to
-  work with `Class.Humanoid:ApplyDescription()`.
+  work with `Class.Humanoid:ApplyDescriptionAsync()`.
 code_samples: []
 inherits:
   - Instance

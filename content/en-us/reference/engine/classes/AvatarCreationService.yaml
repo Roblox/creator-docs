@@ -957,8 +957,9 @@ events:
       experience and will trigger when the `Enum.ModerationStatus` changes from
       `Enum.ModerationStatus.NotReviewed|NotReviewed` to any other status. The
       event fires on the client only.
-      `Class.AvatarEditorService:GetOutfitDetails|GetOutfitDetails` can be used
-      on the server to verify the current moderation status if needed.
+      `Class.AvatarEditorService:GetOutfitDetailsAsync|GetOutfitDetailsAsync`
+      can be used on the server to verify the current moderation status if
+      needed.
     code_samples: []
     parameters:
       - name: outfitId
