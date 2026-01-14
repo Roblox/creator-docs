@@ -205,8 +205,9 @@ methods:
     capabilities: []
   - name: HapticEffect:SetWaveformKeys
     summary: |
-      Method used to define a custom waveform as a table and apply it to the
-      haptic.
+      Defines a custom waveform as a table and applies it to the haptic.
+
+          This method takes in an array of `Datatype.FloatCurveKey` objects.
     description: |
       This method lets you define a custom waveform as a table and apply it to
       the haptic.
