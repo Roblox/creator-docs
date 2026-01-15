@@ -9,7 +9,7 @@ import BetaAlert from '../includes/beta-features/beta-alert.md'
 
 Roblox Studio has a built-in [script editor](../studio/script-editor.md) for editing the code in your Roblox project. The editor includes key features like linting, type checking, autocomplete and collaborative editing.
 
-Many developers, however, have a preferred text editor, such as [Visual Studio Code](https://code.visualstudio.com), [Sublime Text](https://www.sublimetext.com), [Notepad++](https://notepad-plus-plus.org), or [Vim](https://www.vim.org). Popular development environments often have features or plugins that don't exist in Studio. To use an external text editor with Studio, enable the **Script Sync** feature.
+Many developers, however, have a preferred text editor, such as [Visual Studio Code](https://code.visualstudio.com), [Cursor](https://cursor.com), [Sublime Text](https://www.sublimetext.com), or [Notepad++](https://notepad-plus-plus.org). Popular development environments often have features or plugins that don't exist in Studio. To use an external text editor with Studio, enable the **Script Sync** feature.
 
 Script Sync works by synchronizing the scripts in your [data model](../projects/data-model.md) to text files on your local disk. Changes made to the Luau files on disk are applied to the scripts in Studio, and vice versa. This synchronization means that you can edit a script in an external editor like VS Code and immediately see the change in Studio.
 

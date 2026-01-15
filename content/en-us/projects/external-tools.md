@@ -149,7 +149,7 @@ For a detailed walkthrough of using React to create a Roblox UI, see [React + Ro
 
 Having a set of plain text files on your computer unlocks a variety of capabilities, but the primary one is _version control_. You can store your files in a [Git](https://git-scm.com/) or [Mercurial](https://www.mercurial-scm.org/) repository; host remote repositories and review code changes in [GitHub](https://github.com), [GitLab](https://gitlab.com), or [Bitbucket](https://bitbucket.org); and use whichever text editor you like.
 
-[Visual Studio Code](https://code.visualstudio.com) has the largest extension ecosystem, but [Sublime Text](https://www.sublimetext.com), [Notepad++](https://notepad-plus-plus.org), and [Vim](https://www.vim.org) are all popular choices. Whichever editor you choose, matching the capabilities of the Studio script editor will require some extensions.
+[Visual Studio Code](https://code.visualstudio.com) and [Cursor](https://cursor.com) have the largest extension ecosystem, but [Sublime Text](https://www.sublimetext.com) and [Notepad++](https://notepad-plus-plus.org), and [Vim](https://www.vim.org) are all popular choices. Whichever editor you choose, matching the capabilities of the Studio script editor will require some extensions.
 
 You might also consider adding:
 

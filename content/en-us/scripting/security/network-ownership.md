@@ -38,7 +38,7 @@ In competitive games, server-side validation of player movement is crucial for g
 Traditional methods often fall short in complex scenarios. Simple distance-over-time calculations may suffice for competitive shooters but fail in physics-intensive games involving vehicles, flight, or intricate interactions. Validation must also account for network latency.
 
 <Alert severity = 'warning'>
-**Server authority** is currently in beta and will be released soon.
+[Server authority](../../projects/server-authority/) is currently in beta and will be released soon.
 The most reliable solution for preventing physics and movement exploits is server authority, which moves physics simulation and movement validation entirely to the server. This eliminates the fundamental security weakness of client-controlled movement by ensuring all movement decisions are made on the server with authoritative validation.
 </Alert>
 

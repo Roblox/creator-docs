@@ -740,3 +740,4 @@ https://json-schema.org/
 https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.luau-lsp
 https://marketplace.visualstudio.com/items?itemName=Kampfkarren.selene-vscode
 https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.stylua
+https://cursor.com/
