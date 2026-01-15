@@ -5,7 +5,7 @@
 name: Path2D
 type: class
 memory_category: Instances
-summary: ''
+summary: 'Instance which allows for the runtime creation, editing, and visualization of 2D splines.'
 description: ''
 code_samples: []
 inherits:
