@@ -5,7 +5,7 @@
 name: Path2D
 type: class
 memory_category: Instances
-summary: ''
+summary: 'Instance which allows for the runtime creation, editing, and visualization of 2D splines.'
 description: |-
   `Path2D` is a UI instance that represents a 2D spline. It can be placed under
   any `Class.GuiObject` and be edited directly in the viewport using built‑in
