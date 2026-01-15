@@ -373,7 +373,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.MarketplaceService.GetProductInfoAsync|GetProductInfoAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -820,8 +822,7 @@ methods:
     summary: |
       Returns whether the given user has the given asset.
     description: ''
-    code_samples:
-      - MarketplaceService-PlayerOwnsAsset1
+    code_samples: []
     parameters:
       - name: player
         type: Instance
@@ -842,7 +843,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.MarketplaceService:PlayerOwnsAssetAsync()|PlayerOwnsAssetAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -882,8 +885,7 @@ methods:
     summary: |
       Returns whether the given player owns the given bundle.
     description: ''
-    code_samples:
-      - MarketplaceService-PlayerOwnsBundle1
+    code_samples: []
     parameters:
       - name: player
         type: Player
@@ -904,7 +906,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.MarketplaceService:PlayerOwnsBundleAsync()|PlayerOwnsBundleAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities: []

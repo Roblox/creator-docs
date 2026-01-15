@@ -11,17 +11,17 @@ There are two ways to determine rate limits: the reference documentation and res
 
 ### Documentation pages
 
-Specific rate limits for each endpoint are under the **Limits** section on their documentation pages. View these sections to understand the rate limits that apply before making requests.
+Public rate limits can be found under the **Limits** section for each endpoint on their documentation pages. View these sections to understand the rate limits that apply before making requests.
 
 <Alert severity="info">
-We strive to be as transparent as possible about rate limits, but additional, undocumented limits may apply for DDoS protection and service stability. Always ensure your application handles HTTP 429 rate limit responses. See [Handling rate limits](#handling-rate-limits) for guidance.
+We strive to be as transparent as possible about rate limits, but additional, undocumented limits may apply, including for DDoS protection and service stability. Always ensure your application handles HTTP 429 rate limit responses. See [Handling rate limits](#handling-rate-limits) for guidance.
 
 If you hit an undocumented rate limit that blocks your use case (or you would like higher limits for an endpoint), please leave feedback explaining your needs in the [Developer Forum](https://devforum.roblox.com/).
 </Alert>
 
 ### Response headers
 
-Every API response includes headers that provide information about your current rate limit status.
+Many API responses include headers that provide information about your current rate limit status.
 
 | Header                  | Description                                                                                                                           |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -44,7 +44,7 @@ In this example:
 
 ## Behavior
 
-Rate limit behavior differs by authentication method and whether you make requests from within a Roblox experience.
+Rate limit behavior differs by authentication method and request origin, including whether you make requests from within a Roblox experience.
 
 ### API key
 

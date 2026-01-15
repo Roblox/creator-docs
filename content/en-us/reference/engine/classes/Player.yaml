@@ -1239,7 +1239,8 @@ methods:
       - Players
   - name: Player:GetFriendsOnline
     summary: |
-      Returns a dictionary of online connections.
+      Returns a dictionary of online connections. Returns the product
+      information of an asset using its asset ID.
     description: ''
     code_samples:
       - how-to-get-a-list-of-online-friends
@@ -1256,7 +1257,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Player.GetFriendsOnline|GetFriendsOnline()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -1537,7 +1540,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Player.GetRoleInGroupAsync|GetRoleInGroup()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -1726,7 +1731,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Player.IsInGroupAsync|IsInGroupAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -1899,7 +1906,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Player:LoadCharacterAsync()|LoadCharacterAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -2007,7 +2016,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Player:LoadCharacterWithHumanoidDescriptionAsync()|LoadCharacterWithHumanoidDescriptionAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -2620,10 +2631,11 @@ events:
       die then respawn in a place.
 
       Note that the `Class.Humanoid` and its default body parts (head, torso,
-      and limbs) will exist when this event fires, but clothing items like
-      `Class.Hat|Hats`, `Class.Shirt|Shirts`, and `Class.Pants` may take a few
-      seconds to be added to the character. Connect `Class.Instance.ChildAdded`
-      on the added character to detect these, or wait for the
+      and limbs) will exist on the server when this event fires, but clothing
+      items like `Class.Hat|Hats`, `Class.Shirt|Shirts`, and `Class.Pants` might
+      take a few seconds to be added to the character. The parts will also take
+      time to replicate to clients. Connect `Class.Instance.ChildAdded` on the
+      added character to detect these, or wait for the
       `Class.Player.CharacterAppearanceLoaded|CharacterAppearanceLoaded` event
       to be sure the character has everything equipped.
 

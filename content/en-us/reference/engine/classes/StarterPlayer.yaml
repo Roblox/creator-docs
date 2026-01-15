@@ -537,8 +537,7 @@ properties:
     summary: |
       Lets you overwrite the player's movement mode on a touch-enabled device.
     description: |
-      This property lets you overwrite the player's movement mode on a
-      touch-enabled device.
+      Lets you overwrite the player's movement mode on a touch-enabled device.
 
       If set to `Enum.DevTouchMovementMode|UserChoice`, the player's movement
       mode will be determined by whatever they set in the experience's settings.
@@ -561,8 +560,12 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.EnableDynamicHeads
-    summary: ''
-    description: ''
+    summary: |
+      Sets the use of dynamic heads. When true, enables the use of avatar heads
+      with facial animation data.
+    description: |
+      Sets the use of dynamic heads. When true, enables the use of avatar heads
+      with facial animation data.
     code_samples: []
     type: LoadDynamicHeads
     tags:

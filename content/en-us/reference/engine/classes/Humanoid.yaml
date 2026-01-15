@@ -1408,7 +1408,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Humanoid:ApplyDescriptionAsync()|ApplyDescriptionAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -1481,7 +1483,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Humanoid:ApplyDescriptionResetAsync()|ApplyDescriptionResetAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -2115,7 +2119,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Humanoid:PlayEmoteAsync()|PlayEmoteAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
