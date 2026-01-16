@@ -1,4 +1,4 @@
----
+danita7215 ---
 title: Roblox Studio setup
 description: Explains how to install Roblox Studio on your system.
 ---
@@ -13,7 +13,7 @@ Create immersive 3D experiences on Roblox with **Roblox Studio**, a free applica
 
 ## Installation
 
-1. Click the following **Download Studio** button.
+1. Click the following **Download Studio** button
 
    <UseStudioButton variant='blueLogoIconButton' />
 
