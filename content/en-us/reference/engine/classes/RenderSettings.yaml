@@ -181,7 +181,7 @@ properties:
     summary: |
       The size in bytes of the mesh cache. Defaults to 32 MiB.
     description: |
-      The size in bytes of the mesh cache. Defaults to 32 MiB (32 \* 1024 \* 1024 bytes).
+      The size in bytes of the mesh cache. Defaults to 32 MiB (`32 * 1024 * 1024` bytes).
     code_samples: []
     type: int
     tags: []
