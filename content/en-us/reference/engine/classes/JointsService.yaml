@@ -5,9 +5,8 @@
 name: JointsService
 type: class
 memory_category: Instances
-summary: |
-  A service that stores joints created by surface connections.
-description: |
+summary: A service that stores joints created by surface connections.
+description: |-
   The JointsService is a service that stores joints created by surface
   connections. It also has API available for visualizing surface to surface
   contact, and joining surfaces together.
@@ -19,17 +18,17 @@ tags:
   - NotCreatable
   - Service
   - Deprecated
-deprecation_message: |
+deprecation_message: |-
   This service has been deprecated in favor of
   [constraints](../../../physics/mechanical-constraints.md) which should be used
   for surface connections instead
 properties: []
 methods:
   - name: JointsService:ClearJoinAfterMoveJoints
-    summary: |
+    summary: |-
       Will remove any 'create joints' that were made visible via the
       `Class.JointsService:ShowPermissibleJoints()` method.
-    description: |
+    description: |-
       Will remove any 'create joints' that were made visible via the
       `Class.JointsService:ShowPermissibleJoints()` method.
     code_samples: []
@@ -43,11 +42,11 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: JointsService:CreateJoinAfterMoveJoints
-    summary: |
+    summary: |-
       Updates all visible joints for the parts assigned by the
       `Class.JointsService:SetJoinAfterMoveTarget()` and
       `Class.JointsService:SetJoinAfterMoveInstance()` methods.
-    description: |
+    description: |-
       Updates all visible joints for the parts assigned by the
       `Class.JointsService:SetJoinAfterMoveTarget()` and
       `Class.JointsService:SetJoinAfterMoveInstance()` methods.
@@ -62,10 +61,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: JointsService:SetJoinAfterMoveInstance
-    summary: |
+    summary: |-
       Sets the PVInstance that will be connected with the target PVInstance
       specified by `Class.JointsService:SetJoinAfterMoveTarget()`.
-    description: |
+    description: |-
       Sets the PVInstance that will be connected with the target PVInstance
       specified by `Class.JointsService:SetJoinAfterMoveTarget()`.
     code_samples: []
@@ -83,10 +82,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: JointsService:SetJoinAfterMoveTarget
-    summary: |
+    summary: |-
       Sets the PVInstance that will be connected with the PVInstance specified
       by `Class.JointsService:SetJoinAfterMoveInstance()`.
-    description: |
+    description: |-
       Sets the PVInstance that will be connected with the PVInstance specified
       by `Class.JointsService:SetJoinAfterMoveInstance()`.
     code_samples: []
@@ -104,12 +103,12 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: JointsService:ShowPermissibleJoints
-    summary: |
+    summary: |-
       When used it will visibly display a potential surface connection between
       the two `Class.BasePart`, which were set with
       `Class.JointsService:SetJoinAfterMoveTarget()` and
       `Class.JointsService:SetJoinAfterMoveInstance()`.
-    description: |
+    description: |-
       When used it will visibly display a potential surface connection between
       the two `Class.BasePart`, which were set with
       `Class.JointsService:SetJoinAfterMoveTarget()` and

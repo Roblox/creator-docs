@@ -5,16 +5,15 @@
 name: LineHandleAdornment
 type: class
 memory_category: Instances
-summary: |
-  A line that can be adorned to a `Class.BasePart`.
-description: |
-  For handles to be interactive, they must be parented to a player's PlayerGui
-  or the CoreGui. The **LineHandleAdornment** is a line that can be adorned to a
+summary: A line-shaped handle that can be adorned to a `Class.BasePart`.
+description: |-
+  `LineHandleAdornment` is a line-shaped handle that can be adorned to a
   `Class.BasePart`. This line starts at the center of the adornment's
-  `Class.HandleAdornment.CFrame` (offset by the adornment's
-  `Class.HandleAdornment.SizeRelativeOffset`) and will be oriented along its
-  CFrame. This adornment can listen to input events and is commonly used to make
-  dragger tools.
+  `Class.LineHandleAdornment.CFrame|CFrame` (offset by its
+  `Class.LineHandleAdornment.SizeRelativeOffset|SizeRelativeOffset`) and is
+  oriented along its `Class.LineHandleAdornment.CFrame|CFrame`. If parented to a
+  player's `Class.PlayerGui` or the `Class.CoreGui`, handles can listen to input
+  events for purposes such as making dragger tools.
 code_samples: []
 inherits:
   - HandleAdornment
@@ -23,10 +22,8 @@ tags: []
 deprecation_message: ''
 properties:
   - name: LineHandleAdornment.Length
-    summary: |
-      The length of the line.
-    description: |
-      The length of the line.
+    summary: Length of the line.
+    description: The length of the line in studs.
     code_samples: []
     type: float
     tags: []
@@ -43,10 +40,8 @@ properties:
       - Basic
       - UI
   - name: LineHandleAdornment.Thickness
-    summary: |
-      The thickness of the line in pixels.
-    description: |
-      The thickness of the line in pixels.
+    summary: Thickness of the line in pixels.
+    description: The thickness of the line in pixels.
     code_samples: []
     type: float
     tags: []

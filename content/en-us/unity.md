@@ -14,7 +14,7 @@ This page contains information to help experienced Unity developers get started 
 
 <img src="./assets/engine-comparisons/Unity-Editor-Layout.png" alt="The Unity user interface with markup to show the various windows and panels." />
 
-<img src="./assets/engine-comparisons/Roblox-Studio-Layout.png" alt="The Roblox Studio user interface with markup to show the various windows and panels." />
+<img src="./assets/studio/general/Studio-Layout.png" alt="The Roblox Studio user interface with markup to show the various windows and panels." />
 
 Unity's **Hierarchy** window and Roblox Studio's [Explorer](studio/explorer.md) are the primary windows for organizing elements in 3D scenes:
 

@@ -6339,7 +6339,7 @@
       "post": {
         "tags": ["Universes"],
         "summary": "Restart Universe Servers",
-        "description": "Restarts all active servers for a specific universe if and only if a new\nversion of the experience has been published. Used for releasing experience\nupdates.",
+        "description": "Restarts active servers for a specific universe. Defaults to only\nrestarting servers running older versions, but can be configured to restart\nall servers regardless of version. Used for releasing experience updates.",
         "operationId": "Cloud_RestartUniverseServers",
         "parameters": [
           {
@@ -10803,7 +10803,7 @@
             }
           },
           "400": {
-            "description": "2: The request was empty.\r\n11: The Facebook profile url is invalid.\r\n12: The Twitter handle is invalid.\r\n13: The YouTube url is invalid.\r\n14: The Twitch profile url is invalid.\r\n15: The Guilded profile url is invalid."
+            "description": "2: The request was empty.\r\n11: The Facebook profile url is invalid.\r\n12: The Twitter handle is invalid.\r\n13: The YouTube url is invalid.\r\n14: The Twitch profile url is invalid."
           },
           "401": {
             "description": "0: Authorization has been denied for this request."
@@ -11684,6 +11684,48 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#accountsettings_patch_v1_email"
+        }
+      }
+    },
+    "/v1/emails": {
+      "get": {
+        "tags": ["Accounts"],
+        "summary": "Gets the authenticated user's verified email and pending (unverified) email if one exists",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.AccountSettings.Api.CurrentEmailsResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.AccountSettings.Api.CurrentEmailsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://accountsettings.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#accountsettings_get_v1_emails"
         }
       }
     },
@@ -16005,6 +16047,9 @@
           "400": {
             "description": "2: The account revert ticket is not valid"
           },
+          "403": {
+            "description": "13: Revert links are disabled for users in the Enhanced Protection Program."
+          },
           "503": {
             "description": "1: This feature is disabled"
           }
@@ -17525,6 +17570,9 @@
           },
           "400": {
             "description": "2: The account revert ticket is not valid"
+          },
+          "403": {
+            "description": "13: Revert links are disabled for users in the Enhanced Protection Program."
           },
           "503": {
             "description": "1: This feature is disabled"
@@ -49278,146 +49326,6 @@
         }
       }
     },
-    "/v1/tags": {
-      "get": {
-        "tags": ["Assets"],
-        "summary": "Gets the information for a list of tag Ids.",
-        "parameters": [
-          {
-            "in": "query",
-            "name": "tagIds",
-            "description": "",
-            "required": true,
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.ItemConfiguration.Api.TagDetails_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.ItemConfiguration.Api.TagDetails_"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: No tag Ids requested\r\n2: Too many tag Ids requested"
-          },
-          "404": {
-            "description": "7: The endpoint was not found"
-          },
-          "429": {
-            "description": "3: Too many requests"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://itemconfiguration.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {},
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#itemconfiguration_get_v1_tags"
-        }
-      }
-    },
-    "/v1/tags/prefix-search": {
-      "get": {
-        "tags": ["Assets"],
-        "summary": "Searches for up to numberOfResults tags based on the given prefix.",
-        "parameters": [
-          {
-            "in": "query",
-            "name": "prefix",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "in": "query",
-            "name": "numberOfResults",
-            "description": "Must be 1, 5, 10, or 25.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.ItemConfiguration.Api.TagDetails_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.ItemConfiguration.Api.TagDetails_"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "5: The given prefix is invalid\r\n6: The number of results requested is invalid"
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "4: This endpoint is not yet enabled for the current user"
-          },
-          "404": {
-            "description": "7: The endpoint was not found"
-          },
-          "429": {
-            "description": "3: Too many requests"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://itemconfiguration.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#itemconfiguration_get_v1_tags_prefix_search"
-        }
-      }
-    },
     "/v1/creations/get-asset-details": {
       "post": {
         "tags": ["Assets"],
@@ -60480,12 +60388,26 @@
           }
         },
         "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 200
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "creator-store-save:read"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -60603,12 +60525,26 @@
           }
         },
         "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 200
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "creator-store-save:write"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -60710,12 +60646,26 @@
           }
         },
         "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 200
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "creator-store-save:write"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -60824,10 +60774,28 @@
           }
         },
         "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 200
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "creator-store-save:write"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}],
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/creator-store#post_toolbox_service_v1_saves_bulkDelete"
         }
@@ -67087,12 +67055,12 @@
           "closeAllVersions": {
             "example": true,
             "type": "boolean",
-            "description": "If true, players from servers running both old and new place versions will\nbe restarted. If false, restarts all active servers for a specific universe \nif and only if a new version of the experience has been published."
+            "description": "If true, players from servers running both old and new place versions will\nbe restarted. If false, restarts all active servers for a specific universe\nif and only if a new version of the experience has been published."
           },
           "bleedOffServers": {
             "example": true,
             "type": "boolean",
-            "description": "If true, matchmaking to servers will stop, but servers will stay up for bleed_off_duration_minutes before shutting down.\nThis setting gives players time to naturally migrate to the newer version.\nIf false, servers will immediately start shutting down."
+            "description": "If true, matchmaking to servers will stop, but servers will stay up for\nbleed_off_duration_minutes before shutting down.\nThis setting gives players time to naturally migrate to the newer version.\nIf false, servers will immediately start shutting down."
           },
           "bleedOffDurationMinutes": {
             "example": 10,
@@ -68622,10 +68590,6 @@
           "twitch": {
             "description": "The Twitch channel",
             "type": "string"
-          },
-          "guilded": {
-            "description": "The Guilded channel",
-            "type": "string"
           }
         },
         "additionalProperties": false
@@ -68648,10 +68612,6 @@
           },
           "twitch": {
             "description": "The Twitch channel",
-            "type": "string"
-          },
-          "guilded": {
-            "description": "The Guilded channel",
             "type": "string"
           },
           "promotionChannelsVisibilityPrivacy": {
@@ -68683,10 +68643,6 @@
           },
           "twitch": {
             "description": "The Twitch channel",
-            "type": "string"
-          },
-          "guilded": {
-            "description": "The Guilded channel",
             "type": "string"
           }
         },
@@ -68794,6 +68750,21 @@
       },
       "Roblox.Web.WebAPI.ApiEmptyResponseModel": {
         "type": "object",
+        "additionalProperties": false
+      },
+      "Roblox.AccountSettings.Api.CurrentEmailsResponse": {
+        "description": "Response model for getting the user's verified and pending email addresses",
+        "type": "object",
+        "properties": {
+          "verifiedEmail": {
+            "description": "The user's most recent verified email address (masked)",
+            "type": "string"
+          },
+          "pendingEmail": {
+            "description": "The user's pending (unverified) email address if one exists (masked)",
+            "type": "string"
+          }
+        },
         "additionalProperties": false
       },
       "Roblox.AccountSettings.Api.EmailResponse": {
@@ -81782,18 +81753,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.ItemConfiguration.Api.TagDetails_": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.TagDetails"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.ItemConfiguration.Api.AssetCreationsResponse_": {
         "type": "object",
         "properties": {
@@ -89283,6 +89242,7 @@
           "accountsettings_get_v1_account_settings_account_country",
           "accountsettings_post_v1_account_settings_account_country",
           "accountsettings_get_v1_account_settings_metadata",
+          "accountsettings_get_v1_emails",
           "accountsettings_get_v1_email",
           "accountsettings_patch_v1_email",
           "accountsettings_post_v1_email",
@@ -89503,8 +89463,6 @@
           "itemconfiguration_post_v1_item_tags",
           "itemconfiguration_delete_v1_item_tags__itemTagId_",
           "itemconfiguration_get_v1_item_tags_metadata",
-          "itemconfiguration_get_v1_tags",
-          "itemconfiguration_get_v1_tags_prefix_search",
           "publish_get_v1_asset_quotas",
           "publish_post_v1_audio",
           "publish_post_v1_audio_verify",

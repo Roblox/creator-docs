@@ -105,6 +105,11 @@ Appearance of the overall chat window is customizable through `Class.ChatWindowC
 		<td>`0.3`</td>
 	</tr>
 	<tr>
+		<td>`Class.ChatWindowConfiguration.Enabled|Enabled`</td>
+		<td>Whether to show the default chat window. Set to `false` to hide.</td>
+		<td>`true`</td>
+	</tr>
+	<tr>
 		<td>`Class.ChatWindowConfiguration.FontFace|FontFace`</td>
 		<td>`Datatype.Font` of chat window text.</td>
 		<td>`Enum.Font.BuilderSansMedium|BuilderSansMedium`</td>

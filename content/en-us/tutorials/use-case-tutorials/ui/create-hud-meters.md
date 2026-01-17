@@ -27,7 +27,7 @@ The best way to test UI designs across platforms is Studio's [Device Emulator](.
 
    <UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="99416825187098" universeId="6627378835" />
 
-2. From Studio's **View** menu, toggle on **Device Emulator**.
+2. From Studio's **Test** menu, toggle on **Device Emulator**.
 3. From the bar directly above the main viewport, select a phone emulation such as **iPhone&nbsp;X** or **Samsung&nbsp;Galaxy&nbsp;A51**. Then, set the view size to **Fit&nbsp;to&nbsp;Window** to utilize the maximum space in Studio.
 
    <img src="../../../assets/studio/general/Device-Emulator-Phone.png" width="800" alt="Device Emulator settings options indicated at top of viewport window." />
