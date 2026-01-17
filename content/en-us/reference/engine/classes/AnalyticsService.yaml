@@ -153,7 +153,7 @@ methods:
         used in the **category** parameter.
       - **"AnalyticsService: The event value you fired is too long."** – Thrown
         if the **value** parameter was too long after serialization. The length
-        limit is 1 KB, or 1024 bytes.
+        limit is 1 KiB, or 1024 bytes.
     code_samples: []
     parameters:
       - name: category
@@ -167,7 +167,7 @@ methods:
         default:
         summary: |
           A value to be serialized and reported. Serialized length must not
-          exceed 1 KB, or 1024 bytes.
+          exceed 1 KiB, or 1024 bytes.
     returns:
       - type: ()
         summary: ''
