@@ -63,7 +63,7 @@ properties:
     description: |
       Returns the grid snapping size the user has set in Studio's toolbar. Note
       that this property may have slight rounding errors; for example it may be
-      `0.0099999997764826` for a user setting of `1` or `0.4000000059604645` for
+      `0.0099999997764826` for a user setting of `0.01` or `0.4000000059604645` for
       a user setting of `0.4`.
     code_samples: []
     type: float
