@@ -19,9 +19,9 @@ description: |
     `Class.StudioService.RotateIncrement|RotateIncrement` and
     `Class.StudioService.UseLocalSpace|UseLocalSpace` useful.
   - Plugins that require the user to import files should use
-    `Class.StudioService:PromptImportFile()|PromptImportFile` or
-    `Class.StudioService:PromptImportFiles()|PromptImportFiles` in order to
-    receive `Class.File` objects.
+    `Class.StudioService:PromptImportFileAsync()|PromptImportFileAsync` or
+    `Class.StudioService:PromptImportFilesAsync()|PromptImportFilesAsync` in
+    order to receive `Class.File` objects.
   - Plugins that display icons of Instance classes can use
     `Class.StudioService:GetClassIcon()|GetClassIcon`.
   - Plugins that care about which script is currently being edited (if any) can
@@ -376,8 +376,8 @@ methods:
 
       See also:
 
-      - `Class.StudioService:PromptImportFiles()`, the same function but for
-        loading a list of files instead of a single file
+      - `Class.StudioService:PromptImportFilesAsync()`, the same function but
+        for loading a list of files instead of a single file
     code_samples: []
     parameters:
       - name: fileTypeFilter
@@ -440,7 +440,7 @@ methods:
 
       See also:
 
-      - `Class.StudioService:PromptImportFile()`, the same function but for
+      - `Class.StudioService:PromptImportFileAsync()`, the same function but for
         loading a single file instead of a list of files
     code_samples: []
     parameters:

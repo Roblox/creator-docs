@@ -36,7 +36,7 @@ Roblox Studio features a powerful, built-in **Animation Editor** that allows you
 1. Start or open a project in Roblox Studio.
 2. To animate, you'll need to freely manipulate parts. From the toolbar, make sure **Move** and **Rotate** snapping are turned off.
 
-   <img src="../../assets/education/general/Snap-Settings-C.png" width="500" />
+   <img src="../../assets/education/general/Snap-Settings-C.png" width="510" />
 
 3. To open the Animation Editor, select **Animation** from the **Avatar** tab.
 4. To create player animations, a character rig is needed. In the **Avatar** tab, click on **Character**. In the popup, select any rig.

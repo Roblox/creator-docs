@@ -305,6 +305,63 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: CaptureService:TakeScreenshotCaptureAsync
+    summary: |
+      Initiates a screenshot capture.
+    description: |
+      This method initiates a screenshot capture. The `onCaptureReady` callback
+      can be used to prompt the user to save or share the screenshot capture.
+
+      Use the `Enum.UICaptureMode` parameter in `captureParams` to specify
+      whether UI elements should be in the screenshot. By default, this is set
+      to `Enum.UICaptureMode.None`.
+
+      ```lua
+      local CaptureService = game:GetService("CaptureService")
+
+      local parent = script.Parent
+
+      local onCaptureReady = function(result, screenshotCapture)
+      	if result ~= Enum.ScreenshotCaptureResult.Success or not screenshotCapture then
+      		print("Screenshot failed to complete for reason:", result)
+      	else
+      		-- Prompt the user to save the screenshot capture to their gallery
+      		CaptureService:PromptSaveCapturesToGallery({ screenshotCapture }, function(results)
+      			for capture, result in pairs(results) do
+      				if result then
+      					print("Capture saved")
+      				end
+      			end
+      		end)
+      	end
+      end
+
+      parent.Activated:Connect(function()
+      	CaptureService:TakeScreenshotCaptureAsync(onCaptureReady, { UICaptureMode = Enum.UICaptureMode.All })
+      end)
+      ```
+    code_samples: []
+    parameters:
+      - name: onCaptureReady
+        type: Function
+        default:
+        summary: |
+          A callback function that is called on screenshot capture completion
+          with a `Enum.ScreenshotCaptureResult` and, if successful, a
+          `Class.ScreenshotCapture`.
+      - name: captureParams
+        type: Dictionary
+        default: nil
+        summary: |
+          A dictionary that modifies capture behavior.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: CaptureService:UploadCaptureAsync
     summary: ''
     description: |

@@ -11,19 +11,19 @@ summary: |
 description: |
   **HumanoidDescription** is an object that stores a description of a
   `Class.Humanoid` for R6 and R15 rigs. It can be
-  `Class.Humanoid:ApplyDescription()|applied` in order to set a rig's scaling,
-  clothing (`Class.Shirt`, `Class.Pants`, `Class.ShirtGraphic`),
+  `Class.Humanoid:ApplyDescriptionAsync()|applied` in order to set a rig's
+  scaling, clothing (`Class.Shirt`, `Class.Pants`, `Class.ShirtGraphic`),
   `Class.Accessory|Accessories`, `Class.Animation|Animations` and
   `Class.BodyColors`.
 
   You can get a HumanoidDescription by using the following functions:
 
-  - `Class.Players:GetHumanoidDescriptionFromUserId()`, for an outfit currently
-    being worn by a user on Roblox.
-  - `Class.Players:GetHumanoidDescriptionFromOutfitId()`, for an outfit created
-    by a user on Roblox.
+  - `Class.Players:GetHumanoidDescriptionFromUserIdAsync()`, for an outfit
+    currently being worn by a user on Roblox.
+  - `Class.Players:GetHumanoidDescriptionFromOutfitIdAsync()`, for an outfit
+    created by a user on Roblox.
   - You can create a Humanoid rig model from a HumanoidDescription through
-    `Class.Players:CreateHumanoidModelFromDescription()`.
+    `Class.Players:CreateHumanoidModelFromDescriptionAsync()`.
 
   See also:
 
@@ -72,12 +72,12 @@ properties:
     summary: |
       A comma-separated list of asset IDs that will be added as
       `Class.Accessory|Accessories` to a `Class.Humanoid` rig when
-      `Class.Humanoid:ApplyDescription()|applied`, usually those attached to its
-      back (such as capes).
+      `Class.Humanoid:ApplyDescriptionAsync()|applied`, usually those attached
+      to its back (such as capes).
     description: |
       **BackAccessory** is a comma-separated list of asset IDs that determine
       what accessories should be added when the description is
-      `Class.Humanoid:ApplyDescription()|applied`. The list cannot contain
+      `Class.Humanoid:ApplyDescriptionAsync()|applied`. The list cannot contain
       duplicates.
 
       An error is thrown if you try to apply a new description which shares any
@@ -120,7 +120,7 @@ properties:
       `Class.Humanoid` is interpolated from the standard R15 body shape (0) to a
       taller and more slender body type (1). Values outside the range of 0 to 1
       are clamped. When the description is applied through
-      `Class.Humanoid:ApplyDescription()`, this value maps to a
+      `Class.Humanoid:ApplyDescriptionAsync()`, this value maps to a
       **BodyTypeScale** `Class.NumberValue` within the `Class.Humanoid`.
 
       Note that when the value of this property is 0, the
@@ -155,13 +155,13 @@ properties:
       - Avatar
   - name: HumanoidDescription.ClimbAnimation
     summary: |
-      When this description is `Class.Humanoid:ApplyDescription()|applied` to a
-      `Class.Humanoid`, this determines the `Class.Animation.AnimationId` to
-      play when its `Class.Humanoid:GetState()|state` is
+      When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
+      to a `Class.Humanoid`, this determines the `Class.Animation.AnimationId`
+      to play when its `Class.Humanoid:GetState()|state` is
       `Enum.HumanoidStateType|Climbing`.
     description: |
-      When this description is `Class.Humanoid:ApplyDescription()|applied` to a
-      `Class.Humanoid`, **ClimbAnimation** determines the
+      When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
+      to a `Class.Humanoid`, **ClimbAnimation** determines the
       `Class.Animation.AnimationId` to play when its
       `Class.Humanoid:GetState()|state` is `Enum.HumanoidStateType|Climbing`.
 
@@ -196,7 +196,7 @@ properties:
       **DepthScale** determines by what factor the depth (back-to-front
       distance) of a `Class.Humanoid` is scaled, as well as all accessories not
       attached to its head. When the description is applied through
-      `Class.Humanoid:ApplyDescription()`, this value maps to a
+      `Class.Humanoid:ApplyDescriptionAsync()`, this value maps to a
       **BodyDepthScale** `Class.NumberValue` within the Humanoid.
 
       #### See Also
@@ -227,9 +227,9 @@ properties:
       Determines the asset ID of the Face to be applied to the `Class.Humanoid`.
     description: |
       **Face** determines the asset ID of the Face to be
-      `Class.Humanoid:ApplyDescription()|applied` to a `Class.Humanoid`. The
-      type of the asset ID provided **must be for a Face** type asset and not a
-      Decal or Image type asset.
+      `Class.Humanoid:ApplyDescriptionAsync()|applied` to a `Class.Humanoid`.
+      The type of the asset ID provided **must be for a Face** type asset and
+      not a Decal or Image type asset.
 
       The actual face texture is rendered using a `Class.Decal` in the Head
       named "face" or "Face".
@@ -264,13 +264,14 @@ properties:
     summary: |
       A comma-separated list of asset IDs that will be added as
       `Class.Accessory|Accessories` to a `Class.Humanoid` rig when
-      `Class.Humanoid:ApplyDescription()|applied`, usually those attached to the
-      front of its face (such as glasses).
+      `Class.Humanoid:ApplyDescriptionAsync()|applied`, usually those attached
+      to the front of its face (such as glasses).
     description: |
       **FaceAccessory** is a comma-separated list of asset IDs that determine
       what accessories should be added when the description is
-      `Class.Humanoid:ApplyDescription()|applied`, usually those attached to the
-      front of its face (such as glasses). The list does not contain duplicates.
+      `Class.Humanoid:ApplyDescriptionAsync()|applied`, usually those attached
+      to the front of its face (such as glasses). The list does not contain
+      duplicates.
 
       An error is thrown if you try to apply a new description which shares any
       assets with the existing description but a different accessory property.
@@ -306,13 +307,13 @@ properties:
       - Avatar
   - name: HumanoidDescription.FallAnimation
     summary: |
-      When this description is `Class.Humanoid:ApplyDescription()|applied` to a
-      `Class.Humanoid`, this determines the `Class.Animation.AnimationId` to
-      play when its `Class.Humanoid:GetState()|state` is
+      When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
+      to a `Class.Humanoid`, this determines the `Class.Animation.AnimationId`
+      to play when its `Class.Humanoid:GetState()|state` is
       `Enum.HumanoidStateType|Freefall`.
     description: |
-      When this description is `Class.Humanoid:ApplyDescription()|applied` to a
-      `Class.Humanoid`, **FallAnimation** determines the
+      When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
+      to a `Class.Humanoid`, **FallAnimation** determines the
       `Class.Animation.AnimationId` to play when its
       `Class.Humanoid:GetState()|state` is `Enum.HumanoidStateType|Freefall`.
 
@@ -345,13 +346,13 @@ properties:
     summary: |
       A comma-separated list of asset IDs that will be added as
       `Class.Accessory|Accessories` to a `Class.Humanoid` rig when
-      `Class.Humanoid:ApplyDescription()|applied`, usually those attached to
-      front of its torso (such as medals or ties).
+      `Class.Humanoid:ApplyDescriptionAsync()|applied`, usually those attached
+      to front of its torso (such as medals or ties).
     description: |
       **FrontAccessory** is a comma-separated list of asset IDs that determine
       what accessories should be added when the description is
-      `Class.Humanoid:ApplyDescription()|applied`, usually those attached to
-      front of its torso (such as medals or ties). The list does not contain
+      `Class.Humanoid:ApplyDescriptionAsync()|applied`, usually those attached
+      to front of its torso (such as medals or ties). The list does not contain
       duplicates.
 
       An error is thrown if you try to apply a new description which shares any
@@ -391,8 +392,8 @@ properties:
     description: |
       **GraphicTShirt** determines the `Class.ShirtGraphic.Graphic|Graphic` used
       by a `Class.ShirtGraphic` instance when
-      `Class.Humanoid:ApplyDescription()` is called on a `Class.Humanoid`. The
-      asset type must be for a **T‑Shirt**, not a **Decal** or **Image**.
+      `Class.Humanoid:ApplyDescriptionAsync()` is called on a `Class.Humanoid`.
+      The asset type must be for a **T‑Shirt**, not a **Decal** or **Image**.
 
       #### See Also
 
@@ -421,13 +422,13 @@ properties:
     summary: |
       A comma-separated list of asset IDs that will be added as
       `Class.Accessory|Accessories` to a `Class.Humanoid` rig when
-      `Class.Humanoid:ApplyDescription()|applied`, usually those attached to its
-      head resembling hair.
+      `Class.Humanoid:ApplyDescriptionAsync()|applied`, usually those attached
+      to its head resembling hair.
     description: |
       **HairAccessory** is a comma-separated list of asset IDs that determine
       what accessories should be added when the description is
-      `Class.Humanoid:ApplyDescription()|applied`, usually those attached to its
-      head resembling hair. The list does not contain duplicates.
+      `Class.Humanoid:ApplyDescriptionAsync()|applied`, usually those attached
+      to its head resembling hair. The list does not contain duplicates.
 
       An error is thrown if you try to apply a new description which shares any
       assets with the existing description but a different accessory property.
@@ -463,13 +464,13 @@ properties:
     summary: |
       A comma-separated list of asset IDs that will be added as
       `Class.Accessory|Accessories` to a `Class.Humanoid` rig when
-      `Class.Humanoid:ApplyDescription()|applied`, usually those attached to its
-      head.
+      `Class.Humanoid:ApplyDescriptionAsync()|applied`, usually those attached
+      to its head.
     description: |
       **HatAccessory** is a comma-separated list of asset IDs that determine
       what accessories should be added when the description is
-      `Class.Humanoid:ApplyDescription()|applied`, usually those attached to its
-      head. The list does not contain duplicates.
+      `Class.Humanoid:ApplyDescriptionAsync()|applied`, usually those attached
+      to its head. The list does not contain duplicates.
 
       An error is thrown if you try to apply a new description which shares any
       assets with the existing description but a different accessory property.
@@ -506,7 +507,7 @@ properties:
       Determines the asset ID of the Head to be applied to the `Class.Humanoid`.
     description: |
       **Head** determines the asset ID of the Head to be
-      `Class.Humanoid:ApplyDescription()|applied` to a `Class.Humanoid`.
+      `Class.Humanoid:ApplyDescriptionAsync()|applied` to a `Class.Humanoid`.
 
       See also:
 
@@ -543,11 +544,11 @@ properties:
     summary: |
       Determines the `Class.BodyColors.HeadColor3` and
       `Class.BodyColors.HeadColor` of a `Class.Humanoid` when
-      `Class.Humanoid:ApplyDescription()|applied`.
+      `Class.Humanoid:ApplyDescriptionAsync()|applied`.
     description: |
       **HeadColor** determines the `Class.BodyColors.HeadColor3` and
       `Class.BodyColors.HeadColor` of a `Class.Humanoid` when the description is
-      `Class.Humanoid:ApplyDescription()|applied`.
+      `Class.Humanoid:ApplyDescriptionAsync()|applied`.
 
       See also:
 
@@ -588,8 +589,8 @@ properties:
       (such as those specified by
       `Class.HumanoidDescription.HatAccessory|HatAccessory` and
       `Class.HumanoidDescription.HairAccessory|HairAccessory`). When the
-      description is applied through `Class.Humanoid:ApplyDescription()`, this
-      value maps to a **HeadScale** `Class.NumberValue` within the
+      description is applied through `Class.Humanoid:ApplyDescriptionAsync()`,
+      this value maps to a **HeadScale** `Class.NumberValue` within the
       `Class.Humanoid`.
 
       #### See Also
@@ -626,7 +627,7 @@ properties:
       **HeightScale** determines by what factor the height (top-to-bottom
       distance) of a `Class.Humanoid` is scaled, as well as all accessories not
       attached to its head. When the description is applied through
-      `Class.Humanoid:ApplyDescription()`, this value maps to a
+      `Class.Humanoid:ApplyDescriptionAsync()`, this value maps to a
       **BodyHeightScale** `Class.NumberValue` within the `Class.Humanoid`.
 
       #### See Also
@@ -654,13 +655,13 @@ properties:
       - Avatar
   - name: HumanoidDescription.IdleAnimation
     summary: |
-      When this description is `Class.Humanoid:ApplyDescription()|applied` to a
-      `Class.Humanoid`, this determines the `Class.Animation.AnimationId` to
-      play when its `Class.Humanoid:GetState()|state` is
+      When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
+      to a `Class.Humanoid`, this determines the `Class.Animation.AnimationId`
+      to play when its `Class.Humanoid:GetState()|state` is
       `Enum.HumanoidStateType|Running` at a speed near zero.
     description: |
-      When this description is `Class.Humanoid:ApplyDescription()|applied` to a
-      `Class.Humanoid`, **IdleAnimation** determines the
+      When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
+      to a `Class.Humanoid`, **IdleAnimation** determines the
       `Class.Animation.AnimationId` to play when its
       `Class.Humanoid:GetState()|state` is `Enum.HumanoidStateType|Running` at a
       speed near zero.
@@ -692,13 +693,13 @@ properties:
       - Avatar
   - name: HumanoidDescription.JumpAnimation
     summary: |
-      When this description is `Class.Humanoid:ApplyDescription()|applied` to a
-      `Class.Humanoid`, this determines the `Class.Animation.AnimationId` to
-      play when its `Class.Humanoid:GetState()|state` is
+      When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
+      to a `Class.Humanoid`, this determines the `Class.Animation.AnimationId`
+      to play when its `Class.Humanoid:GetState()|state` is
       `Enum.HumanoidStateType|Jumping`.
     description: |
-      When this description is `Class.Humanoid:ApplyDescription()|applied` to a
-      `Class.Humanoid`, **JumpAnimation** determines the
+      When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
+      to a `Class.Humanoid`, **JumpAnimation** determines the
       `Class.Animation.AnimationId` to play when its
       `Class.Humanoid:GetState()|state` is `Enum.HumanoidStateType|Jumping`.
 
@@ -733,7 +734,7 @@ properties:
       `Class.Humanoid`.
     description: |
       **LeftArm** determines the asset ID of the LeftArm to be
-      `Class.Humanoid:ApplyDescription()|applied` to a `Class.Humanoid`.
+      `Class.Humanoid:ApplyDescriptionAsync()|applied` to a `Class.Humanoid`.
 
       See also:
 
@@ -769,9 +770,9 @@ properties:
     description: |
       **LeftArmColor** determines the `Class.BodyColors.LeftArmColor3` and
       `Class.BodyColors.LeftArmColor` of a `Class.Humanoid` when the description
-      is `Class.Humanoid:ApplyDescription()|applied`. For R15 and Rthro rigs,
-      this property controls both the upper, lower, and hand parts of the left
-      arm.
+      is `Class.Humanoid:ApplyDescriptionAsync()|applied`. For R15 and Rthro
+      rigs, this property controls both the upper, lower, and hand parts of the
+      left arm.
 
       See also:
 
@@ -808,7 +809,7 @@ properties:
       `Class.Humanoid`.
     description: |
       **LeftLeg** determines the asset ID of the LeftLeg to be
-      `Class.Humanoid:ApplyDescription()|applied` to a `Class.Humanoid`.
+      `Class.Humanoid:ApplyDescriptionAsync()|applied` to a `Class.Humanoid`.
 
       See also:
 
@@ -844,9 +845,9 @@ properties:
     description: |
       **LeftLegColor** determines the `Class.BodyColors.LeftLegColor3` and
       `Class.BodyColors.LeftLegColor` of a `Class.Humanoid` when the description
-      is `Class.Humanoid:ApplyDescription()|applied`. For R15 and Rthro rigs,
-      this property controls both the upper, lower, and foot parts of the left
-      leg.
+      is `Class.Humanoid:ApplyDescriptionAsync()|applied`. For R15 and Rthro
+      rigs, this property controls both the upper, lower, and foot parts of the
+      left leg.
 
       See also:
 
@@ -898,13 +899,14 @@ properties:
     summary: |
       A comma-separated list of asset IDs that will be added as
       `Class.Accessory|Accessories` to a `Class.Humanoid` rig when
-      `Class.Humanoid:ApplyDescription()|applied`, usually those attached to its
-      neck (such as scarves or necklaces).
+      `Class.Humanoid:ApplyDescriptionAsync()|applied`, usually those attached
+      to its neck (such as scarves or necklaces).
     description: |
       **NeckAccessory** is a comma-separated list of asset IDs that determine
       what accessories should be added when the description is
-      `Class.Humanoid:ApplyDescription()|applied`, usually those attached to its
-      neck (such as scarves or necklaces). The list does not contain duplicates.
+      `Class.Humanoid:ApplyDescriptionAsync()|applied`, usually those attached
+      to its neck (such as scarves or necklaces). The list does not contain
+      duplicates.
 
       Any accessory can used in this property, even if it is meant to go in a
       different accessory spot. For example, an accessory meant to go on your
@@ -946,7 +948,7 @@ properties:
       `Class.Pants` instance.
     description: |
       **Pants** determines the `Class.Pants.PantsTemplate|PantsTemplate` used by
-      a `Class.Pants` instance when `Class.Humanoid:ApplyDescription()` is
+      a `Class.Pants` instance when `Class.Humanoid:ApplyDescriptionAsync()` is
       called on a `Class.Humanoid`. The asset type must be for **Pants**, not a
       **Decal** or **Image**.
 
@@ -981,7 +983,7 @@ properties:
       **ProportionScale** determines how wide (0) or narrow (1) a
       `Class.Humanoid` rig is. Values outside the range of 0 to 1 are clamped.
       When the description is applied through
-      `Class.Humanoid:ApplyDescription()`, this value maps to a
+      `Class.Humanoid:ApplyDescriptionAsync()`, this value maps to a
       **BodyProportionScale** `Class.NumberValue` within the `Class.Humanoid`.
 
       Note that when the value of
@@ -1020,7 +1022,7 @@ properties:
       `Class.Humanoid`.
     description: |
       **RightArm** determines the asset ID of the RightArm to be
-      `Class.Humanoid:ApplyDescription()|applied` to a `Class.Humanoid`.
+      `Class.Humanoid:ApplyDescriptionAsync()|applied` to a `Class.Humanoid`.
 
       See also:
 
@@ -1056,9 +1058,9 @@ properties:
     description: |
       **RightArmColor** determines the `Class.BodyColors.RightArmColor3` and
       `Class.BodyColors.RightArmColor` of a `Class.Humanoid` when the
-      description is `Class.Humanoid:ApplyDescription()|applied`. For R15 and
-      Rthro rigs, this property controls both the upper, lower, and hand parts
-      of the right arm.
+      description is `Class.Humanoid:ApplyDescriptionAsync()|applied`. For R15
+      and Rthro rigs, this property controls both the upper, lower, and hand
+      parts of the right arm.
 
       See also:
 
@@ -1095,7 +1097,7 @@ properties:
       `Class.Humanoid`.
     description: |
       **RightLeg** determines the asset ID of the RightLeg to be
-      `Class.Humanoid:ApplyDescription()|applied` to a `Class.Humanoid`.
+      `Class.Humanoid:ApplyDescriptionAsync()|applied` to a `Class.Humanoid`.
 
       See also:
 
@@ -1131,9 +1133,9 @@ properties:
     description: |
       **RightLegColor** determines the `Class.BodyColors.RightLegColor3` and
       `Class.BodyColors.RightLegColor` of a `Class.Humanoid` when the
-      description is `Class.Humanoid:ApplyDescription()|applied`. For R15 and
-      Rthro rigs, this property controls both the upper, lower, and foot parts
-      of the right leg.
+      description is `Class.Humanoid:ApplyDescriptionAsync()|applied`. For R15
+      and Rthro rigs, this property controls both the upper, lower, and foot
+      parts of the right leg.
 
       See also:
 
@@ -1166,13 +1168,13 @@ properties:
       - Avatar
   - name: HumanoidDescription.RunAnimation
     summary: |
-      When this description is `Class.Humanoid:ApplyDescription()|applied` to a
-      `Class.Humanoid`, this determines the `Class.Animation.AnimationId` to
-      play when its `Class.Humanoid:GetState()|state` is
+      When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
+      to a `Class.Humanoid`, this determines the `Class.Animation.AnimationId`
+      to play when its `Class.Humanoid:GetState()|state` is
       `Enum.HumanoidStateType|Running` at a moderate speed.
     description: |
-      When this description is `Class.Humanoid:ApplyDescription()|applied` to a
-      `Class.Humanoid`, **RunAnimation** determines the
+      When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
+      to a `Class.Humanoid`, **RunAnimation** determines the
       `Class.Animation.AnimationId` to play when its
       `Class.Humanoid:GetState()|state` is `Enum.HumanoidStateType|Running` at a
       moderate speed.
@@ -1208,7 +1210,7 @@ properties:
       `Class.Shirt` instance.
     description: |
       **Shirt** determines the `Class.Shirt.ShirtTemplate|ShirtTemplate` used by
-      a `Class.Shirt` instance when `Class.Humanoid:ApplyDescription()` is
+      a `Class.Shirt` instance when `Class.Humanoid:ApplyDescriptionAsync()` is
       called on a `Class.Humanoid`. The asset type must be for **Shirt**, not a
       **Decal** or **Image**.
 
@@ -1242,14 +1244,14 @@ properties:
     summary: |
       A comma-separated list of asset IDs that will be added as
       `Class.Accessory|Accessories` to a `Class.Humanoid` rig when
-      `Class.Humanoid:ApplyDescription()|applied`, usually those attached to its
-      shoulders (such as shoulder-mounted critters).
+      `Class.Humanoid:ApplyDescriptionAsync()|applied`, usually those attached
+      to its shoulders (such as shoulder-mounted critters).
     description: |
       **ShouldersAccessory** is a comma-separated list of asset IDs that
       determine what accessories should be added when the description is
-      `Class.Humanoid:ApplyDescription()|applied`, usually those attached to its
-      shoulders (such as shoulder-mounted critters). The list does not contain
-      duplicates.
+      `Class.Humanoid:ApplyDescriptionAsync()|applied`, usually those attached
+      to its shoulders (such as shoulder-mounted critters). The list does not
+      contain duplicates.
 
       An error is thrown if you try to apply a new description which shares any
       assets with the existing description but a different accessory property.
@@ -1283,13 +1285,13 @@ properties:
       - Avatar
   - name: HumanoidDescription.SwimAnimation
     summary: |
-      When this description is `Class.Humanoid:ApplyDescription()|applied` to a
-      `Class.Humanoid`, this determines the `Class.Animation.AnimationId` to
-      play when its `Class.Humanoid:GetState()|state` is
+      When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
+      to a `Class.Humanoid`, this determines the `Class.Animation.AnimationId`
+      to play when its `Class.Humanoid:GetState()|state` is
       `Enum.HumanoidStateType|Swimming`.
     description: |
-      When this description is `Class.Humanoid:ApplyDescription()|applied` to a
-      `Class.Humanoid`, **SwimAnimation** determines the
+      When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
+      to a `Class.Humanoid`, **SwimAnimation** determines the
       `Class.Animation.AnimationId` to play when its
       `Class.Humanoid:GetState()|state` is `Enum.HumanoidStateType|Swimming`
 
@@ -1324,7 +1326,7 @@ properties:
       `Class.Humanoid`.
     description: |
       **Torso** determines the asset ID of the Torso to be
-      `Class.Humanoid:ApplyDescription()|applied` to a `Class.Humanoid`.
+      `Class.Humanoid:ApplyDescriptionAsync()|applied` to a `Class.Humanoid`.
 
       See also:
 
@@ -1360,8 +1362,8 @@ properties:
     description: |
       **TorsoColor** determines the `Class.BodyColors.TorsoColor3` and
       `Class.BodyColors.TorsoColor` of a `Class.Humanoid` when the description
-      is `Class.Humanoid:ApplyDescription()|applied`. For R15 and Rthro rigs,
-      this property controls both the upper and lower parts of the torso.
+      is `Class.Humanoid:ApplyDescriptionAsync()|applied`. For R15 and Rthro
+      rigs, this property controls both the upper and lower parts of the torso.
 
       See also:
 
@@ -1398,13 +1400,13 @@ properties:
     summary: |
       A comma-separated list of asset IDs that will be added as
       `Class.Accessory|Accessories` to a `Class.Humanoid` rig when
-      `Class.Humanoid:ApplyDescription()|applied`, usually those attached to its
-      waist (such as belts).
+      `Class.Humanoid:ApplyDescriptionAsync()|applied`, usually those attached
+      to its waist (such as belts).
     description: |
       **WaistAccessory** is a comma-separated list of asset IDs that determine
       what accessories should be added when the description is
-      `Class.Humanoid:ApplyDescription()|applied`, usually those attached to its
-      waist (such as belts). The list does not contain duplicates.
+      `Class.Humanoid:ApplyDescriptionAsync()|applied`, usually those attached
+      to its waist (such as belts). The list does not contain duplicates.
 
       An error is thrown if you try to apply a new description which shares any
       assets with the existing description but a different accessory property.
@@ -1438,13 +1440,13 @@ properties:
       - Avatar
   - name: HumanoidDescription.WalkAnimation
     summary: |
-      When this description is `Class.Humanoid:ApplyDescription()|applied` to a
-      `Class.Humanoid`, this determines the `Class.Animation.AnimationId` to
-      play when its `Class.Humanoid:GetState()|state` is
+      When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
+      to a `Class.Humanoid`, this determines the `Class.Animation.AnimationId`
+      to play when its `Class.Humanoid:GetState()|state` is
       `Enum.HumanoidStateType|Running` at a low speed.
     description: |
-      When this description is `Class.Humanoid:ApplyDescription()|applied` to a
-      `Class.Humanoid`, **WalkAnimation** determines the
+      When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
+      to a `Class.Humanoid`, **WalkAnimation** determines the
       `Class.Animation.AnimationId` to play when its
       `Class.Humanoid:GetState()|state` is `Enum.HumanoidStateType|Running` at a
       low speed
@@ -1483,7 +1485,7 @@ properties:
       **WidthScale** determines by what factor the width (left-to-right
       distance) of a `Class.Humanoid` is scaled, as well as all accessories not
       attached to its head. When the description is applied through
-      `Class.Humanoid:ApplyDescription()`, this value maps to a
+      `Class.Humanoid:ApplyDescriptionAsync()`, this value maps to a
       **BodyWidthScale** `Class.NumberValue` within the `Class.Humanoid`.
 
       #### See Also

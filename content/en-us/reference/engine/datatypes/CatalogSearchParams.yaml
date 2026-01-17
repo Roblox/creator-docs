@@ -6,10 +6,10 @@ name: CatalogSearchParams
 type: datatype
 summary: |
   Stores parameters used in catalog searches via
-  `Class.AvatarEditorService:SearchCatalog()`.
+  `Class.AvatarEditorService:SearchCatalogAsync()`.
 description: |
   The `Datatype.CatalogSearchParams` data type stores the parameters of a
-  catalog search via `Class.AvatarEditorService:SearchCatalog()`.
+  catalog search via `Class.AvatarEditorService:SearchCatalogAsync()`.
 
   When accessing the value of the `Datatype.CatalogSearchParams.BundleTypes` or
   `Datatype.CatalogSearchParams.AssetTypes` property the returned table will be

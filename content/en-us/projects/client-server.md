@@ -47,8 +47,8 @@ across the server and clients through a process called **replication**, which
 synchronizes the data model, physics simulation, and chat messages. Replication
 logic exists on both the client and server to ensure synchronization.
 
-### Data
-
+<Tabs>
+<TabItem label="Data">
 Data model changes can occur in a variety of cases, such as when something in the 3D
 world is created or a property of the 3D world changes. This typically occurs
 when a script on the server or client makes a change that needs to be reflected
@@ -57,24 +57,26 @@ common scenarios for data replication.
 
 <GridContainer numColumns="3">
 <figure>
-<p><center>**Client** &rarr; **Server**</center></p>
+<Chip label="Client &rarr; Server" size="large" color="primaryBrand" variant="outlined"
+style={{fontSize:"110%", width:"100%"}}/><br /><br />
 <img src="../assets/scripting/client-server/Remote-Flow-Client-Server.png" width="100%" alt="A diagram of one client communicating with the server." />
-Communication from any client to the server. For example, a client presses the <kbd>P</kbd> key to drink an invisibility potion, and tells the server to make that player's character invisible to all other players.
+<figcaption>Communication from any client to the server. For example, a client presses the <kbd>P</kbd> key to drink an invisibility potion, and tells the server to make that player's character invisible to all other players.</figcaption>
 </figure>
 <figure>
-<p><center>**Server** &rarr; **Client**</center></p>
+<Chip label="Server &rarr; Client" size="large" color="success" variant="outlined"
+style={{fontSize:"110%", width:"100%"}}/><br /><br />
 <img src="../assets/scripting/client-server/Remote-Flow-Server-Client.png" width="100%" alt="A diagram of the server communicating with one client." />
-Communication from the server to one specific client. For example, a player joins the experience and the server populates that player's inventory with a set of items.
+<figcaption>Communication from the server to one specific client. For example, a player joins the experience and the server populates that player's inventory with a set of items.</figcaption>
 </figure>
 <figure>
-<p><center>**Server** &rarr; **All Clients**</center></p>
+<Chip label="Server &rarr; All Clients" size="large" color="secondary" variant="outlined"
+style={{fontSize:"110%", width:"100%"}}/><br /><br />
 <img src="../assets/scripting/client-server/Remote-Flow-Server-All-Clients.png" width="100%" alt="A diagram of the server communicating with all connected clients." />
-Communication between the server and all connected clients. For example, displaying a countdown timer to all participants in a race.
+<figcaption>Communication between the server and all connected clients. For example, displaying a countdown timer to all participants in a race.</figcaption>
 </figure>
 </GridContainer>
-
-### Physics
-
+</TabItem>
+<TabItem label="Physics">
 Roblox uses a rigid body physics engine, which is responsible for
 calculating the movement and interactions of parts in the 3D world. By default,
 all parts in Roblox are rigid bodies and participate in simulated physics,
@@ -82,7 +84,7 @@ unless otherwise specified. You can also group multiple parts together into
 assemblies, which the physics engine treats as a single rigid body.
 
 <br/>
-<Grid container spacing={2}>
+<Grid container spacing={0}>
   <Grid item XSmall={4} XLarge={3}>
     <img src="../assets/physics/assemblies/Assembly-Example-Block.png" alt="A single block part in the shape of a cube that represents a single assembly." width="100%" />
     <figcaption>1&nbsp;assembly; 1&nbsp;part</figcaption>
@@ -110,12 +112,17 @@ it directly for fine-tuned responsiveness.
   <video src="../assets/physics/network-ownership/Visualization-Demo.mp4" controls width="90%" alt="A player character walks around collecting glowing objects on the floor. Part ownership is indicated with colored outlines."></video>
   <figcaption>Part ownership indicated through colored outlines</figcaption>
 </figure>
-
-### Chat
-
+</TabItem>
+<TabItem label="Chat">
 Roblox replicates chat messages between the server and client. The server is
 responsible for filtering chat messages and deciding which messages to replicate
 to other clients. For example, the server may filter out messages that contain
 profanity or are too long.
 
 <video src="../assets/players/in-experience-text-chat/Player-Conversation-Bubbles.mp4" controls width="90%" alt="Two characters talk to each other through chat bubbles above their heads in a spooky blue environment."></video>
+</TabItem>
+</Tabs>
+
+<Alert severity="success">
+Most players on Roblox experience between 100–300 milliseconds of network latency. [Roblox Studio](../studio/index.md) playtesting runs with a default of no latency, but you can change **Incoming&nbsp;Replication&nbsp;Lag** in the **Network** section of Studio's settings (<kbd>Alt</kbd><kbd>S</kbd> on Windows; <kbd>⌥</kbd><kbd>S</kbd> on Mac) to `0.1`–`0.3` to better simulate how replication latency will affect your experience.
+</Alert>

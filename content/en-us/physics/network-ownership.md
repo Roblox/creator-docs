@@ -89,6 +89,11 @@ To assist with network ownership debugging, Studio can render colored outlines a
 		<td>(white/grey)</td>
 		<td>Server or another client owns the part through either automatic network ownership or from explicit assignment through `Class.BasePart:SetNetworkOwner()|part:SetNetworkOwner()`.</td>
 	</tr>
+	<tr>
+		<td><ColorSwatch value="rgb(0,0,0)" /></td>
+		<td>(black)</td>
+		<td>The part is owned by neither the server nor the client. Physics will not apply to this part.</td>
+	</tr>
 </tbody>
 </table>
 

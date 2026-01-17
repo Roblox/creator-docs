@@ -13,10 +13,10 @@ description: |
   on the engine.
 
   Scripts that are executed inside of `TestService` (via
-  `Class.TestService:Run()`) have access to special macros that directly invoke
-  functions under the service. Macros are essentially substitutions for large
-  blocks of code that shouldn't need to be rewritten each time you want to call
-  them.
+  `Class.TestService:RunAsync()`) have access to special macros that directly
+  invoke functions under the service. Macros are essentially substitutions for
+  large blocks of code that shouldn't need to be rewritten each time you want to
+  call them.
 
   #### RBX_CHECK
 
@@ -219,10 +219,10 @@ properties:
   - name: TestService.AutoRuns
     summary: |
       If set to `true`, the game will start running when the service's
-      `Class.TestService:Run()` method is called.
+      `Class.TestService:RunAsync()` method is called.
     description: |
       If set to `true`, the game will start running when the service's
-      `Class.TestService:Run()` method is called.
+      `Class.TestService:RunAsync()` method is called.
     code_samples: []
     type: boolean
     tags: []

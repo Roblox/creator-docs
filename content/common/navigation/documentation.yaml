@@ -38,3 +38,6 @@ columns:
         - title: Education
           navigation: /education.yaml
           path: /education/educator-onboarding/landing
+        - title: Courses
+          navigation: /courses/courses.yaml
+          path: /courses

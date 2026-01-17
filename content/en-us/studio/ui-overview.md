@@ -81,7 +81,15 @@ You can customize the appearance of the toolbar by right-clicking in an empty ar
 
 ### Custom tabs
 
-Beyond the default tool tabs, you can add **custom tabs** for your specific needs:
+Beyond the default tool tabs, you can add **custom tabs** for your specific needs, either through Studio's interface or by editing local `.json` files.
+
+<Alert severity="info">
+The tab configuration system is intended for customizing the Studio toolbar using existing controls/widgets and plugins. It's not meant to replace Studio [plugins](./plugins.md) or interactive [widgets](./build-studio-widgets.md).
+</Alert>
+
+<Tabs>
+<TabItem label="Studio">
+The easiest way to create custom tabs is through Studio's workflow.
 
 1. Click the <kbd>+</kbd> button to the right of the default tabs, then type in a name for the new tab and press <kbd>Enter</kbd>.
 
@@ -102,6 +110,202 @@ Beyond the default tool tabs, you can add **custom tabs** for your specific need
    <Alert severity="info">
    If you need to remove a tool from a custom tab, right‑click it and select **Remove&nbsp;tool**.
    </Alert>
+
+</TabItem>
+<TabItem label="JSON">
+
+Custom tab configurations are saved **locally** on each machine in `.json` format, allowing you to build customized tabs and share them with your team or the community.
+
+1. Open the custom tabs folder which is stored in a location unaffected by Studio updates.
+
+   - **Windows** — `%LOCALAPPDATA%\Roblox\<userID>\CustomRibbonTabs`
+   - **Mac** — `~/Documents/Roblox/<userID>/CustomRibbonTabs`
+
+2. In the `CustomRibbonTabs` directory are `.json` files which define the toolbar's structure:
+
+   - The `RibbonLayout.json` file controls the overall ordering and visibility of tabs.
+
+		```json title="RibbonLayout.json"
+		{
+			"TabLayout": [
+				{
+					"Identifier": {
+						"Type": "BuiltIn",
+						"Filename": "HomeTab"
+					},
+					"Visible": true
+				},
+		{
+		```
+
+   - Other `.json` files represent individual tabs and can be named whatever you prefer. Each file's `Name` represents the tab's name as it will appear in Studio.
+
+		```json title="CustomTab.json"
+		{
+			"Name": "Custom",
+			"Controls": [
+
+			]
+		}
+		```
+
+3. In the `Controls` array for a tab file, insert various buttons, submenus, and more. Each control's `Id` value must be **unique** within the file.
+
+   The following examples illustrate common elements in a custom tab:
+
+	<Tabs>
+	<TabItem label="IconButton">
+	`IconButton` inserts a button with an optional text label.
+
+	```json title="CustomTab.json"
+	{
+		"Name": "Custom",
+		"Controls": [
+			{
+				"Id": "Select",
+				"Type": "IconButton",
+				"Action": {
+					"Category": "Actions",
+					"DataModel": "Standalone",
+					"ItemId": "Select",
+					"PluginId": "BuilderTools"
+				}
+			},
+		]
+	}
+	```
+
+	</TabItem>
+	<TabItem label="Separator">
+	`Separator` inserts a non-interactable separation line. `Size` options are `Large`, `Medium`, or `Small`.
+
+	```json title="CustomTab.json"
+	{
+		"Name": "Custom",
+		"Controls": [
+			{
+				"Type": "Separator",
+				"Size": "Large"
+			},
+		]
+	}
+	```
+
+	</TabItem>
+	<TabItem label="SplitButton">
+	`SplitButton` inserts a button which reveals a dropdown menu when the small triangle to the right of its icon is pressed.
+
+	```json title="CustomTab.json"
+	{
+		"Name": "Custom",
+		"Controls": [
+			{
+				"Id": "SimpleSplit",
+				"Type": "SplitButton",
+				"Action": {
+					"Category": "Actions",
+					"DataModel": "Standalone",
+					"ItemId": "Select",
+					"PluginId": "BuilderTools"
+				},
+				"Children": [
+					{
+						"Type": "Column",
+						"Children": [
+							{
+								"Id": "Move",
+								"Type": "Option",
+								"Action": {
+									"Category": "Actions",
+									"DataModel": "Standalone",
+									"ItemId": "Move",
+									"PluginId": "BuilderTools"
+								}
+							},
+							{
+								"Id": "Scale",
+								"Type": "Option",
+								"Action": {
+									"Category": "Actions",
+									"DataModel": "Standalone",
+									"ItemId": "Scale",
+									"PluginId": "BuilderTools"
+								}
+							},
+							{
+								"Id": "Rotate",
+								"Type": "Option",
+								"Action": {
+									"Category": "Actions",
+									"DataModel": "Standalone",
+									"ItemId": "Rotate",
+									"PluginId": "BuilderTools"
+								}
+							},
+						]
+					}
+				]
+			}
+		]
+	}
+	```
+
+	</TabItem>
+	<TabItem label="IconButton (Plugin)">
+	`IconButton` can be used to insert a button which links to a [plugin](./plugins.md) through its ID, assuming the plugin, such as [Tailor Swiftly](https://create.roblox.com/store/asset/130172194397869/Tailor-Swiftly), is installed in your version of Studio.
+
+	```json title="CustomTab.json"
+	{
+		"Name": "Custom",
+		"Controls": [
+			{
+				"Id": "PrinceTybalt_Tailor Swiftly\nHackweek 2024",
+				"Type": "IconButton",
+				"Action": {
+					"Category": "Actions",
+					"DataModel": "Edit",
+					"ItemId": "PrinceTybalt_Tailor Swiftly\nHackweek 2024",
+					"PluginId": "130172194397869",
+					"PluginType": "Cloud"
+				}
+			}
+		]
+	}
+	```
+
+	</TabItem>
+	<TabItem label="Text">
+	`Text` inserts a basic text label, useful to label groups of other controls in submenus.
+
+	```json title="CustomTab.json"
+	{
+		"Name": "Custom",
+		"Controls": [
+			{
+				"Id": "CustomHeader",
+				"Type": "Text",
+				"Title": "Insert UI"
+			},
+		]
+	}
+	```
+
+	</TabItem>
+	</Tabs>
+
+	<Alert severity="success">
+	Beyond the above examples, you can right-click any default tab and select **Duplicate&nbsp;tab**. This will create a new custom tab and corresponding `.json` file in your local `CustomRibbonTabs` directory which you can inspect to explore how various default tools and menus are constructed.
+	</Alert>
+
+4. Save the `.json` file and then reload Studio's plugins:
+
+   1. Right-click anywhere in the toolbar or mezzanine and select **Manage&nbsp;tabs**.
+   2. Access the options menu from the popup's upper‑right corner and select **Reload&nbsp;custom&nbsp;tabs**.
+
+      <img src="../assets/studio/general/Manage-Tabs-Popup-Options.png" width="300" alt="Options menu in the Manage Tabs popup." />
+
+</TabItem>
+</Tabs>
 
 ## 3D viewport
 

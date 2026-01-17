@@ -6,10 +6,10 @@ name: AssetType
 type: enum
 summary: |
   This Enum can be used to match the AssetTypeId from
-  `Class.MarketplaceService:GetProductInfo()` to an asset type.
+  `Class.MarketplaceService:GetProductInfoAsync()` to an asset type.
 description: |
   This Enum can be used to match the AssetTypeId from
-  `Class.MarketplaceService:GetProductInfo()` to an asset type.
+  `Class.MarketplaceService:GetProductInfoAsync()` to an asset type.
 code_samples: []
 tags: []
 deprecation_message: ''

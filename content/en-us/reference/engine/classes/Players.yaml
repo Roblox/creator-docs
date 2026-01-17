@@ -92,8 +92,8 @@ properties:
 
       If this property is disabled (false), player
       `Class.Player.Character|characters` will not spawn until the
-      `Class.Player:LoadCharacter()` function is called for each `Class.Player`,
-      including when players join the experience.
+      `Class.Player:LoadCharacterAsync()` function is called for each
+      `Class.Player`, including when players join the experience.
 
       This can be useful in experiences where players have finite lives, such as
       competitive games in which players do not respawn until a game round ends.
@@ -535,8 +535,7 @@ methods:
       Returns a character `Class.Model` equipped with everything specified in
       the passed in `Class.HumanoidDescription`.
     description: ''
-    code_samples:
-      - create-humanoid-model-from-description
+    code_samples: []
     parameters:
       - name: description
         type: HumanoidDescription
@@ -560,7 +559,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Players:CreateHumanoidModelFromDescription()|CreateHumanoidModelFromDescription()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -615,7 +616,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Players:CreateHumanoidModelFromUserIdAsync()|CreateHumanoidModelFromUserIdAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -918,7 +921,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Players:GetHumanoidDescriptionFromOutfitIdAsync()|GetHumanoidDescriptionFromOutfitIdAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -976,7 +981,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Players.GetHumanoidDescriptionFromUserIdAsync|GetHumanoidDescriptionFromUserIdAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:

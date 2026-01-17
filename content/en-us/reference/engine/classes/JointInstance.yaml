@@ -5,10 +5,9 @@
 name: JointInstance
 type: class
 memory_category: BaseParts
-summary: |
-  The base class for joints.
-description: |
-  **JointInstance** is the base class for joints such as `Class.Weld|Welds` and
+summary: The base class for joints.
+description: |-
+  `JointInstance` is the base class for joints such as `Class.Weld|Welds` and
   `Class.Motor|Motors`.
 
   `Class.Weld`, `Class.WeldConstraint`, `Class.Motor`, and `Class.Motor6D` all
@@ -38,15 +37,13 @@ tags:
 deprecation_message: ''
 properties:
   - name: JointInstance.Active
-    summary: |
-      Determines if the joint is currently active in the world.
-    description: |
-      This property determines if the joint is currently active in the world. If
-      true, the joint is active.
+    summary: Determines if the joint is currently active in the world.
+    description: |-
+      This property determines if the joint is currently active in the world.
 
       If the `Class.JointInstance` is not in `Class.Workspace` or
-      `Class.JointsService`, or one of its parts is not in Workspace the joint
-      will be inactive.
+      `Class.JointsService`, or one of its parts is not in `Class.Workspace`, the
+      joint will be inactive.
 
       Rigid joints like `Class.Weld`, `Class.Snap`, `Class.WeldConstraint`,
       `Class.Motor`, or `Class.Motor6D` may also be disabled due to conflicts
@@ -70,13 +67,16 @@ properties:
     capabilities:
       - Physics
   - name: JointInstance.C0
-    summary: |
+    summary: |-
       Determines how the offset point is attached to
       `Class.JointInstance.Part0`.
-    description: |
-      C0 is the position aspect of the orientation between two parts in a weld.
-      `Class.JointInstance.Part0` and `Class.JointInstance.Part1` move
+    description: |-
+      `C0` is the position aspect of the orientation between two parts in a weld.
+      `Class.JointInstance.Part0|Part0` and `Class.JointInstance.Part1|Part1` move
       accordingly to this value, which denotes their respective positions.
+
+      When animating a `Class.Motor6D`, it's recommended to tween its
+      `Class.Motor6D.Transform|Transform` property instead of `C0`.
     code_samples: []
     type: CFrame
     tags: []
@@ -92,12 +92,15 @@ properties:
     capabilities:
       - Physics
   - name: JointInstance.C1
-    summary: |
-      Is subtracted from the `Class.JointInstance.C0` property to create an
-      offset point for `Class.JointInstance.Part1`.
-    description: |
-      Is subtracted from the `Class.JointInstance.C0` property to create an
-      offset point for `Class.JointInstance.Part1`.
+    summary: |-
+      Subtracted from the `Class.JointInstance.C0|C0` property to create an
+      offset point for `Class.JointInstance.Part1|Part1`.
+    description: |-
+      This property is subtracted from the `Class.JointInstance.C0|C0` property to
+      create an offset point for `Class.JointInstance.Part1|Part1`.
+
+      When animating a `Class.Motor6D`, it's recommended to tween its
+      `Class.Motor6D.Transform|Transform` property instead of `C1`.
     code_samples: []
     type: CFrame
     tags: []
@@ -113,21 +116,17 @@ properties:
     capabilities:
       - Physics
   - name: JointInstance.Enabled
-    summary: |
-      Sets whether the joint is active or not.
-    description: |
+    summary: Sets whether the joint is active or not.
+    description: |-
       This property sets whether the joint is active or not.
 
-      When this property is set to true, if the joints's
-      `Class.JointInstance.Part0` and `Class.JointInstance.Part1` properties are
-      set, then the joint will ensure that its two parts will be connected and
-      behave according to joint type (e.g. `Class.Weld|Welds`, and
-      `Class.Snap|Snaps`).
+      When this property is set to `true` and the joint's
+      `Class.JointInstance.Part0|Part0` and `Class.JointInstance.Part1|Part1`
+      properties are set, the joint will ensure that
+      its two parts will be connected and behave according to joint type.
 
-      See also:
-
-      - `Class.JointInstance.Active`, determines if the joint is currently
-        active in the world
+      See also `Class.JointInstance.Active|Active` which determines if the joint is
+      currently active in the world.
     code_samples: []
     type: boolean
     tags: []
@@ -143,10 +142,8 @@ properties:
     capabilities:
       - Physics
   - name: JointInstance.Part0
-    summary: |
-      The first `Class.BasePart` that the joint connects.
-    description: |
-      The first `Class.BasePart` that the joint connects.
+    summary: The first `Class.BasePart` that the joint connects.
+    description: This property indicates the first `Class.BasePart` that the joint connects.
     code_samples: []
     type: BasePart
     tags: []
@@ -162,10 +159,8 @@ properties:
     capabilities:
       - Physics
   - name: JointInstance.Part1
-    summary: |
-      The second `Class.BasePart` that the joint connects.
-    description: |
-      The second `Class.BasePart` that the joint connects.
+    summary: The second `Class.BasePart` that the joint connects.
+    description: This property indicates the second `Class.BasePart` that the joint connects.
     code_samples: []
     type: BasePart
     tags: []
@@ -189,9 +184,7 @@ properties:
       - Hidden
       - NotReplicated
       - Deprecated
-    deprecation_message: |
-      This deprecated property is a variant of `Class.JointInstance.Part1` which
-      should be used instead.
+    deprecation_message: This deprecated property is a variant of `Class.JointInstance.Part1|Part1` which should be used instead.
     security:
       read: None
       write: None

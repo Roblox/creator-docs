@@ -524,7 +524,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Plugin:ImportFbxRigAsync()|ImportFbxRigAsync()`.
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
@@ -748,7 +750,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Plugin:PromptSaveSelectionAsync()|PromptSaveSelectionAsync()`.
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []

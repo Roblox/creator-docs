@@ -216,7 +216,7 @@ You can use tools like the [Accessory Fitting Tool](../../art/accessories/access
     <td>Hair</td>
     <td>1.78</td>
     <td>3.12* <br /> (Not centered: 1.25 up, 1.875 down)</td>
-    <td>2.08* <br /> (Not centered: 10.892 front, 1.189 behind)</td>
+    <td>2.08* <br /> (Not centered: 1.892 front, 1.189 behind)</td>
   </tr>
   <tr>
     <td>Face</td>

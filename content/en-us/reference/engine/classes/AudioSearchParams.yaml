@@ -6,10 +6,10 @@ name: AudioSearchParams
 type: class
 memory_category: Instances
 summary: |
-  Instance to be passed to `Class.AssetService:SearchAudio()` to search for
+  Instance to be passed to `Class.AssetService:SearchAudioAsync()` to search for
   audio assets.
 description: |
-  Instance to be passed to `Class.AssetService:SearchAudio()` to search for
+  Instance to be passed to `Class.AssetService:SearchAudioAsync()` to search for
   audio assets.
 code_samples: []
 inherits:

@@ -54,8 +54,13 @@ navigation:
             path: /projects/collaboration
           - title: Activity history
             path: /projects/activity-history
-      - title: External tools
-        path: /projects/external-tools
+      - title: File-based workflows
+        path: /scripting/sync
+        section:
+          - title: Script Sync
+            path: /scripting/sync
+          - title: Third-party tools
+            path: /projects/external-tools
   - title: 3D workspace
     path: /workspace/
     section:
@@ -210,8 +215,22 @@ navigation:
             path: /luau/native-code-gen
           - title: Script capabilities
             path: /scripting/capabilities
-          - title: Security tactics and cheat mitigation
+      - title: Security
+        section:
+          - title: General principles
             path: /scripting/security/security-tactics
+          - title: Defensive design tactics
+            path: /scripting/security/defensive-design
+          - title: Securing the client-server boundary
+            path: /scripting/security/client-server-boundary
+          - title: Network ownership
+            path: /scripting/security/network-ownership
+          - title: Access control and confidentiality
+            path: /scripting/security/access-control
+          - title: Third-party asset vulnerability
+            path: /scripting/security/third-party-vulnerabilities
+          - title: Server-side detection and consequencing
+            path: /scripting/security/server-side-detection
       - title: Luau reference
         path: /luau/
         section:
@@ -363,8 +382,6 @@ navigation:
         path: /ui/on-screen-containers
       - title: In-experience UI
         path: /ui/in-experience-containers
-      - title: Accessibility guidelines
-        path: /production/publishing/accessibility
       - title: UI objects
         section:
           - title: Labels

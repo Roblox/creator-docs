@@ -20,13 +20,13 @@ description: |
   The following endpoints on `AvatarEditorService` have experience-level
   throttling:
 
-  - `Class.AvatarEditorService.GetItemDetails`
-  - `Class.AvatarEditorService.GetBatchItemDetails`
-  - `Class.AvatarEditorService.GetRecommendedAssets`
-  - `Class.AvatarEditorService.GetRecommendedBundles`
-  - `Class.AvatarEditorService.SearchCatalog`
+  - `Class.AvatarEditorService.GetItemDetailsAsync`
+  - `Class.AvatarEditorService.GetBatchItemDetailsAsync`
+  - `Class.AvatarEditorService.GetRecommendedAssetsAsync`
+  - `Class.AvatarEditorService.GetRecommendedBundlesAsync`
+  - `Class.AvatarEditorService.SearchCatalogAsync`
   - `Class.AvatarEditorService.PromptSetFavorite`
-  - `Class.AvatarEditorService.GetFavorite`
+  - `Class.AvatarEditorService.GetFavoriteAsync`
 
   For each experience, this throttling allows you to send up to 100 requests per
   second to these `AvatarEditorService` endpoints, regardless of the number of
@@ -241,8 +241,8 @@ methods:
       Gets the item details for a list of items at once.
     description: |
       Gets the item details for a list of items at once. More efficient than
-      AvatarEditorService:GetItemDetails if you need to get all the item details
-      of a list.
+      `AvatarEditorService:GetItemDetailsAsync` if you need to get all the item
+      details of a list.
     code_samples: []
     parameters:
       - name: itemIds
@@ -676,8 +676,8 @@ methods:
     description: |
       This function returns outfit data for the `Class.Players.LocalPlayer`.
       This would be used with
-      `Class.Players:GetHumanoidDescriptionFromOutfitId()` to update the players
-      character to the outfit. Access to this would also depend on
+      `Class.Players:GetHumanoidDescriptionFromOutfitIdAsync()` to update the
+      players character to the outfit. Access to this would also depend on
       `Class.AvatarEditorService:PromptAllowInventoryReadAccess()` being
       accepted by the user.
 
@@ -950,10 +950,10 @@ methods:
       Prompts the `Class.Players.LocalPlayer` to allow the developer to read
       what items the user has in their inventory and other avatar editor related
       information. The prompt needs to be confirmed by the user for the
-      developer to use `Class.AvatarEditorService:GetInventory()`,
-      `Class.AvatarEditorService:GetOutfits()` and
-      `Class.AvatarEditorService:GetFavorite()`. Permission does not persist
-      between sessions.
+      developer to use `Class.AvatarEditorService:GetInventoryAsync()`,
+      `Class.AvatarEditorService:GetOutfitsAsync()` and
+      `Class.AvatarEditorService:GetFavoriteAsync()`. Permission does not
+      persist between sessions.
     code_samples: []
     parameters: []
     returns:

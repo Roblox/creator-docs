@@ -1,27 +1,30 @@
 ---
 title: Third-party tools
-description: These popular tools can enhance developer productivity.
+description: These popular tools for managing Roblox projects as a set of local files can enhance developer productivity.
 ---
 
-For professional development studios, setting up third-party tools and investing in automation can dramatically improve developer productivity. Roblox's cloud-first approach has many advantages, but moving certain portions of the development workflow _outside_ of the cloud can help larger teams track changes over time, review code, and use the languages and tools with which they're already familiar.
+For professional development studios, setting up third-party tools and investing in automation can dramatically improve developer productivity. Roblox's cloud-first approach has many advantages, but moving certain portions of the development workflow **outside** of the cloud can help larger teams track changes over time, review code, and use the languages and tools with which they're already familiar.
+
+- If you just want to use an external text editor or keep code in version control, [Script Sync](../scripting/sync.md) is a great choice.
+- If you want to manage your entire project as a set of local files, this page covers some tools and strategies.
 
 <Alert severity="info">
 Although this page covers several popular tools, it shouldn't be taken as a strict recommendation of them. Every team has different needs, so this page is intended to help you examine ways to improve your workflow rather than tell you to download anything in particular.
 
-Tools mentioned on this page are not maintained by Roblox and may change or stop working at any time.
+The tools on this page are not maintained by Roblox and can change or stop working at any time.
 </Alert>
 
 ## The syncing problem
 
 At its core, using external tools with Roblox is a _syncing_ problem:
 
-- You want your Roblox scripts to exist as `.luau` files on disk so that you can use your own tools to work on them.
+- You want your Roblox instances to exist as files on disk so that you can use your own tools to work on them.
 - You have to get your files back into your Roblox project after you've finished working on them.
 - If someone else changed those same files in the meantime, you have to handle any conflicts.
 
-For the whole solution to feel seamless and automatic, you need to a) listen for changes to files and b) incorporate these changes back into Studio. In other words, you need a server and a Studio plugin, which is how [Rojo](https://rojo.space/) solves this problem.
+For the whole solution to feel seamless and automatic, you need to a) listen for changes to files and b) incorporate these changes back into Studio.
 
-Rather than Roblox's cloud-first approach, Rojo allows for a "file system-first" approach. It extracts all script files in your project into Luau files. Then it runs a server. The Rojo plugin connects to the server to synchronize those files with Studio.
+Rather than Roblox's cloud-first approach, Rojo allows for a "file system-first" approach. It extracts instances in your project into external files. Then it runs a server. The Rojo plugin connects to the server to synchronize those files with Studio.
 
 ## Install Rojo with Foreman
 
@@ -144,9 +147,9 @@ For a detailed walkthrough of using React to create a Roblox UI, see [React + Ro
 
 ## Version control
 
-Having a set of plain text files on your computer unlocks a variety of capabilities, but the primary one is _version control_. You can store your scripts and configuration files in a [Git](https://git-scm.com/) or [Mercurial](https://www.mercurial-scm.org/) repository; host remote repositories and review code changes in [GitHub](https://github.com), [GitLab](https://gitlab.com), or [Bitbucket](https://bitbucket.org); and use whichever text editor you like.
+Having a set of plain text files on your computer unlocks a variety of capabilities, but the primary one is _version control_. You can store your files in a [Git](https://git-scm.com/) or [Mercurial](https://www.mercurial-scm.org/) repository; host remote repositories and review code changes in [GitHub](https://github.com), [GitLab](https://gitlab.com), or [Bitbucket](https://bitbucket.org); and use whichever text editor you like.
 
-[Visual Studio Code](https://code.visualstudio.com) has the largest extension ecosystem, but [Sublime Text](https://www.sublimetext.com), [Notepad++](https://notepad-plus-plus.org), and [Vim](https://www.vim.org) are all popular choices. Whichever editor you choose, matching the capabilities of the Studio script editor will require some extensions.
+[Visual Studio Code](https://code.visualstudio.com) and [Cursor](https://cursor.com) have the largest extension ecosystem, but [Sublime Text](https://www.sublimetext.com) and [Notepad++](https://notepad-plus-plus.org), and [Vim](https://www.vim.org) are all popular choices. Whichever editor you choose, matching the capabilities of the Studio script editor will require some extensions.
 
 You might also consider adding:
 
@@ -154,12 +157,6 @@ You might also consider adding:
 - A code formatter like [StyLua](https://github.com/JohnnyMorganz/StyLua)
 - A language server like [Luau Language Server](https://github.com/JohnnyMorganz/luau-lsp) for autocompletion, type checking, and more
 - [Open Cloud](../cloud/guides/index.md) scripts (not synced to Studio) to [update a published experience](/cloud/reference/Universe#Cloud_UpdateUniverse) or [restart servers](/cloud/reference/Universe#Cloud_RestartUniverseServers)
-
-## Assets
-
-The tools on this page are most applicable to scripts; 3D artists already use external tools like Blender and Maya, store the source files in version control, and import their creations into Studio. After you have a Studio asset, we recommend making use of [packages](../projects/assets/packages.md) whenever possible.
-
-The Roblox implementation of packages follows many of the same principles as the tools on this page: a centralized repository with version history that offers a seamless way to keep all copies of an asset in sync. For more information on how they can improve your workflow, see [Packages](../projects/assets/packages.md).
 
 ## Undo everything
 

@@ -1834,7 +1834,8 @@ events:
       which makes the player's character jump.
 
       Since this event fires multiple times for a single jump request, using a
-      [debounce](../../../scripting/debounce.md) is recommended.
+      [debounce](../../../scripting/debounce.md) is recommended. This event does
+      not fire if `Class.Player.Character` is set to nil.
     code_samples:
       - UserInputService-JumpRequest
     parameters: []

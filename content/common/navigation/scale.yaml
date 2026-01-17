@@ -81,6 +81,8 @@ navigation:
             path: /production/game-design/introduction-to-quest-design
           - title: UI and UX
             path: /production/game-design/ui-ux-design
+          - title: Accessibility guidelines
+            path: /production/publishing/accessibility
           - title: Adaptive design guidelines
             path: /production/publishing/adaptive-design
             section:

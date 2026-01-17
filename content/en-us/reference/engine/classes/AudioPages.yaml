@@ -7,10 +7,10 @@ type: class
 memory_category: Instances
 summary: |
   A special version of the `Class.Pages` class returned by
-  `Class.AssetService:SearchAudio()`.
+  `Class.AssetService:SearchAudioAsync()`.
 description: |
   A special version of the `Class.Pages` class returned by
-  `Class.AssetService:SearchAudio()`. See the following code sample for
+  `Class.AssetService:SearchAudioAsync()`. See the following code sample for
   reference on the returned data format.
 code_samples:
   - printing-search-audio-result-titles

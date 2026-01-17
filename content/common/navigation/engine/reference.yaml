@@ -1463,6 +1463,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/InsertService.yaml
                 ignoreTranslation: true
+              - title: InstanceFileSyncService
+                path: /reference/engine/classes/InstanceFileSyncService
+                type: engineapi
+                source: /reference/engine/classes/InstanceFileSyncService.yaml
+                ignoreTranslation: true
               - title: JointInstance
                 path: /reference/engine/classes/JointInstance
                 type: engineapi
@@ -4655,6 +4660,11 @@ navigation:
         path: /reference/engine/enums/InputType
         type: engineapi
         source: /reference/engine/enums/InputType.yaml
+        ignoreTranslation: true
+      - title: InstanceFileSyncStatus
+        path: /reference/engine/enums/InstanceFileSyncStatus
+        type: engineapi
+        source: /reference/engine/enums/InstanceFileSyncStatus.yaml
         ignoreTranslation: true
       - title: IntermediateMeshGenerationResult
         path: /reference/engine/enums/IntermediateMeshGenerationResult

@@ -5,15 +5,12 @@
 name: CylinderHandleAdornment
 type: class
 memory_category: Instances
-summary: |
-  A cylinder that can be adorned to a `Class.BasePart`.
-description: |
-  For handles to be interactive, they must be parented to a player's PlayerGui
-  or the CoreGui.
-
-  The **CylinderHandleAdornment** is a cylinder that can be adorned to a
-  `Class.BasePart`. This adornment can listen to input events and is commonly
-  used to make dragger tools.
+summary: A cylinder-shaped handle that can be adorned to a `Class.BasePart`.
+description: |-
+  `CylinderHandleAdornment` is a cylinder-shaped handle that can be adorned to a
+  `Class.BasePart`. If parented to a player's `Class.PlayerGui` or the
+  `Class.CoreGui`, handles can listen to input events for purposes such as making
+  dragger tools.
 code_samples: []
 inherits:
   - HandleAdornment
@@ -22,12 +19,13 @@ tags: []
 deprecation_message: ''
 properties:
   - name: CylinderHandleAdornment.Angle
-    summary: |
-      Angle of cylindrical sector (pie-slice).
-    description: |
-      If `Angle` is `<360`, a cylindrical sector (aka a pie-slice) of that angle
-      is rendered instead of a full cylinder. The `Angle` property can be
-      combined with `InnerRadius` to render a sector of a hollow cylinder.
+    summary: Angle of the cylinder handle as in a "pie slice" sector.
+    description: |-
+      The angle of the cylinder handle as in a "pie slice" sector. For example, if set
+      to `90`, a quarter cylinder will render instead of a full cylinder. This
+      property can be combined with
+      `Class.CylinderHandleAdornment.InnerRadius|InnerRadius` to render a sector of a
+      hollow cylinder.
     code_samples: []
     type: float
     tags: []
@@ -44,10 +42,8 @@ properties:
       - Basic
       - UI
   - name: CylinderHandleAdornment.Height
-    summary: |
-      The height of the cylinder adornment.
-    description: |
-      The height of the cylinder adornment.
+    summary: Height of the cylinder adornment.
+    description: The height of the cylinder adornment in studs.
     code_samples: []
     type: float
     tags: []
@@ -64,12 +60,13 @@ properties:
       - Basic
       - UI
   - name: CylinderHandleAdornment.InnerRadius
-    summary: |
-      Inner radius of a hollow cylinder.
-    description: |
-      If `InnerRadius` is >0, a hollow cylinder with that inner radius is
-      rendered instead of a full cylinder. The `InnerRadius` property can be
-      combined with `Angle` to render a sector of a hollow cylinder.
+    summary: Inner radius with which to render a hollow cylinder.
+    description: |-
+      The inner radius with which to render a hollow cylinder, in studs. For example,
+      if `Class.CylinderHandleAdornment.Radius|Radius` is `2` and `InnerRadius` is
+      `1`, the adornment will be a hollow cylinder with a "wall thickness" of 1 stud.
+      This property can be combined with `Class.CylinderHandleAdornment.Angle|Angle`
+      to render a sector of a hollow cylinder.
     code_samples: []
     type: float
     tags: []
@@ -86,10 +83,8 @@ properties:
       - Basic
       - UI
   - name: CylinderHandleAdornment.Radius
-    summary: |
-      The radius of the cylinder adornment.
-    description: |
-      The radius of the cylinder adornment.
+    summary: Radius of the cylinder adornment.
+    description: The radius of the cylinder adornment in studs.
     code_samples: []
     type: float
     tags: []

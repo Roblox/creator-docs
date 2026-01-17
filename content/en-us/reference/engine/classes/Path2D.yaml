@@ -5,8 +5,16 @@
 name: Path2D
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: 'Instance which allows for the runtime creation, editing, and visualization of 2D splines.'
+description: |-
+  `Path2D` is a UI instance that represents a 2D spline. It can be placed under
+  any `Class.GuiObject` and be edited directly in the viewport using built‑in
+  tooling. `Path2D` stores control points and exposes methods to sample
+  positions along the curve, enabling curved UI layouts, path‑based animations,
+  and interactive tools like graph editors and visual effects.
+
+  See the [2D paths](../../../ui/2D-paths.md) guide for more information and
+  usage examples.
 code_samples: []
 inherits:
   - GuiBase
@@ -15,10 +23,8 @@ tags: []
 deprecation_message: ''
 properties:
   - name: Path2D.Closed
-    summary: |
-      Connects the first and last control points when enabled.
-    description: |
-      Connects the first and last control points when enabled.
+    summary: Connects the first and last control points when enabled.
+    description: Connects the first and last control points when enabled.
     code_samples: []
     type: boolean
     tags: []
@@ -34,10 +40,8 @@ properties:
     capabilities:
       - UI
   - name: Path2D.Color3
-    summary: |
-      Determines the Color of the `Class.Path2D`.
-    description: |
-      Determines the Color of the `Class.Path2D`.
+    summary: Determines the color of the `Class.Path2D`.
+    description: Determines the color of the `Class.Path2D`.
     code_samples: []
     type: Color3
     tags: []
@@ -53,8 +57,8 @@ properties:
     capabilities:
       - UI
   - name: Path2D.SelectedControlPoint
-    summary: ''
-    description: ''
+    summary: Index of the currently selected `Datatype.Path2DControlPoint`.
+    description: Index of the currently selected `Datatype.Path2DControlPoint`.
     code_samples: []
     type: int
     tags:
@@ -71,8 +75,8 @@ properties:
     capabilities:
       - UI
   - name: Path2D.SelectedControlPointData
-    summary: ''
-    description: ''
+    summary: '`Datatype.Path2DControlPoint` data type representing the currently selected control point.'
+    description: '`Datatype.Path2DControlPoint` data type representing the currently selected control point, if any.'
     code_samples: []
     type: Path2DControlPoint
     tags:
@@ -89,10 +93,8 @@ properties:
     capabilities:
       - UI
   - name: Path2D.Thickness
-    summary: |
-      Determines how thick the `Class.Path2D` path is.
-    description: |
-      Determines how thick the `Class.Path2D` path is.
+    summary: Determines how thick the `Class.Path2D` path is.
+    description: Determines how thick the `Class.Path2D` path is.
     code_samples: []
     type: float
     tags: []
@@ -108,10 +110,9 @@ properties:
     capabilities:
       - UI
   - name: Path2D.Visible
-    summary: |
-      Determines if the `Class.Path2D` path is rendered or not.
-    description: |
-      Determines if the `Class.Path2D` path is rendered or not. When false, the
+    summary: Determines if the `Class.Path2D` path is rendered or not.
+    description: |-
+      Determines if the `Class.Path2D` path is rendered or not. When `false`, the
       path will not render. However, any modifications to the control points
       will update correctly, ensuring that querying data will have the correct
       info.
@@ -130,10 +131,10 @@ properties:
     capabilities:
       - UI
   - name: Path2D.ZIndex
-    summary: |
+    summary: |-
       Determines the order in which a `Class.Path2D` path renders relative to
       other GUIs.
-    description: |
+    description: |-
       Determines the order in which a `Class.Path2D` path renders relative to
       other GUIs. Works the same as `Class.GuiObject.ZIndex` but does not
       interact with layout order in any way.
@@ -153,9 +154,8 @@ properties:
       - UI
 methods:
   - name: Path2D:GetBoundingRect
-    summary: |
-      Returns the bounding size for the `Class.Path2D`.
-    description: |
+    summary: Returns the bounding size for the `Class.Path2D`.
+    description: |-
       Returns the `Datatype.Rect` bounding size for the `Class.Path2D`. This is
       computed based on the control points and is not modifiable outside of
       changing the control point data.
@@ -171,9 +171,8 @@ methods:
     capabilities:
       - UI
   - name: Path2D:GetControlPoint
-    summary: |
-      Returns the `Datatype.Path2DControlPoint` for a given index.
-    description: |
+    summary: Returns the `Datatype.Path2DControlPoint` for a given index.
+    description: |-
       Returns the `Datatype.Path2DControlPoint` for a given index. If the index
       is out of bounds, this method will throw an error.
     code_samples: []
@@ -184,8 +183,7 @@ methods:
         summary: ''
     returns:
       - type: Path2DControlPoint
-        summary: |
-          The control point at the given index.
+        summary: The control point at the given index.
     tags: []
     deprecation_message: ''
     security: None
@@ -193,18 +191,17 @@ methods:
     capabilities:
       - UI
   - name: Path2D:GetControlPoints
-    summary: |
+    summary: |-
       Returns all the `Datatype.Path2DControlPoint|Path2DControlPoints` for the
       `Class.Path2D`.
-    description: |
+    description: |-
       Returns a table of all the
       `Datatype.Path2DControlPoint|Path2DControlPoints` for the `Class.Path2D`.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: |
-          Table of all the `Datatype.Path2DControlPoint|Path2DControlPoints`.
+        summary: Table of all the `Datatype.Path2DControlPoint|Path2DControlPoints`.
     tags: []
     deprecation_message: ''
     security: None
@@ -212,9 +209,8 @@ methods:
     capabilities:
       - UI
   - name: Path2D:GetLength
-    summary: |
-      Returns the length of the `Class.Path2D`.
-    description: |
+    summary: Returns the length of the `Class.Path2D`.
+    description: |-
       Returns the length of the `Class.Path2D`. This function can be expensive
       if called too frequently.
     code_samples: []
@@ -229,10 +225,8 @@ methods:
     capabilities:
       - UI
   - name: Path2D:GetMaxControlPoints
-    summary: |
-      Returns the maximum allowed number of control points.
-    description: |
-      Returns the maximum allowed number of control points.
+    summary: Returns the maximum allowed number of control points.
+    description: Returns the maximum allowed number of control points.
     code_samples: []
     parameters: []
     returns:
@@ -245,11 +239,10 @@ methods:
     capabilities:
       - UI
   - name: Path2D:GetPositionOnCurve
-    summary: |
-      Returns the position at a given value in parameter space.
-    description: |
-      Returns the 2D `Datatype.UDim2` position at a given `t` value between 0
-      and 1 (inclusive), representing the parameter space result of querying the
+    summary: Returns the position at a given value in parameter space.
+    description: |-
+      Returns the 2D `Datatype.UDim2` position at a given `t` value between `0`
+      and `1` (inclusive), representing the parameter space result of querying the
       spline. The values will be more tightly packed near bends and wider apart
       in straighter segments; see
       `Class.Path2D:GetPositionOnCurveArcLength()|GetPositionOnCurveArcLength()`
@@ -261,12 +254,10 @@ methods:
       - name: t
         type: float
         default:
-        summary: |
-          The value to query the `Class.Path2D` at.
+        summary: The value to query the `Class.Path2D` at.
     returns:
       - type: UDim2
-        summary: |
-          The position in parameter space.
+        summary: The position in parameter space.
     tags: []
     deprecation_message: ''
     security: None
@@ -274,11 +265,10 @@ methods:
     capabilities:
       - UI
   - name: Path2D:GetPositionOnCurveArcLength
-    summary: |
-      Returns the position at a given value in arc length space.
-    description: |
-      Returns the 2D `Datatype.UDim2` position at a given `t` value between 0
-      and 1 (inclusive), representing the arc length space result of querying
+    summary: Returns the position at a given value in arc length space.
+    description: |-
+      Returns the 2D `Datatype.UDim2` position at a given `t` value between `0`
+      and `1` (inclusive), representing the arc length space result of querying
       the spline. The values will be evenly spaced along the spline; see
       `Class.Path2D:GetPositionOnCurve()|GetPositionOnCurve()` for parameter
       spacing results.
@@ -289,12 +279,10 @@ methods:
       - name: t
         type: float
         default:
-        summary: |
-          The value to query the Path2D at.
+        summary: The value to query the Path2D at.
     returns:
       - type: UDim2
-        summary: |
-          The position in arc length space.
+        summary: The position in arc length space.
     tags: []
     deprecation_message: ''
     security: None
@@ -302,19 +290,17 @@ methods:
     capabilities:
       - UI
   - name: Path2D:GetTangentOnCurve
-    summary: |
-      Returns the tangent at a given value in parameter space.
-    description: |
+    summary: Returns the tangent at a given value in parameter space.
+    description: |-
       Returns the tangent at a given `t` value in parameter space where `t` is a
-      value between 0 and 1 (inclusive). Throws an error if the `Class.Path2D`
+      value between `0` and `1` (inclusive). Throws an error if the `Class.Path2D`
       has less than two control points.
     code_samples: []
     parameters:
       - name: t
         type: float
         default:
-        summary: |
-          The value to query the `Class.Path2D` at.
+        summary: The value to query the `Class.Path2D` at.
     returns:
       - type: Vector2
         summary: ''
@@ -325,23 +311,20 @@ methods:
     capabilities:
       - UI
   - name: Path2D:GetTangentOnCurveArcLength
-    summary: |
-      Returns the tangent at a given value in arc length space.
-    description: |
+    summary: Returns the tangent at a given value in arc length space.
+    description: |-
       Returns the tangent at a given `t` value in arc length space where `t` is
-      a value between 0 and 1 (inclusive). Throws an error if the `Class.Path2D`
+      a value between `0` and `1` (inclusive). Throws an error if the `Class.Path2D`
       has less than two control points.
     code_samples: []
     parameters:
       - name: t
         type: float
         default:
-        summary: |
-          The value to query the `Class.Path2D` at.
+        summary: The value to query the `Class.Path2D` at.
     returns:
       - type: Vector2
-        summary: |
-          The tangent in arc length space.
+        summary: The tangent in arc length space.
     tags: []
     deprecation_message: ''
     security: None
@@ -349,9 +332,8 @@ methods:
     capabilities:
       - UI
   - name: Path2D:InsertControlPoint
-    summary: |
-      Inserts a new control point at a given index.
-    description: |
+    summary: Inserts a new control point at a given index.
+    description: |-
       Inserts a new `Datatype.Path2DControlPoint` at a given index. Throws a
       warning if the index is out of bounds or if you're trying to add control
       points past the limit of 50.
@@ -360,13 +342,11 @@ methods:
       - name: index
         type: int
         default:
-        summary: |
-          The index to insert at.
+        summary: The index to insert at.
       - name: point
         type: Path2DControlPoint
         default:
-        summary: |
-          The control point to insert.
+        summary: The control point to insert.
     returns:
       - type: ()
         summary: ''
@@ -377,9 +357,8 @@ methods:
     capabilities:
       - UI
   - name: Path2D:RemoveControlPoint
-    summary: |
-      Removes a control at the given index.
-    description: |
+    summary: Removes a control at the given index.
+    description: |-
       Removes a control point at the given index. Throws a warning if the index
       is out of bounds.
     code_samples: []
@@ -387,8 +366,7 @@ methods:
       - name: index
         type: int
         default:
-        summary: |
-          The index to remove at.
+        summary: The index to remove at.
     returns:
       - type: ()
         summary: ''
@@ -399,10 +377,10 @@ methods:
     capabilities:
       - UI
   - name: Path2D:SetControlPoints
-    summary: |
+    summary: |-
       Sets all the control points to the specified array, replacing all existing
       points with new ones.
-    description: |
+    description: |-
       Sets all the control points to the specified array, replacing all existing
       points with new ones. Throws a warning if there are more than 50 points in
       the `controlPoints` array.
@@ -411,8 +389,7 @@ methods:
       - name: controlPoints
         type: Array
         default:
-        summary: |
-          The new list of control points to set.
+        summary: The new list of control points to set.
     returns:
       - type: ()
         summary: ''
@@ -423,9 +400,8 @@ methods:
     capabilities:
       - UI
   - name: Path2D:UpdateControlPoint
-    summary: |
-      Updates a control point at the given index.
-    description: |
+    summary: Updates a control point at the given index.
+    description: |-
       Updates the control point at the given index. Throws a warning if the
       index is out of range.
     code_samples: []
@@ -433,8 +409,7 @@ methods:
       - name: index
         type: int
         default:
-        summary: |
-          The control point index to update.
+        summary: The control point index to update.
       - name: point
         type: Path2DControlPoint
         default:
@@ -450,10 +425,8 @@ methods:
       - UI
 events:
   - name: Path2D.ControlPointChanged
-    summary: |
-      Fires any time control points change.
-    description: |
-      Fires any time control points change.
+    summary: Fires any time control points change.
+    description: Fires any time control points change.
     code_samples: []
     parameters: []
     tags: []

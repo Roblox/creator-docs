@@ -16,8 +16,16 @@ description: |
   `Class.TextChatMessage.BubbleChatMessageProperties|BubbleChatMessageProperties`
   when returned by callbacks defined in
   `Class.TextChatService.OnIncomingMessage` or
-  `Class.TextChannel.OnIncomingMessage`. This can be used to customize the
-  appearance of a message with [rich text](../../../ui/rich-text.md) tags.
+  `Class.TextChannel.OnIncomingMessage`. These properties are useful for
+  customizing the appearance of a message with
+  [rich text](../../../ui/rich-text.md) tags.
+
+  For sample code, see
+  [Assign chat tags](../../../chat/examples/group-chat-tags.md).
+
+  If you return empty strings for any of these properties,
+  `Class.TextChatService` ignores them and **doesn't** override the original
+  values.
 code_samples: []
 inherits:
   - Instance

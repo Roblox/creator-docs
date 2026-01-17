@@ -737,3 +737,7 @@ https://www.youtube-nocookie.com/embed/j6OPA95-1O0
 https://www.youtube-nocookie.com/embed/-HYByqvW2uc
 https://de.wikipedia.org/wiki/Eulerwinkel
 https://json-schema.org/
+https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.luau-lsp
+https://marketplace.visualstudio.com/items?itemName=Kampfkarren.selene-vscode
+https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.stylua
+https://cursor.com/

@@ -20,8 +20,8 @@ description: |
 
   `GroupService` can also be used to fetch a list of groups a player is a member
   of, using `Class.GroupService:GetGroupsAsync()`. If you wish to verify if a
-  player is in a group, use the `Class.Player:IsInGroup()` method rather than
-  `Class.GroupService:GetGroupsAsync()`.
+  player is in a group, use the `Class.Player:IsInGroupAsync()` method rather
+  than `Class.GroupService:GetGroupsAsync()`.
 
   The service has a number of useful applications, such as detecting if a player
   is an ally or enemy upon joining the game, or prompting a player to join a
@@ -320,8 +320,8 @@ methods:
       player must meet the eligibility criteria to join. If the player is
       ineligible, this method will return `Enum.GroupMembershipStatus.None`.
 
-      Note that you can use `Class.Player:IsInGroup()` to check the player's
-      current membership status before calling this method.
+      Note that you can use `Class.Player:IsInGroupAsync()` to check the
+      player's current membership status before calling this method.
     code_samples:
       - GroupService-PromptJoinAsync1
     parameters:
