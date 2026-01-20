@@ -30,7 +30,7 @@ It is currently not possible to control Roblox Studio's debugger from an externa
 1. In the **Explorer**, select one or more folders that you want to sync.
 1. Right-click and select **Script Sync** ⟩ **Sync with Directory**.
 
-   <img src="../assets/scripting/external-tools/script-sync.png" alt="The Explorer window with the Script Sync menu expanded." width="400" />
+   <img src="../assets/studio/explorer/Script-Sync.png" alt="The Explorer window with the Script Sync menu expanded." width="400" />
 
 1. Choose a directory on your computer (or create a new one) and click **Save**.
 1. In Studio, right-click on the folder again and select **Script Sync** ⟩ **Reveal in Explorer** (Windows) or **Reveal in Finder** (macOS).

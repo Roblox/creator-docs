@@ -16,7 +16,7 @@ Before adding wings, set **rotate snapping** to make it easier to position your 
 1. In the toolbar, make sure **Rotate** snapping is enabled.
 1. Set it to `45°`.
 
-   <img src="../../assets/education/general/Snap-Settings-A.png" width="500" />
+   <img src="../../assets/education/general/Snap-Settings-A.png" width="510" />
 
 ## Place the first wing
 

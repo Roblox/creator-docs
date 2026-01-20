@@ -124,15 +124,15 @@ With a multitude of possible screen sizes accessible to the Roblox platform, att
 	</thead>
 	<tbody>
 		<tr>
-			<td>`Small`</td>
+			<td>`Enum.DisplaySize.Small|Small`</td>
 			<td>Most tablet/mobile/handheld devices</td>
 		</tr>
 		<tr>
-			<td>`Medium`</td>
+			<td>`Enum.DisplaySize.Medium|Medium`</td>
 			<td>Most laptops and monitors</td>
 		</tr>
 		<tr>
-			<td>`Large`</td>
+			<td>`Enum.DisplaySize.Large|Large`</td>
 			<td>Most TVs or larger</td>
 		</tr>
 	</tbody>

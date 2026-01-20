@@ -267,7 +267,7 @@ You can now test your experience using your VR headset using any of the availabl
 
 ## Player emulation
 
-For detailed emulation of experience [localization](../production/localization/index.md) and content policies, you can test through the **Player&nbsp;Emulator**, accessible from Studio's **View** menu.
+For detailed emulation of experience [localization](../production/localization/index.md) and content policies, you can test through the **Player&nbsp;Emulator**, accessible from Studio's **Test** menu.
 
 With the emulator window open, toggle on **Enable Test Profile**. Emulation will remain as toggled (enabled or disabled) even if you close the window.
 

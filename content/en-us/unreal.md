@@ -14,7 +14,7 @@ This page contains information to help experienced Unreal Engine developers get 
 
 <img src="./assets/engine-comparisons/Unreal-Editor-Layout.png" alt="The Unreal Editor user interface with markup to show the various windows and panels." />
 
-<img src="./assets/engine-comparisons/Roblox-Studio-Layout.png" alt="The Roblox Studio user interface with markup to show the various windows and panels." />
+<img src="./assets/studio/general/Studio-Layout.png" alt="The Roblox Studio user interface with markup to show the various windows and panels." />
 
 Unreal's **Outliner** and Roblox Studio's [Explorer](studio/explorer.md) are the primary windows for organizing elements in 3D spaces. Both display a hierarchy of objects and folders. However, **Outliner** has a flatter, less defined structure and only shows `Actors`. The **Explorer** window has a deeply nested, strict structure and displays all objects as part of the hierarchy, even objects that would be considered components in Unreal.
 

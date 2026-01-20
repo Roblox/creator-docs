@@ -34,7 +34,7 @@ To prepare your rig:
 
 1. In the toolbar, find the snapping tools and make sure **Rotate** and **Move** are not checked.
 
-   <img src="../../../assets/education/general/Snap-Settings-C.png" width="500" />
+   <img src="../../../assets/education/general/Snap-Settings-C.png" width="510" />
 
 1. Using the camera controls, move the camera to get a good view of the part you want to animate. While moving, hold <kbd>Shift</kbd> to slow down camera movements.
 

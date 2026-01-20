@@ -2,12 +2,12 @@
 # To submit a bug report on the content, see
 # https://devforum.roblox.com/c/bug-reports/documentation-issues/72
 
-name: ConeHandleAdornment
+name: PyramidHandleAdornment
 type: class
 memory_category: Instances
-summary: A cone-shaped handle that can be adorned to a `Class.BasePart`.
+summary: A pyramid-shaped handle that can be adorned to a `Class.BasePart`.
 description: |-
-  `ConeHandleAdornment` is a cone-shaped handle that can be adorned to a
+  `PyramidHandleAdornment` is a pyramid-shaped handle that can be adorned to a
   `Class.BasePart`. If parented to a player's `Class.PlayerGui` or the
   `Class.CoreGui`, handles can listen to input events for purposes such as making
   dragger tools.
@@ -18,9 +18,9 @@ descendants: []
 tags: []
 deprecation_message: ''
 properties:
-  - name: ConeHandleAdornment.Height
-    summary: Height of the cone adornment.
-    description: The height of the cone adornment in studs.
+  - name: PyramidHandleAdornment.Height
+    summary: Height of the pyramid adornment.
+    description: The height of the pyramid adornment in studs.
     code_samples: []
     type: float
     tags: []
@@ -36,47 +36,49 @@ properties:
     capabilities:
       - Basic
       - UI
-  - name: ConeHandleAdornment.Hollow
-    summary: ''
-    description: ''
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Basic
-      - UI
-  - name: ConeHandleAdornment.Radius
-    summary: Radius of the cone adornment.
-    description: The radius of the cone adornment in studs.
-    code_samples: []
-    type: float
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Basic
-      - UI
-  - name: ConeHandleAdornment.Shading
+  - name: PyramidHandleAdornment.Shading
     summary: ''
     description: ''
     code_samples: []
     type: AdornShading
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+      - UI
+  - name: PyramidHandleAdornment.Sides
+    summary: Number of sides for the pyramid adornment.
+    description: |-
+      The number of sides for the pyramid adornment. Default is `4`, minimum is `3`,
+      and maximum is `32`.
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+      - UI
+  - name: PyramidHandleAdornment.Size
+    summary: Size of the pyramid adornment's base.
+    description: The size of the pyramid adornment's base in studs.
+    code_samples: []
+    type: float
     tags: []
     deprecation_message: ''
     security:
