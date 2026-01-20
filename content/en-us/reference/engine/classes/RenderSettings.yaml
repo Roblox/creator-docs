@@ -179,9 +179,9 @@ properties:
     capabilities: []
   - name: RenderSettings.MeshCacheSize
     summary: |
-      The size in bytes of the mesh cache. Defaults to 32 MB.
+      The size in bytes of the mesh cache. Defaults to 32 MiB.
     description: |
-      The size in bytes of the mesh cache. Defaults to 32 MB (32 \* 2^20 bytes).
+      The size in bytes of the mesh cache. Defaults to 32 MiB.
     code_samples: []
     type: int
     tags: []

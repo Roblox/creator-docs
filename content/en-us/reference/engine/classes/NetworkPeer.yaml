@@ -25,7 +25,7 @@ methods:
     summary: |
       Sets the maximum outgoing bandwidth that Roblox can use.
     description: |
-      Sets the maximum outgoing bandwidth that Roblox can use.
+      Sets the maximum outgoing bandwidth (in *1,000 bits/sec*) that Roblox can use.
     code_samples:
       - NetworkPeer-SetOutgoingKBPSLimit1
     parameters:

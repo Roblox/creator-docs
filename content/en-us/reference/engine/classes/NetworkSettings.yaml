@@ -42,10 +42,10 @@ properties:
     capabilities: []
   - name: NetworkSettings.FreeMemoryMBytes
     summary: |
-      Describes how much free memory is available, in MBs.
+      Describes how much free memory is available, in MiBs.
     description: |
       FreeMemoryMBytes is a read-only property that describes how much free
-      memory is available, in MBs. It is stored as a floating point number, so
+      memory is available, in MiBs. It is stored as a floating point number, so
       it can be read down at the level of available bytes by multiplying its
       value by `1024 * 1024`.
     code_samples: []
