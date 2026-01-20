@@ -1,8 +1,8 @@
-name: Quality Checks
-description: Reusable action for running the quality checks
-inputs:
-  BASE_BRANCH:
-    description: Base branch
+name: Winter Wonderland
+description: Come join the action in Westbrook City for winter wonderland Explore the streets, take part in exciting activities, and earn exclusive rewards you can’t get anywhere else.
+inputs: Teleport / Fast Travel – click on a map or teleport pad
+  BASE_BRANCH: none 
+    description: winter wonderland
   CHECK_LOCALIZED_CONTENT:
     description: Whether to check localized content
   DELETE_MDX_MISMATCHED_ERROR_ON_FAIL:
