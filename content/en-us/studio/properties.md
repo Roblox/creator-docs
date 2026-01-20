@@ -3,8 +3,6 @@ title: Properties window
 description: The Properties window lets you adjust properties of a selected object to change how it looks and behaves.
 ---
 
-import BetaAlert from '../includes/beta-features/beta-alert.md'
-
 The **Properties** window, accessible from Studio's **Window** menu or **Home** tab toolbar, allows you to adjust certain properties of a selected object to change how the object looks and behaves. Additionally, you can manage [tags](#instance-tags) and configure instance [attributes](#instance-attributes) at the bottom of the window.
 
 <img src="../assets/studio/general/Toolbar-Properties.png" width="800" alt="Properties highlighted in Studio's toolbar." />
@@ -118,8 +116,6 @@ New attributes can be created and modified in Studio as follows:
    <img src="../assets/studio/properties/Rename-Delete-Attribute-Button.png" width="320" />
 
 ## Configurable defaults
-
-<BetaAlert betaName="User Provided Default Instances" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
 
 The **configurable defaults** feature allows you to save properties from a selected `Class.Instance` as the new default for that type, reset them as needed, and share them from a local file if desired. Use cases include:
 

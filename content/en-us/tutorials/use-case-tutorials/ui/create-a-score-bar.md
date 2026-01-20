@@ -123,7 +123,7 @@ For example, if you don't test your UI on a range of screen sizes, players with 
 
 To emulate your UI on various screen sizes:
 
-1. From Studio's **View** menu, toggle on **Device Emulator**.
+1. From Studio's **Test** menu, toggle on **Device Emulator**.
 1. In the resolution dropdown, select **Actual Resolution**. This allows you to see the true resolution of your UI elements on the device you're emulating.
 
    <img src="../../../assets/tutorials/creating-a-score-bar/Device-Emulator-Setup.png" width="800" alt="Device Emulator settings options indicated at top of viewport window." />

@@ -6205,7 +6205,7 @@
       "post": {
         "tags": ["Cloud"],
         "summary": "Restart Universe Servers",
-        "description": "Restarts all active servers for a specific universe if and only if a new\nversion of the experience has been published. Used for releasing experience\nupdates.",
+        "description": "Restarts active servers for a specific universe. Defaults to only\nrestarting servers running older versions, but can be configured to restart\nall servers regardless of version. Used for releasing experience updates.",
         "operationId": "Cloud_RestartUniverseServers",
         "parameters": [
           {
@@ -8796,12 +8796,12 @@
           "closeAllVersions": {
             "example": true,
             "type": "boolean",
-            "description": "If true, players from servers running both old and new place versions will\nbe restarted. If false, restarts all active servers for a specific universe \nif and only if a new version of the experience has been published."
+            "description": "If true, players from servers running both old and new place versions will\nbe restarted. If false, restarts all active servers for a specific universe\nif and only if a new version of the experience has been published."
           },
           "bleedOffServers": {
             "example": true,
             "type": "boolean",
-            "description": "If true, matchmaking to servers will stop, but servers will stay up for bleed_off_duration_minutes before shutting down.\nThis setting gives players time to naturally migrate to the newer version.\nIf false, servers will immediately start shutting down."
+            "description": "If true, matchmaking to servers will stop, but servers will stay up for\nbleed_off_duration_minutes before shutting down.\nThis setting gives players time to naturally migrate to the newer version.\nIf false, servers will immediately start shutting down."
           },
           "bleedOffDurationMinutes": {
             "example": 10,

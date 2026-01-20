@@ -7,7 +7,7 @@ The **string** data type is a sequence of characters, such as letters, numbers, 
 
 ## Declare strings
 
-To declare a string variable, put quotes around the characters. It's more common to use double quotes (`"`), but single quotes (`'`) also work. If you want to include a single or double quote in your string, wrap your string around the other type of quote, or use an [escaped quote](#escape-strings).
+To declare a string variable, put quotes around the characters. It's more common to use double quotes (`"`), but single quotes (`'`) also work. If you want to include a single or double quote in your string, enclose your string in the other type of quote, or use an [escaped quote](#escape-strings).
 
 ```lua
 local string1 = "Hello world!"

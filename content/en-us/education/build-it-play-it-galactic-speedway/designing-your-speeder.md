@@ -58,7 +58,7 @@ To move parts where you want them, first turn off **collisions** and **move snap
 
 1. Make sure that **Move** snapping is also turned **off**.
 
-   <img src="../../assets/education/general/Snap-Settings-B.png" width="500" />
+   <img src="../../assets/education/general/Snap-Settings-B.png" width="510" />
 
 ## Change the camera view
 

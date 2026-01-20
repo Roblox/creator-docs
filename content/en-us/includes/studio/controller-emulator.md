@@ -2,7 +2,7 @@
 title: include
 ---
 
-The **Controller Emulator**, accessible from Studio's **View** menu, lets you accurately emulate gamepad input directly in Studio. The default controller is a generic gamepad, but you can select alternatives from the upper‑left picker menu.
+The **Controller Emulator**, accessible from Studio's **Test** menu, lets you accurately emulate gamepad input directly in Studio. The default controller is a generic gamepad, but you can select alternatives from the upper‑left picker menu.
 
 <img src="../../assets/studio/general/Controller-Emulator.png" width="720" alt="View of the generic controller in the Controller Emulator." />
 
