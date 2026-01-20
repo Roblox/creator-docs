@@ -987,11 +987,9 @@ methods:
     deprecation_message: ''
   - name: CFrame:ToAxisAngle
     summary: |
-      Returns a tuple of a `Datatype.Vector3` and a number which represent the
-      rotation of the `Datatype.CFrame` in the axis-angle representation.
+      Returns a tuple containing a unit `Datatype.Vector3` axis and a rotation angle in radians.
     description: |
-      Returns a tuple of a `Datatype.Vector3` and a number which represent the
-      rotation of the `Datatype.CFrame` in the axis-angle representation.
+      Returns a tuple containing a unit `Datatype.Vector3` axis and a rotation angle in radians.
     parameters: []
     returns:
       - type: Vector3
