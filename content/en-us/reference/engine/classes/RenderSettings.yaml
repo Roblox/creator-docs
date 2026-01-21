@@ -6,10 +6,10 @@ name: RenderSettings
 type: class
 memory_category: Instances
 summary: ''
-description: |-
-  `RenderSettings` is a singleton class which lets developers debug components of
-  Roblox's graphics engine. It can be found in Roblox Studio's settings under the
-  **Rendering** tab.
+description: |
+  `RenderSettings` is a singleton class which lets developers debug components
+  of Roblox's graphics engine. It can be found in Roblox Studio's settings under
+  the **Rendering** tab.
 code_samples: []
 inherits:
   - Instance
@@ -22,8 +22,9 @@ tags:
 deprecation_message: ''
 properties:
   - name: RenderSettings.AutoFRMLevel
-    summary: Sets the starting quality level of the framerate manager.
-    description: |-
+    summary: |
+      Sets the starting quality level of the framerate manager.
+    description: |
       Sets the starting quality level of the framerate manager when
       `Class.RenderSettings.EnableFRM|EnableFRM` is set to `true`.
     code_samples: []
@@ -40,13 +41,13 @@ properties:
       can_save: true
     capabilities: []
   - name: RenderSettings.EagerBulkExecution
-    summary: |-
-      Whether all scene updates will be given an unlimited budget,
-      regardless of how computationally expensive it may be.
-    description: |-
+    summary: |
+      Whether all scene updates will be given an unlimited budget, regardless of
+      how computationally expensive it may be.
+    description: |
       When set to `true`, all scene updates will be given an unlimited budget,
-      regardless of how computationally expensive it may be. This ensures each frame
-      will look as it should, at the cost of a more unstable frame rate.
+      regardless of how computationally expensive it may be. This ensures each
+      frame will look as it should, at the cost of a more unstable frame rate.
     code_samples: []
     type: boolean
     tags: []
@@ -61,8 +62,9 @@ properties:
       can_save: true
     capabilities: []
   - name: RenderSettings.EditQualityLevel
-    summary: Sets the graphics quality level in Roblox Studio.
-    description: |-
+    summary: |
+      Sets the graphics quality level in Roblox Studio.
+    description: |
       Sets the graphics quality level in Roblox Studio when
       `Class.RenderSettings.EnableFRM|EnableFRM` is set to `false`.
     code_samples: []
@@ -95,8 +97,10 @@ properties:
       can_save: true
     capabilities: []
   - name: RenderSettings.EnableFRM
-    summary: Toggles the enabled state of the framerate manager.
-    description: Toggles the enabled state of the framerate manager.
+    summary: |
+      Toggles the enabled state of the framerate manager.
+    description: |
+      Toggles the enabled state of the framerate manager.
     code_samples: []
     type: boolean
     tags:
@@ -113,12 +117,12 @@ properties:
       can_save: false
     capabilities: []
   - name: RenderSettings.ExportMergeByMaterial
-    summary: |-
+    summary: |
       Sets whether materials should be generated per part, or per unique
       appearance in Roblox's exporter.
-    description: |-
-      Sets whether materials should be generated per part, or per unique appearance in
-      Roblox's exporter.
+    description: |
+      Sets whether materials should be generated per part, or per unique
+      appearance in Roblox's exporter.
     code_samples: []
     type: boolean
     tags: []
@@ -133,8 +137,10 @@ properties:
       can_save: true
     capabilities: []
   - name: RenderSettings.FrameRateManager
-    summary: Specifies the behavior of the framerate manager.
-    description: Specifies the behavior of the framerate manager.
+    summary: |
+      Specifies the behavior of the framerate manager.
+    description: |
+      Specifies the behavior of the framerate manager.
     code_samples: []
     type: FramerateManagerMode
     tags: []
@@ -149,8 +155,10 @@ properties:
       can_save: true
     capabilities: []
   - name: RenderSettings.GraphicsMode
-    summary: The graphics API that Roblox will use on startup.
-    description: The graphics API that Roblox will use on startup.
+    summary: |
+      The graphics API that Roblox will use on startup.
+    description: |
+      The graphics API that Roblox will use on startup.
     code_samples: []
     type: GraphicsMode
     tags: []
@@ -165,8 +173,10 @@ properties:
       can_save: true
     capabilities: []
   - name: RenderSettings.MeshCacheSize
-    summary: The size in bytes of the mesh cache.
-    description: The size in bytes of the mesh cache. Defaults to 32 MiB.
+    summary: |
+      The size in bytes of the mesh cache.
+    description: |
+      The size in bytes of the mesh cache. Defaults to 32 MiB.
     code_samples: []
     type: int
     tags: []
@@ -181,19 +191,19 @@ properties:
       can_save: true
     capabilities: []
   - name: RenderSettings.MeshPartDetailLevel
-    summary: |-
+    summary: |
       Studio only. Used to visually verify the quality of
       `Class.MeshPart|MeshParts` at lower level of detail at close range.
-    description: |-
-      Determines the mode for the selection of detail levels for mesh parts. For a
-      good balance between performance and fidelity, this should be set to
-      `Enum.MeshPartDetailLevel.DistanceBased` (default), which is what the client
-      uses.
+    description: |
+      Determines the mode for the selection of detail levels for mesh parts. For
+      a good balance between performance and fidelity, this should be set to
+      `Enum.MeshPartDetailLevel.DistanceBased` (default), which is what the
+      client uses.
 
       Note that the `Class.MeshPart.RenderFidelity` needs to be set to
       `Enum.RenderFidelity.Automatic` for this to work. If you set it to
-      `Enum.RenderFidelity.Precise`, you will always see the higher resolution version
-      and the `Enum.MeshPartDetailLevel` value will be ignored for that
+      `Enum.RenderFidelity.Precise`, you will always see the higher resolution
+      version and the `Enum.MeshPartDetailLevel` value will be ignored for that
       `Class.MeshPart`.
     code_samples: []
     type: MeshPartDetailLevel
@@ -209,10 +219,11 @@ properties:
       can_save: true
     capabilities: []
   - name: RenderSettings.QualityLevel
-    summary: Controls the quality level in Roblox Studio.
-    description: |-
-      If `Class.RenderSettings.EnableFRM|EnableFRM` is set to `true`, this property
-      controls the quality level in Roblox Studio.
+    summary: |
+      Controls the quality level in Roblox Studio.
+    description: |
+      If `Class.RenderSettings.EnableFRM|EnableFRM` is set to `true`, this
+      property controls the quality level in Roblox Studio.
     code_samples: []
     type: QualityLevel
     tags: []
@@ -227,12 +238,12 @@ properties:
       can_save: true
     capabilities: []
   - name: RenderSettings.ReloadAssets
-    summary: |-
-      Whether Roblox Studio will automatically reload changes that are
-      made to files in Roblox's `content` folder.
-    description: |-
-      When set to `true`, Roblox Studio will automatically reload changes that are
-      made to files in Roblox's `content` folder.
+    summary: |
+      Whether Roblox Studio will automatically reload changes that are made to
+      files in Roblox's `content` folder.
+    description: |
+      When set to `true`, Roblox Studio will automatically reload changes that
+      are made to files in Roblox's `content` folder.
     code_samples: []
     type: boolean
     tags: []
@@ -247,10 +258,10 @@ properties:
       can_save: true
     capabilities: []
   - name: RenderSettings.RenderCSGTrianglesDebug
-    summary: |-
-      Whether a wireframe of polygons will be shown on all
-      `Class.PartOperation` objects.
-    description: |-
+    summary: |
+      Whether a wireframe of polygons will be shown on all `Class.PartOperation`
+      objects.
+    description: |
       When set to `true`, a wireframe of polygons will be shown on all
       `Class.PartOperation` objects.
     code_samples: []
@@ -267,12 +278,12 @@ properties:
       can_save: true
     capabilities: []
   - name: RenderSettings.ShowBoundingBoxes
-    summary: |-
-      Whether bounding boxes are rendered around each individual rendered
-      entity in the scene.
-    description: |-
-      If set to `true`, renders bounding boxes around each individual rendered entity
+    summary: |
+      Whether bounding boxes are rendered around each individual rendered entity
       in the scene.
+    description: |
+      If set to `true`, renders bounding boxes around each individual rendered
+      entity in the scene.
     code_samples: []
     type: boolean
     tags: []
@@ -304,8 +315,10 @@ properties:
     capabilities: []
 methods:
   - name: RenderSettings:GetMaxQualityLevel
-    summary: Returns the maximum quality level.
-    description: Returns the maximum quality level.
+    summary: |
+      Returns the maximum quality level.
+    description: |
+      Returns the maximum quality level.
     code_samples: []
     parameters: []
     returns:

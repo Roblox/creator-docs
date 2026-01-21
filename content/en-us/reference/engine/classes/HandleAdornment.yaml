@@ -20,6 +20,7 @@ descendants:
   - CylinderHandleAdornment
   - ImageHandleAdornment
   - LineHandleAdornment
+  - PyramidHandleAdornment
   - SphereHandleAdornment
   - WireframeHandleAdornment
 tags:

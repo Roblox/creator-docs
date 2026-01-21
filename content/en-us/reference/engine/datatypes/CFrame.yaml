@@ -4,8 +4,9 @@
 
 name: CFrame
 type: datatype
-summary: A data type that represents both a 3D position and orientation.
-description: |-
+summary: |
+  A data type that represents both a 3D position and orientation.
+description: |
   The `Datatype.CFrame` data type, short for **coordinate frame**, describes a
   3D position and orientation. It is made up of a **positional** component and a
   **rotational** component and includes essential arithmetic operations for
@@ -139,7 +140,7 @@ constructors:
         type: number
         default:
         summary: ''
-      - name: y
+      - name: 'y'
         type: number
         default:
         summary: ''
@@ -164,7 +165,7 @@ constructors:
         type: number
         default:
         summary: ''
-      - name: y
+      - name: 'y'
         type: number
         default:
         summary: ''
@@ -205,7 +206,7 @@ constructors:
         type: number
         default:
         summary: ''
-      - name: y
+      - name: 'y'
         type: number
         default:
         summary: ''
@@ -507,8 +508,9 @@ constants:
 properties:
   - name: CFrame.identity
     type: CFrame
-    summary: An identity `Datatype.CFrame` with no translation or rotation.
-    description: |-
+    summary: |
+      An identity `Datatype.CFrame` with no translation or rotation.
+    description: |
       An identity `Datatype.CFrame` with no translation or rotation. This
       property is a **constant** and must be accessed globally as opposed to
       through an individual `Datatype.CFrame` object.
@@ -518,51 +520,61 @@ properties:
     deprecation_message: ''
   - name: CFrame.Position
     type: Vector3
-    summary: The 3D position of the `Datatype.CFrame`.
-    description: The 3D position of the `Datatype.CFrame`.
+    summary: |
+      The 3D position of the `Datatype.CFrame`.
+    description: |
+      The 3D position of the `Datatype.CFrame`.
     default:
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.Rotation
     type: CFrame
-    summary: A copy of the `Datatype.CFrame` with no translation.
-    description: A copy of the `Datatype.CFrame` with no translation.
+    summary: |
+      A copy of the `Datatype.CFrame` with no translation.
+    description: |
+      A copy of the `Datatype.CFrame` with no translation.
     default:
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.X
     type: number
-    summary: The X coordinate of the position.
-    description: The X coordinate of the position.
+    summary: |
+      The X coordinate of the position.
+    description: |
+      The X coordinate of the position.
     default:
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.Y
     type: number
-    summary: The Y coordinate of the position.
-    description: The Y coordinate of the position.
+    summary: |
+      The Y coordinate of the position.
+    description: |
+      The Y coordinate of the position.
     default:
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.Z
     type: number
-    summary: The Z coordinate of the position.
-    description: The Z coordinate of the position.
+    summary: |
+      The Z coordinate of the position.
+    description: |
+      The Z coordinate of the position.
     default:
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.LookVector
     type: Vector3
-    summary: |-
+    summary: |
       The forward-direction component of the `Datatype.CFrame` object's
       orientation, equivalent to the negated form of
       `Datatype.CFrame.ZVector|ZVector`.
-    description: |-
+    description: |
       The forward-direction component of the `Datatype.CFrame` object's
       orientation, equivalent to the negated `Datatype.CFrame.ZVector|ZVector`
       or the negated third column of the rotation matrix.
@@ -586,10 +598,10 @@ properties:
     deprecation_message: ''
   - name: CFrame.RightVector
     type: Vector3
-    summary: |-
+    summary: |
       The right-direction component of the `Datatype.CFrame` object's
       orientation.
-    description: |-
+    description: |
       The right-direction component of the `Datatype.CFrame` object's
       orientation. Equivalent to `Datatype.CFrame.XVector|XVector` or the first
       column of the rotation matrix.
@@ -608,8 +620,9 @@ properties:
     deprecation_message: ''
   - name: CFrame.UpVector
     type: Vector3
-    summary: The up-direction component of the `Datatype.CFrame` object's orientation.
-    description: |-
+    summary: |
+      The up-direction component of the `Datatype.CFrame` object's orientation.
+    description: |
       The up-direction component of the `Datatype.CFrame` object's orientation.
       Equivalent to `Datatype.CFrame.YVector|YVector` or the second column of
       the rotation matrix.
@@ -628,8 +641,9 @@ properties:
     deprecation_message: ''
   - name: CFrame.XVector
     type: Vector3
-    summary: Equivalent to `Datatype.CFrame.RightVector|RightVector`.
-    description: |-
+    summary: |
+      Equivalent to `Datatype.CFrame.RightVector|RightVector`.
+    description: |
       The X component of the `Datatype.CFrame` object's orientation. Equivalent
       to `Datatype.CFrame.RightVector|RightVector` or the first column of the
       rotation matrix.
@@ -648,8 +662,9 @@ properties:
     deprecation_message: ''
   - name: CFrame.YVector
     type: Vector3
-    summary: Equivalent to `Datatype.CFrame.UpVector|UpVector`.
-    description: |-
+    summary: |
+      Equivalent to `Datatype.CFrame.UpVector|UpVector`.
+    description: |
       The Y component of the `Datatype.CFrame` object's orientation. Equivalent
       to `Datatype.CFrame.UpVector|UpVector` or the second column of the
       rotation matrix.
@@ -668,10 +683,10 @@ properties:
     deprecation_message: ''
   - name: CFrame.ZVector
     type: Vector3
-    summary: |-
+    summary: |
       The Z component of the `Datatype.CFrame` object's orientation. Equivalent
       to the third column of the rotation matrix.
-    description: |-
+    description: |
       The Z component of the `Datatype.CFrame` object's orientation. Equivalent
       to the negated `Datatype.CFrame.LookVector|LookVector` or the third column
       of the rotation matrix.
@@ -690,8 +705,10 @@ properties:
     deprecation_message: ''
 methods:
   - name: CFrame:Inverse
-    summary: Returns the inverse of the `Datatype.CFrame`.
-    description: Returns the inverse of the `Datatype.CFrame`.
+    summary: |
+      Returns the inverse of the `Datatype.CFrame`.
+    description: |
+      Returns the inverse of the `Datatype.CFrame`.
     parameters: []
     returns:
       - type: CFrame
@@ -700,10 +717,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: CFrame:Lerp
-    summary: |-
+    summary: |
       Returns a `Datatype.CFrame` interpolated between itself and `goal` by the
       fraction `alpha`.
-    description: |-
+    description: |
       Returns a `Datatype.CFrame` interpolated between itself and `goal` by the
       fraction `alpha`.
     parameters:
@@ -722,8 +739,9 @@ methods:
     tags: []
     deprecation_message: ''
   - name: CFrame:Orthonormalize
-    summary: Returns an orthonormalized copy of the `Datatype.CFrame`.
-    description: |-
+    summary: |
+      Returns an orthonormalized copy of the `Datatype.CFrame`.
+    description: |
       Returns an orthonormalized copy of the `Datatype.CFrame`. The
       `Class.BasePart.CFrame` property automatically applies orthonormalization,
       but other APIs which take `Datatype.CFrame|CFrames` do not, so this method
@@ -737,10 +755,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: CFrame:ToWorldSpace
-    summary: |-
+    summary: |
       Receives one or more `Datatype.CFrame` objects and returns them
       transformed from object to world space.
-    description: |-
+    description: |
       Receives one or more `Datatype.CFrame` objects and returns them
       transformed from object to world space. Equivalent to:
 
@@ -766,10 +784,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: CFrame:ToObjectSpace
-    summary: |-
+    summary: |
       Receives one or more `Datatype.CFrame` objects and returns them
       transformed from world to object space.
-    description: |-
+    description: |
       Receives one or more `Datatype.CFrame` objects and returns them
       transformed from world to object space. Equivalent to:
 
@@ -786,10 +804,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: CFrame:PointToWorldSpace
-    summary: |-
+    summary: |
       Receives one or more `Datatype.Vector3` objects and returns them
       transformed from object to world space.
-    description: |-
+    description: |
       Receives one or more `Datatype.Vector3` objects and returns them
       transformed from object to world space. Equivalent to:
 
@@ -815,10 +833,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: CFrame:PointToObjectSpace
-    summary: |-
+    summary: |
       Receives one or more `Datatype.Vector3` objects and returns them
       transformed from world to object space.
-    description: |-
+    description: |
       Receives one or more `Datatype.Vector3` objects and returns them
       transformed from world to object space. Equivalent to:
 
@@ -835,10 +853,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: CFrame:VectorToWorldSpace
-    summary: |-
+    summary: |
       Receives one or more `Datatype.Vector3` objects and returns them rotated
       from object to world space.
-    description: |-
+    description: |
       Receives one or more `Datatype.Vector3` objects and returns them rotated
       from object to world space. Equivalent to:
 
@@ -855,10 +873,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: CFrame:VectorToObjectSpace
-    summary: |-
+    summary: |
       Receives one or more `Datatype.Vector3` objects and returns them rotated
       from world to object space.
-    description: |-
+    description: |
       Receives one or more `Datatype.Vector3` objects and returns them rotated
       from world to object space. Equivalent to:
 
@@ -875,12 +893,12 @@ methods:
     tags: []
     deprecation_message: ''
   - name: CFrame:GetComponents
-    summary: |-
+    summary: |
       Returns the values `x`, `y`, `z`, `R00`, `R01`, `R02`, `R10`, `R11`,
       `R12`, `R20`, `R21`, and `R22`, where `x` `y` `z` represent the position
       of the `Datatype.CFrame` and `R00`‑`R22` represent its 3&times;3 rotation
       matrix.
-    description: |-
+    description: |
       Returns the values `x`, `y`, `z`, `R00`, `R01`, `R02`, `R10`, `R11`,
       `R12`, `R20`, `R21`, and `R22`, where `x` `y` `z` represent the position
       of the `Datatype.CFrame` and `R00`‑`R22` represent its 3&times;3 rotation
@@ -893,10 +911,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: CFrame:ToEulerAngles
-    summary: |-
+    summary: |
       Returns approximate angles that could be used to generate the
       `Datatype.CFrame` using the optional `Enum.RotationOrder`.
-    description: |-
+    description: |
       Returns approximate angles that could be used to generate the
       `Datatype.CFrame` using the optional `Enum.RotationOrder`. If you don't
       provide `order`, the method uses `Enum.RotationOrder.XYZ`.
@@ -916,10 +934,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: CFrame:ToEulerAnglesXYZ
-    summary: |-
+    summary: |
       Returns approximate angles that could be used to generate the
       `Datatype.CFrame` using `Enum.RotationOrder.XYZ`.
-    description: |-
+    description: |
       Returns approximate angles that could be used to generate the
       `Datatype.CFrame` using `Enum.RotationOrder.XYZ`.
     parameters: []
@@ -934,10 +952,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: CFrame:ToEulerAnglesYXZ
-    summary: |-
+    summary: |
       Returns approximate angles that could be used to generate the
       `Datatype.CFrame` using `Enum.RotationOrder.YXZ`.
-    description: |-
+    description: |
       Returns approximate angles that could be used to generate the
       `Datatype.CFrame` using `Enum.RotationOrder.YXZ`.
     parameters: []
@@ -952,8 +970,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: CFrame:ToOrientation
-    summary: Equivalent to `Datatype.CFrame:ToEulerAnglesYXZ()`.
-    description: Equivalent to `Datatype.CFrame:ToEulerAnglesYXZ()`.
+    summary: |
+      Equivalent to `Datatype.CFrame:ToEulerAnglesYXZ()`.
+    description: |
+      Equivalent to `Datatype.CFrame:ToEulerAnglesYXZ()`.
     parameters: []
     returns:
       - type: number
@@ -966,10 +986,12 @@ methods:
     tags: []
     deprecation_message: ''
   - name: CFrame:ToAxisAngle
-    summary: Returns a tuple containing a unit `Datatype.Vector3` axis and a rotation angle in radians.
-    description: |-
-      Returns a tuple containing a unit `Datatype.Vector3` axis and a rotation angle
-      in radians.
+    summary: |
+      Returns a tuple containing a unit `Datatype.Vector3` axis and a rotation
+      angle in radians.
+    description: |
+      Returns a tuple containing a unit `Datatype.Vector3` axis and a rotation
+      angle in radians.
     parameters: []
     returns:
       - type: Vector3
@@ -980,8 +1002,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: CFrame:components
-    summary: Equivalent to `Datatype.CFrame:GetComponents()`.
-    description: Equivalent to `Datatype.CFrame:GetComponents()`.
+    summary: |
+      Equivalent to `Datatype.CFrame:GetComponents()`.
+    description: |
+      Equivalent to `Datatype.CFrame:GetComponents()`.
     parameters: []
     returns:
       - type: Tuple
@@ -990,10 +1014,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: CFrame:FuzzyEq
-    summary: |-
+    summary: |
       Returns `true` if the other `Datatype.CFrame` is sufficiently close to
       this `Datatype.CFrame` in both position and rotation.
-    description: |-
+    description: |
       Returns `true` if the other `Datatype.CFrame` is sufficiently close to
       this `Datatype.CFrame` in both position and rotation. The `epsilon` value
       is used to control the tolerance for this similarity; this value is
@@ -1016,10 +1040,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: CFrame:AngleBetween
-    summary: |-
+    summary: |
       Returns the angle, in radians, between the orientation of one
       `Datatype.CFrame` and another.
-    description: |-
+    description: |
       Returns the angle, in radians, between the orientation of one
       `Datatype.CFrame` and another. This function does not take the position of
       either `Datatype.CFrame` into account and only looks at the relative
@@ -1039,10 +1063,10 @@ functions: []
 math_operations:
   - name: '*'
     operation: '*'
-    summary: |-
+    summary: |
       Produces a new `Datatype.CFrame` representing the composition of the two
       `Datatype.CFrame|CFrames`.
-    description: |-
+    description: |
       Produces a new `Datatype.CFrame` representing the composition of the two
       `Datatype.CFrame|CFrames`.
     type_a: CFrame
@@ -1053,10 +1077,10 @@ math_operations:
     deprecation_message: ''
   - name: '*'
     operation: '*'
-    summary: |-
+    summary: |
       Produces a `Datatype.Vector3` transformed from object to world
       coordinates.
-    description: |-
+    description: |
       Produces a `Datatype.Vector3` transformed from object to world
       coordinates.
     type_a: CFrame
@@ -1067,10 +1091,10 @@ math_operations:
     deprecation_message: ''
   - name: +
     operation: +
-    summary: |-
+    summary: |
       Produces a `Datatype.CFrame` translated in world space by the
       `Datatype.Vector3`.
-    description: |-
+    description: |
       Produces a `Datatype.CFrame` translated in world space by the
       `Datatype.Vector3`.
     type_a: CFrame
@@ -1081,10 +1105,10 @@ math_operations:
     deprecation_message: ''
   - name: '-'
     operation: '-'
-    summary: |-
+    summary: |
       Produces a `Datatype.CFrame` translated in world space by the negative
       `Datatype.Vector3`.
-    description: |-
+    description: |
       Produces a `Datatype.CFrame` translated in world space by the negative
       `Datatype.Vector3`.
     type_a: CFrame

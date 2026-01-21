@@ -18,7 +18,6 @@ If you're a 13+ [ID verified](https://en.help.roblox.com/hc/en-us/articles/44072
 - It's 5 minutes or less in either `.mp4` or `.mov` format.
 - Its resolution is less than or equal to 4096&times;2160.
 - It's less than 3.75 GB.
-- It includes only English, Spanish, Portuguese, Indonesian, Chinese (simplified and traditional), Japanese, and/or Korean audio and text.
 
 Videos that don't meet these requirements are rejected. Alpha channels are not supported and will be ignored. When uploading videos, consider the following:
 

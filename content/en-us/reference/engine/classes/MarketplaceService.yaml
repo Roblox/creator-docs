@@ -5,8 +5,9 @@
 name: MarketplaceService
 type: class
 memory_category: Instances
-summary: The service responsible for in-experience transactions.
-description: |-
+summary: |
+  The service responsible for in-experience transactions.
+description: |
   `Class.MarketplaceService` is responsible for in-experience transactions. The
   most notable methods are
   `Class.MarketplaceService:PromptProductPurchase()|PromptProductPurchase` and
@@ -39,10 +40,10 @@ deprecation_message: ''
 properties: []
 methods:
   - name: MarketplaceService:GetDeveloperProductsAsync
-    summary: |-
+    summary: |
       Returns a `Class.Pages` object which contains information for all of the
       current experience's developer products.
-    description: |-
+    description: |
       Returns a `Class.Pages` object which contains information for all of the
       current experience's
       [developer products](../../../production/monetization/developer-products.md).
@@ -59,13 +60,14 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:GetProductInfoAsync
-    summary: Returns the product information of an asset using its asset ID.
-    description: |-
+    summary: |
+      Returns the product information of an asset using its asset ID.
+    description: |
       This method provides information about an asset,
       [developer product](../../../production/monetization/developer-products.md),
-      or [pass](../../../production/monetization/passes.md) based on the
-      asset ID and the `Enum.InfoType`. If an item with the given ID does not
-      exist, this method throws an error.
+      or [pass](../../../production/monetization/passes.md) based on the asset
+      ID and the `Enum.InfoType`. If an item with the given ID does not exist,
+      this method throws an error.
 
       Information about the queried item is provided in a dictionary with the
       following keys. Note that not all information is provided or necessarily
@@ -326,16 +328,17 @@ methods:
       - name: assetId
         type: int64
         default:
-        summary: The asset ID of the specified product.
+        summary: |
+          The asset ID of the specified product.
       - name: infoType
         type: InfoType
         default: Asset
-        summary: |-
+        summary: |
           An `Enum.InfoType` enum value specifying the type of information being
           retrieved.
     returns:
       - type: Dictionary
-        summary: |-
+        summary: |
           A dictionary containing information about the queried item, described
           in the previous tables.
     tags:
@@ -345,7 +348,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:GetProductInfo
-    summary: Returns the product information of an asset using its asset ID.
+    summary: |
+      Returns the product information of an asset using its asset ID.
     description: ''
     code_samples:
       - MarketplaceService-GetProductInfo1
@@ -353,30 +357,33 @@ methods:
       - name: assetId
         type: int64
         default:
-        summary: The asset ID of the specified product.
+        summary: |
+          The asset ID of the specified product.
       - name: infoType
         type: InfoType
         default: Asset
-        summary: |-
+        summary: |
           An `Enum.InfoType` enum value specifying the type of information being
           retrieved.
     returns:
       - type: Dictionary
-        summary: |-
+        summary: |
           A dictionary containing information about the queried item, described
           in the previous tables.
     tags:
       - Yields
       - Deprecated
-    deprecation_message: This method has been superseded by `Class.MarketplaceService.GetProductInfoAsync|GetProductInfoAsync()`.
+    deprecation_message: |
+      This method has been superseded by
+      `Class.MarketplaceService.GetProductInfoAsync|GetProductInfoAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:GetSubscriptionProductInfoAsync
-    summary: |-
+    summary: |
       Returns the product information of a subscription for the given
       `subscriptionId`.
-    description: |-
+    description: |
       **Note**: Because it returns a localized price, you can only call this
       method from a `Class.Script` with `Enum.RunContext.Client`.
 
@@ -444,7 +451,8 @@ methods:
       - name: subscriptionId
         type: string
         default:
-        summary: The ID of the subscription to check.
+        summary: |
+          The ID of the subscription to check.
     returns:
       - type: Dictionary
         summary: ''
@@ -455,21 +463,32 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:GetUsersPriceLevelsAsync
-    summary: Returns the regionalized price level of a user, representing the recommended price for an item in their regional market.
-    description: |-
-      Returns the regionalized price level of a user, representing the recommended price for an item in their regional market. For example, a price level of 100 means that the suggested price for that user (based on their region and purchasing power) is 100 Robux.
+    summary: |
+      Returns the regionalized price level of a user, representing the
+      recommended price for an item in their regional market.
+    description: |
+      Returns the regionalized price level of a user, representing the
+      recommended price for an item in their regional market. For example, a
+      price level of 100 means that the suggested price for that user (based on
+      their region and purchasing power) is 100 Robux.
 
-      See [Protect your trades and gifts](../../../production/monetization/regional-pricing.md#protect-your-trades-and-gifts) for more information.
+      See
+      [Protect your trades and gifts](../../../production/monetization/regional-pricing.md#protect-your-trades-and-gifts)
+      for more information.
     code_samples:
       - MarketplaceService-GetUsersPriceLevelAsync
     parameters:
       - name: userIds
         type: Array
         default:
-        summary: An array of user IDs.
+        summary: |
+          An array of user IDs.
     returns:
       - type: Array
-        summary: Returns an array of `PriceLevelInfo` objects with a dictionary where the keys are user IDs (strings) and their values are the corresponding price levels (integers between 1 and 1000).
+        summary: |
+          Returns an array of `PriceLevelInfo` objects with a dictionary where
+          the keys are user IDs (strings) and their values are the corresponding
+          price levels (integers between 1 and 1000).
     tags:
       - Yields
     deprecation_message: ''
@@ -477,10 +496,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:GetUserSubscriptionDetailsAsync
-    summary: |-
+    summary: |
       Returns a table that contains the details of the user's subscription for a
       given `subscriptionId`.
-    description: |-
+    description: |
       Returns a dictionary table containing the details of the user's
       subscription for the given `subscriptionId`. The table contains the
       following keys:
@@ -539,13 +558,14 @@ methods:
       - name: user
         type: Player
         default:
-        summary: |-
+        summary: |
           The `Class.Player` object whose subscription details you want to
           check.
       - name: subscriptionId
         type: string
         default:
-        summary: The ID of the subscription to check.
+        summary: |
+          The ID of the subscription to check.
     returns:
       - type: Dictionary
         summary: ''
@@ -556,10 +576,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:GetUserSubscriptionPaymentHistoryAsync
-    summary: |-
+    summary: |
       Returns an `Library.table|Array` that contains up to one year of the
       user's subscription payment history for the given `subscriptionId`.
-    description: |-
+    description: |
       **Note**: You can only call this method from a `Class.Script` with
       `Enum.RunContext.Server`.
 
@@ -696,10 +716,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:GetUserSubscriptionStatusAsync
-    summary: |-
+    summary: |
       Returns a `Library.table` that contains the subscription status of the
       user for the given `subscriptionId`.
-    description: |-
+    description: |
       Returns a `Library.table` that contains the subscription status of the
       user for the given `subscriptionId`. The table contains the following
       keys:
@@ -738,11 +758,13 @@ methods:
       - name: user
         type: Player
         default:
-        summary: The `Class.Player` object whose subscription status you want to check.
+        summary: |
+          The `Class.Player` object whose subscription status you want to check.
       - name: subscriptionId
         type: string
         default:
-        summary: The ID of the subscription to check for.
+        summary: |
+          The ID of the subscription to check for.
     returns:
       - type: Dictionary
         summary: ''
@@ -753,15 +775,16 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:PlayerOwnsAssetAsync
-    summary: Returns whether the given user has the given asset.
-    description: |-
+    summary: |
+      Returns whether the given user has the given asset.
+    description: |
       Returns whether the inventory of a specific user contains an asset, based
       on the asset ID. This method throws an error if the query fails, so you
       should wrap calls to this method in `pcall()`.
 
       - This method should **not** be used for
-        [passes](../../../production/monetization/passes.md) since they use
-        a separate ID system. Legacy passes that still depend on an asset ID
+        [passes](../../../production/monetization/passes.md) since they use a
+        separate ID system. Legacy passes that still depend on an asset ID
         should use
         `Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync()`
         instead of this method.
@@ -776,16 +799,17 @@ methods:
       - name: player
         type: Instance
         default:
-        summary: |-
+        summary: |
           The `Class.Player` whose inventory is tested for ownership of the
           given asset.
       - name: assetId
         type: int64
         default:
-        summary: The asset ID for which the given player's inventory is tested.
+        summary: |
+          The asset ID for which the given player's inventory is tested.
     returns:
       - type: boolean
-        summary: |-
+        summary: |
           Indicates whether the given player's inventory contains the given
           asset.
     tags:
@@ -795,35 +819,40 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:PlayerOwnsAsset
-    summary: Returns whether the given user has the given asset.
+    summary: |
+      Returns whether the given user has the given asset.
     description: ''
     code_samples: []
     parameters:
       - name: player
         type: Instance
         default:
-        summary: |-
+        summary: |
           The `Class.Player` whose inventory is tested for ownership of the
           given asset.
       - name: assetId
         type: int64
         default:
-        summary: The asset ID for which the given player's inventory is tested.
+        summary: |
+          The asset ID for which the given player's inventory is tested.
     returns:
       - type: boolean
-        summary: |-
+        summary: |
           Indicates whether the given player's inventory contains the given
           asset.
     tags:
       - Yields
       - Deprecated
-    deprecation_message: This method has been superseded by `Class.MarketplaceService:PlayerOwnsAssetAsync()|PlayerOwnsAssetAsync()`.
+    deprecation_message: |
+      This method has been superseded by
+      `Class.MarketplaceService:PlayerOwnsAssetAsync()|PlayerOwnsAssetAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:PlayerOwnsBundleAsync
-    summary: Returns whether the given player owns the given bundle.
-    description: |-
+    summary: |
+      Returns whether the given player owns the given bundle.
+    description: |
       Returns whether the inventory of a specific user contains a bundle, based
       on the bundle ID. This method throws an error if the query fails, so you
       should wrap calls to this method in `pcall()`.
@@ -833,16 +862,17 @@ methods:
       - name: player
         type: Player
         default:
-        summary: |-
+        summary: |
           The `Class.Player` whose inventory is tested for ownership of the
           given bundle.
       - name: bundleId
         type: int64
         default:
-        summary: The bundle ID for which the given player's inventory is tested.
+        summary: |
+          The bundle ID for which the given player's inventory is tested.
     returns:
       - type: boolean
-        summary: |-
+        summary: |
           Indicates whether the given player's inventory contains the given
           bundle.
     tags:
@@ -852,37 +882,41 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:PlayerOwnsBundle
-    summary: Returns whether the given player owns the given bundle.
+    summary: |
+      Returns whether the given player owns the given bundle.
     description: ''
     code_samples: []
     parameters:
       - name: player
         type: Player
         default:
-        summary: |-
+        summary: |
           The `Class.Player` whose inventory is tested for ownership of the
           given bundle.
       - name: bundleId
         type: int64
         default:
-        summary: The bundle ID for which the given player's inventory is tested.
+        summary: |
+          The bundle ID for which the given player's inventory is tested.
     returns:
       - type: boolean
-        summary: |-
+        summary: |
           Indicates whether the given player's inventory contains the given
           bundle.
     tags:
       - Yields
       - Deprecated
-    deprecation_message: This method has been superseded by `Class.MarketplaceService:PlayerOwnsBundleAsync()|PlayerOwnsBundleAsync()`.
+    deprecation_message: |
+      This method has been superseded by
+      `Class.MarketplaceService:PlayerOwnsBundleAsync()|PlayerOwnsBundleAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:PromptBulkPurchase
-    summary: |-
+    summary: |
       Prompts a user to purchase multiple avatar items with the given `assetId`
       or `bundleId`.
-    description: |-
+    description: |
       Prompts a user to purchase multiple avatar items with the given `assetId`
       or `bundleId`. Does not work with non-avatar items.
 
@@ -900,11 +934,12 @@ methods:
       - name: player
         type: Player
         default:
-        summary: The user to prompt to purchase items.
+        summary: |
+          The user to prompt to purchase items.
       - name: lineItems
         type: Array
         default:
-        summary: |-
+        summary: |
           An array of avatar items to be included in the bulk purchase.
 
           Each line item contains the following structure:
@@ -923,7 +958,8 @@ methods:
       - name: options
         type: Dictionary
         default:
-        summary: Not available at this time.
+        summary: |
+          Not available at this time.
     returns:
       - type: ()
         summary: ''
@@ -933,8 +969,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:PromptBundlePurchase
-    summary: Prompts a user to purchase a bundle with the given `bundleId`.
-    description: Prompts a user to purchase a bundle with the given `bundleId`.
+    summary: |
+      Prompts a user to purchase a bundle with the given `bundleId`.
+    description: |
+      Prompts a user to purchase a bundle with the given `bundleId`.
     code_samples: []
     parameters:
       - name: player
@@ -954,8 +992,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:PromptCancelSubscription
-    summary: Prompts a user to cancel a subscription for the given `subscriptionId`.
-    description: |-
+    summary: |
+      Prompts a user to cancel a subscription for the given `subscriptionId`.
+    description: |
       Prompts a user to cancel a subscription for the given `subscriptionId`.
       Once the user successfully cancels the subscription, the
       `Class.Players.UserSubscriptionStatusChanged` event fires.
@@ -978,8 +1017,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:PromptGamePassPurchase
-    summary: Prompts a user to purchase a pass with the given `gamePassId`.
-    description: |-
+    summary: |
+      Prompts a user to purchase a pass with the given `gamePassId`.
+    description: |
       Prompts a user to purchase a
       [pass](../../../production/monetization/passes.md) with the given
       `gamePassId`.
@@ -1002,8 +1042,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:PromptPremiumPurchase
-    summary: Prompts a user to purchase Roblox Premium.
-    description: |-
+    summary: |
+      Prompts a user to purchase Roblox Premium.
+    description: |
       Prompts a user to purchase
       [Roblox Premium](https://www.roblox.com/premium/membership). To learn more
       about Premium and about incorporating Premium incentives into your
@@ -1022,7 +1063,8 @@ methods:
       - name: player
         type: Instance
         default:
-        summary: The user being prompted to purchase Premium.
+        summary: |
+          The user being prompted to purchase Premium.
     returns:
       - type: ()
         summary: ''
@@ -1032,8 +1074,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:PromptProductPurchase
-    summary: Prompts a user to purchase a developer product with the given `productId`.
-    description: |-
+    summary: |
+      Prompts a user to purchase a developer product with the given `productId`.
+    description: |
       Prompts a user to purchase a
       [developer product](../../../production/monetization/developer-products.md)
       with the given `productId`.
@@ -1065,10 +1108,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:PromptPurchase
-    summary: |-
+    summary: |
       Prompts a user to purchase an item with the given `assetId`. Does not work
       for USD Creator Store purchases.
-    description: |-
+    description: |
       Prompts a user to purchase an item with the given `assetId`.
 
       - This does not work for
@@ -1105,7 +1148,8 @@ methods:
       - name: currencyType
         type: CurrencyType
         default: Default
-        summary: Ignored.
+        summary: |
+          Ignored.
     returns:
       - type: ()
         summary: ''
@@ -1115,18 +1159,22 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:PromptSubscriptionPurchase
-    summary: Prompts a user to purchase a subscription for the given `subscriptionId`.
-    description: Prompts a user to purchase a subscription for the given `subscriptionId`.
+    summary: |
+      Prompts a user to purchase a subscription for the given `subscriptionId`.
+    description: |
+      Prompts a user to purchase a subscription for the given `subscriptionId`.
     code_samples: []
     parameters:
       - name: user
         type: Player
         default:
-        summary: The `Class.Player` object to be prompted to subscribe.
+        summary: |
+          The `Class.Player` object to be prompted to subscribe.
       - name: subscriptionId
         type: string
         default:
-        summary: The ID of the subscription to subscribe to.
+        summary: |
+          The ID of the subscription to subscribe to.
     returns:
       - type: ()
         summary: ''
@@ -1136,25 +1184,32 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:RankProductsAsync
-    summary: Takes a list of product IDs and returns a personalized ordered list of those products.
-    description: |-
-      Takes a list of product IDs and returns a personalized ordered list of those products.
+    summary: |
+      Takes a list of product IDs and returns a personalized ordered list of
+      those products.
+    description: |
+      Takes a list of product IDs and returns a personalized ordered list of
+      those products.
 
-      This API has a client-side throttling limit of 10 requests per minute. If you exceed this limit, wait 60 seconds and make the request again.
+      This API has a client-side throttling limit of 10 requests per minute. If
+      you exceed this limit, wait 60 seconds and make the request again.
     code_samples:
       - MarketplaceService-RankProductsSample
     parameters:
       - name: productIdentifiers
         type: Array
         default:
-        summary: |-
-          An array of objects identifying the products you want to rank. This array can include up to 50 items.
+        summary: |
+          An array of objects identifying the products you want to rank. This
+          array can include up to 50 items.
 
           Each `ProductIdentifier` has:
+
           - `Enum.InfoType`: Enum.InfoType
-          	- Must be either `Enum.InfoType.GamePass` or `Enum.InfoType.Product`.
+            - Must be either `Enum.InfoType.GamePass` or
+              `Enum.InfoType.Product`.
           - `Id`: number
-          	- The ID of the game pass or developer product.
+            - The ID of the game pass or developer product.
 
           ```lua
           local ProductIdentifier = {
@@ -1164,12 +1219,15 @@ methods:
           ```
     returns:
       - type: Array
-        summary: |-
-          The array of ranked items in a personalized order for the current user.
+        summary: |
+          The array of ranked items in a personalized order for the current
+          user.
 
           Each array has:
+
           - `ProductIdentifier`: The corresponding ID from the input array.
-          - `ProductInfo`: The standard product info dictionary returned by `Class.MarketplaceService.GetProductInfoAsync|GetProductInfoAsync`.
+          - `ProductInfo`: The standard product info dictionary returned by
+            `Class.MarketplaceService.GetProductInfoAsync|GetProductInfoAsync`.
     tags:
       - Yields
     deprecation_message: ''
@@ -1177,21 +1235,29 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:RecommendTopProductsAsync
-    summary: '- Takes an array of `Enum.InfoType` and returns up to 50 items representing the products a user is most likely to engage with and purchase.'
-    description: |-
-      Takes an array of `Enum.InfoType` and returns up to 50 items representing the products a user is most likely to engage with and purchase. If no recommendations can be determined, the method returns an empty list.
+    summary: |
+      - Takes an array of `Enum.InfoType` and returns up to 50 items
+        representing the products a user is most likely to engage with and
+        purchase.
+    description: |
+      Takes an array of `Enum.InfoType` and returns up to 50 items representing
+      the products a user is most likely to engage with and purchase. If no
+      recommendations can be determined, the method returns an empty list.
 
-      This API has a client-side throttling limit of 5 requests per minute. If you exceed this limit, wait 60 seconds and make the request again.
+      This API has a client-side throttling limit of 5 requests per minute. If
+      you exceed this limit, wait 60 seconds and make the request again.
     code_samples:
       - MarketplaceService-RecommendTopProductsSample
     parameters:
       - name: infoTypes
         type: Array
         default:
-        summary: |-
-          An array of `Enum.InfoType` values specifying the types of product to retrieve recommendations for.
+        summary: |
+          An array of `Enum.InfoType` values specifying the types of product to
+          retrieve recommendations for.
 
-          Supported `InfoTypes`:  `Enum.InfoType.GamePass`, `Enum.InfoType.Product`.
+          Supported `InfoTypes`: `Enum.InfoType.GamePass`,
+          `Enum.InfoType.Product`.
 
           ```lua
           local infoTypes = {
@@ -1201,7 +1267,10 @@ methods:
           ```
     returns:
       - type: Array
-        summary: A ranked list of up to 50 items the user is most likely to engage with, based on the provided `InfoTypes`. If no recommendations can be determined, the method returns an empty list.
+        summary: |
+          A ranked list of up to 50 items the user is most likely to engage
+          with, based on the provided `InfoTypes`. If no recommendations can be
+          determined, the method returns an empty list.
     tags:
       - Yields
     deprecation_message: ''
@@ -1209,10 +1278,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:UserOwnsGamePassAsync
-    summary: |-
+    summary: |
       Returns true if the player with the given `Class.Player.UserId|UserId`
       owns the pass with the given `gamePassId`.
-    description: |-
+    description: |
       Returns true if the user with the given `Class.Player.UserId|UserId` owns
       the [pass](../../../production/monetization/passes.md) with the given
       `gamePassId` (not to be confused with an asset ID).
@@ -1220,26 +1289,29 @@ methods:
       #### Caching Behavior
 
       The results of this function are cached so that repeated calls are
-      returned faster. When the `Class.MarketplaceService.PromptGamePassPurchaseFinished|PromptGamePassPurchaseFinished`
+      returned faster. When the
+      `Class.MarketplaceService.PromptGamePassPurchaseFinished|PromptGamePassPurchaseFinished`
       event fires, the cache gets updated to reflect the latest ownership state
       of the associated game pass.
 
       If the user purchases a game pass outside of the experience while
-      remaining in the same session, the cache is eventually updated, but this process might take several minutes to propagate.
+      remaining in the same session, the cache is eventually updated, but this
+      process might take several minutes to propagate.
 
-      When a user first enters a server after purchasing a game pass, this functions always returns true.
+      When a user first enters a server after purchasing a game pass, this
+      functions always returns true.
     code_samples: []
     parameters:
       - name: userId
         type: int64
         default:
-        summary: |-
+        summary: |
           The `Class.Player.UserId|UserId` of the `Class.Player` whose inventory
           you're checking.
       - name: gamePassId
         type: int64
         default:
-        summary: |-
+        summary: |
           The pass ID you want to check for. Not to be confused with an asset
           ID.
     returns:
@@ -1253,30 +1325,34 @@ methods:
     capabilities: []
 events:
   - name: MarketplaceService.PromptBulkPurchaseFinished
-    summary: Fires when a purchase prompt for bulk avatar items is closed.
-    description: |-
+    summary: |
+      Fires when a purchase prompt for bulk avatar items is closed.
+    description: |
       This event fires when a purchase prompt for a bulk avatar items closes.
       For example, when a user receives the purchase prompt and clicks
       **Cancel**, or when they receive a success or error message and click
       **OK**.
 
       Note: This is not a trusted event from the client. To check if the user
-      owns the items purchased, use `Class.MarketplaceService.PlayerOwnsAssetAsync`
-      or `Class.MarketplaceService.PlayerOwnsBundleAsync`.
+      owns the items purchased, use
+      `Class.MarketplaceService.PlayerOwnsAssetAsync` or
+      `Class.MarketplaceService.PlayerOwnsBundleAsync`.
     code_samples: []
     parameters:
       - name: player
         type: Instance
         default:
-        summary: The `Class.Player` who received the prompt.
+        summary: |
+          The `Class.Player` who received the prompt.
       - name: status
         type: MarketplaceBulkPurchasePromptStatus
         default:
-        summary: The status of the bulk purchase.
+        summary: |
+          The status of the bulk purchase.
       - name: results
         type: Dictionary
         default:
-        summary: |-
+        summary: |
           The table type containing the line items and their status in the
           following format:
 
@@ -1326,12 +1402,13 @@ events:
     security: None
     capabilities: []
   - name: MarketplaceService.PromptGamePassPurchaseFinished
-    summary: Fires when a purchase prompt for a pass is closed.
-    description: |-
+    summary: |
+      Fires when a purchase prompt for a pass is closed.
+    description: |
       This event fires when a purchase prompt for a
-      [pass](../../../production/monetization/passes.md) closes. For
-      example, when a user receives the purchase prompt and clicks **Cancel**,
-      or when they receive a success or error message and click **OK**.
+      [pass](../../../production/monetization/passes.md) closes. For example,
+      when a user receives the purchase prompt and clicks **Cancel**, or when
+      they receive a success or error message and click **OK**.
 
       ##### See also
 
@@ -1348,32 +1425,39 @@ events:
       - name: player
         type: Instance
         default:
-        summary: The `Class.Player` who received the prompt.
+        summary: |
+          The `Class.Player` who received the prompt.
       - name: gamePassId
         type: int64
         default:
-        summary: |-
+        summary: |
           The ID number of the pass shown in the prompt. Not to be confused with
           an asset ID.
       - name: wasPurchased
         type: boolean
         default:
-        summary: |-
+        summary: |
           Indicates if the user pressed **OK** (true), **Cancel** (false) on the
           purchase prompt, or if the purchase prompt errored (false).
 
-          When `PromptGamePassPurchaseFinished` fires, it updates the cache used by `Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync()` to reflect the current ownership state.
+          When `PromptGamePassPurchaseFinished` fires, it updates the cache used
+          by
+          `Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync()`
+          to reflect the current ownership state.
 
-          `PromptGamePassPurchaseFinished` should only be listened to in a server script. When used on the server, values such as `wasPurchased` reflect the final outcome 
-          of the purchase attempt. When used in a local script, these values should not be
-          relied on for validation or game logic.
+          `PromptGamePassPurchaseFinished` should only be listened to in a
+          server script. When used on the server, values such as `wasPurchased`
+          reflect the final outcome of the purchase attempt. When used in a
+          local script, these values should not be relied on for validation or
+          game logic.
     tags: []
     deprecation_message: ''
     security: None
     capabilities: []
   - name: MarketplaceService.PromptPremiumPurchaseFinished
-    summary: Fires when a purchase prompt for Roblox Premium is closed.
-    description: |-
+    summary: |
+      Fires when a purchase prompt for Roblox Premium is closed.
+    description: |
       This event fires when a purchase prompt for
       [Roblox Premium](https://www.roblox.com/premium/membership) closes. For
       example, when a user receives the purchase prompt and clicks **Cancel**,
@@ -1392,10 +1476,10 @@ events:
     security: None
     capabilities: []
   - name: MarketplaceService.PromptProductPurchaseFinished
-    summary: |-
+    summary: |
       Fires when a purchase prompt for a developer product is closed. Do not use
       this event to process purchases.
-    description: |-
+    description: |
       **IMPORTANT:** Do **not** use the `PromptProductPurchaseFinished` event to
       process purchases; instead, use the
       `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` callback. The
@@ -1436,19 +1520,19 @@ events:
       - name: userId
         type: int64
         default:
-        summary: |-
+        summary: |
           The `Class.Player.UserId|UserId` of the user who received the
           developer product prompt.
       - name: productId
         type: int64
         default:
-        summary: |-
+        summary: |
           The ID number of the developer product shown in the prompt. Not to be
           confused with an asset ID.
       - name: isPurchased
         type: boolean
         default:
-        summary: |-
+        summary: |
           Indicates if the user pressed **OK** (true), **Cancel** (false) on the
           purchase prompt, or if the purchase prompt errored (false).
 
@@ -1458,10 +1542,10 @@ events:
     security: None
     capabilities: []
   - name: MarketplaceService.PromptPurchaseFinished
-    summary: |-
+    summary: |
       Fires when a purchase prompt for an affiliate gear sale or other asset is
       closed. Does **not** fire for developer product or pass prompts.
-    description: |-
+    description: |
       This event fires when a purchase prompt for an affiliate gear sale or
       other asset closes. For example, when a user receives the purchase prompt
       and clicks **Cancel**, or when they receive a success or error message and
@@ -1486,15 +1570,17 @@ events:
       - name: player
         type: Instance
         default:
-        summary: The `Class.Player` who received the prompt.
+        summary: |
+          The `Class.Player` who received the prompt.
       - name: assetId
         type: int64
         default:
-        summary: The asset ID of the item shown in the prompt.
+        summary: |
+          The asset ID of the item shown in the prompt.
       - name: isPurchased
         type: boolean
         default:
-        summary: |-
+        summary: |
           Indicates if the user pressed **OK** (true), **Cancel** (false) on the
           purchase prompt, or if the purchase prompt errored (false).
 
@@ -1505,8 +1591,9 @@ events:
     security: None
     capabilities: []
   - name: MarketplaceService.PromptSubscriptionPurchaseFinished
-    summary: Fires when a purchase prompt for a subscription is closed.
-    description: |-
+    summary: |
+      Fires when a purchase prompt for a subscription is closed.
+    description: |
       This event fires when a purchase prompt for an affiliate gear sale or
       other asset closes. For example, when a user receives the purchase prompt
       and clicks **Cancel**, or when they receive a success or error message and
@@ -1524,23 +1611,27 @@ events:
       - name: user
         type: Player
         default:
-        summary: The `Class.Player` who received the prompt.
+        summary: |
+          The `Class.Player` who received the prompt.
       - name: subscriptionId
         type: string
         default:
-        summary: The ID of the subscription with a status change.
+        summary: |
+          The ID of the subscription with a status change.
       - name: didTryPurchasing
         type: boolean
         default:
-        summary: Whether the user attempted to purchase the subscription.
+        summary: |
+          Whether the user attempted to purchase the subscription.
     tags: []
     deprecation_message: ''
     security: None
     capabilities: []
 callbacks:
   - name: MarketplaceService.ProcessReceipt
-    summary: A callback to process receipts of developer product purchases.
-    description: |-
+    summary: |
+      A callback to process receipts of developer product purchases.
+    description: |
       `ProcessReceipt` is a callback to process receipts from
       [developer product purchases](../../../production/monetization/developer-products.md).
       You can sell developer products inside an experience using
@@ -1625,7 +1716,7 @@ callbacks:
       - name: receiptInfo
         type: Dictionary
         default:
-        summary: |-
+        summary: |
           The `receiptInfo` table passed to this callback contains the following
           data:
 
@@ -1644,7 +1735,7 @@ callbacks:
             product. One of `Enum.ProductPurchaseChannel`.
     returns:
       - type: ProductPurchaseDecision
-        summary: |-
+        summary: |
           An enum that represents how the developer product receipt was
           processed.
 

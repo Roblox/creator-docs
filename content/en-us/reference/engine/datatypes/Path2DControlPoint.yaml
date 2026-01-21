@@ -4,12 +4,12 @@
 
 name: Path2DControlPoint
 type: datatype
-summary: |-
+summary: |
   Stores the info for a single control point used with the `Class.Path2D`
   instance.
-description: |-
-  The `Path2DControlPoint` data type represents a single control point used
-  with the `Class.Path2D` instance.
+description: |
+  The `Path2DControlPoint` data type represents a single control point used with
+  the `Class.Path2D` instance.
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -61,24 +61,31 @@ constants: []
 properties:
   - name: Path2DControlPoint.Position
     type: UDim2
-    summary: The position of the `Datatype.Path2DControlPoint`.
-    description: The position of the `Datatype.Path2DControlPoint` relative to the path's container.
+    summary: |
+      The position of the `Datatype.Path2DControlPoint`.
+    description: |
+      The position of the `Datatype.Path2DControlPoint` relative to the path's
+      container.
     default:
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Path2DControlPoint.LeftTangent
     type: UDim2
-    summary: The left tangent of the `Datatype.Path2DControlPoint`.
-    description: The left tangent of the `Datatype.Path2DControlPoint`.
+    summary: |
+      The left tangent of the `Datatype.Path2DControlPoint`.
+    description: |
+      The left tangent of the `Datatype.Path2DControlPoint`.
     default:
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Path2DControlPoint.RightTangent
     type: UDim2
-    summary: The right tangent of the `Datatype.Path2DControlPoint`.
-    description: The right tangent of the `Datatype.Path2DControlPoint`.
+    summary: |
+      The right tangent of the `Datatype.Path2DControlPoint`.
+    description: |
+      The right tangent of the `Datatype.Path2DControlPoint`.
     default:
     code_samples: []
     tags: []

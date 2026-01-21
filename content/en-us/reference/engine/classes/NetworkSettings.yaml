@@ -5,8 +5,9 @@
 name: NetworkSettings
 type: class
 memory_category: Instances
-summary: Settings related to networked engine behaviors.
-description: |-
+summary: |
+  Settings related to networked engine behaviors.
+description: |
   `NetworkSettings` is a class that allows you to debug several features with
   Roblox's server/client networking. It can be found in Roblox Studio's settings
   under the **Network** tab.
@@ -40,8 +41,9 @@ properties:
       can_save: false
     capabilities: []
   - name: NetworkSettings.FreeMemoryMBytes
-    summary: Describes how much free memory is available, in MiBs.
-    description: |-
+    summary: |
+      Describes how much free memory is available, in MiBs.
+    description: |
       `FreeMemoryMBytes` is a read-only property that describes how much free
       memory is available, in MiBs.
     code_samples: []
@@ -93,10 +95,11 @@ properties:
       can_save: true
     capabilities: []
   - name: NetworkSettings.IncomingReplicationLag
-    summary: Simulates additional network latency in the network receiving path.
-    description: |-
-      This property instructs the engine to simulate additional replication lag by
-      delaying all incoming messages. Units are seconds.
+    summary: |
+      Simulates additional network latency in the network receiving path.
+    description: |
+      This property instructs the engine to simulate additional replication lag
+      by delaying all incoming messages. Units are seconds.
     code_samples: []
     type: double
     tags: []
@@ -111,12 +114,14 @@ properties:
       can_save: true
     capabilities: []
   - name: NetworkSettings.PrintJoinSizeBreakdown
-    summary: Prints diagnostic information about data sent on connect.
-    description: |-
-      Prints diagnostic information to the **Output** window after connecting. The
-      data will indicate the largest individual `Class.Instance|Instances` sent, as
-      well as aggregate data about data sent by `Class.Instance` type. The data sent
-      for initial loading is compressed so the contributions are approximate.
+    summary: |
+      Prints diagnostic information about data sent on connect.
+    description: |
+      Prints diagnostic information to the **Output** window after connecting.
+      The data will indicate the largest individual `Class.Instance|Instances`
+      sent, as well as aggregate data about data sent by `Class.Instance` type.
+      The data sent for initial loading is compressed so the contributions are
+      approximate.
     code_samples: []
     type: boolean
     tags: []
@@ -131,27 +136,30 @@ properties:
       can_save: true
     capabilities: []
   - name: NetworkSettings.PrintPhysicsErrors
-    summary: Whether debug messages will be printed to the output pertaining to physics replication errors.
-    description: |-
-      When set to `true`, debug messages will be printed to the **Output** window
-      pertaining to physics replication errors. The following are debug outputs that
-      are made available:
+    summary: |
+      Whether debug messages will be printed to the output pertaining to physics
+      replication errors.
+    description: |
+      When set to `true`, debug messages will be printed to the **Output**
+      window pertaining to physics replication errors. The following are debug
+      outputs that are made available:
 
-      - `Physics-in old packet` prints for a part that has been updated ahead of the
-        packet's submission time. This happens if the packet is received late, and a
-        newer packet has already been processed.
+      - `Physics-in old packet` prints for a part that has been updated ahead of
+        the packet's submission time. This happens if the packet is received
+        late, and a newer packet has already been processed.
 
-      - `Physics-in of unidentified {GUID}` prints for an unfound part that is trying
-        to be updated because the provided `Class.Instance` identifier was invalid,
-        where `{GUID}` is the unknown `Class.Instance:GetDebugId()` identifier that is
-        supposed to be targeting the part. This typically happens if a part is removed
-        before the physics update packet is received.
+      - `Physics-in of unidentified {GUID}` prints for an unfound part that is
+        trying to be updated because the provided `Class.Instance` identifier
+        was invalid, where `{GUID}` is the unknown `Class.Instance:GetDebugId()`
+        identifier that is supposed to be targeting the part. This typically
+        happens if a part is removed before the physics update packet is
+        received.
 
-      - `Physics-in of part not in workspace {GUID}` prints for a request to update
-        the physics of a part that is not a descendant of the `Class.Workspace`, where
-        `{GUID}` is the `Class.Instance:GetDebugId()` identifier of the target part.
-        This happens if the part was just moved out of the `Class.Workspace`, and was
-        previously being simulated.
+      - `Physics-in of part not in workspace {GUID}` prints for a request to
+        update the physics of a part that is not a descendant of the
+        `Class.Workspace`, where `{GUID}` is the `Class.Instance:GetDebugId()`
+        identifier of the target part. This happens if the part was just moved
+        out of the `Class.Workspace`, and was previously being simulated.
     code_samples: []
     type: boolean
     tags: []
@@ -166,12 +174,16 @@ properties:
       can_save: true
     capabilities: []
   - name: NetworkSettings.PrintStreamInstanceQuota
-    summary: Whether debug information is printed to the output regarding the replication of instances when `Class.Workspace.StreamingEnabled` is set to `true`.
-    description: |-
+    summary: |
+      Whether debug information is printed to the output regarding the
+      replication of instances when `Class.Workspace.StreamingEnabled` is set to
+      `true`.
+    description: |
       When set to `true`, debug information is printed to the **Output** window
-      regarding the replication of instances when `Class.Workspace.StreamingEnabled`
-      is set to `true`. Note that this documentation may become outdated in the
-      future, as Roblox's network code is always changing behind the scenes.
+      regarding the replication of instances when
+      `Class.Workspace.StreamingEnabled` is set to `true`. Note that this
+      documentation may become outdated in the future, as Roblox's network code
+      is always changing behind the scenes.
 
       #### Streaming Capacity Update
 
@@ -211,8 +223,9 @@ properties:
       can_save: true
     capabilities: []
   - name: NetworkSettings.RandomizeJoinInstanceOrder
-    summary: Special facility to help catch bugs related to how your experience loads.
-    description: |-
+    summary: |
+      Special facility to help catch bugs related to how your experience loads.
+    description: |
       Emulates the behavior of a server that has been online a long time by
       randomizing the order that instances initially arrive on clients. It is
       recommended to keep this setting enabled to help discover potential bugs
@@ -231,10 +244,10 @@ properties:
       can_save: true
     capabilities: []
   - name: NetworkSettings.RenderStreamedRegions
-    summary: |-
-      Whether regions of space that are being streamed to the client
-      will be outlined in red.
-    description: |-
+    summary: |
+      Whether regions of space that are being streamed to the client will be
+      outlined in red.
+    description: |
       When set to `true`, regions of space that are being streamed to the client
       will be outlined in red. This will only be shown if
       `Class.Workspace.StreamingEnabled` is set to `true`.
@@ -252,13 +265,13 @@ properties:
       can_save: true
     capabilities: []
   - name: NetworkSettings.ShowActiveAnimationAsset
-    summary: |-
+    summary: |
       Whether a label will be shown above each player character's head, showing
       the current animation being played.
-    description: |-
-      When set to `true`, a label will be shown above each player character's head,
-      showing the current animation (if any) being played by the character's
-      `Class.Humanoid`.
+    description: |
+      When set to `true`, a label will be shown above each player character's
+      head, showing the current animation (if any) being played by the
+      character's `Class.Humanoid`.
     code_samples: []
     type: boolean
     tags: []

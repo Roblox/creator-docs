@@ -5,8 +5,9 @@
 name: EditableMesh
 type: class
 memory_category: Instances
-summary: Instance which allows for the runtime creation and manipulation of meshes.
-description: |-
+summary: |
+  Instance which allows for the runtime creation and manipulation of meshes.
+description: |
   `EditableMesh` changes the applied visual mesh when linked to a
   `Class.MeshPart`, allowing for querying and modification of the mesh both in
   Studio and in experience.
@@ -16,9 +17,9 @@ description: |-
   For security purposes, using `EditableMesh` fails by default for published
   experiences. To enable usage of `EditableMesh`, you must be 13+ age verified
   and ID verified. After you are verified, open Studio's
-  [Experience Settings](../../../studio/experience-settings.md), select **Security**, and
-  enable the **Allow&nbsp;Mesh&nbsp;&&nbsp;Image&nbsp;APIs** toggle. Remember to
-  review the
+  [Experience Settings](../../../studio/experience-settings.md), select
+  **Security**, and enable the **Allow&nbsp;Mesh&nbsp;&&nbsp;Image&nbsp;APIs**
+  toggle. Remember to review the
   [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use#creators-restrictions-on-use)
   before enabling the toggle.
 
@@ -237,10 +238,9 @@ description: |-
   initial `Datatype.CFrame` in the bind pose of the mesh into the
   `Datatype.CFrame` for that FACS corrective.
 
-  Please note that corrective poses that operate on both left and right 
-  action units are not currently expressible. For example, using 
-  `LeftCheekPuff` and `RightEyeClosed` together in a corrective pose is not currently
-  possible.
+  Please note that corrective poses that operate on both left and right action
+  units are not currently expressible. For example, using `LeftCheekPuff` and
+  `RightEyeClosed` together in a corrective pose is not currently possible.
 
   #### Limitations
 
@@ -255,8 +255,9 @@ tags:
 deprecation_message: ''
 properties:
   - name: EditableMesh.FixedSize
-    summary: Returns `true` if a mesh is fixed-size.
-    description: |-
+    summary: |
+      Returns `true` if a mesh is fixed-size.
+    description: |
       Fixed-sized meshes allow changing the values of vertex attributes but do
       not allow vertices and triangles to be added or deleted.
     code_samples: []
@@ -293,14 +294,16 @@ properties:
     capabilities: []
 methods:
   - name: EditableMesh:AddBone
-    summary: Adds a new bone and returns a stable bone ID.
-    description: Adds a new bone and returns a stable bone ID.
+    summary: |
+      Adds a new bone and returns a stable bone ID.
+    description: |
+      Adds a new bone and returns a stable bone ID.
     code_samples: []
     parameters:
       - name: boneProperties
         type: Dictionary
         default:
-        summary: |-
+        summary: |
           Options table containing bone parameters:
 
           - `Name` — A string that specifies the bone name. Note that all bone
@@ -312,36 +315,43 @@ methods:
             Virtual bones can only be bound to a `Class.FaceControls` instance.
     returns:
       - type: int64
-        summary: Stable bone ID of the new bone.
+        summary: |
+          Stable bone ID of the new bone.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:AddColor
-    summary: Adds a new color to the geometry and returns a stable color ID.
-    description: Adds a new color to the geometry and returns a stable color ID.
+    summary: |
+      Adds a new color to the geometry and returns a stable color ID.
+    description: |
+      Adds a new color to the geometry and returns a stable color ID.
     code_samples: []
     parameters:
       - name: color
         type: Color3
         default:
-        summary: The new color.
+        summary: |
+          The new color.
       - name: alpha
         type: float
         default:
-        summary: The color alpha (transparency).
+        summary: |
+          The color alpha (transparency).
     returns:
       - type: int64
-        summary: Stable color ID of the new color.
+        summary: |
+          Stable color ID of the new color.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:AddNormal
-    summary: Adds a new normal to the geometry and returns a stable normal ID.
-    description: |-
+    summary: |
+      Adds a new normal to the geometry and returns a stable normal ID.
+    description: |
       Adds a new normal to the geometry and returns a stable normal ID. If the
       normal value isn't specified, the normal will be automatically calculated.
     code_samples: []
@@ -349,79 +359,96 @@ methods:
       - name: normal
         type: Vector3?
         default:
-        summary: |-
+        summary: |
           The normal vector. If the normal value isn't specified, the normal
           will be automatically calculated.
     returns:
       - type: int64
-        summary: Stable normal ID of the new normal.
+        summary: |
+          Stable normal ID of the new normal.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:AddTriangle
-    summary: Adds a new triangle to the mesh and returns a stable face ID.
-    description: Adds a new triangle to the mesh and returns a stable face ID.
+    summary: |
+      Adds a new triangle to the mesh and returns a stable face ID.
+    description: |
+      Adds a new triangle to the mesh and returns a stable face ID.
     code_samples: []
     parameters:
       - name: vertexId0
         type: int64
         default:
-        summary: ID of the first vertex of the triangle.
+        summary: |
+          ID of the first vertex of the triangle.
       - name: vertexId1
         type: int64
         default:
-        summary: ID of the second vertex of the triangle.
+        summary: |
+          ID of the second vertex of the triangle.
       - name: vertexId2
         type: int64
         default:
-        summary: ID of the third vertex of the triangle.
+        summary: |
+          ID of the third vertex of the triangle.
     returns:
       - type: int64
-        summary: Stable face ID of the new face.
+        summary: |
+          Stable face ID of the new face.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:AddUV
-    summary: Adds a new UV to the geometry and returns a stable UV ID.
-    description: Adds a new UV to the geometry and returns a stable UV ID.
+    summary: |
+      Adds a new UV to the geometry and returns a stable UV ID.
+    description: |
+      Adds a new UV to the geometry and returns a stable UV ID.
     code_samples: []
     parameters:
       - name: uv
         type: Vector2
         default:
-        summary: The new UV coordinate.
+        summary: |
+          The new UV coordinate.
     returns:
       - type: int64
-        summary: Stable UV ID of the new UV.
+        summary: |
+          Stable UV ID of the new UV.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:AddVertex
-    summary: Adds a new vertex to the geometry and returns a stable vertex ID.
-    description: Adds a new vertex to the geometry and returns a stable vertex ID.
+    summary: |
+      Adds a new vertex to the geometry and returns a stable vertex ID.
+    description: |
+      Adds a new vertex to the geometry and returns a stable vertex ID.
     code_samples: []
     parameters:
       - name: p
         type: Vector3
         default:
-        summary: Position in the mesh's local object space.
+        summary: |
+          Position in the mesh's local object space.
     returns:
       - type: int64
-        summary: Stable vertex ID of the new vertex.
+        summary: |
+          Stable vertex ID of the new vertex.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:Destroy
-    summary: Destroys the mesh.
-    description: Destroys the contents of the mesh, immediately reclaiming used memory.
+    summary: |
+      Destroys the mesh.
+    description: |
+      Destroys the contents of the mesh, immediately reclaiming used memory.
     code_samples: []
     parameters: []
     returns:
@@ -433,8 +460,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:FindClosestPointOnSurface
-    summary: Finds the closest point on the mesh's surface.
-    description: |-
+    summary: |
+      Finds the closest point on the mesh's surface.
+    description: |
       Finds the closest point on the mesh's surface. Returns the face ID, point
       on the mesh in local object space, and the barycentric coordinate of the
       position within the face. See
@@ -445,10 +473,11 @@ methods:
       - name: point
         type: Vector3
         default:
-        summary: Point position in the mesh's local object space.
+        summary: |
+          Point position in the mesh's local object space.
     returns:
       - type: Tuple
-        summary: |-
+        summary: |
           Tuple of the face ID, point on the mesh in local object space, and the
           barycentric coordinate of the position within the face.
     tags: []
@@ -457,8 +486,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:FindClosestVertex
-    summary: Finds the closest vertex to a specific point in space.
-    description: |-
+    summary: |
+      Finds the closest vertex to a specific point in space.
+    description: |
       Finds the closest vertex to a specific point in space and returns a stable
       vertex ID.
     code_samples: []
@@ -466,18 +496,21 @@ methods:
       - name: toThisPoint
         type: Vector3
         default:
-        summary: Point position in the mesh's local object space.
+        summary: |
+          Point position in the mesh's local object space.
     returns:
       - type: int64
-        summary: Closest stable vertex ID to the specified point in space.
+        summary: |
+          Closest stable vertex ID to the specified point in space.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:FindVerticesWithinSphere
-    summary: Finds all vertices within a specific sphere.
-    description: |-
+    summary: |
+      Finds all vertices within a specific sphere.
+    description: |
       Finds all vertices within a specific sphere and returns a list of stable
       vertex IDs.
     code_samples: []
@@ -485,22 +518,26 @@ methods:
       - name: center
         type: Vector3
         default:
-        summary: Center of the sphere in the mesh's local object space.
+        summary: |
+          Center of the sphere in the mesh's local object space.
       - name: radius
         type: float
         default:
-        summary: Radius of the sphere.
+        summary: |
+          Radius of the sphere.
     returns:
       - type: Array
-        summary: List of stable vertex IDs within the requested sphere.
+        summary: |
+          List of stable vertex IDs within the requested sphere.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetAdjacentFaces
-    summary: Returns a list of faces adjacent to a given face.
-    description: |-
+    summary: |
+      Returns a list of faces adjacent to a given face.
+    description: |
       Given a stable face ID, returns a list of adjacent faces.
 
       <img src="../../../assets/engine-api/classes/EditableMesh/GetAdjacentTriangles.png" alt="Adjacent faces indicated around requested face" width="120" />
@@ -512,15 +549,17 @@ methods:
         summary: ''
     returns:
       - type: Array
-        summary: List of face IDs adjacent to the given face.
+        summary: |
+          List of face IDs adjacent to the given face.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetAdjacentVertices
-    summary: Returns a list of vertices adjacent to a given vertex.
-    description: |-
+    summary: |
+      Returns a list of vertices adjacent to a given vertex.
+    description: |
       Given a stable vertex ID, returns a list of adjacent vertices.
 
       <img src="../../../assets/engine-api/classes/EditableMesh/GetAdjacentVertices.png" alt="Adjacent vertices indicated around requested vertex" width="120" />
@@ -529,18 +568,21 @@ methods:
       - name: vertexId
         type: int64
         default:
-        summary: Vertex ID around which to get adjacent vertices.
+        summary: |
+          Vertex ID around which to get adjacent vertices.
     returns:
       - type: Array
-        summary: List of IDs of adjacent vertices around the given vertex ID.
+        summary: |
+          List of IDs of adjacent vertices around the given vertex ID.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetBoneByName
-    summary: Finds the bone ID of the bone with the given name.
-    description: |-
+    summary: |
+      Finds the bone ID of the bone with the given name.
+    description: |
       Finds the bone ID of the bone with the given name. Errors if no bone with
       that name exists.
     code_samples: []
@@ -548,20 +590,22 @@ methods:
       - name: boneName
         type: string
         default:
-        summary: Bone name to search for.
+        summary: |
+          Bone name to search for.
     returns:
       - type: int64
-        summary: Bone ID of the bone with the given name.
+        summary: |
+          Bone ID of the bone with the given name.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetBoneCFrame
-    summary: |-
+    summary: |
       Returns the initial `Datatype.CFrame` of the bone in the bind pose of the
       mesh.
-    description: |-
+    description: |
       Returns the initial `Datatype.CFrame` of the bone in the bind pose of the
       mesh, in the mesh's local space.
     code_samples: []
@@ -569,10 +613,11 @@ methods:
       - name: boneId
         type: int64
         default:
-        summary: Bone ID for which to get the `Datatype.CFrame`.
+        summary: |
+          Bone ID for which to get the `Datatype.CFrame`.
     returns:
       - type: CFrame
-        summary: |-
+        summary: |
           Initial `Datatype.CFrame` of the bone in the bind pose of the mesh, in
           the mesh's local space.
     tags: []
@@ -581,8 +626,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetBoneIsVirtual
-    summary: Returns `true` if the bone is virtual.
-    description: |-
+    summary: |
+      Returns `true` if the bone is virtual.
+    description: |
       Returns `true` if the bone is virtual. Virtual bones can only be bound to
       a `Class.FaceControls` instance.
     code_samples: []
@@ -590,10 +636,11 @@ methods:
       - name: boneId
         type: int64
         default:
-        summary: Bone ID for which to get whether the bone is virtual.
+        summary: |
+          Bone ID for which to get whether the bone is virtual.
     returns:
       - type: boolean
-        summary: |-
+        summary: |
           Whether the bone with the given bone ID is virtual. Virtual bones can
           only be bound to a `Class.FaceControls` instance.
     tags: []
@@ -602,34 +649,41 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetBoneName
-    summary: Returns the bone name.
-    description: Returns the bone name.
+    summary: |
+      Returns the bone name.
+    description: |
+      Returns the bone name.
     code_samples: []
     parameters:
       - name: boneId
         type: int64
         default:
-        summary: Bone ID for which to get the name.
+        summary: |
+          Bone ID for which to get the name.
     returns:
       - type: string
-        summary: Name of the bone with the given bone ID.
+        summary: |
+          Name of the bone with the given bone ID.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetBoneParent
-    summary: Returns the parent bone ID, if any.
-    description: Returns the parent bone ID, if any.
+    summary: |
+      Returns the parent bone ID, if any.
+    description: |
+      Returns the parent bone ID, if any.
     code_samples: []
     parameters:
       - name: boneId
         type: int64
         default:
-        summary: Bone ID for which to get the parent.
+        summary: |
+          Bone ID for which to get the parent.
     returns:
       - type: int64
-        summary: |-
+        summary: |
           Bone ID for the parent of the bone with the given bone ID. If there is
           no parent, returns `0`.
     tags: []
@@ -638,13 +692,16 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetBones
-    summary: Returns all bones of the mesh.
-    description: Returns all bones of the mesh as a list of stable bone IDs.
+    summary: |
+      Returns all bones of the mesh.
+    description: |
+      Returns all bones of the mesh as a list of stable bone IDs.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: List of stable bone IDs.
+        summary: |
+          List of stable bone IDs.
     tags: []
     deprecation_message: ''
     security: None
@@ -657,54 +714,66 @@ methods:
     parameters: []
     returns:
       - type: Vector3
-        summary: Center of the bounding box of the `EditableMesh`.
+        summary: |
+          Center of the bounding box of the `EditableMesh`.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetColor
-    summary: Returns the color for the given color ID.
-    description: Returns the color for the given color ID.
+    summary: |
+      Returns the color for the given color ID.
+    description: |
+      Returns the color for the given color ID.
     code_samples: []
     parameters:
       - name: colorId
         type: int64
         default:
-        summary: Color ID for which to get the color.
+        summary: |
+          Color ID for which to get the color.
     returns:
       - type: Color3?
-        summary: Color for the requested stable color ID.
+        summary: |
+          Color for the requested stable color ID.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetColorAlpha
-    summary: Returns the color alpha (transparency) at the given color ID.
-    description: Returns the color alpha (transparency) at the given stable color ID.
+    summary: |
+      Returns the color alpha (transparency) at the given color ID.
+    description: |
+      Returns the color alpha (transparency) at the given stable color ID.
     code_samples: []
     parameters:
       - name: colorId
         type: int64
         default:
-        summary: Color ID for which to get the alpha.
+        summary: |
+          Color ID for which to get the alpha.
     returns:
       - type: float?
-        summary: Color alpha at the request stable color ID.
+        summary: |
+          Color alpha at the request stable color ID.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetColors
-    summary: Returns all colors of the mesh.
-    description: Returns all colors of the mesh as a list of stable color IDs.
+    summary: |
+      Returns all colors of the mesh.
+    description: |
+      Returns all colors of the mesh as a list of stable color IDs.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: List of stable color IDs.
+        summary: |
+          List of stable color IDs.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -712,17 +781,21 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetFaceColors
-    summary: Returns the face's color IDs for the vertices on the face.
-    description: Returns the face's color IDs for the vertices on the face.
+    summary: |
+      Returns the face's color IDs for the vertices on the face.
+    description: |
+      Returns the face's color IDs for the vertices on the face.
     code_samples: []
     parameters:
       - name: faceId
         type: int64
         default:
-        summary: Face ID for which to get the color IDs.
+        summary: |
+          Face ID for which to get the color IDs.
     returns:
       - type: Array
-        summary: List of color IDs used for the vertices on the given face.
+        summary: |
+          List of color IDs used for the vertices on the given face.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -730,17 +803,21 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetFaceNormals
-    summary: Returns the face's normal IDs for the vertices on the face.
-    description: Returns the face's normal IDs for the vertices on the face.
+    summary: |
+      Returns the face's normal IDs for the vertices on the face.
+    description: |
+      Returns the face's normal IDs for the vertices on the face.
     code_samples: []
     parameters:
       - name: faceId
         type: int64
         default:
-        summary: Face ID for which to get the normal IDs.
+        summary: |
+          Face ID for which to get the normal IDs.
     returns:
       - type: Array
-        summary: List of normal IDs used for the vertices on the given face.
+        summary: |
+          List of normal IDs used for the vertices on the given face.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -748,13 +825,16 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetFaces
-    summary: Returns all faces of the mesh.
-    description: Returns all faces of the mesh as a list of stable face IDs.
+    summary: |
+      Returns all faces of the mesh.
+    description: |
+      Returns all faces of the mesh as a list of stable face IDs.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: List of stable face IDs.
+        summary: |
+          List of stable face IDs.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -762,8 +842,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetFacesWithAttribute
-    summary: Returns a list of faces that use a given attribute ID.
-    description: |-
+    summary: |
+      Returns a list of faces that use a given attribute ID.
+    description: |
       Returns a list of faces that use a given vertex ID, normal ID, UV ID, or
       color ID.
     code_samples: []
@@ -771,10 +852,12 @@ methods:
       - name: id
         type: int64
         default:
-        summary: Attribute ID for which to find faces that use it.
+        summary: |
+          Attribute ID for which to find faces that use it.
     returns:
       - type: Array
-        summary: List of face IDs which use the given attribute ID.
+        summary: |
+          List of face IDs which use the given attribute ID.
     tags:
       - Deprecated
     deprecation_message: ''
@@ -782,17 +865,23 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetFacesWithColor
-    summary: Returns an array of face IDs that use the given color ID.
-    description: Returns an array of face IDs that use the given color ID. Use together with `Class.EditableMesh:GetVerticesWithColor()|GetVerticesWithColor()` to obtain all face/vertex pairs.
+    summary: |
+      Returns an array of face IDs that use the given color ID.
+    description: |
+      Returns an array of face IDs that use the given color ID. Use together
+      with `Class.EditableMesh:GetVerticesWithColor()|GetVerticesWithColor()` to
+      obtain all face/vertex pairs.
     code_samples: []
     parameters:
       - name: colorId
         type: int64
         default:
-        summary: Color ID to find faces for.
+        summary: |
+          Color ID to find faces for.
     returns:
       - type: Array
-        summary: List of face IDs that use the provided color ID.
+        summary: |
+          List of face IDs that use the provided color ID.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -800,17 +889,23 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetFacesWithNormal
-    summary: Returns an array of face IDs that use the given normal ID.
-    description: Returns an array of face IDs that use the given normal ID. Use together with `Class.EditableMesh:GetVerticesWithNormal()|GetVerticesWithNormal()` to obtain all face/vertex pairs.
+    summary: |
+      Returns an array of face IDs that use the given normal ID.
+    description: |
+      Returns an array of face IDs that use the given normal ID. Use together
+      with `Class.EditableMesh:GetVerticesWithNormal()|GetVerticesWithNormal()`
+      to obtain all face/vertex pairs.
     code_samples: []
     parameters:
       - name: normalId
         type: int64
         default:
-        summary: Normal ID to find faces for.
+        summary: |
+          Normal ID to find faces for.
     returns:
       - type: Array
-        summary: List of face IDs that use the provided normal ID.
+        summary: |
+          List of face IDs that use the provided normal ID.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -818,17 +913,23 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetFacesWithUV
-    summary: Returns an array of face IDs that use the given UV ID.
-    description: Returns an array of face IDs that use the given UV ID. Use together with `Class.EditableMesh:GetVerticesWithUV()|GetVerticesWithUV()` to obtain all face/vertex pairs.
+    summary: |
+      Returns an array of face IDs that use the given UV ID.
+    description: |
+      Returns an array of face IDs that use the given UV ID. Use together with
+      `Class.EditableMesh:GetVerticesWithUV()|GetVerticesWithUV()` to obtain all
+      face/vertex pairs.
     code_samples: []
     parameters:
       - name: uvId
         type: int64
         default:
-        summary: UV ID to find faces for.
+        summary: |
+          UV ID to find faces for.
     returns:
       - type: Array
-        summary: List of face IDs that use the provided UV ID.
+        summary: |
+          List of face IDs that use the provided UV ID.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -836,17 +937,21 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetFaceUVs
-    summary: Returns the face's UV IDs for the vertices on the face.
-    description: Returns the face's UV IDs for the vertices on the face.
+    summary: |
+      Returns the face's UV IDs for the vertices on the face.
+    description: |
+      Returns the face's UV IDs for the vertices on the face.
     code_samples: []
     parameters:
       - name: faceId
         type: int64
         default:
-        summary: Face ID for which to get the UV IDs.
+        summary: |
+          Face ID for which to get the UV IDs.
     returns:
       - type: Array
-        summary: List of UV IDs used for the vertices on the given face.
+        summary: |
+          List of UV IDs used for the vertices on the given face.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -854,8 +959,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetFaceVertices
-    summary: Returns the face's vertex IDs.
-    description: Returns the face's vertex IDs.
+    summary: |
+      Returns the face's vertex IDs.
+    description: |
+      Returns the face's vertex IDs.
     code_samples: []
     parameters:
       - name: faceId
@@ -864,7 +971,8 @@ methods:
         summary: ''
     returns:
       - type: Array
-        summary: List of vertex IDs around the given face.
+        summary: |
+          List of vertex IDs around the given face.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -872,10 +980,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetFacsCorrectivePose
-    summary: |-
+    summary: |
       Returns bone IDs and bone `Datatype.CFrame|CFrames` for all bones in a
       specific FACS corrective pose.
-    description: |-
+    description: |
       Returns bone IDs and bone `Datatype.CFrame|CFrames` for all bones in a
       specific FACS corrective pose. Each bone `Datatype.CFrame` transforms the
       bone from the initial bone `Datatype.CFrame` in the bind pose of the mesh
@@ -886,12 +994,12 @@ methods:
       - name: actions
         type: Array
         default:
-        summary: |-
+        summary: |
           Array or 2 or 3 `Enum.FacsActionUnit` values that specify a corrective
           pose.
     returns:
       - type: Tuple
-        summary: |-
+        summary: |
           Array of bone IDs and corresponding array of bone
           `Datatype.CFrame|CFrames`.
     tags: []
@@ -900,15 +1008,16 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetFacsCorrectivePoses
-    summary: Returns all FACS corrective poses that are in use.
-    description: |-
+    summary: |
+      Returns all FACS corrective poses that are in use.
+    description: |
       Returns all FACS corrective poses that are in use. Each corrective pose is
       specified by 2 or 3 `Enum.FacsActionUnit` values.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: |-
+        summary: |
           Array of corrective poses. Each corrective pose is specified by a
           small array of 2 or 3 `Enum.FacsActionUnit` values.
     tags: []
@@ -917,10 +1026,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetFacsPose
-    summary: |-
+    summary: |
       Returns bone IDs and bone `Datatype.CFrame|CFrames` for all bones in a
       specific FACS action unit.
-    description: |-
+    description: |
       Returns bone IDs and bone `Datatype.CFrame|CFrames` for all bones in a
       specific FACS action unit. Each bone `Datatype.CFrame` transforms the bone
       from the initial bone `Datatype.CFrame` in the bind pose of the mesh to
@@ -931,23 +1040,27 @@ methods:
       - name: action
         type: FacsActionUnit
         default:
-        summary: FACS action unit for which to get the pose.
+        summary: |
+          FACS action unit for which to get the pose.
     returns:
       - type: Tuple
-        summary: Array of bone IDs and corresponding array of bone `Datatype.CFrame`.
+        summary: |
+          Array of bone IDs and corresponding array of bone `Datatype.CFrame`.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetFacsPoses
-    summary: Returns all FACS action units that have poses defined.
-    description: Returns all FACS action units that have poses defined.
+    summary: |
+      Returns all FACS action units that have poses defined.
+    description: |
+      Returns all FACS action units that have poses defined.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: |-
+        summary: |
           Array of `Enum.FacsActionUnit`, one for each FACS action unit that has
           a pose defined.
     tags: []
@@ -956,30 +1069,37 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetNormal
-    summary: Returns the normal vector for the given normal ID.
-    description: Returns the normal vector for the given normal ID.
+    summary: |
+      Returns the normal vector for the given normal ID.
+    description: |
+      Returns the normal vector for the given normal ID.
     code_samples: []
     parameters:
       - name: normalId
         type: int64
         default:
-        summary: Normal ID for which to get the normal vector.
+        summary: |
+          Normal ID for which to get the normal vector.
     returns:
       - type: Vector3?
-        summary: Normal vector at the requested normal ID.
+        summary: |
+          Normal vector at the requested normal ID.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetNormals
-    summary: Returns all normals of the mesh.
-    description: Returns all normals of the mesh as a list of stable normal IDs.
+    summary: |
+      Returns all normals of the mesh.
+    description: |
+      Returns all normals of the mesh as a list of stable normal IDs.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: List of stable normal IDs.
+        summary: |
+          List of stable normal IDs.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -987,17 +1107,21 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetPosition
-    summary: Gets the position of a vertex.
-    description: Gets the position of a vertex in the mesh's local object space.
+    summary: |
+      Gets the position of a vertex.
+    description: |
+      Gets the position of a vertex in the mesh's local object space.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
-        summary: Stable vertex ID for which to get the position.
+        summary: |
+          Stable vertex ID for which to get the position.
     returns:
       - type: Vector3
-        summary: Position of a vertex in the mesh's local object space.
+        summary: |
+          Position of a vertex in the mesh's local object space.
     tags: []
     deprecation_message: ''
     security: None
@@ -1010,37 +1134,45 @@ methods:
     parameters: []
     returns:
       - type: Vector3
-        summary: Size of the `EditableMesh`.
+        summary: |
+          Size of the `EditableMesh`.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetUV
-    summary: Returns UV coordinates at the given UV ID.
-    description: Returns UV coordinates at the given UV ID.
+    summary: |
+      Returns UV coordinates at the given UV ID.
+    description: |
+      Returns UV coordinates at the given UV ID.
     code_samples: []
     parameters:
       - name: uvId
         type: int64
         default:
-        summary: UV ID for which to get the UV coordinate.
+        summary: |
+          UV ID for which to get the UV coordinate.
     returns:
       - type: Vector2?
-        summary: UV coordinates at the requested UV ID.
+        summary: |
+          UV coordinates at the requested UV ID.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetUVs
-    summary: Returns all UVs of the mesh.
-    description: Returns all UVs of the mesh as a list of stable UV IDs.
+    summary: |
+      Returns all UVs of the mesh.
+    description: |
+      Returns all UVs of the mesh as a list of stable UV IDs.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: List of stable UV IDs.
+        summary: |
+          List of stable UV IDs.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -1048,27 +1180,31 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetVertexBones
-    summary: Returns all bone IDs that are associated with the vertex for skinning.
-    description: Returns all bone IDs that are associated with the vertex for skinning.
+    summary: |
+      Returns all bone IDs that are associated with the vertex for skinning.
+    description: |
+      Returns all bone IDs that are associated with the vertex for skinning.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
-        summary: Vertex ID for which to get the associated bones.
+        summary: |
+          Vertex ID for which to get the associated bones.
     returns:
       - type: Array
-        summary: Bone IDs associated with the vertex for skinning.
+        summary: |
+          Bone IDs associated with the vertex for skinning.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetVertexBoneWeights
-    summary: |-
+    summary: |
       Returns skinning blend weights for each bone that is associated with the
       vertex.
-    description: |-
+    description: |
       Returns skinning blend weights for each bone that is associated with the
       vertex.
     code_samples: []
@@ -1076,10 +1212,11 @@ methods:
       - name: vertexId
         type: int64
         default:
-        summary: Vertex ID for which to get the associated bone weights.
+        summary: |
+          Vertex ID for which to get the associated bone weights.
     returns:
       - type: Array
-        summary: |-
+        summary: |
           Skinning blend weights for each bone that is associated with the
           vertex.
     tags: []
@@ -1088,17 +1225,21 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetVertexColors
-    summary: Returns the color IDs of the faces attached to the given vertex.
-    description: Returns the color IDs of the faces attached to the given vertex.
+    summary: |
+      Returns the color IDs of the faces attached to the given vertex.
+    description: |
+      Returns the color IDs of the faces attached to the given vertex.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
-        summary: Stable vertex ID to find color IDs.
+        summary: |
+          Stable vertex ID to find color IDs.
     returns:
       - type: Array
-        summary: Array of color IDs of faces attached to the given vertex.
+        summary: |
+          Array of color IDs of faces attached to the given vertex.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -1106,59 +1247,73 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetVertexFaceColor
-    summary: Returns the color ID of a vertex/face pair.
-    description: Returns the color ID of a vertex/face pair.
+    summary: |
+      Returns the color ID of a vertex/face pair.
+    description: |
+      Returns the color ID of a vertex/face pair.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
-        summary: Stable vertex ID.
+        summary: |
+          Stable vertex ID.
       - name: faceId
         type: int64
         default:
-        summary: Stable face ID.
+        summary: |
+          Stable face ID.
     returns:
       - type: int64
-        summary: Stable color ID of the vertex/face pair.
+        summary: |
+          Stable color ID of the vertex/face pair.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetVertexFaceNormal
-    summary: Returns the normal ID of a vertex/face pair.
-    description: Returns the normal ID of a vertex/face pair.
+    summary: |
+      Returns the normal ID of a vertex/face pair.
+    description: |
+      Returns the normal ID of a vertex/face pair.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
-        summary: Stable vertex ID.
+        summary: |
+          Stable vertex ID.
       - name: faceId
         type: int64
         default:
-        summary: Stable face ID.
+        summary: |
+          Stable face ID.
     returns:
       - type: int64
-        summary: Stable normal ID of the vertex/face pair.
+        summary: |
+          Stable normal ID of the vertex/face pair.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetVertexFaces
-    summary: Returns the face IDs of the faces attached to the given vertex.
-    description: Returns the face IDs of the faces attached to the given vertex.
+    summary: |
+      Returns the face IDs of the faces attached to the given vertex.
+    description: |
+      Returns the face IDs of the faces attached to the given vertex.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
-        summary: Stable vertex ID to find faces for.
+        summary: |
+          Stable vertex ID to find faces for.
     returns:
       - type: Array
-        summary: Array of face IDs attached to the given vertex.
+        summary: |
+          Array of face IDs attached to the given vertex.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -1166,38 +1321,47 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetVertexFaceUV
-    summary: Returns the UV ID of a vertex/face pair.
-    description: Returns the UV ID of a vertex/face pair.
+    summary: |
+      Returns the UV ID of a vertex/face pair.
+    description: |
+      Returns the UV ID of a vertex/face pair.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
-        summary: Stable vertex ID.
+        summary: |
+          Stable vertex ID.
       - name: faceId
         type: int64
         default:
-        summary: Stable face ID.
+        summary: |
+          Stable face ID.
     returns:
       - type: int64
-        summary: Stable UV ID of the vertex/face pair.
+        summary: |
+          Stable UV ID of the vertex/face pair.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetVertexNormals
-    summary: Returns the normal IDs of the faces attached to the given vertex.
-    description: Returns the normal IDs of the faces attached to the given vertex.
+    summary: |
+      Returns the normal IDs of the faces attached to the given vertex.
+    description: |
+      Returns the normal IDs of the faces attached to the given vertex.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
-        summary: Stable vertex ID to find normal IDs.
+        summary: |
+          Stable vertex ID to find normal IDs.
     returns:
       - type: Array
-        summary: Array of normal IDs of faces attached to the given vertex.
+        summary: |
+          Array of normal IDs of faces attached to the given vertex.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -1205,17 +1369,21 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetVertexUVs
-    summary: Returns the UV IDs of the faces attached to the given vertex.
-    description: Returns the UV IDs of the faces attached to the given vertex.
+    summary: |
+      Returns the UV IDs of the faces attached to the given vertex.
+    description: |
+      Returns the UV IDs of the faces attached to the given vertex.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
-        summary: Stable vertex ID to find UV IDs.
+        summary: |
+          Stable vertex ID to find UV IDs.
     returns:
       - type: Array
-        summary: Array of UV IDs of faces attached to the given vertex.
+        summary: |
+          Array of UV IDs of faces attached to the given vertex.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -1223,21 +1391,25 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetVertices
-    summary: Returns all vertices as a list of stable vertex IDs.
-    description: Returns all vertices as a list of stable vertex IDs.
+    summary: |
+      Returns all vertices as a list of stable vertex IDs.
+    description: |
+      Returns all vertices as a list of stable vertex IDs.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: List of stable vertex IDs.
+        summary: |
+          List of stable vertex IDs.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetVerticesWithAttribute
-    summary: Returns a list of vertices that use a given attribute ID.
-    description: |-
+    summary: |
+      Returns a list of vertices that use a given attribute ID.
+    description: |
       Returns a list of vertices that use a given face ID, normal ID, UV ID, or
       color ID.
     code_samples: []
@@ -1245,10 +1417,12 @@ methods:
       - name: id
         type: int64
         default:
-        summary: Attribute ID for which to find vertices that use it.
+        summary: |
+          Attribute ID for which to find vertices that use it.
     returns:
       - type: Array
-        summary: List of vertex IDs which use the given attribute ID.
+        summary: |
+          List of vertex IDs which use the given attribute ID.
     tags:
       - Deprecated
     deprecation_message: ''
@@ -1256,17 +1430,23 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetVerticesWithColor
-    summary: Returns an array of vertex IDs that use the given color ID.
-    description: Returns an array of vertex IDs that use the given color ID. Use together with `Class.EditableMesh:GetFacesWithColor()|GetFacesWithColor()` to obtain all face/vertex pairs.
+    summary: |
+      Returns an array of vertex IDs that use the given color ID.
+    description: |
+      Returns an array of vertex IDs that use the given color ID. Use together
+      with `Class.EditableMesh:GetFacesWithColor()|GetFacesWithColor()` to
+      obtain all face/vertex pairs.
     code_samples: []
     parameters:
       - name: colorId
         type: int64
         default:
-        summary: Color ID to find faces for.
+        summary: |
+          Color ID to find faces for.
     returns:
       - type: Array
-        summary: List of face IDs that use the provided color ID.
+        summary: |
+          List of face IDs that use the provided color ID.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -1274,17 +1454,23 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetVerticesWithNormal
-    summary: Returns an array of vertex IDs that use the given normal ID.
-    description: Returns an array of vertex IDs that use the given normal ID. Use together with `Class.EditableMesh:GetFacesWithNormal()|GetFacesWithNormal()` to obtain all face/vertex pairs.
+    summary: |
+      Returns an array of vertex IDs that use the given normal ID.
+    description: |
+      Returns an array of vertex IDs that use the given normal ID. Use together
+      with `Class.EditableMesh:GetFacesWithNormal()|GetFacesWithNormal()` to
+      obtain all face/vertex pairs.
     code_samples: []
     parameters:
       - name: normalId
         type: int64
         default:
-        summary: Normal ID to find vertices for.
+        summary: |
+          Normal ID to find vertices for.
     returns:
       - type: Array
-        summary: List of vertex IDs that use the provided normal ID.
+        summary: |
+          List of vertex IDs that use the provided normal ID.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -1292,17 +1478,23 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:GetVerticesWithUV
-    summary: Returns an array of vertex IDs that use the given UV ID.
-    description: Returns an array of vertex IDs that use the given UV ID. Use together with `Class.EditableMesh:GetFacesWithUV()|GetFacesWithUV()` to obtain all face/vertex pairs.
+    summary: |
+      Returns an array of vertex IDs that use the given UV ID.
+    description: |
+      Returns an array of vertex IDs that use the given UV ID. Use together with
+      `Class.EditableMesh:GetFacesWithUV()|GetFacesWithUV()` to obtain all
+      face/vertex pairs.
     code_samples: []
     parameters:
       - name: uvId
         type: int64
         default:
-        summary: UV ID to find vertices for.
+        summary: |
+          UV ID to find vertices for.
     returns:
       - type: Array
-        summary: List of vertex IDs that use the provided UV ID.
+        summary: |
+          List of vertex IDs that use the provided UV ID.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -1310,8 +1502,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:IdDebugString
-    summary: Returns a string describing a stable ID, useful for debugging purposes.
-    description: |-
+    summary: |
+      Returns a string describing a stable ID, useful for debugging purposes.
+    description: |
       Returns a string describing a stable ID, useful for debugging purposes,
       like `f17` or `v12`, containing the type, ID number, and version.
     code_samples: []
@@ -1319,18 +1512,21 @@ methods:
       - name: id
         type: int64
         default:
-        summary: ID for which to return a debugging information string.
+        summary: |
+          ID for which to return a debugging information string.
     returns:
       - type: string
-        summary: String that describes the ID in human-readable format.
+        summary: |
+          String that describes the ID in human-readable format.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:MergeVertices
-    summary: Merges vertices that touch together.
-    description: |-
+    summary: |
+      Merges vertices that touch together.
+    description: |
       Merges vertices that touch together, to use a single vertex ID but keep
       the other original attribute IDs.
     code_samples: []
@@ -1338,10 +1534,11 @@ methods:
       - name: mergeTolerance
         type: float
         default:
-        summary: The distance at which the vertices are considered to touch each other.
+        summary: |
+          The distance at which the vertices are considered to touch each other.
     returns:
       - type: Map
-        summary: |-
+        summary: |
           A mapping of old vertex ID to new vertex ID for vertices that have
           been merged.
     tags: []
@@ -1351,7 +1548,7 @@ methods:
     capabilities: []
   - name: EditableMesh:RaycastLocal
     summary: ''
-    description: |-
+    description: |
       Casts a ray and returns a point of intersection, face ID, and barycentric
       coordinates. The inputs and outputs of this method are in the mesh's local
       object space.
@@ -1366,14 +1563,16 @@ methods:
       - name: origin
         type: Vector3
         default:
-        summary: Origin of the ray in the mesh's local object space.
+        summary: |
+          Origin of the ray in the mesh's local object space.
       - name: direction
         type: Vector3
         default:
-        summary: Direction of the ray.
+        summary: |
+          Direction of the ray.
     returns:
       - type: Tuple
-        summary: |-
+        summary: |
           Tuple of the point of intersection, face ID, and barycentric
           coordinates.
     tags: []
@@ -1382,8 +1581,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:RemoveBone
-    summary: Removes a bone using its stable bone ID.
-    description: Removes a bone using its stable bone ID.
+    summary: |
+      Removes a bone using its stable bone ID.
+    description: |
+      Removes a bone using its stable bone ID.
     code_samples: []
     parameters:
       - name: boneId
@@ -1399,8 +1600,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:RemoveFace
-    summary: Removes a face using its stable face ID.
-    description: Removes a face using its stable face ID.
+    summary: |
+      Removes a face using its stable face ID.
+    description: |
+      Removes a face using its stable face ID.
     code_samples: []
     parameters:
       - name: faceId
@@ -1416,25 +1619,27 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:RemoveUnused
-    summary: |-
+    summary: |
       Removes all unused vertices, normals, UVs, and colors, and returns the
       removed IDs.
-    description: |-
+    description: |
       Removes all vertices, normals, UVs, and colors which are not used in any
       face, and returns the removed IDs.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: All of the removed stable IDs.
+        summary: |
+          All of the removed stable IDs.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:ResetNormal
-    summary: Reset this normal ID to be automatically calculated.
-    description: |-
+    summary: |
+      Reset this normal ID to be automatically calculated.
+    description: |
       Reset this normal ID to be automatically calculated based on the shape of
       the mesh, instead of manually set.
     code_samples: []
@@ -1442,7 +1647,8 @@ methods:
       - name: normalId
         type: int64
         default:
-        summary: Stable normal ID to reset.
+        summary: |
+          Stable normal ID to reset.
     returns:
       - type: ()
         summary: ''
@@ -1452,8 +1658,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetBoneCFrame
-    summary: Set the initial `Datatype.CFrame` for a bone in the mesh's bind pose.
-    description: |-
+    summary: |
+      Set the initial `Datatype.CFrame` for a bone in the mesh's bind pose.
+    description: |
       Set the initial `Datatype.CFrame` for a bone in the mesh's bind pose, in
       the mesh's local space.
     code_samples: []
@@ -1461,11 +1668,12 @@ methods:
       - name: boneId
         type: int64
         default:
-        summary: Bone ID for which to set the initial `Datatype.CFrame`.
+        summary: |
+          Bone ID for which to set the initial `Datatype.CFrame`.
       - name: cframe
         type: CFrame
         default:
-        summary: |-
+        summary: |
           Initial `Datatype.CFrame` for the bone in the mesh's bind pose, in the
           mesh's local space.
     returns:
@@ -1477,8 +1685,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetBoneIsVirtual
-    summary: Set whether a bone is virtual.
-    description: |-
+    summary: |
+      Set whether a bone is virtual.
+    description: |
       Set whether a bone is virtual. Virtual bones can only be bound to a
       `Class.FaceControls` instance.
     code_samples: []
@@ -1486,11 +1695,13 @@ methods:
       - name: boneId
         type: int64
         default:
-        summary: Bone ID for which to set whether the bone is virtual.
+        summary: |
+          Bone ID for which to set whether the bone is virtual.
       - name: virtual
         type: boolean
         default:
-        summary: Whether the bone should be virtual.
+        summary: |
+          Whether the bone should be virtual.
     returns:
       - type: ()
         summary: ''
@@ -1500,8 +1711,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetBoneName
-    summary: Sets the name for a bone.
-    description: |-
+    summary: |
+      Sets the name for a bone.
+    description: |
       Sets the name for a bone. Bone names can be 100 characters long and must
       be unique in the mesh.
     code_samples: []
@@ -1509,11 +1721,13 @@ methods:
       - name: boneId
         type: int64
         default:
-        summary: Bone ID for which to set the name.
+        summary: |
+          Bone ID for which to set the name.
       - name: name
         type: string
         default:
-        summary: Bone name to set.
+        summary: |
+          Bone name to set.
     returns:
       - type: ()
         summary: ''
@@ -1523,18 +1737,22 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetBoneParent
-    summary: Set a parent for a bone.
-    description: Set a parent for a bone.
+    summary: |
+      Set a parent for a bone.
+    description: |
+      Set a parent for a bone.
     code_samples: []
     parameters:
       - name: boneId
         type: int64
         default:
-        summary: Bone ID for which to set the parent.
+        summary: |
+          Bone ID for which to set the parent.
       - name: parentBoneId
         type: int64
         default:
-        summary: Parent bone ID.
+        summary: |
+          Parent bone ID.
     returns:
       - type: ()
         summary: ''
@@ -1544,18 +1762,22 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetColor
-    summary: Sets the color for a color ID.
-    description: Sets the color for a color ID.
+    summary: |
+      Sets the color for a color ID.
+    description: |
+      Sets the color for a color ID.
     code_samples: []
     parameters:
       - name: colorId
         type: int64
         default:
-        summary: Stable color ID for which to set the color.
+        summary: |
+          Stable color ID for which to set the color.
       - name: color
         type: Color3
         default:
-        summary: Color to set.
+        summary: |
+          Color to set.
     returns:
       - type: ()
         summary: ''
@@ -1565,18 +1787,22 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetColorAlpha
-    summary: Sets the color alpha (transparency) for a color ID.
-    description: Sets the color alpha (transparency) for a color ID.
+    summary: |
+      Sets the color alpha (transparency) for a color ID.
+    description: |
+      Sets the color alpha (transparency) for a color ID.
     code_samples: []
     parameters:
       - name: colorId
         type: int64
         default:
-        summary: Stable color ID for which to set the color alpha.
+        summary: |
+          Stable color ID for which to set the color alpha.
       - name: alpha
         type: float
         default:
-        summary: Alpha to set.
+        summary: |
+          Alpha to set.
     returns:
       - type: ()
         summary: ''
@@ -1586,18 +1812,22 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetFaceColors
-    summary: Sets the face's vertex colors to new color IDs.
-    description: Sets the face's vertex colors to new color IDs.
+    summary: |
+      Sets the face's vertex colors to new color IDs.
+    description: |
+      Sets the face's vertex colors to new color IDs.
     code_samples: []
     parameters:
       - name: faceId
         type: int64
         default:
-        summary: Face ID for which to update the vertex colors.
+        summary: |
+          Face ID for which to update the vertex colors.
       - name: ids
         type: Array
         default:
-        summary: List of new stable color IDs to use for the given face's vertices.
+        summary: |
+          List of new stable color IDs to use for the given face's vertices.
     returns:
       - type: ()
         summary: ''
@@ -1608,18 +1838,22 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetFaceNormals
-    summary: Sets the face's vertex normals to new normal IDs.
-    description: Sets the face's vertex normals to new normal IDs.
+    summary: |
+      Sets the face's vertex normals to new normal IDs.
+    description: |
+      Sets the face's vertex normals to new normal IDs.
     code_samples: []
     parameters:
       - name: faceId
         type: int64
         default:
-        summary: Face ID for which to update the vertex normals.
+        summary: |
+          Face ID for which to update the vertex normals.
       - name: ids
         type: Array
         default:
-        summary: List of new stable normal IDs to use for the given face's vertices.
+        summary: |
+          List of new stable normal IDs to use for the given face's vertices.
     returns:
       - type: ()
         summary: ''
@@ -1630,18 +1864,22 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetFaceUVs
-    summary: Sets the face's vertex UVs to new UV IDs.
-    description: Sets the face's vertex UVs to new UV IDs.
+    summary: |
+      Sets the face's vertex UVs to new UV IDs.
+    description: |
+      Sets the face's vertex UVs to new UV IDs.
     code_samples: []
     parameters:
       - name: faceId
         type: int64
         default:
-        summary: Face ID for which to update the vertex UVs.
+        summary: |
+          Face ID for which to update the vertex UVs.
       - name: ids
         type: Array
         default:
-        summary: List of new stable UV IDs to use for the given face's vertices.
+        summary: |
+          List of new stable UV IDs to use for the given face's vertices.
     returns:
       - type: ()
         summary: ''
@@ -1652,18 +1890,22 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetFaceVertices
-    summary: Sets the face's vertices to new vertex IDs.
-    description: Sets the face's vertices to new vertex IDs.
+    summary: |
+      Sets the face's vertices to new vertex IDs.
+    description: |
+      Sets the face's vertices to new vertex IDs.
     code_samples: []
     parameters:
       - name: faceId
         type: int64
         default:
-        summary: Face ID for which to update the vertices.
+        summary: |
+          Face ID for which to update the vertices.
       - name: ids
         type: Array
         default:
-        summary: List of new stable vertex IDs to use for the given face.
+        summary: |
+          List of new stable vertex IDs to use for the given face.
     returns:
       - type: ()
         summary: ''
@@ -1674,10 +1916,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetFacsBonePose
-    summary: |-
+    summary: |
       Set `Datatype.CFrame` for an individual bone in a specific FACS action
       unit.
-    description: |-
+    description: |
       Set `Datatype.CFrame` for an individual bone in a specific FACS action
       unit.
     code_samples: []
@@ -1685,15 +1927,17 @@ methods:
       - name: action
         type: FacsActionUnit
         default:
-        summary: FACS action unit for which to set the pose.
+        summary: |
+          FACS action unit for which to set the pose.
       - name: boneId
         type: int64
         default:
-        summary: Bone to set a `Datatype.CFrame` for this pose.
+        summary: |
+          Bone to set a `Datatype.CFrame` for this pose.
       - name: cframe
         type: CFrame
         default:
-        summary: |-
+        summary: |
           `Datatype.CFrame` which transforms the bone from the initial bone
           `Datatype.CFrame` in the bind pose of the mesh to the combined bone
           `Datatype.CFrame` for this pose. All `Datatype.CFrame|CFrames` are in
@@ -1707,24 +1951,27 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetFacsCorrectivePose
-    summary: Set pose for all bones in a specific FACS corrective pose.
-    description: Set pose for all bones in a specific FACS corrective pose.
+    summary: |
+      Set pose for all bones in a specific FACS corrective pose.
+    description: |
+      Set pose for all bones in a specific FACS corrective pose.
     code_samples: []
     parameters:
       - name: actions
         type: Array
         default:
-        summary: |-
+        summary: |
           Array or 2 or 3 `Enum.FacsActionUnit` values to apply as a corrective
           pose.
       - name: boneIds
         type: Array
         default:
-        summary: Bones to set a `Datatype.CFrame` for this pose.
+        summary: |
+          Bones to set a `Datatype.CFrame` for this pose.
       - name: cframes
         type: Array
         default:
-        summary: |-
+        summary: |
           `Datatype.CFrame` transforms for the bones in this corrective pose.
 
           Each bone `Datatype.CFrame` transforms the bone from the initial bone
@@ -1740,22 +1987,26 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetFacsPose
-    summary: Set pose for all bones in a specific FACS action unit.
-    description: Set pose for all bones in a specific FACS action unit.
+    summary: |
+      Set pose for all bones in a specific FACS action unit.
+    description: |
+      Set pose for all bones in a specific FACS action unit.
     code_samples: []
     parameters:
       - name: action
         type: FacsActionUnit
         default:
-        summary: FACS action unit to set the pose for.
+        summary: |
+          FACS action unit to set the pose for.
       - name: boneIds
         type: Array
         default:
-        summary: Bones for which to set a `Datatype.CFrame` for this pose.
+        summary: |
+          Bones for which to set a `Datatype.CFrame` for this pose.
       - name: cframes
         type: Array
         default:
-        summary: |-
+        summary: |
           `Datatype.CFrame` transforms for the bones in this pose.
 
           Each bone `Datatype.CFrame` transforms the bone from the initial bone
@@ -1771,8 +2022,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetNormal
-    summary: Set the normal for a normal ID.
-    description: |-
+    summary: |
+      Set the normal for a normal ID.
+    description: |
       Set the normal for a normal ID. This will change the normal value for
       every face vertex which is using the normal ID.
     code_samples: []
@@ -1780,11 +2032,13 @@ methods:
       - name: normalId
         type: int64
         default:
-        summary: Stable normal ID for which to set the normal vector.
+        summary: |
+          Stable normal ID for which to set the normal vector.
       - name: normal
         type: Vector3
         default:
-        summary: Normal vector to set.
+        summary: |
+          Normal vector to set.
     returns:
       - type: ()
         summary: ''
@@ -1794,18 +2048,22 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetPosition
-    summary: Sets a vertex position in the mesh's local object space.
-    description: Sets a vertex position in the mesh's local object space.
+    summary: |
+      Sets a vertex position in the mesh's local object space.
+    description: |
+      Sets a vertex position in the mesh's local object space.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
-        summary: Stable vertex ID of the vertex to position.
+        summary: |
+          Stable vertex ID of the vertex to position.
       - name: p
         type: Vector3
         default:
-        summary: Position in the mesh's local object space.
+        summary: |
+          Position in the mesh's local object space.
     returns:
       - type: ()
         summary: ''
@@ -1815,18 +2073,22 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetUV
-    summary: Sets UV coordinates for a UV ID.
-    description: Sets UV coordinates for a UV ID.
+    summary: |
+      Sets UV coordinates for a UV ID.
+    description: |
+      Sets UV coordinates for a UV ID.
     code_samples: []
     parameters:
       - name: uvId
         type: int64
         default:
-        summary: UV ID for which to set the UV coordinates.
+        summary: |
+          UV ID for which to set the UV coordinates.
       - name: uv
         type: Vector2
         default:
-        summary: UV coordinates.
+        summary: |
+          UV coordinates.
     returns:
       - type: ()
         summary: ''
@@ -1836,8 +2098,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetVertexBones
-    summary: Assign a list of bones with the vertex for skinning.
-    description: |-
+    summary: |
+      Assign a list of bones with the vertex for skinning.
+    description: |
       Assign a list of bones with the vertex for skinning.
 
       Corresponds with the skinning blend weights used in
@@ -1854,11 +2117,13 @@ methods:
       - name: vertexId
         type: int64
         default:
-        summary: Vertex ID to set vertex skinning bones.
+        summary: |
+          Vertex ID to set vertex skinning bones.
       - name: boneIDs
         type: Array
         default:
-        summary: Bone IDs to use with this vertex for skinning.
+        summary: |
+          Bone IDs to use with this vertex for skinning.
     returns:
       - type: ()
         summary: ''
@@ -1868,8 +2133,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetVertexBoneWeights
-    summary: Sets skinning blend weights for each bone associated with the vertex.
-    description: |-
+    summary: |
+      Sets skinning blend weights for each bone associated with the vertex.
+    description: |
       Sets skinning blend weights for each bone associated with the vertex.
 
       Corresponds with the bone IDs used in
@@ -1885,11 +2151,13 @@ methods:
       - name: vertexId
         type: int64
         default:
-        summary: Vertex ID on which to set skinning blend weights.
+        summary: |
+          Vertex ID on which to set skinning blend weights.
       - name: boneWeights
         type: Array
         default:
-        summary: Skinning blend weights to set on the vertex.
+        summary: |
+          Skinning blend weights to set on the vertex.
     returns:
       - type: ()
         summary: ''
@@ -1899,22 +2167,27 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetVertexFaceColor
-    summary: Sets the color ID of a vertex/face pair.
-    description: Sets the color ID of a vertex/face pair.
+    summary: |
+      Sets the color ID of a vertex/face pair.
+    description: |
+      Sets the color ID of a vertex/face pair.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
-        summary: Stable vertex ID.
+        summary: |
+          Stable vertex ID.
       - name: faceId
         type: int64
         default:
-        summary: Stable face ID.
+        summary: |
+          Stable face ID.
       - name: colorId
         type: int64
         default:
-        summary: Stable color ID to set for the vertex/face pair.
+        summary: |
+          Stable color ID to set for the vertex/face pair.
     returns:
       - type: ()
         summary: ''
@@ -1924,22 +2197,27 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetVertexFaceNormal
-    summary: Sets the normal ID of a vertex/face pair.
-    description: Sets the normal ID of a vertex/face pair.
+    summary: |
+      Sets the normal ID of a vertex/face pair.
+    description: |
+      Sets the normal ID of a vertex/face pair.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
-        summary: Stable vertex ID.
+        summary: |
+          Stable vertex ID.
       - name: faceId
         type: int64
         default:
-        summary: Stable face ID.
+        summary: |
+          Stable face ID.
       - name: normalId
         type: int64
         default:
-        summary: Stable normal ID to set for the vertex/face pair.
+        summary: |
+          Stable normal ID to set for the vertex/face pair.
     returns:
       - type: ()
         summary: ''
@@ -1949,22 +2227,27 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:SetVertexFaceUV
-    summary: Sets the UV ID of a vertex/face pair.
-    description: Sets the UV ID of a vertex/face pair.
+    summary: |
+      Sets the UV ID of a vertex/face pair.
+    description: |
+      Sets the UV ID of a vertex/face pair.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
-        summary: Stable vertex ID.
+        summary: |
+          Stable vertex ID.
       - name: faceId
         type: int64
         default:
-        summary: Stable face ID.
+        summary: |
+          Stable face ID.
       - name: uvId
         type: int64
         default:
-        summary: Stable UV ID to set for the vertex/face pair.
+        summary: |
+          Stable UV ID to set for the vertex/face pair.
     returns:
       - type: ()
         summary: ''
@@ -1974,8 +2257,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableMesh:Triangulate
-    summary: Splits all faces on the mesh to be triangles.
-    description: |-
+    summary: |
+      Splits all faces on the mesh to be triangles.
+    description: |
       Splits all faces on the mesh to be triangles. Currently this does nothing
       since only triangles can be created, but if your code relies on triangles,
       it's recommended that you call this method after calling

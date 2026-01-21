@@ -5,10 +5,10 @@
 name: GamePassService
 type: class
 memory_category: Instances
-summary: |-
+summary: |
   A service associated with the legacy game pass system. Use
   `Class.MarketplaceService` for all new work.
-description: |-
+description: |
   The GamePassService is a service that supports legacy game passes using _Asset
   IDs_. `Class.MarketplaceService` should be used for all new game passes.
 
@@ -25,10 +25,10 @@ deprecation_message: ''
 properties: []
 methods:
   - name: GamePassService:PlayerHasPass
-    summary: |-
+    summary: |
       Returns `true` if the `Class.Player` has the specified **legacy** game
       pass. Does not work with new game passes.
-    description: |-
+    description: |
       This function will not work with new game passes; use
       `Class.MarketplaceService:UserOwnsGamePassAsync()` instead.
 
@@ -80,16 +80,18 @@ methods:
       - name: player
         type: Player
         default:
-        summary: The `Class.Player` for which to check ownership.
+        summary: |
+          The `Class.Player` for which to check ownership.
       - name: gamePassId
         type: int64
         default:
-        summary: |-
+        summary: |
           The _Asset ID_ of the game pass. This is **not** the _Game Pass ID_
           (see above).
     returns:
       - type: boolean
-        summary: Whether the `Class.Player` owns the game pass.
+        summary: |
+          Whether the `Class.Player` owns the game pass.
     tags:
       - Yields
       - Deprecated

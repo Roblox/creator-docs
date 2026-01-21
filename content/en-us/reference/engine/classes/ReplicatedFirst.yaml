@@ -5,18 +5,18 @@
 name: ReplicatedFirst
 type: class
 memory_category: Instances
-summary: |-
+summary: |
   A container whose contents are replicated to all clients (but not back to the
   server) first before anything else.
-description: |-
+description: |
   `ReplicatedFirst` is a container whose contents are replicated to all clients
   (but not back to the server) before anything else. It's most commonly used to
-  store `Class.LocalScript|LocalScripts` and other elements that are essential for
-  the experience's start such as [loading
-  screens](../../../players/loading-screens.md).
+  store `Class.LocalScript|LocalScripts` and other elements that are essential
+  for the experience's start such as
+  [loading screens](../../../players/loading-screens.md).
 
-  For objects that do **not** need to be replicated before anything else, use the
-  `Class.ReplicatedStorage` container instead.
+  For objects that do **not** need to be replicated before anything else, use
+  the `Class.ReplicatedStorage` container instead.
 
   There are some key considerations for running `Class.LocalScript|LocalScripts`
   in `ReplicatedFirst`:
@@ -25,10 +25,10 @@ description: |-
     `Class.LocalScript|LocalScripts` running in `ReplicatedFirst` will need to
     wait for any objects they require to replicate using
     `Class.Instance:WaitForChild()`
-  - Any objects that are to be used by a `Class.LocalScript` in `ReplicatedFirst`
-    should also be parented to `ReplicatedFirst`. Otherwise, they may replicate to
-    the client late, yielding the script and negating the benefit of initial
-    replication.
+  - Any objects that are to be used by a `Class.LocalScript` in
+    `ReplicatedFirst` should also be parented to `ReplicatedFirst`. Otherwise,
+    they may replicate to the client late, yielding the script and negating the
+    benefit of initial replication.
 code_samples: []
 inherits:
   - Instance
@@ -40,15 +40,17 @@ deprecation_message: ''
 properties: []
 methods:
   - name: ReplicatedFirst:RemoveDefaultLoadingScreen
-    summary: Immediately removes the default Roblox loading screen.
-    description: |-
-      Immediately removes the default Roblox loading screen. Note that if any object
-      has been placed in `ReplicatedFirst`, the default loading screen will be removed
-      after a few seconds regardless if this method has been called or not.
+    summary: |
+      Immediately removes the default Roblox loading screen.
+    description: |
+      Immediately removes the default Roblox loading screen. Note that if any
+      object has been placed in `ReplicatedFirst`, the default loading screen
+      will be removed after a few seconds regardless if this method has been
+      called or not.
 
-      You should **not** remove the default loading screen unless you want to display
-      your own. If you remove the default screen without a replacement, players will
-      be able to see geometry loading in the background.
+      You should **not** remove the default loading screen unless you want to
+      display your own. If you remove the default screen without a replacement,
+      players will be able to see geometry loading in the background.
     code_samples: []
     parameters: []
     returns:

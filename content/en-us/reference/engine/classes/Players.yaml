@@ -5,8 +5,9 @@
 name: Players
 type: class
 memory_category: Instances
-summary: A service that contains presently connected `Class.Player` objects.
-description: |-
+summary: |
+  A service that contains presently connected `Class.Player` objects.
+description: |
   The `Class.Players` service contains `Class.Player` objects for presently
   connected clients to a Roblox server. It also contains information about a
   place's configuration. It can fetch information about players not connected to
@@ -21,14 +22,14 @@ tags:
 deprecation_message: ''
 properties:
   - name: Players.BanningEnabled
-    summary: |-
+    summary: |
       Enables or disables the three `Class.Players` methods
       (`Class.Players:BanAsync()|BanAsync()`,
       `Class.Players:UnbanAsync()|UnbanAsync()`, and
       `Class.Players:GetBanHistoryAsync()|GetBanHistoryAsync()`) that constitute
       the ban API. This property is not scriptable and can only be modified in
       Studio.
-    description: |-
+    description: |
       Enables or disables the three `Class.Players` methods
       (`Class.Players:BanAsync()|BanAsync()`,
       `Class.Players:UnbanAsync()|UnbanAsync()`, and
@@ -51,16 +52,16 @@ properties:
     capabilities:
       - Players
   - name: Players.BubbleChat
-    summary: |-
+    summary: |
       Indicates whether or not bubble chat is enabled. It is set with the
       `Class.Players:SetChatStyle()` method.
-    description: |-
+    description: |
       This property indicates whether or not bubble chat is enabled. It is set
       with the `Class.Players:SetChatStyle()` method using the `Enum.ChatStyle`
       enum.
 
-      When this chat mode is enabled, the experience displays chats in the chat user
-      interface at the top-left corner of the screen.
+      When this chat mode is enabled, the experience displays chats in the chat
+      user interface at the top-left corner of the screen.
 
       There are two other chat modes, `Class.Players.ClassicChat` and a chat
       mode where both classic and bubble chat are enabled.
@@ -82,20 +83,21 @@ properties:
       - Chat
       - Players
   - name: Players.CharacterAutoLoads
-    summary: |-
+    summary: |
       Indicates whether `Class.Player.Character|characters` will respawn
       automatically.
-    description: |-
+    description: |
       This property indicates whether `Class.Player.Character|characters` will
       respawn automatically. The default value is true.
 
       If this property is disabled (false), player
       `Class.Player.Character|characters` will not spawn until the
-      `Class.Player:LoadCharacterAsync()` function is called for each `Class.Player`,
-      including when players join the experience.
+      `Class.Player:LoadCharacterAsync()` function is called for each
+      `Class.Player`, including when players join the experience.
 
       This can be useful in experiences where players have finite lives, such as
-      competitive experiences in which players do not respawn until a round ends.
+      competitive experiences in which players do not respawn until a round
+      ends.
     code_samples:
       - player-respawn-timer
     type: boolean
@@ -113,15 +115,15 @@ properties:
     capabilities:
       - Players
   - name: Players.ClassicChat
-    summary: |-
+    summary: |
       Indicates whether or not classic chat is enabled; set by the
       `Class.Players:SetChatStyle()` method.
-    description: |-
+    description: |
       Indicates whether or not classic chat is enabled. This property is set by
       the `Class.Players:SetChatStyle()` method using the `Enum.ChatStyle` enum.
 
-      When this chat mode is enabled, the experience displays chats in a bubble above
-      the sender's head.
+      When this chat mode is enabled, the experience displays chats in a bubble
+      above the sender's head.
 
       There are two other chat modes, `Class.Players.BubbleChat` and a chat mode
       where both classic and bubble chat are enabled.
@@ -143,8 +145,9 @@ properties:
       - Chat
       - Players
   - name: Players.LocalPlayer
-    summary: The `Class.Player` that the `Class.LocalScript` is running for.
-    description: |-
+    summary: |
+      The `Class.Player` that the `Class.LocalScript` is running for.
+    description: |
       This read-only property refers to the `Class.Player` whose client is
       running the experience.
 
@@ -178,7 +181,7 @@ properties:
       - ReadOnly
       - NotReplicated
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This property is a deprecated variant of `Class.Players.LocalPlayer` which
       should be used instead.
     security:
@@ -192,8 +195,9 @@ properties:
     capabilities:
       - Players
   - name: Players.MaxPlayers
-    summary: The maximum number of players that can be in a server.
-    description: |-
+    summary: |
+      The maximum number of players that can be in a server.
+    description: |
       This property determines the maximum number of players that can be in a
       server. This property can only be set through a specific place's settings
       on the [Creator Dashboard](https://create.roblox.com/dashboard/creations)
@@ -215,8 +219,9 @@ properties:
     capabilities:
       - Players
   - name: Players.NumPlayers
-    summary: Returns the number of people in the server at the current time.
-    description: |-
+    summary: |
+      Returns the number of people in the server at the current time.
+    description: |
       This property indicates the number of people in the server at the current
       time. It is read only. Meaning it cannot be written to, only read.
     code_samples: []
@@ -225,7 +230,7 @@ properties:
       - ReadOnly
       - NotReplicated
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item is deprecated. Instead, of using this item, you should count the
       number of players returned by `Class.Players:GetPlayers()`.
     security:
@@ -239,8 +244,9 @@ properties:
     capabilities:
       - Players
   - name: Players.numPlayers
-    summary: Returns the number of people in the server at the current time.
-    description: |-
+    summary: |
+      Returns the number of people in the server at the current time.
+    description: |
       This property indicates the number of people in the server at the current
       time. It is read only. Meaning it cannot be written to, only read.
     code_samples: []
@@ -250,7 +256,7 @@ properties:
       - ReadOnly
       - NotReplicated
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This property is a deprecated variant of `Class.Players.NumPlayers` which
       has also been deprecated. Neither property should be used in new work.
       Instead, you should count the number of players returned by
@@ -266,8 +272,9 @@ properties:
     capabilities:
       - Players
   - name: Players.PreferredPlayers
-    summary: The preferred number of players for a server.
-    description: |-
+    summary: |
+      The preferred number of players for a server.
+    description: |
       This property indicates the number of players to which Roblox's matchmaker
       will fill servers. This number will be less than the maximum number of
       players (`Class.Players.MaxPlayers`) supported by the experience.
@@ -288,8 +295,9 @@ properties:
     capabilities:
       - Players
   - name: Players.RespawnTime
-    summary: Controls the amount of time taken for a players character to respawn.
-    description: |-
+    summary: |
+      Controls the amount of time taken for a players character to respawn.
+    description: |
       This property controls the time, in seconds, it takes for a player to
       respawn when `Class.Players.CharacterAutoLoads` is true. It defaults to
       5.0 seconds.
@@ -335,12 +343,12 @@ properties:
       - Players
 methods:
   - name: Players:BanAsync
-    summary: |-
+    summary: |
       Bans users from your experience, with options to specify duration, reason,
       whether the ban applies to the entire universe or just the current place,
       and more. This method is enabled and disabled by the
       `Class.Players.BanningEnabled` property, which you can toggle in Studio.
-    description: |-
+    description: |
       The `Class.Players:BanAsync()` method allows you to easily ban users who
       violate your experience's guidelines. You can specify the ban duration,
       enable the ban to propagate to suspected alternate accounts, and provide a
@@ -426,7 +434,7 @@ methods:
       - name: config
         type: Dictionary
         default:
-        summary: |-
+        summary: |
           - `UserIds` (required; array) — Array of `Class.Player.UserId|UserIds`
             of players to be banned. Max size is `50`.
 
@@ -458,8 +466,9 @@ methods:
     capabilities:
       - Players
   - name: Players:Chat
-    summary: Makes the local player chat the given message.
-    description: |-
+    summary: |
+      Makes the local player chat the given message.
+    description: |
       This function makes the local player chat the given message. Since this
       item is protected, attempting to use it in a `Class.Script` or
       `Class.LocalScript` will cause an error.
@@ -473,7 +482,8 @@ methods:
       - name: message
         type: string
         default:
-        summary: The message chatted.
+        summary: |
+          The message chatted.
     returns:
       - type: ()
         summary: ''
@@ -484,28 +494,35 @@ methods:
     capabilities:
       - Players
   - name: Players:CreateHumanoidModelFromDescriptionAsync
-    summary: Returns a character `Class.Model` equipped with everything specified in the passed in `Class.HumanoidDescription`.
-    description: |-
-      Returns a character `Class.Model` equipped with everything specified in the passed
-      in `Class.HumanoidDescription`, and is R6 or R15 as specified by `rigType`.
+    summary: |
+      Returns a character `Class.Model` equipped with everything specified in
+      the passed in `Class.HumanoidDescription`.
+    description: |
+      Returns a character `Class.Model` equipped with everything specified in
+      the passed in `Class.HumanoidDescription`, and is R6 or R15 as specified
+      by `rigType`.
     code_samples:
       - create-humanoid-model-from-description
     parameters:
       - name: description
         type: HumanoidDescription
         default:
-        summary: Specifies the appearance of the returned character.
+        summary: |
+          Specifies the appearance of the returned character.
       - name: rigType
         type: HumanoidRigType
         default:
-        summary: Specifies whether the returned character will be R6 or R15.
+        summary: |
+          Specifies whether the returned character will be R6 or R15.
       - name: assetTypeVerification
         type: AssetTypeVerification
         default: Default
-        summary: The asset type verification mode.
+        summary: |
+          The asset type verification mode.
     returns:
       - type: Model
-        summary: A `Class.Humanoid` character `Class.Model`.
+        summary: |
+          A `Class.Humanoid` character `Class.Model`.
     tags:
       - Yields
     deprecation_message: ''
@@ -515,39 +532,47 @@ methods:
       - Avatar
       - Players
   - name: Players:CreateHumanoidModelFromDescription
-    summary: Returns a character `Class.Model` equipped with everything specified in the passed in `Class.HumanoidDescription`.
+    summary: |
+      Returns a character `Class.Model` equipped with everything specified in
+      the passed in `Class.HumanoidDescription`.
     description: ''
     code_samples: []
     parameters:
       - name: description
         type: HumanoidDescription
         default:
-        summary: Specifies the appearance of the returned character.
+        summary: |
+          Specifies the appearance of the returned character.
       - name: rigType
         type: HumanoidRigType
         default:
-        summary: Specifies whether the returned character will be R6 or R15.
+        summary: |
+          Specifies whether the returned character will be R6 or R15.
       - name: assetTypeVerification
         type: AssetTypeVerification
         default: Default
-        summary: The asset type verification mode.
+        summary: |
+          The asset type verification mode.
     returns:
       - type: Model
-        summary: A `Class.Humanoid` character `Class.Model`.
+        summary: |
+          A `Class.Humanoid` character `Class.Model`.
     tags:
       - Yields
       - Deprecated
-    deprecation_message: This method has been superseded by `Class.Players:CreateHumanoidModelFromDescription()|CreateHumanoidModelFromDescription()`.
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Players:CreateHumanoidModelFromDescription()|CreateHumanoidModelFromDescription()`.
     security: None
     thread_safety: Unsafe
     capabilities:
       - Avatar
       - Players
   - name: Players:CreateHumanoidModelFromUserIdAsync
-    summary: |-
+    summary: |
       Returns a character Model set-up with everything equipped to match the
       avatar of the user specified by the passed in userId.
-    description: |-
+    description: |
       Returns a character Model set-up with everything equipped to match the
       avatar of the user specified by the passed in userId. This includes
       whether that character is currently R6 or R15.
@@ -557,12 +582,13 @@ methods:
       - name: userId
         type: int64
         default:
-        summary: |-
+        summary: |
           The userId for a Roblox user. (The UserId is the number in the profile
           of the user e.g www.roblox.com/users/1/profile).
     returns:
       - type: Model
-        summary: A Humanoid character Model.
+        summary: |
+          A Humanoid character Model.
     tags:
       - Yields
     deprecation_message: ''
@@ -571,7 +597,7 @@ methods:
     capabilities:
       - Players
   - name: Players:CreateHumanoidModelFromUserId
-    summary: |-
+    summary: |
       Returns a character Model set-up with everything equipped to match the
       avatar of the user specified by the passed in userId.
     description: ''
@@ -581,26 +607,29 @@ methods:
       - name: userId
         type: int64
         default:
-        summary: |-
+        summary: |
           The userId for a Roblox user. (The UserId is the number in the profile
           of the user e.g www.roblox.com/users/1/profile).
     returns:
       - type: Model
-        summary: A Humanoid character Model.
+        summary: |
+          A Humanoid character Model.
     tags:
       - Yields
       - Deprecated
-    deprecation_message: This method has been superseded by `Class.Players:CreateHumanoidModelFromUserIdAsync()|CreateHumanoidModelFromUserIdAsync()`.
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Players:CreateHumanoidModelFromUserIdAsync()|CreateHumanoidModelFromUserIdAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
       - Players
   - name: Players:GetBanHistoryAsync
-    summary: |-
+    summary: |
       Retrieves the ban and unban history of any user within the experience's
       universe. This method is enabled and disabled by the
       `Class.Players.BanningEnabled` property, which you can toggle in Studio.
-    description: |-
+    description: |
       Retrieves the ban and unban history of any user within the experience's
       universe. This method returns a `Class.BanHistoryPages` instance that
       inherits from `Class.Pages`. This method is enabled and disabled by the
@@ -621,7 +650,8 @@ methods:
         summary: ''
     returns:
       - type: BanHistoryPages
-        summary: See `Class.BanHistoryPages` for return reference.
+        summary: |
+          See `Class.BanHistoryPages` for return reference.
     tags:
       - Yields
     deprecation_message: ''
@@ -630,10 +660,10 @@ methods:
     capabilities:
       - Players
   - name: Players:GetCharacterAppearanceAsync
-    summary: |-
+    summary: |
       Returns a `Class.Model` containing the assets which the player is wearing,
       excluding gear.
-    description: |-
+    description: |
       This function returns a `Class.Model` containing the assets which the
       player is wearing, excluding gear.
 
@@ -650,7 +680,8 @@ methods:
       - name: userId
         type: int64
         default:
-        summary: The `Class.Player.UserId` of the specified player.
+        summary: |
+          The `Class.Player.UserId` of the specified player.
     returns:
       - type: Model
         summary: ''
@@ -663,11 +694,11 @@ methods:
     capabilities:
       - Players
   - name: Players:GetCharacterAppearanceInfoAsync
-    summary: Returns information about the character appearance of a given user.
-    description: |-
-      This function returns information about a player's avatar
-      on the Roblox website in the form of a dictionary. It is not to be
-      confused with
+    summary: |
+      Returns information about the character appearance of a given user.
+    description: |
+      This function returns information about a player's avatar on the Roblox
+      website in the form of a dictionary. It is not to be confused with
       `Class.Players:GetCharacterAppearanceAsync()|GetCharacterAppearanceAsync`,
       which actually loads the assets described by this method. You can use
       `Class.InsertService:LoadAsset()` to load the assets that are used in the
@@ -771,10 +802,11 @@ methods:
       - name: userId
         type: int64
         default:
-        summary: The \*_userId_ of the specified player.
+        summary: |
+          The \*_userId_ of the specified player.
     returns:
       - type: Dictionary
-        summary: |-
+        summary: |
           A dictionary containing information about the character appearance of
           a given user.
     tags:
@@ -785,10 +817,10 @@ methods:
     capabilities:
       - Players
   - name: Players:GetFriendsAsync
-    summary: |-
+    summary: |
       Returns a `Class.FriendPages` object which contains information for all of
       the given player's connections.
-    description: |-
+    description: |
       The GetFriends `Class.Players` function returns a `Class.FriendPages`
       object which contains information for all of the given user's connections.
       The items within the `Class.FriendPages` object are tables with the
@@ -827,7 +859,8 @@ methods:
       - name: userId
         type: int64
         default:
-        summary: The user ID of the player being specified.
+        summary: |
+          The user ID of the player being specified.
     returns:
       - type: FriendPages
         summary: ''
@@ -839,10 +872,10 @@ methods:
     capabilities:
       - Players
   - name: Players:GetHumanoidDescriptionFromOutfitIdAsync
-    summary: |-
+    summary: |
       Returns the HumanoidDescription for a specified outfit, which will be set
       with the parts/colors/Animations etc of the outfit.
-    description: |-
+    description: |
       Returns the HumanoidDescription for a specified outfitId, which will be
       set with the parts/colors/Animations etc of the outfit. An outfit can be
       one created by a user, or it can be the outfit for a bundle created by
@@ -853,10 +886,11 @@ methods:
       - name: outfitId
         type: int64
         default:
-        summary: The ID of the outfit for which the HumanoidDescription is sought.
+        summary: |
+          The ID of the outfit for which the HumanoidDescription is sought.
     returns:
       - type: HumanoidDescription
-        summary: |-
+        summary: |
           HumanoidDescription initialized with the specification for the passed
           in outfitId.
     tags:
@@ -868,7 +902,7 @@ methods:
       - Avatar
       - Players
   - name: Players:GetHumanoidDescriptionFromOutfitId
-    summary: |-
+    summary: |
       Returns the HumanoidDescription for a specified outfit, which will be set
       with the parts/colors/Animations etc of the outfit.
     description: ''
@@ -878,26 +912,29 @@ methods:
       - name: outfitId
         type: int64
         default:
-        summary: The ID of the outfit for which the HumanoidDescription is sought.
+        summary: |
+          The ID of the outfit for which the HumanoidDescription is sought.
     returns:
       - type: HumanoidDescription
-        summary: |-
+        summary: |
           HumanoidDescription initialized with the specification for the passed
           in outfitId.
     tags:
       - Yields
       - Deprecated
-    deprecation_message: This method has been superseded by `Class.Players:GetHumanoidDescriptionFromOutfitIdAsync()|GetHumanoidDescriptionFromOutfitIdAsync()`.
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Players:GetHumanoidDescriptionFromOutfitIdAsync()|GetHumanoidDescriptionFromOutfitIdAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
       - Avatar
       - Players
   - name: Players:GetHumanoidDescriptionFromUserIdAsync
-    summary: |-
+    summary: |
       Returns a HumanoidDescription which specifies everything equipped for the
       avatar of the user specified by the passed in userId.
-    description: |-
+    description: |
       Returns a HumanoidDescription which specifies everything equipped for the
       avatar of the user specified by the passed in userId. Also includes scales
       and body colors.
@@ -907,12 +944,12 @@ methods:
       - name: userId
         type: int64
         default:
-        summary: |-
+        summary: |
           The userId for a Roblox user. (The UserId is the number in the profile
           of the user e.g www.roblox.com/users/1/profile).
     returns:
       - type: HumanoidDescription
-        summary: |-
+        summary: |
           HumanoidDescription initialized with the passed in user's avatar
           specification.
     tags:
@@ -924,7 +961,7 @@ methods:
       - Avatar
       - Players
   - name: Players:GetHumanoidDescriptionFromUserId
-    summary: |-
+    summary: |
       Returns a HumanoidDescription which specifies everything equipped for the
       avatar of the user specified by the passed in userId.
     description: ''
@@ -934,28 +971,30 @@ methods:
       - name: userId
         type: int64
         default:
-        summary: |-
+        summary: |
           The userId for a Roblox user. (The UserId is the number in the profile
           of the user e.g www.roblox.com/users/1/profile).
     returns:
       - type: HumanoidDescription
-        summary: |-
+        summary: |
           HumanoidDescription initialized with the passed in user's avatar
           specification.
     tags:
       - Yields
       - Deprecated
-    deprecation_message: This method has been superseded by `Class.Players.GetHumanoidDescriptionFromUserIdAsync|GetHumanoidDescriptionFromUserIdAsync()`.
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Players.GetHumanoidDescriptionFromUserIdAsync|GetHumanoidDescriptionFromUserIdAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
       - Avatar
       - Players
   - name: Players:GetNameFromUserIdAsync
-    summary: |-
+    summary: |
       Sends a query to the Roblox website for the username of an account with a
       given `Class.Player.UserId|UserId`.
-    description: |-
+    description: |
       The GetNameFromUserIdAsync `Class.Players` function will send a query to
       the Roblox website asking what the username is of the account with the
       given `Class.Player.UserId|UserId`.
@@ -972,10 +1011,12 @@ methods:
       - name: userId
         type: int64
         default:
-        summary: The `Class.Player.UserId` of the player being specified.
+        summary: |
+          The `Class.Player.UserId` of the player being specified.
     returns:
       - type: string
-        summary: The name of a user with the specified `Class.Player.UserId`.
+        summary: |
+          The name of a user with the specified `Class.Player.UserId`.
     tags:
       - Yields
     deprecation_message: ''
@@ -984,10 +1025,10 @@ methods:
     capabilities:
       - Players
   - name: Players:GetPlayerByUserId
-    summary: |-
+    summary: |
       Returns the `Class.Player` with the given `Class.Player.UserId|UserId` if
       they are in-experience.
-    description: |-
+    description: |
       This function searches each `Class.Player` in `Class.Players` for one
       whose `Class.Player.UserId` matches the given `userId`. If such a player
       does not exist, it returns `nil`.
@@ -1003,7 +1044,8 @@ methods:
       - name: userId
         type: int64
         default:
-        summary: The `Class.Player.UserId` of the player being specified.
+        summary: |
+          The `Class.Player.UserId` of the player being specified.
     returns:
       - type: Player
         summary: ''
@@ -1014,10 +1056,10 @@ methods:
     capabilities:
       - Players
   - name: Players:GetPlayerFromCharacter
-    summary: |-
+    summary: |
       Returns the `Class.Player` whose `Class.Player.Character` matches the
       given instance, or `nil` if one cannot be found.
-    description: |-
+    description: |
       This function returns the `Class.Player` associated with the given
       `Class.Player.Character`, or `nil` if one cannot be found. It is
       equivalent to the following function:
@@ -1044,7 +1086,8 @@ methods:
       - name: character
         type: Model
         default:
-        summary: A character instance that you want to get the player from.
+        summary: |
+          A character instance that you want to get the player from.
     returns:
       - type: Player
         summary: ''
@@ -1055,8 +1098,9 @@ methods:
     capabilities:
       - Players
   - name: Players:GetPlayers
-    summary: Returns a table of all presently connected `Class.Player` objects.
-    description: |-
+    summary: |
+      Returns a table of all presently connected `Class.Player` objects.
+    description: |
       This method returns a table of all presently connected `Class.Player`
       objects. It functions the same way `Class.Instance:GetChildren()` would
       except that it only returns `Class.Player` objects found under
@@ -1072,8 +1116,8 @@ methods:
       ```
 
       Scripts that connect to `Class.Players.PlayerAdded` are often trying to
-      process every Player that connects to the experience. This method is useful for
-      iterating over already-connected players that wouldn't fire
+      process every Player that connects to the experience. This method is
+      useful for iterating over already-connected players that wouldn't fire
       `Class.Players.PlayerAdded|PlayerAdded`. Using this method ensures that no
       player is missed!
 
@@ -1094,7 +1138,8 @@ methods:
     parameters: []
     returns:
       - type: Instances
-        summary: A table containing all the players in the server.
+        summary: |
+          A table containing all the players in the server.
     tags: []
     deprecation_message: ''
     security: None
@@ -1111,7 +1156,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This function is a deprecated variant of `Class.Players:GetPlayers()`
       which should be used instead.
     security: None
@@ -1119,10 +1164,10 @@ methods:
     capabilities:
       - Players
   - name: Players:GetUserIdFromNameAsync
-    summary: |-
+    summary: |
       Sends a query to the Roblox website for the `Class.Player.UserId|userId`
       of an account with a given username.
-    description: |-
+    description: |
       This function will send a query to the Roblox website asking what the
       `Class.Player.UserId` is of the account with the given `Class.Player`
       name.
@@ -1139,10 +1184,12 @@ methods:
       - name: userName
         type: string
         default:
-        summary: The username of the player being specified.
+        summary: |
+          The username of the player being specified.
     returns:
       - type: int64
-        summary: The `Class.Player.UserId` of a user whose name is specified.
+        summary: |
+          The `Class.Player.UserId` of a user whose name is specified.
     tags:
       - Yields
     deprecation_message: ''
@@ -1151,10 +1198,10 @@ methods:
     capabilities:
       - Players
   - name: Players:GetUserThumbnailAsync
-    summary: |-
+    summary: |
       Returns the content URL of a player thumbnail given the size and type, as
       well as a boolean describing if the image is ready to use.
-    description: |-
+    description: |
       This function returns the content URL of an image of a player's avatar
       given their `Class.Player.UserId|UserId`, the desired image size as a
       `Enum.ThumbnailSize` enum, and the desired type as a `Enum.ThumbnailType`
@@ -1168,18 +1215,21 @@ methods:
       - name: userId
         type: int64
         default:
-        summary: The `Class.Player.UserId` of the player being specified.
+        summary: |
+          The `Class.Player.UserId` of the player being specified.
       - name: thumbnailType
         type: ThumbnailType
         default:
-        summary: A `Enum.ThumbnailType` describing the type of thumbnail.
+        summary: |
+          A `Enum.ThumbnailType` describing the type of thumbnail.
       - name: thumbnailSize
         type: ThumbnailSize
         default:
-        summary: A `Enum.ThumbnailSize` specifying the size of the thumbnail.
+        summary: |
+          A `Enum.ThumbnailSize` specifying the size of the thumbnail.
     returns:
       - type: Tuple
-        summary: |-
+        summary: |
           A tuple containing the content URL of a user thumbnail based on the
           specified parameters, and a bool describing if the image is ready to
           be used or not.
@@ -1204,7 +1254,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This function is a deprecated variant of
       `Class.Players:GetPlayerFromCharacter()` which should be used in new work.
     security: None
@@ -1212,10 +1262,11 @@ methods:
     capabilities:
       - Players
   - name: Players:players
-    summary: Returns a list of players in an experience.
-    description: |-
-      This function was once used to return a list of players in an experience, but
-      has since been deprecated in favor of `Class.Players:GetPlayers()`
+    summary: |
+      Returns a list of players in an experience.
+    description: |
+      This function was once used to return a list of players in an experience,
+      but has since been deprecated in favor of `Class.Players:GetPlayers()`
     code_samples: []
     parameters: []
     returns:
@@ -1223,7 +1274,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item has been superseded by `Class.Players:GetPlayers()` which should
       be used in all new work.
     security: None
@@ -1231,23 +1282,25 @@ methods:
     capabilities:
       - Players
   - name: Players:SetChatStyle
-    summary: |-
+    summary: |
       Sets whether BubbleChat and ClassicChat are being used, and tells TeamChat
       and `Class.Chat` what to do.
-    description: |-
+    description: |
       This function sets whether BubbleChat and ClassicChat are being used, and
       tells TeamChat and Chat what to do using the `Enum.ChatStyle` enum. Since
       this item is protected, attempting to use it in a `Class.Script` or
       `Class.LocalScript` will cause an error.
 
-      This function is used internally when the chat mode is set by the experience.
+      This function is used internally when the chat mode is set by the
+      experience.
     code_samples:
       - setting-a-player-s-chat-style
     parameters:
       - name: style
         type: ChatStyle
         default: Classic
-        summary: The specified chat style being set.
+        summary: |
+          The specified chat style being set.
     returns:
       - type: ()
         summary: ''
@@ -1258,10 +1311,10 @@ methods:
     capabilities:
       - Players
   - name: Players:TeamChat
-    summary: |-
+    summary: |
       Makes the local player chat the given message, which will only be viewable
       by users on the same team.
-    description: |-
+    description: |
       This function makes the `Class.Players.LocalPlayer` chat the given
       message, which will only be viewable by users on the same team. Since this
       item is protected, attempting to use it in a `Class.Script` or
@@ -1275,7 +1328,8 @@ methods:
       - name: message
         type: string
         default:
-        summary: The message being chatted.
+        summary: |
+          The message being chatted.
     returns:
       - type: ()
         summary: ''
@@ -1286,11 +1340,11 @@ methods:
     capabilities:
       - Players
   - name: Players:UnbanAsync
-    summary: |-
+    summary: |
       Unbans players banned from `Class.Players:BanAsync()` or the User
       Restrictions Open Cloud API. This method is enabled and disabled by the
       `Class.Players.BanningEnabled` property, which you can toggle in Studio.
-    description: |-
+    description: |
       Unbans players banned from `Class.Players:BanAsync()` or the
       [User Restrictions Open Cloud API](/cloud/reference/UserRestriction). This
       method is enabled and disabled by the `Class.Players.BanningEnabled`
@@ -1336,7 +1390,7 @@ methods:
       - name: config
         type: Dictionary
         default:
-        summary: |-
+        summary: |
           <table><thead>
           <tr>
             <th>Name</th>
@@ -1368,14 +1422,15 @@ methods:
       - Players
 events:
   - name: Players.PlayerAdded
-    summary: Fires when a player enters the experience.
-    description: |-
+    summary: |
+      Fires when a player enters the experience.
+    description: |
       This event fires when a player enters the experience, such as loading the
       player's saved `Class.GlobalDataStore` data.
 
       This can be used alongside the `Class.Players.PlayerRemoving` event, which
-      fires when a player is about to leave the experience. For instance, if you would
-      like print a message every time a new player joins or leaves:
+      fires when a player is about to leave the experience. For instance, if you
+      would like print a message every time a new player joins or leaves:
 
       ```lua
       local Players = game:GetService("Players")
@@ -1397,8 +1452,8 @@ events:
       Note that this event does not work as expected in a solo playtest mode
       because the player is created before scripts run that connect to
       `Class.Players.PlayerAdded|PlayerAdded`. To handle this case, as well as
-      cases in which the script is added into the experience after a player enters,
-      create an `onPlayerAdded()` function that you can call to handle a
+      cases in which the script is added into the experience after a player
+      enters, create an `onPlayerAdded()` function that you can call to handle a
       player's entrance.
     code_samples:
       - Players-PlayerAdded1
@@ -1406,25 +1461,26 @@ events:
       - name: player
         type: Player
         default:
-        summary: An instance of the player that joined the experience.
+        summary: |
+          An instance of the player that joined the experience.
     tags: []
     deprecation_message: ''
     security: None
     capabilities:
       - Players
   - name: Players.PlayerMembershipChanged
-    summary: |-
+    summary: |
       Fires when the experience server recognizes that a player's membership has
       changed.
-    description: |-
+    description: |
       This event fires when the experience server recognizes that a player's
       membership has changed. Note, however, that the server will only attempt
       to check and update the membership **after** the Premium modal has been
       closed. Thus, to account for cases where the user purchases Premium
       **outside** of the experience while playing, you must still prompt them to
       purchase Premium; this will then show a message telling them they're
-      already upgraded and, once they close the modal, the server will
-      update their membership and trigger this event.
+      already upgraded and, once they close the modal, the server will update
+      their membership and trigger this event.
 
       To learn more about and incorporating Premium into your experience and
       monetizing with the engagement-based payouts system, see
@@ -1449,18 +1505,19 @@ events:
     capabilities:
       - Players
   - name: Players.PlayerRemoving
-    summary: Fires when a player is about to leave the experience.
-    description: |-
-      This event fires right before a `Class.Player` leaves the
-      experience, before `Class.Instance.ChildRemoved|ChildRemoved`
-      fires on `Class.Players`, and behaves somewhat similarly to
+    summary: |
+      Fires when a player is about to leave the experience.
+    description: |
+      This event fires right before a `Class.Player` leaves the experience,
+      before `Class.Instance.ChildRemoved|ChildRemoved` fires on
+      `Class.Players`, and behaves somewhat similarly to
       `Class.Instance.DescendantRemoving`. Since it fires before the actual
       removal of a `Class.Player`, this event is useful for storing player data
       using a `Class.GlobalDataStore`.
 
       This can be used alongside the `Class.Player.PlayerAdded` event, which
-      fires when a player joins the experience. For instance, to print a message every
-      time a new player joins or leaves:
+      fires when a player joins the experience. For instance, to print a message
+      every time a new player joins or leaves:
 
       ```lua
       local Players = game:GetService("Players")
@@ -1484,29 +1541,32 @@ events:
       - name: player
         type: Player
         default:
-        summary: An instance of the player that is leaving.
+        summary: |
+          An instance of the player that is leaving.
       - name: reason
         type: PlayerExitReason
         default:
-        summary: Enum.PlayerExitReason in attempt to inform why.
+        summary: |
+          Enum.PlayerExitReason in attempt to inform why.
     tags: []
     deprecation_message: ''
     security: None
     capabilities:
       - Players
   - name: Players.UserSubscriptionStatusChanged
-    summary: |-
-      Fires when the experience server recognizes that the user's status for a certain
-      subscription has changed.
-    description: |-
-      This event fires when the experience server recognizes that the user's status
-      for a certain subscription has changed. Note that the server only attempts to
-      check and update the status **after** the Subscription Purchase modal has been
-      closed. To account for cases in which the user purchases the subscription
-      **outside** of the experience while playing, you must still prompt them to
-      purchase the subscription; the prompt shows a message telling the user they're
-      already subscribed, and after they close the modal, the server updates their
-      subscription status and triggers this event.
+    summary: |
+      Fires when the experience server recognizes that the user's status for a
+      certain subscription has changed.
+    description: |
+      This event fires when the experience server recognizes that the user's
+      status for a certain subscription has changed. Note that the server only
+      attempts to check and update the status **after** the Subscription
+      Purchase modal has been closed. To account for cases in which the user
+      purchases the subscription **outside** of the experience while playing,
+      you must still prompt them to purchase the subscription; the prompt shows
+      a message telling the user they're already subscribed, and after they
+      close the modal, the server updates their subscription status and triggers
+      this event.
 
       Note that only server scripts receive this event.
     code_samples: []
@@ -1514,11 +1574,13 @@ events:
       - name: user
         type: Player
         default:
-        summary: User whose subscription status has changed.
+        summary: |
+          User whose subscription status has changed.
       - name: subscriptionId
         type: string
         default:
-        summary: The ID of the subscription with a status change.
+        summary: |
+          The ID of the subscription with a status change.
     tags: []
     deprecation_message: ''
     security: None

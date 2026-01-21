@@ -74,25 +74,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-  - name: ModerationService:InternalCreateReviewableContentAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: config
-        type: Dictionary
-        default:
-        summary: ''
-    returns:
-      - type: string
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - InternalTest
   - name: ModerationService:InternalRequestReviewableContentReviewAsync
     summary: ''
     description: ''
@@ -113,23 +94,4 @@ methods:
     capabilities:
       - InternalTest
 events: []
-callbacks:
-  - name: ModerationService.InternalProcessReviewableContentEvent
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: event
-        type: Dictionary
-        default:
-        summary: ''
-    returns:
-      - type: boolean
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - InternalTest
-    writeCapabilities: []
+callbacks: []
