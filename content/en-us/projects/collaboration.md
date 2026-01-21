@@ -229,7 +229,7 @@ Live Scripting is **enabled** by default. If you and your team prefer to collabo
 Through **Drafts** mode, you can independently edit and test scripts without affecting the experience for others. After you finish drafting a script, you can [commit](#commit-drafts) it to the shared repository and use [collaborative testing](../studio/testing-modes.md#collaborative-testing) to test the committed version with others.
 
 <Alert severity="warning">
-Drafts Mode is **disabled** by default. To enable it, open Studio's **File**&nbsp;⟩ **Game Settings** window, select the **Other** tab, and turn on **Enable Drafts Mode**.
+Drafts Mode is **disabled** by default. To enable it, open Studio's **File**&nbsp;⟩ **Experience Settings** window, select the **Other** tab, and turn on **Enable Drafts Mode**.
 
 Note that all collaborators will need to exit the session for the change to take effect. Alternatively, you can [disable collaboration](#disable-collaboration) and then reenable it to restart the session.
 </Alert>

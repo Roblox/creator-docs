@@ -8,7 +8,7 @@ A **developer product** is an item or ability that a user can purchase more than
 <img src="../../assets/monetization/developer-products/Buy-Product-Example.jpg" />
 
 <Alert severity="info">
-   For items or abilities that a user should only purchase **once**, such as a special weapon or a permanent power-up, see [Passes](../../production/monetization/game-passes.md).
+   For items or abilities that a user should only purchase **once**, such as a special weapon or a permanent power-up, see [Passes](../../production/monetization/passes.md).
 </Alert>
 
 ## Create a developer product

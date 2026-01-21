@@ -73,7 +73,7 @@ To use the dynamic price check tool:
 
 To disable the dynamic price check tool, go to the **Dynamic Price Check** page and click **Disable**.
 
-For more information about hard-coded versus dynamically-scripted product prices, see [Check for dynamic pricing](./price-optimization.md#check-for-dynamic-pricing) in the Price optimization page. For more information about selling passes and developer products with `MarketplaceService` functions, see [Sell a pass inside your experience](./game-passes.md#inside-your-experience) and [Sell a developer product inside your experience](./developer-products.md#inside-your-experience).
+For more information about hard-coded versus dynamically-scripted product prices, see [Check for dynamic pricing](./price-optimization.md#check-for-dynamic-pricing) in the Price optimization page. For more information about selling passes and developer products with `MarketplaceService` functions, see [Sell a pass inside your experience](./passes.md#inside-your-experience) and [Sell a developer product inside your experience](./developer-products.md#inside-your-experience).
 
 ## Protect your trades and gifts
 

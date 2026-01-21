@@ -78,9 +78,9 @@ The [immersive ads](../../production/monetization/immersive-ads.md) system allow
 
 ### Passes
 
-A [pass](../../production/monetization/game-passes.md) allows you to charge a **one-time Robux fee** in order for users to access special privileges within an experience, such as entry to a restricted area, an in-experience avatar item, or a permanent power-up.
+A [pass](../../production/monetization/passes.md) allows you to charge a **one-time Robux fee** in order for users to access special privileges within an experience, such as entry to a restricted area, an in-experience avatar item, or a permanent power-up.
 
-<img src="../../assets/monetization/game-passes/passes-sample.png" width="800" />
+<img src="../../assets/monetization/passes/passes-sample.png" width="800" />
 
 ### Developer Products
 

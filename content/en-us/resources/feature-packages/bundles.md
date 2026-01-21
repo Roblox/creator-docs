@@ -51,7 +51,7 @@ To get the packages from your inventory into your experience:
 4. Click the **Feature Package Core** tile, then the **Bundle Feature Package** tile. Both package folders display in the **Explorer** window.
 5. Drag the package folders into `Class.ReplicatedStorage`.
 6. Allow data store calls to track player purchases with the packages.
-   1. Open Studio's **File**&nbsp;⟩ **Game Settings** window.
+   1. Open Studio's **File** ⟩ **Experience Settings** window.
    1. Navigate to the **Security** tab, then enable **Enable Studio Access to API Services**.
 
 ## Define currencies

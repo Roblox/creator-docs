@@ -3,7 +3,7 @@ title: Subscriptions
 description: Subscriptions within experiences let you offer users recurring benefits for a monthly fee.
 ---
 
-**Subscriptions** within experiences let you offer users recurring benefits for a monthly fee. Similar to [passes](./game-passes.md), the major difference between subscriptions and passes is that the benefits of a pass are granted in perpetuity, while the benefits of a subscription are contingent on the user paying a monthly fee. Subscriptions on Roblox have the following characteristics:
+**Subscriptions** within experiences let you offer users recurring benefits for a monthly fee. Similar to [passes](./passes.md), the major difference between subscriptions and passes is that the benefits of a pass are granted in perpetuity, while the benefits of a subscription are contingent on the user paying a monthly fee. Subscriptions on Roblox have the following characteristics:
 
 - **Auto-renewal:** Subscriptions are auto-renewing, not one-time purchases, and are priced in local currency.
 - **Robux payout:** You receive subscription revenue in Robux. For more details, see [Earn with subscriptions](#earn-with-subscriptions).

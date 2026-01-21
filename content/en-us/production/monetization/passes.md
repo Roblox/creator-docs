@@ -26,13 +26,13 @@ To create a pass:
 
 <GridContainer numColumns="2">
   <figure>
-    <img alt="Good circular trimming" src="../../assets/monetization/game-passes/Circular-Trimming-Good.png" />
+    <img alt="Good circular trimming" src="../../assets/monetization/passes/Circular-Trimming-Good.png" />
     <figcaption>
       <Alert severity="success">Includes relevant content</Alert>
     </figcaption>
   </figure>
   <figure>
-    <img alt="Bad circular trimming" src="../../assets/monetization/game-passes/Circular-Trimming-Bad.png" />
+    <img alt="Bad circular trimming" src="../../assets/monetization/passes/Circular-Trimming-Bad.png" />
     <figcaption>
       <Alert severity="error">Crops important content</Alert>
     </figcaption>
@@ -290,13 +290,13 @@ Promoted passes are given to users for free.
 
 To help more users discover your experience, you can opt-in to have your passes featured on Roblox's [Buy Robux](https://www.roblox.com/upgrades/robux) page. Opting-in to promote your passes can help increase the time and Robux users spend in your experience. There is no limit to the number of passes you can promote.
 
-Users are shown passes that are relevant to their gameplay history and engagement on the platform. They are not shown passes that they already own.
+Users are shown passes that are relevant to their play history and engagement on the platform. They are not shown passes that they already own.
 
-<img src="../../assets/monetization/game-passes/PromotedPass.png" width="60%" />
+<img src="../../assets/monetization/passes/PromotedPass.png" width="60%" />
 
 When users purchase an eligible Robux package, they receive the promoted pass and are prompted to claim their pass by joining your experience.
 
-<img src="../../assets/monetization/game-passes/PromotedPass2.png" width="60%" />
+<img src="../../assets/monetization/passes/PromotedPass2.png" width="60%" />
 
 <Alert severity="info">
 For best results, we recommend that you create a unique pass specifically for the **Buy Robux** page.
@@ -335,4 +335,4 @@ To access pass analytics:
 2. Go to **Monetization** ⟩ **Passes**.
 3. Select the **Analytics** tab.
 
-<img src="../../assets/monetization/game-passes/passes-analytics-2.png" width="100%" />
+<img src="../../assets/monetization/passes/passes-analytics-2.png" width="100%" />

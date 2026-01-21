@@ -32,7 +32,7 @@ To enable Studio access to API services so that you can use data stores:
 
 1. Open the [Gold Rush create leaderboard tutorial - Start](https://www.roblox.com/games/123363025813820/Gold-Rush-create-leaderboard-tutorial-Start) file in Studio. This starting place file already includes the code from the [Save player data](./save-player-data.md) tutorial and the UI skeleton for the player leaderboard.
 2. [Publish your experience](../../../production/publishing/publish-experiences-and-places.md#publish-experiences).
-3. Back in Studio, go to **File** ⟩ **Game Settings** ⟩ **Security**.
+3. Back in Studio, go to **File** ⟩ **Experience Settings** ⟩ **Security**.
 4. Turn on **Enable Studio Access to API Services**.
 5. Save your changes.
 

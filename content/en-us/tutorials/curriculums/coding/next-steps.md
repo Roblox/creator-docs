@@ -15,13 +15,11 @@ To make your experience public:
 
 1. Using the steps from the **Test and save** chapter, publish your experience so others can see your latest changes.
 
-1. In the top-left corner of your computer, click **File** ⟩ **Game Settings**. The **Game Settings** window displays.
+1. In the top-left corner of your computer, click **File** ⟩ **Experience Settings**.
 
-1. In the **Game Settings** window,
+1. In the settings window:
    1. Go to the left bar and select the **Permissions** tab. New settings display.
    1. Set **Playability** to **Public**.
-
-   <img src="../../../assets/education/general/make-public.png" width="800" />
 
 1. Click the **Save** button. Now everyone on Roblox can play your experience!
 

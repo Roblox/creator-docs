@@ -180,7 +180,7 @@ The Experience Details Page aims to offer users comprehensive insights about the
 
 - **Maintaining up-to-date events**: Events are crucial for community engagement. Use [Experience Events](#experience-events) to inform users about upcoming events and drive traffic to your experience.
 - **Maintaining Roblox Groups and Guilded Channels**: Roblox Groups and Guilded offers the best way for creators to connect with and inform their communities. You can now view [Guilded announcements](https://devforum.roblox.com/t/introducing-announcements-for-roblox-groups/2907426) on Roblox groups, which strengthens community bonds.
-- **Increasing Monetization**: Boost revenue by adding [passes](./production/monetization/game-passes.md) and [subscriptions](./production/monetization/subscriptions.md) for your experience.
+- **Increasing Monetization**: Boost revenue by adding [passes](./production/monetization/passes.md) and [subscriptions](./production/monetization/subscriptions.md) for your experience.
 
 The Experience Details Page also provides additional recommendation opportunities by highlighting similar experiences, helping users discover more relevant content.
 

@@ -56,7 +56,7 @@ After implementation, you can use [analytics](#analytics) to understand key metr
 
 To set up a rewarded video ad inside your experience:
 
-1. In Studio, go to **Game Settings** ⟩ **Monetization**.
+1. In Studio, go to **File** ⟩ **Experience Settings** ⟩ **Monetization**.
 2. Check the **Enable Rewarded Video Ads** checkbox.
   <img src="../../assets/promotion/ads-manager/EnableRewardedVideoAdsToggle.png" width="750" />
 3. Select the reward you want to grant the user. If the reward doesn't already exist, [create a new developer product in the Creator Hub](../monetization/developer-products.md#create-a-developer-product). This developer product must have been created for the specific universe the place is in.

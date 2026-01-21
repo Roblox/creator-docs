@@ -12,7 +12,7 @@ This tutorial shows how to create a basic **data store**, save player data, and 
 By default, games tested in Studio cannot access data stores, so you must first enable them:
 
 1. [Publish](../../../../production/publishing/publish-experiences-and-places.md) the experience.
-2. Open Studio's **File**&nbsp;⟩ **Game Settings** window.
+2. Open Studio's **File** ⟩ **Experience Settings** window.
 3. In the **Security** section, turn on **Enable Studio Access to API Services** and click **Save**.
 
 ## Create a data store

@@ -5,9 +5,8 @@
 name: EditableImage
 type: class
 memory_category: Instances
-summary: |
-  Instance which allows for the runtime creation and manipulation of images.
-description: |
+summary: Instance which allows for the runtime creation and manipulation of images.
+description: |-
   `EditableImage` allows for the runtime creation and manipulation of images.
 
   To create a blank `EditableImage`, use
@@ -41,7 +40,7 @@ description: |
   For security purposes, using `EditableImage` fails by default for published
   experiences. To enable usage, you must be 13+ age verified and ID verified.
   After you are verified, open Studio's
-  [Game Settings](../../../studio/game-settings.md), select **Security**, and
+  [Experience Settings](../../../studio/experience-settings.md), select **Security**, and
   enable the **Allow Mesh&nbsp;&#47; Image APIs** toggle.
 
   #### Permissions
@@ -75,9 +74,8 @@ tags:
 deprecation_message: ''
 properties:
   - name: EditableImage.Size
-    summary: |
-      Size of the `EditableImage` in pixels.
-    description: |
+    summary: Size of the `EditableImage` in pixels.
+    description: |-
       Size of the `EditableImage` in pixels. The maximum size is
       1024&times;1024. An `EditableImage` cannot be resized; this property is
       read-only. In order to resize or crop an image, create a new
@@ -103,8 +101,7 @@ properties:
 methods:
   - name: EditableImage:Destroy
     summary: ''
-    description: |
-      Destroys the contents of the image, immediately reclaiming used memory.
+    description: Destroys the contents of the image, immediately reclaiming used memory.
     code_samples: []
     parameters: []
     returns:
@@ -116,9 +113,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableImage:DrawCircle
-    summary: |
-      Draws a circle at the specified point.
-    description: |
+    summary: Draws a circle at the specified point.
+    description: |-
       Draws a circle at the specified point on the `EditableImage`. If the
       circle is semi-transparent, it will be blended with the pixels behind it
       using source over blending.
@@ -127,29 +123,27 @@ methods:
       - name: center
         type: Vector2
         default:
-        summary: |
+        summary: |-
           Center of the circle, relative to the top-left corner of the
           `EditableImage`. Positions outside the canvas bounds are allowed.
       - name: radius
         type: int
         default:
-        summary: |
-          Radius of the circle in pixels.
+        summary: Radius of the circle in pixels.
       - name: color
         type: Color3
         default:
-        summary: |
-          Color of the circle.
+        summary: Color of the circle.
       - name: transparency
         type: float
         default:
-        summary: |
+        summary: |-
           Transparency of the circle with 0 being fully opaque and 1 being fully
           transparent.
       - name: combineType
         type: ImageCombineType
         default:
-        summary: |
+        summary: |-
           How the pixels of the source image are blended with the pixels of the
           added image.
     returns:
@@ -161,10 +155,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableImage:DrawImage
-    summary: |
+    summary: |-
       Draws another `EditableImage` into this `EditableImage` at the given
       position.
-    description: |
+    description: |-
       Draws another `EditableImage` into this `EditableImage` at the given
       position. Positions outside the canvas bounds are allowed such that only
       part of the new image is drawn.
@@ -173,18 +167,17 @@ methods:
       - name: position
         type: Vector2
         default:
-        summary: |
+        summary: |-
           Position at which the top-left corner of the added image will be
           drawn.
       - name: image
         type: EditableImage
         default:
-        summary: |
-          The `EditableImage` to draw into this `EditableImage`.
+        summary: The `EditableImage` to draw into this `EditableImage`.
       - name: combineType
         type: ImageCombineType
         default:
-        summary: |
+        summary: |-
           How the pixels of the source image should be blended with the pixels
           of the added image.
     returns:
@@ -196,10 +189,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableImage:DrawImageProjected
-    summary: |
+    summary: |-
       Projects another `EditableImage` into an `Class.EditableMesh` and stores
       the result on this `EditableImage`.
-    description: |
+    description: |-
       Projects another `EditableImage` into an `Class.EditableMesh` and stores
       the result on this `EditableImage` by using the specified projection and
       brush configuration.
@@ -208,12 +201,11 @@ methods:
       - name: mesh
         type: EditableMesh
         default:
-        summary: |
-          The `Class.EditableMesh` used to project into.
+        summary: The `Class.EditableMesh` used to project into.
       - name: projection
         type: Dictionary
         default:
-        summary: |
+        summary: |-
           Projection configuration dictionary including the following key-value
           pairs:
 
@@ -226,7 +218,7 @@ methods:
       - name: brushConfig
         type: Dictionary
         default:
-        summary: |
+        summary: |-
           Brush configuration dictionary including the following key-value
           pairs:
 
@@ -236,11 +228,10 @@ methods:
             projection will blend color values.
           - `Decal` (`EditableImage`) as the image used for projection.
           - `FadeAngle` (number) as the angle in degrees for the projection
-            edges to start to fall off. The projection will be fully faded out
-            at 90 degrees. An angle of 0 means fading starts immediately at 0
-            degrees and an angle of 90 means no fading but instead a hard edge
-            at 90 degrees. An angle of 70 degrees would mean the projection
-            starts to fade at 70 degrees and is fully faded out at 90 degrees.
+            edges to start to fall off. The projection will be fully faded out at 90 degrees. 
+            An angle of 0 means fading starts immediately at 0 degrees and an angle of 90 means no fading 
+            but instead a hard edge at 90 degrees. An angle of 70 degrees would mean the projection starts to fade at 
+            70 degrees and is fully faded out at 90 degrees.
           - `BlendIntensity` (number) as the value between `0` and `1` which
             controls how much of the projection is blended into the resulting
             image.
@@ -253,10 +244,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableImage:DrawImageTransformed
-    summary: |
+    summary: |-
       Draws an image into this `EditableImage` with transformations including
       scaling and rotation, placing it at the specified position.
-    description: |
+    description: |-
       This method lets you draw an `EditableImage` into this `EditableImage`
       with transformations applied, such as scaling and rotation. The position
       parameter specifies where the pivot point of the source image will be
@@ -269,29 +260,27 @@ methods:
       - name: position
         type: Vector2
         default:
-        summary: |
+        summary: |-
           Position in pixels where the pivot point of the source image will be
           placed on this image.
       - name: scale
         type: Vector2
         default:
-        summary: |
-          Scaling factors for the source image along the X and Y axes.
+        summary: Scaling factors for the source image along the X and Y axes.
       - name: rotation
         type: float
         default:
-        summary: |
+        summary: |-
           The rotation angle in degrees, applied around the pivot point of the
           source image.
       - name: image
         type: EditableImage
         default:
-        summary: |
-          The source `EditableImage` to be drawn into this image.
+        summary: The source `EditableImage` to be drawn into this image.
       - name: options
         type: Dictionary?
         default:
-        summary: |
+        summary: |-
           Optional dictionary for additional configuration:
 
           - `CombineType`: Specifies how the pixels of the source image blend
@@ -312,9 +301,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableImage:DrawLine
-    summary: |
-      Draws a line between two provided points.
-    description: |
+    summary: Draws a line between two provided points.
+    description: |-
       Draws an anti-aliased line on the `EditableImage` one pixel thick between
       the two provided points.
     code_samples: []
@@ -322,27 +310,23 @@ methods:
       - name: p1
         type: Vector2
         default:
-        summary: |
-          Start point of the line.
+        summary: Start point of the line.
       - name: p2
         type: Vector2
         default:
-        summary: |
-          End point of the line.
+        summary: End point of the line.
       - name: color
         type: Color3
         default:
-        summary: |
-          Color of the line.
+        summary: Color of the line.
       - name: transparency
         type: float
         default:
-        summary: |
-          Transparency of the line.
+        summary: Transparency of the line.
       - name: combineType
         type: ImageCombineType
         default:
-        summary: |
+        summary: |-
           How the pixels of the source image are blended with the pixels of the
           added image.
     returns:
@@ -354,9 +338,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableImage:DrawRectangle
-    summary: |
-      Draws a rectangle of the given size at the given top-left position.
-    description: |
+    summary: Draws a rectangle of the given size at the given top-left position.
+    description: |-
       Draws a rectangle on the `EditableImage` of the given size at the given
       top-left position.
     code_samples: []
@@ -364,29 +347,26 @@ methods:
       - name: position
         type: Vector2
         default:
-        summary: |
+        summary: |-
           Position of the top-left of the rectangle. Unlike other drawing
           methods, this cannot be outside the canvas bounds of the
           `EditableImage`.
       - name: size
         type: Vector2
         default:
-        summary: |
-          Size of the rectangle to draw, in pixels.
+        summary: Size of the rectangle to draw, in pixels.
       - name: color
         type: Color3
         default:
-        summary: |
-          Color of the rectangle.
+        summary: Color of the rectangle.
       - name: transparency
         type: float
         default:
-        summary: |
-          Transparency of the rectangle.
+        summary: Transparency of the rectangle.
       - name: combineType
         type: ImageCombineType
         default:
-        summary: |
+        summary: |-
           How the pixels of the source image are blended with the pixels of the
           added image.
     returns:
@@ -398,9 +378,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: EditableImage:ReadPixelsBuffer
-    summary: |
-      Reads a rectangular region of pixels into a buffer.
-    description: |
+    summary: Reads a rectangular region of pixels into a buffer.
+    description: |-
       Reads a rectangular region of pixels from an `EditableImage` and returns
       it as a buffer. Each number in the buffer is a single byte, with pixels
       stored in a sequence of four bytes (red, green, blue, and alpha).
@@ -413,16 +392,14 @@ methods:
       - name: position
         type: Vector2
         default:
-        summary: |
-          Top-left corner of the rectangular region of pixels to read.
+        summary: Top-left corner of the rectangular region of pixels to read.
       - name: size
         type: Vector2
         default:
-        summary: |
-          Size of the rectangular region of pixels to read.
+        summary: Size of the rectangular region of pixels to read.
     returns:
       - type: buffer
-        summary: |
+        summary: |-
           Buffer where each pixel is represented by four bytes (red, green, blue
           and alpha respectively). The length of the buffer can be calculated as
           `Size.X * Size.Y * 4` bytes.
@@ -433,9 +410,8 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: EditableImage:WritePixelsBuffer
-    summary: |
-      Writes a rectangular region of pixels into the image.
-    description: |
+    summary: Writes a rectangular region of pixels into the image.
+    description: |-
       Writes a rectangular region of pixels to an `EditableImage` from a buffer.
       Each number in the buffer is a single byte, with pixels stored in a
       sequence of four bytes (red, green, blue, and alpha).
@@ -448,17 +424,15 @@ methods:
       - name: position
         type: Vector2
         default:
-        summary: |
-          Top-left corner of the rectangular region to draw the pixels into.
+        summary: Top-left corner of the rectangular region to draw the pixels into.
       - name: size
         type: Vector2
         default:
-        summary: |
-          Size of the rectangular region of pixels to write.
+        summary: Size of the rectangular region of pixels to write.
       - name: buffer
         type: buffer
         default:
-        summary: |
+        summary: |-
           A buffer where each pixel is represented by four bytes (red, green,
           blue, and alpha respectively). The length of the buffer should be
           `Size.X * Size.Y * 4` bytes.

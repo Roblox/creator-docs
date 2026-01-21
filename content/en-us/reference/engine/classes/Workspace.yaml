@@ -5,11 +5,11 @@
 name: Workspace
 type: class
 memory_category: BaseParts
-summary: |
+summary: |-
   **Workspace** houses 3D objects which are rendered to the 3D world. Objects
   not descending from it will not be rendered or physically interact with the
   world.
-description: |
+description: |-
   The core job of `Class.Workspace` is to hold objects that exist in the 3D
   world, effectively `Class.BasePart|BaseParts` and
   `Class.Attachment|Attachments`. While such objects are descendant of
@@ -66,9 +66,8 @@ tags:
 deprecation_message: ''
 properties:
   - name: Workspace.AirDensity
-    summary: |
-      The air density at ground level, used in the aerodynamic force model.
-    description: |
+    summary: The air density at ground level, used in the aerodynamic force model.
+    description: |-
       The ground level (**Y** of 0) air density in RMU/stud&sup3; units (see
       [Roblox Units](../../../physics/units.md)), used to calculate the
       aerodynamic force if `Class.Workspace.FluidForces` is
@@ -91,26 +90,18 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.AirTurbulenceIntensity
-    summary: |
-      Controls the strength of turbulence present in the wind velocity field,
-      affecting the aerodynamic force model.
-    description: |
+    summary: Controls the strength of turbulence present in the wind velocity field, affecting the aerodynamic force model.
+    description: |-
       Controls the intensity of turbulence by determining the magnitude of
-      fluctuations in wind velocities. Ranges from `0` to `1`, with a value of
-      `0` disabling turbulence and a value of `1` providing the most intense
-      turbulence. The values of `AirTurbulenceIntensity` roughly correspond to
-      the following levels:
+      fluctuations in wind velocities. Ranges from `0` to `1`, with a value of `0`
+      disabling turbulence and a value of `1` providing the most intense turbulence.
+      The values of `AirTurbulenceIntensity` roughly correspond to the following levels:
 
       - `(0, 0.4]`: Low intensity turbulence
       - `(0.4, 0.7]`: Moderate intensity turbulence
       - `(0.7, 1]`: High intensity turbulence
 
-      The magnitude of the fluctuations at a fixed intensity scale linearly with
-      the magnitude of the global wind, except in the case that the global wind
-      is zero. When the global wind is zero, the magnitude of the fluctuations
-      scale exponentially with `AirTurbulenceIntensity`, allowing low and high
-      intensity turbulence to exist with wind velocities that still average out
-      to zero.
+      The magnitude of the fluctuations at a fixed intensity scale linearly with the magnitude of the global wind, except in the case that the global wind is zero. When the global wind is zero, the magnitude of the fluctuations scale exponentially with `AirTurbulenceIntensity`, allowing low and high intensity turbulence to exist with wind velocities that still average out to zero.
     code_samples: []
     type: float
     tags: []
@@ -125,30 +116,10 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.AllowThirdPartySales
-    summary: |
-      Determines whether assets created by other users can be sold in the game.
-    description: |
+    summary: Determines whether assets created by other users can be sold in the game.
+    description: |-
       This `Class.Workspace` property determines whether assets created by other
       uses can be sold in the game.
-
-      #### What are third party sales?
-
-      When this value is false, as it is by default, only assets created by the
-      place creator (be it a player or a group) and Roblox can be sold using
-      `Class.MarketplaceService`.
-
-      In most cases, games do not need to sell third party assets. However, some
-      games such as trade hangouts require this feature and therefore it exists
-      as an opt-in option.
-
-      #### What third party products can I sell?
-
-      Note,
-      [developer products](../../../production/monetization/developer-products.md)
-      can only be sold in the game they are associated with, regardless of what
-      AllowThirdPartySales is set to. This property affects
-      [Game Passes](../../../production/monetization/game-passes.md) and
-      [clothing](../../../art/classic-clothing.md).
     code_samples: []
     type: boolean
     tags:
@@ -164,10 +135,8 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.AuthorityMode
-    summary: |
-      Sets the server authority mode.
-    description: |
-      Sets the server authority mode. See `Enum.AuthorityMode` for options.
+    summary: Sets the server authority mode.
+    description: Sets the server authority mode. See `Enum.AuthorityMode` for options.
     code_samples: []
     type: AuthorityMode
     tags: []
@@ -199,9 +168,8 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.ClientAnimatorThrottling
-    summary: |
-      Specifies the animation throttling mode for the local client.
-    description: |
+    summary: Specifies the animation throttling mode for the local client.
+    description: |-
       Specifies the `Enum.ClientAnimatorThrottlingMode` to use for the local
       client.
 
@@ -226,9 +194,8 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.CurrentCamera
-    summary: |
-      The `Class.Camera` object being used by the local player.
-    description: |
+    summary: The `Class.Camera` object being used by the local player.
+    description: |-
       The `Class.Camera` object being used by the local player.
 
       #### How to use CurrentCamera
@@ -260,9 +227,8 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.DistributedGameTime
-    summary: |
-      The amount of time, in seconds, that the game has been running.
-    description: |
+    summary: The amount of time, in seconds, that the game has been running.
+    description: |-
       The amount of time, in seconds, that the game has been running.
 
       Despite the title, this value is currently not 'Distributed' across the
@@ -301,15 +267,15 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.FallenPartsDestroyHeight
-    summary: |
+    summary: |-
       Determines the height at which falling `Class.BasePart|BaseParts` and
       their ancestor `Class.Model|Models` are removed from `Class.Workspace`.
-    description: |
-      This property determines the height at which the engine automatically
-      removes falling `Class.BasePart|BaseParts` and their ancestor
-      `Class.Model|Models` from `Class.Workspace` by parenting them to `nil`.
-      This is to prevent parts that have fallen off the map from continuing to
-      fall forever.
+    description: |-
+      This property determines the height at which the engine
+      automatically removes falling `Class.BasePart|BaseParts` and their
+      ancestor `Class.Model|Models` from `Class.Workspace` by parenting them to
+      `nil`. This is to prevent parts that have fallen off the map from
+      continuing to fall forever.
 
       If a part removed due to this behavior is the last part in a
       `Class.Model`, that model will also be removed. This applies to all model
@@ -351,11 +317,10 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.FilteringEnabled
-    summary: |
+    summary: |-
       Determines whether changes made from the client will replicate to the
       server or not.
-    description: |
-      This property is discontinued and no longer takes effect.
+    description: This property is discontinued and no longer takes effect.
     code_samples: []
     type: boolean
     tags:
@@ -373,11 +338,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Workspace.FluidForces
-    summary: |
+    summary: |-
       Determines whether the physics engine computes aerodynamic forces on
       `Class.BasePart|BaseParts` whose
       `Class.BasePart.EnableFluidForces|EnableFluidForces` property is true.
-    description: |
+    description: |-
       With this property enabled, the physics engine computes aerodynamic forces
       on `Class.BasePart|BaseParts` whose
       `Class.BasePart.EnableFluidForces|EnableFluidForces` property is true. The
@@ -399,10 +364,10 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.GlobalWind
-    summary: |
+    summary: |-
       Specifies the global wind vector for animated terrain grass, dynamic
       clouds, and particles.
-    description: |
+    description: |-
       This property specifies the direction and strength that wind blows through
       the experience, affecting terrain grass, dynamic clouds, and particles.
       See the [Global Wind](../../../environment/global-wind.md) article for
@@ -421,10 +386,10 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.Gravity
-    summary: |
+    summary: |-
       Determines the acceleration due to gravity applied to falling
       `Class.BasePart|BaseParts`.
-    description: |
+    description: |-
       Determines the acceleration due to gravity applied to falling
       `Class.BasePart|BaseParts`. This value is measured in studs per second
       squared and by default is set to 196.2 studs/second<sup>2</sup>. By
@@ -445,10 +410,10 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.IKControlConstraintSupport
-    summary: |
+    summary: |-
       Enables support for constraints for IKControls. If disabled, IKControls
       ignore physics constraints.
-    description: |
+    description: |-
       Enables support for constraints for IKControls. The `Default` value is the
       same as `Enabled`. If disabled, IKControls ignore physics constraints. See
       `Class.IKControl` for additional details.
@@ -492,8 +457,7 @@ properties:
       - Hidden
       - NotReplicated
       - Deprecated
-    deprecation_message: |
-      This property should not be used for new work.
+    deprecation_message: This property should not be used for new work.
     security:
       read: None
       write: PluginSecurity
@@ -520,10 +484,10 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.MeshPartHeadsAndAccessories
-    summary: |
+    summary: |-
       Sets whether character Heads and Accessories should be downloaded as
       MeshParts.
-    description: |
+    description: |-
       Sets whether character Heads and Accessories should be downloaded as
       `Class.MeshPart|MeshParts`. The `Default` value is the same as `Enabled`.
       If this feature is enabled, built-in avatars will use
@@ -560,10 +524,10 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.MoverConstraintRootBehavior
-    summary: |
+    summary: |-
       Controls the logic used to select the assembly root part when using any of
       the mover constraints.
-    description: |
+    description: |-
       Controls the logic used to select the assembly root part for mechanisms
       that use any of the following constraints:
 
@@ -601,14 +565,8 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.NextGenerationReplication
-    summary: |
-      When `true`, enables an alternate replication system that alters and
-      improves how properties are replicated under the hood.
-    description: |
-      When `true`, enables an alternate replication system that alters and
-      improves how properties are replicated under the hood; note that when
-      `true`, you should not rely on the ordering of property replication and
-      remote events.
+    summary: When `true`, enables an alternate replication system that alters and improves how properties are replicated under the hood.
+    description: When `true`, enables an alternate replication system that alters and improves how properties are replicated under the hood; note that when `true`, you should not rely on the ordering of property replication and remote events.
     code_samples: []
     type: RolloutState
     tags:
@@ -658,9 +616,8 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.PhysicsSteppingMethod
-    summary: |
-      Sets how the solver will advance the physics simulation forward in time.
-    description: |
+    summary: Sets how the solver will advance the physics simulation forward in time.
+    description: |-
       Sets how the solver will advance the physics simulation forward in time.
       This option is not scriptable and must be set from the
       **PhysicsSteppingMethod** property of **Workspace** within Studio. See
@@ -702,13 +659,8 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.PlayerScriptsUseInputActionSystem
-    summary: |
-      Controls internal behavior of the built-in `Class.Player` scripts.
-    description: |
-      When `true`, updates the built-in `Class.Player` scripts to a new system
-      where they live under `Class.StarterPlayer`, use the
-      [Input Action System](../../../input/input-action-system.md), and allow
-      the server to process player inputs.
+    summary: Controls internal behavior of the built-in `Class.Player` scripts.
+    description: When `true`, updates the built-in `Class.Player` scripts to a new system where they live under `Class.StarterPlayer`, use the [Input Action System](../../../input/input-action-system.md), and allow the server to process player inputs.
     code_samples: []
     type: RolloutState
     tags:
@@ -825,9 +777,8 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.SignalBehavior
-    summary: |
-      Configures when the engine resumes event handlers.
-    description: |
+    summary: Configures when the engine resumes event handlers.
+    description: |-
       This property determines whether event handlers will be resumed
       immediately when the event fires, or deferred and then resumed at a later
       resumption point. Resumption points currently include:
@@ -862,9 +813,8 @@ properties:
       can_save: false
     capabilities: []
   - name: Workspace.StreamingEnabled
-    summary: |
-      Whether content streaming is enabled for the place.
-    description: |
+    summary: Whether content streaming is enabled for the place.
+    description: |-
       The **StreamingEnabled** property determines whether game content
       streaming is enabled for the place. This property is not scriptable and
       therefore must be set on the **Workspace** object in Studio.
@@ -888,9 +838,8 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.StreamingIntegrityMode
-    summary: |
-      Determines whether StreamingIntegrityMode is active.
-    description: |
+    summary: Determines whether StreamingIntegrityMode is active.
+    description: |-
       If instance [streaming](../../../workspace/streaming.md) is enabled, an
       experience may behave in unintended ways if a player's character moves
       into a region of the world that has not been streamed to their client. The
@@ -911,10 +860,10 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.StreamingMinRadius
-    summary: |
+    summary: |-
       Minimum distance that content will be streamed to players with high
       priority.
-    description: |
+    description: |-
       The **StreamingMinRadius** property indicates the radius around the
       player's character or the current
       `Class.Player.ReplicationFocus|ReplicationFocus` in which content will be
@@ -945,9 +894,8 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.StreamingTargetRadius
-    summary: |
-      Maximum distance that content will be streamed to players.
-    description: |
+    summary: Maximum distance that content will be streamed to players.
+    description: |-
       The **StreamingTargetRadius** property controls the maximum distance away
       from the player's character or the current
       `Class.Player.ReplicationFocus|ReplicationFocus` in which content will be
@@ -977,10 +925,10 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.StreamOutBehavior
-    summary: |
+    summary: |-
       Configures how the engine decides when to Stream content away from
       players.
-    description: |
+    description: |-
       The **StreamOutBehavior** controls where content will be unloaded from the
       `Class.Player.ReplicationFocus|ReplicationFocus` based on device Memory
       Conditions, or based on Streaming Radius.
@@ -1007,10 +955,10 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.Terrain
-    summary: |
+    summary: |-
       A reference to the `Class.Terrain` object parented to the
       `Class.Workspace`.
-    description: |
+    description: |-
       This property is a reference to the `Class.Terrain` object parented to the
       `Class.Workspace`.
 
@@ -1035,10 +983,10 @@ properties:
       can_save: false
     capabilities: []
   - name: Workspace.TouchesUseCollisionGroups
-    summary: |
+    summary: |-
       Determines whether `Class.BasePart|parts` in different groups set to not
       collide will ignore collisions and touch events.
-    description: |
+    description: |-
       This property determines whether `Class.BasePart|parts` in different
       groups set to not collide will ignore collisions and touch events. By
       default, the value of this property is set to `false`.
@@ -1079,18 +1027,8 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.UseFixedSimulation
-    summary: |
-      When `true`, enables `Class.RunService:BindToSimulation()` which calls a
-      function at a fixed frequency, updates physics stepping logic, and makes
-      the `Global.RobloxGlobals.time()` function return the fixed stepped frame
-      time.
-    description: |
-      When `true`, enables `Class.RunService:BindToSimulation()` which calls a
-      function at a fixed frequency. Also updates physics stepping logic such
-      that character controller updates and joint transforms are performed at a
-      fixed frequency rather than once per frame, as well as makes the
-      `Global.RobloxGlobals.time()` function return the fixed stepped frame
-      time.
+    summary: When `true`, enables `Class.RunService:BindToSimulation()` which calls a function at a fixed frequency, updates physics stepping logic, and makes the `Global.RobloxGlobals.time()` function return the fixed stepped frame time.
+    description: When `true`, enables `Class.RunService:BindToSimulation()` which calls a function at a fixed frequency. Also updates physics stepping logic such that character controller updates and joint transforms are performed at a fixed frequency rather than once per frame, as well as makes the `Global.RobloxGlobals.time()` function return the fixed stepped frame time.
     code_samples: []
     type: RolloutState
     tags:
@@ -1124,10 +1062,10 @@ properties:
     capabilities: []
 methods:
   - name: Workspace:BreakJoints
-    summary: |
+    summary: |-
       Goes through all `Class.BasePart|BaseParts` given, breaking any joints
       connected to these parts.
-    description: |
+    description: |-
       Goes through all `Class.BasePart|BaseParts` given, breaking any joints
       connected to these parts. This function will break any of the following
       types of joints:
@@ -1151,7 +1089,7 @@ methods:
       - name: objects
         type: Instances
         default:
-        summary: |
+        summary: |-
           An array of `Class.BasePart|BaseParts` for whom joints are to be
           broken.
     returns:
@@ -1163,11 +1101,24 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
+  - name: Workspace:ExperimentalSolverIsEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: LocalUserSecurity
+    thread_safety: Unsafe
+    capabilities: []
   - name: Workspace:GetNumAwakeParts
-    summary: |
+    summary: |-
       Returns the number of `Class.BasePart|BaseParts` that are deemed
       physically active, due to being recently under the influence of physics.
-    description: |
+    description: |-
       Returns the number of `Class.BasePart|BaseParts` that are deemed
       physically active, due to being recently under the influence of physics.
 
@@ -1181,34 +1132,32 @@ methods:
       print(Workspace:GetNumAwakeParts())
       ```
 
-      In order to ensure good performance, the engine sets
-      `Class.BasePart|BaseParts` in which physics are not being applied to a
-      "sleeping" state. `Class.BasePart|BaseParts` with
-      `Class.BasePart.Anchored` set to `true`, for example, will always be
-      sleeping as physics doesn't apply to them. When a force is applied to a
-      non‑anchored `Class.BasePart`, an "awake" state will be applied. Whilst a
-      `Class.BasePart` is awake, the physics engine will perform continuous
-      calculations to ensure physical forces interact correctly with the part.
-      Once the `Class.BasePart` is no longer subject to physical forces, it will
+      In order to ensure good performance, the engine sets `Class.BasePart|BaseParts`
+      in which physics are not being applied to a "sleeping" state.
+      `Class.BasePart|BaseParts` with `Class.BasePart.Anchored` set to `true`, for
+      example, will always be sleeping as physics doesn't apply to them. When a force
+      is applied to a non‑anchored `Class.BasePart`, an "awake" state will be applied.
+      Whilst a `Class.BasePart` is awake, the physics engine will perform
+      continuous calculations to ensure physical forces interact correctly with the
+      part. Once the `Class.BasePart` is no longer subject to physical forces, it will
       revert to a "sleeping" state.
     code_samples: []
     parameters: []
     returns:
       - type: int
-        summary: |
-          The number of awake parts.
+        summary: The number of awake parts.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
     capabilities: []
   - name: Workspace:GetPhysicsThrottling
-    summary: |
-      Returns an integer, between 0 and 100, representing the percentage of real
-      time that physics simulation is currently being throttled to.
-    description: |
-      Returns an integer, between 0 and 100, representing the percentage of real
-      time that physics simulation is currently being throttled to.
+    summary: |-
+      Returns an integer, between 0 and 100, representing the percentage of
+      real time that physics simulation is currently being throttled to.
+    description: |-
+      Returns an integer, between 0 and 100, representing the percentage of
+      real time that physics simulation is currently being throttled to.
 
       This function can be used to determine whether, and to what degree,
       physics throttling is occurring.
@@ -1252,7 +1201,7 @@ methods:
     parameters: []
     returns:
       - type: int
-        summary: |
+        summary: |-
           The percentage of real time that physics simulation is currently being
           throttled to.
     tags: []
@@ -1261,10 +1210,10 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: Workspace:GetRealPhysicsFPS
-    summary: |
+    summary: |-
       Returns the number of frames per second that physics is currently being
       simulated at.
-    description: |
+    description: |-
       Returns the number of frames per second that physics is currently being
       simulated at.
 
@@ -1283,7 +1232,7 @@ methods:
     parameters: []
     returns:
       - type: double
-        summary: |
+        summary: |-
           Returns the number of frames per second that physics is currently
           being simulated at.
     tags: []
@@ -1292,31 +1241,28 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: Workspace:GetServerTimeNow
-    summary: |
-      Returns the server's Unix time in seconds.
-    description: |
-      This method returns the client's best approximation of the current time on
-      the server. It is useful for creating synchronized experiences, as every
-      client will get roughly the same results regardless of their timezone or
-      local clock.
+    summary: Returns the server's Unix time in seconds.
+    description: |-
+      This method returns the client's best approximation of the current time on the
+      server. It is useful for creating synchronized experiences, as every client will
+      get roughly the same results regardless of their timezone or local clock.
 
-      This method returns a Unix timestamp, similar to `Library.os|os.time()`,
-      that you can use with `Library.os|os.date()` or
-      `Datatype.DateTime.fromUnixTimestamp()`. The timestamp is smoothed so
-      that:
+      This method returns a Unix timestamp, similar to `Library.os|os.time()`, that
+      you can use with `Library.os|os.date()` or
+      `Datatype.DateTime.fromUnixTimestamp()`. The timestamp is smoothed so that:
 
       - It is monotonic; its value will never decrease.
       - It moves at the same rate as the local clock to within 0.6%.
 
-      This method is useful for making sure an event starts at the right
-      real-world time and for periodic adjustments to keep a series of events in
-      sync. For benchmarking or other use cases that require higher precision,
-      consider `Library.os|os.clock()`.
+      This method is useful for making sure an event starts at the right real-world
+      time and for periodic adjustments to keep a series of events in sync. For
+      benchmarking or other use cases that require higher precision, consider
+      `Library.os|os.clock()`.
 
       This method relies on the server, so calling it from a client that isn't
-      connected will throw an error. Also note that this method is not suitable
-      for things like timed rewards, as it is not secure compared to tracking
-      such timers on the server.
+      connected will throw an error. Also note that this method is not suitable for
+      things like timed rewards, as it is not secure compared to tracking such timers
+      on the server.
 
       See also:
 
@@ -1328,19 +1274,18 @@ methods:
     parameters: []
     returns:
       - type: double
-        summary: |
-          The estimated Unix timestamp on the server.
+        summary: The estimated Unix timestamp on the server.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
     capabilities: []
   - name: Workspace:JoinToOutsiders
-    summary: |
+    summary: |-
       Creates joints between the specified `Class.BasePart|Parts` and any
       touching parts depending on the parts' surfaces and the specified joint
       creation mode.
-    description: |
+    description: |-
       This function creates joints between the specified `Class.BasePart|Parts`
       and any touching parts depending on the parts' surfaces and the specified
       joint creation mode.
@@ -1395,12 +1340,11 @@ methods:
       - name: objects
         type: Instances
         default:
-        summary: |
-          An array of `Class.BasePart|BaseParts` for whom joints are to be made.
+        summary: An array of `Class.BasePart|BaseParts` for whom joints are to be made.
       - name: jointType
         type: JointCreationMode
         default:
-        summary: |
+        summary: |-
           The `Enum.JointCreationMode` to be used. Passing in
           `Enum.JointCreationMode|Enum.JointCreationMode.All` or
           `Enum.JointCreationMode|Enum.JointCreationMode.Surface` has the same
@@ -1414,11 +1358,11 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Workspace:MakeJoints
-    summary: |
+    summary: |-
       Goes through all `Class.BasePart|BaseParts` given. If any part's side has
       a `Enum.SurfaceType` that can make a joint it will create a joint with any
       adjacent parts.
-    description: |
+    description: |-
       **Deprecated**
 
       SurfaceType based joining is deprecated, do not use MakeJoints for new
@@ -1460,8 +1404,7 @@ methods:
       - name: objects
         type: Instances
         default:
-        summary: |
-          An array of `Class.BasePart|parts` for whom joints are to be made.
+        summary: An array of `Class.BasePart|parts` for whom joints are to be made.
     returns:
       - type: ()
         summary: ''
@@ -1472,9 +1415,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Workspace:PGSIsEnabled
-    summary: |
-      Returns `true` if the game has the PGS Physics solver enabled.
-    description: |
+    summary: Returns `true` if the game has the PGS Physics solver enabled.
+    description: |-
       Returns `true` if the game has the PGS Physics solver enabled.
 
       As `Class.Workspace.PGSPhysicsSolverEnabled` cannot be accessed by
@@ -1484,18 +1426,17 @@ methods:
     parameters: []
     returns:
       - type: boolean
-        summary: |
-          True if the PGS solver is enabled.
+        summary: True if the PGS solver is enabled.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: Workspace:UnjoinFromOutsiders
-    summary: |
+    summary: |-
       Breaks all joints between the specified `Class.BasePart|BaseParts` and
       other `Class.BasePart|BaseParts`.
-    description: |
+    description: |-
       Breaks all joints between the specified `Class.BasePart|BaseParts` and
       other `Class.BasePart|BaseParts`.
 
@@ -1504,11 +1445,11 @@ methods:
       other), only between these `Class.BasePart|BaseParts` and other
       `Class.BasePart|BaseParts` not in the array.
 
-      This function is used by the Roblox Studio **Move** tool when the user
-      starts moving a selection. In conjunction with
-      `Class.Plugin:GetJoinMode()` and `Class.Workspace:JoinToOutsiders()` it
-      can be used to retain join functionality when developing custom Studio
-      build tools. See the snippets below for an example.
+      This function is used by the Roblox Studio **Move** tool when the user starts
+      moving a selection. In conjunction with `Class.Plugin:GetJoinMode()` and
+      `Class.Workspace:JoinToOutsiders()` it can be used to retain join
+      functionality when developing custom Studio build tools. See the snippets
+      below for an example.
 
       ```
       local Workspace = game:GetService("Workspace")
@@ -1533,7 +1474,7 @@ methods:
       - name: objects
         type: Instances
         default:
-        summary: |
+        summary: |-
           An array of `Class.BasePart|BaseParts` for whom joints are to be
           broken.
     returns:
@@ -1545,14 +1486,14 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Workspace:ZoomToExtents
-    summary: |
+    summary: |-
       Positions and zooms the `Class.Workspace.CurrentCamera` to show the extent
       of `Class.BasePart|BaseParts` currently in the `Class.Workspace`.
-    description: |
-      Positions and zooms the `Class.Workspace.CurrentCamera` to show the extent
-      of `Class.BasePart|BaseParts` currently in the `Class.Workspace`. It
-      exhibits similar behavior to the "focus" command but it shows the extents
-      of the `Class.Workspace` rather than the currently selected object.
+    description: |-
+      Positions and zooms the `Class.Workspace.CurrentCamera` to show the extent of
+      `Class.BasePart|BaseParts` currently in the `Class.Workspace`. It exhibits
+      similar behavior to the "focus" command but it shows the extents of the
+      `Class.Workspace` rather than the currently selected object.
 
       This function cannot be used in scripts but will function in the command
       bar or plugins.
@@ -1568,9 +1509,8 @@ methods:
     capabilities: []
 events:
   - name: Workspace.PersistentLoaded
-    summary: |
-      Fires when persistent models have been sent to the specified player.
-    description: |
+    summary: Fires when persistent models have been sent to the specified player.
+    description: |-
       This event fires every time a player has been sent all current persistent
       models and part-less atomic models. The `player` parameter indicates which
       player has received all applicable instances.

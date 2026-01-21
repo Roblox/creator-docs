@@ -51,8 +51,8 @@ navigation:
     path: /studio/explorer
   - title: Properties
     path: /studio/properties
-  - title: Game Settings
-    path: /studio/game-settings
+  - title: Experience Settings
+    path: /studio/experience-settings
   - title: Avatar Settings
     path: /studio/avatar-settings
   - heading: Plugins

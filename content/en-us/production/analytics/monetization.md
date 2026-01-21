@@ -33,7 +33,7 @@ On the monetization page, you can see the following metrics:
 From there, you can explore data for each monetization product:
 
 - [Developer Products](../monetization/developer-products.md#developer-product-analytics)
-- [Passes](../monetization/game-passes.md#passes-analytics)
+- [Passes](../monetization/passes.md#passes-analytics)
 - [Avatar items](../monetization/avatar-items.md#avatar-items-analytics)
 - [Subscriptions](../monetization/subscriptions.md#subscription-analytics)
 - [Immersive ads](../monetization/immersive-ads.md#view-immersive-ad-metrics)

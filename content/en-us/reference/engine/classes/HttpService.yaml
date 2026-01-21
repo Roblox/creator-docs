@@ -5,14 +5,14 @@
 name: HttpService
 type: class
 memory_category: Instances
-summary: |
+summary: |-
   Allows sending HTTP requests and provides various web-related and JSON
   methods.
-description: |
-  `HttpService` allows HTTP requests to be sent from game servers using
+description: |-
+  `HttpService` allows HTTP requests to be sent from experience servers using
   `Class.HttpService:RequestAsync()|RequestAsync`,
   `Class.HttpService:GetAsync()|GetAsync` and
-  `Class.HttpService:PostAsync()|PostAsync`. This service allows games to be
+  `Class.HttpService:PostAsync()|PostAsync`. This service allows experiences to be
   integrated with third-party web services such as analytics, data storage,
   remote server configuration, error reporting, advanced calculations, or
   real-time communication. Additionally, it can call a subset of the Open Cloud
@@ -28,14 +28,9 @@ description: |
   random 128‑bit labels which can be treated as probabilistically unique in a
   variety of scenarios.
 
-  Within Studio, use
-  `Class.HttpService:CreateWebStreamClient()|CreateWebStreamClient()` to process
-  data in real time from servers that support streaming protocols such as
-  [SSE](https://en.wikipedia.org/wiki/Server-sent_events),
-  [chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding),
-  and [WebSockets](https://en.wikipedia.org/wiki/WebSocket). You can connect
-  callback functions to stream events, allowing you to process data immediately
-  as it arrives instead of waiting for the entire response to complete.
+  Within Studio, use `Class.HttpService:CreateWebStreamClient()|CreateWebStreamClient()` to process data in real time from servers that support streaming protocols such as [SSE](https://en.wikipedia.org/wiki/Server-sent_events), [chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding), and [WebSockets](https://en.wikipedia.org/wiki/WebSocket). You can connect
+  callback functions to stream events, allowing you to process data immediately as it arrives
+  instead of waiting for the entire response to complete.
 
   Only send HTTP requests to trusted third-party platforms to avoid introducing
   unnecessary security risks to your experience.
@@ -53,17 +48,16 @@ tags:
 deprecation_message: ''
 properties:
   - name: HttpService.HttpEnabled
-    summary: |
-      Indicates whether HTTP requests can be sent to external websites.
-    description: |
+    summary: Indicates whether HTTP requests can be sent to external websites.
+    description: |-
       When set to `true`, allows scripts to send requests to websites using
       `Class.HttpService:GetAsync()`, `Class.HttpService:PostAsync()`, and
       `Class.HttpService:RequestAsync()`.
 
-      This property must be toggled on through the
-      [Game Settings](../../../studio/game-settings.md) interface in Studio, or
-      for **unpublished** experiences by setting this property to `true` using
-      the [Command Bar](../../../studio/ui-overview.md#command-bar):
+      This property must be toggled on through the [Experience
+      Settings](../../../studio/experience-settings.md) interface in Studio, or for
+      **unpublished** experiences by setting this property to `true` using the
+      [Command Bar](../../../studio/ui-overview.md#command-bar):
 
       `game:GetService("HttpService").HttpEnabled = true`
     code_samples: []
@@ -82,26 +76,13 @@ properties:
       - Network
 methods:
   - name: HttpService:CreateWebStreamClient
-    summary: |
-      Creates a client that opens a persistent connection to stream data.
-    description: |
-      This method creates a client that establishes a long-lived connection to
-      servers utilizing various streaming technologies, such as
-      [Server-Sent Events (SSE)](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events).
-      After the connection is established, the client fires signals that you can
-      connect callback functions to with `Datatype.RBXScriptConnection`. Use
-      these callbacks to process messages as soon as they arrive, as well as
-      respond to open, close, and error events.
+    summary: Creates a client that opens a persistent connection to stream data.
+    description: |-
+      This method creates a client that establishes a long-lived connection to servers utilizing various streaming technologies, such as [Server-Sent Events (SSE)](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events). After the connection is established, the client fires signals that you can connect callback functions to with `Datatype.RBXScriptConnection`. Use these callbacks to process messages as soon as they arrive, as well as respond to open, close, and error events.
 
-      There is a limit of six total clients allowed at one time. Close streams
-      that you no longer need with `Class.WebStreamClient:Close()`. When the
-      stream is no longer needed, you should disconnect any associated
-      `Datatype.RBXScriptConnection|RBXScriptConnections` to avoid memory leaks.
+      There is a limit of six total clients allowed at one time. Close streams that you no longer need with `Class.WebStreamClient:Close()`. When the stream is no longer needed, you should disconnect any associated `Datatype.RBXScriptConnection|RBXScriptConnections` to avoid memory leaks.
 
-      This method is available in Studio only. If you use it inside scripts,
-      make sure to remove any references before publishing the experience. We
-      encourage you to create plugins with this feature for reusability and ease
-      of use.
+      This method is available in Studio only. If you use it inside scripts, make sure to remove any references before publishing the experience. We encourage you to create plugins with this feature for reusability and ease of use.
     code_samples:
       - HttpService-CreateSSEWebStreamClient
       - HttpService-CreateRawStreamWebStreamClient
@@ -109,19 +90,14 @@ methods:
       - name: streamClientType
         type: WebStreamClientType
         default:
-        summary: |
-          The type of streaming connection to intiialize the client with.
+        summary: The type of streaming connection to intiialize the client with.
       - name: requestOptions
         type: Dictionary
         default:
-        summary: |
-          A dictionary containing information to be requested from the server.
-          It is identical to `requestOptions` in
-          `Class.HttpService:RequestAsync()`.
+        summary: A dictionary containing information to be requested from the server. It is identical to `requestOptions` in `Class.HttpService:RequestAsync()`.
     returns:
       - type: WebStreamClient
-        summary: |
-          A stateful client that emits events in the stream lifecycle.
+        summary: A stateful client that emits events in the stream lifecycle.
     tags: []
     deprecation_message: ''
     security: None
@@ -129,9 +105,8 @@ methods:
     capabilities:
       - Network
   - name: HttpService:GenerateGUID
-    summary: |
-      Generates a UUID/GUID random string, optionally with curly braces.
-    description: |
+    summary: Generates a UUID/GUID random string, optionally with curly braces.
+    description: |-
       This method generates a **random universally unique identifier**
       ([UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier))
       string. The sixteen octets of a UUID are represented as 32 hexadecimal
@@ -163,28 +138,25 @@ methods:
       - name: wrapInCurlyBraces
         type: boolean
         default: true
-        summary: |
-          Whether the returned string should be wrapped in curly braces (`{}`).
+        summary: Whether the returned string should be wrapped in curly braces (`{}`).
     returns:
       - type: string
-        summary: |
-          The randomly generated UUID.
+        summary: The randomly generated UUID.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
     capabilities: []
   - name: HttpService:GetAsync
-    summary: |
-      Sends an HTTP `GET` request.
-    description: |
+    summary: Sends an HTTP `GET` request.
+    description: |-
       This method sends an HTTP `GET` request. It functions similarly to
       `Class.HttpService:RequestAsync()|RequestAsync()` except that it accepts
       HTTP request parameters as method parameters instead of a single
       dictionary and returns only the body of the HTTP response. Generally, this
       method is useful only as a shorthand and
-      `Class.HttpService:RequestAsync()|RequestAsync()` should be used in most
-      cases.
+      `Class.HttpService:RequestAsync()|RequestAsync()` should be used in
+      most cases.
 
       When `true`, the `nocache` parameter prevents this method from caching
       results from previous calls with the same `url`.
@@ -195,22 +167,18 @@ methods:
       - name: url
         type: Variant
         default:
-        summary: |
-          The web address you are requesting data from.
+        summary: The web address you are requesting data from.
       - name: nocache
         type: boolean
         default: false
-        summary: |
-          Whether the request stores (caches) the response.
+        summary: Whether the request stores (caches) the response.
       - name: headers
         type: Variant
         default:
-        summary: |
-          Used to specify some HTTP request headers.
+        summary: Used to specify some HTTP request headers.
     returns:
       - type: string
-        summary: |
-          The GET request's response body.
+        summary: The GET request's response body.
     tags:
       - Yields
     deprecation_message: ''
@@ -219,9 +187,8 @@ methods:
     capabilities:
       - Network
   - name: HttpService:GetSecret
-    summary: |
-      Returns a `Datatype.Secret` from the secrets store.
-    description: |
+    summary: Returns a `Datatype.Secret` from the secrets store.
+    description: |-
       This method returns a value previously added to the secrets store for the
       experience. The secret content is not printable and not available when the
       experience runs locally.
@@ -248,9 +215,8 @@ methods:
     capabilities:
       - Network
   - name: HttpService:JSONDecode
-    summary: |
-      Decodes a JSON string into a Luau table.
-    description: |
+    summary: Decodes a JSON string into a Luau table.
+    description: |-
       This method transforms a JSON object or array into a Luau
       [table](../../../luau/tables.md) with the following characteristics:
 
@@ -270,12 +236,10 @@ methods:
       - name: input
         type: string
         default:
-        summary: |
-          The JSON object being decoded.
+        summary: The JSON object being decoded.
     returns:
       - type: Variant
-        summary: |
-          The decoded JSON object as a Luau table.
+        summary: The decoded JSON object as a Luau table.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -283,9 +247,8 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: HttpService:JSONEncode
-    summary: |
-      Generate a JSON string from a Luau table.
-    description: |
+    summary: Generate a JSON string from a Luau table.
+    description: |-
       This method transforms a Luau [table](../../../luau/tables.md) into a JSON
       object or array based on the following guidelines:
 
@@ -295,12 +258,11 @@ methods:
       - The value `nil` is never generated.
       - Cyclic table references cause an error.
 
-      This method allows values such as `inf` and `nan` which are not valid
-      JSON. This may cause problems if you want to use the outputted JSON
-      elsewhere.
+      This method allows values such as `inf` and `nan` which are not valid JSON. This
+      may cause problems if you want to use the outputted JSON elsewhere.
 
-      This method also accepts `Library.buffer|buffers`, which it encodes to
-      base64 (and often compresses) before converting to a JSON object.
+      This method also accepts `Library.buffer|buffers`, which it encodes to base64
+      (and often compresses) before converting to a JSON object.
 
       To reverse the encoding process and decode a JSON object, use the
       `Class.HttpService:JSONDecode()` method.
@@ -312,12 +274,10 @@ methods:
       - name: input
         type: Variant
         default:
-        summary: |
-          The input Luau table.
+        summary: The input Luau table.
     returns:
       - type: string
-        summary: |
-          The returned JSON string.
+        summary: The returned JSON string.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -325,16 +285,15 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: HttpService:PostAsync
-    summary: |
-      Sends an HTTP `POST` request.
-    description: |
+    summary: Sends an HTTP `POST` request.
+    description: |-
       This method sends an HTTP `POST` request. It functions similarly to
       `Class.HttpService:RequestAsync()|RequestAsync()` except that it accepts
       HTTP request parameters as method parameters instead of a single
       dictionary and returns only the body of the HTTP response. Generally, this
       method is useful only as a shorthand and
-      `Class.HttpService:RequestAsync()|RequestAsync()` should be used in most
-      cases.
+      `Class.HttpService:RequestAsync()|RequestAsync()` should be used in
+      most cases.
 
       When `true`, the `compress` parameter controls whether large request
       bodies will be compressed using **gzip**.
@@ -344,32 +303,26 @@ methods:
       - name: url
         type: Variant
         default:
-        summary: |
-          The destination address for the data.
+        summary: The destination address for the data.
       - name: data
         type: string
         default:
-        summary: |
-          The data being sent.
+        summary: The data being sent.
       - name: content_type
         type: HttpContentType
         default: ApplicationJson
-        summary: |
-          Modifies the value in the `Content-Type` header sent with the request.
+        summary: Modifies the value in the `Content-Type` header sent with the request.
       - name: compress
         type: boolean
         default: false
-        summary: |
-          Determines whether the data is compressed (**gzipped**) when sent.
+        summary: Determines whether the data is compressed (**gzipped**) when sent.
       - name: headers
         type: Variant
         default:
-        summary: |
-          Used to specify some HTTP request headers.
+        summary: Used to specify some HTTP request headers.
     returns:
       - type: string
-        summary: |
-          The HTTP response sent back indicating the request result.
+        summary: The HTTP response sent back indicating the request result.
     tags:
       - Yields
     deprecation_message: ''
@@ -378,10 +331,10 @@ methods:
     capabilities:
       - Network
   - name: HttpService:RequestAsync
-    summary: |
+    summary: |-
       Sends an HTTP request using any HTTP method given a dictionary of
       information.
-    description: |
+    description: |-
       This method sends an HTTP request using a dictionary to specify the
       request data, such as the target URL, method, headers, and request body
       data. It returns a dictionary that describes the response data received.
@@ -563,11 +516,8 @@ methods:
 
       ##### Limitations
 
-      The current limitation for sending and receiving **external** HTTP
-      requests is 500 requests per minute. There is also a separate limit of
-      2500 requests per minute for
-      [Open Cloud requests](../../../cloud-services/http-service.md#use-with-open-cloud).
-      Requests over these thresholds will fail.
+      The current limitation for sending and receiving **external** HTTP requests is 500
+      requests per minute. There is also a separate limit of 2500 requests per minute for [Open Cloud requests](../../../cloud-services/http-service.md#use-with-open-cloud). Requests over these thresholds will fail.
     code_samples:
       - sending-an-http-request
       - OpenCloud-via-HttpService
@@ -575,12 +525,12 @@ methods:
       - name: requestOptions
         type: Dictionary
         default:
-        summary: |
+        summary: |-
           A dictionary containing information to be requested from the server
           specified.
     returns:
       - type: Dictionary
-        summary: |
+        summary: |-
           A dictionary containing response information from the server
           specified.
     tags:
@@ -591,9 +541,8 @@ methods:
     capabilities:
       - Network
   - name: HttpService:UrlEncode
-    summary: |
-      Replaces URL-unsafe characters with '%' and two hexadecimal characters.
-    description: |
+    summary: Replaces URL-unsafe characters with '%' and two hexadecimal characters.
+    description: |-
       This method
       [percent-encodes](https://en.wikipedia.org/wiki/Percent-encoding) a given
       string so that reserved characters properly encoded with `%` and two
@@ -613,12 +562,10 @@ methods:
       - name: input
         type: string
         default:
-        summary: |
-          The string (URL) to encode.
+        summary: The string (URL) to encode.
     returns:
       - type: string
-        summary: |
-          The encoded string.
+        summary: The encoded string.
     tags: []
     deprecation_message: ''
     security: None

@@ -33,7 +33,7 @@ Before adding STT to an experience, you must first enable microphone usage and p
 1. Open the [Gingerbread House - Start](https://www.roblox.com/games/134812596370919/Gingerbread-House-Start) file in Studio.
 2. Create a local copy.
 3. Publish your local copy of the experience.
-4. Back in Studio, go to **File** > **Game Settings** > **Communication**.
+4. Back in Studio, go to **File** &rang; **Experience Settings** &rang; **Communication**.
 5. Turn on **Enable Microphone**.
 6. Save your changes.
 
@@ -70,7 +70,7 @@ To add simple speech capture to your local copy of the [Gingerbread House - Star
 ### Test your speech capture
 
 After you add simple speech capture, you can playtest the experience to make sure your STT implementation works properly. Speaking into your microphone should populate the **AudioSpeechToText** property with the text version of your speech.
- 
+
 To test your speech capture:
 
 1. Under **Test** > **Clients and Servers**, select **Team Test**.

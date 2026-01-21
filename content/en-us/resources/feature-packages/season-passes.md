@@ -51,7 +51,7 @@ To get the packages from your inventory into your experience:
 4. Click the **Feature Package Core** tile, **Missions Feature Package** tile, then the **Season Passes Feature Package** tile. All three package folders display in the **Explorer** window.
 5. Drag the package folders into `Class.ReplicatedStorage`.
 6. Allow data store calls to track player purchases with the packages.
-   1. Open Studio's **File**&nbsp;⟩ **Game Settings** window.
+   1. Open Studio's **File** ⟩ **Experience Settings** window.
    1. Navigate to the **Security** tab, then enable **Enable Studio Access to API Services**.
 
 ## Configure mission dependencies
@@ -122,7 +122,7 @@ After you have set up every mission you want to include in a season, it's time t
 
 ### Define passes
 
-[Passes](../../production/monetization/game-passes.md) allow you to charge players a one-time Robux fee in order to access a season pass's missions and potential rewards. After you create a pass with a unique asset ID, you can set the details of the pass in the `premiumTrack` field of your season.
+[Passes](../../production/monetization/passes.md) allow you to charge players a one-time Robux fee in order to access a season pass's missions and potential rewards. After you create a pass with a unique asset ID, you can set the details of the pass in the `premiumTrack` field of your season.
 For example, the following code sample defines a pass with an example asset ID of `928192647` to represent a season pass, then it gives the season pass a track name of "Premium Track".
 
 ``` lua

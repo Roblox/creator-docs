@@ -97,7 +97,7 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
      </tr>
      <tr>
        <td>**Monetize all group experiences**</td>
-       <td>Members with this role can manage monetization products such as [passes](../production/monetization/game-passes.md), [developer products](../production/monetization/developer-products.md), [subscriptions](../production/monetization/subscriptions.md), and more. Optionally available as a [per‑experience permission](./configure-experiences.md).</td>
+       <td>Members with this role can manage monetization products such as [passes](../production/monetization/passes.md), [developer products](../production/monetization/developer-products.md), [subscriptions](../production/monetization/subscriptions.md), and more. Optionally available as a [per‑experience permission](./configure-experiences.md).</td>
      </tr>
      <tr>
        <td>**View all analytics for group experiences**</td>

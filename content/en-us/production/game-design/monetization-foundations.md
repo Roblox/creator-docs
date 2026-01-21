@@ -294,7 +294,7 @@ The starter pack should be merchandised as a special deal using price calculatio
 
 **Season passes** are limited-time, quest-based progression systems that are part of a game's content cadence. Players complete quest objectives to earn rewards for the duration of the pre-defined period of time or "season". While similar in name, season passes are not game passes. Game passes are one-time purchases that confer gameplay bonuses.
 
-To learn how to implement game passes into your experiences, see the article on [game passes](../../production/monetization/game-passes.md).
+To learn how to implement game passes into your experiences, see the article on [passes](../../production/monetization/passes.md).
 
 To learn how to design an effective season pass, see [season pass design](../../production/game-design/season-pass-design.md).
 

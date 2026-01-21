@@ -190,7 +190,7 @@ Each place must be cross-associated so that players can teleport from the lobby 
 
 By default, Roblox balances players/servers for an optimal social gameplay experience, but a battle royale should allow for bigger and more intense battles. To achieve this:
 
-1. Open Studio's **File**&nbsp;⟩ **Game Settings** window.
+1. Open Studio's **File** ⟩ **Experience Settings** window.
 2. Select the **Places** tab.
 3. For each of the six places, click the button and select **Edit**.
 

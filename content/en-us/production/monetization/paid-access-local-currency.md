@@ -108,7 +108,7 @@ Before becoming available to users, your paid access experience must undergo a p
 
 To enable paid access in Roblox Studio:
 
-1. Open Studio's **File**&nbsp;⟩ **Game Settings** window.
+1. Open Studio's **File** ⟩ **Experience Settings** window.
 2. Under **Monetization**, click **Configure on Creator Hub**.
 3. Follow the steps to [enable paid access in the Creator Hub](#enable-paid-access-in-the-creator-hub).
 

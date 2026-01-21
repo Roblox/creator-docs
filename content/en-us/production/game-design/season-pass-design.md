@@ -26,7 +26,7 @@ For out-of-the-box functionality to create season passes, see the [Season passes
 </Alert>
 
 <Alert severity="warning">
-While similar in name, season passes are not game passes. Game passes are one-time purchases that confer gameplay bonuses. To learn how to implement game passes into your experiences, see [Game Passes](../../production/monetization/game-passes.md).
+While similar in name, season passes are not general experience passes. General [passes](../../production/monetization/passes.md) are one-time purchases that confer gameplay bonuses.
 </Alert>
 
 ## Identify goals

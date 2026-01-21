@@ -7,7 +7,7 @@ description: Engagement-based payouts allow you to earn Robux based on the share
 Effective July 24, 2025, the Engagement-Based Payouts program is deprecated and has been replaced by the [Creator Rewards](../../creator-rewards.md) program.
 </Alert>
 
-Automatic **engagement-based payouts** let you earn Robux based on the share of time that [Premium](https://www.roblox.com/premium/membership) members engage in an experience, regardless of the experience's size. These payouts are in addition to earnings from other [monetization](../../production/monetization/index.md) methods such as [Passes](../../production/monetization/game-passes.md).
+Automatic **engagement-based payouts** let you earn Robux based on the share of time that [Premium](https://www.roblox.com/premium/membership) members engage in an experience, regardless of the experience's size. These payouts are in addition to earnings from other [monetization](../../production/monetization/index.md) methods such as [Passes](../../production/monetization/passes.md).
 
 To encourage Premium subscriber growth and increase your potential to earn engagement-based payouts, you can add the [Premium Purchase Modal](#premium-purchase-modal) directly into an experience. Keep in mind, users from some countries may not have access to Premium subscriptions.
 

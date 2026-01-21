@@ -40,7 +40,7 @@ There are three asset types that map to project-level items. These asset types a
 
 - **Places** — Every experience has one or more [places](../../projects/index.md#places), or individual 3D worlds. Each place is represented by a [data model](../../projects/data-model.md) that describes the place's 3D world and logic.
 - **Badges** — A [badges](../../production/publishing/badges.md) is a special award you can gift users when they meet a goal within an experience, such as completing a difficult objective or playing for a certain amount of time.
-- **Passes** — A [pass](../../production/monetization/game-passes.md) is a monetization product that allows you to charge a one-time Robux fee in order for users to access special privileges within an experience, such as entry to a restricted area, an in-experience avatar item, or a permanent power-up.
+- **Passes** — A [pass](../../production/monetization/passes.md) is a monetization product that allows you to charge a one-time Robux fee in order for users to access special privileges within an experience, such as entry to a restricted area, an in-experience avatar item, or a permanent power-up.
 
 ### For places
 
@@ -210,7 +210,7 @@ The content folder's location depends on the user's operating system:
 		</tr>
 		<tr>
 			<td>`GamePass`</td>
-			<td>ID for a [pass](../../production/monetization/game-passes.md#locating-pass-ids)</td>
+			<td>ID for a [pass](../../production/monetization/passes.md#locating-pass-ids)</td>
 			<td scope="row">150&times;150</td>
 		</tr>
 		<tr>

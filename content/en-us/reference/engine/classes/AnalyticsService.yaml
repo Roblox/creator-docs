@@ -5,11 +5,11 @@
 name: AnalyticsService
 type: class
 memory_category: Instances
-summary: |
+summary: |-
   Collection of methods that allows developers to track how users interact with
   their experiences.
-description: |
-  **AnalyticsService** is a collection of methods that allows developers to
+description: |-
+  `AnalyticsService` is a collection of methods that allows developers to
   track how users interact with their experiences, specifically player
   progression, in-experience economy, funnels, and custom events.
 code_samples: []
@@ -23,10 +23,10 @@ tags:
 deprecation_message: ''
 properties:
   - name: AnalyticsService.ApiKey
-    summary: |
+    summary: |-
       PlayFab API key. Must be set in order to use
       `Class.AnalyticsService:FireEvent()|FireEvent`.
-    description: |
+    description: |-
       The **ApiKey** property contains the game's PlayFab API key. It must be
       set and valid in order to use
       `Class.AnalyticsService:FireEvent()|FireEvent`. It can be set by pasting
@@ -51,9 +51,8 @@ properties:
     capabilities: []
 methods:
   - name: AnalyticsService:FireCustomEvent
-    summary: |
-      Fires a custom event with a custom event name and data.
-    description: |
+    summary: Fires a custom event with a custom event name and data.
+    description: |-
       This function triggers a custom event with a custom event name data.
 
       #### Limits of events
@@ -102,19 +101,17 @@ methods:
       - name: player
         type: Instance
         default:
-        summary: |
+        summary: |-
           The player who triggered the custom event. `nil` if not player
           related.
       - name: eventCategory
         type: string
         default:
-        summary: |
-          User defined category. This should be the name of the event.
+        summary: User defined category. This should be the name of the event.
       - name: customData
         type: Variant
         default:
-        summary: |
-          Optional. User defined data, could be a string, a number or a table.
+        summary: Optional. User defined data, could be a string, a number or a table.
     returns:
       - type: ()
         summary: ''
@@ -125,9 +122,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: AnalyticsService:FireEvent
-    summary: |
-      Report a custom event to PlayFab.
-    description: |
+    summary: Report a custom event to PlayFab.
+    description: |-
       **FireEvent** reports a custom event to PlayFab. The event is reported
       using a **category** and **value**, where the category is a string and the
       value can be a string or table. In order to use PlayFab, you must have a
@@ -159,13 +155,13 @@ methods:
       - name: category
         type: string
         default:
-        summary: |
+        summary: |-
           'The category of event to report. Cannot contain the following
           characters: comma `,`, double quote `"` or newline characters `\r\n`'.
       - name: value
         type: Variant
         default:
-        summary: |
+        summary: |-
           A value to be serialized and reported. Serialized length must not
           exceed 1 KiB, or 1024 bytes.
     returns:
@@ -173,7 +169,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This function has been deprecated in favor of more descriptive methods,
       including:
 
@@ -185,10 +181,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: AnalyticsService:FireInGameEconomyEvent
-    summary: |
+    summary: |-
       Fire an event used to track player actions pertaining to the in-game
       economy.
-    description: |
+    description: |-
       This function triggers an event used to track player actions pertaining to
       the in-game economy.
 
@@ -241,37 +237,31 @@ methods:
       - name: player
         type: Instance
         default:
-        summary: |
-          The player who triggered the economy event.
+        summary: The player who triggered the economy event.
       - name: itemName
         type: string
         default:
-        summary: |
-          The name of the item.
+        summary: The name of the item.
       - name: economyAction
         type: AnalyticsEconomyAction
         default:
-        summary: |
-          Indicates the acquisition or spending of an in game resource.
+        summary: Indicates the acquisition or spending of an in game resource.
       - name: itemCategory
         type: string
         default:
-        summary: |
-          A user defined category for items such as "Vehicle," "Weapon.".
+        summary: A user defined category for items such as "Vehicle," "Weapon.".
       - name: amount
         type: int
         default:
-        summary: |
-          The amount of the currency.
+        summary: The amount of the currency.
       - name: currency
         type: string
         default:
-        summary: |
-          The currency used. Examples: 'gold', 'gems', 'life.'.
+        summary: "The currency used. Examples: 'gold', 'gems', 'life.'."
       - name: location
         type: Variant
         default:
-        summary: |
+        summary: |-
           The event location. A dictionary that each key-value represents an
           entry of location data. The key-value is a string-string pair. With
           this you can query which are the most popular "stores" then maybe you
@@ -291,12 +281,10 @@ methods:
       - name: customData
         type: Variant
         default:
-        summary: |
-          Optional. User defined data, could be a string, a number or a table.
+        summary: Optional. User defined data, could be a string, a number or a table.
     returns:
       - type: ()
-        summary: |
-          No return.
+        summary: No return.
     tags:
       - Deprecated
     deprecation_message: ''
@@ -304,9 +292,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: AnalyticsService:FireLogEvent
-    summary: |
-      Fire a log event used to track errors and warnings experienced by players.
-    description: |
+    summary: Fire a log event used to track errors and warnings experienced by players.
+    description: |-
       This function triggers an event used to track errors and warnings
       experienced by players.
 
@@ -368,22 +355,19 @@ methods:
       - name: player
         type: Instance
         default:
-        summary: |
-          The player who triggered the error event, `nil` if not player related.
+        summary: The player who triggered the error event, `nil` if not player related.
       - name: logLevel
         type: AnalyticsLogLevel
         default:
-        summary: |
-          The specified log level (e.g. Debug, Error).
+        summary: The specified log level (e.g. Debug, Error).
       - name: message
         type: string
         default:
-        summary: |
-          User defined message.
+        summary: User defined message.
       - name: debugInfo
         type: Variant
         default:
-        summary: |
+        summary: |-
           Optional. A dictionary which contains predefined keys including
           "errorCode" and "stackTrace". Both keys values are strings. stackTrace
           is a traceback of the current function call stack.
@@ -397,12 +381,10 @@ methods:
       - name: customData
         type: Variant
         default:
-        summary: |
-          Optional. User defined data, could be a string, a number or a table.
+        summary: Optional. User defined data, could be a string, a number or a table.
     returns:
       - type: ()
-        summary: |
-          No return.
+        summary: No return.
     tags:
       - Deprecated
     deprecation_message: ''
@@ -410,9 +392,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: AnalyticsService:FirePlayerProgressionEvent
-    summary: |
-      Fire an event used to track player progression through the game.
-    description: |
+    summary: Fire an event used to track player progression through the game.
+    description: |-
       This function triggers an event used to track player progression through
       the game.
 
@@ -475,22 +456,19 @@ methods:
       - name: player
         type: Instance
         default:
-        summary: |
-          The player who triggered the event.
+        summary: The player who triggered the event.
       - name: category
         type: string
         default:
-        summary: |
-          A user defined category for progression.
+        summary: A user defined category for progression.
       - name: progressionStatus
         type: AnalyticsProgressionStatus
         default:
-        summary: |
-          Indicates the status of the progression.
+        summary: Indicates the status of the progression.
       - name: location
         type: Variant
         default:
-        summary: |
+        summary: |-
           The event location. A dictionary that each key-value represents an
           entry of location data. The key-value is a string-string pair. With
           this developers can query where is the most frequent location for a
@@ -509,7 +487,7 @@ methods:
       - name: statistics
         type: Variant
         default:
-        summary: |
+        summary: |-
           Optional. A dictionary that each key-value represents an entry of
           statistics data that allows developers to track any specific data that
           they want to collect as players progress through their game. Key-Value
@@ -527,12 +505,10 @@ methods:
       - name: customData
         type: Variant
         default:
-        summary: |
-          Optional. User defined data, could be a string, a number or a table.
+        summary: Optional. User defined data, could be a string, a number or a table.
     returns:
       - type: ()
-        summary: |
-          No return.
+        summary: No return.
     tags:
       - Deprecated
     deprecation_message: ''
@@ -540,34 +516,30 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: AnalyticsService:LogCustomEvent
-    summary: |
-      Logs an event used to track custom metrics of a user in experience.
-    description: |
+    summary: Logs an event used to track custom metrics of a user in experience.
+    description: |-
       Logs an event used to track custom metrics of a user in experience. For
       additional information, see
-      [Custom Events](../../../production/analytics/custom-events.md).
+      [custom events](../../../production/analytics/custom-events.md).
     code_samples:
       - Log-Custom-Event
     parameters:
       - name: player
         type: Player
         default:
-        summary: |
-          The user who triggered the event.
+        summary: The user who triggered the event.
       - name: eventName
         type: string
         default:
-        summary: |
-          The name of the custom event.
+        summary: The name of the custom event.
       - name: value
         type: double
         default: 1
-        summary: |
-          The value of the event that will be used in aggregation.
+        summary: The value of the event that will be used in aggregation.
       - name: customFields
         type: Dictionary
         default: nil
-        summary: |
+        summary: |-
           Optional dictionary of custom fields that will provide breakdowns in
           Roblox-provided charts. Only specific keys, provided by
           `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns.
@@ -582,47 +554,44 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: AnalyticsService:LogEconomyEvent
-    summary: |
-      Logs an event used to track player actions related in experience.
-    description: |
-      Logs an event used to track player actions related in experience.
+    summary: Logs an event used to track player actions related in experience.
+    description: Logs an event used to track player actions related in experience.
     code_samples:
       - AnalyticsService-LogEconomyEvent-IAP
     parameters:
       - name: player
         type: Player
         default:
-        summary: |
-          The user who triggered the event.
+        summary: The user who triggered the event.
       - name: flowType
         type: AnalyticsEconomyFlowType
         default:
-        summary: |
+        summary: |-
           Should specify the direction that currency is flowing using
           `Enum.AnalyticsEconomyFlowType`.
       - name: currencyType
         type: string
         default:
-        summary: |
+        summary: |-
           The name of the currency being added or removed, for example `"gold"`,
           `"gems"`, or `"energy"`. Limited to 5 unique currency types per
           experience.
       - name: amount
         type: float
         default:
-        summary: |
+        summary: |-
           The amount of currency being added or removed. This value should
           always be positive.
       - name: endingBalance
         type: float
         default:
-        summary: |
+        summary: |-
           The user's balance after the currency has been added or removed. This
-          value should always be greater than or equal to 0.
+          value should always be greater than or equal to `0`.
       - name: transactionType
         type: string
         default:
-        summary: |
+        summary: |-
           The type of transaction that occurred. While you're free to use any
           transaction type, it's recommended to use the provided types from
           `Enum.AnalyticsEconomyTransactionType` such as `"IAP"` or
@@ -637,14 +606,14 @@ methods:
       - name: itemSku
         type: string
         default:
-        summary: |
+        summary: |-
           Optional SKU of the item or bundle being purchased. This is a unique
           identifier for the item being purchased. Limited to 100 unique SKUs
           per experience.
       - name: customFields
         type: Dictionary
         default: nil
-        summary: |
+        summary: |-
           Optional dictionary of custom fields that will provide breakdowns in
           Roblox-provided charts. Only specific keys, provided by
           `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns.
@@ -659,10 +628,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: AnalyticsService:LogFunnelStepEvent
-    summary: |
+    summary: |-
       Logs an event used to track user actions stepping through a pre-planned
       funnel.
-    description: |
+    description: |-
       Logs an event used to track user actions stepping through a pre-planned
       funnel. Funnel breakdowns will only consider the user and event values
       from the first step in a funnel session.
@@ -672,18 +641,17 @@ methods:
       - name: player
         type: Player
         default:
-        summary: |
-          The user who triggered the event.
+        summary: The user who triggered the event.
       - name: funnelName
         type: string
         default:
-        summary: |
+        summary: |-
           The name of the funnel. This should be the same for all steps in the
           funnel. Limited to 10 unique funnels per experience.
       - name: funnelSessionId
         type: string
         default:
-        summary: |
+        summary: |-
           Optional unique identifier for the funnel session. This should be the
           same for all steps in the funnel.
 
@@ -694,7 +662,7 @@ methods:
       - name: step
         type: int
         default: 1
-        summary: |
+        summary: |-
           The step number in the funnel. This should be unique for each step in
           the funnel. All funnels start at step 1. Limited to steps 1-100.
 
@@ -706,13 +674,13 @@ methods:
       - name: stepName
         type: string
         default:
-        summary: |
+        summary: |-
           Optional name of the step in the funnel. This field is only used for
           display purposes in Roblox-provided charts.
       - name: customFields
         type: Dictionary
         default: nil
-        summary: |
+        summary: |-
           Optional dictionary of custom fields that will provide breakdowns in
           Roblox-provided charts. Only specific keys, provided by
           `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns.
@@ -727,10 +695,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: AnalyticsService:LogOnboardingFunnelStepEvent
-    summary: |
+    summary: |-
       Logs an event used to track user actions stepping through an onboarding
       funnel.
-    description: |
+    description: |-
       Logs an event used to track user actions stepping through an onboarding
       funnel. Funnel breakdowns will only consider the user and event values
       from the first step in a funnel session.
@@ -740,12 +708,11 @@ methods:
       - name: player
         type: Player
         default:
-        summary: |
-          The user who triggered the event.
+        summary: The user who triggered the event.
       - name: step
         type: int
         default:
-        summary: |
+        summary: |-
           The step number in the funnel. This should be unique for each step in
           the funnel. All funnels start at step 1. Limited to steps 1-100.
 
@@ -754,13 +721,13 @@ methods:
       - name: stepName
         type: string
         default:
-        summary: |
+        summary: |-
           Optional name of the step in the funnel. This field is only used for
           display purposes in Roblox-provided charts.
       - name: customFields
         type: Dictionary
         default: nil
-        summary: |
+        summary: |-
           Optional dictionary of custom fields that will provide breakdowns in
           Roblox-provided charts. Only specific keys, provided by
           `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns.
@@ -775,9 +742,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: AnalyticsService:LogProgressionCompleteEvent
-    summary: |
-      Logs an event for when a user has completed a level attempt.
-    description: |
+    summary: Logs an event for when a user has completed a level attempt.
+    description: |-
       Logs an event for when a user has completed a level attempt. This event
       does not currently display in any Roblox-provided charts.
     code_samples: []
@@ -785,8 +751,7 @@ methods:
       - name: player
         type: Player
         default:
-        summary: |
-          The player who triggered the event.
+        summary: The player who triggered the event.
       - name: progressionPathName
         type: string
         default:
@@ -812,10 +777,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: AnalyticsService:LogProgressionEvent
-    summary: |
+    summary: |-
       Logs an event for when a user has started, completed, or failed a level
       attempt.
-    description: |
+    description: |-
       Logs an event for when a user has started, completed, or failed a level
       attempt. This event does not currently display in any Roblox-provided
       charts.
@@ -824,8 +789,7 @@ methods:
       - name: player
         type: Player
         default:
-        summary: |
-          The player who triggered the event.
+        summary: The player who triggered the event.
       - name: progressionPathName
         type: string
         default:
@@ -855,9 +819,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: AnalyticsService:LogProgressionFailEvent
-    summary: |
-      Logs an event for when a user has failed a level attempt.
-    description: |
+    summary: Logs an event for when a user has failed a level attempt.
+    description: |-
       Logs an event for when a user has failed a level attempt. This event does
       not currently display in any Roblox-provided charts.
     code_samples: []
@@ -865,8 +828,7 @@ methods:
       - name: player
         type: Player
         default:
-        summary: |
-          The user who triggered the event.
+        summary: The user who triggered the event.
       - name: progressionPathName
         type: string
         default:
@@ -892,9 +854,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: AnalyticsService:LogProgressionStartEvent
-    summary: |
-      Logs an event for when a user has started a level attempt.
-    description: |
+    summary: Logs an event for when a user has started a level attempt.
+    description: |-
       Logs an event for when a user has started a level attempt. This event does
       not currently display in any Roblox-provided charts.
     code_samples: []
@@ -902,8 +863,7 @@ methods:
       - name: player
         type: Player
         default:
-        summary: |
-          The player who triggered the event.
+        summary: The player who triggered the event.
       - name: progressionPathName
         type: string
         default:

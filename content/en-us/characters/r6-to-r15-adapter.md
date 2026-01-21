@@ -27,7 +27,7 @@ The adapter parts perform the following:
 
 ## Enable the R6 to R15 Adapter
 
-You can enable the R6 to R15 Adapter by setting the `Class.Workspace.AvatarUnificationMode|AvatarUnificationMode` property in `Class.Workspace`. You can only access this property if **Avatar Type** is set to `R6` in Studio's **File**&nbsp;⟩ **Game Settings** window. At this time, the **Default** setting disables unification mode.
+You can enable the R6 to R15 Adapter by setting the `Class.Workspace.AvatarUnificationMode|AvatarUnificationMode` property in `Class.Workspace`. You can only access this property if **Avatar Type** is set to `R6` in Studio's **File**&nbsp;⟩ **Experience Settings** window. At this time, the **Default** setting disables unification mode.
 
 To enable the R6 to R15 Adapter:
 

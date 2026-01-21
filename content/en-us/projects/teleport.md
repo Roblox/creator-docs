@@ -36,7 +36,7 @@ If you want to take precautions of handling errors when setting up teleportation
 
 ### Enable cross experience teleportation
 
-For security purposes, teleporting a user from your experience to another experience owned by others fails by default. To enable cross experience teleportation, open the **Security** section of Studio's **File**&nbsp;⟩ **Game Settings** window and enable **Allow Third Party Teleports**.
+For security purposes, teleporting a user from your experience to another experience owned by others fails by default. To enable cross experience teleportation, open the **Security** section of Studio's **File**&nbsp;⟩ **Experience Settings** window and enable **Allow Third Party Teleports**.
 
 ## Create custom teleport screens
 

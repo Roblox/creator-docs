@@ -20,10 +20,8 @@ When you first publish a game, it's automatically set to private. Set it to **pu
 
 1. **Publish** your game so your friends will get your latest changes.
 
-1. Select **File** → **Game Settings** to open the **Game Settings** window.
+1. Open **File** ⟩ **Experience Settings**.
 
 1. On the left bar, select **Permissions**, then choose **Public**.
-
-   <img src="../../assets/education/general/make-public.png" width="800" />
 
 1. Click the **Save** button.

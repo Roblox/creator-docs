@@ -32,7 +32,7 @@ power-ups, and creators can also earn Robux from [engagement-based payouts](../p
 - [Developer Products](../production/monetization/developer-products.md) - users can purchase
   multiple times. Great for in-experience currency purchases.
 
-- [Passes](../production/monetization/game-passes.md) - users can only purchase once.
+- [Passes](../production/monetization/passes.md) - users can only purchase once.
   Great for VIP passes or permanent power-ups.
 
 Both are sold for Robux at a price you choose. You can then trade Robux for real

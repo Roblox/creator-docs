@@ -12,7 +12,7 @@ navigation:
       - title: Subscriptions
         path: /production/monetization/subscriptions
       - title: Passes
-        path: /production/monetization/game-passes
+        path: /production/monetization/passes
       - title: Developer products
         path: /production/monetization/developer-products
       - title: Commerce products

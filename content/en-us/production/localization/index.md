@@ -36,7 +36,7 @@ You can also access your experience's localization settings in the on your [Crea
 
 A link to your experience's localization settings is also available in Studio. To find the link:
 
-1. Open Studio's **File**&nbsp;⟩ **Game Settings** window.
+1. Open Studio's **File** ⟩ **Experience Settings** window.
 2. In the **Localization** section, click the link indicated below to launch the
    localization settings in your default browser.
 

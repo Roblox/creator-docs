@@ -121,7 +121,7 @@ With a template ready, it can be published to Roblox, so students can access it 
 
 Even though the template is now published on Roblox, students need to be able to copy it in their own version of Studio.
 
-1. In the same template, select **File** ⟩ **Game Settings**.
+1. In the same template, select **File** ⟩ **Experience Settings**.
 
    <Alert severity="info">
    <AlertTitle>Adding Screenshots and Icons</AlertTitle>

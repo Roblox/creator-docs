@@ -16,7 +16,7 @@ Voice Chat is currently available to all 13+ phone number verified users in a sp
 Before you can enable Voice Chat in an experience, you must first [publish](../production/publishing/publish-experiences-and-places.md) it, then:
 
 1. Open your experience in Studio.
-1. Open **File**&nbsp;⟩ **Game Settings**.
+1. Open **File**&nbsp;⟩ **Experience Settings**.
 1. Navigate to the **Communication** tab on the left side of the window.
 1. Toggle **Enable Microphone** so the selector turns from gray to green.
 1. <Chip label="OPTIONAL" size="small" variant="outlined" /> For greater communication among players within your experience, toggle on **Enable&nbsp;Camera** to allow eligible players to animate their avatar with their movement.
@@ -28,7 +28,7 @@ Voice Chat will now be available to verified 13+ users who opt‑in to the featu
 
 If you previously set the maximum number of players in a place to more than 50, you'll need to reduce it to support Voice Chat.
 
-1. In the left-hand navigation of the **Game Settings** window, select **Places**. Every place within your experience displays.
+1. In the left-hand navigation of the **Experience Settings** window, select **Places**. Every place within your experience displays.
 1. Click the **&ctdot;** button next to the place with more than 50 players, then select **Configure Place**.
 1. In the **Max Players** field, enter any number less than or equal to 50.
 1. Click the **Save** button and then [publish](../production/publishing/publish-experiences-and-places.md) to save the changes.

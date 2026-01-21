@@ -5,7 +5,7 @@ description: Explore the physical units used in Roblox and how they convert to m
 
 This article outlines Roblox physical units and how they convert to metric units. Understanding units is useful whenever you work with physics, as in the following examples:
 
-- Customizing your experience's gravity, jump height/power, and walk speed in the **World** tab of Studio's **File**&nbsp;⟩ **Game Settings** window.
+- Customizing your experience's gravity, jump height/power, and walk speed in the **World** tab of Studio's **File**&nbsp;⟩ **Experience Settings** window.
 - Tuning linear/angular velocities, forces, torques, stiffness, and damping of [mechanical constraints](../physics/mechanical-constraints.md) and [mover constraints](../physics/mover-constraints.md).
 - Adjusting the density of [custom materials](../parts/materials.md#custom-materials).
 
@@ -101,7 +101,7 @@ The primary units are used to generate conversions for **derived** units such as
 </TabItem>
 <TabItem label="Gravity">
 
-The following table illustrates gravitational acceleration in Roblox units and metric units for presets in the **World** tab of Studio's **File**&nbsp;⟩ **Game Settings** window.
+The following table illustrates gravitational acceleration in Roblox units and metric units for presets in the **World** tab of Studio's **File**&nbsp;⟩ **Experience Settings** window.
 
 <table size="small">
 <thead>

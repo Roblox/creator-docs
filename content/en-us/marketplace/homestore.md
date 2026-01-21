@@ -63,7 +63,7 @@ By default, the catalog applies the following behavior:
 
 To set the catalog to use another creator's marketplace items:
 
-1.  In the **Security** section of [Game Settings](../studio/game-settings.md), enable **Allow Third Party Sales**.
+1.  In the **Security** section of [Experience Settings](../studio/experience-settings.md), enable **Allow Third Party Sales**.
 
     <img src="../assets/publishing/marketplace/Enable-Third-Party-Sales.png" alt="Section of the Explorer window highlighting the Settings file in Replicated Storage." width = "70%"/>
 
