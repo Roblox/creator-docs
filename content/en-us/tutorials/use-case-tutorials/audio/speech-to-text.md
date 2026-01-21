@@ -3,9 +3,9 @@ title: Add speech-to-text
 description: Explains how to add speech-to-text audio to your experiences.
 ---
 
-**Speech-to-text** (STT) is a form of technology that automatically generates text from speech sounds. With STT, you can create more immersive worlds by allowing players to talk to NPCs, generate text without the need to pre-record specific audio, improve accessibility for players with motor or vision limitations, and provide players with hands-free game controls through voice shortcuts for actions like opening their inventory or casting a spell.
+**Speech-to-text** (STT) is a form of technology that automatically generates text from speech sounds. With STT, you can create more immersive worlds by allowing players to talk to NPCs, generate text without the need to pre-record specific audio, improve accessibility for players with motor or vision limitations, and provide players with hands-free controls through voice shortcuts for actions like opening their inventory or casting a spell.
 
-Using the [Gingerbread House - Start](https://www.roblox.com/games/134812596370919/Gingerbread-House-Start) `.rbxl` file as a starting place, this tutorial shows you how to add text generated dynamically from speech to your experience, including guidance on how to implement STT so that the player can interact with objects in your game world.
+Using the [Gingerbread House - Start](https://www.roblox.com/games/134812596370919/Gingerbread-House-Start) `.rbxl` file as a starting place, this tutorial shows you how to add text generated dynamically from speech to your experience, including guidance on how to implement STT so that the player can interact with objects in your 3D world.
 
 <Alert severity="info">
 For more general guidance on adding audio to your experience, see the [Add 2D audio](./add-2D-audio.md) and [Add 3D audio](./add-3D-audio.md) tutorials.
@@ -24,7 +24,7 @@ All of these audio objects work together to generate STT text in response to pla
 - The `AudioDeviceInput` captures the player's speech, as spoken into their microphone and as a stream of audio.
 - A `Wire` carries the audio stream from the `AudioDeviceInput` to the `AudioSpeechToText`.
 - The `AudioSpeechToText` converts the player's speech into text.
-- The game reads this text and performs an action, such as displaying the spoken text on the screen or opening a door at the player's command.
+- The experience reads this text and performs an action, such as displaying the spoken text on the screen or opening a door at the player's command.
 
 ## Enable microphone usage
 

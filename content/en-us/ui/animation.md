@@ -582,7 +582,7 @@ The "typewriter" effect is ideal for `Class.TextLabel|TextLabels` that tell a st
 
    local label = script.Parent
 
-   -- Load translator if game is localized
+   -- Load translator if experience is localized
    --AnimateUI.loadTranslator()
 
    local message1 = [[Beyond this door is the<br /><font size="46" color="rgb(255,50,25)">Great Zorgoth...</font> <font size="40">🗡</font>]]

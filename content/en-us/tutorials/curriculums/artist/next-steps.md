@@ -11,7 +11,7 @@ Congratulations on completing your first VFX art with Roblox Studio! Now that yo
 
 ## Share with others
 
-When you first publish an experience, it's automatically set to **private** so that you are the only one who can play your game. However, creating on Roblox is always more fun when you can share what you make with others, so let's set up your experience so that they can play too.
+When you first publish an experience, it's automatically set to **private** so that you are the only one who can play it. However, creating on Roblox is always more fun when you can share what you make with others, so let's set up your experience so that they can play too.
 
 To make your experience public:
 

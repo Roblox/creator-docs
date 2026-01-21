@@ -154,7 +154,7 @@ Use a **boolean**, a variable that stores true or false, to ensure that finish()
    end
    ```
 
-4. Playtest your game to check that you only see your test print statement once.
+4. Playtest your experience to check that you only see your test print statement once.
 
 ### Keep track of time
 
@@ -186,7 +186,7 @@ Like an if statement, a while loop can also use a condition to see if it should 
    end
    ```
 
-3. Play the game and check that you see each second displayed in the Output window.
+3. Playtest the experience and check that you see each second displayed in the **Output** window.
 
 ## Award player medals
 

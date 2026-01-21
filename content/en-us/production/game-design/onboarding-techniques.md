@@ -31,7 +31,7 @@ Examples of visual elements in onboarding include:
 - A bouncing arrow pointing at a button in the UI
 - Particle effects over an item of interest in the world
 - A glowing trail in the world that directs players to a destination
-- An in-world sign displaying a game's core loop.
+- An in-world sign displaying an experience's core loop.
 
 <figure>
     <img src="../../assets/game-design/onboarding-techniques/visual-elements-1.png" width="80%"/>
@@ -40,7 +40,7 @@ Examples of visual elements in onboarding include:
 
 ### Improve clarity
 
-Players who don't understand what to do in the first few minutes of a game are likely to quit, but so are players who are bored by lengthy and prescriptive tutorials. Utilizing visual elements in onboarding funnels enables you to teach players what they need to know, while also allowing them to get to the fun quickly. When information must be communicated efficiently, visual elements are used to improve clarity in three ways:
+Players who don't understand what to do in the first few minutes are likely to quit, but so are players who are bored by lengthy and prescriptive tutorials. Utilizing visual elements in onboarding funnels enables you to teach players what they need to know, while also allowing them to get to the fun quickly. When information must be communicated efficiently, visual elements are used to improve clarity in three ways:
 
 - Prominence
 - Highlights
@@ -50,7 +50,7 @@ Players who don't understand what to do in the first few minutes of a game are l
 
 Prominent visuals can be harder to overlook, ignore, or misinterpret than text alone. Some experiences present pop-up messages with text as players make progress. Depending on factors like location, color and contrast, and how focused the player is on what they're doing in the experience, those text prompts can be easily overlooked. If players don't notice them, they are of no benefit. Placing visual elements in the world, where players encounter them as they are playing, is one solution to this problem.
 
-In _Color or Die_, a sign explaining the game's core survival mechanic is placed directly in players' line of sight as they collect their first paint bucket to begin playing. It's impossible to miss, but doesn't prevent the player from starting the experience.
+In _Color or Die_, a sign explaining the experience's core survival mechanic is placed directly in players' line of sight as they collect their first paint bucket to begin playing. It's impossible to miss, but doesn't prevent the player from starting the experience.
 
 <figure>
     <img src="../../assets/game-design/onboarding-techniques/visual-elements-2.png" width="80%"/>
@@ -121,7 +121,7 @@ Visual elements can help players stay immersed in gameplay. Directional trails, 
 
 ### Facilitate feedback
 
-Visual elements can be used as feedback outside of tutorials and onboarding funnels. Feedback occurs when a player takes an action in a game and the game responds in a way that communicates the results of the action. Visual elements can be used to communicate feedback and provide players with actionable information to help them make their next choice.
+Visual elements can be used as feedback outside of tutorials and onboarding funnels. Feedback occurs when a player takes an action and the experience responds in a way that communicates the results of the action. Visual elements can be used to communicate feedback and provide players with actionable information to help them make their next choice.
 
 As an example, when players are in combat in _Winds of Fortune_:
 
@@ -139,7 +139,7 @@ As an example, when players are in combat in _Winds of Fortune_:
 
 All of this feedback tells players when they have successfully hit the enemy, when they have taken damage themselves, what rewards they receive from victory, and whether they've made progress on their quest. The combination of these visual elements ensures most players understand what's happening without a needing more explicit combat tutorial.
 
-Anytime a player takes an action in a game, it's imperative to provide clear feedback. Otherwise, players may not know that the action they took did anything, and wonder if they did something wrong, or wonder if the game is buggy.
+Anytime a player takes an action in an experience, it's imperative to provide clear feedback. Otherwise, players may not know that the action they took did anything, and wonder if they did something wrong, or wonder if the experience is buggy.
 
 For more information about feedback and other User Experience (UX) best practices, see [UI and UX](./ui-ux-design.md)
 
@@ -147,9 +147,9 @@ For more information about feedback and other User Experience (UX) best practice
 
 Also known as **just in time** tutorials, **contextual tutorials** are tutorials triggered by normal play, such as entering a new map zone or picking up a new weapon. By waiting for players to engage naturally, contextual tutorials personalize instruction, which maximizes their relevance and utility within the broader onboarding funnel. Contextual tutorials facilitate:
 
-- **Increased learning retention:** Players learn best by understanding the context of a situation and by interacting with tutorials that are triggered by their first interaction with a game feature. When players practice actions while learning them, they retain knowledge better.
+- **Increased learning retention:** Players learn best by understanding the context of a situation and by interacting with tutorials that are triggered by their first interaction with an experience feature. When players practice actions while learning them, they retain knowledge better.
 - **Faster onboarding:** It's important to lead players to the enjoyable parts of an experience quickly to keep them engaged.Contextual tutorials allow designers to avoid lengthy onboarding systems and delay unneeded tutorials, enabling players to begin having fun more quickly.
-- **Reduced cognitive load:** In the first few minutes of a game, new players often must learn many things like interactions, mechanics, and goals. The more they have to learn, the harder it becomes to retain it all, increasing the likelihood of feeling overwhelmed and quitting. Delaying non-essential information to future sessions reduces what they must learn and remember in the first session, allowing them to focus on the essentials.
+- **Reduced cognitive load:** In the first few minutes of an experience, new players often must learn many things like interactions, mechanics, and goals. The more they have to learn, the harder it becomes to retain it all, increasing the likelihood of feeling overwhelmed and quitting. Delaying non-essential information to future sessions reduces what they must learn and remember in the first session, allowing them to focus on the essentials.
 
 Traditional tutorial flows guide players in a fixed sequence through an experience's features, ensuring that they learn essential skills and knowledge. While this method can be effective for high level concepts, it can lead to boredom or frustration due to restricting player choice. Contextual tutorials enhance the experience by holding off on less crucial instructions and quickly handing control to the player, by only providing specific instructions to the relevant players.
 
@@ -191,7 +191,7 @@ In addition to helping players through the onboarding tutorial, showing timely h
 
 - **Increase retention:** Timed hints can increase the number of new players retained by an experience by ensuring that struggling players get the extra help they need to succeed and have fun. New players needing additional help at first can become dedicated players in the future if they receive appropriate and well timed support.
 - **Improve player agency:** Timed hints allow designers to create less structured tutorial sequences and add additional layers of assistance specifically for those who need it. This avoids annoying experienced players while giving newer players the opportunity to figure things out for themselves. Players who figure things out on their own tend to feel more successful and empowered, which helps them complete tutorials quickly and get to the fun faster.
-- **Surface overlooked features:** Timed hints can also be used to draw attention to features in an experience that weren't core enough to be included in onboarding, but are still worth surfacing. For example, if a player hasn't engaged with a game's trade feature in their first two sessions, highlighting the trade button in the UI would encourage them to click on it and experience the feature for the first time.
+- **Surface overlooked features:** Timed hints can also be used to draw attention to features in an experience that weren't core enough to be included in onboarding, but are still worth surfacing. For example, if a player hasn't engaged with an experience's trade feature in their first two sessions, highlighting the trade button in the UI would encourage them to click on it and experience the feature for the first time.
 
 When deciding how and when to use timed hints, observing playtesters can provide valuable information about where such hints are needed and how long to wait before displaying them. Try to find a balance between displaying them so quickly that players feel that they haven't gotten the chance to figure it out on their own, and waiting so long that they get frustrated.
 

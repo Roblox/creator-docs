@@ -517,4 +517,4 @@ end
 
 ## Summary
 
-A common application of using module scripts in Roblox games is to handle common tasks used by players, such as granting them points. For this example, a module script named TreasureManager was created to handle giving players keys and treasure whenever they interact with in-game objects.
+A common application of using module scripts in Roblox experiences is to handle common tasks used by players, such as granting them points. For this example, a module script named TreasureManager was created to handle giving players keys and treasure whenever they interact with in-game objects.

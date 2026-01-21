@@ -37,7 +37,7 @@ To set Blender units to be compatible with Roblox's stud units:
 - One axis represents vertical position (up and down movement).
 - One axis represents depth (forward and backward movement).
 
-Blender and Studio use **different** coordinate systems, specifically for the axis that represents the "up" direction. Like other modeling software, Blender uses the Z axis because 3D objects move up out of the 2D plane to become a 3D object; conversely, like other game engines, Studio uses the Y axis because characters move on the ground plane and jump up for vertical movement.
+Blender and Studio use **different** coordinate systems, specifically for the axis that represents the "up" direction. Like other modeling software, Blender uses the **Z** axis because 3D objects move up out of the 2D plane to become a 3D object; conversely, like other engines, Studio uses the **Y** axis because characters move on the ground plane and jump up for vertical movement.
 
 This difference is important to keep in mind as you import your 3D art into Blender or Studio because you must make adjustments to the import settings to ensure your object maintains the correct orientation in either application.
 
@@ -121,7 +121,7 @@ To set Blender settings for exporting 3D objects for Studio:
 
 ### Adjust scale (FBX)
 
-The FBX (`.fbx`) file format is widely used in 3D workflows due to its broad support across modeling tools and game engines. However, when exporting from Blender using its default `.fbx` settings, models often import at an unexpectedly large scale in Roblox Studio.
+The FBX (`.fbx`) file format is widely used in 3D workflows due to its broad support across modeling tools and engines. However, when exporting from Blender using its default `.fbx` settings, models often import at an unexpectedly large scale in Roblox Studio.
 
 <Alert severity = 'info'>Roblox Studio also supports GLTF (`.gltf`) formats which do not require these additional scaling configurations.</Alert>
 

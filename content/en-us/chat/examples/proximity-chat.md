@@ -3,7 +3,7 @@ title: Proximity-based chat
 description: Learn how to implement exclusive chat for users who are close to each other in locations using the TextChatService.
 ---
 
-This example shows how to implement an exclusive chat for users who are near each other in the game world. It extends the callback with a function using `Class.TextSource` to identify the locations of a user who might be a potential message receiver. If this function returns `false`, it means that the user locates further than the preset valid range from the message sender, so the system doesn't deliver the message to that user.
+This example shows how to implement an exclusive chat for users who are near each other in the 3D world. It extends the callback with a function using `Class.TextSource` to identify the locations of a user who might be a potential message receiver. If this function returns `false`, it means that the user locates further than the preset valid range from the message sender, so the system doesn't deliver the message to that user.
 
 Add the following to a `Class.Script` in `Class.ServerScriptService`:
 

@@ -17,7 +17,7 @@ The basic steps are to copy an asset ID, create a `Class.Sound` object, and use 
 
 ### Sound setup
 
-If a sound object is parented to a part, sound will emit from its position. If a sound object is parented to **SoundService**, it will play at the same volume at every point in the game world. This makes SoundService ideal for storing background music.
+If a sound object is parented to a part, sound will emit from its position. If a sound object is parented to **SoundService**, it will play at the same volume at every point in the 3D world. This makes SoundService ideal for storing background music.
 
 1. In **SoundService**, insert a **Sound** object named **BackgroundMusic**.
 
@@ -39,7 +39,7 @@ Here are some sample music IDs you can use:
 
 ### Play the song
 
-Background music can be played in a game through a script.
+Background music can be played through a script.
 
 1. In **StarterPlayer** ⟩ **StarterPlayerScripts**, create a **LocalScript** named **MusicPlayer**.
 
@@ -61,7 +61,7 @@ Background music can be played in a game through a script.
    backgroundMusic:Play()
    ```
 
-4. Test the game and confirm that the music is audible.
+4. Test the experience and confirm that the music is audible.
 
 ### Audio properties
 
@@ -75,6 +75,6 @@ Currently, the music doesn't loop. Additionally, the original sound file may be 
 
    ![alt](../../../assets/tutorials/playing-background-music/playingBGMusic_changeProperties_volume.png)
 
-With this project done, explore using scripts to implement other features in music. For instance, try using a script to shuffle songs in a soundtrack or play songs in different areas of your game world.
+With this project done, explore using scripts to implement other features in music. For instance, try using a script to shuffle songs in a soundtrack or play songs in different areas of your 3D world.
 
 For more on sounds and background music, see [Audio](../../../sound/index.md).

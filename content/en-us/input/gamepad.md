@@ -25,7 +25,7 @@ For alternative gamepad detection methods, see the `Class.UserInputService.Gamep
 
 ## Common control schemas
 
-When considering specific control bindings for the [Input Action System](../input/input-action-system.md), it's best to establish consistency across different games and experiences. The following input bindings will help players immediately feel familiar and comfortable with gamepad controls.
+When considering specific control bindings for the [Input Action System](../input/input-action-system.md), it's best to establish consistency across different experiences. The following input bindings will help players immediately feel familiar and comfortable with gamepad controls.
 
 <table>
 <thead>

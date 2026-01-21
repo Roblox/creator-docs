@@ -270,7 +270,7 @@ end
 In the above example, `Images` is the category/folder that appears in the [Asset Manager](../../projects/assets/manager.md) and `Potion` is the asset name, minus its extension.
 
 <Alert severity="warning">
-`rbxgameasset` only works for the current game. If you paste a parent object that utilizes the asset into another game, the asset will not load (or will load a different asset if you've uploaded one with the same name to that other game). If you need an asset to work across multiple games, use `rbxassetid` instead of `rbxgameasset`.
+`rbxgameasset` only works for the current experience. If you paste a parent object that utilizes the asset into another experience, the asset will not load (or will load a different asset if you've uploaded one with the same name to that other game). If you need an asset to work across multiple experiences, use `rbxassetid` instead of `rbxgameasset`.
 </Alert>
 
 ### rbxhttp

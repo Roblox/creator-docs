@@ -103,7 +103,7 @@ To customize your course for your obby's starting jumping puzzle:
       <img src="../../../assets/tutorials/building-lesson/customize-1.png" alt="" width="60%" />
 
       <Alert severity="info">
-      Keep in mind that the jump distance between platforms is important for your game design. If you make it too difficult from the start, players may quit instead of continuing to play.
+      Keep in mind that the jump distance between platforms is important. If you make it too difficult from the start, players may quit instead of continuing to play.
       </Alert>
 
 1. Change the **size** of your first platform.

@@ -16,7 +16,7 @@ width="100%" />
 To maintain an orderly and structured system:
 
 - Each tile must connect to another existing tile or to the ground.
-- Place all building tiles within a grid coordinated with the game world so that tiles connect properly and do not overlap.
+- Place all building tiles within a grid coordinated with the 3D world so that tiles connect properly and do not overlap.
 
 ## Tile composition
 
@@ -26,7 +26,7 @@ Tiles use 3 components: the [visual asset](#asset) that is used as the tile obje
 
 ### Asset
 
-An asset is a `Class.BasePart` (`Class.Part`, `Class.MeshPart`, etc.) placed in `ReplicatedStorage/BuildingSystem/Assets` representing what the tile looks like in the game world. This `Class.BasePart` must have two children:
+An asset is a `Class.BasePart` (`Class.Part`, `Class.MeshPart`, etc.) placed in `ReplicatedStorage/BuildingSystem/Assets` representing what the tile looks like in the 3D world. This `Class.BasePart` must have two children:
 
 - **ObjectType** — A `Class.StringValue` with a `Value` of the tile type name.
 - **StartingRotation** — A `Class.NumberValue` with a `Value` of the tile's starting rotation when a user places it in the world.

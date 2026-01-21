@@ -1,6 +1,6 @@
 ---
 title: Plant reference project
-description: A deep dive into building of the Plant experience, a game where players plant seeds and harvest plants.
+description: A deep dive into building of the Plant experience, an experience where players plant seeds and harvest plants.
 ---
 
 [Plant][planturl] is a reference experience where players plant and water seeds, so they
@@ -77,9 +77,9 @@ The following table describes which container services in the data model instanc
 	<tr>
     <td>`Class.ReplicatedFirst`</td>
     <td>
-      <p>Contains the smallest possible subset of instances needed to display the loading screen and initialize the game. The more instances that are placed in `Class.ReplicatedFirst`, the longer the wait for them to replicate before code in `Class.ReplicatedFirst` can run.</p>
+      <p>Contains the smallest possible subset of instances needed to display the loading screen and initialize the experience. The more instances that are placed in `Class.ReplicatedFirst`, the longer the wait for them to replicate before code in `Class.ReplicatedFirst` can run.</p>
 			- In the **Instances** folder exists the loading screen GUI.
-			- In the **Source** folder exists the loading screen code and the code needed to wait for the rest of the game to load. The `start` `Class.LocalScript` is the entry point for all client-side code in the project.
+			- In the **Source** folder exists the loading screen code and the code needed to wait for the rest of the experience to load. The `start` `Class.LocalScript` is the entry point for all client-side code in the project.
   	</td>
   </tr>
   <tr>
@@ -87,7 +87,7 @@ The following table describes which container services in the data model instanc
     <td>
       <p>Serves as a storage container for all instances for which access is required on both the client and the server.</p>
 			- In the **Dependencies** folder exists some third party libraries used by the project.
-			- In the **Instances** folder exists a wide range of prefabricated instances used by various classes in the game.
+			- In the **Instances** folder exists a wide range of prefabricated instances.
 			- In the **Source** folder exists all code **not** required for the loading process that needs to be accessible from both the client and the server.
     </td>
   </tr>
@@ -101,14 +101,14 @@ The following table describes which container services in the data model instanc
     <td>`Class.ServerStorage`</td>
     <td>
       <p>Serves as a storage container for all instances that do not need to be replicated to the client.</p>
-			- In the **Instances** folder exists a template **Farm** model. A copy of this is placed in `Class.Workspace` when the player joins the game, where it will be replicated to all players.
+			- In the **Instances** folder exists a template **Farm** model. A copy of this is placed in `Class.Workspace` when the player joins the experience, where it will be replicated to all players.
 			- In the **Source** folder exists all code that is exclusive to the server.
     </td>
   </tr>
   <tr>
     <td>`Class.SoundService`</td>
     <td>
-      <p>Contains the `Class.Sound` objects used for sound effects in the game. Under `Class.SoundService`, these `Class.Sound` objects have no position and are not simulated in 3D space.</p>
+      <p>Contains the `Class.Sound` objects used for sound effects in the experience. Under `Class.SoundService`, these `Class.Sound` objects have no position and are not simulated in 3D space.</p>
     </td>
   </tr>
 </tbody>
@@ -121,7 +121,7 @@ that can be imported across the entire codebase.
 `Class.ModuleScript|ModuleScripts` are reusable but they do not execute
 on their own; they need to be imported by a `Class.Script` or `Class.LocalScript`. Many Roblox
 projects will have a large number of `Class.Script` and `Class.LocalScript` objects, each
-pertaining to a behavior or particular system in the game, creating multiple
+pertaining to a behavior or particular system in the experience, creating multiple
 points of entry.
 
 For the [Plant][planturl] microgame, a different approach is implemented through
@@ -203,7 +203,7 @@ The following systems are associated with the server.
   <tr>
     <td>**FarmManagerServer**</td>
     <td>
-      - Re-creates a player's farm model from their player data when they join the game.
+      - Re-creates a player's farm model from their player data when they join the experience.
       - Removes the farm model when a player leaves.
       - Updates the player data when a player's farm is changed.
       - Exposes a method to access the **Farm** class associated with a given player.
@@ -286,7 +286,7 @@ The following systems are associated with the client.
     <td>**UISetup**</td>
     <td>
       - Initializes all UI layers.
-      - Configures certain layers to be visible only in physical sections of the game world.
+      - Configures certain layers to be visible only in physical sections of the world.
       - Hooks up a special camera effect for when menus are enabled.
     </td>
   </tr>
@@ -638,7 +638,7 @@ In [Plant][planturl], all UI structures are either a `Layer` or a `Component`.
 
 A common UI management problem is view handling. This project has a range of menus and HUD items, some of which listen to user input, and careful management of when they are visible or enabled is required.
 
-[Plant][planturl] approaches this problem with its **UIHandler** system which manages when a UI layer should or should not be visible. All UI layers in the game are categorized as `HUD` or `Menu` and their visibility is managed by the following rules:
+[Plant][planturl] approaches this problem with its **UIHandler** system which manages when a UI layer should or should not be visible. All UI layers in the experience are categorized as `HUD` or `Menu` and their visibility is managed by the following rules:
 
 - The enabled state of `Menu` and `HUD` layers can be toggled.
 - Enabled `HUD` layers are only shown if no `Menu` layers are enabled.

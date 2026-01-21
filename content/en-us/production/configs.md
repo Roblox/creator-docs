@@ -124,7 +124,7 @@ configSnapshot.UpdateAvailable:Connect(function()
 end)
 ```
 
-After you refresh a snapshot, you can use `Class.ConfigSnapshot:GetValueChangedSignal()` to listen for changes to a specific key so that you can update your game code:
+After you refresh a snapshot, you can use `Class.ConfigSnapshot:GetValueChangedSignal()` to listen for changes to a specific key so that you can update your experience's code:
 
 ```lua
 configSnapshot:GetValueChangedSignal("bossHealth"):Connect(function(newHealthValue)

@@ -21,7 +21,7 @@ The following are examples of third-party software that creators commonly use:
 
 - **Audio editing software**
 
-  - Creators working on sound design or music for their Roblox games might use external audio editing software like [Audacity](https://www.audacityteam.org/) or [Reaper](https://www.reaper.fm/). These tools allow for precise control when creating audio assets.
+  - Creators working on sound design or music for their Roblox experiences might use external audio editing software like [Audacity](https://www.audacityteam.org/) or [Reaper](https://www.reaper.fm/). These tools allow for precise control when creating audio assets.
 
 By using third-party software, creators can tap into specialized features, workflows, and expertise, while expanding their creative possibilities and enhancing the overall quality of their Roblox experiences.
 

@@ -64,7 +64,7 @@ The code here calls `Class.Instance:FindFirstChildWhichIsA()|FindFirstChildWhich
 
 ## Get the pickups folder
 
-The folder holding the health pickups may not have loaded into the game by the time the script runs. `WaitForChild` can be used to pause the script and get the HealthPickups folder when it loads.
+The folder holding the health pickups may not have loaded into the experience by the time the script runs. `WaitForChild` can be used to pause the script and get the HealthPickups folder when it loads.
 
 When called on a folder, the `GetChildren` function will return an array of the folder's contents.
 
@@ -139,7 +139,7 @@ A health bar should appear in the top right which will disappear when the player
 
 ## Pickup cooldown
 
-Currently, the pickup will indefinitely heal any player who touches it. It would be more effective in a game if it could only be picked up once, with a short cooldown before it can be used again.
+Currently, the pickup will indefinitely heal any player who touches it. It would be more effective if it could only be picked up once, with a short cooldown before it can be used again.
 
 First, you need to record whether or not the pickup is in the cooldown period. The pattern below should be familiar from [Fade Trap](../basic-scripting/fading-trap.md) - this time, the debounce will be achieved by setting an attribute on the health pickup.
 

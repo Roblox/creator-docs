@@ -22,9 +22,9 @@ We implemented it as a simple state machine (Update function), and the states ar
 
 GameStates is mostly server-side, but when the client needs to do something, such as show countdown, lore, or disable streaming pause UI, server and client (GameStatesClient) communicate via a remote event called `GameStateEvent`. As with most cases, the event payload has event "type" (Config.GameEvents) as the first parameter, and event specific data after that.
 
-### Teleportation game states
+### Teleportation states
 
-There is a group of 3 game states that run three unique cutscenes that hide the teleportation to the corrupt room: Warmup, InFlight, and Cooldown. **Warmup** runs for the whole duration and ends with an almost black screen in which the 3D world is no longer visible. During this time, we clone the room, get desired player positions in the corrupt room for each player, call `Class.Player.RequestStreamAroundAsync`, and transport players to a specific assigned `Datatype.CFrame` coordinate within the corrupt room. This type of teleportation might trigger a streaming pause. When a streaming pause occurs, the client displays a warning message. We disabled this default UI to keep the experience immersive.
+There is a group of 3 states that run three unique cutscenes that hide the teleportation to the corrupt room: Warmup, InFlight, and Cooldown. **Warmup** runs for the whole duration and ends with an almost black screen in which the 3D world is no longer visible. During this time, we clone the room, get desired player positions in the corrupt room for each player, call `Class.Player.RequestStreamAroundAsync`, and transport players to a specific assigned `Datatype.CFrame` coordinate within the corrupt room. This type of teleportation might trigger a streaming pause. When a streaming pause occurs, the client displays a warning message. We disabled this default UI to keep the experience immersive.
 
 <Alert severity="info">
 Players cannot transport to a specific assigned `Datatype.CFrame` while they are sitting, so the server sends a message to the client to "unseat" players before the teleport, as well as disable the seating state while the teleportation is in progress.
@@ -34,7 +34,7 @@ While streaming is being handled, **InFlight** runs, keeping a slightly pulsing 
 
 A similar set of Warmup, InFlight, and Cooldown cutscenes occur when we teleport the player back to the normal state of the room, **TeleportWarmupBack**, **TeleportInFlightBack**, and **TeleportCooldownBack**, and at the end of the experience, we also run **TeleportWarmupFinal**, **TeleportInFlightFinal**, and **TeleportCooldownFinal** to teleport players into the foyer for the finishing cutscene.
 
-### Lighting and atmosphere game states
+### Lighting and atmosphere states
 
 We knew that we wanted each room's normal and corrupt state to have a different visual appearance so it could give players clear visual feedback that they were in a completely different location. Game states allowed us to change the lighting and atmosphere properties for normal and corrupt rooms, in which the GameStateManager selected which instances to use based on if players are teleporting from the normal to the corrupt state of the room (`TeleportWarmup`), or vice versa (`TeleportWarmupBack`). Events playing during the teleport make the whole screen either dark or white, so we decided to change the `Class.Lighting` and `Class.Atmosphere` instances at those moments to hide the process from players. To make it simple to change, **DemoConfig** includes maps that define what instances under these services need to change.
 

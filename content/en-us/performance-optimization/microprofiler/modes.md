@@ -54,7 +54,7 @@ In addition to the bar graph from frame mode, detailed mode adds a colorful time
 
 - Right-click a label to zoom the timeline to exactly the duration of that task.
 
-- Left-click a label to add it to a line graph in the bottom-right. The graph shows the time the task takes each frame. Using this graph, you can test the performance of only certain tasks in your game. When you're done, right-click the graph to hide it.
+- Left-click a label to add it to a line graph in the bottom-right. The graph shows the time the task takes each frame. Using this graph, you can test the performance of only certain tasks in your experience. When you're done, right-click the graph to hide it.
 
   <img alt="The graph showing how long tasks take per frame." src="../../assets/optimization/microprofiler/micro-graph.png" width="300px" />
 

@@ -10,7 +10,7 @@ This guide covers advanced techniques for creating high-quality, smooth, multipl
 <BetaAlert betaName="Server Authority Core API" leadIn="The server authority model and its associated APIs are currently in beta. Enable them in Studio through " leadOut="." components={props.components} />
 
 <Alert severity="error">
-As this feature is currently in beta, you should **not** publish a server‑authoritative game. Your players' clients will not yet have support for server authority APIs, so the published game will not work correctly.
+As this feature is currently in beta, you should **not** publish a server‑authoritative experience. Your players' clients will not yet have support for server authority APIs, so the published experience will not work correctly.
 </Alert>
 
 ## Position smoothing
@@ -155,18 +155,18 @@ end)
 
 ## Designing around network latency
 
-Certain gameplay mechanics lend themselves better to networked multiplayer than other mechanics. Players will always have some delay between when another player performs an action and when they receive that player's input. The best way to create a super smooth multiplayer experience is to design your game with these limitations in mind.
+Certain gameplay mechanics lend themselves better to networked multiplayer than other mechanics. Players will always have some delay between when another player performs an action and when they receive that player's input. The best way to create a super smooth multiplayer experience is to design your experience with these limitations in mind.
 
-For example, a game with slower acceleration on player movement will appear smoother than a game with higher acceleration because the difference in position caused by the network latency of player input will be less than in a game with higher acceleration.
+For example, an experience with slower acceleration on player movement will appear smoother than one with higher acceleration because the difference in position caused by the network latency of player input will be less than in an experience with higher acceleration.
 
 As another example, a gameplay mechanic where players can **instantly** trigger a large explosion by pressing an input will have more network artifacts than if the explosion is delayed after the input, as if by lighting a fuse. This puts the resimulation on the fuse effect instead of on the explosion effect which is a less noticeable network artifact.
 
 ## Predicting other player inputs
 
-By default, Roblox does not forward the inputs from each client to every other client. Whether this is right for your game depends on its design:
+By default, Roblox does not forward the inputs from each client to every other client. Whether this is right for your experience depends on its design:
 
 - For basic humanoid movement, the default behavior means that other player characters' movements are not extrapolated from the authoritative server state and, as a result, other player characters will not mispredict but will render slightly in the past.
-- In a racing game, by contrast, the default behavior means that clients will not know whether other players are applying the throttle or other inputs, so other cars may appear behind the local player even if they're actually ahead. To alleviate this, you can store player inputs in [attributes](../../studio/properties.md#instance-attributes) on the server and operate on those synchronized attributes client‑side using `Class.RunService:BindToSimulation()` as demonstrated in the following code sample and the [Racing](https://www.roblox.com/games/134686834388911/Racing-Server-Authority-Template) template. This approach lets you use attributes as inputs to your game simulation to have fully replicated player inputs.
+- In a racing game, by contrast, the default behavior means that clients will not know whether other players are applying the throttle or other inputs, so other cars may appear behind the local player even if they're actually ahead. To alleviate this, you can store player inputs in [attributes](../../studio/properties.md#instance-attributes) on the server and operate on those synchronized attributes client‑side using `Class.RunService:BindToSimulation()` as demonstrated in the following code sample and the [Racing](https://www.roblox.com/games/134686834388911/Racing-Server-Authority-Template) template. This approach lets you use attributes as inputs to your simulation to have fully replicated player inputs.
 
 ```lua title="Storing Player Input in Attributes (ModuleScript)"
 local Players = game:GetService("Players")

@@ -48,13 +48,7 @@ Roblox Battle Royale must be structured as a game with six unique places. To beg
    width="80%" />
 
 2. Select **File** → **Publish As…** to open the publishing window.
-3. Near the bottom of the window, click **Create new game…**.
-
-   <img
-   alt="Publish Window - Create New."
-   src="../../assets/resources/battle-royale/installation-and-setup/Publish-Window-Create-New-Game.png"
-   width="80%" />
-
+3. Near the bottom of the window, click **Create new experience**.
 4. Type in **Lobby** for the place name.
 
    <img
@@ -265,13 +259,7 @@ local _places = {
    ```
 
 4. Select **File** → **Publish As…** to open the publishing window.
-5. Near the bottom of the window, click **Update existing game…**.
-
-   <img
-   alt="Update Existing Game."
-   src="../../assets/resources/battle-royale/installation-and-setup/Publish-Update-Existing.png"
-   width="80%" />
-
+5. Near the bottom of the window, click **Update existing experience…**.
 6. Locate and click the **Lobby** place that you published earlier.
 7. On the next screen, you should see a list of the places you added earlier. From the list, select the **Gameplay** place and click the **Overwrite** button.
 

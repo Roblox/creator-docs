@@ -16,4 +16,4 @@ For example, imagine you've just added a new place to your experience:
 1. You check the script, which adds some user data to a large table, but never cleans the data up—it's growing infinitely.
 1. You fix the problem, publish the updated experience, and client crash rate returns to its previous value.
 
-Comparing the Performance Dashboard to other dashboards can help you correlate performance improvements (or regressions) to business metrics for a more complete idea of how a performant game impacts your bottom line. For more information, see [Analytics](../production/analytics/index.md).
+Comparing the Performance Dashboard to other dashboards can help you correlate performance improvements (or regressions) to business metrics for a more complete idea of how a performant experience impacts your bottom line. For more information, see [Analytics](../production/analytics/index.md).

@@ -15,12 +15,12 @@ Every piece of data sent from a client must be validated by the server before it
 
 ### Context/permission validation
 
-This is necessary for remotes that affect game state, progression, or other players. The server must verify if the player has the necessary permissions to make the request. For example, is the player close enough to a shop to buy something? Do they have a key required to open a door? Is their character alive?
+This is necessary for remotes that affect experience's state, progression, or other players. The server must verify if the player has the necessary permissions to make the request. For example, is the player close enough to a shop to buy something? Do they have a key required to open a door? Is their character alive?
 
 Validation is necessary for remotes that:
 
 - Grant rewards or modify player progression
-- Affect other players or shared game state
+- Affect other players or shared experience state
 - Perform actions with distance, timing, or permission requirements (for example, shop distance)
 
 ### Type and structure validation
@@ -138,7 +138,7 @@ Consider an in-experience shop system with a user interface, for instance a prod
 
 Combat scenarios warrant special attention on validating values, particularly through aiming and hit validation.
 
-Imagine a game where a player can fire a laser beam at another player. Rather than the client telling the server who to damage, it should instead tell the server the origin position of the shot and the part/position it thinks it has hit. The server can then validate the following:
+Imagine an experience where a player can fire a laser beam at another player. Rather than the client telling the server who to damage, it should instead tell the server the origin position of the shot and the part/position it thinks it has hit. The server can then validate the following:
 
 - The position the client reports shooting from is near the player's character on the server. Note that the server and client will differ slightly due to latency, so extra tolerance will need to be applied.
 - The position the client reports hitting is reasonably close to the position of the part the client reports hitting, on the server.
@@ -162,7 +162,7 @@ For any server-sided logic that can be triggered by a client, always consider th
 - **Computationally expensive operations**: Actions that consume significant server resources or impact other clients
 - Server example: cloning large models from ServerStorage, even if they're never replicated to clients
 - **Client example**: instructing all connected clients to update their GUI simultaneously
-- **Exploitable game mechanics**: Actions that could be abused if performed rapidly, such as granting invulnerability, teleporting players, or awarding currency
+- **Exploitable mechanics**: Actions that could be abused if performed rapidly, such as granting invulnerability, teleporting players, or awarding currency
 
 ### Token bucket example
 
@@ -336,7 +336,7 @@ castLightningEvent.OnClientEvent:Connect(createLightningEffect)
 
 An exploiter can abuse this vulnerable system by:
 
-- **Spamming**: Calling the remote hundreds of times per second, causing continuous effects that make the game unplayable
+- **Spamming**: Calling the remote hundreds of times per second, causing continuous effects that make the experience unplayable
 - **Invalid data**: Sending nil, NaN, or wrong types that cause script errors on all clients
 - **Unauthorized use**: Casting spells they haven't unlocked or don't have resources for
 
@@ -417,4 +417,4 @@ Race conditions can occur when players manipulate timing between operations to d
 
 ### MarketplaceService
 
-For interactions involving `Class.MarketplaceService`, such as game passes or developer products, all purchase validation and item granting must occur on the server. Specifically, utilize the `ProcessReceipt` callback to securely validate purchase receipts. Never trust a client-side signal, such as `PromptProductPurchaseFinished`, to confirm a purchase without server verification, as these can be spoofed. Ensure that your `ProcessReceipt` function thoroughly checks the receipt details and only grants items or currency after confirming a legitimate transaction with Roblox servers, and be prepared to handle cases where a product has already been granted for a given receipt.
+For interactions involving `Class.MarketplaceService`, such as passes or developer products, all purchase validation and item granting must occur on the server. Specifically, utilize the `ProcessReceipt` callback to securely validate purchase receipts. Never trust a client-side signal, such as `PromptProductPurchaseFinished`, to confirm a purchase without server verification, as these can be spoofed. Ensure that your `ProcessReceipt` function thoroughly checks the receipt details and only grants items or currency after confirming a legitimate transaction with Roblox servers, and be prepared to handle cases where a product has already been granted for a given receipt.

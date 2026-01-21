@@ -3,7 +3,7 @@ title: Profile Card
 description: The Profile Card module lets players see more information about other players in an experience.
 ---
 
-It can be interesting to learn about other players. The **ProfileCard** [developer module](../../resources/modules/index.md) is a great way to see more information about others within an experience, from badges achieved to the player's favorite games.
+It can be interesting to learn about other players. The **ProfileCard** [developer module](../../resources/modules/index.md) is a great way to see more information about others within an experience, from badges achieved to the player's favorite experiences.
 
 <video src="../../assets/developer-modules/profile-card/Showcase.mp4" controls width="100%"></video>
 

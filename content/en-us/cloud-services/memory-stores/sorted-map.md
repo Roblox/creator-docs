@@ -166,7 +166,7 @@ To retrieve the value and sort key of a key from a sorted map and update it, cal
 
 For most experiences, multiple servers can update the same key concurrently and change the value. As `Class.MemoryStoreSortedMap:UpdateAsync()|UpdateAsync()` always modifies the latest value before updating, you should use it to read the latest value as the input for your callback function.
 
-For example, the following code sample updates the score in a leaderboard for a player in a game. The score is calculated as kills / deaths. `Class.MemoryStoreSortedMap:UpdateAsync()|UpdateAsync()` ensures that the kills and deaths are updated for the most recent values even if multiple game servers update the same item simultaneously. A player's kills and deaths are monotonically increasing values and can hence only increase in value in a session.
+For example, the following code sample updates the score in a leaderboard for a player. The score is calculated as kills / deaths. `Class.MemoryStoreSortedMap:UpdateAsync()|UpdateAsync()` ensures that the kills and deaths are updated for the most recent values even if multiple experience servers update the same item simultaneously. A player's kills and deaths are monotonically increasing values and can hence only increase in value in a session.
 
 ```lua title="Updating the leaderboard score for a player in a Sorted Map"
 local MemoryStoreService = game:GetService("MemoryStoreService")

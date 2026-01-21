@@ -9,7 +9,7 @@ comments: The links to the Materials and PBR Modeling guides must be replaced by
 
 <br/>
 
-**Applying polished assets** is the last step in constructing your final environment, in which you swap out your greybox placeholder assets for high-quality polished assets in order to meet your experience's aesthetic goals and game design requirements. This exciting section of the curriculum is where you see your world come to life into a cohesive environment that is complete and ready for publication.
+**Applying polished assets** is the last step in constructing your final environment, in which you swap out your greybox placeholder assets for high-quality polished assets in order to meet your experience's aesthetic goals and design requirements. This exciting section of the curriculum is where you see your world come to life into a cohesive environment that is complete and ready for publication.
 
 Using the [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) `.rbxl` file as a reference, this section of the tutorial teaches you how to use the Creator Store to find and add a sample asset library into your project, continue your organization structure to sort your new assets into meaningful categories, and apply the asset library to the 3D space.
 
@@ -1160,7 +1160,7 @@ To exactly recreate the mountains within the sample [Island Jump - Final](https:
 
 ## Playtest
 
-After you finish applying your asset library and constructing your environment, you must playtest your experience to ensure any variations in your layout from your polished assets haven't impacted players' ability to finish your game.
+After you finish applying your asset library and constructing your environment, you must playtest your experience to ensure any variations in your layout from your polished assets haven't impacted players' ability to finish.
 
 To playtest your experience:
 

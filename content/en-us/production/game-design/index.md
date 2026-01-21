@@ -7,7 +7,7 @@ description: Design experiences on Roblox
 
 <br />
 
-A game designer's role is to create an engaging experience for players, retain those players over time, and devise a sustainable monetization model to fund further development. Whether you are a novice game designer or a veteran, Roblox offers a variety of game design resources to help you through the design process.
+A designer's role is to create an engaging experience for players, retain those players over time, and devise a sustainable monetization model to fund further development. Whether you are a novice designer or a veteran, Roblox offers a variety of resources to help you through the design process.
 
 ## What's new
 

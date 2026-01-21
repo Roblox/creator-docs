@@ -56,7 +56,7 @@ Now that the variable will refer to whatever part the script is attached to, you
 
 1. Right-click on the color part and select Duplicate, or use the hot-key <kbd>Ctrl</kbd><kbd>D</kbd> (<kbd>⌘</kbd><kbd>D</kbd>). Create at least three total parts.
 
-2. Run the game to check that all parts change color.
+2. Run the experience to check that all parts change color.
    <video controls src="../../../assets/education/coding-1/scriptParent_finalExample_web.mp4" width="80%"></video>
 
 ## Summary

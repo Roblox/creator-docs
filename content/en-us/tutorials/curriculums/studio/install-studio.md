@@ -11,10 +11,10 @@ import StudioSystemReqs from '../../../includes/studio/system-reqs.md'
 
 <StudioSystemReqs components={props.components} />
 
-Studio comes bundled with the Roblox game engine that also powers experiences on the Roblox app. This means that when you develop and publish your experiences in Studio, players interact with the same game engine from your development on their personal devices.
+Studio comes bundled with the Roblox engine that also powers experiences on the Roblox app. This means that when you develop and publish your experiences in Studio, players interact with the same engine from your development on their personal devices.
 
 <Alert severity="info">
-For an overview on Studio's functionality and the game engine, see [Roblox Studio](../../../studio/index.md).
+For an overview on Studio's functionality and the Roblox engine, see [Roblox Studio](../../../studio/index.md).
 </Alert>
 
 To install Roblox Studio:

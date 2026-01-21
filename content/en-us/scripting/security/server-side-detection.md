@@ -12,7 +12,7 @@ This section assumes you already validate inputs and context (see previous secti
 ## Philosophy
 
 - **The server decides**. Detection and consequencing live on the server. Try to never ban based on client-side detections, as exploiters can easily bypass them.
-- **Prevent harm first**. Quietly neutralize the impact of an exploit. For example, if a player is speed-hacking, just rubber-band them back to their last valid position instead of kicking them immediately. Punish only when necessary to protect the game or other players.
+- **Prevent harm first**. Quietly neutralize the impact of an exploit. For example, if a player is speed-hacking, just rubber-band them back to their last valid position instead of kicking them immediately. Punish only when necessary to protect the experience or other players.
 - **Be proportional and reversible**. Assume false positives can happen. Prefer actions you can roll back, such as temporary suspensions or resource removal, over permanent bans.
 - **Design > detection**. Your primary security comes from robust validation and rate limiting (covered in [Securing the client-server boundary](./client-server-boundary.md) and other sections). The detection methods below are meant to supplement those defenses, not replace them.
 
@@ -22,7 +22,7 @@ Heuristics are behavior checks that flag actions that are technically possible b
 
 For example, if a player suddenly claims to have gained 1 billion coins in your simulator game, your remote validation might confirm the request is structured correctly. But a heuristic check on the server would know that earning that much should take weeks, not seconds, and flag the transaction as suspicious.
 
-Here are three classic examples of server-side heuristics. Each one validates player behavior against the game's rules and physical limitations, creating a strong defense against common exploits.
+Here are three classic examples of server-side heuristics. Each one validates player behavior against the experience's rules and physical limitations, creating a strong defense against common exploits.
 
 <table><thead>
   <tr>
@@ -56,15 +56,15 @@ However, if that same player's run also flagged the "Action Cadence" heuristic f
 
 ## Honeypots
 
-One way to detect cheaters trying to probe your game's RemoteEvents is to use a decoy called a honeypot. A honeypot is a `Class.RemoteEvent` or `Class.RemoteFunction` that appears legitimate to an exploiter but is never used by any of your legitimate client scripts. Because no normal player should ever be able to fire this remote, any traffic it receives must be from an exploiter. When the server detects this remote being fired, it's a very high-confidence signal that the client is meddling. The best immediate action is to log the incident and kick the player from the session.
+One way to detect cheaters trying to probe your experience's RemoteEvents is to use a decoy called a honeypot. A honeypot is a `Class.RemoteEvent` or `Class.RemoteFunction` that appears legitimate to an exploiter but is never used by any of your legitimate client scripts. Because no normal player should ever be able to fire this remote, any traffic it receives must be from an exploiter. When the server detects this remote being fired, it's a very high-confidence signal that the client is meddling. The best immediate action is to log the incident and kick the player from the session.
 
 Another variation is to design RemoteEvents with specific directional purposes - some exclusively for client → server communication and others exclusively for server → client communication. While the event names don't reveal their intended direction, the server tracks which direction each remote should be used. If an exploiter attempts to fire a server → client remote from the client, this serves as a reliable detection method since legitimate gameplay would never trigger communication in the wrong direction.
 
 ## Applying consequences
 
-When detection systems flag suspicious behavior, consider your response strategy carefully. Different games require different approaches based on their community, competitive stakes, and tolerance for disruption.
+When detection systems flag suspicious behavior, consider your response strategy carefully. Different experiences require different approaches based on their community, competitive stakes, and tolerance for disruption.
 
-**The consequence ladder** - Most games benefit from escalating responses rather than jumping straight to permanent bans:
+**The consequence ladder** - Most experiences benefit from escalating responses rather than jumping straight to permanent bans:
 
 - **Silent logging** - Build evidence without player impact
 - **Quiet mitigation** - Block the exploit's effect (drop requests, clamp values, sync correct state)
@@ -75,7 +75,7 @@ When detection systems flag suspicious behavior, consider your response strategy
 
 - **Delay visible consequences** to avoid teaching exploiters exactly what triggered detection
 - **Match severity to response** - minor economic exploits may warrant different treatment than game-breaking physics cheats
-- **Consider your community** - competitive games may need stricter enforcement than casual experiences
+- **Consider your community** - competitive experiences may need stricter enforcement than casual experiences
 - **Plan for mistakes** - prefer reversible actions when detection confidence is lower
 
-For persistent offenders, consider using the `Class.Players.BanAsync|Ban API` rather than relying solely on kicks. The Ban API prevents banned players from rejoining and provides better tracking across your universe. Version your detection rules and track consequence rates so you can identify problematic systems. Monitor player feedback to gauge whether your enforcement feels fair to the community. The right balance depends entirely on your game's needs and your players' expectations.
+For persistent offenders, consider using the `Class.Players.BanAsync|Ban API` rather than relying solely on kicks. The Ban API prevents banned players from rejoining and provides better tracking across your universe. Version your detection rules and track consequence rates so you can identify problematic systems. Monitor player feedback to gauge whether your enforcement feels fair to the community. The right balance depends entirely on your experience's needs and your players' expectations.

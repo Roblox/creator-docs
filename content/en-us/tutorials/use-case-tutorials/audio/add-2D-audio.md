@@ -120,7 +120,7 @@ When you play multiple sounds at once, certain sounds may be more important for 
 
 For example, the sample includes various audio triggers throughout the experience, but they aren't all at the same level of importance for understanding the experience's main objective: collect gumdrops to open the gingerbread house. To ensure that players are aware of what they need to do, the sample triples the amplitude of the auditory feedback whenever the player collects a gumdrop.
 
-To recreate the one shot game state feedback audio in the sample [Gingerbread House - Complete Audio](https://www.roblox.com/games/94670255584609/Gingerbread-House-Complete-Audio) place file:
+To recreate the one shot state feedback audio in the sample [Gingerbread House - Complete Audio](https://www.roblox.com/games/94670255584609/Gingerbread-House-Complete-Audio) place file:
 
 1. In the **Explorer** window, navigate to **Workspace** ⟩ **Gumdrops** ⟩ **Gumdrop**, then:
    1. Insert an **AudioPlayer** object to create an audio source.
@@ -242,7 +242,7 @@ To recreate the one shot game state feedback audio in the sample [Gingerbread Ho
 
 ### UI interaction
 
-When players interact with your user interface (UI) elements, such as hovering over a checkbox or selecting a purchase button, it's important to provide instant feedback so that they intuitively understand **how** they're interacting with your UI. For example, many game designers change the visual characteristics of UI when players enable or disable settings to communicate the status of the setting.
+When players interact with your user interface (UI) elements, such as hovering over a checkbox or selecting a purchase button, it's important to provide instant feedback so that they intuitively understand **how** they're interacting with your UI. For example, many designers change the visual characteristics of UI when players enable or disable settings to communicate the status of the setting.
 
 However, for players with visual impairments in which color changes or animations are more difficult to decipher on their own, it's useful to provide multiple forms of sensory feedback for your UI interactions so that they remain accessible and intuitive for as many players as possible. To expand on this concept, let's consider the following UI states that are important for the [UGC Homestore](../../../resources/templates.md#ugc-homestore) template's purchase buttons:
 

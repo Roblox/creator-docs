@@ -9,7 +9,7 @@ An array's contents will often have to be changed, like when needing to remove a
 
 This article will outline prebuilt functions for tables like add and remove while describing how to search for a value.
 
-To apply these skills, you'll create a script that helps to manage a player's inventory in a game.
+To apply these skills, you'll create a script that helps to manage a player's inventory.
 
 <img src="../../../assets/education/coding-5/coding4_arrayFunctions.jpg" width="80%" />
 

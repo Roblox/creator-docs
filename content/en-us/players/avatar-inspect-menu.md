@@ -6,7 +6,7 @@ description: The Avatar Inspect Menu allows users to view other users' avatars, 
 The **Avatar Inspect Menu** allows users to view another user's Roblox avatar character, try on items, and even make purchases within an experience. Roblox enables this menu by default and users in your experience can access this menu in three ways:
 
 - Opening the experience's main menu and clicking the **View** button next to a user in the **Players** tab.
-- Clicking on a user's name in the player list (upper-right section of the game view).
+- Clicking on a user's name in the player list.
 - Selecting the Inspect option in the [Avatar Context Menu](../players/avatar-context-menu.md), an opt-in feature which provides additional user-to-user social interaction.
 
 You can customize a user's **Avatar Inspect Menu** in the following ways:

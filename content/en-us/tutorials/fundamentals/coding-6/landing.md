@@ -1,6 +1,6 @@
 ---
 title: Organizing code
-description: Roblox module scripts are one way of organizing code. This series covers how they work and how to implement them in a game experience.
+description: Roblox module scripts are one way of organizing code. This series covers how they work and how to implement them in an experience.
 next: /tutorials/fundamentals/coding-6/intro-to-module-scripts
 prev: /tutorials/fundamentals/coding-5/return-values-from-tables
 ---

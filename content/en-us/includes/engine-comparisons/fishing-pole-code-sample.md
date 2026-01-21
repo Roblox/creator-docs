@@ -5,7 +5,6 @@ title: include
 The following Luau code sample demonstrates how to, after a player equips a fishing pole, listen for user input (in this case, the <kbd>E</kbd> key) and call additional functions:
 
 ```lua
--- Get the necessary game services
 local ContextActionService = game:GetService("ContextActionService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 

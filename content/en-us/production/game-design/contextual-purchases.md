@@ -95,7 +95,7 @@ Contextual cues in the **UI** can take a variety of forms and can be versatile t
     <figcaption>UI shop badge in *BotClash Simulator*. </figcaption>
   </figure>
 
-Loading screens offer prominent space to display a purchase opportunity when players' attention is focused and not yet distracted by other UI elements or gameplay. If you choose to use a space like this for purchase offers, make sure you also provide sufficient context for the player to properly gauge the value of the item. It wouldn't be appropriate to have a [Starter Pack](monetization-foundations.md#starter-packs) appear on the loading screen the very first time a player loads the game, but it could be become appropriate in future sessions.
+Loading screens offer prominent space to display a purchase opportunity when players' attention is focused and not yet distracted by other UI elements or gameplay. If you choose to use a space like this for purchase offers, make sure you also provide sufficient context for the player to properly gauge the value of the item. It wouldn't be appropriate to have a [Starter Pack](monetization-foundations.md#starter-packs) appear on the loading screen the very first time a player loads the experience, but it could be become appropriate in future sessions.
 
  <figure>
   <img src="../../assets/game-design/contextual-purchases/contextual-purchases-12.png" width="70%"/>

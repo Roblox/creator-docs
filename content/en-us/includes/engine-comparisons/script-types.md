@@ -10,7 +10,7 @@ Roblox experiences support three different types of Luau scripts:
 
 - **Server scripts**
 
-  These scripts run on the server, and the client has no visibility into their behavior. Server scripts have a `Class.BaseScript.RunContext|RunContext` value of `Enum.RunContext|Server` and typically live in `Class.ServerScriptService`, the contents of which are not replicated to the game client.
+  These scripts run on the server, and the client has no visibility into their behavior. Server scripts have a `Class.BaseScript.RunContext|RunContext` value of `Enum.RunContext|Server` and typically live in `Class.ServerScriptService`, the contents of which are not replicated to the client.
 
 - **Module scripts**
 

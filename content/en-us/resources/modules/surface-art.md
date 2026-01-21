@@ -8,7 +8,7 @@ Players often enjoy feeling like they're a part of constructing the space they'r
 <video src="../../assets/developer-modules/surface-art/Showcase.mp4" controls width="100%"></video>
 
 <Alert severity="warning">
-By default, a player can place 2 pieces of art across all of the tagged surfaces in the workspace. All of a player's art will be removed when they leave the game.
+By default, a player can place 2 pieces of art across all of the tagged surfaces in the workspace. All of a player's art will be removed when they leave the experience.
 </Alert>
 
 ## Module Usage

@@ -23,7 +23,7 @@ Once all six places are published, you're ready to playtest.
      <img src="../../assets/resources/battle-royale/running-the-game/Battle-Royale-Lobby-Open-Place-2.png" width="80%" />
    </GridContainer>
 
-4. From the target page, click the large play button to test your game.
+4. From the target page, click the large play button to test your experience.
 
 ## Game controls
 

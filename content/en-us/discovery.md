@@ -75,10 +75,10 @@ The behavior of users you get from ads, Home Recommendations, and other sources 
 
 For example:
 
-- Experience A is an established game, acquiring an average of 10 thousand daily players on 25 thousand impressions from Home Recommendations.
+- Experience A is established, acquiring an average of 10 thousand daily players on 25 thousand impressions from Home Recommendations.
 - By running ads, Experience A acquires an additional 5 thousand daily players from Sponsored sort, from 20 thousand impressions.
-- Experience A is now acquiring an average of 15 thousand daily players to their experience. This extends the reach of the game, while also increasing earning potential.
-- As long as the behavior of the 10 thousand daily players from Home Recommendations does not change, the experience will continue to get around the same traffic from Home Recommendations (excluding external factors like seasonality or newly popular games).
+- Experience A is now acquiring an average of 15 thousand daily players to their experience. This extends the reach of the experience, while also increasing earning potential.
+- As long as the behavior of the 10 thousand daily players from Home Recommendations does not change, the experience will continue to get around the same traffic from Home Recommendations (excluding external factors like seasonality or newly popular experiences).
 
 ## Use Home Recommendations analytics to grow your experience
 

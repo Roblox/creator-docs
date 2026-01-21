@@ -380,7 +380,7 @@ All of these audio objects work together to generate STT text in response to pla
 - The `Class.AudioDeviceInput` captures the player's speech, as spoken into their microphone and as a stream of audio.
 - A `Class.Wire` carries the audio stream from the `Class.AudioDeviceInput` to the `Class.AudioSpeechToText`.
 - The `Class.AudioSpeechToText` converts the player's speech into text.
-- The game reads this text and performs an action, such as displaying the spoken text on the screen or opening a door at the player's command.
+- The experience reads this text and performs an action, such as displaying the spoken text on the screen or opening a door at the player's command.
 
 <img src="../assets/audio/audio-objects/STT-Audio-Diagram.png" width="100%" />
 

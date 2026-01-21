@@ -73,7 +73,7 @@ To test the particle burst, you can use a Studio plugin developed by Roblox.
 
    ![alt](../../../assets/tutorials/using-particles-for-explosions/burstParticles_confirmPluginInstall.png)
 
-3. Select the **Explosion** emitter and notice the plugin UI that appears in the top left of the game window. In the number box, type **100** (the amount of particles to emit) and press <kbd>Enter</kbd>.
+3. Select the **Explosion** emitter and notice the plugin UI that appears in the top left of the 3D viewport. In the number box, type **100** (the amount of particles to emit) and press <kbd>Enter</kbd>.
 
    ![alt](../../../assets/tutorials/using-particles-for-explosions/burstParticles_enterEmitRate.png)
 

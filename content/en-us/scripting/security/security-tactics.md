@@ -21,24 +21,24 @@ This is the foundational principle. A determined exploiter has complete control 
 - Change anything in their local DataModel without firing any expected events
 - Arbitrarily alter the behavior of any locally running code
 
-Because of this, all critical game logic must be validated server-side or run exclusively on the server. The consequences of this control are detailed in [Network Ownership, Movement Validation, and Physics Exploits](./network-ownership.md) and [Access Control and Confidentiality](./access-control.md).
+Because of this, all critical logic must be validated server-side or run exclusively on the server. The consequences of this control are detailed in [Network Ownership, Movement Validation, and Physics Exploits](./network-ownership.md) and [Access Control and Confidentiality](./access-control.md).
 
 ## Server authority
 
-The server must be the ultimate source of truth for all game state, rules, player progression, and critical decisions. The client's role is to render the world and send user input to the server.
+The server must be the ultimate source of truth for all simulation states, rules, player progression, and critical decisions. The client's role is to render the world and send user input to the server.
 
 The server's role is to:
 
 - Receive input from the client
 - Validate that the requested action is possible and permissible
-- Execute the action and update its authoritative game state
+- Execute the action and update its authoritative state
 - Replicate the results to all relevant clients
 
 For example, if a player says "I want to buy a Bloxy Cola" the server must know the item's true price, the player's money, and the player character's physical distance from the shop before validating and approving the transaction. As much as possible, the state to be validated should be maintained exclusively by the server and not by clients. In the example, if the Bloxy Cola transaction is approved, the server should subtract the Bloxy Cola's price from the player's money, however, the server cannot necessarily always control the player's character.
 
 ## Security by design
 
-Integrate security considerations into your game's design from the very beginning, rather than attempting to bolt them on later as an afterthought.
+Integrate security considerations into your experience's design from the very beginning, rather than attempting to bolt them on later as an afterthought.
 
 - Threat model every new feature. For every new feature, ask
   - How could an attacker exploit this if they have full control of their client?
@@ -46,5 +46,5 @@ Integrate security considerations into your game's design from the very beginnin
   - What happens if this feature is used 1,000+ times per second? What is the maximum rate at which it should be used?
   - Could an exploiter use this to ruin another player's experience?
   - How much resources, in the worst case, could this feature feasibly use?
-  - What is the minimum internal information or game state that I need to expose for this feature?
-- Partition responsibilities early. Keep game logic and data in ServerScriptStorage from day one. Never place them in replicated containers, e.g. ReplicatedStorage or Workspace.
+  - What is the minimum internal information or state that I need to expose for this feature?
+- Partition responsibilities early. Keep logic and data in ServerScriptStorage from day one. Never place them in replicated containers, e.g. ReplicatedStorage or Workspace.
