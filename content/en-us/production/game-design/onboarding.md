@@ -66,13 +66,13 @@ For many Roblox players, playing with others is part of the fun, whether they ar
 
 Providing free items like equipment and avatar customizations in the onboarding experience allows players to experience the fun of those systems early. The items can be low level and few in number, such that players will want to upgrade or exchange them quickly. The goal is to give players the opportunity to enjoy the utility or self-expression afforded by those items to encourage future playtime.
 
-A similar approach can be used in experiences that utilize _soft currencies_. Soft currencies are the most commonly found currencies in free-to-play games. Players can earn them easily and they are widely available from rewards in the experience's _core loop_. Giving players a small amount of soft currency in the onboarding experience alongside a selection of purchasable items that they can afford, allows them to quickly engage with the monetization system and see the value of earning more currency.
+A similar approach can be used in experiences that utilize _soft currencies_. Soft currencies are the most commonly found currencies in free-to-play experiences. Players can earn them easily and they are widely available from rewards in the experience's _core loop_. Giving players a small amount of soft currency in the onboarding experience alongside a selection of purchasable items that they can afford, allows them to quickly engage with the monetization system and see the value of earning more currency.
 
 For more on core loops, see [Core loops](../../production/game-design/core-loops.md).
 
 ### Leave players wanting more
 
-By the end of the onboarding experience, players should be aware of the full range of experiences that an experience offers. Even if they cannot access all of the systems and content yet, knowing that there are more challenges and rewards on the horizon encourages them to continue to invest their time in the game. Designing these two characteristics effectively keep players coming back:
+By the end of the onboarding experience, players should be aware of the full range of experiences that an experience offers. Even if they cannot access all of the systems and content yet, knowing that there are more challenges and rewards on the horizon encourages them to continue to invest their time in the experience. Designing these two characteristics effectively keep players coming back:
 
 - Goals
 - Moments of joy

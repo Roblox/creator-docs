@@ -3,7 +3,7 @@ title: Save player data with standard data stores
 description: Create basic standard data stores to save, store, and load player data.
 ---
 
-**Data stores** are a service you can use to save and load **persistent player data** across different game sessions. They store important information, like a player's progress or inventory, and allow you to retrieve it for the player next time they join your experience. Without data stores, a player would lose all of their progress every time they left the game.
+**Data stores** are a service you can use to save and load **persistent player data** across different player sessions. They store important information, like a player's progress or inventory, and allow you to retrieve it for the player next time they join your experience. Without data stores, a player would lose all of their progress every time they left the experience.
 
 There are two types of data stores: standard and ordered. This tutorial uses **standard data stores**, which store data like numbers, strings, and tables that don't need to be ranked or sorted.
 
@@ -16,7 +16,7 @@ Using the [Gold Rush data store tutorial - Start](https://www.roblox.com/games/1
 - Restoring the player's position when they join the experience again.
 
 <Alert severity="info">
-	The [Gold Rush data store tutorial - Start](https://www.roblox.com/games/116344152904993/Gold-Rush-save-data-tutorial-Start) starting place file already includes code that allows the player to collect gold and updates the UI with their gold score, but this data doesn't persist across game sessions because the file lacks data stores. Without data stores, the player's score and position reset when they leave the experience.
+	The [Gold Rush data store tutorial - Start](https://www.roblox.com/games/116344152904993/Gold-Rush-save-data-tutorial-Start) starting place file already includes code that allows the player to collect gold and updates the UI with their gold score, but this data doesn't persist across sessions because the file lacks data stores. Without data stores, the player's score and position reset when they leave the experience.
 </Alert>
 
 By the end of this tutorial, you should have two scripts with data stores under `Class.ServerScriptService`:
@@ -173,7 +173,7 @@ Automatically saving a player's data is good practice because it protects the pl
 
 To autosave the player's data:
 
-1. Create a new constant to determine how often you want your experience to automatically save the player's data. A constant is a variable whose value does not change while the game is running. You can use this constant to refer to the autosave interval throughout your script and to easily adjust the autosaving frequency.
+1. Create a new constant to determine how often you want your experience to automatically save the player's data. A constant is a variable whose value does not change while the experience is running. You can use this constant to refer to the autosave interval throughout your script and to easily adjust the autosaving frequency.
 
    ```lua
 	-- This number is in seconds
@@ -199,7 +199,7 @@ To autosave the player's data:
 
 ## Save and load player position
 
-To save a player's position, work with their `Class.Player.Character|Character` instead of the `Class.Player` object itself. A player's `Character` represents their physical model in the game world and has the coordinates for their current position and orientation, while the `Player` object only represents the user account.
+To save a player's position, work with their `Class.Player.Character|Character` instead of the `Class.Player` object itself. A player's `Character` represents their physical model in the 3D world and has the coordinates for their current position and orientation, while the `Player` object only represents the user account.
 
 Because data stores can only save basic data types like numbers, strings, and tables, you can't directly store complex objects like `Datatype.Vector3` or `Datatype.CFrame` values. To save a player's position, you need to split it into three separate numbers (the X, Y, and Z coordinates) and save them individually. When loading the position later, you can rebuild the `Vector3` using the saved coordinates.
 
@@ -304,7 +304,7 @@ local uiEvent = ReplicatedStorage:WaitForChild("UIEvent")
 -- Data store for saving the player's gold chunks
 local goldStore = DataStoreService:GetDataStore("PlayerGold")
 
--- Table to store the player's gold chunks for a single game session
+-- Table to store the player's gold chunks for a single session
 local playerGold = {}
 
 -- Constants

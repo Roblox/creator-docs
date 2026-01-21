@@ -301,7 +301,7 @@ You can use product intelligence APIs to sort and recommend developer products t
 `Class.MarketplaceService.RankProductsAsync|RankProductsAsync` takes in a list of product IDs and returns a personalized ordered list of those products. You can use this method to provide your users with personalized item recommendations in your in-experience store.
 
 <Alert severity="warning">
-Because `RankProductsAsync` has a strict rate limit, you should load recommendations once at game join instead of calling it repeatedly.
+Because `RankProductsAsync` has a strict rate limit, you should load recommendations once at player join instead of calling it repeatedly.
 </Alert>
 
 	<figcaption>Example: Three "Powers" items ranked for the user</figcaption>

@@ -56,7 +56,7 @@ We recommend that you include the following information in your pitch:
 - **Overall vision**:
 
   - What makes your adaption of the IP unique and exciting for players.
-  - Your team's relevant experience, including examples of previous games you have developed, along with any previous work involving IP.
+  - Your team's relevant experience, including examples of previous experiences you have developed, along with any previous work involving IP.
   - How you believe the IP integration will engage players, expand the IP's reach, and create new opportunities for monetization and community growth.
 
 - **Creative elements**:
@@ -157,7 +157,7 @@ When you enter an agreement with an IP holder, you agree to the revenue share ra
     <td width="45%">From the 60 Robux:<br /><br /><ul><li>The license owner receives **6 Robux** (10% of the 60 Robux that would have otherwise gone to the item owner in an unlicensed experience).</li><li>The item owner receives the rest, or **54 Robux** (the other 90% of the sale revenue).</li></ul></td>
   </tr>
   <tr>
-    <td>**10%** (in this case, 10 Robux) from the sale revenue goes to affiliate fees. For example, if the game pass is owned by User A but it's on sale inside User B's experience, each under a different license.</td>
+    <td>**10%** (in this case, 10 Robux) from the sale revenue goes to affiliate fees. For example, if the pass is owned by User A but it's on sale inside User B's experience, each under a different license.</td>
     <td>From the 10 Robux:<br /><br /><ul><li>The license owner receives **1 Robux** (10%).</li><li>The item owner (User A) receives the rest, or **9 Robux** (90%).</li></ul></td>
   </tr>
   <tr>

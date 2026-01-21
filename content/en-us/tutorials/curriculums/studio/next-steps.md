@@ -7,11 +7,9 @@ prev: /tutorials/curriculums/studio/explore-ui
 
 Congratulations on completing your introduction to Roblox Studio! Now that you have Studio on your computer, login credentials, and familiarity with Studio's core user interface, you are ready to start building anything you can imagine.
 
-Not sure where to get started? Let's look at some of your options according to your experience with game development.
+## New to development?
 
-## New to game development?
-
-If you are brand new to game development, check out the following beginner tutorials on different development areas that you can specialize in:
+If you are brand new to development, check out the following beginner tutorials on different development areas that you can specialize in:
 
 - [Building lesson](../building/index.md) — Learn how to **build a simple platformer** using one of Studio's templates.
 - [Coding lesson](../coding/index.md) — Learn how to **code an interactive story** where players replace placeholder words with their own answers.
@@ -26,7 +24,7 @@ Game development is a massive field with a lot of different specializations. If 
 
 ## Just new to Studio?
 
-If you aren't new to game development, but are new to Studio, check out the following guides for an overview of how experiences technically work:
+If you aren't new to development, but are new to Studio, check out the following guides for an overview of how experiences technically work:
 
 - [Projects](../../../projects/index.md) — Learn how to create and manage projects in Studio.
 - [Assets](../../../projects/assets/index.md) — Learn about how everything in Roblox is represented as a cloud-based asset.

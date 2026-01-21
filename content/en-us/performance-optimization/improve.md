@@ -488,7 +488,7 @@ every frame, but larger amounts of information require more compute time.
   can be very network intensive.
 
   A common culprit here is the complex animation data saved by **Animation Editor**
-  plugins in rigs. If these aren't removed before the game is published and
+  plugins in rigs. If these aren't removed before the experience is published and
   the animated model is cloned regularly, a large amount of data will be
   replicated unnecessary.
 

@@ -168,7 +168,7 @@ For example, you can use encapsulation to:
 - Wrap error handling code around sensitive services such as `Class.DataStoreService`.
 - Define custom methods to control or extend Roblox object features.
 
-It's difficult to keep track of dozens of individual `Class.RemoteEvent` objects to implement networking in your game. You can use a `Class.ModuleScript` to encapsulate a single `Class.RemoteEvent` to help simplify this problem. By including a unique `id` argument, you can still send different network messages while only using a single `Class.RemoteEvent`.
+It's difficult to keep track of dozens of individual `Class.RemoteEvent` objects to implement networking in your experience. You can use a `Class.ModuleScript` to encapsulate a single `Class.RemoteEvent` to help simplify this problem. By including a unique `id` argument, you can still send different network messages while only using a single `Class.RemoteEvent`.
 
 In the example below, the `Class.ModuleScript` named `NetworkManagerClient` encapsulates the `Class.RemoteEvent:FireServer()` method to include this extra `id` argument. Additionally, this `Class.ModuleScript` references the `Class.RemoteEvent` object itself so you don't have to reference it in other parts of your code. You only need to require this `Class.ModuleScript` to send network messages and don't need to deal with `Class.RemoteEvent` objects in the rest of your codebase.
 

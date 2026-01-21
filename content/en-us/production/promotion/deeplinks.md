@@ -25,7 +25,7 @@ Parameter | Description
 `userId` | The user ID to join. Results in a "Followed user has left the experience" error if the user left the experience or is offline.
 `accessCode` | The private server access code.
 `linkCode` | The private server link code.
-`gameInstanceId` | The unique identifier of the game instance to join, also called the `Class.DataModel.JobId`.
+`gameInstanceId` | The unique identifier of the experience instance to join, also called the `Class.DataModel.JobId`.
 `launchData` | Additional information that you want to include within the deep link, such as promotional codes or coordinates. Process using the `Class.Player:GetJoinData()` method. See [Include launch data](./invite-prompts.md#include-launch-data).
 
 ### Requirements and guidelines

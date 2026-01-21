@@ -185,7 +185,7 @@ Ordered data stores:
 
 ## Rate limits
 
-For each Roblox game server, there is a limit of 2500 Open Cloud requests per minute. Exceeding this can cause request-sending methods to stall for around 30 seconds. Your `Global.LuaGlobals.pcall()` may also fail with a message of `Number of Open Cloud requests exceeded limit`.
+For each Roblox experience server, there is a limit of 2500 Open Cloud requests per minute. Exceeding this can cause request-sending methods to stall for around 30 seconds. Your `Global.LuaGlobals.pcall()` may also fail with a message of `Number of Open Cloud requests exceeded limit`.
 
 - Open Cloud requests **do not** consume the same overall limit of 500 HTTP requests per minute enforced on all other requests.
 - Each endpoint has its own limit per API key owner (can be a user or a group) that is enforced no matter where the calls come from (`Class.HttpService`, the web, etc.).
@@ -243,5 +243,5 @@ The **Response Time** chart is not correlated with status data. If you select "S
 
 ## Additional considerations
 
-- Requests should provide a secure form of authentication, such as a pre-shared secret key, so that bad actors cannot pose as one of your Roblox game servers.
+- Requests should provide a secure form of authentication, such as a pre-shared secret key, so that bad actors cannot pose as one of your Roblox servers.
 - Be aware of the general capacity and rate-limiting policies of the web servers to which requests are being sent.

@@ -10,7 +10,7 @@ next: /tutorials/curriculums/core/building/create-basic-visual-effects
 <br/>
 
 Players can now collect coins and lose them when they die, but the coins don't
-do anything, and most of the game world is inaccessible without the ability to
+do anything, and most of the 3D world is inaccessible without the ability to
 jump very high. This section of the tutorial teaches you how to finish the logic
 for your experience by adding an on-screen button that spends coins to increase jumping power.
 
@@ -228,7 +228,7 @@ To implement the jump upgrade:
      `Class.Player.Character|Character` model and `Class.Humanoid` exist for the
      player being upgraded, the function updates the
      `Class.Humanoid.JumpPower|JumpPower` property to the new value stored by
-     **PlayerData**, increasing it by 30. If you want your game to last slightly
+     **PlayerData**, increasing it by 30. If you want your experience to last slightly
      longer, you can decrease this number.
 
    - **Validate server requests** - `onPurchaseJumpIncrease()` first checks that the
@@ -313,4 +313,4 @@ You should now be able to purchase jump upgrades for coins using the upgrade but
    <source src="../../../../assets/tutorials/script-an-upgrade-button/script-an-upgrade-button-example.mp4" />
    </video>
 
-Now that the code is complete, try balancing the game through the quantity and positions of the coins. Add more coins if the game feels too slow, or subtract coins and put them in challenging places if it feels too fast and easy.
+Now that the code is complete, try balancing the experience through the quantity and positions of the coins. Add more coins if the pace feels too slow, or subtract coins and put them in challenging places if it feels too fast and easy.

@@ -41,7 +41,7 @@ The `Class.Tool` object is the basis of any tool in Roblox, so you'll need to cr
 
 ## Store the tool
 
-Tools can be kept in the game world as **collectable tools** or given to all players as **starter tools**.
+Tools can be kept in the 3D world as **collectable tools** or given to all players as **starter tools**.
 
 ### Collectable tool
 
@@ -66,13 +66,13 @@ During gameplay, unequipped tools are stored within the player's hierarchy in th
 
 ### Starter tool
 
-Storing a tool in `Class.StarterPack` will place it in a player's `Class.Backpack` when they join the game or respawn.
+Storing a tool in `Class.StarterPack` will place it in a player's `Class.Backpack` when they join or respawn.
 
 1. Move the **Blaster** to **StarterPack** in the **Explorer**.
 
    ![](../../../../assets/tutorials/creating-player-tools/explorer-starterpack.png)
 
-2. Play the game to test the tool. Click on the hotbar at the bottom of the screen or press **1** on the keyboard to equip the tool.
+2. Play the experience to test the tool. Click on the hotbar at the bottom of the screen or press **1** on the keyboard to equip the tool.
 
 ## Tool properties
 

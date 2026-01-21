@@ -28,7 +28,7 @@ A content cadence draws on existing gameplay systems to produce small, frequent 
 - Levels/maps
 - Quests
 
-Many of these examples are predominantly art-based, requiring little to no programming or game design work to produce. Simple variants on existing assets, like assets with only slight changes to color, are ideal because they can be produced quickly on a recurring schedule by the fewest possible team members. A good example of a content cadence are Pet Variants in [_Adopt Me!_](https://www.roblox.com/games/920587237/)
+Many of these examples are predominantly art-based, requiring little to no programming or design work to produce. Simple variants on existing assets, like assets with only slight changes to color, are ideal because they can be produced quickly on a recurring schedule by the fewest possible team members. A good example of a content cadence are Pet Variants in [_Adopt Me!_](https://www.roblox.com/games/920587237/)
 
 <GridContainer numColumns="2">
   <figure>
@@ -41,20 +41,20 @@ Many of these examples are predominantly art-based, requiring little to no progr
   </figure>
 </GridContainer>
 
-These examples only work in games with systems in place to support simple variations. Adding new systems to an experience to support new deliverables turns the content into an expansion, which would be unsustainable for the creation of a content cadence.
+These examples only work in experiences with systems in place to support simple variations. Adding new systems to an experience to support new deliverables turns the content into an expansion, which would be unsustainable for the creation of a content cadence.
 
 Cadenced content should consist of items and experiences that players regularly want. Tracking player behavior through analytics and gathering player feedback can provide valuable insight into the highest-value content to target.
 
 <h4>Themed Content</h4>
 
-Ideally, there are multiple systems in a game from which cadenced content can be produced. Building releases around a theme can help to unlock creativity and generate ideas for assets that fit together conceptually and aesthetically, like with _Adopt Me!_ themed updates.
+Ideally, there are multiple systems in an experience from which cadenced content can be produced. Building releases around a theme can help to unlock creativity and generate ideas for assets that fit together conceptually and aesthetically, like with _Adopt Me!_ themed updates.
 
 <figure>
     <img src="../../assets/game-design/content-update/content-update1.jpg" width="50%"/>
     <figcaption>Themed update in *Adopt Me!*</figcaption>
   </figure>
 
-Seasons and holidays are also rich sources of ideas with potential for limited-time cadence content. However, it is important to keep in mind that holidays are not universal and may not appeal to all players. Developers must determine which seasonal themes will be most popular with their game's audience.
+Seasons and holidays are also rich sources of ideas with potential for limited-time cadence content. However, it is important to keep in mind that holidays are not universal and may not appeal to all players. Developers must determine which seasonal themes will be most popular with their audience.
 
 <GridContainer numColumns="2">
   <figure>
@@ -81,7 +81,7 @@ Establishing a routine release cadence encourages players to check back often so
 
 A regular release cadence also creates a beneficial routine for developers. Releasing on a schedule requires planning, coordination and communication between team members. With practice, developers can become more efficient at designing and releasing updates while maintaining a healthy work-life balance.
 
-Determining the appropriate frequency of releases for a game must take into account factors such as the capabilities and availability of the developers, the scope of the planned releases, and player sentiment. In order to maintain player engagement between game expansions, many games release content cadence updates every two weeks to one month.
+Determining the appropriate frequency of releases for an experience must take into account factors such as the capabilities and availability of the developers, the scope of the planned releases, and player sentiment. In order to maintain player engagement between expansions, many experiences release content cadence updates every two weeks to one month.
 
 ## Prioritize sustainability
 
@@ -95,7 +95,7 @@ Because content requires time and effort to produce, it's imperative to produce 
 
 ### Progression
 
-Games with progression, such as player levels or gated map zones, can use their content cadence to add more permanent content at the end of the progression, where seasoned players are starting to run out of objectives. Those high-level players will appreciate the fresh content that they can play immediately, while newer players will have more content to look forward to reaching in the future.
+Experiences with progression, such as player levels or gated map zones, can use their content cadence to add more permanent content at the end of the progression, where seasoned players are starting to run out of objectives. Those high-level players will appreciate the fresh content that they can play immediately, while newer players will have more content to look forward to reaching in the future.
 
 ### Limited time content
 
@@ -103,7 +103,7 @@ Limited-time content is content which is available to all players but only for t
 
 ### Season passes
 
-A **season pass** system, also known as a battle pass, is a combination of limited-time event and progression system in which players must complete a series of quest objectives to earn item rewards. Season passes can be adapted to most games, offering developers a straightforward framework for designing cadence releases.
+A **season pass** system, also known as a battle pass, is a combination of limited-time event and progression system in which players must complete a series of quest objectives to earn item rewards. Season passes can be adapted to most experiences, offering developers a straightforward framework for designing cadence releases.
 
 <figure>
     <img src="../../assets/game-design/content-update/content-update6.png" width="50%"/>

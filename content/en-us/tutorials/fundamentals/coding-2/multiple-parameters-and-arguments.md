@@ -5,7 +5,7 @@ next: /tutorials/fundamentals/coding-3/landing
 prev: /tutorials/fundamentals/coding-2/parameters-practice-buttons
 ---
 
-Functions can actually have more than one parameter, allowing for multiple arguments (pieces of information), to be passed into the function. A game example might be assigning a player to a team. Here you would need a parameter to pass in the player, and a parameter to pass in which team to assign them to.
+Functions can actually have more than one parameter, allowing for multiple arguments (pieces of information), to be passed into the function. An example might be assigning a player to a team. Here you would need a parameter to pass in the player, and a parameter to pass in which team to assign them to.
 
 To set up multiple parameters, separate the parameter names with a comma.
 
@@ -17,7 +17,7 @@ end
 
 ## Practice with multiple parameters
 
-To practice working with multiple parameters, create a function that sorts objects in your game into trash or recycling.
+To practice working with multiple parameters, create a function that sorts objects into trash or recycling.
 
 - The **first** parameter will be trash, which will be destroyed.
 - The **second** parameter will be for recycling, which will be made shiny and new again.

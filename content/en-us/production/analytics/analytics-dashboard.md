@@ -141,8 +141,8 @@ Benchmarking is the process of measuring your experience's KPIs and comparing th
 For KPIs relevant to specific aspects of your user behavior, the analytics dashboard provides **benchmarks for experiences with similar players**. Depending on the availability, you might see:
 
 - **Experiences with similar players** if the model finds enough experiences enjoyed by players that are similar to yours, such as those on the recommended experiences section on your Experience Details Page.
-- **Genre** benchmarks if the model cannot find enough similar experiences but your game has an internal genre.
-- **All experiences** benchmarks if your game hasn't been labeled with a genre yet.
+- **Genre** benchmarks if the model cannot find enough similar experiences but your experience has an internal genre.
+- **All experiences** benchmarks if your experience hasn't been labeled with a genre yet.
 
 Your experience may transition from one benchmark set to another as we gather more data to help you compare your experience with the most relevant experiences with at least 100 daily active users. Benchmarks for similar experiences update daily to reflect the most relevant experiences for your user base.
 
@@ -248,8 +248,8 @@ On the `.csv` sales data sheet, each sold item has the following attributes and 
 | Buyer User ID      | User ID of the user who purchased the item.                                                                                                                                                                             | `123456789`                           |
 | Sale Date and Time | Date and time of the transaction in UTC.                                                                                                                                                                                | `2022-07-15T19:04:30.397Z`            |
 | Sale Location      | The location in which the user bought the item, such as an experience and the Marketplace.                                                                                                                              | `WebSite`, `Marketplace`, `Game`      |
-| Universe ID        | The unique identifier of the experience that the purchased item belongs to. Only applicable for items that belong to an experience, like a game pass.                                                                   | `987654321`                           |
-| Universe           | The name of the experience that the purchased item belongs to. Only applicable for items that belong to an experience, like a game pass.                                                                                | `My Awesome Experience`               |
+| Universe ID        | The unique identifier of the experience that the purchased item belongs to. Only applicable for items that belong to an experience, like a  pass.                                                                   | `987654321`                           |
+| Universe           | The name of the experience that the purchased item belongs to. Only applicable for items that belong to an experience, like a pass.                                                                                | `My Awesome Experience`               |
 | Asset ID           | The unique identifier of the item.                                                                                                                                                                                      | `234565432`                           |
 | Asset Name         | The name of the item.                                                                                                                                                                                                   | `My Avatar Shirt`, `My Server`        |
 | Asset Type         | The type of the item, which can be a [Roblox asset type](../../projects/assets/index.md#asset-types) or a [developer product](../../production/monetization/developer-products.md) type.                                | `Game Pass`, `Private Server`, `Mesh` |

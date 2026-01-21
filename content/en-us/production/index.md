@@ -59,7 +59,3 @@ You can promote your experience within the Roblox Ecosystem in multiple ways:
 
 Roblox offers a variety of [analytics](../production/analytics/index.md) features to help you chart your experience's growth, track user behavior and retention, and find
 opportunities for optimization.
-
-## Game design
-
-The Roblox Game Insights team provides [game design](../production/game-design/index.md) resources for designers of all levels to expand their knowledge and skills.

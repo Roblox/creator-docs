@@ -26,7 +26,7 @@ Even if an experience may not use multiple input contexts initially, best practi
 
 An `Class.InputAction` defines a gameplay action mechanic such as "Jump," "Sprint," or "Shoot." These actions are then mapped to hardware inputs using [input bindings](#input-bindings).
 
-An `Class.InputAction` can be of several variations depending on its `Class.InputAction.Type|Type` property (`Enum.InputActionType`). The default is `Enum.InputActionType|Bool`, designed to receive `true`/`false` values from press/release of inputs such as `Enum.KeyCode|ButtonA`, `Enum.KeyCode|E`, or `Enum.KeyCode|MouseLeftButton`. The `Enum.InputActionType|Bool` type also exposes the `Class.InputBinding.UIButton|UIButton` property on child bindings, allowing you to easily hook up press/release of a specific `Class.GuiButton` for the action.
+An `Class.InputAction` can be of several variations depending on its `Class.InputAction.Type|Type` property (`Enum.InputActionType`). The default is `Enum.InputActionType|Bool`, designed to receive `true`/`false` values from press/release of inputs such as `Enum.KeyCode.ButtonA|ButtonA`, `Enum.KeyCode.E|E`, or `Enum.KeyCode.MouseLeftButton|MouseLeftButton`. The `Enum.InputActionType|Bool` type also exposes the `Class.InputBinding.UIButton|UIButton` property on child bindings, allowing you to easily hook up press/release of a specific `Class.GuiButton` for the action.
 
 <table>
 	<thead>
@@ -79,7 +79,7 @@ The `Class.InputAction.Type|Type` assigned to the parent `Class.InputAction` dir
 
 To hook up bindings for simple character sprinting:
 
-1. Insert a new `Class.InputBinding` into the `CharacterSprint` action and rename it to `KeyboardBinding`. Then set the binding's `Class.InputBinding.KeyCode|KeyCode` property to `Enum.KeyCode|LeftShift`.
+1. Insert a new `Class.InputBinding` into the `CharacterSprint` action and rename it to `KeyboardBinding`. Then set the binding's `Class.InputBinding.KeyCode|KeyCode` property to `Enum.KeyCode.LeftShift|LeftShift`.
 
 	 <Grid container spacing={2} alignItems="top">
 	 <Grid item>
@@ -101,7 +101,7 @@ To hook up bindings for simple character sprinting:
 	 </Grid>
 	 </Grid>
 
-3. Insert another `Class.InputBinding` into the `CharacterSprint` action and rename it to `GamepadBinding`. Then set the binding's `Class.InputBinding.KeyCode|KeyCode` property to `Enum.KeyCode|ButtonY`.
+3. Insert another `Class.InputBinding` into the `CharacterSprint` action and rename it to `GamepadBinding`. Then set the binding's `Class.InputBinding.KeyCode|KeyCode` property to `Enum.KeyCode.ButtonY|ButtonY`.
 
 	 <Grid container spacing={2} alignItems="top">
 	 <Grid item>
@@ -156,7 +156,7 @@ The `Enum.InputActionType|Bool` type is best for triggered actions such as jump,
 <td><ul style={{marginBottom: -16}}><li>`Class.InputAction.Pressed|Pressed` event:<ul><li>`true` when pressed</li></ul></li><li>`Class.InputAction.Released|Released` event:<ul><li>`true` when released</li></ul></li><li>`Class.InputAction.StateChanged|StateChanged` event:<ul><li>`true` (pressed) or `false` (released)</li></ul></li></ul></td>
 </tr>
 <tr>
-<td>Variable input amounts from analog inputs like gamepad triggers (`Enum.KeyCode|ButtonL2`/`Enum.KeyCode|ButtonR2`) through the binding's `Class.InputBinding.KeyCode|KeyCode` property.</td>
+<td>Variable input amounts from analog inputs like gamepad triggers (`Enum.KeyCode.ButtonL2|ButtonL2`/`Enum.KeyCode.ButtonR2|ButtonR2`) through the binding's `Class.InputBinding.KeyCode|KeyCode` property.</td>
 <td><ul style={{marginBottom: -16}}><li>`Class.InputAction.Pressed|Pressed` event:<ul><li>`true` when trigger press is `>=` `Class.InputBinding.PressedThreshold|PressedThreshold`</li></ul></li><li>`Class.InputAction.Released|Released` event:<ul><li>`true` when trigger press is `<=` `Class.InputBinding.ReleasedThreshold|ReleasedThreshold`</li></ul></li><li>`Class.InputAction.StateChanged|StateChanged` event:<ul><li style={{marginBottom: -16}}>`true` when trigger press is `>=` `Class.InputBinding.PressedThreshold|PressedThreshold`</li><li>`false` when trigger press is `<=` `Class.InputBinding.ReleasedThreshold|ReleasedThreshold`</li></ul></li></ul></td>
 </tr>
 </tbody>
@@ -175,7 +175,7 @@ The `Enum.InputActionType|Direction1D` type is best for variable zero‑to‑ful
 </thead>
 <tbody>
 <tr>
-<td width="40%">Variable input amounts from analog inputs like gamepad triggers (`Enum.KeyCode|ButtonL2`/`Enum.KeyCode|ButtonR2`) through the binding's `Class.InputBinding.KeyCode|KeyCode`, `Class.InputBinding.Up|Up`, and `Class.InputBinding.Down|Down` properties.</td>
+<td width="40%">Variable input amounts from analog inputs like gamepad triggers (`Enum.KeyCode.ButtonL2|ButtonL2`/`Enum.KeyCode.ButtonR2|ButtonR2`) through the binding's `Class.InputBinding.KeyCode|KeyCode`, `Class.InputBinding.Up|Up`, and `Class.InputBinding.Down|Down` properties.</td>
 <td><ul style={{marginBottom: -16}}><li>`Class.InputAction.StateChanged|StateChanged` event:<ul><li style={{marginBottom: -16}}>`0` to `1` (fully released to fully pressed) through the `Class.InputBinding.KeyCode|KeyCode` or `Class.InputBinding.Up|Up` properties</li><li>`0` to `-1` (fully released to fully pressed) through the `Class.InputBinding.Down|Down` property</li></ul></li></ul></td>
 </tr>
 <tr>
@@ -198,11 +198,11 @@ The `Enum.InputActionType|Direction2D` type is best for 2D directional movement 
 </thead>
 <tbody>
 <tr>
-<td width="40%">Variable input amounts from 2D analog inputs like gamepad thumbsticks (`Enum.KeyCode|Thumbstick1`/`Enum.KeyCode|Thumbstick2`) through the binding's `Class.InputBinding.KeyCode|KeyCode` property.</td>
+<td width="40%">Variable input amounts from 2D analog inputs like gamepad thumbsticks (`Enum.KeyCode.Thumbstick1|Thumbstick1`/`Enum.KeyCode.Thumbstick2|Thumbstick2`) through the binding's `Class.InputBinding.KeyCode|KeyCode` property.</td>
 <td><ul style={{marginBottom: -16}}><li>`Class.InputAction.StateChanged|StateChanged` event:<ul><li>`Datatype.Vector2` between <Typography noWrap>`(-1, -1)`</Typography> and <Typography noWrap>`(1, 1)`</Typography></li></ul></li></ul></td>
 </tr>
 <tr>
-<td>Variable input amounts from analog inputs like gamepad triggers (`Enum.KeyCode|ButtonL2`/`Enum.KeyCode|ButtonR2`) through the binding's `Class.InputBinding.Up|Up`, `Class.InputBinding.Down|Down`, `Class.InputBinding.Left|Left`, and `Class.InputBinding.Right|Right` properties.</td>
+<td>Variable input amounts from analog inputs like gamepad triggers (`Enum.KeyCode.ButtonL2|ButtonL2`/`Enum.KeyCode.ButtonR2|ButtonR2`) through the binding's `Class.InputBinding.Up|Up`, `Class.InputBinding.Down|Down`, `Class.InputBinding.Left|Left`, and `Class.InputBinding.Right|Right` properties.</td>
 <td><ul style={{marginBottom: -16}}><li>`Class.InputAction.StateChanged|StateChanged` event:<ul><li style={{marginBottom: -16}}>`Datatype.Vector2` with `Datatype.Vector2.Y|Y` component between `0` and `1` (fully released to fully pressed) through the `Class.InputBinding.Up|Up` property</li><li style={{marginBottom: -16}}>`Datatype.Vector2` with `Datatype.Vector2.Y|Y` component between `0` and `-1` (fully released to fully pressed) through the `Class.InputBinding.Down|Down` property</li><li style={{marginBottom: -16}}>`Datatype.Vector2` with `Datatype.Vector2.X|X` component between `0` and `-1` (fully released to fully pressed) through the `Class.InputBinding.Left|Left` property</li><li>`Datatype.Vector2` with `Datatype.Vector2.X|X` component between `0` and `1` (fully released to fully pressed) through the `Class.InputBinding.Right|Right` property</li></ul></li></ul></td>
 </tr>
 <tr>
@@ -229,7 +229,7 @@ The `Enum.InputActionType|Direction3D` type is best for 3D directional movement 
 </thead>
 <tbody>
 <tr>
-<td width="40%">Variable input amounts from analog inputs like gamepad triggers (`Enum.KeyCode|ButtonL2`/`Enum.KeyCode|ButtonR2`) through the binding's `Class.InputBinding.Up|Up`, `Class.InputBinding.Down|Down`, `Class.InputBinding.Left|Left`, `Class.InputBinding.Right|Right`, `Class.InputBinding.Forward|Forward`, and `Class.InputBinding.Backward|Backward` properties.</td>
+<td width="40%">Variable input amounts from analog inputs like gamepad triggers (`Enum.KeyCode.ButtonL2|ButtonL2`/`Enum.KeyCode.ButtonR2|ButtonR2`) through the binding's `Class.InputBinding.Up|Up`, `Class.InputBinding.Down|Down`, `Class.InputBinding.Left|Left`, `Class.InputBinding.Right|Right`, `Class.InputBinding.Forward|Forward`, and `Class.InputBinding.Backward|Backward` properties.</td>
 <td><ul style={{marginBottom: -16}}><li>`Class.InputAction.StateChanged|StateChanged` event:<ul><li style={{marginBottom: -16}}>`Datatype.Vector3` with `Datatype.Vector3.Y|Y` component between `0` and `1` (fully released to fully pressed) through the `Class.InputBinding.Up|Up` property</li><li style={{marginBottom: -16}}>`Datatype.Vector3` with `Datatype.Vector3.Y|Y` component between `0` and `-1` (fully released to fully pressed) through the `Class.InputBinding.Down|Down` property</li><li style={{marginBottom: -16}}>`Datatype.Vector3` with `Datatype.Vector3.X|X` component between `0` and `-1` (fully released to fully pressed) through the `Class.InputBinding.Left|Left` property</li><li style={{marginBottom: -16}}>`Datatype.Vector3` with `Datatype.Vector3.X|X` component between `0` and `1` (fully released to fully pressed) through the `Class.InputBinding.Right|Right` property</li><li style={{marginBottom: -16}}>`Datatype.Vector3` with `Datatype.Vector3.Z|Z` component between `0` and `-1` (fully released to fully pressed) through the `Class.InputBinding.Forward|Forward` property</li><li>`Datatype.Vector3` with `Datatype.Vector3.Z|Z` component between `0` and `1` (fully released to fully pressed) through the `Class.InputBinding.Backward|Backward` property</li></ul></li></ul></td>
 </tr>
 <tr>
@@ -241,7 +241,7 @@ The `Enum.InputActionType|Direction3D` type is best for 3D directional movement 
 
 </TabItem>
 <TabItem label="ViewportPosition">
-The `Enum.InputActionType|ViewportPosition` type is best for 2D absolute viewport coordinates of a pointer-like input such as mouse, which can be used for features like custom cursors or selecting 2D and 3D objects.
+The `Enum.InputActionType|ViewportPosition` type is best for absolute 2D viewport coordinates of an input such as a mouse pointer or touch, which can be used for features like custom cursors or selecting objects.
 
 <table>
 <thead>
@@ -252,7 +252,7 @@ The `Enum.InputActionType|ViewportPosition` type is best for 2D absolute viewpor
 </thead>
 <tbody>
 <tr>
-<td width="40%">Variable input amounts from pointer inputs such as a mouse (`Enum.KeyCode|MousePosition`).</td>
+<td width="40%">Variable input amounts from positional inputs such as a mouse pointer (`Enum.KeyCode.MousePosition|MousePosition`) or touch (`Enum.KeyCode.Touch|Touch`).</td>
 <td><ul style={{marginBottom: -16}}><li>`Class.InputAction.StateChanged|StateChanged` event:<ul><li>`Datatype.Vector2` between <Typography noWrap>`(0, 0)`</Typography> and the maximum absolute <Typography noWrap>`(X, Y)`</Typography> pixel size in the viewport.</li></ul></li></ul></td>
 </tr>
 </tbody>
@@ -294,7 +294,7 @@ To connect events for simple character sprinting:
 		end)
 		```
 
-3. Playtest your experience and test the character sprint action with the [bindings](#input-bindings) you chose previously: `Enum.KeyCode|LeftShift` for keyboard, `Enum.KeyCode|ButtonY` for gamepad, and the on‑screen `SprintButton` for touch‑enabled devices. Remember that you can use the [Controller Emulator](../studio/testing-modes.md#controller-emulation) to test gamepad inputs directly in Roblox Studio.
+3. Playtest your experience and test the character sprint action with the [bindings](#input-bindings) you chose previously: `Enum.KeyCode.LeftShift|LeftShift` for keyboard, `Enum.KeyCode.ButtonY|ButtonY` for gamepad, and the on‑screen `SprintButton` for touch‑enabled devices. Remember that you can use the [Controller Emulator](../studio/testing-modes.md#controller-emulation) to test gamepad inputs directly in Roblox Studio.
 
    <video controls src="../assets/ui/button-text-input/Sprint-Demo.mp4" width="720"></video>
 

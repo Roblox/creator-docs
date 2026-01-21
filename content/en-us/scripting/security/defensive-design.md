@@ -1,6 +1,6 @@
 ---
 title: Defensive design tactics
-description: Understand fundamentals of game design that help prevent cheaters and exploiters from ruining the playing experience.
+description: Understand fundamentals of design that help prevent cheaters and exploiters from ruining the playing experience.
 ---
 
 <Alert severity = 'warning'>
@@ -44,7 +44,7 @@ Additional defensive design scenarios:
   <tr>
     <td>(Obby) Exploiter teleports to the end to claim rewards</td>
     <td>Only check the player's final position and try to detect impossible completion times</td>
-    <td>Design with mandatory, sequential checkpoints. Server validates each checkpoint was activated in order before granting rewardsYou can add another layer by flagging players who complete stages faster than humanly possible. The design of the game (requiring checkpoints) is what enables the effective server-side validation.</td>
+    <td>Design with mandatory, sequential checkpoints. Server validates each checkpoint was activated in order before granting rewardsYou can add another layer by flagging players who complete stages faster than humanly possible. The design of the experience (requiring checkpoints) is what enables the effective server-side validation.</td>
   </tr>
   <tr>
     <td>(Combat) Client reports dealing impossible damage amounts</td>
@@ -58,4 +58,4 @@ Additional defensive design scenarios:
   </tr>
 </tbody></table>
 
-<Alert severity = 'info'> <AlertTitle>Key principle</AlertTitle> <br /> When designing a new feature, ask yourself: "How would an exploiter abuse this, and can I change the design to make that abuse impossible or worthless?" Instead of trying to detect cheating after it happens, design your game so that cheating either cannot occur or provides no meaningful advantage.</Alert>
+<Alert severity = 'info'> <AlertTitle>Key principle</AlertTitle> <br /> When designing a new feature, ask yourself: "How would an exploiter abuse this, and can I change the design to make that abuse impossible or worthless?" Instead of trying to detect cheating after it happens, design your experience so that cheating either cannot occur or provides no meaningful advantage.</Alert>

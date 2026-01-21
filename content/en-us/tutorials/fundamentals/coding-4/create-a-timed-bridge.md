@@ -1,6 +1,6 @@
 ---
 title: Loops practice - create a timed bridge
-description: Make a bridge that disappears to add challenge to a Roblox game. Combine for loops and while loops in this computer science practice.
+description: Make a bridge that disappears to add challenge to a Roblox experience. Combine for loops and while loops in this computer science practice.
 next: /tutorials/fundamentals/coding-4/nested-loops
 prev: /tutorials/fundamentals/coding-4/glow-lights-with-for-loops
 ---
@@ -11,7 +11,7 @@ This project is another example of using for loops in a practical way. For this 
 
 ## Set up the project
 
-This bridge can be included in any game project with movement-based challenges, like an obby.
+This bridge can be included in any Roblox project with movement-based challenges, like an obby.
 
 ### Create parts
 
@@ -187,7 +187,7 @@ To start, the script will need to make the bridge solid, or collidable and then 
    end
    ```
 
-5. Run the game. When you touch the button, the bridge should appear and the timer will start, then complete.
+5. Run the experience. When you touch the button, the bridge should appear and the timer will start, then complete.
 
    <video controls src="../../../assets/education/coding-4/forLoopBridge-finishedCountdown.mp4" width="100%"></video>
 

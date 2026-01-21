@@ -798,7 +798,7 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Data storage</Typography>
 
 <div style={{marginBottom: 24}}>
-**Data stores** are a service you can use to save and load persistent player data across different game sessions. They store important information, like a player's progress or inventory, and allow you to retrieve it for the player next time they join your experience. Without data stores, your players would lose all of their progress every time they left the game.
+**Data stores** are a service you can use to save and load persistent player data across different player sessions. They store important information, like a player's progress or inventory, and allow you to retrieve it for the player next time they join your experience. Without data stores, your players would lose all of their progress every time they left the experience.
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>

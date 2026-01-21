@@ -26,7 +26,7 @@ When editing an object's **Text** property in Studio, toggling the **RichText** 
 </Alert>
 
 <Alert severity="warning">
-<a href="../production/localization/index.md">Localizing</a> a game to support other languages removes rich text formatting tags. To ensure formatting appears in other languages, re-apply the tags manually to your localized strings.
+<a href="../production/localization/index.md">Localizing</a> an experience to support other languages removes rich text formatting tags. To ensure formatting appears in other languages, re-apply the tags manually to your localized strings.
 </Alert>
 
 ## Supported tags

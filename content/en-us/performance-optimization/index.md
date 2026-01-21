@@ -3,7 +3,7 @@ title: Performance optimization
 description: Introduces the performance optimization process.
 ---
 
-Performance optimization is the process of building and iterating on an experience to improve frame rate, memory usage, and load times. Players expect games to perform well, so taking the time to understand and improve your experience's performance can be critical to its success.
+Performance optimization is the process of building and iterating on an experience to improve frame rate, memory usage, and load times. Players expect experiences to perform well, so taking the time to understand and improve your experience's performance can be critical to its success.
 
 The first step in performance optimization is to [design for performance](design.md), which means following a set of best practices **as you build** a new experience. After you publish an experience, the optimization process follows a common cycle:
 
@@ -20,11 +20,11 @@ The first step in performance optimization is to [design for performance](design
 
 ## Why performance matters
 
-To put it simply, performant games are more fun. When a game has a consistent, smooth frame rate, even basic actions like running and jumping feel more precise and enjoyable. Aiming can go from feeling impossible to feeling completely natural. A game with a small memory footprint and fast load times might always have plenty of other people to play with.
+To put it simply, performant experiences are more fun. When an experience has a consistent, smooth frame rate, even basic actions like running and jumping feel more precise and enjoyable. Aiming can go from feeling impossible to feeling completely natural. An experience with a small memory footprint and fast load times might always have plenty of other people to play with.
 
 Performance optimization also lets you expand your ambitions. If your experience runs well, you might be able to make it more expansive or beautiful or add new systems to it.
 
-From a business perspective, performant games often have higher user engagement, better user retention, and make more money.
+From a business perspective, performant experiences often have higher user engagement, better user retention, and make more money.
 
 ## Measure performance
 

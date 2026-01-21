@@ -41,7 +41,7 @@ export const sections = [
   },
   {
     title: "Unleash the power of the Roblox engine",
-    description: "Roblox Studio comes bundled with the Roblox engine, a powerful game engine that runs anywhere with endless customization.",
+    description: "Roblox Studio comes bundled with the powerful Roblox engine that runs anywhere with endless customization.",
     links: [
       { text: "Engine API", href: "./reference/engine" },
       { text: "Experience Guides", href: "./creation" }

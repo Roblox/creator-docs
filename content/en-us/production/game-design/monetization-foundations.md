@@ -292,9 +292,7 @@ The starter pack should be merchandised as a special deal using price calculatio
 </figure>
 <br />
 
-**Season passes** are limited-time, quest-based progression systems that are part of a game's content cadence. Players complete quest objectives to earn rewards for the duration of the pre-defined period of time or "season". While similar in name, season passes are not game passes. Game passes are one-time purchases that confer gameplay bonuses.
-
-To learn how to implement game passes into your experiences, see the article on [passes](../../production/monetization/passes.md).
+**Season passes** are limited-time, quest-based progression systems that are part of an experience's content cadence. Players complete quest objectives to earn rewards for the duration of the pre-defined period of time or "season".
 
 To learn how to design an effective season pass, see [season pass design](../../production/game-design/season-pass-design.md).
 
@@ -389,12 +387,12 @@ For a list of common monetization terms, consult the table below.
 | Economy                    | The numerical system dictating the impact of users' behaviors in pursuit of and in response to content present in the experience and the inflows and outflows of currencies                                                                   |
 | Enhancement                | A category of in-experience item that improves the user's experience or capabilities in some way.                                                                                                                                             |
 | Expression                 | A category of in-experience item that personalizes the user's experience but typically does not provide a benefit to the user's capabilities.                                                                                                 |
-| Hard Currency              | Currency that is unique to a specific game and is primarily obtained by spending real money (represented by Robux in Roblox).                                                                                                                 |
+| Hard Currency              | Currency that is unique to a specific experience and is primarily obtained by spending real money (represented by Robux in Roblox).                                                                                                                 |
 | Item                       | An individual piece of in-experience content that users can earn or purchase.                                                                                                                                                                 |
 | Limited-time item          | An in-experience item that is in the item shop for a set period of time, after which it is unavailable                                                                                                                                        |
 | Merchandising              | The methods by which an experience attracts attention to and communicates the value of items and other content available for purchase within that experience                                                                                  |
 | Monetization               | The strategies, systems and content designed to add value to a user's experience through the purchase and spend of Robux                                                                                                                      |
 | Season Pass                | Also known as a Battle Pass. A programmatic method of content distribution and engagement incentive that allows users to earn in-experience rewards by interacting with the core loop or other content systems over a certain period of time. |
 | Shop                       | The in-experience area, typically a separate modal, where items and other in-experience content is sold for Robux or other soft currencies.                                                                                                   |
-| Soft Currency              | Currency that is unique to a specific game and is usually earned through gameplay or another action required by the experience.                                                                                                               |
+| Soft Currency              | Currency that is unique to a specific experience and is usually earned through gameplay or another action required by the experience.                                                                                                               |
 | Starter Pack               | Also known as a Starter Bundle or Beginner's Offer. An initial offer of an item or bundle of items that a new user sees within the first few minutes after joining an experience.                                                             |

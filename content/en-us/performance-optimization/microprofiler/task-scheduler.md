@@ -3,7 +3,7 @@ title: Task scheduler
 description: Task Scheduler coordinates tasks done in each frame as the experience runs.
 ---
 
-The **task scheduler** coordinates tasks done each frame as the game runs, even when the game is paused. These tasks include detecting player input, animating characters, updating the physics simulation, and resuming scripts in a `Library.task.wait()` state.
+The **task scheduler** coordinates tasks done each frame as the experience runs, even when it is paused. These tasks include detecting player input, animating characters, updating the physics simulation, and resuming scripts in a `Library.task.wait()` state.
 
 While there may be multiple tasks running, the task scheduler can potentially be overloaded, especially in the following situations:
 
@@ -12,13 +12,9 @@ While there may be multiple tasks running, the task scheduler can potentially be
 - Depending heavily on precise physics.
 - Replicating objects regularly.
 
-## Frames
-
-A **frame** is a unit of game logic where work is done. Each frame should perform tasks efficiently, leading to more **frames per second** and a smoother player experience.
-
 ## RunService
 
-The most direct way to add frame-by-frame game tasks is through the following members of `Class.RunService`:
+The most direct way to add frame-by-frame tasks is through the following members of `Class.RunService`:
 
 - `Class.RunService:BindToRenderStep()`
 - `Class.RunService.PreAnimation`
@@ -35,7 +31,7 @@ The task scheduler categorizes and completes tasks in the following order. Some 
 
 ## Best practices
 
-To build performant games with efficiency in mind, note the following:
+To build performant experiences with efficiency in mind, note the following:
 
 - **Don't connect/bind functions to the render step unless absolutely necessary.**
   Only tasks that must be done after input but before rendering should be done in such a way, like camera movement. For strict control over order, use `Class.RunService:BindToRenderStep()|BindToRenderStep()` instead of `Class.RunService.PreRender|PreRender`.
