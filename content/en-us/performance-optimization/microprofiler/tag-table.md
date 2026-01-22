@@ -3,7 +3,9 @@ title: Tag reference
 description: A list of tags for the MicroProfiler.
 ---
 
-The following is a list of common tags in the [MicroProfiler](./index.md), grouped by category. Understanding these tags can help you identify problematic code in your experience. The tables contain tag label, descriptions, and advice for improving performance and optimizing your experience.
+The following is a list of common tags in the [MicroProfiler](./index.md), grouped by category. Tags are also interchangeably called tasks, timers, scopes, processes, and labels. Whatever the name, they represent a unit of work.
+
+Understanding these tags can help you identify problematic code in your experience. The tables contain tag label, descriptions, and advice for improving performance and optimizing your experience.
 
 ## Sleep
 

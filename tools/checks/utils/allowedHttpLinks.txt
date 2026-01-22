@@ -741,3 +741,5 @@ https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.luau-lsp
 https://marketplace.visualstudio.com/items?itemName=Kampfkarren.selene-vscode
 https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.stylua
 https://cursor.com/
+https://www.youtube-nocookie.com/embed/XLCZfGEm9tU?si=d992GKSU7oveIrhd
+https://www.youtube-nocookie.com/embed/eWf-6Sh-9Os?si=GZYvQw6ZvQiZF1uv
