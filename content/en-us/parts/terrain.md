@@ -171,7 +171,7 @@ While most materials are static, you can add animated blades of grass to the `En
 Note that the speed of animated grass — but not its vector direction&nbsp;— will be reduced if the player has toggled on the **Reduce&nbsp;Motion** [accessibility](../production/publishing/accessibility.md#reduced-motion) setting from the Roblox or in‑experience **Settings** menu.
 </Alert>
 
-To add animated grass to th `Enum.Material.Grass|Grass` material:
+To add animated grass to the `Enum.Material.Grass|Grass` material:
 
 1. In the **Explorer** window, navigate to the `Class.Workspace`, then select the `Class.Terrain` object.
 
