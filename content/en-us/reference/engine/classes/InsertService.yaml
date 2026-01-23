@@ -147,7 +147,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: InsertService:GetBaseCategories
     summary: ''
     description: ''
@@ -265,7 +266,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: InsertService:GetFreeDecals
     summary: |
       Retrieves a list of free Decals from the Catalog.
@@ -293,7 +295,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: InsertService:GetFreeModelsAsync
     summary: |
       Retrieves a list of Free Models from the Catalog.
@@ -348,7 +351,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: InsertService:GetFreeModels
     summary: |
       Retrieves a list of Free Models from the Catalog.
@@ -376,7 +380,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: InsertService:GetLatestAssetVersionAsync
     summary: |
       Returns the latest AssetVersionId of an asset for assets created by the
@@ -402,7 +407,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: InsertService:GetUserCategories
     summary: ''
     description: ''
@@ -596,7 +602,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - LoadOwnedAsset
   - name: InsertService:loadAsset
     summary: ''
     description: ''
@@ -640,6 +647,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - LoadOwnedAsset
 events: []
 callbacks: []

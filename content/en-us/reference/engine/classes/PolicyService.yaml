@@ -61,7 +61,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: PolicyService:GetPolicyInfoForPlayerAsync
     summary: |
       Returns policy information about a player based on geolocation, age group,
@@ -192,6 +193,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
 events: []
 callbacks: []

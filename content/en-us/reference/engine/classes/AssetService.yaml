@@ -152,7 +152,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetCreateUpdate
   - name: AssetService:CreateAssetVersionAsync
     summary: |
       Uploads a new version for an existing asset from the given object.
@@ -215,7 +216,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetCreateUpdate
   - name: AssetService:CreateEditableImage
     summary: |
       Creates a new `Class.EditableImage`.
@@ -243,7 +245,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: AssetService:CreateEditableImageAsync
     summary: |
       Creates a new `Class.EditableImage` object populated with the given image.
@@ -282,7 +285,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AssetService:CreateEditableMesh
     summary: |
       Creates a new, empty `Class.EditableMesh`.
@@ -308,7 +312,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: AssetService:CreateEditableMeshAsync
     summary: |
       Returns a new `Class.EditableMesh` object created from an existing mesh
@@ -355,7 +360,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AssetService:CreateMeshPartAsync
     summary: |
       Creates a new `Class.MeshPart` with a specified mesh ID and an optional
@@ -403,7 +409,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: AssetService:CreatePlaceAsync
     summary: |
       Clones a place through the given `templatePlaceID`.
@@ -448,7 +455,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetCreateUpdate
   - name: AssetService:CreatePlaceInPlayerInventoryAsync
     summary: |
       Clones a place through the given `templatePlaceID` and puts it into the
@@ -481,7 +489,8 @@ methods:
       This method has been removed and is no longer functional.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetCreateUpdate
   - name: AssetService:CreateSurfaceAppearanceAsync
     summary: |
       Creates a new `Class.SurfaceAppearance` object using the provided content
@@ -531,7 +540,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: AssetService:GetAssetIdsForPackageAsync
     summary: |
       Returns an array of asset IDs that are contained in a specified package.
@@ -552,7 +562,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AssetService:GetAssetIdsForPackage
     summary: |
       Returns an array of asset IDs that are contained in a specified package.
@@ -573,7 +584,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AssetService:GetAudioMetadataAsync
     summary: |
       Provides relevant metadata about a specific audio source.
@@ -617,7 +629,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AssetService:GetBundleDetailsAsync
     summary: |
       Returns details of the contents of specified bundle.
@@ -663,7 +676,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AssetService:GetCreatorAssetID
     summary: |
       Returns the UserId of the account who created the creationID asset.
@@ -708,7 +722,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AssetService:LoadAssetAsync
     summary: |
       Loads a `Class.Model` instance given its asset ID. This is the modern
@@ -774,7 +789,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRequire
   - name: AssetService:PromptCreateAssetAsync
     summary: |
       Allows in-experience asset creation for users by prompting a publish
@@ -812,7 +828,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetCreateUpdate
   - name: AssetService:PromptImportAnimationClipFromVideoAsync
     summary: ''
     description: ''
@@ -834,7 +851,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
   - name: AssetService:SavePlaceAsync
     summary: |
       Saves the state of the current place.
@@ -873,7 +891,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetCreateUpdate
   - name: AssetService:SearchAudioAsync
     summary: |
       Finds audio assets matching a variety of search criteria.
@@ -918,7 +937,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AssetService:SearchAudio
     summary: |
       Finds audio assets matching a variety of search criteria.
@@ -939,6 +959,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
 events: []
 callbacks: []

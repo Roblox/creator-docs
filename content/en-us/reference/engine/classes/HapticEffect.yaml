@@ -57,7 +57,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
   - name: HapticEffect.Position
     summary: |
       Along with `Class.HapticEffect.Radius|Radius`, specifies the impact
@@ -96,7 +97,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
   - name: HapticEffect.Radius
     summary: |
       Along with `Class.HapticEffect.Position|Position`, specifies the impact
@@ -136,7 +138,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
   - name: HapticEffect.Type
     summary: |
       `Enum.HapticEffectType` describing the haptic type.
@@ -158,7 +161,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
   - name: HapticEffect.Waveform
     summary: ''
     description: ''
@@ -175,7 +179,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
 methods:
   - name: HapticEffect:Play
     summary: |
@@ -202,7 +207,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
   - name: HapticEffect:SetWaveformKeys
     summary: |
       Defines a custom waveform as a table and applies it to the haptic.
@@ -245,7 +251,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
   - name: HapticEffect:Stop
     summary: |
       Stops the haptic effect.
@@ -275,7 +282,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
 events:
   - name: HapticEffect.Ended
     summary: |
@@ -294,5 +302,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
 callbacks: []

@@ -47,7 +47,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
   - name: StyleDerive.StyleSheet
     summary: |
       The `Class.StyleSheet` from which the parent `Class.StyleSheet` inherits
@@ -67,7 +68,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
 methods: []
 events: []
 callbacks: []

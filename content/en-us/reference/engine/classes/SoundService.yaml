@@ -56,7 +56,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
   - name: SoundService.AmbientReverb
     summary: |
       The ambient sound environment preset applied to all `Class.Sound|Sounds`.
@@ -86,7 +87,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
   - name: SoundService.CharacterSoundsUseNewApi
     summary: |
       Determines whether the default character sounds will use instances in the
@@ -110,7 +112,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
   - name: SoundService.DefaultListenerLocation
     summary: |
       Determines where (if anywhere) to place an `Class.AudioListener` by
@@ -134,7 +137,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
   - name: SoundService.DistanceFactor
     summary: |
       The number of studs to be considered a meter by `Class.SoundService` when
@@ -169,7 +173,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
   - name: SoundService.DopplerScale
     summary: |
       Degree to which the pitch of a `Class.Sound` varies due to the Doppler
@@ -200,7 +205,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
   - name: SoundService.RespectFilteringEnabled
     summary: |
       Sets whether `Class.Sound` playback from a client will replicate to the
@@ -225,7 +231,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
   - name: SoundService.RolloffScale
     summary: |
       Determines how fast the volume of a `Class.Sound` attenuates beyond its
@@ -262,7 +269,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
   - name: SoundService.VolumetricAudio
     summary: |
       Determines whether certain spatialized `Class.Sound|Sounds` emit
@@ -292,7 +300,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
 methods:
   - name: SoundService:GetListener
     summary: |
@@ -347,7 +356,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
   - name: SoundService:OpenAttenuationCurveEditor
     summary: |
       Opens the attenuation curve editor in Studio for the provided
@@ -370,7 +380,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
   - name: SoundService:OpenDirectionalCurveEditor
     summary: |
       Opens the directional curve editor in Studio for the provided
@@ -393,7 +404,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
   - name: SoundService:PlayLocalSound
     summary: |
       Plays a copy of a `Class.Sound` locally, such that it will only be heard
@@ -423,7 +435,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
   - name: SoundService:SetListener
     summary: |
       Sets the listener used by `Class.Sound|Sounds`.
@@ -460,6 +473,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
 events: []
 callbacks: []

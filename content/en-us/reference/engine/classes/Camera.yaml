@@ -101,7 +101,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera.CameraType
     summary: |
       Specifies the `Enum.CameraType` to be read by the camera scripts.
@@ -131,7 +132,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera.CFrame
     summary: |
       The `Datatype.CFrame` of the `Class.Camera`, defining its position and
@@ -218,7 +220,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera.CoordinateFrame
     summary: ''
     description: |
@@ -244,7 +247,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera.DiagonalFieldOfView
     summary: |
       Sets the angle of the camera's diagonal field of view.
@@ -271,7 +275,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera.FieldOfView
     summary: |
       Sets the angle of the camera's vertical field of view.
@@ -307,7 +312,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera.FieldOfViewMode
     summary: |
       Determines the FOV value of the `Class.Camera` that's invariant under
@@ -334,7 +340,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera.Focus
     summary: |
       Sets the area in 3D space that is prioritized by Roblox's graphical
@@ -370,7 +377,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera.focus
     summary: ''
     description: ''
@@ -390,7 +398,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera.HeadLocked
     summary: |
       Toggles whether the camera will automatically track the head motion of a
@@ -444,7 +453,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera.HeadScale
     summary: |
       Sets the scale of the user's perspective of the world when using VR.
@@ -478,7 +488,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera.MaxAxisFieldOfView
     summary: |
       Sets the angle of the camera's field of view along the longest viewport
@@ -506,7 +517,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera.NearPlaneZ
     summary: |
       Describes the negative **Z** offset, in studs, of the camera's near
@@ -535,7 +547,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera.ViewportSize
     summary: |
       The dimensions of the device safe area on a Roblox client.
@@ -583,7 +596,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera.VRTiltAndRollEnabled
     summary: |
       Toggles whether to apply tilt and roll from the
@@ -618,7 +632,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
 methods:
   - name: Camera:GetLargestCutoffDistance
     summary: |
@@ -661,7 +676,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera:GetPanSpeed
     summary: |
       Returns the current 'pan' speed of the `Class.Camera`.
@@ -687,7 +703,8 @@ methods:
       in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera:GetPartsObscuringTarget
     summary: |
       Returns an array of `Class.BasePart|BaseParts` that are obscuring the
@@ -746,7 +763,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera:GetRenderCFrame
     summary: |
       Returns the actual `Datatype.CFrame`where the `Class.Camera` is being
@@ -784,7 +802,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera:GetRoll
     summary: |
       Returns in radians the current roll, or rotation around the camera's
@@ -826,7 +845,8 @@ methods:
       This method has been deprecated.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera:GetTiltSpeed
     summary: |
       Returns the current tilt speed of the `Class.Camera`.
@@ -851,7 +871,8 @@ methods:
       This method has been deprecated and no longer works.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera:Interpolate
     summary: |
       Tweens the `Class.Camera` in a linear fashion towards a new
@@ -943,7 +964,8 @@ methods:
       example.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera:PanUnits
     summary: |
       Pans the `Class.Camera` around the `Class.Camera.Focus|Focus` in 45 degree
@@ -983,7 +1005,8 @@ methods:
       deprecated. Do not use in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera:ScreenPointToRay
     summary: |
       Creates a unit `Datatype.Ray` from a position on the screen (in pixels),
@@ -1052,7 +1075,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera:SetCameraPanMode
     summary: |
       Sets the `Enum.CameraPanMode` to be used by the `Class.Camera` on mobile
@@ -1081,7 +1105,8 @@ methods:
       This method has been deprecated and should not be used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera:SetRoll
     summary: |
       Sets the current rotation applied around the camera's Z-axis.
@@ -1144,7 +1169,8 @@ methods:
       `Class.Camera.CFrame|CFrame` property to 'roll' the `Class.Camera`.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera:TiltUnits
     summary: |
       Tilts the `Class.Camera` around its `Class.Camera.Focus|Focus` in 10
@@ -1174,7 +1200,8 @@ methods:
       Do not use in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera:ViewportPointToRay
     summary: |
       Creates a unit `Datatype.Ray` from a position on the viewport (in pixels),
@@ -1267,7 +1294,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera:WorldToScreenPoint
     summary: |
       Returns the screen location and depth of a `Datatype.Vector3` `worldPoint`
@@ -1322,7 +1350,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera:WorldToViewportPoint
     summary: |
       Returns the screen location and depth of a `Datatype.Vector3` `worldPoint`
@@ -1380,7 +1409,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Camera:ZoomToExtents
     summary: |
       Adjusts the `Class.Camera.CFrame|CFrame` so that the specified bounding
@@ -1433,7 +1463,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
 events:
   - name: Camera.InterpolationFinished
     summary: |
@@ -1454,5 +1485,6 @@ events:
       This event has been deprecated. Instead use `Class.TweenService` to
       smoothly animate the `Class.Camera`.
     security: None
-    capabilities: []
+    capabilities:
+      - Basic
 callbacks: []

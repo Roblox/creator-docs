@@ -72,7 +72,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - AssetManagement
   - name: ContentProvider.RequestQueueSize
     summary: |
       Gives the number of items in the `Class.ContentProvider` request queue
@@ -103,7 +104,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - AssetManagement
 methods:
   - name: ContentProvider:GetAssetFetchStatus
     summary: |
@@ -128,7 +130,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
   - name: ContentProvider:GetAssetFetchStatusChangedSignal
     summary: |
       A signal that fires when the `Enum.AssetFetchStatus` of the provided
@@ -153,7 +156,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
   - name: ContentProvider:ListEncryptedAssets
     summary: ''
     description: ''
@@ -166,7 +170,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
   - name: ContentProvider:Preload
     summary: |
       Queues an asset to be downloaded by the `Class.ContentProvider`.
@@ -194,7 +199,8 @@ methods:
       which should be used in all new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
   - name: ContentProvider:PreloadAsync
     summary: |
       Yields until all of the assets associated with the given
@@ -247,7 +253,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
   - name: ContentProvider:RegisterDefaultEncryptionKey
     summary: ''
     description: ''
@@ -264,7 +271,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
   - name: ContentProvider:RegisterDefaultSessionKey
     summary: ''
     description: ''
@@ -281,7 +289,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
   - name: ContentProvider:RegisterEncryptedAsset
     summary: ''
     description: ''
@@ -302,7 +311,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
   - name: ContentProvider:RegisterSessionEncryptedAsset
     summary: ''
     description: ''
@@ -323,7 +333,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
   - name: ContentProvider:UnregisterDefaultEncryptionKey
     summary: ''
     description: ''
@@ -336,7 +347,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
   - name: ContentProvider:UnregisterEncryptedAsset
     summary: ''
     description: ''
@@ -353,7 +365,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
 events:
   - name: ContentProvider.AssetFetchFailed
     summary: ''
@@ -367,5 +380,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - AssetManagement
 callbacks: []

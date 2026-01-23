@@ -45,7 +45,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
   - name: VRService.AvatarGestures
     summary: |
       When true, a VR player will be able to animate their hands and head using
@@ -67,7 +68,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
   - name: VRService.ControllerModels
     summary: ''
     description: ''
@@ -83,7 +85,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
   - name: VRService.FadeOutViewOnCollision
     summary: |
       When true, a VR player's view will fade to black when their head collides
@@ -104,7 +107,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
   - name: VRService.GuiInputUserCFrame
     summary: |
       Describes what `Enum.UserCFrame` is responsible for input in VR.
@@ -130,7 +134,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Input
   - name: VRService.LaserPointer
     summary: ''
     description: ''
@@ -146,7 +151,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
   - name: VRService.ThirdPersonFollowCamEnabled
     summary: ''
     description: ''
@@ -164,7 +170,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Input
   - name: VRService.VREnabled
     summary: |
       Describes whether the user is using a virtual reality device.
@@ -210,7 +217,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Input
 methods:
   - name: VRService:GetTouchpadMode
     summary: |
@@ -240,7 +248,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
   - name: VRService:GetUserCFrame
     summary: |
       Returns a CFrame describing the position &amp; orientation of a specified
@@ -280,7 +289,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
   - name: VRService:GetUserCFrameEnabled
     summary: |
       Returns true if the specified `Enum.UserCFrame` is available to be
@@ -312,7 +322,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
   - name: VRService:RecenterUserHeadCFrame
     summary: |
       Re-centers the `Datatype.CFrame` to the current location of the VR headset
@@ -337,7 +348,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
   - name: VRService:RequestNavigation
     summary: |
       Requests navigation to the specified `Datatype.CFrame` using the specified
@@ -375,7 +387,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
   - name: VRService:SetTouchpadMode
     summary: |
       Sets the mode of the specified `Enum.VRTouchpad` to the specified
@@ -412,7 +425,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
 events:
   - name: VRService.NavigationRequested
     summary: |
@@ -444,7 +458,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
   - name: VRService.TouchpadModeChanged
     summary: |
       Fires if the `Enum.VRTouchpadMode` of a `Enum.VRTouchpad` is changed.
@@ -474,7 +489,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
   - name: VRService.UserCFrameChanged
     summary: |
       Fires when a `Enum.UserCFrame` is changed.
@@ -505,7 +521,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
   - name: VRService.UserCFrameEnabled
     summary: |
       Fires when a `Enum.UserCFrame` is enabled or disabled.
@@ -536,5 +553,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
 callbacks: []

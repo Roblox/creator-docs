@@ -4,8 +4,9 @@
 
 name: KeyCode
 type: enum
-summary: Byte keycodes that represent the key or button involved in user input.
-description: |-
+summary: |
+  Byte keycodes that represent the key or button involved in user input.
+description: |
   The `KeyCode` enum contains a list of byte keycodes that represent the key or
   button involved in user input. This enum also includes buttons and axes
   present on gamepads, and 96 `World[]` values for non-standard buttons.
@@ -23,382 +24,458 @@ tags: []
 deprecation_message: ''
 items:
   - name: Unknown
-    summary: Blank value that represents no key being pressed.
+    summary: |
+      Blank value that represents no key being pressed.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Backspace
-    summary: The `Backspace` key.
+    summary: |
+      The `Backspace` key.
     value: 8
     tags: []
     deprecation_message: ''
   - name: Tab
-    summary: The `Tab` key.
+    summary: |
+      The `Tab` key.
     value: 9
     tags: []
     deprecation_message: ''
   - name: Clear
-    summary: Only present on certain keyboards.
+    summary: |
+      Only present on certain keyboards.
     value: 12
     tags: []
     deprecation_message: ''
   - name: Return
-    summary: Frequently known as **Enter**.
+    summary: |
+      Frequently known as **Enter**.
     value: 13
     tags: []
     deprecation_message: ''
   - name: Pause
-    summary: Only present on certain keyboards.
+    summary: |
+      Only present on certain keyboards.
     value: 19
     tags: []
     deprecation_message: ''
   - name: Escape
-    summary: The `Escape` key.
+    summary: |
+      The `Escape` key.
     value: 27
     tags: []
     deprecation_message: ''
   - name: Space
-    summary: The `Space` key.
+    summary: |
+      The `Space` key.
     value: 32
     tags: []
     deprecation_message: ''
   - name: QuotedDouble
-    summary: The `"` key.
+    summary: |
+      The `"` key.
     value: 34
     tags: []
     deprecation_message: ''
   - name: Hash
-    summary: The `#` key.
+    summary: |
+      The `#` key.
     value: 35
     tags: []
     deprecation_message: ''
   - name: Dollar
-    summary: The `$` key.
+    summary: |
+      The `$` key.
     value: 36
     tags: []
     deprecation_message: ''
   - name: Percent
-    summary: The `%` key.
+    summary: |
+      The `%` key.
     value: 37
     tags: []
     deprecation_message: ''
   - name: Ampersand
-    summary: The `&` key.
+    summary: |
+      The `&` key.
     value: 38
     tags: []
     deprecation_message: ''
   - name: Quote
-    summary: The `'` key.
+    summary: |
+      The `'` key.
     value: 39
     tags: []
     deprecation_message: ''
   - name: LeftParenthesis
-    summary: The `(` key.
+    summary: |
+      The `(` key.
     value: 40
     tags: []
     deprecation_message: ''
   - name: RightParenthesis
-    summary: The `)` key.
+    summary: |
+      The `)` key.
     value: 41
     tags: []
     deprecation_message: ''
   - name: Asterisk
-    summary: The `*` key.
+    summary: |
+      The `*` key.
     value: 42
     tags: []
     deprecation_message: ''
   - name: Plus
-    summary: The `+` key.
+    summary: |
+      The `+` key.
     value: 43
     tags: []
     deprecation_message: ''
   - name: Comma
-    summary: The `,` key.
+    summary: |
+      The `,` key.
     value: 44
     tags: []
     deprecation_message: ''
   - name: Minus
-    summary: The `-` key.
+    summary: |
+      The `-` key.
     value: 45
     tags: []
     deprecation_message: ''
   - name: Period
-    summary: The `.` key.
+    summary: |
+      The `.` key.
     value: 46
     tags: []
     deprecation_message: ''
   - name: Slash
-    summary: The `/` key.
+    summary: |
+      The `/` key.
     value: 47
     tags: []
     deprecation_message: ''
   - name: Zero
-    summary: The `0` key.
+    summary: |
+      The `0` key.
     value: 48
     tags: []
     deprecation_message: ''
   - name: One
-    summary: The `1` key.
+    summary: |
+      The `1` key.
     value: 49
     tags: []
     deprecation_message: ''
   - name: Two
-    summary: The `2` key.
+    summary: |
+      The `2` key.
     value: 50
     tags: []
     deprecation_message: ''
   - name: Three
-    summary: The `3` key.
+    summary: |
+      The `3` key.
     value: 51
     tags: []
     deprecation_message: ''
   - name: Four
-    summary: The `4` key.
+    summary: |
+      The `4` key.
     value: 52
     tags: []
     deprecation_message: ''
   - name: Five
-    summary: The `5` key.
+    summary: |
+      The `5` key.
     value: 53
     tags: []
     deprecation_message: ''
   - name: Six
-    summary: The `6` key.
+    summary: |
+      The `6` key.
     value: 54
     tags: []
     deprecation_message: ''
   - name: Seven
-    summary: The `7` key.
+    summary: |
+      The `7` key.
     value: 55
     tags: []
     deprecation_message: ''
   - name: Eight
-    summary: The `8` key.
+    summary: |
+      The `8` key.
     value: 56
     tags: []
     deprecation_message: ''
   - name: Nine
-    summary: The `9` key.
+    summary: |
+      The `9` key.
     value: 57
     tags: []
     deprecation_message: ''
   - name: Colon
-    summary: The `:` key.
+    summary: |
+      The `:` key.
     value: 58
     tags: []
     deprecation_message: ''
   - name: Semicolon
-    summary: The `;` key.
+    summary: |
+      The `;` key.
     value: 59
     tags: []
     deprecation_message: ''
   - name: LessThan
-    summary: The `<` key.
+    summary: |
+      The `<` key.
     value: 60
     tags: []
     deprecation_message: ''
   - name: Equals
-    summary: The `=` key.
+    summary: |
+      The `=` key.
     value: 61
     tags: []
     deprecation_message: ''
   - name: GreaterThan
-    summary: The `>` key.
+    summary: |
+      The `>` key.
     value: 62
     tags: []
     deprecation_message: ''
   - name: Question
-    summary: The `?` key.
+    summary: |
+      The `?` key.
     value: 63
     tags: []
     deprecation_message: ''
   - name: At
-    summary: The `@` key.
+    summary: |
+      The `@` key.
     value: 64
     tags: []
     deprecation_message: ''
   - name: LeftBracket
-    summary: The `[` key.
+    summary: |
+      The `[` key.
     value: 91
     tags: []
     deprecation_message: ''
   - name: BackSlash
-    summary: The `\` key.
+    summary: |
+      The `\` key.
     value: 92
     tags: []
     deprecation_message: ''
   - name: RightBracket
-    summary: The `]` key.
+    summary: |
+      The `]` key.
     value: 93
     tags: []
     deprecation_message: ''
   - name: Caret
-    summary: The `^` key.
+    summary: |
+      The `^` key.
     value: 94
     tags: []
     deprecation_message: ''
   - name: Underscore
-    summary: The `_` key.
+    summary: |
+      The `_` key.
     value: 95
     tags: []
     deprecation_message: ''
   - name: Backquote
-    summary: The `` ` `` key.
+    summary: |
+      The `` ` `` key.
     value: 96
     tags: []
     deprecation_message: ''
   - name: A
-    summary: The `A` key.
+    summary: |
+      The `A` key.
     value: 97
     tags: []
     deprecation_message: ''
   - name: B
-    summary: The `B` key.
+    summary: |
+      The `B` key.
     value: 98
     tags: []
     deprecation_message: ''
   - name: C
-    summary: The `C` key.
+    summary: |
+      The `C` key.
     value: 99
     tags: []
     deprecation_message: ''
   - name: D
-    summary: The `D` key.
+    summary: |
+      The `D` key.
     value: 100
     tags: []
     deprecation_message: ''
   - name: E
-    summary: The `E` key.
+    summary: |
+      The `E` key.
     value: 101
     tags: []
     deprecation_message: ''
   - name: F
-    summary: The `F` key.
+    summary: |
+      The `F` key.
     value: 102
     tags: []
     deprecation_message: ''
   - name: G
-    summary: The `G` key.
+    summary: |
+      The `G` key.
     value: 103
     tags: []
     deprecation_message: ''
   - name: H
-    summary: The `H` key.
+    summary: |
+      The `H` key.
     value: 104
     tags: []
     deprecation_message: ''
   - name: I
-    summary: The `I` key.
+    summary: |
+      The `I` key.
     value: 105
     tags: []
     deprecation_message: ''
   - name: J
-    summary: The `J` key.
+    summary: |
+      The `J` key.
     value: 106
     tags: []
     deprecation_message: ''
   - name: K
-    summary: The `K` key.
+    summary: |
+      The `K` key.
     value: 107
     tags: []
     deprecation_message: ''
   - name: L
-    summary: The `L` key.
+    summary: |
+      The `L` key.
     value: 108
     tags: []
     deprecation_message: ''
   - name: M
-    summary: The `M` key.
+    summary: |
+      The `M` key.
     value: 109
     tags: []
     deprecation_message: ''
-  - name: N
-    summary: The `N` key.
+  - name: 'N'
+    summary: |
+      The `N` key.
     value: 110
     tags: []
     deprecation_message: ''
   - name: O
-    summary: The `O` key.
+    summary: |
+      The `O` key.
     value: 111
     tags: []
     deprecation_message: ''
   - name: P
-    summary: The `P` key.
+    summary: |
+      The `P` key.
     value: 112
     tags: []
     deprecation_message: ''
   - name: Q
-    summary: The `Q` key.
+    summary: |
+      The `Q` key.
     value: 113
     tags: []
     deprecation_message: ''
   - name: R
-    summary: The `R` key.
+    summary: |
+      The `R` key.
     value: 114
     tags: []
     deprecation_message: ''
   - name: S
-    summary: The `S` key.
+    summary: |
+      The `S` key.
     value: 115
     tags: []
     deprecation_message: ''
   - name: T
-    summary: The `T` key.
+    summary: |
+      The `T` key.
     value: 116
     tags: []
     deprecation_message: ''
   - name: U
-    summary: The `U` key.
+    summary: |
+      The `U` key.
     value: 117
     tags: []
     deprecation_message: ''
   - name: V
-    summary: The `V` key.
+    summary: |
+      The `V` key.
     value: 118
     tags: []
     deprecation_message: ''
   - name: W
-    summary: The `W` key.
+    summary: |
+      The `W` key.
     value: 119
     tags: []
     deprecation_message: ''
   - name: X
-    summary: The `X` key.
+    summary: |
+      The `X` key.
     value: 120
     tags: []
     deprecation_message: ''
-  - name: Y
-    summary: The `Y` key.
+  - name: 'Y'
+    summary: |
+      The `Y` key.
     value: 121
     tags: []
     deprecation_message: ''
   - name: Z
-    summary: The `Z` key.
+    summary: |
+      The `Z` key.
     value: 122
     tags: []
     deprecation_message: ''
   - name: LeftCurly
-    summary: The `{` key.
+    summary: |
+      The `{` key.
     value: 123
     tags: []
     deprecation_message: ''
   - name: Pipe
-    summary: The `|` key.
+    summary: |
+      The `|` key.
     value: 124
     tags: []
     deprecation_message: ''
   - name: RightCurly
-    summary: The `}` key.
+    summary: |
+      The `}` key.
     value: 125
     tags: []
     deprecation_message: ''
   - name: Tilde
-    summary: The `~` key.
+    summary: |
+      The `~` key.
     value: 126
     tags: []
     deprecation_message: ''
   - name: Delete
-    summary: The `Del` key.
+    summary: |
+      The `Del` key.
     value: 127
     tags: []
     deprecation_message: ''
@@ -979,452 +1056,552 @@ items:
       - Deprecated
     deprecation_message: ''
   - name: KeypadZero
-    summary: The `0` key on the keypad cluster.
+    summary: |
+      The `0` key on the keypad cluster.
     value: 256
     tags: []
     deprecation_message: ''
   - name: KeypadOne
-    summary: The `1` key on the keypad cluster.
+    summary: |
+      The `1` key on the keypad cluster.
     value: 257
     tags: []
     deprecation_message: ''
   - name: KeypadTwo
-    summary: The `2` key on the keypad cluster.
+    summary: |
+      The `2` key on the keypad cluster.
     value: 258
     tags: []
     deprecation_message: ''
   - name: KeypadThree
-    summary: The `3` key on the keypad cluster.
+    summary: |
+      The `3` key on the keypad cluster.
     value: 259
     tags: []
     deprecation_message: ''
   - name: KeypadFour
-    summary: The `4` key on the keypad cluster.
+    summary: |
+      The `4` key on the keypad cluster.
     value: 260
     tags: []
     deprecation_message: ''
   - name: KeypadFive
-    summary: The `5` key on the keypad cluster.
+    summary: |
+      The `5` key on the keypad cluster.
     value: 261
     tags: []
     deprecation_message: ''
   - name: KeypadSix
-    summary: The `6` key on the keypad cluster.
+    summary: |
+      The `6` key on the keypad cluster.
     value: 262
     tags: []
     deprecation_message: ''
   - name: KeypadSeven
-    summary: The `7` key on the keypad cluster.
+    summary: |
+      The `7` key on the keypad cluster.
     value: 263
     tags: []
     deprecation_message: ''
   - name: KeypadEight
-    summary: The `8` key on the keypad cluster.
+    summary: |
+      The `8` key on the keypad cluster.
     value: 264
     tags: []
     deprecation_message: ''
   - name: KeypadNine
-    summary: The `9` key on the keypad cluster.
+    summary: |
+      The `9` key on the keypad cluster.
     value: 265
     tags: []
     deprecation_message: ''
   - name: KeypadPeriod
-    summary: The `.` key on the keypad cluster.
+    summary: |
+      The `.` key on the keypad cluster.
     value: 266
     tags: []
     deprecation_message: ''
   - name: KeypadDivide
-    summary: The `/` key on the keypad cluster.
+    summary: |
+      The `/` key on the keypad cluster.
     value: 267
     tags: []
     deprecation_message: ''
   - name: KeypadMultiply
-    summary: The `*` key on the keypad cluster.
+    summary: |
+      The `*` key on the keypad cluster.
     value: 268
     tags: []
     deprecation_message: ''
   - name: KeypadMinus
-    summary: The `-` key on the keypad cluster.
+    summary: |
+      The `-` key on the keypad cluster.
     value: 269
     tags: []
     deprecation_message: ''
   - name: KeypadPlus
-    summary: The `+` key on the keypad cluster.
+    summary: |
+      The `+` key on the keypad cluster.
     value: 270
     tags: []
     deprecation_message: ''
   - name: KeypadEnter
-    summary: The `Enter` key on the keypad cluster.
+    summary: |
+      The `Enter` key on the keypad cluster.
     value: 271
     tags: []
     deprecation_message: ''
   - name: KeypadEquals
-    summary: The `=` key on the keypad cluster.
+    summary: |
+      The `=` key on the keypad cluster.
     value: 272
     tags: []
     deprecation_message: ''
   - name: Up
-    summary: The `↑` arrow key.
+    summary: |
+      The `↑` arrow key.
     value: 273
     tags: []
     deprecation_message: ''
   - name: Down
-    summary: The `↓` arrow key.
+    summary: |
+      The `↓` arrow key.
     value: 274
     tags: []
     deprecation_message: ''
   - name: Right
-    summary: The `→` arrow key.
+    summary: |
+      The `→` arrow key.
     value: 275
     tags: []
     deprecation_message: ''
   - name: Left
-    summary: The `←` arrow key.
+    summary: |
+      The `←` arrow key.
     value: 276
     tags: []
     deprecation_message: ''
   - name: Insert
-    summary: The `Insert` key.
+    summary: |
+      The `Insert` key.
     value: 277
     tags: []
     deprecation_message: ''
   - name: Home
-    summary: The `Home` key.
+    summary: |
+      The `Home` key.
     value: 278
     tags: []
     deprecation_message: ''
   - name: End
-    summary: The `End` key.
+    summary: |
+      The `End` key.
     value: 279
     tags: []
     deprecation_message: ''
   - name: PageUp
-    summary: The `PgUp` key.
+    summary: |
+      The `PgUp` key.
     value: 280
     tags: []
     deprecation_message: ''
   - name: PageDown
-    summary: The `PgDown` key.
+    summary: |
+      The `PgDown` key.
     value: 281
     tags: []
     deprecation_message: ''
   - name: F1
-    summary: The `F1` key.
+    summary: |
+      The `F1` key.
     value: 282
     tags: []
     deprecation_message: ''
   - name: F2
-    summary: The `F2` key.
+    summary: |
+      The `F2` key.
     value: 283
     tags: []
     deprecation_message: ''
   - name: F3
-    summary: The `F3` key.
+    summary: |
+      The `F3` key.
     value: 284
     tags: []
     deprecation_message: ''
   - name: F4
-    summary: The `F4` key.
+    summary: |
+      The `F4` key.
     value: 285
     tags: []
     deprecation_message: ''
   - name: F5
-    summary: The `F5` key.
+    summary: |
+      The `F5` key.
     value: 286
     tags: []
     deprecation_message: ''
   - name: F6
-    summary: The `F6` key.
+    summary: |
+      The `F6` key.
     value: 287
     tags: []
     deprecation_message: ''
   - name: F7
-    summary: The `F7` key.
+    summary: |
+      The `F7` key.
     value: 288
     tags: []
     deprecation_message: ''
   - name: F8
-    summary: The `F8` key.
+    summary: |
+      The `F8` key.
     value: 289
     tags: []
     deprecation_message: ''
   - name: F9
-    summary: The `F9` key.
+    summary: |
+      The `F9` key.
     value: 290
     tags: []
     deprecation_message: ''
   - name: F10
-    summary: The `F10` key.
+    summary: |
+      The `F10` key.
     value: 291
     tags: []
     deprecation_message: ''
   - name: F11
-    summary: The `F11` key.
+    summary: |
+      The `F11` key.
     value: 292
     tags: []
     deprecation_message: ''
   - name: F12
-    summary: The `F12` key.
+    summary: |
+      The `F12` key.
     value: 293
     tags: []
     deprecation_message: ''
   - name: F13
-    summary: The `F13` key. Only present on certain keyboards.
+    summary: |
+      The `F13` key. Only present on certain keyboards.
     value: 294
     tags: []
     deprecation_message: ''
   - name: F14
-    summary: The `F14` key. Only present on certain keyboards.
+    summary: |
+      The `F14` key. Only present on certain keyboards.
     value: 295
     tags: []
     deprecation_message: ''
   - name: F15
-    summary: The `F15` key. Only present on certain keyboards.
+    summary: |
+      The `F15` key. Only present on certain keyboards.
     value: 296
     tags: []
     deprecation_message: ''
   - name: NumLock
-    summary: The `Num Lock` key on the keypad cluster.
+    summary: |
+      The `Num Lock` key on the keypad cluster.
     value: 300
     tags: []
     deprecation_message: ''
   - name: CapsLock
-    summary: The `Caps Lock` key.
+    summary: |
+      The `Caps Lock` key.
     value: 301
     tags: []
     deprecation_message: ''
   - name: ScrollLock
-    summary: The `Scr Lock` key.
+    summary: |
+      The `Scr Lock` key.
     value: 302
     tags: []
     deprecation_message: ''
   - name: RightShift
-    summary: The right side `Shift` key.
+    summary: |
+      The right side `Shift` key.
     value: 303
     tags: []
     deprecation_message: ''
   - name: LeftShift
-    summary: The left side `Shift` key.
+    summary: |
+      The left side `Shift` key.
     value: 304
     tags: []
     deprecation_message: ''
   - name: RightControl
-    summary: The right side `Ctrl` key.
+    summary: |
+      The right side `Ctrl` key.
     value: 305
     tags: []
     deprecation_message: ''
   - name: LeftControl
-    summary: The left side `Ctrl` key.
+    summary: |
+      The left side `Ctrl` key.
     value: 306
     tags: []
     deprecation_message: ''
   - name: RightAlt
-    summary: The right side `Alt` key.
+    summary: |
+      The right side `Alt` key.
     value: 307
     tags: []
     deprecation_message: ''
   - name: LeftAlt
-    summary: The left side `Alt` key.
+    summary: |
+      The left side `Alt` key.
     value: 308
     tags: []
     deprecation_message: ''
   - name: RightMeta
-    summary: The right side `Meta` key.
+    summary: |
+      The right side `Meta` key.
     value: 309
     tags: []
     deprecation_message: ''
   - name: LeftMeta
-    summary: The left side `Meta` key.
+    summary: |
+      The left side `Meta` key.
     value: 310
     tags: []
     deprecation_message: ''
   - name: LeftSuper
-    summary: The left side `Super` key. Better known as the Windows key or <kbd>Cmd</kbd> key.
+    summary: |
+      The left side `Super` key. Better known as the Windows key or
+      <kbd>Cmd</kbd> key.
     value: 311
     tags: []
     deprecation_message: ''
   - name: RightSuper
-    summary: The right side `Super` key. Better known as the Windows key or <kbd>Cmd</kbd> key.
+    summary: |
+      The right side `Super` key. Better known as the Windows key or
+      <kbd>Cmd</kbd> key.
     value: 312
     tags: []
     deprecation_message: ''
   - name: Mode
-    summary: Only present on certain keyboards.
+    summary: |
+      Only present on certain keyboards.
     value: 313
     tags: []
     deprecation_message: ''
   - name: Compose
-    summary: Only present on certain keyboards.
+    summary: |
+      Only present on certain keyboards.
     value: 314
     tags: []
     deprecation_message: ''
   - name: Help
-    summary: Only present on certain keyboards.
+    summary: |
+      Only present on certain keyboards.
     value: 315
     tags: []
     deprecation_message: ''
   - name: Print
-    summary: Only present on certain keyboards.
+    summary: |
+      Only present on certain keyboards.
     value: 316
     tags: []
     deprecation_message: ''
   - name: SysReq
-    summary: Only present on certain keyboards.
+    summary: |
+      Only present on certain keyboards.
     value: 317
     tags: []
     deprecation_message: ''
   - name: Break
-    summary: Only present on certain keyboards.
+    summary: |
+      Only present on certain keyboards.
     value: 318
     tags: []
     deprecation_message: ''
   - name: Menu
-    summary: The `Menu` key.
+    summary: |
+      The `Menu` key.
     value: 319
     tags: []
     deprecation_message: ''
   - name: Power
-    summary: Only present on certain keyboards.
+    summary: |
+      Only present on certain keyboards.
     value: 320
     tags: []
     deprecation_message: ''
   - name: Euro
-    summary: The `€` key. Only present on certain keyboards.
+    summary: |
+      The `€` key. Only present on certain keyboards.
     value: 321
     tags: []
     deprecation_message: ''
   - name: Undo
-    summary: Only present on certain keyboards.
+    summary: |
+      Only present on certain keyboards.
     value: 322
     tags: []
     deprecation_message: ''
   - name: ButtonX
-    summary: Gamepad `X` button.
+    summary: |
+      Gamepad `X` button.
     value: 1000
     tags: []
     deprecation_message: ''
   - name: ButtonY
-    summary: Gamepad `Y` button.
+    summary: |
+      Gamepad `Y` button.
     value: 1001
     tags: []
     deprecation_message: ''
   - name: ButtonA
-    summary: Gamepad `A` button.
+    summary: |
+      Gamepad `A` button.
     value: 1002
     tags: []
     deprecation_message: ''
   - name: ButtonB
-    summary: Gamepad `B` button.
+    summary: |
+      Gamepad `B` button.
     value: 1003
     tags: []
     deprecation_message: ''
   - name: ButtonR1
-    summary: Gamepad `R1` button.
+    summary: |
+      Gamepad `R1` button.
     value: 1004
     tags: []
     deprecation_message: ''
   - name: ButtonL1
-    summary: Gamepad `L1` button.
+    summary: |
+      Gamepad `L1` button.
     value: 1005
     tags: []
     deprecation_message: ''
   - name: ButtonR2
-    summary: Gamepad `R2` button.
+    summary: |
+      Gamepad `R2` button.
     value: 1006
     tags: []
     deprecation_message: ''
   - name: ButtonL2
-    summary: Gamepad `L2` button.
+    summary: |
+      Gamepad `L2` button.
     value: 1007
     tags: []
     deprecation_message: ''
   - name: ButtonR3
-    summary: Gamepad `R3` button.
+    summary: |
+      Gamepad `R3` button.
     value: 1008
     tags: []
     deprecation_message: ''
   - name: ButtonL3
-    summary: Gamepad `L3` button.
+    summary: |
+      Gamepad `L3` button.
     value: 1009
     tags: []
     deprecation_message: ''
   - name: ButtonStart
-    summary: Gamepad `Start` button.
+    summary: |
+      Gamepad `Start` button.
     value: 1010
     tags: []
     deprecation_message: ''
   - name: ButtonSelect
-    summary: Gamepad `Select` button.
+    summary: |
+      Gamepad `Select` button.
     value: 1011
     tags: []
     deprecation_message: ''
   - name: DPadLeft
-    summary: Left arrow on a gamepad D-pad.
+    summary: |
+      Left arrow on a gamepad D-pad.
     value: 1012
     tags: []
     deprecation_message: ''
   - name: DPadRight
-    summary: Right arrow on a gamepad D-pad.
+    summary: |
+      Right arrow on a gamepad D-pad.
     value: 1013
     tags: []
     deprecation_message: ''
   - name: DPadUp
-    summary: Up arrow on a gamepad D-pad.
+    summary: |
+      Up arrow on a gamepad D-pad.
     value: 1014
     tags: []
     deprecation_message: ''
   - name: DPadDown
-    summary: Down arrow on a gamepad D-pad.
+    summary: |
+      Down arrow on a gamepad D-pad.
     value: 1015
     tags: []
     deprecation_message: ''
   - name: Thumbstick1
-    summary: Gamepad primary thumbstick.
+    summary: |
+      Gamepad primary thumbstick.
     value: 1016
     tags: []
     deprecation_message: ''
   - name: Thumbstick2
-    summary: Gamepad secondary thumbstick.
+    summary: |
+      Gamepad secondary thumbstick.
     value: 1017
     tags: []
     deprecation_message: ''
   - name: Thumbstick1Up
-    summary: Up vector on the gamepad primary thumbstick. Primarily used in the [Input Action System](../../../input/input-action-system.md).
+    summary: |
+      Up vector on the gamepad primary thumbstick. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
     value: 1018
     tags: []
     deprecation_message: ''
   - name: Thumbstick1Down
-    summary: Down vector on the gamepad primary thumbstick. Primarily used in the [Input Action System](../../../input/input-action-system.md).
+    summary: |
+      Down vector on the gamepad primary thumbstick. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
     value: 1019
     tags: []
     deprecation_message: ''
   - name: Thumbstick1Left
-    summary: Left vector on the gamepad primary thumbstick. Primarily used in the [Input Action System](../../../input/input-action-system.md).
+    summary: |
+      Left vector on the gamepad primary thumbstick. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
     value: 1020
     tags: []
     deprecation_message: ''
   - name: Thumbstick1Right
-    summary: Right vector on the gamepad primary thumbstick. Primarily used in the [Input Action System](../../../input/input-action-system.md).
+    summary: |
+      Right vector on the gamepad primary thumbstick. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
     value: 1021
     tags: []
     deprecation_message: ''
   - name: Thumbstick2Up
-    summary: Up vector on the gamepad secondary thumbstick. Primarily used in the [Input Action System](../../../input/input-action-system.md).
+    summary: |
+      Up vector on the gamepad secondary thumbstick. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
     value: 1022
     tags: []
     deprecation_message: ''
   - name: Thumbstick2Down
-    summary: Down vector on the gamepad secondary thumbstick. Primarily used in the [Input Action System](../../../input/input-action-system.md).
+    summary: |
+      Down vector on the gamepad secondary thumbstick. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
     value: 1023
     tags: []
     deprecation_message: ''
   - name: Thumbstick2Left
-    summary: Left vector on the gamepad secondary thumbstick. Primarily used in the [Input Action System](../../../input/input-action-system.md).
+    summary: |
+      Left vector on the gamepad secondary thumbstick. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
     value: 1024
     tags: []
     deprecation_message: ''
   - name: Thumbstick2Right
-    summary: Right vector on the gamepad secondary thumbstick. Primarily used in the [Input Action System](../../../input/input-action-system.md).
+    summary: |
+      Right vector on the gamepad secondary thumbstick. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
     value: 1025
     tags: []
     deprecation_message: ''
@@ -1448,32 +1625,40 @@ items:
     value: 1029
     tags:
       - Deprecated
-    deprecation_message: This enum is deprecated and flagged for removal.
+    deprecation_message: |
+      This enum is deprecated and flagged for removal.
   - name: MouseNoButton
     summary: ''
     value: 1030
     tags:
       - Deprecated
-    deprecation_message: This enum is deprecated and flagged for removal.
+    deprecation_message: |
+      This enum is deprecated and flagged for removal.
   - name: MouseX
     summary: ''
     value: 1031
     tags:
       - Deprecated
-    deprecation_message: This enum is deprecated and flagged for removal.
+    deprecation_message: |
+      This enum is deprecated and flagged for removal.
   - name: MouseY
     summary: ''
     value: 1032
     tags:
       - Deprecated
-    deprecation_message: This enum is deprecated and flagged for removal.
+    deprecation_message: |
+      This enum is deprecated and flagged for removal.
   - name: MousePosition
-    summary: The position of a mouse in the viewport. Primarily used in the [Input Action System](../../../input/input-action-system.md).
+    summary: |
+      The position of a mouse in the viewport. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
     value: 1033
     tags: []
     deprecation_message: ''
   - name: Touch
-    summary: The position of a touch in the viewport. Primarily used in the [Input Action System](../../../input/input-action-system.md).
+    summary: |
+      The position of a touch in the viewport. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
     value: 1034
     tags: []
     deprecation_message: ''

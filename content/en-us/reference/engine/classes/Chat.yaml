@@ -53,7 +53,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Chat
   - name: Chat.LoadDefaultChat
     summary: |
       Toggles whether the default chat framework should be automatically loaded
@@ -73,7 +74,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Chat
 methods:
   - name: Chat:CanUserChatAsync
     summary: |
@@ -96,7 +98,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
   - name: Chat:CanUsersChatAsync
     summary: |
       Will return false if the two users cannot communicate because their
@@ -122,7 +125,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
   - name: Chat:Chat
     summary: |
       Fires the `Class.Chat.Chatted` event with the parameters specified in this
@@ -165,7 +169,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
   - name: Chat:FilterStringAsync
     summary: |
       Filters a string sent from a player to another player using filtering that
@@ -220,7 +225,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
   - name: Chat:FilterStringForBroadcast
     summary: |
       Filters a string sent from a player meant for broadcast to no particular
@@ -264,7 +270,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
   - name: Chat:FilterStringForPlayerAsync
     summary: |
       Filters a string appropriate to the given player's age settings, so they
@@ -299,7 +306,8 @@ methods:
       work
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
   - name: Chat:InvokeChatCallback
     summary: |
       Invoke a chat callback function registered by
@@ -338,7 +346,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
   - name: Chat:RegisterChatCallback
     summary: |
       Register a function to be called upon the invocation of some chat system
@@ -405,7 +414,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
   - name: Chat:SetBubbleChatSettings
     summary: |
       Customizes various settings of the in-game bubble chat.
@@ -439,7 +449,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
 events:
   - name: Chat.Chatted
     summary: |
@@ -463,5 +474,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Chat
 callbacks: []

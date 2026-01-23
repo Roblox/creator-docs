@@ -35,7 +35,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - Capture
   - name: VideoCapture.TimeLength
     summary: ''
     description: ''
@@ -53,7 +54,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - Capture
 methods: []
 events: []
 callbacks: []

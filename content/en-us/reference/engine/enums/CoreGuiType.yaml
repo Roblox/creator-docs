@@ -64,3 +64,9 @@ items:
     value: 7
     tags: []
     deprecation_message: ''
+  - name: AvatarSwitcher
+    summary: |
+      The **Avatar Switcher** allows users to change their platform avatar.
+    value: 8
+    tags: []
+    deprecation_message: ''

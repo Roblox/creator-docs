@@ -58,7 +58,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Social
   - name: SocialService:CanSendGameInviteAsync
     summary: |
       Indicates whether the given `Class.Player` can invite other players.
@@ -98,7 +99,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Social
   - name: SocialService:GetEventRsvpStatusAsync
     summary: |
       Returns the local player's RSVP status for the given event.
@@ -131,7 +133,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Social
   - name: SocialService:GetExperienceEventAsync
     summary: |
       Returns details for the specified experience event or `nil` if it is
@@ -188,7 +191,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Social
   - name: SocialService:GetPartyAsync
     summary: |
       Returns an array of dictionaries containing data for all members of the
@@ -266,7 +270,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Social
   - name: SocialService:GetPlayersByPartyId
     summary: |
       Returns a table of all presently connected `Class.Player` objects whose
@@ -298,7 +303,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Social
   - name: SocialService:GetUpcomingExperienceEventsAsync
     summary: |
       Returns active and upcoming experience events for the current experience.
@@ -327,7 +333,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Social
   - name: SocialService:HideSelfView
     summary: |
       Hides the calling player's self view.
@@ -343,7 +350,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Social
   - name: SocialService:PromptFeedbackSubmissionAsync
     summary: |
       Prompts the player to submit feedback about the current experience.
@@ -377,7 +385,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Social
   - name: SocialService:PromptGameInvite
     summary: |
       Prompts the given `Class.Player` with the invite screen.
@@ -415,7 +424,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Social
   - name: SocialService:PromptLinkSharingAsync
     summary: ''
     description: |
@@ -486,7 +496,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Social
   - name: SocialService:PromptLinkSharing
     summary: ''
     description: ''
@@ -528,7 +539,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Social
   - name: SocialService:PromptPhoneBook
     summary: |
       Prompts the given `Class.Player` with the phone book.
@@ -568,7 +580,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Social
   - name: SocialService:PromptRsvpToEventAsync
     summary: |
       Prompts the local `Class.Player` with a prompt to change their RSVP status
@@ -606,7 +619,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Social
   - name: SocialService:ShowSelfView
     summary: |
       Shows the calling player's self view.
@@ -627,7 +641,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Social
 events:
   - name: SocialService.CallInviteStateChanged
     summary: |
@@ -651,7 +666,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Social
   - name: SocialService.GameInvitePromptClosed
     summary: |
       Fires when a player closes an invite prompt.
@@ -672,7 +688,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Social
   - name: SocialService.PhoneBookPromptClosed
     summary: |
       Fires when a player closes the phone book prompt.
@@ -688,7 +705,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Social
   - name: SocialService.ShareSheetClosed
     summary: ''
     description: ''
@@ -701,7 +719,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Social
 callbacks:
   - name: SocialService.OnCallInviteInvoked
     summary: |
@@ -737,5 +756,6 @@ callbacks:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Social
     writeCapabilities: []

@@ -68,7 +68,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Fire.Enabled
     summary: |
       Determines whether flame particles are emit.
@@ -104,7 +105,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Fire.Heat
     summary: |
       Determines the velocity at which particles are emit.
@@ -128,7 +130,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Fire.LocalTransparencyModifier
     summary: |
       A multiplier for the `Class.Fire` object's transparency that is only
@@ -152,7 +155,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Fire.SecondaryColor
     summary: |
       Determines the color of the of the secondary (inner) flame particles.
@@ -176,7 +180,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Fire.Size
     summary: |
       Determines the size of the flame particles.
@@ -204,7 +209,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Fire.size
     summary: ''
     description: ''
@@ -224,7 +230,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Fire.TimeScale
     summary: |
       Controls the speed of the particle effect.
@@ -244,7 +251,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
 methods: []
 events: []
 callbacks: []

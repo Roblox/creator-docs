@@ -1237,6 +1237,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+      - Social
   - name: Player:GetFriendsOnline
     summary: |
       Returns a dictionary of online connections. Returns the product
@@ -1264,6 +1265,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+      - Social
   - name: Player:GetJoinData
     summary: |
       Returns a dictionary containing information describing how the player
@@ -1455,6 +1457,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+      - Groups
   - name: Player:GetRankInGroup
     summary: |
       Returns the player's rank in the group as an integer.
@@ -1479,6 +1482,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+      - Groups
   - name: Player:GetRoleInGroupAsync
     summary: |
       Returns the player's role in the group as a string, or `Guest` if the
@@ -1519,6 +1523,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+      - Groups
   - name: Player:GetRoleInGroup
     summary: |
       Returns the player's role in the group as a string, or `Guest` if the
@@ -1547,6 +1552,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+      - Groups
   - name: Player:HasAppearanceLoaded
     summary: |
       Returns whether or not the appearance of the player's character has
@@ -1627,6 +1633,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+      - Social
   - name: Player:IsFriendsWith
     summary: |
       Checks whether a player is a connection of the user with the given
@@ -1654,6 +1661,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+      - Social
   - name: Player:isFriendsWith
     summary: ''
     description: ''
@@ -1713,6 +1721,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+      - Groups
   - name: Player:IsInGroup
     summary: |
       Checks whether a player is a member of a group with the given ID.
@@ -1738,6 +1747,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+      - Groups
   - name: Player:IsVerified
     summary: |
       Returns whether the player is verified with concrete, real-world signals.
@@ -1798,6 +1808,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+      - Consequences
   - name: Player:LoadBoolean
     summary: |
       Returns a boolean value that was previously saved to the player with
@@ -2808,4 +2819,5 @@ events:
     security: None
     capabilities:
       - Players
+      - Teleport
 callbacks: []

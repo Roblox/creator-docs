@@ -274,7 +274,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh.SkinningEnabled
     summary: ''
     description: ''
@@ -291,7 +292,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
 methods:
   - name: EditableMesh:AddBone
     summary: |
@@ -321,7 +323,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:AddColor
     summary: |
       Adds a new color to the geometry and returns a stable color ID.
@@ -347,7 +350,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:AddNormal
     summary: |
       Adds a new normal to the geometry and returns a stable normal ID.
@@ -370,7 +374,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:AddTriangle
     summary: |
       Adds a new triangle to the mesh and returns a stable face ID.
@@ -401,7 +406,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:AddUV
     summary: |
       Adds a new UV to the geometry and returns a stable UV ID.
@@ -422,7 +428,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:AddVertex
     summary: |
       Adds a new vertex to the geometry and returns a stable vertex ID.
@@ -443,7 +450,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:Destroy
     summary: |
       Destroys the mesh.
@@ -458,7 +466,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:FindClosestPointOnSurface
     summary: |
       Finds the closest point on the mesh's surface.
@@ -484,7 +493,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:FindClosestVertex
     summary: |
       Finds the closest vertex to a specific point in space.
@@ -506,7 +516,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:FindVerticesWithinSphere
     summary: |
       Finds all vertices within a specific sphere.
@@ -533,7 +544,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetAdjacentFaces
     summary: |
       Returns a list of faces adjacent to a given face.
@@ -555,7 +567,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetAdjacentVertices
     summary: |
       Returns a list of vertices adjacent to a given vertex.
@@ -578,7 +591,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetBoneByName
     summary: |
       Finds the bone ID of the bone with the given name.
@@ -600,7 +614,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetBoneCFrame
     summary: |
       Returns the initial `Datatype.CFrame` of the bone in the bind pose of the
@@ -624,7 +639,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetBoneIsVirtual
     summary: |
       Returns `true` if the bone is virtual.
@@ -647,7 +663,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetBoneName
     summary: |
       Returns the bone name.
@@ -668,7 +685,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetBoneParent
     summary: |
       Returns the parent bone ID, if any.
@@ -690,7 +708,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetBones
     summary: |
       Returns all bones of the mesh.
@@ -706,7 +725,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetCenter
     summary: ''
     description: ''
@@ -720,7 +740,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetColor
     summary: |
       Returns the color for the given color ID.
@@ -741,7 +762,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetColorAlpha
     summary: |
       Returns the color alpha (transparency) at the given color ID.
@@ -762,7 +784,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetColors
     summary: |
       Returns all colors of the mesh.
@@ -779,7 +802,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetFaceColors
     summary: |
       Returns the face's color IDs for the vertices on the face.
@@ -801,7 +825,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetFaceNormals
     summary: |
       Returns the face's normal IDs for the vertices on the face.
@@ -823,7 +848,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetFaces
     summary: |
       Returns all faces of the mesh.
@@ -840,7 +866,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetFacesWithAttribute
     summary: |
       Returns a list of faces that use a given attribute ID.
@@ -863,7 +890,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetFacesWithColor
     summary: |
       Returns an array of face IDs that use the given color ID.
@@ -887,7 +915,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetFacesWithNormal
     summary: |
       Returns an array of face IDs that use the given normal ID.
@@ -911,7 +940,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetFacesWithUV
     summary: |
       Returns an array of face IDs that use the given UV ID.
@@ -935,7 +965,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetFaceUVs
     summary: |
       Returns the face's UV IDs for the vertices on the face.
@@ -957,7 +988,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetFaceVertices
     summary: |
       Returns the face's vertex IDs.
@@ -978,7 +1010,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetFacsCorrectivePose
     summary: |
       Returns bone IDs and bone `Datatype.CFrame|CFrames` for all bones in a
@@ -1006,7 +1039,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetFacsCorrectivePoses
     summary: |
       Returns all FACS corrective poses that are in use.
@@ -1024,7 +1058,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetFacsPose
     summary: |
       Returns bone IDs and bone `Datatype.CFrame|CFrames` for all bones in a
@@ -1050,7 +1085,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetFacsPoses
     summary: |
       Returns all FACS action units that have poses defined.
@@ -1067,7 +1103,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetNormal
     summary: |
       Returns the normal vector for the given normal ID.
@@ -1088,7 +1125,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetNormals
     summary: |
       Returns all normals of the mesh.
@@ -1105,7 +1143,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetPosition
     summary: |
       Gets the position of a vertex.
@@ -1126,7 +1165,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetSize
     summary: ''
     description: ''
@@ -1140,7 +1180,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetUV
     summary: |
       Returns UV coordinates at the given UV ID.
@@ -1161,7 +1202,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetUVs
     summary: |
       Returns all UVs of the mesh.
@@ -1178,7 +1220,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetVertexBones
     summary: |
       Returns all bone IDs that are associated with the vertex for skinning.
@@ -1199,7 +1242,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetVertexBoneWeights
     summary: |
       Returns skinning blend weights for each bone that is associated with the
@@ -1223,7 +1267,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetVertexColors
     summary: |
       Returns the color IDs of the faces attached to the given vertex.
@@ -1245,7 +1290,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetVertexFaceColor
     summary: |
       Returns the color ID of a vertex/face pair.
@@ -1271,7 +1317,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetVertexFaceNormal
     summary: |
       Returns the normal ID of a vertex/face pair.
@@ -1297,7 +1344,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetVertexFaces
     summary: |
       Returns the face IDs of the faces attached to the given vertex.
@@ -1319,7 +1367,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetVertexFaceUV
     summary: |
       Returns the UV ID of a vertex/face pair.
@@ -1345,7 +1394,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetVertexNormals
     summary: |
       Returns the normal IDs of the faces attached to the given vertex.
@@ -1367,7 +1417,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetVertexUVs
     summary: |
       Returns the UV IDs of the faces attached to the given vertex.
@@ -1389,7 +1440,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetVertices
     summary: |
       Returns all vertices as a list of stable vertex IDs.
@@ -1405,7 +1457,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetVerticesWithAttribute
     summary: |
       Returns a list of vertices that use a given attribute ID.
@@ -1428,7 +1481,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetVerticesWithColor
     summary: |
       Returns an array of vertex IDs that use the given color ID.
@@ -1452,7 +1506,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetVerticesWithNormal
     summary: |
       Returns an array of vertex IDs that use the given normal ID.
@@ -1476,7 +1531,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:GetVerticesWithUV
     summary: |
       Returns an array of vertex IDs that use the given UV ID.
@@ -1500,7 +1556,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:IdDebugString
     summary: |
       Returns a string describing a stable ID, useful for debugging purposes.
@@ -1522,7 +1579,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:MergeVertices
     summary: |
       Merges vertices that touch together.
@@ -1545,7 +1603,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:RaycastLocal
     summary: ''
     description: |
@@ -1579,7 +1638,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:RemoveBone
     summary: |
       Removes a bone using its stable bone ID.
@@ -1598,7 +1658,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:RemoveFace
     summary: |
       Removes a face using its stable face ID.
@@ -1617,7 +1678,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:RemoveUnused
     summary: |
       Removes all unused vertices, normals, UVs, and colors, and returns the
@@ -1635,7 +1697,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:ResetNormal
     summary: |
       Reset this normal ID to be automatically calculated.
@@ -1656,7 +1719,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetBoneCFrame
     summary: |
       Set the initial `Datatype.CFrame` for a bone in the mesh's bind pose.
@@ -1683,7 +1747,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetBoneIsVirtual
     summary: |
       Set whether a bone is virtual.
@@ -1709,7 +1774,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetBoneName
     summary: |
       Sets the name for a bone.
@@ -1735,7 +1801,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetBoneParent
     summary: |
       Set a parent for a bone.
@@ -1760,7 +1827,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetColor
     summary: |
       Sets the color for a color ID.
@@ -1785,7 +1853,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetColorAlpha
     summary: |
       Sets the color alpha (transparency) for a color ID.
@@ -1810,7 +1879,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetFaceColors
     summary: |
       Sets the face's vertex colors to new color IDs.
@@ -1836,7 +1906,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetFaceNormals
     summary: |
       Sets the face's vertex normals to new normal IDs.
@@ -1862,7 +1933,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetFaceUVs
     summary: |
       Sets the face's vertex UVs to new UV IDs.
@@ -1888,7 +1960,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetFaceVertices
     summary: |
       Sets the face's vertices to new vertex IDs.
@@ -1914,7 +1987,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetFacsBonePose
     summary: |
       Set `Datatype.CFrame` for an individual bone in a specific FACS action
@@ -1949,7 +2023,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetFacsCorrectivePose
     summary: |
       Set pose for all bones in a specific FACS corrective pose.
@@ -1985,7 +2060,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetFacsPose
     summary: |
       Set pose for all bones in a specific FACS action unit.
@@ -2020,7 +2096,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetNormal
     summary: |
       Set the normal for a normal ID.
@@ -2046,7 +2123,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetPosition
     summary: |
       Sets a vertex position in the mesh's local object space.
@@ -2071,7 +2149,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetUV
     summary: |
       Sets UV coordinates for a UV ID.
@@ -2096,7 +2175,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetVertexBones
     summary: |
       Assign a list of bones with the vertex for skinning.
@@ -2131,7 +2211,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetVertexBoneWeights
     summary: |
       Sets skinning blend weights for each bone associated with the vertex.
@@ -2165,7 +2246,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetVertexFaceColor
     summary: |
       Sets the color ID of a vertex/face pair.
@@ -2195,7 +2277,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetVertexFaceNormal
     summary: |
       Sets the normal ID of a vertex/face pair.
@@ -2225,7 +2308,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:SetVertexFaceUV
     summary: |
       Sets the UV ID of a vertex/face pair.
@@ -2255,7 +2339,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:Triangulate
     summary: |
       Splits all faces on the mesh to be triangles.
@@ -2273,6 +2358,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
 events: []
 callbacks: []

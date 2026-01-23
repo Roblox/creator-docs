@@ -37,7 +37,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
   - name: StyleBase:InsertStyleRule
     summary: |
       Inserts a new `Class.StyleRule` into the array of rules.
@@ -65,7 +66,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
   - name: StyleBase:SetStyleRules
     summary: |
       Similar to `Class.StyleBase:InsertStyleRule()|InsertStyleRule()` but lets
@@ -105,7 +107,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
 events:
   - name: StyleBase.StyleRulesChanged
     summary: |
@@ -120,5 +123,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - UI
 callbacks: []

@@ -52,7 +52,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
   - name: UserSettings:Reset
     summary: |
       Erases the saved state of the UserSettings, and restores its default
@@ -71,6 +72,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
 events: []
 callbacks: []

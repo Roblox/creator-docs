@@ -35,8 +35,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Performance
     serialization:
@@ -55,8 +55,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Performance
     serialization:
@@ -73,8 +73,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Errors
     serialization:
@@ -93,8 +93,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Performance
     serialization:
@@ -113,8 +113,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Performance
     serialization:
@@ -131,8 +131,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Errors
     serialization:
@@ -153,8 +153,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Profile
     serialization:
@@ -173,8 +173,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Benchmarking
     serialization:

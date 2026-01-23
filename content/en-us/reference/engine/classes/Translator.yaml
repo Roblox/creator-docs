@@ -50,7 +50,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
 methods:
   - name: Translator:FormatByKey
     summary: |
@@ -99,7 +100,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Translator:Translate
     summary: |
       Returns the localized text string in a `Class.LocalizationTable` based on
@@ -247,6 +249,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
 events: []
 callbacks: []

@@ -48,7 +48,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
 methods:
   - name: AnalyticsService:FireCustomEvent
     summary: |
@@ -123,7 +124,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: AnalyticsService:FireEvent
     summary: |
       Report a custom event to PlayFab.
@@ -183,7 +185,8 @@ methods:
       - `Class.AnalyticsService:FirePlayerProgressionEvent()`
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: AnalyticsService:FireInGameEconomyEvent
     summary: |
       Fire an event used to track player actions pertaining to the in-game
@@ -302,7 +305,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: AnalyticsService:FireLogEvent
     summary: |
       Fire a log event used to track errors and warnings experienced by players.
@@ -408,7 +412,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: AnalyticsService:FirePlayerProgressionEvent
     summary: |
       Fire an event used to track player progression through the game.
@@ -538,7 +543,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: AnalyticsService:LogCustomEvent
     summary: |
       Logs an event used to track custom metrics of a user in experience.
@@ -580,7 +586,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: AnalyticsService:LogEconomyEvent
     summary: |
       Logs an event used to track player actions related in experience.
@@ -657,7 +664,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: AnalyticsService:LogFunnelStepEvent
     summary: |
       Logs an event used to track user actions stepping through a pre-planned
@@ -725,7 +733,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: AnalyticsService:LogOnboardingFunnelStepEvent
     summary: |
       Logs an event used to track user actions stepping through an onboarding
@@ -773,7 +782,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: AnalyticsService:LogProgressionCompleteEvent
     summary: |
       Logs an event for when a user has completed a level attempt.
@@ -810,7 +820,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: AnalyticsService:LogProgressionEvent
     summary: |
       Logs an event for when a user has started, completed, or failed a level
@@ -853,7 +864,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: AnalyticsService:LogProgressionFailEvent
     summary: |
       Logs an event for when a user has failed a level attempt.
@@ -890,7 +902,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: AnalyticsService:LogProgressionStartEvent
     summary: |
       Logs an event for when a user has started a level attempt.
@@ -927,6 +940,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
 events: []
 callbacks: []

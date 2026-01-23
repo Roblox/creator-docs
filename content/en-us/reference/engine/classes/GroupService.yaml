@@ -103,7 +103,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Groups
   - name: GroupService:GetEnemiesAsync
     summary: |
       Returns a `Class.StandardPages` object including information on all of the
@@ -169,7 +170,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Groups
   - name: GroupService:GetGroupInfoAsync
     summary: |
       Returns a table containing information about the given group.
@@ -229,7 +231,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Groups
   - name: GroupService:GetGroupsAsync
     summary: |
       Returns a list of tables containing information on all of the groups a
@@ -309,7 +312,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Groups
   - name: GroupService:PromptJoinAsync
     summary: |
       Prompts the local `Class.Player` to join a specified Roblox group via a
@@ -343,6 +347,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Groups
 events: []
 callbacks: []

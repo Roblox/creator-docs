@@ -66,7 +66,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Capture
   - name: CaptureService:PromptCaptureGalleryPermissionAsync
     summary: ''
     description: |
@@ -94,7 +95,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Capture
   - name: CaptureService:PromptSaveCapturesToGallery
     summary: |
       Prompts the user to save specified captures to their gallery.
@@ -123,7 +125,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Capture
   - name: CaptureService:PromptShareCapture
     summary: |
       Prompts the user to share a specified capture.
@@ -192,7 +195,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Capture
   - name: CaptureService:ReadCapturesFromGalleryAsync
     summary: ''
     description: |
@@ -227,7 +231,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Capture
   - name: CaptureService:StartVideoCaptureAsync
     summary: |
       Initiates a video capture recording.
@@ -286,7 +291,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Capture
   - name: CaptureService:StopVideoCapture
     summary: |
       Ends a video capture initiated by
@@ -304,7 +310,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Capture
   - name: CaptureService:TakeScreenshotCaptureAsync
     summary: |
       Initiates a screenshot capture.
@@ -361,7 +368,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Capture
   - name: CaptureService:UploadCaptureAsync
     summary: ''
     description: |
@@ -394,7 +402,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Capture
 events:
   - name: CaptureService.CaptureBegan
     summary: |
@@ -412,7 +421,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Capture
   - name: CaptureService.CaptureEnded
     summary: |
       Fires after a capture finishes.
@@ -429,7 +439,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Capture
   - name: CaptureService.CaptureSaved
     summary: ''
     description: ''
@@ -445,7 +456,8 @@ events:
       This event has been superseded by the
       `Class.CaptureService.UserCaptureSaved|UserCaptureSaved` event.
     security: None
-    capabilities: []
+    capabilities:
+      - Capture
   - name: CaptureService.UserCaptureSaved
     summary: |
       Fires when the user saves a capture.
@@ -463,5 +475,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Capture
 callbacks: []

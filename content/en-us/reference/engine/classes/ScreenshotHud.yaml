@@ -49,7 +49,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
   - name: ScreenshotHud.CameraButtonPosition
     summary: |
       Screen location of the camera button.
@@ -67,7 +68,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
   - name: ScreenshotHud.CloseButtonPosition
     summary: |
       Screen location of the close button.
@@ -85,7 +87,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
   - name: ScreenshotHud.CloseWhenScreenshotTaken
     summary: |
       Whether the `Class.ScreenshotHud` closes automatically when a screenshot
@@ -105,7 +108,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
   - name: ScreenshotHud.ExperienceNameOverlayEnabled
     summary: |
       Whether the experience name in the overlay is enabled.
@@ -125,7 +129,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
   - name: ScreenshotHud.HideCoreGuiForCaptures
     summary: ''
     description: ''
@@ -141,7 +146,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
   - name: ScreenshotHud.HidePlayerGuiForCaptures
     summary: ''
     description: ''
@@ -157,7 +163,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
   - name: ScreenshotHud.OverlayFont
     summary: |
       `Datatype.Font` used for the experience name in the overlay.
@@ -177,7 +184,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
   - name: ScreenshotHud.UsernameOverlayEnabled
     summary: |
       Currently disabled with no effect.
@@ -197,7 +205,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
   - name: ScreenshotHud.Visible
     summary: |
       Determines whether the `Class.ScreenshotHud` is visible.
@@ -215,7 +224,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
 methods: []
 events: []
 callbacks: []

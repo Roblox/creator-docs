@@ -73,7 +73,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: PackageLink.DefaultName
     summary: ''
     description: ''
@@ -110,7 +111,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: PackageLink.PackageId
     summary: |
       The ID of the asset this package corresponds to.
@@ -130,7 +132,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: PackageLink.PermissionLevel
     summary: |
       The package permission for the current Studio user.
@@ -151,7 +154,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: PackageLink.SerializedDefaultAttributes
     summary: ''
     description: ''

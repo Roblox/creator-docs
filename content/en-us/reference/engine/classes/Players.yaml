@@ -465,6 +465,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+      - Consequences
   - name: Players:Chat
     summary: |
       Makes the local player chat the given message.
@@ -659,6 +660,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+      - Consequences
   - name: Players:GetCharacterAppearanceAsync
     summary: |
       Returns a `Class.Model` containing the assets which the player is wearing,
@@ -871,6 +873,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+      - Social
   - name: Players:GetHumanoidDescriptionFromOutfitIdAsync
     summary: |
       Returns the HumanoidDescription for a specified outfit, which will be set
@@ -1420,6 +1423,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+      - Consequences
 events:
   - name: Players.PlayerAdded
     summary: |
@@ -1586,4 +1590,5 @@ events:
     security: None
     capabilities:
       - Players
+      - Monetization
 callbacks: []

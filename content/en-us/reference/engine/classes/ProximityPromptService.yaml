@@ -57,7 +57,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
   - name: ProximityPromptService.MaxIndicatorsVisible
     summary: ''
     description: ''
@@ -73,7 +74,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
   - name: ProximityPromptService.MaxPromptsVisible
     summary: |
       Maximum number of `Class.ProximityPrompt|ProximityPrompts` that will be
@@ -93,7 +95,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
 methods: []
 events:
   - name: ProximityPromptService.IndicatorHidden
@@ -108,7 +111,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
   - name: ProximityPromptService.IndicatorShown
     summary: ''
     description: ''
@@ -121,7 +125,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
   - name: ProximityPromptService.PromptButtonHoldBegan
     summary: |
       Triggers when the player begins holding down the
@@ -146,7 +151,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
   - name: ProximityPromptService.PromptButtonHoldEnded
     summary: |
       Triggers when the player stops holding down the
@@ -171,7 +177,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
   - name: ProximityPromptService.PromptHidden
     summary: |
       Triggers client-side when a prompt becomes hidden.
@@ -188,7 +195,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
   - name: ProximityPromptService.PromptShown
     summary: |
       Triggers client-side when a prompt becomes visible.
@@ -210,7 +218,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
   - name: ProximityPromptService.PromptTriggered
     summary: |
       Triggers when the user interacts with this prompt.
@@ -235,7 +244,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
   - name: ProximityPromptService.PromptTriggerEnded
     summary: |
       Triggers when the player stops holding down the
@@ -261,5 +271,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
 callbacks: []

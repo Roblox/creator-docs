@@ -61,7 +61,8 @@ methods:
       property.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
   - name: PhysicsService:CollisionGroupsAreCollidable
     summary: |
       Returns whether the two groups will collide.
@@ -86,7 +87,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
   - name: PhysicsService:CollisionGroupSetCollidable
     summary: |
       Sets the collision status between two groups.
@@ -117,7 +119,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
   - name: PhysicsService:CreateCollisionGroup
     summary: |
       Creates a new collision group with the given name, and returns the ID of
@@ -142,7 +145,8 @@ methods:
       which should be used for all new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
   - name: PhysicsService:GetCollisionGroupId
     summary: |
       Returns the ID of the collision group with the specified name.
@@ -169,7 +173,8 @@ methods:
       `Class.BasePart.CollisionGroup|CollisionGroup` property.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
   - name: PhysicsService:GetCollisionGroupName
     summary: |
       Returns the name of the group with the corresponding ID.
@@ -194,7 +199,8 @@ methods:
       `Class.BasePart.CollisionGroup|CollisionGroup` property.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
   - name: PhysicsService:GetCollisionGroups
     summary: |
       Returns a table with info on all of the place's collision groups.
@@ -241,7 +247,8 @@ methods:
       which should be used for all new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
   - name: PhysicsService:GetMaxCollisionGroups
     summary: |
       Returns the maximum number of collision groups.
@@ -257,7 +264,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
   - name: PhysicsService:GetRegisteredCollisionGroups
     summary: |
       Returns a table with info on all of the place's collision groups.
@@ -295,7 +303,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
   - name: PhysicsService:IsCollisionGroupRegistered
     summary: |
       Checks if a collision group is registered.
@@ -317,7 +326,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
   - name: PhysicsService:RegisterCollisionGroup
     summary: |
       Registers a new collision group with the given name.
@@ -346,7 +356,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
   - name: PhysicsService:RemoveCollisionGroup
     summary: |
       Removes the collision group with the given name.
@@ -379,7 +390,8 @@ methods:
       which should be used for all new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
   - name: PhysicsService:RenameCollisionGroup
     summary: |
       Renames specified collision group.
@@ -420,7 +432,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
   - name: PhysicsService:SetPartCollisionGroup
     summary: |
       Sets the collision group of a part.
@@ -458,7 +471,8 @@ methods:
       `Class.BasePart.CollisionGroup|CollisionGroup` property.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
   - name: PhysicsService:UnregisterCollisionGroup
     summary: |
       Unregisters the collision group for the given name.
@@ -493,6 +507,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
 events: []
 callbacks: []

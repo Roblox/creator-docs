@@ -72,7 +72,7 @@ Opening the MicroProfiler varies by platform:
   This screenshot shows an IP address of `172.18.56.105` and a port of `1338`, so you navigate to `172.18.56.105:1338`. Depending on your device's network configuration, you might see multiple IP addresses. If one doesn't work, try the next.
 
   <Alert severity="info">
-  By default, the MicroProfiler shows the 30 most recent frames from your mobile device. For a larger set of frames, add a slash and a number to the URL, such as `172.18.56.105:1338/90`.
+  By default, the MicroProfiler web UI shows the 30 most recent frames from your mobile device. For a larger set of frames, add a slash and a number to the URL, such as `172.18.56.105:1338/90`. To get a fresh set of frames, use the **Re-capture** button.
   </Alert>
 
 - On the desktop client, press <kbd>Ctrl</kbd><kbd>F6</kbd> (<kbd>⌘</kbd><kbd>F6</kbd>).

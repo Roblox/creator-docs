@@ -42,7 +42,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
   - name: StyleRule.Selector
     summary: |
       A string specifying which instances the `StyleRule` should affect.
@@ -139,7 +140,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
   - name: StyleRule.SelectorError
     summary: |
       A read-only string that displays errors from the
@@ -162,7 +164,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - UI
 methods:
   - name: StyleRule:GetProperties
     summary: |
@@ -200,7 +203,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
   - name: StyleRule:GetProperty
     summary: |
       Returns the value of a specific property in the `StyleRule`.
@@ -234,7 +238,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
   - name: StyleRule:SetProperties
     summary: |
       Lets you declare and set multiple properties of the `StyleRule` at once.
@@ -307,7 +312,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
   - name: StyleRule:SetProperty
     summary: ''
     description: |
@@ -376,6 +382,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
 events: []
 callbacks: []

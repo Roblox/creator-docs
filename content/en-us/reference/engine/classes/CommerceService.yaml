@@ -74,7 +74,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Monetization
   - name: CommerceService:PromptCommerceProductPurchase
     summary: |
       Prompts a user to purchase a commerce product using the provided
@@ -101,7 +102,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Monetization
   - name: CommerceService:PromptRealWorldCommerceBrowser
     summary: ''
     description: |
@@ -127,7 +129,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Monetization
   - name: CommerceService:UserEligibleForRealWorldCommerceAsync
     summary: ''
     description: |
@@ -146,7 +149,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Monetization
 events:
   - name: CommerceService.PromptCommerceProductPurchaseFinished
     summary: |
@@ -174,5 +178,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Monetization
 callbacks: []
