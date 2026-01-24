@@ -210,43 +210,48 @@ You can use product intelligence APIs to sort and recommend passes to users. Per
 `Class.MarketplaceService.RankProductsAsync|RankProductsAsync` takes in a list of product IDs and returns a personalized ordered list of those products. You can use this method to provide your users with personalized item recommendations in your in-experience store.
 
 <Alert severity="warning">
-Because `RankProductsAsync` has a strict rate limit, you should load recommendations once at player join instead of calling it repeatedly.
+Because `RankProductsAsync` has a strict rate limit, you should load recommendations once at game join instead of calling it repeatedly.
 </Alert>
 
-	<figcaption>Example: Three "Powers" items ranked for the user</figcaption>
+	<figcaption>Example: Three "Power" items ranked for the user</figcaption>
   <img src="../../assets/monetization/developer-products/RankedItems.png" alt="Three items ranked for the user." width="80%" />
 
 ```lua
 local MarketplaceService = game:GetService("MarketplaceService")
 
--- Create an array of products you want to rank
+-- Create the array of products you want to rank
 local productIdentifiers = {
     {InfoType = Enum.InfoType.GamePass, Id = 123},
     {InfoType = Enum.InfoType.Product, Id = 456},
     {InfoType = Enum.InfoType.Product, Id = 789}
 }
 
--- Make a protected call to handle errors
-local success, rankedProducts = pcall(function()
-    return MarketplaceService:RankProductsAsync(productIdentifiers)
+-- Optional: Wrap the call in an async task so that if the request is slow,
+-- it doesn’t freeze the UI / game
+task.spawn(function()
+    -- Use a pcall to handle errors gracefully
+    local success, result = pcall(function()
+        return MarketplaceService:RankProductsAsync(productIdentifiers)
+    end)
+
+    if not success then
+        -- If failed, 'result' is the error message.
+        warn("Failed to rank products:", result)
+    end
+
+    -- Load the returned items into the store.
+    for i, rankedItem in ipairs(rankedProducts) do
+        local productIdentifier = rankedItem.ProductIdentifier
+        local productInfo = rankedItem.ProductInfo
+        -- ...
+        -- Logic to add productInfo into store
+    end
 end)
-
-if not success then
-    error("Failed to rank products")
-end
-
--- Load the returned items into the store
-for i, rankedItem in ipairs(rankedProducts) do
-    local productIdentifier = rankedItem.ProductIdentifier
-    local productInfo = rankedItem.ProductInfo
-    -- ...
-    -- Logic to add products into store
-end
 ```
 
 ### Display your top passes
 
-<Alert severity="info">
+<Alert severity="warning">
 If your experience has had no item sales in the past 28 days, `RecommendTopProductsAsync` returns an empty list. At least one purchase within the last 28 days is required for this API to generate recommendations.
 </Alert>
 
@@ -254,32 +259,42 @@ If your experience has had no item sales in the past 28 days, `RecommendTopProdu
 
 If no recommendations can be determined, `RecommendTopProductsAsync` returns 0 items. Any passes that the user already owns are also not returned.
 
+<Alert severity="warning">
+In rare cases, calls to the ranking model can be slow. To help prevent added lately for users, we recommend using `task.spawn` to make the call to `RecommendTopProductgs` non-blocking.
+</Alert>
+
 	<figcaption>Example: A "Top Picks" tab in an in-experience store</figcaption>
   <img src="../../assets/monetization/developer-products/StoreTopPicks.png" alt="Top Picks tab of an in-experience store." width="90%" />
 
 ```lua
 local MarketplaceService = game:GetService("MarketplaceService")
 
--- Create an array of product types you want to include in the recommendations -- This example includes both passes and developer products
+-- Create an array of product types to include. In this case both game passes and developer products
 local productTypes = {Enum.InfoType.GamePass, Enum.InfoType.Product}
 
--- Make a protected call to handle errors
-local success, topRankedItems = pcall(function()
-    return MarketplaceService:RecommendTopProductsAsync(productTypes)
+-- Optional: Wrap the call in an async task so that if the request is slow,
+-- it doesn’t freeze the UI / game
+task.spawn(function()
+    -- Use a pcall to handle errors gracefully
+    local success, result = pcall(function()
+        return MarketplaceService:RecommendTopProductsAsync(productTypes)
+    end)
+
+    if not success then
+        -- If failed, 'result' is the error message.
+        warn("Failed to rank products:", result)
+    end
+
+    -- Load the returned items into the store. Make sure to filter out any 
+    -- ineligible items from topRankedItems such as developer products the
+    -- user can no longer purchase
+    for i, rankedItem in ipairs(rankedProducts) do
+        local productIdentifier = rankedItem.ProductIdentifier
+        local productInfo = rankedItem.ProductInfo
+        -- ...
+        -- Logic to add productInfo into store
+    end
 end)
-
-if not success then
-    error("Failed to rank products")
-end
-
--- Load the returned items into the store
--- Make sure to filter out any ineligible items from topRankedItems such as passes the user can no longer purchase
-for i, rankedItem in ipairs(topRankedItems) do
-    local productIdentifier = rankedItem.ProductIdentifier
-    local productInfo = rankedItem.ProductInfo
-    -- ...
-    -- Logic to add products into store
-end
 ```
 
 ## Promote a pass
