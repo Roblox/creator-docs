@@ -5,7 +5,7 @@ description: Explains how to interpret and improve acquisition metrics for your 
 
 **Acquisition** measures where new and returning users are coming from and how well they convert.
 
-When acquiring users to your experience, such as announcing an in-game event or creating ad campaigns, make sure your experience has good [retention](./retention.md) and [engagement](./engagement.md) to ensure a healthy user population and game experience.
+When acquiring users to your experience, such as announcing an in-game event or creating ad campaigns, make sure your experience has good [retention](./retention.md) and [engagement](./engagement.md).
 
 ## View acquisition metrics
 

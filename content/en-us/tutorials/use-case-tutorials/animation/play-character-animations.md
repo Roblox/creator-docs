@@ -31,7 +31,7 @@ Every character with a default `Class.Humanoid` object, whether it's a player-co
   </figure>
 </GridContainer>
 
-However, if these default animations don't meet the design requirements for your world's environment, aesthetic, or overall narrative, you can swap them out with custom animations that apply to every player that joins your experience. This game design technique can help your characters and experiences feel more personal, engaging, and immersive.
+However, if these default animations don't meet the design requirements for your world's environment, aesthetic, or overall narrative, you can swap them out with custom animations that apply to every player that joins your experience.
 
 To demonstrate, the following section teaches you how to swap out the default walk animation with a custom walk cycle animation from [Create Character Animations](create-an-animation.md). Using this same process, you can swap out any of the default animations with your own animation asset IDs.
 

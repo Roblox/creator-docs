@@ -7,7 +7,7 @@ description: Teaches you about best practice guidance on designing season packs.
 
 <br />
 
-A _season pass_ is a limited-time, quest-based progression systems that is part of a game's content cadence. Players complete quest objectives to earn rewards for the duration of the pre-defined period of time or "season".
+A _season pass_ is a limited-time, quest-based progression systems that is part of an experience's content cadence. Players complete quest objectives to earn rewards for the duration of the pre-defined period of time or "season".
 
 Season passes are time-bound design strategies used in Roblox experiences to deliver new content, promote player retention, and generate revenue. Season passes encourage players to complete tasks, gain pass experience points (XP), and climb through reward tiers. When making a season pass, it's imperative to:
 
@@ -26,7 +26,7 @@ For out-of-the-box functionality to create season passes, see the [Season passes
 </Alert>
 
 <Alert severity="warning">
-While similar in name, season passes are not game passes. Game passes are one-time purchases that confer gameplay bonuses. To learn how to implement game passes into your experiences, see [Game Passes](../../production/monetization/game-passes.md).
+While similar in name, season passes are not general experience passes. General [passes](../../production/monetization/passes.md) are one-time purchases that confer gameplay bonuses.
 </Alert>
 
 ## Identify goals
@@ -115,7 +115,7 @@ Extra attention is needed in implementing the following sections of a season pas
 
 A _final reward_ is the last reward at the end of the season pass. Creating a brand-new asset for the final reward is great option. Additionally, retiring that final reward item after the season is done to make it exclusive to the season pass system creates a stronger incentive and encourages more playtime. Final rewards often define the impact of a season pass, and are pivotal to design correctly in order to incentivize and reward your community.
 
-Although your Tiers UI shows the rewards that players earn, it's good practice to also display any 3D model-based rewards inside your game world directly, especially if its the final reward. Items like cars, houses, pets, and avatar clothing are much more compelling "in person" than a 2D image in a UI. Making the final reward as tangible and exciting as possible to your players will engage and inspire them throughout the entire season.
+Although your Tiers UI shows the rewards that players earn, it's good practice to also display any 3D model-based rewards directly, especially if its the final reward. Items like cars, houses, pets, and avatar clothing are much more compelling "in person" than a 2D image in a UI. Making the final reward as tangible and exciting as possible to your players will engage and inspire them throughout the entire season.
 
 <GridContainer numColumns="2">
   <figure>
@@ -230,7 +230,7 @@ Difficulty designations also help you determine the appropriate amount of XP to 
 
 ### Mission surfacing
 
-**Surfacing** is the act of making a specific part of your experience highly visible to your players to promote discoverability and engagement. When adding any new system to your game, make sure that you're doing everything you can to surface it. Having your season pass surfaced ensures your players are aware of it and interact with it as you intend.
+**Surfacing** is the act of making a specific part of your experience highly visible to your players to promote discoverability and engagement. When adding any new system to your experience, make sure that you're doing everything you can to surface it. Having your season pass surfaced ensures your players are aware of it and interact with it as you intend.
 
  <figure>
     <img src="../../assets/game-design/season-pass-design/season-pass-design-12.png" width="60%"/>

@@ -41,8 +41,8 @@ description: |
   For security purposes, using `EditableImage` fails by default for published
   experiences. To enable usage, you must be 13+ age verified and ID verified.
   After you are verified, open Studio's
-  [Game Settings](../../../studio/game-settings.md), select **Security**, and
-  enable the **Allow Mesh&nbsp;&#47; Image APIs** toggle.
+  [Experience Settings](../../../studio/experience-settings.md), select
+  **Security**, and enable the **Allow Mesh&nbsp;&#47; Image APIs** toggle.
 
   #### Permissions
 
@@ -99,7 +99,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
 methods:
   - name: EditableImage:Destroy
     summary: ''
@@ -114,7 +115,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableImage:DrawCircle
     summary: |
       Draws a circle at the specified point.
@@ -159,7 +161,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableImage:DrawImage
     summary: |
       Draws another `EditableImage` into this `EditableImage` at the given
@@ -194,7 +197,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableImage:DrawImageProjected
     summary: |
       Projects another `EditableImage` into an `Class.EditableMesh` and stores
@@ -251,7 +255,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableImage:DrawImageTransformed
     summary: |
       Draws an image into this `EditableImage` with transformations including
@@ -310,7 +315,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableImage:DrawLine
     summary: |
       Draws a line between two provided points.
@@ -352,7 +358,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableImage:DrawRectangle
     summary: |
       Draws a rectangle of the given size at the given top-left position.
@@ -396,7 +403,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableImage:ReadPixelsBuffer
     summary: |
       Reads a rectangular region of pixels into a buffer.
@@ -431,7 +439,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: EditableImage:WritePixelsBuffer
     summary: |
       Writes a rectangular region of pixels into the image.
@@ -470,6 +479,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
 events: []
 callbacks: []

@@ -15,7 +15,7 @@ Once inside a universe, clients can teleport to any place within that universe, 
 
 - Disabling "Direct Access" only removes the Join button from subplaces on the website - it does not prevent client-initiated teleports
 - Assume exploiters will discover the existence of all subplaces within your universe
-- A client can teleport to any subplace if they can access a single place, such as the root place, regardless of your intended game flow
+- A client can teleport to any subplace if they can access a single place, such as the root place, regardless of your intended design flow
 
 Many developers attempt to prevent access by kicking unauthorized users from a subplace. This may work for blocking gameplay, but it does **not** prevent content from replicating to the client. For places intended to be private:
 
@@ -31,7 +31,7 @@ For universes requiring a public place but restricted access, combine multiple l
 
 ## Replication
 
-Replication describes how state transfers over the network between instances of the game engine. Roblox's replication model is generally simplified in a few key ways:
+Replication describes how state transfers over the network between instances of the engine. Roblox's replication model is generally simplified in a few key ways:
 
 - Instances are server-authoritative, meaning that for an instance to replicate between all participants (the server and all connected clients) it must be created on the server.
 - Instance properties are also server-authoritative, which means most properties must be changed on the server for the changes to be visible on all clients.
@@ -113,5 +113,5 @@ As shown above, decompilation reveals server-side logic including hardcoded pass
 Confidentiality breaches can have significant consequences, such as:
 
 - **Content leaks**: Unreleased items, maps, or features may be discovered and shared publicly before official announcements
-- **Competitive disadvantage**: Game mechanics, algorithms, or upcoming features may be reverse-engineered by competitors
+- **Competitive disadvantage**: Mechanics, algorithms, or upcoming features may be reverse-engineered by competitors
 - **Exploit Development**: Exposed server logic makes it faster and easier for exploiters to identify vulnerabilities and develop targeted attacks

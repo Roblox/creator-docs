@@ -26,9 +26,9 @@ description: Frequently asked questions and guidelines about IP licensing tools.
     If you want to use an IP in your experience, you must have explicit permission from the IP holder. We recommend removing any content that might use IP and isn't covered by a license. There might be some creators and experiences that have reached agreements with IP holders on their own; if you already have a licensing agreement with the IP holder, then that is still valid.
   <p /></dd><br />
 
-  <dt>**Can I apply for a license with a game that doesn't currently meet the eligibility requirements?**</dt>
+  <dt>**Can I apply for a license with an experience that doesn't currently meet the eligibility requirements?**</dt>
   <dd><p />
-    Yes. When you apply for a license, the experience you pick is meant to showcase to IP holders your abilities as a creator. This experience can be partially or fully finished, or it can be a fork of an existing game. After you apply to use a license, the IP holder can review your application to build your experience around their IP and then choose to grant you a license.
+    Yes. When you apply for a license, the experience you pick is meant to showcase to IP holders your abilities as a creator. This experience can be partially or fully finished, or it can be a fork of an existing experience. After you apply to use a license, the IP holder can review your application to build your experience around their IP and then choose to grant you a license.
   <p /></dd><br />
 
   <dt>**How much creative freedom do I have with the IP?**</dt>
@@ -43,7 +43,7 @@ description: Frequently asked questions and guidelines about IP licensing tools.
     No. As long as you're following the terms and content standards of the license, you can make or use your own assets.
   <p /></dd><br />
 
-  <dt>**Can I create one level or a portion of my game based on an IP and request a license?**</dt>
+  <dt>**Can I create one level or a portion of my experience based on an IP and request a license?**</dt>
   <dd><p />
     No. You can only request or be offered a license for a full experience, where the IP is central to and present throughout the experience.
   <p /></dd><br />

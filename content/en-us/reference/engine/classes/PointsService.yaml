@@ -73,7 +73,8 @@ methods:
       used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: PointsService:GetAwardablePoints
     summary: |
       Returns the number of points the current game has available to award to
@@ -94,7 +95,8 @@ methods:
       used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: PointsService:GetGamePointBalance
     summary: |
       Returns the total number of points a player has in the current game.
@@ -119,7 +121,8 @@ methods:
       used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: PointsService:GetPointBalance
     summary: |
       Returns the total number of points the given player has across all games.
@@ -144,7 +147,8 @@ methods:
       used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
 events:
   - name: PointsService.PointsAwarded
     summary: |
@@ -197,5 +201,6 @@ events:
       ancient achievement system since removed and deprecated. It should not be
       used in new work.
     security: None
-    capabilities: []
+    capabilities:
+      - Basic
 callbacks: []

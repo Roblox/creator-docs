@@ -38983,6 +38983,15 @@
             "url": "https://games.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnails#games_get_v2_games__universeId__media"
         }
@@ -39064,6 +39073,15 @@
         "servers": [
           {
             "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -39149,6 +39167,15 @@
             "url": "https://games.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/universes#games_get_v2_users__userId__games"
         }
@@ -39206,6 +39233,15 @@
         "servers": [
           {
             "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -39292,6 +39328,14 @@
         "servers": [
           {
             "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -39393,6 +39437,15 @@
             "url": "https://games.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/places#games_get_v1_games__placeId__servers__serverType_"
         }
@@ -39443,6 +39496,14 @@
         "servers": [
           {
             "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -39517,6 +39578,14 @@
             "url": "https://games.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#games_post_v1_games__universeId__favorites"
         }
@@ -39564,6 +39633,15 @@
         "servers": [
           {
             "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -39614,6 +39692,15 @@
         "servers": [
           {
             "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "description": "Use https://games.roblox.com/v2/games/{universeId}/media instead",
@@ -39814,6 +39901,15 @@
             "url": "https://games.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/universes#games_get_v1_games_games_product_info"
         }
@@ -39868,6 +39964,14 @@
         "servers": [
           {
             "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -39925,6 +40029,15 @@
         "servers": [
           {
             "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -40002,6 +40115,15 @@
         "servers": [
           {
             "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -40114,6 +40236,15 @@
         "servers": [
           {
             "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -59282,7 +59413,7 @@
     },
     "/v1/description#UsersApi": {
       "get": {
-        "tags": ["Accounts"],
+        "tags": ["Accounts", "User profiles"],
         "summary": "Get the user's description",
         "responses": {
           "200": {
@@ -59325,7 +59456,7 @@
         }
       },
       "post": {
-        "tags": ["Accounts"],
+        "tags": ["Accounts", "User profiles"],
         "summary": "Update the user's description",
         "requestBody": {
           "content": {
@@ -61199,6 +61330,10 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
           }
         },
         "x-roblox-scopes": [
@@ -61309,6 +61444,10 @@
         "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          },
+          "perOauth2Authorization": {
             "period": "MINUTE",
             "maxInPeriod": 1000
           }
@@ -61611,6 +61750,10 @@
           "perApiKeyOwner": {
             "period": "SECOND",
             "maxInPeriod": 3
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "maxInPeriod": 3
           }
         },
         "x-roblox-scopes": [
@@ -61627,6 +61770,9 @@
           },
           {
             "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["developer-product:write"]
           }
         ],
         "externalDocs": {
@@ -61793,6 +61939,10 @@
           "perApiKeyOwner": {
             "period": "SECOND",
             "maxInPeriod": 3
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "maxInPeriod": 3
           }
         },
         "x-roblox-scopes": [
@@ -61809,6 +61959,9 @@
           },
           {
             "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["developer-product:write"]
           }
         ],
         "externalDocs": {
@@ -61890,6 +62043,10 @@
           "perApiKeyOwner": {
             "period": "SECOND",
             "maxInPeriod": 10
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "maxInPeriod": 10
           }
         },
         "x-roblox-scopes": [
@@ -61906,6 +62063,9 @@
           },
           {
             "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["developer-product:read"]
           }
         ],
         "externalDocs": {
@@ -62004,6 +62164,10 @@
           "perApiKeyOwner": {
             "period": "SECOND",
             "maxInPeriod": 10
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "maxInPeriod": 10
           }
         },
         "x-roblox-scopes": [
@@ -62020,6 +62184,9 @@
           },
           {
             "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["developer-product:read"]
           }
         ],
         "externalDocs": {
@@ -62263,6 +62430,10 @@
           "perApiKeyOwner": {
             "period": "SECOND",
             "maxInPeriod": 5
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "maxInPeriod": 5
           }
         },
         "x-roblox-scopes": [
@@ -62279,6 +62450,9 @@
           },
           {
             "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["game-pass:write"]
           }
         ],
         "externalDocs": {
@@ -62437,6 +62611,10 @@
           "perApiKeyOwner": {
             "period": "SECOND",
             "maxInPeriod": 5
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "maxInPeriod": 5
           }
         },
         "x-roblox-scopes": [
@@ -62453,6 +62631,9 @@
           },
           {
             "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["game-pass:write"]
           }
         ],
         "externalDocs": {
@@ -62534,6 +62715,10 @@
           "perApiKeyOwner": {
             "period": "SECOND",
             "maxInPeriod": 10
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "maxInPeriod": 10
           }
         },
         "x-roblox-scopes": [
@@ -62550,6 +62735,9 @@
           },
           {
             "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["game-pass:read"]
           }
         ],
         "externalDocs": {
@@ -62648,6 +62836,10 @@
           "perApiKeyOwner": {
             "period": "SECOND",
             "maxInPeriod": 10
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "maxInPeriod": 10
           }
         },
         "x-roblox-scopes": [
@@ -62664,6 +62856,9 @@
           },
           {
             "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["game-pass:read"]
           }
         ],
         "externalDocs": {
@@ -73217,7 +73412,7 @@
         "properties": {
           "category": {
             "format": "int32",
-            "description": "Category type. ['Featured' = 0, 'All' = 1, 'Collectibles' = 2, 'Clothing' = 3, 'BodyParts' = 4, 'Gear' = 5, 'Accessories' = 11, 'AvatarAnimations' = 12, 'CommunityCreations' = 13, 'Premium' = 14, 'Recommended' = 15, 'LayeredClothing' = 16, 'Characters' = 17, 'Body' = 18]",
+            "description": "Category type.",
             "enum": [0, 1, 2, 3, 4, 5, 11, 12, 13, 14, 15, 16, 17, 18],
             "type": "integer"
           },
@@ -89205,10 +89400,10 @@
   "tags": [
     {
       "name": "Accounts",
-      "description": "HTTP APIs for working with accounts on Roblox Cloud.",
+      "description": "Access and manage Roblox account information.\n",
       "x-roblox-tag-info": {
         "path": "accounts",
-        "content": "Lists all HTTP APIs for working with accounts, including legacy APIs for account information, settings, authentication, games, inventory, notifications, private messages, and two-step verification.",
+        "content": "HTTP APIs for working with accounts on Roblox Cloud.",
         "ordering": [
           "accountinformation_get_v1_birthdate",
           "accountinformation_get_v1_description",
@@ -89386,10 +89581,10 @@
     },
     {
       "name": "Assets",
-      "description": "HTTP APIs for working with assets on Roblox Cloud.",
+      "description": "Upload, update, and manage assets programmatically. Supported asset types include Audio, Decals, Images, Models, Meshes, and Videos. For detailed implementation, see the [Assets Usage Guide](/cloud/guides/usage-assets).\n\nCommon use cases include:\n\n- Asset creation: [Create an asset](#Assets_CreateAsset), then [poll the operation endpoint](#Assets_GetOperation) for completion\n- Asset retrieval: [Retrieve asset content](#get_asset_delivery_api_v1_assetId__assetId_) or [a specific version of it](#get_asset_delivery_api_v1_assetId__assetId__version__versionNumber_) for external tools\n- Versioning: [Manage asset versions](#listAssetVersions) with [rollback](#Assets_RollbackAssetVersion) support\n",
       "x-roblox-tag-info": {
         "path": "assets",
-        "content": "Lists all HTTP APIs for working with assets, such as creating, retrieving, updating, and archiving them.",
+        "content": "HTTP APIs for working with assets on Roblox Cloud.",
         "ordering": [
           "Assets_CreateAsset",
           "Assets_GetAsset",
@@ -89478,10 +89673,10 @@
     },
     {
       "name": "Avatars",
-      "description": "HTTP APIs for working with avatars on Roblox Cloud.",
+      "description": "Customize user avatars and manage outfits programmatically, including body colors, scales, and [thumbnail generation](#Cloud_GenerateUserThumbnail).\n",
       "x-roblox-tag-info": {
         "path": "avatars",
-        "content": "Lists all HTTP APIs for working with avatars, such as generating thumbnails, creating outfits, and more.",
+        "content": "HTTP APIs for working with avatars on Roblox Cloud.",
         "ordering": [
           "Cloud_GenerateUserThumbnail",
           "avatar_get_v1_avatar",
@@ -89540,10 +89735,10 @@
     },
     {
       "name": "Badges",
-      "description": "HTTP APIs for working with badges on Roblox Cloud.",
+      "description": "Create and manage experience badges to recognize player achievements. [Create](#post_legacy_badges_v1_universes__universeId__badges) and [update](#patch_legacy_badges_v1_badges__badgeId_) badges with custom icons, and [track which badges users have earned](#badges_get_v1_users__userId__badges_awarded_dates) and when they were awarded.\n",
       "x-roblox-tag-info": {
         "path": "badges",
-        "content": "Lists all HTTP APIs for working with badges, such as creating them and updating their translations.",
+        "content": "HTTP APIs for working with badges on Roblox Cloud.",
         "ordering": [
           "patch_legacy_badges_v1_badges__badgeId_",
           "badges_patch_v1_badges__badgeId_",
@@ -89582,10 +89777,10 @@
     },
     {
       "name": "Bans and blocks",
-      "description": "HTTP APIs for working with bans and blocks on Roblox Cloud.",
+      "description": "Manage user restrictions using the Ban API, which includes real-time alt account detection. [Universe-level bans](#Cloud_UpdateUserRestriction__Using_Universes) affect all places, while [place-level bans](#Cloud_UpdateUserRestriction__Using_Universes_Places) allow granular control. Bans can also be managed via the Creator Hub dashboard.\n\nBan users with customizable duration and reasons, and [review moderation history](#Cloud_ListUserRestrictionLogs) for any banned users.\n",
       "x-roblox-tag-info": {
         "path": "bans-and-blocks",
-        "content": "Lists all HTTP APIs for working with bans and blocks, such as listing and updating user restrictions.",
+        "content": "HTTP APIs for working with bans and blocks on Roblox Cloud.",
         "ordering": [
           "Cloud_ListUserRestrictions__Using_Universes",
           "Cloud_GetUserRestriction__Using_Universes_Places",
@@ -89607,10 +89802,10 @@
     },
     {
       "name": "Creator Store",
-      "description": "HTTP APIs for working with the Creator Store on Roblox Cloud.",
+      "description": "Manage your presence on the [Creator Store](/production/creator-store). [Create](#Cloud_CreateCreatorStoreProduct) and [update](#Cloud_UpdateCreatorStoreProduct) product listings for your assets, and [search the toolbox](#get_toolbox_service_v2_assets_search) for assets using various filters.\n",
       "x-roblox-tag-info": {
         "path": "creator-store",
-        "content": "Lists all HTTP APIs for working with the Creator Store.",
+        "content": "HTTP APIs for working with the Creator Store on Roblox Cloud.",
         "ordering": [
           "Cloud_CreateCreatorStoreProduct",
           "Cloud_GetCreatorStoreProduct",
@@ -89626,10 +89821,10 @@
     },
     {
       "name": "Developer products",
-      "description": "HTTP APIs for working with developer products on Roblox Cloud.",
+      "description": "Create and manage developer products for repeatable in-experience purchases like in-game currency, consumables, or temporary boosts. [Create](#DeveloperProducts_CreateDeveloperProductV2) and [update](#DeveloperProducts_UpdateDeveloperProductV2) products with custom icons and pricing, and [add localized names and descriptions](#patch_legacy_game_internationalization_v1_developer_products__developerProductId__description_language_codes__languageCode_) for different languages.\n",
       "x-roblox-tag-info": {
         "path": "developer-products",
-        "content": "Lists all HTTP APIs for working with developer products.",
+        "content": "HTTP APIs for working with developer products on Roblox Cloud.",
         "ordering": [
           "DeveloperProducts_CreateDeveloperProductV2",
           "DeveloperProducts_UpdateDeveloperProductV2",
@@ -89657,10 +89852,10 @@
     },
     {
       "name": "Connections",
-      "description": "HTTP APIs for working with connections on Roblox Cloud.",
+      "description": "Manage user connections, such as [declining all connection requests](#friends_post_v1_users__requesterUserId__decline_friend_request) or [retrieving a connection list](#friends_get_v1_users__userId__friends).\n",
       "x-roblox-tag-info": {
         "path": "friends",
-        "content": "Lists all HTTP APIs for working with connections, such as declining all connection requests or retrieving a connection list.",
+        "content": "HTTP APIs for working with connections on Roblox Cloud.",
         "ordering": [
           "friends_post_v1_contacts__targetContactId__request_friendship",
           "friends_get_v1_metadata",
@@ -89694,10 +89889,10 @@
     },
     {
       "name": "Game passes",
-      "description": "HTTP APIs for working with game passes on Roblox Cloud.",
+      "description": "Create and manage game passes to monetize your experiences. Game passes provide one-time purchases that grant permanent benefits to players. [Create](#GamePasses_CreateGamePass) and [update](#GamePasses_UpdateGamePass) game passes with custom icons and pricing, and [list all game passes](#GamePasses_ListGamePassConfigsByUniverse) for an experience.\n",
       "x-roblox-tag-info": {
         "path": "game-passes",
-        "content": "Lists all HTTP APIs for working with game passes.",
+        "content": "HTTP APIs for working with game passes on Roblox Cloud.",
         "ordering": [
           "GamePasses_CreateGamePass",
           "GamePasses_UpdateGamePass",
@@ -89725,10 +89920,10 @@
     },
     {
       "name": "Generative AI",
-      "description": "HTTP APIs related to Generative AI and LLMs on Open Cloud.",
+      "description": "Access Roblox's generative AI capabilities for content creation and translation. These APIs enable you to [translate in-game text](#Cloud_TranslateText) between supported languages and [generate speech audio assets](#Cloud_GenerateSpeechAsset) from text for NPC dialogue or narration.\n",
       "x-roblox-tag-info": {
         "path": "generative-ai",
-        "content": "Lists all HTTP APIs related to Generative AI and LLMs on Open Cloud.",
+        "content": "HTTP APIs related to Generative AI and LLMs on Open Cloud.",
         "ordering": [
           "Cloud_TranslateText",
           "Cloud_GenerateSpeechAsset",
@@ -89739,10 +89934,10 @@
     },
     {
       "name": "Groups",
-      "description": "HTTP APIs for working with groups on Roblox Cloud.",
+      "description": "Manage Roblox groups including memberships, roles, and group settings.\n\nCommon use cases include:\n\n- Membership management: [Accept](#Cloud_AcceptGroupJoinRequest) or [decline](#Cloud_DeclineGroupJoinRequest) join requests and [manage member roles](#Cloud_UpdateGroupMembership)\n- Role configuration: [Create](#groups_post_v1_groups__groupId__rolesets_create), [update](#groups_patch_v1_groups__groupId__rolesets__rolesetId_), and [delete](#groups_delete_v1_groups__groupId__rolesets__rolesetId_) group roles with custom permissions\n- Audit logging: [Review group activity](#get_legacy_groups_v1_groups__groupId__audit_log) through audit logs\n",
       "x-roblox-tag-info": {
         "path": "groups",
-        "content": "Lists all HTTP APIs for working with groups, including accepting join requests and listing group memberships.",
+        "content": "HTTP APIs for working with groups on Roblox Cloud.",
         "ordering": [
           "Cloud_GetGroup",
           "Cloud_ListGroupJoinRequests",
@@ -89859,10 +90054,10 @@
     },
     {
       "name": "Interactions",
-      "description": "HTTP APIs for working with favorites, followings, and other player interactions on Roblox Cloud.",
+      "description": "Manage your favorites, experience notifications, and assets you voted on. [List experiences opted-in for notifications for a user](#get_legacy_followings_v1_users__userId__universes), [manage favorites](#catalog_get_v1_favorites_users__userId__assets__assetId__favorite) for assets and bundles, and [track](#games_get_v1_games_votes) votes on experiences.\n",
       "x-roblox-tag-info": {
         "path": "interactions",
-        "content": "Lists all HTTP APIs for interactions, such as getting all universes a user has followed or retrieving favorites.",
+        "content": "HTTP APIs for working with favorites, experience notifications, and other player interactions on Roblox Cloud.",
         "ordering": [
           "get_legacy_followings_v1_users__userId__universes",
           "followings_get_v1_users__userId__universes",
@@ -89908,10 +90103,10 @@
     },
     {
       "name": "Inventories",
-      "description": "HTTP APIs for working with inventories on Roblox Cloud.",
+      "description": "Access user inventories to verify ownership and display player collections. For detailed implementation details, see the [Inventory guide](/cloud/guides/inventory).\n\nYou can [retrieve and check](#Cloud_ListInventoryItems) if a user owns specific items, like limiteds, badges, passes, or private servers.\n",
       "x-roblox-tag-info": {
         "path": "inventories",
-        "content": "Lists all HTTP APIs for working with user inventories, such as listing items or adding items to collections.",
+        "content": "HTTP APIs for working with inventories on Roblox Cloud.",
         "ordering": [
           "Cloud_ListInventoryItems",
           "inventory_delete_v1_collections_items__itemType___itemTargetId_",
@@ -89933,10 +90128,10 @@
     },
     {
       "name": "Localization",
-      "description": "HTTP APIs for localization on Roblox Cloud.",
+      "description": "Extend [built-in Roblox localization features](production/localization) with automation.\n\nCommon use cases include:\n\n- Content translation: Update localized names and descriptions for [badges](#patch_legacy_game_internationalization_v1_badges__badgeId__description_language_codes__languageCode_), [game passes](#patch_legacy_game_internationalization_v1_game_passes__gamePassId__description_language_codes__languageCode_), and [developer products](#patch_legacy_game_internationalization_v1_developer_products__developerProductId__description_language_codes__languageCode_)\n- Localization tables: [Manage localization table entries](#patch_legacy_localization_tables_v1_localization_table_tables__tableId_) for in-game text\n- Automatic translation: [Configure automatic translation settings](#patch_legacy_localization_tables_v1_autolocalization_games__gameId__settings) for supported languages\n",
       "x-roblox-tag-info": {
         "path": "localization",
-        "content": "Lists all HTTP APIs for working with localizations, such as updating localized descriptions for badges, game passes, or developer products.",
+        "content": "HTTP APIs for localization on Roblox Cloud.",
         "ordering": [
           "patch_legacy_game_internationalization_v1_badges__badgeId__description_language_codes__languageCode_",
           "gameinternationalization_patch_v1_badges__badgeId__description_language_codes__languageCode_",
@@ -90084,10 +90279,10 @@
     },
     {
       "name": "Luau Execution",
-      "description": "HTTP APIs for Luau execution on Roblox Cloud.",
+      "description": "Run Luau scripts headlessly in a Roblox place via Open Cloud for automated testing, game configuration, and procedural generation, with full DataModel and engine Luau API access. Tasks can run for up to 5 minutes, with a limit of 10 concurrent tasks per place. You can save changes using [`SavePlaceAsync`](/reference/engine/classes/AssetService#SavePlaceAsync), pass in large binary payloads, and use [`SerializationService`](/reference/engine/classes/SerializationService) to deserialize RBXM content. For a reference implementation, see [Roblox/place-ci-cd-demo](https://github.com/Roblox/place-ci-cd-demo) on GitHub.\n\nWorkflow:\n\n1. [Create a task](#Cloud_CreateLuauExecutionSessionTask__Using_Universes) with your universeId, placeId, and the Luau script to run\n2. A server launches, loads the place, and executes your code\n3. [Poll for completion](#Cloud_GetLuauExecutionSessionTask) and receive the script's return values and [logs](#Cloud_ListLuauExecutionSessionTaskLogs)\n\nCommon use cases include:\n\n- Automated testing: Run test scripts against specific place versions as part of a CI/CD pipeline\n- Game configuration: Update pricing, stats, and balancing variables outside of Studio\n",
       "x-roblox-tag-info": {
         "path": "luau-execution",
-        "content": "Lists all HTTP APIs for Luau execution, which lets you run scripts on a specific version of a place.",
+        "content": "HTTP APIs for Luau execution on Roblox Cloud.",
         "ordering": [
           "Cloud_CreateLuauExecutionSessionTaskBinaryInput",
           "Cloud_CreateLuauExecutionSessionTask__Using_Universes",
@@ -90099,10 +90294,10 @@
     },
     {
       "name": "Matchmaking",
-      "description": "HTTP APIs for matchmaking on Roblox Cloud.",
+      "description": "Configure and manage matchmaking for your experiences. Matchmaking APIs help you create fair, balanced matches by considering player skill, preferences, and latency.\n\nCommon use cases include:\n\n- Player attributes: [Define](#post_matchmaking_api_v1_matchmaking_player_attribute) and [manage](#patch_matchmaking_api_v1_matchmaking_player_attribute__attributeId_) custom player attributes for matching (skill level, preferences, etc.)\n- Scoring configuration: [Create](#post_matchmaking_api_v1_matchmaking_scoring_configuration) and [tune](#patch_matchmaking_api_v1_matchmaking_scoring_configuration__scoringConfigurationId_) scoring configurations that determine match quality\n- Instance control: [Shut down game instances](#post_matchmaking_api_v1_game_instances_shutdown) for maintenance\n",
       "x-roblox-tag-info": {
         "path": "matchmaking",
-        "content": "Lists all HTTP APIs for working with matchmaking.",
+        "content": "HTTP APIs for matchmaking on Roblox Cloud.",
         "ordering": [
           "post_matchmaking_api_v1_client_status",
           "get_matchmaking_api_v1_client_status",
@@ -90138,10 +90333,10 @@
     },
     {
       "name": "Metadata",
-      "description": "HTTP APIs for working with metadata on Roblox Cloud.",
+      "description": "Retrieve configuration metadata and system information from various Roblox services, including settings, quotas, and limits.\n",
       "x-roblox-tag-info": {
         "path": "metadata",
-        "content": "Lists all HTTP APIs for metadata, such as auto-localization configuration information or authorization metadata.",
+        "content": "HTTP APIs for working with metadata on Roblox Cloud.",
         "ordering": [
           "get_legacy_localization_tables_v1_autolocalization_metadata",
           "localizationtables_get_v1_autolocalization_metadata",
@@ -90194,10 +90389,10 @@
     },
     {
       "name": "Notifications",
-      "description": "HTTP APIs for working with notifications on Roblox Cloud.",
+      "description": "Send personalized notifications to re-engage players and keep them informed about your experience. Each user can receive one notification per day from a given experience. See the [Experience Notifications Guide](/cloud/guides/experience-notifications).\n\nCommon use cases include:\n\n- Experience notifications: [Send targeted notifications](#Cloud_CreateUserNotification) to users about in-game events, rewards, or updates\n- Personalized messages: Customize notifications with dynamic parameters like usernames and scores\n- **Launch Data Integration**: Include launch data to route users to specific locations when they join\n",
       "x-roblox-tag-info": {
         "path": "notifications",
-        "content": "Lists all HTTP APIs for working with notifications, such as creating user notifications or modifying push settings.",
+        "content": "HTTP APIs for working with notifications on Roblox Cloud.",
         "ordering": [
           "Cloud_CreateUserNotification",
           "notifications_get_v2_push_notifications_chrome_manifest",
@@ -90220,10 +90415,10 @@
     },
     {
       "name": "Places",
-      "description": "HTTP APIs for working with places on Roblox Cloud.",
+      "description": "Manage places, update instance properties, and publish place versions programmatically. See the [Engine Instances Guide](/cloud/guides/instance) and [Place Publishing Guide](/cloud/guides/usage-place-publishing).\n\nCommon use cases include:\n\n- Automated publishing: Publish place updates from CI/CD pipelines with version control and rollback support\n- Instance management: [Read](#Cloud_GetInstance) and [update](#Cloud_UpdateInstance) Script, LocalScript, and ModuleScript objects in collaborative sessions\n- Luau execution: [Run Luau scripts](#Cloud_CreateLuauExecutionSessionTask__Using_Universes) on specific place versions for testing or automation\n",
       "x-roblox-tag-info": {
         "path": "places",
-        "content": "Lists all HTTP APIs for working with places. You can update instances, get children for a given instance in the place, and more.",
+        "content": "HTTP APIs for working with places on Roblox Cloud.",
         "ordering": [
           "Cloud_GetPlace",
           "Cloud_UpdatePlace",
@@ -90256,10 +90451,10 @@
     },
     {
       "name": "Private servers",
-      "description": "HTTP APIs for working with private servers on Roblox Cloud.",
+      "description": "Create and manage private servers for your experiences, including server creation, access control, and subscription management.\n",
       "x-roblox-tag-info": {
         "path": "private-servers",
-        "content": "Lists all HTTP APIs for working with private servers, including listing them and updating access settings.",
+        "content": "HTTP APIs for working with private servers on Roblox Cloud.",
         "ordering": [
           "develop_get_v1_universes__universeId__configuration_vip_servers",
           "games_get_v1_games__placeId__private_servers",
@@ -90276,10 +90471,10 @@
     },
     {
       "name": "Sponsored campaigns",
-      "description": "HTTP APIs for working with sponsored campaigns on Roblox Cloud.",
+      "description": "Create and manage sponsored advertising campaigns for your experiences and assets. [Launch](#adconfiguration_post_v2_sponsored_campaigns_create), [list](#adconfiguration_get_v2_sponsored_campaigns), and [stop](#adconfiguration_post_v2_sponsored_campaigns_stop) campaigns to promote your content across the Roblox platform, and [verify eligibility](#adconfiguration_get_v2_sponsored_campaigns_eligible_asset_type_ids) for sponsorship.\n",
       "x-roblox-tag-info": {
         "path": "sponsored-campaigns",
-        "content": "Lists all HTTP APIs for working with sponsored campaigns.",
+        "content": "HTTP APIs for working with sponsored campaigns on Roblox Cloud.",
         "ordering": [
           "adconfiguration_get_v2_sponsored_campaigns",
           "adconfiguration_post_v2_sponsored_campaigns_create",
@@ -90296,10 +90491,10 @@
     },
     {
       "name": "Data and memory stores",
-      "description": "HTTP APIs for working with data and memory stores on Roblox Cloud.",
+      "description": "Manage persistent player data using standard data stores, ordered data stores, and memory stores. See the [Data Stores Guide](/cloud/guides/data-stores) for implementation examples.\n\nCommon use cases include:\n\n- **Player Data Management**: [Store](#Cloud_CreateDataStoreEntry__Using_Universes) and [retrieve](#Cloud_GetDataStoreEntry__Using_Universes_DataStores) player profiles, inventories, and progress\n- **Leaderboards**: Use [ordered data stores](#Cloud_ListOrderedDataStoreEntries) to create global or per-experience leaderboards sorted by score\n- **Customer Support Tools**: Build external portals to [view](#Cloud_GetDataStoreEntry__Using_Universes_DataStores) and [modify](#Cloud_UpdateDataStoreEntry__Using_Universes_DataStores) player data\n",
       "x-roblox-tag-info": {
         "path": "storage",
-        "content": "Lists all HTTP APIs for working with data stores and memory stores.",
+        "content": "HTTP APIs for working with data and memory stores on Roblox Cloud.",
         "ordering": [
           "Cloud_ListDataStores",
           "Cloud_DeleteDataStore",
@@ -90354,10 +90549,10 @@
     },
     {
       "name": "Team Create",
-      "description": "HTTP APIs for working with Team Create on Roblox Cloud.",
+      "description": "Manage Team Create collaborative sessions for your experiences, including session monitoring, membership management, and collaboration settings.\n",
       "x-roblox-tag-info": {
         "path": "team-create",
-        "content": "Lists all HTTP APIs for working with Team Create.",
+        "content": "HTTP APIs for working with Team Create on Roblox Cloud.",
         "ordering": [
           "get_legacy_develop_v1_places__placeId__teamcreate_active_session_members",
           "develop_get_v1_places__placeId__teamcreate_active_session_members",
@@ -90376,10 +90571,10 @@
     },
     {
       "name": "Thumbnails",
-      "description": "HTTP APIs for working with user thumbnails on Roblox Cloud.",
+      "description": "Generate and retrieve thumbnails for [users](#Cloud_GenerateUserThumbnail), [experiences](#post_legacy_game_internationalization_v1_game_thumbnails_games__gameId__language_codes__languageCode__image), [badges](#post_legacy_publish_v1_badges__badgeId__icon), and [avatar images](#Cloud_GenerateUserThumbnail). in various formats.\n",
       "x-roblox-tag-info": {
         "path": "thumbnails",
-        "content": "Lists all HTTP APIs for generating, retrieving, and updating thumbnails.",
+        "content": "HTTP APIs for working with user thumbnails on Roblox Cloud.",
         "ordering": [
           "Cloud_GenerateUserThumbnail",
           "post_legacy_game_internationalization_v1_game_thumbnails_games__gameId__language_codes__languageCode__alt_text",
@@ -90424,10 +90619,10 @@
     },
     {
       "name": "Trades",
-      "description": "HTTP APIs for working with trades on Roblox Cloud.",
+      "description": "Manage item trades between users on the Roblox platform. [Check trade eligibility](#trades_get_v2_users__userId__can_trade_with) between users, [retrieve trade details](#trades_get_v2_trades__tradeId_), and [list trades by status](#trades_get_v1_trades__tradeStatusType_) (pending, completed, declined, expired).\n",
       "x-roblox-tag-info": {
         "path": "trades",
-        "content": "Lists all HTTP APIs for trades.",
+        "content": "HTTP APIs for working with trades on Roblox Cloud.",
         "ordering": [
           "trades_get_v2_users__userId__can_trade_with",
           "trades_get_v2_users_me_can_trade",
@@ -90450,10 +90645,10 @@
     },
     {
       "name": "Universes",
-      "description": "HTTP APIs for working with universes on Roblox Cloud, including subscriptions, place and instance updates, user restrictions, and more.",
+      "description": "Manage experiences (universes), publish updates, and communicate with live servers. See the [Messaging Usage Guide](/cloud/guides/usage-messaging) and [Place Publishing Guide](/cloud/guides/usage-place-publishing).\n\nCommon use cases include:\n\n- **Cross-Server Messaging**: [Send announcements](#Cloud_PublishUniverseMessage), trigger events, or update all players across servers using the Messaging Service\n- Server management: [Restart servers](#Cloud_RestartUniverseServers) after deploying updates or to clear cached state\n- User restrictions: [Ban or restrict users](#Cloud_UpdateUserRestriction__Using_Universes) from your experience at the universe or place level\n",
       "x-roblox-tag-info": {
         "path": "universes",
-        "content": "Lists all HTTP APIs for working with universes, including restarting servers and getting user subscriptions.",
+        "content": "HTTP APIs for working with universes on Roblox Cloud, including subscriptions, place and instance updates, user restrictions, and more.",
         "ordering": [
           "Cloud_GetUniverse",
           "Cloud_UpdateUniverse",
@@ -90625,10 +90820,10 @@
     },
     {
       "name": "User profiles",
-      "description": "HTTP APIs for working with user profiles on Roblox Cloud.",
+      "description": "Access user profile pages. [Retrieve user descriptions](#users_get_v1_description), [badges](#accountinformation_get_v1_users__userId__roblox_badges), [avatar configuration](#avatar_get_v1_users__userId__avatar), and [wearing items](#avatar_get_v1_users__userId__currently_wearing).\n",
       "x-roblox-tag-info": {
         "path": "user-profiles",
-        "content": "Lists all HTTP APIs for user profiles, such as updating user descriptions and retrieving badges.",
+        "content": "HTTP APIs for working with user profiles on Roblox Cloud.",
         "ordering": [
           "accountinformation_get_v1_description",
           "accountinformation_post_v1_description",
@@ -90648,16 +90843,18 @@
           "Presence_GetUserPresences",
           "users_get_v1_users__userId_",
           "users_patch_v1_users__userId__display_names",
-          "users_get_v1_users__userId__username_history"
+          "users_get_v1_users__userId__username_history",
+          "users_get_v1_description",
+          "users_post_v1_description"
         ]
       }
     },
     {
       "name": "Users",
-      "description": "HTTP APIs for working with users on Roblox Cloud, including inventory items, restrictions, subscriptions, and more.",
+      "description": "Retrieve user information, manage inventories, and restrict users from your experience. See the [Inventory Guide](/cloud/guides/inventory) for code examples.\n\nCommon use cases include:\n\n- User lookup: [Search users by username](#users_get_v1_users_search) or ID and [retrieve profile information](#Cloud_GetUser)\n- Inventory access: [List user-owned items](#Cloud_ListInventoryItems), badges, and collectibles\n- User restrictions: [Manage experience-level bans](#Cloud_UpdateUserRestriction__Using_Universes) and access restrictions\n",
       "x-roblox-tag-info": {
         "path": "users",
-        "content": "Lists all HTTP APIs for working with users, such as getting user information or all universes a user is following.",
+        "content": "HTTP APIs for working with users on Roblox Cloud, including inventory items, restrictions, subscriptions, and more.",
         "ordering": [
           "users_get_v1_users_search",
           "users_post_v1_usernames_users",

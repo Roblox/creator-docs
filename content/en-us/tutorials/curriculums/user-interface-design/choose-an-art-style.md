@@ -141,7 +141,7 @@ When outlining simple icons for your own experience, consider the following:
 - Icons are powerful because they can communicate a message no matter the player's language. As long as it doesn't impact player comprehension of your UI, **replace unnecessary text with icons** to improve localization efforts.
 - Many experiences of the same genre use icons that are stylistically similar, such as a sword icon that represents strength, or a beaker that represents magic. **Embrace the symbolism within your experience's genre** so players can understand your icons without additional guidance.
 
-If you don't know what types of icons are common within your experience's genre, check out the [Game UI Database](https://gameuidatabase.com/). This free resource tool for UI designers includes screenshots from hundreds of games of different genres that you can reference during your design process.
+If you don't know what types of icons are common within your experience's genre, check out the [Game UI Database](https://gameuidatabase.com/). This free resource tool for UI designers includes screenshots from hundreds of experiences of different genres that you can reference during your design process.
 
 ## Establish an interaction order
 

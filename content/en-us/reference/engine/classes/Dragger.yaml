@@ -41,7 +41,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
   - name: Dragger:MouseDown
     summary: |
       Initializes a dragging action, specifying which parts to use when
@@ -70,7 +71,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
   - name: Dragger:MouseMove
     summary: |
       Tries to move the currently dragged part to the point where MouseRay hits
@@ -91,7 +93,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
   - name: Dragger:MouseUp
     summary: |
       Stops the current dragging action (made by `Class.Dragger:MouseDown()`).
@@ -106,6 +109,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
 events: []
 callbacks: []

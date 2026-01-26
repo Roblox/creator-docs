@@ -201,7 +201,7 @@ To recreate the push to voice chat in the sample [Gingerbread Island - Voice Cha
 
 ## Add time-based chat
 
-**Time-based chat** is a voice chat configuration in which players are only able to speak and hear one another during a set period of time. Integrating time-based chat into your gameplay is useful when you want players to carefully plan how they communicate with each other during specific game phases, such as during round-based discussions or after cutscenes.
+**Time-based chat** is a voice chat configuration in which players are only able to speak and hear one another during a set period of time. Integrating time-based chat into your gameplay is useful when you want players to carefully plan how they communicate with each other during specific phases, such as during round-based discussions or after cutscenes.
 
 To recreate the time-based voice chat in the sample [Gingerbread Island - Voice Chat](https://www.roblox.com/games/91891961746476/Gingerbread-Island-Voice-Chat) place file:
 

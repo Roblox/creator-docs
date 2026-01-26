@@ -66,10 +66,8 @@ Giving players more points can make smashing buildings feel even more rewarding.
 
 ## Share with connections
 
-When you first publish an experience, it's automatically set to private. Making it public in the Game Settings menu will allow connections to be able to join with a link.
+When you first publish an experience, it's automatically set to private. Making it public in the **Experience Settings** menu will allow connections to be able to join with a link.
 
-1. In the **File** &rarr; **Game Settings** window, select **Permissions**.
+1. In the **File** &rarr; **Experience Settings** window, select **Permissions**.
 
 2. Choose **Public** and click **Save**.
-
-   <img src="../../assets/education/general/make-public.png" width="800" />

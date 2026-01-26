@@ -14,11 +14,9 @@ Now that you've completed the experience, here are a few ideas to take your expe
 
 One of the most exciting features of Roblox is that it's really easy to share your experience with connections. Currently your experience is probably private, meaning only you can play it. For your connections to see the experience, you need to make it public.
 
-1. Select **File** (top left of Studio) and click **Game Settings**.
+1. Select **File** (top left of Studio) and click **Experience Settings**.
 
 1. On the left bar, select **Permissions**, then choose **Public**.
-
-   <img src="../../assets/education/general/make-public.png" width="800" />
 
 1. Click the **Save** button.
 

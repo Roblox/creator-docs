@@ -47,7 +47,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Environment
   - name: TerrainDetail.ColorMapContent
     summary: |
       Determines the color of the surface. Only supports asset URIs as textures.
@@ -66,7 +67,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Environment
   - name: TerrainDetail.EmissiveMaskContent
     summary: |
       Determines the emissivity across the surface.
@@ -90,7 +92,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Environment
   - name: TerrainDetail.EmissiveStrength
     summary: |
       Determines the strength of emissive contribution.
@@ -116,7 +119,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Environment
   - name: TerrainDetail.EmissiveTint
     summary: |
       Determines the tinting color for emissive contribution.
@@ -134,7 +138,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Environment
   - name: TerrainDetail.Face
     summary: |
       The face this TerrainDetail overrides.
@@ -154,7 +159,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Environment
   - name: TerrainDetail.MaterialPattern
     summary: |
       Determines texture tiling method.
@@ -172,7 +178,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Environment
   - name: TerrainDetail.MetalnessMap
     summary: |
       Determines which parts of the surface are metal and are non-metal.
@@ -205,7 +212,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Environment
   - name: TerrainDetail.MetalnessMapContent
     summary: |
       Determines which parts of the surface are metal and are non-metal. Only
@@ -239,7 +247,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Environment
   - name: TerrainDetail.NormalMap
     summary: |
       Modifies the lighting of the surface by adding bumps, dents, cracks, and
@@ -291,7 +300,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Environment
   - name: TerrainDetail.NormalMapContent
     summary: |
       Modifies the lighting of the surface by adding bumps, dents, cracks, and
@@ -343,7 +353,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Environment
   - name: TerrainDetail.RoughnessMap
     summary: |
       Determines the apparent roughness across the surface.
@@ -368,7 +379,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Environment
   - name: TerrainDetail.RoughnessMapContent
     summary: |
       Determines the apparent roughness across the surface. Only supports asset
@@ -394,7 +406,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Environment
   - name: TerrainDetail.StudsPerTile
     summary: |
       Determines the scale of textures.
@@ -413,7 +426,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Environment
 methods: []
 events: []
 callbacks: []

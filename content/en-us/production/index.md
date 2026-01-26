@@ -32,7 +32,7 @@ power-ups, and creators can also earn Robux from [engagement-based payouts](../p
 - [Developer Products](../production/monetization/developer-products.md) - users can purchase
   multiple times. Great for in-experience currency purchases.
 
-- [Passes](../production/monetization/game-passes.md) - users can only purchase once.
+- [Passes](../production/monetization/passes.md) - users can only purchase once.
   Great for VIP passes or permanent power-ups.
 
 Both are sold for Robux at a price you choose. You can then trade Robux for real
@@ -59,7 +59,3 @@ You can promote your experience within the Roblox Ecosystem in multiple ways:
 
 Roblox offers a variety of [analytics](../production/analytics/index.md) features to help you chart your experience's growth, track user behavior and retention, and find
 opportunities for optimization.
-
-## Game design
-
-The Roblox Game Insights team provides [game design](../production/game-design/index.md) resources for designers of all levels to expand their knowledge and skills.

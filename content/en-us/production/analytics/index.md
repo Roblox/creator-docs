@@ -77,7 +77,7 @@ Your similar experience benchmarks are updated daily. Roblox does not use these 
 
 You can monitor the analytics of up to nine Roblox experiences by putting them into a **watchlist**. If you have analytics permissions for the experience, your watchlist provides the following analytics at a glance:
 
-- **Daily Active Users (DAU)**: Number of unique players who joined the game at least once in the given day.
+- **Daily Active Users (DAU)**: Number of unique players who joined the experience at least once in the given day.
 - **New Users**: Number of DAUs who are first-time users.
 - **Session Time**: Total play time divided by number of individual sessions each day.
 - **Day 1 Retention**: Percentage of new users who played again after their first session ended.

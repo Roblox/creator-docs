@@ -9,19 +9,17 @@ Congratulations on building your first obby with Roblox Studio! Now that you hav
 
 ## Share with others
 
-When you first publish an experience, it's automatically set to **private** so that you are the only one who can play your game. However, creating on Roblox is always more fun when you can share what you make with others, so let's set up your experience so that they can play too.
+When you first publish an experience, it's automatically set to **private** so that you are the only one who can play it. However, creating on Roblox is always more fun when you can share what you make with others, so let's set up your experience so that they can play too.
 
 To make your experience public:
 
 1. Using the steps from the last chapter, publish your experience so others can see your latest changes.
 
-1. In the top-left corner of your computer, click **File** &rang; **Game Settings**.
+1. In the top-left corner of your computer, click **File** &rang; **Experience Settings**.
 
-1. In the **Game Settings** window,
+1. In the settings window:
    1. Go to the left bar and select the **Permissions** tab. New settings display.
    1. Set **Playability** to **Public**.
-
-   <img src="../../../assets/education/general/make-public.png" width="800" />
 
 1. Click the **Save** button. Now everyone on Roblox can play your experience!
 

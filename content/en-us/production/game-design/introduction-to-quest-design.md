@@ -10,7 +10,7 @@ description: Introduction to Quest Design, achievements, and dailies.
 
 <br />
 
-Quests are a game mechanic in which players complete objectives in order to earn rewards like items, currency, or badges. Quests provide players with fresh goals and incentives, which can motivate them to play longer and more often, increasing their [engagement](../../production/analytics/engagement.md). They can also reduce boredom and provide a sense of progression and accomplishment that lead to better [retention](../../production/analytics/retention.md).
+Quests are an experience mechanic in which players complete objectives in order to earn rewards like items, currency, or badges. Quests provide players with fresh goals and incentives, which can motivate them to play longer and more often, increasing their [engagement](../../production/analytics/engagement.md). They can also reduce boredom and provide a sense of progression and accomplishment that lead to better [retention](../../production/analytics/retention.md).
 
 <Alert severity="info">
 For out-of-the-box functionality to create quests, see the [Missions](../../resources/feature-packages/missions.md) feature package.
@@ -28,7 +28,7 @@ The structure of a quest can vary from a single task to multiple tasks, all of w
 
 There are two common types of quests:
 
-- **Achievements:** Also known as badges on Roblox, are single-task quests that often require significant time and effort to complete. Earning a particularly challenging achievement is a source of pride, and badges allow players to show off their accomplishments to others. Achievements can also act as an indicator of player progression, representing milestones that they have achieved throughout their journey in a game. To learn how to implement achievements in your experience, see [Badges](../../production/publishing/badges.md).
+- **Achievements:** Also known as badges on Roblox, are single-task quests that often require significant time and effort to complete. Earning a particularly challenging achievement is a source of pride, and badges allow players to show off their accomplishments to others. Achievements can also act as an indicator of player progression, representing milestones that they have achieved throughout their journey. To learn how to implement achievements in your experience, see [Badges](../../production/publishing/badges.md).
 
    <figure>
       <img src="../../assets/game-design/introduction-to-quest-design/quest-design-0.png" alt="A close up view of an achievement badge for the Jailbreak experience that awards players who achieve the highest bounty in a busy server. The badge on the left-hand side displays a lightskinned blocky male avatar turned to his right to look at text that says Smooth Criminal." />
@@ -64,7 +64,7 @@ Though they use similar mechanics to task and reward players, quests, achievemen
 
 ### Provide goals
 
-One way to keep players engaged in a game is to provide them with a mixture of short, mid and long-term goals that allow them to feel frequent progress and give them something to aspire toward.
+One way to keep players engaged is to provide them with a mixture of short, mid and long-term goals that allow them to feel frequent progress and give them something to aspire toward.
 
 **Short-term goals** can be completed in a single play session and provide small, frequent moments of accomplishment. Because players must complete them within a single day, dailies should exclusively consist of short-term goals.
 
@@ -74,9 +74,9 @@ One way to keep players engaged in a game is to provide them with a mixture of s
 
 ### Surface features
 
-By creating quests that require players to explore different areas of the game or complete certain tasks, you can draw attention to the full breadth of the game's features and content. This can be especially helpful for games with large worlds or complex systems, as players might not realize all the game has to offer.
+By creating quests that require players to explore different areas or complete certain tasks, you can draw attention to the full breadth of the experience's features and content. This can be especially helpful for experiences with large worlds or complex systems, as players might not realize all the experience has to offer.
 
-In this example from [_Squishmallows_](https://www.roblox.com/games/7941853407/), one of the game's many locations, the campsite, is being surfaced. This quest might be the first time that a player learns that there is a campsite in the game, and the reward incentivizes them to explore the map to find it.
+In this example from [_Squishmallows_](https://www.roblox.com/games/7941853407/), one of the experience's many locations, the campsite, is being surfaced. This quest might be the first time that a player learns that there is a campsite in the world, and the reward incentivizes them to explore the map to find it.
 
   <figure>
       <img src="../../assets/game-design/introduction-to-quest-design/quest-design-8.png" alt="A pop-up UI in the Squishmallows experience that informs players what they need to do in a quest to obtain a reward." width="30%"/>
@@ -100,7 +100,7 @@ Quests can also teach players how to use those features by acting as tutorials. 
 
 ### Add session variety
 
-The longer a player plays a game, the more familiar they become with its systems and content. When players are incentivized to try new things, they are less likely to fall into gameplay routines that become boring over time. Quests can add variety to a player's session by encouraging them to engage with content or systems that they might not have otherwise, or to revisit ones that they have not engaged with recently. This can be especially helpful for games with repetitive gameplay, or those that have less frequent updates, but any game can benefit by keeping its players engaged and ensuring that all of its areas remain active.
+The longer a player plays an experience, the more familiar they become with its systems and content. When players are incentivized to try new things, they are less likely to fall into gameplay routines that become boring over time. Quests can add variety to a player's session by encouraging them to engage with content or systems that they might not have otherwise, or to revisit ones that they have not engaged with recently. This can be especially helpful for experiences with repetitive gameplay, or those that have less frequent updates, but any experience can benefit by keeping its players engaged and ensuring that all of its areas remain active.
 
   <figure>
       <img src="../../assets/game-design/introduction-to-quest-design/quest-design-3.png" alt="Quest UI in The Wild West experience that displays tiles in various colors to inform players what they need to do for each tile's quest to obtain a reward." width="70%"/>
@@ -111,9 +111,9 @@ The longer a player plays a game, the more familiar they become with its systems
 
 A **resource drip** is a source that provides small amounts of virtual resources like currencies, XP, or crafting ingredients that add up over time, allowing players to plan their play sessions and resource spending around them.
 
-Earning even small amounts regularly encourages players to spend because they know that there is always more to be found. When sources are scarce or too effort-intensive, it can discourage participation in the overall economy and lead to negative impressions about the fairness of the game's design.
+Earning even small amounts regularly encourages players to spend because they know that there is always more to be found. When sources are scarce or too effort-intensive, it can discourage participation in the overall economy and lead to negative impressions about the fairness of the experience's design.
 
-An experience's economy is tied to its core loop. When a player engages with the core mechanics of the game, they naturally earn and spend resources. Players who do not have resources to spend cannot make the purchases that enable or enhance their activity in the rest of the game, such as upgraded tools and abilities. Facilitating investment in an experience's economy and a healthy interaction with the core loop can also lead to improved retention.
+An experience's economy is tied to its core loop. When a player engages with the core mechanics of the experience, they naturally earn and spend resources. Players who do not have resources to spend cannot make the purchases that enable or enhance their activity in the rest of the experience, such as upgraded tools and abilities. Facilitating investment in an experience's economy and a healthy interaction with the core loop can also lead to improved retention.
 
 For these reasons, it can be beneficial to drip-feed resources to players over time, and one way to do that is through quest rewards. Dailies are an excellent delivery mechanism for currencies because the rewards are reliable, small, and valuable enough to encourage players to return every day.
 
@@ -131,15 +131,15 @@ Limited-time content is any type of consumable or collectible content like quest
       <figcaption>Limited-time seasonal events</figcaption>
     </figure>
 
-Because it is so effective at driving player engagement and monetization, limited-time content is an essential element of a game's live operations (LiveOps). Like other forms of limited-time content, quests that are only available for a brief time create a sense of urgency and excitement, encouraging players to log in regularly throughout the event's duration in order to earn the limited-time rewards. These temporary quests are common during seasonal events, such as Halloween or anniversary celebrations.
+Because it is so effective at driving player engagement and monetization, limited-time content is an essential element of an experience's live operations (LiveOps). Like other forms of limited-time content, quests that are only available for a brief time create a sense of urgency and excitement, encouraging players to log in regularly throughout the event's duration in order to earn the limited-time rewards. These temporary quests are common during seasonal events, such as Halloween or anniversary celebrations.
 
-To learn more about live operations and maintaining and updating a live game, see [LiveOps essentials](../../production/game-design/liveops-essentials.md).
+To learn more about live operations and maintaining and updating a live experience, see [LiveOps essentials](../../production/game-design/liveops-essentials.md).
 
 ### Facilitate progression
 
-A **progression system** can help players achieve them by promoting engagement with the game's [core loop](../../production/game-design/core-loops.md). As players engage with the core systems of the game, they progress through the loop and make progress on their own goals.
+A **progression system** can help players achieve them by promoting engagement with the experience's [core loop](../../production/game-design/core-loops.md). As players engage with the core systems of the experience, they progress through the loop and make progress on their own goals.
 
-Quests can act as a progression system by providing a structured way to advance through the game's content. With each quest completed, players earn rewards like weapons or skill points that help to prepare them for the next challenge.
+Quests can act as a progression system by providing a structured way to advance through the experience's content. With each quest completed, players earn rewards like weapons or skill points that help to prepare them for the next challenge.
 
 [Season passes](../../production/game-design/season-pass-design.md) are progression systems that incorporate quests. In [_Dragon Adventures_](https://www.roblox.com/games/3475397644/), players complete quests called "missions" in order to earn points toward reward tiers. The quests are all activities that are tied to the core loop mechanics of hatching and raising dragons. As players progress through the tiers, they unlock more rewards, culminating in unlocking an exclusive dragon as the final season reward. Through this UI, players can track their progress through the tiers as the deadline for the end of the season approaches.
 
@@ -150,20 +150,20 @@ Quests can act as a progression system by providing a structured way to advance 
 
 ### Encourage new gameplay
 
-Quests can encourage players to play the game in more interesting and challenging ways that they might not have tried before. In this example from Jailbreak, players are required to not only shoot down an enemy helicopter, but to do so while riding in a vehicle – a challenge that they might never attempt otherwise. As evidenced by the "impossible" rating, achieving this badge likely requires many attempts, during which the player is highly engaged.
+Quests can encourage players to play in more interesting and challenging ways that they might not have tried before. In this example from Jailbreak, players are required to not only shoot down an enemy helicopter, but to do so while riding in a vehicle – a challenge that they might never attempt otherwise. As evidenced by the "impossible" rating, achieving this badge likely requires many attempts, during which the player is highly engaged.
 
   <figure>
       <img src="../../assets/game-design/introduction-to-quest-design/quest-design-4.png" alt="A close up view of an achievement badge for the Jailbreak experience that awards players who shoot down a helicopter while riding in a vehicle. The badge on the left-hand side displays a lightskinned blocky male avatar turned to his left to look at text that says Top Gun." width="70%"/>
       <figcaption>Achievement badge in *Jailbreak*</figcaption>
     </figure>
 
-These alternate gameplay goals can be especially engaging for experienced players who might have tried everything the game has to offer. Without new challenges, even the most dedicated players eventually grow bored and move on to other games. Achievements are one way to keep them engaged between content updates.
+These alternate gameplay goals can be especially engaging for experienced players who might have tried everything the experience has to offer. Without new challenges, even the most dedicated players eventually grow bored and move on to other experiences. Achievements are one way to keep them engaged between content updates.
 
 ### Deliver narrative
 
-In addition to their objectives, quantities, and rewards, quests can optionally include **flavor text** that provides bits of narrative, and backstory about the game's world. While not strictly necessary, especially in games without narrative elements, story-based quests can enrich the player's experience and make them feel more immersed in the game world.
+In addition to their objectives, quantities, and rewards, quests can optionally include **flavor text** that provides bits of narrative, and backstory about the experience's world. While not strictly necessary, especially in experiences without narrative elements, story-based quests can enrich the player's experience and make them feel more immersed in the 3D world.
 
-In [_Spellbound_](https://www.roblox.com/games/6468323505/), the player accepts a quest from an NPC named Moritor, who needs help retrieving a potion to cure his baldness. The text tells the player not just what to do, but why, and it does so in a way that contributes to the game's humorous tone and experience. Even the quest's reward, a hat, is thematically tied to the story.
+In [_Spellbound_](https://www.roblox.com/games/6468323505/), the player accepts a quest from an NPC named Moritor, who needs help retrieving a potion to cure his baldness. The text tells the player not just what to do, but why, and it does so in a way that contributes to the experience's humorous tone and experience. Even the quest's reward, a hat, is thematically tied to the story.
 
   <figure>
       <img src="../../assets/game-design/introduction-to-quest-design/quest-design-5.png" alt="Quest UI in the form of a red scroll that displays both narrative from the blocky male character to the right of the scroll, as well as an objective prompt and rewards players will earn if they complete the quest." width="70%"/>

@@ -143,7 +143,7 @@ Roblox uses the following formula to throttle requests for this API based on the
 
 `max requests per minute per experience = 600 + (1.5 * number_of_concurrent_users)`
 
-There is also a combined limit of 150 requests per minute, per game server for all Open Cloud APIs.
+There is also a combined limit of 150 requests per minute, per experience server for all Open Cloud APIs.
 
 ## Supported languages
 

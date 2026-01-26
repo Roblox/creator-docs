@@ -28,7 +28,7 @@ If Assistant fails, add more details to your prompt and try again. Use instance 
   </tr>
   <tr>
     <td>How can I design a core loop?</td>
-    <td>Help me design a fun core loop for my game. I want to build a game where players can hunt treasure as pirates. They can also buy and upgrade pirate ships and battle each other.</td>
+    <td>Help me design a fun core loop. I want to build a game where players can hunt treasure as pirates. They can also buy and upgrade pirate ships and battle each other.</td>
   </tr>
 </table>
 

@@ -6,11 +6,11 @@ description: UI and UX design in Roblox
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/lOOvOIJoMi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <br />
-The _user interface_ (UI) combines artistic visual design with communication-centric information design to produce menus, shop layouts, heads-up displays (HUDs) and other interfaces that players interact with. The _user experience_ (UX) relates to how players interact with the game, how they make their choices known to the game, and how they move from one choice to the next. While UI and UX often work collaboratively, UX carries a more significant focus on interactivity and the player's experience rather than the visual and informational design of the UI.
+The _user interface_ (UI) combines artistic visual design with communication-centric information design to produce menus, shop layouts, heads-up displays (HUDs) and other interfaces that players interact with. The _user experience_ (UX) relates to how players interact with the experience, how they make their choices known, and how they move from one choice to the next. While UI and UX often work collaboratively, UX carries a more significant focus on interactivity and the player's experience rather than the visual and informational design of the UI.
 
 ## UI
 
-The UI shares vital information like hit points, quest objectives, and prices that allow players to make decisions and navigate the game. Because it is often the primary way in which games communicate with the player, UI is critical to players' experience. Poorly designed UI can leave players confused and frustrated and lead to poor retention, while expertly designed UI can contribute to engagement and monetization. Effective designed UI employs the following principles:
+The UI shares vital information like hit points, quest objectives, and prices that allow players to make decisions and navigate the experience. Because it is often the primary way in which games communicate with the player, UI is critical to players' experience. Poorly designed UI can leave players confused and frustrated and lead to poor retention, while expertly designed UI can contribute to engagement and monetization. Effective designed UI employs the following principles:
 
 - Prioritization
 - Attention
@@ -28,7 +28,7 @@ Sharing the most significant information first is known as the _Hierarchy of Inf
 - What information do they need in order to make those choices?
 - How frequently will they engage in those choices?
 
-Important information and features change during the course of a game, depending on factors like the role the player assumes, their location in the game world, and the items they hold. The UI can be designed to present only what matters contextually – swapping out the buttons and information depending on what's useful in each context. This ensures that players always have what they need, without the clutter of everything that they don't.
+Important information and features change depending on factors like the role the player assumes, their location in the 3D world, and the items they hold. The UI can be designed to present only what matters contextually – swapping out the buttons and information depending on what's useful in each context. This ensures that players always have what they need, without the clutter of everything that they don't.
 
 <h4>Examples</h4>
 
@@ -131,17 +131,17 @@ Headers and titles containing significant high-level information should be large
     <figcaption> Clothing Shop in [Winds of Fortune](https://www.roblox.com/games/7714627632/)</figcaption>
   </figure>
 
-Once the visual language has been designed, it can be documented in a _Style Guide_, a set of rules and examples that help everyone on the team understand how to apply the language consistently across the game.
+Once the visual language has been designed, it can be documented in a _Style Guide_, a set of rules and examples that help everyone on the team understand how to apply the language consistently across the experience.
 
 ### Conventions
 
-Conventions are commonly-applied design choices that are seen across many different games. Some examples include:
+Conventions are commonly-applied design choices that are seen across many different experiences. Some examples include:
 
 - An X symbol on a button that closes the dialog when pressed
 - The color gray applied to buttons that are currently unusable
 - A lock icon overlaying a button or feature to indicate that the player has not yet earned or unlocked it
 
-Given their widespread use, players are typically familiar with such conventions. Leveraging this familiarity can make an interface more intuitive and lessen the need for game-specific instructions. Playing games within your target genre can help identify conventions players may recognize. A UI designer may opt for a unique approach to better fit their game, but knowing these conventions informs their decision-making process.
+Given their widespread use, players are typically familiar with such conventions. Leveraging this familiarity can make an interface more intuitive and lessen the need for game-specific instructions. Playing games within your target genre can help identify conventions players may recognize. A UI designer may opt for a unique approach to better fit their experience, but knowing these conventions informs their decision-making process.
 
 <GridContainer numColumns="2">
   <figure>
@@ -156,7 +156,7 @@ Given their widespread use, players are typically familiar with such conventions
 
 ### Consistency
 
-Whatever decisions a UI designer makes, they should consistently apply them throughout the game. Consistency helps players learn to navigate the game more efficiently and prevents confusion and frustration.
+Whatever decisions a UI designer makes, they should consistently apply them throughout the experience. Consistency helps players learn to navigate the experience more efficiently and prevents confusion and frustration.
 
 Here are some examples of UI consistency in a game:
 
@@ -165,29 +165,29 @@ Here are some examples of UI consistency in a game:
 - Close buttons are always square, red, and contain a white X, appearing only in the top right corner of a dialog.
 - Whenever a player can't afford an item in the shop, the price displays in red.
 
-These choices are deliberate, aiming to facilitate player comprehension and navigation. By applying them consistently, they enable players to associate related elements, identify important items, develop muscle memory, make swift informed decisions, and spend more time immersed in the game.
+These choices are deliberate, aiming to facilitate player comprehension and navigation. By applying them consistently, they enable players to associate related elements, identify important items, develop muscle memory, make swift informed decisions, and spend more time immersed in the experience.
 
 ## UX
 
-UX design relates to how players interact with the game, how they make their choices known to the game, and how they move from one choice to the next. Although UX often works hand-in-hand with user interface (UI), it is more focused on interactivity and player experience than the visual and informational design of UI.
+UX design relates to how players interact with the experience, how they make their choices known, and how they move from one choice to the next. Although UX often works hand-in-hand with user interface (UI), it is more focused on interactivity and player experience than the visual and informational design of UI.
 
 ### Understanding players
 
-A primary goal of the UX designer is to create interactions and flows that are intuitive, unobtrusive and convenient for players to use. That process starts with an understanding of the players themselves, the intended audience for a game. When identifying players of an experience, consider the following:
+A primary goal of the UX designer is to create interactions and flows that are intuitive, unobtrusive and convenient for players to use. That process starts with an understanding of the players themselves, the intended audience for an experience. When identifying players of an experience, consider the following:
 
 - **Demographics:** Demographics help to inform design choices by revealing generalized information about a player group. For example, younger players are generally more likely to play on mobile or tablet devices than personal computers, so games intended for that audience often prioritize designing and polishing the mobile user experience.
 
 - **Experience level:** Developers may choose to design for players with little gaming experience, a significant amount, or somewhere in between. Interactions that are familiar to experienced players, such as tapping a number key to equip an item in a toolbar, or pressing c to crouch, may not be obvious to inexperienced players, and require additional messaging or training.
 
-- **Genre familiarity:** Similar to general experience level, genre familiarity reflects players' experience level with a specific type of game. Games that fall into popular genres on Roblox, like Roleplay, Survival Horror, and First-Person Shooter, are likely to have many potential players who have played a similar game before. Games in other genres may have fewer experienced players, but that experience gap can be overcome through tutorials and usability.
+- **Genre familiarity:** Similar to general experience level, genre familiarity reflects players' experience level with a specific type of experience. Games that fall into popular genres on Roblox, like roleplay, survival horror, and first-person shooter, are likely to have many potential players who have played a similar genre before. Games in other genres may have fewer experienced players, but that experience gap can be overcome through tutorials and usability.
 
-- **Gameplay style:** Players often favor specific types of play, ranging from competition and achievement-collecting to exploration and cooperation. These preferences are not only reflected in the game mechanics players prefer but also influence UX decisions. Designers consider which interactions to prioritize, which to polish, and which to present to the players. They also take into account the mindset players will have when they engage with these interactions and the emotions they aim to evoke from them.
+- **Gameplay style:** Players often favor specific types of play, ranging from competition and achievement-collecting to exploration and cooperation. These preferences are not only reflected in the experience mechanics players prefer but also influence UX decisions. Designers consider which interactions to prioritize, which to polish, and which to present to the players. They also take into account the mindset players will have when they engage with these interactions and the emotions they aim to evoke from them.
 
 After considering these factors and selecting a target player group (or groups), get to know them by meeting them, playing with them, and learning about their goals and preferences to better inform design choices.
 
 ### Design interactions
 
-_Interactions_ are features that allow players to experience and communicate their choices in a game. UX designers want those interactions to be intuitive, and require as little explanation as possible. To do this they utilize:
+_Interactions_ are features that allow players to experience and communicate their choices in an experience. UX designers want those interactions to be intuitive, and require as little explanation as possible. To do this they utilize:
 
 - Conventions
 - Metaphors
@@ -195,7 +195,7 @@ _Interactions_ are features that allow players to experience and communicate the
 
 <h4>Conventions</h4>
 
-_Conventions_ are UX designs and principles that players may already be familiar with from other games.
+_Conventions_ are UX designs and principles that players may already be familiar with from other experiences.
 
 <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-16.png" width="40%"/>
@@ -222,7 +222,7 @@ _Metaphors_ relate an abstract concept to a more familiar one, creating a shortc
 
 <h4>Feedback</h4>
 
-Communication from the game to the player is known as _feedback_. Feedback helps players understand that an action that they have taken has had an effect in the game. It can contribute to learning how the game functions and add an extra layer of polish that makes a feature more satisfying to use. Some examples of feedback include:
+Communication from the experience to the player is known as _feedback_. Feedback helps players understand that an action that they have taken. It can contribute to learning how the experience functions and add an extra layer of polish that makes a feature more satisfying to use. Some examples of feedback include:
 
 - An enemy playing its "hit" reaction animation to indicate that it has taken damage from the player's weapon
 - A button that changes color to indicate hover, depressed, and released (selected) state

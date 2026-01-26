@@ -8,7 +8,7 @@ A **developer product** is an item or ability that a user can purchase more than
 <img src="../../assets/monetization/developer-products/Buy-Product-Example.jpg" />
 
 <Alert severity="info">
-   For items or abilities that a user should only purchase **once**, such as a special weapon or a permanent power-up, see [Passes](../../production/monetization/game-passes.md).
+   For items or abilities that a user should only purchase **once**, such as a special weapon or a permanent power-up, see [Passes](../../production/monetization/passes.md).
 </Alert>
 
 ## Create a developer product
@@ -337,13 +337,17 @@ end
 
 ### Display your top developer products
 
-<Alert severity="info">
+<Alert severity="warning">
 If your experience has had no item sales in the past 28 days, `RecommendTopProductsAsync` returns an empty list. At least one purchase within the last 28 days is required for this API to generate recommendations.
 </Alert>
 
 `Class.MarketplaceService.RecommendTopProductsAsync|RecommendTopProductsAsync` takes an array of `Enum.InfoType|InfoType` values and returns up to 50 items a user is most likely to engage with and purchase. You can use this method to create a "Top Picks" section in your in-experience store.
 
 If no recommendations can be determined, `RecommendTopProductsAsync` returns 0 items.
+
+<Alert severity="warning">
+In rare cases, calls to the ranking model can be slow. To help prevent added lately for users, we recommend using `task.spawn` to make the call to `RecommendTopProductgs` non-blocking.
+</Alert>
 
 	<figcaption>Example: A "Top Picks" tab in an in-experience store</figcaption>
   <img src="../../assets/monetization/developer-products/StoreTopPicks.png" alt="Top Picks tab of an in-experience store." width="90%" />

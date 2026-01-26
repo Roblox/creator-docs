@@ -124,7 +124,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - ServerCommunication
   - name: MessagingService:SubscribeAsync
     summary: |
       Begins listening to the given topic.
@@ -198,6 +199,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - ServerCommunication
 events: []
 callbacks: []

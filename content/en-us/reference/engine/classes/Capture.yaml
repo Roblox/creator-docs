@@ -37,7 +37,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - Capture
   - name: Capture.CaptureType
     summary: ''
     description: ''
@@ -55,7 +56,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - Capture
   - name: Capture.FilePathString
     summary: ''
     description: ''
@@ -73,7 +75,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - Capture
   - name: Capture.LocalId
     summary: ''
     description: ''
@@ -91,7 +94,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - Capture
   - name: Capture.SourcePlaceId
     summary: ''
     description: ''
@@ -109,7 +113,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - Capture
   - name: Capture.SourceUniverseId
     summary: ''
     description: ''
@@ -127,7 +132,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - Capture
 methods: []
 events: []
 callbacks: []

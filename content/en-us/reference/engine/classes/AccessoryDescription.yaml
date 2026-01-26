@@ -89,9 +89,10 @@ properties:
     summary: |
       Whether the `Class.Accessory` is layered or rigid.
     description: |
-      Whether the `Class.Accessory` is layered or rigid. This will be updated
-      after calling `Class.Humanoid:ApplyDescriptionAsync()` if this property
-      doesn't match the actual `Class.Accessory` contents.
+      Whether the `Class.Accessory` is layered or rigid. This is intended to be
+      read-only. It will be corrected after calling
+      `Class.Humanoid:ApplyDescriptionAsync()` if this property doesn't match
+      the actual `Class.Accessory` contents.
     code_samples: []
     type: boolean
     tags: []

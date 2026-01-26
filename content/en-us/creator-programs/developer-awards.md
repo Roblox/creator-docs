@@ -1,9 +1,9 @@
 ---
 title: Developer Awards
-description: Developer Awards is a data-driven program designed to reward developers for reaching significant milestones in their games.
+description: Developer Awards is a data-driven program designed to reward developers for reaching significant milestones.
 ---
 
-Developer Awards is a data-driven program designed to reward developers for reaching significant milestones in their games. The program aims to recognize and celebrate developers' achievements and contributions to the platform. By meeting specific criteria, developers can earn awards that reflect their dedication and success.
+Developer Awards is a data-driven program designed to reward developers for reaching significant milestones. The program aims to recognize and celebrate developers' achievements and contributions to the platform. By meeting specific criteria, developers can earn awards that reflect their dedication and success.
 
 <figure>
 <Chip

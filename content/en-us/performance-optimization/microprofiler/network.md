@@ -5,7 +5,7 @@ description: The MicroProfiler provides detailed information on network usage wi
 
 The MicroProfiler also lets you capture and view network traffic, which can help you identify causes of high latency and loading problems in your experiences.
 
-Network data is available only in frame dumps, not in the real-time overlay. If you encounter lag or other issues that you suspect are network-related, that's a great time to [save MicroProfiler data](index.md#save-frame-data).
+Network data is available **only in frame dumps from the desktop client or Studio**, not in the real-time overlay. If you encounter lag or other issues that you suspect are network-related, that's a great time to [save MicroProfiler data](index.md#save-frame-data).
 
 ## Capture network data
 

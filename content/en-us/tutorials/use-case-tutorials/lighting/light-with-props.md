@@ -3,7 +3,7 @@ title: Light with props
 description: The process for creating light sources out of props.
 ---
 
-While overall world lighting is globally controlled through the `Class.Lighting` service, games can also include in-game **light sources** like lamps, torches, spotlights, TV screens, etc.
+While overall world lighting is globally controlled through the `Class.Lighting` service, experiences can also include in-game **light sources** like lamps, torches, spotlights, TV screens, etc.
 
 ![alt](../../../assets/tutorials/lighting-with-props/Misty-Harbor-Banner.jpg)
 

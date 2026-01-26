@@ -145,7 +145,7 @@ The following flow chart displays the user flow of a player entering and playing
 It's important to develop user flows for everything players can do in your experience because it allows you to assess where and how you want them to complete tasks, and anticipate where you can alleviate the pain points for anyone who follows their own path. For example, if you were to develop additional user flows for the sample laser tag experience, what happens when players:
 
 - Quit a round before the end condition is met?
-- Leave the game while joining a team?
+- Leave the experience while joining a team?
 - Receive a phone call in the middle of a round?
 - Lose their connection to the round for less than 15 seconds?
 

@@ -5,12 +5,13 @@
 name: PyramidHandleAdornment
 type: class
 memory_category: Instances
-summary: A pyramid-shaped handle that can be adorned to a `Class.BasePart`.
-description: |-
+summary: |
+  A pyramid-shaped handle that can be adorned to a `Class.BasePart`.
+description: |
   `PyramidHandleAdornment` is a pyramid-shaped handle that can be adorned to a
   `Class.BasePart`. If parented to a player's `Class.PlayerGui` or the
-  `Class.CoreGui`, handles can listen to input events for purposes such as making
-  dragger tools.
+  `Class.CoreGui`, handles can listen to input events for purposes such as
+  making dragger tools.
 code_samples: []
 inherits:
   - HandleAdornment
@@ -19,8 +20,10 @@ tags: []
 deprecation_message: ''
 properties:
   - name: PyramidHandleAdornment.Height
-    summary: Height of the pyramid adornment.
-    description: The height of the pyramid adornment in studs.
+    summary: |
+      Height of the pyramid adornment.
+    description: |
+      The height of the pyramid adornment in studs.
     code_samples: []
     type: float
     tags: []
@@ -55,10 +58,11 @@ properties:
       - Basic
       - UI
   - name: PyramidHandleAdornment.Sides
-    summary: Number of sides for the pyramid adornment.
-    description: |-
-      The number of sides for the pyramid adornment. Default is `4`, minimum is `3`,
-      and maximum is `32`.
+    summary: |
+      Number of sides for the pyramid adornment.
+    description: |
+      The number of sides for the pyramid adornment. Default is `4`, minimum is
+      `3`, and maximum is `32`.
     code_samples: []
     type: int
     tags: []
@@ -75,8 +79,10 @@ properties:
       - Basic
       - UI
   - name: PyramidHandleAdornment.Size
-    summary: Size of the pyramid adornment's base.
-    description: The size of the pyramid adornment's base in studs.
+    summary: |
+      Size of the pyramid adornment's base.
+    description: |
+      The size of the pyramid adornment's base in studs.
     code_samples: []
     type: float
     tags: []

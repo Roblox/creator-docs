@@ -378,11 +378,11 @@ To recreate the one shot object interaction 3D audio in the sample [Gingerbread 
 
 ### Character dialogue
 
-Providing directional audio from your non-playable characters (NPC) is helpful to guide players toward points of interest within their environment, and add depth to their interactions with other characters. In fact, in narrative-driven games, many game designers strategically use character dialogue to indirectly teach players about their character, ally and enemy characters, or the world itself.
+Providing directional audio from your non-playable characters (NPC) is helpful to guide players toward points of interest within their environment, and add depth to their interactions with other characters. In fact, in narrative-driven experiences, many designers strategically use character dialogue to indirectly teach players about their character, ally and enemy characters, or the world itself.
 
 Common examples of this technique include:
 
-- **Dialogue style** to set the tone of your game.
+- **Dialogue style** to set the tone of your experience.
 - **Banter** to teach players about character relationships.
 - **Enemy conversations** to confess motivations or their position in relation to the player.
 - **Player characters speaking their thoughts aloud** to gently guide the player to what they should do next, such as heal themselves, move to another location, or find an item.

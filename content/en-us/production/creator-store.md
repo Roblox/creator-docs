@@ -20,7 +20,7 @@ Roblox performs both human and automated asset moderation on a proactive and rea
 In addition, the Creator Store **restricts** use of the following practices to ensure asset safety:
 
 - **Obscuring engine features within scripts**, including LuaVMs, `Global.LuaGlobals.getfenv()`, and `Global.LuaGlobals.setfenv()`.
-- **Requiring remote assets,** including `Global.RobloxGlobals.require(assetId)`, `Global.LuaGlobals.loadstring()`, `Class.InsertService:LoadAsset()`, and `Class.ModuleScript.LinkedSource`. Assets that may look useful on the surface could load another "virus" asset at runtime.
+- **Requiring remote assets,** including `Global.RobloxGlobals.require(assetId)`, `Global.LuaGlobals.loadstring()`, `Class.InsertService:LoadAsset()`, `Class.AssetService:LoadAssetAsync()`, and `Class.ModuleScript.LinkedSource`. Assets that may look useful on the surface could load another "virus" asset at runtime.
 - **Including obfuscated code**. For publicly-shared assets, it's important for creators to understand what they are putting into their experiences. If code is obfuscated, creators cannot trust that the script is only doing what it should be doing.
 - **Extremely large scripts**. Assets with unnecessarily large scripts, including multiple repeat lines or large strings that are unused, especially if they cause rendering issues in editors.
 

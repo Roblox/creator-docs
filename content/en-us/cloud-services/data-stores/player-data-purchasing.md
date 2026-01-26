@@ -145,7 +145,7 @@ Even though Roblox only allows a client to be connected to one server at a time,
 3. On server A, some code connected to the `Class.Players.PlayerRemoving|PlayerRemoving` event yields before the player's data is saved. Before this operation completes, the player joins server B.
 4. The performance of server A has degraded to the point that the final save is delayed until after the player joins server B.
 
-These scenarios should be rare, but they do occur, particularly in situations where a player disconnects from one server and connects to another in rapid succession (for example, while teleporting). Some malicious users might even attempt to abuse this behavior to complete actions without them persisting. This can be particularly impactful in games that allow players to trade and is a common source of item duplication exploits.
+These scenarios should be rare, but they do occur, particularly in situations where a player disconnects from one server and connects to another in rapid succession (for example, while teleporting). Some malicious users might even attempt to abuse this behavior to complete actions without them persisting. This can be particularly impactful in experiences that allow players to trade and is a common source of item duplication exploits.
 
 Session locking addresses this vulnerability by ensuring that when a player's `Class.GlobalDataStore|DataStore` key is first read by the server, the server atomically writes a lock to the key's metadata inside the same `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` call. If this lock value is present when any other server attempts to read or write the key, the server does not proceed.
 
@@ -228,7 +228,7 @@ The comments in `ReceiptProcessor` outline the approach:
 
    Because this system uses session locking, this check also verifies that the in-memory data is the most up-to-date version.
 
-   If the player's data hasn't loaded yet (which is expected when a player joins a game), wait for the player's data to load. The system also listens for the player leaving the game before their data loads, as it should not yield indefinitely and block this callback from being invoked again on this server for this purchase if the player rejoins.
+   If the player's data hasn't loaded yet (which is expected when a player joins a game), wait for the player's data to load. The system also listens for the player leaving the experience before their data loads, as it should not yield indefinitely and block this callback from being invoked again on this server for this purchase if the player rejoins.
 
 1. Verify the `PurchaseId` is not already recorded as processed in the player data.
 
@@ -254,7 +254,7 @@ The comments in `ReceiptProcessor` outline the approach:
 
 ### Background
 
-Modules that provide an interface for game code to synchronously read and write player session data are common in Roblox experiences. This section covers `PlayerData.Server` and `PlayerData.Client`.
+Modules that provide an interface for code to synchronously read and write player session data are common in Roblox experiences. This section covers `PlayerData.Server` and `PlayerData.Client`.
 
 ### Approach
 
@@ -308,7 +308,7 @@ Modules that provide an interface for game code to synchronously read and write 
 
 <img src="../../assets/data/player-data-purchasing/data-save-diagram.png" alt="A process diagram illustrating the saving system" width="60%" />
 
-1. When the player leaves the game, the system takes the following steps:
+1. When the player leaves the experience, the system takes the following steps:
 
    1. Check if it is safe to write the player's data to the data store. Scenarios where it would be unsafe include the player's data failing to load or still undergoing loading.
    1. Make a request through the `SessionLockedDataStoreWrapper` to write the current in-memory data value to the data store and remove the session lock once complete.

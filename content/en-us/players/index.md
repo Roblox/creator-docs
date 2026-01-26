@@ -161,7 +161,7 @@ The `Class.StarterGear` container clones its contents to the user's `Class.Playe
 
 Unlike `Class.StarterPack`, `Class.Player.StarterGear` isn't a service but rather a child of each `Class.Player` object, so its contents are user-specific. Each user can have different `Class.Tool` objects within their `Class.Player.StarterGear`. To use `Class.Player.StarterGear`, enable Gear in your experience's settings page under **Permissions**. On the permissions page, you can enable by gear by its type. To disable gear, deselect its type.
 
-Always test games after adding Gear to them to check that users can't easily abuse them there. Gear includes `Class.Script` objects and allows the player to perform actions that you might not consider. For example, a navigational gear might allow the player to access a part of the map that you don't want them to. Weapons allow players with gear to damage other players, possibly without retribution or retaliation.
+Always test experiences after adding Gear to them to check that users can't easily abuse them there. Gear includes `Class.Script` objects and allows the player to perform actions that you might not consider. For example, a navigational gear might allow the player to access a part of the map that you don't want them to. Weapons allow players with gear to damage other players, possibly without retribution or retaliation.
 
 ### PlayerGui
 

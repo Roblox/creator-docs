@@ -190,7 +190,7 @@ These calls happen automatically for every user who joins, so monitoring this me
 
 ### Monitor the metric
 
-The primary goal during the first 60 seconds of a game join is to stream and load your experience's assets (meshes, images, sounds, etc.). Ideally, the asset delivery service is the most-called API during this key time span.
+The primary goal during the first 60 seconds of a player joining is to stream and load your experience's assets (meshes, images, sounds, etc.). Ideally, the asset delivery service is the most-called API during this key time span.
 
 The metric is updated hourly so that you can quickly check it after publishing a new version of your experience.
 

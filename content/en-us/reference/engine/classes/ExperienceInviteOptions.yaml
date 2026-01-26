@@ -41,7 +41,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Social
   - name: ExperienceInviteOptions.InviteUser
     summary: |
       Roblox `Class.Player.UserId|UserId` of the specific connection to invite.
@@ -61,7 +62,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Social
   - name: ExperienceInviteOptions.LaunchData
     summary: |
       Used to set a parameter in `Class.Player:GetJoinData()` when a connection
@@ -83,7 +85,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Social
   - name: ExperienceInviteOptions.PromptMessage
     summary: |
       Custom text shown on the invite prompt for the sending player.
@@ -104,7 +107,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Social
 methods: []
 events: []
 callbacks: []

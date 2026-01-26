@@ -27,7 +27,7 @@ The adapter parts perform the following:
 
 ## Enable the R6 to R15 Adapter
 
-You can enable the R6 to R15 Adapter by setting the `Class.Workspace.AvatarUnificationMode|AvatarUnificationMode` property in `Class.Workspace`. You can only access this property if **Avatar Type** is set to `R6` in Studio's **File**&nbsp;⟩ **Game Settings** window. At this time, the **Default** setting disables unification mode.
+You can enable the R6 to R15 Adapter by setting the `Class.Workspace.AvatarUnificationMode|AvatarUnificationMode` property in `Class.Workspace`. You can only access this property if **Avatar Type** is set to `R6` in Studio's **File**&nbsp;⟩ **Experience Settings** window. At this time, the **Default** setting disables unification mode.
 
 To enable the R6 to R15 Adapter:
 
@@ -36,9 +36,9 @@ To enable the R6 to R15 Adapter:
 
 ## Known limitations
 
-In a majority of cases, the R6 to R15 Adapter works out-of-the-box with the systems of a R6 experience. In rare cases, there may be conflicts with custom systems that handle game security, or character-related behavior. See the following for a list of potential limitations or conflicts that you may encounter when using the R6 to R15 Adapter.
+In a majority of cases, the R6 to R15 Adapter works out-of-the-box with the systems of a R6 experience. In rare cases, there may be conflicts with custom systems that handle security, or character-related behavior. See the following for a list of potential limitations or conflicts that you may encounter when using the R6 to R15 Adapter.
 
-### Game security
+### Security
 
 Some R6 experiences with active cheat detection can interpret the Luau script injection as an attempt to circumvent the security.
 
@@ -54,7 +54,7 @@ Experiences that check the avatar rig type and include solutions specific for ea
 
 ### Body part rescaling
 
-Games that resize the R6 body parts won't see the scale change propagated to the proxied R15 parts. This is also the case if joint attachments are moved.
+Experiences that resize the R6 body parts won't see the scale change propagated to the proxied R15 parts. This is also the case if joint attachments are moved.
 
 ### GetChildren API calls
 
@@ -72,4 +72,4 @@ This has always been a best practice for Roblox scripts, even if some cases work
 
 ### Head collisions
 
-R15 characters joining an R6 experience don't support collisions with their Head part. If your game detects or depends on collisions with a character's Head, you must also update your scripts to check for `CollisionHead` as well.
+R15 characters joining an R6 experience don't support collisions with their Head part. If your experience detects or depends on collisions with a character's Head, you must also update your scripts to check for `CollisionHead` as well.

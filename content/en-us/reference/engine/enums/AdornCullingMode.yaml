@@ -4,19 +4,23 @@
 
 name: AdornCullingMode
 type: enum
-summary: Culling method used for adornments.
-description: Used by `Class.HandleAdornment` to determine how it is culled.
+summary: |
+  Culling method used for adornments.
+description: |
+  Used by `Class.HandleAdornment` to determine how it is culled.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Automatic
-    summary: Automatically culls adornment based on distance.
+    summary: |
+      Automatically culls adornment based on distance.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Never
-    summary: Never culls adornment. Adornment is always visible.
+    summary: |
+      Never culls adornment. Adornment is always visible.
     value: 1
     tags: []
     deprecation_message: ''

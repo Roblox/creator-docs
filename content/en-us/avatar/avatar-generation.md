@@ -55,10 +55,10 @@ To generate an avatar character:
 
 1. Call `Class.AvatarCreationService:GenerateAvatarAsync` on the Server with a `Dictionary` containing the SessionId and PreviewId.
    1. This method call returns a `string` generationId.
-2. Retrieve the generated avatar data as a `Class.HumanoidDescription` using the `Class.AvatarCreationService:LoadGeneratedAvatarAsync` method on both the game server and the client.
+2. Retrieve the generated avatar data as a `Class.HumanoidDescription` using the `Class.AvatarCreationService:LoadGeneratedAvatarAsync` method on both the experience server and the client.
 3. You can use the `Players.CreateHumanoidModelFromDescription` method to create an avatar model from the `Class.HumanoidDescription` to display to the `Class.Player`.
 
-Mesh and texture assets will be provided as `Class.EditableMesh` and `Class.EditableImage` objects, respectively, to allow continued editing of the generated avatar. Edits should be made on both the game server and the client copy to keep them in sync for publish.
+Mesh and texture assets will be provided as `Class.EditableMesh` and `Class.EditableImage` objects, respectively, to allow continued editing of the generated avatar. Edits should be made on both the experience server and the client copy to keep them in sync for publish.
 
 ### Publish
 

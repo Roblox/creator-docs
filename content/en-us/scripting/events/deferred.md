@@ -22,7 +22,7 @@ The total time taken does not change, but the ordering is different.
 
 ## Deferred event benefits
 
-The `Immediate` behavior has some disadvantages. For every instance added to your game, property that changes, or some other trigger that is invoked, the engine needs to run Luau code before anything else happens.
+The `Immediate` behavior has some disadvantages. For every instance added to your experience, property that changes, or some other trigger that is invoked, the engine needs to run Luau code before anything else happens.
 
 - To change 1,000 properties, 1,000 snippets of code potentially need to run after each change.
 - Strange, hard-to-diagnose bugs can occur, such as a removing event firing before something was even added.

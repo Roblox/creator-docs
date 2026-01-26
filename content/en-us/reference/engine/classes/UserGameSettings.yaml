@@ -115,7 +115,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
   - name: UserGameSettings.ComputerMovementMode
     summary: |
       The type of controls being used by the client on desktop.
@@ -133,7 +134,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
   - name: UserGameSettings.ControlMode
     summary: |
       Toggles whether or not the client can use the Mouse Lock Switch mode.
@@ -156,7 +158,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
   - name: UserGameSettings.Fullscreen
     summary: ''
     description: ''
@@ -190,7 +193,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
   - name: UserGameSettings.GraphicsOptimizationMode
     summary: ''
     description: ''
@@ -309,7 +313,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
   - name: UserGameSettings.OnboardingsCompleted
     summary: ''
     description: ''
@@ -439,7 +444,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Input
   - name: UserGameSettings.SavedQualityLevel
     summary: |
       The graphics quality level set by the client.
@@ -457,7 +463,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
   - name: UserGameSettings.StartMaximized
     summary: ''
     description: ''
@@ -529,7 +536,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
   - name: UserGameSettings.TouchMovementMode
     summary: |
       The type of controls being used by the client on a mobile device.
@@ -547,7 +555,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
   - name: UserGameSettings.UsedCoreGuiIsVisibleToggle
     summary: ''
     description: ''
@@ -675,7 +684,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
   - name: UserGameSettings:GetOnboardingCompleted
     summary: |
       Checks if onboarding has been completed.
@@ -707,7 +717,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
   - name: UserGameSettings:InFullScreen
     summary: |
       Returns true if the user's Roblox window is in full screen mode.
@@ -722,7 +733,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
   - name: UserGameSettings:InStudioMode
     summary: |
       Returns true if the client's game session is in Roblox Studio.
@@ -737,7 +749,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
   - name: UserGameSettings:SetCameraYInvertVisible
     summary: |
       If called, Roblox toggles the menu option to invert the user's camera y
@@ -754,7 +767,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
   - name: UserGameSettings:SetGamepadCameraSensitivityVisible
     summary: |
       If called, Roblox toggles the menu option to control the camera
@@ -771,7 +785,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
   - name: UserGameSettings:SetOnboardingCompleted
     summary: |
       Sets onboarding as completed.
@@ -806,7 +821,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
 events:
   - name: UserGameSettings.FullscreenChanged
     summary: |

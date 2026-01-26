@@ -8,7 +8,7 @@ The **ScavengerHunt** [developer module](../../resources/modules/index.md) gives
 <video src="../../assets/developer-modules/scavenger-hunt/Showcase.mp4" controls width="100%"></video>
 
 <Alert severity="warning">
-This module utilizes [data stores](../../cloud-services/data-stores/index.md). To test it in Studio, make sure **Enable Studio Access to API Services** is enabled from the **Security** section of Studio's **File**&nbsp;⟩ **Game Settings** window.
+This module utilizes [data stores](../../cloud-services/data-stores/index.md). To test it in Studio, make sure **Enable Studio Access to API Services** is enabled from the **Security** section of Studio's **File**&nbsp;⟩ **Experience Settings** window.
 </Alert>
 
 ## Module usage

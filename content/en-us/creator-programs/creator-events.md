@@ -37,7 +37,7 @@ To preview events hosted by our community creators, visit our [past events](http
 
 Fill out the application carefully to start the process. After we receive your application, you should hear from us within 2–3 weeks. Large volumes of applications might cause delays.
 
-<Button href="https://survey.roblox.com/jfe/form/SV_cSnxeXTXIbKFz0i" size='large' variant='contained' style={{width:200}}>Apply</Button>
+<Button href="https://survey.roblox.com/jfe/form/SV_7W1I2AOPuTd8FhA" size='large' variant='contained' style={{width:200}}>Apply</Button>
 
 ### After initial acceptance
 

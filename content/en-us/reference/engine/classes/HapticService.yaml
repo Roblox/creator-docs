@@ -53,7 +53,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
   - name: HapticService:IsMotorSupported
     summary: |
       Returns `true` if the specified motor is available to be used with the
@@ -84,7 +85,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
   - name: HapticService:IsVibrationSupported
     summary: |
       Returns `true` if the specified `Enum.UserInputType` supports haptic
@@ -109,7 +111,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
   - name: HapticService:SetMotor
     summary: |
       Sets the vibration intensity of the specified
@@ -145,6 +148,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
 events: []
 callbacks: []

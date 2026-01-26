@@ -67,7 +67,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
   - name: BadgeService:AwardBadge
     summary: |
       Award a badge to a player given the ID of each.
@@ -94,7 +95,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
   - name: BadgeService:CheckUserBadgesAsync
     summary: |
       Checks a list of badge IDs against a `Class.Player.UserId|UserId` and
@@ -138,7 +140,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
   - name: BadgeService:GetBadgeInfoAsync
     summary: |
       Fetch information about a badge given its ID.
@@ -197,7 +200,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
   - name: BadgeService:IsDisabled
     summary: |
       Returns whether a given badge is disabled.
@@ -240,7 +244,8 @@ methods:
       IsEnabled field.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
   - name: BadgeService:IsLegal
     summary: |
       Determines if a given badge is associated with the current game.
@@ -273,7 +278,8 @@ methods:
       new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
   - name: BadgeService:UserHasBadge
     summary: |
       Checks whether a user has the badge given the `Class.Player.UserId` and
@@ -314,7 +320,8 @@ methods:
       instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
   - name: BadgeService:UserHasBadgeAsync
     summary: |
       Checks whether a player has the badge given the `Class.Player.UserId` and
@@ -355,6 +362,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetManagement
 events: []
 callbacks: []

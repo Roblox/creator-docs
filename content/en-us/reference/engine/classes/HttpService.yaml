@@ -9,11 +9,11 @@ summary: |
   Allows sending HTTP requests and provides various web-related and JSON
   methods.
 description: |
-  `HttpService` allows HTTP requests to be sent from game servers using
+  `HttpService` allows HTTP requests to be sent from experience servers using
   `Class.HttpService:RequestAsync()|RequestAsync`,
   `Class.HttpService:GetAsync()|GetAsync` and
-  `Class.HttpService:PostAsync()|PostAsync`. This service allows games to be
-  integrated with third-party web services such as analytics, data storage,
+  `Class.HttpService:PostAsync()|PostAsync`. This service allows experiences to
+  be integrated with third-party web services such as analytics, data storage,
   remote server configuration, error reporting, advanced calculations, or
   real-time communication. Additionally, it can call a subset of the Open Cloud
   APIs.
@@ -61,9 +61,10 @@ properties:
       `Class.HttpService:RequestAsync()`.
 
       This property must be toggled on through the
-      [Game Settings](../../../studio/game-settings.md) interface in Studio, or
-      for **unpublished** experiences by setting this property to `true` using
-      the [Command Bar](../../../studio/ui-overview.md#command-bar):
+      [Experience Settings](../../../studio/experience-settings.md) interface in
+      Studio, or for **unpublished** experiences by setting this property to
+      `true` using the
+      [Command Bar](../../../studio/ui-overview.md#command-bar):
 
       `game:GetService("HttpService").HttpEnabled = true`
     code_samples: []

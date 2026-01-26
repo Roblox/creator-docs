@@ -21,7 +21,7 @@ The **Properties** window can be used to learn about an object's properties. Use
 
 ## Add comments to scripts
 
-Comments are special lines starting with `--` that help coders remember what parts of scripts do. Unlike other code, comments don't run; they're just there so you can leave notes to yourself and other programmers. This script will change a part's `Class.BasePart.Color|Color` property at the start of the game.
+Comments are special lines starting with `--` that help coders remember what parts of scripts do. Unlike other code, comments don't run; they're just there so you can leave notes to yourself and other programmers. This script will change a part's `Class.BasePart.Color|Color` property at the start of the experience.
 
 1. Select an existing part or create a new one. Rename the part PracticePart.
 

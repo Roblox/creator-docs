@@ -60,8 +60,8 @@ properties:
       with the `Class.Players:SetChatStyle()` method using the `Enum.ChatStyle`
       enum.
 
-      When this chat mode is enabled, the game displays chats in the chat user
-      interface at the top-left corner of the screen.
+      When this chat mode is enabled, the experience displays chats in the chat
+      user interface at the top-left corner of the screen.
 
       There are two other chat modes, `Class.Players.ClassicChat` and a chat
       mode where both classic and bubble chat are enabled.
@@ -96,7 +96,8 @@ properties:
       `Class.Player`, including when players join the experience.
 
       This can be useful in experiences where players have finite lives, such as
-      competitive games in which players do not respawn until a game round ends.
+      competitive experiences in which players do not respawn until a round
+      ends.
     code_samples:
       - player-respawn-timer
     type: boolean
@@ -121,8 +122,8 @@ properties:
       Indicates whether or not classic chat is enabled. This property is set by
       the `Class.Players:SetChatStyle()` method using the `Enum.ChatStyle` enum.
 
-      When this chat mode is enabled, the game displays chats in a bubble above
-      the sender's head.
+      When this chat mode is enabled, the experience displays chats in a bubble
+      above the sender's head.
 
       There are two other chat modes, `Class.Players.BubbleChat` and a chat mode
       where both classic and bubble chat are enabled.
@@ -200,7 +201,7 @@ properties:
       This property determines the maximum number of players that can be in a
       server. This property can only be set through a specific place's settings
       on the [Creator Dashboard](https://create.roblox.com/dashboard/creations)
-      or through [Game Settings](../../../studio/game-settings.md).
+      or through [Experience Settings](../../../studio/experience-settings.md).
     code_samples: []
     type: int
     tags:
@@ -464,6 +465,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+      - Consequences
   - name: Players:Chat
     summary: |
       Makes the local player chat the given message.
@@ -634,7 +636,7 @@ methods:
       inherits from `Class.Pages`. This method is enabled and disabled by the
       `Class.Players.BanningEnabled` property, which you can toggle in Studio.
 
-      This function call will only succeed on production game servers and not on
+      This function call will only succeed on production servers and not on
       client devices or in Studio.
 
       This API uses the
@@ -658,6 +660,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+      - Consequences
   - name: Players:GetCharacterAppearanceAsync
     summary: |
       Returns a `Class.Model` containing the assets which the player is wearing,
@@ -870,6 +873,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+      - Social
   - name: Players:GetHumanoidDescriptionFromOutfitIdAsync
     summary: |
       Returns the HumanoidDescription for a specified outfit, which will be set
@@ -1026,7 +1030,7 @@ methods:
   - name: Players:GetPlayerByUserId
     summary: |
       Returns the `Class.Player` with the given `Class.Player.UserId|UserId` if
-      they are in-game.
+      they are in-experience.
     description: |
       This function searches each `Class.Player` in `Class.Players` for one
       whose `Class.Player.UserId` matches the given `userId`. If such a player
@@ -1104,7 +1108,7 @@ methods:
       objects. It functions the same way `Class.Instance:GetChildren()` would
       except that it only returns `Class.Player` objects found under
       `Class.Players`. When used with a `for` loop, it is useful for iterating
-      over all players in a game.
+      over all players in an experience.
 
       ```lua
       local Players = game:GetService("Players")
@@ -1115,8 +1119,8 @@ methods:
       ```
 
       Scripts that connect to `Class.Players.PlayerAdded` are often trying to
-      process every Player that connects to the game. This method is useful for
-      iterating over already-connected players that wouldn't fire
+      process every Player that connects to the experience. This method is
+      useful for iterating over already-connected players that wouldn't fire
       `Class.Players.PlayerAdded|PlayerAdded`. Using this method ensures that no
       player is missed!
 
@@ -1262,10 +1266,10 @@ methods:
       - Players
   - name: Players:players
     summary: |
-      Returns a list of players in a game.
+      Returns a list of players in an experience.
     description: |
-      This function was once used to return a list of players in a game, but has
-      since been deprecated in favor of `Class.Players:GetPlayers()`
+      This function was once used to return a list of players in an experience,
+      but has since been deprecated in favor of `Class.Players:GetPlayers()`
     code_samples: []
     parameters: []
     returns:
@@ -1290,7 +1294,8 @@ methods:
       this item is protected, attempting to use it in a `Class.Script` or
       `Class.LocalScript` will cause an error.
 
-      This function is used internally when the chat mode is set by the game.
+      This function is used internally when the chat mode is set by the
+      experience.
     code_samples:
       - setting-a-player-s-chat-style
     parameters:
@@ -1372,10 +1377,10 @@ methods:
       requests may succeed before all input is validated.
 
       Because of the risks associated with banning users, this method may only
-      be called on the backend game server. Client side calls will result in an
+      be called on the backend server. Client side calls will result in an
       error. You may test this API in Studio, Team Create, and Team Test, but
       the bans will not apply to production. This function call will only
-      attempt ban requests on production game servers and not in Studio testing.
+      attempt ban requests on production servers and not in Studio testing.
       However, all input validation steps will still work in Studio.
 
       This API uses the
@@ -1418,41 +1423,41 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+      - Consequences
 events:
   - name: Players.PlayerAdded
     summary: |
-      Fires when a player enters the game.
+      Fires when a player enters the experience.
     description: |
-      This event fires when a player enters the game. This is used to fire an
-      event when a player joins a game, such as loading the player's saved
-      `Class.GlobalDataStore` data.
+      This event fires when a player enters the experience, such as loading the
+      player's saved `Class.GlobalDataStore` data.
 
       This can be used alongside the `Class.Players.PlayerRemoving` event, which
-      fires when a player is about to leave the game. For instance, if you would
-      like print a message every time a new player joins or leaves the game:
+      fires when a player is about to leave the experience. For instance, if you
+      would like print a message every time a new player joins or leaves:
 
       ```lua
       local Players = game:GetService("Players")
 
       Players.PlayerAdded:Connect(function(player)
-      	print(player.Name .. " joined the game!")
+      	print(player.Name .. " joined the experience!")
       end)
 
       Players.PlayerRemoving:Connect(function(player, reason)
-      	print(player.Name .. " left the game! Reason: " .. tostring(exitReason))
+      	print(player.Name .. " left the experience! Reason: " .. tostring(exitReason))
       end)
       ```
 
       If you want to track when a player's character is added or removed from
-      the game, such as when a player respawns or dies, you can use the
+      the experience, such as when a player respawns or dies, you can use the
       `Class.Player.CharacterAdded` and `Class.Player.CharacterRemoving`
       functions.
 
       Note that this event does not work as expected in a solo playtest mode
       because the player is created before scripts run that connect to
       `Class.Players.PlayerAdded|PlayerAdded`. To handle this case, as well as
-      cases in which the script is added into the game after a player enters,
-      create an `onPlayerAdded()` function that you can call to handle a
+      cases in which the script is added into the experience after a player
+      enters, create an `onPlayerAdded()` function that you can call to handle a
       player's entrance.
     code_samples:
       - Players-PlayerAdded1
@@ -1461,7 +1466,7 @@ events:
         type: Player
         default:
         summary: |
-          An instance of the player that joined the game.
+          An instance of the player that joined the experience.
     tags: []
     deprecation_message: ''
     security: None
@@ -1469,17 +1474,17 @@ events:
       - Players
   - name: Players.PlayerMembershipChanged
     summary: |
-      Fires when the game server recognizes that a player's membership has
+      Fires when the experience server recognizes that a player's membership has
       changed.
     description: |
-      This event fires when the game server recognizes that a player's
+      This event fires when the experience server recognizes that a player's
       membership has changed. Note, however, that the server will only attempt
       to check and update the membership **after** the Premium modal has been
       closed. Thus, to account for cases where the user purchases Premium
-      **outside** of the game while playing, you must still prompt them to
+      **outside** of the experience while playing, you must still prompt them to
       purchase Premium; this will then show a message telling them they're
-      already upgraded and, once they close the modal, the game server will
-      update their membership and trigger this event.
+      already upgraded and, once they close the modal, the server will update
+      their membership and trigger this event.
 
       To learn more about and incorporating Premium into your experience and
       monetizing with the engagement-based payouts system, see
@@ -1505,33 +1510,33 @@ events:
       - Players
   - name: Players.PlayerRemoving
     summary: |
-      Fires when a player is about to leave the game.
+      Fires when a player is about to leave the experience.
     description: |
-      The PlayerRemoving event fires right before a `Class.Player` leaves the
-      game. This event fires before `Class.Instance.ChildRemoved|ChildRemoved`
-      does on `Class.Players`, and behaves somewhat similarly to
+      This event fires right before a `Class.Player` leaves the experience,
+      before `Class.Instance.ChildRemoved|ChildRemoved` fires on
+      `Class.Players`, and behaves somewhat similarly to
       `Class.Instance.DescendantRemoving`. Since it fires before the actual
       removal of a `Class.Player`, this event is useful for storing player data
       using a `Class.GlobalDataStore`.
 
       This can be used alongside the `Class.Player.PlayerAdded` event, which
-      fires when a player joins the game. For instance, to print a message every
-      time a new player joins or leaves the game:
+      fires when a player joins the experience. For instance, to print a message
+      every time a new player joins or leaves:
 
       ```lua
       local Players = game:GetService("Players")
 
       Players.PlayerAdded:Connect(function(player)
-      	print(player.Name .. " joined the game!")
+      	print(player.Name .. " joined the experience!")
       end)
 
       Players.PlayerRemoving:Connect(function(player, exitReason)
-      	print(player.Name .. " left the game! - Reason: " .. tostring(exitReason))
+      	print(player.Name .. " left the experience! - Reason: " .. tostring(exitReason))
       end)
       ```
 
       If you want to track when a player's character is added or removed from
-      the game, such as when a player respawns or dies, you can use the
+      the experience, such as when a player respawns or dies, you can use the
       `Class.Player.CharacterAdded` and `Class.Player.CharacterRemoving`
       functions.
     code_samples:
@@ -1541,7 +1546,7 @@ events:
         type: Player
         default:
         summary: |
-          An instance of the player that is leaving the game.
+          An instance of the player that is leaving.
       - name: reason
         type: PlayerExitReason
         default:
@@ -1554,17 +1559,18 @@ events:
       - Players
   - name: Players.UserSubscriptionStatusChanged
     summary: |
-      Fires when the game server recognizes that the user's status for a certain
-      subscription has changed.
+      Fires when the experience server recognizes that the user's status for a
+      certain subscription has changed.
     description: |
-      This event fires when the game server recognizes that the user's status
-      for a certain subscription has changed. Note that the server only attempts
-      to check and update the status **after** the Subscription Purchase modal
-      has been closed. To account for cases in which the user purchases the
-      subscription **outside** of the game while playing, you must still prompt
-      them to purchase the subscription; the prompt shows a message telling the
-      user they're already subscribed, and after they close the modal, the game
-      server updates their subscription status and triggers this event.
+      This event fires when the experience server recognizes that the user's
+      status for a certain subscription has changed. Note that the server only
+      attempts to check and update the status **after** the Subscription
+      Purchase modal has been closed. To account for cases in which the user
+      purchases the subscription **outside** of the experience while playing,
+      you must still prompt them to purchase the subscription; the prompt shows
+      a message telling the user they're already subscribed, and after they
+      close the modal, the server updates their subscription status and triggers
+      this event.
 
       Note that only server scripts receive this event.
     code_samples: []
@@ -1584,4 +1590,5 @@ events:
     security: None
     capabilities:
       - Players
+      - Monetization
 callbacks: []

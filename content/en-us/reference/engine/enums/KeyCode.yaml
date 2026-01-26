@@ -1369,13 +1369,15 @@ items:
     deprecation_message: ''
   - name: LeftSuper
     summary: |
-      The left side `Super` key. Better known as the Windows key or Cmd key.
+      The left side `Super` key. Better known as the Windows key or
+      <kbd>Cmd</kbd> key.
     value: 311
     tags: []
     deprecation_message: ''
   - name: RightSuper
     summary: |
-      The right side `Super` key. Better known as the Windows key or Cmd key.
+      The right side `Super` key. Better known as the Windows key or
+      <kbd>Cmd</kbd> key.
     value: 312
     tags: []
     deprecation_message: ''
@@ -1651,5 +1653,12 @@ items:
       The position of a mouse in the viewport. Primarily used in the
       [Input Action System](../../../input/input-action-system.md).
     value: 1033
+    tags: []
+    deprecation_message: ''
+  - name: Touch
+    summary: |
+      The position of a touch in the viewport. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
+    value: 1034
     tags: []
     deprecation_message: ''

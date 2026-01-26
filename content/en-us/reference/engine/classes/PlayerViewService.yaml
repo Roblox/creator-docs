@@ -53,6 +53,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - SensitiveInput
 events: []
 callbacks: []

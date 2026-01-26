@@ -5,12 +5,13 @@
 name: BoxHandleAdornment
 type: class
 memory_category: Instances
-summary: A box-shaped handle that can be adorned to a `Class.BasePart`.
-description: |-
+summary: |
+  A box-shaped handle that can be adorned to a `Class.BasePart`.
+description: |
   `BoxHandleAdornment` is a box-shaped handle that can be adorned to a
   `Class.BasePart`. If parented to a player's `Class.PlayerGui` or the
-  `Class.CoreGui`, handles can listen to input events for purposes such as making
-  dragger tools.
+  `Class.CoreGui`, handles can listen to input events for purposes such as
+  making dragger tools.
 code_samples: []
 inherits:
   - HandleAdornment
@@ -37,8 +38,10 @@ properties:
       - Basic
       - UI
   - name: BoxHandleAdornment.Size
-    summary: Size of the adornment.
-    description: The size of the adornment in studs.
+    summary: |
+      Size of the adornment.
+    description: |
+      The size of the adornment in studs.
     code_samples: []
     type: Vector3
     tags: []

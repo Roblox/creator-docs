@@ -12,7 +12,7 @@ A better way to organize and reuse code is with **module scripts**, a unique typ
 By storing commonly used code in module scripts, it makes maintaining and organizing code easier since changes only need to be made to one module script, rather than updating multiple scripts.
 
 <Alert severity="success">
-Normal scripts should be used for standalone elements of a game, such as touching a pickup, while module scripts are useful for storing code that can be reused by multiple independent scripts, like rewarding points.
+Normal scripts should be used for standalone elements of an experience, such as touching a pickup, while module scripts are useful for storing code that can be reused by multiple independent scripts, like rewarding points.
 </Alert>
 
 ## Module script basics
@@ -172,4 +172,4 @@ Some of the tips here address common issues when working with module scripts. Ke
 
 **Module scripts** in Roblox are a method coders use to organize and reuse code. A module script is often stored in ServerStorage (or ReplicatedStorage for client-based interactions). From there, other scripts are able to call functions and variables stored in that module script.
 
-For instance, one game may award points to players for collecting objects. A module script can handle code to give points. Then, scripts for different types of objects can just call the module script function. This reduces the need to reuse code between scripts, making code easier to understand and maintain.
+For instance, one experience may award points to players for collecting objects. A module script can handle code to give points. Then, scripts for different types of objects can just call the module script function. This reduces the need to reuse code between scripts, making code easier to understand and maintain.

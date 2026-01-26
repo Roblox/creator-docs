@@ -7,10 +7,9 @@ type: class
 memory_category: Instances
 summary: ''
 description: |
-  The RenderSettings is a singleton class, which lets developers debug
-  components of Roblox's graphics engine.
-
-  It can be found under the `Rendering` tab in Roblox Studio's settings menu.
+  `RenderSettings` is a singleton class which lets developers debug components
+  of Roblox's graphics engine. It can be found in Roblox Studio's settings under
+  the **Rendering** tab.
 code_samples: []
 inherits:
   - Instance
@@ -24,11 +23,10 @@ deprecation_message: ''
 properties:
   - name: RenderSettings.AutoFRMLevel
     summary: |
-      Sets the starting quality level of the framerate manager, when
-      `Class.RenderSettings.EnableFRM` is set to true.
+      Sets the starting quality level of the framerate manager.
     description: |
-      Sets the starting quality level of the framerate manager, when
-      `Class.RenderSettings.EnableFRM` is set to true.
+      Sets the starting quality level of the framerate manager when
+      `Class.RenderSettings.EnableFRM|EnableFRM` is set to `true`.
     code_samples: []
     type: int
     tags: []
@@ -44,14 +42,12 @@ properties:
     capabilities: []
   - name: RenderSettings.EagerBulkExecution
     summary: |
-      When set to true, all scene updates will be given an unlimited budget,
-      regardless of how computationally expensive it may be.
+      Whether all scene updates will be given an unlimited budget, regardless of
+      how computationally expensive it may be.
     description: |
-      When set to true, all scene updates will be given an unlimited budget,
+      When set to `true`, all scene updates will be given an unlimited budget,
       regardless of how computationally expensive it may be. This ensures each
       frame will look as it should, at the cost of a more unstable frame rate.
-
-      This is used when rendering game thumbnails.
     code_samples: []
     type: boolean
     tags: []
@@ -67,11 +63,10 @@ properties:
     capabilities: []
   - name: RenderSettings.EditQualityLevel
     summary: |
-      Sets the graphics quality level in Roblox Studio, when
-      `Class.RenderSettings.EnableFRM` is set to false.
+      Sets the graphics quality level in Roblox Studio.
     description: |
-      Sets the graphics quality level in Roblox Studio, when
-      `Class.RenderSettings.EnableFRM` is set to false.
+      Sets the graphics quality level in Roblox Studio when
+      `Class.RenderSettings.EnableFRM|EnableFRM` is set to `false`.
     code_samples: []
     type: QualityLevel
     tags: []
@@ -124,10 +119,10 @@ properties:
   - name: RenderSettings.ExportMergeByMaterial
     summary: |
       Sets whether materials should be generated per part, or per unique
-      appearance in Roblox's obj exporter.
+      appearance in Roblox's exporter.
     description: |
       Sets whether materials should be generated per part, or per unique
-      appearance in Roblox's obj exporter.
+      appearance in Roblox's exporter.
     code_samples: []
     type: boolean
     tags: []
@@ -179,9 +174,9 @@ properties:
     capabilities: []
   - name: RenderSettings.MeshCacheSize
     summary: |
-      The size in bytes of the mesh cache. Defaults to 32 MB.
+      The size in bytes of the mesh cache.
     description: |
-      The size in bytes of the mesh cache. Defaults to 32 MB (32 \* 2^20 bytes).
+      The size in bytes of the mesh cache. Defaults to 32 MiB.
     code_samples: []
     type: int
     tags: []
@@ -225,11 +220,10 @@ properties:
     capabilities: []
   - name: RenderSettings.QualityLevel
     summary: |
-      If `Class.RenderSettings.EnableFRM` is set to true, this property controls
-      the quality level in Roblox Studio.
+      Controls the quality level in Roblox Studio.
     description: |
-      If `Class.RenderSettings.EnableFRM` is set to true, this property controls
-      the quality level in Roblox Studio.
+      If `Class.RenderSettings.EnableFRM|EnableFRM` is set to `true`, this
+      property controls the quality level in Roblox Studio.
     code_samples: []
     type: QualityLevel
     tags: []
@@ -245,11 +239,11 @@ properties:
     capabilities: []
   - name: RenderSettings.ReloadAssets
     summary: |
-      When set to true, Roblox Studio will automatically reload changes that are
-      made to files in Roblox's `content` folder.
+      Whether Roblox Studio will automatically reload changes that are made to
+      files in Roblox's `content` folder.
     description: |
-      When set to true, Roblox Studio will automatically reload changes that are
-      made to files in Roblox's `content` folder.
+      When set to `true`, Roblox Studio will automatically reload changes that
+      are made to files in Roblox's `content` folder.
     code_samples: []
     type: boolean
     tags: []
@@ -265,10 +259,10 @@ properties:
     capabilities: []
   - name: RenderSettings.RenderCSGTrianglesDebug
     summary: |
-      When set to true, a wireframe of polygons will be shown on all
-      `Class.PartOperation` objects.
+      Whether a wireframe of polygons will be shown on all `Class.PartOperation`
+      objects.
     description: |
-      When set to true, a wireframe of polygons will be shown on all
+      When set to `true`, a wireframe of polygons will be shown on all
       `Class.PartOperation` objects.
     code_samples: []
     type: boolean
@@ -285,10 +279,10 @@ properties:
     capabilities: []
   - name: RenderSettings.ShowBoundingBoxes
     summary: |
-      If set to true, renders bounding boxes around each individual rendered
-      entity in the scene.
+      Whether bounding boxes are rendered around each individual rendered entity
+      in the scene.
     description: |
-      If set to true, renders bounding boxes around each individual rendered
+      If set to `true`, renders bounding boxes around each individual rendered
       entity in the scene.
     code_samples: []
     type: boolean

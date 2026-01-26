@@ -133,7 +133,7 @@ The new attribute shows up in the **Server Attributes** list of the **Attributes
 ## Preview and test server scores
 
 <Alert severity="warning">
-  Preview server scores are just examples and don't reflect actual game servers.
+  Preview server scores are just examples and don't reflect actual experience servers.
 </Alert>
 
 Preview and test server scoring to see how your configured signal weights impact server selection. You can experiment with different weight combinations to optimize your matchmaking configuration.

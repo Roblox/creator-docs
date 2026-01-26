@@ -80,7 +80,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Basic
   - name: LocalizationTable.Root
     summary: |
       The object that is being targeted for localization by this table.
@@ -104,7 +105,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Basic
   - name: LocalizationTable.SourceLocaleId
     summary: |
       The locale of source strings.
@@ -125,7 +127,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
 methods:
   - name: LocalizationTable:GetContents
     summary: ''
@@ -142,7 +145,8 @@ methods:
       which should be used in all new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: LocalizationTable:GetEntries
     summary: |
       Returns an array of dictionaries, where each dictionary represents an
@@ -215,7 +219,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: LocalizationTable:GetString
     summary: |
       Returns a translation based on the specified language and key.
@@ -246,11 +251,12 @@ methods:
       which should be used in all new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: LocalizationTable:GetTranslator
     summary: |
       Returns a `Class.Translator` for entries in this LocalizationTable, in the
-      specified language.
+      specified locale.
     description: |
       Returns a `Class.Translator` for entries in this LocalizationTable, in the
       specified language. The translator will first search in this table and
@@ -263,12 +269,14 @@ methods:
         summary: ''
     returns:
       - type: Instance
-        summary: ''
+        summary: |
+          The `Class.Translator` instance for the specified locale.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: LocalizationTable:RemoveEntry
     summary: |
       Removes an entry from the LocalizationTable, using the specified `key`,
@@ -297,7 +305,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: LocalizationTable:RemoveEntryValue
     summary: |
       Removes a single language translation from the LocalizationTable, using
@@ -332,7 +341,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: LocalizationTable:RemoveKey
     summary: |
       Deprecated in favor of `Class.LocalizationTable:RemoveEntry()`.
@@ -359,7 +369,8 @@ methods:
       which should be used in all new work
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: LocalizationTable:RemoveTargetLocale
     summary: |
       Removes all translations from the LocalizationTable with the specified
@@ -380,7 +391,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: LocalizationTable:SetContents
     summary: |
       Sets the contents of the LocalizationTable, via the legacy JSON format.
@@ -403,7 +415,8 @@ methods:
       which should be used in all new work
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: LocalizationTable:SetEntries
     summary: |
       Sets the contents of the LocalizationTable.
@@ -426,7 +439,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: LocalizationTable:SetEntry
     summary: ''
     description: ''
@@ -454,7 +468,8 @@ methods:
       which should be used in all new work
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: LocalizationTable:SetEntryContext
     summary: |
       Sets the **Context** field of a LocalizationTable entry to `newContext`,
@@ -489,7 +504,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: LocalizationTable:SetEntryExample
     summary: |
       Sets the **Example** field of a LocalizationTable entry to `example`,
@@ -524,7 +540,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: LocalizationTable:SetEntryKey
     summary: |
       Sets the **Key** field of a LocalizationTable entry to `newKey`, using the
@@ -559,7 +576,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: LocalizationTable:SetEntrySource
     summary: |
       Sets the **Source** field of a LocalizationTable entry to `newSource`,
@@ -594,7 +612,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: LocalizationTable:SetEntryValue
     summary: |
       Sets the text of the specified localeId in a LocalizationTable entry,
@@ -633,6 +652,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
 events: []
 callbacks: []

@@ -55,7 +55,11 @@ properties:
     summary: |
       The amount of variance allowed from the value.
     description: |
-      The amount of variance allowed from the value. A computed value.
+      The amount of variance allowed from the value. For example, a value of 0.5
+      with an envelope of 0.1 could compute to between 0.4 and 0.6 at runtime.
+      The most common use case for this property is to randomize the size of
+      particles (within the envelope) from a
+      `Class.ParticleEmitter|ParticleEmitter`.
     default:
     code_samples: []
     tags: []

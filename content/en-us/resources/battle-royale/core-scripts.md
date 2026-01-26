@@ -14,7 +14,7 @@ The `ReplicatedFirst/InitialSetup` script configures a few engine-level systems 
 
 ## Game stages
 
-The initialization and updating of specific systems is done differently depending on the current stage of the game. Most of these cases are handled by `ServerScriptService/Core/GameStageHandler` on the server and `ReplicatedStorage/Core/StageManager` on the client. When a stage is requested, a module of the same name is required and various setup functions called on it. If there is already a module handling the current stage, shutdown functions are called on it prior to the new stage handler being initialized.
+The initialization and updating of specific systems is done differently depending on the current stage of the experience. Most of these cases are handled by `ServerScriptService/Core/GameStageHandler` on the server and `ReplicatedStorage/Core/StageManager` on the client. When a stage is requested, a module of the same name is required and various setup functions called on it. If there is already a module handling the current stage, shutdown functions are called on it prior to the new stage handler being initialized.
 
 ## Places/server roles
 

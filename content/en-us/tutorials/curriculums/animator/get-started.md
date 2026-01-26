@@ -78,7 +78,7 @@ To playtest the experience's gameplay:
 
    <img src="../../../assets/education/build-it-play-it-island-of-move/test-the-game/click-npc.png" width="50%" />
 
-1. When the game starts, go forward by repeatedly clicking the **Move** button. Your character automatically follows the track as you click.
+1. When the experience starts, go forward by repeatedly clicking the **Move** button. Your character automatically follows the track as you click.
 
    <video controls src="../../../assets/education/build-it-play-it-island-of-move/test-the-game/click-game-button.mp4" width="80%"></video>
 

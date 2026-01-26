@@ -41,6 +41,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Network
 events: []
 callbacks: []

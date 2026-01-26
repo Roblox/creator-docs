@@ -28,7 +28,7 @@ Before you can enable private servers, your experience must be **public** to all
 
 To create a private server:
 
-1. Open Studio's **File**&nbsp;⟩ **Game Settings** window.
+1. Open Studio's **File** ⟩ **Experience Settings** window.
 1. In the left-hand navigation, click **Monetization**.
 1. Enable the **Private Servers** toggle. Additional settings appear for setting how to monetize private servers:
 

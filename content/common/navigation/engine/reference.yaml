@@ -1285,6 +1285,11 @@ navigation:
                                 type: engineapi
                                 source: /reference/engine/classes/LineHandleAdornment.yaml
                                 ignoreTranslation: true
+                              - title: PyramidHandleAdornment
+                                path: /reference/engine/classes/PyramidHandleAdornment
+                                type: engineapi
+                                source: /reference/engine/classes/PyramidHandleAdornment.yaml
+                                ignoreTranslation: true
                               - title: SphereHandleAdornment
                                 path: /reference/engine/classes/SphereHandleAdornment
                                 type: engineapi

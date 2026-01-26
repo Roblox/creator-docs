@@ -13,7 +13,7 @@ description: |
   IDs_. `Class.MarketplaceService` should be used for all new game passes.
 
   For more information about game passes, please see
-  [Game Passes](../../../production/monetization/game-passes.md).
+  [Game Passes](../../../production/monetization/passes.md).
 code_samples: []
 inherits:
   - Instance
@@ -36,7 +36,7 @@ methods:
       legacy game pass. The result of this function may be cached, meaning it
       should not be relied on to give an up to date result.
 
-      See [Passes](../../../production/monetization/game-passes.md) for further
+      See [Passes](../../../production/monetization/passes.md) for further
       information.
 
       #### Legacy Game Passes
@@ -98,6 +98,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Monetization
 events: []
 callbacks: []

@@ -7,7 +7,7 @@ description: Learn about vulnerability vectors from third-party assets.
 The following content covers various concepts and tactics to improve security and mitigate cheating in your Roblox experiences. It's highly recommended that all developers read through these to ensure that your experiences are secure and fair for all users. Check the sidebar for additional security topics.
 </Alert>
 
-Third-party assets from the Creator Store (Toolbox) are a common source of security risks, as they can contain malicious scripts called backdoors. These scripts give their creators unauthorized server-side access to your game, allowing them to manipulate game state, steal sensitive data, or disrupt the experience for your players.
+Third-party assets from the Creator Store (Toolbox) are a common source of security risks, as they can contain malicious scripts called backdoors. These scripts give their creators unauthorized server-side access to your experience, allowing them to manipulate its state, steal sensitive data, or disrupt the experience for your players.
 
 Backdoors are particularly dangerous because they often appear in otherwise legitimate-looking models. A seemingly innocent building or vehicle might contain a script that activates when certain conditions are met, such as when a specific player joins or a particular command is executed. When a model contains scripts, this is indicated in the Toolbox user interface before and during insertion.
 

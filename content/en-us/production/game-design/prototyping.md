@@ -55,7 +55,7 @@ Despite its benefits, prototyping on paper has drawbacks due to the difference i
 
 _Studio prototyping_ is the act of using Roblox Studio to design and iterate the early stages of an experience. The benefits of starting directly in Studio for prototyping includes:
 
-- **Rapid Playtesting:** Creating directly in Studio enables you to have a quick playable version of the system in your game that you can easily share with others for feedback.
+- **Rapid Playtesting:** Creating directly in Studio enables you to have a quick playable version of the system in your experience that you can easily share with others for feedback.
 - **Reusable work:** Creating in directly in Studio allows you to build off your work. Unlike paper prototyping, you don't have to start over when the prototyping period concludes, and can continue working from where you left off.
 - **Early technical issues detection:** The abstraction of paper prototyping can result in unrealistic ideas that are impossible to technically implement. Prototyping in Studio forces you to determine if your idea is something you can practically create with the resources available to you.
     <figure>
@@ -82,5 +82,5 @@ When prototyping, take extra care to explore the following parts of your experie
 
 - **Core loop:** The core loop is the central gameplay through which an entire experience is built. To learn more about core loop design, see [Core loops](../../production/game-design/core-loops.md).
 - **UI/UX:** Ensure that your menu interaction input controls are intuitive and well designed. To learn more about UI/UX design, see [UI and UX](../../production/game-design/ui-ux-design.md).
-- **Game rules:** Get into the details of how your experience will function. As an example, if you know that your game will feature a respawn mechanic, explore how long the respawn timer could be, where the player will physically respawn in experience, and if there are any factors that could change the rate at which a player can rejoin the fun.
+- **Game rules:** Get into the details of how your experience will function. As an example, if you know that your experience will feature a respawn mechanic, explore how long the respawn timer could be, where the player will physically respawn in experience, and if there are any factors that could change the rate at which a player can rejoin the fun.
 - **Edge cases:** Explore how a player might push the limits of what your experience can do. Design solutions and stop gaps to either prevent or encourage this behavior.

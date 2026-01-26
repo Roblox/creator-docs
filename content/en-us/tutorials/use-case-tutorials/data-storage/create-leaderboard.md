@@ -3,7 +3,7 @@ title: Create a custom leaderboard with ordered data stores
 description: Use ordered data stores to track and rank players by the amount of gold they have collected.
 ---
 
-**Data stores** are a service you can use to save and load **persistent player data** across different game sessions. They store important information, like a player's progress or inventory, and allow you to retrieve it for the player next time they join your experience. Without data stores, a player would lose all of their progress every time they left the game.
+**Data stores** are a service you can use to save and load **persistent player data** across different player sessions. They store important information, like a player's progress or inventory, and allow you to retrieve it for the player next time they join your experience. Without data stores, a player would lose all of their progress every time they left the experience.
 
 There are two types of data stores: standard and ordered. This tutorial uses **ordered data stores**, which store data that you can rank and sort numerically and retrieve in ascending or descending order based on the stored numerical values.
 
@@ -32,7 +32,7 @@ To enable Studio access to API services so that you can use data stores:
 
 1. Open the [Gold Rush create leaderboard tutorial - Start](https://www.roblox.com/games/123363025813820/Gold-Rush-create-leaderboard-tutorial-Start) file in Studio. This starting place file already includes the code from the [Save player data](./save-player-data.md) tutorial and the UI skeleton for the player leaderboard.
 2. [Publish your experience](../../../production/publishing/publish-experiences-and-places.md#publish-experiences).
-3. Back in Studio, go to **File** ⟩ **Game Settings** ⟩ **Security**.
+3. Back in Studio, go to **File** ⟩ **Experience Settings** ⟩ **Security**.
 4. Turn on **Enable Studio Access to API Services**.
 5. Save your changes.
 
@@ -327,7 +327,7 @@ local leaderboardStore = DataStoreService:GetOrderedDataStore("GlobalLeaderboard
 -- Create a random number generator for positioning gold chunks
 local random = Random.new()
 
--- Table to store the player's gold chunks for a single game session
+-- Table to store the player's gold chunks for a single session
 local playerGold = {}
 
 -- Constants

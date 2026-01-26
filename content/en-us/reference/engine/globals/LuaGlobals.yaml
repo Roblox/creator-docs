@@ -557,6 +557,10 @@ functions:
       -- "@self" prefix corresponds to the script itself
       require("@self/MyChild")
       require((script).(MyChild))
+
+      -- "@game" prefix corresponds to the DataModel root
+      require("@game/ReplicatedStorage/Shared/MyModule")
+      require((game).(ReplicatedStorage).(Shared).(MyModule))
       ```
 
       Once the return object is created by an **initial**

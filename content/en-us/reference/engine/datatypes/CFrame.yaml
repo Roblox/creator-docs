@@ -541,9 +541,9 @@ properties:
   - name: CFrame.X
     type: number
     summary: |
-      The X coordinate of the position.
+      The **X** coordinate of the position.
     description: |
-      The X coordinate of the position.
+      The **X** coordinate of the position.
     default:
     code_samples: []
     tags: []
@@ -551,9 +551,9 @@ properties:
   - name: CFrame.Y
     type: number
     summary: |
-      The Y coordinate of the position.
+      The **Y** coordinate of the position.
     description: |
-      The Y coordinate of the position.
+      The **Y** coordinate of the position.
     default:
     code_samples: []
     tags: []
@@ -561,9 +561,9 @@ properties:
   - name: CFrame.Z
     type: number
     summary: |
-      The Z coordinate of the position.
+      The **Z** coordinate of the position.
     description: |
-      The Z coordinate of the position.
+      The **Z** coordinate of the position.
     default:
     code_samples: []
     tags: []
@@ -987,11 +987,11 @@ methods:
     deprecation_message: ''
   - name: CFrame:ToAxisAngle
     summary: |
-      Returns a tuple of a `Datatype.Vector3` and a number which represent the
-      rotation of the `Datatype.CFrame` in the axis-angle representation.
+      Returns a tuple containing a unit `Datatype.Vector3` axis and a rotation
+      angle in radians.
     description: |
-      Returns a tuple of a `Datatype.Vector3` and a number which represent the
-      rotation of the `Datatype.CFrame` in the axis-angle representation.
+      Returns a tuple containing a unit `Datatype.Vector3` axis and a rotation
+      angle in radians.
     parameters: []
     returns:
       - type: Vector3

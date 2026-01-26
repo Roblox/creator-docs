@@ -136,7 +136,7 @@ For the cube tower script, first code a function that spawns a single cube. The 
    ```
 
    <Alert severity="info">
-   In Roblox code, once an object is created by script, it's recommended to parent it at the end. It's faster to make changes to an instance before there is a physical object in the game world.
+   In Roblox code, once an object is created by script, it's recommended to parent it at the end. It's faster to make changes to an instance before there is a physical object in the 3D world.
    </Alert>
 
 ### Spawn in different directions

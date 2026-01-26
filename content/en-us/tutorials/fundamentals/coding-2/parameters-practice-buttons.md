@@ -13,7 +13,7 @@ In this example, the button will be used to activate a bridge. When the button h
 
 Start off by setting up the bridge.
 
-1. Create an area in your game where players will need a bridge.
+1. Create an area in your environment where players will need a bridge.
 2. Create a part for the bridge and rename it Bridge.
 3. Select the bridge, in the Properties window:
 
@@ -21,7 +21,7 @@ Start off by setting up the bridge.
    - Check **Anchor**.
    - Uncheck **CanCollide**.
 
-4. Test the game, the bridge should be misty looking and people shouldn't be able to walk on it yet.
+4. When you test the experience, the bridge should be misty looking and people shouldn't be able to walk on it yet.
    <img src="../../../assets/education/coding-2/transparent-bridge.jpg" width="80%" />
 
 ## Create the button
@@ -73,7 +73,7 @@ button.Touched:Connect(buttonPressed)
 
 ### Troubleshoot your code
 
-**Issue: The bridge is already solid when the game starts.**
+**Issue: The bridge is already solid when the experience starts.**
 Make sure that the parts are Anchored and not touching anything. The parts might touch something, like terrain or another part, and cause the buttonPressed() function to fire accidentally.
 
 **Issue: You get an error in the Output window saying: "Bridge is not a valid member of Workspace"**

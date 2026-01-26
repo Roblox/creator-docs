@@ -30,7 +30,7 @@ Remember that setting a part's Anchored property to **true** makes it stay in pl
 
 ## Insert a script
 
-Code in Roblox is written in a language called [Luau](../../../../luau/index.md) which you can put in scripts within various containers in the **Explorer**. If you put a script under a **Part**, Roblox will run the script's code when the part is loaded into the game.
+Code in Roblox is written in a language called [Luau](../../../../luau/index.md) which you can put in scripts within various containers in the **Explorer**. If you put a script under a **Part**, Roblox will run the script's code when the part is loaded into the experience.
 
 1. Hover over the `DisappearingPlatform` part in the **Explorer** window and click the **+** button to insert a new script into the platform. Rename your new script as **Disappear**.
 
@@ -139,7 +139,7 @@ Once you've declared a function, you can run it by writing its name with parenth
    disappear()
    ```
 
-2. [Initiate a playtest](../../../../studio/testing-modes.md#playtesting). If your code works, the platform should have disappeared by the time the user spawns into the game.
+2. [Initiate a playtest](../../../../studio/testing-modes.md#playtesting). If your code works, the platform should have disappeared by the time the user spawns in.
 
 ## Appear function
 
@@ -195,7 +195,7 @@ The built-in function `Library.task.wait()` can be used for this. In the parenth
 
 <Alert severity="error">
 
-Whatever you do, never make a `while true` loop without including a `task.wait()` — and don't test your code before you've put one in! If you don't wait, your game will **freeze** because Studio will never have a chance to leave the loop and do anything else.
+Whatever you do, never make a `while true` loop without including a `task.wait()` — and don't test your code before you've put one in! If you don't wait, your experience will **freeze** because Studio will never have a chance to leave the loop and do anything else.
 
 </Alert>
 

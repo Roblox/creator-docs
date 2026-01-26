@@ -1583,6 +1583,12 @@ methods:
         default:
         summary: |
           Name of the property to query.
+      - name: selector
+        type: string?
+        default:
+        summary: |
+          Optional selector for the pseudo instance you are targeting on the
+          instance.
     returns:
       - type: Variant
         summary: |

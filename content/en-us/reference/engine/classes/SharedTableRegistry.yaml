@@ -48,7 +48,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - ScriptGlobals
   - name: SharedTableRegistry:SetSharedTable
     summary: |
       Registers the provided `Datatype.SharedTable` with the specified name.
@@ -87,6 +88,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - ScriptGlobals
 events: []
 callbacks: []

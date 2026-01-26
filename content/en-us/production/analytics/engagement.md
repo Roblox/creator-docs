@@ -28,7 +28,7 @@ Usually, the friction of joining and leaving an experience is very low on Roblox
 
 1. **Ensure users have fun within the first five minutes of joining your experience**: Think about what makes your experience fun and what makes it stand out from other experiences. You should be able to communicate these to your users within the first five minutes of joining your experience.
 
-2. **Get users into the action as soon as possible and avoid long tutorials**: If you lock all the fun of your game behind a lengthy tutorial, users might get bored and move on to something else. Make learning contextual and action based, such as short, unobtrusive pop-up instructions when a user encounters a new feature and tooltips about the purpose of items in the shop. Also consider giving users some starter items and currency to help them enjoy the core loop as soon as possible.
+2. **Get users into the action as soon as possible and avoid long tutorials**: If you lock all the fun of your experience behind a lengthy tutorial, users might get bored and move on to something else. Make learning contextual and action based, such as short, unobtrusive pop-up instructions when a user encounters a new feature and tooltips about the purpose of items in the shop. Also consider giving users some starter items and currency to help them enjoy the core loop as soon as possible.
 
 3. **Remove unnecessary barriers to social interaction**: Many successful experiences on Roblox highlight socializing with connections and other users a core part of their design. Try to design your experience to support group play and social interaction where possible.
 

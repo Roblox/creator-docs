@@ -66,7 +66,7 @@ Although memory stores store temporary data, they also support permanent feature
   </tr>
   <tr>
     <td>**Common use cases**</td>
-    <td>Skill-based matchmaking, match states for multiplayer games, daily and monthly leaderboards.</td>
+    <td>Skill-based matchmaking, match states for multiplayer experiences, daily and monthly leaderboards.</td>
   </tr>
 </tbody>
 </table>

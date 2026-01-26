@@ -86,7 +86,7 @@ You can modify experience information, such as the name, description, icon, and 
 
 #### Add experience product translations
 
-You can modify experience product details, such as developer [products](../../production/monetization/developer-products.md), [game passes](../../production/monetization/game-passes.md), and [badges](../../production/publishing/badges.md):
+You can modify experience product details, such as developer [products](../../production/monetization/developer-products.md), [passes](../../production/monetization/passes.md), and [badges](../../production/publishing/badges.md):
 
 1. In the localization settings page, click the **Translate** button on the top right.
 2. In the **Target Languages** menu on the left, select the target language you want to add a translation to.

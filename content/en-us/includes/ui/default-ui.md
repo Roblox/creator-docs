@@ -40,6 +40,10 @@ All Roblox experiences include several UI elements that are enabled by default. 
     <td>A **capture screenshot** button along the right side of the screen. Does not appear unless the player has enabled **Captures** from the Roblox menu.</td>
     <td>`Enum.CoreGuiType.Captures`</td>
   </tr>
+  <tr>
+    <td>The **Avatar Switcher** allows users to change their platform avatar.</td>
+    <td>`Enum.CoreGuiType.AvatarSwitcher`</td>
+  </tr>
 </tbody>
 </table>
 

@@ -3,6 +3,10 @@ title: Makeup specifications
 description: Makeup is a cosmetic look made up of multiple facial textures and optional eyebrow and eyelashes.
 ---
 
+<Alert severity ='warning'>
+This feature is currently in beta. Enable it through **File** ⟩ **Beta Features** ⟩ **Avatar Makeup**. The information provided is subject to change and is intended to prepare creators for the final release. For the latest news and updates, see the [DevForum announcement](https://devforum.roblox.com/t/studio-beta-introducing-avatar-makeup/3973764).
+</Alert>
+
 Makeup is a unique avatar asset that converts a combination of textures into a single `Decal` object that is applied over a character's face. Makeup can also include optional eyebrows and eyelashes, which are MeshPart accessories that include their own textures.
 
 <Alert severity = 'warning'>
@@ -48,3 +52,4 @@ Eyebrows and eyelashes are layered accessories, meaning that they must meet [lay
   - Eyebrows and eyelashes can also take advantage of automatic skinning, specifically with [special skinning joints](../art/accessories/automatic-skinning-transfer.md#special-skinning-transfer-joints).
 
 - **Geometry size** - Eye accessories can't exceed [maximum dimensions](../art/accessories/clothing-specifications.md) for their asset type.
+- **Budgets** - Eye accessories can't exceed 4k triangles each.

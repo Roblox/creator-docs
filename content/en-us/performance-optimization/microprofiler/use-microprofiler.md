@@ -15,9 +15,9 @@ This walkthrough shows how to use the MicroProfiler to find a problematic aspect
 
 1. After you open the experience in Studio, start testing it with <kbd>F5</kbd> or the **Play** button.
 
-1. The frame rate feels decent, but not as smooth as it should be for an experience of this size and scope. Navigate to the **View** tab and click **Summary** under [Stats](../../studio/view-tab.md#diagnostic-stats).
+1. The frame rate feels decent, but not as smooth as it should be for an experience of this size and scope. Press <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F5</kbd> (<kbd>⌘</kbd><kbd>Shift</kbd><kbd>F5</kbd>) to show the **Performance Summary** overlay.
 
-   <img alt="Debug stats summary showing 45 FPS." src="../../assets/optimization/microprofiler/micro-tut-framerate.png" width="500px" />
+   <img alt="Performance summary showing 45 FPS." src="../../assets/optimization/microprofiler/micro-tut-framerate.png" width="500px" />
 
    Note that the frame rate is below 60 frames per second (FPS).
 
@@ -109,8 +109,8 @@ Now that the MicroProfiler has provided a starting point, you can troubleshoot t
 
 1. Delete or comment out the `onStepped()` function and the `RunService.Stepped:Connect(onStepped)` connection.
 
-1. Start testing the experience again, and check the debug stats summary again.
+1. Start testing the experience again, and check the **Performance Summary** again.
 
-   <img alt="Debug stats summary showing 60 FPS." src="../../assets/optimization/microprofiler/micro-tut-framerate2.png" width="500px" />
+   <img alt="Performance summary showing 60 FPS." src="../../assets/optimization/microprofiler/micro-tut-framerate2.png" width="500px" />
 
    Note the huge improvement to frame rate and corresponding drop in frame times on the MicroProfiler graph.

@@ -22,8 +22,13 @@ tags: []
 deprecation_message: ''
 properties:
   - name: InputAction.BoolState
-    summary: ''
-    description: ''
+    summary: |
+      Non-scriptable read-only property useful for debugging
+      `Enum.InputActionType|Bool` input actions.
+    description: |
+      A non-scriptable read-only property only visible in Studio, primarily
+      useful for debugging while testing an `InputAction` with
+      `Class.InputAction.Type|Type` of `Enum.InputActionType|Bool`.
     code_samples: []
     type: boolean
     tags:

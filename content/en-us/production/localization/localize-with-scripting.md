@@ -387,7 +387,7 @@ function TranslationHelper.setLanguage(newLanguageCode)
 	return false
 end
 
--- Create a Translate function that uses a fallback translator if the first fails to load or return successfully. You can also set the referenced object to default to the generic game object
+-- Create a Translate function that uses a fallback translator if the first fails to load or return successfully. You can also set the referenced object to default to the generic object
 
 function TranslationHelper.translate(text, object)
 	if not object then

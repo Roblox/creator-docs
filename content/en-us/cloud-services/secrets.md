@@ -27,7 +27,7 @@ You can also use Open Cloud to manage your secrets. See the [reference documenta
 
 For security reasons, the secrets store for each experience is only available to live servers or [collaborative testing](../studio/testing-modes.md#collaborative-testing) environments. If you try to access a secret during [local playtesting](../studio/testing-modes.md#playtesting), you'll receive a `Can't find secret with given key` error.
 
-To specify secrets for local testing, go to Studio and then go to **File** ⟩ **Game Settings** ⟩ **Security**. You can create new secrets and edit or delete existing secrets in the **Secrets** section.
+To specify secrets for local testing, go to Studio and then go to **File** ⟩ **Experience Settings** ⟩ **Security**. You can create new secrets and edit or delete existing secrets in the **Secrets** section.
 
 <img src="../assets/data/secrets-store/LocalSecrets.png" width="750px" alt="View, create, edit secrets with the Secrets UI."/>
 
@@ -35,7 +35,7 @@ To specify secrets for local testing, go to Studio and then go to **File** ⟩ *
 
 ## Use secrets
 
-Before using secrets within your experience, you must enable **Allow HTTP Requests** in the **Security** section of Studio's **File** ⟩ **Game Settings** window. Then call `Class.HttpService:GetSecret()` within a script:
+Before using secrets within your experience, you must enable **Allow HTTP Requests** in the **Security** section of Studio's **File** ⟩ **Experience Settings** window. Then call `Class.HttpService:GetSecret()` within a script:
 
 ```lua
 local HttpService = game:GetService("HttpService")

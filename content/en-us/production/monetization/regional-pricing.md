@@ -73,7 +73,7 @@ To use the dynamic price check tool:
 
 To disable the dynamic price check tool, go to the **Dynamic Price Check** page and click **Disable**.
 
-For more information about hard-coded versus dynamically-scripted product prices, see [Check for dynamic pricing](./price-optimization.md#check-for-dynamic-pricing) in the Price optimization page. For more information about selling passes and developer products with `MarketplaceService` functions, see [Sell a pass inside your experience](./game-passes.md#inside-your-experience) and [Sell a developer product inside your experience](./developer-products.md#inside-your-experience).
+For more information about hard-coded versus dynamically-scripted product prices, see [Check for dynamic pricing](./price-optimization.md#check-for-dynamic-pricing) in the Price optimization page. For more information about selling passes and developer products with `MarketplaceService` functions, see [Sell a pass inside your experience](./passes.md#inside-your-experience) and [Sell a developer product inside your experience](./developer-products.md#inside-your-experience).
 
 ## Protect your trades and gifts
 
@@ -92,7 +92,7 @@ A lower price level difference means that there's a smaller price difference bet
 <Alert severity="warning">
   We recommend that you **do not** cache the results of your `GetUsersPriceLevelsAsync` API calls after a user session. User price levels can change. Relying on cached data can lead to inaccurate transfer logic and potential abuse or exploitation of the system.
   
-  To make sure that you have the most up-to-date price information for each user, always make calls to `GetUsersPriceLevelsAsync` at game join.
+  To make sure that you have the most up-to-date price information for each user, always make calls to `GetUsersPriceLevelsAsync` at player join.
 </Alert>
 
 To get the price levels of users involved in an item transfer, call the `GetUsersPriceLevelsAsync` function in the `MarketplaceService`. This function takes an array of user IDs as its argument, and returns an array of `PriceLevelInfo` objects with the following fields:

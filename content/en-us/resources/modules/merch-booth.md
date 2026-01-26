@@ -3,12 +3,12 @@ title: Merch Booth
 description: The Merch Booth module lets you sell avatar assets, passes, and products directly in an experience.
 ---
 
-The **MerchBooth** [developer module](../../resources/modules/index.md) lets you offer [avatar assets](../../art/accessories/index.md), [passes](../../production/monetization/game-passes.md), and [developer products](../../production/monetization/developer-products.md) for sale directly within your experience. Players can browse items, preview assets on their own avatar, purchase items, and instantly use or equip them&nbsp;— all without leaving your experience. This can help you [monetize](../../production/monetization/index.md) your experience and gain revenue through the 40% affiliate fee associated with selling other creators' items.
+The **MerchBooth** [developer module](../../resources/modules/index.md) lets you offer [avatar assets](../../art/accessories/index.md), [passes](../../production/monetization/passes.md), and [developer products](../../production/monetization/developer-products.md) for sale directly within your experience. Players can browse items, preview assets on their own avatar, purchase items, and instantly use or equip them&nbsp;— all without leaving your experience. This can help you [monetize](../../production/monetization/index.md) your experience and gain revenue through the 40% affiliate fee associated with selling other creators' items.
 
 <video src="../../assets/developer-modules/merch-booth/Showcase.mp4" controls width="100%"></video>
 
 <Alert severity="warning">
-To offer assets created by third parties in the merch booth, make sure **Allow Third Party Sales** is enabled from the **Security** section of Studio's **File**&nbsp;⟩ **Game Settings** window. If this setting is disabled, you will not be able to sell UGC assets created by other users.
+To offer assets created by third parties in the merch booth, make sure **Allow Third Party Sales** is enabled from the **Security** section of Studio's **File**&nbsp;⟩ **Experience Settings** window. If this setting is disabled, you will not be able to sell UGC assets created by other users.
 </Alert>
 
 ## Module usage
@@ -123,7 +123,7 @@ Items such as [clothing and accessories](../../art/accessories/index.md) must be
 
 #### Passes
 
-Adding [passes](../../production/monetization/game-passes.md) requires pass IDs which can be located in the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+Adding [passes](../../production/monetization/passes.md) requires pass IDs which can be located in the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 
 1. Create a `Class.Script` within **ServerScriptService** and paste in the following code.
 

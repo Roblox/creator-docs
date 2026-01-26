@@ -19,7 +19,7 @@ description: |
   [developer products](../../../production/monetization/developer-products.md)
   (`Class.MarketplaceService:GetProductInfoAsync()|GetProductInfoAsync` and
   `Class.MarketplaceService:GetDeveloperProductsAsync()|GetDeveloperProductsAsync`),
-  [passes](../../../production/monetization/game-passes.md)
+  [passes](../../../production/monetization/passes.md)
   (`Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync()`),
   and other assets
   (`Class.MarketplaceService:PlayerOwnsAssetAsync()|PlayerOwnsAssetAsync`,
@@ -58,16 +58,17 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: MarketplaceService:GetProductInfoAsync
     summary: |
       Returns the product information of an asset using its asset ID.
     description: |
       This method provides information about an asset,
       [developer product](../../../production/monetization/developer-products.md),
-      or [pass](../../../production/monetization/game-passes.md) based on the
-      asset ID and the `Enum.InfoType`. If an item with the given ID does not
-      exist, this method throws an error.
+      or [pass](../../../production/monetization/passes.md) based on the asset
+      ID and the `Enum.InfoType`. If an item with the given ID does not exist,
+      this method throws an error.
 
       Information about the queried item is provided in a dictionary with the
       following keys. Note that not all information is provided or necessarily
@@ -346,7 +347,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: MarketplaceService:GetProductInfo
     summary: |
       Returns the product information of an asset using its asset ID.
@@ -378,7 +380,8 @@ methods:
       `Class.MarketplaceService.GetProductInfoAsync|GetProductInfoAsync()`.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: MarketplaceService:GetSubscriptionProductInfoAsync
     summary: |
       Returns the product information of a subscription for the given
@@ -461,7 +464,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: MarketplaceService:GetUsersPriceLevelsAsync
     summary: |
       Returns the regionalized price level of a user, representing the
@@ -783,8 +787,8 @@ methods:
       should wrap calls to this method in `pcall()`.
 
       - This method should **not** be used for
-        [passes](../../../production/monetization/game-passes.md) since they use
-        a separate ID system. Legacy passes that still depend on an asset ID
+        [passes](../../../production/monetization/passes.md) since they use a
+        separate ID system. Legacy passes that still depend on an asset ID
         should use
         `Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync()`
         instead of this method.
@@ -817,7 +821,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: MarketplaceService:PlayerOwnsAsset
     summary: |
       Returns whether the given user has the given asset.
@@ -848,7 +853,8 @@ methods:
       `Class.MarketplaceService:PlayerOwnsAssetAsync()|PlayerOwnsAssetAsync()`.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: MarketplaceService:PlayerOwnsBundleAsync
     summary: |
       Returns whether the given player owns the given bundle.
@@ -880,7 +886,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: MarketplaceService:PlayerOwnsBundle
     summary: |
       Returns whether the given player owns the given bundle.
@@ -911,7 +918,8 @@ methods:
       `Class.MarketplaceService:PlayerOwnsBundleAsync()|PlayerOwnsBundleAsync()`.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: MarketplaceService:PromptBulkPurchase
     summary: |
       Prompts a user to purchase multiple avatar items with the given `assetId`
@@ -967,7 +975,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - PromptExternalPurchase
   - name: MarketplaceService:PromptBundlePurchase
     summary: |
       Prompts a user to purchase a bundle with the given `bundleId`.
@@ -990,7 +999,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - PromptExternalPurchase
   - name: MarketplaceService:PromptCancelSubscription
     summary: |
       Prompts a user to cancel a subscription for the given `subscriptionId`.
@@ -1015,13 +1025,14 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - PromptExternalPurchase
   - name: MarketplaceService:PromptGamePassPurchase
     summary: |
       Prompts a user to purchase a pass with the given `gamePassId`.
     description: |
       Prompts a user to purchase a
-      [pass](../../../production/monetization/game-passes.md) with the given
+      [pass](../../../production/monetization/passes.md) with the given
       `gamePassId`.
     code_samples: []
     parameters:
@@ -1040,7 +1051,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - PromptExternalPurchase
   - name: MarketplaceService:PromptPremiumPurchase
     summary: |
       Prompts a user to purchase Roblox Premium.
@@ -1072,7 +1084,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - PromptExternalPurchase
   - name: MarketplaceService:PromptProductPurchase
     summary: |
       Prompts a user to purchase a developer product with the given `productId`.
@@ -1106,7 +1119,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - PromptExternalPurchase
   - name: MarketplaceService:PromptPurchase
     summary: |
       Prompts a user to purchase an item with the given `assetId`. Does not work
@@ -1157,7 +1171,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - PromptExternalPurchase
   - name: MarketplaceService:PromptSubscriptionPurchase
     summary: |
       Prompts a user to purchase a subscription for the given `subscriptionId`.
@@ -1283,7 +1298,7 @@ methods:
       owns the pass with the given `gamePassId`.
     description: |
       Returns true if the user with the given `Class.Player.UserId|UserId` owns
-      the [pass](../../../production/monetization/game-passes.md) with the given
+      the [pass](../../../production/monetization/passes.md) with the given
       `gamePassId` (not to be confused with an asset ID).
 
       #### Caching Behavior
@@ -1322,7 +1337,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
 events:
   - name: MarketplaceService.PromptBulkPurchaseFinished
     summary: |
@@ -1406,9 +1422,9 @@ events:
       Fires when a purchase prompt for a pass is closed.
     description: |
       This event fires when a purchase prompt for a
-      [pass](../../../production/monetization/game-passes.md) closes. For
-      example, when a user receives the purchase prompt and clicks **Cancel**,
-      or when they receive a success or error message and click **OK**.
+      [pass](../../../production/monetization/passes.md) closes. For example,
+      when a user receives the purchase prompt and clicks **Cancel**, or when
+      they receive a success or error message and click **OK**.
 
       ##### See also
 
@@ -1553,7 +1569,7 @@ events:
 
       This event does not fire for
       [developer product](../../../production/monetization/developer-products.md)
-      or [pass](../../../production/monetization/game-passes.md) prompts.
+      or [pass](../../../production/monetization/passes.md) prompts.
 
       ##### See also
 

@@ -111,7 +111,7 @@ effect | RewardEffect | The visual effect to use in the UI. See [Customize the U
 `Time` rewards unlock after a certain number of seconds in-game. Customize these numbers to meet your needs. You might use small numbers for easy testing, and in the published experience, confer a reward after 10 minutes, another after 30 minutes, another after an hour, and so on.
 
 <Alert severity="info">
-Time tracking starts at 0 for each session, so players lose all progress towards `Time` rewards when they leave the game.
+Time tracking starts at 0 for each session, so players lose all progress towards `Time` rewards when they leave the experience.
 </Alert>
 
 Multiplication makes numbers in seconds easier for humans to work with, so for two hours, you might prefer to specify `2 * 60 * 60` rather than `7200`.

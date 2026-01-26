@@ -200,7 +200,7 @@ As follows are example tools and their behaviors managed by either a `Class.Loca
     <tr>
       <td>**Creator's Wand**</td>
       <td>Detects where the player activates the tool (`Class.Tool.Activated|Activated()`).</td>
-      <td>Creates a new part at the location within the game world where the player touched or clicked.</td>
+      <td>Creates a new part at the location within the 3D world where the player touched or clicked.</td>
     </tr>
     <tr>
       <td>**Invisibility Cloak**</td>

@@ -11,7 +11,7 @@ This article will cover how to start coding in Roblox, introducing common concep
 
 ## Code with scripts
 
-In Roblox Studio, lines of Luau code are held in **scripts**. These scripts give the game sets of instructions on how to give players health points, create a rain of fireballs, or anything else imaginable.
+In Roblox Studio, lines of Luau code are held in **scripts**. These scripts give the experience sets of instructions on how to give players health points, create a rain of fireballs, or anything else imaginable.
 
 ### Create a script
 
@@ -32,7 +32,7 @@ New scripts include a print function at the top of the script editor. **Print fu
 print("Hello world!")
 ```
 
-To find the script next time you open up Roblox Studio, click on the name of the script above the game editor, or double-click the script's name in Explorer.
+To find the script next time you open up Roblox Studio, click on the name of the script above the 3D viewport, or double-click the script's name in Explorer.
 
 ### Test output
 

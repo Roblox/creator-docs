@@ -176,7 +176,7 @@ Once you've developed an experience, you can earn through the following methods:
 
 - [Subscriptions](./monetization/subscriptions.md) within experiences offer you the ability to earn from your experience through subscription-based offerings and business models.
 - [Developer Products](../production/monetization/developer-products.md), which are items or abilities that a user can purchase, such as in-experience currency.
-- [Passes](../production/monetization/game-passes.md) for access to special privileges within an experience, such as entry to a restricted area or a permanent power‑up. When you sell your own passes in your experience, you earn 70% of the Robux spent. You can also sell passes within your experience that were made by other creators; in this case, you earn a 10% affiliate fee on the Robux spent within your experience, and the original creator of the pass earns 60%.
+- [Passes](../production/monetization/passes.md) for access to special privileges within an experience, such as entry to a restricted area or a permanent power‑up. When you sell your own passes in your experience, you earn 70% of the Robux spent. You can also sell passes within your experience that were made by other creators; in this case, you earn a 10% affiliate fee on the Robux spent within your experience, and the original creator of the pass earns 60%.
 - [Private servers](../production/monetization/private-servers.md) for users to play with just connections (subscription-based access fees).
 
 #### Creator Rewards

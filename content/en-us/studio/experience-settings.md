@@ -1,9 +1,9 @@
 ---
-title: Game Settings
-description: The Game Settings window contains all Studio-level settings and customization options for an experience.
+title: Experience Settings
+description: The Experience Settings window contains Studio-level settings and customization options for an experience.
 ---
 
-The **Game Settings** window, accessible from Studio's **File** menu, contains all Studio-level settings and customization options for Roblox experiences, including settings for [permissions](#permissions), [monetization](#monetization), [security](#security), and [localization](#localization).
+The **Experience Settings** window, accessible from Studio's **File** menu, contains a wide array of Studio-level settings and customization options for Roblox experiences, including settings for [permissions](#permissions), [monetization](#monetization), [security](#security), and [localization](#localization).
 
 <Alert severity="warning">
 Many settings in this window modify underlying properties in your place file that aren’t visible in Studio or accessible with scripts. This can lead to unexpected or difficult-to-debug behavior, especially when working across teams or reverting changes. Make sure you fully understand the impact of each setting before applying changes.

@@ -21,7 +21,7 @@ In this tutorial, you'll learn how to cast a laser from the blaster in [Create p
 
 ## Find the mouse location
 
-Before a laser can be shot, you must first know where the player is aiming. This can be found by raycasting from the player's 2D mouse location on the screen directly forwards from the camera into the game world. The ray will collide with whatever the player is aiming at with the mouse.
+Before a laser can be shot, you must first know where the player is aiming. This can be found by raycasting from the player's 2D mouse location on the screen directly forwards from the camera into the 3D world. The ray will collide with whatever the player is aiming at with the mouse.
 
 1. Open the **ToolController** script inside the Blaster tool from [Create player tools](./create-player-tools.md). If you haven't completed that tutorial yet you can download the [Blaster](https://www.roblox.com/library/6571559694/Blaster) model and insert it into StarterPack.
 
@@ -29,7 +29,7 @@ Before a laser can be shot, you must first know where the player is aiming. This
 
    <Alert severity="info">
 
-   Models can be added into your Inventory to be used between any game.
+   Models can be added into your Inventory to be used between any experience.
 
    1. In a browser, open the [model](https://www.roblox.com/library/6571559694/Blaster) page, click the **Get** button. This adds the model into your inventory.
    2. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../../../projects/assets/toolbox.md) and select the **Inventory** tab.
@@ -78,7 +78,7 @@ Before a laser can be shot, you must first know where the player is aiming. This
    end
    ```
 
-Now the 2D mouse location is known, its **X** and **Y** properties can be used as parameters for the `Class.Camera:ViewportPointToRay()` function, which creates a `Datatype.Ray` from the screen into the 3D game world.
+Now the 2D mouse location is known, its **X** and **Y** properties can be used as parameters for the `Class.Camera:ViewportPointToRay()` function, which creates a `Datatype.Ray` from the screen into the 3D world.
 
 1. Use the **X** and **Y** properties of `mouseLocation` as arguments for the `Class.Camera:ViewportPointToRay()|ViewportPointToRay()` function. Assign this to a variable named **screenToWorldRay**.
 
@@ -334,7 +334,7 @@ First, you'll need to find the **character model**. If a part of the character w
 You can use `Class.Instance:FindFirstAncestorOfClass()|FindFirstAncestorOfClass` to find a character model ancestor of the object hit by the laser, if one exists. If you find a model and it contains a humanoid, in most cases you can assume it's a character.
 
 <Alert severity="warning">
-If you have other models in the game that contain humanoids, further checks will be needed.
+If you have other models in the experience that contain humanoids, further checks will be needed.
 </Alert>
 
 1. Add the highlighted code below to the `weaponRaycastResult` **if** statement to check if a character was hit.
@@ -805,7 +805,7 @@ The shooting sound effect currently only plays on the client that's shooting the
 
 If the server isn't checking data from incoming requests, a hacker can abuse remote functions and events and use them to send fake values to the server. It's important to use **server-side validation** to prevent this.
 
-In its current form, the **DamageCharacter** remote event is very vulnerable to attack. Hackers could use this event to damage any player they want in the game without shooting them.
+In its current form, the **DamageCharacter** remote event is very vulnerable to attack. Hackers could use this event to damage any player they want without shooting them.
 
 Validation is the process of checking that the values being sent to the server are realistic. In this case, the server will need to:
 
@@ -926,7 +926,7 @@ The second check will involve a raycast between the weapon fired and the hit pos
 
 Now the damageCharacter remote event is more secure and will prevent most players from abusing it. Note that some malicious players will often find ways around validation; keeping remote events secure is a continuous effort.
 
-Your laser blaster is now complete, with a basic hit detection system using raycasting. Try the [Detecting User Input](../../input-and-camera/detect-user-input.md) tutorial to find out how you can add a reloading action to your laser blaster, or create a fun game map and try your laser blaster out with other players!
+Your laser blaster is now complete, with a basic hit detection system using raycasting. Try the [Detecting User Input](../../input-and-camera/detect-user-input.md) tutorial to find out how you can add a reloading action to your laser blaster, or create a fun map and try your laser blaster out with other players!
 
 <video controls loop muted>
     <source src="../../../../assets/tutorials/hit-detection-with-lasers/Introduction-Video.mp4" />

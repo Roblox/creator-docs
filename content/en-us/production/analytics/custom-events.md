@@ -80,11 +80,11 @@ For more information, see [Custom fields](./custom-fields.md).
 
 ## Use custom events to grow your experience
 
-Custom events enable you to track metrics that matter most to your game, providing insights into how players interact with specific features and content. Use these events to uncover patterns in player behavior and optimize your core game loop.
+Custom events enable you to track metrics that matter most, providing insights into how players interact with specific features and content. Use these events to uncover patterns in player behavior and optimize your core game loop.
 
 In the reference game [Plant](../../resources/plant-reference-project.md), the core loop with a `HarvestPlant` event fires whenever a player harvests a ripe plant. Using custom events, you can track the average number of plants harvested per player each day broken down by the plant type as a custom field:
 
-<img src="../../assets/analytics/event-types/Custom-Event-Graph.png" width = "100%" alt="Custom Event graph for the reference Plant game."/>
+<img src="../../assets/analytics/event-types/Custom-Event-Graph.png" width = "100%" alt="Custom Event graph for the reference Plant experience."/>
 
 - Try to improve the diversity of content within your experience and encourage players to explore other options as part of the [core loop](../game-design/core-loops.md) to prevent repetitiveness.
 - Explore why users significantly prefer turnips over other plants, and if there are any imbalances that turnips are causing (such as with [economy events](./economy-events.md)).

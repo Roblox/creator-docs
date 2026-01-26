@@ -56,7 +56,7 @@ After implementation, you can use [analytics](#analytics) to understand key metr
 
 To set up a rewarded video ad inside your experience:
 
-1. In Studio, go to **Game Settings** ⟩ **Monetization**.
+1. In Studio, go to **File** ⟩ **Experience Settings** ⟩ **Monetization**.
 2. Check the **Enable Rewarded Video Ads** checkbox.
   <img src="../../assets/promotion/ads-manager/EnableRewardedVideoAdsToggle.png" width="750" />
 3. Select the reward you want to grant the user. If the reward doesn't already exist, [create a new developer product in the Creator Hub](../monetization/developer-products.md#create-a-developer-product). This developer product must have been created for the specific universe the place is in.
@@ -342,7 +342,7 @@ To prevent abuse of the rewarded ad system and to provide the best user experien
   </tr>
   <tr>
     <th>**Rewards**</th>
-    <td>The reward for watching a video ad should:<br/><br/><ul><li>Be granted upon completion of a video ad view.</li><li>Be a developer product which would normally be available to purchase with Robux inside an in-experience shop.</li><li>Not inflate currency or unbalance the game economy.</li></ul>The right reward strategy is critical. See [Best practices](#best-practices) for more guidance on choosing the right reward for your video ad.</td>
+    <td>The reward for watching a video ad should:<br/><br/><ul><li>Be granted upon completion of a video ad view.</li><li>Be a developer product which would normally be available to purchase with Robux inside an in-experience shop.</li><li>Not inflate currency or unbalance the experience's economy.</li></ul>The right reward strategy is critical. See [Best practices](#best-practices) for more guidance on choosing the right reward for your video ad.</td>
   </tr>
 </tbody>
 </table>
@@ -361,7 +361,7 @@ To get the most out of your rewarded video ad, make sure to:
 For the best reward strategy, we recommend that your rewards:
 
 - Have prominent reward prompts to ensure all eligible users engage with the video.
-- Be relevant to the gameplay and align with core game mechanics. For example, extra lives in a battle game or new customization options in a roleplaying game.
+- Be relevant to the gameplay and align with core experience mechanics. For example, extra lives in a battle experience or new customization options in a roleplaying game.
 - Be scaled so that they remain valuable to users as they advance through the experience.
 - Motivate the user by offering in-experience progression, collection, customization, or competition.
 - Be offered at strategic moments, like after the user loses a life or after they complete a difficult level.

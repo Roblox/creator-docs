@@ -145,7 +145,7 @@ Though both systems share the same basic chat functionalities, `Class.TextChatSe
     </tr>
     <tr>
       <td>Disable chat</td>
-      <td>[Game Settings](../studio/game-settings.md) in Studio and `ChatWindow/ChatSettings` module for hiding the chat window</td>
+      <td>[Experience Settings](../studio/experience-settings.md) in Studio and `ChatWindow/ChatSettings` module for hiding the chat window</td>
       <td>`Class.ChatWindowConfiguration.Enabled`</td>
       <td></td>
     </tr>

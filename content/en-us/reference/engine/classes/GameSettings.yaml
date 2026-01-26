@@ -29,8 +29,8 @@ properties:
       - Deprecated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Video
     serialization:

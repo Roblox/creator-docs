@@ -3,7 +3,7 @@ title: Subscriptions
 description: Subscriptions within experiences let you offer users recurring benefits for a monthly fee.
 ---
 
-**Subscriptions** within experiences let you offer users recurring benefits for a monthly fee. Similar to [passes](./game-passes.md), the major difference between subscriptions and passes is that the benefits of a pass are granted in perpetuity, while the benefits of a subscription are contingent on the user paying a monthly fee. Subscriptions on Roblox have the following characteristics:
+**Subscriptions** within experiences let you offer users recurring benefits for a monthly fee. Similar to [passes](./passes.md), the major difference between subscriptions and passes is that the benefits of a pass are granted in perpetuity, while the benefits of a subscription are contingent on the user paying a monthly fee. Subscriptions on Roblox have the following characteristics:
 
 - **Auto-renewal:** Subscriptions are auto-renewing, not one-time purchases, and are priced in local currency.
 - **Robux payout:** You receive subscription revenue in Robux. For more details, see [Earn with subscriptions](#earn-with-subscriptions).
@@ -162,24 +162,24 @@ Players.PlayerAdded:Connect(checkSubStatus)
 Players.UserSubscriptionStatusChanged:Connect(onUserSubscriptionStatusChanged)
 ```
 
-### Replace a game pass with a subscription
+### Replace a pass with a subscription
 
-One option for rolling out subscriptions in your experience is to replace an existing Game Pass with a subscription. This is a great option if you want to quickly implement subscriptions in your experience without adding new features or awards.
+One option for rolling out subscriptions in your experience is to replace an existing pass with a subscription. This is a great option if you want to quickly implement subscriptions in your experience without adding new features or awards.
 
-There are two important considerations when replacing a Game Pass with a subscription:
+There are two important considerations when replacing a pass with a subscription:
 
-- Any existing holders of the Game Pass should continue to receive the benefit they paid for.
-- The Game Pass should be taken off sale so that new users can purchase the subscription instead.
-- Subscriptions can be revoked, which means if your Game Pass previously persisted its benefits to a data store, you need to "undo" these benefits. This consideration does not apply to all Game Pass implementations, but might apply to more complex ones.
+- Any existing holders of the pass should continue to receive the benefit they paid for.
+- The pass should be taken off sale so that new users can purchase the subscription instead.
+- Subscriptions can be revoked, which means if your pass previously persisted its benefits to a data store, you need to "undo" these benefits. This consideration does not apply to all pass implementations, but might apply to more complex ones.
 
-The following code sample shows how to replace a Game Pass with a subscription:
+The following code sample shows how to replace a pass with a subscription:
 
 ```lua
 -- Run this code on the server
 local MarketplaceService = game:GetService("MarketplaceService")
 local Players = game:GetService("Players")
 
-local LEGACY_GAME_PASS_ID = 1234 -- Replace with the ID of the game pass being replaced by a subscription
+local LEGACY_GAME_PASS_ID = 1234 -- Replace with the ID of the pass being replaced by a subscription
 local SUBSCRIPTION_ID = "EXP-11111111" -- Replace with your subscription ID
 
 local function awardBenefit(player: Player)
@@ -215,12 +215,12 @@ local function onPlayerAdded(player: Player)
 	end)
 
 	if not success then
-		print(`Error fetching game pass status: {result}`)
+		print(`Error fetching pass status: {result}`)
 		return
 	end
 
 	if result then
-		-- If the player has purchased the legacy game pass, we do not need to look up their subscription status
+		-- If the player has purchased the legacy pass, we do not need to look up their subscription status
 		-- as they have the benefit granted for life
 		awardBenefit(player)
 		return
@@ -244,7 +244,7 @@ end
 
 Players.PlayerAdded:Connect(onPlayerAdded)
 Players.UserSubscriptionStatusChanged:Connect(onUserSubscriptionStatusChanged)
--- We will continue to listen for in-game game pass purchases in case the game pass is still on sale
+-- We will continue to listen for pass purchases in case the pass is still on sale
 MarketplaceService.PromptGamePassPurchaseFinished:Connect(onPromptGamePassPurchaseFinished)
 ```
 
@@ -290,7 +290,7 @@ local purchaseSubscriptionButton = script.Parent.PromptPurchaseSubscription -- R
 
 
 local function playerHasSubscription()
-    -- Note if your subscription is replacing a game pass, you will need to check if the game pass is owned here too
+    -- Note if your subscription is replacing a pass, you will need to check if the pass is owned here too
 
 	local success, result = pcall(function()
 		return getSubscriptionStatusRemote:InvokeServer(SUBSCRIPTION_ID)

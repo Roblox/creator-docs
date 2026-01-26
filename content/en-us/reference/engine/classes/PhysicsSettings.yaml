@@ -32,8 +32,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Performance
     serialization:
@@ -54,8 +54,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -78,8 +78,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -114,8 +114,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -174,8 +174,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -260,8 +260,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -350,8 +350,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -386,8 +386,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -422,8 +422,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -444,8 +444,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -460,8 +460,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -482,8 +482,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -504,8 +504,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -527,8 +527,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -559,8 +559,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -595,8 +595,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -617,8 +617,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -637,8 +637,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -653,8 +653,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -756,8 +756,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -804,8 +804,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -824,8 +824,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -897,8 +897,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -918,8 +918,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Performance
     serialization:
@@ -938,8 +938,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -1032,8 +1032,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Performance
     serialization:
@@ -1068,8 +1068,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:

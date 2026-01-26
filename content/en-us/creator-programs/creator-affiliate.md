@@ -23,7 +23,7 @@ This program is currently in pilot, and we intend to expand to all eligible crea
 
 We are looking for creators, influencers, and studios with one or more of the following:
 
-- **A track record of successfully developed games and products**, either on or off Roblox. You can demonstrate this through player count, sales estimates, and overall popularity.
+- **A track record of successfully developed experiences and products**, either on or off Roblox. You can demonstrate this through player count, sales estimates, and overall popularity.
 - **A strong presence on social, video, and gaming platforms.** You can demonstrate this through follower count and post engagement.
 - **The ability to reach [new audiences](https://corp.roblox.com/newsroom/2024/07/roblox-genre-insights-what-will-you-create-next) and meet their needs in growing genres and markets.** Growing genres include open world action, sports, driving, and social cooperation, and growing markets include Japan, India, Germany, Brazil, and South Korea.
 - **Marketing expertise.** You can demonstrate this through previous creative and successful marketing campaigns, as well as through the quality of your Creator Affiliate Pilot Program application.

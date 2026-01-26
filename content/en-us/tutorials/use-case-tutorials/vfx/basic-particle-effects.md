@@ -3,7 +3,7 @@ title: Basic particle effects
 description: The process of creating particles to elevate the visual effects in your experience.
 ---
 
-**Particles** are used to create a wide range of effects in games, from smoke and fire to splashing water. They can help bring your game world to life and can provide valuable visual feedback for your players.
+**Particles** are used to create a wide range of effects in experiences, from smoke and fire to splashing water. They can help bring your experience to life and can provide valuable visual feedback for your players.
 
 In this tutorial, you will use a `Class.ParticleEmitter` object to create a sparkling effect around a part.
 

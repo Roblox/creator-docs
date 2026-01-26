@@ -3,16 +3,16 @@ title: Save data
 description: The process for creating a basic data store to save, store, and read data back.
 ---
 
-Games often need to store **persistent data** between sessions, such as a player's level, experience points, money, inventory items, location, and more.
+Experiences often need to store **persistent data** between sessions, such as a player's level, experience points, money, inventory items, location, and more.
 
-This tutorial shows how to create a basic **data store**, save player data, and read the data back into a game session.
+This tutorial shows how to create a basic **data store**, save player data, and read the data back into a player session.
 
 ## Enable Studio access
 
-By default, games tested in Studio cannot access data stores, so you must first enable them:
+By default, experiences tested in Studio cannot access data stores, so you must first enable them:
 
 1. [Publish](../../../../production/publishing/publish-experiences-and-places.md) the experience.
-2. Open Studio's **File**&nbsp;⟩ **Game Settings** window.
+2. Open Studio's **File** ⟩ **Experience Settings** window.
 3. In the **Security** section, turn on **Enable Studio Access to API Services** and click **Save**.
 
 ## Create a data store
@@ -39,7 +39,7 @@ Data stores require a unique **name**. This example creates a data store named *
 
 ## Save data
 
-A data store is essentially a dictionary, like a Luau table. Each value in the data store is indexed by a unique **key**, which might be the player's unique `Class.Player.UserId|UserId` or simply a named string for a game promotion.
+A data store is essentially a dictionary, like a Luau table. Each value in the data store is indexed by a unique **key**, which might be the player's unique `Class.Player.UserId|UserId` or simply a named string.
 
 <Tabs>
 <TabItem label="Player Data Example">
@@ -140,7 +140,7 @@ The sample above checks status on line 13. If `Class.GlobalDataStore:SetAsync()|
 <Alert severity="warning">
 Be careful to not send requests to data stores too often. Requests on a data store key are placed in a queue and, if the queue fills up, additional requests are [dropped](../../../../cloud-services/data-stores/index.md#error-codes).
 
-A common mistake may be updating a player's gold data every time they collect a gold piece. Instead, store the player's gold in a variable and only update the data store occasionally, such as with a periodic auto-save and/or when the player leaves the game.
+A common mistake may be updating a player's gold data every time they collect a gold piece. Instead, store the player's gold in a variable and only update the data store occasionally, such as with a periodic auto-save and/or when the player leaves the experience.
 </Alert>
 
 ## Read data
@@ -283,6 +283,6 @@ This script adds a new data store, `playerPositionStore`. Because data stores on
 
 ## Sample project
 
-Now that you understand basic data store usage, test it out in the [Gold Rush](https://www.roblox.com/games/5268331031/Gold-Rush) sample game. You can also edit the game in Studio and explore the enhanced **GoldManager** script, which displays gold as part of the UI and includes auto-saving.
+Now that you understand basic data store usage, test it out in the [Gold Rush](https://www.roblox.com/games/5268331031/Gold-Rush) sample experience. You can also edit the experience in Studio and explore the enhanced **GoldManager** script, which displays gold as part of the UI and includes auto-saving.
 
 <UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="5268331031" universeId="1845192636" />
