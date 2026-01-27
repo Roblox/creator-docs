@@ -11,7 +11,7 @@ This feature is currently in beta. Enable it through **File** ⟩ **Beta Feature
 The following information applies to character creators who want to optimize their character faces to work effectively with makeup and improve the quality and accuracy of the makeup transfer.
 </Alert>
 
-Makeup utilizes a characters facial cage to accurately transfer the texture onto the surface of the 3D model. It's important to pay extra attention to your character's head cages to ensure that makeup, eyebrows, eyelashes, and other face-related cosmetics apply correctly.
+Makeup utilizes a characters facial cage to accurately transfer the texture onto the surface of the 3D model. It's important to pay extra attention to your character's head cages to ensure that makeup, eyebrows, eyelashes, and other face-related cosmetics apply correctly. Properly constructed cages also improve other head components, such as accurate fitting with head accessories and animations.
 
 The following information and examples are best practices that are applicable to face caging as well as other caging processes. For additional best practices for caging, see [clothing caging best practices](../art/accessories/caging-best-practices.md).
 

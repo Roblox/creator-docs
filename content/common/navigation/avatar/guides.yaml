@@ -55,6 +55,8 @@ navigation:
         section:
           - title: Overview
             path: /art/characters/facial-animation/
+          - title: Head specifications
+            path: /art/characters/head-specifications
           - title: In Studio
             path: /art/characters/facial-animation/use-heads-in-studio
           - title: Head animation

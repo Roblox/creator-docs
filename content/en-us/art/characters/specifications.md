@@ -646,29 +646,9 @@ See the following requirements for skinning:
 - **No Root Influences** - Do not apply influences to the Root bone or joint.
 - **Symmetry** - When possible, maintain symmetry when applying influences to a rig.
 
-## Facial animations
+## Facial animation
 
-Roblox supports facial animation on character heads and can support more than 50 base poses. If you are creating an avatar character, it must, at minimum, include the following 17 [FACS reference poses](../../art/characters/facial-animation/facs-poses-reference.md) to support avatar chat:
-
-- EyesLookDown
-- EyesLookLeft
-- EyesLookRight
-- EyesLookUp
-- JawDrop
-- LeftEyeClosed
-- LeftLipCornerPuller
-- LeftLipStretcher
-- LeftLowerLipDepressor
-- LeftUpperLipRaiser
-- LipsTogether
-- Pucker
-- RightEyeClosed
-- RightLipCornerPuller
-- RightLipStretcher
-- RightLowerLipDepressor
-- RightUpperLipRaiser
-
-While the 17 poses are a minimum requirement, it's recommended to include as many facial poses as possible in your asset to improve expressiveness and facial animation fidelity for facial animation and avatar chat.
+For information on required facial animation support, see [head specifications](./head-specifications.md#facs-animation).
 
 ## Textures
 
@@ -717,10 +697,11 @@ Outer cages on your character model allow your character to wear layerable acces
 
 For general use, see the following requirements for adding outer cage meshes to your model:
 
-- Use Roblox's [body cage templates](../../avatar/resources.md#project-files) to ensure naming convention and other configurations are correct.
+- Use Roblox's [auto setup tool](../../avatar-setup/auto-setup.md) or Roblox's [body cage templates](../../avatar/resources.md#project-files) to ensure naming convention and other configurations are correct.
 - **Naming Conventions** - The outer cage of a body part must be named after the primary mesh object with **\_OuterCage** affixed, for example `LeftUpperArm_OuterCage`.
 - **Vertices and UV Map** - Don't delete vertices or alter the UVs on the Outer Cages as this can cause errors when importing in Studio or when equipping onto a character. Use the Roblox provided templates for the cage meshes to ensure compatibility with other layered assets.
 - **Symmetry and consistency** - Keep each face (the space between vertices) consistently sized and retain symmetry wherever possible. Use symmetry tools in your modeling software whenever possible.
+- For information on head cages and best practices, see [head specifications](../characters/head-specifications.md#head-cage).
 
 ## Marketplace requirements
 

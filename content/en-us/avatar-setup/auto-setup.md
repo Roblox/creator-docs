@@ -89,48 +89,77 @@ Studio supports `.gltf`, `.fbx`, and `.obj` models using the 3D Importer. If you
 
 For an asset that meets all of these model requirements, download one of the following auto-setup templates for your own reference and testing:
 
-<Grid container alignItems='stretch' style={{margin: -6}}>
+<Grid container alignItems="stretch" style={{ margin: -6 }}>
 
-<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
-<Card style={{height: '100%'}}>
-<CardContent>
+  <Grid item XSmall={12} Medium={6} Large={4} style={{ padding: 6 }}>
+    <Card style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+      <CardContent style={{ flex: 1 }}>
+        <center>Nature Girl - Auto-Setup</center>
+        <figure>
+          <center>
+            <img
+              src="../assets/art/resources/Archer-Girl-Preview.png"
+              width="100%"
+            />
+          </center>
+        </figure>
+        <figure>
+          A comprehensive <code>.zip</code> folder of an{' '}
+          <a href="./auto-setup-requirements.md">Avatar auto-setup</a> ready
+          character model, including clothing and rigid accessory assets and PBR
+          texture assets.
+          <br /><br />
+          This auto-setup template is not compatible with the traditional avatar
+          creation workflow.
+        </figure>
+      </CardContent>
+      <CardActions>
+        <Button
+          href="../assets/art/reference-files/NatureArcherGirl-AutoSetup.zip"
+          fullWidth
+          size="large"
+          color="primary"
+          variant="contained"
+        >
+          Download
+        </Button>
+      </CardActions>
+    </Card>
+  </Grid>
 
-<center>Nature Girl - Auto-Setup</center>
-<figure>
-<center> <img src="../assets/art/resources/Archer-Girl-Preview.png" width="100%" /> </center>
-</figure>
-<figure>
-A comprehensive `.zip` folder of an [Avatar auto-setup](./auto-setup-requirements.md) ready character model, including clothing and rigid accessory assets and PBR texture assets. <br /> <br />
-This auto-setup template is not compatible with the traditional avatar creation workflow.
-</figure>
-</CardContent>
-
-<CardActions style={{bottom: 0, width: '100%'}}>
-<Button href="../assets/art/reference-files/NatureArcherGirl-AutoSetup.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
-</CardActions>
-
-</Card>
-</Grid>
-
-<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
-<Card style={{height: '100%'}}>
-<CardContent>
-
-<center>Stylish Male - Auto-Setup</center>
-<figure>
-<center> <img src="../assets/art/resources/StylizedMale-Preview.png" width="100%" /> </center>
-</figure>
-<figure>
-A comprehensive `.zip` folder of an [Avatar auto-setup](./index.md) ready character model, including the base body and associated PBR textures. <br /> <br />
-This auto-setup template is not compatible with the traditional avatar creation workflow.
-</figure>
-</CardContent>
-
-<CardActions style={{bottom: 0, width: '100%'}}>
-<Button href="../assets/art/reference-files/StylizedMale-AutoSetup.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
-</CardActions>
-
-</Card>
-</Grid>
+  <Grid item XSmall={12} Medium={6} Large={4} style={{ padding: 6 }}>
+    <Card style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+      <CardContent style={{ flex: 1 }}>
+        <center>Stylish Male - Auto-Setup</center>
+        <figure>
+          <center>
+            <img
+              src="../assets/art/resources/StylizedMale-Preview.png"
+              width="100%"
+            />
+          </center>
+        </figure>
+        <figure>
+          A comprehensive <code>.zip</code> folder of an{' '}
+          <a href="./index.md">Avatar auto-setup</a> ready character model,
+          including the base body and associated PBR textures.
+          <br /><br />
+          This auto-setup template is not compatible with the traditional avatar
+          creation workflow.
+        </figure>
+      </CardContent>
+      <CardActions>
+        <Button
+          href="../assets/art/reference-files/StylizedMale-AutoSetup.zip"
+          fullWidth
+          size="large"
+          color="primary"
+          variant="contained"
+        >
+          Download
+        </Button>
+      </CardActions>
+    </Card>
+  </Grid>
 
 </Grid>

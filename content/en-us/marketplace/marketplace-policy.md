@@ -109,9 +109,21 @@ Each body can only include the following parts, and cannot have additional appen
   - 1 right leg, comprising of an upper leg, a lower leg, and a foot.
   - 1 left leg, comprising of an upper leg, a lower leg, and a foot.
 - Heads
-  - Head (includes baked-in eyes, nose, ears, and mouth, if applicable)
-    - All heads must include the 17 minimum [FACS controls](../art/characters/facial-animation/facs-poses-reference.md).
-    - It's recommended to include more poses to increase facial animation quality and fidelity.
+  - Head model
+    - All heads must be [caged](../art/characters/head-specifications.md#head-cage)
+      - The cage mesh must envelope the head model
+    - All heads must have one mouth region
+      - The mouth region on the head is determined by the projection of the cage mouth region onto the head model
+      - The cage mouth region is defined by the cage vertices forming the edge of the mouth
+      - The mouth region does not need to have lips, teeth or tongue; it must deform in response to mouth open and close animations
+    - All heads must have one or two eye regions
+      - The left eye region on the head is determined by the projection of the cage left eye region onto the head model. Same applies for the right eye region
+      - A one-eyed head has both the left and right eye regions on the cage projected onto the same region on the head model
+      - The cage eye region is defined by the cage vertices forming the outline of the cage eyes
+      - The head eye region does not need to have an eyeball or eyelid; it must deform in response to eye blink animations
+    - All heads must include the [17 minimum FACS controls](../art/characters/head-specifications.md#facs-animation)
+      - Specifically we require the head to deform in response to happiness and sadness expressions
+      - It's recommended to include more poses to increase facial animation quality and fidelity
   - Eyebrows (optional)
   - Eyelashes (optional)
 

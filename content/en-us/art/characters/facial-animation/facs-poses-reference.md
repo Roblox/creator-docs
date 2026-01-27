@@ -13,6 +13,32 @@ If you intend to publish your avatar to the Marketplace, your avatar head must i
 
 You can combine multiple FACS base poses together in one animation frame to create complex facial expressions. However, some combinations of poses might collide unless you also add a [corrective](../../../art/characters/facial-animation/create-basic-heads.md#combination-poses) to their full default values.
 
+## LeftEyeClosed
+
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.LeftEyeClosed|LeftEyeClosed` closes the character's left eyelid.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftEyeClosedA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftEyeClosedB.mp4" width="70%"></video>
+</GridContainer>
+
+## RightEyeClosed
+
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.RightEyeClosed|RightEyeClosed` closes the character's right eyelid.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightEyeClosedA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightEyeClosedB.mp4" width="70%"></video>
+</GridContainer>
+
 ## EyesLookDown
 
 <Alert severity = 'warning'>
@@ -24,45 +50,6 @@ You can combine multiple FACS base poses together in one animation frame to crea
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookDownA.mp4" width="70%"></video>
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookDownB.mp4" width="70%"></video>
-</GridContainer>
-
-## EyesLookLeft
-
-<Alert severity = 'warning'>
- If publishing to the Marketplace, your avatar asset must include this pose.
-</Alert>
-
-`Class.FaceControls.EyesLookLeft|EyesLookLeft` makes the eyes gaze left.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookLeftA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookLeftB.mp4" width="70%"></video>
-</GridContainer>
-
-## EyesLookRight
-
-<Alert severity = 'warning'>
- If publishing to the Marketplace, your avatar asset must include this pose.
-</Alert>
-
-`Class.FaceControls.EyesLookRight|EyesLookRight` makes the eyes gaze right.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookRightA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookRightB.mp4" width="70%"></video>
-</GridContainer>
-
-## EyesLookUp
-
-<Alert severity = 'warning'>
- If publishing to the Marketplace, your avatar asset must include this pose.
-</Alert>
-
-`Class.FaceControls.EyesLookUp|EyesLookUp` makes the eyes gaze up.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookUpA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookUpB.mp4" width="70%"></video>
 </GridContainer>
 
 ## JawDrop
@@ -78,17 +65,17 @@ You can combine multiple FACS base poses together in one animation frame to crea
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/JawDropB.mp4" width="70%"></video>
 </GridContainer>
 
-## LeftEyeClosed
+## Pucker
 
 <Alert severity = 'warning'>
  If publishing to the Marketplace, your avatar asset must include this pose.
 </Alert>
 
-`Class.FaceControls.LeftEyeClosed|LeftEyeClosed` closes the character's left eyelid.
+`Class.FaceControls.Pucker|Pucker` makes a kiss-like shape with the mouth.
 
 <GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftEyeClosedA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftEyeClosedB.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/PuckerA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/PuckerB.mp4" width="70%"></video>
 </GridContainer>
 
 ## LeftLipCornerPuller
@@ -104,17 +91,123 @@ You can combine multiple FACS base poses together in one animation frame to crea
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipCornerPullerB.mp4" width="70%"></video>
 </GridContainer>
 
-## LeftLipStretcher
+## RightLipCornerPuller
 
 <Alert severity = 'warning'>
  If publishing to the Marketplace, your avatar asset must include this pose.
 </Alert>
 
-`Class.FaceControls.LeftLipStretcher|LeftLipStretcher` stretches the corners of the mouth apart.
+`Class.FaceControls.RightLipCornerPuller|RightLipCornerPuller` raises the corners of the mouth upwards in a smile.
 
 <GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipStretcherA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipStretcherB.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipCornerPullerA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipCornerPullerB.mp4" width="70%"></video>
+</GridContainer>
+
+## ChinRaiser
+
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.ChinRaiser|ChinRaiser` raises the chin up; moves the lower lip upwards.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/ChinRaiserA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/ChinRaiserB.mp4" width="70%"></video>
+</GridContainer>
+
+When you use `Class.FaceControls.ChinRaiser|ChinRaiser` and the character's mouth is closed, the character's lower lip collides with their upper lip. When you need to keep the mouth closed while raising the chin, use [`ChinRaiserUpperLip`](#chinraiserupperlip) and `Class.FaceControls.ChinRaiser|ChinRaiser` together to raise both the lower and upper lip, and avoid a collision. Note that if you use this method, you must set both `Class.FaceControls.ChinRaiser|ChinRaiser` and [`ChinRaiserUpperLip`](#chinraiserupperlip) to the same value so the lips move the same distance upwards.
+
+## ChinRaiserUpperLip
+
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.ChinRaiserUpperLip|ChinRaiserUpperLip` raises the upper lip up when ChinRaiser is engaged and it is touching the upper lip.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/ChinRaiserUpperLipA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/ChinRaiserUpperLipB.mp4" width="70%"></video>
+</GridContainer>
+
+## LeftCheekRaiser
+
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.LeftCheekRaiser|LeftCheekRaiser` squints the character's left eye.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftCheekRaiserA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftCheekRaiserB.mp4" width="70%"></video>
+</GridContainer>
+
+## RightCheekRaiser
+
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.RightCheekRaiser|RightCheekRaiser` squints the character's right eye.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightCheekRaiserA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightCheekRaiserB.mp4" width="70%"></video>
+</GridContainer>
+
+## LeftInnerBrowRaiser
+
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.LeftInnerBrowRaiser|LeftInnerBrowRaiser` raises the interior half of the character's left brow upwards.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftInnerBrowRaiserA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftInnerBrowRaiserB.mp4" width="70%"></video>
+</GridContainer>
+
+## RightInnerBrowRaiser
+
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.RightInnerBrowRaiser|RightInnerBrowRaiser` raises the interior half of the character's right brow upwards.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightInnerBrowRaiserA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightInnerBrowRaiserB.mp4" width="70%"></video>
+</GridContainer>
+
+## LeftLipCornerDown
+
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.LeftLipCornerDown|LeftLipCornerDown` lowers the corners of the mouth downwards in a frown.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipCornerDownA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipCornerDownB.mp4" width="70%"></video>
+</GridContainer>
+
+## RightLipCornerDown
+
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.RightLipCornerDown|RightLipCornerDown` lowers the corners of the mouth downwards in a frown.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipCornerDownA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipCornerDownB.mp4" width="70%"></video>
 </GridContainer>
 
 ## LeftLowerLipDepressor
@@ -130,11 +223,56 @@ You can combine multiple FACS base poses together in one animation frame to crea
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLowerLipDepressorB.mp4" width="70%"></video>
 </GridContainer>
 
-## LeftUpperLipRaiser
+## RightLowerLipDepressor
 
 <Alert severity = 'warning'>
  If publishing to the Marketplace, your avatar asset must include this pose.
 </Alert>
+
+`Class.FaceControls.RightLowerLipDepressor|RightLowerLipDepressor` lowers the lower lip down away from the upper lip revealing the lower teeth.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLowerLipDepressorA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLowerLipDepressorB.mp4" width="70%"></video>
+</GridContainer>
+
+## EyesLookLeft
+
+`Class.FaceControls.EyesLookLeft|EyesLookLeft` makes the eyes gaze left.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookLeftA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookLeftB.mp4" width="70%"></video>
+</GridContainer>
+
+## EyesLookRight
+
+`Class.FaceControls.EyesLookRight|EyesLookRight` makes the eyes gaze right.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookRightA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookRightB.mp4" width="70%"></video>
+</GridContainer>
+
+## EyesLookUp
+
+`Class.FaceControls.EyesLookUp|EyesLookUp` makes the eyes gaze up.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookUpA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookUpB.mp4" width="70%"></video>
+</GridContainer>
+
+## LeftLipStretcher
+
+`Class.FaceControls.LeftLipStretcher|LeftLipStretcher` stretches the corners of the mouth apart.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipStretcherA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipStretcherB.mp4" width="70%"></video>
+</GridContainer>
+
+## LeftUpperLipRaiser
 
 `Class.FaceControls.LeftUpperLipRaiser|LeftUpperLipRaiser` raises the character's left upper lip away from the lower lip revealing the upper teeth.
 
@@ -144,10 +282,6 @@ You can combine multiple FACS base poses together in one animation frame to crea
 </GridContainer>
 
 ## LipsTogether
-
-<Alert severity = 'warning'>
- If publishing to the Marketplace, your avatar asset must include this pose.
-</Alert>
 
 `Class.FaceControls.LipsTogether|LipsTogether` brings the character's lips together. However, if the character's mouth is closed, their lips are already together and they collide.
 
@@ -170,50 +304,7 @@ In addition, if you set [`JawDrop`](#jawdrop) to 100% of its default value, and 
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LipsTogetherB-3.mp4" width="70%"></video>
 </GridContainer>
 
-## Pucker
-
-<Alert severity = 'warning'>
- If publishing to the Marketplace, your avatar asset must include this pose.
-</Alert>
-
-`Class.FaceControls.Pucker|Pucker` makes a kiss-like shape with the mouth.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/PuckerA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/PuckerB.mp4" width="70%"></video>
-</GridContainer>
-
-## RightEyeClosed
-
-<Alert severity = 'warning'>
- If publishing to the Marketplace, your avatar asset must include this pose.
-</Alert>
-
-`Class.FaceControls.RightEyeClosed|RightEyeClosed` closes the character's right eyelid.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightEyeClosedA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightEyeClosedB.mp4" width="70%"></video>
-</GridContainer>
-
-## RightLipCornerPuller
-
-<Alert severity = 'warning'>
- If publishing to the Marketplace, your avatar asset must include this pose.
-</Alert>
-
-`Class.FaceControls.RightLipCornerPuller|RightLipCornerPuller` raises the corners of the mouth upwards in a smile.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipCornerPullerA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipCornerPullerB.mp4" width="70%"></video>
-</GridContainer>
-
 ## RightLipStretcher
-
-<Alert severity = 'warning'>
- If publishing to the Marketplace, your avatar asset must include this pose.
-</Alert>
 
 `Class.FaceControls.RightLipStretcher|RightLipStretcher` stretches the corners of the mouth apart.
 
@@ -222,50 +313,13 @@ In addition, if you set [`JawDrop`](#jawdrop) to 100% of its default value, and 
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipStretcherB.mp4" width="70%"></video>
 </GridContainer>
 
-## RightLowerLipDepressor
-
-<Alert severity = 'warning'>
- If publishing to the Marketplace, your avatar asset must include this pose.
-</Alert>
-
-`Class.FaceControls.RightLowerLipDepressor|RightLowerLipDepressor` lowers the lower lip down away from the upper lip revealing the lower teeth.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLowerLipDepressorA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLowerLipDepressorB.mp4" width="70%"></video>
-</GridContainer>
-
 ## RightUpperLipRaiser
-
-<Alert severity = 'warning'>
- If publishing to the Marketplace, your avatar asset must include this pose.
-</Alert>
 
 `Class.FaceControls.RightUpperLipRaiser|RightUpperLipRaiser` raises the right upper lip away from the lower lip, revealing the upper teeth.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightUpperLipRaiserA.mp4" width="70%"></video>
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightUpperLipRaiserB.mp4" width="70%"></video>
-</GridContainer>
-
-## ChinRaiser
-
-`Class.FaceControls.ChinRaiser|ChinRaiser` raises the chin up; moves the lower lip upwards.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/ChinRaiserA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/ChinRaiserB.mp4" width="70%"></video>
-</GridContainer>
-
-When you use `Class.FaceControls.ChinRaiser|ChinRaiser` and the character's mouth is closed, the character's lower lip collides with their upper lip. When you need to keep the mouth closed while raising the chin, use [`ChinRaiserUpperLip`](#chinraiserupperlip) and `Class.FaceControls.ChinRaiser|ChinRaiser` together to raise both the lower and upper lip, and avoid a collision. Note that if you use this method, you must set both `Class.FaceControls.ChinRaiser|ChinRaiser` and [`ChinRaiserUpperLip`](#chinraiserupperlip) to the same value so the lips move the same distance upwards.
-
-## ChinRaiserUpperLip
-
-`Class.FaceControls.ChinRaiserUpperLip|ChinRaiserUpperLip` raises the upper lip up when ChinRaiser is engaged and it is touching the upper lip.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/ChinRaiserUpperLipA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/ChinRaiserUpperLipB.mp4" width="70%"></video>
 </GridContainer>
 
 ## FlatPucker
@@ -349,15 +403,6 @@ When you use `Class.FaceControls.ChinRaiser|ChinRaiser` and the character's mout
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftDimplerB.mp4" width="70%"></video>
 </GridContainer>
 
-## LeftLipCornerDown
-
-`Class.FaceControls.LeftLipCornerDown|LeftLipCornerDown` lowers the corners of the mouth downwards in a frown.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipCornerDownA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipCornerDownB.mp4" width="70%"></video>
-</GridContainer>
-
 ## RightCheekPuff
 
 `Class.FaceControls.RightCheekPuff|RightCheekPuff` puffs up the character's right cheek.
@@ -374,15 +419,6 @@ When you use `Class.FaceControls.ChinRaiser|ChinRaiser` and the character's mout
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightDimplerA.mp4" width="70%"></video>
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightDimplerB.mp4" width="70%"></video>
-</GridContainer>
-
-## RightLipCornerDown
-
-`Class.FaceControls.RightLipCornerDown|RightLipCornerDown` lowers the corners of the mouth downwards in a frown.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipCornerDownA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipCornerDownB.mp4" width="70%"></video>
 </GridContainer>
 
 ## JawLeft
@@ -439,15 +475,6 @@ When you use `Class.FaceControls.ChinRaiser|ChinRaiser` and the character's mout
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftNoseWrinklerB.mp4" width="70%"></video>
 </GridContainer>
 
-## LeftInnerBrowRaiser
-
-`Class.FaceControls.LeftInnerBrowRaiser|LeftInnerBrowRaiser` raises the interior half of the character's left brow upwards.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftInnerBrowRaiserA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftInnerBrowRaiserB.mp4" width="70%"></video>
-</GridContainer>
-
 ## RightBrowLowerer
 
 `Class.FaceControls.RightBrowLowerer|RightBrowLowerer` lowers the character's right brow down.
@@ -466,15 +493,6 @@ When you use `Class.FaceControls.ChinRaiser|ChinRaiser` and the character's mout
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightOuterBrowRaiserB.mp4" width="70%"></video>
 </GridContainer>
 
-## RightInnerBrowRaiser
-
-`Class.FaceControls.RightInnerBrowRaiser|RightInnerBrowRaiser` raises the interior half of the character's right brow upwards.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightInnerBrowRaiserA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightInnerBrowRaiserB.mp4" width="70%"></video>
-</GridContainer>
-
 ## RightNoseWrinkler
 
 `Class.FaceControls.RightNoseWrinkler|RightNoseWrinkler` raises the character's right nostril, pulls the brow down slightly, and wrinkles the right side of the nose.
@@ -484,15 +502,6 @@ When you use `Class.FaceControls.ChinRaiser|ChinRaiser` and the character's mout
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightNoseWrinklerB.mp4" width="70%"></video>
 </GridContainer>
 
-## LeftCheekRaiser
-
-`Class.FaceControls.LeftCheekRaiser|LeftCheekRaiser` squints the character's left eye.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftCheekRaiserA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftCheekRaiserB.mp4" width="70%"></video>
-</GridContainer>
-
 ## LeftEyeUpperLidRaiser
 
 `Class.FaceControls.LeftEyeUpperLidRaiser|LeftEyeUpperLidRaiser` raises the character's left eyelid upwards to reveal more of the eye white above the iris.
@@ -500,15 +509,6 @@ When you use `Class.FaceControls.ChinRaiser|ChinRaiser` and the character's mout
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftEyeUpperLidRaiserA.mp4" width="70%"></video>
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftEyeUpperLidRaiserB.mp4" width="70%"></video>
-</GridContainer>
-
-## RightCheekRaiser
-
-`Class.FaceControls.RightCheekRaiser|RightCheekRaiser` squints the character's right eye.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightCheekRaiserA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightCheekRaiserB.mp4" width="70%"></video>
 </GridContainer>
 
 ## RightEyeUpperLidRaiser
