@@ -92,19 +92,17 @@ properties:
       - Players
   - name: StarterPlayer.AvatarJointUpgrade
     summary: |
-      Controls whether avatars spawn with AnimationConstraint joints for
+      Controls whether avatars spawn with `Class.AnimationConstraint` joints for
       physical simulation.
     description: |
-      This property controls the rollout state of new AnimationConstraint joints
-      in avatars. When Disabled, avatars spawn with legacy
-      `Class.Motor6D|Motor6Ds` connecting their limbs. When Enabled, avatars
-      spawn with `Class.AnimationConstraint|AnimationConstraints` and
+      This property controls the rollout state of new
+      `Class.AnimationConstraint` joints in avatars. When disabled, avatars
+      spawn with legacy `Class.Motor6D|Motor6Ds` connecting their limbs. When
+      enabled, avatars spawn with
+      `Class.AnimationConstraint|AnimationConstraints` and
       `Class.BallSocketConstraint|BallSocketConstraints` connecting their limbs.
       This makes it easier to write scripts that enable physical simulation,
       like arm strength and ragdoll falling down.
-
-      For more info see the
-      [devforum announcement](https://devforum.roblox.com/t/studio-beta-avatar-joint-upgrade-enabling-physically-simulated-characters/3266099).
     code_samples: []
     type: RolloutState
     tags:
@@ -185,14 +183,14 @@ properties:
       Sets the default value for `Class.Player.CameraMode` for each player in
       the game. The camera has two modes:
 
-      ##### First Person
+      #### First Person
 
       In first person mode, the player's camera is zoomed all the way in. Unless
       there is a visible GUI present with the `Class.GuiButton.Modal` property
       set to `true`, the mouse will be locked and the user's camera will turn as
       the mouse moves.
 
-      ##### Third Person
+      #### Third Person
 
       In third person mode (default), the character can be seen in the camera.
       While in third person mode on Roblox:
@@ -228,8 +226,8 @@ properties:
       `Class.Humanoid.BreakJointsOnDeath` for a player's
       `Class.Player.Character`.
 
-      Note, `Class.StarterPlayer.AvatarJointUpgrade` must be enabled for
-      CharacterBreakJointsOnDeath to take effect.
+      Note that `Class.StarterPlayer.AvatarJointUpgrade|AvatarJointUpgrade` must
+      be enabled for this property to take effect.
     code_samples: []
     type: boolean
     tags: []
@@ -250,12 +248,11 @@ properties:
       `Class.Player.Character`.
     description: |
       This property determines the starting value of `Class.Humanoid.JumpHeight`
-      for a player's `Class.Player.Character`. The value of this property
-      defaults to 7.2 studs.
+      for a player's `Class.Player.Character` in studs, with a default of `7.2`.
 
-      This property is only visible in the Properties window If
-      `Class.StarterPlayer.CharacterUseJumpPower` is set to `false`, as it would
-      not be relevant otherwise.
+      This property is only visible in the **Properties** window If
+      `Class.StarterPlayer.CharacterUseJumpPower|CharacterUseJumpPower` is set
+      to `false`, as it would not be relevant otherwise.
 
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.
@@ -280,13 +277,12 @@ properties:
       `Class.Player.Character`.
     description: |
       This property determines the starting value of `Class.Humanoid.JumpPower`
-      for a player's `Class.Player.Character`. The value of this property
-      defaults to 50 and when applied to the player's `Class.Humanoid` it will
-      be constrained between 0 and 1000.
+      for a player's `Class.Player.Character`, with a default of `50`, minimum
+      of `0`, and maximum of `1000`.
 
-      This property is only visible in the Properties window If
-      `Class.StarterPlayer.CharacterUseJumpPower` is set to `true`, as it would
-      not be relevant otherwise.
+      This property is only visible in the **Properties** window If
+      `Class.StarterPlayer.CharacterUseJumpPower|CharacterUseJumpPower` is set
+      to `true`, as it would not be relevant otherwise.
 
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.
@@ -311,10 +307,9 @@ properties:
       `Class.Player.Character`.
     description: |
       This property determines the starting value of
-      `Class.Humanoid.MaxSlopeAngle` for a player's `Class.Player.Character`. It
-      defaults to 89°, so humanoids can climb pretty much any slope they want by
-      default. When applied to the player's `Class.Humanoid` it will be
-      constrained between 0 and 89.
+      `Class.Humanoid.MaxSlopeAngle` for a player's `Class.Player.Character` in
+      degrees. It defaults to `89`, so humanoids can climb pretty much any slope
+      they want by default.
 
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.
@@ -338,12 +333,12 @@ properties:
       Determines the starting state of `Class.Humanoid.UseJumpPower` for
       `Class.Player.Character`.
     description: |
-      `CharacterUseJumpPower` determines the starting value of
+      This property determines the starting value of
       `Class.Humanoid.UseJumpPower` for a player's `Class.Player.Character`.
-      Toggling it will change which property is visible in the properties
-      window: `Class.StarterPlayer.CharacterJumpHeight|CharacterJumpHeight`
-      (false) or `Class.StarterPlayer.CharacterJumpPower` (true). Defaults to
-      true.
+      Toggling it will change which property is visible in the **Properties**
+      window (`Class.StarterPlayer.CharacterJumpHeight|CharacterJumpHeight` if
+      `false` or `Class.StarterPlayer.CharacterJumpPower|CharacterJumpPower` if
+      `true`). Defaults to `true`.
 
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.
@@ -368,7 +363,7 @@ properties:
       `Class.Player.Character`.
     description: |
       This property determines the starting value of `Class.Humanoid.WalkSpeed`
-      for a player's `Class.Player.Character`. This property defaults to 16.
+      for a player's `Class.Player.Character` with a default of `16`.
 
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.

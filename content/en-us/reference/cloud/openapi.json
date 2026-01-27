@@ -60527,7 +60527,8 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "creator-store-save:read"
+            "name": "creator-store-save:read",
+            "targetResourceSpecifier": ""
           }
         ],
         "x-roblox-engine-usability": {
@@ -60664,7 +60665,8 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "creator-store-save:write"
+            "name": "creator-store-save:write",
+            "targetResourceSpecifier": ""
           }
         ],
         "x-roblox-engine-usability": {
@@ -60785,7 +60787,8 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "creator-store-save:write"
+            "name": "creator-store-save:write",
+            "targetResourceSpecifier": ""
           }
         ],
         "x-roblox-engine-usability": {
@@ -60913,7 +60916,8 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "creator-store-save:write"
+            "name": "creator-store-save:write",
+            "targetResourceSpecifier": ""
           }
         ],
         "x-roblox-engine-usability": {
@@ -61758,7 +61762,8 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "developer-product:write"
+            "name": "developer-product:write",
+            "targetResourceSpecifier": "universes"
           }
         ],
         "x-roblox-engine-usability": {
@@ -61947,7 +61952,8 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "developer-product:write"
+            "name": "developer-product:write",
+            "targetResourceSpecifier": "universes"
           }
         ],
         "x-roblox-engine-usability": {
@@ -62051,7 +62057,8 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "developer-product:read"
+            "name": "developer-product:read",
+            "targetResourceSpecifier": "universes"
           }
         ],
         "x-roblox-engine-usability": {
@@ -62172,7 +62179,8 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "developer-product:read"
+            "name": "developer-product:read",
+            "targetResourceSpecifier": "universes"
           }
         ],
         "x-roblox-engine-usability": {
@@ -62273,7 +62281,8 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "asset-permissions:write"
+            "name": "asset-permissions:write",
+            "targetResourceSpecifier": ""
           }
         ],
         "x-roblox-engine-usability": {
@@ -62438,7 +62447,8 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "game-pass:write"
+            "name": "game-pass:write",
+            "targetResourceSpecifier": "universes"
           }
         ],
         "x-roblox-engine-usability": {
@@ -62619,7 +62629,8 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "game-pass:write"
+            "name": "game-pass:write",
+            "targetResourceSpecifier": "universes"
           }
         ],
         "x-roblox-engine-usability": {
@@ -62723,7 +62734,8 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "game-pass:read"
+            "name": "game-pass:read",
+            "targetResourceSpecifier": "universes"
           }
         ],
         "x-roblox-engine-usability": {
@@ -62844,7 +62856,8 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "game-pass:read"
+            "name": "game-pass:read",
+            "targetResourceSpecifier": "universes"
           }
         ],
         "x-roblox-engine-usability": {
@@ -74735,6 +74748,19 @@
           },
           "isUserEligibleForPublicPublish": {
             "description": "isUserEligibleForPublicPublish",
+            "type": "boolean"
+          },
+          "remainingPublicPublishCount": {
+            "format": "int32",
+            "description": "How many public publishes are remaining for the given user / group.",
+            "type": "integer"
+          },
+          "isPublicPublish": {
+            "description": "Whether the universe is publicly published or not.",
+            "type": "boolean"
+          },
+          "isPublishToExistingUniverse": {
+            "description": "Whether the universeId is within the tracked list of distinct allowed published universes.",
             "type": "boolean"
           }
         },

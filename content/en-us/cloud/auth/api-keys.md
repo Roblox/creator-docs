@@ -168,3 +168,74 @@ longer using an API key, you should manually disable or delete it. </Alert>
   </tr>
 </tbody>
 </table>
+
+## Introspect API keys
+
+### `POST` api-keys/v1/introspect
+
+Retrieve information about an API key. Verifies whether the key can be used from the requester's IP address and whether the key or the last generated user is moderated.
+
+<h4>Request</h4>
+
+`(application/json)`
+
+| Key            | Value                  |
+| -------------- | ---------------------- |
+| apiKey  | `<api_key>`     |
+
+```bash title="Example Introspect API Key Request"
+curl --location --request POST 'https://apis.roblox.com/api-keys/v1/introspect' \
+--header 'Content-Type: application/json' \
+--data '{
+    "apiKey": "your-api-key"
+}'
+```
+
+<h4>Response</h4>
+
+There are four possible resource identifiers that can be present in each scope object:
+
+- userId
+- groupId
+- universeId
+- universeDatastore
+
+The userId and groupId identifiers are only relevant to scopes with the creator target. The universeDatastore identifier is only relevant to scopes with the universe-datastore target. The resource identifier will be omitted for scopes that do not support resource selection.
+
+An asterisk (`*`) in the resource identifier list indicates that the scope has permission on all resources of that type.
+
+```json title="Example Introspect API Key Response"
+{
+  "name": "test key",
+  "authorizedUserId": 234,
+  "scopes": [
+    {
+      "name": "universe-datastores.objects",
+      "operations": [
+        "create"
+      ],
+      "universeDatastores": [
+        {
+          "universeId": "123",
+          "datastoreName": "playerData"
+        }
+      ]
+    },
+    {
+      "name": "asset",
+      "operations": [
+        "write"
+      ],
+      "groupIds": [
+        "*"
+      ],
+      "userIds": [
+        "*"
+      ]
+    }
+  ],
+  "enabled": true,
+  "expired": false,
+  "expirationTimeUtc": "2026-01-01T12:00:00.000Z"
+}
+```
