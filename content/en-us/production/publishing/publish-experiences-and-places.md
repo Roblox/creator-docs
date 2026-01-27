@@ -182,6 +182,10 @@ These requirements apply to both **publishing a new experience** and **making up
 - Publishing a new version of a place within an existing experience
 </Alert>
 
+<Alert severity="warning">
+   You can publish up to **10 public experiences per day**. This limit resets daily.
+</Alert>
+
 <Alert severity="info">
    You must meet the public experience requirements if your audience is set to **Public** or **Community members**.
 
