@@ -9,10 +9,8 @@ summary: |
   Aligns two `Class.BasePart|BaseParts` with an animate-able kinematic or
   force-based joint.
 description: |
-  An **AnimationConstraint** constrains its `Class.Attachment|Attachments` so
-  that they're offset by the `Class.AnimationConstraint.Transform|Transform`
-  `CFrame`. The `Class.AnimationConstraint.Transform|Transform` can be set
-  manually during `Class.RunService.PreSimulation` or by an `Class.Animator`.
+  An `AnimationConstraint` constrains its `Class.Attachment|Attachments` so that
+  they're offset by `Class.AnimationConstraint.Transform|Transform`.
 code_samples: []
 inherits:
   - Constraint
@@ -73,15 +71,14 @@ properties:
       - Animation
   - name: AnimationConstraint.IsKinematic
     summary: |
-      Toggles whether the `Class.AnimationConstraint` is kinematic or physically
-      simulated.
+      Toggles whether the constraint is kinematic or physically simulated.
     description: |
-      When true, the connected parts follow the
+      When `true`, the connected parts follow the
       `Class.AnimationConstraint.Transform|Transform` perfectly without
-      participating in physics simulation. When false, the connected parts
+      participating in physics simulation. When `false`, the connected parts
       follow the trajectory using forces and torques limited by
-      `Class.AnimationConstraint.MaxForce` and
-      `Class.AnimationConstraint.MaxTorque`.
+      `Class.AnimationConstraint.MaxForce|MaxForce` and
+      `Class.AnimationConstraint.MaxTorque|MaxTorque`.
     code_samples: []
     type: boolean
     tags: []
@@ -102,7 +99,7 @@ properties:
       Maximum force magnitude the constraint can apply to achieve its goal.
     description: |
       Maximum force magnitude the constraint can apply to achieve its goal. Only
-      used if `Class.AnimationConstraint.IsKinematic|IsKinematic` is false.
+      used if `Class.AnimationConstraint.IsKinematic|IsKinematic` is `false`.
     code_samples: []
     type: float
     tags: []
@@ -123,7 +120,7 @@ properties:
       Maximum torque the constraint can apply to reach its goal.
     description: |
       Maximum torque the constraint can use to reach its goal. Only used if
-      `Class.AnimationConstraint.IsKinematic|IsKinematic` is false.
+      `Class.AnimationConstraint.IsKinematic|IsKinematic` is `false`.
     code_samples: []
     type: float
     tags: []
@@ -191,22 +188,18 @@ properties:
       - Animation
   - name: AnimationConstraint.Transform
     summary: |
-      Describes the current animation offset of the `Class.AnimationConstraint`
-      joint.
+      Describes the current animation offset of the constraint joint.
     description: |
-      The internal `Datatype.CFrame` that is manipulated when a
-      `Class.AnimationConstraint` is being animated.
+      The internal `Datatype.CFrame` that is manipulated when the constraint is
+      being animated.
 
-      ##### Timing
-
-      `Class.AnimationConstraint` transforms are not applied immediately, but
-      rather as a batch in a parallel job after
+      Note that `AnimationConstraint` transforms are not applied immediately,
+      but rather as a batch in a parallel job after
       `Class.RunService.PreSimulation`, immediately before physics steps. The
       deferred batch update is much more efficient than many immediate updates.
-
-      If the `Class.AnimationConstraint` is part of an animated model with an
-      `Class.Animator`, then `Class.AnimationConstraint.Transform` is usually
-      overwritten every frame by the `Class.Animator` after
+      If the `AnimationConstraint` is part of an animated model with an
+      `Class.Animator`, then `Class.AnimationConstraint.Transform|Transform` is
+      usually overwritten every frame by the `Class.Animator` after
       `Class.RunService.PreAnimation` and before
       `Class.RunService.PreSimulation`.
     code_samples: []

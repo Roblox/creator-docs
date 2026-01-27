@@ -652,8 +652,11 @@ methods:
       version of Roblox's UI exclusive to consoles.
     description: |
       Returns `true` if the client is using the ten foot interface, a special
-      version of Roblox's UI exclusive to consoles. This is the only guaranteed
-      way to verify if the user is on a console or not.
+      version of Roblox's UI exclusive to consoles.
+
+      Note that you should **not** use this property in an attempt to verify if
+      the player is on a console or not. Instead, consider reading
+      `Class.GuiService.ViewportDisplaySize|ViewportDisplaySize`.
     code_samples: []
     parameters: []
     returns:

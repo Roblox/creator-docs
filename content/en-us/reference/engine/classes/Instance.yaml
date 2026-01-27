@@ -543,7 +543,7 @@ properties:
       Newly created objects using `Datatype.Instance.new()` will not have a
       parent, and usually will not be visible or function until one is set.
 
-      ##### Object Replication
+      #### Object Replication
 
       An object created by the server will not replicate to clients until it is
       parented to some object that is replicated. When creating an object and
@@ -671,7 +671,7 @@ methods:
       already applied. Successfully adding a tag will fire a signal created by
       `Class.CollectionService:GetInstanceAddedSignal()` with the given tag.
 
-      ##### Warnings
+      #### Warnings
 
       - An instance's tags that were added client-side will be dropped if the
         server later adds or removes a tag on that instance because the server
@@ -1023,7 +1023,7 @@ methods:
       `true`, this method searches all descendants rather than only the
       immediate children of the `Class.Instance`.
 
-      ##### Checking the Existence of an Object
+      #### Checking the Existence of an Object
 
       `FindFirstChild()` is necessary if you need to verify an object exists
       before continuing. Attempting to index a child by name using the dot
@@ -1048,7 +1048,7 @@ methods:
       end
       ```
 
-      ##### Finding a Child Whose Name Matches a Property
+      #### Finding a Child Whose Name Matches a Property
 
       Sometimes the `Class.Instance.Name|Name` of an object is the same as that
       of a property of its `Class.Instance.Parent|Parent`. When using the dot
@@ -1070,7 +1070,7 @@ methods:
       local c2 = part:FindFirstChild("Color")  -- The child folder
       ```
 
-      ##### Performance Notes
+      #### Performance Notes
 
       `Class.Instance:FindFirstChild()|FindFirstChild()` takes about 20% longer
       than using the dot operator and almost 8 times longer than simply storing
@@ -1269,7 +1269,7 @@ methods:
       print(initialPosition)
       ```
 
-      ##### See Also
+      #### See Also
 
       - `Class.Instance:SetAttribute()` which sets the attribute with the given
         name to the given value.
@@ -1835,7 +1835,9 @@ methods:
         [attribute](../../../studio/properties.md#instance-attributes) set.
       - `[$attribute = value]` — Matches instances which have the specified
         attribute **and** that attribute has the specified value. Same
-        limitations apply as for property selectors.
+        limitations apply as for property selectors. If you want to check for
+        the absence of an attribute, do not query it as `nil`; instead use the
+        `:not` pseudo‑class as in `:not([$attribute])`.
 
       Selectors can also be combined. For example,
       `Model.Apple[$Variety = Fuji][$Flavor = 4]` will match instances which are
@@ -2055,7 +2057,7 @@ methods:
       part:SetAttribute("InitialPosition", Vector3.new(0, 10, 0))
       ```
 
-      ##### Limitations
+      #### Limitations
 
       Naming requirements and restrictions:
 
@@ -2069,7 +2071,7 @@ methods:
       When attempting to set an attribute to an unsupported type, an error will
       be thrown.
 
-      ##### See Also
+      #### See Also
 
       - `Class.Instance:GetAttribute()` which returns the value that has been
         assigned to the given attribute name.
@@ -2105,7 +2107,7 @@ methods:
       the `timeOut` parameter is specified, this method will time out after the
       specified number of seconds and return `nil`.
 
-      ##### Primary Usage
+      #### Primary Usage
 
       `Class.Instance:WaitForChild()|WaitForChild()` is extremely important when
       working on code run by the client in a `Class.LocalScript`. The Roblox
@@ -2116,7 +2118,7 @@ methods:
       may not be streamed to the client, potentially causing scripts to break
       when indexing objects that do not yet exist on the client.
 
-      ##### Notes
+      #### Notes
 
       - This method does not yield if a child with the given name exists when
         the call is made.
@@ -2348,7 +2350,7 @@ events:
       If a descendant has children, this event fires with the descendant first,
       followed by its descendants.
 
-      ##### Warning
+      #### Warning
 
       This event fires with the descendant object that is being removed.
       Attempting to set the `Class.Instance.Parent|Parent` of the descendant to
