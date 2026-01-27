@@ -744,7 +744,7 @@ methods:
       - Input
   - name: UserInputService:GetFocusedTextBox
     summary: |
-      Returns the currently `Class.TextBox` the client is currently focused on.
+      Returns the `Class.TextBox` the client is currently focused on.
     description: |
       This method returns the `Class.TextBox` the client is currently focused
       on. A `Class.TextBox` can be manually selected by the user, or selection
