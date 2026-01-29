@@ -5,10 +5,10 @@
 name: Instance
 type: class
 memory_category: Instances
-summary: |
+summary: |-
   `Instance` is the base class for all classes in the Roblox class hierarchy
   which can be part of the `Class.DataModel` tree.
-description: |
+description: |-
   `Instance` is the base class for all classes in the Roblox class hierarchy
   which can be part of the `Class.DataModel` tree.
 
@@ -76,6 +76,7 @@ descendants:
   - BodyMover
   - BodyPartDescription
   - BrowserService
+  - BugReporterService
   - CacheableContentProvider
   - CaptureService
   - ChangeHistoryService
@@ -122,6 +123,7 @@ descendants:
   - Explosion
   - FaceControls
   - FaceInstance
+  - FacialAgeEstimationService
   - Feature
   - FeatureRestrictionManager
   - Fire
@@ -214,6 +216,7 @@ descendants:
   - PermissionsService
   - PhysicsService
   - PhysicsSettings
+  - PlaceAssetIdsService
   - Player
   - PlayerScripts
   - PlayerViewService
@@ -276,6 +279,7 @@ descendants:
   - Stats
   - StatsItem
   - SurfaceAppearance
+  - SystemThemeService
   - TaskScheduler
   - Team
   - TeamCreateData
@@ -324,6 +328,8 @@ descendants:
   - VisualizationModeCategory
   - VisualizationModeService
   - VoiceChatService
+  - WebSocketClient
+  - WebSocketService
   - WeldConstraint
   - Wire
   - WrapTextureTransfer
@@ -333,6 +339,7 @@ descendants:
   - VirtualInputManager
   - PatchBundlerFileWatch
   - CreatorStoreService
+  - LiveSyncService
   - InputAction
   - InputBinding
   - InputContext
@@ -367,6 +374,7 @@ descendants:
   - TeamCreateService
   - VRStatusService
   - StudioService
+  - LanguageService
   - StyleBase
   - StyleDerive
   - StyleLink
@@ -379,10 +387,10 @@ tags:
 deprecation_message: ''
 properties:
   - name: Instance.Archivable
-    summary: |
+    summary: |-
       Determines if an `Class.Instance` and its descendants can be cloned using
       `Class.Instance:Clone()`, and can be saved/published.
-    description: |
+    description: |-
       This property determines whether the instance should be included when the
       experience is published or saved, or when `Class.Instance:Clone()|Clone()`
       is called on one of the instance's ancestors. Calling
@@ -422,7 +430,7 @@ properties:
       - Hidden
       - NotReplicated
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This deprecated property is a variant of `Class.Instance.Archivable` which
       should be used instead.
     security:
@@ -435,10 +443,10 @@ properties:
       can_save: false
     capabilities: []
   - name: Instance.Capabilities
-    summary: |
+    summary: |-
       The set of capabilities allowed to be used for scripts inside this
       container.
-    description: |
+    description: |-
       The set of capabilities allowed to be used for scripts inside this
       instance. For the capabilities to take effect, `Class.Instance.Sandboxed`
       property must be enabled.
@@ -461,9 +469,8 @@ properties:
     capabilities:
       - CapabilityControl
   - name: Instance.Name
-    summary: |
-      A non-unique identifier of the `Class.Instance`.
-    description: |
+    summary: A non-unique identifier of the `Class.Instance`.
+    description: |-
       A non-unique identifier of the `Class.Instance`. Names are used to keep
       the object hierarchy organized, along with allowing scripts to access
       specific objects. The name of an instance cannot exceed 100 characters in
@@ -510,9 +517,8 @@ properties:
       can_save: true
     capabilities: []
   - name: Instance.Parent
-    summary: |
-      Determines the hierarchical parent of the `Class.Instance`.
-    description: |
+    summary: Determines the hierarchical parent of the `Class.Instance`.
+    description: |-
       The `Parent` property determines the hierarchical parent of the
       `Class.Instance`. The following terminology is commonly used when talking
       about how this property is set:
@@ -597,9 +603,8 @@ properties:
       can_save: false
     capabilities: []
   - name: Instance.RobloxLocked
-    summary: |
-      A deprecated property that used to protect `Class.CoreGui` objects.
-    description: |
+    summary: A deprecated property that used to protect `Class.CoreGui` objects.
+    description: |-
       This property used to protect objects in the `Class.CoreGui` service from
       being altered by users in an unauthorized manner. It has been deprecated
       and does not do anything.
@@ -607,8 +612,7 @@ properties:
     type: boolean
     tags:
       - Hidden
-    deprecation_message: |
-      This property is deprecated and does not do anything.
+    deprecation_message: This property is deprecated and does not do anything.
     security:
       read: PluginSecurity
       write: PluginSecurity
@@ -619,9 +623,8 @@ properties:
       can_save: false
     capabilities: []
   - name: Instance.Sandboxed
-    summary: |
-      Turns the instance to be a sandboxed container.
-    description: |
+    summary: Turns the instance to be a sandboxed container.
+    description: |-
       Turns the instance to be a **sandboxed container**, an experimental
       feature which limits the actions that scripts inside a particular
       container can perform. See
@@ -643,9 +646,8 @@ properties:
     capabilities:
       - CapabilityControl
   - name: Instance.UniqueId
-    summary: |
-      A unique identifier for the instance.
-    description: |
+    summary: A unique identifier for the instance.
+    description: |-
       A unique identifier for the instance, distinct from `Class.Instance.Name`
       which is not necessarily unique.
     code_samples: []
@@ -664,9 +666,8 @@ properties:
     capabilities: []
 methods:
   - name: Instance:AddTag
-    summary: |
-      Applies a tag to the instance.
-    description: |
+    summary: Applies a tag to the instance.
+    description: |-
       This method applies a tag to the instance, with no effect if the tag is
       already applied. Successfully adding a tag will fire a signal created by
       `Class.CollectionService:GetInstanceAddedSignal()` with the given tag.
@@ -699,28 +700,24 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Instance:children
-    summary: |
-      Returns an array of the object's children.
-    description: |
-      The children function returns an array of the object's children.
+    summary: Returns an array of the object's children.
+    description: The children function returns an array of the object's children.
     code_samples: []
     parameters: []
     returns:
       - type: Instances
-        summary: |
-          Array of child objects/instances.
+        summary: Array of child objects/instances.
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This item has been superseded by `Class.Instance:GetChildren()` which
       should be used in all new work.
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: Instance:ClearAllChildren
-    summary: |
-      This method destroys all of an instance's children.
-    description: |
+    summary: This method destroys all of an instance's children.
+    description: |-
       This method destroys all of an instance's children and descendants.
 
       ```
@@ -770,10 +767,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Instance:Clone
-    summary: |
+    summary: |-
       Create a copy of an instance and all its descendants, ignoring instances
       that are not `Class.Instance.Archivable|Archivable`.
-    description: |
+    description: |-
       `Clone()` creates a copy of an instance and all of its descendants,
       ignoring all instances that are not
       `Class.Instance.Archivable|Archivable`. The copy of the root instance is
@@ -783,13 +780,13 @@ methods:
       return `nil`.
 
       If a reference property such as `Class.ObjectValue.Value` is set in a
-      cloned instance, the value of the copy's property depends on the
-      original's value:
+      cloned instance, the value of the copy's property depends on the original's
+      value:
 
       - If a reference property refers to an instance that was **also** cloned,
         the copy will refer to the copy.
-      - If a reference property refers to an instance that was **not** cloned,
-        the same value is maintained in the copy.
+      - If a reference property refers to an instance that was **not** cloned, the
+        same value is maintained in the copy.
     code_samples:
       - Clone-Example
     parameters: []
@@ -812,7 +809,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This deprecated function is a variant of `Class.Instance:Clone()` which
       should be used instead.
     security: None
@@ -820,15 +817,15 @@ methods:
     capabilities:
       - CreateInstances
   - name: Instance:Destroy
-    summary: |
+    summary: |-
       Sets the `Class.Instance.Parent` property to `nil`, locks the
       `Class.Instance.Parent` property, disconnects all connections, and calls
       `Destroy()` on all children.
-    description: |
+    description: |-
       Sets the `Class.Instance.Parent` property to `nil`, locks the
       `Class.Instance.Parent` property, disconnects all connections, and calls
-      `Destroy()` on all children. This method is the correct way to dispose of
-      objects that are no longer required.
+      `Destroy()` on all children. This method is the correct way to dispose
+      of objects that are no longer required.
 
       Disposing of unneeded objects is important, since unnecessary objects and
       connections in a place use up memory which can lead to serious performance
@@ -884,17 +881,17 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This deprecated function is a variant of `Class.Instance:Destroy()` which
       should be used instead.
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: Instance:FindFirstAncestor
-    summary: |
+    summary: |-
       Returns the first ancestor of the `Class.Instance` whose
       `Class.Instance.Name` is equal to the given name.
-    description: |
+    description: |-
       Returns the first ancestor of the `Class.Instance` whose
       `Class.Instance.Name` is equal to the given name.
 
@@ -917,22 +914,20 @@ methods:
       - name: name
         type: string
         default:
-        summary: |
-          The `Class.Instance.Name` to be looked for.
+        summary: The `Class.Instance.Name` to be looked for.
     returns:
       - type: Instance
-        summary: |
-          The `Class.Instance` found.
+        summary: The `Class.Instance` found.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
     capabilities: []
   - name: Instance:FindFirstAncestorOfClass
-    summary: |
+    summary: |-
       Returns the first ancestor of the `Class.Instance` whose
       `Class.Object.ClassName` is equal to the given className.
-    description: |
+    description: |-
       Returns the first ancestor of the `Class.Instance` whose
       `Class.Object.ClassName` is equal to the given className.
 
@@ -957,22 +952,20 @@ methods:
       - name: className
         type: string
         default:
-        summary: |
-          The `Class.Object.ClassName` to be looked for.
+        summary: The `Class.Object.ClassName` to be looked for.
     returns:
       - type: Instance
-        summary: |
-          The `Class.Instance` found.
+        summary: The `Class.Instance` found.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
     capabilities: []
   - name: Instance:FindFirstAncestorWhichIsA
-    summary: |
+    summary: |-
       Returns the first ancestor of the `Class.Instance` for whom
       `Class.Object:IsA()` returns true for the given className.
-    description: |
+    description: |-
       Returns the first ancestor of the `Class.Instance` for whom
       `Class.Object:IsA()` returns true for the given className.
 
@@ -1003,21 +996,18 @@ methods:
       - name: className
         type: string
         default:
-        summary: |
-          The `Class.Object.ClassName` to be looked for.
+        summary: The `Class.Object.ClassName` to be looked for.
     returns:
       - type: Instance
-        summary: |
-          The `Class.Instance` found.
+        summary: The `Class.Instance` found.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
     capabilities: []
   - name: Instance:FindFirstChild
-    summary: |
-      Returns the first child of the `Class.Instance` found with the given name.
-    description: |
+    summary: Returns the first child of the `Class.Instance` found with the given name.
+    description: |-
       Returns the first child of the `Class.Instance` with the given name, or
       `nil` if no such child exists. If the optional `recursive` argument is
       `true`, this method searches all descendants rather than only the
@@ -1087,17 +1077,14 @@ methods:
       - name: name
         type: string
         default:
-        summary: |
-          The `Class.Instance.Name` to be searched for.
+        summary: The `Class.Instance.Name` to be searched for.
       - name: recursive
         type: boolean
         default: false
-        summary: |
-          Whether or not the search should be conducted recursively.
+        summary: Whether or not the search should be conducted recursively.
     returns:
       - type: Instance
-        summary: |
-          The `Class.Instance` found.
+        summary: The `Class.Instance` found.
     tags: []
     deprecation_message: ''
     security: None
@@ -1121,50 +1108,49 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This deprecated function is a variant of `Class.Instance:FindFirstChild()`
       which should be used instead.
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: Instance:FindFirstChildOfClass
-    summary: |
+    summary: |-
       Returns the first child of the `Class.Instance` whose
       `Class.Object.ClassName|ClassName` is equal to the given class name.
-    description: |
+    description: |-
       Returns the first child of the `Class.Instance` whose
       `Class.Object.ClassName|ClassName` is equal to the given `className`.
-      Unlike `Class.Instance:FindFirstChildWhichIsA()`, this method only returns
-      objects whose class matches `className`, ignoring class inheritance. If no
-      matching child is found, this method returns `nil`.
+      Unlike `Class.Instance:FindFirstChildWhichIsA()`, this method only
+      returns objects whose class matches `className`, ignoring class
+      inheritance. If no matching child is found, this method returns `nil`.
     code_samples:
       - Instance-FindFirstChildOfClass1
     parameters:
       - name: className
         type: string
         default:
-        summary: |
-          The `Class.Object.ClassName` to be looked for.
+        summary: The `Class.Object.ClassName` to be looked for.
     returns:
       - type: Instance
-        summary: |
-          The `Class.Instance` found.
+        summary: The `Class.Instance` found.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
     capabilities: []
   - name: Instance:FindFirstChildWhichIsA
-    summary: |
+    summary: |-
       Returns the first child of the `Class.Instance` for whom
       `Class.Object:IsA()` returns true for the given className.
-    description: |
+    description: |-
       Returns the first child of the `Class.Instance` for whom
       `Class.Object:IsA()` returns true for the given className.
 
-      If no matching child is found, this method returns `nil`. If the optional
-      recursive argument is true, this method searches all descendants rather
-      than only the immediate children of the `Class.Instance`.
+      If no matching child is found, this method returns `nil`. If the
+      optional recursive argument is true, this method searches all
+      descendants rather than only the immediate children of the
+      `Class.Instance`.
 
       Unlike `Class.Instance:FindFirstChildOfClass()`, this method uses
       `Class.Object:IsA()` which respects class inheritance. For example:
@@ -1190,26 +1176,22 @@ methods:
       - name: className
         type: string
         default:
-        summary: |
-          The `Class.Object.ClassName` to be searched for.
+        summary: The `Class.Object.ClassName` to be searched for.
       - name: recursive
         type: boolean
         default: false
-        summary: |
-          Whether or not the search should be conducted recursively.
+        summary: Whether or not the search should be conducted recursively.
     returns:
       - type: Instance
-        summary: |
-          The `Class.Instance` found.
+        summary: The `Class.Instance` found.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
     capabilities: []
   - name: Instance:FindFirstDescendant
-    summary: |
-      Returns the first descendant found with the given `Class.Instance.Name`.
-    description: |
+    summary: Returns the first descendant found with the given `Class.Instance.Name`.
+    description: |-
       Returns the first descendant found with the given `Class.Instance.Name`.
 
       This method is disabled and cannot be used. To find the first descendant
@@ -1220,21 +1202,18 @@ methods:
       - name: name
         type: string
         default:
-        summary: |
-          The `Class.Instance.Name` to search for.
+        summary: The `Class.Instance.Name` to search for.
     returns:
       - type: Instance
-        summary: |
-          The `Class.Instance` found.
+        summary: The `Class.Instance` found.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
     capabilities: []
   - name: Instance:GetActor
-    summary: |
-      Returns the `Class.Actor` associated with the Instance, if any.
-    description: |
+    summary: Returns the `Class.Actor` associated with the Instance, if any.
+    description: |-
       If the `Class.Instance` is an `Class.Actor`, the `Class.Actor` itself is
       returned. Otherwise, its closest ancestor `Class.Actor` is returned. If no
       ancestor is an `Class.Actor`, the result is `nil`.
@@ -1242,17 +1221,15 @@ methods:
     parameters: []
     returns:
       - type: Actor?
-        summary: |
-          The `Class.Actor` found.
+        summary: The `Class.Actor` found.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
     capabilities: []
   - name: Instance:GetAttribute
-    summary: |
-      Returns the value which has been assigned to the given attribute name.
-    description: |
+    summary: Returns the value which has been assigned to the given attribute name.
+    description: |-
       This method returns the value which has been assigned to the given
       attribute name. If no attribute has been assigned, `nil` is returned.
 
@@ -1280,11 +1257,10 @@ methods:
       - name: attribute
         type: string
         default:
-        summary: |
-          The name of the attribute being retrieved.
+        summary: The name of the attribute being retrieved.
     returns:
       - type: Variant
-        summary: |
+        summary: |-
           The value which has been assigned to the given attribute name. If no
           attribute has been assigned, `nil` is returned.
     tags: []
@@ -1293,9 +1269,8 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: Instance:GetAttributeChangedSignal
-    summary: |
-      Returns an event that fires when the given attribute changes.
-    description: |
+    summary: Returns an event that fires when the given attribute changes.
+    description: |-
       This method returns an event that behaves exactly like the
       `Class.Object.Changed|Changed` event, except that it only fires when the
       specific given attribute changes; effectively it is similar to
@@ -1330,22 +1305,20 @@ methods:
       - name: attribute
         type: string
         default:
-        summary: |
+        summary: |-
           The name of the specified attribute for which the change signal is
           being returned.
     returns:
       - type: RBXScriptSignal
-        summary: |
-          An event that fires when the given attribute changes.
+        summary: An event that fires when the given attribute changes.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: Instance:GetAttributes
-    summary: |
-      Returns a dictionary of the instance's attributes.
-    description: |
+    summary: Returns a dictionary of the instance's attributes.
+    description: |-
       This method returns a dictionary of key‑value pairs for each attribute
       where the key is the attribute's name and the value is a non‑`nil` value.
 
@@ -1370,7 +1343,7 @@ methods:
     parameters: []
     returns:
       - type: Dictionary
-        summary: |
+        summary: |-
           A dictionary of string → variant pairs for each attribute where the
           string is the name of the attribute and the variant is a non-nil
           value.
@@ -1381,9 +1354,8 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: Instance:GetChildren
-    summary: |
-      Returns an array containing all of the instance's children.
-    description: |
+    summary: Returns an array containing all of the instance's children.
+    description: |-
       Returns an array (a numerically indexed table) containing all of the
       instance's direct children, or every `Class.Instance` whose
       `Class.Instance.Parent|Parent` is equal to the object. The array can be
@@ -1411,8 +1383,8 @@ methods:
       ```
 
       Note that the returned array is **not** sorted in any particular order, so
-      manual sorting (for example using `Library.table.sort()`) is advised for
-      sorting the children returned by this method.
+      manual sorting (for example using `Library.table.sort()`) is advised for sorting
+      the children returned by this method.
 
       See also the `Class.Instance:GetDescendants()|GetDescendants()` method.
     code_samples:
@@ -1420,8 +1392,7 @@ methods:
     parameters: []
     returns:
       - type: Instances
-        summary: |
-          An array containing the instance's children.
+        summary: An array containing the instance's children.
     tags: []
     deprecation_message: ''
     security: None
@@ -1437,16 +1408,15 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This deprecated function is a variant of `Class.Instance:GetChildren()`
       which should be used instead.
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: Instance:GetDebugId
-    summary: |
-      Returns a coded string of the debug ID used internally by Roblox.
-    description: |
+    summary: Returns a coded string of the debug ID used internally by Roblox.
+    description: |-
       Returns a coded string of the debug ID used internally by Roblox. Note
       that:
 
@@ -1464,12 +1434,10 @@ methods:
       - name: scopeLength
         type: int
         default: 4
-        summary: |
-          The scope length.
+        summary: The scope length.
     returns:
       - type: string
-        summary: |
-          The Debug ID string.
+        summary: The Debug ID string.
     tags:
       - NotBrowsable
     deprecation_message: ''
@@ -1477,17 +1445,16 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Instance:GetDescendants
-    summary: |
-      Returns an array containing all of the descendants of the instance.
-    description: |
-      This object method returns an array that contains all of the descendants
-      of that object. Unlike `Class.Instance:GetChildren()`, which only returns
-      the immediate children of an object, this method finds every child of the
-      object, every child of those children, and so on.
+    summary: Returns an array containing all of the descendants of the instance.
+    description: |-
+      This object method returns an array that contains all of the descendants of that
+      object. Unlike `Class.Instance:GetChildren()`, which only returns the immediate
+      children of an object, this method finds every child of the object, every child
+      of those children, and so on.
 
       Note that the returned array is **not** sorted in any particular order, so
-      manual sorting (for example using `Library.table.sort()`) is advised for
-      sorting the descendants returned by this method. Also consdier the
+      manual sorting (for example using `Library.table.sort()`) is advised for sorting
+      the descendants returned by this method. Also consdier the
       `Class.Instance:QueryDescendants()|QueryDescendants()` method to query
       descendants by a combination of selectors and combinators.
     code_samples:
@@ -1495,8 +1462,7 @@ methods:
     parameters: []
     returns:
       - type: Instances
-        summary: |
-          An array containing the instance's descendants.
+        summary: An array containing the instance's descendants.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -1504,9 +1470,8 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: Instance:GetFullName
-    summary: |
-      Returns a string describing the instance's ancestry.
-    description: |
+    summary: Returns a string describing the instance's ancestry.
+    description: |-
       Returns a string describing the instance's ancestry. The string is a
       concatenation of the `Class.Instance.Name|Name` of the object and its
       ancestors, separated by periods. The `Class.DataModel` (`game`) is not
@@ -1514,12 +1479,12 @@ methods:
       return `Class.Workspace.Part`.
 
       When called on an `Class.Instance` that is not a descendant of the
-      `Class.DataModel`, this method considers all ancestors up to and including
-      the topmost one without a `Class.Instance.Parent|Parent`.
+      `Class.DataModel`, this method considers all ancestors up to and
+      including the topmost one without a `Class.Instance.Parent|Parent`.
 
-      This method is useful for logging and debugging. You shouldn't attempt to
-      parse the returned string for any useful operation; this method does not
-      escape periods (or any other symbol) in object names. In other words,
+      This method is useful for logging and debugging. You shouldn't attempt
+      to parse the returned string for any useful operation; this method does
+      not escape periods (or any other symbol) in object names. In other words,
       although its output often appears to be a valid Luau identifier, it is not
       guaranteed.
     code_samples:
@@ -1528,18 +1493,17 @@ methods:
     parameters: []
     returns:
       - type: string
-        summary: |
-          The full name of the `Class.Instance`.
+        summary: The full name of the `Class.Instance`.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
     capabilities: []
   - name: Instance:GetStyled
-    summary: |
+    summary: |-
       Returns the styled or explicitly modified value of the specified property,
-      or else the default property value if it hasn't been styled/modified.
-    description: |
+      	or else the default property value if it hasn't been styled/modified.
+    description: |-
       This method returns the styled or explicitly modified value of the
       specified property, or else the default property value if it hasn't been
       styled/modified. This differs slightly from accessing the property value
@@ -1581,17 +1545,14 @@ methods:
       - name: name
         type: string
         default:
-        summary: |
-          Name of the property to query.
+        summary: Name of the property to query.
       - name: selector
         type: string?
         default:
-        summary: |
-          Optional selector for the pseudo instance you are targeting on the
-          instance.
+        summary: Optional selector for the pseudo instance you are targeting on the instance.
     returns:
       - type: Variant
-        summary: |
+        summary: |-
           The styled or explicitly modified value of the specified property, or
           else the default property value if it hasn't been styled/modified.
     tags: []
@@ -1601,7 +1562,7 @@ methods:
     capabilities: []
   - name: Instance:GetStyledPropertyChangedSignal
     summary: ''
-    description: |
+    description: |-
       This method returns an event that behaves exactly like the
       `Class.Instance.StyledPropertiesChanged|StyledPropertiesChanged` event,
       except that it only fires when the given style property changes. It's
@@ -1633,21 +1594,18 @@ methods:
       - name: property
         type: string
         default:
-        summary: |
-          Name of the style property for which to listen for changes.
+        summary: Name of the style property for which to listen for changes.
     returns:
       - type: RBXScriptSignal
-        summary: |
-          Event that fires when the given style property changes.
+        summary: Event that fires when the given style property changes.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: Instance:GetTags
-    summary: |
-      Gets an array of all tags applied to the instance.
-    description: |
+    summary: Gets an array of all tags applied to the instance.
+    description: |-
       This method returns an array of the tags applied to the given instance, as
       strings. You can add tags either in Studio in the
       [Properties](../../../studio/properties.md) window or at runtime with
@@ -1668,9 +1626,8 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: Instance:HasTag
-    summary: |
-      Check whether the instance has a given tag.
-    description: |
+    summary: Check whether the instance has a given tag.
+    description: |-
       This method returns `true` if the provided tag has been added to the
       object. You can add tags either in Studio in the
       [Properties](../../../studio/properties.md) window or at runtime with
@@ -1690,10 +1647,10 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: Instance:IsAncestorOf
-    summary: |
+    summary: |-
       Returns true if an `Class.Instance` is an ancestor of the given
       descendant.
-    description: |
+    description: |-
       Returns true if an `Class.Instance` is an ancestor of the given
       descendant.
 
@@ -1708,22 +1665,20 @@ methods:
       - name: descendant
         type: Instance
         default:
-        summary: |
-          The descendant `Class.Instance`.
+        summary: The descendant `Class.Instance`.
     returns:
       - type: boolean
-        summary: |
-          True if the `Class.Instance` is an ancestor of the given descendant.
+        summary: True if the `Class.Instance` is an ancestor of the given descendant.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
     capabilities: []
   - name: Instance:IsDescendantOf
-    summary: |
+    summary: |-
       Returns `true` if an `Class.Instance` is a descendant of the given
       ancestor.
-    description: |
+    description: |-
       Returns `true` if an `Class.Instance` is a descendant of the given
       ancestor.
 
@@ -1737,12 +1692,10 @@ methods:
       - name: ancestor
         type: Instance
         default:
-        summary: |
-          The ancestor `Class.Instance`.
+        summary: The ancestor `Class.Instance`.
     returns:
       - type: boolean
-        summary: |
-          True if the `Class.Instance` is a descendant of the given ancestor.
+        summary: True if the `Class.Instance` is a descendant of the given ancestor.
     tags: []
     deprecation_message: ''
     security: None
@@ -1762,49 +1715,45 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This deprecated function is a variant of `Class.Instance:IsDescendantOf()`
       which should be used instead.
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: Instance:IsPropertyModified
-    summary: |
-      Returns `true` if the value stored in the specified property is not equal
-      to the code-instantiated default.
-    description: |
-      This method indicates whether a specific property has been modified from
-      the code‑instantiated default. If called on an instance newly created via
-      code (`Datatype.Instance.new()`), this method will return `false`. If
-      called on an object newly created by Studio workflows such as
-      [Explorer](../../../studio/explorer.md) window insertion, the result may
-      differ.
+    summary: Returns `true` if the value stored in the specified property is not equal to the code-instantiated default.
+    description: |-
+      This method indicates whether a specific property has been modified from the
+      code‑instantiated default. If called on an instance newly created via code
+      (`Datatype.Instance.new()`), this method will return `false`. If called on an
+      object newly created by Studio workflows such as
+      [Explorer](../../../studio/explorer.md) window insertion, the result may differ.
 
-      For example, querying the
-      `Class.TextLabel.BackgroundColor3|BackgroundColor3` property of a
-      `Class.TextLabel` inserted via the [Explorer](../../../studio/explorer.md)
-      will return `true`, but querying the same property of a `Class.TextLabel`
-      created through `Datatype.Instance.new()` will return `false`, assuming no
-      other changes were made to its
+      For example, querying the `Class.TextLabel.BackgroundColor3|BackgroundColor3`
+      property of a `Class.TextLabel` inserted via the
+      [Explorer](../../../studio/explorer.md) will return `true`, but querying the
+      same property of a `Class.TextLabel` created through `Datatype.Instance.new()`
+      will return `false`, assuming no other changes were made to its
       `Class.TextLabel.BackgroundColor3|BackgroundColor3`.
 
-      Note that if this method returns `true`, styling will **not** affect the
-      property because explicitly modifying a property takes precedence over
-      styling it. To reset a property to its code‑instantiated default and allow
-      styling on it, use
-      `Class.Instance:ResetPropertyToDefault()|ResetPropertyToDefault()`.
+      Note that this method only returns useful results for services and
+      user‑creatable instances. Return values for system‑populated properties of
+      instances like `Class.PackageLink` is undefined behavior.
+
+      Also note that if this method returns `true`, styling will **not** affect the
+      property because explicitly modifying a property takes precedence over styling
+      it. To reset a property to its code‑instantiated default and allow styling on
+      it, use `Class.Instance:ResetPropertyToDefault()|ResetPropertyToDefault()`.
     code_samples: []
     parameters:
       - name: property
         type: string
         default:
-        summary: |
-          Name of the property to query.
+        summary: Name of the property to query.
     returns:
       - type: boolean
-        summary: |
-          Boolean indicating whether the property is modified from its
-          code‑instantiated default.
+        summary: Boolean indicating whether the property is modified from its code‑instantiated default.
     tags: []
     deprecation_message: ''
     security: None
@@ -1812,37 +1761,28 @@ methods:
     capabilities: []
   - name: Instance:QueryDescendants
     summary: ''
-    description: |
+    description: |-
       This object method returns an array which contains the descendants of that
       object matching the provided `selector` string. The `selector` string can
-      include multiple selectors and combinators to match characteristics such
-      as the class name, instance name, hierarchy relationships, as well as
-      specific values of instance properties and attributes. The `selector`
-      grammar is similar to the one used in `Class.StyleRule` with only a few
-      differences regarding which parts of the grammar are supported or not.
+      include multiple selectors and combinators to match characteristics such as the
+      class name, instance name, hierarchy relationships, as well as specific values
+      of instance properties and attributes. The `selector` grammar is similar to the
+      one used in `Class.StyleRule` with only a few differences regarding which parts
+      of the grammar are supported or not.
 
       #### Selectors
 
-      - `ClassName` — Matches instances of the specified class in a
-        `Class.Object:IsA()` relationship.
+      - `ClassName` — Matches instances of the specified class in a `Class.Object:IsA()` relationship.
       - `.Tag` — Matches instances tagged with a `Class.CollectionService` tag.
       - `#Name` — Matches instances of a specific `Class.Instance.Name`.
-      - `[property = value]` — Matches instances which have the specified
-        property and that property has the specified value. Boolean, number, and
-        string values are supported. Letters, numbers, `_`, and `-` can be used
-        without putting the value in quotation marks.
-      - `[$attribute]` — Matches instances which have the specified
-        [attribute](../../../studio/properties.md#instance-attributes) set.
-      - `[$attribute = value]` — Matches instances which have the specified
-        attribute **and** that attribute has the specified value. Same
-        limitations apply as for property selectors. If you want to check for
-        the absence of an attribute, do not query it as `nil`; instead use the
-        `:not` pseudo‑class as in `:not([$attribute])`.
+      - `[property = value]` — Matches instances which have the specified property and that property has the specified value. Boolean, number, and string values are supported. Letters, numbers, `_`, and `-` can be used without putting the value in quotation marks.
+      - `[$attribute]` — Matches instances which have the specified [attribute](../../../studio/properties.md#instance-attributes) set.
+      - `[$attribute = value]` — Matches instances which have the specified attribute **and** that attribute has the specified value. Same limitations apply as for property selectors. If you want to check for the absence of an attribute, do not query it as `nil`; instead use the `:not` pseudo‑class as in `:not([$attribute])`.
 
-      Selectors can also be combined. For example,
-      `Model.Apple[$Variety = Fuji][$Flavor = 4]` will match instances which are
-      a `Class.Model` tagged as `Apple` and which have a `Variety` attribute
-      equal to `Fuji` as well as a `Flavor` attribute equal to `4`.
+      Selectors can also be combined. For example, `Model.Apple[$Variety =
+      Fuji][$Flavor = 4]` will match instances which are a `Class.Model` tagged as
+      `Apple` and which have a `Variety` attribute equal to `Fuji` as well as a
+      `Flavor` attribute equal to `4`.
 
       ```lua
       local Workspace = game:GetService("Workspace")
@@ -1867,20 +1807,17 @@ methods:
 
       #### Combinators
 
-      Combinators let you mix basic selectors to match deeper hierarchy
-      relationships.
+      Combinators let you mix basic selectors to match deeper hierarchy relationships.
 
-      - `>` — Matches instances that are **direct children** of the previous
-        filter matches.
+      - `>` — Matches instances that are **direct children** of the previous filter
+      matches.
 
       - `>>` — Matches instances that are **descendants** of the previous filter
-        matches. This is the default first filter, meaning that `SpotLight.Red`
-        is the same as `>> SpotLight.Red`.
+        matches. This is the default first filter, meaning that `SpotLight.Red` is
+        the same as `>> SpotLight.Red`.
 
-      - `,` — Specifies a list of multiple independent selectors for the
-        descendant query. Only elements matching the filter are placed in the
-        returned array; `nil` will not be included for non‑matches in a query
-        list.
+      - `,` — Specifies a list of multiple independent selectors for the descendant
+        query. Only elements matching the filter are placed in the returned array; `nil` will not be included for non‑matches in a query list.
 
       ```lua
       local Workspace = game:GetService("Workspace")
@@ -1900,14 +1837,14 @@ methods:
 
       #### Pseudo-class selectors
 
-      - `:not(complex-selector-list)` — Allows selecting instances which do
-        **not** match any of the selectors inside, effectively performing a
-        negation of the selectors. Since the expression inside is a list of
-        complex selectors, it's possible to filter based on multiple conditions.
+      - `:not(complex-selector-list)` — Allows selecting instances which do **not**
+      match any of the selectors inside, effectively performing a negation of the
+      selectors. Since the expression inside is a list of complex selectors, it's
+      possible to filter based on multiple conditions.
 
-      - `:has(relative-selector-list)` — Allows selecting instances based on
-        which instances they contain inside. The selector list is evaluated
-        relative to each instance.
+      - `:has(relative-selector-list)` — Allows selecting instances based on which
+      instances they contain inside. The selector list is evaluated relative to each
+      instance.
 
       ```lua
       local Workspace = game:GetService("Workspace")
@@ -1934,12 +1871,10 @@ methods:
       - name: selector
         type: string
         default:
-        summary: |
-          Selector string used to filter elements.
+        summary: Selector string used to filter elements.
     returns:
       - type: Instances
-        summary: |
-          An array of instances (empty if nothing matched the selector).
+        summary: An array of instances (empty if nothing matched the selector).
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -1947,10 +1882,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Instance:Remove
-    summary: |
+    summary: |-
       Sets the object's `Parent` to `nil`, and does the same for all its
       descendants.
-    description: |
+    description: |-
       This method sets the object's `Class.Instance.Parent` to `nil`, and does
       the same for all its descendants.
 
@@ -1964,7 +1899,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This item is deprecated in favor of `Class.Instance:Destroy()` and
       `Class.Instance:ClearAllChildren()`. If you must remove an object from the
       game, and wish to use the object later, set its `Parent` property to `nil`
@@ -1982,16 +1917,15 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This deprecated function is a variant of `Class.Instance:Remove()` which
       has also been deprecated. Neither function should be used in new work.
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: Instance:RemoveTag
-    summary: |
-      Removes a tag from the instance.
-    description: |
+    summary: Removes a tag from the instance.
+    description: |-
       This method removes a tag from an instance. It will not throw an error if
       the object does not have the tag. Successfully removing a tag will fire a
       signal created by `Class.CollectionService:GetInstanceRemovedSignal()`
@@ -2016,9 +1950,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Instance:ResetPropertyToDefault
-    summary: |
-      Resets a property to its default value.
-    description: |
+    summary: Resets a property to its default value.
+    description: |-
       Resets a property to its default value. For example, calling
       `ResetPropertyToDefault("Rotation")` on a `Class.TextLabel` is equivalent
       to setting its `Class.TextLabel.Rotation|Rotation` to `0` (the property's
@@ -2029,8 +1962,7 @@ methods:
       - name: property
         type: string
         default:
-        summary: |
-          Name of the property to reset.
+        summary: Name of the property to reset.
     returns:
       - type: ()
         summary: ''
@@ -2040,9 +1972,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Instance:SetAttribute
-    summary: |
-      Sets the attribute with the given name to the given value.
-    description: |
+    summary: Sets the attribute with the given name to the given value.
+    description: |-
       This method sets the attribute with the given name to the given value. If
       the value given is `nil`, the attribute will be removed, since `nil` is
       returned by default.
@@ -2082,13 +2013,11 @@ methods:
       - name: attribute
         type: string
         default:
-        summary: |
-          The name of the attribute being set.
+        summary: The name of the attribute being set.
       - name: value
         type: Variant
         default:
-        summary: |
-          The value to set the specified attribute to.
+        summary: The value to set the specified attribute to.
     returns:
       - type: ()
         summary: ''
@@ -2098,10 +2027,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Instance:WaitForChild
-    summary: |
+    summary: |-
       Returns the child of the `Class.Instance` with the given name. If the
       child does not exist, it will yield the current thread until it does.
-    description: |
+    description: |-
       Returns the child of the `Class.Instance` with the given name. If the
       child does not exist, it will yield the current thread until it does. If
       the `timeOut` parameter is specified, this method will time out after the
@@ -2134,17 +2063,14 @@ methods:
       - name: childName
         type: string
         default:
-        summary: |
-          The `Class.Instance.Name` to be looked for.
+        summary: The `Class.Instance.Name` to be looked for.
       - name: timeOut
         type: double
         default:
-        summary: |
-          An optional time out parameter.
+        summary: An optional time out parameter.
     returns:
       - type: Instance
-        summary: |
-          The `Class.Instance` found.
+        summary: The `Class.Instance` found.
     tags:
       - CustomLuaState
       - CanYield
@@ -2154,10 +2080,10 @@ methods:
     capabilities: []
 events:
   - name: Instance.AncestryChanged
-    summary: |
+    summary: |-
       Fires when the `Class.Instance.Parent` property of the object or one of
       its ancestors is changed.
-    description: |
+    description: |-
       Fires when the `Class.Instance.Parent` property of the object or one of
       its ancestors is changed.
 
@@ -2175,12 +2101,11 @@ events:
       - name: child
         type: Instance
         default:
-        summary: |
-          The `Class.Instance` whose `Class.Instance.Parent` has been changed.
+        summary: The `Class.Instance` whose `Class.Instance.Parent` has been changed.
       - name: parent
         type: Instance
         default:
-        summary: |
+        summary: |-
           The new `Class.Instance.Parent` of the `Class.Instance` whose
           `Class.Instance.Parent` was changed.
     tags: []
@@ -2188,9 +2113,8 @@ events:
     security: None
     capabilities: []
   - name: Instance.AttributeChanged
-    summary: |
-      Fires whenever an attribute is changed on the `Class.Instance`.
-    description: |
+    summary: Fires whenever an attribute is changed on the `Class.Instance`.
+    description: |-
       This event fires whenever any attribute is changed on the instance,
       including when an attribute is set to `nil`. The name of the changed
       attribute is passed to the connected function.
@@ -2217,20 +2141,18 @@ events:
       - name: attribute
         type: string
         default:
-        summary: |
-          The name of the attribute that has been changed.
+        summary: The name of the attribute that has been changed.
     tags: []
     deprecation_message: ''
     security: None
     capabilities: []
   - name: Instance.ChildAdded
-    summary: |
-      Fires after an object is parented to this `Class.Instance`.
-    description: |
+    summary: Fires after an object is parented to this `Class.Instance`.
+    description: |-
       Fires after an object is parented to this `Class.Instance`.
 
-      Note, when using this method on a client to detect objects created by the
-      server it is necessary to use `Class.Instance:WaitForChild()` when
+      Note, when using this method on a client to detect objects created by
+      the server it is necessary to use `Class.Instance:WaitForChild()` when
       indexing these object's descendants. This is because the object and its
       descendants are not guaranteed to replicate from the server to the client
       simultaneously. For example:
@@ -2255,8 +2177,7 @@ events:
       - name: child
         type: Instance
         default:
-        summary: |
-          The `Class.Instance` that has been added.
+        summary: The `Class.Instance` that has been added.
     tags: []
     deprecation_message: ''
     security: None
@@ -2272,15 +2193,14 @@ events:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This deprecated event is a variant of `Class.Instance.ChildAdded` which
       should be used instead.
     security: None
     capabilities: []
   - name: Instance.ChildRemoved
-    summary: |
-      Fires after a child is removed from this `Class.Instance`.
-    description: |
+    summary: Fires after a child is removed from this `Class.Instance`.
+    description: |-
       Fires after a child is removed from this `Class.Instance`.
 
       Removed refers to when an object's parent is changed from this
@@ -2300,16 +2220,14 @@ events:
       - name: child
         type: Instance
         default:
-        summary: |
-          The `Class.Instance` that has been removed.
+        summary: The `Class.Instance` that has been removed.
     tags: []
     deprecation_message: ''
     security: None
     capabilities: []
   - name: Instance.DescendantAdded
-    summary: |
-      Fires after a descendant is added to the `Class.Instance`.
-    description: |
+    summary: Fires after a descendant is added to the `Class.Instance`.
+    description: |-
       This event fires after a descendant is added to the `Class.Instance`.
 
       As it fires for every descendant, parenting an object to the
@@ -2326,16 +2244,14 @@ events:
       - name: descendant
         type: Instance
         default:
-        summary: |
-          The `Class.Instance` that has been added.
+        summary: The `Class.Instance` that has been added.
     tags: []
     deprecation_message: ''
     security: None
     capabilities: []
   - name: Instance.DescendantRemoving
-    summary: |
-      Fires immediately before a descendant of the `Class.Instance` is removed.
-    description: |
+    summary: Fires immediately before a descendant of the `Class.Instance` is removed.
+    description: |-
       This event fires **immediately before** the parent `Class.Instance`
       changes such that a **descendant** instance will no longer be a
       descendant. `Class.Instance:Destroy()|Destroy()` changes an instance's
@@ -2378,17 +2294,16 @@ events:
       - name: descendant
         type: Instance
         default:
-        summary: |
-          The `Class.Instance` that is being removed.
+        summary: The `Class.Instance` that is being removed.
     tags: []
     deprecation_message: ''
     security: None
     capabilities: []
   - name: Instance.Destroying
-    summary: |
+    summary: |-
       Fires immediately before (or is deferred until after) the instance is
       destroyed via `Class.Instance:Destroy()`.
-    description: |
+    description: |-
       The `Class.Instance` will never be deleted from memory while a connected
       function is still using it. However, if the function yields at any point,
       the `Class.Instance` and its descendants will be parented to `nil`.
@@ -2421,10 +2336,10 @@ events:
     security: None
     capabilities: []
   - name: Instance.StyledPropertiesChanged
-    summary: |
+    summary: |-
       Fires whenever any style property is changed on the instance, including
       when a property is set to `nil`.
-    description: |
+    description: |-
       This event fires whenever any style property is changed on the instance,
       including when a property is set to `nil`.
 

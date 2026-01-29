@@ -259,12 +259,12 @@ Custom tab configurations are saved **locally** on each machine in `.json` forma
 		"Name": "Custom",
 		"Controls": [
 			{
-				"Id": "PrinceTybalt_Tailor Swiftly\nHackweek 2024",
+				"Id": "PrinceTybalt_Tailor Swiftly",
 				"Type": "IconButton",
 				"Action": {
 					"Category": "Actions",
 					"DataModel": "Edit",
-					"ItemId": "PrinceTybalt_Tailor Swiftly\nHackweek 2024",
+					"ItemId": "PrinceTybalt_Tailor Swiftly",
 					"PluginId": "130172194397869",
 					"PluginType": "Cloud"
 				}

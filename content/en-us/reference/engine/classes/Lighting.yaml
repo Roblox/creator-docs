@@ -5,11 +5,11 @@
 name: Lighting
 type: class
 memory_category: Instances
-summary: |
+summary: |-
   The `Lighting` service controls global lighting in an experience. It includes
   a range of adjustable properties that you can use to change how lighting
   appears and interacts with other objects.
-description: |
+description: |-
   The `Lighting` service controls global lighting in an experience. It includes
   a range of adjustable properties that you can use to change how lighting
   appears and interacts with other objects, as summarized in
@@ -37,10 +37,10 @@ tags:
 deprecation_message: ''
 properties:
   - name: Lighting.Ambient
-    summary: |
+    summary: |-
       The lighting hue applied to areas that are occluded from the sky, such as
       indoor areas.
-    description: |
+    description: |-
       `Ambient` is the lighting hue applied to areas that are occluded from the
       sky, such as indoor areas.
 
@@ -69,9 +69,8 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.Brightness
-    summary: |
-      The intensity of illumination in the place.
-    description: |
+    summary: The intensity of illumination in the place.
+    description: |-
       The intensity of illumination in the place.
 
       Changing this value will influence the impact of the light source (sun or
@@ -97,10 +96,10 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.ClockTime
-    summary: |
+    summary: |-
       A numerical representation (in hours) of the current time of day used by
       `Lighting`.
-    description: |
+    description: |-
       A numerical representation (in hours) of the current time of day used by
       `Lighting`. Note that this property does not correspond with the actual
       time of day and will not change during gameplay unless it has been changed
@@ -127,10 +126,10 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.ColorShift_Bottom
-    summary: |
+    summary: |-
       The hue represented in light reflected in the opposite surfaces to those
       facing the sun or moon.
-    description: |
+    description: |-
       The hue represented in light reflected in the opposite surfaces to those
       facing the sun or moon.
 
@@ -165,10 +164,10 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.ColorShift_Top
-    summary: |
+    summary: |-
       The hue represented in light reflected from surfaces facing the sun or
       moon.
-    description: |
+    description: |-
       The hue represented in light reflected from surfaces facing the sun or
       moon.
 
@@ -200,9 +199,8 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.EnvironmentDiffuseScale
-    summary: |
-      Ambient light that is derived from the environment.
-    description: |
+    summary: Ambient light that is derived from the environment.
+    description: |-
       Ambient light that is derived from the environment with a default of `0`.
       This property is similar to `Class.Lighting.Ambient|Ambient` and
       `Class.Lighting.OutdoorAmbient|OutdoorAmbient` but it's dynamic and can
@@ -224,9 +222,8 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.EnvironmentSpecularScale
-    summary: |
-      Specular light derived from environment.
-    description: |
+    summary: Specular light derived from environment.
+    description: |-
       Specular light derived from environment with a default of `0`. This
       property will make smooth objects reflect the environment and it is
       especially important to make metal look more realistic.
@@ -245,9 +242,8 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.ExposureCompensation
-    summary: |
-      The exposure compensation value.
-    description: |
+    summary: The exposure compensation value.
+    description: |-
       This property determines the exposure compensation amount which applies a
       bias to the exposure level of the scene prior to the tonemap step.
       Defaults to `0` (no exposure compensation) and has a range from `-5` to
@@ -286,9 +282,8 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.FogColor
-    summary: |
-      A `Datatype.Color3` value giving the hue of `Lighting` fog.
-    description: |
+    summary: A `Datatype.Color3` value giving the hue of `Lighting` fog.
+    description: |-
       A `Datatype.Color3` value giving the hue of `Lighting` fog. Note that fog
       properties are hidden when `Lighting` contains an `Class.Atmosphere`
       object.
@@ -307,10 +302,10 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.FogEnd
-    summary: |
+    summary: |-
       The depth from the `Class.Workspace.CurrentCamera`, in studs, at which fog
       will be completely opaque.
-    description: |
+    description: |-
       The depth from the `Class.Workspace.CurrentCamera`, in studs, at which fog
       will be completely opaque. Note that fog properties are hidden when
       `Lighting` contains an `Class.Atmosphere` object.
@@ -329,10 +324,10 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.FogStart
-    summary: |
+    summary: |-
       The depth from the `Class.Workspace.CurrentCamera`, in studs, at which fog
       begins to show.
-    description: |
+    description: |-
       The depth from the `Class.Workspace.CurrentCamera`, in studs, at which fog
       begins to show. Note that fog properties are hidden when `Lighting`
       contains an `Class.Atmosphere` object.
@@ -351,10 +346,10 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.GeographicLatitude
-    summary: |
+    summary: |-
       The geographic latitude, in degrees, of the scene, influencing the result
       of `Lighting` time on the position of the sun and moon.
-    description: |
+    description: |-
       The geographic latitude, in degrees, of the scene, influencing the result
       of `Lighting` time on the position of the sun and moon. When calculating
       the position of the sun, the earth's tilt is also taken into account.
@@ -379,9 +374,8 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.GlobalShadows
-    summary: |
-      Toggles voxel-based dynamic lighting for the place.
-    description: |
+    summary: Toggles voxel-based dynamic lighting for the place.
+    description: |-
       Toggles voxel-based dynamic lighting in the place. When set to `true`,
       shadows are rendered in sheltered areas depending on the position of the
       sun and moon. The lighting hue applied to these sheltered areas is
@@ -413,11 +407,8 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.LightingStyle
-    summary: |
-      The artistic intent behind lighting in the experience.
-    description: |
-      `LightingStyle` indicates the artistic intent behind lighting in the
-      experience, as an `Enum.LightingStyle` option.
+    summary: The artistic intent behind lighting in the experience.
+    description: '`LightingStyle` indicates the artistic intent behind lighting in the experience, as an `Enum.LightingStyle` option.'
     code_samples: []
     type: LightingStyle
     tags: []
@@ -433,9 +424,8 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.OutdoorAmbient
-    summary: |
-      The lighting hue applied to outdoor areas.
-    description: |
+    summary: The lighting hue applied to outdoor areas.
+    description: |-
       `OutdoorAmbient` is the lighting hue applied to outdoor areas.
 
       `OutdoorAmbient` defaults to `[127, 127, 127]`. As long as the red, green,
@@ -469,9 +459,8 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.Outlines
-    summary: |
-      Determines whether outlines are enabled or disabled in a place.
-    description: |
+    summary: Determines whether outlines are enabled or disabled in a place.
+    description: |-
       This property determines whether outlines are enabled or disabled in a
       place.
 
@@ -485,7 +474,7 @@ properties:
     type: boolean
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This item is no longer supported as the outlines feature was removed from
       the Roblox platform.
     security:
@@ -499,15 +488,8 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.PrioritizeLightingQuality
-    summary: |
-      Indicates whether you prefer lighting/shading quality or view distance to
-      scale down first.
-    description: |
-      This property indicates whether you prefer lighting/shading quality or
-      view distance to scale down first. As the rendering quality level reduces,
-      a setting of `true` prioritizes features such as advanced shadows and
-      high‑quality shaders at closer distances, while a setting of `false`
-      prioritizes view distance.
+    summary: Indicates whether you prefer lighting/shading quality or view distance to scale down first.
+    description: This property indicates whether you prefer lighting/shading quality or view distance to scale down first. As the rendering quality level reduces, a setting of `true` prioritizes features such as advanced shadows and high‑quality shaders at closer distances, while a setting of `false` prioritizes view distance.
     code_samples: []
     type: boolean
     tags: []
@@ -523,10 +505,10 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.ShadowColor
-    summary: |
+    summary: |-
       This is supposed to change the color of player shadows, but currently
       doesn't do anything.
-    description: |
+    description: |-
       This is supposed to change the color of player shadows, but currently
       doesn't do anything.
     code_samples: []
@@ -534,7 +516,7 @@ properties:
     tags:
       - NotReplicated
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This item is deprecated and has no current functionality. Do not use it
       for new work.
     security:
@@ -548,9 +530,8 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.ShadowSoftness
-    summary: |
-      Controls how blurry the shadows are.
-    description: |
+    summary: Controls how blurry the shadows are.
+    description: |-
       Controls how blurry the shadows are with a default of `0.2`. This property
       only works when `Class.Lighting.Technology|Technology` mode is
       `Enum.Technology|ShadowMap` or `Enum.Technology|Future` and the device is
@@ -570,21 +551,14 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.Technology
-    summary: |
-      Determines the lighting system for rendering the 3D world. Non-scriptable.
-    description: |
+    summary: Determines the lighting system for rendering the 3D world. Non-scriptable.
+    description: |-
       Determines the lighting system for rendering the 3D world. This property
       is non‑scriptable and only modifiable in Studio.
     code_samples: []
     type: Technology
     tags: []
-    deprecation_message: |
-      This property has been superseded by
-      `Class.Lighting.LightingStyle|LightingStyle` which determines the artistic
-      intent behind lighting, and
-      `Class.Lighting.PrioritizeLightingQuality|PrioritizeLightingQuality` which
-      indicates whether you prefer lighting/shading quality or view distance to
-      scale down first.
+    deprecation_message: This property has been superseded by `Class.Lighting.LightingStyle|LightingStyle` which determines the artistic intent behind lighting, and `Class.Lighting.PrioritizeLightingQuality|PrioritizeLightingQuality` which indicates whether you prefer lighting/shading quality or view distance to scale down first.
     security:
       read: RobloxScriptSecurity
       write: RobloxScriptSecurity
@@ -596,12 +570,21 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.TimeOfDay
-    summary: |
+    summary: |-
       A 24-hour string representation of the current time of day used by
       `Lighting`.
-    description: |
+    description: |-
       A 24-hour string representation of the current time of day used by
-      `Lighting`. Note that this property does not correspond with the actual
+      `Lighting`. For example:
+
+      ```lua
+      local Lighting = game:GetService("Lighting")
+
+      Lighting.TimeOfDay = "11:00" -- Set time of day to 11:00 AM
+      Lighting.TimeOfDay = "21:30" -- Set time of day to 9:30 PM
+      ```
+
+      Note that this property does not correspond with the real-world
       time of day and will not change during gameplay unless it has been changed
       by a script.
 
@@ -626,10 +609,10 @@ properties:
       - Environment
 methods:
   - name: Lighting:GetMinutesAfterMidnight
-    summary: |
+    summary: |-
       Returns the number of minutes that have passed after midnight for the
       purposes of lighting.
-    description: |
+    description: |-
       Returns the number of minutes that have passed after midnight for the
       purposes of lighting. This number will be nearly identical to
       `Class.Lighting.ClockTime|ClockTime` multiplied by `60`.
@@ -641,8 +624,7 @@ methods:
     parameters: []
     returns:
       - type: double
-        summary: |
-          The number of minutes after midnight.
+        summary: The number of minutes after midnight.
     tags: []
     deprecation_message: ''
     security: None
@@ -659,7 +641,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This method is a deprecated variant of
       `Class.Lighting:GetMinutesAfterMidnight()` which should be used instead.
     security: None
@@ -667,9 +649,8 @@ methods:
     capabilities:
       - Environment
   - name: Lighting:GetMoonDirection
-    summary: |
-      Returns a `Datatype.Vector3` representing the direction of the moon.
-    description: |
+    summary: Returns a `Datatype.Vector3` representing the direction of the moon.
+    description: |-
       Returns a `Datatype.Vector3` representing the direction of the moon from
       the position <Typography noWrap>`(0, 0, 0)`</Typography>. Note that when
       the moon has "set" and is no longer visible, the `Datatype.Vector3`
@@ -682,8 +663,7 @@ methods:
     parameters: []
     returns:
       - type: Vector3
-        summary: |
-          `Datatype.Vector3` representing the direction of the moon.
+        summary: '`Datatype.Vector3` representing the direction of the moon.'
     tags: []
     deprecation_message: ''
     security: None
@@ -691,9 +671,8 @@ methods:
     capabilities:
       - Environment
   - name: Lighting:GetMoonPhase
-    summary: |
-      Returns the moon's current phase.
-    description: |
+    summary: Returns the moon's current phase.
+    description: |-
       Returns the moon's current phase. There is no way to change the moon's
       phase so this will always return `0.75`.
     code_samples: []
@@ -702,7 +681,7 @@ methods:
       - type: float
         summary: ''
     tags: []
-    deprecation_message: |
+    deprecation_message: |-
       There is currently no way to change the moon's phase, and thus this method
       should not be used.
     security: None
@@ -710,9 +689,8 @@ methods:
     capabilities:
       - Environment
   - name: Lighting:GetSunDirection
-    summary: |
-      Returns a `Datatype.Vector3` representing the direction of the sun.
-    description: |
+    summary: Returns a `Datatype.Vector3` representing the direction of the sun.
+    description: |-
       Returns a `Datatype.Vector3` representing the direction of the sun from
       the position <Typography noWrap>`(0, 0, 0)`</Typography>. Note that when
       the sun has "set" and is no longer visible, the `Datatype.Vector3`
@@ -725,8 +703,7 @@ methods:
     parameters: []
     returns:
       - type: Vector3
-        summary: |
-          `Datatype.Vector3` representing the direction of the sun.
+        summary: '`Datatype.Vector3` representing the direction of the sun.'
     tags: []
     deprecation_message: ''
     security: None
@@ -734,11 +711,11 @@ methods:
     capabilities:
       - Environment
   - name: Lighting:SetMinutesAfterMidnight
-    summary: |
+    summary: |-
       Sets `Class.Lighting.TimeOfDay|TimeOfDay` and
       `Class.Lighting.ClockTime|ClockTime` to the given number of minutes after
       midnight.
-    description: |
+    description: |-
       Sets `Class.Lighting.TimeOfDay|TimeOfDay` and
       `Class.Lighting.ClockTime|ClockTime` to the given number of minutes after
       midnight.
@@ -775,8 +752,7 @@ methods:
       - name: minutes
         type: double
         default:
-        summary: |
-          The number of minutes after midnight.
+        summary: The number of minutes after midnight.
     returns:
       - type: ()
         summary: ''
@@ -800,7 +776,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This method is a deprecated variant of
       `Class.Lighting:SetMinutesAfterMidnight()` which should be used instead.
     security: None
@@ -809,10 +785,10 @@ methods:
       - Environment
 events:
   - name: Lighting.LightingChanged
-    summary: |
+    summary: |-
       This event fires when a `Lighting` property is changed or a `Class.Sky` is
       added or removed from `Lighting`.
-    description: |
+    description: |-
       This event fires when a `Lighting` property is changed or a `Class.Sky` is
       added or removed from `Lighting`, with some exceptions:
 
