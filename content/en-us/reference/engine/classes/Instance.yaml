@@ -1494,7 +1494,7 @@ methods:
       - Instance-GetDescendants1
     parameters: []
     returns:
-      - type: Array
+      - type: Instances
         summary: |
           An array containing the instance's descendants.
     tags:

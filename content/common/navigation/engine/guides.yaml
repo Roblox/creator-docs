@@ -534,7 +534,7 @@ navigation:
   - title: Cloud services
     path: /cloud-services/data-stores-vs-memory-stores
     section:
-      - title: Data stores vs memory stores
+      - title: Choose between cloud services
         path: /cloud-services/data-stores-vs-memory-stores
       - title: Data stores
         path: /cloud-services/data-stores/

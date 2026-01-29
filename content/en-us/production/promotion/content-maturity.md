@@ -3,7 +3,7 @@ title: Content maturity and compliance
 description: Explains how to accurately disclose content in experiences to receive appropriate maturity labels and content descriptors.
 ---
 
-**Content maturity** provides information on the experience's main details page about what kinds of content the experience contains so that players can make informed decisions about what they interact with. Roblox uses this information to recommend experiences on the [Home](https://www.roblox.com/home) and [Charts](https://www.roblox.com/charts#/) pages according to each user's age group and regional content policies.
+**Content maturity** provides information on the experience's main details page about what kinds of content the experience contains so that players can make informed decisions about what they interact with. Roblox uses this information to recommend experiences on the [Home](https://www.roblox.com/home) and [Charts](https://www.roblox.com/charts#/) pages according to each user's age group and regional content policies. When applicable, this information is also used to generate country or locale-specific **experience labels**, which may include different age and maturity recommendations from Roblox's.
 
 <Alert severity = 'error'>
 **Additional rules apply to uploaded assets (such as images and meshes)**. Realistic or excessive depictions of violence, blood, crude humor, or romantic themes may be moderated regardless of your experience’s content maturity label. See the [Restricted Content Policy](https://en.help.roblox.com/hc/en-us/articles/15869919570708-Restricted-Content-Policy) for details.

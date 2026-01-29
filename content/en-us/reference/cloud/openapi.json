@@ -24327,7 +24327,14 @@
         "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/metadata#clientsettings_get_v1_client_version__binaryType_"
-        }
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://clientsettings.roblox.com/v2/client-version/{binaryType}",
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/metadata#clientsettings_get_v2_client_version__binaryType_"
+          }
+        ]
       }
     },
     "/v1/installer-cdns": {
@@ -24350,14 +24357,7 @@
         "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/metadata#clientsettings_get_v1_installer_cdns"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://clientsettings.roblox.com/v1/client-version/{binaryType}",
-            "httpMethod": "GET",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/metadata#clientsettings_get_v1_client_version__binaryType_"
-          }
-        ]
+        }
       }
     },
     "/v1/mobile-client-version": {
@@ -40249,526 +40249,6 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#games_get_v1_private_servers_enabled_in_universe__universeId_"
-        }
-      }
-    },
-    "/v1/private-servers/my-private-servers": {
-      "get": {
-        "tags": ["Private servers", "Universes"],
-        "summary": "Get private servers for the authenticated user",
-        "parameters": [
-          {
-            "in": "query",
-            "name": "privateServersTab",
-            "description": "Type of private server to fetch",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "enum": [0, 1],
-              "default": 0
-            }
-          },
-          {
-            "in": "query",
-            "name": "itemsPerPage",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 25
-            }
-          },
-          {
-            "in": "query",
-            "name": "cursor",
-            "description": "Current cursor",
-            "schema": {
-              "type": "string",
-              "default": ""
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.MyPrivateServersResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.MyPrivateServersResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "39: Invalid cursor provided in the request."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://games.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#games_get_v1_private_servers_my_private_servers"
-        }
-      }
-    },
-    "/v1/vip-server/can-invite/{userId}": {
-      "get": {
-        "tags": ["Private servers", "Users"],
-        "summary": "Determines if a user by id is allowed to receive a VIP Server invite from the authenticated user.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "userId",
-            "description": "The user id.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.VipServerCanInviteResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.VipServerCanInviteResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "404": {
-            "description": "19: The user is does not exist."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://games.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#games_get_v1_vip_server_can_invite__userId_"
-        }
-      }
-    },
-    "/v1/vip-servers/{id}": {
-      "get": {
-        "tags": ["Metadata", "Private servers", "Universes"],
-        "summary": "Get necessary data to generate webpage",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "id",
-            "description": "The VIP Server ID",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.VipServerResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.VipServerResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "8: The creator of this game has disabled private servers for this game."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "2: You are not the owner of this private server."
-          },
-          "404": {
-            "description": "1: The private server is invalid or does not exist.\r\n4: The universe does not exist."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://games.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/metadata#games_get_v1_vip_servers__id_"
-        }
-      },
-      "patch": {
-        "tags": ["Private servers", "Universes"],
-        "summary": "Updates vip server",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "id",
-            "description": "The VIP Server ID",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Games.Api.VipServerUpdateRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Games.Api.VipServerUpdateRequest"
-              }
-            }
-          },
-          "description": "The Roblox.Games.Api.VipServerUpdateRequest",
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.VipServerResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.VipServerResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "8: The creator of this game has disabled private servers for this game.\r\n10: The name of the private server is either empty or too long."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n2: You are not the owner of this private server.\r\n11: You cannot activate a cancelled private server.\r\n12: The game must not be Friends Only to allow private servers.\r\n13: Join Link can be generated only for active private servers."
-          },
-          "404": {
-            "description": "1: The private server is invalid or does not exist.\r\n4: The universe does not exist."
-          },
-          "429": {
-            "description": "3: Please wait a few minutes before configuring your private server again."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://games.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#games_patch_v1_vip_servers__id_"
-        }
-      }
-    },
-    "/v1/games/vip-servers/{universeId}": {
-      "post": {
-        "tags": ["Private servers", "Universes"],
-        "summary": "Create VIP server for a game",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "universeId",
-            "description": "The id of the universe.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Games.Api.CreateVipServersRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Games.Api.CreateVipServersRequest"
-              }
-            }
-          },
-          "description": "The request body.",
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.Responses.Games.GameServerResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.Responses.Games.GameServerResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "15: The price for purchasing this private server has changed. Please refresh the page and try again."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed"
-          },
-          "404": {
-            "description": "4: The universe does not exist."
-          },
-          "500": {
-            "description": "16: We are having a problem completing your purchase. Please try again in a few minutes."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://games.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#games_post_v1_games_vip_servers__universeId_"
-        }
-      }
-    },
-    "/v1/vip-servers/{id}/permissions": {
-      "patch": {
-        "tags": ["Groups", "Private servers", "Universes"],
-        "summary": "Update friend/clan access and allowed friends/clan list",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "id",
-            "description": "The VIP Server ID",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Games.Api.VipServerUpdatePermissionsRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Games.Api.VipServerUpdatePermissionsRequest"
-              }
-            }
-          },
-          "description": "The Roblox.Games.Api.VipServerUpdatePermissionsRequest",
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.VipServerPermissionsResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.VipServerPermissionsResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "6: You cannot add so many players to the private server's invite list.\r\n8: The creator of this game has disabled private servers for this game.\r\n12: The game must not be Friends Only to allow private servers.\r\n28: You may only add or remove valid players to your private server's invite list.\r\n29: You may only add or remove players when your private server is active."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n2: You are not the owner of this private server."
-          },
-          "404": {
-            "description": "1: The private server is invalid or does not exist.\r\n4: The universe does not exist."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://games.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#games_patch_v1_vip_servers__id__permissions"
-        }
-      }
-    },
-    "/v1/vip-servers/{id}/subscription": {
-      "patch": {
-        "tags": ["Private servers", "Universes"],
-        "summary": "Updates subscription status of a vip server",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "id",
-            "description": "The VIP Server ID",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Games.Api.VipServerUpdateSubscriptionRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Games.Api.VipServerUpdateSubscriptionRequest"
-              }
-            }
-          },
-          "description": "The Roblox.Games.Api.VipServerUpdateSubscriptionRequest",
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.VipServerSubscriptionResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.VipServerSubscriptionResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "8: The creator of this game has disabled private servers for this game.\r\n32: You do not have enough funds available to renew the subscription for this private server."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n2: You are not the owner of this private server.\r\n21: You may not configure a cancelled private server. Please renew your subscription before configuring."
-          },
-          "404": {
-            "description": "1: The private server is invalid or does not exist.\r\n4: The universe does not exist."
-          },
-          "429": {
-            "description": "3: Please wait a few minutes before configuring your private server again."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://games.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#games_patch_v1_vip_servers__id__subscription"
         }
       }
     },
@@ -65276,6 +64756,528 @@
           "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#Voting_VoteGame"
         }
       }
+    },
+    "/v1/vip-servers/{id}/permissions#PrivateServersApi": {
+      "patch": {
+        "tags": ["Groups", "Private servers", "Universes"],
+        "operationId": "PrivateServers_UpdatePrivateServerPermissions",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/PrivateServerUpdatePermissionsRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/PrivateServerUpdatePermissionsRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/PrivateServerUpdatePermissionsRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PrivateServerPermissionsResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#PrivateServers_UpdatePrivateServerPermissions"
+        }
+      }
+    },
+    "/v1/vip-servers/{id}/subscription#PrivateServersApi": {
+      "patch": {
+        "tags": ["Private servers", "Universes"],
+        "operationId": "PrivateServers_UpdatePrivateServerSubscription",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/PrivateServerUpdateSubscriptionRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/PrivateServerUpdateSubscriptionRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/PrivateServerUpdateSubscriptionRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PrivateServerSubscriptionResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#PrivateServers_UpdatePrivateServerSubscription"
+        }
+      }
+    },
+    "/v1/vip-servers/{id}#PrivateServersApi": {
+      "get": {
+        "tags": ["Metadata", "Private servers", "Universes"],
+        "operationId": "PrivateServers_GetPrivateServer",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PrivateServerResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/metadata#PrivateServers_GetPrivateServer"
+        }
+      },
+      "patch": {
+        "tags": ["Private servers", "Universes"],
+        "operationId": "PrivateServers_UpdatePrivateServer",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/PrivateServerUpdateRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/PrivateServerUpdateRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/PrivateServerUpdateRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PrivateServerResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#PrivateServers_UpdatePrivateServer"
+        }
+      }
+    },
+    "/v1/games/vip-servers/{universeId}#PrivateServersApi": {
+      "post": {
+        "tags": ["Private servers", "Universes"],
+        "operationId": "PrivateServers_CreatePrivateServer",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreatePrivateServerRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreatePrivateServerRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreatePrivateServerRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameServerResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#PrivateServers_CreatePrivateServer"
+        }
+      }
+    },
+    "/v1/vip-server/can-invite/{userId}#PrivateServersApi": {
+      "get": {
+        "tags": ["Private servers", "Users"],
+        "operationId": "PrivateServers_CanInviteUser",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CanInviteUserResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#PrivateServers_CanInviteUser"
+        }
+      }
+    },
+    "/v1/vip-servers/my-private-servers": {
+      "get": {
+        "tags": ["Private servers"],
+        "operationId": "PrivateServers_GetMyPrivateServers",
+        "parameters": [
+          {
+            "name": "privateServersTab",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/PrivateServersTab"
+                }
+              ],
+              "default": 0
+            }
+          },
+          {
+            "name": "itemsPerPage",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 25
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MyPrivateServersResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#PrivateServers_GetMyPrivateServers"
+        }
+      }
+    },
+    "/v1/private-servers/my-private-servers#PrivateServersApi": {
+      "get": {
+        "tags": ["Private servers", "Universes"],
+        "operationId": "PrivateServersApi.PrivateServers_GetMyPrivateServers",
+        "parameters": [
+          {
+            "name": "privateServersTab",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/PrivateServersTab"
+                }
+              ],
+              "default": 0
+            }
+          },
+          {
+            "name": "itemsPerPage",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 25
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MyPrivateServersResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#PrivateServersApi.PrivateServers_GetMyPrivateServers"
+        }
+      }
     }
   },
   "components": {
@@ -73243,6 +73245,13 @@
           "supportsHeadShapes": {
             "description": "Whether the item supports head shapes.",
             "type": "boolean"
+          },
+          "timedOptions": {
+            "description": "The timed options for the item.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Catalog.Api.TimedOption"
+            }
           }
         },
         "additionalProperties": false
@@ -77906,45 +77915,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Games.Api.CreateVipServersRequest": {
-        "description": "An create request for a vip server",
-        "type": "object",
-        "properties": {
-          "name": {
-            "description": "The name new vip server will be",
-            "type": "string"
-          },
-          "expectedPrice": {
-            "format": "int64",
-            "description": "the expected price of the vip server",
-            "type": "integer"
-          },
-          "isPurchaseConfirmed": {
-            "description": "Optional bool to confirm intention to purchase multiple private servers in quick succession.",
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Games.Api.GameResponse": {
-        "description": "Response model for a VIP server game.",
-        "type": "object",
-        "properties": {
-          "id": {
-            "format": "int64",
-            "description": "Game id",
-            "type": "integer"
-          },
-          "name": {
-            "description": "Game name",
-            "type": "string"
-          },
-          "rootPlace": {
-            "$ref": "#/components/schemas/Roblox.Games.Api.PlaceResponse"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Games.Api.GameServerPlayerResponse": {
         "description": "A response model representing a game server player.",
         "type": "object",
@@ -78403,85 +78373,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Games.Api.Models.Response.MyPrivateServersData": {
-        "description": "Data model for private server",
-        "type": "object",
-        "properties": {
-          "active": {
-            "description": "Active",
-            "type": "boolean"
-          },
-          "universeId": {
-            "format": "int64",
-            "description": "The universe id of the private server.",
-            "type": "integer"
-          },
-          "placeId": {
-            "format": "int64",
-            "description": "The place id of the private server.",
-            "type": "integer"
-          },
-          "name": {
-            "description": "The name of the private server.",
-            "type": "string"
-          },
-          "ownerId": {
-            "format": "int64",
-            "description": "The id of the owner of the private server",
-            "type": "integer"
-          },
-          "ownerName": {
-            "description": "The name of the owner of the private server",
-            "type": "string"
-          },
-          "priceInRobux": {
-            "format": "int64",
-            "description": "The price of the private server product in robux",
-            "type": "integer"
-          },
-          "privateServerId": {
-            "format": "int64",
-            "description": "Private Server Id.",
-            "type": "integer"
-          },
-          "expirationDate": {
-            "format": "date-time",
-            "description": "Expiration date",
-            "type": "string"
-          },
-          "willRenew": {
-            "description": "Boolean. If true, the date is the renewal date, otherwise it’s the expiration date.",
-            "type": "boolean"
-          },
-          "universeName": {
-            "description": "universe name",
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Games.Api.Models.Response.MyPrivateServersResponse": {
-        "description": "Response model for getting private servers",
-        "type": "object",
-        "properties": {
-          "nextPageCursor": {
-            "description": "The cursor to use for the next page of data.",
-            "type": "string"
-          },
-          "previousPageCursor": {
-            "description": "The cursor to use for the previous page of data.",
-            "type": "string"
-          },
-          "data": {
-            "description": "The data of the response.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.MyPrivateServersData"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Games.Api.Models.Response.PlaceDetails": {
         "description": "Response model for a place.",
         "type": "object",
@@ -78669,233 +78560,6 @@
           },
           "displayName": {
             "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Games.Api.PlaceResponse": {
-        "description": "Response model for a VIP server place",
-        "type": "object",
-        "properties": {
-          "id": {
-            "format": "int64",
-            "description": "Place id",
-            "type": "integer"
-          },
-          "name": {
-            "description": "Place name",
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Games.Api.VipServerCanInviteResponse": {
-        "description": "Response model for VIP server can-invite user.",
-        "type": "object",
-        "properties": {
-          "canInvite": {
-            "description": "Sufficient permissions to invite user",
-            "type": "boolean"
-          },
-          "doesOwnerPrivacyRestrictJoins": {
-            "description": "Does owner privacy restrict joins",
-            "type": "boolean"
-          },
-          "inviteResponseType": {
-            "format": "int32",
-            "description": "Invite response type ['Invalid' = 0, 'CanInvite' = 1, 'UnableToAddAnyUser' = 2, 'UnableToAddNonFriends' = 3, 'UnableToAddSpecificUser' = 4]",
-            "enum": [0, 1, 2, 3, 4],
-            "type": "integer"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Games.Api.VipServerPermissionsResponse": {
-        "description": "Response model for VIP server permissions.",
-        "type": "object",
-        "properties": {
-          "clanAllowed": {
-            "description": "Clan access",
-            "type": "boolean"
-          },
-          "enemyClanId": {
-            "format": "int64",
-            "description": "EnemyClanId",
-            "type": "integer"
-          },
-          "friendsAllowed": {
-            "description": "Friend access",
-            "type": "boolean"
-          },
-          "users": {
-            "description": "Users",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.Web.Responses.Users.SkinnyUserResponse"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Games.Api.VipServerResponse": {
-        "description": "Response model for a VIP server.",
-        "type": "object",
-        "properties": {
-          "id": {
-            "format": "int64",
-            "description": "Server Id",
-            "type": "integer"
-          },
-          "name": {
-            "description": "Server name",
-            "type": "string"
-          },
-          "game": {
-            "$ref": "#/components/schemas/Roblox.Games.Api.GameResponse"
-          },
-          "joinCode": {
-            "description": "Server join code",
-            "type": "string"
-          },
-          "active": {
-            "description": "Server status",
-            "type": "boolean"
-          },
-          "subscription": {
-            "$ref": "#/components/schemas/Roblox.Games.Api.VipServerSubscriptionResponse"
-          },
-          "permissions": {
-            "$ref": "#/components/schemas/Roblox.Games.Api.VipServerPermissionsResponse"
-          },
-          "voiceSettings": {
-            "$ref": "#/components/schemas/Roblox.Games.Api.VipServerVoiceSettingsResponse"
-          },
-          "link": {
-            "description": "Private server link",
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Games.Api.VipServerSubscriptionResponse": {
-        "description": "Response model for VIP server subscription.",
-        "type": "object",
-        "properties": {
-          "active": {
-            "description": "Active",
-            "type": "boolean"
-          },
-          "expired": {
-            "description": "Expired",
-            "type": "boolean"
-          },
-          "expirationDate": {
-            "format": "date-time",
-            "description": "Expiration date",
-            "type": "string"
-          },
-          "price": {
-            "format": "int64",
-            "description": "Price",
-            "type": "integer"
-          },
-          "canRenew": {
-            "description": "Can renew a subscription",
-            "type": "boolean"
-          },
-          "hasInsufficientFunds": {
-            "description": "Subscription cancelled due to insufficient funds",
-            "type": "boolean"
-          },
-          "hasRecurringProfile": {
-            "description": "Subscription has a recurring profile",
-            "type": "boolean"
-          },
-          "hasPriceChanged": {
-            "description": "Subscriptions price has changed",
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Games.Api.VipServerUpdatePermissionsRequest": {
-        "description": "Request model for updating permissions for a VIP server.",
-        "type": "object",
-        "properties": {
-          "clanAllowed": {
-            "description": "Clan access",
-            "type": "boolean"
-          },
-          "enemyClanId": {
-            "format": "int32",
-            "description": "EnemyClanId",
-            "type": "integer"
-          },
-          "friendsAllowed": {
-            "description": "Friend access",
-            "type": "boolean"
-          },
-          "usersToAdd": {
-            "description": "Users to add",
-            "type": "array",
-            "items": {
-              "format": "int64",
-              "type": "integer"
-            }
-          },
-          "usersToRemove": {
-            "description": "Users to remove",
-            "type": "array",
-            "items": {
-              "format": "int64",
-              "type": "integer"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Games.Api.VipServerUpdateRequest": {
-        "description": "Request model to update a VIP server.",
-        "type": "object",
-        "properties": {
-          "name": {
-            "description": "Server name",
-            "type": "string"
-          },
-          "newJoinCode": {
-            "description": "Server join code",
-            "type": "boolean"
-          },
-          "active": {
-            "description": "Server status",
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Games.Api.VipServerUpdateSubscriptionRequest": {
-        "description": "Request model to update subscriptions for a VIP server.",
-        "type": "object",
-        "properties": {
-          "active": {
-            "description": "Active",
-            "type": "boolean"
-          },
-          "price": {
-            "format": "int64",
-            "description": "Price",
-            "type": "integer"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Games.Api.VipServerVoiceSettingsResponse": {
-        "description": "Contains voice settings of a vip server",
-        "type": "object",
-        "properties": {
-          "enabled": {
-            "description": "Whether the voice chat is enabled",
-            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -89045,6 +88709,475 @@
           }
         },
         "additionalProperties": false
+      },
+      "CanInviteUserResponse": {
+        "type": "object",
+        "properties": {
+          "canInvite": {
+            "type": "boolean"
+          },
+          "doesOwnerPrivacyRestrictJoins": {
+            "type": "boolean"
+          },
+          "inviteResponseType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PrivateServerInviteResponseType"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreatePrivateServerRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "expectedPrice": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isPurchaseConfirmed": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GameResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "rootPlace": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PlaceResponse"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GameServerResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "maxPlayers": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "playing": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "playerTokens": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "players": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PrivateServerPlayerResponse"
+            },
+            "nullable": true
+          },
+          "fps": {
+            "type": "number",
+            "format": "double"
+          },
+          "ping": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "vipServerId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "accessCode": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "owner": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/VerifiedBadgeUserResponse"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MyPrivateServersData": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "universeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "placeId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "ownerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ownerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "priceInRobux": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "privateServerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "expirationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "willRenew": {
+            "type": "boolean"
+          },
+          "universeName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MyPrivateServersResponse": {
+        "type": "object",
+        "properties": {
+          "nextPageCursor": {
+            "type": "string",
+            "nullable": true
+          },
+          "previousPageCursor": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MyPrivateServersData"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PlaceResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrivateServerInviteResponseType": {
+        "enum": [0, 1, 2, 3, 4],
+        "type": "integer",
+        "format": "int32"
+      },
+      "PrivateServerPermissionsResponse": {
+        "type": "object",
+        "properties": {
+          "clanAllowed": {
+            "type": "boolean"
+          },
+          "enemyClanId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "friendsAllowed": {
+            "type": "boolean"
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SkinnyUserResponse"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrivateServerPlayerResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "displayName": {
+            "type": "string",
+            "nullable": true
+          },
+          "playerToken": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrivateServerResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "game": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GameResponse"
+              }
+            ],
+            "nullable": true
+          },
+          "joinCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "subscription": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PrivateServerSubscriptionResponse"
+              }
+            ],
+            "nullable": true
+          },
+          "permissions": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PrivateServerPermissionsResponse"
+              }
+            ],
+            "nullable": true
+          },
+          "voiceSettings": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PrivateServerVoiceSettingsResponse"
+              }
+            ],
+            "nullable": true
+          },
+          "link": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrivateServerSubscriptionResponse": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "expired": {
+            "type": "boolean"
+          },
+          "expirationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "price": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "canRenew": {
+            "type": "boolean"
+          },
+          "hasInsufficientFunds": {
+            "type": "boolean"
+          },
+          "hasRecurringProfile": {
+            "type": "boolean"
+          },
+          "hasPriceChanged": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrivateServerUpdatePermissionsRequest": {
+        "type": "object",
+        "properties": {
+          "clanAllowed": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "enemyClanId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "friendsAllowed": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "usersToAdd": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "nullable": true
+          },
+          "usersToRemove": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrivateServerUpdateRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "newJoinCode": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "active": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrivateServerUpdateSubscriptionRequest": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "price": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrivateServerVoiceSettingsResponse": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrivateServersTab": {
+        "enum": [0, 1],
+        "type": "integer",
+        "format": "int32"
+      },
+      "SkinnyUserResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "displayName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VerifiedBadgeUserResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "displayName": {
+            "type": "string",
+            "nullable": true
+          },
+          "hasVerifiedBadge": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
       }
     },
     "requestBodies": {
@@ -90072,7 +90205,7 @@
           "thumbnails_get_v1_groups_icons",
           "develop_get_v1_groups__groupId__universes",
           "develop_get_v1_user_groups_canmanagegamesoritems",
-          "games_patch_v1_vip_servers__id__permissions",
+          "PrivateServers_UpdatePrivateServerPermissions",
           "games_get_v2_groups__groupId__games",
           "games_get_v2_groups__groupId__gamesV2"
         ]
@@ -90395,7 +90528,7 @@
           "gameinternationalization_get_v1_supported_languages_metadata",
           "gameinternationalization_get_v1_translation_analytics_metadata",
           "gameinternationalization_get_v1_ui_configurations",
-          "games_get_v1_vip_servers__id_",
+          "PrivateServers_GetPrivateServer",
           "groups_get_v1_groups_configuration_metadata",
           "groups_get_v1_groups_metadata",
           "groups_get_v1_groups_search_metadata",
@@ -90484,14 +90617,15 @@
         "ordering": [
           "develop_get_v1_universes__universeId__configuration_vip_servers",
           "games_get_v1_games__placeId__private_servers",
-          "games_post_v1_games_vip_servers__universeId_",
+          "PrivateServers_CreatePrivateServer",
           "games_get_v1_private_servers_enabled_in_universe__universeId_",
-          "games_get_v1_private_servers_my_private_servers",
-          "games_get_v1_vip_server_can_invite__userId_",
-          "games_get_v1_vip_servers__id_",
-          "games_patch_v1_vip_servers__id_",
-          "games_patch_v1_vip_servers__id__permissions",
-          "games_patch_v1_vip_servers__id__subscription"
+          "PrivateServersApi.PrivateServers_GetMyPrivateServers",
+          "PrivateServers_CanInviteUser",
+          "PrivateServers_GetPrivateServer",
+          "PrivateServers_UpdatePrivateServer",
+          "PrivateServers_UpdatePrivateServerPermissions",
+          "PrivateServers_UpdatePrivateServerSubscription",
+          "PrivateServers_GetMyPrivateServers"
         ]
       }
     },
@@ -90814,14 +90948,14 @@
           "games_get_v1_games_multiget_place_details",
           "games_get_v1_games_multiget_playability_status",
           "games_get_v1_games_recommendations_game__universeId_",
-          "games_post_v1_games_vip_servers__universeId_",
+          "PrivateServers_CreatePrivateServer",
           "games_get_v1_games_votes",
           "games_get_v1_private_servers_enabled_in_universe__universeId_",
-          "games_get_v1_private_servers_my_private_servers",
-          "games_get_v1_vip_servers__id_",
-          "games_patch_v1_vip_servers__id_",
-          "games_patch_v1_vip_servers__id__permissions",
-          "games_patch_v1_vip_servers__id__subscription",
+          "PrivateServersApi.PrivateServers_GetMyPrivateServers",
+          "PrivateServers_GetPrivateServer",
+          "PrivateServers_UpdatePrivateServer",
+          "PrivateServers_UpdatePrivateServerPermissions",
+          "PrivateServers_UpdatePrivateServerSubscription",
           "games_get_v2_games__universeId__media",
           "games_get_v2_groups__groupId__games",
           "games_get_v2_groups__groupId__gamesV2",
@@ -90970,7 +91104,7 @@
           "groups_get_v1_groups__groupId__users__userId__permissions",
           "groups_patch_v1_groups__groupId__users__userId_",
           "develop_get_v1_user_groups_canmanagegamesoritems",
-          "games_get_v1_vip_server_can_invite__userId_",
+          "PrivateServers_CanInviteUser",
           "games_get_v2_users__userId__games",
           "games_get_v2_users__userId__favorite_games",
           "Cloud_ListUserRestrictions",
