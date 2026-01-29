@@ -117,7 +117,27 @@ The following table compares the classic decals with the dynamic head.
   <tr>
     <td colspan="2"><img src="../../assets/art/avatar/classic-head/Classic-41.png" /></td>
     <td></td>
-    <td colspan="2"></td>
+    <td colspan="2"><img src="../../assets/art/avatar/classic-head/Classic-42.png" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="../../assets/art/avatar/classic-head/Classic-43.png" /></td>
+    <td></td>
+    <td colspan="2"><img src="../../assets/art/avatar/classic-head/Classic-44.png" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="../../assets/art/avatar/classic-head/Classic-45.png" /></td>
+    <td></td>
+    <td colspan="2"><img src="../../assets/art/avatar/classic-head/Classic-46.png" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="../../assets/art/avatar/classic-head/Classic-47.png" /></td>
+    <td></td>
+    <td colspan="2"><img src="../../assets/art/avatar/classic-head/Classic-48.png" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="../../assets/art/avatar/classic-head/Classic-49.png" /></td>
+    <td></td>
+    <td colspan="2"><img src="../../assets/art/avatar/classic-head/Classic-50.png" /></td>
   </tr>
 
 </tbody></table>
