@@ -29,7 +29,7 @@ The following table compares the classic decals with the dynamic head equivalent
   <tr><td>**Crimson Starface**</td><td colspan="2"><img src="../../assets/art/avatar/classic-head/Crimson_Starface.png" /></td></tr>
   <tr><td>**Daring Beard**</td><td colspan="2"><img src="../../assets/art/avatar/classic-head/Daring_Beard.png" /></td></tr>
   <tr><td>**Devil Nas X - Lil Nas X LNX**</td><td colspan="2"><img src="../../assets/art/avatar/classic-head/Devil_Nas_X_-_Lil_Nas_X_LNX.png" /></td></tr>
-  <tr><td>**\$.\$**</td><td colspan="2"><img src="../../assets/art/avatar/classic-head/dollar-dot-dollar.png" /></td></tr>
+  <tr><td>**$.$**</td><td colspan="2"><img src="../../assets/art/avatar/classic-head/dollar-dot-dollar.png" /></td></tr>
   <tr><td>**Drooling Noob**</td><td colspan="2"><img src="../../assets/art/avatar/classic-head/Drooling_Noob.png" /></td></tr>
   <tr><td>**Emerald Archfey Visage**</td><td colspan="2"><img src="../../assets/art/avatar/classic-head/Emerald_Archfey_Visage.png" /></td></tr>
   <tr><td>**Emerald Laser Vision**</td><td colspan="2"><img src="../../assets/art/avatar/classic-head/Emerald_Laser_Vision.png" /></td></tr>
