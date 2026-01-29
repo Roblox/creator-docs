@@ -161,6 +161,31 @@ properties:
       can_save: true
     capabilities:
       - Input
+  - name: InputAction.ViewportPositionState
+    summary: |
+      Non-scriptable read-only property useful for debugging
+      `Enum.InputActionType|ViewportPosition` input actions.
+    description: |
+      A non-scriptable read-only property only visible in Studio, primarily
+      useful for debugging while testing an `InputAction` with
+      `Class.InputAction.Type|Type` of `Enum.InputActionType|ViewportPosition`.
+    code_samples: []
+    type: Vector2
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - Input
 methods:
   - name: InputAction:Fire
     summary: |

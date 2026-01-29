@@ -767,7 +767,7 @@ methods:
       Unlike `Class.InsertService:LoadAsset()`, this method can load public
       assets created by **third parties** (assets not owned by the experience
       creator). To enable this functionality, you must first enable the **Allow
-      Loading Third Party Assets** setting in **Home > Game Settings >
+      Loading Third Party Assets** setting in **File > Experience Settings >
       Security**.
 
       If this setting is disabled (which it is by default), `LoadAssetAsync`

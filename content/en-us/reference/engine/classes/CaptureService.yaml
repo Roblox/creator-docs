@@ -207,8 +207,9 @@ methods:
       `captureTypeFilters` parameter. If this parameter isn't provided, the
       function returns all captures.
 
-      Currently, this method will only return captures taken in the experience
-      where it is called. Additionally, captures taken with
+      If `readFromAllEligibleExperiences` is `true`, captures from all eligible
+      experiences will be read. If `false`, only those from the current
+      experience will be read. Additionally, captures taken with
       `Class.CaptureService:CaptureScreenshot()|CaptureScreenshot()` and
       subsequently saved with
       `Class.CaptureService:PromptSaveCapturesToGallery()|PromptSaveCapturesToGallery()`
@@ -221,6 +222,11 @@ methods:
         default: '{}'
         summary: |
           An array of `Enum.CaptureType`.
+      - name: readFromAllEligibleExperiences
+        type: boolean
+        default:
+        summary: |
+          A boolean; default is `false`.
     returns:
       - type: Tuple
         summary: |

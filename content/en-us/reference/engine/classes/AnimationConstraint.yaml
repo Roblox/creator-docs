@@ -15,8 +15,7 @@ code_samples: []
 inherits:
   - Constraint
 descendants: []
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
 properties:
   - name: AnimationConstraint.C0
