@@ -1,17 +1,13 @@
 ---
 title: Face caging best practices
-description: Tips on optimizing facial cages for use with makeup assets.
+description: Tips on optimizing face cages for your avatars.
 ---
 
-<Alert severity ='warning'>
-This feature is currently in beta. Enable it through **File** ⟩ **Beta Features** ⟩ **Avatar Makeup**. The information provided is subject to change and is intended to prepare creators for the final release. For the latest news and updates, see the [DevForum announcement](https://devforum.roblox.com/t/studio-beta-introducing-avatar-makeup/3973764).
-</Alert>
-
 <Alert severity = 'info'>
-The following information applies to character creators who want to optimize their character faces to work effectively with makeup and improve the quality and accuracy of the makeup transfer.
+The following information applies to character creators who are looking to improve or resolve errors with their character head cages. This improves compatibility with Marketplace items, such as accessories and makeup.
 </Alert>
 
-Makeup utilizes a characters facial cage to accurately transfer the texture onto the surface of the 3D model. It's important to pay extra attention to your character's head cages to ensure that makeup, eyebrows, eyelashes, and other face-related cosmetics apply correctly. Properly constructed cages also improve other head components, such as accurate fitting with head accessories and animations.
+A character's head cage helps define the surface of the 3D model. The cage also plays an important role in Marketplace [head validation](../art/characters/head-specifications.md#facial-landmarks), so it's important properly construct cages to ensure accurate fitting with head accessories and animations.
 
 The following information and examples are best practices that are applicable to face caging as well as other caging processes. For additional best practices for caging, see [clothing caging best practices](../art/accessories/caging-best-practices.md).
 

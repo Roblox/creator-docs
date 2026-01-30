@@ -1,9 +1,15 @@
 ---
-title: Use heads in Studio
+title: Test heads in Studio
 description: If you have a model with a live head, you can import the model into Studio, equip face accessories, and create and save animations.
 ---
 
-You can import character models with animatable heads into Studio and use the automatically generated `Class.FaceControls` instance to pose or animate the face.
+<Alert severity = 'info'>
+If you are looking to quickly test a character's head animation, use the [Avatar Setup tool](../../../avatar-setup/index.md) to load your character and use the presets to preview various facial animations and head accessories.
+</Alert>
+
+Manually test your head creations by importing character models with animatable heads into Studio and use the generated `Class.FaceControls` instance to pose or animate the face.
+
+When importing a head that supports facial animation into Studio, Studio creates a `Class.FaceControls` instance you can use to access and combine these individual poses to create expressions and animations. Unlike typical rigged models, you cannot access the facial `Class.Bone|Bones` of a head mesh directly in Studio.
 
 To set up heads with facial animation in your experience:
 

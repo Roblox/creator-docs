@@ -308,6 +308,8 @@ navigation:
         path: /characters/adaptive-animation
       - title: Emotes
         path: /characters/emotes
+      - title: Moods
+        path: /art/characters/facial-animation/moods
       - title: Pathfinding
         path: /characters/pathfinding
       - title: Name and health display
