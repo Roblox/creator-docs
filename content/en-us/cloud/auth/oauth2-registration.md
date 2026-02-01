@@ -57,6 +57,10 @@ To ensure proper access control and security within your app, you must add
   permission of assets. Select only the minimum number of scopes that you need
   for your app.
 
+<Alert severity="info">
+  Each App is expected to request the minimal number of Scopes needed for its function. The set of Scopes for an App must fall under a single App category listed on our [Creator Third Party App Policy page](https://en.help.roblox.com/hc/en-us/articles/37924211313044-Creator-Third-Party-App-Policy)
+</Alert>
+
 ## Add redirect URLs
 
 **Redirect URLs** are the reentry points of your app that users are redirected
