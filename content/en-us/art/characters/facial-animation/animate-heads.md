@@ -3,6 +3,10 @@ title: Animate heads
 description: You can create facial animations for a character with live heads using the Animation Editor.
 ---
 
+<Alert severity = 'info'>
+If you are looking to quickly test a character's head animation, use the [Avatar Setup tool](../../../avatar-setup/index.md) to load your character and use the presets to preview various facial animations and head accessories.
+</Alert>
+
 You can use the [Animation Editor](../../../animation/editor.md) to animate supported heads in the following ways:
 
 - You can manually set values to each facial pose on separate [animation tracks](#use-animation-tracks).

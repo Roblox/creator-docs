@@ -36,7 +36,7 @@ Similar to other avatar body parts, an outer cage is required for the head. [Hig
 
 ### Caging quality
 
-For details on improving the quality of your head cage, see [Face cage optimizations](../../makeup/face-caging-best-practices.md).
+For details on improving the quality of your head cage, see [Face cage optimizations](../characters/face-caging-best-practices.md).
 
 ### Facial landmarks
 
