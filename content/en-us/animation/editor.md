@@ -203,7 +203,7 @@ To create a pose:
    <img src="../assets/animation/animation-editor/Scrubber-0-15.png" width="60%" />
 
 3. In the **viewport**, hover your mouse over **rig** and select a bone or mesh. You can also select the ⊕ icon on the timeline and click **Add All** to add all bones or meshes to the animation.
-   <img controls src="../assets/modeling/skinned-meshes/Animation-Editor-Add-Tracks.png" width="60%" />
+   <img src="../assets/modeling/skinned-meshes/Animation-Editor-Add-Tracks.png" width="60%" />
 
 4. Move or rotate the bone or mesh to a new orientation. For bones, you can rotate them to pose the rig along the created bone joints.
 
