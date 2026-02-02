@@ -12,7 +12,7 @@ The following table compares the classic decals with the dynamic head equivalent
     <th style="text-align: center;"><b><center>Dynamic</center></b></th>
   </tr></thead>
 <tbody>
-  <tr><td>**3**</td><td colspan="2"><img src="../../assets/art/avatar/classic-head/3.png" /></td></tr>
+  <tr><td>**:3**</td><td colspan="2"><img src="../../assets/art/avatar/classic-head/3.png" /></td></tr>
   <tr><td>**Angelic**</td><td colspan="2"><img src="../../assets/art/avatar/classic-head/Angelic.png" /></td></tr>
   <tr><td>**Bacon Face**</td><td colspan="2"><img src="../../assets/art/avatar/classic-head/Bacon_Face.png" /></td></tr>
   <tr><td>**Bandage**</td><td colspan="2"><img src="../../assets/art/avatar/classic-head/Bandage.png" /></td></tr>

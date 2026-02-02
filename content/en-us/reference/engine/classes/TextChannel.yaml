@@ -129,7 +129,8 @@ methods:
     description: |
       Sends a `Class.TextChatMessage` to the server. Can only be used in a
       `Class.LocalScript`, or in a `Class.Script` with
-      `Class.Script.RunContext|RunContext` of `Enum.RunContext.Client`.
+      `Class.Script.RunContext|RunContext` of `Enum.RunContext.Client`. Please
+      note that only messages typed and sent by the user will be delivered.
 
       The `metadata` argument has a limit of 200 characters. If this is called
       with a `metadata` argument that has more than 200 characters, the message

@@ -4,8 +4,9 @@
 
 name: table
 type: library
-summary: A library of table functions.
-description: |-
+summary: |
+  A library of table functions.
+description: |
   This library provides generic functions for table/array manipulation,
   providing all its functions inside the global `Library.table` variable. Most
   functions in the `Library.table` library assume that the table represents an
@@ -16,8 +17,9 @@ code_samples: []
 properties: []
 functions:
   - name: table.clear
-    summary: Sets all keys in the given table to `nil`.
-    description: |-
+    summary: |
+      Sets all keys in the given table to `nil`.
+    description: |
       Sets the value for all keys within the given table to `nil`. This causes
       the `#` operator to return `0` for the given table. The allocated capacity
       of the table's array portion is maintained, which allows for efficient
@@ -40,7 +42,8 @@ functions:
       - name: table
         type: table
         default:
-        summary: The table whose keys will be cleared.
+        summary: |
+          The table whose keys will be cleared.
     returns:
       - type: ()
         summary: ''
@@ -48,8 +51,9 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: table.clone
-    summary: Returns a shallow copy of the provided table.
-    description: |-
+    summary: |
+      Returns a shallow copy of the provided table.
+    description: |
       Returns an unfrozen shallow copy of the provided table.
 
       ```lua
@@ -65,18 +69,20 @@ functions:
       - name: t
         type: table
         default:
-        summary: The table to be cloned.
+        summary: |
+          The table to be cloned.
     returns:
       - type: table
-        summary: The clone of the provided table.
+        summary: |
+          The clone of the provided table.
     tags: []
     code_samples: []
     deprecation_message: ''
   - name: table.concat
-    summary: |-
+    summary: |
       Returns the given range of table elements as a string where each element
       is separated by the given separator.
-    description: |-
+    description: |
       Given an array where all elements are strings or numbers, returns the
       string `t[i] ... sep ... t[i+1] ... sep ... t[j]`. The default value for
       sep is an empty string, the default for `i` is 1, and the default for `j`
@@ -85,19 +91,23 @@ functions:
       - name: t
         type: Array
         default:
-        summary: The table that will be converted into a string.
+        summary: |
+          The table that will be converted into a string.
       - name: sep
         type: string
         default: ''
-        summary: The string that will be concatenated between each entry in the table.
+        summary: |
+          The string that will be concatenated between each entry in the table.
       - name: i
         type: int
         default: 1
-        summary: The starting index of the table concatenation.
+        summary: |
+          The starting index of the table concatenation.
       - name: j
         type: int
         default:
-        summary: The ending index of the table concatenation.
+        summary: |
+          The ending index of the table concatenation.
     returns:
       - type: string
         summary: ''
@@ -105,8 +115,9 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: table.create
-    summary: Returns a new table populated with many instances of the specified value.
-    description: |-
+    summary: |
+      Returns a new table populated with many instances of the specified value.
+    description: |
       Creates a table with the array portion allocated to the given `number` of
       elements, optionally filled with the given `value`.
 
@@ -136,10 +147,10 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: table.find
-    summary: |-
+    summary: |
       Returns the index of the first occurrence of `needle` within `haystack`
       starting from `init`.
-    description: |-
+    description: |
       Within the given array-like table `haystack`, find the first occurrence of
       value `needle`, starting from index `init` or the beginning if not
       provided. If the value is not found, `nil` is returned.
@@ -173,10 +184,10 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: table.foreach
-    summary: |-
+    summary: |
       Iterates over the provided table, passing the key and value of each
       iteration over to the provided function.
-    description: |-
+    description: |
       Iterates over the provided table, passing the key and value of each
       iteration over to the provided function. This function has been deprecated
       and is not recommended for use in new code; use a `for` loop instead.
@@ -184,11 +195,12 @@ functions:
       - name: t
         type: table
         default:
-        summary: The table to be iterated over.
+        summary: |
+          The table to be iterated over.
       - name: f
         type: function
         default:
-        summary: |-
+        summary: |
           The function that will be used for the iteration. This function will
           receive 2 arguments for each iteration, where the 1st argument is the
           key, and the 2nd argument is the value.
@@ -200,10 +212,10 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: table.foreachi
-    summary: |-
+    summary: |
       Similar to `Library.table.foreach()` except index-value pairs are passed
       instead of key-value pairs.
-    description: |-
+    description: |
       This is similar to `Library.table.foreach()` except that index-value pairs
       are passed, not key-value pairs. This function has been deprecated and is
       not recommended for use in new code; use a `for` loop instead.
@@ -211,11 +223,12 @@ functions:
       - name: t
         type: Array
         default:
-        summary: The table to be iterated over.
+        summary: |
+          The table to be iterated over.
       - name: f
         type: function
         default:
-        summary: |-
+        summary: |
           The function that will be used for the iteration. This function will
           receive 2 arguments for each iteration, where the 1st argument is the
           index, and the 2nd argument is the value.
@@ -227,8 +240,9 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: table.freeze
-    summary: Makes the given table read-only.
-    description: |-
+    summary: |
+      Makes the given table read-only.
+    description: |
       This function makes the given table read-only, effectively "freezing" it
       in its current state. Attempting to modify a frozen table throws an error.
 
@@ -239,23 +253,27 @@ functions:
       - name: t
         type: table
         default:
-        summary: The table to be frozen.
+        summary: |
+          The table to be frozen.
     returns:
       - type: table
-        summary: The frozen table.
+        summary: |
+          The frozen table.
     tags: []
     code_samples: []
     deprecation_message: ''
   - name: table.getn
-    summary: Returns the number of elements in the table passed.
-    description: |-
+    summary: |
+      Returns the number of elements in the table passed.
+    description: |
       Returns the number of elements in the table passed. This function has been
       deprecated and is not recommended for use in new code; use `#t` instead.
     parameters:
       - name: t
         type: Array
         default:
-        summary: The table whose size is being measured.
+        summary: |
+          The table whose size is being measured.
     returns:
       - type: number
         summary: ''
@@ -264,21 +282,26 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: table.insert
-    summary: Inserts the provided value to the target position of the array.
-    description: Inserts the provided value to the target position of the array.
+    summary: |
+      Inserts the provided value to the target position of the array.
+    description: |
+      Inserts the provided value to the target position of the array.
     parameters:
       - name: t
         type: Array
         default:
-        summary: The table that is being appended to.
+        summary: |
+          The table that is being appended to.
       - name: pos
         type: number
         default:
-        summary: The position at which the value will be inserted.
+        summary: |
+          The position at which the value will be inserted.
       - name: value
         type: Variant
         default:
-        summary: The value that will be appended to the table.
+        summary: |
+          The value that will be appended to the table.
     returns:
       - type: ()
         summary: ''
@@ -286,17 +309,21 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: table.insert
-    summary: Appends the provided value to the end of the array.
-    description: Appends the provided value to the end of the array.
+    summary: |
+      Appends the provided value to the end of the array.
+    description: |
+      Appends the provided value to the end of the array.
     parameters:
       - name: t
         type: Array
         default:
-        summary: The table that is being appended to.
+        summary: |
+          The table that is being appended to.
       - name: value
         type: Variant
         default:
-        summary: The value that will be appended to the table.
+        summary: |
+          The value that will be appended to the table.
     returns:
       - type: ()
         summary: ''
@@ -304,28 +331,30 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: table.isfrozen
-    summary: |-
+    summary: |
       Returns `true` if the given table is frozen and `false` if it isn't
       frozen.
-    description: |-
+    description: |
       This function returns `true` if the given table is frozen and `false` if
       it isn't frozen. You can freeze tables using `Library.table.freeze()`.
     parameters:
       - name: t
         type: table
         default:
-        summary: The table to check.
+        summary: |
+          The table to check.
     returns:
       - type: bool
-        summary: Whether the table is frozen from `Library.table.freeze()`.
+        summary: |
+          Whether the table is frozen from `Library.table.freeze()`.
     tags: []
     code_samples: []
     deprecation_message: ''
   - name: table.maxn
-    summary: |-
+    summary: |
       Returns the maximum numeric key of the provided table, or zero if the
       table has no numeric keys.
-    description: |-
+    description: |
       Returns the maximum numeric key of the provided table, or zero if the
       table has no numeric keys. Gaps in the table are ignored.
     parameters:
@@ -340,8 +369,9 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: table.move
-    summary: Copies the specified range of elements from one table to another.
-    description: |-
+    summary: |
+      Copies the specified range of elements from one table to another.
+    description: |
       Copies elements in table `src` from `src[a]` up to `src[b]` into table
       `dst` starting at index `t`. Equivalent to the assignment statement
       `dst[t], ..., dst[t + (b - a)] = src[a], ..., src[b]`.
@@ -354,32 +384,39 @@ functions:
       - name: src
         type: table
         default:
-        summary: Source table.
+        summary: |
+          Source table.
       - name: a
         type: number
         default:
-        summary: Start copying at `src[a]`.
+        summary: |
+          Start copying at `src[a]`.
       - name: b
         type: number
         default:
-        summary: Copy up to and including `src[b]`.
+        summary: |
+          Copy up to and including `src[b]`.
       - name: t
         type: number
         default:
-        summary: Copy into `dst[t], ...`.
+        summary: |
+          Copy into `dst[t], ...`.
       - name: dst
         type: table
         default: src
-        summary: Destination table.
+        summary: |
+          Destination table.
     returns:
       - type: table
-        summary: '`dst`, for convenience.'
+        summary: |
+          `dst`, for convenience.
     tags: []
     code_samples: []
     deprecation_message: ''
   - name: table.pack
-    summary: Returns a new table containing the provided values.
-    description: |-
+    summary: |
+      Returns a new table containing the provided values.
+    description: |
       Returns a new table with all arguments stored into keys 1, 2, etc. and
       with a field "n" with the total number of arguments. Note that the
       resulting table may not be a sequence.
@@ -400,10 +437,10 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: table.remove
-    summary: |-
+    summary: |
       Removes the specified element from the array, shifting later elements down
       to fill in the empty space if possible.
-    description: |-
+    description: |
       Removes from array t the element at position pos, returning the value of
       the removed element. When pos is an integer between `1` and `#t`, it
       shifts down the elements `t[pos+1], t[pos+2], ..., t[#t]` and erases
@@ -413,11 +450,13 @@ functions:
       - name: t
         type: Array
         default:
-        summary: The table that is having an element removed.
+        summary: |
+          The table that is having an element removed.
       - name: pos
         type: number
         default:
-        summary: The index of the element being removed.
+        summary: |
+          The index of the element being removed.
     returns:
       - type: Variant
         summary: ''
@@ -425,10 +464,10 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: table.sort
-    summary: |-
+    summary: |
       Sorts table elements using the provided comparison function or the `<`
       operator.
-    description: |-
+    description: |
       Sorts elements of array t in a given order, from `t[1]` to `t[#t]`. If
       `comp` is given, then it must be a function that receives two elements and
       returns true when the first element must come before the second in the
@@ -447,7 +486,7 @@ functions:
       - name: comp
         type: function
         default: nil
-        summary: |-
+        summary: |
           An optional comparison function to be used when comparing elements in
           the table. This function receives two elements, and should return true
           if the first element should be sorted before the second in the final
@@ -459,8 +498,9 @@ functions:
     code_samples: []
     deprecation_message: ''
   - name: table.unpack
-    summary: Returns all elements from the given list as a tuple.
-    description: |-
+    summary: |
+      Returns all elements from the given list as a tuple.
+    description: |
       Returns the elements from the given list. By default, `i` is 1 and `j` is
       the length of `list`.
 
@@ -470,15 +510,18 @@ functions:
       - name: list
         type: table
         default:
-        summary: The list of elements to be unpacked.
+        summary: |
+          The list of elements to be unpacked.
       - name: i
         type: number
         default: 1
-        summary: The index of the first element to unpack.
+        summary: |
+          The index of the first element to unpack.
       - name: j
         type: number
         default: '#list'
-        summary: The index of the last element to unpack.
+        summary: |
+          The index of the last element to unpack.
     returns:
       - type: Tuple
         summary: ''

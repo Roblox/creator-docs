@@ -68,16 +68,20 @@ methods:
       pin.
     description: |
       Returns an array of `Class.Wire|Wires` that are connected to the specified
-      pin.
+      pin. For `Class.AudioChannelMixer`, this can be one "Output" pin or a
+      number of input pins - see `Class.AudioChannelMixer.GetInputPins` for a
+      full list.
     code_samples: []
     parameters:
       - name: pin
         type: string
         default:
-        summary: ''
+        summary: |
+          An input or output pin on this instance
     returns:
       - type: Instances
-        summary: ''
+        summary: |
+          An array of `Class.Wire|Wires`
     tags: []
     deprecation_message: ''
     security: None
@@ -86,10 +90,13 @@ methods:
       - Audio
   - name: AudioChannelMixer:GetInputPins
     summary: |
-      Returns the input pins that can be selected by `Class.Wire.TargetName`.
+      Gets the list of pins that `Class.Wire` can use in `Class.Wire.TargetName`
+      to connect to this instance via its `Class.Wire.TargetInstance` property.
     description: |
-      Returns a table of strings indicating which input pins are available for
-      `Class.Wire.TargetName`:
+      Gets the list of pins that `Class.Wire` can use in `Class.Wire.TargetName`
+      to connect to this instance via its `Class.Wire.TargetInstance` property.
+
+      For `Class.AudioChannelMixer`, these are:
 
       - `"Input"`
       - `"Left"`
@@ -108,7 +115,8 @@ methods:
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of strings representing valid pin names.
     tags: []
     deprecation_message: ''
     security: None
@@ -117,15 +125,19 @@ methods:
       - Audio
   - name: AudioChannelMixer:GetOutputPins
     summary: |
-      Returns the output pin available for `Class.Wire.SourceName`.
+      Gets the list of pins that `Class.Wire` can use in `Class.Wire.SourceName`
+      to connect to this instance via its `Class.Wire.SourceInstance` property.
     description: |
-      Returns a table containing one string, `"Output"`, indicating the output
-      pin available for `Class.Wire.SourceName`.
+      Gets the list of pins that `Class.Wire` can use in `Class.Wire.SourceName`
+      to connect to this instance via its `Class.Wire.SourceInstance` property.
+
+      For `Class.AudioChannelMixer`, this is `Output` only.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of strings representing valid pin names.
     tags: []
     deprecation_message: ''
     security: None

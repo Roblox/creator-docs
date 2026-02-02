@@ -80,8 +80,45 @@ properties:
     capabilities:
       - Avatar
   - name: BodyPartDescription.HeadShape
-    summary: ''
-    description: ''
+    summary: |
+      Specifies the head shape identifier to apply to a Dynamic Head when this
+      `Class.BodyPartDescription` is applied.
+    description: |
+      **HeadShape** specifies a Classic Head shape identifier to apply to a
+      compatible Dynamic Head. This property is only relevant when
+      `Class.BodyPartDescription.BodyPart|BodyPart` is set to
+      `Enum.BodyPart|Head` and `Class.BodyPartDescription.AssetId|AssetId`
+      references a Dynamic Head that supports head shapes.
+
+      #### Example
+
+      ```lua
+      local AvatarEditorService = game:GetService("AvatarEditorService")
+
+      -- Get available head shapes for the user
+      local headShapes = AvatarEditorService:GetHeadShapesAsync(userId)
+
+      -- Create a BodyPartDescription for a Dynamic Head with a Classic shape
+      local bodyPartDescription = Instance.new("BodyPartDescription")
+      bodyPartDescription.BodyPart = Enum.BodyPart.Head
+      bodyPartDescription.AssetId = dynamicHeadAssetId
+      bodyPartDescription.HeadShape = headShapes[1] -- Apply the first owned head shape
+      bodyPartDescription.Parent = humanoidDescription
+
+      -- Apply the description
+      humanoid:ApplyDescriptionAsync(humanoidDescription)
+      ```
+
+      See also:
+
+      - `Class.AvatarEditorService:GetHeadShapesAsync()`, which returns head
+        shape identifiers that can be used with this property
+      - `Class.BodyPartDescription.AssetId|AssetId`, which specifies the Dynamic
+        Head asset to apply the shape to
+      - `Class.BodyPartDescription.BodyPart|BodyPart`, which must be set to
+        `Enum.BodyPart|Head` for this property to have effect
+      - `Class.Humanoid:ApplyDescriptionAsync()`, which applies the description
+        containing this `Class.BodyPartDescription`
     code_samples: []
     type: string
     tags: []

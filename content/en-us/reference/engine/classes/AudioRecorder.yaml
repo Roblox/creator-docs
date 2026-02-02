@@ -100,17 +100,23 @@ methods:
     capabilities:
       - Audio
   - name: AudioRecorder:GetConnectedWires
-    summary: ''
-    description: ''
+    summary: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin.
+    description: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin. `Class.AudioRecorder` has one "Input" pin.
     code_samples: []
     parameters:
       - name: pin
         type: string
         default:
-        summary: ''
+        summary: |
+          An input or output pin on this instance
     returns:
       - type: Instances
-        summary: ''
+        summary: |
+          An array of `Class.Wire|Wires`
     tags: []
     deprecation_message: ''
     security: None
@@ -118,13 +124,20 @@ methods:
     capabilities:
       - Audio
   - name: AudioRecorder:GetInputPins
-    summary: ''
-    description: ''
+    summary: |
+      Gets the list of pins that `Class.Wire` can use in `Class.Wire.TargetName`
+      to connect to this instance via its `Class.Wire.TargetInstance` property.
+    description: |
+      Gets the list of pins that `Class.Wire` can use in `Class.Wire.TargetName`
+      to connect to this instance via its `Class.Wire.TargetInstance` property.
+
+      For `Class.AudioRecorder`, this is `Input` only.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of strings representing valid pin names.
     tags: []
     deprecation_message: ''
     security: None
@@ -132,13 +145,20 @@ methods:
     capabilities:
       - Audio
   - name: AudioRecorder:GetOutputPins
-    summary: ''
-    description: ''
+    summary: |
+      Gets the list of pins that `Class.Wire` can use in `Class.Wire.SourceName`
+      to connect to this instance via its `Class.Wire.SourceInstance` property.
+    description: |
+      Gets the list of pins that `Class.Wire` can use in `Class.Wire.SourceName`
+      to connect to this instance via its `Class.Wire.SourceInstance` property.
+
+      For `Class.AudioRecorder`, there are none.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of strings representing valid pin names.
     tags: []
     deprecation_message: ''
     security: None
@@ -215,26 +235,36 @@ methods:
       - Audio
 events:
   - name: AudioRecorder.WiringChanged
-    summary: ''
-    description: ''
+    summary: |
+      Fires when another instance is connected to or disconnected from the
+      `Class.AudioAnalyzer` via a `Class.Wire`.
+    description: |
+      Event that fires after a `Class.Wire` becomes connected or disconnected,
+      and that `Class.Wire` is now or was previously connected to a pin on the
+      `Class.AudioRecorder` and to some other wirable instance.
     code_samples: []
     parameters:
       - name: connected
         type: boolean
         default:
-        summary: ''
+        summary: |
+          Whether the instance got connected or disconnected.
       - name: pin
         type: string
         default:
-        summary: ''
+        summary: |
+          The pin on the `Class.AudioAnalyzer` that the `Class.Wire` targets.
       - name: wire
         type: Wire
         default:
-        summary: ''
+        summary: |
+          The `Class.Wire` between the `Class.AudioAnalyzer` and the other
+          instance.
       - name: instance
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The other instance that is or was connected through the `Class.Wire`.
     tags: []
     deprecation_message: ''
     security: None
