@@ -341,31 +341,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-  - name: StudioService:GizmoRaycast
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: origin
-        type: Vector3
-        default:
-        summary: ''
-      - name: direction
-        type: Vector3
-        default:
-        summary: ''
-      - name: raycastParams
-        type: RaycastParams
-        default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
-        summary: ''
-    returns:
-      - type: RaycastResult?
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
   - name: StudioService:PromptImportFileAsync
     summary: |
       Prompts the current Studio user to select one file to add as a

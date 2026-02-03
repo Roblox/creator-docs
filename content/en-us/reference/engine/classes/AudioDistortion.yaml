@@ -69,10 +69,12 @@ methods:
       - name: pin
         type: string
         default:
-        summary: ''
+        summary: |
+          An input or output pin on this instance
     returns:
       - type: Instances
-        summary: ''
+        summary: |
+          An array of `Class.Wire|Wires`
     tags: []
     deprecation_message: ''
     security: None
@@ -80,13 +82,20 @@ methods:
     capabilities:
       - Audio
   - name: AudioDistortion:GetInputPins
-    summary: ''
-    description: ''
+    summary: |
+      Gets the list of pins that `Class.Wire` can use in `Class.Wire.TargetName`
+      to connect to this instance via its `Class.Wire.TargetInstance` property.
+    description: |
+      Gets the list of pins that `Class.Wire` can use in `Class.Wire.TargetName`
+      to connect to this instance via its `Class.Wire.TargetInstance` property.
+
+      For `Class.AudioDistortion`, this is `Input` only.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of strings representing valid pin names.
     tags: []
     deprecation_message: ''
     security: None
@@ -94,13 +103,20 @@ methods:
     capabilities:
       - Audio
   - name: AudioDistortion:GetOutputPins
-    summary: ''
-    description: ''
+    summary: |
+      Gets the list of pins that `Class.Wire` can use in `Class.Wire.SourceName`
+      to connect to this instance via its `Class.Wire.SourceInstance` property.
+    description: |
+      Gets the list of pins that `Class.Wire` can use in `Class.Wire.SourceName`
+      to connect to this instance via its `Class.Wire.SourceInstance` property.
+
+      For `Class.AudioDistortion`, this is `Output` only.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of strings representing valid pin names.
     tags: []
     deprecation_message: ''
     security: None

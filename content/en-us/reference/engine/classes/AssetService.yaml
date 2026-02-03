@@ -5,10 +5,10 @@
 name: AssetService
 type: class
 memory_category: Instances
-summary: |-
+summary: |
   A non-replicated service that handles asset-related queries to the Roblox web
   API.
-description: |-
+description: |
   **AssetService** is a non-replicated service that handles asset-related
   queries to the Roblox web API.
 code_samples: []
@@ -21,10 +21,10 @@ tags:
 deprecation_message: ''
 properties:
   - name: AssetService.AllowInsertFreeAssets
-    summary: |-
+    summary: |
       Controls whether `Class.AssetService:LoadAssetAsync()` can load assets
       that are not owned by the experience creator.
-    description: |-
+    description: |
       This property can only be modified in Studio's **Experience Settings** by
       changing **Allow Loading Third Party Assets**.
 
@@ -35,8 +35,8 @@ properties:
       - The asset must be **shared** by the asset owner.
       - The asset must be owned by Roblox.
 
-      When `true`, `Class.AssetService:LoadAssetAsync()` can additionally
-      load any public free asset on the Creator Store.
+      When `true`, `Class.AssetService:LoadAssetAsync()` can additionally load
+      any public free asset on the Creator Store.
     code_samples: []
     type: boolean
     tags: []
@@ -52,34 +52,44 @@ properties:
     capabilities: []
 methods:
   - name: AssetService:ComposeDecalAsync
-    summary: |-
-      Creates a Decal instance that uses composite PBR textures created by 
-      layering the provided textures in the order they are provided in the 
-      `layers` array. Textures layer based on the alpha value 
-      of the ColorMap.
-    description: |-
-      Creates a new `Class.Decal` that contains a composed texture derived
-      from one or more layered texture sets. Each set can include color, roughness, metalness, and normal maps. Each `layer` is composited in the order they are provided, with the ColorMap alpha channel used to determine blending.
+    summary: |
+      Creates a Decal instance that uses composite PBR textures created by
+      layering the provided textures in the order they are provided in the
+      `layers` array. Textures layer based on the alpha value of the ColorMap.
+    description: |
+      Creates a new `Class.Decal` that contains a composed texture derived from
+      one or more layered texture sets. Each set can include color, roughness,
+      metalness, and normal maps. Each `layer` is composited in the order they
+      are provided, with the ColorMap alpha channel used to determine blending.
 
       - There is a limit of 8 layers.
-      - Layering order is bottom-to-top: the first layer in the list provides the bottom-most textures.
+      - Layering order is bottom-to-top: the first layer in the list provides
+        the bottom-most textures.
       - Each dictionary table should contain the following key-value pairs:
-        - **ColorMap**: A `Datatype.Content` referencing a color (albedo) texture by assetId.
-        - **RoughnessMap**: A `Datatype.Content` referencing a roughness texture by assetId.
-        - **MetalnessMap**: A `Datatype.Content` referencing a metalness texture by assetId.
-        - **NormalMap**: A `Datatype.Content` referencing a normal texture by assetId.
-      - `ColorMap` is mandatory in every layer. The ColorMap's alpha channel is used to control blending of the entire layer.
-      - `NormalMap`, `MetalnessMap`, `RoughnessMap` are optional. If omitted, this layer doesn't perform any blending for those maps.
+        - **ColorMap**: A `Datatype.Content` referencing a color (albedo)
+          texture by assetId.
+        - **RoughnessMap**: A `Datatype.Content` referencing a roughness texture
+          by assetId.
+        - **MetalnessMap**: A `Datatype.Content` referencing a metalness texture
+          by assetId.
+        - **NormalMap**: A `Datatype.Content` referencing a normal texture by
+          assetId.
+      - `ColorMap` is mandatory in every layer. The ColorMap's alpha channel is
+        used to control blending of the entire layer.
+      - `NormalMap`, `MetalnessMap`, `RoughnessMap` are optional. If omitted,
+        this layer doesn't perform any blending for those maps.
     code_samples:
       - AssetService-ComposeDecalAsync
     parameters:
       - name: layers
         type: Array
         default:
-        summary: An array of `Dictionary` tables that maps PBR names to ContentID.
+        summary: |
+          An array of `Dictionary` tables that maps PBR names to ContentID.
     returns:
       - type: Decal
-        summary: A new `Class.Decal` containing the composed texture set.
+        summary: |
+          A new `Class.Decal` containing the composed texture set.
     tags:
       - Yields
     deprecation_message: ''
@@ -87,8 +97,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: AssetService:CreateAssetAsync
-    summary: Uploads a new asset to Roblox from the given object.
-    description: |-
+    summary: |
+      Uploads a new asset to Roblox from the given object.
+    description: |
       Uploads a new asset to Roblox from the given object.
 
       Currently, this method can only be used in locally loaded plugins and
@@ -99,11 +110,12 @@ methods:
       - name: object
         type: Object
         default:
-        summary: The object to be created as an asset.
+        summary: |
+          The object to be created as an asset.
       - name: assetType
         type: AssetType
         default:
-        summary: |-
+        summary: |
           Currently supported types are:
 
           - `Enum.AssetType.Model` – with `object` as any valid `Class.Instance`
@@ -117,7 +129,7 @@ methods:
       - name: requestParameters
         type: Dictionary
         default: nil
-        summary: |-
+        summary: |
           Options table containing asset metadata:
 
           - `Name` – Name of the asset as a string. Defaults to `[object.Name]`.
@@ -133,7 +145,8 @@ methods:
             `Enum.AssetType.Model` type. Defaults to `true`.
     returns:
       - type: Tuple
-        summary: The `Enum.CreateAssetResult` and asset ID pair if successful.
+        summary: |
+          The `Enum.CreateAssetResult` and asset ID pair if successful.
     tags:
       - Yields
     deprecation_message: ''
@@ -142,8 +155,9 @@ methods:
     capabilities:
       - AssetCreateUpdate
   - name: AssetService:CreateAssetVersionAsync
-    summary: Uploads a new version for an existing asset from the given object.
-    description: |-
+    summary: |
+      Uploads a new version for an existing asset from the given object.
+    description: |
       Uploads a new version for an existing asset from the given object.
 
       Currently, this method can only be used in locally loaded plugins and
@@ -154,11 +168,12 @@ methods:
       - name: object
         type: Object
         default:
-        summary: The object to be created as an asset.
+        summary: |
+          The object to be created as an asset.
       - name: assetType
         type: AssetType
         default:
-        summary: |-
+        summary: |
           Currently supported types are:
 
           - `Enum.AssetType.Model` – with `object` as any valid `Class.Instance`
@@ -172,11 +187,12 @@ methods:
       - name: assetId
         type: int64
         default:
-        summary: The ID of the asset for the new version.
+        summary: |
+          The ID of the asset for the new version.
       - name: requestParameters
         type: Dictionary
         default: nil
-        summary: |-
+        summary: |
           Options table containing asset metadata:
 
           - `Name` – A `string`. Name of the asset. Default: object.Name.
@@ -192,7 +208,7 @@ methods:
             `Enum.AssetType.Model` type. Default: true.
     returns:
       - type: Tuple
-        summary: |-
+        summary: |
           The `Enum.CreateAssetResult` and asset version number pair if
           successful.
     tags:
@@ -203,8 +219,9 @@ methods:
     capabilities:
       - AssetCreateUpdate
   - name: AssetService:CreateEditableImage
-    summary: Creates a new `Class.EditableImage`.
-    description: |-
+    summary: |
+      Creates a new `Class.EditableImage`.
+    description: |
       Creates a new `Class.EditableImage`. By default, the resolution is set at
       512&times;512, but you can specify a different size using the method's
       option table.
@@ -216,7 +233,7 @@ methods:
       - name: editableImageOptions
         type: Dictionary?
         default:
-        summary: |-
+        summary: |
           Options table containing controls for the method:
 
           - `Size` – A `Datatype.Vector2` that specifies the image's desired
@@ -231,8 +248,9 @@ methods:
     capabilities:
       - DynamicGeneration
   - name: AssetService:CreateEditableImageAsync
-    summary: Creates a new `Class.EditableImage` object populated with the given image.
-    description: |-
+    summary: |
+      Creates a new `Class.EditableImage` object populated with the given image.
+    description: |
       Creates a new `Class.EditableImage` object populated with the given
       texture. Non-asset texture IDs such as `rbxthumb://` are supported. If
       using an image asset, it must be associated with and/or owned by a creator
@@ -247,20 +265,21 @@ methods:
       - name: content
         type: Content
         default:
-        summary: |-
+        summary: |
           Reference to asset content stored externally or as an object within
           the place, wrapping a single value of one of the supported
           `Enum.ContentSourceType` values.
       - name: editableImageOptions
         type: Dictionary?
         default:
-        summary: |-
+        summary: |
           Table containing options for the created `Class.EditableImage`.
           Currently no options are available since resizing via
           `Class.EditableImage.Size|Size` is not supported.
     returns:
       - type: EditableImage
-        summary: A new `Class.EditableImage` containing the provided image.
+        summary: |
+          A new `Class.EditableImage` containing the provided image.
     tags:
       - Yields
     deprecation_message: ''
@@ -269,8 +288,9 @@ methods:
     capabilities:
       - AssetRead
   - name: AssetService:CreateEditableMesh
-    summary: Creates a new, empty `Class.EditableMesh`.
-    description: |-
+    summary: |
+      Creates a new, empty `Class.EditableMesh`.
+    description: |
       Creates a new, empty `Class.EditableMesh`. Vertices, triangles, and their
       attributes can be added dynamically to it. If the device‑specific editable
       memory budget is exhausted, creation will fail and this method will return
@@ -280,7 +300,7 @@ methods:
       - name: editableMeshOptions
         type: Dictionary?
         default:
-        summary: |-
+        summary: |
           Table containing options for the created `Class.EditableMesh`.
           Currently no options are available since
           `Class.EditableMesh.FixedSize|FixedSize` will always be `false` for
@@ -295,10 +315,10 @@ methods:
     capabilities:
       - DynamicGeneration
   - name: AssetService:CreateEditableMeshAsync
-    summary: |-
+    summary: |
       Returns a new `Class.EditableMesh` object created from an existing mesh
       content ID.
-    description: |-
+    description: |
       Returns a new `Class.EditableMesh` object created from an existing
       `Class.EditableMesh` or mesh `Datatype.Content` ID. By default, an
       `Class.EditableMesh` created from this method will be fixed size such that
@@ -309,22 +329,22 @@ methods:
       If the device-specific editable memory budget is exhausted, creation will
       fail and this method will return `nil`.
 
-      See the **Enabling for Published Experiences** and
-      **Permissions** sections of `Class.EditableMesh` for special
-      considerations when using this API.
+      See the **Enabling for Published Experiences** and **Permissions**
+      sections of `Class.EditableMesh` for special considerations when using
+      this API.
     code_samples: []
     parameters:
       - name: content
         type: Content
         default:
-        summary: |-
+        summary: |
           Reference to asset content stored externally or as an object within
           the place, wrapping a single value of one of the supported
           `Enum.ContentSourceType` values.
       - name: editableMeshOptions
         type: Dictionary?
         default:
-        summary: |-
+        summary: |
           Options table containing controls for the method:
 
           - `FixedSize` – A `bool`. Default value is `true`, and the returned
@@ -333,7 +353,8 @@ methods:
             the mesh topology is required, at the expense of using more memory.
     returns:
       - type: EditableMesh
-        summary: The new `Class.EditableMesh` instance.
+        summary: |
+          The new `Class.EditableMesh` instance.
     tags:
       - Yields
     deprecation_message: ''
@@ -342,10 +363,10 @@ methods:
     capabilities:
       - AssetRead
   - name: AssetService:CreateMeshPartAsync
-    summary: |-
+    summary: |
       Creates a new `Class.MeshPart` with a specified mesh ID and an optional
       table of fidelity values.
-    description: |-
+    description: |
       This method creates a `Class.MeshPart` with a specified
       `Class.MeshPart.CollisionFidelity|CollisionFidelity`,
       `Class.MeshPart.RenderFidelity|RenderFidelity`, and
@@ -358,14 +379,14 @@ methods:
       - name: meshContent
         type: Content
         default:
-        summary: |-
+        summary: |
           Reference to asset content stored externally or as an object within
           the place, wrapping a single value of one of the supported
           `Enum.ContentSourceType` values.
       - name: options
         type: Dictionary
         default: nil
-        summary: |-
+        summary: |
           Options table containing one or more controls for the method:
 
           - `CollisionFidelity` – The value of
@@ -391,8 +412,9 @@ methods:
     capabilities:
       - Basic
   - name: AssetService:CreatePlaceAsync
-    summary: Clones a place through the given `templatePlaceID`.
-    description: |-
+    summary: |
+      Clones a place through the given `templatePlaceID`.
+    description: |
       Clones a place through the given `templatePlaceID` and returns the
       `Class.DataModel.PlaceId|PlaceId` of the new place, which you can use with
       `Class.TeleportService`. The clone place displays within the inventory of
@@ -412,18 +434,22 @@ methods:
       - name: placeName
         type: string
         default:
-        summary: Name of the new place.
+        summary: |
+          Name of the new place.
       - name: templatePlaceID
         type: int64
         default:
-        summary: '`Class.DataModel.PlaceId|PlaceId` of the place to clone.'
+        summary: |
+          `Class.DataModel.PlaceId|PlaceId` of the place to clone.
       - name: description
         type: string
         default:
-        summary: Description of the new place.
+        summary: |
+          Description of the new place.
     returns:
       - type: int64
-        summary: '`Class.DataModel.PlaceId|PlaceId` of the new place.'
+        summary: |
+          `Class.DataModel.PlaceId|PlaceId` of the new place.
     tags:
       - Yields
     deprecation_message: ''
@@ -432,7 +458,7 @@ methods:
     capabilities:
       - AssetCreateUpdate
   - name: AssetService:CreatePlaceInPlayerInventoryAsync
-    summary: |-
+    summary: |
       Clones a place through the given `templatePlaceID` and puts it into the
       inventory of the given player.
     description: ''
@@ -459,20 +485,23 @@ methods:
         summary: ''
     tags:
       - Yields
-    deprecation_message: This method has been removed and is no longer functional.
+    deprecation_message: |
+      This method has been removed and is no longer functional.
     security: None
     thread_safety: Unsafe
     capabilities:
       - AssetCreateUpdate
   - name: AssetService:CreateSurfaceAppearanceAsync
-    summary: Creates a new `Class.SurfaceAppearance` object using the provided content maps.
-    description: |-
-      Creates a new `Class.SurfaceAppearance` object using the provided
-      content maps.
+    summary: |
+      Creates a new `Class.SurfaceAppearance` object using the provided content
+      maps.
+    description: |
+      Creates a new `Class.SurfaceAppearance` object using the provided content
+      maps.
 
-      Currently, content only supports `Class.EditableImage` and only
-      content maps can be specified, but functionality will expand to include
-      asset IDs as input. If you need to achieve this today, you can create an
+      Currently, content only supports `Class.EditableImage` and only content
+      maps can be specified, but functionality will expand to include asset IDs
+      as input. If you need to achieve this today, you can create an
       `Class.EditableImage` from an asset ID using the following:
 
       `Class.AssetService:CreateEditableImageAsync(Content.fromUri(uri))`
@@ -485,7 +514,7 @@ methods:
       - name: content
         type: Dictionary
         default:
-        summary: |-
+        summary: |
           Dictionary containing the following key-value pairs:
 
           - `ColorMap` — A `Datatype.Content` object that contains the color
@@ -493,8 +522,8 @@ methods:
           - `MetalnessMap` — A `Datatype.Content` object that contains the
             metalness map. If more than one channel is present, only the red
             channel is used. Default is `nil`.
-          - `NormalMap` — A `Datatype.Content` object that contains the
-            normal map. Default is `nil`.
+          - `NormalMap` — A `Datatype.Content` object that contains the normal
+            map. Default is `nil`.
           - `RoughnessMap` — A `Datatype.Content` object that contains the
             roughness map. If more than one channel is present, only the red
             channel is used. Default is `nil`.
@@ -503,7 +532,9 @@ methods:
             channel is used. Default is `nil`.
     returns:
       - type: SurfaceAppearance
-        summary: A new `Class.SurfaceAppearance` instance with the given maps from the `content` parameter.
+        summary: |
+          A new `Class.SurfaceAppearance` instance with the given maps from the
+          `content` parameter.
     tags:
       - Yields
     deprecation_message: ''
@@ -512,8 +543,10 @@ methods:
     capabilities:
       - Basic
   - name: AssetService:GetAssetIdsForPackageAsync
-    summary: Returns an array of asset IDs that are contained in a specified package.
-    description: Returns an array of asset IDs that are contained in a specified package.
+    summary: |
+      Returns an array of asset IDs that are contained in a specified package.
+    description: |
+      Returns an array of asset IDs that are contained in a specified package.
     code_samples: []
     parameters:
       - name: packageAssetId
@@ -522,7 +555,8 @@ methods:
         summary: ''
     returns:
       - type: Array
-        summary: Asset IDs that are contained in a specified package.
+        summary: |
+          Asset IDs that are contained in a specified package.
     tags:
       - Yields
     deprecation_message: ''
@@ -531,7 +565,8 @@ methods:
     capabilities:
       - AssetRead
   - name: AssetService:GetAssetIdsForPackage
-    summary: Returns an array of asset IDs that are contained in a specified package.
+    summary: |
+      Returns an array of asset IDs that are contained in a specified package.
     description: ''
     code_samples: []
     parameters:
@@ -541,7 +576,8 @@ methods:
         summary: ''
     returns:
       - type: Array
-        summary: Asset IDs that are contained in a specified package.
+        summary: |
+          Asset IDs that are contained in a specified package.
     tags:
       - Yields
       - Deprecated
@@ -551,8 +587,9 @@ methods:
     capabilities:
       - AssetRead
   - name: AssetService:GetAudioMetadataAsync
-    summary: Provides relevant metadata about a specific audio source.
-    description: |-
+    summary: |
+      Provides relevant metadata about a specific audio source.
+    description: |
       Provides relevant metadata about a specific audio source (artist, title,
       duration, type, etc.).
     code_samples:
@@ -561,12 +598,12 @@ methods:
       - name: idList
         type: Array
         default:
-        summary: |-
+        summary: |
           Array of asset or content IDs for which to retrieve metadata. Max
           batch size is 30.
     returns:
       - type: Array
-        summary: |-
+        summary: |
           Array of dictionary tables in the same order as the request, where
           each dictionary contains the following metadata for its asset/content:
 
@@ -595,8 +632,9 @@ methods:
     capabilities:
       - AssetRead
   - name: AssetService:GetBundleDetailsAsync
-    summary: Returns details of the contents of specified bundle.
-    description: |-
+    summary: |
+      Returns details of the contents of specified bundle.
+    description: |
       This function returns details of the contents of the specified bundle.
 
       If the bundle ID does not exist, it throws `HTTP 400 (Bad Request)`. If
@@ -608,10 +646,11 @@ methods:
       - name: bundleId
         type: int64
         default:
-        summary: The ID of the specified bundle.
+        summary: |
+          The ID of the specified bundle.
     returns:
       - type: Dictionary
-        summary: |-
+        summary: |
           Dictionary with the following key-value pairs containing details about
           the specified bundle:
 
@@ -640,8 +679,9 @@ methods:
     capabilities:
       - AssetRead
   - name: AssetService:GetCreatorAssetID
-    summary: Returns the UserId of the account who created the creationID asset.
-    description: |-
+    summary: |
+      Returns the UserId of the account who created the creationID asset.
+    description: |
       The GetCreatorAssetID function returns the `Class.Player.UserId` of the
       account who created the _creationID_ asset.
 
@@ -658,17 +698,17 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item is deprecated and no longer functions correctly. Do not use it
       for new work.
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: AssetService:GetGamePlacesAsync
-    summary: |-
+    summary: |
       Returns a `Class.StandardPages` object which contains the name and
       `Class.DataModel.PlaceId|PlaceId` of places within the current experience.
-    description: |-
+    description: |
       Returns a `Class.StandardPages` object which contains the name and
       `Class.DataModel.PlaceId|PlaceId` of places within the current experience.
     code_samples:
@@ -685,20 +725,19 @@ methods:
     capabilities:
       - AssetRead
   - name: AssetService:LoadAssetAsync
-    summary: |-
+    summary: |
       Loads a `Class.Model` instance given its asset ID. This is the modern
       replacement for `Class.InsertService:LoadAsset()` and supports loading
       third-party assets.
-    description: |-
+    description: |
       Loads the latest version of an asset from the given `assetId` and returns
       it wrapped in a `Class.Model`. This method is the modern replacement for
       `Class.InsertService:LoadAsset()` and
       `Class.InsertService:LoadAssetVersion()` methods.
 
-      Calls to this function may fail if the asset does not exist,
-      or if the server providing the model is having problems. It
-      is recommended to wrap calls to this function in `pcall()` to handle
-      potential errors.
+      Calls to this function may fail if the asset does not exist, or if the
+      server providing the model is having problems. It is recommended to wrap
+      calls to this function in `pcall()` to handle potential errors.
 
       ```lua
       local AssetService = game:GetService("AssetService")
@@ -716,28 +755,34 @@ methods:
 
       #### Script Sandbox Security
 
-      For enhanced security, the returned `Class.Model` is sandboxed by default (`Class.Model.Sandboxed|Sandboxed` is `true`) and has no script `Enum.SecurityCapability|Capabilities`. This prevents untrusted scripts descending from the returned Model from running. To enable scripts in a model you trust, you can manually grant a safe set of `Enum.SecurityCapability|Capabilities` on the Model after loading.
+      For enhanced security, the returned `Class.Model` is sandboxed by default
+      (`Class.Model.Sandboxed|Sandboxed` is `true`) and has no script
+      `Enum.SecurityCapability|Capabilities`. This prevents untrusted scripts
+      descending from the returned Model from running. To enable scripts in a
+      model you trust, you can manually grant a safe set of
+      `Enum.SecurityCapability|Capabilities` on the Model after loading.
 
       #### Third-Party Asset Loading
 
-      Unlike `Class.InsertService:LoadAsset()`, this method can load public assets
-      created by **third parties** (assets not owned by the experience creator). To
-      enable this functionality, toggle on **Allow Loading Third Party Assets** in
-      Studio's **Experience Settings**.
+      Unlike `Class.InsertService:LoadAsset()`, this method can load public
+      assets created by **third parties** (assets not owned by the experience
+      creator). To enable this functionality, toggle on **Allow Loading Third
+      Party Assets** in Studio's **Experience Settings**.
 
       If this setting is disabled (which it is by default), `LoadAssetAsync`
       will only load assets that are owned by the experience creator, behaving
-      identically to the old `Class.InsertService:LoadAsset()` security
-      check.
+      identically to the old `Class.InsertService:LoadAsset()` security check.
     code_samples: []
     parameters:
       - name: assetId
         type: int64
         default:
-        summary: The asset ID number of the asset being loaded.
+        summary: |
+          The asset ID number of the asset being loaded.
     returns:
       - type: Instance
-        summary: A `Class.Model` instance containing the loaded asset.
+        summary: |
+          A `Class.Model` instance containing the loaded asset.
     tags:
       - Yields
     deprecation_message: ''
@@ -746,10 +791,10 @@ methods:
     capabilities:
       - AssetRequire
   - name: AssetService:PromptCreateAssetAsync
-    summary: |-
+    summary: |
       Allows in-experience asset creation for users by prompting a publish
       dialog.
-    description: |-
+    description: |
       Allows in-experience asset creation for users by prompting a publish
       dialog. When called, it presents a dialog to the user, allowing them to
       enter a name, description, and preview the asset. Upon submitting, it
@@ -760,20 +805,23 @@ methods:
       - name: player
         type: Player
         default:
-        summary: The user who submits an asset creation.
+        summary: |
+          The user who submits an asset creation.
       - name: instance
         type: Instance
         default:
-        summary: |-
+        summary: |
           The asset to be created. Currently can't contain scripts or nest
           non-public assets.
       - name: assetType
         type: AssetType
         default:
-        summary: The asset type. Currently can only be `Enum.AssetType.Model`.
+        summary: |
+          The asset type. Currently can only be `Enum.AssetType.Model`.
     returns:
       - type: Tuple
-        summary: The `Enum.PromptCreateAssetResult` and asset ID pair if successful.
+        summary: |
+          The `Enum.PromptCreateAssetResult` and asset ID pair if successful.
     tags:
       - Yields
     deprecation_message: ''
@@ -805,8 +853,9 @@ methods:
     capabilities:
       - AssetManagement
   - name: AssetService:SavePlaceAsync
-    summary: Saves the state of the current place.
-    description: |-
+    summary: |
+      Saves the state of the current place.
+    description: |
       Saves the current state of the place. Keep in mind the following
       guidelines and restrictions:
 
@@ -824,7 +873,15 @@ methods:
       - name: requestParameters
         type: Dictionary?
         default:
-        summary: 'Optional dictionary that includes `SaveWithoutPublish`, a boolean indicating whether to save with publish or without publish, and `PlaceId`, the destination place ID to save over. An example usage would be: AssetService:SavePlaceAsync({PlaceId = 1, SaveWithoutPublish = true}). If PlaceId is not provided, the default behavior will save over the current original place which is calling SavePlaceAsync. If SaveWithoutPublish is not provided, the default behavior is SaveWithoutPublish=false.'
+        summary: |
+          Optional dictionary that includes `SaveWithoutPublish`, a boolean
+          indicating whether to save with publish or without publish, and
+          `PlaceId`, the destination place ID to save over. An example usage
+          would be: AssetService:SavePlaceAsync({PlaceId = 1, SaveWithoutPublish
+          = true}). If PlaceId is not provided, the default behavior will save
+          over the current original place which is calling SavePlaceAsync. If
+          SaveWithoutPublish is not provided, the default behavior is
+          SaveWithoutPublish=false.
     returns:
       - type: ()
         summary: ''
@@ -836,8 +893,9 @@ methods:
     capabilities:
       - AssetCreateUpdate
   - name: AssetService:SearchAudioAsync
-    summary: Finds audio assets matching a variety of search criteria.
-    description: |-
+    summary: |
+      Finds audio assets matching a variety of search criteria.
+    description: |
       Returns a `Class.AudioPages` object containing the result of the given
       search. Will not return fields with empty values.
 
@@ -881,7 +939,8 @@ methods:
     capabilities:
       - AssetRead
   - name: AssetService:SearchAudio
-    summary: Finds audio assets matching a variety of search criteria.
+    summary: |
+      Finds audio assets matching a variety of search criteria.
     description: ''
     code_samples:
       - printing-search-audio-result-titles

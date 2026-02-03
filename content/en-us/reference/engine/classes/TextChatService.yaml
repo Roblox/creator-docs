@@ -301,11 +301,13 @@ methods:
       - name: userIdFrom
         type: int64
         default:
-        summary: ''
+        summary: |
+          The user must be in the current server, otherwise an error will occur.
       - name: userIdTo
         type: int64
         default:
-        summary: ''
+        summary: |
+          The user must be in the current server, otherwise an error will occur.
     returns:
       - type: boolean
         summary: ''

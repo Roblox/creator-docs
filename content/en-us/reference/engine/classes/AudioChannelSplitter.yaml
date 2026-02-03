@@ -73,16 +73,20 @@ methods:
       pin.
     description: |
       Returns an array of `Class.Wire|Wires` that are connected to the specified
-      pin.
+      pin. For `Class.AudioChannelSplitter`, this can be one "Input" pin or a
+      number of output pins - see `Class.AudioChannelSplitter.GetInputPins` for
+      a full list.
     code_samples: []
     parameters:
       - name: pin
         type: string
         default:
-        summary: ''
+        summary: |
+          An input or output pin on this instance
     returns:
       - type: Instances
-        summary: ''
+        summary: |
+          An array of `Class.Wire|Wires`
     tags: []
     deprecation_message: ''
     security: None
@@ -91,15 +95,19 @@ methods:
       - Audio
   - name: AudioChannelSplitter:GetInputPins
     summary: |
-      Returns the input pin available for `Class.Wire.TargetName`.
+      Gets the list of pins that `Class.Wire` can use in `Class.Wire.TargetName`
+      to connect to this instance via its `Class.Wire.TargetInstance` property.
     description: |
-      Returns a table containing one string, `"Input"`, indicating the input pin
-      available for `Class.Wire.TargetName`.
+      Gets the list of pins that `Class.Wire` can use in `Class.Wire.TargetName`
+      to connect to this instance via its `Class.Wire.TargetInstance` property.
+
+      For `Class.AudioChannelSplitter`, this is `Input` only.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of strings representing valid pin names.
     tags: []
     deprecation_message: ''
     security: None
@@ -108,10 +116,13 @@ methods:
       - Audio
   - name: AudioChannelSplitter:GetOutputPins
     summary: |
-      Returns the output pins that can be selected by `Class.Wire.SourceName`.
+      Gets the list of pins that `Class.Wire` can use in `Class.Wire.SourceName`
+      to connect to this instance via its `Class.Wire.SourceInstance` property.
     description: |
-      Returns a table of strings indicating which output pins are available for
-      `Class.Wire.SourceName`:
+      Gets the list of pins that `Class.Wire` can use in `Class.Wire.SourceName`
+      to connect to this instance via its `Class.Wire.SourceInstance` property.
+
+      For `Class.AudioChannelSplitter`, these are:
 
       - `"Output"`
       - `"Left"`
@@ -130,7 +141,8 @@ methods:
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of strings representing valid pin names.
     tags: []
     deprecation_message: ''
     security: None

@@ -98,16 +98,18 @@ methods:
       pin.
     description: |
       Returns an array of `Class.Wire|Wires` that are connected to the specified
-      pin. `Class.AudioSpeechToText` has one input pin.
+      pin. `Class.AudioSpeechToText` has one "Input" pin.
     code_samples: []
     parameters:
       - name: pin
         type: string
         default:
-        summary: ''
+        summary: |
+          An input or output pin on this instance
     returns:
       - type: Instances
-        summary: ''
+        summary: |
+          An array of `Class.Wire|Wires`
     tags: []
     deprecation_message: ''
     security: None
