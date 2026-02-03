@@ -89,9 +89,9 @@ First, you'll need a function to handle when user input is detected.
 
 `Class.ContextActionService` can be used to **bind** a function to a specific input by using the `Class.ContextActionService:BindAction()|BindAction` function, which accepts several arguments:
 
-- The name of the action
-- The function to handle the action (also called a "callback")
-- Whether or not a touchscreen button should be displayed
+- The name of the action.
+- The function to handle the action (also called a "callback").
+- Whether or not a touchscreen button should be displayed.
 - Any amount of `Enum.KeyCodes` to detect and associate with the action.
 
 KeyCodes are values that represent different input buttons, such as keyboard keys or controller buttons. A full list of codes is available `Enum.KeyCode|here`.
