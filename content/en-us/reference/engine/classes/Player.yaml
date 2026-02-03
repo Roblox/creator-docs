@@ -1260,7 +1260,7 @@ methods:
       - Deprecated
     deprecation_message: |
       This method has been superseded by
-      `Class.Player.GetFriendsOnline|GetFriendsOnline()`.
+      `Class.Player.GetFriendsOnlineAsync|GetFriendsOnlineAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
