@@ -300,8 +300,9 @@ methods:
       JSON. This may cause problems if you want to use the outputted JSON
       elsewhere.
 
-      This method also accepts `Library.buffer|buffers`, which it encodes to
-      base64 (and often compresses) before converting to a JSON object.
+      This method also accepts `Library.buffer|buffers` up to 50 MiB, which it
+      encodes to base64 (and often compresses) before converting to a JSON
+      object.
 
       To reverse the encoding process and decode a JSON object, use the
       `Class.HttpService:JSONDecode()` method.
