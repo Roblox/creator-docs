@@ -4,7 +4,7 @@ description: An overview of creation curriculum paths covering topics like model
 hideInPageNavigation: true
 ---
 
-<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/DKzFkn7q8MQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/DKzFkn7q8MQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 <br /> <br />
 
@@ -47,7 +47,7 @@ Learn the foundational skills you need to become an environmental artist.
 
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<iframe src="https://www.youtube-nocookie.com/embed/nwShvDmFHWc?si=2gk0n6cb9uq-48Ni" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "90%", height: "90%"}}></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/nwShvDmFHWc?si=2gk0n6cb9uq-48Ni" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "90%", height: "90%"}}></iframe>
 </div>
 
 </Grid>
@@ -118,7 +118,7 @@ Learn the programming skills you need to introduce gameplay to the laser tag env
 
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<iframe src="https://www.youtube-nocookie.com/embed/7iJKUUiKc0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "90%", height: "90%"}}></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/7iJKUUiKc0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "90%", height: "90%"}}></iframe>
 </div>
 
 </Grid>
@@ -189,7 +189,7 @@ Learn the design skills you need to implement UI that informs players of the las
 
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<iframe src="https://www.youtube-nocookie.com/embed/eqW9SINYeWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "90%", height: "90%"}}></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/eqW9SINYeWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "90%", height: "90%"}}></iframe>
 </div>
 
 </Grid>

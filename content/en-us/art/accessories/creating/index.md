@@ -4,7 +4,7 @@ description: This tutorial covers the basic steps required in Blender to Studio-
 next: /art/accessories/creating/modeling-setup
 ---
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/C-DwGRBHvmE" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/C-DwGRBHvmE" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 <br /><br />
 
 You can create your own custom avatar clothing using Blender and Roblox's downloadable project templates. These project templates include [components required for layered clothing](../../../art/accessories/layered-clothing.md#components-of-a-layered-clothing-accessory), and can double as a mannequin to quickly begin shaping and sculpting your clothing assets. By the end of this tutorial, you will have a clothing asset that contains all the required components for a layered clothing accessory on the Marketplace.

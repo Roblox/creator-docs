@@ -3,7 +3,7 @@ title: UGC Homestore
 description: Showcase and sell your published avatar items in a easily customizable shop template.
 ---
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/6MPWLQmIKLk" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br />
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/6MPWLQmIKLk" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> <br />
 
 The **UGC Homestore** is a user-friendly template that avatar item creators can use to showcase and sell their marketplace items. This template is ideal for creators with an existing UGC catalog who want a dedicated space to promote their assets. Creators who sell their own avatar items from their own experience also benefit from a [larger commission split](../marketplace/marketplace-fees-and-commissions.md#commissions).
 

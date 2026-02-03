@@ -5,6 +5,10 @@ description: The Avatar Validation Tool checks for common character model issues
 
 The following table compares the classic decals with the dynamic head equivalent.
 
+<Alert severity = 'warning'>
+The references below are not final and are subject to change. We encourage you to provide feedback on specific heads on the [DevForum announcement](https://devforum.roblox.com/t/completing-the-dynamic-head-migration/4301387).
+</Alert>
+
 <table><thead>
   <tr>
     <th style="text-align: center; vertical-align: middle;"><b>Asset Name</b></th>

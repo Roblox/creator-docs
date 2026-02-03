@@ -10,8 +10,8 @@ If you previously used this feature while it was still in beta, make sure to imp
 <table>
 <tbody>
   <tr>
-    <td><iframe width="500" height="300" src="https://www.youtube-nocookie.com/embed/qfWKYgO63OI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
-    <td><iframe width="500" height="300" src="https://www.youtube-nocookie.com/embed/rVFmc8gxu4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
+    <td><iframe width="500" height="300" src="https://www.youtube-nocookie.com/embed/qfWKYgO63OI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></td>
+    <td><iframe width="500" height="300" src="https://www.youtube-nocookie.com/embed/rVFmc8gxu4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></td>
   </tr>
 </tbody>
 </table>

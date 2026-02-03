@@ -12,7 +12,7 @@ description: Event Sequencer is a powerful framework for building live, cross-se
 This framework has been battle tested in Roblox events like the [Twenty One Pilots](https://www.youtube.com/watch?v=0fAhhoXK12o) and [24kGoldn](https://www.youtube.com/watch?v=UfzqGkfRKr4) concerts, as well as many highly visited experiences.
 
 <figure>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0fAhhoXK12o" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0fAhhoXK12o" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 </figure>
 
 To see **EventSequencer** in action within an editable place, check out the [Concert](https://www.roblox.com/games/10275826693/Concert) template in Roblox Studio. This template is a comprehensive starting point for developers to create events/concerts and familiarize themselves with the various features and components involved.

@@ -4,7 +4,7 @@ description: An overview of creation use case tutorials covering topics like mod
 hideInPageNavigation: true
 ---
 
-<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/x_RPLaXYhdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/x_RPLaXYhdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Modeling</Typography>
 
@@ -21,7 +21,7 @@ Use solid modeling operations directly in Studio to form complex shapes by union
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
- <iframe src="https://www.youtube-nocookie.com/embed/SgPU84AqpkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+ <iframe src="https://www.youtube-nocookie.com/embed/SgPU84AqpkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
  </div>
    <Typography variant='body1' >Intro to world building</Typography>
      <div style={{marginTop:16}}>
@@ -456,7 +456,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
- <iframe src="https://www.youtube-nocookie.com/embed/9mXvhYSv7fc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+ <iframe src="https://www.youtube-nocookie.com/embed/9mXvhYSv7fc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
  </div>
    <Typography variant='body1' >Physics 101</Typography>
      <div style={{marginTop:16}}>

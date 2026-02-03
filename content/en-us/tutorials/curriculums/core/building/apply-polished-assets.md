@@ -5,7 +5,7 @@ prev: /tutorials/curriculums/core/building/customize-global-lighting
 comments: The links to the Materials and PBR Modeling guides must be replaced by a single link to the Environmental Art curriculum once that is published. The link at the end should also be changed to link to the next sets of tutorials.
 ---
 
-<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/d3ltJgFP-rE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/d3ltJgFP-rE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 <br/>
 

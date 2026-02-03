@@ -4,7 +4,7 @@ description: This tutorial covers the basic steps required to publish a custom a
 next: /art/accessories/creating-rigid/modeling-setup
 ---
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/Eed29gV0hLA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/Eed29gV0hLA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 <br /><br />
 
 Rigid accessories are 3D objects that users can equip to their avatar characters in an experience or through Roblox's [Marketplace](https://www.roblox.com/catalog) and [Avatar Editor](https://www.roblox.com/my/avatar).

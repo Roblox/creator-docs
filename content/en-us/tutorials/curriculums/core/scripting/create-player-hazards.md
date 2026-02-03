@@ -9,7 +9,7 @@ prev: /tutorials/curriculums/core/scripting/record-and-display-player-data
 src="https://www.youtube-nocookie.com/embed/vlzZm3PQGfQ"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen></iframe>
+allowFullScreen></iframe>
 
 <br/>
 

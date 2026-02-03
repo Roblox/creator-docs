@@ -34,7 +34,7 @@ The **Bundles** feature package offers out-of-the-box functionality to sell coll
 
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<img src="../../assets/resources/feature-packages/Bundles/Bundles-Intro.png" width="100%" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "90%" }} />
+<img src="../../assets/resources/feature-packages/Bundles/Bundles-Intro.png" width="100%" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "90%" }} />
 </div>
 
 </Grid>
@@ -105,7 +105,7 @@ The **Missions** feature package offers out-of-the-box functionality to create m
 
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<img src="../../assets/resources/feature-packages/Missions/Missions-Intro.png" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "90%"}} />
+<img src="../../assets/resources/feature-packages/Missions/Missions-Intro.png" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "90%"}} />
 </div>
 
 </Grid>
@@ -176,7 +176,7 @@ The **Season Passes** feature package offers out-of-the-box functionality to cre
 
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<img src="../../assets/resources/feature-packages/Season-Passes/Season-Passes-Intro.png" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "90%"}} />
+<img src="../../assets/resources/feature-packages/Season-Passes/Season-Passes-Intro.png" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "90%"}} />
 </div>
 
 </Grid>
@@ -247,7 +247,7 @@ The **Engagement Rewards** feature package is a customizable framework for offer
 
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<img src="../../assets/resources/feature-packages/engagement/rewards.jpg" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "90%"}} />
+<img src="../../assets/resources/feature-packages/engagement/rewards.jpg" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "90%"}} />
 </div>
 
 </Grid>

@@ -5,7 +5,7 @@ prev: /tutorials/curriculums/core/building/create-basic-visual-effects
 next: /tutorials/curriculums/core/building/apply-polished-assets
 ---
 
-<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/VtsWu2G0ZiM?si=TZDy2jahPoWpCBnr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/VtsWu2G0ZiM?si=TZDy2jahPoWpCBnr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 <br/>
 **Global lighting** is the luminescence from either the sun or moon in your environment. By customizing a couple of key default properties in the `Class.Lighting` service and its default child objects in Studio, you can drastically change how global lighting looks and feels in your experience, as well as how the light interacts with any other object you place in the 3D space.

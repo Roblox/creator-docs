@@ -48,7 +48,7 @@ Whether you're just getting started with Roblox or need a quick refresher, use t
 
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-    <iframe src="https://www.youtube-nocookie.com/embed/EUDSIUmLjxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+    <iframe src="https://www.youtube-nocookie.com/embed/EUDSIUmLjxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
   </div>
     <Typography variant='h4'>Create avatar items</Typography>
     <Typography variant='body1' >Create accessories, clothing, and bodies that you can sell on the Marketplace.</Typography>
@@ -74,7 +74,7 @@ that teaches you the skills you need to create and monetize your experiences.
 
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<iframe src="https://www.youtube-nocookie.com/embed/nwShvDmFHWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/nwShvDmFHWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
 </div>
   <Typography variant='h4'>Environmental art</Typography>
   <Typography variant='body1' >Environmental art teaches you how to recreate a high-quality environment for a first-person laser tag experience.</Typography>
@@ -93,7 +93,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<iframe src="https://www.youtube-nocookie.com/embed/tzPn6QvU8Bo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/tzPn6QvU8Bo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
 </div>
   <Typography variant='h4'>Avatar item tutorials</Typography>
   <Typography variant='body1' >Check out our tutorials on creating your own Avatar items ready for the Marketplace.</Typography>
@@ -166,7 +166,7 @@ style={{marginRight:8, alignSelf: 'flex-start'}}>Learn more</Button>
 
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<iframe src="https://www.youtube-nocookie.com/embed/V-SDTfxcIF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/V-SDTfxcIF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
 </div>
 <Typography variant='h4'>Custom skyboxes 101</Typography>
 

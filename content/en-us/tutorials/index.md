@@ -241,7 +241,7 @@ While many creators focus on a single area, the following tutorials walk you thr
 
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
- <iframe src="https://www.youtube-nocookie.com/embed/nwShvDmFHWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+ <iframe src="https://www.youtube-nocookie.com/embed/nwShvDmFHWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
  </div>
    <Typography variant='h4'>Environmental art</Typography>
    <Typography variant='body1' >Learn how to recreate a high-quality environment for a first-person laser tag experience.</Typography>
@@ -259,7 +259,7 @@ While many creators focus on a single area, the following tutorials walk you thr
 
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
- <iframe src="https://www.youtube-nocookie.com/embed/7iJKUUiKc0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+ <iframe src="https://www.youtube-nocookie.com/embed/7iJKUUiKc0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
  </div>
    <Typography variant='h4'>Gameplay scripting</Typography>
    <Typography variant='body1' >Learn how to organize and implement the gameplay logic for a large, complex project.</Typography>
@@ -277,7 +277,7 @@ While many creators focus on a single area, the following tutorials walk you thr
 
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
- <iframe src="https://www.youtube-nocookie.com/embed/eqW9SINYeWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+ <iframe src="https://www.youtube-nocookie.com/embed/eqW9SINYeWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
  </div>
    <Typography variant='h4'>UI design</Typography>
    <Typography variant='body1' >Learn how to design and implement UI components for unique user flows.</Typography>

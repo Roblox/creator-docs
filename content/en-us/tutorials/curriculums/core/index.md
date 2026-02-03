@@ -15,7 +15,7 @@ hideInPageNavigation: true
 
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/zi0hIuPDyWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style={{position: "absolute", top: 0, left: 0, width: "95%", height: "95%"}}></iframe>
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/zi0hIuPDyWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen style={{position: "absolute", top: 0, left: 0, width: "95%", height: "95%"}}></iframe>
 </div>
 
 </Grid>

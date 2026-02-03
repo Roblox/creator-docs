@@ -11,7 +11,7 @@ For latest information on updates and limitations, see the [DevForum Announcemen
 
 **Reimport** allows you to update existing custom models and their textures from an external 3D file. Unlike regular [import](./3d-importer.md#import-files), which creates brand new instances, the reimport function updates existing objects non-destructively to help support the iterative nature of 3D development.
 
-<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/HVUO3Dl7qT0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <br />
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/HVUO3Dl7qT0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe> <br />
 
 Along with asset updates, reimport remembers the file and settings used to import the original asset. This means you can easily update an imported asset with a single click or hotkey without going through all the initial import settings. This memory persists across Studio sessions.
 

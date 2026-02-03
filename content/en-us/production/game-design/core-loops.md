@@ -3,7 +3,7 @@ title: Core loops
 description: Core Loops
 ---
 
-<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/gkFKF9A-snY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/gkFKF9A-snY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 <br />
 

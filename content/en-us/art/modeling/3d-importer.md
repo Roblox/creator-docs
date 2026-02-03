@@ -379,7 +379,7 @@ You can use the **&ctdot;** menu next to the Presets dropdown for additional opt
 
 ## Warnings and errors
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/UEHEsmCslBU" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/UEHEsmCslBU" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 <br />
 
 If Studio detects any issues with your model, a small indicator displays in the hierarchy panel or the settings panel.

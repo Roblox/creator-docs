@@ -3,7 +3,7 @@ title: Prototyping
 description: Prototyping
 ---
 
-<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/wN4-AERPU9g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/wN4-AERPU9g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 <br />
 
@@ -14,7 +14,7 @@ description: Prototyping
 
 ## Paper prototyping
 
-  <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/IJSih2t_jso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/IJSih2t_jso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
   <br />
 
@@ -49,7 +49,7 @@ Despite its benefits, prototyping on paper has drawbacks due to the difference i
 
 ## Studio prototyping
 
-<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/Q4Cec876KLU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/Q4Cec876KLU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 <br />
 

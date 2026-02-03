@@ -22,7 +22,7 @@ The following are video workflows for various tasks in exporting textures from a
 <Typography variant="label1">Reassigning textures in Blender</Typography>
 </AccordionSummary>
 <AccordionDetails>
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/B0y5fLlwkF0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br /><br />
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/B0y5fLlwkF0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe><br /><br />
 
 Additional notes:
 
@@ -37,7 +37,7 @@ Additional notes:
 <Typography variant="label1">Reassigning textures in Maya</Typography>
 </AccordionSummary>
 <AccordionDetails>
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/JaX5rcsStvQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/JaX5rcsStvQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 </AccordionDetails>
 </BaseAccordion>
@@ -47,7 +47,7 @@ Additional notes:
 <Typography variant="label1">Exporting textures from Photoshop</Typography>
 </AccordionSummary>
 <AccordionDetails>
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/0se12PNhVCI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br /><br />
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/0se12PNhVCI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe><br /><br />
 
 Additional notes:
 
@@ -61,7 +61,7 @@ Additional notes:
 <Typography variant="label1">Exporting textures from Substance Painter</Typography>
 </AccordionSummary>
 <AccordionDetails>
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/g79GBh0AcXA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/g79GBh0AcXA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 </AccordionDetails>
 </BaseAccordion>
 

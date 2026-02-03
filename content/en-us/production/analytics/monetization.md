@@ -3,7 +3,7 @@ title: Monetization
 description: Explains how to improve monetization metrics for your experience.
 ---
 
-<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/L6_HXinYTt0?si=N2nIj9L5wy9C0lBF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/L6_HXinYTt0?si=N2nIj9L5wy9C0lBF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 <br />
 
@@ -50,7 +50,7 @@ Here are some high level tips for growing your revenue:
 
 Devote as much creativity and attention to your storefront as you do to the rest of the experience. Users would appreciate an easy-to-find shop that helps them learn more about the experience.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YdplC2WVkWc" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YdplC2WVkWc" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 ## Improve payer conversion rate
 
@@ -62,7 +62,7 @@ To improve this metric:
 2. **Consider welcome offers and discounts for first-time purchasers**: This can lower the barrier for new users to try out your paid content to see how fun it is.
 3. **Analyze the purchase funnel and identify any issues**: Possible issues include unclear or confusing steps in the purchase flow or distractions that make it difficult for users to complete the process.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Cli3ogW-azk" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Cli3ogW-azk" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 ## Improve average revenue per paying user (ARPPU)
 

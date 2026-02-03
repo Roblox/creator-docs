@@ -18,11 +18,11 @@ The following ad formats can be served in your experience:
 
 <GridContainer numColumns="2">
 <figure>
-    <iframe width="440" height="247" src="https://www.youtube-nocookie.com/embed/4P79zbwU9D8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="440" height="247" src="https://www.youtube-nocookie.com/embed/4P79zbwU9D8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
     <figcaption>Video ad format (autoplaying)</figcaption>
   </figure>
   <figure>
-    <iframe width="440" height="247" src="https://www.youtube-nocookie.com/embed/JVjkzGIgoak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="440" height="247" src="https://www.youtube-nocookie.com/embed/JVjkzGIgoak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
     <figcaption>Video ad format (click-to-play)</figcaption>
   </figure>
   <figure>
@@ -107,7 +107,7 @@ Even if your experience is eligible to serve ads, not all users are eligible to 
 
 ## Insert ad units
 
-<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/dlItlMLMDCE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/dlItlMLMDCE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 <br /> <br />
 

@@ -3,7 +3,7 @@ title: Data model
 description: Explains the hierarchy of objects that describe everything about a place.
 ---
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/3Q0R1-Xkw9U" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/3Q0R1-Xkw9U" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 <br />
 
@@ -21,7 +21,7 @@ Runtime](/projects/client-server).
 
 ## Objects
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/FzmFAm00A8g" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/FzmFAm00A8g" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 <br />
 

@@ -7,7 +7,7 @@ import OpeningSteps from '../../includes/developer-console/opening-developer-con
 
 Every building and scripting component that you add to your experience consumes memory. When memory usage reaches engine limits, the user's device or server may crash, so you need to actively monitor usage.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/x1JgsC8c8VQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br />
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/x1JgsC8c8VQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe><br />
 
 The **Developer Console** provides two tools for monitoring memory usage:
 

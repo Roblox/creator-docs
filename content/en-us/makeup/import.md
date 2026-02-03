@@ -41,7 +41,7 @@ These instructions apply specifically to the Makeup test place, available in the
 
 ## Test with Avatar Setup
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/rHkHXl4Qkpg" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/rHkHXl4Qkpg" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 <br />
 
 You can also use the Avatar Setup tool to preview makeup assets without playtesting.

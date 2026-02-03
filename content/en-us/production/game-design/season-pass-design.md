@@ -3,7 +3,7 @@ title: Season pass design
 description: Teaches you about best practice guidance on designing season packs.
 ---
 
-<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/k2gbQI-ggB4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/k2gbQI-ggB4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 <br />
 

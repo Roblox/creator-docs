@@ -3,7 +3,7 @@ title: Caging best practices
 description: In-depth description and images of various caging best practices for layered clothing.
 ---
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/QwZaA9Gc-WQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/QwZaA9Gc-WQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 <br /><br />
 
 Caging is a complex process required to define the inner and outer surface of a layered clothing item. Properly caged assets allow your clothing items to stretch and layer in combination with each other. Cages that are improperly configured can lead to cosmetic issues with the look and feel of your clothing item.

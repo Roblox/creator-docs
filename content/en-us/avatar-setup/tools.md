@@ -74,7 +74,7 @@ As **Avatar Setup** continues development, check here for additional tools and f
 
 ### Edit cage meshes
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/fwbuhzq1D0k" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/fwbuhzq1D0k" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 <br /><br />
 
 You can modify your body cage mesh using the cage mesh editing tool. Use the brush and various brush settings to modify your cage, allowing you to make adjustments to how clothing and other layered assets fit on your character. <br />

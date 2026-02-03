@@ -5,7 +5,7 @@ description: Match players to servers inside your experience.
 
 Matchmaking is the process of matching players to servers based on player characteristics like age, language, skill level, and other gameplay preferences.
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/fUMlnldI53A" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/fUMlnldI53A" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 ## How matchmaking works
 

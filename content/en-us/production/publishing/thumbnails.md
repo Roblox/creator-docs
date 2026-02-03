@@ -178,7 +178,7 @@ After you set up and activate thumbnail personalization, its algorithm shows eac
 
 <br/>
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/5NvGzKVyKxg" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/5NvGzKVyKxg" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 ### Set up thumbnail personalization
 

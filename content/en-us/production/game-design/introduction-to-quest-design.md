@@ -4,7 +4,7 @@ description: Introduction to Quest Design, achievements, and dailies.
 ---
 
 <figure>
-     <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/d4g30UupgKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+     <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/d4g30UupgKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
       <figcaption>Introduction to quests, achievements, and dailies</figcaption>
     </figure>
 
@@ -175,11 +175,11 @@ In [_Spellbound_](https://www.roblox.com/games/6468323505/), the player accepts 
 For a more in-depth look at quests, watch these workshop videos. They include tips for designing, writing, and producing quests, as well as developing a spreadsheet to make quest development more efficient.
 
 <figure>
-     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1stxDQeHhr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1stxDQeHhr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
       <figcaption>Designing quests, achievements, and dailies</figcaption>
     </figure>
 
 <figure>
-    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/iWSZJSE2NEc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/iWSZJSE2NEc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
       <figcaption>Writing quests, achievements, and dailies</figcaption>
     </figure>

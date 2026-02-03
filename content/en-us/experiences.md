@@ -128,7 +128,7 @@ that teaches you the skills you need to create and monetize your experiences.
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>
-  <iframe src="https://www.youtube-nocookie.com/embed/nwShvDmFHWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/nwShvDmFHWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
   </div>
     <Typography variant='h4'>Environmental art</Typography>
     <Typography variant='body1' >Environmental Art teaches you how to create a high-quality environment for a laser tag experience.</Typography>
@@ -146,7 +146,7 @@ that teaches you the skills you need to create and monetize your experiences.
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>
-  <iframe src="https://www.youtube-nocookie.com/embed/7iJKUUiKc0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/7iJKUUiKc0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
   </div>
     <Typography variant='h4'>Gameplay scripting</Typography>
     <Typography variant='body1' >Gameplay Scripting teaches you how to organize and implement the scripting logic for large, complex project.</Typography>
@@ -164,7 +164,7 @@ that teaches you the skills you need to create and monetize your experiences.
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>
-  <iframe src="https://www.youtube-nocookie.com/embed/eqW9SINYeWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/eqW9SINYeWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
   </div>
     <Typography variant='h4'>UI Design</Typography>
     <Typography variant='body1' >UI Design teaches you how to plan and implement UI components for unique user flows.</Typography>

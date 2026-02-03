@@ -3,7 +3,7 @@ title: Publish to Marketplace
 description: Explains how to publish user-generated content to the Marketplace.
 ---
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/swQW2VS9ZMA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/swQW2VS9ZMA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 <br /><br />
 
 In order to publish and sell assets on the Marketplace, your account or group must first meet [Roblox's Creator and Group requirements](../marketplace/marketplace-policy.md#creator-and-group-requirements). Users who satisfy the requirements and have not hit their [publishing limits](#upload-and-publish-limits), can upload and sell their assets in the following general steps:

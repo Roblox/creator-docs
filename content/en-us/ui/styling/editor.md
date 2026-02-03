@@ -6,7 +6,7 @@ description: Explore the built-in Style Editor, a comprehensive tool that allows
 The built-in **Style Editor** is a comprehensive tool that allows you to create, manage, and apply UI styles for Roblox experiences through a combination of [tokens](#style-tokens), [design sheets](#design-sheets), [style rules](#style-rules), and [themes](#style-themes).
 
 <figure>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_k1ea0OIKaU?si=A9mdnnG95qdaZbB_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_k1ea0OIKaU?si=A9mdnnG95qdaZbB_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 </figure>
 
 Access the **Style Editor** via the **UI** tab.

@@ -7,7 +7,7 @@ description: The Avatar setup tool previews animations, clothing, accessories, a
 Auto-setup is currently in [active development](https://devforum.roblox.com/t/avatar-auto-setup-now-supports-clothing-and-accessories/3709128) with many improvements on the roadmap. Note that some inputs might work better than others and your results can vary over time as additional training and improvements are made.
 </Alert>
 
-<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/Hp9pr2FpZa8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br />
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/Hp9pr2FpZa8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> <br />
 
 If [Avatar Setup](./index.md) detects that the input model is an incomplete avatar asset model, the **auto-setup** feature attempts to convert the model into an avatar asset with all the advanced components that allow characters to interact with the world and express themselves with accessories and clothing. <br />
 

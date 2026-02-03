@@ -4,7 +4,7 @@ description: Monetization foundations
 ---
 
  <figure>
-    <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/1GKd9euwkuA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/1GKd9euwkuA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
     <figcaption>Introduction</figcaption>
   </figure>
 
@@ -23,13 +23,13 @@ Taken together, these components can foster a thriving economy within your exper
 ## Items
 
 <figure>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/rPHlMWSUgGU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/rPHlMWSUgGU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 <figcaption>Items and shop introduction</figcaption>
 </figure>
 
 <br />
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mWtz5UTyZX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mWtz5UTyZX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 <figcaption>Items</figcaption>
 
 <br />
@@ -72,7 +72,7 @@ They can then be further divided into categories of utility:
 ## The shop
 
 <figure>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/C3YrGutsuSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/C3YrGutsuSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 <figcaption>The shop</figcaption>
 </figure>
 <br />
@@ -124,7 +124,7 @@ New content and item updates invites players back to the store to see what's new
 ## Merchandising
 
 <figure>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qg-hhW21EOw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qg-hhW21EOw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 <figcaption>Merchandising</figcaption>
 </figure>
 
@@ -229,7 +229,7 @@ For out-of-the-box functionality to create bundles, see the [Bundles](../../reso
 ## Starter packs
 
 <figure>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/G0ZLMT9sHTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/G0ZLMT9sHTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 <figcaption>Starter packs</figcaption>
 </figure>
 
@@ -287,7 +287,7 @@ The starter pack should be merchandised as a special deal using price calculatio
 ## Season passes
 
 <figure>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wIT3hWvwYPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wIT3hWvwYPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 <figcaption>Season passes</figcaption>
 </figure>
 <br />

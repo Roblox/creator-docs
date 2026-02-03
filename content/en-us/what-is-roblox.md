@@ -9,7 +9,7 @@ hideInPageNavigation: true
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<iframe src="https://www.youtube-nocookie.com/embed/vIiVbFiDbBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/vIiVbFiDbBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
 </div>
 </Grid>
 </Grid>
@@ -45,7 +45,7 @@ style={{marginRight:16, alignSelf: 'flex-start'}}>Learn More</Button>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<iframe src="https://www.youtube-nocookie.com/embed/SgPU84AqpkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/SgPU84AqpkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
 </div>
 <Typography variant='h4'>Intro to world building</Typography>
 <Typography variant='body1' >Roblox is designed for massive 3D worlds. Learn how to use Roblox Studio to start building!</Typography>
@@ -55,7 +55,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<iframe src="https://www.youtube-nocookie.com/embed/9mXvhYSv7fc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/9mXvhYSv7fc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
 </div>
 <Typography variant='h4'>Intro to physics</Typography>
 <Typography variant='body1' >Roblox is a simulation-first engine that mimics the real world. Learn more about how physics operates in the Roblox Engine.</Typography>
@@ -87,7 +87,7 @@ style={{marginRight:16, alignSelf: 'flex-start'}}>Learn More</Button>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<iframe src="https://www.youtube-nocookie.com/embed/QAJ2Qg5RmiU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/QAJ2Qg5RmiU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
 </div>
 <Typography variant='h4'>Get started with UGC</Typography>
 <Typography variant='body1'>Watch this interview with PolarCub, one of the top UGC item creators on Roblox.</Typography>
@@ -97,7 +97,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<iframe src="https://www.youtube-nocookie.com/embed/EUDSIUmLjxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/EUDSIUmLjxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
 </div>
 <Typography variant='h4'>Avatar items</Typography>
 <Typography variant='body1'>Get an overview of everything you can build for Roblox avatars.</Typography>
@@ -108,7 +108,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<iframe src="https://www.youtube-nocookie.com/embed/tzPn6QvU8Bo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/tzPn6QvU8Bo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
 </div>
 <Typography variant='h4'>Rigid accessories</Typography>
 <Typography variant='body1'>Accessories are items that users can attach to their avatars at a single attachment point.</Typography>
@@ -118,7 +118,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<iframe src="https://www.youtube-nocookie.com/embed/gXXukd6yOSs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/gXXukd6yOSs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
 </div>
 <Typography variant='h4'>Layered clothing</Typography>
 <Typography variant='body1'>Build clothing that can layer and stretch on a variety of avatar sizes and shapes.</Typography>
@@ -128,7 +128,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<iframe src="https://www.youtube-nocookie.com/embed/2My8jE47clI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/2My8jE47clI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
 </div>
 <Typography variant='h4'>Custom characters</Typography>
 <Typography variant='body1' >Build completely custom avatar heads and bodies that users can equip.</Typography>

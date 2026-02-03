@@ -3,7 +3,7 @@ title: Rewarded video ads
 description: Immersive ads allow you insert ad units into your experience that programmatically serve ad content.
 ---
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/-HYByqvW2uc" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/-HYByqvW2uc" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 <br /><br />
 
@@ -27,7 +27,7 @@ Before implementing rewarded video ads, consider where inside your experience yo
 
 <br /><br />
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/Jpj0VnA-jmI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/Jpj0VnA-jmI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 <br /><br />
 

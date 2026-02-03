@@ -3,7 +3,7 @@ title: LiveOps essentials
 description: LiveOps Essentials is an overview of what live ops are and how to think about designing them effectively.
 ---
 
-<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/kNE757v3Bwg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/kNE757v3Bwg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 <br />
 

@@ -3,7 +3,7 @@ title: Retention
 description: Explains how to improve retention metrics for your experience.
 ---
 
-<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/LpAU6TheAZ4?si=_1r_ZtlJ3WsrZMUf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/LpAU6TheAZ4?si=_1r_ZtlJ3WsrZMUf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 <br />
 
@@ -80,7 +80,7 @@ The following example is one path to improve your core loop:
 2. **Balance the challenge** of your core loop to avoid user frustration and boredom.
 3. **Reward users** for completing your core loop with feedback, currency, items, and achievements.
 
-<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/gkFKF9A-snY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/gkFKF9A-snY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 <br />
 
@@ -108,7 +108,7 @@ You can also use analytics to improve your FTUE:
 
 Avoid a complex or time consuming FTUE, as you want to get users to the fun as quickly as possible, ideally in 5 minutes or less after entering your experience.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XfxbdKtSbOI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XfxbdKtSbOI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 <br />
 
@@ -146,7 +146,7 @@ You can use analytics to improve your progression system:
 
 3. **Fix the progression system**. If users level up too quickly or too slowly, evaluate the difficulties of your progression system's tasks and adjust them accordingly to make sure users spend the proper amount of time on each level.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hD2Ive5RqtE" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hD2Ive5RqtE" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 ## Improve day 30 retention
 

@@ -13,7 +13,7 @@ To keep assets organized and reusable across your team or across multiple projec
 
 The most efficient workflow is to [create a package](#create-packages), [share it](#share-and-access-levels) with any collaborators, and [set it to auto-update](#automatic-updates). And you don't have to wait for a model to be "done" before using it in a package. Even if the package is a placeholder on top of a simple shape, you can use it to [greybox your environment](../../tutorials/curriculums/environmental-art/greybox-your-environment.md) and then have the placeholder copies automatically update as you publish more detailed versions.<br /><br />
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AzKZy2BqIh8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AzKZy2BqIh8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 ## Create packages
 

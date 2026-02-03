@@ -3,7 +3,7 @@ title: Event types
 description: Overview of using event types to track user sources, sinks and milestones in your experience.
 ---
 
-<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/NFLP-FVv834" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <br />
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/NFLP-FVv834" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe> <br />
 
 Event types help you identify opportunities to grow and monetize your experience. They allow you to **integrate event tracking in your experience** and visualize your in-experience economy and player usage patterns on the Analytics dashboard
 
