@@ -130,6 +130,7 @@ https://github.com/
 https://github.com/Elttob/Fusion
 https://github.com/Roblox/StudioWidgets
 https://github.com/Roblox/avatar/tree/main/Makeup
+https://github.com/Roblox/avatar/blob/main/Makeup/MakeupBeta.zip
 https://github.com/Roblox/creator-docs
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/cloud.docs.json
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/openapi.json

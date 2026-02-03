@@ -13,12 +13,133 @@ Character models designed to be sold on the Marketplace require a specific set o
 For information on character body requirements, see [character specifications](./specifications.md).
 </Alert>
 
-To pass Marketplace validation, a dynamic head requires:
+## How validation works
 
-1. A configured [head cage](#head-cage), with distinct eye and mouth landmarks.
-2. [FACS controls](#facs-animation) to enable basic facial movements.
+Roblox runs a rigorous validation to ensure the asset being uploaded to the Marketplace is compatible with all other assets on the Marketplace. For heads, validation primarily ensures that the head asset includes:
 
-Validation verifies that landmarks on the head mesh, denoted by the cage projections, must deform correctly when facial animation is applied for the basic movement tests.
+- A correctly **configured cage** — to wear clothing and accessories.
+- Correctly configured **facial animation poses** — to perform basic universal expressions, such as blinking and smiling.
+
+The primary validation check for heads **uses the cage to validate facial animation**. See below for a reference of how validation processes, as well as common [invalid examples](#invalid-examples).
+
+<Alert severity = 'warning'>
+Validation also checks for other issues, such as poor caging or missing required FACS poses.
+</Alert>
+
+### Landmark projection
+
+Validation uses the head cage to project landmarks onto the head mesh. This helps Roblox establish where the eyes and mouth are and helps guide the facial animation test.
+
+<GridContainer numColumns="2">
+
+<figure>
+
+<img src="../../assets/art/avatar/Cage-With-Landmarks.png"/>
+<figcaption>Cage mesh: Specific vertices of the cage mark eyes and mouth.</figcaption>
+</figure>
+
+<figure>
+
+<img src="../../assets/art/avatar/Projection-Side.png"/>
+<figcaption>Roblox validation projects these points onto the head mesh.</figcaption>
+</figure>
+</GridContainer>
+
+<center><figure>
+
+<img src="../../assets/art/avatar/Face-Landmarks.png" width = "60%"/>
+<figcaption><center>Head mesh: All landmarks projected from cage mesh to head mesh.</center></figcaption>
+</figure>
+</center>
+
+<Alert severity = "success">
+Once validation verifies that projection is successful and all landmarks established onto the head mesh, it can move onto testing facial animations.
+</Alert>
+
+### Test face animations
+
+Now that the validation system knows where to check for the eyes and mouth, the validation checks for facial animations to ensure that the following basic actions are possible:
+
+- Left and right eyes can close
+- Mouth can open and close
+- Basic happy and sad expressions
+  - For a full list of basic action units and poses, see [FACS animations](#facs-animation).
+
+The validation looks for the **relative change in the landmarks**. For example, when testing for right eye closing (FACS pose: `RightEyeClosed`), validation checks if the landmarks move from their original neutral state accordingly.
+
+<GridContainer numColumns="2">
+
+<figure>
+
+<img src="../../assets/art/avatar/Face-Landmarks.png"/>
+<figcaption><Alert severity = "success">Face mesh with all projected landmarks applied from cage.</Alert></figcaption>
+</figure>
+
+<figure>
+
+<img src="../../assets/art/avatar/Eye-Closed-Success.png"/>
+<figcaption><Alert severity = "success">
+Validation verifies that the right eye can close based off of displacement of landmarks.
+</Alert></figcaption>
+</figure>
+</GridContainer>
+
+### Invalid examples
+
+The following are common issues that cause validation failures.
+
+#### Unable to project landmarks
+
+If validation is unable to apply the projection correctly onto the surface of the head, the validation fails. This often occurs if your **cage extends beyond your head mesh**, or if your head mesh has a **hole or gap** that prevents the application of the landmark. See the following examples:
+
+<GridContainer numColumns="2">
+
+<figure>
+
+<img src="../../assets/art/avatar/Missing-Landmarks-A.png"/>
+<figcaption><Alert severity = "error">Cage **extends too far beyond the mesh** and the validation is unable to apply 3 landmarks to the base mesh.</Alert></figcaption>
+</figure>
+
+<figure>
+
+<img src="../../assets/art/avatar/Missing-Landmarks-B.png"/>
+<figcaption><Alert severity = "error">
+Base mesh has a **hollow gap** in the design, preventing validation from applying 3 landmarks to denote the eye area.
+</Alert></figcaption>
+</figure>
+</GridContainer>
+
+<Alert severity = 'success'>
+In both cases, adjusting the cage to allow the proper projection of landmarks to the base mesh would resolve this issue.
+</Alert>
+
+#### Animations not displacing landmarks
+
+In the case where landmarks are correctly applied to the base mesh, it's possible that the facial animations do not displace the landmarks enough. See the following example:
+
+<GridContainer numColumns="2">
+<figure>
+<img src="../../assets/art/avatar/Face-Landmarks-Poor.png" />
+<figcaption><Alert severity ='warning'>Landmarks successfully established on base mesh, but are not near the expected regions.</Alert></figcaption>
+</figure>
+
+<figure>
+<img src="../../assets/art/avatar/Landmarks-Fail-B.png"/>
+<figcaption><Alert severity = "error">When testing animations, validation doesn't detect the expected change to the landmark regions.</Alert></figcaption>
+</figure>
+</GridContainer>
+
+<Alert severity = 'success'>
+In the example case, adjusting the cage to allow the proper projection of landmarks at the appropriate areas would resolve this issue.
+</Alert>
+
+There may also be cases where the landmarks are correct, but the animation itself does not alter the projected landscapes enough to pass validation. In these cases, fixing the animation and/or optimizing the cage could help the validation properly identify the facial animation.
+
+#### Animation data missing
+
+Heads require [17 specific FACS poses](#facs-animation) that are used to test the 5 basic actions. Regardless of landmarks or other FACS animations, validation immediately fails if the minimum 17 poses were not detected.
+
+For information on how to pose and map dynamic heads, see [Creating basic heads](../characters/facial-animation/create-basic-heads.md).
 
 ## Auto-setup recommendation
 
