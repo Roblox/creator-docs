@@ -5,55 +5,13 @@
 name: GenerationService
 type: class
 memory_category: Instances
-summary: |
-  Service that allows developers to generate 3D objects from text prompts.
-description: |
+summary: Service that allows developers to generate 3D objects from text prompts.
+description: |-
   `GenerationService` enables you to generate 3D objects from text prompts using
   Roblox's Cube 3D foundation model. This enables the generation of objects like
-  environmental props in-experience.
-
-  You can control the output by providing an optional `Datatype.Vector3` to the
-  `SuggestedSize` parameter. Rather than simply rescaling the result, this
-  parameter guides the model during the creation process, influencing it to
-  create a mesh that attempts to match the proportions and size of your
-  specified bounding box.
-
-  Mesh generation is a two step process:
-
-  1. `Class.GenerationService:GenerateMeshAsync()|GenerateMeshAsync()` starts
-     the mesh generation process using a text prompt and other required
-     parameters. It returns a unique identifier (generation ID) that can be used
-     to retrieve the future result.
-  2. `Class.GenerationService:LoadGeneratedMeshAsync()|LoadGeneratedMeshAsync()`
-     loads the generated mesh into the experience. The mesh is returned as a
-     `Class.MeshPart` or `Class.Model`.
-
-  Currently, `GenerationService` only supports the following usage:
-
-  - `Class.GenerationService:GenerateMeshAsync()|GenerateMeshAsync()` must be
-    called from server scripts.
-  - `Class.GenerationService:LoadGeneratedMeshAsync()|LoadGeneratedMeshAsync()`
-    must be called from client scripts.
-
-  As a result, when a mesh generation request originates from a client, the
-  client must send a signal to the server to initiate generation. Once the
-  server determines that generation is complete, it should notify the
-  appropriate client to call
-  `Class.GenerationService:LoadGeneratedMeshAsync()|LoadGeneratedMeshAsync()`
-  and retrieve the mesh. Note that since the generated mesh is loaded with
-  `Class.EditableMesh` content and only on the client, it is not replicated to
-  any other clients.
-
-  See
-  [this demo experience](https://www.roblox.com/games/108838517877898/SuggestedSize-Generation-Template)
-  for a more detailed example including usage of the `SuggestedSize` option
-  (click the **&ctdot;** button and **Edit in Studio**).
-code_samples:
-  - GenerationService-ServerSideMeshGeneration
-  - GenerationService-ClientSideMeshGeneration
-  - GenerationService-ServerSideMeshGeneration-WithSuggestedSize
-  - GenerationService-ClientSideMeshGeneration-WithSuggestedSize
-  - GenerationService-StarterPlayerScripts-WithSuggestedSize
+  environmental props in-experience, as well as fully functional models like
+  vehicles that drive, planes that fly, and weapons that shoot.
+code_samples: []
 inherits:
   - Instance
 descendants: []
@@ -64,90 +22,102 @@ deprecation_message: ''
 properties: []
 methods:
   - name: GenerationService:GenerateMeshAsync
-    summary: |
-      Starts the generation of a new 3D mesh from a text prompt and returns
-      unique IDs used to track and retrieve the result.
-    description: |
-      Starts the generation of a new 3D mesh from a text prompt and returns
-      unique IDs used to track and retrieve the result. You can optionally
-      receive intermediate results, such as the untextured mesh, by providing an
-      `intermediateResultCallback` function. After the generation is complete,
-      use
-      `Class.GenerationService:LoadGeneratedMeshAsync|LoadGeneratedMeshAsync()`
-      to load and display the generated mesh.
+    summary: Starts the generation of a new 3D mesh from a text prompt and returns unique IDs used to track and retrieve the result.
+    description: |-
+      Starts the generation of a new 3D mesh from a text prompt and returns unique IDs
+      used to track and retrieve the result. Must be called from server scripts. You
+      can optionally receive intermediate results, such as the untextured mesh, by
+      providing an `intermediateResultCallback` function.
 
-      **Error Codes**
+      After the generation is complete, use
+      `Class.GenerationService:LoadGeneratedMeshAsync|LoadGeneratedMeshAsync()` to
+      load and display the generated mesh.
 
-      | Error                                      | Description                                                              | Recommended developer action                                                         |
-      | ------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-      | Rate limit exceeded                        | The maximum number of mesh generations has been exceeded for the minute. | Wait until the rate limit resets.                                                    |
-      | Moderation failed                          | The mesh generation was flagged for moderation.                          | Review and modify the prompt to ensure it adheres to Roblox's moderation guidelines. |
-      | Internal server error                      | An unexpected issue occurred on the server.                              | Retry the request later or check server status for issues.                           |
-      | Character limit exceeded                   | The input prompt length for this generation request exceeded the limit.  | Reduce the number of characters in the `Prompt` string of the `input` dictionary.    |
-      | Service overloaded                         | The service is overloaded.                                               | Retry the request later.                                                             |
-      | Size dimensions must all be greater than 0 | Invalid size provided.                                                   | Change the size to above `0`.                                                        |
+      #### Error Codes
+
+      | Error                    | Description                                                              | Recommended action                                                         |
+      | ------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+      | Rate limit exceeded      | The maximum number of mesh generations has been exceeded for the minute. | Wait until the rate limit resets.                                                    |
+      | Moderation failed        | The mesh generation was flagged for moderation.                          | Review and modify the prompt to ensure it adheres to Roblox's moderation guidelines. |
+      | Internal server error    | An unexpected issue occurred on the server.                              | Retry the request later or check server status for issues.                           |
+      | Character limit exceeded | The input prompt length for this generation request exceeded the limit.  | Reduce the number of characters in the `Prompt` string of the `input` dictionary.    |
+      | Service overloaded       | The service is overloaded.  | Retry the request later.                   | 
+      | Size dimensions must all be greater than 0 | Invalid size provided.  | Change the size to above `0`.    |
     code_samples: []
     parameters:
       - name: inputs
         type: Dictionary
         default:
-        summary: |
-          A dictionary containing the mesh generation prompts. Currently, the
-          only supported key is the `Prompt` (string) that describes the mesh to
-          generate.
+        summary: A dictionary containing the mesh generation prompts. Currently, the only supported key is the `Prompt` (string) that describes the mesh to generate.
       - name: player
         type: Player
         default:
-        summary: |
-          The `Class.Player` requesting the generation.
+        summary: The `Class.Player` requesting the generation.
       - name: options
         type: Dictionary
         default:
-        summary: |
-          A dictionary for additional generation options to influence the
-          result. The following key is supported: - `SuggestedSize` — Optional
-          `Datatype.Vector3` representing a size guide for the generated asset.
-          The service will attempt to create a model with a size and proportion
-          similar to the provided `Datatype.Vector3`. This does not guarantee
-          the final output size.
+        summary: A dictionary for additional generation options to influence the result. The optional `SuggestedSize` key (`Datatype.Vector3`) represents a size guide for the generated asset, meaning `GenerationService` will attempt to create a model with a size and proportion similar to the provided `Datatype.Vector3`, although there is no guarantee on the final output size.
       - name: intermediateResultCallback
         type: Function?
         default:
-        summary: |
-          A callback function triggered with intermediate generation results.
-          Useful for retrieving early mesh versions before textures are applied.
+        summary: A callback function triggered with intermediate generation results. Useful for retrieving early mesh versions before textures are applied.
     returns:
       - type: Tuple
-        summary: |
-          A tuple of the generation ID (a unique ID returned for each invocation
-          of `GenerateMeshAsync()`) and context ID (not currently used).
+        summary: A tuple of the generation ID (a unique ID returned for each invocation of `GenerateMeshAsync()`) and context ID (not currently used).
     tags:
       - Yields
-    deprecation_message: ''
+    deprecation_message: This method is scheduled for future deprecation. Explore `Class.GenerationService:GenerateModelAsync()|GenerateModelAsync()` as a newer method.
     security: None
     thread_safety: Unsafe
     capabilities:
       - DynamicGeneration
   - name: GenerationService:GenerateModelAsync
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: Enables generation of multi-mesh geometries according to provided `inputs` and a `schema`.
+    description: |-
+      Enables generation of multi-mesh geometries according to provided
+      `inputs` and a `schema`.
+
+      This method throws an error during the generation process for issues like prompt
+      rejection, generation timeouts, `schema` mismatches, or backend service errors.
+      It's recommended to wrap it in a `Global.LuaGlobals.pcall()` to catch such
+      errors.
+
+      See [this guide](../../../parts/model-generation.md) for more detailed examples
+      including usage of a `Behaviors` module to connect functional behaviors to
+      generated models.
+    code_samples:
+      - GenerationService-Basic-Car5
     parameters:
       - name: inputs
         type: Dictionary
         default:
-        summary: ''
+        summary: |-
+          A table representing conditioning inputs with the following keys:
+            	
+          - `TextPrompt` — String description of the object to generate.
+          - `Size` — Optional `Datatype.Vector3` describing the object size to generate.
+            This is only approximate; scale the model extents post‑generation if you need
+            a specific size.
+          - `MaxTriangles` — Optional integer describing the maximum number of triangles
+            that the returned model will contain. Lower values result in more faceted and
+            low-poly generations.
+          - `GenerateTextures` — `true` (default) textures the resulting generation, while
+            `false` will not generate textures.
       - name: schema
         type: Dictionary
         default:
-        summary: ''
+        summary: Table representing the generation schema. Must contain a `PredefinedSchema` key with a string value; current valid options are `Car5` for a basic vehicle chassis consisting of five `Class.Model|Models`, or `Body1` which results in a single mesh output.
       - name: options
         type: Dictionary?
         default:
-        summary: ''
+        summary: Currently not used; reserved for future customization options.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |-
+          Tuple with the following elements:
+
+          - A standard `Class.Model` container instance that is compliant with the specified `schema`.
+          - A table containing a UUID and other metadata about the generation.
     tags:
       - Yields
     deprecation_message: ''
@@ -156,31 +126,24 @@ methods:
     capabilities:
       - DynamicGeneration
   - name: GenerationService:LoadGeneratedMeshAsync
-    summary: |
+    summary: Retrieves and loads a mesh generated by `Class.GenerationService:GenerateMeshAsync()` using the provided `generationId`.
+    description: |-
       Retrieves and loads a mesh generated by
-      `Class.GenerationService:GenerateMeshAsync()` using the provided
-      `generationId`.
-    description: |
-      Retrieves and loads a mesh generated by
-      `Class.GenerationService:GenerateMeshAsync()|GenerateMeshAsync()` using
-      the provided `generationId`. The mesh can be returned as a
-      `Class.MeshPart` or `Class.Model`. Because editable meshes are not
-      replicated, the loaded mesh is not replicated to any other clients and can
-      only be loaded once per `generationId`.
+      `Class.GenerationService:GenerateMeshAsync()|GenerateMeshAsync()` using the
+      provided `generationId`. Must be called from client scripts.
+
+      The mesh can be returned as a `Class.MeshPart` or `Class.Model`. Because
+      editable meshes are not replicated, the loaded mesh is not replicated to any
+      other clients and can only be loaded once per `generationId`.
     code_samples: []
     parameters:
       - name: generationId
         type: string
         default:
-        summary: |
-          The unique ID returned by
-          `Class.GenerationService:GenerateMeshAsync()|GenerateMeshAsync()`.
-          Identifies the mesh to load.
+        summary: The unique ID returned by `Class.GenerationService:GenerateMeshAsync()|GenerateMeshAsync()`. Identifies the mesh to load.
     returns:
       - type: MeshPart
-        summary: |
-          The generated asset, returned as a `Class.Model` with a single
-          `Class.MeshPart` containing an `Class.EditableMesh`.
+        summary: The generated asset, returned as a `Class.Model` with a single `Class.MeshPart` containing an `Class.EditableMesh`.
     tags:
       - Yields
     deprecation_message: ''

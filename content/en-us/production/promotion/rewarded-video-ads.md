@@ -220,13 +220,13 @@ local adButton = Instance.new("TextButton", screenGui)
 
 -- Register the button with AdService
 local success, err = pcall(function()
--- The second parameter is an optional Placement ID (UUID) parameter generated in the Creator Hub.
--- If you choose not to provide a Placement ID, the ad opportunity is tracked under the default placement.
-  AdService:RegisterAdOpportunityAsync(adButton, "123e4567-e89b-12d3-a456-426614174000")
+	-- The second parameter is an optional Placement ID (Number) parameter generated in the Creator Hub.
+	-- If you choose not to provide a Placement ID, the ad opportunity is tracked under the default placement.
+	AdService:RegisterAdOpportunityAsync(adButton, 1234567891234567)
 end)
 
 if not success then
-  warn("Failed to register ad opportunity:", err)
+	warn("Failed to register ad opportunity:", err)
 end
 ```
 

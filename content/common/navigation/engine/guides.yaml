@@ -179,8 +179,8 @@ navigation:
             path: /workspace/collisions
           - title: Raycasting
             path: /workspace/raycasting
-          # - title: Bézier Curves
-          #   path: /docs/mechanics/bezier-curves
+      - title: Model generation
+        path: /parts/model-generation
   - title: Scripting
     path: /scripting/
     section:

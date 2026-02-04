@@ -224,7 +224,7 @@ The following slider designates its container as the `Class.UIDragDetector.Bound
 <video src="../assets/ui/ui-drag-detectors/Transparency-Slider.mp4" controls width="90%" alt="Video demonstrating event signals utilized to implement a transparency slider widget."></video>
 
 <Alert>
-To test this example, download the <a href="../assets/ui/ui-drag-detectors/TransparencySlider.rbxm">`TransparencySlider.rbxm`</a> file, right‑click `Class.StarterGui` in the [Explorer](../studio/explorer.md) window, select **Insert&nbsp;from&nbsp;File**, and choose the downloaded file.
+To test this example, download the <a href="../assets/ui/ui-drag-detectors/TransparencySlider.rbxm">`TransparencySlider.rbxm`</a> file, right‑click `Class.StarterGui` in the [Explorer](../studio/explorer.md) window, select **Insert**&nbsp;⟩ **Import&nbsp;Roblox&nbsp;Model**, and choose the downloaded file.
 </Alert>
 
 ```lua title="UIDragDetector - Event Signal Transparency Change"
@@ -265,7 +265,7 @@ The following detector has its `Class.UIDragDetector.DragStyle|DragStyle` set to
 <video src="../assets/ui/ui-drag-detectors/Hue-Rotator.mp4" controls width="90%" alt="Video demonstrating property change detection to implement a hue rotator widget."></video>
 
 <Alert>
-To test this example, download the <a href="../assets/ui/ui-drag-detectors/HueRotator.rbxm">`HueRotator.rbxm`</a> file, right‑click `Class.StarterGui` in the [Explorer](../studio/explorer.md) window, select **Insert&nbsp;from&nbsp;File**, and choose the downloaded file.
+To test this example, download the <a href="../assets/ui/ui-drag-detectors/HueRotator.rbxm">`HueRotator.rbxm`</a> file, right‑click `Class.StarterGui` in the [Explorer](../studio/explorer.md) window, select **Insert**&nbsp;⟩ **Import&nbsp;Roblox&nbsp;Model**, and choose the downloaded file.
 </Alert>
 
 ```lua title="UIDragDetector - DragRotation Change"
@@ -332,7 +332,7 @@ The following example utilizes a constraint function that clamps the planar drag
 <video src="../assets/ui/ui-drag-detectors/Grid-Drag.mp4" controls width="90%" alt="Video demonstrating a custom constraint function that clamps the planar drag into a grid."></video>
 
 <Alert>
-To test this example, download the <a href="../assets/ui/ui-drag-detectors/GridDrag.rbxm">`GridDrag.rbxm`</a> file, right‑click `Class.StarterGui` in the [Explorer](../studio/explorer.md) window, select **Insert&nbsp;from&nbsp;File**, and choose the downloaded file.
+To test this example, download the <a href="../assets/ui/ui-drag-detectors/GridDrag.rbxm">`GridDrag.rbxm`</a> file, right‑click `Class.StarterGui` in the [Explorer](../studio/explorer.md) window, select **Insert**&nbsp;⟩ **Import&nbsp;Roblox&nbsp;Model**, and choose the downloaded file.
 </Alert>
 
 ```lua title="UIDragDetector - Drag in Grid, Snapping to Tiles"
