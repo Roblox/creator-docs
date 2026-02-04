@@ -55,6 +55,8 @@ navigation:
         section:
           - title: Overview
             path: /art/characters/facial-animation/
+          - title: Validation process
+            path: /art/characters/head-validation
           - title: Head specifications
             path: /art/characters/head-specifications
           - title: Face cage optimizations

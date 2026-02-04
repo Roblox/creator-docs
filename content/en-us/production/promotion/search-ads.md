@@ -81,7 +81,7 @@ To create search ads:
 
 6. In the Review Campaign page, review the final details of your advertisement and click **SUBMIT** to launch your campaign.
 
-After launching your campaign, you can monitor the campaign's performance with [ads reporting](#reporting) and [billing](./reporting-and-billing.md#billing).
+After launching your campaign, you can monitor the campaign's performance with [ads reporting](#reporting) and [billing](./ads-manager.md#billing).
 
 ## Bidding and auction
 
@@ -113,6 +113,6 @@ The following is the [same bidding and auction information](./ads-manager.md#bid
 
 ## Reporting
 
-You can review your ad campaign's performance using the Ad Manager's [ads reporting tool](./reporting-and-billing.md#reporting). At this time, you can't filter reports by keywords, but you can create ad sets with a single keyword to compare how an individual keyword performs for your campaign.
+You can review your ad campaign's performance using the Ad Manager's [ads reporting tool](./ads-manager.md#reporting). At this time, you can't filter reports by keywords, but you can create ad sets with a single keyword to compare how an individual keyword performs for your campaign.
 
 Search ad metrics also populate in the [Analytics Dashboard](../analytics/acquisition.md#acquisition-sources) acquisition metrics. At this time, search ad and sponsored ad results are combined as a single Sponsored Ad metric on acquisition reports.

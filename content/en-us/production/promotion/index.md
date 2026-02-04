@@ -22,7 +22,7 @@ The following table details promotional methods for experiences on the platform.
   <tr>
 		<td>**Search ads**</td>
 		<td>Promote your experiences in search results by creating search ads.  This form of advertising allows developers to target their ads to users using search, increasing the likelihood of engagement based off of specific keywords.
-		<br /><br />For more information, see [Search ads](../../production/promotion/search-ads.md).</td>
+		<br /><br />For more information, see [Ads Manager](../../production/promotion/ads-manager.md).</td>
   </tr>
   <tr>
 		<td>**Sponsored experiences**</td>

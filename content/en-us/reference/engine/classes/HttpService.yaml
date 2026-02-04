@@ -431,6 +431,12 @@ methods:
                   <td>no</td>
                   <td>An optional compression field that will compress the data in the request. The value can either be <code>Enum.HttpCompression.None</code> or <code>Enum.HttpCompression.Gzip</code>.</td>
               </tr>
+              <tr>
+                  <td><code>Timeout</code></td>
+                  <td><code>Integer</code></td>
+                  <td>no</td>
+                  <td>An optional timeout value in seconds to make requests time out more quickly. Values must be greater than zero and no greater than the default request timeout. This can be useful when debugging hanging requests.</td>
+              </tr>
           </tbody>
       </table>
 

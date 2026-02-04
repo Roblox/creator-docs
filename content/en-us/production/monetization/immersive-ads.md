@@ -68,7 +68,7 @@ How publishers earn:
 
 - **Portal ads** are static, non-clickable images with a door that teleports users into an advertiser's experience. Advertisers bid on a teleport, so publishers earn for each successful teleport. A teleport is when a user enters the portal and arrives at the advertiser's experience.
 
-To learn more about how advertisers are billed, see [Billing](../promotion/reporting-and-billing.md#billing).
+To learn more about how advertisers are billed, see [Billing](../promotion/ads-manager.md#billing).
 
 Roblox pays out earnings on the 25th of the following month from when you inserted ad units into your experience. For example, if you insert ad units during the month of March, your payout date for the viewable impressions and successful teleports from those ad units is April 25. You can track your collective earnings from ads either through the **My Transactions** or the **Group Transactions** page. You can also analyze their overall performance through metrics graphs on the Creator Dashboard.
 

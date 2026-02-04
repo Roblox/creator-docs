@@ -64,15 +64,15 @@ Here's a list of all the available acquisition sources:
   </tr>
   <tr>
     <td>Sponsored ads</td>
-    <td>Acquisition from [sponsored experiences](../promotion/ads-manager.md#sponsored-experiences) and **Sponsored Takeovers** on **Home**</td>
+    <td>Acquisition from [sponsored experiences](../promotion/ads-manager.md) and **Sponsored Takeovers** on **Home**</td>
   </tr>
   <tr>
     <td>Search ads</td>
-    <td>Acquisition from [search ads](../promotion/search-ads.md)</td>
+    <td>Acquisition from [search ads](../promotion/ads-manager.md)</td>
   </tr>
   <tr>
     <td>Portal ads</td>
-    <td>Acquisition from [portal ads](../promotion/ads-manager.md#portal-ads)</td>
+    <td>Acquisition from [portal ads](../monetization/immersive-ads.md#portal-ads)</td>
   </tr>
   <tr>
     <td>Teleport</td>

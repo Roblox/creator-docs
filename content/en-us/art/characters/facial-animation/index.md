@@ -20,6 +20,15 @@ When creating heads intended for the Marketplace, ensure that your head meets Ro
 
 Using third-party modeling tools, you can either modify a rigged character model to meet head requirements, or create a head from scratch. For step-by-step instructions on how to add face bones, apply skinning, posing, and mapping poses on a head model in Blender, see [Create basic heads](../../../art/characters/facial-animation/create-basic-heads.md). This guide includes several reference files you can use to compare and track your progress.
 
+### Resources
+
+Heads designated for the Marketplace require specific components to ensure universal support across Roblox's platform. Heads are often the most complex part of an avatar character. Use the following docs to best equip your assets to pass validation and work well with other assets:
+
+- Understand how Roblox tests facial animations in the [validation process](../head-validation.md) and learn common issues that you can self-resolve.
+- Similar to character bodies and clothing, Marketplace heads must also follow [Roblox's specifications](../head-specifications.md).
+- Ensure that you are following Roblox's [head caging best practices](../face-caging-best-practices.md) to ensure the best results for clothing, validation, and makeup.
+- Use the [FACS poses reference](../../../art/characters/facial-animation/facs-poses-reference.md) when posing and mapping your head.
+
 ## Create face accessories
 
 Similar to creating heads, you can design and model face accessories using a third-party modeling software and import the models as a cosmetic `Class.Accessory` in Studio. When created correctly, equipped accessories stretch and deform as the head animates and emotes.
@@ -36,7 +45,3 @@ If you're interested in animating a head, for use in-experience or to further te
 
 <video controls width="80%" src="../../../assets/avatar/dynamic-heads/animating-dynamic-heads/videos/2-Face-Controls-Example-Goblin.mp4">
 </video>
-
-## Additional resources
-
-Heads are often the most complex part of an avatar character. Ensure that you are following Roblox's [head caging best practices](../face-caging-best-practices.md) and verify your FACS poses using the [FACS poses reference](../../../art/characters/facial-animation/facs-poses-reference.md).

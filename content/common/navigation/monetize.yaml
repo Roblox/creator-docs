@@ -46,19 +46,15 @@ navigation:
         path: /ip-licensing/glossary
 
   - title: Advertise
-    path: /production/promotion/ads-manager
+    path: /production/promotion/advertise
     section:
       - title: Ads Manager
         path: /production/promotion/ads-manager
-      - title: Reporting and billing
-        path: /production/promotion/reporting-and-billing
       - title: Roblox-served ads vs. independent ads
         path: /production/promotion/advertise-on-roblox
       - title: Immersive ads
         path: /production/monetization/immersive-ads
       - title: Rewarded video ads
         path: /production/promotion/rewarded-video-ads
-      - title: Search ads
-        path: /production/promotion/search-ads
       - title: Advertising standards
         path: /production/promotion/comply-with-advertising-standards

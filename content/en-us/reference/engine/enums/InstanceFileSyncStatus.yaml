@@ -37,3 +37,10 @@ items:
     value: 3
     tags: []
     deprecation_message: ''
+  - name: AncestorErrored
+    summary: |
+      The `Class.Instance` is not currently being synced because the root of its
+      sync tree is `Errored`.
+    value: 4
+    tags: []
+    deprecation_message: ''
