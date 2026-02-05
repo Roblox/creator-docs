@@ -121,23 +121,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-  - name: AudioListener.PositionOverride
-    summary: ''
-    description: ''
-    code_samples: []
-    type: Instance
-    tags: []
-    deprecation_message: ''
-    security:
-      read: RobloxEngineSecurity
-      write: RobloxEngineSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Audio
   - name: AudioListener.SimulationFidelity
     summary: |
       Controls how detailed the audio simulation should be for this

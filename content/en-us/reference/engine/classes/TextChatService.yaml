@@ -417,6 +417,74 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Chat
+  - name: TextChatService:GetChatGroupsAsync
+    summary: |
+      Returns chat group IDs that indicate which players can synchronously text
+      chat together.
+    description: |
+      Returns a sorted array of arrays of chat group IDs for the given players.
+      Each chat group ID is a string that represents a communication-compatible
+      group within the current universe.
+
+      If two or more players share the same chat group ID, those players are
+      able to synchronously text chat with each other based on their age-check
+      status and chat settings.
+
+      This method is server-side only and intended for real-time use cases such
+      as matchmaking and teleporting. Chat group IDs are unique to the current
+      universe, may change over time, and should not be stored once the user has
+      left the experience. While you can hold onto the data returned for the
+      purposes of gameplay while the user is in the experience, this data should
+      not be stored after they've left.
+
+      To use this method, you must enable **Chat & Voice Groups APIs** in
+      **Experience Settings** ⟩ **Communication** in Roblox Studio and agree to
+      the Roblox Terms of Use.
+
+      ```lua
+      local TextChatService = game:GetService("TextChatService")
+      local Players = game:GetService("Players")
+      local players = Players:GetPlayers()
+
+      local success, chatGroups = pcall(function()
+        return TextChatService:GetChatGroupsAsync(players)
+      end)
+
+      if not success then
+        warn("Failed to retrieve chat groups")
+        return
+      end
+
+      for _, group in ipairs(chatGroups) do
+        -- Each group contains chat group ID strings.
+        -- Players who share a matching group ID can chat with each other.
+        for _, groupId in ipairs(group) do
+          print("Chat group ID:", groupId)
+        end
+      end
+      ```
+    code_samples:
+      - TextChatService-Chat-Groups-Teleport
+    parameters:
+      - name: players
+        type: Instances
+        default:
+        summary: |
+          A list of `Class.Player|Players` currently in the experience to
+          evaluate for text chat compatibility.
+    returns:
+      - type: Array
+        summary: |
+          A sorted array of arrays of chat group ID strings. Players who share a
+          matching chat group ID are eligible to synchronously text chat with
+          each other.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Chat
 events:
   - name: TextChatService.BubbleDisplayed
     summary: |

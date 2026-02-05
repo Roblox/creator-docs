@@ -23,7 +23,7 @@ properties: []
 methods:
   - name: AvatarCreationService:AutoSetupAvatarAsync
     summary: |
-      Automatically sets up a custom `Class.Model` as an avatar asset.
+      Automatically sets up a custom `Class.Model` and/or avatar accessories.
     description: |
       Automatically sets up a custom `Class.Model` as an avatar asset. This
       method returns a `string` generation ID which can be passed to
@@ -49,11 +49,12 @@ methods:
         default:
         summary: |
           The `Class.Player` that the avatar is being set up for.
-      - name: model
+      - name: autoSetupParams
         type: Dictionary
         default:
         summary: |
-          The humanoid `Class.Model` that will be set up as an avatar.
+          A table containing the arguments. Type:
+          `type AutoSetupAccessory = { AccessoryType: Enum.AccessoryType, IsLayered: bool, Instance: Model, } type AutoSetupParams = { Body: Model?, Accessories: {AutoSetupAccessory}, }`
       - name: progressCallback
         type: Function?
         default:

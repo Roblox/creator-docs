@@ -73,7 +73,7 @@ Once validation verifies that projection is successful and all landmarks establi
 Now that the validation system knows where to check for the eyes and mouth, the validation checks for facial animations to ensure that the following basic actions are possible:
 
 - Left and right eyes can close
-- Mouth can open and close
+- Mouth can open
 - Basic happy and sad expressions
   - For a full list of basic action units and poses, see [FACS animations](./head-specifications.md#facs-animation).
 

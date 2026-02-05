@@ -115,6 +115,73 @@ properties:
       can_save: true
     capabilities: []
 methods:
+  - name: VoiceChatService:GetChatGroupsAsync
+    summary: |
+      Returns chat group IDs that indicate which players can voice chat
+      together.
+    description: |
+      Returns a sorted array of arrays of chat group IDs for the given players.
+      Each chat group ID is a string that represents a communication-compatible
+      group within the current universe.
+
+      If two or more players share the same chat group ID, those players are
+      eligible to voice chat with each other based on their age-check status,
+      voice chat eligibility, and communication settings.
+
+      This method is server-side only and intended for real-time use cases such
+      as matchmaking and teleporting. Chat group IDs are unique to the current
+      universe, may change over time, and should not be stored once the user has
+      left the experience. While you can hold onto the data returned for the
+      purposes of gameplay while the user is in the experience, this data should
+      not be stored after they've left.
+
+      To use this method, you must enable **Chat & Voice Groups APIs** in
+      **Experience Settings** ⟩ **Communication** in Roblox Studio and agree to
+      the Roblox Terms of Use.
+
+      ```lua
+      local VoiceChatService = game:GetService("VoiceChatService")
+      local Players = game:GetService("Players")
+      local players = Players:GetPlayers()
+
+      local success, chatGroups = pcall(function()
+      	return VoiceChatService:GetChatGroupsAsync(players)
+      end)
+
+      if not success then
+      	warn("Failed to retrieve chat groups")
+      	return
+      end
+
+      for _, group in ipairs(chatGroups) do
+      	-- Each group contains chat group ID strings.
+      	-- Players who share a matching group ID can chat with each other.
+      	for _, groupId in ipairs(group) do
+      		print("Chat group ID:", groupId)
+      	end
+      end
+      ```
+    code_samples:
+      - VoiceChatService-Chat-Groups-Teleport
+    parameters:
+      - name: players
+        type: Instances
+        default:
+        summary: |
+          A list of `Class.Player|Players` currently in the experience to
+          evaluate for voice chat compatibility.
+    returns:
+      - type: Array
+        summary: |
+          A sorted array of arrays of chat group ID strings. Players who share a
+          matching chat group ID are eligible to voice chat with each other.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Chat
   - name: VoiceChatService:IsVoiceEnabledForUserIdAsync
     summary: |
       Returns whether or not the given user has voice enabled.

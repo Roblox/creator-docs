@@ -108,7 +108,6 @@ properties:
     tags:
       - NotReplicated
       - NotScriptable
-      - NotBrowsable
     deprecation_message: ''
     security:
       read: None
@@ -387,8 +386,7 @@ properties:
     description: ''
     code_samples: []
     type: boolean
-    tags:
-      - NotBrowsable
+    tags: []
     deprecation_message: ''
     security:
       read: None

@@ -39,7 +39,7 @@ For details on improving the quality of your head cage, see [Face cage optimizat
 
 ### Facial landmarks
 
-During validation, Roblox projects the cage eye/mouth regions to the base mesh to identify the eyes and mouth regions of your character head. For more information on this process, see [validation process](./head-validation.md).
+During validation, Roblox projects the cage eye/mouth regions to the base mesh to identify the eyes and mouth regions of your character head. Even for non-humanoid faces that don't include visual eyes or mouths, it's important to ensure that these landmarks still exist and can be projected over your base mesh. For more information on this process, see [validation process](./head-validation.md).
 
 Roblox expects the following 3 distinct landmarks in your cages:
 
@@ -67,7 +67,9 @@ Roblox expects the following 3 distinct landmarks in your cages:
 </GridContainer>
 
 <Alert severity = 'error'>
-Even for non-humanoid faces that don't include visual eyes or mouths, it's important to ensure that these landmarks still exist and can be projected over your base mesh.
+The mouth landmark vertices are on the **second loop** of vertices from the mouth opening. This precision may help prevent issues with [landmark validation](./head-validation.md#landmark-projection).
+
+<center><img src="../../assets/art/avatar/Mouth-Vertices-Warning.png"/></center>
 </Alert>
 
 ## FACS animation

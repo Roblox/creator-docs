@@ -224,7 +224,7 @@ methods:
           An array of `Enum.CaptureType`.
       - name: readFromAllEligibleExperiences
         type: boolean
-        default:
+        default: false
         summary: |
           A boolean; default is `false`.
     returns:

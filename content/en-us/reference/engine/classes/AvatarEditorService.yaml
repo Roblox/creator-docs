@@ -32,6 +32,327 @@ description: |
   second to these `AvatarEditorService` endpoints, regardless of the number of
   servers or user count. Exceeding these limits returns a
   `429 Too Many Requests` error.
+
+  #### Item Details Response
+
+  The following methods return item data in a shared response format:
+
+  - `Class.AvatarEditorService:GetItemDetailsAsync()`
+  - `Class.AvatarEditorService:GetBatchItemDetailsAsync()`
+  - `Class.AvatarEditorService:SearchCatalogAsync()`
+
+  ```lua
+  {
+    "Id": 0,
+    "ItemType": "Asset",
+    "AssetType": "Image",
+    "BundleType": "BodyParts",
+    "Name": "string",
+    "Description": "string",
+    "ProductId": 0,
+    "ItemStatus": ["New"],
+    "ItemRestrictions": ["Collectible"],
+
+    "BundledItems": [
+      {
+        "Id": 0,
+        "Name": "string",
+        "Type": "Asset",
+        "AssetType": 29
+      }
+    ],
+    "IsRecolorable": false,
+
+    "CollectibleItemId": "string",
+    "TotalQuantity": 0,
+    "UnitsAvailableForConsumption": 0,
+    "QuantityLimitPerUser": 0,
+    "HasResellers": false,
+    "OffSaleDeadline": null,
+
+    "Price": 0,
+    "PremiumPricing": {
+      "PremiumDiscountPercentage": 0,
+      "PremiumPriceInRobux": 0
+    },
+    "LowestPrice": 0,
+    "LowestResalePrice": 0,
+    "PriceStatus": "string",
+    "SaleLocationType": "ShopAndAllExperiences",
+    "PurchaseCount": 0,
+    "FavoriteCount": 0,
+
+    "CreatorType": "User",
+    "CreatorTargetId": 0,
+    "CreatorName": "string",
+    "CreatorHasVerifiedBadge": false
+  }
+  ```
+
+  ##### Basic Information
+
+  <table>
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><code>Id</code></td>
+      <td>number</td>
+      <td>The unique identifier of the item.</td>
+    </tr>
+    <tr>
+      <td><code>ItemType</code></td>
+      <td>string</td>
+      <td>The type of item: <code>"Asset"</code> or <code>"Bundle"</code>. Corresponds to <code>Enum.AvatarItemType</code>.</td>
+    </tr>
+    <tr>
+      <td><code>AssetType</code></td>
+      <td>string</td>
+      <td>The asset type. Corresponds to <code>Enum.AvatarAssetType</code> values (e.g., <code>"Hat"</code>, <code>"Shirt"</code>). Only present if <code>ItemType</code> is <code>"Asset"</code>.</td>
+    </tr>
+    <tr>
+      <td><code>BundleType</code></td>
+      <td>string</td>
+      <td>The bundle type. Corresponds to <code>Enum.BundleType</code> values (e.g., <code>"BodyParts"</code>, <code>"Animations"</code>). Only present if <code>ItemType</code> is <code>"Bundle"</code>.</td>
+    </tr>
+    <tr>
+      <td><code>Name</code></td>
+      <td>string</td>
+      <td>The display name of the item.</td>
+    </tr>
+    <tr>
+      <td><code>Description</code></td>
+      <td>string</td>
+      <td>The item's description text.</td>
+    </tr>
+    <tr>
+      <td><code>ProductId</code></td>
+      <td>number</td>
+      <td>The product ID associated with this item.</td>
+    </tr>
+    <tr>
+      <td><code>ItemStatus</code></td>
+      <td>array</td>
+      <td>An array of status strings (e.g., <code>"New"</code>, <code>"Sale"</code>, <code>"XboxExclusive"</code>, <code>"AmazonExclusive"</code>).</td>
+    </tr>
+    <tr>
+      <td><code>ItemRestrictions</code></td>
+      <td>array</td>
+      <td>An array of restriction strings. See the <code>itemRestrictions</code> table below.</td>
+    </tr>
+    </tbody>
+  </table>
+
+  ##### Bundle Information
+
+  <table>
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><code>BundledItems</code></td>
+      <td>array</td>
+      <td>An array of items contained in the bundle. Only present if <code>ItemType</code> is <code>"Bundle"</code>. Each entry contains:</td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td><code>Id</code>: The unique identifier of the bundled item.</td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td><code>Name</code>: The display name of the bundled item.</td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td><code>Type</code>: The type of the bundled item (e.g., <code>"Asset"</code>).</td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td><code>AssetType</code>: The asset type as an integer. Corresponds to <code>Enum.AvatarAssetType</code>.</td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td><code>Owned</code>: Whether the bundled item is owned by the current user. Only present in <code>Class.AvatarEditorService:GetItemDetailsAsync()</code>.</td>
+    </tr>
+    <tr>
+      <td><code>IsRecolorable</code></td>
+      <td>boolean</td>
+      <td>Whether the bundle supports skin tone matching. Only applies to BodyParts and DynamicHead bundles.</td>
+    </tr>
+    </tbody>
+  </table>
+
+  ##### Collectible Information
+
+  <table>
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><code>CollectibleItemId</code></td>
+      <td>string</td>
+      <td>The unique item ID of the collectible.</td>
+    </tr>
+    <tr>
+      <td><code>TotalQuantity</code></td>
+      <td>number</td>
+      <td>The total quantity of the collectible available for purchase (not resale).</td>
+    </tr>
+    <tr>
+      <td><code>UnitsAvailableForConsumption</code></td>
+      <td>number</td>
+      <td>The number of units available for purchase. Only applies to Limited items with remaining stock.</td>
+    </tr>
+    <tr>
+      <td><code>QuantityLimitPerUser</code></td>
+      <td>number</td>
+      <td>Maximum number of the same collectible item a user can own.</td>
+    </tr>
+    <tr>
+      <td><code>HasResellers</code></td>
+      <td>boolean</td>
+      <td><code>true</code> when item is a Limited collectible and there are copies available for resale.</td>
+    </tr>
+    <tr>
+      <td><code>OffSaleDeadline</code></td>
+      <td>string</td>
+      <td>The date/time when the item goes off sale.</td>
+    </tr>
+    </tbody>
+  </table>
+
+  ##### Pricing and Sale Information
+
+  <table>
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><code>Price</code></td>
+      <td>number</td>
+      <td>The price in Robux. <code>0</code> if free or not for sale.</td>
+    </tr>
+    <tr>
+      <td><code>PremiumPricing</code></td>
+      <td>table</td>
+      <td>Premium pricing information. Contains the following fields:</td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td><code>PremiumDiscountPercentage</code>: The discount percentage for Premium members.</td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td><code>PremiumPriceInRobux</code>: The discounted price in Robux for Premium members.</td>
+    </tr>
+    <tr>
+      <td><code>LowestPrice</code></td>
+      <td>number</td>
+      <td>The lowest resale price for Limited items.</td>
+    </tr>
+    <tr>
+      <td><code>LowestResalePrice</code></td>
+      <td>number</td>
+      <td>The lowest resale price for the collectible in Robux.</td>
+    </tr>
+    <tr>
+      <td><code>PriceStatus</code></td>
+      <td>string</td>
+      <td>The price status (e.g., <code>"Free"</code>, <code>"Off Sale"</code>, <code>"No Resellers"</code>).</td>
+    </tr>
+    <tr>
+      <td><code>SaleLocationType</code></td>
+      <td>string</td>
+      <td>The type of sale location setting. See <code>SaleLocationType</code> values below.</td>
+    </tr>
+    <tr>
+      <td><code>PurchaseCount</code></td>
+      <td>number</td>
+      <td>The total number of times this item has been purchased.</td>
+    </tr>
+    <tr>
+      <td><code>FavoriteCount</code></td>
+      <td>number</td>
+      <td>The total number of users who have favorited this item.</td>
+    </tr>
+    </tbody>
+  </table>
+
+  ##### Creator Information
+
+  <table>
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><code>CreatorType</code></td>
+      <td>string</td>
+      <td>Either <code>User</code> or <code>Group</code>. See <code>Enum.CreatorType</code>.</td>
+    </tr>
+    <tr>
+      <td><code>CreatorTargetId</code></td>
+      <td>number</td>
+      <td>The ID of the creator user or group.</td>
+    </tr>
+    <tr>
+      <td><code>CreatorName</code></td>
+      <td>string</td>
+      <td>The display name of the creator.</td>
+    </tr>
+    <tr>
+      <td><code>CreatorHasVerifiedBadge</code></td>
+      <td>boolean</td>
+      <td>Boolean of whether the creator has a verified badge.</td>
+    </tr>
+    </tbody>
+  </table>
+
+  ##### SaleLocationType Values
+
+  | Value                    | Description                                                                            |
+  | :----------------------- | :------------------------------------------------------------------------------------- |
+  | `NotApplicable`          | Default value, should not occur in practice.                                           |
+  | `ShopOnly`               | Item can only be purchased in the Roblox catalog shop.                                 |
+  | `MyExperiencesOnly`      | Item can only be purchased in the creator's experiences.                               |
+  | `ShopAndMyExperiences`   | Item can be purchased in the Roblox catalog shop or the creator's experiences.         |
+  | `ExperiencesById`        | Item can only be purchased in a specific list of experiences.                          |
+  | `ShopAndAllExperiences`  | Item can be purchased in the Roblox catalog shop and all experiences.                  |
+  | `ExperiencesDevApiOnly`  | Item can only be purchased in experiences via developer APIs.                          |
+  | `ShopAndExperiencesById` | Item can be purchased in the Roblox catalog shop or a whitelisted list of experiences. |
+
+  ##### itemRestrictions Values
+
+  | itemRestrictions | Limited or Unlimited  |
+  | :--------------: | :-------------------: |
+  |     `empty`      |       Unlimited       |
+  |  `Collectible`   |      UGC Limited      |
+  |    `Limited`     |    Roblox Limited     |
+  | `LimitedUnique`  | Roblox Limited Unique |
 code_samples: []
 inherits:
   - Instance
@@ -241,8 +562,10 @@ methods:
       Gets the item details for a list of items at once.
     description: |
       Gets the item details for a list of items at once. More efficient than
-      `AvatarEditorService:GetItemDetailsAsync` if you need to get all the item
-      details of a list.
+      `Class.AvatarEditorService:GetItemDetailsAsync()` if you need to get the
+      item details for multiple items.
+
+      Returns an array of items (see Item Details Response above in summary).
     code_samples: []
     parameters:
       - name: itemIds
@@ -258,35 +581,7 @@ methods:
     returns:
       - type: Array
         summary: |
-          Returns an array of item details with the following fields:
-
-          ```lua
-            {
-              "AssetType" = "string",
-              "CreatorName" = "string",
-              "CreatorTargetId" = 0,
-              "CreatorType" = "string",
-              "Description" = "string",
-              "FavoriteCount" = 0,
-              "Genres" = [
-                "All"
-              ],
-              "Id" = 0,
-              "ItemRestrictions" = [
-                "Limited"
-              ],
-              "ItemStatus": [
-                "New"
-              ],
-              "ItemType" = "string",
-              "LowestPrice" = 0,
-              "Name" = "string",
-              "Price" = 0,
-              "ProductId" = 0
-            }
-          ```
-
-          .
+          Returns an array of item details.
     tags:
       - Yields
     deprecation_message: ''
@@ -312,35 +607,9 @@ methods:
     returns:
       - type: Array
         summary: |
-          Returns an array of item details with the following fields:
-
-          ```lua
-            {
-              "AssetType" = "string",
-              "CreatorName" = "string",
-              "CreatorTargetId" = 0,
-              "CreatorType" = "string",
-              "Description" = "string",
-              "FavoriteCount" = 0,
-              "Genres" = [
-                "All"
-              ],
-              "Id" = 0,
-              "ItemRestrictions" = [
-                "Limited"
-              ],
-              "ItemStatus": [
-                "New"
-              ],
-              "ItemType" = "string",
-              "LowestPrice" = 0,
-              "Name" = "string",
-              "Price" = 0,
-              "ProductId" = 0
-            }
-          ```
-
-          .
+          Returns an array of item details. See
+          `Class.AvatarEditorService:GetBatchItemDetailsAsync()` for the
+          response format.
     tags:
       - Yields
       - Deprecated
@@ -474,63 +743,41 @@ methods:
       parameters - the first indicating the ID of the item being retrieved and
       the second indicating its `Enum.AvatarItemType`.
 
-      Data returned in the format:
+      The response includes all fields from Item Details Response (see above in
+      summary), plus the following additional fields specific to single-item
+      queries:
 
-      ```lua
-      {
-        "IsForRent": true,
-        "ExpectedSellerId": 0,
-        "Owned": true,
-        "IsPurchasable": true,
-        "Id": 0,
-        "ItemType": "Asset",
-        "AssetType": "Image",
-        "BundleType": "BodyParts",
-        "Name": "string",
-        "Description": "string",
-        "ProductId": 0,
-        "Genres": [
-          "All"
-        ],
-        "BundledItems": [
-          {
-            "Owned": true,
-            "Id": 0,
-            "Name": "string",
-            "Type": "string"
-          }
-        ],
-        "ItemStatus": [
-          "New"
-        ],
-        "ItemRestrictions": [
-          "ThirteenPlus"
-        ],
-        "CreatorType": "User",
-        "CreatorTargetId": 0,
-        "CreatorName": "string",
-        "Price": 0,
-        "PremiumPricing": {
-          "PremiumDiscountPercentage": 0,
-          "PremiumPriceInRobux": 0
-        },
-        "LowestPrice": 0,
-        "PriceStatus": "string",
-        "UnitsAvailableForConsumption": 0,
-        "PurchaseCount": 0,
-        "FavoriteCount": 0
-      }
-      ```
-
-      <br /> <br /> To query for limited or unlimited assets, use the following
-      `itemRestrictions` values:
-
-      | itemRestrictions | Limited or Unlimited  |
-      | :--------------: | :-------------------: |
-      |     `empty`      |       Unlimited       |
-      |  `Collectible`   |      UGC Limited      |
-      |    `Limited`     |    Roblox Limited     |
-      | `LimitedUnique`  | Roblox Limited Unique |
+      <table>
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><code>Owned</code></td>
+          <td>boolean</td>
+          <td>Whether the item is owned by the current user.</td>
+        </tr>
+        <tr>
+          <td><code>IsPurchasable</code></td>
+          <td>boolean</td>
+          <td>Whether the item can be purchased by the current user.</td>
+        </tr>
+        <tr>
+          <td><code>ExpectedSellerId</code></td>
+          <td>number</td>
+          <td>The user ID of the lowest private seller if resellable, or the creator's target ID otherwise. Used when calling purchase APIs.</td>
+        </tr>
+        <tr>
+          <td><code>CreatingUniverseId</code></td>
+          <td>number</td>
+          <td>If this asset was created in an experience, this is the universe ID where it was created. <code>nil</code> if not an in-experience creation.</td>
+        </tr>
+        </tbody>
+      </table>
     code_samples: []
     parameters:
       - name: itemId
@@ -547,8 +794,7 @@ methods:
     returns:
       - type: Dictionary
         summary: |
-          A table containing the item info for the retrieved item. See above for
-          a sample table.
+          A table containing the item info for the retrieved item.
     tags:
       - Yields
     deprecation_message: ''
@@ -781,12 +1027,12 @@ methods:
               "AssetId": 0,
               "Name": "string",
               "Price": 0,
-              "PremiumPrice": 0,
+              "PremiumPrice": 0
             },
             "Creator": {
               "CreatorId": 0,
               "CreatorType": "string",
-              "Name": "string",
+              "Name": "string"
             },
             "Product": {
               "Id": 0,
@@ -1139,51 +1385,8 @@ methods:
       This function returns a `Class.CatalogPages` object containing the result
       of the given search.
 
-      The returned data has the format:
-
-      ```lua
-      [
-          {
-            "Id": 0,
-            "ItemType": "Asset",
-            "AssetType": "Image",
-            "BundleType": "BodyParts",
-            "Name": "string",
-            "Description": "string",
-            "ProductId": 0,
-            "Genres": [
-              "All"
-            ],
-            "BundledItems": [
-              {
-                "Owned": true,
-                "Id": 0,
-                "Name": "string",
-                "Type": "string"
-              }
-            ],
-            "ItemStatus": [
-              "New"
-            ],
-            "ItemRestrictions": [
-              "ThirteenPlus"
-            ],
-            "CreatorType": "User",
-            "CreatorTargetId": 0,
-            "CreatorName": "string",
-            "Price": 0,
-            "PremiumPricing": {
-              "PremiumDiscountPercentage": 0,
-              "PremiumPriceInRobux": 0
-            },
-            "LowestPrice": 0,
-            "PriceStatus": "string",
-            "UnitsAvailableForConsumption": 0,
-            "PurchaseCount": 0,
-            "FavoriteCount": 0
-          }
-      ]
-      ```
+      Each item in the returned pages uses the Item Details Response format (see
+      above in summary).
     code_samples: []
     parameters:
       - name: searchParameters
@@ -1193,7 +1396,8 @@ methods:
           An object containing the parameters used for the search.
     returns:
       - type: CatalogPages
-        summary: ''
+        summary: |
+          A `Class.CatalogPages` object containing the search results.
     tags:
       - Yields
     deprecation_message: ''

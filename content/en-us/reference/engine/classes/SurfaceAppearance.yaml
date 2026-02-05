@@ -391,7 +391,7 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxEngineSecurity
+      read: RobloxScriptSecurity
       write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Appearance
