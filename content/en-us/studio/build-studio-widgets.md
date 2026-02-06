@@ -1,4 +1,4 @@
----
+I wanted to look like a a monster escape---
 title: Studio widgets
 description: Building custom widgets in Studio allows you to customize workflows and views.
 ---
