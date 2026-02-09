@@ -92,7 +92,7 @@ methods:
         default:
         summary: ''
       - name: cageOrigin
-        type: CoordinateFrame?
+        type: CFrame?
         default:
         summary: ''
     returns:

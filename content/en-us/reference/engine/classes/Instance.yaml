@@ -920,7 +920,7 @@ methods:
         summary: |
           The `Class.Instance.Name` to be looked for.
     returns:
-      - type: Instance
+      - type: Instance?
         summary: |
           The `Class.Instance` found.
     tags: []
@@ -960,7 +960,7 @@ methods:
         summary: |
           The `Class.Object.ClassName` to be looked for.
     returns:
-      - type: Instance
+      - type: Instance?
         summary: |
           The `Class.Instance` found.
     tags: []
@@ -1006,7 +1006,7 @@ methods:
         summary: |
           The `Class.Object.ClassName` to be looked for.
     returns:
-      - type: Instance
+      - type: Instance?
         summary: |
           The `Class.Instance` found.
     tags: []
@@ -1095,7 +1095,7 @@ methods:
         summary: |
           Whether or not the search should be conducted recursively.
     returns:
-      - type: Instance
+      - type: Instance?
         summary: |
           The `Class.Instance` found.
     tags: []
@@ -1146,7 +1146,7 @@ methods:
         summary: |
           The `Class.Object.ClassName` to be looked for.
     returns:
-      - type: Instance
+      - type: Instance?
         summary: |
           The `Class.Instance` found.
     tags: []
@@ -1198,7 +1198,7 @@ methods:
         summary: |
           Whether or not the search should be conducted recursively.
     returns:
-      - type: Instance
+      - type: Instance?
         summary: |
           The `Class.Instance` found.
     tags: []
@@ -1223,7 +1223,7 @@ methods:
         summary: |
           The `Class.Instance.Name` to search for.
     returns:
-      - type: Instance
+      - type: Instance?
         summary: |
           The `Class.Instance` found.
     tags: []

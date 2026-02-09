@@ -78,7 +78,7 @@ methods:
         summary: |
           The absolute path to the file.
     returns:
-      - type: Instance
+      - type: Instance?
         summary: |
           Returns the Instance being synced to the file path, if one exists.
           Otherwise, returns nil.

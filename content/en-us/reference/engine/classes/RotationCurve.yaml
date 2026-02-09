@@ -120,7 +120,7 @@ methods:
         summary: |
           Time at which to sample the curve.
     returns:
-      - type: CoordinateFrame?
+      - type: CFrame?
         summary: |
           Value of the curve at the requested `time`.
     tags: []
