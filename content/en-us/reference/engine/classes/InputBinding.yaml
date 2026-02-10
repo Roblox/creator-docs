@@ -5,8 +5,9 @@
 name: InputBinding
 type: class
 memory_category: Instances
-summary: Defines which hardware binding should trigger the parent `Class.InputAction`.
-description: |-
+summary: |
+  Defines which hardware binding should trigger the parent `Class.InputAction`.
+description: |
   An `InputBinding` defines which hardware binding should trigger the parent
   `Class.InputAction`, for example a key press, gamepad button, or tap on a
   touch‑enabled device. There can be multiple `InputBinding` instances parented
@@ -19,10 +20,10 @@ tags: []
 deprecation_message: ''
 properties:
   - name: InputBinding.Backward
-    summary: |-
+    summary: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally
       "backward" inputs to the parent `Class.InputAction`.
-    description: |-
+    description: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally
       "backward" inputs to `Class.InputAction:GetState()|GetState()` and the
       `Class.InputAction.StateChanged|StateChanged` event of the parent
@@ -45,10 +46,10 @@ properties:
     capabilities:
       - Input
   - name: InputBinding.Down
-    summary: |-
+    summary: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally "down"
       inputs to the parent `Class.InputAction`.
-    description: |-
+    description: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally "down"
       inputs to `Class.InputAction:GetState()|GetState()` and the
       `Class.InputAction.StateChanged|StateChanged` event of the parent
@@ -85,10 +86,10 @@ properties:
     capabilities:
       - Input
   - name: InputBinding.Forward
-    summary: |-
+    summary: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally
       "forward" inputs to the parent `Class.InputAction`.
-    description: |-
+    description: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally
       "forward" inputs to `Class.InputAction:GetState()|GetState()` and the
       `Class.InputAction.StateChanged|StateChanged` event of the parent
@@ -111,10 +112,10 @@ properties:
     capabilities:
       - Input
   - name: InputBinding.KeyCode
-    summary: |-
+    summary: |
       Specifies the `Enum.KeyCode` which triggers the parent
       `Class.InputAction`.
-    description: |-
+    description: |
       Specifies the `Enum.KeyCode` which triggers the parent
       `Class.InputAction`. The code type should match the input action's
       `Class.InputAction.Type|Type`, for example `Enum.KeyCode.E` for an action
@@ -138,10 +139,10 @@ properties:
     capabilities:
       - Input
   - name: InputBinding.Left
-    summary: |-
+    summary: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally "left"
       inputs to the parent `Class.InputAction`.
-    description: |-
+    description: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally "left"
       inputs to `Class.InputAction:GetState()|GetState()` and the
       `Class.InputAction.StateChanged|StateChanged` event of the parent
@@ -174,10 +175,10 @@ properties:
     capabilities:
       - Input
   - name: InputBinding.PressedThreshold
-    summary: |-
+    summary: |
       Numerical value above which to fire an `Class.InputAction` with a
       `Class.InputAction.Type|Type` of `Enum.InputActionType|Bool`.
-    description: |-
+    description: |
       Numerical value above which to fire an `Class.InputAction` with a
       `Class.InputAction.Type|Type` of `Enum.InputActionType|Bool`, for example
       when a gamepad trigger such as `Enum.KeyCode.ButtonL2` exceeds `0.5`
@@ -201,15 +202,21 @@ properties:
     capabilities:
       - Input
   - name: InputBinding.PrimaryModifier
-    summary: Specifies a primary `Enum.KeyCode` that must be pressed for the binding to activate.
-    description: |-
-      Specifies a `Enum.KeyCode` that serves as a required modifier for the binding. The `Class.InputBinding` 
-      will only trigger the parent `Class.InputAction` if this input is pressed prior to 
-      `Class.InputBinding.KeyCode|KeyCode`, `Class.InputBinding.UIButton|UIButton`, or composite directions. 
+    summary: |
+      Specifies a primary `Enum.KeyCode` that must be pressed for the binding to
+      activate.
+    description: |
+      Specifies a `Enum.KeyCode` that serves as a required modifier for the
+      binding. The `Class.InputBinding` will only trigger the parent
+      `Class.InputAction` if this input is pressed prior to
+      `Class.InputBinding.KeyCode|KeyCode`,
+      `Class.InputBinding.UIButton|UIButton`, or composite directions.
 
-      There is no ordering requirement between `Class.InputBinding.PrimaryModifier|PrimaryModifier` and 
-      `Class.InputBinding.SecondaryModifier|SecondaryModifier`. If both properties are set, both modifiers 
-      must be pressed to activate the binding, but the order in which they are pressed does not matter. 
+      There is no ordering requirement between
+      `Class.InputBinding.PrimaryModifier|PrimaryModifier` and
+      `Class.InputBinding.SecondaryModifier|SecondaryModifier`. If both
+      properties are set, both modifiers must be pressed to activate the
+      binding, but the order in which they are pressed does not matter.
 
       If set to `Enum.KeyCode.Unknown`, no primary modifier is required.
     code_samples: []
@@ -227,10 +234,10 @@ properties:
     capabilities:
       - Input
   - name: InputBinding.ReleasedThreshold
-    summary: |-
+    summary: |
       Numerical value below which to fire an `Class.InputAction` with a
       `Class.InputAction.Type|Type` of `Enum.InputActionType|Bool`.
-    description: |-
+    description: |
       Numerical value below which to fire an `Class.InputAction` with a
       `Class.InputAction.Type|Type` of `Enum.InputActionType|Bool`, for example
       when a gamepad trigger such as `Enum.KeyCode.ButtonL2` falls below `0.5`
@@ -254,18 +261,22 @@ properties:
     capabilities:
       - Input
   - name: InputBinding.ResponseCurve
-    summary: Numerical value to configure scaling for more precise thumbstick aiming.
-    description: |-
-      A numerical value to control the sensitivity of gamepad thumbstick input by applying
-      a quadratic response curve. Commonly used for camera control to make small thumbstick inputs more
-      precise, while ramping up quickly to allow for large movements with higher magnitude input.
+    summary: |
+      Numerical value to configure scaling for more precise thumbstick aiming.
+    description: |
+      A numerical value to control the sensitivity of gamepad thumbstick input
+      by applying a quadratic response curve. Commonly used for camera control
+      to make small thumbstick inputs more precise, while ramping up quickly to
+      allow for large movements with higher magnitude input.
 
-      Ranges between `1` to `10`, with higher values providing a more intense curve. 
-      Default is `1`, at which input is returned exactly as received.
+      Ranges between `1` to `10`, with higher values providing a more intense
+      curve. Default is `1`, at which input is returned exactly as received.
 
       Only applicable when the parent action's `Class.InputAction.Type|Type` is
-      `Enum.InputActionType|Direction2D` and the `Class.InputBinding.KeyCode|KeyCode` 
-      is `Enum.KeyCode.Thumbstick1|Thumbstick1` or `Enum.KeyCode.Thumbstick2|Thumbstick2`.
+      `Enum.InputActionType|Direction2D` and the
+      `Class.InputBinding.KeyCode|KeyCode` is
+      `Enum.KeyCode.Thumbstick1|Thumbstick1` or
+      `Enum.KeyCode.Thumbstick2|Thumbstick2`.
     code_samples: []
     type: float
     tags: []
@@ -281,10 +292,10 @@ properties:
     capabilities:
       - Input
   - name: InputBinding.Right
-    summary: |-
+    summary: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally
       "right" inputs to the parent `Class.InputAction`.
-    description: |-
+    description: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally
       "right" inputs to `Class.InputAction:GetState()|GetState()` and the
       `Class.InputAction.StateChanged|StateChanged` event of the parent
@@ -317,10 +328,10 @@ properties:
     capabilities:
       - Input
   - name: InputBinding.Scale
-    summary: |-
+    summary: |
       Amount by which to linearly scale the values of a directional
       `Class.InputAction`.
-    description: |-
+    description: |
       Amount by which to linearly scale the values of an `Class.InputAction`
       with `Class.InputAction.Type|Type` of `Enum.InputActionType|Direction1D`,
       `Enum.InputActionType|Direction2D`, or `Enum.InputActionType|Direction3D`.
@@ -339,15 +350,21 @@ properties:
     capabilities:
       - Input
   - name: InputBinding.SecondaryModifier
-    summary: Specifies a secondary `Enum.KeyCode` that must be pressed for the binding to activate.
-    description: |-
-      Specifies a `Enum.KeyCode` that serves as a required modifier for the binding. The `Class.InputBinding` 
-      will only trigger the parent `Class.InputAction` if this input is pressed prior to 
-      `Class.InputBinding.KeyCode|KeyCode`, `Class.InputBinding.UIButton|UIButton`, or composite directions. 
+    summary: |
+      Specifies a secondary `Enum.KeyCode` that must be pressed for the binding
+      to activate.
+    description: |
+      Specifies a `Enum.KeyCode` that serves as a required modifier for the
+      binding. The `Class.InputBinding` will only trigger the parent
+      `Class.InputAction` if this input is pressed prior to
+      `Class.InputBinding.KeyCode|KeyCode`,
+      `Class.InputBinding.UIButton|UIButton`, or composite directions.
 
-      There is no ordering requirement between `Class.InputBinding.PrimaryModifier|PrimaryModifier` and 
-      `Class.InputBinding.SecondaryModifier|SecondaryModifier`. If both properties are set, both modifiers 
-      must be pressed to activate the binding, but the order in which they are pressed does not matter. 
+      There is no ordering requirement between
+      `Class.InputBinding.PrimaryModifier|PrimaryModifier` and
+      `Class.InputBinding.SecondaryModifier|SecondaryModifier`. If both
+      properties are set, both modifiers must be pressed to activate the
+      binding, but the order in which they are pressed does not matter.
 
       If set to `Enum.KeyCode.Unknown`, no secondary modifier is required.
     code_samples: []
@@ -365,8 +382,10 @@ properties:
     capabilities:
       - Input
   - name: InputBinding.UIButton
-    summary: Connects a `Class.GuiButton` to a boolean action.
-    description: '`Class.GuiButton` to connect to a boolean action.'
+    summary: |
+      Connects a `Class.GuiButton` to a boolean action.
+    description: |
+      `Class.GuiButton` to connect to a boolean action.
     code_samples: []
     type: GuiButton
     tags: []
@@ -382,10 +401,10 @@ properties:
     capabilities:
       - Input
   - name: InputBinding.Up
-    summary: |-
+    summary: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally "up"
       inputs to the parent `Class.InputAction`.
-    description: |-
+    description: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally "up"
       inputs to `Class.InputAction:GetState()|GetState()` and the
       `Class.InputAction.StateChanged|StateChanged` event of the parent
@@ -422,10 +441,10 @@ properties:
     capabilities:
       - Input
   - name: InputBinding.Vector2Scale
-    summary: |-
+    summary: |
       Amount by which to linearly scale the values of a two-directional
       `Class.InputAction`.
-    description: |-
+    description: |
       Amount by which to linearly scale the values of an `Class.InputAction`
       with `Class.InputAction.Type|Type` of `Enum.InputActionType|Direction2D`.
     code_samples: []

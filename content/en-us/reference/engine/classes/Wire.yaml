@@ -57,10 +57,11 @@ properties:
       `Class.Wire.SourceInstance|SourceInstance`,
       `Class.Wire.TargetInstance|TargetInstance`,
       `Class.Wire.SourceName|SourceName`, and `Class.Wire.TargetName|TargetName`
-      properties are all assigned, the connection is valid, and the connection
-      does not result in a cyclic processing graph. Cyclic processing graphs are
-      invalid since they can result in infinite computation; attempting to
-      create one will log an error.
+      properties are all assigned, the corresponding
+      `Class.Wire.SourceName|SourceName` and `Class.Wire.TargetName|TargetName`
+      pins exist on `Class.Wire.SourceInstance|SourceInstance` and
+      `Class.Wire.TargetInstance|TargetInstance` respectively, and the
+      connection does not result in a cyclic processing graph.
     code_samples: []
     type: boolean
     tags:
