@@ -105,6 +105,41 @@ constructors:
     code_samples: []
     tags: []
     deprecation_message: ''
+  - name: PhysicalProperties.new
+    summary: |-
+      Creates a `Datatype.PhysicalProperties` container with the specified density,
+      friction, elasticity, weight of friction, weight of elasticity, and acoustic absorption.
+    description: |-
+      Creates a `Datatype.PhysicalProperties` container with the specified density,
+      friction, elasticity, weight of friction, weight of elasticity, and acoustic absorption.
+    parameters:
+      - name: density
+        type: number
+        default:
+        summary: ''
+      - name: friction
+        type: number
+        default:
+        summary: ''
+      - name: elasticity
+        type: number
+        default:
+        summary: ''
+      - name: frictionWeight
+        type: number
+        default:
+        summary: ''
+      - name: elasticityWeight
+        type: number
+        default:
+        summary: ''
+      - name: acousticAbsorption
+        type: number
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
 constants: []
 properties:
   - name: PhysicalProperties.AcousticAbsorption

@@ -15,7 +15,9 @@ Before you begin retrieving and manipulating objects, you must have an understan
 
 The Roblox Engine doesn't guarantee the order in which objects (and changes to objects) are replicated from the server to the client, which makes the `Class.Instance:WaitForChild()` method essential for accessing objects in client scripts, particularly objects in the `Class.Workspace`.
 
-For example, if a server script changes a property of some instance in the Workspace and then calls `Class.RemoteEvent:FireAllClients()`, the property change might replicate to the client before or after `Class.RemoteEvent.OnClientEvent` fires. Still, some aspects of clients launching an experience are predictable:
+For example, if a server script changes a property of some instance in the Workspace and then calls `Class.RemoteEvent:FireAllClients()`, the property change might replicate to the client before or after `Class.RemoteEvent.OnClientEvent` fires. Use the available methods and events to [detect changes](#detect-changes) rather than assuming a change has replicated. Changes of the same type, such as two attribute changes, generally **do** arrive in order.
+
+When clients first launch an experience, some aspects of replication and script execution are predictable:
 
 1. The client loads the contents of `Class.ReplicatedFirst`, such as a loading screen, assets, and scripts.
 1. `Class.LocalScript|LocalScripts` (and `Class.Script|Scripts` with a `Class.Script.RunContext|RunContext` of `Enum.RunContext.Client|Client`) in `ReplicatedFirst` run. These scripts can safely get objects from `ReplicatedFirst` without using `WaitForChild()`:

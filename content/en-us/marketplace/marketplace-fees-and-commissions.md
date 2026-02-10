@@ -453,6 +453,41 @@ To protect against automated purchases, Roblox sets purchase limits for Limiteds
   - A maximum of 3 successful purchases per user per item.
 - For in-experience purchases, users must be in the experience for 60 seconds to successfully complete a purchase.
 
+## Timed options
+
+<Alert severity = 'info'>
+At this time, timed options are available for 3D shirts, pants, and sweater categories.
+</Alert>
+
+Timed options allows users to purchase your items for a period of time of either 3, 7, or 14 days at a cheaper cost. You can enable or disable timed options for your Marketplace assets [in bulk](#in-bulk) or [per item](#per-item).
+
+<center><figure>
+<img src="../assets/publishing/marketplace/Timed-Options-Mobile-Marketplace.png" alt="Example of timed options displaying for end user viewing marketplace item" width="80%" />
+<figcaption><center>With timed options enabled, users gain access to multiple purchase options for each available time range.</center></figcaption>
+</figure></center>
+
+### In bulk
+
+To toggle timed options for multiple assets:
+
+1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page > Avatar items.
+2. Filter by avatar asset type, such as **Clothing**.
+3. On the top right, select the **Timed option** button.
+  <img src="../assets/publishing/marketplace/Timed-Options-Bulk-A.png" alt="Timed options button on top right of Creations page" width="90%" />
+
+4. Follow the prompts to confirm the bulk selection and timed option settings.
+
+  <img src="../assets/publishing/marketplace/Timed-Options-Bulk-B.png" alt="Confirmation prompt for setting timed options for all assets" width="60%" />
+
+### Per item
+
+To toggle timed options for individual assets:
+
+1. In your [Creations](https://create.roblox.com/dashboard/creations) tab, navigate to the individual asset's **Manage Item** page.
+2. Toggle the timed option for your asset.
+  <img src="../assets/publishing/marketplace/Timed-Options-Per-Item.png" alt="Individual timed option toggle on the specific asset sale setting page" width="90%" />
+3. When complete, click the **Save Changes** button.
+
 ## Price ranges
 
 Depending on the 3D asset type, you must set the price of the item within the marketplace price range. If you are selling a [Limited](#limiteds) item, you can set your item price as **0**, or any value after the **Limiteds Price Floor**.
