@@ -144,6 +144,8 @@ navigation:
                 path: /physics/constraints/torque
               - title: LineForce
                 path: /physics/constraints/line-force
+              - title: Animation
+                path: /physics/constraints/animation
           - title: Sleep system
             path: /physics/sleep-system
           - title: Adaptive timestepping

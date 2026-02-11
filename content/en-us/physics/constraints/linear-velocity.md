@@ -4,7 +4,7 @@ description: The LinearVelocity constraint applies force on an assembly to maint
 ---
 
 <Alert severity="info">
-For an overview on creating, visualizing, and simulating mover constraints, including `Class.LinearVelocity`, see [Mover constraints](../../physics/mover-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
+For an overview on creating, visualizing, and simulating mover constraints, including `Class.LinearVelocity`, see [mover constraints](../../physics/mover-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
 </Alert>
 
 A `Class.LinearVelocity` constraint applies force on an assembly to maintain a constant velocity. It can be set to apply force along a `Datatype.Vector3`, line, or 2D&nbsp;plane.

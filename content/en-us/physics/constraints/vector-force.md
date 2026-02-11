@@ -4,7 +4,7 @@ description: The VectorForce constraint applies constant linear force on an asse
 ---
 
 <Alert severity="info">
-For an overview on creating, visualizing, and simulating mover constraints, including `Class.VectorForce`, see [Mover constraints](../../physics/mover-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
+For an overview on creating, visualizing, and simulating mover constraints, including `Class.VectorForce`, see [mover constraints](../../physics/mover-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
 </Alert>
 
 The `Class.VectorForce` constraint applies constant linear force on an assembly. The direction and strength of the force is determined by a `Datatype.Vector3` and can be relative to an attachment on the part, another attachment, or the world coordinate system.

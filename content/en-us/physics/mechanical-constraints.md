@@ -15,9 +15,9 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 <CardContent>
 <Button href="../physics/constraints/ball-socket.md" size="large" variant="contained" fullWidth>Ball Socket</Button>
 <p></p>
-<CardMedia component="video" controls src="../assets/physics/constraints/BallInSocket-Demo.mp4" />
+<CardMedia component="video" controls src="../assets/physics/constraints/BallSocket-Demo.mp4" />
 <p></p>
-<figcaption>[BallSocketConstraint](../physics/constraints/ball-socket.md) forces its two attachments into the same position and allows them to freely rotate about all three axes, with optional limits to restrict both tilt and twist</figcaption>
+<figcaption>`Class.BallSocketConstraint` forces its two attachments into the same position and allows them to freely rotate about all three axes, with optional limits to restrict both tilt and twist</figcaption>
 </CardContent>
 </Card>
 </Grid>
@@ -29,7 +29,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/Hinge-Demo.mp4" />
 <p></p>
-<figcaption>[HingeConstraint](../physics/constraints/hinge.md) allows its two attachments to rotate about one axis, with optional assigned power for motor or servo behavior</figcaption>
+<figcaption>`Class.HingeConstraint` allows its two attachments to rotate about one axis, with optional assigned power for motor or servo behavior</figcaption>
 </CardContent>
 </Card>
 </Grid>
@@ -41,7 +41,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/Prismatic-Demo.mp4" />
 <p></p>
-<figcaption>[PrismaticConstraint](../physics/constraints/prismatic.md) allows two attachments to slide along one axis but not rotate, with optional assigned power for mechanisms like sliding doors and elevator platforms</figcaption>
+<figcaption>`Class.PrismaticConstraint` allows two attachments to slide along one axis but not rotate, with optional assigned power for mechanisms like sliding doors and elevator platforms</figcaption>
 </CardContent>
 </Card>
 </Grid>
@@ -53,7 +53,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/Cylindrical-Demo.mp4" />
 <p></p>
-<figcaption>[CylindricalConstraint](../physics/constraints/cylindrical.md) allows its attachments to slide along one axis and rotate about another axis, with optional assigned angular and/or linear power</figcaption>
+<figcaption>`Class.CylindricalConstraint` allows its attachments to slide along one axis and rotate about another axis, with optional assigned angular and/or linear power</figcaption>
 </CardContent>
 </Card>
 </Grid>
@@ -65,7 +65,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/Spring-Demo.mp4" />
 <p></p>
-<figcaption>[SpringConstraint](../physics/constraints/spring.md) applies a force on its attachments based on spring and damper behavior, with an optional minimum/maximum length</figcaption>
+<figcaption>`Class.SpringConstraint` applies a force on its attachments based on spring and damper behavior, with an optional minimum/maximum length</figcaption>
 </CardContent>
 </Card>
 </Grid>
@@ -77,7 +77,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/TorsionSpring-Demo.mp4" />
 <p></p>
-<figcaption>[TorsionSpringConstraint](../physics/constraints/torsion-spring.md) applies torque based on a relative angle and relative angular velocity, in an attempt to bring two axes from two parts together</figcaption>
+<figcaption>`Class.TorsionSpringConstraint` applies torque based on a relative angle and relative angular velocity, in an attempt to bring two axes from two parts together</figcaption>
 </CardContent>
 </Card>
 </Grid>
@@ -89,7 +89,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/Universal-Demo.mp4" />
 <p></p>
-<figcaption>[UniversalConstraint](../physics/constraints/universal.md) ensures two axes on two assemblies remain perpendicular, useful for applications such as vehicle power transmission to rear drive shafts, robotics, and more</figcaption>
+<figcaption>`Class.UniversalConstraint` ensures two axes on two assemblies remain perpendicular, useful for applications such as vehicle power transmission to rear drive shafts, robotics, and more</figcaption>
 </CardContent>
 </Card>
 </Grid>
@@ -101,7 +101,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/Rope-Demo.mp4" />
 <p></p>
-<figcaption>[RopeConstraint](../physics/constraints/rope.md) prevents two attachments from separating further than a defined length, with optional behavior as an extending or contracting winch</figcaption>
+<figcaption>`Class.RopeConstraint` prevents two attachments from separating further than a defined length, with optional behavior as an extending or contracting winch</figcaption>
 </CardContent>
 </Card>
 </Grid>
@@ -113,7 +113,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/Rod-Demo.mp4" />
 <p></p>
-<figcaption>[RodConstraint](../physics/constraints/rod.md) keeps two attachments separated by a defined length, with optional limits on rotational tilt</figcaption>
+<figcaption>`Class.RodConstraint` keeps two attachments separated by a defined length, with optional limits on rotational tilt</figcaption>
 </CardContent>
 </Card>
 </Grid>
@@ -125,7 +125,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/Plane-Demo.mp4" />
 <p></p>
-<figcaption>[PlaneConstraint](../physics/constraints/plane.md) moves two attachments into a position/orientation along a plane, and both attachments remain free to translate and rotate unless otherwise constrained</figcaption>
+<figcaption>`Class.PlaneConstraint` moves two attachments into a position/orientation along a plane, and both attachments remain free to translate and rotate unless otherwise constrained</figcaption>
 </CardContent>
 </Card>
 </Grid>
@@ -135,7 +135,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 <CardContent>
 <Button href="../physics/constraints/weld.md" size="large" variant="contained" fullWidth>Weld</Button>
 <p></p>
-<figcaption>[WeldConstraint](../physics/constraints/weld.md) connects two `Class.BasePart|BaseParts` and ensures they stay in the same relative position and orientation to each other, even if they are not touching</figcaption>
+<figcaption>`Class.WeldConstraint` connects two `Class.BasePart|BaseParts` and ensures they stay in the same relative position and orientation to each other, even if they are not touching</figcaption>
 </CardContent>
 </Card>
 </Grid>
@@ -145,7 +145,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 <CardContent>
 <Button href="../physics/constraints/rigid.md" size="large" variant="contained" fullWidth>Rigid</Button>
 <p></p>
-<figcaption>[RigidConstraint](../physics/constraints/rigid.md) connects two `Class.Attachment|Attachments` or `Class.Bone|Bones` and ensures they stay in the same relative position/orientation to each other, even if they are not touching</figcaption>
+<figcaption>`Class.RigidConstraint` connects two `Class.Attachment|Attachments` or `Class.Bone|Bones` and ensures they stay in the same relative position/orientation to each other, even if they are not touching</figcaption>
 </CardContent>
 </Card>
 </Grid>
@@ -155,7 +155,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 <CardContent>
 <Button href="../physics/constraints/no-collision.md" size="large" variant="contained" fullWidth>No Collision</Button>
 <p></p>
-<figcaption>[NoCollisionConstraint](../physics/constraints/no-collision.md) prevents collisions between two specific parts, but those parts may still register collisions with the rest of the world</figcaption>
+<figcaption>`Class.NoCollisionConstraint` prevents collisions between two specific parts, but those parts may still register collisions with the rest of the world</figcaption>
 </CardContent>
 </Card>
 </Grid>

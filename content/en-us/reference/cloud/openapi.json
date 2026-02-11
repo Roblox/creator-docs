@@ -316,6 +316,350 @@
         }
       }
     },
+    "/cloud/v2/groups/{group_id}/forum-categories": {
+      "get": {
+        "tags": ["Groups"],
+        "summary": "List Group Forum Categories",
+        "description": "Lists forum categories in the group.",
+        "operationId": "Cloud_ListGroupForumCategories",
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "description": "The group ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of group forum categories to return. The service might\nreturn fewer than this value. If unspecified, at most 10 group forum\ncategories are returned. The maximum value is 10 and higher values are set\nto 10.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "examples": {
+              "maxPageSize": {
+                "description": "An integer between 1 and 10, inclusive",
+                "value": 10
+              }
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\nWhen paginating, all other parameters provided to the subsequent call must\nmatch the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\nFiltering conforms to Common Expression Language (CEL). Only the boolean\nfield `archived` and `==` operator are supported. If `archived=false`,\narchived categories are not returned. The default value is `false`.\nExample: `\"filter=archived==true\"`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListGroupForumCategoriesResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "group-forum:read"
+          }
+        ],
+        "x-roblox-docs": {
+          "category": "Users and groups",
+          "methodProperties": {
+            "scopes": ["group-forum:read"]
+          },
+          "resource": {
+            "$ref": "#/components/schemas/GroupForumCategory",
+            "name": "GroupForumCategory"
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 150
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#Cloud_ListGroupForumCategories"
+        }
+      }
+    },
+    "/cloud/v2/groups/{group_id}/forum-categories/{forum_category_id}/posts": {
+      "get": {
+        "tags": ["Groups"],
+        "summary": "List Group Forum Posts",
+        "description": "Lists forum posts in the group's forum category.",
+        "operationId": "Cloud_ListGroupForumPosts",
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "description": "The group ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "forum_category_id",
+            "in": "path",
+            "description": "The forum-category ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of group forum posts to return. The service might return\nfewer than this value. If unspecified, at most 10 group forum posts are\nreturned. The maximum value is 100 and higher values are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "examples": {
+              "maxPageSize": {
+                "description": "An integer between 1 and 100, inclusive",
+                "value": 10
+              }
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\nWhen paginating, all other parameters provided to the subsequent call must\nmatch the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\nFiltering conforms to Common Expression Language (CEL). Only the query\n`filter=pinned==true` is supported, where only pinned posts are returned.\n`filter=pinned==false`is not supported.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "view",
+            "in": "query",
+            "description": "The view in which to retrieve the group forum post.\n\nSupports FULL and FULL_WITH_FIRST_COMMENT.\n\nDefaults to FULL.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | VIEW_UNSPECIFIED | The group forum post view is not specified; the default will be used. |\n  | FULL | Includes all fields but does not dereference `first_comment`. Only the `path` field is populated. |\n  | FULL_WITH_FIRST_COMMENT | Includes all fields and also fully populates `first_comment`. The default view. |",
+            "schema": {
+              "example": "VIEW_UNSPECIFIED",
+              "enum": ["VIEW_UNSPECIFIED", "FULL", "FULL_WITH_FIRST_COMMENT"],
+              "type": "string",
+              "format": "enum"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListGroupForumPostsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "group-forum:read"
+          }
+        ],
+        "x-roblox-docs": {
+          "category": "Users and groups",
+          "methodProperties": {
+            "scopes": ["group-forum:read"]
+          },
+          "resource": {
+            "$ref": "#/components/schemas/GroupForumPost",
+            "name": "GroupForumPost"
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 150
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#Cloud_ListGroupForumPosts"
+        }
+      }
+    },
+    "/cloud/v2/groups/{group_id}/forum-categories/{forum_category_id}/posts/{post_id}/comments": {
+      "get": {
+        "tags": ["Groups"],
+        "summary": "List Group Forum Comments",
+        "description": "Lists forum comments on a group's forum post.",
+        "operationId": "Cloud_ListGroupForumComments",
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "description": "The group ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "forum_category_id",
+            "in": "path",
+            "description": "The forum-category ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "post_id",
+            "in": "path",
+            "description": "The post ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of group forum comments to return. The service might\nreturn fewer than this value. If unspecified, at most 10 group forum\ncomments are returned. The maximum value is 100 and higher values are set\nto 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "examples": {
+              "maxPageSize": {
+                "description": "An integer between 1 and 100, inclusive",
+                "value": 10
+              }
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\nWhen paginating, all other parameters provided to the subsequent call must\nmatch the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\nFiltering conforms to Common Expression Language (CEL).\nOnly the boolean field `includeReactions` and string field\n`repliesToCommentId` are supported. Only the `==` operator is supported. If\n`includeReactions=false`, comment reactions are not returned in the\nresponse. The default value is `false`. If `repliesToCommentId` is\nspecified, only comments that respond to the comment are returned. The\ndefault value is `''`. If `repliesToCommentId=''`, only comments responding\ndirectly to the post are returned. Example:\n`\"filter=includeReactions==true;repliesToCommentId==01234567-89ab-cdef-0123-456789abcdef\"`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListGroupForumCommentsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "group-forum:read"
+          }
+        ],
+        "x-roblox-docs": {
+          "category": "Users and groups",
+          "methodProperties": {
+            "scopes": ["group-forum:read"]
+          },
+          "resource": {
+            "$ref": "#/components/schemas/GroupForumComment",
+            "name": "GroupForumComment"
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 150
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#Cloud_ListGroupForumComments"
+        }
+      }
+    },
     "/cloud/v2/groups/{group_id}/join-requests": {
       "get": {
         "tags": ["Groups"],
@@ -15352,6 +15696,11 @@
             "roblox-oauth2": []
           }
         ],
+        "x-roblox-scopes": [
+          {
+            "name": "legacy-asset:manage"
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/assets#get_asset_delivery_api_v1_assetId__assetId_"
         }
@@ -15537,6 +15886,11 @@
           },
           {
             "roblox-oauth2": []
+          }
+        ],
+        "x-roblox-scopes": [
+          {
+            "name": "legacy-asset:manage"
           }
         ],
         "externalDocs": {
@@ -21770,25 +22124,6 @@
               "type": "integer",
               "format": "int64"
             }
-          },
-          {
-            "in": "header",
-            "name": "RequestUserIdIsInGameServer",
-            "description": "Whether the user with the request userId is present in the game server.",
-            "required": true,
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "in": "header",
-            "name": "Roblox-Place-Id",
-            "description": "Place identifier of the requesting place.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
           }
         ],
         "responses": {
@@ -21841,25 +22176,6 @@
                 "format": "int64",
                 "type": "integer"
               }
-            }
-          },
-          {
-            "in": "header",
-            "name": "RequestUserIdIsInGameServer",
-            "description": "Whether the user with the request userId is present in the game server.",
-            "required": true,
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "in": "header",
-            "name": "Roblox-Place-Id",
-            "description": "Place identifier of the requesting place.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
             }
           }
         ],
@@ -28598,133 +28914,6 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/friends#friends_get_v1_my_new_friend_requests_count"
-        }
-      }
-    },
-    "/v1/my/trusted-friends/{userId}/status": {
-      "get": {
-        "tags": ["Connections"],
-        "summary": "Gets trusted friend status of a specified user against the requesting user.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "userId",
-            "description": "The user to check the trusted friend status for.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.TrustedFriendStatusResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.TrustedFriendStatusResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The target user is invalid or does not exist."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/friends#friends_get_v1_my_trusted_friends__userId__status"
-        }
-      }
-    },
-    "/v1/user/{userId}/multiget-are-trusted-friends": {
-      "get": {
-        "tags": ["Connections"],
-        "summary": "Check if the requesting user is trusted friends with the specified users.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "userId",
-            "description": "The requesting userId.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "query",
-            "name": "userIds",
-            "description": "The user ids to check against with the requesting user.",
-            "required": true,
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "array",
-              "items": {
-                "format": "int64",
-                "type": "integer"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.MultigetAreTrustedFriendsResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.MultigetAreTrustedFriendsResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The target user is invalid or does not exist."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {},
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/friends#friends_get_v1_user__userId__multiget_are_trusted_friends"
         }
       }
     },
@@ -39228,6 +39417,9 @@
           },
           "400": {
             "description": "8: The universe IDs specified are invalid.\r\n9: Too many universe IDs were requested."
+          },
+          "429": {
+            "description": "4: Too many requests have been made."
           }
         },
         "servers": [
@@ -39716,145 +39908,6 @@
         ]
       }
     },
-    "/v1/games/{universeId}/votes": {
-      "get": {
-        "tags": ["Interactions", "Universes"],
-        "summary": "Get the game vote status",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "universeId",
-            "description": "The id of the universe we get vote status from.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.GameVoteResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.GameVoteResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "2: The universe's root place is invalid.\r\n3: The asset is not voteable."
-          },
-          "404": {
-            "description": "1: The requested universe does not exist."
-          },
-          "429": {
-            "description": "10: Internal service busy. Please try again later."
-          },
-          "500": {
-            "description": "0: An unknown error occurred."
-          }
-        },
-        "deprecated": true,
-        "servers": [
-          {
-            "url": "https://games.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {},
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "description": "Use https://games.roblox.com/docs#!/Votes/get_v1_games_votes instead",
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#games_get_v1_games__universeId__votes"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://games.roblox.com/v1/games/votes",
-            "httpMethod": "GET",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/interactions#games_get_v1_games_votes"
-          }
-        ]
-      }
-    },
-    "/v1/games/{universeId}/votes/user": {
-      "get": {
-        "tags": ["Interactions", "Universes"],
-        "summary": "Get the user's vote status for a game",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "universeId",
-            "description": "The id of the universe we get user vote status from.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.UserGameVoteResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.UserGameVoteResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "2: The universe's root place is invalid.\r\n3: The asset is not voteable."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "404": {
-            "description": "1: The requested universe does not exist."
-          },
-          "429": {
-            "description": "10: Internal service busy. Please try again later."
-          },
-          "500": {
-            "description": "0: An unknown error occurred."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://games.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#games_get_v1_games__universeId__votes_user"
-        }
-      }
-    },
     "/v1/games/games-product-info": {
       "get": {
         "tags": ["Universes"],
@@ -40131,72 +40184,6 @@
         }
       }
     },
-    "/v1/games/votes": {
-      "get": {
-        "tags": ["Interactions", "Universes"],
-        "summary": "Gets a list of universe vote status",
-        "parameters": [
-          {
-            "in": "query",
-            "name": "universeIds",
-            "description": "A list of universe Ids. Cannot exceed a maximum of 50 IDs.",
-            "required": true,
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "array",
-              "items": {
-                "format": "int64",
-                "type": "integer"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Games.Api.Models.Response.GameVoteResponse_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Games.Api.Models.Response.GameVoteResponse_"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "3: The asset is not voteable.\r\n8: No universe IDs were specified.\r\n9: Too many universe IDs were requested."
-          },
-          "429": {
-            "description": "10: Internal service busy. Please try again later."
-          },
-          "500": {
-            "description": "0: An unknown error occurred."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://games.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {},
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#games_get_v1_games_votes"
-        }
-      }
-    },
     "/v1/private-servers/enabled-in-universe/{universeId}": {
       "get": {
         "tags": ["Private servers", "Universes"],
@@ -40313,7 +40300,7 @@
         }
       }
     },
-    "/v2/groups/{groupId}/gamesV2#GroupsApi": {
+    "/v2/groups/{groupId}/gamesV2": {
       "get": {
         "tags": ["Groups", "Universes"],
         "summary": "Gets experiences created by the specified group id.",
@@ -40408,7 +40395,7 @@
         }
       }
     },
-    "/v2/groups/{groupId}/games#GroupsApi": {
+    "/v2/groups/{groupId}/games": {
       "get": {
         "tags": ["Groups", "Universes"],
         "summary": "Gets experiences created by the specified group id.",
@@ -43889,12 +43876,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Groups.Api.SocialLinkResponse_"
+                  "$ref": "#/components/schemas/Roblox.Groups.Api.GetSocialLinkResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Groups.Api.SocialLinkResponse_"
+                  "$ref": "#/components/schemas/Roblox.Groups.Api.GetSocialLinkResponse"
                 }
               }
             }
@@ -53726,7 +53713,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}],
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/assets#thumbnails_get_v1_assets_thumbnail_3d"
         }
@@ -54755,7 +54747,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}],
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/avatars#thumbnails_get_v1_users_avatar_3d"
         }
@@ -61008,7 +61005,7 @@
         "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
-            "period": "DAY",
+            "period": "MINUTE",
             "maxInPeriod": 100
           }
         },
@@ -64654,7 +64651,7 @@
         }
       }
     },
-    "/v1/games/{universeId}/user-votes#VotingApi": {
+    "/v1/games/{universeId}/user-votes": {
       "patch": {
         "tags": ["Interactions", "Universes"],
         "operationId": "Voting_VoteGame",
@@ -64757,7 +64754,207 @@
         }
       }
     },
-    "/v1/vip-servers/{id}/permissions#PrivateServersApi": {
+    "/v1/games/{universeId}/votes": {
+      "get": {
+        "tags": ["Interactions", "Universes"],
+        "operationId": "Voting_GetGameVoteStatus",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Roblox-Api-Key",
+            "in": "header",
+            "description": "Api Key (UUID).",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameVoteResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameVoteResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameVoteResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#Voting_GetGameVoteStatus"
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://games.roblox.com/v1/games/votes",
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/interactions#Voting_MultiGetGameVoteStatus"
+          }
+        ]
+      }
+    },
+    "/v1/games/{universeId}/votes/user": {
+      "get": {
+        "tags": ["Interactions", "Universes"],
+        "operationId": "Voting_GetGameVoteStatusForUser",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Roblox-Api-Key",
+            "in": "header",
+            "description": "Api Key (UUID).",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserGameVoteResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserGameVoteResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserGameVoteResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#Voting_GetGameVoteStatusForUser"
+        }
+      }
+    },
+    "/v1/games/votes": {
+      "get": {
+        "tags": ["Interactions", "Universes"],
+        "operationId": "Voting_MultiGetGameVoteStatus",
+        "parameters": [
+          {
+            "name": "universeIds",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          },
+          {
+            "name": "Roblox-Api-Key",
+            "in": "header",
+            "description": "Api Key (UUID).",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameVoteResponseApiArrayResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameVoteResponseApiArrayResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameVoteResponseApiArrayResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#Voting_MultiGetGameVoteStatus"
+        }
+      }
+    },
+    "/v1/vip-servers/{id}/permissions": {
       "patch": {
         "tags": ["Groups", "Private servers", "Universes"],
         "operationId": "PrivateServers_UpdatePrivateServerPermissions",
@@ -64833,7 +65030,7 @@
         }
       }
     },
-    "/v1/vip-servers/{id}/subscription#PrivateServersApi": {
+    "/v1/vip-servers/{id}/subscription": {
       "patch": {
         "tags": ["Private servers", "Universes"],
         "operationId": "PrivateServers_UpdatePrivateServerSubscription",
@@ -64909,7 +65106,7 @@
         }
       }
     },
-    "/v1/vip-servers/{id}#PrivateServersApi": {
+    "/v1/vip-servers/{id}": {
       "get": {
         "tags": ["Metadata", "Private servers", "Universes"],
         "operationId": "PrivateServers_GetPrivateServer",
@@ -65028,7 +65225,7 @@
         }
       }
     },
-    "/v1/games/vip-servers/{universeId}#PrivateServersApi": {
+    "/v1/games/vip-servers/{universeId}": {
       "post": {
         "tags": ["Private servers", "Universes"],
         "operationId": "PrivateServers_CreatePrivateServer",
@@ -65104,7 +65301,7 @@
         }
       }
     },
-    "/v1/vip-server/can-invite/{userId}#PrivateServersApi": {
+    "/v1/vip-server/can-invite/{userId}": {
       "get": {
         "tags": ["Private servers", "Users"],
         "operationId": "PrivateServers_CanInviteUser",
@@ -65214,7 +65411,7 @@
         }
       }
     },
-    "/v1/private-servers/my-private-servers#PrivateServersApi": {
+    "/v1/private-servers/my-private-servers": {
       "get": {
         "tags": ["Private servers", "Universes"],
         "operationId": "PrivateServersApi.PrivateServers_GetMyPrivateServers",
@@ -65411,6 +65608,48 @@
           "singular": "asset-quota"
         },
         "x-resource": true
+      },
+      "ContentMessage": {
+        "type": "object",
+        "properties": {
+          "createTime": {
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z",
+            "type": "string",
+            "description": "The timestamp when the message was created.",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z",
+            "type": "string",
+            "description": "The timestamp when the message was last updated.",
+            "format": "date-time"
+          },
+          "plainText": {
+            "type": "string",
+            "description": "The plain text content of the message."
+          },
+          "author": {
+            "readOnly": true,
+            "example": "users/156",
+            "type": "string",
+            "description": "The resource path of the user who created the message."
+          },
+          "messageReaction": {
+            "readOnly": true,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MessageReaction"
+            },
+            "description": "The reactions to the message, if this feature is enabled for this message."
+          }
+        },
+        "description": "Represents the content of a message.",
+        "x-oneOf": {
+          "Author": ["author"],
+          "content": ["plainText"]
+        }
       },
       "CreatorStoreProduct": {
         "type": "object",
@@ -65854,6 +66093,175 @@
         "x-oneOf": {
           "Owner": ["owner"]
         }
+      },
+      "GroupForumCategory": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "example": "groups/123/forum-categories/01234567-89ab-cdef-0123-456789abcdef",
+            "type": "string",
+            "description": "The resource path of the group forum category.\n\nFormat: `groups/{group_id}/forum-categories/{group_forum_category_id}`"
+          },
+          "createTime": {
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z",
+            "type": "string",
+            "description": "The timestamp when the group forum category was created.",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z",
+            "type": "string",
+            "description": "The timestamp when the group forum category was last updated.",
+            "format": "date-time"
+          },
+          "groupForumCategoryId": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The id of the group forum category."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "The display name of the group forum category."
+          },
+          "creator": {
+            "readOnly": true,
+            "example": "users/156",
+            "type": "string",
+            "description": "The resource path of the user who created the group forum category."
+          },
+          "archiveTime": {
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z",
+            "type": "string",
+            "description": "The timestamp when the group forum category was archived.",
+            "format": "date-time"
+          },
+          "archiver": {
+            "readOnly": true,
+            "example": "users/156",
+            "type": "string",
+            "description": "The resource path of the user who archived the group forum category."
+          }
+        },
+        "description": "Represents a forum category within a group for user discussions.",
+        "x-aep-resource": {
+          "patterns": [
+            "groups/{group_id}/forum-categories/{group_forum_category_id}"
+          ],
+          "plural": "group-forum-categories",
+          "singular": "group-forum-category"
+        },
+        "x-resource": true
+      },
+      "GroupForumComment": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "example": "groups/123/forum-categories/01234567-89ab-cdef-0123-456789abcdef/posts/01234567-89ab-cdef-0123-456789abcdef/comments/01234567-89ab-cdef-0123-456789abcdef",
+            "type": "string",
+            "description": "The resource path of the group forum comment.\n\nFormat:\n`groups/{group_id}/forum-categories/{group_forum_category_id}/posts/{group_forum_post_id}/comments/{group_forum_comment_id}`"
+          },
+          "groupForumCommentId": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The id of the group forum comment."
+          },
+          "message": {
+            "$ref": "#/components/schemas/ContentMessage",
+            "description": "The message content of the group forum comment."
+          }
+        },
+        "description": "Represents a forum comment on a group's forum post.",
+        "x-aep-resource": {
+          "patterns": [
+            "groups/{group_id}/forum-categories/{group_forum_category_id}/posts/{group_forum_post_id}/comments/{group_forum_comment_id}"
+          ],
+          "plural": "group-forum-comments",
+          "singular": "group-forum-comment"
+        },
+        "x-resource": true
+      },
+      "GroupForumPost": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "example": "groups/123/forum-categories/01234567-89ab-cdef-0123-456789abcdef/posts/01234567-89ab-cdef-0123-456789abcdef",
+            "type": "string",
+            "description": "The resource path of the group forum post.\n\nFormat:\n`groups/{group_id}/forum-categories/{group_forum_category_id}/posts/{group_forum_post_id}`"
+          },
+          "createTime": {
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z",
+            "type": "string",
+            "description": "The timestamp when the group forum post was created.",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z",
+            "type": "string",
+            "description": "The timestamp when the group forum post was last updated.",
+            "format": "date-time"
+          },
+          "pinned": {
+            "example": true,
+            "type": "boolean",
+            "description": "Whether the group forum post is pinned."
+          },
+          "locked": {
+            "example": true,
+            "type": "boolean",
+            "description": "Whether the group forum post is locked."
+          },
+          "groupForumPostId": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The id of the group forum post."
+          },
+          "title": {
+            "type": "string",
+            "description": "The title of the group forum post."
+          },
+          "firstComment": {
+            "$ref": "#/components/schemas/GroupForumComment",
+            "description": "The resource path of the group forum post's first comment, which holds the\npost content.\n\nBy default, the `first_comment` field is fully populated. This **will not**\ndereference resource references within the first comment, such as\n`GroupForumComment.author`; only the `path` subfield of these fields will\nbe populated. However, if only the `path` field of the first comment is\nneeded, you can specify the FULL view."
+          },
+          "author": {
+            "readOnly": true,
+            "example": "users/156",
+            "type": "string",
+            "description": "The resource path of the user who created the group forum post."
+          },
+          "archiveTime": {
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z",
+            "type": "string",
+            "description": "The timestamp when the group forum post was archived.",
+            "format": "date-time"
+          },
+          "archiver": {
+            "readOnly": true,
+            "example": "users/156",
+            "type": "string",
+            "description": "The resource path of the user who archived the group forum post."
+          },
+          "commentCount": {
+            "type": "integer",
+            "description": "The number of comments on the group forum post. This includes the first\ncomment (post content).",
+            "format": "int64"
+          }
+        },
+        "description": "Represents a forum post within a group's forum category.",
+        "x-aep-resource": {
+          "patterns": [
+            "groups/{group_id}/forum-categories/{group_forum_category_id}/posts/{group_forum_post_id}"
+          ],
+          "plural": "group-forum-posts",
+          "singular": "group-forum-post"
+        },
+        "x-resource": true
       },
       "GroupJoinRequest": {
         "type": "object",
@@ -66538,6 +66946,57 @@
         },
         "description": "A list of DataStores in the parent collection."
       },
+      "ListGroupForumCategoriesResponse": {
+        "type": "object",
+        "properties": {
+          "groupForumCategories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GroupForumCategory"
+            },
+            "description": "The GroupForumCategories from the specified Group."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\npage. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of GroupForumCategories in the parent collection."
+      },
+      "ListGroupForumCommentsResponse": {
+        "type": "object",
+        "properties": {
+          "groupForumComments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GroupForumComment"
+            },
+            "description": "The GroupForumComments from the specified GroupForumPost."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\npage. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of GroupForumComments in the parent collection."
+      },
+      "ListGroupForumPostsResponse": {
+        "type": "object",
+        "properties": {
+          "groupForumPosts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GroupForumPost"
+            },
+            "description": "The GroupForumPosts from the specified GroupForumCategory."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\npage. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of GroupForumPosts in the parent collection."
+      },
       "ListGroupJoinRequestsResponse": {
         "type": "object",
         "properties": {
@@ -67068,6 +67527,23 @@
           "expiration": ["ttl", "expireTime"],
           "sortKey": ["stringSortKey", "numericSortKey"]
         }
+      },
+      "MessageReaction": {
+        "type": "object",
+        "properties": {
+          "emoteId": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The id of the emote."
+          },
+          "count": {
+            "readOnly": true,
+            "type": "integer",
+            "description": "The count of reactions for this emote.",
+            "format": "int64"
+          }
+        },
+        "description": "Represents the reaction to a message."
       },
       "Money": {
         "type": "object",
@@ -74161,6 +74637,11 @@
             "additionalProperties": {
               "type": "string"
             }
+          },
+          "versionV2": {
+            "format": "int64",
+            "description": "VersionV2 of the OTA asset.",
+            "type": "integer"
           }
         },
         "additionalProperties": false
@@ -76124,21 +76605,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Friends.Api.MultigetAreTrustedFriendsResponse": {
-        "description": "Response model for MultigetAreTrustedFriendsRequest",
-        "type": "object",
-        "properties": {
-          "trustedFriendsId": {
-            "description": "List of trusted friend ids",
-            "type": "array",
-            "items": {
-              "format": "int64",
-              "type": "integer"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Friends.Api.PendingFriendRequestCountModel": {
         "description": "Response model for Pending Friend Request Count",
         "type": "object",
@@ -76146,19 +76612,6 @@
           "count": {
             "format": "int32",
             "description": "Count of pending friend requests",
-            "type": "integer"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Friends.Api.TrustedFriendStatusResponse": {
-        "description": "The trusted friend status response model",
-        "type": "object",
-        "properties": {
-          "status": {
-            "format": "int32",
-            "description": "The trusted friend status. ['Invalid' = 0, 'NotFriends' = 1, 'Friends' = 2, 'TrustedFriends' = 3, 'RequestSent' = 4, 'RequestReceived' = 5, 'RequestIgnored' = 6]",
-            "enum": [0, 1, 2, 3, 4, 5, 6],
             "type": "integer"
           }
         },
@@ -78352,28 +78805,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Games.Api.Models.Response.GameVoteResponse": {
-        "description": "Response model for getting the game vote",
-        "type": "object",
-        "properties": {
-          "id": {
-            "format": "int64",
-            "description": "The game universe id",
-            "type": "integer"
-          },
-          "upVotes": {
-            "format": "int64",
-            "description": "The game up votes",
-            "type": "integer"
-          },
-          "downVotes": {
-            "format": "int64",
-            "description": "The game down votes",
-            "type": "integer"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Games.Api.Models.Response.GetPrivateServerListResponse": {
         "type": "object",
         "properties": {
@@ -78546,25 +78977,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Games.Api.Models.Response.UserGameVoteResponse": {
-        "description": "Response model for getting the user vote status for a game",
-        "type": "object",
-        "properties": {
-          "canVote": {
-            "description": "Whether the user can vote the game",
-            "type": "boolean"
-          },
-          "userVote": {
-            "description": "The user's vote status for the game",
-            "type": "boolean"
-          },
-          "reasonForNotVoteable": {
-            "description": "The reason why the user can't vote",
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Games.Api.Models.Response.VerifiedBadgeUserResponse": {
         "description": "A response model specific to multi-get user.",
         "type": "object",
@@ -78680,18 +79092,6 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.GameProductResponse"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Games.Api.Models.Response.GameVoteResponse_": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.GameVoteResponse"
             }
           }
         },
@@ -79088,6 +79488,24 @@
           },
           "isPrivate": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Groups.Api.GetSocialLinkResponse": {
+        "description": "A social link response from a create request",
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Groups.Api.SocialLinkResponse"
+            }
+          },
+          "socialLinksVerificationStatus": {
+            "format": "int32",
+            "enum": [0, 1, 2, 3],
+            "type": "integer"
           }
         },
         "additionalProperties": false
@@ -80780,18 +81198,6 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Roblox.Groups.Api.GroupRoleDetailResponse"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Groups.Api.SocialLinkResponse_": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.Groups.Api.SocialLinkResponse"
             }
           }
         },
@@ -83669,6 +84075,10 @@
           "accessContext": {
             "description": "Access context for asset permission checks (only relevant for Asset thumbnail types)",
             "type": "string"
+          },
+          "headShape": {
+            "description": "Head shape for dynamic head thumbnails (only relevant for Asset thumbnail types with dynamic head)",
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -84745,6 +85155,10 @@
           "isDelayedUiEnabled": {
             "description": "Whether the delayed UI is enabled.",
             "type": "boolean"
+          },
+          "is2svRecoveryEnabled": {
+            "description": "Whether to expose 2SV recovery through the 2SV challenge modal.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -85687,6 +86101,18 @@
         "description": "Representation of a creator store asset.",
         "nullable": true
       },
+      "CreatorStoreCapabilitiesModel": {
+        "type": "object",
+        "properties": {
+          "shouldSandbox": {
+            "type": "boolean",
+            "description": "Controls whether the model will be sandboxed upon insertion when it has scripts."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents the capabilities that a model has (e.g. sandboxing).\r\nOnly present for model asset types; AMRS includes it in the response when available.",
+        "nullable": true
+      },
       "ToolboxService.CreatorStoreProduct": {
         "type": "object",
         "properties": {
@@ -85992,6 +86418,15 @@
               }
             ],
             "description": "The number of studio Instance types in the model.\r\nSee [Instance](https://create.roblox.com/docs/reference/engine/classes/Instance).\r\nThese are broken down into specific types, such as MeshPart, Part, Script,\r\nTool, Animation, etc.",
+            "nullable": true
+          },
+          "capabilities": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CreatorStoreCapabilitiesModel"
+              }
+            ],
+            "description": "Script capabilities for the asset (sandboxing)",
             "nullable": true
           }
         },
@@ -88726,11 +89161,59 @@
         "additionalProperties": false,
         "description": "The response for updating a matchmaking server attribute definition."
       },
+      "GameVoteResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "upVotes": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "downVotes": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GameVoteResponseApiArrayResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GameVoteResponse"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "UserGameVoteRequest": {
         "type": "object",
         "properties": {
           "vote": {
             "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserGameVoteResponse": {
+        "type": "object",
+        "properties": {
+          "canVote": {
+            "type": "boolean"
+          },
+          "userVote": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "reasonForNotVoteable": {
+            "type": "string",
             "nullable": true
           }
         },
@@ -90049,9 +90532,7 @@
           "friends_get_v1_my_friends_requests",
           "friends_delete_v1_my_new_friend_requests",
           "friends_get_v1_my_new_friend_requests_count",
-          "friends_get_v1_my_trusted_friends__userId__status",
           "friends_post_v1_user__userId__multiget_are_friends",
-          "friends_get_v1_user__userId__multiget_are_trusted_friends",
           "friends_get_v1_user_friend_requests_count",
           "friends_post_v1_user_friend_requests_decline_all",
           "friends_post_v1_users__requesterUserId__accept_friend_request",
@@ -90133,6 +90614,9 @@
           "Cloud_ListGroupRoles",
           "Cloud_GetGroupRole",
           "Cloud_GetGroupShout",
+          "Cloud_ListGroupForumCategories",
+          "Cloud_ListGroupForumPosts",
+          "Cloud_ListGroupForumComments",
           "get_legacy_develop_v1_user_groups_canmanage",
           "develop_get_v1_user_groups_canmanage",
           "get_legacy_groups_v1_groups__groupId__audit_log",
@@ -90278,9 +90762,9 @@
           "games_post_v1_games__universeId__favorites",
           "games_get_v1_games__universeId__favorites_count",
           "Voting_VoteGame",
-          "games_get_v1_games__universeId__votes",
-          "games_get_v1_games__universeId__votes_user",
-          "games_get_v1_games_votes",
+          "Voting_GetGameVoteStatus",
+          "Voting_GetGameVoteStatusForUser",
+          "Voting_MultiGetGameVoteStatus",
           "games_get_v2_users__userId__favorite_games",
           "inventory_get_v1_users__userId__categories_favorites"
         ]
@@ -90968,14 +91452,14 @@
           "games_get_v1_games__universeId__favorites_count",
           "games_get_v1_games__universeId__media",
           "Voting_VoteGame",
-          "games_get_v1_games__universeId__votes",
-          "games_get_v1_games__universeId__votes_user",
+          "Voting_GetGameVoteStatus",
+          "Voting_GetGameVoteStatusForUser",
           "games_get_v1_games_games_product_info",
           "games_get_v1_games_multiget_place_details",
           "games_get_v1_games_multiget_playability_status",
           "games_get_v1_games_recommendations_game__universeId_",
           "PrivateServers_CreatePrivateServer",
-          "games_get_v1_games_votes",
+          "Voting_MultiGetGameVoteStatus",
           "games_get_v1_private_servers_enabled_in_universe__universeId_",
           "PrivateServersApi.PrivateServers_GetMyPrivateServers",
           "PrivateServers_GetPrivateServer",

@@ -4,7 +4,7 @@ description: The Torque constraint applies constant torque on an assembly from i
 ---
 
 <Alert severity="info">
-For an overview on creating, visualizing, and simulating mover constraints, including `Class.Torque`, see [Mover constraints](../../physics/mover-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
+For an overview on creating, visualizing, and simulating mover constraints, including `Class.Torque`, see [mover constraints](../../physics/mover-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
 </Alert>
 
 A `Class.Torque` constraint applies constant torque on an assembly from its center of mass.

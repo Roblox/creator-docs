@@ -17,7 +17,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that ap
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/LinearVelocity-Demo.mp4" />
 <p></p>
-<figcaption>[LinearVelocity](../physics/constraints/linear-velocity.md) applies force on an assembly to maintain a constant velocity along a 3D vector, line, or 2D plane</figcaption>
+<figcaption>`Class.LinearVelocity` applies force on an assembly to maintain a constant velocity along a 3D vector, line, or 2D plane</figcaption>
 </CardContent>
 </Card>
 </Grid>
@@ -29,7 +29,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that ap
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/AngularVelocity-Demo.mp4" />
 <p></p>
-<figcaption>[AngularVelocity](../physics/constraints/angular-velocity.md) applies torque on an assembly to maintain a constant angular velocity</figcaption>
+<figcaption>`Class.AngularVelocity` applies torque on an assembly to maintain a constant angular velocity</figcaption>
 </CardContent>
 </Card>
 </Grid>
@@ -41,7 +41,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that ap
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/AlignPosition-Demo.mp4" />
 <p></p>
-<figcaption>[AlignPosition](../physics/constraints/align-position.md) applies force to move two attachments together, or to move one attachment to a goal position</figcaption>
+<figcaption>`Class.AlignPosition` applies force to move two attachments together, or to move one attachment to a goal position</figcaption>
 </CardContent>
 </Card>
 </Grid>
@@ -53,7 +53,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that ap
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/AlignOrientation-Demo.mp4" />
 <p></p>
-<figcaption>[AlignOrientation](../physics/constraints/align-orientation.md) applies torque to align two attachments, or to align one attachment with a goal orientation</figcaption>
+<figcaption>`Class.AlignOrientation` applies torque to align two attachments, or to align one attachment with a goal orientation</figcaption>
 </CardContent>
 </Card>
 </Grid>
@@ -65,7 +65,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that ap
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/VectorForce-Demo.mp4" />
 <p></p>
-<figcaption>[VectorForce](../physics/constraints/vector-force.md) applies constant linear force on an assembly</figcaption>
+<figcaption>`Class.VectorForce` applies constant linear force on an assembly</figcaption>
 </CardContent>
 </Card>
 </Grid>
@@ -77,7 +77,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that ap
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/Torque-Demo.mp4" />
 <p></p>
-<figcaption>[Torque](../physics/constraints/torque.md) applies constant torque on an assembly from its center of mass</figcaption>
+<figcaption>`Class.Torque` applies constant torque on an assembly from its center of mass</figcaption>
 </CardContent>
 </Card>
 </Grid>
@@ -89,7 +89,19 @@ The physics engine includes the following `Class.Constraint|Constraints` that ap
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/LineForce-Demo.mp4" />
 <p></p>
-<figcaption>[LineForce](../physics/constraints/line-force.md) applies force along the theoretical line connecting its two attachments</figcaption>
+<figcaption>`Class.LineForce` applies force along the theoretical line connecting its two attachments</figcaption>
+</CardContent>
+</Card>
+</Grid>
+
+<Grid item XSmall={12} Small={6} Medium={6} Large={6}>
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/animation.md" size="large" variant="contained" fullWidth>Animation Constraint</Button>
+<p></p>
+<CardMedia component="video" controls src="../assets/physics/constraints/AnimationConstraint-Demo.mp4" />
+<p></p>
+<figcaption>`Class.AnimationConstraint` constrains its `Class.Attachment|Attachments` by an offset transform `Datatype.CFrame`.</figcaption>
 </CardContent>
 </Card>
 </Grid>

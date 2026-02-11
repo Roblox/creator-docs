@@ -4,7 +4,7 @@ description: The LineForce constraint applies force along the theoretical line c
 ---
 
 <Alert severity="info">
-For an overview on creating, visualizing, and simulating mover constraints, including `Class.LineForce`, see [Mover constraints](../../physics/mover-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
+For an overview on creating, visualizing, and simulating mover constraints, including `Class.LineForce`, see [mover constraints](../../physics/mover-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
 </Alert>
 
 The `Class.LineForce` constraint applies force along the theoretical line connecting its two `Class.Attachment|Attachments`. As the end points (attachments) move, the direction of force will change accordingly.

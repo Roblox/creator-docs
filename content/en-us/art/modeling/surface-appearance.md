@@ -3,6 +3,8 @@ title: PBR textures
 description: PBR textures are advanced textures using multiple texture maps.
 ---
 
+import BetaAlert from '../../includes/beta-features/beta-alert.md'
+
 **Physically-Based Rendering** (PBR) textures allow you to represent realistic shading and lighting by using multiple types of texture images, or **maps**, on a single object. Combining multiple texture maps can more accurately simulate color, roughness, and reflectivity in any lighting environment and can enhance the visual elements of your assets and environment.
 
 <Tabs>
@@ -140,15 +142,39 @@ For objects that require partial or complete sections of transparency, such as g
 
 You can apply transparency in two different behaviors by setting the following `Class.SurfaceAppearance.AlphaMode|AlphaMode` values:
 
-- [Overlay](#overlay) — Overlays the `Class.SurfaceAppearance.ColorMap|ColorMap` over the underlying mesh's `Class.MeshPart.Color`. Color maps using **Overlay** reveal the base color of the mesh anywhere transparency is present. This is the default setting.
+- [Opaque](#opaque) — Ignores the alpha channel of the `Class.SurfaceAppearance.ColorMap|ColorMap` and uses the color value directly from the color map.
+- [Overlay](#overlay) — Overlays the `Class.SurfaceAppearance.ColorMap|ColorMap` over the underlying mesh's `Class.MeshPart.Color`. Color maps using overlay mode reveal the base color of the mesh anywhere transparency is present. This is the default setting.
 - [Transparency](#alpha-modes) — Removes the visible mesh based on transparency in the `ColorMap`. This renders the mesh see-through and does not reveal the original mesh color whenever transparency is present.
 - [TintMask](#tintmask) — Blends the tinted `Class.SurfaceAppearance.ColorMap|ColorMap` over the un-tinted `Class.SurfaceAppearance.ColorMap|ColorMap`.
 
+##### Opaque
+
+<BetaAlert betaName="MaterialVariant Alpha Mode" leadIn="This mode is currently in beta. Enable it through " leadOut="." components={props.components} />
+
+You can use `Enum.AlphaMode.Opaque` mode to ignore the alpha channel of the `Class.SurfaceAppearance.ColorMap|ColorMap` altogether. In this case the alpha value is assumed to be 1 (fully opaque).
+
+The following example demonstrates how the `Enum.AlphaMode.Opaque|Opaque` mode works using a white object as reference:
+
+<GridContainer numColumns="3">
+<figure>
+  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Opaque-ColorMap.jpg" alt="A polkadot texture with transparency. The background is completely transparent."/>
+  <figcaption>Example color/albedo map with transparency</figcaption>
+</figure>
+<figure>
+  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Opaque-Before.jpg" alt="A white torus on a plane."/>
+  <figcaption>Example mesh object (white)</figcaption>
+</figure>
+<figure>
+  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Opaque-After.jpg" alt="The torus has the polkadot patterns scattered over its surface. Transparency value is ignored."/>
+  <figcaption>`Class.SurfaceAppearance.AlphaMode|AlphaMode` set to `Enum.AlphaMode.Opaque|Opaque` using reference map and material</figcaption>
+</figure>
+</GridContainer>
+
 ##### Overlay
 
-You can use **Overlay** to reveal sections of the mesh's original color. Since the transparent areas of the color map expose the underlying color, you can design a unique texture map that partially or fully reveals the mesh's `Class.MeshPart.Color|Color` property for custom skin tones or other situations with unique colors.
+You can use `Enum.AlphaMode.Overlay` to reveal sections of the mesh's original color. Since the transparent areas of the color map expose the underlying color, you can design a unique texture map that partially or fully reveals the mesh's `Class.MeshPart.Color|Color` property for custom skin tones or other situations with unique colors.
 
-The following example demonstrates how the **Overlay** mode works using a white sphere reference:
+The following example demonstrates how the `Enum.AlphaMode.Overlay|Overlay` mode works using a white sphere reference:
 
 <GridContainer numColumns="3">
 <figure>
@@ -161,11 +187,11 @@ The following example demonstrates how the **Overlay** mode works using a white 
 </figure>
 <figure>
   <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-AlphaMode-Overlay.jpg" alt="A white sphere with small blue squares scattered over the surface."/>
-  <figcaption>`Class.SurfaceAppearance.AlphaMode|AlphaMode` set to **Overlay** using reference map and material</figcaption>
+  <figcaption>`Class.SurfaceAppearance.AlphaMode|AlphaMode` set to `Enum.AlphaMode.Overlay|Overlay` using reference map and material</figcaption>
 </figure>
 </GridContainer>
 
-The following example uses the **Overlay** mode for custom characters, revealing the character's original skin-tone:
+The following example uses the `Enum.AlphaMode.Overlay|Overlay` mode for custom characters, revealing the character's original skin-tone:
 
 <GridContainer numColumns="2">
 <figure>
@@ -174,7 +200,7 @@ The following example uses the **Overlay** mode for custom characters, revealing
 </figure>
 <figure>
 <img src="../../assets/modeling/surface-appearance/Custom-Skin-Tone-Example.png" alt="Four of the same humanoid models with different skin tones: light brown, black, white, dark green."/>
-<figcaption>Several variations of characters with a single color map using **Overlay** mode</figcaption>
+<figcaption>Several variations of characters with a single color map using `Enum.AlphaMode.Overlay|Overlay` mode</figcaption>
 </figure>
 </GridContainer>
 
@@ -182,7 +208,7 @@ See [custom skin tone](../../art/characters/specifications.md#custom-skin-tone) 
 
 ##### Transparency
 
-You can use the **Transparency** mode to create complex or extremely fine objects, such as lace or netting, by removing visible parts of the mesh as an alternative to sculpting the mesh geometry. Since this does not affect the geometry of the mesh object, this can allow you to create detailed objects without the performance impact of an intricate mesh model.
+You can use the `Enum.AlphaMode.Transparency` mode to create complex or extremely fine objects, such as lace or netting, by removing visible parts of the mesh as an alternative to sculpting the mesh geometry. Since this does not affect the geometry of the mesh object, this can allow you to create detailed objects without the performance impact of an intricate mesh model.
 
 The following example demonstrates how a partial and full transparency in this mode visually removes sections of the mesh:
 
@@ -221,7 +247,7 @@ The following example demonstrates how a partial and full transparency in this m
 </TabItem>
 </Tabs>
 
-There are two outcomes of `Enum.AlphaMode|Transparency` mode, depending on whether the `Class.MeshPart.Transparency` is set to `0` or **at&nbsp;least** `0.02`, although numerical precision may result in small values such as `0.01` triggering the opaque transparency.
+There are two outcomes of `Enum.AlphaMode.Transparency|Transparency` mode, depending on whether the `Class.MeshPart.Transparency` is set to `0` or **at&nbsp;least** `0.02`, although numerical precision may result in small values such as `0.01` triggering the opaque transparency.
 
 - When alpha is used to cut out the shape of mostly opaque objects with hard edges such as foliage, lace fabric, and netting, set the `Class.MeshPart.Transparency` to `0`. When parts of the surface are fully opaque, the Roblox engine can render them with proper depth‑based occlusion. Opaque surfaces also generally work better with depth‑based effects like `Class.DepthOfFieldEffect`, glass and water refraction, and water reflection.
 - When alpha is used to add detail to semi‑transparent objects or objects with smooth gradients of transparency, set the `Class.MeshPart.Transparency` to **at&nbsp;least** `0.02`. This improves the quality of blending for objects such as dirty windows and soft‑edged feathers, but it will not work with all effects.

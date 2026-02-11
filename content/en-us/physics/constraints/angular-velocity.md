@@ -4,7 +4,7 @@ description: The AngularVelocity constraint applies torque on an assembly to mai
 ---
 
 <Alert severity="info">
-For an overview on creating, visualizing, and simulating mover constraints, including `Class.AngularVelocity`, see [Mover constraints](../../physics/mover-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
+For an overview on creating, visualizing, and simulating mover constraints, including `Class.AngularVelocity`, see [mover constraints](../../physics/mover-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
 </Alert>
 
 An `Class.AngularVelocity` constraint applies torque on an assembly to maintain a constant angular velocity.

@@ -308,6 +308,344 @@
         ]
       }
     },
+    "/cloud/v2/groups/{group_id}/forum-categories": {
+      "get": {
+        "tags": ["Cloud"],
+        "summary": "List Group Forum Categories",
+        "description": "Lists forum categories in the group.",
+        "operationId": "Cloud_ListGroupForumCategories",
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "description": "The group ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of group forum categories to return. The service might\nreturn fewer than this value. If unspecified, at most 10 group forum\ncategories are returned. The maximum value is 10 and higher values are set\nto 10.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "examples": {
+              "maxPageSize": {
+                "description": "An integer between 1 and 10, inclusive",
+                "value": 10
+              }
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\nWhen paginating, all other parameters provided to the subsequent call must\nmatch the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\nFiltering conforms to Common Expression Language (CEL). Only the boolean\nfield `archived` and `==` operator are supported. If `archived=false`,\narchived categories are not returned. The default value is `false`.\nExample: `\"filter=archived==true\"`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListGroupForumCategoriesResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": true
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "group-forum:read"
+          }
+        ],
+        "x-roblox-docs": {
+          "category": "Users and groups",
+          "methodProperties": {
+            "scopes": ["group-forum:read"]
+          },
+          "resource": {
+            "$ref": "#/components/schemas/GroupForumCategory",
+            "name": "GroupForumCategory"
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 150
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
+      }
+    },
+    "/cloud/v2/groups/{group_id}/forum-categories/{forum_category_id}/posts": {
+      "get": {
+        "tags": ["Cloud"],
+        "summary": "List Group Forum Posts",
+        "description": "Lists forum posts in the group's forum category.",
+        "operationId": "Cloud_ListGroupForumPosts",
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "description": "The group ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "forum_category_id",
+            "in": "path",
+            "description": "The forum-category ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of group forum posts to return. The service might return\nfewer than this value. If unspecified, at most 10 group forum posts are\nreturned. The maximum value is 100 and higher values are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "examples": {
+              "maxPageSize": {
+                "description": "An integer between 1 and 100, inclusive",
+                "value": 10
+              }
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\nWhen paginating, all other parameters provided to the subsequent call must\nmatch the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\nFiltering conforms to Common Expression Language (CEL). Only the query\n`filter=pinned==true` is supported, where only pinned posts are returned.\n`filter=pinned==false`is not supported.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "view",
+            "in": "query",
+            "description": "The view in which to retrieve the group forum post.\n\nSupports FULL and FULL_WITH_FIRST_COMMENT.\n\nDefaults to FULL.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | VIEW_UNSPECIFIED | The group forum post view is not specified; the default will be used. |\n  | FULL | Includes all fields but does not dereference `first_comment`. Only the `path` field is populated. |\n  | FULL_WITH_FIRST_COMMENT | Includes all fields and also fully populates `first_comment`. The default view. |",
+            "schema": {
+              "example": "VIEW_UNSPECIFIED",
+              "enum": ["VIEW_UNSPECIFIED", "FULL", "FULL_WITH_FIRST_COMMENT"],
+              "type": "string",
+              "format": "enum"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListGroupForumPostsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": true
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "group-forum:read"
+          }
+        ],
+        "x-roblox-docs": {
+          "category": "Users and groups",
+          "methodProperties": {
+            "scopes": ["group-forum:read"]
+          },
+          "resource": {
+            "$ref": "#/components/schemas/GroupForumPost",
+            "name": "GroupForumPost"
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 150
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
+      }
+    },
+    "/cloud/v2/groups/{group_id}/forum-categories/{forum_category_id}/posts/{post_id}/comments": {
+      "get": {
+        "tags": ["Cloud"],
+        "summary": "List Group Forum Comments",
+        "description": "Lists forum comments on a group's forum post.",
+        "operationId": "Cloud_ListGroupForumComments",
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "description": "The group ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "forum_category_id",
+            "in": "path",
+            "description": "The forum-category ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "post_id",
+            "in": "path",
+            "description": "The post ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of group forum comments to return. The service might\nreturn fewer than this value. If unspecified, at most 10 group forum\ncomments are returned. The maximum value is 100 and higher values are set\nto 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "examples": {
+              "maxPageSize": {
+                "description": "An integer between 1 and 100, inclusive",
+                "value": 10
+              }
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\nWhen paginating, all other parameters provided to the subsequent call must\nmatch the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\nFiltering conforms to Common Expression Language (CEL).\nOnly the boolean field `includeReactions` and string field\n`repliesToCommentId` are supported. Only the `==` operator is supported. If\n`includeReactions=false`, comment reactions are not returned in the\nresponse. The default value is `false`. If `repliesToCommentId` is\nspecified, only comments that respond to the comment are returned. The\ndefault value is `''`. If `repliesToCommentId=''`, only comments responding\ndirectly to the post are returned. Example:\n`\"filter=includeReactions==true;repliesToCommentId==01234567-89ab-cdef-0123-456789abcdef\"`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListGroupForumCommentsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": true
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "group-forum:read"
+          }
+        ],
+        "x-roblox-docs": {
+          "category": "Users and groups",
+          "methodProperties": {
+            "scopes": ["group-forum:read"]
+          },
+          "resource": {
+            "$ref": "#/components/schemas/GroupForumComment",
+            "name": "GroupForumComment"
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 150
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
+      }
+    },
     "/cloud/v2/groups/{group_id}/join-requests": {
       "get": {
         "tags": ["Cloud"],
@@ -6943,6 +7281,48 @@
         },
         "x-resource": true
       },
+      "ContentMessage": {
+        "type": "object",
+        "properties": {
+          "createTime": {
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z",
+            "type": "string",
+            "description": "The timestamp when the message was created.",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z",
+            "type": "string",
+            "description": "The timestamp when the message was last updated.",
+            "format": "date-time"
+          },
+          "plainText": {
+            "type": "string",
+            "description": "The plain text content of the message."
+          },
+          "author": {
+            "readOnly": true,
+            "example": "users/156",
+            "type": "string",
+            "description": "The resource path of the user who created the message."
+          },
+          "messageReaction": {
+            "readOnly": true,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MessageReaction"
+            },
+            "description": "The reactions to the message, if this feature is enabled for this message."
+          }
+        },
+        "description": "Represents the content of a message.",
+        "x-oneOf": {
+          "Author": ["author"],
+          "content": ["plainText"]
+        }
+      },
       "CreatorStoreProduct": {
         "type": "object",
         "properties": {
@@ -7385,6 +7765,175 @@
         "x-oneOf": {
           "Owner": ["owner"]
         }
+      },
+      "GroupForumCategory": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "example": "groups/123/forum-categories/01234567-89ab-cdef-0123-456789abcdef",
+            "type": "string",
+            "description": "The resource path of the group forum category.\n\nFormat: `groups/{group_id}/forum-categories/{group_forum_category_id}`"
+          },
+          "createTime": {
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z",
+            "type": "string",
+            "description": "The timestamp when the group forum category was created.",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z",
+            "type": "string",
+            "description": "The timestamp when the group forum category was last updated.",
+            "format": "date-time"
+          },
+          "groupForumCategoryId": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The id of the group forum category."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "The display name of the group forum category."
+          },
+          "creator": {
+            "readOnly": true,
+            "example": "users/156",
+            "type": "string",
+            "description": "The resource path of the user who created the group forum category."
+          },
+          "archiveTime": {
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z",
+            "type": "string",
+            "description": "The timestamp when the group forum category was archived.",
+            "format": "date-time"
+          },
+          "archiver": {
+            "readOnly": true,
+            "example": "users/156",
+            "type": "string",
+            "description": "The resource path of the user who archived the group forum category."
+          }
+        },
+        "description": "Represents a forum category within a group for user discussions.",
+        "x-aep-resource": {
+          "patterns": [
+            "groups/{group_id}/forum-categories/{group_forum_category_id}"
+          ],
+          "plural": "group-forum-categories",
+          "singular": "group-forum-category"
+        },
+        "x-resource": true
+      },
+      "GroupForumComment": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "example": "groups/123/forum-categories/01234567-89ab-cdef-0123-456789abcdef/posts/01234567-89ab-cdef-0123-456789abcdef/comments/01234567-89ab-cdef-0123-456789abcdef",
+            "type": "string",
+            "description": "The resource path of the group forum comment.\n\nFormat:\n`groups/{group_id}/forum-categories/{group_forum_category_id}/posts/{group_forum_post_id}/comments/{group_forum_comment_id}`"
+          },
+          "groupForumCommentId": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The id of the group forum comment."
+          },
+          "message": {
+            "$ref": "#/components/schemas/ContentMessage",
+            "description": "The message content of the group forum comment."
+          }
+        },
+        "description": "Represents a forum comment on a group's forum post.",
+        "x-aep-resource": {
+          "patterns": [
+            "groups/{group_id}/forum-categories/{group_forum_category_id}/posts/{group_forum_post_id}/comments/{group_forum_comment_id}"
+          ],
+          "plural": "group-forum-comments",
+          "singular": "group-forum-comment"
+        },
+        "x-resource": true
+      },
+      "GroupForumPost": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "example": "groups/123/forum-categories/01234567-89ab-cdef-0123-456789abcdef/posts/01234567-89ab-cdef-0123-456789abcdef",
+            "type": "string",
+            "description": "The resource path of the group forum post.\n\nFormat:\n`groups/{group_id}/forum-categories/{group_forum_category_id}/posts/{group_forum_post_id}`"
+          },
+          "createTime": {
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z",
+            "type": "string",
+            "description": "The timestamp when the group forum post was created.",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z",
+            "type": "string",
+            "description": "The timestamp when the group forum post was last updated.",
+            "format": "date-time"
+          },
+          "pinned": {
+            "example": true,
+            "type": "boolean",
+            "description": "Whether the group forum post is pinned."
+          },
+          "locked": {
+            "example": true,
+            "type": "boolean",
+            "description": "Whether the group forum post is locked."
+          },
+          "groupForumPostId": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The id of the group forum post."
+          },
+          "title": {
+            "type": "string",
+            "description": "The title of the group forum post."
+          },
+          "firstComment": {
+            "$ref": "#/components/schemas/GroupForumComment",
+            "description": "The resource path of the group forum post's first comment, which holds the\npost content.\n\nBy default, the `first_comment` field is fully populated. This **will not**\ndereference resource references within the first comment, such as\n`GroupForumComment.author`; only the `path` subfield of these fields will\nbe populated. However, if only the `path` field of the first comment is\nneeded, you can specify the FULL view."
+          },
+          "author": {
+            "readOnly": true,
+            "example": "users/156",
+            "type": "string",
+            "description": "The resource path of the user who created the group forum post."
+          },
+          "archiveTime": {
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z",
+            "type": "string",
+            "description": "The timestamp when the group forum post was archived.",
+            "format": "date-time"
+          },
+          "archiver": {
+            "readOnly": true,
+            "example": "users/156",
+            "type": "string",
+            "description": "The resource path of the user who archived the group forum post."
+          },
+          "commentCount": {
+            "type": "integer",
+            "description": "The number of comments on the group forum post. This includes the first\ncomment (post content).",
+            "format": "int64"
+          }
+        },
+        "description": "Represents a forum post within a group's forum category.",
+        "x-aep-resource": {
+          "patterns": [
+            "groups/{group_id}/forum-categories/{group_forum_category_id}/posts/{group_forum_post_id}"
+          ],
+          "plural": "group-forum-posts",
+          "singular": "group-forum-post"
+        },
+        "x-resource": true
       },
       "GroupJoinRequest": {
         "type": "object",
@@ -8069,6 +8618,57 @@
         },
         "description": "A list of DataStores in the parent collection."
       },
+      "ListGroupForumCategoriesResponse": {
+        "type": "object",
+        "properties": {
+          "groupForumCategories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GroupForumCategory"
+            },
+            "description": "The GroupForumCategories from the specified Group."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\npage. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of GroupForumCategories in the parent collection."
+      },
+      "ListGroupForumCommentsResponse": {
+        "type": "object",
+        "properties": {
+          "groupForumComments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GroupForumComment"
+            },
+            "description": "The GroupForumComments from the specified GroupForumPost."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\npage. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of GroupForumComments in the parent collection."
+      },
+      "ListGroupForumPostsResponse": {
+        "type": "object",
+        "properties": {
+          "groupForumPosts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GroupForumPost"
+            },
+            "description": "The GroupForumPosts from the specified GroupForumCategory."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\npage. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of GroupForumPosts in the parent collection."
+      },
       "ListGroupJoinRequestsResponse": {
         "type": "object",
         "properties": {
@@ -8599,6 +9199,23 @@
           "expiration": ["ttl", "expireTime"],
           "sortKey": ["stringSortKey", "numericSortKey"]
         }
+      },
+      "MessageReaction": {
+        "type": "object",
+        "properties": {
+          "emoteId": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The id of the emote."
+          },
+          "count": {
+            "readOnly": true,
+            "type": "integer",
+            "description": "The count of reactions for this emote.",
+            "format": "int64"
+          }
+        },
+        "description": "Represents the reaction to a message."
       },
       "Money": {
         "type": "object",
@@ -9788,6 +10405,7 @@
             "scopes": {
               "creator-store-product:write": "creator-store-product:write",
               "creator-store-product:read": "creator-store-product:read",
+              "group-forum:read": "group-forum:read",
               "group:read": "group:read",
               "group:write": "group:write",
               "universe:write": "universe:write",
