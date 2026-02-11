@@ -283,6 +283,54 @@ functions:
     tags: []
     code_samples: []
     deprecation_message: ''
+  - name: math.isfinite
+    summary: |
+      Returns whether the provided number is finite or not.
+    description: |
+      Returns whether the provided number is finite or not.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    code_samples: []
+    deprecation_message: ''
+  - name: math.isinf
+    summary: |
+      Returns whether the provided number is infinite or not.
+    description: |
+      Returns whether the provided number is infinite or not.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    code_samples: []
+    deprecation_message: ''
+  - name: math.isnan
+    summary: |
+      Returns whether the provided number is NaN or not.
+    description: |
+      Returns whether the provided number is NaN or not.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: math.ldexp
     summary: |
       Returns `x`\*`2`^`e` (`e` should be an integer).
