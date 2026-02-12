@@ -45,7 +45,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
   - name: PlayerScripts:ClearComputerMovementModes
     summary: |
       Unregisters all ComputerMovementMode enums from the experience's settings
@@ -62,7 +63,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
+      - Players
   - name: PlayerScripts:ClearTouchCameraMovementModes
     summary: |
       Unregisters all TouchCameraMovementMode enums from the experience's
@@ -79,7 +82,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
   - name: PlayerScripts:ClearTouchMovementModes
     summary: |
       Unregisters all TouchMovementMode enums from the experience's settings
@@ -96,7 +100,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
+      - Players
   - name: PlayerScripts:RegisterComputerCameraMovementMode
     summary: |
       Registers that a computer camera movement mode is available to be selected
@@ -117,7 +123,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
   - name: PlayerScripts:RegisterComputerMovementMode
     summary: |
       Registers that a computer movement mode is available to be selected from
@@ -138,7 +145,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
+      - Players
   - name: PlayerScripts:RegisterTouchCameraMovementMode
     summary: |
       Registers that a touch camera movement mode is available to be selected
@@ -159,7 +168,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
   - name: PlayerScripts:RegisterTouchMovementMode
     summary: |
       Registers that a touch movement mode is available to be selected from the
@@ -180,6 +190,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
+      - Players
 events: []
 callbacks: []

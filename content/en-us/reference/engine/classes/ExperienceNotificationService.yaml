@@ -61,7 +61,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
+      - Social
   - name: ExperienceNotificationService:PromptOptIn
     summary: |
       Shows an in-experience prompt for the local player to enable
@@ -95,7 +97,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
+      - Social
 events:
   - name: ExperienceNotificationService.OptInPromptClosed
     summary: |
@@ -117,5 +121,7 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Players
+      - Social
 callbacks: []

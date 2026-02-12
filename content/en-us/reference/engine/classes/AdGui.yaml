@@ -50,6 +50,7 @@ properties:
       can_save: true
     capabilities:
       - UI
+      - Monetization
   - name: AdGui.FallbackImage
     summary: ''
     description: ''
@@ -86,6 +87,7 @@ properties:
       can_save: false
     capabilities:
       - UI
+      - Monetization
 methods: []
 events: []
 callbacks:
@@ -115,4 +117,5 @@ callbacks:
     thread_safety: Unsafe
     capabilities:
       - UI
+      - Monetization
     writeCapabilities: []

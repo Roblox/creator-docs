@@ -142,7 +142,8 @@ Face accessories, such as hair, eyebrows, and eyelashes are unique accessories t
 
 ## Textures
 
-Textures created for accessories must meet Roblox's [texture specifications](../../art/modeling/texture-specifications.md). Keep in mind that smaller assets, such as accessories, can use smaller texture map sizes, such as **256&times;256px**, to optimize performance with virtually no loss in detail.
+- Textures for Marketplace assets can't exceed 2048x2048 resolution.
+- Textures created for accessories must meet Roblox's [texture specifications](../../art/modeling/texture-specifications.md). High resolution textures are automatically converted to lower-resolution textures to optimize performance.
 
 ## Layerable Properties
 

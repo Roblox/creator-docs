@@ -71,7 +71,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: AvatarCreationService:GenerateAvatar2DPreviewAsync
     summary: |
       Creates a 2D avatar preview and returns a previewId.
@@ -119,7 +120,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: AvatarCreationService:GenerateAvatarAsync
     summary: |
       Generates an avatar and returns a generationId.
@@ -165,7 +167,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: AvatarCreationService:GetBatchTokenDetailsAsync
     summary: |
       Gets the avatar creation token details for a list of avatar creation
@@ -208,7 +211,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Monetization
   - name: AvatarCreationService:GetValidationRules
     summary: |
       Gets data regarding rules that assets must abide by to pass UGC
@@ -400,7 +404,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: AvatarCreationService:LoadGeneratedAvatarAsync
     summary: |
       Loads a generated avatar using an avatar generation ID.
@@ -441,7 +446,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: AvatarCreationService:PrepareAvatarForPreviewAsync
     summary: |
       Prepares in-experience avatar for preview.
@@ -475,7 +481,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
   - name: AvatarCreationService:PromptCreateAvatarAssetAsync
     summary: |
       Prompts a `Class.Player` to purchase and create an avatar asset from an
@@ -668,7 +675,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetCreateUpdate
+      - Monetization
   - name: AvatarCreationService:PromptSelectAvatarGenerationImageAsync
     summary: |
       Prompt the `Class.Player` to take a selfie and return the FileId.
@@ -709,7 +718,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - SensitiveInput
   - name: AvatarCreationService:RequestAvatarGenerationSessionAsync
     summary: |
       Request an AvatarGeneration session for a `Class.Player`.
@@ -779,7 +789,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: AvatarCreationService:ValidateUGCAccessoryAsync
     summary: |
       Studio only. Runs UGC validation for an `Enum.AccessoryType`.
@@ -976,5 +987,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
 callbacks: []

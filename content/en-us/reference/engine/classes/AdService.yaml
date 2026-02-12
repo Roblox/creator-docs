@@ -39,7 +39,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Monetization
   - name: AdService:GetAdAvailabilityNowAsync
     summary: |
       Checks if a video ad is available to be played to the current user inside
@@ -63,7 +64,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Monetization
   - name: AdService:RegisterAdOpportunityAsync
     summary: |
       Tracks how many times a user had the chance to watch a video ad and the
@@ -91,7 +93,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Monetization
   - name: AdService:ShowRewardedVideoAdAsync
     summary: |
       Plays the video ad to the current user inside the experience.
@@ -126,7 +129,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
+      - Monetization
   - name: AdService:ShowVideoAd
     summary: |
       Show mobile video advertisements.
@@ -144,7 +149,8 @@ methods:
       no longer operational.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Monetization
   - name: AdService:UnregisterAdOpportunity
     summary: ''
     description: ''
@@ -161,7 +167,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Monetization
 events:
   - name: AdService.VideoAdClosed
     summary: |
@@ -180,5 +187,6 @@ events:
       `Class.AdService.VideoAdClosed|VideoAdClosed` has been decommissioned and
       is no longer operational.
     security: None
-    capabilities: []
+    capabilities:
+      - Monetization
 callbacks: []

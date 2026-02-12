@@ -277,9 +277,8 @@ You can use tools like the [Accessory Fitting Tool](../../art/accessories/access
 
 ## Textures
 
-Textures created for accessories must meet Roblox's [texture specifications](../../art/modeling/texture-specifications.md).
-
-- Non-albedo maps (RGH, MTL, NOR) for rigid accessories cannot exceed 256x256.
+- Textures for Marketplace assets cannot exceed 2048x2048 resolution.
+- Textures created for accessories must meet Roblox's [texture specifications](../../art/modeling/texture-specifications.md).
 
 ## Attachment points
 

@@ -44,7 +44,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
+      - Input
   - name: GuiService.CoreGuiNavigationEnabled
     summary: |
       Toggles whether or not objects in the `Class.CoreGui` can be navigated
@@ -66,7 +68,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - UI
+      - Input
   - name: GuiService.GuiNavigationEnabled
     summary: |
       Used to enable and disable the default controller GUI navigation.
@@ -84,7 +88,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
+      - Input
   - name: GuiService.IsModalDialog
     summary: |
       Indicates whether a modal dialog is visible.
@@ -107,7 +113,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService.IsWindows
     summary: |
       Indicates whether the user is playing on a computer running Windows.
@@ -130,7 +137,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService.MenuIsOpen
     summary: |
       Returns `true` if any menu of `Class.CoreGui` is open.
@@ -150,7 +158,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService.PreferredTextSize
     summary: |
       Gets the player's preferred text size as an `Enum.PreferredTextSize`
@@ -211,7 +220,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService.PreferredTransparency
     summary: |
       Gets the player's preferred transparency as a number between `0` and `1`.
@@ -247,7 +257,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService.ReducedMotionEnabled
     summary: |
       Returns `true` if the player has enabled reduced motion.
@@ -273,7 +284,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService.SelectedObject
     summary: |
       Sets the `Class.GuiObject` currently being focused on by the GUI
@@ -299,7 +311,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
+      - Input
   - name: GuiService.TopbarInset
     summary: |
       Used to determine the absolute size and position of unobstructed area
@@ -330,7 +344,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService.TouchControlsEnabled
     summary: |
       Used to enable and disable touch controls and touch control display UI.
@@ -350,7 +365,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - UI
+      - Input
   - name: GuiService.ViewportDisplaySize
     summary: |
       Read-only property which represents the physical rendering size of the
@@ -375,7 +392,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - UI
 methods:
   - name: GuiService:AddSelectionParent
     summary: |
@@ -406,7 +424,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService:AddSelectionTuple
     summary: |
       **AddSelectionTuple** works similarly to
@@ -449,7 +468,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService:CloseInspectMenu
     summary: |
       Closes the avatar inspection menu, if open.
@@ -476,7 +496,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService:DismissNotification
     summary: ''
     description: ''
@@ -493,7 +514,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService:GetEmotesMenuOpen
     summary: |
       Checks if the player emotes menu is open.
@@ -511,7 +533,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService:GetGameplayPausedNotificationEnabled
     summary: |
       Returns whether or not the `Class.Player.GameplayPaused` notification has
@@ -534,7 +557,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService:GetGuiInset
     summary: |
       Returns two `Datatype.Vector2` values representing the inset of user GUIs
@@ -559,7 +583,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService:GetInspectMenuEnabled
     summary: |
       Returns whether the avatar inspection menu is enabled.
@@ -579,7 +604,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService:InspectPlayerFromHumanoidDescription
     summary: |
       Allows the avatar inspection menu to appear showing the assets listed in a
@@ -615,7 +641,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
+      - Avatar
   - name: GuiService:InspectPlayerFromUserId
     summary: |
       Allows the avatar inspection menu to appear showing the user that has the
@@ -645,7 +673,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
+      - Avatar
   - name: GuiService:IsTenFootInterface
     summary: |
       Returns `true` if the client is using the ten foot interface, a special
@@ -666,7 +696,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService:RemoveSelectionGroup
     summary: |
       Removes a group that was created with
@@ -690,7 +721,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService:Select
     summary: |
       Sets `Class.GuiService.SelectedObject` to a child of a provided instance
@@ -716,7 +748,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService:SendNotification
     summary: ''
     description: ''
@@ -733,7 +766,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService:SetEmotesMenuOpen
     summary: |
       Opens or closes the player emotes menu.
@@ -752,7 +786,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService:SetGameplayPausedNotificationEnabled
     summary: |
       Lets you disable the built-in notification when a player's gameplay is
@@ -781,7 +816,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService:SetInspectMenuEnabled
     summary: |
       Allows you to enable or disable the avatar inspection menu.
@@ -803,7 +839,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
 events:
   - name: GuiService.MenuClosed
     summary: |
@@ -815,7 +852,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - UI
   - name: GuiService.MenuOpened
     summary: |
       Fires when the user **opens** the Roblox `Class.CoreGui` escape menu.
@@ -826,5 +864,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - UI
 callbacks: []

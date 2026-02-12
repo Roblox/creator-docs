@@ -285,9 +285,10 @@ functions:
     deprecation_message: ''
   - name: math.isfinite
     summary: |
-      Returns whether the provided number is finite or not.
+      Returns true if `x` is a finite number.
     description: |
-      Returns whether the provided number is finite or not.
+      Returns true if `x` is a finite number, meaning it is neither NaN nor
+      positive or negative infinity (±`Library.math.huge`).
     parameters:
       - name: x
         type: number
@@ -301,9 +302,10 @@ functions:
     deprecation_message: ''
   - name: math.isinf
     summary: |
-      Returns whether the provided number is infinite or not.
+      Returns true if `x` is positive or negative infinity and false otherwise.
     description: |
-      Returns whether the provided number is infinite or not.
+      Returns true if `x` is positive or negative infinity
+      (±`Library.math.huge`) and false otherwise.
     parameters:
       - name: x
         type: number
@@ -317,9 +319,9 @@ functions:
     deprecation_message: ''
   - name: math.isnan
     summary: |
-      Returns whether the provided number is NaN or not.
+      Returns true if `x` is not a number (NaN) and false otherwise.
     description: |
-      Returns whether the provided number is NaN or not.
+      Returns true if `x` is not a number (NaN) and false otherwise.
     parameters:
       - name: x
         type: number

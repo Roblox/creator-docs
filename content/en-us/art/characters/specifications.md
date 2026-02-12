@@ -652,7 +652,9 @@ For information on required facial animation support, see [head specifications](
 
 ## Textures
 
-Avatar characters must follow Roblox's [texture specifications](../../art/modeling/texture-specifications.md). Characters created for the Marketplace can take advantage of [custom skin tones](#custom-skin-tone) which use alpha layers allow users to select their own base color.
+- Textures for Marketplace assets can't exceed 2048x2048 resolution.
+- Textures created for accessories must meet Roblox's [texture specifications](../../art/modeling/texture-specifications.md). High resolution textures are automatically converted to lower-resolution textures to optimize performance.
+- Avatar characters must follow Roblox's [texture specifications](../../art/modeling/texture-specifications.md). Characters created for the Marketplace can take advantage of [custom skin tones](#custom-skin-tone) which use alpha layers allow users to select their own base color.
 
 ### Custom skin tone
 

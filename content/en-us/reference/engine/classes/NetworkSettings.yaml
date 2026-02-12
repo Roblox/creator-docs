@@ -39,7 +39,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Network
   - name: NetworkSettings.FreeMemoryMBytes
     summary: |
       Describes how much free memory is available, in MiBs.
@@ -61,7 +62,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Network
   - name: NetworkSettings.HttpProxyEnabled
     summary: ''
     description: ''
@@ -77,7 +79,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Network
   - name: NetworkSettings.HttpProxyURL
     summary: ''
     description: ''
@@ -93,7 +96,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Network
   - name: NetworkSettings.IncomingReplicationLag
     summary: |
       Simulates additional network latency in the network receiving path.
@@ -112,7 +116,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Network
   - name: NetworkSettings.PrintJoinSizeBreakdown
     summary: |
       Prints diagnostic information about data sent on connect.
@@ -134,7 +139,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Network
   - name: NetworkSettings.PrintPhysicsErrors
     summary: |
       Whether debug messages will be printed to the output pertaining to physics
@@ -172,7 +178,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Network
   - name: NetworkSettings.PrintStreamInstanceQuota
     summary: |
       Whether debug information is printed to the output regarding the
@@ -221,7 +228,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Network
   - name: NetworkSettings.RandomizeJoinInstanceOrder
     summary: |
       Special facility to help catch bugs related to how your experience loads.
@@ -242,7 +250,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Network
   - name: NetworkSettings.RenderStreamedRegions
     summary: |
       Whether regions of space that are being streamed to the client will be
@@ -263,7 +272,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Network
   - name: NetworkSettings.ShowActiveAnimationAsset
     summary: |
       Whether a label will be shown above each player character's head, showing
@@ -284,7 +294,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Network
+      - Animation
 methods: []
 events: []
 callbacks: []

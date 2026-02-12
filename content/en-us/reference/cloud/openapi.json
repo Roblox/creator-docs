@@ -600,7 +600,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "This field may be set in order to filter the resources returned.\n\nFiltering conforms to Common Expression Language (CEL).\nOnly the boolean field `includeReactions` and string field\n`repliesToCommentId` are supported. Only the `==` operator is supported. If\n`includeReactions=false`, comment reactions are not returned in the\nresponse. The default value is `false`. If `repliesToCommentId` is\nspecified, only comments that respond to the comment are returned. The\ndefault value is `''`. If `repliesToCommentId=''`, only comments responding\ndirectly to the post are returned. Example:\n`\"filter=includeReactions==true;repliesToCommentId==01234567-89ab-cdef-0123-456789abcdef\"`",
+            "description": "This field may be set in order to filter the resources returned.\n\nFiltering conforms to Common Expression Language (CEL). Only the string\nfield `repliesToCommentId` and the `==` operator are supported.\nIf `repliesToCommentId` is specified, only comments that respond to the\ncomment are returned. The default value is `''`. If\n`repliesToCommentId=''`, only comments responding directly to the post are\nreturned. Example:\n`\"filter=repliesToCommentId==01234567-89ab-cdef-0123-456789abcdef\"`",
             "schema": {
               "type": "string"
             }
@@ -19213,6 +19213,64 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_DeleteCredentialBatch"
         }
+      }
+    },
+    "/v1/passkey/finish-ar-preauth-registration": {
+      "post": {
+        "summary": "Finishes account recovery pre-auth passkey registration by validating the recovery session,\r\ndeactivating the user's password, and completing passkey registration.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.FinishARPreAuthPasskeyRegistrationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.FinishARPreAuthPasskeyRegistrationRequest"
+              }
+            }
+          },
+          "description": "The request body containing recovery session and passkey details.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "0: An unknown error occurred with the request."
+          },
+          "401": {
+            "description": "0: An unknown error occurred with the request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n1: Reached limit of pass keys registered."
+          },
+          "500": {
+            "description": "0: An unknown error occurred with the request."
+          },
+          "503": {
+            "description": "2: Feature disabled."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ]
       }
     },
     "/v1/passkey/finish-preauth-registration": {
@@ -71581,6 +71639,25 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Authentication.Api.Models.Request.FinishARPreAuthPasskeyRegistrationRequest": {
+        "type": "object",
+        "properties": {
+          "recoverySession": {
+            "type": "string"
+          },
+          "passkeySessionId": {
+            "type": "string"
+          },
+          "passkeyRegistrationResponse": {
+            "type": "string"
+          },
+          "userId": {
+            "format": "int64",
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Authentication.Api.Models.Request.FinishPasskeyPreauthRegistrationRequest": {
         "type": "object",
         "properties": {
@@ -72014,6 +72091,10 @@
               19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
             ],
             "type": "integer"
+          },
+          "staticFacialAnimation": {
+            "description": "Indicates user choice for facial animation.\r\nstaticFacialAnimation=false, implies the toggle as on and face will animate.\r\nApplicable for dynamic head assets.",
+            "type": "boolean"
           },
           "version": {
             "format": "int32",
@@ -88236,6 +88317,20 @@
             "type": "integer",
             "description": "If BleedOffServers=true, how long will we allow old servers to stay up before shutting them down.\r\nValid values: 1 - 60 minutes",
             "format": "int32"
+          },
+          "placeIdToVersions": {
+            "type": "object",
+            "additionalProperties": {
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "nullable": true
+            },
+            "description": "Optional. A mapping of PlaceId to the specific versions to restart/bleed off for that place.\r\nWhen set for a place, only servers running those exact versions will be affected.\r\nIf a place is not in this dictionary or has an empty set, behavior falls back to CloseOldVersionsOnly logic.",
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -88754,6 +88849,24 @@
           "isInUniverse": {
             "type": "boolean",
             "description": "Indicates whether the place is still part of the universe.\r\nA place may have active games but is no longer in the universe if it has been removed from the universe."
+          },
+          "versionToPlayerCounts": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "description": "Player counts broken down by place version.\r\nKey is the place version, value is the number of players on that version.",
+            "nullable": true
+          },
+          "versionToInstanceCounts": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "description": "Instance counts broken down by place version.\r\nKey is the place version, value is the number of instances on that version.",
+            "nullable": true
           }
         },
         "additionalProperties": false,

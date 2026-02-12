@@ -71,7 +71,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - AvatarBehavior
 methods: []
 events: []
 callbacks: []

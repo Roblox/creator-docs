@@ -56,7 +56,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Material
   - name: MaterialVariant.BaseMaterial
     summary: |
       Category Material this variant belongs to.
@@ -74,7 +75,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Material
   - name: MaterialVariant.ColorMap
     summary: |
       Determines the color of the surface.
@@ -93,7 +95,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Material
   - name: MaterialVariant.ColorMapContent
     summary: |
       Determines the color of the surface. Only supports asset URIs as textures.
@@ -112,7 +115,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Material
   - name: MaterialVariant.CustomPhysicalProperties
     summary: ''
     description: ''
@@ -128,7 +132,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Material
   - name: MaterialVariant.EmissiveMaskContent
     summary: |
       Determines the emissivity across the surface.
@@ -153,7 +158,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Material
   - name: MaterialVariant.EmissiveStrength
     summary: |
       Determines the strength of emissive contribution.
@@ -179,7 +185,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Material
   - name: MaterialVariant.EmissiveTint
     summary: |
       Determines the tinting color for emissive contribution.
@@ -197,7 +204,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Material
   - name: MaterialVariant.MaterialPattern
     summary: |
       Determines texture tiling method.
@@ -215,7 +223,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Material
   - name: MaterialVariant.MetalnessMap
     summary: |
       Determines which parts of the surface are metal and are non-metal.
@@ -248,7 +257,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Material
   - name: MaterialVariant.MetalnessMapContent
     summary: |
       Determines which parts of the surface are metal and are non-metal. Only
@@ -282,7 +292,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Material
   - name: MaterialVariant.NormalMap
     summary: |
       Modifies the lighting of the surface by adding bumps, dents, cracks, and
@@ -334,7 +345,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Material
   - name: MaterialVariant.NormalMapContent
     summary: |
       Modifies the lighting of the surface by adding bumps, dents, cracks, and
@@ -386,7 +398,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Material
   - name: MaterialVariant.RoughnessMap
     summary: |
       Determines the apparent roughness across the surface.
@@ -411,7 +424,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Material
   - name: MaterialVariant.RoughnessMapContent
     summary: |
       Determines the apparent roughness across the surface. Only supports asset
@@ -437,7 +451,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Material
   - name: MaterialVariant.StudsPerTile
     summary: |
       Determines the scale of textures.
@@ -456,7 +471,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Material
 methods: []
 events: []
 callbacks: []

@@ -393,7 +393,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
   - name: AvatarEditorService:CheckApplyDefaultClothing
     summary: |
       Used to apply default clothing to the `Class.HumanoidDescription` if
@@ -417,7 +418,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
   - name: AvatarEditorService:ConformToAvatarRulesAsync
     summary: ''
     description: ''
@@ -435,7 +437,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
   - name: AvatarEditorService:ConformToAvatarRules
     summary: ''
     description: ''
@@ -454,7 +457,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
   - name: AvatarEditorService:GetAccessoryType
     summary: ''
     description: ''
@@ -587,7 +591,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AvatarEditorService:GetBatchItemDetails
     summary: |
       Gets the item details for a list of items at once.
@@ -616,7 +621,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AvatarEditorService:GetFavoriteAsync
     summary: |
       Returns if the `Class.Players.LocalPlayer` has favorited the given bundle
@@ -645,7 +651,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
+      - AssetRead
   - name: AvatarEditorService:GetFavorite
     summary: |
       Returns if the `Class.Players.LocalPlayer` has favorited the given bundle
@@ -673,7 +681,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
+      - AssetRead
   - name: AvatarEditorService:GetInventoryAsync
     summary: |
       Returns an `Class.InventoryPages` object with information about owned
@@ -711,7 +721,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
+      - AssetRead
   - name: AvatarEditorService:GetInventory
     summary: |
       Returns an `Class.InventoryPages` object with information about owned
@@ -734,7 +746,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
+      - AssetRead
   - name: AvatarEditorService:GetItemDetailsAsync
     summary: |
       Returns the item details for the given item.
@@ -800,7 +814,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AvatarEditorService:GetItemDetails
     summary: |
       Returns the item details for the given item.
@@ -829,7 +844,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AvatarEditorService:GetOutfitDetailsAsync
     summary: |
       Returns the outfit details for the given outfit.
@@ -892,7 +908,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AvatarEditorService:GetOutfitDetails
     summary: |
       Returns the outfit details for the given outfit.
@@ -915,7 +932,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AvatarEditorService:GetOutfitsAsync
     summary: |
       Returns outfit data for the `Class.Players.LocalPlayer`.
@@ -983,7 +1001,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
+      - AssetRead
   - name: AvatarEditorService:GetOutfits
     summary: |
       Returns outfit data for the `Class.Players.LocalPlayer`.
@@ -1007,7 +1027,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
+      - AssetRead
   - name: AvatarEditorService:GetRecommendedAssetsAsync
     summary: |
       Returns a list of recommended assets based on a given `Enum.AssetType` and
@@ -1073,7 +1095,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AvatarEditorService:GetRecommendedAssets
     summary: |
       Returns a list of recommended assets based on a given `Enum.AssetType` and
@@ -1105,7 +1128,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AvatarEditorService:GetRecommendedBundlesAsync
     summary: |
       Returns a list of recommended bundles for a given bundle id.
@@ -1164,7 +1188,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AvatarEditorService:GetRecommendedBundles
     summary: |
       Returns a list of recommended bundles for a given bundle id.
@@ -1186,7 +1211,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AvatarEditorService:PromptAllowInventoryReadAccess
     summary: |
       Prompts the `Class.Players.LocalPlayer` to allow the developer to read
@@ -1209,7 +1235,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
+      - AssetRead
   - name: AvatarEditorService:PromptCreateOutfit
     summary: |
       Prompts the `Class.Players.LocalPlayer` to save the given
@@ -1239,7 +1267,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
+      - PlatformAvatarEditing
   - name: AvatarEditorService:PromptDeleteOutfit
     summary: |
       Prompts the `Class.Players.LocalPlayer` to delete the given outfit.
@@ -1261,7 +1291,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
+      - PlatformAvatarEditing
   - name: AvatarEditorService:PromptRenameOutfit
     summary: |
       Prompts the `Class.Players.LocalPlayer` to rename the given outfit.
@@ -1283,7 +1315,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
+      - PlatformAvatarEditing
   - name: AvatarEditorService:PromptSaveAvatar
     summary: |
       Prompts the `Class.Players.LocalPlayer` to update their avatar based on
@@ -1345,7 +1379,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
+      - PlatformAvatarEditing
   - name: AvatarEditorService:PromptUpdateOutfit
     summary: |
       Prompts the `Class.Players.LocalPlayer` to update the given outfit.
@@ -1376,7 +1412,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
+      - PlatformAvatarEditing
   - name: AvatarEditorService:SearchCatalogAsync
     summary: |
       Returns a `Class.CatalogPages` object containing the result of the given
@@ -1403,7 +1441,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AvatarEditorService:SearchCatalog
     summary: |
       Returns a `Class.CatalogPages` object containing the result of the given
@@ -1425,7 +1464,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
 events:
   - name: AvatarEditorService.PromptAllowInventoryReadAccessCompleted
     summary: |
@@ -1448,7 +1488,9 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Players
+      - AssetRead
   - name: AvatarEditorService.PromptCreateOutfitCompleted
     summary: |
       Fires when the PromptSaveOutfit operation is completed.

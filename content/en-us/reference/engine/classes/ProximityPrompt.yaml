@@ -91,6 +91,7 @@ properties:
       can_save: true
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.AutoLocalize
     summary: |
       Whether the prompt's `Class.ProximityPrompt.ActionText` and
@@ -116,6 +117,7 @@ properties:
       can_save: true
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.ClickablePrompt
     summary: |
       Whether the prompt can be activated by clicking/tapping on the prompt UI.
@@ -137,6 +139,7 @@ properties:
       can_save: true
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.Enabled
     summary: |
       Whether or not this prompt should be shown.
@@ -157,6 +160,7 @@ properties:
       can_save: true
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.Exclusivity
     summary: |
       Used to customize which prompts can be shown at the same time.
@@ -177,6 +181,7 @@ properties:
       can_save: true
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.GamepadKeyCode
     summary: |
       The gamepad button the player should press to trigger the prompt.
@@ -198,6 +203,7 @@ properties:
       can_save: true
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.HoldDuration
     summary: |
       The duration, in seconds, that the player must hold the button/key down to
@@ -219,6 +225,7 @@ properties:
       can_save: true
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.KeyboardKeyCode
     summary: |
       The key the player should press to trigger the prompt.
@@ -239,6 +246,7 @@ properties:
       can_save: true
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.MaxActivationDistance
     summary: |
       The maximum distance a Player's `Class.Player.Character|character` can be
@@ -261,6 +269,7 @@ properties:
       can_save: true
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.MaxIndicatorDistance
     summary: ''
     description: ''
@@ -278,6 +287,7 @@ properties:
       can_save: true
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.ObjectText
     summary: |
       An optional property that determines the object name text shown to the
@@ -299,6 +309,7 @@ properties:
       can_save: true
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.RequiresLineOfSight
     summary: |
       Whether the prompt is hidden if the path between the player's
@@ -326,6 +337,7 @@ properties:
       can_save: true
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.RootLocalizationTable
     summary: |
       A reference to a `Class.LocalizationTable` to be used to apply automated
@@ -357,6 +369,7 @@ properties:
       can_save: true
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.Style
     summary: |
       The style of the prompt's UI.
@@ -387,6 +400,7 @@ properties:
       can_save: true
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.UIOffset
     summary: |
       The pixel offset applied to the prompt's UI.
@@ -406,6 +420,7 @@ properties:
       can_save: true
     capabilities:
       - UI
+      - Input
 methods:
   - name: ProximityPrompt:InputHoldBegin
     summary: |
@@ -427,6 +442,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt:InputHoldEnd
     summary: |
       Fires a signal indicating that the user ended pressing the prompt GUI
@@ -445,6 +461,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
+      - Input
 events:
   - name: ProximityPrompt.IndicatorHidden
     summary: ''
@@ -456,6 +473,7 @@ events:
     security: None
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.IndicatorShown
     summary: ''
     description: ''
@@ -466,6 +484,7 @@ events:
     security: None
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.PromptButtonHoldBegan
     summary: |
       Triggered when a player begins holding down the
@@ -488,6 +507,7 @@ events:
     security: None
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.PromptButtonHoldEnded
     summary: |
       Triggers when the player ends holding down the button on a prompt with a
@@ -508,6 +528,7 @@ events:
     security: None
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.PromptHidden
     summary: |
       Triggers when the `Class.ProximityPrompt|prompt` becomes hidden.
@@ -521,6 +542,7 @@ events:
     security: None
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.PromptShown
     summary: |
       Triggers when the `Class.ProximityPrompt|prompt` becomes visible.
@@ -539,6 +561,7 @@ events:
     security: None
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.Triggered
     summary: |
       Triggered when the prompt
@@ -562,6 +585,7 @@ events:
     security: None
     capabilities:
       - UI
+      - Input
   - name: ProximityPrompt.TriggerEnded
     summary: |
       Triggers when `Class.ProximityPrompt.KeyboardKeyCode|key`/button is
@@ -585,4 +609,5 @@ events:
     security: None
     capabilities:
       - UI
+      - Input
 callbacks: []

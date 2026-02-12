@@ -20,8 +20,6 @@ items:
     summary: |
       Overlays the `Class.SurfaceAppearance.ColorMap|ColorMap` on top of the
       underlying part color based on the map's alpha channel.
-
-      <img src="/assets/engine-api/enums/AlphaMode/Fern-Overlay.png" width="512" />
     value: 0
     tags: []
     deprecation_message: ''
@@ -29,8 +27,6 @@ items:
     summary: |
       Uses the `Class.SurfaceAppearance.ColorMap|ColorMap` alpha channel to
       control the transparency of the surface.
-
-      <img src="/assets/engine-api/enums/AlphaMode/Fern-Cutout.png" width="512" />
     value: 1
     tags: []
     deprecation_message: ''
@@ -40,4 +36,12 @@ items:
       control the amount of `Class.SurfaceAppearance.Color` tinting.
     value: 2
     tags: []
+    deprecation_message: ''
+  - name: Opaque
+    summary: |
+      Ignores the `Class.SurfaceAppearance.ColorMap|ColorMap` alpha channel and
+      assumes an opacity value of 1 everywhere.
+    value: 3
+    tags:
+      - NotBrowsable
     deprecation_message: ''

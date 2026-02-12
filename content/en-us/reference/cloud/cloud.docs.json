@@ -588,7 +588,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "This field may be set in order to filter the resources returned.\n\nFiltering conforms to Common Expression Language (CEL).\nOnly the boolean field `includeReactions` and string field\n`repliesToCommentId` are supported. Only the `==` operator is supported. If\n`includeReactions=false`, comment reactions are not returned in the\nresponse. The default value is `false`. If `repliesToCommentId` is\nspecified, only comments that respond to the comment are returned. The\ndefault value is `''`. If `repliesToCommentId=''`, only comments responding\ndirectly to the post are returned. Example:\n`\"filter=includeReactions==true;repliesToCommentId==01234567-89ab-cdef-0123-456789abcdef\"`",
+            "description": "This field may be set in order to filter the resources returned.\n\nFiltering conforms to Common Expression Language (CEL). Only the string\nfield `repliesToCommentId` and the `==` operator are supported.\nIf `repliesToCommentId` is specified, only comments that respond to the\ncomment are returned. The default value is `''`. If\n`repliesToCommentId=''`, only comments responding directly to the post are\nreturned. Example:\n`\"filter=repliesToCommentId==01234567-89ab-cdef-0123-456789abcdef\"`",
             "schema": {
               "type": "string"
             }

@@ -51,7 +51,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
+      - Input
   - name: AudioDeviceInput.Active
     summary: |
       Controls whether the physical device is actively recording.
@@ -73,7 +75,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
+      - Input
   - name: AudioDeviceInput.IsReady
     summary: |
       Denotes whether this `Class.AudioDeviceInput` is ready to produce sound.
@@ -94,7 +98,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
+      - Input
   - name: AudioDeviceInput.Muted
     summary: |
       Controls whether this `Class.AudioDeviceInput` is muted.
@@ -119,7 +125,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
+      - Input
   - name: AudioDeviceInput.Player
     summary: |
       Determines whose device is producing sound.
@@ -140,7 +148,10 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
+      - Input
+      - Players
   - name: AudioDeviceInput.Volume
     summary: |
       Volume level which is multiplied onto the output audio stream.
@@ -159,7 +170,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
+      - Input
 methods:
   - name: AudioDeviceInput:GetConnectedWires
     summary: |
@@ -183,7 +196,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
+      - Input
   - name: AudioDeviceInput:GetInputPins
     summary: |
       Gets the list of pins that `Class.Wire` can use in `Class.Wire.TargetName`
@@ -203,7 +218,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
+      - Input
   - name: AudioDeviceInput:GetOutputPins
     summary: |
       Gets the list of pins that `Class.Wire` can use in `Class.Wire.SourceName`
@@ -223,7 +240,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
+      - Input
   - name: AudioDeviceInput:GetUserIdAccessList
     summary: |
       Returns a list of user IDs that are either permitted to hear or blocked
@@ -241,7 +260,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
+      - Input
   - name: AudioDeviceInput:SetUserIdAccessList
     summary: |
       Sets a list of user IDs that are either permitted to hear or blocked from
@@ -266,7 +287,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
+      - Input
 events:
   - name: AudioDeviceInput.WiringChanged
     summary: |
@@ -302,5 +325,7 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Audio
+      - Input
 callbacks: []
