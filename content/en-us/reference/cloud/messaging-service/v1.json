@@ -18,6 +18,7 @@
         "operationId": "CrossServerMessaging_Publish",
         "x-roblox-cloud-api-operation-name": "Publish a Message",
         "x-roblox-stability": "BETA",
+        "summary": "Publish a cross-server message to a universe",
         "description": "Publish a message to a pre-defined topic of an experience, with the size of the message up to 1,024 characters (1 KB). Requires the **Publish** permission for API keys and the **universe-messaging-service:publish** scope for OAuth 2.0 apps. See [Cross-server messaging](/cloud-services/cross-server-messaging.md#subscribe-users-to-receive-messages) for defining and subscribing users to a topic.",
         "parameters": [
           {
