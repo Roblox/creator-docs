@@ -27,7 +27,7 @@ columns:
           path: /production/analytics/
           navigation: analytics.yaml
         - title: Platform
-          path: /platform
+          path: /get-started/
           navigation: /platform.yaml
         - title: Tutorials
           navigation: /engine/tutorials.yaml

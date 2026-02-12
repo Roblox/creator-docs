@@ -1,7 +1,22 @@
 navigation:
   - heading: Platform
-  - title: Get started
-    path: /get-started
+  - title: Get Started
+    path: /get-started/
+    section:
+      - title: Why should I develop on Roblox?
+        path: /get-started/why-build-on-roblox
+      - title: How is Roblox different from other platforms?
+        path: /get-started/how-is-roblox-different
+      - title: What tools does Roblox provide?
+        path: /get-started/tools
+      - title: How do I make money?
+        path: /get-started/monetization
+      - title: Recommended strategies
+        path: /get-started/strategies
+      - title: Start creating
+        path: /get-started/creating
+      - title: Resources
+        path: /get-started/resources
   - title: Create
     path: /platform
   - title: Scale
