@@ -1,6 +1,5 @@
 navigation:
   - heading: Platform
-
   - title: Get started
     path: /get-started
   - title: Create
@@ -9,9 +8,6 @@ navigation:
     path: /scale
   - title: Monetize
     path: /monetize
-    section:
-      - title: Earn on Roblox
-        path: /production/earn-on-roblox
   - title: Guidelines and policies
     section:
       - title: Safety on Roblox
