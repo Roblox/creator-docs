@@ -11,6 +11,10 @@ Using the [Gingerbread House - Start](https://www.roblox.com/games/1348125963709
 For more general guidance on adding audio to your experience, see the [Add 2D audio](./add-2D-audio.md) and [Add 3D audio](./add-3D-audio.md) tutorials.
 </Alert>
 
+<Alert severity="info">
+For more reliable voice detection, use [push to chat](./add-voice-chat.md#add-push-to-chat) alongside STT. This ensures players' microphones are only active while they press and hold a specific button on their device.
+</Alert>
+
 ## Audio objects
 
 To create STT audio, it's important to understand the audio objects that you will be working with throughout this tutorial. There are three types of audio objects for STT:

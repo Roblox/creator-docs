@@ -91,98 +91,109 @@ For a detailed breakdown of your current pending balance costs, click **View Det
 
 ## Service pricing
 
-See the following table for Extended Services pricing.
+See the following table for Extended Services pricing:
 
 <table>
 <thead>
-  <th>**Service**</th>
-  <th>**Default**</th>
-  <th>**Extended**</th>
+  <tr>
+    <th>**Service**</th>
+    <th></th>
+    <th>**Default**</th>
+    <th>**Extended**</th>
+  </tr>
 </thead>
 <tbody>
   <tr>
-    <td style={{border: 'none'}}><a href="https://create.roblox.com/docs/cloud-services/memory-stores" style={{color: 'inherit', textDecoration: 'underline'}}><strong>Memory stores</strong></a></td>
+    <td><a href="https://create.roblox.com/docs/cloud-services/memory-stores" style={{color: 'inherit', textDecoration: 'underline'}}>Memory stores</a></td>
+    <td>Requests</td>
+    <td>1000 + (CCU x 120) requests per minute</td>
+    <td>$0.003 / 1M requests</td>
   </tr>
   <tr>
-    <td style={{border: 'none'}}>Request units</td>
-    <td style={{border: 'none'}}>1000 + (CCU x 120) request units per minute</td>
-    <td style={{border: 'none'}}>$0.003 / 1M request units</td>
+    <td></td>
+    <td>Storage</td>
+    <td>64KB + (CCU x 1.2KB)</td>
+    <td>$0.10 / GB per hour&sup1;</td>
+  </tr>
+
+  <tr>
+    <td><a href="https://create.roblox.com/docs/audio/objects#text-to-speech" style={{color: 'inherit', textDecoration: 'underline'}}>Text-to-speech</a></td>
+    <td>Requests</td>
+    <td>1 + (CCU x 6) requests per minute</td>
+    <td>$5.00 / 1M requests</td>
+  </tr>
+
+  <tr>
+    <td><a href="https://create.roblox.com/docs/audio/objects#speech-to-text" style={{color: 'inherit', textDecoration: 'underline'}}>Speech-to-text</a></td>
+    <td>Requests</td>
+    <td>1 + (CCU x 5) requests per minute</td>
+    <td>$1 / 1M requests</td>
+  </tr>
+
+  <tr>
+    <td><a href="https://create.roblox.com/docs/cloud-services/data-stores" style={{color: 'inherit', textDecoration: 'underline'}}>Standard data stores (coming soon)</a></td>
+    <td>Get</td>
+    <td>250 + (CCU * 40) requests per minute</td>
+    <td>$0.08 / 1M requests</td>
   </tr>
   <tr>
-    <td style={{paddingBottom: '24px'}}>Storage</td>
-    <td style={{paddingBottom: '24px'}}>64KB + (CCU x 1.2KB)</td>
-    <td style={{paddingBottom: '24px'}}>$0.10 / GB per Hour&sup1;</td>
-  </tr>
-    <tr>
-    <td style={{border: 'none'}}><a href="https://create.roblox.com/docs/audio/objects#text-to-speech" style={{color: 'inherit', textDecoration: 'underline'}}><strong>Text-to-speech</strong></a></td>
+    <td></td>
+    <td>Set</td>
+    <td>250 + (CCU * 20) requests per minute</td>
+    <td>$0.80 / 1M requests</td>
   </tr>
   <tr>
-    <td style={{paddingBottom: '24px'}}>Requests</td>
-    <td style={{paddingBottom: '24px'}}>1 + (CCU x 6) requests per minute</td>
-    <td style={{paddingBottom: '24px'}}>$5.00 / 1M requests</td>
-  </tr>
-    <tr>
-    <td style={{border: 'none'}}><a href="https://create.roblox.com/docs/cloud-services/data-stores" style={{color: 'inherit', textDecoration: 'underline'}}><strong>Access to standard data stores</strong> (coming soon)</a></td>
+    <td></td>
+    <td>List</td>
+    <td>10 + (CCU * 2) requests per minute</td>
+    <td>$0.60 / 1M requests</td>
   </tr>
   <tr>
-    <td style={{border: 'none'}}>Get</td>
-    <td style={{border: 'none'}}>250 + (CCU * 40) requests per minute</td>
-    <td style={{border: 'none'}}>$0.08 / 1M requests</td>
+    <td></td>
+    <td>Remove</td>
+    <td>100 + (CCU * 40) requests per minute</td>
+    <td>$0.80 / 1M requests</td>
+  </tr>
+
+  <tr>
+    <td><a href="https://create.roblox.com/docs/cloud-services/data-stores" style={{color: 'inherit', textDecoration: 'underline'}}>Ordered data stores (coming soon)</a></td>
+    <td>Get</td>
+    <td>250 + (CCU * 40) requests per minute</td>
+    <td>$0.08 / 1M requests</td>
   </tr>
   <tr>
-    <td style={{border: 'none'}}>Set</td>
-    <td style={{border: 'none'}}>250 + (CCU * 20) requests per minute</td>
-    <td style={{border: 'none'}}>$0.80 / 1M requests</td>
-  </tr>
-    <tr>
-    <td style={{border: 'none'}}>List</td>
-    <td style={{border: 'none'}}>10 + (CCU * 2) requests per minute</td>
-    <td style={{border: 'none'}}>$0.60 / 1M requests</td>
-  </tr>
-    <tr>
-    <td style={{border: 'none'}}>Remove</td>
-    <td style={{border: 'none'}}>100 + (CCU * 40) requests per minute</td>
-    <td style={{border: 'none'}}>$0.80 / 1M requests</td>
+    <td></td>
+    <td>Set</td>
+    <td>250 + (CCU * 20) requests per minute</td>
+    <td>$0.25 / 1M requests</td>
   </tr>
   <tr>
-    <td style={{border: 'none'}}><a href="https://create.roblox.com/docs/cloud-services/data-stores" style={{color: 'inherit', textDecoration: 'underline'}}><strong>Access to ordered data stores</strong> (coming soon)</a></td>
+    <td></td>
+    <td>GetSorted</td>
+    <td>100 + (CCU * 2) requests per minute</td>
+    <td>$0.32 / 1M requests</td>
   </tr>
   <tr>
-    <td style={{border: 'none'}}>Get</td>
-    <td style={{border: 'none'}}>250 + (CCU * 40) requests per minute</td>
-    <td style={{border: 'none'}}>$0.08 / 1M requests</td>
+    <td></td>
+    <td>Remove</td>
+    <td>100 + (CCU * 40) requests per minute</td>
+    <td>$0.25 / 1M requests</td>
   </tr>
+
   <tr>
-    <td style={{border: 'none'}}>Set</td>
-    <td style={{border: 'none'}}>250 + (CCU * 20) requests per minute</td>
-    <td style={{border: 'none'}}>$0.25 / 1M requests</td>
-  </tr>
-    <tr>
-    <td style={{border: 'none'}}>GetSorted</td>
-    <td style={{border: 'none'}}>100 + (CCU * 2) requests per minute</td>
-    <td style={{border: 'none'}}>$0.32 / 1M requests</td>
-  </tr>
-    <tr>
-    <td style={{border: 'none'}}>Remove</td>
-    <td style={{border: 'none'}}>100 + (CCU * 40) requests per minute</td>
-    <td style={{border: 'none'}}>$0.25 / 1M requests</td>
-  </tr>
-  <tr>
-    <td style={{border: 'none'}}><a href="https://create.roblox.com/docs/cloud-services/data-stores" style={{color: 'inherit', textDecoration: 'underline'}}><strong>Data store storage</strong> (coming soon)</a></td>
-  </tr>
-  <tr>
-    <td style={{paddingBottom: '24px'}}>Storage</td>
-    <td style={{paddingBottom: '24px'}}>100 MB + (1MB * Lifetime Players) GB per Month</td>
-    <td style={{paddingBottom: '24px'}}>$0.12 / GB per Month</td>
+    <td><a href="https://create.roblox.com/docs/cloud-services/data-stores" style={{color: 'inherit', textDecoration: 'underline'}}>Data store storage (coming soon)</a></td>
+    <td>Storage</td>
+    <td>100 MB + (1MB * Lifetime Players) GB per month</td>
+    <td>$0.12 / GB per month</td>
   </tr>
 </tbody>
 </table>
 
-<figcaption>&sup1; GB per Hour = the storage consumption multiplied by the amount of time. For example, 100GB Hours might equate to "100GB x 1 hour" or "200GB x 0.5 hours".</figcaption>
+<figcaption>&sup1; GB per hour = the storage consumption multiplied by the amount of time. For example, 100GB hours might equate to "100GB x 1 hour" or "200GB x 0.5 hours".</figcaption>
 
 ## Supported countries
 
-Extended Services is available in the following countries.
+Extended Services is available in the following countries:
 
 <table>
   <thead>
