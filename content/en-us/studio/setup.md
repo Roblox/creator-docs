@@ -1,5 +1,6 @@
 ---
-title: Roblox Studio setup
+title: Roblox Studio setup open
+
 description: Explains how to install Roblox Studio on your system.
 ---
 
