@@ -21,7 +21,7 @@ add a `Class.Texture` or `Class.Decal` object to a part or union, you can:
 </Grid>
 <Grid item>
 	<figure>
-		<img src="../assets/modeling/textures-decals/Texture-On-Surface.jpg" alt="The same blue texture repeated eight times on a block part." width="450" />
+		<img src="../assets/modeling/textures-decals/Texture-On-Surface.jpg" alt="The same texture repeated eight times on a block part." width="450" />
 		<figcaption>Texture applied to a part (repeating)</figcaption>
 	</figure>
 </Grid>
@@ -36,8 +36,8 @@ add a `Class.Texture` or `Class.Decal` object to a part or union, you can:
 </Grid>
 <Grid item>
 	<figure>
-		<img src="../assets/modeling/textures-decals/Decal-On-Surface.jpg" alt="The same blue decal stretched on a block part." width="450" />
-		<figcaption>Decal applied to a part (stretching)</figcaption>
+		<img src="../assets/modeling/textures-decals/Decal-On-Surface.jpg" alt="The same decal stretched on a block part." width="450" />
+		<figcaption>Decal applied to a part (stretched)</figcaption>
 	</figure>
 </Grid>
 </Grid>
