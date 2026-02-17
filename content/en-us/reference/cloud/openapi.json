@@ -53769,6 +53769,7 @@
             "url": "https://thumbnails.roblox.com"
           }
         ],
+        "x-roblox-stability": "BETA",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -54803,6 +54804,7 @@
             "url": "https://thumbnails.roblox.com"
           }
         ],
+        "x-roblox-stability": "BETA",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -55057,6 +55059,7 @@
             "url": "https://thumbnails.roblox.com"
           }
         ],
+        "x-roblox-stability": "BETA",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -85237,10 +85240,6 @@
           "isDelayedUiEnabled": {
             "description": "Whether the delayed UI is enabled.",
             "type": "boolean"
-          },
-          "is2svRecoveryEnabled": {
-            "description": "Whether to expose 2SV recovery through the 2SV challenge modal.",
-            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -85958,6 +85957,12 @@
             "format": "date-time",
             "nullable": true
           },
+          "creatingUniverseId": {
+            "type": "integer",
+            "description": "Universe ID if the asset was created within a specific universe.",
+            "format": "int64",
+            "nullable": true
+          },
           "categoryPath": {
             "type": "string",
             "description": "Category Path of the asset, if it exists.\r\ne.g. \"3d__characters\"",
@@ -86111,6 +86116,17 @@
           "verified": {
             "type": "boolean",
             "description": "Whether the creator is verified.",
+            "nullable": true
+          },
+          "latestGroupUpdaterUserId": {
+            "type": "integer",
+            "description": "This value only exists for group-based creators and represents the User ID of the creator who most recently updated the asset.",
+            "format": "int64",
+            "nullable": true
+          },
+          "latestGroupUpdaterUserName": {
+            "type": "string",
+            "description": "This value only exists for group-based creators and represents the name of the creator who most recently updated the asset.",
             "nullable": true
           }
         },

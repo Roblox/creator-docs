@@ -1348,7 +1348,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
+      - PlatformAvatarEditing
   - name: AvatarEditorService:PromptSetFavorite
     summary: |
       Prompts the `Class.Players.LocalPlayer` to favorite or unfavorite the
@@ -1512,7 +1514,9 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Players
+      - PlatformAvatarEditing
   - name: AvatarEditorService.PromptDeleteOutfitCompleted
     summary: |
       Fires when the PromptDeleteOutfit operation is completed.
@@ -1530,7 +1534,9 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Players
+      - PlatformAvatarEditing
   - name: AvatarEditorService.PromptRenameOutfitCompleted
     summary: |
       Fires when the PromptRenameOutfit operation is completed.
@@ -1548,7 +1554,9 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Players
+      - PlatformAvatarEditing
   - name: AvatarEditorService.PromptSaveAvatarCompleted
     summary: |
       Fires when the `Class.AvatarEditorService:PromptSaveAvatar()` operation is
@@ -1572,7 +1580,9 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Players
+      - PlatformAvatarEditing
   - name: AvatarEditorService.PromptSetFavoriteCompleted
     summary: |
       Fires when the `Class.AvatarEditorService:PromptSetFavorite()` operation
@@ -1592,7 +1602,9 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Players
+      - PlatformAvatarEditing
   - name: AvatarEditorService.PromptUpdateOutfitCompleted
     summary: |
       Fires when the `Class.AvatarEditorService:PromptUpdateOutfit()` operation
@@ -1612,5 +1624,7 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Players
+      - PlatformAvatarEditing
 callbacks: []

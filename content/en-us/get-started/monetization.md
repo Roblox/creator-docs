@@ -88,16 +88,15 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Daily engagement</h4>
-        <Typography variant='body1'>Earn a fixed payout of 5 Robux when a user who has spent at least $9.99 on the platform in the last 60 days (an "Active Spender") plays your game for 10 minutes or more. This reward applies to the first three experiences they play per day. *</Typography>
+        <Typography variant='body1'>Earn a fixed payout of 5 Robux when a user who has spent at least $9.99 on the platform in the last 60 days (an "Active Spender") plays your game for 10 minutes or more. This reward applies to the first three experiences they play per day.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Audience expansion</h4>
-        <Typography variant='body1'>Earn a 35% revenue share on the first $100 in Robux purchases made by a new or returning user who finds your experience through a direct link or search, and plays for at least 10 minutes. _</Typography>
+        <Typography variant='body1'>Earn a 35% revenue share on the first $100 in Robux purchases made by a new or returning user who finds your experience through a direct link or search, and plays for at least 10 minutes.<sup>1</sup><br></br><br></br><sup>1</sup><em> Less qualifying purchases they have made in the 60 days after each time (if any) they have previously reactivated. Additional restrictions apply.</em></Typography>
       </CardContent>
     </Card>
-    <Typography variant='body2' color="textSecondary"><em>_ Less Qualifying Purchases they have made in the 60 days after each time (if any) they have previously reactivated). Additional restrictions apply.</em></Typography>
   </Grid>
   <Grid item xs={12} md={7}>
     <img style={{ width: '100%', height: 'auto' }} src="../assets/developer-jumpstart/image38.png" alt="" />
