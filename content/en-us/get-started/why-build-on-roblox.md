@@ -5,40 +5,6 @@ hideInPageNavigation: true
 fullWidth: true
 ---
 
-<h2 style={{ marginTop: 24, marginBottom: 24 }}>Where imagination meets a global audience</h2>
-<Grid container spacing={8}>
-  <Grid item xs={12} md={5}>
-      <Card style={{ marginBottom: 24 }}>
-        <CardContent>
-          <h4>Massive global reach</h4>
-          <Typography variant='body1'>Tap into a platform with 111.8 million daily active users (DAU), spanning 180 countries and 17 languages.</Typography><br /><br />
-          <Typography variant='caption'><i>*As of Q1 2025</i></Typography>
-        </CardContent>
-      </Card>
-      <Card style={{ marginBottom: 24 }}>
-        <CardContent>
-          <h4>Deep user engagement</h4>
-          <Typography variant='body1'>Capture attention on a platform where users spend an average of 2.7 hours per day, totaling 27.4 billion hours of engagement.</Typography><br /><br />
-          <Typography variant='caption'><i>*As of Q1 2025</i></Typography>
-        </CardContent>
-      </Card>
-      <Card style={{ marginBottom: 24 }}>
-        <CardContent>
-          <h4>Proven developer success</h4>
-          <Typography variant='body1'>On average, the top 10,000 developers earned over $97,000 in 2024.</Typography>
-        </CardContent>
-      </Card>
-  </Grid>
-  <Grid item xs={12} md={7}>
-    <img
-      style={{ width: '100%', height: 'auto' }}
-      src="../assets/developer-jumpstart/image51.png"
-      alt=""
-    />
-    <Typography variant='caption1'><i>DAU by Region (in millions)</i></Typography>
-  </Grid>
-</Grid>
-
 <h2 style={{ marginTop: 48, marginBottom: 24 }}>Robust tools with no upfront costs</h2>
 <Grid container spacing={8}>
   <Grid item xs={12} md={5}>

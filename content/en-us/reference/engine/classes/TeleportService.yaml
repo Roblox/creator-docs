@@ -6,10 +6,8 @@ name: TeleportService
 type: class
 memory_category: Instances
 summary: |
-  Enables transporting `Class.Player|Players` between places and servers.
-
-      For more information on how to teleport players between servers, see
-
+  Enables transporting `Class.Player|Players` between places and servers. For
+  more information on how to teleport players between servers, see
   [Teleport between places](../../../projects/teleport.md).
 description: |
   **TeleportService** is responsible for transporting `Class.Player|Players`

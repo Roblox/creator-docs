@@ -29,13 +29,19 @@ Ensure your experience feels natural on various input devices, including gamepad
 
 <Tabs>
 <TabItem label="Mouse/Keyboard">
+<div style={{height: '473px'}}>
 <img src="../../assets/publishing/cross-platform/Inventory-Selection-Keyboard.jpg" width="840" height="473" />
+</div>
 </TabItem>
 <TabItem label="Touch">
+<div style={{height: '473px'}}>
 <img src="../../assets/publishing/cross-platform/Inventory-Selection-Touch.jpg" width="840" height="473" />
+</div>
 </TabItem>
 <TabItem label="Gamepad">
+<div style={{height: '473px'}}>
 <img src="../../assets/publishing/cross-platform/Inventory-Selection-Gamepad.jpg" width="840" height="473" />
+</div>
 </TabItem>
 </Tabs>
 
@@ -48,10 +54,14 @@ The layout of your experience UI should adapt to different screen sizes and orie
 
 <Tabs>
 <TabItem label="Medium / Landscape">
+<div style={{height: '473px'}}>
 <img src="../../assets/publishing/cross-platform/Responsive-Layout-Landscape.jpg" width="766" height="473" />
+</div>
 </TabItem>
 <TabItem label="Small / Portrait">
+<div style={{height: '473px'}}>
 <img src="../../assets/publishing/cross-platform/Responsive-Layout-Portrait.jpg" width="266" height="473" />
+</div>
 </TabItem>
 </Tabs>
 
@@ -64,13 +74,19 @@ This is about the **size** of your UI elements, not just their position. Your UI
 
 <Tabs>
 <TabItem label="Large">
+<div style={{height: '473px'}}>
 <img src="../../assets/publishing/cross-platform/Dynamic-Sizing-Large.jpg" width="840" height="473" />
+</div>
 </TabItem>
 <TabItem label="Medium">
-<img src="../../assets/publishing/cross-platform/Dynamic-Sizing-Medium.jpg" width="766" height="473" />
+<div style={{height: '473px'}}>
+<img src="../../assets/publishing/cross-platform/Dynamic-Sizing-Medium.jpg" width="766" height="473"  />
+</div>
 </TabItem>
 <TabItem label="Small">
+<div style={{height: '473px'}}>
 <img src="../../assets/publishing/cross-platform/Dynamic-Sizing-Small.jpg" width="638" height="473" />
+</div>
 </TabItem>
 </Tabs>
 

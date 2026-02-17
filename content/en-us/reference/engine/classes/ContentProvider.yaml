@@ -230,6 +230,13 @@ methods:
       individual textures. Calling it on a `Class.SurfaceAppearance` instance
       will not do anything, but the associated textures will still be streamed
       in during runtime.
+
+      If PreloadAsync is called on `Class.Instance|Instances` that are not
+      currently visible, such as a `Class.Decal` or an `Class.ImageLabel`, the
+      Engine will download and store textures used by those Instances in its
+      disk cache. Because the `Class.Instance|Instances` are not visible in
+      these cases, the Engine may reduce memory consumption by unloading the
+      textures after preloading them.
     code_samples:
       - ContentProvider-PreloadAsync1
     parameters:
