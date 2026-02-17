@@ -223,7 +223,52 @@ To play 2D text-to-speech audio:
          <td>10</td>
          <td>Retro voice #2</td>
          <td><audio controls><source src="../assets/audio/audio-objects/Retro-Voice-2.wav" type="audio/mpeg"></source></audio></td>
-         </tr>  
+         </tr>
+         <tr>
+         <td>11</td>
+         <td>Host voice</td>
+         <td><audio controls><source src="../assets/audio/audio-objects/Narrator-Voice.wav" type="audio/mpeg"></source></audio></td>
+         </tr>
+         <tr>
+         <td>101</td>
+         <td>Spanish male</td>
+         <td><audio controls><source src="../assets/audio/audio-objects/Spanish-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
+         </tr>
+         <tr>
+         <td>102</td>
+         <td>Spanish female</td>
+         <td><audio controls><source src="../assets/audio/audio-objects/Spanish-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
+         </tr>
+         <tr>
+         <td>201</td>
+         <td>German male</td>
+         <td><audio controls><source src="../assets/audio/audio-objects/German-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
+         </tr>
+         <tr>
+         <td>202</td>
+         <td>German female</td>
+         <td><audio controls><source src="../assets/audio/audio-objects/German-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
+         </tr>
+         <tr>
+         <td>301</td>
+         <td>Italian male</td>
+         <td><audio controls><source src="../assets/audio/audio-objects/Italian-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
+         </tr>
+         <tr>
+         <td>302</td>
+         <td>Italian female</td>
+         <td><audio controls><source src="../assets/audio/audio-objects/Italian-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
+         </tr>
+         <tr>
+         <td>401</td>
+         <td>French male</td>
+         <td><audio controls><source src="../assets/audio/audio-objects/French-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
+         </tr>
+         <tr>
+         <td>402</td>
+         <td>French female</td>
+         <td><audio controls><source src="../assets/audio/audio-objects/French-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
+         </tr>
          </tbody>
          </table>
 
