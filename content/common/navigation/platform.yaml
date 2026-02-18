@@ -29,6 +29,8 @@ navigation:
         path: /safety
       - title: Content maturity
         path: /production/promotion/content-maturity
+      - title: Regional content availability
+        path: /production/promotion/regional-content-availability
       - title: GDPR and CCPA
         path: /production/publishing/about-GDPR-and-CCPA
       - title: DMCA

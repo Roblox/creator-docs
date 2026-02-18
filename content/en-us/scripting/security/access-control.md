@@ -13,20 +13,30 @@ Understanding what information and assets are visible to clients is critical for
 
 Once inside a universe, clients can teleport to any place within that universe, potentially bypassing any intended access restrictions or progression gates. This can also lead to the unintended leak of unreleased content, for example from a development or staging experience. It is important to understand that:
 
-- Disabling "Direct Access" only removes the Join button from subplaces on the website - it does not prevent client-initiated teleports
+- Disabling "Direct Access" only removes the Join button from subplaces on the website — it does not prevent client-initiated teleports
 - Assume exploiters will discover the existence of all subplaces within your universe
 - A client can teleport to any subplace if they can access a single place, such as the root place, regardless of your intended design flow
 
-Many developers attempt to prevent access by kicking unauthorized users from a subplace. This may work for blocking gameplay, but it does **not** prevent content from replicating to the client. For places intended to be private:
+Many developers attempt to prevent access by kicking unauthorized users from a subplace. This may work for blocking gameplay, but it does **not** prevent content from replicating to the client, since replication begins as soon as the player joins and before server-side kick logic can execute.
 
-- **Keep development and test places in separate, private universe**s - this is the only reliable way to ensure confidentiality
-  Never ship confidential event assets, scripts, or UI elements to the production environment before they're intended to be active
+### Use secure teleports
 
-For universes requiring a public place but restricted access, combine multiple layers:
+The most effective way to prevent unauthorized access via teleportation is to set **Access Control for Places** to **Secure within universe only** in the Creator Dashboard. This restricts all non-start places to server-initiated teleports only, blocking client-initiated teleports at the platform level before the player ever joins the subplace. Because the player never joins, no content replicates to them.
 
-- If feasible, use streaming to limit how much of the world will replicate to a new player.
+<Alert severity='success'>
+Enabling **Secure within universe only** is the recommended setting for any experience with restricted subplaces, progression-gated areas, or test places that players should not have access to.
+</Alert>
+
+For configuration steps and migration guidance for existing experiences that use client-initiated teleports, see [Teleport between places](../../projects/teleport.md#configure-secure-teleportation).
+
+### Defense-in-depth for restricted places
+
+For universes that cannot use secure teleports, or as additional layers of protection alongside them, combine the following measures:
+
+- **Keep development and test places in separate, private universes** — this is the only reliable way to ensure confidentiality for unreleased content. Never ship confidential event assets, scripts, or UI elements to the production environment before they are intended to be active.
+- If feasible, use streaming to limit how much of the world replicates to a new player.
 - Add server-side group role or badge verification and verify player state or progression requirements.
-- By default, disallow incoming players. This ensures no player will be allowed even if the verification process is inconclusive, such as in the case of an exception thrown from the engine.
+- By default, disallow incoming players. This ensures no player will be allowed in even if the verification process is inconclusive, such as in the case of an exception thrown from the engine.
 - If practical, use the `Class.Players.BanAsync|Ban API` for players that fail validation. This prevents players from continuously attempting to join on the same account.
 
 ## Replication
@@ -114,4 +124,4 @@ Confidentiality breaches can have significant consequences, such as:
 
 - **Content leaks**: Unreleased items, maps, or features may be discovered and shared publicly before official announcements
 - **Competitive disadvantage**: Mechanics, algorithms, or upcoming features may be reverse-engineered by competitors
-- **Exploit Development**: Exposed server logic makes it faster and easier for exploiters to identify vulnerabilities and develop targeted attacks
+- **Exploit development**: Exposed server logic makes it faster and easier for exploiters to identify vulnerabilities and develop targeted attacks
