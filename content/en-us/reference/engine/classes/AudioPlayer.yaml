@@ -71,7 +71,8 @@ properties:
     description: ''
     code_samples: []
     type: Content
-    tags: []
+    tags:
+      - Hidden
     deprecation_message: ''
     security:
       read: None

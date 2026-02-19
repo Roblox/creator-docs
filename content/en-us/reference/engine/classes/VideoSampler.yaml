@@ -17,6 +17,7 @@ inherits:
 descendants: []
 tags:
   - NotCreatable
+  - NotReplicated
 deprecation_message: ''
 properties:
   - name: VideoSampler.TimeLength

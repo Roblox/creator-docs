@@ -50,6 +50,8 @@ In addition to being able to distribute more of each asset type, verifying your 
 
 For information on how to verify your account either through a government-issued ID or through a phone number, see [account verification](../production/publishing/account-verification.md).
 
+Verification status for group-owned assets is based on the user that last updated the asset.
+
 <Alert severity="warning">
 
 **Phone number verification is not sufficient** to sell priced assets on the Creator Store. To sell priced assets, you need to verify with a [government ID](./publishing/account-verification.md#verify-through-government-id) and create a seller account. For more information, see [Sell on the Creator Store](./sell-on-creator-store.md).
