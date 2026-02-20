@@ -227,7 +227,7 @@ properties:
     summary: |
       The voice style to be used by `Class.AudioTextToSpeech`.
     description: |
-      The voice style to be used by`Class.AudioTextToSpeech`. A list of
+      The voice style to be used by `Class.AudioTextToSpeech`. A list of
       available voices and their corresponding VoiceIds can be found in the
       [text-to-speech guide](../../../audio/objects.md#text-to-speech).
     code_samples: []
