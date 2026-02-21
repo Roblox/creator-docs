@@ -1215,7 +1215,7 @@ events:
         default:
         summary: |
           An `Class.InputObject`, which contains useful data for querying user
-          input such as the`Enum.UserInputType|type of input`,
+          input such as the `Enum.UserInputType|type of input`,
           `Enum.UserInputState|state of input`, and
           `Class.InputObject.Position|screen coordinates of the input`.
     tags: []
@@ -1248,7 +1248,7 @@ events:
         default:
         summary: |
           An `Class.InputObject`, which contains useful data for querying user
-          input such as the`Enum.UserInputType|type of input`,
+          input such as the `Enum.UserInputType|type of input`,
           `Enum.UserInputState|state of input`, and
           `Class.InputObject.Position|screen coordinates of the input`.
     tags: []
@@ -1279,7 +1279,7 @@ events:
         default:
         summary: |
           An `Class.InputObject`, which contains useful data for querying user
-          input such as the`Enum.UserInputType`, `Enum.UserInputState`, and
+          input such as the `Enum.UserInputType`, `Enum.UserInputState`, and
           `Class.InputObject.Position`.
     tags: []
     deprecation_message: ''
