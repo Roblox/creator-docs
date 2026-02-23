@@ -292,7 +292,7 @@ PhotoBooth.configure({
 setBackgrounds(backgrounds: `Library.table`)
 </figcaption>
 
-Overrides the default backgrounds provided by the photo booth. Background images should be at 16:9 aspect ratio (1024&times;768) for an optimal experience and their asset IDs should be included in the backgrounds array. 1–4&nbsp;(inclusive) backgrounds can be provided.
+Overrides the default backgrounds provided by the photo booth. Background images should be at 16:9 aspect ratio (1024&times;576) for an optimal experience and their asset IDs should be included in the backgrounds array. 1–4&nbsp;(inclusive) backgrounds can be provided.
 
 ```lua title="LocalScript"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
