@@ -1967,7 +1967,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - Players
   - name: Player:LoadCharacterWithHumanoidDescriptionAsync
     summary: |

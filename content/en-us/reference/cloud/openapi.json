@@ -53552,6 +53552,22 @@
           }
         ],
         "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "thumbnail:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -53559,6 +53575,12 @@
           {},
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["thumbnail:read"]
           }
         ],
         "externalDocs": {
@@ -54587,6 +54609,22 @@
           }
         ],
         "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 500
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 500
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "thumbnail:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -54594,6 +54632,12 @@
           {},
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["thumbnail:read"]
           }
         ],
         "externalDocs": {
@@ -54842,6 +54886,22 @@
           }
         ],
         "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "thumbnail:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -54849,6 +54909,12 @@
           {},
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["thumbnail:read"]
           }
         ],
         "externalDocs": {
@@ -64377,7 +64443,7 @@
     },
     "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repositoryType}/full": {
       "get": {
-        "tags": ["Universes"],
+        "tags": ["Configs"],
         "summary": "Gets full config with metadata",
         "operationId": "CreatorConfigsPublicApi_GetConfigRepositoryFull",
         "parameters": [
@@ -64499,13 +64565,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#CreatorConfigsPublicApi_GetConfigRepositoryFull"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/configs#CreatorConfigsPublicApi_GetConfigRepositoryFull"
         }
       }
     },
     "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repositoryType}": {
       "get": {
-        "tags": ["Universes"],
+        "tags": ["Configs"],
         "summary": "Gets the latest published config values without metadata and decorators.\r\nThis response can be used as a direct copy-and-paste to the draft update endpoints.",
         "operationId": "CreatorConfigsPublicApi_GetConfigRepositoryValues",
         "parameters": [
@@ -64627,13 +64693,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#CreatorConfigsPublicApi_GetConfigRepositoryValues"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/configs#CreatorConfigsPublicApi_GetConfigRepositoryValues"
         }
       }
     },
     "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repositoryType}/draft": {
       "get": {
-        "tags": ["Universes"],
+        "tags": ["Configs"],
         "summary": "Gets the current draft changes for a configuration repository.",
         "operationId": "CreatorConfigsPublicApi_GetConfigRepositoryDraft",
         "parameters": [
@@ -64755,11 +64821,11 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#CreatorConfigsPublicApi_GetConfigRepositoryDraft"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/configs#CreatorConfigsPublicApi_GetConfigRepositoryDraft"
         }
       },
       "delete": {
-        "tags": ["Universes"],
+        "tags": ["Configs"],
         "summary": "Resets the current draft area. If draftHash is provided, this call will fail if the hash doesn't match.",
         "operationId": "CreatorConfigsPublicApi_DeleteDraft",
         "parameters": [
@@ -64926,11 +64992,11 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#CreatorConfigsPublicApi_DeleteDraft"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/configs#CreatorConfigsPublicApi_DeleteDraft"
         }
       },
       "patch": {
-        "tags": ["Universes"],
+        "tags": ["Configs"],
         "summary": "Updates the draft changes treating the payload as a partial changeset.\r\nIf draftHash is provided, this call will fail if the hash doesn't match.\r\nA key not included will not be changed. To indicate deletion, set key to null.\r\nTo discard a change, set key to its currently published value.",
         "operationId": "CreatorConfigsPublicApi_UpdateDraft",
         "parameters": [
@@ -65097,13 +65163,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#CreatorConfigsPublicApi_UpdateDraft"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/configs#CreatorConfigsPublicApi_UpdateDraft"
         }
       }
     },
     "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repositoryType}/draft:overwrite": {
       "put": {
-        "tags": ["Universes"],
+        "tags": ["Configs"],
         "summary": "Full overwrite of current draft. The payload is the expected final state after publish.\r\nIf a key is not included, it is interpreted as removed.\r\nIf draftHash is provided, this call will fail if the hash doesn't match.",
         "operationId": "CreatorConfigsPublicApi_OverwriteDraft",
         "parameters": [
@@ -65270,13 +65336,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#CreatorConfigsPublicApi_OverwriteDraft"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/configs#CreatorConfigsPublicApi_OverwriteDraft"
         }
       }
     },
     "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repositoryType}/publish": {
       "post": {
-        "tags": ["Universes"],
+        "tags": ["Configs"],
         "summary": "Publishes draft changes.",
         "operationId": "CreatorConfigsPublicApi_PublishDraft",
         "parameters": [
@@ -65443,13 +65509,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#CreatorConfigsPublicApi_PublishDraft"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/configs#CreatorConfigsPublicApi_PublishDraft"
         }
       }
     },
     "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repositoryType}/revisions": {
       "get": {
-        "tags": ["Universes"],
+        "tags": ["Configs"],
         "summary": "Gets the list of previous revisions to the repository.",
         "operationId": "CreatorConfigsPublicApi_ListRevisions",
         "parameters": [
@@ -65627,13 +65693,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#CreatorConfigsPublicApi_ListRevisions"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/configs#CreatorConfigsPublicApi_ListRevisions"
         }
       }
     },
     "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repositoryType}/revisions/{revisionId}/restore": {
       "post": {
-        "tags": ["Universes"],
+        "tags": ["Configs"],
         "summary": "Attempts to restore configs to the provided revision. This will clear the staging and stage a revert commit.\r\nNote that you will need to publish for the revert to take place.",
         "operationId": "CreatorConfigsPublicApi_RestoreRevision",
         "parameters": [
@@ -65764,7 +65830,7 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#CreatorConfigsPublicApi_RestoreRevision"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/configs#CreatorConfigsPublicApi_RestoreRevision"
         }
       }
     },
@@ -91552,6 +91618,25 @@
       }
     },
     {
+      "name": "Configs",
+      "description": "Manage your in-experience config values in real time without restarting servers. See the [Configs documentation](https://create.roblox.com/docs/production/configs) for setup and usage.\n",
+      "x-roblox-tag-info": {
+        "path": "configs",
+        "content": "HTTP APIs for working with creator configs on Roblox Cloud",
+        "ordering": [
+          "CreatorConfigsPublicApi_GetConfigRepositoryFull",
+          "CreatorConfigsPublicApi_GetConfigRepositoryValues",
+          "CreatorConfigsPublicApi_GetConfigRepositoryDraft",
+          "CreatorConfigsPublicApi_UpdateDraft",
+          "CreatorConfigsPublicApi_DeleteDraft",
+          "CreatorConfigsPublicApi_OverwriteDraft",
+          "CreatorConfigsPublicApi_PublishDraft",
+          "CreatorConfigsPublicApi_ListRevisions",
+          "CreatorConfigsPublicApi_RestoreRevision"
+        ]
+      }
+    },
+    {
       "name": "Creator Store",
       "description": "Manage your presence on the [Creator Store](/production/creator-store). [Create](#Cloud_CreateCreatorStoreProduct) and [update](#Cloud_UpdateCreatorStoreProduct) product listings for your assets, and [search the toolbox](#get_toolbox_service_v2_assets_search) for assets using various filters.\n",
       "x-roblox-tag-info": {
@@ -92418,15 +92503,6 @@
           "Cloud_ListUserRestrictionLogs",
           "Cloud_GetUserRestriction__Using_Universes",
           "Cloud_UpdateUserRestriction__Using_Universes",
-          "CreatorConfigsPublicApi_GetConfigRepositoryFull",
-          "CreatorConfigsPublicApi_GetConfigRepositoryValues",
-          "CreatorConfigsPublicApi_GetConfigRepositoryDraft",
-          "CreatorConfigsPublicApi_UpdateDraft",
-          "CreatorConfigsPublicApi_DeleteDraft",
-          "CreatorConfigsPublicApi_OverwriteDraft",
-          "CreatorConfigsPublicApi_PublishDraft",
-          "CreatorConfigsPublicApi_ListRevisions",
-          "CreatorConfigsPublicApi_RestoreRevision",
           "post_legacy_badges_v1_universes__universeId__badges",
           "badges_post_v1_universes__universeId__badges",
           "get_legacy_develop_v1_places__placeId__teamcreate_active_session_members",

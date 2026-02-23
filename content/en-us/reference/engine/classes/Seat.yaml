@@ -80,7 +80,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
-      - Avatar
+      - AvatarBehavior
   - name: Seat.Occupant
     summary: |
       The humanoid that is sitting in the seat.
@@ -102,7 +102,7 @@ properties:
       can_save: false
     capabilities:
       - Basic
-      - Avatar
+      - AvatarBehavior
 methods:
   - name: Seat:Sit
     summary: |
@@ -126,6 +126,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-      - Avatar
+      - AvatarBehavior
 events: []
 callbacks: []

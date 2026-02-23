@@ -394,7 +394,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: AvatarEditorService:CheckApplyDefaultClothing
     summary: |
       Used to apply default clothing to the `Class.HumanoidDescription` if
@@ -419,7 +419,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: AvatarEditorService:ConformToAvatarRulesAsync
     summary: ''
     description: ''
@@ -438,7 +438,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: AvatarEditorService:ConformToAvatarRules
     summary: ''
     description: ''
@@ -458,7 +458,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: AvatarEditorService:GetAccessoryType
     summary: ''
     description: ''

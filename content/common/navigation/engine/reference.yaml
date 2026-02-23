@@ -1363,11 +1363,6 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/GuidRegistryService.yaml
                 ignoreTranslation: true
-              - title: HandRigDescription
-                path: /reference/engine/classes/HandRigDescription
-                type: engineapi
-                source: /reference/engine/classes/HandRigDescription.yaml
-                ignoreTranslation: true
               - title: HapticEffect
                 path: /reference/engine/classes/HapticEffect
                 type: engineapi
@@ -3467,6 +3462,11 @@ navigation:
         type: engineapi
         source: /reference/engine/datatypes/Secret.yaml
         ignoreTranslation: true
+      - title: SecurityCapabilities
+        path: /reference/engine/datatypes/SecurityCapabilities
+        type: engineapi
+        source: /reference/engine/datatypes/SecurityCapabilities.yaml
+        ignoreTranslation: true
       - title: SharedTable
         path: /reference/engine/datatypes/SharedTable
         type: engineapi
@@ -4535,11 +4535,6 @@ navigation:
         path: /reference/engine/enums/HandlesStyle
         type: engineapi
         source: /reference/engine/enums/HandlesStyle.yaml
-        ignoreTranslation: true
-      - title: HandRigDescriptionSide
-        path: /reference/engine/enums/HandRigDescriptionSide
-        type: engineapi
-        source: /reference/engine/enums/HandRigDescriptionSide.yaml
         ignoreTranslation: true
       - title: HapticEffectType
         path: /reference/engine/enums/HapticEffectType

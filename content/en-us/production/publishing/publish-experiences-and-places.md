@@ -169,12 +169,13 @@ To change the start place:
 ### Make experience public
 
 <Alert severity="warning">
-Before making a new experience public—or updating an existing public experience—you must meet **at least one** of the following requirements:
+To make a new experience public or update an existing public experience, you must:
 
-- Have an account that is [ID-verified](./account-verification.md#verify-through-government-id) **or**
-- Have made a purchase using real currency or a gift card since January 1, 2025
-
-You must also complete the [content maturity & compliance](../promotion/content-maturity.md) questionnaire for the specific experience.
+- Have an account that is at least 48 hours old
+- Complete the [content maturity & compliance](../promotion/content-maturity.md) questionnaire for the specific experience
+- Meet at least one of the following:
+  - Have an [ID-verified account](./account-verification.md#verify-through-government-id) **OR**
+  - Have made a purchase using real currency or a gift card since January 1, 2025
 
 These requirements apply to both **publishing a new experience** and **updating an existing public experience**, including:
 
@@ -182,7 +183,7 @@ These requirements apply to both **publishing a new experience** and **updating 
 - Publishing a new version of a place within an existing experience
 - Setting your audience to **Public** or **Community members**
 
-You do **not** need to meet these requirements if you keep your experience private or set the audience to **Connections**.
+You do **not** need to meet these requirements if you keep your experience private or if your audience is set to **Connections**.
 </Alert>
 
 <Alert severity="info">

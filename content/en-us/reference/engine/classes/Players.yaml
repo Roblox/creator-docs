@@ -530,7 +530,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - Players
   - name: Players:CreateHumanoidModelFromDescription
     summary: |
@@ -567,7 +567,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - Players
   - name: Players:CreateHumanoidModelFromUserIdAsync
     summary: |
@@ -902,7 +902,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - Players
   - name: Players:GetHumanoidDescriptionFromOutfitId
     summary: |
@@ -931,7 +931,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - Players
   - name: Players:GetHumanoidDescriptionFromUserIdAsync
     summary: |
@@ -961,7 +961,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - Players
   - name: Players:GetHumanoidDescriptionFromUserId
     summary: |
@@ -991,7 +991,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - Players
   - name: Players:GetNameFromUserIdAsync
     summary: |

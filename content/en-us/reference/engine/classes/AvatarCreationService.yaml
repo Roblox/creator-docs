@@ -482,7 +482,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: AvatarCreationService:PromptCreateAvatarAssetAsync
     summary: |
       Prompts a `Class.Player` to purchase and create an avatar asset from an

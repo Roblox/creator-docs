@@ -68,7 +68,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: WrapTextureTransfer.UVMaxBound
     summary: |
       Determines the maximum bound of the UV space to include in the transfer.
@@ -95,7 +95,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: WrapTextureTransfer.UVMinBound
     summary: |
       Determines the minimum bound of the UV space to include in the transfer.
@@ -121,7 +121,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
 methods: []
 events: []
 callbacks: []

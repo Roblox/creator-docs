@@ -143,7 +143,6 @@ descendants:
   - GuiBase
   - GuiService
   - GuidRegistryService
-  - HandRigDescription
   - HapticEffect
   - HapticService
   - HeapProfilerService

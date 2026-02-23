@@ -54,7 +54,7 @@ properties:
       can_load: false
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Accoutrement.AttachmentPoint
     summary: |
       The exact CFrame of the Accoutrement.
@@ -73,7 +73,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Accoutrement.AttachmentPos
     summary: |
       Sets the position of the object on the Player.
@@ -94,7 +94,7 @@ properties:
       can_load: false
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Accoutrement.AttachmentRight
     summary: |
       Sets the offset position of the object on the Player.
@@ -115,7 +115,7 @@ properties:
       can_load: false
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Accoutrement.AttachmentUp
     summary: |
       Sets the offset position of the object on the Player.
@@ -136,7 +136,7 @@ properties:
       can_load: false
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
 methods: []
 events: []
 callbacks: []

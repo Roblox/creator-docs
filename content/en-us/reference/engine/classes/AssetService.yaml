@@ -798,7 +798,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - AssetRequire
+      - LoadUnownedAsset
   - name: AssetService:PromptCreateAssetAsync
     summary: |
       Allows in-experience asset creation for users by prompting a publish

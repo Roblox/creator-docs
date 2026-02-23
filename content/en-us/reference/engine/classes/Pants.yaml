@@ -66,7 +66,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
 methods: []
 events: []
 callbacks: []

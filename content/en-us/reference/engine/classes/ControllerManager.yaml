@@ -44,7 +44,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarBehavior
   - name: ControllerManager.BaseMoveSpeed
     summary: |
       The base linear movement speed used by all controllers.
@@ -65,7 +65,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarBehavior
   - name: ControllerManager.BaseTurnSpeed
     summary: |
       The base angular turning speed used by all controllers.
@@ -85,7 +85,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarBehavior
   - name: ControllerManager.ClimbSensor
     summary: |
       A reference to the sensor data used while a `Class.ClimbController` is
@@ -112,7 +112,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarBehavior
   - name: ControllerManager.FacingDirection
     summary: |
       The unit vector describing the desired direction to face.
@@ -134,7 +134,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarBehavior
   - name: ControllerManager.GroundSensor
     summary: |
       A reference to the sensor data used while a `Class.GroundController` is
@@ -161,7 +161,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarBehavior
   - name: ControllerManager.MovingDirection
     summary: |
       The vector describing the desired direction to move in.
@@ -185,7 +185,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarBehavior
   - name: ControllerManager.RootPart
     summary: |
       The `Class.BasePart` where the controller's forces and torques are
@@ -208,7 +208,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarBehavior
   - name: ControllerManager.UpDirection
     summary: ''
     description: ''
@@ -225,7 +225,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarBehavior
 methods: []
 events: []
 callbacks: []

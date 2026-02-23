@@ -46,7 +46,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: ShirtGraphic.Graphic
     summary: |
       The content ID link pointing to the `Class.ShirtGraphic` texture hosted on
@@ -93,7 +93,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
 methods: []
 events: []
 callbacks: []
