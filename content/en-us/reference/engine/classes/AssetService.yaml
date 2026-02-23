@@ -765,7 +765,7 @@ methods:
       #### Script Sandbox Security
 
       For enhanced security, the returned `Class.Model` is sandboxed by default
-      (`Class.Model.Sandboxed|Sandboxed` is `true`) and has no script
+      (`Class.Instance.Sandboxed|Sandboxed` is `true`) and has no script
       `Enum.SecurityCapability|Capabilities`. This prevents untrusted scripts
       descending from the returned Model from running. To enable scripts in a
       model you trust, you can manually grant a safe set of
