@@ -168,6 +168,34 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - CSG
+  - name: GeometryService:FragmentAsync
+    summary: |
+      This API has not been released.
+    description: ''
+    code_samples: []
+    parameters:
+      - name: part
+        type: BasePart
+        default:
+        summary: ''
+      - name: sites
+        type: Array
+        default:
+        summary: ''
+      - name: options
+        type: Dictionary
+        default: nil
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - CSG
   - name: GeometryService:IntersectAsync
     summary: |
       Creates one or more `Class.PartOperation|PartOperations` from the
@@ -425,6 +453,34 @@ methods:
         summary: |
           One or more `Class.PartOperation|PartOperations` from the geometry of
           the main part (`part`) minus the geometry occupied by the other parts.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - CSG
+  - name: GeometryService:SweepPartAsync
+    summary: |
+      This API has not been released.
+    description: ''
+    code_samples: []
+    parameters:
+      - name: part
+        type: BasePart
+        default:
+        summary: ''
+      - name: cframes
+        type: Array
+        default:
+        summary: ''
+      - name: options
+        type: Dictionary
+        default: nil
+        summary: ''
+    returns:
+      - type: MeshPart
+        summary: ''
     tags:
       - Yields
     deprecation_message: ''

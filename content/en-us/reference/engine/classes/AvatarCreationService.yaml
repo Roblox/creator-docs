@@ -953,7 +953,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: AvatarCreationService.AvatarModerationCompleted
     summary: |
       Fires when an in-experience-created avatar's moderation status has been

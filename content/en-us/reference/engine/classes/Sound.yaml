@@ -33,11 +33,14 @@ tags: []
 deprecation_message: ''
 properties:
   - name: Sound.AudioContent
-    summary: ''
-    description: ''
+    summary: |
+      A reference to an audio asset.
+    description: |
+      This property is a reference to an audio asset.
     code_samples: []
     type: Content
-    tags: []
+    tags:
+      - Hidden
     deprecation_message: ''
     security:
       read: None

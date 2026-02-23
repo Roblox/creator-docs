@@ -3,7 +3,9 @@ title: Studio testing modes
 description: Explore the built-in Studio testing modes for experiences.
 ---
 
+import BetaAlert from '../includes/beta-features/beta-alert.md'
 import DeviceEmulator from '../includes/studio/device-emulator.md'
+import TouchSimulation from '../includes/studio/touch-simulation.md'
 import ControllerEmulator from '../includes/studio/controller-emulator.md'
 import PlaytestModes from '../includes/studio/playtest-modes.md'
 
@@ -173,7 +175,13 @@ If you're working on an experience with others in [collaboration](../projects/co
 
 <DeviceEmulator components={props.components} />
 
-## Controller emulation
+## Touch simulation
+
+<BetaAlert betaName="Multi-touch Simulation" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
+
+<TouchSimulation components={props.components} />
+
+## Controller simulation
 
 <ControllerEmulator components={props.components} />
 
@@ -183,7 +191,7 @@ If you'd like to support virtual reality (VR) headsets for your experience, make
 
 ### VR emulation
 
-**VR emulation** lets you test VR experiences in Studio without a physical headset. Just like emulating any other device, use the [device selector](#device-emulation) menu to choose either **Meta&nbsp;Quest&nbsp;2** or **Meta&nbsp;Quest&nbsp;3**. The [controller emulator](#controller-emulation) automatically selects the appropriate controller for the headset.
+**VR emulation** lets you test VR experiences in Studio without a physical headset. Just like emulating any other device, use the [device selector](#device-emulation) menu to choose either **Meta&nbsp;Quest&nbsp;2** or **Meta&nbsp;Quest&nbsp;3**. The [controller emulator](#controller-simulation) automatically selects the appropriate controller for the headset.
 
 <Grid container spacing={1}>
 <Grid item XSmall={12} Medium={6} Large={6} XLarge={6}><img src="../assets/studio/general/Controller-Emulator-VR.png" width="540" alt="The Controller Emulator with a Quest 3 controller." /></Grid>

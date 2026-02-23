@@ -83,10 +83,6 @@ You can customize the appearance of the toolbar by right-clicking in an empty ar
 
 Beyond the default tool tabs, you can add **custom tabs** for your specific needs, either through Studio's interface or by editing local `.json` files.
 
-<Alert severity="info">
-The tab configuration system is intended for customizing the Studio toolbar using existing controls/widgets and plugins. It's not meant to replace Studio [plugins](./plugins.md) or interactive [widgets](./build-studio-widgets.md).
-</Alert>
-
 <Tabs>
 <TabItem label="Studio">
 The easiest way to create custom tabs is through Studio's workflow.
@@ -116,12 +112,14 @@ The easiest way to create custom tabs is through Studio's workflow.
 
 Custom tab configurations are saved **locally** on each machine in `.json` format, allowing you to build customized tabs and share them with your team or the community.
 
-1. Open the custom tabs folder which is stored in a location unaffected by Studio updates.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> To modify `.json` from a default tab toolset, begin by right‑clicking an existing tab and selecting **Duplicate&nbsp;tab**.
+
+2. Open the custom tabs folder which is stored in a location unaffected by Studio updates.
 
    - **Windows** — `%LOCALAPPDATA%\Roblox\<userID>\CustomRibbonTabs`
    - **Mac** — `~/Documents/Roblox/<userID>/CustomRibbonTabs`
 
-2. In the `CustomRibbonTabs` directory are `.json` files which define the toolbar's structure:
+3. In the `CustomRibbonTabs` directory are `.json` files which define the toolbar's structure:
 
    - The `RibbonLayout.json` file controls the overall ordering and visibility of tabs.
 
@@ -149,7 +147,7 @@ Custom tab configurations are saved **locally** on each machine in `.json` forma
 		}
 		```
 
-3. In the `Controls` array for a tab file, insert various buttons, submenus, and more. Each control's `Id` value must be **unique** within the file.
+4. In the `Controls` array for a tab file, insert various buttons, submenus, and more. Each control's `Id` value must be **unique** within the file.
 
    The following examples illustrate common elements in a custom tab:
 
@@ -297,7 +295,7 @@ Custom tab configurations are saved **locally** on each machine in `.json` forma
 	Beyond the above examples, you can right-click any default tab and select **Duplicate&nbsp;tab**. This will create a new custom tab and corresponding `.json` file in your local `CustomRibbonTabs` directory which you can inspect to explore how various default tools and menus are constructed.
 	</Alert>
 
-4. Save the `.json` file and then reload Studio's plugins:
+5. Save the `.json` file and then reload Studio's plugins:
 
    1. Right-click anywhere in the toolbar or mezzanine and select **Manage&nbsp;tabs**.
    2. Access the options menu from the popup's upper‑right corner and select **Reload&nbsp;custom&nbsp;tabs**.

@@ -78,27 +78,28 @@ Roblox pays out earnings on the 25th of the following month from when you insert
 
 ## Publisher eligibility
 
-While anyone can insert ad units into their experiences, Roblox only serves ads into ad units if the experience or group owner and experience is eligible to serve ads. Eligibility does not guarantee Roblox will serve ads in your experience and nothing obligates Roblox to serve ads into your experience.
+While anyone can insert ad units into their experiences, Roblox only serves ads into ad units if the experience is eligible to serve ads. Eligibility does not guarantee Roblox will serve ads in your experience, and nothing obligates Roblox to serve ads into your experience.
 
-Experiences must meet the following criteria to be eligible to be an ad publisher:
+For your experience to be eligible to serve ads, your account and experience must meet the following criteria:
 
-- Your account must have **2-factor authentication (2FA)** enabled.
-  - For group-owned experiences, this requirement applies to the owner of the group.
-  - If a publisher disables 2FA, they will lose eligibility.
+- Your experience must be **public**.
 - You must be **13+ years of age**.
   - For group-owned experiences, this requirement applies to the owner of the group.
-- Your account must be [ID-verified](../publishing/account-verification.md).
+- Your account must be [ID-verified](../publishing/account-verification.md) and have **2-factor authentication (2FA)** enabled.
   - For group-owned experiences, this requirement applies to the owner of the group.
-  - This requirement is persistent. If a publisher disables identity verification, they lose eligibility.
-- Your experience must be **Public**. If a publisher makes the experience Private, the experience loses eligibility.
-- You must complete the **Maturity & Compliance Questionnaire** for your experience.
+  - This requirement is persistent. If you disable identity verification or 2FA, your experience loses eligibility.
+- You must complete the **Maturity and Compliance Questionnaire** for your experience.
+  - The questionnaire must be reviewed and approved by Roblox before the experience is eligible to serve ads. If the review status is **Pending**, you can request a re-review from the experience's advertising eligibility page under **Monetization** ⟩ **Ads** ⟩ **Eligiblity**. You'll receive a response within 24 hours.
 - Your experience must maintain **2,000 unique visitors per month**.
-  - This is calculated and updated monthly, based on visitor data.
-  - Bots can't be included in visitor counts.
-- You must comply with the [Roblox Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and the [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards#publisher-integrity).
+  - This is calculated and updated monthly, based on visitor data. Bots are not included in visitor counts.
+- You must comply with the [Roblox terms of use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), [community standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and [publisher integrity requirements](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards#publisher-integrity).
+
+<Alert severity="info">
+  Resubmitting your **Maturity and Compliance Questionnaire** will temporarily remove your ads eligibility while the questionnaire is under review. To avoid repeated interruptions, only resubmit the questionnaire when you publish an experience update that changes your previous responses.
+</Alert>
 
 <Alert severity="warning">
-  Publishers who don't comply with these requirements might lose their eligibility temporarily or permanently. In some cases, they might lose some or all ad payouts and might have their content or account suspended.
+  If you don't comply with these requirements, you might lose your publisher eligibility temporarily or permanently. In some cases, you might lose some or all ad payouts and might have your content or account suspended.
 </Alert>
 
 ## User eligibility

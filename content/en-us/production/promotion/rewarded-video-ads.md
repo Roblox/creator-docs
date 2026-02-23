@@ -334,7 +334,7 @@ To prevent abuse of the rewarded ad system and to provide the best user experien
 <tbody>
   <tr>
     <th>**Experiences**</th>
-    <td>Experiences must:<br/><br/><ul><li>Be public and unrestricted.</li><li>Offer no free-form user creation or AI interaction.</li><li>Have a complete [Maturity & Compliance questionnaire](../promotion/content-maturity.md).</li><li>Have an average of at least **2 thousand unique visitors per month**.</li><li>Comply with the Roblox [terms of use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), [community standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and [publisher integrity requirements](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards#publisher-integrity).</li></ul></td>
+    <td>Experiences must:<br/><br/><ul><li>Be public and unrestricted.</li><li>Offer no free-form user creation.</li><li>Have a complete **Maturity and Compliance Questionnaire** that has been reviewed and approved by Roblox. If the review status is **Pending**, you can request a re-review from the experience's advertising eligibility page under **Monetization** ⟩ **Ads** ⟩ **Eligiblity**. You'll receive a response within 24 hours.</li><li>Have an average of at least **2,000 unique visitors per month**.</li><li>Comply with the [Roblox terms of use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), [community standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and [publisher integrity requirements](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards#publisher-integrity).</li></ul></td>
   </tr>
   <tr>
     <th>**Publishers**</th>
@@ -347,7 +347,13 @@ To prevent abuse of the rewarded ad system and to provide the best user experien
 </tbody>
 </table>
 
-Any violation of the eligilibity requirements can result in account suspension, removal of content, revocation of ad payouts, or loss of eligibility to earn from ads.
+<Alert severity="info">
+  Resubmitting your **Maturity and Compliance Questionnaire** will temporarily remove your ads eligibility while the questionnaire is under review. To avoid repeated interruptions, only resubmit the questionnaire when you publish an experience update that changes your previous responses.
+</Alert>
+
+<Alert severity="warning">
+  Any violation of the eligilibity requirements can result in account suspension, removal of content, revocation of ad payouts, or loss of eligibility to earn from ads.
+</Alert>
 
 ## Best practices
 

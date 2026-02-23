@@ -196,7 +196,7 @@ methods:
       It is recommended to use `Class.EncodingService.GetDecompressedBufferSize`
       to find out the decompressed data size before attempting to decompress.
       This is very important if the input buffer contents are outside of your
-      control (for example, from a client `Class.RemoveEvent`)
+      control (for example, from a client `Class.RemoteEvent`)
     code_samples: []
     parameters:
       - name: input

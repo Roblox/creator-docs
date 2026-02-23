@@ -290,7 +290,7 @@ methods:
     description: |
       Determines whether or not two users would receive messages between each
       other. Factors such as incompatible parental control settings or blocked
-      status may prevent the delivery of messages between users
+      status may prevent the delivery of messages between users.
       `Class.TextChannel|TextChannels` internally use this result to determine
       whether to deliver messages between users. Note that this method is only
       available for use in a `Class.Script` with

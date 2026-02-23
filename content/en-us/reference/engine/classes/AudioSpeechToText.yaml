@@ -14,7 +14,8 @@ description: |
 
   Roblox uses the following formula to throttle requests for this API based on
   the number of players in your experience:
-  `max requests per minute per experience = 1 + (5 * number_of_concurrent_users)`. You can purchase additional usage using
+  `max requests per minute per experience = 1 + (5 * number_of_concurrent_users)`.
+  You can purchase additional usage using
   [Extended Services](../../../cloud-services/extended-services.md).
 
   For more information, see
