@@ -6,7 +6,7 @@ description: Overview of Roblox Standard Scripts
 By default, Roblox creates default scripts that provide behavior for things such as the Camera and Character Controls.
 
 <figure>
-<img src="../assets/roblox-scripts/starterplayer_scripts.png" width="200" alt="Showcase of some standard Roblox Scripts." />
+<img src="../assets/roblox-scripts/starterplayerscripts.png" width="200" alt="Showcase of some standard Roblox Scripts." />
 </figure>
 
 
