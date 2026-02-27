@@ -7,7 +7,6 @@ This ModuleScript implements a singleton class to manage the selection, activati
 
 The camera controller ModuleScripts implement classes which are instantiated and activated as-needed, they are no longer all instantiated up front as they were in the previous generation of PlayerScripts.
 
-
 ## cameraRenderUpdate
 
 ``cameraRenderUpdate`` is the RenderStep name used and bound with by the ``CameraModule`` with the priority ``Enum.RenderPriority.Camera.Value``, through Class.RunService:BindToRenderStep()|:BindToRenderStep().
