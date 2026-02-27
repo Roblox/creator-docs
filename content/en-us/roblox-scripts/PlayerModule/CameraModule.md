@@ -15,3 +15,5 @@ For custom camera or other behavior, it is recommended to keep the priority in m
 
 The order is important. For instance, if the ``CameraModule`` changes the ``Datatype.CFrame`` of the camera,
 you want to ensure that anything that's meant to change the ``Datatype.CFrame`` again runs first, before reading the ``Datatype.CFrame``, if you're expecting a different your custom modified values.
+
+``Class.RunService:BindToRenderStep()|:BindToRenderStep()`` runs before ``Class.RunService.RenderStep``.
