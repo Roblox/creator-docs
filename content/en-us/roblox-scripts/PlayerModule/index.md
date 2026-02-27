@@ -3,10 +3,10 @@ title: Standard PlayerModule
 description: Overview of the PlayerModule.
 ---
 
-The ``PlayerModule`` is initialized by ``PlayerScriptsLoader``.
-``PlayerScriptsLoader`` is a script which requires and instantiates the ``PlayerModule`` singleton.
+<i>The ``PlayerModule`` is initialized by ``PlayerScriptsLoader``.
+``PlayerScriptsLoader`` is a script which requires and instantiates the ``PlayerModule`` singleton.</i>
 
-``PlayerModule`` comes with two further modules, ``CameraModule`` and ``ControlModule``.
+``PlayerModule`` comes with two further modules, [``CameraModule``](./CameraModule.md) and ``ControlModule``.
 
 ## PlayerModule
 
