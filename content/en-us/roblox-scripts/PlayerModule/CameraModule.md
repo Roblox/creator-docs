@@ -3,17 +3,14 @@ title: CameraModule
 description: Overview about the CameraModule
 ---
 
-This ModuleScript implements a singleton class to manage the selection, activation, and deactivation of the current camera controller, character occlusion controller, and transparency controller.
-This script binds to RenderStepped at Camera priority and calls the Update() methods on the active controller instances.
+This ModuleScript implements a singleton class to manage the selection, activation, and deactivation of the current camera controller, character occlusion controller, and transparency controller. This script binds to RenderStepped at Camera priority and calls the Update() methods on the active controller instances.
 
-The camera controller ModuleScripts implement classes which are instantiated and activated as-needed,
-they are no longer all instantiated up front as they were in the previous generation of PlayerScripts.
+The camera controller ModuleScripts implement classes which are instantiated and activated as-needed, they are no longer all instantiated up front as they were in the previous generation of PlayerScripts.
 
 
 ## cameraRenderUpdate
 
-``cameraRenderUpdate`` is the RenderStep name used and bound with by the ``CameraModule``
-with the priority ``Enum.RenderPriority.Camera.Value``, through Class.RunService:BindToRenderStep()|:BindToRenderStep().
+``cameraRenderUpdate`` is the RenderStep name used and bound with by the ``CameraModule`` with the priority ``Enum.RenderPriority.Camera.Value``, through Class.RunService:BindToRenderStep()|:BindToRenderStep().
 
 For custom camera or other behavior, it is recommended to keep the priority in mind. The MicroProfiler can be used to debug which render steps are running in which order.
 
