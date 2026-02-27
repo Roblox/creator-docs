@@ -11,7 +11,7 @@ navigation:
     path: /assistant/guide
     section:
       - title: Overview
-        path: /assistant/guide
+        path: /assistant/guide    
       - title: Prompt guide and examples
         path: /assistant/prompt-engineering
   - heading: Building tools

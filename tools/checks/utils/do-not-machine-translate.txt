@@ -11,7 +11,6 @@ content/en-us/assets.md
 content/en-us/creator-hub.md
 content/en-us/creator-rewards.md
 content/en-us/get-started.md
-content/en-us/monetize.md
 content/en-us/platform.md
 content/en-us/scale.md
 content/en-us/studio/index.md

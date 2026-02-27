@@ -692,22 +692,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-  - name: TestService:RunAsync
-    summary: |
-      Runs scripts which are parented to `TestService`.
-    description: |
-      Runs scripts which are parented to `TestService`.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
   - name: TestService:Run
     summary: |
       Runs scripts which are parented to `TestService`.
@@ -720,6 +704,22 @@ methods:
     tags:
       - Yields
       - Deprecated
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
+  - name: TestService:RunAsync
+    summary: |
+      Runs scripts which are parented to `TestService`.
+    description: |
+      Runs scripts which are parented to `TestService`.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Yields
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe

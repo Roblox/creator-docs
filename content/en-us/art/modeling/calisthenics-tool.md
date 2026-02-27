@@ -3,6 +3,10 @@ title: Calisthenics Tool
 description: Calisthenics Tool is a Blender plugin that you can use to verify skinning quality of an asset.
 ---
 
+<Alert severity = 'warning'>
+This tool is no longer in active development. You are free to use the tool for any purpose. The tool may be out of date or incompatible with modern Roblox assets.
+</Alert>
+
 The **Calisthenics Tool** is a supplemental [Blender](https://www.blender.org/) add-on that allows you to quickly test your asset through a set of animation cycles to verify your skinning data. At any point during the animation testing, you can pause and use Blender's skinning Tools, such as [Weight Painting brushes](https://docs.blender.org/manual/en/latest/sculpt_paint/weight_paint/introduction.html), to resolve any skinning imperfections.
 
 Skinning your clothing and characters is a critical and often time-intensive process to create high quality assets that move and fit with different character bodies. Similar to the [Layered Clothing Validation Tool](../../art/accessories/validation-tool.md), the Calisthenics Tool can save you time when testing your character models after rigging and skinning.
@@ -34,7 +38,7 @@ The Calisthenics Tool plugin is designed for [Blender 3.0+](https://www.blender.
 
 To install the Calisthenics Tool in Blender:
 
-1. Download the [CalisthenicsTool.zip](../../assets/modeling/skinned-meshes/calisthenic-tool/CalisthenicsTool.zip) and save the `.zip` file locally.
+1. Download the [CalisthenicsTool.zip](https://github.com/Roblox/avatar/tree/main/Tools/CalisthenicsTool) and save the `.zip` file locally.
 2. In Blender, navigate to **Edit** > **Preferences**.
    <img src="../../assets/modeling/skinned-meshes/calisthenic-tool/Blender-Preferences.png" width="70%" />
 

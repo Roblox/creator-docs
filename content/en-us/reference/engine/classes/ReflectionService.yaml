@@ -170,62 +170,56 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-  - name: ReflectionService:GetPropertiesOfClass
+  - name: ReflectionService:GetEventsOfClass
     summary: |
-      Returns a list of properties for a given class with filters applied.
+      Returns a list of events for a given class with filters applied.
     description: |
-      Given a class name in the Roblox API, returns a list of
-      `ReflectedProperty` dictionaries for all properties of that class that
-      match the provided filter criteria. If no such class name exists, returns
-      `nil`.
+      Given a class name in the Roblox API, returns a list of `ReflectedEvent`
+      dictionaries for all events of that class that match the provided filter
+      criteria. If no such class name exists, returns `nil`.
 
       If you pass in a `ReflectionMemberFilter` dictionary, you can adjust the
-      set of eligible properties and adjust the output behavior:
+      set of eligible events and adjust the output behavior:
 
       ```lua
       {
       	-- The security context to use; can be more expansive than the current script's security
       	Security: SecurityCapabilities?, -- default: SecurityCapabilities.fromCurrent()
-      	-- Whether to exclude inherited properties from superclasses
+      	-- Whether to exclude inherited events from superclasses
       	ExcludeInherited: boolean?, -- default: false
-      	-- Whether to exclude Studio display information about the properties
+      	-- Whether to exclude Studio display information about the events
       	ExcludeDisplay: boolean?, -- default: false
       }
       ```
 
-      If the class name is valid and that class has properties, you'll get a
-      list of `ReflectedProperty` dictionaries as output, each with the
-      following structure:
+      If the class name is valid and that class has events, you'll get a list of
+      `ReflectedEvent` dictionaries as output, each with the following
+      structure:
 
       ```lua
       {
-      	-- The name of the property
+      	-- The name of the event
       	Name: string,
       	-- The superclass from which the property is inherited, or the class name if not inherited
       	Owner: string,
-      	-- Whether the property is serialized (able to be saved to disk or sent over the network)
-      	Serialized: boolean,
-      	-- The type of the property
-      	Type: ReflectionType,
-      	-- The content type of the property, if applicable
-      	ContentType: Enum.AssetType?,
+      	-- A list of all parameters the event passes to connected functions
+      	Parameters: {
+      		{
+      			-- The name of the parameter
+      			Name: string,
+      			-- The type of the parameter
+      			Type: ReflectionType,
+      		}
+      	},
       	-- Studio display information
       	Display: {
-      		-- The category under which the property is listed in Studio
-      		Category: string,
-      		-- A message indicating that the property is deprecated, if applicable
+      		-- A message indicating that the event is deprecated, if applicable
       		DeprecationMessage: string?,
       	}?,
-      	-- The security permissions required to access this property
+      	-- The security permissions required to access this event
       	Permits: {
-      		-- The security context required to read this property
-      		Read: SecurityCapabilities?,
-      		-- The security context required to read this property while thread-safe
-      		ReadParallel: SecurityCapabilities?,
-      		-- The security context required to write to this property
-      		Write: SecurityCapabilities?,
-      		-- The security context required to write to this property while thread-safe
-      		WriteParallel: SecurityCapabilities?,
+      		-- The security permissions required to listen for the event in any context
+      		Listen: SecurityCapabilities?,
       	},
       }
       ```
@@ -235,18 +229,18 @@ methods:
         type: string
         default:
         summary: |
-          The name of the class for which you wish to retrieve properties.
+          The name of the class for which you wish to retrieve events.
       - name: filter
         type: Dictionary
         default: nil
         summary: |
-          An optional filter to restrict or expand the set of properties that
-          this method can return and change the method's behavior.
+          An optional filter to restrict or expand the set of events that this
+          method can return and change the method's behavior.
     returns:
       - type: Array
         summary: |
-          A list of `ReflectedProperty` dictionaries with reflection information
-          for each property of the class that matches the filter criteria.
+          A list of `ReflectedEvent` dictionaries with reflection information
+          for each event of the class that matches the filter criteria.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -338,56 +332,62 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-  - name: ReflectionService:GetEventsOfClass
+  - name: ReflectionService:GetPropertiesOfClass
     summary: |
-      Returns a list of events for a given class with filters applied.
+      Returns a list of properties for a given class with filters applied.
     description: |
-      Given a class name in the Roblox API, returns a list of `ReflectedEvent`
-      dictionaries for all events of that class that match the provided filter
-      criteria. If no such class name exists, returns `nil`.
+      Given a class name in the Roblox API, returns a list of
+      `ReflectedProperty` dictionaries for all properties of that class that
+      match the provided filter criteria. If no such class name exists, returns
+      `nil`.
 
       If you pass in a `ReflectionMemberFilter` dictionary, you can adjust the
-      set of eligible events and adjust the output behavior:
+      set of eligible properties and adjust the output behavior:
 
       ```lua
       {
       	-- The security context to use; can be more expansive than the current script's security
       	Security: SecurityCapabilities?, -- default: SecurityCapabilities.fromCurrent()
-      	-- Whether to exclude inherited events from superclasses
+      	-- Whether to exclude inherited properties from superclasses
       	ExcludeInherited: boolean?, -- default: false
-      	-- Whether to exclude Studio display information about the events
+      	-- Whether to exclude Studio display information about the properties
       	ExcludeDisplay: boolean?, -- default: false
       }
       ```
 
-      If the class name is valid and that class has events, you'll get a list of
-      `ReflectedEvent` dictionaries as output, each with the following
-      structure:
+      If the class name is valid and that class has properties, you'll get a
+      list of `ReflectedProperty` dictionaries as output, each with the
+      following structure:
 
       ```lua
       {
-      	-- The name of the event
+      	-- The name of the property
       	Name: string,
       	-- The superclass from which the property is inherited, or the class name if not inherited
       	Owner: string,
-      	-- A list of all parameters the event passes to connected functions
-      	Parameters: {
-      		{
-      			-- The name of the parameter
-      			Name: string,
-      			-- The type of the parameter
-      			Type: ReflectionType,
-      		}
-      	},
+      	-- Whether the property is serialized (able to be saved to disk or sent over the network)
+      	Serialized: boolean,
+      	-- The type of the property
+      	Type: ReflectionType,
+      	-- The content type of the property, if applicable
+      	ContentType: Enum.AssetType?,
       	-- Studio display information
       	Display: {
-      		-- A message indicating that the event is deprecated, if applicable
+      		-- The category under which the property is listed in Studio
+      		Category: string,
+      		-- A message indicating that the property is deprecated, if applicable
       		DeprecationMessage: string?,
       	}?,
-      	-- The security permissions required to access this event
+      	-- The security permissions required to access this property
       	Permits: {
-      		-- The security permissions required to listen for the event in any context
-      		Listen: SecurityCapabilities?,
+      		-- The security context required to read this property
+      		Read: SecurityCapabilities?,
+      		-- The security context required to read this property while thread-safe
+      		ReadParallel: SecurityCapabilities?,
+      		-- The security context required to write to this property
+      		Write: SecurityCapabilities?,
+      		-- The security context required to write to this property while thread-safe
+      		WriteParallel: SecurityCapabilities?,
       	},
       }
       ```
@@ -397,18 +397,18 @@ methods:
         type: string
         default:
         summary: |
-          The name of the class for which you wish to retrieve events.
+          The name of the class for which you wish to retrieve properties.
       - name: filter
         type: Dictionary
         default: nil
         summary: |
-          An optional filter to restrict or expand the set of events that this
-          method can return and change the method's behavior.
+          An optional filter to restrict or expand the set of properties that
+          this method can return and change the method's behavior.
     returns:
       - type: Array
         summary: |
-          A list of `ReflectedEvent` dictionaries with reflection information
-          for each event of the class that matches the filter criteria.
+          A list of `ReflectedProperty` dictionaries with reflection information
+          for each property of the class that matches the filter criteria.
     tags:
       - CustomLuaState
     deprecation_message: ''

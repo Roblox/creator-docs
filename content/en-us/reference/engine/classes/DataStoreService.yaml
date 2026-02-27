@@ -192,5 +192,31 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
+  - name: DataStoreService:SetRateLimitForRequestType
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: requestType
+        type: DataStoreRequestType
+        default:
+        summary: ''
+      - name: baseLimit
+        type: int
+        default:
+        summary: ''
+      - name: perPlayerLimit
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - DataStore
 events: []
 callbacks: []

@@ -115,7 +115,7 @@ The following table illustrates gravitational acceleration in Roblox units and m
 	<tr>
 		<td>**Classic** (default)</td>
 		<td>196.2 studs/s&sup2;</td>
-		<td>54.963 m/s&sup2;</td>
+		<td>54.936 m/s&sup2;</td>
 	</tr>
 	<tr>
 		<td>**Realistic** (real-world)</td>

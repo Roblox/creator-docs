@@ -130,6 +130,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/AnimationFromVideoCreatorService.yaml
                 ignoreTranslation: true
+              - title: AnimationNodeDefinition
+                path: /reference/engine/classes/AnimationNodeDefinition
+                type: engineapi
+                source: /reference/engine/classes/AnimationNodeDefinition.yaml
+                ignoreTranslation: true
               - title: AnimationRigData
                 path: /reference/engine/classes/AnimationRigData
                 type: engineapi
@@ -332,6 +337,27 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/BadgeService.yaml
                 ignoreTranslation: true
+              - title: BaseCoreGuiConfiguration
+                path: /reference/engine/classes/BaseCoreGuiConfiguration
+                type: engineapi
+                source: /reference/engine/classes/BaseCoreGuiConfiguration.yaml
+                ignoreTranslation: true
+                section:
+                  - title: CapturesViewConfiguration
+                    path: /reference/engine/classes/CapturesViewConfiguration
+                    type: engineapi
+                    source: /reference/engine/classes/CapturesViewConfiguration.yaml
+                    ignoreTranslation: true
+                  - title: PlayerListConfiguration
+                    path: /reference/engine/classes/PlayerListConfiguration
+                    type: engineapi
+                    source: /reference/engine/classes/PlayerListConfiguration.yaml
+                    ignoreTranslation: true
+                  - title: SelfViewConfiguration
+                    path: /reference/engine/classes/SelfViewConfiguration
+                    type: engineapi
+                    source: /reference/engine/classes/SelfViewConfiguration.yaml
+                    ignoreTranslation: true
               - title: BasePlayerGui
                 path: /reference/engine/classes/BasePlayerGui
                 type: engineapi
@@ -774,6 +800,11 @@ navigation:
                 path: /reference/engine/classes/CookiesService
                 type: engineapi
                 source: /reference/engine/classes/CookiesService.yaml
+                ignoreTranslation: true
+              - title: CoreGuiConfiguration
+                path: /reference/engine/classes/CoreGuiConfiguration
+                type: engineapi
+                source: /reference/engine/classes/CoreGuiConfiguration.yaml
                 ignoreTranslation: true
               - title: CoreScriptDebuggingManagerHelper
                 path: /reference/engine/classes/CoreScriptDebuggingManagerHelper
@@ -1363,11 +1394,6 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/GuidRegistryService.yaml
                 ignoreTranslation: true
-              - title: HandRigDescription
-                path: /reference/engine/classes/HandRigDescription
-                type: engineapi
-                source: /reference/engine/classes/HandRigDescription.yaml
-                ignoreTranslation: true
               - title: HapticEffect
                 path: /reference/engine/classes/HapticEffect
                 type: engineapi
@@ -1660,6 +1686,11 @@ navigation:
                 path: /reference/engine/classes/MLService
                 type: engineapi
                 source: /reference/engine/classes/MLService.yaml
+                ignoreTranslation: true
+              - title: MakeupDescription
+                path: /reference/engine/classes/MakeupDescription
+                type: engineapi
+                source: /reference/engine/classes/MakeupDescription.yaml
                 ignoreTranslation: true
               - title: MarkerCurve
                 path: /reference/engine/classes/MarkerCurve
@@ -2385,6 +2416,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/ReflectionService.yaml
                 ignoreTranslation: true
+              - title: RemoteCommandService
+                path: /reference/engine/classes/RemoteCommandService
+                type: engineapi
+                source: /reference/engine/classes/RemoteCommandService.yaml
+                ignoreTranslation: true
               - title: RemoteDebuggerServer
                 path: /reference/engine/classes/RemoteDebuggerServer
                 type: engineapi
@@ -3077,6 +3113,11 @@ navigation:
                         type: engineapi
                         source: /reference/engine/classes/UIStroke.yaml
                         ignoreTranslation: true
+              - title: UniqueIdLookupService
+                path: /reference/engine/classes/UniqueIdLookupService
+                type: engineapi
+                source: /reference/engine/classes/UniqueIdLookupService.yaml
+                ignoreTranslation: true
               - title: UserGameSettings
                 path: /reference/engine/classes/UserGameSettings
                 type: engineapi
@@ -3467,6 +3508,11 @@ navigation:
         type: engineapi
         source: /reference/engine/datatypes/Secret.yaml
         ignoreTranslation: true
+      - title: SecurityCapabilities
+        path: /reference/engine/datatypes/SecurityCapabilities
+        type: engineapi
+        source: /reference/engine/datatypes/SecurityCapabilities.yaml
+        ignoreTranslation: true
       - title: SharedTable
         path: /reference/engine/datatypes/SharedTable
         type: engineapi
@@ -3571,6 +3617,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AdornCullingMode.yaml
         ignoreTranslation: true
+      - title: AdornShading
+        path: /reference/engine/enums/AdornShading
+        type: engineapi
+        source: /reference/engine/enums/AdornShading.yaml
+        ignoreTranslation: true
       - title: AdShape
         path: /reference/engine/enums/AdShape
         type: engineapi
@@ -3645,6 +3696,11 @@ navigation:
         path: /reference/engine/enums/AnimationClipFromVideoStatus
         type: engineapi
         source: /reference/engine/enums/AnimationClipFromVideoStatus.yaml
+        ignoreTranslation: true
+      - title: AnimationNodeType
+        path: /reference/engine/enums/AnimationNodeType
+        type: engineapi
+        source: /reference/engine/enums/AnimationNodeType.yaml
         ignoreTranslation: true
       - title: AnimationPriority
         path: /reference/engine/enums/AnimationPriority
@@ -3956,6 +4012,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/CameraMode.yaml
         ignoreTranslation: true
+      - title: CameraNavigationModel
+        path: /reference/engine/enums/CameraNavigationModel
+        type: engineapi
+        source: /reference/engine/enums/CameraNavigationModel.yaml
+        ignoreTranslation: true
       - title: CameraPanMode
         path: /reference/engine/enums/CameraPanMode
         type: engineapi
@@ -4226,6 +4287,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/DebuggerStatus.yaml
         ignoreTranslation: true
+      - title: DefaultScriptSyncFileType
+        path: /reference/engine/enums/DefaultScriptSyncFileType
+        type: engineapi
+        source: /reference/engine/enums/DefaultScriptSyncFileType.yaml
+        ignoreTranslation: true
       - title: DevCameraOcclusionMode
         path: /reference/engine/enums/DevCameraOcclusionMode
         type: engineapi
@@ -4290,6 +4356,11 @@ navigation:
         path: /reference/engine/enums/DialogTone
         type: engineapi
         source: /reference/engine/enums/DialogTone.yaml
+        ignoreTranslation: true
+      - title: DigitsRigDescriptionSide
+        path: /reference/engine/enums/DigitsRigDescriptionSide
+        type: engineapi
+        source: /reference/engine/enums/DigitsRigDescriptionSide.yaml
         ignoreTranslation: true
       - title: DisplaySize
         path: /reference/engine/enums/DisplaySize
@@ -4395,6 +4466,16 @@ navigation:
         path: /reference/engine/enums/FieldOfViewMode
         type: engineapi
         source: /reference/engine/enums/FieldOfViewMode.yaml
+        ignoreTranslation: true
+      - title: FileMode
+        path: /reference/engine/enums/FileMode
+        type: engineapi
+        source: /reference/engine/enums/FileMode.yaml
+        ignoreTranslation: true
+      - title: FileSystemWalkMode
+        path: /reference/engine/enums/FileSystemWalkMode
+        type: engineapi
+        source: /reference/engine/enums/FileSystemWalkMode.yaml
         ignoreTranslation: true
       - title: FillDirection
         path: /reference/engine/enums/FillDirection
@@ -4535,11 +4616,6 @@ navigation:
         path: /reference/engine/enums/HandlesStyle
         type: engineapi
         source: /reference/engine/enums/HandlesStyle.yaml
-        ignoreTranslation: true
-      - title: HandRigDescriptionSide
-        path: /reference/engine/enums/HandRigDescriptionSide
-        type: engineapi
-        source: /reference/engine/enums/HandRigDescriptionSide.yaml
         ignoreTranslation: true
       - title: HapticEffectType
         path: /reference/engine/enums/HapticEffectType
@@ -4796,6 +4872,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/LuauTypeCheckMode.yaml
         ignoreTranslation: true
+      - title: MakeupType
+        path: /reference/engine/enums/MakeupType
+        type: engineapi
+        source: /reference/engine/enums/MakeupType.yaml
+        ignoreTranslation: true
       - title: MarketplaceBulkPurchasePromptStatus
         path: /reference/engine/enums/MarketplaceBulkPurchasePromptStatus
         type: engineapi
@@ -5031,6 +5112,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/PathWaypointAction.yaml
         ignoreTranslation: true
+      - title: PeoplePageLayout
+        path: /reference/engine/enums/PeoplePageLayout
+        type: engineapi
+        source: /reference/engine/enums/PeoplePageLayout.yaml
+        ignoreTranslation: true
       - title: PermissionLevelShown
         path: /reference/engine/enums/PermissionLevelShown
         type: engineapi
@@ -5160,6 +5246,11 @@ navigation:
         path: /reference/engine/enums/PromptCreateAvatarResult
         type: engineapi
         source: /reference/engine/enums/PromptCreateAvatarResult.yaml
+        ignoreTranslation: true
+      - title: PromptExperienceDetailsResult
+        path: /reference/engine/enums/PromptExperienceDetailsResult
+        type: engineapi
+        source: /reference/engine/enums/PromptExperienceDetailsResult.yaml
         ignoreTranslation: true
       - title: PromptPublishAssetResult
         path: /reference/engine/enums/PromptPublishAssetResult

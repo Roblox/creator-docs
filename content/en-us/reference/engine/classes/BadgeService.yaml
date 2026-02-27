@@ -23,6 +23,34 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: BadgeService:AwardBadge
+    summary: |
+      Award a badge to a player given the ID of each.
+    description: ''
+    code_samples: []
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: |
+          The `Class.Player.UserId` of the user the badge is to be awarded to.
+      - name: badgeId
+        type: int64
+        default:
+        summary: |
+          The ID of the badge to be awarded.
+    returns:
+      - type: boolean
+        summary: |
+          Boolean of `true` if the badge was awarded successfully.
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AssetManagement
   - name: BadgeService:AwardBadgeAsync
     summary: |
       Award a badge to a player given the ID of each.
@@ -69,34 +97,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - AssetManagement
-  - name: BadgeService:AwardBadge
-    summary: |
-      Award a badge to a player given the ID of each.
-    description: ''
-    code_samples: []
-    parameters:
-      - name: userId
-        type: int64
-        default:
-        summary: |
-          The `Class.Player.UserId` of the user the badge is to be awarded to.
-      - name: badgeId
-        type: int64
-        default:
-        summary: |
-          The ID of the badge to be awarded.
-    returns:
-      - type: boolean
-        summary: |
-          Boolean of `true` if the badge was awarded successfully.
-    tags:
-      - Yields
-      - Deprecated
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - AssetManagement
   - name: BadgeService:CheckUserBadgesAsync
     summary: |
       Checks a list of badge IDs against a `Class.Player.UserId|UserId` and
@@ -112,6 +112,9 @@ methods:
       `Class.Player.UserId|UserId` can be used in a `Class.Script`, but in a
       `Class.LocalScript`, only the `Class.Player.UserId|UserId` of the local
       user whose client is running the script can be used.
+
+      This API's behavior will change soon. For more information, see
+      [this DevForum announcement](https://devforum.roblox.com/t/upcoming-breaking-change-to-checkuserbadgesasync-userhasbadgeasync-and-badges-web-apis/4438920).
 
       Rate limit is `10 + 5 * [number of players]` per minute in each server.
     code_samples:
@@ -288,13 +291,15 @@ methods:
       Checks and returns whether a `Class.Player` owns a badge given their
       `Class.Player.UserId|UserId` and the badge ID. You can call the function
       from the server in a `Class.Script` or `Class.ModuleScript` eventually
-      required by a `Class.Script`, and the user in question must be present in
-      the server for the query to run. When calling the method from the client
-      in a `Class.LocalScript`, it only works for the local user whose client is
+      required by a `Class.Script`. When calling the method from the client in a
+      `Class.LocalScript`, it only works for the local user whose client is
       running the script.
 
       Any badge for any experience can be queried, no matter who created the
       badge or which experience it is used for.
+
+      This API's behavior will change soon. For more information, see
+      [this DevForum announcement](https://devforum.roblox.com/t/upcoming-breaking-change-to-checkuserbadgesasync-userhasbadgeasync-and-badges-web-apis/4438920).
     code_samples: []
     parameters:
       - name: userId
@@ -330,13 +335,15 @@ methods:
       Checks and returns whether a `Class.Player` owns a badge given their
       `Class.Player.UserId|UserId` and the badge ID. You can call this method
       from the server in a `Class.Script` or `Class.ModuleScript` eventually
-      required by a `Class.Script`, and the user in question must be present in
-      the server for the query to run. When calling this method from the client
-      in a `Class.LocalScript`, it only works for the local user whose client is
+      required by a `Class.Script`. When calling this method from the client in
+      a `Class.LocalScript`, it only works for the local user whose client is
       running the script.
 
       Any badge for any experience can be queried, no matter who created the
       badge or which experience it is used for.
+
+      This API's behavior will change soon. For more information, see
+      [this DevForum announcement](https://devforum.roblox.com/t/upcoming-breaking-change-to-checkuserbadgesasync-userhasbadgeasync-and-badges-web-apis/4438920).
 
       Rate limit is `50 + 35 * [number of players]` per minute.
     code_samples:

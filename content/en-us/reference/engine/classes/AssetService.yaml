@@ -53,14 +53,16 @@ properties:
 methods:
   - name: AssetService:ComposeDecalAsync
     summary: |
-      Creates a Decal instance that uses composite PBR textures created by
-      layering the provided textures in the order they are provided in the
-      `layers` array. Textures layer based on the alpha value of the ColorMap.
+      Modifies an existing `Class.Decal` to contain a composite PBR textures
+      created by layering the provided textures in the order they are provided
+      in the `layers` array. Textures layer based on the alpha value of the
+      color map.
     description: |
-      Creates a new `Class.Decal` that contains a composed texture derived from
-      one or more layered texture sets. Each set can include color, roughness,
-      metalness, and normal maps. Each `layer` is composited in the order they
-      are provided, with the ColorMap alpha channel used to determine blending.
+      Modifies an existing `Class.Decal` to contain a composed texture derived
+      from one or more layered texture sets. Each set can include color,
+      roughness, metalness, and normal maps. Each layer in `layers` is
+      composited in the order they are provided, with the color map alpha
+      channel used to determine blending.
 
       - There is a limit of 8 layers.
       - Layering order is bottom-to-top: the first layer in the list provides
@@ -81,15 +83,22 @@ methods:
     code_samples:
       - AssetService-ComposeDecalAsync
     parameters:
+      - name: decal
+        type: Decal
+        default:
+        summary: |
+          A `Class.Decal` instance that will be modified to contain a
+          representation of the layers. Any existing maps on this instance will
+          be cleared.
       - name: layers
         type: Array
         default:
         summary: |
-          An array of `Dictionary` tables that maps PBR names to ContentID.
+          An array of dictionary tables that maps PBR names to
+          `Datatype.Content` IDs.
     returns:
-      - type: Decal
-        summary: |
-          A new `Class.Decal` containing the composed texture set.
+      - type: ()
+        summary: ''
     tags:
       - Yields
     deprecation_message: ''
@@ -542,28 +551,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-  - name: AssetService:GetAssetIdsForPackageAsync
-    summary: |
-      Returns an array of asset IDs that are contained in a specified package.
-    description: |
-      Returns an array of asset IDs that are contained in a specified package.
-    code_samples: []
-    parameters:
-      - name: packageAssetId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: Array
-        summary: |
-          Asset IDs that are contained in a specified package.
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - AssetRead
   - name: AssetService:GetAssetIdsForPackage
     summary: |
       Returns an array of asset IDs that are contained in a specified package.
@@ -581,6 +568,28 @@ methods:
     tags:
       - Yields
       - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AssetRead
+  - name: AssetService:GetAssetIdsForPackageAsync
+    summary: |
+      Returns an array of asset IDs that are contained in a specified package.
+    description: |
+      Returns an array of asset IDs that are contained in a specified package.
+    code_samples: []
+    parameters:
+      - name: packageAssetId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: |
+          Asset IDs that are contained in a specified package.
+    tags:
+      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -789,7 +798,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - AssetRequire
+      - LoadUnownedAsset
   - name: AssetService:PromptCreateAssetAsync
     summary: |
       Allows in-experience asset creation for users by prompting a publish
@@ -892,6 +901,28 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - AssetCreateUpdate
+  - name: AssetService:SearchAudio
+    summary: |
+      Finds audio assets matching a variety of search criteria.
+    description: ''
+    code_samples:
+      - printing-search-audio-result-titles
+    parameters:
+      - name: searchParameters
+        type: AudioSearchParams
+        default:
+        summary: ''
+    returns:
+      - type: AudioPages
+        summary: ''
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AssetRead
   - name: AssetService:SearchAudioAsync
     summary: |
       Finds audio assets matching a variety of search criteria.
@@ -933,28 +964,6 @@ methods:
         summary: ''
     tags:
       - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - AssetRead
-  - name: AssetService:SearchAudio
-    summary: |
-      Finds audio assets matching a variety of search criteria.
-    description: ''
-    code_samples:
-      - printing-search-audio-result-titles
-    parameters:
-      - name: searchParameters
-        type: AudioSearchParams
-        default:
-        summary: ''
-    returns:
-      - type: AudioPages
-        summary: ''
-    tags:
-      - Yields
-      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

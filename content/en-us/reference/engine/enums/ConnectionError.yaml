@@ -325,6 +325,31 @@ items:
     value: 309
     tags: []
     deprecation_message: ''
+  - name: DisconnectCollaboratorNotAgeVerified
+    summary: ''
+    value: 310
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectCollaboratorTrustedConnectionsRequired
+    summary: ''
+    value: 311
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectCollaboratorOwnerActionRequired
+    summary: ''
+    value: 312
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectCollaboratorTooManyCollaborators
+    summary: ''
+    value: 313
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectCollaboratorUnknownError
+    summary: ''
+    value: 314
+    tags: []
+    deprecation_message: ''
   - name: PlacelaunchErrors
     summary: ''
     value: 512

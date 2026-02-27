@@ -12,6 +12,15 @@ description: |
 tags: []
 code_samples: []
 properties:
+  - name: math.e
+    type: number
+    summary: |
+      The value of Euler's number, e.
+    description: |
+      The value of Euler's number, e.
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: math.huge
     type: number
     summary: |
@@ -24,12 +33,49 @@ properties:
     tags: []
     code_samples: []
     deprecation_message: ''
+  - name: math.nan
+    type: number
+    summary: |
+      A NaN value, as defined by the IEEE 754 standard.
+    description: |
+      A NaN value, as defined by the IEEE 754 standard. Comparing directly to
+      `math.nan` will always return false; use `Library.math.isnan()` instead.
+    tags: []
+    code_samples: []
+    deprecation_message: ''
+  - name: math.phi
+    type: number
+    summary: |
+      The value of the golden ratio.
+    description: |
+      The value of the golden ratio.
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: math.pi
     type: number
     summary: |
       The value of pi.
     description: |
       The value of pi.
+    tags: []
+    code_samples: []
+    deprecation_message: ''
+  - name: math.sqrt2
+    type: number
+    summary: |
+      The value of the square root of 2.
+    description: |
+      The value of the square root of 2.
+    tags: []
+    code_samples: []
+    deprecation_message: ''
+  - name: math.tau
+    type: number
+    summary: |
+      The value of tau, which is defined as `2 * math.pi`.
+    description: |
+      The value of tau, which is defined as `2 * math.pi`.
     tags: []
     code_samples: []
     deprecation_message: ''

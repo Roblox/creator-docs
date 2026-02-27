@@ -60,6 +60,39 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - AssetRead
+  - name: MarketplaceService:GetProductInfo
+    summary: |
+      Returns the product information of an asset using its asset ID.
+    description: ''
+    code_samples:
+      - MarketplaceService-GetProductInfo1
+    parameters:
+      - name: assetId
+        type: int64
+        default:
+        summary: |
+          The asset ID of the specified product.
+      - name: infoType
+        type: InfoType
+        default: Asset
+        summary: |
+          An `Enum.InfoType` enum value specifying the type of information being
+          retrieved.
+    returns:
+      - type: Dictionary
+        summary: |
+          A dictionary containing information about the queried item, described
+          in the previous tables.
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This method has been superseded by
+      `Class.MarketplaceService.GetProductInfoAsync|GetProductInfoAsync()`.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AssetRead
   - name: MarketplaceService:GetProductInfoAsync
     summary: |
       Returns the product information of an asset using its asset ID.
@@ -345,39 +378,6 @@ methods:
     tags:
       - Yields
     deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - AssetRead
-  - name: MarketplaceService:GetProductInfo
-    summary: |
-      Returns the product information of an asset using its asset ID.
-    description: ''
-    code_samples:
-      - MarketplaceService-GetProductInfo1
-    parameters:
-      - name: assetId
-        type: int64
-        default:
-        summary: |
-          The asset ID of the specified product.
-      - name: infoType
-        type: InfoType
-        default: Asset
-        summary: |
-          An `Enum.InfoType` enum value specifying the type of information being
-          retrieved.
-    returns:
-      - type: Dictionary
-        summary: |
-          A dictionary containing information about the queried item, described
-          in the previous tables.
-    tags:
-      - Yields
-      - Deprecated
-    deprecation_message: |
-      This method has been superseded by
-      `Class.MarketplaceService.GetProductInfoAsync|GetProductInfoAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -778,6 +778,38 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: MarketplaceService:PlayerOwnsAsset
+    summary: |
+      Returns whether the given user has the given asset.
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The `Class.Player` whose inventory is tested for ownership of the
+          given asset.
+      - name: assetId
+        type: int64
+        default:
+        summary: |
+          The asset ID for which the given player's inventory is tested.
+    returns:
+      - type: boolean
+        summary: |
+          Indicates whether the given player's inventory contains the given
+          asset.
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This method has been superseded by
+      `Class.MarketplaceService:PlayerOwnsAssetAsync()|PlayerOwnsAssetAsync()`.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AssetRead
   - name: MarketplaceService:PlayerOwnsAssetAsync
     summary: |
       Returns whether the given user has the given asset.
@@ -823,34 +855,34 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - AssetRead
-  - name: MarketplaceService:PlayerOwnsAsset
+  - name: MarketplaceService:PlayerOwnsBundle
     summary: |
-      Returns whether the given user has the given asset.
+      Returns whether the given player owns the given bundle.
     description: ''
     code_samples: []
     parameters:
       - name: player
-        type: Instance
+        type: Player
         default:
         summary: |
           The `Class.Player` whose inventory is tested for ownership of the
-          given asset.
-      - name: assetId
+          given bundle.
+      - name: bundleId
         type: int64
         default:
         summary: |
-          The asset ID for which the given player's inventory is tested.
+          The bundle ID for which the given player's inventory is tested.
     returns:
       - type: boolean
         summary: |
           Indicates whether the given player's inventory contains the given
-          asset.
+          bundle.
     tags:
       - Yields
       - Deprecated
     deprecation_message: |
       This method has been superseded by
-      `Class.MarketplaceService:PlayerOwnsAssetAsync()|PlayerOwnsAssetAsync()`.
+      `Class.MarketplaceService:PlayerOwnsBundleAsync()|PlayerOwnsBundleAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -884,38 +916,6 @@ methods:
     tags:
       - Yields
     deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - AssetRead
-  - name: MarketplaceService:PlayerOwnsBundle
-    summary: |
-      Returns whether the given player owns the given bundle.
-    description: ''
-    code_samples: []
-    parameters:
-      - name: player
-        type: Player
-        default:
-        summary: |
-          The `Class.Player` whose inventory is tested for ownership of the
-          given bundle.
-      - name: bundleId
-        type: int64
-        default:
-        summary: |
-          The bundle ID for which the given player's inventory is tested.
-    returns:
-      - type: boolean
-        summary: |
-          Indicates whether the given player's inventory contains the given
-          bundle.
-    tags:
-      - Yields
-      - Deprecated
-    deprecation_message: |
-      This method has been superseded by
-      `Class.MarketplaceService:PlayerOwnsBundleAsync()|PlayerOwnsBundleAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -1299,7 +1299,8 @@ methods:
     description: |
       Returns true if the user with the given `Class.Player.UserId|UserId` owns
       the [pass](../../../production/monetization/passes.md) with the given
-      `gamePassId` (not to be confused with an asset ID).
+      `gamePassId` (not to be confused with an asset ID). You can use this
+      method on both the client and the server.
 
       #### Caching Behavior
 

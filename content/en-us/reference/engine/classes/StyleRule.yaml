@@ -240,6 +240,20 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
+  - name: StyleRule:GetPropertyTransitions
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - UI
   - name: StyleRule:SetProperties
     summary: |
       Lets you declare and set multiple properties of the `StyleRule` at once.
@@ -375,6 +389,24 @@ methods:
         default:
         summary: |
           Property value to set, for example `Datatype.Color3.new(1, 0, 0.25)`.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - UI
+  - name: StyleRule:SetPropertyTransitions
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: properties
+        type: Dictionary
+        default:
+        summary: ''
     returns:
       - type: ()
         summary: ''

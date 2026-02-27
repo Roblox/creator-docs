@@ -15,3 +15,8 @@ items:
     value: 0
     tags: []
     deprecation_message: ''
+  - name: InExperienceFAE
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''

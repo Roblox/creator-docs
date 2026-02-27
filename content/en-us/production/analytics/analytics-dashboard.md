@@ -3,28 +3,28 @@ title: Analytics dashboard
 description: The analytics dashboard helps you measure and gain insight into your experience's performance.
 ---
 
-The **analytics dashboard** helps you measure and gain insight into your experience's performance to adjust content strategies. It visualizes standard key performance indicators (KPIs) of your experience to help you optimize your experience's full lifecycle, including:
+The **analytics dashboard** helps you measure and gain insight into your experience's performance, which can give you the information you need to adjust marketing, content, and monetization strategies.
+
+The dashboard includes key performance indicators (KPIs) for your experience, including:
 
 - [Retention](../../production/analytics/retention.md) KPIs that measure how many users return to your experience again after their first visit.
 - [Engagement](../../production/analytics/engagement.md) KPIs that reflect how users actively use your experience and represent your core user base.
 - [Acquisition](../../production/analytics/acquisition.md) statistics that show you the sources of users finding your experience and how users from different sources convert.
 - [Demographics](../../production/analytics/demographics.md) shows you the age, gender, country, and language of monthly active users who play your experience.
 - [Feedback](../../production/analytics/feedback.md) helps you monitor player/community comments and ratings.
-- [Monetization](../../production/analytics/monetization.md) KPIs that help you understand the business performance of your experience.
+- [Monetization](../../production/analytics/monetization.md) KPIs that help you understand the business performance of your experience, as well as [sales data](#sales-data) that you can download and analyze in custom ways.
 
-Any experience with more than 10 Daily Active Users (DAU) and 10 play hours for 7 consecutive days is eligible for accessing all KPIs on the dashboard.
-
-The dashboard also provides [Sales data](#sales-data) that you can download and analyze in custom ways.
+Any experience with more than 10 daily active users (DAU) and 10 play hours for 7 consecutive days is eligible for accessing all KPIs on the dashboard.
 
 ## Set up analytics dashboard
 
 If you are an experience owner or a group owner, and your experience meets the enrollment requirements, you can enroll in the analytics dashboard at any point with the following steps:
 
-1. Make sure that you have a verified email address and a 2-Step Verification method on your Roblox account.
+1. Make sure that you have a verified email address and a two-step verification method on your Roblox account.
 
 2. Navigate to the experience overview page on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 
-3. Read Roblox **Terms of Use** that pop out automatically. Click **Agree** if you agree to them.
+3. Read Roblox **Terms of Use** and agree to them.
 
 Now you have access to the main dashboard on the **Overview** and dashboards of all KPI categories, including **Engagement**, **Retention**, and **Monetization**.
 
@@ -33,10 +33,10 @@ If you don't want to activate the dashboard immediately, or you accidentally dec
 </Alert>
 
 <Alert severity="warning">
-For [group](../../projects/groups.md) experiences, only the group owner and members with sufficient permissions can view the analytics dashboard, as some KPIs such as revenue are sensitive information. See [here](../../projects/groups.md#roles-and-permissions) for details on how to create a group role with access to view the dashboard.
+For group experiences, only the group owner and members with sufficient permissions can view the analytics dashboard, as some metrics contain sensitive information. See [roles and permissions](../../projects/groups.md#roles-and-permissions) for details on how to create a group role with access to the dashboard.
 </Alert>
 
-## Dashboard functionalities
+## Dashboard functionality
 
 After activating the analytics dashboard, you can view the default charts on the overview and each KPI category. Hover over the **Information Icon** to understand what each chart represents and the **View Icon** to understand how to interpret the summary statistics on the top of each chart.
 
@@ -59,54 +59,64 @@ You can filter by the following metrics:
 <table><thead>
   <tr>
     <th>**Filter type**</th>
-    <th>**Subcategories**</th>
-    <th>**Usage**</th>
+    <th>**Example subcategories**</th>
+    <th>**Notes**</th>
   </tr></thead>
 <tbody>
   <tr>
     <td>Age group</td>
-    <td>&lt;9, 9-12, 13-17, 18+</td>
-    <td>Analyze latest trends across different age groups.</td>
-  </tr>
-  <tr>
-    <td>Platform</td>
-    <td>Computer, Phone, Tablet, VR and Console. Users might be double counted if they use more than one device.</td>
-    <td>Analyze latest trends across different platforms.</td>
-  </tr>
-  <tr>
-    <td>OS (Operating System)</td>
-    <td>Android, iOS, Xbox One, OSX, PlayStation and Windows.</td>
-    <td>Analyze latest trends across different OS types. Users might be double counted if they use more than one device.</td>
-  </tr>
-  <tr>
-    <td>Country </td>
-    <td>All countries</td>
-    <td>Analyze latest trends across different countries</td>
-  </tr>
-  <tr>
-    <td>Language </td>
-    <td>All languages</td>
-    <td>Analyze which languages are popular across your users to help prioritize localization efforts. You can also see the impacts of adding translation for different languages.</td>
-  </tr>
-  <tr>
-    <td>New vs. returning</td>
-    <td>New, returning</td>
-    <td>Analyze how new and returning users are engaging with your experiences. </td>
+    <td>&lt;9, 9-12, 13-15, 18+, etc.</td>
+    <td></td>
   </tr>
   <tr>
     <td>Gender</td>
     <td>Female, male, unknown</td>
-    <td>Analyze how female, male, and unknown gender demographics are engaging with your experiences. </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Country</td>
+    <td>All countries</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Language</td>
+    <td>All languages</td>
+    <td>This filter can help you see the impact of adding translations for different languages.</td>
+  </tr>
+  <tr>
+    <td>Source</td>
+    <td>Home recommendation, search, teleports, sponsored ads, etc.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Active payer status</td>
+    <td>Top 15%, intermediate 35%, casual 50%, lapsed, never</td>
+    <td>Percentile-based within your experience, not a fixed value. **Top 15%** includes users who fall into the 85-100th percentile of spenders for your experience, **Intermediate 35%** 50-84th, and **Casual 50%** 0-49th. **Lapsed** indicates users who haven't spent in the past 30 days, and **Never** is users who've never spent. Recalculated daily. See **Platform spender status** for status outside of your experience.</td>
+  </tr>
+  <tr>
+    <td>When user first played</td>
+    <td>0-30 days ago, 31-90 days ago, 91-180 days ago, 181-365 days ago, 365+ days ago, never</td>
+    <td>It's uncommon, but users can purchase a game pass and never actually play the experience. You might see these users on the revenue chart.</td>
+  </tr>
+  <tr>
+    <td>Platform spender status</td>
+    <td>Active, other</td>
+    <td>Fixed value, not percentile-based. **Active** includes users who've spent $9.99 or more anywhere on Roblox in the last 60 days. **Other** includes all other users.<br /><br />This definition is consistent with the [Creator Rewards program](../../creator-rewards.md), so you can better understand the behavior of players who earn you Daily Engagement Rewards.[^1]</td>
+  </tr>
+  <tr>
+    <td>Platform</td>
+    <td>Computer, phone, tablet, console, VR</td>
+    <td>Users might be counted more than once if they use multiple devices.</td>
+  </tr>
+  <tr>
+    <td>OS (operating system)</td>
+    <td>Android, iOS, Windows, macOS, PlayStation, etc.</td>
+    <td>Users might be counted more than once if they use multiple devices.</td>
   </tr>
   <tr>
     <td>Memory group (only applicable to some performance metrics)</td>
     <td>&lt;2GB, 2GB-4GB, 4GB-8GB, 8GB+</td>
-    <td>Analyze how your experience is performing across different devices. You can identify under-performing devices and focus on improving performance.</td>
-  </tr>
-  <tr>
-    <td>Acquisition source (only applicable to acquisition metrics)</td>
-    <td>Home recommendations, home other, search, connections, teleport, sponsored ads</td>
-    <td>Analyze how users from different acquisition sources engage with your experience.</td>
+    <td>Can help you identify devices that aren't performing well in your experience.</td>
   </tr>
 </tbody></table>
 
@@ -164,45 +174,70 @@ Each of these KPIs shows its similar experience benchmark in the 50th - 90th per
 
 <img src="../../assets/analytics/analytics-dashboard/benchmark-similar-exp.png" width= "100%" alt="An example shows the D7 retention chart with similar experience benchmarking." />
 
-For KPIs on your experience's overall success, the analytics dashboard uses the top 1000 experiences with the highest total playtime on rolling 30 days as the benchmarking pool, excluding experiences that are less than 30 days old. Each of these KPIs has **Top 200**, **Top 500**, and **Top 1000** as benchmarking tiers. The dashboard displays the appropriate tier for your experience based on your experience's engagement metrics and updates them on a daily basis.
+For KPIs on your experience's overall success, the analytics dashboard uses the top 1000 experiences with the highest total playtime over a rolling 30 days as the benchmarking pool, excluding experiences that are less than 30 days old. Each of these KPIs has **Top 200**, **Top 500**, and **Top 1000** as benchmarking tiers. The dashboard displays the appropriate tier for your experience based on your experience's engagement metrics and updates them on a daily basis.
 
 ### View KPI breakdowns
 
-You can apply a breakdown to analyze each chart in a more specific category by clicking the **Breakdown by** and toggling between the breakdown types, including **Age Group**, **Platform**, **OS**, **Country**, and **Language**. The following table explains the subcategories and usage of each breakdown type. You might also see an "Unknown" subcategory refers to users without relevant data.
+You can apply a breakdown to analyze each chart in a more specific category by clicking the **Breakdown by** and toggling between the breakdown types, including **Age Group**, **Platform**, **OS**, **Country**, and **Language**. The following table explains the subcategories and usage of each breakdown type. You might also see an "Unknown" subcategory that refers to users without relevant data.
 
 <table>
 <thead>
   <tr>
-    <th>Breakdown type</th>
-    <th>Subcategories</th>
-    <th>Usage</th>
+    <th>Breakdown by</th>
+    <th>Subcategory examples</th>
+    <th>Notes</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td>Age group</td>
-    <td>13 and Under, 13 through Under 18, 18 and Over. </td>
-    <td>Understand latest trends across different age groups.</td>
+    <td>&lt;9, 9-12, 13-15, 18+, etc.</td>
+    <td></td>
   </tr>
   <tr>
     <td>Platform</td>
-    <td>Computer, Phone, Tablet, and Console. Users might be double counted if they use more than one device.</td>
-    <td>Understand latest trends across different platforms.</td>
+    <td>Computer, phone, tablet, console, VR</td>
+    <td>Users might be counted more than once if they use multiple devices.</td>
   </tr>
   <tr>
-    <td>OS (Operating System)</td>
-    <td>Android, iOS, Xbox one, OSX, and Windows. Users might be double counted if they use more than one device.</td>
-    <td>Understand latest trends across different OS types.</td>
-  </tr>
-    <tr>
-    <td>Country (top 5)</td>
-    <td>The top 5 countries where your experience has the most Daily Active Users, an "Other" category as the aggregate of all other countries where you have users, and the total number of Daily Active Users.</td>
-    <td>Understand latest trends across the top 5 countries where your experience is most popular.</td>
+    <td>OS (operating system)</td>
+    <td>Android, iOS, Windows, macOS, PlayStation, etc.</td>
+    <td>Users might be counted more than once if they use multiple devices.</td>
   </tr>
   <tr>
-    <td>Language (top 5)</td>
-    <td>The top 5 languages where your experience has the most Daily Active Users, an "Other" category as the aggregate of all other languages where you have users based on their playtime instead of the languages you offer, and the total number of Daily Active Users.</td>
-    <td>Understand which languages are most popular across your users to help prioritize localization efforts. You can also see the impacts of adding translation for different languages.</td>
+    <td>Gender</td>
+    <td>Female, male, unknown</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Source</td>
+    <td>Home recommendation, search, teleports, sponsored ads, etc.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Top countries</td>
+    <td>The top five countries where your experience has the most daily active users</td>
+    <td>Also includes an "other" category and total DAU.</td>
+  </tr>
+  <tr>
+    <td>Top languages</td>
+    <td>The top five languages where your experience has the most daily active users</td>
+    <td>Also includes an "other" category and total DAU.</td>
+  </tr>
+  <tr>
+    <td>When user first played</td>
+    <td>0-30 days ago, 31-90 days ago, 91-180 days ago, 181-365 days ago, 365+ days ago, never</td>
+    <td>It's uncommon, but users can purchase a game pass and never actually play the experience. You might see these users on the revenue chart.</td>
+  </tr>
+  <tr>
+    <td>Active payer status</td>
+    <td>Top 15%, intermediate 35%, casual 50%, lapsed, never</td>
+    <td>Percentile-based within your experience, not a fixed value. **Top 15%** includes users who fall into the 85-100th percentile of spenders for your experience, **Intermediate 35%** 50-84th, and **Casual 50%** 0-49th. **Lapsed** indicates users who haven't spent in the past 30 days, and **Never** is users who've never spent. Recalculated daily. See **Platform spender status** for status outside of your experience.</td>
+  </tr>
+  <tr>
+    <td>Platform spender status</td>
+    <td>Active, other</td>
+    <td>Fixed value, not percentile-based. **Active** includes users who've spent $9.99 or more anywhere on Roblox in the last 60 days. **Other** includes all other users.<br /><br />This definition is consistent with the [Creator Rewards program](../../creator-rewards.md), so you can better understand the behavior of players who earn you Daily Engagement Rewards.[^1]</td>
   </tr>
 </tbody>
 </table>
@@ -235,9 +270,9 @@ Roblox automatically generates a `.csv` (comma-separated values) file for your s
 
    <img src="../../assets/analytics/sales-data-calendar.png" width= "45%" />
 
-6. In your inbox of your verified email address, you receive an email with a link to download a `.zip` file that contains your sales data in `.csv` format. The link will expire after 48 hours.
+6. In the inbox of your verified email address, you receive an email with a link to download a `.zip` file that contains your sales data in `.csv` format. The link will expire after 48 hours.
 
-7. You can use the `.csv` sales data sheet to analyze the data in your desired way to meet your specific business needs. For example, you can filter to display only sale records with pending Robux to release to you, so you can calculate the timeline and amount of your sales payout to make decisions on when to [exchange earned Robux for real-world currency (DevEx)](../../production/earn-on-roblox.md#the-developer-exchange-program) or pay your collaborators.
+7. You can use the `.csv` sales data sheet to analyze the data in your desired way to meet your specific business needs. For example, you can filter to display only sale records with pending Robux to release to you, so you can calculate the timeline and amount of your sales payout to make decisions on when to [exchange earned Robux for real-world currency (DevEx)](https://en.help.roblox.com/hc/en-us/articles/203314100-Developer-Exchange-DevEx-Overview-How-to-Submit-Requirements) or pay your collaborators.
 
 ### Sales data attributes
 
@@ -256,3 +291,5 @@ On the `.csv` sales data sheet, each sold item has the following attributes and 
 | Hold Status        | The status of whether Robux from this sale have been released to you or are still in a hold.                                                                                                                            | `Released`, `Held`, `Cancelled`       |
 | Revenue            | The amount of Robux you receive for the purchase, which is the item listing price excluding any [Marketplace fees](../../marketplace/marketplace-fees-and-commissions.md), Affiliate Fees, and Recurring Group Payouts. | `50`                                  |
 | Price              | The item listing price, which is the amount of Robux that the buyer paid for the purchase.                                                                                                                              | `10`                                  |
+
+[^1]: Daily Engagement Rewards have additional eligibility requirements; the number of players with a Platform Spender Status of active is always greater than or equal to the number of rewarded active spenders.

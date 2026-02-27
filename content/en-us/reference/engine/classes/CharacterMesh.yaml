@@ -17,6 +17,23 @@ descendants: []
 tags: []
 deprecation_message: ''
 properties:
+  - name: CharacterMesh.BaseTextureContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - AvatarAppearance
   - name: CharacterMesh.BaseTextureId
     summary: |
       The texture of a CharacterMesh. It can be overridden by Shirts, Pants,
@@ -37,7 +54,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: CharacterMesh.BodyPart
     summary: |
       The part of the Character's body that is affected.
@@ -56,7 +73,24 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
+  - name: CharacterMesh.MeshContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - AvatarAppearance
   - name: CharacterMesh.MeshId
     summary: |
       Used to load a mesh file, and apply it to the given BodyPart.
@@ -75,7 +109,24 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
+  - name: CharacterMesh.OverlayTextureContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - AvatarAppearance
   - name: CharacterMesh.OverlayTextureId
     summary: |
       The assetId of the overlay texture. The overlay covers Shirts, Pants,
@@ -96,7 +147,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
 methods: []
 events: []
 callbacks: []

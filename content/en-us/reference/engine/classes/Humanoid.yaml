@@ -84,7 +84,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.AutomaticScalingEnabled
     summary: |
@@ -110,7 +110,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.AutoRotate
     summary: |
       AutoRotate sets whether or not the Humanoid will automatically rotate to
@@ -165,7 +165,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.BreakJointsOnDeath
     summary: |
@@ -187,7 +187,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.CameraOffset
     summary: |
@@ -216,7 +216,7 @@ properties:
       can_load: false
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.CollisionType
     summary: |
@@ -239,7 +239,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.DisplayDistanceType
     summary: |
       Controls the distance behavior of the humanoid's name and health display.
@@ -276,7 +276,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.DisplayName
     summary: |
       Sets the text of a Humanoid, displayed above their head.
@@ -315,7 +315,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.EvaluateStateMachine
     summary: |
       Used to disable the internal physics and state machine of the Humanoid.
@@ -363,7 +363,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.FloorMaterial
     summary: |
@@ -416,7 +416,7 @@ properties:
       can_load: false
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.Health
     summary: |
@@ -474,7 +474,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.HealthDisplayDistance
     summary: |
@@ -503,7 +503,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.HealthDisplayType
     summary: |
       Controls when the humanoid's health bar is allowed to be displayed.
@@ -543,7 +543,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.HipHeight
     summary: |
       Determines the distance off the ground the `Class.Humanoid.RootPart`
@@ -583,7 +583,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.Jump
     summary: |
       If `true`, the `Class.Humanoid` jumps with an upwards force.
@@ -606,7 +606,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.JumpHeight
     summary: |
@@ -638,7 +638,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.JumpPower
     summary: |
@@ -674,7 +674,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.LeftLeg
     summary: |
@@ -700,7 +700,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.MaxHealth
     summary: |
       The maximum value of a humanoid's `Class.Humanoid.Health|Health`.
@@ -726,7 +726,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.maxHealth
     summary: ''
@@ -748,7 +748,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.MaxSlopeAngle
     summary: |
       The maximum slope angle that a humanoid can walk on without slipping.
@@ -777,7 +777,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.MoveDirection
     summary: |
@@ -805,7 +805,7 @@ properties:
       can_load: false
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.NameDisplayDistance
     summary: |
@@ -833,7 +833,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.NameOcclusion
     summary: |
       Controls whether a humanoid's name and health bar can be seen behind walls
@@ -866,7 +866,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.PlatformStand
     summary: |
       Determines whether the `Class.Humanoid` is currently in the
@@ -890,7 +890,7 @@ properties:
       can_load: false
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.RequiresNeck
     summary: |
@@ -914,7 +914,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.RightLeg
     summary: |
@@ -940,7 +940,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.RigType
     summary: |
       Describes whether this `Class.Humanoid` is utilizing the legacy R6
@@ -970,7 +970,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.RootPart
     summary: |
       A reference to the humanoid's **HumanoidRootPart** object.
@@ -998,7 +998,7 @@ properties:
       can_load: false
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.SeatPart
     summary: |
@@ -1029,7 +1029,7 @@ properties:
       can_load: false
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.Sit
     summary: |
@@ -1061,7 +1061,7 @@ properties:
       can_load: false
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.TargetPoint
     summary: |
@@ -1093,7 +1093,7 @@ properties:
       can_load: false
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.Torso
     summary: |
@@ -1120,7 +1120,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.UseJumpPower
     summary: |
       Determines whether the `Class.Humanoid.JumpHeight|JumpHeight` (false) or
@@ -1146,7 +1146,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.WalkSpeed
     summary: |
@@ -1187,7 +1187,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.WalkToPart
     summary: |
@@ -1224,7 +1224,7 @@ properties:
       can_load: false
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.WalkToPoint
     summary: |
@@ -1256,7 +1256,7 @@ properties:
       can_load: false
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
 methods:
   - name: Humanoid:AddAccessory
@@ -1300,7 +1300,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid:AddCustomStatus
     summary: |
       Adds a custom status to the Humanoid.
@@ -1326,7 +1326,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid:AddStatus
     summary: |
       Adds a BoolValue to the Humanoid's _Status_ object.
@@ -1352,7 +1352,38 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
+  - name: Humanoid:ApplyDescription
+    summary: |
+      Makes the character's look match that of the passed in
+      `Class.HumanoidDescription`.
+    description: ''
+    code_samples: []
+    parameters:
+      - name: humanoidDescription
+        type: HumanoidDescription
+        default:
+        summary: |
+          The `Class.HumanoidDescription` instance which you want to set the
+          character to match.
+      - name: assetTypeVerification
+        type: AssetTypeVerification
+        default: Default
+        summary: |
+          The asset type verification mode.
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Humanoid:ApplyDescriptionAsync()|ApplyDescriptionAsync()`.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AvatarAppearance
   - name: Humanoid:ApplyDescriptionAsync
     summary: |
       Makes the character's look match that of the passed in
@@ -1406,11 +1437,11 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
-  - name: Humanoid:ApplyDescription
+      - AvatarAppearance
+  - name: Humanoid:ApplyDescriptionReset
     summary: |
       Makes the character's look match that of the passed in
-      `Class.HumanoidDescription`.
+      `Class.HumanoidDescription`, even after external changes.
     description: ''
     code_samples: []
     parameters:
@@ -1433,11 +1464,11 @@ methods:
       - Deprecated
     deprecation_message: |
       This method has been superseded by
-      `Class.Humanoid:ApplyDescriptionAsync()|ApplyDescriptionAsync()`.
+      `Class.Humanoid:ApplyDescriptionResetAsync()|ApplyDescriptionResetAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid:ApplyDescriptionResetAsync
     summary: |
       Makes the character's look match that of the passed in
@@ -1481,38 +1512,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
-  - name: Humanoid:ApplyDescriptionReset
-    summary: |
-      Makes the character's look match that of the passed in
-      `Class.HumanoidDescription`, even after external changes.
-    description: ''
-    code_samples: []
-    parameters:
-      - name: humanoidDescription
-        type: HumanoidDescription
-        default:
-        summary: |
-          The `Class.HumanoidDescription` instance which you want to set the
-          character to match.
-      - name: assetTypeVerification
-        type: AssetTypeVerification
-        default: Default
-        summary: |
-          The asset type verification mode.
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Yields
-      - Deprecated
-    deprecation_message: |
-      This method has been superseded by
-      `Class.Humanoid:ApplyDescriptionResetAsync()|ApplyDescriptionResetAsync()`.
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid:BuildRigFromAttachments
     summary: |
       Assembles a tree of `Class.Motor6D` joints by attaching together
@@ -1544,7 +1544,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid:ChangeState
     summary: |
@@ -1595,7 +1595,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid:EquipTool
     summary: |
@@ -1626,7 +1626,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid:GetAccessories
     summary: |
@@ -1655,7 +1655,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid:GetAppliedDescription
     summary: |
       Returns a copy of the humanoid's cached `Class.HumanoidDescription` which
@@ -1687,7 +1687,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid:GetBodyPartR15
     summary: |
       Pass a body part to this method (the body part should be a sibling of
@@ -1726,7 +1726,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid:GetLimb
     summary: |
@@ -1766,7 +1766,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid:GetMoveVelocity
     summary: ''
@@ -1781,7 +1781,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid:GetPlayingAnimationTracks
     summary: |
@@ -1809,7 +1809,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid:GetState
     summary: |
       Returns the humanoid's current `Enum.HumanoidStateType`.
@@ -1833,7 +1833,7 @@ methods:
     security: None
     thread_safety: Safe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid:GetStateEnabled
     summary: |
@@ -1873,7 +1873,7 @@ methods:
     security: None
     thread_safety: Safe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid:GetStatuses
     summary: |
@@ -1895,7 +1895,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid:HasCustomStatus
     summary: |
       Returns boolean based on if custom statuses exist.
@@ -1920,7 +1920,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid:HasStatus
     summary: |
       Returns a boolean based on if a status exists.
@@ -1944,7 +1944,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid:LoadAnimation
     summary: |
       Loads an `Class.Animation` onto a `Class.Humanoid`, returning an
@@ -1971,7 +1971,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid:loadAnimation
     summary: ''
     description: ''
@@ -1992,7 +1992,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid:Move
     summary: |
       Causes the `Class.Humanoid` to walk in the given direction.
@@ -2046,7 +2046,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid:MoveTo
     summary: |
@@ -2107,33 +2107,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
-      - AvatarBehavior
-  - name: Humanoid:PlayEmoteAsync
-    summary: |
-      Plays emotes and returns if was successfully ran.
-    description: |
-      If the emote could not be played because the emoteName is not found in the
-      HumanoidDescription, this method will give an error. The method will
-      return true to indicate that the emote was played successfully.
-    code_samples: []
-    parameters:
-      - name: emoteName
-        type: string
-        default:
-        summary: |
-          name of the emote to play.
-    returns:
-      - type: boolean
-        summary: |
-          successfully played.
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid:PlayEmote
     summary: |
@@ -2159,7 +2133,33 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
+      - AvatarBehavior
+  - name: Humanoid:PlayEmoteAsync
+    summary: |
+      Plays emotes and returns if was successfully ran.
+    description: |
+      If the emote could not be played because the emoteName is not found in the
+      HumanoidDescription, this method will give an error. The method will
+      return true to indicate that the emote was played successfully.
+    code_samples: []
+    parameters:
+      - name: emoteName
+        type: string
+        default:
+        summary: |
+          name of the emote to play.
+    returns:
+      - type: boolean
+        summary: |
+          successfully played.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid:RemoveAccessories
     summary: |
@@ -2188,7 +2188,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid:RemoveCustomStatus
     summary: |
       Removes the defined custom status from the Status model in the Humanoid..
@@ -2213,7 +2213,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid:RemoveStatus
     summary: |
       Removes the defined status from the Status model in the Humanoid.
@@ -2238,7 +2238,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid:ReplaceBodyPartR15
     summary: |
       Dynamically replaces a Humanoid body part with a different part.
@@ -2274,7 +2274,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid:SetStateEnabled
     summary: |
       Sets whether a given `Enum.HumanoidStateType` is enabled for the
@@ -2310,7 +2310,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid:TakeDamage
     summary: |
@@ -2358,7 +2358,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid:takeDamage
     summary: ''
@@ -2380,7 +2380,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid:UnequipTools
     summary: |
       Unequips any `Class.Tool` currently equipped by the `Class.Humanoid`.
@@ -2408,7 +2408,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
 events:
   - name: Humanoid.AnimationPlayed
@@ -2445,7 +2445,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.ApplyDescriptionFinished
     summary: ''
     description: ''
@@ -2459,7 +2459,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.Climbing
     summary: |
       Fires when the speed at which a `Class.Humanoid` is climbing changes.
@@ -2495,7 +2495,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.CustomStatusAdded
     summary: |
@@ -2517,7 +2517,7 @@ events:
       not use it for new work.
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.CustomStatusRemoved
     summary: |
       Fired when a status is removed from the Humanoid.
@@ -2538,7 +2538,7 @@ events:
       not use it for new work.
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.Died
     summary: |
       Fires when the `Class.Humanoid` dies.
@@ -2558,7 +2558,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.FallingDown
     summary: |
@@ -2584,7 +2584,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.FreeFalling
     summary: |
@@ -2614,7 +2614,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.GettingUp
     summary: |
@@ -2646,7 +2646,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.HealthChanged
     summary: |
@@ -2673,7 +2673,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.Jumping
     summary: |
@@ -2703,7 +2703,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.MoveToFinished
     summary: |
@@ -2737,7 +2737,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.PlatformStanding
     summary: |
@@ -2769,7 +2769,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.Ragdoll
     summary: |
@@ -2801,7 +2801,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.Running
     summary: |
@@ -2834,7 +2834,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.Seated
     summary: |
@@ -2876,7 +2876,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.StateChanged
     summary: |
@@ -2914,7 +2914,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.StateEnabledChanged
     summary: |
@@ -2951,7 +2951,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.StatusAdded
     summary: |
@@ -2973,7 +2973,7 @@ events:
       not use it for new work.
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.StatusRemoved
     summary: |
       Fired when a status is removed from the Humanoid.
@@ -2994,7 +2994,7 @@ events:
       not use it for new work.
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: Humanoid.Strafing
     summary: |
       Fires when the `Class.Humanoid` enters or leaves the `StrafingNoPhysics`
@@ -3028,7 +3028,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.Swimming
     summary: |
@@ -3063,7 +3063,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
   - name: Humanoid.Touched
     summary: |
@@ -3116,6 +3116,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - AvatarBehavior
 callbacks: []

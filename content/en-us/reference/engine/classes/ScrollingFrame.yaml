@@ -486,6 +486,34 @@ properties:
       can_save: true
     capabilities:
       - UI
-methods: []
+methods:
+  - name: ScrollingFrame:GetScrollVelocity
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Vector2
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - UI
+  - name: ScrollingFrame:ResetScrollVelocity
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - UI
 events: []
 callbacks: []

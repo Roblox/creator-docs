@@ -426,6 +426,49 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Social
+  - name: SocialService:PromptLinkSharing
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: |
+          Prompts the given `Class.Player` with a Roblox platform-level share
+          sheet with a generated share link.
+      - name: options
+        type: Dictionary
+        default: nil
+        summary: |
+          `Dictionary` that specifies the configuration for the generated link.
+          It includes the following optional key-value pairs:
+
+          - `FallbackLinkId` (string). Determines how this share link will
+            direct player to once expired. Default to experience join link.
+          - `ExpirationSeconds` (number). Determines time to expiration once the
+            share link is created. Truncates to nearest integer. Defaults to
+            86,400.
+          - `PreviewTitle` (string) Preview title of the share link.
+          - `PreviewDescription` (string) Preview description of the share link.
+          - `PreviewAssetId` (number) Image asset ID used for share link
+            preview.
+          - `LaunchData` (string). Used to set a parameter in
+            `Class.Player:GetJoinData()` when a player joined using the
+            generated share link.
+    returns:
+      - type: Tuple
+        summary: |
+          A tuple containing an `Enum.PromptLinkSharingResult` indicating the
+          result of the link sharing prompt.
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Social
   - name: SocialService:PromptLinkSharingAsync
     summary: ''
     description: |
@@ -493,49 +536,6 @@ methods:
           result of the link sharing prompt.
     tags:
       - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Social
-  - name: SocialService:PromptLinkSharing
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: player
-        type: Player
-        default:
-        summary: |
-          Prompts the given `Class.Player` with a Roblox platform-level share
-          sheet with a generated share link.
-      - name: options
-        type: Dictionary
-        default: nil
-        summary: |
-          `Dictionary` that specifies the configuration for the generated link.
-          It includes the following optional key-value pairs:
-
-          - `FallbackLinkId` (string). Determines how this share link will
-            direct player to once expired. Default to experience join link.
-          - `ExpirationSeconds` (number). Determines time to expiration once the
-            share link is created. Truncates to nearest integer. Defaults to
-            86,400.
-          - `PreviewTitle` (string) Preview title of the share link.
-          - `PreviewDescription` (string) Preview description of the share link.
-          - `PreviewAssetId` (number) Image asset ID used for share link
-            preview.
-          - `LaunchData` (string). Used to set a parameter in
-            `Class.Player:GetJoinData()` when a player joined using the
-            generated share link.
-    returns:
-      - type: Tuple
-        summary: |
-          A tuple containing an `Enum.PromptLinkSharingResult` indicating the
-          result of the link sharing prompt.
-    tags:
-      - Yields
-      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

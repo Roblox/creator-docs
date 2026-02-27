@@ -91,6 +91,7 @@ If you wish to upload an accessory using these joints as a UGC item, there are a
 - Vertices cannot be partially weighted to these joints. If you want to use them you must skin the vertex to the joint with a weight of `1.0`.
 - If these joints are present in the mesh, then the accessory must be set to `WrapLayerAutoSkin.EnabledOverride`.
 - Body part meshes containing these joints will be rejected by validation.
+- Eyebrow and Eyelash accessory types are required to have the special skinning joints and be set to `WrapLayerAutoSkin.EnabledOverride`.
 
 ### Modify character cages
 

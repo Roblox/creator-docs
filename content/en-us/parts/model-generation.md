@@ -116,7 +116,7 @@ style FunctionalModel color:white, fill:SeaGreen
 
 To test retargetable scripts:
 
-1. Download the <a href="../assets/modeling/model-generation/Behaviors.rbxm">`Behaviors.rbxm`</a> file (right‑click and "save&nbsp;as" to your local system).
+1. Download the <a href="../assets/modeling/model-generation/Behaviors.rbxm">`Behaviors.rbxm`</a> file.
 2. In Studio's [Explorer](../studio/explorer.md) hierarchy, right‑click `Class.ReplicatedStorage`, select **Insert**&nbsp;⟩ **Import&nbsp;Roblox&nbsp;Model**, and choose the downloaded file. The model unpacks into several folders.
 
    <img src="../assets/studio/explorer/Model-Generation-Behaviors.png" width="320" />

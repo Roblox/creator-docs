@@ -202,6 +202,23 @@ properties:
       can_save: true
     capabilities:
       - Basic
+  - name: Decal.Rotation
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
   - name: Decal.RoughnessMap
     summary: ''
     description: ''

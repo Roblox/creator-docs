@@ -20,6 +20,11 @@ items:
     value: 1
     tags: []
     deprecation_message: ''
+  - name: PlaceUploadFailing
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
   - name: NoError
     summary: ''
     value: 3

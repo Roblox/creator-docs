@@ -482,7 +482,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: AvatarCreationService:PromptCreateAvatarAssetAsync
     summary: |
       Prompts a `Class.Player` to purchase and create an avatar asset from an
@@ -953,7 +953,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - DynamicGeneration
   - name: AvatarCreationService.AvatarModerationCompleted
     summary: |
       Fires when an in-experience-created avatar's moderation status has been

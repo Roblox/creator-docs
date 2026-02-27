@@ -40,7 +40,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: BodyPartDescription.BodyPart
     summary: |
       The type of body part.
@@ -59,7 +59,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: BodyPartDescription.Color
     summary: |
       The `Datatype.Color3` for this body part.
@@ -78,7 +78,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: BodyPartDescription.HeadShape
     summary: |
       Specifies the head shape identifier to apply to a Dynamic Head when this
@@ -132,7 +132,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: BodyPartDescription.Instance
     summary: |
       A reference to the `Class.Instance` that should be applied when applying
@@ -157,7 +157,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
 methods: []
 events: []
 callbacks: []

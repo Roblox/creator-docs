@@ -1,6 +1,6 @@
 ---
 title: Script Sync
-description: Use Studio's Script Sync feature to edit your Luau scripts in an external text editor.
+description: Use Studio's Script Sync feature to edit your Luau scripts on your local disk using an external text editor or your favorite integrated development environment (IDE).
 ---
 
 import BetaAlert from '../includes/beta-features/beta-alert.md'
@@ -9,7 +9,7 @@ import BetaAlert from '../includes/beta-features/beta-alert.md'
 
 Roblox Studio has a built-in [script editor](../studio/script-editor.md) for editing the code in your Roblox project. The editor includes key features like linting, type checking, autocomplete and collaborative editing.
 
-Many developers, however, have a preferred text editor, such as [Visual Studio Code](https://code.visualstudio.com), [Cursor](https://cursor.com), [Sublime Text](https://www.sublimetext.com), or [Notepad++](https://notepad-plus-plus.org). Popular development environments often have features or plugins that don't exist in Studio. To use an external text editor with Studio, enable the **Script Sync** feature.
+Many developers, however, have a preferred text editor or integrated development environment (IDE), such as [Visual Studio Code](https://code.visualstudio.com), [Cursor](https://cursor.com), [Sublime Text](https://www.sublimetext.com), or [Notepad++](https://notepad-plus-plus.org). Popular development environments often have features or plugins that don't exist in Studio. To use an external editor or IDE with Studio, enable the **Script Sync** feature.
 
 Script Sync works by synchronizing the scripts in your [data model](../projects/data-model.md) to text files on your local disk. Changes made to the Luau files on disk are applied to the scripts in Studio, and vice versa. This synchronization means that you can edit a script in an external editor like VS Code and immediately see the change in Studio.
 

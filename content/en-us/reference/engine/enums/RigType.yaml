@@ -18,6 +18,11 @@ items:
     value: 0
     tags: []
     deprecation_message: ''
+  - name: CustomHumanoid
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
   - name: Custom
     summary: |
       A rig type of Custom.

@@ -1215,7 +1215,7 @@ events:
         default:
         summary: |
           An `Class.InputObject`, which contains useful data for querying user
-          input such as the`Enum.UserInputType|type of input`,
+          input such as the `Enum.UserInputType|type of input`,
           `Enum.UserInputState|state of input`, and
           `Class.InputObject.Position|screen coordinates of the input`.
     tags: []
@@ -1248,7 +1248,7 @@ events:
         default:
         summary: |
           An `Class.InputObject`, which contains useful data for querying user
-          input such as the`Enum.UserInputType|type of input`,
+          input such as the `Enum.UserInputType|type of input`,
           `Enum.UserInputState|state of input`, and
           `Class.InputObject.Position|screen coordinates of the input`.
     tags: []
@@ -1279,7 +1279,7 @@ events:
         default:
         summary: |
           An `Class.InputObject`, which contains useful data for querying user
-          input such as the`Enum.UserInputType`, `Enum.UserInputState`, and
+          input such as the `Enum.UserInputType`, `Enum.UserInputState`, and
           `Class.InputObject.Position`.
     tags: []
     deprecation_message: ''
@@ -1580,9 +1580,6 @@ events:
       `Enum.UserInputState.Change` if the player moves their finger during the
       gesture, and finally `Enum.UserInputState.End`. The delay is platform
       dependent; in Studio it is a little longer than one second.
-
-      Since this event only requires one finger, this event can be simulated in
-      Studio using the emulator and a mouse.
     code_samples:
       - Move-UI-Element-with-TouchLongPress
     parameters:
@@ -1623,9 +1620,6 @@ events:
       addition, it fires multiple times: `Enum.UserInputState.Begin` after a
       brief delay, `Enum.UserInputState.Change` when the player moves their
       finger during the gesture, and finally with `Enum.UserInputState.End`.
-
-      This event cannot be simulated in Studio using the emulator and a mouse;
-      you must have a real touch-enabled device to fire it.
     code_samples:
       - Panning-UI-Element
     parameters:
@@ -1675,10 +1669,6 @@ events:
       brief delay, `Enum.UserInputState.Change` when the player moves a finger
       during the gesture, and finally with `Enum.UserInputState.End`. It should
       be noted that the scale should be used **multiplicatively**.
-
-      Since this event requires at least two fingers, it is not possible to
-      simulate it in Studio using the emulator and a mouse; you must have a real
-      touch-enabled device.
     code_samples:
       - Pinch-Pull-Scaling
     parameters:
@@ -1726,10 +1716,6 @@ events:
       addition, it fires multiple times: `Enum.UserInputState.Begin` after a
       brief delay, `Enum.UserInputState.Change` when the player moves a finger
       during the gesture, and finally with `Enum.UserInputState.End`.
-
-      Since this event requires at least two fingers, it is not possible to be
-      simulated in Studio using the emulator and a mouse; you must have a real
-      touch-enabled device.
     code_samples:
       - Touch-Rotation
     parameters:
@@ -1769,9 +1755,6 @@ events:
       gesture (Up, Down, Left or Right) and the number of touch points involved
       in the gesture. Swipe gestures are often used to change tabs in mobile
       UIs.
-
-      Since this event only requires one finger, it can be simulated in Studio
-      using the emulator and a mouse.
     code_samples:
       - Bouncing-Color-Picker
     parameters:
@@ -1802,9 +1785,6 @@ events:
       `Class.GuiObject.TouchPan` and/or `Class.GuiObject.TouchSwipe`). It fires
       with a table of `Datatype.Vector2` objects that describe the relative
       positions of the fingers involved in the gesture.
-
-      Since this event only requires one finger, it can be simulated in Studio
-      using the emulator and a mouse.
     code_samples:
       - Tap-Transparency-Toggle
     parameters:

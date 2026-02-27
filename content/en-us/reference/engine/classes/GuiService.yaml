@@ -585,6 +585,24 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
+  - name: GuiService:GetInsetArea
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: screenInsets
+        type: ScreenInsets
+        default:
+        summary: ''
+    returns:
+      - type: Rect
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - UI
   - name: GuiService:GetInspectMenuEnabled
     summary: |
       Returns whether the avatar inspection menu is enabled.
@@ -643,7 +661,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-      - Avatar
+      - AvatarAppearance
   - name: GuiService:InspectPlayerFromUserId
     summary: |
       Allows the avatar inspection menu to appear showing the user that has the
@@ -675,7 +693,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-      - Avatar
+      - AvatarAppearance
   - name: GuiService:IsTenFootInterface
     summary: |
       Returns `true` if the client is using the ten foot interface, a special

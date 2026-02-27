@@ -494,6 +494,43 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+  - name: Players:CreateHumanoidModelFromDescription
+    summary: |
+      Returns a character `Class.Model` equipped with everything specified in
+      the passed in `Class.HumanoidDescription`.
+    description: ''
+    code_samples: []
+    parameters:
+      - name: description
+        type: HumanoidDescription
+        default:
+        summary: |
+          Specifies the appearance of the returned character.
+      - name: rigType
+        type: HumanoidRigType
+        default:
+        summary: |
+          Specifies whether the returned character will be R6 or R15.
+      - name: assetTypeVerification
+        type: AssetTypeVerification
+        default: Default
+        summary: |
+          The asset type verification mode.
+    returns:
+      - type: Model
+        summary: |
+          A `Class.Humanoid` character `Class.Model`.
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Players:CreateHumanoidModelFromDescription()|CreateHumanoidModelFromDescription()`.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AvatarAppearance
+      - Players
   - name: Players:CreateHumanoidModelFromDescriptionAsync
     summary: |
       Returns a character `Class.Model` equipped with everything specified in
@@ -530,72 +567,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
-      - Players
-  - name: Players:CreateHumanoidModelFromDescription
-    summary: |
-      Returns a character `Class.Model` equipped with everything specified in
-      the passed in `Class.HumanoidDescription`.
-    description: ''
-    code_samples: []
-    parameters:
-      - name: description
-        type: HumanoidDescription
-        default:
-        summary: |
-          Specifies the appearance of the returned character.
-      - name: rigType
-        type: HumanoidRigType
-        default:
-        summary: |
-          Specifies whether the returned character will be R6 or R15.
-      - name: assetTypeVerification
-        type: AssetTypeVerification
-        default: Default
-        summary: |
-          The asset type verification mode.
-    returns:
-      - type: Model
-        summary: |
-          A `Class.Humanoid` character `Class.Model`.
-    tags:
-      - Yields
-      - Deprecated
-    deprecation_message: |
-      This method has been superseded by
-      `Class.Players:CreateHumanoidModelFromDescription()|CreateHumanoidModelFromDescription()`.
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Avatar
-      - Players
-  - name: Players:CreateHumanoidModelFromUserIdAsync
-    summary: |
-      Returns a character Model set-up with everything equipped to match the
-      avatar of the user specified by the passed in userId.
-    description: |
-      Returns a character Model set-up with everything equipped to match the
-      avatar of the user specified by the passed in userId. This includes
-      whether that character is currently R6 or R15.
-    code_samples:
-      - create-humanoid-model-from-userid
-    parameters:
-      - name: userId
-        type: int64
-        default:
-        summary: |
-          The userId for a Roblox user. (The UserId is the number in the profile
-          of the user e.g www.roblox.com/users/1/profile).
-    returns:
-      - type: Model
-        summary: |
-          A Humanoid character Model.
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
+      - AvatarAppearance
       - Players
   - name: Players:CreateHumanoidModelFromUserId
     summary: |
@@ -621,6 +593,34 @@ methods:
     deprecation_message: |
       This method has been superseded by
       `Class.Players:CreateHumanoidModelFromUserIdAsync()|CreateHumanoidModelFromUserIdAsync()`.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+  - name: Players:CreateHumanoidModelFromUserIdAsync
+    summary: |
+      Returns a character Model set-up with everything equipped to match the
+      avatar of the user specified by the passed in userId.
+    description: |
+      Returns a character Model set-up with everything equipped to match the
+      avatar of the user specified by the passed in userId. This includes
+      whether that character is currently R6 or R15.
+    code_samples:
+      - create-humanoid-model-from-userid
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: |
+          The userId for a Roblox user. (The UserId is the number in the profile
+          of the user e.g www.roblox.com/users/1/profile).
+    returns:
+      - type: Model
+        summary: |
+          A Humanoid character Model.
+    tags:
+      - Yields
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -874,6 +874,35 @@ methods:
     capabilities:
       - Players
       - Social
+  - name: Players:GetHumanoidDescriptionFromOutfitId
+    summary: |
+      Returns the HumanoidDescription for a specified outfit, which will be set
+      with the parts/colors/Animations etc of the outfit.
+    description: ''
+    code_samples:
+      - get-humanoiddescription-from-outfitid
+    parameters:
+      - name: outfitId
+        type: int64
+        default:
+        summary: |
+          The ID of the outfit for which the HumanoidDescription is sought.
+    returns:
+      - type: HumanoidDescription
+        summary: |
+          HumanoidDescription initialized with the specification for the passed
+          in outfitId.
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Players:GetHumanoidDescriptionFromOutfitIdAsync()|GetHumanoidDescriptionFromOutfitIdAsync()`.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AvatarAppearance
+      - Players
   - name: Players:GetHumanoidDescriptionFromOutfitIdAsync
     summary: |
       Returns the HumanoidDescription for a specified outfit, which will be set
@@ -902,66 +931,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
-      - Players
-  - name: Players:GetHumanoidDescriptionFromOutfitId
-    summary: |
-      Returns the HumanoidDescription for a specified outfit, which will be set
-      with the parts/colors/Animations etc of the outfit.
-    description: ''
-    code_samples:
-      - get-humanoiddescription-from-outfitid
-    parameters:
-      - name: outfitId
-        type: int64
-        default:
-        summary: |
-          The ID of the outfit for which the HumanoidDescription is sought.
-    returns:
-      - type: HumanoidDescription
-        summary: |
-          HumanoidDescription initialized with the specification for the passed
-          in outfitId.
-    tags:
-      - Yields
-      - Deprecated
-    deprecation_message: |
-      This method has been superseded by
-      `Class.Players:GetHumanoidDescriptionFromOutfitIdAsync()|GetHumanoidDescriptionFromOutfitIdAsync()`.
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Avatar
-      - Players
-  - name: Players:GetHumanoidDescriptionFromUserIdAsync
-    summary: |
-      Returns a HumanoidDescription which specifies everything equipped for the
-      avatar of the user specified by the passed in userId.
-    description: |
-      Returns a HumanoidDescription which specifies everything equipped for the
-      avatar of the user specified by the passed in userId. Also includes scales
-      and body colors.
-    code_samples:
-      - get-humanoiddescription-from-userid
-    parameters:
-      - name: userId
-        type: int64
-        default:
-        summary: |
-          The userId for a Roblox user. (The UserId is the number in the profile
-          of the user e.g www.roblox.com/users/1/profile).
-    returns:
-      - type: HumanoidDescription
-        summary: |
-          HumanoidDescription initialized with the passed in user's avatar
-          specification.
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Avatar
+      - AvatarAppearance
       - Players
   - name: Players:GetHumanoidDescriptionFromUserId
     summary: |
@@ -991,7 +961,37 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
+      - Players
+  - name: Players:GetHumanoidDescriptionFromUserIdAsync
+    summary: |
+      Returns a HumanoidDescription which specifies everything equipped for the
+      avatar of the user specified by the passed in userId.
+    description: |
+      Returns a HumanoidDescription which specifies everything equipped for the
+      avatar of the user specified by the passed in userId. Also includes scales
+      and body colors.
+    code_samples:
+      - get-humanoiddescription-from-userid
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: |
+          The userId for a Roblox user. (The UserId is the number in the profile
+          of the user e.g www.roblox.com/users/1/profile).
+    returns:
+      - type: HumanoidDescription
+        summary: |
+          HumanoidDescription initialized with the passed in user's avatar
+          specification.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AvatarAppearance
       - Players
   - name: Players:GetNameFromUserIdAsync
     summary: |

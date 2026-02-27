@@ -7,6 +7,9 @@ description: In-depth details on how Roblox validates head assets
 This content is for creators who intend to create character heads designated for the Marketplace, or any character heads that support assets from the Marketplace.
 </Alert>
 
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/OwhkWzSBnf0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+<br /><br />
+
 Roblox runs a rigorous validation to ensure the asset being uploaded to the Marketplace is compatible with all other assets on the Marketplace. For heads, validation primarily ensures that the head asset includes:
 
 - A correctly **configured cage** — to wear clothing and accessories.

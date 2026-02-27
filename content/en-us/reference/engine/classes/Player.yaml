@@ -1153,6 +1153,34 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+  - name: Player:GetFriendsOnline
+    summary: |
+      Returns a dictionary of online connections. Returns the product
+      information of an asset using its asset ID.
+    description: ''
+    code_samples:
+      - how-to-get-a-list-of-online-friends
+    parameters:
+      - name: maxFriends
+        type: int
+        default: 200
+        summary: |
+          The maximum number of online connections to return.
+    returns:
+      - type: Array
+        summary: |
+          A dictionary of online connections (see the table above).
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Player:GetFriendsOnlineAsync()|GetFriendsOnlineAsync()`.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+      - Social
   - name: Player:GetFriendsOnlineAsync
     summary: |
       Returns a dictionary of online connections.
@@ -1233,34 +1261,6 @@ methods:
     tags:
       - Yields
     deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-      - Social
-  - name: Player:GetFriendsOnline
-    summary: |
-      Returns a dictionary of online connections. Returns the product
-      information of an asset using its asset ID.
-    description: ''
-    code_samples:
-      - how-to-get-a-list-of-online-friends
-    parameters:
-      - name: maxFriends
-        type: int
-        default: 200
-        summary: |
-          The maximum number of online connections to return.
-    returns:
-      - type: Array
-        summary: |
-          A dictionary of online connections (see the table above).
-    tags:
-      - Yields
-      - Deprecated
-    deprecation_message: |
-      This method has been superseded by
-      `Class.Player:GetFriendsOnlineAsync()|GetFriendsOnlineAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -1419,6 +1419,31 @@ methods:
     thread_safety: Safe
     capabilities:
       - Players
+  - name: Player:GetRankInGroup
+    summary: |
+      Returns the player's rank in the group as an integer.
+    description: ''
+    code_samples:
+      - Player-GetRankInGroup1
+    parameters:
+      - name: groupId
+        type: int64
+        default:
+        summary: |
+          The `groupId` of the specified group.
+    returns:
+      - type: int
+        summary: |
+          The player's rank in the group.
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+      - Groups
   - name: Player:GetRankInGroupAsync
     summary: |
       Returns the player's rank in the group as an integer.
@@ -1458,26 +1483,30 @@ methods:
     capabilities:
       - Players
       - Groups
-  - name: Player:GetRankInGroup
+  - name: Player:GetRoleInGroup
     summary: |
-      Returns the player's rank in the group as an integer.
+      Returns the player's role in the group as a string, or `Guest` if the
+      player isn't part of the group.
     description: ''
     code_samples:
-      - Player-GetRankInGroup1
+      - Player-GetRoleInGroup1
     parameters:
       - name: groupId
         type: int64
         default:
         summary: |
-          The `groupId` of the specified group.
+          The group ID of the specified group.
     returns:
-      - type: int
+      - type: string
         summary: |
-          The player's rank in the group.
+          The player's role in the specified group, or `Guest` if the player is
+          not a member.
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Player.GetRoleInGroupAsync|GetRoleInGroup()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -1519,35 +1548,6 @@ methods:
     tags:
       - Yields
     deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-      - Groups
-  - name: Player:GetRoleInGroup
-    summary: |
-      Returns the player's role in the group as a string, or `Guest` if the
-      player isn't part of the group.
-    description: ''
-    code_samples:
-      - Player-GetRoleInGroup1
-    parameters:
-      - name: groupId
-        type: int64
-        default:
-        summary: |
-          The group ID of the specified group.
-    returns:
-      - type: string
-        summary: |
-          The player's role in the specified group, or `Guest` if the player is
-          not a member.
-    tags:
-      - Yields
-      - Deprecated
-    deprecation_message: |
-      This method has been superseded by
-      `Class.Player.GetRoleInGroupAsync|GetRoleInGroup()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -1605,35 +1605,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-  - name: Player:IsFriendsWithAsync
-    summary: |
-      Checks whether a player is a connection of the user with the given
-      `Class.Player.UserId`.
-    description: |
-      This method sends a request to Roblox asking whether a player is a
-      connection of another user, given the `Class.Player.UserId|UserId` of that
-      user. This method caches results so multiple calls on the same player with
-      the same `userId` may not yield the most up-to-date result.
-    code_samples: []
-    parameters:
-      - name: userId
-        type: int64
-        default:
-        summary: |
-          The `Class.Player.UserId` of the specified player.
-    returns:
-      - type: boolean
-        summary: |
-          A boolean indicating whether a player is a connection of the specified
-          user.
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-      - Social
   - name: Player:IsFriendsWith
     summary: |
       Checks whether a player is a connection of the user with the given
@@ -1684,6 +1655,61 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+  - name: Player:IsFriendsWithAsync
+    summary: |
+      Checks whether a player is a connection of the user with the given
+      `Class.Player.UserId`.
+    description: |
+      This method sends a request to Roblox asking whether a player is a
+      connection of another user, given the `Class.Player.UserId|UserId` of that
+      user. This method caches results so multiple calls on the same player with
+      the same `userId` may not yield the most up-to-date result.
+    code_samples: []
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: |
+          The `Class.Player.UserId` of the specified player.
+    returns:
+      - type: boolean
+        summary: |
+          A boolean indicating whether a player is a connection of the specified
+          user.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+      - Social
+  - name: Player:IsInGroup
+    summary: |
+      Checks whether a player is a member of a group with the given ID.
+    description: ''
+    code_samples: []
+    parameters:
+      - name: groupId
+        type: int64
+        default:
+        summary: |
+          The group ID of the specified group.
+    returns:
+      - type: boolean
+        summary: |
+          A boolean indicating whether the player is in the specified group.
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Player.IsInGroupAsync|IsInGroupAsync()`.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+      - Groups
   - name: Player:IsInGroupAsync
     summary: |
       Checks whether a player is a member of a group with the given ID.
@@ -1717,32 +1743,6 @@ methods:
     tags:
       - Yields
     deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-      - Groups
-  - name: Player:IsInGroup
-    summary: |
-      Checks whether a player is a member of a group with the given ID.
-    description: ''
-    code_samples: []
-    parameters:
-      - name: groupId
-        type: int64
-        default:
-        summary: |
-          The group ID of the specified group.
-    returns:
-      - type: boolean
-        summary: |
-          A boolean indicating whether the player is in the specified group.
-    tags:
-      - Yields
-      - Deprecated
-    deprecation_message: |
-      This method has been superseded by
-      `Class.Player.IsInGroupAsync|IsInGroupAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -1858,51 +1858,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-  - name: Player:LoadCharacterAsync
-    summary: |
-      Creates a new character for the player, removing the old one. Also clears
-      the player's `Class.Backpack` and `Class.PlayerGui`.
-    description: |
-      This method creates a new character for the player, removing the old one.
-      It also clears the player's `Class.Backpack` and `Class.PlayerGui`. This
-      is useful in cases where you want to reload the character without killing
-      the player, such as when you want to load a new character appearance after
-      changing the player's
-      `Class.Player.CharacterAppearance|CharacterAppearance`.
-
-      After calling `LoadCharacterAsync()` for an individual player, it is not
-      recommended to call it again for the same player until after that player's
-      `Class.Player.CharacterAppearanceLoaded|CharacterAppearanceLoaded` event
-      has fired.
-
-      #### Character Loading Event Order
-
-      Calling the `LoadCharacterAsync()` method on any `Player` fires events in
-      the following order:
-
-      1. The character appearance initializes.
-      2. The character rig builds and scales.
-      3. The character moves to the spawn location.
-      4. `Class.Player.Character` sets, automatically removing old character.
-      5. `Class.Object.Changed` fires on the `Class.Player` with a value of
-         `Character`.
-      6. The character's `Class.Instance.Parent|Parent` sets to the
-         `Class.DataModel`.
-      7. `Class.Player.CharacterAdded` fires.
-      8. `Class.Player.CharacterAppearanceLoaded` fires.
-    code_samples:
-      - Player-LoadCharacter1
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
   - name: Player:LoadCharacter
     summary: |
       Creates a new character for the player, removing the old one. Also clears
@@ -1967,35 +1922,43 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
       - Players
-  - name: Player:LoadCharacterWithHumanoidDescriptionAsync
+  - name: Player:LoadCharacterAsync
     summary: |
-      Spawns a player character with everything equipped in the passed in
-      `Class.HumanoidDescription`.
+      Creates a new character for the player, removing the old one. Also clears
+      the player's `Class.Backpack` and `Class.PlayerGui`.
     description: |
-      This method spawns a player character with everything equipped in the
-      passed in `Class.HumanoidDescription`.
+      This method creates a new character for the player, removing the old one.
+      It also clears the player's `Class.Backpack` and `Class.PlayerGui`. This
+      is useful in cases where you want to reload the character without killing
+      the player, such as when you want to load a new character appearance after
+      changing the player's
+      `Class.Player.CharacterAppearance|CharacterAppearance`.
 
-      After calling this method for an individual player, it is not recommended
-      to call it again for the same player until after that player's
+      After calling `LoadCharacterAsync()` for an individual player, it is not
+      recommended to call it again for the same player until after that player's
       `Class.Player.CharacterAppearanceLoaded|CharacterAppearanceLoaded` event
       has fired.
 
-      See also
-      [HumanoidDescription System](../../../characters/appearance.md#humanoiddescription),
-      an article which explains the humanoid description system in greater
-      detail and provides several scripting examples.
+      #### Character Loading Event Order
+
+      Calling the `LoadCharacterAsync()` method on any `Player` fires events in
+      the following order:
+
+      1. `Class.Player.Character` sets, automatically removing old character.
+      2. `Class.Player.CharacterAdded` fires.
+      3. `Class.Object.Changed` fires on the `Class.Player` with a value of
+         `Character`.
+      4. The character appearance initializes.
+      5. `Class.Player.CharacterAppearanceLoaded` fires.
+      6. The character's `Class.Instance.Parent|Parent` sets to the
+         `Class.DataModel`.
+      7. The character rig builds and scales.
+      8. The character moves to the spawn location.
     code_samples:
-      - spawn-characters-with-humanoiddescription
-    parameters:
-      - name: humanoidDescription
-        type: HumanoidDescription
-        default:
-        summary: |
-          A `Class.HumanoidDescription` containing traits like body
-          parts/colors, body scaling, accessories, clothing, and animations that
-          will be equipped to the loaded character.
+      - Player-LoadCharacter1
+    parameters: []
     returns:
       - type: ()
         summary: ''
@@ -2030,6 +1993,43 @@ methods:
     deprecation_message: |
       This method has been superseded by
       `Class.Player:LoadCharacterWithHumanoidDescriptionAsync()|LoadCharacterWithHumanoidDescriptionAsync()`.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+  - name: Player:LoadCharacterWithHumanoidDescriptionAsync
+    summary: |
+      Spawns a player character with everything equipped in the passed in
+      `Class.HumanoidDescription`.
+    description: |
+      This method spawns a player character with everything equipped in the
+      passed in `Class.HumanoidDescription`.
+
+      After calling this method for an individual player, it is not recommended
+      to call it again for the same player until after that player's
+      `Class.Player.CharacterAppearanceLoaded|CharacterAppearanceLoaded` event
+      has fired.
+
+      See also
+      [HumanoidDescription System](../../../characters/appearance.md#humanoiddescription),
+      an article which explains the humanoid description system in greater
+      detail and provides several scripting examples.
+    code_samples:
+      - spawn-characters-with-humanoiddescription
+    parameters:
+      - name: humanoidDescription
+        type: HumanoidDescription
+        default:
+        summary: |
+          A `Class.HumanoidDescription` containing traits like body
+          parts/colors, body scaling, accessories, clothing, and animations that
+          will be equipped to the loaded character.
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities:

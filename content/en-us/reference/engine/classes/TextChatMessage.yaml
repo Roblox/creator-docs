@@ -87,30 +87,34 @@ properties:
       `Class.TextChatService.OnIncomingMessage` and
       `Class.TextChannel.OnIncomingMessage` callbacks.
 
-      ```
+      ```lua
+      local Players = game:GetService("Players")
       local TextChatService = game:GetService("TextChatService")
 
-      local generalChannel: TextChannel = TextChatService:WaitForChild("TextChannels").RBXGeneral
+      local customChannel: TextChannel = Instance.new("TextChannel")
+      customChannel.Parent = TextChatService:WaitForChild("TextChannels")
 
-      generalChannel:DisplaySystemMessage("This is an error!", "Game.Error.Generic")
-      generalChannel:DisplaySystemMessage("Could not find save data!", "Game.Error.SaveDataNotFound")
+      customChannel.OnIncomingMessage = function(message: TextChatMessage)
+        if string.find(message.Metadata, "Error") then
+          local overrideProperties = Instance.new("TextChatMessageProperties")
+          overrideProperties.Text = string.format("<font color='rgb(255,0,0)'>%s</font>", message.Text)
+          return overrideProperties
+        elseif string.find(message.Metadata, "Info") then
+          local overrideProperties = Instance.new("TextChatMessageProperties")
+          overrideProperties.Text = string.format("<font color='rgb(0, 255, 150)'>%s</font>", message.Text)
+          return overrideProperties
+        end
 
-      generalChannel:DisplaySystemMessage("You won the game!", "Game.Info.Win")
-      generalChannel:DisplaySystemMessage("You lost the game!", "Game.Info.Lose")
-
-      generalChannel.OnIncomingMessage = function(message: TextChatMessage)
-      	if string.find(message.Metadata, "Error") then
-      		local overrideProperties = Instance.new("TextChatMessageProperties")
-      		overrideProperties.TextColor = Color3.fromRGB(255, 0, 0)
-      		return overrideProperties
-      	elseif string.find(message.Metadata, "Info") then
-      		local overrideProperties = Instance.new("TextChatMessageProperties")
-      		overrideProperties.TextColor = Color3.fromRGB(0, 255, 150)
-      		return overrideProperties
-      	end
-
-      	return nil
+        return nil
       end
+
+      Players.LocalPlayer.CharacterAdded:Connect(function()
+        customChannel:DisplaySystemMessage("This is an error!", "Game.Error.Generic")
+        customChannel:DisplaySystemMessage("Could not find save data!", "Game.Error.SaveDataNotFound")
+
+        customChannel:DisplaySystemMessage("You won the game!", "Game.Info.Win")
+        customChannel:DisplaySystemMessage("You lost the game!", "Game.Info.Lose")
+      end)
       ```
 
       As follows is a reference of the default system messages emitted by the

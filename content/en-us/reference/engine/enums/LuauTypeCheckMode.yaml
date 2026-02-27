@@ -10,6 +10,11 @@ code_samples: []
 tags: []
 deprecation_message: ''
 items:
+  - name: Default
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
   - name: NoCheck
     summary: ''
     value: 1

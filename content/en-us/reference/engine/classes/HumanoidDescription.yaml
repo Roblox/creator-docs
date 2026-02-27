@@ -67,7 +67,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.BackAccessory
     summary: |
       A comma-separated list of asset IDs that will be added as
@@ -109,7 +109,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.BodyTypeScale
     summary: |
       Determines the factor by which the shape of a `Class.Humanoid` is
@@ -152,7 +152,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.ClimbAnimation
     summary: |
       When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
@@ -187,7 +187,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.DepthScale
     summary: |
       Determines by what factor the depth (back-to-front distance) of a
@@ -221,7 +221,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.Face
     summary: |
       Determines the asset ID of the Face to be applied to the `Class.Humanoid`.
@@ -259,7 +259,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.FaceAccessory
     summary: |
       A comma-separated list of asset IDs that will be added as
@@ -304,7 +304,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.FallAnimation
     summary: |
       When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
@@ -341,7 +341,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.FrontAccessory
     summary: |
       A comma-separated list of asset IDs that will be added as
@@ -384,7 +384,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.GraphicTShirt
     summary: |
       Determines the `Class.ShirtGraphic.Graphic|Graphic` used by a
@@ -417,7 +417,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.HairAccessory
     summary: |
       A comma-separated list of asset IDs that will be added as
@@ -459,7 +459,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.HatAccessory
     summary: |
       A comma-separated list of asset IDs that will be added as
@@ -501,7 +501,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.Head
     summary: |
       Determines the asset ID of the Head to be applied to the `Class.Humanoid`.
@@ -539,7 +539,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.HeadColor
     summary: |
       Determines the `Class.BodyColors.HeadColor3` and
@@ -578,7 +578,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.HeadScale
     summary: |
       Determines by what factor the **Head** object of a `Class.Humanoid` is
@@ -617,7 +617,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.HeightScale
     summary: |
       Determines by what factor the height (top-to-bottom distance) of a
@@ -652,7 +652,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.IdleAnimation
     summary: |
       When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
@@ -690,7 +690,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.JumpAnimation
     summary: |
       When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
@@ -727,7 +727,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.LeftArm
     summary: |
       Determines the asset ID of the LeftArm to be applied to the
@@ -762,7 +762,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.LeftArmColor
     summary: |
       Determines the `Class.BodyColors.LeftArmColor3` and
@@ -802,7 +802,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.LeftLeg
     summary: |
       Determines the asset ID of the LeftLeg to be applied to the
@@ -837,7 +837,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.LeftLegColor
     summary: |
       Determines the `Class.BodyColors.LeftLegColor3` and
@@ -877,7 +877,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.MoodAnimation
     summary: ''
     description: ''
@@ -894,7 +894,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.NeckAccessory
     summary: |
       A comma-separated list of asset IDs that will be added as
@@ -941,7 +941,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.Pants
     summary: |
       Determines the `Class.Pants.PantsTemplate|PantsTemplate` used by a
@@ -975,7 +975,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.ProportionScale
     summary: |
       Determines how wide (0) or narrow (1) a `Class.Humanoid` rig is.
@@ -1015,7 +1015,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.RightArm
     summary: |
       Determines the asset ID of the RightArm to be applied to the
@@ -1050,7 +1050,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.RightArmColor
     summary: |
       Determines the `Class.BodyColors.RightArmColor3` and
@@ -1090,7 +1090,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.RightLeg
     summary: |
       Determines the asset ID of the RightLeg to be applied to the
@@ -1125,7 +1125,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.RightLegColor
     summary: |
       Determines the `Class.BodyColors.RightLegColor3` and
@@ -1165,7 +1165,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.RunAnimation
     summary: |
       When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
@@ -1203,7 +1203,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.Shirt
     summary: |
       Determines the `Class.Shirt.ShirtTemplate|ShirtTemplate` used by a
@@ -1239,7 +1239,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.ShouldersAccessory
     summary: |
       A comma-separated list of asset IDs that will be added as
@@ -1282,7 +1282,24 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
+  - name: HumanoidDescription.StaticFacialAnimation
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Animation
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - AvatarAppearance
   - name: HumanoidDescription.SwimAnimation
     summary: |
       When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
@@ -1319,7 +1336,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.Torso
     summary: |
       Determines the asset ID of the Torso to be applied to the
@@ -1354,7 +1371,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.TorsoColor
     summary: |
       Determines the `Class.BodyColors.TorsoColor3` and
@@ -1395,7 +1412,24 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
+  - name: HumanoidDescription.UseAvatarSettings
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - AvatarAppearance
   - name: HumanoidDescription.WaistAccessory
     summary: |
       A comma-separated list of asset IDs that will be added as
@@ -1437,7 +1471,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.WalkAnimation
     summary: |
       When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
@@ -1475,7 +1509,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.WidthScale
     summary: |
       Determines by what factor the width (left-to-right distance) of a
@@ -1510,7 +1544,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - Avatar
+      - AvatarAppearance
 methods:
   - name: HumanoidDescription:AddEmote
     summary: |
@@ -1559,7 +1593,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription:GetAccessories
     summary: |
       Returns a table of an avatar's current accessories.
@@ -1588,7 +1622,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription:GetEmotes
     summary: |
       Returns a dictionary of emotes that have been
@@ -1646,7 +1680,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription:GetEquippedEmotes
     summary: |
       Returns an array of tables describing the equipped emotes that have been
@@ -1699,7 +1733,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription:RemoveEmote
     summary: |
       Removes any emotes that have been added under the given name.
@@ -1736,7 +1770,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription:SetAccessories
     summary: |
       Accepts a table that sets the accessories and related properties for an
@@ -1771,7 +1805,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription:SetEmotes
     summary: |
       Sets all of the emotes on this description.
@@ -1828,7 +1862,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription:SetEquippedEmotes
     summary: |
       Sets the currently equipped emotes given an array of emote names.
@@ -1893,7 +1927,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
 events:
   - name: HumanoidDescription.EmotesChanged
     summary: |
@@ -1939,7 +1973,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: HumanoidDescription.EquippedEmotesChanged
     summary: |
       Fires when the equipped emotes are
@@ -1995,5 +2029,5 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
-      - Avatar
+      - AvatarAppearance
 callbacks: []

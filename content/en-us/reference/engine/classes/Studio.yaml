@@ -600,6 +600,22 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: Studio.CameraNavigationModel
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CameraNavigationModel
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: Studio.CameraOrbitSensitivity
     summary: ''
     description: ''
@@ -712,6 +728,38 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Output
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Studio.CommandBarEnterExec
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Studio.CommandBarFont
+    summary: ''
+    description: ''
+    code_samples: []
+    type: QFont
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Script Editor
     serialization:
       can_load: true
       can_save: true
@@ -886,6 +934,22 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: Studio.DraggerLengthFactor
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: Studio.DraggerMajorGridIncrement
     summary: ''
     description: ''
@@ -934,6 +998,38 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: Studio.DraggerScaleFactor
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Studio.DraggerShowAxisTicks
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: Studio.DraggerShowHoverRuler
     summary: ''
     description: ''
@@ -966,7 +1062,71 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: Studio.DraggerShowNegativeAxes
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Studio.DraggerShowPlanes
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: Studio.DraggerShowTargetSnap
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Studio.DraggerShowTrackball
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Studio.DraggerShowWhileDragging
     summary: ''
     description: ''
     code_samples: []
@@ -1342,6 +1502,22 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+  - name: Studio.ExternalEditorSelection
+    summary: ''
+    description: ''
+    code_samples: []
+    type: QDir
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Directories
+    serialization:
+      can_load: true
+      can_save: true
     capabilities: []
   - name: Studio.Find Selection Background Color
     summary: |
@@ -2884,6 +3060,22 @@ properties:
       write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Tools
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Studio.UseDefaultExternalEditor
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Directories
     serialization:
       can_load: true
       can_save: true

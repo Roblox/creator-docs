@@ -210,6 +210,35 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: InsertService:GetFreeDecals
+    summary: |
+      Retrieves a list of free Decals from the Catalog.
+    description: ''
+    code_samples:
+      - InsertService-GetFreeDecals1
+    parameters:
+      - name: searchText
+        type: string
+        default:
+        summary: |
+          String used to search for free decals in the Catalog.
+      - name: pageNum
+        type: int
+        default:
+        summary: |
+          The page number in the Catalog to return.
+    returns:
+      - type: Array
+        summary: |
+          A single table (of returned free decals) wrapped in a table.
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AssetRead
   - name: InsertService:GetFreeDecalsAsync
     summary: |
       Retrieves a list of free Decals from the Catalog.
@@ -268,12 +297,12 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - AssetRead
-  - name: InsertService:GetFreeDecals
+  - name: InsertService:GetFreeModels
     summary: |
-      Retrieves a list of free Decals from the Catalog.
+      Retrieves a list of Free Models from the Catalog.
     description: ''
     code_samples:
-      - InsertService-GetFreeDecals1
+      - InsertService-GetFreeModels1
     parameters:
       - name: searchText
         type: string
@@ -288,7 +317,7 @@ methods:
     returns:
       - type: Array
         summary: |
-          A single table (of returned free decals) wrapped in a table.
+          A single table (of returned free models) wrapped in a table.
     tags:
       - Yields
       - Deprecated
@@ -348,35 +377,6 @@ methods:
           A single table (of returned free models) wrapped in a table.
     tags:
       - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - AssetRead
-  - name: InsertService:GetFreeModels
-    summary: |
-      Retrieves a list of Free Models from the Catalog.
-    description: ''
-    code_samples:
-      - InsertService-GetFreeModels1
-    parameters:
-      - name: searchText
-        type: string
-        default:
-        summary: |
-          String used to search for free decals in the Catalog.
-      - name: pageNum
-        type: int
-        default:
-        summary: |
-          The page number in the Catalog to return.
-    returns:
-      - type: Array
-        summary: |
-          A single table (of returned free models) wrapped in a table.
-    tags:
-      - Yields
-      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

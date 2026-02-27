@@ -341,6 +341,34 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
+  - name: StudioService:PromptImportFile
+    summary: |
+      Prompts the current Studio user to select one file to add as a
+      `Class.File`.
+    description: ''
+    code_samples: []
+    parameters:
+      - name: fileTypeFilter
+        type: Array
+        default: '{}'
+        summary: |
+          A list of file types that the user is allowed to select. File types
+          are formatted without a period. For example, {"jpg", "png"} would
+          allow only a JPG or PNG file to be selected. If no filter is provided,
+          the filter is `nil` and allows the user to select any file type.
+    returns:
+      - type: Instance
+        summary: |
+          The imported `Class.File`. Returns `nil` if no files were selected, or
+          if the selected file was too large (FileSize greater than 100
+          megabytes).
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
   - name: StudioService:PromptImportFileAsync
     summary: |
       Prompts the current Studio user to select one file to add as a
@@ -375,10 +403,10 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-  - name: StudioService:PromptImportFile
+  - name: StudioService:PromptImportFiles
     summary: |
-      Prompts the current Studio user to select one file to add as a
-      `Class.File`.
+      Prompts the current Studio user to select files to add as
+      `Class.File|Files`.
     description: ''
     code_samples: []
     parameters:
@@ -388,14 +416,14 @@ methods:
         summary: |
           A list of file types that the user is allowed to select. File types
           are formatted without a period. For example, {"jpg", "png"} would
-          allow only a JPG or PNG file to be selected. If no filter is provided,
+          allow only JPG and PNG files to be selected. If no filter is provided,
           the filter is `nil` and allows the user to select any file type.
     returns:
-      - type: Instance
+      - type: Instances
         summary: |
-          The imported `Class.File`. Returns `nil` if no files were selected, or
-          if the selected file was too large (FileSize greater than 100
-          megabytes).
+          The imported `Class.File|Files`. Returns an empty list if no files
+          were selected. Returns `nil` if the user selected one or more files
+          that were too large (FileSize greater than 100 megabytes).
     tags:
       - Yields
       - Deprecated
@@ -435,34 +463,6 @@ methods:
           that were too large (FileSize greater than 100 megabytes).
     tags:
       - Yields
-    deprecation_message: ''
-    security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
-  - name: StudioService:PromptImportFiles
-    summary: |
-      Prompts the current Studio user to select files to add as
-      `Class.File|Files`.
-    description: ''
-    code_samples: []
-    parameters:
-      - name: fileTypeFilter
-        type: Array
-        default: '{}'
-        summary: |
-          A list of file types that the user is allowed to select. File types
-          are formatted without a period. For example, {"jpg", "png"} would
-          allow only JPG and PNG files to be selected. If no filter is provided,
-          the filter is `nil` and allows the user to select any file type.
-    returns:
-      - type: Instances
-        summary: |
-          The imported `Class.File|Files`. Returns an empty list if no files
-          were selected. Returns `nil` if the user selected one or more files
-          that were too large (FileSize greater than 100 megabytes).
-    tags:
-      - Yields
-      - Deprecated
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe

@@ -45,6 +45,23 @@ properties:
       can_save: true
     capabilities:
       - Input
+  - name: InputBinding.ClampMagnitudeToOne
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Composite Directions
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Input
   - name: InputBinding.Down
     summary: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally "down"
@@ -169,6 +186,23 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Composite Directions
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Input
+  - name: InputBinding.PointerIndex
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
     serialization:
       can_load: true
       can_save: true

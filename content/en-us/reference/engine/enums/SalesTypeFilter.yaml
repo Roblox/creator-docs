@@ -25,3 +25,8 @@ items:
     value: 3
     tags: []
     deprecation_message: ''
+  - name: TimedOptions
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''

@@ -90,3 +90,13 @@ items:
     value: 15
     tags: []
     deprecation_message: ''
+  - name: InactivityTimeout
+    summary: ''
+    value: 16
+    tags: []
+    deprecation_message: ''
+  - name: TooManyOutstandingRequests
+    summary: ''
+    value: 17
+    tags: []
+    deprecation_message: ''

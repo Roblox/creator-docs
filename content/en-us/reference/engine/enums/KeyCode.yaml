@@ -1662,3 +1662,23 @@ items:
     value: 1034
     tags: []
     deprecation_message: ''
+  - name: MouseWheel
+    summary: ''
+    value: 1035
+    tags: []
+    deprecation_message: ''
+  - name: TrackpadPan
+    summary: ''
+    value: 1040
+    tags: []
+    deprecation_message: ''
+  - name: TrackpadPinch
+    summary: ''
+    value: 1045
+    tags: []
+    deprecation_message: ''
+  - name: MouseDelta
+    summary: ''
+    value: 1048
+    tags: []
+    deprecation_message: ''

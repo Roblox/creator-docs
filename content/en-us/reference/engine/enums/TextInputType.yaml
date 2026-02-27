@@ -55,3 +55,13 @@ items:
     value: 8
     tags: []
     deprecation_message: ''
+  - name: NewPassword
+    summary: ''
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: NewPasswordShown
+    summary: ''
+    value: 10
+    tags: []
+    deprecation_message: ''

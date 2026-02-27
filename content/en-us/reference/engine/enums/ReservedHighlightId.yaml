@@ -30,3 +30,8 @@ items:
     value: 524288
     tags: []
     deprecation_message: ''
+  - name: NegatedPart
+    summary: ''
+    value: 1048576
+    tags: []
+    deprecation_message: ''

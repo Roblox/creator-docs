@@ -47,7 +47,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: WrapDeformer:GetDeformedCFrameAsync
     summary: |
       Returns a `Datatype.CFrame` deformed comparably to the `Class.MeshPart`.
@@ -75,7 +75,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
   - name: WrapDeformer:SetCageMeshContent
     summary: |
       Sets the cage mesh used to deform against a sibling `Class.WrapTarget`
@@ -103,6 +103,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
-      - Avatar
+      - AvatarAppearance
 events: []
 callbacks: []

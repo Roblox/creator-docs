@@ -3,6 +3,10 @@ title: Blender validation tool
 description: The Avatar Validation Tool checks for common character model issues in Blender.
 ---
 
+<Alert severity = 'warning'>
+This tool is no longer in active development. You are free to use the tool for any purpose. The tool may be out of date or incompatible with modern Roblox assets.
+</Alert>
+
 The **Avatar Validation Tool** is a supplemental Blender add-on you can use to quickly identify common issues with your character model. This tool checks that your model meets most of Roblox's avatar [technical specifications](../../art/characters/specifications.md) and, when possible, attempts to automatically resolve them.
 
 <img src="../../assets/art/avatar/Validation-Tool-Preview.png" width="100%" />
@@ -17,7 +21,7 @@ The Validation Tool plugin is compatible with Blender 3.5.1+. You may experience
 
 To install the Validation Tool in Blender:
 
-1. Download [ValidationTool_Blender.zip](../../assets/art/ValidationTool_V2.zip) and save the .zip file locally. Do not open the .zip file.
+1. Download [ValidationTool_Blender.zip](https://github.com/Roblox/avatar/tree/main/Tools/ClothingValidationTool) and save the .zip file locally. Do not open the .zip file.
 2. In Blender, navigate to **Edit** > **Preferences**.
 3. In Preferences, go to the **Add-Ons** section on the left sidebar.
 

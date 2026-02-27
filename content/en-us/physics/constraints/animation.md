@@ -23,6 +23,10 @@ The constraint's `Class.AnimationConstraint.Transform|Transform` is the internal
 
 When the constraint's `Class.AnimationConstraint.IsKinematic|IsKinematic` property is `true`, the connected parts snap to the [transform](#transform) instantly and precisely without participating in physics simulation. When `false`, the connected parts follow the trajectory using [force and torque](#force-and-torque).
 
+<figure>
+<video controls src="../../assets/physics/constraints/AnimationConstraint-IsKinematic.mp4" width="90%"></video>
+</figure>
+
 ## Force and torque
 
-If the constraint is not [kinematic](#kinematic), the connected parts follow a trajectory toward the [transform](#transform) using a maximum force/torque limited by `Class.AnimationConstraint.MaxForce|MaxForce` and `Class.AnimationConstraint.MaxTorque|MaxTorque` respectively.
+If the constraint is **not** set to [kinematic](#kinematic), the connected parts follow a trajectory toward the [transform](#transform) using a maximum force/torque limited by `Class.AnimationConstraint.MaxForce|MaxForce` and `Class.AnimationConstraint.MaxTorque|MaxTorque` respectively.

@@ -136,6 +136,11 @@ items:
     value: 20
     tags: []
     deprecation_message: ''
+  - name: Web
+    summary: ''
+    value: 21
+    tags: []
+    deprecation_message: ''
   - name: None
     summary: |
       The client's operating system is unknown.

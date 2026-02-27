@@ -134,6 +134,37 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
+  - name: Plugin:CreateDockWidgetPluginGui
+    summary: |
+      Creates a `Class.DockWidgetPluginGui` given a
+      `Datatype.DockWidgetPluginGuiInfo`.
+    description: ''
+    code_samples: []
+    parameters:
+      - name: pluginGuiId
+        type: string
+        default:
+        summary: |
+          A unique and consistent identifier used to storing the widget's dock
+          state and other internal details.
+      - name: dockWidgetPluginGuiInfo
+        type: DockWidgetPluginGuiInfo
+        default:
+        summary: |
+          Describes the `Class.DockWidgetPluginGui` to create (initial state,
+          size, etc).
+    returns:
+      - type: DockWidgetPluginGui
+        summary: ''
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Plugin:CreateDockWidgetPluginGuiAsync()|CreateDockWidgetPluginGuiAsync()`.
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
   - name: Plugin:CreateDockWidgetPluginGuiAsync
     summary: |
       Creates a `Class.DockWidgetPluginGui` given a
@@ -164,37 +195,6 @@ methods:
     tags:
       - Yields
     deprecation_message: ''
-    security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
-  - name: Plugin:CreateDockWidgetPluginGui
-    summary: |
-      Creates a `Class.DockWidgetPluginGui` given a
-      `Datatype.DockWidgetPluginGuiInfo`.
-    description: ''
-    code_samples: []
-    parameters:
-      - name: pluginGuiId
-        type: string
-        default:
-        summary: |
-          A unique and consistent identifier used to storing the widget's dock
-          state and other internal details.
-      - name: dockWidgetPluginGuiInfo
-        type: DockWidgetPluginGuiInfo
-        default:
-        summary: |
-          Describes the `Class.DockWidgetPluginGui` to create (initial state,
-          size, etc).
-    returns:
-      - type: DockWidgetPluginGui
-        summary: ''
-    tags:
-      - Yields
-      - Deprecated
-    deprecation_message: |
-      This method has been superseded by
-      `Class.Plugin:CreateDockWidgetPluginGuiAsync()|CreateDockWidgetPluginGuiAsync()`.
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
@@ -428,34 +428,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-  - name: Plugin:ImportFbxAnimationAsync
-    summary: |
-      Prompts the user to open a `.fbx` animation file that can be loaded onto
-      the `rigModel`, then proceeds to insert the animation as a
-      `Class.KeyframeSequence` in the `Class.Workspace`.
-    description: |
-      This function prompts the user to open a `.fbx` animation file that can be
-      loaded onto the `rigModel`, then proceeds to insert the animation as a
-      `Class.KeyframeSequence` in the `Class.Workspace`.
-    code_samples: []
-    parameters:
-      - name: rigModel
-        type: Instance
-        default:
-        summary: ''
-      - name: isR15
-        type: boolean
-        default: true
-        summary: ''
-    returns:
-      - type: Instance
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
   - name: Plugin:ImportFbxAnimation
     summary: |
       Prompts the user to open a `.fbx` animation file that can be loaded onto
@@ -482,17 +454,21 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-  - name: Plugin:ImportFbxRigAsync
+  - name: Plugin:ImportFbxAnimationAsync
     summary: |
-      Prompts the user to open a `.fbx` file, uploads the individual components
-      of the model as meshes, and generates a character rig for use in
-      animation, which is loaded into the `Class.Workspace`.
+      Prompts the user to open a `.fbx` animation file that can be loaded onto
+      the `rigModel`, then proceeds to insert the animation as a
+      `Class.KeyframeSequence` in the `Class.Workspace`.
     description: |
-      Prompts the user to open a `.fbx` file, uploads the individual components
-      of the model as meshes, and generates a character rig for use in
-      animation, which is loaded into the `Class.Workspace`.
+      This function prompts the user to open a `.fbx` animation file that can be
+      loaded onto the `rigModel`, then proceeds to insert the animation as a
+      `Class.KeyframeSequence` in the `Class.Workspace`.
     code_samples: []
     parameters:
+      - name: rigModel
+        type: Instance
+        default:
+        summary: ''
       - name: isR15
         type: boolean
         default: true
@@ -527,6 +503,30 @@ methods:
     deprecation_message: |
       This method has been superseded by
       `Class.Plugin:ImportFbxRigAsync()|ImportFbxRigAsync()`.
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
+  - name: Plugin:ImportFbxRigAsync
+    summary: |
+      Prompts the user to open a `.fbx` file, uploads the individual components
+      of the model as meshes, and generates a character rig for use in
+      animation, which is loaded into the `Class.Workspace`.
+    description: |
+      Prompts the user to open a `.fbx` file, uploads the individual components
+      of the model as meshes, and generates a character rig for use in
+      animation, which is loaded into the `Class.Workspace`.
+    code_samples: []
+    parameters:
+      - name: isR15
+        type: boolean
+        default: true
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
@@ -668,29 +668,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-  - name: Plugin:PromptForExistingAssetIdAsync
-    summary: |
-      Opens a window in Roblox Studio which prompts the user to select an asset
-      based on the `assetType` specified.
-    description: |
-      Opens a window in Roblox Studio which prompts the user to select an asset
-      based on the `assetType` specified. Returns what asset ID was selected, or
-      `-1` if the window was closed.
-    code_samples: []
-    parameters:
-      - name: assetType
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: int64
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
   - name: Plugin:PromptForExistingAssetId
     summary: |
       Opens a window in Roblox Studio which prompts the user to select an asset
@@ -711,21 +688,22 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-  - name: Plugin:PromptSaveSelectionAsync
+  - name: Plugin:PromptForExistingAssetIdAsync
     summary: |
-      Prompts the user to save their current selection with the specified file
-      name.
+      Opens a window in Roblox Studio which prompts the user to select an asset
+      based on the `assetType` specified.
     description: |
-      Prompts the user to save their current selection with the specified file
-      name. Returns `true` if the user did save the file.
+      Opens a window in Roblox Studio which prompts the user to select an asset
+      based on the `assetType` specified. Returns what asset ID was selected, or
+      `-1` if the window was closed.
     code_samples: []
     parameters:
-      - name: suggestedFileName
+      - name: assetType
         type: string
         default:
         summary: ''
     returns:
-      - type: boolean
+      - type: int64
         summary: ''
     tags:
       - Yields
@@ -753,6 +731,28 @@ methods:
     deprecation_message: |
       This method has been superseded by
       `Class.Plugin:PromptSaveSelectionAsync()|PromptSaveSelectionAsync()`.
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
+  - name: Plugin:PromptSaveSelectionAsync
+    summary: |
+      Prompts the user to save their current selection with the specified file
+      name.
+    description: |
+      Prompts the user to save their current selection with the specified file
+      name. Returns `true` if the user did save the file.
+    code_samples: []
+    parameters:
+      - name: suggestedFileName
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []

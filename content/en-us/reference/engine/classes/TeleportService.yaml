@@ -6,10 +6,8 @@ name: TeleportService
 type: class
 memory_category: Instances
 summary: |
-  Enables transporting `Class.Player|Players` between places and servers.
-
-      For more information on how to teleport players between servers, see
-
+  Enables transporting `Class.Player|Players` between places and servers. For
+  more information on how to teleport players between servers, see
   [Teleport between places](../../../projects/teleport.md).
 description: |
   **TeleportService** is responsible for transporting `Class.Player|Players`
@@ -344,6 +342,35 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Teleport
+  - name: TeleportService:ReserveServer
+    summary: |
+      Returns an access code that can be used to teleport players to a reserved
+      server, along with the `Class.DataModel.PrivateServerId` for it.
+    description: ''
+    code_samples:
+      - TeleportService-ReserveServer1
+      - teleportservice-teleport-to-a-reserved-server-via-chat
+    parameters:
+      - name: placeId
+        type: int64
+        default:
+        summary: |
+          The `Class.DataModel.PlaceId` of the place the reserved server is
+          being created for.
+    returns:
+      - type: Tuple
+        summary: |
+          The server access code required by
+          `Class.TeleportService:TeleportToPrivateServer()` and the
+          `Class.DataModel.PrivateServerId` for the reserved server.
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Teleport
   - name: TeleportService:ReserveServerAsync
     summary: |
       Returns an access code that can be used to teleport players to a reserved
@@ -408,35 +435,6 @@ methods:
           `Class.DataModel.PrivateServerId` for the reserved server.
     tags:
       - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Teleport
-  - name: TeleportService:ReserveServer
-    summary: |
-      Returns an access code that can be used to teleport players to a reserved
-      server, along with the `Class.DataModel.PrivateServerId` for it.
-    description: ''
-    code_samples:
-      - TeleportService-ReserveServer1
-      - teleportservice-teleport-to-a-reserved-server-via-chat
-    parameters:
-      - name: placeId
-        type: int64
-        default:
-        summary: |
-          The `Class.DataModel.PlaceId` of the place the reserved server is
-          being created for.
-    returns:
-      - type: Tuple
-        summary: |
-          The server access code required by
-          `Class.TeleportService:TeleportToPrivateServer()` and the
-          `Class.DataModel.PrivateServerId` for the reserved server.
-    tags:
-      - Yields
-      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

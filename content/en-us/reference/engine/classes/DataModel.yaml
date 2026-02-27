@@ -442,6 +442,24 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
+  - name: DataModel.RunService
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
   - name: DataModel.VIPServerId
     summary: |
       A string that could identify the current server as a private server.

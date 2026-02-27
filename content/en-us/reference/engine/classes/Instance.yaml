@@ -30,6 +30,7 @@ descendants:
   - AnimationClipProvider
   - AnimationController
   - AnimationFromVideoCreatorService
+  - AnimationNodeDefinition
   - AnimationRigData
   - AnimationTrack
   - Animator
@@ -67,6 +68,7 @@ descendants:
   - AvatarEditorService
   - Backpack
   - BadgeService
+  - BaseCoreGuiConfiguration
   - BasePlayerGui
   - BaseRemoteEvent
   - BaseWrap
@@ -96,6 +98,7 @@ descendants:
   - ControllerManager
   - ControllerService
   - CookiesService
+  - CoreGuiConfiguration
   - CustomEvent
   - CustomEventReceiver
   - CustomLog
@@ -143,7 +146,6 @@ descendants:
   - GuiBase
   - GuiService
   - GuidRegistryService
-  - HandRigDescription
   - HapticEffect
   - HapticService
   - HeapProfilerService
@@ -177,6 +179,7 @@ descendants:
   - LuaSourceContainer
   - LuaWebService
   - MLService
+  - MakeupDescription
   - MarkerCurve
   - MarketplaceService
   - MatchmakingService
@@ -371,7 +374,9 @@ descendants:
   - StyleDerive
   - StyleLink
   - Annotation
+  - RemoteCommandService
   - ServiceVisibilityService
+  - UniqueIdLookupService
   - GetTextBoundsParams
 tags:
   - NotCreatable

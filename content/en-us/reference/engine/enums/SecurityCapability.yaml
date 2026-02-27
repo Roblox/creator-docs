@@ -125,3 +125,153 @@ items:
     value: 22
     tags: []
     deprecation_message: ''
+  - name: Plugin
+    summary: ''
+    value: 23
+    tags: []
+    deprecation_message: ''
+  - name: LocalUser
+    summary: ''
+    value: 24
+    tags: []
+    deprecation_message: ''
+  - name: WritePlayer
+    summary: ''
+    value: 25
+    tags: []
+    deprecation_message: ''
+  - name: RobloxScript
+    summary: ''
+    value: 26
+    tags: []
+    deprecation_message: ''
+  - name: RobloxEngine
+    summary: ''
+    value: 27
+    tags: []
+    deprecation_message: ''
+  - name: Unassigned
+    summary: ''
+    value: 28
+    tags: []
+    deprecation_message: ''
+  - name: InternalTest
+    summary: ''
+    value: 29
+    tags: []
+    deprecation_message: ''
+  - name: PluginOrOpenCloud
+    summary: ''
+    value: 30
+    tags: []
+    deprecation_message: ''
+  - name: Assistant
+    summary: ''
+    value: 31
+    tags: []
+    deprecation_message: ''
+  - name: RemoteCommand
+    summary: ''
+    value: 32
+    tags: []
+    deprecation_message: ''
+  - name: AssetRead
+    summary: ''
+    value: 33
+    tags: []
+    deprecation_message: ''
+  - name: AssetManagement
+    summary: ''
+    value: 34
+    tags: []
+    deprecation_message: ''
+  - name: DynamicGeneration
+    summary: ''
+    value: 35
+    tags: []
+    deprecation_message: ''
+  - name: PlatformAvatarEditing
+    summary: ''
+    value: 36
+    tags: []
+    deprecation_message: ''
+  - name: AssetCreateUpdate
+    summary: ''
+    value: 37
+    tags: []
+    deprecation_message: ''
+  - name: Capture
+    summary: ''
+    value: 38
+    tags: []
+    deprecation_message: ''
+  - name: SensitiveInput
+    summary: ''
+    value: 39
+    tags: []
+    deprecation_message: ''
+  - name: Monetization
+    summary: ''
+    value: 40
+    tags: []
+    deprecation_message: ''
+  - name: LoadOwnedAsset
+    summary: ''
+    value: 41
+    tags: []
+    deprecation_message: ''
+  - name: Social
+    summary: ''
+    value: 42
+    tags: []
+    deprecation_message: ''
+  - name: ServerCommunication
+    summary: ''
+    value: 43
+    tags: []
+    deprecation_message: ''
+  - name: Logging
+    summary: ''
+    value: 44
+    tags: []
+    deprecation_message: ''
+  - name: PromptExternalPurchase
+    summary: ''
+    value: 45
+    tags: []
+    deprecation_message: ''
+  - name: Groups
+    summary: ''
+    value: 46
+    tags: []
+    deprecation_message: ''
+  - name: Teleport
+    summary: ''
+    value: 47
+    tags: []
+    deprecation_message: ''
+  - name: Consequences
+    summary: ''
+    value: 48
+    tags: []
+    deprecation_message: ''
+  - name: Material
+    summary: ''
+    value: 49
+    tags: []
+    deprecation_message: ''
+  - name: AvatarBehavior
+    summary: ''
+    value: 50
+    tags: []
+    deprecation_message: ''
+  - name: AvatarAppearance
+    summary: ''
+    value: 51
+    tags: []
+    deprecation_message: ''
+  - name: LoadUnownedAsset
+    summary: ''
+    value: 52
+    tags: []
+    deprecation_message: ''

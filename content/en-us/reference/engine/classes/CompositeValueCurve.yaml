@@ -63,6 +63,29 @@ properties:
     capabilities:
       - Basic
 methods:
+  - name: CompositeValueCurve:GetComponentCurves
+    summary: |
+      Returns the child curves with the given names for the
+      `Class.CompositeValueCurve.CurveType|CurveType` of this
+      `Class.CompositeValueCurve`.
+    description: |
+      This method returns the child curves with the given names for the
+      `Class.CompositeValueCurve.CurveType|CurveType` of this
+      `Class.CompositeValueCurve`, in the order given by the list of child
+      curves outlined at the top of this page. Any curve that does not exist
+      prior to calling this method will be created and added as a child with the
+      appropriate name. That new curve will be an empty `Class.FloatCurve`.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Instances
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Basic
   - name: CompositeValueCurve:GetValueAtTime
     summary: |
       Returns the sampled animated value at the passed `time` argument.
@@ -89,29 +112,6 @@ methods:
       - type: Variant
         summary: |
           The value of the curve at the passed time.
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Basic
-  - name: CompositeValueCurve:GetComponentCurves
-    summary: |
-      Returns the child curves with the given names for the
-      `Class.CompositeValueCurve.CurveType|CurveType` of this
-      `Class.CompositeValueCurve`.
-    description: |
-      This method returns the child curves with the given names for the
-      `Class.CompositeValueCurve.CurveType|CurveType` of this
-      `Class.CompositeValueCurve`, in the order given by the list of child
-      curves outlined at the top of this page. Any curve that does not exist
-      prior to calling this method will be created and added as a child with the
-      appropriate name. That new curve will be an empty `Class.FloatCurve`.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Instances
-        summary: ''
     tags: []
     deprecation_message: ''
     security: None

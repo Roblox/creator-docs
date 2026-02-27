@@ -119,6 +119,30 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
+  - name: AnimationClipProvider:GetAnimations
+    summary: |
+      This function returns an `Class.InventoryPages` object which can be used
+      to iterate over animations owned by a specific user.
+    description: ''
+    code_samples: []
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: |
+          The user ID of the user.
+    returns:
+      - type: Instance
+        summary: |
+          An `Class.InventoryPages` of animations.
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Animation
   - name: AnimationClipProvider:GetAnimationsAsync
     summary: |
       This function returns an `Class.InventoryPages` object which can be used
@@ -142,30 +166,6 @@ methods:
           An `Class.InventoryPages` of animations.
     tags:
       - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Animation
-  - name: AnimationClipProvider:GetAnimations
-    summary: |
-      This function returns an `Class.InventoryPages` object which can be used
-      to iterate over animations owned by a specific user.
-    description: ''
-    code_samples: []
-    parameters:
-      - name: userId
-        type: int64
-        default:
-        summary: |
-          The user ID of the user.
-    returns:
-      - type: Instance
-        summary: |
-          An `Class.InventoryPages` of animations.
-    tags:
-      - Yields
-      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

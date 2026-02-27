@@ -58,8 +58,8 @@ To create a custom Roblox accessory for your own experience or to sell on the Ma
   - [Clothing creation tutorial](../../art/accessories/creating/index.md) - a step-by-step process of creating your own avatar-ready clothing from scratch in Blender.
 - [Additional tools, resources, and guides](#resources) provided by Roblox to standardize and expedite the creation process.
 
-<Alert severity = 'info'>
-If you are a developer and are looking for information on manually equipping or configuring layered clothing accessories within an experience, including implementing layered clothing on a non-standard character model, see [Character appearance](../../characters/appearance.md).
+<Alert severity = 'warning'>
+If you are a developer and are looking for information on manually equipping or configuring layered clothing accessories within an experience, including [implementing layered clothing on a non-standard character model](../../characters/appearance.md#layered-clothing-on-non-r15), see [Character appearance](../../characters/appearance.md).
 </Alert>
 
 Roblox also supports [classic clothing](#classic-clothing), 2D images that can be applied to your character's surface.

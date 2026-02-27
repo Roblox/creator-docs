@@ -121,8 +121,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
-      This deprecated property is a variant of `Class.AnalyticsService:LogCustomEvent()` which should be used instead.
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -180,9 +179,10 @@ methods:
       This function has been deprecated in favor of more descriptive methods,
       including:
 
-      - `Class.AnalyticsService:LogCustomEvent()`
-      - `Class.AnalyticsService:LogEconomyEvent()`
-      - `Class.AnalyticsService:LogProgressionEvent()`
+      - `Class.AnalyticsService:FireCustomEvent()`
+      - `Class.AnalyticsService:FireInGameEconomyEvent()`
+      - `Class.AnalyticsService:FireLogEvent()`
+      - `Class.AnalyticsService:FirePlayerProgressionEvent()`
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -302,8 +302,7 @@ methods:
           No return.
     tags:
       - Deprecated
-    deprecation_message: |
-      This deprecated property is a variant of `Class.AnalyticsService:LogEconomyEvent()` which should be used instead.
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -541,8 +540,7 @@ methods:
           No return.
     tags:
       - Deprecated
-    deprecation_message: |
-      This deprecated property is a variant of `Class.AnalyticsService:LogProgressionEvent()` which should be used instead.
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities:

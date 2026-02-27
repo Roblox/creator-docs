@@ -152,6 +152,7 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
           <li>The 3D Importer provides a 3D preview, various error-checking, and many customizable import settings.</li>
           </ul>
           <li>`.rbxm` or `.rbxmx` files edited outside of [Roblox Studio](../../studio/setup.md) might not upload or function.</li>
+          <li>Will be uploaded as [packages](../../projects/assets/packages.md)</li>
         </ul>
       </td>
     </tr>
@@ -175,6 +176,7 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
           <li>Up to 4096x2160 resolution.</li>
           <li>Up to 3.75 GB.</li>
           <li>Up to 20 uploads per day if you're 13+ and ID-verified.</li>
+          <li>Not available for updating.</li>
         </ul>
       </td>
     </tr>

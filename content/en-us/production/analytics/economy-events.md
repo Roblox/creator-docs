@@ -111,7 +111,7 @@ For more information, see [Custom fields](./custom-fields.md).
 
 ## Use economy to grow your experience
 
-The Economy dashboard includes five charts to help you take action to grow your revenue. You can add up to five currencies of resources, and all charts can be filtered by gender, age group, platform, OS, and up to three custom fields specific to your experience.
+The Economy dashboard includes five charts to help you take action to grow your revenue. You can add up to five currencies of resources, and all charts can be filtered by various user categories (gender, age, platform, etc.) and up to three custom fields specific to your experience.
 
 - **Total sources and sinks by category** - Use this chart to balance your in-experience economy. Total sources subtract total sinks should be close to zero. You can also see your top sources and sinks by category. If your net total is growing, consider adding more sinks.
 
