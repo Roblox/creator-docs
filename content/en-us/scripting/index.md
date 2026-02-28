@@ -1,4 +1,7 @@
----
+auto ready
+fly
+walk in walls
+spawn brainrot's---
 title: Scripting
 description: An introduction to scripting in Roblox with the Luau programming language.
 ---
