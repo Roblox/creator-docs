@@ -22,4 +22,8 @@ you want to ensure that anything that's meant to change the ``Datatype.CFrame`` 
 
 ### BoundKeys
 
-By default, the ``MouseLockController`` will create a ``Class.StringValue`` named ``BoundKeys``. By default it is set to ``"LeftShift,RightShift"`` with comma-separated values. They're named based off `Enum.KeyCode` and the values can be overwritten to change the bindings that should be used to trigger Mouse Lock <i>(Shift-Lock)</i>.
+By default, the ``MouseLockController`` will create a ``Class.StringValue`` named ``BoundKeys``, placed under the module. By default it is set to ``"LeftShift,RightShift"`` with comma-separated values. They're named based off `Enum.KeyCode` and the values can be overwritten to change the bindings that should be used to trigger Mouse Lock <i>(Shift-Lock)</i>.
+
+### CursorImage
+
+``CusorImage`` is a ``Class.StringValue`` that is placed under the module. The value by default contains ``rbxasset://textures/MouseLockedCursor.png`` and can be overwritten. It's not present until Mouse Lock is triggered for the first time, but any ``StringValue`` with the same name can be placed under the module to overwrite the image ahead.
