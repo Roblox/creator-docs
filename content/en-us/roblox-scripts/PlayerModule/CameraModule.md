@@ -17,3 +17,9 @@ The order is important. For instance, if the ``CameraModule`` changes the ``Data
 you want to ensure that anything that's meant to change the ``Datatype.CFrame`` again runs first, before reading the ``Datatype.CFrame``, if you're expecting a different your custom modified values.
 
 ``Class.RunService:BindToRenderStep()|:BindToRenderStep()`` runs before ``Class.RunService.RenderStep``.
+
+## MouseLockController
+
+### BoundKeys
+
+By default, the ``MouseLockController`` will create a ``Class.StringValue`` named ``BoundKeys``. By default it is set to ``"LeftShift,RightShift"`` with comma-separated values. They're named based off `Enum.KeyCode` and the values can be overwritten to change the bindings that should be used to trigger Mouse Lock <i>(Shift-Lock)</i>.
