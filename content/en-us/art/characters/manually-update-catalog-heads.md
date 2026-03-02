@@ -136,7 +136,9 @@ Import your head back into Studio and verify that it passes validation. If valid
     2.  Select **Development Item**.
     3.  Set its **Asset Category** to Model.
     4.  Save the model to Roblox (no publishing fees are incurred).
-        1.  Get the asset ID of the head asset (not the body bundle).
+    5.  After saving to Roblox, save the asset ID provided.
+        1.  While you can submit either the head or body asset, there is no distinction between head and body asset when saving as a development item.
+        2.  For submission to the web form, we prefer that you get the asset ID of the head, but you can use either the head or body asset ID and Roblox will replace the head accordingly.
 
 ## 5. Provide the assetID of your updated head
 
@@ -153,5 +155,6 @@ Roblox has published a series of documentation and video tutorials on best pract
 
 - [Dynamic head overview](./facial-animation/)
 - [Head validation process](./head-validation.md)
+- [Head validation video guide](https://www.youtube.com/watch?v=OwhkWzSBnf0)
 - [Avatar Auto-Setup](../../avatar-setup/auto-setup.md)
 - [Caging Best Practices](../accessories/caging-best-practices.md)
