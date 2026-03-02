@@ -1,0 +1,19 @@
+{
+  "extensionsToTreatAsEsm": [".ts", ".mts"],
+  "testEnvironment": "node",
+  "testRegex": "(\\.|/)test\\.[jt]sx?$",
+  "transform": {
+    "^.+\\.[m]?ts$": [
+      "ts-jest",
+      {
+        "useESM": true
+      }
+    ]
+  },
+  "moduleNameMapper": {
+    "^(\\.{1,2}/.*)\\.js$": "$1",
+    "^(\\.{1,2}/.*)\\.mjs$": "$1.mts"
+  },
+  "automock": false,
+  "testPathIgnorePatterns": ["/node_modules/", "\\.github/"]
+}
