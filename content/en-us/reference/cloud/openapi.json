@@ -1669,7 +1669,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 300
+            "maxInPeriod": 10000
           }
         },
         "x-roblox-scopes": [
@@ -3178,7 +3178,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 300
+            "maxInPeriod": 10000
           }
         },
         "x-roblox-scopes": [
@@ -20640,6 +20640,62 @@
         ]
       }
     },
+    "/v2/avatar": {
+      "patch": {
+        "summary": "Sets the avatar to the incoming avatar using field masks.",
+        "description": "Only allows items that you own, are not expired, and are wearable asset types.\r\nAny assets being worn before this method is called are automatically removed.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.UpdateAvatarRequestModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.UpdateAvatarRequestModel"
+              }
+            }
+          },
+          "description": "Model of avatar that we are updating to.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.UpdateAvatarResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.UpdateAvatarResponseModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "3: Invalid assetId\r\n5: Meta does not apply to specified asset type\r\n7: Required meta is not provided for the specific asset type"
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          },
+          "500": {
+            "description": "2: Failed to wear asset."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://avatar.roblox.com"
+          }
+        ]
+      }
+    },
     "/v2/outfits/{userOutfitId}": {
       "patch": {
         "tags": ["Avatars"],
@@ -24776,7 +24832,7 @@
           {
             "url": "https://apis.roblox.com/toolbox-service/v2/assets/{id}",
             "httpMethod": "GET",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/assets#get_toolbox_service_v2_assets__id_"
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/assets#Toolbox_GetAssetDetails"
           }
         ]
       }
@@ -40606,7 +40662,9 @@
                 "JoinGroup",
                 "LeaveGroup",
                 "UpdateGroupIcon",
-                "UpdateGroupCoverPhoto"
+                "UpdateGroupCoverPhoto",
+                "AssignRole",
+                "UnassignRole"
               ]
             }
           },
@@ -40797,7 +40855,9 @@
                 "JoinGroup",
                 "LeaveGroup",
                 "UpdateGroupIcon",
-                "UpdateGroupCoverPhoto"
+                "UpdateGroupCoverPhoto",
+                "AssignRole",
+                "UnassignRole"
               ]
             }
           },
@@ -59436,6 +59496,7 @@
       "get": {
         "tags": ["Creator Store"],
         "summary": "Gets saves from a collection.",
+        "operationId": "Saves_GetSaves",
         "parameters": [
           {
             "name": "targetType",
@@ -59613,12 +59674,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/creator-store#get_toolbox_service_v1_saves"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/creator-store#Saves_GetSaves"
         }
       },
       "post": {
         "tags": ["Creator Store"],
         "summary": "Creates a save.",
+        "operationId": "Saves_CreateSave",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -59751,12 +59813,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/creator-store#post_toolbox_service_v1_saves"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/creator-store#Saves_CreateSave"
         }
       },
       "delete": {
         "tags": ["Creator Store"],
         "summary": "Deletes a save.",
+        "operationId": "Saves_DeleteSave",
         "parameters": [
           {
             "name": "targetType",
@@ -59873,7 +59936,7 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/creator-store#delete_toolbox_service_v1_saves"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/creator-store#Saves_DeleteSave"
         }
       }
     },
@@ -59881,6 +59944,7 @@
       "post": {
         "tags": ["Creator Store"],
         "summary": "Bulk deletes saves.\r\nMax of 5000 saves per request.",
+        "operationId": "Saves_BulkDeleteSaves",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -60002,7 +60066,7 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/creator-store#post_toolbox_service_v1_saves_bulkDelete"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/creator-store#Saves_BulkDeleteSaves"
         }
       }
     },
@@ -60011,6 +60075,7 @@
         "tags": ["Assets", "Creator Store"],
         "summary": "Search Creator Store Assets",
         "description": "Search Creator Store for assets.",
+        "operationId": "Toolbox_SearchCreatorStoreAssetsDeprecated",
         "parameters": [
           {
             "name": "searchCategoryType",
@@ -60432,7 +60497,7 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#get_toolbox_service_v2_assets_search"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#Toolbox_SearchCreatorStoreAssetsDeprecated"
         }
       }
     },
@@ -60441,6 +60506,7 @@
         "tags": ["Assets", "Creator Store"],
         "summary": "Get Creator Store Asset Details",
         "description": "Get details for a single Creator Store asset.",
+        "operationId": "Toolbox_GetAssetDetails",
         "parameters": [
           {
             "name": "id",
@@ -60548,7 +60614,7 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#get_toolbox_service_v2_assets__id_"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#Toolbox_GetAssetDetails"
         }
       }
     },
@@ -73861,6 +73927,70 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Api.Avatar.Models.UpdateAvatarDataModel": {
+        "description": "A model containing details about an avatar.",
+        "type": "object",
+        "properties": {
+          "scales": {
+            "$ref": "#/components/schemas/Roblox.Web.Responses.Avatar.ScaleModel"
+          },
+          "playerAvatarType": {
+            "format": "int32",
+            "description": "The avatar type.",
+            "enum": [1, 3],
+            "type": "integer"
+          },
+          "bodyColors": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.BodyColors3Model"
+          },
+          "assets": {
+            "description": "The assets worn on the character.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AssetWearModel"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.UpdateAvatarRequestModel": {
+        "description": "A model containing details about an avatar update request.",
+        "type": "object",
+        "properties": {
+          "updateMask": {
+            "description": "Update mask specifying which avatar fields to update (can include multiple).\r\nAcceptable values:\r\n- UpdateAvatarType: updates avatar.type (R6/R15)\r\n- UpdateScales: updates avatar.scale\r\n- UpdateBodyColors: updates avatar.body_color_set\r\n- UpdateAssets: updates avatar.avatar_assets",
+            "type": "array",
+            "items": {
+              "format": "int32",
+              "description": " ['Invalid' = 0, 'UpdateScales' = 1, 'UpdateAvatarType' = 2, 'UpdateBodyColors' = 3, 'UpdateAssets' = 4]",
+              "enum": [0, 1, 2, 3, 4],
+              "type": "integer"
+            }
+          },
+          "data": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.UpdateAvatarDataModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.UpdateAvatarResponseModel": {
+        "description": "A model for update avatar responses.",
+        "type": "object",
+        "properties": {
+          "invalidAssets": {
+            "description": "The assets that could not be worn\r\nUnlike invalidAssetIds, only contains assets that are wearable types.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AssetModelV2"
+            }
+          },
+          "success": {
+            "description": "Whether or not all the outfit contents were successfully worn.",
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Api.Avatar.Models.WearRequestModel": {
         "description": "A model that contains a list of AssetWear models",
         "type": "object",
@@ -80170,6 +80300,57 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Groups.Api.GroupDetailResponse": {
+        "description": "A detailed group response model",
+        "type": "object",
+        "properties": {
+          "id": {
+            "format": "int64",
+            "description": "The group id",
+            "type": "integer"
+          },
+          "name": {
+            "description": "The group name",
+            "type": "string"
+          },
+          "description": {
+            "description": "The group description",
+            "type": "string"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/Roblox.Groups.Api.Models.Response.UserModel"
+          },
+          "shout": {
+            "$ref": "#/components/schemas/Roblox.Groups.Api.ShoutResponse"
+          },
+          "memberCount": {
+            "format": "int32",
+            "description": "The number of members in the group",
+            "type": "integer"
+          },
+          "isBuildersClubOnly": {
+            "description": "Whether the group is Builders Club only",
+            "type": "boolean"
+          },
+          "publicEntryAllowed": {
+            "description": "Whether the group is public (no approval required)",
+            "type": "boolean"
+          },
+          "isLocked": {
+            "description": "Whether the group is locked",
+            "type": "boolean"
+          },
+          "hasVerifiedBadge": {
+            "description": "Whether the group has a verified badge.",
+            "type": "boolean"
+          },
+          "hasSocialModules": {
+            "description": "Whether the group has social modules enabled (e.g. Forums)\r\n(determines if \"Followers\" vs \"Members\" should be shown).",
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Groups.Api.GroupMembershipResponse": {
         "description": "A basic group membership response model",
         "type": "object",
@@ -80181,7 +80362,7 @@
             "$ref": "#/components/schemas/Roblox.Web.Responses.Groups.GroupRoleBasicResponse"
           },
           "isNotificationsEnabled": {
-            "description": "Whether the group notification preferences are enabled for the user",
+            "description": "Whether the group notification preferences are enabled for the user\r\nTODO: Deprecate this field - it only returns if announcement notifications are enabled and that information is already returned in the NotificationPreferences list below",
             "type": "boolean"
           },
           "notificationPreferences": {
@@ -80336,6 +80517,29 @@
             "type": "string"
           },
           "displayName": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Groups.Api.ShoutResponse": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "description": "The shout's message",
+            "type": "string"
+          },
+          "poster": {
+            "$ref": "#/components/schemas/Roblox.Groups.Api.Models.Response.UserModel"
+          },
+          "created": {
+            "format": "date-time",
+            "description": "The shout's created time",
+            "type": "string"
+          },
+          "updated": {
+            "format": "date-time",
+            "description": "The shout's last updated time",
             "type": "string"
           }
         },
@@ -80703,57 +80907,6 @@
           "newDescription": {
             "description": "The new description returned",
             "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Groups.Api.GroupDetailResponse": {
-        "description": "A detailed group response model",
-        "type": "object",
-        "properties": {
-          "id": {
-            "format": "int64",
-            "description": "The group id",
-            "type": "integer"
-          },
-          "name": {
-            "description": "The group name",
-            "type": "string"
-          },
-          "description": {
-            "description": "The group description",
-            "type": "string"
-          },
-          "owner": {
-            "$ref": "#/components/schemas/Roblox.Groups.Api.Models.Response.UserModel"
-          },
-          "shout": {
-            "$ref": "#/components/schemas/Roblox.Groups.Api.ShoutResponse"
-          },
-          "memberCount": {
-            "format": "int32",
-            "description": "The number of members in the group",
-            "type": "integer"
-          },
-          "isBuildersClubOnly": {
-            "description": "Whether the group is Builders Club only",
-            "type": "boolean"
-          },
-          "publicEntryAllowed": {
-            "description": "Whether the group is public (no approval required)",
-            "type": "boolean"
-          },
-          "isLocked": {
-            "description": "Whether the group is locked",
-            "type": "boolean"
-          },
-          "hasVerifiedBadge": {
-            "description": "Whether the group has a verified badge.",
-            "type": "boolean"
-          },
-          "hasSocialModules": {
-            "description": "Whether the group has social modules enabled (e.g. Forums)\r\n(determines if \"Followers\" vs \"Members\" should be shown).",
-            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -81710,29 +81863,6 @@
             "format": "int32",
             "description": "The maximum rank a role can have",
             "type": "integer"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Groups.Api.ShoutResponse": {
-        "type": "object",
-        "properties": {
-          "body": {
-            "description": "The shout's message",
-            "type": "string"
-          },
-          "poster": {
-            "$ref": "#/components/schemas/Roblox.Groups.Api.Models.Response.UserModel"
-          },
-          "created": {
-            "format": "date-time",
-            "description": "The shout's created time",
-            "type": "string"
-          },
-          "updated": {
-            "format": "date-time",
-            "description": "The shout's last updated time",
-            "type": "string"
           }
         },
         "additionalProperties": false
@@ -91681,8 +91811,8 @@
           "post_legacy_publish_v1_badges__badgeId__icon",
           "publish_post_v1_badges__badgeId__icon",
           "badges_post_v1_badges__badgeId__icon",
-          "get_toolbox_service_v2_assets_search",
-          "get_toolbox_service_v2_assets__id_",
+          "Toolbox_SearchCreatorStoreAssetsDeprecated",
+          "Toolbox_GetAssetDetails",
           "patch_asset_permissions_api_v1_assets_permissions",
           "assetdelivery_get_v1_asset",
           "get_asset_delivery_api_v1_assetId__assetId_",
@@ -91904,12 +92034,12 @@
           "Cloud_CreateCreatorStoreProduct",
           "Cloud_GetCreatorStoreProduct",
           "Cloud_UpdateCreatorStoreProduct",
-          "get_toolbox_service_v2_assets_search",
-          "get_toolbox_service_v2_assets__id_",
-          "get_toolbox_service_v1_saves",
-          "post_toolbox_service_v1_saves",
-          "delete_toolbox_service_v1_saves",
-          "post_toolbox_service_v1_saves_bulkDelete"
+          "Toolbox_SearchCreatorStoreAssetsDeprecated",
+          "Toolbox_GetAssetDetails",
+          "Saves_GetSaves",
+          "Saves_CreateSave",
+          "Saves_DeleteSave",
+          "Saves_BulkDeleteSaves"
         ]
       }
     },
