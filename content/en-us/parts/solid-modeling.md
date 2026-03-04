@@ -42,18 +42,18 @@ There are three basic elements of meshes:
 - **Face** - A surface area between three or more vertices.
 
 <GridContainer numColumns="3">
-  <figure>
-    <img src="../assets/art/3p-software/blender/Vertex.png" alt="A single active vertex on a cube mesh." />
-    <figcaption>Vertex</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/art/3p-software/blender/Edge.png"alt="A single active edge on a cube mesh."/>
-    <figcaption>Edge</figcaption>
-  </figure>
-    <figure>
-    <img src="../assets/art/3p-software/blender/Face.png" alt="A single active face on a cube mesh." />
-    <figcaption>Face</figcaption>
-  </figure>
+  <figure>
+    <img src="../assets/art/3p-software/blender/Vertex.png" alt="A single active vertex on a cube mesh." />
+    <figcaption>Vertex</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/art/3p-software/blender/Edge.png"alt="A single active edge on a cube mesh."/>
+    <figcaption>Edge</figcaption>
+  </figure>
+	<figure>
+    <img src="../assets/art/3p-software/blender/Face.png" alt="A single active face on a cube mesh." />
+    <figcaption>Face</figcaption>
+  </figure>
 </GridContainer>
 
 </AccordionDetails>
@@ -333,77 +333,77 @@ To get this example running in Studio:
 
 1. Create the following `Script` in `ServerScriptService` to perform all of the solid modeling operations.
 
-  ```lua highlight="6"
-  local ReplicatedStorage = game:GetService("ReplicatedStorage")
-  local GeometryService = game:GetService("GeometryService")
-  local DrawCurveEvent = ReplicatedStorage:WaitForChild("DrawCurveEvent")
+   ```lua highlight="6"
+   local ReplicatedStorage = game:GetService("ReplicatedStorage")
+   local GeometryService = game:GetService("GeometryService")
+   local DrawCurveEvent = ReplicatedStorage:WaitForChild("DrawCurveEvent")
 
-  DrawCurveEvent.OnServerEvent:Connect(function(player, cframeList, hitInstance)
-	  local blade = Instance.new("Part")
-	  blade.Size = Vector3.new(0.2, 0.2, 15.0)
+   DrawCurveEvent.OnServerEvent:Connect(function(player, cframeList, hitInstance)
+	   local blade = Instance.new("Part")
+	   blade.Size = Vector3.new(0.2, 0.2, 15.0)
 
-	  local success, sweptPart = pcall( function()
-		  return GeometryService:SweepPartAsync(blade, cframeList)
-	  end)
+	   local success, sweptPart = pcall( function()
+		   return GeometryService:SweepPartAsync(blade, cframeList)
+	   end)
 
-	  if success and sweptPart then
-		  -- Visualize the sweep
-		  sweptPart.Parent = workspace
-		  sweptPart.Transparency = 0.5
-		  sweptPart.Anchored = true
-		  sweptPart.CanQuery = false
+	   if success and sweptPart then
+		   -- Visualize the sweep
+		   sweptPart.Parent = workspace
+		   sweptPart.Transparency = 0.5
+		   sweptPart.Anchored = true
+		   sweptPart.CanQuery = false
 		
-		  -- Subtract the sweep from the hit instance
-		  local subtractSuccess, newParts = pcall( function()
-			  return GeometryService:SubtractAsync(hitInstance, {sweptPart})
-		  end)
-		  if subtractSuccess and newParts then
-			  for _, newPart in pairs(newParts) do
-				  newPart.Parent = hitInstance.Parent
-				  newPart.Anchored = true
-			  end
-			  hitInstance:Destroy()
-		  end
-	  end
-  end)
-  ```
+		   -- Subtract the sweep from the hit instance
+		   local subtractSuccess, newParts = pcall( function()
+			   return GeometryService:SubtractAsync(hitInstance, {sweptPart})
+		   end)
+		   if subtractSuccess and newParts then
+			   for _, newPart in pairs(newParts) do
+				   newPart.Parent = hitInstance.Parent
+				   newPart.Anchored = true
+			   end
+			   hitInstance:Destroy()
+		   end
+	   end
+   end)
+   ```
 
 1. Create the following `LocalScript` in `StarterPlayerScripts` to handle user input.
 
-  ```lua highlight="6"
-  local ReplicatedStorage = game:GetService("ReplicatedStorage")
-  local GeometryService = game:GetService("GeometryService")
-  local DrawCurveEvent = ReplicatedStorage:WaitForChild("DrawCurveEvent")
+   ```lua highlight="6"
+   local ReplicatedStorage = game:GetService("ReplicatedStorage")
+   local GeometryService = game:GetService("GeometryService")
+   local DrawCurveEvent = ReplicatedStorage:WaitForChild("DrawCurveEvent")
 
-  DrawCurveEvent.OnServerEvent:Connect(function(player, cframeList, hitInstance)
-	  local blade = Instance.new("Part")
-	  blade.Size = Vector3.new(0.2, 0.2, 15.0)
+   DrawCurveEvent.OnServerEvent:Connect(function(player, cframeList, hitInstance)
+	   local blade = Instance.new("Part")
+	   blade.Size = Vector3.new(0.2, 0.2, 15.0)
 
-	  local success, sweptPart = pcall( function()
-		  return GeometryService:SweepPartAsync(blade, cframeList)
-	  end)
+	   local success, sweptPart = pcall( function()
+		   return GeometryService:SweepPartAsync(blade, cframeList)
+	   end)
 
-	  if success and sweptPart then
-		  -- Visualize the sweep
-		  sweptPart.Parent = workspace
-		  sweptPart.Transparency = 0.5
-		  sweptPart.Anchored = true
-		  sweptPart.CanQuery = false
+	   if success and sweptPart then
+		   -- Visualize the sweep
+		   sweptPart.Parent = workspace
+		   sweptPart.Transparency = 0.5
+		   sweptPart.Anchored = true
+		   sweptPart.CanQuery = false
 		
-		  -- Subtract the sweep from the hit instance
-		  local subtractSuccess, newParts = pcall( function()
-			  return GeometryService:SubtractAsync(hitInstance, {sweptPart})
-		  end)
-		  if subtractSuccess and newParts then
-			  for _, newPart in pairs(newParts) do
-				  newPart.Parent = hitInstance.Parent
-				  newPart.Anchored = true
-			  end
-			  hitInstance:Destroy()
-		  end
-	  end
-  end)
-  ```
+		   -- Subtract the sweep from the hit instance
+		   local subtractSuccess, newParts = pcall( function()
+			  r eturn GeometryService:SubtractAsync(hitInstance, {sweptPart})
+		   end)
+		   if subtractSuccess and newParts then
+			   for _, newPart in pairs(newParts) do
+				   newPart.Parent = hitInstance.Parent
+				   newPart.Anchored = true
+			   end
+			   hitInstance:Destroy()
+		   end
+	   end
+   end)
+   ```
 
 1. Create a `RemoteEvent` in `ReplicatedStorage` named **DrawCurveEvent**.
 

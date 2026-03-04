@@ -16,11 +16,31 @@ Before you start, [generate an API key](../auth/api-keys.md) or [configure an OA
 
 All endpoints use your universe ID, which you can find on the [Creator Dashboard](https://create.roblox.com/dashboard/creations). Click the experience tile overflow menu and **Copy Universe ID**.
 
-<Alert severity="info">
-For in-experience configs, use `UniverseConfiguration` as the repository type and `UniverseConfigurations` as the namespace in your request payloads. Other repository types are currently unsupported.
-</Alert>
-
 For the full endpoint reference, request and response schemas, and error codes, see the [Cloud API reference](/cloud/reference).
+
+## Repositories and namespaces
+
+Many requests to the configs endpoints require a **repository** in the path and a **namespace** in the request body. For example, this request adds a draft config:
+
+```json
+PUT /creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/<REPOSITORY>
+{
+  "namespaces": {
+    "<NAMESPACE>": {
+      "enableNewTutorial": true
+    }
+  }
+}
+```
+
+- Repositories differ by product. They separate configs by system.
+- Namespaces are groupings within a product. They organize keys or mark them as being for some particular purpose.
+
+This guide covers in-experience configs, so all requests use `UniverseConfiguration` for repository and `UniverseConfigurations` for namespace. Repositories and namespaces will eventually expand to cover additional products and use cases.
+
+| Use case              | Repository              | Supported namespaces     |
+| --------------------- | ----------------------- | ------------------------ |
+| In-experience configs | `UniverseConfiguration` | `UniverseConfigurations` |
 
 ## Create or update configs
 
