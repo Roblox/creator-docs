@@ -112,8 +112,8 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
        <td>Members with this role can ban and manage banned users for all experiences owned by the group.</td>
      </tr>
      <tr>
-       <td>**Access read-only chat and configure bans for all group experiences**</td>
-       <td>Members with this role can view all in-experience chat messages and ban or manage banned users across all experiences owned by the group.<br/><br/>To view in-experience chat messages, enable **Read-only view** in the in-experience settings.</td>
+       <td>**Configure bans for all group experiences**</td>
+       <td>Members with this role can ban or manage banned users across all experiences owned by the group.</td>
      </tr>
      <tr>
        <td>**Configure monetization for all group experiences**</td>

@@ -52,8 +52,10 @@ navigation:
             path: /projects/groups
           - title: Collaboration
             path: /projects/collaboration
-          - title: Activity history
+          - title: Activity History
             path: /projects/activity-history
+          - title: Version History
+            path: /projects/version-history         
       - title: File-based workflows
         path: /scripting/sync
         section:
