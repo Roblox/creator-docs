@@ -15,12 +15,15 @@ The cross-platform **Input Action System** lets you connect [actions](#input-act
 
 An `Class.InputContext` is a collection of actions which holds related [input actions](#input-actions), for example `PlayContext` for in‑experience character controls and `NavContext` for controls to navigate around UI menus. You can enable or disable contexts (and their corresponding actions) through their `Class.InputContext.Enabled|Enabled` property, such as to enable the `NavContext` when an inventory menu is open and then change to the `PlayContext` when the player closes the menu and returns to primary gameplay.
 
-Even if an experience may not use multiple input contexts initially, best practice is to create a primary context at the top level of any input system, for example the `PlayContext` instance for input that occurs during gameplay.
+Even if an experience may not use multiple input contexts initially, it's recommended to create a primary context at the top level of any input system, for example the `PlayContext` instance for input that occurs during gameplay.
 
-1. Insert a new `Class.InputContext` into `Class.StarterGui`.
-2. Rename it to `PlayContext`.
+1. <Chip label="RECOMMENDED" size="small" variant="outlined" color="success" /> Create a `Class.Folder` named `Inputs` inside `Class.ReplicatedStorage` to hold various input contexts.
 
-   <img src="../assets/studio/explorer/StarterGui-InputContext.png" width="320" alt="New InputContext instance inside StarterGui, renamed to PlayContext" />
+   <img src="../assets/studio/explorer/ReplicatedStorage-Folder-Inputs.png" width="320" alt="New Folder inside ReplicatedStorage, renamed to Inputs" />
+
+2. Insert a new `Class.InputContext` into the folder and rename it to `PlayContext`.
+
+   <img src="../assets/studio/explorer/ReplicatedStorage-InputContext.png" width="320" alt="New InputContext instance inside ReplicatedStorage, renamed to PlayContext" />
 
 ## Input actions
 
@@ -61,9 +64,9 @@ An `Class.InputAction` can be of several variations depending on its `Class.Inpu
 
 To test an `Class.InputAction` for simple character sprinting:
 
-1. Create a new `Class.InputAction`  inside the `PlayContext` context within `Class.StarterGui`. Rename it to `CharacterSprint` to indicate its dedicated action.
+1. Create a new `Class.InputAction`  inside the `PlayContext` context within `Class.ReplicatedStorage`. Rename it to `CharacterSprint` to indicate its dedicated action.
 
-   <img src="../assets/studio/explorer/StarterGui-InputContext-InputAction.png" width="320" alt="New InputAction instance inside an InputContext, renamed to CharacterSprint" />
+   <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-InputAction.png" width="320" alt="New InputAction instance inside an InputContext, renamed to CharacterSprint" />
 
 2. In the [Properties](../studio/properties.md) window, notice that the action's `Class.InputAction.Type|Type` is `Enum.InputActionType|Bool` (default). This is a logical type for simple character sprinting as a boolean `true`/`false` action (character is either sprinting or not sprinting).
 
@@ -73,7 +76,7 @@ To test an `Class.InputAction` for simple character sprinting:
 
 An `Class.InputBinding` defines which hardware binding should trigger the parent `Class.InputAction`, for example a key press, gamepad button, or tap on a touch‑enabled device. For [cross‑platform](../projects/cross-platform.md) compatibility, each `Class.InputAction` should have an `Class.InputBinding` for **gamepad**, **keyboard/mouse**, and **touch** as illustrated here.
 
-<img src="../assets/studio/explorer/StarterGui-InputContext-InputAction-InputBinding-All.png" width="320" />
+<img src="../assets/studio/explorer/ReplicatedStorage-InputContext-InputAction-InputBinding-All.png" width="320" />
 
 The `Class.InputAction.Type|Type` assigned to the parent `Class.InputAction` directly affects which general input types (key/button/tap, analog trigger, thumbstick, etc.) are valid for child `Class.InputBinding` instances. In turn, values sent to the parent action's connected events depend on a binding's chosen input type. See [input events](#input-events) for details on the correlation between action types, bindings, and return values.
 
@@ -83,7 +86,7 @@ To hook up bindings for simple character sprinting:
 
 	 <Grid container spacing={2} alignItems="top">
 	 <Grid item>
-     <img src="../assets/studio/explorer/StarterGui-InputContext-InputAction-InputBinding-KeyboardBinding.png" width="320" />
+     <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-InputAction-InputBinding-KeyboardBinding.png" width="320" />
 	 </Grid>
 	 <Grid item>
      <img src="../assets/studio/properties/InputBinding-KeyCode-LeftShift.png" width="320" />
@@ -105,7 +108,7 @@ To hook up bindings for simple character sprinting:
 
 	 <Grid container spacing={2} alignItems="top">
 	 <Grid item>
-     <img src="../assets/studio/explorer/StarterGui-InputContext-InputAction-InputBinding-GamepadBinding.png" width="320" />
+     <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-InputAction-InputBinding-GamepadBinding.png" width="320" />
 	 </Grid>
 	 <Grid item>
      <img src="../assets/studio/properties/InputBinding-KeyCode-ButtonY.png" width="320" />
@@ -122,7 +125,7 @@ To hook up bindings for simple character sprinting:
 
 	 <Grid container spacing={2} alignItems="top">
 	 <Grid item>
-     <img src="../assets/studio/explorer/StarterGui-InputContext-InputAction-InputBinding-TouchBinding.png" width="320" />
+     <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-InputAction-InputBinding-TouchBinding.png" width="320" />
 	 </Grid>
 	 <Grid item>
      <img src="../assets/studio/properties/InputBinding-UIButton-SprintButton.png" width="320" />
@@ -267,13 +270,13 @@ Note that returned `Datatype.Vector2`/`Datatype.Vector3` values for 2D/3D inputs
 
 To connect events for simple character sprinting:
 
-1. Insert a new `Class.LocalScript` into the `CharacterSprint` tree, alongside the various input bindings.
+1. Insert a new `Class.Script` into the `CharacterSprint` tree, alongside the various input bindings. Then set its `Class.BaseScript.RunContext|RunContext` to `Enum.RunContext.Client|Client` and rename it to `OnActivate`.
 
-   <img src="../assets/studio/explorer/StarterGui-InputContext-InputAction-LocalScript.png" width="320" />
+   <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-InputAction-Script.png" width="320" />
 
-2. Paste the following code into the script. Note the `Class.InputAction.Pressed|Pressed` event connection on lines `13`‑`15` which doubles the character's walk speed when a sprint input binding is pressed, and the corresponding `Class.InputAction.Released|Released` event connection on lines `16`‑`18` which resets the walk speed to default when a sprint input binding is released.
+2. Paste the following code into the `OnActivate` script. Note the `Class.InputAction.Pressed|Pressed` event connection on lines `13`‑`15` which doubles the character's walk speed when a sprint input binding is pressed, and the corresponding `Class.InputAction.Released|Released` event connection on lines `16`‑`18` which resets the walk speed to default when a sprint input binding is released.
 
-		```lua
+		```lua title="OnActivate (Client Script)"
 		local Players = game:GetService("Players")
 
 		local player = Players.LocalPlayer
@@ -302,27 +305,25 @@ To connect events for simple character sprinting:
 
 Once you have an [input context](#input-contexts) such as `PlayContext`, you can enable/disable it during gameplay through scripting, change its `Class.InputContext.Priority|Priority` to determine which actions take precedence over others, and `Class.InputContext.Sink|Sink` inputs from being processed within contexts of lower priority.
 
-1. To make it easier to switch contexts from other scripts, insert a new `Class.BindableEvent` into `Class.StarterGui` and rename it to `ContextEvent`.
+1. To make it easier to switch contexts from other scripts, insert a new `Class.BindableEvent` into your inputs folder within `Class.ReplicatedStorage` and rename it to `ContextEvent`.
 
-   <img src="../assets/studio/explorer/StarterGui-BindableEvent-ContextEvent.png" width="320" />
+   <img src="../assets/studio/explorer/ReplicatedStorage-BindableEvent-ContextEvent.png" width="320" />
 
-2. Create a new `Class.LocalScript` inside `Class.StarterGui` and rename it to `UpdateContext`.
+2. Create a new `Class.Script` at the same level, set its `Class.BaseScript.RunContext|RunContext` to `Enum.RunContext.Client|Client`, and rename it to `UpdateContext`.
 
-   <img src="../assets/studio/explorer/StarterGui-LocalScript-UpdateContext.png" width="320" />
+   <img src="../assets/studio/explorer/ReplicatedStorage-Script-UpdateContext.png" width="320" />
 
 3. Inside the `UpdateContext` script, paste the following code:
 
-		```lua
-		local Players = game:GetService("Players")
+		```lua title="UpdateContext (Client Script)"
+		local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-		local player = Players.LocalPlayer
-		local playerGui = player.PlayerGui
-
-		local contextEvent = playerGui:FindFirstChild("ContextEvent")
+		local inputsFolder = ReplicatedStorage:WaitForChild("Inputs")
+		local contextEvent = inputsFolder:WaitForChild("ContextEvent")
 
 		-- Connect bindable event
 		contextEvent.Event:Connect(function(targetContext, enabled)
-			local context = playerGui:FindFirstChild(targetContext)
+			local context = inputsFolder:FindFirstChild(targetContext)
 			if context then
 				context.Enabled = enabled
 				print(context.Name .. ": " .. tostring(context.Enabled))
@@ -332,17 +333,15 @@ Once you have an [input context](#input-contexts) such as `PlayContext`, you can
 		end)
 		```
 
-4. With the `UpdateContext` script in place, you can now update a named `Class.InputContext` by firing the bindable event, for example from another `Class.LocalScript` that powers a `Class.GuiButton` inside the `Class.ScreenGui` container.
+4. With the `UpdateContext` script in place, you can now update a named `Class.InputContext` by firing the bindable event, for example from a `Class.LocalScript` that powers a `Class.GuiButton` inside the `Class.ScreenGui` container.
 
    <img src="../assets/studio/explorer/StarterGui-ScreenGui-TextButton.png" width="320" style={{marginBottom: 0}} />
 
-		```lua
-		local Players = game:GetService("Players")
+		```lua title="Button Script"
+		local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-		local player = Players.LocalPlayer
-		local playerGui = player.PlayerGui
-
-		local contextEvent = playerGui:FindFirstChild("ContextEvent")
+		local inputsFolder = ReplicatedStorage:WaitForChild("Inputs")
+		local contextEvent = inputsFolder:WaitForChild("ContextEvent")
 
 		local button = script.Parent
 		button.Activated:Connect(function()

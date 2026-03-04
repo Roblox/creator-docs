@@ -60499,6 +60499,138 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/assets#Toolbox_SearchCreatorStoreAssetsDeprecated"
         }
+      },
+      "post": {
+        "summary": "Search Creator Store Assets",
+        "description": "Search Creator Store for assets.",
+        "operationId": "Toolbox_SearchCreatorStoreAssets",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/SearchCreatorStoreAssetsRequest"
+                  }
+                ],
+                "description": "Request model for searching Creator Store assets.",
+                "nullable": true
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/SearchCreatorStoreAssetsRequest"
+                  }
+                ],
+                "description": "Request model for searching Creator Store assets.",
+                "nullable": true
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/SearchCreatorStoreAssetsRequest"
+                  }
+                ],
+                "description": "Request model for searching Creator Store assets.",
+                "nullable": true
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/SearchCreatorStoreAssetsRequest"
+                  }
+                ],
+                "description": "Request model for searching Creator Store assets.",
+                "nullable": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchCreatorStoreAssetsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ProblemDetails"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HttpValidationProblemDetails"
+                    }
+                  ],
+                  "nullable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ProblemDetails"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HttpValidationProblemDetails"
+                    }
+                  ],
+                  "nullable": true
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": true
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "creator-store-product:read"
+          }
+        ],
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/toolbox-service/v2/assets/{id}": {
@@ -79963,6 +80095,10 @@
           "ageRecommendationDisplayName": {
             "description": "Age Recommendation display name.",
             "type": "string"
+          },
+          "canonicalUrlPath": {
+            "description": "Canonical URL path for the game page, e.g. /games/{placeId}/{canonical-slug}.\r\nIt must be the same as the canonical URL (rel-canonical meta tag) on the game's EDP.",
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -87089,6 +87225,62 @@
         "description": "Representation of an audio asset.",
         "nullable": true
       },
+      "AudioSearchFilters": {
+        "type": "object",
+        "properties": {
+          "audioTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SearchAudioTypeModel"
+            },
+            "description": "Audio types to include (e.g. Music, SoundEffect)",
+            "nullable": true
+          },
+          "minDurationSeconds": {
+            "maximum": 2147483647,
+            "minimum": 0,
+            "type": "integer",
+            "description": "The minimum duration for audio in seconds. If included, must be greater than or equal to 0.",
+            "format": "int32"
+          },
+          "maxDurationSeconds": {
+            "maximum": 2147483647,
+            "minimum": 1,
+            "type": "integer",
+            "description": "The maximum duration for audio in seconds. If included, must be greater than or equal to 1.",
+            "format": "int32",
+            "nullable": true
+          },
+          "artist": {
+            "type": "string",
+            "description": "The name of the artist to filter by.",
+            "nullable": true
+          },
+          "album": {
+            "type": "string",
+            "description": "The name of the album to filter by.",
+            "nullable": true
+          },
+          "includeTopCharts": {
+            "type": "boolean",
+            "description": "Whether to include top charts in the results.",
+            "nullable": true
+          },
+          "musicChartType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/MusicChartType"
+              }
+            ],
+            "description": "Indicates which music charts to filter from.",
+            "x-enumNames": ["None", "Current", "Week", "Month", "Year"],
+            "x-enum-varnames": ["None", "Current", "Week", "Month", "Year"]
+          }
+        },
+        "additionalProperties": false,
+        "description": "Audio-specific search filter parameters.",
+        "nullable": true
+      },
       "BulkDeleteSavesRequest": {
         "required": ["targets"],
         "type": "object",
@@ -87630,6 +87822,38 @@
           "Tool"
         ]
       },
+      "ModelSearchFilters": {
+        "type": "object",
+        "properties": {
+          "includedSubTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ModelSubType"
+            },
+            "description": "If included, search for assets only with these subtypes.",
+            "nullable": true
+          },
+          "excludedSubTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ModelSubType"
+            },
+            "description": "If included, excludes assets with these subtypes.",
+            "nullable": true
+          },
+          "includedInstanceTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ModelInstanceType"
+            },
+            "description": "This filters that the following [Instance](https://create.roblox.com/docs/reference/engine/classes/Instance) types are included in the model.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Model-specific search filter parameters.",
+        "nullable": true
+      },
       "ModelSubType": {
         "enum": ["Ad", "MaterialPack", "Package"],
         "type": "string",
@@ -87874,6 +88098,190 @@
           "Video",
           "FontFamily"
         ]
+      },
+      "SearchCreatorStoreAssetsRequest": {
+        "required": ["searchCategoryType"],
+        "type": "object",
+        "properties": {
+          "searchCategoryType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SearchCategoryType"
+              }
+            ],
+            "description": "The asset type to search within.",
+            "x-enumNames": [
+              "Audio",
+              "Model",
+              "Decal",
+              "Plugin",
+              "MeshPart",
+              "Video",
+              "FontFamily"
+            ],
+            "x-enum-varnames": [
+              "Audio",
+              "Model",
+              "Decal",
+              "Plugin",
+              "MeshPart",
+              "Video",
+              "FontFamily"
+            ]
+          },
+          "query": {
+            "type": "string",
+            "description": "The search terms used to filter the results. Only one of 'query' and 'image' can be present in a query.",
+            "nullable": true
+          },
+          "image": {
+            "type": "string",
+            "description": "The image file to search by. Only one of 'query' and 'image' can be present in a query.",
+            "format": "binary",
+            "nullable": true
+          },
+          "userId": {
+            "minimum": 1,
+            "type": "integer",
+            "description": "The User ID of the creator. Only one of 'userId' and 'groupId' can be present in a query.",
+            "format": "int64",
+            "nullable": true
+          },
+          "groupId": {
+            "minimum": 1,
+            "type": "integer",
+            "description": "The Group ID of the creator. Only one of 'userId' and 'groupId' can be present in a query.",
+            "format": "int64",
+            "nullable": true
+          },
+          "pageToken": {
+            "type": "string",
+            "description": "The identifier for the desired search results page. Only one of 'pageNumber' and 'pageToken' can be present in a query.",
+            "nullable": true
+          },
+          "pageNumber": {
+            "maximum": 2147483647,
+            "minimum": 0,
+            "type": "integer",
+            "description": "The page number to retrieve, starting from 0. Only one of 'pageNumber' and 'pageToken' can be present in a query.",
+            "format": "int32",
+            "nullable": true
+          },
+          "maxPageSize": {
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer",
+            "description": "The number of assets to be returned. Cannot be larger than 100.",
+            "format": "int32"
+          },
+          "sortDirection": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SortDirection"
+              }
+            ],
+            "description": "The sort direction of the search results.",
+            "x-enumNames": ["None", "Ascending", "Descending"],
+            "x-enum-varnames": ["None", "Ascending", "Descending"]
+          },
+          "sortCategory": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SortCategory"
+              }
+            ],
+            "description": "The category to sort the search results by.",
+            "x-enumNames": [
+              "Relevance",
+              "Trending",
+              "Top",
+              "AudioDuration",
+              "CreateTime",
+              "UpdatedTime",
+              "Ratings"
+            ],
+            "x-enum-varnames": [
+              "Relevance",
+              "Trending",
+              "Top",
+              "AudioDuration",
+              "CreateTime",
+              "UpdatedTime",
+              "Ratings"
+            ]
+          },
+          "includeOnlyVerifiedCreators": {
+            "type": "boolean",
+            "description": "Whether the results should only include assets created by verified creators."
+          },
+          "minPriceCents": {
+            "maximum": 2147483647,
+            "minimum": 0,
+            "type": "integer",
+            "description": "The minimum price of the asset in cents. If included, must be greater than or equal to 0.",
+            "format": "int64"
+          },
+          "maxPriceCents": {
+            "maximum": 2147483647,
+            "minimum": 0,
+            "type": "integer",
+            "description": "The maximum price of the asset in cents. If included, must be greater than or equal to 0.",
+            "format": "int64",
+            "nullable": true
+          },
+          "facets": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Additional keywords to query by.",
+            "nullable": true
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The tags to filter by.",
+            "nullable": true
+          },
+          "categoryPath": {
+            "type": "string",
+            "description": "The category path to filter by.",
+            "nullable": true
+          },
+          "searchView": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SearchView"
+              }
+            ],
+            "description": "Indicates which fields will be populated in the response.",
+            "x-enumNames": ["IDs", "Core", "Full"],
+            "x-enum-varnames": ["IDs", "Core", "Full"]
+          },
+          "audioSearchFilters": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/AudioSearchFilters"
+              }
+            ],
+            "description": "Audio-specific search filters.",
+            "nullable": true
+          },
+          "modelSearchFilters": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ModelSearchFilters"
+              }
+            ],
+            "description": "Model-specific search filters.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request model for searching Creator Store assets.",
+        "nullable": true
       },
       "SearchCreatorStoreAssetsResponse": {
         "type": "object",
@@ -92007,7 +92415,7 @@
     },
     {
       "name": "Configs",
-      "description": "Manage your in-experience config values in real time without restarting servers. See the [Configs documentation](https://create.roblox.com/docs/production/configs) for setup and usage.\n",
+      "description": "Manage your in-experience config values in real time without restarting servers. See the [Configs guide](https://create.roblox.com/docs/cloud/guides/configs) for Open Cloud setup and usage.\n",
       "x-roblox-tag-info": {
         "path": "configs",
         "content": "HTTP APIs for working with creator configs on Roblox Cloud",
