@@ -4,7 +4,7 @@ description: How to test your classic clothing items before uploading them to th
 ---
 
 <Alert severity="warning">
-Current user-generated avatars on the Marketplace do not support 2D classic clothing. For information on creating modern 3D cosmetics, including rigid accessories and clothing items, see [Get started](../avatar/index.md).
+Many user-generated avatars on the Marketplace do not support 2D classic clothing. For information on creating modern 3D cosmetics, including rigid accessories and clothing items, see [Get started](../avatar/index.md).
 </Alert>
 
 To ensure the best quality results, you can test your classic clothing before uploading or selling. You can test your clothes without needing to pay any fees by using [Roblox Studio](../studio/setup.md).
