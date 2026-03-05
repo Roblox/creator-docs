@@ -4,24 +4,31 @@
 
 name: VolumetricAudio
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls how the engine renders volumetric audio effects.
+description: |
+  Controls how the engine renders volumetric audio effects, allowing sound to
+  emanate from the surface of a `Class.Part` rather than a single point in
+  space.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Disabled
-    summary: ''
+    summary: |
+      Volumetric audio is disabled; sound emanates from a single point.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Automatic
-    summary: ''
+    summary: |
+      Currently equivalent to `Enum.VolumetricAudio.Disabled`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Enabled
-    summary: ''
+    summary: |
+      Volumetric audio is enabled; sound emanates from the object's volume.
     value: 2
     tags: []
     deprecation_message: ''

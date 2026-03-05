@@ -308,7 +308,7 @@ methods:
         type: string
         default:
         summary: |
-          String used to search for free decals in the Catalog.
+          String used to search for free models in the Catalog.
       - name: pageNum
         type: int
         default:

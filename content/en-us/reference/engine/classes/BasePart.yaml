@@ -2607,8 +2607,25 @@ methods:
     capabilities: []
   - name: BasePart:IntersectAsync
     summary: |
-      Creates a new `Class.IntersectOperation` from the overlapping geometry of
-      the part and the other parts in the given array.
+      Note: It is highly recommended to use the newer
+      `Class.GeometryService:IntersectAsync` instead of this function. As well
+      as having better performance and more features, the new function differs
+      as follows:
+
+      - The output is an array of instances rather than a single instance.
+      - The input parts do not need to be parented to the scene, allowing for
+        background operations.
+      - When the `SplitApart` option is set to `true` (default), each distinct
+        body will be returned in its own `Class.PartOperation`.
+      - All the returned parts are in the coordinate space of the main part, so
+        their `Class.PVInstance.Origin` positions are the same as the main
+        part's. This keeps the vertices of the mesh in the same position
+        relative to the object as before the operation, but it does also mean
+        the `(0, 0, 0)` of a returned part is not necessarily at the center of
+        its body.
+
+        Creates a new `Class.IntersectOperation` from the overlapping geometry
+        of the part and the other parts in the given array.
     description: |
       Creates a new `Class.IntersectOperation` from the intersecting geometry of
       the part and the other parts in the given array. Only `Class.Part|Parts`
@@ -2865,8 +2882,25 @@ methods:
     capabilities: []
   - name: BasePart:SubtractAsync
     summary: |
-      Creates a new `Class.UnionOperation` from the part, minus the geometry
-      occupied by the parts in the given array.
+      Note: It is highly recommended to use the newer
+      `Class.GeometryService:UnionAsync` instead of this function. As well as
+      having better performance and more features, the new function differs as
+      follows:
+
+      - The output is an array of instances rather than a single instance.
+      - The input parts do not need to be parented to the scene, allowing for
+        background operations.
+      - When the `SplitApart` option is set to `true` (default), each distinct
+        body will be returned in its own `Class.PartOperation`.
+      - All the returned parts are in the coordinate space of the main part, so
+        their `Class.PVInstance.Origin` positions are the same as the main
+        part's. This keeps the vertices of the mesh in the same position
+        relative to the object as before the operation, but it does also mean
+        the `(0, 0, 0)` of a returned part is not necessarily at the center of
+        its body.
+
+        Creates a new `Class.UnionOperation` from the part, minus the geometry
+        occupied by the parts in the given array.
     description: |
       Creates a new `Class.UnionOperation` from the part, minus the geometry
       occupied by the parts in the given array. Only `Class.Part|Parts` are
@@ -2947,8 +2981,26 @@ methods:
     capabilities: []
   - name: BasePart:UnionAsync
     summary: |
-      Creates a new `Class.UnionOperation` from the part, plus the geometry
-      occupied by the parts in the given array.
+      Note: It is highly recommended to use the newer
+      `Class.GeometryService:UnionAsync` instead of this function. As well as
+      having better performance and more features, the new function differs as
+      follows:
+
+      - The output is an array of instances rather than a single instance.
+      - The input parts do not need to be parented to the scene, allowing for
+        background operations.
+      - When the `SplitApart` option is set to `true` (default), each distinct
+        body will be returned in its own `Class.PartOperation`.
+      - All the returned parts are in the coordinate space of the main part, so
+        their `Class.PVInstance.Origin` positions are the same as the main
+        part's. This keeps the vertices of the mesh in the same position
+        relative to the object as before the operation, but it does also mean
+        the `(0, 0, 0)` of a returned part is not necessarily at the center of
+        its body.
+
+              Creates a new `Class.UnionOperation` from the part, plus the geometry
+
+        occupied by the parts in the given array.
     description: |
       Creates a new `Class.UnionOperation` from the part, plus the geometry
       occupied by the parts in the given array. Only `Class.Part|Parts` are

@@ -213,6 +213,27 @@ properties:
       can_save: true
     capabilities:
       - Basic
+  - name: ParticleEmitter.FlipbookBlendFrames
+    summary: |
+      Determines whether the flipbook frames are blended between.
+    description: |
+      The **FlipbookBlendFrames** property determines whether the frames in the
+      flipbook texture are blended between using a linear crossfade, or swapped
+      instantly.
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Flipbook
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
   - name: ParticleEmitter.FlipbookFramerate
     summary: |
       Determines how fast the flipbook texture animates in frames per second.

@@ -26,7 +26,8 @@ properties:
     description: |
       This property determines the level of detail that the solid modeled part
       will be shown in. It can be set to the possible values of the
-      `Enum.RenderFidelity` enum.
+      `Enum.RenderFidelity` enum except for
+      `Enum.RenderFidelity.Performance|Performance`.
 
       The default value is `Enum.RenderFidelity.Automatic|Automatic`, meaning
       the part's detail is based on its distance from the camera as outlined in

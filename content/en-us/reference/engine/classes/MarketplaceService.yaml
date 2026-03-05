@@ -382,6 +382,25 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - AssetRead
+  - name: MarketplaceService:GetRobloxSubscriptionDetailsAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: user
+        type: Player
+        default:
+        summary: ''
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Monetization
   - name: MarketplaceService:GetSubscriptionProductInfoAsync
     summary: |
       Returns the product information of a subscription for the given

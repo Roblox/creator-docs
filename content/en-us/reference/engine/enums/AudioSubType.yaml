@@ -4,19 +4,24 @@
 
 name: AudioSubType
 type: enum
-summary: ''
-description: ''
+summary: |
+  The categorization of an audio asset.
+description: |
+  The categorization of an audio asset between music and sound effects. This
+  categorization is used for filtering audio in `Class.AudioSearchParams`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Music
-    summary: ''
+    summary: |
+      Represents an asset which contains music.
     value: 1
     tags: []
     deprecation_message: ''
   - name: SoundEffect
-    summary: ''
+    summary: |
+      Represents an asset which is a sound effect.
     value: 2
     tags: []
     deprecation_message: ''

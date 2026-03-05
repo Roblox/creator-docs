@@ -290,21 +290,29 @@ methods:
     capabilities:
       - Audio
   - name: AudioTextToSpeech:GetWaveformAsync
-    summary: ''
-    description: ''
+    summary: |
+      Returns a sampling of the waveform data for the generated audio.
+    description: |
+      Returns a sampling of the waveform data for the generated text-to-speech
+      audio. This can be used to check the volume of the audio over the course
+      of its duration without playing it.
     code_samples: []
     parameters:
       - name: timeRange
         type: NumberRange
         default:
-        summary: ''
+        summary: |
+          The start and end time (in seconds) of the segment to read.
       - name: samples
         type: int
         default:
-        summary: ''
+        summary: |
+          The number of samples to return for the specified range.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          A table of `samples` numbers ranging between -1 and 1 representing the
+          sampled waveform,
     tags:
       - Yields
     deprecation_message: ''

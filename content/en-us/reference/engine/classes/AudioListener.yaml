@@ -25,8 +25,18 @@ tags: []
 deprecation_message: ''
 properties:
   - name: AudioListener.AcousticSimulationEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether acoustic simulation should be used for this
+      `Class.AudioListener`.
+    description: |
+      Determines whether sound being heard by this `Class.AudioListener` shoud
+      automatically implement features of acoustic simulation, such as occlusion
+      (being muffled through walls), diffraction (bending around corners), and
+      reverberation (echoing off of walls), when being sourced from an
+      `Class.AudioEmitter|AudioEmitter`. Note that the `Class.AudioEmitter` also
+      needs its
+      `Class.AudioEmitter.AcousticSimulationEnabled|AcousticSimulationEnabled`
+      property set to `true` for the effects to occur.
     code_samples: []
     type: boolean
     tags: []
@@ -328,8 +338,8 @@ methods:
       curves (including the ones on the sending `Class.AudioEmitter`) to obtain
       the final audibility.
 
-      If the table is empty or `nil`, the `Class.AudioEmitter` defaults to using
-      an angle attenuation curve with the constant volume value of `1`.
+      If the table is empty or `nil`, the `Class.AudioListener` defaults to
+      using an angle attenuation curve with the constant volume value of `1`.
     code_samples:
       - audio-wiring---directional-listener
     parameters:

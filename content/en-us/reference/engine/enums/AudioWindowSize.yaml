@@ -4,8 +4,12 @@
 
 name: AudioWindowSize
 type: enum
-summary: ''
-description: ''
+summary: |
+  For audio effects that use some internal buffering, determines the window-size
+  used.
+description: |
+  For audio effects that use some internal buffering, determines the window-size
+  used.
 code_samples: []
 tags: []
 deprecation_message: ''

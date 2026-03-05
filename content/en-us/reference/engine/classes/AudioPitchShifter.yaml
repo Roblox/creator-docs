@@ -60,8 +60,12 @@ properties:
     capabilities:
       - Audio
   - name: AudioPitchShifter.WindowSize
-    summary: ''
-    description: ''
+    summary: |
+      Controls how much audio will be buffered and shifted at once.
+    description: |
+      Controls how much audio will be buffered and shifted at once. Larger
+      windows result in higher-quality pitch shifting, but introduce more
+      latency.
     code_samples: []
     type: AudioWindowSize
     tags: []

@@ -8,15 +8,14 @@ memory_category: Instances
 summary: |
   A service handling in-experience text chat.
 description: |
-  A service handling in-experience text chat, including
-  `Class.TextChannel|managing channels`, decorating messages, filtering text,
-  `Class.TextChatCommand|creating commands`, and
+  A service handling in-experience text chat, including managing
+  `Class.TextChannel|TextChannels`, decorating messages, filtering text,
+  creating `Class.TextChatCommand|TextChatCommands`, and
   [developing custom chats interfaces](../../../chat/examples/simple-custom-frontend-ui.md).
-
   To learn more, see
-  [TextChatService Overview](../../../chat/in-experience-text-chat.md).
+  [text chat overview](../../../chat/in-experience-text-chat.md).
 
-  For further customization, TextChatService has the following singleton
+  For further customization, `TextChatService` has the following singleton
   children:
 
   - `Class.ChatWindowConfiguration`
@@ -36,9 +35,9 @@ properties:
     summary: |
       Determines whether a user has chat translation enabled.
     description: |
-      Determines whether a user has chat translation enabled. If true, messages
-      the user receives will be translated into their preferred language. Use
-      <code>Class.TextChatMessage.Translation</code> to get the message
+      Determines whether a user has chat translation enabled. If `true`,
+      messages the user receives will be translated into their preferred
+      language. Use `Class.TextChatMessage.Translation` to get the message
       translation.
     code_samples: []
     type: boolean
@@ -87,11 +86,9 @@ properties:
       `Class.TextChatCommand|TextChatCommands`.
     description: |
       Determines whether `Class.TextChatService` should create default
-      `Class.TextChatCommand|TextChatCommands`.
-
-      If true, the following `Class.TextChatCommand|TextChatCommands` are
-      created and put in a `Class.Folder` named **TextChatCommands** inside
-      `Class.TextChatService`:
+      `Class.TextChatCommand|TextChatCommands`. If `true`, the following
+      `Class.TextChatCommand|TextChatCommands` are created and put in a
+      `Class.Folder` named **TextChatCommands** inside `Class.TextChatService`:
 
       <table>
         <thead>
@@ -173,7 +170,7 @@ properties:
       Note that you can edit, create, and remove
       `Class.TextChatCommand|TextChatCommands` even if
       `Class.TextChatService.CreateDefaultCommands|CreateDefaultCommands` is
-      true. Also note that mute and unmute commands apply to all
+      `true`. Also note that mute and unmute commands apply to all
       `Class.TextChannel|TextChannels`.
     code_samples: []
     type: boolean
@@ -195,7 +192,7 @@ properties:
       `Class.TextChannel|TextChannels`.
     description: |
       Determines whether `Class.TextChatService` should create default
-      `Class.TextChannel|TextChannels`. If true, a `Class.Folder` named
+      `Class.TextChannel|TextChannels`. If `true`, a `Class.Folder` named
       **TextChannels** is created inside `Class.TextChatService` at runtime to
       contain the `Class.TextChannel|TextChannels` outlined in the table below.
       Each of the default channels has the described special behavior applied to
@@ -235,7 +232,7 @@ properties:
       be overwritten. Also note that you can edit, create, and remove
       `Class.TextChannel|TextChannels` even if
       `Class.TextChatService.CreateDefaultTextChannels|CreateDefaultTextChannels`
-      is true.
+      is `true`.
 
       Messages from different TextChannels can be separated into different tabs
       in the chat window using `Class.ChannelTabsConfiguration`.
@@ -260,7 +257,7 @@ methods:
     description: |
       Determines whether a user has permission to chat in experiences. Factors
       such as parental control settings may prevent the user from sending
-      messages. Errors if the userId is not in the current server. Note that
+      messages. Errors if the `userId` is not in the current server. Note that
       this method can be used with all current player
       `Class.Player.UserId|UserIds` in a `Class.Script` with
       `Class.Script.RunContext|RunContext` of `Enum.RunContext.Server` or
@@ -285,14 +282,15 @@ methods:
       - Chat
   - name: TextChatService:CanUsersChatAsync
     summary: |
-      Determines whether or not two users would receive messages between each
-      other.
+      Determines whether or not two users can receive messages from each other.
     description: |
-      Determines whether or not two users would receive messages between each
-      other. Factors such as incompatible parental control settings or blocked
-      status may prevent the delivery of messages between users.
-      `Class.TextChannel|TextChannels` internally use this result to determine
-      whether to deliver messages between users. Note that this method is only
+      Determines whether or not two users can receive messages from each other.
+      Both users must be in the current server, otherwise an error will occur.
+
+      Factors such as incompatible parental control settings or blocked status
+      may prevent the delivery of messages between users
+      (`Class.TextChannel|TextChannels` internally use this result to determine
+      whether to deliver messages between users). Note that this method is only
       available for use in a `Class.Script` with
       `Class.Script.RunContext|RunContext` of `Enum.RunContext.Server` or
       `Enum.RunContext.Legacy`.
@@ -301,13 +299,11 @@ methods:
       - name: userIdFrom
         type: int64
         default:
-        summary: |
-          The user must be in the current server, otherwise an error will occur.
+        summary: ''
       - name: userIdTo
         type: int64
         default:
-        summary: |
-          The user must be in the current server, otherwise an error will occur.
+        summary: ''
     returns:
       - type: boolean
         summary: ''
@@ -324,33 +320,22 @@ methods:
       in experiences based on factors such as their parental control settings.
     description: |
       Determines whether a user has permission to chat directly with other users
-      in experiences based on their parental control settings. To be used when:
+      in experiences based on their parental control settings, such as a whisper
+      channel between two users. To be used when:
 
       - The line of communication is user-initiated (not developer- or
-        gameplay-initiated)
-      - Access to the communication is closed and limited
-
-      An example of a direct chat is a whisper channel between two users.
+        gameplay-initiated).
+      - Access to the communication is closed and limited.
 
       You may use this method to gate certain features in your experience
       depending on the result.
 
       When creating a `Class.TextChannel` for a direct chat, use
-      `Class.TextChannel:SetDirectChatRequester` to set the requesterUserId so
+      `Class.TextChannel:SetDirectChatRequester` to set the `requesterUserId` so
       that the channel can determine whether to deliver messages between users.
-      When `Class.TextChannel.DirectChatRequester` is non-nil,
+      When `Class.TextChannel.DirectChatRequester` is non-`nil`,
       `Class.TextChannel|TextChannels` internally use this result to determine
       whether to deliver messages between users.
-
-      ```lua
-      local whoCanDirectChat = TextChatService:CanUsersDirectChatAsync(requesterUserId, { userId1, userId2 })
-
-      if #whoCanDirectChat > 0 then
-        -- The requesterUserId can direct chat with either userId1, userId2, or both
-      else
-        -- The requesterUserId cannot direct chat with either userId1 or userId2
-      end
-      ```
 
       Note that this method is only available for use in a `Class.Script` with
       `Class.Script.RunContext|RunContext` of `Enum.RunContext.Server` or
@@ -362,20 +347,20 @@ methods:
         type: int64
         default:
         summary: |
-          The user who would have initiated the direct chat request. If the
-          requesterUserId is not in the current server, this method will error.
+          The user who would have initiated the direct chat request. If the user
+          is not in the current server, this method will error.
       - name: userIds
         type: Array
         default:
         summary: |
-          A list of users who the requesterUserId would like to chat with
+          A list of users who the `requesterUserId` would like to chat with
           directly. Users not in the current server are ignored.
     returns:
       - type: Array
         summary: |
           A list of users who could participate in the direct chat request. If
-          none of the users can direct chat with the requesterUserId, the result
-          is an empty array.
+          none of the users can direct chat with the `requesterUserId`, the
+          result is an empty array.
     tags:
       - Yields
     deprecation_message: ''

@@ -30,7 +30,7 @@ properties:
     description: |
       Time, in seconds, denoting how quickly the compressor will clamp down on
       volume after it surpasses `Class.AudioCompressor.Threshold|Threshold`.
-      Ranges from 0.001 to 0.5.
+      Ranges from 0.0001 to 0.5.
     code_samples: []
     type: float
     tags: []
@@ -115,7 +115,7 @@ properties:
     description: |
       Time, in seconds, denoting how quickly the compressor will unclamp after
       its stream volume dips back below
-      `Class.AudioCompressor.Threshold|Threshold`. Ranges from 0.01 to 0.5.
+      `Class.AudioCompressor.Threshold|Threshold`. Ranges from 0.01 to 5.
     code_samples: []
     type: float
     tags: []
