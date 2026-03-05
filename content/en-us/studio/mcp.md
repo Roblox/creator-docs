@@ -17,6 +17,23 @@ Before you begin, make sure you have:
 
 No additional downloads or plugins are required — the MCP server ships with Studio itself.
 
+## Enabling the MCP Server in Studio
+
+Before connecting any external client, you need to turn on the MCP server inside Roblox Studio.
+
+1. Open the **Assistant chat window** in Studio.
+2. Click the three dots (**…**) menu to open Assistant Settings.
+3. Select the **MCP Servers** tab in the left sidebar.
+4. Toggle on **Enable Studio as MCP server**.
+
+Once enabled, the settings panel will display the JSON configuration and startup command you'll need for your client. When a client successfully connects, you'll see a green indicator showing the number of connected clients ("● 1 client connected").
+
+Learn how to connect to your client in the next sections. You can also find more detailed, client-specific guides below.
+
+## Connecting to multiple Studio instances
+
+You can connect a single MCP client to multiple running instances of Studio simultaneously. The server will intelligently infer which Studio instance you're referring to based on context — for example, if you mention a specific game by name or reference something that only exists in one of your connected experiences. You can also switch manually using `list_roblox_studios` and `set_active_studio` at any time. This feature is still experimental.
+
 ## Understanding the Studio MCP Server
 
 The Studio MCP Server runs as a local process on your machine and communicates with your AI client via **stdio transport** (standard input/output). When your AI assistant wants to perform an action in Studio, it sends a request through this channel, and the server relays it to the Studio plugin.
@@ -56,23 +73,8 @@ The Studio MCP Server runs as a local process on your machine and communicates w
 All actions flow through your AI client, which will typically ask for your approval before executing them.
 
 <Alert severity = 'warning'>
-Security note: MCP clients can read and modify content in your open Roblox places. Only connect clients you trust. You can toggle MCP on/off at any time from the **Plugins** tab in Studio.
+Security note: MCP clients can read and modify content in your open Roblox places. Only connect clients you trust.
 </Alert>
-
-## Connecting to multiple Studio instances
-
-You can connect a single MCP client to multiple running instances of Studio simultaneously. The server will intelligently infer which Studio instance you're referring to based on context — for example, if you mention a specific game by name or reference something that only exists in one of your connected experiences. You can also switch manually using `list_roblox_studios` and `set_active_studio` at any time. This feature is still experimental.
-
-## Enabling the MCP Server in Studio
-
-Before connecting any external client, you need to turn on the MCP server inside Roblox Studio.
-
-1. Open the **Assistant chat window** in Studio.
-2. Click the three dots (**…**) menu to open Assistant Settings.
-3. Select the **MCP Servers** tab in the left sidebar.
-4. Toggle on **Enable Studio as MCP server**.
-
-Once enabled, the settings panel will display the JSON configuration and startup command you'll need for your client. When a client successfully connects, you'll see a green indicator showing the number of connected clients ("● 1 client connected").
 
 ## Connecting your client
 

@@ -624,7 +624,8 @@ methods:
       which should be used instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - LoadOwnedAsset
   - name: InsertService:LoadAssetVersion
     summary: |
       Returns a model inserted into `Class.InsertService` containing the asset

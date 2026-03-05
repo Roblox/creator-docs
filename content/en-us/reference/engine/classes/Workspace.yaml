@@ -89,7 +89,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Environment
   - name: Workspace.AirTurbulenceIntensity
     summary: |
       Controls the strength of turbulence present in the wind velocity field,
@@ -123,7 +125,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Environment
   - name: Workspace.AllowThirdPartySales
     summary: |
       Determines whether assets created by other users can be sold in the game.
@@ -143,7 +147,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Monetization
   - name: Workspace.AuthorityMode
     summary: |
       Sets the server authority mode.
@@ -205,7 +210,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Animation
   - name: Workspace.CurrentCamera
     summary: |
       The `Class.Camera` object being used by the local player.
@@ -281,7 +287,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Workspace.FallenPartsDestroyHeight
     summary: |
       Determines the height at which falling `Class.BasePart|BaseParts` and
@@ -315,7 +322,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Workspace.FallHeightEnabled
     summary: ''
     description: ''
@@ -331,7 +339,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Workspace.FilteringEnabled
     summary: |
       Determines whether changes made from the client will replicate to the
@@ -487,7 +496,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Physics
   - name: Workspace.LayeredClothingCacheOptimizations
     summary: ''
     description: ''
@@ -775,7 +785,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
   - name: Workspace.ReplicateInstanceDestroySetting
     summary: ''
     description: ''
@@ -808,7 +819,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Animation
   - name: Workspace.SandboxedInstanceMode
     summary: ''
     description: ''
@@ -1203,7 +1215,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Workspace:GetPhysicsThrottling
     summary: |
       Returns an integer, between 0 and 100, representing the percentage of real
@@ -1261,7 +1274,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Workspace:GetRealPhysicsFPS
     summary: |
       Returns the number of frames per second that physics is currently being
@@ -1292,7 +1306,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Workspace:GetServerTimeNow
     summary: |
       Returns the server's Unix time in seconds.
@@ -1336,7 +1351,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Workspace:JoinToOutsiders
     summary: |
       Creates joints between the specified `Class.BasePart|Parts` and any
@@ -1414,7 +1430,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
   - name: Workspace:MakeJoints
     summary: |
       Goes through all `Class.BasePart|BaseParts` given. If any part's side has
@@ -1546,7 +1563,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
   - name: Workspace:ZoomToExtents
     summary: |
       Positions and zooms the `Class.Workspace.CurrentCamera` to show the extent

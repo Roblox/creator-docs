@@ -517,7 +517,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Monetization
   - name: MarketplaceService:GetUserSubscriptionDetailsAsync
     summary: |
       Returns a table that contains the details of the user's subscription for a
@@ -597,7 +598,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Monetization
   - name: MarketplaceService:GetUserSubscriptionPaymentHistoryAsync
     summary: |
       Returns an `Library.table|Array` that contains up to one year of the
@@ -737,7 +739,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Monetization
   - name: MarketplaceService:GetUserSubscriptionStatusAsync
     summary: |
       Returns a `Library.table` that contains the subscription status of the
@@ -796,7 +799,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Monetization
   - name: MarketplaceService:PlayerOwnsAsset
     summary: |
       Returns whether the given user has the given asset.
@@ -1216,7 +1220,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - PromptExternalPurchase
   - name: MarketplaceService:RankProductsAsync
     summary: |
       Takes a list of product IDs and returns a personalized ordered list of
@@ -1415,7 +1420,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - PromptExternalPurchase
   - name: MarketplaceService.PromptBundlePurchaseFinished
     summary: ''
     description: ''
@@ -1436,7 +1442,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - PromptExternalPurchase
   - name: MarketplaceService.PromptGamePassPurchaseFinished
     summary: |
       Fires when a purchase prompt for a pass is closed.
@@ -1489,7 +1496,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - PromptExternalPurchase
   - name: MarketplaceService.PromptPremiumPurchaseFinished
     summary: |
       Fires when a purchase prompt for Roblox Premium is closed.
@@ -1510,7 +1518,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - PromptExternalPurchase
   - name: MarketplaceService.PromptProductPurchaseFinished
     summary: |
       Fires when a purchase prompt for a developer product is closed. Do not use
@@ -1576,7 +1585,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - PromptExternalPurchase
   - name: MarketplaceService.PromptPurchaseFinished
     summary: |
       Fires when a purchase prompt for an affiliate gear sale or other asset is
@@ -1625,7 +1635,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - PromptExternalPurchase
   - name: MarketplaceService.PromptSubscriptionPurchaseFinished
     summary: |
       Fires when a purchase prompt for a subscription is closed.
@@ -1662,7 +1673,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - PromptExternalPurchase
 callbacks:
   - name: MarketplaceService.ProcessReceipt
     summary: |
@@ -1787,5 +1799,6 @@ callbacks:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Monetization
     writeCapabilities: []

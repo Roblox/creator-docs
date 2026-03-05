@@ -18,29 +18,27 @@ All endpoints use your universe ID, which you can find on the [Creator Dashboard
 
 For the full endpoint reference, request and response schemas, and error codes, see the [Cloud API reference](/cloud/reference).
 
-## Repositories and namespaces
+## Repositories
 
-Many requests to the configs endpoints require a **repository** in the path and a **namespace** in the request body. For example, this request adds a draft config:
+Requests to the configs endpoints use a **repository** in the path and an **entries** object in the request body. For example, this request adds a draft config:
 
 ```json
-PUT /creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/<REPOSITORY>
+PATCH /creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/<REPOSITORY>/draft
 {
-  "namespaces": {
-    "<NAMESPACE>": {
-      "enableNewTutorial": true
-    }
+  "entries": {
+    "enableNewTutorial": true
   }
 }
 ```
 
-- Repositories differ by product. They separate configs by system.
-- Namespaces are groupings within a product. They organize keys or mark them as being for some particular purpose.
+- **Repositories** differ by product and separate configs by system.
+- **Entries** are the config key-value pairs. You send and receive a single flat object of keys and values.
 
-This guide covers in-experience configs, so all requests use `UniverseConfiguration` for repository and `UniverseConfigurations` for namespace. Repositories and namespaces will eventually expand to cover additional products and use cases.
+This guide covers in-experience configs, so all requests use `InExperienceConfig` for repository. Repositories will eventually expand to cover additional products and use cases.
 
-| Use case              | Repository              | Supported namespaces     |
-| --------------------- | ----------------------- | ------------------------ |
-| In-experience configs | `UniverseConfiguration` | `UniverseConfigurations` |
+| Use case              | Repository           |
+| --------------------- | -------------------- |
+| In-experience configs | `InExperienceConfig` |
 
 ## Create or update configs
 
@@ -49,7 +47,7 @@ Before going live, config changes are staged as drafts. You can either set the e
 - **Starting from scratch or replacing everything** — Use the overwrite endpoint so that the payload is the full desired state. Any key you omit is treated as removed.
 - **Changing only some keys** — Use the partial update endpoint so only the keys you send are updated; everything else stays as-is.
 
-This sample code sets `bossHealth` to `100` in the `UniverseConfigurations` namespace and uses the overwrite endpoint:
+This sample code sets `bossHealth` to `100` and uses the overwrite endpoint:
 
 <Tabs>
   <TabItem key="1" label="Python">
@@ -59,15 +57,13 @@ import requests
 
 API_KEY = "<API_KEY>"
 UNIVERSE_ID = "<UNIVERSE_ID>"
-BASE = f"https://apis.roblox.com/creator-configs-public-api/v1/configs/universes/{UNIVERSE_ID}/repositories/UniverseConfiguration"
+BASE = f"https://apis.roblox.com/creator-configs-public-api/v1/configs/universes/{UNIVERSE_ID}/repositories/InExperienceConfig"
 headers = {"x-api-key": API_KEY, "Content-Type": "application/json"}
 
 # Optional: send previousDraftHash if you have an existing draft and want optimistic concurrency
 payload = {
-    "namespaces": {
-        "UniverseConfigurations": {
-            "bossHealth": 100
-        }
+    "entries": {
+        "bossHealth": 100
     }
 }
 r = requests.put(f"{BASE}/draft:overwrite", headers=headers, json=payload)
@@ -82,16 +78,16 @@ print("Draft staged. draftHash:", draft_hash)
 
 ```bash
 curl --request PUT \
-  "https://apis.roblox.com/creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/UniverseConfiguration/draft:overwrite" \
+  "https://apis.roblox.com/creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/InExperienceConfig/draft:overwrite" \
   --header "x-api-key: <API_KEY>" \
   --header "Content-Type: application/json" \
-  --data '{"namespaces":{"UniverseConfigurations":{"bossHealth":100}}}'
+  --data '{"entries":{"bossHealth":100}}'
 ```
 
   </TabItem>
 </Tabs>
 
-The response includes the `draftHash` value. You need this hash in order to publish. If you prefer to only tweak a few keys in your draft, use the PATCH method on the `/draft` endpoint and only send the namespaces and keys you want to change.
+The response includes the `draftHash` value. You need this hash in order to publish. If you prefer to only tweak a few keys in your draft, use the PATCH method on the `/draft` endpoint and only send the entries (keys) you want to change.
 
 ### About draft hashes
 
@@ -126,7 +122,7 @@ print("Published. configVersion:", result["configVersion"])
 ```bash
 # Use the draftHash from the previous step
 curl --request POST \
-  "https://apis.roblox.com/creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/UniverseConfiguration/publish" \
+  "https://apis.roblox.com/creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/InExperienceConfig/publish" \
   --header "x-api-key: <API_KEY>" \
   --header "Content-Type: application/json" \
   --data '{
@@ -159,7 +155,7 @@ To confirm the change went through, fetch the latest published config. Use the v
 r = requests.get(BASE, headers=headers)
 r.raise_for_status()
 config = r.json()
-boss_health = config["namespaces"]["UniverseConfigurations"].get("bossHealth")
+boss_health = config["entries"].get("bossHealth")
 print("Published bossHealth:", boss_health)  # Should be 100
 
 # Or with full metadata:
@@ -171,14 +167,14 @@ print("Published bossHealth:", boss_health)  # Should be 100
 
 ```bash
 curl --location \
-  "https://apis.roblox.com/creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/UniverseConfiguration" \
+  "https://apis.roblox.com/creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/InExperienceConfig" \
   --header "x-api-key: <API_KEY>"
 ```
 
   </TabItem>
 </Tabs>
 
-Verify that `namespaces.UniverseConfigurations.bossHealth` (or your key) matches what you published.
+Verify that `entries.bossHealth` (or your key) matches what you published.
 
 ## View history and roll back
 
@@ -202,7 +198,7 @@ for rev in data["revisions"]:
 
 ```bash
 curl --location \
-  "https://apis.roblox.com/creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/UniverseConfiguration/revisions?MaxPageSize=10" \
+  "https://apis.roblox.com/creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/InExperienceConfig/revisions?MaxPageSize=10" \
   --header "x-api-key: <API_KEY>"
 ```
 
@@ -238,12 +234,12 @@ print("Rollback published. configVersion:", r.json()["configVersion"])
 ```bash
 # 1) Restore (returns a new draftHash)
 curl --request POST \
-  "https://apis.roblox.com/creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/UniverseConfiguration/revisions/<REVISION_ID>/restore" \
+  "https://apis.roblox.com/creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/InExperienceConfig/revisions/<REVISION_ID>/restore" \
   --header "x-api-key: <API_KEY>"
 
 # 2) Publish the reverted draft using the draftHash from the response
 curl --request POST \
-  "https://apis.roblox.com/creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/UniverseConfiguration/publish" \
+  "https://apis.roblox.com/creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/InExperienceConfig/publish" \
   --header "x-api-key: <API_KEY>" \
   --header "Content-Type: application/json" \
   --data '{"draftHash":"<DRAFT_HASH>","message":"Rollback","deploymentStrategy":"Immediate"}'
@@ -257,7 +253,7 @@ curl --request POST \
 | Limit                   | Maximum        |
 | ----------------------- | -------------- |
 | **Keys per repository** | 100            |
-| **Key length**          | 250 characters |
+| **Key length**          | 256 characters |
 
 Requests that exceed these limits will fail. For type-specific value limits (e.g. string vs JSON) in your experience, see [Limits](../../production/configs.md#limits) in the experience configs guide.
 

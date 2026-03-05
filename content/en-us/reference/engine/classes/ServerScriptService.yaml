@@ -61,7 +61,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
 methods: []
 events: []
 callbacks: []
