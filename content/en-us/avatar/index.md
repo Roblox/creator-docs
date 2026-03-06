@@ -1,5 +1,5 @@
 ---
-title: Create avatar items
+title: shirt items
 description: Create and upload avatar characters, clothing, and accessories to the Roblox Marketplace.
 
 hideInPageNavigation: true
