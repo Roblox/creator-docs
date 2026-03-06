@@ -107,13 +107,16 @@ Fix your asset in Blender, or preferred 3D modeling software. In many cases, you
 5. Ensure the Blender animation start value is set to 0.
 6. Remove vertex colors. In Blender this can be done by clicking on the mesh and then under the data tab selecting color attributes and removing any that exist.
    <img src="../../assets/art/avatar/Delete-Vertex-Colors.png"/>
-7. Modify your head asset to pass validation:
+7. If needed, remove vertex color shading nodes for fbx export. The blender fbx exporter is more picky then glTF and won't accept nodes in between the texture input and the shader.
+   <img src="../../assets/art/avatar/Remove-Vertex-Node-A.png"/>
+   <img src="../../assets/art/avatar/Remove-Vertex-Node-B.png"/>
+8. Modify your head asset to [pass validation](./head-validation.md):
    1. Align cage eyes and mouth regions to the head.
    2. Ensure your head includes a rig, with poses keyframed and mapped to the FACs standard so that:
          1.  Eyes must blink.
          2.  Mouth must open and close.
          3.  Face must express happy and sad.
-8.  Export your updated head asset to FBX file format using the correct settings explained here (If you have PBR, you may want to use glTF).
+9.  Export your updated head asset to FBX file format using the correct settings explained here (If you have PBR, you may want to use glTF).
     1.  Setup textures for FBX export (if needed). Blender will import the glTF textures in such a way that they won't be able to be exported in an FBX file by default.
         1.  To fix this go through each image and save it to your disk locally.
    <img src="../../assets/art/avatar/Blender-Save-Image-Workaround.png"/>

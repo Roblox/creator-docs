@@ -24,6 +24,7 @@ description: |
   - `Class.AudioAnalyzer`
   - `Class.AudioChannelMixer`
   - `Class.AudioChannelSplitter`
+  - `Class.AudioChorus`
   - `Class.AudioCompressor`
   - `Class.AudioDeviceInput`
   - `Class.AudioDeviceOutput`
@@ -34,6 +35,7 @@ description: |
   - `Class.AudioFader`
   - `Class.AudioFilter`
   - `Class.AudioFlanger`
+  - `Class.AudioGate`
   - `Class.AudioLimiter`
   - `Class.AudioListener`
   - `Class.AudioPitchShifter`
@@ -42,6 +44,9 @@ description: |
   - `Class.AudioReverb`
   - `Class.AudioSpeechToText`
   - `Class.AudioTextToSpeech`
+  - `Class.AudioTremolo`
+  - `Class.VideoPlayer`
+  - `Class.VideoDisplay`
 code_samples: []
 inherits:
   - Instance

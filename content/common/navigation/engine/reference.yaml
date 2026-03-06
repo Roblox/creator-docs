@@ -934,6 +934,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/DialogChoice.yaml
                 ignoreTranslation: true
+              - title: DigitsRigDescription
+                path: /reference/engine/classes/DigitsRigDescription
+                type: engineapi
+                source: /reference/engine/classes/DigitsRigDescription.yaml
+                ignoreTranslation: true
               - title: DraftsService
                 path: /reference/engine/classes/DraftsService
                 type: engineapi
@@ -2815,6 +2820,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/StyleLink.yaml
                 ignoreTranslation: true
+              - title: StyleQuery
+                path: /reference/engine/classes/StyleQuery
+                type: engineapi
+                source: /reference/engine/classes/StyleQuery.yaml
+                ignoreTranslation: true
               - title: SurfaceAppearance
                 path: /reference/engine/classes/SurfaceAppearance
                 type: engineapi
@@ -3107,6 +3117,11 @@ navigation:
                         path: /reference/engine/classes/UIScale
                         type: engineapi
                         source: /reference/engine/classes/UIScale.yaml
+                        ignoreTranslation: true
+                      - title: UIShadow
+                        path: /reference/engine/classes/UIShadow
+                        type: engineapi
+                        source: /reference/engine/classes/UIShadow.yaml
                         ignoreTranslation: true
                       - title: UIStroke
                         path: /reference/engine/classes/UIStroke

@@ -44,7 +44,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Network
   - name: NetworkClient.ConnectionFailed
     summary: |
       Fired if the client fails to connect to the server.
@@ -65,5 +66,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Network
 callbacks: []

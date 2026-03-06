@@ -20,7 +20,7 @@ Eyelashes and eyebrows are cosmetics that can help emphasize facial features and
 </figure>
 </GridContainer>
 
-When publishing eyelashes and eyebrows, you must parent these `Class.Accessory` objects under the avatar character's `Class.Model` prior to uploading the character `Model` to the Marketplace. These `Accessory` face objects must adhere to Roblox's accessory requirements and include layered components such as caging, rigging, and skinning components. For an overview on creating your own eyelashes and eyebrows, see [Create face accessories](../../art/characters/facial-animation/create-face-accessories.md).
+When publishing eyelashes and eyebrows, you must parent these `Class.Accessory` objects under the avatar character's `Class.Model` prior to uploading the character `Model` to the Marketplace. These `Accessory` face objects must adhere to Roblox's accessory requirements and include layered components such as caging, rigging, and skinning components. For an overview on creating your own eyelashes and eyebrows, see [Create face accessories](../../art/characters/facial-animation/create-face-accessories.md). Eyebrows and Eyelash must use [Automatic Skinning Transfer](../../art/accessories/automatic-skinning-transfer.md) with the `RBX_Leader` and `RBX_Follower` special joints to be published on the marketplace.
 
 <Alert severity = 'warning'>
 At this time, you can only bundle **eyelashes**, **eyebrows**, and **hair** with your body on Marketplace upload. Other facial accessories, such as horns, makeup, glitter, or other cosmetics are not acceptable. See [Marketplace policy](../../marketplace/marketplace-policy.md) for specific information on allowable cosmetics and other policy regulations and guidelines.

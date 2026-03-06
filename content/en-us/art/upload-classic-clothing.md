@@ -4,10 +4,10 @@ description: How to upload your classic clothing to the Marketplace and check mo
 ---
 
 <Alert severity="warning">
-Current user-generated avatars on the Marketplace do not support 2D classic clothing. For information on creating modern 3D cosmetics, including rigid accessories and clothing items, see [Get started](../avatar).
+Many user-generated avatars on the Marketplace do not support 2D classic clothing. For information on creating modern 3D cosmetics, including rigid accessories and clothing items, see [Get started](../avatar).
 </Alert>
 
-After [creating](./classic-clothing.md#creating-classic-clothing) and [testing](./test-classic-clothing.md) your classic clothing design, you can upload the clothing item to the Marketplace for a [fee](../marketplace/marketplace-fees-and-commissions.md#classic-clothing).
+After [creating](./classic-clothing.md#creating-classic-clothing) and [testing](./test-classic-clothing.md) your classic clothing design, you can upload the clothing item to the Marketplace for a [fee](../marketplace/marketplace-fees-and-commissions.md#classic-clothing). To upload assets to the Marketplace, you must meet [creator requirements](../marketplace/marketplace-policy.md#creator-requirements).
 
 ## Upload new creations
 

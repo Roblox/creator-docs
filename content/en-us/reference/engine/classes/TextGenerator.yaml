@@ -60,7 +60,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: TextGenerator.SystemPrompt
     summary: |
       Provides context to the model about its role, tone, or behavior during
@@ -82,7 +83,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: TextGenerator.Temperature
     summary: |
       Controls the "creativity" or randomness of the model's responses.
@@ -103,7 +105,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: TextGenerator.TopP
     summary: |
       Helps the AI model narrow or expand the range of possible words to sample
@@ -128,7 +131,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
 methods:
   - name: TextGenerator:GenerateTextAsync
     summary: |
@@ -225,6 +229,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
 events: []
 callbacks: []

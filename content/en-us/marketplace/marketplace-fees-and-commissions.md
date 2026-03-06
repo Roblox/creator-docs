@@ -10,7 +10,9 @@ You receive a commission every time users purchase your item. If users purchase 
 
 ## Upload fees
 
-Uploading a 3D avatar item, such as accessories, bodies, and animations, requires an upload fee of **750 Robux** per submission. In general, fees are not refunded if an item is rejected through moderation. If your asset clears the uploading process, your asset is ready to publish to the Marketplace.
+Uploading a 2D avatar item, such as t-shirts, shirts, and pants, requires an upload fee of **10 Robux** per submission. Uploading a 3D avatar item, such as accessories, bodies, and animations, requires an upload fee of **300 Robux** per submission.
+
+In general, fees are not refunded if an item is rejected through moderation. If your asset clears the uploading process, your asset is ready to publish to the Marketplace.
 
 ## Publishing advance
 
@@ -21,7 +23,30 @@ This publishing advance is dependent on the type of Marketplace item being sold:
 <table>
 <thead>
   <tr>
-    <th>Asset type</th>
+    <th>2D avatar asset type</th>
+    <th>Publishing advance</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>T-shirt</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>Shirt</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>Pants</td>
+    <td>10</td>
+  </tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+  <tr>
+    <th>3D avatar asset type</th>
     <th>Non-limited publishing advance</th>
     <th>Paid limited publishing advance</th>
   </tr>
@@ -498,4 +523,4 @@ Depending on the 3D asset type, you must set the price of the item within the ma
 
 You can upload and sell [classic clothing](../art/classic-clothing.md) through the Roblox website. It costs **10 Robux** to upload these assets.
 
-Classic t-shirts do not require a fee when uploading, but they do require a **10 Robux** fee when going on sale for the first time. If the seller takes the item off sale, it does not require an additional fee when they place it on sale again.
+If the seller takes the item off sale, it does not require an additional fee when they place it on sale again.

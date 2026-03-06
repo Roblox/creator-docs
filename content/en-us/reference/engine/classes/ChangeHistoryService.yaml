@@ -45,9 +45,8 @@ methods:
         summary: |
           Identifies the recording from the previous call to
           `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()`.
-          If the operation is
-          `Enum.ChangeHistoryService.FinishRecordingOperation.Cancel`, this
-          value is ignored, and the recording is determined by context.
+          If the operation is `Enum.FinishRecordingOperation.Cancel`, this value
+          is ignored, and the recording is determined by context.
       - name: operation
         type: FinishRecordingOperation
         default:

@@ -1,3 +1,6 @@
+
+https://modelcontextprotocol.io/docs/getting-started/intro
+https://code.visualstudio.com/docs/copilot/customization/mcp-servers
 http://cgtrader.com/pbr-3d-models?polygons=lt_5k
 http://en.cppreference.com/w/cpp/chrono/c/time_t
 https://academy.zenva.com/product/roblox-game-development-mini-degree/?zva_src=robloxedu
@@ -755,6 +758,11 @@ https://www.ftc.gov/sites/default/files/attachments/press-releases/ftc-publishes
 https://activity-va.tiktok.com/magic/eco/runtime/release/689e44394a786f02edabc8a7
 https://youtu.be/gkFKF9A-snY
 https://www.youtube-nocookie.com/embed/5HcH-9E7USc?si=IDla-YBxiO_E-O0q
+https://extensions.blender.org/add-ons/print3d-toolbox
+https://extensions.blender.org/add-ons/mesh-repair-tools
+https://www.meshlab.net/
+https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/solidify.html
+https://en.wikipedia.org/wiki/Voronoi_diagram
 https://www.youtube-nocookie.com/watch?v=7DXTQcA9G_A
 https://github.com/Roblox/studio-rust-mcp-server
 https://ai.google.dev/gemini-api/docs/api-key

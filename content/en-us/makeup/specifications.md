@@ -40,7 +40,12 @@ The [provided Roblox makeup template head](https://github.com/Roblox/avatar/tree
 
 ## Decals and textures
 
-Textures created for accessories must meet Roblox's [texture specifications](../art/modeling/texture-specifications.md). For additional information on PBR textures, see [PBR textures](../art/modeling/surface-appearance.md).
+All textures created for accessories must meet Roblox's [texture specifications](../art/modeling/texture-specifications.md), but makeup textures includes two addtional considerations:
+
+- There is a 4K texture limit for [in-experience](../avatar/in-experience-creation.md) makeup creation.
+- There is a 1K texture limit for makeup that you upload to the [Marketplace](https://www.roblox.com/catalog).
+
+For additional information on PBR textures, see [PBR textures](../art/modeling/surface-appearance.md).
 
 ## (Optional) Eyebrows and eyelashes
 

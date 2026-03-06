@@ -60,8 +60,11 @@ properties:
     capabilities:
       - AssetRead
   - name: AudioSearchParams.AudioSubType
-    summary: ''
-    description: ''
+    summary: |
+      The subtype of the audio asset.
+    description: |
+      Searches for audio with this subtype, corresponding to the
+      `Enum.AudioSubType` enum. Defaults to `Enum.AudioSubType.Music`.
     code_samples: []
     type: AudioSubType
     tags: []

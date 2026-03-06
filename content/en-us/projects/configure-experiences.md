@@ -61,17 +61,9 @@ For step-by-step instructions on how to edit collaborator permissions, see [role
 
 ## Access version history
 
-Roblox automatically retains saved versions of each place for version control and backup purposes. To access and revert to a previously saved version of any place within an experience:
+Roblox automatically retains saved versions of each place for version control and backup purposes. You can access **Version History** in the Creator Dashboard to revert to a previously saved version of any place within an experience, or in Studio to leave notes attached to your saved place files.
 
-1. Navigate to the [Creator Dashboard][creatordashboard] and click on the thumbnail of the experience. The experience's **Overview** page displays.
-1. In the left-hand navigation, navigate to **Configure** ⟩ **Places**.
-1. On the **Places** page, click the thumbnail of the place you'd like to revert to a previous version.
-1. In the left-hand navigation, click **Version History**.
-1. Locate and select the version to revert to, then click the **Restore** button. Confirm the action to restore to that version.
-
-<Alert severity="warning">
-Note that restoring a place to a previous version does **not** automatically publish the changes. If the place has been [released to the public](../production/publishing/publish-experiences-and-places.md#make-experience-public) and you want to overwrite its live/public version with the reverted version, open the place in Studio, publish it, and then [restart your servers](./update-experiences.md#restart-servers) for updates.
-</Alert>
+For more information about accessing Version History, saving place files with notes, and reverting to previous place versions, see [Version History](./version-history.md).
 
 ## Allow copying
 

@@ -5,8 +5,14 @@
 name: AudioGate
 type: class
 memory_category: Internal
-summary: ''
-description: ''
+summary: |
+  Mutes audio streams that fall below a certain volume threshold.
+description: |
+  `Class.AudioGate` behaves like a noise gate, muting audio streams when their
+  volume drops below a specified `Class.AudioGate.Threshold|Threshold`. It is
+  useful for removing background noise from microphone input or cleaning up
+  audio tracks. It provides one **Input** pin and one **Output** pin which can
+  be connected to/from by `Class.Wire|Wires`.
 code_samples: []
 inherits:
   - Instance
@@ -15,8 +21,13 @@ tags: []
 deprecation_message: ''
 properties:
   - name: AudioGate.Attack
-    summary: ''
-    description: ''
+    summary: |
+      Controls how long it takes for the gate to open when the signal level
+      rises above the `Class.AudioGate.Threshold|Threshold`.
+    description: |
+      The duration, in seconds, over which the gate will unmute the audio stream
+      when the signal level rises above the
+      `Class.AudioGate.Threshold|Threshold`. Ranges from 0.001 to 5.
     code_samples: []
     type: float
     tags: []
@@ -32,8 +43,10 @@ properties:
     capabilities:
       - Audio
   - name: AudioGate.Bypass
-    summary: ''
-    description: ''
+    summary: |
+      Whether audio streams are passed-through unaffected by this effect.
+    description: |
+      If `true`, audio streams are passed-through unaffected by this effect.
     code_samples: []
     type: boolean
     tags: []
@@ -49,8 +62,13 @@ properties:
     capabilities:
       - Audio
   - name: AudioGate.Release
-    summary: ''
-    description: ''
+    summary: |
+      Controls how long it takes for the gate to close when the signal level
+      drops below the `Class.AudioGate.Threshold|Threshold`.
+    description: |
+      The duration, in seconds, over which the gate will mute the audio stream
+      when the signal level drops below the
+      `Class.AudioGate.Threshold|Threshold`. Ranges from 0.001 to 5.
     code_samples: []
     type: float
     tags: []
@@ -66,8 +84,22 @@ properties:
     capabilities:
       - Audio
   - name: AudioGate.Threshold
-    summary: ''
-    description: ''
+    summary: |
+      The gain value(s) around which the gate opens and closes.
+    description: |
+      The gain value(s), in decibels, at which the gate will transition from
+      being closed (i.e. muted) to being open (i.e. unmuted).
+
+      `Class.AudioGate.Threshold` is a `Class.NumberRange` with a "low" and a
+      "high" threshold. The gate starts out muted - when the input stream's
+      volume rises above the "high" threshold, the gate will unmute the audio
+      stream over the course of `Class.AudioGate.Attack|Attack` seconds. If the
+      input stream's volume then dips below the "low" threshold, the gate will
+      mute the audio stream over the course of `Class.AudioGate.Release|Release`
+      seconds. The two "low" and "high" thresholds create a hysteresis region to
+      prevent the gate from opening and closing very rapidly.
+
+      Ranges from -80 to 30, and defaults to -36 (low) and -24 (high).
     code_samples: []
     type: NumberRange
     tags: []
@@ -153,7 +185,7 @@ events:
   - name: AudioGate.WiringChanged
     summary: |
       Fires when another instance is connected to or disconnected from the
-      `Class.AudioAnalyzer` via a `Class.Wire`.
+      `Class.AudioGate` via a `Class.Wire`.
     description: |
       Event that fires after a `Class.Wire` becomes connected or disconnected,
       and that `Class.Wire` is now or was previously connected to a pin on the
@@ -169,13 +201,12 @@ events:
         type: string
         default:
         summary: |
-          The pin on the `Class.AudioAnalyzer` that the `Class.Wire` targets.
+          The pin on the `Class.AudioGate` that the `Class.Wire` targets.
       - name: wire
         type: Wire
         default:
         summary: |
-          The `Class.Wire` between the `Class.AudioAnalyzer` and the other
-          instance.
+          The `Class.Wire` between the `Class.AudioGate` and the other instance.
       - name: instance
         type: Instance
         default:

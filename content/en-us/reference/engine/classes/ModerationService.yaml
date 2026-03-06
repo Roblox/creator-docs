@@ -38,7 +38,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Consequences
   - name: ModerationService:CreateReviewableContentAsync
     summary: ''
     description: ''
@@ -56,7 +57,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Consequences
   - name: ModerationService:CreateReviewableContentKey
     summary: ''
     description: ''
@@ -73,7 +75,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Consequences
   - name: ModerationService:InternalRequestReviewableContentReviewAsync
     summary: ''
     description: ''
@@ -92,6 +95,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
+      - Consequences
       - InternalTest
 events: []
 callbacks: []

@@ -377,9 +377,21 @@ functions:
       `dst[t], ..., dst[t + (b - a)] = src[a], ..., src[b]`.
 
       The default for `dst` is `src`. The destination range may overlap with the
-      source range.
+      source range. Returns `dst` for convenience.
 
-      Returns `dst` for convenience.
+      ```lua
+      local sourceTable = {4, 5} -- Table of data to copy from
+      local destTable = {1, 2, 3} -- Table to add copied data to
+
+      table.move(
+      	sourceTable, -- Source table
+      	1, -- Index to start from in source table
+      	#sourceTable, -- Index up to (and including) from source table
+      	#destTable + 1, -- Index within destination table to move data into
+      	destTable -- Destination table
+      )
+      print(destTable) --> {1, 2, 3, 4, 5}
+      ```
     parameters:
       - name: src
         type: table
@@ -409,7 +421,7 @@ functions:
     returns:
       - type: table
         summary: |
-          `dst`, for convenience.
+          `dst` for convenience.
     tags: []
     code_samples: []
     deprecation_message: ''

@@ -31,7 +31,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
+      - Capture
 methods: []
 events: []
 callbacks: []

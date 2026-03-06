@@ -32,7 +32,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
+      - Capture
   - name: CoreGuiConfiguration.PlayerListConfiguration
     summary: ''
     description: ''
@@ -48,7 +50,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
   - name: CoreGuiConfiguration.SelfViewConfiguration
     summary: ''
     description: ''
@@ -64,7 +67,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - UI
 methods: []
 events: []
 callbacks: []

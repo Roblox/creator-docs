@@ -27,14 +27,8 @@ properties:
       PlayFab API key. Must be set in order to use
       `Class.AnalyticsService:FireEvent()|FireEvent`.
     description: |
-      The **ApiKey** property contains the game's PlayFab API key. It must be
-      set and valid in order to use
-      `Class.AnalyticsService:FireEvent()|FireEvent`. It can be set by pasting
-      and editing the following line of code into the Command bar:
-
-      ```lua
-      game:GetService("AnalyticsService").ApiKey = "API_KEY"
-      ```
+      This property contains the game's PlayFab API key. It must be set and
+      valid in order to use `Class.AnalyticsService:FireEvent()|FireEvent`.
     code_samples: []
     type: string
     tags:
@@ -56,49 +50,7 @@ methods:
       Fires a custom event with a custom event name and data.
     description: |
       This function triggers a custom event with a custom event name data.
-
-      #### Limits of events
-
-      Each game server is allowed a certain number of standard events API calls
-      based on the number of players present (more players means more events
-      will be needed). The events that exceed the limit will be dropped and log
-      an error to the developer console. - Per minute limit: 120 + numPlayers \*
-      20, all events shared this limit. - Cooldown: refresh every 10 seconds
-
-      #### Limits of parameters
-
-      Limit the size of parameters. The event that exceeds the limit will be
-      dropped and log an error to the developer console.
-
-      <table>
-          <thead>
-              <tr>
-                  <th>Parameters</th>
-                  <th>Maximum Number of Characters</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>customData Variant</td>
-                  <td>500 after serialized</td>
-              </tr>
-              <tr>
-                  <td>other string types</td>
-                  <td>50</td>
-              </tr>
-          </tbody>
-      </table>
-
-      See also:
-
-      - `Class.AnalyticsService:FirePlayerProgressionEvent()`, triggers an event
-        used to track player progression through the game
-      - `Class.AnalyticsService:FireInGameEconomyEvent()`, triggers an event
-        used to track player actions pertaining to the in-game economy
-      - `Class.AnalyticsService:FireLogEvent()`, triggers an event used to track
-        errors and warnings experienced by players
-    code_samples:
-      - analytics-event---custom
+    code_samples: []
     parameters:
       - name: player
         type: Instance
@@ -121,7 +73,9 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This deprecated function is a variant of
+      `Class.AnalyticsService:LogCustomEvent()` which should be used instead.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -130,32 +84,10 @@ methods:
     summary: |
       Report a custom event to PlayFab.
     description: |
-      **FireEvent** reports a custom event to PlayFab. The event is reported
+      This function reports a custom event to PlayFab. The event is reported
       using a **category** and **value**, where the category is a string and the
       value can be a string or table. In order to use PlayFab, you must have a
       valid `Class.AnalyticsService.ApiKey|ApiKey` set.
-
-      #### Possible Errors
-
-      - **"AnalyticsService can only be executed by game server."** – Tracking
-        can only be done on the server through a `Class.Script` or
-        `Class.ModuleScript` required by a script. See
-        `Class.RunService:IsServer()`.
-      - **"The ApiKey is invalid."** – The
-        `Class.AnalyticsService.ApiKey|ApiKey` has been set, but it's invalid.
-        Check that it is set to the correct value.
-      - **"AnalyticsService can only accept valid UTF-8 characters."** – Thrown
-        when the value can't be serialized as UTF-8 characters. This can happen
-        if you pass a value which has unicode characters, like emojis.
-      - **"AnalyticsService failed in parse event value. Error: ..."** – Thrown
-        when there is an issue when serializing the provided value into a
-        string.
-      - **"AnalyticsService: , " and \r\n are not allowed in category."** – The
-        comma `,`, the double quote `"`, and newline characters `\r\n` cannot be
-        used in the **category** parameter.
-      - **"AnalyticsService: The event value you fired is too long."** – Thrown
-        if the **value** parameter was too long after serialization. The length
-        limit is 1 KiB, or 1024 bytes.
     code_samples: []
     parameters:
       - name: category
@@ -177,12 +109,9 @@ methods:
       - Deprecated
     deprecation_message: |
       This function has been deprecated in favor of more descriptive methods,
-      including:
-
-      - `Class.AnalyticsService:FireCustomEvent()`
-      - `Class.AnalyticsService:FireInGameEconomyEvent()`
-      - `Class.AnalyticsService:FireLogEvent()`
-      - `Class.AnalyticsService:FirePlayerProgressionEvent()`
+      including `Class.AnalyticsService:LogCustomEvent()`,
+      `Class.AnalyticsService:LogEconomyEvent()`, and
+      `Class.AnalyticsService:LogProgressionEvent()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -193,53 +122,9 @@ methods:
       economy.
     description: |
       This function triggers an event used to track player actions pertaining to
-      the in-game economy.
-
-      For example, it should be called to track when players acquire or spend
-      virtual items within the economy like currency.
-
-      #### Limits of events
-
-      Each game server is allowed a certain number of standard events API calls
-      based on the number of players present (more players means more events
-      will be needed). The events that exceed the limit will be dropped and log
-      an error to the developer console. - Per minute limit: 120 + numPlayers \*
-      20, all events shared this limit. - Cooldown: refresh every 10 seconds
-
-      #### Limits of parameters
-
-      Limit the size of parameters. The event that exceeds the limit will be
-      dropped and log an error to the developer console.
-
-      <table>
-          <thead>
-              <tr>
-                  <th>Parameters</th>
-                  <th>Maximum Number of Characters</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>customData Variant</td>
-                  <td>500 after serialized</td>
-              </tr>
-              <tr>
-                  <td>other string types</td>
-                  <td>50</td>
-              </tr>
-          </tbody>
-      </table>
-
-      See also:
-
-      - `Class.AnalyticsService:FirePlayerProgressionEvent()`, triggers an event
-        used to track player progression through the game
-      - `Class.AnalyticsService:FireLogEvent()`, triggers an event used to track
-        errors and warnings experienced by players
-      - `Class.AnalyticsService:FireCustomEvent()`, triggers an event used to
-        emit a custom event
-    code_samples:
-      - analytics-event---economy
+      the in-game economy. For example, it should be called to track when
+      players acquire or spend virtual items within the economy like currency.
+    code_samples: []
     parameters:
       - name: player
         type: Instance
@@ -302,7 +187,9 @@ methods:
           No return.
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This deprecated function is a variant of
+      `Class.AnalyticsService:LogEconomyEvent()` which should be used instead.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -312,62 +199,10 @@ methods:
       Fire a log event used to track errors and warnings experienced by players.
     description: |
       This function triggers an event used to track errors and warnings
-      experienced by players.
-
-      For example, it could be called to indicate when a function call fails -
-      such as a datastore save or `Class.TeleportService:Teleport()`. See the
-      example below.
-
-      #### Limits of events
-
-      Each game server is allowed a certain number of standard events API calls
-      based on the number of players present (more players means more events
-      will be needed). The events that exceed the limit will be dropped and log
-      an error to the developer console. - Per minute limit: 120 + numPlayers \*
-      20, all events shared this limit. - Cooldown: refresh every 10 seconds
-
-      #### Limits of parameters
-
-      Limit the size of parameters. The event that exceeds the limit will be
-      dropped and log an error to the developer console.
-
-      <table>
-          <thead>
-              <tr>
-                  <th>Parameters</th>
-                  <th>Maximum Number of Characters</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>FireLogEvent stackTrace</td>
-                  <td>1000</td>
-              </tr>
-              <tr>
-                  <td>FireLogEvent message</td>
-                  <td>500</td>
-              </tr>
-              <tr>
-                  <td>customData Variant</td>
-                  <td>500 after serialized</td>
-              </tr>
-              <tr>
-                  <td>other string types</td>
-                  <td>50</td>
-              </tr>
-          </tbody>
-      </table>
-
-      See also:
-
-      - `Class.AnalyticsService:FireInGameEconomyEvent()`, triggers an event
-        used to track player actions pertaining to the in-game economy
-      - `Class.AnalyticsService:FirePlayerProgressionEvent()`, triggers an event
-        used to track player progression through the game
-      - `Class.AnalyticsService:FireCustomEvent()`, triggers an event used to
-        emit a custom event
-    code_samples:
-      - analytics-event---log
+      experienced by players. For example, it could be called to indicate when a
+      function call fails, such as a datastore save or
+      `Class.TeleportService:Teleport()`. See the example below.
+    code_samples: []
     parameters:
       - name: player
         type: Instance
@@ -391,13 +226,6 @@ methods:
           Optional. A dictionary which contains predefined keys including
           "errorCode" and "stackTrace". Both keys values are strings. stackTrace
           is a traceback of the current function call stack.
-
-          ```lua
-          local debugInfo = {
-                      errorCode = '123',
-                      stackTrace = debug.traceback()
-                }
-          ```
       - name: customData
         type: Variant
         default:
@@ -419,63 +247,9 @@ methods:
       Fire an event used to track player progression through the game.
     description: |
       This function triggers an event used to track player progression through
-      the game.
-
-      For example, it should be called when a player starts an in-game tutorial
-      and again that player finishes the tutorial. Another example (see below)
-      includes tracking when a player gains experience, collects objects, and
-      levels up.
-
-      #### Limits of events
-
-      Each game server is allowed a certain number of standard events API calls
-      based on the number of players present (more players means more events
-      will be needed). The events that exceed the limit will be dropped and log
-      an error to the developer console. - Per minute limit: 120 + numPlayers \*
-      20, all events shared this limit. - Cooldown: refresh every 10 seconds
-
-      #### Limits of parameters
-
-      Limit the size of parameters. The event that exceeds the limit will be
-      dropped and log an error to the developer console.
-
-      <table>
-          <thead>
-              <tr>
-                  <th>Parameters</th>
-                  <th>Maximum Number of Characters</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>FirePlayerProgressionEvent location</td>
-                  <td>5 pairs of Key and Value, each Key and Value are 50</td>
-              </tr>
-              <tr>
-                  <td>FirePlayerProgressionEvent statistics</td>
-                  <td>5 pairs of Key and Value, each Key and Value are 50</td>
-              </tr>
-              <tr>
-                  <td>customData Variant</td>
-                  <td>500 after serialized</td>
-              </tr>
-              <tr>
-                  <td>other string types</td>
-                  <td>50</td>
-              </tr>
-          </tbody>
-      </table>
-
-      See also:
-
-      - `Class.AnalyticsService:FireInGameEconomyEvent()`, triggers an event
-        used to track player actions pertaining to the in-game economy
-      - `Class.AnalyticsService:FireLogEvent()`, triggers an event used to track
-        errors and warnings experienced by players
-      - `Class.AnalyticsService:FireCustomEvent()`, triggers an event used to
-        emit a custom event
-    code_samples:
-      - analytics-event---progression
+      the game. For example, it should be called when a player starts an in-game
+      tutorial and again that player finishes the tutorial.
+    code_samples: []
     parameters:
       - name: player
         type: Instance
@@ -501,16 +275,6 @@ methods:
           this developers can query where is the most frequent location for a
           specific progression event category. For example, the category could
           be "LevelUp".
-
-          ```lua
-          local location = {
-              ["placeDesc"] = "Dungeon1",
-              ["levelDesc"] = "level2",
-              ["mapDesc"] = "LeftChamberMap",
-              ["ProgresionType"] = "LevelUp",
-              ["userDefinedKey5"] = "0005"
-          }
-          ```
       - name: statistics
         type: Variant
         default:
@@ -519,16 +283,6 @@ methods:
           statistics data that allows developers to track any specific data that
           they want to collect as players progress through their game. Key-Value
           is a string-number pair.
-
-          ```lua
-          local statistics = {
-              ["numberOfKills"] = 111,
-              ["numberOfExp"] = 222,
-              ["userDefinedKey3"] = number,
-              ["userDefinedKey4"] = number,
-              ["userDefinedKey5"] = number
-          }
-          ```
       - name: customData
         type: Variant
         default:
@@ -540,7 +294,10 @@ methods:
           No return.
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This deprecated function is a variant of
+      `Class.AnalyticsService:LogProgressionEvent()` which should be used
+      instead.
     security: None
     thread_safety: Unsafe
     capabilities:

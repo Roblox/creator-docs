@@ -45,7 +45,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
   - name: VideoPlayer.AutoPlayInStudio
     summary: |
       Plays the `Class.VideoPlayer.VideoContent|VideoContent` while in Studio
@@ -68,7 +70,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
   - name: VideoPlayer.IsLoaded
     summary: |
       Indicates when the `Class.VideoPlayer.VideoContent|VideoContent` has
@@ -91,7 +95,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
   - name: VideoPlayer.IsPlaying
     summary: |
       Denotes whether this `Class.VideoPlayer` is currently playing.
@@ -114,7 +120,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
   - name: VideoPlayer.Looping
     summary: |
       Controls whether this `Class.VideoPlayer` loops.
@@ -133,7 +141,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
   - name: VideoPlayer.PlaybackSpeed
     summary: |
       Controls the speed at which the video is played.
@@ -152,7 +162,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
   - name: VideoPlayer.Resolution
     summary: |
       Gets the original source resolution of the
@@ -174,7 +186,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
   - name: VideoPlayer.TimeLength
     summary: |
       Indicates the length of the `Class.VideoPlayer.VideoContent|VideoContent`
@@ -197,7 +211,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
   - name: VideoPlayer.TimePosition
     summary: |
       Indicates the progress in seconds of the
@@ -218,7 +234,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
   - name: VideoPlayer.VideoContent
     summary: |
       The asset to be loaded into the `Class.VideoPlayer`.
@@ -240,7 +258,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
   - name: VideoPlayer.Volume
     summary: |
       Controls how loudly the audio track will be played.
@@ -259,7 +279,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
 methods:
   - name: VideoPlayer:GetConnectedWires
     summary: |
@@ -283,7 +305,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
   - name: VideoPlayer:GetInputPins
     summary: |
       Gets the list of pins that `Class.Wire` can use in `Class.Wire.TargetName`
@@ -303,7 +327,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
   - name: VideoPlayer:GetOutputPins
     summary: |
       Gets the list of pins that `Class.Wire` can use in `Class.Wire.SourceName`
@@ -323,7 +349,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
   - name: VideoPlayer:LoadAsync
     summary: |
       Loads the `Class.VideoPlayer.VideoContent|VideoContent` before it is
@@ -345,7 +373,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
   - name: VideoPlayer:Pause
     summary: |
       Pauses the `Class.VideoPlayer` wherever its
@@ -363,7 +393,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
   - name: VideoPlayer:Play
     summary: |
       Plays the `Class.VideoPlayer` from wherever its
@@ -384,7 +416,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
   - name: VideoPlayer:Unload
     summary: |
       Unloads the `Class.VideoPlayer.VideoContent` to save resources.
@@ -405,7 +439,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
 events:
   - name: VideoPlayer.DidEnd
     summary: |
@@ -424,7 +460,9 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
   - name: VideoPlayer.DidLoop
     summary: |
       Fires when the `Class.VideoPlayer.VideoContent|VideoContent` loops.
@@ -438,7 +476,9 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
   - name: VideoPlayer.PlayFailed
     summary: ''
     description: ''
@@ -451,7 +491,9 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
   - name: VideoPlayer.WiringChanged
     summary: |
       Fires when another instance is connected to or disconnected from the
@@ -486,5 +528,7 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Audio
+      - UI
 callbacks: []

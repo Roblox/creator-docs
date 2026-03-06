@@ -94,8 +94,13 @@ properties:
     capabilities:
       - Audio
   - name: AudioAnalyzer.WindowSize
-    summary: ''
-    description: ''
+    summary: |
+      Controls the resolution and timeliness of
+      `Class.AudioAnalyzer:GetSpectrum|GetSpectrum`.
+    description: |
+      Controls the size of arrays returned by
+      `Class.AudioAnalyzer:GetSpectrum|GetSpectrum()`. Larger windows contain
+      more data (so more-accurate frequency responses) but change less often.
     code_samples: []
     type: AudioWindowSize
     tags: []
@@ -190,7 +195,10 @@ methods:
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          A table of numbers representing the amplitude levels of various
+          frequencies of audio within the last buffer, or an empty table if a
+          spectrum cannot be obtained.
     tags:
       - CustomLuaState
     deprecation_message: ''

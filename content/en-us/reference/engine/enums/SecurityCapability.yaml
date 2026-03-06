@@ -28,7 +28,8 @@ items:
   - name: AssetRequire
     summary: ''
     value: 3
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: LoadString
     summary: ''
@@ -93,7 +94,8 @@ items:
   - name: Avatar
     summary: ''
     value: 16
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: Input
     summary: ''
