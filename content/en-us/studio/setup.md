@@ -1,48 +1,44 @@
----
-title: Roblox Studio setup
-description: Explains how to install Roblox Studio on your system.
----
+-- Laser Tag Script
+local tool = script.Parent
+local DAMAGE = 20        -- How much damage per hit
+local RANGE = 200        -- How far the laser can go
+local COOLDOWN = 0.5     -- Time between shots
 
-import StudioSystemReqs from '../includes/studio/system-reqs.md'
+local lastShot = 0
 
-Create immersive 3D experiences on Roblox with **Roblox Studio**, a free application available on Windows and Mac.
+tool.Activated:Connect(function()
+    local now = tick()
+    if now - lastShot < COOLDOWN then return end
+    lastShot = now
 
-<UseStudioButton variant='blueLogoIconButton' />
+    local character = tool.Parent
+    if not character then return end
+    local player = game.Players:GetPlayerFromCharacter(character)
+    if not player then return end
 
-## System requirements
+    local head = character:FindFirstChild("Head")
+    if not head then return end
 
-<StudioSystemReqs components={props.components} />
+    -- Raycast to detect what the laser hits
+    local rayOrigin = head.Position
+    local rayDirection = head.CFrame.LookVector * RANGE
 
-## Installation
+    local raycastParams = RaycastParams.new()
+    raycastParams.FilterDescendantsInstances = {character}  -- Ignore yourself
+    raycastParams.FilterType = Enum.RaycastFilterType.Blacklist
 
-1. <UseStudioButton variant="link">Download Studio</UseStudioButton>.
-1. In the pop-up dialog, click the **Download Studio** button.
-1. Find the Studio installer in your browser's download history and double-click the file.
+    local raycastResult = workspace:Raycast(rayOrigin, rayDirection, raycastParams)
 
-   - On Windows, the file is `RobloxStudio.exe`.
-   - On Mac, the file is `RobloxStudio.dmg`.
-
-1. After Studio finishes installing, a pop-up confirmation displays. Click the **Launch&nbsp;Studio** button.
-
-1. Sign in to Studio with your Roblox account (if you don't have an account, create one at [roblox.com](https://www.roblox.com/)).
-
-## Customization
-
-You can customize Studio to suit your workflow across various levels:
-
-- [Configure the toolbar](../studio/ui-overview.md#toolbar-and-mezzanine) with custom tabs, reorganize tools within custom tabs, hide infrequently used tabs, and more.
-- Customize the [window layout](../studio/ui-overview.md#layout-customization) to best suit your workflows.
-- View/edit Studio shortcuts and bind actions without defaults through **File**&nbsp;⟩ **Customize&nbsp;Shortcuts**.
-- Access a wide array of **Studio Settings** (<kbd>Alt</kbd><kbd>S</kbd> on Windows; <kbd>⌥</kbd><kbd>S</kbd> on Mac). Locate known settings by typing keywords into the search field at the top of the window, for example `theme` to locate the setting for dark theme or light theme.
-
-## Updates
-
-In contrast to certain other engines, every experience runs on the latest version of the Roblox engine. You should keep Studio up‑to‑date to utilize the latest APIs and features.
-
-If your current version of Studio is outdated, you'll see an **Update** button in the upper‑right corner. Clicking the button will prompt you to save/close the currently open place so that Studio can automatically update and restart.
-
-<img src="../assets/studio/general/Toolbar-Update-Available.png" width="800" alt="Update button in Studio highlighted." />
-
-## Beta features
-
-Many beta features are available through Studio's **File**&nbsp;&rang; **Beta&nbsp;Features** menu. Once you've enabled beta features, click the **Save** button and you'll be prompted to restart Studio for the features to take effect.
+    if raycastResult then
+        local hitPart = raycastResult.Instance
+        local hitCharacter = hitPart:FindFirstAncestorOfClass("Model")
+        if hitCharacter then
+            local humanoid = hitCharacter:FindFirstChild("Humanoid")
+            if humanoid then
+                humanoid:TakeDamage(DAMAGE)
+                -- Optional: print who got hit
+                print(player.Name .. " hit " .. humanoid.Parent.Name)
+            end
+        end
+    end
+end)
