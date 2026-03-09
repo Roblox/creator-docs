@@ -193,111 +193,50 @@ methods:
     capabilities:
       - DataStore
   - name: DataStoreService:SetRateLimitForRequestType
-    summary: 'Sets the per-server rate limit (requests per minute) for a given Data Store request type.'
+    summary: |
+      Sets the rate limit for a given request type per minute.
     description: |
-      Sets the per-server rate limit (requests per minute) for a given Data Store request type. The configured limit overrides the default rate limit for that request type on the current server. The rate limit is calculated as `rateLimit = baseLimit + (perPlayerLimit * numPlayers)`, where `numPlayers` is the current number of active players on the server. `Enum.DataStoreRequestType.OnUpdate|DataStoreRequestType.OnUpdate` and `Enum.DataStoreRequestType.UpdateAsync|DataStoreRequestType.UpdateAsync` cannot be configured with this function. Calling this API with those request types will result in an error.
+      Sets the per-server rate limit (requests per minute) for a given Data
+      Store request type. The configured limit overrides the default rate limit
+      for that request type on the current server. The rate limit is calculated
+      as `rateLimit = baseLimit + (perPlayerLimit * numPlayers)`, where
+      `numPlayers` is the current number of active players on the server.
+      `Enum.DataStoreRequestType.OnUpdate|DataStoreRequestType.OnUpdate` and
+      `Enum.DataStoreRequestType.UpdateAsync|DataStoreRequestType.UpdateAsync`
+      cannot be configured with this function. Calling this API with those
+      request types will result in an error.
 
-      You should call this API **once per request type during server initialization**. We don not recommend calling this API during active experience logic. If called multiple times, the new limit definitions will immediately overwrite the previous ones.
+      You should call this API **once per request type during server
+      initialization**. We don't recommend calling this API during active
+      experience logic. If called multiple times, the new limit definitions will
+      immediately overwrite the previous ones.
 
-      The `baseLimit` and `perPlayerLimit` have different constraints depending on the request type. See the table below for more information.
+      The `baseLimit` and `perPlayerLimit` have different constraints depending
+      on the request type. See the table below for more information.
 
-      <h4>Constraints by request type</h4>
+      ##### Constraints by Request Type
 
-      <table>
-          <tr>
-              <td>Request Type</td>
-              <td>baseLimit constraints</td>
-              <td>perPlayerLimit constraints</td>
-          </tr>
-          <tr>
-              <td>`DataStoreRequestType.GetAsync`</td>
-              <td>[0, 60]</td>
-              <td>[0, 40]</td>
-          </tr>
-          <tr>
-              <td>`DataStoreRequestType.SetIncrementAsync`</td>
-              <td>[0, 60]</td>
-              <td>[0, 40]</td>
-          </tr>
-          <tr>
-              <td>`DataStoreRequestType.UpdateAsync`</td>
-              <td>N/A</td>
-              <td>N/A</td>
-          </tr>
-          <tr>
-              <td>`DataStoreRequestType.GetSortedAsync`</td>
-              <td>[0, 5]</td>
-              <td>[0, 2]</td>
-          </tr>
-          <tr>
-              <td>`DataStoreRequestType.SetIncrementSortedAsync`</td>
-              <td>[0, 30]</td>
-              <td>[0, 5]</td>
-          </tr>
-          <tr>
-              <td>`DataStoreRequestType.OnUpdate`</td>
-              <td>N/A</td>
-              <td>N/A</td>
-          </tr>
-          <tr>
-              <td>`DataStoreRequestType.ListAsync`</td>
-              <td>[0, 5]</td>
-              <td>[0, 2]</td>
-          </tr>
-          <tr>
-              <td>`DataStoreRequestType.GetVersionAsync`</td>
-              <td>[0, 5]</td>
-              <td>[0, 2]</td>
-          </tr>
-          <tr>
-              <td>`DataStoreRequestType.RemoveVersionAsync`</td>
-              <td>[0, 5]</td>
-              <td>[0, 2]</td>
-          </tr>
-          <tr>
-              <td>`DataStoreRequestType.StandardRead`</td>
-              <td>[0, 10000]</td>
-              <td>[0, 200]</td>
-          </tr>
-          <tr>
-              <td>`DataStoreRequestType.StandardWrite`</td>
-              <td>[0, 10000]</td>
-              <td>[0, 200]</td>
-          </tr>
-          <tr>
-              <td>`DataStoreRequestType.StandardList`</td>
-              <td>[0, 10000]</td>
-              <td>[0, 200]</td>
-          </tr>
-          <tr>
-              <td>`DataStoreRequestType.StandardRemove`</td>
-              <td>[0, 10000]</td>
-              <td>[0, 200]</td>
-          </tr>
-          <tr>
-              <td>`DataStoreRequestType.OrderedRead`</td>
-              <td>[0, 10000]</td>
-              <td>[0, 200]</td>
-          </tr>
-          <tr>
-              <td>`DataStoreRequestType.OrderedWrite`</td>
-              <td>[0, 10000]</td>
-              <td>[0, 200]</td>
-          </tr>
-          <tr>
-              <td>`DataStoreRequestType.OrderedList`</td>
-              <td>[0, 10000]</td>
-              <td>[0, 200]</td>
-          </tr>
-          <tr>
-              <td>`DataStoreRequestType.OrderedRemove`</td>
-              <td>[0, 10000]</td>
-              <td>[0, 200]</td>
-          </tr>
-      </table>
-
+      | Request Type                                   | baseLimit constraints | perPlayerLimit constraints |
+      | :--------------------------------------------- | :-------------------- | :------------------------- |
+      | `DataStoreRequestType.GetAsync`                | [0, 60]               | [0, 40]                    |
+      | `DataStoreRequestType.SetIncrementAsync`       | [0, 60]               | [0, 40]                    |
+      | `DataStoreRequestType.UpdateAsync`             | N/A                   | N/A                        |
+      | `DataStoreRequestType.GetSortedAsync`          | [0, 5]                | [0, 2]                     |
+      | `DataStoreRequestType.SetIncrementSortedAsync` | [0, 30]               | [0, 5]                     |
+      | `DataStoreRequestType.OnUpdate`                | N/A                   | N/A                        |
+      | `DataStoreRequestType.ListAsync`               | [0, 5]                | [0, 2]                     |
+      | `DataStoreRequestType.GetVersionAsync`         | [0, 5]                | [0, 2]                     |
+      | `DataStoreRequestType.RemoveVersionAsync`      | [0, 5]                | [0, 2]                     |
+      | `DataStoreRequestType.StandardRead`            | [0, 10000]            | [0, 200]                   |
+      | `DataStoreRequestType.StandardWrite`           | [0, 10000]            | [0, 200]                   |
+      | `DataStoreRequestType.StandardList`            | [0, 10000]            | [0, 200]                   |
+      | `DataStoreRequestType.StandardRemove`          | [0, 10000]            | [0, 200]                   |
+      | `DataStoreRequestType.OrderedRead`             | [0, 10000]            | [0, 200]                   |
+      | `DataStoreRequestType.OrderedWrite`            | [0, 10000]            | [0, 200]                   |
+      | `DataStoreRequestType.OrderedList`             | [0, 10000]            | [0, 200]                   |
+      | `DataStoreRequestType.OrderedRemove`           | [0, 10000]            | [0, 200]                   |
     code_samples:
-      - DataStoreService-SetRateLimits
+      - DataStoreService-SetRateLimitForRequestType1
     parameters:
       - name: requestType
         type: DataStoreRequestType

@@ -1984,6 +1984,11 @@ methods:
           A `Class.HumanoidDescription` containing traits like body
           parts/colors, body scaling, accessories, clothing, and animations that
           will be equipped to the loaded character.
+      - name: assetTypeVerification
+        type: AssetTypeVerification
+        default:
+        summary: |
+          The asset type verification mode.
     returns:
       - type: ()
         summary: ''
@@ -2024,6 +2029,11 @@ methods:
           A `Class.HumanoidDescription` containing traits like body
           parts/colors, body scaling, accessories, clothing, and animations that
           will be equipped to the loaded character.
+      - name: assetTypeVerification
+        type: AssetTypeVerification
+        default:
+        summary: |
+          The asset type verification mode.
     returns:
       - type: ()
         summary: ''
