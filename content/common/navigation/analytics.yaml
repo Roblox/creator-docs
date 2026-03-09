@@ -6,12 +6,11 @@ navigation:
   - title: Insights
     path: /production/analytics/insights
 
-  - title: Monitor
-    section:
-      - title: Performance
-        path: /production/analytics/performance
-      - title: Error report
-        path: /production/analytics/error-report
+  - heading: Monitor
+  - title: Performance
+    path: /production/analytics/performance
+  - title: Error report
+    path: /production/analytics/error-report
 
   - heading: Adjust and experiment
   - title: Configs

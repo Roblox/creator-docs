@@ -135,7 +135,7 @@ Requests you make to data stores can fail due to poor connectivity or other issu
     <td>`403`</td>
     <td>`StudioAccessToApisNotAllowed`</td>
     <td>Can't write to `DataStore` from Studio because API access is not enabled.</td>
-    <td>API access must be active in order to use Data Stores in Studio.</td>
+    <td>API access must be active in order to use data stores in Studio.</td>
   </tr>
   <tr>
     <td>`404`</td>
@@ -159,12 +159,12 @@ Requests you make to data stores can fail due to poor connectivity or other issu
     <td>`503`</td>
     <td>`InternalError`</td>
     <td>Data store request was successful but key wasn't found.</td>
-    <td>The key requested wasn't found in the Data Store. This might be a sign of data corruption. Try again later.</td>
+    <td>The key requested wasn't found in the data store. This might be a sign of data corruption. Try again later.</td>
   </tr>
   <tr>
     <td>`504`</td>
     <td>`InternalError`</td>
-    <td>Data Store request was successful but the response wasn't formatted correctly.</td>
+    <td>Data store request was successful but the response wasn't formatted correctly.</td>
     <td>The server was unable to parse the response to your request. This might be a sign of data corruption. Try again later.</td>
   </tr>
   <tr>
@@ -176,8 +176,8 @@ Requests you make to data stores can fail due to poor connectivity or other issu
   <tr>
     <td>`509`</td>
     <td>`OperationNotAllowed`</td>
-    <td>Data Store operations are blocked while running on a Personal RCC to prevent possible data corruption.</td>
-    <td>Data Store writes are blocked on private RCC channels.</td>
+    <td>Data store operations are blocked while running on a Personal RCC to prevent possible data corruption.</td>
+    <td>Data store writes are blocked on private RCC channels.</td>
   </tr>
   <tr>
     <td>`511`</td>
@@ -247,6 +247,102 @@ Requests you make to data stores can fail due to poor connectivity or other issu
     <td>The timestamp provided to `Class.DataStore:GetVersionAtTimeAsync()|GetVersionAtTimeAsync()` was not valid.</td>
     <td></td>
   </tr>
+  <tr>
+    <td></td>
+    <td>`StandardReadExperienceThrottled`</td>
+    <td>`StandardRead` request was throttled by experience limits.</td>
+    <td>A request to `Class.DataStore:GetAsync()|GetAsync()`, `Class.DataStore:GetVersionAsync()|GetVersionAsync()`, `Class.DataStore:GetVersionAtTimeAsync()|GetVersionAtTimeAsync()`, or the read of `Class.DataStore:UpdateAsync()|UpdateAsync()` on a standard data store exceeded the `StandardRead` experience-level rate limit.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>`StandardWriteExperienceThrottled`</td>
+    <td>`StandardWrite` request was throttled by experience limits.</td>
+    <td>A request to `Class.DataStore:SetAsync()|SetAsync()`, `Class.DataStore:IncrementAsync()|IncrementAsync()`, or the write of `Class.DataStore:UpdateAsync()|UpdateAsync()` on a standard data store exceeded the `StandardWrite` experience-level rate limit.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>`StandardListExperienceThrottled`</td>
+    <td>`StandardList` request was throttled by experience limits.</td>
+    <td>A request to `Class.DataStore:ListKeysAsync()|ListKeysAsync()`, `Class.DataStore:ListVersionsAsync()|ListVersionsAsync()`, or `Class.DataStoreService:ListDataStoresAsync()|ListDataStoresAsync()` on standard data stores exceeded the `StandardList` experience-level rate limit.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>`StandardRemoveExperienceThrottled`</td>
+    <td>`StandardRemove` request was throttled by experience limits.</td>
+    <td>A request to `Class.DataStore:RemoveAsync()|RemoveAsync()` on a standard data store exceeded the `StandardRemove` experience-level rate limit.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>`OrderedReadExperienceThrottled`</td>
+    <td>`OrderedRead` request was throttled by experience limits.</td>
+    <td>A request to `Class.OrderedDataStore:GetAsync()|GetAsync()` or the read of `Class.OrderedDataStore:UpdateAsync()|UpdateAsync()` on an ordered data store exceeded the `OrderedRead` experience-level rate limit.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>`OrderedWriteExperienceThrottled`</td>
+    <td>`OrderedWrite` request was throttled by experience limits.</td>
+    <td>A request to `Class.OrderedDataStore:SetAsync()|SetAsync()`, `Class.OrderedDataStore:IncrementAsync()|IncrementAsync()`, or the write of `Class.OrderedDataStore:UpdateAsync()|UpdateAsync()` on an ordered data store exceeded the `OrderedWrite` experience-level rate limit.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>`OrderedListExperienceThrottled`</td>
+    <td>`OrderedList` request was throttled by experience limits.</td>
+    <td>A request to `Class.OrderedDataStore:GetSortedAsync()|GetSortedAsync()` on an ordered data store exceeded the `OrderedList` experience-level rate limit.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>`OrderedRemoveExperienceThrottled`</td>
+    <td>`OrderedRemove` request was throttled by experience limits.</td>
+    <td>A request to `Class.OrderedDataStore:RemoveAsync()|RemoveAsync()` on an ordered data store exceeded the `OrderedRemove` experience-level rate limit.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>`StandardReadGameServerThrottled`</td>
+    <td>`StandardRead` request was throttled by game server limits.</td>
+    <td>A request to `Class.DataStore:GetAsync()|GetAsync()`, `Class.DataStore:GetVersionAsync()|GetVersionAsync()`, `Class.DataStore:GetVersionAtTimeAsync()|GetVersionAtTimeAsync()`, or the read of `Class.DataStore:UpdateAsync()|UpdateAsync()` on a standard data store exceeded the `StandardRead` game server-level rate limit.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>`StandardWriteGameServerThrottled`</td>
+    <td>`StandardWrite` request was throttled by game server limits.</td>
+    <td>A request to `Class.DataStore:SetAsync()|SetAsync()`, `Class.DataStore:IncrementAsync()|IncrementAsync()`, or the write of `Class.DataStore:UpdateAsync()|UpdateAsync()` on a standard data store exceeded the `StandardWrite` game server-level rate limit.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>`standardListGameServerThrottled`</td>
+    <td>`StandardList` request was throttled by game server limits.</td>
+    <td>A request to `Class.DataStore:ListKeysAsync()|ListKeysAsync()`, `Class.DataStore:ListVersionsAsync()|ListVersionsAsync()`, or `Class.DataStoreService:ListDataStoresAsync()|ListDataStoresAsync()` on standard data stores exceeded the `StandardList` game server-level rate limit.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>`StandardRemoveGameServerThrottled`</td>
+    <td>`StandardRemove` request was throttled by game server limits.</td>
+    <td>A request to `Class.DataStore:RemoveAsync()|RemoveAsync()` on a standard data store exceeded the `StandardRemove` game server-level rate limit.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>`OrderedReadGameServerThrottled`</td>
+    <td>`OrderedRead` request was throttled by game server limits.</td>
+    <td>A request to `Class.OrderedDataStore:GetAsync()|GetAsync()` or the read of `Class.OrderedDataStore:UpdateAsync()|UpdateAsync()` on an ordered data store exceeded the `OrderedRead` game server-level rate limit.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>`OrderedWriteGameServerThrottled`</td>
+    <td>`OrderedWrite` request was throttled by game server limits.</td>
+    <td>A request to `Class.OrderedDataStore:SetAsync()|SetAsync()`, `Class.OrderedDataStore:IncrementAsync()|IncrementAsync()`, or the write of `Class.OrderedDataStore:UpdateAsync()|UpdateAsync()` on an ordered data store exceeded the `OrderedWrite` game server-level rate limit.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>`OrderedListGameServerThrottled`</td>
+    <td>`OrderedList` request was throttled by game server limits.</td>
+    <td>A request to `Class.OrderedDataStore:GetSortedAsync()|GetSortedAsync()` on an ordered data store exceeded the `OrderedList` game server-level rate limit.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>`OrderedRemoveGameServerThrottled`</td>
+    <td>`OrderedRemove` request was throttled by game server limits.</td>
+    <td>A request to `Class.OrderedDataStore:RemoveAsync()|RemoveAsync()` on an ordered data store exceeded the `OrderedRemove` game server-level rate limit.</td>
+  </tr>
 </tbody>
 </table>
 
@@ -264,7 +360,7 @@ Requests you make to data stores can fail due to poor connectivity or other issu
   <tr>
     <td>`DatastoreThrottled`</td>
     <td>The request rate exceeds the allowed maximum for the `datastore`.</td>
-    <td>Too many requests were sent to a single Data Store. </td>
+    <td>Too many requests were sent to a single data store. </td>
   </tr>
   <tr>
     <td>`InternalServerError`</td>
@@ -279,7 +375,7 @@ Requests you make to data stores can fail due to poor connectivity or other issu
   <tr>
     <td>`InvalidTarget`</td>
     <td>The provided target is invalid.</td>
-    <td>Ordered Data Store key name exceeds the 50 character limit.</td>
+    <td>Ordered data store key name exceeds the 50 character limit.</td>
   </tr>
   <tr>
     <td>`InvalidUniverse`</td>
@@ -306,6 +402,46 @@ Requests you make to data stores can fail due to poor connectivity or other issu
     <td>No pages to advance to.</td>
     <td>This error occurs when you call `Class.Pages:AdvanceToNextPageAsync()` on the last page.</td>
   </tr>
+  <tr>
+    <td>`StandardReadExperienceThrottled`</td>
+    <td>The standard read request rate exceeds the allowed maximum for the experience.</td>
+    <td>A request to `Class.DataStore:GetAsync()|GetAsync()`, `Class.DataStore:GetVersionAsync()|GetVersionAsync()`, `Class.DataStore:GetVersionAtTimeAsync()|GetVersionAtTimeAsync()`, or the read of `Class.DataStore:UpdateAsync()|UpdateAsync()` on a standard data store exceeded the `StandardRead` experience-level rate limit.</td>
+  </tr>
+  <tr>
+    <td>`StandardWriteExperienceThrottled`</td>
+    <td>The standard write request rate exceeds the allowed maximum for the experience.</td>
+    <td>A request to `Class.DataStore:SetAsync()|SetAsync()`, `Class.DataStore:IncrementAsync()|IncrementAsync()`, or the write of `Class.DataStore:UpdateAsync()|UpdateAsync()` on a standard data store exceeded the `StandardWrite` experience-level rate limit.</td>
+  </tr>
+  <tr>
+    <td>`StandardListExperienceThrottled`</td>
+    <td>The standard list request rate exceeds the allowed maximum for the experience.</td>
+    <td>A request to `Class.DataStore:ListKeysAsync()|ListKeysAsync()`, `Class.DataStore:ListVersionsAsync()|ListVersionsAsync()`, or `Class.DataStoreService:ListDataStoresAsync()|ListDataStoresAsync()` on standard data stores exceeded the `StandardList` experience-level rate limit.</td>
+  </tr>
+  <tr>
+    <td>`StandardRemoveExperienceThrottled`</td>
+    <td>The standard remove request rate exceeds the allowed maximum for the experience.</td>
+    <td>A request to `Class.DataStore:RemoveAsync()|RemoveAsync()` on a standard data store exceeded the `StandardRemove` experience-level rate limit.</td>
+  </tr>
+  <tr>
+    <td>`OrderedReadExperienceThrottled`</td>
+    <td>The ordered read request rate exceeds the allowed maximum for the experience.</td>
+    <td>A request to `Class.OrderedDataStore:GetAsync()|GetAsync()` or the read of `Class.OrderedDataStore:UpdateAsync()|UpdateAsync()` on an ordered data store exceeded the `OrderedRead` experience-level rate limit.</td>
+  </tr>
+  <tr>
+    <td>`OrderedWriteExperienceThrottled`</td>
+    <td>The ordered write request rate exceeds the allowed maximum for the experience.</td>
+    <td>A request to `Class.OrderedDataStore:SetAsync()|SetAsync()`, `Class.OrderedDataStore:IncrementAsync()|IncrementAsync()`, or the write of `Class.OrderedDataStore:UpdateAsync()|UpdateAsync()` on an ordered data store exceeded the `OrderedWrite` experience-level rate limit.</td>
+  </tr>
+  <tr>
+    <td>`OrderedListExperienceThrottled`</td>
+    <td>The ordered list request rate exceeds the allowed maximum for the experience.</td>
+    <td>A request to `Class.OrderedDataStore:GetSortedAsync()|GetSortedAsync()` on an ordered data store exceeded the `OrderedList` experience-level rate limit.</td>
+  </tr>
+  <tr>
+    <td>`OrderedRemoveExperienceThrottled`</td>
+    <td>The ordered remove request rate exceeds the allowed maximum for the experience.</td>
+    <td>A request to `Class.OrderedDataStore:RemoveAsync()|RemoveAsync()` on an ordered data store exceeded the `OrderedRemove` experience-level rate limit.</td>
+  </tr>
 </tbody>
 </table>
 
@@ -328,7 +464,7 @@ Each queue has a limit of 30 requests. When the limit of a queue is reached, req
 <TabItem label="Server limits">
   Each server is allowed a certain number of data store requests based on the request type and number of users. Servers often receive a one-time allotment of additional requests when they first start up. Use `Class.DataStoreService:GetRequestBudgetForRequestType()|GetRequestBudgetForRequestType()` to confirm the number of data store requests that the current place can make.
 
-  For each request type, the limit is shared among all listed functions.
+For each request type, the limit is shared among all listed functions.
 
   <table>
   <thead>
@@ -377,17 +513,21 @@ Each queue has a limit of 30 requests. When the limit of a queue is reached, req
   </tbody>
   </table>
 </TabItem>
-<TabItem label="Future experience limits">
+<TabItem label="Future limits">
 
-  <Alert severity="info">
-  Server limits will be replaced by experience-level limits starting in 2026.
-  </Alert>
+<Alert severity="info">
+The limits described below will be active starting in April 2026.
+</Alert>
 
-  Each experience is allowed a certain number of data store requests based on the data store type, request type, and number of concurrent users. For each data store type and request type, the limit is shared among all listed functions.
-  
-  Note that `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` will consume from both the read and write request limits.
+Data stores are subject to both <b>experience and server-level limits</b>. Experience-level limits scale with total concurrent users across the experience, while server-level limits are configurable and meant to be used as a tool by the creator.
 
-  <h5>Standard data stores</h5>
+<h4>Experience Limits</h4>
+
+Each experience is allowed a certain number of data store requests based on the data store type, request type, and number of concurrent users. For each data store type and request type, the limit is shared among all listed functions.
+
+Note that `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` consumes from both the read and write request budgets. A single call will decrement both limits.
+
+<h5>Standard data stores</h5>
 
   <table>
   <thead>
@@ -418,15 +558,10 @@ Each queue has a limit of 30 requests. When the limit of a queue is reached, req
       <td>`Class.DataStore:RemoveAsync()|RemoveAsync()`</td>
       <td>100 + concurrentUsers × 40</td>
     </tr>
-    <tr>
-      <td><b>RemoveVersion (deprecated)</b></td>
-      <td>`Class.DataStore:RemoveVersionAsync()|RemoveVersionAsync()`</td>
-      <td>5 + concurrentUsers × 2</td>
-    </tr>
   </tbody>
   </table>
 
-  <h5>Ordered data stores</h5>
+<h5>Ordered data stores</h5>
 
   <table>
   <thead>
@@ -459,6 +594,104 @@ Each queue has a limit of 30 requests. When the limit of a queue is reached, req
     </tr>
   </tbody>
   </table>
+
+<h4>Server limits</h4>
+
+Each server has a configurable rate limit for each request type, based on the number of players in that server. Servers receive a one-time startup burst of additional request budget when they are first created. Use `Class.DataStoreService:GetRequestBudgetForRequestType()|GetRequestBudgetForRequestType()` to confirm the number of data store requests that the current server can make at any given time.
+
+These limits are **configurable by the creator** using the
+`Class.DataStoreService:SetRateLimitForRequestType()|SetRateLimitForRequestType()` API. Using this API, a creator can configure their own data stores rate limits for each request type.
+
+The following **default rate limits** apply if the API is not called:
+
+<h5>Standard data stores</h5>
+
+  <table>
+  <thead>
+    <tr>
+      <th>Request type</th>
+      <th>`DataStoreRequestType` Enum</th>
+      <th>Functions</th>
+      <th>Requests per minute</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Read</b></td>
+      <td>`StandardRead`</td>
+      <td>`Class.DataStore:GetAsync()|GetAsync()`<br></br>`Class.DataStore:GetVersionAsync()|GetVersionAsync()`<br></br>`Class.DataStore:GetVersionAtTimeAsync()|GetVersionAtTimeAsync()`<br></br>`Class.DataStore:UpdateAsync()|UpdateAsync()`</td>
+      <td>60 + numPlayers × 40</td>
+    </tr>
+    <tr>
+      <td><b>Write</b></td>
+      <td>`StandardWrite`</td>
+      <td>`Class.DataStore:SetAsync()|SetAsync()`<br></br>`Class.DataStore:IncrementAsync()|IncrementAsync()`<br></br>`Class.DataStore:UpdateAsync()|UpdateAsync()`</td>
+      <td>60 + numPlayers × 40</td>
+    </tr>
+    <tr>
+      <td><b>List</b></td>
+      <td>`StandardList`</td>
+      <td>`Class.DataStoreService:ListDataStoresAsync()|ListDataStoresAsync()`<br></br>`Class.DataStore:ListKeysAsync()|ListKeysAsync()`<br></br>`Class.DataStore:ListVersionsAsync()|ListVersionsAsync()`</td>
+      <td>5 + numPlayers × 2</td>
+    </tr>
+    <tr>
+      <td><b>Remove</b></td>
+      <td>`StandardRemove`</td>
+      <td>`Class.DataStore:RemoveAsync()|RemoveAsync()`</td>
+      <td>60 + numPlayers × 40</td>
+    </tr>
+    <tr>
+      <td><b>RemoveVersion (Deprecated)</b></td>
+      <td>`RemoveVersionAsync`</td>
+      <td>`Class.DataStore:RemoveVersionAsync()|RemoveVersionAsync()`</td>
+      <td>5 + numPlayers × 2</td>
+    </tr>
+  </tbody>
+  </table>
+
+<h5>Ordered data stores</h5>
+
+  <table>
+  <thead>
+    <tr>
+      <th>Request type</th>
+      <th>`DataStoreRequestType` Enum</th>
+      <th>Functions</th>
+      <th>Requests per minute</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Read</b></td>
+      <td>`OrderedRead`</td>
+      <td>`Class.OrderedDataStore:GetAsync()|GetAsync()`<br></br>`Class.OrderedDataStore:UpdateAsync()|UpdateAsync()`</td>
+      <td>60 + numPlayers × 40</td>
+    </tr>
+    <tr>
+      <td><b>Write</b></td>
+      <td>`OrderedWrite`</td>
+      <td>`Class.OrderedDataStore:SetAsync()|SetAsync()`<br></br>`Class.OrderedDataStore:IncrementAsync()|IncrementAsync()`<br></br>`Class.OrderedDataStore:UpdateAsync()|UpdateAsync()`</td>
+      <td>30 + numPlayers × 5</td>
+    </tr>
+    <tr>
+      <td><b>List</b></td>
+      <td>`OrderedList`</td>
+      <td>`Class.OrderedDataStore:GetSortedAsync()|GetSortedAsync()`</td>
+      <td>5 + numPlayers × 2</td>
+    </tr>
+    <tr>
+      <td><b>Remove</b></td>
+      <td>`OrderedRemove`</td>
+      <td>`Class.OrderedDataStore:RemoveAsync()|RemoveAsync()`</td>
+      <td>30 + numPlayers × 5</td>
+    </tr>
+  </tbody>
+  </table>
+
+  <Alert severity="info">
+    Data store requests made in Studio Run mode are subject to a separate set of static limits, which may be lower than the limits configured with `Class.DataStoreService:SetRateLimitForRequestType()|SetRateLimitForRequestType()`. When testing rate limits, we recommend using Studio Team Create instead.
+  </Alert>
+
 </TabItem>
 </Tabs>
 

@@ -10,8 +10,6 @@ navigation:
     path: /creator-programs/safety-council
   - title: Creator Events
     path: /creator-programs/creator-events
-  - title: Creator Fund
-    path: /creator-fund
   - title: Creator Spotlights
     path: /creator-programs/spotlights
   - title: Developer Awards
@@ -20,15 +18,19 @@ navigation:
     path: /creator-programs/inspire
   - title: Learn & Explore Sort
     path: /creator-programs/learn-explore-sort
-  - title: Managed Brand Integrations
+  - title: Roblox Brand Link
     path: /creator-programs/managed-brand-integrations
   - title: Roblox Developers Conference (RDC)
     path: /creator-programs/rdc
+  - title: Roblox Incubator
+    path: /creator-programs/incubator
   - title: Roblox Innovation Awards
     path: /creator-programs/innovation-awards
+  - title: Roblox Jumpstart
+    path: /creator-programs/jumpstart
   - title: Roblox Research Panel
     path: /creator-programs/research-panel
-  - title: Today's Picks on Home
-    path: /creator-programs/todays-picks-home
+  - title: Standout Games
+    path: /creator-programs/standout-games
   - title: Today's Picks on Marketplace
     path: /creator-programs/todays-picks-marketplace

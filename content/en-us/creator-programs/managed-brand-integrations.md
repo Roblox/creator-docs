@@ -1,9 +1,9 @@
 ---
-title: Managed Brand Integrations
-description: The Managed Brand Integration program is for creators interested in brand integrations.
+title: Roblox Brand Link
+description: The Roblox Brand Link program is for creators interested in brand integrations.
 ---
 
-The Managed Brand Integration program is for creators interested in brand integrations. This program targets brands that invest in Roblox and want to integrate into popular experiences.
+The **Roblox Brand Link** program is for creators interested in brand integrations. This program targets brands that invest in Roblox and want to integrate into popular experiences.
 
 Roblox manages the entire process for brands, including coordinating with creators to bring these integrations to life. This is an excellent opportunity for creators to work with Roblox and prominent brands on innovative integrations. Creators will have access to paid opportunities to integrate brands into their experiences and the chance to collaborate with high-profile brands.
 

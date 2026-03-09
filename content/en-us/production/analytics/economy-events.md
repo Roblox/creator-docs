@@ -60,7 +60,7 @@ AnalyticsService:LogEconomyEvent(
 )
 ```
 
-The following sample tracks a Robux purchase of a 1000-coin bundle, using the `IAP` (in-app purchase) transaction type. The `itemSKU` field is an optional parameter added here to compare with the previous sample. If you don't specify an `itemSKU`, the Economy dashboards display `N/A` in the sources and sinks table.
+The following sample tracks a Robux purchase of a 1000-coin bundle, using the `IAP` (in-app purchase) transaction type, this time with an `itemSKU`, your unique identifier for the item. `itemSKU` is optional. If you don't specify it, the Economy dashboards display `N/A` in the sources and sinks table.
 
 ```lua title="Tracking an in-app purchase"
 local AnalyticsService = game:GetService("AnalyticsService")
@@ -75,6 +75,8 @@ AnalyticsService:LogEconomyEvent(
     "1000CoinBundle" -- Unique item SKU identifier of the coin bundle
 )
 ```
+
+In this example, if you have many coin bundles, you might also want to add a [custom field](./custom-fields.md) to track the coin bundle category against other categories.
 
 ### Track sinks
 
