@@ -36,7 +36,7 @@ Roblox ranks the selected experiences based on the following 6 key signals of us
 <tbody>
   <tr>
     <td>**Qualified play through rate (qPTR)**</td>
-    <td>The percentage of impressions converting to qualified plays. A qualified play refers to a user's intentional engagement with your experience. It filters out accidental clicks or quick bounces.</td>
+    <td>The percentage of impressions converting to qualified plays. A qualified play refers to a user's intentional engagement with your experience and filters out accidental clicks or quick bounces.</td>
   </tr>
   <tr>
     <td>**Deep play through rate**</td>

@@ -193,9 +193,111 @@ methods:
     capabilities:
       - DataStore
   - name: DataStoreService:SetRateLimitForRequestType
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: 'Sets the per-server rate limit (requests per minute) for a given Data Store request type.'
+    description: |
+      Sets the per-server rate limit (requests per minute) for a given Data Store request type. The configured limit overrides the default rate limit for that request type on the current server. The rate limit is calculated as `rateLimit = baseLimit + (perPlayerLimit * numPlayers)`, where `numPlayers` is the current number of active players on the server. `Enum.DataStoreRequestType.OnUpdate|DataStoreRequestType.OnUpdate` and `Enum.DataStoreRequestType.UpdateAsync|DataStoreRequestType.UpdateAsync` cannot be configured with this function. Calling this API with those request types will result in an error.
+
+      You should call this API **once per request type during server initialization**. We don not recommend calling this API during active experience logic. If called multiple times, the new limit definitions will immediately overwrite the previous ones.
+
+      The `baseLimit` and `perPlayerLimit` have different constraints depending on the request type. See the table below for more information.
+
+      <h4>Constraints by request type</h4>
+
+      <table>
+          <tr>
+              <td>Request Type</td>
+              <td>baseLimit constraints</td>
+              <td>perPlayerLimit constraints</td>
+          </tr>
+          <tr>
+              <td>`DataStoreRequestType.GetAsync`</td>
+              <td>[0, 60]</td>
+              <td>[0, 40]</td>
+          </tr>
+          <tr>
+              <td>`DataStoreRequestType.SetIncrementAsync`</td>
+              <td>[0, 60]</td>
+              <td>[0, 40]</td>
+          </tr>
+          <tr>
+              <td>`DataStoreRequestType.UpdateAsync`</td>
+              <td>N/A</td>
+              <td>N/A</td>
+          </tr>
+          <tr>
+              <td>`DataStoreRequestType.GetSortedAsync`</td>
+              <td>[0, 5]</td>
+              <td>[0, 2]</td>
+          </tr>
+          <tr>
+              <td>`DataStoreRequestType.SetIncrementSortedAsync`</td>
+              <td>[0, 30]</td>
+              <td>[0, 5]</td>
+          </tr>
+          <tr>
+              <td>`DataStoreRequestType.OnUpdate`</td>
+              <td>N/A</td>
+              <td>N/A</td>
+          </tr>
+          <tr>
+              <td>`DataStoreRequestType.ListAsync`</td>
+              <td>[0, 5]</td>
+              <td>[0, 2]</td>
+          </tr>
+          <tr>
+              <td>`DataStoreRequestType.GetVersionAsync`</td>
+              <td>[0, 5]</td>
+              <td>[0, 2]</td>
+          </tr>
+          <tr>
+              <td>`DataStoreRequestType.RemoveVersionAsync`</td>
+              <td>[0, 5]</td>
+              <td>[0, 2]</td>
+          </tr>
+          <tr>
+              <td>`DataStoreRequestType.StandardRead`</td>
+              <td>[0, 10000]</td>
+              <td>[0, 200]</td>
+          </tr>
+          <tr>
+              <td>`DataStoreRequestType.StandardWrite`</td>
+              <td>[0, 10000]</td>
+              <td>[0, 200]</td>
+          </tr>
+          <tr>
+              <td>`DataStoreRequestType.StandardList`</td>
+              <td>[0, 10000]</td>
+              <td>[0, 200]</td>
+          </tr>
+          <tr>
+              <td>`DataStoreRequestType.StandardRemove`</td>
+              <td>[0, 10000]</td>
+              <td>[0, 200]</td>
+          </tr>
+          <tr>
+              <td>`DataStoreRequestType.OrderedRead`</td>
+              <td>[0, 10000]</td>
+              <td>[0, 200]</td>
+          </tr>
+          <tr>
+              <td>`DataStoreRequestType.OrderedWrite`</td>
+              <td>[0, 10000]</td>
+              <td>[0, 200]</td>
+          </tr>
+          <tr>
+              <td>`DataStoreRequestType.OrderedList`</td>
+              <td>[0, 10000]</td>
+              <td>[0, 200]</td>
+          </tr>
+          <tr>
+              <td>`DataStoreRequestType.OrderedRemove`</td>
+              <td>[0, 10000]</td>
+              <td>[0, 200]</td>
+          </tr>
+      </table>
+
+    code_samples:
+      - DataStoreService-SetRateLimits
     parameters:
       - name: requestType
         type: DataStoreRequestType
