@@ -1634,7 +1634,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 300
+            "maxInPeriod": 50000
           }
         },
         "x-roblox-scopes": [
@@ -3113,7 +3113,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 300
+            "maxInPeriod": 10000
           }
         },
         "x-roblox-scopes": [
@@ -6869,7 +6869,7 @@
       "get": {
         "tags": ["Cloud"],
         "summary": "List Inventory Items",
-        "description": "List the inventory items in a user's inventory.\n\nThe inventory items returned depend on the target user’s choice under\n**Settings > Privacy > Who can see my inventory?**:\n* If the user granted inventory visibility to \"Everyone,\" then any API key\nor OAuth2 token can be used to view the target’s inventory, no matter what\nscopes it has or who created it.\n* If the user has not granted inventory visibility to \"Everyone\":\n  * Their inventory can still be viewed with an API key created by the\n  target user with **Inventory: Read** permission.\n  * Their inventory can still be viewed with an OAuth2 token if the target\n  user authorizes an app requesting permissions for the\n  `user.inventory-item:read` scope.\n\nRate Limits:\n* API Keys - 100 requests/minute per API key owner (can be user or group).\nRate limits are enforced across all of an owner's API keys.\n* OAuth2 Tokens - 20 requests/minute per OAuth2 access token",
+        "description": "List the inventory items in a user's inventory.\n\nThe inventory items returned depend on the target user’s choice under\n**Settings > Privacy > Who can see my inventory?**:\n* If the user granted inventory visibility to \"Everyone,\" then any API key\nor OAuth2 token can be used to view the target’s inventory, no matter what\nscopes it has or who created it.\n* If the user has not granted inventory visibility to \"Everyone\":\n  * Their inventory can still be viewed with an API key created by the\n  target user with **Inventory: Read** permission.\n  * Their inventory can still be viewed with an OAuth2 token if the target\n  user authorizes an app requesting permissions for the\n  `user.inventory-item:read` scope.",
         "operationId": "Cloud_ListInventoryItems",
         "parameters": [
           {
