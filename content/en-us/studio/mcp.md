@@ -264,9 +264,10 @@ Consult your client's documentation for where to place the configuration, then a
 After configuring any client, follow these steps to confirm everything is working:
 
 1. Open Roblox Studio and open a place file.
-2. Check the Plugins tab — verify the MCP plugin icon is visible.
-3. Check the Output console — look for "The MCP Studio plugin is ready for prompts".
-4. Open your MCP client and try a prompt like: `What Roblox Studio tools do you have access to?`.
+2. Click on the three dots (⋯) menu to open the **Assistant Settings**.
+3. In the left sidebar, select the **MCP Servers** tab.
+4. Under **Enable Studio as MCP Server**, verify the client is connected.
+  <img src="../assets/studio/general/MCP.png" width="800" alt="Assistants settings menu displaying 1 client connected." />
 
 ## Troubleshooting
 
