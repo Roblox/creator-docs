@@ -257,4 +257,4 @@ curl --request POST \
 
 Requests that exceed these limits will fail. For type-specific value limits (e.g. string vs JSON) in your experience, see [Limits](../../production/configs.md#limits) in the experience configs guide.
 
-For full details on all the endpoints in this guide, see the [Cloud API reference](/cloud/reference).
+For full details on all the endpoints in this guide, see the [Cloud API reference](/cloud/reference/features/configs).
