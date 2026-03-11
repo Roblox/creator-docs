@@ -24,7 +24,7 @@ We do not count the engagement or monetization of users first acquired from ads,
 
 ### Key signals
 
-Roblox ranks the selected experiences based on the following 6 key signals of users acquired from Recommended for You:
+Roblox ranks the selected experiences based on the following key signals of users acquired from Recommended for You:
 
 <table>
 <thead>
@@ -67,7 +67,7 @@ Roblox ranks the selected experiences based on the following 6 key signals of us
 
 When all of these signals improve together in an experience, the recommendation algorithm picks it up. Improving your [retention](./production/analytics/retention.md), [engagement](./production/analytics/engagement.md), and [monetization](./production/analytics/monetization.md) directly enhances our recommendation signals, resulting in better Home visibility.
 
-Roblox's recommendation system uses **explore and expand** phases to understand the 6 key signals. For example, you might see a spike in new users from recommendations (explore) after a content update. If that new user cohort has good engagement and monetization, Roblox is more likely to continue to recommend your experience to those user cohorts (expand).
+Roblox's recommendation system uses **explore and expand** phases to understand the key signals. For example, you might see a spike in new users from recommendations (explore) after a content update. If that new user cohort has good engagement and monetization, Roblox is more likely to continue to recommend your experience to those user cohorts (expand).
 
 ## Understand your metrics in Creator Analytics
 

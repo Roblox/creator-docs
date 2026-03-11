@@ -398,7 +398,7 @@ methods:
         type: Capture
         default:
         summary: |
-          a capture object of type `Class.Capture`
+          The `Class.Capture` to upload.
     returns:
       - type: Tuple
         summary: |

@@ -216,25 +216,25 @@ methods:
 
       ##### Constraints by Request Type
 
-      | Request Type                                   | baseLimit constraints | perPlayerLimit constraints |
-      | :--------------------------------------------- | :-------------------- | :------------------------- |
-      | `DataStoreRequestType.GetAsync`                | [0, 60]               | [0, 40]                    |
-      | `DataStoreRequestType.SetIncrementAsync`       | [0, 60]               | [0, 40]                    |
-      | `DataStoreRequestType.UpdateAsync`             | N/A                   | N/A                        |
-      | `DataStoreRequestType.GetSortedAsync`          | [0, 5]                | [0, 2]                     |
-      | `DataStoreRequestType.SetIncrementSortedAsync` | [0, 30]               | [0, 5]                     |
-      | `DataStoreRequestType.OnUpdate`                | N/A                   | N/A                        |
-      | `DataStoreRequestType.ListAsync`               | [0, 5]                | [0, 2]                     |
-      | `DataStoreRequestType.GetVersionAsync`         | [0, 5]                | [0, 2]                     |
-      | `DataStoreRequestType.RemoveVersionAsync`      | [0, 5]                | [0, 2]                     |
-      | `DataStoreRequestType.StandardRead`            | [0, 10000]            | [0, 200]                   |
-      | `DataStoreRequestType.StandardWrite`           | [0, 10000]            | [0, 200]                   |
-      | `DataStoreRequestType.StandardList`            | [0, 10000]            | [0, 200]                   |
-      | `DataStoreRequestType.StandardRemove`          | [0, 10000]            | [0, 200]                   |
-      | `DataStoreRequestType.OrderedRead`             | [0, 10000]            | [0, 200]                   |
-      | `DataStoreRequestType.OrderedWrite`            | [0, 10000]            | [0, 200]                   |
-      | `DataStoreRequestType.OrderedList`             | [0, 10000]            | [0, 200]                   |
-      | `DataStoreRequestType.OrderedRemove`           | [0, 10000]            | [0, 200]                   |
+      | Request Type            | baseLimit constraints | perPlayerLimit constraints |
+      | :---------------------- | :-------------------- | :------------------------- |
+      | GetAsync                | [0, 60]               | [0, 40]                    |
+      | SetIncrementAsync       | [0, 60]               | [0, 40]                    |
+      | UpdateAsync             | N/A                   | N/A                        |
+      | GetSortedAsync          | [0, 5]                | [0, 2]                     |
+      | SetIncrementSortedAsync | [0, 30]               | [0, 5]                     |
+      | OnUpdate                | N/A                   | N/A                        |
+      | ListAsync               | [0, 5]                | [0, 2]                     |
+      | GetVersionAsync         | [0, 5]                | [0, 2]                     |
+      | RemoveVersionAsync      | [0, 5]                | [0, 2]                     |
+      | StandardRead            | [0, 10000]            | [0, 200]                   |
+      | StandardWrite           | [0, 10000]            | [0, 200]                   |
+      | StandardList            | [0, 10000]            | [0, 200]                   |
+      | StandardRemove          | [0, 10000]            | [0, 200]                   |
+      | OrderedRead             | [0, 10000]            | [0, 200]                   |
+      | OrderedWrite            | [0, 10000]            | [0, 200]                   |
+      | OrderedList             | [0, 10000]            | [0, 200]                   |
+      | OrderedRemove           | [0, 10000]            | [0, 200]                   |
     code_samples:
       - DataStoreService-SetRateLimitForRequestType1
     parameters:
