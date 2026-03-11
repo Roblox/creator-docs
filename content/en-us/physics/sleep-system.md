@@ -110,28 +110,23 @@ The following are considered actuated joints:
 - `Class.AlignPosition|AlignPosition` with `Class.AlignPosition.RigidityEnabled|RigidityEnabled` set to `false`, nonzero `Class.AlignPosition.MaxAngularVelocity|MaxVelocity` and `Class.AlignPosition.Responsiveness|Responsiveness`.
 - `Class.AngularVelocity|AngularVelocity` with nonzero `Class.AngularVelocity.AngularVelocity|AngularVelocity` and `Class.AngularVelocity.MaxTorque|MaxTorque`.
 - `Class.AnimationConstraint|AnimationConstraint` with `Class.AnimationConstraint.IsKinematic|IsKinematic` set to `false`, nonzero `Class.AnimationConstraint.MaxForce|MaxForce` and `Class.AnimationConstraint.MaxTorque|MaxTorque`.
+- `Class.CylindricalConstraint|CylindricalConstraint` with `Class.SlidingBallConstraint.ActuatorType|ActuatorType` set to:
+  - `Enum.ActuatorType.Motor|Motor` with nonzero `Class.CylindricalConstraint.Velocity|Velocity`, `Class.CylindricalConstraint.MotorMaxAcceleration|MotorMaxAcceleration`, and `Class.CylindricalConstraint.MotorMaxForce|MotorMaxForce`.
+  - `Enum.ActuatorType.Servo|Servo` with nonzero `Class.CylindricalConstraint.Speed|Speed`, `Class.CylindricalConstraint.ServoMaxForce|ServoMaxForce`, and `Class.CylindricalConstraint.Responsiveness|Responsiveness`.
+- `Class.CylindricalConstraint|CylindricalConstraint` with `Class.CylindricalConstraint.AngularActuatorType|AngularActuatorType` set to:
+  - `Enum.ActuatorType.Motor|Motor` with nonzero `Class.CylindricalConstraint.AngularVelocity|AngularVelocity`, `Class.CylindricalConstraint.MotorMaxAngularAcceleration|MotorMaxAngularAcceleration`, and `Class.CylindricalConstraint.MotorMaxTorque|MotorMaxTorque`.
+  - `Enum.ActuatorType.Servo` with nonzero `Class.CylindricalConstraint.AngularSpeed|AngularSpeed`, `Class.CylindricalConstraint.ServoMaxTorque|ServoMaxTorque`, and `Class.CylindricalConstraint.Responsiveness|Responsiveness`.
 - `Class.HingeConstraint|HingeConstraint` with `Class.HingeConstraint.ActuatorType|ActuatorType` set to:
-  - `Enum.ActuatorType.Motor|Motor` with nonzero `Class.HingeConstraint.AngularVelocity|AngularVelocity`, `Class.HingeConstraint.MotorMaxAcceleration|MotorMaxAcceleration`, and `Class.HingeConstraint.MotorMaxTorque|MotorMaxTorque`.
+  - `Enum.ActuatorType.Motor|Motor` with nonzero `Class.HingeConstraint.AngularVelocity|AngularVelocity`, `Class.HingeConstraint.MotorMaxAcceleration|MotorMaxAcceleration`, and `Class.HingeConstraint.MotorMaxTorque|MotorMaxTorque`.
   - `Enum.ActuatorType.Servo|Servo` with nonzero `Class.HingeConstraint.AngularSpeed|AngularSpeed`, `Class.HingeConstraint.ServoMaxTorque|ServoMaxTorque`, and `Class.HingeConstraint.Responsiveness|Responsiveness`.
-- `Class.RopeConstraint|RopeConstraint` with `Class.RopeConstraint.WinchEnabled|WinchEnabled` set to `true`, nonzero `Class.RopeConstraint.WinchForce|WinchForce` and `Class.RopeConstraint.WinchSpeed|WinchSpeed`.
-- `Class.LinearVelocity|LinearVelocity` — depends on `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode`:
-  - `Enum.VelocityConstraintMode.Line|Line`: nonzero `Class.LinearVelocity.LineVelocity|LineVelocity`, and if `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled`, nonzero `Class.LinearVelocity.MaxForce|MaxForce`.
-  - `Enum.VelocityConstraintMode.Plane|Plane`: nonzero `Class.LinearVelocity.PlaneVelocity|PlaneVelocity`, and if `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled`: in `Enum.ForceLimitMode.Magnitude|Magnitude` mode, nonzero `Class.LinearVelocity.MaxForce|MaxForce`; in `Enum.ForceLimitMode.PerAxis|PerAxis` mode, nonzero `Class.LinearVelocity.MaxPlanarAxesForce|MaxPlanarAxesForce`.
-  - `Enum.VelocityConstraintMode.Vector|Vector`: nonzero `Class.LinearVelocity.VectorVelocity|VectorVelocity`, and if `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled`: in `Enum.ForceLimitMode.Magnitude|Magnitude` mode, nonzero
-      `Class.LinearVelocity.MaxForce|MaxForce`; in `Enum.ForceLimitMode.PerAxis|PerAxis` mode, nonzero `Class.LinearVelocity.MaxAxesForce|MaxAxesForce`.
-- `Class.PrismaticConstraint|PrismaticConstraint` with `Class.SlidingBallConstraint.ActuatorType|ActuatorType` set to:
-  - `Enum.ActuatorType.Motor|Motor` with nonzero `Class.PrismaticConstraint.Velocity|Velocity`, `Class.PrismaticConstraint.MotorMaxAcceleration|MotorMaxAcceleration`, and
-      `Class.PrismaticConstraint.MotorMaxForce|MotorMaxForce`.
-  - `Enum.ActuatorType.Servo|Servo` with nonzero `Class.PrismaticConstraint.Speed|Speed`, `Class.PrismaticConstraint.ServoMaxForce|ServoMaxForce`, and
-      `Class.PrismaticConstraint.Responsiveness|Responsiveness`.
-- `Class.CylindricalConstraint|CylindricalConstraint` with `Class.SlidingBallConstraint.ActuatorType|ActuatorType` set to:
-  - `Enum.ActuatorType.Motor|Motor` with nonzero `Class.CylindricalConstraint.Velocity|Velocity`, `Class.CylindricalConstraint.MotorMaxAcceleration|MotorMaxAcceleration`, and
-      `Class.CylindricalConstraint.MotorMaxForce|MotorMaxForce`.
-  - `Enum.ActuatorType.Servo|Servo` with nonzero `Class.CylindricalConstraint.Speed|Speed`, `Class.CylindricalConstraint.ServoMaxForce|ServoMaxForce`, and
-      `Class.CylindricalConstraint.Responsiveness|Responsiveness`.
-- `Class.CylindricalConstraint|CylindricalConstraint` with `Class.CylindricalConstraint.AngularActuatorType|AngularActuatorType` set to:
-  - `Enum.ActuatorType.Motor|Motor` with nonzero `Class.CylindricalConstraint.AngularVelocity|AngularVelocity`, `Class.CylindricalConstraint.MotorMaxAngularAcceleration|MotorMaxAngularAcceleration`, and `Class.CylindricalConstraint.MotorMaxTorque|MotorMaxTorque`.
-  - `Enum.ActuatorType.Servo` with nonzero `Class.CylindricalConstraint.AngularSpeed|AngularSpeed`, `Class.CylindricalConstraint.ServoMaxTorque|ServoMaxTorque`, and `Class.CylindricalConstraint.Responsiveness|Responsiveness`.
+- `Class.LinearVelocity|LinearVelocity` with `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` set to:
+  - `Enum.VelocityConstraintMode.Line|Line`: nonzero `Class.LinearVelocity.LineVelocity|LineVelocity`, and if `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled`, nonzero `Class.LinearVelocity.MaxForce|MaxForce`.
+  - `Enum.VelocityConstraintMode.Plane|Plane`: nonzero `Class.LinearVelocity.PlaneVelocity|PlaneVelocity`, and if `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled`: in `Enum.ForceLimitMode.Magnitude|Magnitude` mode, nonzero `Class.LinearVelocity.MaxForce|MaxForce`; in `Enum.ForceLimitMode.PerAxis|PerAxis` mode, nonzero `Class.LinearVelocity.MaxPlanarAxesForce|MaxPlanarAxesForce`.
+  - `Enum.VelocityConstraintMode.Vector|Vector`: nonzero `Class.LinearVelocity.VectorVelocity|VectorVelocity`, and if `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled`: in `Enum.ForceLimitMode.Magnitude|Magnitude` mode, nonzero `Class.LinearVelocity.MaxForce|MaxForce`; in `Enum.ForceLimitMode.PerAxis|PerAxis` mode, nonzero `Class.LinearVelocity.MaxAxesForce|MaxAxesForce`.
+- `Class.PrismaticConstraint|PrismaticConstraint` with `Class.SlidingBallConstraint.ActuatorType|ActuatorType` set to:
+  - `Enum.ActuatorType.Motor|Motor` with nonzero `Class.PrismaticConstraint.Velocity|Velocity`, `Class.PrismaticConstraint.MotorMaxAcceleration|MotorMaxAcceleration`, and `Class.PrismaticConstraint.MotorMaxForce|MotorMaxForce`.
+  - `Enum.ActuatorType.Servo|Servo` with nonzero `Class.PrismaticConstraint.Speed|Speed`, `Class.PrismaticConstraint.ServoMaxForce|ServoMaxForce`, and `Class.PrismaticConstraint.Responsiveness|Responsiveness`.
+- `Class.RopeConstraint|RopeConstraint` with `Class.RopeConstraint.WinchEnabled|WinchEnabled` set to `true`, nonzero `Class.RopeConstraint.WinchForce|WinchForce` and `Class.RopeConstraint.WinchSpeed|WinchSpeed`.
 
 ## Additional wake situations
 
