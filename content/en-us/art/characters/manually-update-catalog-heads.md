@@ -97,6 +97,8 @@ Export your head or entire body from Blender as a glTF file:
 Fix your asset in Blender, or preferred 3D modeling software. In many cases, you may save time using a brand new head cage and fitting the cage over your character head. You may also see other validation issues that need to be addressed from the first step.
 
 1. In Blender, open a new empty scene and import the glTF file.
+   1. In the glTF import settings, disable **Guess Original Bind Pose**.
+      <img src="../../assets/art/avatar/Guess-Original-Bind-Pose.png" width = "60%"/>
 2. Ensure everything you need for the head is present, including the cage, attachment points, facial joints and facial animations.
 3. Roblox Studio flips avatars by 180 degrees on import, so you need to rotate your asset back by 180 in Blender (Hotkeys: <kbd>R</kbd>+<kbd>Z</kbd> then type `180`).
 4. Most often heads fail validation due to cage issues. For example, the cage may be completely inside the head, has incorrect UVs or looks completely misplaced in the model. In most cases we recommend you do not spend time editing the original cage and instead:
