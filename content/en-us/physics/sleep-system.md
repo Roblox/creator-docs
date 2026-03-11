@@ -100,13 +100,45 @@ Rotational velocity and acceleration thresholds reflect the velocity and acceler
 For a given angular velocity, the rotational velocity of an assembly is proportional to the assembly bounding sphere radius. This means that larger assemblies can rotate at a lower angular velocity without falling asleep.
 </Alert>
 
+## Actuated joints
+
+It is sometimes desirable to move parts very slowly using an actuated joint, e.g. a `Class.HingeConstraint|HingeConstraint` that uses a `Enum.ActuatorType.Motor|Motor` to rotate a part very slowly. To keep parts connected to actuated joints awake in these scenarios, a stricter sleep velocity threshold is applied to assemblies connected to actuated joints. This delays when the assemblies connected to actuated joints fall asleep, allowing developers to move parts more slowly.
+
+The following are considered actuated joints:
+
+- `Class.AlignOrientation|AlignOrientation` with `Class.AlignOrientation.RigidityEnabled|RigidityEnabled` set to `false`, nonzero `Class.AlignOrientation.MaxAngularVelocity|MaxAngularVelocity`, `Class.AlignOrientation.MaxTorque|MaxTorque`, and `Class.AlignOrientation.Responsiveness|Responsiveness`.
+- `Class.AlignPosition|AlignPosition` with `Class.AlignPosition.RigidityEnabled|RigidityEnabled` set to `false`, nonzero `Class.AlignPosition.MaxAngularVelocity|MaxVelocity` and `Class.AlignPosition.Responsiveness|Responsiveness`.
+- `Class.AngularVelocity|AngularVelocity` with nonzero `Class.AngularVelocity.AngularVelocity|AngularVelocity` and `Class.AngularVelocity.MaxTorque|MaxTorque`.
+- `Class.AnimationConstraint|AnimationConstraint` with `Class.AnimationConstraint.IsKinematic|IsKinematic` set to `false`, nonzero `Class.AnimationConstraint.MaxForce|MaxForce` and `Class.AnimationConstraint.MaxTorque|MaxTorque`.
+- `Class.HingeConstraint|HingeConstraint` with `Class.HingeConstraint.ActuatorType|ActuatorType` set to:
+  - `Enum.ActuatorType.Motor|Motor` with nonzero `Class.HingeConstraint.AngularVelocity|AngularVelocity`, `Class.HingeConstraint.MotorMaxAcceleration|MotorMaxAcceleration`, and `Class.HingeConstraint.MotorMaxTorque|MotorMaxTorque`.
+  - `Enum.ActuatorType.Servo|Servo` with nonzero `Class.HingeConstraint.AngularSpeed|AngularSpeed`, `Class.HingeConstraint.ServoMaxTorque|ServoMaxTorque`, and `Class.HingeConstraint.Responsiveness|Responsiveness`.
+- `Class.RopeConstraint|RopeConstraint` with `Class.RopeConstraint.WinchEnabled|WinchEnabled` set to `true`, nonzero `Class.RopeConstraint.WinchForce|WinchForce` and `Class.RopeConstraint.WinchSpeed|WinchSpeed`.
+- `Class.LinearVelocity|LinearVelocity` — depends on `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode`:
+  - `Enum.VelocityConstraintMode.Line|Line`: nonzero `Class.LinearVelocity.LineVelocity|LineVelocity`, and if `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled`, nonzero `Class.LinearVelocity.MaxForce|MaxForce`.
+  - `Enum.VelocityConstraintMode.Plane|Plane`: nonzero `Class.LinearVelocity.PlaneVelocity|PlaneVelocity`, and if `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled`: in `Enum.ForceLimitMode.Magnitude|Magnitude` mode, nonzero `Class.LinearVelocity.MaxForce|MaxForce`; in `Enum.ForceLimitMode.PerAxis|PerAxis` mode, nonzero `Class.LinearVelocity.MaxPlanarAxesForce|MaxPlanarAxesForce`.
+  - `Enum.VelocityConstraintMode.Vector|Vector`: nonzero `Class.LinearVelocity.VectorVelocity|VectorVelocity`, and if `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled`: in `Enum.ForceLimitMode.Magnitude|Magnitude` mode, nonzero
+      `Class.LinearVelocity.MaxForce|MaxForce`; in `Enum.ForceLimitMode.PerAxis|PerAxis` mode, nonzero `Class.LinearVelocity.MaxAxesForce|MaxAxesForce`.
+- `Class.PrismaticConstraint|PrismaticConstraint` with `Class.SlidingBallConstraint.ActuatorType|ActuatorType` set to:
+  - `Enum.ActuatorType.Motor|Motor` with nonzero `Class.PrismaticConstraint.Velocity|Velocity`, `Class.PrismaticConstraint.MotorMaxAcceleration|MotorMaxAcceleration`, and
+      `Class.PrismaticConstraint.MotorMaxForce|MotorMaxForce`.
+  - `Enum.ActuatorType.Servo|Servo` with nonzero `Class.PrismaticConstraint.Speed|Speed`, `Class.PrismaticConstraint.ServoMaxForce|ServoMaxForce`, and
+      `Class.PrismaticConstraint.Responsiveness|Responsiveness`.
+- `Class.CylindricalConstraint|CylindricalConstraint` with `Class.SlidingBallConstraint.ActuatorType|ActuatorType` set to:
+  - `Enum.ActuatorType.Motor|Motor` with nonzero `Class.CylindricalConstraint.Velocity|Velocity`, `Class.CylindricalConstraint.MotorMaxAcceleration|MotorMaxAcceleration`, and
+      `Class.CylindricalConstraint.MotorMaxForce|MotorMaxForce`.
+  - `Enum.ActuatorType.Servo|Servo` with nonzero `Class.CylindricalConstraint.Speed|Speed`, `Class.CylindricalConstraint.ServoMaxForce|ServoMaxForce`, and
+      `Class.CylindricalConstraint.Responsiveness|Responsiveness`.
+- `Class.CylindricalConstraint|CylindricalConstraint` with `Class.CylindricalConstraint.AngularActuatorType|AngularActuatorType` set to:
+  - `Enum.ActuatorType.Motor|Motor` with nonzero `Class.CylindricalConstraint.AngularVelocity|AngularVelocity`, `Class.CylindricalConstraint.MotorMaxAngularAcceleration|MotorMaxAngularAcceleration`, and `Class.CylindricalConstraint.MotorMaxTorque|MotorMaxTorque`.
+  - `Enum.ActuatorType.Servo` with nonzero `Class.CylindricalConstraint.AngularSpeed|AngularSpeed`, `Class.CylindricalConstraint.ServoMaxTorque|ServoMaxTorque`, and `Class.CylindricalConstraint.Responsiveness|Responsiveness`.
+
 ## Additional wake situations
 
 In addition to situations outlined in [sleep‑checking](#sleep-checking) and [sleeping](#sleeping), an assembly enters the [awake](#awake) state when:
 
 - It collides with another assembly moving faster than 1 studs/s.
 - Any physics-related property of any `Class.BasePart` within the assembly changes, including:
-
   - `Class.BasePart.Anchored|Anchored`
   - `Class.BasePart.AssemblyLinearVelocity|AssemblyLinearVelocity`/`Class.BasePart.AssemblyAngularVelocity|AssemblyAngularVelocity`
   - `Class.BasePart.CanCollide|CanCollide`/`Class.BasePart.CanTouch|CanTouch`
@@ -118,7 +150,6 @@ In addition to situations outlined in [sleep‑checking](#sleep-checking) and [s
 - A non-zero impulse is applied to any `Class.BasePart` within the assembly via `Class.BasePart:ApplyImpulse()|ApplyImpulse()`, `Class.BasePart:ApplyImpulseAtPosition()|ApplyImpulseAtPosition()`, or `Class.BasePart:ApplyAngularImpulse()|ApplyAngularImpulse()`.
 
 - Any physics-related property changes on the `Class.Workspace` that would affect the assembly, including:
-
   - `Class.Workspace.Gravity|Gravity`
   - `Class.Workspace.FluidForces|FluidForces`
   - `Class.Workspace.GlobalWind|GlobalWind`
