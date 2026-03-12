@@ -232,6 +232,7 @@ methods:
         summary: ''
     tags:
       - Yields
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

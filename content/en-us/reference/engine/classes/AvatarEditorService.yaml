@@ -360,7 +360,6 @@ descendants: []
 tags:
   - NotCreatable
   - Service
-  - NotReplicated
 deprecation_message: ''
 properties: []
 methods:
