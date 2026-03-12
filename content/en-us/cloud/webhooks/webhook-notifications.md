@@ -6,7 +6,7 @@ description: Explains how to set up webhooks to automate your notification manag
 Instead of manually monitoring all events in your experience and requests from users, you can set up webhooks to receive real-time notifications on a third-party messaging tool or your custom endpoint that can receive HTTP requests. This helps you automate your notification management workflow to reduce manual effort handling notifications.
 
 <Alert severity="info">
-Currently, Roblox fully supports webhook notifications for Discord, Guilded, and Slack. Using webhooks with other third-party tools carries the risk of not receiving all notifications.
+Currently, Roblox fully supports webhook notifications for Discord and Slack. Using webhooks with other third-party tools carries the risk of not receiving all notifications.
 </Alert>
 
 ## Webhook workflow
@@ -86,7 +86,6 @@ When a webhook notification fails to reach your specified URL due to errors such
 Third-party tools usually have their own requirements for webhooks that you need to follow when setting up your webhook URL. You can find these requirements by searching for the keyword "webhook" on the support or documentation site of the target tool. For the three supported third-party tools, see the following:
 
 - [Discord Help Center](https://support.discord.com/hc/en-us)
-- [Guilded Support](https://support.guilded.gg/hc/en-us)
 - [Slack API Reference](https://api.slack.com/)
 
 ## Test webhooks
@@ -154,19 +153,17 @@ To verify a signature:
 
 1. Extract the timestamp value from the `Timestamp` footer of the notification.
 
-1. Extract the message body from the notification. For the following example notification, the message body is:
+1. Extract the message body from the notification. An example message body might look like this:
 
-   <figcaption>
+   ```text
    You have received a new notification for Right to Erasure for the User Id: XXXXXXXX in the game(s) with Ids: YYYYYYY, ZZZZZZZZZ
-    </figcaption>
-
-   <img src="../../assets/misc/Webhooks-Example-Message-Body.png" width="50%" alt="Example message body on Guilded"/>
+   ```
 
 1. Concatenate the timestamp value and the message with a period character in the format as:
 
-   <figcaption>
+   ```text
    168487229.You have received a new notification for Right to Erasure for the User Id: XXXXXXXX in the game(s) with Ids: YYYYYYY, ZZZZZZZZZ
-    </figcaption>
+   ```
 
 1. Compute a Hash-based message authentication code (HMAC) with the SHA256 hash function using the secret you defined during the configuration as the key and the base string you generated through step 2 as the message. Convert the result to Base64 format to get the expected signature.
 
@@ -209,7 +206,7 @@ The following example shows the payload schema of the **Right To Erasure request
 
 ## Handle notifications
 
-If you store any **Personally Identifiable Information (PII)** of your users, such as their User IDs, you must delete this information when a user submits such a request to comply with the GDPR [right to erasure](https://gdpr-info.eu/art-17-gdpr/) compliance requirements. You can create a bot to handle webhook notifications and help automate data deletion, provided you're storing PII in a data store. See [Automating Right to Erasure Requests Deletion](../../cloud/webhooks/automate-right-to-erasure.md) for an example on how to create a bot within Guilded or Discord that uses the [Open Cloud API for data stores](../../cloud/guides/data-stores/index.md) to delete PII data as an automation solution. This example can be adapted for handling other notifications, such as subscription events.
+If you store any **Personally Identifiable Information (PII)** of your users, such as their User IDs, you must delete this information when a user submits such a request to comply with the GDPR [right to erasure](https://gdpr-info.eu/art-17-gdpr/) compliance requirements. You can create a bot to handle webhook notifications and help automate data deletion, provided you're storing PII in a data store. See [Automating Right to Erasure Requests Deletion](../../cloud/webhooks/automate-right-to-erasure.md) for an example on how to create a bot within Discord that uses the [Open Cloud API for data stores](../../cloud/guides/data-stores/index.md) to delete PII data as an automation solution. This example can be adapted for handling other notifications, such as subscription events.
 
 If you use a custom endpoint as your webhook server instead of a third-party tool, you can extract the data subject to deletion from the webhook payload and build your own automation solution. The following code sample is an example of a server that has prevention against replay attacks by verifying the timestamp and that the request is coming from Roblox:
 

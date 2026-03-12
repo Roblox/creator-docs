@@ -140,9 +140,8 @@ Import your head back into Studio and verify that it passes validation. If valid
     1.  Select **Save to Roblox** on your asset.
     2.  Select **Development Item**.
     3.  Set its **Asset Category** to Model.
-    4.  Set **Asset Privacy** to `Public` (default value is `Private`).
-    5.  Save the model to Roblox (no publishing fees are incurred).
-    6.  After saving to Roblox, save the asset ID provided.
+    4.  Save the model to Roblox (no publishing fees are incurred).
+    5.  After saving to Roblox, save the asset ID provided.
         1.  While you can submit either the head or body asset, there is no distinction between head and body asset when saving as a development item.
         2.  For submission to the web form, we prefer that you get the asset ID of the head, but you can use either the head or body asset ID and Roblox will replace the head accordingly.
 

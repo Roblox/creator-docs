@@ -183,7 +183,7 @@ Home is a user's personalized view of Roblox. Outside of Recommended for You, Ho
 The Experience Details Page aims to offer users comprehensive insights about the experience, enhancing their understanding and aiding in decision-making. This, in turn, drives high-intent users to your experiences. You can leverage the Experience Details Page to improve user onboarding and attract returning users by:
 
 - **Maintaining up-to-date events**: Events are crucial for community engagement. Use [Experience Events](#experience-events) to inform users about upcoming events and drive traffic to your experience.
-- **Maintaining Roblox Groups and Guilded Channels**: Roblox Groups and Guilded offers the best way for creators to connect with and inform their communities. You can now view [Guilded announcements](https://devforum.roblox.com/t/introducing-announcements-for-roblox-groups/2907426) on Roblox groups, which strengthens community bonds.
+- **Maintaining Roblox Groups**: Roblox Groups offer the best way for creators to connect with and inform their communities.
 - **Increasing Monetization**: Boost revenue by adding [passes](./production/monetization/passes.md) and [subscriptions](./production/monetization/subscriptions.md) for your experience.
 
 The Experience Details Page also provides additional recommendation opportunities by highlighting similar experiences, helping users discover more relevant content.

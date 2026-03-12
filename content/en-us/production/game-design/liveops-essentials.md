@@ -107,7 +107,7 @@ Although the developers are the ultimate vision-holders, players are a good sour
 - What do players want added to the game?
 - How can their experience be improved?
 
-Game groups and social media like Guilded allow developers to connect with players and gather their feedback. Even more important than players' specific suggestions is the reasoning behind them. Often, the gap that they are trying to fill can be addressed in other creative ways that achieve both the players' and developers' goals.
+Game groups and social media like Discord allow developers to connect with players and gather their feedback. Even more important than players' specific suggestions is the reasoning behind them. Often, the gap that they are trying to fill can be addressed in other creative ways that achieve both the players' and developers' goals.
 
 <h4>Improving gameplay</h4>
 
