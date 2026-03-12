@@ -429,6 +429,10 @@ These assets require additional steps in third-party tools to pass validation in
 If you are using Roblox's avatar template files, you must perform the [cleanup steps](../art/characters/creating/combine-head-geometry.md) in order for the assets to properly validate before publishing to the Marketplace.
 </Alert>
 
+<Alert severity = 'warning'>
+Some of the template files include additional mesh assets for eyebrows and eyelashes. These eyebrows and eyelashes versions may not be fully compatible with the template body. For the latest information on eyebrows and eyelashes, see [Makeup](../makeup/index.md#components-of-makeup).
+</Alert>
+
 <Grid container style={{margin: -6}}>
 <Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
