@@ -1,16 +1,20 @@
 ---
 title: 3D workspace
-description: Describes the workspace container service, which holds all objects that exist in the 3D world.
+description: >-
+  Describes the workspace container service, which holds all objects that exist
+  in the 3D world.
 ---
-
-`Class.Workspace` is a container service that holds objects that you want the
+`Class.W` is a container service that holds objects that you want the
 Roblox Engine to render in the 3D world. You typically will add these objects to
 the workspace:
 
-- `Class.BasePart` objects, which includes both `Class.Part` and `Class.MeshPart` objects.
-- `Class.Attachment` objects, which you can attach to special effect generators like a `Class.ParticleEmitter`, UI objects like a `Class.BillboardGui`, physical `Class.Constraint|Constraints`, and more.
-- `Class.Model` objects that organize geometric groupings.
-- `Class.Script` objects that are parented by other objects in the workspace.
+* `Class.BasePart` objects, which includes both `Class.Part` and `Class.MeshPart` objects.
+
+* `Class.Attachment` objects, which you can attach to special effect generators like a `Class.ParticleEmitter`, UI objects like a `Class.BillboardGui`, physical `Class.Constraint|Constraints`, and more.
+
+* `Class.Model` objects that organize geometric groupings.
+
+* `Class.Script` o that are parented by other objects in the workspace.
   Scripts aren't rendered but can affect another object's rendering.
 
 ## Parts
@@ -103,14 +107,18 @@ also contain scripts that act on the individual objects of the model.
 
 Within a script, you can access a place's `Class.Workspace` in three different ways, all of which are valid.
 
-- `game:GetService("Workspace")`
-- `workspace`
-- `game.Workspace`
+* `game:GetService("Workspace")`
+
+* `workspace`
+
+* `game.Workspace`
 
 From there, you can carry out a large set of use cases to script logic for your
 experiences and create dynamic worlds and interactions. For example:
 
-- Obtain a reference to any object in the workspace to change its properties during runtime.
-- Obtain a reference to a user's `Class.Camera` object to [manipulate their view](../workspace/camera.md) of the workspace.
-- Listen for events on objects in the workspace to carry out
+* Obtain a reference to any object in the workspace to change its properties during runtime.
+
+* Obtain a reference to a user's `Class.Camera` object to [manipulate their view](../workspace/camera.md) of the workspace.
+
+* Listen for events on objects in the workspace to carry out
   logic at specific times, such as when a user's playable character [touches an object](../workspace/collisions.md).
