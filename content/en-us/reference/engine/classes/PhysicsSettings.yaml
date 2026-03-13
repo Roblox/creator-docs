@@ -872,16 +872,6 @@ properties:
       		<td>Root Primitive of an Assembly.</td>
       	</tr>
       	<tr>
-      		<td bgcolor="#FF7F00"></td>
-      		<td>Cylinder</td>
-      		<td>Root Primitive of a Clump.</td>
-      	</tr>
-      	<tr>
-      		<td bgcolor="#B2B2B2"></td>
-      		<td>Line</td>
-      		<td>Connection between two Primitives that share the same Assembly and Clump.</td>
-      	</tr>
-      	<tr>
       		<td bgcolor="#0000FF"></td>
       		<td>Line</td>
       		<td>Connection between two Primitives that share the same Assembly.</td>
