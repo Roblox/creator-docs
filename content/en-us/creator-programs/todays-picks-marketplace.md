@@ -1,9 +1,9 @@
 ---
 title: Today's Picks on Marketplace
-description: Today's Picks on Marketplace is a curated sort with items selected each day by a team of in-house editors.
+description: Today's Picks on Marketplace is a curated sort with items selected each day by a team of in-house curators.
 ---
 
-**Today's Picks on Marketplace** is a curated sort with items selected each day by a team of in-house editors. We strive to connect every user with the avatar items that help them bring their unique self to the platform.
+**Today's Picks on Marketplace** is a curated sort with items selected each day by a team of in-house curators. We strive to connect every user with the avatar items that help them bring their unique self to the platform.
 
 <figure>
 <Chip
@@ -17,7 +17,7 @@ description: Today's Picks on Marketplace is a curated sort with items selected 
   <Grid item container Large={8} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <h2>Why apply?</h2>
-    <p>Using the combined efforts of our team of Roblox editors and our Marketplace recommendation system, Today's Picks on Marketplace will give us more ways to feature the work and creativity you bring to Roblox.</p>
+    <p>Using the combined efforts of our team of Roblox curators and our Marketplace recommendation system, Today's Picks on Marketplace will give us more ways to feature the work and creativity you bring to Roblox.</p>
     <h2>Eligibility</h2>
     <ul>
       <li>Be 17+ and ID-verified</li>

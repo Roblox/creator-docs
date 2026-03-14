@@ -5,9 +5,9 @@ description: Overview of using event types to track user sources, sinks and mile
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/NFLP-FVv834" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe> <br />
 
-Event types help you identify opportunities to grow and monetize your experience. They allow you to **integrate event tracking in your experience** and visualize your in-experience economy and player usage patterns on the Analytics dashboard
+Event types help you identify opportunities to grow and monetize your experience. They allow you to integrate event tracking into your experience and visualize your in-experience economy and player usage patterns on the Analytics dashboard
 
-Once you begin tracking these events from your experience using the `Class.AnalyticsService`, you'll unlock new [economy](./economy-events.md), [funnel](./funnel-events.md), and [custom](./custom-events.md) dashboards under Analytics on the Creator Dashboard. You can use these dashboards to identify growth opportunities and segment users by age, gender, platform, OS and custom fields. All of these features are **free to use**.
+After you begin tracking these events from your experience using `Class.AnalyticsService`, you unlock new [economy](./economy-events.md), [funnel](./funnel-events.md), and [custom](./custom-events.md) dashboards under Analytics on the Creator Dashboard. You can use these dashboards to identify growth opportunities and segment users by age, gender, platform, OS and custom fields. All of these features are **free to use**.
 
 <img src="../../assets/analytics/event-types/Overview-Economy-Funnels.png" alt="Economy and Funnels dashboard pages populated with data."/>
 
@@ -19,21 +19,19 @@ Roblox provides three sets of analytic dashboards you can use to track different
 
    - **Top sinks** — What do users spend in-experience resources on?
    - **Top sources** — Where do users earn resources?
-   - **Average wallet balance** — How much resources are users holding?
+   - **Average wallet balance** — How many resources are users holding?
 
-<p />
 2. **Funnel events** let you track your user's progress through key stages of your experience, such as:
 
-      - **Onboarding** — Where do users drop off when getting started with your experience?
-      - **Progression** — Where do users stop advancing through your experience?
-      - **Shop** — Where do users abandon purchases?
+   - **Onboarding** — Where do users drop off when getting started with your experience?
+   - **Progression** — Where do users stop advancing through your experience?
+   - **Shop** — Where do users abandon purchases?
 
-<p />
 3. **Custom events**  let you track metrics specific to your experience, such as:
 
-      - **Adoption** — How many users click on a specific UI component?
-      - **User Behavior** — What is the most frequently used ability on each map?
-      - **Core Loop** — How do kill/death ratios compare across different weapons?
+   - **Adoption** — How many users click on a specific UI component?
+   - **User behavior** — What is the most frequently used ability on each map?
+   - **Core loop** — How do kill/death ratios compare across different weapons?
 
 For more information on setting up these dashboards, see [Economy events](./economy-events.md), [Funnel events](./funnel-events.md) and [Custom events](./custom-events.md).
 
@@ -47,6 +45,8 @@ Once you add [economy](./economy-events.md), [funnel](./funnel-events.md), or [c
 
 <img src="../../assets/analytics/event-types/Event-Tracking.png" alt="View events report displaying multiple event entries sortable by event type, user ID and keyword."/>
 
+If you see more events than you were expecting, verify that your calls to the `Class.AnalyticsService` methods occur **after** a successful operation. For example, you should call `Class.AnalyticsService:LogEconomyEvent()|LogEconomyEvent()` after a successful purchase, not when the user attempts a purchase (which could fail due to lack of funds).
+
 You can also visit your experience's [error report](./error-report.md) to see if there are any errors with your event tracking.
 
 ## Event tracking limitations
@@ -59,8 +59,6 @@ You can leverage [custom fields](./custom-fields.md) to additionally filter your
 For example, instead of tracking `WarriorXP`, `MageXP`, `PaladinXP` as separate economy currencies, set `XP` as one currency and set `Warrior`, `Mage`, `Paladin`, `...`, as Custom Field 1. This allows you to break down these values on your dashboards and not use up your currency cardinality.
 </Alert>
 
-<figure>
-<br />
 <table><thead>
   <tr>
     <th></th>
@@ -127,4 +125,3 @@ For example, instead of tracking `WarriorXP`, `MageXP`, `PaladinXP` as separate 
   </tr>
 </tbody>
 </table>
-</figure>

@@ -173,7 +173,7 @@ If you spot a potential problem, use the following steps to remediate and fix it
 ## Client API calls after join
 
 <Alert severity="info">
-This metric is only available for experiences with an extremely high number of daily active users (DAU), typically five million or more.
+This metric is only available for a small number of top experiences.
 </Alert>
 
 The **Client API Calls in First 60s After Join** metric measures the total number of requests (API calls) your experience makes to Roblox services during the critical first minute after a user successfully joins.

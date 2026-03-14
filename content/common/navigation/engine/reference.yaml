@@ -3602,6 +3602,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/ActionType.yaml
         ignoreTranslation: true
+      - title: ActivePayerStatus
+        path: /reference/engine/enums/ActivePayerStatus
+        type: engineapi
+        source: /reference/engine/enums/ActivePayerStatus.yaml
+        ignoreTranslation: true
       - title: ActuatorRelativeTo
         path: /reference/engine/enums/ActuatorRelativeTo
         type: engineapi
@@ -5187,6 +5192,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/PlayerExitReason.yaml
         ignoreTranslation: true
+      - title: PlayerPlatformSpenderStatus
+        path: /reference/engine/enums/PlayerPlatformSpenderStatus
+        type: engineapi
+        source: /reference/engine/enums/PlayerPlatformSpenderStatus.yaml
+        ignoreTranslation: true
       - title: PoseEasingDirection
         path: /reference/engine/enums/PoseEasingDirection
         type: engineapi
@@ -6146,6 +6156,11 @@ navigation:
         path: /reference/engine/enums/WeldConstraintPreserve
         type: engineapi
         source: /reference/engine/enums/WeldConstraintPreserve.yaml
+        ignoreTranslation: true
+      - title: WhenUserFirstPlayed
+        path: /reference/engine/enums/WhenUserFirstPlayed
+        type: engineapi
+        source: /reference/engine/enums/WhenUserFirstPlayed.yaml
         ignoreTranslation: true
       - title: WhisperChatPrivacyMode
         path: /reference/engine/enums/WhisperChatPrivacyMode

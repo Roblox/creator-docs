@@ -193,9 +193,50 @@ methods:
     capabilities:
       - DataStore
   - name: DataStoreService:SetRateLimitForRequestType
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Sets the rate limit for a given request type per minute.
+    description: |
+      Sets the per-server rate limit (requests per minute) for a given Data
+      Store request type. The configured limit overrides the default rate limit
+      for that request type on the current server. The rate limit is calculated
+      as `rateLimit = baseLimit + (perPlayerLimit * numPlayers)`, where
+      `numPlayers` is the current number of active players on the server.
+      `Enum.DataStoreRequestType.OnUpdate|DataStoreRequestType.OnUpdate` and
+      `Enum.DataStoreRequestType.UpdateAsync|DataStoreRequestType.UpdateAsync`
+      cannot be configured with this function. Calling this API with those
+      request types will result in an error.
+
+      You should call this API **once per request type during server
+      initialization**. We don't recommend calling this API during active
+      experience logic. If called multiple times, the new limit definitions will
+      immediately overwrite the previous ones.
+
+      The `baseLimit` and `perPlayerLimit` have different constraints depending
+      on the request type. See the table below for more information.
+
+      ##### Constraints by Request Type
+
+      | Request Type            | baseLimit constraints | perPlayerLimit constraints |
+      | :---------------------- | :-------------------- | :------------------------- |
+      | GetAsync                | [0, 60]               | [0, 40]                    |
+      | SetIncrementAsync       | [0, 60]               | [0, 40]                    |
+      | UpdateAsync             | N/A                   | N/A                        |
+      | GetSortedAsync          | [0, 5]                | [0, 2]                     |
+      | SetIncrementSortedAsync | [0, 30]               | [0, 5]                     |
+      | OnUpdate                | N/A                   | N/A                        |
+      | ListAsync               | [0, 5]                | [0, 2]                     |
+      | GetVersionAsync         | [0, 5]                | [0, 2]                     |
+      | RemoveVersionAsync      | [0, 5]                | [0, 2]                     |
+      | StandardRead            | [0, 10000]            | [0, 200]                   |
+      | StandardWrite           | [0, 10000]            | [0, 200]                   |
+      | StandardList            | [0, 10000]            | [0, 200]                   |
+      | StandardRemove          | [0, 10000]            | [0, 200]                   |
+      | OrderedRead             | [0, 10000]            | [0, 200]                   |
+      | OrderedWrite            | [0, 10000]            | [0, 200]                   |
+      | OrderedList             | [0, 10000]            | [0, 200]                   |
+      | OrderedRemove           | [0, 10000]            | [0, 200]                   |
+    code_samples:
+      - DataStoreService-SetRateLimitForRequestType1
     parameters:
       - name: requestType
         type: DataStoreRequestType

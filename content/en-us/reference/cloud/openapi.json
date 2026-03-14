@@ -62,7 +62,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 150
+            "maxInPeriod": 30
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
@@ -133,7 +133,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 150
+            "maxInPeriod": 30
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
@@ -230,7 +230,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 150
+            "maxInPeriod": 30
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
@@ -1669,7 +1669,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 10000
+            "maxInPeriod": 50000
           }
         },
         "x-roblox-scopes": [
@@ -7017,7 +7017,7 @@
       "get": {
         "tags": ["Inventories", "Users"],
         "summary": "List Inventory Items",
-        "description": "List the inventory items in a user's inventory.\n\nThe inventory items returned depend on the target user’s choice under\n**Settings > Privacy > Who can see my inventory?**:\n* If the user granted inventory visibility to \"Everyone,\" then any API key\nor OAuth2 token can be used to view the target’s inventory, no matter what\nscopes it has or who created it.\n* If the user has not granted inventory visibility to \"Everyone\":\n  * Their inventory can still be viewed with an API key created by the\n  target user with **Inventory: Read** permission.\n  * Their inventory can still be viewed with an OAuth2 token if the target\n  user authorizes an app requesting permissions for the\n  `user.inventory-item:read` scope.\n\nRate Limits:\n* API Keys - 100 requests/minute per API key owner (can be user or group).\nRate limits are enforced across all of an owner's API keys.\n* OAuth2 Tokens - 20 requests/minute per OAuth2 access token",
+        "description": "List the inventory items in a user's inventory.\n\nThe inventory items returned depend on the target user’s choice under\n**Settings > Privacy > Who can see my inventory?**:\n* If the user granted inventory visibility to \"Everyone,\" then any API key\nor OAuth2 token can be used to view the target’s inventory, no matter what\nscopes it has or who created it.\n* If the user has not granted inventory visibility to \"Everyone\":\n  * Their inventory can still be viewed with an API key created by the\n  target user with **Inventory: Read** permission.\n  * Their inventory can still be viewed with an OAuth2 token if the target\n  user authorizes an app requesting permissions for the\n  `user.inventory-item:read` scope.",
         "operationId": "Cloud_ListInventoryItems",
         "parameters": [
           {
@@ -10313,6 +10313,13 @@
         "operationId": "CrossServerMessaging_Publish",
         "x-roblox-cloud-api-operation-name": "Publish a Message",
         "x-roblox-stability": "BETA",
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}:publishMessage",
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/universes#Cloud_PublishUniverseMessage"
+          }
+        ],
         "summary": "Publish a cross-server message to a universe",
         "description": "Publish a message to a pre-defined topic of an experience, with the size of the message up to 1,024 characters (1 KB). Requires the **Publish** permission for API keys and the **universe-messaging-service:publish** scope for OAuth 2.0 apps. See [Cross-server messaging](/cloud-services/cross-server-messaging.md#subscribe-users-to-receive-messages) for defining and subscribing users to a topic.",
         "parameters": [
@@ -20640,62 +20647,6 @@
         ]
       }
     },
-    "/v2/avatar": {
-      "patch": {
-        "summary": "Sets the avatar to the incoming avatar using field masks.",
-        "description": "Only allows items that you own, are not expired, and are wearable asset types.\r\nAny assets being worn before this method is called are automatically removed.",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.UpdateAvatarRequestModel"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.UpdateAvatarRequestModel"
-              }
-            }
-          },
-          "description": "Model of avatar that we are updating to.",
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.UpdateAvatarResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.UpdateAvatarResponseModel"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "3: Invalid assetId\r\n5: Meta does not apply to specified asset type\r\n7: Required meta is not provided for the specific asset type"
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed"
-          },
-          "500": {
-            "description": "2: Failed to wear asset."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://avatar.roblox.com"
-          }
-        ]
-      }
-    },
     "/v2/outfits/{userOutfitId}": {
       "patch": {
         "tags": ["Avatars"],
@@ -21677,7 +21628,14 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/badges#badges_get_v1_users__userId__badges"
-        }
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://apis.roblox.com/cloud/v2/users/{user_id}/inventory-items",
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/inventories#Cloud_ListInventoryItems"
+          }
+        ]
       }
     },
     "/v1/users/{userId}/badges/{badgeId}/awarded-date": {
@@ -21725,7 +21683,15 @@
         "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/badges#badges_get_v1_users__userId__badges__badgeId__awarded_date"
-        }
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://apis.roblox.com/cloud/v2/users/{user_id}/inventory-items",
+            "httpMethod": "GET",
+            "description": "The addTime response field corresponds with the badge awarded date",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/inventories#Cloud_ListInventoryItems"
+          }
+        ]
       }
     },
     "/v1/users/{userId}/badges/awarded-dates": {
@@ -21793,7 +21759,15 @@
         "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/badges#badges_get_v1_users__userId__badges_awarded_dates"
-        }
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://apis.roblox.com/cloud/v2/users/{user_id}/inventory-items",
+            "httpMethod": "GET",
+            "description": "The addTime response field corresponds with the badge awarded date",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/inventories#Cloud_ListInventoryItems"
+          }
+        ]
       }
     },
     "/v1/badges/{badgeId}/icon": {
@@ -23876,6 +23850,61 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/users#contacts_post_v1_user_tag"
+        }
+      }
+    },
+    "/v2/android-binaries/{version}/channels/{channelName}": {
+      "get": {
+        "tags": ["Metadata"],
+        "summary": "Retrieve the Android binary information for a given version and channel name.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "version",
+            "description": "The version string of the application. i.e. 2.660.392",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "channelName",
+            "description": "The name of the channel. E.g. ZFlag, ZIntegration",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.ClientSettings.Api.Models.Response.AndroidBinaryResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.ClientSettings.Api.Models.Response.AndroidBinaryResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://clientsettings.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/metadata#clientsettings_get_v2_android_binaries__version__channels__channelName_"
         }
       }
     },
@@ -33181,6 +33210,65 @@
         }
       }
     },
+    "/v1/user-localization-settings/player-choice/{universeId}": {
+      "get": {
+        "summary": "Get user player choice settings for universe.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "universeId",
+            "description": "The universe's ID.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.Models.Response.GetPlayerChoiceUniverseSettingsResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.Models.Response.GetPlayerChoiceUniverseSettingsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "14: Invalid game id"
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "500": {
+            "description": "0: An unknown error occurred."
+          },
+          "503": {
+            "description": "17: Feature is disabled"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://gameinternationalization.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
     "/v1/user-localization-settings/universe/{universeId}": {
       "get": {
         "tags": ["Localization", "Universes"],
@@ -39021,100 +39109,6 @@
         }
       }
     },
-    "/v1/games/{placeId}/private-servers": {
-      "get": {
-        "tags": ["Private servers", "Universes"],
-        "summary": "Get list of private servers user can access for given game id.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "placeId",
-            "description": "The Id of the place we are geting the private server list for.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "query",
-            "name": "excludeFriendServers",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            }
-          },
-          {
-            "in": "query",
-            "name": "limit",
-            "description": "The number of results per request.",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "enum": [10, 25, 50, 100],
-              "default": 10
-            }
-          },
-          {
-            "in": "query",
-            "name": "cursor",
-            "description": "The paging cursor for the previous or next page.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "in": "query",
-            "name": "sortOrder",
-            "description": "The order the results are sorted in.",
-            "schema": {
-              "type": "string",
-              "enum": ["Asc", "Desc"],
-              "default": "Asc"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.GetPrivateServerListResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.GetPrivateServerListResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The place is invalid.\r\n7: Guest users are not allowed."
-          },
-          "404": {
-            "description": "1: The place is invalid."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://games.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#games_get_v1_games__placeId__private_servers"
-        }
-      }
-    },
     "/v1/games/{placeId}/servers/{serverType}": {
       "get": {
         "tags": ["Places", "Universes"],
@@ -39761,61 +39755,6 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/universes#games_get_v1_games_recommendations_game__universeId_"
-        }
-      }
-    },
-    "/v1/private-servers/enabled-in-universe/{universeId}": {
-      "get": {
-        "tags": ["Private servers", "Universes"],
-        "summary": "Checks if the private servers are enabled in the specified universe.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "universeId",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.PrivateServersEnabledInUniverseResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.PrivateServersEnabledInUniverseResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "8: The universe IDs specified are invalid."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://games.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {},
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#games_get_v1_private_servers_enabled_in_universe__universeId_"
         }
       }
     },
@@ -48333,181 +48272,6 @@
         }
       }
     },
-    "/v1/item-tags": {
-      "get": {
-        "tags": ["Assets"],
-        "summary": "Gets all related item tags for each item id listed.",
-        "parameters": [
-          {
-            "in": "query",
-            "name": "itemIds",
-            "description": "",
-            "required": true,
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.ItemConfiguration.Api.ItemWithTags_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.ItemConfiguration.Api.ItemWithTags_"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: No item tag Ids requested\r\n2: Too many item tag Ids requested\r\n3: Invalid item id\r\n6: Invalid item namespace"
-          },
-          "404": {
-            "description": "10: The endpoint was not found"
-          },
-          "429": {
-            "description": "7: Too many requests"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://itemconfiguration.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {},
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#itemconfiguration_get_v1_item_tags"
-        }
-      },
-      "post": {
-        "tags": ["Assets"],
-        "summary": "Creates a new item tag.",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.CreateItemTagRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.CreateItemTagRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.ItemTagDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.ItemTagDetails"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "3: Invalid item id\r\n4: Invalid tag id\r\n6: Invalid item namespace\r\n8: The given item is ineligible for item tags\r\n9: The given item has already reached its maximum item tag count"
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n5: The current user is missing permissions for the endpoint"
-          },
-          "404": {
-            "description": "10: The endpoint was not found"
-          },
-          "429": {
-            "description": "7: Too many requests"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://itemconfiguration.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#itemconfiguration_post_v1_item_tags"
-        }
-      }
-    },
-    "/v1/item-tags/metadata": {
-      "get": {
-        "tags": ["Assets", "Metadata"],
-        "summary": "Gets the metadata related to item tags.",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.ItemTagsMetadataResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.ItemTagsMetadataResponse"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "10: The endpoint was not found"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://itemconfiguration.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {},
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#itemconfiguration_get_v1_item_tags_metadata"
-        }
-      }
-    },
     "/v1/creations/get-asset-details": {
       "post": {
         "tags": ["Assets"],
@@ -48583,68 +48347,6 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/assets#itemconfiguration_post_v1_creations_get_asset_details"
-        }
-      }
-    },
-    "/v1/item-tags/{itemTagId}": {
-      "delete": {
-        "tags": ["Assets"],
-        "summary": "Deletes an item tag from an item.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "itemTagId",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n5: The current user is missing permissions for the endpoint"
-          },
-          "404": {
-            "description": "10: The endpoint was not found"
-          },
-          "429": {
-            "description": "7: Too many requests"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://itemconfiguration.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#itemconfiguration_delete_v1_item_tags__itemTagId_"
         }
       }
     },
@@ -60501,6 +60203,7 @@
         }
       },
       "post": {
+        "tags": ["Creator Store"],
         "summary": "Search Creator Store Assets",
         "description": "Search Creator Store for assets.",
         "operationId": "Toolbox_SearchCreatorStoreAssets",
@@ -60630,7 +60333,10 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/creator-store#Toolbox_SearchCreatorStoreAssets"
+        }
       }
     },
     "/toolbox-service/v2/assets/{id}": {
@@ -64752,7 +64458,7 @@
         }
       }
     },
-    "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repositoryType}/full": {
+    "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repository}/full": {
       "get": {
         "tags": ["Configs"],
         "summary": "Gets full config with metadata.",
@@ -64769,29 +64475,25 @@
             }
           },
           {
-            "name": "repositoryType",
+            "name": "repository",
             "in": "path",
-            "description": "\n\nInvalid\n\nUniverseConfiguration\n\nMatchmakingConfiguration\n\nDataStoresConfiguration",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig",
             "required": true,
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/CreatorConfigsPublicApi.RepositoryType"
+                  "$ref": "#/components/schemas/Repository"
                 }
               ],
-              "description": "RepositoryType represents the type of repository for which an experiment can be defined.",
+              "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
-                "Invalid",
-                "UniverseConfiguration",
-                "MatchmakingConfiguration",
-                "DataStoresConfiguration"
+                "InExperienceConfig",
+                "RecommendationServicesConfig"
               ]
             },
             "x-enum-varnames": [
-              "Invalid",
-              "UniverseConfiguration",
-              "MatchmakingConfiguration",
-              "DataStoresConfiguration"
+              "InExperienceConfig",
+              "RecommendationServicesConfig"
             ]
           },
           {
@@ -64881,7 +64583,7 @@
         }
       }
     },
-    "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repositoryType}": {
+    "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repository}": {
       "get": {
         "tags": ["Configs"],
         "summary": "Gets published config values without metadata.",
@@ -64898,29 +64600,25 @@
             }
           },
           {
-            "name": "repositoryType",
+            "name": "repository",
             "in": "path",
-            "description": "\n\nInvalid\n\nUniverseConfiguration\n\nMatchmakingConfiguration\n\nDataStoresConfiguration",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig",
             "required": true,
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/CreatorConfigsPublicApi.RepositoryType"
+                  "$ref": "#/components/schemas/Repository"
                 }
               ],
-              "description": "RepositoryType represents the type of repository for which an experiment can be defined.",
+              "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
-                "Invalid",
-                "UniverseConfiguration",
-                "MatchmakingConfiguration",
-                "DataStoresConfiguration"
+                "InExperienceConfig",
+                "RecommendationServicesConfig"
               ]
             },
             "x-enum-varnames": [
-              "Invalid",
-              "UniverseConfiguration",
-              "MatchmakingConfiguration",
-              "DataStoresConfiguration"
+              "InExperienceConfig",
+              "RecommendationServicesConfig"
             ]
           },
           {
@@ -65010,7 +64708,7 @@
         }
       }
     },
-    "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repositoryType}/draft": {
+    "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repository}/draft": {
       "get": {
         "tags": ["Configs"],
         "summary": "Gets the current draft.",
@@ -65027,29 +64725,25 @@
             }
           },
           {
-            "name": "repositoryType",
+            "name": "repository",
             "in": "path",
-            "description": "\n\nInvalid\n\nUniverseConfiguration\n\nMatchmakingConfiguration\n\nDataStoresConfiguration",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig",
             "required": true,
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/CreatorConfigsPublicApi.RepositoryType"
+                  "$ref": "#/components/schemas/Repository"
                 }
               ],
-              "description": "RepositoryType represents the type of repository for which an experiment can be defined.",
+              "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
-                "Invalid",
-                "UniverseConfiguration",
-                "MatchmakingConfiguration",
-                "DataStoresConfiguration"
+                "InExperienceConfig",
+                "RecommendationServicesConfig"
               ]
             },
             "x-enum-varnames": [
-              "Invalid",
-              "UniverseConfiguration",
-              "MatchmakingConfiguration",
-              "DataStoresConfiguration"
+              "InExperienceConfig",
+              "RecommendationServicesConfig"
             ]
           },
           {
@@ -65154,29 +64848,25 @@
             }
           },
           {
-            "name": "repositoryType",
+            "name": "repository",
             "in": "path",
-            "description": "\n\nInvalid\n\nUniverseConfiguration\n\nMatchmakingConfiguration\n\nDataStoresConfiguration",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig",
             "required": true,
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/CreatorConfigsPublicApi.RepositoryType"
+                  "$ref": "#/components/schemas/Repository"
                 }
               ],
-              "description": "RepositoryType represents the type of repository for which an experiment can be defined.",
+              "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
-                "Invalid",
-                "UniverseConfiguration",
-                "MatchmakingConfiguration",
-                "DataStoresConfiguration"
+                "InExperienceConfig",
+                "RecommendationServicesConfig"
               ]
             },
             "x-enum-varnames": [
-              "Invalid",
-              "UniverseConfiguration",
-              "MatchmakingConfiguration",
-              "DataStoresConfiguration"
+              "InExperienceConfig",
+              "RecommendationServicesConfig"
             ]
           },
           {
@@ -65326,29 +65016,25 @@
             }
           },
           {
-            "name": "repositoryType",
+            "name": "repository",
             "in": "path",
-            "description": "\n\nInvalid\n\nUniverseConfiguration\n\nMatchmakingConfiguration\n\nDataStoresConfiguration",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig",
             "required": true,
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/CreatorConfigsPublicApi.RepositoryType"
+                  "$ref": "#/components/schemas/Repository"
                 }
               ],
-              "description": "RepositoryType represents the type of repository for which an experiment can be defined.",
+              "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
-                "Invalid",
-                "UniverseConfiguration",
-                "MatchmakingConfiguration",
-                "DataStoresConfiguration"
+                "InExperienceConfig",
+                "RecommendationServicesConfig"
               ]
             },
             "x-enum-varnames": [
-              "Invalid",
-              "UniverseConfiguration",
-              "MatchmakingConfiguration",
-              "DataStoresConfiguration"
+              "InExperienceConfig",
+              "RecommendationServicesConfig"
             ]
           },
           {
@@ -65483,7 +65169,7 @@
         }
       }
     },
-    "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repositoryType}/draft:overwrite": {
+    "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repository}/draft:overwrite": {
       "put": {
         "tags": ["Configs"],
         "summary": "Overwrites the entire draft with the request payload.",
@@ -65500,29 +65186,25 @@
             }
           },
           {
-            "name": "repositoryType",
+            "name": "repository",
             "in": "path",
-            "description": "\n\nInvalid\n\nUniverseConfiguration\n\nMatchmakingConfiguration\n\nDataStoresConfiguration",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig",
             "required": true,
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/CreatorConfigsPublicApi.RepositoryType"
+                  "$ref": "#/components/schemas/Repository"
                 }
               ],
-              "description": "RepositoryType represents the type of repository for which an experiment can be defined.",
+              "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
-                "Invalid",
-                "UniverseConfiguration",
-                "MatchmakingConfiguration",
-                "DataStoresConfiguration"
+                "InExperienceConfig",
+                "RecommendationServicesConfig"
               ]
             },
             "x-enum-varnames": [
-              "Invalid",
-              "UniverseConfiguration",
-              "MatchmakingConfiguration",
-              "DataStoresConfiguration"
+              "InExperienceConfig",
+              "RecommendationServicesConfig"
             ]
           },
           {
@@ -65657,7 +65339,7 @@
         }
       }
     },
-    "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repositoryType}/publish": {
+    "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repository}/publish": {
       "post": {
         "tags": ["Configs"],
         "summary": "Publishes draft changes.",
@@ -65674,29 +65356,25 @@
             }
           },
           {
-            "name": "repositoryType",
+            "name": "repository",
             "in": "path",
-            "description": "\n\nInvalid\n\nUniverseConfiguration\n\nMatchmakingConfiguration\n\nDataStoresConfiguration",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig",
             "required": true,
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/CreatorConfigsPublicApi.RepositoryType"
+                  "$ref": "#/components/schemas/Repository"
                 }
               ],
-              "description": "RepositoryType represents the type of repository for which an experiment can be defined.",
+              "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
-                "Invalid",
-                "UniverseConfiguration",
-                "MatchmakingConfiguration",
-                "DataStoresConfiguration"
+                "InExperienceConfig",
+                "RecommendationServicesConfig"
               ]
             },
             "x-enum-varnames": [
-              "Invalid",
-              "UniverseConfiguration",
-              "MatchmakingConfiguration",
-              "DataStoresConfiguration"
+              "InExperienceConfig",
+              "RecommendationServicesConfig"
             ]
           },
           {
@@ -65831,7 +65509,7 @@
         }
       }
     },
-    "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repositoryType}/revisions": {
+    "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repository}/revisions": {
       "get": {
         "tags": ["Configs"],
         "summary": "Lists revision history.",
@@ -65848,29 +65526,25 @@
             }
           },
           {
-            "name": "repositoryType",
+            "name": "repository",
             "in": "path",
-            "description": "\n\nInvalid\n\nUniverseConfiguration\n\nMatchmakingConfiguration\n\nDataStoresConfiguration",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig",
             "required": true,
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/CreatorConfigsPublicApi.RepositoryType"
+                  "$ref": "#/components/schemas/Repository"
                 }
               ],
-              "description": "RepositoryType represents the type of repository for which an experiment can be defined.",
+              "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
-                "Invalid",
-                "UniverseConfiguration",
-                "MatchmakingConfiguration",
-                "DataStoresConfiguration"
+                "InExperienceConfig",
+                "RecommendationServicesConfig"
               ]
             },
             "x-enum-varnames": [
-              "Invalid",
-              "UniverseConfiguration",
-              "MatchmakingConfiguration",
-              "DataStoresConfiguration"
+              "InExperienceConfig",
+              "RecommendationServicesConfig"
             ]
           },
           {
@@ -66016,7 +65690,7 @@
         }
       }
     },
-    "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repositoryType}/revisions/{revisionId}/restore": {
+    "/creator-configs-public-api/v1/configs/universes/{universeId}/repositories/{repository}/revisions/{revisionId}/restore": {
       "post": {
         "tags": ["Configs"],
         "summary": "Stages a revert to a previous revision.",
@@ -66033,29 +65707,25 @@
             }
           },
           {
-            "name": "repositoryType",
+            "name": "repository",
             "in": "path",
-            "description": "\n\nInvalid\n\nUniverseConfiguration\n\nMatchmakingConfiguration\n\nDataStoresConfiguration",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig",
             "required": true,
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/CreatorConfigsPublicApi.RepositoryType"
+                  "$ref": "#/components/schemas/Repository"
                 }
               ],
-              "description": "RepositoryType represents the type of repository for which an experiment can be defined.",
+              "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
-                "Invalid",
-                "UniverseConfiguration",
-                "MatchmakingConfiguration",
-                "DataStoresConfiguration"
+                "InExperienceConfig",
+                "RecommendationServicesConfig"
               ]
             },
             "x-enum-varnames": [
-              "Invalid",
-              "UniverseConfiguration",
-              "MatchmakingConfiguration",
-              "DataStoresConfiguration"
+              "InExperienceConfig",
+              "RecommendationServicesConfig"
             ]
           },
           {
@@ -66151,6 +65821,163 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/configs#CreatorConfigsPublicApi_RestoreRevision"
+        }
+      }
+    },
+    "/server-management/v1/universes/{universeId}/places/{placeId}/versions/{versionNumber}/game-servers": {
+      "get": {
+        "tags": ["Places"],
+        "summary": "Lists game servers for a specific place version.",
+        "operationId": "GameServers_ListGameServers",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "placeId",
+            "in": "path",
+            "description": "The place ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "versionNumber",
+            "in": "path",
+            "description": "The version number",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxPageSize",
+            "in": "query",
+            "description": "The maximum number of game servers to return. The service might return\r\nfewer than this value. If unspecified, at most 25 game servers are\r\nreturned. The maximum value is 100 and higher values are set to 100.",
+            "schema": {
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\r\nWhen paginating, all other parameters provided to the subsequent call must\r\nmatch the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrderBy",
+            "in": "query",
+            "description": "Sorting is supported only for a single field at a time.\r\nExample: \"orderBy\": \"uptime\"\r\nDefaults to ascending, but descending ordering is also supported by\r\nincluding the \" desc\" suffix. For example: \"orderBy\": \"uptime desc\".",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\r\n- CEL filtering is supported on all fields.\r\n- Supported operators &&, <, <=, >, >=, ==, and `in`",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Roblox-Api-Key",
+            "in": "header",
+            "description": "Api Key (UUID).",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerManagementService.ListGameServersResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerManagementService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerManagementService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerManagementService.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe:read",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/places#GameServers_ListGameServers"
         }
       }
     },
@@ -66560,7 +66387,7 @@
                   "$ref": "#/components/schemas/PrivateServersTab"
                 }
               ],
-              "default": 0
+              "default": "MyPrivateServers"
             }
           },
           {
@@ -66625,7 +66452,7 @@
                   "$ref": "#/components/schemas/PrivateServersTab"
                 }
               ],
-              "default": 0
+              "default": "MyPrivateServers"
             }
           },
           {
@@ -66673,6 +66500,116 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#PrivateServersApi.PrivateServers_GetMyPrivateServers"
+        }
+      }
+    },
+    "/v1/private-servers/enabled-in-universe/{universeId}#PrivateServersApi": {
+      "get": {
+        "tags": ["Private servers", "Universes"],
+        "operationId": "PrivateServers_PrivateServersEnabledInUniverse",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PrivateServersEnabledInUniverseResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#PrivateServers_PrivateServersEnabledInUniverse"
+        }
+      }
+    },
+    "/v1/games/{placeId}/private-servers#PrivateServersApi": {
+      "get": {
+        "tags": ["Private servers", "Universes"],
+        "operationId": "PrivateServers_GetPrivateServerList",
+        "parameters": [
+          {
+            "name": "placeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "exclusiveStartKeyCursor",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/StringExclusiveStartKeyCursor"
+                }
+              ]
+            }
+          },
+          {
+            "name": "excludeFriendServers",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetPrivateServerListResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://games.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#PrivateServers_GetPrivateServerList"
         }
       }
     }
@@ -71863,6 +71800,12 @@
           },
           "shouldAutoLoginFromRecovery": {
             "type": "boolean"
+          },
+          "shouldPrompt2svRemoval": {
+            "type": "boolean"
+          },
+          "shouldPromptPasskeyAddition": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -72799,6 +72742,9 @@
           "userId": {
             "format": "int64",
             "type": "integer"
+          },
+          "isPostRecovery": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -74059,70 +74005,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Api.Avatar.Models.UpdateAvatarDataModel": {
-        "description": "A model containing details about an avatar.",
-        "type": "object",
-        "properties": {
-          "scales": {
-            "$ref": "#/components/schemas/Roblox.Web.Responses.Avatar.ScaleModel"
-          },
-          "playerAvatarType": {
-            "format": "int32",
-            "description": "The avatar type.",
-            "enum": [1, 3],
-            "type": "integer"
-          },
-          "bodyColors": {
-            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.BodyColors3Model"
-          },
-          "assets": {
-            "description": "The assets worn on the character.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AssetWearModel"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Api.Avatar.Models.UpdateAvatarRequestModel": {
-        "description": "A model containing details about an avatar update request.",
-        "type": "object",
-        "properties": {
-          "updateMask": {
-            "description": "Update mask specifying which avatar fields to update (can include multiple).\r\nAcceptable values:\r\n- UpdateAvatarType: updates avatar.type (R6/R15)\r\n- UpdateScales: updates avatar.scale\r\n- UpdateBodyColors: updates avatar.body_color_set\r\n- UpdateAssets: updates avatar.avatar_assets",
-            "type": "array",
-            "items": {
-              "format": "int32",
-              "description": " ['Invalid' = 0, 'UpdateScales' = 1, 'UpdateAvatarType' = 2, 'UpdateBodyColors' = 3, 'UpdateAssets' = 4]",
-              "enum": [0, 1, 2, 3, 4],
-              "type": "integer"
-            }
-          },
-          "data": {
-            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.UpdateAvatarDataModel"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Api.Avatar.Models.UpdateAvatarResponseModel": {
-        "description": "A model for update avatar responses.",
-        "type": "object",
-        "properties": {
-          "invalidAssets": {
-            "description": "The assets that could not be worn\r\nUnlike invalidAssetIds, only contains assets that are wearable types.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AssetModelV2"
-            }
-          },
-          "success": {
-            "description": "Whether or not all the outfit contents were successfully worn.",
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Api.Avatar.Models.WearRequestModel": {
         "description": "A model that contains a list of AssetWear models",
         "type": "object",
@@ -75040,6 +74922,11 @@
               "$ref": "#/components/schemas/Roblox.Catalog.Api.TaxonomyModel"
             }
           },
+          "itemCreatedUtc": {
+            "format": "date-time",
+            "description": "The UTC creation date-time of the asset or bundle.",
+            "type": "string"
+          },
           "id": {
             "format": "int64",
             "description": "The Item Id.",
@@ -75844,6 +75731,35 @@
             "description": "Status message to be sent to the requester of the userTag validation ['Success' = 0, 'Moderated' = 1, 'TooLong' = 2]",
             "enum": ["Success", "Moderated", "TooLong"],
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.ClientSettings.Api.Models.Response.AndroidBinaryLibraryNames": {
+        "description": "Contains the names of the libraries in an Android Binary Module.",
+        "type": "object",
+        "properties": {
+          "engine": {
+            "description": "Name of the engine library.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.ClientSettings.Api.Models.Response.AndroidBinaryResponse": {
+        "description": "Contains information about an Android Binary Module for a given channel.\r\nincluding its module name, the names of its libraries, and whether the channel supports Android binaries.",
+        "type": "object",
+        "properties": {
+          "moduleName": {
+            "description": "The name of the Android Binary Module.",
+            "type": "string"
+          },
+          "libraryNames": {
+            "$ref": "#/components/schemas/Roblox.ClientSettings.Api.Models.Response.AndroidBinaryLibraryNames"
+          },
+          "supportsAndroidBinaries": {
+            "description": "True if the channel supports android binaries. False otherwise.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -78657,6 +78573,16 @@
         },
         "additionalProperties": false
       },
+      "Roblox.GameInternationalization.Api.Models.Response.GetPlayerChoiceUniverseSettingsResponse": {
+        "type": "object",
+        "properties": {
+          "IsPlayerChoiceEnabled": {
+            "description": "Checks whether player choice warning should be displayed to users.",
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.GameInternationalization.Api.Models.Response.GetUserLocalizationSettingsForUniverseResponse": {
         "type": "object",
         "properties": {
@@ -80103,27 +80029,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Games.Api.Models.Response.GetPrivateServerListResponse": {
-        "type": "object",
-        "properties": {
-          "gameJoinRestricted": {
-            "type": "boolean"
-          },
-          "previousPageCursor": {
-            "type": "string"
-          },
-          "nextPageCursor": {
-            "type": "string"
-          },
-          "data": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.Web.Responses.Games.GameServerResponse"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Games.Api.Models.Response.PlaceDetails": {
         "description": "Response model for a place.",
         "type": "object",
@@ -80224,17 +80129,39 @@
           "unplayableDisplayText": {
             "description": "Localized display text explaining why unplayable",
             "type": "string"
+          },
+          "playableUxTreatment": {
+            "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.PlayableUxTreatment"
           }
         },
         "additionalProperties": false
       },
-      "Roblox.Games.Api.Models.Response.PrivateServersEnabledInUniverseResponse": {
-        "description": "Response model for getting whether a universe has private servers enabled.",
+      "Roblox.Games.Api.Models.Response.PlayableUxTreatment": {
         "type": "object",
         "properties": {
-          "privateServersEnabled": {
-            "description": "Whether private servers are enabled in the universe.",
-            "type": "boolean"
+          "treatment": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.PlayableUxTreatmentData"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Games.Api.Models.Response.PlayableUxTreatmentData": {
+        "type": "object",
+        "properties": {
+          "titleText": {
+            "type": "string"
+          },
+          "bodyText": {
+            "type": "string"
+          },
+          "primaryActionText": {
+            "type": "string"
+          },
+          "secondaryActionText": {
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -83217,74 +83144,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.ItemConfiguration.Api.CreateItemTagRequest": {
-        "description": "Request model to add a tag to an item.",
-        "type": "object",
-        "properties": {
-          "itemId": {
-            "description": "Gets or sets the item Id.",
-            "type": "string"
-          },
-          "tagId": {
-            "description": "Gets or sets the tag Id.",
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.ItemConfiguration.Api.ItemTagDetails": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "description": "Gets or sets the item tag id.",
-            "type": "string"
-          },
-          "tag": {
-            "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.TagDetails"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.ItemConfiguration.Api.ItemTagsMetadataResponse": {
-        "description": "Item-tags related metadata response model.",
-        "type": "object",
-        "properties": {
-          "isItemTagsFeatureEnabled": {
-            "description": "Gets or sets a value indicating whether the item tags feature is enabled.",
-            "type": "boolean"
-          },
-          "enabledAssetTypes": {
-            "description": "Gets or sets the asset types where item tagging is enabled.",
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "maximumItemTagsPerItem": {
-            "format": "int32",
-            "description": "Gets or sets the maximum item tags per item limit.",
-            "type": "integer"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.ItemConfiguration.Api.ItemWithTags": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "description": "Gets or sets the item id.",
-            "type": "string"
-          },
-          "itemTags": {
-            "description": "Gets or sets the item tag details related to this item.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.ItemTagDetails"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.ItemConfiguration.Api.PriceConfigurationModel": {
         "description": "Defines the configuration options for an items price.",
         "type": "object",
@@ -83323,42 +83182,6 @@
               "description": " ['Undefined' = 0, 'Catalog' = 1, 'AllUniverses' = 2, 'MyUniverses' = 3]",
               "enum": ["Undefined", "Catalog", "AllUniverses", "MyUniverses"],
               "type": "string"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.ItemConfiguration.Api.TagDetails": {
-        "description": "The tag model for any tag-related gets.",
-        "type": "object",
-        "properties": {
-          "tagId": {
-            "description": "Gets or sets the tag Id.",
-            "type": "string"
-          },
-          "name": {
-            "description": "Gets or sets the name of the tag.",
-            "type": "string"
-          },
-          "localizedDisplayName": {
-            "description": "Gets or sets the localized display name of the tag.",
-            "type": "string"
-          },
-          "status": {
-            "description": "Gets or sets the status for the fetch of this tag. ['Success' = 0, 'MissingItem' = 1]",
-            "enum": ["Success", "MissingItem"],
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.ItemConfiguration.Api.ItemWithTags_": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.ItemWithTags"
             }
           }
         },
@@ -86442,6 +86265,10 @@
             "description": "Whether the EPP UI is enabled.",
             "type": "boolean"
           },
+          "isEppRecoveryCodesEnabled": {
+            "description": "Whether the EPP recovery codes UI is enabled.",
+            "type": "boolean"
+          },
           "maskedUserEmail": {
             "description": "The masked email for the authenticated user. Typically used in Email 2SV challenges after\r\nthe challenge has been verified to match the target user.",
             "type": "string"
@@ -86452,6 +86279,10 @@
           },
           "isDelayedUiEnabled": {
             "description": "Whether the delayed UI is enabled.",
+            "type": "boolean"
+          },
+          "is2svRecoveryEnabled": {
+            "description": "Whether to expose 2SV recovery through the 2SV challenge modal.",
             "type": "boolean"
           }
         },
@@ -88006,6 +87837,19 @@
         },
         "nullable": true
       },
+      "QueryCorrection": {
+        "type": "object",
+        "properties": {
+          "suggestedQuery": {
+            "type": "string",
+            "description": "The suggested spelling correction for the original search query.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Contains query correction information for a search query.",
+        "nullable": true
+      },
       "QueryFacets": {
         "type": "object",
         "properties": {
@@ -88312,6 +88156,15 @@
             "type": "integer",
             "description": "The total number of results for the given search query.",
             "format": "int64"
+          },
+          "queryCorrection": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/QueryCorrection"
+              }
+            ],
+            "description": "Query correction information, if a correction was available for the search query.",
+            "nullable": true
           },
           "filteredKeyword": {
             "type": "string",
@@ -90422,6 +90275,15 @@
             "type": "integer",
             "description": "The version of the place that is being updated",
             "format": "int32"
+          },
+          "placeVersionsToBeClosed": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "description": "The versions of the place that will be closed during the update",
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -90854,21 +90716,6 @@
         "additionalProperties": false,
         "description": "A draft entry containing a value and optional description."
       },
-      "ConfigNamespaceFull": {
-        "type": "object",
-        "properties": {
-          "entries": {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/components/schemas/ConfigValueFull"
-            },
-            "description": "The configuration entries in this namespace.",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "A full representation of a configuration namespace, including all entries and their metadata."
-      },
       "ConfigRepositoryDraft": {
         "type": "object",
         "properties": {
@@ -90877,16 +90724,12 @@
             "description": "The hash of the draft for concurrency control.",
             "nullable": true
           },
-          "namespaces": {
+          "entries": {
             "type": "object",
             "additionalProperties": {
-              "type": "object",
-              "additionalProperties": {
-                "$ref": "#/components/schemas/ConfigDraftEntry"
-              },
-              "nullable": true
+              "$ref": "#/components/schemas/ConfigDraftEntry"
             },
-            "description": "The configuration namespaces in the draft, where each namespace contains entries with values and descriptions.",
+            "description": "The configuration entries in the draft (key to value and optional description).",
             "nullable": true
           }
         },
@@ -90896,12 +90739,12 @@
       "ConfigRepositoryFull": {
         "type": "object",
         "properties": {
-          "namespaces": {
+          "entries": {
             "type": "object",
             "additionalProperties": {
-              "$ref": "#/components/schemas/ConfigNamespaceFull"
+              "$ref": "#/components/schemas/ConfigValueFull"
             },
-            "description": "The configuration namespaces in the repository.",
+            "description": "The configuration entries (key-value with metadata such as description, last modified/accessed times).",
             "nullable": true
           },
           "metadata": {
@@ -90915,7 +90758,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "A full representation of a configuration repository, including all namespaces, entries, and their metadata."
+        "description": "A full representation of a configuration repository, including all entries and their metadata."
       },
       "ConfigRepositoryMetadata": {
         "type": "object",
@@ -90941,14 +90784,12 @@
             "description": "Metadata about the configuration repository.",
             "nullable": true
           },
-          "namespaces": {
+          "entries": {
             "type": "object",
             "additionalProperties": {
-              "type": "object",
-              "additionalProperties": {},
               "nullable": true
             },
-            "description": "The configuration namespaces in the repository, where each namespace contains key-value pairs.",
+            "description": "The configuration entries (key-value pairs) in the repository.",
             "nullable": true
           }
         },
@@ -91064,20 +90905,13 @@
         "additionalProperties": false,
         "description": "Response model for publishing a draft."
       },
-      "CreatorConfigsPublicApi.RepositoryType": {
-        "enum": [
-          "Invalid",
-          "UniverseConfiguration",
-          "MatchmakingConfiguration",
-          "DataStoresConfiguration"
-        ],
+      "Repository": {
+        "enum": ["InExperienceConfig", "RecommendationServicesConfig"],
         "type": "string",
-        "description": "RepositoryType represents the type of repository for which an experiment can be defined.\n\nInvalid\n\nUniverseConfiguration\n\nMatchmakingConfiguration\n\nDataStoresConfiguration",
+        "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.\n\nInExperienceConfig\n\nRecommendationServicesConfig",
         "x-enum-varnames": [
-          "Invalid",
-          "UniverseConfiguration",
-          "MatchmakingConfiguration",
-          "DataStoresConfiguration"
+          "InExperienceConfig",
+          "RecommendationServicesConfig"
         ]
       },
       "RevisionChange": {
@@ -91153,19 +90987,265 @@
             "description": "The previous draft hash for concurrency control. If provided, the update will fail if it doesn't match.",
             "nullable": true
           },
-          "namespaces": {
+          "entries": {
             "type": "object",
             "additionalProperties": {
-              "type": "object",
-              "additionalProperties": {},
               "nullable": true
             },
-            "description": "The namespaces to update. Keys not included will not be changed. Set key to null to delete, or set to published value to discard.",
+            "description": "The entries to update. Keys not included will not be changed. Set key to null to delete, or set to published value to discard.",
             "nullable": true
           }
         },
         "additionalProperties": false,
         "description": "Request model for updating a draft (partial update)."
+      },
+      "ServerManagementService.GameServer": {
+        "type": "object",
+        "properties": {
+          "placeId": {
+            "type": "string",
+            "description": "The place ID this game server belongs to.",
+            "nullable": true
+          },
+          "placeVersion": {
+            "type": "string",
+            "description": "The place version this game server belongs to.",
+            "nullable": true
+          },
+          "jobId": {
+            "type": "string",
+            "description": "The unique ID for this server.",
+            "nullable": true
+          },
+          "engineVersion": {
+            "type": "string",
+            "description": "The RCC Version the server is running",
+            "nullable": true
+          },
+          "createTime": {
+            "type": "string",
+            "description": "The time this server was created.",
+            "format": "date-time"
+          },
+          "uptime": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TimeSpan"
+              }
+            ],
+            "description": "How long this server has been running."
+          },
+          "cpuUsageCores": {
+            "type": "number",
+            "description": "The CPU Usage of the server.",
+            "format": "double"
+          },
+          "memoryUsageBytes": {
+            "type": "integer",
+            "description": "The Memory Usage of the server in bytes.",
+            "format": "int64"
+          },
+          "frameRate": {
+            "type": "number",
+            "description": "The Server Frame Rate.",
+            "format": "float"
+          },
+          "occupancy": {
+            "type": "integer",
+            "description": "The current number of users in the server.",
+            "format": "int32"
+          },
+          "maxOccupancy": {
+            "type": "integer",
+            "description": "The maximum number of users in the server.",
+            "format": "int32"
+          },
+          "type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ServerType"
+              }
+            ],
+            "description": "The Type of Server."
+          },
+          "full": {
+            "type": "boolean",
+            "description": "Whether the server is at max occupancy."
+          },
+          "shutDown": {
+            "type": "boolean",
+            "description": "Whether the server has been shutdown."
+          },
+          "reasonForShutdown": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ShutdownReason"
+              }
+            ],
+            "description": "Why the server has been shutdown.\r\nUnspecified if ServerManagementService.V2.Models.GameServer.ShutDown is false."
+          },
+          "playerIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "description": "The list of PlayerIds in the server",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response model for listing a Game Server"
+      },
+      "ServerManagementService.ListGameServersResponse": {
+        "type": "object",
+        "properties": {
+          "gameServers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServerManagementService.GameServer"
+            },
+            "description": "The GameServers from the specified PlaceVersion.",
+            "nullable": true
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\r\npage. If this field is omitted, there are no subsequent pages.",
+            "nullable": true
+          },
+          "previousPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the previous\r\npage (reverse cursor). If this field is omitted, there are no prior pages.",
+            "nullable": true
+          },
+          "totalCount": {
+            "type": "integer",
+            "description": "Total number of game servers that match the filter (across all pages).\r\nOmitted if the backend does not provide a total count.",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response model for listing game servers."
+      },
+      "ServerManagementService.ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {}
+      },
+      "ServerType": {
+        "enum": [0, 1, 2, 3],
+        "type": "integer",
+        "description": "Defines the different types of servers",
+        "format": "int32"
+      },
+      "ShutdownReason": {
+        "enum": [0, 1, 2, 3, 4, 5],
+        "type": "integer",
+        "description": "Defines the reason a server was shut down",
+        "format": "int32"
+      },
+      "TimeSpan": {
+        "type": "object",
+        "properties": {
+          "ticks": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "days": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "hours": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "milliseconds": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "microseconds": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "nanoseconds": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "minutes": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "seconds": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "totalDays": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "totalHours": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "totalMilliseconds": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "totalMicroseconds": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "totalNanoseconds": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "totalMinutes": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "totalSeconds": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
       },
       "CanInviteUserResponse": {
         "type": "object",
@@ -91203,6 +91283,10 @@
           }
         },
         "additionalProperties": false
+      },
+      "CursorPagingDirection": {
+        "enum": ["Forward", "Backward"],
+        "type": "string"
       },
       "GameResponse": {
         "type": "object",
@@ -91285,6 +91369,30 @@
               }
             ],
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetPrivateServerListResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GameServerResponse"
+            },
+            "nullable": true
+          },
+          "previousPageCursor": {
+            "type": "string",
+            "nullable": true
+          },
+          "nextPageCursor": {
+            "type": "string",
+            "nullable": true
+          },
+          "gameJoinRestricted": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -91375,9 +91483,14 @@
         "additionalProperties": false
       },
       "PrivateServerInviteResponseType": {
-        "enum": [0, 1, 2, 3, 4],
-        "type": "integer",
-        "format": "int32"
+        "enum": [
+          "Invalid",
+          "CanInvite",
+          "UnableToAddAnyUser",
+          "UnableToAddNonFriends",
+          "UnableToAddSpecificUser"
+        ],
+        "type": "string"
       },
       "PrivateServerPermissionsResponse": {
         "type": "object",
@@ -91592,10 +91705,18 @@
         },
         "additionalProperties": false
       },
+      "PrivateServersEnabledInUniverseResponse": {
+        "type": "object",
+        "properties": {
+          "privateServersEnabled": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "PrivateServersTab": {
-        "enum": [0, 1],
-        "type": "integer",
-        "format": "int32"
+        "enum": ["MyPrivateServers", "OtherPrivateServers"],
+        "type": "string"
       },
       "SkinnyUserResponse": {
         "type": "object",
@@ -91611,6 +91732,46 @@
           "displayName": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrivateServersApi.SortOrder": {
+        "enum": ["Asc", "Desc"],
+        "type": "string"
+      },
+      "StringExclusiveStartKeyCursor": {
+        "type": "object",
+        "properties": {
+          "discriminator": {
+            "type": "string",
+            "nullable": true
+          },
+          "count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "key": {
+            "type": "string",
+            "nullable": true
+          },
+          "sortOrder": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PrivateServersApi.SortOrder"
+              }
+            ]
+          },
+          "pagingDirection": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CursorPagingDirection"
+              }
+            ]
+          },
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -92269,10 +92430,6 @@
           "inventory_get_v2_users__userId__inventory",
           "itemconfiguration_post_v1_creations_get_asset_details",
           "itemconfiguration_get_v1_creations_get_assets",
-          "itemconfiguration_get_v1_item_tags",
-          "itemconfiguration_post_v1_item_tags",
-          "itemconfiguration_delete_v1_item_tags__itemTagId_",
-          "itemconfiguration_get_v1_item_tags_metadata",
           "publish_get_v1_asset_quotas",
           "publish_post_v1_audio",
           "publish_post_v1_audio_verify",
@@ -92434,7 +92591,7 @@
     },
     {
       "name": "Creator Store",
-      "description": "Manage your presence on the [Creator Store](/production/creator-store). [Create](#Cloud_CreateCreatorStoreProduct) and [update](#Cloud_UpdateCreatorStoreProduct) product listings for your assets, and [search the toolbox](#get_toolbox_service_v2_assets_search) for assets using various filters.\n",
+      "description": "Manage your presence on the [Creator Store](/production/creator-store). [Create](#Cloud_CreateCreatorStoreProduct) and [update](#Cloud_UpdateCreatorStoreProduct) product listings for your assets, and [search the toolbox](#Toolbox_SearchCreatorStoreAssets) for assets using various filters.\n",
       "x-roblox-tag-info": {
         "path": "creator-store",
         "content": "HTTP APIs for working with the Creator Store on Roblox Cloud.",
@@ -92443,6 +92600,7 @@
           "Cloud_GetCreatorStoreProduct",
           "Cloud_UpdateCreatorStoreProduct",
           "Toolbox_SearchCreatorStoreAssetsDeprecated",
+          "Toolbox_SearchCreatorStoreAssets",
           "Toolbox_GetAssetDetails",
           "Saves_GetSaves",
           "Saves_CreateSave",
@@ -92990,6 +93148,7 @@
           "clientsettings_get_v1_client_version__binaryType_",
           "clientsettings_get_v1_installer_cdns",
           "clientsettings_get_v1_mobile_client_version",
+          "clientsettings_get_v2_android_binaries__version__channels__channelName_",
           "clientsettings_get_v2_client_version__binaryType_",
           "clientsettings_get_v2_client_version__binaryType__channel__channelName_",
           "clientsettings_get_v2_compression_dictionaries",
@@ -93006,7 +93165,6 @@
           "groups_get_v1_groups_configuration_metadata",
           "groups_get_v1_groups_metadata",
           "groups_get_v1_groups_search_metadata",
-          "itemconfiguration_get_v1_item_tags_metadata",
           "locale_post_v1_locales_set_user_supported_locale",
           "locale_get_v1_locales_supported_locales",
           "locale_get_v1_locales_supported_locales_for_creators",
@@ -93070,6 +93228,7 @@
           "develop_get_v1_places__placeId__teamcreate_active_session_members",
           "delete_legacy_develop_v2_teamtest__placeId_",
           "develop_delete_v2_teamtest__placeId_",
+          "GameServers_ListGameServers",
           "Places_CreatePlaceVersionApiKey",
           "develop_patch_v1_places__placeId_",
           "develop_post_v1_places__placeId_",
@@ -93090,9 +93249,9 @@
         "content": "HTTP APIs for working with private servers on Roblox Cloud.",
         "ordering": [
           "develop_get_v1_universes__universeId__configuration_vip_servers",
-          "games_get_v1_games__placeId__private_servers",
+          "PrivateServers_GetPrivateServerList",
           "PrivateServers_CreatePrivateServer",
-          "games_get_v1_private_servers_enabled_in_universe__universeId_",
+          "PrivateServers_PrivateServersEnabledInUniverse",
           "PrivateServersApi.PrivateServers_GetMyPrivateServers",
           "PrivateServers_CanInviteUser",
           "PrivateServers_GetPrivateServer",
@@ -93409,7 +93568,7 @@
           "gameinternationalization_post_v1_user_localization_settings_universe__universeId_",
           "gameinternationalization_get_v2_supported_languages_games__gameId_",
           "games_get_v1_games",
-          "games_get_v1_games__placeId__private_servers",
+          "PrivateServers_GetPrivateServerList",
           "games_get_v1_games__placeId__servers__serverType_",
           "games_get_v1_games__universeId__favorites",
           "games_post_v1_games__universeId__favorites",
@@ -93424,7 +93583,7 @@
           "games_get_v1_games_recommendations_game__universeId_",
           "PrivateServers_CreatePrivateServer",
           "Voting_MultiGetGameVoteStatus",
-          "games_get_v1_private_servers_enabled_in_universe__universeId_",
+          "PrivateServers_PrivateServersEnabledInUniverse",
           "PrivateServersApi.PrivateServers_GetMyPrivateServers",
           "PrivateServers_GetPrivateServer",
           "PrivateServers_UpdatePrivateServer",
