@@ -34,7 +34,7 @@ description: |
 
   local suiteName = StudioTestService:GetTestArgs()
   if suiteName then
-      local tests = getTestsArrayByName(SuiteName)
+      local tests = getTestsArrayByName(suiteName)
       if tests then
           local result = "SUCCESS!"
           for name, test in tests do
