@@ -47,7 +47,7 @@ Currently, only coin count is stored for each player in the **PlayerData**
 module script. You need to also store and update jump power in the same
 way. Because the functions in **PlayerData** are non-specific to the data being
 changed, all that's required to store player jump power is to add a `Jump` key
-and initialize its initial value in `DEFAULT_PLAYER_DATA`.
+and initialize its initial value in `defaultPlayerData()`.
 
 To update the **PlayerData** module script to store jumping power:
 
@@ -71,13 +71,15 @@ To update the **PlayerData** module script to store jumping power:
    	--]]
    }
 
-   local DEFAULT_PLAYER_DATA = {
-   	[PlayerData.COIN_KEY_NAME] = 0,
-   	[PlayerData.JUMP_KEY_NAME] = 0,
-   }
+   local function defaultPlayerData()
+   	return {
+   		[PlayerData.COIN_KEY_NAME] = 0,
+   		[PlayerData.JUMP_KEY_NAME] = 0,
+   	}
+   end
 
    local function getData(player)
-   	local data = playerData[tostring(player.UserId)] or DEFAULT_PLAYER_DATA
+   	local data = playerData[tostring(player.UserId)] or defaultPlayerData()
    	playerData[tostring(player.UserId)] = data
    	return data
    end
