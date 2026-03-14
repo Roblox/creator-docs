@@ -20,8 +20,10 @@ tags: []
 deprecation_message: ''
 properties:
   - name: AudioTremolo.Bypass
-    summary: ''
-    description: ''
+    summary: |
+      Whether audio streams are passed-through unaffected by this effect.
+    description: |
+      If `true`, audio streams are passed-through unaffected by this effect.
     code_samples: []
     type: boolean
     tags: []
@@ -230,7 +232,7 @@ events:
   - name: AudioTremolo.WiringChanged
     summary: |
       Fires when another instance is connected to or disconnected from the
-      `Class.AudioAnalyzer` via a `Class.Wire`.
+      `Class.AudioTremolo` via a `Class.Wire`.
     description: |
       Event that fires after a `Class.Wire` becomes connected or disconnected,
       and that `Class.Wire` is now or was previously connected to a pin on the
@@ -246,12 +248,12 @@ events:
         type: string
         default:
         summary: |
-          The pin on the `Class.AudioAnalyzer` that the `Class.Wire` targets.
+          The pin on the `Class.AudioTremolo` that the `Class.Wire` targets.
       - name: wire
         type: Wire
         default:
         summary: |
-          The `Class.Wire` between the `Class.AudioAnalyzer` and the other
+          The `Class.Wire` between the `Class.AudioTremolo` and the other
           instance.
       - name: instance
         type: Instance

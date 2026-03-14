@@ -96,10 +96,6 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
        <td>Members with this role can both edit experiences, as above, and also publish experiences to Roblox. Optionally available as a [per‑experience permission](./configure-experiences.md).</td>
      </tr>
      <tr>
-       <td>**Monetize all group experiences**</td>
-       <td>Members with this role can manage monetization products such as [passes](../production/monetization/passes.md), [developer products](../production/monetization/developer-products.md), [subscriptions](../production/monetization/subscriptions.md), and more. Optionally available as a [per‑experience permission](./configure-experiences.md).</td>
-     </tr>
-     <tr>
        <td>**View all analytics for group experiences**</td>
        <td>Members with this role can access the [analytics](../production/analytics/index.md) of all experiences owned by the group, even if they don't have edit access. Optionally available as a [per‑experience permission](./configure-experiences.md).</td>
      </tr>
@@ -114,6 +110,14 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
      <tr>
        <td>**Configure bans for all group experiences**</td>
        <td>Members with this role can ban and manage banned users for all experiences owned by the group.</td>
+     </tr>
+     <tr>
+       <td>**Access read-only chat and configure bans for all group experiences**</td>
+       <td>Members with this role can view all in-experience chat messages and ban or manage banned users across all experiences owned by the group.<br/><br/>To view in-experience chat messages, enable **Read-only view** in the in-experience settings.</td>
+     </tr>
+     <tr>
+       <td>**Configure monetization for all group experiences**</td>
+       <td>Members with this role can manage monetization products such as [passes](../production/monetization/passes.md), [developer products](../production/monetization/developer-products.md), [subscriptions](../production/monetization/subscriptions.md), and more. Optionally available as a [per‑experience permission](./configure-experiences.md).</td>
      </tr>
      <tr>
        <td>**List, create, update, and delete secrets for all group experiences**</td>

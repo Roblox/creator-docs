@@ -67,8 +67,13 @@ properties:
     capabilities:
       - Audio
   - name: AudioPlayer.AudioContent
-    summary: ''
-    description: ''
+    summary: |
+      The audio content to be loaded into the `Class.AudioPlayer`.
+    description: |
+      The audio content to be loaded into the `Class.AudioPlayer`. If
+      `Class.AudioPlayer.AutoLoad|AutoLoad` is `true`, the asset loads
+      immediately once this property is assigned. When loading is complete,
+      `Class.AudioPlayer.IsReady|IsReady` becomes `true`.
     code_samples: []
     type: Content
     tags:
@@ -352,7 +357,7 @@ properties:
       Controls how loudly the asset will be played.
     description: |
       Volume level which is multiplied onto the output audio stream, controlling
-      how loudly the asset will be played. Ranges from 0 to 3.
+      how loudly the asset will be played. Ranges from 0 to 10.
     code_samples: []
     type: float
     tags: []
@@ -435,21 +440,30 @@ methods:
     capabilities:
       - Audio
   - name: AudioPlayer:GetWaveformAsync
-    summary: ''
-    description: ''
+    summary: |
+      Returns a sampling of the waveform data for the loaded
+      `Class.AudioPlayer.Asset|Asset`.
+    description: |
+      Returns a sampling of the waveform data for the loaded
+      `Class.AudioPlayer.Asset|Asset`. This can be used to check the volume of
+      an asset over the course of its duration without playing it.
     code_samples: []
     parameters:
       - name: timeRange
         type: NumberRange
         default:
-        summary: ''
+        summary: |
+          The start and end time (in seconds) of the segment to read.
       - name: samples
         type: int
         default:
-        summary: ''
+        summary: |
+          The number of samples to return for the specified range.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          A table of `samples` numbers ranging between -1 and 1 representing the
+          sampled waveform, or an empty table if a waveform could not be read.
     tags:
       - Yields
     deprecation_message: ''
@@ -502,9 +516,9 @@ events:
     description: |
       Fires after the `Class.AudioPlayer` has completed playback and stopped.
       Note this event will **not** fire for audio with
-      `Class.AudioPlayer.Looped|Looped` set to `true` since it continues playing
-      upon reaching its end. This event will also **not** fire when the audio is
-      stopped before playback has completed; for this, use
+      `Class.AudioPlayer.Looping|Looping` set to `true` since it continues
+      playing upon reaching its end. This event will also **not** fire when the
+      audio is stopped before playback has completed; for this, use
       `Class.AudioPlayer:GetPropertyChangedSignal()` on the
       `Class.AudioPlayer.IsPlaying|IsPlaying` property.
 

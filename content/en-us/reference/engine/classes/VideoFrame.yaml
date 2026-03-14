@@ -60,6 +60,7 @@ properties:
       can_load: false
       can_save: false
     capabilities:
+      - Audio
       - UI
   - name: VideoFrame.Looped
     summary: |
@@ -81,6 +82,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Audio
       - UI
   - name: VideoFrame.Playing
     summary: |
@@ -104,6 +106,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Audio
       - UI
   - name: VideoFrame.Resolution
     summary: |
@@ -126,6 +129,7 @@ properties:
       can_load: false
       can_save: false
     capabilities:
+      - Audio
       - UI
   - name: VideoFrame.TimeLength
     summary: |
@@ -148,6 +152,7 @@ properties:
       can_load: false
       can_save: false
     capabilities:
+      - Audio
       - UI
   - name: VideoFrame.TimePosition
     summary: |
@@ -170,6 +175,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Audio
       - UI
   - name: VideoFrame.Video
     summary: |
@@ -193,6 +199,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Audio
       - UI
   - name: VideoFrame.VideoContent
     summary: ''
@@ -210,6 +217,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Audio
       - UI
   - name: VideoFrame.Volume
     summary: |
@@ -230,6 +238,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Audio
       - UI
 methods:
   - name: VideoFrame:Pause
@@ -252,6 +261,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
+      - Audio
       - UI
   - name: VideoFrame:Play
     summary: |
@@ -274,6 +284,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
+      - Audio
       - UI
 events:
   - name: VideoFrame.DidLoop
@@ -293,6 +304,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
+      - Audio
       - UI
   - name: VideoFrame.Ended
     summary: |
@@ -312,6 +324,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
+      - Audio
       - UI
   - name: VideoFrame.Loaded
     summary: |
@@ -329,6 +342,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
+      - Audio
       - UI
   - name: VideoFrame.Paused
     summary: |
@@ -350,6 +364,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
+      - Audio
       - UI
   - name: VideoFrame.Played
     summary: |
@@ -371,5 +386,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
+      - Audio
       - UI
 callbacks: []

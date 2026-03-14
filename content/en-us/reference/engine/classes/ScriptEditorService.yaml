@@ -149,7 +149,14 @@ methods:
       - name: options
         type: Dictionary
         default: nil
-        summary: ''
+        summary: |
+          A dictionary that supports the following options:
+
+          - `Temporary` &mdash; Boolean. Whether to open the script in a preview
+            tab. Default is false.
+          - `HighlightRange` &mdash; A nested dictionary containing a line and
+            character range to highlight in the editor. Example:
+            `HighlightRange = { Start = { Line = 10, Character = 1 }, End = { Line = 15, Character = 20 }}`.
     returns:
       - type: Tuple
         summary: ''

@@ -5,7 +5,7 @@ description: Explains how to automate Right to Erasure requests with webhooks an
 
 The **General Data Protection Regulation (GDPR)** is a European regulation on data protection and privacy. It grants individuals the right to request the deletion of their personal data, known as the [right to erasure](https://gdpr-info.eu/art-17-gdpr/). If you store any **Personally Identifiable Information (PII)** of your users, such as their User IDs, you must comply with GDPR requirements by deleting this information upon receiving a user's request.
 
-Instead of handling requests manually, you can [set up a webhook](../../cloud/webhooks/webhook-notifications.md) and use a bot within a third-party messaging application to automate the process. As [data stores](../../cloud-services/data-stores/index.md) being the most common way for storing PII data, this tutorial provides an example on how to create a bot within Guilded or Discord that uses the [Open Cloud API for data stores](../../cloud/guides/data-stores/index.md) to delete PII data as an automation solution.
+Instead of handling requests manually, you can [set up a webhook](../../cloud/webhooks/webhook-notifications.md) and use a bot within a third-party messaging application to automate the process. As [data stores](../../cloud-services/data-stores/index.md) being the most common way for storing PII data, this tutorial provides an example on how to create a bot within Discord that uses the [Open Cloud API for data stores](../../cloud/guides/data-stores/index.md) to delete PII data as an automation solution.
 
 ## Workflow
 
@@ -17,7 +17,7 @@ Upon completing this tutorial, you should be able to create a locally-running cu
    <Alert severity="warning">
    To use this solution, make sure your data store keys are identifiable by User IDs, such as containing User IDs as substrings, or you need to modify the scripts to match your own data schema.
    </Alert>
-1. The bot responds to the webhook message in Discord or Guilded with the deletion status.
+1. The bot responds to the webhook message in Discord with the deletion status.
 
 <img src="../../assets/misc/Webhooks-Bot-Workflow.png" width="100%" />
 
@@ -27,28 +27,18 @@ Before creating a bot, set up a server with webhook integration on the third-par
 
 ### Set up a server
 
-The following steps show how to set up the server using Guilded or Discord.
+The following steps show how to set up the server using Discord.
 
-<Tabs>
-<TabItem label="Guilded">
-1. Create a new Guilded server. If you are unfamiliar with the process, see [Guilded Support](https://support.guilded.gg/hc/en-us/articles/1500002751582-Create-a-Server).
-1. Under the **Privacy** settings, set the server to private. The server automatically creates a private **#general** channel as your default channel.
-1. Create a webhook integration with the new server and give it a name that you can easily understand, such as `GDPR Hook`. If you are unfamiliar with the process, see [Guilded Support](https://support.guilded.gg/hc/en-us/articles/360038927934-Incoming-Webhooks).
-1. Copy the webhook URL and store it in a secure place. Only allow trusted team members to access it, as leaking the URL can enable bad actors to send fake messages and potentially delete your user data.
-</TabItem>
-<TabItem label="Discord">
 1. Create a new Discord server. If you are unfamiliar with the process, see [Discord Support](https://support.discord.com/hc/en-us/articles/204849977-How-do-I-create-a-server-).
-    <Alert severity="info">
-    It's recommended to set your server as a private server to protect user security. See [Discord Support](https://support.discord.com/hc/en-us/articles/206143407-How-do-I-set-up-a-private-server-) if you are unfamiliar with the process.
-    </Alert>
+
+   <Alert severity="info">
+   It's recommended to set your server as a private server to protect user security. See [Discord Support](https://support.discord.com/hc/en-us/articles/206143407-How-do-I-set-up-a-private-server-) if you are unfamiliar with the process.
+   </Alert>
 
 1. The server automatically creates a **#general** channel as your default channel. Click the **Edit Channel** icon of the **#general** channel.
 1. Under **Permissions**, set the channel to private.
 1. Create a webhook integration with the new server, name it to `GDPR Hook`. If you are unfamiliar with the process, see [Discord Support](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
 1. Copy the webhook URL and store it in a secure place. Only allow trusted team members to access it, as leaking the URL can enable bad actors to send fake messages and potentially delete your user data.
-
-</TabItem>
-</Tabs>
 
 ### Configure a webhook on Roblox
 
@@ -58,39 +48,15 @@ After obtaining the third-party server URL, use it to [configure a webhook](../.
 Currently, only group owners can receive Right to Erasure requests for group-owned experiences. To implement the automation solution for a group-owned experience, make sure that the group owner configures the webhook.
 </Alert>
 
-- Add the Guilded or Discord server URL as the **Webhook URL**.
+- Add the Discord server URL as the **Webhook URL**.
 - Include a custom **Secret**. Though a secret is optional for completing the configuration, you should include one to prevent bad actors from impersonating Roblox and deleting your data. For more information on the usage of a secret, see [Verify webhook security](../../cloud/webhooks/webhook-notifications.md#verifying-webhook-security).
 - Select **Right to Erasure Request** under **Triggers**.
 
 You can test the webhook using the **Test Response** button to see if you receive a notification in your server's **#general** channel from Roblox. If you don't receive the notification, try again or check your server settings to troubleshoot the error.
 
-<img src="../../assets/misc/Webhooks-Sample-Notification.png" width="50%" alt="Example notification on Guilded"/>
-
 ## Configure a bot
 
-After you add the webhook, use it to configure the bot with the following steps:
-
-<Tabs>
-<TabItem label="Guilded">
-
-1. Open the **All servers** list by clicking its icon or use the shortcut:
-
-   - <kbd>Ctrl</kbd><kbd>S</kbd> on Windows.
-   - <kbd>⌘</kbd><kbd>S</kbd> on Mac.
-
-1. Select your server for receiving right to erasure notifications.
-1. Expand the list under **Server home** and select **Manage Bots**.
-1. The server automatically creates a private **#general** channel as your default channel.
-1. Click the **Create a bot** button and add a bot name. Guilded redirects you to the bot configuration page.
-1. Select the **API** section on the bot configuration page.
-1. Under the **Tokens** section, click the **Generate Token** button.
-1. Save and store the generated token in a safe place.
-
-</TabItem>
-
-<TabItem label="Discord">
-
-Check out Discord's [documentation](https://discord.com/developers/docs/topics/oauth2#bot-vs-user-accounts) for latest instructions.
+After you add the webhook, use it to configure the bot with the following steps. For more information, see the [Discord documentation](https://discord.com/developers/docs/topics/oauth2#bot-vs-user-accounts).
 
 1. Navigate to the [Applications page](https://discord.com/developers/applications).
 1. Create a new application and name it to `GDPR Bot`.
@@ -105,9 +71,6 @@ Check out Discord's [documentation](https://discord.com/developers/docs/topics/o
 1. Navigate back to application settings page and navigate to the Bot settings.
 1. Under the **Privileged Gateway Intents** section, enable **Message Content Intent**.
 1. In the Bot settings > **Build-A-Bot** section, save the bot token in a secure place for later steps. If you don't see the token, click the **Reset Token** button to generate a new one.
-
-</TabItem>
-</Tabs>
 
 ## Create an Open Cloud API key
 
@@ -129,30 +92,15 @@ To obtain these identifiers:
 
 ## Add scripts
 
-After you finish setting up the webhook, bot, and API key for data stores, add them to the scripts that implement the bot's automation logic. The following example uses Python 3:
+After you finish setting up the webhook, bot, and API key for data stores, add them to the scripts that implement the bot's automation logic. The following example uses Python 3.
 
 1. Install Python libraries using the following commands:
-
-   <Tabs>
-   <TabItem label="Guilded">
-
-   ```bash title="Install Libraries"
-   pip3 install guilded.py==1.8.0
-   pip3 install requests
-   pip3 install urllib3==1.26.6
-   ```
-
-   </TabItem>
-   <TabItem label="Discord">
 
    ```bash title="Install Libraries"
    pip3 install discord
    pip3 install requests
    pip3 install urllib3==1.26.6
    ```
-
-   </TabItem>
-   </Tabs>
 
 1. Copy and save the following scripts corresponding to different parts of the bot logic in the same directory:
 
@@ -315,7 +263,7 @@ After you finish setting up the webhook, bot, and API key for data stores, add t
         return True
 
     """
-    Parses a received webhook messaged on Discord or Guilded. Extracts user ID, prevents replay attack
+    Parses a received webhook messaged on Discord. Extracts user ID, prevents replay attack
     based on timestamp received, and verifies Roblox signature with configured secret to check for
     validity.
     """
@@ -340,61 +288,6 @@ After you finish setting up the webhook, bot, and API key for data stores, add t
         else:
             return "", []
     ```
-
-    <Tabs>
-    <TabItem label="Guilded">
-
-    ```python title="guilded_bot.py"
-    import guilded
-    import json
-
-    import bot_config
-    import data_stores_api
-    import message_parser
-
-    def run():
-        client = guilded.Client()
-
-        @client.event
-        async def on_ready():
-            print(f"{client.user} is listening to Right to Erasure messages")
-
-        """
-        Handler for webhook messages from Roblox
-        """
-        @client.event
-        async def on_message(message):
-            # Parses and validates message
-            user_id, start_place_ids = message_parser.parse_message(message)
-            if not user_id or not start_place_ids:
-                return
-
-            # Deletes standard data stores user data
-            [successes, failures] = data_stores_api.delete_standard_data_stores(user_id, start_place_ids)
-            if successes:
-                await message.reply(f"Deleted standard data stores data for " +
-                                   f"user ID: {user_id}, data: {dict(successes)}")
-            if failures:
-                await message.reply(f"Failed to delete standard data stores data for " +
-                                   f"user ID: {user_id}, data: {dict(failures)}")
-
-            # Deletes ordered data stores user data
-            [successes, failures] = data_stores_api.delete_ordered_data_stores(user_id, start_place_ids)
-            if successes:
-                await message.reply(f"Deleted ordered data stores data for " +
-                                   f"user ID: {user_id}, data: {dict(successes)}")
-            if failures:
-                await message.reply(f"Failed to delete ordered data stores data for " +
-                                   f"user ID: {user_id}, data: {dict(failures)}")
-
-        client.run(bot_config.BOT_TOKEN)
-
-    if __name__ == "__main__":
-        run()
-    ```
-
-    </TabItem>
-    <TabItem label="Discord">
 
     ```python title="discord_bot.py"
     import discord
@@ -446,9 +339,6 @@ After you finish setting up the webhook, bot, and API key for data stores, add t
         run()
     ```
 
-    </TabItem>
-    </Tabs>
-
 1. On the `bot_config.py` file for main configuration of the bot:
 
    1. Set `BOT_TOKEN` to the token generated by your bot.
@@ -461,22 +351,9 @@ After you finish setting up the webhook, bot, and API key for data stores, add t
 
 1. Execute the following command to run the bot:
 
-    <Tabs>
-    <TabItem label="Guilded">
-
-    ```bash title="Run Guilded Bot"
-    python3 guilded_bot.py
-    ```
-
-    </TabItem>
-    <TabItem label="Discord">
-
-    ```bash title="Run Discord Bot"
-    python3 discord_bot.py
-    ```
-
-    </TabItem>
-    </Tabs>
+   ```bash title="Run Discord Bot"
+   python3 discord_bot.py
+   ```
 
 1. The bot then starts to listen and verify Roblox webhooks for right to erasure Requests and calls the Open Cloud endpoint for deleting the corresponding data store.
 
@@ -488,7 +365,7 @@ To ensure constant and secure execution of the scripts, save and run them locall
 
 You can create and run a test message to verify that your custom program can properly handle right to erasure requests and delete PII data:
 
-1. Send an HTTP `POST` request to your Guilded or Discord webhook server with the following request body:
+1. Send an HTTP `POST` request to your Discord webhook server with the following request body:
 
    ```bash title="Example Request"
    curl -X POST {serverUrl}

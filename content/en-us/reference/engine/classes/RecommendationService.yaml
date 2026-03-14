@@ -108,7 +108,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RecommendationService:GetRecommendationItemAsync
     summary: ''
     description: |
@@ -147,7 +148,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RecommendationService:LogActionEvent
     summary: ''
     description: |
@@ -210,7 +212,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RecommendationService:LogImpressionEvent
     summary: ''
     description: |
@@ -270,7 +273,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RecommendationService:RegisterItemAsync
     summary: ''
     description: |
@@ -365,7 +369,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RecommendationService:RemoveItemAsync
     summary: ''
     description: |
@@ -396,7 +401,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RecommendationService:UpdateItemAsync
     summary: ''
     description: |
@@ -445,6 +451,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
 events: []
 callbacks: []

@@ -145,6 +145,9 @@ methods:
       **Experience Settings** ⟩ **Communication** in Roblox Studio and agree to
       the Roblox Terms of Use.
 
+      In Roblox Studio this API is only available when the experience is running
+      in **Team Test**.
+
       ```lua
       local VoiceChatService = game:GetService("VoiceChatService")
       local Players = game:GetService("Players")

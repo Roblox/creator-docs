@@ -27,7 +27,8 @@ tags:
 deprecation_message: ''
 properties:
   - name: AudioRecorder.IsRecording
-    summary: ''
+    summary: |
+      Whether the `AudioRecorder` is currently recording.
     description: |
       Returns whether the `AudioRecorder` is currently recording.
     code_samples: []
@@ -45,7 +46,8 @@ properties:
     capabilities:
       - Audio
   - name: AudioRecorder.TimeLength
-    summary: ''
+    summary: |
+      The current length of the recording in seconds.
     description: |
       Returns the current length of the recording in seconds.
     code_samples: []
@@ -66,7 +68,8 @@ properties:
       - Audio
 methods:
   - name: AudioRecorder:CanRecordAsync
-    summary: ''
+    summary: |
+      Returns whether the `AudioRecorder` can currently record.
     description: |
       Returns whether the `AudioRecorder` can currently record. For instance,
       this will return `false` if the current recording data has reached the
@@ -76,7 +79,8 @@ methods:
     parameters: []
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if recording is possible, `false` otherwise.
     tags:
       - Yields
     deprecation_message: ''
@@ -85,7 +89,8 @@ methods:
     capabilities:
       - Audio
   - name: AudioRecorder:Clear
-    summary: ''
+    summary: |
+      Clears out the recording from the `AudioRecorder`.
     description: |
       Clears out the recording from the `AudioRecorder`.
     code_samples: []
@@ -166,7 +171,8 @@ methods:
     capabilities:
       - Audio
   - name: AudioRecorder:GetTemporaryContent
-    summary: ''
+    summary: |
+      Returns a `Content` object representing the current audio recording.
     description: |
       Returns recorded content that can be played back with `Class.AudioPlayer`.
       The content retrieved from this method is only valid in the current
@@ -175,7 +181,8 @@ methods:
     parameters: []
     returns:
       - type: Content
-        summary: ''
+        summary: |
+          A temporary `Content` ID that can be used with `Class.AudioPlayer`.
     tags: []
     deprecation_message: ''
     security: None
@@ -183,7 +190,8 @@ methods:
     capabilities:
       - Audio
   - name: AudioRecorder:GetUnrecordableInstancesAsync
-    summary: ''
+    summary: |
+      Returns any instances which cannot be recorded.
     description: |
       Traverses the audio graph, starting from this recorder's inputs, to find
       unrecordable instances. Currently, `Class.AudioDeviceInput` is not
@@ -192,7 +200,8 @@ methods:
     parameters: []
     returns:
       - type: Instances
-        summary: ''
+        summary: |
+          A table of `Class.Instance|Instances` that are not recordable.
     tags:
       - Yields
     deprecation_message: ''
@@ -201,9 +210,11 @@ methods:
     capabilities:
       - Audio
   - name: AudioRecorder:RecordAsync
-    summary: ''
+    summary: |
+      Starts recording audio.
     description: |
-      If `Class.AudioRecorder:CanRecordAsync()|CanRecordAsync()` returns `true`,
+      Starts recording audio. If
+      `Class.AudioRecorder:CanRecordAsync()|CanRecordAsync()` returns `true`,
       recording begins. If recording cannot begin, this method produces an
       error.
     code_samples: []
@@ -219,9 +230,10 @@ methods:
     capabilities:
       - Audio
   - name: AudioRecorder:Stop
-    summary: ''
+    summary: |
+      Stops recording audio.
     description: |
-      Stops recording.
+      Stops recording audio.
     code_samples: []
     parameters: []
     returns:
@@ -237,7 +249,7 @@ events:
   - name: AudioRecorder.WiringChanged
     summary: |
       Fires when another instance is connected to or disconnected from the
-      `Class.AudioAnalyzer` via a `Class.Wire`.
+      `Class.AudioRecorder` via a `Class.Wire`.
     description: |
       Event that fires after a `Class.Wire` becomes connected or disconnected,
       and that `Class.Wire` is now or was previously connected to a pin on the
@@ -253,12 +265,12 @@ events:
         type: string
         default:
         summary: |
-          The pin on the `Class.AudioAnalyzer` that the `Class.Wire` targets.
+          The pin on the `Class.AudioRecorder` that the `Class.Wire` targets.
       - name: wire
         type: Wire
         default:
         summary: |
-          The `Class.Wire` between the `Class.AudioAnalyzer` and the other
+          The `Class.Wire` between the `Class.AudioRecorder` and the other
           instance.
       - name: instance
         type: Instance

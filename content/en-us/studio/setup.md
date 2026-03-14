@@ -7,16 +7,15 @@ import StudioSystemReqs from '../includes/studio/system-reqs.md'
 
 Create immersive 3D experiences on Roblox with **Roblox Studio**, a free application available on Windows and Mac.
 
+<UseStudioButton variant='blueLogoIconButton' />
+
 ## System requirements
 
 <StudioSystemReqs components={props.components} />
 
 ## Installation
 
-1. Click the following **Download Studio** button.
-
-   <UseStudioButton variant='blueLogoIconButton' />
-
+1. <UseStudioButton variant="link">Download Studio</UseStudioButton>.
 1. In the pop-up dialog, click the **Download Studio** button.
 1. Find the Studio installer in your browser's download history and double-click the file.
 

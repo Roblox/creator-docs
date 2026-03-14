@@ -93,7 +93,9 @@ items:
     tags: []
     deprecation_message: ''
   - name: Lowpass6dB
-    summary: ''
+    summary: |
+      Filter that cuts sound above a specified
+      `Class.AudioFilter.Frequency|Frequency`, at a slope of -6dB/octave.
     value: 11
     tags: []
     deprecation_message: ''

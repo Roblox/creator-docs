@@ -84,7 +84,7 @@ properties:
     summary: |
       Controls how many reflections are generated.
     description: |
-      A number controlling how many reflections are generated. Ranges from 0
+      A number controlling how many reflections are generated. Ranges from 0.1
       to 1.
     code_samples: []
     type: float
@@ -105,7 +105,7 @@ properties:
       Controls how smooth and reflective the simulated surfaces are.
     description: |
       A number controlling how smooth and reflective the reverb's simulated
-      surfaces are. Ranges from 0 to 1.
+      surfaces are. Ranges from 0.1 to 1.
     code_samples: []
     type: float
     tags: []

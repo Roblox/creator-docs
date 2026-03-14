@@ -1,3 +1,6 @@
+
+https://modelcontextprotocol.io/docs/getting-started/intro
+https://code.visualstudio.com/docs/copilot/customization/mcp-servers
 http://cgtrader.com/pbr-3d-models?polygons=lt_5k
 http://en.cppreference.com/w/cpp/chrono/c/time_t
 https://academy.zenva.com/product/roblox-game-development-mini-degree/?zva_src=robloxedu
@@ -261,9 +264,6 @@ https://support.discord.com/hc/en-us
 https://support.discord.com/hc/en-us/articles/204849977-How-do-I-create-a-server-
 https://support.discord.com/hc/en-us/articles/206143407-How-do-I-set-up-a-private-server-
 https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
-https://support.guilded.gg/hc/en-us
-https://support.guilded.gg/hc/en-us/articles/1500002751582-Create-a-Server
-https://support.guilded.gg/hc/en-us/articles/360038927934-Incoming-Webhooks
 https://support.stripe.com/express/questions/what-is-a-w-8-form
 https://support.stripe.com/express/questions/what-is-a-w-9-form
 https://teaching.pitt.edu/wp-content/uploads/2020/07/FLEX-Designing-Discussion-Questions-Using-Blooms-Taxonomy-Examples.pdf
@@ -441,6 +441,7 @@ https://www.wizkidlearning.com/
 https://www.wowschool.pl/
 https://www.youthtechinc.com/
 https://www.youtube.com/@RobloxLearn
+https://www.youtube.com/watch?v=OwhkWzSBnf0
 https://www.youtube-nocookie.com/embed/OwhkWzSBnf0
 https://www.youtube-nocookie.com/embed/HVUO3Dl7qT0
 https://www.youtube-nocookie.com/embed/rHkHXl4Qkpg
@@ -620,8 +621,6 @@ https://www.youtube.com/live/h8RD96Ciof0
 https://docs.google.com/forms/d/e/1FAIpQLSfwtTgKdNcwHfpvhGW1OFYz1lMzbdBf0AUbUP6JOS4Sn4WFXQ/viewform
 https://docs.google.com/forms/d/e/1FAIpQLSdjdN0JcmKfxsPCHJgwCO7MCkbN7WPWczy6g_38VwVBzRTm7Q/viewform
 https://docs.google.com/forms/d/e/1FAIpQLSdihHNOQdTc_Ug91CpeFAjVqFDsvSuTb8_z_FNnWfNxFysAKg/viewform
-https://www.guilded.gg/i/kbQ4Po42
-https://www.guilded.gg/i/EwKQPZWE
 https://www.youtube.com/watch?v=6MPWLQmIKLk
 https://impactacademies.ca/
 https://impactacademies.cz/
@@ -754,8 +753,14 @@ https://www.ftc.gov/sites/default/files/attachments/press-releases/ftc-publishes
 https://activity-va.tiktok.com/magic/eco/runtime/release/689e44394a786f02edabc8a7
 https://youtu.be/gkFKF9A-snY
 https://www.youtube-nocookie.com/embed/5HcH-9E7USc?si=IDla-YBxiO_E-O0q
+https://extensions.blender.org/add-ons/print3d-toolbox
+https://extensions.blender.org/add-ons/mesh-repair-tools
+https://www.meshlab.net/
+https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/solidify.html
+https://en.wikipedia.org/wiki/Voronoi_diagram
 https://www.youtube-nocookie.com/watch?v=7DXTQcA9G_A
 https://github.com/Roblox/studio-rust-mcp-server
 https://ai.google.dev/gemini-api/docs/api-key
 https://platform.openai.com/api-keys
 https://platform.claude.com/settings/keys
+https://survey.roblox.com/jfe/form/SV_b1QDMtBNrR0EUGG

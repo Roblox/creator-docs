@@ -100,6 +100,199 @@ Rotational velocity and acceleration thresholds reflect the velocity and acceler
 For a given angular velocity, the rotational velocity of an assembly is proportional to the assembly bounding sphere radius. This means that larger assemblies can rotate at a lower angular velocity without falling asleep.
 </Alert>
 
+## Actuated joints
+
+Sometimes developers want to move parts very slowly using an **actuated joint**, a constraint that applies force or motion to drive connected parts, such as a `Class.HingeConstraint` using a `Enum.ActuatorType.Motor|Motor`. To support these scenarios, assemblies connected to actuated joints use a stricter sleep velocity threshold. This delays when those assemblies fall asleep, allowing slow, controlled motion without the physics system prematurely putting them to sleep.
+
+The following are considered actuated joints:
+
+<table>
+	<thead>
+		<tr>
+			<th>Constraint</th>
+			<th>Configuration</th>
+			<th>Required nonzero properties</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>`Class.AlignOrientation|AlignOrientation`</td>
+			<td>`Class.AlignOrientation.RigidityEnabled|RigidityEnabled` = `false`</td>
+			<td>
+				<ul>
+					<li>`Class.AlignOrientation.MaxAngularVelocity|MaxAngularVelocity`</li>
+					<li>`Class.AlignOrientation.MaxTorque|MaxTorque`</li>
+					<li>`Class.AlignOrientation.Responsiveness|Responsiveness`</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>`Class.AlignPosition|AlignPosition`</td>
+			<td>`Class.AlignPosition.RigidityEnabled|RigidityEnabled` = `false`</td>
+			<td>
+				<ul>
+					<li>`Class.AlignPosition.MaxVelocity|MaxVelocity`</li>
+					<li>`Class.AlignPosition.Responsiveness|Responsiveness`</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>`Class.AngularVelocity|AngularVelocity`</td>
+			<td>—</td>
+			<td>
+				<ul>
+					<li>`Class.AngularVelocity.AngularVelocity|AngularVelocity`</li>
+					<li>`Class.AngularVelocity.MaxTorque|MaxTorque`</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>`Class.AnimationConstraint|AnimationConstraint`</td>
+			<td>`Class.AnimationConstraint.IsKinematic|IsKinematic` = `false`</td>
+			<td>
+				<ul>
+					<li>`Class.AnimationConstraint.MaxForce|MaxForce`</li>
+					<li>`Class.AnimationConstraint.MaxTorque|MaxTorque`</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="2">`Class.CylindricalConstraint|CylindricalConstraint`</td>
+			<td>`Class.CylindricalConstraint.ActuatorType|ActuatorType` = `Enum.ActuatorType.Motor|Motor`</td>
+			<td>
+				<ul>
+					<li>`Class.CylindricalConstraint.Velocity|Velocity`</li>
+					<li>`Class.CylindricalConstraint.MotorMaxAcceleration|MotorMaxAcceleration`</li>
+					<li>`Class.CylindricalConstraint.MotorMaxForce|MotorMaxForce`</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>`Class.CylindricalConstraint.ActuatorType|ActuatorType` = `Enum.ActuatorType.Servo|Servo`</td>
+			<td>
+				<ul>
+					<li>`Class.CylindricalConstraint.Speed|Speed`</li>
+					<li>`Class.CylindricalConstraint.ServoMaxForce|ServoMaxForce`</li>
+					<li>`Class.CylindricalConstraint.Responsiveness|Responsiveness`</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="2">`Class.CylindricalConstraint|CylindricalConstraint`</td>
+			<td>`Class.CylindricalConstraint.AngularActuatorType|AngularActuatorType` = `Enum.ActuatorType.Motor|Motor`</td>
+			<td>
+				<ul>
+					<li>`Class.CylindricalConstraint.AngularVelocity|AngularVelocity`</li>
+					<li>`Class.CylindricalConstraint.MotorMaxAngularAcceleration|MotorMaxAngularAcceleration`</li>
+					<li>`Class.CylindricalConstraint.MotorMaxTorque|MotorMaxTorque`</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>`Class.CylindricalConstraint.AngularActuatorType|AngularActuatorType` = `Enum.ActuatorType.Servo|Servo`</td>
+			<td>
+				<ul>
+					<li>`Class.CylindricalConstraint.AngularSpeed|AngularSpeed`</li>
+					<li>`Class.CylindricalConstraint.ServoMaxTorque|ServoMaxTorque`</li>
+					<li>`Class.CylindricalConstraint.Responsiveness|Responsiveness`</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="2">`Class.HingeConstraint|HingeConstraint`</td>
+			<td>`Class.HingeConstraint.ActuatorType|ActuatorType` = `Enum.ActuatorType.Motor|Motor`</td>
+			<td>
+				<ul>
+					<li>`Class.HingeConstraint.AngularVelocity|AngularVelocity`</li>
+					<li>`Class.HingeConstraint.MotorMaxAcceleration|MotorMaxAcceleration`</li>
+					<li>`Class.HingeConstraint.MotorMaxTorque|MotorMaxTorque`</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>`Class.HingeConstraint.ActuatorType|ActuatorType` = `Enum.ActuatorType.Servo|Servo`</td>
+			<td>
+				<ul>
+					<li>`Class.HingeConstraint.AngularSpeed|AngularSpeed`</li>
+					<li>`Class.HingeConstraint.ServoMaxTorque|ServoMaxTorque`</li>
+					<li>`Class.HingeConstraint.Responsiveness|Responsiveness`</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="3">`Class.LinearVelocity|LinearVelocity`</td>
+			<td>`Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` = `Enum.VelocityConstraintMode.Line|Line`</td>
+			<td>
+				<ul>
+					<li>`Class.LinearVelocity.LineVelocity|LineVelocity`</li>
+					<li>If `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled`, also `Class.LinearVelocity.MaxForce|MaxForce`</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>`Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` = `Enum.VelocityConstraintMode.Plane|Plane`</td>
+			<td>
+				<ul>
+					<li>`Class.LinearVelocity.PlaneVelocity|PlaneVelocity`</li>
+					<li>
+						<span>If `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled`:</span>
+						<ul>
+							<li>`Enum.ForceLimitMode.Magnitude|Magnitude`: `Class.LinearVelocity.MaxForce|MaxForce`</li>
+							<li>`Enum.ForceLimitMode.PerAxis|PerAxis`: `Class.LinearVelocity.MaxPlanarAxesForce|MaxPlanarAxesForce`</li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>`Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` = `Enum.VelocityConstraintMode.Vector|Vector`</td>
+			<td>
+				<ul>
+					<li>`Class.LinearVelocity.VectorVelocity|VectorVelocity`</li>
+					<li>
+						<span>If `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled`:</span>
+						<ul>
+							<li>`Enum.ForceLimitMode.Magnitude|Magnitude`: `Class.LinearVelocity.MaxForce|MaxForce`</li>
+							<li>`Enum.ForceLimitMode.PerAxis|PerAxis`: `Class.LinearVelocity.MaxAxesForce|MaxAxesForce`</li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="2">`Class.PrismaticConstraint|PrismaticConstraint`</td>
+			<td>`Class.PrismaticConstraint.ActuatorType|ActuatorType` = `Enum.ActuatorType.Motor|Motor`</td>
+			<td>
+				<ul>
+					<li>`Class.PrismaticConstraint.Velocity|Velocity`</li>
+					<li>`Class.PrismaticConstraint.MotorMaxAcceleration|MotorMaxAcceleration`</li>
+					<li>`Class.PrismaticConstraint.MotorMaxForce|MotorMaxForce`</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>`Class.PrismaticConstraint.ActuatorType|ActuatorType` = `Enum.ActuatorType.Servo|Servo`</td>
+			<td>
+				<ul>
+					<li>`Class.PrismaticConstraint.Speed|Speed`</li>
+					<li>`Class.PrismaticConstraint.ServoMaxForce|ServoMaxForce`</li>
+					<li>`Class.PrismaticConstraint.Responsiveness|Responsiveness`</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>`Class.RopeConstraint|RopeConstraint`</td>
+			<td>`Class.RopeConstraint.WinchEnabled|WinchEnabled` = `true`</td>
+			<td>
+				<ul>
+					<li>`Class.RopeConstraint.WinchForce|WinchForce`</li>
+					<li>`Class.RopeConstraint.WinchSpeed|WinchSpeed`</li>
+				</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
 ## Additional wake situations
 
 In addition to situations outlined in [sleep‑checking](#sleep-checking) and [sleeping](#sleeping), an assembly enters the [awake](#awake) state when:

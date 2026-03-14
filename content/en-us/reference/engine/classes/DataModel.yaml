@@ -446,7 +446,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: Instance
+    type: RunService
     tags:
       - ReadOnly
       - NotReplicated

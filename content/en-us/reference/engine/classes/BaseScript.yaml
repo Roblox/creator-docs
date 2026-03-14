@@ -127,7 +127,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LoadUnownedAsset
   - name: BaseScript.RunContext
     summary: |
       Determines the context under which the script will run.

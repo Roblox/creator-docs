@@ -99,8 +99,16 @@ properties:
     capabilities:
       - Audio
   - name: AudioEcho.RampTime
-    summary: ''
-    description: ''
+    summary: |
+      The time taken to interpolate between
+      `Class.AudioEcho.DelayTime|DelayTime` values.
+    description: |
+      The time, in seconds, the `Class.AudioEcho` takes to interpolate between
+      different `Class.AudioEcho.DelayTime|DelayTime` values, when changed. This
+      can be used to smooth out changes in the
+      `Class.AudioEcho.DelayTime|DelayTime`, or create a pitch bend effect when
+      the `Class.AudioEcho.DelayTime|DelayTime` is modified at a constant rate.
+      Ranges from 0 to 60000.
     code_samples: []
     type: float
     tags: []

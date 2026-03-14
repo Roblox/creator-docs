@@ -20,7 +20,7 @@ items:
     value: 1
     tags: []
     deprecation_message: ''
-  - name: BlendNode
+  - name: OverNode
     summary: ''
     value: 2
     tags: []

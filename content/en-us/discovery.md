@@ -24,7 +24,7 @@ We do not count the engagement or monetization of users first acquired from ads,
 
 ### Key signals
 
-Roblox ranks the selected experiences based on the following 6 key signals of users acquired from Recommended for You:
+Roblox ranks the selected experiences based on the following key signals of users acquired from Recommended for You:
 
 <table>
 <thead>
@@ -36,7 +36,11 @@ Roblox ranks the selected experiences based on the following 6 key signals of us
 <tbody>
   <tr>
     <td>**Qualified play through rate (qPTR)**</td>
-    <td>The number of engaging plays divided by the number of impressions from Recommended for You.</td>
+    <td>The percentage of impressions converting to qualified plays. A qualified play refers to a user's intentional engagement with your experience and filters out accidental clicks or quick bounces.</td>
+  </tr>
+  <tr>
+    <td>**Deep play through rate**</td>
+    <td>The percentage of impressions converting to deeply-engaged plays. Deep engagement identifies when users have demonstrated sustained interest in your experience through time spent and other forms of active participation.</td>
   </tr>
   <tr>
     <td>**7 day playtime per user**</td>
@@ -63,7 +67,7 @@ Roblox ranks the selected experiences based on the following 6 key signals of us
 
 When all of these signals improve together in an experience, the recommendation algorithm picks it up. Improving your [retention](./production/analytics/retention.md), [engagement](./production/analytics/engagement.md), and [monetization](./production/analytics/monetization.md) directly enhances our recommendation signals, resulting in better Home visibility.
 
-Roblox's recommendation system uses **explore and expand** phases to understand the 6 key signals. For example, you might see a spike in new users from recommendations (explore) after a content update. If that new user cohort has good engagement and monetization, Roblox is more likely to continue to recommend your experience to those user cohorts (expand).
+Roblox's recommendation system uses **explore and expand** phases to understand the key signals. For example, you might see a spike in new users from recommendations (explore) after a content update. If that new user cohort has good engagement and monetization, Roblox is more likely to continue to recommend your experience to those user cohorts (expand).
 
 ## Understand your metrics in Creator Analytics
 
@@ -179,7 +183,7 @@ Home is a user's personalized view of Roblox. Outside of Recommended for You, Ho
 The Experience Details Page aims to offer users comprehensive insights about the experience, enhancing their understanding and aiding in decision-making. This, in turn, drives high-intent users to your experiences. You can leverage the Experience Details Page to improve user onboarding and attract returning users by:
 
 - **Maintaining up-to-date events**: Events are crucial for community engagement. Use [Experience Events](#experience-events) to inform users about upcoming events and drive traffic to your experience.
-- **Maintaining Roblox Groups and Guilded Channels**: Roblox Groups and Guilded offers the best way for creators to connect with and inform their communities. You can now view [Guilded announcements](https://devforum.roblox.com/t/introducing-announcements-for-roblox-groups/2907426) on Roblox groups, which strengthens community bonds.
+- **Maintaining Roblox Groups**: Roblox Groups offer the best way for creators to connect with and inform their communities.
 - **Increasing Monetization**: Boost revenue by adding [passes](./production/monetization/passes.md) and [subscriptions](./production/monetization/subscriptions.md) for your experience.
 
 The Experience Details Page also provides additional recommendation opportunities by highlighting similar experiences, helping users discover more relevant content.

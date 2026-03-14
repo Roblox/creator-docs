@@ -81,7 +81,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LoadUnownedAsset
   - name: ModuleScript.Source
     summary: |
       The code to be executed.

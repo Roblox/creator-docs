@@ -22,6 +22,7 @@ descendants:
   - UILayout
   - UIPadding
   - UIScale
+  - UIShadow
   - UIStroke
 tags:
   - NotCreatable

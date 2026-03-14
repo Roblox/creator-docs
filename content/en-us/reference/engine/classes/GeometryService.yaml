@@ -31,6 +31,9 @@ methods:
       with their respective parents. Iterating over this table lets you decide
       whether to reparent recommended constraints and attachments to their
       respective parents.
+
+      For more information and detailed examples, see
+      https://create.roblox.com/docs/parts/solid-modeling#in-experience-solid-modeling.
     code_samples:
       - GeometryService-CalculateConstraintsToPreserve
     parameters:
@@ -170,25 +173,67 @@ methods:
       - CSG
   - name: GeometryService:FragmentAsync
     summary: |
-      This API has not been released.
-    description: ''
-    code_samples: []
+      Breaks a `Class.BasePart` into multiple `Class.MeshPart` instances,
+      according to the pattern of points passed in, by using voronoi
+      decomposition.
+    description: |
+      Breaks a `Class.BasePart` into multiple `Class.MeshPart` instances,
+      according to the pattern of points passed in, by using voronoi
+      decomposition. `Class.Terrain` is not supported. Similar to
+      `Class.Instance:Clone()|Clone()`, the returned parts have no set
+      `Class.Instance.Parent|Parent`.
+
+      For more information and detailed examples, see
+      https://create.roblox.com/docs/parts/solid-modeling#in-experience-solid-modeling.
+    code_samples:
+      - GeometryService-FragmentAsync
     parameters:
       - name: part
         type: BasePart
         default:
-        summary: ''
+        summary: |
+          A `Class.Part`, `Class.PartOperation`, or `Class.MeshPart` to operate
+          on.
       - name: sites
         type: Array
         default:
-        summary: ''
+        summary: |
+          Array of `Vector3` defining the site positions. Each site will become
+          a separate part. You can also provide a jagged 2D array of `Vector3`
+          by including inner arrays of `Vector3` as elements of the outer array.
+          Each inner array will have all of its voronoi cells merged into a
+          single part. `Class.GeometryService:GenerateFragmentSites` can be used
+          to easily create this input.
       - name: options
         type: Dictionary
         default: nil
-        summary: ''
+        summary: |
+          Options table containing all the controls for the method:
+
+          - `CollisionFidelity` — The value of
+            `Class.TriangleMeshPart.CollisionFidelity|CollisionFidelity` in the
+            resulting parts, with one caveat: If a 2D array of sites is
+            provided, this collision fidelity will only be applied to parts
+            which came from more than one site. The others will be given `Hull`
+            precision.
+          - `RenderFidelity` — The value of
+            `Class.MeshPart.RenderFidelity|RenderFidelity` in the resulting
+            parts.
+          - `FluidFidelity` — The value of
+            `Class.TriangleMeshPart.FluidFidelity|FluidFidelity` in the
+            resulting parts.
+          - `SplitApart` — Boolean controlling whether a part should be split
+            into multiple parts if it contains multiple connected components.
+            Default is `true` (split).
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          Array of `Class.MeshPart` along with mapping info. Each array element
+          is a Dictionary with two elements:
+          `{ “Instance”: instance, “Index”: index }`. `Index` is the index in
+          the outer array of sites; in other words, it tells you which group of
+          sites this instance came from. Note that it is possible for multiple
+          instances to have the same index, if SplitApart is `true`.
     tags:
       - Yields
     deprecation_message: ''
@@ -198,21 +243,61 @@ methods:
       - CSG
   - name: GeometryService:GenerateFragmentSites
     summary: |
-      This API has not been released.
-    description: ''
-    code_samples: []
+      Provides an array of positions which can easily be passed into
+      `FragmentAsync` to perform simple types of destruction.
+    description: |
+      Provides an array of positions which can easily be passed into
+      `Class.GeometryService:FragmentAsync()|FragmentAsync()` to perform common
+      types of destruction: Fragmenting an entire `Class.BasePart` into pieces,
+      or a localized area of a `Class.BasePart` into pieces.
+
+      The positions outputted are partially random, so the output should not be
+      relied on to look exactly the same as the first time it is run with the
+      same parameters.
+
+      For more information and detailed examples, see
+      https://create.roblox.com/docs/parts/solid-modeling#in-experience-solid-modeling.
+      Luau code to mimic this API has also been provided on that page, which can
+      be freely modified if a slightly different effect is desired.
+    code_samples:
+      - GeometryService-GenerateFragmentSites
     parameters:
       - name: part
         type: BasePart
         default:
-        summary: ''
+        summary: |
+          The `Class.Part`, `Class.PartOperation`, or `Class.MeshPart` which you
+          are planning to pass into
+          `Class.GeometryService:FragmentAsync()|FragmentAsync()`. This is
+          necessary to make the fragment site generation and the subsequent
+          `Class.GeometryService:FragmentAsync()|FragmentAsync()` call
+          efficient.
       - name: options
         type: Dictionary
         default: nil
-        summary: ''
+        summary: |
+          Options table containing all the controls for the method:
+
+          - `SiteSpacing` — The approximate distance between sites, which
+            directly corresponds to the diameter of the resulting fragments. If
+            not specified, a reasonable value will be chosen.
+          - `Origin` — If provided, this will be the center of the area to be
+            fragmented. If not provided, the entire object will be fragmented.
+          - `Radius` — If provided, this will be the center of the area to be
+            fragmented. Either `Origin` and `Radius` should both be provided, or
+            neither.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of `Vector3` which is typically passed into
+          `Class.GeometryService:FragmentAsync()|FragmentAsync()`. The output
+          depends on the options provided. If `Origin` and `Radius` are
+          provided, then the output array will contain several `Vector3`
+          elements which will all be located within the radius, but the last
+          element of the array will be an inner array containing many `Vector3`
+          sites which are outside the radius. If `Origin` and `Radius` are not
+          provided, the output will simply be an array of `Vector3` positions
+          within the extents of the input `part`.
     tags: []
     deprecation_message: ''
     security: None
@@ -221,94 +306,26 @@ methods:
       - CSG
   - name: GeometryService:IntersectAsync
     summary: |
-      Creates one or more `Class.PartOperation|PartOperations` from the
-      intersecting geometry of one part and other parts.
+      Creates one or more `Class.PartOperation|PartOperations` or
+      `Class.MeshPart|MeshParts` from the intersecting geometry of multiple
+      parts.
     description: |
-      Creates one or more `Class.PartOperation|PartOperations` from the
-      intersecting geometry of the main part and other parts in the given array.
-      Only primitive `Class.Part|Parts` and `Class.PartOperation|PartOperations`
-      are supported, not `Class.Terrain` or `Class.MeshPart|MeshParts`. Similar
-      to `Class.Instance:Clone()|Clone()`, the returned parts have no set
-      `Class.Instance.Parent|Parent`.
+      Creates one or more `Class.PartOperation|PartOperations` or
+      `Class.MeshPart|MeshParts` from the intersecting geometry of multiple
+      parts. Primitive `Class.Part|Parts`, `Class.PartOperation|PartOperations`,
+      and `Class.MeshPart|MeshParts` are supported as inputs, but not
+      `Class.Terrain`.
 
-      The following properties from the main part (`part`) are applied to the
-      resulting `Class.PartOperation|PartOperations`:
+      Similarly to `Class.Instance:Clone()|Clone()`, the returned parts have no
+      set `Class.Instance.Parent|Parent`. In most cases, you should parent the
+      results to the same place as the main part, then
+      `Class.Instance.Destroy|Destroy()` the original parts.
 
-      - `Class.BasePart.Color|Color`, `Class.BasePart.Material|Material`,
-        `Class.BasePart.MaterialVariant|MaterialVariant`,
-        `Class.BasePart.Reflectance|Reflectance`,
-        `Class.BasePart.Transparency|Transparency`
-      - `Class.BasePart.CanCollide|CanCollide`
-      - `Class.BasePart.Anchored|Anchored`, `Class.BasePart.Density|Density`,
-        `Class.BasePart.Elasticity|Elasticity`,
-        `Class.BasePart.ElasticityWeight|ElasticityWeight`,
-        `Class.BasePart.Friction|Friction`,
-        `Class.BasePart.FrictionWeight|FrictionWeight`
+      This function replaces `Class.BasePart:IntersectAsync()`. Go to that page
+      for a description of the differences.
 
-      In the following image comparison,
-      `Class.GeometryService:IntersectAsync()|IntersectAsync()` is called using
-      the purple block and an array containing the blue block. The resulting
-      `Class.PartOperation` resolves into a shape of the intersecting geometry
-      of both parts.
-
-      <figure>
-      <img src="../../../assets/modeling/solid-modeling/Separate-Parts-To-Intersect.jpg"
-      width="720" alt="Two block parts overlapping" />
-      <figcaption>Separate parts</figcaption>
-      </figure>
-      <figure>
-      <img src="../../../assets/modeling/solid-modeling/Intersect-Result.jpg"
-      width="720" alt="Parts intersected into a new solid model" />
-      <figcaption>Resulting <code>Class.PartOperation</code></figcaption>
-      </figure>
-
-      #### Notes
-
-      - Compared to `Class.BasePart:IntersectAsync()`, this method differs as
-        follows:
-
-        - The input parts do not need to be parented to the scene, allowing for
-          background operations.
-        - When the `SplitApart` option is set to `true` (default), each distinct
-          body will be returned in its own `Class.PartOperation`.
-        - Each of the returned parts are in the coordinate space of the main
-          part. This means that the `(0, 0, 0)` of any returned part is not
-          necessarily at the center of its body.
-        - It's possible to call this method on the client, but with some
-          limitations. First, it currently must be done with objects **created**
-          on the client. Secondly, there is no replication available from client
-          to the server.
-
-      - The original parts remain intact following a successful operation. In
-        most cases, you should parent the returned
-        `Class.PartOperation|PartOperations` to the same place as the main part,
-        then `Class.Instance.Destroy|Destroy()` all of the original parts.
-
-      - By default, the face colors of the resulting
-        `Class.PartOperation|PartOperations` are borrowed from the
-        `Class.BasePart.Color|Color` property of the original parts, although
-        you can enable their `Class.PartOperation.UsePartColor|UsePartColor`
-        property to change them to a specific color.
-
-      - If an intersect operation would result in any
-        `Class.PartOperation|PartOperations` with more than 20,000 triangles,
-        they will be simplified to 20,000. This will result in an error with
-        code `-14`.
-
-      - If the main part is moving during the calculation of the operation, you
-        can set the resulting parts to the updated `Datatype.CFrame` of the main
-        part, since the returned parts are in the same coordinate space as the
-        main part.
-
-      - If using this method with a `Class.PartOperation` as the main part, you
-        can substitute the geometry of another `Class.PartOperation` via
-        `Class.PartOperation:SubstituteGeometry()|SubstituteGeometry()`, making
-        it easier to utilize the geometry of the operation but maintain
-        properties, attributes, tags, and children of the main part such as
-        `Class.Attachment|Attachments`, `Class.Constraint|Constraints`,
-        `Class.ParticleEmitter|ParticleEmitters`, light objects, and decals.
-        This approach also circumvents the potential "flicker" of completely
-        replacing the original `Class.PartOperation` with another.
+      For more information and detailed examples, see
+      https://create.roblox.com/docs/parts/solid-modeling#in-experience-solid-modeling.
     code_samples:
       - GeometryService-IntersectAsync
     parameters:
@@ -316,12 +333,13 @@ methods:
         type: Instance
         default:
         summary: |
-          Main `Class.Part` or `Class.PartOperation` to operate on.
+          Main `Class.Part`, `Class.PartOperation`, or `Class.MeshPart` to
+          operate on.
       - name: parts
         type: Array
         default:
         summary: |
-          Array of parts to intersect with the main part.
+          Array of other parts to intersect with the main part.
       - name: options
         type: Dictionary
         default: nil
@@ -329,21 +347,24 @@ methods:
           Options table containing all the controls for the method:
 
           - `CollisionFidelity` — The value of
-            `Class.PartOperation.CollisionFidelity|CollisionFidelity` in the
+            `Class.TriangleMeshPart.CollisionFidelity|CollisionFidelity` in the
             resulting parts.
           - `RenderFidelity` — The value of
-            `Class.PartOperation.RenderFidelity|RenderFidelity` in the resulting
+            `Class.PartOperation.RenderFidelity|RenderFidelity` or
+            `Class.MeshPart.RenderFidelity|RenderFidelity` in the resulting
             parts.
           - `FluidFidelity` — The value of
-            `Class.PartOperation.FluidFidelity|FluidFidelity` in the resulting
-            parts.
+            `Class.TriangleMeshPart.FluidFidelity|FluidFidelity` in the
+            resulting parts.
           - `SplitApart` — Boolean controlling whether the objects should all be
             kept together or properly split apart. Default is `true` (split).
     returns:
       - type: Array
         summary: |
-          One or more `Class.PartOperation|PartOperations` from the intersecting
-          geometry of the main part (`part`) and the other parts.
+          One or more `Class.PartOperation|PartOperations` or
+          `Class.MeshPart|MeshParts`. If the input contained any
+          `Class.MeshPart|MeshParts`, then the results will always be
+          `Class.MeshPart|MeshParts`.
     tags:
       - Yields
     deprecation_message: ''
@@ -353,94 +374,26 @@ methods:
       - CSG
   - name: GeometryService:SubtractAsync
     summary: |
-      Creates one or more `Class.PartOperation|PartOperations` from one part
-      minus the geometry occupied by other parts.
+      Creates one or more `Class.PartOperation|PartOperations` or
+      `Class.MeshPart|MeshParts` from one part minus the space occupied by other
+      parts.
     description: |
-      Creates one or more `Class.PartOperation|PartOperations` from the main
-      part minus the geometry occupied by other parts in the given array. Only
-      primitive `Class.Part|Parts` and `Class.PartOperation|PartOperations` are
-      supported, not `Class.Terrain` or `Class.MeshPart|MeshParts`. Similar to
-      `Class.Instance:Clone()|Clone()`, the returned parts have no set
-      `Class.Instance.Parent|Parent`.
+      Creates one or more `Class.PartOperation|PartOperations` or
+      `Class.MeshPart|MeshParts` consisting of the space occupied by one part
+      minus the space occupied by the other parts. Primitive `Class.Part|Parts`,
+      `Class.PartOperation|PartOperations`, and `Class.MeshPart|MeshParts` are
+      supported as inputs, but not `Class.Terrain`.
 
-      The following properties from the main part (`part`) are applied to the
-      resulting `Class.PartOperation|PartOperations`:
+      Similarly to `Class.Instance:Clone()|Clone()`, the returned parts have no
+      set `Class.Instance.Parent|Parent`. In most cases, you should parent the
+      results to the same place as the main part, then
+      `Class.Instance.Destroy|Destroy()` the original parts.
 
-      - `Class.BasePart.Color|Color`, `Class.BasePart.Material|Material`,
-        `Class.BasePart.MaterialVariant|MaterialVariant`,
-        `Class.BasePart.Reflectance|Reflectance`,
-        `Class.BasePart.Transparency|Transparency`
-      - `Class.BasePart.CanCollide|CanCollide`
-      - `Class.BasePart.Anchored|Anchored`, `Class.BasePart.Density|Density`,
-        `Class.BasePart.Elasticity|Elasticity`,
-        `Class.BasePart.ElasticityWeight|ElasticityWeight`,
-        `Class.BasePart.Friction|Friction`,
-        `Class.BasePart.FrictionWeight|FrictionWeight`
+      This function replaces `Class.BasePart:SubtractAsync()`. Go to that page
+      for a description of the differences.
 
-      In the following image comparison,
-      `Class.BasePart:SubtractAsync()|SubtractAsync()` is called using the blue
-      cylinder and an array containing the purple block. The resulting
-      `Class.PartOperation` resolves into a shape that omits the block's
-      geometry from that of the cylinder.
-
-      <figure>
-      <img src="../../../assets/modeling/solid-modeling/Separate-Parts-To-Subtract.jpg"
-      width="720" alt="Longer block overlapping a cylinder" />
-      <figcaption>Separate parts</figcaption>
-      </figure>
-      <figure>
-      <img src="../../../assets/modeling/solid-modeling/Negate-Result.jpg" width="720"
-      alt="Block part subtracted from cylinder" />
-      <figcaption>Resulting <code>Class.PartOperation</code></figcaption>
-      </figure>
-
-      #### Notes
-
-      - Compared to `Class.BasePart:SubtractAsync()`, this method differs as
-        follows:
-
-        - The input parts do not need to be parented to the scene, allowing for
-          background operations.
-        - When the `SplitApart` option is set to `true` (default), each distinct
-          body will be returned in its own `Class.PartOperation`.
-        - Each of the returned parts are in the coordinate space of the main
-          part. This means that the `(0, 0, 0)` of any returned part is not
-          necessarily at the center of its body.
-        - It's possible to call this method on the client, but with some
-          limitations. First, it currently must be done with objects **created**
-          on the client. Secondly, there is no replication available from client
-          to the server.
-
-      - The original parts remain intact following a successful operation. In
-        most cases, you should parent the returned
-        `Class.PartOperation|PartOperations` to the same place as the main part,
-        then `Class.Instance.Destroy|Destroy()` all of the original parts.
-
-      - By default, the face colors of the resulting
-        `Class.PartOperation|PartOperations` are borrowed from the
-        `Class.BasePart.Color|Color` property of the original parts, although
-        you can enable their `Class.PartOperation.UsePartColor|UsePartColor`
-        property to change them to a specific color.
-
-      - If a subtract operation would result in any
-        `Class.PartOperation|PartOperations` with more than 20,000 triangles,
-        they will be simplified to 20,000. This will result in an error with
-        code `-14`.
-
-      - If the main part is moving during the calculation of the operation, you
-        can set the resulting parts to the updated `Datatype.CFrame` of the main
-        part, since the returned parts are in the same coordinate space as the
-        main part.
-
-      - If using this method with a `Class.PartOperation` as the main part, you
-        can substitute the geometry of another `Class.PartOperation` via
-        `Class.PartOperation:SubstituteGeometry()|SubstituteGeometry()`, making
-        it easier to utilize the geometry of the operation but maintain
-        properties, attributes, tags, and children of the main part such as
-        `Class.Attachment|Attachments`, `Class.Constraint|Constraints`,
-        `Class.ParticleEmitter|ParticleEmitters`, light objects, and decals.
-        This approach also circumvents the potential "flicker" of completely
-        replacing the original `Class.PartOperation` with another.
+      For more information and detailed examples, see
+      https://create.roblox.com/docs/parts/solid-modeling#in-experience-solid-modeling.
     code_samples:
       - GeometryService-SubtractAsync
     parameters:
@@ -448,7 +401,8 @@ methods:
         type: Instance
         default:
         summary: |
-          Main `Class.Part` or `Class.PartOperation` to operate on.
+          Main `Class.Part`, `Class.PartOperation`, or `Class.MeshPart` to
+          operate on.
       - name: parts
         type: Array
         default:
@@ -461,21 +415,24 @@ methods:
           Options table containing all the controls for the method:
 
           - `CollisionFidelity` — The value of
-            `Class.PartOperation.CollisionFidelity|CollisionFidelity` in the
+            `Class.TriangleMeshPart.CollisionFidelity|CollisionFidelity` in the
             resulting parts.
           - `RenderFidelity` — The value of
-            `Class.PartOperation.RenderFidelity|RenderFidelity` in the resulting
+            `Class.PartOperation.RenderFidelity|RenderFidelity` or
+            `Class.MeshPart.RenderFidelity|RenderFidelity` in the resulting
             parts.
           - `FluidFidelity` — The value of
-            `Class.PartOperation.FluidFidelity|FluidFidelity` in the resulting
-            parts.
+            `Class.TriangleMeshPart.FluidFidelity|FluidFidelity` in the
+            resulting parts.
           - `SplitApart` — Boolean controlling whether the objects should all be
             kept together or properly split apart. Default is `true` (split).
     returns:
       - type: Array
         summary: |
-          One or more `Class.PartOperation|PartOperations` from the geometry of
-          the main part (`part`) minus the geometry occupied by the other parts.
+          One or more `Class.PartOperation|PartOperations` or
+          `Class.MeshPart|MeshParts`. If the input contained any
+          `Class.MeshPart|MeshParts`, then the results will always be
+          `Class.MeshPart|MeshParts`.
     tags:
       - Yields
     deprecation_message: ''
@@ -485,25 +442,52 @@ methods:
       - CSG
   - name: GeometryService:SweepPartAsync
     summary: |
-      This API has not been released.
-    description: ''
-    code_samples: []
+      Creates a `Class.MeshPart` which has the shape of the input part
+      stretched/dragged through the given set of `CFrame` positions.
+    description: |
+      Creates a `Class.MeshPart` which has the shape of the input part
+      stretched/dragged through the given set of `CFrame` positions. The exact
+      shape of the result is defined as the union of the convex hulls of each
+      adjacent pair of `CFrames`.
+
+      If a single `CFrame` is provided, the result will be a convex hull of the
+      input part.
+
+      For more information and detailed examples, see
+      https://create.roblox.com/docs/parts/solid-modeling#in-experience-solid-modeling.
+    code_samples:
+      - GeometryService-SweepPartAsync
     parameters:
       - name: part
         type: BasePart
         default:
-        summary: ''
+        summary: |
+          A `Class.Part`, `Class.PartOperation`, or `Class.MeshPart` to operate
+          on.
       - name: cframes
         type: Array
         default:
-        summary: ''
+        summary: |
+          Array of coordinate frames to sweep parts through.
       - name: options
         type: Dictionary
         default: nil
-        summary: ''
+        summary: |
+          Options table containing all the controls for the method:
+
+          - `CollisionFidelity` — The value of
+            `Class.TriangleMeshPart.CollisionFidelity|CollisionFidelity` in the
+            resulting parts.
+          - `RenderFidelity` — The value of
+            `Class.MeshPart.RenderFidelity|RenderFidelity` in the resulting
+            parts.
+          - `FluidFidelity` — The value of
+            `Class.TriangleMeshPart.FluidFidelity|FluidFidelity` in the
+            resulting parts.
     returns:
       - type: MeshPart
-        summary: ''
+        summary: |
+          A new `Class.MeshPart` with the swept geometry.
     tags:
       - Yields
     deprecation_message: ''
@@ -513,94 +497,26 @@ methods:
       - CSG
   - name: GeometryService:UnionAsync
     summary: |
-      Creates one or more `Class.PartOperation|PartOperations` from one part
-      plus the geometry occupied by other parts.
+      Creates one or more `Class.PartOperation|PartOperations` or
+      `Class.MeshPart|MeshParts` from one part plus the space occupied by other
+      parts.
     description: |
-      Creates one or more `Class.PartOperation|PartOperations` from the main
-      part plus the geometry occupied by other parts in the given array. Only
-      primitive `Class.Part|Parts` and `Class.PartOperation|PartOperations` are
-      supported, not `Class.Terrain` or `Class.MeshPart|MeshParts`. Similar to
-      `Class.Instance:Clone()|Clone()`, the returned parts have no set
-      `Class.Instance.Parent|Parent`.
+      Creates one or more `Class.PartOperation|PartOperations` or
+      `Class.MeshPart|MeshParts` consisting of the space occupied by one part
+      plus the space occupied by the other parts. Primitive `Class.Part|Parts`,
+      `Class.PartOperation|PartOperations`, and `Class.MeshPart|MeshParts` are
+      supported as inputs, but not `Class.Terrain`.
 
-      The following properties from the main part (`part`) are applied to the
-      resulting `Class.PartOperation|PartOperations`:
+      Similarly to `Class.Instance:Clone()|Clone()`, the returned parts have no
+      set `Class.Instance.Parent|Parent`. In most cases, you should parent the
+      results to the same place as the main part, then
+      `Class.Instance.Destroy|Destroy()` the original parts.
 
-      - `Class.BasePart.Color|Color`, `Class.BasePart.Material|Material`,
-        `Class.BasePart.MaterialVariant|MaterialVariant`,
-        `Class.BasePart.Reflectance|Reflectance`,
-        `Class.BasePart.Transparency|Transparency`
-      - `Class.BasePart.CanCollide|CanCollide`
-      - `Class.BasePart.Anchored|Anchored`, `Class.BasePart.Density|Density`,
-        `Class.BasePart.Elasticity|Elasticity`,
-        `Class.BasePart.ElasticityWeight|ElasticityWeight`,
-        `Class.BasePart.Friction|Friction`,
-        `Class.BasePart.FrictionWeight|FrictionWeight`
+      This function replaces `Class.BasePart:UnionAsync()`. Go to that page for
+      a description of the differences.
 
-      In the following image comparison,
-      `Class.GeometryService:UnionAsync()|UnionAsync()` is called using the blue
-      block and an array containing the purple cylinder. The resulting
-      `Class.PartOperation` resolves into a shape of the combined geometry of
-      both parts.
-
-      <figure>
-      <img src="../../../assets/modeling/solid-modeling/Separate-Parts-To-Union.jpg"
-      width="720" alt="Block and cylinder parts overlapping" />
-      <figcaption>Separate parts</figcaption>
-      </figure>
-      <figure>
-      <img src="../../../assets/modeling/solid-modeling/Union-Result.jpg" width="720"
-      alt="Parts joined together into a single solid union" />
-      <figcaption>Resulting <code>Class.PartOperation</code></figcaption>
-      </figure>
-
-      #### Notes
-
-      - Compared to `Class.BasePart:UnionAsync()`, this method differs as
-        follows:
-
-        - The input parts do not need to be parented to the scene, allowing for
-          background operations.
-        - When the `SplitApart` option is set to `true` (default), each distinct
-          body will be returned in its own `Class.PartOperation`.
-        - Each of the returned parts are in the coordinate space of the main
-          part. This means that the `(0, 0, 0)` of any returned part is not
-          necessarily at the center of its body.
-        - It's possible to call this method on the client, but with some
-          limitations. First, it currently must be done with objects **created**
-          on the client. Secondly, there is no replication available from client
-          to the server.
-
-      - The original parts remain intact following a successful operation. In
-        most cases, you should parent the returned
-        `Class.PartOperation|PartOperations` to the same place as the main part,
-        then `Class.Instance.Destroy|Destroy()` all of the original parts.
-
-      - By default, the colors of the resulting
-        `Class.PartOperation|PartOperations` are borrowed from the
-        `Class.BasePart.Color|Color` property of the original parts, although
-        you can enable their `Class.PartOperation.UsePartColor|UsePartColor`
-        property to change them to a specific color.
-
-      - If a union operation would result in any
-        `Class.PartOperation|PartOperations` with more than 20,000 triangles,
-        they will be simplified to 20,000. This will result in an error with
-        code `-14`.
-
-      - If the main part is moving during the calculation of the operation, you
-        can set the resulting parts to the updated `Datatype.CFrame` of the main
-        part, since the returned parts are in the same coordinate space as the
-        main part.
-
-      - If using this method with a `Class.PartOperation` as the main part, you
-        can substitute the geometry of another `Class.PartOperation` via
-        `Class.PartOperation:SubstituteGeometry()|SubstituteGeometry()`, making
-        it easier to utilize the geometry of the operation but maintain
-        properties, attributes, tags, and children of the main part such as
-        `Class.Attachment|Attachments`, `Class.Constraint|Constraints`,
-        `Class.ParticleEmitter|ParticleEmitters`, light objects, and decals.
-        This approach also circumvents the potential "flicker" of completely
-        replacing the original `Class.PartOperation` with another.
+      For more information and detailed examples, see
+      https://create.roblox.com/docs/parts/solid-modeling#in-experience-solid-modeling.
     code_samples:
       - GeometryService-UnionAsync
     parameters:
@@ -608,7 +524,8 @@ methods:
         type: Instance
         default:
         summary: |
-          Main `Class.Part` or `Class.PartOperation` to operate on.
+          Main `Class.Part`, `Class.PartOperation`, or `Class.MeshPart` to
+          operate on.
       - name: parts
         type: Array
         default:
@@ -621,21 +538,24 @@ methods:
           Options table containing all the controls for the method:
 
           - `CollisionFidelity` — The value of
-            `Class.PartOperation.CollisionFidelity|CollisionFidelity` in the
+            `Class.TriangleMeshPart.CollisionFidelity|CollisionFidelity` in the
             resulting parts.
           - `RenderFidelity` — The value of
-            `Class.PartOperation.RenderFidelity|RenderFidelity` in the resulting
+            `Class.PartOperation.RenderFidelity|RenderFidelity` or
+            `Class.MeshPart.RenderFidelity|RenderFidelity` in the resulting
             parts.
           - `FluidFidelity` — The value of
-            `Class.PartOperation.FluidFidelity|FluidFidelity` in the resulting
-            parts.
+            `Class.TriangleMeshPart.FluidFidelity|FluidFidelity` in the
+            resulting parts.
           - `SplitApart` — Boolean controlling whether the objects should all be
             kept together or properly split apart. Default is `true` (split).
     returns:
       - type: Array
         summary: |
-          One or more `Class.PartOperation|PartOperations` from the geometry of
-          the main part (`part`) plus the geometry occupied by the other parts.
+          One or more `Class.PartOperation|PartOperations` or
+          `Class.MeshPart|MeshParts`. If the input contained any
+          `Class.MeshPart|MeshParts`, then the results will always be
+          `Class.MeshPart|MeshParts`.
     tags:
       - Yields
     deprecation_message: ''

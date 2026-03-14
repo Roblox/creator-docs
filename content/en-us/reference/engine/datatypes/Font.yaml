@@ -49,6 +49,14 @@ description: |
     <td><code>rbxasset://fonts/families/Bangers.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Bangers.png" /></td>
   </tr>
   <tr>
+    <td>Builder Extended</td>
+    <td><code>rbxasset://fonts/families/BuilderExtended.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Builder-Extended.png" /></td>
+  </tr>
+  <tr>
+    <td>Builder Mono</td>
+    <td><code>rbxasset://fonts/families/BuilderMono.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Builder-Mono.png" /></td>
+  </tr>
+  <tr>
     <td>Builder Sans</td>
     <td><code>rbxasset://fonts/families/BuilderSans.json</code><br /><br /><img src="../../../assets/engine-api/datatypes/Font/Builder-Sans.png" /></td>
   </tr>

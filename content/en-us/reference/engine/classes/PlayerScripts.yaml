@@ -46,6 +46,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
+      - Input
       - Players
   - name: PlayerScripts:ClearComputerMovementModes
     summary: |
@@ -83,6 +84,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
+      - Input
       - Players
   - name: PlayerScripts:ClearTouchMovementModes
     summary: |
@@ -124,6 +126,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
+      - Input
       - Players
   - name: PlayerScripts:RegisterComputerMovementMode
     summary: |
@@ -169,6 +172,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
+      - Input
       - Players
   - name: PlayerScripts:RegisterTouchMovementMode
     summary: |

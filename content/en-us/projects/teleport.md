@@ -49,7 +49,7 @@ Setting | Description
 
 - If you choose **Fully open**, players can join any place in your experience through teleports from any experience, including deep links, game invites, joining a connection, and more.
 
-  This is a good choice if your experience has several places and you want friends to be able to easily join each other no matter which place they're in.
+  This is a good choice if your experience has several places and you want friends to be able to easily join each other no matter which place they're in. If you don't choose this option, players who try to join their friends in non-start places will instead join your experience's start place.
 
 - If you choose **Limited to same universe**, players can only join non-start places through teleports within your experiences. This setting allows both client- and server-initiated teleports.
 

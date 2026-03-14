@@ -3,49 +3,88 @@ title: Marketplace policy
 description: Marketplace Requirements lists the specific requirements for Marketplace Assets.
 ---
 
-3D accessories and clothing assets you sell on the [Marketplace](https://www.roblox.com/catalog), such as clothing accessories, must follow specific requirements. Some requirements may require additional configuration on a third-party modeling software, such as Blender or Maya.
+Avatar assets you sell on the [Marketplace](https://www.roblox.com/catalog), such as clothing accessories, must follow specific requirements. Some requirements may require additional configuration on a third-party modeling software, such as Blender or Maya.
 
 If you are ready to sell an item and the item meets the requirements below, see [Publish Marketplace items](../marketplace/publish-to-marketplace.md) for details on publishing the asset.
 
 ## Creator requirements
 
-To upload, publish, and maintain existing content on-sale, Roblox requires users and groups to have [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644) and [Premium membership](https://www.roblox.com/premium/membership). Your ID-verified account must participate in an active Premium 1000/2200 membership to keep your Marketplace items on sale after uploading and publishing.
+To upload, publish, and maintain existing content on-sale, Roblox requires users and groups to have [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644) and/or a [Premium membership](https://www.roblox.com/premium/membership), depending on if the asset is a 2D or 3D item. Your ID-verified account must participate in an active Premium 1000/2200 membership to keep your 3D Marketplace items on sale after uploading and publishing.
 
 See the following breakdown of the user and group requirements:
 
 <table>
 <thead>
   <tr>
-    <th colspan="2"><center>Creator is able to…</center></th>
-    <th>ID/Premium Requirements</th>
+    <th>For 2D items:</th>
+    <th>Creator is able to…</th>
+    <th width="40%">Requirements</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="3">Individually</td>
+    <td>Upload content from Creator Dashboard</td>
+    <td>10 Robux upload fee</td>
+  </tr>
+  <tr>
+    <td>Publish content to the Marketplace</td>
+    <td><ul><li>Premium 1000/2200</li><li>10 Robux publishing advance</li></ul></td>
+  </tr>
+  <tr>
+    <td>Keep existing content on-sale</td>
+    <td>Premium 1000/2200</td>
+  </tr>
+  <tr>
+    <td rowspan="3">As a Group</td>
+    <td>Upload content from Creator Dashboard</td>
+    <td>10 Robux upload fee</td>
+  </tr>
+  <tr>
+    <td>Publish content to the Marketplace</td>
+    <td>Publishing user needs:<br /><br /><ul><li>Premium 1000/2200</li><li>10 Robux publishing advance</li></ul><br /><br />Group owner needs Premium 1000/2200</td>
+  </tr>
+  <tr>
+    <td>Keep existing content on-sale</td>
+    <td>Group owner needs Premium 1000/2200</td>
+  </tr>
+  </tbody>
+</table>
+
+<table>
+<thead>
+  <tr>
+    <th>For 3D items:</th>
+    <th>Creator is able to…</th>
+    <th width="40%">Requirements</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td rowspan="3">Individually</td>
     <td>Upload content from Studio</td>
-    <td>&mdash; ID Verification</td>
+    <td><ul><li>ID verification</li><li>300 Robux upload fee</li></ul></td>
   </tr>
   <tr>
     <td>Publish content to the Marketplace</td>
-    <td>&mdash; ID Verification<br />&mdash; Premium 1000/2200</td>
+    <td><ul><li>ID verification</li><li>Premium 1000/2200</li><li>600-2500 Robux publishing advance</li></ul></td>
   </tr>
   <tr>
     <td>Keep existing content on-sale</td>
-    <td>&mdash; ID Verification<br />&mdash; Premium 1000/2200</td>
+    <td><ul><li>ID verification</li><li>Premium 1000/2200</li></ul></td>
   </tr>
   <tr>
     <td rowspan="3">As a Group</td>
     <td>Upload content from Studio</td>
-    <td>Uploading user needs: <br /><br />&mdash; ID Verification<br />&mdash; Premium 1000/2200</td>
+    <td>Uploading user needs:<br /><br /><ul><li>ID verification</li><li>Premium 1000/2200</li><li>300 Robux upload fee</li></ul></td>
   </tr>
   <tr>
     <td>Publish content to the Marketplace</td>
-    <td>Publishing user needs: <br /><br />&mdash; ID Verification<br /><br />&mdash; Premium 1000/2200<br /><br />Group owner needs:<br /><br />&mdash; Premium 1000/2200</td>
+    <td>Publishing user needs:<br /><br /><ul><li>ID verification</li><li>Premium 1000/2200</li><li>600-2500 Robux publishing advance</li></ul><br /><br />Group owner needs Premium 1000/2200</td>
   </tr>
   <tr>
     <td>Keep existing content on-sale</td>
-    <td>Group owner needs:<br /><br />&mdash; Premium 1000/2200</td>
+    <td>Group owner needs Premium 1000/2200</td>
   </tr>
 </tbody>
 </table>

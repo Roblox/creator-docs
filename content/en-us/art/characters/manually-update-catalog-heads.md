@@ -97,6 +97,8 @@ Export your head or entire body from Blender as a glTF file:
 Fix your asset in Blender, or preferred 3D modeling software. In many cases, you may save time using a brand new head cage and fitting the cage over your character head. You may also see other validation issues that need to be addressed from the first step.
 
 1. In Blender, open a new empty scene and import the glTF file.
+   1. In the glTF import settings, disable **Guess Original Bind Pose**.
+      <img src="../../assets/art/avatar/Guess-Original-Bind-Pose.png" width = "60%"/>
 2. Ensure everything you need for the head is present, including the cage, attachment points, facial joints and facial animations.
 3. Roblox Studio flips avatars by 180 degrees on import, so you need to rotate your asset back by 180 in Blender (Hotkeys: <kbd>R</kbd>+<kbd>Z</kbd> then type `180`).
 4. Most often heads fail validation due to cage issues. For example, the cage may be completely inside the head, has incorrect UVs or looks completely misplaced in the model. In most cases we recommend you do not spend time editing the original cage and instead:
@@ -107,13 +109,16 @@ Fix your asset in Blender, or preferred 3D modeling software. In many cases, you
 5. Ensure the Blender animation start value is set to 0.
 6. Remove vertex colors. In Blender this can be done by clicking on the mesh and then under the data tab selecting color attributes and removing any that exist.
    <img src="../../assets/art/avatar/Delete-Vertex-Colors.png"/>
-7. Modify your head asset to pass validation:
+7. If needed, remove vertex color shading nodes for fbx export. The blender fbx exporter is more picky then glTF and won't accept nodes in between the texture input and the shader.
+   <img src="../../assets/art/avatar/Remove-Vertex-Node-A.png"/>
+   <img src="../../assets/art/avatar/Remove-Vertex-Node-B.png"/>
+8. Modify your head asset to [pass validation](./head-validation.md):
    1. Align cage eyes and mouth regions to the head.
    2. Ensure your head includes a rig, with poses keyframed and mapped to the FACs standard so that:
          1.  Eyes must blink.
          2.  Mouth must open and close.
          3.  Face must express happy and sad.
-8.  Export your updated head asset to FBX file format using the correct settings explained here (If you have PBR, you may want to use glTF).
+9.  Export your updated head asset to FBX file format using the correct settings explained here (If you have PBR, you may want to use glTF).
     1.  Setup textures for FBX export (if needed). Blender will import the glTF textures in such a way that they won't be able to be exported in an FBX file by default.
         1.  To fix this go through each image and save it to your disk locally.
    <img src="../../assets/art/avatar/Blender-Save-Image-Workaround.png"/>
@@ -136,7 +141,9 @@ Import your head back into Studio and verify that it passes validation. If valid
     2.  Select **Development Item**.
     3.  Set its **Asset Category** to Model.
     4.  Save the model to Roblox (no publishing fees are incurred).
-        1.  Get the asset ID of the head asset (not the body bundle).
+    5.  After saving to Roblox, save the asset ID provided.
+        1.  While you can submit either the head or body asset, there is no distinction between head and body asset when saving as a development item.
+        2.  For submission to the web form, we prefer that you get the asset ID of the head, but you can use either the head or body asset ID and Roblox will replace the head accordingly.
 
 ## 5. Provide the assetID of your updated head
 
@@ -153,5 +160,6 @@ Roblox has published a series of documentation and video tutorials on best pract
 
 - [Dynamic head overview](./facial-animation/)
 - [Head validation process](./head-validation.md)
+- [Head validation video guide](https://www.youtube.com/watch?v=OwhkWzSBnf0)
 - [Avatar Auto-Setup](../../avatar-setup/auto-setup.md)
 - [Caging Best Practices](../accessories/caging-best-practices.md)
