@@ -6,12 +6,14 @@ name: AnalyticsService
 type: class
 memory_category: Instances
 summary: |
-  Collection of methods that allows developers to track how users interact with
-  their experiences.
+  Collection of methods that allows you to track how users interact with your
+  experiences.
 description: |
-  `AnalyticsService` is a collection of methods that allows developers to track
-  how users interact with their experiences, specifically player progression,
-  in-experience economy, funnels, and custom events.
+  `AnalyticsService` is a collection of methods that allows you to track how
+  users interact with your experiences, specifically player progression,
+  in-experience economy, funnels, and custom events. For more information on
+  using this service, see
+  [Event types](../../../production/analytics/event-types.md).
 code_samples: []
 inherits:
   - Instance
@@ -307,8 +309,8 @@ methods:
       Logs an event used to track custom metrics of a user in experience.
     description: |
       Logs an event used to track custom metrics of a user in experience. For
-      additional information, see
-      [custom events](../../../production/analytics/custom-events.md).
+      more information, see
+      [Custom events](../../../production/analytics/custom-events.md).
     code_samples:
       - Log-Custom-Event
     parameters:
@@ -349,7 +351,9 @@ methods:
     summary: |
       Logs an event used to track player actions related in experience.
     description: |
-      Logs an event used to track player actions related in experience.
+      Logs an event used to track player actions related in experience. For more
+      information, see
+      [Economy events](../../../production/analytics/economy-events.md).
     code_samples:
       - AnalyticsService-LogEconomyEvent-IAP
     parameters:
@@ -429,8 +433,9 @@ methods:
       funnel.
     description: |
       Logs an event used to track user actions stepping through a pre-planned
-      funnel. Funnel breakdowns will only consider the user and event values
-      from the first step in a funnel session.
+      funnel. Funnel breakdowns only consider the user and event values from the
+      first step in a funnel session. See
+      [Funnel events](../../../production/analytics/funnel-events.md).
     code_samples:
       - AnalyticsService-LogFunnelStepEvent-Shop
     parameters:
@@ -498,8 +503,9 @@ methods:
       funnel.
     description: |
       Logs an event used to track user actions stepping through an onboarding
-      funnel. Funnel breakdowns will only consider the user and event values
-      from the first step in a funnel session.
+      funnel. Funnel breakdowns only consider the user and event values from the
+      first step in a funnel session. See
+      [Funnel events](../../../production/analytics/funnel-events.md).
     code_samples:
       - AnalyticsService-LogOnboardingFunnelStepEvent-TwoSteps
     parameters:

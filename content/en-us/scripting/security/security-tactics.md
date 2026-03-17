@@ -47,4 +47,4 @@ Integrate security considerations into your experience's design from the very be
   - Could an exploiter use this to ruin another player's experience?
   - How much resources, in the worst case, could this feature feasibly use?
   - What is the minimum internal information or state that I need to expose for this feature?
-- Partition responsibilities early. Keep logic and data in ServerScriptStorage from day one. Never place them in replicated containers, e.g. ReplicatedStorage or Workspace.
+- Partition responsibilities early. Keep logic and data in ServerScriptService from day one. Never place them in replicated containers like ReplicatedStorage or Workspace.

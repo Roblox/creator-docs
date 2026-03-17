@@ -41,8 +41,8 @@ While not necessary for consideration, it's recommended that your game:
 We highly encourage you to prepare the following **before** applying for the Standout Games sort:
 
 - Record video footage that highlights your core gameplay mechanics and other novel aspects to upload in your nomination survey.
-- [Localize](../production/localization/index.md) your game because Roblox can display it to global audiences.
-- Upload a gameplay [video preview](../production/publishing/thumbnails.md#videos) to help users visually see your game before they join.
+- [Localize](../production/localization/index.md) your game to reach a global audience and improve accessibility for international players.
+- Upload a gameplay [trailer](../production/publishing/thumbnails.md#videos) to give users a clear visual preview of the experience before they join.
 - Review your existing thumbnails to make sure they comply with our [best practices](../production/publishing/thumbnails.md#best-practices).
 
 If you wish to nominate your novel game for Roblox to promote in the Standout Games sort, please complete the survey below. Our curation team reviews nominations on an ongoing basis. Once your nomination is reviewed, you will receive an email to inform you of whether or not your game has been selected.

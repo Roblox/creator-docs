@@ -695,6 +695,91 @@ properties:
       can_save: true
     capabilities:
       - Animation
+  - name: HumanoidRigDescription.LeftToeBase
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+  - name: HumanoidRigDescription.LeftToeBaseRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+  - name: HumanoidRigDescription.LeftToeBaseRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+  - name: HumanoidRigDescription.LeftToeBaseSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+  - name: HumanoidRigDescription.LeftToeBaseTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
   - name: HumanoidRigDescription.LeftWrist
     summary: ''
     description: ''
@@ -1392,6 +1477,91 @@ properties:
       can_save: true
     capabilities:
       - Animation
+  - name: HumanoidRigDescription.RightToeBase
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+  - name: HumanoidRigDescription.RightToeBaseRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+  - name: HumanoidRigDescription.RightToeBaseRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+  - name: HumanoidRigDescription.RightToeBaseSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+  - name: HumanoidRigDescription.RightToeBaseTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
   - name: HumanoidRigDescription.RightWrist
     summary: ''
     description: ''
@@ -1546,6 +1716,91 @@ properties:
     capabilities:
       - Animation
   - name: HumanoidRigDescription.RootTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+  - name: HumanoidRigDescription.Spine
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+  - name: HumanoidRigDescription.SpineRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+  - name: HumanoidRigDescription.SpineRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+  - name: HumanoidRigDescription.SpineSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+  - name: HumanoidRigDescription.SpineTposeAdjustment
     summary: ''
     description: ''
     code_samples: []

@@ -356,14 +356,21 @@ events:
     capabilities:
       - UI
   - name: GuiButton.SecondaryActivated
-    summary: ''
-    description: ''
+    summary: |
+      Fires when a right-click is detected on desktop, long press detected on
+      mobile, or triangle / Y activated in UI navigation mode on console. This
+      function is not available yet.
+    description: |
+      Fires when a right-click is detected on desktop, long press detected on
+      mobile, or triangle / Y activated in UI navigation mode on console. This
+      function is not available yet.
     code_samples: []
     parameters:
       - name: inputObject
         type: InputObject
         default:
-        summary: ''
+        summary: |
+          The input object representing the alternate activation action.
     tags: []
     deprecation_message: ''
     security: None

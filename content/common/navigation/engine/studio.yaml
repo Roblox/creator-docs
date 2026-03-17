@@ -11,7 +11,7 @@ navigation:
     path: /assistant/guide
     section:
       - title: Overview
-        path: /assistant/guide    
+        path: /assistant/guide
       - title: Prompt guide and examples
         path: /assistant/prompt-engineering
   - title: MCP Server
@@ -57,6 +57,8 @@ navigation:
     path: /studio/experience-settings
   - title: Avatar Settings
     path: /studio/avatar-settings
+  - title: Command-line interface
+    path: /studio/command-line-interface
   - heading: Plugins
   - title: Overview
     path: /studio/plugins

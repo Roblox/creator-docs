@@ -43,6 +43,10 @@ You can choose from a variety of templates that best match your final design and
 
 Each `.zip` contains a `.blend`, `.fbx`, and PBR texture `.png` files for that template model. If using Blender or following the [template creation guides](../../../art/characters/creating/index.md), use the `.blend` project.
 
+<Alert severity = 'warning'>
+Some of the template files include additional mesh assets for eyebrows and eyelashes. These eyebrows and eyelashes versions may not be fully compatible with the template body. For the latest information on eyebrows and eyelashes, see [Makeup](../../../makeup/index.md#components-of-makeup).
+</Alert>
+
 <Tabs>
   <TabItem label="Head Shapes">
   <GridContainer numColumns="2">
