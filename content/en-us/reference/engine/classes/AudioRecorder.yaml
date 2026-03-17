@@ -119,7 +119,7 @@ methods:
         summary: |
           An input or output pin on this instance
     returns:
-      - type: Instances
+      - type: List<Wire>
         summary: |
           An array of `Class.Wire|Wires`
     tags: []
@@ -199,7 +199,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Instances
+      - type: List<Instance>
         summary: |
           A table of `Class.Instance|Instances` that are not recordable.
     tags:

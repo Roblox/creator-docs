@@ -31,7 +31,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Instances
+      - type: List<StyleSheet>
         summary: |
           Array of other `StyleSheets`.
     tags: []
