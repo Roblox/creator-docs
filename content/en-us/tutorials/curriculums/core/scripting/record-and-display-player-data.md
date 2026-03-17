@@ -123,7 +123,7 @@ To create a module script:
 
    `getData()` is a local function that retrieves data for a specific
    `playerData` table. If a player hasn't collected a coin, it returns a
-   `defaultPlayerData()` table to ensure that every player has some data
+   table from the `defaultPlayerData()` function to ensure every player has some data
    associated with them. A common convention is to create simple,
    public-facing functions that offload logic to locally-scoped functions that
    do the heavy lifting.
