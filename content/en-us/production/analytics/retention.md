@@ -158,4 +158,96 @@ Ending system is what's available to users after they've completed the main obje
 
 1. **Add more content**: Regular updates can keep users coming back. A common frequency is to release smaller updates on the existing mechanics every 2-4 weeks, and bigger updates of new features every 2-3 months.
 
-2. **Add social mechanics**: Social mechanics can motivate users to stay engaged with your experience and interact with other users while waiting for new content. Common social systems and elements include trading, parties, guilds, and competitive systems such as PvP (player versus player), tournaments and leaderboards.
+2. **Add social mechanics**: Social mechanics can motivate users to stay engaged with your experience and interact with other users while waiting for new content. Common social systems and elements include trading, parties, guilds, and competitive systems such as PvP (player versus player), tournaments and leaderboards.Jana imej: Here is the Roblox Lua code for a 3D Math Obby like in your picture. This code handles the 3D board (SurfaceGui) and teleports the player forward when they get the answer right.
+ 
+1. Setup in Roblox Studio:
+ 
+1. Create a Part (this is your math board).
+2. Inside the Part, add a SurfaceGui.
+3. Inside the SurfaceGui, add:
+- A TextLabel named  QuestionLabel .
+- A TextBox named  AnswerInput .
+4. Place a LocalScript inside the SurfaceGui and paste the code below.
+ 
+2. The Code (English):
+ 
+lua
+  
+-- References to UI elements on the 3D board
+local surfaceGui = script.Parent
+local questionLabel = surfaceGui:WaitForChild("QuestionLabel")
+local answerInput = surfaceGui:WaitForChild("AnswerInput")
+
+-- Player and Character references
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+-- Game Settings
+local currentNum1 = 0
+local currentNum2 = 0
+local correctAnswer = 0
+local stageCount = 0
+local teleportDistance = 20 -- How many studs to move forward each time
+
+-- Function to create a new math problem
+local function generateNewQuestion()
+	-- Increase difficulty slightly as stage increases
+	currentNum1 = math.random(1, 10 + stageCount)
+	currentNum2 = math.random(1, 10 + stageCount)
+	
+	correctAnswer = currentNum1 + currentNum2
+	questionLabel.Text = currentNum1 .. " + " .. currentNum2 .. " = ?"
+	
+	-- Reset the input box
+	answerInput.Text = ""
+	answerInput.PlaceholderText = "Type Answer Here"
+end
+
+-- Function to handle correct answers
+local function onCorrectAnswer()
+	stageCount = stageCount + 1
+	print("Correct! Current Stage: " .. stageCount)
+	
+	-- Visual Feedback
+	questionLabel.TextColor3 = Color3.fromRGB(0, 255, 0) -- Green
+	questionLabel.Text = "CORRECT!"
+	
+	-- Teleport Player Forward (Like moving through the obby)
+	local forwardVector = humanoidRootPart.CFrame.LookVector
+	humanoidRootPart.CFrame = humanoidRootPart.CFrame + (forwardVector * teleportDistance)
+	
+	task.wait(1) -- Wait a moment before next question
+	questionLabel.TextColor3 = Color3.fromRGB(255, 255, 255) -- Back to White
+	generateNewQuestion()
+end
+
+-- Event: Triggered when player presses Enter in the TextBox
+answerInput.FocusLost:Connect(function(enterPressed)
+	if enterPressed then
+		local playerInput = tonumber(answerInput.Text)
+		
+		if playerInput == correctAnswer then
+			onCorrectAnswer()
+		else
+			-- Wrong Answer Feedback
+			answerInput.Text = ""
+			answerInput.PlaceholderText = "WRONG! TRY AGAIN"
+			task.wait(1)
+			answerInput.PlaceholderText = "Type Answer Here"
+		end
+	end
+end)
+
+-- Start the first question when the game begins
+generateNewQuestion()
+ 
+ 
+What this code does:
+ 
+1. 3D Math Board: It puts the math question directly onto a Part in your game world.
+2. Enter Key Support: The player just needs to type the number and press Enter to submit.
+3. Automatic Teleport: Every time the player gets it right, the code automatically moves their character 20 studs forward (you can change  teleportDistance  to match your map).
+4. Infinite Scaling: It uses  stageCount  to make the numbers slightly bigger/harder the further they go!
+ 
+Does this match what you were looking for? Let me know if you want to add a Leaderboard for stages! .dalam nisbah aspek 1:1.
