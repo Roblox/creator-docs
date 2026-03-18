@@ -366,7 +366,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Instances
+      - type: List<Constraint>
         summary: ''
     tags: []
     deprecation_message: ''

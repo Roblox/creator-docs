@@ -379,7 +379,7 @@ properties:
       using rich text formatting.
     description: |
       This property determines whether the `Class.TextBox` renders the
-      `Class.TextBox.Text` string using rich text formatting. Rich text uses
+      `Class.TextBox.Text` string using [rich text](../../../ui/rich-text.md) formatting. Rich text uses
       simple markup tags to style sections of the string in bold, italics,
       specific colors, and more.
 

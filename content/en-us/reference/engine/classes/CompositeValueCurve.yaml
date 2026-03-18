@@ -78,7 +78,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Instances
+      - type: List<FloatCurve>
         summary: ''
     tags: []
     deprecation_message: ''

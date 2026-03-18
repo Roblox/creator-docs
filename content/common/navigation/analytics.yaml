@@ -11,6 +11,8 @@ navigation:
     path: /production/analytics/performance
   - title: Error report
     path: /production/analytics/error-report
+  - title: Crashes
+    path: /production/analytics/crashes
 
   - heading: Adjust and experiment
   - title: Configs

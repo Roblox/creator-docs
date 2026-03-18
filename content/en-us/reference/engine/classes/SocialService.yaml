@@ -295,7 +295,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Instances
+      - type: List<Player>
         summary: |
           A table of `Class.Player` objects whose `Class.Player.PartyId`
           property matches the passed `partyId`.

@@ -107,7 +107,7 @@ methods:
       - Get-KeyframeSequence-Length
     parameters: []
     returns:
-      - type: Instances
+      - type: List<Keyframe>
         summary: |
           An array of `Class.Keyframe|Keyframes`.
     tags: []

@@ -68,7 +68,7 @@ properties:
       `Class.AudioListener:SetAngleAttenuation()|SetAngleAttenuation()` for
       usage details.
     code_samples: []
-    type: BinaryString
+    type: Flyweight
     tags: []
     deprecation_message: ''
     security:
@@ -118,7 +118,7 @@ properties:
       `Class.AudioListener:SetDistanceAttenuation()|SetDistanceAttenuation()`
       for usage details.
     code_samples: []
-    type: BinaryString
+    type: Flyweight
     tags: []
     deprecation_message: ''
     security:
@@ -219,7 +219,7 @@ methods:
         summary: |
           An input or output pin on this instance
     returns:
-      - type: Instances
+      - type: List<Wire>
         summary: |
           An array of `Class.Wire|Wires`
     tags: []
@@ -281,7 +281,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Instances
+      - type: List<AudioEmitter>
         summary: ''
     tags: []
     deprecation_message: ''

@@ -46,7 +46,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Instances
+      - type: List<Instance>
         summary: ''
     tags:
       - Yields
@@ -79,7 +79,7 @@ methods:
       - SerializationService-Roundtrip-Sample
     parameters:
       - name: inputInstances
-        type: Instances
+        type: List<Instance>
         default:
         summary: ''
     returns:
