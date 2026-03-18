@@ -75,7 +75,7 @@ methods:
       - Teams-GetTeams
     parameters: []
     returns:
-      - type: Instances
+      - type: List<Team>
         summary: |
           An array of `Class.Team|Teams` in the game.
     tags: []

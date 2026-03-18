@@ -402,7 +402,7 @@ methods:
         summary: |
           The maximum amount of `Class.BasePart|BaseParts` to be returned.
     returns:
-      - type: Instances
+      - type: List<BasePart>
         summary: |
           An array of `Class.BasePart|BaseParts` within the `Datatype.Region3`.
     tags:
@@ -432,7 +432,7 @@ methods:
         default: 20
         summary: ''
     returns:
-      - type: Instances
+      - type: List<BasePart>
         summary: ''
     tags:
       - Deprecated
@@ -480,7 +480,7 @@ methods:
         summary: |
           The maximum number of `Class.BasePart|BaseParts` to be returned.
     returns:
-      - type: Instances
+      - type: List<BasePart>
         summary: |
           An array of `Class.BasePart|BaseParts` found within the
           `Datatype.Region3`.
@@ -531,7 +531,7 @@ methods:
         summary: |
           The maximum number of `Class.BasePart|BaseParts` to be returned.
     returns:
-      - type: Instances
+      - type: List<BasePart>
         summary: |
           An array of `Class.BasePart|BaseParts` within the `Datatype.Region3`.
     tags:
@@ -583,7 +583,7 @@ methods:
         summary: |
           Contains reusable portions of the spatial query parameters.
     returns:
-      - type: Instances
+      - type: List<BasePart>
         summary: |
           An array of `Class.BasePart|BaseParts` which matched the spatial
           query.
@@ -633,7 +633,7 @@ methods:
         summary: |
           Contains reusable portions of the spatial query parameters.
     returns:
-      - type: Instances
+      - type: List<BasePart>
         summary: |
           An array of `Class.BasePart|BaseParts` which matched the spatial
           query.
@@ -682,7 +682,7 @@ methods:
         summary: |
           Contains reusable portions of the spatial query parameters.
     returns:
-      - type: Instances
+      - type: List<BasePart>
         summary: |
           An array of `Class.BasePart|BaseParts` which matched the spatial
           query.

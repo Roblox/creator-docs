@@ -212,7 +212,7 @@ methods:
       - Teams-GetTeams
     parameters: []
     returns:
-      - type: Instances
+      - type: List<Player>
         summary: |
           An array of `Class.Player|Players` in the `Class.Team`.
     tags: []

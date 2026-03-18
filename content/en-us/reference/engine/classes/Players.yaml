@@ -1140,7 +1140,7 @@ methods:
       - Give-Sparkles-to-Everyone
     parameters: []
     returns:
-      - type: Instances
+      - type: List<Player>
         summary: |
           A table containing all the players in the server.
     tags: []
@@ -1155,7 +1155,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Instances
+      - type: List<Player>
         summary: ''
     tags:
       - Deprecated
@@ -1273,7 +1273,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Instances
+      - type: List<Player>
         summary: ''
     tags:
       - Deprecated

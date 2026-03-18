@@ -30,7 +30,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Instances
+      - type: List<StyleRule>
         summary: |
           Array of `Class.StyleRule|StyleRules`.
     tags: []

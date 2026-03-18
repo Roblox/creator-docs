@@ -79,6 +79,18 @@ The following endpoints are supported. Due to current limitations on `Class.Http
 - [UpdateUserRestriction (Universe)](/cloud/features/bans-and-blocks#/UserRestriction/Cloud_UpdateUserRestriction__Using_Universes)
 - [ListUserRestrictionLogs (Universe)](https://create.roblox.com/docs/cloud/features/bans-and-blocks#/UserRestriction/Cloud_ListUserRestrictionLogs)
 
+#### Configs
+
+- [GetConfigRepositoryValues](/cloud/reference/features/configs#CreatorConfigsPublicApi_GetConfigRepositoryValues)
+- [GetConfigRepositoryDraft](/cloud/reference/features/configs#CreatorConfigsPublicApi_GetConfigRepositoryDraft)
+- [UpdateDraft](/cloud/reference/features/configs#CreatorConfigsPublicApi_UpdateDraft)
+- [DeleteDraft](/cloud/reference/features/configs#CreatorConfigsPublicApi_DeleteDraft)
+- [OverwriteDraft](/cloud/reference/features/configs#CreatorConfigsPublicApi_OverwriteDraft)
+- [GetConfigRepositoryFull](/cloud/reference/features/configs#CreatorConfigsPublicApi_GetConfigRepositoryFull)
+- [PublishDraft](/cloud/reference/features/configs#CreatorConfigsPublicApi_PublishDraft)
+- [ListRevisions](/cloud/reference/features/configs#CreatorConfigsPublicApi_ListRevisions)
+- [RestoreRevision](/cloud/reference/features/configs#CreatorConfigsPublicApi_RestoreRevision)
+
 #### Creator Store
 
 - [CreateCreatorStoreProduct](/cloud/features/creator-store#/CreatorStoreProduct/Cloud_CreateCreatorStoreProduct)

@@ -454,7 +454,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Instances
+      - type: List<Player>
         summary: |
           A table with all the `Class.Player` objects that this model object is
           persistent for.

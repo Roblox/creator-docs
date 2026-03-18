@@ -136,6 +136,10 @@ The **Server** tab includes the following charts:
     </tbody>
 </table>
 
+<Alert severity="info">
+For a deep dive view on server crashes and out-of-memory snapshots, see [Server crashes chart](crashes.md).
+</Alert>
+
 The server CPU and memory charts default to the **Overall** view, but have dropdown menus for individual process groups, such as physics, rendering, and scripts. The sum of these categories is **not** comprehensive; the server performs a small—typically insignificant—amount of additional work per frame that isn't included in any category. As such, the overall millisecond and MB values are slightly lower than reality, but close enough to give you a clear understanding of server performance.
 
 If a category is higher than usual or appears to be taking up a disproportionate amount of time, use the dropdown menu to drill down on the group and identify processes that could be causing issues.
