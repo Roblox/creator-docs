@@ -11,7 +11,7 @@ The two primary functions for adding and finding a table's metatable are `Global
 
 ```lua
 local x = {}
-local metaTable = {} -- metaTables are tables, too!
+local metaTable = {} -- Metatables are tables, too!
 setmetatable(x, metaTable) -- Give x a metatable called metaTable!
 print(getmetatable(x)) --> table: [hexadecimal memory address]
 ```

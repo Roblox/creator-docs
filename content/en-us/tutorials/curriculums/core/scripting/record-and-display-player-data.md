@@ -50,12 +50,14 @@ To create a module script:
      ]]
    }
 
-   local DEFAULT_PLAYER_DATA = {
-     [PlayerData.COIN_KEY_NAME] = 0
-   }
+   local function defaultPlayerData()
+     return {
+       [PlayerData.COIN_KEY_NAME] = 0
+     }
+   end
 
    local function getData(player)
-     local data = playerData[tostring(player.UserId)] or DEFAULT_PLAYER_DATA
+     local data = playerData[tostring(player.UserId)] or defaultPlayerData()
      playerData[tostring(player.UserId)] = data
      return data
    end
@@ -121,18 +123,20 @@ To create a module script:
 
    `getData()` is a local function that retrieves data for a specific
    `playerData` table. If a player hasn't collected a coin, it returns a
-   `DEFAULT_PLAYER_DATA` table to ensure that every player has some data
+   table from the `defaultPlayerData()` function to ensure every player has some data
    associated with them. A common convention is to create simple,
    public-facing functions that offload logic to locally-scoped functions that
    do the heavy lifting.
 
    ```lua
-   local DEFAULT_PLAYER_DATA = {
-    [PlayerData.COIN_KEY_NAME] = 0
-   }
+   local function defaultPlayerData()
+     return {
+       [PlayerData.COIN_KEY_NAME] = 0
+     }
+   end
 
    local function getData(player)
-     local data = playerData[tostring(player.UserId)] or DEFAULT_PLAYER_DATA
+     local data = playerData[tostring(player.UserId)] or defaultPlayerData()
      playerData[tostring(player.UserId)] = data
      return data
    end

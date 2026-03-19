@@ -57,7 +57,7 @@ It's recommended to publish to Roblox every ten minutes or after making a big ch
 
 1. In the top-left corner of your computer, click **File** → **Publish to Roblox** to open the publishing window.
 
-1. In the **Publish Game** window,
+1. In the **Publish Experience** window,
 
    1. In the **Name** field, provide a name for your experience.
    1. <Chip label="OPTIONAL" size="small" variant="outlined" /> In the **Description** field, provide a summary of what a player can expect from the experience.

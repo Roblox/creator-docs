@@ -32,7 +32,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RenderingTest.ComparisonDiffThreshold
     summary: ''
     description: ''
@@ -48,7 +49,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RenderingTest.ComparisonMethod
     summary: ''
     description: ''
@@ -64,7 +66,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RenderingTest.ComparisonPsnrThreshold
     summary: ''
     description: ''
@@ -80,7 +83,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RenderingTest.Description
     summary: ''
     description: ''
@@ -96,7 +100,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RenderingTest.FieldOfView
     summary: ''
     description: ''
@@ -112,7 +117,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RenderingTest.Orientation
     summary: ''
     description: ''
@@ -130,7 +136,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RenderingTest.PerfTest
     summary: ''
     description: ''
@@ -146,7 +153,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RenderingTest.Position
     summary: ''
     description: ''
@@ -164,7 +172,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RenderingTest.QualityAuto
     summary: ''
     description: ''
@@ -180,7 +189,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RenderingTest.QualityLevel
     summary: ''
     description: ''
@@ -196,7 +206,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RenderingTest.RenderingTestFrameCount
     summary: ''
     description: ''
@@ -212,7 +223,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RenderingTest.ShouldSkip
     summary: ''
     description: ''
@@ -228,7 +240,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RenderingTest.Ticket
     summary: ''
     description: ''
@@ -244,7 +257,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: RenderingTest.Timeout
     summary: ''
     description: ''
@@ -260,7 +274,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
 methods:
   - name: RenderingTest:RenderdocTriggerCapture
     summary: |
@@ -275,6 +290,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
 events: []
 callbacks: []

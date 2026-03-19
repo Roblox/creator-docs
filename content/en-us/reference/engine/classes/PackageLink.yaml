@@ -52,7 +52,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: PackageLink.Creator
     summary: |
       The creator of the package asset.
@@ -90,7 +91,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: PackageLink.PackageAssetName
     summary: |
       The asset name of the package.
@@ -171,7 +173,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: PackageLink.Status
     summary: |
       The status of the package.
@@ -192,7 +195,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: PackageLink.VersionNumber
     summary: |
       Refers to a revision of a specific package.
@@ -211,7 +215,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - AssetRead
 methods: []
 events: []
 callbacks: []

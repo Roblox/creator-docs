@@ -712,7 +712,8 @@ methods:
       for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - AssetRead
   - name: AssetService:GetGamePlacesAsync
     summary: |
       Returns a `Class.StandardPages` object which contains the name and

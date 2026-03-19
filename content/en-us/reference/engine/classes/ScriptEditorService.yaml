@@ -120,7 +120,7 @@ methods:
       - ScriptEditorService-GetScriptDocuments
     parameters: []
     returns:
-      - type: Instances
+      - type: List<ScriptDocument>
         summary: ''
     tags: []
     deprecation_message: ''

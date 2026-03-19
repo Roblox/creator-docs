@@ -109,7 +109,7 @@ methods:
         summary: |
           An input or output pin on this instance
     returns:
-      - type: Instances
+      - type: List<Wire>
         summary: |
           An array of `Class.Wire|Wires`
     tags: []

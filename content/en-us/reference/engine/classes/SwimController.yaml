@@ -14,23 +14,6 @@ descendants: []
 tags: []
 deprecation_message: ''
 properties:
-  - name: SwimController.AccelerationTime
-    summary: ''
-    description: ''
-    code_samples: []
-    type: float
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Movement
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Basic
   - name: SwimController.PitchMaxTorque
     summary: |
       The maximum torque used to rotate to the desired pitch.

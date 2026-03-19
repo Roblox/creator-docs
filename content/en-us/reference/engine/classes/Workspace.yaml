@@ -514,7 +514,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - AvatarAppearance
   - name: Workspace.LuauTypeCheckMode
     summary: ''
     description: ''
@@ -833,7 +834,7 @@ properties:
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Behavior
+    category: Permissions
     serialization:
       can_load: true
       can_save: true
