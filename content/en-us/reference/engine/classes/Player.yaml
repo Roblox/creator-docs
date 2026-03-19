@@ -1986,7 +1986,7 @@ methods:
           will be equipped to the loaded character.
       - name: assetTypeVerification
         type: AssetTypeVerification
-        default:
+        default: Default
         summary: |
           The asset type verification mode.
     returns:
@@ -2031,7 +2031,7 @@ methods:
           will be equipped to the loaded character.
       - name: assetTypeVerification
         type: AssetTypeVerification
-        default:
+        default: Default
         summary: |
           The asset type verification mode.
     returns:

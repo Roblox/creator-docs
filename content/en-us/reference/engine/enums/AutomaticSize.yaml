@@ -32,20 +32,22 @@ items:
     deprecation_message: ''
   - name: X
     summary: |
-      Automatically resize element along X-axis to fit child contents.
+      Automatically resize element along the **X** axis to fit child contents.
     value: 1
     tags: []
     deprecation_message: ''
   - name: 'Y'
     summary: |
-      Automatically resize element along Y-axis to fit child contents. Text
-      Objects will only resize along the Y-axis if TextWrapped is enabled.
+      Automatically resize element along the **Y** axis to fit child contents.
+      Text objects will only resize along the **Y** axis if their `TextWrapped`
+      property is enabled.
     value: 2
     tags: []
     deprecation_message: ''
   - name: XY
     summary: |
-      Automatically resize element along X and Y axes to fit child contents.
+      Automatically resize element along the **X** and **Y** axes to fit child
+      contents.
     value: 3
     tags: []
     deprecation_message: ''

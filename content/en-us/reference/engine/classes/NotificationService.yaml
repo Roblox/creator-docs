@@ -36,7 +36,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
   - name: NotificationService.SelectedTheme
     summary: ''
     description: ''
@@ -53,7 +54,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
 methods: []
 events:
   - name: NotificationService.Roblox17sConnectionChanged
@@ -76,7 +78,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Players
   - name: NotificationService.Roblox17sEventReceived
     summary: ''
     description: ''
@@ -89,5 +92,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Players
 callbacks: []

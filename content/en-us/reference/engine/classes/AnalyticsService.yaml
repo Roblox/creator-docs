@@ -304,6 +304,73 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
+  - name: AnalyticsService:GetPlayerSegmentsAsync
+    summary: |
+      Returns coarse player segment buckets for the current experience.
+    description: |
+      This server-only method returns coarse segment buckets for a player in the
+      current experience. If a cached result is not already available, the
+      method may yield while the engine fetches the segment data. Successfully
+      fetched results are cached per player for the lifetime of the server
+      session.
+
+      If segment data is unavailable, this method does not throw. Instead, it
+      returns `HasData = false` and all enum fields are set to `Unknown`.
+
+      This method throws only when called from the client or when the `player`
+      argument is invalid.
+
+      The returned dictionary has the following structure:
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Description</th>
+      		</tr>
+      	</thead>
+      	<tr>
+      		<td><code>HasData</code></td>
+      		<td>bool</td>
+      		<td>Whether segment data was successfully retrieved for the player.</td>
+      	</tr>
+      	<tr>
+      		<td><code>ActivePayerStatus</code></td>
+      		<td><code>Enum.ActivePayerStatus</code></td>
+      		<td>The player's current payer status bucket for this experience.</td>
+      	</tr>
+      	<tr>
+      		<td><code>WhenUserFirstPlayed</code></td>
+      		<td><code>Enum.WhenUserFirstPlayed</code></td>
+      		<td>When the player first played this experience, represented as a bucket.</td>
+      	</tr>
+      	<tr>
+      		<td><code>PlatformSpenderStatus</code></td>
+      		<td><code>Enum.PlayerPlatformSpenderStatus</code></td>
+      		<td>The player's platform-wide spender status bucket, including whether the player falls outside the active spender bucket.</td>
+      	</tr>
+      </table>
+    code_samples:
+      - AnalyticsService-GetPlayerSegmentsAsync
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: |
+          The player whose segment buckets should be returned.
+    returns:
+      - type: Dictionary
+        summary: |
+          A dictionary containing coarse player segment buckets for the current
+          experience.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Basic
   - name: AnalyticsService:LogCustomEvent
     summary: |
       Logs an event used to track custom metrics of a user in experience.
