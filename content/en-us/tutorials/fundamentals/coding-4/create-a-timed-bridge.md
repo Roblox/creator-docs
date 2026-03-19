@@ -23,7 +23,7 @@ This bridge can be included in any Roblox project with movement-based challenges
 
    <img src="../../../assets/education/coding-4/forLoopBridge_bridgeSetup.png" width="100%" />
 
-2. When inactive, the bridge will be semi-transparent. To do so, select the **Bridge** and change it's properties.
+2. When inactive, the bridge will be semi-transparent. To do so, select the **Bridge** and change its properties.
 
    - **Transparency** = 0.8
    - **CanCollide** = False

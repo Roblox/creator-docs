@@ -190,7 +190,7 @@ Lessons below focus on project-based learning with Constructionist principles. S
   <img src="../../assets/education/build-it-play-it-create-and-destroy/cc2019_thumbnail_312x200.jpg" />
   <h4>Design a city</h4>
   <p>
-  Learn building to make a city for an multiplayer experience.
+  Learn building to make a city for a multiplayer experience.
   </p>
   <a href="../../education/lesson-plans/create-and-destroy-lesson.md">
   <Button variant="contained">View</Button>

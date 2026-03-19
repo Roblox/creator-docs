@@ -210,7 +210,7 @@ Now that the tool script has the playerItems and playerSpaces variables created,
    ```
 
    <Alert severity="info">
-   To access the contents of any value object, type .Value at the end of it. If you just do the object itself, you'll just get it's name.
+   To access the contents of any value object, type .Value at the end of it. If you just do the object itself, you'll just get its name.
    </Alert>
 
 2. In the if statement itself, add to the player's items by typing `playerItems.Value += 1`.

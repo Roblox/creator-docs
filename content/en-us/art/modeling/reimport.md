@@ -57,7 +57,7 @@ In the scenario where a mesh in Blender is renamed from "Mesh1" to "Mesh2", reim
 
 In cases where you may want to use the pivot point of the `Class.MeshPart` and not the `Class.Model`, right-click any `Class.MeshPart` with reimport information and select **Reimport** > **Reimport relative to this**.
 
-**Reimport relative to this** triggers a reimport for the entire model using the pivot point of right-clicked `Class.MeshPart` as an anchor instead of the `Class.Model` pivot point. You can use this for models that have custom pivots by reimporting relative to a mesh that that has not changed position in the 3D file.
+**Reimport relative to this** triggers a reimport for the entire model using the pivot point of right-clicked `Class.MeshPart` as an anchor instead of the `Class.Model` pivot point. You can use this for models that have custom pivots by reimporting relative to a mesh that has not changed position in the 3D file.
 
 ### SurfaceAppearance detection
 

@@ -113,7 +113,7 @@ The `Class.Highlight.FillTransparency|FillTransparency` property sets the visibi
     <figcaption>FillTransparency = 0</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/highlighting-objects/FillTransparency-Half.jpg" alt="A tree mesh with an semi-transparent black fill." />
+    <img src="../assets/ui/highlighting-objects/FillTransparency-Half.jpg" alt="A tree mesh with a semi-transparent black fill." />
     <figcaption>FillTransparency = 0.5</figcaption>
   </figure>
   <figure>

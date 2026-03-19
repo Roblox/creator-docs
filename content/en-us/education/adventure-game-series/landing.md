@@ -82,7 +82,7 @@ Create an adventure game where players explore a world to find items to harvest 
       <td>
       [Adventure Game Example](https://www.roblox.com/games/9544298367/)
 
-      Play an version of the final project to see what you can develop with this series.
+      Play a version of the final project to see what you can develop with this series.
       </td>
 
    </tr>

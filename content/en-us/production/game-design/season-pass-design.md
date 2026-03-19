@@ -115,7 +115,7 @@ Extra attention is needed in implementing the following sections of a season pas
 
 A _final reward_ is the last reward at the end of the season pass. Creating a brand-new asset for the final reward is great option. Additionally, retiring that final reward item after the season is done to make it exclusive to the season pass system creates a stronger incentive and encourages more playtime. Final rewards often define the impact of a season pass, and are pivotal to design correctly in order to incentivize and reward your community.
 
-Although your Tiers UI shows the rewards that players earn, it's good practice to also display any 3D model-based rewards directly, especially if its the final reward. Items like cars, houses, pets, and avatar clothing are much more compelling "in person" than a 2D image in a UI. Making the final reward as tangible and exciting as possible to your players will engage and inspire them throughout the entire season.
+Although your Tiers UI shows the rewards that players earn, it's good practice to also display any 3D model-based rewards directly, especially if it's the final reward. Items like cars, houses, pets, and avatar clothing are much more compelling "in person" than a 2D image in a UI. Making the final reward as tangible and exciting as possible to your players will engage and inspire them throughout the entire season.
 
 <GridContainer numColumns="2">
   <figure>
