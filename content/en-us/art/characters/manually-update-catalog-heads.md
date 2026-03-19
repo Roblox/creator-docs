@@ -32,50 +32,51 @@ Roblox recently updated the dynamic head validation parameters to allow more exi
 1. Open a new Roblox Studio and verify you have the beta feature **glTF Export** enabled (you might need to restart Studio to pick up the new setting)
    1. Verify your beta settings in **File** > **Beta Features**.
 2. Run the following script in the command bar.
+
    1. You have the option to provide either the head id (asset ID) or the bundle id (for a full body bundle) . Just replace `my_asset_id` with the correct ID and remove the leading `--` to run
    2. Uncomment `createExportFromHeadAssetId(your_asset_id)` to retrieve only the head asset
    3. Uncomment `createExportFromBodyBundleId(your_bundle_id)` to retrieve the full body as a bundle (includes the head)
 
-    ```lua
-    local AssetService = game:GetService("AssetService")
-    local Players = game:GetService("Players")
+   ```lua
+   local AssetService = game:GetService("AssetService")
+   local Players = game:GetService("Players")
 
-    local function createExportFromHeadAssetId(assetId: number)
-      local hd = Instance.new("HumanoidDescription")
-      hd.Head = assetId
-      
-      local char = Players:CreateHumanoidModelFromDescriptionAsync(hd, Enum.HumanoidRigType.R15)
-      local headMesh = char.Head :: MeshPart
-      headMesh.Size = headMesh.MeshSize
-      headMesh.CFrame = CFrame.identity
-      headMesh.Locked = false
+   local function createExportFromHeadAssetId(assetId: number)
+     local hd = Instance.new("HumanoidDescription")
+     hd.Head = assetId
 
-      local exportModel = Instance.new("Model", workspace)
-      exportModel.Name = "ExportThisAsGLTF"
-      headMesh.Parent = exportModel
-    end
+     local char = Players:CreateHumanoidModelFromDescriptionAsync(hd, Enum.HumanoidRigType.R15)
+     local headMesh = char.Head :: MeshPart
+     headMesh.Size = headMesh.MeshSize
+     headMesh.CFrame = CFrame.identity
+     headMesh.Locked = false
 
-    local function getOutfitId(bundleInfo)
-      for _, item in pairs(bundleInfo.Items) do
-        if item.Type == "UserOutfit" then
-          return item.Id
-        end
-      end
-      error("Could not find outfit ID")
-    end
-    local function createExportFromBodyBundleId(bundleId: number)
-      local bundleInfo = AssetService:GetBundleDetailsAsync(bundleId)
-      local outfitId = getOutfitId(bundleInfo)
-      local hd = Players:GetHumanoidDescriptionFromOutfitIdAsync(outfitId)
-      local char = Players:CreateHumanoidModelFromDescriptionAsync(hd, Enum.HumanoidRigType.R15)
-      char:PivotTo(CFrame.identity)
-      char.Name = "ExportThisAsGLTF"
-      char.Parent = workspace
-    end
+     local exportModel = Instance.new("Model", workspace)
+     exportModel.Name = "ExportThisAsGLTF"
+     headMesh.Parent = exportModel
+   end
 
-    -- createExportFromHeadAssetId(your_asset_id)
-    -- createExportFromBodyBundleId(your_bundle_id)
-    ```
+   local function getOutfitId(bundleInfo)
+     for _, item in pairs(bundleInfo.Items) do
+       if item.Type == "UserOutfit" then
+         return item.Id
+       end
+     end
+     error("Could not find outfit ID")
+   end
+   local function createExportFromBodyBundleId(bundleId: number)
+     local bundleInfo = AssetService:GetBundleDetailsAsync(bundleId)
+     local outfitId = getOutfitId(bundleInfo)
+     local hd = Players:GetHumanoidDescriptionFromOutfitIdAsync(outfitId)
+     local char = Players:CreateHumanoidModelFromDescriptionAsync(hd, Enum.HumanoidRigType.R15)
+     char:PivotTo(CFrame.identity)
+     char.Name = "ExportThisAsGLTF"
+     char.Parent = workspace
+   end
+
+   -- createExportFromHeadAssetId(your_asset_id)
+   -- createExportFromBodyBundleId(your_bundle_id)
+   ```
 
 3. Once the script runs, you will see a "ExportThisAsGLTF" model in workspace. Right-click and select **Save To Roblox**. This will popup the publish window:
    1. In Content type, select **Avatar Item**.
@@ -102,9 +103,10 @@ Fix your asset in Blender, or preferred 3D modeling software. In many cases, you
 2. Ensure everything you need for the head is present, including the cage, attachment points, facial joints and facial animations.
 3. Roblox Studio flips avatars by 180 degrees on import, so you need to rotate your asset back by 180 in Blender (Hotkeys: <kbd>R</kbd>+<kbd>Z</kbd> then type `180`).
 4. Most often heads fail validation due to cage issues. For example, the cage may be completely inside the head, has incorrect UVs or looks completely misplaced in the model. In most cases we recommend you do not spend time editing the original cage and instead:
+
    1. Delete it from the asset.
    2. Select the cage from the head template in this folder that best matches the shape of your head asset. These are [Roblox provided templates for cages with the correct UV settings](../../assets/art/reference-files/HeadCages.zip).
-   <img src="../../assets/art/avatar/Cage-Template-Lineup.png"/>
+      <img src="../../assets/art/avatar/Cage-Template-Lineup.png"/>
 
 5. Ensure the Blender animation start value is set to 0.
 6. Remove vertex colors. In Blender this can be done by clicking on the mesh and then under the data tab selecting color attributes and removing any that exist.
@@ -115,13 +117,12 @@ Fix your asset in Blender, or preferred 3D modeling software. In many cases, you
 8. Modify your head asset to [pass validation](./head-validation.md):
    1. Align cage eyes and mouth regions to the head.
    2. Ensure your head includes a rig, with poses keyframed and mapped to the FACs standard so that:
-         1.  Eyes must blink.
-         2.  Mouth must open and close.
-         3.  Face must express happy and sad.
-9.  Export your updated head asset to FBX file format using the correct settings explained here (If you have PBR, you may want to use glTF).
-    1.  Setup textures for FBX export (if needed). Blender will import the glTF textures in such a way that they won't be able to be exported in an FBX file by default.
-        1.  To fix this go through each image and save it to your disk locally.
-   <img src="../../assets/art/avatar/Blender-Save-Image-Workaround.png"/>
+      1. Eyes must blink.
+      2. Mouth must open and close.
+      3. Face must express happy and sad.
+9. Export your updated head asset to FBX file format using the correct settings explained here (If you have PBR, you may want to use glTF).
+   1. Setup textures for FBX export (if needed). Blender will import the glTF textures in such a way that they won't be able to be exported in an FBX file by default. 1. To fix this go through each image and save it to your disk locally.
+      <img src="../../assets/art/avatar/Blender-Save-Image-Workaround.png"/>
 
 ## 4. Import your fixed head back into Studio
 
@@ -136,14 +137,21 @@ Import your head back into Studio and verify that it passes validation. If valid
       4. Wait for the Dynamic Head validation result (pass or fail).
       5. **Cancel** the save operation so you don't incur publishing fees at this time.
    2. If your head doesn't pass validation then you need to go back to Blender, Maya and make the appropriate fixes to pass validation.
-3.  If your head passes validation, publish your asset as a Development Item.
-    1.  Select **Save to Roblox** on your asset.
-    2.  Select **Development Item**.
-    3.  Set its **Asset Category** to Model.
-    4.  Save the model to Roblox (no publishing fees are incurred).
-    5.  After saving to Roblox, save the asset ID provided.
-        1.  While you can submit either the head or body asset, there is no distinction between head and body asset when saving as a development item.
-        2.  For submission to the web form, we prefer that you get the asset ID of the head, but you can use either the head or body asset ID and Roblox will replace the head accordingly.
+3. If your head passes validation, publish your asset as a Development Item.
+
+   1. In the Explorer, select the `Class.Model` of your avatar, ensure that it includes the head mesh, face rig, and the cage data.
+      1. If you save the model for the entire character body, the upload process automatically extracts the head data.
+   2. Select **Save to Roblox** on your asset.
+
+      <img src="../../assets/art/avatar/Save-Character-Model.png"/>
+
+   3. Select **Development Item**.
+
+   4. Set its **Asset Category** to Model.
+   5. Save the model to Roblox (no publishing fees are incurred).
+   6. After saving to Roblox, save the asset ID provided.
+      1. While you can submit either the head or body asset, there is no distinction between head and body asset when saving as a development item.
+      2. For submission to the web form, we prefer that you get the asset ID of the head, but you can use either the head or body asset ID and Roblox will replace the head accordingly.
 
 ## 5. Provide the assetID of your updated head
 
