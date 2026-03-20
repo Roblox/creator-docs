@@ -50,11 +50,7 @@ navigation:
     section:
       - title: Ads Manager
         path: /production/promotion/ads-manager
-      - title: Roblox-served ads vs. independent ads
-        path: /production/promotion/advertise-on-roblox
       - title: Immersive ads
         path: /production/monetization/immersive-ads
       - title: Rewarded video ads
         path: /production/promotion/rewarded-video-ads
-      - title: Advertising standards
-        path: /production/promotion/comply-with-advertising-standards

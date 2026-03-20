@@ -37,7 +37,7 @@ There are limits on the number of assets you can upload to Roblox and enable for
   </tr>
   <tr>
     <td>Publishing - Enabling on sale<sup>&dagger;</sup></td>
-    <td>1 per day</td>
+    <td>No limit for paid limiteds. 50 per day for free limiteds.</td>
     <td>No limit</td>
 
   </tr>
@@ -76,7 +76,7 @@ To upload your asset:
 3. In **Submit As**, select **Avatar Asset**.
 4. In the **Asset type** dropdown menu, select the appropriate marketplace asset type. Validation begins upon selection.
    <Alert severity = 'info'>
-    If you don't see this dropdown, your account might not have access to upload assets to the Marketplace. For more information, see [Creator requirements](../marketplace/marketplace-policy.md#creator-requirements).
+   If you don't see this dropdown, your account might not have access to upload assets to the Marketplace. For more information, see [Creator requirements](../marketplace/marketplace-policy.md#creator-requirements).
    </Alert>
 
    <GridContainer numColumns='2'>
@@ -135,7 +135,7 @@ You can access uploaded assets in your [Creator Dashboard](https://create.roblox
 <Alert severity = 'warning'>
   You can't change or modify the asset or thumbnail after upload. If you discover that your item is broken or doesn't work as expected, you might need to remove the item and re-upload a corrected asset.
 
-  If a Roblox update breaks an existing asset, [submit a help ticket](https://www.roblox.com/support) with a link to the broken item and an `.rbxm` of the correct version.
+If a Roblox update breaks an existing asset, [submit a help ticket](https://www.roblox.com/support) with a link to the broken item and an `.rbxm` of the correct version.
 </Alert>
 
 Before publishing your asset, it's important to consider if you want to sell your asset as a Limited or Non-Limited item.
