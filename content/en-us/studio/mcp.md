@@ -45,6 +45,12 @@ The Studio MCP Server runs as a local process on your machine and communicates w
 - `script_search` — Fast fuzzy search against script names. Useful when you know part of a script's name but not its location. Returns up to 10 results.
 - `script_grep` — Searches for a string pattern across all script contents in the game. Results are capped at 50 matches.
 
+**Asset & Content Generation**
+
+- `generate_mesh` — Generate a 3D textured single mesh.
+- `generate_material' — Generate a custom material/texture.
+- `insert_from_creator_store' — Insert pre-built models from the Roblox marketplace.
+
 **Exploring the Data Model**
 
 - `search_game_tree` — Explores the game's instance hierarchy as a flat JSON array. Supports filtering by path, instance type (with `IsA()` checks), and keywords. Configurable traversal depth (default 3, max 10).
