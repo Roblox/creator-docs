@@ -160,7 +160,7 @@ Claude Desktop manages MCP servers through a JSON configuration file. Use the fo
 1. In Claude desktop, navigate to **Claude** > **Settings...**.
 2. Navigate to the **Developer** tab and select **Edit Config**.
    1. If pressing that button produces errors, it's possible that Claude Desktop 'hid' the configuration JSON in a directory like `C:\Users\<username>\AppData\Local\Packages\Claude_????\LocalCache\Roaming\Claude\claude_desktop_config.json`
-3. Add the server configuration from [Connecting Your Client](#connecting-your-client) to the `claude_desktop_config.json`.
+3. Add the server configuration from [Connecting Your Client](#connect-your-client) to the `claude_desktop_config.json`.
 
 4. Restart Claude Desktop by completely quitting and relaunching. On restart, you should see a MCP server indicator in the bottom-right corner of the chat input field.
 5. Click the hammer icon below the chat input to access your tools and verify Roblox Studio has been added.
@@ -261,7 +261,7 @@ Antigravity supports MCP servers through its built-in MCP store and raw config e
 
 ### Other MCP clients
 
-The Studio MCP server works with **any client that supports stdio transport**. Use the configuration JSON or CLI command from the [Connecting Your Client](#connecting-your-client) section and consult your client's documentation for where to place the configuration. Restart the client to load the new configuration.
+The Studio MCP server works with **any client that supports stdio transport**. Use the configuration JSON or CLI command from the [Connect your client](#connect-your-client) section and consult your client's documentation for where to place the configuration. Restart the client to load the new configuration.
 
 Consult your client's documentation for where to place the configuration, then add a server entry with the command and argument above. Restart the client to load the new configuration.
 

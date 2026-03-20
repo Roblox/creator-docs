@@ -221,7 +221,7 @@ To be considered for the program, submitted events must meet the following crite
 
 - The submitting creator must be **13 years of age** or older with an email address linked to their account.
 - The submission must represent a **time-limited event or significant experience update** (for example, seasonal content, feature update, collaboration, anniversary, or live moment).
-- The event must be **submitted at least 14 days prior to the event start** and must be set to public and active while the event is live.
+- The event must be **submitted at least 7 days prior to the event start** and must be set to public and active while the event is live.
 - All event metadata, including title, description, schedule, and thumbnails, must be **complete, accurate, and aligned** with the event's content.
 - The event and its assets must comply with Roblox [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) and content guidelines.
 - Selections are based on performance signals (DAU growth, playtime, retention, monetization), current trends, and seasonal alignment.
