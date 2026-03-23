@@ -92,6 +92,7 @@ To create an ad campaign:
 2. Under **Experience**:
    1. Select the experience you want players to join when they click on your ad.
    2. Enter a name for the campaign.
+   3. <Chip label="OPTIONAL" size="small" variant="outlined" /> Select **Advanced options** to send players to a specific place in your experience when they click your ad. For more information, see [Advanced join options](#advanced-join-options).
 3. Under **Goal**, select a goal for the ad campaign:
 
    <table>
@@ -181,6 +182,53 @@ After a campaign is published, you can edit some fields while others are fixed:
 You can cancel a campaign up to 6 hours before the campaign's scheduled start time.
 
 Cancelling a campaign automatically cancels any associated ads, returns any ad credits you spent back to your account, and prevents your credit or debit card from being charged.
+
+### Advanced join options
+
+Advanced join options let you control where users land in your experience when they click your ad. You can also include launch data to identify which players joined through a specific ad campaign, allowing you to personalize a player's experience or trigger custom effects when they join.
+
+<Alert severity="info">
+  Launch data appears in the join URL and isn’t hidden. Users can share the URL and join your experience with the same launch data, so joins using your campaign’s launch data might not exactly match your experience’s sponsored tile play metrics.
+</Alert>
+
+By identifying which players joined through a specific ad, you can:
+
+- **Tailor onboarding**: Adjust the player's introduction based on the audience targeted by the ad. For example, players from a **New Players** campaign can be shown tutorial steps, while **Lapsed Players** can receive a "Welcome back" message.
+- **Customize spawn locations**: Spawn players in a location related to the ad they clicked instead of the default spawn point. For example, if the ad promotes a specific map, players can spawn at the beginning of that map.
+- **Offer ad-only rewards**: Grant small cosmetic items or limited-time currency boosts to players who join through an ad. Exclusive rewards are a good way to increase campaign conversion.
+
+To customize your campaign's join options:
+
+1. During campaign creation, click **Advanced options** to open the **Advanced join options** panel.
+2. Select the start place you want to send players to when they click your ad. If you don't select a start place, players are sent to your experience's default spawn location.
+3. Set launch data parameters.
+4. Use the launch URL to test the join implementation before launching the campaign.
+
+<Alert severity="info">
+  Both selecting a start place and setting launch data parameters are optional and independent of each other. You can customize a player's start place without using launch data, or use launch data to run custom logic while sending players to the default start place.
+</Alert>
+
+If you set launch data parameters, you must open Roblox Studio and update `Class.Player.GetJoinData|GetJoinData` in your experience's `onPlayerAdded` function to retrieve the launch data. You can then check whether a player joined through the specific ad campaign associated with those parameters and run custom logic, such as granting rewards or triggering other in-game effects.
+
+The following example updates the `onPlayerAdded` function to retrieve and check the launch data parameters you defined when creating the campaign.
+
+```lua
+local Players = game:GetService("Players")
+
+local function onPlayerAdded(player)
+    -- Retrieve the join data
+    local launchData = player:GetJoinData().LaunchData
+    
+    -- Check for the launch data parameters you defined when creating the campaign in Ads Manager
+    if launchData then
+        if launchData == "AdLaunchData" then
+            -- Custom logic to tailor onboarding, offer rewards, trigger effects, etc
+        end
+    end
+end
+
+Players.PlayerAdded:Connect(onPlayerAdded)
+```
 
 ## Reporting
 
