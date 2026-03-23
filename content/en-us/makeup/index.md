@@ -4,38 +4,44 @@ description: Makeup is a cosmetic look made up of multiple facial textures and o
 ---
 
 <Alert severity ='warning'>
-This feature is currently in beta. Enable it through **File** ⟩ **Beta Features** ⟩ **Avatar Makeup**. The information provided is subject to change and is intended to prepare creators for the final release. For the latest news and updates, see the [DevForum announcement](https://devforum.roblox.com/t/studio-beta-introducing-avatar-makeup/3973764).
+This feature is currently in beta. Enable it through **File** ⟩ **Beta Features** ⟩ **Avatar Makeup**. The information in this guide is subject to change and is intended to prepare creators for the final release. For the latest news and updates, see the [DevForum announcement](https://devforum.roblox.com/t/studio-beta-introducing-avatar-makeup/3973764).
 </Alert>
-**Makeup** is a cosmetic look available for Roblox characters that allows additional expression, allowing you to add elements like eyeshadow, lipstick, scars, glitter, and blush. This feature uses a combination of specialized facial textures and optional eyebrow and eyelash mesh assets.
 
-<center>
+**Makeup** is a cosmetic `Class.Decal` object for Roblox characters that allows you to add elements like eyeshadow, lipstick, scars, glitter, and blush to NPCs and avtars for additional expression. This feature uses a combination of specialized facial textures and optional eyebrow and eyelash mesh assets.
+
+<GridContainer numColumns="3">
 <figure>
-<img src="../assets/makeup/Makeup-Full-Render.png" width="55%" />
-<figcaption><center>A character model head, with a smokey eye effect, natural lipstick, and cheek and forehead adornments. <br />You can [download](#resources) this template and a test place file.</center></figcaption>
+<img src="../assets/makeup/Makeup-Example-1.png"/>
 </figure>
-</center>
+<figure>
+<img src="../assets/makeup/Makeup-Example-2.png"/>
+</figure>
+<figure>
+<img src="../assets/makeup/Makeup-Example-3.png"/>
+</figure>
+</GridContainer>
 
 ## Components of makeup
 
-Makeup is made up of multiple textures baked into a `Class.Decal` that you can apply to a face of a character. There are three primary regions of the face (eyes, lips, face/cheeks) that you can apply textures to. Each region has some overlapping surfaces with other regions.
+Makeup is made up of multiple textures baked into a `Class.Decal` object that you can apply to a face of a character. There are three primary regions of the face that you can apply textures to: the eye region, lips region, and face/cheek region. Each region has overlapping surfaces with other regions.
 
 <GridContainer numColumns="3">
-  <figure><img src="../assets/makeup/Makeup-Eye-Section.png" /><figcaption>Eye region</figcaption></figure>
-  <figure><img src="../assets/makeup/Makeup-Mouth-Section.png" /><figcaption>Lips region</figcaption></figure>
-  <figure><img src="../assets/makeup/Makeup-Face-Section.png" /><figcaption>Face/cheek region</figcaption></figure>
+  <figure><img src="../assets/makeup/Makeup-Eye-Region.png" /><figcaption>Eye region</figcaption></figure>
+  <figure><img src="../assets/makeup/Makeup-Lips-Region.png" /><figcaption>Lips region</figcaption></figure>
+  <figure><img src="../assets/makeup/Makeup-Face-Region.png" /><figcaption>Face/cheek region</figcaption></figure>
 </GridContainer>
 
-You can optionally include eyebrows and eyelashes with makeup. These are `Class.Model` containing `Class.MeshPart` objects with skinning and caging data.
+You can include eyebrows and eyelashes with makeup. These are `Class.Model` containing `Class.MeshPart` objects with skinning and caging data.
 
 <GridContainer numColumns="2">
   <figure><img src="../assets/makeup/Makeup-Eye-Acc.png" /><figcaption>Eyebrow and eyelash mesh objects</figcaption></figure>
   <figure><img src="../assets/makeup/Makeup-Eye-Accessory-Datamodel.png" /><figcaption>Eyebrow and eyelash data model</figcaption></figure>
 </GridContainer>
 
-You can quickly apply any makeup `Decal` objects and accessories by dragging them from the imported reference head into the appropriate character's `Makeup` or `Accessories` folder.
+You can quickly apply any makeup `Class.Decal` objects and accessories by dragging them from the imported reference head into the appropriate character's **Makeup** or **Accessories** folder.
 
 <GridContainer numColumns="2">
-  <figure><img src="../assets/makeup/Imported-DataModel.png" /><figcaption>On import, the decals are automatically generated within the **imported model**.</figcaption></figure>
+  <figure><img src="../assets/makeup/Imported-DataModel.png" width="76%" /><figcaption>On import, the decals are automatically generated within the **imported model**.</figcaption></figure>
   <figure><img src="../assets/makeup/Makeup-Character-Folders.png" /><figcaption>In the demo place, move the generated decals into the character's **Makeup folder** to apply makeup.</figcaption></figure>
 </GridContainer>
 
@@ -45,61 +51,66 @@ Makeup assets intended for the Marketplace can include up to 6 total decals, com
 
 ### Makeup template
 
-Each makeup template resource, available in the [resources](#resources) section later in this guide, provides a 3D model asset that allows creators to quickly import premade makeup assets into their own 3D modeling tools where you can modify, create, and preview your own makeup assets.
+Each [makeup template resource](#resources) in this guide provides a 3D model asset that allows you to quickly import premade makeup assets into your own 3D modeling tools, and modify, create, and preview your own makeup assets.
 
 <GridContainer numColumns="2">
-  <figure><img src="../assets/makeup/Makeup-Full-Render.png" /><figcaption>Reference template render</figcaption></figure>
-  <figure><img src="../assets/makeup/Makeup-Blender-Datamodel.png" /><figcaption>Reference template data model</figcaption></figure>
+  <figure><img src="../assets/makeup/Makeup-Full-Render.png" width="93%" /><figcaption>Reference template render</figcaption></figure>
+  <figure><img src="../assets/makeup/Makeup-Blender-Datamodel.png" width="90%" /><figcaption>Reference template data model</figcaption></figure>
 </GridContainer>
 
 The makeup template includes the following:
 
-- Target head mesh object and target head cage mesh object.
-- Eye region mesh, fully linked to reference PBR textures
-- Lip region mesh, fully linked to reference PBR textures
-- Multiple face region mesh objects, fully linked to reference PBR textures
-- Eyebrows and eyelash mesh objects.
+- Target head mesh object or head cage mesh object
+- Eye, lip, and multiple face region mesh objects, fully linked to reference PBR textures
+- Eyebrows and eyelash mesh objects
 
 For a general workflow on authoring makeup using the template, see the next section.
 
 ## Creation process
 
-<Alert severity ='info'>
-Makeup is currently in beta. Check out the [DevForum announcement](https://devforum.roblox.com/t/studio-beta-introducing-avatar-makeup/3973764) for the latest information on additional features, tools, and details regarding creating or implementing makeup.
+<Alert severity ='warning'>
+This process assumes that you are proficient in 3D modeling software, such as Blender or Maya, and that you understand how to update, replace, export, save, and alter materials within your modeling tool and any additional texturing software or plugins.
 </Alert>
 
 <GridContainer numColumns="3">
   <figure><img src="../assets/makeup/Creation-Steps-1.png" /><figcaption>Download the 3D reference template head and texture templates applicable to your workflow.</figcaption></figure>
   <figure><img src="../assets/makeup/Creation-Steps-2.png" /><figcaption>Modify the texture images in the tools of your choice.</figcaption></figure>
-  <figure><img src="../assets/makeup/Creation-Steps-3.png" /><figcaption>In Blender/Maya, replace the textures in the template with your new textures and export. </figcaption></figure>
+  <figure><img src="../assets/makeup/Creation-Steps-3.png" /><figcaption>In Blender or Maya, replace the textures in the template with your new textures and export. </figcaption></figure>
 </GridContainer>
 
-While you can easily swap decal images in Studio to make a quick change to a character's makeup, the following instructions is a best practice for implementing PBR-based textures into Roblox makeup at scale. This process requires:
+While you can easily swap decal images in Studio to make a quick change to a character's makeup, the following instruction is best practice for implementing PBR-based textures into Roblox makeup at scale. This process requires:
 
 - The [Makeup test place and template files](#resources)
-- A 3D modeling tool such as [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview)
+- A 3D modeling tool such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview)
 - Any PBR texturing software, such as [Substance Painter](https://www.adobe.com/products/substance3d/apps/painter.html), [Materialize](http://boundingboxsoftware.com/materialize/index.php), or plugins like [Ucupaint](https://extensions.blender.org/add-ons/ucupaint/) (Blender).
 
-<Alert severity ='warning'>
-This process assumes a proficiency in 3D modeling software such as Blender or Maya and understand how to update, replace, export, save, and alter materials within your modeling tool and any additional texturing software or plugins.
-
-As always with 3D art and creation workflows, there are many ways to achieve a specific goal and that is no different for makeup and your own PBR publishing flow.
-</Alert>
+As always with 3D art and creation workflows, there are many ways to achieve a specific goal, and the makeup and PBR publishing flow is no exception. It's recommended to try the workflow in this guide first, then adjust as necessary for your own creation requirements. To create makeup:
 
 1. Download a [reference template head](#resources) and open it in the general modeling software of your choice.
-   1. You can choose between a **reference mesh** and **reference cage** templates. The authoring flow is the same between these two, but **reference mesh** is often easier for artists to visualize the applicable region of the makeup texture.
 2. Using your texturing tools or an image editing software, modify the texture images associated with the different regions: `TransferTexture_Eyes`, `TransferTexture_Face`, or `TransferTexture_Lips`.
-3. When you've created your new texture images, use Blender or Maya to replace the existing file textures in the template.
-4. Export the entire template file as a `.fbx`or `.gltf`. See [Export specifications](../art/modeling/export-requirements.md) for additional export instructions from Maya or Blender.
-5. [Import](./import.md) the template file into Studio. Studio should automatically detect your mesh object names and associated textures and generate `Decal` objects.
+3. When you've created your new texture images, use Blender or Maya to reassign the existing file textures in the template. For more information, see [Reassign textures](./reassign-textures.md).
+4. Review [Face caging best practices](../art/characters/face-caging-best-practices.md) for guidance on how to adjust face cages so that your makeup displays correctly for your use case.
+5. Export the entire template file as a `.fbx`or `.gltf`. All 3D modeling [export requirements](../art/modeling/export-requirements.md) apply, but there are a few makeup-specific settings you must configure:
 
-   <img src="../assets/makeup/Imported-DataModel.png" />
+   - If you are using Blender,
+     1. In the export file brower window, navigate to the **Include** section, then enable the **Custom Properties** toggle for makeup UV data transfer data purposes.
+     1. In the **Armature** section, enable **Only Deform Bones** to ensure your export file includes skinning data for eyebrows and eyelashes.
+
+       <figure><img src="../assets/makeup/Blender-MakeupExport.png" /><figcaption>All necessary Blender export settings for makeup</figcaption></figure>
+
+   - If you are using Maya, in the export file brower window, navigate to the **Deformed Models** section, then enable the **Skins** toggle to ensure your export file includes skinning data for eyebrows and eyelashes.
+
+       <img src="../assets/makeup/Maya-MakeupExport.png" />  
+
+6. [Import](./import.md) the template file into Studio. Studio automatically detects your mesh object names and associated textures and generate `Decal` objects.
+
+   <img src="../assets/makeup/Imported-DataModel.png" width="30%" />
   
-6. Apply any makeup decals or eyebrow and eyelash accessories to characters in the test place by dropping makeup assets in the appropriate character's `Makeup` or `Accessories` folder.
+7. Apply any makeup decals or eyebrow and eyelash accessories to characters in the test place by dropping makeup assets in the appropriate character's `Makeup` or `Accessories` folder.
 
-   <img src="../assets/makeup/Makeup-Character-Folders.png" />
+   <img src="../assets/makeup/Makeup-Character-Folders.png" width="35%" />
 
-7. Click the **Play** button, then navigate to the character with new makeup assets to preview.
+8. Click the **Play** button, then navigate to the character with new makeup assets to preview.
 
 ## Resources
 
@@ -272,13 +283,13 @@ A comprehensive `.zip` folder of `.fbx` and `.gltf` assets, including heads with
         <center>Reference place file (download)</center>
         <figure>
           <center>
-            <img src="../assets/art/Generic-Icon.png" width="100%" />
+            <img src="../assets/makeup/Makeup-Experience-Thumbnail.png" width="100%" />
           </center>
         </figure>
         <figure>
           At this time, you can only test makeup on the downloadable placefile.
           <br />
-          In Github, select the download icon on the right-side to download the 'MakeupBeta.zip'.
+          In Github, select the download icon on the right-side to download the <code>MakeupBeta.zip</code> file.
         </figure>
       </CardContent>
       <CardActions style={{ width: '100%' }}>
