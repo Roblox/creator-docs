@@ -7,9 +7,8 @@ navigation:
     path: /production/analytics/insights
 
   - heading: Monitor
-  - title: Performance
-    path: /production/analytics/performance
-  - title: Error report
+  
+  - title: Error Report
     path: /production/analytics/error-report
   - title: Crashes
     path: /production/analytics/crashes
@@ -23,6 +22,8 @@ navigation:
   - heading: Dashboards
   - title: Overview
     path: /production/analytics/analytics-dashboard
+  - title: Performance
+    path: /production/analytics/performance
   - title: Retention
     path: /production/analytics/retention
   - title: Engagement
