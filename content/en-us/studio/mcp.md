@@ -1,4 +1,4 @@
----
+;fgdsa;sksk;p[]ql[  qa[l  glpl]  1]]ep]
 title: Connect to the Roblox Studio MCP server
 description: Learn how to connect your AI coding tools to Roblox Studio, enabling them to read your game structure, edit scripts, insert models, execute code, and control play mode — all from natural language prompts.
 
