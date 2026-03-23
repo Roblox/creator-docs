@@ -5,8 +5,12 @@
 name: MakeupDescription
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Describes the appearance of a makeup item for the `Class.HumanoidDescription`.
+description: |
+  `MakeupDescription` is an object that stores the description for a makeup
+  item. It is meant to be placed underneath a `Class.HumanoidDescription` in
+  order to work with `Class.Humanoid:ApplyDescriptionAsync()`.
 code_samples: []
 inherits:
   - Instance
@@ -15,8 +19,12 @@ tags: []
 deprecation_message: ''
 properties:
   - name: MakeupDescription.AssetId
-    summary: ''
-    description: ''
+    summary: |
+      The asset ID that should be applied when applying this
+      `Class.MakeupDescription`.
+    description: |
+      The asset ID that should be applied when applying this
+      `Class.MakeupDescription`.
     code_samples: []
     type: int64
     tags: []
@@ -32,8 +40,14 @@ properties:
     capabilities:
       - AvatarAppearance
   - name: MakeupDescription.Instance
-    summary: ''
-    description: ''
+    summary: |
+      A reference to the `Class.Instance` that should be used when applying this
+      `Class.MakeupDescription`.
+    description: |
+      A reference to the `Class.Instance` that should be used when applying this
+      `Class.MakeupDescription`. This property can be used instead of
+      `Class.MakeupDescription.AssetId|AssetId` to apply makeup without
+      uploading it to the platform.
     code_samples: []
     type: Instance
     tags: []
@@ -49,8 +63,10 @@ properties:
     capabilities:
       - AvatarAppearance
   - name: MakeupDescription.MakeupType
-    summary: ''
-    description: ''
+    summary: |
+      The `Enum.MakeupType` of the makeup item referred to by this description.
+    description: |
+      The `Enum.MakeupType` of the makeup item referred to by this description.
     code_samples: []
     type: MakeupType
     tags: []
@@ -66,8 +82,13 @@ properties:
     capabilities:
       - AvatarAppearance
   - name: MakeupDescription.Order
-    summary: ''
-    description: ''
+    summary: |
+      The layering sort order for the makeup item.
+    description: |
+      The sort order used when layering this makeup item relative to other
+      makeup items. Lower values are applied first, with higher values rendered
+      on top. If the same ordered values is used, the tie breaker will be the
+      AssetID.
     code_samples: []
     type: int
     tags: []
@@ -84,8 +105,14 @@ properties:
       - AvatarAppearance
 methods:
   - name: MakeupDescription:GetAppliedInstance
-    summary: ''
-    description: ''
+    summary: |
+      Returns the applied makeup `Class.Instance`.
+    description: |
+      Returns the applied makeup `Class.Decal` if this `Class.MakeupDescription`
+      is the child of an applied `Class.HumanoidDescription` parented to a
+      `Class.Humanoid`. However, if multiple `Class.MakeupDescription` exist in
+      the parented `Class.MakeupDescription`, they will be composed into a
+      single makeup `Class.Decal`.
     code_samples: []
     parameters: []
     returns:

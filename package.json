@@ -9,6 +9,7 @@
     "npm": "^10.9.0"
   },
   "scripts": {
+    "ai-review": "npx tsx tools/ai-editorial-review/main.ts",
     "check": "npx tsx tools/checks/main.ts",
     "checks": "npx tsx tools/checks/main.ts",
     "redirects": "npx tsx tools/redirects/main.ts",
@@ -80,6 +81,7 @@
     "markdownlint-cli2": "^0.19.0",
     "mdx-bundler": "^9.2.1",
     "npm-run-all": "^4.1.5",
+    "openai": "^4.77.0",
     "pluralize": "^8.0.0",
     "prettier": "^2.8.8",
     "react": "^18.3.1",

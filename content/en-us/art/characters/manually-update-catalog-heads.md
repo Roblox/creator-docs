@@ -129,15 +129,19 @@ Fix your asset in Blender, or preferred 3D modeling software. In many cases, you
 Import your head back into Studio and verify that it passes validation. If validation fails, check the error messages and address the issues in your 3D modeling software again. If validation passes, use the following steps to upload as a **Development Item** (not Avatar item).
 
 1. Import the FBX/glTF file with your (fixed) head asset back into Studio.
-2. Make sure your head asset passes validation.
+
+   1. Your fixed head must contain: head mesh, cage mesh, face rig, and updated textures (if you modified them).
+   2. Later, you will save these assets as a `Class.Model` in Studio (not as an individual asset such as the head mesh).
+
+1. Make sure your head asset passes validation.
    1. The easiest way to accomplish this is:
       1. Select **Save to Roblox** on your asset.
       2. Select **Avatar Item**.
       3. Set its **Asset Category** to Head.
       4. Wait for the Dynamic Head validation result (pass or fail).
       5. **Cancel** the save operation so you don't incur publishing fees at this time.
-   2. If your head doesn't pass validation then you need to go back to Blender, Maya and make the appropriate fixes to pass validation.
-3. If your head passes validation, publish your asset as a Development Item.
+   2. If your head doesn't pass validation then you need to go back to Blender or Maya and make the appropriate fixes to pass validation.
+1. If your head passes validation, publish your asset as a Development Item.
 
    1. In the Explorer, select the `Class.Model` of your avatar, ensure that it includes the head mesh, face rig, and the cage data.
       1. If you save the model for the entire character body, the upload process automatically extracts the head data.
@@ -148,8 +152,10 @@ Import your head back into Studio and verify that it passes validation. If valid
    3. Select **Development Item**.
 
    4. Set its **Asset Category** to Model.
-   5. Save the model to Roblox (no publishing fees are incurred).
-   6. After saving to Roblox, save the asset ID provided.
+   5. Set Asset Privacy to **Public**.
+      1. If you are enrolled in **Asset Privacy beta**, disable the beta before uploading your fixed asset.
+   6. Save the model to Roblox (no publishing fees are incurred).
+   7. After saving to Roblox, save the asset ID provided.
       1. While you can submit either the head or body asset, there is no distinction between head and body asset when saving as a development item.
       2. For submission to the web form, we prefer that you get the asset ID of the head, but you can use either the head or body asset ID and Roblox will replace the head accordingly.
 
