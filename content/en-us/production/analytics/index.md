@@ -3,11 +3,13 @@ title: Analytics
 description: An overview of analytics features to track an experience's growth, retention, and other metrics.
 ---
 
-Roblox offers a variety of analytics features to help you chart your experience's growth, track user behavior and retention, and find opportunities for optimization. You can use analytics to understand what actions you can take to grow your experience.
+Roblox offers a variety of analytics features to help you chart your experience's growth, technical performance, track user behavior and retention, and find opportunities for optimization. You can use analytics to understand what actions you can take to grow your experience.
+
+If this is your first time engaging with analytics on Roblox, see [Get started with analytics](./get-started.md).
 
 ## Grow your experience with analytics
 
-Consider following this 3-step plan to use analytics to grow your experience:
+Analytics is primarily used to understand your users engagement with your experience. Consider following this 3-step plan to use analytics to grow your experience:
 
 <h4>Step 1: Optimize retention, engagement, and monetization</h4>
 

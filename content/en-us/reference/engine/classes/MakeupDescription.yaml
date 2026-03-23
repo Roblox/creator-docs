@@ -86,9 +86,8 @@ properties:
       The layering sort order for the makeup item.
     description: |
       The sort order used when layering this makeup item relative to other
-      makeup items. Lower values are applied first, with higher values rendered
-      on top. If the same ordered values is used, the tie breaker will be the
-      AssetID.
+      makeup items of the same `Class.MakeupDescription.MakeupType|MakeupType`.
+      Lower values are applied first, with higher values rendered on top.
     code_samples: []
     type: int
     tags: []
@@ -108,11 +107,9 @@ methods:
     summary: |
       Returns the applied makeup `Class.Instance`.
     description: |
-      Returns the applied makeup `Class.Decal` if this `Class.MakeupDescription`
-      is the child of an applied `Class.HumanoidDescription` parented to a
-      `Class.Humanoid`. However, if multiple `Class.MakeupDescription` exist in
-      the parented `Class.MakeupDescription`, they will be composed into a
-      single makeup `Class.Decal`.
+      Returns the applied makeup `Class.Instance` if this
+      `Class.MakeupDescription` is the child of an applied
+      `Class.HumanoidDescription` parented to a `Class.Humanoid`.
     code_samples: []
     parameters: []
     returns:
