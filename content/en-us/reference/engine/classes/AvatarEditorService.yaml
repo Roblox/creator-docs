@@ -735,7 +735,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
+      - AssetRead
   - name: AvatarEditorService:GetInventory
     summary: |
       Returns an `Class.InventoryPages` object with information about owned

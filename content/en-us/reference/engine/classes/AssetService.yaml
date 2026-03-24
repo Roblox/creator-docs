@@ -260,7 +260,7 @@ methods:
         summary: |
           A tuple containing an `Enum.CreateContentResult` indicating the
           success or failure of the request, and the resulting
-          `Class.DataModel`-scoped `ContentSourceType.Opaque`
+          `Class.DataModel`-scoped `Enum.ContentSourceType|Opaque`
           `Datatype.Content`.
     tags:
       - Yields
