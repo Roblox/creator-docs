@@ -118,3 +118,15 @@ Avatar items you've sold automatically appear within the **Avatar Items** tab. H
 ### Track user acquisition
 
 The **Share Links** tab provides information about the **Link Visits** metric, which tracks how many users have arrived on your experience details page by clicking on the share link you created.
+
+## Access analytics in-experience
+
+The `Class.AnalyticsService.GetPlayerSegmentsAsync|AnalyticsService:GetPlayerSegmentsAsync()` method lets you query player analytics data directly in your experience at runtime. This enables you to tailor gameplay, onboarding, and monetization opportunities for each individual player based on characteristics, or **segments**, such as their spending behavior or overall length of time spent in your experience.
+
+By retrieving a player's segment information in-experience, you can dynamically adjust UI, offers, and gameplay systems to better match the player's profile and stage of engagement. For example, you can:
+
+- **Adjust store offerings by payer status** - Present store items that better match a player's purchase history and stage of progression. For example, players who haven't spent Robux yet might see lower-cost items that support early gameplay, while players who have previously purchased may see bundle options or broader upgrades.
+
+- **Adapt onboarding and progression using account age** - Newer players, such as those within their first 30 days of playing your experience, can receive additional tutorials, tooltips, and simplified content. You can also direct more experienced players toward advanced systems such as events, PvP areas, or end-game content.
+
+For implementation details, code samples, and the full list of available segment dimensions, see `Class.AnalyticsService:GetPlayerSegmentsAsync`.

@@ -58,7 +58,9 @@ description: |
         "Id": 0,
         "Name": "string",
         "Type": "Asset",
-        "AssetType": 29
+        "AssetType": "string",
+        "SupportsHeadShapes": false,
+        "Owned": false
       }
     ],
     "IsRecolorable": false,
@@ -85,7 +87,9 @@ description: |
     "CreatorType": "User",
     "CreatorTargetId": 0,
     "CreatorName": "string",
-    "CreatorHasVerifiedBadge": false
+    "CreatorHasVerifiedBadge": false,
+
+    "SupportsHeadShapes": false
   }
   ```
 
@@ -114,6 +118,11 @@ description: |
       <td><code>AssetType</code></td>
       <td>string</td>
       <td>The asset type. Corresponds to <code>Enum.AvatarAssetType</code> values (e.g., <code>"Hat"</code>, <code>"Shirt"</code>). Only present if <code>ItemType</code> is <code>"Asset"</code>.</td>
+    </tr>
+    <tr>
+      <td><code>SupportsHeadShapes</code></td>
+      <td>boolean</td>
+      <td>Whether the asset supports head shape swapping. Only present if <code>AssetType</code> is <code>"DynamicHead"</code>.</td>
     </tr>
     <tr>
       <td><code>BundleType</code></td>
@@ -178,11 +187,15 @@ description: |
     </tr>
     <tr>
       <td colspan="2"></td>
-      <td><code>AssetType</code>: The asset type as an integer. Corresponds to <code>Enum.AvatarAssetType</code>.</td>
+      <td><code>AssetType</code>: The asset type as a string. Corresponds to <code>Enum.AvatarAssetType</code> values (e.g., <code>"Hat"</code>, <code>"DynamicHead"</code>).</td>
     </tr>
     <tr>
       <td colspan="2"></td>
-      <td><code>Owned</code>: Whether the bundled item is owned by the current user. Only present in <code>Class.AvatarEditorService:GetItemDetailsAsync()</code>.</td>
+      <td><code>SupportsHeadShapes</code>: Whether the asset supports head shape swapping. Only present if <code>AssetType</code> is <code>"DynamicHead"</code>.</td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td><code>Owned</code>: Whether the bundled item is owned by the current user.</td>
     </tr>
     <tr>
       <td><code>IsRecolorable</code></td>
@@ -440,17 +453,26 @@ methods:
     capabilities:
       - AvatarAppearance
   - name: AvatarEditorService:ConformToAvatarRulesAsync
-    summary: ''
-    description: ''
+    summary: |
+      Returns a copy of the given `Class.HumanoidDescription` that conforms to
+      the platform Avatar rules.
+    description: |
+      This method also remaps classic face and classic head assets to their
+      corresponding Dynamic Head asset IDs, with the appropriate
+      `Class.BodyPartDescription.HeadShape|HeadShape` pre-applied. This
+      remapping happens automatically and requires no code changes.
     code_samples: []
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
         default:
-        summary: ''
+        summary: |
+          The `Class.HumanoidDescription` to conform.
     returns:
       - type: HumanoidDescription
-        summary: ''
+        summary: |
+          A new `Class.HumanoidDescription` that conforms to the platform Avatar
+          rules.
     tags:
       - Yields
     deprecation_message: ''
@@ -683,6 +705,37 @@ methods:
     capabilities:
       - Players
       - AssetRead
+  - name: AvatarEditorService:GetHeadShapesAsync
+    summary: |
+      Returns an array of head shape names that the `Class.Players.LocalPlayer`
+      owns.
+    description: |
+      Each head shape corresponds to a classic head owned by the user and can be
+      applied to any Dynamic Head that supports shape swapping (see
+      `Class.BodyPartDescription.HeadShape`).
+
+      This method requires the user to have accepted the
+      `Class.AvatarEditorService:PromptAllowInventoryReadAccess()` prompt.
+    code_samples:
+      - getting-owned-head-shapes
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          An array of strings, each identifying a head shape owned by
+          `Class.Players.LocalPlayer`. Possible values include:
+          `"RobloxClassic"`, `"Blockhead"`, `"Cheeks"`, `"Chiseled"`,
+          `"CoolThing"`, `"EraserHead"`, `"FatHead"`, `"FlatTop"`,
+          `"GoldenKorbloxGeneral"`, `"GoldenMrRobot"`, `"KnightOfChivalry"`,
+          `"KnightOfCourage"`, `"ManHead"`, `"MercilessNinja"`, `"Narrow"`,
+          `"Paragon"`, `"Peabrain"`, `"Perfection"`, `"Roll"`, `"Roundy"`,
+          `"RoxBox"`, `"TheEngineer"`, `"Trim"`, `"WomanHead"`.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: AvatarEditorService:GetInventory
     summary: |
       Returns an `Class.InventoryPages` object with information about owned
@@ -885,10 +938,11 @@ methods:
             "AssetType": {
               "Id": 31,
               "Name": "RightLeg"
-            }
+            },
             "CurrentVersionId": 16447385805,
             "Id": 11584239464,
-            "Name": "Anime Female - Right Leg"
+            "Name": "Anime Female - Right Leg",
+            "SupportsHeadShapes": false
           }
         ],
         "BodyColors": {
@@ -1172,7 +1226,9 @@ methods:
                 "Owned": true,
                 "Id": 0,
                 "Name": "string",
-                "Type": "string"
+                "Type": "string",
+                "AssetType": "string",
+                "SupportsHeadShapes": false
               }
             ],
             "Creator": {

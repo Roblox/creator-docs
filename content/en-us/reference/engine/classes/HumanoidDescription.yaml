@@ -1284,8 +1284,30 @@ properties:
     capabilities:
       - AvatarAppearance
   - name: HumanoidDescription.StaticFacialAnimation
-    summary: ''
-    description: ''
+    summary: |
+      When `true`, disables facial animations on a Dynamic Head, displaying a
+      static mood pose instead. Defaults to `false`.
+    description: |
+      **StaticFacialAnimation** controls whether facial animations play when
+      this description is applied to a `Class.Humanoid` with a Dynamic Head.
+      When set to `true`, the head displays a static mood pose without any
+      animated facial movement, achieving visual parity with classic face
+      decals.
+
+      Even with `StaticFacialAnimation` set to `true`,
+      `Class.HumanoidDescription.MoodAnimation|MoodAnimation` still applies a
+      static pose to give the face its characteristic expression. Setting
+      `StaticFacialAnimation` to `true` is different from setting
+      `MoodAnimation` to `0`, which would result in the Dynamic Head's neutral
+      rest pose.
+
+      This is a per-description setting and does not affect other descriptions
+      or the user's avatar globally.
+
+      See also:
+
+      - [HumanoidDescription System](../../../characters/appearance.md#humanoiddescription),
+        for more information on `Class.HumanoidDescription`.
     code_samples: []
     type: boolean
     tags: []

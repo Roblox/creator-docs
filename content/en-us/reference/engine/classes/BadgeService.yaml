@@ -107,14 +107,19 @@ methods:
       batches of up to 10 badges; use `Class.BadgeService:UserHasBadgeAsync()`
       for single badge lookups.
 
-      Any set of badges for any experience can be queried, no matter who created
-      the badges or which experiences they are for. Any
-      `Class.Player.UserId|UserId` can be used in a `Class.Script`, but in a
-      `Class.LocalScript`, only the `Class.Player.UserId|UserId` of the local
-      user whose client is running the script can be used.
+      When called from a `Class.Script`, any `Class.Player.UserId|UserId` can be
+      used. If the user with the target user ID has not recently been in the
+      server, only badge IDs that are associated with the requesting experience
+      will be checked, and any badge IDs that are not associated with the
+      requesting experience will not be included in the response (as if they
+      were not owned).
 
-      This API's behavior will change soon. For more information, see
-      [this DevForum announcement](https://devforum.roblox.com/t/upcoming-breaking-change-to-checkuserbadgesasync-userhasbadgeasync-and-badges-web-apis/4438920).
+      For users that have recently been in the server, any badges for any
+      experiences can be queried, no matter who created the badge or which
+      experience it is used for.
+
+      In a `Class.LocalScript`, only the `Class.Player.UserId|UserId` of the
+      local user whose client is running the script can be used.
 
       Rate limit is `10 + 5 * [number of players]` per minute in each server.
     code_samples:
@@ -137,7 +142,10 @@ methods:
         summary: |
           The list of badge IDs the given user owns out of the provided badge
           IDs. Empty if none of the provided badges are owned by the given user.
-          Not guaranteed to be in the same order as the input list.
+          Not guaranteed to be in the same order as the input list. Some badge
+          IDs may be omitted if the user with the target `userId` has not
+          recently been in the server and the badge IDs are not associated with
+          the requesting experience.
     tags:
       - Yields
     deprecation_message: ''
@@ -295,11 +303,16 @@ methods:
       `Class.LocalScript`, it only works for the local user whose client is
       running the script.
 
-      Any badge for any experience can be queried, no matter who created the
-      badge or which experience it is used for.
+      When called from a `Class.Script`, any `Class.Player.UserId|UserId` can be
+      used. If the user with the target user ID has not recently been in the
+      server, only badge IDs that are associated with the requesting experience
+      will be checked. If the requested badge ID is not associated with the
+      requesting experience and the target user has not recently been in the
+      server, the method behaves as if the badge is not owned.
 
-      This API's behavior will change soon. For more information, see
-      [this DevForum announcement](https://devforum.roblox.com/t/upcoming-breaking-change-to-checkuserbadgesasync-userhasbadgeasync-and-badges-web-apis/4438920).
+      For users that have recently been in the server, any badge for any
+      experience can be queried, no matter who created the badge or which
+      experience it is used for.
     code_samples: []
     parameters:
       - name: userId
@@ -339,11 +352,16 @@ methods:
       a `Class.LocalScript`, it only works for the local user whose client is
       running the script.
 
-      Any badge for any experience can be queried, no matter who created the
-      badge or which experience it is used for.
+      When called from a `Class.Script`, any `Class.Player.UserId|UserId` can be
+      used. If the user with the target user ID has not recently been in the
+      server, only badge IDs that are associated with the requesting experience
+      will be checked. If the requested badge ID is not associated with the
+      requesting experience and the target user has not recently been in the
+      server, the method behaves as if the badge is not owned.
 
-      This API's behavior will change soon. For more information, see
-      [this DevForum announcement](https://devforum.roblox.com/t/upcoming-breaking-change-to-checkuserbadgesasync-userhasbadgeasync-and-badges-web-apis/4438920).
+      For users that have recently been in the server, any badge for any
+      experience can be queried, no matter who created the badge or which
+      experience it is used for.
 
       Rate limit is `50 + 35 * [number of players]` per minute.
     code_samples:

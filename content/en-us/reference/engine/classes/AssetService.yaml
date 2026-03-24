@@ -227,6 +227,48 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - AssetCreateUpdate
+  - name: AssetService:CreateDataModelContentAsync
+    summary: |
+      Creates ephemeral, `Class.DataModel`-scoped content from the provided
+      content input.
+    description: |
+      Creates ephemeral, `Class.DataModel`-scoped content from the provided
+      content input.
+
+      If the server storage budget is exhausted during this call, the creation
+      will fail and the method will return
+      `Enum.CreateContentResult.StorageLimitExceeded` alongside an empty
+      `Datatype.Content` object.
+    code_samples: []
+    parameters:
+      - name: content
+        type: Content
+        default:
+        summary: |
+          Reference to the input content. Currently, this only supports
+          `Datatype.Content` wrapping a `Class.EditableMesh` or
+          `Class.EditableImage`.
+      - name: options
+        type: Dictionary?
+        default:
+        summary: |
+          Optional dictionary containing configuration controls for the created
+          `Class.DataModel` content. Currently no controls are surfaced and this
+          parameter exists for future functionality.
+    returns:
+      - type: Tuple
+        summary: |
+          A tuple containing an `Enum.CreateContentResult` indicating the
+          success or failure of the request, and the resulting
+          `Class.DataModel`-scoped `ContentSourceType.Opaque`
+          `Datatype.Content`.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - DynamicGeneration
   - name: AssetService:CreateEditableImage
     summary: |
       Creates a new `Class.EditableImage`.
@@ -679,7 +721,12 @@ methods:
 
             - `Name` — Item name
 
-            - `Type` — Item type such as `"Asset"` .
+            - `Type` — Item type such as `"Asset"`
+
+            - `AssetType` — String representing the `Enum.AvatarAssetType`
+
+            - `SupportsHeadShapes` — Whether the asset supports head shape
+              swapping. Only present if `AssetType` is `"DynamicHead"`.
     tags:
       - Yields
     deprecation_message: ''
