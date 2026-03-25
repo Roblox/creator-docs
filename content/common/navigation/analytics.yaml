@@ -9,8 +9,6 @@ navigation:
   - heading: Monitor
   - title: Insights
     path: /production/analytics/insights
-  - title: Performance
-    path: /production/analytics/performance
   - title: Error report
     path: /production/analytics/error-report
   - title: Crashes

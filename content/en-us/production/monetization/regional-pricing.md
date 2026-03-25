@@ -75,6 +75,14 @@ To disable the dynamic price check tool, go to the **Dynamic Price Check** page 
 
 For more information about hard-coded versus dynamically-scripted product prices, see [Check for dynamic pricing](./price-optimization.md#check-for-dynamic-pricing) in the Price optimization page. For more information about selling passes and developer products with `MarketplaceService` functions, see [Sell a pass inside your experience](./passes.md#inside-your-experience) and [Sell a developer product inside your experience](./developer-products.md#inside-your-experience).
 
+## Display regional prices in your experience
+
+With Regional Pricing, the price a user sees can vary based on their location. If you display prices in a custom in-experience UI, like a `Class.TextLabel`, you can retrieve product information at runtime to make sure the displayed price matches the price shown in the purchase prompt.
+
+To display the regional price for a single developer product or pass, use `Class.MarketplaceService.GetProductInfoAsync|GetProductInfoAsync`.
+
+To display the regional price for all developer products, use `Class.MarketplaceService.GetDeveloperProductsAsync|GetDeveloperProductsAsync`.
+
 ## Protect your trades and gifts
 
 Regional pricing can affect in-experience transfers like trading and gifting. Because of price differences across regions, price arbitrage (exploiting price discrepancies between the same products to generate a profit) can take place. To manage the potential for price arbitrage, you can use the `Class.MarketplaceService.GetUsersPriceLevelsAsync|GetUsersPriceLevelsAsync` API, which lets you determine the relative price levels of users so that you can implement logic to regulate item transfers based on these levels.

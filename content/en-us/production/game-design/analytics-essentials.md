@@ -1,5 +1,5 @@
 ---
-title: Leverage analytics
+title: Analyze and experiment
 description: Analytics essentials
 ---
 
@@ -11,4 +11,6 @@ Analytics provide a high level overview of your experience's health and surface 
 - Retention metrics
 - Monetization metrics
 
-For an introduction to what Roblox's analytics features can do for you and your experience, see [Analytics](../../production/analytics/get-started.md).
+Once you identify an area for improvement through your KPIs, you can use **Experiments** and **Configs** to iterate with precision. **Experiments** allow you to run A/B tests to measure the causal impact of specific changes on your metrics, while **Configs** let you adjust in-game values in real time to optimize the experience instantly without restarting your servers.
+
+For an introduction to what Roblox's analytics features can do for you and your experience, see [Get started with analytics](../../production/analytics/get-started.md).
