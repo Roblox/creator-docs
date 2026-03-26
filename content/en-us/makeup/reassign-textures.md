@@ -67,8 +67,8 @@ Additional notes:
 
 ## Blender
 
-1. Unzip and open the [Blender reference head file](../assets/makeup/resources/Makeup-Reference-Blender.zip).
-2. Switch to the Shading tab.
+1. Unzip and open the [Blender reference head file](./index.md#template-heads).
+2. Switch to the **Shading** tab.
 3. In the Outliner, expand the Makeup collection and select the face region you intend to replace textures for.
 
     <img src="../assets/makeup/resources/Blender-Select-Region.png" width="40%" />
@@ -93,7 +93,7 @@ After replacing your PBR textures, [export the entire head](../art/modeling/expo
 
 ## Maya
 
-1. Unzip and open the Maya [reference head file](../assets/makeup/resources/Makeup-Reference-Maya.zip).
+1. Unzip and open the Maya [reference head file](./index.md#template-heads).
 2. In the Status Line near the top of the default layout, click on the Hypershade icon.
 
    <img src="../assets/makeup/resources/Maya-Select-Hypershade.png" width="65%" />
@@ -112,7 +112,8 @@ After replacing your PBR textures, [export the entire head](../art/modeling/expo
 2. Repeat for all PBR textures that you intend to replace.
 3. Delete any texture nodes you are not using.
 4.  Verify your final node graph looks similar to the original reference with nothing unintentionally missing.
-    <img src="../assets/makeup/resources/Maya-Expected-Nodes.png" width="90%" />
+
+  <img src="../assets/makeup/resources/Maya-Expected-Nodes.png" width="90%" />
   
 <Alert severity ='success'>
 After replacing your PBR textures, [export the entire head](../art/modeling/export-requirements.md#maya) and follow instructions to [import into Studio](./import.md).
