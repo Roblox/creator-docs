@@ -147,6 +147,8 @@ navigation:
   - heading: Policies and Guidelines
   - title: Marketplace policy
     path: /marketplace/marketplace-policy
+  - title: Marketplace categories
+    path: /marketplace/categories
   - title: Intellectual property
     path: /marketplace/intellectual-property
   - title: Moderation
