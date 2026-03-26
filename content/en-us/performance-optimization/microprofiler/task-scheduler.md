@@ -16,18 +16,20 @@ While there may be multiple tasks running, the task scheduler can potentially be
 
 The most direct way to add frame-by-frame tasks is through the following members of `Class.RunService`:
 
-- `Class.RunService:BindToRenderStep()`
 - `Class.RunService.PreAnimation`
-- `Class.RunService.PreRender`
 - `Class.RunService.PreSimulation`
 - `Class.RunService.PostSimulation`
 - `Class.RunService.Heartbeat`
+- `Class.RunService:BindToRenderStep()`
+- `Class.RunService.PreRender`
 
 ## Scheduler priority
 
 The task scheduler categorizes and completes tasks in the following order. Some tasks may not perform work in a frame, while others may run multiple times.
 
-<img src="../../assets/optimization/task-scheduler/scheduler-priority.png" />
+<img src="../../assets/optimization/task-scheduler/task-scheduler.svg" />
+
+\* Script execution during `Class.RunService.Heartbeat` differs depending on your experience's `Class.Workspace.SignalBehavior` setting. See [Deferred events](../../scripting/events/deferred.md).
 
 ## Best practices
 
