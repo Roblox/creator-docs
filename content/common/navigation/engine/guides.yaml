@@ -55,7 +55,7 @@ navigation:
           - title: Activity History
             path: /projects/activity-history
           - title: Version History
-            path: /projects/version-history         
+            path: /projects/version-history
       - title: File-based workflows
         path: /scripting/sync
         section:
@@ -474,6 +474,8 @@ navigation:
             path: /chat/in-experience-text-chat
           - title: Guidelines
             path: /chat/guidelines
+          - title: Preset system guidelines
+            path: /chat/preset-system-guidelines
           - title: Chat window
             path: /chat/chat-window
           - title: Bubble chat
