@@ -5147,6 +5147,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/PermissionLevelShown.yaml
         ignoreTranslation: true
+      - title: PhysicalConstraintType
+        path: /reference/engine/enums/PhysicalConstraintType
+        type: engineapi
+        source: /reference/engine/enums/PhysicalConstraintType.yaml
+        ignoreTranslation: true
       - title: PhysicsSimulationRate
         path: /reference/engine/enums/PhysicsSimulationRate
         type: engineapi
