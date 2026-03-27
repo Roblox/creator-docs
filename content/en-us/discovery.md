@@ -61,6 +61,9 @@ Roblox ranks the selected experiences based on the following key signals of user
   <tr>
     <td>**7 day intentional co-play days per user**</td>
     <td>Frequency of users intentionally playing with connections over the last 7 days (through join, invite, or private server rather than through matchmaking).</td>
+  </tr>  <tr>
+    <td>**7 day qualified play sessions per user**</td>
+    <td>Total qualified play sessions per user in your experience within the last 7 days.</td>
   </tr>
 </tbody>
 </table>
