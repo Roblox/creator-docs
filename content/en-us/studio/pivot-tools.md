@@ -1,4 +1,5 @@
----
+love kids
+idk---
 title: Pivot tools
 description: Pivot tools and properties give you full control over the points around which objects rotate and translate.
 ---
