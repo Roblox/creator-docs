@@ -5,11 +5,11 @@
 name: Model
 type: class
 memory_category: BaseParts
-summary: |
+summary: |-
   Models are container objects, meaning they group objects together. They are
   best used to hold collections of `Class.BasePart|BaseParts` and have a number
   of functions that extend their functionality.
-description: |
+description: |-
   Models are container objects, meaning they group objects together. They are
   best used to hold collections of `Class.BasePart|BaseParts` and have a number
   of functions that extend their functionality.
@@ -63,22 +63,21 @@ tags: []
 deprecation_message: ''
 properties:
   - name: Model.LevelOfDetail
-    summary: |
+    summary: |-
       Sets the level of detail on the model for experiences with instance
       streaming enabled.
-    description: |
+    description: |-
       Sets the level of detail on the model for experiences with instance
-      [streaming](../../../workspace/streaming.md) enabled.
+      [streaming](../../../workspace/streaming/index.md) enabled.
 
       When set to `Enum.ModelLevelOfDetail|StreamingMesh`, a lower resolution
       "imposter" mesh (colored, coarse mesh that wraps around all child parts of
       the model) renders outside the streaming radius.
 
-      When set to `Enum.ModelLevelOfDetail|SLIM`, a Scalable Lightweight
-      Interactive Model, or SLIM, model (a composite of all child parts of the
-      model) renders at progressively lower resolutions at distances based on
-      the streaming radius. This greatly improves visual quality over
-      `Enum.ModelLevelOfDetail|StreamingMesh`.
+      When set to `Enum.ModelLevelOfDetail|SLIM`, a Scalable Lightweight Interactive 
+      Model, or SLIM, model (a composite of all child parts of the model) renders at progressively 
+      lower resolutions at distances based on the streaming radius. This greatly improves 
+      visual quality over `Enum.ModelLevelOfDetail|StreamingMesh`.
 
       When set to `Enum.ModelLevelOfDetail|Disabled` or
       `Enum.ModelLevelOfDetail|Automatic`, lower resolution meshes will not be
@@ -97,12 +96,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Model.ModelStreamingMode
-    summary: |
+    summary: |-
       Controls the model streaming behavior on `Class.Model|Models` when
       instance streaming is enabled.
-    description: |
+    description: |-
       Controls how `Class.Model|Models` are streamed in and out when instance
-      [streaming](../../../workspace/streaming.md) is enabled. Behavior depends
+      [streaming](../../../workspace/streaming/index.md) is enabled. Behavior depends
       on the selected enum. Has no effect when streaming is not enabled.
 
       This property should only be changed in Studio via the
@@ -124,9 +123,8 @@ properties:
       can_save: true
     capabilities: []
   - name: Model.PrimaryPart
-    summary: |
-      The primary part of the `Class.Model`, or `nil` if not explicitly set.
-    description: |
+    summary: The primary part of the `Class.Model`, or `nil` if not explicitly set.
+    description: |-
       Points to the primary part of the `Class.Model`. The primary part is the
       `Class.BasePart` that acts as the physical reference for the pivot of the
       model. That is, when parts within the model are moved due to physical
@@ -172,20 +170,20 @@ properties:
       can_save: true
     capabilities: []
   - name: Model.Scale
-    summary: |
+    summary: |-
       Editor-only property used to scale the model around its pivot. Setting
-      this property will move the scale as though `Class.Model:ScaleTo()` was
-      called on it.
-    description: |
+      this property will move the scale as though `Class.Model:ScaleTo()` was called on
+      it.
+    description: |-
       Setting this property in the Properties window will scale the model as
-      though `Class.Model:ScaleTo()` was called on it, scaling all descendant
-      Instances in the model, such as materials, images, and the 3D geometry of
-      parts, so that the model has the specified scale factor relative to its
-      original size.
+      though `Class.Model:ScaleTo()` was called on it, scaling all descendant Instances
+      in the model, such as materials, images, and the 3D geometry of parts, so
+      that the model has the specified scale factor relative to its original
+      size.
 
       This property is only available in Studio and will throw an error if used
-      in a `Class.Script` or `Class.LocalScript`. `Class.Model:ScaleTo()` and
-      `Class.Model:GetScale()` should be used from scripts.
+      in a `Class.Script` or `Class.LocalScript`. `Class.Model:ScaleTo()` and `Class.Model:GetScale()`
+      should be used from scripts.
     code_samples: []
     type: float
     tags:
@@ -202,10 +200,10 @@ properties:
       can_save: false
     capabilities: []
   - name: Model.WorldPivot
-    summary: |
+    summary: |-
       Determines where the pivot of a `Class.Model` which does **not** have a
       set `Class.Model.PrimaryPart` is located.
-    description: |
+    description: |-
       This property determines where the pivot of a `Class.Model` which does
       **not** have a set `Class.Model.PrimaryPart` is located. If the
       `Class.Model` **does** have a `Class.Model.PrimaryPart|PrimaryPart`, the
@@ -256,12 +254,12 @@ properties:
     capabilities: []
 methods:
   - name: Model:AddPersistentPlayer
-    summary: |
+    summary: |-
       Sets this model to be persistent for the specified player.
       `Class.Model.ModelStreamingMode|ModelStreamingMode` must be set to
       `Enum.ModelStreamingMode|PersistentPerPlayer` for behavior to be changed
       as a result of addition.
-    description: |
+    description: |-
       Sets this model to be persistent for the specified player. Persistent
       models stay present for the player regardless of streaming settings or
       conditions.
@@ -274,8 +272,7 @@ methods:
       - name: playerInstance
         type: Player
         default: nil
-        summary: |
-          The `Class.Player` to make this model persistent for.
+        summary: The `Class.Player` to make this model persistent for.
     returns:
       - type: ()
         summary: ''
@@ -285,11 +282,11 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Model:BreakJoints
-    summary: |
+    summary: |-
       Breaks connections between `BaseParts`, including surface connections with
       any adjacent parts, `Class.WeldConstraint|WeldConstraints` and all
       `Class.Weld|Welds` and other `Class.JointInstance|JointInstances`.
-    description: |
+    description: |-
       Breaks connections between `BaseParts`, including surface connections with
       any adjacent parts, `Class.WeldConstraint|WeldConstraints`, and all
       `Class.Weld|Welds` and other `Class.JointInstance|JointInstances`.
@@ -325,16 +322,15 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This deprecated function is a variant of `Class.Model:BreakJoints()` which
       should be used instead.
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: Model:GetBoundingBox
-    summary: |
-      Returns a description of a volume that contains all parts of a Model.
-    description: |
+    summary: Returns a description of a volume that contains all parts of a Model.
+    description: |-
       This function returns a description of a volume that contains all
       `Class.BasePart` children within a `Class.Model`. The volume's orientation
       is based on the orientation of the `Class.Model.PrimaryPart|PrimaryPart`,
@@ -342,13 +338,11 @@ methods:
       selected. Mirroring the behavior of `Class.Terrain:FillBlock()`, it
       returns a `Datatype.CFrame` representing the center of that bounding box
       and a `Datatype.Vector3` representing its size. The size may be inaccurate
-      at runtime if physics constraints are acting upon the parts within the
-      `Class.Model`.
+      at runtime if physics constraints are acting upon the parts within the `Class.Model`.
 
       The orientation of the bounding box matches the orientation of the
-      `Class.PVInstance.GetPivot|Pivot` - either the pivot of the
-      `Class.Model.PrimaryPart|PrimaryPart` (if present) or the
-      `Class.Model.WorldPivot|WorldPivot` of the model.
+      `Class.PVInstance.GetPivot|Pivot` - either the pivot of the `Class.Model.PrimaryPart|PrimaryPart`
+      (if present) or the `Class.Model.WorldPivot|WorldPivot` of the model.
 
       ```lua
       local Workspace = game:GetService("Workspace")
@@ -365,7 +359,7 @@ methods:
     parameters: []
     returns:
       - type: Tuple
-        summary: |
+        summary: |-
           A `Datatype.CFrame` representing the orientation of the volume
           followed by a `Datatype.Vector3` representing the size of the volume.
     tags: []
@@ -374,15 +368,15 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Model:GetExtentsSize
-    summary: |
+    summary: |-
       Returns the size of the smallest bounding box that contains all of the
       `Class.BasePart|BaseParts` in the `Class.Model`, aligned with the
       `Class.Model.PrimaryPart` if it is set.
-    description: |
+    description: |-
       Returns the size of the smallest bounding box that contains all of the
       `Class.BasePart|BaseParts` in the `Class.Model`. The orientation matches
-      the orientation of the `Class.PVInstance.GetPivot|Pivot` - either the
-      pivot of the `Class.Model.PrimaryPart|PrimaryPart` (if present) or the
+      the orientation of the `Class.PVInstance.GetPivot|Pivot` - either the pivot of
+      the `Class.Model.PrimaryPart|PrimaryPart` (if present) or the
       `Class.Model.WorldPivot|WorldPivot` of the model.
 
       Note this function only returns the size of the smallest bounding box, and
@@ -393,18 +387,17 @@ methods:
     parameters: []
     returns:
       - type: Vector3
-        summary: |
-          The `Datatype.Vector3` extents size of the `Class.Model`.
+        summary: The `Datatype.Vector3` extents size of the `Class.Model`.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: Model:GetModelCFrame
-    summary: |
+    summary: |-
       This value historically returned the CFrame of a central position in the
       model.
-    description: |
+    description: |-
       This value historically returned the CFrame of a central position in the
       model.
     code_samples: []
@@ -414,7 +407,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This function has been deprecated as it did not provide reliable results.
       You can instead use `Class.Model:GetPrimaryPartCFrame()` to retrieve the
       `Datatype.CFrame` of the model's primary part.
@@ -422,9 +415,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Model:GetModelSize
-    summary: |
-      Returns the Vector3 size of the Model.
-    description: |
+    summary: Returns the Vector3 size of the Model.
+    description: |-
       The GetModelSize function returns the `Datatype.Vector3` size of the
       `Class.Model`.
     code_samples:
@@ -435,18 +427,18 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This item is deprecated. Do not use it for new work. Developers can
       instead use `Class.Model.GetExtentsSize`.
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: Model:GetPersistentPlayers
-    summary: |
+    summary: |-
       Returns all the `Class.Player` objects that this model object is
       persistent for. Behavior varies based on whether this method is called
       from a `Class.Script` or a `Class.LocalScript`.
-    description: |
+    description: |-
       When this method is called from a `Class.Script`, it returns all the
       `Class.Player` objects that this model is persistent for. When called from
       a `Class.LocalScript`, this method only checks if this model is persistent
@@ -455,7 +447,7 @@ methods:
     parameters: []
     returns:
       - type: List<Player>
-        summary: |
+        summary: |-
           A table with all the `Class.Player` objects that this model object is
           persistent for.
     tags: []
@@ -464,11 +456,11 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Model:GetPrimaryPartCFrame
-    summary: |
+    summary: |-
       Returns the `Datatype.CFrame` of the model's `Class.Model.PrimaryPart`.
       This function will throw an error if no primary part exists for the
       `Class.Model`.
-    description: |
+    description: |-
       This function has been superseded by `Class.PVInstance:GetPivot()` which
       acts as a replacement and does not change your code's behavior. Use
       `Class.PVInstance:GetPivot()` for new work and migrate your existing
@@ -498,28 +490,25 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Model:GetScale
-    summary: |
+    summary: |-
       Returns the canonical scale of the model, which defaults to 1 for newly
-      created models and will change as it is scaled via
-      `Class.Model:ScaleTo()`.
-    description: |
+      created models and will change as it is scaled via `Class.Model:ScaleTo()`.
+    description: |-
       Models contain a persistent canonical scale factor, which starts out at 1
       for newly created models and changes as the model is scaled by calling
-      `Class.Model:ScaleTo()`. This function returns the current canonical scale
-      factor of the model.
+      `Class.Model:ScaleTo()`. This function returns the current canonical scale factor
+      of the model.
 
       The current scale factor does not _directly_ impact the size of Instances
       under the model. It is used for content authoring and scripting purposes
       to remember how the model has been scaled relative to its original size.
 
       Within a given session, the model will cache the precise original size
-      information of the descendant Instances after the first
-      `Class.Model:ScaleTo()` call. This means that calling
-      `Class.Model:ScaleTo()|ScaleTo(x)` followed by
-      `Class.Model:ScaleTo()|ScaleTo(1)` will get you back _exactly_ the
-      original configuration of the model with no floating point drift. Avoiding
-      floating point drift is the motivation for having a Scale**To** function
-      instead of a Scale**By** function.
+      information of the descendant Instances after the first `Class.Model:ScaleTo()`
+      call. This means that calling `Class.Model:ScaleTo()|ScaleTo(x)` followed by `Class.Model:ScaleTo()|ScaleTo(1)` will
+      get you back _exactly_ the original configuration of the model with no
+      floating point drift. Avoiding floating point drift is the motivation for
+      having a Scale**To** function instead of a Scale**By** function.
 
       The scale factor does impact engine behavior in one way: The scale factor
       of a model will be applied to joint offsets of
@@ -531,19 +520,18 @@ methods:
     parameters: []
     returns:
       - type: float
-        summary: |
-          The current canonical scale factor of the model.
+        summary: The current canonical scale factor of the model.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: Model:MakeJoints
-    summary: |
+    summary: |-
       Goes through all `Class.BasePart|BaseParts` in the `Class.Model`. If any
       part's side has a SurfaceType that can make a joint it will create a joint
       with any adjacent parts.
-    description: |
+    description: |-
       SurfaceType based joining is deprecated. Don't use MakeJoints for new
       projects. Use `Class.WeldConstraint|WeldConstraints` and
       `Class.HingeConstraint|HingeConstraints` instead.
@@ -574,7 +562,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This joint type has been deprecated. Don't use it for new work. Use
       `Class.WeldConstraint|WeldConstraints` and
       `Class.HingeConstraint|HingeConstraints` instead.
@@ -591,7 +579,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This deprecated function is a variant of `Class.Model:MakeJoints()` which
       should be used instead.
     security: None
@@ -611,18 +599,18 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This item has been superseded by `Class.Model:MoveTo()` which should be
       used in all new work
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: Model:MoveTo
-    summary: |
+    summary: |-
       Moves the `Class.Model.PrimaryPart|PrimaryPart` to the given position. If
       a primary part has not been specified, the root part of the model will be
       used.
-    description: |
+    description: |-
       Moves the `Class.Model.PrimaryPart|PrimaryPart` to the given position. If
       a primary part has not been specified, the root part of the model will be
       used, but the root part is not deterministic and it is recommended that
@@ -644,8 +632,7 @@ methods:
       - name: position
         type: Vector3
         default:
-        summary: |
-          The `Datatype.Vector3` the `Class.Model` is moved to.
+        summary: The `Datatype.Vector3` the `Class.Model` is moved to.
     returns:
       - type: ()
         summary: ''
@@ -668,19 +655,19 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This deprecated function is a variant of `Class.Model:MoveTo()` which
       should be used instead.
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: Model:RemovePersistentPlayer
-    summary: |
+    summary: |-
       Makes this model no longer persistent for the specified player.
       `Class.Model.ModelStreamingMode|ModelStreamingMode` must be set to
       `Enum.ModelStreamingMode|PersistentPerPlayer` for behavior to be changed
       as a result of removal.
-    description: |
+    description: |-
       Makes this model no longer persistent for the specified player. This does
       not guarantee the model will immediately be removed for the player; after
       calling this method, the model will be treated as
@@ -695,8 +682,7 @@ methods:
       - name: playerInstance
         type: Player
         default: nil
-        summary: |
-          The `Class.Player` to make this model no longer persistent for.
+        summary: The `Class.Player` to make this model no longer persistent for.
     returns:
       - type: ()
         summary: ''
@@ -706,11 +692,11 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Model:ResetOrientationToIdentity
-    summary: |
+    summary: |-
       Resets the rotation of the model's parts to the previously set identity
       rotation, which is done through the `Class.Model:SetIdentityOrientation()`
       method.
-    description: |
+    description: |-
       Resets the rotation of the model's parts to the previously set identity
       rotation, which is done through the `Class.Model:SetIdentityOrientation()`
       method.
@@ -721,18 +707,18 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This function has been deprecated; it remains to prevent legacy scripts
       from throwing errors, but it does nothing when called.
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: Model:ScaleTo
-    summary: |
+    summary: |-
       Sets the scale factor of the model, adjusting the sizing and location of
       all descendant Instances such that they have that scale factor relative to
       their initial sizes and locations when scale factor was 1.
-    description: |
+    description: |-
       Models contain a persistent canonical scale factor, which starts out at 1
       for newly created models. This function scales the model, around the pivot
       location, relative to how it would look at a scale factor of 1. To
@@ -767,11 +753,11 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Model:SetIdentityOrientation
-    summary: |
+    summary: |-
       Sets the identity rotation of the given model, allowing you to reset the
       rotation of the entire model later, through the use of the
       `ResetOrientationToIdentity` method.
-    description: |
+    description: |-
       Sets the identity rotation of the given model, allowing you to reset the
       rotation of the entire model later, through the use of the
       `ResetOrientationToIdentity` method.
@@ -782,18 +768,18 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This function has been deprecated; it remains to prevent legacy scripts
       from throwing errors, but it does nothing when called.
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: Model:SetPrimaryPartCFrame
-    summary: |
+    summary: |-
       Sets the `Class.BasePart.CFrame` of the model's `Class.Model.PrimaryPart`.
       All other parts in the model will also be moved and will maintain their
       orientation and offset respective to the `Class.Model.PrimaryPart`.
-    description: |
+    description: |-
       This function has been superseded by `Class.PVInstance:PivotTo()` which
       acts as a more performant replacement and does not change your code's
       behavior. Use `Class.PVInstance:PivotTo()` for new work and migrate your
@@ -811,8 +797,7 @@ methods:
       - name: cframe
         type: CFrame
         default:
-        summary: |
-          The `Datatype.CFrame` to be set.
+        summary: The `Datatype.CFrame` to be set.
     returns:
       - type: ()
         summary: ''
@@ -823,12 +808,12 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Model:TranslateBy
-    summary: |
+    summary: |-
       Shifts a `Class.Model` by the given `Datatype.Vector3` offset, preserving
       the model's orientation. If another `Class.BasePart` or `Class.Terrain`
       already exists at the new position then the `Class.Model` will overlap
       said object.
-    description: |
+    description: |-
       Shifts a `Class.Model` by the given `Datatype.Vector3` offset, preserving
       the model's orientation. If another `Class.BasePart` or `Class.Terrain`
       already exists at the new position then the `Class.Model` will overlap
@@ -843,8 +828,7 @@ methods:
       - name: delta
         type: Vector3
         default:
-        summary: |
-          The `Datatype.Vector3` to translate the `Class.Model` by.
+        summary: The `Datatype.Vector3` to translate the `Class.Model` by.
     returns:
       - type: ()
         summary: ''

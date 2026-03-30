@@ -30,13 +30,18 @@ navigation:
           - title: Client-server runtime
             path: /projects/client-server
           - title: Instance streaming
-            path: /workspace/streaming
+            path: /workspace/streaming/
+            section:
+              - title: Overview
+                path: /workspace/streaming/
+              - title: Techniques
+                path: /workspace/streaming/techniques
           - title: Server authority
             path: /projects/server-authority/
             section:
               - title: Overview
                 path: /projects/server-authority/
-              - title: Advanced techniques
+              - title: Techniques
                 path: /projects/server-authority/techniques
       - title: Manage
         path: /projects/experience-ownership-transfer

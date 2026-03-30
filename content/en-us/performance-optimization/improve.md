@@ -537,7 +537,7 @@ You can employ the following tactics to reduce unnecessary replication:
 
 ## Asset memory usage
 
-The highest impact mechanism available to creators to improve client memory usage is to enable [Instance streaming](../workspace/streaming.md).
+The highest impact mechanism available to creators to improve client memory usage is to enable [instance streaming](../workspace/streaming/index.md).
 
 ### Instance streaming
 
@@ -550,7 +550,7 @@ If instance streaming is enabled, you can increase the aggressiveness of it. For
 - Reducing use of `Enum.ModelStreamingMode.Persistent` where possible. You may need to update your scripts if you're using it as a compatibility measure.
 - Reducing the `Workspace.StreamingMinRadius` and `Workspace.StreamingTargetRadius`.
 
-For more information on streaming options and their benefits, see [Streaming properties](../workspace/streaming.md#streaming-properties).
+For more information on streaming options and their benefits, see [streaming properties](../workspace/streaming/index.md#streaming-properties).
 
 ### Other common problems
 

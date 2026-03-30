@@ -5,6 +5,8 @@ description: How scripts run in Roblox, and how location impacts that behavior.
 
 import ScriptLocations from '../includes/engine-comparisons/script-locations.md'
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jLNgutvbALY?si=CU8CiDeiQOMIDfDr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe><br />
+
 For many developers, the fundamental challenge of adapting to Roblox scripting is the importance of file location and the `Class.Script.RunContext` property. Depending on script type, location in the **Explorer**, and run context, scripts can behave very differently. Certain method calls might fail, objects in your experience might be inaccessible, or scripts might not run at all.
 
 The reason for this complexity is that Roblox experiences are multiplayer by default. Scripts need the ability to only run on the server, only run on the client, or be shared across both. The evolution of the Roblox platform over time has further complicated the situation.
@@ -28,12 +30,19 @@ To change a script run context, select it in the [Explorer](../studio/explorer.m
 
 ### Recommendations
 
-- Using `Server` and `Client` values for `RunContext` removes ambiguity from how scripts run and can help keep your project organized. The best use cases for non-default `RunContext` values are:
+- Put client scripts into `Class.ReplicatedStorage` with a `RunContext` of `Client` alongside client-only `Class.ModuleScript|ModuleScripts`.
 
-  - Client scripts that you want to run from `Class.ReplicatedStorage` or `Class.ReplicatedFirst`.
-  - Server or client scripts that you include within [models](../parts/models.md) and [packages](../projects/assets/packages.md). Explicitly setting the run context makes models and packages more likely to work properly from a variety of locations.
+  When debugging in Studio, you can click lines in the **Output** window and go to `ReplicatedStorage.YourScript` (the stable location of the script) rather than `Players.YourName.PlayerScripts.YourScript` (the ephemeral location that the script was copied to at runtime).
 
+- Put server scripts into `Class.ServerScriptService` with a `RunContext` of `Server` alongside server-only `Class.ModuleScript|ModuleScripts`.
 - To share code between server and client scripts, use `Class.ModuleScript|ModuleScripts` in `ReplicatedStorage`.
+
+  <Alert severity="success">
+  To stay organized, many creators write the vast majority of their code in `Class.ModuleScript|ModuleScripts` and `Global.LuaGlobals.require()` all of them in exactly one server script and one client script.
+  </Alert>
+
+- If you place scripts within [models](../parts/models.md) and [packages](../projects/assets/packages.md), specify a `RunContext` for each script to remove ambiguity from how it runs. Explicitly setting this property makes models and packages more likely to work properly from a variety of locations.
+- Put the minimal number of client scripts (such as a loading script) into `Class.ReplicatedFirst` with a `RunContext` of `Client`. To learn more, see [Replication order](attributes.md#replication-order).
 - Use `Class.LocalScript|LocalScripts` in `StarterCharacterScripts`, `StarterPlayerScripts`, `StarterGui`, and `StarterPack`.
 
 ## Script locations

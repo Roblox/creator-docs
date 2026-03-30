@@ -5,11 +5,8 @@
 name: TeleportService
 type: class
 memory_category: Instances
-summary: |
-  Enables transporting `Class.Player|Players` between places and servers. For
-  more information on how to teleport players between servers, see
-  [Teleport between places](../../../projects/teleport.md).
-description: |
+summary: Enables transporting `Class.Player|Players` between places and servers. For more information on how to teleport players between servers, see [Teleport between places](../../../projects/teleport.md).
+description: |-
   **TeleportService** is responsible for transporting `Class.Player|Players`
   between different places and servers.
 
@@ -25,9 +22,8 @@ tags:
 deprecation_message: ''
 properties:
   - name: TeleportService.CustomizedTeleportUI
-    summary: |
-      No longer functional.
-    description: |
+    summary: No longer functional.
+    description: |-
       This property used to control whether or not a `Class.Message` would be
       shown by default. The default message has been removed, so this no longer
       does anything.
@@ -36,7 +32,7 @@ properties:
     tags:
       - NotReplicated
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This item is deprecated since the default message it controls has been
       removed. Do not use it for new work.
     security:
@@ -51,10 +47,10 @@ properties:
       - Teleport
 methods:
   - name: TeleportService:GetArrivingTeleportGui
-    summary: |
+    summary: |-
       Returns the _customLoadingScreen_ the
       `Class.Players.LocalPlayer|LocalPlayer` arrived into the place with.
-    description: |
+    description: |-
       This function returns the _customLoadingScreen_ the
       `Class.Players.LocalPlayer|LocalPlayer` arrived into the place with.
 
@@ -82,7 +78,7 @@ methods:
     parameters: []
     returns:
       - type: Instance
-        summary: |
+        summary: |-
           The _customLoadingScreen_ the `Class.Players.LocalPlayer|LocalPlayer`
           arrived into the place with.
     tags: []
@@ -93,10 +89,10 @@ methods:
       - UI
       - Teleport
   - name: TeleportService:GetLocalPlayerTeleportData
-    summary: |
+    summary: |-
       Returns the _teleportData_ the `Class.Players.LocalPlayer` arrived into
       the place with.
-    description: |
+    description: |-
       This function returns the teleport data the `Class.Players.LocalPlayer`
       arrived with. It can only be called from the client.
 
@@ -108,7 +104,7 @@ methods:
     parameters: []
     returns:
       - type: Variant
-        summary: |
+        summary: |-
           The teleport data the `Class.Players.LocalPlayer` arrived into the
           place with.
     tags: []
@@ -118,12 +114,12 @@ methods:
     capabilities:
       - Teleport
   - name: TeleportService:GetPlayerPlaceInstanceAsync
-    summary: |
+    summary: |-
       Returns the `Class.DataModel.PlaceId|PlaceId` and
       `Class.DataModel.JobId|JobId` of the server the user with the given
       `Class.Player.UserId|UserId` is in provided it is in the same game as the
       current place.
-    description: |
+    description: |-
       This function returns the `Class.DataModel.PlaceId|PlaceId` and
       `Class.DataModel.JobId|JobId` of the server the user with the given
       `Class.Player.UserId|UserId` is in, provided it is in the same game as the
@@ -185,8 +181,8 @@ methods:
       - It is possible for this function to throw an error, hence developers
         should wrap it in a `Global.LuaGlobals.pcall()` (see example below)
       - As this function returns the JobId of the server and not the access code
-        returned by `Class.TeleportService:ReserveServerAsync()`, the ID
-        returned is not appropriate for use with reserved servers.
+        returned by `Class.TeleportService:ReserveServerAsync()`, the ID returned is
+        not appropriate for use with reserved servers.
 
       #### Studio Limitation
 
@@ -199,12 +195,10 @@ methods:
       - name: userId
         type: int64
         default:
-        summary: |
-          The `Class.Player.UserId` of the `Class.Player`.
+        summary: The `Class.Player.UserId` of the `Class.Player`.
     returns:
       - type: Tuple
-        summary: |
-          See the table above.
+        summary: See the table above.
     tags:
       - Yields
     deprecation_message: ''
@@ -213,10 +207,10 @@ methods:
     capabilities:
       - Teleport
   - name: TeleportService:GetTeleportSetting
-    summary: |
+    summary: |-
       Retrieves a teleport setting saved using
       `Class.TeleportService:SetTeleportSetting()` using the given key.
-    description: |
+    description: |-
       This function retrieves a teleport setting saved using
       `Class.TeleportService:SetTeleportSetting()` using the given key.
 
@@ -277,13 +271,12 @@ methods:
       - name: setting
         type: string
         default:
-        summary: |
+        summary: |-
           The key the value was stored under using
           `Class.TeleportService:SetTeleportSetting()`.
     returns:
       - type: Variant
-        summary: |
-          The value stored under the given key.
+        summary: The value stored under the given key.
     tags: []
     deprecation_message: ''
     security: None
@@ -291,50 +284,36 @@ methods:
     capabilities:
       - Teleport
   - name: TeleportService:PromptExperienceDetailsAsync
-    summary: |
+    summary: |-
       Prompts a `Class.Player` with information about the specified experience.
-      The player can choose to teleport to the target experience through the
-      prompt.
-    description: |
-      Prompts the specified `Class.Player` with information of the specified
-      experience. The prompt includes the experience name, creator name,
-      maturity rating, etc. The prompt also includes a **Join** button which the
-      player can use to be teleported to the target experience. If the player is
-      ineligible to join the target experience, the button will be disabled.
+        The player can choose to teleport to the target experience through the prompt.
+    description: |-
+      Prompts the specified `Class.Player` with information of the specified experience.
+      The prompt includes the experience name, creator name, maturity rating, etc.
+      The prompt also includes a **Join** button which the player can use to be teleported to the target experience. If the player is ineligible to join the target experience, the button will be disabled.
 
-      Any teleport failures after the player clicks the **Join** button will
-      also fire `Class.TeleportService.TeleportInitFailed` providing a reason
-      for the failure.
+      Any teleport failures after the player clicks the **Join** button will also fire
+      `Class.TeleportService.TeleportInitFailed` providing a reason for the failure.
 
       #### Limitations
 
-      - For security purposes, teleporting a user from your experience to
-        another experience owned by others fails by default. See
-        [here](../../../projects/teleport.md#enable-cross-experience-teleportation)
-        for steps to enable cross-experience teleportation.
-      - This function currently can only be called from the client with
-        `Class.Players.LocalPlayer` as the `player` parameter.
-      - The join button will always be disabled during Studio playtesting; to
-        test aspects of your experience using it, you must publish the
-        experience and play it in the Roblox application.
+      - For security purposes, teleporting a user from your experience to another experience owned by others fails by default. See [here](../../../projects/teleport.md#enable-cross-experience-teleportation) for steps to enable cross-experience teleportation.
+      - This function currently can only be called from the client with `Class.Players.LocalPlayer` as the `player` parameter.
+      - The join button will always be disabled during Studio playtesting; to test aspects of your experience using it, you must publish the experience and play it in the Roblox application.
     code_samples:
       - present-experience-details-page
     parameters:
       - name: player
         type: Player
         default:
-        summary: |
-          The `Class.Player` to be presented the prompt.
+        summary: The `Class.Player` to be presented the prompt.
       - name: universeId
         type: int64
         default:
-        summary: |
-          `Class.DataModel.UniverseId` of the experience to be presented to the
-          `Class.Player`
+        summary: '`Class.DataModel.UniverseId` of the experience to be presented to the `Class.Player`.'
     returns:
       - type: PromptExperienceDetailsResult
-        summary: |
-          `Enum.PromptExperienceDetailsResult`
+        summary: '`Enum.PromptExperienceDetailsResult`'
     tags:
       - Yields
     deprecation_message: ''
@@ -343,7 +322,7 @@ methods:
     capabilities:
       - Teleport
   - name: TeleportService:ReserveServer
-    summary: |
+    summary: |-
       Returns an access code that can be used to teleport players to a reserved
       server, along with the `Class.DataModel.PrivateServerId` for it.
     description: ''
@@ -354,12 +333,12 @@ methods:
       - name: placeId
         type: int64
         default:
-        summary: |
+        summary: |-
           The `Class.DataModel.PlaceId` of the place the reserved server is
           being created for.
     returns:
       - type: Tuple
-        summary: |
+        summary: |-
           The server access code required by
           `Class.TeleportService:TeleportToPrivateServer()` and the
           `Class.DataModel.PrivateServerId` for the reserved server.
@@ -372,10 +351,10 @@ methods:
     capabilities:
       - Teleport
   - name: TeleportService:ReserveServerAsync
-    summary: |
+    summary: |-
       Returns an access code that can be used to teleport players to a reserved
       server, along with the `Class.DataModel.PrivateServerId` for it.
-    description: |
+    description: |-
       This function returns an access code that can be used to teleport players
       to a reserved server, along with the server's
       `Class.DataModel.PrivateServerId`. It can only be called on the server.
@@ -424,12 +403,12 @@ methods:
       - name: placeId
         type: int64
         default:
-        summary: |
+        summary: |-
           The `Class.DataModel.PlaceId` of the place the reserved server is
           being created for.
     returns:
       - type: Tuple
-        summary: |
+        summary: |-
           The server access code required by
           `Class.TeleportService:TeleportToPrivateServer()` and the
           `Class.DataModel.PrivateServerId` for the reserved server.
@@ -441,10 +420,10 @@ methods:
     capabilities:
       - Teleport
   - name: TeleportService:SetTeleportGui
-    summary: |
+    summary: |-
       Sets the custom `Class.ScreenGui|teleport GUI` that will be shown to the
       local user during teleportation, prior to the teleport being invoked.
-    description: |
+    description: |-
       This function sets the custom `Class.ScreenGui|teleport GUI` that will be
       shown to the local user during teleportation, prior to the teleport being
       invoked.
@@ -485,7 +464,7 @@ methods:
       - name: gui
         type: Instance
         default:
-        summary: |
+        summary: |-
           The loading `Class.ScreenGui` that is to be displayed during
           teleportation.
     returns:
@@ -499,10 +478,10 @@ methods:
       - UI
       - Teleport
   - name: TeleportService:SetTeleportSetting
-    summary: |
+    summary: |-
       Stores a value under a given key that persists across all teleportations
       in the same game.
-    description: |
+    description: |-
       This function stores a value under a given key that persists across all
       teleportations in the same game.
 
@@ -569,14 +548,13 @@ methods:
       - name: setting
         type: string
         default:
-        summary: |
+        summary: |-
           The key to store the _value_ under. This key can be used to retrieve
           the value using `Class.TeleportService:GetTeleportSetting()`.
       - name: value
         type: Variant
         default:
-        summary: |
-          The value to store.
+        summary: The value to store.
     returns:
       - type: ()
         summary: ''
@@ -587,10 +565,10 @@ methods:
     capabilities:
       - Teleport
   - name: TeleportService:Teleport
-    summary: |
+    summary: |-
       Teleports a `Class.Player` to the place associated with the given
       `placeId`.
-    description: |
+    description: |-
       This method should not be used for new work; the numerous teleport
       functions have been combined into a single method,
       `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
@@ -602,24 +580,23 @@ methods:
       - name: placeId
         type: int64
         default:
-        summary: |
-          The ID of the place to teleport to.
+        summary: The ID of the place to teleport to.
       - name: player
         type: Instance
         default: nil
-        summary: |
+        summary: |-
           The `Class.Player` to teleport, if this function is being called from
           the client this defaults to the `Class.Players.LocalPlayer`.
       - name: teleportData
         type: Variant
         default:
-        summary: |
+        summary: |-
           Optional data to be passed to the destination place. Can be retrieved
           using `Class.TeleportService:GetLocalPlayerTeleportData()`.
       - name: customLoadingScreen
         type: Instance
         default: nil
-        summary: |
+        summary: |-
           Optional custom loading screen to be placed in the `Class.CoreGui` at
           the destination place. Can be retrieved using
           `Class.TeleportService:GetArrivingTeleportGui()`.
@@ -634,10 +611,10 @@ methods:
       - UI
       - Teleport
   - name: TeleportService:TeleportAsync
-    summary: |
+    summary: |-
       The all-encompassing method to teleport a player or group of players from
       one server to another.
-    description: |
+    description: |-
       This function serves as the all-encompassing method to teleport a player
       or group of players from one server to another. It can be used to:
 
@@ -705,23 +682,21 @@ methods:
       - name: placeId
         type: int64
         default:
-        summary: |
-          The place ID the player(s) should be teleported to.
+        summary: The place ID the player(s) should be teleported to.
       - name: players
         type: Instances
         default:
-        summary: |
-          An array of the player(s) to teleport.
+        summary: An array of the player(s) to teleport.
       - name: teleportOptions
         type: Instance
         default: nil
-        summary: |
+        summary: |-
           An optional `Class.TeleportOptions` object containing additional
           arguments to the `Class.TeleportService:TeleportAsync()` call. If this
           is not passed, no result will be returned.
     returns:
       - type: Instance
-        summary: |
+        summary: |-
           If a `Class.TeleportOptions` parameter is passed, this will be a
           `Class.TeleportAsyncResult` object that provides information about the
           final teleport destination.
@@ -734,12 +709,12 @@ methods:
       - UI
       - Teleport
   - name: TeleportService:TeleportPartyAsync
-    summary: |
+    summary: |-
       Teleports a group of `Class.Player|Players` to the same server of the
       place with the given `Class.DataModel.PlaceId|PlaceId`, returning the
       `Class.DataModel.JobId|JobId` of the server instance they were teleported
       to.
-    description: |
+    description: |-
       This method should not be used for new work; the numerous teleport
       functions have been combined into a single method,
       `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
@@ -750,29 +725,27 @@ methods:
       - name: placeId
         type: int64
         default:
-        summary: |
-          The ID of the place to teleport to.
+        summary: The ID of the place to teleport to.
       - name: players
         type: Instances
         default:
-        summary: |
-          An array containing the `Class.Player|Players` to teleport.
+        summary: An array containing the `Class.Player|Players` to teleport.
       - name: teleportData
         type: Variant
         default:
-        summary: |
+        summary: |-
           Optional data to be passed to the destination place. Can be retrieved
           using `Class.TeleportService:GetLocalPlayerTeleportData()`.
       - name: customLoadingScreen
         type: Instance
         default: nil
-        summary: |
+        summary: |-
           Optional custom loading screen to be placed in the `Class.CoreGui` at
           the destination place. Can be retrieved using
           `Class.TeleportService:GetArrivingTeleportGui()`.
     returns:
       - type: string
-        summary: |
+        summary: |-
           The `Class.DataModel.JobId` of the server instance the
           `Class.Player|Players` were teleported to.
     tags:
@@ -784,10 +757,10 @@ methods:
       - UI
       - Teleport
   - name: TeleportService:TeleportToPlaceInstance
-    summary: |
+    summary: |-
       Teleports a `Class.Player` to the server instance associated with the
       given _placeId_ and _instanceId_.
-    description: |
+    description: |-
       This method should not be used for new work; the numerous teleport
       functions have been combined into a single method,
       `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
@@ -798,34 +771,31 @@ methods:
       - name: placeId
         type: int64
         default:
-        summary: |
-          The ID of the place to teleport to.
+        summary: The ID of the place to teleport to.
       - name: instanceId
         type: string
         default:
-        summary: |
-          The `Class.DataModel.JobId` of the server instance to teleport to.
+        summary: The `Class.DataModel.JobId` of the server instance to teleport to.
       - name: player
         type: Instance
         default: nil
-        summary: |
+        summary: |-
           The `Class.Player` to teleport, if this function is being called from
           the client this defaults to the `Class.Players.LocalPlayer`.
       - name: spawnName
         type: string
         default:
-        summary: |
-          Optional name of the `Class.SpawnLocation` to spawn at.
+        summary: Optional name of the `Class.SpawnLocation` to spawn at.
       - name: teleportData
         type: Variant
         default:
-        summary: |
+        summary: |-
           Optional data to be passed to the destination place. Can be retrieved
           using `Class.TeleportService:GetLocalPlayerTeleportData()`.
       - name: customLoadingScreen
         type: Instance
         default: nil
-        summary: |
+        summary: |-
           Optional custom loading screen to be placed in the `Class.CoreGui` at
           the destination place. Can be retrieved using
           `Class.TeleportService:GetArrivingTeleportGui()`.
@@ -840,10 +810,10 @@ methods:
       - UI
       - Teleport
   - name: TeleportService:TeleportToPrivateServer
-    summary: |
+    summary: |-
       Teleport a group of `Class.Player|Players` to a reserved server created
       using `Class.TeleportService:ReserveServerAsync()`.
-    description: |
+    description: |-
       This method should not be used for new work; the numerous teleport
       functions have been combined into a single method,
       `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
@@ -855,34 +825,31 @@ methods:
       - name: placeId
         type: int64
         default:
-        summary: |
-          The ID of the place to teleport to.
+        summary: The ID of the place to teleport to.
       - name: reservedServerAccessCode
         type: string
         default:
-        summary: |
+        summary: |-
           The reserved server access code returned by
           `Class.TeleportService:ReserveServerAsync()`.
       - name: players
         type: Instances
         default:
-        summary: |
-          An array of `Class.Player|Players` to teleport.
+        summary: An array of `Class.Player|Players` to teleport.
       - name: spawnName
         type: string
         default:
-        summary: |
-          Optional name of the `Class.SpawnLocation` to spawn at.
+        summary: Optional name of the `Class.SpawnLocation` to spawn at.
       - name: teleportData
         type: Variant
         default:
-        summary: |
+        summary: |-
           Optional data to be passed to the destination place. Can be retrieved
           using `Class.TeleportService:GetLocalPlayerTeleportData()`.
       - name: customLoadingScreen
         type: Instance
         default: nil
-        summary: |
+        summary: |-
           Optional custom loading screen to be placed in the `Class.CoreGui` at
           the destination place. Can be retrieved using
           `Class.TeleportService:GetArrivingTeleportGui()`.
@@ -897,11 +864,11 @@ methods:
       - UI
       - Teleport
   - name: TeleportService:TeleportToSpawnByName
-    summary: |
+    summary: |-
       A variant of `Class.TeleportService:Teleport()` that causes the
       `Class.Player` to spawn at a `Class.SpawnLocation` of the given name at
       the destination place.
-    description: |
+    description: |-
       This method should not be used for new work; the numerous teleport
       functions have been combined into a single method,
       `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
@@ -912,29 +879,27 @@ methods:
       - name: placeId
         type: int64
         default:
-        summary: |
-          The ID of the place to teleport to.
+        summary: The ID of the place to teleport to.
       - name: spawnName
         type: string
         default:
-        summary: |
-          The name of the `Class.SpawnLocation` to spawn at.
+        summary: The name of the `Class.SpawnLocation` to spawn at.
       - name: player
         type: Instance
         default: nil
-        summary: |
+        summary: |-
           The `Class.Player` to teleport, if this function is being called from
           the client this defaults to the `Class.Players.LocalPlayer`.
       - name: teleportData
         type: Variant
         default:
-        summary: |
+        summary: |-
           Optional data to be passed to the destination place. Can be retrieved
           using `Class.TeleportService:GetLocalPlayerTeleportData()`.
       - name: customLoadingScreen
         type: Instance
         default: nil
-        summary: |
+        summary: |-
           Optional custom loading screen to be placed in the `Class.CoreGui` at
           the destination place. Can be retrieved using
           `Class.TeleportService:GetArrivingTeleportGui()`.
@@ -950,10 +915,10 @@ methods:
       - Teleport
 events:
   - name: TeleportService.LocalPlayerArrivedFromTeleport
-    summary: |
+    summary: |-
       Fires when the `Class.Players.LocalPlayer|LocalPlayer` enters the place
       following a teleport.
-    description: |
+    description: |-
       This function fires when the `Class.Players.LocalPlayer` enters the place
       following a teleport. The `teleportData` and `customLoadingScreen` are
       provided as arguments.
@@ -1010,13 +975,13 @@ events:
       - name: loadingGui
         type: Instance
         default:
-        summary: |
+        summary: |-
           The _customLoadingScreen_ the `Class.Players.LocalPlayer|LocalPlayer`
           arrived into the place with.
       - name: dataTable
         type: Variant
         default:
-        summary: |
+        summary: |-
           The _teleportData_ the `Class.Players.LocalPlayer|LocalPlayer` arrived
           into the place with.
     tags: []
@@ -1025,10 +990,10 @@ events:
     capabilities:
       - Teleport
   - name: TeleportService.TeleportInitFailed
-    summary: |
+    summary: |-
       Fires when a teleport fails to start, leaving the player in their current
       server.
-    description: |
+    description: |-
       This event fires on both the client and the server when a request to
       teleport from a function such as `Class.TeleportService:TeleportAsync()`
       fails and the player does not leave the current server. It provides a
@@ -1093,27 +1058,23 @@ events:
       - name: player
         type: Instance
         default:
-        summary: |
-          The `Class.Player` instance that failed to teleport.
+        summary: The `Class.Player` instance that failed to teleport.
       - name: teleportResult
         type: TeleportResult
         default:
-        summary: |
-          The reason for the teleport failure.
+        summary: The reason for the teleport failure.
       - name: errorMessage
         type: string
         default:
-        summary: |
-          The message provided to the player explaining the teleport failure.
+        summary: The message provided to the player explaining the teleport failure.
       - name: placeId
         type: int64
         default:
-        summary: |
-          The original target place ID of the teleport.
+        summary: The original target place ID of the teleport.
       - name: teleportOptions
         type: Instance
         default:
-        summary: |
+        summary: |-
           A `Class.TeleportOptions` object that can be passed back to
           `Class.TeleportService:TeleportAsync()` to retry the failed teleport.
     tags: []

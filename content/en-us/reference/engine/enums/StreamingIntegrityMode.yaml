@@ -4,51 +4,42 @@
 
 name: StreamingIntegrityMode
 type: enum
-summary: |
+summary: |-
   Determines how a user's client should handle not having enough content
   streamed in.
-description: |
-  This enum is used to control `Class.Workspace.StreamingIntegrityMode`
-  behavior. The default behavior is currently equivalent to **Disabled** but may
-  change in the future. For all modes, the replication focus defaults to be the
-  local character model unless explicitly set via
-  `Class.Player.ReplicationFocus`.
+description: |-
+  This enum is used to control `Class.Workspace.StreamingIntegrityMode` behavior.
+  For all modes, the replication focus defaults to be the local character model
+  unless explicitly set via `Class.Player.ReplicationFocus`.
 
-  Most experiences should use **PauseOutsideLoadedArea**, however if your
-  experience relies on raycasts, or otherwise requires a certain amount of
-  content to be loaded in, then **MinimumRadiusPause** might be a better choice.
-
-  Note that **MinimumRadiusPause** and **PauseOutsideLoadedArea** both set the
+  Note that `MinimumRadiusPause` and `PauseOutsideLoadedArea` both set the
   `Class.Player.GameplayPaused` property when their respective pause logic is
-  triggered, and a default message is displayed on the client. The default pause
-  UI can be overridden as outlined in
-  [Instance streaming](../../../workspace/streaming.md#customize-the-pause-screen).
+  triggered, and a default message is displayed on the client.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: |
-      Default behavior (currently equivalent to **Disabled**).
+    summary: Default behavior (subject to change).
     value: 0
     tags: []
     deprecation_message: ''
   - name: Disabled
-    summary: |
+    summary: |-
       Simulation of the replication focus is never paused, regardless of the
       amount of content streamed in on the client.
     value: 1
     tags: []
     deprecation_message: ''
   - name: MinimumRadiusPause
-    summary: |
+    summary: |-
       All client-side simulation is paused when content is not streamed in up to
       the minimum radius.
     value: 2
     tags: []
     deprecation_message: ''
   - name: PauseOutsideLoadedArea
-    summary: |
+    summary: |-
       Simulation of the replication focus is paused when any part of its
       bounding box is not in a streamed-in area.
     value: 3

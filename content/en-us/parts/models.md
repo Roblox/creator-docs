@@ -108,9 +108,9 @@ To prevent parts that have fallen off of an experience's map from continuing to 
 
 ## Model streaming
 
-Instance [streaming](../workspace/streaming.md) dynamically loads and unloads `Class.Model|Models` on a player's device as their character explores the 3D world. With streaming enabled, you can specify the way each model should be treated under streaming behavior. For example, a model set to [Persistent](../workspace/streaming.md#persistent) will never stream out, or a model set to [Atomic](../workspace/streaming.md#atomic) will stream in and out as a single unit with all of its descendants. For more information, see [Per-model streaming controls](../workspace/streaming.md#per-model-streaming-controls).
+Instance [streaming](../workspace/streaming/index.md) dynamically loads and unloads `Class.Model|Models` on a player's device as their character explores the 3D world. With streaming enabled, you can specify the way each model should be treated under streaming behavior. For example, a model set to [Persistent](../workspace/streaming/index.md#persistent) will never stream out, or a model set to [Atomic](../workspace/streaming/index.md#atomic) will stream in and out as a single unit with all of its descendants. For more information, see [per-model streaming controls](../workspace/streaming/index.md#per-model-streaming-controls).
 
-Because the 3D content that exists on the client changes dynamically in a streaming-enabled experience, models might suddenly disappear, which can be visually jarring for the player. To avoid this situation, you can set specific models to render as optimized "SLIM" meshes or as lower resolution "imposter" meshes when streamed out. See [Model level of detail](../workspace/streaming.md#model-level-of-detail).
+Because the 3D content that exists on the client changes dynamically in a streaming-enabled experience, models might suddenly disappear, which can be visually jarring for the player. To avoid this situation, you can set specific models to render as optimized "SLIM" meshes or as lower resolution "imposter" meshes when streamed out. See [model level of detail](../workspace/streaming/techniques.md#set-model-level-of-detail).
 
 ## Upload models
 

@@ -41,13 +41,6 @@ Below are some ways our educators have used private servers in the classroom.
 - If students have created an experience, allow them to create a private
   server so only members of the class can play.
 
-## Tips from an educator
-
-**Bianca Rivera, Librarian at Ruth C. Kinney Elementary in New York**, attended the first Roblox webinar in early April and was inspired to organize a private play session for her students shortly afterwards. She wrote to us:
-
-- "I was thrilled to see 50 students actually show up for our Adopt Me private play session! It was so much fun playing as a group with students socializing as they hopped on and off over a 3-hour span. I'm now exploring other games from Roblox's Play Together collection that offer VIP servers and can accommodate large groups at a time and look forward to hosting another gathering soon. We needed this and badly! So even after this crisis is gone, I want to arrange something like this over long school breaks."
-- "What I'd recommend to teachers is to look for games that offer large VIP servers (enough for 20+ students). It's very easy to buy some "Robux" to "rent" a VIP server at really reasonable prices for a month and share regular sessions' dates/times with student and their parents to meetup and connect over the game. After the scheduled games are done, they can also let the students know they can go in to the private server any time for the next month to have private games with school friends."
-
 ## Find experience
 
 The [Learn & Explore](https://www.roblox.com/discover#/sortName/Curated_67) sort, features experience that offer exploration of new places and subjects like history, safety, physics, and natural sciences. Many were created by educators and students.

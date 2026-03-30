@@ -63,7 +63,7 @@ To test the module in Studio, the **FriendsLocator** module must be run in a mul
    </Alert>
 
    <Alert severity="warning">
-   By default, clicking/tapping a friends's icon will teleport your character to that character's location. If you keep this default behavior and you find that streaming pause is occurring under the [instance streaming](../../workspace/streaming.md) architecture, you may want to [request area streaming](../../workspace/streaming.md#request-area-streaming) around the teleport location as shown in the [clicked](#clicked) event code sample.
+   By default, clicking/tapping a friends's icon will teleport your character to that character's location. If you keep this default behavior and you find that streaming pause is occurring under the [instance streaming](../../workspace/streaming/index.md) architecture, you may want to [request area streaming](../../workspace/streaming/techniques.md#stream-proactively) around the teleport location as shown in the [clicked](#clicked) event code sample.
    </Alert>
 
 ### Connect to events

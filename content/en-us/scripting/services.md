@@ -43,7 +43,7 @@ Some key details include:
 
 - Because you should only retrieve a service once per script, the convention is to give the variable the same name as the service. This convention applies to module scripts, as well.
 - You retrieve services with the global variable `Class.DataModel|game`, a reference to the root of the data model.
-- Roblox doesn't make guarantees around loading order (and [instance streaming](../workspace/streaming.md) further complicates what is and isn't loaded at any given time), so the use of `Class.Instance:WaitForChild()` is an important safety measure.
+- Roblox doesn't make guarantees around loading order (and [instance streaming](../workspace/streaming/index.md) further complicates what is and isn't loaded at any given time), so the use of `Class.Instance:WaitForChild()` is an important safety measure.
 
 Rather than comparing [standard libraries](/reference/engine/libraries), [global functions and variables](/reference/engine/globals), or third-party libraries, a big part of Roblox development is identifying which of the many, many services can help you add the desired functionality to your experiences. In the example above, instead of using a standard I/O library to write to disk, you use [cloud services](#cloud-services) to store data.
 

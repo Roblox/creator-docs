@@ -764,3 +764,4 @@ https://ai.google.dev/gemini-api/docs/api-key
 https://platform.openai.com/api-keys
 https://platform.claude.com/settings/keys
 https://survey.roblox.com/jfe/form/SV_b1QDMtBNrR0EUGG
+https://www.youtube-nocookie.com/embed/jLNgutvbALY?si=CU8CiDeiQOMIDfDr

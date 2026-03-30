@@ -5,29 +5,22 @@
 name: ObjectValue
 type: class
 memory_category: Instances
-summary: |
-  A container object for a reference to another instance.
-description: |
-  Stores a single reference to another object. If this object is duplicated
-  within Studio and the value refers to an object also being copied, then the
-  new `ObjectValue` points to the copied object instead of the original.
-  Otherwise, the same value is kept. Copying and pasting this object clears the
-  value field.
-
-  You can set the value within Studio like other reference-type fields (such as
-  `Class.Model.PrimaryPart`): click the field within the Properties window, then
-  click the object you wish to set it to within the game view or Explorer
-  window. You can clear the field (set it to `nil`) by clicking the X that
-  appears when you click the field.
+summary: A container object for a reference to another instance.
+description: |-
+  Stores a single reference to
+  another object. If this object is duplicated within Studio and the value
+  refers to an object also being copied, then the new `ObjectValue` points to
+  the copied object instead of the original. Otherwise, the same value is kept.
+  Copying and pasting this object clears the value field.
 
   Like all `Class.ValueBase` objects, this single value is stored in the
-  `Class.ObjectValue.Value|Value` property. The `Changed` event fires with the
-  new value being stored in the object, instead of a string representing the
-  property being changed.
+  `Class.ObjectValue.Value|Value` property. The `Changed` event fires with the new
+  value being stored in the object, instead of a string representing the property
+  being changed.
 
-  If [streaming](../../../workspace/streaming.md) is enabled, the `Value`
-  property is nil until the referenced object streams in, at which point the
-  `Changed` event fires.
+  If [streaming](../../../workspace/streaming/index.md) is enabled, the `Value` property
+  is nil until the referenced object streams in, at which point the `Changed`
+  event fires.
 code_samples:
   - ObjectValue-Example
 inherits:
@@ -37,10 +30,8 @@ tags: []
 deprecation_message: ''
 properties:
   - name: ObjectValue.Value
-    summary: |
-      Holds a reference to an instance.
-    description: |
-      Holds a reference to an instance.
+    summary: Holds a reference to an instance.
+    description: Holds a reference to an instance.
     code_samples: []
     type: Instance
     tags: []
@@ -57,12 +48,11 @@ properties:
 methods: []
 events:
   - name: ObjectValue.Changed
-    summary: |
-      Fires whenever the `Class.ObjectValue.Value` is changed.
-    description: |
-      Fires whenever the `Class.ObjectValue.Value` changes. It runs with the new
-      value being stored in the argument object, instead of a string
-      representing the property being changed.
+    summary: Fires whenever the `Class.ObjectValue.Value` is changed.
+    description: |-
+      Fires whenever the `Class.ObjectValue.Value` changes. It
+      runs with the new value being stored in the argument object, instead of a
+      string representing the property being changed.
 
       Listening for the `Changed` signal can be useful in games that use
       `ObjectValues` to track game state, such as an RPG targeting system.
@@ -72,8 +62,7 @@ events:
       - name: value
         type: Instance
         default:
-        summary: |
-          The new value after the change.
+        summary: The new value after the change.
     tags: []
     deprecation_message: ''
     security: None
@@ -89,7 +78,7 @@ events:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This event is a deprecated variant of `Class.ObjectValue.Changed` which
       should be used instead.
     security: None
