@@ -840,7 +840,7 @@ local constraintOptions = {
 	dropAttachmentsWithoutConstraints = false,
 }
 
--- Perform subtract operation in pcall() since it's asyncronous
+-- Perform subtract operation in pcall() since it's asynchronous
 local success, newParts = pcall(function()
 	return GeometryService:SubtractAsync(mainPart, otherParts, options)
 end)

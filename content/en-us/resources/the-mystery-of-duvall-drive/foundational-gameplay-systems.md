@@ -227,7 +227,7 @@ Some of the mission logic is in the **[GameStateManager](#gamestatemanager)** sc
 
 Each mission type has its own `StartMissionFunc` and `CompleteMissionFunc`. Starting function usually reads parameters from the **MatchItem** map, resolves names to objects, and sets up any click detectors or UI elements. Almost all the logic is on a server, but MissionsLogicClient provides a UI for showing items counter, used in many missions. `MissionLogicEvent` remote event is used for server - client communications, with a small MissionEvents defining types of commands passed. The `MiscGameLogic` script binds some triggers to events and removes debug objects in Release version.
 
-Matching items logic allows to "use" (click while holding) items marked with **PuzzlePieceXX** tags over items with **PuzzleSlotYY** tag. There are a few options available as parameters in **MatchItems** map (if pieces need to be applied in order, if only one of each is required). We could specify names for simple audio and visual FX. When pieces need to be placed at specific locations, an extra "Placement" map provides mapping from pieces tags to names of placeholder parts that define transforms.
+Matching items logic allows you to "use" (click while holding) items marked with **PuzzlePieceXX** tags over items with **PuzzleSlotYY** tag. There are a few options available as parameters in **MatchItems** map (if pieces need to be applied in order, if only one of each is required). We could specify names for simple audio and visual FX. When pieces need to be placed at specific locations, an extra "Placement" map provides mapping from pieces tags to names of placeholder parts that define transforms.
 
 ## Grabbing
 

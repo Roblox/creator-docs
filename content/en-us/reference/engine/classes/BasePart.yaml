@@ -2399,7 +2399,7 @@ methods:
           A table of parts connected to the object by any kind of
           `Class.JointInstance|joint`.
     returns:
-      - type: Instances
+      - type: List<BasePart>
         summary: ''
     tags: []
     deprecation_message: ''

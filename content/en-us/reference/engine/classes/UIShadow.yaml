@@ -11,7 +11,8 @@ code_samples: []
 inherits:
   - UIComponent
 descendants: []
-tags: []
+tags:
+  - NotBrowsable
 deprecation_message: ''
 properties:
   - name: UIShadow.BlurRadius

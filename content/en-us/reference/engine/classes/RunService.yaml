@@ -320,7 +320,7 @@ methods:
           current simulation step.
       - name: frequency
         type: StepFrequency
-        default: Hz60
+        default: Hz30
         summary: |
           Optional `Enum.StepFrequency` value indicating the frequency at which
           to call the bound function. If not provided, the default frequency
@@ -744,9 +744,6 @@ events:
       `Class.LocalScript`, in a `Class.ModuleScript` required by a
       `Class.LocalScript`, or in a `Class.Script` with
       `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`.
-
-      Following the `PreRender` phase, the simulation phase begins with the
-      `Class.RunService.PreAnimation|PreAnimation` event.
     code_samples: []
     parameters:
       - name: deltaTimeRender

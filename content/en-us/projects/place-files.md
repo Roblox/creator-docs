@@ -3,6 +3,8 @@ title: Place files
 description: Learn how to manage and optimize your place files in Roblox.
 ---
 
+import PlaceSizeLimit from '../includes/place-size-limit.md'
+
 Each Roblox experience consists of one or more [places](index.md#places), and Studio uploads your place data to Roblox's servers whenever you save or publish to Roblox in the **File** menu.
 
 You might also want to export local copies of places for use with a version control system or other [external tools](external-tools.md). To export your place in Studio, select **Save&nbsp;to&nbsp;File** or **Download&nbsp;a&nbsp;Copy** from the **File** menu. Studio offers two file formats:
@@ -10,13 +12,9 @@ You might also want to export local copies of places for use with a version cont
 - `.rbxl` is the binary place file format. This format is compact, but not human-readable.
 - `.rbxlx` is the XML-based place file format, which is quite a bit larger on disk than the binary format.
 
-## Size limit
+<PlaceSizeLimit components={props.components} />
 
-Roblox supports places up to 100 MB (104,857,600 bytes). Beyond that limit, **Save to Roblox** and **Publish to Roblox** might fail. The data that Studio uploads to Roblox is slightly smaller than the `.rbxl` file format, so you can export your place to `.rbxl` to get a sense of its size.
-
-Very few places, even the most complex ones, reach this limit, and when they do, it's often due to inefficiencies in the place. See [Troubleshooting](#troubleshoot-place-file-size).
-
-### Auto-recovery files
+## Auto-recovery files
 
 If saving to Roblox fails due to the file size limit, Studio automatically generates a backup of your place called a **recovery file**. The frequency of auto-recovery backups depends on whether your experience has [collaboration](collaboration.md) enabled:
 

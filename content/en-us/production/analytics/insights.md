@@ -80,5 +80,5 @@ You can also access the player feedback report by clicking **See full report** o
 </figure>
 
 <Alert severity="warning">
-  Analytics and player feedback reports use AI and can make mistakes. Make sure to check responses and weigh player feedback against your judgement.
+  Analytics and player feedback reports use AI and can make mistakes. Make sure to check responses and weigh player feedback against your judgment.
 </Alert>

@@ -14,23 +14,6 @@ descendants: []
 tags: []
 deprecation_message: ''
 properties:
-  - name: GroundController.AccelerationLean
-    summary: ''
-    description: ''
-    code_samples: []
-    type: float
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Balance
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Basic
   - name: GroundController.AccelerationTime
     summary: |
       Estimated time taken to reach the desired speed.
@@ -178,40 +161,6 @@ properties:
       `Class.ControllerManager.RootPart` at. If the root part is below this
       offset from the ground, a force is applied to raise up to this height. If
       it's above, nothing happens.
-    code_samples: []
-    type: float
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Movement
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Basic
-  - name: GroundController.StandForce
-    summary: ''
-    description: ''
-    code_samples: []
-    type: float
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Movement
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Basic
-  - name: GroundController.StandSpeed
-    summary: ''
-    description: ''
     code_samples: []
     type: float
     tags: []

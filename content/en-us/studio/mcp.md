@@ -1,10 +1,10 @@
 ---
-title: Connect to the Roblox Studio MCP Server
+title: Connect to the Roblox Studio MCP server
 description: Learn how to connect your AI coding tools to Roblox Studio, enabling them to read your game structure, edit scripts, insert models, execute code, and control play mode — all from natural language prompts.
 
 ---
 
-The **Roblox Studio MCP Server** is built into Roblox Studio. It implements the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), an open standard that lets AI tools securely communicate with external applications. Once connected, your AI assistant can interact directly with your open Studio session — exploring the DataModel, writing scripts, running Luau code, testing in play mode, and more.
+The **Roblox Studio MCP server** is built into Roblox Studio. It implements the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), an open standard that lets AI tools securely communicate with external applications. Once connected, your AI assistant can interact directly with your open Studio session—exploring the data model, writing scripts, running Luau code, testing in play mode, and more.
 
 This guide walks you through connecting the Studio MCP Server to popular AI clients. While the exact steps vary by client, the core concept is the same: you point your client at the Studio MCP Server binary and it handles the rest.
 
@@ -17,7 +17,7 @@ Before you begin, make sure you have:
 
 No additional downloads or plugins are required — the MCP server ships with Studio itself.
 
-## Enabling the MCP Server in Studio
+## Enabling the MCP server in Studio
 
 Before connecting any external client, you need to turn on the MCP server inside Roblox Studio.
 
@@ -34,49 +34,55 @@ Learn how to connect to your client in the next sections. You can also find more
 
 You can connect a single MCP client to multiple running instances of Studio simultaneously. The server will intelligently infer which Studio instance you're referring to based on context — for example, if you mention a specific game by name or reference something that only exists in one of your connected experiences. You can also switch manually using `list_roblox_studios` and `set_active_studio` at any time. This feature is still experimental.
 
-## Understanding the Studio MCP Server
+## Understanding the Studio MCP server
 
-The Studio MCP Server runs as a local process on your machine and communicates with your AI client via **stdio transport** (standard input/output). When your AI assistant wants to perform an action in Studio, it sends a request through this channel, and the server relays it to the Studio plugin.
+The Studio MCP server runs as a local process on your machine and communicates with your AI client via **stdio transport** (standard input/output). When your AI assistant wants to perform an action in Studio, it sends a request through this channel, and the server relays it to the Studio plugin.
 
-<br />**Scripts**
+All actions flow through your AI client, which will typically ask for your approval before executing them.
+
+<Alert severity="warning">
+MCP clients can read and modify content in your open Roblox places. Only connect clients you trust.
+</Alert>
+
+### Scripts
 
 - `script_read` — Reads a script from the game using dot-notation paths (game.ServerScriptService.MyScript). Supports reading entire scripts or specific line ranges.
 - `multi_edit` — Makes multiple edits to a single script in one atomic operation. Can also create new scripts if the target path doesn't exist. Edits are applied sequentially using exact string matching.
 - `script_search` — Fast fuzzy search against script names. Useful when you know part of a script's name but not its location. Returns up to 10 results.
 - `script_grep` — Searches for a string pattern across all script contents in the game. Results are capped at 50 matches.
 
-**Exploring the Data Model**
+### Asset and content generation
+
+- `generate_mesh` — Generate a 3D textured single mesh
+- `generate_material` — Generate a custom material/texture
+- `insert_from_creator_store` — Insert pre-built models from the Roblox marketplace
+
+### Exploring the data model
 
 - `search_game_tree` — Explores the game's instance hierarchy as a flat JSON array. Supports filtering by path, instance type (with `IsA()` checks), and keywords. Configurable traversal depth (default 3, max 10).
 - `inspect_instance` — Returns detailed information about a specific instance, including all readable properties, custom attributes, and a summary of children and total descendants.
 
-**Luau Execution**
+### Luau execution
 
 - `execute_luau` — Executes Luau code directly in Roblox Studio and returns the result or an error message.
 
-**Playtesting**
+### Playtesting
 
 - `start_stop_play` — Start or stop playtesting the game.
 - `console_output` — Retrieve console/output logs while the game is running.
 
-**Player Input Simulation**
+### Player input simulation
 
 - `character_navigation` — Move the player character to a position or instance.
 - `keyboard_input` — Simulate key presses, key holds, and text input.
 - `mouse_input` — Simulate mouse clicks, movement, and scrolling.
 
-**Session Management**
+### Session management
 
 - `list_roblox_studios` — Lists all connected Roblox Studio instances with their name, ID, and active status. Useful when multiple Studio windows are open.
 - `set_active_studio` — Sets a specific Studio instance as active so that all subsequent tool calls target it.
 
-All actions flow through your AI client, which will typically ask for your approval before executing them.
-
-<Alert severity = 'warning'>
-Security note: MCP clients can read and modify content in your open Roblox places. Only connect clients you trust.
-</Alert>
-
-## Connecting your client
+## Connect your client
 
 Choose your client below and follow the setup instructions. Refer to the client's documentation if required.
 
@@ -112,7 +118,7 @@ macOS:
 }
 ```
 
-Other MCP clients will prompt you for the MCP command or expect it as a CLI argument during setup. Here are the commands for the Roblox MCP Server:
+Other MCP clients will prompt you for the MCP command or expect it as a CLI argument during setup. Here are the commands for the Roblox MCP server:
 
 Windows CLI command:
 
@@ -154,7 +160,7 @@ Claude Desktop manages MCP servers through a JSON configuration file. Use the fo
 1. In Claude desktop, navigate to **Claude** > **Settings...**.
 2. Navigate to the **Developer** tab and select **Edit Config**.
    1. If pressing that button produces errors, it's possible that Claude Desktop 'hid' the configuration JSON in a directory like `C:\Users\<username>\AppData\Local\Packages\Claude_????\LocalCache\Roaming\Claude\claude_desktop_config.json`
-3. Add the server configuration from [Connecting Your Client](#connecting-your-client) to the `claude_desktop_config.json`.
+3. Add the server configuration from [Connecting Your Client](#connect-your-client) to the `claude_desktop_config.json`.
 
 4. Restart Claude Desktop by completely quitting and relaunching. On restart, you should see a MCP server indicator in the bottom-right corner of the chat input field.
 5. Click the hammer icon below the chat input to access your tools and verify Roblox Studio has been added.
@@ -255,7 +261,7 @@ Antigravity supports MCP servers through its built-in MCP store and raw config e
 
 ### Other MCP clients
 
-The Studio MCP Server works with **any client that supports stdio transport**. Use the configuration JSON or CLI command from the [Connecting Your Client](#connecting-your-client) section and consult your client's documentation for where to place the configuration. Restart the client to load the new configuration.
+The Studio MCP server works with **any client that supports stdio transport**. Use the configuration JSON or CLI command from the [Connect your client](#connect-your-client) section and consult your client's documentation for where to place the configuration. Restart the client to load the new configuration.
 
 Consult your client's documentation for where to place the configuration, then add a server entry with the command and argument above. Restart the client to load the new configuration.
 
@@ -275,4 +281,4 @@ After configuring any client, follow these steps to confirm everything is workin
 
 1. Restart both Roblox Studio and your MCP client completely.
 2. Verify the binary path is correct and the file exists.
-3. Check your JSON syntax — a missing comma or bracket will silently break the config.
+3. Check your JSON syntax. Even minor issues like a missing comma or bracket will silently break the config.

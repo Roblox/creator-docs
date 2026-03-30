@@ -43,7 +43,7 @@ It's recommended to publish to Roblox every ten minutes or after making a big ch
    If **Publish to Roblox** is greyed out, make sure you stopped your playtest.
    </Alert>
 
-1. In the **Publish Game** window,
+1. In the **Publish Experience** window,
 
    1. In the **Name** field, provide a name for your experience.
    1. <Chip label="OPTIONAL" size="small" variant="outlined" /> In the **Description** field, provide a summary of what a player can expect from the experience.

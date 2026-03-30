@@ -23,7 +23,7 @@ Roblox treats experiences without guidelines the same as experiences with an age
 If your Roblox account is at least 30 days old, you can generate experience guidelines by filling out the **Experience Questionnaire** which contains a set of questions about the type of content players can possibly encounter within your experience, as well as how frequently it occurs. Your answers give Roblox an understanding of the content in your experience and ensure that the experience is available to the appropriate audience.
 
 <Alert severity="info">
-   If your experience is going to have [17+ content](https://en.help.roblox.com/hc/articles/15869919570708), it must first receive experience guidelines with an age recommendation of 17+ so that its content is restricted to verified players who are at least 17 years old. You must not add any 17+ content to your experience before before generating guidelines with an age recommendation of 17+.
+   If your experience is going to have [17+ content](https://en.help.roblox.com/hc/articles/15869919570708), it must first receive experience guidelines with an age recommendation of 17+ so that its content is restricted to verified players who are at least 17 years old. You must not add any 17+ content to your experience before generating guidelines with an age recommendation of 17+.
 </Alert>
 
 As you are completing the questionnaire, **base your answers on the most mature or extreme content players can encounter within your experience**. You can retake the questionnaire and generate new guidelines at any time to accurately reflect the content in your experience. For 17+ experiences, you can't change the age recommendation, but you can update the content descriptors.

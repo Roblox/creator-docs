@@ -350,6 +350,39 @@ methods:
       			["RigidAllowed"]: boolean,
       		},
       		...
+            	},
+              ["MakeupRules"] = {
+      		["ReferenceCageMeshId"]: number,
+      		["WrapTextureTransferUVBounds"] = {
+      			["MinBound"]: Vector2,
+                  		["MaxBound"]: Vector2,
+                	},
+                	["ExcludeUVBounds"] = {
+                  		[Enum.AssetType.FaceMakeup] = {
+                    			["LeftEye"] = {
+                      			["MinBound"]: Vector2,
+                      			["MaxBound"]: Vector2,
+                    			},
+                    			["RightEye"] = {
+                      			["MinBound"]: Vector2,
+                      			["MaxBound"]: Vector2,
+                    			},
+                    			["Lips"] = {
+                      			["MinBound"]: Vector2,
+                      			["MaxBound"]: Vector2,
+                    			},
+                  		},
+                	},
+                	["IncludeUVBounds"] = {
+      			[Enum.AssetType.LipMakeup] = {
+      				["MinBound"]: Vector2,
+      				["MaxBound"]: Vector2,
+      		    	},
+      		    	[Enum.AssetType.EyeMakeup] = {
+      		      		["MinBound"]: Vector2,
+      		      		["MaxBound"]: Vector2,
+      		    	},
+                	}
       	}
       }
       ```

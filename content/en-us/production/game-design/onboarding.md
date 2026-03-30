@@ -1,13 +1,13 @@
 ---
 title: Onboarding
-description: Onboarding
+description: Learn how to design and optimize the First-Time User Experience (FTUE) using data-driven iteration.
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/XfxbdKtSbOI?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 <br />
 
-**Onboarding**, also known as the First-Time User Experience (FTUE), comprises the first few minutes of gameplay that new players experience. The FTUE introduces the experience, interface and mechanics, and may include tutorials that teach players how to play. A FTUE's success is determined by how it accomplishes two metrics:
+**Onboarding**, also known as the First-Time User Experience (FTUE), comprises the first few minutes of gameplay that new players experience. The FTUE introduces the experience, interface, and mechanics, and may include tutorials that teach players how to play. The success of a FTUE is determined by how well it achieves two metrics:
 
 - Day 1 retention
 - Onboarding goals
@@ -16,13 +16,15 @@ description: Onboarding
 
 **Day 1 Retention** is gauged by the amount of players who make it through the FTUE, known as the **Player Funnel**. The funnel is widest at the top and narrowest at the bottom as fewer players complete each step. All experiences lose some amount of players along this path.
 
-<img src="../../assets/game-design/onboarding/onboarding_1.png" alt="A diagram of an upside down pyramid that's broken into four sections that decrease in size from top-to-bottom to signifiy the tunnel of fewer and fewer players completing each step. The top section says Tap Play Button, the top-middle section says Start First-Time User Experience, the bottom-middle section says Finish FTUE, and the bottom section says Return." width="70%" />
+<img src="../../assets/game-design/onboarding/onboarding_1.png" alt="A diagram of an upside down pyramid that's broken into four sections that decrease in size from top-to-bottom to signify the tunnel of fewer and fewer players completing each step." width="70%" />
 
-The onboarding experience aims to limit drop-off between steps and retain as many new players as possible to increase potential concurrent users, daily active users (DAU), and an experience's monetization potential. The Day 1 (D1) retention metric counts players who return the next day and measures onboarding success by gauging its impact on new players. Experiences with high D1 retention metrics often owe that success to effectively accomplishing their onboarding goals.
+The onboarding experience aims to limit drop-off between steps and retain as many new players as possible. To identify and "plug" leaks in your funnel, you can use [Experiments](../../production/experiments.md). By running A/B tests on specific tutorial steps, you can measure the causal impact of different designs, such as a shorter dialogue sequence versus a guided arrow, to see which version leads to higher completion rates.
+
+Experiences with high D1 retention metrics often owe that success to effectively accomplishing their onboarding goals through constant iteration and data-driven testing.
 
 ## Onboarding goals
 
-Although onboarding experiences are as varied as the experiences they introduce, many of the most successful ones follow these high-level practices:
+Many of the most successful onboarding experiences follow these high-level practices:
 
 - Teach the essentials
 - Get to the fun quickly
@@ -30,64 +32,64 @@ Although onboarding experiences are as varied as the experiences they introduce,
 
 ### Teach the essentials
 
-For successful onboarding, players need to grasp controls for an experience's navigation and interaction. Displaying complex, unfamiliar controls on-screen or incorporating them in a tutorial can be beneficial.
+For successful onboarding, players need to grasp controls for navigation and interaction. Displaying complex, unfamiliar controls on-screen or incorporating them in a tutorial can be beneficial.
 
 <figure>
     <img src="../../assets/game-design/onboarding/onboarding_2.png" alt="A close up view of UI in the Super Striker League experience that displays which buttons to press on your mouse or keyboard to complete various actions." width="70%" />
     <figcaption>[*Super Striker League*](https://www.roblox.com/games/3360853050/) controls.</figcaption>
   </figure>
 
-Besides controls, onboarding should also impart knowledge of the experience's **Core Loop**, the necessary repetitive actions for progress that defines what the experience is. It's important that players understand both what they are expected to do and why they should do it.
+Besides controls, onboarding should also impart knowledge of the experience's **Core Loop**, the repetitive actions for progress that define the experience. It is critical that players understand both _what_ they are expected to do and _why_ they should do it.
 
 ### Get to the fun quickly
 
-New players typically decide their interest in an experience within minutes. To retain these players, it's vital to quickly demonstrate an experience's value, which is often determined by how "fun" it is, in order to convince the player to continue playing. Designing for fun is often done through the following:
+New players typically decide their interest in an experience within minutes. To retain them, you must quickly demonstrate value through:
 
 - Game progression
 - Social motivators
 - Starter items and currency
 
-<h4>Progression</h4>
+#### Progression
 
-**Progression** is felt by a player when they get better at the experience, gain access to new systems and content, and achieve their goals. A great way to facilitate this is through _Player XP-Based leveling systems_.
-
-Player XP-based leveling systems allow players to earn experience points based on their activity, level up when they hit certain XP thresholds, and unlock rewards. Keeping thresholds low for a player's early levels allows them to level up quickly, receive rewards for their efforts, and feel the fun of progression early in the experience.
+**Progression** is felt when a player gets better, gains access to new systems, and achieves goals. A great way to facilitate this is through _Player XP-Based leveling systems_.
 
 <figure>
    <img src="../../assets/game-design/onboarding/onboarding_3.png" alt="A chart of the experience a player needs to level up in an experience. The curve increase exponentially from left-to-right." width="70%" />
     <figcaption>Player XP Level Up curve.</figcaption>
   </figure>
 
-<h4>Social motivators</h4>
+Keeping thresholds low for a player's early levels allows them to level up quickly and feel the fun of progression immediately. You can use **Configs** to tune these XP thresholds in real-time. This allows you to smooth out the progression curve or adjust rewards based on live player behavior without needing to restart servers or push a full update.
 
-For many Roblox players, playing with others is part of the fun, whether they are joined in an experience by connections or interacting with strangers. These social players often prefer onboarding experiences that provide opportunities for collaboration and competition.
+#### Social motivators
 
-<h4>Starter items and currency</h4>
+Social players often prefer onboarding experiences that provide opportunities for collaboration and competition. If your experience relies heavily on social interaction, consider using **Experiments** to test different matchmaking parameters during the FTUE to see which social groupings lead to better long-term engagement.
 
-Providing free items like equipment and avatar customizations in the onboarding experience allows players to experience the fun of those systems early. The items can be low level and few in number, such that players will want to upgrade or exchange them quickly. The goal is to give players the opportunity to enjoy the utility or self-expression afforded by those items to encourage future playtime.
+#### Starter items and currency
 
-A similar approach can be used in experiences that utilize _soft currencies_. Soft currencies are the most commonly found currencies in free-to-play experiences. Players can earn them easily and they are widely available from rewards in the experience's _core loop_. Giving players a small amount of soft currency in the onboarding experience alongside a selection of purchasable items that they can afford, allows them to quickly engage with the monetization system and see the value of earning more currency.
+Providing free items like equipment or soft currency allows players to engage with your systems early. However, finding the right balance is vital. The goal is to give players the opportunity to enjoy the utility or self-expression afforded by those items to encourage future playtime.
+
+By using **Experiments**, you can gift different starting amounts of currency to different groups of new players to see which leads to higher retention. Once you find the ideal balance, **Configs** allow you to update that starting value globally and instantly for all future players.
 
 For more on core loops, see [Core loops](../../production/game-design/core-loops.md).
 
 ### Leave players wanting more
 
-By the end of the onboarding experience, players should be aware of the full range of experiences that an experience offers. Even if they cannot access all of the systems and content yet, knowing that there are more challenges and rewards on the horizon encourages them to continue to invest their time in the experience. Designing these two characteristics effectively keep players coming back:
+By the end of onboarding, players should be aware of the full range of content available. Designing these two characteristics effectively keeps players coming back:
 
 - Goals
 - Moments of joy
 
-<h4>Goals</h4>
+#### Goals
 
 Providing short, mid, and long-term goals help players conceptualize future play sessions and envision their future success. These goals can take a number of different forms: skill trees, season passes, quests, collections, and more. Surfacing these goals in highly visible places, either in the game-world or the UI, provides a frequent reminder to players of what they're working towards.
 
-To learn how to accomplish this through season passes, see [Season Pass Design](../../production/game-design/core-loops.md).
+To learn how to accomplish this through season passes, see [Season Pass Design](../../production/game-design/season-pass-design.md).
 
 <figure>
     <img src="../../assets/game-design/onboarding/onboarding_4.png" alt="A pop-up UI in the Jailbreak experience that displays various items a player can earn if they play through a season. The season pass exclusive items are marked with a bright color to attract attention." width="70%"/>
     <figcaption>Season Pass in _Jailbreak_.</figcaption>
   </figure>
 
-<h4>Moments of joy</h4>
+#### Moments of joy
 
-Joy can be elicited in experiences during moments like leveling up, defeating a boss enemy, finding a rare item, or discovering a new region. Those moments can be made joyful and special through rewards, delightful animations, and visual or auditory effects that celebrate players' achievements. Ending the onboarding experience with intentionally designed moments leave players feeling accomplished and excited to return.
+Joy can be elicited through rewards, delightful animations, and celebratory visual effects when a player achieves a milestone. Ending the onboarding experience with an intentionally designed moment of joy leaves players feeling accomplished and excited to return for their next session.

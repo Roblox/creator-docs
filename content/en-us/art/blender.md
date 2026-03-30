@@ -346,7 +346,7 @@ For more information on the Toolbar, see Blender's official [Toolbar](https://do
 
 <img src="../assets/art/blender-ui/3DCursor.png" width = "100%" alt="Blender's UI with the 3D Cursor highlighted."/>
 
-The **3D Cursor** is a moveable reference point in the 3D space that has both location and rotation data. While this tool has many different uses, the most common are using its position and orientation to:
+The **3D Cursor** is a movable reference point in the 3D space that has both location and rotation data. While this tool has many different uses, the most common are using its position and orientation to:
 
 - Create precise transformations.
 - Place new objects into the scene.

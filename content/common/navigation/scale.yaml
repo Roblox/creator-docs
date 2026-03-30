@@ -115,7 +115,7 @@ navigation:
             path: /production/game-design/liveops-essentials
           - title: LiveOps planning
             path: /production/game-design/liveops-planning
-          - title: Analytics essentials
+          - title: Analyze and experiment
             path: /production/game-design/analytics-essentials
           - title: Content updates
             path: /production/game-design/content-updates

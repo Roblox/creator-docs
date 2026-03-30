@@ -2,7 +2,7 @@
 title: Connect the beam
 prev: /education/build-it-play-it-mansion-of-wonder/creating-engaging-experiences
 next: /education/build-it-play-it-mansion-of-wonder/using-particles-for-actions
-description: Learn how to connect a beam effect in Roblox Studio, and to configure it's properties to customize it to your game's needs. Part of the Build It Play It Mansion of Wonders series.
+description: Learn how to connect a beam effect in Roblox Studio, and to configure its properties to customize it to your game's needs. Part of the Build It Play It Mansion of Wonders series.
 ---
 
 Now that you've made the attachments, it's time to connect them to the beam so that a texture can be shown.

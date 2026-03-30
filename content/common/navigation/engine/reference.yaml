@@ -4252,6 +4252,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/CreateAssetResult.yaml
         ignoreTranslation: true
+      - title: CreateContentResult
+        path: /reference/engine/enums/CreateContentResult
+        type: engineapi
+        source: /reference/engine/enums/CreateContentResult.yaml
+        ignoreTranslation: true
       - title: CreateOutfitFailure
         path: /reference/engine/enums/CreateOutfitFailure
         type: engineapi
@@ -5141,6 +5146,11 @@ navigation:
         path: /reference/engine/enums/PermissionLevelShown
         type: engineapi
         source: /reference/engine/enums/PermissionLevelShown.yaml
+        ignoreTranslation: true
+      - title: PhysicalConstraintType
+        path: /reference/engine/enums/PhysicalConstraintType
+        type: engineapi
+        source: /reference/engine/enums/PhysicalConstraintType.yaml
         ignoreTranslation: true
       - title: PhysicsSimulationRate
         path: /reference/engine/enums/PhysicsSimulationRate

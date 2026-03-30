@@ -118,7 +118,9 @@ Submissions of accessory and clothing items to the Marketplace must follow addit
 
 ### Miscategorization
 
-Do not miscategorize items when you upload them. Proper categorization includes the following:
+Do not miscategorize items when you upload them. For a list of categories and descriptions, see [Marketplace categories](./categories.md).
+
+Additional categorization information:
 
 - Complete hairstyles (hair with full head coverage) must be in the Hair category.
   - Partial hairstyles (e.g. Bangs and Braids) can be in Hat, Face, or Hair categories.
@@ -131,7 +133,7 @@ Do not miscategorize items when you upload them. Proper categorization includes 
 - Hat designs (e.g. baseball caps, beanies, cowboy hats) must be in the Hat category.
   - Designs that combine items with hair designs (e.g. beanie with hair sticking out, mohawk with headphones) can be in the Hat or Hair category.
 - Designs that are components of facial anatomy (e.g. noses, mustache) or accessories that augment facial anatomy (e.g. eyeshadow, blush, wrinkles) must be in the Face category.
-- Roblox automatically detects bodysuits, clothing items that completely cover a body below the head, and automatically categorizes them after upload.
+- Roblox automatically detects some individual asset categories, like bodysuits. This automatic categorization occurs after upload.
 
 ## Avatar body guidelines
 

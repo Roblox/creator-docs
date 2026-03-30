@@ -37,7 +37,7 @@ There are limits on the number of assets you can upload to Roblox and enable for
   </tr>
   <tr>
     <td>Publishing - Enabling on sale<sup>&dagger;</sup></td>
-    <td>1 per day</td>
+    <td>No limit for paid limiteds. 50 per day for free limiteds.</td>
     <td>No limit</td>
 
   </tr>
@@ -76,7 +76,7 @@ To upload your asset:
 3. In **Submit As**, select **Avatar Asset**.
 4. In the **Asset type** dropdown menu, select the appropriate marketplace asset type. Validation begins upon selection.
    <Alert severity = 'info'>
-    If you don't see this dropdown, your account might not have access to upload assets to the Marketplace. For more information, see [Creator requirements](../marketplace/marketplace-policy.md#creator-requirements).
+   If you don't see this dropdown, your account might not have access to upload assets to the Marketplace. For more information, see [Creator requirements](../marketplace/marketplace-policy.md#creator-requirements).
    </Alert>
 
    <GridContainer numColumns='2'>
@@ -93,13 +93,11 @@ To upload your asset:
 5. Once validation completes successfully, an item description dialog displays. Fill out the following fields and follow [metadata best practices](../production/publishing/publish-experiences-and-places.md#publish-experiences) when possible.
 
    - **Title**: The name of your asset in the Marketplace.
-   - **Description**: This description of your asset in the Marketplace.
-   - **Tags**: You can add up to 5 tags from a preset list to each of your items to aid in discovery. Roblox already includes implicit tags related to the accessory type, such as **Hair**, **Back**, or **Shoulder**.
    - **Creator**: You can set your user or any associated groups as the creator of this asset. The creator can access the Marketplace asset to set prices, benefits, and access sales information.
 
 6. Click **Submit** to pay any applicable upload fee and submit your asset for moderation approval.
 
-After uploading the asset, you can find it in the **Creations** tab of the [Toolbox](../projects/assets/toolbox.md) in a pre-published state where you can view the current moderation status or edit the title and description.
+After uploading the asset, you can find it in the **Creations** tab of the [Creator Hub](https://create.roblox.com/dashboard/creations?activeTab=HairAccessory&filterIndex=0) in a pre-published state where you can view the current moderation status or edit the title and description.
 
 <img src="../assets/publishing/marketplace/Creation-Page.png" alt="List of Hat assets on the Creator Hub with current status listed below each entry." width="80%" />
 
@@ -127,7 +125,6 @@ width="400" alt="An example error indicating a missing FaceControls object from 
 For other validation issues, keep in mind the following common uploading conflicts:
 
 - Studio's text filter identifies inappropriate strings in the name or description.
-- Roblox's automation flags your account for repeat actions. This may occur more often if you added tags to your item. Try submitting without tags and add them later once the item is published.
 - Your item uses an `AssetID` or `TextureID` that belongs to an existing asset in the Marketplace, or doesn't belong to you or an appropriate group.
 - Your item uses an `AssetID` or `TextureID` that is still pending moderation.
 
@@ -138,7 +135,7 @@ You can access uploaded assets in your [Creator Dashboard](https://create.roblox
 <Alert severity = 'warning'>
   You can't change or modify the asset or thumbnail after upload. If you discover that your item is broken or doesn't work as expected, you might need to remove the item and re-upload a corrected asset.
 
-  If a Roblox update breaks an existing asset, [submit a help ticket](https://www.roblox.com/support) with a link to the broken item and an `.rbxm` of the correct version.
+If a Roblox update breaks an existing asset, [submit a help ticket](https://www.roblox.com/support) with a link to the broken item and an `.rbxm` of the correct version.
 </Alert>
 
 Before publishing your asset, it's important to consider if you want to sell your asset as a Limited or Non-Limited item.
@@ -153,7 +150,6 @@ On the Manage Item page, you can update the following fields:
 
 - **Title**: The name of your asset in the Marketplace. You can modify this after publishing.
 - **Description**: The description of your asset in the Marketplace.
-- **Tags**: You can add up to 5 tags from a preset list to each of your items to aid in discovery. Roblox already includes implicit tags related to the accessory type, such as **Hair**, **Back**, or **Shoulder**.
 
 ### Item attributes
 

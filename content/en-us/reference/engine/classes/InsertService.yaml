@@ -47,7 +47,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LoadUnownedAsset
   - name: InsertService.AllowInsertFreeModels
     summary: |
       Indicates whether ''Free Models'' can be inserted into the game.
@@ -71,7 +72,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LoadUnownedAsset
 methods:
   - name: InsertService:ApproveAssetId
     summary: ''
