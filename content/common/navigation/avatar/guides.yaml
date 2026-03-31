@@ -75,7 +75,7 @@ navigation:
         path: /art/emotes/export-settings
       - title: Import and configure in Studio
         path: /art/emotes/import
-  - title: Makeup (Beta)
+  - title: Makeup
     section:
       - title: Overview
         path: /makeup/
