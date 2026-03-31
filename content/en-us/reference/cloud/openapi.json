@@ -999,6 +999,7 @@
     },
     "/cloud/v2/groups/{group_id}/memberships/{membership_id}:assignRole": {
       "post": {
+        "tags": ["Groups"],
         "summary": "Assign Role Group Membership",
         "description": "Assigns a specific role to a user within a group. If the user already\nholds the specified role, no action is taken.",
         "operationId": "Cloud_AssignRoleGroupMembership",
@@ -1070,11 +1071,15 @@
           {
             "roblox-oauth2": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#Cloud_AssignRoleGroupMembership"
+        }
       }
     },
     "/cloud/v2/groups/{group_id}/memberships/{membership_id}:unassignRole": {
       "post": {
+        "tags": ["Groups"],
         "summary": "Unassign Role Group Membership",
         "description": "Unassigns a specific role from a user within a group. If the user does\nnot hold the specified role, no action is taken.",
         "operationId": "Cloud_UnassignRoleGroupMembership",
@@ -1146,7 +1151,10 @@
           {
             "roblox-oauth2": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#Cloud_UnassignRoleGroupMembership"
+        }
       }
     },
     "/cloud/v2/groups/{group_id}/roles": {
@@ -32276,6 +32284,7 @@
     },
     "/v1/user-localization-settings/player-choice/{universeId}": {
       "get": {
+        "tags": ["Localization"],
         "summary": "Get user player choice settings for universe.",
         "parameters": [
           {
@@ -32330,7 +32339,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/localization#gameinternationalization_get_v1_user_localization_settings_player_choice__universeId_"
+        }
       }
     },
     "/v1/user-localization-settings/universe/{universeId}": {
@@ -40271,6 +40283,7 @@
     },
     "/v1/groups/{groupId}/features": {
       "get": {
+        "tags": ["Groups"],
         "summary": "Gets the freeze status of all features and the lock status for a group.",
         "parameters": [
           {
@@ -40317,7 +40330,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_get_v1_groups__groupId__features"
+        }
       }
     },
     "/v1/groups/{groupId}/join-requests": {
@@ -52449,6 +52465,7 @@
     },
     "/v1/metadata#ThumbnailsApi": {
       "get": {
+        "tags": ["Thumbnails"],
         "summary": "Return list of thumbnail meta data.",
         "responses": {
           "200": {
@@ -52476,7 +52493,10 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}]
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnails#thumbnails_get_v1_metadata"
+        }
       }
     },
     "/v1/places/gameicons": {
@@ -63291,6 +63311,7 @@
     },
     "/server-management/v1/universes/{universeId}/places/{placeId}/game-servers:filter-options": {
       "get": {
+        "tags": ["Places"],
         "summary": "Gets available filter options for game servers.",
         "operationId": "GameServers_GetFilterOptions",
         "parameters": [
@@ -63397,11 +63418,15 @@
           {
             "roblox-oauth2": ["universe:read"]
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/places#GameServers_GetFilterOptions"
+        }
       }
     },
     "/server-management/v1/universes/{universeId}/restarts:forecast": {
       "get": {
+        "tags": ["Universes"],
         "summary": "Forecast the impact of restarting game servers for a universe.",
         "operationId": "Restarts_ForecastRestart",
         "parameters": [
@@ -63486,11 +63511,15 @@
           {
             "roblox-oauth2": ["universe:read"]
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#Restarts_ForecastRestart"
+        }
       }
     },
     "/server-management/v1/universes/{universeId}/restarts": {
       "get": {
+        "tags": ["Universes"],
         "summary": "List restart statuses for a universe.",
         "operationId": "Restarts_ListRestartStatuses",
         "parameters": [
@@ -63575,9 +63604,13 @@
           {
             "roblox-oauth2": ["universe:read"]
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#Restarts_ListRestartStatuses"
+        }
       },
       "post": {
+        "tags": ["Universes"],
         "summary": "Launch a game server restart for a universe.",
         "operationId": "Restarts_LaunchRestart",
         "parameters": [
@@ -63697,11 +63730,15 @@
           {
             "roblox-oauth2": ["universe:write"]
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#Restarts_LaunchRestart"
+        }
       }
     },
     "/v1/groups/{groupId}/revenue/summary/{timeFrame}": {
       "get": {
+        "tags": ["Groups"],
         "operationId": "RevenueSummary_GetGroupRevenueSummary",
         "parameters": [
           {
@@ -63750,11 +63787,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#RevenueSummary_GetGroupRevenueSummary"
+        }
       }
     },
     "/v2/sales/sales-report-download": {
       "post": {
+        "tags": ["Universes"],
         "operationId": "SalesReportDownload_PublishSalesReportDownloadMessage",
         "requestBody": {
           "content": {
@@ -63820,11 +63861,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#SalesReportDownload_PublishSalesReportDownloadMessage"
+        }
       }
     },
     "/v2/groups/{groupId}/transactions": {
       "get": {
+        "tags": ["Groups"],
         "operationId": "TransactionHistory_GetGroupTransactions",
         "parameters": [
           {
@@ -63883,11 +63928,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#TransactionHistory_GetGroupTransactions"
+        }
       }
     },
     "/v2/users/{userId}/transactions": {
       "get": {
+        "tags": ["Users"],
         "operationId": "TransactionRecords_GetUserTransactions",
         "parameters": [
           {
@@ -63957,11 +64006,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/users#TransactionRecords_GetUserTransactions"
+        }
       }
     },
     "/v2/users/{userId}/transaction-totals": {
       "get": {
+        "tags": ["Users"],
         "operationId": "TransactionRecords_GetUserRevenueSummary",
         "parameters": [
           {
@@ -64039,11 +64092,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/users#TransactionRecords_GetUserRevenueSummary"
+        }
       }
     },
     "/v2/users/{userId}/transaction-types": {
       "get": {
+        "tags": ["Users"],
         "operationId": "TransactionRecords_GetUsedTransactionTypes",
         "parameters": [
           {
@@ -64080,7 +64137,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/users#TransactionRecords_GetUsedTransactionTypes"
+        }
       }
     }
   },
@@ -89710,6 +89770,8 @@
           "Cloud_DeclineGroupJoinRequest",
           "Cloud_ListGroupMemberships",
           "Cloud_UpdateGroupMembership",
+          "Cloud_AssignRoleGroupMembership",
+          "Cloud_UnassignRoleGroupMembership",
           "Cloud_ListGroupRoles",
           "Cloud_GetGroupRole",
           "Cloud_GetGroupShout",
@@ -89807,10 +89869,13 @@
           "groups_patch_v1_groups__groupId__blocked_keywords__keywordId_",
           "groups_delete_v1_groups__groupId__blocked_keywords__keywordId_",
           "groups_get_v1_groups__groupId__emotes",
+          "groups_get_v1_groups__groupId__features",
           "groups_get_v2_groups",
           "groups_get_v2_groups__groupId__wall_posts",
           "groups_post_v2_groups__groupId__wall_posts",
           "groups_get_v2_users__userId__groups_roles",
+          "RevenueSummary_GetGroupRevenueSummary",
+          "TransactionHistory_GetGroupTransactions",
           "thumbnails_get_v1_groups_icons",
           "develop_get_v1_groups__groupId__universes",
           "develop_get_v1_user_groups_canmanagegamesoritems",
@@ -90019,6 +90084,7 @@
           "gameinternationalization_post_v1_translation_analytics_games__gameId__request_translation_analytics_report",
           "gameinternationalization_get_v1_translation_analytics_metadata",
           "gameinternationalization_get_v1_ui_configurations",
+          "gameinternationalization_get_v1_user_localization_settings_player_choice__universeId_",
           "gameinternationalization_get_v1_user_localization_settings_universe__universeId_",
           "gameinternationalization_post_v1_user_localization_settings_universe__universeId_",
           "gameinternationalization_get_v1_source_language_games__gameId__language_with_locales",
@@ -90202,6 +90268,7 @@
           "develop_get_v1_places__placeId__teamcreate_active_session_members",
           "delete_legacy_develop_v2_teamtest__placeId_",
           "develop_delete_v2_teamtest__placeId_",
+          "GameServers_GetFilterOptions",
           "GameServers_ListGameServers",
           "Places_CreatePlaceVersionApiKey",
           "develop_patch_v1_places__placeId_",
@@ -90359,6 +90426,7 @@
           "thumbnails_get_v1_game_passes",
           "thumbnails_get_v1_games__universeId__thumbnails",
           "thumbnails_get_v1_games_icons",
+          "thumbnails_get_v1_metadata",
           "thumbnails_get_v1_games_multiget_thumbnails",
           "thumbnails_get_v1_groups_icons",
           "thumbnails_get_v1_places_gameicons",
@@ -90486,6 +90554,9 @@
           "localizationtables_post_v1_autolocalization_games__gameId__autolocalizationtable",
           "patch_legacy_localization_tables_v1_autolocalization_games__gameId__settings",
           "localizationtables_patch_v1_autolocalization_games__gameId__settings",
+          "Restarts_ForecastRestart",
+          "Restarts_ListRestartStatuses",
+          "Restarts_LaunchRestart",
           "CrossServerMessaging_Publish",
           "Places_CreatePlaceVersionApiKey",
           "get_cloud_v2_universes__universeId__secrets_public_key",
@@ -90513,6 +90584,7 @@
           "develop_get_v1_universes_user_public_publish_eligibility",
           "develop_get_v1_user_universes",
           "develop_patch_v2_universes__universeId__configuration",
+          "SalesReportDownload_PublishSalesReportDownloadMessage",
           "economycreatorstats_get_v1_universes__universeId__stats",
           "engagementpayouts_get_v1_universe_payout_history",
           "gameinternationalization_get_v1_automatic_translation_games__gameId__feature_status",
@@ -90694,6 +90766,9 @@
           "Cloud_ListUserRestrictionLogs",
           "Cloud_CreateUserNotification",
           "Cloud_GetSubscription",
+          "TransactionRecords_GetUserTransactions",
+          "TransactionRecords_GetUserRevenueSummary",
+          "TransactionRecords_GetUsedTransactionTypes",
           "translationroles_get_v1_game_localization_roles_games__gameId__roles__role__assignees"
         ]
       }
