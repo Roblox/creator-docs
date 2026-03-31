@@ -358,6 +358,24 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
+  - name: SoundService:GetMixerTime
+    summary: |
+      Returns the number of seconds since the audio engine began mixing.
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: double
+        summary: |
+          The number of seconds since the audio engine began mixing. This value
+          is stable, sample-accurate, and monotonically-increasing – intended to
+          be used for scheduling audible changes at precise times.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Audio
   - name: SoundService:OpenAttenuationCurveEditor
     summary: |
       Opens the attenuation curve editor in Studio for the provided

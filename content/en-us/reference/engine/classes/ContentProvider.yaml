@@ -5,8 +5,9 @@
 name: ContentProvider
 type: class
 memory_category: Instances
-summary: Service that is used to load content, or assets, into a game.
-description: |-
+summary: |
+  Service that is used to load content, or assets, into a game.
+description: |
   Service that loads content (assets) into a game.
 
   Roblox servers stream all assets to the client at runtime: objects in the
@@ -43,10 +44,10 @@ tags:
 deprecation_message: ''
 properties:
   - name: ContentProvider.BaseUrl
-    summary: |-
+    summary: |
       Used by the `Class.ContentProvider` to download assets from the Roblox
       website.
-    description: |-
+    description: |
       Used by the `Class.ContentProvider` to download assets from the Roblox
       website.
 
@@ -74,10 +75,10 @@ properties:
     capabilities:
       - AssetManagement
   - name: ContentProvider.RequestQueueSize
-    summary: |-
+    summary: |
       Gives the number of items in the `Class.ContentProvider` request queue
       that need to be downloaded.
-    description: |-
+    description: |
       Gives the number of items in the `Class.ContentProvider` request queue
       that need to be downloaded.
 
@@ -107,8 +108,9 @@ properties:
       - AssetManagement
 methods:
   - name: ContentProvider:GetAssetFetchStatus
-    summary: Gets the current `Enum.AssetFetchStatus` of the `contentId` provided.
-    description: |-
+    summary: |
+      Gets the current `Enum.AssetFetchStatus` of the `contentId` provided.
+    description: |
       Gets the current `Enum.AssetFetchStatus` of the `contentId` provided. Use
       `Class.ContentProvider:GetAssetFetchStatusChangedSignal()|GetAssetFetchStatusChangedSignal()`
       to listen for changes to this value.
@@ -118,10 +120,12 @@ methods:
       - name: contentId
         type: ContentId
         default:
-        summary: The ID of the content to fetch the status for.
+        summary: |
+          The ID of the content to fetch the status for.
     returns:
       - type: AssetFetchStatus
-        summary: The `Enum.AssetFetchStatus` of the content.
+        summary: |
+          The `Enum.AssetFetchStatus` of the content.
     tags: []
     deprecation_message: ''
     security: None
@@ -129,10 +133,10 @@ methods:
     capabilities:
       - AssetManagement
   - name: ContentProvider:GetAssetFetchStatusChangedSignal
-    summary: |-
+    summary: |
       A signal that fires when the `Enum.AssetFetchStatus` of the provided
       content changes.
-    description: |-
+    description: |
       A signal that fires when the `Enum.AssetFetchStatus` of the provided
       content changes. Connect to this signal by using a callback with one
       argument of type `Enum.AssetFetchStatus`. This is particularly useful for
@@ -169,8 +173,9 @@ methods:
     capabilities:
       - AssetManagement
   - name: ContentProvider:Preload
-    summary: Queues an asset to be downloaded by the `Class.ContentProvider`.
-    description: |-
+    summary: |
+      Queues an asset to be downloaded by the `Class.ContentProvider`.
+    description: |
       Usually, content is loaded only when it starts being used. That explains
       why it often takes a moment for an image to appear in a `Class.GuiObject`,
       or a `Mesh|mesh` to appear in a `Class.BasePart|part`, or why a
@@ -189,7 +194,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item has been superseded by `Class.ContentProvider:PreloadAsync()`
       which should be used in all new work.
     security: None
@@ -197,10 +202,10 @@ methods:
     capabilities:
       - AssetManagement
   - name: ContentProvider:PreloadAsync
-    summary: |-
+    summary: |
       Yields until all of the assets associated with the given
       `Class.Instance|Instances` have loaded.
-    description: |-
+    description: |
       Yields until all of the assets associated with the given
       `Class.Instance|Instances` have loaded. This can be used to pause a script
       and not use content until it is certain that the content has been loaded
@@ -228,21 +233,22 @@ methods:
 
       If PreloadAsync is called on `Class.Instance|Instances` that are not
       currently visible, such as a `Class.Decal` or an `Class.ImageLabel`, the
-      Engine will download and store textures used by those Instances in its disk
-      cache. Because the `Class.Instance|Instances` are not visible in these cases, the
-      Engine may reduce memory consumption by unloading the textures after
-      preloading them.
+      Engine will download and store textures used by those Instances in its
+      disk cache. Because the `Class.Instance|Instances` are not visible in
+      these cases, the Engine may reduce memory consumption by unloading the
+      textures after preloading them.
     code_samples:
       - ContentProvider-PreloadAsync1
     parameters:
       - name: contentIdList
         type: Array
         default:
-        summary: An array of instances to load.
+        summary: |
+          An array of instances to load.
       - name: callbackFunction
         type: Function
         default: nil
-        summary: |-
+        summary: |
           The function called when each asset request completes. Returns the
           `Datatype.Content|content` string and the asset's final
           `Enum.AssetFetchStatus`.

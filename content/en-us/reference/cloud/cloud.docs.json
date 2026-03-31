@@ -63,7 +63,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 150
+            "maxInPeriod": 30
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
@@ -132,7 +132,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 150
+            "maxInPeriod": 30
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
@@ -227,7 +227,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 150
+            "maxInPeriod": 30
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
@@ -1009,7 +1009,7 @@
       "patch": {
         "tags": ["Cloud"],
         "summary": "Update Group Membership",
-        "description": "Updates the group membership for a particular group member. This action\nrequires the requester to be able to manage lower ranked members. Guest or\nOwner ranks cannot be assigned, and a requester cannot change their own\nrank.",
+        "description": "**Deprecated.** Use AssignGroupRole and UnassignGroupRole instead.\nUpdates the group membership for a particular group member. This action\nrequires the requester to be able to manage lower ranked members. Guest or\nOwner ranks cannot be assigned, and a requester cannot change their own\nrank.",
         "operationId": "Cloud_UpdateGroupMembership",
         "parameters": [
           {
@@ -1091,6 +1091,146 @@
             "roblox-oauth2": []
           }
         ]
+      }
+    },
+    "/cloud/v2/groups/{group_id}/memberships/{membership_id}:assignRole": {
+      "post": {
+        "tags": ["Cloud"],
+        "summary": "Assign Role Group Membership",
+        "description": "Assigns a specific role to a user within a group. If the user already\nholds the specified role, no action is taken.",
+        "operationId": "Cloud_AssignRoleGroupMembership",
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "description": "The group ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "membership_id",
+            "in": "path",
+            "description": "The membership ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssignRoleGroupMembershipRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GroupMembership"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": true
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "group:write"
+          }
+        ],
+        "x-roblox-docs": {
+          "category": "Users and groups",
+          "methodProperties": {
+            "scopes": ["group:write"]
+          },
+          "resource": {
+            "$ref": "#/components/schemas/GroupMembership",
+            "name": "GroupMembership"
+          }
+        },
+        "x-roblox-stability": "BETA"
+      }
+    },
+    "/cloud/v2/groups/{group_id}/memberships/{membership_id}:unassignRole": {
+      "post": {
+        "tags": ["Cloud"],
+        "summary": "Unassign Role Group Membership",
+        "description": "Unassigns a specific role from a user within a group. If the user does\nnot hold the specified role, no action is taken.",
+        "operationId": "Cloud_UnassignRoleGroupMembership",
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "description": "The group ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "membership_id",
+            "in": "path",
+            "description": "The membership ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UnassignRoleGroupMembershipRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GroupMembership"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": true
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "group:write"
+          }
+        ],
+        "x-roblox-docs": {
+          "category": "Users and groups",
+          "methodProperties": {
+            "scopes": ["group:write"]
+          },
+          "resource": {
+            "$ref": "#/components/schemas/GroupMembership",
+            "name": "GroupMembership"
+          }
+        },
+        "x-roblox-stability": "BETA"
       }
     },
     "/cloud/v2/groups/{group_id}/roles": {
@@ -7281,6 +7421,18 @@
         },
         "x-resource": true
       },
+      "AssignRoleGroupMembershipRequest": {
+        "required": ["role"],
+        "type": "object",
+        "properties": {
+          "role": {
+            "example": "groups/123/roles/456",
+            "type": "string",
+            "description": "The resource path of the role to assign.\n\nFormat: `groups/{group_id}/roles/{group_role_id}`"
+          }
+        },
+        "description": "Assigns a role to the specified group membership."
+      },
       "ContentMessage": {
         "type": "object",
         "properties": {
@@ -7998,7 +8150,16 @@
           "role": {
             "example": "groups/7/roles/99513316",
             "type": "string",
-            "description": "The resource path for the role of the group member."
+            "description": "The resource path of the member's highest-ranked role.\nWhen the member holds multiple roles, this reflects only the\nhighest-ranked one. Prefer using the `roles` field, which always\ncontains the complete set of assigned roles."
+          },
+          "roles": {
+            "readOnly": true,
+            "example": "groups/7/roles/99513316",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The resource paths of all roles assigned to the group member.\nThis is the recommended field for reading a member's roles, as it\nalways contains the complete set of roles held by the member."
           }
         },
         "description": "A membership to a group. A user ID can be used in place of a membership ID.",
@@ -9573,7 +9734,7 @@
               "ROBLOX_CREDIT"
             ],
             "type": "string",
-            "description": "The payment provider used to purchase the subscription.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | PAYMENT_PROVIDER_UNSPECIFIED | The payment provider is unspecified. |\n  | STRIPE | The subscription was purchased using Stripe. |\n  | APPLE | The subscription was purchased using Apple. |\n  | GOOGLE | The subscription was purchased using Google. |\n  | ROBLOX_CREDIT | The subscription was purchased using Roblox Credit. |",
+            "description": "The payment provider used to purchase the subscription.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | PAYMENT_PROVIDER_UNSPECIFIED | The payment provider is unspecified. For fiat currency subscriptions, this indicates an error. For Robux subscriptions, this is expected as Robux transactions do not use an external payment provider. |\n  | STRIPE | The subscription was purchased using Stripe. |\n  | APPLE | The subscription was purchased using Apple. |\n  | GOOGLE | The subscription was purchased using Google. |\n  | ROBLOX_CREDIT | The subscription was purchased using Roblox Credit. |",
             "format": "enum"
           },
           "user": {
@@ -9657,6 +9818,18 @@
           }
         },
         "description": "Contains the detected or specified source language code and a map of\nrequested translations, where each key is a language code and the value is\nthe translated text."
+      },
+      "UnassignRoleGroupMembershipRequest": {
+        "required": ["role"],
+        "type": "object",
+        "properties": {
+          "role": {
+            "example": "groups/123/roles/456",
+            "type": "string",
+            "description": "The resource path of the role to unassign.\n\nFormat: `groups/{group_id}/roles/{group_role_id}`"
+          }
+        },
+        "description": "Unassigns a role from the specified group membership."
       },
       "UndeleteDataStoreRequest": {
         "type": "object",

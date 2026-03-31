@@ -4,10 +4,10 @@
 
 name: ModelLevelOfDetail
 type: enum
-summary: |-
+summary: |
   Controls the level of detail for `Class.Model|Models` in experiences with
   instance streaming enabled.
-description: |-
+description: |
   Controls the level of detail for `Class.Model|Models` in experiences with
   instance [streaming](../../../workspace/streaming/index.md) enabled.
 code_samples: []
@@ -15,27 +15,30 @@ tags: []
 deprecation_message: ''
 items:
   - name: Automatic
-    summary: Default behavior, currently equivalent to **Disabled**.
+    summary: |
+      Default behavior, currently equivalent to **Disabled**.
     value: 0
     tags: []
     deprecation_message: ''
   - name: StreamingMesh
-    summary: |-
+    summary: |
       A lower resolution "imposter" mesh (colored, coarse mesh that wraps around
       all child parts of the model) renders outside the streaming radius.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Disabled
-    summary: A lower resolution mesh will not be displayed.
+    summary: |
+      A lower resolution mesh will not be displayed.
     value: 2
     tags: []
     deprecation_message: ''
   - name: SLIM
-    summary: |-
-      A Scalable Lightweight Interactive Model, or SLIM, model (a composite of all
-      	child parts of the model) renders at progressively lower resolutions at distances
-      	based on the streaming radius. Greatly improves visual quality over `StreamingMesh`.
+    summary: |
+      A Scalable Lightweight Interactive Model, or SLIM, model (a composite of
+      all child parts of the model) renders at progressively lower resolutions
+      at distances based on the streaming radius. Greatly improves visual
+      quality over `StreamingMesh`.
     value: 4
     tags: []
     deprecation_message: ''

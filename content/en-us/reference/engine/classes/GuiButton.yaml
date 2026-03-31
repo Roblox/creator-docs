@@ -5,8 +5,9 @@
 name: GuiButton
 type: class
 memory_category: Gui
-summary: An abstract class for interactive 2D user interface elements.
-description: |-
+summary: |
+  An abstract class for interactive 2D user interface elements.
+description: |
   `Class.GuiButton` is an abstract class that inherits from `Class.GuiObject`.
   It is the base class for the interactive, clickable `Class.ImageButton` and
   `Class.TextButton` objects. This class also defines several properties for
@@ -34,10 +35,10 @@ tags:
 deprecation_message: ''
 properties:
   - name: GuiButton.AutoButtonColor
-    summary: |-
+    summary: |
       Determines whether the button automatically changes color when the mouse
       hovers over or clicks on it.
-    description: |-
+    description: |
       This property determines whether the button automatically changes color
       when the user's `Class.Mouse` hovers over or clicks on it. If `true`, the
       button will automatically change color when the mouse hovers over or
@@ -69,10 +70,10 @@ properties:
     capabilities:
       - UI
   - name: GuiButton.HoverHapticEffect
-    summary: |-
+    summary: |
       A `Class.HapticEffect` instance that will play when the `Class.GuiButton`
       is being hovered.
-    description: |-
+    description: |
       A `Class.HapticEffect` instance that will play when the `Class.GuiButton`
       is being hovered.
     code_samples: []
@@ -90,10 +91,10 @@ properties:
     capabilities:
       - UI
   - name: GuiButton.Modal
-    summary: |-
+    summary: |
       If `true` while the GUI element is visible, the mouse will not be locked
       unless the right mouse button is down.
-    description: |-
+    description: |
       If `true` while the GUI element is visible, the mouse will not be locked
       unless the right mouse button is down.
     code_samples: []
@@ -111,10 +112,10 @@ properties:
     capabilities:
       - UI
   - name: GuiButton.PressHapticEffect
-    summary: |-
+    summary: |
       A `Class.HapticEffect` instance that will play when the `Class.GuiButton`
       is being pressed.
-    description: |-
+    description: |
       A `Class.HapticEffect` instance that will play when the `Class.GuiButton`
       is being pressed.
     code_samples: []
@@ -132,8 +133,10 @@ properties:
     capabilities:
       - UI
   - name: GuiButton.Selected
-    summary: A boolean property which indicates whether the object has been selected.
-    description: A boolean property which indicates whether the object has been selected.
+    summary: |
+      A boolean property which indicates whether the object has been selected.
+    description: |
+      A boolean property which indicates whether the object has been selected.
     code_samples: []
     type: boolean
     tags: []
@@ -149,10 +152,10 @@ properties:
     capabilities:
       - UI
   - name: GuiButton.Style
-    summary: |-
+    summary: |
       Sets the style of the `Class.GuiButton` based on a list of pre-determined
       styles.
-    description: |-
+    description: |
       Sets the style of the `Class.GuiButton` based on a list of pre-determined
       styles.
     code_samples: []
@@ -172,11 +175,12 @@ properties:
 methods: []
 events:
   - name: GuiButton.Activated
-    summary: Fires when the button is activated.
-    description: |-
-      Fires when a left click press-and-release is detected on desktop, touch release
-      is detected on mobile, or **A**/cross is activated in UI navigation mode on
-      console.
+    summary: |
+      Fires when the button is activated.
+    description: |
+      Fires when a left click press-and-release is detected on desktop, touch
+      release is detected on mobile, or **A**/cross is activated in UI
+      navigation mode on console.
 
       As this event doesn't fire on the server, it should only be used in a
       `Class.LocalScript`, or in a `Class.Script` with
@@ -197,8 +201,9 @@ events:
     capabilities:
       - UI
   - name: GuiButton.MouseButton1Click
-    summary: Fires when the user's mouse fully left clicks the `Class.GuiButton`.
-    description: |-
+    summary: |
+      Fires when the user's mouse fully left clicks the `Class.GuiButton`.
+    description: |
       This event fires when the user's mouse fully left clicks the
       `Class.GuiButton`.
 
@@ -219,10 +224,10 @@ events:
     capabilities:
       - UI
   - name: GuiButton.MouseButton1Down
-    summary: |-
+    summary: |
       Fires when the user presses their left mouse button down on the
       `Class.GuiButton`.
-    description: |-
+    description: |
       This event fires when the user presses their left mouse button down on the
       `Class.GuiButton`.
 
@@ -234,21 +239,23 @@ events:
       - name: x
         type: int
         default:
-        summary: The mouse's **X** screen coordinate in pixels.
-      - name: y
+        summary: |
+          The mouse's **X** screen coordinate in pixels.
+      - name: 'y'
         type: int
         default:
-        summary: The mouse's **Y** screen coordinate in pixels.
+        summary: |
+          The mouse's **Y** screen coordinate in pixels.
     tags: []
     deprecation_message: ''
     security: None
     capabilities:
       - UI
   - name: GuiButton.MouseButton1Up
-    summary: |-
+    summary: |
       Fires when the user releases their left mouse button off of the
       `Class.GuiButton`.
-    description: |-
+    description: |
       This event fires when the user releases their left mouse button off of the
       `Class.GuiButton`.
 
@@ -260,19 +267,22 @@ events:
       - name: x
         type: int
         default:
-        summary: The mouse's **X** screen coordinate in pixels.
-      - name: y
+        summary: |
+          The mouse's **X** screen coordinate in pixels.
+      - name: 'y'
         type: int
         default:
-        summary: The mouse's **Y** screen coordinate in pixels.
+        summary: |
+          The mouse's **Y** screen coordinate in pixels.
     tags: []
     deprecation_message: ''
     security: None
     capabilities:
       - UI
   - name: GuiButton.MouseButton2Click
-    summary: Fires when the user's mouse fully right clicks the `Class.GuiButton`.
-    description: |-
+    summary: |
+      Fires when the user's mouse fully right clicks the `Class.GuiButton`.
+    description: |
       This event fires when the user's mouse fully right clicks the
       `Class.GuiButton`.
 
@@ -293,10 +303,10 @@ events:
     capabilities:
       - UI
   - name: GuiButton.MouseButton2Down
-    summary: |-
+    summary: |
       Fires when the user presses their right mouse button down on the
       `Class.GuiButton`.
-    description: |-
+    description: |
       This event fires when the user presses their right mouse button down on
       the `Class.GuiButton`.
 
@@ -308,21 +318,23 @@ events:
       - name: x
         type: int
         default:
-        summary: The mouse's **X** screen coordinate in pixels.
-      - name: y
+        summary: |
+          The mouse's **X** screen coordinate in pixels.
+      - name: 'y'
         type: int
         default:
-        summary: The mouse's **Y** screen coordinate in pixels.
+        summary: |
+          The mouse's **Y** screen coordinate in pixels.
     tags: []
     deprecation_message: ''
     security: None
     capabilities:
       - UI
   - name: GuiButton.MouseButton2Up
-    summary: |-
+    summary: |
       Fires when the user releases their right mouse button off of the
       `Class.GuiButton`.
-    description: |-
+    description: |
       This event fires when the user releases their right mouse button off of
       the `Class.GuiButton`.
 
@@ -334,11 +346,13 @@ events:
       - name: x
         type: int
         default:
-        summary: The mouse's **X** screen coordinate in pixels.
-      - name: y
+        summary: |
+          The mouse's **X** screen coordinate in pixels.
+      - name: 'y'
         type: int
         default:
-        summary: The mouse's **Y** screen coordinate in pixels.
+        summary: |
+          The mouse's **Y** screen coordinate in pixels.
     tags: []
     deprecation_message: ''
     security: None

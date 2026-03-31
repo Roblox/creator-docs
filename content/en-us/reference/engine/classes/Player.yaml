@@ -5,8 +5,9 @@
 name: Player
 type: class
 memory_category: Instances
-summary: An object that represents a presently connected client to the experience.
-description: |-
+summary: |
+  An object that represents a presently connected client to the experience.
+description: |
   A `Player` object is a client that is currently connected. These objects are
   added to the `Class.Players` service when a new player connects, then removed
   when they eventually disconnect from the server.
@@ -37,8 +38,9 @@ tags: []
 deprecation_message: ''
 properties:
   - name: Player.AccountAge
-    summary: Describes the player's account age in days.
-    description: |-
+    summary: |
+      Describes the player's account age in days.
+    description: |
       This property describes how long ago a player's account was registered in
       days. It is set using the `Class.Player:SetAccountAge()|SetAccountAge()`
       method, which cannot be accessed by scripts.
@@ -59,10 +61,10 @@ properties:
     capabilities:
       - Players
   - name: Player.AutoJumpEnabled
-    summary: |-
+    summary: |
       Determines whether the character of a player using a mobile device will
       automatically jump upon hitting an obstacle.
-    description: |-
+    description: |
       This property determines whether the `Class.Player.Character|Character` of
       a `Class.Player` using a mobile device will automatically jump when they
       hit an obstacle. This can make levels more navigable while on a mobile
@@ -91,8 +93,9 @@ properties:
     capabilities:
       - Players
   - name: Player.CameraMaxZoomDistance
-    summary: The maximum distance the player's camera is allowed to zoom out.
-    description: |-
+    summary: |
+      The maximum distance the player's camera is allowed to zoom out.
+    description: |
       This property sets the maximum distance the player's camera is allowed to
       zoom out, in studs.
 
@@ -116,8 +119,9 @@ properties:
     capabilities:
       - Players
   - name: Player.CameraMinZoomDistance
-    summary: The minimum distance the player's camera is allowed to zoom in.
-    description: |-
+    summary: |
+      The minimum distance the player's camera is allowed to zoom in.
+    description: |
       This property sets the minimum distance the player's camera is allowed to
       zoom in, in studs.
 
@@ -141,8 +145,9 @@ properties:
     capabilities:
       - Players
   - name: Player.CameraMode
-    summary: Changes the camera's mode to either first or third person.
-    description: |-
+    summary: |
+      Changes the camera's mode to either first or third person.
+    description: |
       This property sets the player's camera mode, defaulting to third person.
 
       #### Third Person
@@ -182,11 +187,11 @@ properties:
     capabilities:
       - Players
   - name: Player.CanLoadCharacterAppearance
-    summary: |-
+    summary: |
       Determines whether the character's appearance will be loaded when the
       player spawns. If `false`, the player will spawn with a default
       appearance.
-    description: |-
+    description: |
       This property determines whether the character's appearance will be loaded
       when the player spawns. The default value of this property is set by
       `Class.StarterPlayer.LoadPlayerAppearance`.
@@ -199,7 +204,8 @@ properties:
 
       Attempting to set the property after the character has spawned will not
       change the character; you must call
-      `Class.Player:LoadCharacterAsync()|LoadCharacterAsync()` to load the new appearance.
+      `Class.Player:LoadCharacterAsync()|LoadCharacterAsync()` to load the new
+      appearance.
     code_samples: []
     type: boolean
     tags: []
@@ -215,10 +221,10 @@ properties:
     capabilities:
       - Players
   - name: Player.Character
-    summary: |-
+    summary: |
       A `Class.Model` controlled by the player that contains a `Class.Humanoid`,
       body parts, scripts, and other objects.
-    description: |-
+    description: |
       This property contains a reference to a `Class.Model` containing a
       `Class.Humanoid`, body parts, scripts, and other objects required for
       simulating the player's avatar in-experience. The model is parented to the
@@ -266,23 +272,25 @@ properties:
     capabilities:
       - Players
   - name: Player.CharacterAppearance
-    summary: |-
+    summary: |
       The URL of the asset containing the character's appearance, clothing, and
       gear.
-    description: |-
+    description: |
       This property indicates the URL of the asset containing the character's
       appearance, clothing, and gear. It is automatically set by Roblox to load
       your avatar's appearance when you join an experience.
 
       Attempting to set the property after the character has spawned will not
       change the character, you must call
-      `Class.Player:LoadCharacterAsync()|LoadCharacterAsync()` to load the new appearance.
+      `Class.Player:LoadCharacterAsync()|LoadCharacterAsync()` to load the new
+      appearance.
     code_samples: []
     type: string
     tags:
       - NotBrowsable
       - Deprecated
-    deprecation_message: This item is deprecated. Do not use it for new work.
+    deprecation_message: |
+      This item is deprecated. Do not use it for new work.
     security:
       read: None
       write: None
@@ -294,10 +302,10 @@ properties:
     capabilities:
       - Players
   - name: Player.CharacterAppearanceId
-    summary: |-
+    summary: |
       Determines the user ID of the account whose character appearance is used
       for a player's `Class.Player.Character|Character`.
-    description: |-
+    description: |
       This property determines the user ID of the account whose character
       appearance is used for a player's `Class.Player.Character|Character`. By
       default, this property is the `Class.Player.UserId|UserId`, which uses the
@@ -324,10 +332,10 @@ properties:
     capabilities:
       - Players
   - name: Player.DataComplexity
-    summary: |-
+    summary: |
       The total amount of data currently being stored in the player's cache on
       the current place.
-    description: |-
+    description: |
       This property was once used by an ancient data persistence method to
       indicate the total amount of data currently being stored in the player's
       cache on the current place.
@@ -352,7 +360,7 @@ properties:
       - ReadOnly
       - NotReplicated
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item is deprecated, as it may have been used for a now obsolete data
       persistence method. Please save and load player data using
       `Class.DataStoreService` for new work.
@@ -367,8 +375,9 @@ properties:
     capabilities:
       - Players
   - name: Player.DataReady
-    summary: Indicates when the player's data is available to load.
-    description: |-
+    summary: |
+      Indicates when the player's data is available to load.
+    description: |
       This property was once used by an ancient data persistence method to
       indicate when the player's data is available to load. Becomes true when
       data is available.
@@ -379,7 +388,7 @@ properties:
       - ReadOnly
       - NotReplicated
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item is deprecated, as it may have been used for a now obsolete data
       persistence method. Please save and load player data using
       `Class.DataStoreService` for new work.
@@ -394,10 +403,10 @@ properties:
     capabilities:
       - Players
   - name: Player.DevCameraOcclusionMode
-    summary: |-
+    summary: |
       Sets how the default camera handles objects between the camera and the
       player.
-    description: |-
+    description: |
       Defines how the default camera scripts handle objects between the camera
       and the camera subject. Set by
       `Class.StarterPlayer.DevCameraOcclusionMode` and can't be changed for
@@ -420,10 +429,10 @@ properties:
     capabilities:
       - Players
   - name: Player.DevComputerCameraMode
-    summary: |-
+    summary: |
       Determines player's camera movement mode when using a device with a mouse
       and keyboard.
-    description: |-
+    description: |
       This property determines the manner in which a player moves their camera
       when using a device with a mouse and keyboard. This property cannot be set
       using a `Class.LocalScript` (it must be set on the server using a
@@ -450,10 +459,10 @@ properties:
     capabilities:
       - Players
   - name: Player.DevComputerMovementMode
-    summary: |-
+    summary: |
       Determines player's character movement mode when using a device with a
       mouse and keyboard.
-    description: |-
+    description: |
       This property determines the manner in which a player moves their
       character when using a device with a mouse and keyboard. This property
       cannot be set using a `Class.LocalScript` (it must be set on the server
@@ -480,8 +489,9 @@ properties:
     capabilities:
       - Players
   - name: Player.DevEnableMouseLock
-    summary: Determines if the player can toggle mouse lock.
-    description: |-
+    summary: |
+      Determines if the player can toggle mouse lock.
+    description: |
       This property determines if a player is able to toggle mouse lock by
       pressing <kbd>Shift</kbd>. A player can disable the mouse lock switch in
       the experience's settings during play. By default, this property is set to
@@ -509,10 +519,10 @@ properties:
     capabilities:
       - Players
   - name: Player.DevTouchCameraMode
-    summary: |-
+    summary: |
       Determines player's camera movement mode when using a touch-enabled
       device.
-    description: |-
+    description: |
       This property determines the manner in which a player moves their camera
       when using a `Class.UserInputService.TouchEnabled|TouchEnabled` device.
       This property cannot be set using a `Class.LocalScript` (it must be set on
@@ -539,10 +549,10 @@ properties:
     capabilities:
       - Players
   - name: Player.DevTouchMovementMode
-    summary: |-
+    summary: |
       Determines player's character movement mode when using a touch-enabled
       device.
-    description: |-
+    description: |
       This property determines the manner in which a player moves their
       character when using a `Class.UserInputService.TouchEnabled|TouchEnabled`
       device. This property cannot be set using a `Class.LocalScript` (it must
@@ -569,10 +579,10 @@ properties:
     capabilities:
       - Players
   - name: Player.DisplayName
-    summary: |-
+    summary: |
       The display name of the authenticated user associated with the
       `Class.Player`.
-    description: |-
+    description: |
       This property contains the display name of the authenticated user
       associated with the `Class.Player` object. Unlike
       `Class.Player.UserId|UserId`, display names are non-unique names a player
@@ -584,9 +594,10 @@ properties:
         single instance to have identical names. If you need a globally unique
         identifier for a player, use `Class.Player.UserId|UserId` instead.
 
-      - Characters generated with `Class.Player:LoadCharacterAsync()|LoadCharacterAsync()`
-        or by the Roblox engine will have their `Class.Humanoid.DisplayName`
-        property assigned to the `Class.Player.DisplayName` property.
+      - Characters generated with
+        `Class.Player:LoadCharacterAsync()|LoadCharacterAsync()` or by the
+        Roblox engine will have their `Class.Humanoid.DisplayName` property
+        assigned to the `Class.Player.DisplayName` property.
 
       - Display names may have unicode characters in the string. See
         `Library.utf8|UTF-8` for more information on how to work with strings
@@ -606,10 +617,10 @@ properties:
     capabilities:
       - Players
   - name: Player.FollowUserId
-    summary: |-
+    summary: |
       Describes the user ID of the player who was followed into an experience by
       a player.
-    description: |-
+    description: |
       This property contains the `Class.Player.UserId|UserId` of the user that a
       player followed into the experience, or `0` if the player did not follow
       anyone in. This property is useful for alerting players who have been
@@ -635,8 +646,9 @@ properties:
     capabilities:
       - Players
   - name: Player.GameplayPaused
-    summary: Whether player client-side gameplay is currently paused.
-    description: |-
+    summary: |
+      Whether player client-side gameplay is currently paused.
+    description: |
       This property indicates if the player is currently in a pause state in a
       place with `Class.Workspace.StreamingEnabled|StreamingEnabled` activated.
       It is set on the client but replicated to the server.
@@ -664,8 +676,10 @@ properties:
     capabilities:
       - Players
   - name: Player.HasVerifiedBadge
-    summary: Indicates if a player has a **Verified** badge.
-    description: This property indicates if the player has a **Verified** badge.
+    summary: |
+      Indicates if a player has a **Verified** badge.
+    description: |
+      This property indicates if the player has a **Verified** badge.
     code_samples: []
     type: boolean
     tags: []
@@ -681,10 +695,10 @@ properties:
     capabilities:
       - Players
   - name: Player.HealthDisplayDistance
-    summary: |-
+    summary: |
       Sets the distance at which this player will see other players' health
       bars.
-    description: |-
+    description: |
       This property sets the distance in studs at which this player will see
       other `Class.Humanoid` health bars. If set to `0`, the health bars will
       not be displayed. This property is set to
@@ -707,10 +721,10 @@ properties:
     capabilities:
       - Players
   - name: Player.LocaleId
-    summary: |-
+    summary: |
       This property shows the locale ID that the local player has set for their
       Roblox account.
-    description: |-
+    description: |
       This property shows the locale ID that the local player has set for their
       Roblox account. It holds a string with the two letter code, for example
       `en-us`.
@@ -735,28 +749,10 @@ properties:
       can_save: false
     capabilities:
       - Players
-  - name: Player.MaximumSimulationRadius
-    summary: ''
-    description: ''
-    code_samples: []
-    type: float
-    tags:
-      - Hidden
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: LocalUserSecurity
-      write: LocalUserSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities:
-      - Players
   - name: Player.MembershipType
-    summary: Describes the account's membership type.
-    description: |-
+    summary: |
+      Describes the account's membership type.
+    description: |
       This property can only be read from to determine membership (it cannot be
       set to another membership type). It holds a `Enum.MembershipType` enum of
       the account's membership type.
@@ -778,8 +774,9 @@ properties:
     capabilities:
       - Players
   - name: Player.NameDisplayDistance
-    summary: Sets the distance at which this player will see other players' names.
-    description: |-
+    summary: |
+      Sets the distance at which this player will see other players' names.
+    description: |
       This property sets the distance in studs at which this player will see
       other `Class.Humanoid` names. If the property is set to `0`, names are
       hidden. This property is set to `Class.StarterPlayer.NameDisplayDistance`
@@ -802,8 +799,9 @@ properties:
     capabilities:
       - Players
   - name: Player.Neutral
-    summary: Determines whether the player is on a specific team.
-    description: |-
+    summary: |
+      Determines whether the player is on a specific team.
+    description: |
       This property determines whether the player is on a specific team.
 
       - When `true`, the player is not on a specific team. This also means that
@@ -828,8 +826,9 @@ properties:
     capabilities:
       - Players
   - name: Player.PartyId
-    summary: A unique identifier of the party a `Class.Player` belongs to.
-    description: |-
+    summary: |
+      A unique identifier of the party a `Class.Player` belongs to.
+    description: |
       A read-only string identifying the party the player currently belongs to
       within the experience. If the player is not in a party, this value is an
       empty string.
@@ -839,7 +838,10 @@ properties:
       `Class.SocialService:GetPartyAsync()` to access information about a
       player's party and its members.
 
-      To test this service in your experience, use the [Party Simulator](../../../studio/testing-modes.md#party-simulation) in Roblox Studio or publish the experience and play it in the Roblox application.
+      To test this service in your experience, use the
+      [Party Simulator](../../../studio/testing-modes.md#party-simulation) in
+      Roblox Studio or publish the experience and play it in the Roblox
+      application.
     code_samples:
       - Player-PartyId
     type: string
@@ -858,8 +860,9 @@ properties:
     capabilities:
       - Players
   - name: Player.ReplicationFocus
-    summary: Sets the part to focus replication around.
-    description: |-
+    summary: |
+      Sets the part to focus replication around.
+    description: |
       This property sets the part to focus replication around a player.
       Different Roblox systems that communicate over the network (such as
       physics, streaming, etc.) replicate at different rates depending on how
@@ -887,8 +890,9 @@ properties:
     capabilities:
       - Players
   - name: Player.RespawnLocation
-    summary: If set, the player will respawn at the given `Class.SpawnLocation`.
-    description: |-
+    summary: |
+      If set, the player will respawn at the given `Class.SpawnLocation`.
+    description: |
       If set, the player will respawn at the given `Class.SpawnLocation` which
       must meet the following criteria:
 
@@ -920,24 +924,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-  - name: Player.SimulationRadius
-    summary: ''
-    description: ''
-    code_samples: []
-    type: float
-    tags:
-      - Hidden
-    deprecation_message: ''
-    security:
-      read: LocalUserSecurity
-      write: LocalUserSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities:
-      - Players
   - name: Player.StepIdOffset
     summary: ''
     description: ''
@@ -956,8 +942,9 @@ properties:
     capabilities:
       - Players
   - name: Player.Team
-    summary: Determines the `Class.Team` with which the player is associated.
-    description: |-
+    summary: |
+      Determines the `Class.Team` with which the player is associated.
+    description: |
       This property is a reference to a `Class.Team` object within the
       `Class.Teams` service. If the player isn't on a team or has an invalid
       `Class.Player.TeamColor|TeamColor`, this property is `nil`. When this
@@ -981,10 +968,10 @@ properties:
     capabilities:
       - Players
   - name: Player.TeamColor
-    summary: |-
+    summary: |
       Determines the `Class.Team` with which the player is associated with
       according to that team's `Class.Team.TeamColor`.
-    description: |-
+    description: |
       This property determines which `Class.Team` a player is associated with
       according to that team's `Class.Team.TeamColor`. If no `Class.Team` object
       has the associated `Datatype.BrickColor`, the player will not be
@@ -1028,8 +1015,9 @@ properties:
     capabilities:
       - Players
   - name: Player.UserId
-    summary: A unique identifying integer assigned to all user accounts.
-    description: |-
+    summary: |
+      A unique identifying integer assigned to all user accounts.
+    description: |
       This property contains a read-only integer that **uniquely and
       consistently** identifies the user's account on Roblox. Unlike the
       player's `Class.Player.DisplayName|DisplayName` which may change, this
@@ -1060,7 +1048,7 @@ properties:
     type: int64
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This property is a deprecated variant of `Class.Player.UserId` which
       should be used instead.
     security:
@@ -1075,25 +1063,28 @@ properties:
       - Players
 methods:
   - name: Player:AddReplicationFocus
-    summary: Adds an additional replication focus for the player.
-    description: |-
-      This method adds an additional replication focus for the player in order to
-      trigger streaming around the location of the specified `part`. In this manner,
-      streaming can occur around multiple locations, not just the location of
-      `Class.Player.ReplicationFocus`. This has no effect in experiences that are not
-      streaming enabled.
+    summary: |
+      Adds an additional replication focus for the player.
+    description: |
+      This method adds an additional replication focus for the player in order
+      to trigger streaming around the location of the specified `part`. In this
+      manner, streaming can occur around multiple locations, not just the
+      location of `Class.Player.ReplicationFocus`. This has no effect in
+      experiences that are not streaming enabled.
 
-      Additional foci will use the same values of `Class.Workspace.StreamingMinRadius`
-      and `Class.Workspace.StreamingTargetRadius` as are used by the primary focus.
+      Additional foci will use the same values of
+      `Class.Workspace.StreamingMinRadius` and
+      `Class.Workspace.StreamingTargetRadius` as are used by the primary focus.
 
-      This method should only be called on the server. It has no effect when called
-      from a `Class.LocalScript`.
+      This method should only be called on the server. It has no effect when
+      called from a `Class.LocalScript`.
     code_samples: []
     parameters:
       - name: part
         type: BasePart
         default:
-        summary: The `Class.BasePart` to use as a new replication focus.
+        summary: |
+          The `Class.BasePart` to use as a new replication focus.
     returns:
       - type: ()
         summary: ''
@@ -1104,10 +1095,10 @@ methods:
     capabilities:
       - Players
   - name: Player:ClearCharacterAppearance
-    summary: |-
+    summary: |
       Removes all accessories and other character appearance objects from a
       player's `Class.Player.Character|Character`.
-    description: |-
+    description: |
       This method removes all `Class.Accessory`, `Class.Shirt`, `Class.Pants`,
       `Class.CharacterMesh`, and `Class.BodyColors` from the given player's
       `Class.Player.Character|Character`. In addition, it also removes the
@@ -1127,10 +1118,10 @@ methods:
     capabilities:
       - Players
   - name: Player:DistanceFromCharacter
-    summary: |-
+    summary: |
       Returns the distance between the character's head and the given
       `Datatype.Vector3`, or `0` if the player has no character.
-    description: |-
+    description: |
       This method returns the distance between the character's head and the
       given `Datatype.Vector3` point, or `0` if the player has no
       `Class.Player.Character|Character`.
@@ -1150,10 +1141,12 @@ methods:
       - name: point
         type: Vector3
         default:
-        summary: The location from which player's distance to is being measured.
+        summary: |
+          The location from which player's distance to is being measured.
     returns:
       - type: float
-        summary: The distance in studs between the player and the location.
+        summary: |
+          The distance in studs between the player and the location.
     tags: []
     deprecation_message: ''
     security: None
@@ -1161,9 +1154,9 @@ methods:
     capabilities:
       - Players
   - name: Player:GetFriendsOnline
-    summary: |-
-      Returns a dictionary of online connections.
-      	Returns the product information of an asset using its asset ID.
+    summary: |
+      Returns a dictionary of online connections. Returns the product
+      information of an asset using its asset ID.
     description: ''
     code_samples:
       - how-to-get-a-list-of-online-friends
@@ -1171,22 +1164,27 @@ methods:
       - name: maxFriends
         type: int
         default: 200
-        summary: The maximum number of online connections to return.
+        summary: |
+          The maximum number of online connections to return.
     returns:
       - type: Array
-        summary: A dictionary of online connections (see the table above).
+        summary: |
+          A dictionary of online connections (see the table above).
     tags:
       - Yields
       - Deprecated
-    deprecation_message: This method has been superseded by `Class.Player:GetFriendsOnlineAsync()|GetFriendsOnlineAsync()`.
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Player:GetFriendsOnlineAsync()|GetFriendsOnlineAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
       - Players
       - Social
   - name: Player:GetFriendsOnlineAsync
-    summary: Returns a dictionary of online connections.
-    description: |-
+    summary: |
+      Returns a dictionary of online connections.
+    description: |
       This function returns a dictionary array of online connections, using a 30
       second cache. In the returned array, some fields are only present for
       certain location types; for example, `PlaceId` won't be present when
@@ -1254,10 +1252,12 @@ methods:
       - name: maxFriends
         type: int
         default: 200
-        summary: The maximum number of online connections to return.
+        summary: |
+          The maximum number of online connections to return.
     returns:
       - type: Array
-        summary: A dictionary of online connections (see the table above).
+        summary: |
+          A dictionary of online connections (see the table above).
     tags:
       - Yields
     deprecation_message: ''
@@ -1267,10 +1267,10 @@ methods:
       - Players
       - Social
   - name: Player:GetJoinData
-    summary: |-
+    summary: |
       Returns a dictionary containing information describing how the player
       joins the experience.
-    description: |-
+    description: |
       Returns a dictionary containing information describing how the player
       joins the experience. The dictionary contains any of the following fields:
 
@@ -1361,7 +1361,7 @@ methods:
     parameters: []
     returns:
       - type: Dictionary
-        summary: |-
+        summary: |
           A dictionary containing PlaceId and UserId values (see table in
           description).
     tags:
@@ -1372,8 +1372,9 @@ methods:
     capabilities:
       - Players
   - name: Player:GetMouse
-    summary: Returns the mouse being used by the client.
-    description: |-
+    summary: |
+      Returns the mouse being used by the client.
+    description: |
       This method returns the `Class.Mouse` being used by the client. The
       player's mouse instance can be used to track user mouse input including
       left and right mouse button clicks and movement and location.
@@ -1394,12 +1395,13 @@ methods:
       - Input
       - Players
   - name: Player:GetNetworkPing
-    summary: Returns the round-trip, isolated network latency in seconds.
-    description: |-
+    summary: |
+      Returns the round-trip, isolated network latency in seconds.
+    description: |
       Returns the round-trip, isolated network latency of the player in seconds.
-      "Ping" is a measurement of the time taken for data to be sent from the client
-      to the server, then back again. It doesn't involve data deserialization or
-      processing.
+      "Ping" is a measurement of the time taken for data to be sent from the
+      client to the server, then back again. It doesn't involve data
+      deserialization or processing.
 
       For client-side `Class.LocalScript|LocalScripts`, this function can only
       be called on the `Class.Players.LocalPlayer`. This function is useful in
@@ -1418,7 +1420,8 @@ methods:
     capabilities:
       - Players
   - name: Player:GetRankInGroup
-    summary: Returns the player's rank in the group as an integer.
+    summary: |
+      Returns the player's rank in the group as an integer.
     description: ''
     code_samples:
       - Player-GetRankInGroup1
@@ -1426,10 +1429,12 @@ methods:
       - name: groupId
         type: int64
         default:
-        summary: The `groupId` of the specified group.
+        summary: |
+          The `groupId` of the specified group.
     returns:
       - type: int
-        summary: The player's rank in the group.
+        summary: |
+          The player's rank in the group.
     tags:
       - Yields
       - Deprecated
@@ -1440,19 +1445,20 @@ methods:
       - Players
       - Groups
   - name: Player:GetRankInGroupAsync
-    summary: Returns the player's rank in the group as an integer.
-    description: |-
+    summary: |
+      Returns the player's rank in the group as an integer.
+    description: |
       This method returns the player's rank in the group as an integer between
       `0` and `255`, where `0` is a non-member and `255` is the group's owner.
 
-      This call may not yield the most up-to-date information. If a player leaves a group
-      while they are in the experience, `GetRankInGroupAsync()` will still think
-      they're in that group until they leave. However, this does not happen when
-      used with a `Class.LocalScript` because the method caches results, so
-      multiple calls of `GetRankInGroupAsync()` on the same player with the same
-      group ID will yield the same result as when the method was first called
-      with the given group ID. The caching behavior is on a per-peer basis: a
-      server does not share the same cache as a client.
+      This call may not yield the most up-to-date information. If a player
+      leaves a group while they are in the experience, `GetRankInGroupAsync()`
+      will still think they're in that group until they leave. However, this
+      does not happen when used with a `Class.LocalScript` because the method
+      caches results, so multiple calls of `GetRankInGroupAsync()` on the same
+      player with the same group ID will yield the same result as when the
+      method was first called with the given group ID. The caching behavior is
+      on a per-peer basis: a server does not share the same cache as a client.
 
       When a player joins a group in-experience due to a call to
       `Class.GroupService:PromptJoinAsync()`, any cached value for that player
@@ -1463,10 +1469,12 @@ methods:
       - name: groupId
         type: int64
         default:
-        summary: The `groupId` of the specified group.
+        summary: |
+          The `groupId` of the specified group.
     returns:
       - type: int
-        summary: The player's rank in the group.
+        summary: |
+          The player's rank in the group.
     tags:
       - Yields
     deprecation_message: ''
@@ -1476,7 +1484,7 @@ methods:
       - Players
       - Groups
   - name: Player:GetRoleInGroup
-    summary: |-
+    summary: |
       Returns the player's role in the group as a string, or `Guest` if the
       player isn't part of the group.
     description: ''
@@ -1486,37 +1494,40 @@ methods:
       - name: groupId
         type: int64
         default:
-        summary: The group ID of the specified group.
+        summary: |
+          The group ID of the specified group.
     returns:
       - type: string
-        summary: |-
+        summary: |
           The player's role in the specified group, or `Guest` if the player is
           not a member.
     tags:
       - Yields
       - Deprecated
-    deprecation_message: This method has been superseded by `Class.Player.GetRoleInGroupAsync|GetRoleInGroup()`.
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Player.GetRoleInGroupAsync|GetRoleInGroup()`.
     security: None
     thread_safety: Unsafe
     capabilities:
       - Players
       - Groups
   - name: Player:GetRoleInGroupAsync
-    summary: |-
+    summary: |
       Returns the player's role in the group as a string, or `Guest` if the
       player isn't part of the group.
-    description: |-
+    description: |
       This method returns the player's role in the group as a string, or `Guest`
       if the player isn't part of the group.
 
-      This call may not yield the most up-to-date information. If a player leaves a group
-      while they are in the experience, `GetRoleInGroupAsync()` will still think
-      they're in that group until they leave. However, this does not happen when
-      used with a `Class.LocalScript` because the method caches results, so
-      multiple calls of `GetRoleInGroupAsync()` on the same player with the same
-      group ID will yield the same result as when the method was first called
-      with the given group ID. The caching behavior is on a per-peer basis: a
-      server does not share the same cache as a client.
+      This call may not yield the most up-to-date information. If a player
+      leaves a group while they are in the experience, `GetRoleInGroupAsync()`
+      will still think they're in that group until they leave. However, this
+      does not happen when used with a `Class.LocalScript` because the method
+      caches results, so multiple calls of `GetRoleInGroupAsync()` on the same
+      player with the same group ID will yield the same result as when the
+      method was first called with the given group ID. The caching behavior is
+      on a per-peer basis: a server does not share the same cache as a client.
 
       When a player joins a group in-experience due to a call to
       `Class.GroupService:PromptJoinAsync()`, any cached value for that player
@@ -1527,10 +1538,11 @@ methods:
       - name: groupId
         type: int64
         default:
-        summary: The group ID of the specified group.
+        summary: |
+          The group ID of the specified group.
     returns:
       - type: string
-        summary: |-
+        summary: |
           The player's role in the specified group, or `Guest` if the player is
           not a member.
     tags:
@@ -1542,10 +1554,10 @@ methods:
       - Players
       - Groups
   - name: Player:HasAppearanceLoaded
-    summary: |-
+    summary: |
       Returns whether or not the appearance of the player's character has
       loaded.
-    description: |-
+    description: |
       This method returns whether or not the appearance of the player's
       `Class.Player.Character|Character` has loaded. Appearance includes items
       such as the player's `Class.Shirt`, `Class.Pants`, and
@@ -1559,7 +1571,7 @@ methods:
     parameters: []
     returns:
       - type: boolean
-        summary: |-
+        summary: |
           A boolean indicating whether or not the appearance of the player's
           character has loaded.
     tags: []
@@ -1569,11 +1581,11 @@ methods:
     capabilities:
       - Players
   - name: Player:IsBestFriendsWith
-    summary: Returns whether a player is connections with the specified user.
-    description: |-
+    summary: |
+      Returns whether a player is connections with the specified user.
+    description: |
       This function was once used to return whether a player is best friends
-      with the specified user, but the feature has since been
-      removed.
+      with the specified user, but the feature has since been removed.
     code_samples: []
     parameters:
       - name: userId
@@ -1586,7 +1598,7 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This function is obsolete because the "best friends" feature was removed.
       Use `Class.Player:IsFriendsWithAsync()` instead.
     security: None
@@ -1594,7 +1606,7 @@ methods:
     capabilities:
       - Players
   - name: Player:IsFriendsWith
-    summary: |-
+    summary: |
       Checks whether a player is a connection of the user with the given
       `Class.Player.UserId`.
     description: ''
@@ -1603,16 +1615,17 @@ methods:
       - name: userId
         type: int64
         default:
-        summary: The `Class.Player.UserId` of the specified player.
+        summary: |
+          The `Class.Player.UserId` of the specified player.
     returns:
       - type: boolean
-        summary: |-
+        summary: |
           A boolean indicating whether a player is a connection of the specified
           user.
     tags:
       - Yields
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This method has been superseded by the `Class.Player:IsFriendsWithAsync()`
       method which should be used for new work.
     security: None
@@ -1635,7 +1648,7 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This method has been superseded by the `Class.Player:IsFriendsWithAsync()`
       method which should be used for new work.
     security: None
@@ -1643,10 +1656,10 @@ methods:
     capabilities:
       - Players
   - name: Player:IsFriendsWithAsync
-    summary: |-
+    summary: |
       Checks whether a player is a connection of the user with the given
       `Class.Player.UserId`.
-    description: |-
+    description: |
       This method sends a request to Roblox asking whether a player is a
       connection of another user, given the `Class.Player.UserId|UserId` of that
       user. This method caches results so multiple calls on the same player with
@@ -1656,10 +1669,11 @@ methods:
       - name: userId
         type: int64
         default:
-        summary: The `Class.Player.UserId` of the specified player.
+        summary: |
+          The `Class.Player.UserId` of the specified player.
     returns:
       - type: boolean
-        summary: |-
+        summary: |
           A boolean indicating whether a player is a connection of the specified
           user.
     tags:
@@ -1671,40 +1685,46 @@ methods:
       - Players
       - Social
   - name: Player:IsInGroup
-    summary: Checks whether a player is a member of a group with the given ID.
+    summary: |
+      Checks whether a player is a member of a group with the given ID.
     description: ''
     code_samples: []
     parameters:
       - name: groupId
         type: int64
         default:
-        summary: The group ID of the specified group.
+        summary: |
+          The group ID of the specified group.
     returns:
       - type: boolean
-        summary: A boolean indicating whether the player is in the specified group.
+        summary: |
+          A boolean indicating whether the player is in the specified group.
     tags:
       - Yields
       - Deprecated
-    deprecation_message: This method has been superseded by `Class.Player.IsInGroupAsync|IsInGroupAsync()`.
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Player.IsInGroupAsync|IsInGroupAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
       - Players
       - Groups
   - name: Player:IsInGroupAsync
-    summary: Checks whether a player is a member of a group with the given ID.
-    description: |-
+    summary: |
+      Checks whether a player is a member of a group with the given ID.
+    description: |
       This method sends a request to Roblox asking whether a player is a member
       of a group, given the ID of that group.
 
-      This call may not yield the most up-to-date information. If a player leaves a group
-      while they are in the experience, `IsInGroupAsync()` will still think they're
-      in that group until they leave. However, this does not happen when used
-      with a `Class.LocalScript` because the method caches results, so multiple
-      calls of `IsInGroupAsync()` on the same player with the same group ID will
-      yield the same result as when the method was first called with the given
-      group ID. The caching behavior is on a per-peer basis: a server does not
-      share the same cache as a client.
+      This call may not yield the most up-to-date information. If a player
+      leaves a group while they are in the experience, `IsInGroupAsync()` will
+      still think they're in that group until they leave. However, this does not
+      happen when used with a `Class.LocalScript` because the method caches
+      results, so multiple calls of `IsInGroupAsync()` on the same player with
+      the same group ID will yield the same result as when the method was first
+      called with the given group ID. The caching behavior is on a per-peer
+      basis: a server does not share the same cache as a client.
 
       When a player joins a group in-experience due to a call to
       `Class.GroupService:PromptJoinAsync()`, any cached value for that player
@@ -1714,10 +1734,12 @@ methods:
       - name: groupId
         type: int64
         default:
-        summary: The group ID of the specified group.
+        summary: |
+          The group ID of the specified group.
     returns:
       - type: boolean
-        summary: A boolean indicating whether the player is in the specified group.
+        summary: |
+          A boolean indicating whether the player is in the specified group.
     tags:
       - Yields
     deprecation_message: ''
@@ -1727,8 +1749,9 @@ methods:
       - Players
       - Groups
   - name: Player:IsVerified
-    summary: Returns whether the player is verified with concrete, real-world signals.
-    description: |-
+    summary: |
+      Returns whether the player is verified with concrete, real-world signals.
+    description: |
       Returns a boolean value indicating that player's verification status. When
       `true`, the player is verified. Verification includes, but isn't limited
       to, non-VOIP phone number or government ID verification.
@@ -1744,7 +1767,8 @@ methods:
     parameters: []
     returns:
       - type: boolean
-        summary: A boolean indicating whether the player is verified.
+        summary: |
+          A boolean indicating whether the player is verified.
     tags: []
     deprecation_message: ''
     security: None
@@ -1752,10 +1776,10 @@ methods:
     capabilities:
       - Players
   - name: Player:Kick
-    summary: |-
+    summary: |
       Forcibly disconnect a player from the experience, optionally providing a
       message.
-    description: |-
+    description: |
       This method allows an experience to gracefully disconnect a client and
       optionally provide a message to the disconnected user. This is useful for
       moderating abusive users. You should only allow specific users whom you
@@ -1773,7 +1797,8 @@ methods:
       - name: message
         type: string
         default:
-        summary: The message to show the user upon kicking.
+        summary: |
+          The message to show the user upon kicking.
     returns:
       - type: ()
         summary: ''
@@ -1785,10 +1810,10 @@ methods:
       - Players
       - Consequences
   - name: Player:LoadBoolean
-    summary: |-
+    summary: |
       Returns a boolean value that was previously saved to the player with
       `Class.Player:SaveBoolean()` with the same key.
-    description: |-
+    description: |
       This function returns a boolean value that was previously saved to the
       player with `Class.Player:SaveBoolean()` with the same key. Returns false
       if the key doesn't exist, not `nil`.
@@ -1803,7 +1828,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item is deprecated, as it may have been used for a now obsolete data
       persistence method. Please save and load player data using
       `Class.DataStoreService` for new work.
@@ -1825,7 +1850,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This deprecated function is a variant of `Class.Player:LoadBoolean()`
       which has also been deprecated. Neither function should be used in new
       work.
@@ -1834,7 +1859,7 @@ methods:
     capabilities:
       - Players
   - name: Player:LoadCharacter
-    summary: |-
+    summary: |
       Creates a new character for the player, removing the old one. Also clears
       the player's `Class.Backpack` and `Class.PlayerGui`.
     description: ''
@@ -1847,16 +1872,18 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: This method has been superseded by `Class.Player:LoadCharacterAsync()|LoadCharacterAsync()`.
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Player:LoadCharacterAsync()|LoadCharacterAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
       - Players
   - name: Player:LoadCharacterAppearance
-    summary: |-
+    summary: |
       Places the given instance either in the player's character, head, or
       StarterGear based on the instance's class.
-    description: |-
+    description: |
       The LoadCharacterAppearance `Class.Player` function places the given
       instance either in the player's `Class.Player.Character`, head, or
       `Class.StarterGear` based on the instance's class.
@@ -1864,8 +1891,8 @@ methods:
       This is useful when giving a player's character an asset from the Roblox
       catalog, such as a hat or piece of gear.
 
-      It is similar to `Class.Player:LoadCharacterAsync()`, except it does not reload
-      the entire character instance, StarterGear, or `Class.PlayerGui`.
+      It is similar to `Class.Player:LoadCharacterAsync()`, except it does not
+      reload the entire character instance, StarterGear, or `Class.PlayerGui`.
 
       Note:
 
@@ -1883,7 +1910,7 @@ methods:
       - name: assetInstance
         type: Instance
         default:
-        summary: |-
+        summary: |
           An instance of the asset being loaded, which can be obtained using the
           `Class.InsertService:LoadAsset()` function.
     returns:
@@ -1898,10 +1925,10 @@ methods:
       - AvatarAppearance
       - Players
   - name: Player:LoadCharacterAsync
-    summary: |-
+    summary: |
       Creates a new character for the player, removing the old one. Also clears
       the player's `Class.Backpack` and `Class.PlayerGui`.
-    description: |-
+    description: |
       This method creates a new character for the player, removing the old one.
       It also clears the player's `Class.Backpack` and `Class.PlayerGui`. This
       is useful in cases where you want to reload the character without killing
@@ -1916,8 +1943,8 @@ methods:
 
       #### Character Loading Event Order
 
-      Calling the `LoadCharacterAsync()` method on any `Player` fires events in the
-      following order:
+      Calling the `LoadCharacterAsync()` method on any `Player` fires events in
+      the following order:
 
       1. `Class.Player.Character` sets, automatically removing old character.
       2. `Class.Player.CharacterAdded` fires.
@@ -1943,7 +1970,7 @@ methods:
     capabilities:
       - Players
   - name: Player:LoadCharacterWithHumanoidDescription
-    summary: |-
+    summary: |
       Spawns a player character with everything equipped in the passed in
       `Class.HumanoidDescription`.
     description: ''
@@ -1953,30 +1980,33 @@ methods:
       - name: humanoidDescription
         type: HumanoidDescription
         default:
-        summary: |-
+        summary: |
           A `Class.HumanoidDescription` containing traits like body
           parts/colors, body scaling, accessories, clothing, and animations that
           will be equipped to the loaded character.
       - name: assetTypeVerification
         type: AssetTypeVerification
-        default:
-        summary: The asset type verification mode.
+        default: Default
+        summary: |
+          The asset type verification mode.
     returns:
       - type: ()
         summary: ''
     tags:
       - Yields
       - Deprecated
-    deprecation_message: This method has been superseded by `Class.Player:LoadCharacterWithHumanoidDescriptionAsync()|LoadCharacterWithHumanoidDescriptionAsync()`.
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Player:LoadCharacterWithHumanoidDescriptionAsync()|LoadCharacterWithHumanoidDescriptionAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
       - Players
   - name: Player:LoadCharacterWithHumanoidDescriptionAsync
-    summary: |-
+    summary: |
       Spawns a player character with everything equipped in the passed in
       `Class.HumanoidDescription`.
-    description: |-
+    description: |
       This method spawns a player character with everything equipped in the
       passed in `Class.HumanoidDescription`.
 
@@ -1995,14 +2025,15 @@ methods:
       - name: humanoidDescription
         type: HumanoidDescription
         default:
-        summary: |-
+        summary: |
           A `Class.HumanoidDescription` containing traits like body
           parts/colors, body scaling, accessories, clothing, and animations that
           will be equipped to the loaded character.
       - name: assetTypeVerification
         type: AssetTypeVerification
-        default:
-        summary: The asset type verification mode.
+        default: Default
+        summary: |
+          The asset type verification mode.
     returns:
       - type: ()
         summary: ''
@@ -2014,10 +2045,10 @@ methods:
     capabilities:
       - Players
   - name: Player:LoadInstance
-    summary: |-
+    summary: |
       Returns an instance that was previously saved to the player with
       `Class.Player:SaveInstance()` with the same key.
-    description: |-
+    description: |
       This function returns an instance that was previously saved to the player
       with `Class.Player:SaveInstance()` with the same key. Returns `nil` if the
       key doesn't exist.
@@ -2033,7 +2064,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item is deprecated, as it may have been used for a now obsolete data
       persistence method. Please save and load player data using
       `Class.DataStoreService` for new work.
@@ -2055,7 +2086,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This deprecated function is a variant of `Class.Player:LoadInstance()`
       which has also been deprecated. Neither function should be used in new
       work.
@@ -2064,8 +2095,9 @@ methods:
     capabilities:
       - Players
   - name: Player:LoadNumber
-    summary: Returns a number value that was previously saved to the player.
-    description: |-
+    summary: |
+      Returns a number value that was previously saved to the player.
+    description: |
       This function was once used by an ancient data persistence method to
       return a number value that was previously saved to the player with
       `Class.Player:SaveNumber()` with the same key. Returns 0 if the key
@@ -2082,7 +2114,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item is deprecated, as it may have been used for a now obsolete data
       persistence method. Please save and load player data using
       `Class.DataStoreService` for new work.
@@ -2104,7 +2136,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This deprecated function is a variant of `Class.Player:LoadNumber()` which
       has also been deprecated. Neither function should be used in new work.
     security: None
@@ -2112,8 +2144,9 @@ methods:
     capabilities:
       - Players
   - name: Player:LoadString
-    summary: Returns a string value that was previously saved to the player.
-    description: |-
+    summary: |
+      Returns a string value that was previously saved to the player.
+    description: |
       This function returns a string value that was previously saved to the
       player with `Class.Player:SaveString()` with the same key. Returns an
       empty string ("") if the key doesn't exist, not `nil`.
@@ -2129,7 +2162,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item is deprecated, as it may have been used for a now obsolete data
       persistence method. Please save and load player data using
       `Class.DataStoreService` for new work.
@@ -2151,7 +2184,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This function is a deprecated variant of `Class.Player:LoadString()` which
       has also been deprecated. Neither function should be used in new work.
     security: None
@@ -2159,10 +2192,10 @@ methods:
     capabilities:
       - Players
   - name: Player:Move
-    summary: |-
+    summary: |
       Causes the player's character to walk in the given direction until
       stopped, or interrupted by the player (by using their controls).
-    description: |-
+    description: |
       This method causes the player's character to walk in the given direction
       until stopped, or interrupted by the player (by using their controls).
 
@@ -2178,11 +2211,12 @@ methods:
       - name: walkDirection
         type: Vector3
         default:
-        summary: The Vector3 direction that the player should move.
+        summary: |
+          The Vector3 direction that the player should move.
       - name: relativeToCamera
         type: boolean
         default: false
-        summary: |-
+        summary: |
           A boolean indicating whether the player should move relative to the
           player's camera.
     returns:
@@ -2195,8 +2229,9 @@ methods:
     capabilities:
       - Players
   - name: Player:RemoveReplicationFocus
-    summary: Removes a previously added replication focus.
-    description: |-
+    summary: |
+      Removes a previously added replication focus.
+    description: |
       This method removes a replication focus previously added by
       `Class.Player:AddReplicationFocus()|AddReplicationFocus(). Has no effect
       in experiences that are not streaming enabled.
@@ -2208,7 +2243,8 @@ methods:
       - name: part
         type: BasePart
         default:
-        summary: The `Class.BasePart` to remove as a replication focus.
+        summary: |
+          The `Class.BasePart` to remove as a replication focus.
     returns:
       - type: ()
         summary: ''
@@ -2219,18 +2255,19 @@ methods:
     capabilities:
       - Players
   - name: Player:RequestStreamAroundAsync
-    summary: |-
+    summary: |
       Requests that the server stream to the player around the specified
       location.
-    description: |-
+    description: |
       For experiences where
-      [instance streaming](../../../workspace/streaming/index.md) is enabled, requests
-      that the server stream to the player regions (parts and terrain) around
-      the specified **X**, **Y**, **Z** location in the 3D world. It is useful
-      if the experience knows that the player's `Datatype.CFrame` will be set to
-      the specified location in the near future. Without providing the location
-      with this call, the player may not have streamed in content for the
-      destination, resulting in a streaming pause or other undesirable behavior.
+      [instance streaming](../../../workspace/streaming/index.md) is enabled,
+      requests that the server stream to the player regions (parts and terrain)
+      around the specified **X**, **Y**, **Z** location in the 3D world. It is
+      useful if the experience knows that the player's `Datatype.CFrame` will be
+      set to the specified location in the near future. Without providing the
+      location with this call, the player may not have streamed in content for
+      the destination, resulting in a streaming pause or other undesirable
+      behavior.
 
       The effect of this call will be temporary and there are no guarantees of
       what will be streamed in around the specified location. Client memory
@@ -2248,11 +2285,12 @@ methods:
       - name: position
         type: Vector3
         default:
-        summary: World location where streaming is requested.
+        summary: |
+          World location where streaming is requested.
       - name: timeOut
         type: double
         default: 0
-        summary: |-
+        summary: |
           Optional timeout for the request, the maximum duration that the engine
           attempts to stream regions around the `position` parameter before
           abandoning the request. If you don't specify a value, the timeout is
@@ -2270,10 +2308,10 @@ methods:
     capabilities:
       - Players
   - name: Player:SaveBoolean
-    summary: |-
+    summary: |
       Used to save a boolean value that can be loaded again at a later time
       using `Class.Player:LoadBoolean()`.
-    description: |-
+    description: |
       This function is used to save a boolean value that can be loaded again at
       a later time using `Class.Player:LoadBoolean()`.
     code_samples:
@@ -2292,7 +2330,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item is deprecated, as it may have been used for a now obsolete data
       persistence method. Please save and load player data using
       `Class.DataStoreService` for new work.
@@ -2318,7 +2356,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This function is a deprecated variant of `Class.Player:SaveBoolean()`
       which has also been deprecated. Neither function should be used in new
       work.
@@ -2327,8 +2365,9 @@ methods:
     capabilities:
       - Players
   - name: Player:SaveInstance
-    summary: Saves an instance which can be loaded again at a later time.
-    description: |-
+    summary: |
+      Saves an instance which can be loaded again at a later time.
+    description: |
       This function was once used by an ancient data persistence method to save
       an instance which can be loaded again at a later time using
       `Class.Player:LoadInstance()`..
@@ -2348,7 +2387,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item is deprecated, as it may have been used for a now obsolete data
       persistence method. Please save and load player data using
       `Class.DataStoreService` for new work.
@@ -2374,7 +2413,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This function is a deprecated variant of `Class.Player:SaveInstance()`
       which has also been deprecated. Neither function should be used in new
       work.
@@ -2383,8 +2422,9 @@ methods:
     capabilities:
       - Players
   - name: Player:SaveNumber
-    summary: Saves a number value that can be loaded again at a later time using.
-    description: |-
+    summary: |
+      Saves a number value that can be loaded again at a later time using.
+    description: |
       This function was once used by an ancient data persistence method to save
       a number value that can be loaded again at a later time using
       `Class.Player:LoadNumber()`.
@@ -2404,7 +2444,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item is deprecated, as it may have been used for a now obsolete data
       persistence method. Please save and load player data using
       `Class.DataStoreService` for new work.
@@ -2430,7 +2470,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This function is a deprecated variant of `Class.Player:SaveNumber()` which
       has also been deprecated. Neither function should be used in new work.
     security: None
@@ -2438,8 +2478,9 @@ methods:
     capabilities:
       - Players
   - name: Player:SaveString
-    summary: Saves a string value that can be loaded again at a later time.
-    description: |-
+    summary: |
+      Saves a string value that can be loaded again at a later time.
+    description: |
       This function was once used by an ancient data persistence method to save
       a string value that can be loaded again at a later time using
       `Class.Player:LoadString()`.
@@ -2459,7 +2500,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item is deprecated, as it may have been used for a now obsolete data
       persistence method. Please save and load player data using
       `Class.DataStoreService` for new work.
@@ -2485,7 +2526,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This function is a deprecated variant of `Class.Player:SaveString()` which
       has also been deprecated. Neither function should be used in new work.
     security: None
@@ -2493,8 +2534,9 @@ methods:
     capabilities:
       - Players
   - name: Player:SetAccountAge
-    summary: Sets the `Class.Player.AccountAge|AccountAge` of the player.
-    description: |-
+    summary: |
+      Sets the `Class.Player.AccountAge|AccountAge` of the player.
+    description: |
       This method sets the `Class.Player.AccountAge|AccountAge` of the player in
       days, meaning the age of the account itself relative to when it was first
       created.
@@ -2503,7 +2545,8 @@ methods:
       - name: accountAge
         type: int
         default:
-        summary: The age of the account in days.
+        summary: |
+          The age of the account in days.
     returns:
       - type: ()
         summary: ''
@@ -2514,10 +2557,10 @@ methods:
     capabilities:
       - Players
   - name: Player:SetSuperSafeChat
-    summary: |-
+    summary: |
       Sets whether or not the player sees filtered chats, rather than normal
       chats.
-    description: |-
+    description: |
       This method sets whether or not the player sees chat filtered by
       `Class.TextService:FilterStringAsync()` rather than normal chats.
 
@@ -2538,7 +2581,8 @@ methods:
       - name: value
         type: boolean
         default:
-        summary: A boolean indicating whether or not the player sees filtered chat.
+        summary: |
+          A boolean indicating whether or not the player sees filtered chat.
     returns:
       - type: ()
         summary: ''
@@ -2549,11 +2593,11 @@ methods:
     capabilities:
       - Players
   - name: Player:WaitForDataReady
-    summary: |-
+    summary: |
       Used to pause the script until the player's data is available to
       manipulate, or until a certain amount of time has elapsed without fetching
       the player's data.
-    description: |-
+    description: |
       This function is used to pause the script until the player's data is
       available to manipulate, or until a certain amount of time has elapsed
       without fetching the player's data
@@ -2565,7 +2609,7 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item is deprecated, as it may have been used for a now obsolete data
       persistence method. Please save and load player data using
       `Class.DataStoreService` for new work.
@@ -2584,7 +2628,7 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This function is a deprecated variant of `Class.Player:WaitForDataReady()`
       which has also been deprecated. Neither function should be used in new
       work.
@@ -2594,12 +2638,13 @@ methods:
       - Players
 events:
   - name: Player.CharacterAdded
-    summary: Fires when a player's character spawns or respawns.
-    description: |-
+    summary: |
+      Fires when a player's character spawns or respawns.
+    description: |
       This event fires when a player's character spawns or respawns. It fires
       soon after setting `Class.Player.Character|Character` to a non-`nil` value
-      or calling `Class.Player:LoadCharacterAsync()|LoadCharacterAsync()`, which is before
-      the character is parented to the `Class.Workspace`.
+      or calling `Class.Player:LoadCharacterAsync()|LoadCharacterAsync()`, which
+      is before the character is parented to the `Class.Workspace`.
 
       This can be used alongside the
       `Class.Player.CharacterRemoving|CharacterRemoving` event which fires right
@@ -2607,14 +2652,14 @@ events:
       As such, both of these events can potentially fire many times as players
       die then respawn in a place.
 
-      Note that the `Class.Humanoid` and its default body parts (head, torso, and
-      limbs) will exist on the server when this event fires, but clothing items like
-      `Class.Hat|Hats`, `Class.Shirt|Shirts`, and `Class.Pants` might take a few
-      seconds to be added to the character. The parts will also take time to
-      replicate to clients. Connect `Class.Instance.ChildAdded` on the added
-      character to detect these, or wait for the
-      `Class.Player.CharacterAppearanceLoaded|CharacterAppearanceLoaded` event to be
-      sure the character has everything equipped.
+      Note that the `Class.Humanoid` and its default body parts (head, torso,
+      and limbs) will exist on the server when this event fires, but clothing
+      items like `Class.Hat|Hats`, `Class.Shirt|Shirts`, and `Class.Pants` might
+      take a few seconds to be added to the character. The parts will also take
+      time to replicate to clients. Connect `Class.Instance.ChildAdded` on the
+      added character to detect these, or wait for the
+      `Class.Player.CharacterAppearanceLoaded|CharacterAppearanceLoaded` event
+      to be sure the character has everything equipped.
 
       If you instead need to track when a player joins/leaves the experience,
       use the events `Class.Players.PlayerAdded` and
@@ -2626,17 +2671,18 @@ events:
       - name: character
         type: Model
         default:
-        summary: An instance of the character that spawned/respawned.
+        summary: |
+          An instance of the character that spawned/respawned.
     tags: []
     deprecation_message: ''
     security: None
     capabilities:
       - Players
   - name: Player.CharacterAppearanceLoaded
-    summary: |-
+    summary: |
       Fires when the full appearance of a `Class.Player.Character|Character` has
       been inserted.
-    description: |-
+    description: |
       This event fires when the full appearance of a
       `Class.Player.Character|Character` has been inserted. It only fires on the
       server.
@@ -2660,15 +2706,17 @@ events:
       - name: character
         type: Model
         default:
-        summary: The `Class.Player.Character` `Class.Model`.
+        summary: |
+          The `Class.Player.Character` `Class.Model`.
     tags: []
     deprecation_message: ''
     security: None
     capabilities:
       - Players
   - name: Player.CharacterRemoving
-    summary: Fires right before a player's character is removed.
-    description: |-
+    summary: |
+      Fires right before a player's character is removed.
+    description: |
       This event fires right before a player's
       `Class.Player.Character|Character` is removed, such as when the player is
       respawning. This can be used alongside the
@@ -2684,15 +2732,17 @@ events:
       - name: character
         type: Model
         default:
-        summary: An instance of the character that is being removed.
+        summary: |
+          An instance of the character that is being removed.
     tags: []
     deprecation_message: ''
     security: None
     capabilities:
       - Players
   - name: Player.Chatted
-    summary: Fires when a player chats in experience using Roblox's provided chat bar.
-    description: |-
+    summary: |
+      Fires when a player chats in experience using Roblox's provided chat bar.
+    description: |
       This event fires when a `Class.Player` types a message and presses
       <kbd>Enter</kbd> in Roblox's provided chat bar. This is done using some
       Luau bindings by the default chat script. You can prevent players from
@@ -2703,11 +2753,12 @@ events:
       - name: message
         type: string
         default:
-        summary: The content of the message the player typed in chat.
+        summary: |
+          The content of the message the player typed in chat.
       - name: recipient
         type: Player
         default:
-        summary: |-
+        summary: |
           **Deprecated.** For whisper messages, this was the Player who was the
           intended target of the chat message.
     tags: []
@@ -2717,11 +2768,11 @@ events:
       - Chat
       - Players
   - name: Player.Idled
-    summary: |-
+    summary: |
       This event fires approximately two minutes after the engine classifies the
       player as idle. Time is the number of seconds that have elapsed since that
       point.
-    description: |-
+    description: |
       This event fires approximately two minutes after the engine classifies the
       player as idle. Time is the number of seconds that have elapsed since that
       point. The event continues to fire every 30 seconds for as long as the
@@ -2742,15 +2793,17 @@ events:
       - name: time
         type: double
         default:
-        summary: The time in seconds the player has been idle.
+        summary: |
+          The time in seconds the player has been idle.
     tags: []
     deprecation_message: ''
     security: None
     capabilities:
       - Players
   - name: Player.OnTeleport
-    summary: Fires when the teleport state of a player changes.
-    description: |-
+    summary: |
+      Fires when the teleport state of a player changes.
+    description: |
       This event fires when the `Enum.TeleportState` of a player changes. This
       event is useful for detecting whether a teleportation was successful.
     code_samples:
@@ -2759,15 +2812,17 @@ events:
       - name: teleportState
         type: TeleportState
         default:
-        summary: The new `Enum.TeleportState` of the `Class.Player`.
+        summary: |
+          The new `Enum.TeleportState` of the `Class.Player`.
       - name: placeId
         type: int64
         default:
-        summary: The ID of the place the `Class.Player` is being teleported to.
+        summary: |
+          The ID of the place the `Class.Player` is being teleported to.
       - name: spawnName
         type: string
         default:
-        summary: |-
+        summary: |
           The name of the spawn to teleport to, if
           `Class.TeleportService:TeleportToSpawnByName()` has been used.
     tags: []

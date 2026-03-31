@@ -4,25 +4,26 @@
 
 name: ModelStreamingBehavior
 type: enum
-summary: |-
+summary: |
   Controls how `Class.Model|Models` are sent to clients in experiences with
   instance streaming enabled.
-description: |-
+description: |
   Controls how `Class.Model|Models` are replicated in experiences when instance
-  [streaming](../../../workspace/streaming/index.md) is enabled. Only affects models
-  with `Class.Model.ModelStreamingMode|ModelStreamingMode` set to
+  [streaming](../../../workspace/streaming/index.md) is enabled. Only affects
+  models with `Class.Model.ModelStreamingMode|ModelStreamingMode` set to
   `Enum.ModelStreamingMode|Default`/`Enum.ModelStreamingMode|Nonatomic`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: Default behavior (subject to change).
+    summary: |
+      Default behavior (subject to change).
     value: 0
     tags: []
     deprecation_message: ''
   - name: Legacy
-    summary: |-
+    summary: |
       Models are sent when their parent is sent, typically during player join.
       Models are never streamed out unless an ancestor of the model is streamed
       out.
@@ -30,7 +31,10 @@ items:
     tags: []
     deprecation_message: ''
   - name: Improved
-    summary: Models are never sent during player join. See [model streaming controls](../../../workspace/streaming/index.md#model-streaming-controls) for detailed behavioral notes.
+    summary: |
+      Models are never sent during player join. See
+      [model streaming controls](../../../workspace/streaming/index.md#model-streaming-controls)
+      for detailed behavioral notes.
     value: 2
     tags: []
     deprecation_message: ''
