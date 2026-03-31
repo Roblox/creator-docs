@@ -47,6 +47,12 @@ To enable Regional Pricing for a developer product:
 6. Click **Enable Regional Pricing**.
 7. <Chip label="OPTIONAL" size="small" variant="outlined" /> To view regional prices by country or region, select a product and go to its **Basic Settings** page. The **Top Countries/Regions** list updates to show the adjusted regional prices based on the default price of the product. To view regional prices for all countries and regions, click **View all countries**.
 
+### For subscriptions
+
+Regional Pricing is enabled by default for subscriptions priced in Robux and cannot be turned off. For more information, see [Create subscriptions](./subscriptions.md#create-subscriptions).
+
+Regional Pricing isn't available for subscriptions priced in local currency.
+
 ### For Avatar items
 
 To enable Regional Pricing for an Avatar item, see [Pricing](../../marketplace/publish-to-marketplace.md#pricing) in the Publish to Marketplace page.

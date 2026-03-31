@@ -194,7 +194,6 @@ When you are finished making changes to any of the following template texture im
         1. Delete everything except for the following PBR textures:
            - `TransferTarget_FullHead_Mat-Color`
            - `TransferTarget_FullHead_Mat-Metallic`
-           - `TransferTarget_FullHead_Mat-Normal`
            - `TransferTarget_FullHead_Mat-Roughness`
      1. Replace your makeup component's `TransferTarget_FullHead_Mat-Color` layer with a version that will export transparency in the output texture.
         1. Copy your active makeup component layer.
@@ -211,7 +210,6 @@ When you are finished making changes to any of the following template texture im
      1. Rename your makeup component's PBR textures appropriately so that you can easily reference each makeup component's PBR data when you reassign your textures in Blender or Maya. For example, if you are exporting texture maps for lips:
         - `Lips-Color`
         - `Lips-Metallic`
-        - `Lips-Normal`
         - `Lips-Roughness`
      1. Repeat this process for every makeup component you want to import for your makeup look.
 

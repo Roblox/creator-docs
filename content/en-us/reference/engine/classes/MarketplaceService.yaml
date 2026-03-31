@@ -467,9 +467,9 @@ methods:
       	  <td>A number that can be used to compare the price of different subscription products. This is not the actual price of the subscription (for example, 499).</td>
         </tr>
         <tr>
-            	  <td><code>PriceInRobux</code></td>
-            	  <td>number</td>
-            	  <td>The equivalent cost of the subscription in Robux. Returns 0 if the subscription product is not available to be purchased in Robux.</td>
+      	  <td><code>PriceInRobux</code></td>
+      	  <td>number</td>
+      	  <td>The equivalent cost of the subscription in Robux. Returns 0 if the subscription product is not available to be purchased in Robux.</td>
         </tr>
         </tbody>
       </table>

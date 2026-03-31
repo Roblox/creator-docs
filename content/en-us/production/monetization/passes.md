@@ -259,9 +259,7 @@ If your experience has had no item sales in the past 28 days, `RecommendTopProdu
 
 If no recommendations can be determined, `RecommendTopProductsAsync` returns 0 items. Any passes that the user already owns are also not returned.
 
-<Alert severity="warning">
-In rare cases, calls to the ranking model can be slow. To help prevent added lately for users, we recommend using `task.spawn` to make the call to `RecommendTopProductgs` non-blocking.
-</Alert>
+In rare cases, calls to the ranking model can be slow. To help prevent added lately for users, we recommend using `task.spawn` to make the call to `RecommendTopProducts` non-blocking.
 
 	<figcaption>Example: A "Top Picks" tab in an in-experience store</figcaption>
   <img src="../../assets/monetization/developer-products/StoreTopPicks.png" alt="Top Picks tab of an in-experience store." width="90%" />
