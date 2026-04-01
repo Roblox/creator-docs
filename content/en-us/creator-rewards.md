@@ -16,8 +16,8 @@ Payout Awards Framework terms and definitions apply to the Creator Rewards progr
 - "User" means any person or entity who uses or accesses the Services (per the
   [Roblox Dictionary](https://en.help.roblox.com/hc/en-us/articles/4415545981332-Roblox-Dictionary)).
 - "Experience" means Interactive content Published on the Services by Developers for the engagement and enjoyment of
-   Users (per the [Roblox Dictionary](https://en.help.roblox.com/hc/en-us/articles/4415545981332-Roblox-Dictionary)).
-- "Creator"  means any User who creates, uploads, publishes, generates, or otherwise makes available
+  Users (per the [Roblox Dictionary](https://en.help.roblox.com/hc/en-us/articles/4415545981332-Roblox-Dictionary)).
+- "Creator" means any User who creates, uploads, publishes, generates, or otherwise makes available
   UGC on the Services.
   Creators include but are not limited to Developers (per the [Roblox Dictionary](https://en.help.roblox.com/hc/en-us/articles/4415545981332-Roblox-Dictionary)).
 - "Services" means any service or application offered by Roblox, such as those allowing Users to
@@ -178,18 +178,14 @@ To access payout data for one of your experiences:
 
 The dashboard displays the following metrics:
 
-- **Creator rewards earned** - Estimated Robux earnings over a specified period with a breakdown for
-  Total, Daily Engagement (from active spenders), New Audience Expansion, and Reactivated Audience
-  Expansion.
+- **Creator rewards earned** - Estimated Robux earnings over a specified period with a breakdown for Total, Daily Engagement (from active spenders), New Audience Expansion, and Reactivated Audience Expansion.
 - **Daily rewarded active spenders** - Number of daily [rewarded active
-  spenders](#daily-engagement-rewards) who engage with your experience over a specified period.
-  These users contribute to your Daily Engagement rewards.
-- **Rewarded signups** - Shows how many [new users](#audience-expansion-rewards) you've brought to
-  Roblox over the specified time period. These users contribute to your New Audience Expansion
-  rewards.
-- **Rewarded reactivations** - Shows how many [reactivated users](#audience-expansion-rewards)
-  you've brought to Roblox over the specified time period. These users contribute to your
-  Reactivated Audience Expansion rewards.
+  spenders](#daily-engagement-rewards) who engage with your experience over a specified period. These users contribute to your Daily Engagement rewards.
+  - **Daily rewarded active spender %** - displays the percentage change, along with a 50th-90th percentile benchmark to similar experiences.
+- **Rewarded signups** - Shows how many [new users](#audience-expansion-rewards) you've brought to Roblox over the specified time period. These users contribute to your New Audience Expansion rewards.
+  - The **Rewarded signups %** graph displays the percentage change, along with a 90th-95th percentile benchmark.
+- **Rewarded reactivations** - Shows how many [reactivated users](#audience-expansion-rewards) you've brought to Roblox over the specified time period. These users contribute to your Reactivated Audience Expansion rewards.
+  - **Rewarded reactivations %** graph displays the percentage change, along with a 90th-95th percentile benchmark.
 
 <img src="./assets/monetization/creator-rewards/dashboard.png" width="100%" />
 
@@ -211,8 +207,8 @@ The dashboard displays the following metrics:
   your experience, excluding possible duplicates.
 - **Reactivations** - Lapsed Roblox users who reactivated during the selected time period and are
   attributed to your experience, excluding possible duplicates.
-**(Audience expansion) spenders**: Rewarded signups and reactivations who made a Qualifying Purchase
-in their first two months.
+  **(Audience expansion) spenders** - Rewarded signups and reactivations who made a Qualifying Purchase
+  in their first two months.
 - **Qualifying spend per spender** - Average Robux value of qualifying purchases per rewarded
   (audience expansion) spender, in their first two months.
 - **Estimated payout** - Estimate of Creator Reward earnings in Robux before adjustments.
@@ -254,7 +250,7 @@ in their first two months.
   - **Violation of Policies**: Any violation of the Roblox Terms of Use, Roblox Community Standards,
     or general Program Policies.
 - Audience Expansion Rewards are limited to one per user, and Roblox uses a variety of inputs
-(e.g. unique device identifier) to identify and remove credit for "alt" accounts.
+  (e.g. unique device identifier) to identify and remove credit for "alt" accounts.
 
 ### Will Paid Access experiences be eligible for Creator Rewards?
 
@@ -268,8 +264,8 @@ at least $9.99 in the last 60 days.
 ### What is happening with Engagement Based Payouts and Creator Affiliate programs?
 
 - Engagement Based Payouts and Creator Affiliate programs have been discontinued and replaced with
-Creator Rewards, which is the next step in our goal to support creators who bring engaging content
-to our platform.
+  Creator Rewards, which is the next step in our goal to support creators who bring engaging content
+  to our platform.
 - With Engagement Based Payouts, we found that creators lacked transparency into which actions drove
   higher earnings and predictability in how those earnings would evolve over time. We want to put
   creators in control, with more transparency into the actions they can take to earn higher rewards.

@@ -60,16 +60,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -129,16 +119,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -224,16 +204,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -288,16 +258,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -388,16 +348,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -508,16 +458,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -626,16 +566,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -726,16 +656,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 300
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 90
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -808,16 +728,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 90
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -890,16 +800,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 90
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -985,16 +885,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 300
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 90
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -1073,16 +963,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 300
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 90
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -1160,7 +1040,15 @@
             "name": "GroupMembership"
           }
         },
-        "x-roblox-stability": "BETA"
+        "x-roblox-stability": "BETA",
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/groups/{group_id}/memberships/{membership_id}:unassignRole": {
@@ -1230,7 +1118,15 @@
             "name": "GroupMembership"
           }
         },
-        "x-roblox-stability": "BETA"
+        "x-roblox-stability": "BETA",
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/groups/{group_id}/roles": {
@@ -1306,16 +1202,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 300
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 90
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -1385,16 +1271,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 300
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 90
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -1455,16 +1331,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -1519,16 +1385,6 @@
           }
         },
         "x-roblox-stability": "STABLE",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -1605,16 +1461,6 @@
           }
         },
         "x-roblox-stability": "STABLE",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -1699,11 +1545,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 500
-          }
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -1771,11 +1613,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 50000
-          }
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -1883,11 +1721,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 500000
-          }
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -1977,11 +1811,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000000
-          }
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -2058,11 +1888,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000000
-          }
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -2131,11 +1957,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000000
-          }
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -2229,11 +2051,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000000
-          }
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -2320,11 +2138,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 500000
-          }
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -2438,11 +2252,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 500
-          }
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -2559,11 +2369,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 500
-          }
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -2662,11 +2468,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000000
-          }
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -2752,11 +2554,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000000
-          }
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -2834,11 +2632,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000000
-          }
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -2941,11 +2735,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000000
-          }
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -3041,11 +2831,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 500000
-          }
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -3168,11 +2954,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 500
-          }
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -3250,11 +3032,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 10000
-          }
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -3323,11 +3101,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 60
-          }
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -3411,12 +3185,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 5
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -3492,12 +3260,6 @@
           }
         },
         "x-roblox-stability": "STABLE",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -3567,12 +3329,6 @@
           }
         },
         "x-roblox-stability": "STABLE",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -3666,12 +3422,6 @@
           }
         },
         "x-roblox-stability": "STABLE",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -3776,12 +3526,6 @@
           }
         },
         "x-roblox-stability": "STABLE",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -3869,12 +3613,6 @@
           }
         },
         "x-roblox-stability": "STABLE",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -3949,12 +3687,6 @@
           }
         },
         "x-roblox-stability": "STABLE",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -4021,12 +3753,6 @@
           }
         },
         "x-roblox-stability": "STABLE",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -4118,12 +3844,6 @@
           }
         },
         "x-roblox-stability": "STABLE",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -4198,12 +3918,6 @@
           }
         },
         "x-roblox-stability": "STABLE",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -4302,11 +4016,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 500000
-          }
+          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -4405,11 +4115,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 500000
-          }
+          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -4495,11 +4201,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 500000
-          }
+          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -4577,11 +4279,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 500000
-          }
+          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -4684,11 +4382,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 500000
-          }
+          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -4784,11 +4478,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 500000
-          }
+          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling)."
         },
         "x-roblox-scopes": [
           {
@@ -4866,16 +4556,6 @@
           }
         },
         "x-roblox-stability": "STABLE",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -4961,16 +4641,6 @@
           }
         },
         "x-roblox-stability": "STABLE",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -5056,12 +4726,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 45
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -5161,12 +4825,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 45
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -5272,12 +4930,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 45
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -5353,12 +5005,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 40
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -5432,15 +5078,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 30
-          }
+          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute."
         },
         "x-roblox-scopes": [
           {
@@ -5520,15 +5158,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 30
-          }
+          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute."
         },
         "x-roblox-scopes": [
           {
@@ -5643,15 +5273,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 30
-          }
+          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute."
         },
         "x-roblox-scopes": [
           {
@@ -5756,12 +5378,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 5
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -5871,12 +5487,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 200
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -6009,12 +5619,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 45
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -6106,16 +5710,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 500
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 3
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -6183,15 +5777,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 30
-          }
+          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute."
         },
         "x-roblox-scopes": [
           {
@@ -6262,15 +5848,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 30
-          }
+          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute."
         },
         "x-roblox-scopes": [
           {
@@ -6376,15 +5954,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 30
-          }
+          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute."
         },
         "x-roblox-scopes": [
           {
@@ -6477,15 +6047,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 30
-          }
+          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute."
         },
         "x-roblox-scopes": [
           {
@@ -6586,16 +6148,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 4
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 4
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -6659,16 +6211,6 @@
           }
         },
         "x-roblox-stability": "STABLE",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 5000
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 5000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -6738,16 +6280,6 @@
           }
         },
         "x-roblox-stability": "STABLE",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -6802,11 +6334,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Text translation requests are subject to additional rate limits [documented here](https://create.roblox.com/docs/production/localization/auto-translate-dynamic-content#limits).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 10000
-          }
+          "description": "Text translation requests are subject to additional rate limits [documented here](https://create.roblox.com/docs/production/localization/auto-translate-dynamic-content#limits)."
         },
         "x-roblox-scopes": [
           {
@@ -6885,16 +6413,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 10
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -6985,16 +6503,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 60
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 60
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -7086,16 +6594,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 20
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -7165,16 +6663,6 @@
           }
         },
         "x-roblox-stability": "STABLE",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 4000
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 4000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -7268,16 +6756,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 10
-          }
-        },
         "security": [
           {
             "roblox-api-key": []

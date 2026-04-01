@@ -1046,7 +1046,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -1126,7 +1126,7 @@
           }
         },
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "x-roblox-scopes": [
           {
@@ -40314,7 +40314,7 @@
             "description": "0: Authorization has been denied for this request."
           },
           "403": {
-            "description": "23: Insufficient permissions to complete the request."
+            "description": "23: Insufficient permissions to complete the request.\r\n49: User is invalid or does not exist"
           }
         },
         "servers": [
@@ -40334,6 +40334,57 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_get_v1_groups__groupId__features"
         }
+      }
+    },
+    "/v1/groups/{groupId}/features/status": {
+      "get": {
+        "summary": "Checks whether a group has ANY feature disabled (includes feature freezes and group lock).\r\nUsed to display a banner on Creator Hub/Studio to inform group members that some features may not be available.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "groupId",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Groups.Api.HasGroupFeaturesBlockedResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "1: Group is invalid or does not exist."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "23: Insufficient permissions to complete the request.\r\n49: User is invalid or does not exist"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
       }
     },
     "/v1/groups/{groupId}/join-requests": {
@@ -78567,6 +78618,17 @@
           },
           "canEnableGroupNotifications": {
             "description": "Whether or not group notifications can be enabled",
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Groups.Api.HasGroupFeaturesBlockedResponse": {
+        "description": "Response model for the features/status endpoint.",
+        "type": "object",
+        "properties": {
+          "hasFeaturesBlocked": {
+            "description": "Whether the group has any active feature freezes.",
             "type": "boolean"
           }
         },
