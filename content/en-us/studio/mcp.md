@@ -11,16 +11,6 @@ This guide shows you how to connect the Studio MCP server to popular AI clients.
 
 Before you can connect to the server, make sure you have the **latest version of Roblox Studio** and your **preferred MCP client** installed on your computer.
 
-## Enable the MCP server in Studio
-
-To enable the MCP server in Studio:
-
-1. Open **Assistant**.
-2. Click **&hellip;** &rang; **Manage MCP Servers**.
-3. Turn on **Enable Studio as MCP server**.
-
-Once enabled, the settings panel displays the JSON configuration and startup command for your client. When a client connects successfully, a green indicator shows the number of connected clients.
-
 ## How the Studio MCP server works
 
 The server runs as a local process on your machine and communicates with the AI client using **`stdio` transport**, which uses standard input/output streams. All actions are initiated through your AI client, which then sends a request through this channel to perform actions inside your Studio session.
@@ -153,6 +143,16 @@ The server provides the following tools:
   </tr>
 </tbody>
 </table>
+
+## Enable the MCP server in Studio
+
+To enable the MCP server in Studio:
+
+1. Open **Assistant**.
+2. Click **&hellip;** &rang; **Manage MCP Servers**.
+3. Turn on **Enable Studio as MCP server**.
+
+Once enabled, the settings panel displays the JSON configuration and startup command for your client. When a client connects successfully, a green indicator shows the number of connected clients.
 
 ## Connect your client
 
