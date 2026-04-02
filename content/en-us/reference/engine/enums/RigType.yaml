@@ -5,9 +5,9 @@
 name: RigType
 type: enum
 summary: |
-  The type of rig being imported with the Importer.
+  The type of rig being imported with the 3D Importer.
 description: |
-  The type of rig being imported with the Importer
+  The type of rig being imported with the 3D Importer
 code_samples: []
 tags: []
 deprecation_message: ''

@@ -88,6 +88,10 @@ events:
         type: MessageType
         default:
         summary: ''
+      - name: context
+        type: Dictionary
+        default:
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None
