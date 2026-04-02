@@ -32,9 +32,9 @@ You can sell `Class.MeshPart` assets as avatar bodies, accessories, and clothing
 
 ## Import meshes
 
-You can import meshes into Studio using the [3D Importer](../art/modeling/3d-importer.md). With this tool, you can preview and examine meshes before importing them into your workspace or **Toolbox**, such as verifying texture, rigging, skinning, and animation data. It also flags issues and rejects meshes with error.
+You can import meshes into Studio using the [Importer](../studio/importer.md). With this tool, you can preview and examine meshes before importing them into your workspace or **Toolbox**, such as verifying texture, rigging, skinning, and animation data. It also flags issues and rejects meshes with error.
 
-If the mesh file you are importing contains objects using specific naming conventions or contains facial animation data, the 3D Importer automatically detects and converts them into the following objects instead of `Class.MeshPart`:
+If the mesh file you are importing contains objects using specific naming conventions or contains facial animation data, the Importer automatically detects and converts them into the following objects instead of `Class.MeshPart`:
 
 - `Class.Attachment` — Objects with `_Att` at the end of their names.
 - `Class.WrapTarget` — Objects with `_OuterCage` at the end of their names.

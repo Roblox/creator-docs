@@ -75,7 +75,7 @@ style={{position: "relative"}}>
 
 <Step style={{marginTop: -36}}>
 <a href="../art/accessories/creating-rigid/importing.md">
-<StepLabel optional="Use the 3D Importer to bring in your custom asset.">
+<StepLabel optional="Use the Importer to bring in your custom asset.">
 
 <h5 style={{marginTop: 36}}>Import into Studio</h5>
 </StepLabel></a>

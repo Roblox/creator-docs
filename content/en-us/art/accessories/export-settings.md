@@ -3,7 +3,7 @@ title: Rigid accessory export settings
 description: Use the appropriate export settings in Maya and Blender to generate Studio-ready .fbx files.
 ---
 
-Export your rigid accessory model as a `.fbx` or `.gltf` file to take advantage of all of Studio's 3D import features. These file types contains mesh and texture data you need to later [import](../../art/modeling/3d-importer.md) into Studio.
+Export your rigid accessory model as a `.fbx` or `.gltf` file to take advantage of all of Studio's 3D import features. These file types contain mesh and texture data you need to later [import](../../studio/importer.md) into Studio.
 
 <Alert severity = 'warning'>
 <AlertTitle>If creating other types of 3D models:</AlertTitle>
@@ -34,7 +34,7 @@ To export the `.fbx` file in Blender:
 4. Set **Transform** > **Apply Scalings** to **Unit Scale**. For more information, see [scaling and scene units](../blender.md#adjust-scale-fbx).
    <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-5.png" width="320" />
 5. Click the **Export FBX** button.
-6. After exporting, use Studio's [3D Importer](../../art/modeling/3d-importer.md) to import your model and the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) to convert the model into an accessory.
+6. After exporting, use Studio's [Importer](../../studio/importer.md) to import your model and the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) to convert the model into an accessory.
 
 ## Maya export settings
 
@@ -54,4 +54,4 @@ To export a mesh in Maya as a `.fbx` file:
 
    <img src="../../assets/accessories/lc-requirements-maya-settings.png" />
 
-10. After exporting, use Studio's [3D Importer](../../art/modeling/3d-importer.md) to import your model and the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) to convert the model into an accessory.
+10. After exporting, use Studio's [Importer](../../studio/importer.md) to import your model and the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) to convert the model into an accessory.

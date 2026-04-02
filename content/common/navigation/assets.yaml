@@ -13,6 +13,8 @@ navigation:
         path: /projects/assets/toolbox
       - title: External catalog queries
         path: /projects/assets/api
+  - title: Importer
+    path: /studio/importer
   - title: Packages
     path: /projects/assets/packages
   - title: Asset privacy
@@ -69,8 +71,6 @@ navigation:
       - title: Head animation
         path: /art/characters/facial-animation/animate-heads
 
-  - title: 3D Importer
-    path: /art/modeling/3d-importer
   - title: Reimport
     path: /art/modeling/reimport
   - title: glTF Export

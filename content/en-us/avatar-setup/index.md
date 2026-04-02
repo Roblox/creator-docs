@@ -26,15 +26,15 @@ The **Avatar Setup** tool helps accelerate the avatar character, clothing, and a
 
 ## Import a model
 
-If you are using a custom 3D asset, import your asset into Studio using the 3D importer tool. To import the model into Studio:
+If you are using a custom 3D asset, import your asset into Studio using the Importer tool. To import the model into Studio:
 
-1. From Studio's **File** menu, select **3D Importer**.
+1. From Studio's **File** menu, select **Importer**.
 2. In the file browser, select your model object.
 3. When your model object loads in the 3D Import preview, disable the **Upload To Roblox** option.
    1. This prevents the asset immediately saving to your **Toolbox**, preventing unwanted copies of similar assets.
-   2. To save time in the future, click the **&ctdot;** dropdown in the top-right of the 3D Importer window and **Save as New** to create an import profile for this workflow.
+   2. To save time in the future, click the **&ctdot;** dropdown in the top-right of the Importer window and **Save as New** to create an import profile for this workflow.
 4. Verify the preview and any warnings or errors in your model object.
-   1. See [3D Importer](../art/modeling/3d-importer.md) for additional information. Certain warnings and errors may require readjusting the model in a third-party software.
+   1. See [Importer](../studio/importer.md) for additional information. Certain warnings and errors may require readjusting the model in a third-party software.
 5. Select **Import** to add the `Class.Model` instance into your workspace.
 
    <Alert severity = 'warning'>

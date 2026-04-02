@@ -28,7 +28,7 @@ Avatar character models are made up of 15 separate mesh objects and require addi
 
 ### Body scale
 
-Roblox supports 3 standards of body scales: **Normal**, **Slender**, and **Classic**. These standards allow developers to create experiences and spaces with consistent body sizes for standardizing movement and interaction. You can select a body scale on import using [Rig Scale options](../modeling/3d-importer.md#rig-general), or modify the [body scale manually](../../art/accessories/body-scale.md). Body scale persists when the asset is [uploaded to the Marketplace](../../marketplace/publish-to-marketplace.md#upload-an-asset).
+Roblox supports 3 standards of body scales: **Normal**, **Slender**, and **Classic**. These standards allow developers to create experiences and spaces with consistent body sizes for standardizing movement and interaction. You can select a body scale on import using [Rig Scale options](../../studio/importer.md), or modify the [body scale manually](../../art/accessories/body-scale.md). Body scale persists when the asset is [uploaded to the Marketplace](../../marketplace/publish-to-marketplace.md#upload-an-asset).
 
 <center>
 <figure>
@@ -54,7 +54,7 @@ A Rthro Normal body scale [downloadable mannequin](../../avatar/resources.md#ref
 </figure>
 </center>
 
-In the [3D importer](../../art/modeling/3d-importer.md#avatar-general), use **Rig Type** > **Rthro** to import your model as a Normal body scale.
+In the [Importer](../../studio/importer.md#avatar-general), use **Rig Type** > **Rthro** to import your model as a Normal body scale.
 
 <br />
 
@@ -162,7 +162,7 @@ A Rthro Slender (Narrow) body scale [downloadable mannequin](../../avatar/resour
 </figure>
 </center>
 
-In the [3D importer](../../art/modeling/3d-importer.md#avatar-general), use **Rig Type** > **Rthro Narrow** to import your model as a Slender body scale.
+In the [Importer](../../studio/importer.md#avatar-general), use **Rig Type** > **Rthro Narrow** to import your model as a Slender body scale.
 
 <br />
 
@@ -270,7 +270,7 @@ A Classic body scale [downloadable mannequin](../../avatar/resources.md#referenc
 </figure>
 </center>
 
-In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Rig Type** > **Default** to import your model as a Classic body scale.
+In the [Importer](../../studio/importer.md#avatar-general), use **Rig Type** > **Default** to import your model as a Classic body scale.
 
 <br />
 
@@ -471,7 +471,7 @@ To ensure that avatar sizes are visually consistent, you must standardize body p
 
 Attachments are points on the humanoid model where rigid accessories attach. Like many [character components](./index.md#components-of-an-avatar), attachment points are set up in third-party modeling software and imported as `Class.Attachment` objects.
 
-The 3D Importer automatically recognizes and converts mesh objects as attachment points if the objects include the affix `\_Att` and follow the naming conventions below. This only applies when importing meshes with caging data, such as bodies (accessory attachment points are created using the Accessory Fitting Tool). Check out examples of this implementation in any of the [downloadable reference models](../../avatar/resources.md#references).
+The Importer automatically recognizes and converts mesh objects as attachment points if the objects include the affix `\_Att` and follow the naming conventions below. This only applies when importing meshes with caging data, such as bodies (accessory attachment points are created using the Accessory Fitting Tool). Check out examples of this implementation in any of the [downloadable reference models](../../avatar/resources.md#references).
 
 Generally, when placing attachment points, position them so they overlap halfway with the character model's mesh part.
 

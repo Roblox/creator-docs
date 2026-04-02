@@ -1,6 +1,6 @@
 ---
 title: Import character bodies
-description: Use the 3D Importer to add third-party models to Studio before testing, using, or uploading the character model.
+description: Use the Importer to add third-party models to Studio before testing, using, or uploading the character model.
 ---
 
 Use the following instructions to import a full character body model into Studio as a `Model` object that you can save to use in your experience, share with others, or upload to the Marketplace.
@@ -9,19 +9,19 @@ Use the following instructions to import a full character body model into Studio
 If you are using a single-mesh character body for the Roblox Auto-Setup tool, see [Avatar auto-setup](../../avatar-setup/).
 </Alert>
 
-Studio's 3D Importer provides a quick and easy way to import third-party 3D assets into your projects. The importer provides object previews and error-checking to ensure that your asset meets Roblox's [general 3D requirements](../modeling/specifications.md).
+Studio's Importer provides a quick and easy way to import third-party 3D assets into your projects. The importer provides object previews and error-checking to ensure that your asset meets Roblox's [general 3D requirements](../modeling/specifications.md).
 
 Keep in mind, your character model must also follow Roblox's [avatar character specifications](../characters/specifications.md) to use or sell this asset as an avatar-ready character model, or you may experience errors later in the workflow.
 
 To import your asset:
 
-1. From Studio's **File** menu, select **3D Importer**.
-2. In the file browser, select the `.fbx` or `.gltf` file saved locally. The 3D Importer loads a preview of the object.
+1. From Studio's **File** menu, select **Importer**.
+2. In the file browser, select the `.fbx` or `.gltf` file saved locally. The Importer loads a preview of the object.
 
     <img src="../../assets/art/avatar/Avatar-3D-Importer.png" width = "60%"/>
 
    - If textures don't load for your asset, you can manually import your textures later.
-   - See [3D importer](../../art/modeling/3d-importer.md) for additional information on import settings and troubleshooting.
+   - See [Importer](../../studio/importer.md) for additional information on import settings and troubleshooting.
 
 3. To begin body validation after import, enable **Validate UGC Body**. This can save you time if you intend on uploading your body to the Marketplace.
 4. Set the **Rig Scale** to the appropriate [Body Scale](../characters/specifications.md#body-scale) of your character.

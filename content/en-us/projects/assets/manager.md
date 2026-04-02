@@ -21,7 +21,7 @@ Assets are organized within folders based on their type. You can switch between 
 
 ### Importing assets
 
-The **bulk import** tool is ideal for importing up to 50 files in one batch. Imported assets enter the moderation queue and are only visible to you within their respective [folder](#asset-folders) and within the **Inventory** tab of the [Toolbox](../../projects/assets/toolbox.md).
+The legacy **bulk import** tool is ideal for importing up to 50 files in one batch. Imported assets enter the moderation queue and are only visible to you within their respective [folder](#asset-folders) and within the **Inventory** tab of the [Toolbox](../../projects/assets/toolbox.md). This bulk import tool is only available in the current version of the Asset Manager. The latest Asset Manager version utilizes the Studio [Importer](../../studio/importer.md).
 
 <img src="../../assets/studio/asset-manager/Import-Button-V1.png" alt="The Asset Manager window with the Bulk Import button highlighted." width="360" />
 
@@ -39,7 +39,7 @@ The **bulk import** tool is ideal for importing up to 50 files in one batch. Imp
   </tr>
   <tr>
     <td>**Mesh**</td>
-    <td>You can bulk import meshes in either `.fbx` or `.obj` format, although this workflow does not support complex meshes such as those with rigging, skinning, or animation data. For complex meshes, it's recommended that you use the [3D&nbsp;Importer](../../art/modeling/3d-importer.md).</td>
+    <td>You can bulk import meshes in either `.fbx` or `.obj` format, although this workflow does not support complex meshes such as those with rigging, skinning, or animation data. For complex meshes, it's recommended that you use the [Importer](../../studio/importer.md).</td>
   </tr>
   <tr>
     <td>**Audio**</td>
@@ -379,36 +379,11 @@ The **filter items** button lets you control which assets are displayed.
 
 ### Asset import
 
-The **import** button lets you import up to 50 files in one batch. Imported assets enter the moderation queue and, upon approval, are added to the inventory of the user/group that owns the experience.
+The **asset import** button lets you import one or more assets of any asset type. Imported assets enter the moderation queue and, upon approval, are added to the inventory of the user/group that owns the experience.
 
 <img src="../../assets/studio/asset-manager/Import-Button.png" width="600" alt="Location of the import button in the Asset Manager." />
 
-<table>
-  <thead>
-	<tr>
-	  <th>Asset&nbsp;Type</th>
-		<th>Details</th>
-  </tr>
-	</thead>
-  <tbody>
-  <tr>
-    <td>**Image**</td>
-    <td>You can import images in `.png`, `.jpg`, `.gif`, `.tga`, or `.bmp` format for use as [textures/decals](../../parts/textures-decals.md) on parts, [image&nbsp;labels](../../ui/labels.md), [mesh&nbsp;textures](../../parts/meshes.md#texture), textures for [custom&nbsp;materials](../../parts/materials.md#custom-materials), textures for [special&nbsp;effects](../../effects/index.md), and more.</td>
-  </tr>
-  <tr>
-    <td>**Mesh**</td>
-    <td>You can import meshes in either `.fbx` or `.obj` format, although this workflow does not support complex meshes such as those with rigging, skinning, or animation data. For complex meshes or `.gltf` format, it's recommended that you use the [3D&nbsp;Importer](../../art/modeling/3d-importer.md).</td>
-  </tr>
-  <tr>
-    <td>**Audio**</td>
-    <td>You can import audio assets in either `.ogg`, `.mp3`, `.flac`, or `.wav` format. See [Audio Assets](../../audio/assets.md#import-audio) for details.</td>
-  </tr>
-	<tr>
-    <td>**Video**</td>
-    <td>You can import video assets in either `.mp4` or `.mov` format if all of the [requirements](../../ui/video-frames.md) are met.</td>
-  </tr>
-  </tbody>
-</table>
+For more information on supported file types and other features, see [Importer](../../studio/importer.md).
 
 ### Insert and quick actions
 

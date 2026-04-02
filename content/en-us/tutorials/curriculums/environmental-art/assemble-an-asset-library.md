@@ -116,17 +116,17 @@ Studio represents the modular assets and props that you import as `Class.Model` 
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section3/Importing-Intro.png" alt="" width="30%"/>
 
-Using the 3D Importer, you can import the sample modular kit and props into Studio for use in your asset library, or you can import any assets you designed in the previous section of the tutorial. For more information on this tool's functionality, see [3D Importer](../../../art/modeling/3d-importer.md).
+Using the Importer, you can import the sample modular kit and props into Studio for use in your asset library, or you can import any assets you designed in the previous section of the tutorial. For more information on this tool's functionality, see [Importer](../../../studio/importer.md).
 
 To import your modular assets and props into the experience:
 
-1. From the **File** menu, select **Import 3D**. A file browser displays.
+1. From the **File** menu, select **Import**. A file browser displays.
 2. Select a `.fbx` file for either a modular asset or prop.
 3. Verify the object preview and check that the import settings are correct for your object.
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section3/Importing-3.jpg" alt="" width="80%"/>
 
-4. Verify any [warning or error messages](../../../art/modeling/3d-importer.md#warnings-and-errors).
+4. Verify any [warning or error messages](../../../studio/importer.md#warnings-and-errors).
 5. Click **Import**. The asset displays in the **Explorer** window and in the viewport.
 6. Repeat this process for each modular asset and prop.
 7. Move all of your assets into one area of your experience near your greybox geometry. This zone is your asset library.

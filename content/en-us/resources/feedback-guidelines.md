@@ -17,7 +17,7 @@ If you want to provide feedback on the documentation, first off, thank you! We r
 
 > "The **Clothing** and **Environment** tabs on the PBR Textures page aren't working on Firefox for Windows."
 >
-> "The 3D Importer page says that it allows you to import `.fbx` files, but it also supports `.obj` files."
+> "The Importer page says that it allows you to import `.fbx` files, but it also supports `.obj` files."
 >
 > "This page does an incredible job explaining the purpose of module scripts, but it was hard to find. Have you considered linking to it from the reference documentation?
 

@@ -14,7 +14,7 @@ navigation:
   - title: Export from Blender
     path: /art/accessories/creating-rigid/exporting
   - heading: Import
-  - title: Use Studio's 3D importer
+  - title: Use Studio's Importer
     path: /art/accessories/creating-rigid/importing
   - title: Convert to accessory
     path: /art/accessories/creating-rigid/converting

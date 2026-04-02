@@ -3,7 +3,7 @@ title: Layered clothing export settings
 description: Use the appropriate export settings in Maya and Blender to generate Studio-ready .fbx files.
 ---
 
-Export your mesh or model as a `.fbx` or `.gltf` to take advantage of all of Studio's 3D import features. When rigging or skinning a layerable model, these file types contains all the mesh and texture data, including the rig and influence data, you need to later [import](../../art/modeling/3d-importer.md) into Studio.
+Export your mesh or model as a `.fbx` or `.gltf` to take advantage of all of Studio's 3D import features. When rigging or skinning a layerable model, these file types contain all the mesh and texture data, including the rig and influence data, you need to later [import](../../studio/importer.md) into Studio.
 
 <Alert severity = 'warning'>
 <AlertTitle>If creating other types of 3D models:</AlertTitle>
@@ -71,7 +71,7 @@ To export the `.fbx` file in Blender:
    <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-3.png" width="320" />
 
 6. Click the **Export FBX** button.
-7. After exporting, use Studio's [3D Importer](../../art/modeling/3d-importer.md) to import your model and the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) to convert the model into an accessory.
+7. After exporting, use Studio's [Importer](../../studio/importer.md) to import your model and the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) to convert the model into an accessory.
 
 ## Maya export settings
 
@@ -88,4 +88,4 @@ To export a mesh in Maya as a `.fbx` file:
    - Navigate to **Axis Conversion**, then set the **Up Axis** property to **Y**.
 8. Click the **Export All** button.
    <img src="../../assets/accessories/lc-requirements-maya-settings-with-animation.png" />
-9. After exporting, use Studio's [3D Importer](../../art/modeling/3d-importer.md) to import your model and the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) to convert the model into an accessory.
+9. After exporting, use Studio's [Importer](../../studio/importer.md) to import your model and the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) to convert the model into an accessory.

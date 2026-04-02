@@ -53,4 +53,4 @@ To export a mesh in Maya as a `.fbx` file:
 
     <img src="../../assets/accessories/lc-requirements-maya-settings-with-animation.png" alt = "Screenshot of Maya export settings for exports with animation."/>
 
-11. After exporting, use Studio's [3D importer](../../art/modeling/3d-importer.md) to import your model. See [Test characters in Studio](../../art/characters/testing/studio.md) for additional importing and testing information.
+11. After exporting, use Studio's [Importer](../../studio/importer.md) to import your model. See [Test characters in Studio](../../art/characters/testing/studio.md) for additional importing and testing information.
