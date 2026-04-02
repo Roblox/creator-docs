@@ -234,6 +234,10 @@ To disable caching and opt out of using the cache to retrieve the most up-to-dat
 
 Disabling caching is useful if you have multiple servers writing to a key with high frequency and need to get the latest value from servers. However, it can cause you to consume more of your [data stores limits and quotas](../../cloud-services/data-stores/error-codes-and-limits.md#limits), since `Class.GlobalDataStore:GetAsync()|GetAsync()` requests bypassing caching always count towards your throughput and server limits.
 
+<Alert severity="warning">
+  Do not use a default `Class.GlobalDataStore:GetAsync()|GetAsync()` call to immediately verify whether a recent write succeeded or failed. Because `Class.GlobalDataStore:GetAsync()|GetAsync()` uses a local cache for four seconds by default, an immediate verification read can return stale data. This is especially important after `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`, `Class.GlobalDataStore:SetAsync()|SetAsync()`, `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()`, or `Class.GlobalDataStore:RemoveAsync()|RemoveAsync()` returns an error and your code must decide whether to retry or rollback. For verification reads, use `DataStoreGetOptions.UseCache = false`.
+</Alert>
+
 ## Serialization
 
 The `Class.DataStoreService` stores data in JSON format. When you save Luau data in Studio, Roblox uses a process called serialization to convert that data into JSON to save it in data stores. Roblox then converts your data back to Luau and returns it to you in another process called deserialization.
