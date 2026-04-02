@@ -7,7 +7,7 @@ description: Use the appropriate export settings in Maya and Blender to generate
 It's important to test your assets multiple times at every point of the asset creation process, whether it is within your modeling application or after importing into Studio. See [Test characters](../../art/characters/testing/index.md) for more information.
 </Alert>
 
-Export your model as a `.fbx` or `.gltf` to take advantage of all of Studio's 3D import features. When rigging or skinning a layerable model, these file types contains all the mesh and texture data, including the rig and influence data, you need to later [import](../../art/modeling/3d-importer.md) into Studio.
+Export your model as a `.fbx` or `.gltf` to take advantage of all of Studio's 3D import features. When rigging or skinning a layerable model, these file types contain all the mesh and texture data, including the rig and influence data, you need to later [import](../../studio/importer.md) into Studio.
 
 Check that your model meets Roblox's [avatar character specifications](../../art/characters/specifications.md) before exporting to ensure Studio compatibility.
 
@@ -88,7 +88,7 @@ To export a mesh in Maya as a `.fbx` file:
 
     <img src="../../assets/accessories/lc-requirements-maya-settings-with-animation.png" alt = "Screenshot of Maya export settings for exports with animation."/>
 
-11. After exporting, use Studio's [3D importer](../../art/modeling/3d-importer.md) to import your model. See [Test characters in Studio](../../art/characters/testing/studio.md) for additional importing and testing information.
+11. After exporting, use Studio's [Importer](../../studio/importer.md) to import your model. See [Test characters in Studio](../../art/characters/testing/studio.md) for additional importing and testing information.
 
 <Alert severity = 'success'>
 After importing the `Class.Model` character to Studio, you can now perform the following with this asset:

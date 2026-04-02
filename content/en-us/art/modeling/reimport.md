@@ -1,6 +1,6 @@
 ---
 title: Reimport
-description: Reimport allows you to update an existing custom mesh and textures without generating a new instance. 
+description: Reimport allows you to update an existing custom mesh and textures without generating a new instance.
 ---
 
 <Alert severity = 'info'>
@@ -9,7 +9,7 @@ Reimport is currently in beta. Enable the Reimport beta by navigating to **File*
 For latest information on updates and limitations, see the [DevForum Announcement](https://devforum.roblox.com/t/studio-beta-reimport-one-click-updates-for-imported-3d-content/4068650).
 </Alert>
 
-**Reimport** allows you to update existing custom models and their textures from an external 3D file. Unlike regular [import](./3d-importer.md#import-files), which creates brand new instances, the reimport function updates existing objects non-destructively to help support the iterative nature of 3D development.
+**Reimport** allows you to update existing custom models and their textures from an external 3D file. Unlike regular [import](../../studio/importer.md#import-files), which creates brand new instances, the reimport function updates existing objects non-destructively to help support the iterative nature of 3D development.
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/HVUO3Dl7qT0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe> <br />
 
@@ -29,6 +29,7 @@ Reimport memory is local to your device. A Reimport ID is stored on the `Class.M
 - Filepaths are never saved in the place file.
 - Reimport supports different reimport paths on different devices for the same instance.
 - Reimport supports copy-pasting, saving and loading from rbxm/rbxl, and Asset Manager workflows.
+
 </Alert>
 
 ### MeshPart detection

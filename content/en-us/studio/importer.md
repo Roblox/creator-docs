@@ -1,9 +1,9 @@
 ---
-title: 3D Importer
-description: 3D Importer imports third-party .fbx, .gltf, and .obj 3D model assets into Studio.
+title: Importer
+description: Importer imports third-party .fbx, .gltf, and .obj 3D model assets into Studio.
 ---
 
-The 3D Importer allows you to import `.fbx`, `.gltf`, or `.obj` 3D models into Studio as a custom `Class.Model`. This includes meshes with PBR textures, meshes with rigging, skinning, and animation data, and meshes designed as avatar items.
+The Importer allows you to import 3D models, images, sounds, and video files into Studio. 3D model import supports meshes with PBR textures, meshes with rigging, skinning, and animation data, and meshes designed as avatar items.
 
 <Grid container spacing={2} style={{ marginBottom: 24, width: '100%' }}>
 <Grid item xs={6} style={{ padding: 16 }}>
@@ -42,67 +42,71 @@ allowFullScreen
 style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} ></iframe>
 </div>
 <Typography variant="body1">
-Use the 3D importer to import assets with avatar item components.
+Use the Importer to import assets with avatar item components.
 </Typography>
 </Grid>
 </Grid>
 </Grid>
 
-To import a 3D object:
+To import an asset:
 
-1. From Studio's **File** menu, select **Import 3D**.
-2. In the file browser, select the supported `.fbx`, `.gltf` or `.obj` files you intend to import.
-   1. If selecting one object, the [import preview](#import-preview) window screen appears for that object.
-   2. If selecting multiple objects, the files are added to the [import queue](#import-queue).
+1. From Studio's **File** menu, select **Import**.
+2. In the file browser, select the [supported file type](#supported-file-types) you intend to import.
 3. Configure your import settings and verify any [warning or error messages](#warnings-and-errors).
 4. Click **Import**.
+5. After importing, you can **right-click** the imported asset in the importer and perform the following:
+   1. **Copy Asset ID** - Copies the uploaded Asset ID to your clipboard. For models, this copies the Asset ID of the `Class.Model`.
+   2. **Find in Workspace** (3D models only) - Automatically positions the camera to the location of the imported object in workspace.
 
 <Alert severity ='info'>
-To directly import 3D assets using HTTP requests, see the [Open Cloud usage guide for assets](../../cloud/guides/usage-assets.md).
+To directly import assets using HTTP requests, see the [Open Cloud usage guide for assets](../../cloud/guides/usage-assets.md).
 </Alert>
 
 ## Supported file types
 
 Before importing a 3D object, ensure that the `.fbx`, `.gltf` or `.obj` meets Studio's [mesh requirements](../../art/characters/specifications.md) to reduce errors or unexpected behavior.
 
-<table><thead>
+<table>
+  <thead>
+	<tr>
+	  <th>Asset&nbsp;Type</th>
+		<th>Details</th>
+  </tr>
+	</thead>
+  <tbody>
   <tr>
-    <th style={{width:"20%"}}>**File type**</th>
-    <th style={{width:"40%"}}>**Studio compatibility**</th>
-    <th>**Best for**</th>
-  </tr></thead>
-<tbody>
-  <tr>
-    <td>OBJ (`.obj`)</td>
-    <td>— Basic single mesh objects</td>
-    <td>Simple mesh geometry use-cases.</td>
+    <td>**Image**</td>
+    <td>You can import images in `.png`, `.jpg`, `.gif`, `.tga`, or `.bmp` format for use as [textures/decals](../../parts/textures-decals.md) on parts, [image&nbsp;labels](../../ui/labels.md), [mesh&nbsp;textures](../../parts/meshes.md#texture), textures for [custom&nbsp;materials](../../parts/materials.md#custom-materials), textures for [special&nbsp;effects](../../effects/index.md), and more.</td>
   </tr>
   <tr>
-    <td>FBX (`.fbx`)</td>
-    <td>— Multiple mesh objects and hierarchies<br/>—  Textures, including basic and [PBR textures](../../art/modeling/surface-appearance.md).<br/>— Cage mesh objects<br/>— [Rigging and armature data](../../art/modeling/rigging.md)<br/>— Additional components for [avatar](../../avatar/index.md) items<br/>— Animation data<br/>— [Vertex colors](../blender.md#vertex-painting)</td>
-    <td>Any type of 3D import, including but not limited to [game assets](../../assets.md) or [avatar items](../../avatar).</td>
+    <td>**Mesh**</td>
+    <td>You can import meshes in the `.fbx`, `.obj`, or `.gltf` format. <br /><br />The `.fbx` and `.gltf` formats support multiple mesh objects and hierachies, basic and [PBR textures](../../art/modeling/surface-appearance.md), cage mesh objects, [rigs](../../art/modeling/rigging.md), [avatar components](../../avatar/index.md), animation data, and [vertex colors](../blender.md#vertex-painting). </td>
   </tr>
   <tr>
-    <td>gLTF (`.gltf`)</td>
-    <td>— Multiple mesh objects and hierarchies<br/>— Textures, including basic and [PBR textures](../../art/modeling/surface-appearance.md).<br/>— Cage mesh objects<br/>— [Rigging and armature data](../../art/modeling/rigging.md)<br/>— Additional components for [avatar](../../avatar/index.md) items<br/>— Animation data<br/>— [Vertex colors](../blender.md#vertex-painting)</td>
-    <td>Any type of 3D import, including but not limited to [game assets](../../assets.md) or [avatar items](../../avatar).</td>
+    <td>**Audio**</td>
+    <td>You can import audio assets in either `.ogg`, `.mp3`, `.flac`, or `.wav` format. See [Audio Assets](../../audio/assets.md#import-audio) for details.</td>
   </tr>
-</tbody></table>
+	<tr>
+    <td>**Video**</td>
+    <td>You can import video assets in either `.mp4` or `.mov` format if all of the [requirements](../../ui/video-frames.md) are met.</td>
+  </tr>
+  </tbody>
+</table>
 
 ## Import queue
 
-If you selected multiple files with the 3D Importer, you can use the import queue to bulk manage your various imports.
+If you selected multiple files with the Importer, you can use the import queue to bulk manage your various imports.
 
-<img src="../../assets/modeling/meshes/3d-Import-Queue.png" width="80%" alt="The 3D importer interface, showing a preview of the mesh in the top left, a list of 3D objects on the bottom left, and a list of toggle-able properties on the right side."/>
+<img src="../assets/modeling/meshes/3d-Import-Queue.png" width="80%" alt="The Importer interface, showing a preview of the mesh in the top left, a list of 3D objects on the bottom left, and a list of toggle-able properties on the right side."/>
 
 <Grid container spacing={2}>
-  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-A.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-A.png" width="40" style={{float:"right"}} /></Grid>
   <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
-  The **top bar** allows you to add new files, clear the queue, search and filter, and import all enabled models.
+  The **top bar** allows you to add new files, clear the queue, search and filter, and import all enabled assets.
   </Grid>
 </Grid>
 <Grid container spacing={2}>
-  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
   <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
   The **import queue** lists all added files, with quick access dropdowns to change creator, presets, and file paths.
   </Grid>
@@ -113,7 +117,7 @@ If you selected multiple files with the 3D Importer, you can use the import queu
 To open a file browser and add additional files to the import queue, you can:
 
 - Click the **Add file** button in the top bar of the import queue window.
-- From Studio's **File** menu, select **Import 3D**.
+- From Studio's **File** menu, select **Import**.
 
 ### Remove files from queue
 
@@ -121,13 +125,13 @@ To remove all files from the queue, click the **Clear queue** button with the br
 
 ### Apply preset settings
 
-Use the **Import Preset** column to select a preset configuration to apply to your model. For more information, see [Presets](#presets).
+Use the **Import Preset** column to select a preset configuration to apply to your asset. For more information, see [Presets](#presets).
 
 You can also apply the settings of one item to all items by right-clicking an item with the desired settings and selecting **Apply settings to all**.
 
 ### Access individual preview and settings
 
-Click the individual **Asset** name of an unimported model to access the import preview for that item. Use the import preview to view and check your model, as well as set any individual [import settings](#import-settings).
+If you are importing a 3D model, click the individual **Asset** name of an unimported model to access the [import preview](#import-preview-models) for that item. Use the import preview to view and check your model, as well as set any individual [import settings](#import-settings).
 
 ### Import files
 
@@ -135,40 +139,40 @@ Ensure that each item you want to import has a checkbox enabled in the first col
 
 Press the **Import** button to start the import process.
 
-## Import preview
+## Import preview (Models)
 
-The import preview window appears if you are importing a single file, or if you selected an individual item from the import queue. This preview window provides individual controls for the various objects in your model.
+The import preview window appears if you are importing a single model file, or if you selected an individual asset from the import queue. This preview window provides individual controls for the various objects in your model.
 
 The preview window is divided into multiple sections:
 
-<img src="../../assets/modeling/meshes/3d-Importer-Panels.png" width="80%" alt="The 3D importer interface, showing a preview of the mesh in the top left, a list of 3D objects on the bottom left, and a list of toggle-able properties on the right side."/>
+<img src="../assets/modeling/meshes/3d-Importer-Panels.png" width="70%" alt="The Importer interface, showing a preview of the mesh in the top left, a list of 3D objects on the bottom left, and a list of toggle-able properties on the right side."/>
 
 <Grid container spacing={2}>
-  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-A.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-A.png" width="40" style={{float:"right"}} /></Grid>
   <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
   The **file path** of your model file. Click **Browse** to edit.
   </Grid>
 </Grid>
 <Grid container spacing={2}>
-  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
   <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
   The **preset** applied to your import. Use the dropdown to select multiple presets, or the hamburger menu to set a new preset.
   </Grid>
 </Grid>
 <Grid container spacing={2}>
-  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-C.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-C.png" width="40" style={{float:"right"}} /></Grid>
   <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
   The **3D preview** of your model. Use mouse buttons and top-right icons for various camera options and views.
   </Grid>
 </Grid>
 <Grid container spacing={2}>
-  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-D.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-D.png" width="40" style={{float:"right"}} /></Grid>
   <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
   The **object hierarchy** of the imported object. Includes mesh objects and other supported components.
   </Grid>
 </Grid>
 <Grid container spacing={2}>
-  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-E.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-E.png" width="40" style={{float:"right"}} /></Grid>
   <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
   The **import settings** for your import. For a complete list of settings, see [Import settings](#import-settings).
   </Grid>
@@ -187,7 +191,7 @@ Depending on the object selected in the hierarchy panel, the inspector panel dis
 
 #### File general
 
-The 3D Importer provides the following settings for all meshes:
+The Importer provides the following settings for all meshes:
 
 <table>
 <thead>
@@ -203,38 +207,38 @@ The 3D Importer provides the following settings for all meshes:
   </tr>
   <tr>
     <td>Import Only As Model</td>
-    <td>If enabled, the 3D Importer imports the model as a single asset even if the model contains multiple children. By default, this is **enabled**. <br /><br />If disabled, the 3D Importer imports the model and all descendants, such as the multiple meshes, as individual assets.</td>
+    <td>If enabled, the Importer imports the model as a single asset even if the model contains multiple children. By default, this is **enabled**. <br /><br />If disabled, the Importer imports the model and all descendants, such as the multiple meshes, as individual assets.</td>
   </tr>
   <tr>
     <td>Add Model To Inventory</td>
-    <td>If enabled, the 3D Importer adds the model to your **Toolbox** and **Asset Manager** inventory as a new asset. By default, this is **enabled**. <br /><br />If disabled, the 3D Importer does not add the asset to your inventory.</td>
+    <td>If enabled, the Importer adds the model to your **Toolbox** and **Asset Manager** inventory as a new asset. By default, this is **enabled**. <br /><br />If disabled, the Importer does not add the asset to your inventory.</td>
   </tr>
   <tr>
     <td>Insert In Workspace</td>
-    <td>If enabled, the 3D Importer inserts the model into the `Class.Workspace` as well as your **Toolbox** and **Asset Manager** inventory. If importing from a saved or published experience, this setting also grants permission to the experience to use the restricted asset. By default, this is **enabled**. <br /><br />If disabled, this setting only adds the model to your inventory and does **not** grant the experience permission to use the asset.</td>
+    <td>If enabled, the Importer inserts the model into the `Class.Workspace` as well as your **Toolbox** and **Asset Manager** inventory. If importing from a saved or published experience, this setting also grants permission to the experience to use the restricted asset. By default, this is **enabled**. <br /><br />If disabled, this setting only adds the model to your inventory and does **not** grant the experience permission to use the asset.</td>
   </tr>
   <tr>
     <td>Insert Using Scene Position</td>
-    <td>If enabled, the 3D Importer uses the current scene position when inserting the model into the workspace. By default, this is **disabled**.</td>
+    <td>If enabled, the Importer uses the current scene position when inserting the model into the workspace. By default, this is **disabled**.</td>
   </tr>
   <tr>
     <td>Set Pivot to Scene Origin</td>
-    <td>If enabled, the 3D Importer sets the pivot point of the entire model to the scene origin. By default, this is **enabled**.</td>
+    <td>If enabled, the Importer sets the pivot point of the entire model to the scene origin. By default, this is **enabled**.</td>
   </tr>
   <tr>
     <td>Anchored</td>
-    <td>If enabled, the 3D Importer sets the `Class.BasePart.Anchored|Anchored` property to `true` on all the imported `Class.MeshPart|MeshParts`. This is disabled for meshes with rig data / avatars. By default, this is **disabled**.</td>
+    <td>If enabled, the Importer sets the `Class.BasePart.Anchored|Anchored` property to `true` on all the imported `Class.MeshPart|MeshParts`. This is disabled for meshes with rig data / avatars. By default, this is **disabled**.</td>
   </tr>
   <tr>
     <td>Uses Cage</td>
-    <td>If enabled, the 3D Importer finds cage meshes in the model and converts them to `WrapInstance` objects, such as `Class.WrapLayer` or `Class.WrapTarget`. If disabled, the Importer treats them as regular meshes. If the 3D Importer initially detects cage meshes in the model, this is **enabled** by default.</td>
+    <td>If enabled, the Importer finds cage meshes in the model and converts them to `WrapInstance` objects, such as `Class.WrapLayer` or `Class.WrapTarget`. If disabled, the Importer treats them as regular meshes. If the Importer initially detects cage meshes in the model, this is **enabled** by default.</td>
   </tr>
 </tbody>
 </table>
 
 #### Rig general
 
-The 3D Importer provides the following settings for meshes with rigging data, typically character bodies or clothing accessories:
+The Importer provides the following settings for meshes with rigging data, typically character bodies or clothing accessories:
 
 <table>
 <thead>
@@ -246,7 +250,7 @@ The 3D Importer provides the following settings for meshes with rigging data, ty
 <tbody>
   <tr>
     <td>Rig Type</td>
-    <td>Sets the type of rig the mesh should be associated with. The options are:<br />- **R15**<br />- **Custom**<br />- **No Rig**<br /><br />By default, the 3D importer attempts to select the most appropriate setting based on the detected rigging and skinning data of the mesh. </td>
+    <td>Sets the type of rig the mesh should be associated with. The options are:<br />- **R15**<br />- **Custom**<br />- **No Rig**<br /><br />By default, the Importer attempts to select the most appropriate setting based on the detected rigging and skinning data of the mesh. </td>
   </tr>
   <tr>
     <td>Validate UGC Body</td>
@@ -261,7 +265,7 @@ The 3D Importer provides the following settings for meshes with rigging data, ty
 
 #### File transform
 
-The 3D Importer provides the following settings for all meshes:
+The Importer provides the following settings for all meshes:
 
 <table>
 <thead>
@@ -311,7 +315,7 @@ File geometry includes information on the file dimensions and polycount of the e
 
 #### Object general
 
-When selecting a specific child object of your mesh, the 3D Importer populates Object General settings. You can edit the following settings for the selected child objects:
+When selecting a specific child object of your mesh, the Importer populates Object General settings. You can edit the following settings for the selected child objects:
 
 <table>
 <thead>
@@ -361,7 +365,7 @@ Object Geometry includes information on the dimensions and polycount of the sele
 
 ## Presets
 
-You can save presets of various import settings to quickly apply later within the [import preview](#import-preview) or [import queue](#import-queue).
+You can save presets of various import settings to quickly apply later within the [import preview](#import-preview-models) or [import queue](#import-queue).
 
 By default, you can select between two presets:
 
@@ -388,11 +392,11 @@ If you see a warning icon in the hierarchy, expand the hierarchy until you reach
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../assets/modeling/meshes/Warning-Settings-Panel.png" alt="A warning message in orange stating an error about cages mismatching."/>
+    <img src="../assets/modeling/meshes/Warning-Settings-Panel.png" alt="A warning message in orange stating an error about cages mismatching."/>
     <figcaption>Warning and error messages display in the appropriate section in the inspector panel.</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/modeling/meshes/Warning-Mouse-Over.png" alt="An error message in red with a pop-up message about missing textures."/>
+    <img src="../assets/modeling/meshes/Warning-Mouse-Over.png" alt="An error message in red with a pop-up message about missing textures."/>
     <figcaption>Some errors display a tooltip when hovering over the error icon.</figcaption>
   </figure>
 </GridContainer>

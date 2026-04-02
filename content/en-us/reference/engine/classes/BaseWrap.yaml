@@ -43,7 +43,7 @@ properties:
     summary: |
       Asset ID for cage mesh.
     description: |
-      This property is set up automatically by the 3D Importer.
+      This property is set up automatically by the Importer.
 
       Asset ID for cage mesh.
     code_samples: []
@@ -64,7 +64,7 @@ properties:
     summary: |
       Cage mesh offset relative to parent `Class.MeshPart`.
     description: |
-      This property is set up automatically by the 3D Importer.
+      This property is set up automatically by the Importer.
 
       Cage mesh offset relative to parent `Class.MeshPart`.
     code_samples: []
@@ -124,7 +124,7 @@ properties:
       Describes where a global zero was while authoring the cage mesh in an
       asset creation tool.
     description: |
-      This property is set up automatically by the 3D Importer.
+      This property is set up automatically by the Importer.
 
       Describes where a global zero was while authoring the cage mesh in an
       asset creation tool such as Blender or Maya. This property is not used by

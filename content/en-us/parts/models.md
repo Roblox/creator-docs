@@ -114,13 +114,14 @@ Because the 3D content that exists on the client changes dynamically in a stream
 
 ## Upload models
 
-When you upload or import a `.gltf`, `.fbx` and `.obj` model file to the cloud using the [3D Importer](../art/accessories/creating-rigid/importing.md), Roblox represents it as a cloud-based asset with a unique corresponding ID. This cloud-based asset system allows you to store models through Roblox and reuse them across the platform in various contexts without maintaining local copies as part of each saved Studio experience.
+When you upload or import a `.gltf`, `.fbx` and `.obj` model file to the cloud using the [Importer](../art/accessories/creating-rigid/importing.md), Roblox represents it as a cloud-based asset with a unique corresponding ID. This cloud-based asset system allows you to store models through Roblox and reuse them across the platform in various contexts without maintaining local copies as part of each saved Studio experience.
 
 To upload a model you made in Studio:
 
 1. In the **Explorer** window, right-click your model. A contextual menu displays.
 2. Select **Save to Roblox**. The **Asset Configuration** window displays.
 3. In the **Asset Configuration** window,
+
    1. Set **Content Type** to **Development Item**.
    1. Set **Asset Category** to **Model**.
    1. Complete the following fields:

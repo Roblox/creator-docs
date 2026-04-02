@@ -105,8 +105,8 @@ navigation:
         path: /avatar-setup/tools
   - title: More Studio tools
     section:
-      - title: 3D Importer
-        path: /art/modeling/3d-importer
+      - title: Importer
+        path: /studio/importer
       - title: Accessory Fitting
         path: /art/accessories/accessory-fitting-tool
       - title: Automatic Skinning Transfer

@@ -93,7 +93,7 @@ The Roblox script can be relatively concise because Roblox has many built-in ass
 
 Unreal and Roblox both support importing custom meshes and models in `.fbx` format. Certain types of assets may require specific configurations and export settings from your third-party modeling software. For more information, see the following pages:
 
-- [3D Importer](art/modeling/3d-importer.md)
+- [Importer](studio/importer.md)
 - [3D modeling specifications](art/modeling/specifications.md)
 - [Blender and Maya export requirements](art/modeling/export-requirements.md)
 
@@ -121,19 +121,19 @@ Similar to Unreal, Roblox Studio supports [plugins](studio/plugins.md), which ca
 
 ## Glossary
 
-| Unreal | Roblox | Notes |
-| :--- | :--- | :--- |
-| Level | [Place](projects.md#places) | |
-| Actor | `Class.Part` or `Class.Model` | See [Philosophical differences](#philosophical-differences). |
-| Blueprint Class | [Package](projects/assets/packages.md) | |
-| Transform | `Datatype.CFrame` | `Datatype.CFrame` doesn't include scale information. See [Transforms](#transforms). |
-| Outliner | [Explorer](studio/explorer.md) | |
-| Details panel | [Properties](studio/properties.md) |
-| Level Viewport | [3D viewport](studio/ui-overview.md#3d-viewport) | |
-| Content Browser | [Asset Manager](projects/assets/manager.md) or [Toolbox](projects/assets/toolbox.md) | |
-| Landscape Mode | [Terrain Editor](studio/terrain-editor.md) | |
-| PlayerStart | `Class.SpawnLocation` | |
-| Output Log | [Output](studio/output.md) | |
-| Marketplace | [Creator Store](production/creator-store.md) | |
-| Menu bar | [Toolbar](studio/ui-overview.md#toolbar-and-mezzanine) | |
-| Plugin | [Plugin](studio/plugins.md) | |
+| Unreal          | Roblox                                                                               | Notes                                                                               |
+| :-------------- | :----------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
+| Level           | [Place](projects.md#places)                                                          |                                                                                     |
+| Actor           | `Class.Part` or `Class.Model`                                                        | See [Philosophical differences](#philosophical-differences).                        |
+| Blueprint Class | [Package](projects/assets/packages.md)                                               |                                                                                     |
+| Transform       | `Datatype.CFrame`                                                                    | `Datatype.CFrame` doesn't include scale information. See [Transforms](#transforms). |
+| Outliner        | [Explorer](studio/explorer.md)                                                       |                                                                                     |
+| Details panel   | [Properties](studio/properties.md)                                                   |
+| Level Viewport  | [3D viewport](studio/ui-overview.md#3d-viewport)                                     |                                                                                     |
+| Content Browser | [Asset Manager](projects/assets/manager.md) or [Toolbox](projects/assets/toolbox.md) |                                                                                     |
+| Landscape Mode  | [Terrain Editor](studio/terrain-editor.md)                                           |                                                                                     |
+| PlayerStart     | `Class.SpawnLocation`                                                                |                                                                                     |
+| Output Log      | [Output](studio/output.md)                                                           |                                                                                     |
+| Marketplace     | [Creator Store](production/creator-store.md)                                         |                                                                                     |
+| Menu bar        | [Toolbar](studio/ui-overview.md#toolbar-and-mezzanine)                               |                                                                                     |
+| Plugin          | [Plugin](studio/plugins.md)                                                          |                                                                                     |

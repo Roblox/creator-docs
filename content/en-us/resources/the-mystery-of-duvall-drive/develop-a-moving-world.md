@@ -241,7 +241,7 @@ We knew we wanted to save time and reuse the same animation, so we built our fir
   <figcaption>The trees have primary, secondary, and tertiary joints so that we could have believable movement from being blown around by the wind.</figcaption>
 </figure>
 
-Once we had created our joints/bones, it was time to create a test animation to move around all the joints and bones in Studio to see if it moved the way we wanted it to. To do this, we had to [import the tree into Studio](../../resources/beyond-the-dark/custom-characters.md#import-the-mesh-to-studio) through the **Custom Rig** setting in the **3D Importer**, then move/animate the mesh using the [Animation Editor](../../resources/beyond-the-dark/custom-characters.md#import-the-mesh-to-studio). We set up the materials and textures after these tests, but you can see the result below.
+Once we had created our joints/bones, it was time to create a test animation to move around all the joints and bones in Studio to see if it moved the way we wanted it to. To do this, we had to [import the tree into Studio](../../resources/beyond-the-dark/custom-characters.md#import-the-mesh-to-studio) through the **Custom Rig** setting in the **Importer**, then move/animate the mesh using the [Animation Editor](../../resources/beyond-the-dark/custom-characters.md#import-the-mesh-to-studio). We set up the materials and textures after these tests, but you can see the result below.
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/developing-a-moving-world/tree-hierarchy.png" width="80%" />

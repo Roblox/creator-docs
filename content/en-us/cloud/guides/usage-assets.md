@@ -119,7 +119,7 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
       </td>
       <td>
         <ul>
-          <li>Only content downloaded from [Asset delivery API](../api/asset-delivery.md) is accepted. If you are not trying to download and re-upload meshes, then use [3D Importer](../../art/modeling/3d-importer.md) to import meshes instead.</li>
+          <li>Only content downloaded from [Asset delivery API](../api/asset-delivery.md) is accepted. If you are not trying to download and re-upload meshes, then use [Importer](../../studio/importer.md) to import meshes instead.</li>
           <li>Not available for updating.</li>
         </ul>
       </td>
@@ -148,8 +148,8 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
         <ul>
           <li>Imports custom 3D models as a `Class.Model` container containing one or more `Class.MeshPart` objects.</li>
           <ul>
-            <li>Depending on your use-case, consider uploading custom 3D models manually using the [3D Importer](../../art/modeling/3d-importer.md).</li>
-          <li>The 3D Importer provides a 3D preview, various error-checking, and many customizable import settings.</li>
+            <li>Depending on your use-case, consider uploading custom 3D models manually using the [Importer](../../studio/importer.md).</li>
+          <li>The Importer provides a 3D preview, various error-checking, and many customizable import settings.</li>
           </ul>
           <li>`.rbxm` or `.rbxmx` files edited outside of [Roblox Studio](../../studio/setup.md) might not upload or function.</li>
           <li>Will be uploaded as [packages](../../projects/assets/packages.md)</li>

@@ -21,7 +21,7 @@ Assets are organized within folders based on their type. You can switch between 
 
 ### Importing assets
 
-The **bulk import** tool is ideal for importing up to 50 files in one batch. Imported assets enter the moderation queue and are only visible to you within their respective [folder](#asset-folders) and within the **Inventory** tab of the [Toolbox](../../projects/assets/toolbox.md).
+The legacy **bulk import** tool is ideal for importing up to 50 files in one batch. Imported assets enter the moderation queue and are only visible to you within their respective [folder](#asset-folders) and within the **Inventory** tab of the [Toolbox](../../projects/assets/toolbox.md). This bulk import tool is only available in the current version of the Asset Manager. The latest Asset Manager version utilizes the Studio [Importer](../../studio/importer.md).
 
 <img src="../../assets/studio/asset-manager/Import-Button-V1.png" alt="The Asset Manager window with the Bulk Import button highlighted." width="360" />
 
@@ -39,7 +39,7 @@ The **bulk import** tool is ideal for importing up to 50 files in one batch. Imp
   </tr>
   <tr>
     <td>**Mesh**</td>
-    <td>You can bulk import meshes in either `.fbx` or `.obj` format, although this workflow does not support complex meshes such as those with rigging, skinning, or animation data. For complex meshes, it's recommended that you use the [3D&nbsp;Importer](../../art/modeling/3d-importer.md).</td>
+    <td>You can bulk import meshes in either `.fbx` or `.obj` format, although this workflow does not support complex meshes such as those with rigging, skinning, or animation data. For complex meshes, it's recommended that you use the [Importer](../../studio/importer.md).</td>
   </tr>
   <tr>
     <td>**Audio**</td>
@@ -379,36 +379,11 @@ The **filter items** button lets you control which assets are displayed.
 
 ### Asset import
 
-The **import** button lets you import up to 50 files in one batch. Imported assets enter the moderation queue and, upon approval, are added to the inventory of the user/group that owns the experience.
+The **asset import** button lets you import one or more assets of any asset type. Imported assets enter the moderation queue and, upon approval, are added to the inventory of the user/group that owns the experience.
 
 <img src="../../assets/studio/asset-manager/Import-Button.png" width="600" alt="Location of the import button in the Asset Manager." />
 
-<table>
-  <thead>
-	<tr>
-	  <th>Asset&nbsp;Type</th>
-		<th>Details</th>
-  </tr>
-	</thead>
-  <tbody>
-  <tr>
-    <td>**Image**</td>
-    <td>You can import images in `.png`, `.jpg`, `.gif`, `.tga`, or `.bmp` format for use as [textures/decals](../../parts/textures-decals.md) on parts, [image&nbsp;labels](../../ui/labels.md), [mesh&nbsp;textures](../../parts/meshes.md#texture), textures for [custom&nbsp;materials](../../parts/materials.md#custom-materials), textures for [special&nbsp;effects](../../effects/index.md), and more.</td>
-  </tr>
-  <tr>
-    <td>**Mesh**</td>
-    <td>You can import meshes in either `.fbx` or `.obj` format, although this workflow does not support complex meshes such as those with rigging, skinning, or animation data. For complex meshes or `.gltf` format, it's recommended that you use the [3D&nbsp;Importer](../../art/modeling/3d-importer.md).</td>
-  </tr>
-  <tr>
-    <td>**Audio**</td>
-    <td>You can import audio assets in either `.ogg`, `.mp3`, `.flac`, or `.wav` format. See [Audio Assets](../../audio/assets.md#import-audio) for details.</td>
-  </tr>
-	<tr>
-    <td>**Video**</td>
-    <td>You can import video assets in either `.mp4` or `.mov` format if all of the [requirements](../../ui/video-frames.md) are met.</td>
-  </tr>
-  </tbody>
-</table>
+For more information on supported file types and other features, see [Importer](../../studio/importer.md).
 
 ### Insert and quick actions
 
@@ -488,3 +463,147 @@ Quick actions are accessible by right‑clicking an asset name/tile and selectin
 
 </TabItem>
 </Tabs>
+
+### Search query language
+
+Use the search query language to refine how you find assets in your Asset Manager inventory. You can combine keywords, operators, and tags to filter, prioritize, or exclude results.
+
+<Alert severity="info">
+When combining multiple features, search terms are processed in the following order (highest to lowest priority): Exact search → Excluded terms → Optional terms → Asset ID tag → Created before → Created after → Updated before → Updated after → Numeric asset ID → Audio type.
+</Alert>
+
+<h5 style={{marginTop: '36px'}}>Query features</h5>
+
+The following features can be combined in a single query:
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Syntax</th>
+      <th>How it works</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Exact search</td>
+      <td><code>"..."</code></td>
+      <td>
+        Matches a phrase exactly. Exact matches take the highest priority and bypass other tag processing.<br/><br/>
+        Use quotes to search for text that looks like a tag (for example, <code>"asset_id:123"</code>). You can mix quoted phrases with regular terms and include multiple quoted phrases in one query.
+      </td>
+    </tr>
+    <tr>
+    <td>Exclude terms</td>
+      <td>
+        <code>-term</code><br/>
+        <code>exclude:term</code>
+      </td>
+      <td>
+        Excludes results containing specific terms.<br/><br/>
+        You can use multiple <code>-</code> prefixes and <code>exclude</code> tags in the same query, or mix both syntaxes.
+      </td>
+    </tr>
+    <tr>
+      <td>Optional terms</td>
+      <td>
+        <code>term?</code><br/>
+        <code>term!</code><br/>
+        <code>optional:term</code>
+      </td>
+      <td>
+        By default, all terms are required. Optional terms boost matching results without excluding results that don't contain them.<br/><br/>
+        You can use <code>?</code>, <code>!</code>, or the <code>optional</code> tag, and mix these syntaxes.
+      </td>
+    </tr>
+    <tr>
+      <td>Asset ID search</td>
+      <td>
+        <code>asset_id:123456</code><br/>
+        <code>assetId:123456</code><br/>
+        <code>123456</code>
+      </td>
+      <td>
+        Pins matching assets to the top of the results.<br/><br/>
+        A standalone number is treated as an asset ID if it matches one. Multiple IDs are supported and are merged automatically.
+      </td>
+    </tr>
+    <tr>
+      <td>Date filters</td>
+      <td>
+        <code>created_before</code><br/>
+        <code>created_after</code><br/>
+        <code>updated_before</code><br/>
+        <code>updated_after</code><br/>
+      </td>
+      <td>
+        Filters results by creation or update date.<br/><br/>
+        Dates use the US format (MM/DD/YYYY) and must be wrapped in brackets if they include spaces. Natural language dates (for example, "yesterday") are not supported.<br/><br/>
+        Each tag also supports a camelCase alternative: <code>createdBefore</code>, <code>createdAfter</code>, <code>updatedBefore</code>, <code>updatedAfter</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>Audio type</td>
+      <td>
+        <code>music</code><br/>
+        <code>sfx</code><br/>
+        <code>sound effects</code>
+      </td>
+      <td>
+        Filters audio assets by type. To restrict results to a specific audio type, append the type at the end of your query.<br/><br/>
+        To search for the literal word instead of filtering, wrap the word in quotes.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 style={{marginTop: '36px'}}>Tags</h5>
+
+Tags modify how search works, but they are not treated like search terms themselves. They only filter or rank your results. If a tag has a typo or an invalid date, it's treated as a regular search term instead.
+
+Tags can use the formats `tag:value` or `tag=value`, and are not case-sensitive.
+
+Some tags accept multiple values when you use brackets. For example, `exclude:[rusty, broken]` and `asset_id:[123, 456]`.
+
+<h5 style={{marginTop: '36px'}}>Date formats</h5>
+
+Date filters support the following formats:
+
+<table>
+  <thead>
+	<tr>
+	  <th>Format</th>
+		<th>Example</th>
+  </tr>
+	</thead>
+  <tbody>
+  <tr>
+    <td>ISO 8601</td>
+    <td>`2026-03-10`</td>
+  </tr>
+  <tr>
+    <td>ISO with time</td>
+    <td>`2026-03-10T14:30:00Z`</td>
+  </tr>
+  <tr>
+    <td>US format</td>
+    <td>`03/10/2026`</td>
+  </tr>
+  <tr>
+    <td>Long form (requires brackets)</td>
+    <td>`[March 10, 2026]`</td>
+  </tr>
+  <tr>
+    <td>With time (requires brackets)</td>
+    <td>`[03/10/2026 2:30 PM]`</td>
+  </tr>
+  </tbody>
+</table>
+
+<h5 style={{marginTop: '36px'}}>Example queries</h5>
+
+- `"wooden crate" asset_id:99887766 created_after:2023-06-01 -damaged optional:painted`: Exactly matches "wooden crate", pins a specific asset by ID, filters by date, excludes "damaged", and ranks "painted" results higher.
+
+- `explosion sfx -loop created_before:[December 31, 2023]`: Filters sound effects named "explosion", excludes looping variants, and limits the results by date.
+
+- `125447393891114 sword glowing? -rusty`: Pins a specific asset by ID, searches for "sword", boosts "glowing", and excludes "rusty".

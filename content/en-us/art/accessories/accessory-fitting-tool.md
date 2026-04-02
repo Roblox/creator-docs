@@ -34,7 +34,7 @@ Before using the tool, ensure that you have the `Class.MeshPart` or `Class.Model
 
 To setup your accessories:
 
-1. Ensure that your custom asset is selectable in your project. See [3D Importer](../../art/modeling/3d-importer.md) for instructions on importing a custom model into your experience.
+1. Ensure that your custom asset is selectable in your project. See [Importer](../../studio/importer.md) for instructions on importing a custom model into your experience.
 2. In the toolbar's **Avatar** tab, click **Accessory** to open the AFT.
 3. Select the **Part** field and click on the `Class.MeshPart` or `Class.Model` in the viewport that you intend to preview. The text field populates with the name of the object selected.
 

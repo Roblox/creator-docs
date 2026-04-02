@@ -114,7 +114,7 @@ If setting attachment names manually in Studio, use the following `Class.Attachm
   </table>
 
   <Alert severity = 'info'>
-  The 3D Importer automatically recognizes mesh objects as attachment points if the objects include the affix `\_Att`. This only applies when importing meshes with caging data, such as clothing or bodies.
+  The Importer automatically recognizes mesh objects as attachment points if the objects include the affix `\_Att`. This only applies when importing meshes with caging data, such as clothing or bodies.
   </Alert>
 
 - **Shoulders and Collars** - Even though they are in similar locations, Shoulder and Collar attachment points interact with character rigs differently for rigid accessories.

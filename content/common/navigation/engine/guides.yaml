@@ -458,12 +458,14 @@ navigation:
         section:
           - title: Animation Editor
             path: /animation/editor
+          - title: Curve Editor
+            path: /animation/curve-editor
+          - title: Graph Editor
+            path: /animation/graph-editor
           - title: Animation events
             path: /animation/events
           - title: Animation capture
             path: /animation/capture
-          - title: Curve editor
-            path: /animation/curve-editor
           - title: Inverse kinematics
             path: /animation/inverse-kinematics
       - title: Use animations

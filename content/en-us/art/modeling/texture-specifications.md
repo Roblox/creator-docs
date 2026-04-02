@@ -40,7 +40,7 @@ For information on how to properly connect PBR textures to your model in Blender
 
 See the following requirements for `Class.SurfaceAppearance` assets:
 
-- **Texture files** — Ensuring your textures follow consistent conventions optimizes assets for tools like the [3D Importer](../../art/modeling/3d-importer.md) and helps with organization. When possible, texture files should include the appropriate name affix and follow the appropriate image details:
+- **Texture files** — Ensuring your textures follow consistent conventions optimizes assets for tools like the [Importer](../../studio/importer.md) and helps with organization. When possible, texture files should include the appropriate name affix and follow the appropriate image details:
 
    <table>
   <thead>

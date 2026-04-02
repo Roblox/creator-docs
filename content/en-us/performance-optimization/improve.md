@@ -93,20 +93,20 @@ The following memory values in the **Developer Console** can indicate a problem 
   destroy their representative `Class.Player` object and character model, so
   connections to the `Class.Player` object and instances under the character
   model, such as `Class.Player.CharacterAdded|CharacterAdded`, still consume memory if you don't disconnect them in your scripts.
-	This can result in very significant memory leaks over time on the server as hundreds of users join and leave the experience.
+  This can result in very significant memory leaks over time on the server as hundreds of users join and leave the experience.
 
 - **Tables** - Inserting objects into tables but not removing them when they are
   no longer needed causes unnecessary memory consumption, especially for tables
   that track user data when they join. For example, the following code sample creates a table adding user information each time a user joins:
 
-   ```lua title="Example"
-   local playerInfo = {}
-   Players.PlayerAdded:Connect(function(player)
-	   playerInfo[player] = {} -- some info
-   end)
-   ```
+  ```lua title="Example"
+  local playerInfo = {}
+  Players.PlayerAdded:Connect(function(player)
+    playerInfo[player] = {} -- some info
+  end)
+  ```
 
-   If you don't remove these entries when they are no longer needed, the table continues to grow in size and consumes more memory as more users join the session. Any code that iterates over this table also becomes more computationally expensive as the table grows in size.
+  If you don't remove these entries when they are no longer needed, the table continues to grow in size and consumes more memory as more users join the session. Any code that iterates over this table also becomes more computationally expensive as the table grows in size.
 
 ### Mitigation
 
@@ -114,24 +114,25 @@ To clean up all used values for preventing memory leaks:
 
 - **Disconnect all connections** - Go through your codebase and make sure each
   connection is cleaned up via one of the following paths:
+
   - Disconnecting manually using the `Datatype.RBXScriptConnection:Disconnect()|Disconnect()` function.
   - Destroying the instance the event belongs to with the `Class.Instance:Destroy()|Destroy()` function.
   - Destroying the script object that the connection traces back to.
 
 - **Remove player objects and characters after leaving** - Enable `Class.Workspace.PlayerCharacterDestroyBehavior` to automatically destroy player objects and character models after a user leaves. If you prefer, you can instead clean them up manually:
 
-   ```lua title="Example player and character cleanup"
-	 local Players = game:GetService("Players")
-   Players.PlayerAdded:Connect(function(player)
-     player.CharacterRemoving:Connect(function(character)
-       task.defer(character.Destroy, character)
-     end)
-   end)
+  ```lua title="Example player and character cleanup"
+  local Players = game:GetService("Players")
+  Players.PlayerAdded:Connect(function(player)
+    player.CharacterRemoving:Connect(function(character)
+      task.defer(character.Destroy, character)
+    end)
+  end)
 
-   Players.PlayerRemoving:Connect(function(player)
-	   task.defer(player.Destroy, player)
-   end)
-   ```
+  Players.PlayerRemoving:Connect(function(player)
+    task.defer(player.Destroy, player)
+  end)
+  ```
 
 ## Physics computation
 
@@ -168,6 +169,7 @@ per frame on both the server and the client.
   rate of physics calculations for physics mechanisms, allowing physics updates
   to be made less frequently in some cases.
 - **Reduce mechanism complexity**
+
   - Where possible, minimize the number of physics constraints or joints in an
     assembly.
   - Reduce the amount of self-collision within a mechanism, such as by applying
@@ -175,6 +177,7 @@ per frame on both the server and the client.
     colliding with each other.
 
 - **Reduce the usage of precise collision fidelity for meshes**
+
   - For small or non-interactable objects where users would rarely notice the
     difference, use box fidelity.
   - For small-medium size objects, use box or hull fidelities, depending on the
@@ -184,7 +187,7 @@ per frame on both the server and the client.
   - For objects that don't require collisions, disable collisions and use box or
     hull fidelity, since the collision geometry is still stored in memory.
   - You can render collision geometry for debug purposes in Studio by toggling
-  	on **Collision fidelity** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
+    on **Collision fidelity** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 
     Alternatively, you can apply the `CollisionFidelity=PreciseConvexDecomposition` filter to the [Explorer](../studio/explorer.md#property-filters) which shows a count of all mesh parts with the precise fidelity and allows you to easily select them.
 
@@ -415,6 +418,7 @@ same `Class.MeshPart.MeshContent|MeshContent` are handled in a single draw call 
   light objects and parts to improve performance while shadows are enabled and
   increase the likelihood that shadows remain enabled. Some examples of
   optimizations you can make either at edit time or dynamically at runtime:
+
   - Use the `Class.BasePart.CastShadow` property to disable shadow casting on
     small parts where shadows are unlikely to be visible. This strategy is
     particularly effective when applied to parts that are far away from the
@@ -511,7 +515,7 @@ You can employ the following tactics to reduce unnecessary replication:
   after importing.
 - **Limit unnecessary instance replication**, especially in cases where the
   server doesn't need to have knowledge of the instances being created. This
- includes:
+  includes:
   - Visual effects such as an explosion or a magic spell blast. The server only
     needs to know the location to determine the outcome, while the clients can
     create visuals locally.
@@ -570,7 +574,7 @@ For more information on streaming options and their benefits, see [streaming pro
   - Though there is no API to detect similarity of assets automatically, you can collect all the image asset IDs in your place (either manually or with a script), download them, and compare them using external comparison tools.
   - For mesh parts, the best strategy is to take unique mesh IDs and organize them by size to manually identify duplicates.
   - Instead of using separate textures for different colors, upload a single texture and use the `Class.SurfaceAppearance.Color` property to apply various tints to it.
-- **Import assets in map separately** - Instead of importing an entire map at once, import and reconstruct assets in the map individually and reconstruct them. The 3D importer doesn't do any de-duplication of meshes, so if you were to import a large map with a lot of separate floor tiles, each of those tiles would be imported as a separate asset (even if they are duplicates). This can lead to performance and memory issues down the line, as each mesh is treated as individually and takes up memory and draw calls.
+- **Import assets in map separately** - Instead of importing an entire map at once, import and reconstruct assets in the map individually and reconstruct them. The Importer doesn't do any de-duplication of meshes, so if you were to import a large map with a lot of separate floor tiles, each of those tiles would be imported as a separate asset (even if they are duplicates). This can lead to performance and memory issues down the line, as each mesh is treated as individually and takes up memory and draw calls.
 - **Limit the pixels of images** to no more than the necessary amount. Unless an image is occupying a large amount of physical space on the screen, it usually needs at most 512x512 pixels. Most minor images should be smaller than 256x256 pixels.
 - **Use trim sheets** to ensure maximum texture reuse in 3D maps. For steps and examples on how to create trim sheets, see [Create trim sheets](../resources/beyond-the-dark/building-architecture.md#create-trim-sheets).
 
