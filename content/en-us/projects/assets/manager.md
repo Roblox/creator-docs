@@ -466,135 +466,108 @@ Quick actions are accessible by right‑clicking an asset name/tile and selectin
 
 ### Search query language
 
-Use search query language to refine how you find assets in your Asset Manager inventory. You can combine keywords, operators, and tags to filter, prioritize, or exclude results.
+Use the search query language to refine how you find assets in your Asset Manager inventory. You can combine keywords, operators, and tags to filter, prioritize, or exclude results.
 
+<Alert severity="info">
 When combining multiple features, search terms are processed in the following order (highest to lowest priority): Exact search → Excluded terms → Optional terms → Asset ID tag → Created before → Created after → Updated before → Updated after → Numeric asset ID → Audio type.
+</Alert>
 
-<h5 style={{marginTop: '36px'}}>Query syntax</h5>
+<h5 style={{marginTop: '36px'}}>Query features</h5>
 
-Use the following syntax to control how search terms are interpreted:
+The following features can be combined in a single query:
 
 <table>
   <thead>
-	<tr>
-	  <th>Feature</th>
-		<th>Syntax</th>
-    <th>Description</th>
-    <th>Example</th>
-  </tr>
-	</thead>
+    <tr>
+      <th>Feature</th>
+      <th>Syntax</th>
+      <th>How it works</th>
+    </tr>
+  </thead>
   <tbody>
-  <tr>
-    <td>Exact phrase</td>
-    <td>`"exact phrase"`</td>
-    <td>Matches the phrase exactly.</td>
-    <td>`"explosion sound"`</td>
-  </tr>
-  <tr>
-    <td>Exclude term</td>
-    <td>`-term` or `exclude:term`</td>
-    <td>Removes results containing the term. You can use multiple `-` prefixes in one query to exclude more than one term.</td>
-    <td>`sword -rusty`</td>
-  </tr>
-  <tr>
-    <td>Optional term</td>
-    <td>`term!` or `optional:term`</td>
-    <td>Boosts results but doesn't require the term.</td>
-    <td>`sword glowing!`</td>
-  </tr>
-	<tr>
-    <td>Asset ID</td>
-    <td>`1234567890` or `asset_id:123456`</td>
-    <td>Pins matching assets to the top of the search results.</td>
-    <td>`asset_id:123456`</td>
-  </tr>
-	<tr>
-    <td>Date filter</td>
-    <td>`created_after:YYYY-MM-DD`</td>
-    <td>Filters by creation or update date.</td>
-    <td>`created_after:2024-01-01`</td>
-  </tr>
-	<tr>
-    <td>Audio type</td>
-    <td>`music`, `sfx`, `sound effects`</td>
-    <td>Filters audio assets by type. You must append the audio type at the **end** of your query.</td>
-    <td>`explosion sfx`</td>
-  </tr>
+    <tr>
+      <td>Exact search</td>
+      <td><code>"..."</code></td>
+      <td>
+        Matches a phrase exactly. Exact matches take the highest priority and bypass other tag processing.<br/><br/>
+        Use quotes to search for text that looks like a tag (for example, <code>"asset_id:123"</code>). You can mix quoted phrases with regular terms and include multiple quoted phrases in one query.
+      </td>
+    </tr>
+    <tr>
+    <td>Exclude terms</td>
+      <td>
+        <code>-term</code><br/>
+        <code>exclude:term</code>
+      </td>
+      <td>
+        Excludes results containing specific terms.<br/><br/>
+        You can use multiple <code>-</code> prefixes and <code>exclude</code> tags in the same query, or mix both syntaxes.
+      </td>
+    </tr>
+    <tr>
+      <td>Optional terms</td>
+      <td>
+        <code>term?</code><br/>
+        <code>term!</code><br/>
+        <code>optional:term</code>
+      </td>
+      <td>
+        By default, all terms are required. Optional terms boost matching results without excluding results that don't contain them.<br/><br/>
+        You can use <code>?</code>, <code>!</code>, or the <code>optional</code> tag, and mix these syntaxes.
+      </td>
+    </tr>
+    <tr>
+      <td>Asset ID search</td>
+      <td>
+        <code>asset_id:123456</code><br/>
+        <code>assetId:123456</code><br/>
+        <code>123456</code>
+      </td>
+      <td>
+        Pins matching assets to the top of the results.<br/><br/>
+        A standalone number is treated as an asset ID if it matches one. Multiple IDs are supported and are merged automatically.
+      </td>
+    </tr>
+    <tr>
+      <td>Date filters</td>
+      <td>
+        <code>created_before</code><br/>
+        <code>created_after</code><br/>
+        <code>updated_before</code><br/>
+        <code>updated_after</code><br/>
+      </td>
+      <td>
+        Filters results by creation or update date.<br/><br/>
+        Dates use the US format (MM/DD/YYYY) and must be wrapped in brackets if they include spaces. Natural language dates (for example, "yesterday") are not supported.<br/><br/>
+        Each tag also supports a camelCase alternative: <code>createdBefore</code>, <code>createdAfter</code>, <code>updatedBefore</code>, <code>updatedAfter</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>Audio type</td>
+      <td>
+        <code>music</code><br/>
+        <code>sfx</code><br/>
+        <code>sound effects</code>
+      </td>
+      <td>
+        Filters audio assets by type. To restrict results to a specific audio type, append the type at the end of your query.<br/><br/>
+        To search for the literal word instead of filtering, wrap the word in quotes.
+      </td>
+    </tr>
   </tbody>
 </table>
 
 <h5 style={{marginTop: '36px'}}>Tags</h5>
 
-Tags modify how search works, but aren't treated like search terms themselves. They only filter or rank your results. If a tag has a typo or an invalid date, it's treated as a regular search term instead.
+Tags modify how search works, but they are not treated like search terms themselves. They only filter or rank your results. If a tag has a typo or an invalid date, it's treated as a regular search term instead.
 
 Tags can use the formats `tag:value` or `tag=value`, and are not case-sensitive.
 
-<table>
-  <thead>
-	<tr>
-	  <th>Tag</th>
-		<th>Alternative syntax</th>
-    <th>Description</th>
-    <th>Example</th>
-  </tr>
-	</thead>
-  <tbody>
-  <tr>
-    <td>`exclude`</td>
-    <td>`excluded`</td>
-    <td>Excludes one or more terms.</td>
-    <td>`exclude:rusty`</td>
-  </tr>
-  <tr>
-    <td>`optional`</td>
-    <td>N/A</td>
-    <td>Marks terms as optional.</td>
-    <td>`optional:glowing`</td>
-  </tr>
-  <tr>
-    <td>`asset_id`</td>
-    <td>`assetId`</td>
-    <td>Pins assets by ID.</td>
-    <td>`asset_id:123456`</td>
-  </tr>
-	<tr>
-    <td>`created_before`</td>
-    <td>`createdBefore`</td>
-    <td>Created on or before the specified date.</td>
-    <td>`created_before:2024-01-01`</td>
-  </tr>
-	<tr>
-    <td>`created_after`</td>
-    <td>`createdAfter`</td>
-    <td>Created after the specified date.</td>
-    <td>`created_after:2024-01-01`</td>
-  </tr>
-	<tr>
-    <td>`updated_before`</td>
-    <td>`updatedBefore`</td>
-    <td>Updated on or before the specified date.</td>
-    <td>`updated_before:2024-01-01`</td>
-  </tr>
-	<tr>
-    <td>`updated_after`</td>
-    <td>`updatedAfter`</td>
-    <td>Updated after the specified date.</td>
-    <td>`updated_after:2024-01-01`</td>
-  </tr>
-  </tbody>
-</table>
-
-<Alert severity="info">
-Some tags accept multiple values when you use brackets. For example, `exclude:[rusty, broken]` and `asset_id[123, 456]`.
-</Alert>
+Some tags accept multiple values when you use brackets. For example, `exclude:[rusty, broken]` and `asset_id:[123, 456]`.
 
 <h5 style={{marginTop: '36px'}}>Date formats</h5>
 
-Date filters support multiple formats. Make sure to:
-
-- Wrap dates in brackets if they have spaces (for example, `[March 10, 2026]`)
-- Use the US format `MM/DD/YYYY`
-- **Not** use natural language (for example, `yesterday` or `last week`)
+Date filters support the following formats:
 
 <table>
   <thead>
@@ -621,7 +594,7 @@ Date filters support multiple formats. Make sure to:
     <td>`[March 10, 2026]`</td>
   </tr>
   <tr>
-    <td>With time</td>
+    <td>With time (requires brackets)</td>
     <td>`[03/10/2026 2:30 PM]`</td>
   </tr>
   </tbody>
@@ -633,4 +606,4 @@ Date filters support multiple formats. Make sure to:
 
 - `explosion sfx -loop created_before:[December 31, 2023]`: Filters sound effects named "explosion", excludes looping variants, and limits the results by date.
 
-- `125447393891114 sword glowing! -rusty`: Pins a specific asset by ID, searches for "sword", boosts "glowing", and excludes "rusty".
+- `125447393891114 sword glowing? -rusty`: Pins a specific asset by ID, searches for "sword", boosts "glowing", and excludes "rusty".
