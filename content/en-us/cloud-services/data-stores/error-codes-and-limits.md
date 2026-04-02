@@ -5,6 +5,8 @@ description: Error codes you might encounter and limits you might hit when using
 
 Requests you make to data stores can fail due to poor connectivity or other issues. To handle errors and return messages with an error code, wrap data store functions in `Global.LuaGlobals.pcall()`.
 
+A failed write call, such as `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`, means the game server did not receive a successful response. It does not always guarantee that the backend write did not occur. In some failure scenarios, the final write state may be unknown to the caller until it is verified with a follow-up read without cache.
+
 ## Error code reference
 
 <table>
