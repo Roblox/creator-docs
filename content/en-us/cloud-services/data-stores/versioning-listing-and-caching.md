@@ -234,7 +234,11 @@ To disable caching and opt out of using the cache to retrieve the most up-to-dat
 
 Disabling caching is useful if you have multiple servers writing to a key with high frequency and need to get the latest value from servers. However, it can cause you to consume more of your [data stores limits and quotas](../../cloud-services/data-stores/error-codes-and-limits.md#limits), since `Class.GlobalDataStore:GetAsync()|GetAsync()` requests bypassing caching always count towards your throughput and server limits.
 
-For immediate verification reads after a write, use `Class.GlobalDataStore:GetAsync()|GetAsync()` with `DataStoreGetOptions.UseCache = false`. By default, `Class.GlobalDataStore:GetAsync()|GetAsync()` uses a local four-second cache, so a normal verification read can return stale data. This matters most after `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`, `Class.GlobalDataStore:SetAsync()|SetAsync()`, `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()`, or `Class.GlobalDataStore:RemoveAsync()|RemoveAsync()` returns an error and your code must decide whether to retry, refund, or perform other compensating logic. The following example shows how to bypass the cache when verifying the result of a write:
+For immediate verification reads after a write, use `Class.GlobalDataStore:GetAsync()|GetAsync()` with `DataStoreGetOptions.UseCache = false`. By default, `Class.GlobalDataStore:GetAsync()|GetAsync()` uses a local four-second cache, so a normal verification read can return stale data.
+
+This is especially important after write operations like `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`, `Class.GlobalDataStore:SetAsync()|SetAsync()`, `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()`, or `Class.GlobalDataStore:RemoveAsync()|RemoveAsync()` return an error. In these cases, your code needs to determine whether to retry, refund, or take other corrective action.
+
+The following example shows how to bypass the cache when verifying the result of a write:
 
 ```lua
 local ok = pcall(function()
