@@ -488,3 +488,174 @@ Quick actions are accessible by right‑clicking an asset name/tile and selectin
 
 </TabItem>
 </Tabs>
+
+### Search query language
+
+Use search query language to refine how you find assets in your Asset Manager inventory. You can combine keywords, operators, and tags to filter, prioritize, or exclude results.
+
+When combining multiple features, search terms are processed in the following order (highest to lowest priority): Exact search → Excluded terms → Optional terms → Asset ID tag → Created before → Created after → Updated before → Updated after → Numeric asset ID → Audio type.
+
+<h5 style={{marginTop: '36px'}}>Query syntax</h5>
+
+Use the following syntax to control how search terms are interpreted:
+
+<table>
+  <thead>
+	<tr>
+	  <th>Feature</th>
+		<th>Syntax</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+	</thead>
+  <tbody>
+  <tr>
+    <td>Exact phrase</td>
+    <td>`"exact phrase"`</td>
+    <td>Matches the phrase exactly.</td>
+    <td>`"explosion sound"`</td>
+  </tr>
+  <tr>
+    <td>Exclude term</td>
+    <td>`-term` or `exclude:term`</td>
+    <td>Removes results containing the term. You can use multiple `-` prefixes in one query to exclude more than one term.</td>
+    <td>`sword -rusty`</td>
+  </tr>
+  <tr>
+    <td>Optional term</td>
+    <td>`term!` or `optional:term`</td>
+    <td>Boosts results but doesn't require the term.</td>
+    <td>`sword glowing!`</td>
+  </tr>
+	<tr>
+    <td>Asset ID</td>
+    <td>`1234567890` or `asset_id:123456`</td>
+    <td>Pins matching assets to the top of the search results.</td>
+    <td>`asset_id:123456`</td>
+  </tr>
+	<tr>
+    <td>Date filter</td>
+    <td>`created_after:YYYY-MM-DD`</td>
+    <td>Filters by creation or update date.</td>
+    <td>`created_after:2024-01-01`</td>
+  </tr>
+	<tr>
+    <td>Audio type</td>
+    <td>`music`, `sfx`, `sound effects`</td>
+    <td>Filters audio assets by type. You must append the audio type at the **end** of your query.</td>
+    <td>`explosion sfx`</td>
+  </tr>
+  </tbody>
+</table>
+
+<h5 style={{marginTop: '36px'}}>Tags</h5>
+
+Tags modify how search works, but aren't treated like search terms themselves. They only filter or rank your results. If a tag has a typo or an invalid date, it's treated as a regular search term instead.
+
+Tags can use the formats `tag:value` or `tag=value`, and are not case-sensitive.
+
+<table>
+  <thead>
+	<tr>
+	  <th>Tag</th>
+		<th>Alternative syntax</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+	</thead>
+  <tbody>
+  <tr>
+    <td>`exclude`</td>
+    <td>`excluded`</td>
+    <td>Excludes one or more terms.</td>
+    <td>`exclude:rusty`</td>
+  </tr>
+  <tr>
+    <td>`optional`</td>
+    <td>N/A</td>
+    <td>Marks terms as optional.</td>
+    <td>`optional:glowing`</td>
+  </tr>
+  <tr>
+    <td>`asset_id`</td>
+    <td>`assetId`</td>
+    <td>Pins assets by ID.</td>
+    <td>`asset_id:123456`</td>
+  </tr>
+	<tr>
+    <td>`created_before`</td>
+    <td>`createdBefore`</td>
+    <td>Created on or before the specified date.</td>
+    <td>`created_before:2024-01-01`</td>
+  </tr>
+	<tr>
+    <td>`created_after`</td>
+    <td>`createdAfter`</td>
+    <td>Created after the specified date.</td>
+    <td>`created_after:2024-01-01`</td>
+  </tr>
+	<tr>
+    <td>`updated_before`</td>
+    <td>`updatedBefore`</td>
+    <td>Updated on or before the specified date.</td>
+    <td>`updated_before:2024-01-01`</td>
+  </tr>
+	<tr>
+    <td>`updated_after`</td>
+    <td>`updatedAfter`</td>
+    <td>Updated after the specified date.</td>
+    <td>`updated_after:2024-01-01`</td>
+  </tr>
+  </tbody>
+</table>
+
+<Alert severity="info">
+Some tags accept multiple values when you use brackets. For example, `exclude:[rusty, broken]` and `asset_id[123, 456]`.
+</Alert>
+
+<h5 style={{marginTop: '36px'}}>Date formats</h5>
+
+Date filters support multiple formats. Make sure to:
+
+- Wrap dates in brackets if they have spaces (for example, `[March 10, 2026]`)
+- Use the US format `MM/DD/YYYY`
+- **Not** use natural language (for example, `yesterday` or `last week`)
+
+<table>
+  <thead>
+	<tr>
+	  <th>Format</th>
+		<th>Example</th>
+  </tr>
+	</thead>
+  <tbody>
+  <tr>
+    <td>ISO 8601</td>
+    <td>`2026-03-10`</td>
+  </tr>
+  <tr>
+    <td>ISO with time</td>
+    <td>`2026-03-10T14:30:00Z`</td>
+  </tr>
+  <tr>
+    <td>US format</td>
+    <td>`03/10/2026`</td>
+  </tr>
+  <tr>
+    <td>Long form (requires brackets)</td>
+    <td>`[March 10, 2026]`</td>
+  </tr>
+  <tr>
+    <td>With time</td>
+    <td>`[03/10/2026 2:30 PM]`</td>
+  </tr>
+  </tbody>
+</table>
+
+<h5 style={{marginTop: '36px'}}>Example queries</h5>
+
+- `"wooden crate" asset_id:99887766 created_after:2023-06-01 -damaged optional:painted`: Exactly matches "wooden crate", pins a specific asset by ID, filters by date, excludes "damaged", and ranks "painted" results higher.
+
+- `explosion sfx -loop created_before:[December 31, 2023]`: Filters sound effects named "explosion", excludes looping variants, and limits the results by date.
+
+- `125447393891114 sword glowing! -rusty`: Pins a specific asset by ID, searches for "sword", boosts "glowing", and excludes "rusty".
