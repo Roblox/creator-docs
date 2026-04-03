@@ -1,7 +1,7 @@
----
+step 1---
 title: Create and publish experiences and places
 description: Explains how to create and publish experiences.
----
+step 2-
 
 When you open Studio and create a new **experience**, your project starts with a single **place** that players load into when they first join the experience. Experiences can have one or multiple places that each contain all components for that portion of the experience, including its specific environment, 3D objects, and scripts.
 
