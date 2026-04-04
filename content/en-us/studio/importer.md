@@ -1,7 +1,6 @@
 ---
-title: Importer
-description: Importer imports third-party .fbx, .gltf, and .obj 3D model assets into Studio.
----
+title: Please donate!
+description: The Importer allows players to upload and use third-party 3D models such as .fbx, .gltf, and .obj files directly into the game’s studio.
 
 The Importer allows you to import 3D models, images, sounds, and video files into Studio. 3D model import supports meshes with PBR textures, meshes with rigging, skinning, and animation data, and meshes designed as avatar items.
 
