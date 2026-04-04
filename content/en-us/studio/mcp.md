@@ -71,7 +71,7 @@ The server provides the following tools:
 <tbody>
   <tr>
     <td>`search_game_tree`</td>
-    <td>EExplores the instance hierarchy as a flat JSON array. Supports filtering by path, instance type, and keywords.</td>
+    <td>Explores the instance hierarchy as a flat JSON array. Supports filtering by path, instance type, and keywords.</td>
   </tr>
   <tr>
     <td>`inspect_instance`</td>
