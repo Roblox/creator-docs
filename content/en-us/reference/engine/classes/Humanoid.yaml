@@ -86,6 +86,7 @@ properties:
     capabilities:
       - AvatarAppearance
       - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid.AutomaticScalingEnabled
     summary: |
       When Enabled, AutomaticScalingEnabled causes the size of the character to
@@ -167,6 +168,7 @@ properties:
     capabilities:
       - AvatarAppearance
       - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid.BreakJointsOnDeath
     summary: |
       Determines whether the humanoid's joints break when in the
@@ -418,6 +420,7 @@ properties:
     capabilities:
       - AvatarAppearance
       - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid.Health
     summary: |
       Describes the current health of the Humanoid on the range [0,
@@ -584,6 +587,7 @@ properties:
       can_save: true
     capabilities:
       - AvatarAppearance
+    simulationAccess: true
   - name: Humanoid.Jump
     summary: |
       If `true`, the `Class.Humanoid` jumps with an upwards force.
@@ -608,6 +612,7 @@ properties:
     capabilities:
       - AvatarAppearance
       - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid.JumpHeight
     summary: |
       Provides control over the height that the `Class.Humanoid` jumps to.
@@ -640,6 +645,7 @@ properties:
     capabilities:
       - AvatarAppearance
       - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid.JumpPower
     summary: |
       Determines how much upwards force is applied to the `Class.Humanoid` when
@@ -676,6 +682,7 @@ properties:
     capabilities:
       - AvatarAppearance
       - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid.LeftLeg
     summary: |
       A reference to the humanoid's _Left Leg_ part.
@@ -807,6 +814,7 @@ properties:
     capabilities:
       - AvatarAppearance
       - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid.NameDisplayDistance
     summary: |
       Used in conjunction with the `Class.Humanoid.DisplayDistanceType` property
@@ -1000,6 +1008,7 @@ properties:
     capabilities:
       - AvatarAppearance
       - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid.SeatPart
     summary: |
       A reference to the seat that a `Class.Humanoid` is currently sitting in,
@@ -1031,6 +1040,7 @@ properties:
     capabilities:
       - AvatarAppearance
       - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid.Sit
     summary: |
       Describes whether the `Class.Humanoid` is currently sitting.
@@ -1063,6 +1073,7 @@ properties:
     capabilities:
       - AvatarAppearance
       - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid.TargetPoint
     summary: |
       Describes the 3D position where the `Class.Player` controlling the
@@ -1148,6 +1159,7 @@ properties:
     capabilities:
       - AvatarAppearance
       - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid.WalkSpeed
     summary: |
       Describes the humanoid's maximum movement speed in studs per second.
@@ -1189,6 +1201,7 @@ properties:
     capabilities:
       - AvatarAppearance
       - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid.WalkToPart
     summary: |
       A reference to a part whose position is trying to be reached by a
@@ -1258,6 +1271,7 @@ properties:
     capabilities:
       - AvatarAppearance
       - AvatarBehavior
+    simulationAccess: true
 methods:
   - name: Humanoid:AddAccessory
     summary: |
@@ -1597,6 +1611,7 @@ methods:
     capabilities:
       - AvatarAppearance
       - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid:EquipTool
     summary: |
       Makes the `Class.Humanoid` equip the given `Class.Tool`.
@@ -1835,6 +1850,7 @@ methods:
     capabilities:
       - AvatarAppearance
       - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid:GetStateEnabled
     summary: |
       Returns whether a `Enum.HumanoidStateType` is enabled for the
@@ -1875,6 +1891,7 @@ methods:
     capabilities:
       - AvatarAppearance
       - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid:GetStatuses
     summary: |
       Returns a table of the Humanoid's statuses, and custom statuses.
@@ -1972,6 +1989,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - AvatarAppearance
+    simulationAccess: true
   - name: Humanoid:loadAnimation
     summary: ''
     description: ''
@@ -1993,6 +2011,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - AvatarAppearance
+    simulationAccess: true
   - name: Humanoid:Move
     summary: |
       Causes the `Class.Humanoid` to walk in the given direction.
@@ -2048,6 +2067,7 @@ methods:
     capabilities:
       - AvatarAppearance
       - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid:MoveTo
     summary: |
       Causes the `Class.Humanoid` to attempt to walk to the given location by
@@ -2109,6 +2129,7 @@ methods:
     capabilities:
       - AvatarAppearance
       - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid:PlayEmote
     summary: |
       Plays emotes and returns if was successfully ran.
@@ -2312,6 +2333,7 @@ methods:
     capabilities:
       - AvatarAppearance
       - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid:TakeDamage
     summary: |
       Lowers the `Class.Humanoid.Health` of the `Class.Humanoid` by the given

@@ -156,6 +156,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
+    simulationAccess: true
   - name: Animator:LoadAnimation
     summary: |
       Loads an `Class.Animation` onto an `Class.Animator`, returning an
@@ -214,6 +215,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
+    simulationAccess: true
   - name: Animator:RegisterEvaluationParallelCallback
     summary: ''
     description: ''

@@ -58,6 +58,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: WorldRoot:Blockcast
     summary: |
       Casts a block shape in a given direction and returns a
@@ -115,6 +116,7 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
+    simulationAccess: true
   - name: WorldRoot:BulkMoveTo
     summary: |
       Moves a table of `Class.BasePart|BaseParts` to a table of
@@ -161,6 +163,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: WorldRoot:FindPartOnRay
     summary: |
       Returns the first `Class.BasePart` or `Class.Terrain` cell intersecting
@@ -593,6 +596,7 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
+    simulationAccess: true
   - name: WorldRoot:GetPartBoundsInRadius
     summary: |
       Returns an array of parts whose **bounding boxes** overlap a given sphere.
@@ -643,6 +647,7 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
+    simulationAccess: true
   - name: WorldRoot:GetPartsInPart
     summary: |
       Returns an array of parts whose occupied space is shared with the given
@@ -692,6 +697,7 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
+    simulationAccess: true
   - name: WorldRoot:IKMoveTo
     summary: |
       Moves the specified part to the specified location via inverse kinematics
@@ -761,6 +767,7 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: WorldRoot:IsRegion3Empty
     summary: |
       Returns a bool indicating whether there are no `Class.BasePart|BaseParts`
@@ -938,6 +945,7 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
+    simulationAccess: true
   - name: WorldRoot:Shapecast
     summary: ''
     description: ''
@@ -963,6 +971,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: WorldRoot:Spherecast
     summary: |
       Casts a spherical shape in a given direction and returns a
@@ -1020,6 +1029,7 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
+    simulationAccess: true
   - name: WorldRoot:StepPhysics
     summary: |
       Advances the simulation for parts in the world forward based on a

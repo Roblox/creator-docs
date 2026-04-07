@@ -12,11 +12,11 @@ description: |
   `Class.WorldRoot:GetPartBoundsInBox()`,
   `Class.WorldRoot:GetPartBoundsInRadius()` and
   `Class.WorldRoot:GetPartsInPart()`. The
-  `Datatype.OverlapParams.FilterDescendantsInstances` property stores an array
-  of objects to use as either an inclusion or exclusion list based on the
-  `Datatype.OverlapParams.FilterType` enum, and the
-  `Datatype.OverlapParams.CollisionGroup` property can specify a collision group
-  for the boundary query operation.
+  `Datatype.OverlapParams.ExcludeInstances|ExcludeInstances` and
+  `Datatype.OverlapParams.IncludeInstances|IncludeInstances` properties store a
+  set of objects and their descendants that will be excluded and included from
+  the query. The `Datatype.OverlapParams.CollisionGroup` property can specify a
+  collision group for the boundary query operation.
 
   Unlike most data types in Luau, you can change all of the members of
   `Datatype.OverlapParams` without creating a new object, allowing you to reuse
@@ -37,25 +37,33 @@ constructors:
     deprecation_message: ''
 constants: []
 properties:
-  - name: OverlapParams.FilterDescendantsInstances
+  - name: OverlapParams.ExcludeInstances
     type: Array
     summary: |
-      An array of objects whose descendants is used in filtering candidates.
+      An optional array of instances whose descendants will be excluded from the
+      query.
     description: |
-      An array of objects whose descendants is used in filtering candidates.
+      This property can be used simultaneously with `IncludeInstances` to allow
+      for mixed filtering (e.g., including a large folder but excluding specific
+      child instances). If an instance matches both an exclude and include
+      filter, exclusions take priority over inclusions.
     default:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - name: OverlapParams.FilterType
-    type: RaycastFilterType
+  - name: OverlapParams.IncludeInstances
+    type: Array
     summary: |
-      Determines how the `Datatype.OverlapParams.FilterDescendantsInstances`
-      list is used.
+      An optional array of instances whose descendants will be included in the
+      query.
     description: |
-      Determines how the `Datatype.OverlapParams.FilterDescendantsInstances`
-      array is used, depending on the `Enum.RaycastFilterType` provided. Default
-      is `Enum.RaycastFilterType.Exclude`.
+      This property can be used simultaneously with `ExcludeInstances` to allow
+      for mixed filtering. If an instance matches both an exclude and include
+      filter, exclusions take priority over inclusions. Setting
+      `IncludeInstances` to nil versus an empty array (`{}`) have opposite
+      effects. `IncludeInstances = nil` is the most permissive filter (includes
+      everything), whereas `IncludeInstances = {}` is the most restrictive
+      filter (includes nothing).
     default:
     code_samples: []
     tags: []
@@ -123,16 +131,38 @@ properties:
     code_samples: []
     tags: []
     deprecation_message: ''
+  - name: OverlapParams.FilterDescendantsInstances
+    type: Array
+    summary: |
+      An array of objects whose descendants are used in filtering candidates.
+    description: |
+      This property has been superseded by `ExcludeInstances` and
+      `IncludeInstances`, which should be used instead for new work.
+    default:
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: OverlapParams.FilterType
+    type: RaycastFilterType
+    summary: |
+      Determines whether the
+      `Datatype.OverlapParams.FilterDescendantsInstances|FilterDescendantsInstances`
+      array is used as an exclude or include list.
+    description: |
+      This property has been superseded by `ExcludeInstances` and
+      `IncludeInstances`, which should be used instead for new work.
+    default:
+    code_samples: []
+    tags: []
+    deprecation_message: ''
 methods:
   - name: OverlapParams:AddToFilter
     summary: |
       Adds the instances provided to
       `Datatype.OverlapParams.FilterDescendantsInstances|FilterDescendantsInstances`.
     description: |
-      For efficiency and simplicity, this method is the preferred way to add
-      instances to the filter. It has the additional advantage that it allows
-      `Datatype.OverlapParams.FilterDescendantsInstances|FilterDescendantsInstances`
-      to be updated from a parallel context.
+      This method has been superseded by `ExcludeInstances` and
+      `IncludeInstances`, which should be used instead for new work.
     parameters:
       - name: instances
         type: Instance | Array

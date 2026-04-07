@@ -13,6 +13,8 @@ Style **tokens**, defined through [attributes](../../studio/properties.md#instan
 
 Style **themes**, configured through [attributes](../../studio/properties.md#instance-attributes) of a theme `Class.StyleSheet`, consist of sets of specific tokens that can be swapped, for example color tokens that define a "light" and "dark" theme. Related themes must have the same set of tokens to work correctly.
 
+Style **queries** allow you to apply styles conditionally based on the UI's context or environment. These are comparable to CSS [container queries and media queries](css-comparisons.md#queries), enabling UI to adapt to screen size, input types, or user accessibility settings.
+
 <figure>
 <img src="../../assets/studio/explorer/Styling-Hierarchy.png" width="414" />
 </figure>
@@ -32,6 +34,7 @@ At a high level, instance matching and modification via a rule's `Class.StyleRul
 - Instance **name** selection according to the value of the UI object's `Class.Instance.Name`.
 - Instance **modifiers**, similar to [CSS pseudo-elements](css-comparisons.md#pseudo-instances), applied through phantom `Class.UIComponent|UIComponents` such as `Class.UICorner` or `Class.UIStroke`.
 - `Class.GuiObject` **state** selectors, similar to [CSS pseudo-class](css-comparisons.md#pseudo-classes) selectors, which correspond to one of the four `Enum.GuiState|GuiState` enum values such as `Enum.GuiState|Hover`.
+- Roblox **query** selectors, similar to [CSS container and media queries](css-comparisons.md#queries), which use the `@` prefix to apply styles only while a `Class.StyleQuery` instance or pseudo‑instance with the same name is active.
 
 <Tabs>
 <TabItem label="Class Selector">

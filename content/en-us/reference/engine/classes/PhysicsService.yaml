@@ -89,6 +89,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
+    simulationAccess: true
   - name: PhysicsService:CollisionGroupSetCollidable
     summary: |
       Sets the collision status between two groups.
@@ -121,6 +122,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
+    simulationAccess: true
   - name: PhysicsService:CreateCollisionGroup
     summary: |
       Creates a new collision group with the given name, and returns the ID of
@@ -266,6 +268,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
+    simulationAccess: true
   - name: PhysicsService:GetRegisteredCollisionGroups
     summary: |
       Returns a table with info on all of the place's collision groups.
@@ -305,6 +308,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
+    simulationAccess: true
   - name: PhysicsService:IsCollisionGroupRegistered
     summary: |
       Checks if a collision group is registered.
@@ -328,6 +332,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
+    simulationAccess: true
   - name: PhysicsService:RegisterCollisionGroup
     summary: |
       Registers a new collision group with the given name.
@@ -358,6 +363,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
+    simulationAccess: true
   - name: PhysicsService:RemoveCollisionGroup
     summary: |
       Removes the collision group with the given name.
@@ -434,6 +440,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
+    simulationAccess: true
   - name: PhysicsService:SetPartCollisionGroup
     summary: |
       Sets the collision group of a part.
@@ -509,5 +516,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
+    simulationAccess: true
 events: []
 callbacks: []

@@ -538,6 +538,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: Model:MakeJoints
     summary: |
       Goes through all `Class.BasePart|BaseParts` in the `Class.Model`. If any

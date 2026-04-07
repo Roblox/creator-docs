@@ -74,6 +74,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: NoCollisionConstraint.Part0
     summary: |
       The second `Class.BasePart` that the constraint connects.
@@ -93,6 +94,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: NoCollisionConstraint.Part1
     summary: |
       The first `Class.BasePart` that the constraint connects.
@@ -112,6 +114,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
 methods: []
 events: []
 callbacks: []

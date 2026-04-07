@@ -80,6 +80,7 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
+    simulationAccess: true
   - name: PVInstance:PivotTo
     summary: |
       Transforms the `Class.PVInstance` along with all of its descendant
@@ -127,5 +128,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
 events: []
 callbacks: []

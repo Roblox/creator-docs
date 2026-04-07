@@ -47,6 +47,7 @@ properties:
     capabilities:
       - Physics
       - Animation
+    simulationAccess: true
   - name: AnimationConstraint.MaxForce
     summary: |
       Maximum force magnitude the constraint can apply to achieve its goal.
@@ -68,6 +69,7 @@ properties:
     capabilities:
       - Physics
       - Animation
+    simulationAccess: true
   - name: AnimationConstraint.MaxTorque
     summary: |
       Maximum torque the constraint can apply to reach its goal.
@@ -89,6 +91,7 @@ properties:
     capabilities:
       - Physics
       - Animation
+    simulationAccess: true
   - name: AnimationConstraint.Transform
     summary: |
       Describes the current animation offset of the constraint joint.
@@ -120,6 +123,7 @@ properties:
     capabilities:
       - Physics
       - Animation
+    simulationAccess: true
 methods: []
 events: []
 callbacks: []

@@ -9,11 +9,11 @@ summary: |
 description: |
   The `Datatype.RaycastParams` data type stores parameters for
   `Class.WorldRoot:Raycast()` operations. The
-  `Datatype.RaycastParams.FilterDescendantsInstances|FilterDescendantsInstances`
-  property stores an array of objects to use as either an inclusion or exclusion
-  list based on the `Datatype.RaycastParams.FilterType` enum. If desired, the
-  `Datatype.RaycastParams.IgnoreWater` property can be used to ignore
-  `Class.Terrain` water, and the `Datatype.RaycastParams.CollisionGroup`
+  `Datatype.RaycastParams.ExcludeInstances|ExcludeInstances` and
+  `Datatype.RaycastParams.IncludeInstances|IncludeInstances` properties store a
+  set of objects and their descendants that will be excluded and included from
+  the query. The `Datatype.RaycastParams.IgnoreWater` property can be used to
+  ignore `Class.Terrain` water, and the `Datatype.RaycastParams.CollisionGroup`
   property can specify a collision group for the raycasting operation.
 
   This object is different from the similarly named `Datatype.RaycastResult`
@@ -38,28 +38,33 @@ constructors:
     deprecation_message: ''
 constants: []
 properties:
-  - name: RaycastParams.FilterDescendantsInstances
+  - name: RaycastParams.ExcludeInstances
     type: Array
     summary: |
-      An array of objects whose descendants are used in filtering raycasting
-      candidates.
+      An optional array of instances whose descendants will be excluded from the
+      query.
     description: |
-      An array of objects whose descendants are used in filtering raycasting
-      candidates.
+      This property can be used simultaneously with `IncludeInstances` to allow
+      for mixed filtering (e.g., including a large folder but excluding specific
+      child instances). If an instance matches both an exclude and include
+      filter, exclusions take priority over inclusions.
     default:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - name: RaycastParams.FilterType
-    type: RaycastFilterType
+  - name: RaycastParams.IncludeInstances
+    type: Array
     summary: |
-      Determines how the
-      `Datatype.RaycastParams.FilterDescendantsInstances|FilterDescendantsInstances`
-      array is used.
+      An optional array of Instances whose descendants will be included in the
+      query.
     description: |
-      Determines how the
-      `Datatype.RaycastParams.FilterDescendantsInstances|FilterDescendantsInstances`
-      array is used, depending on the `Enum.RaycastFilterType` provided.
+      This property can be used simultaneously with `ExcludeInstances` to allow
+      for mixed filtering. If an instance matches both an exclude and include
+      filter, exclusions take priority over inclusions. Setting
+      `IncludeInstances` to nil versus an empty array (`{}`) have opposite
+      effects. `IncludeInstances = nil` is the most permissive filter (includes
+      everything), whereas `IncludeInstances = {}` is the most restrictive
+      filter (includes nothing).
     default:
     code_samples: []
     tags: []
@@ -117,16 +122,39 @@ properties:
     code_samples: []
     tags: []
     deprecation_message: ''
+  - name: RaycastParams.FilterDescendantsInstances
+    type: Array
+    summary: |
+      An array of objects whose descendants are used to filter raycasting
+      candidates.
+    description: |
+      This property has been superseded by `ExcludeInstances` and
+      `IncludeInstances`, which should be used instead for new work.
+    default:
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: RaycastParams.FilterType
+    type: RaycastFilterType
+    summary: |
+      Determines whether the
+      `Datatype.RaycastParams.FilterDescendantsInstances|FilterDescendantsInstances`
+      array is used as an exclude or include list.
+    description: |
+      This property has been superseded by `ExcludeInstances` and
+      `IncludeInstances`, which should be used instead for new work.
+    default:
+    code_samples: []
+    tags: []
+    deprecation_message: ''
 methods:
   - name: RaycastParams:AddToFilter
     summary: |
       Adds the instances provided to
       `Datatype.RaycastParams.FilterDescendantsInstances|FilterDescendantsInstances`.
     description: |
-      For efficiency and simplicity, this method is the preferred way to add
-      instances to the filter. It has the additional advantage that it allows
-      `Datatype.RaycastParams.FilterDescendantsInstances|FilterDescendantsInstances`
-      to be updated from a parallel context.
+      This method has been superseded by `ExcludeInstances` and
+      `IncludeInstances`, which should be used instead for new work.
     parameters:
       - name: instances
         type: Instance | Array

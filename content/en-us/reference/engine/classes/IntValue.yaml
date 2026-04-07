@@ -54,6 +54,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
 methods: []
 events:
   - name: IntValue.Changed

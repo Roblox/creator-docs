@@ -20,6 +20,10 @@ navigation:
             path: /projects/configure-experiences
           - title: Release updates
             path: /projects/update-experiences
+          - title: Ownership transfer
+            path: /projects/experience-ownership-transfer
+          - title: Place files
+            path: /projects/place-files
       - title: Cross-platform development
         path: /projects/cross-platform
       - title: Architecture
@@ -43,13 +47,6 @@ navigation:
                 path: /projects/server-authority/
               - title: Techniques
                 path: /projects/server-authority/techniques
-      - title: Manage
-        path: /projects/experience-ownership-transfer
-        section:
-          - title: Experience ownership transfer
-            path: /projects/experience-ownership-transfer
-          - title: Place files
-            path: /projects/place-files
       - title: Work in teams
         path: /projects/groups
         section:

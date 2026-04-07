@@ -3,6 +3,8 @@ title: Style Editor
 description: Explore the built-in Style Editor, a comprehensive tool that allows you to create, manage, and apply UI styles for Roblox experiences.
 ---
 
+import BetaAlert from '../../includes/beta-features/beta-alert.md'
+
 The built-in **Style Editor** is a comprehensive tool that allows you to create, manage, and apply UI styles for Roblox experiences through a combination of [tokens](#style-tokens), [design sheets](#design-sheets), [style rules](#style-rules), and [themes](#style-themes).
 
 <figure>
@@ -302,6 +304,112 @@ A **pseudo instance** is required to configure and apply rounded corners to othe
 5. Insert a new `Class.ImageButton` into the `Class.ScreenGui` you previously [created and linked](#design-sheets). When you hover over the button in the viewport, it should rotate 4 degrees counterclockwise.
 
    <img src="../../assets/ui/ui-styling/SE-State-Rule-Result.png" width="840" alt="Final styled state rule in the Style Editor." />
+
+## Style queries
+
+Style **queries**, similar to [CSS container and media queries](./css-comparisons.md#queries), allow you to apply conditional logic to your UI based on container size, input type, or other factors. The Style Editor provides a streamlined workflow to create both the query logic (conditions) and the resulting styles as a unified set.
+
+<BetaAlert betaName="StyleQuery" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
+
+### Create a query
+
+You can add a style query to any existing rule to create responsive UI that adapts to its container. The following setup configures a `Class.TextLabel` to automatically change its appearance only when it expands to a width of 400 pixels or more.
+
+1. In the left column of the Style Editor, hover over **TextLabel**, click the **⋮** button, and navigate through to **New**&nbsp;⟩ **StyleQuery**.
+
+   <img src="../../assets/ui/ui-styling/SE-Query-New.png" width="600" alt="Creation of a StyleQuery in the Style Editor." />
+
+   This action creates a **Queries** folder under the **TextLabel** rule containing two linked items:
+
+   - **::StyleQuery** pseudo-instance rule where you define the **Conditions**.
+   - **@StyleQuery** rule where you define the **Properties** to apply when those conditions are met.
+
+   <img src="../../assets/ui/ui-styling/SE-Query-Hierarchy.png" width="400" alt="Hierarchy of a StyleQuery within a class rule." />
+
+2. Select the parent **TextLabel** rule in the main panel and define the following default properties:
+
+   <table size="small" style={{width: '60%;'}}>
+   <thead>
+     <tr>
+     <th>Property</th>
+     <th>Style Token</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>`Class.TextLabel.BackgroundColor3|BackgroundColor3`</td>
+       <td>`$Magenta`</td>
+     </tr>
+     <tr>
+       <td>`Class.TextLabel.Text|Text`</td>
+       <td>`Default Text`</td>
+     </tr>
+   </tbody>
+   </table>
+
+3. Select the **::StyleQuery** rule in the main panel, click **Add&nbsp;a&nbsp;Condition…**, and configure the following:
+
+   <table size="small" style={{width: '60%;'}}>
+   <thead>
+     <tr>
+     <th>Condition</th>
+     <th>Value</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>`MinSize`</td>
+       <td>`400, 0`</td>
+     </tr>
+   </tbody>
+   </table>
+
+4. Select the **@StyleQuery** rule in the main panel and set the properties that should apply when the query is active:
+
+   <table size="small" style={{width: '60%;'}}>
+   <thead>
+     <tr>
+     <th>Property</th>
+     <th>Style Token</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>`Class.TextLabel.BackgroundColor3|BackgroundColor3`</td>
+       <td>`$Gold`</td>
+     </tr>
+     <tr>
+       <td>`Class.TextLabel.Text|Text`</td>
+       <td>`Large Text`</td>
+     </tr>
+   </tbody>
+   </table>
+
+### Test responsive logic
+
+To verify the query, you can manually resize a `Class.TextLabel` in the viewport.
+
+1. Insert a new `Class.TextLabel` into the `Class.ScreenGui`.
+2. Adjust its width to see the style swap in real-time.
+
+   <Tabs>
+   <TabItem label="0–400 Pixel Width">
+   While the `Class.TextLabel` width is smaller, the `MinSize` condition is not met and the label uses its default background color and text.
+
+   <img src="../../assets/ui/ui-styling/SE-Query-Test-Small.png" width="800" alt="TextLabel appearing magenta with 'Default Text' on a phone viewport." />
+   </TabItem>
+   <TabItem label="Over 400 Pixel Width">
+   As you drag the `Class.TextLabel` wider than 400 pixels, the query becomes active and the `@StyleQuery` immediately overrides the base style.
+
+   <img src="../../assets/ui/ui-styling/SE-Query-Test-Large.png" width="800" alt="TextLabel appearing gold with 'Large Text' on the same phone viewport." />
+   </TabItem>
+   </Tabs>
+
+<Alert severity="success">
+While manual resizing is a quick way to check responsive logic, you can also use Studio's built‑in emulation tools for more precise testing:
+- Use the [Device Emulator](../../studio/testing-modes.md#device-emulation) to test how your UI responds to specific screen resolutions and `Class.GuiService.ViewportDisplaySize|ViewportDisplaySize` conditions.
+- Use the [Controller Emulator](../../studio/testing-modes.md#controller-simulation) to verify `Class.UserInputService.PreferredInput|PreferredInput` logic, such as switching styles when a gamepad is detected.
+</Alert>
 
 ## Style themes
 

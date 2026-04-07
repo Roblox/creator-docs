@@ -35,6 +35,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+    simulationAccess: true
   - name: SwimController.PitchSpeedFactor
     summary: |
       Multiplied by `Class.ControllerManager.BaseTurnSpeed` to determine the
@@ -57,6 +58,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+    simulationAccess: true
   - name: SwimController.RollMaxTorque
     summary: |
       The maximum torque applied to rotate to the desired roll.
@@ -78,6 +80,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+    simulationAccess: true
   - name: SwimController.RollSpeedFactor
     summary: |
       Multiplied by `Class.ControllerManager.BaseTurnSpeed` to determine the
@@ -100,6 +103,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+    simulationAccess: true
 methods: []
 events: []
 callbacks: []

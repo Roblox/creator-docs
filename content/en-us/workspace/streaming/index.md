@@ -8,7 +8,7 @@ In-experience **instance streaming** allows the Roblox engine to dynamically loa
 - <Chip label="Faster Join Times" size="small" variant="outlined" color="success" /> — Players can start playing in one part of the world while more of the world loads in the background.
 - <Chip label="Memory Efficiency" size="small" variant="outlined" color="success" /> — Experiences can be played on devices with less memory since content is dynamically streamed in and out. More immersive and detailed worlds can be played on a wider range of devices.
 - <Chip label="Improved Performance" size="small" variant="outlined" color="success" /> — Better frame rates and performance, as the server can spend less time and bandwidth synchronizing changes between the world and players in it. Clients spend less time updating instances that aren't currently relevant to the player.
-- <Chip label="Level of Detail" size="small" variant="outlined" color="success" /> — Distant models and terrain remain visible even when they're not streamed to clients, keeping the experience optimized without entirely sacrificing background visuals.
+- <Chip label="Level of Detail" size="small" variant="outlined" color="success" /> — Distant models (if configured to use [model level‑of‑detail](./techniques.md#set-model-level-of-detail)) and terrain remain visible even when they're not streamed to clients, keeping the experience optimized without entirely sacrificing background visuals.
 
 Instance streaming is controlled through the `Class.Workspace.StreamingEnabled` property, enabled by default for new places created in Studio. This property cannot be set in a script.
 

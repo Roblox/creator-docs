@@ -442,6 +442,7 @@ https://www.wowschool.pl/
 https://www.youthtechinc.com/
 https://www.youtube.com/@RobloxLearn
 https://www.youtube.com/watch?v=OwhkWzSBnf0
+https://www.youtube-nocookie.com/embed/VgMUCph3bOI
 https://www.youtube-nocookie.com/embed/OwhkWzSBnf0
 https://www.youtube-nocookie.com/embed/HVUO3Dl7qT0
 https://www.youtube-nocookie.com/embed/rHkHXl4Qkpg
@@ -647,9 +648,11 @@ https://developer.mozilla.org/docs/Web/HTTP/Methods/TRACE
 https://developer.mozilla.org/docs/Web/HTTP/Methods/PATCH
 https://docs.google.com/forms/d/e/1FAIpQLSfGTRQwATB2wUg0P4HUSTtyXrhptFahJifo1ew84SyqtfSBfg/viewform
 https://www.youtube.com/playlist?list=PLuEQ5BB-Z1PJi8RJ7Kuc0JhcT0ubgaL43
-https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
-https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
-https://developer.mozilla.org/en-US/docs/Web/CSS/--*
+https://developer.mozilla.org/docs/Web/CSS/--*
+https://developer.mozilla.org/docs/Web/CSS/Pseudo-classes
+https://developer.mozilla.org/docs/Web/CSS/Pseudo-elements
+https://developer.mozilla.org/docs/Web/CSS/CSS_media_queries
+https://developer.mozilla.org/docs/Web/CSS/CSS_containment/Container_queries
 https://sass-lang.com/guide/
 https://survey.roblox.com/jfe/form/SV_7W1I2AOPuTd8FhA
 https://www.youtube-nocookie.com/embed/rVFmc8gxu4s

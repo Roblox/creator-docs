@@ -138,9 +138,7 @@ With a multitude of possible screen sizes accessible to the Roblox platform, att
 	</tbody>
 </table>
 
-For more native customization, you can use the UI [Style Editor](../ui/styling/editor.md) to configure [themes](../ui/styling/editor.md#style-themes) for the various `Class.GuiService.ViewportDisplaySize|ViewportDisplaySize` values, including tokens for text sizes, container sizes, and any other sizing/measurement tokens to suit your needs.
-
-<img src="../assets/publishing/cross-platform/Screen-Size-Themes.png" width="840" />
+For more native customization, you can use the UI [Style Editor](../ui/styling/editor.md) to configure [Style Queries](../ui/styling/editor.md#style-queries) for both `Class.GuiService.ViewportDisplaySize|ViewportDisplaySize` and `Class.UserInputService.PreferredInput|PreferredInput` values. Using intrinsic selectors like `@ViewportDisplaySizeSmall` or `@PreferredInputTouch` allows your UI to automatically swap tokens for text sizes, container dimensions, and other measurements as the player's device environment or primary input method changes.
 
 ### Layout containers
 

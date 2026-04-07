@@ -311,7 +311,7 @@ A failed write call, such as `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`
   </tr>
   <tr>
     <td></td>
-    <td>`standardListGameServerThrottled`</td>
+    <td>`StandardListGameServerThrottled`</td>
     <td>`StandardList` request was throttled by game server limits.</td>
     <td>A request to `Class.DataStore:ListKeysAsync()|ListKeysAsync()`, `Class.DataStore:ListVersionsAsync()|ListVersionsAsync()`, or `Class.DataStoreService:ListDataStoresAsync()|ListDataStoresAsync()` on standard data stores exceeded the `StandardList` game server-level rate limit.</td>
   </tr>
@@ -359,6 +359,11 @@ A failed write call, such as `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`
   </tr>
 </thead>
 <tbody>
+  <tr>
+    <td>`DatastoreDeleted`</td>
+    <td>The data store is deleted.</td>
+    <td>An operation on the data store could not occur because the data store was previously deleted.</td>
+  </tr>
   <tr>
     <td>`DatastoreThrottled`</td>
     <td>The request rate exceeds the allowed maximum for the `datastore`.</td>

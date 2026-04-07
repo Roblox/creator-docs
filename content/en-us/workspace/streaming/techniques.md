@@ -39,11 +39,11 @@ Atomicity guarantees apply only during initial replication. Once an atomic model
 
 For example, defining a large persistent model that includes all meshes and parts which "might" be referenced occasionally during gameplay is not an effective design strategy. Instead, group logically related parts and instances into smaller [atomic](./index.md#atomic) models (or persistent models if that is desirable) to allow the engine to stream them in/out as standalone units.
 
-## Avoid nested models
+## Be cautious with nested models
 
 Deeply nested models can interfere with the intended streaming behavior. For example, including a [persistent](./index.md#persistent) model inside an [atomic](./index.md#atomic) model effectively forces the entire atomic model to become persistent. Whenever possible, flatten model hierarchies to reduce coupling, simplify debugging, and avoid unintentional behaviors.
 
-## Avoid client desynchronization
+## Be cautious with client desynchronization
 
 Client‑side desynchronization should be treated as an exception, not a standard design pattern. Introducing client‑only copies or reparenting instances locally can create serious issues.
 
@@ -208,7 +208,7 @@ For areas that are visited frequently, you can use `Class.Player:AddReplicationF
 Requesting streaming around an area is **not a guarantee** that the content will be present when the request completes, as streaming is always affected by the client's network bandwidth, memory limitations, and other factors.
 </Alert>
 
-The following scripts show how to fire a client-to-server [remote event](../../scripting/events/remote.md) to teleport a player within a place, yielding at the streaming request before moving the character to a new `Datatype.CFrame`.
+The following scripts show how to fire a client-to-server [remote event](../../scripting/events/remote.md) to move a player character to a `Datatype.CFrame` using a pre-fetching method. If the pre-fetch request was successful when the function returns, the minimum radius around the target location should be present on the client.
 
 ```lua title="Server Script - Teleport Player Character" highlight="7, 10-14"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")

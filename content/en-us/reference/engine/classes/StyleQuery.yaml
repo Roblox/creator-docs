@@ -5,8 +5,14 @@
 name: StyleQuery
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Instance used to set conditions such as `"MaxSize"` and `"PreferredInput"` for
+  a `Class.StyleRule`.
+description: |
+  `StyleQuery` is an instance used to set conditions like `"MaxSize"` and
+  `"PreferredInput"` for a `Class.StyleRule`. If the conditions are `true`, the
+  rule's `@` selector is enabled. This is helpful to author styling with dynamic
+  container sizes and cross-platform UI.
 code_samples: []
 inherits:
   - Instance
@@ -14,28 +20,63 @@ descendants: []
 tags: []
 deprecation_message: ''
 properties:
-  - name: StyleQuery.AspectRatioRange
-    summary: ''
-    description: ''
-    code_samples: []
-    type: NumberRange
-    tags:
-      - NotReplicated
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: RobloxEngineSecurity
-      write: RobloxEngineSecurity
-    thread_safety: ReadSafe
-    category: Conditions
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities:
-      - UI
   - name: StyleQuery.IsActive
-    summary: ''
-    description: ''
+    summary: |
+      A boolean that determines whether a `Class.StyleRule.Selector` of `@` will
+      match the `Class.StyleQuery` name.
+    description: |
+      A boolean that determines whether a `Class.StyleRule.Selector` of `@` will
+      match the `StyleQuery` name. For example, if a `StyleQuery` named
+      `SmGamepad` has conditions set for `Class.UserInputService.PreferredInput`
+      of `Enum.PreferredInput.Gamepad|Gamepad` and
+      `Class.GuiService.ViewportDisplaySize` of `Enum.DisplaySize.Small|Small`
+      and both of these conditions are `true` (player is playing on a small
+      display size and using a gamepad), the parent of the `StyleQuery` will
+      match any `Class.StyleRule.Selector` `@SmGamepad`.
+
+      #### Conditions
+
+      <table>
+      <thead>
+        <tr>
+          <th>Condition</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>AspectRatioRange</code></td>
+          <td><code>Datatype.NumberRange</code></td>
+          <td>Evaluates to <code>true</code> if the parent width-to-height ratio of <code>Class.GuiBase2d.AbsoluteSize</code> is greater than or equal to <code>AspectRatioRange.Min</code> and less than <code>AspectRatioRange.Max</code>.</td>
+        </tr>
+        <tr>
+          <td><code>MaxSize</code></td>
+          <td><code>Datatype.Vector2</code></td>
+          <td>Evaluates to <code>true</code> if the parent <code>Class.GuiBase2d.AbsoluteSize</code> is less than <code>MaxSize</code>.</td>
+        </tr>
+        <tr>
+          <td><code>MinSize</code></td>
+          <td><code>Datatype.Vector2</code></td>
+          <td>Evaluates to <code>true</code> if the parent <code>Class.GuiBase2d.AbsoluteSize</code> is greater than or equal to <code>MinSize</code>.</td>
+        </tr>
+        <tr>
+          <td><code>PreferredInput</code></td>
+          <td><code>Enum.PreferredInput</code></td>
+          <td>Evaluates to <code>true</code> if <code>PreferredInput</code> matches <code>Class.UserInputService.PreferredInput</code>.</td>
+        </tr>
+        <tr>
+          <td><code>ReducedMotionEnabled</code></td>
+          <td>boolean</td>
+          <td>Evaluates to <code>true</code> if <code>ReducedMotionEnabled</code> matches <code>Class.GuiService.ReducedMotionEnabled</code>.</td>
+        </tr>
+        <tr>
+          <td><code>ViewportDisplaySize</code></td>
+          <td><code>Enum.DisplaySize</code></td>
+          <td>Evaluates to <code>true</code> if <code>ViewportDisplaySize</code> matches <code>Class.GuiService.ViewportDisplaySize</code>.</td>
+        </tr>
+      </tbody>
+      </table>
     code_samples: []
     type: boolean
     tags:
@@ -52,114 +93,24 @@ properties:
       can_save: true
     capabilities:
       - UI
-  - name: StyleQuery.MaxSize
-    summary: ''
-    description: ''
-    code_samples: []
-    type: Vector2
-    tags:
-      - NotReplicated
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: RobloxEngineSecurity
-      write: RobloxEngineSecurity
-    thread_safety: ReadSafe
-    category: Conditions
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities:
-      - UI
-  - name: StyleQuery.MinSize
-    summary: ''
-    description: ''
-    code_samples: []
-    type: Vector2
-    tags:
-      - NotReplicated
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: RobloxEngineSecurity
-      write: RobloxEngineSecurity
-    thread_safety: ReadSafe
-    category: Conditions
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities:
-      - UI
-  - name: StyleQuery.PreferredInput
-    summary: ''
-    description: ''
-    code_samples: []
-    type: PreferredInput
-    tags:
-      - NotReplicated
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: RobloxEngineSecurity
-      write: RobloxEngineSecurity
-    thread_safety: ReadSafe
-    category: Conditions
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities:
-      - UI
-  - name: StyleQuery.ReducedMotionEnabled
-    summary: ''
-    description: ''
-    code_samples: []
-    type: boolean
-    tags:
-      - NotReplicated
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: RobloxEngineSecurity
-      write: RobloxEngineSecurity
-    thread_safety: ReadSafe
-    category: Conditions
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities:
-      - UI
-  - name: StyleQuery.ViewportDisplaySize
-    summary: ''
-    description: ''
-    code_samples: []
-    type: DisplaySize
-    tags:
-      - NotReplicated
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: RobloxEngineSecurity
-      write: RobloxEngineSecurity
-    thread_safety: ReadSafe
-    category: Conditions
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities:
-      - UI
 methods:
   - name: StyleQuery:GetCondition
-    summary: ''
-    description: ''
+    summary: |
+      Returns the value of a specific condition in the `StyleQuery`.
+    description: |
+      Returns the value of a specific condition in the `StyleQuery`.
     code_samples: []
     parameters:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          String name of the condition, for example `"MaxSize"` or
+          `"ViewportDisplaySize"`.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          Value of the condition.
     tags: []
     deprecation_message: ''
     security: None
@@ -167,13 +118,19 @@ methods:
     capabilities:
       - UI
   - name: StyleQuery:GetConditions
-    summary: ''
-    description: ''
+    summary: |
+      Returns a dictionary of key-value pairs describing the conditoins set on
+      the `StyleQuery`.
+    description: |
+      Returns a dictionary of key-value pairs describing the conditoins set on
+      the `StyleQuery`.
     code_samples: []
     parameters: []
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          Dictionary of key-value pairs describing the conditions set on the
+          `StyleQuery`.
     tags: []
     deprecation_message: ''
     security: None
@@ -182,17 +139,36 @@ methods:
       - UI
   - name: StyleQuery:SetCondition
     summary: ''
-    description: ''
+    description: |
+      Sets a new condition (or modifies an existing condition) for the
+      `StyleQuery`. The `name` parameter should be a valid condition of
+      `StyleQuery`, and the assigned value should match the condition's value
+      type, for example `Datatype.Vector2` for `MaxSize` or
+      `Enum.PreferredInput` for `PreferredInput`.
+
+      Attempts to assign invalid condition names such as `"Size"` or `"Input"`
+      will silently fail. Type mismatches such as `Datatype.UDim2` for `MaxSize`
+      or `string` for `ReducedMotionEnabled` will also fail.
+
+      To set multiple conditions for a `StyleQuery` at once, see
+      `Class.StyleQuery:SetConditions()|SetConditions()`.
+
+      ```lua
+      local styleQuery = Instance.new("StyleQuery")
+      styleQuery:SetCondition("MaxSize", Vector2.new(200, math.huge))
+      ```
     code_samples: []
     parameters:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          Condition name to set, for example `"MinSize"`.
       - name: value
         type: Variant
         default:
-        summary: ''
+        summary: |
+          Condition value to set, for example `Datatype.Vector2.new(100, 0)`.
     returns:
       - type: ()
         summary: ''
@@ -203,14 +179,37 @@ methods:
     capabilities:
       - UI
   - name: StyleQuery:SetConditions
-    summary: ''
-    description: ''
+    summary: |
+      Lets you declare and set multiple conditions of the `StyleQuery` at once.
+    description: |
+      Similar to `Class.StyleQuery:SetCondition()|SetCondition()` but lets you
+      declare and set multiple conditions of the `StyleQuery` at once. Each
+      `name` parameter should be a valid condition of `StyleQuery`, and the
+      assigned value should match the condition's value type, for example
+      `Datatype.Vector2` for `MaxSize` or `Enum.PreferredInput` for
+      `PreferredInput`.
+
+      Attempts to assign invalid condition names such as `"Size"` or `"Input"`
+      will silently fail. Type mismatches such as `Datatype.UDim2` for `MaxSize`
+      or `string` for `ReducedMotionEnabled` will also fail.
+
+      To set/update just one condition of a `StyleQuery`, see
+      `Class.StyleQuery:SetCondition()|SetCondition()`.
+
+      ```lua
+      local styleQuery = Instance.new("StyleQuery")
+      styleQuery:SetConditions({
+      	["AspectRatioRange"] = NumberRange.new(0, 1),
+      	["MaxSize"] = Vector2.new(200, math.huge),
+      })
+      ```
     code_samples: []
     parameters:
       - name: conditions
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          Dictionary of key-value pairs defining the conditions to set.
     returns:
       - type: ()
         summary: ''

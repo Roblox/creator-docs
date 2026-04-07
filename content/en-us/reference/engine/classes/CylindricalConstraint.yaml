@@ -126,6 +126,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: CylindricalConstraint.AngularLimitsEnabled
     summary: |
       Enables the angular limits around the rotation axis.
@@ -145,6 +146,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: CylindricalConstraint.AngularResponsiveness
     summary: |
       Specifies the sharpness of the angular servo motor in reaching the
@@ -169,6 +171,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: CylindricalConstraint.AngularRestitution
     summary: |
       Restitution of the two limits, or how elastic they are.
@@ -189,6 +192,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: CylindricalConstraint.AngularSpeed
     summary: |
       Target angular speed. This value is unsigned as the servo will always move
@@ -210,6 +214,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: CylindricalConstraint.AngularVelocity
     summary: |
       The target angular velocity of the motor in radians per second around the
@@ -231,6 +236,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: CylindricalConstraint.CurrentAngle
     summary: |
       Signed angle (in degrees) between the reference axis and the secondary
@@ -256,6 +262,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: CylindricalConstraint.InclinationAngle
     summary: |
       Direction of the rotation axis as an angle from the **X** axis in the
@@ -278,6 +285,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: CylindricalConstraint.LowerAngle
     summary: |
       Lower limit for the angle (in degrees) between the reference axis and the
@@ -301,6 +309,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: CylindricalConstraint.MotorMaxAngularAcceleration
     summary: |
       The maximum angular acceleration of the motor in radians per second
@@ -322,6 +331,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: CylindricalConstraint.MotorMaxTorque
     summary: |
       The maximum torque the motor can apply to achieve the target angular
@@ -343,6 +353,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: CylindricalConstraint.RotationAxisVisible
     summary: |
       Enable the visibility of the rotation axis.
@@ -382,6 +393,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: CylindricalConstraint.SoftlockAngularServoUponReachingTarget
     summary: ''
     description: ''
@@ -401,6 +413,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: CylindricalConstraint.TargetAngle
     summary: |
       Target angle (in degrees) between the reference axis and the secondary
@@ -424,6 +437,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: CylindricalConstraint.UpperAngle
     summary: |
       Upper limit for the angle (in degrees) between the reference axis and the
@@ -447,6 +461,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: CylindricalConstraint.WorldRotationAxis
     summary: |
       The unit vector direction of the rotation axis in world coordinates.
@@ -468,6 +483,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
 methods: []
 events: []
 callbacks: []

@@ -5332,16 +5332,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/ReadCapturesFromGalleryResult.yaml
         ignoreTranslation: true
-      - title: ReceiptDecision
-        path: /reference/engine/enums/ReceiptDecision
-        type: engineapi
-        source: /reference/engine/enums/ReceiptDecision.yaml
-        ignoreTranslation: true
-      - title: ReceiptType
-        path: /reference/engine/enums/ReceiptType
-        type: engineapi
-        source: /reference/engine/enums/ReceiptType.yaml
-        ignoreTranslation: true
       - title: RecommendationActionType
         path: /reference/engine/enums/RecommendationActionType
         type: engineapi

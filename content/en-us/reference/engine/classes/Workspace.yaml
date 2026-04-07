@@ -92,6 +92,7 @@ properties:
     capabilities:
       - Physics
       - Environment
+    simulationAccess: true
   - name: Workspace.AirTurbulenceIntensity
     summary: |
       Controls the strength of turbulence present in the wind velocity field,
@@ -128,6 +129,7 @@ properties:
     capabilities:
       - Physics
       - Environment
+    simulationAccess: true
   - name: Workspace.AllowThirdPartySales
     summary: |
       Determines whether assets created by other users can be sold in the game.
@@ -413,6 +415,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+    simulationAccess: true
   - name: Workspace.Gravity
     summary: |
       Determines the acceleration due to gravity applied to falling
@@ -438,6 +441,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+    simulationAccess: true
   - name: Workspace.IKControlConstraintSupport
     summary: |
       Enables support for constraints for IKControls. If disabled, IKControls
