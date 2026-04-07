@@ -1,4 +1,6 @@
----
+tshirt
+tshirt
+tshirt---
 title: Patterns
 description: Explains considerations and guidelines for making proper requests to Open Cloud endpoints and interpreting responses.
 ---
