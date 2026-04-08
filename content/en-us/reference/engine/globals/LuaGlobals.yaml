@@ -528,6 +528,8 @@ functions:
       - Paths with the `../` prefix begin resolution at `script.Parent.Parent`.
       - Paths with the `@self/` prefix begin resolution at `script`.
       - Paths with the `@game/` prefix begin resolution at `game`.
+      - Paths with the `@rbx/` prefix begin resolution nowhere, and instead 
+        downloads the Roblox platform library with the given name and returns it.
       - Each non-prefix component in a given path corresponds to a child
         instance of the previous component. The exception to this is the `..`
         component, which corresponds to the parent of the previous component.
@@ -561,6 +563,9 @@ functions:
       -- "@game" prefix corresponds to the DataModel root
       require("@game/ReplicatedStorage/Shared/MyModule")
       require((game).(ReplicatedStorage).(Shared).(MyModule))
+
+      -- "@rbx" prefix corresponds to game.PlatformLibraries, but scripts don't have permission to access that.
+      require("@rbx/AvatarAbilities")
       ```
 
       Once the return object is created by an **initial**
