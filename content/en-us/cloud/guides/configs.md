@@ -16,7 +16,7 @@ Before you start, [generate an API key](../auth/api-keys.md) or [configure an OA
 
 All endpoints use your universe ID, which you can find on the [Creator Dashboard](https://create.roblox.com/dashboard/creations). Click the experience tile overflow menu and **Copy Universe ID**.
 
-For the full endpoint reference, request and response schemas, and error codes, see the [Cloud API reference](/cloud/reference).
+For the full endpoint reference, request and response schemas, and error codes, see the [Cloud API reference](/cloud/reference/features/configs).
 
 ## Repositories
 

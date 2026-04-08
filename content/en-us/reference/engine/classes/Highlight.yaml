@@ -48,8 +48,8 @@ description: |
 
   #### Limitations
 
-  As a performance limit, the engine only displays 255 `Class.Highlight`
-  instances simultaneously on the client at a time. If you exceed this limit,
+  As a performance limit, Studio only displays 255 simultaneous
+  `Class.Highlight` instances on the client at a time. If you exceed this limit,
   the additional instances are silently ignored. Note that while a
   `Class.Highlight` with `Class.Highlight.Enabled|Enabled` set to `false`
   doesn't display, it still takes one of the 255 available slots, so if you plan

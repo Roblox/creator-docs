@@ -154,8 +154,6 @@ navigation:
             path: /physics/sleep-system
           - title: Adaptive timestepping
             path: /physics/adaptive-timestepping
-          - title: Character controllers
-            path: /physics/character-controllers
           - title: Roblox units
             path: /physics/units
       - title: Effects
@@ -310,6 +308,17 @@ navigation:
         path: /characters/
       - title: Appearance
         path: /characters/appearance
+      - title: Character Controller Library
+        path: /characters/character-controller-library/
+        section:
+          - title: Overview
+            path: /characters/character-controller-library/
+          - title: Abilities
+            path: /characters/character-controller-library/abilities
+          - title: Controllers
+            path: /characters/character-controller-library/controllers
+      - title: Name and health display
+        path: /characters/name-health-display
       - title: Adaptive Animation
         path: /characters/adaptive-animation
       - title: Emotes
@@ -318,8 +327,6 @@ navigation:
         path: /art/characters/facial-animation/moods
       - title: Pathfinding
         path: /characters/pathfinding
-      - title: Name and health display
-        path: /characters/name-health-display
       - title: R6 to R15 adapter
         path: /characters/r6-to-r15-adapter
   - title: Players

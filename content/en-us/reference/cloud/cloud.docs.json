@@ -9209,10 +9209,11 @@
               "STRIPE",
               "APPLE",
               "GOOGLE",
-              "ROBLOX_CREDIT"
+              "ROBLOX_CREDIT",
+              "ROBUX"
             ],
             "type": "string",
-            "description": "The payment provider used to purchase the subscription.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | PAYMENT_PROVIDER_UNSPECIFIED | The payment provider is unspecified. For fiat currency subscriptions, this indicates an error. For Robux subscriptions, this is expected as Robux transactions do not use an external payment provider. |\n  | STRIPE | The subscription was purchased using Stripe. |\n  | APPLE | The subscription was purchased using Apple. |\n  | GOOGLE | The subscription was purchased using Google. |\n  | ROBLOX_CREDIT | The subscription was purchased using Roblox Credit. |",
+            "description": "The payment provider used to purchase the subscription.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | PAYMENT_PROVIDER_UNSPECIFIED | The payment provider is unspecified. |\n  | STRIPE | The subscription was purchased using Stripe. |\n  | APPLE | The subscription was purchased using Apple. |\n  | GOOGLE | The subscription was purchased using Google. |\n  | ROBLOX_CREDIT | The subscription was purchased using Roblox Credit. |\n  | ROBUX | The subscription was purchased using Robux. |",
             "format": "enum"
           },
           "user": {

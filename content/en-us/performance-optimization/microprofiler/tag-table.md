@@ -61,7 +61,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <td>Simulation/gameStepped/stepHumanoid</td>
     <td>`Class.Humanoid` state changes and movement.</td>
-    <td>Reduce the amount of `Class.Humanoid|Humanoids` or humanoids with `Class.Humanoid.EvaluateStateMachine` enabled. Disable `Class.Humanoid` states on NPCs that don't need them, such as `Enum.HumanoidStateType|Climbing` or `Enum.HumanoidStateType|Swimming`. Reduce callbacks to `Class.Humanoid.StateChanged` or state changes such as `Class.Humanoid.Running|Running` or `Class.Humanoid.Died|Died`.</td>
+    <td>Reduce the amount of `Class.Humanoid|Humanoids` or disable `Class.Humanoid` states on NPCs that don't need them, such as `Enum.HumanoidStateType|Climbing` or `Enum.HumanoidStateType|Swimming`. Reduce callbacks to `Class.Humanoid.StateChanged` or state changes such as `Class.Humanoid.Running|Running` or `Class.Humanoid.Died|Died`.</td>
   </tr>
   <tr>
     <td>Simulation/gameStepped/stepAnimation</td>

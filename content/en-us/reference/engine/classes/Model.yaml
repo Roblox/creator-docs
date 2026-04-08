@@ -57,6 +57,7 @@ inherits:
 descendants:
   - Actor
   - BackpackItem
+  - ProceduralModel
   - Status
   - WorldRoot
 tags: []

@@ -38,7 +38,7 @@ constructors:
 constants: []
 properties:
   - name: OverlapParams.ExcludeInstances
-    type: Array
+    type: '{Instance}?'
     summary: |
       An optional array of instances whose descendants will be excluded from the
       query.
@@ -52,7 +52,7 @@ properties:
     tags: []
     deprecation_message: ''
   - name: OverlapParams.IncludeInstances
-    type: Array
+    type: '{Instance}?'
     summary: |
       An optional array of instances whose descendants will be included in the
       query.

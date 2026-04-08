@@ -3,9 +3,9 @@ title: Adaptive Animation
 description: Set up your character rig to support universal sets of animations and emotes.
 ---
 
-<Alert severity = 'info'>
-Adaptive Animation is currently in beta. Enable the beta by navigating to **File** > **Beta Features** and enable **Adaptive Animation**.
-</Alert>
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
+<BetaAlert betaName="Adaptive Animations" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
 
 Roblox's **Adaptive Animation** system allows animations to play seamlessly between custom characters with unique body types, rigs, and proportions. This feature utilizes a `Class.HumanoidRigDescription` object within your character model that enables you to customize, modify, and map the internal joints of your custom character to enable universal animation support.
 
