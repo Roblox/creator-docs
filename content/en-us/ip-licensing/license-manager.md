@@ -22,7 +22,7 @@ License listings are made up of:
 
 To create your license listing:
 
-1. Go to **Intellectual Property** ⟩ **Licenses**.
+1. Go to **Intellectual Property** ⟩ **License Manager** ⟩ **Licenses**.
 2. Select the **My Licenses** tab.
 3. Click **Create license listing**.
 4. In the **Create listing** step, set up the listing.
@@ -86,7 +86,7 @@ You can review the experiences matched to your IP and send them a license offer 
 
 To review your matches and send a creator a license offer:
 
-1. Go to **Intellectual Property** ⟩ **Licenses** ⟩ **Matches**.
+1. Go to **Intellectual Property** ⟩ **License Manager** ⟩ **Matches**.
 2. Select the experience you want to send an offer to.
 3. Click **Offer license**.
 4. In the **New license offer** panel:
@@ -94,7 +94,7 @@ To review your matches and send a creator a license offer:
     2. Select the revenue share timing. You can choose to **Monetize on activation** and apply the revenue share rate of the license you selected the moment the creator accepts your offer, or **Monetize later** and activate the revenue share rate later.
     3. Click **Send offer**.
 
-If you believe an experience is using a significant amount of content related to your IP but you don't see that experience on your Matches page, submit additional keywords and images to your IP family and wait for your matches to refresh.
+If you believe an experience is using a significant amount of content related to your IP but you don't see that experience on your Matches page, you can send that experience a [match request](#request-a-match).
 
 <Alert severity="warning">
   You can't send an offer to an experience that is already associated with an active license agreement.
@@ -106,13 +106,29 @@ If you believe an experience is using a significant amount of content related to
   If the creator doesn't dispute the offer by the activation date, **the agreement automatically becomes active**.
 </Alert>
 
+## Request a match
+
+If an experience using your IP doesn't appear on your **Matches** page, you can manually request to add it. You can submit up to 3 match requests per day.
+
+To request a match:
+
+1. Go to **Intellectual Property** ⟩ **License Manager** ⟩ **Matches**.
+2. Click **Request match**.
+3. Under **Request an experience as a match**:
+    1. Enter the URL for the experience using your IP.
+    2. Select an IP family and a license.
+    3. Select the revenue share timing. You can choose to **Monetize on activation** and apply the revenue share rate of the license you selected the moment the creator accepts your offer, or **Monetize later** and activate the revenue share rate later.
+    4. Click **Confirm**.
+
+Roblox reviews the submitted experience to confirm it matches your IP. If approved, a license offer is automatically sent to the creator of the experience.
+
 ## Review applications from creators
 
 Creators can browse the **Licenses** catalog and directly apply to use your IP in their experiences without first being matched to your IP. After receiving an application, you can choose to accept or reject it.
 
 To review an application from a creator:
 
-1. Go to **Intellectual Property** ⟩ **Licenses**.
+1. Go to **Intellectual Property** ⟩ **License Manager** ⟩ **Licenses**.
 2. Select the **License agreements** tab.
 3. Filter by **Requests**.
 4. Select the application you want to review.
@@ -128,7 +144,7 @@ To review an application from a creator:
 
 To view all of your offers and license agreements:
 
-1. Go to **Intellectual Property** ⟩ **Licenses**.
+1. Go to **Intellectual Property** ⟩ **License Manager** ⟩ **Licenses**.
 2. Select the **License agreements** tab. You can filter all license agreements by:
 
 <table>
@@ -164,7 +180,7 @@ After you send a license offer to a creator, they can choose to dispute that off
 
 To review an offer dispute from a creator:
 
-1. Go to **Intellectual Property** ⟩ **Licenses**.
+1. Go to **Intellectual Property** ⟩ **License Manager** ⟩ **Licenses**.
 2. Select the creation that has disputed your offer. The reason for the creator's dispute displays at the top of the page.
 3. Accept or reject the dispute.
     - To accept the dispute and archive the offer, click **Accept dispute**.
@@ -182,7 +198,7 @@ To request changes, email [iplicensing_agent@roblox.com](mailto:iplicensing_agen
 
 Use analytics to analyze the impact of your individual licenses. To view a license's metrics:
 
-1. Go to **Intellectual Property** ⟩ **Licenses**.
+1. Go to **Intellectual Property** ⟩ **License Manager** ⟩ **Licenses**.
 2. Select the **My licenses** tab.
 3. Select a license.
 4. Select the **Analytics** tab to see the following:
