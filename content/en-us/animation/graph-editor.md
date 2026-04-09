@@ -27,12 +27,12 @@ Animation graphs is currently in Studio Beta. To enable, navigate to **File** > 
 
 To begin building logic for an animatable character, access the Animation Graph editor via the Avatar tab in the Studio ribbon. The following steps demonstrate how to initialize a rig and construct a basic node network using default walking and waving animations.
 
-For a deeper dive into practical applications, you can explore the Animation Graph Reference File, which contains both foundational and complex implementation examples.
+For a deeper dive into practical applications, you can explore the [Animation Graph Reference File](https://www.roblox.com/games/92493993350916/Animation-Graph-Editor-Simple-Demo), which contains both foundational and complex implementation examples.
 
 To create your own animation graph, similar to the basic example provided in the reference, use the following steps:
 
 1. In Studio, add an animatable rig by navigating to the Avatar tab and selecting **Character** > **My Avatar**.
-2. Open the Animation Graph Editor by navigating to **Avatar** > **Anim Graph**.
+2. Open the Animation Graph Editor by navigating to **Graph Editor** in Studio's **Avatar** tab.
 
    <img src="../assets/animation/graph-editor/Anim-Graph-Ribbon.png" width="60%" alt="Animation Graph Editor indicated in Studio's toolbar" />
 
@@ -127,40 +127,11 @@ For all nodes and [transitions](#transitions), the following rules apply by defa
 - Nodes without custom event logic pass all events through unchanged; nodes that blend or select between inputs may scale the weight or block events from non-primary inputs (see per-node Event section).
 - Marker events that reach the top of the graph can be observed via `Class.AnimationTrack:GetMarkerReachedSignal`.
 
-### Transitions
-
-Several nodes in the Animation Graph (such as **Select**, **Priority Select**, **Sequence**, and **Random Sequence**) manage how animations blend when switching between active inputs. To prevent redundancy in the node reference, these behaviors are defined by standardized transition property groups.
-
-<dl>
-<dt>**Default Transition**</dt>
-
-<img src="../assets/animation/graph-editor/Transition-Default.png" width="60%" alt="Default Transition" />
-
-<dd>
-The baseline blending behavior applied to the node whenever it switches to a new active input.
-<ul>
-  <li>**DefaultTransitionDuration** (Number): The time (in seconds) it takes to fully blend into the new pose.</li>
-  <li>**DefaultTransitionCurve** (`Enum.PoseEasingStyle`): The easing function applied during the blend. Currently only supports `Enum.PoseEasingStyle.Linear` and `Enum.PoseEasingStyle.CubicV2`.</li>
-</ul>
-</dd>
-<dt>**Transition Override**</dt>
-
-<img src="../assets/animation/graph-editor/Transition-Override.png" width="60%" alt="Transition Override" />
-
-<dd>
-Input-specific link properties that supersede the Default Transition. These are applied when the node transitions <em>to</em> that specific input.
-<ul>
-  <li>**TransitionOverrideDuration** (Number): Overrides the default transition duration.</li>
-  <li>**TransitionOverrideCurve** (`Enum.PoseEasingStyle`): Overrides the default transition curve. Currently only supports `Enum.PoseEasingStyle.Linear` and `Enum.PoseEasingStyle.CubicV2`</li>
-</ul>
-</dd>
-</dl>
-
 ### Clip
 
-<img src="../assets/animation/graph-editor/Clip-Node.png" width="230px" alt="Clip node" />
+<img src="../assets/animation/graph-editor/Clip-Node.png" width="30%" alt="Clip node" />
 
-A reference to an `Class.AnimationClip` asset. This serves as a leaf node in the graph, generating the raw animation data that is fed into other nodes for blending, selection, or modification.
+A reference to an `Class.AnimationClip` asset. This serves as a leaf node in the graph, generating the raw animation data that feeds into other nodes for blending, selection, or modification.
 
 <dl>
 <dt>**Inputs**</dt>
@@ -232,7 +203,7 @@ A reference to an `Class.AnimationClip` asset. This serves as a leaf node in the
 
 ### Select
 
-<img src="../assets/animation/graph-editor/Select-Node.png" width="230px" alt="Select node" />
+<img src="../assets/animation/graph-editor/Select-Node.png" width="30%" alt="Select node" />
 
 Selects between any number of inputs via the Selection property. Whenever the current selection changes, it triggers a new [transition](#transitions).
 
@@ -268,7 +239,7 @@ Selects between any number of inputs via the Selection property. Whenever the cu
 
 ### PrioritySelect
 
-<img src="../assets/animation/graph-editor/Priority-Select-Node.png" width="230px" alt="Priority Select node" />
+<img src="../assets/animation/graph-editor/Priority-Select-Node.png" width="30%" alt="Priority Select node" />
 
 Evaluates a list of connected inputs from top to bottom and plays the first one whose condition evaluates to true. This allows for hierarchical animation selection based on specific logic. Whenever the current selection changes, it triggers a new [transition](#transitions).
 
@@ -313,7 +284,7 @@ Evaluates a list of connected inputs from top to bottom and plays the first one 
 
 ### Sequence
 
-<img src="../assets/animation/graph-editor/Sequence-Node.png" width="230px" alt="Sequence node" />
+<img src="../assets/animation/graph-editor/Sequence-Node.png" width="30%" alt="Sequence node" />
 
 Activates connected inputs in a specific sequential order based on defined wait conditions. Whenever the current selection changes, it triggers a new [transition](#transitions).
 
@@ -362,9 +333,9 @@ Activates connected inputs in a specific sequential order based on defined wait 
 
 ### RandomSequence
 
-<img src="../assets/animation/graph-editor/Random-Sequence-Node.png" width="230px" alt="Random Sequence node" />
+<img src="../assets/animation/graph-editor/Random-Sequence-Node.png" width="30%" alt="Random Sequence node" />
 
-Selects and plays one of its connected inputs at random. When the currently selected animation completes, the node randomly picks another input to play. Each input can be assigned a specific weight to influence the probability of it being chosen. Whenever the current selection changes, it triggers a new [transition](#transitions).
+Selects and plays one of its connected inputs at random. When the currently selected animation completes, the node randomly picks another input to play. Assign each input a specific weight to influence the probability of it being chosen. Whenever the current selection changes, it triggers a new [transition](#transitions).
 
 <dl>
 <dt>**Inputs**</dt>
@@ -404,7 +375,7 @@ Selects and plays one of its connected inputs at random. When the currently sele
 
 ### Over
 
-<img src="../assets/animation/graph-editor/Over-Node.png" width="230px" alt="Over node" />
+<img src="../assets/animation/graph-editor/Over-Node.png" width="30%" alt="Over node" />
 
 Layers the **Over** pose on top of the Base pose. When combined with a Mask node, masked-out joints in the **Over** pose reveal the **Base** pose entirely, creating a transparent overlay effect.
 
@@ -446,7 +417,7 @@ Layers the **Over** pose on top of the Base pose. When combined with a Mask node
 
 ### Add
 
-<img src="../assets/animation/graph-editor/Add-Node.png" width="230px" alt="Add node" />
+<img src="../assets/animation/graph-editor/Add-Node.png" width="30%" alt="Add node" />
 
 Adds the **Additive** pose to the **Base** pose, attenuated by a specific **Weight** (unclamped).
 
@@ -483,7 +454,7 @@ Adds the **Additive** pose to the **Base** pose, attenuated by a specific **Weig
 
 ### Subtract
 
-<img src="../assets/animation/graph-editor/Subtract-Node.png" width="230px" alt="Subtract node" />
+<img src="../assets/animation/graph-editor/Subtract-Node.png" width="30%" alt="Subtract node" />
 
 Converts an animation into an additive pose by subtracting a relative base pose from the target pose ($A - B$). The result is attenuated by a specific **Weight** (unclamped).
 
@@ -520,7 +491,7 @@ Converts an animation into an additive pose by subtracting a relative base pose 
 
 ### Blend1D
 
-<img src="../assets/animation/graph-editor/Blend1D-Node.png" width="230px" alt="Blend1D node" />
+<img src="../assets/animation/graph-editor/Blend1D-Node.png" width="30%" alt="Blend1D node" />
 
 Linearly interpolates between the two animation poses closest to the current input position on a single axis.
 
@@ -568,7 +539,7 @@ Linearly interpolates between the two animation poses closest to the current inp
 
 ### Blend2D
 
-<img src="../assets/animation/graph-editor/Blend2D-Node.png" width="230px" alt="Blend2D node" />
+<img src="../assets/animation/graph-editor/Blend2D-Node.png" width="30%" alt="Blend2D node" />
 
 Blends multiple animation poses together based on two input parameters within a 2D coordinate space. This generalizes the Blend1D node to handle complex scenarios, such as blending based on both movement direction and speed simultaneously.
 
@@ -633,7 +604,7 @@ Blends multiple animation poses together based on two input parameters within a 
 
 ### Mask
 
-<img src="../assets/animation/graph-editor/Mask-Node.png" width="230px" alt="Mask node" />
+<img src="../assets/animation/graph-editor/Mask-Node.png" width="30%" alt="Mask node" />
 
 Applies a predefined mask to the input Pose. A mask is defined by a weight per object (e.g. joint) in the rig hierarchy, allowing for precise control or "feathering" of the animation.
 
@@ -685,7 +656,7 @@ Applies a predefined mask to the input Pose. A mask is defined by a weight per o
 
 ### Speed
 
-<img src="../assets/animation/graph-editor/Speed-Node.png" width="230px" alt="Speed node" />
+<img src="../assets/animation/graph-editor/Speed-Node.png" width="30%" alt="Speed node" />
 
 Modifies the playback rate of an incoming animation pose.
 
@@ -721,7 +692,7 @@ Modifies the playback rate of an incoming animation pose.
 
 ### GraphOutput
 
-<img src="../assets/animation/graph-editor/Graph-Output-Node.png" width="230px" alt="GraphOutput node" />
+<img src="../assets/animation/graph-editor/Graph-Output-Node.png" width="30%" alt="GraphOutput node" />
 
 Represents the final evaluated pose of the graph. This node is automatically included in all new graphs in the Animation Graph Editor. Its presence ensures that the graph is always valid and consistently produces an animation pose.
 
@@ -740,3 +711,146 @@ Represents the final evaluated pose of the graph. This node is automatically inc
 - **Event Emission:** This node serves as the exit point for the animation pipeline and does not emit signals back into the graph.
 </dd>
 </dl>
+
+## Transitions
+
+Several nodes in the Animation Graph (such as **Select**, **Priority Select**, **Sequence**, and **Random Sequence**) manage how animations blend when switching between active inputs. To prevent redundancy in the node reference, these behaviors are defined by standardized transition property groups.
+
+### Default transition
+
+<img src="../assets/animation/graph-editor/Transition-Default.png" width="60%" alt="Default Transition" />
+
+The baseline blending behavior applied to the node whenever it switches to a new active input.
+
+- **DefaultTransitionDuration** (number): The time (in seconds) it takes to fully blend into the new pose.
+- **DefaultTransitionCurve** (`Enum.PoseEasingStyle`): The easing function applied during the blend. Currently only supports `Enum.PoseEasingStyle.Linear` and `Enum.PoseEasingStyle.CubicV2`.
+
+### Transition override
+
+<img src="../assets/animation/graph-editor/Transition-Override.png" width="60%" alt="Transition Override" />
+
+Input-specific link properties that supersede the default transition. These are applied when the node transitions **to** that specific input.
+
+- **TransitionOverrideDuration** (number): Overrides the default transition duration.
+- **TransitionOverrideCurve** (`Enum.PoseEasingStyle`): Overrides the default transition curve. Currently only supports `Enum.PoseEasingStyle.Linear` and `Enum.PoseEasingStyle.CubicV2`
+
+## Replication
+
+Animation graph parameters are local to each `Class.AnimationTrack` and are not automatically replicated. This may change in future updates, but the currently recommended approach uses:
+
+- **Client → Server**: A `Class.RemoteEvent` to send parameters from the owning client to the server at a fixed tick rate.
+- **Server → Other Clients**: Instance **attributes** which automatically replicate to all clients.
+
+### Player characters
+
+A client script drives player characters. Since only the owning client knows the current gameplay state (movement input, humanoid state, etc.), parameters must flow from the owning client to the server and then to all other clients.
+
+<h4>Setup</h4>
+
+Under `Class.StarterCharacterScripts`, create:
+
+- A `Class.LocalScript` for client-side animation and parameter driving.
+- A `Class.Script` for server-side replication.
+- A `Class.RemoteEvent` for client-to-server communication.
+
+<h4>Client script</h4>
+
+The owning client drives parameters from gameplay events and sends them to the server periodically. Other clients read replicated attributes from the server script instead.
+
+```lua
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+
+local character = script.Parent
+local humanoid = character:WaitForChild("Humanoid")
+local animator = humanoid:FindFirstChildOfClass("Animator") or humanoid
+
+-- Load the animation graph
+local animation = Instance.new("Animation")
+animation.AnimationId = "rbxassetid://YOUR_GRAPH_ID" -- Replace with your published graph ID
+local track = animator:LoadAnimation(animation)
+track:Play()
+
+local isLocalCharacter = Players:GetPlayerFromCharacter(character) == Players.LocalPlayer
+
+if not isLocalCharacter then
+    -- Read replicated parameters from the server script
+    local animateServer = script.Parent:WaitForChild("AnimateServer")
+
+    for attribute, value in animateServer:GetAttributes() do
+        track:SetParameter(attribute, value)
+    end
+
+    animateServer.AttributeChanged:Connect(function(attribute)
+        track:SetParameter(attribute, animateServer:GetAttribute(attribute))
+    end)
+    return
+end
+
+-- Local player: drive parameters from gameplay
+local params = {}
+
+local function setParam(key, value)
+    track:SetParameter(key, value)
+    params[key] = value
+end
+
+-- Example: drive parameters from humanoid state
+humanoid.Running:Connect(function(speed)
+    setParam("Speed", speed)
+    setParam("State", if speed < 0.1 then "Idle" else "Moving")
+end)
+
+-- Send parameters to the server at a fixed tick rate
+local replicateEvent = script.Parent:WaitForChild("ReplicateEvent")
+local TICK_RATE = 1 / 20
+local lastSendTime = 0
+
+RunService.Stepped:Connect(function(gameTime)
+    if gameTime - lastSendTime > TICK_RATE then
+        lastSendTime = gameTime
+        replicateEvent:FireServer(params)
+    end
+end)
+```
+
+<h4>Server script</h4>
+
+Receives parameters from the owning client, drives the server-side animation graph, and propagates values as attributes for replication to other clients.
+
+```lua
+local Players = game:GetService("Players")
+
+local character = script.Parent
+local humanoid = character:WaitForChild("Humanoid")
+local animator = humanoid:FindFirstChildOfClass("Animator") or humanoid
+
+-- Load the same animation graph on the server
+local animation = Instance.new("Animation")
+animation.AnimationId = "rbxassetid://YOUR_GRAPH_ID" -- Same graph ID as client
+animation.Parent = script
+local track = animator:LoadAnimation(animation)
+track:Play()
+
+-- Receive parameters from owning client and replicate via attributes
+local replicateEvent = script.Parent:WaitForChild("ReplicateEvent")
+
+replicateEvent.OnServerEvent:Connect(function(player, params)
+    if Players:GetPlayerFromCharacter(character) ~= player then
+        return
+    end
+
+    for key, value in params do
+        track:SetParameter(key, value)
+        script:SetAttribute(key, value)
+    end
+end)
+```
+
+### NPCs
+
+Since the server owns NPC animation, only server-to-client replication is needed. Drive the animation graph on the server, write parameters as attributes on a server Script, and read them on clients using the same `Class.Instance.AttributeChanged` pattern shown above.
+
+### Latency
+
+Other clients see animations with a small delay equal to the tick interval (up to 50 ms at 20 Hz) plus network latency. You can reduce the tick interval by increasing the frequency (such as 1/30), at the cost of higher network traffic. 20 Hz is a reasonable default; animation blending is forgiving enough that small delays are hard to notice.

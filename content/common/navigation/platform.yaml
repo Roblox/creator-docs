@@ -35,6 +35,8 @@ navigation:
         path: /production/publishing/about-GDPR-and-CCPA
       - title: DMCA
         path: /production/publishing/dmca-guidelines
+      - title: Generative AI
+        path: /generative-AI
       - title: AI data sharing
         path: /ai-data-sharing
       - title: Account verification
