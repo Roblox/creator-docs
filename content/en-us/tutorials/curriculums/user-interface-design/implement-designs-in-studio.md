@@ -95,15 +95,17 @@ Asset libraries are collections of assets you can add into your inventory for ea
   </TabItem>
 </Tabs>
 
-You can add most of the library to your inventory within Studio by clicking the **Add to Inventory** link in the following component. Once assets are within your inventory, you can reuse them in any project on the platform.
-
-<BrowseSampleCard href='https://create.roblox.com/store/asset/18879085966' description='Reference the completed version of the UI designs with these 2D assets.' title='Final Screen UI Components' assetId={18879085966}  />
-
-<br></br>
-
 To get the asset library from your inventory into your experience:
 
-1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../../projects/assets/toolbox.md).
+1. Add the asset library to your inventory.
+
+   1. Navigate to the asset library's [details page](https://create.roblox.com/store/asset/102445640805652) on the Creator Store.
+   1. In the top-right corner, click the **Get Model** button. The asset library is now in your inventory, and you can reuse these assets in any project on the platform.
+
+1. In Studio, navigate to the **Home** tab, then click the **Toolbox** button. The **Toolbox** window opens.
+
+   <img src="../../../assets/studio/general/Toolbar-Toolbox.png" width="100%" alt="Toolbox highlighted in Studio's toolbar." />
+
 1. In the **Toolbox** window, click the **Inventory** tab. The **My Models** sort displays.
 
    <img src="../../../assets/studio/toolbox/Inventory-Tab.png" width="360" />
