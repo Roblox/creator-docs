@@ -240,7 +240,7 @@ methods:
     code_samples:
       - ContentProvider-PreloadAsync1
     parameters:
-      - name: contentIdList
+      - name: contentInstancesList
         type: Array
         default:
         summary: |
