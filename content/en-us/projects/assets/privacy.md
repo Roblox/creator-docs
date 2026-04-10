@@ -269,7 +269,7 @@ While opting in to the **Asset Privacy** beta allows you to restrict your or you
 To open permissions for your or your group's mesh, image, or decal asset through the Asset Privacy beta:
 
 1. Follow the steps to opt-in to the Asset Privacy beta in [Restrict permissions](#restrict-permissions).
-1. Back in the [Creator Dashboard](https://create.roblox.com/dashboard/creations), navigate to the upper tab bar, select **Development Items**, then click either **Decalss**, **Images**, or **Meshes**. All of your decal, image, or mesh assets display.
+1. Back in the [Creator Dashboard](https://create.roblox.com/dashboard/creations), navigate to the upper tab bar, select **Development Items**, then click either **Decals**, **Images**, or **Meshes**. All of your decal, image, or mesh assets display.
 
    <Alert severity="warning">
    If you want to set a decal asset to open use, you must set its image dependency to open use **first**, otherwise the Asset Privacy system will block you in future steps.

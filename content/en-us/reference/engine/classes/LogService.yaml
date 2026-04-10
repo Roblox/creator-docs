@@ -8,12 +8,13 @@ memory_category: Instances
 summary: |
   A service that allows you to read outputted text.
 description: |
-  **Important notes about this service:** This service might have unexpected or
-  unreliable behavior depending on how games and the game engine log things.
-  Content might also be truncated. Don't rely on contents of events and messages
-  emitted by this service for any important game logic.
+  `LogService` allows you to log structured log entries and read outputted text.
 
-  A service that allows you to read outputted text.
+  #### Warning
+
+  This service might have unexpected or unreliable behavior and content might be
+  truncated. Don't rely on contents of events and messages emitted by this
+  service for any important game logic.
 code_samples: []
 inherits:
   - Instance
@@ -26,13 +27,11 @@ properties: []
 methods:
   - name: LogService:ClearOutput
     summary: |
-      Clears the Roblox Studio output window.
+      Clears Roblox Studio's **Output** window.
     description: |
-      Clears the Roblox Studio output window.
-
-      The log history is also cleared, such that
-      `Class.LogService.GetLogHistory` will not return any entries from before
-      the `Class.LogService.ClearOutput` call.
+      Clears Roblox Studio's **Output** window. The log history is also cleared,
+      such that `Class.LogService:GetLogHistory()` will not return any entries
+      from before the `ClearOutput()` call.
     code_samples: []
     parameters: []
     returns:
@@ -44,22 +43,238 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Logging
+  - name: LogService:Output
+    summary: |
+      Logs a message at the `Enum.MessageType.MessageOutput` level with optional
+      structured context.
+    description: |
+      Logs a message at the `Enum.MessageType.MessageOutput` level. When a
+      `context` table is provided, template placeholders like `{key}` in the
+      message are replaced with the corresponding context values. The context is
+      preserved as structured data for display in the Developer Console and
+      Studio's **Output** window.
+
+      ```lua
+      local LogService = game:GetService("LogService")
+
+      LogService:Output("Player {name} joined", {name = "Alice"})
+      -- Output: "Player Alice joined"
+      ```
+    code_samples: []
+    parameters:
+      - name: message
+        type: string
+        default:
+        summary: |
+          The message string. Supports `{key}` template placeholders when a
+          context table is provided.
+      - name: context
+        type: Dictionary
+        default: nil
+        summary: |
+          An optional dictionary of key-value pairs. When provided, `{key}`
+          placeholders in the message are replaced with the corresponding
+          values.
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Logging
+  - name: LogService:Info
+    summary: |
+      Logs a message at the `Enum.MessageType.MessageInfo` level with optional
+      structured context.
+    description: |
+      Logs a message at the `Enum.MessageType.MessageInfo` level. When a
+      `context` table is provided, template placeholders like `{key}` in the
+      message are replaced with the corresponding context values. The context is
+      preserved as structured data for display in the Developer Console and
+      Studio's **Output** window.
+
+      ```lua
+      local LogService = game:GetService("LogService")
+
+      LogService:Info("User {name} has {count} items", {name = "Alice", count = 42})
+      -- Output: "User Alice has 42 items"
+      ```
+    code_samples: []
+    parameters:
+      - name: message
+        type: string
+        default:
+        summary: |
+          The message string. Supports `{key}` template placeholders when a
+          context table is provided.
+      - name: context
+        type: Dictionary
+        default: nil
+        summary: |
+          An optional dictionary of key-value pairs. When provided, `{key}`
+          placeholders in the message are replaced with the corresponding
+          values.
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Logging
+  - name: LogService:Warn
+    summary: |
+      Logs a message at the `Enum.MessageType.MessageWarning` level with
+      optional structured context.
+    description: |
+      Logs a message at the `Enum.MessageType.MessageWarning` level with
+      optional structured context. When a `context` table is provided, template
+      placeholders like `{key}` in the message are replaced with the
+      corresponding context values. The context is preserved as structured data
+      for display in the Developer Console and Studio's **Output** window.
+
+      ```lua
+      local LogService = game:GetService("LogService")
+
+      LogService:Warn("Memory usage at {pct}%", {pct = 95})
+      -- Output: "Memory usage at 95%"
+      ```
+    code_samples: []
+    parameters:
+      - name: message
+        type: string
+        default:
+        summary: |
+          The message string. Supports `{key}` template placeholders when a
+          context table is provided.
+      - name: context
+        type: Dictionary
+        default: nil
+        summary: |
+          An optional dictionary of key-value pairs. When provided, `{key}`
+          placeholders in the message are replaced with the corresponding
+          values.
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Logging
+  - name: LogService:Error
+    summary: |
+      Logs a message at the `Enum.MessageType.MessageError` level and throws a
+      structured error with optional context.
+    description: |
+      Logs a message at the `Enum.MessageType.MessageError` level and throws a
+      structured error with optional context. As this method always throws, use
+      `Global.LuaGlobals.pcall()` to catch the error. The thrown error is a
+      table with `message`, `template`, `context`, and `stack` fields, and a
+      `__tostring` metamethod that returns the rendered message.
+
+      When a `context` table is provided, template placeholders like `{key}` in
+      the message are replaced with the corresponding context values.
+
+      ```lua
+      local LogService = game:GetService("LogService")
+
+      local ok, err = pcall(function()
+      	LogService:Error("Failed: {reason}", {reason = "timeout"})
+      end)
+      -- ok is false
+      -- err.message == "Failed: timeout"
+      -- err.context == {reason = "timeout"}
+      -- tostring(err) == "Failed: timeout"
+      ```
+    code_samples: []
+    parameters:
+      - name: message
+        type: string
+        default:
+        summary: |
+          The message string. Supports `{key}` template placeholders when a
+          context table is provided.
+      - name: context
+        type: Dictionary
+        default: nil
+        summary: |
+          An optional dictionary of key-value pairs. When provided, `{key}`
+          placeholders in the message are replaced with the corresponding
+          values.
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Logging
+  - name: LogService:Log
+    summary: |
+      Logs a message at the specified level with optional structured context.
+    description: |
+      Logs a message at the specified `Enum.MessageType` level. This is a
+      general-purpose method that combines the functionality of
+      `Class.LogService:Output()|Output()`, `Class.LogService:Info()|Info()`,
+      `Class.LogService:Warn()|Warn()`, and `Class.LogService:Error()|Error()`
+      into a single call with an explicit message type parameter.
+
+      When `messageType` is `Enum.MessageType.MessageError`, this method throws
+      a structured error object (same behavior as
+      `Class.LogService:Error()|Error()`).
+
+      ```lua
+      local LogService = game:GetService("LogService")
+
+      LogService:Log(Enum.MessageType.MessageInfo, "Event {action}", {action = "click"})
+      ```
+    code_samples: []
+    parameters:
+      - name: messageType
+        type: MessageType
+        default:
+        summary: |
+          The `Enum.MessageType` specifying the log level.
+      - name: message
+        type: string
+        default:
+        summary: |
+          The message string. Supports `{key}` template placeholders when a
+          context table is provided.
+      - name: context
+        type: Dictionary
+        default: nil
+        summary: |
+          An optional dictionary of key-value pairs. When provided, `{key}`
+          placeholders in the message are replaced with the corresponding
+          values.
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Logging
   - name: LogService:GetLogHistory
     summary: |
       Returns a table of tables, each with the message string, message type, and
-      timestamp of a message that the client displays in the output window.
+      timestamp of a message that the client displays in the **Output** window.
     description: |
-      **Unreliable Behavior** This may have changing, unexpected or unreliable
-      behavior depending on how the game engine logs things. It should not be
-      relied upon for any important game logic.
-
       Returns a table of tables, each with the message string, message type, and
-      timestamp of a message that the client displays in the output window.
-
-      See also:
-
-      - `Class.LogService.MessageOut` - An event that fires when text is added
-        to the output from the client
+      timestamp of a message that the client displays in the **Output** window.
     code_samples: []
     parameters: []
     returns:

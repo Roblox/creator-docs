@@ -48,24 +48,26 @@ Asset libraries are collections of assets you can place into a central location 
 
 Each of these 3D assets are either a single `Class.MeshPart` object, or a `Class.Model` object that stores multiple `Class.MeshPart` objects, and they use custom materials or physically-based rendering (PBR) textures that allow you to represent realistic shading and lighting. For more information on this process, see [Materials - Custom Materials](../../../../parts/materials.md#custom-materials) and [PBR Textures](../../../../art/modeling/surface-appearance.md).
 
-**If you are logged in on Creator Hub**, you can add the library to your inventory within Studio by clicking the **Add to Inventory** link in the following component. You can then reuse these assets in any project on the platform.
-
-<BrowseSampleCard href='https://create.roblox.com/store/asset/14238769242' description='Create the completed version of the Core sample experience with these art assets. Includes six 3D assets and two custom materials.' title='Core Curriculum Library' assetId={14238769242}  />
-
-<br> </br>
-
 To get the asset library from your inventory into your experience:
 
-1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../../../projects/assets/toolbox.md).
-2. In the **Toolbox** window, click the **Inventory** tab. The **My Models** sort displays.
+1. Add the asset library to your inventory.
+
+   1. Navigate to the asset library's [details page](https://create.roblox.com/store/asset/14238769242) on the Creator Store.
+   1. In the top-right corner, click the **Get Model** button. The asset library is now in your inventory, and you can reuse these assets in any project on the platform.
+
+1. In Studio, navigate to the **Home** tab, then click the **Toolbox** button. The **Toolbox** window opens.
+
+   <img src="../../../../assets/studio/general/Toolbar-Toolbox.png" width="100%" alt="Toolbox highlighted in Studio's toolbar." />
+
+1. In the **Toolbox** window, click the **Inventory** tab. The **My Models** sort displays.
 
    <img src="../../../../assets/studio/toolbox/Inventory-Tab.png" alt="Studio's Toolbox window with the Inventory tab highlighted." width="360" />
 
-3. Click the **Core Building and Scripting** tile. The library displays in the viewport, but some of the meshes do not display the correct texture. This is because their materials are set to custom variants that are not yet in `Class.MaterialService`.
+1. Click the **Core Building and Scripting** tile. The library displays in the viewport, but some of the meshes do not display the correct texture. This is because their materials are set to custom variants that are not yet in `Class.MaterialService`.
 
    <img src="../../../../assets/tutorials/core-building-and-scripting/Asset-Library-Complete.jpg" alt="All meshes from the asset library hover above the water. Some of the meshes are missing their textures so they appear gray." width="800" />
 
-4. In the **Explorer** window, select **Moss_Lumpy_A** and **Moss_Strata_Noisy_A** in the sample asset library, then drag them into the **MaterialService** container. The asset library updates to display the correct materials.
+1. In the **Explorer** window, select **Moss_Lumpy_A** and **Moss_Strata_Noisy_A** in the sample asset library, then drag them into the **MaterialService** container. The asset library updates to display the correct materials.
 
    <img src="../../../../assets/tutorials/core-building-and-scripting/MaterialService-Contents.png" alt="Studio's Explorer window with both the Moss_LumpyA and Moss_Strata_Noisy_A textures highlighted underneath MaterialService." width="320" />
 

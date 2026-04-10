@@ -131,7 +131,7 @@ See the following table for Extended Services pricing:
   </tr>
 
   <tr>
-    <td><a href="https://create.roblox.com/docs/cloud-services/data-stores" style={{color: 'inherit', textDecoration: 'underline'}}>Standard data stores (coming soon)</a></td>
+    <td><a href="https://create.roblox.com/docs/cloud-services/data-stores" style={{color: 'inherit', textDecoration: 'underline'}}>Standard data stores</a></td>
     <td>Get</td>
     <td>250 + (CCU * 40) requests per minute</td>
     <td>$0.08 / 1M requests</td>
@@ -156,7 +156,7 @@ See the following table for Extended Services pricing:
   </tr>
 
   <tr>
-    <td><a href="https://create.roblox.com/docs/cloud-services/data-stores" style={{color: 'inherit', textDecoration: 'underline'}}>Ordered data stores (coming soon)</a></td>
+    <td><a href="https://create.roblox.com/docs/cloud-services/data-stores" style={{color: 'inherit', textDecoration: 'underline'}}>Ordered data stores </a></td>
     <td>Get</td>
     <td>250 + (CCU * 40) requests per minute</td>
     <td>$0.08 / 1M requests</td>
@@ -181,7 +181,7 @@ See the following table for Extended Services pricing:
   </tr>
 
   <tr>
-    <td><a href="https://create.roblox.com/docs/cloud-services/data-stores" style={{color: 'inherit', textDecoration: 'underline'}}>Data store storage (coming soon)</a></td>
+    <td><a href="https://create.roblox.com/docs/cloud-services/data-stores" style={{color: 'inherit', textDecoration: 'underline'}}>Data store storage </a></td>
     <td>Storage</td>
     <td>100 MB + (1MB * Lifetime Players) GB per month</td>
     <td>$0.12 / GB per month</td>

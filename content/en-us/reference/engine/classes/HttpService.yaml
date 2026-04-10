@@ -293,7 +293,8 @@ methods:
       - Keys of the table must be either strings or numbers. If a table contains
         both, an array takes priority (string keys are ignored).
       - An empty Luau table (`{}`) generates an empty JSON array (e.g. `[]`).
-      - The value `nil` is never generated.
+      - Whether passing a dictionary table or a numerically indexed table, avoid
+        `nil` values for any index.
       - Cyclic table references cause an error.
 
       This method allows values such as `inf` and `nan` which are not valid

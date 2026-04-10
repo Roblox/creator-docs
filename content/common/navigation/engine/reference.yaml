@@ -1047,6 +1047,12 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/Folder.yaml
                 ignoreTranslation: true
+                section:
+                  - title: GeneratedFolder
+                    path: /reference/engine/classes/GeneratedFolder
+                    type: engineapi
+                    source: /reference/engine/classes/GeneratedFolder.yaml
+                    ignoreTranslation: true
               - title: ForceField
                 path: /reference/engine/classes/ForceField
                 type: engineapi
@@ -2010,6 +2016,11 @@ navigation:
                                 type: engineapi
                                 source: /reference/engine/classes/Flag.yaml
                                 ignoreTranslation: true
+                      - title: ProceduralModel
+                        path: /reference/engine/classes/ProceduralModel
+                        type: engineapi
+                        source: /reference/engine/classes/ProceduralModel.yaml
+                        ignoreTranslation: true
                       - title: Status
                         path: /reference/engine/classes/Status
                         type: engineapi

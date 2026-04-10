@@ -7,12 +7,10 @@ The **Avatar Settings** window, accessible from Studio's **File** menu or the **
 
 <img src="../assets/studio/general/Toolbar-Avatar-Settings.png" width="800" alt="Avatar Settings indicated in Studio's toolbar" />
 
-Most experiences will find that the default avatar settings work perfectly right out of the box, offering a seamless player experience. The extensive controls in **Avatar Settings** are primarily for advanced creators looking to finely tune avatar appearance and behavior for specific gameplay needs.
+<img src="../assets/studio/general/Avatar-Settings-Window.png" width="600" alt="Avatar Settings window layout" />
 
 <Alert severity="warning">
-**Avatar Settings** modifies underlying experience defaults that are not visible outside of the settings interface or accessible with scripts. This can lead to difficult-to-debug behaviors, especially when working across teams or on a universe with multiple place files.
-
-Test your changes by using the window's preview and by playtesting in Studio so that you fully understand the impact on player avatars before publishing changes to your live experience.
+**Avatar Settings** modifies underlying experience defaults that are not visible outside of the settings interface or accessible with scripts. This can lead to difficult-to-debug behaviors, especially when working across teams or on a universe with multiple place files. Test your changes by using the window's preview and by playtesting in Studio so that you fully understand the impact on player avatars before publishing changes to your live experience.
 </Alert>
 
 The top bar of the **Avatar Settings** window provides easy access to quickly set the avatar type, assign a preset, and enable preview.
@@ -27,17 +25,16 @@ The top bar of the **Avatar Settings** window provides easy access to quickly se
 <tbody>
   <tr>
     <td>**Preset**</td>
-    <td>Displays which Settings preset is enabled and allows you to toggle between them (for descriptions of each setting, see [General](#general)). <br /><br />If the preset displays `--`, this indicates that the current settings are customized and do not match a preset.<br /> </td>
+    <td>Displays which settings preset is enabled and allows you to toggle between them (for descriptions of each setting, see [General](#general)). If the preset displays `--`, this indicates that the current settings are customized and do not match a preset.</td>
   </tr>
   <tr>
     <td>**Preview**</td>
-    <td>Toggles a preview lineup of avatars based off the avatar settings applied. <br/><br/>This creates an `AvatarPreview` folder under **Workspace**&nbsp;⟩ **Camera** with four representative avatar types. You can add or remove avatars to the lineup by dragging them into or out of the folder. <br/> <br/>This folder is removed during Studio runtime playtesting and it is not saved to your place file.</td>
+    <td>Toggles a preview lineup of avatars based off the avatar settings applied and creates an `AvatarPreview` folder under `Class.Workspace`&nbsp;⟩ `Class.Camera` with four representative avatar types. You can add or remove avatars to the lineup by dragging them into or out of the folder. The folder is removed during Studio runtime playtesting and it is not saved to your place file.</td>
   </tr>
   <tr>
     <td>**&ctdot;**</td>
     <td>Sets the default avatar type to either **R6**, **R15**, or **R15 & R6**.</td>
   </tr>
-
 </tbody>
 </table>
 
@@ -48,13 +45,13 @@ The **General** tab offers simple presets tailored to the needs of most experien
 <table>
 <thead>
   <tr>
-    <th>Setting</th>
+    <th width="22%">Setting</th>
     <th>Description</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>****Player Choice****</td>
+    <td>**Player Choice**</td>
     <td>Loads player avatars without any modifications.</td>
   </tr>
   <tr>
@@ -71,7 +68,7 @@ The **Body** tab contains settings for body proportions, parts, scale.
 <table>
 <thead>
   <tr>
-    <th>Setting</th>
+    <th width="22%">Setting</th>
     <th>Description</th>
   </tr>
 </thead>
@@ -81,10 +78,9 @@ The **Body** tab contains settings for body proportions, parts, scale.
     <td>
       <ul>
         <li>**Player Choice** (default): Does not modify avatar character scale.</li>
-        <li>**Custom Scale**: Allows you to scale avatars to an absolute height in studs, but maintain their proportions. You can set a **Minimum** and **Maximum** range. </li>
+        <li>**Custom Scale**: Allows you to scale avatars to an absolute height in studs, but maintain their proportions. You can set a **Minimum** and **Maximum** range.</li>
       </ul>
-      <br />
-      <Typography variant='body1'>For reference, classic style avatars are around 5 studs tall. More humanoid style proportions are around 6 - 6.5 studs.</Typography>
+      For reference, classic style avatars are around 5 studs tall. More humanoid style proportions are around 6 to 6.5 studs.
     </td>
   </tr>
   <tr>
@@ -101,7 +97,7 @@ The **Body** tab contains settings for body proportions, parts, scale.
     <td>
       <ul>
         <li>**Player Choice** (default): Does not modify avatar character proportions.</li>
-        <li>**Custom Build**: Provides customization options that limits the user's avatar body type, height, width, head size, and proportions. </li>
+        <li>**Custom Build**: Provides customization options that limits the user's avatar body type, height, width, head size, and proportions.</li>
       </ul>
     </td>
   </tr>
@@ -115,25 +111,25 @@ The **Clothing** tab contains controls for layered and classic clothing.
 <table>
 <thead>
   <tr>
-    <th>Setting</th>
+    <th width="22%">Setting</th>
     <th>Description</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>Clothing Scale</td>
+    <td>**Clothing Scale**</td>
     <td>
       <ul>
         <li>**Player Choice** (default): Keep user's avatar clothing.</li>
         <li>**Custom Limit**: Remove any clothing that exceeds the limit bounds of the avatar.</li>
         <ul>
-          <li>**Limit Bounds**: The amount of length, width, and depth padding beyond the avatar body’s bounding box, expressed as a percentage. <br /> <br />0% means no padding and items must be strictly within the bounding box of the body and 100% adds padding equal to the avatar's bounding box on all sides, allowing items to occupy up to three times the body size. <br /> <br />This limit is shown as a blue box around each avatar in the preview lineup.</li>
+          <li>**Limit Bounds**: The amount of length, width, and depth padding beyond the avatar body’s bounding box, expressed as a percentage. This limit is shown as a blue box around each avatar in the preview lineup.<br /><br />0% means no padding and items must be strictly within the bounding box of the body and 100% adds padding equal to the avatar's bounding box on all sides, allowing items to occupy up to three times the body size.</li>
         </ul>
       </ul>
     </td>
   </tr>
     <tr>
-    <td>Custom Clothing</td>
+    <td>**Custom Clothing**</td>
     <td>
       <ul>
         <li>**Player Choice** (default): Keep user's avatar clothing.</li>
@@ -151,7 +147,7 @@ The **Accessories** tab contains settings related to accessories in your experie
 <table>
 <thead>
   <tr>
-    <th>Setting</th>
+    <th width="22%">Setting</th>
     <th>Description</th>
   </tr>
 </thead>
@@ -164,7 +160,7 @@ The **Accessories** tab contains settings related to accessories in your experie
         <li>**Custom Limit**: Allows you to **Scale** accessories, or **Remove** accessories that exceed limit bounds.</li>
           <ul>
             <li>**Limit Method**: Allows you to **Scale** accessories to fit within limit bounds, or **Remove** accessories that exceed limit bounds.</li>
-            <li>**Limit Bounds**: The amount of length, width, and depth padding beyond the avatar body's bounding box, expressed as a percentage. <br /> <br />0% means no padding and items must be strictly within the bounding box of the body and 100% means pad by 100% of the bounding box on each side, so items can occupy an area three times the size of the body. <br /> <br />The limit bounds are visualized as a blue box around each avatar in the preview lineup.</li>
+            <li>**Limit Bounds**: The amount of length, width, and depth padding beyond the avatar body's bounding box, expressed as a percentage. The limit bounds are visualized as a blue box around each avatar in the preview lineup.<br /><br />0% means no padding and items must be strictly within the bounding box of the body and 100% means pad by 100% of the bounding box on each side, so items can occupy an area three times the size of the body.</li>
           </ul>
       </ul>
     </td>
@@ -180,19 +176,19 @@ The **Accessories** tab contains settings related to accessories in your experie
   </tr>
   <tr>
     <td>**Accessory Behaviors**</td>
-    <td>Controls to enable/disable accessory behaviors like VFX and Sound.</td>
+    <td>Controls to enable/disable accessory behaviors like **VFX** and **Sound**.</td>
   </tr>
 </tbody>
 </table>
 
 ## Movement
 
-The **Movement** tab contains collision and animation settings.
+The **Movement** tab contains collision and animation settings, as well as ability configurations for the [Character Controller Library](../characters/character-controller-library/index.md).
 
 <table>
 <thead>
   <tr>
-    <th>Setting</th>
+    <th width="22%">Setting</th>
     <th>Description</th>
   </tr>
 </thead>
@@ -201,13 +197,13 @@ The **Movement** tab contains collision and animation settings.
     <td>**Collision**</td>
     <td>
       <ul>
-        <li>**Default**: Use Outer Box method for collisions. This method calculates collisions based off the bounding boxes of avatar parts. </li>
+        <li>**Default**: Use the `Enum.R15CollisionType.OuterBox|OuterBox` method which calculates collisions based off the bounding boxes of avatar parts.</li>
         <li>**Single Collider**: Use a single consistently sized box for collisions.</li>
           <ul>
             <li>**Size**: Set the length, width, and depth of the collider box.</li>
             <li>**Hit & Touch Detection**: Set hit and touch events to use avatar **parts** or **colliders**.</li>
           </ul>
-        <li>**Legacy**: Use Inner Box Collision method (for backwards compatibility only).</li>
+        <li>**Legacy**: Use the `Enum.R15CollisionType.InnerBox|InnerBox` collision method (for backwards compatibility only).</li>
       </ul>
     </td>
   </tr>
@@ -216,8 +212,8 @@ The **Movement** tab contains collision and animation settings.
     <td>
       <ul>
         <li>**Player Choice** (default): Keep user's platform animation style, including style packs</li>
-        <li>**Standard R15**: All avatars will use the Standard R15 platform animations.</li>
-        <li>**Standard R6**: All avatars will use the Standard R6 platform animations.</li>
+        <li>**Standard R15**: All avatars will use the standard R15 platform animations.</li>
+        <li>**Standard R6**: All avatars will use the standard R6 platform animations.</li>
       </ul>
     </td>
   </tr>
@@ -227,6 +223,15 @@ The **Movement** tab contains collision and animation settings.
       <ul>
         <li>**Player Choice** (default): Keep user's platform animations.</li>
         <li>**Custom Clips**: Lets you override and preview any default animation type with a custom ID. These overrides are applied **on top of your selection of Animation Pack**.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>**Abilities**</td>
+    <td>
+      <ul>
+        <li>**Legacy Humanoid** (default): Use legacy character abilities built on rigid `Class.Humanoid` state machines.</li>
+        <li>**Character Controller Library**: Enables the [Character Controller Library](../characters/character-controller-library/index.md) and lets you toggle on/off default character abilities at runtime.</li>
       </ul>
     </td>
   </tr>

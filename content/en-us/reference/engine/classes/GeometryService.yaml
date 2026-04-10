@@ -293,7 +293,7 @@ methods:
           `Class.GeometryService:FragmentAsync()|FragmentAsync()`. The output
           depends on the options provided. If `Origin` and `Radius` are
           provided, then the output array will contain several `Vector3`
-          elements which will all be located within the radius, but the last
+          elements which will all be located within the radius, but the first
           element of the array will be an inner array containing many `Vector3`
           sites which are outside the radius. If `Origin` and `Radius` are not
           provided, the output will simply be an array of `Vector3` positions
