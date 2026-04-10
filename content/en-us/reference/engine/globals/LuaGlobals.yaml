@@ -564,7 +564,8 @@ functions:
       require("@game/ReplicatedStorage/Shared/MyModule")
       require((game).(ReplicatedStorage).(Shared).(MyModule))
 
-      -- "@rbx" prefix corresponds to game.PlatformLibraries, but scripts don't have permission to access that.
+      -- "@rbx" prefix corresponds to nowhere, or game.PlatformLibraries if the library was already loaded. 
+      -- However, normal scripts cannot use game.PlatformLibraries
       require("@rbx/AvatarAbilities")
       ```
 

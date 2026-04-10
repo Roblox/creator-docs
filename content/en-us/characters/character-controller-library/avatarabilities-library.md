@@ -17,6 +17,8 @@ initializeServer()
 
 Initializes the server-side system and allows proper set up of the CCL for characters. This function only works on the server, and trying to run it on the client will do nothing. This function automatically runs on the server using a script in `Class.ServerScriptService` if the CCL is enabled in Studio's [Avatar Settings](../../studio/avatar-settings.md) window.
 
+The following is the code used to initialize the server when CCL is enabled.
+
 ```lua title="AvatarAbilitiesServerScript" highlight="6"
 require("@rbx/AvatarAbilities").initializeServer()
 ```
@@ -27,7 +29,9 @@ require("@rbx/AvatarAbilities").initializeServer()
 initializeCharacter(character: `Class.Model`)
 </figcaption>
 
-Sets up the CCL for the character that the function is ran on. This function automatically runs on both the server and the client using scripts in the AbilityManagerActor if the CCL is enabled in Studio's [Avatar Settings](../../studio/avatar-settings.md) window.
+Sets up the CCL for the character that the function is ran on. This function automatically runs on both the server and the client using scripts in the AbilityManagerActor if the CCL is enabled in Studio's [Avatar Settings](../../studio/avatar-settings.md) window. Note that this function currently doesn't return anything, but it will in the future. <!--this is inferred from the fact it says abilityManager at the bottom of the script example-->
+
+The following is the code used to initialize the character when CCL is enabled.
 
 ```lua title="ServerInitialize / ClientInitialize" highlight="6"
 local AvatarAbilities = require("@rbx/AvatarAbilities")
@@ -46,7 +50,7 @@ local abilityManager = AvatarAbilities.initializeCharacter(character)
 initializeClient()
 </figcaption>
 
-Initializes the client-side system and automatically initializes . Note this is currently unused, clients call initializeCharacter directly from a StarterCharacterScript, but in the future, this will likely be used. 
+Initializes the client-side system and automatically initializes . Note this is currently unused, but in the future, this will likely be used. 
 
 ### Properties
 
