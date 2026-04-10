@@ -1,26 +1,28 @@
 ---
 title: Roblox Plus
-description: Roblox Plus gives you additional ways to earn from your experiences by rewarding engagement and purchases from Plus subscribers.
+description: Roblox Plus gives you additional ways to earn from your games by rewarding engagement and purchases from Plus subscribers.
 ---
 
 <Alert severity="info">
 Roblox Plus will become available to users starting on April 30, 2026.
 </Alert>
 
-**Roblox Plus** gives you additional ways to earn from your experiences by rewarding engagement and purchases from Plus subscribers.
+**Roblox Plus** gives you additional ways to earn from your games by rewarding engagement and purchases from Plus subscribers.
 
-Users who subscribe to Plus get a range of benefits to enhance their purchasing power, access, and overall experience on the platform:
+Users who subscribe to Plus get a range of benefits to enhance their purchasing power, access, and overall game on the platform:
 
-- **Discounted purchases**: Subscribers get 10% off eligible purchases, including in-experience items, avatar items, and more. The discount increases to 20% starting in the third month. Roblox covers this discount for you.
+- **Discounted purchases**: Subscribers get 10% off eligible purchases, including in-game items, avatar items, and more. The discount increases to 20% starting in the third month. Roblox covers this discount for you.
 - **Free paid private servers**: Subscribers get unlimited access to paid private servers at no cost. You're still compensated when they spend time in your paid private servers.
-- **Free Robux transfers**: Subscribers can transfer Robux at no cost to sender or recipient.
+- **Free Robux transfers**: Subscribers can transfer Robux at no cost to sender or recipient. Transfers are subject to age restrictions and parental consent.
 - [**Marketplace access**](../../marketplace/marketplace-policy.md#creator-requirements): Subscribers can trade and resell limited items, and publish and sell avatar items. Premium subscribers have the same Marketplace access.
 
-You can earn from Roblox Plus subscribers through:
+For more information about the benefits of Roblox Plus to end-users, see the [help center](https://en.help.roblox.com/hc/en-us/articles/47967913158164-Roblox-Plus).
 
-- **In-experience Robux purchases**: Subscribers receive a 10–20% discount on purchases, which is covered by Roblox so that your earnings per purchase are not reduced. Lower prices can encourage more frequent purchases, helping increase your overall revenue.
-- **Driving Plus sign-ups**: Encourage engaged users to subscribe to Roblox Plus directly from your experience using `Class.MarketplaceService.PromptRobloxSubscriptionPurchase|PromptRobloxSubscriptionPurchase`. You can earn up to 750 Robux for each new subscriber you bring in.
-- **Time spent in paid private servers**: Earn up to 100 Robux per subscriber when they spend at least 60 minutes in your paid private servers each month.
+As a creator, you can earn from Roblox Plus subscribers through:
+
+- [**In-game Robux purchases**](#earn-from-in-experience-purchases): Subscribers receive a 10–20% discount on purchases, which is covered by Roblox so that your earnings per purchase are not reduced. Lower prices can encourage more frequent purchases, helping increase your overall revenue.
+- [**Driving Plus sign-ups**](#earn-from-in-experience-plus-subscriptions): Encourage engaged users to subscribe to Roblox Plus directly from your game using `Class.MarketplaceService.PromptRobloxSubscriptionPurchase|PromptRobloxSubscriptionPurchase`. You can earn up to 750 Robux for each new subscriber you bring in.
+- [**Time spent in paid private servers**](#earn-from-paid-private-server-time): Earn up to 100 Robux per subscriber when they spend at least 60 minutes in your paid private servers each month.
 
 ## Earn from in-experience purchases
 
@@ -33,7 +35,7 @@ Eligible Robux purchases include:
 - Developer products
 - Game passes
 - Developer subscriptions
-- Paid access experiences
+- Paid access games
 - Avatar items
 
 Discounts do not apply to:
@@ -85,7 +87,7 @@ The following table shows how Roblox Plus discounts are subsidized by Roblox.
 </table>
 
 <Alert severity="warning">
-**If you hard-code prices, your in-experience UI might display incorrect pricing to Plus subscribers.** While subscribers are still charged the discounted price, your experience might show them the full price instead. This mismatch can cause confusion.
+**If you hard-code prices, your in-game UI might display incorrect pricing to Plus subscribers.** While subscribers are still charged the discounted price, your game might show them the full price instead. This mismatch can cause confusion.
 
 To display accurate, real-time pricing (including Plus discounts), you should use `Class.MarketplaceService` functions like `Class.MarketplaceService.GetProductInfoAsync|GetProductInfoAsync` and `Class.MarketplaceService.GetDeveloperProductsAsync|GetDeveloperProductsAsync`.
 
@@ -94,17 +96,17 @@ For implementation details, see [Sell a pass](./passes.md#sell-a-pass) and [Sell
 
 ## Earn from in-experience Plus subscriptions
 
-You can encourage users to subscribe to Roblox Plus directly from your experience with `Class.MarketplaceService.PromptRobloxSubscriptionPurchase|PromptRobloxSubscriptionPurchase`. For each user who becomes a subscriber through your experience, you earn **250 Robux per month for their first three consecutive months**, with up to **750 Robux for every newly acquired subscriber**.
+You can encourage users to subscribe to Roblox Plus directly from your game with `Class.MarketplaceService.PromptRobloxSubscriptionPurchase|PromptRobloxSubscriptionPurchase`. For each user who becomes a subscriber through your game, you earn **250 Robux per month for their first three consecutive months**, with up to **750 Robux for every newly acquired subscriber**.
 
 <img src="../../assets/monetization/roblox-plus/Plus-Signup-Bonus.png" width="80%" />
 
 <Alert severity="info">
-Roblox Plus subscription prompts might appear in other places like paid private server pages or purchase modals, but you only earn a Robux payout when a user subscribes through your experience using `PromptRobloxSubscriptionPurchase`.
+Roblox Plus subscription prompts might appear in other places like paid private server pages or purchase modals, but you only earn a Robux payout when a user subscribes through your game using `PromptRobloxSubscriptionPurchase`.
 </Alert>
 
-To offer Plus subscriptions within your experience and grant rewards to users:
+To offer Plus subscriptions within your game and grant rewards to users:
 
-1. Detect when the user reaches the point in your experience where you want to offer the Plus subscription.
+1. Detect when the user reaches the point in your game where you want to offer the Plus subscription.
 2. Check whether the user already has an active Plus subscription with `Class.Player.HasRobloxSubscription|HasRobloxSubscription`.
 3. If the user is already a subscriber:
     1. Grant them the reward immediately.
@@ -115,7 +117,7 @@ To offer Plus subscriptions within your experience and grant rewards to users:
 
 ### Examples
 
-The following examples show how to work with Roblox Plus in your experience, including retrieving discount information, checking subscription status, prompting users to subscribe, and handling the purchase flow.
+The following examples show how to work with Roblox Plus in your game, including retrieving discount information, checking subscription status, prompting users to subscribe, and handling the purchase flow.
 
 <h5 style={{marginTop: '36px'}}>Example 1</h5>
 
@@ -160,18 +162,18 @@ if success and details.IsSubscribed then
         print("Awarding the '3-Month Subscription Veteran' skin!")
     end
 
-    -- Check if user subscribed through the experience
+    -- Check if user subscribed through the game
     if details.IsOriginExperience then
-        print("Attribution confirmed: User subscribed via this experience.")
+        print("Attribution confirmed: User subscribed via this game.")
     else
-        print("User subscribed elsewhere: Website or another experience.")
+        print("User subscribed elsewhere: Website or another game.")
     end
 end
 ```
 
 <h5 style={{marginTop: '36px'}}>Example 3</h5>
 
-Prompt users to subscribe to Plus and handle the purchase flow in your experience.
+Prompt users to subscribe to Plus and handle the purchase flow in your game.
 
 ```lua
 local MarketplaceService = game:GetService("MarketplaceService")
@@ -270,12 +272,14 @@ You can earn up to **100 Robux per user per server** when a Plus subscriber spen
 
 On each successful Plus subscription renewal, Roblox evaluates that subscriber's paid private server usage over the previous 30 days. It then considers the **top five paid private servers** where the subscriber spent at least 60 minutes during that period. If your server qualifies, you earn based on the server price, up to a maximum of 100 Robux per user per server.
 
-In the following example, Servers A, B, and C qualify because the Plus subscriber spent at least 60 minutes in each server during the last 30 days. Servers D and E don't qualify because they don't meet the 60-minute threshold. The creator earns a total of 205 Robux across the qualifying servers.
+In the following example, Servers A, B, and C qualify because the Plus subscriber spent at least 60 minutes in each server during the last 30 days. Servers D and E don't qualify because they don't meet the 60-minute threshold. If all five servers (A–E) belong to the same game and represent the top five servers the subscriber spent time in, the creator earns a total of 205 Robux across the qualifying servers.
+
+were from their game AND there were the top 5 servers the user was in.
 
 <table>
 <thead>
   <tr>
-    <td>**Experience's paid private server**</td>
+    <td>**game's paid private server**</td>
     <td>**Server price**</td>
     <td>**Cumulative time (30 days prior to renewal)**</td>
     <td>**Creator earnings**</td>
@@ -317,11 +321,11 @@ In the following example, Servers A, B, and C qualify because the Plus subscribe
 
 ## Track your Plus earnings
 
-You can track your earnings from users who subscribe to Roblox Plus through your in-experience prompts, as well as from Plus subscribers who spend time in your paid private servers, whether they join from within your experience or outside of it.
+You can track your earnings from users who subscribe to Roblox Plus through your in-game prompts, as well as from Plus subscribers who spend time in your paid private servers, whether they join from within your game or outside of it.
 
 To see a detailed breakdown of your Plus subscription incentives:
 
-1. In Creator Hub, go to **Creations** and select an experience.
+1. In Creator Hub, go to **Creations** and select a game.
 2. Go to **Monetization** ⟩ **Roblox Plus**.
 
-<img src="../../assets/monetization/roblox-plus/Plus-Analytics.png" width="90%" />
+<img src="../../assets/monetization/roblox-plus/Roblox-Plus-Analytics.png" width="90%" />
