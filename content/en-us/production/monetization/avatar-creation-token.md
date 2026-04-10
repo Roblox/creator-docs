@@ -26,7 +26,7 @@ To create a token:
 3. In **Creations** ⟩ **Experiences**, select your experience.
 4. On the left panel, navigate to **Monetization** ⟩ **Avatar Creation Tokens**.
 5. Click **Create Token**.
-   1. Ensure that your account or group account meets the [Marketplace Creator Requirements](../../marketplace/marketplace-policy.md#creator-requirements). If the token owner account is not ID-verified with a Premium subscription, the experience can not enable in-experience creation APIs. You must maintain these requirements for the token to remain valid.
+   1. Ensure that your account or group account meets the [Marketplace Creator Requirements](../../marketplace/marketplace-policy.md#creator-requirements). If the token owner account is not ID-verified with a Roblox Plus or Premium subscription, the experience cannot enable in-experience creation APIs. You must maintain these requirements for the token to remain valid.
 6. Complete the following fields:
 
    1. **Name** - The name of your token. This is not user-facing and can be changed after creation.

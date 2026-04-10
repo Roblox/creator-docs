@@ -14,7 +14,7 @@ Unlike clothing or bodies, rigid accessories do not require additional configura
 This tutorial covers the basics of each step in the workflow to create your own simple 3D model in Blender and import it into Studio. From there, you can upload the accessory to the Marketplace to sell, save the asset to your toolbox, or use the asset in your experiences.
 
 <Alert severity = 'warning'>
-Creating, building, and sharing on Roblox is free. However, the last step of listing your item to sell requires a Premium Roblox account, an upload fee, and a publishing advance. For more information, see the [Marketplace policy](../../../marketplace/marketplace-policy.md#creator-requirements).
+Creating, building, and sharing on Roblox is free. However, the last step of listing your item to sell requires a Roblox Plus or Premium account, an upload fee, and a publishing advance. For more information, see the [Marketplace policy](../../../marketplace/marketplace-policy.md#creator-requirements).
 </Alert>
 
 <GridContainer numColumns="2">

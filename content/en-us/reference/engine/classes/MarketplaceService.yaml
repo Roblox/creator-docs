@@ -132,6 +132,28 @@ methods:
       	  <td>The cost of purchasing the asset using Robux.</td>
         </tr>
         <tr>
+      	  <td><code>UserBasePriceInRobux</code></td>
+      	  <td>number</td>
+      	  <td>The base price of the asset in Robux before any discounts are applied.</td>
+        </tr>
+        <tr>
+      	  <td><code>PriceDiscountDetails</code></td>
+      	  <td>Array</td>
+      	  <td>An ordered list of discounts representing the difference between <code>UserBasePriceInRobux</code> and <code>PriceInRobux</code>. Each entry contains the following keys:</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+      	  <td><code>Type</code>: The type of discount. <code>"RobloxPlusSubscription"</code> indicates that the discount was applied due to the user’s Roblox Plus subscription.</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+      	  <td><code>AmountInRobux</code>: number — The value of the discount in Robux.</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+      	  <td><code>Percent</code>: number — The percentage of the discount.</td>
+        </tr>
+        <tr>
       	  <td><code>ProductId</code></td>
       	  <td>number</td>
       	  <td>The product ID if <code>Enum.InfoType</code> is <code>Product</code>.</td>
@@ -358,6 +380,7 @@ methods:
       </table>
     code_samples:
       - MarketplaceService-GetProductInfo1
+      - MarketplaceService-GetProductInfo2
     parameters:
       - name: assetId
         type: int64
@@ -383,17 +406,56 @@ methods:
     capabilities:
       - AssetRead
   - name: MarketplaceService:GetRobloxSubscriptionDetailsAsync
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Returns the subscription details for the given user for the Roblox
+      Subscription ecosystem.
+    description: |
+      This method is a streamlined endpoint to check for a single, platform-wide
+      Roblox subscription product. By providing `StartTime` (conditionally) and
+      `IsOriginExperience` to reward long-term loyalists without compromising
+      user data across the platform.
+
+      The returned dictionary contains the following fields:
+
+      <table size="small">
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>IsSubscribed</code></td>
+            <td>bool</td>
+            <td>Returns true if the user has an active Roblox Subscription membership.</td>
+          </tr>
+          <tr>
+            <td><code>IsOriginExperience</code></td>
+            <td>bool</td>
+            <td>Returns true if the user originally subscribed to Roblox Subscription while inside the current Experience (Universe).</td>
+          </tr>
+          <tr>
+            <td><code>StartTime</code></td>
+            <td>DateTime?</td>
+            <td>A <code>Datatype.DateTime</code> object representing the time when the user’s subscription period first began. Note: For privacy reasons, this field is only returned if <code>IsOriginExperience</code> is true. If the user subscribed in a different experience or on the web, this field will be nil.</td>
+          </tr>
+        </tbody>
+      </table>
+    code_samples:
+      - MarketplaceService-GetRobloxSubscriptionDetailsAsync1
     parameters:
       - name: user
         type: Player
         default:
-        summary: ''
+        summary: |
+          The user regarding whom to check the subscription status.
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          A dictionary containing subscription details such as `IsSubscribed`,
+          `IsOriginExperience`, and optionally `StartTime`.
     tags:
       - Yields
     deprecation_message: ''
@@ -1109,7 +1171,9 @@ methods:
       - type: ()
         summary: ''
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.MarketplaceService:PromptRobloxSubscriptionPurchase()|PromptRobloxSubscriptionPurchase()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -1192,6 +1256,38 @@ methods:
         default: Default
         summary: |
           Ignored.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - PromptExternalPurchase
+  - name: MarketplaceService:PromptRobloxSubscriptionPurchase
+    summary: |
+      Prompts a user to purchase a Roblox Plus subscription.
+    description: |
+      Prompts a user to purchase a Roblox Plus subscription. When the user
+      successfully subscribes, any experience-defined rewards for the upsell are
+      granted automatically through the engine API.
+
+      ##### See also
+
+      - `Class.MarketplaceService.PromptRobloxSubscriptionPurchaseFinished`
+        which fires when the Roblox Plus purchase UI closes.
+      - `Class.Player.HasRobloxSubscription` which can be observed via
+        `Class.Instance:GetPropertyChangedSignal()` to detect when a user's
+        subscription status changes.
+    code_samples:
+      - MarketplaceService-PromptRobloxSubscriptionPurchase
+    parameters:
+      - name: user
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` to be prompted to purchase Roblox Plus.
     returns:
       - type: ()
         summary: ''
@@ -1637,6 +1733,44 @@ events:
 
           This might not accurately reflect if the purchase itself has been
           successfully processed.
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - PromptExternalPurchase
+  - name: MarketplaceService.PromptRobloxSubscriptionPurchaseFinished
+    summary: |
+      Fires when a purchase prompt for Roblox Plus is closed.
+    description: |
+      This event fires when a purchase prompt for Roblox Plus closes. For
+      example, when a user receives the purchase prompt and clicks **Cancel**,
+      or when they receive a success or error message and click **OK**.
+
+      Note that this event firing does **not** guarantee the subscription was
+      successfully processed. Listen to `Class.Player.HasRobloxSubscription` via
+      `Class.Instance:GetPropertyChangedSignal()` on the server to confirm a
+      subscription change before granting rewards.
+
+      ##### See also
+
+      - `Class.MarketplaceService.PromptRobloxSubscriptionPurchase|PromptRobloxSubscriptionPurchase`
+        to prompt a user to purchase Roblox Plus.
+      - `Class.Player.HasRobloxSubscription`, which can be observed via
+        `Class.Instance:GetPropertyChangedSignal()` to detect when a user's
+        subscription status changes.
+    code_samples:
+      - MarketplaceService-PromptRobloxSubscriptionPurchaseFinished
+    parameters:
+      - name: user
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` who received the prompt.
+      - name: didTryPurchasing
+        type: boolean
+        default:
+        summary: |
+          Whether the user attempted to purchase Roblox Plus.
     tags: []
     deprecation_message: ''
     security: None
