@@ -120,7 +120,9 @@ To request a match:
     3. Select the revenue share timing. You can choose to **Monetize on activation** and apply the revenue share rate of the license you selected the moment the creator accepts your offer, or **Monetize later** and activate the revenue share rate later.
     4. Click **Confirm**.
 
-Roblox reviews the submitted experience to confirm it matches your IP. If approved, a license offer is automatically sent to the creator of the experience.
+<Alert severity="warning">
+  Roblox reviews the submitted experience to verify that it matches your IP. **If approved, a license offer is automatically sent to the creator of the experience.**
+</Alert>
 
 ## Review applications from creators
 
