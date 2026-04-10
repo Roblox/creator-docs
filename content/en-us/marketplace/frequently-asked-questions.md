@@ -6,7 +6,7 @@ description: Marketplace FAQ providing answers and resources for common question
 <dl>
   <dt>**What do I need to do to be eligible to sell in Marketplace?**</dt>
 
-  <dd><p />Creators who are [ID-verified](https://en.help.roblox.com/hc/en-us/articles/4407282410644-Age-ID-Verification), have [Roblox Premium 1000 or 2200](https://www.roblox.com/premium/membership), and consistently follow our [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) and [Marketplace Policies](./marketplace-policy.md) can upload, publish, and sell in Marketplace. These eligibility requirements allow us to more effectively enforce our Marketplace policies and prevent violators from circumventing moderation. You can learn more about the requirements to upload and publish as an individual or a group [here](./marketplace-policy.md#creator-requirements). <p /> Roblox also requires a [publishing advance](./marketplace-fees-and-commissions.md#publishing-advance) for all items published on Marketplace, with the exception of free Limited items. A publishing advance is a rebatable upfront fee that you pay at the time of publishing an item. <p /></dd><br />
+  <dd><p />Creators who are [ID-verified](https://en.help.roblox.com/hc/en-us/articles/4407282410644-Age-ID-Verification), have [Roblox Plus](../production/monetization/roblox-plus.md) or [Roblox Premium 1000 or 2200](https://www.roblox.com/premium/membership), and consistently follow our [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) and [Marketplace Policies](./marketplace-policy.md) can upload, publish, and sell in Marketplace. These eligibility requirements allow us to more effectively enforce our Marketplace policies and prevent violators from circumventing moderation. You can learn more about the requirements to upload and publish as an individual or a group [here](./marketplace-policy.md#creator-requirements). <p /> Roblox also requires a [publishing advance](./marketplace-fees-and-commissions.md#publishing-advance) for all items published on Marketplace, with the exception of free Limited items. A publishing advance is a rebatable upfront fee that you pay at the time of publishing an item. <p /></dd><br />
 
   <dt>**Why is Roblox providing more transparent eligibility requirements to create and sell?**</dt>
 
@@ -32,9 +32,9 @@ description: Marketplace FAQ providing answers and resources for common question
 
   <dd><p />There is no cap on the number of 3D accessories, clothing, bodies, or heads that you can upload from Studio. Once your items are uploaded, you can publish any number of non-Limited items and only 1 Limited item per day.<p /></dd><br />
 
-  <dt>**Why is Premium a requirement?**</dt>
+  <dt>**Why is Roblox Plus or Premium a requirement?**</dt>
 
-  <dd><p />We care about creating a marketplace with items that people love and where creativity is protected. We also care about ensuring Marketplace remains a safe and civil space for all. Requiring that creators have Premium and be ID verified brings more accountability to the ecosystem and motivates creators who want to sell in Marketplace to publish items they believe will sell.<p /></dd><br />
+  <dd><p />We care about creating a marketplace with items that people love and where creativity is protected. We also care about ensuring Marketplace remains a safe and civil space for all. Requiring that creators have Roblox Plus or Premium and be ID verified brings more accountability to the ecosystem and motivates creators who want to sell in Marketplace to publish items they believe will sell.<p /></dd><br />
 
   <dt>**Will the price floors ever change?**</dt>
 

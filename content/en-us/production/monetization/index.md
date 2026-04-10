@@ -67,6 +67,10 @@ The [immersive ads](../../production/monetization/immersive-ads.md) system allow
   </figure>
 </GridContainer>
 
+### Roblox Plus
+
+[Roblox Plus](./roblox-plus.md) lets you earn through increased in-experience purchases driven by Roblox-subsidized user discounts, sign-up bonuses for each new subscriber you bring in, and engagement in paid private servers.
+
 ### Subscriptions
 
 [Subscriptions](../../production/monetization/subscriptions.md) within experiences let you offer users recurring benefits for a monthly fee.
@@ -91,12 +95,6 @@ A [developer product](../../production/monetization/developer-products.md) is an
 ### Price optimization
 
 [Price optimization](../../production/monetization/price-optimization.md) lets you find the best price points for your passes and developer products, which can help you earn more money over time while keeping your prices competitive.
-
-### Engagement-based payouts
-
-<img src="../../assets/monetization/engagement-based-payouts/Premium-Banner.jpg" />
-
-[Engagement-based payouts](../../production/monetization/engagement-based-payouts.md) allow you to automatically earn Robux based on the share of time that [Premium](https://www.roblox.com/premium/membership) subscribers engage in your experiences.
 
 ### Paid access in Robux
 
