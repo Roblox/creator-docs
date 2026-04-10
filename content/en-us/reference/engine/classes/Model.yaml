@@ -57,6 +57,7 @@ inherits:
 descendants:
   - Actor
   - BackpackItem
+  - ProceduralModel
   - Status
   - WorldRoot
 tags: []
@@ -68,7 +69,7 @@ properties:
       streaming enabled.
     description: |
       Sets the level of detail on the model for experiences with instance
-      [streaming](../../../workspace/streaming.md) enabled.
+      [streaming](../../../workspace/streaming/index.md) enabled.
 
       When set to `Enum.ModelLevelOfDetail|StreamingMesh`, a lower resolution
       "imposter" mesh (colored, coarse mesh that wraps around all child parts of
@@ -102,8 +103,8 @@ properties:
       instance streaming is enabled.
     description: |
       Controls how `Class.Model|Models` are streamed in and out when instance
-      [streaming](../../../workspace/streaming.md) is enabled. Behavior depends
-      on the selected enum. Has no effect when streaming is not enabled.
+      [streaming](../../../workspace/streaming/index.md) is enabled. Behavior
+      depends on the selected enum. Has no effect when streaming is not enabled.
 
       This property should only be changed in Studio via the
       [Properties](../../../studio/properties.md) window when streaming is
@@ -345,8 +346,10 @@ methods:
       at runtime if physics constraints are acting upon the parts within the
       `Class.Model`.
 
-      If there is no `Class.Model.PrimaryPart|PrimaryPart` for the model, the
-      bounding box will be aligned to the world axes.
+      The orientation of the bounding box matches the orientation of the
+      `Class.PVInstance.GetPivot|Pivot` - either the pivot of the
+      `Class.Model.PrimaryPart|PrimaryPart` (if present) or the
+      `Class.Model.WorldPivot|WorldPivot` of the model.
 
       ```lua
       local Workspace = game:GetService("Workspace")
@@ -378,12 +381,10 @@ methods:
       `Class.Model.PrimaryPart` if it is set.
     description: |
       Returns the size of the smallest bounding box that contains all of the
-      `Class.BasePart|BaseParts` in the `Class.Model`. If
-      `Class.Model.PrimaryPart` exists then the bounding box will be aligned to
-      that part. If a primary part has not been set then the function will chose
-      a part in the model to align the bounding box to. As the selection of this
-      part is not deterministic it is recommended to set a
-      `Class.Model.PrimaryPart` to get consistent results with this function.
+      `Class.BasePart|BaseParts` in the `Class.Model`. The orientation matches
+      the orientation of the `Class.PVInstance.GetPivot|Pivot` - either the
+      pivot of the `Class.Model.PrimaryPart|PrimaryPart` (if present) or the
+      `Class.Model.WorldPivot|WorldPivot` of the model.
 
       Note this function only returns the size of the smallest bounding box, and
       the developer must employ their own method to obtain the position of the
@@ -538,6 +539,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: Model:MakeJoints
     summary: |
       Goes through all `Class.BasePart|BaseParts` in the `Class.Model`. If any

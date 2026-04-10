@@ -31,6 +31,8 @@ For example, consider an example per-partition limit of 50,000 requests per minu
 
 - In the very best case, a sorted map and a queue are limited to 50,000 RPM, because each one resides on a single partition.
 - Requests to hash maps are spread across the item keys, which are themselves spread across partitions, so hash maps can have a much higher effective limit before throttling, many times that of the other data structures assuming that requests are spread across many item keys.
+- Although hash maps can achieve higher overall throughput by spreading requests across partitions, individual item keys are still rate limited to maintain system stability. If most of your traffic targets a single item key, that key may still be throttled.
+- To scale effectively and avoid these per-key limits, implement key sharding. Spread reads and writes evenly across multiple item keys to reduce bottlenecks and maintain smooth performance.
 
 <img src="../../assets/data/memory-store/Per-Partition-Limits-4.png" width="100%" />
 

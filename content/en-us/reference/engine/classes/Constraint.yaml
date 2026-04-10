@@ -61,6 +61,7 @@ properties:
       can_save: false
     capabilities:
       - Physics
+    simulationAccess: true
   - name: Constraint.Attachment0
     summary: |
       The `Class.Attachment` that is connected to
@@ -81,6 +82,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: Constraint.Attachment1
     summary: |
       The `Class.Attachment` that is connected to
@@ -101,6 +103,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: Constraint.Color
     summary: |
       The color of the constraint.
@@ -139,6 +142,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: Constraint.Visible
     summary: |
       Toggles the constraint's visibility.

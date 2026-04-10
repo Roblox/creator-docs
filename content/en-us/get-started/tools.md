@@ -183,7 +183,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Targeted user acquisition</h4>
-        <Typography variant='body1'>Roblox <a href="../production/promotion/advertise-on-roblox.md" target="_blank">Sponsored Ads</a> empower you to reach the players most likely to engage with your experience. With comprehensive audience selection options, you can tailor your campaigns to specific demographics and interests, delivering maximum impact and driving high-quality traffic to your game.</Typography>
+        <Typography variant='body1'>Roblox <a href="../production/promotion/ads-manager.md" target="_blank">Sponsored Ads</a> empower you to reach the players most likely to engage with your experience. With comprehensive audience selection options, you can tailor your campaigns to specific demographics and interests, delivering maximum impact and driving high-quality traffic to your game.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>

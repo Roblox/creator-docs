@@ -46,6 +46,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+    simulationAccess: true
   - name: FluidForceSensor.Force
     summary: |
       Assembly fluid force in world coordinates.
@@ -67,6 +68,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+    simulationAccess: true
   - name: FluidForceSensor.Torque
     summary: |
       Assembly fluid torque in world coordinates.
@@ -88,6 +90,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+    simulationAccess: true
 methods:
   - name: FluidForceSensor:EvaluateAsync
     summary: |
@@ -127,5 +130,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
+    simulationAccess: true
 events: []
 callbacks: []

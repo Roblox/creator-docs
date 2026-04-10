@@ -93,6 +93,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: SlidingBallConstraint.CurrentPosition
     summary: |
       The current offset between the constraint's
@@ -116,6 +117,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: SlidingBallConstraint.LimitsEnabled
     summary: |
       Sets whether the `Class.SlidingBallConstraint` will limit the range of
@@ -141,6 +143,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: SlidingBallConstraint.LinearResponsiveness
     summary: |
       Specifies the "sharpness" of the linear servo motor in reaching the
@@ -165,6 +168,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: SlidingBallConstraint.LowerLimit
     summary: |
       The lower positional limit along the **X** axis of
@@ -188,6 +192,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: SlidingBallConstraint.MotorMaxAcceleration
     summary: |
       The constraint's maximum acceleration when
@@ -213,6 +218,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: SlidingBallConstraint.MotorMaxForce
     summary: |
       The constraint's maximum force when
@@ -238,6 +244,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: SlidingBallConstraint.Restitution
     summary: |
       The elasticity of the constraint's `Class.Attachment|Attachments` when
@@ -266,6 +273,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: SlidingBallConstraint.ServoMaxForce
     summary: |
       The constraint's maximum force when
@@ -291,6 +299,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: SlidingBallConstraint.Size
     summary: |
       The constraint's visualized size.
@@ -310,6 +319,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: SlidingBallConstraint.SoftlockServoUponReachingTarget
     summary: ''
     description: ''
@@ -329,6 +339,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: SlidingBallConstraint.Speed
     summary: |
       The constraint's desired speed when
@@ -356,6 +367,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: SlidingBallConstraint.TargetPosition
     summary: |
       The constraint's attempted target position when
@@ -379,6 +391,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: SlidingBallConstraint.UpperLimit
     summary: |
       The upper positional limit along the **X** axis of
@@ -402,6 +415,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: SlidingBallConstraint.Velocity
     summary: |
       The constraint's attempted velocity when
@@ -425,6 +439,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
 methods: []
 events: []
 callbacks: []

@@ -33,11 +33,11 @@ description: |
   Note that if an invoked `Class.RemoteFunction` creates an instance on the
   server, there is no guarantee that it exists on the client when the function
   returns. This is particularly important in places where instance
-  [streaming](../../../workspace/streaming.md) is enabled and when the created
-  instances are `Class.BasePart|BaseParts` or `Class.Model|Models`, since parts
-  that are far away from the player's character may not be streamed to the
-  client, and models that are `Enum.ModelStreamingMode|Atomic` depend on whether
-  their parts are streamed. Even if a model is
+  [streaming](../../../workspace/streaming/index.md) is enabled and when the
+  created instances are `Class.BasePart|BaseParts` or `Class.Model|Models`,
+  since parts that are far away from the player's character may not be streamed
+  to the client, and models that are `Enum.ModelStreamingMode|Atomic` depend on
+  whether their parts are streamed. Even if a model is
   `Enum.ModelStreamingMode|Persistent`, there may be some delay between the
   creation of the model and when it is replicated to the client.
 

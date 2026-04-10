@@ -89,7 +89,7 @@ The Roblox script can be relatively concise because Roblox has many built-in ass
 
 Unity and Roblox both support importing custom meshes and models in `.fbx` format. Certain types of assets may require specific configurations and export settings from your third-party modeling software. For more information, see the following pages:
 
-- [3D Importer](art/modeling/3d-importer.md)
+- [Importer](studio/importer.md)
 - [General specifications](art/modeling/specifications.md)
 - [Blender and Maya export requirements](art/modeling/export-requirements.md)
 
@@ -117,20 +117,20 @@ Similar to Unity tools, Roblox Studio supports [plugins](studio/plugins.md), whi
 
 ## Glossary
 
-| Unity | Roblox | Notes |
-| :--- | :--- | :--- |
-| Scene | [Place](projects.md#places) | |
-| GameObject | `Class.Part` or `Class.Model` | See [Philosophical differences](#philosophical-differences). |
-| Prefab | [Package](projects/assets/packages.md) | |
-| Transform | `Datatype.CFrame` | `Datatype.CFrame` doesn't include scale information. See [Transforms](#transforms). |
-| Hierarchy | [Explorer](studio/explorer.md) | |
-| Inspector | [Properties](studio/properties.md) |
-| Scene view | [3D viewport](studio/ui-overview.md#3d-viewport) | |
-| Game view | [3D viewport](studio/ui-overview.md#3d-viewport) | The viewport transitions into a gameplay view when you test your experience. |
-| Project window | [Asset Manager](projects/assets/manager.md) or [Toolbox](projects/assets/toolbox.md) | |
-| Terrain Inspector | [Terrain Editor](studio/terrain-editor.md) | |
-| Spawn point | `Class.SpawnLocation` | |
-| Console | [Output](studio/output.md) | |
-| Asset Store | [Creator Store](production/creator-store.md) | |
-| Overlays | [Toolbar](studio/ui-overview.md#toolbar-and-mezzanine) | |
-| Tool | [Plugin](studio/plugins.md) | |
+| Unity             | Roblox                                                                               | Notes                                                                               |
+| :---------------- | :----------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
+| Scene             | [Place](projects.md#places)                                                          |                                                                                     |
+| GameObject        | `Class.Part` or `Class.Model`                                                        | See [Philosophical differences](#philosophical-differences).                        |
+| Prefab            | [Package](projects/assets/packages.md)                                               |                                                                                     |
+| Transform         | `Datatype.CFrame`                                                                    | `Datatype.CFrame` doesn't include scale information. See [Transforms](#transforms). |
+| Hierarchy         | [Explorer](studio/explorer.md)                                                       |                                                                                     |
+| Inspector         | [Properties](studio/properties.md)                                                   |
+| Scene view        | [3D viewport](studio/ui-overview.md#3d-viewport)                                     |                                                                                     |
+| Game view         | [3D viewport](studio/ui-overview.md#3d-viewport)                                     | The viewport transitions into a gameplay view when you test your experience.        |
+| Project window    | [Asset Manager](projects/assets/manager.md) or [Toolbox](projects/assets/toolbox.md) |                                                                                     |
+| Terrain Inspector | [Terrain Editor](studio/terrain-editor.md)                                           |                                                                                     |
+| Spawn point       | `Class.SpawnLocation`                                                                |                                                                                     |
+| Console           | [Output](studio/output.md)                                                           |                                                                                     |
+| Asset Store       | [Creator Store](production/creator-store.md)                                         |                                                                                     |
+| Overlays          | [Toolbar](studio/ui-overview.md#toolbar-and-mezzanine)                               |                                                                                     |
+| Tool              | [Plugin](studio/plugins.md)                                                          |                                                                                     |

@@ -1047,6 +1047,12 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/Folder.yaml
                 ignoreTranslation: true
+                section:
+                  - title: GeneratedFolder
+                    path: /reference/engine/classes/GeneratedFolder
+                    type: engineapi
+                    source: /reference/engine/classes/GeneratedFolder.yaml
+                    ignoreTranslation: true
               - title: ForceField
                 path: /reference/engine/classes/ForceField
                 type: engineapi
@@ -2010,6 +2016,11 @@ navigation:
                                 type: engineapi
                                 source: /reference/engine/classes/Flag.yaml
                                 ignoreTranslation: true
+                      - title: ProceduralModel
+                        path: /reference/engine/classes/ProceduralModel
+                        type: engineapi
+                        source: /reference/engine/classes/ProceduralModel.yaml
+                        ignoreTranslation: true
                       - title: Status
                         path: /reference/engine/classes/Status
                         type: engineapi
@@ -4252,6 +4263,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/CreateAssetResult.yaml
         ignoreTranslation: true
+      - title: CreateContentResult
+        path: /reference/engine/enums/CreateContentResult
+        type: engineapi
+        source: /reference/engine/enums/CreateContentResult.yaml
+        ignoreTranslation: true
       - title: CreateOutfitFailure
         path: /reference/engine/enums/CreateOutfitFailure
         type: engineapi
@@ -5141,6 +5157,11 @@ navigation:
         path: /reference/engine/enums/PermissionLevelShown
         type: engineapi
         source: /reference/engine/enums/PermissionLevelShown.yaml
+        ignoreTranslation: true
+      - title: PhysicalConstraintType
+        path: /reference/engine/enums/PhysicalConstraintType
+        type: engineapi
+        source: /reference/engine/enums/PhysicalConstraintType.yaml
         ignoreTranslation: true
       - title: PhysicsSimulationRate
         path: /reference/engine/enums/PhysicsSimulationRate

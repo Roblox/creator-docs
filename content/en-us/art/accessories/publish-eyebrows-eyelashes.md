@@ -32,7 +32,7 @@ Use the following steps to import your face accessory and body assets into Studi
 
 You can download reference `.fbx` models of [eyelashes](../../assets/art/reference-files/Eyelashes.fbx), [eyebrows](../../assets/art/reference-files/Eyebrows.fbx), and an [avatar body](../../assets/art/reference-files/AnimeFemale-Studio-Ready.fbx) to follow along this process.
 
-1. In the [3D Importer](../../art/modeling/3d-importer.md), import the `.fbx` files of your face accessory and body. The eyelashes, eyebrows, and body each populate in your Workspace as a `Model`.
+1. In the [Importer](../../studio/importer.md), import the `.fbx` files of your face accessory and body. The eyelashes, eyebrows, and body each populate in your Workspace as a `Model`.
    1. If you are using the reference body, set **Rig General** > **Rig Type** to **Rthro**.
 2. Use the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) and select the **Eyelash** or **Eyebrow** model and click **Next**.
 

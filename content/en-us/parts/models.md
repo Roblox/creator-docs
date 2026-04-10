@@ -108,19 +108,20 @@ To prevent parts that have fallen off of an experience's map from continuing to 
 
 ## Model streaming
 
-Instance [streaming](../workspace/streaming.md) dynamically loads and unloads `Class.Model|Models` on a player's device as their character explores the 3D world. With streaming enabled, you can specify the way each model should be treated under streaming behavior. For example, a model set to [Persistent](../workspace/streaming.md#persistent) will never stream out, or a model set to [Atomic](../workspace/streaming.md#atomic) will stream in and out as a single unit with all of its descendants. For more information, see [Per-model streaming controls](../workspace/streaming.md#per-model-streaming-controls).
+Instance [streaming](../workspace/streaming/index.md) dynamically loads and unloads `Class.Model|Models` on a player's device as their character explores the 3D world. With streaming enabled, you can specify the way each model should be treated under streaming behavior. For example, a model set to [Persistent](../workspace/streaming/index.md#persistent) will never stream out, or a model set to [Atomic](../workspace/streaming/index.md#atomic) will stream in and out as a single unit with all of its descendants. For more information, see [per-model streaming controls](../workspace/streaming/index.md#per-model-streaming-controls).
 
-Because the 3D content that exists on the client changes dynamically in a streaming-enabled experience, models might suddenly disappear, which can be visually jarring for the player. To avoid this situation, you can set specific models to render as optimized "SLIM" meshes or as lower resolution "imposter" meshes when streamed out. See [Model level of detail](../workspace/streaming.md#model-level-of-detail).
+Because the 3D content that exists on the client changes dynamically in a streaming-enabled experience, models might suddenly disappear, which can be visually jarring for the player. To avoid this situation, you can set specific models to render as optimized "SLIM" meshes or as lower resolution "imposter" meshes when streamed out. See [model level of detail](../workspace/streaming/techniques.md#set-model-level-of-detail).
 
 ## Upload models
 
-When you upload or import a `.gltf`, `.fbx` and `.obj` model file to the cloud using the [3D Importer](../art/accessories/creating-rigid/importing.md), Roblox represents it as a cloud-based asset with a unique corresponding ID. This cloud-based asset system allows you to store models through Roblox and reuse them across the platform in various contexts without maintaining local copies as part of each saved Studio experience.
+When you upload or import a `.gltf`, `.fbx` and `.obj` model file to the cloud using the [Importer](../art/accessories/creating-rigid/importing.md), Roblox represents it as a cloud-based asset with a unique corresponding ID. This cloud-based asset system allows you to store models through Roblox and reuse them across the platform in various contexts without maintaining local copies as part of each saved Studio experience.
 
 To upload a model you made in Studio:
 
 1. In the **Explorer** window, right-click your model. A contextual menu displays.
 2. Select **Save to Roblox**. The **Asset Configuration** window displays.
 3. In the **Asset Configuration** window,
+
    1. Set **Content Type** to **Development Item**.
    1. Set **Asset Category** to **Model**.
    1. Complete the following fields:

@@ -171,7 +171,7 @@ You've completed the exporting section of this tutorial. If desired, download a 
 
 ## Import to Studio
 
-Studio's 3D Importer provides a quick and easy way to import third-party 3D assets into your projects. The importer provides object previews and error-checking to ensure that your asset meets Studio's general 3D requirements.
+Studio's Importer provides a quick and easy way to import third-party 3D assets into your projects. The importer provides object previews and error-checking to ensure that your asset meets Studio's general 3D requirements.
 
 To import your asset, check out the latest information on [importing rigid accessories](./importing.md).
 

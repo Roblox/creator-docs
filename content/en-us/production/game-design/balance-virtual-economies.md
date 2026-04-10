@@ -10,6 +10,10 @@ Virtual economies on Roblox are intricate systems that mimic real-world economie
 - Impact estimation
 - Resource sinks
 
+<Alert severity = 'warning'>
+Use [Experiments](../../production/experiments.md) to A/B test different price points and discount strategies to find your shop's "Goldilocks zone." Once you identify the most effective prices, leverage [Configs](../../production/configs.md) to trigger flash sales or balance your virtual economy in real-time without restarting your servers.
+</Alert>
+
 ## Data-driven content
 
 Using data to understand how players interact with and consume your experience's content is key to maintaining a balanced economy. When building your experience's database, be sure to track:

@@ -20,7 +20,7 @@ To view, create, or edit secrets, you must be the experience owner or group owne
    - You can use a limited wildcard syntax for the domain, such as `*` for any domain (not recommended) or `*.example.com` for any subdomain at `example.com`. Specific domains are even better, such as `my.example.com`.
 
 <Alert severity="success">
-You can also use Open Cloud to manage your secrets. See the [reference documentation](../cloud/api/secrets-store.md) and [guide](../cloud/guides/secrets-store.md).
+You can also use Open Cloud to manage your secrets. See the [reference documentation](/cloud/reference/features/universes#get_cloud_v2_universes__universeId__secrets) and [guide](../cloud/guides/secrets-store.md).
 </Alert>
 
 ## Local secrets

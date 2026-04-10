@@ -137,10 +137,11 @@ properties:
       - Audio
   - name: AudioPlayer.IsPlaying
     summary: |
-      Denotes whether this `Class.AudioPlayer` is currently playing.
+      Denotes whether this `Class.AudioPlayer` is currently playing or planning
+      to play.
     description: |
-      Denotes whether this `Class.AudioPlayer` is currently playing. This
-      property is read-only, but replicates. To play and stop an
+      Denotes whether this `Class.AudioPlayer` is currently playing or planning
+      to play. This property is read-only, but replicates. To play and stop an
       `Class.AudioPlayer` at runtime, use the `Class.AudioPlayer:Play()|Play()`
       and `Class.AudioPlayer:Stop()|Stop()` methods.
     code_samples: []
@@ -373,6 +374,28 @@ properties:
     capabilities:
       - Audio
 methods:
+  - name: AudioPlayer:Cancel
+    summary: |
+      Attempts to cancel a pre-planned future `Play` or `Stop` command.
+    description: ''
+    code_samples: []
+    parameters:
+      - name: actionId
+        type: int64?
+        default:
+        summary: |
+          The unique-ID of a pre-planned `Play` or `Stop` command.
+    returns:
+      - type: boolean
+        summary: |
+          Whether the cancellation was successful. Returns false if the action
+          has already occurred, or otherwise does not exist.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Audio
   - name: AudioPlayer:GetConnectedWires
     summary: |
       Returns an array of `Class.Wire|Wires` that are connected to the specified
@@ -480,10 +503,19 @@ methods:
       `Class.AudioPlayer.TimePosition|TimePosition` is. Replicates from server
       to client.
     code_samples: []
-    parameters: []
+    parameters:
+      - name: atTime
+        type: double?
+        default:
+        summary: |
+          A specific time, based on
+          `Class.SoundService.GetMixerTime|GetMixerTime`, that this
+          `AudioPlayer` should begin playing at.
     returns:
-      - type: ()
-        summary: ''
+      - type: int64?
+        summary: |
+          If `atTime` was provided, a unique ID, which can be passed to
+          `Class.AudioPlayer.Cancel|Cancel()`.
     tags: []
     deprecation_message: ''
     security: None
@@ -499,10 +531,19 @@ methods:
       `Class.AudioPlayer.TimePosition|TimePosition` is. Replicates from server
       to client.
     code_samples: []
-    parameters: []
+    parameters:
+      - name: atTime
+        type: double?
+        default:
+        summary: |
+          A specific time, based on
+          `Class.SoundService.GetMixerTime|GetMixerTime`, that this
+          `AudioPlayer` should stop playing at.
     returns:
-      - type: ()
-        summary: ''
+      - type: int64?
+        summary: |
+          If `atTime` was provided, a unique ID, which can be passed to
+          `Class.AudioPlayer.Cancel|Cancel()`.
     tags: []
     deprecation_message: ''
     security: None

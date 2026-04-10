@@ -69,6 +69,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
   - name: IntConstrainedValue.MinValue
     summary: |
       The lowest number that the `Class.IntConstrainedValue.Value` property can
@@ -91,6 +92,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
   - name: IntConstrainedValue.Value
     summary: |
       Used to hold an integer value between `Class.IntConstrainedValue.MinValue`
@@ -114,6 +116,7 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
+    simulationAccess: true
 methods: []
 events:
   - name: IntConstrainedValue.Changed

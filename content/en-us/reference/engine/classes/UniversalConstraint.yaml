@@ -56,6 +56,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: UniversalConstraint.MaxAngle
     summary: |
       The max angle, in degrees, of the constraint's limiting cone.
@@ -81,6 +82,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: UniversalConstraint.Radius
     summary: |
       The constraint's visualization radius.
@@ -101,6 +103,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: UniversalConstraint.Restitution
     summary: |
       The restitution coefficient of the cone constraint.
@@ -125,6 +128,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
 methods: []
 events: []
 callbacks: []

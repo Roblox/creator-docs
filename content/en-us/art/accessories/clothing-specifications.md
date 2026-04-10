@@ -49,12 +49,6 @@ Depending on the type of layerable asset, the size requirements can't exceed the
     <td>8</td>
   </tr>
   <tr>
-    <td>Hair</td>
-    <td>3</td>
-    <td>5* <br /> (Not centered: 2 up, 3 down)</td>
-    <td>3.5* <br /> (Not centered: 1.5 front, 2 behind)</td>
-  </tr>
-  <tr>
     <td>Eyebrow and Eyelashes</td>
     <td>1.5</td>
     <td>0.5</td>
@@ -83,10 +77,6 @@ If setting attachment names manually in Studio, use the following `Class.Attachm
     <tr>
       <td>Hat</td>
       <td>`HatAttachment`</td>
-    </tr>
-    <tr>
-      <td>Hair</td>
-      <td>`HairAttachment`</td>
     </tr>
     <tr>
       <td>Back</td>
@@ -124,7 +114,7 @@ If setting attachment names manually in Studio, use the following `Class.Attachm
   </table>
 
   <Alert severity = 'info'>
-  The 3D Importer automatically recognizes mesh objects as attachment points if the objects include the affix `\_Att`. This only applies when importing meshes with caging data, such as clothing or bodies.
+  The Importer automatically recognizes mesh objects as attachment points if the objects include the affix `\_Att`. This only applies when importing meshes with caging data, such as clothing or bodies.
   </Alert>
 
 - **Shoulders and Collars** - Even though they are in similar locations, Shoulder and Collar attachment points interact with character rigs differently for rigid accessories.

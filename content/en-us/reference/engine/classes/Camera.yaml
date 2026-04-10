@@ -222,6 +222,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+    simulationAccess: true
   - name: Camera.CoordinateFrame
     summary: ''
     description: |
@@ -249,6 +250,7 @@ properties:
       can_save: false
     capabilities:
       - Basic
+    simulationAccess: true
   - name: Camera.DiagonalFieldOfView
     summary: |
       Sets the angle of the camera's diagonal field of view.
@@ -379,6 +381,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+    simulationAccess: true
   - name: Camera.focus
     summary: ''
     description: ''

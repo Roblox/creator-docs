@@ -1,6 +1,6 @@
 ---
 title: 3D Export
-description: 3D Importer imports third-party .fbx, .gltf, and .obj 3D model assets into Studio.
+description: Importer imports third-party .fbx, .gltf, and .obj 3D model assets into Studio.
 ---
 
 import BetaAlert from '../../includes/beta-features/beta-alert.md'

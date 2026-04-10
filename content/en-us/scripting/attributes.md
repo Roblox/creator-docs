@@ -20,7 +20,7 @@ For example, if a server script changes a property of some instance in the Works
 When clients first launch an experience, some aspects of replication and script execution are predictable:
 
 1. The client loads the contents of `Class.ReplicatedFirst`, such as a loading screen, assets, and scripts.
-1. `Class.LocalScript|LocalScripts` (and `Class.Script|Scripts` with a `Class.Script.RunContext|RunContext` of `Enum.RunContext.Client|Client`) in `ReplicatedFirst` run. These scripts can safely get objects from `ReplicatedFirst` without using `WaitForChild()`:
+1. `Class.LocalScript|LocalScripts` (and `Class.Script|Scripts` with a `Class.Script.RunContext|RunContext` of `Enum.RunContext.Client|Client`) in `Class.ReplicatedFirst` run. These scripts can safely get objects from `Class.ReplicatedFirst` without using `Class.Instance:WaitForChild()`:
 
    ```lua
    -- Safe
@@ -36,19 +36,19 @@ When clients first launch an experience, some aspects of replication and script 
    local PickupManager = require(ReplicatedStorage.PickupManager)
    ```
 
-   You **can** use `WaitForChild()` in these scripts to get objects from other services, but doing so negates the benefits of using `ReplicatedFirst`.
+   You **can** use `Class.Instance:WaitForChild()|WaitForChild()` in these scripts to get objects from other services, but doing so negates the benefits of using `Class.ReplicatedFirst`.
 
 1. The client continues loading the rest of the experience.
 
-1. When it finishes, the `Class.DataModel.Loaded|game.Loaded` event fires and `Class.DataModel:IsLoaded()|game:IsLoaded()` returns true.
+1. When it finishes, the `Class.DataModel.Loaded|Loaded` event fires and `Class.DataModel:IsLoaded()|IsLoaded()` returns true.
 
-1. `LocalScripts` in `Players.Player.PlayerScripts` (copied from `StarterPlayerScripts`) run, as well as client `Scripts` in `Class.ReplicatedStorage`. These scripts can safely get objects from `ReplicatedStorage` without using `WaitForChild()`.
+1. `Class.LocalScript|LocalScripts` in `Players.[Player].PlayerScripts` (copied from `Class.StarterPlayerScripts`) run, as well as client `Class.Script|Scripts` in `Class.ReplicatedStorage`. These scripts can safely get objects from `Class.ReplicatedStorage` without using `Class.Instance:WaitForChild()|WaitForChild()`.
 
 1. The player's `Class.Player.Character|Character` model spawns in the experience.
 
-1. `LocalScripts` in `Workspace.Character` (copied from `StarterCharacterScripts`) run.
+1. `Class.LocalScript|LocalScripts` in `Workspace.[Character]` (copied from `Class.StarterCharacterScripts`) run.
 
-If your experience uses [instance streaming](../workspace/streaming.md) (`Class.Workspace.StreamingEnabled`), some or most objects might not have loaded into the workspace, so using `WaitForChild()` to access workspace objects becomes an even more important safety measure. In particular, see [Stream in](../workspace/streaming.md#stream-in) and [Per-model streaming controls](../workspace/streaming.md#per-model-streaming-controls) for additional information on loading and tuning streaming behavior.
+If your experience uses [instance streaming](../workspace/streaming/index.md) (`Class.Workspace.StreamingEnabled`), some or most objects might not have loaded into the workspace, so using `Class.Instance:WaitForChild()|WaitForChild()` to access workspace objects becomes an even more important safety measure. In particular, see [stream in](../workspace/streaming/index.md#stream-in) and [per-model streaming controls](../workspace/streaming/index.md#per-model-streaming-controls) for additional information on loading and tuning streaming behavior.
 
 ## Get objects
 
@@ -90,7 +90,7 @@ Although you can create attributes programmatically, the more common solution is
 
 <img alt="A script within a folder in ReplicatedStorage." src="../assets/studio/properties/Attributes-Example.png" width="320" />
 
-For information on creating attributes in Studio, see [Instance attributes](../studio/properties.md#instance-attributes).
+For information on creating attributes in Studio, see [instance attributes](../studio/properties.md#instance-attributes).
 
 ## Set attributes
 

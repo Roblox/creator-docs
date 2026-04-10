@@ -15,7 +15,7 @@ deprecation_message: ''
 items:
   - name: Default
     summary: |
-      Engine determines best behavior. Currently equivalent to **Nonatomic**.
+      Default behavior (subject to change).
     value: 0
     tags: []
     deprecation_message: ''
@@ -40,7 +40,7 @@ items:
     summary: |
       Behaves as a persistent model for players that have been added using
       `Class.Model:AddPersistentPlayer()`. For other players, behavior is the
-      same as **Atomic**. You can revert a model from player persistence via
+      same as `Atomic`. You can revert a model from player persistence via
       `Class.Model:RemovePersistentPlayer()`.
     value: 3
     tags: []

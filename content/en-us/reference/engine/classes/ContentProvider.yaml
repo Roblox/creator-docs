@@ -13,7 +13,7 @@ description: |
   Roblox servers stream all assets to the client at runtime: objects in the
   Workspace, mesh assets, texture assets, etc. Assets such as mesh visual data,
   textures, decals, and sounds are streamed in as required, regardless of
-  whether [Streaming](../../../workspace/streaming.md) is enabled.
+  whether [Streaming](../../../workspace/streaming/index.md) is enabled.
 
   In some cases, this behavior is undesirable, as it can lead to a delay before
   the content loads into the experience.

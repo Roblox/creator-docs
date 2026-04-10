@@ -90,6 +90,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: HingeConstraint.AngularResponsiveness
     summary: |
       Specifies the sharpness of the servo motor in reaching the
@@ -114,6 +115,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: HingeConstraint.AngularSpeed
     summary: |
       The desired angular speed a `Class.HingeConstraint` with
@@ -141,6 +143,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: HingeConstraint.AngularVelocity
     summary: |
       The angular velocity a `Class.HingeConstraint` with
@@ -166,6 +169,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: HingeConstraint.CurrentAngle
     summary: |
       The current angle of the `Class.HingeConstraint`.
@@ -189,6 +193,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: HingeConstraint.LimitsEnabled
     summary: |
       Sets whether the `Class.HingeConstraint` will limit the range of rotation.
@@ -216,6 +221,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: HingeConstraint.LowerAngle
     summary: |
       The minimum rotation angle the `Class.HingeConstraint` will allow if
@@ -238,6 +244,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: HingeConstraint.MotorMaxAcceleration
     summary: |
       The maximum angular acceleration a `Class.HingeConstraint` with
@@ -265,6 +272,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: HingeConstraint.MotorMaxTorque
     summary: |
       The maximum torque a `Class.HingeConstraint` with
@@ -290,6 +298,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: HingeConstraint.Radius
     summary: |
       The visualized radius of the `Class.HingeConstraint`.
@@ -309,6 +318,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: HingeConstraint.Restitution
     summary: |
       How elastic `Class.Attachment` connected by a `Class.HingeConstraint` will
@@ -334,6 +344,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: HingeConstraint.ServoMaxTorque
     summary: |
       The maximum torque a `Class.HingeConstraint` with
@@ -359,6 +370,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: HingeConstraint.SoftlockServoUponReachingTarget
     summary: ''
     description: ''
@@ -378,6 +390,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: HingeConstraint.TargetAngle
     summary: |
       The target angle a `Class.HingeConstraint` will attempt to rotate to if
@@ -401,6 +414,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: HingeConstraint.UpperAngle
     summary: |
       The maximum rotation angle the `Class.HingeConstraint` will allow if
@@ -423,6 +437,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
 methods: []
 events: []
 callbacks: []

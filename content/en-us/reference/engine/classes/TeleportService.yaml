@@ -330,7 +330,7 @@ methods:
         default:
         summary: |
           `Class.DataModel.UniverseId` of the experience to be presented to the
-          `Class.Player`
+          `Class.Player`.
     returns:
       - type: PromptExperienceDetailsResult
         summary: |

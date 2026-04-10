@@ -13,7 +13,7 @@ Lower-end devices, particularly mobile devices, have severe memory limitations a
 
   For example, you might test an experience with the **Render** (<kbd>Shift</kbd><kbd>F2</kbd>) and **Summary** (<kbd>Shift</kbd><kbd>F2</kbd>) debug stats enabled. If the frame rate starts to drop in a particularly cluttered area, you could examine the **Draw (scene)** numbers and determine that you need to stay below 1,000 draw calls and 1,000,000 triangles for the experience to run well on your baseline device.
 
-  Or you could examine the **Developer Console** (<kbd>F9</kbd>) and note that memory usage is a bit high unless you enable [streaming](../workspace/streaming.md). Having a clear understanding of device limits can help you stay under them as you continue to build your experience.
+  Or you could examine the **Developer Console** (<kbd>F9</kbd>) and note that memory usage is a bit high unless you enable [streaming](../workspace/streaming/index.md). Having a clear understanding of device limits can help you stay under them as you continue to build your experience.
 
   ![A Roblox experience with three overlays active.](../assets/optimization/perf-hud.png)
 
@@ -27,7 +27,7 @@ More generally, testing on a variety of devices can help you check that the expe
 
 ## Streaming and teleportation
 
-- [Instance streaming](../workspace/streaming.md) lets Roblox dynamically load and unload 3D content and is a great option for most places, especially larger ones. Streaming improves join times, reduces memory footprint, and increases frame rate. For more information, see [Improve performance](improve.md#instance-streaming).
+- [Instance streaming](../workspace/streaming/index.md) lets Roblox dynamically load and unload 3D content and is a great option for most places, especially larger ones. Streaming improves join times, reduces memory footprint, and increases frame rate. For more information, see [Improve performance](improve.md#instance-streaming).
 
 - Consider breaking large places into more manageable ones and using [teleportation](../projects/teleport.md) to move players between them. This approach can reduce **initial** join times, but imposes additional join times as players teleport from place to place. Benefits to memory usage vary depending on the size of the place and whether you've enabled streaming.
 

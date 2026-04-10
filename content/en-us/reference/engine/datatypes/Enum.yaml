@@ -36,7 +36,11 @@ methods:
       Converts an enum name to an `Datatype.Enum`.
     description: |
       Returns either the converted `Datatype.Enum` or `nil`.
-    parameters: []
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
     returns:
       - type: Enum | nil
         summary: ''
@@ -48,7 +52,11 @@ methods:
       Converts an enum value to an `Datatype.Enum`.
     description: |
       Returns either the converted `Datatype.Enum` or `nil`.
-    parameters: []
+    parameters:
+      - name: value
+        type: number
+        default:
+        summary: ''
     returns:
       - type: Enum | nil
         summary: ''

@@ -26,20 +26,22 @@ This tutorial references a high-quality laser beam blaster model that you can us
 
 <img src="../../../assets/tutorials/laser-traps-with-beams/LaserBlasterAsset.png" mg width="90%" />
 
-You can add this model to your inventory within Studio by clicking the **Add to Inventory** link in the following component. Once assets are within your inventory, you can reuse them in any project on the platform.
-
-<BrowseSampleCard href='https://create.roblox.com/store/asset/16382650186' description='Create your laser beam with this high-quality laser beam blaster.' title='Laser Beam Blaster' assetId={16382650186}  />
-
-<br> </br>
-
 To get this blaster asset from your inventory into your experience:
 
-1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../../projects/assets/toolbox.md).
-2. In the **Toolbox** window, click the **Inventory** tab. The **My Models** sort displays.
+1. Add the blaster to your inventory.
+
+   1. Navigate to the asset's [details page](https://create.roblox.com/store/asset/16382650186) on the Creator Store.
+   1. In the top-right corner, click the **Get Model** button. The blaster asset is now in your inventory, and you can reuse it in any project on the platform.
+
+1. In Studio, navigate to the **Home** tab, then click the **Toolbox** button. The **Toolbox** window opens.
+
+   <img src="../../../assets/studio/general/Toolbar-Toolbox.png" width="100%" alt="Toolbox highlighted in Studio's toolbar." />
+
+1. In the **Toolbox** window, click the **Inventory** tab. The **My Models** sort displays.
 
    <img src="../../../assets/studio/toolbox/Inventory-Tab.png" width="360" />
 
-3. Click the **Laser Beam Blaster** tile. The model displays in your viewport.
+1. Click the **Laser Beam Blaster** tile. The model displays in your viewport.
 
 ## Set up a collision box
 

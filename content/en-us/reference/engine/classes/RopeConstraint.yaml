@@ -62,6 +62,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: RopeConstraint.Length
     summary: |
       The maximum distance apart the two `Class.Attachment|Attachments` can be.
@@ -82,6 +83,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: RopeConstraint.Restitution
     summary: |
       Elasticity of the `Class.Attachment|Attachments` connected by the
@@ -105,6 +107,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: RopeConstraint.Thickness
     summary: |
       The visualized thickness of the `Class.RopeConstraint`.
@@ -124,6 +127,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: RopeConstraint.WinchEnabled
     summary: |
       Enables the winch motor.
@@ -144,6 +148,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: RopeConstraint.WinchForce
     summary: |
       The maximum force that the winch motor can apply.
@@ -163,6 +168,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: RopeConstraint.WinchResponsiveness
     summary: |
       The sharpness of the winch motor in reaching the
@@ -184,6 +190,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: RopeConstraint.WinchSpeed
     summary: |
       A positive desired velocity at which the winch motor changes the rope
@@ -205,6 +212,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: RopeConstraint.WinchTarget
     summary: |
       The target length for the winch motor.
@@ -224,6 +232,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
 methods: []
 events: []
 callbacks: []

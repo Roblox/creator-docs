@@ -9,7 +9,7 @@ summary: |
   instance streaming enabled.
 description: |
   Controls the level of detail for `Class.Model|Models` in experiences with
-  instance [streaming](../../../workspace/streaming.md) enabled.
+  instance [streaming](../../../workspace/streaming/index.md) enabled.
 code_samples: []
 tags: []
 deprecation_message: ''

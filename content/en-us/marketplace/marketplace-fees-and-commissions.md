@@ -443,7 +443,7 @@ As a hypothetical case where limited hat items are 100 Robux per-unit, if 200 li
 
 ### Reselling
 
-If reselling is enabled by the original creator, [Premium](https://www.roblox.com/premium/membership) members can resell purchased Limited items. Every time a creator's item is resold, the creator benefits from a 10% original creator commission. After purchasing a Limited, there is up to a 30 day holding period when the item cannot be resold.
+If reselling is enabled by the original creator, [Roblox Plus](../production/monetization/roblox-plus.md) or [Premium](https://www.roblox.com/premium/membership) members can resell purchased Limited items. Every time a creator's item is resold, the creator benefits from a 10% original creator commission. After purchasing a Limited, there is up to a 30 day holding period when the item cannot be resold.
 
 <Alert severity = 'info'>
 Reselling community-created Limiteds is not available for accounts based in Japan.

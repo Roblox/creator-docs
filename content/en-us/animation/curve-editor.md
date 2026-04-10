@@ -36,9 +36,9 @@ You can switch the editor's timeline between the dope sheet editor and the Curve
 
    1. In the top-right corner of the editor window, click the gear icon. A contextual menu displays.
 
-	    <img alt="Gear Icon" src="../assets/animation/curve-editor/Gear-Icon.png" width="600" />
+   <img alt="Gear Icon" src="../assets/animation/curve-editor/Gear-Icon.png" width="600" />
 
-   2. Hover over **Default Rotation Type**, then select either **Euler Angles** or **Quaternions**. Your rotation type sets to your choice and becomes the default rotation type for future projects.
+   1. Hover over **Default Rotation Type**, then select either **Euler Angles** or **Quaternions**. Your rotation type sets to your choice and becomes the default rotation type for future projects.
 
 3. In the top-left corner of the **timeline**, click the **Curve Animation** icon. A popup window displays to confirm that your `Class.KeyframeSequence` clip will convert to a `Class.CurveAnimation` clip.
 
@@ -46,11 +46,11 @@ You can switch the editor's timeline between the dope sheet editor and the Curve
 
    If you kept the default rotation type of Euler angles, Studio automatically converts any pre-existing quaternions to Euler angles following the [Euler angles order](#euler-angles-order) setting. Because `Class.KeyframeSequence|KeyframeSequences` work with quaternions and curve animations work with Euler angles by default, your animation might appear slightly different between keyframes, especially if any of your Euler angles approach [Gimbal lock](https://en.wikipedia.org/wiki/Gimbal_lock).
 
-	 <img alt="Convert Euler Angles" src="../assets/animation/curve-editor/Convert-Euler-Angles.png" width="600" />
+    <img alt="Convert Euler Angles" src="../assets/animation/curve-editor/Convert-Euler-Angles.png" width="600" />
 
-	 If you set the rotation type to quaternions, the conversion to curves preserves the quaternions and the animation remains the same.
+   If you set the rotation type to quaternions, the conversion to curves preserves the quaternions and the animation remains the same.
 
-	 <img alt="Curve Editor Overview" src="../assets/animation/curve-editor/Convert-Quaternion-Angles.png" width="600" />
+    <img alt="Curve Editor Overview" src="../assets/animation/curve-editor/Convert-Quaternion-Angles.png" width="600" />
 
 ## Interpolation
 

@@ -178,10 +178,13 @@ events:
     summary: |
       Fires when the button is activated.
     description: |
-      Fires when the button is activated. As this event doesn't fire on the
-      server, it should only be used in a `Class.LocalScript`, or in a
-      `Class.Script` with `Class.Script.RunContext|RunContext` of
-      `Enum.RunContext.Client`.
+      Fires when a left click press-and-release is detected on desktop, touch
+      release is detected on mobile, or **A**/cross is activated in UI
+      navigation mode on console.
+
+      As this event doesn't fire on the server, it should only be used in a
+      `Class.LocalScript`, or in a `Class.Script` with
+      `Class.Script.RunContext|RunContext` of `Enum.RunContext.Client`.
     code_samples: []
     parameters:
       - name: inputObject
@@ -350,27 +353,6 @@ events:
         default:
         summary: |
           The mouse's **Y** screen coordinate in pixels.
-    tags: []
-    deprecation_message: ''
-    security: None
-    capabilities:
-      - UI
-  - name: GuiButton.SecondaryActivated
-    summary: |
-      Fires when a right-click is detected on desktop, long press detected on
-      mobile, or triangle / Y activated in UI navigation mode on console. This
-      function is not available yet.
-    description: |
-      Fires when a right-click is detected on desktop, long press detected on
-      mobile, or triangle / Y activated in UI navigation mode on console. This
-      function is not available yet.
-    code_samples: []
-    parameters:
-      - name: inputObject
-        type: InputObject
-        default:
-        summary: |
-          The input object representing the alternate activation action.
     tags: []
     deprecation_message: ''
     security: None

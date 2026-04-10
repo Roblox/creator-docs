@@ -87,6 +87,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: AlignOrientation.CFrame
     summary: |
       The `Datatype.CFrame` orientation with which the constraint will attempt
@@ -111,6 +112,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: AlignOrientation.LookAtPosition
     summary: |
       A `Datatype.Vector3` world space location toward which the primary axis
@@ -136,6 +138,7 @@ properties:
       can_save: false
     capabilities:
       - Physics
+    simulationAccess: true
   - name: AlignOrientation.MaxAngularVelocity
     summary: |
       Maximum angular velocity the constraint can use to reach its goal.
@@ -162,6 +165,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: AlignOrientation.MaxTorque
     summary: |
       Maximum torque the constraint can use to reach its goal.
@@ -187,6 +191,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: AlignOrientation.Mode
     summary: |
       Whether the constraint uses one or two attachments in calculating its
@@ -225,6 +230,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: AlignOrientation.PrimaryAxis
     summary: |
       The direction of the goal's **X** axis, represented as a unit
@@ -248,6 +254,7 @@ properties:
       can_save: false
     capabilities:
       - Physics
+    simulationAccess: true
   - name: AlignOrientation.PrimaryAxisOnly
     summary: |
       Determines how the constraint's axes are affected by torque.
@@ -278,6 +285,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: AlignOrientation.ReactionTorqueEnabled
     summary: |
       Whether the constraint applies torque only to
@@ -303,6 +311,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: AlignOrientation.Responsiveness
     summary: |
       Controls how quickly the constraint reaches its goal. Higher values cause
@@ -324,6 +333,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: AlignOrientation.RigidityEnabled
     summary: |
       Whether torque is dependent on other properties, or if the physics solver
@@ -350,6 +360,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: AlignOrientation.SecondaryAxis
     summary: |
       The direction of the goal's **Y** axis, represented as a unit
@@ -373,6 +384,7 @@ properties:
       can_save: false
     capabilities:
       - Physics
+    simulationAccess: true
 methods: []
 events: []
 callbacks: []

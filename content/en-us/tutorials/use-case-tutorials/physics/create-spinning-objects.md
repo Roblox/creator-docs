@@ -170,20 +170,22 @@ To demonstrate this process, you will add a propeller assembly with two objects 
 
 The **Creator Store** is a tab of the **Toolbox** that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add an individual asset or asset library directly into an open experience.
 
-This tutorial references a propeller model that you can use as you replicate each step of the `Class.HingeConstraint` technique of spinning objects. You can add this model to your inventory within Studio by clicking the **Add to Inventory** link in the following component. Once assets are within your inventory, you can reuse them in any project on the platform.
+This tutorial references a propeller model that you can use as you replicate each step of the `Class.HingeConstraint` technique of spinning objects. To get this propeller asset from your inventory into your experience:
 
-<BrowseSampleCard href='https://create.roblox.com/store/asset/16558528602' description='Create your spinning object with this propeller model.' title='Propeller' assetId={16558528602}  />
+1. Add the propeller to your inventory.
 
-<br> </br>
+   1. Navigate to the asset's [details page](https://create.roblox.com/store/asset/16558528602) on the Creator Store.
+   1. In the top-right corner, click the **Get Model** button. The propeller asset is now in your inventory, and you can reuse it in any project on the platform.
 
-To get this propeller asset from your inventory into your experience:
+1. In Studio, navigate to the **Home** tab, then click the **Toolbox** button. The **Toolbox** window opens.
 
-1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../../projects/assets/toolbox.md).
-2. In the **Toolbox** window, click the **Inventory** tab. The **My Models** sort displays.
+   <img src="../../../assets/studio/general/Toolbar-Toolbox.png" width="100%" alt="Toolbox highlighted in Studio's toolbar." />
+
+1. In the **Toolbox** window, click the **Inventory** tab. The **My Models** sort displays.
 
    <img src="../../../assets/studio/toolbox/Inventory-Tab.png" width="360" />
 
-3. Click the **Propeller** tile. The model displays in your viewport.
+1. Click the **Propeller** tile. The model displays in your viewport.
 
    <img src="../../../assets/tutorials/creating-spinning-objects/Propeller.jpg" mg width="80%" />
 

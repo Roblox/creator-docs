@@ -58,7 +58,7 @@ properties:
       tagged with `BlueOnHover` (`.BlueOnHover`) **and** is in the
       `Enum.GuiState.Hover` state (`:Hover`).
 
-      ##### Selectors
+      #### Selectors
 
       <table>
       <thead>
@@ -89,10 +89,16 @@ properties:
           <td>Matches instances currently in a <code>Enum.GuiState</code>.</td>
           <td><code>":Hover"</code></td>
         </tr>
+        <tr>
+          <td><code>@[StyleQuery name]</code></td>
+          <td>Matches instances with child <code>Class.StyleQuery</code> that has <code>Class.StyleQuery.IsActive|IsActive</code> set to <code>true</code>.<br /><br />
+          There are also built-in selectors for <code>"@ReducedMotionEnabledFalse"</code>, <code>"@ReducedMotionEnabledTrue"</code>, <code>"@PreferredInputGamepad"</code>, <code>"@PreferredInputKeyboardAndMouse"</code>, <code>"@PreferredInputTouch"</code>, <code>"@ViewportDisplaySizeSmall"</code>, <code>"@ViewportDisplaySizeMedium"</code>, and <code>"@ViewportDisplaySizeLarge"</code> that can match an instance without a <code>Class.StyleQuery</code> instance.</td>
+          <td><code>"@StyleQuerySmall"</code></td>
+        </tr>
       </tbody>
       </table>
 
-      ##### Combinators
+      #### Combinators
 
       <table>
       <thead>
@@ -120,8 +126,10 @@ properties:
         </tr>
         <tr>
           <td><code>::</code></td>
-          <td>Creates a phantom <code>Class.UIComponent</code> instance under the previous filter matches and applies the style rule's properties to it.</td>
-          <td><code>"Frame::UICorner"</code></td>
+          <td>Creates a phantom <code>Class.UIComponent</code> instance under the previous filter matches and applies the style rule's properties to it.<br /><br />
+          Multiple instances can be created for <code>Class.StyleQuery</code> and <code>Class.UIStroke</code> by aliasing the instance with a name selector.
+          Some nested instances are supported, including <code>Class.UIGradient</code> under <code>Class.UIStroke</code> or <code>Class.UIConstraint</code> under a <code>Class.UIGridLayout</code>.</td>
+          <td><code>"Frame::UICorner" "::UIStroke #Outer"</code></td>
         </tr>
       </tbody>
       </table>
@@ -129,6 +137,7 @@ properties:
       - UI-Styling-Class
       - UI-Styling-Tag
       - UI-Styling-Modifier
+      - UI-Styling-StyleQuery
     type: string
     tags: []
     deprecation_message: ''

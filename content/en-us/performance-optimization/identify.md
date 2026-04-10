@@ -42,7 +42,7 @@ Roblox has a number of tools for identifying performance issues, some of which a
     <td>Debug Stats</td>
     <td>Overlays with detailed information around graphics, physics, network traffic, and FPS.</td>
     <td>Studio, in-experience</td>
-    <td><kbd>Shift</kbd><kbd>F1</kbd>, <kbd>Shift</kbd><kbd>F2</kbd>, <kbd>Shift</kbd><kbd>F3</kbd>, <kbd>Shift</kbd><kbd>F4</kbd>, <kbd>Shift</kbd><kbd>F5</kbd></td>
+    <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F1</kbd> (<kbd>Shift</kbd><kbd>⌘</kbd><kbd>F1</kbd>), <kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F2</kbd> (<kbd>Shift</kbd><kbd>⌘</kbd><kbd>F2</kbd>), <kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F3</kbd> (<kbd>Shift</kbd><kbd>⌘</kbd><kbd>F3</kbd>), <kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F4</kbd> (<kbd>Shift</kbd><kbd>⌘</kbd><kbd>F4</kbd>), <kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F5</kbd> (<kbd>Shift</kbd><kbd>⌘</kbd><kbd>F5</kbd>)</td>
     <td>Live sessions, Studio testing</td>
   </tr>
   <tr>

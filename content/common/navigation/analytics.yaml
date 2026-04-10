@@ -2,13 +2,13 @@ navigation:
   - heading: Analytics
   - title: Overview
     path: /production/analytics/
+  - title: Get started
+    path: /production/analytics/get-started
 
-  - title: Insights
-    path: /production/analytics/insights
 
   - heading: Monitor
-  - title: Performance
-    path: /production/analytics/performance
+  - title: Insights
+    path: /production/analytics/insights
   - title: Error report
     path: /production/analytics/error-report
   - title: Crashes
@@ -23,6 +23,8 @@ navigation:
   - heading: Dashboards
   - title: Overview
     path: /production/analytics/analytics-dashboard
+  - title: Performance
+    path: /production/analytics/performance
   - title: Retention
     path: /production/analytics/retention
   - title: Engagement

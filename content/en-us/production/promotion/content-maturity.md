@@ -423,7 +423,7 @@ Sensitive issues are frequently in the news and inspire strong opinions and deba
 
 If your experience includes content related to a sensitive issue or people implicated by them, but it isn't primarily themed on that issue, such as a religious building in a city, guns in a first-person shooter experience, or a national holiday parade in a hangout experience, you do **not** need to disclose it within the Maturity & Compliance Questionnaire.
 
-However, if the **majority of the content or gameplay of your experience** refers to a sensitive issue, you must disclose it within the Maturity & Compliance Questionnaire. Experiences with a primary theme of a social issue are only available to players that are at least 13 years old unless a parent has [manually allowed access](https://en.help.roblox.com/hc/en-us/articles/30428310121620-Parental-Controls-Overview) to these experiences.
+However, if the **majority of the content or gameplay of your experience** refers to a sensitive issue, you must disclose it within the Maturity & Compliance Questionnaire. Experiences with a primary theme of a sensitive issue are only available to players who are at least 13 years old, but they aren't recommended and discoverable unless the players have age-verified themselves. Parents can [manually allow access](https://en.help.roblox.com/hc/en-us/articles/30428310121620-Parental-Controls-Overview) to these experiences, regardless of their childs's age.
 
 <Alert severity="info">
 Individual assets, as well as text and voice chat, do not qualify for this descriptor.

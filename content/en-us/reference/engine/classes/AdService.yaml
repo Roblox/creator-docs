@@ -58,7 +58,9 @@ methods:
           The format of the requested ad. For example, `RewardedVideo`.
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          A dictionary with the `Enum.AdAvailabilityResult` for the requested ad
+          format.
     tags:
       - Yields
     deprecation_message: ''

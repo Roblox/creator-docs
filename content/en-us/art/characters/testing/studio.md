@@ -51,7 +51,7 @@ After you open the test experience in Studio, import your custom character model
    4. Verify any yellow warnings that may indicate a quality issue with your avatar components.
 
     <Alert severity = 'warning'>
-    The 3D Importer may incorrectly report some cage meshes as not watertight. You can ignore these warnings for those cage objects.
+    The Importer may incorrectly report some cage meshes as not watertight. You can ignore these warnings for those cage objects.
     </Alert>
 
 4. Click **Import**. The character's model populates into the workspace.
@@ -62,7 +62,7 @@ After you open the test experience in Studio, import your custom character model
 
 ### Add SurfaceAppearance
 
-If you exported your textures separately, or if the 3D Importer fails to pick up your PBR textures, you can add them manually.
+If you exported your textures separately, or if the Importer fails to pick up your PBR textures, you can add them manually.
 
 To add individual image texture files:
 

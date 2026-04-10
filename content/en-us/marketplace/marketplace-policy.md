@@ -9,7 +9,7 @@ If you are ready to sell an item and the item meets the requirements below, see 
 
 ## Creator requirements
 
-To upload, publish, and maintain existing content on-sale, Roblox requires users and groups to have [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644) and/or a [Premium membership](https://www.roblox.com/premium/membership), depending on if the asset is a 2D or 3D item. Your ID-verified account must participate in an active Premium 1000/2200 membership to keep your 3D Marketplace items on sale after uploading and publishing.
+To upload, publish, and maintain existing content on-sale, Roblox requires users and groups to have [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644), and/or a [Roblox Plus](../production/monetization/roblox-plus.md) or [Premium membership](https://www.roblox.com/premium/membership), depending on if the asset is a 2D or 3D item. If you're a Premium user, you must have an active Premium 1000/2200 membership to keep your 3D Marketplace items on sale after uploading and publishing.
 
 See the following breakdown of the user and group requirements:
 
@@ -17,7 +17,7 @@ See the following breakdown of the user and group requirements:
 <thead>
   <tr>
     <th>For 2D items:</th>
-    <th>Creator is able to…</th>
+    <th>Creator is able to</th>
     <th width="40%">Requirements</th>
   </tr>
 </thead>
@@ -29,11 +29,11 @@ See the following breakdown of the user and group requirements:
   </tr>
   <tr>
     <td>Publish content to the Marketplace</td>
-    <td><ul><li>Premium 1000/2200</li><li>10 Robux publishing advance</li></ul></td>
+    <td><ul><li>Roblox Plus or Premium 1000/2200</li><li>10 Robux publishing advance</li></ul></td>
   </tr>
   <tr>
     <td>Keep existing content on-sale</td>
-    <td>Premium 1000/2200</td>
+    <td>Roblox Plus or Premium 1000/2200</td>
   </tr>
   <tr>
     <td rowspan="3">As a Group</td>
@@ -42,11 +42,11 @@ See the following breakdown of the user and group requirements:
   </tr>
   <tr>
     <td>Publish content to the Marketplace</td>
-    <td>Publishing user needs:<br /><br /><ul><li>Premium 1000/2200</li><li>10 Robux publishing advance</li></ul><br /><br />Group owner needs Premium 1000/2200</td>
+    <td>Publishing user needs:<br /><br /><ul><li>Roblox Plus or Premium 1000/2200</li><li>10 Robux publishing advance</li></ul><br /><br />Group owner needs Roblox Plus or Premium 1000/2200</td>
   </tr>
   <tr>
     <td>Keep existing content on-sale</td>
-    <td>Group owner needs Premium 1000/2200</td>
+    <td>Group owner needs Roblox Plus or Premium 1000/2200</td>
   </tr>
   </tbody>
 </table>
@@ -55,7 +55,7 @@ See the following breakdown of the user and group requirements:
 <thead>
   <tr>
     <th>For 3D items:</th>
-    <th>Creator is able to…</th>
+    <th>Creator is able to</th>
     <th width="40%">Requirements</th>
   </tr>
 </thead>
@@ -67,24 +67,24 @@ See the following breakdown of the user and group requirements:
   </tr>
   <tr>
     <td>Publish content to the Marketplace</td>
-    <td><ul><li>ID verification</li><li>Premium 1000/2200</li><li>600-2500 Robux publishing advance</li></ul></td>
+    <td><ul><li>ID verification</li><li>Roblox Plus or Premium 1000/2200</li><li>600-2500 Robux publishing advance</li></ul></td>
   </tr>
   <tr>
     <td>Keep existing content on-sale</td>
-    <td><ul><li>ID verification</li><li>Premium 1000/2200</li></ul></td>
+    <td><ul><li>ID verification</li><li>Roblox Plus or Premium 1000/2200</li></ul></td>
   </tr>
   <tr>
     <td rowspan="3">As a Group</td>
     <td>Upload content from Studio</td>
-    <td>Uploading user needs:<br /><br /><ul><li>ID verification</li><li>Premium 1000/2200</li><li>300 Robux upload fee</li></ul></td>
+    <td>Uploading user needs:<br /><br /><ul><li>ID verification</li><li>Roblox Plus or Premium 1000/2200</li><li>300 Robux upload fee</li></ul></td>
   </tr>
   <tr>
     <td>Publish content to the Marketplace</td>
-    <td>Publishing user needs:<br /><br /><ul><li>ID verification</li><li>Premium 1000/2200</li><li>600-2500 Robux publishing advance</li></ul><br /><br />Group owner needs Premium 1000/2200</td>
+    <td>Publishing user needs:<br /><br /><ul><li>ID verification</li><li>Roblox Plus or Premium 1000/2200</li><li>600-2500 Robux publishing advance</li></ul><br /><br />Group owner needs Roblox Plus or Premium 1000/2200</td>
   </tr>
   <tr>
     <td>Keep existing content on-sale</td>
-    <td>Group owner needs Premium 1000/2200</td>
+    <td>Group owner needs Roblox Plus or Premium 1000/2200</td>
   </tr>
 </tbody>
 </table>
@@ -118,7 +118,9 @@ Submissions of accessory and clothing items to the Marketplace must follow addit
 
 ### Miscategorization
 
-Do not miscategorize items when you upload them. Proper categorization includes the following:
+Do not miscategorize items when you upload them. For a list of categories and descriptions, see [Marketplace categories](./categories.md).
+
+Additional categorization information:
 
 - Complete hairstyles (hair with full head coverage) must be in the Hair category.
   - Partial hairstyles (e.g. Bangs and Braids) can be in Hat, Face, or Hair categories.
@@ -131,7 +133,7 @@ Do not miscategorize items when you upload them. Proper categorization includes 
 - Hat designs (e.g. baseball caps, beanies, cowboy hats) must be in the Hat category.
   - Designs that combine items with hair designs (e.g. beanie with hair sticking out, mohawk with headphones) can be in the Hat or Hair category.
 - Designs that are components of facial anatomy (e.g. noses, mustache) or accessories that augment facial anatomy (e.g. eyeshadow, blush, wrinkles) must be in the Face category.
-- Roblox automatically detects bodysuits, clothing items that completely cover a body below the head, and automatically categorizes them after upload.
+- Roblox automatically detects some individual asset categories, like bodysuits. This automatic categorization occurs after upload.
 
 ## Avatar body guidelines
 

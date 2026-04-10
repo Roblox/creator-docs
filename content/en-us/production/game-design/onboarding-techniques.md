@@ -13,6 +13,8 @@ Onboarding techniques are strategies used to help direct players through the onb
 - Contextual tutorials
 - Timed hints
 
+Each of these techniques can be optimized using **Configs** and **Experiments**. For example, you can use **Experiments** to A/B test whether a 5-second or 10-second delay for a timed hint leads to better funnel completion. Once you've identified the winning timing, leverage **Configs** to update that value globally in real-time, allowing you to optimize your onboarding flow instantly without restarting your servers.
+
 ## Visual elements
 
 **Visual elements** are assets or effects that appear in an experience to help players understand how to play, where to go, what to pay attention to, or what actions to take. Because of these characteristics, visual elements thrive when used in conjunction with an experience's onboarding funnel.

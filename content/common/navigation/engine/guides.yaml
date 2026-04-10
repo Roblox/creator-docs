@@ -20,6 +20,10 @@ navigation:
             path: /projects/configure-experiences
           - title: Release updates
             path: /projects/update-experiences
+          - title: Ownership transfer
+            path: /projects/experience-ownership-transfer
+          - title: Place files
+            path: /projects/place-files
       - title: Cross-platform development
         path: /projects/cross-platform
       - title: Architecture
@@ -30,21 +34,19 @@ navigation:
           - title: Client-server runtime
             path: /projects/client-server
           - title: Instance streaming
-            path: /workspace/streaming
+            path: /workspace/streaming/
+            section:
+              - title: Overview
+                path: /workspace/streaming/
+              - title: Techniques
+                path: /workspace/streaming/techniques
           - title: Server authority
             path: /projects/server-authority/
             section:
               - title: Overview
                 path: /projects/server-authority/
-              - title: Advanced techniques
+              - title: Techniques
                 path: /projects/server-authority/techniques
-      - title: Manage
-        path: /projects/experience-ownership-transfer
-        section:
-          - title: Experience ownership transfer
-            path: /projects/experience-ownership-transfer
-          - title: Place files
-            path: /projects/place-files
       - title: Work in teams
         path: /projects/groups
         section:
@@ -55,7 +57,7 @@ navigation:
           - title: Activity History
             path: /projects/activity-history
           - title: Version History
-            path: /projects/version-history         
+            path: /projects/version-history
       - title: File-based workflows
         path: /scripting/sync
         section:
@@ -152,8 +154,6 @@ navigation:
             path: /physics/sleep-system
           - title: Adaptive timestepping
             path: /physics/adaptive-timestepping
-          - title: Character controllers
-            path: /physics/character-controllers
           - title: Roblox units
             path: /physics/units
       - title: Effects
@@ -308,6 +308,17 @@ navigation:
         path: /characters/
       - title: Appearance
         path: /characters/appearance
+      - title: Character Controller Library
+        path: /characters/character-controller-library/
+        section:
+          - title: Overview
+            path: /characters/character-controller-library/
+          - title: Abilities
+            path: /characters/character-controller-library/abilities
+          - title: Controllers
+            path: /characters/character-controller-library/controllers
+      - title: Name and health display
+        path: /characters/name-health-display
       - title: Adaptive Animation
         path: /characters/adaptive-animation
       - title: Emotes
@@ -316,8 +327,6 @@ navigation:
         path: /art/characters/facial-animation/moods
       - title: Pathfinding
         path: /characters/pathfinding
-      - title: Name and health display
-        path: /characters/name-health-display
       - title: R6 to R15 adapter
         path: /characters/r6-to-r15-adapter
   - title: Players
@@ -453,12 +462,14 @@ navigation:
         section:
           - title: Animation Editor
             path: /animation/editor
+          - title: Curve Editor
+            path: /animation/curve-editor
+          - title: Graph Editor
+            path: /animation/graph-editor
           - title: Animation events
             path: /animation/events
           - title: Animation capture
             path: /animation/capture
-          - title: Curve editor
-            path: /animation/curve-editor
           - title: Inverse kinematics
             path: /animation/inverse-kinematics
       - title: Use animations
@@ -474,6 +485,8 @@ navigation:
             path: /chat/in-experience-text-chat
           - title: Guidelines
             path: /chat/guidelines
+          - title: Preset system guidelines
+            path: /chat/preset-system-guidelines
           - title: Chat window
             path: /chat/chat-window
           - title: Bubble chat
@@ -557,6 +570,8 @@ navigation:
             path: /cloud-services/data-stores/observability
           - title: Best practices
             path: /cloud-services/data-stores/best-practices
+          - title: Right to be forgotten (RTBF)
+            path: /cloud-services/data-stores/right-to-be-forgotten
           - title: Implement player data and purchase systems
             path: /cloud-services/data-stores/player-data-purchasing
       - title: Memory stores

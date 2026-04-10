@@ -32,7 +32,7 @@ Studio provides several tools to get your third-party content into Studio depend
 - Models
 
   - Uploaded models must follow Studio's [modeling specifications](../art/modeling/specifications.md).
-  - Studio's [3D Importer](../art/modeling/3d-importer.md) supports `.gltf`, `.fbx`, `.obj` file formats.
+  - Studio's [Importer](../studio/importer.md) supports `.gltf`, `.fbx`, `.obj` file formats.
   - You can also use tools like the [Roblox Blender plugin](../art/modeling/roblox-blender-plugin.md) to connect your modeling software to Studio and directly upload your modeling assets between applications.
 
 - Images

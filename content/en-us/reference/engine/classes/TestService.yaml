@@ -757,8 +757,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities:
-      - InternalTest
+    capabilities: []
   - name: TestService:Warn
     summary: |
       Prints if a condition is `true`, otherwise prints a warning.

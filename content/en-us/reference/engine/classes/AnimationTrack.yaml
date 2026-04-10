@@ -75,6 +75,7 @@ properties:
       can_save: false
     capabilities:
       - Animation
+    simulationAccess: true
   - name: AnimationTrack.Length
     summary: |
       A read-only property that returns the length (in seconds) of an
@@ -136,6 +137,7 @@ properties:
       can_save: false
     capabilities:
       - Animation
+    simulationAccess: true
   - name: AnimationTrack.Priority
     summary: |
       Sets the priority of an `Class.AnimationTrack`. Depending on what this is
@@ -177,6 +179,7 @@ properties:
       can_save: true
     capabilities:
       - Animation
+    simulationAccess: true
   - name: AnimationTrack.Speed
     summary: |
       Read-only property that gives the current playback speed of the
@@ -207,6 +210,7 @@ properties:
       can_save: false
     capabilities:
       - Animation
+    simulationAccess: true
   - name: AnimationTrack.TimePosition
     summary: |
       Returns the position in time in seconds that an `Class.AnimationTrack` is
@@ -235,6 +239,7 @@ properties:
       can_save: false
     capabilities:
       - Animation
+    simulationAccess: true
   - name: AnimationTrack.WeightCurrent
     summary: |
       Read-only property that gives the current weight of the
@@ -270,6 +275,7 @@ properties:
       can_save: false
     capabilities:
       - Animation
+    simulationAccess: true
   - name: AnimationTrack.WeightTarget
     summary: |
       Read-only property that gives the current weight of the
@@ -309,6 +315,7 @@ properties:
       can_save: false
     capabilities:
       - Animation
+    simulationAccess: true
 methods:
   - name: AnimationTrack:AdjustSpeed
     summary: |
@@ -348,6 +355,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
+    simulationAccess: true
   - name: AnimationTrack:AdjustWeight
     summary: |
       Changes the weight of an animation, with the optional `fadeTime` parameter
@@ -397,6 +405,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
+    simulationAccess: true
   - name: AnimationTrack:GetMarkerReachedSignal
     summary: |
       Returns an `Datatype.RBXScriptSignal` (event) that fires when a specified
@@ -594,6 +603,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
+    simulationAccess: true
   - name: AnimationTrack:SetParameter
     summary: ''
     description: ''
@@ -674,6 +684,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
+    simulationAccess: true
 events:
   - name: AnimationTrack.DidLoop
     summary: |

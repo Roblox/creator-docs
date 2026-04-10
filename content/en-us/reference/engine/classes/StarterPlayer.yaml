@@ -107,11 +107,10 @@ properties:
     type: RolloutState
     tags:
       - NotReplicated
-      - NotScriptable
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Character
     serialization:

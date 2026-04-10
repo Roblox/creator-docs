@@ -58,7 +58,7 @@ By default, when you import a face accessory, it imports as a `Class.MeshPart` o
 
 To import a face accessory:
 
-1. From Studio's **File** menu, use the [3D Importer](../../../art/modeling/3d-importer.md) to import the custom model into the workspace.
+1. From Studio's **File** menu, use the [Importer](../../../studio/importer.md) to import the custom model into the workspace.
 
    <img src="../../../assets/avatar/dynamic-heads/using-dynamic-heads-in-studio/Importing-Facial-Accessory-Final-Result.jpg" width="80%" />
 

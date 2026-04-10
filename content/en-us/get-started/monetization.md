@@ -109,7 +109,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>UGC for everyone</h4>
-        <Typography variant='body1'>Previously restricted to approved creators, selling user-generated avatar clothing is now available to all creators who are age-verified and subscribe to Premium.</Typography>
+        <Typography variant='body1'>Previously restricted to approved creators, selling user-generated avatar clothing is now available to all creators who are age-verified and subscribe to Roblox Plus or Premium.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>

@@ -130,6 +130,10 @@
           },
           "capabilities": {
             "$ref": "#/definitions/__schema3"
+          },
+          "simulationAccess": {
+            "description": "Whether the property is available in RunService:BindToSimulation. Boolean. Automated.",
+            "type": "boolean"
           }
         },
         "required": [
@@ -195,6 +199,10 @@
           },
           "capabilities": {
             "$ref": "#/definitions/__schema3"
+          },
+          "simulationAccess": {
+            "description": "Whether the method is available in RunService:BindToSimulation. Boolean. Automated.",
+            "type": "boolean"
           }
         },
         "required": [
@@ -253,6 +261,10 @@
           },
           "capabilities": {
             "$ref": "#/definitions/__schema3"
+          },
+          "simulationAccess": {
+            "description": "Whether the event is available in RunService:BindToSimulation. Boolean. Automated.",
+            "type": "boolean"
           }
         },
         "required": [
@@ -324,6 +336,10 @@
             "items": {
               "type": "string"
             }
+          },
+          "simulationAccess": {
+            "description": "Whether the callback is available in RunService:BindToSimulation. Boolean. Automated.",
+            "type": "boolean"
           }
         },
         "required": [

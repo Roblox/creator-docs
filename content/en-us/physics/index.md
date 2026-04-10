@@ -3,7 +3,7 @@ title: Physics
 description: Overview of Roblox's rigid body physics engine, assemblies, and constraints.
 ---
 
-Roblox uses a rigid body physics engine. Parts are subject to physical forces as long as they are not `Class.BasePart.Anchored|anchored`. You can create physical [assemblies](#assemblies) using attachments and constraints, and you can detect and control [collisions](#collisions) between objects using events and collision filtering.
+Roblox uses a rigid body physics engine. `Class.BasePart|BaseParts` are subject to physical forces as long as they are not `Class.BasePart.Anchored|Anchored`. You can create physical [assemblies](#assemblies) using attachments and constraints, and you can detect and control [collisions](#collisions) between objects using events and collision filtering.
 
 ## Assemblies
 
@@ -26,19 +26,20 @@ An [assembly](../physics/assemblies.md) is one or more `Class.BasePart|BaseParts
 
 ## Constraints
 
-Non-anchored assemblies react to force from gravity and collisions, but physical force can also be applied through **mechanical constraints** or **mover constraints**.
+Non-anchored assemblies react to force from gravity and collisions, but physical force can also be applied and simulated through [mechanical&nbsp;constraints](../physics/mechanical-constraints.md) or [mover&nbsp;constraints](../physics/mover-constraints.md).
 
-### Mechanical constraints
+<Tabs>
+<TabItem label="Mechanical">
+Mechanical constraints include familiar objects like [hinges](../physics/constraints/hinge.md), [springs](../physics/constraints/spring.md), and [ropes](../physics/constraints/rope.md) which can be used to build mechanisms. Each is summarized in the [mechanical&nbsp;constraints](../physics/mechanical-constraints.md) guide.
 
-Mechanical constraints include familiar objects like hinges, springs, and ropes which can be used to build mechanisms. Each is covered in [Mechanical&nbsp;constraints](../physics/mechanical-constraints.md).
+<video src="../assets/physics/constraints/Spring-Demo.mp4" controls width="90%"></video>
+</TabItem>
+<TabItem label="Mover">
+Mover constraints apply velocity, force, or torque to assemblies, align assemblies by position or orientation, and more. Each is summarized in the [mover&nbsp;constraints](../physics/mover-constraints.md) guide.
 
-<video src="../assets/physics/constraints/Spring-Demo.mp4" controls width="100%"></video>
-
-### Mover constraints
-
-Mover constraints apply force or torque to move one or more assemblies. Each is outlined in [Mover&nbsp;constraints](../physics/mover-constraints.md).
-
-<video src="../assets/physics/constraints/Torque-RelativeTo-Attachment0.mp4" controls width="100%"></video>
+<video src="../assets/physics/constraints/Torque-RelativeTo-Attachment0.mp4" controls width="90%"></video>
+</TabItem>
+</Tabs>
 
 ## Collisions
 
@@ -46,16 +47,16 @@ Collision events automatically occur when two `Class.BasePart|BaseParts` touch o
 
 Through [collision filtering](../workspace/collisions.md#collision-filtering) techniques such as collision groups or part‑to‑part filtering, you can control which physical assemblies collide with others.
 
-See [Collisions](../workspace/collisions.md) for more details on detecting and filtering collisions.
+See the [collisions](../workspace/collisions.md) guide for more details on detecting and filtering collisions.
 
 ## Network ownership
 
-In order to support complex physical mechanisms while also aiming for a smooth and responsive experience for players, the Roblox physics engine utilizes a **distributed physics** system in which computations are distributed between the server and all connected clients. Within this system, the engine assigns **network ownership** of physically simulated `Class.BasePart|BaseParts` to either a client or server to divide the work of calculating physics. See [Network ownership](../physics/network-ownership.md) for further details.
+In order to support complex physical mechanisms while also aiming for a smooth and responsive experience for players, the Roblox physics engine utilizes a **distributed physics** system in which computations are distributed between the server and all connected clients. Within this system, the engine assigns **network ownership** of physically simulated `Class.BasePart|BaseParts` to either a client or server to divide the work of calculating physics. See the [network ownership](../physics/network-ownership.md) guide for further details.
 
 ## Adaptive timestepping
 
-The engine emphasizes best performance by automatically assigning assemblies to one of three simulation rates. For scenarios featuring complex mechanisms like tanks, you can improve stability by setting a fixed timestep. See [Adaptive timestepping](../physics/adaptive-timestepping.md) for more information.
+The engine emphasizes best performance by automatically assigning assemblies to one of three simulation rates. For scenarios featuring complex mechanisms like tanks, you can improve stability by setting a fixed timestep. See the [adaptive timestepping](../physics/adaptive-timestepping.md) guide for more information.
 
 ## Sleep system
 
-When an assembly is not moving or accelerating, the Roblox physics engine improves performance by automatically stops simulating the assembly. See [Sleep system](../physics/sleep-system.md) for a detailed description of the sleep system.
+When an assembly is not moving or accelerating, the Roblox physics engine improves performance by automatically stops simulating the assembly. See the [sleep system](../physics/sleep-system.md) guide for details.
