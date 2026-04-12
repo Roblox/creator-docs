@@ -1,5 +1,42 @@
 ---
-title: Roblox Studio setup
+title: local Players = game:GetService("Players")
+
+Players.PlayerAdded:Connect(function(player)
+	-- Create Leaderstats
+	local leaderstats = Instance.new("Folder")
+	leaderstats.Name = "leaderstats"
+	leaderstats.Parent = player
+
+	local stage = Instance.new("IntValue")
+	stage.Name = "Stage"
+	stage.Value = 1
+	stage.Parent = leaderstats
+end)
+
+-- Function to teleport player to their current checkpoint
+local function teleportToCheckpoint(player, stageNumber)
+	local char = player.Character or player.CharacterAdded:Wait()
+	local root = char:WaitForChild("HumanoidRootPart")
+	
+	local checkpointFolder = workspace:FindFirstChild("Checkpoints")
+	if not checkpointFolder then return end
+	
+	local checkpoint = checkpointFolder:FindFirstChild("Stage" .. stageNumber)
+	if checkpoint then
+		root.CFrame = checkpoint.CFrame + Vector3.new(0, 5, 0)  -- Spawn a bit above the part
+	end
+end
+
+-- Listen for deaths and respawn at last checkpoint
+Players.PlayerAdded:Connect(function(player)
+	player.CharacterAdded:Connect(function(char)
+		local humanoid = char:WaitForChild("Humanoid")
+		humanoid.Died:Connect(function()
+			wait(2)  -- Small delay before respawn
+			teleportToCheckpoint(player, player.leaderstats.Stage.Value)
+		end)
+	end)
+end)
 description: Explains how to install Roblox Studio on your system.
 ---
 
