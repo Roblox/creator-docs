@@ -83,7 +83,7 @@ When a webhook notification fails to reach your specified URL due to errors such
 
 ### Third-party requirements
 
-Third-party tools usually have their own requirements for webhooks that you need to follow when setting up your webhook URL. You can find these requirements by searching for the keyword "webhook" on the support or documentation site of the target tool. For the three supported third-party tools, see the following:
+Third-party tools usually have their own requirements for webhooks that you need to follow when setting up your webhook URL. You can find these requirements by searching for the keyword "webhook" on the support or documentation site of the target tool. For the supported third-party tools, see the following:
 
 - [Discord Help Center](https://support.discord.com/hc/en-us)
 - [Slack API Reference](https://api.slack.com/)
