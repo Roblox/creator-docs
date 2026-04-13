@@ -1,18 +1,18 @@
 ---
 title: Secrets stores
-description: Securely manage API keys, passwords, and assess tokens for third-party services with your experience's secrets store.
+description: Securely manage API keys, passwords, and assess tokens for third-party services with your game's secrets store.
 ---
 
-Roblox offers a **secrets** store for each experience. Secrets are sensitive information like API keys, passwords, and access tokens that you use to authenticate with external services. For example, if you want to connect to a third-party analytics or music service, you likely need to use an API key to authenticate with it.
+Roblox offers a **secrets** store for each game. Secrets are sensitive information like API keys, passwords, and access tokens that you use to authenticate with external services. For example, if you want to connect to a third-party analytics or music service, you likely need to use an API key to authenticate with it.
 
 You could copy and paste the API key into a script or add it to a data store, but those approaches carry unnecessary security risks. The better solution is to use the secrets store and access the key using a small set of secure methods.
 
 ## Add secrets
 
-To view, create, or edit secrets, you must be the experience owner or group owner. You can have up to 500 secrets per experience.
+To view, create, or edit secrets, you must be the game owner or group owner. You can have up to 500 secrets per game.
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-2. Select your experience, and then select **Secrets** ⟩ **Create Secret**.
+2. Select your game, and then select **Secrets** ⟩ **Create Secret**.
 3. Enter a name, the secret, and the applicable domain.
 
    - The name acts as a unique identifier for the secret, so we recommend something descriptive.
@@ -25,7 +25,7 @@ You can also use Open Cloud to manage your secrets. See the [reference documenta
 
 ## Local secrets
 
-For security reasons, the secrets store for each experience is only available to live servers or [collaborative testing](../studio/testing-modes.md#collaborative-testing) environments. If you try to access a secret during [local playtesting](../studio/testing-modes.md#playtesting), you receive a `Can't find secret with given key` error. You receive an identical error if you try to access secrets from a client script.
+For security reasons, the secrets store for each game is only available to live servers or [collaborative testing](../studio/testing-modes.md#collaborative-testing) environments. If you try to access a secret during [local playtesting](../studio/testing-modes.md#playtesting), you receive a `Can't find secret with given key` error. You receive an identical error if you try to access secrets from a client script.
 
 To specify secrets for local testing, go to Studio and then go to **File** ⟩ **Experience Settings** ⟩ **Security**. You can create new secrets and edit or delete existing secrets in the **Secrets** section.
 
@@ -35,7 +35,7 @@ To specify secrets for local testing, go to Studio and then go to **File** ⟩ *
 
 ## Use secrets
 
-Before using secrets within your experience, you must enable **Allow HTTP Requests** in the **Security** section of Studio's **File** ⟩ **Experience Settings** window. Then call `Class.HttpService:GetSecret()` within a server script:
+Before using secrets within your game, you must enable **Allow HTTP Requests** in the **Security** section of Studio's **File** ⟩ **Experience Settings** window. Then call `Class.HttpService:GetSecret()` within a server script:
 
 ```lua
 local HttpService = game:GetService("HttpService")

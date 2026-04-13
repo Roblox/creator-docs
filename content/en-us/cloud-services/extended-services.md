@@ -21,11 +21,11 @@ To use Extended Services, your Roblox account must:
 
 ## Unlock Extended Services
 
-If you meet all of the [eligibility requirements](#eligibility-requirements), you can finish setting up Extended Services by entering your account details and payment information. For group-owned experiences, only the group owner can unlock Extended Services and onboard the experience onto it.
+If you meet all of the [eligibility requirements](#eligibility-requirements), you can finish setting up Extended Services by entering your account details and payment information. For group-owned games, only the group owner can unlock Extended Services and onboard the game onto it.
 
 To unlock and use Extended Services:
 
-1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), go to **Creations** and select an experience.
+1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), go to **Creations** and select a game.
 2. Go to **Extended Services**.
 3. If you haven't entered your account details and payment information yet, click **Add missing information** on the top banner.
     1. Enter your account information. The **Account type**, **Tax ID type**, and **Tax ID** fields are optional.
@@ -85,7 +85,7 @@ To access the Extended Services billing dashboard:
 1. Go to **Finances** ⟩ **Billing**.
 2. Select the **Cloud services** tab to display the following:
     - Your pending balance, including month-to-date cost
-    - Your billing history, including all Extended Services billing activity across your experiences
+    - Your billing history, including all Extended Services billing activity across your games
 
 For a detailed breakdown of your current pending balance costs, click **View Details** next to your payment method. For a detailed invoice of a previous bill, click **View Bill** under **Billing history**.
 

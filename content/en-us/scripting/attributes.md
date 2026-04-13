@@ -3,9 +3,9 @@ title: Properties and attributes
 description: How to use scripts to manipulate object properties and attributes.
 ---
 
-Making experiences interactive often means manipulating object properties and attributes:
+Making games interactive often means manipulating object properties and attributes:
 
-- Properties are part of the object class. For example, the `Class.BasePart.Anchored` property controls physics for the part. In a track and field experience, you might want to anchor a discus or javelin the instant it lands so that players have a visual indicator of how far it traveled.
+- Properties are part of the object class. For example, the `Class.BasePart.Anchored` property controls physics for the part. In a track and field game, you might want to anchor a discus or javelin the instant it lands so that players have a visual indicator of how far it traveled.
 
 - Attributes are essentially custom properties that you define. For example, the [Plant](../resources/plant-reference-project.md) reference project uses attributes to set the purchase price for seeds and the maximum plant size that a pot can hold.
 
@@ -17,7 +17,7 @@ The Roblox Engine doesn't guarantee the order in which objects (and changes to o
 
 For example, if a server script changes a property of some instance in the Workspace and then calls `Class.RemoteEvent:FireAllClients()`, the property change might replicate to the client before or after `Class.RemoteEvent.OnClientEvent` fires. Use the available methods and events to [detect changes](#detect-changes) rather than assuming a change has replicated. Changes of the same type, such as two attribute changes, generally **do** arrive in order.
 
-When clients first launch an experience, some aspects of replication and script execution are predictable:
+When clients first launch a game, some aspects of replication and script execution are predictable:
 
 1. The client loads the contents of `Class.ReplicatedFirst`, such as a loading screen, assets, and scripts.
 1. `Class.LocalScript|LocalScripts` (and `Class.Script|Scripts` with a `Class.Script.RunContext|RunContext` of `Enum.RunContext.Client|Client`) in `Class.ReplicatedFirst` run. These scripts can safely get objects from `Class.ReplicatedFirst` without using `Class.Instance:WaitForChild()`:
@@ -38,17 +38,17 @@ When clients first launch an experience, some aspects of replication and script 
 
    You **can** use `Class.Instance:WaitForChild()|WaitForChild()` in these scripts to get objects from other services, but doing so negates the benefits of using `Class.ReplicatedFirst`.
 
-1. The client continues loading the rest of the experience.
+1. The client continues loading the rest of the game.
 
 1. When it finishes, the `Class.DataModel.Loaded|Loaded` event fires and `Class.DataModel:IsLoaded()|IsLoaded()` returns true.
 
 1. `Class.LocalScript|LocalScripts` in `Players.[Player].PlayerScripts` (copied from `Class.StarterPlayerScripts`) run, as well as client `Class.Script|Scripts` in `Class.ReplicatedStorage`. These scripts can safely get objects from `Class.ReplicatedStorage` without using `Class.Instance:WaitForChild()|WaitForChild()`.
 
-1. The player's `Class.Player.Character|Character` model spawns in the experience.
+1. The player's `Class.Player.Character|Character` model spawns in the game.
 
 1. `Class.LocalScript|LocalScripts` in `Workspace.[Character]` (copied from `Class.StarterCharacterScripts`) run.
 
-If your experience uses [instance streaming](../workspace/streaming/index.md) (`Class.Workspace.StreamingEnabled`), some or most objects might not have loaded into the workspace, so using `Class.Instance:WaitForChild()|WaitForChild()` to access workspace objects becomes an even more important safety measure. In particular, see [stream in](../workspace/streaming/index.md#stream-in) and [per-model streaming controls](../workspace/streaming/index.md#per-model-streaming-controls) for additional information on loading and tuning streaming behavior.
+If your game uses [instance streaming](../workspace/streaming/index.md) (`Class.Workspace.StreamingEnabled`), some or most objects might not have loaded into the workspace, so using `Class.Instance:WaitForChild()|WaitForChild()` to access workspace objects becomes an even more important safety measure. In particular, see [stream in](../workspace/streaming/index.md#stream-in) and [per-model streaming controls](../workspace/streaming/index.md#per-model-streaming-controls) for additional information on loading and tuning streaming behavior.
 
 ## Get objects
 

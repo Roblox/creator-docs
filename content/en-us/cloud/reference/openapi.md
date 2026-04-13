@@ -11,7 +11,7 @@ You can use OpenAPI documents with tools like the [Swagger Editor](https://edito
 This document is still under active development and may contain issues. Report a bug if you notice inaccurate information.
 </Alert>
 
-<a href="https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/">
+<a href="https://create.roblox.com/docs/cloud/openapi.json">
   <Button variant="contained">Download openapi.json here</Button>
 </a><br />
 

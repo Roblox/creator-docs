@@ -1281,66 +1281,6 @@
         ]
       }
     },
-    "/cloud/v2/groups/{group_id}/shout": {
-      "get": {
-        "tags": ["Cloud"],
-        "summary": "Get Group Shout",
-        "description": "Gets the group shout.\n\nIf a guest can view the group shout, this is always retrievable.\n\nIf a guest cannot, a member who has the permissions to view the group\nshout, along with the `group:read` scope, will be able to read the group\nshout.",
-        "operationId": "Cloud_GetGroupShout",
-        "parameters": [
-          {
-            "name": "group_id",
-            "in": "path",
-            "description": "The group ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GroupShout"
-                }
-              }
-            }
-          }
-        },
-        "x-visibility": "BETA",
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": true
-        },
-        "x-roblox-scopes": [
-          {
-            "description": "Required to view the group shout if a guest cannot view the group shout.",
-            "name": "group:read"
-          }
-        ],
-        "x-roblox-docs": {
-          "category": "Users and groups",
-          "methodProperties": {
-            "scopes": []
-          },
-          "resource": {
-            "$ref": "#/components/schemas/GroupShout",
-            "name": "GroupShout"
-          }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
-      }
-    },
     "/cloud/v2/universes/{universe_id}": {
       "get": {
         "tags": ["Cloud"],
@@ -7871,51 +7811,6 @@
           }
         },
         "description": "Represents the permissions on a role."
-      },
-      "GroupShout": {
-        "type": "object",
-        "properties": {
-          "path": {
-            "example": "groups/123/shout",
-            "type": "string",
-            "description": "The resource path of the group shout.\n\nFormat: `groups/{group_id}/shout`"
-          },
-          "createTime": {
-            "readOnly": true,
-            "example": "2023-07-05T12:34:56Z",
-            "type": "string",
-            "description": "The timestamp when the group shout was created.",
-            "format": "date-time"
-          },
-          "updateTime": {
-            "readOnly": true,
-            "example": "2023-07-05T12:34:56Z",
-            "type": "string",
-            "description": "The timestamp when the group shout was last updated.",
-            "format": "date-time"
-          },
-          "content": {
-            "example": "This is the group shout content to share with everyone.",
-            "type": "string",
-            "description": "The shout content.\n\nHas a maximum limit of 255 characters."
-          },
-          "poster": {
-            "readOnly": true,
-            "example": "users/21557",
-            "type": "string",
-            "description": "The resource path for the poster of the group shout.\n\nIf the group is abandoned, has no owner, and has never had a shout, this\nfield is not returned."
-          }
-        },
-        "description": "A single status post on a group that can hold important group updates or\nother information.",
-        "x-aep-resource": {
-          "patterns": ["groups/{group_id}/shout"],
-          "plural": "group-shouts",
-          "singular": "group-shout"
-        },
-        "x-resource": true,
-        "x-oneOf": {
-          "Poster": ["poster"]
-        }
       },
       "IncrementDataStoreEntryRequest": {
         "type": "object",

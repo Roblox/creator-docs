@@ -1,6 +1,6 @@
 ---
 title: MicroProfiler
-description: The MicroProfiler is a Studio and client tool for optimizing your experience.
+description: The MicroProfiler is a Studio and client tool for optimizing your games on Roblox.
 ---
 
 The **MicroProfiler** is a performance optimization and troubleshooting tool in Roblox Studio and the Roblox client. It provides detailed, visual timing information for all the [engine tasks](task-scheduler.md) that run during a frame, like animating characters, updating physics, running scripts, and rendering geometry. You can identify which tasks ran during which frame, how long these tasks took to run, and whether any caused you to miss your frame time goals.<br />
@@ -57,7 +57,7 @@ Average frame time | Frames per second
 8.33 ms | 120 FPS
 4.17 ms | 240 FPS
 
-For smooth gameplay, however, it's not enough to have a high frame rate. You need **consistent frame times**. For example, if 59 frames arrive in 10 milliseconds and one frame in 410 milliseconds, players perceive a huge, jarring stutter, even though the experience is running at 60 FPS. If all frames take roughly the same amount of time to render, your experience will feel perceptibly smoother due to that consistency, especially at lower frame rates.
+For smooth gameplay, however, it's not enough to have a high frame rate. You need **consistent frame times**. For example, if 59 frames arrive in 10 milliseconds and one frame in 410 milliseconds, players perceive a huge, jarring stutter, even though the game is running at 60 FPS. If all frames take roughly the same amount of time to render, your game will feel perceptibly smoother due to that consistency, especially at lower frame rates.
 
 The MicroProfiler focuses **entirely on frame time**. Its purpose is to help you identify frame time spikes and what caused them.
 
@@ -78,7 +78,7 @@ Opening the MicroProfiler varies by platform:
 - On the desktop client, press <kbd>Ctrl</kbd><kbd>F6</kbd> (<kbd>⌘</kbd><kbd>F6</kbd>).
 - In Studio, press <kbd>Ctrl</kbd><kbd>F6</kbd> (<kbd>⌘</kbd><kbd>F6</kbd>).
 
-Generally, the mobile client is the best place to profile your experience. Most players on Roblox use phones and tablets, and these devices have severe thermal and power constraints that limit their performance. If your experience runs well on a midrange Android tablet, it almost certainly performs much, much better on a gaming desktop.
+Generally, the mobile client is the best place to profile your game. Most players on Roblox use phones and tablets, and these devices have severe thermal and power constraints that limit their performance. If your game runs well on a midrange Android tablet, it almost certainly performs much, much better on a gaming desktop.
 
 <Alert severity="success">
 Powerful devices like gaming desktops can actually obscure performance problems, especially if you have a frame rate cap in place. For example, if you cap FPS to 60 on the client, you might not notice the difference between a frame time of 4 milliseconds and 16 milliseconds, even though the latter is four times as long, because they all arrive in under 16.67 milliseconds. On a mobile device that is struggling to stay at 30 FPS, a frame that takes four times as long (133 ms) is hard to miss.
@@ -103,11 +103,11 @@ The height of each bar indicates the number of milliseconds that it took to comp
 
 - Orange bars are frames where the **Jobs Wall Time** exceeds the **Render Wall Time**. In these frames, at least one of the [worker threads](#threads), which do things like run scripts, calculate physics, and play animations, took longer to run than the [main render thread](#threads).
 
-  If the experience is not reaching your frame time goals and has a large number of orange frames, common causes are scripts, physics, and animations. See [Improve performance](../../performance-optimization/improve.md#script-computation).
+  If the game is not reaching your frame time goals and has a large number of orange frames, common causes are scripts, physics, and animations. See [Improve performance](../../performance-optimization/improve.md#script-computation).
 
 - Blue bars are frames where the **Render Wall Time** exceeds the **Jobs Wall Time**. In these frames, the main render thread took more time than any of the worker threads.
 
-  If the experience is not reaching your frame time goals and has a large number of blue frames, that indicates a rendering bottleneck. Common causes are excessive object density, object movement, and lighting. See [Improve performance](../../performance-optimization/improve.md#rendering).
+  If the game is not reaching your frame time goals and has a large number of blue frames, that indicates a rendering bottleneck. Common causes are excessive object density, object movement, and lighting. See [Improve performance](../../performance-optimization/improve.md#rendering).
 
 - Red bars are frames where two conditions are true:
 
@@ -202,14 +202,14 @@ On the desktop client or in Studio, use the **Dump** menu. In both cases, the Mi
 - On macOS, check `~/Library/Logs/Roblox`.
 
 <Alert severity="info">
-Dumps only contain data for the selected number of frames, **not** the entire duration that the experience has been running. The exception is [counters mode](modes.md#counters-mode), which includes data from when Studio or the client started running to the time of the dump.
+Dumps only contain data for the selected number of frames, **not** the entire duration that the game has been running. The exception is [counters mode](modes.md#counters-mode), which includes data from when Studio or the client started running to the time of the dump.
 </Alert>
 
 ## Profile the server
 
 In addition to profiling the client, you can capture brief dumps of server activity:
 
-1. On the desktop client, join an experience that you have edit permissions for.
+1. On the desktop client, join a game that you have edit permissions for.
 1. Open the Developer Console with <kbd>Ctrl</kbd><kbd>F9</kbd> (<kbd>⌘</kbd><kbd>F9</kbd>).
 1. In the dropdown menu, select **MicroProfiler**.
 1. In the **Server** tab, specify the number of frames to capture (maximum 60) and the number of seconds to delay before starting the capture (maximum 4).
@@ -239,7 +239,7 @@ The MicroProfiler has two user interfaces: the web UI (mobile and dumps) and the
 
   <img alt="The MicroProfiler flame graph in Studio." src="../../assets/optimization/microprofiler/micro-studio-flame.png" />
 
-- Drag and drop a second dump file into the web UI to generate a diff flame graph, which can help you identify improvements or regressions to your experience's performance over time. Click **Combine & Compare** to export a new HTML file.
+- Drag and drop a second dump file into the web UI to generate a diff flame graph, which can help you identify improvements or regressions to your game's performance over time. Click **Combine & Compare** to export a new HTML file.
 
   <img alt="The MicroProfiler diff flame graph builder showing the left and right sides." src="../../assets/optimization/microprofiler/micro-flame-diff.png" />
 
@@ -253,7 +253,7 @@ The MicroProfiler has two user interfaces: the web UI (mobile and dumps) and the
 
 ## Desktop-only features
 
-On the desktop timeline, left-click a label to add it to a line graph in the bottom-right. The graph shows the time the task takes each frame. Using this graph, you can test the performance of only certain tasks in your experience. When you're done, right-click the graph to hide it.
+On the desktop timeline, left-click a label to add it to a line graph in the bottom-right. The graph shows the time the task takes each frame. Using this graph, you can test the performance of only certain tasks in your game. When you're done, right-click the graph to hide it.
 
 <img alt="The graph showing how long tasks take per frame." src="../../assets/optimization/microprofiler/micro-graph.png" width="300px" />
 

@@ -2862,78 +2862,6 @@
         }
       }
     },
-    "/cloud/v2/groups/{group_id}/shout": {
-      "get": {
-        "tags": ["Groups"],
-        "summary": "Get Group Shout",
-        "description": "Gets the group shout.\n\nIf a guest can view the group shout, this is always retrievable.\n\nIf a guest cannot, a member who has the permissions to view the group\nshout, along with the `group:read` scope, will be able to read the group\nshout.",
-        "operationId": "Cloud_GetGroupShout",
-        "parameters": [
-          {
-            "name": "group_id",
-            "in": "path",
-            "description": "The group ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GroupShout"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": true
-        },
-        "x-roblox-scopes": [
-          {
-            "description": "Required to view the group shout if a guest cannot view the group shout.",
-            "name": "group:read"
-          }
-        ],
-        "x-roblox-docs": {
-          "category": "Users and groups",
-          "methodProperties": {
-            "scopes": []
-          },
-          "resource": {
-            "$ref": "#/components/schemas/GroupShout",
-            "name": "GroupShout"
-          }
-        },
-        "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          }
-        },
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#Cloud_GetGroupShout"
-        }
-      }
-    },
     "/cloud/v2/universes/{universeId}/secrets": {
       "get": {
         "tags": ["Universes"],
@@ -9574,7 +9502,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -9585,12 +9513,14 @@
               "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
                 "InExperienceConfig",
-                "RecommendationServicesConfig"
+                "RecommendationServicesConfig",
+                "DataStoresConfig"
               ]
             },
             "x-enum-varnames": [
               "InExperienceConfig",
-              "RecommendationServicesConfig"
+              "RecommendationServicesConfig",
+              "DataStoresConfig"
             ]
           },
           {
@@ -9699,7 +9629,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -9710,12 +9640,14 @@
               "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
                 "InExperienceConfig",
-                "RecommendationServicesConfig"
+                "RecommendationServicesConfig",
+                "DataStoresConfig"
               ]
             },
             "x-enum-varnames": [
               "InExperienceConfig",
-              "RecommendationServicesConfig"
+              "RecommendationServicesConfig",
+              "DataStoresConfig"
             ]
           },
           {
@@ -9867,7 +9799,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -9878,12 +9810,14 @@
               "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
                 "InExperienceConfig",
-                "RecommendationServicesConfig"
+                "RecommendationServicesConfig",
+                "DataStoresConfig"
               ]
             },
             "x-enum-varnames": [
               "InExperienceConfig",
-              "RecommendationServicesConfig"
+              "RecommendationServicesConfig",
+              "DataStoresConfig"
             ]
           },
           {
@@ -9990,7 +9924,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10001,12 +9935,14 @@
               "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
                 "InExperienceConfig",
-                "RecommendationServicesConfig"
+                "RecommendationServicesConfig",
+                "DataStoresConfig"
               ]
             },
             "x-enum-varnames": [
               "InExperienceConfig",
-              "RecommendationServicesConfig"
+              "RecommendationServicesConfig",
+              "DataStoresConfig"
             ]
           },
           {
@@ -10160,7 +10096,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10171,12 +10107,14 @@
               "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
                 "InExperienceConfig",
-                "RecommendationServicesConfig"
+                "RecommendationServicesConfig",
+                "DataStoresConfig"
               ]
             },
             "x-enum-varnames": [
               "InExperienceConfig",
-              "RecommendationServicesConfig"
+              "RecommendationServicesConfig",
+              "DataStoresConfig"
             ]
           },
           {
@@ -10330,7 +10268,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10341,12 +10279,14 @@
               "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
                 "InExperienceConfig",
-                "RecommendationServicesConfig"
+                "RecommendationServicesConfig",
+                "DataStoresConfig"
               ]
             },
             "x-enum-varnames": [
               "InExperienceConfig",
-              "RecommendationServicesConfig"
+              "RecommendationServicesConfig",
+              "DataStoresConfig"
             ]
           },
           {
@@ -10455,7 +10395,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10466,12 +10406,14 @@
               "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
                 "InExperienceConfig",
-                "RecommendationServicesConfig"
+                "RecommendationServicesConfig",
+                "DataStoresConfig"
               ]
             },
             "x-enum-varnames": [
               "InExperienceConfig",
-              "RecommendationServicesConfig"
+              "RecommendationServicesConfig",
+              "DataStoresConfig"
             ]
           },
           {
@@ -10625,7 +10567,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10636,12 +10578,14 @@
               "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
                 "InExperienceConfig",
-                "RecommendationServicesConfig"
+                "RecommendationServicesConfig",
+                "DataStoresConfig"
               ]
             },
             "x-enum-varnames": [
               "InExperienceConfig",
-              "RecommendationServicesConfig"
+              "RecommendationServicesConfig",
+              "DataStoresConfig"
             ]
           },
           {
@@ -10806,7 +10750,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10817,12 +10761,14 @@
               "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
                 "InExperienceConfig",
-                "RecommendationServicesConfig"
+                "RecommendationServicesConfig",
+                "DataStoresConfig"
               ]
             },
             "x-enum-varnames": [
               "InExperienceConfig",
-              "RecommendationServicesConfig"
+              "RecommendationServicesConfig",
+              "DataStoresConfig"
             ]
           },
           {
@@ -35087,14 +35033,6 @@
                 "type": "integer"
               }
             }
-          },
-          {
-            "in": "query",
-            "name": "languageCode",
-            "description": "The HTML language code [optional].",
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {
@@ -37551,8 +37489,7 @@
           {
             "url": "https://apis.roblox.com/cloud/v2/groups/{group_id}/shout",
             "httpMethod": "GET",
-            "description": "For the group shout information",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/groups#Cloud_GetGroupShout"
+            "description": "For the group shout information"
           }
         ]
       }
@@ -71981,76 +71918,6 @@
         },
         "description": "Represents the permissions on a role."
       },
-      "GroupShout": {
-        "type": "object",
-        "properties": {
-          "path": {
-            "example": "groups/123/shout",
-            "type": "string",
-            "description": "The resource path of the group shout.\n\nFormat: `groups/{group_id}/shout`"
-          },
-          "createTime": {
-            "readOnly": true,
-            "example": "2023-07-05T12:34:56Z",
-            "type": "string",
-            "description": "The timestamp when the group shout was created.",
-            "format": "date-time"
-          },
-          "updateTime": {
-            "readOnly": true,
-            "example": "2023-07-05T12:34:56Z",
-            "type": "string",
-            "description": "The timestamp when the group shout was last updated.",
-            "format": "date-time"
-          },
-          "content": {
-            "example": "This is the group shout content to share with everyone.",
-            "type": "string",
-            "description": "The shout content.\n\nHas a maximum limit of 255 characters."
-          },
-          "poster": {
-            "readOnly": true,
-            "example": "users/21557",
-            "type": "string",
-            "description": "The resource path for the poster of the group shout.\n\nIf the group is abandoned, has no owner, and has never had a shout, this\nfield is not returned."
-          }
-        },
-        "description": "A single status post on a group that can hold important group updates or\nother information.",
-        "x-aep-resource": {
-          "patterns": ["groups/{group_id}/shout"],
-          "plural": "group-shouts",
-          "singular": "group-shout"
-        },
-        "x-resource": true,
-        "x-oneOf": {
-          "Poster": ["poster"]
-        }
-      },
-      "GroupsApi.Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Assets.AssetType_": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "format": "int64",
-            "type": "integer"
-          },
-          "type": {
-            "format": "int32",
-            "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91]",
-            "enum": [
-              1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21, 22,
-              24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40,
-              41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
-              59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
-              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91
-            ],
-            "type": "integer"
-          },
-          "name": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
       "HttpContent": {
         "type": "object",
         "properties": {
@@ -75306,12 +75173,17 @@
         "description": "Response to remove scoring configuration for a place."
       },
       "Repository": {
-        "enum": ["InExperienceConfig", "RecommendationServicesConfig"],
+        "enum": [
+          "InExperienceConfig",
+          "RecommendationServicesConfig",
+          "DataStoresConfig"
+        ],
         "type": "string",
-        "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.\n\nInExperienceConfig\n\nRecommendationServicesConfig",
+        "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig",
         "x-enum-varnames": [
           "InExperienceConfig",
-          "RecommendationServicesConfig"
+          "RecommendationServicesConfig",
+          "DataStoresConfig"
         ]
       },
       "RestartState": {
@@ -85902,7 +85774,7 @@
             "$ref": "#/components/schemas/Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Core.CreatorType_"
           },
           "rootPlace": {
-            "$ref": "#/components/schemas/GroupsApi.Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Assets.AssetType_"
+            "$ref": "#/components/schemas/Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Assets.AssetType_"
           },
           "created": {
             "format": "date-time",
@@ -91006,13 +90878,13 @@
           },
           "type": {
             "format": "int32",
-            "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90]",
+            "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91]",
             "enum": [
               1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21, 22,
               24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40,
               41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
               59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
-              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90
+              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91
             ],
             "type": "integer"
           },
@@ -95803,7 +95675,6 @@
           "Cloud_UnassignRoleGroupMembership",
           "Cloud_ListGroupRoles",
           "Cloud_GetGroupRole",
-          "Cloud_GetGroupShout",
           "Cloud_ListGroupForumCategories",
           "Cloud_ListGroupForumPosts",
           "Cloud_ListGroupForumComments",

@@ -9,8 +9,8 @@ Script capabilities are experimental and available as a client beta.
 
 **Script capabilities** let you control which actions scripts can perform inside the `Class.DataModel` subtree. Rather than the default "all-or-nothing system," you can set a script to only be able to access certain categories, such as audio, physics, data stores, and more.
 
-- This system lets you limit what models taken from the toolbox can do and makes it easier to include user-generated content inside the experience.
-- It can also help ensure better security of experiences that allow players to run their own code, which is often executed in a restricted or emulated environment.
+- This system lets you limit what models taken from the toolbox can do and makes it easier to include user-generated content inside the game.
+- It can also help ensure better security of games that allow players to run their own code, which is often executed in a restricted or emulated environment.
 - It can also be used to share libraries that restrict what they can do themselves. For example, a library providing additional math methods can be restricted to the smallest set of capabilities it needs so that other developers using that library don't have to validate the entire codebase to make sure it doesn't include malicious code.
 
 ## Enable script capabilities
@@ -69,7 +69,7 @@ When the capability is not available, the script can only look up instances that
 
 Additionally, any Roblox API event that passes in an `Class.Instance` instead passes in `nil` for any `Class.Instance` outside the sandboxed container. For example, if the `Class.BasePart.Touched` is signaled by a touch from an instance outside the sandboxed container, the event is still received, but the argument is `nil`.
 
-Avoid setting this capability; sandboxing guarantees are weaker when scripts can interact with any instance in an experience.
+Avoid setting this capability; sandboxing guarantees are weaker when scripts can interact with any instance in a game.
 
 #### Access to services
 
@@ -88,7 +88,7 @@ This set of capabilities controls some general aspects of scripts:
 - **LoadUnownedAsset** - Script is allowed to call `Global.LuaGlobals.require` with an asset ID or `Class.AssetService:LoadAssetAsync`
 - **ScriptGlobals** - Script has `Global.LuaGlobals.shared` and `Global.LuaGlobals._G` available
 
-Keep in mind that default function restrictions still apply. Even if **LoadString** is enabled, the experience still has to enable it in `Class.ServerScriptService`, and it is still only available on the server.
+Keep in mind that default function restrictions still apply. Even if **LoadString** is enabled, the game still has to enable it in `Class.ServerScriptService`, and it is still only available on the server.
 
 To create new instances, aside from **CreateInstances**, an additional Engine API capability providing access to that instance is required.
 
@@ -107,7 +107,7 @@ This last group of capabilities controls script access to various Engine APIs:
 - **CSG** - Access to instances and functions related to constructive solid geometry (CSG)
 - **CapabilityControl** - Access to modifying the `Sandboxed` and `Capabilities` properties of instances
 - **Capture** -  Access to Engine APIs related to capturing screenshots or videos on the user's screen
-- **Chat** - Access to instances related to in-experience chat
+- **Chat** - Access to instances related to in-game chat
 - **Consequences** - Access to APIs for punishing users (kicks or bans)
 - **DataStore** - Access to data store and memory store APIs
 - **DynamicGeneration** - Access to Engine APIs related to dynamically modifying assets
@@ -118,7 +118,7 @@ This last group of capabilities controls script access to various Engine APIs:
 - **LoadOwnedAsset** - Access to Engine APIs for loading assets that are owned by you, shared to you, owned by Roblox, or are a benign asset type
 - **Logging** - Access to the logs API
 - **Material** - Access to Engine APIs related to materials
-- **Monetization** - Access to Engine APIs related to monetizing an experience, excluding most `PromptPurchases`
+- **Monetization** - Access to Engine APIs related to monetizing a game, excluding most `PromptPurchases`
 - **Network** - Access to HTTP networking APIs
 - **Physics** - Access to instances related to physics
 - **PlatformAvatarEditing** - Access to Engine APIs related to creating or updating avatars, or APIs to aid with that

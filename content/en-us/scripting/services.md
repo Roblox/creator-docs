@@ -3,7 +3,7 @@ title: Services
 description: Services provide pre-built functionality in the Roblox Engine.
 ---
 
-In [Reuse code](module.md), you might have noticed frequent use of the `game:GetService()` method. Roblox services let you access the built-in features of the engine, like selling in-experience items, enabling chat, playing sounds, animating objects, and managing instances.
+In [Reuse code](module.md), you might have noticed frequent use of the `game:GetService()` method. Roblox services let you access the built-in features of the engine, like selling in-game items, enabling chat, playing sounds, animating objects, and managing instances.
 
 In fact, services are the first step in **the most fundamental, common pattern of Roblox development**:
 
@@ -12,7 +12,7 @@ In fact, services are the first step in **the most fundamental, common pattern o
 1. Add local functions.
 1. Add the [events](events/index.md) that trigger those functions.
 
-For example, you might want to save players' positions in the world when they exit your experience:
+For example, you might want to save players' positions in the world when they exit your game:
 
 ```lua
 local Players = game:GetService("Players")
@@ -30,12 +30,12 @@ local function saveProgress(character)
 end
 
 -- Another local function that calls saveProgress() when a character is removed
--- from the experience (in this case, when the player leaves).
+-- from the game (in this case, when the player leaves).
 local function onPlayerAdded(player)
 	player.CharacterRemoving:Connect(saveProgress)
 end
 
--- Calls onPlayerAdded when a player first connects to the experience.
+-- Calls onPlayerAdded when a player first connects to the game.
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
@@ -45,7 +45,7 @@ Some key details include:
 - You retrieve services with the global variable `Class.DataModel|game`, a reference to the root of the data model.
 - Roblox doesn't make guarantees around loading order (and [instance streaming](../workspace/streaming/index.md) further complicates what is and isn't loaded at any given time), so the use of `Class.Instance:WaitForChild()` is an important safety measure.
 
-Rather than comparing [standard libraries](/reference/engine/libraries), [global functions and variables](/reference/engine/globals), or third-party libraries, a big part of Roblox development is identifying which of the many, many services can help you add the desired functionality to your experiences. In the example above, instead of using a standard I/O library to write to disk, you use [cloud services](#cloud-services) to store data.
+Rather than comparing [standard libraries](/reference/engine/libraries), [global functions and variables](/reference/engine/globals), or third-party libraries, a big part of Roblox development is identifying which of the many, many services can help you add the desired functionality to your games. In the example above, instead of using a standard I/O library to write to disk, you use [cloud services](#cloud-services) to store data.
 
 ## Container services
 
@@ -78,9 +78,9 @@ call within scripts. The following table includes some common scripting services
 Service | Description
 :--- | :---
 `Class.TweenService` | Used to interpolate numeric properties of other instances from a start to end value, with options for easing direction and style, repeat, and delay.
-`Class.MarketplaceService` | The service responsible for in-experience transactions, such as prompting the player to purchase a developer product, subscription, pass, Roblox Premium, etc.
-`Class.RunService` | Contains methods and events for frame-by-frame time management, as well as for checking the context (server, client, Studio mode) in which the experience is running. Useful for running any process or update on every runtime frame.
-`Class.SoundService` | Controls various global aspects of how audio plays in an experience, such as the doppler scale and volumetric audio. Can also contain sound groups to control the volume and dynamic effects properties of multiple audio signals at once.
+`Class.MarketplaceService` | The service responsible for in-game transactions, such as prompting the player to purchase a developer product, subscription, pass, Roblox Premium, etc.
+`Class.RunService` | Contains methods and events for frame-by-frame time management, as well as for checking the context (server, client, Studio mode) in which the game is running. Useful for running any process or update on every runtime frame.
+`Class.SoundService` | Controls various global aspects of how audio plays in a game, such as the doppler scale and volumetric audio. Can also contain sound groups to control the volume and dynamic effects properties of multiple audio signals at once.
 `Class.CollectionService` | Manages groups (collections) of instances with tags that replicate from the server to the client, letting you more easily assign and work with groups of related instances.
 
 ## Cloud services

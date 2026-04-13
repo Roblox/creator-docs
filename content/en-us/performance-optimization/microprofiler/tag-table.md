@@ -5,7 +5,7 @@ description: A list of tags for the MicroProfiler.
 
 The following is a list of common tags in the [MicroProfiler](./index.md), grouped by category. Tags are also interchangeably called tasks, timers, scopes, processes, and labels. Whatever the name, they represent a unit of work.
 
-Understanding these tags can help you identify problematic code in your experience. The tables contain tag label, descriptions, and advice for improving performance and optimizing your experience.
+Understanding these tags can help you identify problematic code in your game. The tables contain tag label, descriptions, and advice for improving performance and optimizing your game.
 
 ## Sleep
 
@@ -55,7 +55,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
 <tbody>
   <tr>
     <td>Simulation/gameStepped</td>
-    <td>Processing of experience-specific objects such as `Class.Humanoid|Humanoids`, `Class.Animation|Animations` and heartbeat callbacks.</td>
+    <td>Processing of game-specific objects such as `Class.Humanoid|Humanoids`, `Class.Animation|Animations` and heartbeat callbacks.</td>
     <td>See **gameStepped** labels below.</td>
   </tr>
   <tr>
@@ -123,7 +123,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   </tr>
   <tr>
     <td>Allocate Bandwidth and Run Senders/Dispatch Physics Senders and TouchSenders</td>
-    <td>Sends data about activity in the experience.</td>
+    <td>Sends data about activity in the game.</td>
     <td>Reduce the amount of moving objects and/or touches. See following sections.</td>
   </tr>
   <tr>
