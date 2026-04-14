@@ -3,9 +3,9 @@ title: Studio plugins
 description: Explains how to create, publish, and monetize extensions to Studio that add custom functionality.
 ---
 
-A **plugin** is an extension that adds additional features or functionality to Studio. You can [install](../production/creator-store.md#find-assets) community-made plugins from the Creator Store, or you can [create](#create-new-plugins) and [publish](#upload-distribute-and-monetize-plugins) your own to the [Toolbox](../projects/assets/toolbox.md) to use across your experiences.
+A **plugin** is an extension that adds additional features or functionality to Studio. You can [install](../production/creator-store.md#find-assets) community-made plugins from the Creator Store, or you can [create](#create-new-plugins) and [publish](#upload-plugins) your own to the [Toolbox](../projects/assets/toolbox.md) to use across your experiences.
 
-If you choose to also distribute your plugins to the Creator Store, you can either offer them for free or sell them for **United States Dollars**. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information on selling plugins, see [Selling on the Creator Store](../production/sell-on-creator-store.md).
+If you choose to also distribute your plugins to the Creator Store, you can either offer them for free or sell them for **United States Dollars**. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information on selling plugins, see [Creator Store - Distribute and sell assets](../production/creator-store.md#distribute-and-sell-assets).
 
 ## Create new plugins
 
@@ -128,27 +128,26 @@ button.Click:Connect(function()
 end)
 ```
 
-## Upload, distribute, and monetize plugins
+## Upload plugins
 
-As with [models](../parts/models.md), [meshes](../parts/meshes.md), [images](../parts/textures-decals.md), and [animations](../animation/editor.md#creating-an-animation), you can distribute plugins to Roblox to make them easy to reuse from the [Toolbox](../projects/assets/toolbox.md). You can choose to make them publicly available to all other creators on the [Creator Store](../production/creator-store.md), or to distribute them privately for your own use. If you choose to distribute your plugin publicly, you can set a price at which to sell it to other creators.
+After you finish creating a plugin, you can upload it to your inventory so that it is accessible across all of your projects.
 
-<Alert severity="info">
-The only way to distribute and set a price for a plugin is through the Creator Dashboard. You can always upload a plugin using this process and, if age-verified, monetize it later from the dashboard. For instructions on this process, see [Distributing Assets](../production/creator-store.md#through-creator-dashboard).
-</Alert>
+To upload a plugin:
 
-To distribute a plugin:
+1. In the **Explorer** window, select a plugin script.
+1. Navigate to Studio's **Plugins** menu, then select **Publish as Plugin**.
 
-1. In the [Explorer](./explorer.md) window, select a plugin script and then select **Publish as Plugin** from Studio's **Plugins** menu.
-1. <Chip label="OPTIONAL" size="small" variant="outlined" /> In the upper-left corner of the asset configuration window, click the image to upload a 512&times;512 image.
+   <img src="../assets/studio/general/Publish-As-Plugin.png" width="60%" alt="The Publish as Plugin menu item highlighted in Studio's Plugins menu." />
+
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> In the upper-left corner of the asset configuration window, click the default puzzle piece image to upload a 512&times;512 image thumbnail for your plugin.
 1. Fill in the following fields:
 
    - **Name** — A title for your plugin.
-   - **Description** — A description that describes what a potential user should expect the plugin to do.
-   - **Creator** — The creator you'd like to attribute as the creator of the plugin.
+   - **Description** — A description that describes what a potential user can expect the plugin to do.
+   - **Creator** — The creator or group that you want to attribute as the creator of the plugin.
 
-1. Click the **Submit** button. Your plugin is now available to you in the **Inventory** and **Creations** tabs of the [Toolbox](../projects/assets/toolbox.md).
-1. Click the link to Creator Dashboard to [configure distribution](../production/creator-store.md#through-creator-dashboard).
+1. Click the **Submit** button. Your plugin is now available to you in the Toolbox's **Inventory** and **Creations** tabs.
 
-<Alert severity="info">
-To publicly distribute or monetize a plugin you have previously uploaded, use the [Creations](https://create.roblox.com/dashboard/creations?activeTab=Model) section of the Creator Dashboard. For more information, see [Distributing Assets](../production/creator-store.md).
-</Alert>
+## Distribute and sell plugins
+
+You can publicly distribute and sell your own plugins on the Creator Store for others to use within their own game development. This monetization method lets you earn 100% of net proceeds on transactions, bypassing platform fees and DevEx rates. For more information on this process, including how to set up a seller account to set prices and receive payouts, see [Creator Store - Requirements](../production/creator-store.md#requirements).

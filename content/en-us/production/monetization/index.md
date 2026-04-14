@@ -3,7 +3,7 @@ title: Monetization
 description: Monetization is a part of Roblox's overall structure to provide value to creators.
 ---
 
-Monetization is a part of Roblox's overall structure to provide value to creators. There are several different approaches to monetize your content, including utilizing [subscriptions](#subscriptions), charging an access fee in [Robux](#paid-access-in-robux) or [local currency](#paid-access-in-local-currency), providing [items or abilities that users can purchase](#developer-products), offering [private servers](#private-servers) for users to play just with connections, and [selling plugins](../sell-on-creator-store.md) to other creators on the Creator Store.
+Monetization is a part of Roblox's overall structure to provide value to creators. There are several different approaches to monetize your content, including utilizing [subscriptions](#subscriptions), charging an access fee in [Robux](#paid-access-in-robux) or [local currency](#paid-access-in-local-currency), providing [items or abilities that users can purchase](#developer-products), offering [private servers](#private-servers) for users to play just with connections, and [selling models and plugins](../creator-store.md#distribute-and-sell-assets) to other creators on the Creator Store.
 
 If you choose to offer purchasable content, Roblox doesn't automatically record product or purchase information. To prevent data loss, you must carefully store this data using `Class.DataStoreService` or another data storage service hosted outside of Roblox.
 
@@ -128,7 +128,7 @@ You'll receive a [commission](../../marketplace/marketplace-fees-and-commissions
 
 ### Plugins and Models
 
-A [plugin](../../studio/plugins.md) is an extension that adds additional functionality to Studio, and a [model](../../parts/models.md) is a reusable asset type. You can offer both to other creators on the [Creator Store](../../production/creator-store.md) for free, or you can sell them for **United States Dollars** (the minimum price is \$4.99 for plugins and \$2.99 for models). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information on selling plugins and models, see [Sell on the Creator Store](../sell-on-creator-store.md).
+A [plugin](../../studio/plugins.md) is an extension that adds additional functionality to Studio, and a [model](../../parts/models.md) is a reusable asset type. You can offer both to other creators on the [Creator Store](../../production/creator-store.md) for free, or you can sell them for **United States Dollars** (the minimum price is \$4.99 for plugins and \$2.99 for models). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information on selling plugins and models, see [Creator Store - Distribute and sell assets](../creator-store.md#distribute-and-sell-assets).
 
 <Alert severity="warning">
    There is a 30 day escrow hold for each purchase. Roblox holds your share of the sale for 30 days, starting from the date of sale.

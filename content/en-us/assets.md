@@ -38,6 +38,15 @@ export const sections = [
           { text: "Moderation", href: "./projects/assets#asset-moderation" },
           { text: "Manage and publish", href: "/projects/assets/manager" },
         ]
+      },
+      {
+        title: "Sell on the Creator Store",
+        description: "The Creator Store is full of assets made by the community for people to use within their experiences. You can become a seller on the Creator Store to monetize any models or plugins that you create for United States Dollars (USD). Creator Store's real-world pricing model allows us to give 100% of net proceeds on transactions to creators, bypassing platform fees and DevEx rates.",
+        image: "./assets/landing/creator-store.png",
+        links: [
+          { text: "Creator Store", href: "./production/creator-store" },
+          { text: "Monetize models and plugins", href: "./production/creator-store#distribute-and-sell-assets" },
+        ]
       }
     ]
   }
