@@ -7,6 +7,8 @@ navigation:
     section:
       - title: Creator Rewards
         path: /creator-rewards
+      - title: Roblox Plus
+        path: /production/monetization/roblox-plus
       - title: Private servers
         path: /production/monetization/private-servers
       - title: Subscriptions

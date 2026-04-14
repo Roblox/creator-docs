@@ -92,6 +92,7 @@ properties:
     capabilities:
       - Physics
       - Environment
+    simulationAccess: true
   - name: Workspace.AirTurbulenceIntensity
     summary: |
       Controls the strength of turbulence present in the wind velocity field,
@@ -128,6 +129,7 @@ properties:
     capabilities:
       - Physics
       - Environment
+    simulationAccess: true
   - name: Workspace.AllowThirdPartySales
     summary: |
       Determines whether assets created by other users can be sold in the game.
@@ -413,6 +415,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+    simulationAccess: true
   - name: Workspace.Gravity
     summary: |
       Determines the acceleration due to gravity applied to falling
@@ -438,6 +441,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+    simulationAccess: true
   - name: Workspace.IKControlConstraintSupport
     summary: |
       Enables support for constraints for IKControls. If disabled, IKControls
@@ -540,7 +544,7 @@ properties:
       Sets whether character Heads and Accessories should be downloaded as
       `Class.MeshPart|MeshParts`. The `Default` value is the same as `Enabled`.
       If this feature is enabled, built-in avatars will use
-      `Class.MeshPart|MeshParts` for the character's Head and Accessories.
+      `Class.MeshPart|MeshParts` for the character's head and accessories.
     code_samples: []
     type: MeshPartHeadsAndAccessories
     tags:
@@ -556,8 +560,13 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.ModelStreamingBehavior
-    summary: ''
-    description: ''
+    summary: |
+      Controls how `Class.Model|Models` are replicated in experiences when
+      instance streaming is enabled.
+    description: |
+      This `Enum.ModelStreamingBehavior` property controls how
+      `Class.Model|Models` are replicated in experiences when instance streaming
+      is enabled.
     code_samples: []
     type: ModelStreamingBehavior
     tags:
@@ -880,11 +889,11 @@ properties:
     summary: |
       Whether content streaming is enabled for the place.
     description: |
-      The **StreamingEnabled** property determines whether game content
-      streaming is enabled for the place. This property is not scriptable and
-      therefore must be set on the **Workspace** object in Studio.
+      This property determines whether in-experience content streaming is
+      enabled for the place. This property is not scriptable and therefore must
+      be set on the `Workspace` object in Studio.
 
-      See also:
+      #### See Also
 
       - `Class.Workspace.StreamingMinRadius`
       - `Class.Workspace.StreamingTargetRadius`
@@ -904,10 +913,10 @@ properties:
     capabilities: []
   - name: Workspace.StreamingIntegrityMode
     summary: |
-      Determines whether StreamingIntegrityMode is active.
+      Determines whether streaming integrity mode is active.
     description: |
-      If instance [streaming](../../../workspace/streaming.md) is enabled, an
-      experience may behave in unintended ways if a player's character moves
+      If instance [streaming](../../../workspace/streaming/index.md) is enabled,
+      an experience may behave in unintended ways if a player's character moves
       into a region of the world that has not been streamed to their client. The
       streaming integrity feature offers a way to avoid those potentially
       problematic situations.
@@ -930,16 +939,15 @@ properties:
       Minimum distance that content will be streamed to players with high
       priority.
     description: |
-      The **StreamingMinRadius** property indicates the radius around the
-      player's character or the current
-      `Class.Player.ReplicationFocus|ReplicationFocus` in which content will be
-      streamed in at the highest priority. Defaults to 64 studs.
+      This property indicates the radius around the player's character or the
+      current `Class.Player.ReplicationFocus|ReplicationFocus` in which content
+      will be streamed in at the highest priority. Defaults to 64 studs.
 
       Care should be taken when increasing the default minimum radius since
       doing so will require more memory and more server bandwidth at the expense
       of other components.
 
-      See also:
+      #### See Also
 
       - `Class.Workspace.StreamingEnabled` which controls whether content
         streaming is enabled
@@ -963,15 +971,14 @@ properties:
     summary: |
       Maximum distance that content will be streamed to players.
     description: |
-      The **StreamingTargetRadius** property controls the maximum distance away
-      from the player's character or the current
-      `Class.Player.ReplicationFocus|ReplicationFocus` in which content will be
-      streamed in. Defaults to 1024 studs.
+      This property controls the maximum distance away from the player's
+      character or the current `Class.Player.ReplicationFocus|ReplicationFocus`
+      in which content will be streamed in. Defaults to 1024 studs.
 
       Note that the engine is allowed to retain previously loaded content beyond
       the target radius, memory permitting.
 
-      See also:
+      #### See Also
 
       - `Class.Workspace.StreamingEnabled` which controls whether content
         streaming is enabled
@@ -993,14 +1000,14 @@ properties:
     capabilities: []
   - name: Workspace.StreamOutBehavior
     summary: |
-      Configures how the engine decides when to Stream content away from
+      Configures how the engine decides when to stream content away from
       players.
     description: |
-      The **StreamOutBehavior** controls where content will be unloaded from the
-      `Class.Player.ReplicationFocus|ReplicationFocus` based on device Memory
-      Conditions, or based on Streaming Radius.
+      This property controls where content will be unloaded from the
+      `Class.Player.ReplicationFocus|ReplicationFocus` based on device memory
+      conditions, or based on the streaming radius.
 
-      See also:
+      #### See Also
 
       - `Class.Workspace.StreamingEnabled` which controls whether content
         streaming is enabled
@@ -1064,23 +1071,6 @@ properties:
       information on the behavior of CanTouch, please visit its property page.
     code_samples: []
     type: boolean
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: Workspace.TouchEventsUseCollisionGroups
-    summary: ''
-    description: ''
-    code_samples: []
-    type: RolloutState
     tags:
       - NotScriptable
     deprecation_message: ''
@@ -1223,47 +1213,17 @@ methods:
       Returns an integer, between 0 and 100, representing the percentage of real
       time that physics simulation is currently being throttled to.
     description: |
-      Returns an integer, between 0 and 100, representing the percentage of real
-      time that physics simulation is currently being throttled to.
-
-      This function can be used to determine whether, and to what degree,
-      physics throttling is occurring.
-
-      #### What is physics throttling?
-
-      Physics throttling occurs when the physics engine detects it cannot keep
-      up with the game in real time. When physics is being throttled, it will
-      update less frequently causing `Class.BasePart|BaseParts` to appear to
-      move slower.
-
-      Without throttling, the physics simulation would fall further behind out
-      of sync with the game. This can lead to lower frame rates and other
-      undesirable behavior.
+      Returns an integer, between `0` and `100`, representing the percentage of
+      real time that physics simulation is currently being throttled to. Physics
+      throttling occurs when the physics engine detects it cannot keep up with
+      the game in real time. When physics is being throttled, it will update
+      less frequently causing `Class.BasePart|BaseParts` to appear to move
+      slower.
 
       Objects associated with `Class.Humanoid|Humanoids` are exempt from physics
       throttling.
 
       See also `Class.Workspace:SetPhysicsThrottleEnabled()`.
-
-      #### Demonstrating physics throttling
-
-      Developers should always avoid creating places that overload the physics
-      engine, as it leads to sub-par experience for players. Those wishing to
-      simulate physics throttling for research purposes however, need only
-      create a lot of `Class.Part|Parts` very quickly.
-
-      ```
-      local Workspace = game:GetService("Workspace")
-
-      local i = 0
-      while true do
-      	i += 1
-      	if i % 5 == 0 then
-      		task.wait()
-      	end
-      	local part = Instance.new("Part", Workspace)
-      end
-      ```
     code_samples: []
     parameters: []
     returns:

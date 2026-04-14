@@ -5,7 +5,7 @@ description: When to use standard data stores, ordered data stores, memory store
 
 Roblox offers several options for data storage. Each storage option has pros and cons and is appropriate for different use cases. This table summarizes the available options and provides the closest points of comparison from standard web services.
 
-| Service | Persistence | Scope | In-experience access | Cloud comparison |
+| Service | Persistence | Scope | In-game access | Cloud comparison |
 | :--- | :--- | :--- | :--- | :--- |
 | **Data stores** | Permanent | Cross-server | Read-write | NoSQL database |
 | **Memory stores** | 45 day maximum | Cross-server | Read-write | In-memory cache |
@@ -14,12 +14,12 @@ Roblox offers several options for data storage. Each storage option has pros and
 | **Luau in-memory** | Session duration | Single server | Read-write | Server RAM |
 
 <Alert severity="success">
-Within Roblox experiences, cloud services are only accessible from server scripts.
+Within Roblox games, cloud services are only accessible from server scripts.
 </Alert>
 
 ## When to use data stores
 
-`Class.DataStoreService` stores long-term data that needs to last between sessions, such as user progress or inventory items. Data stores are consistent per experience, so every server for every place within an experience can access and change the same data. There are two types of data stores: standard and ordered.
+`Class.DataStoreService` stores long-term data that needs to last between sessions, such as user progress or inventory items. Data stores are consistent per game, so every server for every place within a game can access and change the same data. There are two types of data stores: standard and ordered.
 
 - **Standard data stores** can store data like numbers, strings, and tables that don't need to be ranked or sorted. They store data as key-value pairs; each entry is stored under a key that is unique within its data store and that you can retrieve, update, or delete. For more information, see [Data stores](./data-stores/index.md).
 
@@ -39,7 +39,7 @@ Within Roblox experiences, cloud services are only accessible from server script
   </tr>
   <tr>
     <td>**Common use cases**</td>
-    <td>User progress, inventory items, and experience settings.</td>
+    <td>User progress, inventory items, and game settings.</td>
     <td>All-time, persistent ranking systems and leaderboards. Unlike leaderboards in memory stores, this leaderboard data is permanent.</td>
   </tr>
   <tr>
@@ -56,7 +56,7 @@ If you want to add granular permission control to your data stores and access th
 
 ## When to use memory stores
 
-`Class.MemoryStoreService` is a high throughput and low latency service that stores temporary data that needs to be updated or accessed frequently, such as global leaderboards or matchmaking queues. With memory stores, every server for every place within an experience can access and change the same data quickly and frequently. Data in a memory store expires after a certain period of time, up to 45 days.
+`Class.MemoryStoreService` is a high throughput and low latency service that stores temporary data that needs to be updated or accessed frequently, such as global leaderboards or matchmaking queues. With memory stores, every server for every place within a game can access and change the same data quickly and frequently. Data in a memory store expires after a certain period of time, up to 45 days.
 
 If you need to quickly read (not write to) a small number of values across all servers, [configs](#when-to-use-configs) are the better choice. Memory stores are not as performant as configs when frequently accessing a single key or partition.
 
@@ -74,7 +74,7 @@ Although memory stores store temporary data, they also support permanent feature
   </tr>
   <tr>
     <td rowspan="2">**Common use cases**</td>
-    <td>Skill-based matchmaking, match states for multiplayer experiences.</td>
+    <td>Skill-based matchmaking, match states for multiplayer games.</td>
   </tr>
   <tr>
     <td>Daily and monthly leaderboards.</td>
@@ -86,7 +86,7 @@ Although memory stores store temporary data, they also support permanent feature
 
 [Configs](../production/configs.md) let you update in-game variables in real time without restarting servers. They are ideal for feature flags and any in-game values you hope to tune over time or [experiment](../production/experiments.md) with.
 
-- Configs are read-only from within an experience—you modify them on Creator Hub or in Roblox Studio—so they don't serve the same use cases as data stores and memory stores.
+- Configs are read-only from within a game—you modify them on Creator Hub or in Roblox Studio—so they don't serve the same use cases as data stores and memory stores.
 - Changes to configs deploy over the course of five minutes; changes to data and memory stores are more instantaneous.
 
 <table>
@@ -104,14 +104,14 @@ Although memory stores store temporary data, they also support permanent feature
     <td>Enabling a new dungeon, disabling a limited-time game mode, starting a holiday event.</td>
   </tr>
   <tr>
-    <td>Enemy health, weapon damage, item prices, experience multipliers, welcome messages.</td>
+    <td>Enemy health, weapon damage, item prices, game multipliers, welcome messages.</td>
   </tr>
 </tbody>
 </table>
 
 ## When to use secrets stores
 
-Use the [secrets store](secrets.md) for your experience to store any API keys, passwords, and access tokens that you use to authenticate with external services. Storing these values in a data store presents unnecessary security risks.
+Use the [secrets store](secrets.md) for your game to store any API keys, passwords, and access tokens that you use to authenticate with external services. Storing these values in a data store presents unnecessary security risks.
 
 <table>
 <thead>
@@ -146,7 +146,7 @@ Use in-memory storage in Luau to store temporary data that needs to be accessed 
   </tr>
   <tr>
     <td rowspan="3">**Common use cases**</td>
-    <td>Data that is only relevant to a single server session and doesn't need to be persisted, such as status effects or temporary points that reset when the user leaves the experience.</td>
+    <td>Data that is only relevant to a single server session and doesn't need to be persisted, such as status effects or temporary points that reset when the user leaves the game.</td>
   </tr>
   <tr>
     <td>Values that change frequently, like counters, timers, state flags, or a health bar.</td>

@@ -17,8 +17,9 @@ hideInPageNavigation: true
 Use solid modeling operations directly in Studio to form complex shapes by unioning and negating basic parts.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <iframe src="https://www.youtube-nocookie.com/embed/SgPU84AqpkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
@@ -33,8 +34,9 @@ Use solid modeling operations directly in Studio to form complex shapes by union
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Neon-Signs.png" />
@@ -49,8 +51,9 @@ Use solid modeling operations directly in Studio to form complex shapes by union
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Modular-Environments.png" />
@@ -68,11 +71,12 @@ Use solid modeling operations directly in Studio to form complex shapes by union
 
 <Typography variant='h2'>Blender modeling</Typography>
 
-Use third-party modeling tools like Blender to create meshes, then import them into Studio using the 3D Importer.
+Use third-party modeling tools like Blender to create meshes, then import them into Studio using the Importer.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Box-Modeling.png" />
@@ -87,8 +91,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Vertex-Coloring.png" />
@@ -130,8 +135,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Creating-HUD-Meters.png" />
@@ -146,8 +152,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Interactive-UI.png" />
@@ -162,8 +169,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Proximity-Prompts.png" />
@@ -178,8 +186,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Score-Bars.png" />
@@ -221,8 +230,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Background-Music.png" />
@@ -237,8 +247,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Positional-Audio.png" />
@@ -253,8 +264,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Voice-Chat.png" />
@@ -269,8 +281,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Text-to-Speech.png" />
@@ -285,8 +298,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Speech-to-Text.png" />
@@ -324,8 +338,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Indoor-Lighting.png" />
@@ -340,8 +355,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Outdoor-Lighting.png" />
@@ -380,8 +396,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Laser-Beams.png" />
@@ -396,8 +413,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Waterfalls.png" />
@@ -412,8 +430,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Volcanoes.png" />
@@ -452,8 +471,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <iframe src="https://www.youtube-nocookie.com/embed/9mXvhYSv7fc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
@@ -468,8 +488,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Moving-Objects.png" />
@@ -484,8 +505,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Spinning-Objects.png" />
@@ -528,8 +550,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 Use the **Animation Editor** directly in Studio to create animations for models or meshes with rigging and skinning data.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Creating-Animations.png" />
@@ -544,8 +567,9 @@ Use the **Animation Editor** directly in Studio to create animations for models 
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Scripting-Avatar-Animations.png" />
@@ -563,11 +587,12 @@ Use the **Animation Editor** directly in Studio to create animations for models 
 
 <Typography variant='h2'>Blender animation</Typography>
 
-Use third-party modeling tools like Blender to create meshes with rigging and skinning data, then import them into Studio using the 3D Importer.
+Use third-party modeling tools like Blender to create meshes with rigging and skinning data, then import them into Studio using the Importer.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Simple-Mesh.png" />
@@ -586,8 +611,9 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Humanoid-Model.png" />
@@ -630,8 +656,9 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Script-Types-Locations.png" />
@@ -646,8 +673,9 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Services.png" />
@@ -662,8 +690,9 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Properties-Attributes.png" />
@@ -678,8 +707,9 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Events.png" />
@@ -716,8 +746,9 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/First-Person-Camera.png" />
@@ -732,8 +763,9 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Side-Scrolling-Camera.png" />
@@ -748,8 +780,9 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Isometric-Camera.png" />
@@ -764,8 +797,9 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Player-Input.png" />
@@ -802,8 +836,9 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Score-Bars.png" />
@@ -818,8 +853,9 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Saving-Data.png" />

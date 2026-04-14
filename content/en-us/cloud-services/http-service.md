@@ -1,5 +1,5 @@
 ---
-title: In-experience HTTP requests
+title: In-game HTTP requests
 description: Use HttpService to send HTTP requests to third-party web services and Open Cloud.
 ---
 
@@ -7,7 +7,7 @@ You can use `Class.HttpService` to send generic HTTP requests to third-party web
 
 ## Enable HTTP requests
 
-The `Class.HttpService:GetAsync()`, `Class.HttpService:PostAsync()`, and `Class.HttpService:RequestAsync()` methods aren't enabled by default. To send requests, you must **Allow HTTP Requests** under [Experience Settings](../studio/experience-settings.md) for your experience.
+The `Class.HttpService:GetAsync()`, `Class.HttpService:PostAsync()`, and `Class.HttpService:RequestAsync()` methods aren't enabled by default. To send requests, you must **Allow HTTP Requests** under [Experience Settings](../studio/experience-settings.md) for your game.
 
 ## Use in plugins
 
@@ -23,7 +23,7 @@ Plugins can also communicate with other software running on the same computer th
 2. [Save the API key to your secrets store](/cloud-services/secrets#add-secrets).
 3. Make the request.
 
-The following code sample demonstrates how to update a user's group membership from within an experience:
+The following code sample demonstrates how to update a user's group membership from within a game:
 
 ```lua
 local HttpService = game:GetService("HttpService")
@@ -197,7 +197,7 @@ Ordered data stores:
 
 ## Rate limits
 
-For each Roblox experience server, there is a limit of 2500 Open Cloud requests per minute. Exceeding this can cause request-sending methods to stall for around 30 seconds. Your `Global.LuaGlobals.pcall()` may also fail with a message of `Number of Open Cloud requests exceeded limit`.
+For each Roblox game server, there is a limit of 2500 Open Cloud requests per minute. Exceeding this can cause request-sending methods to stall for around 30 seconds. Your `Global.LuaGlobals.pcall()` may also fail with a message of `Number of Open Cloud requests exceeded limit`.
 
 - Open Cloud requests **do not** consume the same overall limit of 500 HTTP requests per minute enforced on all other requests.
 - Each endpoint has its own limit per API key owner (can be a user or a group) that is enforced no matter where the calls come from (`Class.HttpService`, the web, etc.).
@@ -217,14 +217,14 @@ To optimize your `Class.HttpService` usage and avoid exceeding the limits, apply
 - Aggregate and send data in bulk.
 
   When possible, it's recommended to let your server collect all necessary data in order to send one HTTP request, rather than multiple small requests. For example, if you are sending an HTTP request for every player in your server, check if the API has a bulk/batch endpoint and, if so, collect the information from all players and send it all in one request.
-  
+
   In some cases you may have to use `Class.HttpService:RequestAsync()` to include data in the body of the request.
 
 - **Use HTTP/2 endpoints**. HTTP/2 provides significant performance benefits through features such as header compression and request/response multiplexing over a single connection. `Class.HttpService` automatically uses HTTP/2 when available. Note that the HTTP/2 specification requires all header names to be sent in lowercase.
 
 ## Observability
 
-The **Observability Dashboard** provides insights and analytics for monitoring and troubleshooting your `Class.HttpService` usage. The dashboard features two primary charts: **Request Count** which tracks the volume of `Class.HttpService` requests from your experience, and **Response Time** which measures the latency for endpoints to respond.
+The **Observability Dashboard** provides insights and analytics for monitoring and troubleshooting your `Class.HttpService` usage. The dashboard features two primary charts: **Request Count** which tracks the volume of `Class.HttpService` requests from your game, and **Response Time** which measures the latency for endpoints to respond.
 
 The available dimensions for filtering and breakdown are defined as follows:
 

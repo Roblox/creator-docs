@@ -216,7 +216,11 @@ methods:
           This method takes in an array of `Datatype.FloatCurveKey` objects.
     description: |
       This method lets you define a custom waveform as a table and apply it to
-      the haptic.
+      the haptic. It takes an array of `Datatype.FloatCurveKey` objects, each
+      constructed with three arguments: **time** in milliseconds, **value**
+      ranging from `0` (no haptic) to `1` (full intensity), and an
+      `Enum.KeyInterpolationMode` that controls how the curve interpolates.
+      between keys.
 
       ```
       local Workspace = game:GetService("Workspace")
@@ -227,12 +231,13 @@ methods:
       effect.Type = Enum.HapticEffectType.Custom
       effect.Parent = Workspace
 
-      -- Define the custom waveform curve through a table
+      -- Define the custom waveform curve through a table of FloatCurveKeys
+      -- Time values are in milliseconds; values range from 0 (no haptic) to 1 (full intensity)
       local rampUpWaveform = {
-      	FloatCurveKey.new(0, 0.3),
-      	FloatCurveKey.new(100, 0.4),
-      	FloatCurveKey.new(300, 0.8),
-      	FloatCurveKey.new(400, 1.0)
+      	FloatCurveKey.new(0, 0.3, Enum.KeyInterpolationMode.Linear),
+      	FloatCurveKey.new(100, 0.4, Enum.KeyInterpolationMode.Linear),
+      	FloatCurveKey.new(300, 0.8, Enum.KeyInterpolationMode.Linear),
+      	FloatCurveKey.new(400, 1.0, Enum.KeyInterpolationMode.Linear)
       }
 
       -- Set waveform through the effect's method

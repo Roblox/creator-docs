@@ -1655,7 +1655,7 @@ items:
     value: 1033
     tags: []
     deprecation_message: ''
-  - name: Touch
+  - name: TouchPosition
     summary: |
       The position of a touch in the viewport. Primarily used in the
       [Input Action System](../../../input/input-action-system.md).

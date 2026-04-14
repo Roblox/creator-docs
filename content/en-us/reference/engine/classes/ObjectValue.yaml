@@ -14,18 +14,12 @@ description: |
   Otherwise, the same value is kept. Copying and pasting this object clears the
   value field.
 
-  You can set the value within Studio like other reference-type fields (such as
-  `Class.Model.PrimaryPart`): click the field within the Properties window, then
-  click the object you wish to set it to within the game view or Explorer
-  window. You can clear the field (set it to `nil`) by clicking the X that
-  appears when you click the field.
-
   Like all `Class.ValueBase` objects, this single value is stored in the
   `Class.ObjectValue.Value|Value` property. The `Changed` event fires with the
   new value being stored in the object, instead of a string representing the
   property being changed.
 
-  If [streaming](../../../workspace/streaming.md) is enabled, the `Value`
+  If [streaming](../../../workspace/streaming/index.md) is enabled, the `Value`
   property is nil until the referenced object streams in, at which point the
   `Changed` event fires.
 code_samples:
@@ -54,6 +48,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
 methods: []
 events:
   - name: ObjectValue.Changed

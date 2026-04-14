@@ -29,7 +29,7 @@ Useful applications of the highlight effect include:
 
 ## Add highlights
 
-As a performance limit, Studio only displays 31 simultaneous `Class.Highlight` instances on the client-side at a time. If you add more than this limit, the additional `Class.Highlight` instances are silently ignored.
+As a performance limit, Studio only displays 255 simultaneous `Class.Highlight` instances on the client-side at a time. If you add more than this limit, the additional `Class.Highlight` instances are silently ignored.
 
 Note also that highlights on low-end devices may be more pixelated but will otherwise look the same as on other devices with any combination of settings.
 

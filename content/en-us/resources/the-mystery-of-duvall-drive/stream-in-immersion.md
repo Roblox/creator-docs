@@ -6,7 +6,7 @@ prev: /resources/the-mystery-of-duvall-drive/immersive-narrative
 description: Explains the use of instance streaming The Mystery of Duvall Drive.
 ---
 
-Roblox Studio is a powerful engine that can create experiences on a wide variety of platforms, but even some high-end phones may struggle to load all of our content at once. To address this, we used [streaming](../../workspace/streaming.md) to achieve the highest level of quality possible on a wide spectrum of devices. Streaming allowed us to author all our content in one place and dynamically load smaller portions of the content visible to the user.
+Roblox Studio is a powerful engine that can create experiences on a wide variety of platforms, but even some high-end phones may struggle to load all of our content at once. To address this, we used [streaming](../../workspace/streaming/index.md) to achieve the highest level of quality possible on a wide spectrum of devices. Streaming allowed us to author all our content in one place and dynamically load smaller portions of the content visible to the user.
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/streaming-in-immersion/content-streaming.png" width="100%" />
@@ -21,7 +21,7 @@ When enabling streaming on your experience, there are a few things to consider t
 2. **Are there scripts that scan the workspace when the experience starts?** Client scripts should not rely on finding all instances they require at the time an experience starts and this is not a recommended practice.
 3. **Does your experience suffer visually if some content doesn't display at the correct time?** There are various techniques and tricks to create a [streaming-friendly environment](#streaming-friendly-level-design) and ways to use [perspective](#play-with-perspective) to your advantage.
 
-When creating The Mystery of Duvall Drive, we encountered all three of these problems and were able to work around them by using a combination of careful script design and cleverly applied set dressing and world layout. When working with streaming on your own experience, remember you can tune your streaming min/max distance to what suits your experience and adjust a variety of [highly customizable options](../../workspace/streaming.md#streaming-properties).
+When creating The Mystery of Duvall Drive, we encountered all three of these problems and were able to work around them by using a combination of careful script design and cleverly applied set dressing and world layout. When working with streaming on your own experience, remember you can tune your streaming min/max distance to what suits your experience and adjust a variety of [highly customizable options](../../workspace/streaming/index.md#streaming-properties).
 
 <GridContainer numColumns="2">
   <figure>

@@ -1,9 +1,9 @@
 ---
 title: Task scheduler
-description: Task Scheduler coordinates tasks done in each frame as the experience runs.
+description: Task Scheduler coordinates tasks done in each frame as the game runs.
 ---
 
-The **task scheduler** coordinates tasks done each frame as the experience runs, even when it is paused. These tasks include detecting player input, animating characters, updating the physics simulation, and resuming scripts in a `Library.task.wait()` state.
+The **task scheduler** coordinates tasks done each frame as the game runs, even when it is paused. These tasks include detecting player input, animating characters, updating the physics simulation, and resuming scripts in a `Library.task.wait()` state.
 
 While there may be multiple tasks running, the task scheduler can potentially be overloaded, especially in the following situations:
 
@@ -29,11 +29,11 @@ The task scheduler categorizes and completes tasks in the following order. Some 
 
 <img src="../../assets/optimization/task-scheduler/task-scheduler.svg" />
 
-\* Script execution during `Class.RunService.Heartbeat` differs depending on your experience's `Class.Workspace.SignalBehavior` setting. See [Deferred events](../../scripting/events/deferred.md).
+\* Script execution during `Class.RunService.Heartbeat` differs depending on your game's `Class.Workspace.SignalBehavior` setting. See [Deferred events](../../scripting/events/deferred.md).
 
 ## Best practices
 
-To build performant experiences with efficiency in mind, note the following:
+To build performant games with efficiency in mind, note the following:
 
 - **Don't connect/bind functions to the render step unless absolutely necessary.**
   Only tasks that must be done after input but before rendering should be done in such a way, like camera movement. For strict control over order, use `Class.RunService:BindToRenderStep()|BindToRenderStep()` instead of `Class.RunService.PreRender|PreRender`.

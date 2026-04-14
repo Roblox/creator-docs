@@ -36,33 +36,6 @@ Our Featured Educators represent the best that the Roblox Education community ha
 
    <tr>
     <td>
-    <a href="https://codekingdoms.com/roblox-coding/" target="_blank" rel="noopener"><img src="../../assets/education/educators-page/code-kingdom-logo.png" /></a>
-    </td>
-    <td>
-    Code Kingdoms provides an online-exclusive program for students and educators across the world. With its web-based drag-and-drop code editor, kids age 8+ can learn how to develop their own games using Roblox Studio and the Luau programming language.
-    </td>
-   </tr>
-
-   <tr>
-    <td>
-    <a href="https://www.youtube.com/channel/UCp1R0TBvgM7gj0rwTYULmSA" target="_blank" rel="noopener"><img src="../../assets/education/educators-page/alvinblox.png" /></a>
-    </td>
-    <td>
-    AlvinBlox is a renowned Roblox game developer who provides a series of free tutorial videos on YouTube to teach beginners ages 8 and up how to code and make their own games from scratch.
-    </td>
-   </tr>
-
-   <tr>
-    <td>
-    <a href="https://www.linkedin.com/in/bcrivera/" target="_blank" rel="noopener"><img src="../../assets/education/educators-page/Bianca-Riviera.jpg" /></a>
-    </td>
-    <td>
-    Bianca Rivera is a librarian in New York, United States. She uses Roblox in technology clubs at libraries that give students experiences they can't get in traditional schooling.
-    </td>
-   </tr>
-
-   <tr>
-    <td>
     <a href="https://edmo.org/" target="_blank" rel="noopener"><img src="../../assets/education/educators-page/EDMO-Round-1.png" /></a>
     </td>
     <td>
@@ -105,16 +78,6 @@ Our Featured Educators represent the best that the Roblox Education community ha
     WGFactory, located in South Korea, provides Roblox workshops to students in elementary to university level. Their students produce online art galleries and historical recreations of Korean society in Roblox.
     </td>
    </tr>
-
-   <tr>
-    <td>
-    <a href="https://www.roblox.com/games/2686040248/The-Math-Obby" target="_blank" rel="noopener"><img src="../../assets/education/educators-page/The-Math-Obby.jpg" /></a>
-    </td>
-    <td>
-    An educational experience built on Roblox, the Math Obby is a small, fun, and unique obstacle course that tests math and parkour skills. Add, subtract, and multiply your way to victory!
-    </td>
-   </tr>
-
 </tbody>
 </table>
 

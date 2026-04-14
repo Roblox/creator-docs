@@ -137,11 +137,7 @@ In summary, the **client**:
 
 In the server authority model, you're able to keep the core gameplay objects server‑owned without incurring the input latency cost normally associated with server ownership. Things like cars, player characters, or other gameplay‑critical objects can remain server‑owned, even when interacting with other players.
 
-By default, Roblox will automatically predict the physics properties of `Class.BasePart|BaseParts` near the local player `Class.Player.Character|Character`, but if you want more fine‑grained control, you can explicitly force an instance's prediction on or off with `Class.RunService:SetPredictionMode()`.
-
-<Alert severity="success">
-Roblox synchronizes all relevant physics properties automatically.
-</Alert>
+By default, Roblox will automatically predict properties with [simulation access](#simulation-access) near the local player `Class.Player.Character|Character`, but if you want more fine‑grained control, you can explicitly force an instance's prediction on or off with `Class.RunService:SetPredictionMode()`.
 
 ### Simulation sync
 
@@ -181,7 +177,7 @@ During a resimulation, Roblox will re-run the functions bound to the simulation 
 
 ### State sync with attributes
 
-Roblox automatically synchronizes all relevant physics properties on predicted instances. For custom data, [attributes](../../studio/properties.md#instance-attributes) are the primary way to synchronize instances marked as predicted; on such instances, any mismatch in attribute values between the server's source of truth and the client's prediction will trigger a full [rollback and resimulation](#rollback-and-resimulation).
+Roblox automatically synchronizes all properties with [simulation access](#simulation-access) on predicted instances. For custom data, [attributes](../../studio/properties.md#instance-attributes) are the primary way to synchronize instances marked as predicted; on such instances, any mismatch in attribute values between the server's source of truth and the client's prediction will trigger a full [rollback and resimulation](#rollback-and-resimulation).
 
 <Alert severity="success">
 Use attributes to store experience data that affects your core simulation, including player health, ammunition, inventory, or custom rules (see [limitations](#attribute-limits)).
@@ -199,17 +195,9 @@ In order to be replicated, an attribute must meet all of the following criteria:
 - Its name contains at most 50 characters.
 - If a string type attribute, its value contains at most 50 characters.
 
-#### Physical properties
+#### Simulation access
 
-The server authority system predicts physical properties such as the ones below. Note that this is **not** an exhaustive list but rather an illustration of classes and property types that will be considered.
-
-- `Class.BasePart` — `Class.BasePart.CFrame|CFrame`; `Class.BasePart.RotVelocity|RotVelocity`; `Class.BasePart.Velocity|Velocity` (if assembly root); `Class.BasePart.CurrentPhysicalProperties|CurrentPhysicalProperties`; `Class.BasePart.CanCollide|CanCollide`; `Class.BasePart.Mass|Mass`; `Class.BasePart.Size|Size`
-- `Class.WeldConstraint` — `Class.WeldConstraint.Enabled|Enabled`; `Class.WeldConstraint.CFrame1|CFrame1`; `Class.WeldConstraint.CFrame2|CFrame2`
-- `Class.Constraint` — `Class.Constraint.Enabled|Enabled`; any non-redundant readable/writable property
-- `Class.Attachment` — `Class.Attachment.CFrame|CFrame`
-- `Class.Motor` — `Class.Motor.CurrentAngle|CurrentAngle`; `Class.Motor.DesiredAngle|DesiredAngle`; `Class.Motor.MaxVelocity|MaxVelocity`
-- `Class.Humanoid` — `Class.Humanoid.Jump|Jump`; `Class.Humanoid.MoveDirection|MoveDirection`; `Class.Humanoid.AutoRotate|AutoRotate`
-- `Class.ControllerManager`
+Many properties and methods in the engine API reference include the **Simulation Access** label, for example `Class.BasePart.CFrame`. Properties with this label will be predicted by the server authority system. Additionally, only properties and methods with this label can be accessed inside functions bound with `Class.RunService:BindToSimulation()`.
 
 ### Input actions
 
@@ -243,6 +231,10 @@ end)
 ### Remote events
 
 [Remote events](../../scripting/events/remote.md) can still be used within the server authority model to facilitate discrete communication between client and server. For example, servers can use remote events to broadcast data about players scoring points or picking up objects, and clients can use remote events as an alternative API for sending inputs to the server, such as for button presses or tapping objects in the 3D world.
+
+<Alert severity="warning">
+`Class.RemoteEvent|RemoteEvents` might not be consistently ordered with property and attribute updates over the network. For example, if you change a property before firing a remote event on a client, the server might receive the property change after the remote event. To learn more, see [replication order](../../scripting/attributes.md#replication-order).
+</Alert>
 
 ### Animations, sounds, and effects
 

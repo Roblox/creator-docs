@@ -53,6 +53,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: RodConstraint.Length
     summary: |
       The distance apart at which the constraint attempts to keep its
@@ -74,6 +75,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: RodConstraint.LimitAngle0
     summary: |
       The maximum angle between the rod and
@@ -97,6 +99,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: RodConstraint.LimitAngle1
     summary: |
       The maximum angle between the rod and
@@ -120,6 +123,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: RodConstraint.LimitsEnabled
     summary: |
       Determines whether `Class.RodConstraint.LimitAngle0|LimitAngle0` and
@@ -144,6 +148,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: RodConstraint.Thickness
     summary: |
       The visualized thickness of the `Class.RodConstraint`.
@@ -163,6 +168,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
 methods: []
 events: []
 callbacks: []

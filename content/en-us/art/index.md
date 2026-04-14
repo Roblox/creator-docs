@@ -331,7 +331,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <Typography variant='h5'>Studio tools</Typography>
 
-<a href="./modeling/3d-importer.md"><Typography variant='body1' style={{marginBottom: 12}}>3D Importer</Typography></a>
+<a href="../studio/importer.md"><Typography variant='body1' style={{marginBottom: 12}}>Importer</Typography></a>
 
 <a href="./accessories/accessory-fitting-tool.md"><Typography variant='body1' style={{marginBottom: 12}}>Accessory Fitting Tool</Typography></a>
 

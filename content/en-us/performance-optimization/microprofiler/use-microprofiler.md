@@ -1,21 +1,21 @@
 ---
 title: MicroProfiler walkthrough
-description: Explains how using the MicroProfiler can help you optimize portions of your experience.
+description: Explains how using the MicroProfiler can help you optimize portions of your game.
 ---
 
-This walkthrough shows how to use the MicroProfiler to find a problematic aspect of an experience and identify the root cause. Download the experience, **Open from File** in Studio, and follow along.
+This walkthrough shows how to use the MicroProfiler to find a problematic aspect of a game and identify the root cause. Download the game, **Open from File** in Studio, and follow along.
 
 <a href="../../assets/optimization/microprofiler/RaycastSpam.rbxl">
-  <Button variant="contained">Download the Experience</Button>
+  <Button variant="contained">Download the game</Button>
 </a>
 
 <br />
 
 ## Identify the issue
 
-1. After you open the experience in Studio, start testing it with <kbd>F5</kbd> or the **Play** button.
+1. After you open the game in Studio, start testing it with <kbd>F5</kbd> or the **Play** button.
 
-1. The frame rate feels decent, but not as smooth as it should be for an experience of this size and scope. Press <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F5</kbd> (<kbd>⌘</kbd><kbd>Shift</kbd><kbd>F5</kbd>) to show the **Performance Summary** overlay.
+1. The frame rate feels decent, but not as smooth as it should be for a game of this size and scope. Press <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F5</kbd> (<kbd>⌘</kbd><kbd>Shift</kbd><kbd>F5</kbd>) to show the **Performance Summary** overlay.
 
    <img alt="Performance summary showing 45 FPS." src="../../assets/optimization/microprofiler/micro-tut-framerate.png" width="500px" />
 
@@ -49,7 +49,7 @@ Now that the MicroProfiler has provided a starting point, you can troubleshoot t
 
    <img alt="A view of filtering in the Explorer window." src="../../assets/optimization/microprofiler/micro-tut-explorer-filter.png" width="400px" />
 
-   A search for `raycast` indicates that this portion of code is probably the culprit for the experience's poor performance:
+   A search for `raycast` indicates that this portion of code is probably the culprit for the game's poor performance:
 
    ```lua
    local RAYS_PER_SECOND = 1500
@@ -99,7 +99,7 @@ Now that the MicroProfiler has provided a starting point, you can troubleshoot t
 
 ## Confirm and fix the issue
 
-1. Start testing the experience, and open the MicroProfiler again.
+1. Start testing the game, and open the MicroProfiler again.
 
 1. Note how the MicroProfiler now shows the custom label, indicating that this function was indeed the root cause.
 
@@ -109,7 +109,7 @@ Now that the MicroProfiler has provided a starting point, you can troubleshoot t
 
 1. Delete or comment out the `onStepped()` function and the `RunService.Stepped:Connect(onStepped)` connection.
 
-1. Start testing the experience again, and check the **Performance Summary** again.
+1. Start testing the game again, and check the **Performance Summary** again.
 
    <img alt="Performance summary showing 60 FPS." src="../../assets/optimization/microprofiler/micro-tut-framerate2.png" width="500px" />
 

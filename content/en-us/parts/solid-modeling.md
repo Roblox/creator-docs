@@ -457,6 +457,8 @@ In addition, you can create your own lists of sites manually rather than using `
 
 The following script fragments an area of a part, given by a position and radius. The position might commonly come from a physical collision or a raycast from a player.
 
+The first element of the site array which `Class.GeometryService:GenerateFragmentSites()|GenerateFragmentSites()` generates will be an inner array of all the sites which are outside the requested `radius`. If you want to do something specific to the remaining 'unshattered portion' of the part, you can find that portion by checking `fragments[i].Index == 1` when looping over the results of `Class.GeometryService:FragmentAsync()|FragmentAsync()`.
+
 ```lua highlight="6"
 local GeometryService = game:GetService("GeometryService")
 
@@ -801,7 +803,7 @@ local function generateFragmentSites(part: BasePart, siteSpacing: number?, origi
 			end
 		end
 
-		table.insert(sitesListFinal, mainPartSites)
+		table.insert(sitesListFinal, 1, mainPartSites)
 	else
 		for _, localSite in ipairs(sitesFlatList) do
 			local worldSite = partCFrame * localSite

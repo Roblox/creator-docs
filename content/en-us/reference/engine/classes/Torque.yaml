@@ -64,6 +64,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: Torque.Torque
     summary: |
       The strength and direction of the torque.
@@ -83,6 +84,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
 methods: []
 events: []
 callbacks: []

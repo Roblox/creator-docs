@@ -89,7 +89,7 @@ To incorporate neon 3D text from the [open-text](../../../assets/tutorials/creat
 
 1. Import the **open-text** `.obj` file.
 
-   1. From Studio's **File** menu, select **Import 3D**. A file browser displays.
+   1. From Studio's **File** menu, select **Import**. A file browser displays.
    1. Select the **open-text** `.obj` file, then click the **Open** button. The **Import Preview** window displays.
    1. Keep the default import settings, then click the **Import** button. The open text models display within the viewport.
 

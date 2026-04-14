@@ -98,6 +98,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
   - name: BasePart.AssemblyAngularVelocity
     summary: |
       The angular velocity of the part's assembly.
@@ -134,6 +135,7 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
+    simulationAccess: true
   - name: BasePart.AssemblyCenterOfMass
     summary: |
       The center of mass of the part's assembly in world space.
@@ -163,6 +165,7 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
+    simulationAccess: true
   - name: BasePart.AssemblyLinearVelocity
     summary: |
       The linear velocity of the part's assembly.
@@ -203,6 +206,7 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
+    simulationAccess: true
   - name: BasePart.AssemblyMass
     summary: |
       The total mass of the part's assembly.
@@ -229,6 +233,7 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
+    simulationAccess: true
   - name: BasePart.AssemblyRootPart
     summary: |
       A reference to the root part of the assembly.
@@ -259,6 +264,7 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
+    simulationAccess: true
   - name: BasePart.AudioCanCollide
     summary: |
       Determines whether the part will physically interact with audio
@@ -284,6 +290,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
   - name: BasePart.BackParamA
     summary: |
       Determines the first parameter for the SurfaceType on the Back face of a
@@ -572,6 +579,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
   - name: BasePart.CanQuery
     summary: |
       Determines whether the part is considered during spatial query operations.
@@ -600,6 +608,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
   - name: BasePart.CanTouch
     summary: |
       Determines if `Class.BasePart.Touched|Touched` and
@@ -639,6 +648,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
   - name: BasePart.CastShadow
     summary: |
       Determines whether or not a part casts a shadow.
@@ -689,6 +699,7 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
+    simulationAccess: true
   - name: BasePart.CFrame
     summary: |
       Determines the position and orientation of the `Class.BasePart` in the
@@ -725,6 +736,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
   - name: BasePart.CollisionGroup
     summary: |
       Describes the name of a part's collision group.
@@ -751,6 +763,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
   - name: BasePart.CollisionGroupId
     summary: |
       Describes the automatically set ID number of a part's collision group.
@@ -863,6 +876,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
   - name: BasePart.Elasticity
     summary: |
       Used to control the Elasticity of the part, but it no longer does
@@ -908,6 +922,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
   - name: BasePart.ExtentsCFrame
     summary: |
       The `Datatype.CFrame` of the physical extents of the `Class.BasePart`.
@@ -929,6 +944,7 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
+    simulationAccess: true
   - name: BasePart.ExtentsSize
     summary: |
       The actual physical size of the `Class.BasePart` as regarded by the
@@ -952,6 +968,7 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
+    simulationAccess: true
   - name: BasePart.Friction
     summary: |
       Used to control the Friction of the part, but now it no longer does
@@ -1285,6 +1302,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
   - name: BasePart.Mass
     summary: |
       Describes the mass of the part, the product of its density and volume.
@@ -1315,6 +1333,7 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
+    simulationAccess: true
   - name: BasePart.Massless
     summary: |
       Determines whether the part contributes to the total mass or inertia of
@@ -1350,6 +1369,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
   - name: BasePart.Material
     summary: |
       Determines the texture and default physical properties of a part.
@@ -1388,6 +1408,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
   - name: BasePart.MaterialVariant
     summary: |
       The name of `Class.MaterialVariant`.
@@ -1412,6 +1433,7 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
+    simulationAccess: true
   - name: BasePart.Orientation
     summary: |
       Describes the rotation of the part in the world.
@@ -1453,6 +1475,7 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
+    simulationAccess: true
   - name: BasePart.PivotOffset
     summary: |
       Specifies the offset of the part's pivot from its `Datatype.CFrame`.
@@ -1487,6 +1510,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
   - name: BasePart.Position
     summary: |
       Describes the position of the part in the world.
@@ -1516,6 +1540,7 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
+    simulationAccess: true
   - name: BasePart.ReceiveAge
     summary: |
       Time since last recorded physics update.
@@ -1773,6 +1798,7 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
+    simulationAccess: true
   - name: BasePart.RotVelocity
     summary: |
       Determines a part's change in orientation over time.
@@ -1803,6 +1829,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
   - name: BasePart.Size
     summary: |
       Determines the dimensions of a part (length, width, height).
@@ -1841,6 +1868,7 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
+    simulationAccess: true
   - name: BasePart.SpecificGravity
     summary: |
       The ratio of the part's density to the density of water determined by the
@@ -2128,6 +2156,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
 methods:
   - name: BasePart:AngularAccelerationToTorque
     summary: ''
@@ -2150,6 +2179,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:ApplyAngularImpulse
     summary: |
       Apply an angular impulse to the assembly.
@@ -2185,6 +2215,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:ApplyImpulse
     summary: |
       Apply an impulse to the assembly at the assembly's
@@ -2224,6 +2255,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:ApplyImpulseAtPosition
     summary: |
       Apply an impulse to the assembly at specified position.
@@ -2269,6 +2301,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:BreakJoints
     summary: |
       Breaks any surface connection with any adjacent part, including
@@ -2287,6 +2320,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:breakJoints
     summary: ''
     description: ''
@@ -2326,6 +2360,7 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:CanSetNetworkOwnership
     summary: |
       Checks whether you can set a part's network ownership.
@@ -2350,6 +2385,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:GetClosestPointOnSurface
     summary: ''
     description: ''
@@ -2367,6 +2403,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:GetConnectedParts
     summary: |
       Returns a table of parts connected to the object by any kind of rigid
@@ -2422,6 +2459,7 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:GetMass
     summary: |
       Returns the value of the `Class.BasePart.Mass|Mass` property.
@@ -2443,6 +2481,7 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:getMass
     summary: ''
     description: ''
@@ -2478,6 +2517,7 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:GetNetworkOwnershipAuto
     summary: |
       Returns true if the game engine automatically decides the network owner
@@ -2497,6 +2537,7 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:GetNoCollisionConstraints
     summary: ''
     description: ''
@@ -2510,6 +2551,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:GetRenderCFrame
     summary: |
       OBSOLETE. Returns a CFrame describing where the part is being rendered at.
@@ -2556,6 +2598,7 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:GetTouchingParts
     summary: |
       Returns a table of all `Class.BasePart.CanCollide` true parts that
@@ -2581,6 +2624,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:GetVelocityAtPosition
     summary: |
       Returns the linear velocity of the part's assembly at the given position
@@ -2605,6 +2649,7 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:IntersectAsync
     summary: |
       Note: It is highly recommended to use the newer
@@ -2728,6 +2773,7 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:MakeJoints
     summary: |
       Creates a joint on any side of the object that has a surface ID that can
@@ -2817,6 +2863,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:resize
     summary: ''
     description: ''
@@ -2863,6 +2910,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:SetNetworkOwnershipAuto
     summary: |
       Lets the game engine dynamically decide who will handle the part's physics
@@ -2880,6 +2928,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:SubtractAsync
     summary: |
       Note: It is highly recommended to use the newer
@@ -2979,6 +3028,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: BasePart:UnionAsync
     summary: |
       Note: It is highly recommended to use the newer

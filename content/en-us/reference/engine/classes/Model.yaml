@@ -57,6 +57,7 @@ inherits:
 descendants:
   - Actor
   - BackpackItem
+  - ProceduralModel
   - Status
   - WorldRoot
 tags: []
@@ -68,7 +69,7 @@ properties:
       streaming enabled.
     description: |
       Sets the level of detail on the model for experiences with instance
-      [streaming](../../../workspace/streaming.md) enabled.
+      [streaming](../../../workspace/streaming/index.md) enabled.
 
       When set to `Enum.ModelLevelOfDetail|StreamingMesh`, a lower resolution
       "imposter" mesh (colored, coarse mesh that wraps around all child parts of
@@ -102,8 +103,8 @@ properties:
       instance streaming is enabled.
     description: |
       Controls how `Class.Model|Models` are streamed in and out when instance
-      [streaming](../../../workspace/streaming.md) is enabled. Behavior depends
-      on the selected enum. Has no effect when streaming is not enabled.
+      [streaming](../../../workspace/streaming/index.md) is enabled. Behavior
+      depends on the selected enum. Has no effect when streaming is not enabled.
 
       This property should only be changed in Studio via the
       [Properties](../../../studio/properties.md) window when streaming is
@@ -538,6 +539,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    simulationAccess: true
   - name: Model:MakeJoints
     summary: |
       Goes through all `Class.BasePart|BaseParts` in the `Class.Model`. If any

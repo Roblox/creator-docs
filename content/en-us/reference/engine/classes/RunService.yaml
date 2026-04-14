@@ -362,6 +362,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
+    simulationAccess: true
   - name: RunService:IsClient
     summary: |
       Returns whether the current environment is running on the client.
@@ -672,6 +673,134 @@ events:
     security: None
     capabilities:
       - Basic
+  - name: RunService.Misprediction
+    summary: |
+      In the server authority model, fires during prediction when the engine
+      detects that the client has diverged from the server's authoritative
+      state. Intended for plugin-based debugging.
+    description: |
+      With server authority enabled, the Misprediction event fires when a
+      received server state differs from the predicted state.
+
+      Use this event to build debugging tools that inspect misprediction data
+      programmatically. For example, a plugin could listen for this event and
+      track which instances are frequently mispredicting, what properties are
+      diverging, and by how much.
+
+      ##### Instances Array
+
+      Each entry in the `instances` array is a table with the following
+      structure:
+
+      <table size="small">
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>Instance</code></td>
+            <td><code>Instance</code></td>
+            <td>The instance that was mispredicted.</td>
+          </tr>
+          <tr>
+            <td><code>Properties</code></td>
+            <td><code>dictionary?</code></td>
+            <td>Properties that were mispredicted. Each key is a property name
+      mapping to a table with the client's <code>Predicted</code> and
+      owner's/server's <code>Authoritative</code> values as captured on the
+      step when the client first mispredicted the owner's value. Only
+      present if there are property mismatches.</td>
+          </tr>
+          <tr>
+            <td><code>Attributes</code></td>
+            <td><code>dictionary?</code></td>
+            <td>Attributes that were mispredicted. Each key is a property name
+      mapping to a table with the client's <code>Predicted</code> and
+      owner's/server's <code>Authoritative</code> values as captured on the
+      step when the client first mispredicted the owner's value. Only
+      present if there are attribute mismatches.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      ##### Stats Dictionary
+
+      The `stats` dictionary contains the following fields:
+
+      <table size="small">
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>ResimulationTime</code></td>
+            <td>number</td>
+            <td>The time spent during resimulation (or the amount of time rolled
+      back).</td>
+          </tr>
+        </tbody>
+      </table>
+
+      ##### Code Sample
+
+      ```lua
+      local RunService = game:GetService("RunService")
+
+      RunService.Misprediction:Connect(function(time, instances, stats)
+      	print(`Misprediction at t={time}, resim={stats.ResimulationTime}s`)
+
+      	for _, entry in instances do
+      		print(`  Instance: {entry.Instance:GetFullName()}`)
+
+      		if entry.Properties then
+      			for name, values in entry.Properties do
+      				print(`    Property '{name}': predicted={values.Predicted}, authoritative={values.Authoritative}`)
+      			end
+      		end
+
+      		if entry.Attributes then
+      			for name, values in entry.Attributes do
+      				print(`    Attribute '{name}': predicted={values.Predicted}, authoritative={values.Authoritative}`)
+      			end
+      		end
+      	end
+      end)
+      ```
+    code_samples: []
+    parameters:
+      - name: time
+        type: double
+        default:
+        summary: |
+          The time (in seconds) from the start of simulation at which the
+          client's predicted state first diverged from the server's
+          authoritative state.
+      - name: instances
+        type: Array
+        default:
+        summary: |
+          An array of tables, each describing an `Class.Instance` that was
+          mispredicted. See below for the structure of each entry.
+      - name: stats
+        type: Dictionary
+        default:
+        summary: |
+          A dictionary of statistics about the misprediction. See below for the
+          structure.
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - Basic
+      - PluginOrOpenCloud
   - name: RunService.PostSimulation
     summary: |
       Fires every frame, after the physics simulation has completed.
@@ -802,6 +931,50 @@ events:
         default:
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - Basic
+  - name: RunService.Rollback
+    summary: |
+      In the server authority model, this fires after rolling back the predicted
+      state due to a misprediction, but before resimulation begins.
+    description: |
+      When server authority is enabled, the `Rollback` event fires after the
+      engine detects a misprediction and rolls back all eligible state
+      (properties, attributes, and related physics and animation state), but
+      before the engine resimulates the rolled-back steps.
+
+      Use this event to update state in your place that wouldn't otherwise be
+      rolled back after a misprediction. For example, if you maintain gameplay
+      state that can't be stored in a property or attribute with simulation
+      access, you can listen for this event, compare the rolled-back-to step
+      against your farthest-reached step, and rewind your custom state
+      accordingly.
+
+      ```lua
+      local RunService = game:GetService("RunService")
+
+      local stateHistory = {} -- your custom state tracked per fixed step
+
+      RunService.Rollback:Connect(function(time)
+      	-- Discard any custom state newer than the rolled-back-to step
+      	-- and restore the state at that step before resimulation begins
+      	for step, _ in stateHistory do
+      		if step > time then
+      			stateHistory[step] = nil
+      		end
+      	end
+      end)
+      ```
+    code_samples: []
+    parameters:
+      - name: time
+        type: double
+        default:
+        summary: |
+          The time (in seconds) that we are rolling back to.
     tags: []
     deprecation_message: ''
     security: None

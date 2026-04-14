@@ -18,7 +18,7 @@ This page contains information to help experienced Unreal Engine developers get 
 
 Unreal's **Outliner** and Roblox Studio's [Explorer](studio/explorer.md) are the primary windows for organizing elements in 3D spaces. Both display a hierarchy of objects and folders. However, **Outliner** has a flatter, less defined structure and only shows `Actors`. The **Explorer** window has a deeply nested, strict structure and displays all objects as part of the hierarchy, even objects that would be considered components in Unreal.
 
-The Roblox Studio [Asset Manager](projects/assets/manager.md) and [Toolbox](projects/assets/toolbox.md) overlap with the Unreal **Content Browser**. The **Asset Manager** lets you manage all assets within your experience, whereas the **Toolbox** lets you access any assets you've published. The **Toolbox** also lets you search the [Creator Store](production/creator-store.md) for assets from Roblox or the community, similar to the Unreal Engine **Marketplace** but accessible directly from the Studio user interface.
+The Roblox Studio [Asset Manager](projects/assets/manager.md) and [Toolbox](projects/assets/toolbox.md) overlap with the Unreal **Content Browser**. The **Asset Manager** lets you manage all assets within your game, whereas the **Toolbox** lets you access any assets you've published. The **Toolbox** also lets you search the [Creator Store](production/creator-store.md) for assets from Roblox or the community, similar to the Unreal Engine **Marketplace** but accessible directly from the Studio user interface.
 
 ## Philosophical differences
 
@@ -61,7 +61,7 @@ Rather than using standard metric units for length and mass, Roblox uses notiona
 
 ## Location matters
 
-Roblox experiences are multiplayer by default, so Roblox Studio includes many different storage locations with specific behaviors. For example, a script might run when you put it in `Class.ReplicatedStorage`, but not when you put it into `Class.StarterPlayerScripts`. For more information, see [Client-server runtime](projects/client-server) and [Object organization](projects/data-model#object-organization).
+Roblox games are multiplayer by default, so Roblox Studio includes many different storage locations with specific behaviors. For example, a script might run when you put it in `Class.ReplicatedStorage`, but not when you put it into `Class.StarterPlayerScripts`. For more information, see [Client-server runtime](projects/client-server) and [Object organization](projects/data-model#object-organization).
 
 <ScriptLocations components={props.components} />
 
@@ -79,7 +79,7 @@ Compared to the Unreal "ticking" system, Roblox scripts are much more event-driv
 
 For scripting, Unreal uses C++. Roblox uses [Luau](luau/index.md), a scripting language derived from [Lua 5.1](https://www.lua.org/manual/5.1/).
 
-Compared to Luau, C++ has an overall performance advantage, which might or might not be relevant to the kinds of experiences you want to build. Luau is gradually typed and has a less verbose syntax. In larger projects, however, gradual typing can introduce categories of bugs that strongly typed languages like C++ avoid, so consider enabling [strict type checking](luau/type-checking.md#inference-modes) in Roblox scripts.
+Compared to Luau, C++ has an overall performance advantage, which might or might not be relevant to the kinds of games you want to build. Luau is gradually typed and has a less verbose syntax. In larger projects, however, gradual typing can introduce categories of bugs that strongly typed languages like C++ avoid, so consider enabling [strict type checking](luau/type-checking.md#inference-modes) in Roblox scripts.
 
 Unreal also includes a visual scripting system called **Blueprints**. Roblox has third-party plugins that offer similar functionality, but no comparable system built-in.
 
@@ -93,7 +93,7 @@ The Roblox script can be relatively concise because Roblox has many built-in ass
 
 Unreal and Roblox both support importing custom meshes and models in `.fbx` format. Certain types of assets may require specific configurations and export settings from your third-party modeling software. For more information, see the following pages:
 
-- [3D Importer](art/modeling/3d-importer.md)
+- [Importer](studio/importer.md)
 - [3D modeling specifications](art/modeling/specifications.md)
 - [Blender and Maya export requirements](art/modeling/export-requirements.md)
 
@@ -112,7 +112,7 @@ In Unreal, you collaborate with version control systems like Perforce or SVN, ge
 Roblox files live in the cloud (although you can export copies), so Roblox Studio provides built-in collaboration workflows for simultaneous editing, group management, permissions, script drafting, and more. See [Collaboration](projects/collaboration.md).
 
 <Alert severity="info">
-Cloud syncing provides further benefits with [packages](projects/assets/packages.md), the Roblox equivalent of Unreal Blueprint classes. Converting an asset or asset hierarchy to a package helps with local reusability, but also with collaboration. When you or your collaborators publish a new version of a package, you can quickly update existing instances of that package within an experience or set them to auto-update.
+Cloud syncing provides further benefits with [packages](projects/assets/packages.md), the Roblox equivalent of Unreal Blueprint classes. Converting an asset or asset hierarchy to a package helps with local reusability, but also with collaboration. When you or your collaborators publish a new version of a package, you can quickly update existing instances of that package within a game or set them to auto-update.
 </Alert>
 
 ## Plugins
@@ -121,19 +121,19 @@ Similar to Unreal, Roblox Studio supports [plugins](studio/plugins.md), which ca
 
 ## Glossary
 
-| Unreal | Roblox | Notes |
-| :--- | :--- | :--- |
-| Level | [Place](projects.md#places) | |
-| Actor | `Class.Part` or `Class.Model` | See [Philosophical differences](#philosophical-differences). |
-| Blueprint Class | [Package](projects/assets/packages.md) | |
-| Transform | `Datatype.CFrame` | `Datatype.CFrame` doesn't include scale information. See [Transforms](#transforms). |
-| Outliner | [Explorer](studio/explorer.md) | |
-| Details panel | [Properties](studio/properties.md) |
-| Level Viewport | [3D viewport](studio/ui-overview.md#3d-viewport) | |
-| Content Browser | [Asset Manager](projects/assets/manager.md) or [Toolbox](projects/assets/toolbox.md) | |
-| Landscape Mode | [Terrain Editor](studio/terrain-editor.md) | |
-| PlayerStart | `Class.SpawnLocation` | |
-| Output Log | [Output](studio/output.md) | |
-| Marketplace | [Creator Store](production/creator-store.md) | |
-| Menu bar | [Toolbar](studio/ui-overview.md#toolbar-and-mezzanine) | |
-| Plugin | [Plugin](studio/plugins.md) | |
+| Unreal          | Roblox                                                                               | Notes                                                                               |
+| :-------------- | :----------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
+| Level           | [Place](projects.md#places)                                                          |                                                                                     |
+| Actor           | `Class.Part` or `Class.Model`                                                        | See [Philosophical differences](#philosophical-differences).                        |
+| Blueprint Class | [Package](projects/assets/packages.md)                                               |                                                                                     |
+| Transform       | `Datatype.CFrame`                                                                    | `Datatype.CFrame` doesn't include scale information. See [Transforms](#transforms). |
+| Outliner        | [Explorer](studio/explorer.md)                                                       |                                                                                     |
+| Details panel   | [Properties](studio/properties.md)                                                   |
+| Level Viewport  | [3D viewport](studio/ui-overview.md#3d-viewport)                                     |                                                                                     |
+| Content Browser | [Asset Manager](projects/assets/manager.md) or [Toolbox](projects/assets/toolbox.md) |                                                                                     |
+| Landscape Mode  | [Terrain Editor](studio/terrain-editor.md)                                           |                                                                                     |
+| PlayerStart     | `Class.SpawnLocation`                                                                |                                                                                     |
+| Output Log      | [Output](studio/output.md)                                                           |                                                                                     |
+| Marketplace     | [Creator Store](production/creator-store.md)                                         |                                                                                     |
+| Menu bar        | [Toolbar](studio/ui-overview.md#toolbar-and-mezzanine)                               |                                                                                     |
+| Plugin          | [Plugin](studio/plugins.md)                                                          |                                                                                     |

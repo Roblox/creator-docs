@@ -15,6 +15,7 @@ import { getNonEditableFilesList } from './files.js';
 import { areEqualFileImports, FileImports, getFileImports } from './imports.js';
 
 export enum Locale {
+  AR_001 = 'ar-001',
   ID_ID = 'id-id',
   DE_DE = 'de-de',
   EN_US = 'en-us',
@@ -32,7 +33,7 @@ export enum Locale {
   KO_KR = 'ko-kr',
 }
 
-const LOCALE_REGEX = /\/([a-z]{2}-[a-z]{2})\//;
+const LOCALE_REGEX = /\/([a-z]{2}-[a-z]{2}|ar-001)\//;
 
 const filePathExistsMap = new Map<string, boolean>();
 const filePathToRawContentMap = new Map<string, string>();

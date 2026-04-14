@@ -5,19 +5,16 @@
 name: StreamOutBehavior
 type: enum
 summary: |
-  Determines how content is streamed away from Players.
+  Determines how content is streamed out from `Class.Player` clients.
 description: |
-  Determines how content is streamed out from Player clients. This is a
-  temporary rollout API. In the future, streaming will always run on
-  Opportunistic mode.
+  Determines how content is streamed out from `Class.Player` clients.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
     summary: |
-      Currently equivalent to LowMemory. This will eventually change to
-      Opportunistic.
+      Default behavior (subject to change).
     value: 0
     tags: []
     deprecation_message: ''
@@ -30,7 +27,7 @@ items:
   - name: Opportunistic
     summary: |
       Stream out content that is significantly outside of the current
-      StreamingRadius.
+      `Class.Workspace.StreamingTargetRadius`.
     value: 2
     tags: []
     deprecation_message: ''

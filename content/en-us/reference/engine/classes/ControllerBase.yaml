@@ -37,6 +37,7 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
+    simulationAccess: true
   - name: ControllerBase.BalanceRigidityEnabled
     summary: ''
     description: ''
@@ -53,6 +54,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
   - name: ControllerBase.MoveSpeedFactor
     summary: |
       The value multiplied by the `Class.ControllerManager.BaseMoveSpeed`.
@@ -73,6 +75,7 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+    simulationAccess: true
 methods: []
 events: []
 callbacks: []

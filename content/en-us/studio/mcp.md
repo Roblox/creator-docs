@@ -1,98 +1,182 @@
 ---
 title: Connect to the Roblox Studio MCP server
-description: Learn how to connect your AI coding tools to Roblox Studio, enabling them to read your game structure, edit scripts, insert models, execute code, and control play mode — all from natural language prompts.
-
+description: Learn how to connect your AI coding tools to Roblox Studio, enabling them to read your game structure, edit scripts, insert models, execute code, and control play mode.
 ---
 
-The **Roblox Studio MCP server** is built into Roblox Studio. It implements the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), an open standard that lets AI tools securely communicate with external applications. Once connected, your AI assistant can interact directly with your open Studio session—exploring the data model, writing scripts, running Luau code, testing in play mode, and more.
+The Roblox Studio MCP server is built into Roblox Studio. It implements the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), an open standard that lets AI tools securely communicate with external applications. Once connected, your AI client can interact directly with your open Studio session, exploring the data model, writing scripts, running Luau code, and testing your experience in play mode.
 
-This guide walks you through connecting the Studio MCP Server to popular AI clients. While the exact steps vary by client, the core concept is the same: you point your client at the Studio MCP Server binary and it handles the rest.
+This guide shows you how to connect the Studio MCP server to popular AI clients. While the setup varies by client, the core idea is the same: you configure your client to connect to the MCP server and then send commands from the client to your active Studio session.
 
 ## Prerequisites
 
-Before you begin, make sure you have:
+Before you can connect to the server, make sure you have the **latest version of Roblox Studio** and your **preferred MCP client** installed on your computer.
 
-- **Roblox Studio** installed and updated to the latest version
-- **Your preferred MCP client** installed (Claude Code, Claude Desktop, Cursor, VS Code, Antigravity, or others)
+## How the Studio MCP server works
 
-No additional downloads or plugins are required — the MCP server ships with Studio itself.
+The server runs as a local process on your machine and communicates with the AI client using **`stdio` transport**, which uses standard input/output streams. All actions are initiated through your AI client, which then sends a request through this channel to perform actions inside your Studio session.
 
-## Enabling the MCP server in Studio
+The server provides the following tools:
 
-Before connecting any external client, you need to turn on the MCP server inside Roblox Studio.
+<table>
+<thead>
+  <tr>
+    <th>**Scripts**</th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>`script_read`</td>
+    <td>Reads a scripts from the game using dot-notation paths (for example, `game.ServerScriptService.MyScript`). Supports reading entire scripts or specific line ranges.</td>
+  </tr>
+  <tr>
+    <td>`multi_edit`</td>
+    <td>Applies multiple edits to a script. If the target path doesn't exist, it creates a new script.</td>
+  </tr>
+  <tr>
+    <td>`script_search`</td>
+    <td>Searches for scripts by name using fuzzy matching. Returns up to 10 results.</td>
+  </tr>
+  <tr>
+    <td>`script_grep`</td>
+    <td>Searches for a string pattern across all script in the game. Returns up to 50 matches.</td>
+  </tr>
+</tbody>
+<thead>
+  <tr>
+    <th>**Asset and content generation**</th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>`generate_mesh`</td>
+    <td>Generates a textured 3D mesh.</td>
+  </tr>
+  <tr>
+    <td>`generate_material`</td>
+    <td>Generates custom material or texture.</td>
+  </tr>
+  <tr>
+    <td>`insert_from_creator_store`</td>
+    <td>Inserts assets, plugins, and models from the Creator Store.</td>
+  </tr>
+</tbody>
+<thead>
+  <tr>
+    <th>**Data model exploration**</th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>`search_game_tree`</td>
+    <td>Explores the instance hierarchy as a flat JSON array. Supports filtering by path, instance type, and keywords.</td>
+  </tr>
+  <tr>
+    <td>`inspect_instance`</td>
+    <td>Returns detailed information about a specific instance, including readable properties, custom attributes, and a summary of its children and descendants.</td>
+  </tr>
+</tbody>
+<thead>
+  <tr>
+    <th>**Luau execution**</th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>`execute_luau`</td>
+    <td>Runs Luau code in Studio. Returns either the result or an error.</td>
+  </tr>
+</tbody>
+<thead>
+  <tr>
+    <th>**Playtesting**</th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>`start_stop_play`</td>
+    <td>Starts or stops playtesting.</td>
+  </tr>
+  <tr>
+    <td>`console_output`</td>
+    <td>Retrieves output logs while the game is running.</td>
+  </tr>
+</tbody>
+<thead>
+  <tr>
+    <th>**Player input simulation**</th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>`character_navigation`</td>
+    <td>Moves the player character to a position or instance.</td>
+  </tr>
+  <tr>
+    <td>`keyboard_input`</td>
+    <td>Simulates key presses, key holds, and text input.</td>
+  </tr>
+  <tr>
+    <td>`mouse_input`</td>
+    <td>Simulates mouse clicks, movement, and scrolling.</td>
+  </tr>
+</tbody>
+<thead>
+  <tr>
+    <th>**Session management**</th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>`list_roblox_studios`</td>
+    <td>Lists all connected Studio instances, including their name, ID, and active status. This is useful when multiple Studio windows are open.</td>
+  </tr>
+  <tr>
+    <td>`set_active_studio`</td>
+    <td>Sets a Studio instance as active so that all subsequent tool calls target that instance.</td>
+  </tr>
+</tbody>
+</table>
 
-1. Open the **Assistant chat window** in Studio.
-2. Click the three dots (**…**) menu to open Assistant Settings.
-3. Select the **MCP Servers** tab in the left sidebar.
-4. Toggle on **Enable Studio as MCP server**.
+## Enable the MCP server in Studio
 
-Once enabled, the settings panel will display the JSON configuration and startup command you'll need for your client. When a client successfully connects, you'll see a green indicator showing the number of connected clients ("● 1 client connected").
+To enable the MCP server in Studio:
 
-Learn how to connect to your client in the next sections. You can also find more detailed, client-specific guides below.
+1. Open **Assistant**.
+2. Click **&hellip;** &rang; **Manage MCP Servers**.
+3. Turn on **Enable Studio as MCP server**.
 
-## Connecting to multiple Studio instances
-
-You can connect a single MCP client to multiple running instances of Studio simultaneously. The server will intelligently infer which Studio instance you're referring to based on context — for example, if you mention a specific game by name or reference something that only exists in one of your connected experiences. You can also switch manually using `list_roblox_studios` and `set_active_studio` at any time. This feature is still experimental.
-
-## Understanding the Studio MCP server
-
-The Studio MCP server runs as a local process on your machine and communicates with your AI client via **stdio transport** (standard input/output). When your AI assistant wants to perform an action in Studio, it sends a request through this channel, and the server relays it to the Studio plugin.
-
-All actions flow through your AI client, which will typically ask for your approval before executing them.
-
-<Alert severity="warning">
-MCP clients can read and modify content in your open Roblox places. Only connect clients you trust.
-</Alert>
-
-### Scripts
-
-- `script_read` — Reads a script from the game using dot-notation paths (game.ServerScriptService.MyScript). Supports reading entire scripts or specific line ranges.
-- `multi_edit` — Makes multiple edits to a single script in one atomic operation. Can also create new scripts if the target path doesn't exist. Edits are applied sequentially using exact string matching.
-- `script_search` — Fast fuzzy search against script names. Useful when you know part of a script's name but not its location. Returns up to 10 results.
-- `script_grep` — Searches for a string pattern across all script contents in the game. Results are capped at 50 matches.
-
-### Asset and content generation
-
-- `generate_mesh` — Generate a 3D textured single mesh
-- `generate_material` — Generate a custom material/texture
-- `insert_from_creator_store` — Insert pre-built models from the Roblox marketplace
-
-### Exploring the data model
-
-- `search_game_tree` — Explores the game's instance hierarchy as a flat JSON array. Supports filtering by path, instance type (with `IsA()` checks), and keywords. Configurable traversal depth (default 3, max 10).
-- `inspect_instance` — Returns detailed information about a specific instance, including all readable properties, custom attributes, and a summary of children and total descendants.
-
-### Luau execution
-
-- `execute_luau` — Executes Luau code directly in Roblox Studio and returns the result or an error message.
-
-### Playtesting
-
-- `start_stop_play` — Start or stop playtesting the game.
-- `console_output` — Retrieve console/output logs while the game is running.
-
-### Player input simulation
-
-- `character_navigation` — Move the player character to a position or instance.
-- `keyboard_input` — Simulate key presses, key holds, and text input.
-- `mouse_input` — Simulate mouse clicks, movement, and scrolling.
-
-### Session management
-
-- `list_roblox_studios` — Lists all connected Roblox Studio instances with their name, ID, and active status. Useful when multiple Studio windows are open.
-- `set_active_studio` — Sets a specific Studio instance as active so that all subsequent tool calls target it.
+Once enabled, the settings panel displays the JSON configuration and startup command for your client. When a client connects successfully, a green indicator shows the number of connected clients.
 
 ## Connect your client
 
-Choose your client below and follow the setup instructions. Refer to the client's documentation if required.
+<Alert severity="warning">
+MCP clients can read and modify content in your open Roblox places. Make sure to only connect clients you trust.
+</Alert>
 
-The **MCP Servers** tab contains an expandable **Setup Instructions** section with a JSON entry field and Command.
+To connect your client to the server, you can use either a JSON configuration or a CLI command.
 
-Most editors use JSON MCP configuration files. Here are the complete JSON configuration files — you can use them as-is if Roblox Studio is the only MCP server you need. If you want to use it alongside other MCP servers, copy just the `Roblox_Studio` entry and add it to the `mcpServers` dictionary:
+If your client supports MCP config files, use the JSON configuration. Otherwise, use the CLI command.
 
-Windows:
+<h5 style={{marginTop: '36px'}}>JSON configuration</h5>
 
-```json
+Most editors use JSON configuration files for MCP servers. The following examples show complete configurations you can use.
+
+If Roblox Studio is your only MCP server, use these configurations as they are. If you're using multiple MCP servers, copy the `Roblox_Studio` entry and add it to your existing `mcpServers` dictionary.
+
+The configuration depends on your operating system.
+
+<Alert severity="info">
+Your `mcp.json` file might already contain other entries. When adding the `Roblox_Studio` configuration, make sure each entry is separated by a comma. Missing commas will result in invalid JSON and prevent the configuration from loading.
+</Alert>
+
+```json title="Windows"
 {
   "mcpServers": {
     "Roblox_Studio": {
@@ -106,9 +190,7 @@ Windows:
 }
 ```
 
-macOS:
-
-```json
+```json title="macOS"
 {
   "mcpServers": {
     "Roblox_Studio": {
@@ -118,167 +200,120 @@ macOS:
 }
 ```
 
-Other MCP clients will prompt you for the MCP command or expect it as a CLI argument during setup. Here are the commands for the Roblox MCP server:
+<h5 style={{marginTop: '36px'}}>CLI command</h5>
 
-Windows CLI command:
+Some MCP clients require a CLI command instead of a JSON configuration. The command depends on your operating system.
 
-```bash
+```bash title="Windows"
 cmd.exe /c %LOCALAPPDATA%\Roblox\mcp.bat
 ```
 
-macOS CLI command:
-
-```bash
+```bash title="macOS"
 /Applications/RobloxStudio.app/Contents/MacOS/StudioMCP
 ```
 
 ### Claude Code
 
-Claude Code is Anthropic's terminal-based coding agent. You register MCP servers using the `claude mcp add` command:
+To connect Claude Code:
 
-1. Open your terminal and run the following commands:
-   1. macOS bash:
-
-        ```bash
-        claude mcp add Roblox_Studio -- /Applications/RobloxStudio.app/Contents/MacOS/StudioMCP
-        ```
-
-   2. Windows bash:
-
-        ```bash
-        claude mcp add Roblox_Studio -- cmd.exe /c %LOCALAPPDATA%\Roblox\mcp.bat
-        ```
-
-2. Verify the connection in Claude Code
-   1. In Claude Code, run `/mcp`.
-   2. You should see `Roblox_Studio: connected` in the server list.
+1. Open your terminal and run one of the following commands:
+    - Windows: `claude mcp add Roblox_Studio -- cmd.exe /c %LOCALAPPDATA%\Roblox\mcp.bat`
+    - macOS: `claude mcp add Roblox_Studio -- /Applications/RobloxStudio.app/Contents/MacOS/StudioMCP`
+2. In Claude Code, run `/mcp`.
+3. Confirm that `Roblox_Studio: connected` appears in the server list.
 
 ### Claude Desktop
 
-Claude Desktop manages MCP servers through a JSON configuration file. Use the following steps to configure Roblox Studio MCP with Claude Desktop:
+To connect Claude Desktop:
 
-1. In Claude desktop, navigate to **Claude** > **Settings...**.
-2. Navigate to the **Developer** tab and select **Edit Config**.
-   1. If pressing that button produces errors, it's possible that Claude Desktop 'hid' the configuration JSON in a directory like `C:\Users\<username>\AppData\Local\Packages\Claude_????\LocalCache\Roaming\Claude\claude_desktop_config.json`
-3. Add the server configuration from [Connecting Your Client](#connect-your-client) to the `claude_desktop_config.json`.
-
-4. Restart Claude Desktop by completely quitting and relaunching. On restart, you should see a MCP server indicator in the bottom-right corner of the chat input field.
-5. Click the hammer icon below the chat input to access your tools and verify Roblox Studio has been added.
+1. In the Claude Desktop app, go to **Claude** &rang; **Settings...**.
+2. In the **Developer** tab, select **Edit Config**.
+    - You can also find the config file at `C:\Users\<username>\AppData\Local\Packages\Claude_????\LocalCache\Roaming\Claude\claude_desktop_config.json`.
+3. Add the `Roblox_Studio` configuration from [Connect your client](#connect-your-client) to the `claude_desktop_config.json` file.
+4. Restart Claude Desktop by fully quitting and relaunching the application.
+5. Locate the MCP server indicator at the bottom-right corner of the chat input window.
+6. Click the hammer icon to open the tools panel and verify that Roblox Studio is available.
 
 ### Visual Studio Code
 
-VS Code supports MCP servers through mcp.json configuration files. Official Visual Studio Documentation is [here](https://code.visualstudio.com/docs/copilot/customization/mcp-servers).
+<Alert severity="info">
+VS Code uses `servers` as the top-level key instead of `mcpServers`. Make sure your JSON configuration uses `servers`.
+</Alert>
 
-**Important:** VS Code uses "servers" as its top-level key, not "mcpServers".
+You can configure the server at the workspace level, globally, or through the Command Palette. Use a workspace configuration for project-specific setups, or a global configuration to reuse the server across all of your projects.
 
-For Windows:
+To connect VS Code:
 
-```json
-{
-  "servers": {
-    "Roblox_Studio": {
-      "command": "cmd.exe",
-      "args": [
-        "/c",
-        "%LOCALAPPDATA%\\Roblox\\mcp.bat"
-      ]
-    }
-  }
-}
-```
-
-For macOS:
-
-```json
-{
-  "servers": {
-    "Roblox_Studio": {
-      "command": "/Applications/RobloxStudio.app/Contents/MacOS/StudioMCP"
-    }
-  }
-}
-```
-
-#### Workspace configuration
-
-Connect Roblox Studio MCP on a per-workspace basis:
-
-1. Create `.vscode/mcp.json` in your project root.
-2. Add the server entry to the created file.
-
-#### Global configuration
-
-Connect Roblox Studio on a global basis:
-
-1. Open the Command Palette (<kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> / <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>).
-2. Run **MCP: Open User Configuration**.
-3. Add the same server entry to the opened `mcp.json` file.
-
-#### Command Palette
-
-Connect Roblox Studio MCP using the Command Palette:
-
-1. Open the Command Palette.
-2. Run **MCP: Add Server…**.
-3. Select **Command (stdio)** as the type, then enter the server name. For example, Roblox_Studio (adding space can cause issues)
-4. Paste the command and arguments from above
-
-#### Verify
-
-Open GitHub Copilot Chat, switch to **Agent Mode**, and click the **Tools** icon. Confirm that Roblox Studio tools appear in the list.
+1. Choose how you want to configure the server:
+    - For the workspace:
+        1. In your project root, create a `.vscode/mcp.json` file.
+        2. Add the `Roblox_Studio` configuration from [Connect your client](#connect-your-client) to the file.
+    - Globally:
+        1. In VS Code, open the Command Palette.
+        2. Run **MCP: Open User Configuration**.
+        3. Add the `Roblox_Studio` configuration from [Connect your client](#connect-your-client) to the `mcp.json` file.
+    - Through the Command Palette:
+        1. In VS Code, open the Command Palette.
+        2. Run **MCP: Add Server...**.
+        3. Select **Command (stdio)** and enter a server name.
+        4. Add the `Roblox_Studio` configuration from [Connect your client](#connect-your-client).
+2. Verify the connection:
+    1. Open the **GitHub Copilot Chat**.
+    2. Switch to **Agent Mode**.
+    3. Click the **Tools** icon.
+    4. Confirm that **Roblox Studio tools** appears on the list.
 
 ### Cursor
 
-Cursor supports MCP servers through its settings UI or by editing `mcp.json` directly.
+You can configure the server using the settings UI or by directly editing the configuration file.
 
-#### Edit settings
+To connect Cursor:
 
-1. Go to **File** > **Preferences** > **Cursor Settings**.
-2. Select **MCP** in the sidebar.
-3. Click **Add new global MCP server**.
-4. Paste the JSON configuration provided earlier.
+1. Choose how you want to configure the server:
+    - Through the settings UI:
+        1. Go to **File** &rang; **Preferences** &rang; **Cursor Settings**.
+        2. Select **MCP**.
+        3. Click **Add new global MCP server**.
+        4. Add the `Roblox_Studio` configuration from [Connect your client](#connect-your-client).
+    - Through the configuration file:
+        1. Open `~/.cursor/mcp.json` (for global) or `.cursor/mcp.json` (for project-level).
+        2. Add the `Roblox_Studio` configuration from [Connect your client](#connect-your-client) to the file.
+2. Verify the connection:
+    1. Go to **Cursor Settings** &rang; **MCP**.
+    2. Confirm that the server is showing a green status indicator.
 
-#### Edit config files
+### Antigravity
 
-1. Open `~/.cursor/mcp.json` (global) or `.cursor/mcp.json` (project-level)
-2. Paste the JSON configuration provided earlier.
+To connect Antigravity:
 
-#### Verify
-
-In **Cursor Settings** > **MCP**, the server should show a green status indicator. You can also confirm tools are available in Agent Mode.
-
-### Google Antigravity
-
-Antigravity supports MCP servers through its built-in MCP store and raw config editor:
-
-1. Click the three dots (**…**) at the top of the Agent pane and select **MCP Servers**.
-2. Click **Manage MCP Servers** > **View raw config**. This opens the `mcp_config.json` file:
-   1. macOS: `~/.gemini/antigravity/mcp_config.json`
-   2. Windows: `C:\Users\<USERNAME>\.gemini\antigravity\mcp_config.json`
-3. Add the server by inserting the JSON configuration provided earlier.
-
-4. Refresh the MCP Servers panel and verify Roblox Studio tools appears in the active tools list.
+1. In Antigravity, click **&hellip;** &rang; **MCP Servers**.
+2. Click **Manage MCP Servers**.
+3. Click **View raw config**.
+4. Add the `Roblox_Studio` configuration from [Connect your client](#connect-your-client) to the `mcp_config.json` file.
+5. Refresh the **MCP Servers** panel to verify that **Roblox Studio tools** appears in the active tools list.
 
 ### Other MCP clients
 
-The Studio MCP server works with **any client that supports stdio transport**. Use the configuration JSON or CLI command from the [Connect your client](#connect-your-client) section and consult your client's documentation for where to place the configuration. Restart the client to load the new configuration.
+The Studio MCP server works with any client that supports `stdio` transport. Use the configuration JSON or CLI command from the [Connect your client](#connect-your-client) section, then follow your client's documentation to add the server configuration. Restart the client to apply your changes.
 
-Consult your client's documentation for where to place the configuration, then add a server entry with the command and argument above. Restart the client to load the new configuration.
+## Use multiple Studio instances
 
-## Verifying your setup
+You can connect a single MCP client to multiple running instances of Studio at the same time. The server automatically determines which instance to use based on context (for example, if you reference a specific experience or an object that exists only in that instance).
 
-After configuring any client, follow these steps to confirm everything is working:
+You can manually switch instances using `list_roblox_studios` and `set_active_studio`.
 
-1. Open Roblox Studio and open a place file.
-2. Click on the three dots (⋯) menu to open the **Assistant Settings**.
-3. In the left sidebar, select the **MCP Servers** tab.
-4. Under **Enable Studio as MCP Server**, verify the client is connected.
-  <img src="../assets/studio/general/MCP.png" width="800" alt="Assistants settings menu displaying 1 client connected." />
+## Verify your connection
+
+After setting up your client, verify that the connection is working in Roblox Studio:
+
+1. Open **Assistant**.
+2. Click **&hellip;** &rang; **Manage MCP Servers**.
+3. Under **Enable Studio as MCP server**, check for the green indicator to confirm that the client has connected successfully.
 
 ## Troubleshooting
 
-### Server not showing up or tools not appearing
+If the server is not showing up, or the tools aren't available:
 
-1. Restart both Roblox Studio and your MCP client completely.
-2. Verify the binary path is correct and the file exists.
-3. Check your JSON syntax. Even minor issues like a missing comma or bracket will silently break the config.
+- Restart both Roblox Studio and your MCP client.
+- Verify that the command or binary path is correct and the file exists.
+- Check your JSON syntax. Even a missing comma or bracket can prevent the configuration from loading.

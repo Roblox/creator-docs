@@ -74,22 +74,22 @@ To set Blender import settings for 3D objects from Studio:
 
 To set Studio import settings for 3D objects from Blender:
 
-1. Navigate to **File** > **Import 3D**. Your local file browser displays.
-1. Select and then confirm the 3D object's `.obj`, `.fbx`, or `.gltf` file(s) you want to import from your local system. The 3D Importer's **Import Preview** window displays.
-1. In the right-hand panel, navigate to the **File General** section, then:
+1. Navigate to **File** > **Import**. Your local file browser displays.
+2. Select and then confirm the 3D object's `.obj`, `.fbx`, or `.gltf` file(s) you want to import from your local system. The Importer's **Import Preview** window displays.
+3. In the right-hand panel, navigate to the **File General** section, then:
 
    1. Enable **Import Only as a Model** if you have multiple objects that you want to group into a `Class.Model` object.
-   1. Enable **Upload to Roblox** if you want to create an asset with an asset ID that you can reference across projects.
-   1. Set **Creator** to **Me** if you are the only one who needs to access the object, or to the group that owns the project you're working on. This latter setting ensures all eligible group members have permission to use the 3D object within the project.
-   1. Enable **Insert Using Scene Position** so that the object retains the position you set in Blender.
+   2. Enable **Upload to Roblox** if you want to create an asset with an asset ID that you can reference across projects.
+   3. Set **Creator** to **Me** if you are the only one who needs to access the object, or to the group that owns the project you're working on. This latter setting ensures all eligible group members have permission to use the 3D object within the project.
+   4. Enable **Insert Using Scene Position** so that the object retains the position you set in Blender.
 
    <img src="../assets/art/3p-software/blender/Studio-Import.png" width = "80%" alt="The Import Preview window with the File General section highlighted."/>
 
-1. Navigate to the **File Transform** section, then set the following settings so that the object retains the same orientation from Blender:
+4. Navigate to the **File Transform** section, then set the following settings so that the object retains the same orientation from Blender:
    1. Set **World Forward** to **Front** to keep the same "forward" axis as Blender.
-   1. Set **World Up** to **Top** to keep the same "up" axis as Blender.
-1. Navigate to the **File Geometry** section, then set **Scale Unit** to **Stud** to keep the same scale from Blender.
-1. At the bottom of the window, click the **Import** button. Your 3D object imports with the same scale and orientation from Blender.
+   2. Set **World Up** to **Top** to keep the same "up" axis as Blender.
+5. Navigate to the **File Geometry** section, then set **Scale Unit** to **Stud** to keep the same scale from Blender.
+6. At the bottom of the window, click the **Import** button. Your 3D object imports with the same scale and orientation from Blender.
 
 ### Export settings
 
@@ -749,7 +749,7 @@ To use the Follow Active Quads tool:
 1. Open the **UV Editing** workspace. The UV Editor displays on the lefthand side of the screen, and the 3D viewport displays on the righthand side of the screen in Edit mode.
 1. In the **3D Viewport**, navigate to your 3D object, then unwrap every face you want to texture using an active face.
 1. **(Optional)** Configure your active face.
-   1. In the **UV Editor**, select the face you want to be your active face, then press <kbd>Alt</kbd><kbd>M</kbd>/<kbd>⌥</kbd><kbd>M</kbd>  to open the **Split** contextual menu.
+   1. In the **UV Editor**, select the face you want to be your active face, then press <kbd>Alt</kbd><kbd>M</kbd>/<kbd>⌥</kbd><kbd>M</kbd> to open the **Split** contextual menu.
    1. Select **Selection**. The active face separates from the UV island.
    1. Move, scale, or rotate your active face to the appropriate position, orientation, and scale that you want other faces in the UV map to follow.
 1. In the **UV Editor**, select all faces you want to follow the active face. Make sure to select your active face last so that Blender knows to use its layout as the guide.

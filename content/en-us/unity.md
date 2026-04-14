@@ -23,7 +23,7 @@ Unity's **Hierarchy** window and Roblox Studio's [Explorer](studio/explorer.md) 
 
 However, the **Hierarchy** window has no predefined structure, whereas the **Explorer** window has a strict structure. It might help to think of the **Explorer** window as a combination of Unity's **Hierarchy** and **Project** windows, with the `Class.Workspace` folder as the most recognizable element.
 
-Similarly, the Roblox Studio [Asset Manager](projects/assets/manager.md) and [Toolbox](projects/assets/toolbox.md) overlap with the Unity **Project** window. The **Asset Manager** lets you manage all assets within your experience, whereas the **Toolbox** lets you access any assets you've published. The **Toolbox** also lets you search the [Creator Store](production/creator-store.md) for assets from Roblox or the community, similar to the Unity **Asset Store**.
+Similarly, the Roblox Studio [Asset Manager](projects/assets/manager.md) and [Toolbox](projects/assets/toolbox.md) overlap with the Unity **Project** window. The **Asset Manager** lets you manage all assets within your game, whereas the **Toolbox** lets you access any assets you've published. The **Toolbox** also lets you search the [Creator Store](production/creator-store.md) for assets from Roblox or the community, similar to the Unity **Asset Store**.
 
 ## Philosophical differences
 
@@ -57,7 +57,7 @@ Rather than using standard metric units for length and mass, Roblox uses notiona
 
 ## Location matters
 
-Roblox experiences are multiplayer by default, so Roblox Studio includes many different storage locations with specific behaviors. For example, a script might run when you put it in `Class.ReplicatedStorage`, but not when you put it into `Class.StarterPlayerScripts`. For more information, see [Client-server runtime](projects/client-server) and [Object organization](projects/data-model#object-organization).
+Roblox games are multiplayer by default, so Roblox Studio includes many different storage locations with specific behaviors. For example, a script might run when you put it in `Class.ReplicatedStorage`, but not when you put it into `Class.StarterPlayerScripts`. For more information, see [Client-server runtime](projects/client-server) and [Object organization](projects/data-model#object-organization).
 
 <ScriptLocations components={props.components} />
 
@@ -89,7 +89,7 @@ The Roblox script can be relatively concise because Roblox has many built-in ass
 
 Unity and Roblox both support importing custom meshes and models in `.fbx` format. Certain types of assets may require specific configurations and export settings from your third-party modeling software. For more information, see the following pages:
 
-- [3D Importer](art/modeling/3d-importer.md)
+- [Importer](studio/importer.md)
 - [General specifications](art/modeling/specifications.md)
 - [Blender and Maya export requirements](art/modeling/export-requirements.md)
 
@@ -108,7 +108,7 @@ In Unity, you collaborate with standard version control systems or paid services
 Roblox files live in the cloud (although you can export copies), so Roblox Studio provides built-in collaboration workflows for simultaneous editing, group management, permissions, script drafting, and more. See [Collaboration](projects/collaboration.md).
 
 <Alert severity="info">
-Cloud syncing provides further benefits with [packages](projects/assets/packages.md), the Roblox equivalent of Unity prefabs. Converting an asset or asset hierarchy to a package helps with local reusability, but also with collaboration. When you or your collaborators publish a new version of a package, you can quickly update existing instances of that package within an experience or set them to auto-update.
+Cloud syncing provides further benefits with [packages](projects/assets/packages.md), the Roblox equivalent of Unity prefabs. Converting an asset or asset hierarchy to a package helps with local reusability, but also with collaboration. When you or your collaborators publish a new version of a package, you can quickly update existing instances of that package within a game or set them to auto-update.
 </Alert>
 
 ## Plugins
@@ -117,20 +117,20 @@ Similar to Unity tools, Roblox Studio supports [plugins](studio/plugins.md), whi
 
 ## Glossary
 
-| Unity | Roblox | Notes |
-| :--- | :--- | :--- |
-| Scene | [Place](projects.md#places) | |
-| GameObject | `Class.Part` or `Class.Model` | See [Philosophical differences](#philosophical-differences). |
-| Prefab | [Package](projects/assets/packages.md) | |
-| Transform | `Datatype.CFrame` | `Datatype.CFrame` doesn't include scale information. See [Transforms](#transforms). |
-| Hierarchy | [Explorer](studio/explorer.md) | |
-| Inspector | [Properties](studio/properties.md) |
-| Scene view | [3D viewport](studio/ui-overview.md#3d-viewport) | |
-| Game view | [3D viewport](studio/ui-overview.md#3d-viewport) | The viewport transitions into a gameplay view when you test your experience. |
-| Project window | [Asset Manager](projects/assets/manager.md) or [Toolbox](projects/assets/toolbox.md) | |
-| Terrain Inspector | [Terrain Editor](studio/terrain-editor.md) | |
-| Spawn point | `Class.SpawnLocation` | |
-| Console | [Output](studio/output.md) | |
-| Asset Store | [Creator Store](production/creator-store.md) | |
-| Overlays | [Toolbar](studio/ui-overview.md#toolbar-and-mezzanine) | |
-| Tool | [Plugin](studio/plugins.md) | |
+| Unity             | Roblox                                                                               | Notes                                                                               |
+| :---------------- | :----------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
+| Scene             | [Place](projects.md#places)                                                          |                                                                                     |
+| GameObject        | `Class.Part` or `Class.Model`                                                        | See [Philosophical differences](#philosophical-differences).                        |
+| Prefab            | [Package](projects/assets/packages.md)                                               |                                                                                     |
+| Transform         | `Datatype.CFrame`                                                                    | `Datatype.CFrame` doesn't include scale information. See [Transforms](#transforms). |
+| Hierarchy         | [Explorer](studio/explorer.md)                                                       |                                                                                     |
+| Inspector         | [Properties](studio/properties.md)                                                   |
+| Scene view        | [3D viewport](studio/ui-overview.md#3d-viewport)                                     |                                                                                     |
+| Game view         | [3D viewport](studio/ui-overview.md#3d-viewport)                                     | The viewport transitions into a gameplay view when you test your game.        |
+| Project window    | [Asset Manager](projects/assets/manager.md) or [Toolbox](projects/assets/toolbox.md) |                                                                                     |
+| Terrain Inspector | [Terrain Editor](studio/terrain-editor.md)                                           |                                                                                     |
+| Spawn point       | `Class.SpawnLocation`                                                                |                                                                                     |
+| Console           | [Output](studio/output.md)                                                           |                                                                                     |
+| Asset Store       | [Creator Store](production/creator-store.md)                                         |                                                                                     |
+| Overlays          | [Toolbar](studio/ui-overview.md#toolbar-and-mezzanine)                               |                                                                                     |
+| Tool              | [Plugin](studio/plugins.md)                                                          |                                                                                     |

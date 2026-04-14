@@ -63,6 +63,7 @@ properties:
       can_save: false
     capabilities:
       - Basic
+    simulationAccess: true
   - name: Attachment.CFrame
     summary: |
       `Datatype.CFrame` offset of the attachment.
@@ -85,6 +86,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+    simulationAccess: true
   - name: Attachment.Orientation
     summary: |
       Orientation of the attachment relative to the orientation of its parent.
@@ -107,6 +109,7 @@ properties:
       can_save: false
     capabilities:
       - Basic
+    simulationAccess: true
   - name: Attachment.Position
     summary: |
       Positional offset of the attachment, relative to the position and
@@ -130,6 +133,7 @@ properties:
       can_save: false
     capabilities:
       - Basic
+    simulationAccess: true
   - name: Attachment.Rotation
     summary: |
       Rotation of the attachment relative to the rotation of its parent.
@@ -155,6 +159,7 @@ properties:
       can_save: false
     capabilities:
       - Basic
+    simulationAccess: true
   - name: Attachment.SecondaryAxis
     summary: |
       Direction of the **Y** axis of the attachment, represented as a unit
@@ -177,6 +182,7 @@ properties:
       can_save: false
     capabilities:
       - Basic
+    simulationAccess: true
   - name: Attachment.Visible
     summary: |
       Toggles the in-experience visibility of the attachment.
@@ -218,6 +224,7 @@ properties:
       can_save: false
     capabilities:
       - Basic
+    simulationAccess: true
   - name: Attachment.WorldCFrame
     summary: |
       The exact `Datatype.CFrame` of the attachment in world space coordinates.
@@ -241,6 +248,7 @@ properties:
       can_save: false
     capabilities:
       - Basic
+    simulationAccess: true
   - name: Attachment.WorldOrientation
     summary: |
       Orientation of the attachment relative to the world rather than its own
@@ -264,6 +272,7 @@ properties:
       can_save: false
     capabilities:
       - Basic
+    simulationAccess: true
   - name: Attachment.WorldPosition
     summary: |
       Position of the attachment relative to the world rather than its own
@@ -287,6 +296,7 @@ properties:
       can_save: false
     capabilities:
       - Basic
+    simulationAccess: true
   - name: Attachment.WorldRotation
     summary: |
       Rotation of the attachment relative to the world rather than its own
@@ -315,6 +325,7 @@ properties:
       can_save: false
     capabilities:
       - Basic
+    simulationAccess: true
   - name: Attachment.WorldSecondaryAxis
     summary: |
       Direction of the **Y** axis of the attachment relative to the world,
@@ -337,6 +348,7 @@ properties:
       can_save: false
     capabilities:
       - Basic
+    simulationAccess: true
 methods:
   - name: Attachment:GetAxis
     summary: |

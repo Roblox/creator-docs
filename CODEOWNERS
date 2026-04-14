@@ -1,6 +1,7 @@
 *                                                           @Roblox/creator-knowledge
 
 /content/common/                                            @Roblox/documentation
+/content/common/localization_manifest.json                  @Roblox/creator-knowledge
 /content/en-us/                                             @Roblox/documentation
 /content/en-us/assets/education/                            @Roblox/documentation @Roblox/education
 /content/en-us/education/                                   @Roblox/documentation @Roblox/education

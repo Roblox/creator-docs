@@ -43,6 +43,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+    simulationAccess: true
   - name: AtmosphereSensor.RelativeWindVelocity
     summary: |
       Reports the wind velocity relative to the sensor.
@@ -64,6 +65,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+    simulationAccess: true
 methods: []
 events: []
 callbacks: []

@@ -1,6 +1,6 @@
 ---
 title: Import and configure animations
-description: Use the 3D Importer to add third-party models to Studio before testing, using, or uploading the character model.
+description: Use the Importer to add third-party models to Studio before testing, using, or uploading the character model.
 ---
 
 Use the following steps to import and configure the animation for publishing emotes:

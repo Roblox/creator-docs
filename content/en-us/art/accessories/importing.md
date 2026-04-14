@@ -1,6 +1,6 @@
 ---
 title: Import rigid accessories
-description: Use the 3D Importer to add third-party models to Studio before using the Accessory Fitting Tool to convert the model to an Accessory.
+description: Use the Importer to add third-party models to Studio before using the Accessory Fitting Tool to convert the model to an Accessory.
 ---
 
 Use the following instructions to [import](#import-3d-assets) your `.fbx` or `.gltf` third-party model into Studio and [convert](#convert-rigid-accessories) the asset to an `Accessory` object that you can save to use in your experience, share with others, or upload to the Marketplace.
@@ -11,19 +11,19 @@ The following asset example and instructions are part of the [Rigid accessory tu
 
 ## Import 3D assets
 
-Studio's 3D Importer provides a quick and easy way to import third-party 3D assets into your projects. The importer provides object previews and error-checking to ensure that your asset meets Roblox's [general 3D requirements](../modeling/specifications.md).
+Studio's Importer provides a quick and easy way to import third-party 3D assets into your projects. The importer provides object previews and error-checking to ensure that your asset meets Roblox's [general 3D requirements](../modeling/specifications.md).
 
 Keep in mind, the model that you intend to create as a rigid accessory must also follow Roblox's [accessory specifications](../accessories/specifications.md) to eventually use this asset as an `Class.Accessory`, or you may experience errors later in the workflow.
 
 To import your asset:
 
-1. From Studio's **File** menu, select **3D Importer**.
-2. In the file browser, select the `.fbx` or `.gltf` file saved locally. The 3D Importer loads a preview of the object.
+1. From Studio's **File** menu, select **Importer**.
+2. In the file browser, select the `.fbx` or `.gltf` file saved locally. The Importer loads a preview of the object.
 
       <img src="../../assets/art/accessories/creating-rigid/3D-Importer.png" />
 
    - If textures don't load for your asset, you can manually import your textures later.
-   - See [3D Importer](../../art/modeling/3d-importer.md) for additional information on import settings and troubleshooting.
+   - See [Importer](../../studio/importer.md) for additional information on import settings and troubleshooting.
 
 3. Select **Import**. The asset populates in your workspace as a `Class.Model` with the appropriate textures applied as a `Class.SurfaceAppearance` or `Class.MeshPart.TextureID`.
 
@@ -53,7 +53,7 @@ If textures didn't load correctly, add them manually. You may need to save and p
 </BaseAccordion>
 
 <Alert severity = 'success'>
-After successful import, your model object should populate in your project as a `Class.Model` with the appropriate textures applied. See [3D Importer](../../art/modeling/3d-importer.md) for additional information on import settings and troubleshooting.
+After successful import, your model object should populate in your project as a `Class.Model` with the appropriate textures applied. See [Importer](../../studio/importer.md) for additional information on import settings and troubleshooting.
 </Alert>
 
 ## Convert rigid accessories

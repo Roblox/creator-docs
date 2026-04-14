@@ -101,6 +101,7 @@ properties:
       can_save: false
     capabilities:
       - Physics
+    simulationAccess: true
 methods: []
 events: []
 callbacks: []

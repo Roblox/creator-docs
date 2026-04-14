@@ -14,7 +14,7 @@ navigation:
         path: /assistant/guide
       - title: Prompt guide and examples
         path: /assistant/prompt-engineering
-  - title: MCP Server
+  - title: MCP server
     path: /studio/mcp
   - heading: Building tools
   - title: Align

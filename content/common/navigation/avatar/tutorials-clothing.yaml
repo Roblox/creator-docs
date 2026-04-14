@@ -40,7 +40,7 @@ navigation:
     path: /art/accessories/creating/exporting
 
   - heading: Import and convert
-  - title: Use Studio's 3D importer
+  - title: Use Studio's Importer
     path: /art/accessories/creating/importing
   - title: Use the accessory fitting tool
     path: /art/accessories/creating/converting

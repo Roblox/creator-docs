@@ -89,24 +89,24 @@ The following memory values in the **Developer Console** can indicate a problem 
 
   Although events are disconnected when the instance they belong to is
   destroyed, a common mistake is to assume this applies to `Class.Player`
-  objects. After a user leaves an experience, the engine doesn't automatically
+  objects. After a user leaves a game, the engine doesn't automatically
   destroy their representative `Class.Player` object and character model, so
   connections to the `Class.Player` object and instances under the character
   model, such as `Class.Player.CharacterAdded|CharacterAdded`, still consume memory if you don't disconnect them in your scripts.
-	This can result in very significant memory leaks over time on the server as hundreds of users join and leave the experience.
+  This can result in very significant memory leaks over time on the server as hundreds of users join and leave the game.
 
 - **Tables** - Inserting objects into tables but not removing them when they are
   no longer needed causes unnecessary memory consumption, especially for tables
   that track user data when they join. For example, the following code sample creates a table adding user information each time a user joins:
 
-   ```lua title="Example"
-   local playerInfo = {}
-   Players.PlayerAdded:Connect(function(player)
-	   playerInfo[player] = {} -- some info
-   end)
-   ```
+  ```lua title="Example"
+  local playerInfo = {}
+  Players.PlayerAdded:Connect(function(player)
+    playerInfo[player] = {} -- some info
+  end)
+  ```
 
-   If you don't remove these entries when they are no longer needed, the table continues to grow in size and consumes more memory as more users join the session. Any code that iterates over this table also becomes more computationally expensive as the table grows in size.
+  If you don't remove these entries when they are no longer needed, the table continues to grow in size and consumes more memory as more users join the session. Any code that iterates over this table also becomes more computationally expensive as the table grows in size.
 
 ### Mitigation
 
@@ -114,24 +114,25 @@ To clean up all used values for preventing memory leaks:
 
 - **Disconnect all connections** - Go through your codebase and make sure each
   connection is cleaned up via one of the following paths:
+
   - Disconnecting manually using the `Datatype.RBXScriptConnection:Disconnect()|Disconnect()` function.
   - Destroying the instance the event belongs to with the `Class.Instance:Destroy()|Destroy()` function.
   - Destroying the script object that the connection traces back to.
 
 - **Remove player objects and characters after leaving** - Enable `Class.Workspace.PlayerCharacterDestroyBehavior` to automatically destroy player objects and character models after a user leaves. If you prefer, you can instead clean them up manually:
 
-   ```lua title="Example player and character cleanup"
-	 local Players = game:GetService("Players")
-   Players.PlayerAdded:Connect(function(player)
-     player.CharacterRemoving:Connect(function(character)
-       task.defer(character.Destroy, character)
-     end)
-   end)
+  ```lua title="Example player and character cleanup"
+  local Players = game:GetService("Players")
+  Players.PlayerAdded:Connect(function(player)
+    player.CharacterRemoving:Connect(function(character)
+      task.defer(character.Destroy, character)
+    end)
+  end)
 
-   Players.PlayerRemoving:Connect(function(player)
-	   task.defer(player.Destroy, player)
-   end)
-   ```
+  Players.PlayerRemoving:Connect(function(player)
+    task.defer(player.Destroy, player)
+  end)
+  ```
 
 ## Physics computation
 
@@ -151,7 +152,7 @@ per frame on both the server and the client.
 
 - **Excessive number of complexity of simulated objects** - The more 3D
   assemblies that are simulated, the longer physics computations take each
-  frame. Often, experiences will have objects being simulated that do not need
+  frame. Often, games will have objects being simulated that do not need
   to be or will have mechanisms that have more constraints and joints than they
   need.
 - **Overly precise collision detection** - Mesh parts have a
@@ -168,6 +169,7 @@ per frame on both the server and the client.
   rate of physics calculations for physics mechanisms, allowing physics updates
   to be made less frequently in some cases.
 - **Reduce mechanism complexity**
+
   - Where possible, minimize the number of physics constraints or joints in an
     assembly.
   - Reduce the amount of self-collision within a mechanism, such as by applying
@@ -175,6 +177,7 @@ per frame on both the server and the client.
     colliding with each other.
 
 - **Reduce the usage of precise collision fidelity for meshes**
+
   - For small or non-interactable objects where users would rarely notice the
     difference, use box fidelity.
   - For small-medium size objects, use box or hull fidelities, depending on the
@@ -184,7 +187,7 @@ per frame on both the server and the client.
   - For objects that don't require collisions, disable collisions and use box or
     hull fidelity, since the collision geometry is still stored in memory.
   - You can render collision geometry for debug purposes in Studio by toggling
-  	on **Collision fidelity** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
+    on **Collision fidelity** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 
     Alternatively, you can apply the `CollisionFidelity=PreciseConvexDecomposition` filter to the [Explorer](../studio/explorer.md#property-filters) which shows a count of all mesh parts with the precise fidelity and allows you to easily select them.
 
@@ -215,7 +218,7 @@ Physics movement and collision detection consumes memory. Mesh parts have a `Cla
 
 The default and precise collision detection modes consumes significantly more memory than the two other modes with lower fidelity collision shapes.
 
-If you see high levels of memory consumption under **PhysicsParts**, you might need to explore reducing the [collision fidelity](../workspace/collisions.md#mesh-and-solid-model-collisions) of objects in your experience.
+If you see high levels of memory consumption under **PhysicsParts**, you might need to explore reducing the [collision fidelity](../workspace/collisions.md#mesh-and-solid-model-collisions) of objects in your game.
 
 ### How to mitigate
 
@@ -240,7 +243,7 @@ comes with a significant computation cost.
   example, unless your NPC is going to climb ladders, it's safe to disable
   the `Enum.HumanoidStateType.Climbing|Climbing` state.
 - **Instantiating, modifying, and respawning models with `Class.Humanoid|Humanoids` or [skinned](../art/modeling/rigging.md) `Class.MeshPart|MeshParts` frequently**
-  - This can be intensive for the engine to process, particularly if these models use **layered clothing**. This also can be particularly problematic in experiences where avatars respawn often.
+  - This can be intensive for the engine to process, particularly if these models use **layered clothing**. This also can be particularly problematic in games where avatars respawn often.
   - In the MicroProfiler, lengthy **updateInvalidatedFastClusters** tags
     (over 4 ms) are often a signal that avatar instantiation/modification is
     triggering excessive invalidations.
@@ -253,7 +256,7 @@ comes with a significant computation cost.
 
 ### Mitigation
 
-- **Play NPC animations on the client** - In experiences with a large number of
+- **Play NPC animations on the client** - In games with a large number of
   NPCs, consider creating the `Class.Animator` on the client and running the
   animations locally. This reduces the load on the server and the need for
   unnecessary replication. It also makes additional optimizations possible (such
@@ -354,7 +357,7 @@ same `Class.MeshPart.MeshContent|MeshContent` are handled in a single draw call 
   end
   ```
 
-  The output (with **Stack Lines** enabled) might look something like this. Repeated lines indicate reuse of the same mesh, which is good. Unique lines aren't necessarily bad, but depending on your naming scheme, could indicate duplicate meshes in your experience:
+  The output (with **Stack Lines** enabled) might look something like this. Repeated lines indicate reuse of the same mesh, which is good. Unique lines aren't necessarily bad, but depending on your naming scheme, could indicate duplicate meshes in your game:
 
   ```text
   LargeRock, rbxassetid://106420009602747 (x144) -- good
@@ -385,7 +388,7 @@ same `Class.MeshPart.MeshContent|MeshContent` are handled in a single draw call 
   [Delete layered transparencies](../tutorials/curriculums/environmental-art/optimize-your-experience.md#delete-layered-transparencies).
 
 - **Unnecessary skinned MeshPart movement** - Skinned MeshParts that are part of a Model without a Humanoid are grouped using spatially-organized FastClusters. When these MeshParts move, they must be continually added to and removed from these spatial clusters, forcing the clusters to be rebuilt and impacting performance.
-  - A highly effective workaround is to embed a Humanoid within the Model. The presence of a Humanoid overrides the default spatial clustering behavior, mandating the use of a single, unified FastCluster for the entire Model. Consequently, position updates no longer necessitate cluster rebuilds, thus mitigating the performance bottleneck. This technique should be reserved exclusively for MeshParts with expected movement, as it may introduce memory overhead and negate the benefits of spatial optimization. We recommend always profile your experience after making these types of changes. See [Humanoid performance tips](#humanoids) for additional information.
+  - A highly effective workaround is to embed a Humanoid within the Model. The presence of a Humanoid overrides the default spatial clustering behavior, mandating the use of a single, unified FastCluster for the entire Model. Consequently, position updates no longer necessitate cluster rebuilds, thus mitigating the performance bottleneck. This technique should be reserved exclusively for MeshParts with expected movement, as it may introduce memory overhead and negate the benefits of spatial optimization. We recommend always profile your game after making these types of changes. See [Humanoid performance tips](#humanoids) for additional information.
 - **Too many parts in a `Class.Model`** - Too many parts in a Model could cause rebuilds more often due to the potential for a part's property to change leading to requiring a full rebuild. Find the right balance of parts in a Model when it is using FastCluster.
 
 ### Mitigation
@@ -415,6 +418,7 @@ same `Class.MeshPart.MeshContent|MeshContent` are handled in a single draw call 
   light objects and parts to improve performance while shadows are enabled and
   increase the likelihood that shadows remain enabled. Some examples of
   optimizations you can make either at edit time or dynamically at runtime:
+
   - Use the `Class.BasePart.CastShadow` property to disable shadow casting on
     small parts where shadows are unlikely to be visible. This strategy is
     particularly effective when applied to parts that are far away from the
@@ -488,7 +492,7 @@ every frame, but larger amounts of information require more compute time.
   can be very network intensive.
 
   A common culprit here is the complex animation data saved by **Animation Editor**
-  plugins in rigs. If these aren't removed before the experience is published and
+  plugins in rigs. If these aren't removed before the game is published and
   the animated model is cloned regularly, a large amount of data will be
   replicated unnecessary.
 
@@ -511,7 +515,7 @@ You can employ the following tactics to reduce unnecessary replication:
   after importing.
 - **Limit unnecessary instance replication**, especially in cases where the
   server doesn't need to have knowledge of the instances being created. This
- includes:
+  includes:
   - Visual effects such as an explosion or a magic spell blast. The server only
     needs to know the location to determine the outcome, while the clients can
     create visuals locally.
@@ -537,31 +541,31 @@ You can employ the following tactics to reduce unnecessary replication:
 
 ## Asset memory usage
 
-The highest impact mechanism available to creators to improve client memory usage is to enable [Instance streaming](../workspace/streaming.md).
+The highest impact mechanism available to creators to improve client memory usage is to enable [instance streaming](../workspace/streaming/index.md).
 
 ### Instance streaming
 
 Instance streaming selectively loads out parts of the data model that are not required, which can lead to considerably reduced load times and increase the client's ability to prevent crashes when it comes under memory pressure.
 
-If you are encountering memory issues and have instance streaming disabled, consider updating your experience to support it, particularly if your 3D world is large. Instance streaming is based on distance in 3D space, so larger worlds naturally benefit more from it.
+If you are encountering memory issues and have instance streaming disabled, consider updating your game to support it, particularly if your 3D world is large. Instance streaming is based on distance in 3D space, so larger worlds naturally benefit more from it.
 
 If instance streaming is enabled, you can increase the aggressiveness of it. For example, consider:
 
 - Reducing use of `Enum.ModelStreamingMode.Persistent` where possible. You may need to update your scripts if you're using it as a compatibility measure.
 - Reducing the `Workspace.StreamingMinRadius` and `Workspace.StreamingTargetRadius`.
 
-For more information on streaming options and their benefits, see [Streaming properties](../workspace/streaming.md#streaming-properties).
+For more information on streaming options and their benefits, see [streaming properties](../workspace/streaming/index.md#streaming-properties).
 
 ### Other common problems
 
 - **Asset duplication** - A common mistake is to upload the same asset multiple times resulting in different asset IDs. This can lead to the same content being loaded into memory multiple times.
 - **Excessive asset volume** - Even when assets are not identical, there are cases when opportunities to reuse the same asset and save memory are missed.
-- **Audio files** - Audio files can be a surprising contributor to memory usage, particularly if you load all of them into the client at once rather than only loading what you need for a portion of the experience. For strategies, see [Load times](#load-times).
+- **Audio files** - Audio files can be a surprising contributor to memory usage, particularly if you load all of them into the client at once rather than only loading what you need for a portion of the game. For strategies, see [Load times](#load-times).
 - **High resolution textures** - Graphics memory consumption for a texture is unrelated to the size of the texture on the disk; the number of pixels in the texture determines memory usage. For example, a 1024x1024 pixel texture consumes four times the graphics memory of a 512x512 texture.
 
   Images uploaded to Roblox are transcoded to a fixed format, so there is no memory benefit to uploading images in a color model associated with fewer bytes per pixel. Similarly, compressing images prior to upload or removing the alpha channel from images that don't need it can decrease image size on disk, but doesn't improve memory usage.
 
-  As an experience loads, the engine automatically starts with lower quality textures and then ramps up quality based on available device memory, distance from the camera, amount of screen-space that the texture takes up, and other factors. Even still, strategically sizing your textures can improve memory usage in your experience.
+  As a game loads, the engine automatically starts with lower quality textures and then ramps up quality based on available device memory, distance from the camera, amount of screen-space that the texture takes up, and other factors. Even still, strategically sizing your textures can improve memory usage in your game.
 
 ### Mitigation
 
@@ -570,7 +574,7 @@ For more information on streaming options and their benefits, see [Streaming pro
   - Though there is no API to detect similarity of assets automatically, you can collect all the image asset IDs in your place (either manually or with a script), download them, and compare them using external comparison tools.
   - For mesh parts, the best strategy is to take unique mesh IDs and organize them by size to manually identify duplicates.
   - Instead of using separate textures for different colors, upload a single texture and use the `Class.SurfaceAppearance.Color` property to apply various tints to it.
-- **Import assets in map separately** - Instead of importing an entire map at once, import and reconstruct assets in the map individually and reconstruct them. The 3D importer doesn't do any de-duplication of meshes, so if you were to import a large map with a lot of separate floor tiles, each of those tiles would be imported as a separate asset (even if they are duplicates). This can lead to performance and memory issues down the line, as each mesh is treated as individually and takes up memory and draw calls.
+- **Import assets in map separately** - Instead of importing an entire map at once, import and reconstruct assets in the map individually and reconstruct them. The Importer doesn't do any de-duplication of meshes, so if you were to import a large map with a lot of separate floor tiles, each of those tiles would be imported as a separate asset (even if they are duplicates). This can lead to performance and memory issues down the line, as each mesh is treated as individually and takes up memory and draw calls.
 - **Limit the pixels of images** to no more than the necessary amount. Unless an image is occupying a large amount of physical space on the screen, it usually needs at most 512x512 pixels. Most minor images should be smaller than 256x256 pixels.
 - **Use trim sheets** to ensure maximum texture reuse in 3D maps. For steps and examples on how to create trim sheets, see [Create trim sheets](../resources/beyond-the-dark/building-architecture.md#create-trim-sheets).
 
@@ -578,9 +582,9 @@ For more information on streaming options and their benefits, see [Streaming pro
 
 ## Load times
 
-Many experiences implement custom loading screens and use the `Class.ContentProvider:PreloadAsync()` method to request assets so that images, sounds, and meshes are downloaded in the background.
+Many games implement custom loading screens and use the `Class.ContentProvider:PreloadAsync()` method to request assets so that images, sounds, and meshes are downloaded in the background.
 
-The advantage of this approach is that it lets you ensure important parts of your experience are fully loaded without pop-in. However, a common mistake is overutilizing this method to preload more assets than are actually required.
+The advantage of this approach is that it lets you ensure important parts of your game are fully loaded without pop-in. However, a common mistake is overutilizing this method to preload more assets than are actually required.
 
 An example of a bad practice is loading the entire `Class.Workspace`. While this might prevent texture pop-in, it significantly increases load times.
 
@@ -589,7 +593,7 @@ Another similar practice is utilising `Class.ContentProvider.RequestQueueSize` t
 Instead, only use `Class.ContentProvider:PreloadAsync()` in necessary situations, which include:
 
 - Images in the loading screen.
-- Important images in your experience menu, such as button backgrounds and icons.
+- Important images in your game menu, such as button backgrounds and icons.
 - Important assets in the starting or spawning area.
 
 If you must load a large number of assets, we recommend you provide a **Skip Loading** button.

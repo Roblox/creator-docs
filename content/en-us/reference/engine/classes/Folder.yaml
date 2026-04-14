@@ -24,7 +24,8 @@ description: |
 code_samples: []
 inherits:
   - Instance
-descendants: []
+descendants:
+  - GeneratedFolder
 tags: []
 deprecation_message: ''
 properties: []

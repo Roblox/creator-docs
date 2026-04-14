@@ -78,6 +78,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: VectorForce.Force
     summary: |
       The strength and direction of the force.
@@ -97,6 +98,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: VectorForce.RelativeTo
     summary: |
       The `Datatype.CFrame` in which the force is expressed.
@@ -117,6 +119,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
 methods: []
 events: []
 callbacks: []

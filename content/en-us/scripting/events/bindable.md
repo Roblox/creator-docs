@@ -3,13 +3,13 @@ title: Bindable events and callbacks
 description: Bindable events and callbacks allow for back-and-forth communication on the same side of the client-server boundary.
 ---
 
-`Class.BindableEvent` and `Class.BindableFunction` objects let you bind behaviors between scripts **on the same side** of the [client-server](../../projects/client-server.md) boundary and communicate a specific desired outcome for in-experience actions.
+`Class.BindableEvent` and `Class.BindableFunction` objects let you bind behaviors between scripts **on the same side** of the [client-server](../../projects/client-server.md) boundary and communicate a specific desired outcome for in-game actions.
 
-The most common use case for bindable events is for experiences that have a round-based structure. For example, you might have a "match started" event that lets other scripts start a timer and display a leaderboard, with a corresponding "match ended" event that lets other scripts know when to move players back into a lobby and display the winners.
+The most common use case for bindable events is for games that have a round-based structure. For example, you might have a "match started" event that lets other scripts start a timer and display a leaderboard, with a corresponding "match ended" event that lets other scripts know when to move players back into a lobby and display the winners.
 
 Because they coordinate activities between scripts, bindable events are typically used on the server, but you can use them on the client, too.
 
-Depending on how your experience works, bindable events can help make your code more modular, but [module scripts](../module.md) are often a better alternative for situations in which you need to share data between scripts. You can also use bindable events in conjunction with module scripts for a cleaner syntax, as noted in [Custom events](../module.md#custom-events).
+Depending on how your game works, bindable events can help make your code more modular, but [module scripts](../module.md) are often a better alternative for situations in which you need to share data between scripts. You can also use bindable events in conjunction with module scripts for a cleaner syntax, as noted in [Custom events](../module.md#custom-events).
 
 <Alert severity="info">
 To communicate between scripts **across** the client-server boundary, see [Remote events](remote.md).

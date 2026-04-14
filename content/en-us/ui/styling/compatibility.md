@@ -1010,3 +1010,42 @@ The following tables outline all of the classes and associated properties which 
 	</tr>
 </tbody>
 </table>
+
+### StyleQuery
+
+`Class.StyleQuery` lets you define conditional breakpoints (like container/media queries) that control when styles apply to the query's parent instance.
+
+<table size="small">
+<thead>
+ <tr>
+  <th>Property</th>
+  <th width="40%">Type</th>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+  <td>`Class.StyleQuery.AspectRatioRange`</td>
+  <td>`Datatype.NumberRange`</td>
+ </tr>
+ <tr>
+  <td>`Class.StyleQuery.MaxSize`</td>
+  <td>`Datatype.Vector2`</td>
+ </tr>
+ <tr>
+  <td>`Class.StyleQuery.MinSize`</td>
+  <td>`Datatype.Vector2`</td>
+ </tr>
+ <tr>
+  <td>`Class.StyleQuery.PreferredInputType`</td>
+  <td>`Enum.PreferredInput`</td>
+ </tr>
+ <tr>
+  <td>`Class.StyleQuery.ReduceMotionEnabled`</td>
+  <td>boolean</td>
+ </tr>
+ <tr>
+  <td>`Class.StyleQuery.ViewportDisplaySize`</td>
+  <td>`Enum.DisplaySize`</td>
+ </tr>
+</tbody>
+</table>

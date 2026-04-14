@@ -1,11 +1,11 @@
 ---
-title: Server authority advanced techniques
-description: Advanced techniques for creating high-quality, smooth, multiplayer experiences using the server authority model.
+title: Server authority techniques
+description: Techniques for creating high-quality, smooth, multiplayer experiences using the server authority model.
 ---
 
 import BetaAlert from '../../includes/beta-features/beta-alert.md'
 
-This guide covers advanced techniques for creating high-quality, smooth, multiplayer experiences using the [server authority model](./index.md).
+This guide outlines various techniques for creating high-quality, smooth, multiplayer experiences using the [server authority model](./index.md).
 
 <BetaAlert betaName="Server Authority Core API" leadIn="The server authority model and its associated APIs are currently in beta. Enable them in Studio through " leadOut="." components={props.components} />
 

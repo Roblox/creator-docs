@@ -675,6 +675,31 @@ properties:
       can_save: false
     capabilities:
       - Players
+  - name: Player.HasRobloxSubscription
+    summary: |
+      Indicates whether the player has an active Roblox subscription.
+    description: |
+      This read-only property is `true` when the player has an active Roblox
+      subscription (the flagship Roblox membership), and `false` otherwise. It
+      is set by the server and cannot be changed by scripts.
+
+      Use this property instead of `Class.Player.MembershipType` to check for
+      the Roblox subscription.
+    code_samples:
+      - check-roblox-subscription
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: RobloxEngineSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - Players
   - name: Player.HasVerifiedBadge
     summary: |
       Indicates if a player has a **Verified** badge.
@@ -762,7 +787,9 @@ properties:
     tags:
       - ReadOnly
       - NotReplicated
-    deprecation_message: ''
+    deprecation_message: |
+      This property is deprecated. Use `Class.Player.HasRobloxSubscription` to
+      check whether a player has an active Roblox subscription.
     security:
       read: None
       write: None
@@ -2260,13 +2287,14 @@ methods:
       location.
     description: |
       For experiences where
-      [instance streaming](../../../workspace/streaming.md) is enabled, requests
-      that the server stream to the player regions (parts and terrain) around
-      the specified **X**, **Y**, **Z** location in the 3D world. It is useful
-      if the experience knows that the player's `Datatype.CFrame` will be set to
-      the specified location in the near future. Without providing the location
-      with this call, the player may not have streamed in content for the
-      destination, resulting in a streaming pause or other undesirable behavior.
+      [instance streaming](../../../workspace/streaming/index.md) is enabled,
+      requests that the server stream to the player regions (parts and terrain)
+      around the specified **X**, **Y**, **Z** location in the 3D world. It is
+      useful if the experience knows that the player's `Datatype.CFrame` will be
+      set to the specified location in the near future. Without providing the
+      location with this call, the player may not have streamed in content for
+      the destination, resulting in a streaming pause or other undesirable
+      behavior.
 
       The effect of this call will be temporary and there are no guarantees of
       what will be streamed in around the specified location. Client memory

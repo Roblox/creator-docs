@@ -69,6 +69,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: LinearVelocity.ForceLimitsEnabled
     summary: |
       Determines if the constraint force will be limited or if the physics
@@ -94,6 +95,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: LinearVelocity.LineDirection
     summary: |
       The normalized `Datatype.Vector3` direction for constraining the velocity
@@ -117,6 +119,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: LinearVelocity.LineVelocity
     summary: |
       Float value of the velocity when
@@ -140,6 +143,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: LinearVelocity.MaxAxesForce
     summary: |
       Maximum force along each axis that the constraint can apply to achieve the
@@ -172,6 +176,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: LinearVelocity.MaxForce
     summary: |
       Maximum magnitude of the force vector the constraint can apply.
@@ -194,6 +199,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: LinearVelocity.MaxPlanarAxesForce
     summary: |
       Maximum force along each axis that the constraint can apply to achieve the
@@ -226,6 +232,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: LinearVelocity.PlaneVelocity
     summary: |
       `Datatype.Vector2` value of the velocity in each tangent direction of the
@@ -249,6 +256,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: LinearVelocity.PrimaryTangentAxis
     summary: |
       The primary axis in the plane, when
@@ -285,6 +293,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: LinearVelocity.ReactionForceEnabled
     summary: ''
     description: ''
@@ -302,6 +311,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: LinearVelocity.RelativeTo
     summary: |
       Sets the `Enum.ActuatorRelativeTo` property for the constraint.
@@ -321,6 +331,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: LinearVelocity.SecondaryTangentAxis
     summary: |
       The secondary axis in the plane, when
@@ -357,6 +368,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: LinearVelocity.VectorVelocity
     summary: |
       `Datatype.Vector3` velocity value when
@@ -380,6 +392,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
   - name: LinearVelocity.VelocityConstraintMode
     summary: |
       The mode of the constraint.
@@ -402,6 +415,7 @@ properties:
       can_save: true
     capabilities:
       - Physics
+    simulationAccess: true
 methods: []
 events: []
 callbacks: []

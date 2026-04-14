@@ -3,7 +3,7 @@ title: Scripting
 description: An introduction to scripting in Roblox with the Luau programming language.
 ---
 
-Scripts are plain text files that let you add custom, dynamic behavior to your experiences. You can use scripts to trigger in-game events, respond to player input, save player data, create leaderboards, spawn enemies, control NPC behavior, and much, much more.
+Scripts are plain text files that let you add custom, dynamic behavior to your games. You can use scripts to trigger in-game events, respond to player input, save player data, create leaderboards, spawn enemies, control NPC behavior, and much, much more.
 
 <Alert severity="success">
 This section is for creators with some coding experience who want to know the specifics of scripting in Roblox.
@@ -112,7 +112,7 @@ end
    ```
 
 1. Ensure that the [Output](../studio/output.md) window is open.
-1. [Initiate a playtest](../studio/testing-modes.md#playtesting) to run your experience and note the output:
+1. [Run your game](../studio/testing-modes.md#playtesting) and note the output:
 
    ```text
    h
@@ -147,7 +147,7 @@ To use your favorite text editor and version control system rather than the buil
    print("Hello script types and locations!")
    ```
 
-1. [Initiate a playtest](../studio/testing-modes.md#playtesting) to run your experience.
+1. [Run your game](../studio/testing-modes.md#playtesting).
 1. Note how the output is no different than when you ran [your first script](#your-first-script).
 
 To understand why the script didn't run, see [Script Types and Locations](./locations.md).

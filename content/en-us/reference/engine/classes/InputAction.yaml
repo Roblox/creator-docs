@@ -141,6 +141,7 @@ properties:
       can_save: true
     capabilities:
       - Input
+    simulationAccess: true
   - name: InputAction.Type
     summary: |
       Specifies what type of input value the action is expecting.
@@ -161,6 +162,7 @@ properties:
       can_save: true
     capabilities:
       - Input
+    simulationAccess: true
   - name: InputAction.ViewportPositionState
     summary: |
       Non-scriptable read-only property useful for debugging
@@ -226,6 +228,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
+    simulationAccess: true
   - name: InputAction:GetState
     summary: |
       Returns the current state of the `Class.InputAction`.
@@ -245,6 +248,7 @@ methods:
     thread_safety: Safe
     capabilities:
       - Input
+    simulationAccess: true
 events:
   - name: InputAction.Pressed
     summary: |

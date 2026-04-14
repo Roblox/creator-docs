@@ -3,69 +3,21 @@ title: Reassign textures
 description: To import custom makeup, replace the existing textures on the head template with your custom textures.
 ---
 
-<Alert severity ='warning'>
-This feature is currently in beta. Enable it through **File** ⟩ **Beta Features** ⟩ **Avatar Makeup**. The information provided is subject to change and is intended to prepare creators for the final release. For the latest news and updates, see the [DevForum announcement](https://devforum.roblox.com/t/studio-beta-introducing-avatar-makeup/3973764).
-</Alert>
-
-To import custom makeup textures, use Blender or Maya to reassign the existing textures on the reference template head to your custom texture images. After replacing the textures, export the entire head model and [import](./import.md) the model into Roblox Studio.
+To import custom makeup textures, use Blender or Maya to reassign the existing textures on the reference template head to your custom texture images. After replacing the textures, export the entire head model, then [import](./import.md) it into Roblox Studio.
 
 <Alert severity = 'warning'>
 The following information is **specific for applying makeup textures to the Roblox provided head reference**, which already has PBR texture nodes assigned. For more information on assigning textures from scratch, see [Assign textures in Blender and Maya](../art/modeling/assign-textures.md).
 </Alert>
 
-## Video workflows
+## Blender
 
-The following are video workflows for various tasks in exporting textures from a texture editing tool and reconnecting them in Blender and Maya.
-
-<BaseAccordion>
-<AccordionSummary>
-<Typography variant="label1">Reassigning textures in Blender</Typography>
-</AccordionSummary>
-<AccordionDetails>
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/B0y5fLlwkF0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe><br /><br />
 
-Additional notes:
+<Alert severity ='info'>
+The video presenter opts to clear all existing image links by navigating to **File** > **External Data** > **Unpack Resources** and selecting **Remove Pack**. This is a method to unassign all images instead of individually unassigning textures like step #5 in the following instructions.
+</Alert>
 
-- In the video, the presenter opts to clear all existing image links by navigating to **File** > **External Data** > **Unpack Resources** and selecting **Remove Pack**.
-  - This is a method to unassign all images, equivalent to the [Blender](#blender) reassignment step #5.
-
-</AccordionDetails>
-</BaseAccordion>
-
-<BaseAccordion>
-<AccordionSummary>
-<Typography variant="label1">Reassigning textures in Maya</Typography>
-</AccordionSummary>
-<AccordionDetails>
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/JaX5rcsStvQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-
-</AccordionDetails>
-</BaseAccordion>
-
-<BaseAccordion>
-<AccordionSummary>
-<Typography variant="label1">Exporting textures from Photoshop</Typography>
-</AccordionSummary>
-<AccordionDetails>
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/0se12PNhVCI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe><br /><br />
-
-Additional notes:
-
-- In the video, the presenter uses **File** > **Export** > **Layers to Files** to export each layer as its own `.png` file.
-
-</AccordionDetails>
-</BaseAccordion>
-
-<BaseAccordion>
-<AccordionSummary>
-<Typography variant="label1">Exporting textures from Substance Painter</Typography>
-</AccordionSummary>
-<AccordionDetails>
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/g79GBh0AcXA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-</AccordionDetails>
-</BaseAccordion>
-
-## Blender
+To reassign textures in Blender:
 
 1. Unzip and open the [Blender reference head file](./index.md#template-heads).
 2. Switch to the **Shading** tab.
@@ -87,11 +39,21 @@ Additional notes:
 9.  Verify your final node graph looks similar to the original reference with nothing unintentionally missing.
     <img src="../assets/makeup/resources/Blender-Expected-Nodes.png" width="90%" />
 
-<Alert severity ='success'>
-After replacing your PBR textures, [export the entire head](../art/modeling/export-requirements.md#blender) and follow instructions to [import into Studio](./import.md).
+<Alert severity ='info'>
+After replacing your PBR textures, export the entire template file as a `.fbx`or `.gltf`. All 3D modeling [export requirements](../art/modeling/export-requirements.md) apply, but there are a few makeup-specific settings you must configure:
+
+   1. In the export file brower window, navigate to the **Include** section, then enable the **Custom Properties** toggle for makeup UV data transfer data purposes.
+   1. In the **Armature** section, enable **Only Deform Bones** to ensure your export file includes skinning data for eyebrows and eyelashes.
+
+       <figure><img src="../assets/makeup/Blender-MakeupExport.png" /><figcaption>All necessary Blender export settings for makeup</figcaption></figure>
+
 </Alert>
 
 ## Maya
+
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/JaX5rcsStvQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe><br /><br />
+
+To reassign textures in Blender:
 
 1. Unzip and open the Maya [reference head file](./index.md#template-heads).
 2. In the Status Line near the top of the default layout, click on the Hypershade icon.
@@ -115,6 +77,12 @@ After replacing your PBR textures, [export the entire head](../art/modeling/expo
 
   <img src="../assets/makeup/resources/Maya-Expected-Nodes.png" width="90%" />
   
-<Alert severity ='success'>
-After replacing your PBR textures, [export the entire head](../art/modeling/export-requirements.md#maya) and follow instructions to [import into Studio](./import.md).
+<Alert severity ='info'>
+After replacing your PBR textures, export the entire template file as a `.fbx`or `.gltf`. All 3D modeling [export requirements](../art/modeling/export-requirements.md) apply, but there are a few makeup-specific settings you must configure:
+
+   1. In the export file brower window, navigate to the **Deformed Models** section.
+   1. Enable the **Skins** toggle to ensure your export file includes skinning data for eyebrows and eyelashes.
+
+       <img src="../assets/makeup/Maya-MakeupExport.png" />
+
 </Alert>

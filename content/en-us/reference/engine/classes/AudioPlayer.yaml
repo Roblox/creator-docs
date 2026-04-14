@@ -374,6 +374,28 @@ properties:
     capabilities:
       - Audio
 methods:
+  - name: AudioPlayer:Cancel
+    summary: |
+      Attempts to cancel a pre-planned future `Play` or `Stop` command.
+    description: ''
+    code_samples: []
+    parameters:
+      - name: actionId
+        type: int64?
+        default:
+        summary: |
+          The unique-ID of a pre-planned `Play` or `Stop` command.
+    returns:
+      - type: boolean
+        summary: |
+          Whether the cancellation was successful. Returns false if the action
+          has already occurred, or otherwise does not exist.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Audio
   - name: AudioPlayer:GetConnectedWires
     summary: |
       Returns an array of `Class.Wire|Wires` that are connected to the specified
