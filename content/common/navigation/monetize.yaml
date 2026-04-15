@@ -52,6 +52,8 @@ navigation:
     section:
       - title: Ads Manager
         path: /production/promotion/ads-manager
+      - title: Ad integrations
+        path: /production/promotion/ad-integrations
       - title: Immersive ads
         path: /production/monetization/immersive-ads
       - title: Rewarded video ads

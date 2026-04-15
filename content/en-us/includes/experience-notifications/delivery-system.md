@@ -15,5 +15,5 @@ Additionally, the following list outlines some of the special cases which may re
 - Missing or invalid request parameters.
 - Notification string was moderated.
 - For notifications with user mentions, non-delivery occurs if either of these conditions are met:
-  - The receiver and mentioned user are not connections.
-  - The mentioned user has **No** selected for "Update connections about my activity?" under **Privacy**&nbsp;&rarr; **Other&nbsp;Settings** in their Roblox account settings.
+  - The receiver and mentioned user are not friends.
+  - The mentioned user has **No** selected for "Update friends about my activity?" under **Privacy**&nbsp;&rarr; **Other&nbsp;Settings** in their Roblox account settings.

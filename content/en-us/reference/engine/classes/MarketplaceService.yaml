@@ -1221,8 +1221,7 @@ methods:
       Prompts a user to purchase an item with the given `assetId`.
 
       - This does not work for
-        [USD Creator Store](../../../production/creator-store.md)
-        purchases.
+        [USD Creator Store](../../../production/creator-store.md) purchases.
       - If the item has the
         [Sale Location](../../../marketplace/publish-to-marketplace.md#sale-location)
         set as `Experience By Place ID (API Only)`, you must call

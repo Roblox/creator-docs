@@ -3758,6 +3758,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AnnotationRequestType.yaml
         ignoreTranslation: true
+      - title: AntiAliasing
+        path: /reference/engine/enums/AntiAliasing
+        type: engineapi
+        source: /reference/engine/enums/AntiAliasing.yaml
+        ignoreTranslation: true
       - title: AppLifecycleManagerState
         path: /reference/engine/enums/AppLifecycleManagerState
         type: engineapi

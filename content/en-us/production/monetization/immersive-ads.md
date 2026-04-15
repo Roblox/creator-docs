@@ -104,7 +104,7 @@ For your experience to be eligible to serve ads, your account and experience mus
 
 ## User eligibility
 
-Even if your experience is eligible to serve ads, not all users are eligible to see ads, such as those under the age of 13 or those outside of a campaign's audience selection. If a user is ineligible to see ads, ad units display a fallback image of the Roblox logo to those ineligible users. To remove these ad units, you can [remove ad units for ineligible users](#remove-ad-units-for-ineligible-users).
+Even if your experience is eligible to serve ads, not all users are eligible to see ads, such as those outside of a campaign's audience selection. If a user is ineligible to see ads, ad units display a fallback image of the Roblox logo to those ineligible users. To remove these ad units, you can [remove ad units for ineligible users](#remove-ad-units-for-ineligible-users).
 
 ## Insert ad units
 

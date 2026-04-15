@@ -642,7 +642,7 @@ methods:
 
       ##### PromptSendFriendRequest
 
-      Prompts the current player to send a connection request to the given
+      Prompts the current player to send a friend request to the given
       `Class.Player`.
 
       <table size="small">
@@ -659,7 +659,7 @@ methods:
           <td><code>player</code></td>
           <td><code>Class.Player</code></td>
           <td>(required)</td>
-          <td>The player to which the connection request should be sent.</td>
+          <td>The player to which the friend request should be sent.</td>
         </tr>
       </tbody>
       </table>
@@ -667,7 +667,7 @@ methods:
       ##### PromptUnfriend
 
       Prompts the current player to remove a given `Class.Player` from their
-      connections list.
+      friends list.
 
       <table size="small">
       	<thead>

@@ -154,6 +154,13 @@ methods:
         summary: |
           How the pixels of the source image are blended with the pixels of the
           added image.
+      - name: antiAliasing
+        type: AntiAliasing
+        default:
+        summary: |
+          Determines whether anti-aliasing is applied to the circle. When set to
+          `Enum.AntiAliasing.Enabled`, circle edges are soft. When set to
+          `Enum.AntiAliasing.Disabled`, circle edges are hard.
     returns:
       - type: ()
         summary: ''
@@ -321,8 +328,8 @@ methods:
     summary: |
       Draws a line between two provided points.
     description: |
-      Draws an anti-aliased line on the `EditableImage` one pixel thick between
-      the two provided points.
+      Draws a line on the `EditableImage` one pixel thick between the two
+      provided points.
     code_samples: []
     parameters:
       - name: p1
@@ -351,6 +358,13 @@ methods:
         summary: |
           How the pixels of the source image are blended with the pixels of the
           added image.
+      - name: antiAliasing
+        type: AntiAliasing
+        default:
+        summary: |
+          Determines whether anti-aliasing is applied to the line. When set to
+          `Enum.AntiAliasing.Enabled`, line edges are soft. When set to
+          `Enum.AntiAliasing.Disabled`, line edges are hard.
     returns:
       - type: ()
         summary: ''
