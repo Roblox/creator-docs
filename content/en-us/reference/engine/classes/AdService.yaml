@@ -69,26 +69,24 @@ methods:
     capabilities:
       - Monetization
   - name: AdService:GetCampaignEligibilityAsync
-    summary: ''
-    description: ''
+    summary: 'Checks whether users are eligible to see ad integration assets.'
+    description: 'Checks whether users are eligible to see ad integration assets.'
     code_samples: []
     parameters:
       - name: campaignId
         type: string
         default:
         summary: |
-          The id of the campaign that you want to check a `Player`'s eligibility
-          for.
+          The ID of the campaign for which you want to check a `Player`'s eligibility.
       - name: player
         type: Player?
         default: nil
         summary: |
-          The `Player` you want to check eligibility for. If omitted, it will
-          default to `Players.LocalPlayer`.
+          The `Player` whose eligibility you want to check for. If omitted, it defaults to `Players.LocalPlayer`.
     returns:
       - type: Dictionary
         summary: |
-          A dictionary that looks like `{ IsEligible: boolean }`.
+          A dictionary like `{ IsEligible: boolean }`.
     tags:
       - Yields
     deprecation_message: ''
@@ -126,20 +124,20 @@ methods:
     capabilities:
       - Monetization
   - name: AdService:RegisterDisclosureButton
-    summary: ''
-    description: ''
+    summary: 'Enables interactive disclosure when a user clicks or taps an ad integration label, providing additional information about the ad.'
+    description: 'Enables interactive disclosure when a user clicks or taps an ad integration label, providing additional information about the ad.'
     code_samples: []
     parameters:
       - name: disclosureButton
         type: GuiButton
         default:
         summary: |
-          The `GuiButton` you want to mark as an ad disclosure.
+          The `GuiButton` to use as an ad disclosure.
       - name: adIntegrationPlacementId
         type: string
         default:
         summary: |
-          The id of the placement that this disclosure is attached to.
+          The ID of the placement the disclosure is attached to.
     returns:
       - type: ()
         summary: ''
