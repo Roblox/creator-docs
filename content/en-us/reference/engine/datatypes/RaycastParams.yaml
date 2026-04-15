@@ -44,10 +44,12 @@ properties:
       An optional array of instances whose descendants will be excluded from the
       query.
     description: |
-      This property can be used simultaneously with `IncludeInstances` to allow
-      for mixed filtering (e.g., including a large folder but excluding specific
-      child instances). If an instance matches both an exclude and include
-      filter, exclusions take priority over inclusions.
+      An optional array of instances whose descendants will be excluded from the
+      query. This property can be used simultaneously with
+      `Datatype.RaycastParams.IncludeInstances|IncludeInstances` to allow for
+      mixed filtering, for example including a large folder but excluding
+      specific child instances. If an instance matches both an exclude and
+      include filter, exclusions take priority over inclusions.
     default:
     code_samples: []
     tags: []
@@ -58,13 +60,16 @@ properties:
       An optional array of instances whose descendants will be included in the
       query.
     description: |
-      This property can be used simultaneously with `ExcludeInstances` to allow
-      for mixed filtering. If an instance matches both an exclude and include
-      filter, exclusions take priority over inclusions. Setting
-      `IncludeInstances` to nil versus an empty array (`{}`) have opposite
-      effects. `IncludeInstances = nil` is the most permissive filter (includes
-      everything), whereas `IncludeInstances = {}` is the most restrictive
-      filter (includes nothing).
+      An optional array of instances whose descendants will be included in the
+      query. This property can be used simultaneously with
+      `Datatype.RaycastParams.ExcludeInstances|ExcludeInstances` to allow for
+      mixed filtering. If an instance matches both an exclude and include
+      filter, exclusions take priority over inclusions.
+
+      Setting `IncludeInstances` to `nil` versus an empty array (`{}`) has
+      opposite effects. `IncludeInstances = nil` is the most permissive filter
+      (includes everything), whereas `IncludeInstances = {}` is the most
+      restrictive filter (includes nothing).
     default:
     code_samples: []
     tags: []
@@ -128,8 +133,11 @@ properties:
       An array of objects whose descendants are used to filter raycasting
       candidates.
     description: |
-      This property has been superseded by `ExcludeInstances` and
-      `IncludeInstances`, which should be used instead for new work.
+      An array of objects whose descendants are used to filter raycasting
+      candidates. Note that this property has been superseded by
+      `Datatype.RaycastParams.ExcludeInstances|ExcludeInstances` and
+      `Datatype.RaycastParams.IncludeInstances|IncludeInstances` which should be
+      used for new work.
     default:
     code_samples: []
     tags: []
@@ -141,8 +149,13 @@ properties:
       `Datatype.RaycastParams.FilterDescendantsInstances|FilterDescendantsInstances`
       array is used as an exclude or include list.
     description: |
-      This property has been superseded by `ExcludeInstances` and
-      `IncludeInstances`, which should be used instead for new work.
+      Determines whether the
+      `Datatype.RaycastParams.FilterDescendantsInstances|FilterDescendantsInstances`
+      array is used as an exclude or include list. Note that this property has
+      been superseded by
+      `Datatype.RaycastParams.ExcludeInstances|ExcludeInstances` and
+      `Datatype.RaycastParams.IncludeInstances|IncludeInstances` which should be
+      used for new work.
     default:
     code_samples: []
     tags: []
@@ -153,8 +166,12 @@ methods:
       Adds the instances provided to
       `Datatype.RaycastParams.FilterDescendantsInstances|FilterDescendantsInstances`.
     description: |
-      This method has been superseded by `ExcludeInstances` and
-      `IncludeInstances`, which should be used instead for new work.
+      Adds the instances provided to
+      `Datatype.RaycastParams.FilterDescendantsInstances|FilterDescendantsInstances`.
+      Note that this property has been superseded by
+      `Datatype.RaycastParams.ExcludeInstances|ExcludeInstances` and
+      `Datatype.RaycastParams.IncludeInstances|IncludeInstances` which should be
+      used for new work.
     parameters:
       - name: instances
         type: Instance | Array

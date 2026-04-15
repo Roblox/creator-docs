@@ -374,7 +374,13 @@ properties:
       viewport.
     description: |
       Read-only property which represents the physical rendering size of the
-      viewport. You can listen for changes to this property through the
+      viewport:
+
+      - `Enum.DisplaySize.Small` — Most tablet/mobile/handheld devices
+      - `Enum.DisplaySize.Medium` — Most laptops and monitors
+      - `Enum.DisplaySize.Large` — Most TVs or larger
+
+      You can listen for changes to this property through the
       `Class.Object:GetPropertyChangedSignal()|GetPropertyChangedSignal()`
       method to adapt UI to various display sizes.
     code_samples:
@@ -711,7 +717,10 @@ methods:
       - type: boolean
         summary: ''
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by the
+      `Class.GuiService.ViewportDisplaySize|ViewportDisplaySize` property which
+      represents the internally‑categorized rendering size of the viewport.
     security: None
     thread_safety: Unsafe
     capabilities:

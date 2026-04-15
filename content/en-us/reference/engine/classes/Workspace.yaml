@@ -559,6 +559,31 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: Workspace.MeshStreamingAndImprovedLods
+    summary: |
+      Controls whether the experience uses the new mesh streaming and improved
+      LOD system.
+    description: |
+      This `Enum.RolloutState` property determines whether the experience uses
+      the new mesh streaming and Wild Mesh Simplifier LOD system. When set to
+      `Enum.RolloutState|Enabled`, mesh requests fetch the lowest quality LOD
+      first and stream in higher detail over time. When set to
+      `Enum.RolloutState|Disabled`, the legacy mesh loading behavior is used.
+      `Enum.RolloutState|Default` follows the current engine-wide rollout state.
+    code_samples: []
+    type: RolloutState
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: Workspace.ModelStreamingBehavior
     summary: |
       Controls how `Class.Model|Models` are replicated in experiences when
