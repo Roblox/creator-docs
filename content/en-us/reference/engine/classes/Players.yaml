@@ -534,7 +534,9 @@ methods:
   - name: Players:CreateHumanoidModelFromDescriptionAsync
     summary: |
       Returns a character `Class.Model` equipped with everything specified in
-      the passed in `Class.HumanoidDescription`.
+      the passed in `Class.HumanoidDescription`. If
+      `HumanoidDescription.UseAvatarSettings` is set to true, Avatar Settings in
+      the experience will be applied to the returned model.
     description: |
       Returns a character `Class.Model` equipped with everything specified in
       the passed in `Class.HumanoidDescription`, and is R6 or R15 as specified

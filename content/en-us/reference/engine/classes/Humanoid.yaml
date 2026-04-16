@@ -1375,7 +1375,9 @@ methods:
   - name: Humanoid:ApplyDescriptionAsync
     summary: |
       Makes the character's look match that of the passed in
-      `Class.HumanoidDescription`.
+      `Class.HumanoidDescription`. If `HumanoidDescription.UseAvatarSettings` is
+      true, the Avatar Settings for the experience will also be applied to the
+      character.
     description: |
       This yielding method makes the character's look match that of the passed
       in `Class.HumanoidDescription`. A copy of the passed

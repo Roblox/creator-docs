@@ -2108,12 +2108,6 @@ navigation:
                     type: engineapi
                     source: /reference/engine/classes/InventoryPages.yaml
                     ignoreTranslation: true
-                    section:
-                      - title: EmotesPages
-                        path: /reference/engine/classes/EmotesPages
-                        type: engineapi
-                        source: /reference/engine/classes/EmotesPages.yaml
-                        ignoreTranslation: true
                   - title: MemoryStoreHashMapPages
                     path: /reference/engine/classes/MemoryStoreHashMapPages
                     type: engineapi

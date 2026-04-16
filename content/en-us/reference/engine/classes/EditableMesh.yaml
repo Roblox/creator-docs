@@ -25,14 +25,23 @@ description: |
 
   #### Permissions
 
-  To prevent misuse, `Class.AssetService:CreateEditableMeshAsync()` will only
-  allow you to load and edit mesh assets:
+  To prevent misuse, `Class.AssetService:CreateEditableMeshAsync()` only allows
+  you to load and edit mesh assets if any of the following is true:
 
-  - That are owned by the creator of the experience (if the experience is owned
-    by an individual).
-  - That are owned by a group (if the experience is owned by the group).
-  - That are owned by the logged in Studio user (if the place file has not yet
-    been saved or published to Roblox).
+  - Owned by or explicitly shared with the experience owner.
+  - Owned by or explicitly shared with the logged in Studio user.
+  - Owned by or explicitly shared with the logged in player if the
+    `EditableMesh` is on the client side.
+  - Owned by a group where the experience owner, Studio user, or player has a
+    role with permission to edit the group's assets. See
+    [Roles and permissions](../../../projects/groups.md#roles-and-permissions)
+    for more information.
+
+  See [Grant permissions](../../../projects/assets/privacy.md#grant-permissions)
+  to learn how to share assets with users or groups.
+
+  The APIs throw an error if they are used to load an asset that does not meet
+  the criteria above.
 
   #### Memory Limits
 
