@@ -57,7 +57,7 @@ To demonstrate how you can use the chart and server out-of-memory snapshots to d
 
 1. **Investigate and fix**. You can use the viewer's breadcrumbs to trace the context of the bloated node. Since certain assets are dynamically generated at runtime, you use this path as a starting point in Studio's Explorer window, add cleanup logic, then monitor your next update to verify the fix.
 
-   <img src="../../assets/analytics/crashes/Investigate-Fix-Example.png" alt="An example server crashes chart view with a spike highlighted." width="70%" />
+   <img src="../../assets/analytics/crashes/Investigate-Fix-Example.png" alt="A memory snapshot with the breadcrumb highlighted." width="70%" />
 
 <Alert severity="info">
 You can also download the raw CSV summary of the memory snapshots for your own analysis, including feeding the data into your favorite LLM or writing your own parsing script.

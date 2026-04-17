@@ -131,5 +131,61 @@ You'll receive a [commission](../../marketplace/marketplace-fees-and-commissions
 A [plugin](../../studio/plugins.md) is an extension that adds additional functionality to Studio, and a [model](../../parts/models.md) is a reusable asset type. You can offer both to other creators on the [Creator Store](../../production/creator-store.md) for free, or you can sell them for **United States Dollars** (the minimum price is \$4.99 for plugins and \$2.99 for models). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information on selling plugins and models, see [Creator Store - Distribute and sell assets](../creator-store.md#distribute-and-sell-assets).
 
 <Alert severity="warning">
-   There is a 30 day escrow hold for each purchase. Roblox holds your share of the sale for 30 days, starting from the date of sale.
+There is a 30 day escrow hold for each purchase. Roblox holds your share of the sale for 30 days, starting from the date of sale.
 </Alert>
+
+## Guidelines
+
+As you design and implement monetization products into your experiences, consider the following guidelines to ensure your monetization methods are suitable for all audiences on the platform.
+
+### Presenting products
+
+To maintain safety and fairness, you must present monetization products in a way that's transparent, honest, and user-friendly. For example, if you offer discounts, they must be **genuine** and **fair**:
+
+- A discount is not genuine if an item is always "on sale" for the same amount of Robux.
+- A discount is not fair if it's only offered for a very short time, pressuring users to make a purchase as quickly as possible.
+
+Users must never be misled, confused, or pressured into purchases in ways they did not intend, and they should always have the freedom to make a clear, deliberate choice to obtain a subscription or spend Robux on a specific item. As general guidance, there are some practices to avoid at all times when presenting monetization products to your audience:
+
+- Don't claim that a subscription or item is almost out of stock or only available for a short time if it isn't true.
+- Don't use a countdown timer that isn't accurate or automatically restarts for the same item.
+
+For example, if your game includes a "deal of the day" that says it's only available for 24 hours, but then you show the same message to users every time they login and it never stops being available, you have created a false sense of urgency that isn't user-friendly.
+
+### Promoting to global audiences
+
+Roblox is a global community for users of all ages, so promotions within your experiences should be suitable for all audiences by default. If certain monetization products are restricted in certain locations, such as paid random items, Roblox provides `Class.PolicyService` API to help you ensure that those products are only visible to eligible users.
+
+`Class.PolicyService` returns whether a user is eligible for specific items or features according to their location, age, and platform. You must integrate this API into your game to meet your compliance obligations, including determining whether each user is:
+
+- Eligible to purchase subscriptions or commerce products.
+- Allowed paid random items, paid item trading, or to see immersive ads.
+
+<Alert severity="warning">
+If a user can use Robux or something else that was acquired with Robux to get a random reward, you are required to use `Class.PolicyService` to block this feature for users who are not permitted to use random items in exchange for Robux.
+</Alert>
+
+As general guidance, avoid using pushy or urgent messages when interacting with minors, as high-pressure language can be overwhelming:
+
+<table>
+  <thead>
+    <tr>
+    <th><b>Language to avoid</b></th>
+    <th><b>Recommended alternatives</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"GET IT NOW"</td>
+      <td>"View Item"</td>
+    </tr>
+    <tr>
+      <td>"LAST CHANCE, ACT NOW"</td>
+      <td>"See Price"</td>
+    </tr>
+    <tr>
+      <td>"BUY BEFORE IT’S GONE!"</td>
+      <td>"Open Shop"</td>
+    </tr>
+  </tbody>
+</table>
