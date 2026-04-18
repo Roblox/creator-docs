@@ -181,6 +181,11 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
     <td>Reduce the amount or complexity of UI elements.</td>
   </tr>
   <tr>
+    <td>Prepare/SceneUpdater/../SceneUpdater::computeLightingPrepare</td>
+    <td>May reset buffers.</td>
+    <td></td>
+  </tr>
+  <tr>
     <td>Prepare/UpdatePrepare/updateInvalidParts</td>
     <td>Updates parts that had some property changed or added.</td>
     <td>Reduce the amount of properties changes on the world. If a script updates a large set of object properties, break it down across frames.</td>
@@ -248,6 +253,28 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
     <td>Reduce the number of `Class.ParticleEmitter|ParticleEmitters`, emission rates, lifetimes, etc. Limit the movement of emitters.</td>
   </tr>
   <tr>
+    <td>Perform/SceneUpdater/performUpdateCoordinateFrame</td>
+    <td>
+      Updates dynamic scene objects, such as Dynamic Heads as part of Graphical Parts.
+      Can trigger ``preparePerformUpdateCoordinateFrame``.
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Perform/.../SceneUpdater::preparePerformUpdateCoordinateFrame</td>
+    <td>
+      Dynamic Part FastCluster related, chooses between serial or parallel, to update virtual bones.
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Perform/.../FACSRigCFrameProvider::update</td>
+    <td>
+      Computes and updates joint transforms from FACS controls.
+    </td>
+    <td></td>
+  </tr>
+  <tr>
     <td>Scene/Id_Opaque, RenderView/Id_Opaque</td>
     <td>Parts in the scene with an overall transparency of `0.01` or lower.</td>
     <td>Reduce the use and density of parts.</td>
@@ -312,7 +339,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
     <td>If you have too many waiting scripts or scripts with a long runtime before yielding, this step is throttled and waits longer before it can run again. Reduce the amount of bound functions or long computations in this step.</td>
   </tr>
   <tr>
-    <td>GC</td>
+    <td>LuaGc/GC</td>
     <td>Luau's garbage collection cycle.</td>
     <td>Pool tables and other collectable objects or try to reduce creating temporary tables.</td>
   </tr>
@@ -348,7 +375,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <td>Simulation/physicsSteppedTotal/physicsStepped</td>
     <td>Runs the physics simulation.</td>
-    <td>Reduce the amount and complexity of physically simulated bodies.</td>
+    <td>Reduce the amount and complexity of physically simulated bodies. Can contain labels.</td>
   </tr>
   <tr>
     <td>Simulation/physicsSteppedTotal/physicsStepped/SpatialFilter/filterStep</td>
@@ -356,14 +383,75 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
     <td>Avoid setting network ownership frequently. Keep groups of parts far enough away from each other so they can be simulated separately.</td>
   </tr>
   <tr>
+    <td>Simulation/physicsSteppedTotal/physicsStepped/worldStep</td>
+    <td>
+      Can contain labels:
+      <ul>
+        <li>Timestep ID</li>
+        <li>Throttled</li>
+        <li>timestepCycleId</li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
     <td>Simulation/physicsSteppedTotal/physicsStepped/worldStep/stepContacts</td>
     <td>Updates contacts between objects.</td>
     <td>Reduce the amount of bodies colliding at once, or use simpler collision boxes. Cubes are better than complex meshes.</td>
   </tr>
   <tr>
-    <td>Simulation/physicsSteppedTotal/physicsStepped/worldStep/stepWorld **OR** stepWorldThrottled</td>
-    <td>Solves physics equations relating to connectors, buoyancy and `Class.Humanoid|Humanoids`. When the engine is overloaded and unable to simulate everything in real time, some steps may be throttled (**stepWorldThrottled**) and only "real-time assemblies" such as `Class.Humanoid|Humanoids` are simulated.</td>
+    <td>Simulation/physicsSteppedTotal/physicsStepped/worldStep/Kernel::stepWorld **OR** Kernel::stepWorldThrottled</td>
+    <td>Solves physics equations relating to connectors, buoyancy and `Class.Humanoid|Humanoids`. When the engine is overloaded and unable to simulate everything in real time, some steps may be throttled (**Kernel::stepWorldThrottled**) and only "real-time assemblies" such as `Class.Humanoid|Humanoids` are simulated.
+    Can contain label:
+    <ul>
+      <li>collisionConnectors</li>
+      <li>buoyancyAccumulators</li>
+      <li>humanoidConnectors</li>
+    </ul>
+    </td>
     <td>Depends on where the time is going based on the following three phases: **stepContacts**: narrow phase collision detection geometry tests. **Solver step**: integrate time and resolve collisions and other constraints **updateBroadphase**: update positions of assemblies in collision detection system and find possibly colliding narrow phase pairs.</td>
+  </tr>
+  <tr>
+    <td>LDLPGSSolver::solve</td>
+    <td>
+      Can contain labels:
+      <ul>
+        <li>Islands 8dt,4dt,2dt,1dt - count of different "time steps" for adaptive time stepping</li>
+        <li>Rigid Bodies</li>
+        <li>Collisions & Constraints</li>
+        <li>Solver Islands</li>
+        <li>Task Count</li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>LDLPGSSolver::solve/Generating Tasks/Solve Batch</td>
+    <td>
+      [LDL decomposition based Projected Gauss-Seidel Solver](https://about.roblox.com/newsroom/2020/08/improving-simulation-performance-advanced-physics-solver).
+      Can contain labels:
+      <ul>
+        <li>Island Count</li>
+        <li>Constraint Count</li>
+        <li>Sim Body Count</li>
+        <li>Non-Sim Body Count</li>
+        <li>LDL Components</li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Simulation/physicsSteppedTotal/physicsStepped/worldStep/stepMidPhase</td>
+    <td>
+      Bounding Volume Hierarchy tree traversal
+      Can contain labels:
+      <ul>
+        <li>hashToPair</li>
+        <li>dirty midphase collections</li>
+        <li>num pairs collided</li>
+      </ul>
+    </td>
+    <td></td>
   </tr>
   <tr>
     <td>notifyMovingAssemblies</td>
@@ -372,7 +460,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   </tr>
   <tr>
     <td>Simulation/physicsSteppedTotal/physicsStepped/interpolateNetworkedAssemblies</td>
-    <td>Interpolates assemblies not controlled by the current player.</td>
+    <td>Interpolates assemblies not controlled by the current player. Includes label for Root Moving Assemblies</td>
     <td>Set the network owner of parts to the current player to reduce this; although this will usually cause more physics work to be done elsewhere.</td>
   </tr>
   <tr>
@@ -392,8 +480,23 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   </tr>
   <tr>
     <td>worldStep/stepContacts</td>
-    <td>Helps physics simulation step many contacts at once.</td>
+    <td>
+      Helps physics simulation step many contacts at once.
+      Can contain labels:
+      <ul>
+        <li>numPrimitiveContacts</li>
+        <li>numTerrainContacts</li>
+        <li>contacts</li>
+        <li>sleeping contacts</li>
+        <li>Async Contact Results</li>
+      </ul>
+    </td>
     <td>Reduce the number of colliding objects.</td>
+  </tr>
+  <tr>
+    <td>Step Contacts</td>
+    <td>Can provide the "Async Contact Results" info for `stepContacts`.</td>
+    <td></td>
   </tr>
   <tr>
     <td>SolveBatch</td>
@@ -423,6 +526,11 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
     <td>Render/PreRender/TweenService</td>
     <td>Updates objects being tweened using `Class.TweenService` and calls completion callbacks, such as those used provided to `Class.GuiObject:TweenSize()` or `Class.GuiObject:TweenPosition()`.</td>
     <td>Reduce the number of objects being tweened using `Class.TweenService` and ensure callbacks do as little work as possible.</td>
+  </tr>
+  <tr>
+    <td>Render/PreRender/TweenService/updateGenericTweens</td>
+    <td>Process queue, add tweens, step tweens. Labels for tweensToAdd and tweensToUpdate.</td>
+    <td></td>
   </tr>
   <tr>
     <td>Heartbeat/TweenService</td>
