@@ -263,7 +263,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <td>Perform/.../SceneUpdater::preparePerformUpdateCoordinateFrame</td>
     <td>
-      Dynamic Part FastCluster related, chooses between serial or parallel to update virtual bones.
+      Dynamic Part FastCluster related, prepares to update virtual bones.
     </td>
     <td></td>
   </tr>
@@ -276,17 +276,17 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   </tr>
   <tr>
     <td>Scene/Id_Opaque, RenderView/Id_Opaque</td>
-    <td>Parts in the scene with an overall transparency of `0.01` or lower.</td>
+    <td>Parts in the scene with an overall transparency of `0.01` or lower. Contains labels with info.</td>
     <td>Reduce the use and density of parts.</td>
   </tr>
   <tr>
     <td>Scene/Id_Transparent, RenderView/Id_Transparent</td>
-    <td>Parts in the scene with an overall transparency between `0.01` and `1`.</td>
+    <td>Parts in the scene with an overall transparency between `0.01` and `1`. Contains labels with info.</td>
     <td>Reduce the use of partial transparency.</td>
   </tr>
   <tr>
     <td>Scene/Id_Decals, RenderView/Id_Decals</td>
-    <td>Decals in the scene.</td>
+    <td>Decals in the scene. Contains labels with info.</td>
     <td>Reduce the use of decals on complex meshes.</td>
   </tr>
   <tr>
