@@ -400,7 +400,9 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
     <td>Reduce the amount of bodies colliding at once, or use simpler collision boxes. Cubes are better than complex meshes.</td>
   </tr>
   <tr>
-    <td>Simulation/physicsSteppedTotal/physicsStepped/worldStep/Kernel::stepWorld **OR** Kernel::stepWorldThrottled</td>
+    <td>
+      Simulation/physicsSteppedTotal/physicsStepped/worldStep/Kernel::stepWorld **OR** Kernel::stepWorldThrottled
+    </td>
     <td>Solves physics equations relating to connectors, buoyancy and `Class.Humanoid|Humanoids`. When the engine is overloaded and unable to simulate everything in real time, some steps may be throttled (**Kernel::stepWorldThrottled**) and only "real-time assemblies" such as `Class.Humanoid|Humanoids` are simulated.
     Can contain label:
     <ul>
@@ -428,7 +430,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <td>LDLPGSSolver::solve/Generating Tasks/Solve Batch</td>
     <td>
-      [LDL decomposition based Projected Gauss-Seidel Solver](https://about.roblox.com/newsroom/2020/08/improving-simulation-performance-advanced-physics-solver).
+      <a href="https://about.roblox.com/newsroom/2020/08/improving-simulation-performance-advanced-physics-solver">LDL decomposition based Projected Gauss-Seidel Solver</a>.
       Can contain labels:
       <ul>
         <li>Island Count</li>
