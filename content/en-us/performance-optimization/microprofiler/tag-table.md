@@ -182,7 +182,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   </tr>
   <tr>
     <td>Prepare/SceneUpdater/../SceneUpdater::computeLightingPrepare</td>
-    <td>May reset buffers.</td>
+    <td>May reset previous lighting data, to prepare the next.</td>
     <td></td>
   </tr>
   <tr>
