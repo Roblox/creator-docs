@@ -403,7 +403,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
     <td>
       Simulation/physicsSteppedTotal/physicsStepped/worldStep/Kernel::stepWorld **OR** Kernel::stepWorldThrottled
     </td>
-    <td>Solves physics equations relating to connectors, buoyancy and `Class.Humanoid|Humanoids`. When the engine is overloaded and unable to simulate everything in real time, some steps may be throttled (**Kernel::stepWorldThrottled**) and only "real-time assemblies" such as `Class.Humanoid|Humanoids` are simulated.<br>Can contain label:
+    <td>Solves physics equations relating to connectors, buoyancy and `Class.Humanoid|Humanoids`. When the engine is overloaded and unable to simulate everything in real time, some steps may be throttled (**Kernel::stepWorldThrottled**) and only "real-time assemblies" such as `Class.Humanoid|Humanoids` are simulated.<br></br>Can contain label:
     <ul>
       <li>collisionConnectors</li>
       <li>buoyancyAccumulators</li>
