@@ -263,7 +263,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   <tr>
     <td>Perform/.../SceneUpdater::preparePerformUpdateCoordinateFrame</td>
     <td>
-      Dynamic Part FastCluster related, chooses between serial or parallel, to update virtual bones.
+      Dynamic Part FastCluster related, chooses between serial or parallel to update virtual bones.
     </td>
     <td></td>
   </tr>
