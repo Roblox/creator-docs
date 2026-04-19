@@ -26,7 +26,7 @@ While many creators focus on a single area, the following tutorials walk you thr
    <div style={{marginTop:16}}>
      <a underline="none" href="./first-experience/index.md">
      <Button variant="contained" color="secondary" size='large'
-     style={{marginRight:16, alignSelf: 'flex-start'}}>Get started</Button>
+     style={{marginRight:16, alignSelf: 'flex-start'}}>Let's go!</Button>
      </a>
    </div>
  </Grid>
