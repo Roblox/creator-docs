@@ -117,7 +117,7 @@ end)
 
 <Alert severity="warning">
 Some caveats with `Class.ChangeHistoryService` Recordings:
-* Don't run any code in the command bar that will always be running whilst you have a place open, as the command bar uses `Class.ChangeHistoryService` Recordings to allow for undo/redo with commands that make changes to the DataModel.
+* If you're using the Multiline Command Bar, don't run any code in the Command Bar that will always be running whilst you have a place open. As the Command Bar uses `Class.ChangeHistoryService` Recordings to allow for undo/redo with commands that make changes to the `Class.DataModel`.
 * Reloading a plugin won't cancel its ongoing `Class.ChangeHistoryService` Recordings, so make use of [Attributes](../scripting/attributes.md#create-attributes) to store the last recording identifier so it can be canceled by the plugin when it reloads.
 </Alert>
 
