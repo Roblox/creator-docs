@@ -339,7 +339,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
     <td>If you have too many waiting scripts or scripts with a long runtime before yielding, this step is throttled and waits longer before it can run again. Reduce the amount of bound functions or long computations in this step.</td>
   </tr>
   <tr>
-    <td>LuaGc/GC</td>
+    <td>GC OR LuaGc/GC</td>
     <td>Luau's garbage collection cycle.</td>
     <td>Pool tables and other collectable objects or try to reduce creating temporary tables.</td>
   </tr>
