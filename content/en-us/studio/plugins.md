@@ -9,14 +9,13 @@ If you choose to also distribute your plugins to the Creator Store, you can eith
 
 ## Create new plugins
 
-You can create your own plugins to improve your workflow in Studio. The following code sample is a plugin called **AddEmptyScript** that inserts an empty script as the child of an object or in `Class.ServerScriptService`. The following sections explain the major parts to creating this plugin.
+You can create your own plugins to improve your workflow in Studio. The following code sample is a plugin called **AddEmptyScript** that inserts an empty `Class.Script` as the child of an `Class.Instance` or in `Class.ServerScriptService`. The following sections explain the major parts to creating this plugin.
 
 To begin, you should enable **Plugin Debugging Enabled** in the **Studio** section of Studio's settings. This will expose the `Class.PluginDebugService` in Studio which provides real-time debugging for your plugin's code and makes it easier to reload and save your plugin.
 
 ```lua title="AddEmptyScript Plugin"
-local ChangeHistoryService = game:GetService("ChangeHistoryService")
-local Selection = game:GetService("Selection")
 local ServerScriptService = game:GetService("ServerScriptService")
+local Selection = game:GetService("Selection")
 
 -- Create a new toolbar section and Plugins menu folder titled "Custom"
 local toolbar = plugin:CreateToolbar("Custom")
@@ -29,18 +28,14 @@ newScriptButton.ClickableWhenViewportHidden = true
 
 local function onPluginButtonClicked()
 	local selectedObjects = Selection:Get()
-	local parent = ServerScriptService
-	if #selectedObjects > 0 then
-		parent = selectedObjects[1]
-	end
-
+	local parent = selectedObjects[1] or ServerScriptService
 	local newScript = Instance.new("Script")
 	newScript.Source = ""
 	newScript.Parent = parent
-	ChangeHistoryService:SetWaypoint("Added new empty script")
 end
 
 newScriptButton.Click:Connect(onPluginButtonClicked)
+
 ```
 
 ### Save plugin script
@@ -97,17 +92,6 @@ local button = toolbar:CreateButton("Neon it up", "", "")
 
 -- Connect a function to the click event
 button.Click:Connect(function()
-  local parts = {}
-  for _, part in Selection:Get() do
-		if part:IsA("BasePart") then
-			parts[#parts + 1] = part
-		end
-  end
-  if #parts < 1 then
-  	-- Nothing to do!
-    return
-  end
-
   -- Try to begin a recording with a specific identifier
   local recording = ChangeHistoryService:TryBeginRecording("Set selection to neon")
 
@@ -118,9 +102,12 @@ button.Click:Connect(function()
 		return
 	end
 
-  -- Iterate through the selected parts
-  for _, part in parts do
-    part.Material = Enum.Material.Neon -- Set the material of the part to Neon
+  -- Iterate through the selected instances
+  for _, instance in Selection:Get() do
+    -- Check if the instance is a BasePart
+		if instance:IsA("BasePart") then
+      instance.Material = Enum.Material.Neon -- Set the material of the part to Neon
+		end
   end
 
   -- Finish the recording, committing the changes to the history
