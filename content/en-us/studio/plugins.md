@@ -115,6 +115,12 @@ button.Click:Connect(function()
 end)
 ```
 
+<Alert severity="warning">
+Some caveats with `Class.ChangeHistoryService` Recordings:
+* Don't run any code in the command bar that will always be running whilst you have a place open, as the command bar uses `Class.ChangeHistoryService` Recordings to allow for undo/redo with commands that make changes to the DataModel.
+* Reloading a plugin won't cancel its ongoing `Class.ChangeHistoryService` Recordings, so make use of [Attributes](../scripting/attributes.md#create-attributes) to store the last recording identifier so it can be canceled by the plugin when it reloads.
+</Alert>
+
 ## Upload plugins
 
 After you finish creating a plugin, you can upload it to your inventory so that it is accessible across all of your projects.
