@@ -1439,8 +1439,8 @@ properties:
     summary: ''
     description: |
       When true, `Humanoid:ApplyDescriptionAsync` or
-      `Players:LoadCharacterWithHumanoidDescription` will also apply the Avatar
-      Settings set for the universe to the model.
+      `Players:CreateHumanoidModelFromDescriptionAsync` will also apply the
+      Avatar Settings set for the universe to the model.
     code_samples: []
     type: boolean
     tags: []
