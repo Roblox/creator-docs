@@ -13,7 +13,7 @@ Users who subscribe to Plus get a range of benefits to enhance their purchasing 
 
 - **Discounted purchases**: Subscribers get 10% off eligible purchases, including in-game items, avatar items, and more. The discount increases to 20% starting in the third month. Roblox covers this discount for you.
 - **Free paid private servers**: Subscribers get unlimited access to paid private servers at no cost. You're still compensated when they spend time in your paid private servers.
-- **Free Robux transfers**: Subscribers can transfer Robux at no cost to sender or recipient. Transfers are subject to age restrictions and parental consent.
+- **Free Robux transfers**: Subscribers can transfer Robux at no cost to sender or recipient. Transfers are subject to age restrictions and parental consent. Robux received through transfers are not eligible for the DevEx program.
 - [**Marketplace access**](../../marketplace/marketplace-policy.md#creator-requirements): Subscribers can trade and resell limited items, and publish and sell avatar items. Premium subscribers have the same Marketplace access.
 
 For more information about the benefits of Roblox Plus to end-users, see the [help center](https://en.help.roblox.com/hc/en-us/articles/47967913158164-Roblox-Plus).
@@ -97,6 +97,8 @@ For implementation details, see [Sell a pass](./passes.md#sell-a-pass) and [Sell
 ## Earn from in-experience Plus subscriptions
 
 You can encourage users to subscribe to Roblox Plus directly from your game with `Class.MarketplaceService.PromptRobloxSubscriptionPurchase|PromptRobloxSubscriptionPurchase`. For each user who becomes a subscriber through your game, you earn **250 Robux per month for their first three consecutive months**, with up to **750 Robux for every newly acquired subscriber**.
+
+Any earnings are subject to a 60-day holding period.
 
 <img src="../../assets/monetization/roblox-plus/Plus-Signup-Bonus.png" width="80%" />
 
@@ -266,20 +268,20 @@ MarketplaceService.PromptRobloxSubscriptionPurchaseFinished:Connect(onPromptRobl
 
 ## Earn from paid private server time
 
-Roblox Plus subscribers have free access to paid [private servers](./private-servers.md). To make sure that you still earn, Roblox compensates you when Plus subscribers spend time inside your paid private servers.
+Roblox Plus subscribers can create paid [private servers](./private-servers.md) for free. To make sure that you can still earn from these servers, Roblox compensates you based on the time Plus subscribers spend in the paid private servers they create within your game.
 
-You can earn up to **100 Robux per user per server** when a Plus subscriber spends **at least 60 cumulative minutes over the last 30 days** in your paid private server.
+**Payouts are based on the time a Plus subscriber spends in paid private servers they create themselves.** This means that if a Plus subscriber invites another Plus subscriber to a paid private server, you do not earn from the invited player.
 
-On each successful Plus subscription renewal, Roblox evaluates that subscriber's paid private server usage over the previous 30 days. It then considers the **top five paid private servers** where the subscriber spent at least 60 minutes during that period. If your server qualifies, you earn based on the server price, up to a maximum of 100 Robux per user per server.
+On each successful Plus subscription renewal, Roblox evaluates the subscriber's paid private server usage over the previous 30 days. It then determines the **top five paid private servers the subscriber created within your game**, based on the amount of time they spent in each server during that period, with a minimum of 60 cumulative minutes.
+
+If a Plus subscriber spends **at least 60 cumulative minutes over the last 30 days** in a paid private server they created within your game, you can earn up to **100 Robux per user per server** based on the server price.
 
 In the following example, Servers A, B, and C qualify because the Plus subscriber spent at least 60 minutes in each server during the last 30 days. Servers D and E don't qualify because they don't meet the 60-minute threshold. If all five servers (A–E) belong to the same game and represent the top five servers the subscriber spent time in, the creator earns a total of 205 Robux across the qualifying servers.
-
-were from their game AND there were the top 5 servers the user was in.
 
 <table>
 <thead>
   <tr>
-    <td>**game's paid private server**</td>
+    <td>**Game's paid private server**</td>
     <td>**Server price**</td>
     <td>**Cumulative time (30 days prior to renewal)**</td>
     <td>**Creator earnings**</td>

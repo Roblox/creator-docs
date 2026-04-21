@@ -114,11 +114,12 @@ curl --location --request GET 'https://apis.roblox.com/creator-configs-public-ap
 
 ### C. Publish the configuration
 
-After verification, send this `POST` request to publish. The only way to undo this action is to restore a previous version.
+After verification, send this `POST` request to publish. The only way to undo this action is to restore a previous version. This action also requires that the account associated with the API key is [eligible to publish experiences](https://en.help.roblox.com/hc/en-us/articles/203313890-How-to-Publish-Public-Experiences-on-Roblox).
 
 ```bash
 curl --location --request POST 'https://apis.roblox.com/creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/DataStoresConfig/publish' \
   --header 'x-api-key: <API_KEY>' \
+  --header 'Content-Type: application/json' \
   --data-raw '{
   "deploymentStrategy": "Immediate"
 }'

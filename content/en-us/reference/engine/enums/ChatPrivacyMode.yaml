@@ -25,7 +25,7 @@ items:
     deprecation_message: ''
   - name: Friends
     summary: |
-      A player can only chat with users in a game that are on their connections
+      A player can only chat with users in a game that are on their friends
       list.
     value: 2
     tags: []

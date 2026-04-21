@@ -10,7 +10,7 @@ Scheduling code is useful in many situations, such as ensuring code executes aft
 The following are the most common `Library.task` methods used to schedule code. You should use the task methods over legacy scheduling methods, such as `Global.RobloxGlobals.wait()`, to ensure that your code runs optimally.
 
 <Alert severity="warning">
-Certain legacy global methods, such as (`Global.RobloxGlobals.spawn()`, `Global.RobloxGlobals.delay()`, and `Global.RobloxGlobals.wait()`) can provide similar code scheduling results but are less optimized and configurable as their `Library.task` alternatives. If your experience uses these legacy methods, you should use `Library.task` instead to ensure your experience's code remains efficient and up-to-date.
+Certain legacy global methods, such as (`Global.RobloxGlobals.spawn()`, `Global.RobloxGlobals.delay()`, and `Global.RobloxGlobals.wait()`) can provide similar code scheduling results but are less optimized and configurable as their `Library.task` alternatives. If your game uses these legacy methods, you should use `Library.task` instead to ensure your game's code remains efficient and up-to-date.
 </Alert>
 
 The following table lists the relevant legacy global methods and their preferred, more optimized counterparts:

@@ -6,11 +6,11 @@ prev: /education/build-it-play-it-island-of-move/go-beyond-the-challenge
 
 <img src="../../assets/education/build-it-play-it-island-of-move/sharing-animations/hero-banner.png" width="100%" />
 
-Share animations with connections and fellow developers by exporting and importing them through Studio.
+Share animations with friends and fellow developers by exporting and importing them through Studio.
 
 <Alert severity="info">
 <AlertTitle>Animation Permission Changes</AlertTitle>
-You can now share animations with connections, groups, and experiences without re-uploading them. For more information, see [Asset privacy](../../projects/assets/privacy.md).
+You can now share animations with friends, groups, and experiences without re-uploading them. For more information, see [Asset privacy](../../projects/assets/privacy.md).
 </Alert>
 
 ## Export animations

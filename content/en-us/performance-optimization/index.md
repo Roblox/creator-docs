@@ -1,11 +1,11 @@
 ---
 title: Performance optimization
-description: Introduces the performance optimization process.
+description: Introduces the performance optimization process for games on Roblox.
 ---
 
-Performance optimization is the process of building and iterating on an experience to improve frame rate, memory usage, and load times. Players expect experiences to perform well, so taking the time to understand and improve your experience's performance can be critical to its success.
+Performance optimization is the process of building and iterating on a game to improve frame rate, memory usage, and load times. Players expect games to perform well, so taking the time to understand and improve your game's performance can be critical to its success.
 
-The first step in performance optimization is to [design for performance](design.md), which means following a set of best practices **as you build** a new experience. After you publish an experience, the optimization process follows a common cycle:
+The first step in performance optimization is to [design for performance](design.md), which means following a set of best practices **as you build** a new game. After you publish a game, the optimization process follows a common cycle:
 
 <GridContainer numColumns="2">
 <figure>
@@ -20,11 +20,11 @@ The first step in performance optimization is to [design for performance](design
 
 ## Why performance matters
 
-To put it simply, performant experiences are more fun. When an experience has a consistent, smooth frame rate, even basic actions like running and jumping feel more precise and enjoyable. Aiming can go from feeling impossible to feeling completely natural. An experience with a small memory footprint and fast load times might always have plenty of other people to play with.
+To put it simply, performant games are more fun. When a game has a consistent, smooth frame rate, even basic actions like running and jumping feel more precise and enjoyable. Aiming can go from feeling impossible to feeling completely natural. A game with a small memory footprint and fast load times might always have plenty of other people to play with.
 
-Performance optimization also lets you expand your ambitions. If your experience runs well, you might be able to make it more expansive or beautiful or add new systems to it.
+Performance optimization also lets you expand your ambitions. If your game runs well, you might be able to make it more expansive or beautiful or add new systems to it.
 
-From a business perspective, performant experiences often have higher user engagement, better user retention, and make more money.
+From a business perspective, performant games often have higher user engagement, better user retention, and make more money.
 
 ## Measure performance
 
@@ -32,14 +32,14 @@ From a business perspective, performant experiences often have higher user engag
 
   Because the server doesn't render frames, it doesn't _technically_ have a frame rate, but server heartbeat is essentially the same thing: the number of times per second that the server updates its simulation of the world. A low server heartbeat reduces the frame rate for all clients and increases latency.
 
-  On the client, low or inconsistent frame rates reduce the smoothness and responsiveness of the experience. By default, Roblox experiences target 60 FPS, which is one frame every 16.67 milliseconds with proper frame pacing.
+  On the client, low or inconsistent frame rates reduce the smoothness and responsiveness of the game. By default, Roblox games target 60 FPS, which is one frame every 16.67 milliseconds with proper frame pacing.
 
-- **Memory usage** is the amount of RAM or swap that your experience uses. Even if an experience has low starting memory usage, memory leaks can cause that amount to increase over time.
+- **Memory usage** is the amount of RAM or swap that your game uses. Even if a game has low starting memory usage, memory leaks can cause that amount to increase over time.
 
-  On the server, excessive memory usage can cause crashes, which disconnect all players from the experience.
+  On the server, excessive memory usage can cause crashes, which disconnect all players from the game.
 
-  Excessive memory usage causes client crashes, too, but it also prevents users on lower-end devices from playing your experience in the first place. Reducing memory usage can greatly expand your addressable audience, especially on mobile.
+  Excessive memory usage causes client crashes, too, but it also prevents users on lower-end devices from playing your game in the first place. Reducing memory usage can greatly expand your addressable audience, especially on mobile.
 
-- **Load time** is the amount of time it takes for a player to start enjoying your experience.
+- **Load time** is the amount of time it takes for a player to start enjoying your game.
 
-  Long load times are annoying and hurt user acquisition and retention. Players might decide an experience simply isn't worth the wait. Conversely, quick load times can give your experience a "jump in" feel that makes players more likely to engage with it when they have a spare moment.
+  Long load times are annoying and hurt user acquisition and retention. Players might decide a game simply isn't worth the wait. Conversely, quick load times can give your game a "jump in" feel that makes players more likely to engage with it when they have a spare moment.

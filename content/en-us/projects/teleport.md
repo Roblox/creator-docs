@@ -47,7 +47,7 @@ Setting | Description
 
 ![Access control for places on the Creator Hub](../assets/players/teleport-access-control.png)
 
-- If you choose **Fully open**, players can join any place in your experience through teleports from any experience, including deep links, game invites, joining a connection, and more.
+- If you choose **Fully open**, players can join any place in your experience through teleports from any experience, including deep links, game invites, joining a friend, and more.
 
   This is a good choice if your experience has several places and you want friends to be able to easily join each other no matter which place they're in. If you don't choose this option, players who try to join their friends in non-start places will instead join your experience's start place.
 

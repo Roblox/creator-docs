@@ -593,10 +593,6 @@ functions:
       fractional values of `x`, `y`, and `z`, the return value will gradually
       fluctuate between `-0.5` and `0.5`. For coordinates that are close to each
       other, the return values will also be close to each other.
-
-      Very large `x`, `y`, and `z` inputs can cause a loss in precision that
-      makes this function frequently return 0. For time-based noise, use
-      `Global.RobloxGlobals.time()` rather than `Global.RobloxGlobals.tick()`.
     parameters:
       - name: x
         type: number

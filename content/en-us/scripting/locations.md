@@ -7,9 +7,9 @@ import ScriptLocations from '../includes/engine-comparisons/script-locations.md'
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jLNgutvbALY?si=CU8CiDeiQOMIDfDr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe><br />
 
-For many developers, the fundamental challenge of adapting to Roblox scripting is the importance of file location and the `Class.Script.RunContext` property. Depending on script type, location in the **Explorer**, and run context, scripts can behave very differently. Certain method calls might fail, objects in your experience might be inaccessible, or scripts might not run at all.
+For many developers, the fundamental challenge of adapting to Roblox scripting is the importance of file location and the `Class.Script.RunContext` property. Depending on script type, location in the **Explorer**, and run context, scripts can behave very differently. Certain method calls might fail, objects in your game might be inaccessible, or scripts might not run at all.
 
-The reason for this complexity is that Roblox experiences are multiplayer by default. Scripts need the ability to only run on the server, only run on the client, or be shared across both. The evolution of the Roblox platform over time has further complicated the situation.
+The reason for this complexity is that Roblox games are multiplayer by default. Scripts need the ability to only run on the server, only run on the client, or be shared across both. The evolution of the Roblox platform over time has further complicated the situation.
 
 ## Script types
 
@@ -55,6 +55,6 @@ This image shows which **Explorer** window locations can contain client scripts.
 
 ## Example project structure
 
-The [Plant](../resources/plant-reference-project.md) reference project shows how you might organize your code in a large, complex experience.
+The [Plant](../resources/plant-reference-project.md) reference project shows how you might organize your code in a large, complex game.
 
 Of particular note is how it stores the vast majority of its code as reusable `Class.ModuleScript|ModuleScripts` in `ReplicatedStorage` and `ServerStorage`.

@@ -3,9 +3,9 @@ title: Events
 description: Provides an overview of events and a summary of Roblox's built-in events.
 ---
 
-Events are occurrences within your experience that you can listen for and respond to. Many Roblox services and objects have built-in events that automatically **fire** in response to specific actions or changes.
+Events are occurrences within your game that you can listen for and respond to. Many Roblox services and objects have built-in events that automatically **fire** in response to specific actions or changes.
 
-For example, a player's `Class.Player.Character|Character` touching a `Class.BasePart` automatically fires a `Class.BasePart.Touched|Touched` event. Each time a player joins your experience, the `Class.Players.PlayerAdded` event fires.
+For example, a player's `Class.Player.Character|Character` touching a `Class.BasePart` automatically fires a `Class.BasePart.Touched|Touched` event. Each time a player joins your game, the `Class.Players.PlayerAdded` event fires.
 
 Due to the sheer number of events and client-server architecture, Roblox scripting is often referred to as **event-driven**. This approach is different from many other game engines, which emphasize running code on a frame-by-frame basis.
 
@@ -17,7 +17,7 @@ Deferred events can help you ensure more performant and consistent event handlin
 
 ## Connect functions to events
 
-You connect a function to an event using `Datatype.RBXScriptSignal.Connect()|Connect()` to execute code each time the event fires. Most events pass arguments to their connected functions. For example, the `Class.BasePart.Touched` event passes the object that touched the part (such as a left hand or car wheel), and the `Class.Players.PlayerAdded` event passes the `Class.Player` that joined your experience.
+You connect a function to an event using `Datatype.RBXScriptSignal.Connect()|Connect()` to execute code each time the event fires. Most events pass arguments to their connected functions. For example, the `Class.BasePart.Touched` event passes the object that touched the part (such as a left hand or car wheel), and the `Class.Players.PlayerAdded` event passes the `Class.Player` that joined your game.
 
 The following code sample demonstrates how to connect a function named `onPartTouched()` to the `Class.BasePart.Touched|Touched` event of a part:
 
@@ -52,7 +52,7 @@ local function saveProgress(character)
 end
 
 -- Anonymous function that calls saveProgress() when a character is removed
--- from the experience (in this case, when the player leaves).
+-- from the game (in this case, when the player leaves).
 Players.PlayerAdded:Connect(function(player)
 	player.CharacterRemoving:Connect(saveProgress)
 end)
@@ -90,7 +90,7 @@ If you only want to connect a function to an event once&nbsp;— that is, only r
 </Alert>
 
 <Alert severity="info">
-When Luau destroys an event's object, such as the `Class.Player` object when a user leaves the experience, all of its [non-deferred](deferred.md) connections disconnect automatically.
+When Luau destroys an event's object, such as the `Class.Player` object when a user leaves the game, all of its [non-deferred](deferred.md) connections disconnect automatically.
 </Alert>
 
 ## Wait for events to fire

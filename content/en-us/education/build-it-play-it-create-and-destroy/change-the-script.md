@@ -64,9 +64,9 @@ Giving players more points can make smashing buildings feel even more rewarding.
    If the project doesn't work as intended once a change has been made in the script, go back to the script editor and **undo** your last change.
    </Alert>
 
-## Share with connections
+## Share with friends
 
-When you first publish an experience, it's automatically set to private. Making it public in the **Experience Settings** menu will allow connections to be able to join with a link.
+When you first publish an experience, it's automatically set to private. Making it public in the **Experience Settings** menu will allow friends to be able to join with a link.
 
 1. In the **File** &rarr; **Experience Settings** window, select **Permissions**.
 

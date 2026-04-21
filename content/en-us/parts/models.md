@@ -133,25 +133,23 @@ To upload a model you made in Studio:
 
    1. Click the **Save** button. After a moment, the **Asset Configuration** window displays your model's asset ID that you can use in your projects or share with other creators, groups, or experiences. For more information on granting permission to collaborators and experiences so that they can use your models, see [Asset privacy](../projects/assets/privacy.md)
 
-## Distribute models
+## Distribute and sell models
 
-You can distribute models with less than 15,000 dependencies to the [Creator Store](../production/creator-store.md) for other creators to use within their own experiences as long as each model only references:
+You can publicly distribute and sell your own models on the Creator Store for United States Dollars (USD), as long as the models have less than 15,000 dependencies. Each of these dependencies must be an:
 
-- Open use assets.
-- Restricted assets that you created, excluding audio and video.
-- Audio and video assets from the Creator Store.
+- Open use asset or a restricted asset that you created, excluding audio and video.
+- Audio or video asset that you acquired from the Creator Store.
 
-If you are in a supported country, you can sell models you created on the Creator Store for **United States Dollars** (USD). Eligible Creators must complete an application form through Stripe to create their seller account, set prices, and receive payouts. For more information and to start onboarding, see [Sell on the Creator Store](../production/sell-on-creator-store.md).
+This monetization method lets you earn 100% of net proceeds on transactions, bypassing platform fees and DevEx rates. For more information on asset and seller requirements, including how to set up a seller account to set prices and receive payouts, see [Creator Store - Requirements](../production/creator-store.md#requirements).
 
-<Alert severity="warning">
+<Alert severity="info">
 If you want to distribute a model with a child audio asset that you created, you must distribute the audio asset on the Creator Store **_before_** making it a child of the model in order for the audio to be audible at runtime.
 </Alert>
 
-As with any asset, all models must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright, and Creator Store [asset moderation](../production/creator-store.md#asset-moderation) rules. If you suspect a rights violation involving your asset, you can submit the content for removal using the [Rights Manager](../production/publishing/rights-manager.md).
+When creating models for the Creator Store, ensure:
 
-When creating models for the Creator Store:
-
-- Read about Roblox [texture specifications and limits](../art/modeling/texture-specifications.md).
-- Limit each mesh to a maximum of 20,000 triangles.
-- Read and address any warnings shown during the import process.
-- Scale and orient your model appropriately during import so that it's usable out of the box when inserted from the Creator Store.
+- The model and its dependencies adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), [DMCA Guidelines](../production/publishing/dmca-guidelines.md), and Creator Store requirements.
+- The model is set to a reasonable scale and orientation so that it's usable out of the box when inserted from the Creator Store.
+- All of the model's dependencies import into Studio without any warnings.
+- Each mesh dependency contains no more than 20,000 triangles.
+- Each texture dependency meets Roblox's [texture specifications](../art/modeling/texture-specifications.md).

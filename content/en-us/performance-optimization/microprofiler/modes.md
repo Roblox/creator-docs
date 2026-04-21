@@ -1,9 +1,9 @@
 ---
 title: MicroProfiler modes
-description: The MicroProfiler includes several different modes, all of which .
+description: The MicroProfiler includes several different modes, all of which offer different ways to understand your game's performance profile.
 ---
 
-The MicroProfiler includes several modes, which can help you visualize your experience's performance characteristics in different ways. After opening the MicroProfiler, use the **Modes** menu to switch between them.
+The MicroProfiler includes several modes, which can help you visualize your game's performance characteristics in different ways. After opening the MicroProfiler, use the **Modes** menu to switch between them.
 
 **Frame mode** and **detailed mode** are covered under [MicroProfiler basics](index.md#microprofiler-basics).
 
@@ -45,7 +45,7 @@ Only available in the web UI. Similar to timers mode, groups mode provides avera
 
 ## Threads mode
 
-Only available in the web UI. Similar to timers mode, threads mode provides average and total task times for each thread, broken down by group, to help you identify how your experience is distributing tasks across threads.
+Only available in the web UI. Similar to timers mode, threads mode provides average and total task times for each thread, broken down by group, to help you identify how your game is distributing tasks across threads.
 
 <img alt="MicroProfiler web UI showing threads mode." src="../../assets/optimization/microprofiler/micro-threads-mode.png" width="600px" />
 

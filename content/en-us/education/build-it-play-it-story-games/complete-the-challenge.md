@@ -12,7 +12,7 @@ Now that you've completed the experience, here are a few ideas to take your expe
 
 ## Share your experience
 
-One of the most exciting features of Roblox is that it's really easy to share your experience with connections. Currently your experience is probably private, meaning only you can play it. For your connections to see the experience, you need to make it public.
+One of the most exciting features of Roblox is that it's really easy to share your experience with friends. Currently your experience is probably private, meaning only you can play it. For your friends to see the experience, you need to make it public.
 
 1. Select **File** (top left of Studio) and click **Experience Settings**.
 
@@ -22,7 +22,7 @@ One of the most exciting features of Roblox is that it's really easy to share yo
 
 1. In the top right of Studio, click on the **Share** button. A pop-up menu displays.
 
-1. Click the **Copy Link** button, then share the link with your connections.
+1. Click the **Copy Link** button, then share the link with your friends.
 
 ## Add more to the story
 

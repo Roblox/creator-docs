@@ -105,6 +105,10 @@ The server provides the following tools:
     <td>`console_output`</td>
     <td>Retrieves output logs while the game is running.</td>
   </tr>
+  <tr>
+    <td>`playtest_subagent`</td>
+    <td>Spawns a test character that runs through gameplay scenarios.</td>
+  </tr>
 </tbody>
 <thead>
   <tr>
