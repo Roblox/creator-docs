@@ -42,7 +42,7 @@ Instances which are **created** or **cloned** by client-side scripts are exempte
 </Alert>
 
 <Alert severity="warning">
-When an instance streams out, it is parented to `nil` so that any existing Luau state will reconnect if the instance streams back in. As a result, removal signals such as `Class.Instance.ChildRemoved|ChildRemoved` or `Class.Instance.DescendantRemoving|DescendantRemoving` fire on its **parent** or **ancestor**, but the instance itself is not destroyed in the same sense as an `Class.Instance:Destroy()` call.
+When an instance streams out, it is parented to `nil` so that any existing Luau state will reconnect if the instance streams back in. As a result, removal signals such as `Class.Instance.ChildRemoved|ChildRemoved` or `Class.Instance.DescendantRemoving|DescendantRemoving` fire on its **parent** or **ancestor**, but the instance itself is not destroyed in the same sense as an `Class.Instance:Destroy()` call. Local-only changes to instance properties (changes that exist on a client and have not been replicated to the server) can be lost if the instances streams out and later streams back in.
 </Alert>
 
 ### Assemblies

@@ -2223,6 +2223,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/PluginCapabilities.yaml
                 ignoreTranslation: true
+              - title: PluginConnectionService
+                path: /reference/engine/classes/PluginConnectionService
+                type: engineapi
+                source: /reference/engine/classes/PluginConnectionService.yaml
+                ignoreTranslation: true
               - title: PluginDebugService
                 path: /reference/engine/classes/PluginDebugService
                 type: engineapi
@@ -3318,6 +3323,11 @@ navigation:
             path: /reference/engine/classes/MLSession
             type: engineapi
             source: /reference/engine/classes/MLSession.yaml
+            ignoreTranslation: true
+          - title: PluginConnection
+            path: /reference/engine/classes/PluginConnection
+            type: engineapi
+            source: /reference/engine/classes/PluginConnection.yaml
             ignoreTranslation: true
           - title: TerrainIterateOperation
             path: /reference/engine/classes/TerrainIterateOperation
@@ -5216,6 +5226,11 @@ navigation:
         path: /reference/engine/enums/PlayerPlatformSpenderStatus
         type: engineapi
         source: /reference/engine/enums/PlayerPlatformSpenderStatus.yaml
+        ignoreTranslation: true
+      - title: PluginConnectionTargetType
+        path: /reference/engine/enums/PluginConnectionTargetType
+        type: engineapi
+        source: /reference/engine/enums/PluginConnectionTargetType.yaml
         ignoreTranslation: true
       - title: PoseEasingDirection
         path: /reference/engine/enums/PoseEasingDirection

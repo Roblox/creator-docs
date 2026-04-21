@@ -353,6 +353,7 @@ descendants:
   - File
   - InstanceFileSyncService
   - PlacesService
+  - PluginConnectionService
   - PluginManagementService
   - ReflectionMetadata
   - ReflectionMetadataCallbacks

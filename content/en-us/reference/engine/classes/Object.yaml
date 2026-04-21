@@ -26,6 +26,7 @@ descendants:
   - TerrainWriteOperation
   - VideoSampler
   - WebStreamClient
+  - PluginConnection
 tags:
   - NotCreatable
   - NotReplicated
