@@ -182,7 +182,7 @@ These requirements apply to both **publishing a new experience** and **updating 
 - Publishing a new version of a place within an existing experience
 - Setting your audience to **Public** or **Community members**
 
-You do **not** need to meet these requirements if you keep your experience private or if your audience is set to **Connections**.
+You do **not** need to meet these requirements if you keep your experience private or if your audience is set to **Friends**.
 </Alert>
 
 <Alert severity="info">
@@ -210,7 +210,7 @@ After you make your experience public, you can choose the scope of your audience
 1. Go to **Audience** ⟩ **Access Settings**.
 1. Under **Join**, select one of the following options:
    - **Public** — available to all users on Roblox.
-   - **Connections** — available only to the experience owner's connections. This option only appears for non–group-owned experiences.
+   - **Friends** — available only to the experience owner's friends. This option only appears for non–group-owned experiences.
    - **Community members** — available only to group members. This option only appears for group-owned experiences.
 1. Click **Save Changes**.
 

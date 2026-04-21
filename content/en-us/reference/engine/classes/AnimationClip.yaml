@@ -29,6 +29,28 @@ tags:
   - NotCreatable
 deprecation_message: ''
 properties:
+  - name: AnimationClip.Length
+    summary: |
+      Returns the length (in seconds) of this `Class.AnimationClip`. This will
+      return `0` until the animation has fully loaded and thus may not be
+      immediately available.
+    description: ''
+    code_samples: []
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities:
+      - Animation
   - name: AnimationClip.Loop
     summary: |
       Determines whether the animation stored in this `Class.AnimationClip` is

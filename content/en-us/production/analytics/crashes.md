@@ -43,11 +43,21 @@ Directly below the chart is a list of server out-of-memory snapshots that you ca
 
 To demonstrate how you can use the chart and server out-of-memory snapshots to dianose a memory leak:
 
-1. Review the chart to identify any spikes.
-2. Use the **Place** menu to filter by place version so that you can confirm the location of your memory leak.
-3. Scroll down to the memory snapshots and examine the list by **Server uptime** to review servers that ran for several hours before hitting the memory limit. This provides evidence of a memory leak.
-4. Open the snapshot in the treemap view to highlight the largest nodes.
-5. Investigate these nodes in Studio to see where you can add cleanup logic.
+1. **Identify the spike**. When you notice out-of-memory crashes spiking on your server crashes chart, filter by place version so that you can confirm the location of your memory leak.
+
+   <img src="../../assets/analytics/crashes/Investigate-Spike-Example.png" alt="An example server crashes chart view with a spike highlighted." width="100%" />
+
+1. **Select a snapshot**. Scroll down to the memory snapshots and examine the list by the latest timestamp or server uptime. If you select a snapshot from a server that crashed within minutes of starting up, this suggests a massive, acute memory spike during initialization.
+
+   <img src="../../assets/analytics/crashes/Select-Snapshot-Example.png" alt="An example server crashes chart view with a spike highlighted." width="60%" />
+
+1. **Visualize the memory**. Open the snapshot in the treemap view, then click into each node to see which services, folders, or assets dominated memory at crash time. For example, the treemap view in the following video highlights Clouds as the largest node, then shows that ParticleEmitter makes up 50% of the Clouds node, indicating that heavy assets are being cloned into memory at startup but not properly parented or destroyed.
+
+   <video src="../../assets/analytics/crashes/Visualize-Example.mp4" controls width="80%"></video>
+
+1. **Investigate and fix**. You can use the viewer's breadcrumbs to trace the context of the bloated node. Since certain assets are dynamically generated at runtime, you use this path as a starting point in Studio's Explorer window, add cleanup logic, then monitor your next update to verify the fix.
+
+   <img src="../../assets/analytics/crashes/Investigate-Fix-Example.png" alt="A memory snapshot with the breadcrumb highlighted." width="70%" />
 
 <Alert severity="info">
 You can also download the raw CSV summary of the memory snapshots for your own analysis, including feeding the data into your favorite LLM or writing your own parsing script.

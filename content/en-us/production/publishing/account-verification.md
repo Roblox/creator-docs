@@ -6,7 +6,7 @@ description: Explains how to verify your Roblox account.
 **Account verification** is the process of connecting your identity on Roblox to your real world identity, either through a government ID or through your phone number. When you verify your account, you can distribute more of each asset type and maximize their discoverability within the [Creator Store](../../production/creator-store.md), distribute audio assets under 10 seconds, monetize your [plugins](../../studio/plugins.md), and access age-restricted Studio features such as [voice chat](../../chat/voice-chat.md).
 
 <Alert severity="warning">
-**Phone number verification is not sufficient** to sell priced assets on the Creator Store. To sell priced assets, you need to verify with a [government ID](account-verification.md#verify-through-government-id) and create a seller account. For more information, see [Sell on the Creator Store](../sell-on-creator-store.md).
+**Phone number verification is not sufficient** to sell priced assets on the Creator Store. To sell priced assets, you need to verify with a [government ID](account-verification.md#verify-through-government-id) and create a seller account. For more information, see [Creator Store - Distribute and sell assets](../creator-store.md#distribute-and-sell-assets).
 </Alert>
 
 ## Verify through government ID

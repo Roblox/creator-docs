@@ -11,7 +11,7 @@ description: |
   The `Class.Players` service contains `Class.Player` objects for presently
   connected clients to a Roblox server. It also contains information about a
   place's configuration. It can fetch information about players not connected to
-  the server, such as character appearances, connections, and avatar thumbnail.
+  the server, such as character appearances, friends, and avatar thumbnail.
 code_samples: []
 inherits:
   - Instance
@@ -534,7 +534,9 @@ methods:
   - name: Players:CreateHumanoidModelFromDescriptionAsync
     summary: |
       Returns a character `Class.Model` equipped with everything specified in
-      the passed in `Class.HumanoidDescription`.
+      the passed in `Class.HumanoidDescription`. If
+      `HumanoidDescription.UseAvatarSettings` is set to true, Avatar Settings in
+      the experience will be applied to the returned model.
     description: |
       Returns a character `Class.Model` equipped with everything specified in
       the passed in `Class.HumanoidDescription`, and is R6 or R15 as specified
@@ -821,12 +823,12 @@ methods:
   - name: Players:GetFriendsAsync
     summary: |
       Returns a `Class.FriendPages` object which contains information for all of
-      the given player's connections.
+      the given player's friends.
     description: |
       The GetFriends `Class.Players` function returns a `Class.FriendPages`
-      object which contains information for all of the given user's connections.
-      The items within the `Class.FriendPages` object are tables with the
-      following fields:
+      object which contains information for all of the given user's friends. The
+      items within the `Class.FriendPages` object are tables with the following
+      fields:
 
       <table>
       	<thead>
@@ -839,22 +841,22 @@ methods:
       	<tr>
       		<td>Id</td>
       		<td>int64</td>
-      		<td>The connections's UserId</td>
+      		<td>The friend's UserId</td>
       	</tr>
       	<tr>
       		<td>Username</td>
       		<td>string</td>
-      		<td>The connections's username</td>
+      		<td>The friend's username</td>
       	</tr>
           <tr>
             <td>DisplayName</td>
             <td>string</td>
-            <td>The <code>Class.Player.DisplayName|display name</code> of the connections.</td>
+            <td>The <code>Class.Player.DisplayName|display name</code> of the friend.</td>
           </tr>
       </table>
 
       See the code samples for an easy way to iterate over all a player's
-      connections.
+      friends.
     code_samples:
       - print-roblox-friends
     parameters:

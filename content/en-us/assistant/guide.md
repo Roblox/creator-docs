@@ -63,6 +63,17 @@ The `/generate` command enables [mesh generation](https://corp.roblox.com/newsro
 
 <img src="../assets/assistant/Studio-Generated-Green-Dragon.jpg" width="360" alt="A generated green dragon provided by Assistant in Studio." />
 
+### Planning Mode
+
+Planning Mode lets you preview Assistant's next steps before execution. When you submit a complex request, Assistant generates a plan that you can review and adjust.
+
+You can activate Planning Mode by either:
+
+- Clicking the dropdown in the Assistant input panel and selecting **Plan**
+- Entering the command `/plan` in Assistant
+
+<img src="../assets/assistant/PlanningMode.png" width="400" alt="Example of Planning Mode in Assistant." />
+
 ## Access Assistant from Studio
 
 To access Assistant from Studio:

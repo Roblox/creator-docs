@@ -1,43 +1,51 @@
 ---
-title: Custom meshes
-description: External modeling is the use of a third-party modeling software to create custom meshes.
+title: Custom 3D assets
+description: External modeling is the use of a third-party modeling software to create custom 3D assets.
 ---
 
-**Custom meshes** are 3D objects that enhance the visual appeal and uniqueness of your environment and characters. In Studio, custom meshes are represented as `Class.MeshPart` objects, and you can use them to create assets like characters, clothing, environment props, and cosmetics. To create a custom mesh, you must use a third-party modeling application, such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview), to design and model the asset before importing the 3D object into Studio.
+Meshes are **custom 3D assets** that let you personalize and stylize your game's environment and characters. Unlike parts, which you can directly create in Studio, you need to use a third-party modeling application like [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview) to design and model meshes, then import them into Studio. Studio represents imported meshes as `Class.MeshPart` objects, descendants of the `Class.BasePart` class.
 
-Many 3D assets, like characters, are made up of several meshes and are represented in Studio as a single `Class.Model`. See [Models](../../parts/models.md) for more information.
+<Alert severity = 'info'>
+Many 3D assets are made up of several meshes that are parented to a single `Class.Model` object.
+</Alert>
 
-In Roblox, custom 3D assets generally fall under three types of applications:
+Meshes typically fall into one of three types of application in games:
 
-- **Generic meshes or models** you can use for environmental props, buildings, characters, and decoration within an experience.
-- **Avatar models** for users or non-player characters (NPCs).
-- **Accessory models** that character models can equip and wear, like clothing and cosmetics.
+- Meshes for **decorating your game's environment**, such as plants, buildings, and vehicles.
+- Meshes for **individual body parts** for avatars or non-player characters (NPCs).
+- Meshes for **cosmetic accessories** that characters can equip and wear, such as clothing, props, and weapons.
 
-If you meet certain account requirements, you can publish and sell your avatar-ready models on the Marketplace and earn a commission for each sale. For more information, see [Roblox avatars](../../avatar/index.md).
+Each mesh type must meet specifications according to how you are going to use the mesh on the platform. For example, while all meshes must meet general mesh specifications, meshes for characters must also meet character specifications that account for rigging and skinning data. For a full list of specifications for different types of meshes, see [Resources](#resources).
+
+In addition, if you meet certain account requirements, you can publish and sell collections of meshes that are parented to a single `Class.Model` object. For example, you can publish avatar-ready models on the Marketplace and earn a commission for each sale, or you can sell models on the Creator Store and earn 100% of net proceeds on each transaction.
+
+<Alert severity = 'info'>
+For more information on monetizing meshes, see [Monetize avatar items](../../monetize-avatar.md) and [Creator Store - Distribute and sell assets](../../production/creator-store.md#distribute-and-sell-assets).
+</Alert>
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../../assets/modeling/surface-appearance/Layered-Clothing-Example.png" alt="A Roblox avatar wearing a glossy puffy jacket and jeans"/>
-    <figcaption>Create custom accessories, clothing, and characters that anyone can wear and use</figcaption>
+    <img src="../../assets/modeling/meshes/Mystery-of-Duvall-Example.png" alt="A cluttered interior room with a candle in the forefront and spooky interior lighting from the Mystery of Duvall Drive experience"/>
+    <figcaption>Use custom meshes and models to give your environments ambiance and depth</figcaption>
   </figure>
   <figure>
     <img src="../../assets/modeling/meshes/Beyond-The-Dark-Example.png" alt="A floating alien creature in space, from the Beyond The Dark experience"/>
     <figcaption>Design a custom character unique to your experience</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/modeling/meshes/Mystery-of-Duvall-Example.png" alt="A cluttered interior room with a candle in the forefront and spooky interior lighting from the Mystery of Duvall Drive experience"/>
-    <figcaption>Use custom meshes and models to give your environments ambiance and depth</figcaption>
+    <img src="../../assets/modeling/surface-appearance/Layered-Clothing-Example.png" alt="A Roblox avatar wearing a glossy puffy jacket and jeans"/>
+    <figcaption>Create custom accessories, clothing, and characters that anyone can wear and use</figcaption>
   </figure>
 </GridContainer>
 
-## Supported meshes
+## Supported 3D assets
 
-Roblox supports many types of custom meshes, as long as they adhere to the [general mesh specifications](../../art/modeling/specifications.md). A basic custom mesh consists of at least one mesh object and one texture:
+Roblox supports many types of custom 3D assets, as long as they adhere to the [general mesh specifications](../../art/modeling/specifications.md). A basic custom 3D asset consists of at least one `Class.MeshPart` object and one texture:
 
 <GridContainer numColumns="3">
   <figure>
     <img src="../../assets/art/Basic-Mesh-Example.png" alt="A plain white tree mesh without a texture"/>
-    <figcaption>A mesh object sets the shape and geometry of the 3D object</figcaption>
+    <figcaption>A `Class.MeshPart` object sets the shape and geometry of the 3D asset</figcaption>
   </figure>
   <figure>
     <img src="../../assets/art/Basic-Texture-Example.png" alt="Various color maps used to apply textures to the tree bark, and inner, middle, and outer leaves"/>
@@ -45,15 +53,15 @@ Roblox supports many types of custom meshes, as long as they adhere to the [gene
   </figure>
   <figure>
     <img src="../../assets/art/Basic-Mesh-Combined-Example.png" alt="The tree mesh and the image maps combined to create a single tree"/>
-    <figcaption>The mesh and texture combine to make a unique custom 3D object</figcaption>
+    <figcaption>The mesh and texture combine to make a unique custom 3D asset</figcaption>
   </figure>
 </GridContainer>
 
-Studio also supports meshes that include [rigging and skinning](#rigging-and-skinning) data, [PBR textures](#pbr-textures), and other [Studio-related objects](#studio-related-objects) like cage meshes and attachments. Many of these various components are required if you are creating avatar character models or accessories.
+Studio also supports custom 3D assets that include [rigging and skinning](#rigging-and-skinning) data, [PBR textures](#pbr-textures), and other [Studio-related objects](#studio-related-objects) like cage meshes and attachments. Many of these various components are required if you are creating avatar character models or accessories.
 
 ### Rigging and skinning
 
-A **rigged mesh** is a mesh with an internal poseable skeleton rig and bone structure. Rigged meshes allow mesh surfaces to rotate and move where internal bone joints are placed within a model, such as a character's knee or elbow. Skinning a rigged mesh allows the mesh object to bend organically, imitating the natural way joints would move in real life.
+A **rigged mesh** is a `Class.MeshPart` object with an internal poseable skeleton rig and bone structure. Rigged meshes allow mesh surfaces to rotate and move where internal bone joints are placed within a model, such as a character's knee or elbow. Skinning a rigged mesh allows the mesh to bend organically, imitating the natural way joints would move in real life.
 
 <GridContainer numColumns="2">
   <figure>
@@ -70,7 +78,7 @@ For more information on rigging and skinning, see [Rigging and skinning](../../a
 
 ### PBR textures
 
-**Physically-Based rendering** (PBR) textures allow you to represent realistic shading and lighting by using multiple types of texture images, or **maps**, on a single object. Combining multiple texture maps can more accurately simulate color, roughness, and reflectivity in any lighting environment and can enhance the visual elements of your assets and environment.
+**Physically-Based rendering** (PBR) textures allow you to represent realistic shading and lighting by using multiple types of texture images, or **maps**, on a single 3D asset. Combining multiple texture maps can more accurately simulate color, roughness, and reflectivity in any lighting environment, and can enhance the visual elements of your assets and environment.
 
 <GridContainer numColumns="2">
   <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Example-1.jpg" alt="A realistic looking leafy bush with shadows and depth."/>
@@ -83,7 +91,7 @@ For more information on PBR textures, see [PBR textures](../../art/modeling/surf
 
 Studio automatically converts certain types of objects found in 3D modeling files as specific workspace objects in the experience. These are typically used when creating a character or accessory, and configuring these in your modeling software can sometimes be the primary way of correctly setting up these Studio objects.
 
-The following objects are automatically created in Studio if they are detected by the importer:
+The following objects are automatically created in Studio if they are detected by the 3D Importer:
 
 - `Class.Attachment` - Created when Studio detects mesh objects that include `_Att` at the end of their name.
 - `Class.WrapTarget` - Created when Studio detects mesh objects that include `_OuterCage` at the end of their name.
@@ -92,7 +100,7 @@ The following objects are automatically created in Studio if they are detected b
 
 ## Resources
 
-There are a variety of resources available for creators of all backgrounds to get started with custom meshes.
+There are a variety of resources available for creators of all backgrounds to get started with custom 3D assets.
 
 If you are interested in specific avatar creation topics, use the following table to find guides and resources that best match your needs:
 

@@ -591,7 +591,9 @@ properties:
     tags:
       - ReadOnly
       - NotReplicated
-    deprecation_message: ''
+    deprecation_message: |
+      This property has been superseded by `Class.VRService.VREnabled` which
+      should be used in all new work.
     security:
       read: None
       write: None

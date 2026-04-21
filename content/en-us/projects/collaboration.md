@@ -77,19 +77,19 @@ If you're the group's owner, you can grant permissions on a per-experience basis
 
 ### User-owned experiences
 
-For user-owned experiences, you can grant **Play** access to any user or [group](../projects/groups.md), but you can only grant **Edit** permission to Roblox connections.
+For user-owned experiences, you can grant **Play** access to any user or [group](../projects/groups.md), but you can only grant **Edit** permission to Roblox friends.
 
-To give **Edit** permission to a connection for an experience that you own:
+To give **Edit** permission to a friend for an experience that you own:
 
 1. With the experience open in Studio, click the **Collaborate** button on the right side of the mezzanine bar.
 
    <img src="../assets/studio/general/Toolbar-Collaborate.png" width="800" alt="Studio's mezzanine bar with the Collaborate button highlighted." />
 
-1. Type into the search bar at the top to search for a collaborator to add. A dropdown appears listing matching collaborators, with connections indicated by the **Connection** label. Select the collaborator to add.
+1. Type into the search bar at the top to search for a collaborator to add. A dropdown appears listing matching collaborators, with friends indicated by the **Friend** label. Select the collaborator to add.
 
-   <img src="../assets/studio/collaboration/Collaborator-Search.png" width="760" alt="Manage Collaborators window showing search query for a Roblox connection." />
+   <img src="../assets/studio/collaboration/Collaborator-Search.png" width="760" alt="Manage Collaborators window showing search query for a Roblox friend." />
 
-1. Select **Edit** from the permissions dropdown for the connection, then click **Save** for your collaboration settings to take effect.
+1. Select **Edit** from the permissions dropdown for the friend, then click **Save** for your collaboration settings to take effect.
 
 ## Access a session
 

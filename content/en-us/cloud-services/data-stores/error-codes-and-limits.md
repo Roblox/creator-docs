@@ -300,49 +300,49 @@ A failed write call, such as `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`
   <tr>
     <td></td>
     <td>`StandardReadGameServerThrottled`</td>
-    <td>`StandardRead` request was throttled by game server limits.</td>
+    <td>`StandardRead` request was throttled by game server limits or the request queue was full.</td>
     <td>A request to `Class.DataStore:GetAsync()|GetAsync()`, `Class.DataStore:GetVersionAsync()|GetVersionAsync()`, `Class.DataStore:GetVersionAtTimeAsync()|GetVersionAtTimeAsync()`, or the read of `Class.DataStore:UpdateAsync()|UpdateAsync()` on a standard data store exceeded the `StandardRead` game server-level rate limit.</td>
   </tr>
   <tr>
     <td></td>
     <td>`StandardWriteGameServerThrottled`</td>
-    <td>`StandardWrite` request was throttled by game server limits.</td>
+    <td>`StandardWrite` request was throttled by game server limits or the request queue was full.</td>
     <td>A request to `Class.DataStore:SetAsync()|SetAsync()`, `Class.DataStore:IncrementAsync()|IncrementAsync()`, or the write of `Class.DataStore:UpdateAsync()|UpdateAsync()` on a standard data store exceeded the `StandardWrite` game server-level rate limit.</td>
   </tr>
   <tr>
     <td></td>
     <td>`StandardListGameServerThrottled`</td>
-    <td>`StandardList` request was throttled by game server limits.</td>
+    <td>`StandardList` request was throttled by game server limits or the request queue was full.</td>
     <td>A request to `Class.DataStore:ListKeysAsync()|ListKeysAsync()`, `Class.DataStore:ListVersionsAsync()|ListVersionsAsync()`, or `Class.DataStoreService:ListDataStoresAsync()|ListDataStoresAsync()` on standard data stores exceeded the `StandardList` game server-level rate limit.</td>
   </tr>
   <tr>
     <td></td>
     <td>`StandardRemoveGameServerThrottled`</td>
-    <td>`StandardRemove` request was throttled by game server limits.</td>
+    <td>`StandardRemove` request was throttled by game server limits or the request queue was full.</td>
     <td>A request to `Class.DataStore:RemoveAsync()|RemoveAsync()` on a standard data store exceeded the `StandardRemove` game server-level rate limit.</td>
   </tr>
   <tr>
     <td></td>
     <td>`OrderedReadGameServerThrottled`</td>
-    <td>`OrderedRead` request was throttled by game server limits.</td>
+    <td>`OrderedRead` request was throttled by game server limits or the request queue was full.</td>
     <td>A request to `Class.OrderedDataStore:GetAsync()|GetAsync()` or the read of `Class.OrderedDataStore:UpdateAsync()|UpdateAsync()` on an ordered data store exceeded the `OrderedRead` game server-level rate limit.</td>
   </tr>
   <tr>
     <td></td>
     <td>`OrderedWriteGameServerThrottled`</td>
-    <td>`OrderedWrite` request was throttled by game server limits.</td>
+    <td>`OrderedWrite` request was throttled by game server limits or the request queue was full.</td>
     <td>A request to `Class.OrderedDataStore:SetAsync()|SetAsync()`, `Class.OrderedDataStore:IncrementAsync()|IncrementAsync()`, or the write of `Class.OrderedDataStore:UpdateAsync()|UpdateAsync()` on an ordered data store exceeded the `OrderedWrite` game server-level rate limit.</td>
   </tr>
   <tr>
     <td></td>
     <td>`OrderedListGameServerThrottled`</td>
-    <td>`OrderedList` request was throttled by game server limits.</td>
+    <td>`OrderedList` request was throttled by game server limits or the request queue was full.</td>
     <td>A request to `Class.OrderedDataStore:GetSortedAsync()|GetSortedAsync()` on an ordered data store exceeded the `OrderedList` game server-level rate limit.</td>
   </tr>
   <tr>
     <td></td>
     <td>`OrderedRemoveGameServerThrottled`</td>
-    <td>`OrderedRemove` request was throttled by game server limits.</td>
+    <td>`OrderedRemove` request was throttled by game server limits or the request queue was full.</td>
     <td>A request to `Class.OrderedDataStore:RemoveAsync()|RemoveAsync()` on an ordered data store exceeded the `OrderedRemove` game server-level rate limit.</td>
   </tr>
 </tbody>

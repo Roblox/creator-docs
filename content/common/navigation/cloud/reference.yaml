@@ -60,7 +60,7 @@ navigation:
     path: /cloud/features/badges
   - title: Bans and blocks
     path: /cloud/features/bans-and-blocks
-  - title: Connections
+  - title: Friends
     path: /cloud/features/friends
   - title: Creator Store
     path: /cloud/features/creator-store

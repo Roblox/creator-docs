@@ -2108,12 +2108,6 @@ navigation:
                     type: engineapi
                     source: /reference/engine/classes/InventoryPages.yaml
                     ignoreTranslation: true
-                    section:
-                      - title: EmotesPages
-                        path: /reference/engine/classes/EmotesPages
-                        type: engineapi
-                        source: /reference/engine/classes/EmotesPages.yaml
-                        ignoreTranslation: true
                   - title: MemoryStoreHashMapPages
                     path: /reference/engine/classes/MemoryStoreHashMapPages
                     type: engineapi
@@ -3757,6 +3751,11 @@ navigation:
         path: /reference/engine/enums/AnnotationRequestType
         type: engineapi
         source: /reference/engine/enums/AnnotationRequestType.yaml
+        ignoreTranslation: true
+      - title: AntiAliasing
+        path: /reference/engine/enums/AntiAliasing
+        type: engineapi
+        source: /reference/engine/enums/AntiAliasing.yaml
         ignoreTranslation: true
       - title: AppLifecycleManagerState
         path: /reference/engine/enums/AppLifecycleManagerState
