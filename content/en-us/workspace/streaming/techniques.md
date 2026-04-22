@@ -115,13 +115,15 @@ Streaming works primarily on 3D spatial proximity, so you cannot assume that all
 
 The `Enum.StreamOutBehavior.Opportunistic|Opportunistic` mode for `Class.Workspace.StreamOutBehavior` allows the client to aggressively garbage collect content outside `Class.Workspace.StreamingTargetRadius`. This significantly reduces memory usage, especially on lower‑end devices, and helps prevent crashes or out‑of‑memory conditions. `Enum.StreamOutBehavior.Opportunistic|Opportunistic` mode is ideal for large or content‑rich experiences that need to remain performant across a wide range of hardware.
 
-## Set model level-of-detail
+## Set model level of detail
 
 <Alert severity="success">
 SLIM meshes are currently in client beta for Windows and macOS.
 </Alert>
 
 `Class.Model|Models` outside of the currently streamed area are not visible by default. However, you can instruct the engine to render lightweight "SLIM" meshes or low resolution "imposter" meshes for models that are not present on clients. You control this behavior through each model's `Class.Model.LevelOfDetail|LevelOfDetail` property.
+
+For models with a non-default `Class.Model.LevelOfDetail|LevelOfDetail` property, Roblox displays the SLIM or imposter mesh when the model is incomplete, even within the streaming radius; any instance missing from the model causes the LOD to display. Keep in-game space for these models to less than 64 cubic studs to increase the likelihood of the entire model streaming in together, or use the `Enum.ModelStreamingMode.Atomic` setting to ensure that it streams in together. Also, avoid making changes to these models on the client, as any change can cause the model to be considered incomplete.
 
 <img src="../../assets/studio/properties/Model-LevelOfDetail.png" width="320" alt="LevelOfDetail property indicated for Model instance"/>
 

@@ -5,8 +5,34 @@
 name: ProceduralModel
 type: class
 memory_category: BaseParts
-summary: ''
-description: ''
+summary: |
+  Procedural models support edit-time procedural generation. Instead of manually
+  constructing model content, a procedural model generates its contents
+  automatically in response to parameter changes.
+description: |
+  `ProceduralModel` inherits from `Class.Model` and supports edit-time
+  procedural generation of its contents. Instead of manually constructing model
+  content, a procedural model generates its contents automatically in response
+  to parameter changes.
+
+  Generation is defined by a **generator module**, a `Class.ModuleScript`
+  referenced by the `Class.ProceduralModel.Generator|Generator` property. The
+  engine invokes the module's `OnGenerate` function to produce the model's
+  contents.
+
+  A procedural model regenerates when any of the following inputs change:
+
+  - The `Class.ProceduralModel.Size|Size` property of the procedural model,
+    which defines a bounding box for the model to generate within.
+  - Any attributes on the procedural mode, as defined by the generator module.
+  - The generator's module sandboxing configuration (`Sandboxed` and
+    `Capabilities`).
+  - The source code of the generator module.
+
+  When any of these inputs change, the engine schedules regeneration. This
+  scheduled regeneration is performed by calling `OnGenerate` and applying its
+  results once it returns. In most cases, generation happens within the same
+  frame, but can be deferred to maintain performance.
 code_samples: []
 inherits:
   - Model
@@ -15,8 +41,13 @@ tags: []
 deprecation_message: ''
 properties:
   - name: ProceduralModel.GenerationError
-    summary: ''
-    description: ''
+    summary: |
+      Stores errors that the generator module might encounter during generation.
+    description: |
+      If the generator module encounters an error during generation, the
+      contents of the `ProceduralModel` are replaced with an error state
+      placeholder. The error is stored in the `GenerationError` property to give
+      you visibility into why the generation failed.
     code_samples: []
     type: string
     tags:
@@ -34,8 +65,19 @@ properties:
     capabilities:
       - Basic
   - name: ProceduralModel.Generator
-    summary: ''
-    description: ''
+    summary: |
+      A reference to a `Class.ModuleScript` that contains code which defines how
+      the `ProceduralModel` generates its contents in response to parameter
+      changes.
+    description: |
+      A reference to a `Class.ModuleScript` containing code that defines how the
+      `ProceduralModel` generates its contents in response to parameter changes.
+
+      Setting `Generator` triggers generation using the new generator module.
+
+      Clearing `Generator` preserves the current contents of the
+      `ProceduralModel`, and prevents further generation until a new generator
+      is assigned.
     code_samples: []
     type: ModuleScript
     tags: []
@@ -51,8 +93,22 @@ properties:
     capabilities:
       - Basic
   - name: ProceduralModel.Size
-    summary: ''
-    description: ''
+    summary: |
+      Defines the bounding volume used for generation.
+    description: |
+      The `Size` of a `ProceduralModel` defines the bounding volume used for
+      generation.
+
+      In a standard model, size is a derived output value based on its contents
+      and can be queried using `Class.Model:GetBoundingBox()|GetBoundingBox()`.
+      A procedural model inverts this relationship: `Size` is an **input** that
+      determines how generation occurs, and is explicitly set as a property.
+
+      The `Size` property represents the **physical** dimensions of the
+      `ProceduralModel` and is affected by `Class.Model.ScaleTo|ScaleTo`. The
+      `OnGenerate` function in a generator module doesn't need to account for
+      scaling; `OnGenerate` is always executed at a scale of 1, and the system
+      automatically scales the generated results.
     code_samples: []
     type: Vector3
     tags: []
@@ -83,13 +139,27 @@ methods:
     capabilities:
       - Basic
   - name: ProceduralModel:WaitForGenerationAsync
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Waits for generation to complete after making parameter changes.
+    description: |
+      Generation is scheduled to run as soon as possible after a parameter
+      changes, but not immediately. Use `WaitForGenerationAsync()` to wait for
+      generation to complete before parameters are changed.
+
+      This method errors if called on a `Class.ProceduralModel` that is not in
+      the `Class.DataModel` because generation isn't performed for instances
+      without a parent.
+
+      This method returns `false` if the `Class.ProceduralModel` is removed from
+      the `Class.DataModel` while generation is in progress, since this cancels
+      the operation.
+    code_samples:
+      - ProceduralModel-WaitForGenerationAsync
     parameters: []
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          Was the generation successful?
     tags:
       - Yields
     deprecation_message: ''

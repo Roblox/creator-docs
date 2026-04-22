@@ -3354,6 +3354,11 @@ navigation:
             type: engineapi
             source: /reference/engine/classes/VideoSampler.yaml
             ignoreTranslation: true
+          - title: VirtualInput
+            path: /reference/engine/classes/VirtualInput
+            type: engineapi
+            source: /reference/engine/classes/VirtualInput.yaml
+            ignoreTranslation: true
           - title: WebStreamClient
             path: /reference/engine/classes/WebStreamClient
             type: engineapi
