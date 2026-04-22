@@ -965,16 +965,30 @@ properties:
       - AvatarAppearance
   - name: Humanoid.RootPart
     summary: |
-      A reference to the humanoid's **HumanoidRootPart** object.
+      A reference to the humanoid's `HumanoidRootPart` object.
     description: |
-      A reference to the humanoid's **HumanoidRootPart** object, the root
-      driving part of the `Class.Humanoid` that controls a humanoid's movement
-      through the 3D world. This part is normally invisible.
+      A reference to the humanoid's `HumanoidRootPart` object. The
+      `HumanoidRootPart` is required for all assemblies that include a
+      `Class.Humanoid` and is the primary driving part of the `Class.Humanoid`
+      that controls a humanoid's movement through the 3D world. This part is
+      normally invisible and typically resides in the local origin center of the
+      character model.
 
-      For R15 characters, `Class.Model.PrimaryPart` of the
-      `Class.Player.Character` model is set to **HumanoidRootPart**.
+      The `HumanoidRootPart` is included in all platform-wide avatar characters,
+      and automatically created when a character model is imported into Studio.
+      It's possible to manually add a `HumanoidRootPart` to a model by adding a
+      `Class.Part` named `HumanoidRootPart` and ensuring it's the root part of
+      the assembly.
 
-      For R6 characters, `Class.Model.PrimaryPart` is set to the `Head` part.
+      Use this property to reference the specific `HumanoidRootPart` without
+      searching the model hierarchy. You can get or set the `Class.CFrame` of
+      this part to change position or reorient the entire character model.
+
+      For R15 or higher-fidelity characters, the `Class.Model.PrimaryPart` of
+      the `Class.Player.Character` model is also set to `HumanoidRootPart`.
+
+      While R6 characters also include a `HumanoidRootPart`, the R6 characters,
+      `Class.Model.PrimaryPart` is set to the `Head` part.
     code_samples: []
     type: BasePart
     tags:

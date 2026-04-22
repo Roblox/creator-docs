@@ -83,6 +83,8 @@ navigation:
         path: /parts/meshes
       - title: Models
         path: /parts/models
+      - title: Procedural models
+        path: /parts/procedural-models
       - title: Materials
         path: /parts/materials
       - title: Terrain

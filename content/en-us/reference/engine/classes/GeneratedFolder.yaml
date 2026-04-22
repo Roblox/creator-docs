@@ -5,8 +5,17 @@
 name: GeneratedFolder
 type: class
 memory_category: BaseParts
-summary: ''
-description: ''
+summary: |
+  A container that stores `Class.ProceduralModel` generation results.
+description: |
+  `GeneratedFolder` is a container used to represent non-source-of-truth data in
+  the `Class.DataModel`. These are branches that are deterministically generated
+  from other parts of the `Class.DataModel` instead of containing
+  source-of-truth data.
+
+  `GeneratedFolder` is primarily used by `Class.ProceduralModel` to store
+  generation results. It can also be used by plugins or other tools to organize
+  generated content.
 code_samples: []
 inherits:
   - Folder
@@ -16,8 +25,19 @@ deprecation_message: ''
 properties: []
 methods:
   - name: GeneratedFolder:SetPrimaryPart
-    summary: ''
-    description: ''
+    summary: |
+      Specifies which part within the `GeneratedFolder` should be set as the
+      `Class.Model.PrimaryPart|PrimaryPart` of the `Class.ProceduralModel`.
+    description: |
+      This method allows a generator module to specify which part within the
+      `GeneratedFolder` should be set as the
+      `Class.Model.PrimaryPart|PrimaryPart` of the `Class.ProceduralModel` that
+      results get parented to.
+
+      Generation of results happens outside of the `Class.DataModel` and doesn't
+      have direct access to the `Class.ProceduralModel` instance being
+      generated. As a result, the generator must use this method instead of
+      setting the `Class.Model.PrimaryPart|PrimaryPart` directly.
     code_samples: []
     parameters:
       - name: part

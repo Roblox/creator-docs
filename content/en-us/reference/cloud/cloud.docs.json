@@ -3,8 +3,7 @@
   "info": {
     "title": "Cloud API",
     "description": "The Roblox Open Cloud v2 API. This is a subset of endpoints that Roblox\nprovides. See https://create.roblox.com/docs/cloud/open-cloud for more\ndetails.",
-    "version": "2.0.1",
-    "x-roblox-extensions-version": "1.0.0"
+    "version": "2.0.1"
   },
   "servers": [
     {
@@ -58,16 +57,7 @@
             "$ref": "#/components/schemas/CreatorStoreProduct",
             "name": "CreatorStoreProduct"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/creator-store-products/{creator_store_product_id}": {
@@ -117,16 +107,7 @@
             "$ref": "#/components/schemas/CreatorStoreProduct",
             "name": "CreatorStoreProduct"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       },
       "patch": {
         "tags": ["Cloud"],
@@ -202,16 +183,7 @@
             "$ref": "#/components/schemas/CreatorStoreProduct",
             "name": "CreatorStoreProduct"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/groups/{group_id}": {
@@ -256,16 +228,7 @@
             "$ref": "#/components/schemas/Group",
             "name": "Group"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/groups/{group_id}/forum-categories": {
@@ -346,16 +309,7 @@
             "$ref": "#/components/schemas/GroupForumCategory",
             "name": "GroupForumCategory"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/groups/{group_id}/forum-categories/{forum_category_id}/posts": {
@@ -456,16 +410,7 @@
             "$ref": "#/components/schemas/GroupForumPost",
             "name": "GroupForumPost"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/groups/{group_id}/forum-categories/{forum_category_id}/posts/{post_id}/comments": {
@@ -564,16 +509,7 @@
             "$ref": "#/components/schemas/GroupForumComment",
             "name": "GroupForumComment"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/groups/{group_id}/join-requests": {
@@ -654,16 +590,7 @@
             "$ref": "#/components/schemas/GroupJoinRequest",
             "name": "GroupJoinRequest"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/groups/{group_id}/join-requests/{join_request_id}:accept": {
@@ -726,16 +653,7 @@
             "$ref": "#/components/schemas/GroupJoinRequest",
             "name": "GroupJoinRequest"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/groups/{group_id}/join-requests/{join_request_id}:decline": {
@@ -798,16 +716,7 @@
             "$ref": "#/components/schemas/GroupJoinRequest",
             "name": "GroupJoinRequest"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/groups/{group_id}/memberships": {
@@ -883,16 +792,7 @@
             "$ref": "#/components/schemas/GroupMembership",
             "name": "GroupMembership"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/groups/{group_id}/memberships/{membership_id}": {
@@ -961,16 +861,7 @@
             "$ref": "#/components/schemas/GroupMembership",
             "name": "GroupMembership"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/groups/{group_id}/memberships/{membership_id}:assignRole": {
@@ -1039,16 +930,7 @@
             "$ref": "#/components/schemas/GroupMembership",
             "name": "GroupMembership"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/groups/{group_id}/memberships/{membership_id}:unassignRole": {
@@ -1117,16 +999,7 @@
             "$ref": "#/components/schemas/GroupMembership",
             "name": "GroupMembership"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/groups/{group_id}/roles": {
@@ -1200,16 +1073,7 @@
             "$ref": "#/components/schemas/GroupRole",
             "name": "GroupRole"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/groups/{group_id}/roles/{role_id}": {
@@ -1269,16 +1133,7 @@
             "$ref": "#/components/schemas/GroupRole",
             "name": "GroupRole"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}": {
@@ -1323,16 +1178,7 @@
             "$ref": "#/components/schemas/Universe",
             "name": "Universe"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       },
       "patch": {
         "tags": ["Cloud"],
@@ -1399,16 +1245,7 @@
             "$ref": "#/components/schemas/Universe",
             "name": "Universe"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores": {
@@ -1501,13 +1338,7 @@
             "$ref": "#/components/schemas/DataStore",
             "name": "DataStore"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}": {
@@ -1569,13 +1400,7 @@
             "$ref": "#/components/schemas/DataStore",
             "name": "DataStore"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries": {
@@ -1677,13 +1502,7 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       },
       "post": {
         "tags": ["Cloud"],
@@ -1767,13 +1586,7 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}": {
@@ -1844,13 +1657,7 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       },
       "delete": {
         "tags": ["Cloud"],
@@ -1913,13 +1720,7 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       },
       "patch": {
         "tags": ["Cloud"],
@@ -2007,13 +1808,7 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}:increment": {
@@ -2100,13 +1895,7 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}:listRevisions": {
@@ -2208,13 +1997,7 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries": {
@@ -2325,13 +2108,7 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       },
       "post": {
         "tags": ["Cloud"],
@@ -2424,13 +2201,7 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}": {
@@ -2510,13 +2281,7 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       },
       "delete": {
         "tags": ["Cloud"],
@@ -2588,13 +2353,7 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       },
       "patch": {
         "tags": ["Cloud"],
@@ -2691,13 +2450,7 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}:increment": {
@@ -2793,13 +2546,7 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}:listRevisions": {
@@ -2910,13 +2657,7 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}:undelete": {
@@ -2988,13 +2729,7 @@
             "$ref": "#/components/schemas/DataStore",
             "name": "DataStore"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores:snapshot": {
@@ -3057,13 +2792,7 @@
             "$ref": "#/components/schemas/DataStore",
             "name": "DataStore"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/luau-execution-session-task-binary-inputs": {
@@ -3105,7 +2834,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -3123,13 +2852,7 @@
             "$ref": "#/components/schemas/LuauExecutionSessionTaskBinaryInput",
             "name": "LuauExecutionSessionTaskBinaryInput"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/memory-store/queues/{queue_id}/items": {
@@ -3198,13 +2921,7 @@
             "$ref": "#/components/schemas/MemoryStoreQueueItem",
             "name": "MemoryStoreQueueItem"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/memory-store/queues/{queue_id}/items:discard": {
@@ -3267,13 +2984,7 @@
             "$ref": "#/components/schemas/MemoryStoreQueueItem",
             "name": "MemoryStoreQueueItem"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/memory-store/queues/{queue_id}/items:read": {
@@ -3360,13 +3071,7 @@
             "$ref": "#/components/schemas/MemoryStoreQueueItem",
             "name": "MemoryStoreQueueItem"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/memory-store/sorted-maps/{sorted_map_id}/items": {
@@ -3464,13 +3169,7 @@
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
             "name": "MemoryStoreSortedMapItem"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       },
       "post": {
         "tags": ["Cloud"],
@@ -3551,13 +3250,7 @@
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
             "name": "MemoryStoreSortedMapItem"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/memory-store/sorted-maps/{sorted_map_id}/items/{item_id}": {
@@ -3625,13 +3318,7 @@
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
             "name": "MemoryStoreSortedMapItem"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       },
       "delete": {
         "tags": ["Cloud"],
@@ -3691,13 +3378,7 @@
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
             "name": "MemoryStoreSortedMapItem"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       },
       "patch": {
         "tags": ["Cloud"],
@@ -3782,13 +3463,7 @@
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
             "name": "MemoryStoreSortedMapItem"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/memory-store:flush": {
@@ -3856,13 +3531,7 @@
             "$ref": "#/components/schemas/MemoryStore",
             "name": "MemoryStore"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries": {
@@ -3972,13 +3641,7 @@
             "$ref": "#/components/schemas/OrderedDataStoreEntry",
             "name": "OrderedDataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       },
       "post": {
         "tags": ["Cloud"],
@@ -4071,13 +3734,7 @@
             "$ref": "#/components/schemas/OrderedDataStoreEntry",
             "name": "OrderedDataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries/{entry_id}": {
@@ -4157,13 +3814,7 @@
             "$ref": "#/components/schemas/OrderedDataStoreEntry",
             "name": "OrderedDataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       },
       "delete": {
         "tags": ["Cloud"],
@@ -4235,13 +3886,7 @@
             "$ref": "#/components/schemas/OrderedDataStoreEntry",
             "name": "OrderedDataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       },
       "patch": {
         "tags": ["Cloud"],
@@ -4338,13 +3983,7 @@
             "$ref": "#/components/schemas/OrderedDataStoreEntry",
             "name": "OrderedDataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries/{entry_id}:increment": {
@@ -4434,13 +4073,7 @@
             "$ref": "#/components/schemas/OrderedDataStoreEntry",
             "name": "OrderedDataStoreEntry"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}": {
@@ -4494,16 +4127,7 @@
             "$ref": "#/components/schemas/Place",
             "name": "Place"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       },
       "patch": {
         "tags": ["Cloud"],
@@ -4579,16 +4203,7 @@
             "$ref": "#/components/schemas/Place",
             "name": "Place"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/instances/{instance_id}": {
@@ -4664,13 +4279,7 @@
             "$ref": "#/components/schemas/Instance",
             "name": "Instance"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       },
       "patch": {
         "tags": ["Cloud"],
@@ -4763,13 +4372,7 @@
             "$ref": "#/components/schemas/Instance",
             "name": "Instance"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/instances/{instance_id}:listChildren": {
@@ -4868,13 +4471,7 @@
             "$ref": "#/components/schemas/Instance",
             "name": "Instance"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/luau-execution-session-tasks": {
@@ -4925,7 +4522,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -4943,13 +4540,7 @@
             "$ref": "#/components/schemas/LuauExecutionSessionTask",
             "name": "LuauExecutionSessionTask"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions": {
@@ -5034,16 +4625,7 @@
             "$ref": "#/components/schemas/UserRestriction",
             "name": "UserRestriction"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions/{user_restriction_id}": {
@@ -5114,16 +4696,7 @@
             "$ref": "#/components/schemas/UserRestriction",
             "name": "UserRestriction"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       },
       "patch": {
         "tags": ["Cloud"],
@@ -5229,16 +4802,7 @@
             "$ref": "#/components/schemas/UserRestriction",
             "name": "UserRestriction"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-session-tasks": {
@@ -5298,7 +4862,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -5316,13 +4880,7 @@
             "$ref": "#/components/schemas/LuauExecutionSessionTask",
             "name": "LuauExecutionSessionTask"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}": {
@@ -5401,7 +4959,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -5425,13 +4983,7 @@
             "$ref": "#/components/schemas/LuauExecutionSessionTask",
             "name": "LuauExecutionSessionTask"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}/logs": {
@@ -5533,7 +5085,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -5557,13 +5109,7 @@
             "$ref": "#/components/schemas/LuauExecutionSessionTaskLog",
             "name": "LuauExecutionSessionTaskLog"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/subscription-products/{subscription_product_id}/subscriptions/{subscription_id}": {
@@ -5648,16 +5194,7 @@
             "$ref": "#/components/schemas/Subscription",
             "name": "Subscription"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/user-restrictions": {
@@ -5733,16 +5270,7 @@
             "$ref": "#/components/schemas/UserRestriction",
             "name": "UserRestriction"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/user-restrictions/{user_restriction_id}": {
@@ -5804,16 +5332,7 @@
             "$ref": "#/components/schemas/UserRestriction",
             "name": "UserRestriction"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       },
       "patch": {
         "tags": ["Cloud"],
@@ -5910,16 +5429,7 @@
             "$ref": "#/components/schemas/UserRestriction",
             "name": "UserRestriction"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/user-restrictions:listLogs": {
@@ -6003,16 +5513,7 @@
             "$ref": "#/components/schemas/UserRestriction",
             "name": "UserRestriction"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}:generateSpeechAsset": {
@@ -6086,16 +5587,7 @@
             "$ref": "#/components/schemas/Universe",
             "name": "Universe"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}:publishMessage": {
@@ -6149,16 +5641,7 @@
             "$ref": "#/components/schemas/Universe",
             "name": "Universe"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}:restartServers": {
@@ -6218,16 +5701,7 @@
             "$ref": "#/components/schemas/Universe",
             "name": "Universe"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}:translateText": {
@@ -6290,13 +5764,7 @@
             "$ref": "#/components/schemas/Universe",
             "name": "Universe"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/users/{user_id}": {
@@ -6351,16 +5819,7 @@
             "$ref": "#/components/schemas/User",
             "name": "User"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/users/{user_id}/asset-quotas": {
@@ -6441,16 +5900,7 @@
             "$ref": "#/components/schemas/AssetQuota",
             "name": "AssetQuota"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/users/{user_id}/inventory-items": {
@@ -6532,16 +5982,7 @@
             "$ref": "#/components/schemas/InventoryItem",
             "name": "InventoryItem"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/users/{user_id}/notifications": {
@@ -6601,16 +6042,7 @@
             "$ref": "#/components/schemas/UserNotification",
             "name": "UserNotification"
           }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     },
     "/cloud/v2/users/{user_id}:generateThumbnail": {
@@ -6694,16 +6126,7 @@
             "$ref": "#/components/schemas/User",
             "name": "User"
           }
-        },
-        "x-roblox-stability": "BETA",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
+        }
       }
     }
   },
@@ -9931,44 +9354,6 @@
           "Enabled": ["Enabled"],
           "RunContext": ["RunContext"],
           "Source": ["Source"]
-        }
-      }
-    },
-    "securitySchemes": {
-      "roblox-api-key": {
-        "type": "apiKey",
-        "description": "A configurable key that allows granular access to Roblox resources. See https://create.roblox.com/docs/cloud/auth/api-keys for more information.",
-        "in": "header",
-        "name": "x-api-key"
-      },
-      "roblox-oauth2": {
-        "type": "oauth2",
-        "description": "OAuth 2.0 authentication for Roblox APIs. See https://create.roblox.com/docs/cloud/auth/oauth2-overview for more information.",
-        "flows": {
-          "authorizationCode": {
-            "authorizationUrl": "https://apis.roblox.com/oauth/v1/authorize",
-            "tokenUrl": "https://apis.roblox.com/oauth/v1/token",
-            "refreshUrl": "https://apis.roblox.com/oauth/v1/token",
-            "scopes": {
-              "creator-store-product:write": "creator-store-product:write",
-              "creator-store-product:read": "creator-store-product:read",
-              "group-forum:read": "group-forum:read",
-              "group:read": "group:read",
-              "group:write": "group:write",
-              "universe:write": "universe:write",
-              "universe.place:write": "universe.place:write",
-              "universe.user-restriction:read": "universe.user-restriction:read",
-              "universe.user-restriction:write": "universe.user-restriction:write",
-              "universe.subscription-product.subscription:read": "universe.subscription-product.subscription:read",
-              "asset:read": "asset:read",
-              "asset:write": "asset:write",
-              "universe-messaging-service:publish": "universe-messaging-service:publish",
-              "user.advanced:read": "user.advanced:read",
-              "user.social:read": "user.social:read",
-              "user.inventory-item:read": "user.inventory-item:read",
-              "user.user-notification:write": "user.user-notification:write"
-            }
-          }
         }
       }
     }

@@ -58,6 +58,10 @@ The server provides the following tools:
     <td>Generates custom material or texture.</td>
   </tr>
   <tr>
+    <td>`generate_procedural_model`</td>
+    <td>Generates custom procedural models that scale and adapt automatically.</td>
+  </tr>
+  <tr>
     <td>`insert_from_creator_store`</td>
     <td>Inserts assets, plugins, and models from the Creator Store.</td>
   </tr>
@@ -104,6 +108,10 @@ The server provides the following tools:
   <tr>
     <td>`console_output`</td>
     <td>Retrieves output logs while the game is running.</td>
+  </tr>
+  <tr>
+    <td>`screen_capture`</td>
+    <td>Captures the current Studio viewport in Play mode and returns the image data.</td>
   </tr>
   <tr>
     <td>`playtest_subagent`</td>
