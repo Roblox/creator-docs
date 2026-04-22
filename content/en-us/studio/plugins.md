@@ -35,16 +35,17 @@ local function onPluginButtonClicked()
 end
 
 newScriptButton.Click:Connect(onPluginButtonClicked)
+```
 
 ### Save plugin script
 
 To create a plugin, first create a `Class.Script` and save it locally.
 
-1. Insert a new `Class.Script` inside `Class.ServerStorage` and rename it to **AddEmptyScript**.
+1. Insert a new `Class.Script` inside `Class.ServerStorage` and rename it to `AddEmptyScript`.
 
    <img src="../assets/studio/explorer/Plugin-Empty-Script-Adder.png" width="320" />
 
-2. Copy and paste the **AddEmptyScript Plugin** code into the new script.
+2. Copy and paste the **AddEmptyScript Plugin** code above into the new script.
 3. With the new script selected in the **Explorer** window, select **Save as Local Plugin** from Studio's **Plugins** menu.
 4. In the popup window, click **Save** to insert the plugin script into your local **Plugins** folder of the Studio installation.
 5. The plugin should appear in `Class.PluginDebugService` and start running.
@@ -60,13 +61,13 @@ At the broadest level, you can also update **all** plugins by right-clicking `Cl
 
 ### Add toolbar button
 
-To add a button for your plugin to the **Plugins** tab of the Studio toolbar, use the `Class.Plugin:CreateToolbar()` and `Class.PluginToolbar:CreateButton()` methods. In the code for **AddEmptyScript**, line 5 creates a new section in the toolbar and **Plugins** menu folder titled **Custom**, while line 8 creates a button labeled **Empty Script**.
+To add a button for your plugin to the **Plugins** tab of the Studio toolbar, use the `Class.Plugin:CreateToolbar()` and `Class.PluginToolbar:CreateButton()` methods. In the code for `AddEmptyScript`, line 5 creates a new section in the toolbar and **Plugins** menu folder titled **Custom**, while line 8 creates a button labeled **Empty Script**.
 
 <img src="../assets/studio/general/Toolbar-Custom-Plugin-Button.png" width="800" alt="New plugin button added to toolbar in Studio" />
 
 ### Execute code on click
 
-To make the plugin execute code when a user clicks the toolbar button, connect a function to the button's `Class.PluginToolbarButton.Click` event. In the code for **AddEmptyScript**, the connecting function is `onPluginButtonClicked()`.
+To make the plugin execute code when a user clicks the toolbar button, connect a function to the button's `Class.PluginToolbarButton.Click` event. In the code for `AddEmptyScript`, the connecting function is `onPluginButtonClicked()`.
 
 ### Check user selection
 
@@ -76,7 +77,7 @@ To modify a plugin's behavior based on what the user has selected, use the `Clas
 
 ### Support undo and redo
 
-Use `Class.ChangeHistoryService` to allow users to undo and redo changes made by a plugin within an experience. In your script, set the plugin to call `Class.ChangeHistoryService:TryBeginRecording()` and store the identifier assigned to the API call before making changes. Then set the plugin to call `Class.ChangeHistoryService:FinishRecording()` after making changes, so it captures any changes made during the recording session for undo and redo.
+Use `Class.ChangeHistoryService` to allow users to undo and redo changes made by a plugin within an experience. In your script, set the plugin to call `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()` and store the identifier assigned to the API call before making changes. Then set the plugin to call `Class.ChangeHistoryService:FinishRecording()|FinishRecording()` after making changes, so it captures any changes made during the recording session for undo and redo.
 
 The following code sample creates an example plugin that can apply the neon material to selected parts. It uses `Class.ChangeHistoryService` to record and manage the changes made by the plugin:
 
@@ -90,33 +91,33 @@ local button = toolbar:CreateButton("Neon it up", "", "")
 
 -- Connect a function to the click event
 button.Click:Connect(function()
-  -- Try to begin a recording with a specific identifier
-  local recording = ChangeHistoryService:TryBeginRecording("Set selection to neon")
+	-- Try to begin a recording with a specific identifier
+	local recording = ChangeHistoryService:TryBeginRecording("Set selection to neon")
 
-  -- Check if recording was successfully initiated
+	-- Check if recording was successfully initiated
 	if not recording then
 		-- This indicates that your plugin began a previous recording and never completed it
 		-- You may only have one recording per plugin active at a time
 		return
 	end
 
-  -- Iterate through the selected instances
-  for _, instance in Selection:Get() do
-    -- Check if the instance is a BasePart
+	-- Iterate through the selected instances
+	for _, instance in Selection:Get() do
+		-- Check if the instance is a BasePart
 		if instance:IsA("BasePart") then
-      instance.Material = Enum.Material.Neon -- Set the material of the part to Neon
+			instance.Material = Enum.Material.Neon -- Set the material of the part to Neon
 		end
-  end
+	end
 
-  -- Finish the recording, committing the changes to the history
-  ChangeHistoryService:FinishRecording(recording, Enum.FinishRecordingOperation.Commit)
+	-- Finish the recording, committing the changes to the history
+	ChangeHistoryService:FinishRecording(recording, Enum.FinishRecordingOperation.Commit)
 end)
 ```
 
 <Alert severity="warning">
-Some caveats with `Class.ChangeHistoryService` Recordings:
-* If you're using the Multiline Command Bar, don't run any code in the Command Bar that will always be running whilst you have a place open. As the Command Bar uses `Class.ChangeHistoryService` Recordings to allow for undo/redo with commands that make changes to the `Class.DataModel`.
-* Reloading a plugin won't cancel its ongoing `Class.ChangeHistoryService` Recordings, so make use of [Attributes](../scripting/attributes.md#create-attributes) to store the last recording identifier so it can be canceled by the plugin when it reloads.
+Note the following caveats with `Class.ChangeHistoryService` recordings:
+* If you're using the [Multi-line Command Bar](../studio/ui-overview.md#command-bar), don't run any code in the command bar that will always be running while you have a place open, since the command bar uses `Class.ChangeHistoryService` recordings to allow for undo/redo with commands that make changes to the `Class.DataModel`.
+* Reloading a plugin won't cancel its ongoing `Class.ChangeHistoryService` recordings, so make use of [attributes](../scripting/attributes.md#create-attributes) to store the last recording identifier so it can be canceled by the plugin when it reloads.
 </Alert>
 
 ## Upload plugins
@@ -127,9 +128,6 @@ To upload a plugin:
 
 1. In the **Explorer** window, select a plugin script.
 1. Navigate to Studio's **Plugins** menu, then select **Publish as Plugin**.
-
-   <img src="../assets/studio/general/Publish-As-Plugin.png" width="60%" alt="The Publish as Plugin menu item highlighted in Studio's Plugins menu." />
-
 1. <Chip label="OPTIONAL" size="small" variant="outlined" /> In the upper-left corner of the asset configuration window, click the default puzzle piece image to upload a 512&times;512 image thumbnail for your plugin.
 1. Fill in the following fields:
 
@@ -137,7 +135,7 @@ To upload a plugin:
    - **Description** — A description that describes what a potential user can expect the plugin to do.
    - **Creator** — The creator or group that you want to attribute as the creator of the plugin.
 
-1. Click the **Submit** button. Your plugin is now available to you in the Toolbox's **Inventory** and **Creations** tabs.
+1. Click the **Submit** button. Your plugin is now available to you in the [Toolbox](../projects/assets/toolbox.md) under the **Inventory** and **Creations** tabs.
 
 ## Distribute and sell plugins
 
