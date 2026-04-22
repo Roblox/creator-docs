@@ -2189,9 +2189,9 @@ events:
       Fires when the `Class.Instance.Parent` property of the object or one of
       its ancestors is changed.
 
-      This event includes two parameters: `child` refers to the `Class.Instance`
+      This event includes two parameters: `child` refers to the responsible ancestor `Class.Instance`
       whose `Class.Instance.Parent` was actually changed, while `parent` refers
-      to this instance's new `Class.Instance.Parent`.
+      to that ancestor's own new `Class.Instance.Parent`.
 
       You can use this event to track the deletion of an instance in Studio,
       such as manual deletion in the Explorer or through a plugin. If you need
