@@ -36,8 +36,6 @@ end
 
 newScriptButton.Click:Connect(onPluginButtonClicked)
 
-```
-
 ### Save plugin script
 
 To create a plugin, first create a `Class.Script` and save it locally.
