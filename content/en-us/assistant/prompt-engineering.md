@@ -9,7 +9,11 @@ description: Get tips and tricks on how best to prompt Roblox's AI Assistant to 
 
 This document gives guidance on prompting Assistant and provides examples and inspiration on what Assistant can do.
 
-## Be specific
+## Best practices
+
+These best practices can help you get better results when using Assistant. Try them out and see what works best for your workflow.
+
+### Be specific
 
 If Assistant fails, add more details to your prompt and try again. Use instance names exactly as they're spelled, specify which function you want Assistant to use, and tell Assistant which type it's working with, such as a part or a model.
 
@@ -32,21 +36,15 @@ If Assistant fails, add more details to your prompt and try again. Use instance 
   </tr>
 </table>
 
-## Use your selection
+### Use your selection
 
 Selection is a great way of specifying an object or set of objects you want to refer to in your prompt. Select multiple objects and ask Assistant to modify them, make duplicates and place them somewhere, or continue a position pattern like maintaining placement in a line.
 
-## Edit time and run time
+### Edit time and run time
 
 Assistant sometimes confuses the difference between edit time and run time. If you ask Assistant to take an action, it will likely bias towards doing it at edit time. If you want the action to happen during run time, ask Assistant to insert a script that takes the action. For example, tell Assistant "add a script to make the time of day 8:00 AM" instead of "make the time of day 8:00 AM."
 
-## Keep trying
-
-Don't get discouraged if Assistant doesn't work exactly the way you want the first time. Often, making small tweaks and trying again can lead to better results. Many AI tools are non-deterministic, meaning they don't create the exact same output each time you ask them to do something. There's some variance, which you can tap into and control using tweaks to your prompt.
-
-AI in its current state requires work. It takes time to understand how to best speak to Assistant, what it can do, and how to get what you want out of it.
-
-## Multi-step prompts
+### Multi-step prompts
 
 Consider using multi-step prompts to encourage Assistant to think. Instead of asking "Can you explain this script to me?" and pasting in the script, ask it to explain step-by-step by separating the question from the script with `###`. This separation helps Assistant deconstruct and organize the information to provide better answers.
 
@@ -83,6 +81,26 @@ _Certainly! This script is an example of how to handle collisions between two pa
 </blockquote>
 </TabItem>
 </Tabs>
+
+### Prompting for procedural models
+
+Procedural model generation can take longer than text responses. To continue working efficiently, you can keep typing your next prompt while Assistant is generating your model.
+
+When writing prompts for procedural models, make sure to explicitly specify the properties and parameters you want to be able to edit. For example, you can ask Assistant to "add properties to change the colors of the cabin."
+
+It's also helpful to define how different parts of the model should respond to changes in scale or count. For example, you can say "when I scale the table longer or wider, the model should add more chairs proportionally." You can even include specific technical details, like measurements of spacing between parts, like "add a property to control the distance between the rails of the railroad."
+
+### Reference images for procedural models
+
+When uploading images for procedural model generation, use `.png` images. Choose images with good lighting, a clear focus on the object of interest, and a simple background. When possible, use images with good spatial information, like isometric or 3/4 angles, instead of direct front, side, or back views. Avoid low-poly style images.
+
+For objects that can't be fully captured from a single angle, you can include multiple viewpoints in a single image to improve the accuracy of the procedural model generation.
+
+### Keep trying
+
+Don't get discouraged if Assistant doesn't work exactly the way you want the first time. Often, making small tweaks and trying again can lead to better results. Many AI tools are non-deterministic, meaning they don't create the exact same output each time you ask them to do something. There's some variance, which you can tap into and control using tweaks to your prompt.
+
+AI in its current state requires work. It takes time to understand how to best speak to Assistant, what it can do, and how to get what you want out of it.
 
 ## Examples
 
@@ -246,3 +264,38 @@ Add a script to make the spotlights in the folder StreetLights flicker on and of
 Replace each of the selected parts with a model of the same name currently in the data model inside the AssetLibrary Folder under workspace. For example, if the part is called "Suburban House", look for a model called "Suburban House" and replace the part with that model.
 
 <video controls width="90%" src="/assets/assistant/prompt21.webm" />
+
+### Building - Create a scalable ferris wheel
+
+**Prompt:**
+/generate_procedural_model Create a cartoon-themed ferris wheel that has a base with a fence and a gate around it. Add properties to edit the number of cabins on the ferris wheel. When the number of cabins changes, the spacing between them should also change proportionally. Also add properties to change the color of each individual cabin.
+
+<video controls width="90%" src="/assets/assistant/prompt22.mp4" />
+
+### Building - Create a modular train track
+
+**Prompt:**
+/generate_procedural_model Create a modular piece of train track that can be reused across different sections. Add a property to control the curvature of the track from 0-90 degrees to allow for bends. Include properties to adjust the distance between the rails, the gauge (rail size), the spacing between the railroad ties, and the overall length of the track.
+
+<video controls width="90%" src="/assets/assistant/prompt23.mp4" />
+
+### Building - Create a modular medieval castle
+
+**Prompt:**
+/generate_procedural_model A stylized, round medieval castle features a red-brick base, a white-plastered upper tier, and a large terracotta conical roof. A single, dominant landmark tower stands beside numerous small, slender turrets, all anchored by green shrubbery.
+
+<video controls width="90%" src="/assets/assistant/prompt24.webm" />
+
+### Building - Create a modular suspension bridge
+
+**Prompt:**
+/generate_procedural_model A procedural bridge that adjusts the number of suspension cables based on its length and has a 'Rust' material attribute to change the material type.
+
+<video controls width="90%" src="/assets/assistant/prompt25.webm" />
+
+### Building - Create a scalable dining set
+
+**Prompt:**
+/generate_procedural_model A cyberpunk-inspired dining set with table and chairs. When I scale the table and make it longer or wider, add more chairs proportionally.
+
+<video controls width="90%" src="/assets/assistant/prompt26.webm" />
