@@ -9,48 +9,82 @@ summary: |
   Service allowing plugins to automate and customize Test and Run mode testing.
 description: |
   `StudioTestService` allows plugins to automate and customize Test and Run mode
-  testing. With StudioTestService, your plugins can launch tests that jump
+  testing. With `StudioTestService`, your plugins can launch tests that jump
   straight to a specific part of your game, or run complex code tests
   automatically.
 
-  The following is an example of automated unit testing:
+  You can use `StudioTestService` to start a server with multiple simulated
+  clients, add players mid-session, pass arguments into running tests, end tests
+  from the server, and trigger client disconnections, all without manually
+  clicking through the Test tab in Studio.
+
+  These methods complement the existing playtest automation available through
+  Studio's built-in MCP server. Where the MCP server's `start_stop_play` tool
+  starts a single Play Client session, the `StudioTestService` methods are
+  designed for scripted multi-client scenarios such as lobby, matchmaking, and
+  join/leave flow testing.
+
+  A typical multiplayer test splits across three script contexts: the plugin
+  that launches it, the server that drives it, and the clients that participate:
+
+  Plugin script:
 
   ```lua
-  --Plugin Script
   local StudioTestService = game:GetService("StudioTestService")
 
-  local testResult = StudioTestService:ExecuteRunModeAsync("MyTestSuite")
-  print("Test finished. Result:", testResult)
+  local toolbar = plugin:CreateToolbar("STS Tests")
+  local button = toolbar:CreateButton("MyTest", "", "")
+
+  button.Click:Connect(function()
+      button.Enabled = false
+      local result = StudioTestService:ExecuteMultiplayerTestAsync(1, "MyArguments")
+      assert(result == "Success!")
+      print("Test finished successfully!")
+      button.Enabled = true
+  end)
   ```
+
+  Server script:
 
   ```lua
-  --Server Script
+  local Players = game:GetService("Players")
   local StudioTestService = game:GetService("StudioTestService")
-  local RunService = game:GetService("RunService")
 
-  if not RunService:IsStudio() or not RunService:IsRunMode() then
-  	return
-  end
+  assert(StudioTestService:GetTestArgs() == "MyArguments")
 
-  local suiteName = StudioTestService:GetTestArgs()
-  if suiteName then
-      local tests = getTestsArrayByName(suiteName)
-      if tests then
-          local result = "SUCCESS!"
-          for name, test in tests do
-              if not pcall(test) then
-                  result = name .. " failed!"
-                  break
-              end
-          end
-          StudioTestService:EndTest(result)
-      else
-          StudioTestService:EndTest("Suite not found")
-      end
-  else
-  	print("Starting manual playtest")
-  end
+  Players.PlayerRemoving:Connect(function(player)
+      print(player.Name .. " left the experience")
+      task.wait(3)
+      StudioTestService:EndTest("Success!")
+  end)
   ```
+
+  Client script:
+
+  ```lua
+  if not game:IsLoaded() then
+      game.Loaded:Wait()
+  end
+
+  local StudioTestService = game:GetService("StudioTestService")
+  task.wait(3)
+  StudioTestService:LeaveTest()
+  ```
+
+  ##### Limitations
+
+  - `ExecuteMultiplayerTestAsync` can only be called from plugin scripts. It
+    yields until the test ends, so wrap it in a coroutine if the calling plugin
+    needs to remain responsive.
+  - `ExecuteMultiplayerTestAsync` cannot be called from inside a running test.
+  - `ExecuteMultiplayerTestAsync` supports up to 8 simulated clients per test
+    session.
+  - Only one multiplayer test session can run at a time per Studio instance.
+  - `AddPlayers` and `EndTest` must be called from the server DataModel of a
+    running test.
+  - `CanLeaveTest` and `LeaveTest` must be called from a client DataModel.
+  - `GetTestArgs` currently has a known issue when called from a client
+    LocalScript.
 code_samples: []
 inherits:
   - Instance
@@ -60,8 +94,71 @@ tags:
   - Service
   - NotReplicated
 deprecation_message: ''
-properties: []
+properties:
+  - name: StudioTestService.EditModeActive
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
 methods:
+  - name: StudioTestService:AddPlayers
+    summary: ''
+    description: |
+      Adds `numPlayers` additional client DataModels to the running test
+      session. Useful for simulating staggered joins, testing lobby-to-game
+      transitions under load, or reproducing race conditions that only appear
+      when clients connect at different times.
+
+      Must be called from the server DataModel of an active multiplayer test.
+
+      Errors if called outside of an active test, or if called from a client
+      DataModel.
+    code_samples:
+      - StudioTestService-AddPlayers
+    parameters:
+      - name: numPlayers
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: StudioTestService:CanLeaveTest
+    summary: ''
+    description: |
+      Returns `true` if the calling client DataModel is allowed to disconnect
+      from the test, and `false` otherwise. Check this before calling
+      `LeaveTest` to avoid errors during session teardown or during states where
+      disconnection is blocked.
+
+      Call from a client DataModel.
+    code_samples:
+      - StudioTestService-CanLeaveTest
+    parameters: []
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: StudioTestService:EndTest
     summary: ''
     description: |
@@ -76,7 +173,8 @@ methods:
       This method returns immediately and ends the test session asynchronously.
       It errors if called from any `Class.DataModel` other than that of the
       server during a running Studio test session.
-    code_samples: []
+    code_samples:
+      - StudioTestService-EndTest
     parameters:
       - name: value
         type: Variant
@@ -91,6 +189,43 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: StudioTestService:ExecuteMultiplayerTestAsync
+    summary: ''
+    description: |
+      Launches a multiplayer test session with one server and `numPlayers`
+      client DataModels. Yields until the test completes and returns the value
+      passed to `EndTest` on the server.
+
+      Supports up to 8 simulated clients per test session.
+
+      The optional `args` value is forwarded to scripts running inside the test
+      session and can be read via `GetTestArgs`. It can be any
+      Roblox-serializable value, for example a string, a Color3, or a table.
+      Common uses include passing a test name, a timeout, or configuration
+      flags.
+
+      Errors if a test is already running. Errors if `numPlayers` is less than 1
+      or exceeds 8.
+    code_samples:
+      - StudioTestService-ExecuteMultiplayerTestAsync
+    parameters:
+      - name: numPlayers
+        type: int
+        default:
+        summary: ''
+      - name: args
+        type: Variant
+        default:
+        summary: ''
+    returns:
+      - type: Variant
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
   - name: StudioTestService:ExecutePlayModeAsync
@@ -156,12 +291,40 @@ methods:
       `Class.StudioTestService:ExecutePlayModeAsync()` or
       `Class.StudioTestService:ExecuteRunModeAsync()` for the current test
       session, or `nil` if the session was not started by those methods.
-    code_samples: []
+
+      `GetTestArgs` returns the value as-is, preserving its type. For example,
+      if the plugin passed a Color3, `GetTestArgs` returns a Color3.
+
+      Note that if you call `GetTestArgs` a client `LocalScript`, it may fail.
+      Server-side calls work as expected.
+    code_samples:
+      - StudioTestService-GetTestArgs
     parameters: []
     returns:
       - type: Variant
         summary: |
           Arguments passed to the test, or `nil`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: StudioTestService:LeaveTest
+    summary: ''
+    description: |
+      Disconnects the calling client from the active multiplayer test. Useful
+      for testing player leave and reconnection logic, cleanup-on-disconnect
+      behavior, and leader reassignment in lobby systems.
+
+      Call from a client DataModel. Make sure to check `CanLeaveTest()` first.
+
+      Errors if the client cannot currently leave or if called from a server
+      DataModel.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None

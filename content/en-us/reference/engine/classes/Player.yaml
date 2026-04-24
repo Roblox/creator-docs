@@ -1310,6 +1310,27 @@ methods:
     capabilities:
       - Players
       - Social
+  - name: Player:GetFriendsWhoPlayedAsync
+    summary: ''
+    description: |
+      Returns an array of user IDs of any friends who have previously played
+      this game. For example, if a player has had two friends play the game, the
+      method might return `{1111111111, 2222222222}`. If no friends have played
+      this game, the method returns an empty array (`{}`).
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          An array of user IDs.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+      - Social
   - name: Player:GetJoinData
     summary: |
       Returns a dictionary containing information describing how the player

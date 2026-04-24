@@ -368,6 +368,7 @@ descendants:
   - ScriptEditorService
   - SelectionHighlightManager
   - Studio
+  - StudioDeviceSimulatorService
   - StudioTestService
   - StudioTheme
   - TeamCreateService
@@ -628,7 +629,8 @@ properties:
     capabilities: []
   - name: Instance.Sandboxed
     summary: |
-      Turns the instance to be a sandboxed container.
+      When enabled, the instance can only access abilities in its `Capabilities`
+      list.
     description: |
       Turns the instance to be a **sandboxed container**, an experimental
       feature which limits the actions that scripts inside a particular

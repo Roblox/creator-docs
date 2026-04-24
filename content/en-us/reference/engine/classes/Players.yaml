@@ -1102,6 +1102,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+    simulationAccess: true
   - name: Players:GetPlayers
     summary: |
       Returns a table of all presently connected `Class.Player` objects.

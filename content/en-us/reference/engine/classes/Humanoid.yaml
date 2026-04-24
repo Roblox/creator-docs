@@ -361,6 +361,7 @@ properties:
       can_save: true
     capabilities:
       - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid.FloorMaterial
     summary: |
       Describes the `Enum.Material` that the `Class.Humanoid` is currently

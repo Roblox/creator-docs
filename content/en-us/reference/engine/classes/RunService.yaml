@@ -325,6 +325,14 @@ methods:
           Optional `Enum.StepFrequency` value indicating the frequency at which
           to call the bound function. If not provided, the default frequency
           will be used.
+      - name: priority
+        type: int
+        default:
+        summary: |
+          Optional priority of the binding as an integer; it determines the
+          order in which bound functions are called within a simulation step.
+          Lower numbers are called first. If two bindings have the same
+          priority, the order between them is unspecified. Defaults to 2000.
     returns:
       - type: RBXScriptConnection
         summary: ''

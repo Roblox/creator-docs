@@ -64,7 +64,7 @@ properties:
     category: Appearance
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
     capabilities:
       - UI
 methods: []

@@ -2789,6 +2789,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/Studio.yaml
                 ignoreTranslation: true
+              - title: StudioDeviceSimulatorService
+                path: /reference/engine/classes/StudioDeviceSimulatorService
+                type: engineapi
+                source: /reference/engine/classes/StudioDeviceSimulatorService.yaml
+                ignoreTranslation: true
               - title: StudioService
                 path: /reference/engine/classes/StudioService
                 type: engineapi
@@ -5021,11 +5026,6 @@ navigation:
         path: /reference/engine/enums/MouseBehavior
         type: engineapi
         source: /reference/engine/enums/MouseBehavior.yaml
-        ignoreTranslation: true
-      - title: MoverConstraintRootBehaviorMode
-        path: /reference/engine/enums/MoverConstraintRootBehaviorMode
-        type: engineapi
-        source: /reference/engine/enums/MoverConstraintRootBehaviorMode.yaml
         ignoreTranslation: true
       - title: MoveState
         path: /reference/engine/enums/MoveState
