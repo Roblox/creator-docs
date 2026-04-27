@@ -4,24 +4,31 @@
 
 name: RenderingCacheOptimizationMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls rendering cache optimization behavior.
+description: |
+  Determines whether the renderer caches per-object rendering state to avoid
+  redundant per-frame work. This enum is used by
+  `Class.Workspace.RenderingCacheOptimizations`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Uses the engine-default rendering cache state.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Disabled
-    summary: ''
+    summary: |
+      Rendering cache optimizations are disabled.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Enabled
-    summary: ''
+    summary: |
+      Rendering cache optimizations are enabled.
     value: 2
     tags: []
     deprecation_message: ''

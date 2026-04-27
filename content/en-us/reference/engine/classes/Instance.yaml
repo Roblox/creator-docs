@@ -2185,15 +2185,11 @@ methods:
 events:
   - name: Instance.AncestryChanged
     summary: |
-      Fires when the `Class.Instance.Parent` property of the object or one of
+      Fires when the `Class.Instance.Parent` property of this object or one of
       its ancestors is changed.
     description: |
-      Fires when the `Class.Instance.Parent` property of the object or one of
-      its ancestors is changed.
-
-      This event includes two parameters: `child` refers to the `Class.Instance`
-      whose `Class.Instance.Parent` was actually changed, while `parent` refers
-      to this instance's new `Class.Instance.Parent`.
+      Fires when this instance is reparented or when any of its ancestors is
+      reparented.
 
       You can use this event to track the deletion of an instance in Studio,
       such as manual deletion in the Explorer or through a plugin. If you need
@@ -2206,13 +2202,14 @@ events:
         type: Instance
         default:
         summary: |
-          The `Class.Instance` whose `Class.Instance.Parent` has been changed.
+          The instance whose `Class.Instance.Parent|Parent` property changed,
+          which can be this instance or a more distant ancestor, **not**
+          necessarily the instance the handler is connected to.
       - name: parent
         type: Instance
         default:
         summary: |
-          The new `Class.Instance.Parent` of the `Class.Instance` whose
-          `Class.Instance.Parent` was changed.
+          The new parent of the `child` parameter.
     tags: []
     deprecation_message: ''
     security: None

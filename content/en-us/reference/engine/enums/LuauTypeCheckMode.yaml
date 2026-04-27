@@ -4,29 +4,36 @@
 
 name: LuauTypeCheckMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  The Luau type checking mode for scripts in the experience.
+description: |
+  Determines how strictly the Luau type checker analyzes scripts in the
+  experience. This enum is used by `Class.Workspace.LuauTypeCheckMode`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Uses the engine-default type checking mode.
     value: 0
     tags: []
     deprecation_message: ''
   - name: NoCheck
-    summary: ''
+    summary: |
+      Scripts are not type-checked.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Nonstrict
-    summary: ''
+    summary: |
+      Scripts are type-checked in nonstrict mode.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Strict
-    summary: ''
+    summary: |
+      Scripts are type-checked in strict mode.
     value: 3
     tags: []
     deprecation_message: ''

@@ -4,24 +4,31 @@
 
 name: ReplicateInstanceDestroySetting
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls how `Instance:Destroy()` calls are replicated from server to clients.
+description: |
+  Determines the replication behavior the server uses when `Instance:Destroy()`
+  is called. This enum is used by
+  `Class.Workspace.ReplicateInstanceDestroySetting`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Uses the engine-default instance destroy replication behavior.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Disabled
-    summary: ''
+    summary: |
+      Uses legacy instance destroy replication behavior.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Enabled
-    summary: ''
+    summary: |
+      Uses improved instance destroy replication behavior.
     value: 2
     tags: []
     deprecation_message: ''

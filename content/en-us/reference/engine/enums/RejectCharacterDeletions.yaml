@@ -4,24 +4,32 @@
 
 name: RejectCharacterDeletions
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls whether the server rejects client attempts to delete player
+  characters.
+description: |
+  Determines whether the server rejects client replication requests that would
+  delete player character models from the workspace. This enum is used by
+  `Class.Workspace.RejectCharacterDeletions`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Uses the engine-default behavior (currently equivalent to `Enabled`).
     value: 0
     tags: []
     deprecation_message: ''
   - name: Disabled
-    summary: ''
+    summary: |
+      The server does not reject character deletion requests from clients.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Enabled
-    summary: ''
+    summary: |
+      The server rejects client attempts to delete player characters.
     value: 2
     tags: []
     deprecation_message: ''

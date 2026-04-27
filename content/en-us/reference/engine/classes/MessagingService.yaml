@@ -9,8 +9,8 @@ summary: |
   Allows servers of the same experience to communicate with each other.
 description: |
   **MessagingService** allows servers of the same experience to communicate with
-  each other in real time (less than 1 second) using topics. Topics are
-  developer‑defined strings (1–80 characters) that servers use to send and
+  each other in real time, typically within 1-2 seconds, using topics. Topics
+  are developer‑defined strings (1–80 characters) that servers use to send and
   receive messages.
 
   Delivery is best effort and not guaranteed. Make sure to architect your

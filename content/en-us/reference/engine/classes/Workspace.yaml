@@ -170,8 +170,16 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.AvatarUnificationMode
-    summary: ''
-    description: ''
+    summary: |
+      Enables the R6 to R15 adapter, allowing R15 avatars to join R6
+      experiences.
+    description: |
+      When `Enum.AvatarUnificationMode.Enabled`, R15 avatars can join R6
+      experiences via the R6 to R15 adapter. R15 characters receive invisible
+      adapter parts with R6-compatible names welded to their corresponding R15
+      parts, preserving R6-like scale and movement while enabling R15 features
+      such as layered clothing and animatable heads. Only relevant when the
+      experience's avatar type is set to R6.
     code_samples: []
     type: AvatarUnificationMode
     tags:
@@ -327,8 +335,16 @@ properties:
     capabilities:
       - Basic
   - name: Workspace.FallHeightEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether parts that fall below
+      `Class.Workspace.FallenPartsDestroyHeight` are automatically destroyed.
+    description: |
+      When `false`, the kill plane defined by
+      `Class.Workspace.FallenPartsDestroyHeight` is disabled and falling parts
+      are not automatically removed. Defaults to `true`.
+
+      This property can be read by scripts but can only be set by plugins, the
+      command bar, or the properties window in Studio.
     code_samples: []
     type: boolean
     tags: []
@@ -465,8 +481,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.InsertPoint
-    summary: ''
-    description: ''
+    summary: |
+      The world position at which new objects are placed when inserted from the
+      toolbox.
+    description: |
+      Stores the world-space position used when inserting new objects into the
+      workspace via the Studio IDE.
     code_samples: []
     type: Vector3
     tags:
@@ -503,8 +523,13 @@ properties:
     capabilities:
       - Physics
   - name: Workspace.LayeredClothingCacheOptimizations
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether layered clothing cache optimizations are enabled.
+    description: |
+      Controls whether the engine caches layered clothing rendering data to
+      improve performance for experiences with many characters wearing layered
+      clothing. `Enum.RolloutState|Default` follows the current engine-wide
+      rollout state.
     code_samples: []
     type: RolloutState
     tags:
@@ -521,8 +546,11 @@ properties:
     capabilities:
       - AvatarAppearance
   - name: Workspace.LuauTypeCheckMode
-    summary: ''
-    description: ''
+    summary: |
+      Sets the Luau type checking mode for scripts in the experience.
+    description: |
+      Controls the Luau type checking mode applied to scripts in the experience.
+      See `Enum.LuauTypeCheckMode` for the available modes.
     code_samples: []
     type: LuauTypeCheckMode
     tags: []
@@ -630,8 +658,14 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.PathfindingUseImprovedSearch
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether an improved search algorithm is used by
+      `Class.PathfindingService`.
+    description: |
+      When `Enum.PathfindingUseImprovedSearch|Enabled`,
+      `Class.PathfindingService` uses an improved pathfinding algorithm.
+      `Enum.PathfindingUseImprovedSearch|Default` follows the current
+      engine-wide rollout state.
     code_samples: []
     type: PathfindingUseImprovedSearch
     tags:
@@ -647,8 +681,13 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.PhysicsImprovedSleep
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the improved partial physics sleep algorithm is enabled.
+    description: |
+      Controls whether the physics engine uses an improved algorithm for partial
+      sleep, the process by which the engine stops simulating parts that are no
+      longer actively moving. Enabling this property can reduce CPU overhead in
+      games with many near-stationary parts.
     code_samples: []
     type: RolloutState
     tags:
@@ -691,8 +730,14 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.PlayerCharacterDestroyBehavior
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the engine automatically calls `Destroy()` on a player's
+      character when it is replaced and on the `Player` object when the player
+      leaves.
+    description: |
+      When enabled, the engine automatically calls `Destroy()` on a player's old
+      character when it is replaced (for example, on respawn) and on the
+      `Class.Player` object itself when the player leaves the server.
     code_samples: []
     type: PlayerCharacterDestroyBehavior
     tags:
@@ -730,8 +775,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.PrimalPhysicsSolver
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the experimental Primal Physics Solver is enabled.
+    description: |
+      The Primal Physics Solver is an experimental constraint solver that can
+      improve accuracy in complex setup. Setting this property to
+      `Enum.PrimalPhysicsSolver|Experimental` enables it.
     code_samples: []
     type: PrimalPhysicsSolver
     tags:
@@ -747,8 +796,15 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.RejectCharacterDeletions
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the server rejects attempts by clients to delete player
+      characters from the workspace.
+    description: |
+      When enabled, the server ignores client requests to delete player
+      `Class.Model|character` objects from the workspace, preventing exploits
+      that attempt to abuse this replication path.
+      `Enum.RejectCharacterDeletions|Default` is currently equivalent to
+      `Enabled`.
     code_samples: []
     type: RejectCharacterDeletions
     tags:
@@ -764,8 +820,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.RenderingCacheOptimizations
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether rendering cache optimizations are enabled.
+    description: |
+      Controls whether the engine caches rendering state data to reduce
+      redundant per-frame work. When enabled, the renderer can skip recomputing
+      state for static objects, improving frame rates in scenes with many parts.
     code_samples: []
     type: RenderingCacheOptimizationMode
     tags:
@@ -782,8 +842,13 @@ properties:
     capabilities:
       - Physics
   - name: Workspace.ReplicateInstanceDestroySetting
-    summary: ''
-    description: ''
+    summary: |
+      Controls how `Instance:Destroy()` calls are replicated from the server to
+      clients.
+    description: |
+      Determines the replication behavior when `Instance:Destroy()` is called on
+      the server. When `Enum.ReplicateInstanceDestroySetting|Enabled`, the
+      engine uses improved replication semantics for instance destruction.
     code_samples: []
     type: ReplicateInstanceDestroySetting
     tags:
@@ -799,8 +864,13 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.Retargeting
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether animation retargeting is enabled for character
+      animations.
+    description: |
+      Sets the animation retargeting mode. Retargeting adapts animations to
+      character rigs of different proportions, allowing a single animation to
+      play correctly on characters of varying sizes and shapes.
     code_samples: []
     type: AnimatorRetargetingMode
     tags: []
@@ -816,8 +886,11 @@ properties:
     capabilities:
       - Animation
   - name: Workspace.SandboxedInstanceMode
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether sandboxed instance mode (script capabilities) is enabled.
+    description: |
+      When set to `Enum.SandboxedInstanceMode|Experimental`, the engine enables
+      sandboxed instance mode, which lets you use script capabilities.
     code_samples: []
     type: SandboxedInstanceMode
     tags:
@@ -877,7 +950,7 @@ properties:
       enabled for the place. This property is not scriptable and therefore must
       be set on the `Workspace` object in Studio.
 
-      #### See Also
+      #### See also
 
       - `Class.Workspace.StreamingMinRadius`
       - `Class.Workspace.StreamingTargetRadius`
@@ -931,7 +1004,7 @@ properties:
       doing so will require more memory and more server bandwidth at the expense
       of other components.
 
-      #### See Also
+      #### See also
 
       - `Class.Workspace.StreamingEnabled` which controls whether content
         streaming is enabled
@@ -962,7 +1035,7 @@ properties:
       Note that the engine is allowed to retain previously loaded content beyond
       the target radius, memory permitting.
 
-      #### See Also
+      #### See also
 
       - `Class.Workspace.StreamingEnabled` which controls whether content
         streaming is enabled
@@ -991,7 +1064,7 @@ properties:
       `Class.Player.ReplicationFocus|ReplicationFocus` based on device memory
       conditions, or based on the streaming radius.
 
-      #### See Also
+      #### See also
 
       - `Class.Workspace.StreamingEnabled` which controls whether content
         streaming is enabled
@@ -1095,8 +1168,16 @@ properties:
       can_save: true
     capabilities: []
   - name: Workspace.UseNewLuauTypeSolver
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the new Luau type solver is used for type inference.
+    description: |
+      This `Enum.RolloutState` property controls whether the new Luau type
+      solver is used for type inference and type checking in scripts. The new
+      type solver provides improved accuracy and performance for type analysis.
+      Note that `Class.Workspace.LuauTypeCheckMode` controls the mode (strict,
+      nonstrict, etc.) while this property controls which solver implementation
+      is active. `Enum.RolloutState|Default` follows the current engine-wide
+      rollout state.
     code_samples: []
     type: RolloutState
     tags:
@@ -1207,7 +1288,9 @@ methods:
       Objects associated with `Class.Humanoid|Humanoids` are exempt from physics
       throttling.
 
-      See also `Class.Workspace:SetPhysicsThrottleEnabled()`.
+      #### See also
+
+      - `Class.Workspace:SetPhysicsThrottleEnabled()`.
     code_samples: []
     parameters: []
     returns:
@@ -1280,7 +1363,7 @@ methods:
       for things like timed rewards, as it is not secure compared to tracking
       such timers on the server.
 
-      See also:
+      #### See also
 
       - `Class.Workspace.DistributedGameTime|DistributedGameTime`, a game-time
         clock

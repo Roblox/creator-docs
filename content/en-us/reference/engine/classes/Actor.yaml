@@ -15,6 +15,18 @@ description: |
 
   To learn more about using multiple Actors to optimize script performance, see
   [Parallel Luau](../../../scripting/multithreading.md).
+
+  #### Notes
+
+  - Each `Actor` runs in its own Luau VM. `Class.ModuleScript|ModuleScripts`
+    required by an `Actor` are **not** shared or cached across `Actors` or with
+    the main thread. Each VM executes its own copy of the module, so
+    module-level state is isolated per `Actor`. Design accordingly if your
+    modules hold state you intend to share.
+  - `script:GetActor()` returns `nil` when called from a `Class.ModuleScript`
+    unless the `ModuleScript` is a descendant of the `Actor`. `ModuleScripts`
+    stored elsewhere (for example, `Class.ReplicatedStorage`) and required by an
+    `Actor` are not considered descendants of the `Actor`.
 code_samples: []
 inherits:
   - Model
@@ -128,6 +140,11 @@ methods:
 
       See `Class.Actor:BindToMessage()|BindToMessage()` for details on receiving
       a message sent using `Class.Actor:SendMessage()|SendMessage()`.
+
+      Note that message arguments are **passed by copy** across Luau VM
+      boundaries, not by reference. Sending large tables incurs a full copy on
+      each call. Functions are bound to a specific VM and cannot be passed in
+      messages.
 
       ```lua
       -- Assume `actor` is a local variable referring to an Actor instance

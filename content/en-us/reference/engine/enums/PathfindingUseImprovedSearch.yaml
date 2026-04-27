@@ -4,24 +4,31 @@
 
 name: PathfindingUseImprovedSearch
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls whether `Class.PathfindingService` uses an improved search algorithm.
+description: |
+  Determines whether `Class.PathfindingService` uses an improved pathfinding
+  search algorithm. This enum is used by
+  `Class.Workspace.PathfindingUseImprovedSearch`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Uses the engine-default pathfinding behavior.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Disabled
-    summary: ''
+    summary: |
+      Uses the legacy pathfinding search algorithm.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Enabled
-    summary: ''
+    summary: |
+      Uses the improved pathfinding search algorithm.
     value: 2
     tags: []
     deprecation_message: ''

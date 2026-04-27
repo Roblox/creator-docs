@@ -4,19 +4,25 @@
 
 name: SandboxedInstanceMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls whether sandboxed instance mode (script capabilities) is enabled.
+description: |
+  Determines whether sandboxed instance mode, which lets you use script
+  capabilities, is active. This enum is used by
+  `Class.Workspace.SandboxedInstanceMode`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Uses the engine-default sandboxed instance state.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Experimental
-    summary: ''
+    summary: |
+      Sandboxed instance mode is enabled.
     value: 1
     tags: []
     deprecation_message: ''
