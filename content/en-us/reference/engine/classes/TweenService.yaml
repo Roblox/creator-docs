@@ -189,5 +189,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Basic
+    simulationAccess: true
 events: []
 callbacks: []

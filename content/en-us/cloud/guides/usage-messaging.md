@@ -21,11 +21,17 @@ Currently, the API can only target live experience servers through HTTP.
 
 ## Limits
 
-| Limit            | Description                                                                                                                                                                          |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Rate**         | Roblox throttles message requests at `50 + (5 * number_of_players_in_experience)`. For example, an experience with 20 players begins to throttle at 150 message requests per minute. |
-| **Topic size**   | 80 characters                                                                                                                                                                        |
-| **Message size** | 1,024 characters (1 KiB)                                                                                                                                                              |
+The Messaging Service API follows the same limits as the Engine `Class.MessagingService`. Rate limits are shared across both APIs, and usage from both APIs is counted against the same limits.
+
+| Limit                                     | Description                                                      |
+| ----------------------------------------- | -----------------------------------------------------------------|
+| **Messages sent per game server**         | `600 + 240 * (number of players in this game server)` per minute |
+| **Messages received per topic**           | `(40 + 80 * number of servers)` per minute                       |
+| **Messages received for entire game**     | `(400 + 200 * number of servers)` per minute                     |
+| **Subscriptions allowed per game server** | `20 + 8 * (number of players in this game server)`               |
+| **Subscribe requests per game server**    | 240 requests per minute                                          |
+| **Topic size**                            | 80 characters                                                    |
+| **Message size**                          | 1,024 characters (1 KiB)                                         |
 
 ## Set up a topic for messaging
 

@@ -74,6 +74,10 @@ The server provides the following tools:
 </thead>
 <tbody>
   <tr>
+    <td>`explore_subagent`</td>
+    <td>Investigates your place in parallel and return a compact summary without cluttering the main conversation.</td>
+  </tr>
+  <tr>
     <td>`search_game_tree`</td>
     <td>Explores the instance hierarchy as a flat JSON array. Supports filtering by path, instance type, and keywords.</td>
   </tr>
@@ -164,29 +168,53 @@ To enable the MCP server in Studio:
 2. Click **&hellip;** &rang; **Manage MCP Servers**.
 3. Turn on **Enable Studio as MCP server**.
 
-Once enabled, the settings panel displays the JSON configuration and startup command for your client. When a client connects successfully, a green indicator shows the number of connected clients.
+Once enabled, the settings panel displays the quick connect option and setup instructions for different clients. When a client connects successfully, a green indicator shows the number of connected clients.
 
 ## Connect your client
+
+You can connect your client to the Studio MCP server using quick connect, a JSON configuration, or a CLI command.
+
+- Use **quick connect** if your client is supported.
+- If not, use a **JSON configuration** if your client supports MCP config files.
+- Otherwise, use a **CLI command**.
+
+The Studio MCP server works with any client that supports `stdio` transport. After adding the configuration, follow your client's documentation to complete setup, then restart the client to apply your changes.
 
 <Alert severity="warning">
 MCP clients can read and modify content in your open Roblox places. Make sure to only connect clients you trust.
 </Alert>
 
-To connect your client to the server, you can use either a JSON configuration or a CLI command.
+### Quick connect
 
-If your client supports MCP config files, use the JSON configuration. Otherwise, use the CLI command.
+Quick connect supports the following clients:
 
-<h5 style={{marginTop: '36px'}}>JSON configuration</h5>
+- Antigravity
+- Codex CLI
+- Claude Code
+- Claude Desktop
+- Cursor
+- Gemini CLI
+- Visual Studio Code
 
-Most editors use JSON configuration files for MCP servers. The following examples show complete configurations you can use.
+To connect using quick connect:
 
-If Roblox Studio is your only MCP server, use these configurations as they are. If you're using multiple MCP servers, copy the `Roblox_Studio` entry and add it to your existing `mcpServers` dictionary.
+1. Go to **Assistant Settings** &rang; **MCP Servers**.
+2. Expand the **Quick connect** dropdown to view supported clients installed on your computer.
+3. Turn on your chosen client.
 
-The configuration depends on your operating system.
+If the client you want doesn't appear in the **Quick connect** list, install it and restart Roblox Studio.
+
+### JSON configuration
+
+Most MCP clients support JSON configuration files. The following examples show complete configurations you can use.
+
+If Roblox Studio is your only MCP server, use these configurations as-is. If you're using multiple MCP servers, copy the `Roblox_Studio` entry and add it to your existing `mcpServers` dictionary.
 
 <Alert severity="info">
 Your `mcp.json` file might already contain other entries. When adding the `Roblox_Studio` configuration, make sure each entry is separated by a comma. Missing commas will result in invalid JSON and prevent the configuration from loading.
 </Alert>
+
+Configurations vary by operating system:
 
 ```json title="Windows"
 {
@@ -212,9 +240,9 @@ Your `mcp.json` file might already contain other entries. When adding the `Roblo
 }
 ```
 
-<h5 style={{marginTop: '36px'}}>CLI command</h5>
+### CLI command
 
-Some MCP clients require a CLI command instead of a JSON configuration. The command depends on your operating system.
+Some MCP clients require a CLI command instead of a JSON configuration. Use the appropriate command for your operating system:
 
 ```bash title="Windows"
 cmd.exe /c %LOCALAPPDATA%\Roblox\mcp.bat
@@ -223,90 +251,6 @@ cmd.exe /c %LOCALAPPDATA%\Roblox\mcp.bat
 ```bash title="macOS"
 /Applications/RobloxStudio.app/Contents/MacOS/StudioMCP
 ```
-
-### Claude Code
-
-To connect Claude Code:
-
-1. Open your terminal and run one of the following commands:
-    - Windows: `claude mcp add Roblox_Studio -- cmd.exe /c %LOCALAPPDATA%\Roblox\mcp.bat`
-    - macOS: `claude mcp add Roblox_Studio -- /Applications/RobloxStudio.app/Contents/MacOS/StudioMCP`
-2. In Claude Code, run `/mcp`.
-3. Confirm that `Roblox_Studio: connected` appears in the server list.
-
-### Claude Desktop
-
-To connect Claude Desktop:
-
-1. In the Claude Desktop app, go to **Claude** &rang; **Settings...**.
-2. In the **Developer** tab, select **Edit Config**.
-    - You can also find the config file at `C:\Users\<username>\AppData\Local\Packages\Claude_????\LocalCache\Roaming\Claude\claude_desktop_config.json`.
-3. Add the `Roblox_Studio` configuration from [Connect your client](#connect-your-client) to the `claude_desktop_config.json` file.
-4. Restart Claude Desktop by fully quitting and relaunching the application.
-5. Locate the MCP server indicator at the bottom-right corner of the chat input window.
-6. Click the hammer icon to open the tools panel and verify that Roblox Studio is available.
-
-### Visual Studio Code
-
-<Alert severity="info">
-VS Code uses `servers` as the top-level key instead of `mcpServers`. Make sure your JSON configuration uses `servers`.
-</Alert>
-
-You can configure the server at the workspace level, globally, or through the Command Palette. Use a workspace configuration for project-specific setups, or a global configuration to reuse the server across all of your projects.
-
-To connect VS Code:
-
-1. Choose how you want to configure the server:
-    - For the workspace:
-        1. In your project root, create a `.vscode/mcp.json` file.
-        2. Add the `Roblox_Studio` configuration from [Connect your client](#connect-your-client) to the file.
-    - Globally:
-        1. In VS Code, open the Command Palette.
-        2. Run **MCP: Open User Configuration**.
-        3. Add the `Roblox_Studio` configuration from [Connect your client](#connect-your-client) to the `mcp.json` file.
-    - Through the Command Palette:
-        1. In VS Code, open the Command Palette.
-        2. Run **MCP: Add Server...**.
-        3. Select **Command (stdio)** and enter a server name.
-        4. Add the `Roblox_Studio` configuration from [Connect your client](#connect-your-client).
-2. Verify the connection:
-    1. Open the **GitHub Copilot Chat**.
-    2. Switch to **Agent Mode**.
-    3. Click the **Tools** icon.
-    4. Confirm that **Roblox Studio tools** appears on the list.
-
-### Cursor
-
-You can configure the server using the settings UI or by directly editing the configuration file.
-
-To connect Cursor:
-
-1. Choose how you want to configure the server:
-    - Through the settings UI:
-        1. Go to **File** &rang; **Preferences** &rang; **Cursor Settings**.
-        2. Select **MCP**.
-        3. Click **Add new global MCP server**.
-        4. Add the `Roblox_Studio` configuration from [Connect your client](#connect-your-client).
-    - Through the configuration file:
-        1. Open `~/.cursor/mcp.json` (for global) or `.cursor/mcp.json` (for project-level).
-        2. Add the `Roblox_Studio` configuration from [Connect your client](#connect-your-client) to the file.
-2. Verify the connection:
-    1. Go to **Cursor Settings** &rang; **MCP**.
-    2. Confirm that the server is showing a green status indicator.
-
-### Antigravity
-
-To connect Antigravity:
-
-1. In Antigravity, click **&hellip;** &rang; **MCP Servers**.
-2. Click **Manage MCP Servers**.
-3. Click **View raw config**.
-4. Add the `Roblox_Studio` configuration from [Connect your client](#connect-your-client) to the `mcp_config.json` file.
-5. Refresh the **MCP Servers** panel to verify that **Roblox Studio tools** appears in the active tools list.
-
-### Other MCP clients
-
-The Studio MCP server works with any client that supports `stdio` transport. Use the configuration JSON or CLI command from the [Connect your client](#connect-your-client) section, then follow your client's documentation to add the server configuration. Restart the client to apply your changes.
 
 ## Use multiple Studio instances
 

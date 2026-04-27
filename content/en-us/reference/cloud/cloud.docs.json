@@ -5627,6 +5627,9 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Messaging Service requests are subject to additional throttling limits described in the [Open Cloud guide for Messaging Service](https://create.roblox.com/docs/cloud/guides/usage-messaging#limits)."
+        },
         "x-roblox-scopes": [
           {
             "name": "universe-messaging-service:publish"

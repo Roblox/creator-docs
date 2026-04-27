@@ -48,7 +48,7 @@ There are limits on the number of assets you can upload to Roblox and enable for
 
 ## Upload an asset
 
-When uploading your asset, Studio checks your asset for technical issues, such as an incorrect hierarchy or accessory structure. You can also add a [custom thumbnail](../marketplace/custom-thumbnails.md) to your asset before uploading to customize how the item displays on the Marketplace.
+When uploading your asset, Studio checks your asset for technical issues, such as an incorrect hierarchy or accessory structure. You should also add a [custom thumbnail](../marketplace/custom-thumbnails.md) to your asset before uploading to customize how the item displays on the Marketplace.
 
 - After uploading your asset, the item is placed in the moderation queue before you can enable it on sale. See [Moderation](../marketplace/moderation.md) for more information on this process.
 - For details on upfront payments and fees when publishing assets to the marketplace, see [Fees and commissions](../marketplace/marketplace-fees-and-commissions.md).
@@ -215,6 +215,7 @@ If you had a Marketplace listing before the implementation of the dynamic price 
 
 - **Amount Above Price Floor** defaults to 0 Robux.
 - **Do Not Price Below** defaults to the existing price of the item.
+
 </Alert>
 
 When setting a price, you can see the percentage breakdown of commissions in the dialog box. A similar breakdown on fees, when applicable, is provided at the bottom of the prompt. See [Marketplace fees and commissions](../marketplace/marketplace-fees-and-commissions.md) for more information on the fees and commissions for Marketplace items.

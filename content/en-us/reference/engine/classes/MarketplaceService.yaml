@@ -1170,7 +1170,8 @@ methods:
     returns:
       - type: ()
         summary: ''
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: |
       This method has been superseded by
       `Class.MarketplaceService:PromptRobloxSubscriptionPurchase()|PromptRobloxSubscriptionPurchase()`.

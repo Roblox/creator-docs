@@ -71,6 +71,7 @@ properties:
     capabilities:
       - Basic
       - AvatarBehavior
+    simulationAccess: true
   - name: VehicleSeat.HeadsUpDisplay
     summary: |
       If true, a fancy speed bar will be displayed speed on screen that tells
@@ -113,6 +114,7 @@ properties:
     capabilities:
       - Basic
       - AvatarBehavior
+    simulationAccess: true
   - name: VehicleSeat.Occupant
     summary: |
       The humanoid that is sitting in the seat.
@@ -135,6 +137,7 @@ properties:
     capabilities:
       - Basic
       - AvatarBehavior
+    simulationAccess: true
   - name: VehicleSeat.Steer
     summary: |
       The direction of movement, tied to the keys A and D. Must be one of 1
@@ -163,6 +166,7 @@ properties:
     capabilities:
       - Basic
       - AvatarBehavior
+    simulationAccess: true
   - name: VehicleSeat.SteerFloat
     summary: |
       Functions identically to `Class.VehicleSeat.Steer`, but the value is not
@@ -185,6 +189,7 @@ properties:
     capabilities:
       - Basic
       - AvatarBehavior
+    simulationAccess: true
   - name: VehicleSeat.Throttle
     summary: |
       The direction of movement, tied to the keys W and S. Must be an integer 1
@@ -213,6 +218,7 @@ properties:
     capabilities:
       - Basic
       - AvatarBehavior
+    simulationAccess: true
   - name: VehicleSeat.ThrottleFloat
     summary: |
       Functions identically to `Class.VehicleSeat.Throttle`, but the value is
@@ -235,6 +241,7 @@ properties:
     capabilities:
       - Basic
       - AvatarBehavior
+    simulationAccess: true
   - name: VehicleSeat.Torque
     summary: |
       How fast the vehicles will be able to attain `Class.VehicleSeat.MaxSpeed`.
@@ -257,6 +264,7 @@ properties:
     capabilities:
       - Basic
       - AvatarBehavior
+    simulationAccess: true
   - name: VehicleSeat.TurnSpeed
     summary: |
       The speed at which the vehicle will turn. Higher numbers can cause
@@ -279,6 +287,7 @@ properties:
     capabilities:
       - Basic
       - AvatarBehavior
+    simulationAccess: true
 methods:
   - name: VehicleSeat:Sit
     summary: |

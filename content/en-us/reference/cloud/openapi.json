@@ -8756,6 +8756,17 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": true
         },
+        "x-roblox-rate-limits": {
+          "description": "Messaging Service requests are subject to additional throttling limits described in the [Open Cloud guide for Messaging Service](https://create.roblox.com/docs/cloud/guides/usage-messaging#limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 5000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 5000
+          }
+        },
         "x-roblox-scopes": [
           {
             "name": "universe-messaging-service:publish"
@@ -8772,16 +8783,6 @@
           }
         },
         "x-roblox-stability": "STABLE",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 5000
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 5000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -18101,6 +18102,98 @@
         }
       }
     },
+    "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/languages/{languageCode}/image-translation-status": {
+      "patch": {
+        "summary": "Enable or disable image translation for a game and language.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "gameId",
+            "description": "The id of the game.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "path",
+            "name": "languageCode",
+            "description": "The language to enable or disable for image translation.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "boolean"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          },
+          "description": "Flag to indicate if image translation should be enabled or disabled.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.EditImageTranslationStatusForGameAndLanguageResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.EditImageTranslationStatusForGameAndLanguageResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "14: Invalid game id\r\n22: Invalid language code\r\n53: Language is not supported for the game.\r\n93: Image translation cannot be enabled for language."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n18: You do not have permission to manage this game"
+          },
+          "503": {
+            "description": "17: Feature is disabled"
+          }
+        },
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
+      }
+    },
     "/legacy-game-internationalization/v1/supported-languages/games/{gameId}/languages/{languageCode}/universe-display-info-automatic-translation-settings": {
       "patch": {
         "tags": ["Localization", "Universes"],
@@ -21392,147 +21485,6 @@
         },
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/universes#CrossServerMessaging_Publish"
-        }
-      }
-    },
-    "/open-eval-api/v1/eval": {
-      "post": {
-        "tags": ["Generative AI"],
-        "summary": "Performs the evaluation of the Lua script.",
-        "parameters": [
-          {
-            "name": "Roblox-Api-Key",
-            "in": "header",
-            "description": "Api Key (UUID).",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/EvalRequest"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EvalRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EvalRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/EvalRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/EvalResponse"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "studio-evaluations:create"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          },
-          {
-            "roblox-api-key": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/generative-ai#post_open_eval_api_v1_eval"
-        }
-      }
-    },
-    "/open-eval-api/v1/eval-records/{jobId}": {
-      "get": {
-        "tags": ["Generative AI"],
-        "summary": "Gets the evaluation record by job ID.",
-        "parameters": [
-          {
-            "name": "jobId",
-            "in": "path",
-            "description": "The job ID of the evaluation record.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Roblox-Api-Key",
-            "in": "header",
-            "description": "Api Key (UUID).",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/EvalRecord"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 60
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "studio-evaluations:create"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          },
-          {
-            "roblox-api-key": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/generative-ai#get_open_eval_api_v1_eval_records__jobId_"
         }
       }
     },
@@ -45701,14 +45653,14 @@
               }
             }
           },
-          "400": {
-            "description": "1: The specified userOutfitId is invalid!"
-          },
           "401": {
             "description": "0: Authorization has been denied for this request."
           },
           "403": {
             "description": "0: Token Validation Failed\r\n2: You don't have permission to delete this outfit."
+          },
+          "404": {
+            "description": "1: The specified userOutfitId is invalid!"
           },
           "500": {
             "description": "3: An error occurred while deleting the outfit."
@@ -45774,10 +45726,13 @@
             }
           },
           "400": {
-            "description": "1: The specified userOutfitId is invalid.\r\n2: The outfit for the specified userOutfit is invalid."
+            "description": "2: The outfit for the specified userOutfit is invalid."
           },
           "403": {
             "description": "3: The requester does not have access to the details for the given user outfit."
+          },
+          "404": {
+            "description": "1: The specified userOutfitId is invalid."
           }
         },
         "servers": [
@@ -49113,6 +49068,90 @@
             "url": "https://apis.roblox.com/legacy-game-internationalization/v1/supported-languages/games/{gameId}/languages/{languageCode}/automatic-translation-status",
             "httpMethod": "PATCH",
             "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/localization#patch_legacy_game_internationalization_v1_supported_languages_games__gameId__languages__languageCode__automatic_translation_status"
+          }
+        ]
+      }
+    },
+    "/v1/supported-languages/games/{gameId}/languages/{languageCode}/image-translation-status": {
+      "patch": {
+        "summary": "Enable or disable image translation for a game and language.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "gameId",
+            "description": "The id of the game.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "path",
+            "name": "languageCode",
+            "description": "The language to enable or disable for image translation.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "boolean"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          },
+          "description": "Flag to indicate if image translation should be enabled or disabled.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.EditImageTranslationStatusForGameAndLanguageResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.EditImageTranslationStatusForGameAndLanguageResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "14: Invalid game id\r\n22: Invalid language code\r\n53: Language is not supported for the game.\r\n93: Image translation cannot be enabled for language."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n18: You do not have permission to manage this game"
+          },
+          "503": {
+            "description": "17: Feature is disabled"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://gameinternationalization.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
           }
         ]
       }
@@ -55509,7 +55548,11 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}],
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/badges#badges_get_v1_users__userId__badges_awarded_dates"
         },
@@ -55565,7 +55608,11 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}],
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/badges#badges_get_v1_users__userId__badges__badgeId__awarded_date"
         },
@@ -63399,7 +63446,7 @@
             }
           },
           "400": {
-            "description": "3: Body colors must be valid BrickColor IDs\r\n4: Invalid outfit name\r\n5: Asset is not wearable by you and was not added to the outfit\r\n7: Invalid Player Avatar Type. Valid types are R6 and R15\r\n8: Invalid assetIds\r\n9: Meta does not apply to specified asset type\r\n10: Required meta is not provided for the specific asset type"
+            "description": "3: Body colors must be valid BrickColor IDs\r\n4: Invalid outfit name\r\n5: Asset is not wearable by you and was not added to the outfit\r\n7: Invalid Player Avatar Type. Valid types are R6 and R15\r\n8: Invalid assetIds\r\n9: Meta does not apply to specified asset type\r\n10: Required meta is not provided for the specific asset type\r\n12: Outfit type invalid or not permitted\r\n13: Invalid Scale"
           },
           "401": {
             "description": "0: Authorization has been denied for this request."
@@ -63496,13 +63543,16 @@
             }
           },
           "400": {
-            "description": "1: The specified userOutfit does not exist!\r\n1: Must provide both assetIds and bodyColors in to update outfit contents.\r\n3: Body colors must be valid BrickColor IDs\r\n4: Invalid outfit name\r\n5: Asset is not wearable by you\r\n8: Invalid Player Avatar Type. Valid types are R6 and R15\r\n11: Meta does not apply to specified asset type\r\n12: Meta is required for this specific asset type"
+            "description": "3: Body colors must be valid BrickColor IDs\r\n4: Invalid outfit name\r\n5: Asset is not wearable by you\r\n8: Invalid Player Avatar Type. Valid types are R6 and R15\r\n11: Meta does not apply to specified asset type\r\n12: Meta is required for this specific asset type\r\n13: Invalid Outfit Type\r\n14: Invalid scale"
           },
           "401": {
             "description": "0: Authorization has been denied for this request."
           },
           "403": {
             "description": "0: Token Validation Failed\r\n2: You don't have permission to update this outfit."
+          },
+          "404": {
+            "description": "1: The specified userOutfit does not exist!"
           },
           "500": {
             "description": "6: An error occurred while trying to update the outfit"
@@ -68064,7 +68114,7 @@
             }
           },
           "400": {
-            "description": "3: Body colors must be valid BrickColor IDs\r\n4: Invalid outfit name\r\n5: Asset is not wearable by you and was not added to the outfit\r\n7: Invalid Player Avatar Type. Valid types are R6 and R15\r\n8: Invalid assetIds\r\n9: Meta does not apply to specified asset type\r\n10: Required meta is not provided for the specific asset type"
+            "description": "3: Body colors must be valid BrickColor IDs\r\n4: Invalid outfit name\r\n5: Asset is not wearable by you and was not added to the outfit\r\n7: Invalid Player Avatar Type. Valid types are R6 and R15\r\n8: Invalid assetIds\r\n9: Meta does not apply to specified asset type\r\n10: Required meta is not provided for the specific asset type\r\n12: Outfit type invalid or not permitted\r\n13: Invalid Scale"
           },
           "401": {
             "description": "0: Authorization has been denied for this request."
@@ -68153,13 +68203,16 @@
             }
           },
           "400": {
-            "description": "1: The specified userOutfit does not exist!\r\n1: Must provide both assetIds and bodyColors in to update outfit contents.\r\n3: Body colors must be valid BrickColor IDs\r\n4: Invalid outfit name\r\n5: Asset is not wearable by you\r\n8: Invalid Player Avatar Type. Valid types are R6 and R15\r\n11: Meta does not apply to specified asset type\r\n12: Meta is required for this specific asset type"
+            "description": "3: Body colors must be valid BrickColor IDs\r\n4: Invalid outfit name\r\n5: Asset is not wearable by you\r\n8: Invalid Player Avatar Type. Valid types are R6 and R15\r\n11: Meta does not apply to specified asset type\r\n12: Meta is required for this specific asset type\r\n13: Invalid Outfit Type\r\n14: Invalid scale"
           },
           "401": {
             "description": "0: Authorization has been denied for this request."
           },
           "403": {
             "description": "0: Token Validation Failed\r\n2: You don't have permission to update this outfit."
+          },
+          "404": {
+            "description": "1: The specified userOutfit does not exist!"
           },
           "500": {
             "description": "6: An error occurred while trying to update the outfit"
@@ -68234,10 +68287,13 @@
             }
           },
           "400": {
-            "description": "1: The specified userOutfitId is invalid.\r\n2: The outfit for the specified userOutfit is invalid."
+            "description": "2: The outfit for the specified userOutfit is invalid."
           },
           "403": {
             "description": "3: The requester does not have access to the details for the given user outfit."
+          },
+          "404": {
+            "description": "1: The specified userOutfitId is invalid."
           }
         },
         "servers": [
@@ -69958,34 +70014,6 @@
         "enum": ["Forward", "Backward"],
         "type": "string"
       },
-      "CustomLlmInfo": {
-        "required": ["name", "url"],
-        "type": "object",
-        "properties": {
-          "name": {
-            "minLength": 1,
-            "type": "string",
-            "description": "The name of the custom LLM provider (claude, gemini, openai)."
-          },
-          "model_version": {
-            "type": "string",
-            "description": "The specific model version to use (e.g., \"gemini-2.5-pro-preview-03-25\").\nIf not provided, falls back to the provider name.",
-            "nullable": true
-          },
-          "url": {
-            "minLength": 1,
-            "type": "string",
-            "description": "The custom LLM endpoint URL."
-          },
-          "api_key": {
-            "type": "string",
-            "description": "The API key to access the custom LLM.",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "Contains information to override the default LLM endpoint and credentials."
-      },
       "CustomSignalConfiguration": {
         "type": "object",
         "properties": {
@@ -70533,156 +70561,6 @@
         },
         "additionalProperties": false,
         "description": "This is the base class for all custom Exceptions that are thrown in this API."
-      },
-      "EvalJsonRecord": {
-        "type": "object",
-        "properties": {
-          "passes": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "fails": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "checks": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "warning": {
-            "type": "string",
-            "nullable": true
-          },
-          "error": {
-            "type": "string",
-            "nullable": true
-          },
-          "interruptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/InterruptionRecord"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "EvalRecord": {
-        "required": ["inputScript", "jobId", "name"],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "user": {
-            "$ref": "#/components/schemas/StudioModelEvaluations.User"
-          },
-          "useReferenceMode": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "jobId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "inputScript": {
-            "type": "string",
-            "nullable": true
-          },
-          "jobStatus": {
-            "type": "string",
-            "nullable": true
-          },
-          "results": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/EvalResultRecord"
-            },
-            "nullable": true
-          },
-          "fullLogs": {
-            "type": "string",
-            "nullable": true
-          },
-          "evalSucceeded": {
-            "type": "string",
-            "nullable": true
-          },
-          "createUtc": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "EvalRequest": {
-        "required": ["input_script", "name"],
-        "type": "object",
-        "properties": {
-          "name": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "use_reference_mode": {
-            "type": "boolean"
-          },
-          "input_script": {
-            "minLength": 10,
-            "type": "string"
-          },
-          "custom_llm_info": {
-            "$ref": "#/components/schemas/CustomLlmInfo"
-          }
-        },
-        "additionalProperties": false,
-        "description": "The request model for the evaluation."
-      },
-      "EvalResponse": {
-        "type": "object",
-        "properties": {
-          "job_id": {
-            "type": "string",
-            "nullable": true
-          },
-          "status_code": {
-            "type": "integer",
-            "description": "Gets or sets the status code of the response.",
-            "format": "int32"
-          },
-          "error": {
-            "type": "string",
-            "description": "Gets or sets the error message associated with the response.",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "The response model for the evaluation."
-      },
-      "EvalResultRecord": {
-        "type": "object",
-        "properties": {
-          "mode": {
-            "type": "string",
-            "nullable": true
-          },
-          "result": {
-            "$ref": "#/components/schemas/EvalJsonRecord"
-          }
-        },
-        "additionalProperties": false
       },
       "FilterField": {
         "enum": ["EngineVersion", "ALL"],
@@ -71923,31 +71801,6 @@
         },
         "description": "Represents the permissions on a role."
       },
-      "GroupsApi.Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Assets.AssetType_": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "format": "int64",
-            "type": "integer"
-          },
-          "type": {
-            "format": "int32",
-            "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91]",
-            "enum": [
-              1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21, 22,
-              24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40,
-              41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
-              59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
-              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91
-            ],
-            "type": "integer"
-          },
-          "name": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
       "HttpContent": {
         "type": "object",
         "properties": {
@@ -72297,22 +72150,6 @@
           "count": {
             "type": "integer",
             "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "InterruptionRecord": {
-        "type": "object",
-        "properties": {
-          "check": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "type": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -74115,6 +73952,24 @@
           "universeName": {
             "type": "string",
             "nullable": true
+          },
+          "purchaseScheduleId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "totalDiscountAmountInRobux": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "metadata": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PrivateServerSubscriptionMetadata"
+              }
+            ],
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -74919,6 +74774,19 @@
         },
         "additionalProperties": false
       },
+      "PrivateServerSubscriptionMetadata": {
+        "type": "object",
+        "properties": {
+          "privateServerSubscriptionTags": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PrivateServerSubscriptionTag"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "PrivateServerSubscriptionResponse": {
         "type": "object",
         "properties": {
@@ -74948,9 +74816,31 @@
           },
           "hasPriceChanged": {
             "type": "boolean"
+          },
+          "purchaseScheduleId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "totalDiscountAmountInRobux": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "metadata": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PrivateServerSubscriptionMetadata"
+              }
+            ],
+            "nullable": true
           }
         },
         "additionalProperties": false
+      },
+      "PrivateServerSubscriptionTag": {
+        "enum": ["Invalid", "RobloxSubscription"],
+        "type": "string"
       },
       "PrivateServerUpdatePermissionsRequest": {
         "type": "object",
@@ -80940,7 +80830,8 @@
               24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40,
               41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
               59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
-              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91
+              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
+              91, 92
             ],
             "type": "integer"
           },
@@ -81131,7 +81022,8 @@
               24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40,
               41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
               59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
-              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91
+              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
+              91, 92
             ],
             "type": "integer"
           },
@@ -81812,6 +81704,21 @@
         },
         "additionalProperties": false
       },
+      "Roblox.ClientSettings.Api.Models.Response.BetaProgramInfo": {
+        "description": "Beta program information included in the user channel response.",
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The display name of the beta program.",
+            "type": "string"
+          },
+          "id": {
+            "description": "The ID of the beta program.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse": {
         "type": "object",
         "properties": {
@@ -81944,6 +81851,9 @@
           "token": {
             "description": "JWT token. If the channel is not private, this is omitted.",
             "type": "string"
+          },
+          "program": {
+            "$ref": "#/components/schemas/Roblox.ClientSettings.Api.Models.Response.BetaProgramInfo"
           }
         },
         "additionalProperties": false
@@ -82746,6 +82656,25 @@
         },
         "additionalProperties": false
       },
+      "Roblox.GameInternationalization.Api.EditImageTranslationStatusForGameAndLanguageResponse": {
+        "type": "object",
+        "properties": {
+          "gameId": {
+            "format": "int64",
+            "description": "The game id.",
+            "type": "integer"
+          },
+          "languageCode": {
+            "description": "The language code.",
+            "type": "string"
+          },
+          "isImageTranslationEnabled": {
+            "description": "Indicates whether image translation is currently enabled for the game and language.",
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.GameInternationalization.Api.FailedNameDescription": {
         "type": "object",
         "properties": {
@@ -83116,6 +83045,10 @@
           },
           "isAutomaticTranslationEnabled": {
             "description": "Indicates whether or not automatic translation is currently enabled for the game and language.",
+            "type": "boolean"
+          },
+          "isImageTranslationEnabled": {
+            "description": "Indicates whether image translation is currently enabled for the game and language.",
             "type": "boolean"
           }
         },
@@ -83963,6 +83896,28 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Games.Api.Models.Response.GameContentMetadataResponseModel": {
+        "description": "Response model for game-level content metadata.",
+        "type": "object",
+        "properties": {
+          "badgePosition": {
+            "type": "string"
+          },
+          "badgeAnalyticsId": {
+            "type": "string"
+          },
+          "badgeType": {
+            "type": "string"
+          },
+          "badgeIcon": {
+            "type": "string"
+          },
+          "badgeComponentType": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Games.Api.Models.Response.GameCreator": {
         "description": "Response model for getting the game creator",
         "type": "object",
@@ -84347,6 +84302,9 @@
             "description": "Age Recommendation display name.",
             "type": "string"
           },
+          "contentMetadata": {
+            "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.GameContentMetadataResponseModel"
+          },
           "canonicalUrlPath": {
             "description": "Canonical URL path for the game page, e.g. /games/{placeId}/{canonical-slug}.\r\nIt must be the same as the canonical URL (rel-canonical meta tag) on the game's EDP.",
             "type": "string"
@@ -84435,10 +84393,10 @@
         "properties": {
           "playabilityStatus": {
             "format": "int32",
-            "description": "The actual playability status of the universe including the reason if unplayable ['UnplayableOtherReason' = 0, 'Playable' = 1, 'GuestProhibited' = 2, 'GameUnapproved' = 3, 'IncorrectConfiguration' = 4, 'UniverseRootPlaceIsPrivate' = 5, 'InsufficientPermissionFriendsOnly' = 6, 'InsufficientPermissionGroupOnly' = 7, 'DeviceRestricted' = 8, 'UnderReview' = 9, 'PurchaseRequired' = 10, 'AccountRestricted' = 11, 'TemporarilyUnavailable' = 12, 'PlaceHasNoPublishedVersion' = 13, 'ComplianceBlocked' = 14, 'ContextualPlayabilityRegionalAvailability' = 15, 'ContextualPlayabilityRegionalCompliance' = 16, 'ContextualPlayabilityAgeRecommendationParentalControls' = 17, 'ContextualPlayabilityExperienceBlockedParentalControls' = 18, 'ContextualPlayabilityAgeGated' = 19, 'ContextualPlayabilityUnverifiedSeventeenPlusUser' = 20, 'FiatPurchaseRequired' = 21, 'FiatPurchaseDeviceRestricted' = 22, 'ContextualPlayabilityUnrated' = 23, 'ContextualPlayabilityAgeGatedByDescriptor' = 24, 'ContextualPlayabilityGeneral' = 25]",
+            "description": "The actual playability status of the universe including the reason if unplayable ['UnplayableOtherReason' = 0, 'Playable' = 1, 'GuestProhibited' = 2, 'GameUnapproved' = 3, 'IncorrectConfiguration' = 4, 'UniverseRootPlaceIsPrivate' = 5, 'InsufficientPermissionFriendsOnly' = 6, 'InsufficientPermissionGroupOnly' = 7, 'DeviceRestricted' = 8, 'UnderReview' = 9, 'PurchaseRequired' = 10, 'AccountRestricted' = 11, 'TemporarilyUnavailable' = 12, 'PlaceHasNoPublishedVersion' = 13, 'ComplianceBlocked' = 14, 'ContextualPlayabilityRegionalAvailability' = 15, 'ContextualPlayabilityRegionalCompliance' = 16, 'ContextualPlayabilityAgeRecommendationParentalControls' = 17, 'ContextualPlayabilityExperienceBlockedParentalControls' = 18, 'ContextualPlayabilityAgeGated' = 19, 'ContextualPlayabilityUnverifiedSeventeenPlusUser' = 20, 'FiatPurchaseRequired' = 21, 'FiatPurchaseDeviceRestricted' = 22, 'ContextualPlayabilityUnrated' = 23, 'ContextualPlayabilityAgeGatedByDescriptor' = 24, 'ContextualPlayabilityGeneral' = 25, 'ContextualPlayabilityAgeCheckRequired' = 26, 'ContextualPlayabilityRequireParentApproval' = 27, 'ContextualPlayabilityCoreGated' = 28]",
             "enum": [
               0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
-              19, 20, 21, 22, 23, 24, 25
+              19, 20, 21, 22, 23, 24, 25, 26, 27, 28
             ],
             "type": "integer"
           },
@@ -84457,6 +84415,9 @@
           },
           "playableUxTreatment": {
             "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.PlayableUxTreatment"
+          },
+          "upsellUxTreatment": {
+            "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.UpsellUxTreatment"
           }
         },
         "additionalProperties": false
@@ -84522,6 +84483,31 @@
           },
           "articleId": {
             "description": "Zendesk (or similar forum provider) article ID for the client to build a redirect URL.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Games.Api.Models.Response.UpsellUxTreatment": {
+        "description": "Upsell UX treatment metadata appended to a playability response when an experience is\r\ncurrently playable but will be restricted under upcoming Roblox-Core content rules.\r\nMirrors the existing Roblox.Games.Api.Models.Response.PlayableUxTreatment contract intentionally so client\r\nrendering can be unified.",
+        "type": "object",
+        "properties": {
+          "treatment": {
+            "description": "Identifier of the client component to render (currently \"ageCheckUpsell\").\r\nAbsent when the upsell should not surface.",
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.UpsellUxTreatmentData"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Games.Api.Models.Response.UpsellUxTreatmentData": {
+        "description": "Localized strings for an Roblox.Games.Api.Models.Response.UpsellUxTreatment. Currently only carries\r\nRoblox.Games.Api.Models.Response.UpsellUxTreatmentData.BodyText; structured to allow additional fields without breaking the\r\nJSON contract.",
+        "type": "object",
+        "properties": {
+          "bodyText": {
+            "description": "Localized body text for the upsell banner (e.g. \"You'll soon need an age check to\r\njoin this game.\").",
             "type": "string"
           }
         },
@@ -85629,6 +85615,10 @@
           "isMemberListVisibleToPublic": {
             "description": "Whether the group member list is visible to public.",
             "type": "boolean"
+          },
+          "isAutoAssignRoleDisabled": {
+            "description": "Whether automatic assignment of the lowest non-guest role is disabled for this group.\r\nFor non-legacy groups (created after the multi-role cutoff), this is always true.\r\nFor legacy groups, reflects the persisted GroupFeatureSettings value.\r\nNull when the value could not be determined.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -85858,7 +85848,7 @@
             "$ref": "#/components/schemas/Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Core.CreatorType_"
           },
           "rootPlace": {
-            "$ref": "#/components/schemas/GroupsApi.Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Assets.AssetType_"
+            "$ref": "#/components/schemas/Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Assets.AssetType_"
           },
           "created": {
             "format": "date-time",
@@ -92866,7 +92856,7 @@
         "description": "The server numerical signal configuration."
       },
       "ServerType": {
-        "enum": [0, 1, 2, 3],
+        "enum": [0, 1, 2, 3, 4, 5],
         "type": "integer",
         "description": "Defines the different types of servers",
         "format": "int32"
@@ -93218,17 +93208,6 @@
         },
         "additionalProperties": false
       },
-      "StudioModelEvaluations.User": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          }
-        },
-        "additionalProperties": false
-      },
       "SubjectType": {
         "enum": ["Invalid", "User", "Group", "GroupRoleset", "All", "Universe"],
         "type": "string"
@@ -93574,6 +93553,10 @@
           "purchaseToken": {
             "type": "string",
             "nullable": true
+          },
+          "transactionSubtype": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -93885,7 +93868,8 @@
           "PublishingAdvanceRebates",
           "AffiliatePayout",
           "LicensingPayment",
-          "LicensingPaymentClawback"
+          "LicensingPaymentClawback",
+          "CurrencyTransfer"
         ],
         "type": "string"
       },
@@ -93953,6 +93937,9 @@
             "type": "boolean"
           },
           "HasLicensingPayment": {
+            "type": "boolean"
+          },
+          "HasTransfer": {
             "type": "boolean"
           }
         },
@@ -95735,12 +95722,7 @@
       "x-roblox-tag-info": {
         "path": "generative-ai",
         "content": "HTTP APIs related to Generative AI and LLMs on Open Cloud.",
-        "ordering": [
-          "Cloud_TranslateText",
-          "Cloud_GenerateSpeechAsset",
-          "post_open_eval_api_v1_eval",
-          "get_open_eval_api_v1_eval_records__jobId_"
-        ]
+        "ordering": ["Cloud_TranslateText", "Cloud_GenerateSpeechAsset"]
       }
     },
     {
