@@ -76,52 +76,6 @@ When you import your makeup creation from your favorite third-party modeling sof
 Makeup assets that you create for the [Marketplace](https://www.roblox.com/catalog) can include up to 6 total `Class.Decal` objects, comprised of any combination of regions.
 </Alert>
 
-## Creation process
-
-<Alert severity ='warning'>
-This process assumes that you are proficient in 3D modeling software, such as Blender or Maya, and that you understand how to update, replace, export, save, and alter materials within your modeling tool and any additional texturing software or plugins.
-</Alert>
-
-<GridContainer numColumns="3">
-  <figure><img src="../assets/makeup/Creation-Steps-1.png" /><figcaption>Download the 3D reference template head and texture templates applicable to your workflow.</figcaption></figure>
-  <figure><img src="../assets/makeup/Creation-Steps-2.png" /><figcaption>Modify the texture images in the tools of your choice.</figcaption></figure>
-  <figure><img src="../assets/makeup/Creation-Steps-3.png" /><figcaption>In Blender or Maya, replace the textures in the template with your new textures and export. </figcaption></figure>
-</GridContainer>
-
-While you can easily swap `Class.Decal` objects in Studio to make a quick change to a character's makeup, the following instruction is best practice for implementing PBR-based textures into Roblox makeup at scale. This process requires:
-
-- The [Makeup test place and template files](#resources)
-- A 3D modeling tool such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview)
-- Any PBR texturing software, such as [Substance Painter](https://www.adobe.com/products/substance3d/apps/painter.html), [Materialize](http://boundingboxsoftware.com/materialize/index.php), or plugins like [Ucupaint](https://extensions.blender.org/add-ons/ucupaint/) (Blender).
-
-As always with 3D art and creation workflows, there are many ways to achieve a specific goal, and the makeup and PBR publishing flow is no exception. It's recommended to try the workflow in this guide first, then adjust as necessary for your own creation requirements:
-
-1. Download a [reference template head](#resources) and open it in the general modeling software of your choice.
-2. Using your texturing tools or an image editing software, modify the texture images associated with the different regions: `TransferTexture_Eyes`, `TransferTexture_Face`, or `TransferTexture_Lips`.
-3. When you've created your new texture images, use Blender or Maya to reassign the existing file textures in the template. For more information, see [Reassign textures](./reassign-textures.md).
-4. Review [Face caging best practices](../art/characters/face-caging-best-practices.md) for guidance on how to adjust face cages so that your makeup displays correctly for your use case.
-5. Export the entire template file as a `.fbx`or `.gltf`. All 3D modeling [export requirements](../art/modeling/export-requirements.md) apply, but there are a few makeup-specific settings you must configure:
-
-   - If you are using Blender,
-     1. In the export file brower window, navigate to the **Include** section, then enable the **Custom Properties** toggle for makeup UV data transfer data purposes.
-     1. In the **Armature** section, enable **Only Deform Bones** to ensure your export file includes skinning data for eyebrows and eyelashes.
-
-       <figure><img src="../assets/makeup/Blender-MakeupExport.png" /><figcaption>All necessary Blender export settings for makeup</figcaption></figure>
-
-   - If you are using Maya, in the export file brower window, navigate to the **Deformed Models** section, then enable the **Skins** toggle to ensure your export file includes skinning data for eyebrows and eyelashes.
-
-       <img src="../assets/makeup/Maya-MakeupExport.png" />  
-
-6. [Import](./import.md) the template file into Studio. Studio automatically detects your mesh object names and associated textures and generate `Decal` objects.
-
-   <img src="../assets/makeup/Imported-DataModel.png" width="30%" />
-  
-7. Apply any makeup decals or eyebrow and eyelash accessories to characters in the test place by dropping makeup assets in the appropriate character's `Makeup` or `Accessories` folder.
-
-   <img src="../assets/makeup/Makeup-Character-Folders.png" width="35%" />
-
-8. Click the **Play** button, then navigate to the character with new makeup assets to preview.
-
 ## Resources
 
 The following are downloadable resources you can use within the creation process:
@@ -228,21 +182,21 @@ When you are finished making changes to any of the following template texture im
         <center>Photoshop / GIMP texture images</center>
         <figure>
           <center>
-            <img src="../assets/makeup/resources/Photoshop-Thumbnail.png" width="100%" />
+            <img src="../assets/makeup/resources/Photoshop-Realistic-Mesh-Thumbnail.png" width="100%" />
           </center>
           <center>
-            <img src="../assets/makeup/resources/Photoshop-Thumbnail-Cage.png" width="100%" />
+            <img src="../assets/makeup/resources/Photoshop-Realistic-Cage-Thumbnail.png" width="100%" />
           </center>
         </figure>
         <figure>
-          A comprehensive `.zip` folder with texture images for use in Photoshop or your preferred image editor.
+          A comprehensive `.zip` folder with realistic texture images for use in Photoshop or your preferred image editor.
         </figure>
       </CardContent>
       <CardActions style={{bottom: 0, width: '100%'}}>
-      <Button href="../assets/makeup/resources/Makeup-Textures-Photoshop-Gimp-Mesh.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Mesh Template</Button>
+      <Button href="../assets/makeup/resources/Photoshop-Gimp-Realistic-Mesh.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Mesh Template</Button>
       </CardActions>
       <CardActions style={{bottom: 0, width: '100%'}}>
-      <Button href="../assets/makeup/resources/Makeup-Textures-Photoshop-Gimp-Cage.zip" fullWidth size='small' color='secondary' variant='contained' style={{marginBottom:"4px;"}}>Cage Template</Button>
+      <Button href="../assets/makeup/resources/Photoshop-Gimp-Realistic-Cage.zip" fullWidth size='small' color='secondary' variant='contained' style={{marginBottom:"4px;"}}>Cage Template</Button>
       </CardActions>
     </Card>
   </Grid>
@@ -253,21 +207,21 @@ When you are finished making changes to any of the following template texture im
         <center>Substance Painter files</center>
         <figure>
           <center>
-            <img src="../assets/makeup/resources/Substance-Thumbnail.png" width="100%" />
+            <img src="../assets/makeup/resources/Substance-Realistic-Mesh-Thumbnail.png" width="100%" />
           </center>
           <center>
-            <img src="../assets/makeup/resources/Substance-Thumbnail-Cage.png" width="100%" />
+            <img src="../assets/makeup/resources/Substance-Realistic-Cage-Thumbnail.png" width="100%" />
           </center>
         </figure>
         <figure>
-          A comprehensive `.zip` folder with texture files for use in Substance Painter, an industry-standard PBR authoring software.
+          A comprehensive `.zip` folder with realistic texture files for use in Substance Painter, an industry-standard PBR authoring software.
         </figure>
       </CardContent>
       <CardActions style={{bottom: 0, width: '100%'}}>
-      <Button href="../assets/makeup/resources/Makeup-Textures-SubstancePainter-Mesh.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Mesh Template</Button>
+      <Button href="../assets/makeup/resources/SubstancePainter-Realistic-Mesh.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Mesh Template</Button>
       </CardActions>
       <CardActions style={{bottom: 0, width: '100%'}}>
-      <Button href="../assets/makeup/resources/Makeup-Textures-SubstancePainter-Cage.zip" fullWidth size='small' color='secondary' variant='contained' style={{marginBottom:"4px;"}}>Cage Template</Button>
+      <Button href="../assets/makeup/resources/SubstancePainter-Realistic-Cage.zip" fullWidth size='small' color='secondary' variant='contained' style={{marginBottom:"4px;"}}>Cage Template</Button>
       </CardActions>
     </Card>
   </Grid>
@@ -278,21 +232,59 @@ When you are finished making changes to any of the following template texture im
         <center>Procreate texture images</center>
         <figure>
           <center>
-            <img src="../assets/makeup/resources/Procreate-Thumbnail.png" width="100%" />
+            <img src="../assets/makeup/resources/Procreate-Realistic-Mesh-Thumbnail.png" width="100%" />
           </center>
           <center>
-            <img src="../assets/makeup/resources/Procreate-Thumbnail-Cage.png" width="100%" />
+            <img src="../assets/makeup/resources/Procreate-Realistic-Cage-Thumbnail.png" width="100%" />
           </center>
         </figure>
         <figure>
-          A comprehensive `.zip` folder with texture images for use in Procreate.
+          A comprehensive `.zip` folder with realistic texture images for use in Procreate.
         </figure>
       </CardContent>
       <CardActions style={{bottom: 0, width: '100%'}}>
-      <Button href="../assets/makeup/resources/Makeup-Textures-Procreate-Mesh.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Mesh Template</Button>
+      <Button href="../assets/makeup/resources/Procreate-Realistic-Mesh.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Mesh Template</Button>
       </CardActions>
       <CardActions style={{bottom: 0, width: '100%'}}>
-      <Button href="../assets/makeup/resources/Makeup-Textures-Procreate-Cage.zip" fullWidth size='small' color='secondary' variant='contained' style={{marginBottom:"4px;"}}>Cage Template</Button>
+      <Button href="../assets/makeup/resources/Procreate-Realistic-Cage.zip" fullWidth size='small' color='secondary' variant='contained' style={{marginBottom:"4px;"}}>Cage Template</Button>
+      </CardActions>
+    </Card>
+  </Grid>
+
+  <Grid item xs={12} md={6} lg={4} style={{ padding: 6, display: 'flex' }}>
+    <Card style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <CardContent style={{ flexGrow: 1 }}>
+        <center>Photoshop / GIMP texture images</center>
+        <figure>
+          <center>
+            <img src="../assets/makeup/resources/Photoshop-Blocky-Mesh-Thumbnail.png" width="100%" />
+          </center>
+        </figure>
+        <figure>
+          A comprehensive `.zip` folder with blocky texture images for use in Photoshop or your preferred image editor.
+        </figure>
+      </CardContent>
+      <CardActions style={{bottom: 0, width: '100%'}}>
+      <Button href="../assets/makeup/resources/Photoshop-Gimp-Blocky-Mesh.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Mesh Template</Button>
+      </CardActions>
+    </Card>
+  </Grid>
+
+  <Grid item xs={12} md={6} lg={4} style={{ padding: 6, display: 'flex' }}>
+    <Card style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <CardContent style={{ flexGrow: 1 }}>
+        <center>Substance Painter files</center>
+        <figure>
+          <center>
+            <img src="../assets/makeup/resources/Substance-Blocky-Mesh-Thumbnail.png" width="100%" />
+          </center>
+        </figure>
+        <figure>
+          A comprehensive `.zip` folder with blocky texture files for use in Substance Painter, an industry-standard PBR authoring software.
+        </figure>
+      </CardContent>
+      <CardActions style={{bottom: 0, width: '100%'}}>
+      <Button href="../assets/makeup/resources/SubstancePainter-Blocky-Mesh.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Mesh Template</Button>
       </CardActions>
     </Card>
   </Grid>
@@ -316,20 +308,20 @@ The Blender and Maya templates also include a facial region reference `.png` fil
       <CardContent style={{ flexGrow: 1 }}>
 <center>Blender template reference files</center>
 <figure>
-<center> <img src="../assets/makeup/resources/Blender-Thumbnail.png" width="100%" /> </center>
-<center> <img src="../assets/makeup/resources/Blender-Thumbnail-Cage.png" width="100%" /> </center>
+<center> <img src="../assets/makeup/resources/Blender-Realistic-Mesh-Thumbnail.png" width="100%" /> </center>
+<center> <img src="../assets/makeup/resources/Blender-Realistic-Cage-Thumbnail.png" width="100%" /> </center>
 </figure>
 <figure>
-A comprehensive `.zip` folder of Blender assets, including multiple reference heads pre-configured for testing in the Makeup test place or for authoring your own makeup.
+A comprehensive `.zip` folder of Blender assets, including multiple realistic reference heads pre-configured for testing in the Makeup test place or for authoring your own makeup.
 </figure>
 </CardContent>
 
 <CardActions style={{bottom: 0, width: '100%'}}>
-<Button href="../assets/makeup/resources/Makeup-Reference-Blender-Mesh.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Mesh Template</Button>
+<Button href="../assets/makeup/resources/Blender-Realistic-Mesh.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Mesh Template</Button>
 </CardActions>
 
 <CardActions style={{bottom: 0, width: '100%'}}>
-<Button href="../assets/makeup/resources/Makeup-Reference-Blender-Cage.zip" fullWidth size='small' color='secondary' variant='contained' style={{marginBottom:"4px;"}}>Cage Template</Button>
+<Button href="../assets/makeup/resources/Blender-Realistic-Cage.zip" fullWidth size='small' color='secondary' variant='contained' style={{marginBottom:"4px;"}}>Cage Template</Button>
 </CardActions>
 
 </Card>
@@ -341,20 +333,20 @@ A comprehensive `.zip` folder of Blender assets, including multiple reference he
 
 <center>Maya template reference files</center>
 <figure>
-<center> <img src="../assets/makeup/resources/Maya-Thumbnail.png" width="100%" /> </center>
-<center> <img src="../assets/makeup/resources/Maya-Thumbnail-Cage.png" width="100%" /> </center>
+<center> <img src="../assets/makeup/resources/Maya-Realistic-Mesh-Thumbnail.png" width="100%" /> </center>
+<center> <img src="../assets/makeup/resources/Maya-Realistic-Cage-Thumbnail.png" width="100%" /> </center>
 </figure>
 <figure>
-A comprehensive `.zip` folder of Maya assets, including multiple reference heads pre-configured for testing in the Makeup test place or for authoring your own makeup.
+A comprehensive `.zip` folder of Maya assets, including multiple realistic reference heads pre-configured for testing in the Makeup test place or for authoring your own makeup.
 </figure>
 </CardContent>
 
 <CardActions style={{bottom: 0, width: '100%'}}>
-<Button href="../assets/makeup/resources/Makeup-Reference-Maya-Mesh.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Mesh Template</Button>
+<Button href="../assets/makeup/resources/Maya-Realistic-Mesh.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Mesh Template</Button>
 </CardActions>
 
 <CardActions style={{bottom: 0, width: '100%'}}>
-<Button href="../assets/makeup/resources/Makeup-Reference-Maya-Cage.zip" fullWidth size='small' color='secondary' variant='contained' style={{marginBottom:"4px;"}}>Cage Template</Button>
+<Button href="../assets/makeup/resources/Maya-Realistic-Cage.zip" fullWidth size='small' color='secondary' variant='contained' style={{marginBottom:"4px;"}}>Cage Template</Button>
 </CardActions>
 
 </Card>
@@ -366,20 +358,83 @@ A comprehensive `.zip` folder of Maya assets, including multiple reference heads
 
 <center>FBX / GLTF template reference files</center>
 <figure>
-<center> <img src="../assets/makeup/resources/Fbx-Thumbnail.png" width="100%" /> </center>
-<center> <img src="../assets/makeup/resources/Fbx-Thumbnail-Cage.png" width="100%" /> </center>
+<center> <img src="../assets/makeup/resources/Fbx-Realistic-Mesh-Thumbnail.png" width="100%" /> </center>
+<center> <img src="../assets/makeup/resources/Fbx-Realistic-Cage-Thumbnail.png" width="100%" /> </center>
 </figure>
 <figure>
-A comprehensive `.zip` folder of `.fbx` and `.gltf` assets, including heads with various example makeup looks that are ready to be implemented into Studio for testing purposes.
+A comprehensive `.zip` folder of `.fbx` and `.gltf` assets, including realistic heads with various example makeup looks that are ready to be implemented into Studio for testing purposes.
 </figure>
 </CardContent>
 
 <CardActions style={{bottom: 0, width: '100%'}}>
-<Button href="../assets/makeup/resources/Makeup-Reference-FBX-GLTF-Mesh.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Mesh Template</Button>
+<Button href="../assets/makeup/resources/FBX-GLTF-Realistic-Mesh.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Mesh Template</Button>
 </CardActions>
 
 <CardActions style={{bottom: 0, width: '100%'}}>
-<Button href="../assets/makeup/resources/Makeup-Reference-FBX-GLTF-Cage.zip" fullWidth size='small' color='secondary' variant='contained' style={{marginBottom:"4px;"}}>Cage Template</Button>
+<Button href="../assets/makeup/resources/FBX-GLTF-Realistic-Cage.zip" fullWidth size='small' color='secondary' variant='contained' style={{marginBottom:"4px;"}}>Cage Template</Button>
+</CardActions>
+
+</Card>
+</Grid>
+
+</Grid>
+<br/>
+
+<Grid container alignItems="stretch" style={{}}>
+  <Grid item xs={12} md={6} lg={4} style={{ padding: 6, display: 'flex' }}>
+    <Card style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <CardContent style={{ flexGrow: 1 }}>
+<center>Blender template reference files</center>
+<figure>
+<center> <img src="../assets/makeup/resources/Blender-Blocky-Mesh-Thumbnail.png" width="100%" /> </center>
+</figure>
+<figure>
+A comprehensive `.zip` folder of Blender assets, including multiple blocky reference heads pre-configured for testing in the Makeup test place or for authoring your own makeup.
+</figure>
+</CardContent>
+
+<CardActions style={{bottom: 0, width: '100%'}}>
+<Button href="../assets/makeup/resources/Blender-Blocky-Mesh.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Mesh Template</Button>
+</CardActions>
+
+</Card>
+</Grid>
+
+  <Grid item xs={12} md={6} lg={4} style={{ padding: 6, display: 'flex' }}>
+    <Card style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <CardContent style={{ flexGrow: 1 }}>
+
+<center>Maya template reference files</center>
+<figure>
+<center> <img src="../assets/makeup/resources/Maya-Blocky-Mesh-Thumbnail.png" width="100%" /> </center>
+</figure>
+<figure>
+A comprehensive `.zip` folder of Maya assets, including multiple blocky reference heads pre-configured for testing in the Makeup test place or for authoring your own makeup.
+</figure>
+</CardContent>
+
+<CardActions style={{bottom: 0, width: '100%'}}>
+<Button href="../assets/makeup/resources/Maya-Blocky-Mesh.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Mesh Template</Button>
+</CardActions>
+
+</Card>
+</Grid>
+
+  <Grid item xs={12} md={6} lg={4} style={{ padding: 6, display: 'flex' }}>
+    <Card style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <CardContent style={{ flexGrow: 1 }}>
+
+<center>FBX / GLTF template reference files</center>
+<figure>
+<center> <img src="../assets/makeup/resources/Fbx-Blocky-Mesh-Thumbnail.png" width="100%" /> </center>
+</figure>
+<figure>
+A comprehensive `.zip` folder of `.fbx` and `.gltf` assets, including blocky heads with various example makeup looks that are ready to be implemented into Studio for testing purposes.
+</figure>
+</CardContent>
+
+<CardActions style={{bottom: 0, width: '100%'}}>
+<Button href="../assets/makeup/resources/FBX-GLTF-Blocky-Mesh.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Mesh Template</Button>
 </CardActions>
 
 </Card>
@@ -421,3 +476,49 @@ A comprehensive `.zip` folder of `.fbx` and `.gltf` assets, including heads with
   </Grid>
 
 </Grid>
+
+## Creation process
+
+<Alert severity ='warning'>
+This process assumes that you are proficient in 3D modeling software, such as Blender or Maya, and that you understand how to update, replace, export, save, and alter materials within your modeling tool and any additional texturing software or plugins.
+</Alert>
+
+<GridContainer numColumns="3">
+  <figure><img src="../assets/makeup/Creation-Steps-1.png" /><figcaption>Download the 3D reference template head and texture templates applicable to your workflow.</figcaption></figure>
+  <figure><img src="../assets/makeup/Creation-Steps-2.png" /><figcaption>Modify the texture images in the tools of your choice.</figcaption></figure>
+  <figure><img src="../assets/makeup/Creation-Steps-3.png" /><figcaption>In Blender or Maya, replace the textures in the template with your new textures and export. </figcaption></figure>
+</GridContainer>
+
+While you can easily swap `Class.Decal` objects in Studio to make a quick change to a character's makeup, the following instruction is best practice for implementing PBR-based textures into Roblox makeup at scale. This process requires:
+
+- The [Makeup test place and template files](#resources)
+- A 3D modeling tool such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview)
+- Any PBR texturing software, such as [Substance Painter](https://www.adobe.com/products/substance3d/apps/painter.html), [Materialize](http://boundingboxsoftware.com/materialize/index.php), or plugins like [Ucupaint](https://extensions.blender.org/add-ons/ucupaint/) (Blender).
+
+As always with 3D art and creation workflows, there are many ways to achieve a specific goal, and the makeup and PBR publishing flow is no exception. It's recommended to try the workflow in this guide first, then adjust as necessary for your own creation requirements:
+
+1. Download a [reference template head](#resources) and open it in the general modeling software of your choice.
+2. Using your texturing tools or image editing software, modify the texture images associated with the different regions: `TransferTexture_Eyes`, `TransferTexture_Face`, or `TransferTexture_Lips`.
+3. When you've created your new texture images, use Blender or Maya to reassign the existing file textures in the template. For more information, see [Reassign textures](./reassign-textures.md).
+4. Review [Face caging best practices](../art/characters/face-caging-best-practices.md) for guidance on how to adjust face cages so that your makeup displays correctly for your use case.
+5. Export the entire template file as a `.fbx` or `.gltf`. All 3D modeling [export requirements](../art/modeling/export-requirements.md) apply, but there are a few makeup-specific settings you must configure:
+
+   - If you are using Blender,
+     1. In the export file brower window, navigate to the **Include** section, then enable the **Custom Properties** toggle for makeup UV data transfer purposes.
+     1. In the **Armature** section, enable **Only Deform Bones** to ensure your export file includes skinning data for eyebrows and eyelashes.
+
+       <figure><img src="../assets/makeup/Blender-MakeupExport.png" /><figcaption>All necessary Blender export settings for makeup</figcaption></figure>
+
+   - If you are using Maya, in the export file browser window, navigate to the **Deformed Models** section, then enable the **Skins** toggle to ensure your export file includes skinning data for eyebrows and eyelashes.
+
+       <img src="../assets/makeup/Maya-MakeupExport.png" />  
+
+6. [Import](./import.md) the template file into Studio. Studio automatically detects your mesh object names and associated textures, and generates `Decal` objects.
+
+   <img src="../assets/makeup/Imported-DataModel.png" width="30%" />
+  
+7. Apply any makeup decals or eyebrow and eyelash accessories to characters in the test place by dropping makeup assets in the appropriate character's `Makeup` or `Accessories` folder.
+
+   <img src="../assets/makeup/Makeup-Character-Folders.png" width="35%" />
+
+8. Click the **Play** button, then navigate to the character with new makeup assets to preview.
