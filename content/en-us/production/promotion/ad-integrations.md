@@ -63,7 +63,7 @@ To register your ad integration campaign:
     5. Enter a name for the campaign.
 5. Under **Assets**:
     1. Click **Manage assets**.
-    2. Enter the asset IDs for all assets included in the ad campaign. If you haven't created them yet, you can register the campaign without assets and [add them later](#asset-submission-and-moderation).
+    2. Enter the IDs for all individual assets or models included in the ad campaign. If you haven't created them yet, you can register the campaign without assets and [add them later](#asset-submission-and-moderation).
     3. Click **Save**.
 6. Click **Register**.
 
@@ -151,11 +151,11 @@ When placing ad labels in your experience, make sure to:
 
 ### Asset submission and moderation
 
-To submit additional assets to an existing ad integration campaign:
+To submit additional assets or models to an existing ad integration campaign:
 
 1. In Ads Manager, go to **Ad integrations**.
 2. Click **&vellip;** ⟩ **Manage assets** next to the relevant campaign.
-3. Enter the IDs of the assets you want to add to the campaign.
+3. Enter the IDs of the individual assets or models you want to add to the campaign.
 4. Click **Save**.
 
 Roblox reviews and moderates all submitted assets, and [their status](#asset-status) directly affects your [campaign status](#campaign-status). Moderation is typically completed within 48 hours.
