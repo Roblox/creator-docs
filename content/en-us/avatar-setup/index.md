@@ -6,7 +6,7 @@ description: The Avatar Setup tool previews animations, clothing, accessories, a
 The **Avatar Setup** tool helps accelerate the avatar character, clothing, and accessory creation process by automatically processing custom models into avatar assets:
 
 1. [Import](#import-a-model) a custom model.
-2. Select the model and click on [Avatar setup](#run-avatar-setup) to run.
+2. Select the model and click on [Setup](#run-avatar-setup) to run.
    1. If your model does not include all the components of an avatar model, the tool attempts to [auto-setup](./auto-setup.md) the model into an avatar asset.
 3. [Test and edit](#test-and-edit) the asset.
 4. (Optional) [Publish](#publish) the asset to Marketplace.

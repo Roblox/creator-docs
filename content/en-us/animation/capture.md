@@ -20,7 +20,7 @@ The animation capture tools allow you to:
 
 Before you begin to record your face, ensure that you're in a well lit room close enough to your camera so that your face is in the center of your camera's recording frame. This increases your camera's ability to distinguish you from your surroundings so that you can accurately puppeteer your avatar and create high-quality animations.
 
-1. From the toolbar's **Avatar** tab, click **Animation**. The [Animation Editor](../animation/editor.md) window displays.
+1. From the toolbar's **Avatar** tab, click **Clip Editor**. The [Animation Editor](../animation/editor.md) window displays.
 2. In the 3D viewport or the [Explorer](../studio/explorer.md) hierarchy, select the rig you want your video to animate. Enter a new animation name in the dialog window and click the **Create** button.
 3. Navigate to the **track list** and click the **Face Capture** button. A popup displays asking you to acknowledge that you consent to the collection of your facial movements to enable the feature and camera access.
 
@@ -55,7 +55,7 @@ Before you import a video to the **Animation Editor**, ensure the `.mp4` or `.mo
 
 To import a video to create an animation:
 
-1. From the toolbar's **Avatar** tab, click **Animation**. The [Animation Editor](../animation/editor.md) window displays.
+1. From the toolbar's **Avatar** tab, click **Clip Editor**. The [Animation Editor](../animation/editor.md) window displays.
 2. In the 3D viewport or the [Explorer](../studio/explorer.md) hierarchy, select the R15 rig you want your video to animate. Enter a new animation name in the dialog window and click the **Create** button.
 3. Navigate to the **media and playback controls** and click the **&ctdot;** button, then navigate to **Import**&nbsp;⟩ **Live&nbsp;Animation&nbsp;Creator**.
 

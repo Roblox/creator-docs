@@ -185,39 +185,6 @@ Another example of using clear language and imagery to communicate value is thro
 
 In all cases, ensure that your merchandising terms and item descriptions are truthful and accurate so players know exactly what they will receive. Be mindful to not "oversell" items and remember that you are building a relationship with your players that depends on obtaining and maintaining trust.
 
-#### Chance-based merchandising
-
-Another common merchandising strategy is to use a chance-based system. In chance-based systems, players don't purchase items directly, but instead purchase the opportunity to receive several kinds of items, usually of varying rarity. There are three common variations of this technique: There are three common variations of this technique:
-
-- **Chance Wheel:** Each possible item is shown on the wheel, and players buy spin tokens.
-
-  <figure>
-      <img src="../../assets/game-design/monetization-foundations/monetization-foundation-11.png" width="70%"/>
-      <figcaption>Chance wheel in *Dragon Adventure*</figcaption>
-    </figure>
-
-- **Machine Style:** Each possible item is contained within a capsule, and players purchase the ability to pull a lever and get one of the possible listed rewards.
-  <figure>
-      <img src="../../assets/game-design/monetization-foundations/monetization-foundation-12.png" width="70%"/>
-      <figcaption>Machine Style [*Creatures of Sonaria*](https://www.roblox.com/games/5233782396/)</figcaption>
-    </figure>
-- **Mystery Box:** Each possible item is given a percentage chance of being acquired based on rarity, and players purchase the ability to open the box and see what's inside.
-  <figure>
-      <img src="../../assets/game-design/monetization-foundations/monetization-foundation-13.png" width="70%"/>
-      <figcaption>Mystery Box in [*Murder Mystery 2*](https://www.roblox.com/games/142823291/)</figcaption>
-    </figure>
-
-<Alert severity="warning">
-   Be aware that chance-based merchandising needs to adhere to the "Paid Random Items" policy articulated in the [Roblox Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards):
-
-    - Granted items must not be traded or sold for Robux, real currency, or anything else of value on Roblox.
-    - You will need to implement the appropriate [PolicyService API](https://create.roblox.com/docs/reference/engine/classes/PolicyService#GetPolicyInfoForPlayerAsync).
-    - Odds must be accurately and clearly disclosed to your potential customers.
-
-  </Alert>
-
-For more information on how to design fair loot boxes from two experts in the field, watch this [video](https://youtu.be/OEmFocfE0Xs).
-
 #### Bundles
 
 Bundles are a great way to package up items that go together, whether it's a group of items that new players would find appealing or items that share a common theme. Because a bundle has multiple items, ensure players can clearly see each one and let them know what each item does. As best practice, have a comparison to other bundles to gauge the value of grouped items.

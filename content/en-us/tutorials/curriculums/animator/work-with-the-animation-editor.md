@@ -18,7 +18,7 @@ In this chapter, let's explore how to open the **Animation Editor**, customize y
 The **Animation Editor** is Studio's primary animation tool. While it comes with a lot of functionality, such as [animation capture](../../../animation/capture.md) and [inverse kinematics](../../../animation/inverse-kinematics.md) tools, this lesson focuses on its basic tools to help you get started in learning how to create animations.
 
 1. At the top of the toolbar, go to the **Avatar** tab.
-1. Click the **Animation** button. The **Animation Editor** displays at the bottom of Studio.
+1. Click the **Clip Editor** button. The **Animation Editor** displays at the bottom of Studio.
 
 ## Prepare rig
 

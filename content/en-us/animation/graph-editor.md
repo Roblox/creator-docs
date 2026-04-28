@@ -3,24 +3,20 @@ title: Animation Graph Editor
 description: The animation graph editor is a visual, node-based tool that lets you build complex animation logic.
 ---
 
-<Alert severity = 'info'>
-Animation graphs is currently in Studio Beta. To enable, navigate to **File** > **Beta Features** and enable **Animation graphs**.
-</Alert>
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
+<BetaAlert betaName="Animation Graph" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
 
 The **Animation Graph Editor** is a visual, node-based tool that empowers technical artists and animators to build complex animation logic directly within Roblox Studio. By providing a streamlined interface for creating behaviors like blend trees, it removes the traditional dependency on manual scripting for character motion.
 
 This system works in tandem with your existing animation workflow:
 
-- **Animation Editor**: Continue using the Animation Editor as your primary tool for authoring individual clips and fine-tuning keyframes and curves.
+- **Animation Editor**: Continue using the [Animation Editor](./editor.md) as your primary tool for authoring individual clips and fine-tuning keyframes and curves.
 - **Animation Graph Editor**: Use this new workspace to take those clips and organize them into a logic tree to drive sophisticated gameplay behavior.
 
 Designed to enhance collaboration, the visual graph allows developers to quickly inspect, debug, and understand the logic created by animators. While artists focus on refining interactive motion, developers can still access animation graph nodes programmatically for direct control over blended animations and states.
 
 ## Build a graph
-
-<Alert severity = 'info'>
-Animation graphs is currently in Studio Beta. To enable, navigate to **File** > **Beta Features** and enable **Animation graphs**.
-</Alert>
 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/VgMUCph3bOI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 <br />
@@ -31,10 +27,13 @@ For a deeper dive into practical applications, you can explore the [Animation Gr
 
 To create your own animation graph, similar to the basic example provided in the reference, use the following steps:
 
-1. In Studio, add an animatable rig by navigating to the Avatar tab and selecting **Character** > **My Avatar**.
-2. Open the Animation Graph Editor by navigating to **Graph Editor** in Studio's **Avatar** tab.
+1. In Studio, add an animatable rig by navigating to the **Avatar** tab and selecting **Character** ⟩ **My Avatar**.
 
-   <img src="../assets/animation/graph-editor/Anim-Graph-Ribbon.png" width="60%" alt="Animation Graph Editor indicated in Studio's toolbar" />
+   <img src="../assets/studio/general/Toolbar-Character.png" width="800" alt="Character button highlighted in Studio's toolbar." />
+
+2. Open the Animation Graph Editor by navigating to **Graph Editor** in the **Avatar** tab.
+
+   <img src="../assets/studio/general/Toolbar-Graph-Editor.png" width="800" alt="Animation Graph Editor indicated in Studio's toolbar." />
 
 3. Select the animatable rig in the 3D viewport and select **Create Graph**.
 4. In the Graph Editor, right-click and select **Clip**.
@@ -43,7 +42,7 @@ To create your own animation graph, similar to the basic example provided in the
 
 5. In the new Clip node, set the Animation ID.
 
-   1. Select the **Animation ID dropdown**.
+   1. Select the **Animation ID** dropdown.
    2. To submit a specific animation asset ID, click **Import**.
 
       <img src="../assets/animation/graph-editor/Import-AnimationID.png" width="60%" alt="Indicated a field on the animation import module to add Animation ID" />
@@ -151,7 +150,7 @@ A reference to an `Class.AnimationClip` asset. This serves as a leaf node in the
   <tr>
     <td>**Clip**</td>
     <td>Asset ID</td>
-    <td>The animation asset to play (e.g. rbxassetid://12345).</td>
+    <td>The animation asset to play (e.g. `rbxassetid://12345`).</td>
   </tr>
   <tr>
     <td>**PlayMode**</td>

@@ -31,23 +31,6 @@ The basic **Animation Editor** tools are an excellent start while learning to cr
 
 - The [Curve Editor](../../../animation/curve-editor.md) interface that lets you see and modify how a rig's position and orientation changes between keyframes through color-coded curve graphs.
 
-<GridContainer numColumns="2">
-  <figure>
-		<figure>
-    	<img src="../../../assets/animation/animation-editor/Animation-Events-Add-Event.png" alt="A single event marker called FootStep with an empty parameter for an event." width="800" />
-    	<figcaption>Event markers</figcaption>
-  	</figure>
-		<figure>
-    	<img src="../../../assets/animation/curve-editor/Curve-Editor-Example.png" alt="A preview of four curves on the Curve Editor interface." width="61%" />
-    	<figcaption>Curve Editor interface</figcaption>
-  	</figure>
-  </figure>
-  <figure>
-    <video src="../../../assets/animation/inverse-kinematics/IK-Place-Hand.mp4" controls width="75%" style={{marginTop: 0}}></video>
-    <figcaption>Inverse Kinematics</figcaption>
-  </figure>
-</GridContainer>
-
 If you want to continue learning through step-by-step lessons, check out the following use case tutorials:
 
 - [Create character animations](../../use-case-tutorials/animation/create-an-animation.md)
