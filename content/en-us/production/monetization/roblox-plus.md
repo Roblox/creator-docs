@@ -272,7 +272,7 @@ Roblox Plus subscribers can create paid [private servers](./private-servers.md) 
 
 **Payouts are based on the time a Plus subscriber spends in paid private servers they create themselves.** This means that if a Plus subscriber invites another Plus subscriber to a paid private server, you do not earn from the invited player.
 
-On each successful Plus subscription renewal, Roblox evaluates the subscriber's paid private server usage over the previous 30 days. It then determines the **top five paid private servers the subscriber created within your game**, based on the amount of time they spent in each server during that period, with a minimum of 60 cumulative minutes.
+On the Plus subscription renewal day, Roblox evaluates paid private server usage over the previous 30 days for that subscriber. This evaluation occurs even if the subscriber cancels Plus instead of renewing. Roblox then determines the **top five paid private servers the subscriber created within your game**, based on the amount of time they spent in each server during that period, with a minimum of 60 cumulative minutes.
 
 If a Plus subscriber spends **at least 60 cumulative minutes over the last 30 days** in a paid private server they created within your game, you can earn up to **100 Robux per user per server** based on the server price.
 
