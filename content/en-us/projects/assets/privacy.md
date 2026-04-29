@@ -273,7 +273,7 @@ Opening an asset's permissions is irreversible. Once you set an asset to open us
 </Alert>
 
 <Alert severity="info">
-To set multiple assets to **Open Use** in bulk, use the revamped **Asset Manager**. See [Beta: Updates to Revamped Asset Manager](https://devforum.roblox.com/t/beta-updates-to-revamped-asset-manager/4548832/1) for details.
+To set multiple assets to **Open Use** in bulk, use the latest Asset Manager beta. See [Revamped Asset Manager](https://devforum.roblox.com/t/beta-updates-to-revamped-asset-manager/4548832/1) for details.
 </Alert>
 
 While opting in to the **Asset Privacy** beta allows you to restrict your or your group's mesh, image, and decal assets on creation, you are still able to open their permissions so that any creator or experience to freely access and use them in their projects.
