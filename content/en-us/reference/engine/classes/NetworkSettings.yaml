@@ -98,6 +98,85 @@ properties:
       can_save: true
     capabilities:
       - Network
+  - name: NetworkSettings.InboundNetworkJitterMs
+    summary: |
+      Adds jitter to playtest connections in the server-to-client direction.
+    description: |
+      On [playtest](/studio/testing-modes.md#playtesting) connections, this
+      property adds variability (jitter) in milliseconds to the latency added to
+      packets sent from server to client. This variable latency is in addition
+      to any latency introduced by
+      `Class.NetworkSettings.InboundNetworkMinDelayMs|InboundNetworkMinDelayMs`.
+      Per-packet delay sampled from delay and jitter is rounded to 1
+      millisecond. See
+      [network simulation](/studio/testing-modes.md#network-simulation) for
+      additional details.
+    code_samples: []
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Network
+  - name: NetworkSettings.InboundNetworkLossPercent
+    summary: |
+      Sets the probability that packets on playtest connections from server to
+      client are dropped.
+    description: |
+      On [playtest](/studio/testing-modes.md#playtesting) connections, this
+      property sets a percent probability that packets sent from server to
+      client are dropped. To maintain a stable test environment, the value is
+      capped at 0.5%. See
+      [network simulation](/studio/testing-modes.md#network-simulation) for
+      additional details.
+    code_samples: []
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Network
+  - name: NetworkSettings.InboundNetworkMinDelayMs
+    summary: |
+      Adds latency to playtest connections in the server-to-client direction.
+    description: |
+      On [playtest](/studio/testing-modes.md#playtesting) connections, this
+      property adds a minimum latency in milliseconds for packets sent from
+      server to client. Per-packet delay sampled from delay and jitter is
+      rounded to 1 millisecond. See
+      [network simulation](/studio/testing-modes.md#network-simulation) for
+      additional details.
+    code_samples: []
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Network
   - name: NetworkSettings.IncomingReplicationLag
     summary: |
       Simulates additional network latency in the network receiving path.
@@ -113,6 +192,85 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Diagnostics
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Network
+  - name: NetworkSettings.OutboundNetworkJitterMs
+    summary: |
+      Adds jitter to playtest connections in the client-to-server direction.
+    description: |
+      On [playtest](/studio/testing-modes.md#playtesting) connections, this
+      property adds variability (jitter) in milliseconds to the latency added to
+      packets sent from client to server. This variable latency is in addition
+      to any latency introduced by
+      `Class.NetworkSettings.OutboundNetworkMinDelayMs|OutboundNetworkMinDelayMs`.
+      Per-packet delay sampled from delay and jitter is rounded to 1
+      millisecond. See
+      [network simulation](/studio/testing-modes.md#network-simulation) for
+      additional details.
+    code_samples: []
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Network
+  - name: NetworkSettings.OutboundNetworkLossPercent
+    summary: |
+      Sets the probability that packets on playtest connections from client to
+      server are dropped.
+    description: |
+      On [playtest](/studio/testing-modes.md#playtesting) connections, this
+      property sets a percent probability that packets sent from client to
+      server are dropped. To maintain a stable test environment, the value is
+      capped at 0.5%. See
+      [network simulation](/studio/testing-modes.md#network-simulation) for
+      additional details.
+    code_samples: []
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Network
+  - name: NetworkSettings.OutboundNetworkMinDelayMs
+    summary: |
+      Adds latency to playtest connections in the client-to-server direction.
+    description: |
+      On [playtest](/studio/testing-modes.md#playtesting) connections, this
+      property adds a minimum latency in milliseconds for packets sent from
+      client to server. Per-packet delay sampled from delay and jitter is
+      rounded to 1 millisecond. See
+      [network simulation](/studio/testing-modes.md#network-simulation) for
+      additional details.
+    code_samples: []
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
     serialization:
       can_load: true
       can_save: true

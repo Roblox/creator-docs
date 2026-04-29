@@ -158,4 +158,4 @@ You can also manage RTBF templates programmatically using the Open Cloud Configs
 - **Manual verification** — Compare your patterns to your live Luau usage using [Data Stores Manager](./data-stores-manager.md) in the Creator Hub before you publish configuration.
 - **Default scopes** — If a data store uses the default scope, set `scope_pattern` to `"global"` in the key template.
 - **Test end-to-end flow on a test experience** — For full validation of your templates, consider creating a test experience and dummy account, populating it with dummy data for that account's User ID, requesting RTBF on the dummy account, and ensuring the data is deleted once the account is processed.
-- **Confirm deletions** — After onboarding on your live experience, when an RTBF request appears in your Roblox.com inbox, verify that the corresponding data is removed within one week.
+- **Confirm deletions** — After onboarding on your live experience, when an RTBF request appears in your Roblox messages, verify that the corresponding data is removed within 30 days.
