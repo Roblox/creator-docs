@@ -160,7 +160,7 @@ To grant a collaborator permission to use a restricted asset in any of these sce
 1. Click the **Done** button to finalize your asset access permissions.
 
 <Alert severity="info">
-To grant permissions across multiple assets at once, or to bulk-share assets with specific groups and users, use the revamped **Asset Manager**. See [Beta: Updates to Revamped Asset Manager](https://devforum.roblox.com/t/beta-updates-to-revamped-asset-manager/4548832/1) for details.
+To grant permissions across multiple assets at once, or to bulk-share assets with specific groups and users, use the latest Asset Manager beta. See [Revamped Asset Manager](https://devforum.roblox.com/t/beta-updates-to-revamped-asset-manager/4548832/1) for details.
 </Alert>
 
 ### To experiences
