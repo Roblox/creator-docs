@@ -5,10 +5,10 @@
 name: StyleRule
 type: class
 memory_category: Gui
-summary: |
+summary: |-
   Defines style properties which override properties on the instances affected
   by the `Class.StyleRule.Selector|Selector` property.
-description: |
+description: |-
   Defines style properties which override properties on the instances affected
   by the `Class.StyleRule.Selector|Selector` property.
 code_samples: []
@@ -19,11 +19,11 @@ tags: []
 deprecation_message: ''
 properties:
   - name: StyleRule.Priority
-    summary: |
+    summary: |-
       A number that determines how properties of the `StyleRule` apply relative
       to the same properties in other `StyleRules`. Higher priority values take
       precedence over lower.
-    description: |
+    description: |-
       A number that determines how properties of the `StyleRule` apply relative
       to the same properties in other `Class.StyleRule|StyleRules`. Higher
       priority values take precedence over lower. For example, if a `StyleRule`
@@ -45,9 +45,8 @@ properties:
     capabilities:
       - UI
   - name: StyleRule.Selector
-    summary: |
-      A string specifying which instances the `StyleRule` should affect.
-    description: |
+    summary: A string specifying which instances the `StyleRule` should affect.
+    description: |-
       A string specifying which instances the `StyleRule` should affect. This
       can be a mix of selectors and combinators to match characteristics such as
       the class name, instance name, and hierarchy relationships.
@@ -152,10 +151,10 @@ properties:
     capabilities:
       - UI
   - name: StyleRule.SelectorError
-    summary: |
+    summary: |-
       A read-only string that displays errors from the
       `Class.StyleRule.Selector|Selector` property.
-    description: |
+    description: |-
       A read-only string that displays errors from the
       `Class.StyleRule.Selector|Selector` property such as syntax errors,
       unsupported class types, etc.
@@ -176,11 +175,33 @@ properties:
     capabilities:
       - UI
 methods:
+  - name: StyleRule:GetDefaultPropertyTransition
+    summary: |-
+      Returns the default transition applied to all properties of the `StyleRule`
+      that don't have an explicit transition set.
+    description: |-
+      Returns the default transition applied to all properties of the `StyleRule`
+      that don't have an explicit transition set. This is equivalent to calling
+      `Class.StyleRule:GetPropertyTransitions()|GetPropertyTransitions()` and
+      reading the value at key `"*"`.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Variant
+        summary: |-
+          The default transition as a `Datatype.TweenInfo` or string token, or `nil`
+          if no default transition is set.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - UI
   - name: StyleRule:GetProperties
-    summary: |
+    summary: |-
       Returns a dictionary of key-value pairs describing the properties of the
       `StyleRule`.
-    description: |
+    description: |-
       Returns a dictionary of key-value pairs describing the properties of the
       `StyleRule`, for example:
 
@@ -205,7 +226,7 @@ methods:
     parameters: []
     returns:
       - type: Dictionary
-        summary: |
+        summary: |-
           Dictionary of key-value pairs describing the properties of the
           `StyleRule`.
     tags: []
@@ -215,9 +236,8 @@ methods:
     capabilities:
       - UI
   - name: StyleRule:GetProperty
-    summary: |
-      Returns the value of a specific property in the `StyleRule`.
-    description: |
+    summary: Returns the value of a specific property in the `StyleRule`.
+    description: |-
       Returns the value of a specific property in the `StyleRule`.
 
       ```lua
@@ -236,13 +256,12 @@ methods:
       - name: name
         type: string
         default:
-        summary: |
+        summary: |-
           String name of the property, for example `"AnchorPoint"` or
           `"BackgroundColor3"`.
     returns:
       - type: Variant
-        summary: |
-          Value of the property.
+        summary: Value of the property.
     tags: []
     deprecation_message: ''
     security: None
@@ -250,21 +269,60 @@ methods:
     capabilities:
       - UI
   - name: StyleRule:GetPropertyTransitions
-    summary: |
-      Returns a dictionary of all property transitions set on the `StyleRule`.
-    description: |
-      Returns a dictionary of all property transitions set on the `StyleRule`.
-      Each key is a property name (string) and each value is a
-      `Datatype.TweenInfo` or a string token that defines the transition's
-      timing for that property.
+    summary: Returns a dictionary of all property transitions set on the `StyleRule`.
+    description: |-
+      Returns a dictionary of all property transitions set on the `StyleRule`. Each
+      key is a property name (string) and each value is a `Datatype.TweenInfo` or a
+      string token that defines the transition's timing for that property.
     code_samples:
       - StyleRule-GetPropertyTransitions
     parameters: []
     returns:
       - type: Dictionary
-        summary: |
-          Dictionary of key-value pairs mapping property names to their
-          transition parameters.
+        summary: Dictionary of key-value pairs mapping property names to their transition parameters.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - UI
+  - name: StyleRule:SetDefaultPropertyTransition
+    summary: |-
+      Sets or clears a default transition that applies to all properties of the
+      `StyleRule` that don't have an explicit transition set.
+    description: |-
+      Sets or clears a default transition that applies to all properties of the
+      `StyleRule` that don't have an explicit transition set. This is equivalent to
+      calling
+      `Class.StyleRule:SetPropertyTransition()|SetPropertyTransition()` with `"*"`
+      as the property name.
+
+      The `transitionParams` parameter accepts a `Datatype.TweenInfo` that configures
+      the transition's timing. The following `Datatype.TweenInfo` properties are used:
+
+      - `Datatype.TweenInfo.Time|Time` &mdash; Duration of the transition in seconds.
+      - `Datatype.TweenInfo.EasingStyle|EasingStyle` &mdash; The easing function used for interpolation.
+      - `Datatype.TweenInfo.EasingDirection|EasingDirection` &mdash; The direction of the easing function.
+      - `Datatype.TweenInfo.DelayTime|DelayTime` &mdash; Delay in seconds before the transition starts.
+
+      Note that the `Datatype.TweenInfo.RepeatCount|RepeatCount` and
+      `Datatype.TweenInfo.Reverses|Reverses` fields of `Datatype.TweenInfo` are
+      ignored, as style transitions cannot repeat or reverse automatically.
+
+      A per-property transition set via
+      `Class.StyleRule:SetPropertyTransition()|SetPropertyTransition()` takes
+      precedence over the default transition for that property.
+    code_samples: []
+    parameters:
+      - name: transitionParams
+        type: Variant
+        default:
+        summary: |-
+          Either a `Datatype.TweenInfo`, a token string defining the
+          default transition timing, or `nil` to remove the default transition.
+    returns:
+      - type: ()
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None
@@ -272,9 +330,8 @@ methods:
     capabilities:
       - UI
   - name: StyleRule:SetProperties
-    summary: |
-      Lets you declare and set multiple properties of the `StyleRule` at once.
-    description: |
+    summary: Lets you declare and set multiple properties of the `StyleRule` at once.
+    description: |-
       Similar to `Class.StyleRule:SetProperty()|SetProperty()` but lets you
       declare and set multiple properties of the `StyleRule` at once. Each
       assignment should be a valid property of the affected `Class.GuiObject` or
@@ -334,8 +391,7 @@ methods:
       - name: styleProperties
         type: Dictionary
         default:
-        summary: |
-          Dictionary of key-value pairs defining the properties to set.
+        summary: Dictionary of key-value pairs defining the properties to set.
     returns:
       - type: ()
         summary: ''
@@ -347,7 +403,7 @@ methods:
       - UI
   - name: StyleRule:SetProperty
     summary: ''
-    description: |
+    description: |-
       Sets a new property (or modifies an existing property) for the
       `StyleRule`. The `name` parameter should be a valid property of the
       affected `Class.GuiObject` or `Class.UIComponent` (`Class.UICorner`,
@@ -399,13 +455,11 @@ methods:
       - name: name
         type: string
         default:
-        summary: |
-          Property name to set, for example `"BackgroundColor3"`.
+        summary: Property name to set, for example `"BackgroundColor3"`.
       - name: value
         type: Variant
         default:
-        summary: |
-          Property value to set, for example `Datatype.Color3.new(1, 0, 0.25)`.
+        summary: Property value to set, for example `Datatype.Color3.new(1, 0, 0.25)`.
     returns:
       - type: ()
         summary: ''
@@ -416,25 +470,19 @@ methods:
     capabilities:
       - UI
   - name: StyleRule:SetPropertyTransition
-    summary: |
-      Sets or clears the transition for a single property on the `StyleRule`.
-    description: |
-      Sets or clears the transition for a single property on the `StyleRule`.
-      When a transition is set for a property, any change to that property's
-      styled value will be animated over time instead of applied immediately.
+    summary: Sets or clears the transition for a single property on the `StyleRule`.
+    description: |-
+      Sets or clears the transition for a single property on the `StyleRule`. When a
+      transition is set for a property, any change to that property's styled value
+      will be animated over time instead of applied immediately.
 
-      The `transitionParams` parameter accepts a `Datatype.TweenInfo` that
-      configures the transition's timing. The following `Datatype.TweenInfo`
-      properties are used:
+      The `transitionParams` parameter accepts a `Datatype.TweenInfo` that configures
+      the transition's timing. The following `Datatype.TweenInfo` properties are used:
 
-      - `Datatype.TweenInfo.Time|Time` &mdash; Duration of the transition in
-        seconds.
-      - `Datatype.TweenInfo.EasingStyle|EasingStyle` &mdash; The easing function
-        used for interpolation.
-      - `Datatype.TweenInfo.EasingDirection|EasingDirection` &mdash; The
-        direction of the easing function.
-      - `Datatype.TweenInfo.DelayTime|DelayTime` &mdash; Delay in seconds before
-        the transition starts.
+      - `Datatype.TweenInfo.Time|Time` &mdash; Duration of the transition in seconds.
+      - `Datatype.TweenInfo.EasingStyle|EasingStyle` &mdash; The easing function used for interpolation.
+      - `Datatype.TweenInfo.EasingDirection|EasingDirection` &mdash; The direction of the easing function.
+      - `Datatype.TweenInfo.DelayTime|DelayTime` &mdash; Delay in seconds before the transition starts.
 
       Note that the `Datatype.TweenInfo.RepeatCount|RepeatCount` and
       `Datatype.TweenInfo.Reverses|Reverses` fields of `Datatype.TweenInfo` are
@@ -449,13 +497,13 @@ methods:
       - name: property
         type: string
         default:
-        summary: |
-          String name of the property to set a transition for, for example
-          `"BackgroundColor3"` or `"Size"`.
+        summary: |-
+          String name of the property to set a transition for, for
+          example `"BackgroundColor3"` or `"Size"`.
       - name: transitionParams
         type: Variant
         default:
-        summary: |
+        summary: |-
           A `Datatype.TweenInfo` or token string defining the transition timing,
           or `nil` to remove the transition for this property.
     returns:
@@ -468,31 +516,26 @@ methods:
     capabilities:
       - UI
   - name: StyleRule:SetPropertyTransitions
-    summary: |
+    summary: |-
       Lets you declare and set transitions for multiple properties of the
       `StyleRule` at once.
-    description: |
-      Similar to
-      `Class.StyleRule:SetPropertyTransition()|SetPropertyTransition()` but lets
-      you declare and set transitions for multiple properties of the `StyleRule`
+    description: |-
+      Similar to `Class.StyleRule:SetPropertyTransition()|SetPropertyTransition()` but
+      lets you declare and set transitions for multiple properties of the `StyleRule`
       at once.
 
-      Calling this method **replaces** all existing transitions on the
-      `StyleRule` with the provided set. Each key should be a property name
-      (string) and each value should be a `Datatype.TweenInfo` or string token
-      defining the transition timing for that property. Passing `nil` as a value
-      for a key excludes that property from the resulting transitions.
+      Calling this method **replaces** all existing transitions on the `StyleRule`
+      with the provided set. Each key should be a property name (string) and each
+      value should be a `Datatype.TweenInfo` or string token defining the transition
+      timing for that property. Passing `nil` as a value for a key excludes that
+      property from the resulting transitions.
 
       The following `Datatype.TweenInfo` properties are used:
 
-      - `Datatype.TweenInfo.Time|Time` &mdash; Duration of the transition in
-        seconds.
-      - `Datatype.TweenInfo.EasingStyle|EasingStyle` &mdash; The easing function
-        used for interpolation.
-      - `Datatype.TweenInfo.EasingDirection|EasingDirection` &mdash; The
-        direction of the easing function.
-      - `Datatype.TweenInfo.DelayTime|DelayTime` &mdash; Delay in seconds before
-        the transition starts.
+      - `Datatype.TweenInfo.Time|Time` &mdash; Duration of the transition in seconds.
+      - `Datatype.TweenInfo.EasingStyle|EasingStyle` &mdash; The easing function used for interpolation.
+      - `Datatype.TweenInfo.EasingDirection|EasingDirection` &mdash; The direction of the easing function.
+      - `Datatype.TweenInfo.DelayTime|DelayTime` &mdash; Delay in seconds before the transition starts.
 
       Note that the `Datatype.TweenInfo.RepeatCount|RepeatCount` and
       `Datatype.TweenInfo.Reverses|Reverses` fields of `Datatype.TweenInfo` are
@@ -507,8 +550,7 @@ methods:
       - name: properties
         type: Dictionary
         default:
-        summary: |
-          Dictionary of property names to transition parameters.
+        summary: Dictionary of property names to transition parameters.
     returns:
       - type: ()
         summary: ''

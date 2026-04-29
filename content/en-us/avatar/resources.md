@@ -15,7 +15,98 @@ The following downloadable files are available for your use:
 
 ## References
 
-The following are source files used for actual Roblox assets. Finished assets like Nature Girl and Stylish Male include clothing and accessory items and may cause validation errors unless removed.
+### Higher fidelity rigs
+
+The following higher-fidelity humanoid rigs include additional bones or joints for a higher level of realism with articulated hands, shoulders, and spine movements.
+
+<Grid container alignItems='stretch' style={{margin: -6}}>
+
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent style={{marginBottom:'66px'}}>
+
+<center>Mannequin</center>
+<figure>
+<center> <img src="../assets/art/resources/Mannequin-Resource.png" width="100%" /> </center>
+</figure>
+<figure>
+A comprehensive `.zip` folder of a AA avatar-ready character body, including a dynamic head, fingers, layered clothing, and 2K PBR textures.
+</figure>
+</CardContent>
+
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../assets/art/reference-files/Mannequin-HigherFidelity.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+</CardActions>
+
+</Card>
+</Grid>
+
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent style={{marginBottom:'66px'}}>
+
+<center>Robuta</center>
+<figure>
+<center> <img src="../assets/art/resources/Robuta-Resource.png" width="100%" /> </center>
+</figure>
+<figure>
+A comprehensive `.zip` folder of an anime-style, avatar-ready character body, including a dynamic head, fingers, layered clothing and rigid accessory assets, and 2K PBR textures.
+</figure>
+</CardContent>
+
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../assets/art/reference-files/Robuta-HigherFidelity.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+</CardActions>
+
+</Card>
+</Grid>
+
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent style={{marginBottom:'66px'}}>
+
+<center>HipToBeSquare</center>
+<figure>
+<center> <img src="../assets/art/resources/HipToBeSquare-Resource.png" width="100%" /> </center>
+</figure>
+<figure>
+A comprehensive `.zip` folder of a blocky-style, avatar-ready character body, including a dynamic head, fingers, layered clothing and rigid accessory assets, and color, roughness, and metal PBR textures.
+</figure>
+</CardContent>
+
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../assets/art/reference-files/HipToBeSquare-HigherFidelity.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+</CardActions>
+
+</Card>
+</Grid>
+
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent style={{marginBottom:'66px'}}>
+
+<center>Roxie</center>
+<figure>
+<center> <img src="../assets/art/resources/HigherFidelityRoxie-Resource.png" width="100%" /> </center>
+</figure>
+<figure>
+A comprehensive `.zip` folder of an avatar-ready character body, including a dynamic head, fingers, layered clothing and rigid accessory assets, and PBR textures. When you import this model, set **Rig Scale** to **Rthro Narrow**.
+</figure>
+<br />
+
+</CardContent>
+
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../assets/art/reference-files/Roxie-HigherFidelity.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+</CardActions>
+
+</Card>
+</Grid>
+</Grid>
+
+### Standard rigs
+
+The following standard humanoid rigs include the standard amount of bones or joints. Finished assets like Nature Girl and Stylish Male include clothing and accessory items that may cause validation errors unless they are removed.
 
 <Grid container alignItems='stretch' style={{margin: -6}}>
 

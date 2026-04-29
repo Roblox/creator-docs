@@ -14,9 +14,17 @@ description: |
   round corner area. See [here](../../../ui/appearance-modifiers.md#corners) for
   examples.
 
-  In order to keep the circular shape of round corners with the
-  `Class.UICorner.CornerRadius|CornerRadius` value (`Datatype.UDim`), the radius
-  is internally calculated as follows:
+  Each corner has its own radius property
+  (`Class.UICorner.TopLeftRadius|TopLeftRadius`,
+  `Class.UICorner.TopRightRadius|TopRightRadius`,
+  `Class.UICorner.BottomRightRadius|BottomRightRadius`,
+  `Class.UICorner.BottomLeftRadius|BottomLeftRadius`). The
+  `Class.UICorner.CornerRadius|CornerRadius` property is a convenience shorthand
+  that sets all four corners at once and reads from
+  `Class.UICorner.TopLeftRadius|TopLeftRadius`.
+
+  In order to keep the circular shape of round corners, each corner radius
+  (`Datatype.UDim`) is internally calculated as follows:
 
   - The radius of the **X** axis is always the same as the radius of **Y** axis.
   - `Datatype.UDim.Scale|Scale` rounding will always apply to the **minimum**
@@ -30,6 +38,11 @@ description: |
   suitable for decorative borders that are not simply rounded. See
   [9‑Slice Design](../../../ui/9-slice.md) for details.
 
+  When using [styling](../../../ui/styling/index.md) with `Class.UICorner`,
+  avoid configuring both `Class.UICorner.CornerRadius|CornerRadius` and the
+  individual corner radii in style rules at the same time, as this may produce
+  unexpected results.
+
   Note that `Class.UICorner` can not be applied to a `Class.ScrollingFrame`.
 code_samples: []
 inherits:
@@ -40,19 +53,17 @@ deprecation_message: ''
 properties:
   - name: UICorner.CornerRadius
     summary: |
-      Determines the radius of the component.
+      Sets all four corner radii at once and reads from
+      `Class.UICorner.TopLeftRadius|TopLeftRadius`.
     description: |
-      A `Datatype.UDim` property that determines the radius of the
-      `Class.UICorner` component, internally calculated as follows:
-
-      - The radius of the **X** axis is always the same as the radius of **Y**
-        axis.
-      - `Datatype.UDim.Scale|Scale` rounding will always apply to the
-        **minimum** width or height.
-      - Rounded rectangles will always be in a "pill" shape if
-        `Class.UICorner.CornerRadius|CornerRadius` is set to a value that leads
-        to a calculated result greater than half of the rectangle's minimum
-        width or height.
+      A convenience `Datatype.UDim` property that acts as a shorthand for the
+      four individual corner radius properties. Writing to this property sets
+      `Class.UICorner.TopLeftRadius|TopLeftRadius`,
+      `Class.UICorner.TopRightRadius|TopRightRadius`,
+      `Class.UICorner.BottomRightRadius|BottomRightRadius`, and
+      `Class.UICorner.BottomLeftRadius|BottomLeftRadius` to the same value.
+      Reading this property returns the value of
+      `Class.UICorner.TopLeftRadius|TopLeftRadius`.
     code_samples: []
     type: UDim
     tags: []

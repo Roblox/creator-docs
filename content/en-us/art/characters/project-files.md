@@ -13,11 +13,47 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
 
 <Tabs>
   <TabItem label="Models">
-  <table>
+
+**Higher fidelity rigs**
+
+The following higher-fidelity humanoid rigs include additional bones or joints for a higher level of realism with articulated hands, shoulders, and spine movements.
+
+<table>
 <thead>
   <tr>
-    <th>Filename</th>
-    <th>Description</th>
+    <th><b>File name</b></th>
+    <th><b>Description</b></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><a href="../../assets/art/reference-files/Mannequin-HigherFidelity.zip" download>Mannequin-HigherFidelity.zip</a></td>
+    <td>A comprehensive `.zip` folder of a AA avatar-ready character body, including a dynamic head, fingers, layered clothing, and 2K PBR textures.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/Robuta-HigherFidelity.zip" download>Robuta-HigherFidelity.zip</a></td>
+    <td>A comprehensive `.zip` folder of an anime-style, avatar-ready character body, including a dynamic head, fingers, layered clothing and rigid accessory assets, and 2K PBR textures.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/HipToBeSquare-HigherFidelity.zip" download>HipToBeSquare-HigherFidelity.zip</a></td>
+    <td>A comprehensive `.zip` folder of a blocky-style, avatar-ready character body, including a dynamic head, fingers, layered clothing and rigid accessory assets, and color, roughness, and metal PBR textures.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/Roxie-HigherFidelity.zip" download>Roxie-HigherFidelity.zip</a></td>
+    <td>A comprehensive `.zip` folder of an avatar-ready character with an [Rthro Normal](../../art/characters/specifications.md#normal) body, including a dynamic head, fingers, layered clothing and rigid accessory assets, and PBR textures. When you import this model, set **Rig Scale** to **Rthro Narrow**.</td>
+  </tr>
+</tbody>
+</table>
+
+**Standard rigs**
+
+The following humanoid rigs include the standard amount of bones or joints.
+
+<table>
+<thead>
+  <tr>
+    <th><b>File name</b></th>
+    <th><b>Description</b></th>
   </tr>
 </thead>
 <tbody>
@@ -39,7 +75,7 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
   </tr>
     <tr>
     <td><a href="../../assets/art/reference-files/ClassicMannequin.fbx" download>ClassicMannequin.fbx</a></td>
-    <td>A [classic body](../../art/characters/specifications.md#classic) type blank mannequin to use in Studio or your modeling application.</td>
+    <td>A [classic](../../art/characters/specifications.md#classic) body type blank mannequin to use in Studio or your modeling application.</td>
   </tr>
   <tr>
     <td><a href="../../assets/art/reference-files/ClassicMannequin_With-Cages.fbx" download>ClassicMannequin_With-Cages</a></td>
@@ -63,6 +99,7 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
   </tr>
 </tbody>
 </table>
+
   </TabItem>
   <TabItem label="Blender">
   <table>

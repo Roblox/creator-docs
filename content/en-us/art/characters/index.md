@@ -81,6 +81,8 @@ When texturing parts of your character model's body, ensure that your character 
 
 An armature allows each character to articulate its limbs and move naturally through the environment. Often referred to as bones or joints, this rigging character information includes skinning data which allows connected limbs, like the knees or elbows to bend organically. In Studio, each bone of the character armature is represented by `Class.Bone` objects that connect the character `Class.MeshPart` objects together.
 
+Character rigs require 15 poseable `Class.Bone` objects, and all `Class.Bone` objects must follow a specific hierarchy and naming convention to function properly in Studio and on the Marketplace. For more information, see [Rigging](./specifications.md#rigging).
+
 ### Face animation data
 
 <GridContainer numColumns="2">

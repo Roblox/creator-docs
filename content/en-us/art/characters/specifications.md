@@ -18,7 +18,7 @@ When ready to export, see the [export requirements](../../art/characters/export-
 
 ## Geometry
 
-Avatar character models are made up of 15 separate mesh objects and require additional geometry requirements to import into Studio and publish successfully. In addition to the body [types](#body-scale), [parts](#body-parts), and [budget](#triangle-budgets) specifications, ensure that your models also fulfill the following general requirements when modeling:
+Avatar character models are made up of 15 separate mesh objects and require additional geometry requirements to import into Studio and publish successfully. In addition to the body [scale types](#body-scale), [parts](#body-parts), and [triangle budget](#triangle-budgets) specifications, ensure that your models also fulfill the following general requirements when modeling:
 
 - **Watertight** - All geometry must be watertight without exposed holes or backfaces. Meshes used as outer cages do not need to be watertight.
 - **No N-gons** - Model your assets in quads where possible.
@@ -602,36 +602,47 @@ Unlike generic rigs, humanoid models require a specific hierarchy and naming con
 
 See the following requirements for humanoid rigging:
 
-- **Rig Hierarchy** - Humanoid rigs require a specific bone hierarchy and naming convention:
+- **Rig Hierarchy** - Humanoid rigs require a specific bone or joint hierarchy and naming convention:
 
   - Root
-  - HumanoidRootNode
-  - LowerTorso
-  - UpperTorso
-  - Head (representing the base of the neck)
-  - LeftUpperArm
-  - LeftLowerArm
-  - LeftHand
-  - RightUpperArm
-  - RightLowerArm
-  - RightHand
-  - LeftUpperLeg
-  - LeftLowerLeg
-  - LeftFoot
-  - RightUpperLeg
-  - RightLowerLeg
-  - RightFoot
+    - HumanoidRootNode
+      - LowerTorso
+        - UpperTorso
+          - Head (representing the base of the neck)
+          - LeftUpperArm
+            - LeftLowerArm
+              - LeftHand
+          - RightUpperArm
+            - RightLowerArm
+              - RightHand
+        - LeftUpperLeg
+          - LeftLowerLeg
+            - LeftFoot
+        - RightUpperLeg
+          - RightLowerLeg
+            - RightFoot
 
-  <GridContainer numColumns="2">
-    <figure>
-      <img src="../../assets/modeling/skinned-meshes/Rig-Hierarchy-Blender.png" />
-      <figcaption>Blender rig hierarchy</figcaption>
-    </figure>
-    <figure>
-      <img src="../../assets/modeling/skinned-meshes/Rig-Hierarchy-Maya.png" />
-      <figcaption>Maya rig hierarchy</figcaption>
-    </figure>
-  </GridContainer>
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant="subtitle2">Blender standard humanoid rig hierarchy with all bones</Typography>
+</AccordionSummary>
+<AccordionDetails>
+
+<img src="../../assets/modeling/skinned-meshes/Rig-Hierarchy-Blender.png" />
+
+</AccordionDetails>
+</BaseAccordion>
+
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant="subtitle2">Maya standard humanoid rig hierarchy with all joints</Typography>
+</AccordionSummary>
+<AccordionDetails>
+
+<img src="../../assets/modeling/skinned-meshes/Rig-Hierarchy-Maya.png" />
+
+</AccordionDetails>
+</BaseAccordion>
 
 - **LowerTorso and Root** - The LowerTorso and Root bone or joint position must be set to `0`, `0`, `0`.
 - **Pose** - Export your character model in an I-Pose, A-Pose, or T-Pose for the best Studio compatibility. The LeftUpperArm and RightUpperArm bones can be exported with rotation values to meet this requirement.
