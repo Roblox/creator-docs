@@ -3,10 +3,6 @@ title: Roblox Plus
 description: Roblox Plus gives you additional ways to earn from your games by rewarding engagement and purchases from Plus subscribers.
 ---
 
-<Alert severity="info">
-Roblox Plus will become available to users starting on April 30, 2026.
-</Alert>
-
 **Roblox Plus** gives you additional ways to earn from your games by rewarding engagement and purchases from Plus subscribers.
 
 Users who subscribe to Plus get a range of benefits to enhance their purchasing power, access, and overall game on the platform:
