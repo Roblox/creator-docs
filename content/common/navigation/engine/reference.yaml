@@ -2476,6 +2476,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/RunService.yaml
                 ignoreTranslation: true
+              - title: SceneAnalysisService
+                path: /reference/engine/classes/SceneAnalysisService
+                type: engineapi
+                source: /reference/engine/classes/SceneAnalysisService.yaml
+                ignoreTranslation: true
               - title: ScreenshotHud
                 path: /reference/engine/classes/ScreenshotHud
                 type: engineapi

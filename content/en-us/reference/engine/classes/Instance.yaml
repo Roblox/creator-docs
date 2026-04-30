@@ -249,6 +249,7 @@ descendants:
   - ReplicatedStorage
   - RotationCurve
   - RunService
+  - SceneAnalysisService
   - ScreenshotHud
   - ScriptBuilder
   - ScriptContext

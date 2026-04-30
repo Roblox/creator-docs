@@ -89,7 +89,7 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: PluginSecurity
+    security: None
     thread_safety: Unsafe
     capabilities: []
   - name: VirtualInput:SendMouseButton
@@ -141,7 +141,7 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: PluginSecurity
+    security: None
     thread_safety: Unsafe
     capabilities: []
   - name: VirtualInput:SendMouseDelta
@@ -169,7 +169,7 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: PluginSecurity
+    security: None
     thread_safety: Unsafe
     capabilities: []
   - name: VirtualInput:SendMousePosition
@@ -198,7 +198,7 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: PluginSecurity
+    security: None
     thread_safety: Unsafe
     capabilities: []
   - name: VirtualInput:SendPointerAction
@@ -238,7 +238,7 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: PluginSecurity
+    security: None
     thread_safety: Unsafe
     capabilities: []
   - name: VirtualInput:SendTextInput
@@ -267,7 +267,7 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: PluginSecurity
+    security: None
     thread_safety: Unsafe
     capabilities: []
 events: []

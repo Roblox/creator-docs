@@ -627,7 +627,7 @@ methods:
           available.
     tags: []
     deprecation_message: ''
-    security: PluginSecurity
+    security: None
     thread_safety: Unsafe
     capabilities:
       - Input
