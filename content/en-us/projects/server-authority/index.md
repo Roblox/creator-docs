@@ -3,14 +3,6 @@ title: Server authority model
 description: The server authority model lets you build responsive cheat-free competitive experiences such as FPS, racing, sports, and combat.
 ---
 
-import BetaAlert from '../../includes/beta-features/beta-alert.md'
-
-<BetaAlert betaName="Server Authority Core API" leadIn="The server authority model and its associated APIs are currently in beta. Enable them in Studio through " leadOut="." components={props.components} />
-
-<Alert severity="error">
-As this feature is currently in beta, you should **not** publish a server‑authoritative experience. Your players' clients will not yet have support for server authority APIs, so the published experience will not work correctly.
-</Alert>
-
 In a **server authority model**, the server is the single **source of truth** for the entire experience state, and clients are only trusted to report their own inputs. This architecture is the core netcode foundation of a fair, competitive experience because it prevents entire classes of cheating like flyhacks or speedhacks by never trusting a client to report its own position or state.
 
 ## Advantages

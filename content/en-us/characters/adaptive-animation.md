@@ -28,19 +28,21 @@ You can follow along with your own custom character or the [reference character]
 
 ### Import model
 
-Use the 3D Importer to import a character model with `Class.HumanoidRigDescription` and `Class.DigitsRigDescription` objects:
+Use the 3D Importer to import a character model, then use the Adaptive Animation system to add `Class.HumanoidRigDescription` and `Class.DigitsRigDescription` objects:
 
 1. In the **Home** tab, click the **Import** button to open the 3D Importer. A file browser opens.
 2. Select your rigged character's `.fbx` or `.gltf` file. The 3D Importer loads a preview of the character model.
-3. In the **Rig General** section, set **Rig Type** to **Custom Humanoid**.
+3. In the **Rig General** section, set **Rig Type** to **Custom**.
   <img src="../assets/avatar/adaptive-animation/Import-Custom-Humanoid.png" width = "70%" />
-4. Select the **Import** button. The character displays in your workspace as a `Class.Model` containing a `Class.HumanoidRigDescription` object and a `Class.DigitsRigDescription` for each hand.
+4. Select the **Import** button. The character displays in your workspace as a `Class.Model`.
+5. In the **Avatar** tab, click the **Adaptive Animation** button. The **Remap Rig** panel displays.
+6. In the **Remap Rig** panel, click the **Create** button. The Adaptive Animation systems generates a `Class.HumanoidRigDescription` object and a `Class.DigitsRigDescription` for each hand.
 
    <img src="../assets/avatar/adaptive-animation/Rig-DataModel.png" />
 
 ### Assign joints
 
-Adaptive animation requires at least 15 of your character's joints to map to Roblox's [standardized 15 joints skeleton](../art/characters/specifications.md). While the automated import process attempts to make this assignment automatically, you can verify and reassign joints by using the joint assignment tool.
+The Adaptive Animation system requires at least 15 of your character's joints to map to Roblox's [standardized 15 joints skeleton](../art/characters/specifications.md). While the automated import process attempts to make this assignment automatically, you can verify and reassign joints by using the joint assignment tool.
 
 When you select your model's `Class.HumanoidRigDescription` or `Class.DigitsRigDescription` objects, the joint assignment tool's **visual picker** displays in the top right of the 3D viewport with a view of the standard Roblox skeleton. To assign joints, you can either click the joints in the 3D viewport or visual picker, then click the corresponding joint in the other view. When a joint is assigned, the joint icon **turns orange** in both the 3D viewport and the visual picker.
 
