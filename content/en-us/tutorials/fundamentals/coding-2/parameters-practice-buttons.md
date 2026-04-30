@@ -22,6 +22,7 @@ Start off by setting up the bridge.
    - Uncheck **CanCollide**.
 
 4. When you test the experience, the bridge should be misty looking and people shouldn't be able to walk on it yet.
+
    <img src="../../../assets/education/coding-2/transparent-bridge.jpg" width="80%" />
 
 ## Create the button
@@ -32,7 +33,8 @@ Now that the bridge is set up, create the button.
 2. Change the button color to red.
 3. **Anchor** the button.
 4. Move the button so it's slightly floating and not touching anything. This is so to make sure the `Touched` event doesn't accidentally fire.
-   <img src="../../../assets/education/coding-2/red-button.jpg" width="80%" />
+
+	 <img src="../../../assets/education/coding-2/red-button.jpg"width="80%" />
 
 ## Make the button interactive
 
