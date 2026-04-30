@@ -26,7 +26,11 @@ Every model, mesh part, and animation that you create are restricted **by defaul
 
 ### Beta opt-in
 
-Individual creators and groups can opt into the beta via Creator Dashboard to apply permissions to newly created assets by default. Users and groups who are opted into the beta have their Images, Meshes, and Decals created as **Restricted** as default.
+Individual creators and groups can opt into the beta via Creator Dashboard to apply permissions to newly created assets by default. When enabled, newly created Images, Decals, and Meshes are set to **Restricted** by default. All other asset types remain unaffected by this setting.
+
+<Alert severity="info">
+Enabling Asset Privacy does not change your ability to distribute assets on the Creator Store or Marketplace, use your assets in published experiences, or share your assets with collaborators.
+</Alert>
 
 <Tabs>
   <TabItem key = "1" label="As a creator">
@@ -155,6 +159,10 @@ To grant a collaborator permission to use a restricted asset in any of these sce
    - **Edit** - The collaborator receives permission to edit the asset's metadata, such as its name and description.
 1. Click the **Done** button to finalize your asset access permissions.
 
+<Alert severity="info">
+To grant permissions across multiple assets at once, or to bulk-share assets with specific groups and users, use the latest Asset Manager beta. See [Revamped Asset Manager](https://devforum.roblox.com/t/beta-updates-to-revamped-asset-manager/4548832/1) for details.
+</Alert>
+
 ### To experiences
 
 <Alert severity="error">
@@ -262,6 +270,10 @@ To revoke permission for a creator to use a restricted asset in any additional e
 
 <Alert severity="error">
 Opening an asset's permissions is irreversible. Once you set an asset to open use, it **cannot** be reset to the restricted privacy type.
+</Alert>
+
+<Alert severity="info">
+To set multiple assets to **Open Use** in bulk, use the latest Asset Manager beta. See [Revamped Asset Manager](https://devforum.roblox.com/t/beta-updates-to-revamped-asset-manager/4548832/1) for details.
 </Alert>
 
 While opting in to the **Asset Privacy** beta allows you to restrict your or your group's mesh, image, and decal assets on creation, you are still able to open their permissions so that any creator or experience to freely access and use them in their projects.
