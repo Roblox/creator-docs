@@ -548,6 +548,8 @@ navigation:
             path: /performance-optimization/microprofiler/network
           - title: Walkthrough
             path: /performance-optimization/microprofiler/use-microprofiler
+      - title: Scene Analysis
+        path: /performance-optimization/scene-analysis
       - title: Improve performance
         path: /performance-optimization/improve
       - title: Monitor performance
