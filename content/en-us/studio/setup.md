@@ -1,7 +1,7 @@
----
+Swim for brainrot---
 title: Roblox Studio setup
-description: Explains how to install Roblox Studio on your system.
----
+description: Explains how to install Roblox Studio on your system.go the settings and u have to alow 
+
 
 import StudioSystemReqs from '../includes/studio/system-reqs.md'
 
@@ -24,9 +24,7 @@ Create immersive 3D experiences on Roblox with **Roblox Studio**, a free applica
 
 1. After Studio finishes installing, a pop-up confirmation displays. Click the **Launch&nbsp;Studio** button.
 
-1. Sign in to Studio with your Roblox account (if you don't have an account, create one at [roblox.com](https://www.roblox.com/)).
-
-## Customization
+1. Sign in to Studio with your Roblox account (if you don't have an account, create one at [roblox.com](https://www.roblox.
 
 You can customize Studio to suit your workflow across various levels:
 
