@@ -288,6 +288,25 @@ When you are finished making changes to any of the following template texture im
       </CardActions>
     </Card>
   </Grid>
+
+  <Grid item xs={12} md={6} lg={4} style={{ padding: 6, display: 'flex' }}>
+    <Card style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <CardContent style={{ flexGrow: 1 }}>
+        <center>Procreate texture images</center>
+        <figure>
+          <center>
+            <img src="../assets/makeup/resources/Procreate-Blocky-Mesh-Thumbnail.png" width="100%" />
+          </center>
+        </figure>
+        <figure>
+          A comprehensive `.zip` folder with blocky texture images for use in Procreate.
+        </figure>
+      </CardContent>
+      <CardActions style={{bottom: 0, width: '100%'}}>
+      <Button href="../assets/makeup/resources/Procreate-Blocky-Mesh.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Mesh Template</Button>
+      </CardActions>
+    </Card>
+  </Grid>
 </Grid>
 
 ### Template heads
