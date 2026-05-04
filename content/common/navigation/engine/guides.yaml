@@ -603,6 +603,16 @@ navigation:
         path: /cloud-services/extended-services
       - title: Cross-server communication
         path: /cloud-services/cross-server-messaging
+  - title: Roblox Standard Scripts
+    section:
+      - title: Overview
+        path: /roblox-scripts
+      - title: PlayerModule
+        section:
+        - title: Overview
+          path: /roblox-scripts/PlayerModule
+        - title: CameraModule
+          path: /roblox-scripts/PlayerModule/CameraModule
   - title: Roblox for Unity developers
     path: /unity
   - title: Roblox for Unreal developers
