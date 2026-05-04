@@ -19,6 +19,7 @@ As a creator, you can earn from Roblox Plus subscribers through:
 - [**In-game Robux purchases**](#earn-from-in-experience-purchases): Subscribers receive a 10–20% discount on purchases, which is covered by Roblox so that your earnings per purchase are not reduced. Lower prices can encourage more frequent purchases, helping increase your overall revenue.
 - [**Driving Plus sign-ups**](#earn-from-in-experience-plus-subscriptions): Encourage engaged users to subscribe to Roblox Plus directly from your game using `Class.MarketplaceService.PromptRobloxSubscriptionPurchase|PromptRobloxSubscriptionPurchase`. You can earn up to 750 Robux for each new subscriber you bring in.
 - [**Time spent in paid private servers**](#earn-from-paid-private-server-time): Earn up to 100 Robux per subscriber when they spend at least 60 minutes in your paid private servers each month.
+- [**In-game Robux transfers**](#earn-from-robux-transfers): Earn 10% every time a Plus subscriber sends Robux to another user within your game using `Class.MarketplaceService.PromptRobuxTransferAsync|PromptRobuxTransferAsync`. This amount is eligible for the DevEx program.
 
 ## Earn from in-experience purchases
 
@@ -317,13 +318,29 @@ In the following example, Servers A, B, and C qualify because the Plus subscribe
 </tbody>
 </table>
 
+## Earn from Robux transfers
+
+Robux transfers allow Plus subscribers to send Robux directly to other users. You can implement the Transfers API to prompt these transfers within your game and earn a share of each transfer.
+
+When a Plus subscriber initiates a transfer prompted by `Class.MarketplaceService.PromptRobuxTransferAsync|PromptRobuxTransferAsync` inside your game, you receive **10% of the transfer amount**. For example, if a subscriber transfers 100 Robux to another user, the recipient receives 90 Robux (90%) and your game receives 10 Robux (10%).
+
+Robux your game earns from transfers is **eligible for the DevEx program**. Roblox does not take a fee from these transfers.
+
+<Alert severity="info">
+When setting up transfers in your experience, the amount must be between 10 and 500 Robux per transaction.
+</Alert>
+
+<img src="../../assets/monetization/roblox-plus/TransferRobuxPrompt.png" width="60%" />
+
+For more information about implementing Robux transfers within your game, see [Robux transfers](./robux-transfers.md).
+
 ## Track your Plus earnings
 
-You can track your earnings from users who subscribe to Roblox Plus through your in-game prompts, as well as from Plus subscribers who spend time in your paid private servers, whether they join from within your game or outside of it.
+You can track your earnings from users who subscribe to Roblox Plus through your in-game prompts, Robux transfers using the Transfers API, and time spent by Plus subscribers in your paid private servers, whether they join from within your game or outside of it.
 
 To see a detailed breakdown of your Plus subscription incentives:
 
 1. In Creator Hub, go to **Creations** and select a game.
 2. Go to **Monetization** ⟩ **Roblox Plus**.
 
-<img src="../../assets/monetization/roblox-plus/Roblox-Plus-Analytics.png" width="90%" />
+<img src="../../assets/monetization/roblox-plus/Roblox-Plus-Analytics.png" width="100%" />

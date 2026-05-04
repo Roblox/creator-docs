@@ -92,7 +92,7 @@ properties:
         <tr>
           <td><code>@[StyleQuery name]</code></td>
           <td>Matches instances with child <code>Class.StyleQuery</code> that has <code>Class.StyleQuery.IsActive|IsActive</code> set to <code>true</code>.<br /><br />
-          There are also built-in selectors for <code>"@ReducedMotionEnabledFalse"</code>, <code>"@ReducedMotionEnabledTrue"</code>, <code>"@PreferredInputGamepad"</code>, <code>"@PreferredInputKeyboardAndMouse"</code>, <code>"@PreferredInputTouch"</code>, <code>"@ViewportDisplaySizeSmall"</code>, <code>"@ViewportDisplaySizeMedium"</code>, and <code>"@ViewportDisplaySizeLarge"</code> that can match an instance without a <code>Class.StyleQuery</code> instance.</td>
+          There are also built-in selectors for <code>"@ReducedMotionEnabledFalse"</code>, <code>"@ReducedMotionEnabledTrue"</code>, <code>"@PreferredInputGamepad"</code>, <code>"@PreferredInputKeyboardAndMouse"</code>, <code>"@PreferredInputTouch"</code>, <code>"@PreferredTextSizeMedium"</code>, <code>"@PreferredTextSizeLarge"</code>, <code>"@PreferredTextSizeLarger"</code>, <code>"@PreferredTextSizeLargest"</code>, <code>"@ViewportDisplaySizeSmall"</code>, <code>"@ViewportDisplaySizeMedium"</code>, and <code>"@ViewportDisplaySizeLarge"</code> that can match an instance without a <code>Class.StyleQuery</code> instance.</td>
           <td><code>"@StyleQuerySmall"</code></td>
         </tr>
       </tbody>

@@ -9,6 +9,8 @@ navigation:
         path: /creator-rewards
       - title: Roblox Plus
         path: /production/monetization/roblox-plus
+      - title: Robux transfers
+        path: /production/monetization/robux-transfers
       - title: Private servers
         path: /production/monetization/private-servers
       - title: Subscriptions
