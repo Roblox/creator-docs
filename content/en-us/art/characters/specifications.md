@@ -444,6 +444,12 @@ See the following specifications for the individual mesh objects that make up a 
 
    <img src="../../assets/modeling/meshes/Modeling-Requirements-Caps.png" width="600" />
 
+<Alert severity = 'info'>
+<AlertTitle>Interested in creating a higher-fidelity avatar?</AlertTitle>
+<br></br>
+Higher-fidelity character models require the same 15 mesh objects and naming structure. The only difference is that the mesh objects in higher-fidelity character models can have additional internal bones or joints. When these bones or joints are present in a character model, their corresponding mesh objects need to be [skinned](#skinning) for accurate deformation.
+</Alert>
+
 ### Face accessories
 
 Face accessories, such as hair, eyebrows, and eyelashes are unique accessories that you can bundle with an avatar body upload. At this time, eyebrows and eyelashes can not be uploaded as standalone accessories and must be bundled with an avatar body. See [Accessory specifications](../accessories/specifications.md#face-accessories) for additional information on face accessories.
@@ -600,7 +606,9 @@ Unlike generic rigs, humanoid models require a specific hierarchy and naming con
   </figure>
 </GridContainer>
 
-See the following requirements for humanoid rigging:
+### Standard rigs
+
+The following requirements are for standard humanoid rigging.
 
 - **Rig Hierarchy** - Humanoid rigs require a specific bone or joint hierarchy and naming convention:
 
@@ -646,6 +654,139 @@ See the following requirements for humanoid rigging:
 
 - **LowerTorso and Root** - The LowerTorso and Root bone or joint position must be set to `0`, `0`, `0`.
 - **Pose** - Export your character model in an I-Pose, A-Pose, or T-Pose for the best Studio compatibility. The LeftUpperArm and RightUpperArm bones can be exported with rotation values to meet this requirement.
+
+### Higher-fidelity rigs
+
+Higher-fidelity humanoid rigs have the same requirements as standard rigs, but they support up to 37 additional optional bones or joints for a higher level of realism with articulated hands, shoulders, and spine movements.
+
+You do not need to include every optional bone or joint for a higher-fidelity humanoid rig, but each optional bone or joint you include must follow a specific hierarchy and naming convention for the respective body part.
+
+<Tabs>
+<TabItem key = "1" label="Torso">
+
+<table>
+<thead>
+  <tr>
+    <th>Hierarchy</th>
+    <th>Example Rig Setup</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><ul><li>UpperTorso<ul><li>Spine<ul><li>Chest<ul><li>Head<ul><li>HeadBase</li></ul></li><li>RightClavicle<ul><li>RightUpperArm</li></ul></li><li>LeftClavicle<ul><li>LeftUpperArm</li></ul></li></ul></li></ul></li></ul></li></ul></td>
+    <td><img src="../../assets/avatar/specifications/High-Fidelity-Torso.png" /></td>
+  </tr>
+</tbody>
+</table>
+
+</TabItem>
+<TabItem key = "2" label="LeftHand">
+
+<table>
+<thead>
+  <tr>
+    <th>Hierarchy</th>
+    <th>Example Rig Setup</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><ul><li>LeftHand<ul><li>LeftHandThumb1<ul><li>LeftHandThumb2<ul><li>LeftHandThumb3</li></ul></li></ul></li><li>LeftHandIndex1<ul><li>LeftHandIndex2<ul><li>LeftHandIndex3</li></ul></li></ul></li><li>LeftHandMiddle1<ul><li>LeftHandMiddle2<ul><li>LeftHandMiddle3</li></ul></li></ul></li><li>LeftHandRing1<ul><li>LeftHandRing2<ul><li>LeftHandRing3</li></ul></li></ul></li><li>LeftHandPinky1<ul><li>LeftHandPinky2<ul><li>LeftHandPinky3</li></ul></li></ul></li></ul></li></ul></td>
+    <td><img src="../../assets/avatar/specifications/High-Fidelity-LeftHand.png" /></td>
+  </tr>
+</tbody>
+</table>
+
+</TabItem>
+<TabItem key = "3" label="RightHand">
+
+<table>
+<thead>
+  <tr>
+    <th>Hierarchy</th>
+    <th>Example Rig Setup</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><ul><li>RightHand<ul><li>RightHandThumb1<ul><li>RightHandThumb2<ul><li>RightHandThumb3</li></ul></li></ul></li><li>RightHandIndex1<ul><li>RightHandIndex2<ul><li>RightHandIndex3</li></ul></li></ul></li><li>RightHandMiddle1<ul><li>RightHandMiddle2<ul><li>RightHandMiddle3</li></ul></li></ul></li><li>RightHandRing1<ul><li>RightHandRing2<ul><li>RightHandRing3</li></ul></li></ul></li><li>RightHandPinky1<ul><li>RightHandPinky2<ul><li>RightHandPinky3</li></ul></li></ul></li></ul></li></ul></td>
+    <td><img src="../../assets/avatar/specifications/High-Fidelity-RightHand.png" /></td>
+  </tr>
+</tbody>
+</table>
+
+</TabItem>
+<TabItem key = "4" label="LeftFoot">
+
+<table>
+<thead>
+  <tr>
+    <th>Hierarchy</th>
+    <th>Example Rig Setup</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><ul><li>LeftFoot<ul><li>LeftToeBase</li></ul></li></ul></td>
+    <td><img src="../../assets/avatar/specifications/High-Fidelity-LeftFoot.png" /></td>
+  </tr>
+</tbody>
+</table>
+
+</TabItem>
+<TabItem key = "5" label="RightFoot">
+
+<table>
+<thead>
+  <tr>
+    <th>Hierarchy</th>
+    <th>Example Rig Setup</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><ul><li>RightFoot<ul><li>RightToeBase</li></ul></li></ul></td>
+    <td><img src="../../assets/avatar/specifications/High-Fidelity-RightFoot.png" /></td>
+  </tr>
+</tbody>
+</table>
+
+</TabItem>
+</Tabs>
+
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant="subtitle2">Blender humanoid rig hierarchy with all optional bones</Typography>
+</AccordionSummary>
+<AccordionDetails>
+
+<img src="../../assets/modeling/skinned-meshes/R15Plus-Rig-Hierarchy-Blender.png" />
+
+</AccordionDetails>
+</BaseAccordion>
+
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant="subtitle2">Maya humanoid rig hierarchy with all optional joints</Typography>
+</AccordionSummary>
+<AccordionDetails>
+
+<img src="../../assets/modeling/skinned-meshes/R15Plus-Rig-Hierarchy-Maya.png" />
+
+</AccordionDetails>
+</BaseAccordion>
+<br />
+
+<Alert severity = 'info'>
+Make sure that you skin each additional bone or joint's corresponding mesh object for accurate deformation.
+</Alert>
+
+After you [import a higher-fidelity character rig](./import.md) into Studio, you **must** insert a `Class.HumanoidRigDescription` and/or `Class.DigitsRigDescription` objects into your rig to be able to sell your character on the Marketplace, and for your animations to work properly:
+
+- `Class.HumanoidRigDescription` objects are necessary for animating individual body parts and adjusting behavioral characteristics of the rig, such as each bone or joint's size and range of motion.
+- `Class.DigitsRigDescription` objects are necessary for hand articulation. Your character needs one for each hand with optional bone or joints.
+
+Both of these object types detect bones or joints by their naming conventions, so it is very important to ensure every optional bone or joint is named correctly following the table above **before** you import your character rig into Studio. For a set of higher-fidelity rigs that you can reference, see [Resources - Higher-fidelity rigs](../../avatar/resources.md#higher-fidelity-rigs).
 
 ## Skinning
 

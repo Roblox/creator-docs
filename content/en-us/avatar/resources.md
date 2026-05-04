@@ -15,9 +15,9 @@ The following downloadable files are available for your use:
 
 ## References
 
-### Higher fidelity rigs
+### Higher-fidelity rigs
 
-The following higher-fidelity humanoid rigs include additional bones or joints for a higher level of realism with articulated hands, shoulders, and spine movements.
+The following [higher-fidelity](../art/characters/specifications.md#higher-fidelity-rigs) humanoid rigs include additional bones or joints for a higher level of realism with articulated hands, shoulders, and spine movements.
 
 <Grid container alignItems='stretch' style={{margin: -6}}>
 
@@ -106,7 +106,7 @@ A comprehensive `.zip` folder of an avatar-ready character body, including a dyn
 
 ### Standard rigs
 
-The following standard humanoid rigs include the standard amount of bones or joints. Finished assets like Nature Girl and Stylish Male include clothing and accessory items that may cause validation errors unless they are removed.
+The following [standard](../art/characters/specifications.md#standard-rigs) humanoid rigs include the standard amount of bones or joints. Finished assets like Nature Girl and Stylish Male include clothing and accessory items that may cause validation errors unless they are removed.
 
 <Grid container alignItems='stretch' style={{margin: -6}}>
 

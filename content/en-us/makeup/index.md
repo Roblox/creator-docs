@@ -88,7 +88,7 @@ The following are downloadable resources you can use within the creation process
 For resources that include two templates, in almost every case **it's recommended to use the mesh template** to create makeup because:
 
 - It's easier and more intuitive to use because it mimics applying makeup in the real world.
-- It contains a higher fidelity mesh and UVs with minimal distortion.
+- It contains a higher-fidelity mesh and UVs with minimal distortion.
 
 Some creators prefer using the cage template because there is only one transfer when projecting the texture, while there are two transfers before projecting the texture for the mesh template. This can result in makeup transferring more accurately with less artifacts.
 </Alert>

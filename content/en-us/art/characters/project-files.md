@@ -14,9 +14,9 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
 <Tabs>
   <TabItem label="Models">
 
-**Higher fidelity rigs**
+**Higher-fidelity rigs**
 
-The following higher-fidelity humanoid rigs include additional bones or joints for a higher level of realism with articulated hands, shoulders, and spine movements.
+The following [higher-fidelity](../../art/characters/specifications.md#higher-fidelity-rigs) humanoid rigs include additional bones or joints for a higher level of realism with articulated hands, shoulders, and spine movements.
 
 <table>
 <thead>
@@ -47,7 +47,7 @@ The following higher-fidelity humanoid rigs include additional bones or joints f
 
 **Standard rigs**
 
-The following humanoid rigs include the standard amount of bones or joints.
+The following [standard](../../art/characters/specifications.md#standard-rigs) humanoid rigs include the standard amount of bones or joints.
 
 <table>
 <thead>

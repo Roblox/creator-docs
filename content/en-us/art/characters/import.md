@@ -28,6 +28,7 @@ To import your asset as a character model:
 
    <img src="../../assets/art/avatar/Rig-General.png" width = "60%"/>
 
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> If you are importing a [higher-fidelity rig](./specifications.md#higher-fidelity-rigs), set **Rig Type** to **Custom Humanoid**.
 1. Select **Import**. The asset populates in your workspace as a `Class.Model` with the appropriate textures applied as a `Class.SurfaceAppearance` or `Class.MeshPart.TextureID`.
 
 <BaseAccordion>
@@ -80,8 +81,8 @@ Character creation is a complex process that requires lots of testing and iterat
 
 With this new character `Class.Model`, you can perform any of the following:
 
+- If your character includes a [higher-fidelity rig](./specifications.md#higher-fidelity-rigs), add a `Class.HumanoidRigDescription` and/or `Class.DigitsRigDescription` objects for Marketplace and animation requirements. You may need to use the [Adaptive Animation](../../characters/adaptive-animation.md) plugin to remap your joints and set a baseline t-pose reference to better support your animations.
 - Begin the process of [uploading and publishing](../../marketplace/publish-to-marketplace.md#upload-an-asset) the character model to the Marketplace. This involves some additional validation and moderation steps.
-- Use the [Adaptive Animation](../../characters/adaptive-animation.md) plugin to remap your joints and set a baseline t-pose reference to better support your animations.
 - Use the model in your current experience and modify the model's appearance with [HumanoidDescription](../../characters/appearance.md#manually-modify-appearance).
 
   - Playtest as the character by renaming the `Class.Model` to `StarterCharacter` and moving the `Class.Model` to the `Class.StarterPlayer` folder in the **Explorer** before play testing.
