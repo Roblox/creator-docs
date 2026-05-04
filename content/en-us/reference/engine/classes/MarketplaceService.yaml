@@ -1332,8 +1332,8 @@ methods:
 
       After a successful transfer, both the sender and receiver will have receipts delivered to their respective `Class.MarketplaceService:BindReceiptHandler()|BindReceiptHandler` callbacks.
 
-      - The sender's receipt has `Enum.ReceiptType.RobuxTransferSender`.
-      - The receiver's receipt has `Enum.ReceiptType.RobuxTransferReceiver`.
+      - The sender's receipt has `Enum.ReceiptType.RobuxTransferSender|RobuxTransferSender`.
+      - The receiver's receipt has `Enum.ReceiptType.RobuxTransferReceiver|RobuxTransferReceiver`.
 
       Both receipts include a `TransferRequestId` field matching the `transferRequestId` returned by this method, which you can use for logging or to correlate sender and receiver receipts.
 
@@ -1381,7 +1381,7 @@ methods:
       Registers a callback to process receipts of a specific type.
     description: |
       `BindReceiptHandler` registers a callback to process receipts of a
-      specific `Enum.ReceiptType`. You can use it to handle Robux transfer
+      specific `Enum.ReceiptType|ReceiptType`. You can use it to handle Robux transfer
       receipts (`Enum.ReceiptType.RobuxTransferSender|RobuxTransferSender` and
       `Enum.ReceiptType.RobuxTransferReceiver|RobuxTransferReceiver`).
 
@@ -1396,63 +1396,64 @@ methods:
       The receipt info dictionary passed to the `handler` contains the
       following fields:
 
-      <thead>
+      <table size="small">
+        <thead>
+          <tr>
+            <th>Key</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
         <tr>
-          <th>Key</th>
-          <th>Type</th>
-          <th>Description</th>
+          <td><code>PurchaseId</code></td>
+          <td>string</td>
+          <td>A unique identifier for this specific receipt.</td>
         </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td><code>PurchaseId</code></td>
-        <td>string</td>
-        <td>A unique identifier for this specific receipt.</td>
-      </tr>
-      <tr>
-        <td><code>PlayerId</code></td>
-        <td>number</td>
-        <td>The <code>Class.Player.UserId</code> of the user associated with
-        this receipt.</td>
-      </tr>
-      <tr>
-        <td><code>PlaceIdWherePurchased</code></td>
-        <td>number</td>
-        <td>The place ID where the transaction was initiated.</td>
-      </tr>
-      <tr>
-        <td><code>ReceiptType</code></td>
-        <td><code>Enum.ReceiptType</code></td>
-        <td>The type of this receipt.</td>
-      </tr>
-      <tr>
-        <td><code>CurrencySpent</code></td>
-        <td>number</td>
-        <td>The amount of Robux involved in the transaction. For
-        <code>Enum.ReceiptType.RobuxTransferSender</code> receipts, this is
-        the amount sent. For
-        <code>Enum.ReceiptType.RobuxTransferReceiver</code> receipts, this is
-        the amount received.</td>
-      </tr>
-      <tr>
-        <td><code>TransferRequestId</code></td>
-        <td>string</td>
-        <td>The transfer request ID from
-        <code>Class.MarketplaceService:PromptRobuxTransferAsync()</code>. Only
-        present for <code>Enum.ReceiptType.RobuxTransferSender</code> and
-        <code>Enum.ReceiptType.RobuxTransferReceiver</code> receipts.</td>
-      </tr>
-      </tbody>
+        <tr>
+          <td><code>PlayerId</code></td>
+          <td>number</td>
+          <td>The <code>Class.Player.UserId|UserId</code> of the user associated with
+          this receipt.</td>
+        </tr>
+        <tr>
+          <td><code>PlaceIdWherePurchased</code></td>
+          <td>number</td>
+          <td>The place ID where the transaction was initiated.</td>
+        </tr>
+        <tr>
+          <td><code>ReceiptType</code></td>
+          <td><code>Enum.ReceiptType|ReceiptType</code></td>
+          <td>The type of this receipt.</td>
+        </tr>
+        <tr>
+          <td><code>CurrencySpent</code></td>
+          <td>number</td>
+          <td>The amount of Robux involved in the transaction. For
+          <code>Enum.ReceiptType.RobuxTransferSender|RobuxTransferSender</code> receipts, this is
+          the amount sent. For
+          <code>Enum.ReceiptType.RobuxTransferReceiver|RobuxTransferReceiver</code> receipts, this is
+          the amount received.</td>
+        </tr>
+        <tr>
+          <td><code>TransferRequestId</code></td>
+          <td>string</td>
+          <td>The transfer request ID from
+          <code>Class.MarketplaceService:PromptRobuxTransferAsync|PromptRobuxTransferAsync()</code>. Only
+          present for <code>Enum.ReceiptType.RobuxTransferSender|RobuxTransferSender</code> and
+          <code>Enum.ReceiptType.RobuxTransferReceiver|RobuxTransferReceiver</code> receipts.</td>
+        </tr>
+        </tbody>
       </table>
 
       #### Errors
 
       This method throws an error if:
 
-      - A handler is already registered for the same `Enum.ReceiptType` and
+      - A handler is already registered for the same `Enum.ReceiptType|ReceiptType` and
         product ID combination.
       - A catch-all handler is already registered for the same
-        `Enum.ReceiptType`.
+        `Enum.ReceiptType|ReceiptType`.
     code_samples:
       - MarketplaceService-BindReceiptHandler1
     parameters:
@@ -1460,14 +1461,14 @@ methods:
         type: Enum.ReceiptType
         default:
         summary: |
-          The `Enum.ReceiptType` indicating which kind of
+          The `Enum.ReceiptType|ReceiptType` indicating which kind of
           receipt to handle.
       - name: handler
         type: ()
         default:
         summary: |
           A callback function that receives a receipt info dictionary and
-          must return an `Enum.ReceiptDecision` value.
+          must return an `Enum.ReceiptDecision|ReceiptDecision` value.
       - name: filter
         type: Array
         default:
