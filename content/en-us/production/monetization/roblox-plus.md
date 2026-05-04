@@ -156,7 +156,7 @@ end)
 
 if success and details.IsSubscribed then
     -- Check the length of the user's Plus subscription
-    local threeMonths = 60 * 24 * 60 * 60
+    local threeMonths = 90 * 24 * 60 * 60
     if details.StartTime and (os.time() - details.StartTime.UnixTimestamp) > threeMonths then
         print("Awarding the '3-Month Subscription Veteran' skin!")
     end
