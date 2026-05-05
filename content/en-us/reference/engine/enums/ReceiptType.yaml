@@ -22,6 +22,11 @@ code_samples: []
 tags: []
 deprecation_message: ''
 items:
+  - name: DeveloperProduct
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
   - name: RobuxTransferSender
     summary: |
       Used for processing receipts for the user who initiated a Robux transfer.
