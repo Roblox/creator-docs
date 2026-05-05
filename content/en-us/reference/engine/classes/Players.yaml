@@ -525,7 +525,7 @@ methods:
       - Deprecated
     deprecation_message: |
       This method has been superseded by
-      `Class.Players:CreateHumanoidModelFromDescription()|CreateHumanoidModelFromDescription()`.
+      `Class.Players:CreateHumanoidModelFromDescriptionAsync()|CreateHumanoidModelFromDescriptionAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:

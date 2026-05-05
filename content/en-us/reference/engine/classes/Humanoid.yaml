@@ -1810,6 +1810,21 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
+  - name: Humanoid:GetRelativeVelocityAtFloor
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Vector3
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid:GetState
     summary: |
       Returns the humanoid's current `Enum.HumanoidStateType`.

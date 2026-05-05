@@ -5,13 +5,13 @@
 name: ReceiptDecision
 type: enum
 summary: |
-  `ReceiptDecision` works with `Class.MarketplaceService` to
-  indicate the acknowledgement of receipts.
+  `ReceiptDecision` works with `Class.MarketplaceService` to indicate the
+  acknowledgement of receipts.
 description: |
-  `ReceiptDecision` is the required return type for callbacks registered
-  with `Class.MarketplaceService:BindReceiptHandler()`. The value you
-  return determines whether the receipt is marked as complete or remains
-  unresolved for future processing.
+  `ReceiptDecision` is the required return type for callbacks registered with
+  `Class.MarketplaceService:BindReceiptHandler()`. The value you return
+  determines whether the receipt is marked as complete or remains unresolved for
+  future processing.
 code_samples: []
 tags: []
 deprecation_message: ''

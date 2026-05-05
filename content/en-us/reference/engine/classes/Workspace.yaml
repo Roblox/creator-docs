@@ -299,6 +299,24 @@ properties:
       can_save: true
     capabilities:
       - Basic
+  - name: Workspace.EnableSLIMAvatars
+    summary: ''
+    description: ''
+    code_samples: []
+    type: RolloutState
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Streaming
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Players
   - name: Workspace.FallenPartsDestroyHeight
     summary: |
       Determines the height at which falling `Class.BasePart|BaseParts` and
@@ -657,6 +675,24 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: Workspace.NextGenerationReplicationAlias
+    summary: ''
+    description: ''
+    code_samples: []
+    type: RolloutState
+    tags:
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
+    thread_safety: ReadSafe
+    category: Server Authority
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
   - name: Workspace.PathfindingUseImprovedSearch
     summary: |
       Controls whether an improved search algorithm is used by
@@ -773,6 +809,24 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+  - name: Workspace.PlayerScriptsUseInputActionSystemAlias
+    summary: ''
+    description: ''
+    code_samples: []
+    type: RolloutState
+    tags:
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
+    thread_safety: ReadSafe
+    category: Server Authority
+    serialization:
+      can_load: false
+      can_save: false
     capabilities: []
   - name: Workspace.PrimalPhysicsSolver
     summary: |
@@ -942,6 +996,24 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
+  - name: Workspace.SignalBehaviorAlias
+    summary: ''
+    description: ''
+    code_samples: []
+    type: SignalBehavior
+    tags:
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
+    thread_safety: ReadSafe
+    category: Server Authority
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
   - name: Workspace.StreamingEnabled
     summary: |
       Whether content streaming is enabled for the place.
@@ -967,6 +1039,24 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+  - name: Workspace.StreamingEnabledAlias
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags:
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
+    thread_safety: ReadSafe
+    category: Server Authority
+    serialization:
+      can_load: false
+      can_save: false
     capabilities: []
   - name: Workspace.StreamingIntegrityMode
     summary: |
@@ -1167,6 +1257,24 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: Workspace.UseFixedSimulationAlias
+    summary: ''
+    description: ''
+    code_samples: []
+    type: RolloutState
+    tags:
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
+    thread_safety: ReadSafe
+    category: Server Authority
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
   - name: Workspace.UseNewLuauTypeSolver
     summary: |
       Controls whether the new Luau type solver is used for type inference.
@@ -1192,6 +1300,24 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: Workspace.ValidateEnabledProximityPrompt
+    summary: ''
+    description: ''
+    code_samples: []
+    type: RolloutState
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
 methods:
   - name: Workspace:BreakJoints
     summary: |

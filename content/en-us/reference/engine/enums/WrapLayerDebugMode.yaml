@@ -110,3 +110,8 @@ items:
     value: 14
     tags: []
     deprecation_message: ''
+  - name: SkinningTransfer
+    summary: ''
+    value: 15
+    tags: []
+    deprecation_message: ''

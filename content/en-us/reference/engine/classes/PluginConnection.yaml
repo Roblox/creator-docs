@@ -32,33 +32,6 @@ tags:
   - NotReplicated
 deprecation_message: ''
 properties:
-  - name: PluginConnection.Type
-    summary: |
-      This `Enum.PluginConnectionTargetType` describes the relationship of the
-      target data model to the current one.
-    description: |
-      This `Enum.PluginConnectionTargetType` describes the relationship of the
-      target data model to the current data model. For example, a value of
-      `Enum.PluginConnectionTargetType.Test` means that the target data model is
-      a playtest data model spawned from this data model. Alternatively, a value
-      of `Enum.PluginConnectionTargetType.Edit` means the target data model is
-      the edit session which spawned this test data model. This property is
-      immutable.
-    code_samples: []
-    type: PluginConnectionTargetType
-    tags:
-      - ReadOnly
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: PluginSecurity
-      write: PluginSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities: []
   - name: PluginConnection.Connected
     summary: |
       Whether this `PluginConnection` object is still connected.
@@ -107,30 +80,34 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-methods:
-  - name: PluginConnection:SendMessage
+  - name: PluginConnection.Type
     summary: |
-      Sends a payload to the remote data model.
+      This `Enum.PluginConnectionTargetType` describes the relationship of the
+      target data model to the current one.
     description: |
-      This function transmits a string or buffer to the remote data model. The
-      callback registered in `BindToMessage()` by the instance of the current
-      plugin running in the remote data model will be called asynchronously with
-      the message as its argument.
+      This `Enum.PluginConnectionTargetType` describes the relationship of the
+      target data model to the current data model. For example, a value of
+      `Enum.PluginConnectionTargetType.Test` means that the target data model is
+      a playtest data model spawned from this data model. Alternatively, a value
+      of `Enum.PluginConnectionTargetType.Edit` means the target data model is
+      the edit session which spawned this test data model. This property is
+      immutable.
     code_samples: []
-    parameters:
-      - name: message
-        type: Variant
-        default:
-        summary: |
-          The string or buffer to be sent.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
+    type: PluginConnectionTargetType
+    tags:
+      - ReadOnly
+      - NotReplicated
     deprecation_message: ''
-    security: PluginSecurity
-    thread_safety: Unsafe
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
     capabilities: []
+methods:
   - name: PluginConnection:BindToMessage
     summary: |
       Binds a callback to this `PluginConnection` to receive messages from
@@ -157,6 +134,29 @@ methods:
           A `Datatype.RBXScriptConnection` representing the binding of this
           callback to the `PluginConnection`. Disconnect it to disconnect this
           callback from the connection.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
+  - name: PluginConnection:SendMessage
+    summary: |
+      Sends a payload to the remote data model.
+    description: |
+      This function transmits a string or buffer to the remote data model. The
+      callback registered in `BindToMessage()` by the instance of the current
+      plugin running in the remote data model will be called asynchronously with
+      the message as its argument.
+    code_samples: []
+    parameters:
+      - name: message
+        type: Variant
+        default:
+        summary: |
+          The string or buffer to be sent.
+    returns:
+      - type: ()
+        summary: ''
     tags: []
     deprecation_message: ''
     security: PluginSecurity

@@ -2,7 +2,7 @@
 # To submit a bug report on the content, see
 # https://devforum.roblox.com/c/bug-reports/documentation-issues/72
 
-name: SensorMode
+name: StudioCaptureBufferStatus
 type: enum
 summary: ''
 description: ''
@@ -10,22 +10,22 @@ code_samples: []
 tags: []
 deprecation_message: ''
 items:
-  - name: Floor
+  - name: NotStarted
     summary: ''
     value: 0
     tags: []
     deprecation_message: ''
-  - name: Ladder
+  - name: Pending
     summary: ''
     value: 1
     tags: []
     deprecation_message: ''
-  - name: ClassicFloor
+  - name: Ready
     summary: ''
     value: 2
     tags: []
     deprecation_message: ''
-  - name: ClassicLadder
+  - name: Error
     summary: ''
     value: 3
     tags: []

@@ -2001,6 +2001,12 @@ methods:
       changing the player's
       `Class.Player.CharacterAppearance|CharacterAppearance`.
 
+      When reloading a `Class.Player` with their default platform appearance
+      applied, a cached version of their appearance will be loaded. The cached
+      version is cleared whenever the player's appearance is updated using
+      `Class.AvatarEditorService` or when the player manually resets via the in
+      game menu.
+
       After calling `LoadCharacterAsync()` for an individual player, it is not
       recommended to call it again for the same player until after that player's
       `Class.Player.CharacterAppearanceLoaded|CharacterAppearanceLoaded` event

@@ -49,3 +49,8 @@ items:
     value: 5
     tags: []
     deprecation_message: ''
+  - name: NormalMapBlend
+    summary: ''
+    value: 6
+    tags: []
+    deprecation_message: ''
