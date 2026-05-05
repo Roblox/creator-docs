@@ -81,6 +81,23 @@ properties:
       can_save: true
     capabilities:
       - UI
+  - name: LayerCollector.TabKeyboardNavigation
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
   - name: LayerCollector.ZIndexBehavior
     summary: |
       Controls how `Class.GuiObject.ZIndex` behaves on all descendants of this

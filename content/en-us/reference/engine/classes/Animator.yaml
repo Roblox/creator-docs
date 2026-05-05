@@ -157,6 +157,25 @@ methods:
     capabilities:
       - Animation
     simulationAccess: true
+  - name: Animator:GetTrackByAnimationId
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: animationId
+        type: ContentId
+        default:
+        summary: ''
+    returns:
+      - type: AnimationTrack?
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Animation
+    simulationAccess: true
   - name: Animator:LoadAnimation
     summary: |
       Loads an `Class.Animation` onto an `Class.Animator`, returning an

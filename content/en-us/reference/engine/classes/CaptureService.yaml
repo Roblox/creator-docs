@@ -68,6 +68,25 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Capture
+  - name: CaptureService:CheckUploadCaptureStatusAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: token
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Capture
   - name: CaptureService:PromptCaptureGalleryPermissionAsync
     summary: ''
     description: |
@@ -232,6 +251,25 @@ methods:
         summary: |
           Tuple of (result: `Enum.ReadCapturesFromGalleryResult`, capturesPages:
           `Class.CapturesPages`)
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Capture
+  - name: CaptureService:StartUploadCaptureAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: capture
+        type: Capture
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
     tags:
       - Yields
     deprecation_message: ''

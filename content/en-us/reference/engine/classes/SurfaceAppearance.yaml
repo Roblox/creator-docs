@@ -336,6 +336,23 @@ properties:
       can_save: true
     capabilities:
       - Basic
+  - name: SurfaceAppearance.ResampleMode
+    summary: ''
+    description: ''
+    code_samples: []
+    type: ResamplerMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
   - name: SurfaceAppearance.RoughnessMap
     summary: |
       Determines the apparent roughness across the surface.

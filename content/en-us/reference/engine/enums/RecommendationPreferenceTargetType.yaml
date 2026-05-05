@@ -2,7 +2,7 @@
 # To submit a bug report on the content, see
 # https://devforum.roblox.com/c/bug-reports/documentation-issues/72
 
-name: SensorMode
+name: RecommendationPreferenceTargetType
 type: enum
 summary: ''
 description: ''
@@ -10,23 +10,18 @@ code_samples: []
 tags: []
 deprecation_message: ''
 items:
-  - name: Floor
+  - name: User
     summary: ''
     value: 0
     tags: []
     deprecation_message: ''
-  - name: Ladder
+  - name: Universe
     summary: ''
     value: 1
     tags: []
     deprecation_message: ''
-  - name: ClassicFloor
+  - name: CustomTag
     summary: ''
     value: 2
-    tags: []
-    deprecation_message: ''
-  - name: ClassicLadder
-    summary: ''
-    value: 3
     tags: []
     deprecation_message: ''

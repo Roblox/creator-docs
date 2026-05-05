@@ -2794,10 +2794,20 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/Studio.yaml
                 ignoreTranslation: true
+              - title: StudioCaptureService
+                path: /reference/engine/classes/StudioCaptureService
+                type: engineapi
+                source: /reference/engine/classes/StudioCaptureService.yaml
+                ignoreTranslation: true
               - title: StudioDeviceSimulatorService
                 path: /reference/engine/classes/StudioDeviceSimulatorService
                 type: engineapi
                 source: /reference/engine/classes/StudioDeviceSimulatorService.yaml
+                ignoreTranslation: true
+              - title: StudioScreenshotCapture
+                path: /reference/engine/classes/StudioScreenshotCapture
+                type: engineapi
+                source: /reference/engine/classes/StudioScreenshotCapture.yaml
                 ignoreTranslation: true
               - title: StudioService
                 path: /reference/engine/classes/StudioService
@@ -4387,6 +4397,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/DeviceLevel.yaml
         ignoreTranslation: true
+      - title: DeviceSimulatorScalingMode
+        path: /reference/engine/enums/DeviceSimulatorScalingMode
+        type: engineapi
+        source: /reference/engine/enums/DeviceSimulatorScalingMode.yaml
+        ignoreTranslation: true
       - title: DeviceType
         path: /reference/engine/enums/DeviceType
         type: engineapi
@@ -4501,6 +4516,11 @@ navigation:
         path: /reference/engine/enums/ExplosionType
         type: engineapi
         source: /reference/engine/enums/ExplosionType.yaml
+        ignoreTranslation: true
+      - title: ExternalEditorMode
+        path: /reference/engine/enums/ExternalEditorMode
+        type: engineapi
+        source: /reference/engine/enums/ExternalEditorMode.yaml
         ignoreTranslation: true
       - title: FacialAgeEstimationResultType
         path: /reference/engine/enums/FacialAgeEstimationResultType
@@ -4796,6 +4816,11 @@ navigation:
         path: /reference/engine/enums/InputActionType
         type: engineapi
         source: /reference/engine/enums/InputActionType.yaml
+        ignoreTranslation: true
+      - title: InputSink
+        path: /reference/engine/enums/InputSink
+        type: engineapi
+        source: /reference/engine/enums/InputSink.yaml
         ignoreTranslation: true
       - title: InputType
         path: /reference/engine/enums/InputType
@@ -5402,6 +5427,16 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/RecommendationItemVisibility.yaml
         ignoreTranslation: true
+      - title: RecommendationPreferenceTargetType
+        path: /reference/engine/enums/RecommendationPreferenceTargetType
+        type: engineapi
+        source: /reference/engine/enums/RecommendationPreferenceTargetType.yaml
+        ignoreTranslation: true
+      - title: RecommendationPreferenceType
+        path: /reference/engine/enums/RecommendationPreferenceType
+        type: engineapi
+        source: /reference/engine/enums/RecommendationPreferenceType.yaml
+        ignoreTranslation: true
       - title: RejectCharacterDeletions
         path: /reference/engine/enums/RejectCharacterDeletions
         type: engineapi
@@ -5701,6 +5736,16 @@ navigation:
         path: /reference/engine/enums/StrokeSizingMode
         type: engineapi
         source: /reference/engine/enums/StrokeSizingMode.yaml
+        ignoreTranslation: true
+      - title: StudioCaptureBufferStatus
+        path: /reference/engine/enums/StudioCaptureBufferStatus
+        type: engineapi
+        source: /reference/engine/enums/StudioCaptureBufferStatus.yaml
+        ignoreTranslation: true
+      - title: StudioCaptureScreenshotFormat
+        path: /reference/engine/enums/StudioCaptureScreenshotFormat
+        type: engineapi
+        source: /reference/engine/enums/StudioCaptureScreenshotFormat.yaml
         ignoreTranslation: true
       - title: StudioCloseMode
         path: /reference/engine/enums/StudioCloseMode

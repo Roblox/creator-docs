@@ -41,3 +41,13 @@ items:
     value: 5
     tags: []
     deprecation_message: ''
+  - name: UploadPending
+    summary: ''
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: UploadFailed
+    summary: ''
+    value: 7
+    tags: []
+    deprecation_message: ''

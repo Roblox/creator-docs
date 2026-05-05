@@ -39,6 +39,32 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: MarketplaceService:BindReceiptHandler
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: transactionType
+        type: ReceiptType
+        default:
+        summary: ''
+      - name: handler
+        type: Function
+        default:
+        summary: ''
+      - name: filter
+        type: Array?
+        default:
+        summary: ''
+    returns:
+      - type: RBXScriptConnection
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Monetization
   - name: MarketplaceService:GetDeveloperProductsAsync
     summary: |
       Returns a `Class.Pages` object which contains information for all of the
@@ -868,6 +894,24 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Monetization
+  - name: MarketplaceService:OpenShop
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - PromptExternalPurchase
   - name: MarketplaceService:PlayerOwnsAsset
     summary: |
       Returns whether the given user has the given asset.
@@ -1297,6 +1341,33 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - PromptExternalPurchase
+  - name: MarketplaceService:PromptRobuxTransferAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: sender
+        type: Player
+        default:
+        summary: ''
+      - name: receiverUserId
+        type: int64
+        default:
+        summary: ''
+      - name: amount
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags: &ref_0
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - PromptExternalPurchase
   - name: MarketplaceService:PromptSubscriptionPurchase
     summary: |
       Prompts a user to purchase a subscription for the given `subscriptionId`.
@@ -1323,19 +1394,25 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - PromptExternalPurchase
-
   - name: MarketplaceService:PromptRobuxTransferAsync
     summary: |
       Initiates a Robux transfer from the sender to another user.
     description: |
-      `PromptRobuxTransferAsync` initiates a Robux transfer from the `sender` to the user specified by `receiverUserId`. This is a server-only method and must be called from a `Class.Script` with `RunContext` set to `Server`.
+      `PromptRobuxTransferAsync` initiates a Robux transfer from the `sender` to
+      the user specified by `receiverUserId`. This is a server-only method and
+      must be called from a `Class.Script` with `RunContext` set to `Server`.
 
-      After a successful transfer, both the sender and receiver will have receipts delivered to their respective `Class.MarketplaceService:BindReceiptHandler()|BindReceiptHandler` callbacks.
+      After a successful transfer, both the sender and receiver will have
+      receipts delivered to their respective
+      `Class.MarketplaceService:BindReceiptHandler()|BindReceiptHandler`
+      callbacks:
 
-      - The sender's receipt has `Enum.ReceiptType.RobuxTransferSender|RobuxTransferSender`.
-      - The receiver's receipt has `Enum.ReceiptType.RobuxTransferReceiver|RobuxTransferReceiver`.
+      - The sender's receipt has `Enum.ReceiptType.RobuxTransferSender`.
+      - The receiver's receipt has `Enum.ReceiptType.RobuxTransferReceiver`.
 
-      Both receipts include a `TransferRequestId` field matching the `transferRequestId` returned by this method, which you can use for logging or to correlate sender and receiver receipts.
+      Both receipts include a `TransferRequestId` field matching the
+      `transferRequestId` returned by this method, which you can use for logging
+      or to correlate sender and receiver receipts.
 
       #### Errors
 
@@ -1352,16 +1429,16 @@ methods:
         type: Player
         default:
         summary: |
-          The `Class.Player` initiating the transfer. Must be a valid
-          player currently in the server.
+          The `Class.Player` initiating the transfer. Must be a valid player
+          currently in the server.
       - name: receiverUserId
         type: int64
         default:
         summary: |
-          The `Class.Player.UserId|UserId` of the user who will
-          receive the Robux.
+          The `Class.Player.UserId|UserId` of the user who will receive the
+          Robux.
       - name: amount
-        type: number
+        type: int64
         default:
         summary: |
           The amount of Robux to transfer. Must be a positive integer.
@@ -1371,113 +1448,117 @@ methods:
           A string `transferRequestId` that uniquely identifies this transfer
           request. Use this ID to correlate with receipts delivered through
           `Class.MarketplaceService:BindReceiptHandler()|BindReceiptHandler`.
-    tags: []
+    tags: *ref_0
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - PromptExternalPurchase
   - name: MarketplaceService:BindReceiptHandler
     summary: |
       Registers a callback to process receipts of a specific type.
     description: |
       `BindReceiptHandler` registers a callback to process receipts of a
-      specific `Enum.ReceiptType|ReceiptType`. You can use it to handle Robux transfer
-      receipts (`Enum.ReceiptType.RobuxTransferSender|RobuxTransferSender` and
-      `Enum.ReceiptType.RobuxTransferReceiver|RobuxTransferReceiver`).
+      specific `Enum.ReceiptType`. You can use it to handle Robux transfer
+      receipts (`Enum.ReceiptType.RobuxTransferSender` and
+      `Enum.ReceiptType.RobuxTransferReceiver`).
 
       The `handler` callback receives a receipt info dictionary and must return
       an `Enum.ReceiptDecision` value:
 
-      - `Enum.ReceiptDecision.Processed|Processed` &mdash; Indicates the receipt was successfully processed and all benefits have been granted. The receipt is marked as complete.
-      - `Enum.ReceiptDecision.NotProcessedYet|NotProcessedYet` &mdash; Indicates the receipt has not been processed yet. The receipt remains unresolved and will be delivered again on the next opportunity.
+      - `Enum.ReceiptDecision.Processed` &mdash; Indicates the receipt was
+        successfully processed and all benefits have been granted. The receipt
+        is marked as complete.
+      - `Enum.ReceiptDecision.NotProcessedYet` &mdash; Indicates the receipt has
+        not been processed yet. The receipt remains unresolved and will be
+        delivered again on the next opportunity.
 
       #### Receipt info dictionary
 
-      The receipt info dictionary passed to the `handler` contains the
-      following fields:
+      The receipt info dictionary passed to the `handler` contains the following
+      fields:
 
       <table size="small">
-        <thead>
-          <tr>
-            <th>Key</th>
-            <th>Type</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
+      <thead>
         <tr>
-          <td><code>PurchaseId</code></td>
-          <td>string</td>
-          <td>A unique identifier for this specific receipt.</td>
+          <th>Key</th>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-        <tr>
-          <td><code>PlayerId</code></td>
-          <td>number</td>
-          <td>The <code>Class.Player.UserId|UserId</code> of the user associated with
-          this receipt.</td>
-        </tr>
-        <tr>
-          <td><code>PlaceIdWherePurchased</code></td>
-          <td>number</td>
-          <td>The place ID where the transaction was initiated.</td>
-        </tr>
-        <tr>
-          <td><code>ReceiptType</code></td>
-          <td><code>Enum.ReceiptType|ReceiptType</code></td>
-          <td>The type of this receipt.</td>
-        </tr>
-        <tr>
-          <td><code>CurrencySpent</code></td>
-          <td>number</td>
-          <td>The amount of Robux involved in the transaction. For
-          <code>Enum.ReceiptType.RobuxTransferSender|RobuxTransferSender</code> receipts, this is
-          the amount sent. For
-          <code>Enum.ReceiptType.RobuxTransferReceiver|RobuxTransferReceiver</code> receipts, this is
-          the amount received.</td>
-        </tr>
-        <tr>
-          <td><code>TransferRequestId</code></td>
-          <td>string</td>
-          <td>The transfer request ID from
-          <code>Class.MarketplaceService:PromptRobuxTransferAsync|PromptRobuxTransferAsync()</code>. Only
-          present for <code>Enum.ReceiptType.RobuxTransferSender|RobuxTransferSender</code> and
-          <code>Enum.ReceiptType.RobuxTransferReceiver|RobuxTransferReceiver</code> receipts.</td>
-        </tr>
-        </tbody>
+      </thead>
+      <tbody>
+      <tr>
+        <td><code>PurchaseId</code></td>
+        <td>string</td>
+        <td>A unique identifier for this specific receipt.</td>
+      </tr>
+      <tr>
+        <td><code>PlayerId</code></td>
+        <td>number</td>
+        <td>The <code>Class.Player.UserId</code> of the user associated with
+        this receipt.</td>
+      </tr>
+      <tr>
+        <td><code>PlaceIdWherePurchased</code></td>
+        <td>number</td>
+        <td>The place ID where the transaction was initiated.</td>
+      </tr>
+      <tr>
+        <td><code>ReceiptType</code></td>
+        <td><code>Enum.ReceiptType</code></td>
+        <td>The type of this receipt.</td>
+      </tr>
+      <tr>
+        <td><code>CurrencySpent</code></td>
+        <td>number</td>
+        <td>The amount of Robux involved in the transaction. For
+        <code>Enum.ReceiptType.RobuxTransferSender</code> receipts, this is
+        the amount sent. For
+        <code>Enum.ReceiptType.RobuxTransferReceiver</code> receipts, this is
+        the amount received.</td>
+      </tr>
+      <tr>
+        <td><code>TransferRequestId</code></td>
+        <td>string</td>
+        <td>The transfer request ID from
+        <code>Class.MarketplaceService:PromptRobuxTransferAsync()</code>. Only
+        present for <code>Enum.ReceiptType.RobuxTransferSender</code> and
+        <code>Enum.ReceiptType.RobuxTransferReceiver</code> receipts.</td>
+      </tr>
+      </tbody>
       </table>
 
       #### Errors
 
       This method throws an error if:
 
-      - A handler is already registered for the same `Enum.ReceiptType|ReceiptType` and
+      - A handler is already registered for the same `Enum.ReceiptType` and
         product ID combination.
       - A catch-all handler is already registered for the same
-        `Enum.ReceiptType|ReceiptType`.
+        `Enum.ReceiptType`.
     code_samples:
       - MarketplaceService-BindReceiptHandler1
     parameters:
       - name: transactionType
-        type: Enum.ReceiptType
+        type: ReceiptType
         default:
         summary: |
-          The `Enum.ReceiptType|ReceiptType` indicating which kind of
-          receipt to handle.
+          The `Enum.ReceiptType` indicating which kind of receipt to handle.
       - name: handler
-        type: ()
+        type: Function
         default:
         summary: |
-          A callback function that receives a receipt info dictionary and
-          must return an `Enum.ReceiptDecision|ReceiptDecision` value.
+          A callback function that receives a receipt info dictionary and must
+          return an `Enum.ReceiptDecision` value.
       - name: filter
-        type: Array
+        type: Array?
         default:
         summary: |
-          An optional array of product IDs. When provided, the handler
-          only fires for receipts matching those product IDs. Not supported for
+          An optional array of product IDs. When provided, the handler only
+          fires for receipts matching those product IDs. Not supported for
           `RobuxTransferSender` or `RobuxTransferReceiver` receipt types.
     returns:
-      - type: ()
+      - type: RBXScriptConnection
         summary: |
           A `Datatype.RBXScriptConnection` that can be disconnected to
           unregister the handler.
@@ -1485,8 +1566,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
-
+    capabilities:
+      - Monetization
   - name: MarketplaceService:RankProductsAsync
     summary: |
       Takes a list of product IDs and returns a personalized ordered list of

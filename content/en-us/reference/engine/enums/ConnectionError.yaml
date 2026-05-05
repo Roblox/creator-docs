@@ -420,9 +420,29 @@ items:
     value: 533
     tags: []
     deprecation_message: ''
+  - name: PlacelaunchAgeVerificationRequired
+    summary: ''
+    value: 542
+    tags: []
+    deprecation_message: ''
+  - name: PlacelaunchParentalApprovalRequired
+    summary: ''
+    value: 543
+    tags: []
+    deprecation_message: ''
+  - name: PlacelaunchCoreGated
+    summary: ''
+    value: 544
+    tags: []
+    deprecation_message: ''
   - name: PlacelaunchCreatorBan
     summary: ''
     value: 600
+    tags: []
+    deprecation_message: ''
+  - name: PlacelaunchDeviceBlock
+    summary: ''
+    value: 601
     tags: []
     deprecation_message: ''
   - name: PlacelaunchCustomMessage
