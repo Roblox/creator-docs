@@ -525,7 +525,7 @@ methods:
       - Deprecated
     deprecation_message: |
       This method has been superseded by
-      `Class.Players:CreateHumanoidModelFromDescription()|CreateHumanoidModelFromDescription()`.
+      `Class.Players:CreateHumanoidModelFromDescriptionAsync()|CreateHumanoidModelFromDescriptionAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -1102,6 +1102,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+    simulationAccess: true
   - name: Players:GetPlayers
     summary: |
       Returns a table of all presently connected `Class.Player` objects.

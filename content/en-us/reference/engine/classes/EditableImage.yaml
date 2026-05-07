@@ -162,7 +162,7 @@ methods:
           added image.
       - name: antiAliasing
         type: AntiAliasing
-        default:
+        default: Enabled
         summary: |
           Determines whether anti-aliasing is applied to the circle. When set to
           `Enum.AntiAliasing.Enabled`, circle edges are soft. When set to
@@ -366,7 +366,7 @@ methods:
           added image.
       - name: antiAliasing
         type: AntiAliasing
-        default:
+        default: Enabled
         summary: |
           Determines whether anti-aliasing is applied to the line. When set to
           `Enum.AntiAliasing.Enabled`, line edges are soft. When set to

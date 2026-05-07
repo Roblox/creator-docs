@@ -469,7 +469,7 @@ Quick actions are accessible by right‑clicking an asset name/tile and selectin
 Use the search query language to refine how you find assets in your Asset Manager inventory. You can combine keywords, operators, and tags to filter, prioritize, or exclude results.
 
 <Alert severity="info">
-When combining multiple features, search terms are processed in the following order (highest to lowest priority): Exact search → Excluded terms → Optional terms → Asset ID tag → Created before → Created after → Updated before → Updated after → Numeric asset ID → Audio type.
+When combining multiple features, search terms are processed in the following order (highest to lowest priority): Exact search → Excluded terms → Optional terms → Asset ID tag → Created before → Created after → Updated before → Updated after → Creator name → Creator ID → Group name → Group ID → Numeric asset ID → Audio type.
 </Alert>
 
 <h5 style={{marginTop: '36px'}}>Query features</h5>
@@ -543,6 +543,20 @@ The following features can be combined in a single query:
       </td>
     </tr>
     <tr>
+      <td>Creator filters</td>
+      <td>
+        <code>creator_name</code><br/>
+        <code>creator_id</code><br/>
+        <code>group_name</code><br/>
+        <code>group_id</code>
+      </td>
+      <td>
+        Filters results by the creator user or creator group based on their name or ID. When multiple creator or group filters are provided, results matching any of them are included.<br/><br/>
+        Each tag also supports a camelCase alternative: <code>creatorName</code>, <code>creatorId</code>, <code>groupName</code>, <code>groupId</code>.<br/><br/>
+        Names that contain spaces must be wrapped in brackets (for example, <code>group_name:[Group With Space]</code>). If a provided name or ID is invalid, only that specific filter is ignored; other valid creator or group filters in the same query are still applied.
+      </td>
+    </tr>
+    <tr>
       <td>Audio type</td>
       <td>
         <code>music</code><br/>
@@ -607,3 +621,7 @@ Date filters support the following formats:
 - `explosion sfx -loop created_before:[December 31, 2023]`: Filters sound effects named "explosion", excludes looping variants, and limits the results by date.
 
 - `125447393891114 sword glowing? -rusty`: Pins a specific asset by ID, searches for "sword", boosts "glowing", and excludes "rusty".
+
+- `tree creator_name:buildmaster group_id:9876543`: Searches for "tree", filtered to assets by creator "buildmaster" or the group with ID 9876543.
+
+- `sword creator_id:1000001,2000002 group_name:[Studio Builders]`: Searches for "sword", filtered to assets by creators with IDs 1000001 or 2000002, or the group "Studio Builders".

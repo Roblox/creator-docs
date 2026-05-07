@@ -1487,6 +1487,22 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
+  - name: Studio.ExternalEditorMode
+    summary: ''
+    description: ''
+    code_samples: []
+    type: ExternalEditorMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Directories
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: Studio.ExternalEditorSelection
     summary: ''
     description: ''
@@ -3010,6 +3026,23 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
+  - name: Studio.TypeColor
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
   - name: Studio.UI Theme
     summary: |
       Specifies the color scheme of Roblox Studio.
@@ -3064,6 +3097,22 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: Studio.VAxisColor
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: Studio.Warning Color
     summary: |
       Specifies the color of the wavy underline shown when the script analyzer
@@ -3101,6 +3150,54 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+  - name: Studio.XAxisColor
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Studio.YAxisColor
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Studio.ZAxisColor
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
     capabilities: []
 methods:
   - name: Studio:GetAvailableThemes

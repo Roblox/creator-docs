@@ -109,6 +109,7 @@ To create an ad campaign:
    </table>
 
 4. Under **Audience**:
+
    1. Select an audience for the ad campaign:
 
       <table>
@@ -133,12 +134,13 @@ To create an ad campaign:
       </table>
 
    2. <Chip label="OPTIONAL" size="small" variant="outlined" /> Under **Advanced Targeting**, narrow down your audience by customizing settings like location, age, gender, genre, and device type.
+
 5. Under **Budget & Duration**:
-    1. Choose between a **Daily Budget** and a **Lifetime Budget**.
-    2. Select a **Payment Method**. If you're using ad credits, make sure the campaign budget does not exceed the available ad credits in your account.
-    3. Set a **Start Date** and a **Start Time** for your campaign.
-    4. Set a **Duration** for your campaign.
-    5. <Chip label="OPTIONAL" size="small" variant="outlined" />If you're using ad credits, enable **auto-reload** to automatically add ad credits to the campaign when your budget runs out.
+   1. Choose between a **Daily Budget** and a **Lifetime Budget**.
+   2. Select a **Payment Method**. If you're using ad credits, make sure the campaign budget does not exceed the available ad credits in your account.
+   3. Set a **Start Date** and a **Start Time** for your campaign.
+   4. Set a **Duration** for your campaign.
+   5. <Chip label="OPTIONAL" size="small" variant="outlined" />If you're using ad credits, enable **auto-reload** to automatically add ad credits to the campaign when your budget runs out.
 6. Under **Creatives**, choose up to 10 thumbnails to show players.
 7. Click **Publish** and confirm submission. Your ad campaign will go live after it's approved by the moderation team.
 
@@ -218,7 +220,7 @@ local Players = game:GetService("Players")
 local function onPlayerAdded(player)
     -- Retrieve the join data
     local launchData = player:GetJoinData().LaunchData
-    
+
     -- Check for the launch data parameters you defined when creating the campaign in Ads Manager
     if launchData then
         if launchData == "AdLaunchData" then
@@ -234,7 +236,66 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 Reports provide insights into the overall effectiveness of your ad campaigns. You can use reporting data to compare performance across campaigns and identify opportunities to optimize.
 
-To view your reports, go to **Manage Ads** and select the date range and experience you want to analyze.
+To view your reports, go to **Manage Ads** and select the date range and game you want to analyze.
+
+Impressions and clicks are reported in real time. Reporting on plays and earnings, however, relies on **attribution** and can include events that occur up to 30 days after an ad is served.
+
+The goal of attribution is to assign credits to Ads Manager based on the role advertising plays in acquiring users and driving conversions. This helps you understand how your ad spend contributes to your growth and earnings.
+
+### Reporting views
+
+**Reporting views** break down attribution across different types of users, helping you understand the impact of your campaigns according to their objectives.
+
+The reporting views include:
+
+<table>
+<thead>
+  <tr>
+    <th>**Reporting filter**</th>
+    <th>**Who these users are**</th>
+    <th>**How attribution works**</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>All Users</td>
+    <td>All users reached by your ads.</td>
+    <td>A combined view of all other filters, based on the user group they were in when they saw the ad.</td>
+  </tr>
+  <tr>
+    <td>New Users</td>
+    <td>Users who had never visited your game before being reached by your ads.</td>
+    <td>All plays and earnings are attributed to the ad for up to 30 days after the user first joins through it. <br /><br /> For example, if a user joins through an ad and returns the next day through another source (such as search or continue play), Ads Manager still attributes those plays, playtime, and revenue to the ad.</td>
+  </tr>
+  <tr>
+    <td>Recent Users</td>
+    <td>Users reached by your ads less than 7 days after they last played your game.</td>
+    <td>Only plays and earnings from sessions that start with an ad click are attributed to the ad. No additional attributed activity is included.</td>
+  </tr>
+  <tr>
+    <td>Resurrected Users (7D)</td>
+    <td>Users reached by your ads between 7 and 29 days after they last played your game.</td>
+    <td>All plays and earnings are attributed to the ad for 7 days after the user returns through it. <br /><br /> For example, if a user returns through an ad and plays again the next day, Ads Manager counts both plays and includes all associated playtime in its reporting.</td>
+  </tr>
+  <tr>
+    <td>Resurrected Users (30D)</td>
+    <td>Users reached by your ads 30 days or more after they last played your game.</td>
+    <td>All plays and earnings are attributed to the ad for 30 days after the user returns through it.</td>
+  </tr>
+</tbody>
+</table>
+
+The following examples show you how attribution works across different user types and reporting views:
+
+- If a user last played less than 7 days ago from another source, the ad is only credited for that play and any Robux generated during that session.
+- If a user joins your experience for the first time through an ad, their plays and Robux spend are credited to that ad for the next 30 days.
+- If a user comes back through an ad after not playing for at least 7 days, they're considered resurrected by the ad. Their plays and Robux spend are then credited to that ad for the next 7 days.
+
+<Alert severity='warning'>
+In some cases, campaign performance in the **All Users** view might appear low for objectives like retention, plays, or Robux revenue. Switch to **Recent Users** or **Resurrected Users** to better understand impact on those specific user groups.
+</Alert>
+
+### Metric cards
 
 The reporting metric cards include:
 
@@ -248,28 +309,26 @@ The reporting metric cards include:
 <tbody>
   <tr>
     <td>**Amount Spent**</td>
-    <td>The total amount of ad credits you have spent on all ad campaigns for the selected experience.</td>
+    <td>The total amount of ad credits you have spent on all ad campaigns for the selected game.</td>
   </tr>
   <tr>
     <td>**Impressions**</td>
-    <td>The total number of times all ads associated with the selected experience were shown to players.</td>
+    <td>The total number of times all ads associated with the selected game were shown to players.</td>
   </tr>
   <tr>
     <td>**Plays**</td>
-    <td>The total number of times players entered and started playing your experience as a result of all ads associated for the selected experience.</td>
+    <td>The total number of times players entered and started playing the selected game as a result of ads.</td>
   </tr>
   <tr>
-    <td>**7D Playtime**</td>
-    <td>An estimate of the total time players spent in your experience over the last 7 days after converting through ads associated with the selected experience.</td>
+    <td>**Playtime**</td>
+    <td>The total time players spent in the selected game over the selected date range as a result of ads.</td>
   </tr>
 </tbody>
 </table>
 
-<Alert severity="info">
-   Ads only get credit for metrics like 7D Playtime when players enter your experience through an ad.
-</Alert>
-
 <img src="../../assets/promotion/ads-manager/AdsManagerMetricCards.png" />
+
+### Reporting table
 
 The reporting table includes:
 
@@ -306,27 +365,27 @@ The reporting table includes:
     <td>The number of times players clicked on your ad on the Home and Search pages.</td>
   </tr>
   <tr>
-    <td>Plays</td>
-    <td>The number of times players entered and started playing your experience as a result of the ad.</td>
+    <td>**Plays**</td>
+    <td>The number of times players entered and started playing your experience as a result of your campaign.</td>
   </tr>
   <tr>
     <td>**CPP (Cost-per-play)**</td>
     <td>The average cost per play, calculated by dividing your total campaign spend by the number of plays.</td>
   </tr>
   <tr>
-    <td>**7D Playtime**</td>
-    <td>An estimate of how much time players spent in your experience over the last 7 days after converting through an ad.</td>
+    <td>**Playtime**</td>
+    <td>How much time players spent in your game as a result of your campaign.</td>
   </tr>
   <tr>
-    <td>**30D Robux Earnings**</td>
-    <td>An estimate of your total Robux earned over the past 30 days, based on players who converted through an ad during the selected date range. Excludes subscriptions, engagement payouts, and immersive ads.</td>
+    <td>**Robux Earnings**</td>
+    <td>Cumulative Robux earnings as a result of your campaign. Excludes subscriptions, engagement payouts, and immesive ads.</td>
   </tr>
 </tbody>
 </table>
 
 <img src="../../assets/promotion/ads-manager/AdsManagerReportingTable.png" />
 
-### Status
+#### Status
 
 <table>
 <thead>

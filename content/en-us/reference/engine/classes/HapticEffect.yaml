@@ -163,24 +163,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-  - name: HapticEffect.Waveform
-    summary: ''
-    description: ''
-    code_samples: []
-    type: FloatCurve
-    tags:
-      - Deprecated
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Input
 methods:
   - name: HapticEffect:Play
     summary: |

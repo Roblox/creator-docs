@@ -4,24 +4,34 @@
 
 name: AvatarUnificationMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls whether the R6 to R15 adapter is active, allowing R15 avatars to join
+  R6 experiences.
+description: |
+  When enabled, R15 avatars joining an R6 experience receive adapter parts,
+  invisible `Class.MeshPart|MeshParts` with R6-compatible names welded to their
+  corresponding R15 parts. The adapter preserves R6-like scale and movement
+  while enabling R15 features such as layered clothing and animatable heads.
+  Used by `Class.Workspace.AvatarUnificationMode`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Uses the engine-default avatar unification state.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Disabled
-    summary: ''
+    summary: |
+      Avatar unification is disabled.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Enabled
-    summary: ''
+    summary: |
+      Avatar unification is enabled.
     value: 2
     tags: []
     deprecation_message: ''

@@ -1,9 +1,9 @@
 ---
 title: Developer Products
-description: Developer Products let you charge users a Robux fee for items or abilities that they can access and use inside your experience.
+description: Developer Products let you charge users a Robux fee for items or abilities that they can access and use inside your game.
 ---
 
-A **developer product** is an item or ability that a user can purchase more than once, such as in-experience currency, ammo, or potions.
+A **developer product** is an item or ability that a user can purchase more than once, such as in-game currency, ammo, or potions.
 
 <img src="../../assets/monetization/developer-products/Buy-Product-Example.jpg" />
 
@@ -14,12 +14,12 @@ A **developer product** is an item or ability that a user can purchase more than
 ## Create a developer product
 
 <Alert severity="warning">
-   Before creating a developer product, make sure your experience has been [published](../../production/publishing/publish-experiences-and-places.md) and is accessible on Roblox.
+   Before creating a developer product, make sure your game has been [published](../../production/publishing/publish-experiences-and-places.md) and is accessible on Roblox.
 </Alert>
 
 To create a developer product:
 
-1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
+1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select a game.
 2. Go to **Monetization** ⟩ **Developer Products**.
 3. Click **Create a Developer Product**.
 4. Upload an image to display as the product icon. Make sure the image doesn't exceed 512x512 pixels, doesn't include important details outside of its circular boundaries, and is in `.jpg`, `.png`, or `.bmp` format.
@@ -42,27 +42,31 @@ To use scripting, you need a developer product ID. To get the product ID:
 
 ## Sell a developer product
 
+<Alert severity="warning">
+Starting May 30, 2026, cross-experience developer product sales will be disabled. If your game relies on cross-experience sales mechanics, we recommend integrating [Robux transfers](./robux-transfers.md) before this date to avoid service interruptions.
+</Alert>
+
 <Alert severity="info">
 If you're using [price optimization](./price-optimization.md), make sure to place the script inside a `Class.LocalScript` so that users see personalized product prices.
 </Alert>
 
 Before selling developer products, make sure you are properly processing sales receipts and granting users their purchased products. To do so, you must:
 
-- Use the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` API to check purchase receipts. `ProcessReceipt` automatically reads and acknowledges that a user has purchased a product outside of the experience.
+- Use the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` API to check purchase receipts. `ProcessReceipt` automatically reads and acknowledges that a user has purchased a product outside of the game.
 - Validate each receipt for `User ID`, `Developer Product ID`, and the receipt status.
 - If the receipt has a status of **Open**, grant the user the developer items they have purchased.
 - Respond to the `ProcessReceipt` API with a message acknowledging the receipt and validating that the purchased items were granted.
 
 You can sell developer products in two ways:
 
-- [Inside your experience](#inside-your-experience)
-- [Outside your experience](#outside-your-experience)
+- [Inside your game](#inside-your-experience)
+- [Outside your game](#outside-your-experience)
 
 ### Inside your experience
 
-To implement and sell a developer product inside an experience, call `Class.MarketplaceService|MarketplaceService` functions.
+To implement and sell a developer product inside a game, call `Class.MarketplaceService|MarketplaceService` functions.
 
-Use `Class.MarketplaceService:GetProductInfo()|GetProductInfo` to retrieve information about a developer product, like name and price, and then to display that product to users. You can sell the product inside your experience's marketplace, for example. For developer products, the second parameter must be `Enum.InfoType.Product`.
+Use `Class.MarketplaceService:GetProductInfo()|GetProductInfo` to retrieve information about a developer product, like name and price, and then to display that product to users. You can sell the product inside your game's marketplace, for example. For developer products, the second parameter must be `Enum.InfoType.Product`.
 
 ```lua
 local MarketplaceService = game:GetService("MarketplaceService")
@@ -83,7 +87,7 @@ if success and productInfo then
 end
 ```
 
-Use `Class.MarketplaceService:GetDeveloperProductsAsync()|GetDeveloperProductsAsync` to retrieve all developer products associated with your experience. This function returns a `Class.Pages|Pages` object that you can inspect and filter to build things like an in-experience store or product list GUI.
+Use `Class.MarketplaceService:GetDeveloperProductsAsync()|GetDeveloperProductsAsync` to retrieve all developer products associated with your game. This function returns a `Class.Pages|Pages` object that you can inspect and filter to build things like an in-game store or product list GUI.
 
 ```lua
 local MarketplaceService = game:GetService("MarketplaceService")
@@ -101,7 +105,7 @@ if success and developerProducts then
 end
 ```
 
-Use `Class.MarketplaceService:PromptProductPurchase()|PromptProductPurchase` to prompt product purchases inside your experience. You can call this function when a user performs actions like pressing a button or talking to a vendor NPC.
+Use `Class.MarketplaceService:PromptProductPurchase()|PromptProductPurchase` to prompt product purchases inside your game. You can call this function when a user performs actions like pressing a button or talking to a vendor NPC.
 
 ```lua
 local MarketplaceService = game:GetService("MarketplaceService")
@@ -158,7 +162,7 @@ end)
 
 ### Outside your experience
 
-To enable developer product purchases outside your experience, you must work with the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` API. After a user makes a purchase in the **Store** tab of your experience details page, you must use `ProcessReceipt` to confirm their purchase and grant them their items once they enter your experience.
+To enable developer product purchases outside your game, you must work with the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` API. After a user makes a purchase in the **Store** tab of your game details page, you must use `ProcessReceipt` to confirm their purchase and grant them their items once they enter your game.
 
 <Alert severity="warning">
 Do **not** use the `Class.MarketplaceService:PromptProductPurchaseFinished|PromptProductPurchaseFinished` event to process purchases. You must use the `ProcessReceipt` callback instead.
@@ -172,7 +176,7 @@ The firing of `PromptProductPurchaseFinished` does not mean that a user has succ
 Items for sale in test mode cost actual Robux. We recommend testing low-cost developer products.
 </Alert>
 
-The **test mode** feature helps you validate your purchase flow by simulating a developer product purchase outside your experience. You should use test mode to make sure that you have implemented `ProcessReceipt` correctly before enabling external developer product sales.
+The **test mode** feature helps you validate your purchase flow by simulating a developer product purchase outside your game. You should use test mode to make sure that you have implemented `ProcessReceipt` correctly before enabling external developer product sales.
 
 The developer products you put up for sale in test mode can only be seen by you and by members of your group. They are not visible to users.
 
@@ -183,10 +187,10 @@ To test your implementation:
 3. In the **External Purchase Settings** page, click **Enable test mode**.
 4. Once test mode is active, return to the **Developer Products** page and select a product to test.
 5. In the **Basic Settings** page, select the **Allow external purchases** checkbox and save your changes.
-6. Go to the **Store** tab of the experience details page and purchase the product you made available for sale.
-7. Enter the experience and confirm that you have received the product you purchased. The receipt status of the `ProcessReceipt` API should update to **Closed**.
+6. Go to the **Store** tab of the game details page and purchase the product you made available for sale.
+7. Enter the game and confirm that you have received the product you purchased. The receipt status of the `ProcessReceipt` API should update to **Closed**.
 
-After you test your implemention, Roblox verifies that the test has been successfully completed and allows you to fully activate the feature to sell developer products outside your experiences.
+After you test your implemention, Roblox verifies that the test has been successfully completed and allows you to fully activate the feature to sell developer products outside your games.
 
 For more information about the `ProcessReceipt` API and its implementation, see the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` page.
 
@@ -200,9 +204,9 @@ To enable external sales:
 
 1. Go to the **External Purchase Settings** page.
 2. Turn on **External Purchases**.
-3. Return to the **Developer Products** page and select the products you want to sell outside of your experience.
+3. Return to the **Developer Products** page and select the products you want to sell outside of your game.
 4. In the **Basic Settings** page, select the **Allow external purchases** checkbox and save your changes.
-5. Confirm that the products are now available for purchase in the **Store** tab of the experience details page.
+5. Confirm that the products are now available for purchase in the **Store** tab of the game details page.
 
 To disable the external sale of a developer product, select the product on the **Developer Products** page and clear the **Allow external purchases** checkbox.
 
@@ -211,7 +215,7 @@ To disable the external sale of a developer product, select the product on the *
 - Items for sale in test mode cost actual Robux. We recommend testing low-cost developer products.
 - Items for sale in test mode can only be seen by you or by members of your group.
 - To be sold externally, your developer products **must** have a thumbnail.
-- You should not sell the following outside your experience:
+- You should not sell the following outside your game:
 		- Paid random items
 		- Items that are limited to specific quantities, time, place, or user settings and roles
 
@@ -269,7 +273,7 @@ local function processReceipt(receiptInfo)
 	end
 
 	-- The user's items couldn't be awarded
-	-- Returns "NotProcessedYet" and tries again next time the user joins the experience
+	-- Returns "NotProcessedYet" and tries again next time the user joins the game
 	return Enum.ProductPurchaseDecision.NotProcessedYet
 end
 
@@ -294,11 +298,11 @@ Although Roblox itself does **not** record the purchase history of developer pro
 
 ## Personalize your in-experience store
 
-You can use product intelligence APIs to sort and recommend developer products to users. Personalizing your in-experience store helps surface the most relevant items to each user, boosting engagement and revenue. By tailoring developer products to user preferences, you can improve their discovery, increase conversion rates, and unlock new monetization opportunities.
+You can use product intelligence APIs to sort and recommend developer products to users. Personalizing your in-game store helps surface the most relevant items to each user, boosting engagement and revenue. By tailoring developer products to user preferences, you can improve their discovery, increase conversion rates, and unlock new monetization opportunities.
 
 ### Rank developer products for sale
 
-`Class.MarketplaceService.RankProductsAsync|RankProductsAsync` takes in a list of product IDs and returns a personalized ordered list of those products. You can use this method to provide your users with personalized item recommendations in your in-experience store.
+`Class.MarketplaceService.RankProductsAsync|RankProductsAsync` takes in a list of product IDs and returns a personalized ordered list of those products. You can use this method to provide your users with personalized item recommendations in your in-game store.
 
 <Alert severity="warning">
 Because `RankProductsAsync` has a strict rate limit, you should load recommendations once at game join instead of calling it repeatedly.
@@ -338,17 +342,17 @@ end
 ### Display your top developer products
 
 <Alert severity="warning">
-If your experience has had no item sales in the past 28 days, `RecommendTopProductsAsync` returns an empty list. At least one purchase within the last 28 days is required for this API to generate recommendations.
+If your game has had no item sales in the past 28 days, `RecommendTopProductsAsync` returns an empty list. At least one purchase within the last 28 days is required for this API to generate recommendations.
 </Alert>
 
-`Class.MarketplaceService.RecommendTopProductsAsync|RecommendTopProductsAsync` takes an array of `Enum.InfoType|InfoType` values and returns up to 50 items a user is most likely to engage with and purchase. You can use this method to create a "Top Picks" section in your in-experience store.
+`Class.MarketplaceService.RecommendTopProductsAsync|RecommendTopProductsAsync` takes an array of `Enum.InfoType|InfoType` values and returns up to 50 items a user is most likely to engage with and purchase. You can use this method to create a "Top Picks" section in your in-game store.
 
 If no recommendations can be determined, `RecommendTopProductsAsync` returns 0 items.
 
 In rare cases, calls to the ranking model can be slow. To help prevent added lately for users, we recommend using `task.spawn` to make the call to `RecommendTopProducts` non-blocking.
 
-	<figcaption>Example: A "Top Picks" tab in an in-experience store</figcaption>
-  <img src="../../assets/monetization/developer-products/StoreTopPicks.png" alt="Top Picks tab of an in-experience store." width="90%" />
+	<figcaption>Example: A "Top Picks" tab in an in-game store</figcaption>
+  <img src="../../assets/monetization/developer-products/StoreTopPicks.png" alt="Top Picks tab of an in-game store." width="90%" />
 
 ```lua
 local MarketplaceService = game:GetService("MarketplaceService")
@@ -387,7 +391,7 @@ With analytics, you can:
 
 To access developer product analytics:
 
-1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
+1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select a game.
 2. Go to **Monetization** ⟩ **Developer Products**.
 3. Select the **Analytics** tab.
 

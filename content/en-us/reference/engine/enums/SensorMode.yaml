@@ -20,3 +20,13 @@ items:
     value: 1
     tags: []
     deprecation_message: ''
+  - name: ClassicFloor
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: ClassicLadder
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''

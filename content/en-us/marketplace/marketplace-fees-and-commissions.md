@@ -254,9 +254,10 @@ For an example of how the publishing advance is recouped, the following table re
 </AccordionDetails>
 </BaseAccordion>
 
-Rebate credits are reimbursed once per day. See the following guidelines:
+See the following guidelines:
 
-- Once per day, Roblox processes rebates from your sales and adds them to your transaction report.
+- Publishing advance rebates are subject to revenue share.
+- Once per day, Roblox processes and reimburses rebates from your sales and adds them to your transaction report.
   - If you see the rebate on your transaction report, the credit has been applied to your account.
   - The 30 day escrow does not apply for rebates.
 - You can access this data on the Creator Dashboard's [My Transactions](https://create.roblox.com/dashboard/transactions) report, by filtering **Type of Transaction** to **Publishing Advance Rebates**.

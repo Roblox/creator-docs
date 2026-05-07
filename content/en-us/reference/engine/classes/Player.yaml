@@ -1310,6 +1310,27 @@ methods:
     capabilities:
       - Players
       - Social
+  - name: Player:GetFriendsWhoPlayedAsync
+    summary: ''
+    description: |
+      Returns an array of user IDs of any friends who have previously played
+      this game. For example, if a player has had two friends play the game, the
+      method might return `{1111111111, 2222222222}`. If no friends have played
+      this game, the method returns an empty array (`{}`).
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          An array of user IDs.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+      - Social
   - name: Player:GetJoinData
     summary: |
       Returns a dictionary containing information describing how the player
@@ -1979,6 +2000,12 @@ methods:
       the player, such as when you want to load a new character appearance after
       changing the player's
       `Class.Player.CharacterAppearance|CharacterAppearance`.
+
+      When reloading a `Class.Player` with their default platform appearance
+      applied, a cached version of their appearance will be loaded. The cached
+      version is cleared whenever the player's appearance is updated using
+      `Class.AvatarEditorService` or when the player manually resets via the in
+      game menu.
 
       After calling `LoadCharacterAsync()` for an individual player, it is not
       recommended to call it again for the same player until after that player's

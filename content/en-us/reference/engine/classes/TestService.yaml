@@ -659,6 +659,23 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: TestService:RegisterTest
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: testOptions
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: TestCase
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: TestService:Require
     summary: |
       Prints whether a condition is true along with a description string.

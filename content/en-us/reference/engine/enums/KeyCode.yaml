@@ -1682,3 +1682,13 @@ items:
     value: 1048
     tags: []
     deprecation_message: ''
+  - name: TouchDelta
+    summary: ''
+    value: 1049
+    tags: []
+    deprecation_message: ''
+  - name: TouchPinch
+    summary: ''
+    value: 1050
+    tags: []
+    deprecation_message: ''

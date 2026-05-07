@@ -4,24 +4,30 @@
 
 name: PrimalPhysicsSolver
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls whether the experimental Primal Physics Solver is enabled.
+description: |
+  An experimental constraint solver that can improve accuracy in complex setups.
+  This enum is used by `Class.Workspace.PrimalPhysicsSolver`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Uses the engine-default physics solver state.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Experimental
-    summary: ''
+    summary: |
+      The experimental Primal Physics Solver is enabled.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Disabled
-    summary: ''
+    summary: |
+      The Primal Physics Solver is disabled.
     value: 2
     tags: []
     deprecation_message: ''

@@ -6,23 +6,9 @@ comments: There are some opportunities to improve or add images/videos in this d
 
 The **Curve Editor** is a curve-based animation editing interface within the [Animation Editor](../animation/editor.md) that allows you to see and modify how a rig's position and orientation changes between keyframes through color‑coded curve graphs. It allows you to define independent tracks for the **X**, **Y** and **Z** angles, providing additional levels of control to make your animations more fluid and realistic.
 
-<GridContainer numColumns="2">
-  <figure>
-    <img src="../assets/animation/curve-editor/Dope-Sheet-Editor.png" />
-    <figcaption>Dope Sheet Editor</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/animation/curve-editor/Curve-Editor-Example.png" />
-    <figcaption>Curve Editor</figcaption>
-  </figure>
-</GridContainer>
-
 Instead of using the default dope sheet editor's method of manually moving the scrubber from one frame to another to see how a rig's position and orientation change over time, the Curve Editor lets you quickly reference position and orientation values of your selected tracks through the **position ruler** on the left side of the timeline and the **rotation ruler** on the right side of the timeline.
 
-<img
-  alt="Curve Editor Overview"
-  src="../assets/animation/curve-editor/UI-Overview.png"
-  width="780" />
+<img alt="Curve Editor Overview" src="../assets/animation/curve-editor/UI-Overview.png" width="840" />
 
 ## Open the Curve Editor
 
@@ -34,23 +20,21 @@ You can switch the editor's timeline between the dope sheet editor and the Curve
 
 2. <Chip label="IMPORTANT" size="small" variant="outlined" color="warning" /> Studio automatically converts [quaternions](https://en.wikipedia.org/wiki/Quaternion) to [Euler angles](https://en.wikipedia.org/wiki/Euler_angles) when you open the Curve Editor, so it's important that you verify your rotation type **before** you switch to the Curve Editor. Once you convert quaternions to Euler angle tracks, it's impossible to convert them back into quaternions.
 
-   1. In the top-right corner of the editor window, click the gear icon. A contextual menu displays.
+   1. In the top-right corner of the editor window, click the settings icon. A contextual menu displays.
 
-   <img alt="Gear Icon" src="../assets/animation/curve-editor/Gear-Icon.png" width="600" />
+      <img src="../assets/animation/curve-editor/Timeline-Options-Menu.png" width="524" />
 
    1. Hover over **Default Rotation Type**, then select either **Euler Angles** or **Quaternions**. Your rotation type sets to your choice and becomes the default rotation type for future projects.
 
-3. In the top-left corner of the **timeline**, click the **Curve Animation** icon. A popup window displays to confirm that your `Class.KeyframeSequence` clip will convert to a `Class.CurveAnimation` clip.
+3. In the top-left corner of the **timeline**, click the **Curve Editor** icon. A popup window displays to confirm that your `Class.KeyframeSequence` clip will convert to a `Class.CurveAnimation` clip.
 
-   <img alt="Opening Curve Editor" src="../assets/animation/curve-editor/Opening-Curve-Editor.png" width="800" />
+   <img alt="Opening Curve Editor" src="../assets/animation/curve-editor/Opening-Curve-Editor.png" width="840" />
 
-   If you kept the default rotation type of Euler angles, Studio automatically converts any pre-existing quaternions to Euler angles following the [Euler angles order](#euler-angles-order) setting. Because `Class.KeyframeSequence|KeyframeSequences` work with quaternions and curve animations work with Euler angles by default, your animation might appear slightly different between keyframes, especially if any of your Euler angles approach [Gimbal lock](https://en.wikipedia.org/wiki/Gimbal_lock).
+	 <Alert severity="info">
+		If you kept the default rotation type of Euler angles, Studio automatically converts any pre-existing quaternions to Euler angles following the [Euler angles order](#euler-angles-order) setting. Because `Class.KeyframeSequence|KeyframeSequences` work with quaternions and curve animations work with Euler angles by default, your animation might appear slightly different between keyframes, especially if any of your Euler angles approach [Gimbal lock](https://en.wikipedia.org/wiki/Gimbal_lock).
 
-    <img alt="Convert Euler Angles" src="../assets/animation/curve-editor/Convert-Euler-Angles.png" width="600" />
-
-   If you set the rotation type to quaternions, the conversion to curves preserves the quaternions and the animation remains the same.
-
-    <img alt="Curve Editor Overview" src="../assets/animation/curve-editor/Convert-Quaternion-Angles.png" width="600" />
+		If you set the rotation type to quaternions, the conversion to curves preserves the quaternions and the animation remains the same.
+	 </Alert>
 
 ## Interpolation
 
@@ -58,16 +42,16 @@ Interpolation is Studio's process of "filling in" position and orientation value
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/animation/curve-editor/Euler-Angle-Curve.png" />
+    <img src="../assets/animation/curve-editor/Euler-Angle-Curve.png" width="400" />
     <figcaption>Euler Angle Curve</figcaption>
   </figure>
   <figure>
-    <img src="../assets/animation/curve-editor/Quaternion-Curve-Interpolation.png" />
+    <img src="../assets/animation/curve-editor/Quaternion-Curve-Interpolation.png" width="400" />
     <figcaption>Quaternion Curve</figcaption>
   </figure>
 </GridContainer>
 
-For **Euler angle curves**, the height of each keyframe represents its orientation value over time. For example, the highest keyframe represents a rotation of about 120 degrees around the **X** axis, and the lowest keyframe represents a rotation of about -10 degrees. For **quaternion curves**, each segment represents orientation changing between keyframes, and the line displays the interpolation between them. In the previous example, the animation starts from orientation A, then interpolates linearly to orientation B. Once it is at B, the interpolation starts again from orientation B to orientation C, then continues with this pattern until the rig reaches its final orientation.
+For **Euler angle curves**, the height of each keyframe represents its orientation value over time. For **quaternion curves**, each segment represents orientation changing between keyframes, and the line displays the interpolation between them.
 
 You can modify how the Curve Editor handles interpolation for both Euler angle curves and quaternion curves by [setting tangents](#set), [changing the interpolation mode](#interpolation-mode), or by [generating interpolation curves](#generate-interpolation-curves) between two or more keyframes.
 
@@ -77,11 +61,11 @@ The Curve Editor provides **tangents**, or handles, that let you quickly adjust 
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/animation/curve-editor/Euler-Angle-Curve-Tangents.png" />
+    <img src="../assets/animation/curve-editor/Euler-Angle-Curve-Tangents.png" width="400" />
     <figcaption>Euler Angle Curve Tangents</figcaption>
   </figure>
   <figure>
-    <img src="../assets/animation/curve-editor/Quaternion-Curve-Tangents.png" />
+    <img src="../assets/animation/curve-editor/Quaternion-Curve-Tangents.png" width="400" />
     <figcaption>Quaternion Curve Tangents</figcaption>
   </figure>
 </GridContainer>
@@ -90,14 +74,7 @@ The Curve Editor provides **tangents**, or handles, that let you quickly adjust 
 For quaternion curve tangents, no matter how much you adjust each tangent, each segment always begins at `0` and ends at `1`. Although each segment of a quaternion curve graph is disconnected from subsequent segments, the two keyframes within the same frame always represent the same orientation.
 </Alert>
 
-Tangents change appearance when you set them to a new position. For example, when you manually set a tangent, the handle displays as a white circle, otherwise an unset tangent displays as a clear circle. For keyframes with two tangents, you can manually set either one or both tangents, and their appearance changes accordingly.
-
-Tangents change appearance when you set them to a new position; an unset tangent displays as a clear circle, and a set tangent displays as a white circle. Studio automatically calculates the position for unset tangents based on the position of any set tangents. For instance, if you only set one tangent and leave the other unset, the unset tangent aligns with its opposite tangent:
-
-<img
-  alt="Tangent Image"
-  src="../assets/animation/curve-editor/Tangent.png"
-  width="320" />
+Tangents change appearance when you set them to a new position; an unset tangent displays as a clear circle, and a set tangent displays as a white circle. Studio automatically calculates the position for unset tangents based on the position of any set tangents. For instance, if you only set one tangent and leave the other unset, the unset tangent aligns with its opposite tangent.
 
 #### Set
 
@@ -127,11 +104,6 @@ To change interpolation mode:
 1. Right-click a keyframe. A contextual menu displays.
 2. Hover over **Interpolation Mode**, then select either **Linear**, **Constant**, or **Cubic**. The interpolation mode changes the curve following the keyframe.
 
-   <img
-   alt="Interpolation Mode"
-   src="../assets/animation/curve-editor/Interpolation-Mode.png"
-   width="600" />
-
 ### Generate interpolation curves
 
 For curve animations, bounce and elastic easing styles are not available as standard interpolations like they are for `Class.KeyframeSequence|KeyframeSequences`. However, when you convert a `Class.KeyframeSequence` to a curve animation, Studio automatically adds additional keyframes to your animation to keep the animation intact, and you can select two or more keyframes and generate an **interpolation curve** that removes and replaces any of their intermediate keyframes to mimic bounce and elastic easing behavior.
@@ -140,10 +112,10 @@ To generate interpolation curves:
 
 1. Select two or more keyframes. Each keyframe you select highlights.
 2. Right-click one of these keyframes. A contextual menu displays.
-3. Hover over **Generate Curve**, then over **Bounce** or **Elastic**, and then select either **Out**, **In**, or **InOut**. An interpolation curve between your selected keyframes generates according to your settings.
+3. Hover over **Generate Curve**, then over **Bounce** or **Elastic**, and then select either **In**, **Out**, or **InOut**. An interpolation curve between your selected keyframes generates according to your settings.
 
-   - **Out** — The motion is faster at the beginning and slower toward the end of the keyframe range.
    - **In** — The motion is slower at the beginning and faster toward the end of the keyframe range.
+   - **Out** — The motion is faster at the beginning and slower toward the end of the keyframe range.
    - **InOut** — **In** and **Out** on the same tween, with **In** at the beginning and **Out** taking effect halfway through the keyframe range.
 
 ## Euler angles order
@@ -157,8 +129,8 @@ How an animation changes when you set Euler angles order is dependent on **when*
 
 To set the Euler angles order:
 
-1. In the top-right corner of the editor window, click the gear icon. A contextual menu displays.
+1. In the top-right corner of the editor window, click the settings icon. A contextual menu displays.
 
-   <img alt="Gear Icon" src="../assets/animation/curve-editor/Gear-Icon.png" width="600" />
+   <img src="../assets/animation/curve-editor/Timeline-Options-Menu.png" width="524" />
 
 2. Hover over **Default Euler's Angles Order**, then select either **XYZ**, **XZY**, **YXZ**, **YZX**, **ZXY**, or **ZYX**. Your Euler angles order changes accordingly.

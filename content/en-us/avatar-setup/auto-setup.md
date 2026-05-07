@@ -20,7 +20,7 @@ For characters, accessories, and clothing, auto-setup can perform the following:
 - **Partitioning** — Separates the body mesh into the appropriate R15 parts.
 - **Creating attachments** — Adds the appropriate attachment points enabling the character to wear rigid accessories.
 
-If the selected model already contains all the required components for a Roblox avatar, the Avatar Setup tool skips auto-setup and immediately opens the selected model in the [Avatar Setup test interface](./index.md#test-and-edit).
+If the selected model already contains all the required components for a Roblox avatar, the Avatar Setup tool skips auto-setup and immediately opens the selected model in the [Avatar Setup test interface](./index.md#testing-tools).
 
 ## Supported asset types
 

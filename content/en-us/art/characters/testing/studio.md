@@ -35,7 +35,7 @@ To download the Avatar Test experience:
 
 After you open the test experience in Studio, import your custom character model.
 
-1. From Studio's **File** menu, select **Import 3D**. A file browser displays.
+1. From Studio's **File** menu, select **Import**. A file browser displays.
 
    <img src="../../../assets/art/avatar/basic-creation/Testing-3d-Importer.png" />
 

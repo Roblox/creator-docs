@@ -4,7 +4,7 @@ description: Before selling your accessory, upload the accessory for validation 
 prev: /art/accessories/creating-rigid/converting
 ---
 
-After generating your `Class.Accessory` item, you can now begin the process of **publishing** the asset to the Marketplace. This step is optional and only applicable for creators who intend to sell their asset.
+After generating your `Class.Accessory` item, you can now begin the process of **publishing** the asset to the Marketplace. This step is optional and only applicable for creators who intend to sell their asset. For full information on the publishing process, see [uploading and publishing to the Marketplace](../../../marketplace/publish-to-marketplace.md).
 
 <Alert severity = 'warning'>
 Users must meet [creator requirements](../../../marketplace/marketplace-policy.md#creator-requirements) to be eligible to sell assets on the Marketplace. Creators must also provide an upload fee and a payment advance during the upload and publishing process.
@@ -21,17 +21,19 @@ Adding your asset to the Marketplace involves 2 steps:
 
 To upload your accessory:
 
-1. In the **Explorer**, right-click your accessory object and select **Save to Roblox…** from the contextual menu.
-2. In the **Asset Configuration** window, set the **Content Type** to **Avatar Item**.
-3. Complete the following fields (you can adjust these later):
+1. **(Recommended)** Create a thumbnail of your accessory to ensure your thumbnail correctly captures the look of your accessory.
+   For instructions, see [custom thumbnails](../../../marketplace/custom-thumbnails.md).
+2. In the **Explorer**, right-click your accessory object and select **Save to Roblox…** from the contextual menu.
+3. In the **Asset Configuration** window, set the **Content Type** to **Avatar Item**.
+4. Complete the following fields (you can adjust these later):
 
    1. **Title**: The name of your accessory.
    2. **Description**: A short description of your asset.
    3. **Asset Category**: The type of accessory. This should match the Accessory Type selected during the [fitting and conversion](../../../art/accessories/creating-rigid/converting.md) process.
    4. **Creator**: Use the dropdown to select if you'd like to publish this asset as an individual or as part of an associated group.
 
-4. After you select the **Asset Category**, Studio begins validating the asset to ensure that it matches Roblox's accessory technical requirements.
-5. If the validation is successful, you can submit the asset to the upload and moderation queue for a fee. See [Fees and commissions](../../../marketplace/marketplace-fees-and-commissions.md) for current fee information.
+5. After you select the **Asset Category**, Studio begins validating the asset to ensure that it matches Roblox's accessory technical requirements.
+6. If the validation is successful, you can submit the asset to the upload and moderation queue for a fee. See [Fees and commissions](../../../marketplace/marketplace-fees-and-commissions.md) for current fee information.
 
 ## Publish
 

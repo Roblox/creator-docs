@@ -48,20 +48,41 @@ If you need general knowledge or help while creating an experience, you can ask 
 
 ### Generate materials
 
-When given a request to generate a material, Assistant in Studio can quickly style existing parts through a lightweight implementation of the [Material Generator](../studio/material-generator.md).
+When given a request to generate a material, Assistant in Studio can quickly style existing parts with a lightweight version of the [Material Generator](../studio/material-generator.md).
 
 <img src="../assets/assistant/Studio-Quick-Styling-Material.png" width="360" alt="Material variations shown in Assistant for quick styling." />
 
-### Generate 3D models
+### Generate meshes
 
-<BetaAlert betaName="Assistant Mesh Generation" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
+To generate a textured 3D mesh:
 
-The `/generate` command enables [mesh generation](https://corp.roblox.com/newsroom/2025/03/introducing-roblox-cube), powered by Roblox's Cube 3D model.
+- Use the `/generate` command followed by your prompt. For example, `/generate_mesh a red buggy with knobby tires`.
+- Ask Assistant to create a mesh directly. For example, "Make a futuristic crate."
 
-1. In the Assistant chat window, type a command such as `/generate a red buggy with knobby tires`.
-1. Assistant generates the corresponding object and adds it directly to your workspace for further customization.
+You can use a Part in your workspace as a **bounding box**. If you select a Part before entering a prompt, Assistant uses the Part's size and location as input and ensures the generated mesh fits within the defined space.
+
+You can also define a **maximum triangle count** for the returned model. Lower values result in more faceted and low-poly generations. This is an optional input, which defaults to 10,000.
 
 <img src="../assets/assistant/Studio-Generated-Green-Dragon.jpg" width="360" alt="A generated green dragon provided by Assistant in Studio." />
+
+### Generate procedural models
+
+<Alert severity="info">
+You can generate up to **50 procedural models within a 24-hour rolling window**. This limit doesn't reset at a fixed time; instead, it updates continuously based on the number of requests made in the past 24 hours.
+</Alert>
+
+Use the `/generate_procedural_model` command to generate [procedural models](../parts/procedural-models.md) that scale and adapt automatically.
+
+Procedural models let you:
+
+- Create flexible 3D models with minimal input and adjust parameters without having to rebuild your models.
+- Automatically integrate with engine features like undo/redo, Team Create, network replication, scaling, and dragger tools.
+- Maintain high performance, with models behaving like standard objects until their parameters change. This means these models add almost no overhead to your experience.
+- Keep generated content organized in a dedicated `GeneratedFolder`, separating source and output.
+
+To generate a procedural model, type a command such as `/generate_procedural_model a stack of books` in the Assistant chat window. Assistant then generates the procedural model and adds it directly to your workspace for further customization.
+
+<img src="../assets/assistant/Studio-Procedural-Generation-Ferris-Wheel.png" width="360" alt="A generated ferris wheel with Assistant in Studio." />
 
 ### Planning Mode
 

@@ -11,17 +11,17 @@ With [TextChatService](../chat/in-experience-text-chat.md), you can use bubble c
 
 To enable bubble chat in your experience:
 
-1. In the [Explorer](../studio/explorer.md) window, select `Class.BubbleChatConfiguration` under `Class.TextChatService`.
+1. In the **Explorer** window, select `Class.BubbleChatConfiguration` under `Class.TextChatService`.
 
    <img src="../assets/players/in-experience-text-chat/TextChatService-BubbleChatConfiguration.png" width="320" />
 
-2. In the [Properties](../studio/properties.md) window, check the `Class.BubbleChatConfiguration.Enabled` checkbox.
+2. In the **Properties** window, check the `Class.BubbleChatConfiguration.Enabled` checkbox.
 
    <img src="../assets/players/in-experience-text-chat/TextChatService-BubbleChatConfiguration-Enabled.png" width="320" />
 
 ## Bubble customization
 
-After enabling bubble chat, you can customize the appearance and behavior of your chat bubbles to match your experience theme. Use the [Properties](../studio/properties.md) window of `Class.BubbleChatConfiguration` for [basic](#basic-customization) changes like text color and spacing, or implement [advanced](#advanced-customization) customization for bubble background images and other visual adjustments.
+After enabling bubble chat, you can customize the appearance and behavior of your chat bubbles to match your experience theme. Use the **Properties** window of `Class.BubbleChatConfiguration` for [basic](#basic-customization) changes like text color and spacing, or implement [advanced](#advanced-customization) customization for bubble background images and other visual adjustments.
 
 <img src="../assets/players/in-experience-text-chat/TextChatService-BubbleChatConfiguration.png" width="320" />
 

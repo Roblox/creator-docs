@@ -5,8 +5,32 @@
 name: UIShadow
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Renders a shadow below the parent UI instance.
+description: |
+  `UIShadow` renders a drop shadow below its parent UI instance. Key features
+  include:
+
+  - Adjust the shadow's bluriness with `Class.UIShadow.BlurRadius|BlurRadius`.
+  - Adjust the shadow's color and transparency with `Class.UIShadow.Color|Color`
+    and `Class.UIShadow.Transparency|Transparency`.
+  - Adjust the shadow's position and size relative to the parent with
+    `Class.UIShadow.Offset|Offset` and `Class.UIShadow.Spread|Spread`.
+  - Add multiple shadows under the same parent and adjust their render order
+    with `Class.UIShadow.ZIndex|ZIndex`.
+  - If the parent is rotated with `Class.GuiObject.Rotation`, the shadow will
+    also be rotated.
+  - If the parent has round corners with `Class.UICorner`, the shadow will also
+    have round corners.
+
+  #### Limitations
+
+  - `UIShadow` does not support text. If you add a `UIShadow` to a
+    `Class.TextLabel` or `Class.TextButton`, it renders a shadow of the object's
+    rectangular bounding area, not of the text.
+  - `UIShadow` does not support inset shadows.
+  - `UIShadow` does not support `Class.Path2D`.
+  - You cannot apply textures or `Class.UIGradient|UIGradients` to a `UIShadow`.
 code_samples: []
 inherits:
   - UIComponent
@@ -16,8 +40,14 @@ tags:
 deprecation_message: ''
 properties:
   - name: UIShadow.BlurRadius
-    summary: ''
-    description: ''
+    summary: |
+      Determines the shadow's blurriness.
+    description: |
+      This property determines the shadow's blurriness. A larger value makes the
+      shadow's edges appear softer.
+
+      Note that the scale factor of this `Datatype.UDim` property is relative to
+      the parent's width or height, whichever is shorter.
     code_samples: []
     type: UDim
     tags: []
@@ -33,8 +63,10 @@ properties:
     capabilities:
       - UI
   - name: UIShadow.Color
-    summary: ''
-    description: ''
+    summary: |
+      Determines the shadow's color.
+    description: |
+      This property determines the shadow's color.
     code_samples: []
     type: Color3
     tags: []
@@ -50,8 +82,10 @@ properties:
     capabilities:
       - UI
   - name: UIShadow.Offset
-    summary: ''
-    description: ''
+    summary: |
+      Moves the shadow relative to the parent's position.
+    description: |
+      This property moves the shadow relative to the parent's position.
     code_samples: []
     type: UDim2
     tags: []
@@ -67,8 +101,13 @@ properties:
     capabilities:
       - UI
   - name: UIShadow.Spread
-    summary: ''
-    description: ''
+    summary: |
+      Expands or shrinks the shadow relative to the parent's size.
+    description: |
+      This property changes the shadow's size. Properties that are relative to
+      the parent's size, such as the scale factors of
+      `Class.UIShadow.BlurRadius|BlurRadius` and `Class.UIShadow.Offset|Offset`,
+      are not affected by `Spread`.
     code_samples: []
     type: UDim2
     tags: []
@@ -84,8 +123,11 @@ properties:
     capabilities:
       - UI
   - name: UIShadow.Transparency
-    summary: ''
-    description: ''
+    summary: |
+      Sets the shadow's transparency.
+    description: |
+      This property sets the shadow's transparency, with `0` being fully opaque
+      and `1` being fully transparent.
     code_samples: []
     type: float
     tags: []
@@ -101,8 +143,13 @@ properties:
     capabilities:
       - UI
   - name: UIShadow.ZIndex
-    summary: ''
-    description: ''
+    summary: |
+      Determines the shadow's render order relative to sibling `UIShadow`
+      instances.
+    description: |
+      If a UI instance has multiple shadows, they are rendered in order of
+      increasing `ZIndex`. Since all shadows are rendered below the parent
+      instance, `ZIndex` can only be negative.
     code_samples: []
     type: int
     tags: []
