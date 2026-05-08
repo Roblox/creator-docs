@@ -12,8 +12,9 @@ Use the following universal steps and best practices to set up your recommendati
 1. [Register your content](#register-your-content)
 2. [Log users impressions](#log-user-impressions)
 3. [Log quality actions](#log-quality-actions)
-4. [Fetch recommendations](#fetch-recommendations)
-5. [Monitor analytics](#monitor-analytics)
+4. [Log user preferences](#log-user-preferences) (optional)
+5. [Fetch recommendations](#fetch-recommendations)
+6. [Monitor analytics](#monitor-analytics)
 
 <Alert severity = 'warning'>
 This guide covers the process of implementing `Class.RecommendationService` in your experience. This content doesn't cover the process of creating the [UI](../ui/index.md), adding [assets](../assets.md), or [teleporting users](../projects/teleport.md). See additional documentation for those topics.
@@ -86,6 +87,44 @@ Depending on your experience, you may have different definitions on what constit
 
 The model expects a realistic ratio. If you serve 1 impression but log 10 plays from external traffic, you confuse the training data and ruin the accuracy of your metrics.
 
+</Alert>
+
+## Log user preferences
+
+In addition to logging impressions and actions on individual items, log **preference signals** to capture how a user feels about another user, a universe, or a content tag. Use `Class.RecommendationService.LogPreferenceEvent|LogPreferenceEvent` when a user follows, unfollows, mutes, or unmutes a target. The recommendation engine uses these signals to tailor future results across every recommendation surface, not just the item feed.
+
+### When to log
+
+Call `Class.RecommendationService.LogPreferenceEvent|LogPreferenceEvent` whenever a user expresses a relationship-level preference in your interface:
+
+- A **follow** or **unfollow** action on a creator's profile card.
+- A **mute** or **unmute** action on a creator, universe, or content tag.
+
+Pick the `Enum.RecommendationPreferenceType|RecommendationPreferenceType` value that matches the action and specify the target with `Enum.RecommendationPreferenceTargetType|RecommendationPreferenceTargetType`. The format of `targetId` depends on the target type:
+
+- `Enum.RecommendationPreferenceTargetType|User`: the target user's key.
+- `Enum.RecommendationPreferenceTargetType|Universe`: the universe ID as a string.
+- `Enum.RecommendationPreferenceTargetType|CustomTag`: the tag string.
+
+### Correlating preferences with a feed
+
+When the preference originates from a recommendation card served by `Class.RecommendationService.GenerateItemListAsync|GenerateItemListAsync`, pass the card's `tracingId` and `itemId` so the engine can correlate the preference with the recommendation that surfaced the target. Otherwise, pass empty strings for both parameters.
+
+```lua
+local RecommendationService = game:GetService("RecommendationService")
+
+-- User selects "Follow" on another creator shown in a recommendation card.
+RecommendationService:LogPreferenceEvent(
+    Enum.RecommendationPreferenceType.AddFollow,
+    Enum.RecommendationPreferenceTargetType.User,
+    targetUserKey,
+    tracingId,
+    itemId
+)
+```
+
+<Alert severity='warning'>
+`Class.RecommendationService.LogPreferenceEvent|LogPreferenceEvent` can only be called from the **client**, and calls in Studio have no effect. Use a production client to verify logging.
 </Alert>
 
 ## Fetch recommendations
