@@ -4,29 +4,35 @@
 
 name: RecommendationPreferenceType
 type: enum
-summary: ''
+summary: |
+  The type of preference signal logged via
+  `Class.RecommendationService.LogPreferenceEvent|LogPreferenceEvent`.
 description: ''
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: AddFollow
-    summary: ''
+    summary: |
+      The user started following the target.
     value: 0
     tags: []
     deprecation_message: ''
   - name: RemoveFollow
-    summary: ''
+    summary: |
+      The user stopped following the target.
     value: 1
     tags: []
     deprecation_message: ''
   - name: AddMute
-    summary: ''
+    summary: |
+      The user muted the target.
     value: 2
     tags: []
     deprecation_message: ''
   - name: RemoveMute
-    summary: ''
+    summary: |
+      The user unmuted a previously muted target.
     value: 3
     tags: []
     deprecation_message: ''

@@ -277,29 +277,76 @@ methods:
       - Basic
   - name: RecommendationService:LogPreferenceEvent
     summary: ''
-    description: ''
-    code_samples: []
+    description: |
+      This function logs a user preference signal directed at another user, a
+      universe, or a custom content tag. Preference signals include follow,
+      unfollow, mute, and unmute actions, and are used by the recommendation
+      engine to personalize future results for the user.
+
+      The `targetType` parameter determines how `targetId` is interpreted:
+
+      - For `Enum.RecommendationPreferenceTargetType.User|User`, `targetId` is
+        the user key of the target user.
+      - For `Enum.RecommendationPreferenceTargetType.Universe|Universe`,
+        `targetId` is the universe ID as a string.
+      - For `Enum.RecommendationPreferenceTargetType.CustomTag|CustomTag`,
+        `targetId` is the custom tag string.
+
+      When the preference originates from a feed item served by
+      `Class.RecommendationService.GenerateItemListAsync|GenerateItemListAsync`,
+      pass the corresponding `tracingId` and `itemId` so the event can be
+      correlated with the recommendation context. Both are optional because
+      preferences can also originate from profiles, search, or other surfaces
+      outside of a recommendation feed.
+
+      This function can only be called from the **client**.
+
+      **Note:** Only `LogPreferenceEvent` calls in production actually log
+      preferences. Calling this function in Studio doesn't have any effect; you
+      can call it as many times as you want when testing.
+    code_samples:
+      - LogPreferenceEvent-example
     parameters:
       - name: preferenceType
         type: RecommendationPreferenceType
         default:
-        summary: ''
+        summary: |
+          The type of preference being logged, such as
+          `Enum.RecommendationPreferenceType.AddFollow|AddFollow` or
+          `Enum.RecommendationPreferenceType.AddMute|AddMute`.
       - name: targetType
         type: RecommendationPreferenceTargetType
         default:
-        summary: ''
+        summary: |
+          The kind of entity `targetId` refers to. Determines how `targetId` is
+          interpreted.
       - name: targetId
         type: string
         default:
-        summary: ''
+        summary: |
+          The identifier of the preference target. The format depends on
+          `targetType`: a user key for
+          `Enum.RecommendationPreferenceTargetType.User|User`, the universe ID
+          as a string for
+          `Enum.RecommendationPreferenceTargetType.Universe|Universe`, or the
+          tag string for
+          `Enum.RecommendationPreferenceTargetType.CustomTag|CustomTag`.
       - name: tracingId
         type: string
         default:
-        summary: ''
+        summary: |
+          The tracing ID returned from the
+          `Class.RecommendationService.GenerateItemListAsync|GenerateItemListAsync`
+          response, if the preference originated from a recommended item. Pass
+          an empty string when the preference originates from outside a
+          recommendation feed.
       - name: itemId
         type: string
         default:
-        summary: ''
+        summary: |
+          The item ID of the recommended item that triggered the preference,
+          if any. Pass an empty string when the preference originates from
+          outside a recommendation feed.
     returns:
       - type: ()
         summary: ''
