@@ -1811,8 +1811,14 @@ methods:
     capabilities:
       - Animation
   - name: Humanoid:GetRelativeVelocityAtFloor
-    summary: ''
-    description: ''
+    summary: |
+      Returns the humanoid's actual physical velocity relative to the surface it
+      is standing on as a `Datatype.Vector3` in world-space orientation.
+    description: |
+      Returns the humanoid's actual physical velocity relative to the surface it
+      is standing on as a `Datatype.Vector3` in world-space orientation. This
+      accounts for moving platforms by subtracting floor velocity from the
+      humanoid's body velocity.
     code_samples: []
     parameters: []
     returns:

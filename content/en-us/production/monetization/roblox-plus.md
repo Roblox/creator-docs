@@ -271,7 +271,7 @@ Roblox Plus subscribers can create paid [private servers](./private-servers.md) 
 
 On the Plus subscription renewal day, Roblox evaluates paid private server usage over the previous 30 days for that subscriber. This evaluation occurs even if the subscriber cancels Plus instead of renewing. Roblox then determines the **top five paid private servers the subscriber created within your game**, based on the amount of time they spent in each server during that period, with a minimum of 60 cumulative minutes.
 
-If a Plus subscriber spends **at least 60 cumulative minutes over the last 30 days** in a paid private server they created within your game, you can earn up to **100 Robux per user per server** based on the server price.
+If a Plus subscriber (including a subscriber on a Free Plus Trial) spends **at least 60 cumulative minutes over the last 30 days** in a paid private server they created within your game, you can earn up to **100 Robux per user per server** based on the server price.
 
 In the following example, Servers A, B, and C qualify because the Plus subscriber spent at least 60 minutes in each server during the last 30 days. Servers D and E don't qualify because they don't meet the 60-minute threshold. If all five servers (A–E) belong to the same game and represent the top five servers the subscriber spent time in, the creator earns a total of 205 Robux across the qualifying servers.
 

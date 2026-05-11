@@ -1,11 +1,11 @@
 ---
 title: Style Editor
-description: Explore the built-in Style Editor, a comprehensive tool that allows you to create, manage, and apply UI styles for Roblox experiences.
+description: Explore the built-in Style Editor, a comprehensive tool that allows you to create, manage, and apply UI styles for Roblox games.
 ---
 
 import BetaAlert from '../../includes/beta-features/beta-alert.md'
 
-The built-in **Style Editor** is a comprehensive tool that allows you to create, manage, and apply UI styles for Roblox experiences through a combination of [tokens](#style-tokens), [design sheets](#design-sheets), [style rules](#style-rules), and [themes](#style-themes).
+The built-in **Style Editor** is a comprehensive tool that allows you to create, manage, and apply UI styles for Roblox games through a combination of [tokens](#style-tokens), [design sheets](#design-sheets), [style rules](#style-rules), and [themes](#style-themes).
 
 <figure>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_k1ea0OIKaU?si=A9mdnnG95qdaZbB_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
@@ -38,9 +38,11 @@ Although not required for UI styling, tokens are highly recommended for extensib
    1. In the left column of the Style Editor, hover over **Tokens**, click the **&CirclePlus;**, and select **New&nbsp;Token&nbsp;StyleSheet**.
    2. Rename the new sheet to `TokenSheet`.
 
-   <img src="../../assets/ui/ui-styling/SE-TokenSheet-New.png" width="640" alt="New token sheet created in Style Editor." />
+   <img src="../../assets/ui/ui-styling/SE-TokenSheet-New.png" width="240" alt="New token sheet created in the Style Editor." />
 
 2. With the new token sheet selected, create several tokens by clicking **Add&nbsp;a&nbsp;Token…** in the main panel. These tokens will be used throughout this guide for both [rules](#style-rules) and [themes](#style-themes).
+
+   <img src="../../assets/ui/ui-styling/SE-TokenSheet-Add-Token.png" width="640" alt="Token addition field in the Style Editor." />
 
    <table size="small">
 	 <thead>
@@ -111,7 +113,7 @@ A prepopulated design sheet named **StyleSheet** is created via the **Create&nbs
 
 Once you have a design sheet, you can set up a test [on‑screen container](../on-screen-containers.md) to use with the Style Editor, or an [in‑experience container](../in-experience-containers.md) if desired.
 
-1. Hover over `Class.StarterGui` in the **Explorer** and insert a `Class.ScreenGui`.
+1. Hover over `Class.StarterGui` in the [Explorer](../../studio/explorer.md) and insert a `Class.ScreenGui`.
 2. Confirm that a new `Class.StyleLink` instance appears under the `Class.ScreenGui` with its `Class.StyleLink.StyleSheet|StyleSheet` property set to the **StyleSheet** design sheet.
 
    <Grid container spacing={3}>
@@ -123,8 +125,8 @@ Once you have a design sheet, you can set up a test [on‑screen container](../o
    </Grid>
    </Grid>
 
-   <Alert severity="success">
-   If the `Class.StyleLink` is not created, you can quickly create one by selecting the `Class.ScreenGui` in the **Explorer** as well as the **StyleSheet** design sheet in the left column of the Style Editor. Then, click the **Insert&nbsp;StyleLink** button in the upper‑right section of the editor's main panel.
+   <Alert severity="info">
+   If the `Class.StyleLink` is not created, you can quickly create one by selecting the `Class.ScreenGui` in the [Explorer](../../studio/explorer.md) as well as the **StyleSheet** design sheet in the left column of the Style Editor. Then, click the **Insert&nbsp;StyleLink** button in the upper‑right section of the editor's main panel.
 	 </Alert>
 
 ## Style rules
@@ -147,7 +149,7 @@ A style **class** selector targets all instances of a given UI class. The follow
 
 2. Link two previously created [style tokens](#style-tokens) to two `Class.Frame` properties:
 
-   <table size="small" style={{width: '60%;'}}>
+   <table size="small">
 	 <thead>
 	   <tr>
 	   <th>Property</th>
@@ -171,7 +173,7 @@ A style **class** selector targets all instances of a given UI class. The follow
    3. Click the `$` which appears in the value field and select the proper associated token.
 
 	 <figure>
-	 <br /><img src="../../assets/ui/ui-styling/SE-Class-Rule-Configure.png" width="526" alt="Token linking workflow diagrammed in the Style Editor." />
+	 <img src="../../assets/ui/ui-styling/SE-Class-Rule-Configure.png" width="526" alt="Token linking workflow diagrammed in the Style Editor." />
 	 </figure>
 
 	 <img src="../../assets/ui/ui-styling/SE-Class-Rule-Tokens.png" width="400" alt="Class rule configured with tokens in the Style Editor." />
@@ -194,7 +196,7 @@ Instance **tag** selectors target specific UI objects [tagged](../../studio/prop
 
 3. Link three previously created [style tokens](#style-tokens) to three `Class.TextButton` properties:
 
-   <table size="small" style={{width: '60%;'}}>
+   <table size="small">
 	 <thead>
 	   <tr>
 	   <th>Property</th>
@@ -222,18 +224,18 @@ Instance **tag** selectors target specific UI objects [tagged](../../studio/prop
    3. Click the `$` which appears in the value field and select the proper associated token.
 
    <figure>
-	 <br /><img src="../../assets/ui/ui-styling/SE-Tag-Rule-Configure.png" width="526" alt="Token linking workflow diagrammed in the Style Editor." />
+	 <img src="../../assets/ui/ui-styling/SE-Tag-Rule-Configure.png" width="526" alt="Token linking workflow diagrammed in the Style Editor." />
 	 </figure>
 
 	 <img src="../../assets/ui/ui-styling/SE-Tag-Rule-Tokens.png" width="400" alt="Tag rule configured with tokens in the Style Editor." />
 
 4. Insert a new `Class.TextButton` into the `Class.ScreenGui` you previously [created and linked](#design-sheets) and [tag](../../studio/properties.md#instance-tags) it as `ButtonPrimary`. A convenient shortcut is as follows:
 
-   1. Make sure the new `Class.TextButton` is selected in the **Explorer**.
+   1. Make sure the new `Class.TextButton` is selected in the [Explorer](../../studio/explorer.md).
    2. With the **.ButtonPrimary** tag rule selected in the left column of the Style Editor, click **Apply&nbsp;Tag** in the main panel. The styles you defined should automatically apply to the button.
 
    <figure>
-	 <br /><img src="../../assets/ui/ui-styling/SE-Tag-Rule-Apply-Tag.png" width="640" alt="Tag linking workflow diagrammed in the Style Editor." />
+	 <img src="../../assets/ui/ui-styling/SE-Tag-Rule-Apply-Tag.png" width="640" alt="Tag linking workflow diagrammed in the Style Editor." />
 	 </figure>
 
 	 <img src="../../assets/ui/ui-styling/SE-Tag-Rule-Result.png" width="840" alt="Final styled tag rule in the Style Editor." />
@@ -253,7 +255,7 @@ Instance modifier selectors apply phantom `Class.UIComponent|UIComponents` such 
    3. Click the `$` which appears in the value field and select the `$Text32` token.
 
    <figure>
-	 <br /><img src="../../assets/ui/ui-styling/SE-Modifier-Rule-Configure.png" width="526" alt="Token linking workflow diagrammed in the Style Editor." />
+	 <img src="../../assets/ui/ui-styling/SE-Modifier-Rule-Configure.png" width="526" alt="Token linking workflow diagrammed in the Style Editor." />
 	 </figure>
 
 	 <img src="../../assets/ui/ui-styling/SE-Modifier-Rule-Tokens.png" width="400" alt="Class rule configured with tokens in the Style Editor." />
@@ -311,7 +313,7 @@ Style **queries**, similar to [CSS container and media queries](./css-comparison
 
 <BetaAlert betaName="StyleQuery" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
 
-### Create a query
+### Creation
 
 You can add a style query to any existing rule to create responsive UI that adapts to its container. The following setup configures a `Class.TextLabel` to automatically change its appearance only when it expands to a width of 400 pixels or more.
 
@@ -328,7 +330,7 @@ You can add a style query to any existing rule to create responsive UI that adap
 
 2. Select the parent **TextLabel** rule in the main panel and define the following default properties:
 
-   <table size="small" style={{width: '60%;'}}>
+   <table size="small">
    <thead>
      <tr>
      <th>Property</th>
@@ -349,7 +351,7 @@ You can add a style query to any existing rule to create responsive UI that adap
 
 3. Select the **::StyleQuery** rule in the main panel, click **Add&nbsp;a&nbsp;Condition…**, and configure the following:
 
-   <table size="small" style={{width: '60%;'}}>
+   <table size="small">
    <thead>
      <tr>
      <th>Condition</th>
@@ -366,7 +368,7 @@ You can add a style query to any existing rule to create responsive UI that adap
 
 4. Select the **@StyleQuery** rule in the main panel and set the properties that should apply when the query is active:
 
-   <table size="small" style={{width: '60%;'}}>
+   <table size="small">
    <thead>
      <tr>
      <th>Property</th>
@@ -385,9 +387,9 @@ You can add a style query to any existing rule to create responsive UI that adap
    </tbody>
    </table>
 
-### Test responsive logic
+### Testing
 
-To verify the query, you can manually resize a `Class.TextLabel` in the viewport.
+To verify the query's responsive logic, you can manually resize a `Class.TextLabel` in the viewport.
 
 1. Insert a new `Class.TextLabel` into the `Class.ScreenGui`.
 2. Adjust its width to see the style swap in real-time.
@@ -405,7 +407,7 @@ To verify the query, you can manually resize a `Class.TextLabel` in the viewport
    </TabItem>
    </Tabs>
 
-<Alert severity="success">
+<Alert severity="info">
 While manual resizing is a quick way to check responsive logic, you can also use Studio's built‑in emulation tools for more precise testing:
 - Use the [Device Emulator](../../studio/testing-modes.md#device-emulation) to test how your UI responds to specific screen resolutions and `Class.GuiService.ViewportDisplaySize|ViewportDisplaySize` conditions.
 - Use the [Controller Emulator](../../studio/testing-modes.md#controller-simulation) to verify `Class.UserInputService.PreferredInput|PreferredInput` logic, such as switching styles when a gamepad is detected.
@@ -441,7 +443,7 @@ With **ThemeA** selected in the left column of the Style Editor:
 
 1. Link three previously created [style tokens](#style-tokens) to three new theme tokens:
 
-   <table size="small" style={{width: '60%;'}}>
+   <table size="small">
 	 <thead>
 	   <tr>
 	   <th>Theme Token</th>
@@ -475,7 +477,7 @@ With **ThemeA** selected in the left column of the Style Editor:
 
 3. Link the theme's tokens to three new `Class.TextButton` properties:
 
-   <table size="small" style={{width: '60%;'}}>
+   <table size="small">
 	 <thead>
 	   <tr>
 	   <th>Property</th>
@@ -503,7 +505,7 @@ With **ThemeA** selected in the left column of the Style Editor:
    3. Click the `$` which appears in the value field and select the proper theme token.
 
    <figure>
-	 <br /><img src="../../assets/ui/ui-styling/SE-Themes-Theme-Configure.png" width="526" alt="Token linking workflow diagrammed in the Style Editor." />
+	 <img src="../../assets/ui/ui-styling/SE-Themes-Theme-Configure.png" width="526" alt="Token linking workflow diagrammed in the Style Editor." />
 	 <Alert severity="warning">
 	 When linking the theme's tokens, look for **\$\[Token\] in ThemeA** in the hover‑over to know the token is coming from the **theme** and not from the global token sheet (remember that the theme already derives the global tokens).
 	 </Alert>
@@ -522,7 +524,7 @@ Once you have a theme generally established, you can **duplicate** it and change
 
 3. Link two of the theme's tokens to two different style tokens:
 
-   <table size="small" style={{width: '60%;'}}>
+   <table size="small">
 	 <thead>
 	   <tr>
 	   <th>Theme Token</th>

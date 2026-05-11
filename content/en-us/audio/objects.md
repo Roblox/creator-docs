@@ -450,6 +450,30 @@ By default, enabling the microphone also enables spatial voice chat in your expe
 
 After setting up STT in your experience, you can trigger it with scripts. For code sample references, see the [Add speech-to-text](../tutorials/use-case-tutorials/audio/speech-to-text.md) tutorial.
 
+<h5 style={{marginTop: '36px'}}>Supported languages</h5>
+
+No configuration is required to enable supported languages. Roblox automatically detects the spoken language from the audio and transcribes it.
+
+STT supports the following languages:
+
+- Arabic
+- Chinese (Simplified)
+- Chinese (Traditional)
+- English
+- French
+- German
+- Indonesian
+- Italian
+- Japanese
+- Korean
+- Polish
+- Portuguese
+- Spanish
+- Russian
+- Turkish
+- Thai
+- Vietnamese
+
 <h5 style={{marginTop: '36px'}}>Filter for similar words</h5>
 
 When you implement STT in your experience, you might want to improve matching accuracy by filtering for words that sound similar to the words you actually want the player to say. To do this, you can compare the words recognized by `AudioSpeechToText` with known word lists:

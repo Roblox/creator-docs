@@ -420,6 +420,11 @@ items:
     value: 533
     tags: []
     deprecation_message: ''
+  - name: PlacelaunchVipOwnerNotPresent
+    summary: ''
+    value: 541
+    tags: []
+    deprecation_message: ''
   - name: PlacelaunchAgeVerificationRequired
     summary: ''
     value: 542

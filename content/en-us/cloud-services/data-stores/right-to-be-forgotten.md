@@ -7,7 +7,7 @@ description: Configure automated deletion of data store keys and stores when you
 
 ## Automated RTBF
 
-To use automated RTBF processing, you must define deletion templates. These templates tell Roblox which data stores or keys belong to a specific user. You can have up to 10 templates to identify your user data.
+To use automated RTBF processing, you must define deletion templates. These templates tell Roblox which data stores or keys belong to a specific user. You can have up to 100 templates to identify your user data.
 
 ### Deletion templates
 

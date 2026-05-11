@@ -199,11 +199,29 @@ In a server-authoritative experience, the primary way for a client to affect the
 To reiterate, do not use traditional events like `Class.UserInputService.InputBegan` in the core simulation of a server-authoritative experience.
 </Alert>
 
-Note that `Class.InputContext|InputContexts` must be a descendent of a `Class.Player` so that the engine knows who has ownership over the `Class.InputContext`. Placement in `Class.StarterGui` is fine, since it replicates to the player's `Class.PlayerGui` at join time and effectively descends from that `Class.Player`.
+Note that `Class.InputContext|InputContexts` must be a descendent of a `Class.Player` so that the engine knows who has ownership over the `Class.InputContext`. One approach is to add your `Class.InputContext|InputContexts` to a folder under `Class.ReplicatedStorage` and use a `Class.Script` under `Class.ServerScriptService` to clone the `Class.InputContext|InputContexts` per player:
 
-<img src="../../assets/studio/explorer/StarterGui-InputContext-InputAction-InputBinding-All.png" width="320" />
+<img src="../../assets/studio/explorer/IAS-InputSetup.png" width="320" />
 
-Using this pattern, you can read `Class.InputAction|InputActions` for all players in `Class.RunService:BindToSimulation()` on both client and server to receive the same data for a given frame and record the previous frame's input in an [attribute](../../studio/properties.md#instance-attributes), for example to trigger a character sprint when a `CharacterSprint` input action is triggered.
+```lua title="InputSetup"
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local InputsFolder = ReplicatedStorage:WaitForChild("Inputs")
+
+local function onPlayerAdded(player)
+	local clone = InputsFolder:Clone()
+	clone.Parent = player
+end
+
+Players.PlayerAdded:Connect(onPlayerAdded)
+
+for _, player in Players:GetPlayers() do
+	onPlayerAdded(player)
+end
+```
+
+Using this pattern, you can read `Class.InputAction|InputActions` for all players in `Class.RunService:BindToSimulation()` on both client and server to receive the same data for a given frame and record the previous frame's input in an [attribute](../../studio/properties.md#instance-attributes), for example to trigger a character run when a `RunAction` input action is triggered.
 
 Note that if you need to write custom data into the [Input Action System](../../input/input-action-system.md), you should use a function connected to `Class.RunService.RenderStepped` or `Class.RunService:BindToRenderStep()`, not `Class.RunService:BindToSimulation()`. Firing an `Class.InputAction` in `Class.RunService:BindToSimulation()|BindToSimulation()` can cause clients to produce incorrect results during a resimulation.
 
