@@ -375,6 +375,11 @@ A failed write call, such as `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`
     <td>Occasional error on Roblox servers. Try again, ideally with exponential backoff.</td>
   </tr>
   <tr>
+    <td>`InvalidExclusiveStartKey`</td>
+    <td>The provided exclusive start key is not valid.</td>
+    <td>The exclusive start key (cursor) provided to a list operation such as `Class.DataStore:ListKeysAsync()|ListKeysAsync()` is not valid.</td>
+  </tr>
+  <tr>
     <td>`InvalidPlace`</td>
     <td>The provided place is invalid.</td>
     <td>No matching Universe ID for the place. Try again later.</td>

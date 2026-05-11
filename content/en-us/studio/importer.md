@@ -55,16 +55,16 @@ To import an asset:
 3. Configure your import settings and verify any [warning or error messages](#warnings-and-errors).
 4. Click **Import**.
 5. After importing, you can **right-click** the imported asset in the importer and perform the following:
-   1. **Copy Asset ID** - Copies the uploaded Asset ID to your clipboard. For models, this copies the Asset ID of the `Class.Model`.
+   1. **Copy asset ID** - Copies the uploaded asset ID to your clipboard. For models, this copies the asset ID of the `Class.Model`.
    2. **Find in Workspace** (3D models only) - Automatically positions the camera to the location of the imported object in workspace.
 
 <Alert severity ='info'>
-To directly import assets using HTTP requests, see the [Open Cloud usage guide for assets](../../cloud/guides/usage-assets.md).
+To directly import assets using HTTP requests, see the [Open Cloud usage guide for assets](../cloud/guides/usage-assets.md).
 </Alert>
 
 ## Supported file types
 
-Before importing a 3D object, ensure that the `.fbx`, `.gltf` or `.obj` meets Studio's [mesh requirements](../../art/characters/specifications.md) to reduce errors or unexpected behavior.
+Before importing a 3D object, ensure that the `.fbx`, `.gltf` or `.obj` meets Studio's [mesh requirements](../art/characters/specifications.md) to reduce errors or unexpected behavior.
 
 <table>
   <thead>
@@ -76,19 +76,19 @@ Before importing a 3D object, ensure that the `.fbx`, `.gltf` or `.obj` meets St
   <tbody>
   <tr>
     <td>**Image**</td>
-    <td>You can import images in `.png`, `.jpg`, `.gif`, `.tga`, or `.bmp` format for use as [textures/decals](../../parts/textures-decals.md) on parts, [image&nbsp;labels](../../ui/labels.md), [mesh&nbsp;textures](../../parts/meshes.md#texture), textures for [custom&nbsp;materials](../../parts/materials.md#custom-materials), textures for [special&nbsp;effects](../../effects/index.md), and more.</td>
+    <td>You can import images in `.png`, `.jpg`, `.gif`, `.tga`, or `.bmp` format for use as [textures/decals](../parts/textures-decals.md) on parts, [image&nbsp;labels](../ui/labels.md), [mesh&nbsp;textures](../parts/meshes.md#texture), textures for [custom&nbsp;materials](../parts/materials.md#custom-materials), textures for [special&nbsp;effects](../effects/index.md), and more.</td>
   </tr>
   <tr>
     <td>**Mesh**</td>
-    <td>You can import meshes in the `.fbx`, `.obj`, or `.gltf` format. <br /><br />The `.fbx` and `.gltf` formats support multiple mesh objects and hierachies, basic and [PBR textures](../../art/modeling/surface-appearance.md), cage mesh objects, [rigs](../../art/modeling/rigging.md), [avatar components](../../avatar/index.md), animation data, and [vertex colors](../blender.md#vertex-painting). </td>
+    <td>You can import meshes in the `.fbx`, `.obj`, or `.gltf` format. <br /><br />The `.fbx` and `.gltf` formats support multiple mesh objects and hierachies, basic and [PBR textures](../art/modeling/surface-appearance.md), cage mesh objects, [rigs](../art/modeling/rigging.md), [avatar components](../avatar/index.md), animation data, and [vertex colors](../art/blender.md#vertex-painting). </td>
   </tr>
   <tr>
     <td>**Audio**</td>
-    <td>You can import audio assets in either `.ogg`, `.mp3`, `.flac`, or `.wav` format. See [Audio Assets](../../audio/assets.md#import-audio) for details.</td>
+    <td>You can import audio assets in either `.ogg`, `.mp3`, `.flac`, or `.wav` format. See [Audio Assets](../audio/assets.md#import-audio) for details.</td>
   </tr>
 	<tr>
     <td>**Video**</td>
-    <td>You can import video assets in either `.mp4` or `.mov` format if all of the [requirements](../../ui/video-frames.md) are met.</td>
+    <td>You can import video assets in either `.mp4` or `.mov` format if all of the [requirements](../ui/video-frames.md) are met.</td>
   </tr>
   </tbody>
 </table>
@@ -210,16 +210,28 @@ The Importer provides the following settings for all meshes:
     <td>If enabled, the Importer imports the model as a single asset even if the model contains multiple children. By default, this is **enabled**. <br /><br />If disabled, the Importer imports the model and all descendants, such as the multiple meshes, as individual assets.</td>
   </tr>
   <tr>
-    <td>Add Model To Inventory</td>
-    <td>If enabled, the Importer adds the model to your **Toolbox** and **Asset Manager** inventory as a new asset. By default, this is **enabled**. <br /><br />If disabled, the Importer does not add the asset to your inventory.</td>
+    <td>Upload to Roblox</td>
+    <td>If enabled, the Importer adds the model to your **Toolbox** and **Asset Manager** inventory as a new asset. By default, this is **enabled**. <br /><br />If disabled, the asset is kept local to your workspace and not assigned an asset ID. This is ideal for testing and iterating on a model before integrating into your project.</td>
   </tr>
   <tr>
-    <td>Insert In Workspace</td>
-    <td>If enabled, the Importer inserts the model into the `Class.Workspace` as well as your **Toolbox** and **Asset Manager** inventory. If importing from a saved or published experience, this setting also grants permission to the experience to use the restricted asset. By default, this is **enabled**. <br /><br />If disabled, this setting only adds the model to your inventory and does **not** grant the experience permission to use the asset.</td>
+    <td>Import as Package</td>
+    <td>Adds your asset to the workspace as a [package](../projects/assets/packages.md), an auto-updating, scalable, and sharable format recommended for assets that are reused or commonly redistributed. By default, this is **disabled**.</td>
+  </tr>
+  <tr>
+    <td>Creator</td>
+    <td>Sets the creator, or creator group, for the asset.</td>
+  </tr>
+  <tr>
+    <td>Add to Workspace</td>
+    <td>If enabled, the Importer inserts the model into the `Class.Workspace`. If importing from a saved or published experience, this setting also grants permission to the experience to use the restricted asset. By default, this is **enabled**. <br /><br />If disabled, this setting only adds the model to your inventory and does **not** grant the experience permission to use the asset.</td>
   </tr>
   <tr>
     <td>Insert Using Scene Position</td>
     <td>If enabled, the Importer uses the current scene position when inserting the model into the workspace. By default, this is **disabled**.</td>
+  </tr>
+  <tr>
+    <td>Keep Zero Influence Bones</td>
+    <td>If enabled, the importer keeps bones that that do not influence the mesh. By default, this is **disabled**.<br /><br />If disabled, the importer removes zero influence bones.</td>
   </tr>
   <tr>
     <td>Set Pivot to Scene Origin</td>
@@ -254,11 +266,11 @@ The Importer provides the following settings for meshes with rigging data, typic
   </tr>
   <tr>
     <td>Validate UGC Body</td>
-    <td>After importing, Studio opens the assets in the [Avatar Setup](../../avatar-setup/index.md) tool, allowing you to quickly begin testing and uploading avatar assets to the Marketplace.</td>
+    <td>After importing, Studio opens the assets in the [Avatar Setup](../avatar-setup/index.md) tool, allowing you to quickly begin testing and uploading avatar assets to the Marketplace.</td>
   </tr>
   <tr>
     <td>Rig Scale</td>
-    <td>If Rig Type is set to R15, the importer provides additional options to specify [body type scaling](../../art/characters/specifications.md#body-scale). The options are:<br />- **Default**<br />- **Rthro**<br />- **Rthro Narrow**</td>
+    <td>If Rig Type is set to R15, the importer provides additional options to specify [body type scaling](../art/characters/specifications.md#body-scale). The options are:<br />- **Default**<br />- **Rthro**<br />- **Rthro Narrow**</td>
   </tr>
 </tbody>
 </table>

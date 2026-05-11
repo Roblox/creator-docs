@@ -9,14 +9,14 @@ summary: |
   UI modifier which applies deformation to corners of its parent
   `Class.GuiObject`.
 description: |
-  `Class.UICorner` is a modifier which applies deformation to corners of its
-  parent `Class.GuiObject`. Input, but not descendants, will be clipped to the
-  round corner area. See [here](../../../ui/appearance-modifiers.md#corners) for
+  `UICorner` is a modifier which applies deformation to corners of its parent
+  `Class.GuiObject`. Input, but not descendants, will be clipped to the round
+  corner area. See
+  [UI appearance modifiers](../../../ui/appearance-modifiers.md#corners) for
   examples.
 
-  In order to keep the circular shape of round corners with the
-  `Class.UICorner.CornerRadius|CornerRadius` value (`Datatype.UDim`), the radius
-  is internally calculated as follows:
+  In order to keep the circular shape of round corners, each corner radius
+  (`Datatype.UDim`) is internally calculated as follows:
 
   - The radius of the **X** axis is always the same as the radius of **Y** axis.
   - `Datatype.UDim.Scale|Scale` rounding will always apply to the **minimum**
@@ -26,11 +26,27 @@ description: |
     calculated result greater than half of the rectangle's minimum width or
     height.
 
-  Alternatively, rounded corners can be accomplished using **slices** which are
-  suitable for decorative borders that are not simply rounded. See
-  [9‑Slice Design](../../../ui/9-slice.md) for details.
+  Alternatively to `UICorner`, rounded corners can be accomplished using
+  **slices** which are suitable for decorative borders that are not simply
+  rounded. See [9‑Slice Design](../../../ui/9-slice.md) for details.
 
-  Note that `Class.UICorner` can not be applied to a `Class.ScrollingFrame`.
+  Note that `UICorner` can not be applied to a `Class.ScrollingFrame`.
+
+  #### Individual Corners
+
+  Each corner has its own radius property
+  (`Class.UICorner.TopLeftRadius|TopLeftRadius`,
+  `Class.UICorner.TopRightRadius|TopRightRadius`,
+  `Class.UICorner.BottomRightRadius|BottomRightRadius`,
+  `Class.UICorner.BottomLeftRadius|BottomLeftRadius`). The
+  `Class.UICorner.CornerRadius|CornerRadius` property is a convenience shorthand
+  that sets all four corners at once and reads from
+  `Class.UICorner.TopLeftRadius|TopLeftRadius`.
+
+  When using [styling](../../../ui/styling/index.md) with `UICorner`, avoid
+  configuring both `Class.UICorner.CornerRadius|CornerRadius` and the individual
+  corner radii in style rules at the same time, as this may produce unexpected
+  results.
 code_samples: []
 inherits:
   - UIComponent
@@ -38,21 +54,16 @@ descendants: []
 tags: []
 deprecation_message: ''
 properties:
-  - name: UICorner.CornerRadius
+  - name: UICorner.BottomLeftRadius
     summary: |
-      Determines the radius of the component.
+      Determines the radius of the bottom-left corner.
     description: |
-      A `Datatype.UDim` property that determines the radius of the
-      `Class.UICorner` component, internally calculated as follows:
+      This property is currently in beta. To use it, enable **New UI
+      Capabilities** in Studio's beta features window.
 
-      - The radius of the **X** axis is always the same as the radius of **Y**
-        axis.
-      - `Datatype.UDim.Scale|Scale` rounding will always apply to the
-        **minimum** width or height.
-      - Rounded rectangles will always be in a "pill" shape if
-        `Class.UICorner.CornerRadius|CornerRadius` is set to a value that leads
-        to a calculated result greater than half of the rectangle's minimum
-        width or height.
+      A `Datatype.UDim` property that determines the radius of the bottom-left
+      corner independently. Setting `Class.UICorner.CornerRadius|CornerRadius`
+      overwrites all four individual corner radii to the same value.
     code_samples: []
     type: UDim
     tags: []
@@ -61,7 +72,107 @@ properties:
       read: None
       write: None
     thread_safety: ReadSafe
+    category: Individual Corners
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+  - name: UICorner.BottomRightRadius
+    summary: |
+      Determines the radius of the bottom-right corner.
+    description: |
+      This property is currently in beta. To use it, enable **New UI
+      Capabilities** in Studio's beta features window.
+
+      A `Datatype.UDim` property that determines the radius of the bottom-right
+      corner independently. Setting `Class.UICorner.CornerRadius|CornerRadius`
+      overwrites all four individual corner radii to the same value.
+    code_samples: []
+    type: UDim
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Individual Corners
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+  - name: UICorner.CornerRadius
+    summary: |
+      Sets all four corner radii at once and reads from
+      `Class.UICorner.TopLeftRadius|TopLeftRadius`.
+    description: |
+      A convenience `Datatype.UDim` property that acts as a shorthand for the
+      four individual corner radius properties. Writing to this property sets
+      `Class.UICorner.TopLeftRadius|TopLeftRadius`,
+      `Class.UICorner.TopRightRadius|TopRightRadius`,
+      `Class.UICorner.BottomRightRadius|BottomRightRadius`, and
+      `Class.UICorner.BottomLeftRadius|BottomLeftRadius` to the same value.
+      Reading this property returns the value of
+      `Class.UICorner.TopLeftRadius|TopLeftRadius`.
+    code_samples: []
+    type: UDim
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
     category: Appearance
+    serialization:
+      can_load: true
+      can_save: false
+    capabilities:
+      - UI
+  - name: UICorner.TopLeftRadius
+    summary: |
+      Determines the radius of the top-left corner.
+    description: |
+      This property is currently in beta. To use it, enable **New UI
+      Capabilities** in Studio's beta features window.
+
+      A `Datatype.UDim` property that determines the radius of the top-left
+      corner independently. Setting `Class.UICorner.CornerRadius|CornerRadius`
+      overwrites all four individual corner radii to the same value.
+    code_samples: []
+    type: UDim
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Individual Corners
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+  - name: UICorner.TopRightRadius
+    summary: |
+      Determines the radius of the top-right corner.
+    description: |
+      This property is currently in beta. To use it, enable **New UI
+      Capabilities** in Studio's beta features window.
+
+      A `Datatype.UDim` property that determines the radius of the top-right
+      corner independently. Setting `Class.UICorner.CornerRadius|CornerRadius`
+      overwrites all four individual corner radii to the same value.
+    code_samples: []
+    type: UDim
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Individual Corners
     serialization:
       can_load: true
       can_save: true

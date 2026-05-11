@@ -70,3 +70,8 @@ items:
     value: 8
     tags: []
     deprecation_message: ''
+  - name: ExperienceShop
+    summary: ''
+    value: 9
+    tags: []
+    deprecation_message: ''

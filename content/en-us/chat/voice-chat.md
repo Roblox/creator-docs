@@ -13,16 +13,16 @@ Voice Chat is currently available to all 13+ phone number verified users in a sp
 
 ## Enable Voice Chat
 
-Before you can enable Voice Chat in an experience, you must first [publish](../production/publishing/publish-experiences-and-places.md) it, then:
+Voice Chat is enabled by default for verified 13+ users on all new experiences with a maximum of 100 players. To activate voice for existing experiences or disable it for new ones:
 
 1. Open your experience in Studio.
 1. Open **File**&nbsp;⟩ **Experience Settings**.
 1. Navigate to the **Communication** tab on the left side of the window.
-1. Toggle **Enable Microphone** so the selector turns from gray to green.
+1. Toggle **Enable Voice Chat** to your desired setting.
 1. <Chip label="OPTIONAL" size="small" variant="outlined" /> For greater communication among players within your experience, toggle on **Enable&nbsp;Camera** to allow eligible players to animate their avatar with their movement.
 1. [Publish](../production/publishing/publish-experiences-and-places.md) the place to save the changes.
 
-Voice Chat will now be available to verified 13+ users who opt‑in to the feature, in every place within the experience that's set to a maximum of 100 players.
+By enabling this setting, eligible 13+ users can opt-in to Voice Chat within your experience. Enabling Voice Chat is required to use the speech-to-text API.
 
 ### Set maximum players
 

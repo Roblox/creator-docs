@@ -83,6 +83,8 @@ navigation:
         path: /parts/meshes
       - title: Models
         path: /parts/models
+      - title: Procedural models
+        path: /parts/procedural-models
       - title: Materials
         path: /parts/materials
       - title: Terrain
@@ -489,6 +491,8 @@ navigation:
             path: /chat/preset-system-guidelines
           - title: Chat window
             path: /chat/chat-window
+          - title: Cross-server chat
+            path: /chat/cross-server-chat
           - title: Bubble chat
             path: /chat/bubble-chat
           - title: Examples
@@ -546,6 +550,8 @@ navigation:
             path: /performance-optimization/microprofiler/network
           - title: Walkthrough
             path: /performance-optimization/microprofiler/use-microprofiler
+      - title: Scene Analysis
+        path: /performance-optimization/scene-analysis
       - title: Improve performance
         path: /performance-optimization/improve
       - title: Monitor performance

@@ -4,24 +4,34 @@
 
 name: PlayerCharacterDestroyBehavior
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls destruction behavior when a player character is removed.
+description: |
+  Controls whether the engine automatically calls `Destroy()` on a player's old
+  character when it is replaced and on the `Player` object when the player
+  leaves. This enum is used by `Class.Workspace.PlayerCharacterDestroyBehavior`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Uses the engine-default behavior.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Disabled
-    summary: ''
+    summary: |
+      Automatic `Destroy()` calls on character replacement and player removal
+      are disabled.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Enabled
-    summary: ''
+    summary: |
+      The engine automatically calls `Destroy()` on old characters when they are
+      replaced (for example, on respawn) and on `Player` objects when players
+      leave.
     value: 2
     tags: []
     deprecation_message: ''

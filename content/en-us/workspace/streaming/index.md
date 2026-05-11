@@ -8,7 +8,7 @@ In-experience **instance streaming** allows the Roblox engine to dynamically loa
 - <Chip label="Faster Join Times" size="small" variant="outlined" color="success" /> — Players can start playing in one part of the world while more of the world loads in the background.
 - <Chip label="Memory Efficiency" size="small" variant="outlined" color="success" /> — Experiences can be played on devices with less memory since content is dynamically streamed in and out. More immersive and detailed worlds can be played on a wider range of devices.
 - <Chip label="Improved Performance" size="small" variant="outlined" color="success" /> — Better frame rates and performance, as the server can spend less time and bandwidth synchronizing changes between the world and players in it. Clients spend less time updating instances that aren't currently relevant to the player.
-- <Chip label="Level of Detail" size="small" variant="outlined" color="success" /> — Distant models (if configured to use [model level‑of‑detail](./techniques.md#set-model-level-of-detail)) and terrain remain visible even when they're not streamed to clients, keeping the experience optimized without entirely sacrificing background visuals.
+- <Chip label="Level of Detail" size="small" variant="outlined" color="success" /> — Distant models (if configured to use [model level of detail](./techniques.md#set-model-level-of-detail)) and terrain remain visible even when they're not streamed to clients, keeping the experience optimized without entirely sacrificing background visuals.
 
 Instance streaming is controlled through the `Class.Workspace.StreamingEnabled` property, enabled by default for new places created in Studio. This property cannot be set in a script.
 
@@ -42,7 +42,7 @@ Instances which are **created** or **cloned** by client-side scripts are exempte
 </Alert>
 
 <Alert severity="warning">
-When an instance streams out, it is parented to `nil` so that any existing Luau state will reconnect if the instance streams back in. As a result, removal signals such as `Class.Instance.ChildRemoved|ChildRemoved` or `Class.Instance.DescendantRemoving|DescendantRemoving` fire on its **parent** or **ancestor**, but the instance itself is not destroyed in the same sense as an `Class.Instance:Destroy()` call.
+When an instance streams out, it is parented to `nil` so that any existing Luau state will reconnect if the instance streams back in. As a result, removal signals such as `Class.Instance.ChildRemoved|ChildRemoved` or `Class.Instance.DescendantRemoving|DescendantRemoving` fire on its **parent** or **ancestor**, but the instance itself is not destroyed in the same sense as an `Class.Instance:Destroy()` call. Local-only changes to instance properties (changes that exist on a client and have not been replicated to the server) can be lost if the instances streams out and later streams back in.
 </Alert>
 
 ### Assemblies

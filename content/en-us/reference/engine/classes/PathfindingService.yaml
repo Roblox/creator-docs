@@ -8,14 +8,14 @@ memory_category: Instances
 summary: |
   Used to find logical paths between two points.
 description: |
-  **PathfindingService** is used to find logical paths between two points,
+  `PathfindingService` is used to find logical paths between two points,
   ensuring that characters can move between the points without running into
   walls or other obstacles. By default, the shortest path is calculated, but you
   can implement pathfinding modifiers to compute smarter paths across various
   materials, around defined regions, or through obstacles.
 
-  See [Character Pathfinding](../../../characters/pathfinding.md) for usage
-  details.
+  See [Pathfinding](../../../characters/pathfinding.md) for details on
+  implementing character pathfinding.
 code_samples: []
 inherits:
   - Instance
@@ -152,62 +152,59 @@ methods:
           </thead>
           <tbody>
               <tr>
-                  <td><b>AgentRadius</b></td>
+                  <td><code>AgentRadius</code></td>
                   <td>integer</td>
-                  <td>2</td>
+                  <td><code>2</code></td>
                   <td>Determines the minimum amount of horizontal space required
                   for empty space to be considered traversable.</td>
               </tr>
               <tr>
-                  <td><b>AgentHeight</b></td>
+                  <td><code>AgentHeight</code></td>
                   <td>integer</td>
-                  <td>5</td>
+                  <td><code>5</code></td>
                   <td>Determines the minimum amount of vertical space required
                   for empty space to be considered traversable.</td>
               </tr>
               <tr>
-                  <td><b>AgentCanJump</b></td>
+                  <td><code>AgentCanJump</code></td>
                   <td>boolean</td>
-                  <td>true</td>
+                  <td><code>true</code></td>
                   <td>Determines whether jumping during pathfinding is
                   allowed.</td>
               </tr>
               <tr>
-                  <td><b>AgentCanClimb</b></td>
+                  <td><code>AgentCanClimb</code></td>
                   <td>boolean</td>
-                  <td>false</td>
+                  <td><code>false</code></td>
                   <td>Determines whether climbing <code>Class.TrussPart|TrussParts</code>
                   during pathfinding is allowed.</td>
               </tr>
               <tr>
-                  <td><b>WaypointSpacing</b></td>
+                  <td><code>WaypointSpacing</code></td>
                   <td>number</td>
                   <td>4</td>
                   <td>Determines the spacing between intermediate waypoints in
                   path.</td>
               </tr>
               <tr>
-                  <td><b>Costs</b></td>
+                  <td><code>Costs</code></td>
                   <td>table</td>
-                  <td>{}</td>
+                  <td><code>{}</code></td>
                   <td>Table of materials or defined
                   <code>Class.PathfindingModifier|PathfindingModifiers</code> and their
                   "cost" for traversal. Useful for making the agent prefer
-                  certain materials/regions over others. See <a
-                  href="../../../characters/pathfinding.md#pathfinding-modifiers">here</a> for details.</td>
+                  certain materials/regions over others.</td>
               </tr>
           </tbody>
       </table>
-    code_samples:
-      - pathfinding---creating-path-with-params
+    code_samples: []
     parameters:
       - name: agentParameters
         type: Dictionary
         default: nil
         summary: |
-          Luau table which lets you fine-tune the path for the size of the agent
-          (the humanoid that will move along the path). See above for valid
-          keys, types, and descriptions.
+          Lua table which lets you fine-tune the path based on various agent
+          parameters.
     returns:
       - type: Path
         summary: |

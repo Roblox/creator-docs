@@ -4,44 +4,67 @@
 
 name: EnviromentalPhysicsThrottle
 type: enum
-summary: ''
-description: ''
+summary: |
+  Used to control the throttle rate of Roblox's physics engine.
+description: |
+  The `EnviromentalPhysicsThrottle` enum is used with
+  `Class.PhysicsSettings.PhysicsEnvironmentalThrottle`, controlling how
+  aggressively the engine skips physics simulation steps to reduce CPU load.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: DefaultAuto
-    summary: ''
+    summary: |
+      Automatically adjusts throttle level based on performance.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Disabled
-    summary: ''
+    summary: |
+      No throttling; every physics step runs.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Always
-    summary: ''
+    summary: |
+      Maximum throttling; physics is effectively frozen.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Skip2
-    summary: ''
+    summary: |
+      Runs 1 out of every 2 steps (50% reduction). If
+      `Class.Workspace.PhysicsSteppingMethod` is set to
+      `Enum.PhysicsSteppingMethod.Adaptive|Adaptive`, skipping is based on
+      groups of 4 steps instead of individual steps.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Skip4
-    summary: ''
+    summary: |
+      Runs 1 out of every 4 steps (75% reduction). If
+      `Class.Workspace.PhysicsSteppingMethod` is set to
+      `Enum.PhysicsSteppingMethod.Adaptive|Adaptive`, skipping is based on
+      groups of 4 steps instead of individual steps.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Skip8
-    summary: ''
+    summary: |
+      Runs 1 out of every 8 steps (87.5% reduction). If
+      `Class.Workspace.PhysicsSteppingMethod` is set to
+      `Enum.PhysicsSteppingMethod.Adaptive|Adaptive`, skipping is based on
+      groups of 4 steps instead of individual steps.
     value: 5
     tags: []
     deprecation_message: ''
   - name: Skip16
-    summary: ''
+    summary: |
+      Runs 1 out of every 16 steps (93.75% reduction). If
+      `Class.Workspace.PhysicsSteppingMethod` is set to
+      `Enum.PhysicsSteppingMethod.Adaptive|Adaptive`, skipping is based on
+      groups of 4 steps instead of individual steps.
     value: 6
     tags: []
     deprecation_message: ''

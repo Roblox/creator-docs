@@ -17,8 +17,8 @@ If your animation data is saved to a `.fbx` file and your animation meets the em
 <br />
 To import your animation in Studio:
 
-1. If you don't already have a rigged R15 character in your workspace, add one by selecting **Avatar** > **Character**.
-2. Select **Avatar** > **Animation** to open the **Animation Editor**.
+1. If you don't already have a rigged R15 character in your workspace, add one by selecting **Avatar** ⟩ **Character**.
+2. Select **Avatar** ⟩ **Clip Editor** to open the **Animation Editor**.
 3. With editor open, select the rigged character in the 3D viewport.
 4. In the **Animation Editor**, select **&ctdot;** > **Import** > **From FBX Animation** and select your `.fbx` file.
 

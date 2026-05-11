@@ -21,7 +21,7 @@ Instead, set a player [attribute](../../studio/properties.md#instance-attributes
 
 		Players.PlayerAdded:Connect(function(player)
 			local success, isInGroup = pcall(function()
-				return player:IsInGroup(groupID)
+				return player:IsInGroupAsync(groupID)
 			end)
 
 			if success and isInGroup then

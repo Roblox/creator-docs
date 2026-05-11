@@ -66,6 +66,6 @@ To resolve errors and warnings, consider the following debugging steps:
 - **Check recent updates** — Check if there's been a recent update and consider rolling it back if the metrics impact is severe.
 - **Use built-in testing tools to troubleshoot**
   - [Developer Console](../../studio/developer-console.md) for viewing error and log messages and detailed information on memory and networking.
-  - [Script Profiler](../../studio/optimization/scriptprofiler.md) for identifying scripts that take up the most resources.
+  - [Script Profiler](../../studio/optimization/scriptprofiler.md) and [Scene Analysis](../../performance-optimization/scene-analysis.md) for identifying scripts that take up the most resources.
   - [MicroProfiler](../../performance-optimization/microprofiler/index.md) for viewing unoptimized portions of your experience visually.
 - Gather user feedback from your community.

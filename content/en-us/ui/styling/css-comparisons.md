@@ -11,13 +11,12 @@ To test each of the following Luau script examples:
 
 1. In the [Explorer](../../studio/explorer.md), create the following:
 
-   <img src="../../assets/studio/explorer/CSS-Test-Setup.png" width="320" style={{float: "right;", marginLeft: "20px;"}} />
+   <img src="../../assets/studio/explorer/CSS-Test-Setup.png" width="320" />
 
-	 1. `Class.StyleSheet` instance named `CoreSheet` inside `Class.ReplicatedStorage`.
-	 2. Empty `Class.StyleRule` instance as a child of `CoreSheet`.
-	 3. `Class.ScreenGui` container in `Class.StarterGui`.
-	 4. `Class.LocalScript` instance inside the `Class.ScreenGui`.
-	 5. `Class.StyleLink` object inside the `Class.ScreenGui` whose `Class.StyleLink.StyleSheet|StyleSheet` property is linked to `CoreSheet`.
+	 1. `Class.StyleSheet` instance inside `Class.ReplicatedStorage`.
+	 2. `Class.ScreenGui` container in `Class.StarterGui`.
+	 3. `Class.LocalScript` instance inside the `Class.ScreenGui`.
+	 4. `Class.StyleLink` object inside the `Class.ScreenGui`.
 
 2. In the `Class.LocalScript`, paste the following supporting code:
 
@@ -25,12 +24,13 @@ To test each of the following Luau script examples:
 		local CollectionService = game:GetService("CollectionService")
 		local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-		local coreSheet = ReplicatedStorage:FindFirstChild("CoreSheet")
-		local rule = coreSheet:FindFirstChildWhichIsA("StyleRule")
+		local coreSheet = ReplicatedStorage:FindFirstChildWhichIsA("StyleSheet")
 		local screenGui = script.Parent
+		local styleLink = screenGui:FindFirstChildWhichIsA("StyleLink")
+		styleLink.StyleSheet = coreSheet
 		```
 
-3. For each example below, paste the **Luau** code lines following the supporting lines 1–6.
+3. For each example below, paste the **Luau** code lines following the supporting lines 1–7.
 
 ## Selectors
 
@@ -66,15 +66,15 @@ Equivalent to CSS element selectors are Roblox **class selectors** which select 
 <Card>
 <CardContent style={{paddingTop: '0px', paddingBottom: '0px'}}>
 	```lua title="Luau"
-	-- Class selector
-	rule.Selector = "TextButton"
+	local rule = Instance.new("StyleRule")
+	rule.Parent = coreSheet
 
-	-- Set rule properties
+	rule.Selector = "TextButton" -- Roblox class selector
 	rule:SetProperties({
-		["BackgroundColor3"] = Color3.fromHex("335FFF"),
-		["TextColor3"] = Color3.fromHex("E1E1E1"),
-		["Size"] = UDim2.new(0.15, 0, 0, 40),
-		["BorderSizePixel"] = 0
+		BackgroundColor3 = Color3.fromHex("335FFF"),
+		TextColor3 = Color3.fromHex("E1E1E1"),
+		Size = UDim2.new(0.15, 0, 0, 40),
+		BorderSizePixel = 0
 	})
 
 	local button = Instance.new("TextButton")
@@ -111,14 +111,14 @@ The Roblox equivalent to CSS `class` selectors are **tag selectors** which utili
 <Card>
 <CardContent style={{paddingTop: '0px', paddingBottom: '0px'}}>
 	```lua title="Luau"
-	-- Tag selector
-	rule.Selector = ".ButtonPrimary"
+	local rule = Instance.new("StyleRule")
+	rule.Parent = coreSheet
 
-	-- Set rule properties
+	rule.Selector = ".ButtonPrimary" -- Roblox tag selector
 	rule:SetProperties({
-		["BackgroundColor3"] = Color3.fromHex("335FFF"),
-		["TextColor3"] = Color3.fromHex("E1E1E1"),
-		["AutomaticSize"] = Enum.AutomaticSize.XY
+		BackgroundColor3 = Color3.fromHex("335FFF"),
+		TextColor3 = Color3.fromHex("E1E1E1"),
+		AutomaticSize = Enum.AutomaticSize.XY
 	})
 
 	local button = Instance.new("TextButton")
@@ -159,15 +159,15 @@ The closest Roblox comparison to CSS `id` is the `#[name]` selector which select
 <Card>
 <CardContent style={{paddingTop: '0px', paddingBottom: '0px'}}>
 	```lua title="Luau"
-	-- Instance name selector
-	rule.Selector = "#ModalFrame"
+	local rule = Instance.new("StyleRule")
+	rule.Parent = coreSheet
 
-	-- Set rule properties
+	rule.Selector = "#ModalFrame" -- Instance name selector
 	rule:SetProperties({
-		["BackgroundColor3"] = Color3.fromHex("000022"),
-		["BackgroundTransparency"] = 0.5,
-		["Size"] = UDim2.new(0.5, 0, 0, 100),
-		["AutomaticSize"] = Enum.AutomaticSize.Y
+		BackgroundColor3 = Color3.fromHex("000022"),
+		BackgroundTransparency = 0.5,
+		Size = UDim2.new(0.5, 0, 0, 100),
+		AutomaticSize = Enum.AutomaticSize.Y
 	})
 
 	local frame = Instance.new("Frame")
@@ -218,15 +218,15 @@ The child selector of `>` is identical between CSS and Roblox.
 <Card>
 <CardContent style={{paddingTop: '0px', paddingBottom: '0px'}}>
 	```lua title="Luau"
-	-- Child selector
-	rule.Selector = ".MenuContainer > TextButton"
+	local rule = Instance.new("StyleRule")
+	rule.Parent = coreSheet
 
-	-- Set rule properties for child
+	rule.Selector = ".MenuContainer > TextButton" -- Child selector
 	rule:SetProperties({
-		["BackgroundColor3"] = Color3.fromHex("335FFF"),
-		["TextColor3"] = Color3.fromHex("E1E1E1"),
-		["Size"] = UDim2.new(0.8, 0, 0, 40),
-		["BorderSizePixel"] = 0
+		BackgroundColor3 = Color3.fromHex("335FFF"),
+		TextColor3 = Color3.fromHex("E1E1E1"),
+		Size = UDim2.new(0.8, 0, 0, 40),
+		BorderSizePixel = 0
 	})
 
 	-- Create menu container
@@ -288,15 +288,15 @@ Unlike the CSS whitespace syntax, for example <Typography noWrap>`.menu-containe
 <Card>
 <CardContent style={{paddingTop: '0px', paddingBottom: '0px'}}>
 	```lua title="Luau"
-	-- Descendant selector
-	rule.Selector = ".MenuContainer >> TextButton"
+	local rule = Instance.new("StyleRule")
+	rule.Parent = coreSheet
 
-	-- Set rule properties for descendant
+	rule.Selector = ".MenuContainer >> TextButton" -- Descendant selector
 	rule:SetProperties({
-		["BackgroundColor3"] = Color3.fromHex("335FFF"),
-		["TextColor3"] = Color3.fromHex("E1E1E1"),
-		["Size"] = UDim2.new(0.8, 0, 0, 40),
-		["BorderSizePixel"] = 0
+		BackgroundColor3 = Color3.fromHex("335FFF"),
+		TextColor3 = Color3.fromHex("E1E1E1"),
+		Size = UDim2.new(0.8, 0, 0, 40),
+		BorderSizePixel = 0
 	})
 
 	-- Create menu container
@@ -351,10 +351,10 @@ Multiple selectors (including selectors with combinators) can be declared with t
 <Card>
 <CardContent style={{paddingTop: '0px', paddingBottom: '0px'}}>
 	```lua title="Luau"
-	-- Selector for image labels AND text labels
-	rule.Selector = "ImageLabel, TextLabel"
+	local rule = Instance.new("StyleRule")
+	rule.Parent = coreSheet
 
-	-- Set common property for classes
+	rule.Selector = "ImageLabel, TextLabel" -- Selector for image labels AND text labels
 	rule:SetProperty("BackgroundColor3", Color3.fromHex("ff0033"))
 
 	-- Create image label
@@ -401,18 +401,18 @@ The Roblox equivalent to CSS [pseudo-class](https://developer.mozilla.org/docs/W
 <Card>
 <CardContent style={{paddingTop: '0px', paddingBottom: '0px'}}>
 	```lua title="Luau"
-	-- State selector
-	rule.Selector = "ImageLabel:Hover"
+	local rule = Instance.new("StyleRule")
+	rule.Parent = coreSheet
 
-	-- Set rule property
+	rule.Selector = "ImageLabel:Hover" -- State selector
 	rule:SetProperty("ImageTransparency", 0.5)
 
 	-- Create image label
-	local label = Instance.new("ImageLabel")
-	label.Image = "rbxassetid://104919049969988"
-	label.Size = UDim2.new(0, 100, 0, 100)
-	label.BackgroundTransparency = 1
-	label.Parent = screenGui
+	local imageLabel = Instance.new("ImageLabel")
+	imageLabel.Image = "rbxassetid://104919049969988"
+	imageLabel.Size = UDim2.new(0, 100, 0, 100)
+	imageLabel.BackgroundTransparency = 1
+	imageLabel.Parent = screenGui
 	```
 </CardContent>
 </Card>
@@ -422,10 +422,10 @@ The Roblox equivalent to CSS [pseudo-class](https://developer.mozilla.org/docs/W
 Similar to how CSS [pseudo-elements](https://developer.mozilla.org/docs/Web/CSS/Pseudo-elements) can modify specific parts of an element, Roblox can create phantom `Class.UIComponent|UIComponents` through a style rule's `Class.StyleRule.Selector|Selector` property. For example, the following rule effectively creates a `Class.UICorner` modifier under every `Class.Frame` tagged with `RoundedCorner20` and sets each modifier's `Class.UICorner.CornerRadius|CornerRadius` to `20` pixels.
 
 ```lua title="Luau"
--- UI component selector
-rule.Selector = "Frame.RoundedCorner20::UICorner"
+local rule = Instance.new("StyleRule")
+rule.Parent = coreSheet
 
--- Set rule property
+rule.Selector = "Frame.RoundedCorner20::UICorner" -- UI component selector
 rule:SetProperty("CornerRadius", UDim.new(0, 20))
 
 -- Create frame
@@ -492,6 +492,7 @@ In CSS, `@container` applies styles based on the size of a parent element. In Ro
 	})
 	containerRule.Parent = coreSheet
 
+	-- Button rule
 	local buttonRule = Instance.new("StyleRule")
 	buttonRule.Selector = "TextButton" -- Roblox class selector
 	buttonRule:SetProperties({
@@ -625,17 +626,17 @@ CSS lets you declare and reference [variables](https://developer.mozilla.org/doc
 <Card>
 <CardContent style={{paddingTop: '0px', paddingBottom: '0px'}}>
 	```lua title="Luau"
+	local rule = Instance.new("StyleRule")
+	rule.Parent = coreSheet
+
 	-- Set style sheet tokens using attributes
 	coreSheet:SetAttribute("ButtonBgColor", Color3.fromHex("335FFF"))
 	coreSheet:SetAttribute("ButtonTextColor", Color3.fromHex("E1E1E1"))
 
-	-- Class selector
-	rule.Selector = "TextButton"
-
-	-- Set rule properties
+	rule.Selector = "TextButton" -- Class selector
 	rule:SetProperties({
-		["BackgroundColor3"] = "$ButtonBgColor",
-		["TextColor3"] = "$ButtonTextColor"
+		BackgroundColor3 = "$ButtonBgColor",
+		TextColor3 = "$ButtonTextColor"
 	})
 
 	-- Create button
@@ -697,45 +698,49 @@ Borrowing a concept from [SCSS](https://sass-lang.com/guide/#nesting), `Class.St
 	```lua title="Luau"
 	-- Menu frame rule
 	local menuFrameRule = Instance.new("StyleRule")
-	menuFrameRule.Parent = coreSheet
 	menuFrameRule.Selector = "#MenuFrame"
 	menuFrameRule:SetProperties({
-		["BackgroundColor3"] = Color3.fromHex("000022"),
-		["Size"] = UDim2.new(0.25, 0, 0, 200),
-		["AutomaticSize"] = Enum.AutomaticSize.Y
+		BackgroundColor3 = Color3.fromHex("000022"),
+		Size = UDim2.new(0.25, 0, 0, 200),
+		AutomaticSize = Enum.AutomaticSize.Y
 	})
+	menuFrameRule.Parent = coreSheet
 
 	-- Menu layout rule
 	local menuLayoutRule = Instance.new("StyleRule")
-	menuLayoutRule.Parent = menuFrameRule  -- Set menu frame rule as parent
 	menuLayoutRule.Selector = "::UIListLayout"
 	menuLayoutRule:SetProperties({
-		["FillDirection"] = Enum.FillDirection.Vertical,
-		["VerticalFlex"] = Enum.UIFlexAlignment.SpaceEvenly,
-		["HorizontalAlignment"] = Enum.HorizontalAlignment.Center
+		FillDirection = Enum.FillDirection.Vertical,
+		VerticalFlex = Enum.UIFlexAlignment.SpaceEvenly,
+		HorizontalAlignment = Enum.HorizontalAlignment.Center
 	})
+	menuLayoutRule.Parent = menuFrameRule -- Set menu frame rule as parent
 
 	-- Button rule
 	local buttonRule = Instance.new("StyleRule")
-	buttonRule.Parent = menuFrameRule  -- Set menu frame rule as parent
 	buttonRule.Selector = "> TextButton"
 	buttonRule:SetProperties({
-		["BackgroundColor3"] = Color3.fromHex("335FFF"),
-		["TextColor3"] = Color3.fromHex("E1E1E1"),
-		["Size"] = UDim2.new(0.8, 0, 0, 40),
-		["BorderSizePixel"] = 0
+		BackgroundColor3 = Color3.fromHex("335FFF"),
+		TextColor3 = Color3.fromHex("E1E1E1"),
+		Size = UDim2.new(0.8, 0, 0, 40),
+		BorderSizePixel = 0
 	})
+	buttonRule.Parent = menuFrameRule -- Set menu frame rule as parent
 
 	-- Button hover rule
 	local buttonHoverRule = Instance.new("StyleRule")
-	buttonHoverRule.Parent = buttonRule  -- Set button rule as parent
-	buttonHoverRule.Selector = ":hover"
-	buttonHoverRule:SetProperty("BackgroundTransparency", 0.5)
+	buttonHoverRule.Selector = ":Hover"
+	buttonHoverRule:SetProperties({
+		AutoButtonColor = false,
+		BackgroundTransparency = 0.5,
+		TextTransparency = 0.5
+	})
+	buttonHoverRule.Parent = buttonRule -- Set button rule as parent
 
 	-- Create parent frame
 	local menuFrame = Instance.new("Frame")
-	menuFrame.Parent = screenGui
 	menuFrame.Name = "MenuFrame"
+	menuFrame.Parent = screenGui
 
 	-- Create buttons inside frame
 	local button1 = Instance.new("TextButton")

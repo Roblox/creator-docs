@@ -131,6 +131,60 @@ properties:
     capabilities:
       - Audio
       - UI
+  - name: VideoFrame.RollOffMaxDistance
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Video
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+      - UI
+  - name: VideoFrame.RollOffMinDistance
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Video
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+      - UI
+  - name: VideoFrame.RollOffMode
+    summary: ''
+    description: ''
+    code_samples: []
+    type: RollOffMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Video
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+      - UI
   - name: VideoFrame.TimeLength
     summary: |
       Indicates the length of the `Class.VideoFrame.Video` in seconds.

@@ -81,6 +81,7 @@ properties:
       can_save: true
     capabilities:
       - Input
+    simulationAccess: true
   - name: Tool.Grip
     summary: |
       Stores the tool's "grip" properties as one `Datatype.CFrame`.
@@ -104,6 +105,7 @@ properties:
       can_save: true
     capabilities:
       - Input
+    simulationAccess: true
   - name: Tool.GripForward
     summary: |
       Represents the `R02`, `R12`, and `R22` values of the grip

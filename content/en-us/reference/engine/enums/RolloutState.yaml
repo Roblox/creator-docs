@@ -4,24 +4,33 @@
 
 name: RolloutState
 type: enum
-summary: ''
-description: ''
+summary: |
+  A three-phase rollout state used to opt in or out of engine features.
+description: |
+  Several `Class.Workspace` properties use `RolloutState` to support a
+  three-phase rollout pattern, where a feature is initially opt-in (`Default`
+  equals disabled), then opt-out (`Default` equals enabled), and finally always
+  on. `Default` always tracks the current engine-wide phase.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Uses the engine-wide rollout default, which changes as the feature
+      progresses through its rollout phases.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Disabled
-    summary: ''
+    summary: |
+      Opts out of the feature regardless of the engine-wide rollout phase.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Enabled
-    summary: ''
+    summary: |
+      Opts in to the feature regardless of the engine-wide rollout phase.
     value: 2
     tags: []
     deprecation_message: ''

@@ -3,10 +3,6 @@ title: Roblox Plus
 description: Roblox Plus gives you additional ways to earn from your games by rewarding engagement and purchases from Plus subscribers.
 ---
 
-<Alert severity="info">
-Roblox Plus will become available to users starting on April 30, 2026.
-</Alert>
-
 **Roblox Plus** gives you additional ways to earn from your games by rewarding engagement and purchases from Plus subscribers.
 
 Users who subscribe to Plus get a range of benefits to enhance their purchasing power, access, and overall game on the platform:
@@ -21,8 +17,9 @@ For more information about the benefits of Roblox Plus to end-users, see the [he
 As a creator, you can earn from Roblox Plus subscribers through:
 
 - [**In-game Robux purchases**](#earn-from-in-experience-purchases): Subscribers receive a 10–20% discount on purchases, which is covered by Roblox so that your earnings per purchase are not reduced. Lower prices can encourage more frequent purchases, helping increase your overall revenue.
-- [**Driving Plus sign-ups**](#earn-from-in-experience-plus-subscriptions): Encourage engaged users to subscribe to Roblox Plus directly from your game using `Class.MarketplaceService.PromptRobloxSubscriptionPurchase|PromptRobloxSubscriptionPurchase`. You can earn up to 750 Robux for each new subscriber you bring in.
+- [**Driving Plus sign-ups**](#earn-from-in-experience-plus-subscriptions): Encourage engaged users to subscribe to Roblox Plus directly from your game using `Class.MarketplaceService.PromptRobloxSubscriptionPurchase|PromptRobloxSubscriptionPurchase`. You can earn up to 750 Robux for each new subscriber you bring in, with earnings starting once the subscription becomes paid (free trial periods are not included).
 - [**Time spent in paid private servers**](#earn-from-paid-private-server-time): Earn up to 100 Robux per subscriber when they spend at least 60 minutes in your paid private servers each month.
+- [**In-game Robux transfers**](#earn-from-robux-transfers): Earn 10% every time a Plus subscriber sends Robux to another user within your game using `Class.MarketplaceService.PromptRobuxTransferAsync|PromptRobuxTransferAsync`. This amount is eligible for the DevEx program.
 
 ## Earn from in-experience purchases
 
@@ -159,7 +156,7 @@ end)
 
 if success and details.IsSubscribed then
     -- Check the length of the user's Plus subscription
-    local threeMonths = 60 * 24 * 60 * 60
+    local threeMonths = 90 * 24 * 60 * 60
     if details.StartTime and (os.time() - details.StartTime.UnixTimestamp) > threeMonths then
         print("Awarding the '3-Month Subscription Veteran' skin!")
     end
@@ -272,9 +269,9 @@ Roblox Plus subscribers can create paid [private servers](./private-servers.md) 
 
 **Payouts are based on the time a Plus subscriber spends in paid private servers they create themselves.** This means that if a Plus subscriber invites another Plus subscriber to a paid private server, you do not earn from the invited player.
 
-On each successful Plus subscription renewal, Roblox evaluates the subscriber's paid private server usage over the previous 30 days. It then determines the **top five paid private servers the subscriber created within your game**, based on the amount of time they spent in each server during that period, with a minimum of 60 cumulative minutes.
+On the Plus subscription renewal day, Roblox evaluates paid private server usage over the previous 30 days for that subscriber. This evaluation occurs even if the subscriber cancels Plus instead of renewing. Roblox then determines the **top five paid private servers the subscriber created within your game**, based on the amount of time they spent in each server during that period, with a minimum of 60 cumulative minutes.
 
-If a Plus subscriber spends **at least 60 cumulative minutes over the last 30 days** in a paid private server they created within your game, you can earn up to **100 Robux per user per server** based on the server price.
+If a Plus subscriber (including a subscriber on a Free Plus Trial) spends **at least 60 cumulative minutes over the last 30 days** in a paid private server they created within your game, you can earn up to **100 Robux per user per server** based on the server price.
 
 In the following example, Servers A, B, and C qualify because the Plus subscriber spent at least 60 minutes in each server during the last 30 days. Servers D and E don't qualify because they don't meet the 60-minute threshold. If all five servers (A–E) belong to the same game and represent the top five servers the subscriber spent time in, the creator earns a total of 205 Robux across the qualifying servers.
 
@@ -321,13 +318,29 @@ In the following example, Servers A, B, and C qualify because the Plus subscribe
 </tbody>
 </table>
 
+## Earn from Robux transfers
+
+Robux transfers allow Plus subscribers to send Robux directly to other users. You can implement the Transfers API to prompt these transfers within your game and earn a share of each transfer.
+
+When a Plus subscriber initiates a transfer prompted by `Class.MarketplaceService.PromptRobuxTransferAsync|PromptRobuxTransferAsync` inside your game, you receive **10% of the transfer amount**. For example, if a subscriber transfers 100 Robux to another user, the recipient receives 90 Robux (90%) and your game receives 10 Robux (10%).
+
+Robux your game earns from transfers is **eligible for the DevEx program**. Roblox does not take a fee from these transfers.
+
+<Alert severity="info">
+When setting up transfers in your experience, the amount must be between 10 and 500 Robux per transaction.
+</Alert>
+
+<img src="../../assets/monetization/roblox-plus/TransferRobuxPrompt.png" width="60%" />
+
+For more information about implementing Robux transfers within your game, see [Robux transfers](./robux-transfers.md).
+
 ## Track your Plus earnings
 
-You can track your earnings from users who subscribe to Roblox Plus through your in-game prompts, as well as from Plus subscribers who spend time in your paid private servers, whether they join from within your game or outside of it.
+You can track your earnings from users who subscribe to Roblox Plus through your in-game prompts, Robux transfers using the Transfers API, and time spent by Plus subscribers in your paid private servers, whether they join from within your game or outside of it.
 
 To see a detailed breakdown of your Plus subscription incentives:
 
 1. In Creator Hub, go to **Creations** and select a game.
 2. Go to **Monetization** ⟩ **Roblox Plus**.
 
-<img src="../../assets/monetization/roblox-plus/Roblox-Plus-Analytics.png" width="90%" />
+<img src="../../assets/monetization/roblox-plus/Roblox-Plus-Analytics.png" width="100%" />

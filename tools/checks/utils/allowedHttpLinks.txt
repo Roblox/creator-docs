@@ -653,6 +653,7 @@ https://developer.mozilla.org/docs/Web/CSS/Pseudo-classes
 https://developer.mozilla.org/docs/Web/CSS/Pseudo-elements
 https://developer.mozilla.org/docs/Web/CSS/CSS_media_queries
 https://developer.mozilla.org/docs/Web/CSS/CSS_containment/Container_queries
+https://developer.mozilla.org/docs/Web/CSS/Guides/Transitions
 https://sass-lang.com/guide/
 https://survey.roblox.com/jfe/form/SV_7W1I2AOPuTd8FhA
 https://www.youtube-nocookie.com/embed/rVFmc8gxu4s

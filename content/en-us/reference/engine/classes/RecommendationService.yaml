@@ -275,6 +275,40 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
+  - name: RecommendationService:LogPreferenceEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: preferenceType
+        type: RecommendationPreferenceType
+        default:
+        summary: ''
+      - name: targetType
+        type: RecommendationPreferenceTargetType
+        default:
+        summary: ''
+      - name: targetId
+        type: string
+        default:
+        summary: ''
+      - name: tracingId
+        type: string
+        default:
+        summary: ''
+      - name: itemId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Basic
   - name: RecommendationService:RegisterItemAsync
     summary: ''
     description: |

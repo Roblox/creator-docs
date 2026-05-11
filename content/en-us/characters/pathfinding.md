@@ -1,9 +1,11 @@
 ---
-title: Character pathfinding
-description: Pathfinding is the process of moving a character along a logical path to reach a destination.
+title: Pathfinding
+description: Pathfinding is the process of moving a character or object (agent) along a logical path to reach a destination.
 ---
 
-**Pathfinding** is the process of moving a character along a logical path to reach a destination, avoiding obstacles and (optionally) hazardous materials or defined regions.
+**Pathfinding** is the process of moving a character or object (agent) along a
+logical path around obstacles to reach a destination, optionally avoiding
+hazardous materials or defined regions.
 
 <video controls src="../assets/avatar/pathfinding/Showcase.mp4" width="100%" alt="Video showcase of character pathfinding across a series of bridges"></video>
 
@@ -13,41 +15,200 @@ To assist with pathfinding layout and debugging, Studio can render a navigation 
 
 <img src="../assets/studio/general/Visualization-Options.png" width="780" alt="A close up view of the 3D viewport with the Visualization Options button indicated in the upper-right corner." />
 
-With **Navigation mesh** enabled, colored areas show where a character might walk or swim, while non-colored areas are blocked. The small arrows indicate areas that a character will attempt to reach by jumping, assuming you set `AgentCanJump` to `true` when [creating the path](#create-paths).
+<Tabs>
+<TabItem label="Navigation Mesh">
+With **Navigation mesh** enabled, colored areas show where a character might walk or swim. Small arrows indicate areas that a character will attempt to reach by jumping.
 
-<img src="../assets/avatar/pathfinding/Navigation-Mesh.jpg" width="800" alt="Navigation mesh showing in Studio" />
-
+<img src="../assets/avatar/pathfinding/Navigation-Mesh.jpg" width="800" height="400" alt="Navigation mesh showing in Studio" />
+</TabItem>
+<TabItem label="Pathfinding Modifiers">
 With **Pathfinding modifiers** enabled, text labels indicate specific materials and regions that are taken into consideration when using [pathfinding modifiers](#pathfinding-modifiers).
 
-<img src="../assets/avatar/pathfinding/Navigation-Labels.jpg" width="800" alt="Navigation labels showing on navigation mesh" />
+<img src="../assets/avatar/pathfinding/Navigation-Labels.jpg" width="800" height="400" alt="Navigation labels showing on navigation mesh" />
+</TabItem>
+</Tabs>
 
-## Known limitations
+## Implementation
 
-Pathfinding features specific limitations to ensure efficient processing and optimal performance.
+Although pathfinding can be implemented in various ways through `Class.PathfindingService` and its associated methods such as `Class.PathfindingService:CreatePath()|CreatePath()`, this section uses the following pathfinding script for the player's character.
 
-### Vertical placement limit
+To test while reading:
 
-Pathfinding calculations consider only parts within certain vertical boundaries:
+1. Copy the following code into a `Class.LocalScript` within `Class.StarterCharacterScripts`, or [get this package](https://create.roblox.com/store/asset/95888831676289/Player-Path-Following-Script) and drop it into `Class.StarterCharacterScripts`.
 
-- Lower Boundary &mdash; Parts with a bottom **Y** coordinate less than -65,536 studs are ignored.
-- Upper Boundary &mdash; Parts with a top **Y** coordinate exceeding 65,536 studs are ignored.
-- Vertical Span &mdash; The vertical distance from the lowest part's bottom **Y** coordinate to the highest part's top **Y** coordinate must not exceed 65,536 studs; otherwise, the pathfinding system will ignore those parts during the pathfinding computation.
+		```lua title="PlayerPathFollow (LocalScript in StarterCharacterScripts)"
+		local PathfindingService = game:GetService("PathfindingService")
+		local Players = game:GetService("Players")
+		local RunService = game:GetService("RunService")
 
-### Search distance limitation
+		local localPlayer = Players.LocalPlayer
+		local controls = require(localPlayer.PlayerScripts.PlayerModule):GetControls()
+		controls:Disable()
 
-The direct line-of-sight distance for pathfinding from the start to the finish point must not exceed 3,000 studs. Exceeding this distance will result in a `Enum.PathStatus|NoPath` status.
+		local DESTINATION = Vector3.new(20, 0.5, 20)
+		local GROUND_WAIT = 0.01
+		local VELOCITY_MULTIPLIER = 0.0625
 
-## Create paths
+		local path = PathfindingService:CreatePath({
+			AgentCanClimb = true,
+			Costs = {
+				Water = 20
+			}
+		})
 
-Pathfinding is initiated through `Class.PathfindingService` and its `Class.PathfindingService:CreatePath()|CreatePath()` function.
+		local character = script.Parent
+		local humanoid = character:WaitForChild("Humanoid")
+		local waypoints
+		local nextWaypointIndex
+		local blockedConnection
+		local currentWaypointReachedConnection
+		local currentWaypointPlaneNormal = Vector3.zero
+		local currentWaypointPlaneDistance = 0
+		local pathfinderWorking = false
 
-```lua title="LocalScript" highlight="1, 3"
-local PathfindingService = game:GetService("PathfindingService")
+		local function disconnectCurrentWaypointReachedConnection()
+			if not currentWaypointReachedConnection then return end
+			currentWaypointReachedConnection:Disconnect()
+			currentWaypointReachedConnection = nil
+		end
 
-local path = PathfindingService:CreatePath()
-```
+		local function isCurrentWaypointReached()
+			if humanoid.FloorMaterial == Enum.Material.Air then
+				return false
+			end
 
-`Class.PathfindingService:CreatePath()|CreatePath()` accepts an optional table of parameters which fine tune how the character (agent) moves along the path.
+			local reached = false
+			if currentWaypointPlaneNormal ~= Vector3.zero then
+				-- Compute the distance from humanoid to destination plane
+				local dist = currentWaypointPlaneNormal:Dot(humanoid.RootPart.Position) - currentWaypointPlaneDistance
+				-- Compute the component of the humanoid velocity that is towards the plane
+				local velocity = -currentWaypointPlaneNormal:Dot(humanoid.RootPart.Velocity)
+				-- Compute the threshold from the destination plane based on humanoid velocity
+				local threshold = math.max(1.0, VELOCITY_MULTIPLIER * velocity)
+				-- Consider waypoint reached if less then threshold in front of the plane
+				reached = dist < threshold
+			else
+				reached = true
+			end
+
+			if reached then
+				currentWaypointPlaneNormal = Vector3.zero
+				currentWaypointPlaneDistance = 0
+				moveToNextWaypoint()
+			end
+		end
+
+		local function calculateNextWaypointApproach()
+			nextWaypointIndex += 1
+			if nextWaypointIndex > #waypoints then
+				return false
+			end
+			local currentWaypoint = waypoints[nextWaypointIndex - 1]
+			local nextWaypoint = waypoints[nextWaypointIndex]
+			-- Build destination plane from next waypoint towards current one
+			currentWaypointPlaneNormal = currentWaypoint.Position - nextWaypoint.Position
+			-- Set normal perpendicular to Y plane when not climbing up
+			if nextWaypoint.Label ~= "Climb" then
+				currentWaypointPlaneNormal = Vector3.new(currentWaypointPlaneNormal.X, 0, currentWaypointPlaneNormal.Z)
+			end
+			if currentWaypointPlaneNormal.Magnitude > 0.000001 then
+				currentWaypointPlaneNormal	= currentWaypointPlaneNormal.Unit
+				currentWaypointPlaneDistance = currentWaypointPlaneNormal:Dot(nextWaypoint.Position)
+			end
+
+			return true
+		end
+
+		local function resetWaypointData()
+			humanoid:Move(Vector3.zero)
+			currentWaypointPlaneNormal	= Vector3.zero
+			currentWaypointPlaneDistance = 0
+			disconnectCurrentWaypointReachedConnection()
+			pathfinderWorking = false
+		end
+
+		local function waitForGround()
+			while humanoid.FloorMaterial == Enum.Material.Air do
+				task.wait(GROUND_WAIT)
+			end
+		end
+
+		function moveToNextWaypoint()
+			if calculateNextWaypointApproach() then
+				disconnectCurrentWaypointReachedConnection()
+				currentWaypointReachedConnection = RunService.Heartbeat:Connect(isCurrentWaypointReached)
+				local nextWaypointPosition = waypoints[nextWaypointIndex].Position
+				local nextWaypointAction = waypoints[nextWaypointIndex].Action
+				humanoid:Move(nextWaypointPosition - humanoid.RootPart.Position)
+				if waypoints[nextWaypointIndex + 1] and waypoints[nextWaypointIndex + 1].Label == "UseBoat" then
+					nextWaypointIndex += 1
+					-- Call your own customized function to make agent use the boat
+
+				elseif nextWaypointAction == Enum.PathWaypointAction.Jump then
+					humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+					while humanoid.FloorMaterial ~= Enum.Material.Air do
+						task.wait(GROUND_WAIT)
+					end
+					humanoid:Move(nextWaypointPosition - humanoid.RootPart.Position)
+				end
+			else
+				resetWaypointData()
+			end
+		end
+
+		local function findStartingPoint(waypoints)
+			nextWaypointIndex = 1
+			while nextWaypointIndex + 1 <= #waypoints do
+				local dist = waypoints[nextWaypointIndex + 1].Position - humanoid.RootPart.Position
+				dist = Vector3.new(dist.X, 0, dist.Z)
+				if dist.magnitude >= 2 then
+					return
+				end
+				nextWaypointIndex += 1
+			end
+		end
+
+		local function followPath()
+			-- Compute the path
+			pathfinderWorking = true
+			waitForGround()
+
+			local success, errorMessage = pcall(function()
+				path:ComputeAsync(character.PrimaryPart.Position, DESTINATION)
+			end)
+			if not success or path.Status ~= Enum.PathStatus.Success then
+				warn("Path not computed!", errorMessage)
+				return
+			end
+
+			-- Get the path waypoints
+			waypoints = path:GetWaypoints()
+
+			-- Detect if path becomes blocked
+			blockedConnection = path.Blocked:Connect(function(blockedWaypointIndex)
+				-- Check if the obstacle is further down the path
+				if blockedWaypointIndex >= nextWaypointIndex then
+					-- Stop detecting path blockage until path is re-computed
+					blockedConnection:Disconnect()
+					resetWaypointData()
+					-- Call function to re-compute new path
+					followPath()
+				end
+			end)
+
+			findStartingPoint(waypoints)
+			moveToNextWaypoint()
+		end
+
+		followPath()
+		```
+
+2. Edit the `DESTINATION` variable (<Chip label="LINE 9" size="small" variant="outlined" color="success" />) to a `Datatype.Vector3` destination within the 3D world that the player character can reach.
+3. Proceed through the following sections to learn about path computation and character movement.
+
+### Path creation
+
+Pathfinding is initiated through `Class.PathfindingService` and its `Class.PathfindingService:CreatePath()|CreatePath()` method (<Chip label="LINES 13–18" size="small" variant="outlined" color="success" />). This method accepts an optional table of parameters which fine tune how the character (agent) moves along the path.
 
 <table>
 <thead>
@@ -79,7 +240,7 @@ local path = PathfindingService:CreatePath()
    </tr>
 	 <tr>
      <td>`AgentCanClimb`</td>
-     <td>Determines whether climbing `Class.TrussPart|TrussParts` during pathfinding is allowed.</td>
+     <td>Determines whether climbing `Class.TrussPart|TrussParts` during pathfinding is allowed. A climbable path has a `Datatype.PathWaypoint.Label|Label` named `Climb` and the [cost](#material-costs) for a climbable path is `1` by default.</td>
      <td>boolean</td>
      <td>`false`</td>
    </tr>
@@ -98,363 +259,118 @@ local path = PathfindingService:CreatePath()
 </tbody>
 </table>
 
-```lua title="LocalScript" highlight="3-10"
-local PathfindingService = game:GetService("PathfindingService")
+### Path computation
 
-local path = PathfindingService:CreatePath({
-	AgentRadius = 3,
-	AgentHeight = 6,
-	AgentCanJump = false,
-	Costs = {
-		Water = 20
-	}
-})
-```
-
-Note that the agent can climb `Class.TrussPart|TrussParts` during pathfinding assuming you set `AgentCanClimb` to `true` when [creating the path](#create-paths) and nothing blocks the agent from the truss climbing path. A climbable path has the **Climb** label and the [cost](#set-material-costs) for a climbable path is **1** by default.
-
-<img src="../assets/avatar/pathfinding/Path-TrussPart.jpg" width="800" alt="Path going up a climbable TrussPart ladder" />
-
-```lua title="LocalScript - Truss Climbing Path" highlight="6,8"
-local PathfindingService = game:GetService("PathfindingService")
-
-local path = PathfindingService:CreatePath({
-	AgentCanClimb = true,
-	Costs = {
-		Climb = 2  -- Cost of the climbing path; default is 1
-	}
-})
-```
-
-## Move along paths
-
-This section uses the following pathfinding script for the player's character. To test while reading:
-
-1. Copy the code into a `Class.LocalScript` within `Class.StarterCharacterScripts`.
-1. Set the `TEST_DESTINATION` variable to a `Datatype.Vector3` destination in your 3D world that the player character can reach.
-1. Proceed through the following sections to learn about path computation and character movement.
-
-```lua title="LocalScript - Character Pathfinding" highlight="11"
-local PathfindingService = game:GetService("PathfindingService")
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
-local Workspace = game:GetService("Workspace")
-
-local path = PathfindingService:CreatePath()
-
-local player = Players.LocalPlayer
-local character = player.Character
-local humanoid = character:WaitForChild("Humanoid")
-
-local TEST_DESTINATION = Vector3.new(100, 0, 100)
-
-local waypoints
-local nextWaypointIndex
-local reachedConnection
-local blockedConnection
-
-local function followPath(destination)
-	-- Compute the path
-	local success, errorMessage = pcall(function()
-		path:ComputeAsync(character.PrimaryPart.Position, destination)
-	end)
-
-	if success and path.Status == Enum.PathStatus.Success then
-		-- Get the path waypoints
-		waypoints = path:GetWaypoints()
-
-		-- Detect if path becomes blocked
-		blockedConnection = path.Blocked:Connect(function(blockedWaypointIndex)
-			-- Check if the obstacle is further down the path
-			if blockedWaypointIndex >= nextWaypointIndex then
-				-- Stop detecting path blockage until path is re-computed
-				blockedConnection:Disconnect()
-				-- Call function to re-compute new path
-				followPath(destination)
-			end
-		end)
-
-		-- Detect when movement to next waypoint is complete
-		if not reachedConnection then
-			reachedConnection = humanoid.MoveToFinished:Connect(function(reached)
-				if reached and nextWaypointIndex < #waypoints then
-					-- Increase waypoint index and move to next waypoint
-					nextWaypointIndex += 1
-					humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
-				else
-					reachedConnection:Disconnect()
-					blockedConnection:Disconnect()
-				end
-			end)
-		end
-
-		-- Initially move to second waypoint (first waypoint is path start; skip it)
-		nextWaypointIndex = 2
-		humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
-	else
-		warn("Path not computed!", errorMessage)
-	end
-end
-
-followPath(TEST_DESTINATION)
-```
-
-### Compute the path
-
-After you've created a valid path with `Class.PathfindingService:CreatePath()|CreatePath()`, it must be **computed** by calling `Class.Path:ComputeAsync()` with a `Datatype.Vector3` for both the starting point and destination.
-
-```lua title="LocalScript - Character Pathfinding" highlight="5, 21"
-local PathfindingService = game:GetService("PathfindingService")
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
-local Workspace = game:GetService("Workspace")
-
-local path = PathfindingService:CreatePath()
-
-local player = Players.LocalPlayer
-local character = player.Character
-local humanoid = character:WaitForChild("Humanoid")
-
-local TEST_DESTINATION = Vector3.new(100, 0, 100)
-
-local waypoints
-local nextWaypointIndex
-local reachedConnection
-local blockedConnection
-
-local function followPath(destination)
-	-- Compute the path
-	local success, errorMessage = pcall(function()
-		path:ComputeAsync(character.PrimaryPart.Position, destination)
-	end)
-end
-```
-
-<img src="../assets/avatar/pathfinding/Path-Start-End.jpg" width="800" alt="Path start/end marked on series of islands and bridges" />
-
-### Get waypoints
-
-Once the `Class.Path` is computed, it will contain a series of **waypoints** that trace the path from start to end. These points can be gathered with the `Class.Path:GetWaypoints()` function.
-
-```lua title="LocalScript - Character Pathfinding" highlight="13, 24, 26"
-local PathfindingService = game:GetService("PathfindingService")
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
-local Workspace = game:GetService("Workspace")
-
-local path = PathfindingService:CreatePath()
-
-local player = Players.LocalPlayer
-local character = player.Character
-local humanoid = character:WaitForChild("Humanoid")
-
-local TEST_DESTINATION = Vector3.new(100, 0, 100)
-
-local waypoints
-local nextWaypointIndex
-local reachedConnection
-local blockedConnection
-
-local function followPath(destination)
-	-- Compute the path
-	local success, errorMessage = pcall(function()
-		path:ComputeAsync(character.PrimaryPart.Position, destination)
-	end)
-
-	if success and path.Status == Enum.PathStatus.Success then
-		-- Get the path waypoints
-		waypoints = path:GetWaypoints()
-	end
-end
-```
+After you've created a valid path with `Class.PathfindingService:CreatePath()|CreatePath()`, it must be **computed** by calling `Class.Path:ComputeAsync()` with a `Datatype.Vector3` for both the starting point and destination (<Chip label="LINES 137–143" size="small" variant="outlined" color="success" />).
 
 <figure>
-<img src="../assets/avatar/pathfinding/Waypoints.jpg"
-    width="800" alt="Waypoints indicated across computed path" />
+<img src="../assets/avatar/pathfinding/Path-Start-End.jpg" width="800" alt="Path start/end marked across two bridges" />
+</figure>
+
+Once the `Class.Path` is computed, it will contain a series of **waypoints** that trace the path from start to end. These points can be gathered with the `Class.Path:GetWaypoints()` method (<Chip label="LINE 146" size="small" variant="outlined" color="success" />). The returned array is arranged in order of waypoints from path start to path end.
+
+<figure>
+<img src="../assets/avatar/pathfinding/Waypoints.jpg" width="800" alt="Waypoints indicated across computed path" />
 <figcaption>Waypoints indicated across computed path</figcaption>
 </figure>
 
+<Alert severity="warning">
+The pathfinding engine includes specific limitations, and pathfinding computations can fail for various reasons. If your implementation does not behave as expected, see [limitations and failure factors](#limitations-and-failure-factors) for possible causes.
+</Alert>
+
 ### Path movement
 
-Each waypoint consists of both a **position** (`Datatype.Vector3`) and **action** (`Enum.PathWaypointAction|PathWaypointAction`). To move a character containing a `Class.Humanoid`, like a typical Roblox character, the easiest way is to call `Class.Humanoid:MoveTo()` from waypoint to waypoint, using the `Class.Humanoid.MoveToFinished|MoveToFinished` event to detect when the character reaches each waypoint.
+Each `Datatype.PathWaypoint` consists of both a `Datatype.PathWaypoint.Position|Position` (`Datatype.Vector3`) and `Datatype.PathWaypoint.Action|Action` (`Enum.PathWaypointAction|PathWaypointAction`). To move a character containing a `Class.Humanoid`, like a typical Roblox character, the best way is to call `Class.Humanoid:Move()` from waypoint to waypoint and use the script's `isCurrentWaypointReached()` callback (<Chip label="LINES 36–60" size="small" variant="outlined" color="success" />) to detect when the character reaches each waypoint.
 
-```lua title="LocalScript - Character Pathfinding" highlight="40-51, 54-55"
-local PathfindingService = game:GetService("PathfindingService")
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
-local Workspace = game:GetService("Workspace")
+<Alert severity="warning">
+Note that the script waits for the humanoid to be touching the ground before calling the pathfinder. If the path is computed while the character is falling through the air, the pathfinder will try to determine an appropriate start position for the path.
+</Alert>
 
-local path = PathfindingService:CreatePath()
+<video controls src="../assets/avatar/pathfinding/Simple-Path.mp4" width="800" alt="Video of character following a path across islands and bridges"></video>
 
-local player = Players.LocalPlayer
-local character = player.Character
-local humanoid = character:WaitForChild("Humanoid")
+### Blocked paths
 
-local TEST_DESTINATION = Vector3.new(100, 0, 100)
-
-local waypoints
-local nextWaypointIndex
-local reachedConnection
-local blockedConnection
-
-local function followPath(destination)
-	-- Compute the path
-	local success, errorMessage = pcall(function()
-		path:ComputeAsync(character.PrimaryPart.Position, destination)
-	end)
-
-	if success and path.Status == Enum.PathStatus.Success then
-		-- Get the path waypoints
-		waypoints = path:GetWaypoints()
-
-		-- Detect if path becomes blocked
-		blockedConnection = path.Blocked:Connect(function(blockedWaypointIndex)
-			-- Check if the obstacle is further down the path
-			if blockedWaypointIndex >= nextWaypointIndex then
-				-- Stop detecting path blockage until path is re-computed
-				blockedConnection:Disconnect()
-				-- Call function to re-compute new path
-				followPath(destination)
-			end
-		end)
-
-		-- Detect when movement to next waypoint is complete
-		if not reachedConnection then
-			reachedConnection = humanoid.MoveToFinished:Connect(function(reached)
-				if reached and nextWaypointIndex < #waypoints then
-					-- Increase waypoint index and move to next waypoint
-					nextWaypointIndex += 1
-					humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
-				else
-					reachedConnection:Disconnect()
-					blockedConnection:Disconnect()
-				end
-			end)
-		end
-
-		-- Initially move to second waypoint (first waypoint is path start; skip it)
-		nextWaypointIndex = 2
-		humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
-	else
-		warn("Path not computed!", errorMessage)
-	end
-end
-```
-
-<video controls src="../assets/avatar/pathfinding/Simple-Path.mp4" width="800" alt="Video of character following simple path across islands and bridges"></video>
-
-### Handle blocked paths
-
-Many Roblox worlds are dynamic; parts might move or fall and floors may collapse. This can block a computed path and prevent the character from reaching its destination. To handle this, you can connect the `Class.Path.Blocked` event and re-compute the path around whatever blocked it.
+Many Roblox worlds are dynamic; parts might move or fall and floors may collapse. This can block a computed path and prevent the character from reaching its destination. To handle this, you can connect the `Class.Path.Blocked` event and re-compute the path around whatever blocked it (<Chip label="LINES 149–158" size="small" variant="outlined" color="success" />).
 
 <Alert severity="warning">
 Paths may also become blocked somewhere **behind** the agent, such as a pile of rubble falling on a path as the agent runs away, but that doesn't mean the agent should stop moving. The <Typography noWrap>`if blockedWaypointIndex >= nextWaypointIndex`</Typography> check makes sure that the path is re-computed only if the blocked waypoint is **ahead** of the current waypoint.
 </Alert>
 
-```lua title="LocalScript - Character Pathfinding" highlight="16, 29-37"
-local PathfindingService = game:GetService("PathfindingService")
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
-local Workspace = game:GetService("Workspace")
-
-local path = PathfindingService:CreatePath()
-
-local player = Players.LocalPlayer
-local character = player.Character
-local humanoid = character:WaitForChild("Humanoid")
-
-local TEST_DESTINATION = Vector3.new(100, 0, 100)
-
-local waypoints
-local nextWaypointIndex
-local reachedConnection
-local blockedConnection
-
-local function followPath(destination)
-	-- Compute the path
-	local success, errorMessage = pcall(function()
-		path:ComputeAsync(character.PrimaryPart.Position, destination)
-	end)
-
-	if success and path.Status == Enum.PathStatus.Success then
-		-- Get the path waypoints
-		waypoints = path:GetWaypoints()
-
-		-- Detect if path becomes blocked
-		blockedConnection = path.Blocked:Connect(function(blockedWaypointIndex)
-			-- Check if the obstacle is further down the path
-			if blockedWaypointIndex >= nextWaypointIndex then
-				-- Stop detecting path blockage until path is re-computed
-				blockedConnection:Disconnect()
-				-- Call function to re-compute new path
-				followPath(destination)
-			end
-		end)
-	end
-end
-```
-
-<Alert severity="error">
-Currently, `Class.Model|Models` containing a `Class.Humanoid` instance, including typical player characters, will **not** be considered for path [computation](#compute-the-path) or path blockage, although the agent may still be blocked by those models physically.
-</Alert>
-
 ## Pathfinding modifiers
 
-By default, `Class.Path:ComputeAsync()` returns the **shortest** path between the starting point and destination, with the exception that it attempts to avoid jumps. This looks unnatural in some situations&nbsp;&mdash; for instance, a path may go through water rather than over a nearby bridge simply because the path through water is geometrically shorter.
+By default, `Class.Path:ComputeAsync()` returns the **shortest** path between the starting point and destination, with the exception that it attempts to avoid jumps. This looks unnatural in some situations; for instance, a path may go through swamp water rather than around it simply because the path through the water is geometrically shorter.
 
+<figure>
 <img src="../assets/avatar/pathfinding/Paths-Shortest-Best.jpg" width="800" alt="Two paths indicated with the shorter path not necessarily more logical" />
+</figure>
 
-To optimize pathfinding even further, you can implement **pathfinding modifiers** to compute smarter paths across various [materials](#set-material-costs), around defined [regions](#work-with-regions), or through [obstacles](#ignore-obstacles).
+To optimize pathfinding even further, you can implement **pathfinding modifiers** to compute smarter paths across various [materials](#material-costs), around defined [regions](#configure-regions), or to [ignore obstacles](#ignore-obstacles).
 
-### Set material costs
+### Material costs
 
-When working with `Class.Terrain` and `Class.BasePart` materials, you can include a `Costs` table within `Class.PathfindingService:CreatePath()|CreatePath()` to make certain materials more traversable than others. All materials have a default cost of **1** and any material can be defined as non-traversable by setting its value to `Library.math.huge`.
+When working with `Class.Terrain` and `Class.BasePart` materials, you can include a `Costs` table within `Class.PathfindingService:CreatePath()|CreatePath()` to make certain materials more traversable than others. All materials have a default cost of `1` and any material can be defined as non‑traversable by setting its value to `Library.math.huge`.
 
-Keys in the `Costs` table should be string names representing `Enum.Material` names, for example `Water` for `Enum.Material.Water`.
+Keys in the `Costs` table should be **string** names representing `Enum.Material` names, for example `Water` for `Enum.Material.Water` or `CrackedLava` for `Enum.Material.CrackedLava`.
 
-```lua title="LocalScript - Character Pathfinding" highlight="6-10"
+```lua title="PlayerPathFollow (LocalScript)"
 local PathfindingService = game:GetService("PathfindingService")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
-local Workspace = game:GetService("Workspace")
+
+local localPlayer = Players.LocalPlayer
+local controls = require(localPlayer.PlayerScripts.PlayerModule):GetControls()
+controls:Disable()
+
+local DESTINATION = Vector3.new(20, 0.5, 20)
+local GROUND_WAIT = 0.01
+local VELOCITY_MULTIPLIER = 0.0625
 
 local path = PathfindingService:CreatePath({
+	AgentCanClimb = true,
 	Costs = {
-		Water = 20,
-		Mud = 5,
-		Neon = math.huge
+		Water = 20, CrackedLava = 100, Slate = 20
 	}
 })
 ```
 
-<video controls src="../assets/avatar/pathfinding/Bridge-Path.mp4" width="800" alt="Video showing how material costs determine preference of non-water traversal"></video>
+<Alert severity="info">
+To set a material such as `CrackedLava` as a "last option," assign it a high but finite material cost like `100` or `1000`. Since there's no engine‑enforced upper cap below `Library.math.huge`, the pathfinder will only route through the material if every alternative is more expensive.
+</Alert>
 
-### Work with regions
+### Configure regions
 
-In some cases, [material preference](#set-material-costs) is not enough. For example, you might want characters to avoid a **defined region**, regardless of the materials underfoot. This can be achieved by adding a `Class.PathfindingModifier` object to a part.
+In some cases, [material preference](#material-costs) is not enough. For example, you might want characters to avoid a defined **region**, regardless of the materials underfoot. This can be achieved by adding a `Class.PathfindingModifier` object to a part.
 
-1. Create an `Class.BasePart.Anchored|Anchored` part around the dangerous region and set its `Class.BasePart.CanCollide|CanCollide` property to **false**.
+1. Create an `Class.BasePart.Anchored|Anchored` part around the region and set its `Class.BasePart.CanCollide|CanCollide` property to `false`.
 
-   <img src="../assets/avatar/pathfinding/GeyserBlocker-Block.jpg" width="750" alt="Anchored part defining a region to apply a pathfinding modifier to" />
+   <img src="../assets/avatar/pathfinding/GeyserBlocker-Block.jpg" width="750" alt="Anchored part defining a region to apply a pathfinding modifier to." />
 
-1. Insert a `Class.PathfindingModifier` instance onto the part, locate its `Class.PathfindingModifier.Label|Label` property, and assign a meaningful name like **DangerZone**.
+2. Insert a `Class.PathfindingModifier` instance onto the part, locate its `Class.PathfindingModifier.Label|Label` property, and assign a meaningful name like `DangerZone`.
 
-   <img src="../assets/avatar/pathfinding/GeyserBlocker-PathfindingModifier-Label.png" width="320" alt="PathfindingModifier instance with Label property set to DangerZone" />
+   <img src="../assets/studio/properties/PathfindingModifier-Label.png" width="320" alt="PathfindingModifier instance with Label property set to DangerZone." />
 
-1. Include a `Costs` table within `Class.PathfindingService:CreatePath()|CreatePath()` containing a matching key and associated numeric value. A modifier can be defined as non-traversable by setting its value to `Library.math.huge`.
+3. Include a matching `DangerZone` key and associated numeric value within the `Costs` table of `Class.PathfindingService:CreatePath()|CreatePath()`. A modifier can be defined as non‑traversable by setting its value to `Library.math.huge`.
 
-   ```lua title="LocalScript - Character Pathfinding" highlight="6-8"
-   local PathfindingService = game:GetService("PathfindingService")
-   local Players = game:GetService("Players")
-   local RunService = game:GetService("RunService")
-   local Workspace = game:GetService("Workspace")
+		```lua title="PlayerPathFollow (LocalScript)"
+		local PathfindingService = game:GetService("PathfindingService")
+		local Players = game:GetService("Players")
+		local RunService = game:GetService("RunService")
 
-   local path = PathfindingService:CreatePath({
-   	Costs = {
-   		DangerZone = math.huge
-   	}
-   })
-   ```
+		local localPlayer = Players.LocalPlayer
+		local controls = require(localPlayer.PlayerScripts.PlayerModule):GetControls()
+		controls:Disable()
+
+		local DESTINATION = Vector3.new(20, 0.5, 20)
+		local GROUND_WAIT = 0.01
+		local VELOCITY_MULTIPLIER = 0.0625
+
+		local path = PathfindingService:CreatePath({
+			AgentCanClimb = true,
+			Costs = {
+				DangerZone = math.huge, Water = 20, CrackedLava = 20, Slate = 20
+			}
+		})
+		```
 
    <video controls src="../assets/avatar/pathfinding/GeyserBlocker-Path.mp4" width="800"></video>
 
@@ -462,163 +378,69 @@ In some cases, [material preference](#set-material-costs) is not enough. For exa
 
 In some cases, it's useful to pathfind through solid obstacles as if they didn't exist. This lets you compute a path through specific physical blockers, versus the computation failing outright.
 
-1. Create an `Class.BasePart.Anchored|Anchored` part around the object and set its `Class.BasePart.CanCollide|CanCollide` property to **false**.
+1. Create an `Class.BasePart.Anchored|Anchored` part around the object and set its `Class.BasePart.CanCollide|CanCollide` property to `false`.
 
-   <img src="../assets/avatar/pathfinding/DoorPassThrough-Block.jpg" width="750" alt="Anchored part defining a region to apply a pathfinding modifier to" />
+   <img src="../assets/avatar/pathfinding/DoorPassThrough-Block.jpg" width="750" alt="Anchored part defining a region to apply a pathfinding modifier to." />
 
-1. Insert a `Class.PathfindingModifier` instance onto the part and enable its `Class.PathfindingModifier.PassThrough|PassThrough` property.
+2. Insert a `Class.PathfindingModifier` instance onto the part and enable its `Class.PathfindingModifier.PassThrough|PassThrough` property.
 
-   <img src="../assets/avatar/pathfinding/DoorPassThrough-PathfindingModifier-PassThrough.png" width="320" alt="PathfindingModifier instance with PassThrough property enabled" />
+   <img src="../assets/studio/properties/PathfindingModifier-PassThrough.png" width="320" alt="PathfindingModifier instance with PassThrough property enabled." />
 
    Now, when a path is computed from the zombie NPC to the player character, the path extends beyond the door and you can prompt the zombie to traverse it. Even if the zombie is unable to open the door, it reacts as if it "hears" the character behind the door.
 
-   <img src="../assets/avatar/pathfinding/Zombie-Full-Path.jpg" width="750" alt="Zombie NPC path passing through the previously blocking door" />
+   <img src="../assets/avatar/pathfinding/Zombie-Full-Path.jpg" width="750" alt="Zombie NPC path passing through the previously blocking door." />
 
 ## Pathfinding links
 
 Sometimes it's necessary to find a path across a space that cannot be normally traversed, such as across a chasm, and perform a custom action to reach the next waypoint. This can be achieved through the `Class.PathfindingLink` object.
 
-Using the island example from above, you can make the agent use a boat instead of walking across all of the bridges.
+Using the example from above, you can make the agent use a boat.
 
-<img src="../assets/avatar/pathfinding/PathfindingLink-Path.jpg" width="800" alt="PathfindingLink showing how an agent can use a boat instead of walking across all of the bridges" />
+<img src="../assets/avatar/pathfinding/PathfindingLink-Path.jpg" width="800" alt="PathfindingLink showing how an agent can use a boat." />
 
 To create a `Class.PathfindingLink` using this example:
 
-1. <Chip label="optional" size="small" variant="outlined" color="primary" /> To assist with visualization and debugging, toggle on **Pathfinding&nbsp;links** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
-1. Create two `Class.Attachment|Attachments`, one on the boat's seat and one near the boat's landing point.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Toggle on **Pathfinding&nbsp;links** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport. This helps with visualization and debugging when implementing pathfinding links.
+2. Create two `Class.Attachment|Attachments`, one on the boat's seat and one near the boat's landing point.
 
-   <img src="../assets/avatar/pathfinding/PathfindingLink-Attachments.jpg" width="750" alt="Attachments created for pathfinding link's start and end" />
+   <img src="../assets/avatar/pathfinding/PathfindingLink-Attachments.jpg" width="750" alt="Attachments created for pathfinding link's start and end." />
 
-1. Create a `Class.PathfindingLink` object in the workspace, then assign its **Attachment0** and **Attachment1** properties to the starting and ending attachments respectively.
+3. Create a `Class.PathfindingLink` object in the workspace, then assign its `Class.PathfindingLink.Attachment0|Attachment0` and `Class.PathfindingLink.Attachment1|Attachment1` properties to the starting and ending attachments respectively.
 
-   <img src="../assets/avatar/pathfinding/PathfindingLink-Attachments-Properties.png" width="320" alt="Attachment0/Attachment1 properties of a PathfindingLink" />
+   <img src="../assets/studio/properties/PathfindingLink-Attachments.png" width="320" alt="Attachment0/Attachment1 properties of a PathfindingLink." />
 
-   <img src="../assets/avatar/pathfinding/PathfindingLink-In-World.jpg" width="750" alt="PathfindingLink visualized in the 3D world" />
+   <img src="../assets/avatar/pathfinding/PathfindingLink-In-World.jpg" width="750" alt="PathfindingLink visualized in the 3D world." />
 
-1. Assign a meaningful name like **UseBoat** to its `Class.PathfindingLink.Label|Label` property. This name is used as a flag in the pathfinding script to trigger a custom action when the agent reaches the starting link point.
+4. Assign a meaningful name like `UseBoat` to its `Class.PathfindingLink.Label|Label` property. This name is used as a flag in the pathfinding script to trigger a custom action when the agent reaches the starting link point.
 
-   <img src="../assets/avatar/pathfinding/PathfindingLink-Label.png" width="320" alt="Label property specified for PathfindingLink" />
+   <img src="../assets/studio/properties/PathfindingLink-Label.png" width="320" alt="Label property specified for PathfindingLink." />
 
-1. Include a `Costs` table within `Class.PathfindingService:CreatePath()|CreatePath()` containing both a `Water` key and a custom key matching the `Class.PathfindingLink.Label|Label` property name. Assign the custom key a lower value than `Water`.
+5. Include a `Costs` table within `Class.PathfindingService:CreatePath()|CreatePath()` containing both a `Water` key and a custom key matching the `Class.PathfindingLink.Label|Label` property name. Assign the custom key a value **lower** than that of `Water`.
 
-   ```lua title="LocalScript - Character Pathfinding" highlight="6-9"
-   local PathfindingService = game:GetService("PathfindingService")
-   local Players = game:GetService("Players")
-   local RunService = game:GetService("RunService")
-   local Workspace = game:GetService("Workspace")
+		```lua title="PlayerPathFollow (LocalScript)"
+		local PathfindingService = game:GetService("PathfindingService")
+		local Players = game:GetService("Players")
+		local RunService = game:GetService("RunService")
 
-   local path = PathfindingService:CreatePath({
-   	Costs = {
-   		Water = 20,
-   		UseBoat = 1
-   	}
-   })
-   ```
+		local localPlayer = Players.LocalPlayer
+		local controls = require(localPlayer.PlayerScripts.PlayerModule):GetControls()
+		controls:Disable()
 
-1. In the event which fires when a waypoint is reached, add a custom check for the `Class.PathfindingLink.Label|Label` modifier name and take a different action than `Class.Humanoid:MoveTo()`&nbsp;&mdash; in this case, calling a function to seat the agent in the boat, move the boat across the water, and continue the agent's path upon arrival at the destination island.
+		local DESTINATION = Vector3.new(20, 0.5, 20)
+		local GROUND_WAIT = 0.01
+		local VELOCITY_MULTIPLIER = 0.0625
 
-   ```lua title="LocalScript - Character Pathfinding" highlight="52-56, 72"
-   local PathfindingService = game:GetService("PathfindingService")
-   local Players = game:GetService("Players")
-   local RunService = game:GetService("RunService")
-   local Workspace = game:GetService("Workspace")
+		local path = PathfindingService:CreatePath({
+			AgentCanClimb = true,
+			Costs = {
+				UseBoat = 2, Water = 20
+			}
+		})
+		```
 
-   local path = PathfindingService:CreatePath({
-   	Costs = {
-   		Water = 20,
-   		UseBoat = 1
-   	}
-   })
+6. In the `moveToNextWaypoint()` function (<Chip label="LINES 97–118" size="small" variant="outlined" color="success" />), a custom check for the `Class.PathfindingLink.Label|Label` modifier name can be used to take a different action than `Class.Humanoid:Move()`; in this case, you might call a function to seat the agent in the boat, move the boat across the water, unseat the agent at the boat's landing point, and then continue the agent's path to its final destination.
 
-   local player = Players.LocalPlayer
-   local character = player.Character
-   local humanoid = character:WaitForChild("Humanoid")
-
-   local TEST_DESTINATION = Vector3.new(228.9, 17.8, 292.5)
-
-   local waypoints
-   local nextWaypointIndex
-   local reachedConnection
-   local blockedConnection
-
-   local function followPath(destination)
-   	-- Compute the path
-   	local success, errorMessage = pcall(function()
-   		path:ComputeAsync(character.PrimaryPart.Position, destination)
-   	end)
-
-   	if success and path.Status == Enum.PathStatus.Success then
-   		-- Get the path waypoints
-   		waypoints = path:GetWaypoints()
-
-   		-- Detect if path becomes blocked
-   		blockedConnection = path.Blocked:Connect(function(blockedWaypointIndex)
-   			-- Check if the obstacle is further down the path
-   			if blockedWaypointIndex >= nextWaypointIndex then
-   				-- Stop detecting path blockage until path is re-computed
-   				blockedConnection:Disconnect()
-   				-- Call function to re-compute new path
-   				followPath(destination)
-   			end
-   		end)
-
-   		-- Detect when movement to next waypoint is complete
-   		if not reachedConnection then
-   			reachedConnection = humanoid.MoveToFinished:Connect(function(reached)
-   				if reached and nextWaypointIndex < #waypoints then
-   					-- Increase waypoint index and move to next waypoint
-   					nextWaypointIndex += 1
-
-   					-- Use boat if waypoint label is "UseBoat"; otherwise move to next waypoint
-   					if waypoints[nextWaypointIndex].Label == "UseBoat" then
-   						useBoat()
-   					else
-   						humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
-   					end
-   				else
-   					reachedConnection:Disconnect()
-   					blockedConnection:Disconnect()
-   				end
-   			end)
-   		end
-
-   		-- Initially move to second waypoint (first waypoint is path start; skip it)
-   		nextWaypointIndex = 2
-   		humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
-   	else
-   		warn("Path not computed!", errorMessage)
-   	end
-   end
-
-   function useBoat()
-   	local boat = Workspace.BoatModel
-
-   	humanoid.Seated:Connect(function()
-   		-- Start boat moving if agent is seated
-   		if humanoid.Sit then
-   			task.wait(1)
-   			boat.CylindricalConstraint.Velocity = 5
-   		end
-   		-- Detect constraint position in relation to island
-   		local boatPositionConnection
-   		boatPositionConnection = RunService.PostSimulation:Connect(function()
-   			-- Stop boat when next to island
-   			if boat.CylindricalConstraint.CurrentPosition >= 94 then
-   				boatPositionConnection:Disconnect()
-   				boat.CylindricalConstraint.Velocity = 0
-   				task.wait(1)
-   				-- Unseat agent and continue to destination
-   				humanoid.Sit = false
-   				humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
-   			end
-   		end)
-   	end)
-   end
-
-   followPath(TEST_DESTINATION)
-   ```
-
-   <video controls src="../assets/avatar/pathfinding/Boat-Path.mp4" width="800" alt="Video showing character using the PathfindingLink to traverse the water using the boat" ></video>
+   <video controls src="../assets/avatar/pathfinding/Boat-Path.mp4" width="800" alt="Video showing character using the PathfindingLink to traverse the water using the boat"></video>
 
 ## Streaming compatibility
 
@@ -626,8 +448,28 @@ In-experience [instance streaming](../workspace/streaming/index.md) is a powerfu
 
 Consider the following best practices for using `Class.PathfindingService` in streaming-enabled experiences:
 
-- Streaming can block or unblock a given path as a character moves along it. For example, while a character runs through a forest, a tree might stream in somewhere ahead of them and obstruct the path. To make pathfinding work seamlessly with streaming, it's highly recommended that you use the [handling blocked paths](#handle-blocked-paths) technique and re-compute the path when necessary.
+- Streaming can block or unblock a given path as a character moves along it. For example, while a character runs through a forest, a tree might stream in somewhere ahead of them and obstruct the path. To make pathfinding work seamlessly with streaming, it's highly recommended that you use the [handling blocked paths](#blocked-paths) technique and re-compute the path when necessary.
 
-- A common approach in pathfinding is to use the coordinates of existing objects for [computation](#compute-the-path), such as setting a path destination to the position of an existing **TreasureChest** model in the world. This approach is fully compatible with server-side `Class.Script|Scripts` since the server has full view of the world at all times, but `Class.LocalScript|LocalScripts` and `Class.ModuleScript|ModuleScripts` that run on the client may fail if they attempt to compute a path to an object that's not streamed in.
+- A common approach in pathfinding is to use the coordinates of existing objects for [computation](#path-computation), such as setting a path destination to the position of an existing `TreasureChest` model in the world. This approach is fully compatible with server-side `Class.Script|Scripts` since the server has full view of the world at all times, but `Class.LocalScript|LocalScripts` and `Class.ModuleScript|ModuleScripts` that run on the client may fail if they attempt to compute a path to an object that's not streamed in.
 
   To address this issue, consider setting the destination to the position of a `Class.BasePart` within a [persistent](../workspace/streaming/index.md#model-streaming-controls) model. Persistent models load soon after the player joins and they never stream out, so a client-side script can connect to the `Class.Workspace.PersistentLoaded|PersistentLoaded` event and safely access the model for creating waypoints after the event fires.
+
+## Limitations and failure factors
+
+The pathfinding engine includes specific limitations to ensure efficient processing and optimal performance. Additionally, pathfinding [computations](#path-computation) can fail for various reasons as outlined below.
+
+<Alert severity="warning" variant="outlined">
+**Path request too long** — The direct line‑of‑sight distance for pathfinding from the start to the finish point must not exceed 3,000 studs.
+</Alert>
+
+<Alert severity="warning" variant="outlined">
+**Node budget exhausted** — A pathfinding computation may exceed 20,000 nodes well before reaching the distance cap of 3,000 studs, especially when pathfinding in a vast open world or through complex mazes.
+</Alert>
+
+<Alert severity="warning" variant="outlined">
+**Incompatible agent parameters** — A pathfinding computation will fail if the [creation parameters](#path-creation) cannot resolve. For example, if the destination can **only** be reached by the agent jumping but `AgentCanJump` is `false`, or `AgentHeight` is greater than the height of any traversable path.
+</Alert>
+
+<Alert severity="warning" variant="outlined">
+**Vertical waypoint limits** — Pathfinding calculations only consider paths within a set vertical boundary. Potential waypoints with a bottom global **Y** coordinate less than `-65,536` studs or greater than `65,536` studs are ignored.
+</Alert>

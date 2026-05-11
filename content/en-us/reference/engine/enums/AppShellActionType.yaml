@@ -65,3 +65,8 @@ items:
     value: 10
     tags: []
     deprecation_message: ''
+  - name: HomePageInteractive
+    summary: ''
+    value: 11
+    tags: []
+    deprecation_message: ''

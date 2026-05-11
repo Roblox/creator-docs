@@ -1014,6 +1014,20 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
+  - name: DataModel.ServerLifecycleChanged
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: serverLifecycleChangedEvent
+        type: Dictionary
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - ServerCommunication
 callbacks:
   - name: DataModel.OnClose
     summary: |

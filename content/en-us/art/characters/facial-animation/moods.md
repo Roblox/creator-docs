@@ -29,13 +29,9 @@ To create a mood:
 1. Add a character model with an animatable head to the viewport.
 1. Open the **Face Animation Editor**.
 
-   1. From the toolbar's **Avatar** tab, click **Animation**. The [Animation Editor](../../../animation/editor.md) window displays.
-   1. In the viewport, select your character model with an animatable head. A dialog displays.
-
-      <img width="40%" img src="../../../assets/animation/animation-editor/Create-Animation-Dialog.png" />
-
-   1. In the **Animation Name** field, enter a new animation name, then click the **Create** button. The **Animation Editor** window displays the **media and playback controls**, **timeline**, and **track list**.
-   1. In the editor's **track list**, click the **Face** button. The **Face Animation Editor** displays to the left of the track list.
+   1. From the toolbar's **Avatar** tab, click **Clip Editor**. The [Animation Editor](../../../animation/editor.md) window displays.
+   1. In the viewport, select your character model with an animatable head.
+   1. In the editor's [track list](../../../animation/editor.md#interface), click the **Face** button. The **Face Animation Editor** displays to the left of the track list.
 
 1. In the **Face Animation Editor**, adjust sliders for the facial parts you want to manipulate. Animation tracks for each facial part you manipulate automatically display in the track list along with keyframes for your current position in the timeline. The character's face also updates in the viewport.
 
@@ -45,7 +41,7 @@ To create a mood:
 
 1. When you are finished creating your animation, navigate to the **Media and Playback Controls** and click the **…** button. A pop-up menu displays.
 
-   <img width="60%" img src="../../../assets/animation/animation-editor/Controls-File-Menu.png" />
+   <img img src="../../../assets/animation/animation-editor/Controls-File-Menu.png" width="680" />
 
 1. Select **Save** or **Save As** to save the mood animation. The animation displays in the **Explorer** window as a child of the **AnimSaves** object (itself a child of the rig).
 

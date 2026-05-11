@@ -97,7 +97,7 @@ This is an important moment in a character's stride because both feet equally su
 
 To create a first pass Contact pose for the left foot cycle:
 
-1. From the toolbar's **Avatar** tab, click **Animation**. The [Animation Editor](../../../animation/editor.md) window displays.
+1. From the toolbar's **Avatar** tab, click **Clip Editor**. The [Animation Editor](../../../animation/editor.md) window displays.
 1. Select your rig. A contextual menu displays.
 1. In the **Animation Name** field, input a name for your animation, then click the **Create** button.
 1. **(Optional)** Set the timeline to 24 frames per second.

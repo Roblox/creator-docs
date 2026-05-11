@@ -101,8 +101,6 @@ navigation:
         path: /avatar-setup/auto-setup
       - title: Auto-setup requirements
         path: /avatar-setup/auto-setup-requirements
-      - title: Preview and edit tools
-        path: /avatar-setup/tools
   - title: More Studio tools
     section:
       - title: Importer

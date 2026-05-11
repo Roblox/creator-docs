@@ -274,7 +274,7 @@ Because we animated the character outside of Studio, we needed to use the **Anim
 
 To import an animation:
 
-1. In the toolbar's **Avatar** tab, click **Animation**.
+1. In the toolbar's **Avatar** tab, click **Clip Editor**.
 2. Select the rigged character that you want to animate in Roblox. The character should be the same one you are rigging in your external DCC application.
 3. Click the **&ctdot;** button in the upper-left section of the editor window, select **Import From FBX Animation**, and locate your exported `.fbx` animation file.
 

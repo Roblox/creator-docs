@@ -729,12 +729,52 @@ methods:
           end)
 
           if not pcallSuccess then
-              warn("Failed to prompt for image: ", result)
+              errName, errDesc = unpack(string.split(result, ": "))
+              if errName == "SelfieConsentDenied" then
+                  warn("Player must accept consent to use feature.")
+              else
+                  warn("Failed to prompt for image: ", errDesc)
+              end
           end
 
           return result
       end
       ```
+
+      On failure, the result string has the format
+      `ErrorName: Error description`, allowing the error type to be identified
+      programmatically.
+
+      <table>
+      <thead>
+        <tr>
+          <th>Error name</th>
+          <th>Error description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>`SelfieConsentDenied`</td>
+          <td>Selfie consent not accepted</td>
+        </tr>
+        <tr>
+          <td>`QRTooManyRequests`</td>
+          <td>Failure to generate QR url due to too many requests; please wait and try again later</td>
+        </tr>
+        <tr>
+          <td>`MediaPermissionsDenied`</td>
+          <td>Permissions not granted for taking photo</td>
+        </tr>
+        <tr>
+          <td>`FeatureUnavailable`</td>
+          <td>Feature not available for player</td>
+        </tr>
+        <tr>
+          <td>`GenerationInProgress`</td>
+          <td>Generation already in progress for player</td>
+        </tr>
+      </tbody>
+      </table>
     code_samples: []
     parameters:
       - name: player
@@ -745,7 +785,8 @@ methods:
     returns:
       - type: string
         summary: |
-          A string FileId of the selfie.
+          A string FileId of the selfie on success, or an error string
+          describing the reason for failure.
     tags:
       - Yields
     deprecation_message: ''

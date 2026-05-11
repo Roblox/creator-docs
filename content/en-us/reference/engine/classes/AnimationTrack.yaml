@@ -659,6 +659,14 @@ methods:
       and its effects completely end. Please note this will be the case
       regardless of the initial weight of the animation.
 
+      #### Usage Notes
+
+      After calling `Stop()`, subsequent calls to `Stop()` and
+      `Class.AnimationTrack:AdjustWeight()|AdjustWeight()` will not work as
+      expected. To adjust a track that's fading out, you must first call
+      `Class.AnimationTrack:Play()|Play()` to reset the
+      `Class.AnimationTrack.IsPlaying|IsPlaying` property to `true`.
+
       It is not recommended to use a `fadeTime` of `0` in an attempt to override
       this effect and end the animation immediately for `Class.Motor6D|Motor6Ds`
       that have their `Class.Motor.MaxVelocity` set to zero, as this causes the

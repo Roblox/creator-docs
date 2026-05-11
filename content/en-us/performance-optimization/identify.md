@@ -32,6 +32,13 @@ Roblox has a number of tools for identifying performance issues, some of which a
     <td>Live sessions, Studio testing</td>
   </tr>
   <tr>
+    <td>[Scene Analysis](./scene-analysis.md)</td>
+    <td>Provides at-a-glance comparative information about the resources your client and server scenes are using and which instances are responsible for that resource usage.</td>
+    <td>Studio</td>
+    <td>N/A</td>
+    <td>Studio testing</td>
+  </tr>
+  <tr>
     <td>Performance Stats bar</td>
     <td>A toolbar with basic performance statistics, including memory consumption, CPU, GPU, network data sent and received, and ping time.</td>
     <td>In-game</td>

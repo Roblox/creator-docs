@@ -136,7 +136,7 @@ To test the animation in Studio:
 
 1. Connect the rig to the **Animation Editor**.
 
-   1. From the toolbar's **Avatar** tab, click **Animation**. The [Animation Editor](../../animation/editor.md) window displays.
+   1. From the toolbar's **Avatar** tab, click **Clip Editor**. The [Animation Editor](../../animation/editor.md) window displays.
    1. In the viewport, click your rig. A dialog displays in the editor.
    1. In the **Animation Name** field, enter a new animation name, then click the **Create** button. The editor window displays the media and playback controls, timeline, and track list.
 

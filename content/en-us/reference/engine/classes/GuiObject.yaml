@@ -398,6 +398,23 @@ properties:
       can_save: true
     capabilities:
       - UI
+  - name: GuiObject.InputSink
+    summary: ''
+    description: ''
+    code_samples: []
+    type: InputSink
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
   - name: GuiObject.Interactable
     summary: |
       Determines whether the `Class.GuiButton` can be interacted with or not, or

@@ -16,7 +16,7 @@ These instructions apply specifically to the Makeup test place, available in the
    - If modified, `Face` mesh and associated textures.
    - If modified, `Eyes` mesh and associated textures.
 2. In Studio, open up the Makeup test place.
-3. Click **File** > **Import 3D** and select your 3D makeup asset. Verify there are no errors with the imported components.
+3. Click **File** > **Import** and select your 3D makeup asset. Verify there are no errors with the imported components.
 4. Click **Import** to add the file into Studio. A new `Model` populates in the workspace.
 5. In the **Explorer** window, expand the new `Model`. Verify that `Decal` child objects have populated, each with their own `WrapTextureTransfer` child object.
 

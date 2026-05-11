@@ -88,6 +88,7 @@ properties:
       can_save: true
     capabilities:
       - Animation
+    simulationAccess: true
   - name: IKControl.Enabled
     summary: |
       Toggles the control on and off. True by default.
@@ -109,6 +110,7 @@ properties:
       can_save: true
     capabilities:
       - Animation
+    simulationAccess: true
   - name: IKControl.EndEffector
     summary: |
       The part that you are interested in moving to reach the
@@ -140,6 +142,7 @@ properties:
       can_save: true
     capabilities:
       - Animation
+    simulationAccess: true
   - name: IKControl.EndEffectorOffset
     summary: |
       An additional offset applied on top of the
@@ -328,6 +331,7 @@ properties:
       can_save: true
     capabilities:
       - Animation
+    simulationAccess: true
   - name: IKControl.Type
     summary: |
       Specifies how the solver satisfies this control.
@@ -359,6 +363,7 @@ properties:
       can_save: true
     capabilities:
       - Animation
+    simulationAccess: true
   - name: IKControl.Weight
     summary: |
       Specifies the weight of the IK control target. Should be in the [0, 1]
@@ -389,6 +394,7 @@ properties:
       can_save: true
     capabilities:
       - Animation
+    simulationAccess: true
 methods:
   - name: IKControl:GetChainCount
     summary: ''

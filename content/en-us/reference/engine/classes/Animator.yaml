@@ -8,13 +8,12 @@ memory_category: Instances
 summary: |
   Responsible for the playback and replication of `Class.Animation|Animations`.
 description: |
-  The main class responsible for the playback and replication of
+  `Animator` is the main class responsible for the playback and replication of
   `Class.Animation|Animations`. All replication of playing
-  `Class.AnimationTrack|AnimationTracks` is handled through the `Class.Animator`
+  `Class.AnimationTrack|AnimationTracks` is handled through the `Animator`
   instance.
 
-  See also [Animation Editor](../../../animation/editor.md) and
-  [Using Animations](../../../animation/using.md) to learn how to create and add
+  See [Animation in Roblox](../../../animation/) to learn how to create and add
   pre-built or custom animations to your game.
 code_samples: []
 inherits:
@@ -102,27 +101,26 @@ properties:
 methods:
   - name: Animator:ApplyJointVelocities
     summary: |
-      Computes relative velocities between parts and apply them to
-      `Class.Motor6D.Part1`. These relative velocity calculations and
-      assignments happen in the order provided.
+      Computes relative velocities between parts and applies them to
+      `Class.Motor6D.Part1`.
     description: |
-      Given the current set of `Class.AnimationTrack|AnimationTracks` playing,
-      and their current times and play speeds, compute relative velocities
-      between the parts and apply them to Motor6D.Part1 (the part which
-      `Class.Animator` considers the "child" part). These relative velocity
-      calculations and assignments happen in the order provided.
+      Given the current set of `Class.AnimationTrack|AnimationTracks` playing
+      and their current times and play speeds, this method computes relative
+      velocities between the parts and applies them to `Class.Motor6D.Part1`
+      (the part which `Animator` considers the "child" part). These relative
+      velocity calculations and assignments happen in the order provided.
 
       This method doesn't apply velocities for a given joint if both of the
-      joint's parts are currently part of the same assembly, for example, if
-      they are still connected directly or indirectly by Motors or Welds.
+      joint's parts are currently part of the same assembly; for example, if
+      they are still connected directly or indirectly by motors or welds.
 
-      This method doesn't disable or remove the joints for you. You must disable
-      or otherwise remove the rigid joints from the assembly before calling this
-      method.
+      Note that this method doesn't disable or remove the joints for you. You
+      must disable or otherwise remove the rigid joints from the assembly before
+      calling this method.
 
-      The given `Motor6Ds` are not required to be descendants of the
-      `Class.DataModel`. Removing the joints from the `Class.DataModel` before
-      calling this method is supported.
+      The given `Class.Motor6D|Motor6Ds` are not required to be descendants of
+      the `Class.DataModel`. Removing the joints from the `Class.DataModel`
+      before calling this method is supported.
     code_samples: []
     parameters:
       - name: motors
@@ -140,11 +138,15 @@ methods:
       - Animation
   - name: Animator:GetPlayingAnimationTracks
     summary: |
-      Returns the list of currently playing
+      Returns the list of currently active
       `Class.AnimationTrack|AnimationTracks`.
     description: |
-      Returns the list of currently playing
-      `Class.AnimationTrack|AnimationTracks`.
+      Returns the list of currently active
+      `Class.AnimationTrack|AnimationTracks` on this `Class.Animator`. This
+      includes tracks that are fading out and does **not** depend on
+      `Class.AnimationTrack.IsPlaying` being `true`; as a result,
+      `Class.Animator:GetTrackByAnimationId()|GetTrackByAnimationId()` may be a
+      better option to get a specific `Class.AnimationTrack` by its asset ID.
     code_samples: []
     parameters: []
     returns:
@@ -157,28 +159,65 @@ methods:
     capabilities:
       - Animation
     simulationAccess: true
+  - name: Animator:GetTrackByAnimationId
+    summary: |
+      Returns an existing `Class.AnimationTrack` on this `Class.Animator` that
+      was loaded from an `Class.Animation` with the given animation ID. Unlike
+      `Class.Animator:LoadAnimation()|LoadAnimation()`, this method does not
+      create a new `Class.AnimationTrack` instance.
+    description: |
+      Returns an existing `Class.AnimationTrack` on this `Class.Animator` that
+      was loaded from an `Class.Animation` with the given animation ID. Unlike
+      `Class.Animator:LoadAnimation()|LoadAnimation()`, this method does **not**
+      create a new `Class.AnimationTrack` instance; it only looks up a track
+      that was previously loaded.
+
+      If multiple tracks have been loaded for the same animation ID, this method
+      returns the first match. If no matching track exists, it returns `nil`.
+    code_samples:
+      - Animator-GetTrackByAnimationId
+    parameters:
+      - name: animationId
+        type: ContentId
+        default:
+        summary: |
+          The asset ID of the `Class.Animation` whose loaded track should be
+          retrieved.
+    returns:
+      - type: AnimationTrack?
+        summary: |
+          The first `Class.AnimationTrack` on this `Animator` that was loaded
+          from the given animation ID, or `nil` if none has been loaded.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Animation
+    simulationAccess: true
   - name: Animator:LoadAnimation
     summary: |
-      Loads an `Class.Animation` onto an `Class.Animator`, returning an
+      Loads an `Class.Animation` onto an `Animator`, returning an
       `Class.AnimationTrack`.
     description: |
-      This function loads the given `Class.Animation` onto this
-      `Class.Animator`, returning a playable `Class.AnimationTrack`. When called
-      on an `Class.Animator` within models that the client has network ownership
-      of, for example the local player's character or from
-      `Class.BasePart:SetNetworkOwner()`, this function also loads the animation
-      for the server as well.
+      This method loads the given `Class.Animation` onto this `Animator`,
+      returning a playable `Class.AnimationTrack`. When called on an `Animator`
+      within models that the client has network ownership of, for example the
+      local player's character or from `Class.BasePart:SetNetworkOwner()`, this
+      method also loads the animation for the server as well.
 
-      Note that the `Class.Animator` must be in the `Class.Workspace` before
-      making a call to `LoadAnimation()` or else it will be unable to retrieve
-      the `Class.AnimationClipProvider` service and throw an error.
+      Note that the `Animator` must be in the `Class.Workspace` before making a
+      call to `LoadAnimation()` or else it will be unable to retrieve the
+      `Class.AnimationClipProvider` service and throw an error.
 
-      You should use this function directly instead of the similarly-named
-      `Class.Humanoid:LoadAnimation()` and
-      `Class.AnimationController:LoadAnimation()` functions. These are
-      deprecated proxies of this function which also create an `Class.Animator`
-      if one does not exist; this can cause replication issues if you are not
-      careful.
+      #### Warning
+
+      Do **not** use `LoadAnimation()` in an attempt to retrieve an existing
+      track. Calling `LoadAnimation()` always creates a **new**
+      `Class.AnimationTrack` instance which may impact game performance if
+      overused. Instead, use
+      `Class.Animator:GetTrackByAnimationId()|GetTrackByAnimationId()` when you
+      need to look up a track that was already loaded.
 
       #### Loading an Animation on Client or Server
 
@@ -186,19 +225,18 @@ methods:
       correctly, it's important to know when they should be loaded on the client
       or on the server:
 
-      - If an `Class.Animator` is a descendant of a `Class.Humanoid` or
+      - If an `Animator` is a descendant of a `Class.Humanoid` or
         `Class.AnimationController` in a player's `Class.Player.Character`,
         animations started on that player's client will be replicated to the
         server and other clients.
 
-      - If the `Class.Animator` is **not** a descendant of a player character,
-        its animations must be loaded and started on the server to replicate.
+      - If the `Animator` is **not** a descendant of a player character, its
+        animations must be loaded and started on the server to replicate.
 
-      The `Class.Animator` object must be initially created on the server and
+      The `Animator` object must be initially created on the server and
       replicated to clients for animation replication to work at all. If an
-      `Class.Animator` is created locally, then
-      `Class.AnimationTrack|AnimationTracks` loaded with that `Class.Animator`
-      will not replicate.
+      `Animator` is created locally, then `Class.AnimationTrack|AnimationTracks`
+      loaded with that `Animator` will not replicate.
     code_samples: []
     parameters:
       - name: animation
@@ -238,31 +276,20 @@ methods:
     summary: |
       Increments the `Class.AnimationTrack.TimePosition` of all playing
       `Class.AnimationTrack|AnimationTracks` that are loaded onto the
-      `Class.Animator`, applying the offsets to the model associated with the
-      `Class.Animator`. For use in the command bar or by plugins only.
+      `Animator`, applying the offsets to the model associated with the
+      `Animator`. For use in the command bar or by plugins only.
     description: |
       Increments the `Class.AnimationTrack.TimePosition` of all playing
       `Class.AnimationTrack|AnimationTracks` that are loaded onto the
-      `Class.Animator`, applying the offsets to the model associated with the
-      `Class.Animator`. For use in the command bar or by plugins only.
+      `Animator`, applying the offsets to the model associated with the
+      `Animator`. For use in the command bar or by plugins only.
 
-      The deltaTime parameter determines the number of seconds to increment on
-      the animation's progress. Typically this function will be called in a loop
+      The `deltaTime` parameter determines the number of seconds to increment on
+      the animation's progress. Typically this method will be called in a loop
       to preview the length of an animation (see example).
 
       Note that once animations have stopped playing, the model's joints will
       need to be manually reset to their original positions (see example).
-
-      This function is used to simulate playback of `Class.Animation|Animations`
-      when the game isn't running. This allows animations to be previewed
-      without the consequences of running the game, such as scripts executing.
-      If the function is called while the game is running, or by
-      `Class.Script|Scripts` or `Class.LocalScript|LocalScripts`, it will return
-      an error.
-
-      Developers designing their own custom animation editors are advised to use
-      this function to preview animations, as it is the method the official
-      Roblox Animation Editor plugin uses.
     code_samples:
       - Animator-StepAnimations
     parameters:
@@ -270,7 +297,7 @@ methods:
         type: float
         default:
         summary: |
-          The amount of time in seconds animation playback is to be incremented
+          The amount of time in seconds animation playback is to be incremented.
           by.
     returns:
       - type: ()
@@ -284,10 +311,11 @@ methods:
 events:
   - name: Animator.AnimationPlayed
     summary: |
-      Fires when the Animator starts playing an AnimationTrack.
+      Fires when the `Animator` starts playing an `Class.AnimationTrack`.
     description: |
-      Fires for all `Class.AnimationTrack:Play()` calls on AnimationTracks
-      created and owned by the Animator.
+      Fires for all `Class.AnimationTrack:Play()` calls on
+      `Class.AnimationTrack|AnimationTracks` created and owned by the
+      `Animator`.
     code_samples: []
     parameters:
       - name: animationTrack

@@ -66,6 +66,11 @@ properties:
           <td>Evaluates to <code>true</code> if <code>PreferredInput</code> matches <code>Class.UserInputService.PreferredInput</code>.</td>
         </tr>
         <tr>
+          <td><code>PreferredTextSize</code></td>
+          <td><code>Enum.PreferredTextSize</code></td>
+          <td>Evaluates to <code>true</code> if <code>PreferredTextSize</code> matches <code>Class.GuiService.PreferredTextSize</code>.</td>
+        </tr>
+        <tr>
           <td><code>ReducedMotionEnabled</code></td>
           <td>boolean</td>
           <td>Evaluates to <code>true</code> if <code>ReducedMotionEnabled</code> matches <code>Class.GuiService.ReducedMotionEnabled</code>.</td>

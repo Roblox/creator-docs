@@ -20,6 +20,38 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: ScriptContext:EnableCoverage
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: instance
+        type: Instance
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - PluginOrOpenCloud
+  - name: ScriptContext:GetCoverageStats
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - PluginOrOpenCloud
   - name: ScriptContext:SetTimeout
     summary: |
       Limits how long a script is allowed to run without yielding.
