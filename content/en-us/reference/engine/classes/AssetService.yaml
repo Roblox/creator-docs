@@ -716,7 +716,6 @@ methods:
 
           - `Items` — Array of items in the bundle, each with details
             represented through the following keys:
-
             - `Id` — Item ID
 
             - `Name` — Item name

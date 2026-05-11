@@ -468,7 +468,7 @@ methods:
         default:
         summary: |
           A unique string that identifies the generated avatar, as returned by
-          `Class.AvatarCreationService:AutoSetupAvatarAsync()| AutoSetupAvatarAsync()`.
+          `Class.AvatarCreationService:AutoSetupAvatarAsync()|       AutoSetupAvatarAsync()`.
     returns:
       - type: HumanoidDescription
         summary: |

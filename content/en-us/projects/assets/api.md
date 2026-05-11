@@ -9,7 +9,7 @@ Each API requires a URL and custom search parameters for that specific catalog. 
 
 ## Creator Store API
 
-For information on making calls to the Creator Store API for search, see Toolbox Service in the [Open Cloud reference](../../cloud/features/creator-store.md#toolbox-service).
+For information on making calls to the Creator Store API for search, see Toolbox Service in the [Open Cloud reference](/cloud/reference/features/creator-store#Toolbox_SearchCreatorStoreAssets).
 
 ## Marketplace API
 

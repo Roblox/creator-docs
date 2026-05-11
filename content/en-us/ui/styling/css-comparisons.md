@@ -440,8 +440,6 @@ CollectionService:AddTag(frame, "RoundedCorner20")
 
 Roblox **style queries** bridge the gap between CSS [media queries](https://developer.mozilla.org/docs/Web/CSS/CSS_media_queries) and [container queries](https://developer.mozilla.org/docs/Web/CSS/CSS_containment/Container_queries). Using the `@` prefix, you can toggle styles based on parent dimensions, input device types, or user accessibility settings.
 
-<BetaAlert betaName="StyleQuery" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
-
 In CSS, `@container` applies styles based on the size of a parent element. In Roblox, you define a pseudo‑instance query using `::StyleQuery` followed by an [identifier](#identifier) for the condition's `Class.StyleRule.Selector|Selector` property, for example <Typography noWrap>`"::StyleQuery #WideContainer"`</Typography>, alongside a `Class.StyleQuery` condition name like `"MinSize"` to evaluate the parent's `Class.GuiObject.AbsoluteSize`. Then, to apply styles to the instance or its children when the query is active, create a `Class.StyleRule` with the `@[identifier]` prefix as its `Class.StyleRule.Selector|Selector`, for example `@WideContainer`.
 
 <Card>

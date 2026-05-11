@@ -3349,26 +3349,6 @@ navigation:
             type: engineapi
             source: /reference/engine/classes/PluginConnection.yaml
             ignoreTranslation: true
-          - title: TerrainIterateOperation
-            path: /reference/engine/classes/TerrainIterateOperation
-            type: engineapi
-            source: /reference/engine/classes/TerrainIterateOperation.yaml
-            ignoreTranslation: true
-          - title: TerrainModifyOperation
-            path: /reference/engine/classes/TerrainModifyOperation
-            type: engineapi
-            source: /reference/engine/classes/TerrainModifyOperation.yaml
-            ignoreTranslation: true
-          - title: TerrainReadOperation
-            path: /reference/engine/classes/TerrainReadOperation
-            type: engineapi
-            source: /reference/engine/classes/TerrainReadOperation.yaml
-            ignoreTranslation: true
-          - title: TerrainWriteOperation
-            path: /reference/engine/classes/TerrainWriteOperation
-            type: engineapi
-            source: /reference/engine/classes/TerrainWriteOperation.yaml
-            ignoreTranslation: true
           - title: VideoSampler
             path: /reference/engine/classes/VideoSampler
             type: engineapi

@@ -410,9 +410,10 @@ methods:
       script source, which is the text the editor would display if it is opened.
 
       ```lua
-      local ses = game:GetService('ScriptEditorService')
-      ses:UpdateSourceAsync(Workspace.Script, function(oldContent)
-        return oldContent .. " World!"
+      local ScriptEditorService = game:GetService("ScriptEditorService")
+
+      ScriptEditorService:UpdateSourceAsync(workspace.Script, function(oldContent)
+      	return oldContent .. " World!"
       end)
       ```
     code_samples: []

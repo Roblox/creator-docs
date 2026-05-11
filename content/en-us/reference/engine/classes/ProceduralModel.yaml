@@ -74,11 +74,27 @@ properties:
       `ProceduralModel` generates its contents in response to parameter changes.
 
       Setting `Generator` triggers generation using the new generator module.
+      The `Attributes` table exported by the module is automatically applied as
+      default attribute values on the `ProceduralModel`.
 
       Clearing `Generator` preserves the current contents of the
       `ProceduralModel`, and prevents further generation until a new generator
       is assigned.
-    code_samples: []
+
+      Guidelines for writing the generator module's `OnGenerate` function:
+
+      - Only write results into the provided `targetContainer`. `OnGenerate`
+        should not modify the `Class.DataModel` directly; writes elsewhere may
+        not interact correctly with engine systems.
+      - `OnGenerate` is allowed to yield and call yielding methods (for example,
+        `Class.GeometryService` CSG APIs). Generation is considered complete
+        whenever `OnGenerate` returns.
+      - Calling `parameters:Pause()` inside long-running loops lets the engine
+        break up work. It only yields when needed to avoid dropping frames, so
+        calls are low-cost when the frame budget is not exceeded.
+    code_samples:
+      - ProceduralModel-Generator-Default
+      - ProceduralModel-Generator-Ladder
     type: ModuleScript
     tags: []
     deprecation_message: ''
@@ -107,8 +123,11 @@ properties:
       The `Size` property represents the **physical** dimensions of the
       `ProceduralModel` and is affected by `Class.Model.ScaleTo|ScaleTo`. The
       `OnGenerate` function in a generator module doesn't need to account for
-      scaling; `OnGenerate` is always executed at a scale of 1, and the system
-      automatically scales the generated results.
+      position or scaling: it produces a result of the specified `Size` around
+      the origin at a scale of 1, and the procedural model system automatically
+      uses `Class.PVInstance:PivotTo()|PivotTo()` and
+      `Class.Model:ScaleTo()|ScaleTo()` to place and scale the output in the
+      `ProceduralModel`.
     code_samples: []
     type: Vector3
     tags: []

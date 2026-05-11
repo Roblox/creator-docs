@@ -488,8 +488,16 @@ properties:
       - UI
 methods:
   - name: ScrollingFrame:GetScrollVelocity
-    summary: ''
-    description: ''
+    summary: |
+      Returns a `Datatype.Vector2` representing the current inertial scroll
+      velocity after the user stops their input.
+    description: |
+      Returns a `Datatype.Vector2` representing the current inertial scroll
+      velocity after the user stops their input, for example lifts their finger
+      off the `ScrollingFrame` on a touch-enabled device.
+
+      Note that this method may only produce noticable data on an actual device
+      or in an emulated scenario from Studio's **Device&nbsp;Emulator**.
     code_samples: []
     parameters: []
     returns:
@@ -502,8 +510,12 @@ methods:
     capabilities:
       - UI
   - name: ScrollingFrame:ResetScrollVelocity
-    summary: ''
-    description: ''
+    summary: |
+      Resets the inertial scroll velocity of the `ScrollingFrame` to `0` on both
+      axes.
+    description: |
+      Resets the inertial scroll velocity of the `ScrollingFrame` to `0` on both
+      axes.
     code_samples: []
     parameters: []
     returns:

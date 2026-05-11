@@ -311,22 +311,95 @@ A **pseudo instance** is required to configure and apply rounded corners to othe
 
 Style **queries**, similar to [CSS container and media queries](./css-comparisons.md#queries), allow you to apply conditional logic to your UI based on container size, input type, or other factors. The Style Editor provides a streamlined workflow to create both the query logic (conditions) and the resulting styles as a unified set.
 
-<BetaAlert betaName="StyleQuery" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
+### Built-in queries
 
-### Creation
+Some `Class.StyleQuery` conditions are very common, such as changing properties based on the `Class.GuiService.ViewportDisplaySize|ViewportDisplaySize`. To simplify this, the Style Editor includes **built‑in** queries which allow you to create conditional rules without needing a pseudo or real instance of a `Class.StyleQuery`; instead, you simply use a query rule with a predefined selector like `ViewportDisplaySizeSmall`.
+
+The following steps demonstrate how to generate built‑in queries for a `Class.TextLabel` to handle `Enum.DisplaySize.Small|Small`, `Enum.DisplaySize.Medium|Medium`, and `Enum.DisplaySize.Large|Large` viewport sizes.
+
+1. In the left column of the Style Editor, hover over **TextLabel**, click the **⋮** button, and navigate through to **New**&nbsp;⟩ **StyleQuery**&nbsp;⟩ **Builtin**&nbsp;⟩ **ViewportDisplaySize**.
+
+   <img src="../../assets/ui/ui-styling/SE-Query-New-Builtin.png" width="840" alt="Creation of a built-in StyleQuery in the Style Editor." />
+
+   This creates a **Queries** folder under the **TextLabel** rule containing three query rules:
+
+   - **@ViewportDisplaySizeLarge** — Define properties that apply when the viewport is `Enum.DisplaySize.Large|Large`.
+   - **@ViewportDisplaySizeMedium** — Define properties that apply when the viewport is `Enum.DisplaySize.Medium|Medium`.
+   - **@ViewportDisplaySizeSmall** — Define properties that apply when the viewport is `Enum.DisplaySize.Small|Small`.
+
+   <img src="../../assets/ui/ui-styling/SE-Query-Builtin-Hierarchy.png" width="400" alt="Hierarchy of a StyleQuery within a class rule." />
+
+2. Click **Add a Property…** under each query rule and set the specific `Class.TextLabel.Text|Text` string that should display when that query is active:
+
+   <table size="small">
+   <thead>
+     <tr>
+       <th>Query Rule</th>
+       <th>Property</th>
+       <th>Value</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>**@ViewportDisplaySizeLarge**</td>
+       <td>`Class.TextLabel.Text|Text`</td>
+       <td>`Large Text`</td>
+     </tr>
+     <tr>
+       <td>**@ViewportDisplaySizeMedium**</td>
+       <td>`Class.TextLabel.Text|Text`</td>
+       <td>`Medium Text`</td>
+     </tr>
+     <tr>
+       <td>**@ViewportDisplaySizeSmall**</td>
+       <td>`Class.TextLabel.Text|Text`</td>
+       <td>`Small Text`</td>
+     </tr>
+   </tbody>
+   </table>
+
+3. To verify the queries, use the [Device Emulator](../../studio/testing-modes.md#device-emulation) to test how the UI responds to different resolutions across three distinct devices:
+
+   1. Insert a new `Class.TextLabel` into the `Class.ScreenGui`.
+   2. Change the **Device** in the [Device Emulator](../../studio/testing-modes.md#device-emulation) to see the text change in real time.
+
+      <table size="small">
+      <thead>
+      <tr>
+       <th>Size</th>
+       <th>Example Emulations</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+       <td>`Enum.DisplaySize.Large|Large`</td>
+       <td>**PS5**, **PS4**, **Xbox One**</td>
+      </tr>
+      <tr>
+       <td>`Enum.DisplaySize.Medium|Medium`</td>
+       <td>**Average Laptop**, **HD 720**</td>
+      </tr>
+      <tr>
+       <td>`Enum.DisplaySize.Small|Small`</td>
+       <td>**iPhone XR**, **iPad 7th Generation**</td>
+      </tr>
+      </tbody>
+      </table>
+
+### Custom query
 
 You can add a style query to any existing rule to create responsive UI that adapts to its container. The following setup configures a `Class.TextLabel` to automatically change its appearance only when it expands to a width of 400 pixels or more.
 
-1. In the left column of the Style Editor, hover over **TextLabel**, click the **⋮** button, and navigate through to **New**&nbsp;⟩ **StyleQuery**.
+1. In the left column of the Style Editor, hover over **TextLabel**, click the **⋮** button, and navigate through to **New**&nbsp;⟩ **StyleQuery**&nbsp;⟩ **Custom**.
 
-   <img src="../../assets/ui/ui-styling/SE-Query-New.png" width="600" alt="Creation of a StyleQuery in the Style Editor." />
+   <img src="../../assets/ui/ui-styling/SE-Query-New-Custom.png" width="680" alt="Creation of a custom StyleQuery in the Style Editor." />
 
    This action creates a **Queries** folder under the **TextLabel** rule containing two linked items:
 
    - **::StyleQuery** pseudo-instance rule where you define the **Conditions**.
    - **@StyleQuery** rule where you define the **Properties** to apply when those conditions are met.
 
-   <img src="../../assets/ui/ui-styling/SE-Query-Hierarchy.png" width="400" alt="Hierarchy of a StyleQuery within a class rule." />
+   <img src="../../assets/ui/ui-styling/SE-Query-Custom-Hierarchy.png" width="400" alt="Hierarchy of a StyleQuery within a class rule." />
 
 2. Select the parent **TextLabel** rule in the main panel and define the following default properties:
 
@@ -334,7 +407,7 @@ You can add a style query to any existing rule to create responsive UI that adap
    <thead>
      <tr>
      <th>Property</th>
-     <th>Style Token</th>
+     <th>Value</th>
      </tr>
    </thead>
    <tbody>
@@ -366,13 +439,17 @@ You can add a style query to any existing rule to create responsive UI that adap
    </tbody>
    </table>
 
+	 <Alert severity="info">
+	 See `Class.StyleQuery.IsActive` as a reference for other conditions available through the **::StyleQuery** rule.
+	 </Alert>
+
 4. Select the **@StyleQuery** rule in the main panel and set the properties that should apply when the query is active:
 
    <table size="small">
    <thead>
      <tr>
      <th>Property</th>
-     <th>Style Token</th>
+     <th>Value</th>
      </tr>
    </thead>
    <tbody>
@@ -387,9 +464,7 @@ You can add a style query to any existing rule to create responsive UI that adap
    </tbody>
    </table>
 
-### Testing
-
-To verify the query's responsive logic, you can manually resize a `Class.TextLabel` in the viewport.
+To verify the query, you can manually resize a `Class.TextLabel` in the viewport.
 
 1. Insert a new `Class.TextLabel` into the `Class.ScreenGui`.
 2. Adjust its width to see the style swap in real-time.
