@@ -103,6 +103,27 @@ fullWidth: true
   </Grid>
 </Grid>
 
+<h2 style={{ marginTop: 48, marginBottom: 24 }}>Creator Store purchases</h2>
+<Grid container spacing={8}>
+  <Grid item xs={12} md={5}>
+    <Card style={{ marginBottom: 24 }}>
+      <CardContent>
+        <h4>Sell models and plugins</h4>
+        <Typography variant='body1'>Create and monetize [3D assets and Studio extensions](../production/creator-store.md#distribute-and-sell-assets) to other creators for use in their own development.</Typography>
+      </CardContent>
+    </Card>
+    <Card style={{ marginBottom: 24 }}>
+      <CardContent>
+        <h4>Real-world pricing model</h4>
+        <Typography variant='body1'>The Creator Store's real-world pricing model returns 100% of net proceeds to creators, bypassing platform fees and DevEx rates.</Typography>
+      </CardContent>
+    </Card>
+  </Grid>
+  <Grid item xs={12} md={7}>
+    <img style={{ width: '100%', height: 'auto' }} src="../assets/landing/creator-store.png" alt="" />
+  </Grid>
+</Grid>
+
 <h2 style={{ marginTop: 48, marginBottom: 24 }}>UGC avatar items</h2>
 <Grid container spacing={8}>
   <Grid item xs={12} md={5}>
