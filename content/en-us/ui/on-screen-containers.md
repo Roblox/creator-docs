@@ -24,7 +24,7 @@ By default, `Class.GuiObject|GuiObjects` inside a `Class.ScreenGui` within `Clas
 </Alert>
 
 <Alert severity="info">
-If `Class.Players.CharacterAutoLoads` is disabled, the contents of `Class.StarterGui` will not be cloned until `Class.Player:LoadCharacter()` is called.
+If `Class.Players.CharacterAutoLoads` is disabled, the contents of `Class.StarterGui` will not be cloned until `Class.Player:LoadCharacterAsync()` is called.
 </Alert>
 
 As an experience grows in scope, you may require multiple screen interfaces such as a title screen, settings menu, shop interface, and more. In such cases, you can place multiple unique `Class.ScreenGui` containers inside `Class.StarterGui` and toggle each container's `Class.ScreenGui.Enabled|Enabled` property depending on whether it should be visible and active (while `false`, contents will not render, process user input, or update in response to changes).

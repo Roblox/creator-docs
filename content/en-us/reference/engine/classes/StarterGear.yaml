@@ -6,67 +6,50 @@ name: StarterGear
 type: class
 memory_category: Instances
 summary: |
-  If the game allows gear, StarterGear contains all of a player's appropriate
-  gear. Whenever the player's character spawns, all of the contents of that
-  player's StarterGear will get copied into the player's `Class.Backpack`.
+  If the game allows gear, `StarterGear` is a container automatically inserted
+  into each `Class.Player` object when the player joins the game. Whenever the
+  player's character spawns, the contents of that player's `StarterGear` are
+  copied into the player's `Class.Backpack`.
 description: |
-  StarterGear is a container that is automatically inserted into each
-  `Class.Player` when the player joins the game. When a player spawns, the
-  contents of that player's StarterGear is copied into the player's
-  `Class.Backpack`. Additionally, when a player connects to a game that permits
-  gear, all of the appropriate gear `Class.Tool` objects that the player owns
-  are inserted into that player's StarterGear.
+  When a player spawns, the contents of that player's `StarterGear` is copied
+  into the player's `Class.Backpack`. Additionally, if the game allows gear, all
+  of the appropriate gear `Class.Tool|Tools` that the player owns are inserted
+  into that player's `StarterGear`.
 
-  Unlike `Class.StarterPack`, StarterGear is not a service but rather a child of
-  each `Class.Player` object -- this means that its contents are player-specific
-  so that each player can have different `Class.Tool|Tools` within their
-  `Class.StarterGear`. It is not replicated to any client, including the owning
-  player.
+  Unlike `Class.StarterPack`, `StarterGear` isn't a service but rather a child
+  of each `Class.Player` object, so its contents are player‑specific. Whether or
+  not gear can be permitted is determined in a place's **Permissions** settings.
+  You can enable gear by its genre or choose specific types to allow. To disable
+  gear, ensure all the gear types are unselected.
 
-  ## Accessing StarterGear
+  Listening to the `Class.Players.PlayerAdded` event from a server
+  `Class.Script` is useful for accessing `StarterGear`:
 
-  Listening to the `Class.Players.PlayerAdded` event is useful for
-
-  ```
+  ```lua
   local Players = game:GetService("Players")
 
-  local toolExamplePrefab = Instance.new("Tool")
-  toolExamplePrefab.Name = "Example Tool"
+  local toolPrefab = Instance.new("Tool")
+  toolPrefab.Name = "Example Tool"
 
-  -- Accessing StarterGear from Server Script
   local function onPlayerAdded(player)
-  	-- Wait for the StarterGear to be added
+  	-- Wait for StarterGear to be added
   	local starterGear = player:WaitForChild("StarterGear")
-  	-- Add a Tool to the StarterGear
-  	local toolExample = toolExamplePrefab:Clone()
-  	toolExample.Parent = starterGear
+  	-- Clone prefab tool to StarterGear
+  	local toolClone = toolPrefab:Clone()
+  	toolClone.Parent = starterGear
   end
 
   Players.PlayerAdded:Connect(onPlayerAdded)
   ```
 
-  ## Allowing Gear
+  #### Gameplay Considerations
 
-  Whether or not gear can be permitted is determined in a place's settings page
-  under 'Permissions'. On the permissions page gear can be disabled and enabled
-  by genre and type. To disable gear, ensure all the gear types are not
-  selected.
-
-  Individual gear can also be added to a game using the 'Add to game' feature in
-  the Roblox catalog. This option can be found on the page of any gear that is
-  on sale. When gear is added to a game in this manner it will appear under the
-  'Store' heading on the game's page. The owner of the game (group or user)
-  receives a commission when gear is sold in this manner.
-
-  ## Gameplay Considerations
-
-  Before adding any gear to a game, consider the implication of doing so. Gear
-  includes `Class.Script|Scripts` and allows the player to perform actions that
-  the developer may not have considered. For example, a navigational gear may
-  allow the player to access a part of the map the developer does not want to be
-  accessed. Weapons allow players with gear to damage other players, possibly
-  without the ability to retaliate. Always play-test games after adding gear to
-  them to make sure there are no abuse cases.
+  Always test experiences after adding gear to them to check that users can't
+  easily abuse them there. Gear may include `Class.Script` objects which allow
+  the player to perform actions that you might not consider; for example,
+  navigational gear might allow the player to access a part of the map that you
+  don't want them to, and weapon gear may allow the holder to damage other
+  players, possibly without retribution or retaliation.
 code_samples: []
 inherits:
   - Instance

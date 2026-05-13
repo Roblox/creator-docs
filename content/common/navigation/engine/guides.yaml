@@ -303,6 +303,31 @@ navigation:
         path: /environment/post-processing-effects
       - title: Skyboxes
         path: /environment/skybox
+  - title: Players
+    path: /players/
+    section:
+      - title: Overview
+        path: /players/
+      - title: Teleporting
+        path: /projects/teleport
+      - title: Teams
+        path: /players/teams
+      - title: In-game tools
+        path: /players/tools
+      - title: Leaderboards
+        path: /players/leaderboards
+      - title: Loading screens
+        path: /players/loading-screens
+      - title: Player UI
+        section:
+          - title: Avatar Editor
+            path: /players/avatar-editor
+          - title: Avatar Inspect Menu
+            path: /players/avatar-inspect-menu
+          - title: Avatar Context Menu
+            path: /players/avatar-context-menu
+          - title: Disable default UI
+            path: /players/disable-ui
   - title: Characters
     path: /characters/
     section:
@@ -331,31 +356,6 @@ navigation:
         path: /characters/pathfinding
       - title: R6 to R15 adapter
         path: /characters/r6-to-r15-adapter
-  - title: Players
-    path: /players/
-    section:
-      - title: Overview
-        path: /players/
-      - title: Teleporting
-        path: /projects/teleport
-      - title: Teams
-        path: /players/teams
-      - title: In-experience tools
-        path: /players/tools
-      - title: Leaderboards
-        path: /players/leaderboards
-      - title: Loading screens
-        path: /players/loading-screens
-      - title: Player UI
-        section:
-          - title: Avatar Editor
-            path: /players/avatar-editor
-          - title: Avatar Inspect Menu
-            path: /players/avatar-inspect-menu
-          - title: Avatar Context Menu
-            path: /players/avatar-context-menu
-          - title: Disable default UI
-            path: /players/disable-ui
   - title: Input
     path: /input/
     section:

@@ -3,29 +3,27 @@ title: Avatar Setup
 description: The Avatar Setup tool helps accelerate the avatar character, clothing, and accessory creation process by automatically processing custom models into avatar assets.
 ---
 
-**Avatar Setup** helps accelerate the avatar character, clothing, and accessory creation process by automatically processing custom models into avatar assets. If your creations don't have all essential avatar components for publishing to the [Marketplace](https://www.roblox.com/catalog), Avatar Setup provides tooling to automatically rig, cage, segment, and skin your 3D models.
+**Avatar Setup** helps accelerate the avatar character, clothing, and accessory creation process by automatically processing custom models into avatar assets. If your characters, accessories, and clothing don't have all essential components for publishing to the [Marketplace](https://www.roblox.com/catalog), Avatar Setup can perform the following for your 3D models:
+
+- **Rigging** — Adds an R15 armature to your body model to enable movement and animation.
+- **Skinning** — Adds weights and influences to various surfaces of your mesh, ensuring an organic and natural flexibility during movement.
+- **Facial animation** — Generates the FACS poses, facial rigging, skinning, and animation data required for facial animation and avatar chat.
+- **Caging** — Adds the required cages to your asset, enabling it to support layered clothing.
+- **Partitioning** — Separates the body mesh into the appropriate R15 parts.
+- **Creating attachments** — Adds the appropriate attachment points enabling the character to wear rigid accessories.
 
 <img src="../assets/studio/general/Toolbar-Avatar-Setup.png" width="800" alt="Avatar Preview button indicated in Avatar tab" />
 
-<GridContainer numColumns="2">
-<figure>
-    <img src="../assets/avatar/avatar-setup/Avatar-Setup-Example-A.png" />
-    <figcaption>Import a complete or incomplete avatar character into the tool. The auto-setup feature adds any missing components.</figcaption>
-</figure>
-<figure>
-    <img src="../assets/avatar/avatar-setup/Avatar-Setup-Example-B.png" />
-    <figcaption>You can try out various skin tones, animations, rigid and layered clothing, and more before uploading and selling the avatar asset.</figcaption>
-</figure>
-</GridContainer>
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/Hp9pr2FpZa8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> <br />
 
-## Import a character
+## Import a 3D asset
 
-The [Importer](../studio/importer.md) tool allows you to import custom 3D assets that you made in third-party modeling tools like Blender or Maya directly into Studio. If your custom character assets don't include all essential avatar components for the Marketplace, Avatar Setup will add any missing components as it processes your assets.
+The [Importer](../studio/importer.md) tool allows you to import custom 3D assets that you made in third-party modeling tools like Blender or Maya directly into Studio. If your custom 3D assets don't include all essential avatar components for the Marketplace, Avatar Setup will add any missing components as it processes the assets.
 
-To import a character model using the Importer tool:
+To import a custom 3D asset using the Importer tool:
 
 1. Navigate to the **Home** tab, then select **Import**. A file browser displays.
-1. Select the `.fbx`, `.obj`, or `.gltf` character model you want to import. After a few moments, the **Import Preview** window opens with a preview of your character.
+1. Select the `.fbx`, `.obj`, or `.gltf` model you want to import. After a few moments, the **Import Preview** window opens with a preview of your asset.
 1. In the **File General** section, disable the **Upload To Roblox** option. This setting stops the asset from immediately saving to your Toolbox, preventing unwanted copies of similar assets.
 1. <Chip label="OPTIONAL" size="small" variant="outlined" /> To create an import preset for this workflow,
    1. In the top-right of the **Import Preview** window, click the ⋯ dropdown.
@@ -39,17 +37,113 @@ When you import a new model into Studio, the system adds the model to the modera
 
 ## Run Avatar Setup
 
-When your project has the appropriate `Class.Model` object in your workspace, you can run Avatar Setup to see if your character requires any additional avatar components before you can publish it to the Marketplace as an avatar body that can attach clothing and accessories.
+When your project has the appropriate `Class.Model` object in your workspace, you can run Avatar Setup to see if your 3D asset requires any additional avatar components before you can publish it to the Marketplace as a character body, accessory, or clothing item. Avatar Setup supports the conversion of the following 3D asset types from a base `Class.Model`:
 
-For example, if your character has a 2D decal for its face, you can run Avatar Setup with settings enabled that infer eye and mouth regions from your existing texture, generate cages and FACS data, then map the result onto a [dynamic head](../art/characters/facial-animation/index.md) template. This process allows you to preserve your creative intent while complying with Marketplace policy that requires all avatars to have dynamic heads.
+<figure>
+<table><thead>
+  <tr>
+    <th>Asset type</th>
+    <th>Input object</th>
+    <th>Output object</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>Avatar body</td>
+    <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet Avatar Setup's supported [body inputs](./auto-setup-requirements.md#body).</td>
+    <td>`Class.Model` parenting associated 15 `Class.MeshPart` objects and other expected [avatar components](../art/characters/index.md#components-of-an-avatar).</td>
+  </tr>
+  <tr>
+    <td>Accessory</td>
+    <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet Avatar Setup's supported [accessory inputs](./auto-setup-requirements.md#accessories). <br /> <br />Must [bundle](./auto-setup-requirements.md#bundle-multiple-assets) with an avatar body `Class.Model` for Avatar Setup.</td>
+    <td>`Class.Accessory` that includes all expected [rigid accessory components](../art/accessories/index.md#components-of-a-rigid-accessory).</td>
+  </tr>
+  <tr>
+    <td>Layered clothing</td>
+    <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet Avatar Setup's supported [accessory inputs](./auto-setup-requirements.md#accessories-and-clothing). <br /> <br />Can optionally [bundle](./auto-setup-requirements.md#bundle-multiple-assets) with an avatar body `Class.Model` for Avatar Setup.</td>
+    <td>`Class.Accessory` that includes all expected [layered accessory components](../art/accessories/layered-clothing.md#components-of-a-layered-clothing-accessory).</td>
+  </tr>
+  <tr>
+    <td>Multiple accessories and clothing with single body</td>
+    <td>`Folder` [bundle](./auto-setup-requirements.md#bundle-multiple-assets) containing one or more `Class.Model` that meet supported inputs for accessories, clothing, or body. <br /> <br />Must [bundle](./auto-setup-requirements.md#bundle-multiple-assets) with an avatar body `Class.Model` for Avatar Setup.</td>
+    <td>`Class.Model` character body and any `Class.Accessory` equippable items. <br /> <br />All generated assets include expected avatar item components.</td>
+  </tr>
+</tbody>
+</table>
+</figure>
+
+<Alert severity = 'info'>
+For more in-depth information on supported input configurations, see the individual asset specifications on [Avatar Setup requirements](./auto-setup-requirements.md).
+</Alert>
 
 To run Avatar Setup:
 
-1. Select the model or specific meshes of the model in the Explorer window. If you want to select multiple meshes at once, expand the `Class.Model` object, then hold shift and click on the individual mesh objects you want to process as avatar assets.
+1. In the **Explorer** window, select the model or specific meshes of the model. If you want to select multiple meshes at once, expand the `Class.Model` object, then hold shift and click on the individual mesh objects you want to process as avatar assets.
+
+   <BaseAccordion>
+   <AccordionSummary>
+   <Typography variant='buttonLarge'>Reference models</Typography>
+   </AccordionSummary>
+   <AccordionDetails>
+   For an asset that meets all of these model requirements, download one of the following Avatar Setup templates for your own reference and testing:
+
+   <Grid container alignItems="stretch" style={{ margin: -6 }}>
+
+   <Grid item XSmall={12} Medium={6} Large={4} style={{ padding: 6 }}>
+   <Card style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+   <CardContent style={{ flex: 1 }}>
+   <center>Nature Girl</center>
+   <figure>
+   <center>
+   <img
+              src="../assets/art/resources/Archer-Girl-Preview.png"
+              width="100%"
+            />
+   </center>
+   </figure>
+   <figure>
+   A comprehensive <code>.zip</code> folder of an Avatar Setup ready character model, including clothing and rigid accessory assets and PBR texture assets.
+   <br /><br />
+   This template is not compatible with the traditional avatar creation workflow.
+   </figure>
+   </CardContent>
+   <CardActions>
+   <Button href="../assets/art/reference-files/NatureArcherGirl-AutoSetup.zip" fullWidth size="large" color="primary" variant="contained">Download</Button>
+   </CardActions>
+   </Card>
+   </Grid>
+
+   <Grid item XSmall={12} Medium={6} Large={4} style={{ padding: 6 }}>
+   <Card style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+   <CardContent style={{ flex: 1 }}>
+   <center>Stylish Male</center>
+   <figure>
+   <center>
+   <img
+              src="../assets/art/resources/StylizedMale-Preview.png"
+              width="100%"
+            />
+   </center>
+   </figure>
+   <figure>
+   A comprehensive <code>.zip</code> folder of an Avatar Setup ready character model, including the base body and associated PBR textures.
+   <br /><br />
+   This template is not compatible with the traditional avatar creation workflow.
+   </figure>
+   </CardContent>
+   <CardActions>
+   <Button href="../assets/art/reference-files/StylizedMale-AutoSetup.zip" fullWidth size="large" color="primary" variant="contained">Download</Button>
+   </CardActions>
+   </Card>
+   </Grid>
+
+   </Grid>
+   </AccordionDetails>
+   </BaseAccordion>
+
 1. With the model or meshes selected, navigate to the **Avatar** tab, then select **Avatar Setup**.
 1. In the **Configure Models** section,
    1. Set **Preset** to the appropriate category.
-      1. If you want to publish your assets to the Marketplace, select **Platform Avatar**. This option generates a more restrictive setup that's necessary to pass validation and moderation.
+      1. If you want to publish your assets to the Marketplace for users to purchase and use across Roblox, select **Platform Avatar**. This option generates a more restrictive setup that's necessary to pass validation and moderation.
       1. If you want to upload your assets to your inventory for non-player characters (NPCs) or starter player characters for your experiences, select **Development Avatar**. This option generates a less restrictive setup.
 
       <img src="../assets/avatar/avatar-setup/Configure-Models.png" width="50%" alt="" />
@@ -63,14 +157,14 @@ To run Avatar Setup:
       <img src="../assets/avatar/avatar-setup/Set-Type.png" width="50%" alt="" />
 
 1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Near the bottom-left corner, click on the gear icon to configure specialty settings for your character model.
-   1. If your character has a decal for its face and you want to enable the conversion of the texture into a dynamic head, enable **Handle face as 2D decal**.
+   1. If your character has a decal for its face and you want to enable the conversion of the texture into a [dynamic head](../art/characters/facial-animation/index.md), enable **Handle face as 2D decal**. This process allows you to preserve your creative intent while complying with Marketplace policy that requires all avatars to have dynamic heads.
 
       <BaseAccordion>
       <AccordionSummary>
       <Typography variant='buttonLarge'>Converting a decal into a dynamic head?</Typography>
       </AccordionSummary>
       <AccordionDetails>
-      If you are converting a decal into a dynamic head, review the following guidance for best results.
+      The process of converting a decal into a dynamic head infers eye and mouth regions from your existing texture, generates cages and FACS data, then maps the result onto a dynamic head template. For best results, review the following guidance:
 
       **Run Avatar Setup with the character's body and head**
 
@@ -93,8 +187,8 @@ To run Avatar Setup:
 
    1. If your character includes a [higher-fidelity rig](../art/characters/specifications.md#higher-fidelity-rigs) with additional joints, enable **Create R15 with optional joints**.
    1. If you want to manually align the front direction of your character with the negative Z-axis in world space, enable **Manually Align Front**. While auto-setup does this automatically for you, it can sometimes fail to properly determine the front of your character.
-   1. If you want to add a post-processing step to improve the alignment of your character's head cage with head facial features, enable **Improve facial caging**. This is particularly important if you plan on using [makeup](../makeup/index.md) with your character.
-   1. If you want to skip the auto-decimation of input meshes with resolution above the triangle budgets required for the Marketplace, disable **Reduce triangle count**.
+   1. If you want to add a post-processing step to significantly improve the alignment of your character's head cage with the head model and its facial features, enable **Improve facial caging**. This is particularly important if you plan on using [makeup](../makeup/index.md) with your character.
+   1. If you are importing a development avatar and want to skip the auto-decimation of input meshes with resolution above the triangle budgets required for the Marketplace, disable **Reduce triangle count**.
 
       <img src="../assets/avatar/avatar-setup/Gear-Icon.png" width="50%" alt="" />
 

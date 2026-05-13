@@ -34,16 +34,23 @@ Although pathfinding can be implemented in various ways through `Class.Pathfindi
 
 To test while reading:
 
-1. Copy the following code into a `Class.LocalScript` within `Class.StarterCharacterScripts`, or [get this package](https://create.roblox.com/store/asset/95888831676289/Player-Path-Following-Script) and drop it into `Class.StarterCharacterScripts`.
+1. <Chip label="IMPORTANT" size="small" variant="outlined" color="warning" /> In the [Explorer](../studio/explorer.md), select the `Class.StarterPlayer` container. Then, in the [Properties](../studio/properties.md) window, set both `Class.StarterPlayer.DevComputerMovementMode|DevComputerMovementMode` and `Class.StarterPlayer.DevTouchMovementMode|DevTouchMovementMode` to `Scriptable`.
+
+   <Grid container spacing={2} alignItems="top">
+   <Grid item>
+     <img src="../assets/studio/explorer/StarterPlayer.png" width="320" />
+   </Grid>
+   <Grid item>
+     <img src="../assets/studio/properties/StarterPlayer-DevComputerMovementMode-DevTouchMovementMode.png" width="320" />
+   </Grid>
+   </Grid>
+
+2. Copy the following code into a `Class.LocalScript` within `Class.StarterCharacterScripts`, or [get this package](https://create.roblox.com/store/asset/95888831676289/Player-Path-Following-Script) and drop it into `Class.StarterCharacterScripts`.
 
 		```lua title="PlayerPathFollow (LocalScript in StarterCharacterScripts)"
 		local PathfindingService = game:GetService("PathfindingService")
 		local Players = game:GetService("Players")
 		local RunService = game:GetService("RunService")
-
-		local localPlayer = Players.LocalPlayer
-		local controls = require(localPlayer.PlayerScripts.PlayerModule):GetControls()
-		controls:Disable()
 
 		local DESTINATION = Vector3.new(20, 0.5, 20)
 		local GROUND_WAIT = 0.01
@@ -203,12 +210,12 @@ To test while reading:
 		followPath()
 		```
 
-2. Edit the `DESTINATION` variable (<Chip label="LINE 9" size="small" variant="outlined" color="success" />) to a `Datatype.Vector3` destination within the 3D world that the player character can reach.
-3. Proceed through the following sections to learn about path computation and character movement.
+3. Edit the `DESTINATION` variable (<Chip label="LINE 5" size="small" variant="outlined" color="success" />) to a `Datatype.Vector3` destination within the 3D world that the player character can reach.
+4. Proceed through the following sections to learn about path computation and character movement.
 
 ### Path creation
 
-Pathfinding is initiated through `Class.PathfindingService` and its `Class.PathfindingService:CreatePath()|CreatePath()` method (<Chip label="LINES 13–18" size="small" variant="outlined" color="success" />). This method accepts an optional table of parameters which fine tune how the character (agent) moves along the path.
+Pathfinding is initiated through `Class.PathfindingService` and its `Class.PathfindingService:CreatePath()|CreatePath()` method (<Chip label="LINES 9–14" size="small" variant="outlined" color="success" />). This method accepts an optional table of parameters which fine tune how the character (agent) moves along the path.
 
 <table>
 <thead>
@@ -261,13 +268,13 @@ Pathfinding is initiated through `Class.PathfindingService` and its `Class.Pathf
 
 ### Path computation
 
-After you've created a valid path with `Class.PathfindingService:CreatePath()|CreatePath()`, it must be **computed** by calling `Class.Path:ComputeAsync()` with a `Datatype.Vector3` for both the starting point and destination (<Chip label="LINES 137–143" size="small" variant="outlined" color="success" />).
+After you've created a valid path with `Class.PathfindingService:CreatePath()|CreatePath()`, it must be **computed** by calling `Class.Path:ComputeAsync()` with a `Datatype.Vector3` for both the starting point and destination (<Chip label="LINES 133–139" size="small" variant="outlined" color="success" />).
 
 <figure>
 <img src="../assets/avatar/pathfinding/Path-Start-End.jpg" width="800" alt="Path start/end marked across two bridges" />
 </figure>
 
-Once the `Class.Path` is computed, it will contain a series of **waypoints** that trace the path from start to end. These points can be gathered with the `Class.Path:GetWaypoints()` method (<Chip label="LINE 146" size="small" variant="outlined" color="success" />). The returned array is arranged in order of waypoints from path start to path end.
+Once the `Class.Path` is computed, it will contain a series of **waypoints** that trace the path from start to end. These points can be gathered with the `Class.Path:GetWaypoints()` method (<Chip label="LINE 142" size="small" variant="outlined" color="success" />). The returned array is arranged in order of waypoints from path start to path end.
 
 <figure>
 <img src="../assets/avatar/pathfinding/Waypoints.jpg" width="800" alt="Waypoints indicated across computed path" />
@@ -280,7 +287,7 @@ The pathfinding engine includes specific limitations, and pathfinding computatio
 
 ### Path movement
 
-Each `Datatype.PathWaypoint` consists of both a `Datatype.PathWaypoint.Position|Position` (`Datatype.Vector3`) and `Datatype.PathWaypoint.Action|Action` (`Enum.PathWaypointAction|PathWaypointAction`). To move a character containing a `Class.Humanoid`, like a typical Roblox character, the best way is to call `Class.Humanoid:Move()` from waypoint to waypoint and use the script's `isCurrentWaypointReached()` callback (<Chip label="LINES 36–60" size="small" variant="outlined" color="success" />) to detect when the character reaches each waypoint.
+Each `Datatype.PathWaypoint` consists of both a `Datatype.PathWaypoint.Position|Position` (`Datatype.Vector3`) and `Datatype.PathWaypoint.Action|Action` (`Enum.PathWaypointAction|PathWaypointAction`). To move a character containing a `Class.Humanoid`, like a typical Roblox character, the best way is to call `Class.Humanoid:Move()` from waypoint to waypoint and use the script's `isCurrentWaypointReached()` callback (<Chip label="LINES 32–56" size="small" variant="outlined" color="success" />) to detect when the character reaches each waypoint.
 
 <Alert severity="warning">
 Note that the script waits for the humanoid to be touching the ground before calling the pathfinder. If the path is computed while the character is falling through the air, the pathfinder will try to determine an appropriate start position for the path.
@@ -290,7 +297,7 @@ Note that the script waits for the humanoid to be touching the ground before cal
 
 ### Blocked paths
 
-Many Roblox worlds are dynamic; parts might move or fall and floors may collapse. This can block a computed path and prevent the character from reaching its destination. To handle this, you can connect the `Class.Path.Blocked` event and re-compute the path around whatever blocked it (<Chip label="LINES 149–158" size="small" variant="outlined" color="success" />).
+Many Roblox worlds are dynamic; parts might move or fall and floors may collapse. This can block a computed path and prevent the character from reaching its destination. To handle this, you can connect the `Class.Path.Blocked` event and re-compute the path around whatever blocked it (<Chip label="LINES 145–154" size="small" variant="outlined" color="success" />).
 
 <Alert severity="warning">
 Paths may also become blocked somewhere **behind** the agent, such as a pile of rubble falling on a path as the agent runs away, but that doesn't mean the agent should stop moving. The <Typography noWrap>`if blockedWaypointIndex >= nextWaypointIndex`</Typography> check makes sure that the path is re-computed only if the blocked waypoint is **ahead** of the current waypoint.
@@ -316,10 +323,6 @@ Keys in the `Costs` table should be **string** names representing `Enum.Material
 local PathfindingService = game:GetService("PathfindingService")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
-
-local localPlayer = Players.LocalPlayer
-local controls = require(localPlayer.PlayerScripts.PlayerModule):GetControls()
-controls:Disable()
 
 local DESTINATION = Vector3.new(20, 0.5, 20)
 local GROUND_WAIT = 0.01
@@ -355,10 +358,6 @@ In some cases, [material preference](#material-costs) is not enough. For example
 		local PathfindingService = game:GetService("PathfindingService")
 		local Players = game:GetService("Players")
 		local RunService = game:GetService("RunService")
-
-		local localPlayer = Players.LocalPlayer
-		local controls = require(localPlayer.PlayerScripts.PlayerModule):GetControls()
-		controls:Disable()
 
 		local DESTINATION = Vector3.new(20, 0.5, 20)
 		local GROUND_WAIT = 0.01
@@ -422,10 +421,6 @@ To create a `Class.PathfindingLink` using this example:
 		local Players = game:GetService("Players")
 		local RunService = game:GetService("RunService")
 
-		local localPlayer = Players.LocalPlayer
-		local controls = require(localPlayer.PlayerScripts.PlayerModule):GetControls()
-		controls:Disable()
-
 		local DESTINATION = Vector3.new(20, 0.5, 20)
 		local GROUND_WAIT = 0.01
 		local VELOCITY_MULTIPLIER = 0.0625
@@ -438,7 +433,7 @@ To create a `Class.PathfindingLink` using this example:
 		})
 		```
 
-6. In the `moveToNextWaypoint()` function (<Chip label="LINES 97–118" size="small" variant="outlined" color="success" />), a custom check for the `Class.PathfindingLink.Label|Label` modifier name can be used to take a different action than `Class.Humanoid:Move()`; in this case, you might call a function to seat the agent in the boat, move the boat across the water, unseat the agent at the boat's landing point, and then continue the agent's path to its final destination.
+6. In the `moveToNextWaypoint()` function (<Chip label="LINES 93–114" size="small" variant="outlined" color="success" />), a custom check for the `Class.PathfindingLink.Label|Label` modifier name can be used to take a different action than `Class.Humanoid:Move()`; in this case, you might call a function to seat the agent in the boat, move the boat across the water, unseat the agent at the boat's landing point, and then continue the agent's path to its final destination.
 
    <video controls src="../assets/avatar/pathfinding/Boat-Path.mp4" width="800" alt="Video showing character using the PathfindingLink to traverse the water using the boat"></video>
 

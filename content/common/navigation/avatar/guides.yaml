@@ -97,9 +97,7 @@ navigation:
     section:
       - title: Overview
         path: /avatar-setup/
-      - title: Auto-setup
-        path: /avatar-setup/auto-setup
-      - title: Auto-setup requirements
+      - title: Requirements
         path: /avatar-setup/auto-setup-requirements
   - title: More Studio tools
     section:

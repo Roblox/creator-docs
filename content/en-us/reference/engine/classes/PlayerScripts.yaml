@@ -6,19 +6,18 @@ name: PlayerScripts
 type: class
 memory_category: Instances
 summary: |
-  A container for LocalScripts to be run on the client.
+  A container for client-side scripts to be run inside `Class.Player` objects
+  within the `Class.Players` service.
 description: |
-  `Class.PlayerScripts` is a container object located inside `Class.Player`
-  objects within the `Class.Players` game service. It is created automatically
-  when a player joins the game. Its main purpose is to contain
-  `Class.LocalScript|LocalScripts` copied from the `Class.StarterPlayerScripts`
-  container within the `Class.StarterPlayer` game service, which happens once
-  upon creation. Descendant `LocalScripts` of `Class.PlayerScripts` will run
-  code on the client of the `Class.Player`.
+  `PlayerScripts` is a container object located inside `Class.Player` objects
+  within the `Class.Players` service. It is created automatically when a player
+  joins the game and its main purpose is to contain client scripts copied from
+  the `Class.StarterPlayerScripts` container within the `Class.StarterPlayer`
+  service.
 
   Unlike the `Class.Backpack` and `Class.PlayerGui` containers, the
-  `Class.PlayerScripts` container is not accessible to the server. Server
-  `Class.Script` objects will not run when parented to `Class.PlayerScripts`.
+  `PlayerScripts` container is not accessible to the server and server‑side
+  `Class.Script` objects will not run when parented to `PlayerScripts`.
 code_samples: []
 inherits:
   - Instance
@@ -31,10 +30,10 @@ properties: []
 methods:
   - name: PlayerScripts:ClearComputerCameraMovementModes
     summary: |
-      Unregisters all ComputerCameraMovementMode enums from the experience's
+      Unregisters all `ComputerCameraMovementMode` enums from the game's
       settings menu.
     description: |
-      Unregisters all ComputerCameraMovementMode enums from the experience's
+      Unregisters all `ComputerCameraMovementMode` enums from the game's
       settings menu.
     code_samples: []
     parameters: []
@@ -50,10 +49,10 @@ methods:
       - Players
   - name: PlayerScripts:ClearComputerMovementModes
     summary: |
-      Unregisters all ComputerMovementMode enums from the experience's settings
+      Unregisters all `ComputerMovementMode` enums from the game's settings
       menu.
     description: |
-      Unregisters all ComputerMovementMode enums from the experience's settings
+      Unregisters all `ComputerMovementMode` enums from the game's settings
       menu.
     code_samples: []
     parameters: []
@@ -69,11 +68,11 @@ methods:
       - Players
   - name: PlayerScripts:ClearTouchCameraMovementModes
     summary: |
-      Unregisters all TouchCameraMovementMode enums from the experience's
-      settings menu.
+      Unregisters all `TouchCameraMovementMode` enums from the game's settings
+      menu.
     description: |
-      Unregisters all TouchCameraMovementMode enums from the experience's
-      settings menu.
+      Unregisters all `TouchCameraMovementMode` enums from the game's settings
+      menu.
     code_samples: []
     parameters: []
     returns:
@@ -88,11 +87,9 @@ methods:
       - Players
   - name: PlayerScripts:ClearTouchMovementModes
     summary: |
-      Unregisters all TouchMovementMode enums from the experience's settings
-      menu.
+      Unregisters all `TouchMovementMode` enums from the game's settings menu.
     description: |
-      Unregisters all TouchMovementMode enums from the experience's settings
-      menu.
+      Unregisters all `TouchMovementMode` enums from the game's settings menu.
     code_samples: []
     parameters: []
     returns:

@@ -1,11 +1,11 @@
 ---
-title: In-experience tools
-description: Create in-experience tools for your players.
+title: In-game tools
+description: Create in-game tools for your players.
 ---
 
-In-experience `Class.Tool|Tools` are interactive tools that players can equip in sessions, such as weapons, magic wands, flashlights, keys, and more. You can design tools and include them in a player's inventory or place them around the world as pickups.
+In-game `Class.Tool|Tools` are interactive tools that players can equip in sessions, such as weapons, magic wands, flashlights, keys, and more. You can design tools and include them in a player's inventory or place them around the world as pickups.
 
-## Create an in-experience tool
+## Create an in-game tool
 
 The `Class.Tool` object is the basis of any tool in Roblox, so you'll need to create one. It's easier to preview how a tool looks by designing it in the `Class.Workspace`, and later you can make it an [inventory](#player-inventory) item or an [earned/purchased](#earnedpurchased-tool) item.
 
@@ -28,7 +28,7 @@ After creating the `Class.Tool` instance for a physical tool, you'll need to [ad
 
 #### Add parts/meshes
 
-In-experience tools can consist of one or more `Class.Part|Parts` and/or `Class.MeshPart|MeshParts`. If you construct the tool of multiple pieces, remember to connect them all together using `Class.WeldConstraint|WeldConstraints` or other [mechanical constraints](../physics/mechanical-constraints.md) so that the tool stays intact as a unit while the player carries it around.
+In-game tools can consist of one or more `Class.Part|Parts` and/or `Class.MeshPart|MeshParts`. If you construct the tool of multiple pieces, remember to connect them all together using `Class.WeldConstraint|WeldConstraints` or other [mechanical constraints](../physics/mechanical-constraints.md) so that the tool stays intact as a unit while the player carries it around.
 
 <img src="../assets/studio/general/Toolbar-Constraint-Pickers.png" width="800" alt="Constraint pickers indicated in Studio's toolbar" />
 
@@ -73,7 +73,7 @@ Since the ideal grip position/orientation is different for every tool, you'll ne
 
 ### Non-physical tool
 
-A non-physical `Class.Tool` simply occupies a player's [inventory](#player-inventory) and responds to their input. For example, a roleplaying experience might feature a series of magical spells that player's can "cast" through their inventory.
+A non-physical `Class.Tool` simply occupies a player's [inventory](#player-inventory) and responds to their input. For example, a roleplaying game might feature a series of magical spells that players can "cast" through their inventory.
 
 <img src="../assets/players/in-experience-tools/Tool-Inventory-Non-Physical.jpg" width="800" />
 
@@ -81,9 +81,9 @@ Non-physical tools don't require any 3D composition and do not utilize a `Handle
 
 <img src="../assets/studio/properties/Tool-RequiresHandle.png" width="320" />
 
-## Add tools to an experience
+## Add tools to a game
 
-Once you finish [creating](#create-an-in-experience-tool) your in-experience tool, you'll need to place it in the correct area of the [Explorer](../studio/explorer.md) hierarchy. Where you place the tool in the hierarchy depends on its intended usage.
+Once you finish [creating](#create-an-in-game-tool) your in-game tool, you'll need to place it in the correct area of the [Explorer](../studio/explorer.md) hierarchy. Where you place the tool in the hierarchy depends on its intended usage.
 
 ### Player inventory
 
@@ -114,6 +114,10 @@ for i = 1, #order do
 end
 ```
 
+<Alert severity="info">
+As noted above, tools placed in `Class.StarterPack` clone to **all** players. To more specifically control which tools clone to which players, see `Class.StarterGear`.
+</Alert>
+
 ### Collectible tool
 
 If you want to allow players to collect physical tools as they explore the 3D world, place the tools in the `Class.Workspace` just like normal 3D objects. Collected tools will be automatically equipped and added to the player's inventory (you do not need to add extra collision detection for characters to grab the tool).
@@ -134,7 +138,7 @@ end)
 
 ### Earned/purchased tool
 
-If you want to set tools as awards for when players accomplish tasks, or offer tools for sale in an in‑experience store, put those tools inside `Class.ReplicatedStorage`. From there, you can `Class.Instance:Clone()|Clone()` a tool to the player's `Class.Backpack` at the proper time.
+If you want to set tools as awards for when players accomplish tasks, or offer tools for sale in an in‑game store, put those tools inside `Class.ReplicatedStorage`. From there, you can `Class.Instance:Clone()|Clone()` a tool to the player's `Class.Backpack` at the proper time.
 
 <img src="../assets/studio/explorer/ReplicatedStorage-Tools.png" width="320" />
 
@@ -155,7 +159,7 @@ end
 
 ## Implement tool effects
 
-After [adding tools to your experience](#add-tools-to-an-experience), you can implement scripts to enable players to use their tools and perform the desired actions. The following tool‑specific events indicate the state of the tool and the player's input with it.
+After [adding tools to your game](#add-tools-to-a-game), you can implement scripts to enable players to use their tools and perform the desired actions. The following tool‑specific events indicate the state of the tool and the player's input with it.
 
 - `Class.Tool.Equipped|Equipped()` — Fires when the player selects the tool from their backpack.
 - `Class.Tool.Unequipped|Unequipped()` — Fires when the player switches tools or drops the tool.

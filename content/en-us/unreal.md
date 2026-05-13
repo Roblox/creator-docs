@@ -61,7 +61,7 @@ Rather than using standard metric units for length and mass, Roblox uses notiona
 
 ## Location matters
 
-Roblox games are multiplayer by default, so Roblox Studio includes many different storage locations with specific behaviors. For example, a script might run when you put it in `Class.ReplicatedStorage`, but not when you put it into `Class.StarterPlayerScripts`. For more information, see [Client-server runtime](projects/client-server) and [Object organization](projects/data-model#object-organization).
+Roblox games are multiplayer by default, so Roblox Studio includes many different storage locations with specific behaviors. For more information, see [client-server runtime](projects/client-server) and [object organization](projects/data-model#object-organization).
 
 <ScriptLocations components={props.components} />
 

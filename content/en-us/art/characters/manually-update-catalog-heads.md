@@ -175,5 +175,5 @@ Roblox has published a series of documentation and video tutorials on best pract
 - [Dynamic head overview](./facial-animation/)
 - [Head validation process](./head-validation.md)
 - [Head validation video guide](https://www.youtube.com/watch?v=OwhkWzSBnf0)
-- [Avatar Auto-Setup](../../avatar-setup/auto-setup.md)
+- [Avatar Setup](../../avatar-setup/index.md)
 - [Caging Best Practices](../accessories/caging-best-practices.md)

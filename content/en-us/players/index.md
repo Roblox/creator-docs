@@ -1,31 +1,29 @@
 ---
 title: Users and players
-description: The Player instance contains information on the individual users within your experience.
+description: How users, players, and characters work together in a Roblox game.
 ---
 
-When a user joins an experience, Roblox represents them as a **Player** in the data model. The `Class.Player` object contains information about the user that's universal across experiences, such as their username, friend list, saved [avatar character](../characters/index.md#avatar-characters), and Roblox membership type, as well as properties, methods, and events that affects the user's lifecycle between joining and leaving your experience.
+When a Roblox user joins a game, they are represented as a `Class.Player` in the `Class.DataModel`. This `Class.Player` object contains information about the user that's universal across games, such as their username, friend list, and saved [avatar character](../characters/index.md#avatar-characters), as well as properties, methods, and events that affect the user's [lifecycle](#lifecycle) between joining and leaving the game. Each `Class.Player` object also parents four important [containers](#containers) that you can use to customize a user's experience: `Class.Backpack`, `Class.StarterGear`, `Class.PlayerGui`, and `Class.PlayerScripts`.
 
-The `Class.Players` service contains all the `Class.Player` instances in an experience. Each `Class.Player` object represents a user in the experience, and it parents four important containers that you can use to customize a user's experience: `Class.Backpack`, `Class.StarterGear`, `Class.PlayerGui`, and `Class.PlayerScripts`.
+<img src="../assets/studio/explorer/Players-Player-Hierarchy.png" width="320" />
 
 ## Lifecycle
 
-Client and server-side scripts can both connect to the `Class.Players.PlayerAdded` and `Class.Players.PlayerRemoved` events to perform actions in response to the lifecycle of a `Class.Player` object. They can also connect to the `Class.Player.CharacterAdded`, `Class.Player.CharacterRemoving`, and `Class.Humanoid.Died` events to perform gameplay-related actions for when the character spawns, despawns, and dies.
+The `Class.Players` service contains all the `Class.Player` instances in a game. Client and server-side scripts can both connect to the `Class.Players.PlayerAdded` and `Class.Players.PlayerRemoved` events to perform actions in response to the lifecycle of a `Class.Player` object. Scripts can also connect to the `Class.Player.CharacterAdded` and `Class.Player.CharacterRemoving` events to perform gameplay-related actions for when the character spawns or despawns.
 
-Use Scripts to access server-related services, such as a data store to retrieve and save data when a user joins or leaves. Use LocalScripts if the client needs to create and remove gameplay instances tied to the new user, such as a GUI display for the user's stats on a custom leaderboard.
+### User join
 
-### User joining
+When a user client connects to a game, the `Class.Players.PlayerAdded` event fires and passes the `Class.Player` object of the user who joins; you can use this object for numerous purposes such as loading [user data](../cloud-services/data-stores-vs-memory-stores.md) from a data store or assigning the player to a [team](./teams.md).
 
-When a client connects to an experience, its associated `Class.Player` object clones to the `Class.Players` service. The `Class.Players.PlayerAdded` represents users joining the experience. Some example use-cases include loading user data, assigning teams, and changing a user's character's clothing. The `Class.Players.PlayerAdded` event passes the `Class.Player` object of the user who joins, which you can use when calling other functions, such as data store and `Class.RemoteEvent` objects.
+For example, to load a user's data when they join a game, use the `Class.Players.PlayerAdded|PlayerAdded` event in a `Class.Script` to retrieve the user's data stored in a data store under their user ID:
 
-#### Load user data on join
-
-To load a user's data when they join an experience, use the `Class.Players.PlayerAdded` event in a `Class.Script`. The following example `Class.Script` listens to the event and attempts to retrieve a user's data using their user ID as the datastore key. After successfully retrieving the user data, you can use it to load the user's progress and stats.
-
-```lua Script in ServerScriptService
+```lua title="Script in ServerScriptService"
 local DataStoreService = game:GetService("DataStoreService")
+local Players = game:GetService("Players")
+
 local playerDataStore = DataStoreService:GetDataStore("PlayerData")
 
-game:GetService("Players").PlayerAdded:Connect(function(player)
+Players.PlayerAdded:Connect(function(player)
 	local userId = player.UserId
 
 	-- Read data store key
@@ -41,25 +39,30 @@ game:GetService("Players").PlayerAdded:Connect(function(player)
 end)
 ```
 
-<Alert severity = 'info'>
-The `Class.Instance.Name` of the `Class.Player` object is the name of the user. If you need a unique reference to a user, such as to save information about them in a [data store](../cloud-services/data-stores/index.md), use their `Class.Player.UserId` instead of their `Class.Player.Name` because users can't change their `UserId` even though they can change their Username and Display Name.
-</Alert>
+### Character spawn
 
-### User leaving
+By default, a user's `Class.Player.Character` model represents their platform avatar and `Class.Players.CharacterAutoLoads` is `true`, meaning the character model automatically spawns when the user joins a game.
 
-When a client disconnects from an experience, the server destroys its associated `Class.Player` object from the `Class.Players` service. The `Class.Players.PlayerRemoving` event represents users leaving the experience. Some example use-cases include saving user data, removing their stats from a scoreboard, and destroying any of their models, such as their house. The `Class.Players.PlayerRemoving` event passes the `Class.Player` object of the user who leaves, which you can use when calling other functions, such as data store and `Class.RemoteEvent` objects.
+When a user's `Class.Player.Character` spawns, `Class.Script|Scripts` and `Class.LocalScript|LocalScripts` in `Class.StarterCharacterScripts` clone into the character model and the `Class.Player.CharacterAdded` event fires.
+This event passes the new character model to its listeners which you can use to find the character's `Class.Humanoid` object and modify its behavior. For example, you can use `Class.Humanoid:ApplyDescription()` to change the outfit of the avatar.
 
-Notice that the event is called `Class.Player.PlayerRemoving`, not `Class.Player.PlayerRemoved`, because "removed" would imply that the `Class.Player` object is already removed and is therefore inaccessible to scripts.
+### Character despawn
 
-#### Save user data on leave
+When the player's `Class.Humanoid` dies, the server automatically removes the character model after the amount of time specified by `Class.Players.RespawnTime`. You can then use the `Class.Player.CharacterRemoving` event to reset other objects or update data associated with the character.
 
-To save a user's data when they leave an experience, use the `Class.Players.PlayerRemoving` event in a `Class.Script`. The following example `Class.Script` listens to the event and attempts to save a user's data using their user ID as the data store key.
+### User leave
+
+When a user client disconnects from a game, the server destroys its associated `Class.Player` object inside the `Class.Players` service. At this point, the `Class.Players.PlayerRemoving` event fires and passes the `Class.Player` object of the user who disconnected. You can use this for numerous purposes such as saving user data, removing player stats from a scoreboard, or destroying player‑created models in the game.
+
+The following example `Class.Script` listens to the `Class.Players.PlayerRemoving|PlayerRemoving` event and attempts to save the user's data in a data store under their user ID:
 
 ```lua title="Script in ServerScriptService"
 local DataStoreService = game:GetService("DataStoreService")
+local Players = game:GetService("Players")
+
 local playerDataStore = DataStoreService:GetDataStore("PlayerData")
 
-game:GetService("Players").PlayerRemoving:Connect(function(player)
+Players.PlayerRemoving:Connect(function(player)
 	local userId = player.UserId
 
 	-- Get the player's data state in the game
@@ -74,55 +77,71 @@ game:GetService("Players").PlayerRemoving:Connect(function(player)
 	    warn(errorMessage)
 	end
 end)
-
 ```
 
-### Character spawning
+## Containers
 
-A user's `Class.Player.Character` model represents their avatar. By default, `Class.Player.CharacterAutoLoads` is true, and a user's character model automatically spawns when they join the experience. If `Class.Player.CharacterAutoLoads` is false, then you need to call `Class.Player:LoadCharacter()` to manually spawn the character.
+Each `Class.Player` object representing a user's client stores several important containers: `Class.Backpack`, `Class.StarterGear`, `Class.PlayerGui`, and `Class.PlayerScripts`. At game runtime, several containers in the "edit" data model copy their contents over to these `Class.Player` containers, including `Class.StarterGui` to `Class.PlayerGui`, `Class.StarterPack` to `Class.Backpack`, and `Class.StarterPlayerScripts` to `Class.PlayerScripts`.
 
-When a user's `Class.Player.Character` spawns, Scripts and LocalScripts in `Class.StarterCharacterScripts` clone into the character model and the `Class.Player.CharacterAdded` event fires.
-The `Class.Player.CharacterAdded` event passes the new character model to any event listeners, which you can use to find the character's `Class.Humanoid` object and modify its behavior. For example, you can use `Class.Humanoid:ApplyDescription()` to change the outfit of the avatar and `Class.Humanoid.WalkSpeed` or `Class.Humanoid.JumpHeight` to modify the avatar's movement.
+<figure>
+	<img src="../assets/scripting/client-server/Data-Model-Mapping.png" width="720" alt="A diagram that maps objects between 'edit' and 'runtime' data models." />
+</figure>
 
-### Character despawning
+<Tabs>
+<TabItem label="Backpack">
+`Class.Tool` objects in the `Class.Backpack` make up the player's inventory and display as icon buttons at the bottom of the screen. See [in‑game tools](./tools.md) for more information.
 
-When the player's `Class.Humanoid` dies, its body parts fall to the ground and the `Class.Humanoid.Died` event fires. The server automatically removes the character model and any scripts inside it after amount of time that the `Class.Players.Respawntime` property determines. You can use the `Class.Player.CharacterRemoving` event to reset other objects associated with the character, such as the network ownership of a vehicle they were driving.
+As illustrated above, the contents of `Class.StarterPack` and the player's `Class.StarterGear` clone to `Class.Backpack` when a player's `Class.Player.Character|Character` spawns. When the character dies, the client destroys the `Class.Backpack` and replaces it with a new one.
 
-#### Count player deaths
+To disable the default Roblox inventory GUI and replace it with your own, call `Class.StarterGui:SetCoreGuiEnabled()` in a `Class.LocalScript` as outlined in [disable&nbsp;default&nbsp;UI](./disable-ui.md).
+</TabItem>
+<TabItem label="StarterGear">
+When a player's character spawns, the contents of that player's `Class.StarterGear` are copied into the `Class.Backpack`. Additionally, when a player connects to a game that permits gear, all of the appropriate gear `Class.Tool|Tools` that the player owns are inserted into that player's `Class.StarterGear`.
 
-You can use the `Class.Humanoid.Died` event to handle scoring for a kill or create a custom ragdoll model. The following `Class.Script` connects to `Class.Player.CharacterAdded` to retrieve each user's character model, then connects to the character's `Class.Humanoid` object. When the humanoid's `Class.Humanoid.Died` event fires, the script increments the number of times the user's humanoid has died and outputs that number.
+Unlike `Class.StarterPack`, `Class.StarterGear` isn't a service but rather a child of each `Class.Player` object, so its contents are player‑specific. To use `Class.StarterGear`, navigate to your start place's **Permissions** page and then enable gear by its genre or choose specific types to allow.
 
-```lua title="Script in ServerScriptService"
-game:GetService("Players").PlayerAdded:Connect(function(player)
-	local deaths = 0
-	player.CharacterAdded:Connect(function(character)
-		local humanoid = character:WaitForChild("Humanoid")
-		humanoid.Died:Connect(function()
-			deaths += 1
-			print(player.Name .. " death count: " .. deaths)
-		end)
-	end)
-end)
-```
+<Alert severity="warning">
+Always test experiences after adding gear to them to check that users can't easily abuse them there. Gear may include `Class.Script` objects which allow the player to perform actions that you might not consider; for example, navigational gear might allow the player to access a part of the map that you don't want them to, and weapon gear may allow the holder to damage other players, possibly without retribution or retaliation.
+</Alert>
+</TabItem>
+<TabItem label="PlayerGui">
+The `Class.PlayerGui` container stores objects that create the player's GUI. If a `Class.ScreenGui` is a descendant of `Class.PlayerGui`, any `Class.GuiObject` inside that `Class.ScreenGui` displays on the player's screen.
+
+As illustrated above, the contents of `Class.StarterGui` automatically copy into the player's `Class.PlayerGui` when their player `Class.Player.Character|Character` spawns. If `Class.StarterGui.ResetPlayerGuiOnSpawn` is set to `true`, all the contents of a player's `Class.PlayerGui` are cleared and replaced with the contents of `Class.StarterGui` every time the player's character respawns.
+
+Note that if `Class.Players.CharacterAutoLoads` is set to `false`, the character
+won't spawn and `Class.StarterGui` contents won't copy over until
+`Class.Player:LoadCharacterAsync()` is called.
+</TabItem>
+<TabItem label="PlayerScripts">
+The `Class.PlayerScripts` container is created automatically when a player
+joins the game and its main purpose is to contain client scripts copied from the
+`Class.StarterPlayerScripts` container within the `Class.StarterPlayer` service. It is especially useful for scripts that aren't tied to a user's character life cycle, such as the general chat system or player input controls.
+
+Unlike the `Class.Backpack` and `Class.PlayerGui` containers, the
+`Class.PlayerScripts` container is not accessible to the server and server‑side
+`Class.Script` objects will not run when parented to `Class.PlayerScripts`.
+</TabItem>
+</Tabs>
 
 ## Ban users
 
-To ensure civility and fair play in your experiences, you can ban users who violate your experience rules and community guidelines. You can modify ban durations, ban messages, and even extend bans to potential alternate accounts. When using this feature, you must also follow guidelines for [banning](#ban-guidelines) and [messaging](#message-guidelines). You have several options for working with bans:
+To ensure civility and fair play in your experiences, you can ban users who violate rules or community guidelines. You can modify ban durations, ban messages, and even extend bans to potential alternate accounts. When using this feature, you must follow banning [guidelines](#ban-guidelines) and [messaging](#message-guidelines).
 
-- Each experience page on the [Creator Hub](https://create.roblox.com/) has a [Bans dashboard](../production/bans.md).
-- For programmatic usage with the Engine API, see `Class.Players:BanAsync()`.
-- For Open Cloud, see [Bans and blocks](/cloud/features/bans-and-blocks).
+You have several options for working with bans:
+
+- Each experience page on the [Creator Hub](https://create.roblox.com/) has a [Bans](../production/bans.md) dashboard.
+- For programmatic usage with the engine API, see `Class.Players:BanAsync()`.
+- For Open Cloud, see [bans and blocks](/cloud/features/bans-and-blocks).
 
 ### Ban guidelines
 
 When implementing bans in your experience, adhere to the following guidelines:
 
-- Experience rules must not contradict Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) and [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use).
-  - For example, you can not create an experience rule that excludes someone because of their gender as this violates [Roblox's Discrimination, Slurs, and Hate Speech policy](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards#discrimination-slurs-and-hate-speech).
+- Experience rules must not contradict Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) and [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use). For example, you cannot create an experience rule that excludes someone because of their gender, as this violates [Roblox's Discrimination, Slurs, and Hate Speech policy](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards#discrimination-slurs-and-hate-speech).
 - Creators must clearly state their experience rules somewhere accessible to all users.
 - Creators must apply their experience rules fairly and not arbitrarily target certain users.
-- Users can appeal to creators directly if they believe their ban was incorrect.
-  - Roblox will not mediate these appeals, unless the user believes the creator's experience rules or enforcement of their rules violate the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
+- Users can appeal to creators directly if they believe their ban was incorrect. Roblox will not mediate these appeals, unless the user believes the creator's experience rules or enforcement of their rules violate the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
 - Roblox can moderate an experience if there is reason to believe that a creator's experience rules or enforcement of their rules violate the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
 
 ### Message guidelines
@@ -135,42 +154,3 @@ For example, in your ban messages, you are allowed to reference brand names and 
 - "Message me on Twitter or X"
 
 Mentions of personal information or direct links are not allowed in this message field. This includes posting a specific username or handle, or providing a direct link to a Discord server or X account.
-
-## Containers
-
-The `Class.Player` object stores several important containers:
-
-- [Backpack](#backpack)
-- [StarterGear](#startergear)
-- [PlayerGui](#playergui)
-- [PlayerScripts](#playerscripts)
-
-### Backpack
-
-The `Class.Player.Backpack` container stores the user's inventory. The `Class.Tool` objects in a user's `Class.Backpack` display in their inventory at the bottom of their screen. If a user selects a `Class.Tool` from the inventory, they equip it, and it moves from the `Class.Player.Backpack` to the `Class.Player.Character`.
-
-When a user's `Class.Player.Character` spawns, the contents of the `Class.StarterPack` service and their `Class.Player.StarterGear` clones to their `Class.Player.Backpack`. When the character dies, the client destroys their `Class.Backpack` and replaces it with a new one.
-
-The `Class.Backpack` also stores and runs `Class.Script|Scripts` and `Class.LocalScript|LocalScripts` that the client and server can both access.
-
-Roblox provides an interface for a player to access their `Class.Backpack` and inventory at the bottom of the screen. To disable the default Roblox backpack GUI and replace it with your own, call `Class.StarterGui:SetCoreGuiEnabled()` in a LocalScript. For more information, see `Class.StarterGui`.
-
-### StarterGear
-
-The `Class.StarterGear` container clones its contents to the user's `Class.Player.Backpack` when its character spawns. Additionally, if your place permits gear and a user owns gear, the `Class.Tool` objects of their gear clone to their `Class.Player.StarterGear` when they spawn.
-
-Unlike `Class.StarterPack`, `Class.Player.StarterGear` isn't a service but rather a child of each `Class.Player` object, so its contents are user-specific. Each user can have different `Class.Tool` objects within their `Class.Player.StarterGear`. To use `Class.Player.StarterGear`, enable Gear in your experience's settings page under **Permissions**. On the permissions page, you can enable by gear by its type. To disable gear, deselect its type.
-
-Always test experiences after adding Gear to them to check that users can't easily abuse them there. Gear includes `Class.Script` objects and allows the player to perform actions that you might not consider. For example, a navigational gear might allow the player to access a part of the map that you don't want them to. Weapons allow players with gear to damage other players, possibly without retribution or retaliation.
-
-### PlayerGui
-
-The `Class.PlayerGui` container stores objects that create the player's GUI. If a ScreenGui is a descendant of a `Class.PlayerGui`, then any `Class.GuiObject` inside the ScreenGui displays on the player's screen. Any `Class.LocalScript` runs when it clones to `Class.PlayerGui`. When the player's `Class.Player.Character` spawns for the first time, all of the contents of StarterGui automatically copy into the player's `Class.PlayerGui`.
-
-If Players.CharacterAutoLoads is set to false, the character doesn't spawn, and `Class.StarterGui` contents don't copy over until `Class.Player:LoadCharacter()` is called. If `Class.StarterGui.ResetPlayerGuiOnSpawn` is set to true, every time the player's character respawns, all of the contents of that player's `Class.PlayerGui` are cleared and replaced with the contents of `Class.StarterGui`.
-
-### PlayerScripts
-
-When a user joins the experience, the contents in `Class.StarterPlayer.StarterPlayerScripts` container clone to `Class.PlayerScripts`. Any LocalScripts and ModuleScripts run when they clone.
-
-Unlike the `Class.Backpack` and `Class.PlayerGui` containers, the `Class.PlayerScripts` container isn't accessible to the server, and a user's `Class.PlayerScripts` container doesn't reset when their character dies and respawns. Server-side `Class.Script` objects also don't run when parented to `Class.PlayerScripts`. The `Class.PlayerScripts` container is useful for scripts that aren't tied to a user's character life cycle, such as the general chat system or player input controls.

@@ -14,15 +14,15 @@ Validation for heads use a specialized process that may require adjustment of yo
 </Alert>
 
 <Alert severity = "info" variant="outlined" color="primary" >
-<AlertTitle>Auto-setup recommendation</AlertTitle>
+<AlertTitle>Avatar Setup recommendation</AlertTitle>
 <br />
-[Avatar auto-setup](../../avatar-setup/auto-setup.md) is an automated tool that automatically generates components for your avatar character, **including the head cage and facial animation** required for Marketplace character models. You can save time by submitting character models without avatar components into the auto-setup tool and modifying the output.
+[Avatar Setup](../../avatar-setup/index.md) is an automated tool that automatically generates components for your avatar character, **including the head cage and facial animation** required for Marketplace character models. You can save time by submitting character models without avatar components into the Avatar Setup tool and modifying the output.
 
-You can test and refine your auto-setup output by using the Avatar setup tool previews. You can even download your output as a `.gltf` and adjust the FACS or cage data in your DCC tools.
+You can test and refine your Avatar Setup output by using the Avatar Setup tool previews. You can even download your output as a `.gltf` and adjust the FACS or cage data in your DCC tools.
 
 You can alternatively manually modify your own cages and FACS animations within your DCC tools, which may require more time or additional iteration in your workflow, such as weight-painting adjustments, to ensure it meets Marketplace policies.
 
-To submit issues or feedback regarding the avatar auto setup tool, submit a [bug report](https://devforum.roblox.com/c/bug-reports/10).
+To submit issues or feedback regarding the Avatar Setup tool, submit a [bug report](https://devforum.roblox.com/c/bug-reports/10).
 </Alert>
 
 ## Head cage

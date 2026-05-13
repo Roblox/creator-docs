@@ -7,37 +7,31 @@ type: class
 memory_category: Instances
 summary: |
   A container object that holds a player's inventory. Any `Class.Tool` in a
-  player's Backpack will be displayed in their inventory at the bottom of their
+  player's `Backpack` will be displayed in their inventory at the bottom of the
   screen.
 description: |
-  A container object that holds a player's inventory. Any `Class.Tool` in a
-  player's Backpack will be displayed in their inventory at the bottom of their
-  screen. Selecting `Class.Tool|Tools` from the inventory will equip the
-  `Class.Tool`, moving it from the Backpack to the player's character.
+  `Class.Tool` objects in the `Backpack` container make up the player's
+  inventory and display as icon buttons at the bottom of the screen. See
+  [in‑game tools](../../../players/tools.md) for more information.
 
-  The Backpack can also store `Class.Script|Scripts` and
-  `Class.LocalScript|LocalScripts`, which run when placed in a player's
-  Backpack.
-
-  When a player's character spawns, the contents of the `Class.StarterPack` and
-  their `Class.StarterGear` are copied into their Backpack. Once a character
-  dies, the Backpack is removed and a new one will be created -- populating it
+  When a player's character spawns, the contents of `Class.StarterPack` and the
+  player's `Class.StarterGear` clone to `Backpack`. When the character dies, the
+  client destroys the `Backpack` and replaces it with a new one, populated again
   with the contents of `Class.StarterPack` and `Class.StarterGear`.
 
-  Roblox provides an interface for a player to access their backpack and
-  inventory by default at the bottom of the screen. If a developer wishes to
-  disable the default Roblox backpack GUI and replace it with their own, they
-  may do so using `Class.StarterGui:SetCoreGuiEnabled()`.
+  To disable the default Roblox inventory GUI and replace it with your own, call
+  `Class.StarterGui:SetCoreGuiEnabled()` in a `Class.LocalScript` as outlined in
+  [disable&nbsp;default&nbsp;UI](../../../players/disable-ui.md).
 
-  The Backpack can be accessed from both the client and the server.
+  `Backpack` can be accessed from both the client and the server:
 
   ```lua
   local Players = game:GetService("Players")
 
-  -- Accessing Backpack from a Server Script:
+  -- Accessing Backpack from a server script
   local backpack = Players.PlayerName.Backpack
 
-  -- Accessing Backpack from a LocalScript:
+  -- Accessing Backpack from a client script
   local backpack = Players.LocalPlayer.Backpack
   ```
 code_samples:
