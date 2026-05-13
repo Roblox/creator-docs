@@ -58,6 +58,7 @@ To run Avatar Setup:
       1. For character body geometry, select **Body**.
       1. For layered clothing assets, select **Layered**.
       1. For rigid accessory assets, select **Rigid**.
+      1. For eyebrow and eyelash assets, select **Eye Layered**.
 
       <img src="../assets/avatar/avatar-setup/Set-Type.png" width="50%" alt="" />
 
@@ -90,6 +91,7 @@ To run Avatar Setup:
       </AccordionDetails>
       </BaseAccordion>
 
+   1. If your character includes a [higher-fidelity rig](../art/characters/specifications.md#higher-fidelity-rigs) with additional joints, enable **Create R15 with optional joints**.
    1. If you want to manually align the front direction of your character with the negative Z-axis in world space, enable **Manually Align Front**. While auto-setup does this automatically for you, it can sometimes fail to properly determine the front of your character.
    1. If you want to add a post-processing step to improve the alignment of your character's head cage with head facial features, enable **Improve facial caging**. This is particularly important if you plan on using [makeup](../makeup/index.md) with your character.
    1. If you want to skip the auto-decimation of input meshes with resolution above the triangle budgets required for the Marketplace, disable **Reduce triangle count**.
