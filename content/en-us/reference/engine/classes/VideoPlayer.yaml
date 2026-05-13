@@ -144,6 +144,25 @@ properties:
     capabilities:
       - Audio
       - UI
+  - name: VideoPlayer.MaximumResolution
+    summary: ''
+    description: ''
+    code_samples: []
+    type: VideoSampleSize
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Playback
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+      - UI
+      - InternalTest
   - name: VideoPlayer.PlaybackSpeed
     summary: |
       Controls the speed at which the video is played.

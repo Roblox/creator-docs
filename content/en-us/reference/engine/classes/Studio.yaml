@@ -2266,6 +2266,22 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: Studio.PreferredTextSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: PreferredTextSize
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: General
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: Studio.Primary Text Color
     summary: ''
     description: ''

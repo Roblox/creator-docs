@@ -84,6 +84,25 @@ properties:
     capabilities:
       - Audio
       - UI
+  - name: VideoFrame.MaximumResolution
+    summary: ''
+    description: ''
+    code_samples: []
+    type: VideoSampleSize
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Video
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+      - UI
+      - InternalTest
   - name: VideoFrame.Playing
     summary: |
       Indicates whether the `Class.VideoFrame.Video` is currently playing. It

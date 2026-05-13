@@ -14,6 +14,14 @@ description: |
   `Class.UserSettings` singleton. It holds various persistent settings relating
   to how the user wants to control their camera, and their character.
 
+  The properties on this class reflect both the user-facing options exposed in
+  the in-experience settings menu (such as graphics quality, master volume,
+  camera and control modes) as well as other contextual user-configurable state
+  that is not surfaced in the menu itself (such as internal onboarding progress,
+  VR comfort options, window layout, and debug or profiling configuration). As a
+  result, some properties listed here may not correspond to anything visible in
+  the settings UI, and many are restricted to internal Roblox scripts.
+
   You can access this object from a `Class.LocalScript` via:
 
   ```lua
@@ -35,8 +43,12 @@ tags:
 deprecation_message: ''
 properties:
   - name: UserGameSettings.AllTutorialsDisabled
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether all in-experience tutorials have been disabled by the
+      user.
+    description: |
+      Indicates whether all in-experience tutorials have been disabled by the
+      user.
     code_samples: []
     type: boolean
     tags: []
@@ -51,8 +63,10 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.BadgeVisible
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether badge notifications are visible to the client.
+    description: |
+      Indicates whether badge notifications are visible to the client.
     code_samples: []
     type: boolean
     tags: []
@@ -67,8 +81,10 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.CameraMode
-    summary: ''
-    description: ''
+    summary: |
+      The custom camera mode currently in-use by the client.
+    description: |
+      The custom camera mode currently in-use by the client.
     code_samples: []
     type: CustomCameraMode
     tags: []
@@ -83,8 +99,10 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.ChatVisible
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether the in-experience chat is visible to the client.
+    description: |
+      Indicates whether the in-experience chat is visible to the client.
     code_samples: []
     type: boolean
     tags: []
@@ -161,8 +179,10 @@ properties:
     capabilities:
       - Input
   - name: UserGameSettings.Fullscreen
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether the client's window is currently in full screen mode.
+    description: |
+      Indicates whether the client's window is currently in full screen mode.
     code_samples: []
     type: boolean
     tags: []
@@ -196,8 +216,12 @@ properties:
     capabilities:
       - Input
   - name: UserGameSettings.GraphicsOptimizationMode
-    summary: ''
-    description: ''
+    summary: |
+      The graphics optimization mode used by the client to balance visual
+      quality and performance.
+    description: |
+      The graphics optimization mode used by the client to balance visual
+      quality and performance.
     code_samples: []
     type: GraphicsOptimizationMode
     tags: []
@@ -212,8 +236,10 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.GraphicsQualityLevel
-    summary: ''
-    description: ''
+    summary: |
+      The current graphics quality level being used by the client.
+    description: |
+      The current graphics quality level being used by the client.
     code_samples: []
     type: int
     tags: []
@@ -228,8 +254,10 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.HasEverUsedVR
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether the user has ever launched the client in VR mode.
+    description: |
+      Indicates whether the user has ever launched the client in VR mode.
     code_samples: []
     type: boolean
     tags: []
@@ -263,8 +291,12 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.MasterVolumeStudio
-    summary: ''
-    description: ''
+    summary: |
+      A float between 0 and 1 representing the master volume used in Roblox
+      Studio.
+    description: |
+      A float between 0 and 1 representing the master volume used in Roblox
+      Studio.
     code_samples: []
     type: float
     tags: []
@@ -279,8 +311,12 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.MaxQualityEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether the client's graphics quality is set to the maximum
+      available level.
+    description: |
+      Indicates whether the client's graphics quality is set to the maximum
+      available level.
     code_samples: []
     type: boolean
     tags: []
@@ -316,8 +352,10 @@ properties:
     capabilities:
       - Input
   - name: UserGameSettings.OnboardingsCompleted
-    summary: ''
-    description: ''
+    summary: |
+      A comma-separated list of onboarding IDs that the user has completed.
+    description: |
+      A comma-separated list of onboarding IDs that the user has completed.
     code_samples: []
     type: string
     tags: []
@@ -332,8 +370,10 @@ properties:
       can_save: false
     capabilities: []
   - name: UserGameSettings.PartyVoiceVolume
-    summary: ''
-    description: ''
+    summary: |
+      A float between 0 and 1 representing the volume of party voice chat.
+    description: |
+      A float between 0 and 1 representing the volume of party voice chat.
     code_samples: []
     type: float
     tags: []
@@ -348,8 +388,12 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.PeoplePageLayout
-    summary: ''
-    description: ''
+    summary: |
+      The layout style used to display the people page in the in-experience
+      menu.
+    description: |
+      The layout style used to display the people page in the in-experience
+      menu.
     code_samples: []
     type: PeoplePageLayout
     tags: []
@@ -364,8 +408,10 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.PlayerListVisible
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether the in-experience player list is visible to the client.
+    description: |
+      Indicates whether the in-experience player list is visible to the client.
     code_samples: []
     type: boolean
     tags: []
@@ -380,8 +426,12 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.PlayerNamesEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether player names are displayed above characters in the
+      experience.
+    description: |
+      Indicates whether player names are displayed above characters in the
+      experience.
     code_samples: []
     type: boolean
     tags: []
@@ -396,8 +446,12 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.RCCProfilerRecordFrameRate
-    summary: ''
-    description: ''
+    summary: |
+      Internal MicroProfiler setting specifying the frame rate used when
+      capturing server-side RCC profiler data.
+    description: |
+      Internal MicroProfiler setting specifying the frame rate used when
+      capturing server-side RCC profiler data.
     code_samples: []
     type: int
     tags: []
@@ -412,8 +466,12 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.RCCProfilerRecordTimeFrame
-    summary: ''
-    description: ''
+    summary: |
+      Internal MicroProfiler setting specifying the duration over which
+      server-side RCC profiler data is captured.
+    description: |
+      Internal MicroProfiler setting specifying the duration over which
+      server-side RCC profiler data is captured.
     code_samples: []
     type: int
     tags: []
@@ -466,8 +524,10 @@ properties:
     capabilities:
       - Players
   - name: UserGameSettings.StartMaximized
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether Roblox Studio should launch in a maximized window.
+    description: |
+      Indicates whether Roblox Studio should launch in a maximized window.
     code_samples: []
     type: boolean
     tags:
@@ -484,8 +544,10 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.StartScreenPosition
-    summary: ''
-    description: ''
+    summary: |
+      The screen position of the client's window when the application launches.
+    description: |
+      The screen position of the client's window when the application launches.
     code_samples: []
     type: Vector2
     tags:
@@ -502,8 +564,10 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.StartScreenSize
-    summary: ''
-    description: ''
+    summary: |
+      The size of the client's window when the application launches.
+    description: |
+      The size of the client's window when the application launches.
     code_samples: []
     type: Vector2
     tags:
@@ -558,8 +622,12 @@ properties:
     capabilities:
       - Input
   - name: UserGameSettings.UsedCoreGuiIsVisibleToggle
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether the user has toggled the visibility of core GUI
+      elements.
+    description: |
+      Indicates whether the user has toggled the visibility of core GUI
+      elements.
     code_samples: []
     type: boolean
     tags: []
@@ -574,8 +642,12 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.UsedCustomGuiIsVisibleToggle
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether the user has toggled the visibility of custom GUI
+      elements.
+    description: |
+      Indicates whether the user has toggled the visibility of custom GUI
+      elements.
     code_samples: []
     type: boolean
     tags: []
@@ -590,8 +662,12 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.UsedHideHudShortcut
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether the user has used the keyboard shortcut for hiding the
+      HUD.
+    description: |
+      Indicates whether the user has used the keyboard shortcut for hiding the
+      HUD.
     code_samples: []
     type: boolean
     tags: []
@@ -606,8 +682,10 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.VignetteEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether the VR vignette comfort effect is enabled.
+    description: |
+      Indicates whether the VR vignette comfort effect is enabled.
     code_samples: []
     type: boolean
     tags: []
@@ -622,8 +700,10 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.VREnabled
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether the client is currently running in VR mode.
+    description: |
+      Indicates whether the client is currently running in VR mode.
     code_samples: []
     type: boolean
     tags: []
@@ -638,8 +718,10 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.VRRotationIntensity
-    summary: ''
-    description: ''
+    summary: |
+      The intensity of camera rotation when turning in VR.
+    description: |
+      The intensity of camera rotation when turning in VR.
     code_samples: []
     type: int
     tags: []
@@ -654,8 +736,10 @@ properties:
       can_save: true
     capabilities: []
   - name: UserGameSettings.VRSmoothRotationEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether smooth rotation is used instead of snap rotation in VR.
+    description: |
+      Indicates whether smooth rotation is used instead of snap rotation in VR.
     code_samples: []
     type: boolean
     tags: []
