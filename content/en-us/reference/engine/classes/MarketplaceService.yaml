@@ -982,24 +982,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Monetization
-  - name: MarketplaceService:OpenShop
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: player
-        type: Player
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - PromptExternalPurchase
   - name: MarketplaceService:PlayerOwnsAsset
     summary: |
       Returns whether the given user has the given asset.

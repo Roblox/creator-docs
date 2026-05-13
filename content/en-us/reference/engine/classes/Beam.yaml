@@ -467,11 +467,28 @@ properties:
       Determines the speed at which the `Class.Beam.Texture|Texture` image moves
       along the beam.
     description: |
-      Determines the speed at which the `Class.Beam.Texture|Texture` image moves
-      along the beam. When this property is a positive value, the beam's texture
-      will move from `Class.Beam.Attachment0|Attachment0` to
+      Sets the number of texture cycles per second at which the
+      `Class.Beam.Texture|Texture` image moves along the beam, where one cycle
+      is a full traversal of the texture's UV range. When this property is a
+      positive value, the beam's texture will move from
+      `Class.Beam.Attachment0|Attachment0` to
       `Class.Beam.Attachment1|Attachment1`. This direction can be inverted by
-      setting this property to a negative number.
+      setting this property to a negative number. The default value is `1`.
+
+      How far one cycle travels along the beam in studs depends on
+      `Class.Beam.TextureMode|TextureMode` and
+      `Class.Beam.TextureLength|TextureLength`.
+
+      #### Examples
+
+      - `-2` — Texture scrolls from `Class.Beam.Attachment1|Attachment1` toward
+        `Class.Beam.Attachment0|Attachment0`, completing two cycles per second.
+      - `0` — Texture is static.
+      - `1` — Texture scrolls from `Class.Beam.Attachment0|Attachment0` toward
+        `Class.Beam.Attachment1|Attachment1`, completing one cycle per second
+        (default).
+      - `2` — Texture scrolls from `Class.Beam.Attachment0|Attachment0` toward
+        `Class.Beam.Attachment1|Attachment1`, completing two cycles per second.
     code_samples: []
     type: float
     tags: []

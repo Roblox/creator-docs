@@ -750,4 +750,4 @@ This limit will be the sum of a base limit for each of your experiences and a pe
 
 The storage limit will be calculated using the formula `Total latest version storage limit = 100 MB + 1 MB * lifetime user count`.
 
-Any data that you delete or replace, even if still accessible through version APIs, will not count towards your experience's storage usage.
+Any keys that you delete or replace, even if still accessible through version APIs, do not count towards your experience's storage usage. However, entire data stores deleted via the Open Cloud [`DeleteDataStore`](/cloud/reference/DataStore#Cloud_DeleteDataStore) method continue to count towards your storage usage for the duration of their 30-day processing period, until they are permanently deleted.

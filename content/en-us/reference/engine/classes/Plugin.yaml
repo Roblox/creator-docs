@@ -42,8 +42,12 @@ properties:
       can_save: false
     capabilities: []
   - name: Plugin.DisableUIDragDetectorDrags
-    summary: ''
-    description: ''
+    summary: |
+      If `true`, toolbars and buttons for the plugin will ignore dragging
+      related to a `Class.UIDragDetector` instance.
+    description: |
+      If `true`, toolbars and buttons for the plugin will ignore dragging
+      related to a `Class.UIDragDetector` instance.
     code_samples: []
     type: boolean
     tags: []

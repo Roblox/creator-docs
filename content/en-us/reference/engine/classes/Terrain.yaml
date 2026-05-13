@@ -6,14 +6,14 @@ name: Terrain
 type: class
 memory_category: Instances
 summary: |
-  Terrain lets you to create dynamically morphable environments.
+  `Terrain` lets you to create dynamically morphable environments.
 description: |
-  Terrain lets you create dynamically morphable environments with little to no
-  lag. It is currently based on a 4&times;4&times;4 grid of cells, where each
-  cell has a number between 0 and 1 representing how much the geometry should
-  occupy the cell, and the material of the cell. The occupancy determines how
-  the cell will morph together with surrounding cells, and the result is the
-  illusion of having no grid constraint.
+  The `Terrain` class lets you create dynamically morphable environments. It is
+  based on a 4&times;4&times;4 grid of cells, where each cell has a number
+  between `0` and `1` representing how much the geometry should occupy the cell,
+  and the material of the cell. The occupancy determines how the cell will morph
+  together with surrounding cells, and the result is the illusion of having no
+  grid constraint.
 
   For more information, see [Terrain](../../../parts/terrain.md).
 code_samples: []
@@ -28,9 +28,9 @@ properties:
     summary: |
       Enables or disables terrain decoration.
     description: |
-      Currently enables or disables animated grass on the **Grass** terrain
-      material, although future modifications of this property may control
-      additional decorative features.
+      Currently enables or disables animated grass on the
+      `Enum.Material.Grass|Grass` terrain material, although future
+      modifications of this property may control additional decorative features.
     code_samples: []
     type: boolean
     tags:
@@ -50,9 +50,9 @@ properties:
     summary: |
       Specifies the length of animated grass.
     description: |
-      Specifies the length of animated grass on the **Grass** terrain material,
-      assuming `Class.Terrain.Decoration|Decoration` is enabled. Valid values
-      are between 0.1 and 1.
+      Specifies the length of animated grass on the `Enum.Material.Grass|Grass`
+      terrain material, assuming `Class.Terrain.Decoration|Decoration` is
+      enabled. Valid values are between `0.1` and `1`.
     code_samples: []
     type: float
     tags:
@@ -70,11 +70,9 @@ properties:
       - Environment
   - name: Terrain.IsSmooth
     summary: |
-      Returns true if the current game is using the smooth terrain system.
+      Returns `true` if the game is using the smooth terrain system.
     description: |
-      Returns true if the current game is using the smooth terrain system. The
-      legacy terrain engine has been removed, so this property will always be
-      true.
+      Returns `true` if the game is using the smooth terrain system.
     code_samples: []
     type: boolean
     tags:
@@ -82,8 +80,8 @@ properties:
       - NotReplicated
       - Deprecated
     deprecation_message: |
-      Sets the specified terrain voxel's material to ''Water'' and sets its
-      occupancy to 1.
+      The legacy terrain engine has been removed, so this property will always
+      be `true`.
     security:
       read: None
       write: None
@@ -96,18 +94,14 @@ properties:
       - Environment
   - name: Terrain.MaterialColors
     summary: |
-      MaterialColors represents the editor for the Material Color feature, and
-      **cannot be edited by scripts**.
-
-      To get the color of a material, use: `Class.Terrain:GetMaterialColor()` To
-      set the color of a material, use: `Class.Terrain:SetMaterialColor()`
+      Represents the editor for the **Material Color** feature and cannot be
+      edited by scripts.
     description: |
-      MaterialColors represents the editor for the Material Color feature, and
-      **cannot be edited by scripts**.
+      `MaterialColors` represents the editor for the **Material Color** feature
+      and cannot be edited by scripts.
 
-      To get the color of a material, use: `Class.Terrain:GetMaterialColor()`
-
-      To set the color of a material, use: `Class.Terrain:SetMaterialColor()`
+      To get the color of a material, use `Class.Terrain:GetMaterialColor()`. To
+      set the color of a material, use `Class.Terrain:SetMaterialColor()`.
     code_samples: []
     type: BinaryString
     tags:
@@ -146,9 +140,9 @@ properties:
       - Environment
   - name: Terrain.WaterColor
     summary: |
-      The tint of the Terrain water.
+      The tint of `Terrain` water.
     description: |
-      The tint of the Terrain water.
+      The tint of `Terrain` water.
     code_samples: []
     type: Color3
     tags: []
@@ -165,9 +159,9 @@ properties:
       - Environment
   - name: Terrain.WaterReflectance
     summary: |
-      Controls how opaque the Terrain's water reflections are.
+      Controls how opaque `Terrain` water reflections are.
     description: |
-      Controls how opaque the Terrain's water reflections are.
+      Controls how opaque `Terrain` water reflections are.
     code_samples: []
     type: float
     tags: []
@@ -184,9 +178,9 @@ properties:
       - Environment
   - name: Terrain.WaterTransparency
     summary: |
-      The transparency of the Terrain water.
+      The transparency of `Terrain` water.
     description: |
-      The transparency of the Terrain water.
+      The transparency of `Terrain` water.
     code_samples: []
     type: float
     tags: []
@@ -203,10 +197,10 @@ properties:
       - Environment
   - name: Terrain.WaterWaveSize
     summary: |
-      Sets the maximum height of the Terrain water waves in studs.
+      Sets the maximum height of `Terrain` water waves in studs.
     description: |
-      Sets the maximum height of the Terrain water waves in studs. This is
-      currently constrained to between 0 and 1.
+      Sets the maximum height of `Terrain` water waves in studs. This is
+      currently constrained to between `0` and `1`.
     code_samples: []
     type: float
     tags: []
@@ -223,11 +217,11 @@ properties:
       - Environment
   - name: Terrain.WaterWaveSpeed
     summary: |
-      Sets how many times the Terrain water waves will move up and down per
+      Sets how many times `Terrain` water waves will move up and down per
       minute.
     description: |
-      Sets how many times the Terrain water waves will move up and down per
-      minute. This is currently constrained to between 0 and 100.
+      Sets how many times `Terrain` water waves will move up and down per
+      minute. This is currently constrained to between `0` and `100`.
     code_samples: []
     type: float
     tags: []
@@ -245,9 +239,9 @@ properties:
 methods:
   - name: Terrain:AutowedgeCell
     summary: |
-      _(OBSOLETE)_ No longer does anything.
+      Obsolete function which no longer does anything.
     description: |
-      _(OBSOLETE)_ No longer does anything.
+      Obsolete function which no longer does anything.
     code_samples: []
     parameters:
       - name: x
@@ -276,9 +270,9 @@ methods:
       - Environment
   - name: Terrain:AutowedgeCells
     summary: |
-      _(OBSOLETE)_ No longer does anything.
+      Obsolete function which no longer does anything.
     description: |
-      _(OBSOLETE)_ No longer does anything.
+      <!-- Note: only H4, H5, and H6 headers areObsolete function which no longer does anything._(OBSOLETE)_ No longer does anything.
     code_samples: []
     parameters:
       - name: region
@@ -299,9 +293,9 @@ methods:
       - Environment
   - name: Terrain:CellCenterToWorld
     summary: |
-      Returns the world position of the center of the terrain cell (x, y, z).
+      Returns the world position of the center of the terrain cell.
     description: |
-      Returns the world position of the center of the terrain cell (x, y, z).
+      Returns the world position of the center of the terrain cell.
     code_samples: []
     parameters:
       - name: x
@@ -327,11 +321,9 @@ methods:
       - Environment
   - name: Terrain:CellCornerToWorld
     summary: |
-      Returns the position of the lower-left-forward corner of the grid cell (x,
-      y, z).
+      Returns the position of the lower-left-forward corner of the grid cell.
     description: |
-      Returns the position of the lower-left-forward corner of the grid cell (x,
-      y, z).
+      Returns the position of the lower-left-forward corner of the grid cell.
     code_samples: []
     parameters:
       - name: x
@@ -357,9 +349,9 @@ methods:
       - Environment
   - name: Terrain:Clear
     summary: |
-      Clears the terrain.
+      Clears all terrain.
     description: |
-      Clears the terrain.
+      Clears all terrain.
     code_samples: []
     parameters: []
     returns:
@@ -375,9 +367,8 @@ methods:
     summary: |
       Transforms the legacy terrain engine into the new terrain engine.
     description: |
-      Transforms the legacy terrain engine into the new terrain engine.
-
-      All places now automatically use the new terrain engine, so this method is
+      Transforms the legacy terrain engine into the new terrain engine. All
+      places now automatically use the new terrain engine, so this method is
       obsolete.
     code_samples: []
     parameters: []
@@ -388,7 +379,7 @@ methods:
       - Deprecated
     deprecation_message: |
       Since all places now automatically use the new terrain engine, this method
-      is obsolete. Do not use it for new work.
+      is obsolete.
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities:
@@ -396,11 +387,10 @@ methods:
   - name: Terrain:CopyRegion
     summary: |
       Stores a chunk of terrain into a `Class.TerrainRegion` object so it can be
-      loaded back later. Note: `Class.TerrainRegion` data does not replicate
-      between server and client.
+      loaded back later.
     description: |
       Stores a chunk of terrain into a `Class.TerrainRegion` object so it can be
-      loaded back later. Note: `Class.TerrainRegion` data does not replicate
+      loaded back later. Note that `Class.TerrainRegion` data does not replicate
       between server and client.
     code_samples:
       - Terrain-CopyRegion1
@@ -420,9 +410,9 @@ methods:
       - Environment
   - name: Terrain:CountCells
     summary: |
-      Returns the number of non-empty cells in the Terrain.
+      Returns the number of non-empty cells in the terrain.
     description: |
-      Returns the number of non-empty cells in the Terrain.
+      Returns the number of non-empty cells in the terrain.
     code_samples: []
     parameters: []
     returns:
@@ -439,8 +429,7 @@ methods:
       Fills a ball of smooth terrain in a given space.
     description: |
       Fills a ball of smooth terrain in a given space.
-    code_samples:
-      - Terrain-FillBall1
+    code_samples: []
     parameters:
       - name: center
         type: Vector3
@@ -484,7 +473,7 @@ methods:
         type: Vector3
         default:
         summary: |
-          The size in studs of the square block - both the height and width.
+          The size in studs of the square block (both the height and width).
       - name: material
         type: Material
         default:
@@ -504,13 +493,7 @@ methods:
       Fills a cylinder of smooth terrain in a given space.
     description: |
       Fills a cylinder of smooth terrain in a given space. The space is defined
-      using a CFrame, height, and radius.
-
-      ```lua
-      local Workspace = game:GetService("Workspace")
-
-      Workspace.Terrain:FillCylinder(CFrame.new(0, 50, 0), 5, 30, Enum.Material.Asphalt)
-      ```
+      using a `Datatype.CFrame`, height, and radius.
     code_samples: []
     parameters:
       - name: cframe
@@ -572,12 +555,11 @@ methods:
       - Environment
   - name: Terrain:FillWedge
     summary: |
-      Fills a wedge-shaped volume of Terrain with the given `Enum.Material` and
-      the area's CFrame and Size.
+      Fills a wedge-shaped volume of terrain with the given `Enum.Material`.
     description: |
-      `FillWedge()` fills a wedge-shaped volume of `Class.Terrain` with the
-      given `Enum.Material` and the area's `Datatype.CFrame` and size. The
-      orientation of the wedge is the same as an equivalent `Class.WedgePart`.
+      This method fills a wedge-shaped volume of `Class.Terrain` with the given
+      `Enum.Material` and the area's `Datatype.CFrame` and size. The orientation
+      of the wedge is the same as an equivalent `Class.WedgePart`.
     code_samples: []
     parameters:
       - name: cframe
@@ -606,12 +588,11 @@ methods:
       - Environment
   - name: Terrain:GetCell
     summary: |
-      Returns the closest CellMaterial from the legacy terrain engine that
+      Returns the closest cell material from the legacy terrain engine that
       matches the smooth terrain voxel specified.
     description: |
-      Returns the closest CellMaterial from the legacy terrain engine that
-      matches the smooth terrain voxel specified. CellBlock will always be
-      ''Solid'' and CellOrientation will always be ''NegZ''.
+      Returns the closest cell material from the legacy terrain engine that
+      matches the smooth terrain voxel specified.
     code_samples: []
     parameters:
       - name: x
@@ -661,10 +642,9 @@ methods:
       - Environment
   - name: Terrain:GetWaterCell
     summary: |
-      Returns if the cell is a water cell.
+      Returns `true` if the cell is a water cell.
     description: |
-      Returns if the cell is a water cell. The WaterForce parameter will always
-      be _None_ and the WaterDirection will always be _NegX_.
+      Returns `true` if the cell is a water cell.
     code_samples: []
     parameters:
       - name: x
@@ -693,10 +673,9 @@ methods:
       - Environment
   - name: Terrain:PasteRegion
     summary: |
-      Applies a chunk of terrain to the Terrain object. Note:
-      `Class.TerrainRegion` data does not replicate between server and client.
+      Applies a chunk of terrain to the `Terrain` object.
     description: |
-      Applies a chunk of terrain to the Terrain object. Note:
+      Applies a chunk of terrain to the `Terrain` object. Note that
       `Class.TerrainRegion` data does not replicate between server and client.
     code_samples:
       - Terrain-PasteRegion1
@@ -793,12 +772,12 @@ methods:
         summary: |
           Target region to read from. Must be aligned to the voxel grid. Will
           throw an error if region is too large. The limit is currently 4194304
-          voxels^3.
+          voxels&sup3;.
       - name: resolution
         type: float
         default:
         summary: |
-          Voxel resolution. Must be 4.
+          Voxel resolution. Must be `4`.
     returns:
       - type: Tuple
         summary: |
@@ -824,12 +803,10 @@ methods:
       `Datatype.Region3` with another material. Essentially, it is a
       find-and-replace operation on `Class.Terrain` materials.
 
-      #### Constraints
-
-      When calling this method, the `resolution` parameter must be exactly 4.
-      Additionally, the Region3 must be aligned to the terrain materials grid,
-      i.e. the components of the Region3's minimum and maximum points must be
-      divisible by 4. Use `Datatype.Region3:ExpandToGrid()` to make a region
+      When calling this method, the `resolution` parameter must be exactly `4`.
+      Additionally, `region` must be aligned to the terrain materials grid, such
+      that the components of the region's minimum and maximum points must be
+      divisible by `4`. Use `Datatype.Region3:ExpandToGrid()` to make a region
       compatible with this function.
     code_samples:
       - terrain-replacematerial
@@ -844,7 +821,7 @@ methods:
         default:
         summary: |
           The resolution at which the replacement operation will take place; at
-          the moment this must be exactly 4.
+          the moment this must be exactly `4`.
       - name: sourceMaterial
         type: Material
         default:
@@ -868,11 +845,9 @@ methods:
     summary: |
       Sets the occupancy and material of a specific terrain voxel.
     description: |
-      Sets the occupancy of the specified terrain voxel to 1, and sets it's
-      material to the closest smooth terrain material that matches the
-      CellMaterial.
-
-      CellBlock and CellOrientation have no effect.
+      Sets the occupancy of the specified terrain voxel to `1` and sets its
+      material to the closest smooth terrain material that matches the cell
+      material.
     code_samples: []
     parameters:
       - name: x
@@ -916,11 +891,9 @@ methods:
       Sets the occupancy and material of all terrain voxels in a specific
       region.
     description: |
-      Sets the occupancy of all terrain voxels in the specified region to 1, and
-      sets their materials to the closest smooth terrain material that matches
-      the CellMaterial.
-
-      CellBlock and CellOrientation have no effect.
+      Sets the occupancy of all terrain voxels in the specified region to `1`
+      and sets their materials to the closest smooth terrain material that
+      matches the cell material.
     code_samples: []
     parameters:
       - name: region
@@ -978,15 +951,11 @@ methods:
       - Environment
   - name: Terrain:SetWaterCell
     summary: |
-      Sets the specified terrain voxel's material to ''Water'' and sets its
-      occupancy to 1.
+      Sets the specified terrain voxel's material to water and sets its
+      occupancy to `1`.
     description: |
-      Sets the specified terrain voxel's material to ''Water'' and sets its
-      occupancy to 1. _WaterDirection_ and _WaterForce_ no longer have any
-      effect.
-
-      _Note:_ This API was intended for Roblox's old terrain system, which has
-      since been removed from the engine.
+      Sets the specified terrain voxel's material to water and sets its
+      occupancy to `1`.
     code_samples: []
     parameters:
       - name: x
@@ -1023,9 +992,9 @@ methods:
       - Environment
   - name: Terrain:WorldToCell
     summary: |
-      Returns the grid cell location that contains the point **position**.
+      Returns the grid cell location that contains the position point.
     description: |
-      Returns the grid cell location that contains the point **position**.
+      Returns the grid cell location that contains the point `position`.
     code_samples: []
     parameters:
       - name: position
@@ -1043,10 +1012,10 @@ methods:
       - Environment
   - name: Terrain:WorldToCellPreferEmpty
     summary: |
-      Returns the grid cell location that contains the point position,
+      Returns the grid cell location that contains the position point,
       preferring empty grid cells when position is on a grid edge.
     description: |
-      Returns the grid cell location that contains the point position,
+      Returns the grid cell location that contains the point `position`,
       preferring empty grid cells when position is on a grid edge.
     code_samples: []
     parameters:
@@ -1104,7 +1073,7 @@ methods:
         type: float
         default:
         summary: |
-          Voxel resolution. Must be 4.
+          Voxel resolution. Must be `4`.
       - name: channels
         type: Dictionary
         default:
@@ -1118,14 +1087,14 @@ methods:
             that `Enum.Material|Water` is not supported anymore; instead, a
             voxel that contains only water should be entered as
             `SolidMaterial = Enum.Material.Air, LiquidOccupancy = x`, where `x`
-            is a number between 0 (exclusive) and 1 (inclusive).
+            is a number between `0` (exclusive) and `1` (inclusive).
           - `SolidOccupancy` — The occupancy of the voxel's material as
             specified in the `SolidMaterial` channel. This should be a value
-            between 0 (empty) and 1 (full).
+            between `0` (empty) and `1` (full).
           - `LiquidOccupancy` — Specifies the occupancy of the
-            `Enum.Material|Water` material in a voxel as a value between 0 (no
-            water) and 1 (full of water). If the `SolidOccupancy` is 1 and the
-            `SolidMaterial` is not `Enum.Material|Air`, this will be 0.
+            `Enum.Material|Water` material in a voxel as a value between `0` (no
+            water) and `1` (full of water). If the `SolidOccupancy` is 1 and the
+            `SolidMaterial` is not `Enum.Material|Air`, this will be `0`.
     returns:
       - type: ()
         summary: ''
@@ -1143,7 +1112,6 @@ methods:
       Sets a certain region of smooth terrain using table format.
     code_samples:
       - terrain-writevoxels-example
-      - terrain-writevoxels-max-region
     parameters:
       - name: region
         type: Region3
@@ -1155,18 +1123,18 @@ methods:
         type: float
         default:
         summary: |
-          Voxel resolution. Must be 4.
+          Voxel resolution. Must be `4`.
       - name: materials
         type: Array
         default:
         summary: |
-          3D array of Enum.Material. Dimensions must exactly match the size of
+          3D array of `Enum.Material`. Dimensions must exactly match the size of
           the target region in voxels.
       - name: occupancy
         type: Array
         default:
         summary: |
-          3D array of voxel occupancies (number between 0 and 1). Dimensions
+          3D array of voxel occupancies (number between `0` and `1`). Dimensions
           must exactly match the size of the target region in voxels.
     returns:
       - type: ()
