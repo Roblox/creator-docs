@@ -10,6 +10,7 @@ information or your specific situation or rights, please contact an
 attorney.
 </Alert>
 
+
 **Intellectual property (IP)** refers to creations of the mind, such as inventions; literary and artistic works; designs; and symbols, names and images used in commerce. Copyright is a legal protection for original works of authorship. Copyright protects many different types of creative works including music, movies, pictures, books and virtual goods among others.
 
 Typically when you create an original work, the things that are unique about it – your intellectual property – automatically get legal copyright protection as soon as you create it. Only the unique, inventive aspects can be protected by copyright so **the more original and creative your design is, the more its design elements are protected by copyright**.
@@ -95,7 +96,7 @@ If you find content on Roblox that you believe infringes your IP rights, please 
 
 - Submitting an IP takedown notice to us is a legal process.
 - Only the rights holder or their authorized representative can report content that infringes on their intellectual property rights.
-- If Roblox receives a takedown notice about content from someone other than the IP owner or the owner's representative, Roblox cannot legally take action against the infringer unless contacted by the actual owner.
+- If Roblox receives a takedown notice about content from someone[ other than the IP owner or the owner's representative, Roblox cannot legally take action against the infringer unless contacted by the actual owner.
 
 ## Roblox-created IP
 
