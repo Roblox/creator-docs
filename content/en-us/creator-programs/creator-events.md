@@ -19,7 +19,6 @@ Participants in the program receive:
 
 - Membership in the [Creator Events program Roblox group](https://www.roblox.com/communities/9420522/Creator-Events#!/about) and [DevForum group](https://devforum.roblox.com/g/Event_Organizers).
 - Access to 1:1 connections, office hours and monthly program syncs.
-- Access to the Creator Events program Discord server.
 - Physical Roblox swag as gifts for participation.
 - Access to a versatile events dashboard, with access to event performance and key metrics.
 - Potential for events highlight opportunities across the site and Roblox social media platforms.
