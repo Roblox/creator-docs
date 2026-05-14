@@ -644,6 +644,22 @@ The following tables outline all of the classes and associated properties which 
     <td>`Class.UICorner.CornerRadius`</td>
     <td>`Datatype.UDim`</td>
 	</tr>
+  <tr>
+    <td>`Class.UICorner.BottomLeftRadius`</td>
+    <td>`Datatype.UDim`</td>
+	</tr>
+  <tr>
+    <td>`Class.UICorner.BottomRightRadius`</td>
+    <td>`Datatype.UDim`</td>
+	</tr>
+  <tr>
+    <td>`Class.UICorner.TopLeftRadius`</td>
+    <td>`Datatype.UDim`</td>
+	</tr>
+  <tr>
+    <td>`Class.UICorner.TopRightRadius`</td>
+    <td>`Datatype.UDim`</td>
+	</tr>
 </tbody>
 </table>
 
@@ -705,6 +721,43 @@ The following tables outline all of the classes and associated properties which 
   <tr>
     <td>`Class.UIPadding.PaddingTop`</td>
     <td>`Datatype.UDim`</td>
+	</tr>
+</tbody>
+</table>
+
+### UIShadow
+
+<table size="small">
+<thead>
+  <tr>
+    <th>Property</th>
+    <th width="40%">Type</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>`Class.UIShadow.BlurRadius`</td>
+    <td>`Datatype.UDim`</td>
+	</tr>
+  <tr>
+    <td>`Class.UIShadow.Color`</td>
+    <td>`Datatype.Color3`</td>
+	</tr>
+  <tr>
+    <td>`Class.UIShadow.Offset`</td>
+    <td>`Datatype.UDim2`</td>
+	</tr>
+  <tr>
+    <td>`Class.UIShadow.Spread`</td>
+    <td>`Datatype.UDim2`</td>
+	</tr>
+  <tr>
+    <td>`Class.UIShadow.Transparency`</td>
+    <td>float</td>
+	</tr>
+  <tr>
+    <td>`Class.UIShadow.ZIndex`</td>
+    <td>integer</td>
 	</tr>
 </tbody>
 </table>

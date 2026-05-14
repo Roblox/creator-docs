@@ -88,16 +88,16 @@ The `Class.Trail.Color|Color` property tints the trail's texture to either a spe
    **keypoint** that determines the color value of the trail at that
    point in its lifetime.
 
-	 <img src="../assets/studio/general/ColorSequence-White-Keypoints-Labeled.png" width="640" alt="Keypoints labeled in color sequence popup" />
+	 <img src="../assets/studio/general/ColorSequence-White-Keypoints-Labeled.png" width="628" alt="Keypoints labeled in color sequence popup" />
 
 1. Click the keypoint at the start of the color sequence, click the
    small square next to **Color**, and select a color from the popup window.
 
-	 <img src="../assets/studio/general/ColorSequence-Red-White.png" width="640" alt="Color sequence popup from red to white" />
+	 <img src="../assets/studio/general/ColorSequence-Red-White.png" width="628" alt="Color sequence popup from red to white" />
 
 1. If you want the trail to change color near the end of its lifetime, click the keypoint at the end of the color sequence, click the small square next to **Color**, and select a color from the popup window.
 
-   <img src="../assets/studio/general/ColorSequence-Red-Purple.png" width="640" alt="Color sequence popup from red to purple" />
+   <img src="../assets/studio/general/ColorSequence-Red-Purple.png" width="628" alt="Color sequence popup from red to purple" />
 
 1. For more customization, you can:
 
@@ -131,7 +131,7 @@ The `Class.Trail.Transparency|Transparency` property sets the transparency of th
    In the number sequence popup, each square at the start and end of the graph is a **keypoint** that determines the opacity value of the trail at that
    point along its span. By default, the graph defaults to a straight line and the trail is of consistent opacity.
 
-   <img src="../assets/studio/general/NumberSequence-0.5-0.5-Keypoints-Labeled.png" width="746" alt="Keypoints labeled in number sequence popup" />
+   <img src="../assets/studio/general/NumberSequence-0-0-Keypoints-Labeled.png" width="828" alt="Keypoints labeled in number sequence popup" />
 
 1. Perform any of the following actions:
 
@@ -141,7 +141,7 @@ The `Class.Trail.Transparency|Transparency` property sets the transparency of th
    - To delete a keypoint, select it and click the **Delete** button.
    - Reset the entire sequence by clicking the **Reset** button.
 
-   <img src="../assets/studio/general/NumberSequence-0-1-0.png" width="746" alt="Number sequence popup from 0 to 1 to 0" />
+   <img src="../assets/studio/general/NumberSequence-0-1-0.png" width="828" alt="Number sequence popup from 0 to 1 to 0" />
 
 </TabItem>
 </Tabs>

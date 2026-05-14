@@ -5,7 +5,7 @@
 name: UICorner
 type: class
 memory_category: Instances
-summary: |
+summary: |-
   UI modifier which applies deformation to corners of its parent
   `Class.GuiObject`.
 description: |
@@ -103,10 +103,10 @@ properties:
     capabilities:
       - UI
   - name: UICorner.CornerRadius
-    summary: |
+    summary: |-
       Sets all four corner radii at once and reads from
       `Class.UICorner.TopLeftRadius|TopLeftRadius`.
-    description: |
+    description: |-
       A convenience `Datatype.UDim` property that acts as a shorthand for the
       four individual corner radius properties. Writing to this property sets
       `Class.UICorner.TopLeftRadius|TopLeftRadius`,

@@ -5,15 +5,9 @@ description: Thumbnail images and videos appear on the Roblox home page and at t
 
 Thumbnails appear on Roblox's [Home](https://www.roblox.com/home) page and at the top of your experience's detail page, allowing you to showcase your experience's features and announce updates or events.
 
+<figure>
 <img src="../../assets/publishing/experiences-places-assets/Experience-Page-Example.jpg" width="1120" />
-
-To access your thumbnails:
-
-1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), select the experience you want to upload a thumbnail for.
-2. Go to **Configure** &rang; **Places** and select a place.
-3. Click **Thumbnails & Videos** in the left nav, then use the **Home Page** tab and the **Experience Detail Page** tab to customize your experience's thumbnails for these two spaces.
-
-## Manage thumbnails
+</figure>
 
 You can feature up to 10 images or videos for each of your experiences' detail pages. All uploaded images and videos are moderated to make sure they adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846).
 
@@ -44,6 +38,8 @@ You can feature up to 10 images or videos for each of your experiences' detail p
 </tbody>
 </table>
 
+## Manage thumbnails
+
 Uploaded thumbnails appear in the **Experience Detail Page** tab where they can be reordered, deleted, or given "alt" text for improved [accessibility](../../production/publishing/accessibility.md).
 
 <img src="../../assets/creator-dashboard/Manage-Thumbnails.png" width="840" alt="Thumbnails and related actions on the Creator Dashboard" />
@@ -52,11 +48,25 @@ Uploaded thumbnails appear in the **Experience Detail Page** tab where they can 
 
 A thumbnail image should be **16:9 aspect ratio** and ideally **1920×1080 pixels** so that it always displays in high resolution across the Roblox site and app. Supported formats include `.jpg`, `.gif`, `.png`, `.tga`, or `.bmp`. See [best practices](#best-practices) for additional design recommendations.
 
+To upload an image thumbnail for your experience:
+
+1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), select the experience you want to upload an image thumbnail for.
+2. Go to **Configure** &rang; **Places** and select a place.
+3. Click **Thumbnails** in the left nav, then use the **Home Page** tab and the **Experience Detail Page** tab to customize your experience's thumbnails for these two spaces.
+
 ### Videos
 
 <Alert severity="warning">
 Xbox , PlayStation, and VR headsets do not currently support video thumbnails.
 </Alert>
+
+To help users understand your experience before they join, you can upload an authentic gameplay video. Once approved, the video will appear first on your experience's detail page, and it can also be shown on the [Home](https://www.roblox.com/home) page.
+
+To upload a video thumbnail for your experience:
+
+1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), select the experience you want to upload a video for.
+2. Go to **Configure** &rang; **Places** and select a place.
+3. Click **Videos** in the left nav.
 
 Video thumbnails should be **authentic** and [accurately portray in‑experience content](#video-accuracy) without misleading alterations. **All videos will be reviewed** to ensure they accurately reflect the experience and do not violate the [Community Rules](https://en.help.roblox.com/hc/articles/203313410) or [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846).
 

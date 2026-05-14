@@ -100,17 +100,17 @@ The `Class.ParticleEmitter.Color|Color` property tints each particle's texture t
    **keypoint** that determines the color value of the property at that point in
    the particle's lifetime.
 
-    <img src="../assets/studio/general/ColorSequence-White-Keypoints-Labeled.png" width="640" alt="Keypoints labeled in color sequence popup" />
+    <img src="../assets/studio/general/ColorSequence-White-Keypoints-Labeled.png" width="628" alt="Keypoints labeled in color sequence popup" />
 
 1. Click the keypoint at the start of the color sequence, click the
    small square next to **Color**, and select a color from the popup window.
 
- <img src="../assets/studio/general/ColorSequence-Red-White.png" width="640" alt="Color sequence popup from red to white" />
+ <img src="../assets/studio/general/ColorSequence-Red-White.png" width="628" alt="Color sequence popup from red to white" />
 
 1. If you want particles to change their color near the end of their
    lifetime, click the keypoint at the end of the color sequence, click the small square next to **Color**, and select a color from the popup window.
 
-   <img src="../assets/studio/general/ColorSequence-Red-Purple.png" width="640" alt="Color sequence popup from red to purple" />
+   <img src="../assets/studio/general/ColorSequence-Red-Purple.png" width="628" alt="Color sequence popup from red to purple" />
 
 1. For more customization, you can:
 
@@ -144,7 +144,7 @@ The `Class.ParticleEmitter.Size|Size` property sets the size of each particle to
    In the number sequence popup, each square at the start and end of the graph is a **keypoint** that determines the size value of the property at that
    point in the particle's lifetime. By default, the graph defaults to a straight line and a particle remains the same size throughout its lifetime.
 
-   <img src="../assets/studio/general/NumberSequence-0.5-0.5-Keypoints-Labeled.png" width="746" alt="Keypoints labeled in number sequence popup" />
+   <img src="../assets/studio/general/NumberSequence-0-0-Keypoints-Labeled.png" width="828" alt="Keypoints labeled in number sequence popup" />
 
 1. Perform any of the following actions:
 
@@ -158,7 +158,7 @@ The `Class.ParticleEmitter.Size|Size` property sets the size of each particle to
      generate at a random size between the pink envelope.
 
      <figure>
-     <img src="../assets/studio/general/NumberSequence-Envelope.png" width="440" alt="Envelope lines indicated in number sequence popup" />
+     <img src="../assets/studio/general/NumberSequence-Envelope.png" width="450" alt="Envelope lines indicated in number sequence popup" />
      <video src="../assets/lighting-and-effects/particle-emitter/Size-Envelope.mp4" controls width="720" alt="Video of emitter with large size envelope toward end of its lifetime"></video>
      <figcaption>Emitter with large size envelope toward end of its lifetime</figcaption>
      </figure>
