@@ -11,8 +11,7 @@ description: |
   screen safe area. The insets are relative to the **fullscreen area**, meaning
   the rectangular region that encompasses all visible pixels on the screen.
 
-  <img src="../../../assets/engine-api/enums/ScreenInsets/Inset-Regions-All.png" width="840"
-  alt="Mobile device screen showing inset regions." />
+  <img src="../../../assets/engine-api/enums/ScreenInsets/Inset-Regions-All.png" width="840" alt="Mobile device screen showing inset regions." />
 code_samples: []
 tags: []
 deprecation_message: ''
