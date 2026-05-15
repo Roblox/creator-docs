@@ -27,7 +27,9 @@ More generally, testing on a variety of devices can help you check that the game
 
 ## Streaming and teleportation
 
-- [Instance streaming](../workspace/streaming/index.md) lets Roblox dynamically load and unload 3D content and is a great option for most places, especially larger ones. Streaming improves join times, reduces memory footprint, and increases frame rate. For more information, see [Improve performance](improve.md#instance-streaming).
+- [Instance streaming](../workspace/streaming/index.md) lets Roblox dynamically load and unload 3D content and is a great option for most places, especially larger ones. Streaming improves join times, reduces memory footprint, and increases frame rate.
+
+  For example, when you enable `Class.Workspace.EnableSLIMAvatars` and set your world models' `Class.Model.LevelOfDetail|LevelOfDetail` property to `Enum.ModelLevelOfDetail.SLIM|SLIM`, you can create worlds with social spaces and crowded events that remain visually populated while scaling across a wide range of device capabilities. For more information, see [Improve performance](improve.md#instance-streaming).
 
 - Consider breaking large places into more manageable ones and using [teleportation](../projects/teleport.md) to move players between them. This approach can reduce **initial** join times, but imposes additional join times as players teleport from place to place. Benefits to memory usage vary depending on the size of the place and whether you've enabled streaming.
 

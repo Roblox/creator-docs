@@ -156,7 +156,7 @@ For models with a non-default `Class.Model.LevelOfDetail|LevelOfDetail` property
 				Displays a composite mesh of all child parts in the model when the original model is not present on the client. Roblox automatically generates many SLIM (Scalable Lightweight Interactive Model) meshes for the model and uses progressively less complex ones as distance from the camera increases.
 				- Visual quality is superior to imposter meshes, with comparable performance.
 				- Whether SLIM meshes display at all depends on the position of the **character**. The quality level of SLIM meshes depends on the position of the **camera**.
-				- SLIM currently only supports models with static meshes, not skinned meshes, avatars, or animations.
+				- SLIM currently only supports models with static meshes and platform avatars with animations. Models that contain skinned meshes, are modified at runtime, or play animations are not supported.
 				- The first time a model set to `Enum.ModelLevelOfDetail.SLIM|SLIM` is loaded, Roblox generates its optimized assets in the cloud. This one-time process can take a few moments for very complex models. If you have a large place and don't see some models immediately, wait a few minutes and try again.
 				- SLIM relies on models to understand how to group geometry. For best results, use `Class.Model|Models` to group parts that are spatially and logically related (for example, all the parts of a car). For arbitrary organization in your project, use folders, which SLIM ignores.
 			</td>
@@ -179,6 +179,44 @@ For models with a non-default `Class.Model.LevelOfDetail|LevelOfDetail` property
 		</tr>
 	</tbody>
 </table>
+
+## Set avatar level of detail
+
+Platform avatars outside of the currently streamed area are not visible by default. However, you can instruct the engine to render platform avatar models with [standard rigs](../../art/characters/specifications.md#standard-rigs) and any number of accessories or layers of clothing as optimized lightweight "SLIM" avatar representations with full support for animations.
+
+When you enable the `Class.Workspace.EnableSLIMAvatars` property alongside instance streaming, each composite SLIM model generates several LoDs in the cloud. This enables the engine to automatically:
+
+- Render the SLIM version when platform avatars are streamed out outside the streaming radius.
+- Switch between rendering the SLIM version or the full model depending on available resources when platform avatars are within the streaming radius.
+- Throttle animation updates for SLIM avatars based on scene importance and available network bandwidth.
+
+With these performance optimizations, you can have social spaces and crowded events that remain visually populated while scaling across a wide range of device capabilities. To ensure the best visual experience, set your world models' `Class.Model.LevelOfDetail|LevelOfDetail` property to `Enum.ModelLevelOfDetail.SLIM|SLIM` too.
+
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant='buttonLarge'>Which avatars work with SLIM?</Typography>
+</AccordionSummary>
+<AccordionDetails>
+The avatar level of detail system has specific optimizations for avatars. The following describes what will or won't be processed by SLIM:
+
+**Includes**:
+
+- Any avatar with a standard rig that's added by Roblox when a player joins your experience with streaming enabled, including the character's body, head, layered clothing, and accessories.
+- Any changes made to the player's avatar between when the `Class.Player.CharacterAdded|Player.CharacterAdded()` signal fires and before the `Class.Player.CharacterAppearanceLoaded|Player.CharacterAppearanceLoaded()` signal fires.
+
+**Excludes**:
+
+- R6 avatars.
+- Non-player characters (NPCs), even if they include a standard rig.
+- Custom Avatar Settings that change proportions, clothing, or body parts. Instead, the original "Player Choice" avatar renders when the avatar model is streamed out on the client.
+- Any change to the avatar model after the `Class.Player.CharacterAppearanceLoaded|Player.CharacterAppearanceLoaded()` signal fires is not reflected in the SLIM model. This includes changes like:
+  - Any scripts that modify the avatar model or its appearance after it's been added into the experience.
+  - The avatar equipping a tool.
+  - The avatar adding or removing accessories or clothing.
+  - Highlights added to the avatar.
+
+</AccordionDetails>
+</BaseAccordion>
 
 ## Use streaming radius strategically
 
