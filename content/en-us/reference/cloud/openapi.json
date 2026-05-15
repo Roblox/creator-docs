@@ -9503,7 +9503,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -9516,14 +9516,16 @@
                 "InExperienceConfig",
                 "RecommendationServicesConfig",
                 "DataStoresConfig",
-                "ExtendedServicesConfig"
+                "ExtendedServicesConfig",
+                "LeaderboardsConfig"
               ]
             },
             "x-enum-varnames": [
               "InExperienceConfig",
               "RecommendationServicesConfig",
               "DataStoresConfig",
-              "ExtendedServicesConfig"
+              "ExtendedServicesConfig",
+              "LeaderboardsConfig"
             ]
           }
         ],
@@ -9624,7 +9626,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -9637,14 +9639,16 @@
                 "InExperienceConfig",
                 "RecommendationServicesConfig",
                 "DataStoresConfig",
-                "ExtendedServicesConfig"
+                "ExtendedServicesConfig",
+                "LeaderboardsConfig"
               ]
             },
             "x-enum-varnames": [
               "InExperienceConfig",
               "RecommendationServicesConfig",
               "DataStoresConfig",
-              "ExtendedServicesConfig"
+              "ExtendedServicesConfig",
+              "LeaderboardsConfig"
             ]
           }
         ],
@@ -9788,7 +9792,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -9801,14 +9805,16 @@
                 "InExperienceConfig",
                 "RecommendationServicesConfig",
                 "DataStoresConfig",
-                "ExtendedServicesConfig"
+                "ExtendedServicesConfig",
+                "LeaderboardsConfig"
               ]
             },
             "x-enum-varnames": [
               "InExperienceConfig",
               "RecommendationServicesConfig",
               "DataStoresConfig",
-              "ExtendedServicesConfig"
+              "ExtendedServicesConfig",
+              "LeaderboardsConfig"
             ]
           }
         ],
@@ -9907,7 +9913,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -9920,14 +9926,16 @@
                 "InExperienceConfig",
                 "RecommendationServicesConfig",
                 "DataStoresConfig",
-                "ExtendedServicesConfig"
+                "ExtendedServicesConfig",
+                "LeaderboardsConfig"
               ]
             },
             "x-enum-varnames": [
               "InExperienceConfig",
               "RecommendationServicesConfig",
               "DataStoresConfig",
-              "ExtendedServicesConfig"
+              "ExtendedServicesConfig",
+              "LeaderboardsConfig"
             ]
           }
         ],
@@ -10073,7 +10081,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10086,14 +10094,16 @@
                 "InExperienceConfig",
                 "RecommendationServicesConfig",
                 "DataStoresConfig",
-                "ExtendedServicesConfig"
+                "ExtendedServicesConfig",
+                "LeaderboardsConfig"
               ]
             },
             "x-enum-varnames": [
               "InExperienceConfig",
               "RecommendationServicesConfig",
               "DataStoresConfig",
-              "ExtendedServicesConfig"
+              "ExtendedServicesConfig",
+              "LeaderboardsConfig"
             ]
           }
         ],
@@ -10239,7 +10249,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10252,14 +10262,16 @@
                 "InExperienceConfig",
                 "RecommendationServicesConfig",
                 "DataStoresConfig",
-                "ExtendedServicesConfig"
+                "ExtendedServicesConfig",
+                "LeaderboardsConfig"
               ]
             },
             "x-enum-varnames": [
               "InExperienceConfig",
               "RecommendationServicesConfig",
               "DataStoresConfig",
-              "ExtendedServicesConfig"
+              "ExtendedServicesConfig",
+              "LeaderboardsConfig"
             ]
           }
         ],
@@ -10360,7 +10372,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10373,14 +10385,16 @@
                 "InExperienceConfig",
                 "RecommendationServicesConfig",
                 "DataStoresConfig",
-                "ExtendedServicesConfig"
+                "ExtendedServicesConfig",
+                "LeaderboardsConfig"
               ]
             },
             "x-enum-varnames": [
               "InExperienceConfig",
               "RecommendationServicesConfig",
               "DataStoresConfig",
-              "ExtendedServicesConfig"
+              "ExtendedServicesConfig",
+              "LeaderboardsConfig"
             ]
           }
         ],
@@ -10526,7 +10540,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10539,14 +10553,16 @@
                 "InExperienceConfig",
                 "RecommendationServicesConfig",
                 "DataStoresConfig",
-                "ExtendedServicesConfig"
+                "ExtendedServicesConfig",
+                "LeaderboardsConfig"
               ]
             },
             "x-enum-varnames": [
               "InExperienceConfig",
               "RecommendationServicesConfig",
               "DataStoresConfig",
-              "ExtendedServicesConfig"
+              "ExtendedServicesConfig",
+              "LeaderboardsConfig"
             ]
           },
           {
@@ -10703,7 +10719,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10716,14 +10732,16 @@
                 "InExperienceConfig",
                 "RecommendationServicesConfig",
                 "DataStoresConfig",
-                "ExtendedServicesConfig"
+                "ExtendedServicesConfig",
+                "LeaderboardsConfig"
               ]
             },
             "x-enum-varnames": [
               "InExperienceConfig",
               "RecommendationServicesConfig",
               "DataStoresConfig",
-              "ExtendedServicesConfig"
+              "ExtendedServicesConfig",
+              "LeaderboardsConfig"
             ]
           },
           {
@@ -62845,6 +62863,95 @@
         }
       }
     },
+    "/v2/collectible-items/{collectibleItemId}/owners": {
+      "get": {
+        "tags": ["Assets", "Inventories", "Users"],
+        "summary": "Gets a list of owners of a collectible item.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "collectibleItemId",
+            "description": "The collectible item ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "The number of results per request.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "in": "query",
+            "name": "cursor",
+            "description": "The paging cursor for the previous or next page.",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "in": "query",
+            "name": "sortOrder",
+            "description": "The order the results are sorted in.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "enum": [1, 2],
+              "default": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Inventory.Api.V2.CollectibleItemOwnerResponse_"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Inventory.Api.V2.CollectibleItemOwnerResponse_"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "1: The collectible item id is invalid."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "2: You do not have permission to view the owners of this item."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://inventory.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#inventory_get_v2_collectible_items__collectibleItemId__owners"
+        }
+      }
+    },
     "/v2/compression-dictionaries": {
       "get": {
         "tags": ["Metadata"],
@@ -67239,7 +67346,7 @@
             }
           },
           "400": {
-            "description": "1: The universe does not exist.\r\n3: Invalid UniverseAvatarType.\r\n4: Invalid UniverseScaleType.\r\n5: Invalid UniverseAnimationType.\r\n6: Invalid UniverseCollisionType.\r\n7: New universe name or description has been rejected.\r\n8: New universe name is too long.\r\n10: Invalid UniverseBodyType.\r\n11: Invalid UniverseJointPositioningType.\r\n12: The universe has no root place.\r\n15: Price is required when isForSale is true.\r\n16: This game cannot be offered for sale because it is not public.\r\n17: This game cannot be offered for sale because it has private servers enabled.\r\n18: The game price is outside of the allowed range.\r\n19: Invalid genre.\r\n20: The request body is missing.\r\n21: Invalid device type.\r\n22: Invalid asset type.\r\n23: Invalid value, the min must be less than or equal to the max\r\n24: Invalid scale value\r\n28: OptIn/Out Regions Not Supported.\r\n41: You cannot change the private server price again so soon after the previous change. Please try again later."
+            "description": "1: The universe does not exist.\r\n3: Invalid UniverseAvatarType.\r\n4: Invalid UniverseScaleType.\r\n5: Invalid UniverseAnimationType.\r\n6: Invalid UniverseCollisionType.\r\n7: New universe name or description has been rejected.\r\n8: New universe name is too long.\r\n10: Invalid UniverseBodyType.\r\n11: Invalid UniverseJointPositioningType.\r\n12: The universe has no root place.\r\n15: Price is required when isForSale is true.\r\n16: This game cannot be offered for sale because it is not public.\r\n17: This game cannot be offered for sale because it has private servers enabled.\r\n18: The game price is outside of the allowed range.\r\n19: Invalid genre.\r\n20: The request body is missing.\r\n21: Invalid device type.\r\n22: Invalid asset type.\r\n23: Invalid value, the min must be less than or equal to the max\r\n24: Invalid scale value\r\n28: OptIn/Out Regions Not Supported.\r\n41: You cannot change the private server price again so soon after the previous change. Please try again later.\r\n42: This experience must be Public before its audience can include anything other than Editors. Call /activate first."
           },
           "401": {
             "description": "0: Authorization has been denied for this request."
@@ -67249,6 +67356,9 @@
           },
           "409": {
             "description": "9: Failed to shutdown all intances of game after changing AvatarType. The change has been reverted."
+          },
+          "500": {
+            "description": "43: Failed to update the audience configuration. The change was not applied. Please try again."
           }
         },
         "servers": [
@@ -76031,15 +76141,17 @@
           "InExperienceConfig",
           "RecommendationServicesConfig",
           "DataStoresConfig",
-          "ExtendedServicesConfig"
+          "ExtendedServicesConfig",
+          "LeaderboardsConfig"
         ],
         "type": "string",
-        "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig",
+        "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
         "x-enum-varnames": [
           "InExperienceConfig",
           "RecommendationServicesConfig",
           "DataStoresConfig",
-          "ExtendedServicesConfig"
+          "ExtendedServicesConfig",
+          "LeaderboardsConfig"
         ]
       },
       "RestartState": {
@@ -80678,6 +80790,9 @@
           },
           "attestationResponse": {
             "type": "string"
+          },
+          "source": {
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -82853,6 +82968,10 @@
           },
           "program": {
             "$ref": "#/components/schemas/Roblox.ClientSettings.Api.Models.Response.BetaProgramInfo"
+          },
+          "isFlagOnly": {
+            "description": "Whether the channel is flag-only. A flag-only channel uses production binaries.\r\nIf the channel is not flag-only, this is omitted.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -87886,6 +88005,22 @@
           "updated": {
             "format": "date-time",
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Inventory.Api.V2.CollectibleItemOwnerResponse": {
+        "type": "object",
+        "properties": {
+          "collectibleItemInstanceId": {
+            "type": "string"
+          },
+          "serialNumber": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Agents.AgentType_"
           }
         },
         "additionalProperties": false
@@ -93072,6 +93207,24 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Inventory.Api.V2.CollectibleItemOwnerResponse_": {
+        "type": "object",
+        "properties": {
+          "previousPageCursor": {
+            "type": "string"
+          },
+          "nextPageCursor": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Inventory.Api.V2.CollectibleItemOwnerResponse"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Inventory.Api.V2.UserAssetItemModelV2_": {
         "type": "object",
         "properties": {
@@ -96542,6 +96695,7 @@
           "develop_get_v2_assets__id__versions",
           "inventory_get_v1_users__userId__items__itemType___itemTargetId_",
           "inventory_get_v2_assets__assetId__owners",
+          "inventory_get_v2_collectible_items__collectibleItemId__owners",
           "inventory_delete_v2_inventory_asset__assetId_",
           "inventory_get_v2_users__userId__inventory",
           "itemconfiguration_post_v1_creations_get_asset_details",
@@ -97086,6 +97240,7 @@
           "inventory_get_v1_users__userId__items__itemType___itemTargetId__is_owned",
           "inventory_get_v1_users__userId__places_inventory",
           "inventory_get_v2_assets__assetId__owners",
+          "inventory_get_v2_collectible_items__collectibleItemId__owners",
           "inventory_delete_v2_inventory_asset__assetId_",
           "inventory_get_v2_users__userId__inventory",
           "inventory_get_v2_users__userId__inventory__assetTypeId_"
@@ -97818,6 +97973,7 @@
           "Cloud_GenerateUserThumbnail",
           "Cloud_GetUserThumbnailGenerationOperation",
           "inventory_get_v2_assets__assetId__owners",
+          "inventory_get_v2_collectible_items__collectibleItemId__owners",
           "catalog_get_v1_favorites_users__userId__favorites__assetTypeId__assets",
           "catalog_post_v1_favorites_users__userId__assets__assetId__favorite",
           "catalog_get_v1_favorites_users__userId__assets__assetId__favorite",

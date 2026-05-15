@@ -279,7 +279,7 @@ Note that the rendering order for `Class.UIStroke` instances with the same `Clas
 
 ## Corners
 
-The `Class.UICorner` instance applies deformation to all four corners of its parent `Class.GuiObject`. You can control the applied radius through the `Class.UICorner.CornerRadius|CornerRadius` property using either `Datatype.UDim.Scale|Scale` or `Datatype.UDim.Offset|Offset`.
+The `Class.UICorner` instance applies deformation to the corners of its parent `Class.GuiObject`. You can control the applied radius through the `Class.UICorner.CornerRadius|CornerRadius` property using either `Datatype.UDim.Scale|Scale` or `Datatype.UDim.Offset|Offset`.
 
 `Datatype.UDim.Scale|Scale` rounds the corners to a **percentage** based on the total length of the **shortest** edge of the parent, meaning that a scale of `0.5` or higher deforms the parent into a "pill" shape, regardless of its width or height. `Datatype.UDim.Offset|Offset` rounds the corners to a specific number of **pixels**, regardless of the width/height of the parent.
 
@@ -312,7 +312,7 @@ The `Class.UICorner` instance applies deformation to all four corners of its par
 
 You can also control **individual corners** through the `Class.UICorner.TopLeftRadius|TopLeftRadius`, `Class.UICorner.TopRightRadius|TopRightRadius`, `Class.UICorner.BottomRightRadius|BottomRightRadius`, and `Class.UICorner.BottomLeftRadius|BottomLeftRadius` properties.
 
-<BetaAlert betaName="New UI Capabilities" leadIn="The ability to set individual corners is currently in beta. Enable the capability through " leadOut="." components={props.components} />
+<BetaAlert betaName="New UI Capabilities" leadIn="The ability to set individual corners is currently in beta. Enable the capability through " leadOut=". During this Studio beta period, you cannot publish live games that use individually rounded UI corners." components={props.components} />
 
 <figure>
 	<img src="../assets/ui/ui-objects/UICorner-Mixed-1.png" width="392" />
@@ -340,7 +340,7 @@ A `Class.UIPadding` object applies top, bottom, left, and/or right padding to th
 
 ## Shadow
 
-<BetaAlert betaName="New UI Capabilities" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
+<BetaAlert betaName="New UI Capabilities" leadIn="This feature is currently in beta. Enable it through " leadOut=". During this Studio beta period, you cannot publish live games that use UI shadows." components={props.components} />
 
 A `Class.UIShadow` object renders a drop shadow behind its parent UI instance. Key features include:
 
