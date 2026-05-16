@@ -238,10 +238,6 @@ methods:
       Returns a list of tables containing information on all of the groups a
       given player is a member of.
     description: |
-      **Warning:** The **IsInClan** property in the returned table will always
-      return **false** and exists for backwards compatibility. The Clans feature
-      was sunset from the Roblox platform in 2016.
-
       This function returns a list of tables containing information on all of
       the groups a given `Class.Player` is a member of.
 
@@ -273,20 +269,20 @@ methods:
         <td>The assetId of the emblem, the same which is used in the EmblemUrl</td>
       </tr>
       <tr>
-        <td><b>Rank</b></td>
-        <td>The rankId the player has (for example: 255 for the owner)</td>
+        <td><b>Rank</b> <i>(deprecated)</i></td>
+        <td>The rankId the player has. Deprecated: players may now hold more than one role in a group. Use <code>Class.GroupService:GetRolesInGroupAsync()</code> instead.</td>
       </tr>
       <tr>
-        <td><b>Role</b></td>
-        <td>The name of the player's grouprank (for example: Group Owner)</td>
+        <td><b>Role</b> <i>(deprecated)</i></td>
+        <td>The name of the player's group rank. Deprecated: players may now hold more than one role in a group. Use <code>Class.GroupService:GetRolesInGroupAsync()</code> instead.</td>
       </tr>
       <tr>
         <td><b>IsPrimary</b></td>
         <td>A boolean indicating if this is the player's primary group</td>
       </tr>
       <tr>
-        <td><b>IsInClan</b></td>
-        <td>A boolean indicating if the player is in this group's clan</td>
+        <td><b>IsInClan</b> <i>(deprecated)</i></td>
+        <td>Always <code>false</code>. Deprecated: the Clans feature has been sunset.</td>
       </tr>
       </tbody>
       </table>
@@ -326,6 +322,12 @@ methods:
 
       Note that you can use `Class.Player:IsInGroupAsync()` to check the
       player's current membership status before calling this method.
+
+      If the player successfully joins, any cached results from
+      `Class.GroupService:GetRolesInGroupAsync()`,
+      `Class.Player:GetRankInGroupAsync()`, and
+      `Class.Player:GetRoleInGroupAsync()` for that player and group will be
+      cleared on the client where the prompt was shown.
     code_samples:
       - GroupService-PromptJoinAsync1
     parameters:

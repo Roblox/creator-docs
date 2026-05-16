@@ -113,6 +113,21 @@ methods:
       </tbody>
       </table>
 
+      #### Receipt timing
+
+      For Robux transfer receipts, the timing of when `handler` is invoked
+      depends on whether the transfer required receiver approval:
+
+      - **`Enum.ReceiptType.RobuxTransferReceiver`** &mdash; Always invoked on
+        the receiver's next server join, never while the receiver is still in
+        the originating server. Holds regardless of whether the transfer
+        required approval.
+      - **`Enum.ReceiptType.RobuxTransferSender`** &mdash; Invoked immediately
+        if the transfer settled without needing receiver approval, otherwise
+        deferred until the sender's next server join.
+
+      The user must be on a server for `handler` to fire.
+
       #### Errors
 
       This method throws an error if:
@@ -1430,6 +1445,18 @@ methods:
       Both receipts include a `TransferRequestId` field matching the
       `transferRequestId` returned by this method, which you can use for logging
       or to correlate sender and receiver receipts.
+
+      ##### Receipt timing
+
+      Receipt delivery depends on whether the transfer required receiver
+      approval (for example, parental consent for the receiver's account):
+
+      - **Receiver receipt** is always deferred until the receiver's next
+        session join. It is **not** delivered while the receiver is in the
+        originating server, regardless of whether approval was required.
+      - **Sender receipt** is delivered immediately if the transfer settles
+        without needing receiver approval. If approval is required, it is
+        deferred until the sender's next session join.
 
       #### Errors
 

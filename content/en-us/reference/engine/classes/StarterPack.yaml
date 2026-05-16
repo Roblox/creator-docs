@@ -10,9 +10,9 @@ summary: |
   their player character spawns. It is generally used to hold
   `Class.Tool|Tools`.
 description: |
-  `StarterPack` is a service-level container whose contents are copied into
-  each player's `Class.Backpack` when their player character spawns. It is
-  generally used to hold `Class.Tool|Tools` but it can also hold
+  `StarterPack` is a service-level container whose contents are copied into each
+  player's `Class.Backpack` when their player character spawns. It is generally
+  used to hold `Class.Tool|Tools` but it can also hold
   `Class.LocalScript|LocalScripts` to ensure that each player gets a copy.
 
   To ensure that certain `Class.Tool|Tools` are available to specific players

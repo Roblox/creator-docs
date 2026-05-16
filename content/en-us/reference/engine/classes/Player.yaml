@@ -1487,7 +1487,8 @@ methods:
   - name: Player:GetRankInGroup
     summary: |
       Returns the player's rank in the group as an integer.
-    description: ''
+    description: |
+      Only public roles are considered.
     code_samples:
       - Player-GetRankInGroup1
     parameters:
@@ -1515,6 +1516,7 @@ methods:
     description: |
       This method returns the player's rank in the group as an integer between
       `0` and `255`, where `0` is a non-member and `255` is the group's owner.
+      Only public roles are considered.
 
       This call may not yield the most up-to-date information. If a player
       leaves a group while they are in the experience, `GetRankInGroupAsync()`
@@ -1542,7 +1544,11 @@ methods:
           The player's rank in the group.
     tags:
       - Yields
-    deprecation_message: ''
+    deprecation_message: |
+      This method only returns a single role rank and may produce arbitrary
+      results when a user holds multiple roles. Use
+      `Class.GroupService:GetRolesInGroupAsync()` instead, which returns all
+      roles.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -1552,7 +1558,8 @@ methods:
     summary: |
       Returns the player's role in the group as a string, or `Guest` if the
       player isn't part of the group.
-    description: ''
+    description: |
+      Only public roles are considered.
     code_samples:
       - Player-GetRoleInGroup1
     parameters:
@@ -1583,7 +1590,7 @@ methods:
       player isn't part of the group.
     description: |
       This method returns the player's role in the group as a string, or `Guest`
-      if the player isn't part of the group.
+      if the player isn't part of the group. Only public roles are considered.
 
       This call may not yield the most up-to-date information. If a player
       leaves a group while they are in the experience, `GetRoleInGroupAsync()`
@@ -1612,7 +1619,11 @@ methods:
           not a member.
     tags:
       - Yields
-    deprecation_message: ''
+    deprecation_message: |
+      This method only returns a single role name and may produce arbitrary
+      results when a user holds multiple roles. Use
+      `Class.GroupService:GetRolesInGroupAsync()` instead, which returns all
+      roles.
     security: None
     thread_safety: Unsafe
     capabilities:

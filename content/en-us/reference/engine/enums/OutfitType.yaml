@@ -11,22 +11,32 @@ tags: []
 deprecation_message: ''
 items:
   - name: All
-    summary: ''
+    summary: |
+      Returns outfits of every type, with no filtering applied.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Avatar
-    summary: ''
+    summary: |
+      A full-body avatar outfit.
     value: 2
     tags: []
     deprecation_message: ''
   - name: DynamicHead
-    summary: ''
+    summary: |
+      An outfit containing a dynamic head.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Shoes
-    summary: ''
+    summary: |
+      An outfit consisting of a pair of shoes.
     value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Makeup
+    summary: |
+      An outfit consisting of makeup items applied to the avatar's face.
+    value: 5
     tags: []
     deprecation_message: ''

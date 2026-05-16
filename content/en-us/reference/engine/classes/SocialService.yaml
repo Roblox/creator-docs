@@ -375,7 +375,14 @@ methods:
       in the Roblox application.
     code_samples:
       - PromptFeedbackSubmissionAsync
-    parameters: []
+    parameters:
+      - name: options
+        type: Dictionary?
+        default:
+        summary: |
+          Optional `Dictionary` configuring the prompt. Supported keys: -
+          `FeedbackType` (`Enum.FeedbackType`). Selects which feedback flow to
+          display. Defaults to `Enum.FeedbackType.Feedback`.
     returns:
       - type: ()
         summary: ''

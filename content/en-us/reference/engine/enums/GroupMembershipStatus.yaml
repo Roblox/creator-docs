@@ -30,7 +30,8 @@ items:
     deprecation_message: ''
   - name: JoinRequestPending
     summary: |
-      The player submitted a request to join the group.
+      The player submitted a request to join the group, or already had a pending
+      join request prior to prompting.
     value: 2
     tags: []
     deprecation_message: ''

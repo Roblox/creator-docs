@@ -6,7 +6,19 @@ name: HumanoidRigDescription
 type: class
 memory_category: Animation
 summary: ''
-description: ''
+description: |
+  Stores the joint mapping, reference T-pose and per-joint properties for a
+  bipedal `Humanoid` character rig. Each of the 22 joints in the rig hierarchy
+  can reference an `Instance` (typically a `Motor6D`, `AnimationConstraint` or
+  `Bone`), define a T-pose adjustment transform, rotation range limits, and
+  carry a size for volumetric visualization and retargeting. For an example
+  Blender and Maya rig hierarchy with all optional joints, see
+  [Character specifications - Higher-fidelity rigs](../../../art/characters/specifications.md#higher-fidelity-rigs).
+
+  Use `AutoRig` to automatically populate joint references from a character
+  model, or assign joints individually. Supports both R6 (6-joint) and R15
+  (15-joint) rig subsets in addition to the full 22-joint standard set, as well
+  as rigs with more than 22 joints by mapping the key subset of joints.
 code_samples: []
 inherits:
   - Instance
@@ -16,7 +28,10 @@ deprecation_message: ''
 properties:
   - name: HumanoidRigDescription.Chest
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the chest joint. This joint is the branch point for the neck
+      chain and both clavicle chains.
     code_samples: []
     type: Instance
     tags: []
@@ -33,7 +48,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.ChestRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the chest joint along each local
+      axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -50,7 +67,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.ChestRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the chest joint along each local
+      axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -67,7 +86,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.ChestSize
     summary: ''
-    description: ''
+    description: |
+      Size of the chest joint's volume sphere, used for rig visualization and
+      collision.
     code_samples: []
     type: float
     tags: []
@@ -84,7 +105,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.ChestTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the chest joint to align it with
+      the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -101,7 +124,10 @@ properties:
       - Animation
   - name: HumanoidRigDescription.HeadBase
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the head base joint. This is the terminal joint of the head
+      chain.
     code_samples: []
     type: Instance
     tags: []
@@ -118,7 +144,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.HeadBaseRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the head base joint along each local
+      axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -135,7 +163,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.HeadBaseRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the head base joint along each local
+      axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -152,7 +182,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.HeadBaseSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the head base joint's volume sphere, used for rig
+      visualization and collision.
     code_samples: []
     type: float
     tags: []
@@ -169,7 +201,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.HeadBaseTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the head base joint to align it
+      with the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -186,7 +220,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftAnkle
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the left ankle joint.
     code_samples: []
     type: Instance
     tags: []
@@ -203,7 +239,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftAnkleRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the left ankle joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -220,7 +258,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftAnkleRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the left ankle joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -237,7 +277,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftAnkleSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the left ankle joint's volume sphere, used for rig
+      visualization and collision.
     code_samples: []
     type: float
     tags: []
@@ -254,7 +296,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftAnkleTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the left ankle joint to align it
+      with the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -271,7 +315,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftClavicle
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the left clavicle (collarbone) joint.
     code_samples: []
     type: Instance
     tags: []
@@ -288,7 +334,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftClavicleRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the left clavicle joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -305,7 +353,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftClavicleRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the left clavicle joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -322,7 +372,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftClavicleSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the left clavicle joint's volume sphere, used for rig
+      visualization and collision.
     code_samples: []
     type: float
     tags: []
@@ -339,7 +391,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftClavicleTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the left clavicle joint to align it
+      with the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -356,7 +410,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftElbow
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the left elbow joint.
     code_samples: []
     type: Instance
     tags: []
@@ -373,7 +429,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftElbowRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the left elbow joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -390,7 +448,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftElbowRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the left elbow joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -407,7 +467,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftElbowSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the left elbow joint's volume sphere, used for rig
+      visualization and collision.
     code_samples: []
     type: float
     tags: []
@@ -424,7 +486,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftElbowTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the left elbow joint to align it
+      with the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -441,7 +505,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftHip
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the left hip joint. This is the root of the left leg chain.
     code_samples: []
     type: Instance
     tags: []
@@ -458,7 +524,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftHipRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the left hip joint along each local
+      axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -475,7 +543,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftHipRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the left hip joint along each local
+      axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -492,7 +562,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftHipSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the left hip joint's volume sphere, used for rig visualization
+      and collision.
     code_samples: []
     type: float
     tags: []
@@ -509,7 +581,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftHipTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the left hip joint to align it with
+      the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -526,7 +600,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftKnee
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the left knee joint.
     code_samples: []
     type: Instance
     tags: []
@@ -543,7 +619,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftKneeRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the left knee joint along each local
+      axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -560,7 +638,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftKneeRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the left knee joint along each local
+      axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -577,7 +657,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftKneeSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the left knee joint's volume sphere, used for rig
+      visualization and collision.
     code_samples: []
     type: float
     tags: []
@@ -594,7 +676,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftKneeTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the left knee joint to align it
+      with the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -611,7 +695,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftShoulder
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the left shoulder joint.
     code_samples: []
     type: Instance
     tags: []
@@ -628,7 +714,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftShoulderRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the left shoulder joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -645,7 +733,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftShoulderRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the left shoulder joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -662,7 +752,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftShoulderSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the left shoulder joint's volume sphere, used for rig
+      visualization and collision.
     code_samples: []
     type: float
     tags: []
@@ -679,7 +771,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftShoulderTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the left shoulder joint to align it
+      with the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -696,7 +790,10 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftToeBase
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the left toe base joint. This is the terminal joint of the
+      left leg chain.
     code_samples: []
     type: Instance
     tags: []
@@ -713,7 +810,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftToeBaseRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the left toe base joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -730,7 +829,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftToeBaseRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the left toe base joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -747,7 +848,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftToeBaseSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the left toe base joint's volume sphere, used for rig
+      visualization and collision.
     code_samples: []
     type: float
     tags: []
@@ -764,7 +867,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftToeBaseTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the left toe base joint to align it
+      with the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -781,7 +886,10 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftWrist
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the left wrist joint. This is the terminal joint of the left
+      arm chain.
     code_samples: []
     type: Instance
     tags: []
@@ -798,7 +906,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftWristRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the left wrist joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -815,7 +925,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftWristRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the left wrist joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -832,7 +944,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftWristSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the left wrist joint's volume sphere, used for rig
+      visualization and collision.
     code_samples: []
     type: float
     tags: []
@@ -849,7 +963,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.LeftWristTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the left wrist joint to align it
+      with the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -866,7 +982,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.Neck
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the neck joint.
     code_samples: []
     type: Instance
     tags: []
@@ -883,7 +1001,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.NeckRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the neck joint along each local axis
+      (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -900,7 +1020,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.NeckRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the neck joint along each local axis
+      (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -917,7 +1039,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.NeckSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the neck joint's volume sphere, used for rig visualization and
+      collision.
     code_samples: []
     type: float
     tags: []
@@ -934,7 +1058,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.NeckTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the neck joint to align it with the
+      T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -951,7 +1077,10 @@ properties:
       - Animation
   - name: HumanoidRigDescription.OriginOffset
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame offset of the rig origin relative to the character
+      model's primary part. Adjusts where the rig hierarchy is anchored within
+      the character.
     code_samples: []
     type: CFrame
     tags: []
@@ -968,7 +1097,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightAnkle
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the right ankle joint.
     code_samples: []
     type: Instance
     tags: []
@@ -985,7 +1116,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightAnkleRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the right ankle joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1002,7 +1135,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightAnkleRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the right ankle joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1019,7 +1154,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightAnkleSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the right ankle joint's volume sphere, used for rig
+      visualization and collision.
     code_samples: []
     type: float
     tags: []
@@ -1036,7 +1173,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightAnkleTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the right ankle joint to align it
+      with the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -1053,7 +1192,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightClavicle
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the right clavicle (collarbone) joint.
     code_samples: []
     type: Instance
     tags: []
@@ -1070,7 +1211,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightClavicleRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the right clavicle joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1087,7 +1230,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightClavicleRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the right clavicle joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1104,7 +1249,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightClavicleSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the right clavicle joint's volume sphere, used for rig
+      visualization and collision.
     code_samples: []
     type: float
     tags: []
@@ -1121,7 +1268,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightClavicleTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the right clavicle joint to align
+      it with the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -1138,7 +1287,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightElbow
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the right elbow joint.
     code_samples: []
     type: Instance
     tags: []
@@ -1155,7 +1306,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightElbowRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the right elbow joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1172,7 +1325,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightElbowRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the right elbow joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1189,7 +1344,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightElbowSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the right elbow joint's volume sphere, used for rig
+      visualization and collision.
     code_samples: []
     type: float
     tags: []
@@ -1206,7 +1363,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightElbowTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the right elbow joint to align it
+      with the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -1223,7 +1382,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightHip
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the right hip joint. This is the root of the right leg chain.
     code_samples: []
     type: Instance
     tags: []
@@ -1240,7 +1401,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightHipRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the right hip joint along each local
+      axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1257,7 +1420,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightHipRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the right hip joint along each local
+      axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1274,7 +1439,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightHipSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the right hip joint's volume sphere, used for rig
+      visualization and collision.
     code_samples: []
     type: float
     tags: []
@@ -1291,7 +1458,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightHipTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the right hip joint to align it
+      with the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -1308,7 +1477,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightKnee
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the right knee joint.
     code_samples: []
     type: Instance
     tags: []
@@ -1325,7 +1496,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightKneeRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the right knee joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1342,7 +1515,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightKneeRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the right knee joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1359,7 +1534,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightKneeSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the right knee joint's volume sphere, used for rig
+      visualization and collision.
     code_samples: []
     type: float
     tags: []
@@ -1376,7 +1553,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightKneeTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the right knee joint to align it
+      with the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -1393,7 +1572,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightShoulder
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the right shoulder joint.
     code_samples: []
     type: Instance
     tags: []
@@ -1410,7 +1591,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightShoulderRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the right shoulder joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1427,7 +1610,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightShoulderRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the right shoulder joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1444,7 +1629,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightShoulderSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the right shoulder joint's volume sphere, used for rig
+      visualization and collision.
     code_samples: []
     type: float
     tags: []
@@ -1461,7 +1648,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightShoulderTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the right shoulder joint to align
+      it with the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -1478,7 +1667,10 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightToeBase
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the right toe base joint. This is the terminal joint of the
+      right leg chain.
     code_samples: []
     type: Instance
     tags: []
@@ -1495,7 +1687,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightToeBaseRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the right toe base joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1512,7 +1706,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightToeBaseRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the right toe base joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1529,7 +1725,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightToeBaseSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the right toe base joint's volume sphere, used for rig
+      visualization and collision.
     code_samples: []
     type: float
     tags: []
@@ -1546,7 +1744,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightToeBaseTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the right toe base joint to align
+      it with the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -1563,7 +1763,10 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightWrist
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the right wrist joint. This is the terminal joint of the
+      right arm chain.
     code_samples: []
     type: Instance
     tags: []
@@ -1580,7 +1783,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightWristRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the right wrist joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1597,7 +1802,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightWristRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the right wrist joint along each
+      local axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1614,7 +1821,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightWristSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the right wrist joint's volume sphere, used for rig
+      visualization and collision.
     code_samples: []
     type: float
     tags: []
@@ -1631,7 +1840,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RightWristTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the right wrist joint to align it
+      with the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -1648,7 +1859,11 @@ properties:
       - Animation
   - name: HumanoidRigDescription.Root
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the root joint, which is the base of the entire rig
+      hierarchy. The waist, left hip, and right hip chains all originate from
+      this joint.
     code_samples: []
     type: Instance
     tags: []
@@ -1665,7 +1880,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RootRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the root joint along each local axis
+      (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1682,7 +1899,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RootRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the root joint along each local axis
+      (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1699,7 +1918,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RootSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the root joint's volume sphere, used for rig visualization and
+      collision.
     code_samples: []
     type: float
     tags: []
@@ -1716,7 +1937,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.RootTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the root joint to align it with the
+      T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -1733,7 +1956,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.Spine
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the spine joint.
     code_samples: []
     type: Instance
     tags: []
@@ -1750,7 +1975,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.SpineRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the spine joint along each local
+      axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1767,7 +1994,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.SpineRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the spine joint along each local
+      axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1784,7 +2013,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.SpineSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the spine joint's volume sphere, used for rig visualization
+      and collision.
     code_samples: []
     type: float
     tags: []
@@ -1801,7 +2032,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.SpineTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the spine joint to align it with
+      the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -1818,7 +2051,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.Waist
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` joint
+      instance for the waist joint.
     code_samples: []
     type: Instance
     tags: []
@@ -1835,7 +2070,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.WaistRangeMax
     summary: ''
-    description: ''
+    description: |
+      Maximum rotation range in degrees for the waist joint along each local
+      axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1852,7 +2089,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.WaistRangeMin
     summary: ''
-    description: ''
+    description: |
+      Minimum rotation range in degrees for the waist joint along each local
+      axis (X, Y, Z).
     code_samples: []
     type: Vector3
     tags: []
@@ -1869,7 +2108,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.WaistSize
     summary: ''
-    description: ''
+    description: |
+      Diameter of the waist joint's volume sphere, used for rig visualization
+      and collision.
     code_samples: []
     type: float
     tags: []
@@ -1886,7 +2127,9 @@ properties:
       - Animation
   - name: HumanoidRigDescription.WaistTposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      Coordinate frame adjustment applied to the waist joint to align it with
+      the T-pose reference orientation.
     code_samples: []
     type: CFrame
     tags: []
@@ -1904,16 +2147,22 @@ properties:
 methods:
   - name: HumanoidRigDescription:GetJointFromName
     summary: ''
-    description: ''
+    description: |
+      Returns the joint instance associated with the given joint name. Accepts
+      both standard joint names (e.g., `"LeftShoulder"`) and R15 body part names
+      (e.g., `"LeftLowerLeg"`). Name matching is case-insensitive. Returns `nil`
+      if no joint with the given name is mapped.
     code_samples: []
     parameters:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          string
     returns:
       - type: Instance
-        summary: ''
+        summary: |
+          Instance
     tags: []
     deprecation_message: ''
     security: None
@@ -1922,12 +2171,18 @@ methods:
       - Animation
   - name: HumanoidRigDescription:GetJointNames
     summary: ''
-    description: ''
+    description: |
+      Returns an array of all 22 standard joint name strings for this rig
+      description, in hierarchy order: Root, Waist, Spine, Chest, Neck,
+      HeadBase, LeftClavicle, LeftShoulder, LeftElbow, LeftWrist, RightClavicle,
+      RightShoulder, RightElbow, RightWrist, LeftHip, LeftKnee, LeftAnkle,
+      LeftToeBase, RightHip, RightKnee, RightAnkle, RightToeBase.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          Array
     tags: []
     deprecation_message: ''
     security: None
@@ -1936,12 +2191,17 @@ methods:
       - Animation
   - name: HumanoidRigDescription:GetR15JointNames
     summary: ''
-    description: ''
+    description: |
+      Returns an array of the 15 joint name strings used by R15 rigs: Root,
+      Waist, Neck, LeftShoulder, LeftElbow, LeftWrist, RightShoulder,
+      RightElbow, RightWrist, LeftHip, LeftKnee, LeftAnkle, RightHip, RightKnee,
+      RightAnkle.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          Array
     tags: []
     deprecation_message: ''
     security: None
@@ -1950,12 +2210,15 @@ methods:
       - Animation
   - name: HumanoidRigDescription:GetR6JointNames
     summary: ''
-    description: ''
+    description: |
+      Returns an array of the 6 joint name strings used by R6 rigs: Root, Neck,
+      LeftShoulder, RightShoulder, LeftHip, RightHip.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          Array
     tags: []
     deprecation_message: ''
     security: None

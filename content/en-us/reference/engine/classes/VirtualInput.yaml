@@ -6,18 +6,17 @@ name: VirtualInput
 type: class
 memory_category: Instances
 summary: |
-  Allows Studio plugins to simulate mouse, keyboard, and pointer input as if it
-  were performed by a real player.
+  Simulates mouse, keyboard, and pointer input as if it were performed by a real
+  player.
 description: |
-  `Class.VirtualInput` allows Studio plugins to simulate mouse, keyboard, and
-  pointer input as if it were performed by a real player. It is intended for
-  **testing purposes only** and can only be obtained by calling
-  `Class.UserInputService:CreateVirtualInput()`. It can only be used from a
-  Studio plugin script.
+  `Class.VirtualInput` simulates mouse, keyboard, and pointer input as if it
+  were performed by a real player. It is intended for **testing purposes only**
+  and can only be obtained by calling
+  `Class.UserInputService:CreateVirtualInput()`.
 
   All input methods throw a runtime error if the simulated input would interact
   with Roblox's built-in UI (`Class.CoreGui`), such as the top bar, chat window,
-  or escape menu. This prevents plugin automation from accidentally interfering
+  or escape menu. This prevents automation tests from accidentally interfering
   with system UI that players depend on.
 code_samples: []
 inherits:

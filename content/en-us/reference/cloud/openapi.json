@@ -67346,13 +67346,13 @@
             }
           },
           "400": {
-            "description": "1: The universe does not exist.\r\n3: Invalid UniverseAvatarType.\r\n4: Invalid UniverseScaleType.\r\n5: Invalid UniverseAnimationType.\r\n6: Invalid UniverseCollisionType.\r\n7: New universe name or description has been rejected.\r\n8: New universe name is too long.\r\n10: Invalid UniverseBodyType.\r\n11: Invalid UniverseJointPositioningType.\r\n12: The universe has no root place.\r\n15: Price is required when isForSale is true.\r\n16: This game cannot be offered for sale because it is not public.\r\n17: This game cannot be offered for sale because it has private servers enabled.\r\n18: The game price is outside of the allowed range.\r\n19: Invalid genre.\r\n20: The request body is missing.\r\n21: Invalid device type.\r\n22: Invalid asset type.\r\n23: Invalid value, the min must be less than or equal to the max\r\n24: Invalid scale value\r\n28: OptIn/Out Regions Not Supported.\r\n41: You cannot change the private server price again so soon after the previous change. Please try again later.\r\n42: This experience must be Public before its audience can include anything other than Editors. Call /activate first."
+            "description": "1: The universe does not exist.\r\n3: Invalid UniverseAvatarType.\r\n4: Invalid UniverseScaleType.\r\n5: Invalid UniverseAnimationType.\r\n6: Invalid UniverseCollisionType.\r\n7: New universe name or description has been rejected.\r\n8: New universe name is too long.\r\n10: Invalid UniverseBodyType.\r\n11: Invalid UniverseJointPositioningType.\r\n12: The universe has no root place.\r\n15: Price is required when isForSale is true.\r\n16: This game cannot be offered for sale because it is not public.\r\n17: This game cannot be offered for sale because it has private servers enabled.\r\n18: The game price is outside of the allowed range.\r\n19: Invalid genre.\r\n20: The request body is missing.\r\n21: Invalid device type.\r\n22: Invalid asset type.\r\n23: Invalid value, the min must be less than or equal to the max\r\n24: Invalid scale value\r\n28: OptIn/Out Regions Not Supported.\r\n41: You cannot change the private server price again so soon after the previous change. Please try again later.\r\n42: This experience must be Public before its audience can include anything other than Editors. Call /activate first.\r\n44: The provided audience configuration is invalid. Ensure the audience list is not empty and contains only supported audience values."
           },
           "401": {
             "description": "0: Authorization has been denied for this request."
           },
           "403": {
-            "description": "0: Token Validation Failed\r\n2: You are not authorized to configure this universe.\r\n14: You are not authorized to sell games.\r\n29: Luobu app terms of service user agreement is missing.\r\n30: Unknown error while updating Opt in out region."
+            "description": "0: Token Validation Failed\r\n2: You are not authorized to configure this universe.\r\n14: You are not authorized to sell games.\r\n29: Luobu app terms of service user agreement is missing.\r\n30: Unknown error while updating Opt in out region.\r\n45: The creator of this experience is not eligible to set this audience."
           },
           "409": {
             "description": "9: Failed to shutdown all intances of game after changing AvatarType. The change has been reverted."
@@ -79024,6 +79024,16 @@
             "format": "date-time",
             "description": "The updated System.DateTime",
             "type": "string"
+          },
+          "audiences": {
+            "description": "The audiences this universe is visible to (e.g. Editors, PlayTesters, Friends, Public).\r\nAlways non-null; may be empty when audience visibility has not been configured.",
+            "type": "array",
+            "items": {
+              "format": "int32",
+              "description": " ['Invalid' = 0, 'Editors' = 1, 'PlayTesters' = 2, 'Friends' = 3, 'Public' = 4]",
+              "enum": [0, 1, 2, 3, 4],
+              "type": "integer"
+            }
           }
         },
         "additionalProperties": false
@@ -79299,7 +79309,7 @@
             "type": "integer"
           },
           "audiences": {
-            "description": "Audiences allowed to view this universe, written directly to the new UniversePublicitySettings\r\nentity in universe-settings-service. When provided, persists exactly the supplied audience set\r\nand skips the IsFriendsOnly-derived USS dual-write that runs under non-Off treatments.",
+            "description": "The audiences this universe should be visible to (e.g. Editors, PlayTesters, Friends, Public).\r\nWhen provided, replaces the universe's existing audience set with the supplied values.",
             "type": "array",
             "items": {
               "format": "int32",
@@ -79433,7 +79443,7 @@
             "type": "integer"
           },
           "audiences": {
-            "description": "Audiences allowed to view this universe, sourced from the new UniversePublicitySettings entity\r\nin universe-settings-service. Populated from USS only when UniversePublicitySettingsTreatment\r\nis ReverseShadow or Authority (USS is the source of truth in those modes); an empty list is\r\nreturned for Off and Shadow so clients always see a stable shape, never null.",
+            "description": "The audiences this universe is visible to (e.g. Editors, PlayTesters, Friends, Public).\r\nAlways non-null; may be empty when audience visibility has not been configured.",
             "type": "array",
             "items": {
               "format": "int32",
@@ -79586,7 +79596,7 @@
             "type": "boolean"
           },
           "audiences": {
-            "description": "Audiences allowed to view this universe, sourced from the new UniversePublicitySettings entity\r\nin universe-settings-service. Populated from USS only when UniversePublicitySettingsTreatment\r\nis ReverseShadow or Authority (USS is the source of truth in those modes); an empty list is\r\nreturned for Off and Shadow so clients always see a stable shape, never null.",
+            "description": "The audiences this universe is visible to (e.g. Editors, PlayTesters, Friends, Public).\r\nAlways non-null; may be empty when audience visibility has not been configured.",
             "type": "array",
             "items": {
               "format": "int32",
@@ -93378,6 +93388,22 @@
         },
         "additionalProperties": false
       },
+      "RobuxRateBreakdown": {
+        "type": "object",
+        "properties": {
+          "o18": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "standard": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "RpnOperandDto": {
         "type": "object",
         "properties": {
@@ -94785,6 +94811,14 @@
           },
           "transactionSubtype": {
             "type": "string",
+            "nullable": true
+          },
+          "robuxRateBreakdown": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/RobuxRateBreakdown"
+              }
+            ],
             "nullable": true
           }
         },

@@ -2160,21 +2160,60 @@ properties:
     simulationAccess: true
 methods:
   - name: BasePart:AngularAccelerationToTorque
-    summary: ''
-    description: ''
+    summary: |
+      Returns the torque needed to achieve a given angular acceleration on this
+      part's assembly, optionally accounting for gyroscopic effects.
+    description: |
+      Returns the world-space torque vector that must be applied to the part's
+      assembly to achieve the specified angular acceleration. This result can be
+      used to determine the torque that should be applied via a `Class.Torque`
+      instance or `Class.BasePart:ApplyAngularImpulse()`.
+
+      The calculation uses Euler's rotation equation where _I_ is the assembly's
+      world-space inertia tensor, _α_ is the desired angular acceleration, and
+      _ω_ is the angular velocity.
+
+      _τ = I · α + ω × (I · ω)_
+
+      If the part is not a descendant of `Class.Workspace`, this method returns
+      a vector of infinity. If the assembly is anchored, it similarly returns a
+      vector of infinity.
+
+      #### Gyroscopic Effects
+
+      When a spinning assembly has an asymmetric inertia tensor, the torque
+      required to achieve a specified angular acceerlation is augmented due to
+      the changing orientation of the body. The optional `angVelocity` parameter
+      accounts for these gyroscopic effects. If omitted, these gyroscopic
+      effects are omitted from the calculation.
+
+      ```lua
+      local part = workspace.Part
+      local angularVelocity = part.AssemblyAngularVelocity
+      local desiredAcceleration = Vector3.new(0, 10, 0)
+
+      -- Compute the torque needed to achieve the desired acceleration
+      local torque = part:AngularAccelerationToTorque(desiredAcceleration, angularVelocity)
+      ```
     code_samples: []
     parameters:
       - name: angAcceleration
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The desired angular acceleration vector in world space.
       - name: angVelocity
         type: Vector3
         default: 0, 0, 0
-        summary: ''
+        summary: |
+          The current angular velocity of the assembly in world space. Defaults
+          to `(0, 0, 0)`. Supply the assembly's angular velocity to account for
+          gyroscopic effects.
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          A `Datatype.Vector3` representing the world-space torque required to
+          produce the specified angular acceleration.
     tags: []
     deprecation_message: ''
     security: None
@@ -3009,21 +3048,64 @@ methods:
     capabilities:
       - CSG
   - name: BasePart:TorqueToAngularAcceleration
-    summary: ''
-    description: ''
+    summary: |
+      Returns the angular acceleration that would result from applying a given
+      torque to this part's assembly, optionally accounting for gyroscopic
+      effects.
+    description: |
+      Returns the world-space angular acceleration that would result from
+      applying the specified torque to the part's assembly, optionally taking
+      into account gyroscopic effects.
+
+      This is the inverse of `Class.BasePart:AngularAccelerationToTorque()`. It
+      is useful for predicting how an assembly will respond to an applied
+      torque.
+
+      The calculation uses:
+
+      **α = I⁻¹ · (τ − ω × (I · ω))**
+
+      where **I** is the assembly's world-space inertia tensor, **τ** is the
+      applied torque, and **ω** is the angular velocity.
+
+      If the part is not a descendant of `Class.Workspace`, returns `(0, 0, 0)`.
+      If the assembly is anchored, returns `(0, 0, 0)`.
+
+      #### Gyroscopic Effects
+
+      When a spinning assembly has an asymmetric inertia tensor, the
+      acceleration resulting from an applied torque also depends on the current
+      angular velocity. The `angVelocity` parameter accounts for these
+      gyroscopic effects. If omitted (defaults to zero), the result neglects
+      this contribution from the result.
+
+      ```lua
+      local part = workspace.Part
+      local angularVelocity = part.AssemblyAngularVelocity
+      local appliedTorque = Vector3.new(0, 100, 0)
+
+      -- Predict the angular acceleration from this torque
+      local angAccel = part:TorqueToAngularAcceleration(appliedTorque, angularVelocity)
+      ```
     code_samples: []
     parameters:
       - name: torque
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The torque vector applied to the assembly in world space.
       - name: angVelocity
         type: Vector3
         default: 0, 0, 0
-        summary: ''
+        summary: |
+          The current angular velocity of the assembly in world space. Defaults
+          to `(0, 0, 0)`. Supply the assembly's angular velocity to account for
+          gyroscopic effects.
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          A `Datatype.Vector3` representing the resulting angular acceleration
+          in world space.
     tags: []
     deprecation_message: ''
     security: None

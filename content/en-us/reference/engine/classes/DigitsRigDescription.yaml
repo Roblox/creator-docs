@@ -6,7 +6,12 @@ name: DigitsRigDescription
 type: class
 memory_category: Animation
 summary: ''
-description: ''
+description: |
+  Enables interoperability of animations across hand rigs and drives the hand
+  finger solver. Each `DigitsRigDescription` maps the 15 phalanx joints of one
+  hand (5 fingers with 3 joints each) to engine instances, stores their T-pose
+  adjustments, and exposes forward- and inverse-kinematics helpers for
+  controlling finger poses at runtime.
 code_samples: []
 inherits:
   - Instance
@@ -16,7 +21,9 @@ deprecation_message: ''
 properties:
   - name: DigitsRigDescription.Index1
     summary: ''
-    description: ''
+    description: |
+      The `Class.Motor6D`, `Class.AnimationConstraint`, or `Class.Bone` instance
+      mapped to the proximal (first) phalanx of the index finger.
     code_samples: []
     type: Instance
     tags: []
@@ -33,7 +40,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.Index1TposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      `CoordinateFrame` applied to `Index1` to normalize the joint into its
+      canonical T-pose orientation before retargeting or solving.
     code_samples: []
     type: CFrame
     tags: []
@@ -50,7 +59,8 @@ properties:
       - Animation
   - name: DigitsRigDescription.Index2
     summary: ''
-    description: ''
+    description: |
+      The `Instance` mapped to the medial (second) phalanx of the index finger.
     code_samples: []
     type: Instance
     tags: []
@@ -67,7 +77,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.Index2TposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      `CoordinateFrame` applied to `Index2` to normalize the joint into its
+      canonical T-pose orientation before retargeting or solving.
     code_samples: []
     type: CFrame
     tags: []
@@ -84,7 +96,8 @@ properties:
       - Animation
   - name: DigitsRigDescription.Index3
     summary: ''
-    description: ''
+    description: |
+      The `Instance` mapped to the distal (third) phalanx of the index finger.
     code_samples: []
     type: Instance
     tags: []
@@ -101,7 +114,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.Index3TposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      `CoordinateFrame` applied to `Index3` to normalize the joint into its
+      canonical T-pose orientation before retargeting or solving.
     code_samples: []
     type: CFrame
     tags: []
@@ -118,7 +133,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.IndexRange
     summary: ''
-    description: ''
+    description: |
+      A `Vector3` describing the motion range of the index finger, used by the
+      finger solver.
     code_samples: []
     type: Vector3
     tags: []
@@ -135,7 +152,8 @@ properties:
       - Animation
   - name: DigitsRigDescription.IndexSize
     summary: ''
-    description: ''
+    description: |
+      Size of the index finger, used by the finger solver to preserve contacts.
     code_samples: []
     type: float
     tags: []
@@ -152,7 +170,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.Middle1
     summary: ''
-    description: ''
+    description: |
+      The `Instance` mapped to the proximal (first) phalanx of the middle
+      finger.
     code_samples: []
     type: Instance
     tags: []
@@ -169,7 +189,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.Middle1TposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      `CoordinateFrame` applied to `Middle1` to normalize the joint into its
+      canonical T-pose orientation before retargeting or solving.
     code_samples: []
     type: CFrame
     tags: []
@@ -186,7 +208,8 @@ properties:
       - Animation
   - name: DigitsRigDescription.Middle2
     summary: ''
-    description: ''
+    description: |
+      The `Instance` mapped to the medial (second) phalanx of the middle finger.
     code_samples: []
     type: Instance
     tags: []
@@ -203,7 +226,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.Middle2TposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      `CoordinateFrame` applied to `Middle2` to normalize the joint into its
+      canonical T-pose orientation before retargeting or solving.
     code_samples: []
     type: CFrame
     tags: []
@@ -220,7 +245,8 @@ properties:
       - Animation
   - name: DigitsRigDescription.Middle3
     summary: ''
-    description: ''
+    description: |
+      The `Instance` mapped to the distal (third) phalanx of the middle finger.
     code_samples: []
     type: Instance
     tags: []
@@ -237,7 +263,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.Middle3TposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      `CoordinateFrame` applied to `Middle3` to normalize the joint into its
+      canonical T-pose orientation before retargeting or solving.
     code_samples: []
     type: CFrame
     tags: []
@@ -254,7 +282,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.MiddleRange
     summary: ''
-    description: ''
+    description: |
+      A `Vector3` describing the motion range of the middle finger, used by the
+      finger solver and scalable-property system.
     code_samples: []
     type: Vector3
     tags: []
@@ -271,7 +301,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.MiddleSize
     summary: ''
-    description: ''
+    description: |
+      Scale factor for the middle finger, used when the rig is scaled through
+      the scalable-property system.
     code_samples: []
     type: float
     tags: []
@@ -288,7 +320,8 @@ properties:
       - Animation
   - name: DigitsRigDescription.Pinky1
     summary: ''
-    description: ''
+    description: |
+      The `Instance` mapped to the proximal (first) phalanx of the pinky finger.
     code_samples: []
     type: Instance
     tags: []
@@ -305,7 +338,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.Pinky1TposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      `CoordinateFrame` applied to `Pinky1` to normalize the joint into its
+      canonical T-pose orientation before retargeting or solving.
     code_samples: []
     type: CFrame
     tags: []
@@ -322,7 +357,8 @@ properties:
       - Animation
   - name: DigitsRigDescription.Pinky2
     summary: ''
-    description: ''
+    description: |
+      The `Instance` mapped to the medial (second) phalanx of the pinky finger.
     code_samples: []
     type: Instance
     tags: []
@@ -339,7 +375,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.Pinky2TposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      `CoordinateFrame` applied to `Pinky2` to normalize the joint into its
+      canonical T-pose orientation before retargeting or solving.
     code_samples: []
     type: CFrame
     tags: []
@@ -356,7 +394,8 @@ properties:
       - Animation
   - name: DigitsRigDescription.Pinky3
     summary: ''
-    description: ''
+    description: |
+      The `Instance` mapped to the distal (third) phalanx of the pinky finger.
     code_samples: []
     type: Instance
     tags: []
@@ -373,7 +412,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.Pinky3TposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      `CoordinateFrame` applied to `Pinky3` to normalize the joint into its
+      canonical T-pose orientation before retargeting or solving.
     code_samples: []
     type: CFrame
     tags: []
@@ -390,7 +431,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.PinkyRange
     summary: ''
-    description: ''
+    description: |
+      A `Vector3` describing the motion range of the pinky finger, used by the
+      finger solver and scalable-property system.
     code_samples: []
     type: Vector3
     tags: []
@@ -407,7 +450,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.PinkySize
     summary: ''
-    description: ''
+    description: |
+      Scale factor for the pinky finger, used when the rig is scaled through the
+      scalable-property system.
     code_samples: []
     type: float
     tags: []
@@ -424,7 +469,8 @@ properties:
       - Animation
   - name: DigitsRigDescription.Ring1
     summary: ''
-    description: ''
+    description: |
+      The `Instance` mapped to the proximal (first) phalanx of the ring finger.
     code_samples: []
     type: Instance
     tags: []
@@ -441,7 +487,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.Ring1TposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      `CoordinateFrame` applied to `Ring1` to normalize the joint into its
+      canonical T-pose orientation before retargeting or solving.
     code_samples: []
     type: CFrame
     tags: []
@@ -458,7 +506,8 @@ properties:
       - Animation
   - name: DigitsRigDescription.Ring2
     summary: ''
-    description: ''
+    description: |
+      The `Instance` mapped to the medial (second) phalanx of the ring finger.
     code_samples: []
     type: Instance
     tags: []
@@ -475,7 +524,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.Ring2TposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      `CoordinateFrame` applied to `Ring2` to normalize the joint into its
+      canonical T-pose orientation before retargeting or solving.
     code_samples: []
     type: CFrame
     tags: []
@@ -492,7 +543,8 @@ properties:
       - Animation
   - name: DigitsRigDescription.Ring3
     summary: ''
-    description: ''
+    description: |
+      The `Instance` mapped to the distal (third) phalanx of the ring finger.
     code_samples: []
     type: Instance
     tags: []
@@ -509,7 +561,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.Ring3TposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      `CoordinateFrame` applied to `Ring3` to normalize the joint into its
+      canonical T-pose orientation before retargeting or solving.
     code_samples: []
     type: CFrame
     tags: []
@@ -526,7 +580,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.RingRange
     summary: ''
-    description: ''
+    description: |
+      A `Vector3` describing the motion range of the ring finger, used by the
+      finger solver and scalable-property system.
     code_samples: []
     type: Vector3
     tags: []
@@ -543,7 +599,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.RingSize
     summary: ''
-    description: ''
+    description: |
+      Scale factor for the ring finger, used when the rig is scaled through the
+      scalable-property system.
     code_samples: []
     type: float
     tags: []
@@ -560,7 +618,10 @@ properties:
       - Animation
   - name: DigitsRigDescription.Side
     summary: ''
-    description: ''
+    description: |
+      Which hand this description belongs to: `None`, `Left`, or `Right`. Used
+      when mapping `HandRigLabel` joints to the corresponding `HumanoidRigLabel`
+      entries on the parent `HumanoidRigDescription`.
     code_samples: []
     type: DigitsRigDescriptionSide
     tags: []
@@ -577,7 +638,8 @@ properties:
       - Animation
   - name: DigitsRigDescription.Thumb1
     summary: ''
-    description: ''
+    description: |
+      The `Instance` mapped to the proximal (first) phalanx of the thumb.
     code_samples: []
     type: Instance
     tags: []
@@ -594,7 +656,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.Thumb1TposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      `CoordinateFrame` applied to `Thumb1` to normalize the joint into its
+      canonical T-pose orientation before retargeting or solving.
     code_samples: []
     type: CFrame
     tags: []
@@ -611,7 +675,8 @@ properties:
       - Animation
   - name: DigitsRigDescription.Thumb2
     summary: ''
-    description: ''
+    description: |
+      The `Instance` mapped to the medial (second) phalanx of the thumb.
     code_samples: []
     type: Instance
     tags: []
@@ -628,7 +693,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.Thumb2TposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      `CoordinateFrame` applied to `Thumb2` to normalize the joint into its
+      canonical T-pose orientation before retargeting or solving.
     code_samples: []
     type: CFrame
     tags: []
@@ -645,7 +712,8 @@ properties:
       - Animation
   - name: DigitsRigDescription.Thumb3
     summary: ''
-    description: ''
+    description: |
+      The `Instance` mapped to the distal (third) phalanx of the thumb.
     code_samples: []
     type: Instance
     tags: []
@@ -662,7 +730,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.Thumb3TposeAdjustment
     summary: ''
-    description: ''
+    description: |
+      `CoordinateFrame` applied to `Thumb3` to normalize the joint into its
+      canonical T-pose orientation before retargeting or solving.
     code_samples: []
     type: CFrame
     tags: []
@@ -679,7 +749,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.ThumbRange
     summary: ''
-    description: ''
+    description: |
+      A `Vector3` describing the motion range of the thumb, used by the finger
+      solver and scalable-property system.
     code_samples: []
     type: Vector3
     tags: []
@@ -696,7 +768,9 @@ properties:
       - Animation
   - name: DigitsRigDescription.ThumbSize
     summary: ''
-    description: ''
+    description: |
+      Scale factor for the thumb, used when the rig is scaled through the
+      scalable-property system.
     code_samples: []
     type: float
     tags: []
@@ -714,7 +788,14 @@ properties:
 methods:
   - name: DigitsRigDescription:GetFingerControl
     summary: ''
-    description: ''
+    description: |
+      Returns the current control `Vector3` for the finger at the given 1-based
+      index (1 = Thumb … 5 = Pinky). The components are:
+
+      - **X** — extension in `[0, 1]`: `0` is fully curled, `1` is fully
+        extended.
+      - **Y** — lateral (side) rotation in `[-1, 1]`.
+      - **Z** — axial (twist) rotation in `[-1, 1]`.
     code_samples: []
     parameters:
       - name: fingerIndex
@@ -732,7 +813,10 @@ methods:
       - Animation
   - name: DigitsRigDescription:GetFingerTip
     summary: ''
-    description: ''
+    description: |
+      Returns the world-space position of the fingertip for the finger at the
+      given 1-based index (1 = Thumb … 5 = Pinky). Not yet implemented;
+      currently returns `Vector3.zero`.
     code_samples: []
     parameters:
       - name: fingerIndex
@@ -750,7 +834,17 @@ methods:
       - Animation
   - name: DigitsRigDescription:SetFingerControl
     summary: ''
-    description: ''
+    description: |
+      Drives the three-joint chain of the finger at the given 1-based index (1 =
+      Thumb … 5 = Pinky) using forward kinematics. The `control` components are
+      clamped before application:
+
+      - **X** — extension, clamped to `[0, 1]`.
+      - **Y** — lateral rotation, clamped to `[-1, 1]` (maps to ±50°).
+      - **Z** — axial rotation, clamped to `[-1, 1]` (maps to ±50°).
+
+      Joint angles for the three phalanges are computed via Ptolemy's theorem
+      applied to the chain lengths.
     code_samples: []
     parameters:
       - name: fingerIndex
@@ -772,7 +866,11 @@ methods:
       - Animation
   - name: DigitsRigDescription:SetFingerTip
     summary: ''
-    description: ''
+    description: |
+      Moves the fingertip of the finger at the given 1-based index (1 = Thumb …
+      5 = Pinky) toward the world-space target `point` using inverse kinematics.
+      The solver computes the required extension, lateral, and axial control
+      values and then calls `SetFingerControl` internally.
     code_samples: []
     parameters:
       - name: fingerIndex
