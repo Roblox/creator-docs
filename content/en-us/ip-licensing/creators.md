@@ -5,7 +5,7 @@ description: How to use IP licensing as a creator.
 
 Creating experiences using approved popular IP can make your content more recognizable to users and help you reach new audiences that already know and love certain characters, settings, and storylines.
 
-As a creator, you can browse the [Licenses catalog](https://create.roblox.com/explore/licenses) and apply to use an available IP in your experience. A license allows you to create a full Roblox experience based on an IP while following the conditions and revenue share outlined by the IP holder.
+As a creator, you can browse the [Licenses catalog](https://create.roblox.com/explore/licenses) and request to use an available IP in your experience. A license allows you to create a full Roblox experience based on an IP while following the conditions and revenue share outlined by the rights holder.
 
 <Alert severity="warning">
   Roblox takes intellectual property infringement very seriously. Publishing content on Roblox that uses someone else's IP rights without permission violates the [Roblox Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use) and might result in the removal of the content and your Roblox account.
@@ -17,39 +17,44 @@ To explore available licenses in the Licenses catalog:
 
 1. In the **Explore** dropdown in the Creator Hub, click **Licenses**.
 2. Click an available IP license to see the details page for that specific license.
-  <img src="../assets/ip-licensing/LicensesCatalog.png" alt="Screenshot of Licenses page." width="750" />
+   <img src="../assets/ip-licensing/LicensesCatalog.png" alt="Screenshot of Licenses page." width="750" />
 3. Click **View details** to see more details about the license, like eligibility requirements and content standards.
 
-## Apply to use a license
+## Request to use a license
 
 <Alert severity="info">
-  Before applying to use an IP license, make sure your experience is public.
+  Before requesting to use an IP license, make sure your experience is public.
 </Alert>
 
-To apply to use an IP license in your experience:
+To request to use an IP license in your experience:
 
 1. In the **Explore** dropdown in the Creator Hub, click **Licenses**.
 2. Select an IP from the available licenses.
 3. Click **Request license**.
-4. Select the experience you want to apply to the license with and click **Next**.
-5. Under **Intent**, enter more details about your experience in the form of a pitch. This can help the IP holder make a decision about your application. For more information about writing a pitch, see [Pitch details](#pitch-details).
-6. Under **Experience readiness**, select one of the following:
+4. Select the experience you want to use for this license request and click **Next**.
+5. Under **Intent**, enter more details about your experience in the form of a pitch. This can help the rights holder make a decision about your license request. For more information about writing a pitch, see [Pitch details](#pitch-details).
+6. (For perpetual licenses) Under **Experience readiness**, select one of the following:
    - **Yes, my experience is ready to use this intellectual property** if you're done incorporating the IP into your experience. Revenue share will start as soon as the license agreement becomes active.
-   - **No, I need time to incorporate this intellectual property into my experience** if you're not done incorporating the IP into your experience. Revenue share won't start immediately, but the IP holder can still turn on monetization at any time.
-7. Download the content standards file, review and agree to the content standards, and click **Next**.
-8. Click **Request** to submit your application. The IP holder then reviews and either approves or rejects your application.
+   - **No, I need time to incorporate this intellectual property into my experience** if you're not done incorporating the IP into your experience. Revenue share won't start immediately, but the rights holder can still turn on monetization at any time.
+7. (For time-limited licenses) Under **Proposed date range**, use the calendar to set the proposed dates that your experience will incorporate the IP. Start and end times for time-limited licenses are based on midnight UTC.
+8. Acknowledge licensing terms, review the guidelines and restrictions, and click **Next**.
+9. Click **Submit** to submit your license request. The rights holder then reviews and either approves or rejects your license request.
 
 <Alert severity="info">
   You can currently only request or be offered a license for a full experience, where the IP is central to and present throughout the experience.
 </Alert>
 
 <Alert severity="warning">
-  After you enter an IP license agreement, you **cannot** cancel it.
+  Early use of IP in your experience may lead to early activation of a license request or accepted license agreement.
+</Alert>
+
+<Alert severity="info">
+  You can cancel a pending license request under certain conditions. See [Cancel a license](#cancel-a-license) for details.
 </Alert>
 
 ### Pitch details
 
-Including a well-written pitch with your request can make the IP holder more likely to approve your application. Your pitch should convey a compelling idea and show that you are confident in your ability to execute this creative vision.
+Including a well-written pitch with your request can make the rights holder more likely to approve your license request. Your pitch should convey a compelling idea and show that you are confident in your ability to execute this creative vision.
 
 We recommend that you include the following information in your pitch:
 
@@ -61,7 +66,7 @@ We recommend that you include the following information in your pitch:
 
 - **Creative elements**:
 
-  - How your experience's visual and audio design will reflect the IP, including character models, environments, UI, and soundscapes. For example, if you're applying to integrate an IP like the Blair Witch, you can highlight the use of atmospheric visuals and sound effects that evoke suspense and dread.
+  - How your experience's visual and audio design will reflect the IP, including character models, environments, UI, and soundscapes. For example, if you're requesting to integrate an IP like the Blair Witch, you can highlight the use of atmospheric visuals and sound effects that evoke suspense and dread.
   - How the story, lore, or signature moments from the IP will be integrated into your experience. This could involve recreating iconic scenes, referencing key plot points, or introducing original storylines that fit within the universe of the IP.
   - How you will maintain the integrity of the IP, making sure all creative choices align with the IP's established tone, themes, and content standards.
 
@@ -91,19 +96,19 @@ To view all of your offers and license agreements, go to **Intellectual Property
 <tbody>
   <tr>
     <td>**Offers**</td>
-    <td>All license offers that IP holders have sent you.</td>
+    <td>All license offers that rights holders have sent you.</td>
   </tr>
   <tr>
     <td>**Requests**</td>
-    <td>All license applications that you have sent to IP holders.</td>
+    <td>All license requests that you have sent to rights holders.</td>
   </tr>
   <tr>
     <td>**Active**</td>
-    <td>All active license agreements between you and IP holders.</td>
+    <td>All active license agreements between you and rights holders.</td>
   </tr>
   <tr>
     <td>**Archived**</td>
-    <td>All archived offers or license agreements between you and IP holders.</td>
+    <td>All archived offers or license agreements between you and rights holders.</td>
   </tr>
 </tbody>
 </table>
@@ -111,10 +116,10 @@ To view all of your offers and license agreements, go to **Intellectual Property
 ## Review a license offer
 
 <Alert severity="error">
-  Any license offer you receive from an IP holder automatically becomes active after 14 days. **You must dispute the offer to reject it.**
+  Any license offer you receive from a rights holder automatically becomes active after 14 days. **You must dispute the offer to reject it.**
 </Alert>
 
-IP holders can reach out and make a license offer directly to your experience. This can happen if Roblox detects that your experience has a high likelihood of making prominent use of a registered IP.
+For licenses with a perpetual duration, rights holders can reach out and make a license offer directly to your experience. This can happen if Roblox detects that your experience has a high likelihood of making prominent use of a registered IP.
 
 After you receive an offer, you can review the offer details and either:
 
@@ -125,24 +130,40 @@ After you receive an offer, you can review the offer details and either:
 
 To dispute a license offer:
 
-1. Go to **Intellectual Property** ⟩ **Licenses**.
+1. Go to **Intellectual Property** ⟩ **Licenses** ⟩ **Offers**.
 2. Select the license offer you want to dispute.
-3. Under **Actions you can take**, click **dispute this license**.
+3. Under **Actions you can take**, click **dispute this license offer**.
 4. In the dispute modal, select one of the following reasons for the dispute:
-   - **My creation does not use this IP** if you believe that the IP holder made the license offer by mistake.
-   - **My use of this IP is licensed or otherwise authorized by law** if you believe that you already have the rights to use the IP.
+   - **My creation does not use this IP** if you believe that the rights holder made the license offer by mistake.
+   - **My use of this IP is "fair" or otherwise legally allowed** if you believe that the IP is [fair use](https://copyright.gov/fair-use/).
    - **I modified my creation to remove the IP** if you have fully removed the IP from your experience.
 5. Click **Next**.
 6. Review and accept the legal agreements.
-7. Click **Dispute**. The IP holder can then accept or reject your offer dispute.
+7. Click **Dispute**. The rights holder can then accept or reject your offer dispute.
 
-If the IP holder accepts your dispute, you will not enter into an agreement with them. However, if the IP holder rejects your dispute, you will receive their license offer again. After you receive their offer a second time, you can either wait 14 days for the offer to automatically become active or dispute the offer one final time.
+If the rights holder accepts your dispute, you will not enter into an agreement with them. However, if the rights holder rejects your dispute, you will receive their license offer again. After you receive their offer a second time, you can either wait 14 days for the offer to automatically become active or dispute the offer one final time.
 
-If you submit a second and final dispute, you will not enter into an agreement with the IP holder. Instead, the offer will be archived, and the IP holder might choose to pursue a [DMCA claim](../production/publishing/dmca-guidelines.md) separately.
+If you submit a second and final dispute, you will not enter into an agreement with the rights holder. Instead, the offer will be archived, and the rights holder might choose to pursue a [DMCA claim](../production/publishing/dmca-guidelines.md) separately.
+
+## Cancel a license
+
+You can cancel a pending license request if the following conditions are met:
+
+- The rights holder hasn't responded to your license request yet.
+- Early IP usage has not been detected in your experience.
+- (For time-limited licenses only) The cancellation is made at least three days before the proposed start date.
+
+If you cancel but still intend to use the IP in your experience, you must submit a new license request.
+
+To cancel a license request:
+
+1. Navigate to **Intellectual Property** ⟩ **Licenses**.
+2. Select the license request you want to cancel.
+3. In the top-right, select **Cancel** and complete the prompt.
 
 ## Transactions
 
-When you enter an agreement with an IP holder, you agree to the revenue share rate they have set for their IP license. For example, if the revenue share rate of the IP license is set to **10%** and one of the following items sells for **100 Robux** inside your experience:
+When you enter an agreement with a rights holder, you agree to the revenue share rate they have set for their IP license. For example, if the revenue share rate of the IP license is set to **10%** and one of the following items sells for **100 Robux** inside your experience:
 
 <table>
 <thead>

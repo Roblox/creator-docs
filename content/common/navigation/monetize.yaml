@@ -33,7 +33,7 @@ navigation:
   - title: License
     path: /ip-licensing/
     section:
-      - title: Tools for IP holders
+      - title: Tools for rights holders
         path: /ip-licensing/get-started
         section:
           - title: Get started

@@ -39,7 +39,7 @@ Three settings handle teleport security.
 
 Setting | Description
 :--- | :---
-(Creator Dashboard) **Experience** > **Access Settings** > **Access Control for Places** | Controls whether players can join any place in your experience or must first join the [start place](../production/publishing/publish-experiences-and-places.md#create-experiences).
+(Creator Dashboard) **Audience** > **Access Settings** > **Access Control for Places** | Controls whether players can join any place in your experience or must first join the [start place](../production/publishing/publish-experiences-and-places.md#create-experiences).
 (Creator Dashboard) **Place** > **Access** > **Direct Access Control** | Overrides your experience-level **Access Control for Places** setting for a non-start place.
 (Studio) **File** > **Experience Settings** > **Security** > **Allow Third Party Teleports** | Controls teleports from your experience to **experiences that you don't own**. You can leave this setting disabled and still teleport players between published experiences you own.
 

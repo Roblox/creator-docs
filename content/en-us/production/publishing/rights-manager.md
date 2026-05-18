@@ -5,11 +5,11 @@ description: How to request the removal of IP infringing experiences, avatar ite
 
 **Rights Manager** is an intellectual property (IP) management tool that lets rights holders or their authorized representatives report unauthorized use of their content on Roblox. All rights holders, including those that don't have a presence on Roblox, can use this tool to request the removal of unauthorized experiences, avatar items, and assets hosted on the platform.
 
-Before using the Rights Manager, you must [register as an IP holder](../../ip-licensing/get-started.md#register-as-an-ip-holder) and [verify ownership of your IP](../../ip-licensing/get-started.md#verify-ip-ownership).
+Before using the Rights Manager, you must [register as a rights holder](../../ip-licensing/get-started.md#register-as-an-ip-holder) and [verify ownership of your IP](../../ip-licensing/get-started.md#verify-ip-ownership).
 
 ## File an IP removal request
 
-Once Roblox accepts your registration as an IP holder, you can create IP removal requests for assets, experiences, and avatar items to protect your intellectual property.
+Once Roblox accepts your registration as a rights holder, you can create IP removal requests for assets, experiences, and avatar items to protect your intellectual property.
 
 To file a removal request:
 

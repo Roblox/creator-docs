@@ -9,7 +9,7 @@ export const sections = [
 verticalLayout: true,
 content: [
 {
-description: "One of the most significant ways for creators to expand their reach is to tap into the established fanbases of beloved global IP. We've seen major success when creators and IP holders partner, and we are building an ecosystem that supports licensing for rights holders at scale across Roblox. Our vision is to empower all creators to easily partner with the franchises they love and bring the franchises' licensed IP into their experiences.",
+description: "One of the most significant ways for creators to expand their reach is to tap into the established fanbases of beloved global IP. We've seen major success when creators and rights holders partner, and we are building an ecosystem that supports licensing for rights holders at scale across Roblox. Our vision is to empower all creators to easily partner with the franchises they love and bring the franchises' licensed IP into their experiences.",
 video: "https://www.youtube-nocookie.com/embed/4zoH0Qqq3BE?rel=0&loop=1",
 }
 ]
@@ -18,17 +18,17 @@ video: "https://www.youtube-nocookie.com/embed/4zoH0Qqq3BE?rel=0&loop=1",
 horizontalLayout: true,
 content: [
 {
-title: "Apply to partner with an IP owner today",
+title: "Request to partner with a rights holder today",
 verticalLayout: true,
-description: "Applying for licensable IP is simple – find your desired IP in the Licenses catalog, click Apply for License, select an experience for your application, review terms and content standards, include your pitch, and submit. You'll be notified on Creator Hub once the IP holder reviews your application.",
+description: "Requesting for licensable IP is simple – find your desired IP in the Licenses catalog, click Request for License, select an experience for your license request, review terms and content standards, include your pitch, and submit. You'll be notified on Creator Hub once the rights holder reviews your license request.",
 buttons: [
-{ text: "Apply to partner", href: "./ip-licensing/creators" }
+{ text: "Request to partner", href: "./ip-licensing/creators" }
 ]
 },
 {
 title: "Register your IP",
 verticalLayout: true,
-description: "For eligible IP holders and brands, the License Manager provides powerful self-serve tools to efficiently license your IP to Roblox's massive and engaged audience. You will need to provide the necessary proof of ownership, and a letter of authorization to offer licensed use of your IP.",
+description: "For eligible rights holders and brands, the License Manager provides powerful self-serve tools to efficiently license your IP to Roblox's massive and engaged audience. You will need to provide the necessary proof of ownership, and a letter of authorization to offer licensed use of your IP.",
 buttons: [
 { text: "Register IP", href: "./ip-licensing/get-started" }
 ],
@@ -51,8 +51,8 @@ links: [
 ]
 },
 {
-title: "For IP holders: new IP management tools",
-description: "License Manager offers IP holders complete IP management, including registration, adding licenses to the central Licenses catalog, proactive IP usage scanning, and oversight of licensed IP.",
+title: "For rights holders: new IP management tools",
+description: "License Manager offers rights holders complete IP management, including registration, adding licenses to the central Licenses catalog, proactive IP usage scanning, and oversight of licensed IP.",
 links: [
 { text: "License Manager", href: "./ip-licensing/license-manager" },
 ]

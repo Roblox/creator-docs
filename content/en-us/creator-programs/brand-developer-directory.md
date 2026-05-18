@@ -3,7 +3,7 @@ title: Brand Developer Directory and Roblox Partner Program
 description: The Brand Developer Directory promotes developers with a history of creating engaging experiences on the platform and partnering with brands.
 ---
 
-The Brand Developer Directory promotes developers with a history of creating engaging experiences on the platform and partnering with brands. This directory will offer more visibility for you and your team to various brands, IP holders, and music artists from around the world. See the current [Notable Brand Developers](https://create.roblox.com/talent/search/notable-brand-developers). These developers will also be official Brand Creator Partners and will receive a badge, as part of the Roblox Partner Program.
+The Brand Developer Directory promotes developers with a history of creating engaging experiences on the platform and partnering with brands. This directory will offer more visibility for you and your team to various brands, rights holder, and music artists from around the world. See the current [Notable Brand Developers](https://create.roblox.com/talent/search/notable-brand-developers). These developers will also be official Brand Creator Partners and will receive a badge, as part of the Roblox Partner Program.
 
 <img src="../assets/creator-programs/partner-program.png" alt="Partner Program logo." width="400" />
 

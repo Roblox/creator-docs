@@ -13,7 +13,11 @@ Before making a transfer or accepting a transfer, you must first:
 - Upload your private `Class.ModuleScript|ModuleScripts` and `Class.InsertService|InsertService` asset usages to the group you're transferring the experience to. If the experience uses packages where the package owner is a user and not a group, you might have to recreate those packages or replace them with packages that are already owned by a group.
 
 <Alert severity="info">
-As a best practice, if you're using Open Cloud API keys for the experience, create an API key as the new owner with the name `RobloxTransferApiKey`. During the transfer, the relevant scopes are added to this new key and removed from the original key. You can then use a feature flag to allow your backend services to start using the new key after the transfer is complete.
+If you use Open Cloud API keys for the experience, be aware that the effective permissions of an API key are determined by the access of the user who last generated the API key. If the transfer changes that user's access to the experience, the effective permissions of the API key change accordingly.
+
+In many cases, transfers have no impact on existing API keys. For example, if you transfer an experience from your user account to a group you own, your access stays equivalent and existing API keys continue to work as before.
+
+If the transfer does change access, for instance, when you transfer to a group you do not own, or the original owner loses access, you should create new API keys under an account that has the appropriate access for the experience.
 </Alert>
 
 ## Transfer an experience
