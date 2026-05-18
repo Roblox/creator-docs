@@ -53,8 +53,6 @@ After deciding how to communicate your event to players, be intentional with des
 
 When designing LiveOps for your experience, monitor your experience effectively by accessing comprehensive data, such as the sources of and spending of your experience's currency and other relevant resources. Integrate tracking into your experience's design to understand how players interact with your features.
 
-For more about monitoring the impact your events have on your economy, see [Balance virtual economies](./balance-virtual-economies.md).
-
 When tracking data, make sure it's:
 
 - **Timely:** Having quick access to data is essential for fine-tuning and ensuring your event is successful. Seeing hourly, same-day data to confirm that an event is not granting too many prizes and that players are able to accomplish what you're asking them to accomplish is crucial.

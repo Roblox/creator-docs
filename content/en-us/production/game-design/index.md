@@ -49,14 +49,6 @@ A designer's role is to create an engaging experience for players, retain those 
 - [Quest design:](../../production/game-design/introduction-to-quest-design.md) Learn how to effectively design quests, achievements, and dailies to increase engagement and retention in your experiences.
 - [UI and UX design:](../../production/game-design/ui-ux-design.md) Learn how to design user interfaces and how to design an intuitive and engaging experience.
 
-## Monetize your experience
-
-- [Monetization foundations:](../../production/game-design/monetization-foundations.md) Learn monetization best practices and shop design to maximize your experience's monetary growth potential.
-- [Season pass design:](../../production/game-design/season-pass-design.md) Learn how to design season passes for your experiences to deliver new content, promote player retention, and generate revenue.
-- [Subscription design:](../../production/game-design/subscription-design.md) Learn how to design recurring purchases that your players look forward to each month.
-- [Contextual purchases:](../../production/game-design/contextual-purchases.md) Learn how to design compelling and unintrusive purchase opportunities that occur outside an experience's shop.
-- [Balance virtual economies:](../../production/game-design/balance-virtual-economies.md) Learn best practices to balance virtual economies when introducing new events.
-
 ## Support your experience
 
 - [LiveOps essentials:](../../production/game-design/liveops-essentials.md) Learn how to design content that keeps players coming back and enjoying your experience after launch.

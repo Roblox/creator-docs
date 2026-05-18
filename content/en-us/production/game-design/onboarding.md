@@ -83,8 +83,6 @@ By the end of onboarding, players should be aware of the full range of content a
 
 Providing short, mid, and long-term goals help players conceptualize future play sessions and envision their future success. These goals can take a number of different forms: skill trees, season passes, quests, collections, and more. Surfacing these goals in highly visible places, either in the game-world or the UI, provides a frequent reminder to players of what they're working towards.
 
-To learn how to accomplish this through season passes, see [Season Pass Design](../../production/game-design/season-pass-design.md).
-
 <figure>
     <img src="../../assets/game-design/onboarding/onboarding_4.png" alt="A pop-up UI in the Jailbreak experience that displays various items a player can earn if they play through a season. The season pass exclusive items are marked with a bright color to attract attention." width="70%"/>
     <figcaption>Season Pass in _Jailbreak_.</figcaption>

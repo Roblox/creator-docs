@@ -7,15 +7,11 @@ The **Bundles** feature package offers out-of-the-box functionality to sell coll
 
 Using the package's customization options, you can tailor your bundles to meet the design and monetization goals of your experiences, such as:
 
-- Targetting a low [conversion rate](../../production/game-design/analytics-essentials.md#monetization-metrics) metric by offering discounted [starter packs](../../production/game-design/starter-pack-design.md) that provide value to new players and encourage early spend.
+- Targetting a low [conversion rate](../../production/game-design/analytics-essentials.md#monetization-metrics) metric by offering discounted starter packs that provide value to new players and encourage early spend.
 - Increasing [spend depth](../../production/game-design/analytics-essentials.md#monetization-metrics) by bundling items at various price points to appeal to a range of players.
 - Monetizing live operations (LiveOps) [events](../../production/game-design/liveops-essentials.md#content-cadence) by offering limited-time bundles of exclusive items.
 
 <img src="../../assets/resources/feature-packages/Bundles/Bundles-Intro.png" width="100%" />
-
-<Alert severity="info">
-For information on how to strategically provide purchase opportunities to meet player needs at key stages of your experience, see [Contextual Purchases](../../production/game-design/contextual-purchases.md). For industry best practices on how implement starter pack bundles, see [Starter Pack Design](../../production/game-design/starter-pack-design.md).
-</Alert>
 
 ## Get package
 
@@ -422,7 +418,7 @@ If you want to have greater control over the heads up display, instead of just u
 
 Once the `RelativeTime` bundle is offered to a player, it remains available until the time duration runs out. This type displays on the player's heads up display, and automatically prompts on future sessions until the bundle expires or the player purchases it.
 
-A common example of this bundle type is a single-use starter pack offer that displays to all new players for 24 hours. For industry best practices on how implement starter pack bundles, see [Starter Pack Design](../../production/game-design/starter-pack-design.md).
+A common example of this bundle type is a single-use starter pack offer that displays to all new players for 24 hours.
 
    <table>
    <thead>

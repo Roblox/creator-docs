@@ -78,8 +78,6 @@ Monetization metrics indicate much how revenue your experience is generating. Th
 - **Conversion rate:** The conversion rate is considered one of the most important metrics. The conversion rate is the percentage of all users who have spent any amount of money at all in your experience. The reason why this is one of the most important metrics is that if a player makes an initial purchase, they are much more likely to make a purchase again in the future. Consider if your monetization practices encourage your players to spend.
 - **Average revenue per paying user (ARPPU):** The ARPPU metric tracks the total amount spent for all players in your experience, known as **spend depth**. This tells you if players in your experience are motivated to spend a lot, a little, or somewhere in between. If this number is low, it's often indicative of purchase item value not being correctly optimized.
 
-To learn how to design systems that increase all of these metrics and encourage players to spend money in your experience, see [Monetization foundations](../../production/game-design/monetization-foundations.md).
-
 ### Segmentation and filtering
 
 When viewing your experience's analytics, you can filter your user data by **segments** that allow you to understand the behavior of a subset of users. This lets you filter your metrics by various characteristics, such as:

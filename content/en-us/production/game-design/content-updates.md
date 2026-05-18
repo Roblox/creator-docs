@@ -110,4 +110,4 @@ A **season pass** system, also known as a battle pass, is a combination of limit
     <figcaption>Season Pass in [*Jailbreak*](https://www.roblox.com/games/606849621/)</figcaption>
   </figure>
 
-However they choose to deliver their content updates, if developers structure their releases sustainably and keep up with the cadence, players will never be without new content for long. For more about season passes, see [Season pass design](../../production/game-design/season-pass-design.md)
+However they choose to deliver their content updates, if developers structure their releases sustainably and keep up with the cadence, players will never be without new content for long.

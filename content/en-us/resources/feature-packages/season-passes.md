@@ -11,10 +11,6 @@ The **Season Passes** feature package offers out-of-the-box functionality to cre
 
 <img src="../../assets/resources/feature-packages/Season-Passes/Season-Passes-Intro.png" width="100%" />
 
-<Alert severity="info">
-For information on how to encourage players to complete tasks, gain pass experience points (XP), and climb through reward tiers, see [Season pass design](../../production/game-design/season-pass-design.md).
-</Alert>
-
 ## Get package
 
 The **Creator Store** is a tab of the **Toolbox** that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add one or more assets directly into an open experience, including feature packages!

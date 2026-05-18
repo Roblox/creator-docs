@@ -130,5 +130,3 @@ The Economy dashboard includes five charts to help you take action to grow your 
 - **All sources and sinks** - Use this to get a combined view by category for the selected date range.
 
   <img src="../../assets/analytics/event-types/All-Sources-Sinks.png" alt="All Sources and Sinks chart populated with data."/>
-
-For more tips on how to balance your in-experience economy, see [Balance virtual economies](../game-design/balance-virtual-economies.md).

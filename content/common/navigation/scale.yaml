@@ -94,20 +94,6 @@ navigation:
                 path: /production/publishing/console-guidelines
               - title: VR
                 path: /production/publishing/vr-guidelines
-      - title: Monetize your experience
-        section:
-          - title: Monetization
-            path: /production/game-design/monetization-foundations
-          - title: Season passes
-            path: /production/game-design/season-pass-design
-          - title: Starter packs
-            path: /production/game-design/starter-pack-design
-          - title: Subscriptions
-            path: /production/game-design/subscription-design
-          - title: Contextual purchases
-            path: /production/game-design/contextual-purchases
-          - title: Virtual economies
-            path: /production/game-design/balance-virtual-economies
 
       - title: Support your experience
         section:

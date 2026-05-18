@@ -67346,7 +67346,7 @@
             }
           },
           "400": {
-            "description": "1: The universe does not exist.\r\n3: Invalid UniverseAvatarType.\r\n4: Invalid UniverseScaleType.\r\n5: Invalid UniverseAnimationType.\r\n6: Invalid UniverseCollisionType.\r\n7: New universe name or description has been rejected.\r\n8: New universe name is too long.\r\n10: Invalid UniverseBodyType.\r\n11: Invalid UniverseJointPositioningType.\r\n12: The universe has no root place.\r\n15: Price is required when isForSale is true.\r\n16: This game cannot be offered for sale because it is not public.\r\n17: This game cannot be offered for sale because it has private servers enabled.\r\n18: The game price is outside of the allowed range.\r\n19: Invalid genre.\r\n20: The request body is missing.\r\n21: Invalid device type.\r\n22: Invalid asset type.\r\n23: Invalid value, the min must be less than or equal to the max\r\n24: Invalid scale value\r\n28: OptIn/Out Regions Not Supported.\r\n41: You cannot change the private server price again so soon after the previous change. Please try again later.\r\n42: This experience must be Public before its audience can include anything other than Editors. Call /activate first.\r\n44: The provided audience configuration is invalid. Ensure the audience list is not empty and contains only supported audience values."
+            "description": "1: The universe does not exist.\r\n3: Invalid UniverseAvatarType.\r\n4: Invalid UniverseScaleType.\r\n5: Invalid UniverseAnimationType.\r\n6: Invalid UniverseCollisionType.\r\n7: New universe name or description has been rejected.\r\n8: New universe name is too long.\r\n10: Invalid UniverseBodyType.\r\n11: Invalid UniverseJointPositioningType.\r\n12: The universe has no root place.\r\n15: Price is required when isForSale is true.\r\n16: This game cannot be offered for sale because it is not public.\r\n17: This game cannot be offered for sale because it has private servers enabled.\r\n18: The game price is outside of the allowed range.\r\n19: Invalid genre.\r\n20: The request body is missing.\r\n21: Invalid device type.\r\n22: Invalid asset type.\r\n23: Invalid value, the min must be less than or equal to the max\r\n24: Invalid scale value\r\n28: OptIn/Out Regions Not Supported.\r\n41: You cannot change the private server price again so soon after the previous change. Please try again later.\r\n44: The provided audience configuration is invalid. Ensure the audience list contains only supported audience values."
           },
           "401": {
             "description": "0: Authorization has been denied for this request."
@@ -75034,6 +75034,10 @@
           }
         },
         "additionalProperties": false
+      },
+      "O18EligibilityTag": {
+        "enum": ["None", "O18Eligible", "O18EligibleAndPlus"],
+        "type": "string"
       },
       "OCV1.Assets.Operation": {
         "type": "object",
@@ -94813,6 +94817,14 @@
             "type": "string",
             "nullable": true
           },
+          "o18EligibilityTag": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/O18EligibilityTag"
+              }
+            ],
+            "nullable": true
+          },
           "robuxRateBreakdown": {
             "allOf": [
               {
@@ -94964,6 +94976,14 @@
           "purchaseToken": {
             "type": "string",
             "nullable": true
+          },
+          "o18EligibilityTag": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/O18EligibilityTag"
+              }
+            ],
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -95099,6 +95119,10 @@
           "licensingPaymentClawbackOutgoingTotal": {
             "type": "integer",
             "format": "int64"
+          },
+          "robloxSelectOutgoingTotal": {
+            "type": "integer",
+            "format": "int64"
           }
         },
         "additionalProperties": false
@@ -95132,7 +95156,8 @@
           "AffiliatePayout",
           "LicensingPayment",
           "LicensingPaymentClawback",
-          "CurrencyTransfer"
+          "CurrencyTransfer",
+          "RobloxSelectTransfer"
         ],
         "type": "string"
       },
@@ -95203,6 +95228,9 @@
             "type": "boolean"
           },
           "HasTransfer": {
+            "type": "boolean"
+          },
+          "HasRobloxSelectTransfer": {
             "type": "boolean"
           }
         },

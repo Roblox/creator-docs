@@ -235,8 +235,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Optimize your storefront</h4>
-        <Typography variant='body1'>Make your shop as transparent and frictionless as possible, so players understand what to buy, why, and how. Clearly communicate the value and availability of all items.</Typography><br /><br />
-        <a href="../production/game-design/monetization-foundations.md"><Typography variant='buttonLarge'>Learn more about merchandising best practices</Typography></a>
+        <Typography variant='body1'>Make your shop as transparent and frictionless as possible, so players understand what to buy, why, and how. Clearly communicate the value and availability of all items.</Typography>
       </CardContent>
     </Card>
   </Grid>
