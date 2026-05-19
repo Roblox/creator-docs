@@ -16,6 +16,14 @@ Content maturity consists of two components:
 
 If an experience does not have accurate or all content maturity information, Roblox restricts the playability of the experience on the platform for all players. In addition, experiences without content maturity information cannot contain any [Restricted content](https://en.help.roblox.com/hc/en-us/articles/15869919570708-Roblox-17-Policy-Standards) without risk of moderation. For this reason, Roblox strongly recommends that you fill out the questionnaire for each of your experiences so that they're available to the largest appropriate audience as possible.
 
+Content maturity labels determine which Roblox account types can access your experience:
+
+- Games rated **Minimal or Mild** are eligible for Roblox Kids (ages 5–8) and Roblox Select (ages 9–15).
+- Games rated **Moderate** are eligible for Roblox Select (ages 9–15) and standard Roblox (16+).
+- Games rated **Restricted** are only accessible to age-verified Roblox users 18 and older.
+
+To reach Roblox Kids and Select audiences, creators must also meet additional publishing requirements. See [Roblox Kids and Select](../publishing/kids-and-select.md).
+
 <Alert severity="warning">
    Content descriptors that generate content maturity labels are separate from [genres](../publishing/experience-genres.md) that classify experiences according to their core gameplay. In cases where there is overlap between genres and in-experience content or behavior, answer the Maturity & Compliance questionnaire as accurately as you can regardless of your genre selection or assignment from Roblox.
 </Alert>
@@ -268,11 +276,11 @@ If your experience contains scary elements, you must specify the intensity of th
 <BaseAccordion>
    <AccordionSummary>
 
-   <Typography variant="label1">Moderate Examples (Not Suitable for Young Readers)</Typography>
-   </AccordionSummary>
-   <AccordionDetails>
+<Typography variant="label1">Moderate Examples (Not Suitable for Young Readers)</Typography>
+</AccordionSummary>
+<AccordionDetails>
 
-   The following images meet the moderate criteria for fear-based content.
+The following images meet the moderate criteria for fear-based content.
 
    <GridContainer numColumns="3">
      <figure>
@@ -357,7 +365,7 @@ You do **not** need to report depictions of, and/or references to, items or acti
 
 **Question 1: Do you depict and/or want to allow strong language in your experience?**
 
-Strong language is vulgar and obscene language that is not used to harass, discriminate, incite violence, or threaten others, or used in a sexual context. For example, strong language content could be depictions of a non-playable character (NPC) using obscenity like the "f-word" that is not directed towards another character or group of people (e.g. "f* off").
+Strong language is vulgar and obscene language that is not used to harass, discriminate, incite violence, or threaten others, or used in a sexual context. For example, strong language content could be depictions of a non-playable character (NPC) using obscenity like the "f-word" that is not directed towards another character or group of people (e.g. "f\* off").
 
 If your experience includes strong language, you must disclose it within the Maturity & Compliance Questionnaire. Experiences that include strong language are only available to age-verified players that are at least 18 years old.
 

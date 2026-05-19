@@ -75,11 +75,12 @@ methods:
       - DynamicGeneration
   - name: AvatarCreationService:GenerateAvatar2DPreviewAsync
     summary: |
-      Creates a 2D avatar preview and returns a previewId.
+      Creates a 2D avatar preview and returns a `previewId`.
     description: |
       Creates a 2D avatar image preview, taking as input the FileId from
       `Class.AvatarCreationService:PromptSelectAvatarGenerationImageAsync()|PromptSelectAvatarGenerationImageAsync()`
-      and an optional text prompt. It returns a previewId which can be passed to
+      and an optional text prompt. It returns a `previewId` which can be passed
+      to
       `Class.AvatarCreationService:LoadAvatar2DPreviewAsync()|LoadAvatar2DPreviewAsync()`
       to retrieve the preview image on the client. This API can only be used on
       the game server.
@@ -93,7 +94,7 @@ methods:
               args.SessionId = sessionId
               args.FileId = fileId
               args.TextPrompt = textPrompt
-              return AvatarCreationService:GenerateAvatar2DPreview(args)
+              return AvatarCreationService:GenerateAvatar2DPreviewAsync(args)
           end)
 
           if not pcallSuccess then

@@ -167,29 +167,41 @@ To change the start place:
 
 ### Make experience public
 
-<Alert severity="warning">
-To make a new experience public or update an existing public experience, you must:
+By default, new experiences are set to **private**, meaning that they are only accessible to you as the creator, to users with **Edit** or **Playtest** access, and to group members with the appropriate [roles and permissions](../../projects/groups.md#roles-and-permissions).
 
-- Have an account that is at least 48 hours old
-- Complete the [content maturity & compliance](../promotion/content-maturity.md) questionnaire for the specific experience
-- Meet at least one of the following:
-  - Have an [ID-verified account](./account-verification.md#verify-through-government-id) **OR**
-  - Have made a purchase using real currency or a gift card since January 1, 2025
-
-These requirements apply to both **publishing a new experience** and **updating an existing public experience**, including:
-
-- Using **Publish to** or **Publish as** in Studio
-- Publishing a new version of a place within an existing experience
-- Setting your audience to **Public** or **Community members**
-
-You do **not** need to meet these requirements if you keep your experience private or if your audience is set to **Friends**.
-</Alert>
+To make your experience available on Roblox, you have to meet the [publishing requirements](#publishing-requirements) before updating the experience's privacy settings to **public**.
 
 <Alert severity="info">
-You can make up to **5 private experiences that have never been public before** public per day. This limit resets daily. Making an experience that was already public private and then public again does **not** count toward this limit.
+You can make up to **5 private experiences that have never been public before** public per day. This limit resets daily. Making an existing public experience private and then public again does **not** count toward this limit.
 </Alert>
 
-By default, new experiences are set to **private**, meaning that they are only accessible to you as the creator, to users with **Edit** or **Playtest** access, and to group members with the appropriate [roles and permissions](../../projects/groups.md#roles-and-permissions). To make your experience available to everyone on Roblox, you have to update its privacy settings.
+#### Publishing requirements
+
+Publishing requirements depend on your target audience. These requirements apply to both **publishing a new experience** and **updating an existing public experience**, including using **Publish to** or **Publish as** in Studio, publishing a new version of a place, and setting your audience to **Public** or **Community members**.
+
+You do **not** need to meet these requirements if you keep your experience private or if your audience is set to **Friends**.
+
+To reach **16+** and **Trusted Friends**:
+
+- Complete an age check.
+- Account is in good standing and at least 2 days old.
+- Complete the [content maturity & compliance](../promotion/content-maturity.md) questionnaire.
+
+To reach **all ages** (including **Roblox Kids** and **Roblox Select**):
+
+- All of the above, plus:
+- [ID-verified account](./account-verification.md#verify-through-government-id) or parent-linked age verification.
+- Two-factor authentication (2FA) enabled.
+- One of the following:
+  - Pay a one-time, refundable publishing fee of 1,000 Robux per game.
+    - This fee will be refunded if your game maintains 100 highly engaged players for 60 days without moderation.
+    - If the experience is permanently moderated or taken down for not meeting [Roblox Community Standards](https://en.help.roblox.com/hc/articles/203313410) within the 60 days, the fee **will not be returned**.
+  - Active [Roblox Plus](https://www.roblox.com/plus) or [Roblox Premium](https://www.roblox.com/premium/membership) subscription for 2 consecutive months.
+- Game must pass the [evaluation process](../../production/publishing/kids-and-select.md#evaluation-process).
+
+For full details on Kids and Select audiences and the evaluation process, see [Roblox Kids and Select](./kids-and-select.md).
+
+#### Update privacy settings
 
 To update your experience's privacy settings:
 

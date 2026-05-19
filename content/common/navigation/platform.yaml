@@ -29,6 +29,8 @@ navigation:
         path: /safety
       - title: Content maturity
         path: /production/promotion/content-maturity
+      - title: Roblox Kids and Select
+        path: /production/publishing/kids-and-select
       - title: Regional content availability
         path: /production/promotion/regional-content-availability
       - title: GDPR and CCPA
