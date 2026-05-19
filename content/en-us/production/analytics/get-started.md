@@ -68,10 +68,6 @@ Retention metrics determine if players are returning to your experience. Three o
 
 ### Monetization metrics
 
-<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/L6_HXinYTt0?si=N2nIj9L5wy9C0lBF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-
-<br />
-
 Monetization metrics indicate much how revenue your experience is generating. Three of the most important monetization metrics are:
 
 - **Average revenue per daily active user (ARPDAU):** ARPDAU is the average amount that players spend in your experience. This is a good snapshot of overall health of the experience. Consider if there are successful systems in your experience that encourage your players to spend.

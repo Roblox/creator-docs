@@ -17,24 +17,12 @@ A designer's role is to create an engaging experience for players, retain those 
     <figcaption>Sketch Series: Onboarding Techniques</figcaption>
   </figure>
   <figure>
-    <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/kumeLD2TtRM?si=2nsTV0pia-HxwBPa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-    <figcaption>Sketch Series: Subscription Design</figcaption>
+    <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/LpAU6TheAZ4?si=_1r_ZtlJ3WsrZMUf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+    <figcaption>Sketch Series: Retention Metrics</figcaption>
   </figure>
 </GridContainer>
 
 <br />
-
-<GridContainer numColumns="2">
-
-  <figure>
-  <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/L6_HXinYTt0?si=N2nIj9L5wy9C0lBF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-    <figcaption>Sketch Series: Subscription Design</figcaption>
-  </figure>
- <figure>
-      <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/LpAU6TheAZ4?si=_1r_ZtlJ3WsrZMUf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-    <figcaption>Sketch Series: Retention Metrics</figcaption>
-  </figure>
-</GridContainer>
 
 ## Design your experience
 
