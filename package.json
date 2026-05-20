@@ -11,6 +11,7 @@
   "scripts": {
     "ai-review": "npx tsx tools/ai-editorial-review/main.ts",
     "check": "npx tsx tools/checks/main.ts",
+    "docs-slack-bot": "npx tsx tools/docs-slack-bot/main.ts",
     "checks": "npx tsx tools/checks/main.ts",
     "redirects": "npx tsx tools/redirects/main.ts",
     "format": "prettier --write .",

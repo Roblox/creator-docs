@@ -9503,7 +9503,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -9517,7 +9517,8 @@
                 "RecommendationServicesConfig",
                 "DataStoresConfig",
                 "ExtendedServicesConfig",
-                "LeaderboardsConfig"
+                "LeaderboardsConfig",
+                "ExperienceUserConfig"
               ]
             },
             "x-enum-varnames": [
@@ -9525,7 +9526,8 @@
               "RecommendationServicesConfig",
               "DataStoresConfig",
               "ExtendedServicesConfig",
-              "LeaderboardsConfig"
+              "LeaderboardsConfig",
+              "ExperienceUserConfig"
             ]
           }
         ],
@@ -9626,7 +9628,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -9640,7 +9642,8 @@
                 "RecommendationServicesConfig",
                 "DataStoresConfig",
                 "ExtendedServicesConfig",
-                "LeaderboardsConfig"
+                "LeaderboardsConfig",
+                "ExperienceUserConfig"
               ]
             },
             "x-enum-varnames": [
@@ -9648,7 +9651,8 @@
               "RecommendationServicesConfig",
               "DataStoresConfig",
               "ExtendedServicesConfig",
-              "LeaderboardsConfig"
+              "LeaderboardsConfig",
+              "ExperienceUserConfig"
             ]
           }
         ],
@@ -9792,7 +9796,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -9806,7 +9810,8 @@
                 "RecommendationServicesConfig",
                 "DataStoresConfig",
                 "ExtendedServicesConfig",
-                "LeaderboardsConfig"
+                "LeaderboardsConfig",
+                "ExperienceUserConfig"
               ]
             },
             "x-enum-varnames": [
@@ -9814,7 +9819,8 @@
               "RecommendationServicesConfig",
               "DataStoresConfig",
               "ExtendedServicesConfig",
-              "LeaderboardsConfig"
+              "LeaderboardsConfig",
+              "ExperienceUserConfig"
             ]
           }
         ],
@@ -9913,7 +9919,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -9927,7 +9933,8 @@
                 "RecommendationServicesConfig",
                 "DataStoresConfig",
                 "ExtendedServicesConfig",
-                "LeaderboardsConfig"
+                "LeaderboardsConfig",
+                "ExperienceUserConfig"
               ]
             },
             "x-enum-varnames": [
@@ -9935,7 +9942,8 @@
               "RecommendationServicesConfig",
               "DataStoresConfig",
               "ExtendedServicesConfig",
-              "LeaderboardsConfig"
+              "LeaderboardsConfig",
+              "ExperienceUserConfig"
             ]
           }
         ],
@@ -10081,7 +10089,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10095,7 +10103,8 @@
                 "RecommendationServicesConfig",
                 "DataStoresConfig",
                 "ExtendedServicesConfig",
-                "LeaderboardsConfig"
+                "LeaderboardsConfig",
+                "ExperienceUserConfig"
               ]
             },
             "x-enum-varnames": [
@@ -10103,7 +10112,8 @@
               "RecommendationServicesConfig",
               "DataStoresConfig",
               "ExtendedServicesConfig",
-              "LeaderboardsConfig"
+              "LeaderboardsConfig",
+              "ExperienceUserConfig"
             ]
           }
         ],
@@ -10249,7 +10259,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10263,7 +10273,8 @@
                 "RecommendationServicesConfig",
                 "DataStoresConfig",
                 "ExtendedServicesConfig",
-                "LeaderboardsConfig"
+                "LeaderboardsConfig",
+                "ExperienceUserConfig"
               ]
             },
             "x-enum-varnames": [
@@ -10271,7 +10282,8 @@
               "RecommendationServicesConfig",
               "DataStoresConfig",
               "ExtendedServicesConfig",
-              "LeaderboardsConfig"
+              "LeaderboardsConfig",
+              "ExperienceUserConfig"
             ]
           }
         ],
@@ -10372,7 +10384,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10386,7 +10398,8 @@
                 "RecommendationServicesConfig",
                 "DataStoresConfig",
                 "ExtendedServicesConfig",
-                "LeaderboardsConfig"
+                "LeaderboardsConfig",
+                "ExperienceUserConfig"
               ]
             },
             "x-enum-varnames": [
@@ -10394,7 +10407,8 @@
               "RecommendationServicesConfig",
               "DataStoresConfig",
               "ExtendedServicesConfig",
-              "LeaderboardsConfig"
+              "LeaderboardsConfig",
+              "ExperienceUserConfig"
             ]
           }
         ],
@@ -10540,7 +10554,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10554,7 +10568,8 @@
                 "RecommendationServicesConfig",
                 "DataStoresConfig",
                 "ExtendedServicesConfig",
-                "LeaderboardsConfig"
+                "LeaderboardsConfig",
+                "ExperienceUserConfig"
               ]
             },
             "x-enum-varnames": [
@@ -10562,7 +10577,8 @@
               "RecommendationServicesConfig",
               "DataStoresConfig",
               "ExtendedServicesConfig",
-              "LeaderboardsConfig"
+              "LeaderboardsConfig",
+              "ExperienceUserConfig"
             ]
           },
           {
@@ -10719,7 +10735,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10733,7 +10749,8 @@
                 "RecommendationServicesConfig",
                 "DataStoresConfig",
                 "ExtendedServicesConfig",
-                "LeaderboardsConfig"
+                "LeaderboardsConfig",
+                "ExperienceUserConfig"
               ]
             },
             "x-enum-varnames": [
@@ -10741,7 +10758,8 @@
               "RecommendationServicesConfig",
               "DataStoresConfig",
               "ExtendedServicesConfig",
-              "LeaderboardsConfig"
+              "LeaderboardsConfig",
+              "ExperienceUserConfig"
             ]
           },
           {
@@ -30700,50 +30718,6 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/inventories#inventory_post_v1_collections_items__itemType___itemTargetId_"
-        }
-      }
-    },
-    "/v1/contacts/metadata": {
-      "get": {
-        "tags": ["Users"],
-        "summary": "Gets contextual information for contacts and usertags",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Contacts.Api.Models.Response.ContactsMetadataResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Contacts.Api.Models.Response.ContactsMetadataResponseModel"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          }
-        },
-        "deprecated": true,
-        "servers": [
-          {
-            "url": "https://contacts.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "description": "Endpoint is Deprecated",
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/users#contacts_get_v1_contacts_metadata"
         }
       }
     },
@@ -76146,16 +76120,18 @@
           "RecommendationServicesConfig",
           "DataStoresConfig",
           "ExtendedServicesConfig",
-          "LeaderboardsConfig"
+          "LeaderboardsConfig",
+          "ExperienceUserConfig"
         ],
         "type": "string",
-        "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig",
+        "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
         "x-enum-varnames": [
           "InExperienceConfig",
           "RecommendationServicesConfig",
           "DataStoresConfig",
           "ExtendedServicesConfig",
-          "LeaderboardsConfig"
+          "LeaderboardsConfig",
+          "ExperienceUserConfig"
         ]
       },
       "RestartState": {
@@ -82986,20 +82962,6 @@
           "isFlagOnly": {
             "description": "Whether the channel is flag-only. A flag-only channel uses production binaries.\r\nIf the channel is not flag-only, this is omitted.",
             "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Contacts.Api.Models.Response.ContactsMetadataResponseModel": {
-        "type": "object",
-        "properties": {
-          "multiGetContactsMaxSize": {
-            "format": "int32",
-            "type": "integer"
-          },
-          "multiGetContactsCacheTTLinMS": {
-            "format": "int32",
-            "type": "integer"
           }
         },
         "additionalProperties": false
@@ -93733,6 +93695,11 @@
             "description": "The category path to filter by.",
             "nullable": true
           },
+          "swimlane": {
+            "type": "string",
+            "description": "Optional swimlane identifier (e.g. \"trending\", \"essential\", \"priced\").\r\nResolves through Toolbox.Service.Interfaces.Swimlanes.ISwimlaneRegistry to a provider whose\r\ndefault sort intent and search-builder configuration are applied to the\r\nquery. Unknown, disabled, or category-ineligible values yield 400.",
+            "nullable": true
+          },
           "searchView": {
             "allOf": [
               {
@@ -98057,7 +98024,6 @@
           "friends_get_v1_users__targetUserId__followers_count",
           "friends_get_v1_users__targetUserId__followings",
           "friends_get_v1_users__targetUserId__followings_count",
-          "contacts_get_v1_contacts_metadata",
           "contacts_post_v1_user_get_tags",
           "contacts_get_v1_user_tag_validate",
           "contacts_post_v1_user_tag",

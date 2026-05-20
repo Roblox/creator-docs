@@ -3,7 +3,10 @@ title: Rewarded video ads
 description: Immersive ads allow you insert ad units into your experience that programmatically serve ad content.
 ---
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/-HYByqvW2uc" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+<GridContainer numColumns="2">
+  <iframe width="440" height="247" src="https://www.youtube-nocookie.com/embed/-HYByqvW2uc" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+  <iframe width="440" height="247" src="https://www.youtube-nocookie.com/embed/KanM1I1_q_o" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+</GridContainer>
 
 <br /><br />
 
@@ -24,12 +27,6 @@ Before implementing rewarded video ads, consider where inside your experience yo
 - **Ensure compliance**: Clearly disclose to users that they are engaging with an ad, and explain what users have to do to receive the reward and what the reward is. Rewards for video ads **cannot** be randomized items.
 
 ## Implement rewarded video ads
-
-<br /><br />
-
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/Jpj0VnA-jmI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-
-<br /><br />
 
 <Alert severity="warning">
   Rewards must be **developer products**. You can't reward users with Robux.
@@ -58,7 +55,7 @@ To set up a rewarded video ad inside your experience:
 
 1. In Studio, go to **File** ⟩ **Experience Settings** ⟩ **Monetization**.
 2. Check the **Enable Rewarded Video Ads** checkbox.
-  <img src="../../assets/promotion/ads-manager/EnableRewardedVideoAdsToggle.png" width="750" />
+   <img src="../../assets/promotion/ads-manager/EnableRewardedVideoAdsToggle.png" width="750" />
 3. Select the reward you want to grant the user. If the reward doesn't already exist, [create a new developer product in the Creator Hub](../monetization/developer-products.md#create-a-developer-product). This developer product must have been created for the specific universe the place is in.
 4. Insert a button that the user must press before the video ad starts playing.
 
@@ -122,7 +119,7 @@ end
 
 RewardedAdEvent.OnClientEvent:Connect(function(isSuccess : boolean, result : Enum.ShowAdResult)
 	if result == Enum.ShowAdResult.ShowCompleted then
-		checkForAds()	
+		checkForAds()
 	end
 end)
 
@@ -149,7 +146,7 @@ To implement the rewarded video ad on the server-side:
 1. Create a new `Class.Script` under **ServerScriptService**.
 2. Use the `Class.AdService.CreateAdRewardFromDevProductId|CreateAdRewardFromDevProductId` method to pass the developer product ID of the reward and create an `AdReward` object.
 3. Use the `Class.AdService.ShowRewardedVideoAdAsync|ShowRewardedVideoAdAsync` method to play the video ad to the user.
-    - (Optional) Add a `placementId` to track individual [video ad placements](#placements) inside your experience.
+   - (Optional) Add a `placementId` to track individual [video ad placements](#placements) inside your experience.
 4. Use the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` method to grant the user their reward if they have watched the entire video ad.
 
 ```lua title="Code example for rewarded video ad (Server)"
@@ -170,7 +167,7 @@ RewardedAdEvent.OnServerEvent:Connect(function(player)
 		local reward = AdService:CreateAdRewardFromDevProductId(DEV_PRODUCT_ID)
 		return AdService:ShowRewardedVideoAdAsync(player, reward)
 	end)
-	
+
 	RewardedAdEvent:FireClient(player, isSuccess, result)
 end)
 
@@ -181,7 +178,7 @@ MarketplaceService.ProcessReceipt = function(receiptInfo)
 	end
 
 	if receiptInfo.ProductId == DEV_PRODUCT_ID then
-		
+
     -- Include the logic for granting rewards here
 
 		return Enum.ProductPurchaseDecision.PurchaseGranted
@@ -323,8 +320,20 @@ To access your rewarded video ad metrics:
     <td>**DUV/eDAU**</td>
     <td>The percentage of ads-eligible users who visited your experience and viewed one or more video ads in a day.</td>
   </tr>
+  <tr>
+    <td>**Opt-In Rate**</td>
+    <td>The percentage of ads-eligible users who are engaging with ads in your game.</td>
+  </tr>
+  <tr>
+    <td>**Frequency**</td>
+    <td>The number of ads a user is seeing per day in your game.</td>
+  </tr>
 </tbody>
 </table>
+
+## De-risk your implementation with experiments
+
+If you're unsure how your community will react to a new rewarded video ad placement, you can use [experiments](../experiments.md) to roll the placement out to a percentage of your users first. This lets you measure real-time changes in engagement and retention before rolling the placement out to your entire audience.
 
 ## Eligibility requirements
 
