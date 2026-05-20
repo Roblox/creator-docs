@@ -3,8 +3,6 @@ title: Assistant for Studio
 description: How to use Assistant to help build, grow, and monetize your creations in Studio.
 ---
 
-import BetaAlert from '../includes/beta-features/beta-alert.md'
-
 **Assistant** is an AI helper that accelerates content creation by helping you get started, supplementing your skills, and assisting with ongoing development. It can do the following and much more:
 
 - Answer how to do things on Roblox
@@ -109,3 +107,15 @@ To access Assistant from Studio:
    - Click the redo icon to process a new result.
 
      <img src="../assets/assistant/Studio-General-UI.png" width="360" alt="General user interface for Assistant in Studio." />
+
+## Skills
+
+In Studio, Assistant uses a number of skills to help it perform tasks more consistently and comprehensively. Assistant chooses the appropriate skills automatically based on your request.
+
+Skills are just folders with a `SKILL.md` file and any supporting resources (scripts, a `commands` directory with supplemental Markdown files, etc.). See the full list of Assistant skills in the open source repository.
+
+<Grid container spacing={2}>
+  <Grid item XSmall={12} Large={6}>
+   <ScriptingLibrariesCard title="Assistant skills" description="View all of Assistant's skill files." hue="210" githubHref="https://github.com/Roblox/creator-docs/tree/main/skills" />
+  </Grid>
+</Grid>

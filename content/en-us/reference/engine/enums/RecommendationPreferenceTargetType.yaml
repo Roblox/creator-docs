@@ -5,23 +5,29 @@
 name: RecommendationPreferenceTargetType
 type: enum
 summary: ''
-description: ''
+description: |
+  The kind of entity a preference signal targets when logged via
+  `Class.RecommendationService.LogPreferenceEvent|LogPreferenceEvent`.
+  Determines how the `targetId` parameter is interpreted.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: User
-    summary: ''
+    summary: |
+      The target is another Roblox user. The `targetId` is the user key.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Universe
-    summary: ''
+    summary: |
+      The target is a universe. The `targetId` is the universe ID as a string.
     value: 1
     tags: []
     deprecation_message: ''
   - name: CustomTag
-    summary: ''
+    summary: |
+      The target is a custom content tag. The `targetId` is the tag string.
     value: 2
     tags: []
     deprecation_message: ''

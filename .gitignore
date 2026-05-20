@@ -6,3 +6,4 @@
 # Files
 .DS_Store
 **.env
+/.claude

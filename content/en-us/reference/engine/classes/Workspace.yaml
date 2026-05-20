@@ -300,8 +300,22 @@ properties:
     capabilities:
       - Basic
   - name: Workspace.EnableSLIMAvatars
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether SLIM rendering is used for avatars in the experience.
+    description: |
+      This `Enum.RolloutState` property controls whether a
+      `Enum.ModelLevelOfDetail|SLIM` model is generated for avatar characters in
+      the experience. When enabled and instance streaming is active, avatars
+      render using SLIM in the same way that setting `Class.Model.LevelOfDetail`
+      to `Enum.ModelLevelOfDetail|SLIM` works for other models.
+
+      When set to `Enum.RolloutState|Enabled`, avatars use SLIM rendering. When
+      set to `Enum.RolloutState|Disabled`, avatars use the traditional rendering
+      approach. `Enum.RolloutState|Default` follows the current engine-wide
+      rollout state.
+
+      This property cannot be set through scripting and must be set in Studio
+      through the properties window, command bar, or a plugin.
     code_samples: []
     type: RolloutState
     tags:

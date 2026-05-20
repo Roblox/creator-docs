@@ -277,29 +277,63 @@ methods:
       - Basic
   - name: RecommendationService:LogPreferenceEvent
     summary: ''
-    description: ''
-    code_samples: []
+    description: |
+      This function logs a user preference signal, such as follow, unfollow,
+      mute, or unmute, directed at another user, a universe, or a custom content
+      tag. It requires a `preferenceType`, a `targetType`, and a `targetId`
+      whose format depends on the target type: the user key for
+      `Enum.RecommendationPreferenceTargetType.User|User`, the universe ID as a
+      string for `Enum.RecommendationPreferenceTargetType.Universe|Universe`, or
+      the tag string for
+      `Enum.RecommendationPreferenceTargetType.CustomTag|CustomTag`. When the
+      preference originates from a recommendation card served by
+      `Class.RecommendationService.GenerateItemListAsync|GenerateItemListAsync`,
+      pass the card's `tracingId` and `itemId` to correlate the event with the
+      recommendation context; otherwise pass empty strings for both.
+
+      Logging preferences helps the recommendation engine personalize future
+      results across every recommendation surface, not just item feeds.
+
+      This function can only be called from the **client**.
+
+      **Note:** Only `LogPreferenceEvent` calls in production actually log
+      preferences. Calling this function in Studio doesn't have any effect; you
+      can call it as many times as you want when testing.
+    code_samples:
+      - LogPreferenceEvent-example
     parameters:
       - name: preferenceType
         type: RecommendationPreferenceType
         default:
-        summary: ''
+        summary: |
+          The enum for the type of preference.
       - name: targetType
         type: RecommendationPreferenceTargetType
         default:
-        summary: ''
+        summary: |
+          The enum for the type of target.
       - name: targetId
         type: string
         default:
-        summary: ''
+        summary: |
+          The identifier of the preference target. The format depends on
+          `targetType`.
       - name: tracingId
         type: string
         default:
-        summary: ''
+        summary: |
+          The tracing ID returned from the
+          `Class.RecommendationService.GenerateItemListAsync|GenerateItemListAsync`
+          response. Pass an empty string if the preference originates outside a
+          recommendation feed.
       - name: itemId
         type: string
         default:
-        summary: ''
+        summary: |
+          The item ID returned from the
+          `Class.RecommendationService.GenerateItemListAsync|GenerateItemListAsync`
+          response. Pass an empty string if the preference originates outside a
+          recommendation feed.
     returns:
       - type: ()
         summary: ''

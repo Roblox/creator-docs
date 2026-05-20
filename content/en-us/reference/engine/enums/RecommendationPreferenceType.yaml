@@ -5,28 +5,37 @@
 name: RecommendationPreferenceType
 type: enum
 summary: ''
-description: ''
+description: |
+  The type of preference signal logged via
+  `Class.RecommendationService.LogPreferenceEvent|LogPreferenceEvent`.
+  Preference signals capture follow, unfollow, mute, and unmute actions toward
+  another user, a universe, or a custom content tag, and are used by the
+  recommendation engine to personalize future results.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: AddFollow
-    summary: ''
+    summary: |
+      The user started following the target.
     value: 0
     tags: []
     deprecation_message: ''
   - name: RemoveFollow
-    summary: ''
+    summary: |
+      The user stopped following the target.
     value: 1
     tags: []
     deprecation_message: ''
   - name: AddMute
-    summary: ''
+    summary: |
+      The user muted the target.
     value: 2
     tags: []
     deprecation_message: ''
   - name: RemoveMute
-    summary: ''
+    summary: |
+      The user unmuted a previously muted target.
     value: 3
     tags: []
     deprecation_message: ''
