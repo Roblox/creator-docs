@@ -231,7 +231,7 @@ The Importer provides the following settings for all meshes:
   </tr>
   <tr>
     <td>Keep Zero Influence Bones</td>
-    <td>If enabled, the importer keeps bones that that do not influence the mesh. By default, this is **disabled**.<br /><br />If disabled, the importer removes zero influence bones.</td>
+    <td>If enabled, the importer keeps bones that do not influence the mesh. By default, this is **disabled**.<br /><br />If disabled, the importer removes zero influence bones.</td>
   </tr>
   <tr>
     <td>Set Pivot to Scene Origin</td>
