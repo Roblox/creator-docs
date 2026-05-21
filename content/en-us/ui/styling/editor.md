@@ -488,6 +488,203 @@ While manual resizing is a quick way to check responsive logic, you can also use
 - Use the [Controller Emulator](../../studio/testing-modes.md#controller-simulation) to verify `Class.UserInputService.PreferredInput|PreferredInput` logic, such as switching styles when a gamepad is detected.
 </Alert>
 
+## Style transitions
+
+Style **transitions**, comparable to [CSS transitions](./css-comparisons.md#transitions), let you tween property values over a set duration.
+
+<BetaAlert betaName="Styling Transitions" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
+
+### Default
+
+To tween many UI properties with the same parameters, you can set a default transition that applies to **all** properties unless another transition is explicitly set for a specific property.
+
+1. Select **TextButton** in the **UI&nbsp;Elements** branch and then, in the main panel, add three new properties with the following values:
+
+   <table size="small">
+	 <thead>
+	   <tr>
+	   <th>Property</th>
+	   <th>Value</th>
+	   </tr>
+   </thead>
+	 <tbody>
+     <tr>
+       <td>`Class.TextButton.AutoButtonColor|AutoButtonColor`</td>
+       <td>`false`</td>
+     </tr>
+	   <tr>
+       <td>`Class.TextButton.BackgroundColor3|BackgroundColor3`</td>
+       <td>`#335FFF`</td>
+     </tr>
+     <tr>
+       <td>`Class.TextButton.Rotation|Rotation`</td>
+       <td>`0`</td>
+     </tr>
+   </tbody>
+   </table>
+
+   <img src="../../assets/ui/ui-styling/SE-Transition-Rule-New-Class.png" width="640" alt="Class style in the Style Editor." />
+
+2. Hover over the parent **TextButton** row, click the ⋮ button, and navigate through to **Insert**&nbsp;⟩ **Transition**.
+
+   <img src="../../assets/ui/ui-styling/SE-Transition-Rule-Add-Default-Transition.png" width="680" alt="Add default transition to a rule in the Style Editor." />
+
+   A default transition of `1, Quad, Out, 0` inserts directly under the **TextButton** rule, indicating a transition of 1&nbsp;second, easing style `Enum.EasingStyle.Quad|Quad`, easing direction `Enum.EasingDirection.Out|Out`, and no delay.
+
+	 <img src="../../assets/ui/ui-styling/SE-Transition-Rule-Default-Transition-Added.png" width="400" alt="Default transition highlighted in the Style Editor." />
+
+3. Hover over the parent **TextButton** row, click the **⋮** button, and navigate through to **New**&nbsp;⟩ **GuiState**&nbsp;⟩ **Hover**.
+
+   <img src="../../assets/ui/ui-styling/SE-Transition-Rule-Default-New-State.png" width="840" alt="Creation of state rule in the Style Editor." />
+
+4. For the new **Hover** modifier, add two new properties as the **targets** for the hover state.
+
+   <table size="small">
+	 <thead>
+	   <tr>
+	   <th>Property</th>
+	   <th>Value</th>
+	   </tr>
+   </thead>
+	 <tbody>
+	   <tr>
+       <td>`Class.TextButton.BackgroundColor3|BackgroundColor3`</td>
+       <td>`#33AAFF`</td>
+     </tr>
+     <tr>
+       <td>`Class.TextButton.Rotation|Rotation`</td>
+       <td>`-5`</td>
+     </tr>
+   </tbody>
+   </table>
+
+	 <img src="../../assets/ui/ui-styling/SE-Transition-Rule-State-Properties.png" width="400" alt="Properties on hover state rule in the Style Editor." />
+
+5. Insert a new `Class.TextButton` into the `Class.ScreenGui` you previously [created and linked](#design-sheets). When you hover over the button in the viewport, it should gradually brighten and rotate 5 degrees counterclockwise.
+
+   <img src="../../assets/ui/ui-styling/SE-Transition-Rule-Result.png" width="840" alt="Final styled state rule in the Style Editor." />
+
+### Token-linked
+
+To reuse transition behaviors across multiple rules, you can define **tokens** representing the `Datatype.TweenInfo` data type. The following rule setup creates a hover state to transition all `Class.TextButton|TextButtons` to/from -5 degrees rotation and a lighter background color.
+
+1. If you haven't already, create a [token style sheet](#style-tokens) named `TokenSheet`.
+
+   <img src="../../assets/ui/ui-styling/SE-TokenSheet-New.png" width="240" alt="New token sheet created in the Style Editor." />
+
+2. With the new token sheet selected, create two new tokens by clicking **Add&nbsp;a&nbsp;Token…** in the main panel.
+
+   <table>
+	 <thead>
+	   <tr>
+	   <th>Token Name</th>
+	   <th>Type</th>
+	   <th>Tween Parameters</th>
+	   </tr>
+   </thead>
+	 <tbody>
+	   <tr>
+       <td>`CubicOut`</td>
+       <td>`Datatype.TweenInfo`</td>
+       <td><ul><li>`Duration`&nbsp;=&nbsp;`1.25`</li><li>`EasingStyle`&nbsp;=&nbsp;`Cubic`</li><li>`EasingDirection`&nbsp;=&nbsp;`Out`</li><li>`Delay`&nbsp;=&nbsp;`0`</li></ul></td>
+     </tr>
+	   <tr>
+       <td>`QuadInOut`</td>
+       <td>`Datatype.TweenInfo`</td>
+       <td><ul><li>`Duration`&nbsp;=&nbsp;`0.5`</li><li>`EasingStyle`&nbsp;=&nbsp;`Quad`</li><li>`EasingDirection`&nbsp;=&nbsp;`InOut`</li><li>`Delay`&nbsp;=&nbsp;`0`</li></ul></td>
+     </tr>
+   </tbody>
+   </table>
+
+   <img src="../../assets/ui/ui-styling/SE-Transition-Rule-Tokens-Defined.png" width="400" alt="Tokens added to TokenSheet in Style Editor." />
+
+3. Select **TextButton** in the **UI&nbsp;Elements** branch and then, in the main panel, add three new properties with the following values:
+
+   <table size="small">
+	 <thead>
+	   <tr>
+	   <th>Property</th>
+	   <th>Value</th>
+	   </tr>
+   </thead>
+	 <tbody>
+     <tr>
+       <td>`Class.TextButton.AutoButtonColor|AutoButtonColor`</td>
+       <td>`false`</td>
+     </tr>
+	   <tr>
+       <td>`Class.TextButton.BackgroundColor3|BackgroundColor3`</td>
+       <td>`#335FFF`</td>
+     </tr>
+     <tr>
+       <td>`Class.TextButton.Rotation|Rotation`</td>
+       <td>`0`</td>
+     </tr>
+   </tbody>
+   </table>
+
+   <img src="../../assets/ui/ui-styling/SE-Transition-Rule-New-Class.png" width="640" alt="Class style in the Style Editor." />
+
+4. For each new property except for `Class.TextButton.AutoButtonColor|AutoButtonColor`, hover over its row, click the **⋮** button, and select **Insert**&nbsp;⟩ **Transition**.
+
+   <img src="../../assets/ui/ui-styling/SE-Transition-Rule-Add-Transition.png" width="680" alt="Add transition to a property in the Style Editor." />
+
+5. Hover over the new **Transition** row under each property, click the **⋮** button, and select **Link&nbsp;Token**. Then, instead of entering a static value, click the `$` which appears in the value field and select the proper transition token.
+
+   <img src="../../assets/ui/ui-styling/SE-Transition-Rule-Tokens-Link.png" width="526" alt="Token linking workflow diagrammed in the Style Editor." />
+
+   <table size="small">
+	 <thead>
+	   <tr>
+	   <th>Property Transition</th>
+	   <th>Transition Token</th>
+	   </tr>
+   </thead>
+	 <tbody>
+	   <tr>
+       <td>`Class.TextButton.BackgroundColor3|BackgroundColor3`</td>
+       <td>`$CubicOut`</td>
+     </tr>
+     <tr>
+       <td>`Class.TextButton.Size|Size`</td>
+       <td>`$QuadInOut`</td>
+     </tr>
+   </tbody>
+   </table>
+
+	 <img src="../../assets/ui/ui-styling/SE-Transition-Rule-Tokens-Linked.png" width="400" alt="Transition tokens linked in the Style Editor." />
+
+6. Hover over the parent **TextButton** row, click the **⋮** button, and navigate through to **New**&nbsp;⟩ **GuiState**&nbsp;⟩ **Hover**.
+
+   <img src="../../assets/ui/ui-styling/SE-Transition-Rule-New-State.png" width="840" alt="Creation of state rule in the Style Editor." />
+
+7. For the new **Hover** modifier, add two new properties as the **targets** for the hover state.
+
+   <table size="small">
+	 <thead>
+	   <tr>
+	   <th>Property</th>
+	   <th>Value</th>
+	   </tr>
+   </thead>
+	 <tbody>
+	   <tr>
+       <td>`Class.TextButton.BackgroundColor3|BackgroundColor3`</td>
+       <td>`#33AAFF`</td>
+     </tr>
+     <tr>
+       <td>`Class.TextButton.Rotation|Rotation`</td>
+       <td>`-5`</td>
+     </tr>
+   </tbody>
+   </table>
+
+	 <img src="../../assets/ui/ui-styling/SE-Transition-Rule-State-Properties.png" width="400" alt="Properties on hover state rule in the Style Editor." />
+
+8. Insert a new `Class.TextButton` into the `Class.ScreenGui` you previously [created and linked](#design-sheets). When you hover over the button in the viewport, it should gradually brighten and rotate 5 degrees counterclockwise.
+
+   <img src="../../assets/ui/ui-styling/SE-Transition-Rule-Result.png" width="840" alt="Final styled state rule in the Style Editor." />
+
 ## Style themes
 
 Style **themes** consist of sets of specific tokens that can be swapped, for example color tokens that define a "light" and "dark" theme.

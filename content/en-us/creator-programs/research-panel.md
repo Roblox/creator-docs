@@ -7,8 +7,8 @@ The [Roblox Research Panel](https://survey.roblox.com/app/audience-management#/G
 
 <figure>
 <Chip
-    color="success"
-    label="Status: Open"
+    color="warning"
+    label="Status: Paused"
     size="medium"
     variant="filled" />
 </figure>

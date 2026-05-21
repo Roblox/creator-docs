@@ -646,6 +646,79 @@ CSS lets you declare and reference [variables](https://developer.mozilla.org/doc
 </CardContent>
 </Card>
 
+## Transitions
+
+CSS [transitions](https://developer.mozilla.org/docs/Web/CSS/Guides/Transitions) let you tween property values over a set duration. You can achieve this in Roblox by setting property transitions on a `Class.StyleRule` through `Class.StyleRule:SetPropertyTransition()|SetPropertyTransition()` (single) or `Class.StyleRule:SetPropertyTransitions()|SetPropertyTransitions()` (multiple).
+
+<BetaAlert betaName="Styling Transitions" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
+
+<Card>
+<CardContent style={{paddingTop: '0px', paddingBottom: '0px'}}>
+<GridContainer numColumns="2">
+	<figure>
+	```text title="CSS"
+	button {
+		background-color: #335FFF;
+		color: #E1E1E1;
+		width: 15%;
+		height: 40px;
+		border: none;
+		transition:
+			background-color 1s ease-out,
+			transform 1.25s ease-out
+	}
+	button:hover {
+		background-color: #33AAFF;
+		transform: rotate(-5deg);
+	}
+	```
+  </figure>
+	<figure>
+	```text title="HTML"
+	<button>Main Menu</button>
+	```
+  </figure>
+</GridContainer>
+</CardContent>
+</Card><br />
+
+<Card>
+<CardContent style={{paddingTop: '0px', paddingBottom: '0px'}}>
+	```lua title="Luau"
+	-- Button rule
+	local buttonRule = Instance.new("StyleRule")
+	buttonRule.Selector = "TextButton" -- Roblox class selector
+	buttonRule:SetProperties({
+		BackgroundColor3 = Color3.fromHex("335FFF"),
+		TextColor3 = Color3.fromHex("E1E1E1"),
+		Size = UDim2.new(0.15, 0, 0, 40),
+		BorderSizePixel = 0
+	})
+	-- Set property transition behaviors
+	buttonRule:SetPropertyTransitions({
+		BackgroundColor3 = TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out),
+		Rotation = TweenInfo.new(1.25, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out)
+	})
+	buttonRule.Parent = coreSheet
+
+	-- Button hover rule
+	local hoverRule = Instance.new("StyleRule")
+	hoverRule.Selector = "TextButton:Hover" -- State selector
+	hoverRule:SetProperties({
+		AutoButtonColor = false,
+		BackgroundColor3 = Color3.fromHex("33AAFF"),
+		Rotation = -5
+	})
+	hoverRule.Parent = coreSheet
+
+	-- Create text button
+	local button = Instance.new("TextButton")
+	button.Text = "Main Menu"
+	button.Parent = screenGui
+	```
+</CardContent>
+</Card>
+
 ## Nesting and merging
 
 Borrowing a concept from [SCSS](https://sass-lang.com/guide/#nesting), `Class.StyleRule|StyleRules` can be nested together and their selectors will **merge**.

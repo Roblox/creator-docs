@@ -323,8 +323,8 @@ Roblox offers various programs for creators on the platform to provide additiona
 <h4>Roblox Research Panel</h4>
 <figure>
 <Chip
-        color="success"
-        label="Status: Open"
+        color="warning"
+        label="Status: Paused"
         size="medium"
         variant="filled"/>
 </figure>

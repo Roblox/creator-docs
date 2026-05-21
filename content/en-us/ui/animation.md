@@ -3,6 +3,8 @@ title: UI animation/tweens
 description: Explains how to animate GuiObjects using the process of tweening.
 ---
 
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
 In animation, **tweening** is the process of generating intermediate frames between two key points in a sequence. When designing a user interface, you can use tweening to transition a `Class.GuiObject` smoothly from one state to another, such as:
 
 - Smoothly increasing the size of a button when a user selects it.
@@ -390,6 +392,14 @@ positionTween.Completed:Connect(function()
 end)
 ```
 
+## Style transitions
+
+<BetaAlert betaName="Styling Transitions" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
+
+UI objects can also be animated through **style transitions**, comparable to [CSS transitions](./styling/css-comparisons.md#transitions), where one or more UI properties are tweened through `Class.StyleRule` definitions. See the [Style Editor](./styling/editor.md#style-transitions) guide for details.
+
+<img src="../assets/ui/ui-styling/SE-Transition-Rule-Result.png" width="840" alt="Final styled state rule in the Style Editor." />
+
 ## Easing options
 
 Using the easing options of `Datatype.TweenInfo`, you can control the easing **style** and **direction** of UI animations.
@@ -502,13 +512,9 @@ local tweenInfo = TweenInfo.new(2, Enum.EasingStyle.Cubic, Enum.EasingDirection.
 local tween = TweenService:Create(object, tweenInfo, {Rotation = 45})
 ```
 
-## Animate text
+## Typewriter effect on text
 
-You can easily enhance text-based UI, such as cutscene banners, player instructions, and prompts, with animated effects.
-
-### Typewriter effect
-
-The "typewriter" effect is ideal for `Class.TextLabel|TextLabels` that tell a story, output NPC conversations, etc.
+You can easily enhance text-based UI, such as cutscene banners, player instructions, and prompts, with animated effects. The "typewriter" effect is ideal for `Class.TextLabel|TextLabels` that tell a story, output NPC conversations, etc.
 
 <video src="../assets/ui/ui-animation/Text-Typewriter.mp4" controls width="80%"></video>
 
