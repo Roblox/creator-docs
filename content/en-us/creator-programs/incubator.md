@@ -7,8 +7,8 @@ description: Roblox Incubator is a six-month, milestone-driven program that help
 
 <figure>
 <Chip
-    color="success"
-    label="Status: Open"
+    color="error"
+    label="Status: Closed"
     size="medium"
     variant="filled" />
 </figure>

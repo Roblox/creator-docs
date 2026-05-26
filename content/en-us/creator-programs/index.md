@@ -257,8 +257,8 @@ Roblox offers various programs for creators on the platform to provide additiona
 <h4>Roblox Incubator</h4>
 <figure>
 <Chip
-        color="success"
-        label="Status: Open"
+        color="error"
+        label="Status: Closed"
         size="medium"
         variant="filled"/>
 </figure>

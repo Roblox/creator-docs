@@ -4,17 +4,6 @@ description: Explains the things you can create on Roblox.
 hideInPageNavigation: true
 ---
 
-export const statsByline = "\* Figures are as of Q4 2024";
-
-export const scaleStats = [
-{ header: "85.3M", description: "Daily active users" },
-{ header: "18.9M", description: "Monthly unique payers" },
-{ header: "18.7B", description: "Quarterly hours engaged" },
-{ header: "750M", description: "Yearly creator earnings" },
-{ header: "18.9M", description: "DevX" },
-{ header: "18.7B", description: "xyz" },
-];
-
 export const sections = [
 
 {
@@ -174,6 +163,7 @@ image: "./assets/landing/in-exp-monetization.jpg"
 
 <Grid container direction="row" spacing={4} style={{ marginBottom: 48 }}>
 <Grid item xs={12} md={5}>
+
 <p>Roblox lets you create anything you can imagine with a comprehensive set of powerful 3D collaborative creation tools.</p>
 <p>Our platform provides you with unparalleled opportunities to create content from simple avatar items to immersive, multiplayer experiences.</p>
 <Button
@@ -199,6 +189,7 @@ alt=""
 {section.title && (
 <Typography variant='h1'>{section.title}</Typography>
 )}
+
 <div style={{ marginTop: 16, marginBottom: 48 }}>
 {section.description && (
 <p>{section.description}</p>

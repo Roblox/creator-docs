@@ -25,66 +25,65 @@ To create your license listing:
 1. Go to **Intellectual Property** ⟩ **License Manager** ⟩ **Licenses**.
 2. Select the **My Licenses** tab.
 3. Click **Create license listing**.
-4. In the **Create listing** step, set up the listing.
+4. Under **IP family**, select an IP family that you have previously created.
+5. Under **Listing details**, enter a title and a description for the listing.
+6. Under **Thumbnails**, enter up to 5 images that relate to the listing. The first image you upload is shown to creators on the listing tile of the Licenses page. Make sure these images have an aspect ratio of 16:9, and are in PNG or JPG formats.
+7. Click **Create**.
+8. Listings must undergo moderation review for their name, description, and thumbnails. Click **Submit for review**.
 
-   1. Under **IP family**, select an IP family that you have previously created.
-   2. Under **Listing details**, enter a title and a description for the listing.
-   3. Under **Thumbnails**, enter up to 5 images that relate to the listing. The first image you upload is shown to creators on the listing tile of the Licenses page. Make sure these images have an aspect ratio of 16:9, and are in PNG or JPG formats.
-   4. Click **Next**.
+<img src="../assets/ip-licensing/CreateListingStep.png" width="50%" />
 
-   <img src="../assets/ip-licensing/CreateListingStep.png" width="50%" />
+Once your listing has been created, you will be redirected to the listing details page. To add a license to your listing:
 
-5. In the **Add license** step, configure a license to add to your listing. To skip this step and add a license to your listing later, click **Skip license**.
+1. Click **Add license** in the top-right corner.
+2. Under **License details**, enter a title and a description. If you make your license public, the title and description will become public-facing and be visible to creators.
+3. Under **Duration**:
 
-   1. Under **License details**, enter a title and a description. If you make your license public, the title and description will become public-facing and be visible to creators.
-   2. Under **Duration**:
+   1. Set a **Duration type**, either **Time-limited** or **Perpetual**:
+      - **Time-limited** licenses grant the use of your IP within defined date boundaries and will auto-terminate an active agreement on the end date.
+      - **Perpetual** licenses grant the use of your IP from the date an agreement is active until termination of that agreement is actively sought.
 
-      1. Set a **Duration type**, either **Time-limited** or **Perpetual**:
-         - **Time-limited** licenses grant the use of your IP within defined date boundaries and will auto-terminate an active agreement on the end date.
-         - **Perpetual** licenses grant the use of your IP from the date an agreement is active until termination of that agreement is actively sought.
+   <Alert severity="warning">
+   Rights holders can only [offer licenses to matching experiences](#review-matches-and-send-a-license-offer) if the license's duration is set to **perpetual**. <br /> <br />If the duration is set to **time-limited**, [creators must request for your license](../ip-licensing/creators.md#request-to-use-a-license) directly. Creators can request licenses for either time-limited or perpetual licenses.
+   </Alert>
 
-      <Alert severity="warning">
-      Rights holders can only [offer licenses to matching experiences](#review-matches-and-send-a-license-offer) if the license's duration is set to **perpetual**. <br /> <br />If the duration is set to **time-limited**, [creators must request for your license](../ip-licensing/creators.md#request-to-use-a-license) directly. Creators can request licenses for either time-limited or perpetual licenses.
-      </Alert>
+   <Alert severity="info">
+   Once a license has been created, the duration type cannot be changed. A perpetual license cannot be updated to a time-limited license, and vice versa.
+   </Alert>
+   2. Set a **Duration range** (Time-limited only), a defined date boundary you expect your IP usage to be active for. The creator will specify a start and end date within this boundary. Start and end times for time-limited licenses are based on midnight UTC.
 
-      <Alert severity="info">
-      Once a license has been created, the duration type cannot be changed. A perpetual license cannot be updated to a time-limited license, and vice versa.
-      </Alert>
-      2. Set a **Duration range** (Time-limited only), a defined date boundary you expect your IP usage to be active for. The creator will specify a start and end date within this boundary. Start and end times for time-limited licenses are based on midnight UTC.
+4. Under **Monetization**:
 
-   3. Under **Monetization**:
+   1. Set a **revenue share rate** between 0% and 95%. This is the revenue percentage you want to receive from experiences using your IP, and is shown to creators when they request to use your IP through a license listing.
+   2. Select one of the following for the **default revenue share timing**:
+      - **Monetize on activation**, which means the revenue share is applied beginning at the moment the agreement between the rights holder and the creator of the experience becomes active.
+      - **Monetize later**, which allows you to turn on revenue share at a later date of your choosing.
+   3. Set a **Default revenue share timing**. This option only displays if **Revenue share rate** is not 0%.
 
-      1. Set a **revenue share rate** between 0% and 95%. This is the revenue percentage you want to receive from experiences using your IP, and is shown to creators when they request to use your IP through a license listing.
-      2. Select one of the following for the **default revenue share timing**:
-         - **Monetize on activation**, which means the revenue share is applied beginning at the moment the agreement between the rights holder and the creator of the experience becomes active.
-         - **Monetize later**, which allows you to turn on revenue share at a later date of your choosing.
-      3. Set a **Default revenue share timing**. This option only displays if **Revenue share rate** is not 0%.
+   <Alert severity="info">
+   Time-limited licenses are set to monetize on activation by default, and this preference cannot be changed. Time-limited licenses will begin monetizing on the day the agreement is active, which will be the start date designated by the creator.
+   </Alert>
 
-      <Alert severity="info">
-      Time-limited licenses are set to monetize on activation by default, and this preference cannot be changed. Time-limited licenses will begin monetizing on the day the agreement is active, which will be the start date designated by the creator.
-      </Alert>
+5. Under **Experience eligibility**, select the criteria you want experiences to meet in order to request to use the license. Creators whose experiences don't meet these requirements aren't eligible to request to use your IP. To allow all creators to request, leave the default values.
+   - For **Minimum average last 7 daily active users (DAU)**, choose between no requirement, greater than 1,000 DAU, or greater than 25,000 DAU.
+   - For **Maximum maturity rating**, choose between minimal, mild, moderate, and restricted. See [Maturity labels](../production/promotion/content-maturity.md#questionnaire-categories) for more information about different maturity ratings.
+6. Under **Guidelines and restrictions**:
+   1. Enter the scope of your IP license. Include general background about the IP and clarify if any parts of the IP can or cannot be referenced by creators in their experience.
+   2. Under **Content standards**, set the rules that creators must follow when using your IP.
+   3. (Optional) Under **Brand guidelines**, upload a file to provide creators with creative direction.
+7. Under **Privacy**, select one of the following:
 
-   4. Under **Experience eligibility**, select the criteria you want experiences to meet in order to request to use the license. Creators whose experiences don't meet these requirements aren't eligible to request to use your IP. To allow all creators to request, leave the default values.
-      - For **Minimum average last 7 daily active users (DAU)**, choose between no requirement, greater than 1,000 DAU, or greater than 25,000 DAU.
-      - For **Maximum maturity rating**, choose between minimal, mild, moderate, and restricted. See [Maturity labels](../production/promotion/content-maturity.md#questionnaire-categories) for more information about different maturity ratings.
-   5. Under **Guidelines and restrictions**:
-      1. Enter the scope of your IP license. Include general background about the IP and clarify if any parts of the IP can or cannot be referenced by creators in their experience.
-      2. Under **Content standards**, set the rules that creators must follow when using your IP.
-      3. (Optional) Under **Brand guidelines**, upload a file to provide creators with creative direction.
-   6. Under **Privacy**, select one of the following:
+   - **Public** to make the license listing public and visible to all creators. This option also allows all eligible creators to request to use the license.
+   - **Private** to make the license only available to creators that you reach out to directly and that have experiences that match your IP.
 
-      - **Public** to make the license listing public and visible to all creators. This option also allows all eligible creators to request to use the license.
-      - **Private** to make the license only available to creators that you reach out to directly and that have experiences that match your IP.
+   <Alert severity="info">
+   Because time-limited licenses cannot be used in license offers, they should be marked as **Public** once ready so that creators can request the license with proposed dates.
+   </Alert>
 
-      <Alert severity="info">
-      Because time-limited licenses cannot be used in license offers, they should be marked as **Public** once ready so that creators can request the license with proposed dates.
-      </Alert>
+8. Click **Create**.
+9. Licenses must undergo moderation review for their name, description, scope of license, and brand guidelines document (if provided). Click **Submit for review**.
 
-   7. Click **Next**.
-
-   <img src="../assets/ip-licensing/AddLicenseStep.png" width="50%" />
-
-6. Review the details of the license listing and click **Create**.
+<img src="../assets/ip-licensing/AddLicenseStep.png" width="50%" />
 
 After you have created a license listing, you can go to **My licenses** ⟩ **[IP license listing]** to make changes to both the listing and its associated licenses:
 

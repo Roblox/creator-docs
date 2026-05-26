@@ -16,11 +16,11 @@ If at any point you become stuck in the process, you can use **Lighting Outdoors
 
 <GridContainer numColumns="2">
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/Intro-Before.png" alt="The starting outdoor environment you can use to complete this tutorial." />
+    <img width="100%" src="../../../assets/tutorials/enhancing-outdoor-environments/Intro-Before.png" alt="The starting outdoor environment you can use to complete this tutorial." />
     <figcaption>Lighting Outdoors - Start</figcaption>
   </figure>
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/Intro-After.png" alt="The complete outdoor environment with global and local lighting you will create by the end of this tutorial." />
+    <img width="100%" src="../../../assets/tutorials/enhancing-outdoor-environments/Intro-After.png" alt="The complete outdoor environment with global and local lighting you will create by the end of this tutorial." />
     <figcaption>Lighting Outdoors - Complete</figcaption>
   </figure>
 </GridContainer>
@@ -37,11 +37,11 @@ To demonstrate this concept, see the following two images of the same campfire w
 
 <GridContainer numColumns="2">
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/LightingStyle-Soft.jpg" />
+    <img width="100%" src="../../../assets/tutorials/enhancing-outdoor-environments/LightingStyle-Soft.jpg" />
     <figcaption>`Enum.LightingStyle|Soft` lighting style</figcaption>
   </figure>
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/LightingStyle-Realistic.jpg" />
+    <img width="100%" src="../../../assets/tutorials/enhancing-outdoor-environments/LightingStyle-Realistic.jpg" />
     <figcaption>`Enum.LightingStyle|Realistic` lighting style</figcaption>
   </figure>
 </GridContainer>
@@ -59,11 +59,11 @@ This step is important because it ensures that any PBR textures in your experien
 
 <GridContainer numColumns="2">
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/EnvironmentScale-0.jpg" />
+    <img width="100%" src="../../../assets/tutorials/enhancing-outdoor-environments/EnvironmentScale-0.jpg" />
     <figcaption>`Class.Lighting.EnvironmentDiffuseScale` and `Class.Lighting.EnvironmentSpecularScale` = `0`</figcaption>
   </figure>
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/EnvironmentScale-1.jpg" />
+    <img width="100%" src="../../../assets/tutorials/enhancing-outdoor-environments/EnvironmentScale-1.jpg" />
     <figcaption>`Class.Lighting.EnvironmentDiffuseScale` and `Class.Lighting.EnvironmentSpecularScale` = `1`</figcaption>
   </figure>
 </GridContainer>
@@ -79,11 +79,11 @@ Now that your experience is using the `Enum.LightingStyle.Realistic` lighting st
 
 <GridContainer numColumns="2">
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/Default-Sun-Position.png" />
+    <img width="100%" src="../../../assets/tutorials/enhancing-outdoor-environments/Default-Sun-Position.png" />
     <figcaption>The default sun is high in the sky. While this placement is great if the campfire was happening around noon, it's not realistic for the evening.</figcaption>
   </figure>
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/New-Sun-Position.png" />
+    <img width="100%" src="../../../assets/tutorials/enhancing-outdoor-environments/New-Sun-Position.png" />
     <figcaption>The new sun position is much more appropriate for the time of day right before sunset.</figcaption>
   </figure>
 </GridContainer>
@@ -104,11 +104,11 @@ By default, these properties are set to produce gray ambient lighting, but to co
 
 <GridContainer numColumns="2">
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/Ambient-Default.png" />
+    <img width="100%" src="../../../assets/tutorials/enhancing-outdoor-environments/Ambient-Default.png" />
     <figcaption>`Class.Lighting.OutdoorAmbient` and `Class.Lighting.Ambient` = `70, 70, 70`</figcaption>
   </figure>
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/Ambient-New.png" />
+    <img width="100%" src="../../../assets/tutorials/enhancing-outdoor-environments/Ambient-New.png" />
     <figcaption>`Class.Lighting.OutdoorAmbient` and `Class.Lighting.Ambient` = `156, 136, 176`</figcaption>
   </figure>
 </GridContainer>
@@ -130,10 +130,10 @@ To illustrate these concepts, examine the following two images to see how the sa
 
 <GridContainer numColumns="2">
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/Bad-Skybox.png" />
+    <img width="100%" src="../../../assets/tutorials/enhancing-outdoor-environments/Bad-Skybox.png" />
   </figure>
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/Good-Skybox.png" />
+    <img width="100%" src="../../../assets/tutorials/enhancing-outdoor-environments/Good-Skybox.png" />
   </figure>
 </GridContainer>
 
@@ -147,11 +147,11 @@ The `Class.Atmosphere.Density` property controls how many particles exist in the
 
 <GridContainer numColumns="2">
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/Density-0.jpg" />
+    <img width="100%" src="../../../assets/tutorials/enhancing-outdoor-environments/Density-0.jpg" />
     <figcaption>`Class.Atmosphere.Density` = `0`</figcaption>
   </figure>
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/Density-0.3.jpg" />
+    <img width="100%" src="../../../assets/tutorials/enhancing-outdoor-environments/Density-0.3.jpg" />
     <figcaption>`Class.Atmosphere.Density` = `0.391`</figcaption>
   </figure>
 </GridContainer>
@@ -187,7 +187,7 @@ To adjust the color of the atmosphere:
 
 ## Configure local lighting
 
-Local lighting is the luminescence from local [light sources](../../../effects/light-sources.md) in your experience, such as `Class.SpotLight`, `Class.SurfaceLight`, and `Class.PointLight` objects. The key local light source you can create for this experience is the campfire's glow, and by adjusting a couple of its default properties, you can significantly alter how this local lighting interacts with the overall environment and compliment your global lighting configuration.
+Local lighting is the luminescence from local [light sources](../../../effects/light-sources.md) in your experience, such as `Class.SpotLight`, `Class.SurfaceLight`, and `Class.PointLight` objects. The key local light source you can create for this experience is the campfire's glow, and by adjusting a couple of its default properties, you can significantly alter how this local lighting interacts with the overall environment and complement your global lighting configuration.
 
 ### Add a PointLight
 
@@ -195,11 +195,11 @@ Unlike `Class.SpotLight` or `Class.SurfaceLight` objects that only project light
 
 <GridContainer numColumns="2">
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/No-PointLight.png" />
+    <img width="100%" src="../../../assets/tutorials/enhancing-outdoor-environments/No-PointLight.png" />
     <figcaption>The scene without a local light source</figcaption>
   </figure>
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/Yes-PointLight.jpg" />
+    <img width="100%" src="../../../assets/tutorials/enhancing-outdoor-environments/Yes-PointLight.jpg" />
     <figcaption>The same scene with a local light source</figcaption>
   </figure>
 </GridContainer>
