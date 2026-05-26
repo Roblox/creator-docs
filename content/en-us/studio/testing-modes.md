@@ -177,8 +177,6 @@ If you're working on an experience with others in [collaboration](../projects/co
 
 ## Touch simulation
 
-<BetaAlert betaName="Multi-touch Simulation" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
-
 <TouchSimulation components={props.components} />
 
 ## Controller simulation
