@@ -137,8 +137,6 @@ navigation:
     path: /production/monetization/avatar-creation-token
   - title: Sponsor items
     path: /production/promotion/sponsor-items
-  - title: Randomized items
-    path: /production/monetization/virtual-items
 
   - heading: Policies and Guidelines
   - title: Marketplace policy

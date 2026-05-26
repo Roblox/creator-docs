@@ -331,7 +331,7 @@ The promoted pass:
 
 - Can be off-sale or on-sale. If they're on-sale, their Robux value must be greater than 49 Robux and less than 801 Robux.
 - Must include a thumbnail.
-- Cannot grant [paid random items](./virtual-items.md#randomized-virtual-items).
+- Cannot grant [paid random items](./virtual-items.md).
 - Must comply with the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
 
 ## Pass analytics

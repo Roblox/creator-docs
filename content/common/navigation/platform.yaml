@@ -45,3 +45,5 @@ navigation:
         path: /production/publishing/account-verification
       - title: Group guidelines
         path: /projects/group-guidelines
+      - title: Paid random items guidelines
+        path: /production/monetization/virtual-items
