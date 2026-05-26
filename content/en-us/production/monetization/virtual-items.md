@@ -41,6 +41,8 @@ There are a variety of item types that are paid random items, including but not 
 
 Under Roblox's [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use) and [Community Standards](https://about.roblox.com/community-standards#roblox-economy-paid-random-items), if you offer paid random items that users can purchase with Robux or other in-experience currency purchasable with Robux, you must indicate all possible outcomes and the actual numerical odds of what they may receive.
 
+<img src="../../assets/policy/paid-random-items/Prize-wheel.png" width="70%" alt="An example prize wheel with numerical odds of what users may receive." />
+
 In addition:
 
 - If there are too many individual outcomes to fit in the user's dynamic 3D view, such as rarity categories that have many individual items in each category, the itemized list of final outcomes and their numerical possibilities can be shown in a clickable pop-up with an "Info" or "Details" icon visible and accessible prior to purchase. Using a standalone symbol like the (i) icon without a descriptive word is **not** sufficient.
