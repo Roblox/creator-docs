@@ -310,6 +310,90 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Groups
+  - name: GroupService:GetRolesInGroupAsync
+    summary: |
+      Returns all roles held by the specified user in the specified group,
+      supporting multi-role group membership.
+    description: |
+      Returns a table describing all roles the specified user holds in the
+      specified group. In a multi-role world, a user may belong to more than one
+      role simultaneously.
+
+      The returned table has the following structure:
+
+      | Key      | Type    | Description                                                       |
+      | -------- | ------- | ----------------------------------------------------------------- |
+      | IsMember | boolean | `true` if the user is a member of the group                       |
+      | Roles    | array   | Array of role tables (empty if not a member or no non-base roles) |
+
+      Each entry in the `Roles` array has the following structure:
+
+      | Key  | Type   | Description              |
+      | ---- | ------ | ------------------------ |
+      | Id   | int64  | Unique role ID           |
+      | Name | string | Display name of the role |
+      | Rank | int    | Rank value (0–255)       |
+
+      The `Roles` array is ordered as returned by the backend. Only public roles
+      are included.
+
+      This method supersedes `Class.Player:GetRankInGroupAsync()` and
+      `Class.Player:GetRoleInGroupAsync()`, which only return a single role and
+      may produce arbitrary results when a user holds multiple roles.
+
+      This call may not yield the most up-to-date information. Results are
+      cached per user and group, so multiple calls with the same `userId` and
+      `groupId` may yield the same result until the cache expires. The caching
+      behavior is on a per-peer basis: a server does not share the same cache as
+      a client.
+
+      When a player joins a group in-experience due to a call to
+      `Class.GroupService:PromptJoinAsync()`, any cached result for that player
+      and group will be cleared on the client where the prompt was shown.
+
+      ```lua
+      local GroupService = game:GetService("GroupService")
+      local Players = game:GetService("Players")
+
+      local GROUP_ID = 377251
+      local localPlayer = Players.LocalPlayer
+
+      local result = GroupService:GetRolesInGroupAsync(localPlayer.UserId, GROUP_ID)
+      if result.IsMember then
+          print("User is a member with", #result.Roles, "role(s)")
+          for _, role in ipairs(result.Roles) do
+              print(role.Name, "rank", role.Rank)
+          end
+      else
+          print("User is not a member")
+      end
+      ```
+    code_samples: []
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: |
+          The user's ID.
+      - name: groupId
+        type: int64
+        default:
+        summary: |
+          The group's ID.
+    returns:
+      - type: Variant
+        summary: |
+          A table with two fields: `IsMember` (boolean) and `Roles` (array of
+          public role tables). Each role table contains `Id` (int64), `Name`
+          (string), and `Rank` (int). The array is ordered as returned by the
+          backend.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Groups
   - name: GroupService:PromptJoinAsync
     summary: |
       Prompts the local `Class.Player` to join a specified Roblox group via a

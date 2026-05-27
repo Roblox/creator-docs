@@ -1544,6 +1544,7 @@ methods:
           The player's rank in the group.
     tags:
       - Yields
+      - Deprecated
     deprecation_message: |
       This method only returns a single role rank and may produce arbitrary
       results when a user holds multiple roles. Use
@@ -1619,6 +1620,7 @@ methods:
           not a member.
     tags:
       - Yields
+      - Deprecated
     deprecation_message: |
       This method only returns a single role name and may produce arbitrary
       results when a user holds multiple roles. Use

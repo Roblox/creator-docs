@@ -285,24 +285,6 @@ properties:
       can_save: true
     capabilities:
       - DynamicGeneration
-  - name: EditableMesh.SkinningEnabled
-    summary: ''
-    description: ''
-    code_samples: []
-    type: boolean
-    tags:
-      - Deprecated
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - DynamicGeneration
 methods:
   - name: EditableMesh:AddBone
     summary: |

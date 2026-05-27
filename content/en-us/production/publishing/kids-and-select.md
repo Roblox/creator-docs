@@ -54,7 +54,7 @@ For information on how content maturity labels determine which account types can
 
 ## Publishing requirements
 
-To make a new experience public or update an existing public games, games depend on the target audience. For more information on publishing experiences, see [Publish experiences and places](../publishing/publish-experiences-and-places.md#publish-experiences).
+Publishing requirements depend on the target audience. For more information on publishing experiences, see [Publish experiences and places](../publishing/publish-experiences-and-places.md#publish-experiences).
 
 ### To reach 16+ and Trusted Friends
 
@@ -106,3 +106,37 @@ Use the **Audience Reach** dashboard in the [Creator Hub](https://create.roblox.
 **What if a parent's favorite game is missing from Roblox Kids?**
 
 Parents can use the **Approved Experience** control in parental settings to manually allow access to specific games for their child. This does not apply to Restricted (18+) content.
+
+**What exactly is a "highly engaged player"?**
+
+Before a game can reach younger audiences, we need to confirm it meets our policies for Roblox Kids and Select accounts. To do this, our Realtime Multimodal Moderation system reviews player engagement, using signals like account age, play history, and platform spend to verify that it is genuine and comes from highly engaged players.
+
+A highly engaged player is a user who has met a minimum purchase amount anywhere on Roblox in the last 60 days. They don't need to spend anything in your game. This spend creates a real cost to abuse and makes it much harder for bad actors to generate fake engagement at scale. Your highly engaged player count grows as these users spend time in your game over a 60-day window.
+
+Highly engaged players play all kinds of games, including ones that are free to play, so your game doesn't need to be monetized for players to count toward your total.
+
+We'll adjust these criteria over time to capture more genuine players, always with safety as the priority.
+
+**Will the highly engaged player requirements change over time?**
+
+Yes. We took an intentionally conservative approach at launch to make sure our safety systems have enough data to accurately evaluate games. We're working to expand eligibility so more compliant games can qualify in the coming weeks and months. We'll share an update on requirements before the global launch in June.
+
+**Will I lose my publishing fee if my game loses eligibility?**
+
+No. The refundable publishing fee will be automatically refunded 90 days after your game becomes eligible for Kids or Select accounts. If your game never reaches eligibility, it's still refunded 90 days after your initial payment date. The only exception is if your game is permanently removed from Roblox due to severe Community Standards violations.
+
+**What if I need my game to reach Kids and Select users before reaching the "highly engaged player" requirement?**
+
+We're exploring a fast-track option for creators who want to maximize reach before meeting the highly engaged player requirement bar. To ensure the highest safety standards, this option will include a pre-launch review with a higher upfront fee than our standard publishing flow. Like our existing refundable publishing fees, this fast-track option will be recoupable for experiences that meet our community standards. We'll share more details prior to our global rollout of Kids and Select accounts.
+
+**What happens to uncopylocked games?**
+
+We know many of you use uncopylocked games to share templates and learning resources with other creators. We're looking into options for how these are shared and discovered on Creator Store. We don't have a specific timeline yet, but will have more to share in the coming months.
+
+**I paid the publishing fee but should have received a free Plus subscription. Can I get a refund?**
+
+Yes. The free Plus subscription rolled out one day later than planned, which caused a small number of eligible creators to pay the publishing fee unnecessarily. We're processing automatic refunds for everyone affected. No action needed on your end. The Robux will be back in your account within a few weeks.
+
+**How do these changes impact games available exclusively to playtesters?**
+
+"Private" games are now restricted solely to creators with Edit permissions. To share with anyone else, including those with Playtest permissions, you need to meet the new publishing eligibility requirements. Set your Audience to **Limited** > **Playtesters** to share your game with those with Playtest permissions. Playtesters who are Trusted Friends of age-checked game owners can access the game regardless of age, as long as the game's content maturity questionnaire has been completed. Games published to any of the Limited audiences will not be visible publicly in search or on the home page.
