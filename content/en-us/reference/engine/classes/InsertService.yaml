@@ -31,24 +31,6 @@ tags:
   - Service
 deprecation_message: ''
 properties:
-  - name: InsertService.AllowClientInsertModels
-    summary: ''
-    description: ''
-    code_samples: []
-    type: boolean
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - LoadUnownedAsset
   - name: InsertService.AllowInsertFreeModels
     summary: |
       Indicates whether ''Free Models'' can be inserted into the game.
