@@ -11,7 +11,7 @@ If you choose to offer purchasable content, Roblox doesn't automatically record 
 
 ## Monetization strategies
 
-Be mindful of the monetization methods you introduce into your experience as our users are likely to **downvote** your experience if they do not approve of your strategies. Also, all developers need to be transparent with any [chance-based monetization](virtual-items.md) and use these mechanics responsibly.
+Be mindful of the monetization methods you introduce into your experience as our users are likely to **downvote** your experience if they do not approve of your strategies. Also, all developers need to be transparent with any [chance-based monetization](paid-random-items.md) and use these mechanics responsibly.
 
 Some popular monetization strategies for free-to-play experiences on other platforms are not recommended for Roblox. For instance, appointment mechanics and timers which can be removed or brought forward may work well on other platforms, but these mechanics are unpopular with Roblox users who take issue with their fun coming to a premature end.
 

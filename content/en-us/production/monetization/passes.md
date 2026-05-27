@@ -40,7 +40,7 @@ To create a pass:
 </GridContainer>
 
 <Alert severity="info">
-   If you want to use the pass as a randomized reward, review the [Randomized Virtual Item Policy](./virtual-items.md).
+   If you want to use the pass as a randomized reward, review the [Randomized Virtual Item Policy](./paid-random-items.md).
 </Alert>
 
 ## Get the pass ID
@@ -331,7 +331,7 @@ The promoted pass:
 
 - Can be off-sale or on-sale. If they're on-sale, their Robux value must be greater than 49 Robux and less than 801 Robux.
 - Must include a thumbnail.
-- Cannot grant [paid random items](./virtual-items.md).
+- Cannot grant [paid random items](./paid-random-items.md).
 - Must comply with the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
 
 ## Pass analytics

@@ -28,7 +28,7 @@ To create a developer product:
 7. Click **Create Developer Product**.
 
 <Alert severity="info">
-   If you want to use the developer product as a randomized reward, review the [randomized virtual item policy](./virtual-items.md).
+   If you want to use the developer product as a randomized reward, review the [randomized virtual item policy](./paid-random-items.md).
 </Alert>
 
 ## Get the developer product ID
