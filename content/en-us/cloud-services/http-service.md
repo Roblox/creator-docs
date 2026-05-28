@@ -77,7 +77,7 @@ The following endpoints are supported. Due to current limitations on `Class.Http
 - [ListUserRestrictions (Universe)](/cloud/features/bans-and-blocks#/UserRestriction/Cloud_ListUserRestrictions)
 - [GetUserRestriction (Universe)](/docs/cloud/features/bans-and-blocks#/UserRestriction/Cloud_GetUserRestriction__Using_Universes)
 - [UpdateUserRestriction (Universe)](/cloud/features/bans-and-blocks#/UserRestriction/Cloud_UpdateUserRestriction__Using_Universes)
-- [ListUserRestrictionLogs (Universe)](https://create.roblox.com/docs/cloud/features/bans-and-blocks#/UserRestriction/Cloud_ListUserRestrictionLogs)
+- [ListUserRestrictionLogs (Universe)](/cloud/features/bans-and-blocks#/UserRestriction/Cloud_ListUserRestrictionLogs)
 
 #### Configs
 
@@ -97,6 +97,20 @@ The following endpoints are supported. Due to current limitations on `Class.Http
 - [GetCreatorStoreProduct](/cloud/features/creator-store#/CreatorStoreProduct/Cloud_GetCreatorStoreProduct)
 - [UpdateCreatorStoreProduct](/cloud/features/creator-store#/CreatorStoreProduct/Cloud_UpdateCreatorStoreProduct)
 - [CreatorStoreAssetsSearch](/cloud/features/creator-store#toolbox-service)
+
+#### Developer products
+
+- [CreateDeveloperProduct](/cloud/reference/features/developer-products#DeveloperProducts_CreateDeveloperProductV2)
+- [UpdateDeveloperProduct](/cloud/reference/features/developer-products#DeveloperProducts_UpdateDeveloperProductV2)
+- [GetDeveloperProductConfig](/cloud/reference/features/developer-products#DeveloperProducts_GetDeveloperProductConfigV2)
+- [ListDeveloperProductConfigsByUniverse](/cloud/reference/features/developer-products#DeveloperProducts_ListDeveloperProductConfigsByUniverseV2)
+
+#### Game passes
+
+- [CreateGamePass](/cloud/reference/features/game-passes#GamePasses_CreateGamePass)
+- [UpdateGamePass](/cloud/reference/features/game-passes#GamePasses_UpdateGamePass)
+- [GetGamePassConfig](/cloud/reference/features/game-passes#GamePasses_GetGamePassConfig)
+- [ListGamePassConfigsByUniverse](/cloud/reference/features/game-passes#GamePasses_ListGamePassConfigsByUniverse)
 
 #### Data and memory stores
 

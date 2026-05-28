@@ -12,6 +12,15 @@ As part of this group, you are:
 - Willing to provide honest and detailed feedback about safety concerns on the platform and respond to follow-up from Roblox staff, as required.
 - Abide by our Community Standards. As a reminder, our policy on Harmful Off-Platform Speech or Behavior requires all users to treat everyone with respect, both on and off platform.
 
+<figure>
+<Chip
+  color="success"
+  label="Status: Open"
+  size="medium"
+  variant="filled"
+/>
+</figure>
+
 ## Eligibility Requirements
 
 Eligible creators must meet the following requirements:
@@ -46,4 +55,6 @@ Out of respect for the privacy of Council members, we do not intend to announce 
 
 ## How to Apply
 
-Applications are currently closed. Check back periodically for updates on when applications reopen.
+Fill out the application below. Roblox staff reviews applications and will reach out if you have been selected.
+
+<Button href="https://survey.roblox.com/jfe/form/SV_b8Ub8XGMoDnLvFA" size='large' variant='contained' style={{width:200}}>Apply</Button>
