@@ -729,7 +729,7 @@
           {
             "name": "group_id",
             "in": "path",
-            "description": "The group ID, supports wildcard \"-\" when filtering: https://create.roblox.com/docs/cloud/reference/patterns#list-group-memberships",
+            "description": "The group ID, supports wildcard \"-\" when [filtering](https://create.roblox.com/docs/cloud/reference/patterns#list-group-memberships)",
             "required": true,
             "schema": {
               "type": "string"
