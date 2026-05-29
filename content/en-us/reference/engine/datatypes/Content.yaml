@@ -46,6 +46,27 @@ constructors:
     code_samples: []
     tags: []
     deprecation_message: ''
+  - name: Content.fromAssetId
+    summary: Returns a new `Content` from a numeric asset ID.
+    description: |-
+      Returns a new `Content` from a numeric asset ID. This is a convenience
+      constructor equivalent to calling
+      `Content.fromUri("rbxassetid://" .. tostring(assetId))`.
+
+      `Datatype.Content.SourceType` will be `Enum.ContentSourceType|Uri`, and
+      `Datatype.Content.Uri` will contain the formatted `rbxassetid://` URI string.
+
+      If `assetId` is `0`, `Datatype.Content.none` will be returned instead.
+
+      Throws if `assetId` is non‑finite, for example `Library.math.huge()` or `0/0`.
+    parameters:
+      - name: assetId
+        type: number
+        default:
+        summary: The numeric asset ID.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
   - name: Content.fromObject
     summary: Returns a new `Content` with a strong reference to an `Class.Object`.
     description: |-

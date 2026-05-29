@@ -6,7 +6,7 @@ name: EditableImage
 type: class
 memory_category: Instances
 summary: |
-  Instance which allows for the runtime creation and manipulation of images.
+  Object which allows for the runtime creation and manipulation of images.
 description: |
   `EditableImage` allows for the runtime creation and manipulation of images.
 

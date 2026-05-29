@@ -299,6 +299,7 @@ methods:
       **Note:** Only `LogPreferenceEvent` calls in production actually log
       preferences. Calling this function in Studio doesn't have any effect; you
       can call it as many times as you want when testing.
+    code_samples: []
     parameters:
       - name: preferenceType
         type: RecommendationPreferenceType

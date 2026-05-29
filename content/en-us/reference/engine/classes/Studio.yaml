@@ -28,8 +28,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -45,8 +45,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -62,8 +62,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -79,8 +79,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -96,8 +96,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -128,8 +128,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Directories
     serialization:
@@ -144,8 +144,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Tools
     serialization:
@@ -160,8 +160,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Tools
     serialization:
@@ -180,8 +180,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: General
     serialization:
@@ -202,8 +202,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Tools
     serialization:
@@ -218,8 +218,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -234,8 +234,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -250,8 +250,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -266,8 +266,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -282,8 +282,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -298,8 +298,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Auto-Recovery
     serialization:
@@ -314,8 +314,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Auto-Recovery
     serialization:
@@ -397,8 +397,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -415,8 +415,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: General
     serialization:
@@ -432,8 +432,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -449,8 +449,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -468,8 +468,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -488,8 +488,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Camera
     serialization:
@@ -524,8 +524,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Camera
     serialization:
@@ -544,8 +544,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Camera
     serialization:
@@ -576,8 +576,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Camera
     serialization:
@@ -708,8 +708,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Output
     serialization:
@@ -756,8 +756,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Lua Debugger
     serialization:
@@ -775,8 +775,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -792,8 +792,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -809,8 +809,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -826,8 +826,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -878,8 +878,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Browsing
     serialization:
@@ -1186,8 +1186,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -1218,8 +1218,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Advanced
     serialization:
@@ -1234,8 +1234,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Advanced
     serialization:
@@ -1250,8 +1250,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Advanced
     serialization:
@@ -1266,8 +1266,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Advanced
     serialization:
@@ -1346,8 +1346,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -1362,8 +1362,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -1479,8 +1479,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -1532,8 +1532,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -1550,8 +1550,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -1566,8 +1566,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -1582,8 +1582,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -1599,8 +1599,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -1615,8 +1615,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -1631,8 +1631,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -1648,8 +1648,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -1668,8 +1668,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Tools
     serialization:
@@ -1718,8 +1718,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Tools
     serialization:
@@ -1750,8 +1750,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -1784,8 +1784,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -1803,8 +1803,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -1855,8 +1855,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Primary Part
     serialization:
@@ -1937,8 +1937,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Lua Debugger
     serialization:
@@ -1956,8 +1956,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Lua Debugger
     serialization:
@@ -1973,8 +1973,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -2008,8 +2008,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -2042,8 +2042,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Output
     serialization:
@@ -2059,8 +2059,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -2076,8 +2076,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -2095,8 +2095,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -2115,8 +2115,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Audio
     serialization:
@@ -2134,8 +2134,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -2152,8 +2152,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Output
     serialization:
@@ -2170,8 +2170,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Output
     serialization:
@@ -2192,8 +2192,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Browsing
     serialization:
@@ -2240,8 +2240,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Lua Debugger
     serialization:
@@ -2258,8 +2258,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Directories
     serialization:
@@ -2274,8 +2274,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: General
     serialization:
@@ -2291,8 +2291,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -2308,8 +2308,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -2360,8 +2360,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Advanced
     serialization:
@@ -2377,8 +2377,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -2393,8 +2393,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -2409,8 +2409,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Undo
     serialization:
@@ -2425,8 +2425,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -2442,8 +2442,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -2459,8 +2459,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -2477,8 +2477,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Lua Debugger
     serialization:
@@ -2493,8 +2493,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -2510,8 +2510,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -2530,8 +2530,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Tools
     serialization:
@@ -2548,8 +2548,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Primary Part
     serialization:
@@ -2565,8 +2565,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -2582,8 +2582,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -2601,8 +2601,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -2636,8 +2636,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -2668,8 +2668,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Advanced
     serialization:
@@ -2688,8 +2688,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Explorer
     serialization:
@@ -2706,8 +2706,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Advanced
     serialization:
@@ -2722,8 +2722,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Explorer
     serialization:
@@ -2738,8 +2738,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Explorer
     serialization:
@@ -2758,8 +2758,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Tools
     serialization:
@@ -2810,8 +2810,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Visualization
     serialization:
@@ -2846,8 +2846,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Explorer
     serialization:
@@ -2862,8 +2862,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Explorer
     serialization:
@@ -2894,8 +2894,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -2926,8 +2926,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -2945,8 +2945,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -2965,8 +2965,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -2984,8 +2984,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -3002,8 +3002,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor
     serialization:
@@ -3034,8 +3034,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: General
     serialization:
@@ -3051,8 +3051,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -3073,8 +3073,8 @@ properties:
       - Deprecated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: General
     serialization:
@@ -3142,8 +3142,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:
@@ -3159,8 +3159,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Script Editor Colors
     serialization:

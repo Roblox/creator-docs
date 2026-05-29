@@ -32,8 +32,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Debug
     serialization:
@@ -53,8 +53,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Performance
     serialization:
@@ -72,8 +72,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Performance
     serialization:
@@ -88,8 +88,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: General
     serialization:
@@ -108,8 +108,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Debug
     serialization:
@@ -128,8 +128,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: General
     serialization:
@@ -146,8 +146,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: General
     serialization:
@@ -164,8 +164,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: General
     serialization:
@@ -182,8 +182,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Cache
     serialization:
@@ -210,8 +210,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Debug
     serialization:
@@ -229,8 +229,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Performance
     serialization:
@@ -249,8 +249,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Debug
     serialization:
@@ -269,8 +269,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Debug
     serialization:
@@ -289,8 +289,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Debug
     serialization:
@@ -305,8 +305,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: PluginSecurity
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Debug
     serialization:
@@ -326,7 +326,7 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: None
+    security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
 events: []
