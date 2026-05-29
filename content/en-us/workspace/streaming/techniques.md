@@ -318,7 +318,7 @@ The engine includes multiple on-screen debug panels that can be enabled/visible 
 
 Use this panel to inspect and validate how content is being streamed during gameplay, and to help diagnose issues related to odd gameplay behavior or missing stream areas.
 
-</br>
+<br/>
 
 Inside of the Streaming debug view, you can see colored highlighted spaces within the panel UI:
 
