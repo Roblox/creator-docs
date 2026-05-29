@@ -9,7 +9,7 @@ The **Roblox Developer Exchange Program** (**DevEx**) is a program that allows e
 
 ## What is Earned Robux?
 
-**Earned Robux** is Robux that you can earn from creating value on the platform,  including:
+**Earned Robux** is Robux that you can earn from creating value on the platform, including:
 
 - Earnings from selling in-experience items to players, such as [developer products](./developer-products.md), [passes](./passes.md), [subscriptions](./subscriptions.md) within experiences, fees from in-experience purchases of Marketplace items, and fees from [Robux Transfers](./robux-transfers.md) through the Transfer API
 - Earnings from selling things related to your experience, such as paid [private servers](./private-servers.md), [paid access](./paid-access-robux.md) purchased in Robux, [Roblox Plus](./roblox-plus.md) incentives, and [publishing ads](../promotion/advertise.md) within an experience
@@ -31,7 +31,7 @@ Roblox maintains the exclusive right to decide if any Robux qualifies as Earned 
 
 ## What is the exchange rate?
 
-The standard exchange rate for the DevEx program is `0.0038` per 1 Earned Robux$, which comes out to $114 USD for 30,000 Earned Robux.
+The standard exchange rate for the DevEx program is `0.0038` per 1 Earned Robux, which comes out to $114 USD for 30,000 Earned Robux.
 
 Starting June 8, 2026, Roblox will offer a higher exchange rate of `0.0054` for certain Earned Robux in eligible games from purchases of developer products, passes, subscriptions, and private servers from U.S. players who have verified their age as at least 18 years old through [facial age estimation](https://about.roblox.com/age-estimation) or [government ID](../publishing/account-verification.md#verify-through-government-id). For more information, see the [U.S. 18+ exchange rate](./18-plus-devex-rate.md).
 
@@ -164,7 +164,7 @@ If activity that violates the [DevEx Terms of Use](https://en.help.roblox.com/hc
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant='buttonLarge'>My request was rejected for a name discrepancy? What does this mean and how can I fix it?</Typography>
+<Typography variant='buttonLarge'>My request was rejected for a name discrepancy. What does this mean and how can I fix it?</Typography>
 </AccordionSummary>
 <AccordionDetails>
 If Roblox rejects your DevEx request because of a name discrepancy, do not submit another request. The rejection means that the DevEx team noticed that the name of your DevEx request differs from previous requests and/or your account name in the DevEx Portal.

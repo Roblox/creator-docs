@@ -19,7 +19,7 @@ To understand the U.S. 18+ DevEx rate's eligibility criteria, it's important to 
 <thead>
 	<tr>
 		<th><b>Term</b></th>
-		<th><b>Definitionn</b></th>
+		<th><b>Definition</b></th>
 	</tr>
 </thead>
 <tbody>
@@ -33,11 +33,11 @@ To understand the U.S. 18+ DevEx rate's eligibility criteria, it's important to 
 	</tr>
 	<tr>
 		<td><b>Human form</b></td>
-		<td>A bipedal character based on the human form, such as people, humanoid robots, and goblins.<br /><br />Human form characters generally include 2 arms, 2 legs, and a head, but appendage count can vary as long as human characteristics are still recognizable, such as<br /><br /><ul><li>Pirates with 1 leg</li><li>Two-headed ogres</li><li>Zombie humans without a head</li></ul></td>
+		<td>A bipedal character based on the human form, such as people, humanoid robots, and goblins.<br /><br />Human form characters generally include 2 arms, 2 legs, and a head, but appendage count can vary as long as human characteristics are still recognizable, such as:<br /><br /><ul><li>Pirates with 1 leg</li><li>Two-headed ogres</li><li>Zombie humans without a head</li></ul></td>
 	</tr>
 	<tr>
 		<td><b>Non-human form</b></td>
-		<td>Any character that's not humanoid, such as<br /><br /><ul><li>Quadruped animals</li><li>Flying dragons</li><li>Rolling robots</li><li>Floating amorphous ghosts</li><li>Wheeled vehicles</li></ul></td>
+		<td>Any character that's not humanoid, such as:<br /><br /><ul><li>Quadruped animals</li><li>Flying dragons</li><li>Rolling robots</li><li>Floating amorphous ghosts</li><li>Wheeled vehicles</li></ul></td>
 	</tr>
 	<tr>
 		<td><b>R6</b></td>
@@ -69,10 +69,10 @@ All Earned Robux must be in complete compliance with Roblox's [Terms of Use](htt
 
 Games that qualify for the U.S. 18+ DevEx rate must include player characters that spend **100% of active playtime** as one of the following:
 
-- Platforms avatars with a [standard](../../art/characters/specifications.md#standard-rigs) or [higher-fidelity](../../art/characters/specifications.md#higher-fidelity-rigs) rig
+- Platform avatars with a [standard](../../art/characters/specifications.md#standard-rigs) or [higher-fidelity](../../art/characters/specifications.md#higher-fidelity-rigs) rig
 - Custom human-form characters with the following characteristics:
   - Approximately 1 head, 2 legs, and 2 arms
-  - 12 limb parts or 12 limb joints that are equally distributed among limbs spread equally between limbs
+  - 12 limb parts or 12 limb joints that are equally distributed among limbs
     - For example, if the character's left leg has `LeftUpperLeg`, `LeftLowerLeg`, and `LeftFoot` joints, the right leg must have `RightUpperLeg`, `RightLowerLeg`, and `RightFoot` joints too
   - A torso with at least 2 parts or 2 joints
   - Full bipedal range of motion
@@ -107,7 +107,7 @@ Roblox runs a background **compliance check** on eligible games to verify that t
 
 ## Group payouts
 
-If your game is owned by a group and the game acquires Earned Robux from eligible purchases, one-time payouts and recurring revenue splits respect the U.S. 18+ DevEx rate. Your one-time payouts will prioritize the U.S. 18+ DevEx rate, as well your DevEx requests. When you cash or pay out the Earned Robux, you can view how much of it is from the U.S. 18+ DevEx rate and the standard exchange rate.
+If your game is owned by a group and the game acquires Earned Robux from eligible purchases, one-time payouts and recurring revenue splits respect the U.S. 18+ DevEx rate. Your one-time payouts will prioritize the U.S. 18+ DevEx rate, as well as your DevEx requests. When you cash or pay out the Earned Robux, you can view how much of it is from the U.S. 18+ DevEx rate and the standard exchange rate.
 
 ## Frequently asked questions
 
