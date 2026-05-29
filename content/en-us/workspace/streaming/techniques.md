@@ -322,8 +322,9 @@ Use this panel to inspect and validate how content is being streamed during game
 
 Inside of the Streaming debug view, you can see colored highlighted spaces within the panel UI:
 
-- Green
-- Yellow
+- Regular streaming
+  - Green: A streamed in space
+  - Yellow: A not yet fully streamed in space
 - Prefetch related, e.g. ``RequestStreamAroundAsync``
   - Orange: A streamed in space through prefetch
   - Purple: A not yet fully streamed in space through prefetch
