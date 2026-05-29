@@ -56,6 +56,60 @@ For information on how content maturity labels determine which account types can
 
 Publishing requirements depend on the target audience. For more information on publishing experiences, see [Publish experiences and places](../publishing/publish-experiences-and-places.md#publish-experiences).
 
+The following table summarizes what creators must satisfy to reach each audience:
+
+<table>
+<thead>
+  <tr>
+    <th>**Publishing requirements**</th>
+    <th>**Roblox**<br />(Ages 16+ and Trusted Friends)</th>
+    <th>**Roblox Select**<br />(Ages 9–15)</th>
+    <th>**Roblox Kids**<br />(Ages 5–8)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>**Age-checked creator account**</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td>
+  </tr>
+  <tr>
+    <td>**ID-verified creator account**</td>
+    <td>—</td>
+    <td>✓</td>
+    <td>✓</td>
+  </tr>
+  <tr>
+    <td>**2-Step Verification on creator account**</td>
+    <td>—</td>
+    <td>✓</td>
+    <td>✓</td>
+  </tr>
+  <tr>
+    <td>**Fee or subscription to publish or update games**</td>
+    <td>Free, no fee or subscription required</td>
+    <td colspan="2">One-time refundable per-game fee<sup>1</sup><br/>**or**<br/>An active, 2+ month old Roblox Plus or Premium subscription</td>
+  </tr>
+  <tr>
+    <td>**Evaluation process<sup>2</sup>**</td>
+    <td>Not required</td>
+    <td>Required</td>
+    <td>Required</td>
+  </tr>
+  <tr>
+    <td>**Content maturity**</td>
+    <td>All rated content, except Restricted<sup>3</sup></td>
+    <td>Minimal, Mild, Moderate</td>
+    <td>Minimal, Mild</td>
+  </tr>
+</tbody>
+</table>
+
+<sup>1</sup> As long as the game is playable and not permanently removed due to Community Standards violations.<br />
+<sup>2</sup> Evaluation process requires 500 unique plays from highly engaged players in the last 60 days.<br />
+<sup>3</sup> Restricted content is limited to 18+ users.
+
 ### To reach 16+ and Trusted Friends
 
 1. Complete an age check.
@@ -111,11 +165,11 @@ Parents can use the **Approved Experience** control in parental settings to manu
 
 Before a game can reach younger audiences, we need to confirm it meets our policies for Roblox Kids and Select accounts. To do this, our Realtime Multimodal Moderation system reviews player engagement, using signals like account age, play history, and platform spend to verify that it is genuine and comes from highly engaged players.
 
-A highly engaged player is a user who has met a minimum purchase amount anywhere on Roblox in the last 60 days. They don't need to spend anything in your game. This spend creates a real cost to abuse and makes it much harder for bad actors to generate fake engagement at scale. Your highly engaged player count grows as these users spend time in your game over a 60-day window.
+Today, a highly engaged player must meet requirements on account tenure, playtime in your game, and platform spend to qualify. Users who meet the criteria for "platform spend" have made a minimum purchase anywhere on Roblox in the last 60 days and have spent time in your game within that same window. They don't need to spend anything in your game specifically. This spend creates a real cost to abuse and makes it much harder for bad actors to generate fake engagement at scale.
 
 Highly engaged players play all kinds of games, including ones that are free to play, so your game doesn't need to be monetized for players to count toward your total.
 
-We'll adjust these criteria over time to capture more genuine players, always with safety as the priority.
+We'll keep evolving these criteria over time to capture more genuine players, with safety as the priority.
 
 **Will the highly engaged player requirements change over time?**
 
