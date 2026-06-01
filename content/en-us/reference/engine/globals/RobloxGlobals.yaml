@@ -155,7 +155,8 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags: []
+    tags:
+      - Deprecated
     code_samples: []
     deprecation_message: ''
   - name: PluginManager
@@ -352,7 +353,8 @@ functions:
     returns:
       - type: string
         summary: ''
-    tags: []
+    tags:
+      - Deprecated
     code_samples: []
     deprecation_message: ''
   - name: wait

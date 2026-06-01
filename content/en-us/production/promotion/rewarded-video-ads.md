@@ -39,7 +39,7 @@ Before implementing rewarded video ads, consider where inside your experience yo
 To implement rewarded video ads:
 
 1. Make sure you meet the [eligibility requirements](#eligibility-requirements), including being 13+ years of age, having an ID-verified Roblox account, and have a public experience with at least 2 thousand unique visitors per month.
-2. [Enable rewarded video ads in Studio](#video-ad-setup).
+2. [Enable rewarded video ads in Creator Hub](#video-ad-setup).
 3. Choose the item you want to reward users with for watching the ad. You can select an existing developer product or create a brand new one.
 4. Create [client-side](#client-side-implementation) and [server-side](#server-side-implementation) scripts. The client-side script checks if a video ad is available to be played to the user, while the server-side script turns a developer product into a reward, shows the user the video ad, and grants the user their reward.
 
@@ -53,11 +53,12 @@ After implementation, you can use [analytics](#analytics) to understand key metr
 
 To set up a rewarded video ad inside your experience:
 
-1. In Studio, go to **File** ⟩ **Experience Settings** ⟩ **Monetization**.
-2. Check the **Enable Rewarded Video Ads** checkbox.
-   <img src="../../assets/promotion/ads-manager/EnableRewardedVideoAdsToggle.png" width="750" />
-3. Select the reward you want to grant the user. If the reward doesn't already exist, [create a new developer product in the Creator Hub](../monetization/developer-products.md#create-a-developer-product). This developer product must have been created for the specific universe the place is in.
-4. Insert a button that the user must press before the video ad starts playing.
+1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
+2. Go to **Monetization** ⟩ **Ads** ⟩ **Settings**.
+3. Under **Rewarded Video** ⟩ **Serving**, turn on the **Serving enabled** toggle.
+   <img src="../../assets/promotion/ads-manager/EnableRewardedVideoAdsCreatorHub.png" width="750" />
+4. Select the reward you want to grant the user. If the reward doesn't already exist, [create a new developer product in the Creator Hub](../monetization/developer-products.md#create-a-developer-product). This developer product must have been created for the specific universe the place is in.
+5. Insert a button that the user must press before the video ad starts playing.
 
 ### Client-side implementation
 
