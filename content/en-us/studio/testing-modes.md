@@ -183,6 +183,70 @@ If you're working on an experience with others in [collaboration](../projects/co
 
 <ControllerEmulator components={props.components} />
 
+## Network simulation
+
+Network simulation, accessible from the **Network** tab of [Studio Settings](./setup.md#customization) (<kbd>Alt</kbd><kbd>S</kbd> on Windows; <kbd>⌥</kbd><kbd>S</kbd> on Mac), allows you to simulate real-world network conditions like latency, packet loss, and jitter to [playtest](#playtesting) connections. This is particularly useful for testing games that use [Server Authority](../projects/server-authority/index.md) since the prediction and rollback/resimulation mechanisms are sensitive to networking conditions. It is also useful for testing `Class.UnreliableRemoteEvent|UnreliableRemoteEvents` which may be lost or arrive out of order.
+
+Network simulation settings are applied to all playtest connections, including [Test](#playtesting), [Server&nbsp;&&nbsp;Clients](#multi-client-simulation), and [Team&nbsp;Test](#collaborative-testing). Note that for [Team&nbsp;Test](#collaborative-testing), the latency and loss numbers are in **addition** to any latency and packet loss from your computer to Roblox's servers. For example, if your network ping in a team test is normally 20 milliseconds and you configure 50 milliseconds of delay in Studio's settings, you will see a ping of 70 milliseconds.
+
+<Alert severity="success">
+Network simulation settings can be updated during a test session and the new values will be applied immediately. For best results, make only small changes to latency (+/&minus;&nbsp;20%) while running a test session, as large increases in latency may trigger congestion control detection that reduces network transmission speeds.
+</Alert>
+
+<Alert severity="warning">
+The legacy **Incoming Replication Lag** setting will continue to add lag to connections at the [replication](../projects/client-server.md#replication) level, even if network simulation properties are also utilized. For simplicity and consistency, network simulation is recommended for all new use cases.
+</Alert>
+
+<table>
+	<thead>
+		<tr>
+			<th>Studio&nbsp;Setting</th>
+			<th>Property</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>**Min Inbound Delay**</td>
+			<td>`Class.NetworkSettings.InboundNetworkMinDelayMs|InboundNetworkMinDelayMs`</td>
+			<td>Adds latency to playtest connections in the server‑to‑client direction.</td>
+		</tr>
+		<tr>
+			<td>**Min Outbound Delay**</td>
+			<td>`Class.NetworkSettings.OutboundNetworkMinDelayMs|OutboundNetworkMinDelayMs`</td>
+			<td>Adds latency to playtest connections in the client‑to‑server direction.</td>
+		</tr>
+		<tr>
+			<td>**Inbound Jitter**</td>
+			<td>`Class.NetworkSettings.InboundNetworkJitterMs|InboundNetworkJitterMs`</td>
+			<td>Adds jitter to playtest connections in the server‑to‑client direction.</td>
+		</tr>
+		<tr>
+			<td>**Outbound Jitter**</td>
+			<td>`Class.NetworkSettings.OutboundNetworkJitterMs|OutboundNetworkJitterMs`</td>
+			<td>Adds jitter to playtest connections in the client‑to‑server direction.</td>
+		</tr>
+		<tr>
+			<td>**Inbound Packet Loss**</td>
+			<td>`Class.NetworkSettings.InboundNetworkLossPercent|InboundNetworkLossPercent`</td>
+			<td>Sets the probability that packets on playtest connections from server to client are dropped.</td>
+		</tr>
+		<tr>
+			<td>**Outbound&nbsp;Packet&nbsp;Loss**</td>
+			<td>`Class.NetworkSettings.OutboundNetworkLossPercent|OutboundNetworkLossPercent`</td>
+			<td>Sets the probability that packets on playtest connections from client to server are dropped.</td>
+		</tr>
+  </tbody>
+</table>
+
+In each of the above settings, the following concepts apply:
+
+- **Inbound** refers to traffic from server to client. **Outbound** is traffic from client to server.
+- **Delay** — Network ping is measured as round-trip time. To simulate 20 milliseconds network ping, set both **Min&nbsp;Inbound&nbsp;Delay** and **Min&nbsp;Outbound&nbsp;Delay** to 10 milliseconds.
+- **Jitter** — Jitter is added on top of any configured minimum delay. Jitter can cause some traffic, such as `Class.UnreliableRemoteEvent|UnreliableRemoteEvents`, to arrive out of order.
+- **Precision** — Per-packet delay sampled from delay and jitter is rounded to 1 millisecond.
+- **Packet Loss** — Each packet can be dropped randomly based on the configured probability.
+
 ## VR headsets
 
 If you'd like to support virtual reality (VR) headsets for your experience, make sure to test or [emulate](#vr-emulation) VR in Studio.

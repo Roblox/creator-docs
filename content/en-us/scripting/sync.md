@@ -97,7 +97,7 @@ On disk, Script Sync uses the following rules to disambiguate the different type
 
 ## Settings
 
-Script Sync has several settings in the **Studio Settings** window (<kbd>Alt</kbd><kbd>S</kbd> or <kbd></kbd>⌥<kbd>S</kbd>). The default options are a good fit for most use cases.
+Script Sync has several settings in the [Studio Settings](../studio/setup.md#customization) window (<kbd>Alt</kbd><kbd>S</kbd> or <kbd></kbd>⌥<kbd>S</kbd>). The default options are a good fit for most use cases.
 
 | Setting | Description |
 | :---- | :---- |

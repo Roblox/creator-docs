@@ -7,9 +7,10 @@ Identifying performance issues generally means drilling down on one of three cat
 
 Roblox has a number of tools for identifying performance issues, some of which are available in the Roblox client (and therefore Studio) and some of which are only available in Studio. Whereas you can observe client behavior directly, you must use tools to diagnose server issues.
 
-## Diagnostic Tools
+## Diagnostic tools
 
 <table>
+  <thead>
   <tr>
     <th>Tool</th>
     <th>Description</th>
@@ -17,19 +18,21 @@ Roblox has a number of tools for identifying performance issues, some of which a
     <th>Keyboard shortcut</th>
     <th>Environment</th>
   </tr>
+	</thead>
+	<tbody>
   <tr>
     <td>[Developer Console](../studio/developer-console.md)</td>
     <td>A console with real-time log messages, errors, and detailed information on memory, networking, and script performance. It's useful for viewing memory consumption, key server health stats, script performance stats, and to launch the client or server MicroProfiler.</td>
-    <td>Studio, in-game</td>
+    <td><Chip label="Studio" size="small" color="primaryBrand" variant="outlined" /><br /><Chip label="In-Game" size="small" color="success" variant="outlined" style={{marginTop: 8}} /></td>
     <td><kbd>F9</kbd></td>
-    <td>Live sessions, Studio testing</td>
+    <td><Chip label="Studio Testing" size="small" color="primaryBrand" variant="outlined" /><br /><Chip label="Live Sessions" size="small" color="success" variant="outlined" style={{marginTop: 8}} /></td>
   </tr>
   <tr>
     <td>[MicroProfiler](./microprofiler/index.md)</td>
     <td>A debugging tool that breaks down how much computational time is spent on tasks each frame. It can generate dumps for analysis showing a precise breakdown of individual frames, making it helpful for identifying the specific task causing performance issues. You can run the profiler on either the client or the server, depending on which side has an issue.</td>
-    <td>Studio, in-game</td>
+    <td><Chip label="Studio" size="small" color="primaryBrand" variant="outlined" /><br /><Chip label="In-Game" size="small" color="success" variant="outlined" style={{marginTop: 8}} /></td>
     <td><kbd><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F6</kbd> (<kbd>⌘</kbd><kbd>⌥</kbd><kbd>F6</kbd>)</kbd></td>
-    <td>Live sessions, Studio testing</td>
+    <td><Chip label="Studio Testing" size="small" color="primaryBrand" variant="outlined" /><br /><Chip label="Live Sessions" size="small" color="success" variant="outlined" style={{marginTop: 8}} /></td>
   </tr>
   <tr>
     <td>[Scene Analysis](./scene-analysis.md)</td>
@@ -39,26 +42,34 @@ Roblox has a number of tools for identifying performance issues, some of which a
     <td>Studio testing</td>
   </tr>
   <tr>
-    <td>Performance Stats bar</td>
+    <td>Performance Stats</td>
     <td>A toolbar with basic performance statistics, including memory consumption, CPU, GPU, network data sent and received, and ping time.</td>
-    <td>In-game</td>
+    <td><Chip label="In-Game" size="small" color="success" variant="outlined" /></td>
     <td><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F7</kbd> (<kbd>⌘</kbd><kbd>⌥</kbd><kbd>F7</kbd>)</td>
-    <td>Live sessions, Studio testing</td>
+    <td><Chip label="Studio Testing" size="small" color="primaryBrand" variant="outlined" /><br /><Chip label="Live Sessions" size="small" color="success" variant="outlined" style={{marginTop: 8}} /></td>
   </tr>
   <tr>
     <td>Debug Stats</td>
     <td>Overlays with detailed information around graphics, physics, network traffic, and FPS.</td>
-    <td>Studio, in-game</td>
+    <td><Chip label="Studio" size="small" color="primaryBrand" variant="outlined" /><br /><Chip label="In-Game" size="small" color="success" variant="outlined" style={{marginTop: 8}} /></td>
     <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F1</kbd> (<kbd>Shift</kbd><kbd>⌘</kbd><kbd>F1</kbd>), <kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F2</kbd> (<kbd>Shift</kbd><kbd>⌘</kbd><kbd>F2</kbd>), <kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F3</kbd> (<kbd>Shift</kbd><kbd>⌘</kbd><kbd>F3</kbd>), <kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F4</kbd> (<kbd>Shift</kbd><kbd>⌘</kbd><kbd>F4</kbd>), <kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F5</kbd> (<kbd>Shift</kbd><kbd>⌘</kbd><kbd>F5</kbd>)</td>
-    <td>Live sessions, Studio testing</td>
+    <td><Chip label="Studio Testing" size="small" color="primaryBrand" variant="outlined" /><br /><Chip label="Live Sessions" size="small" color="success" variant="outlined" style={{marginTop: 8}} /></td>
+  </tr>
+  <tr>
+    <td>[Network Simulation](../studio/testing-modes.md#network-simulation)</td>
+    <td>Properties that simulate real-world network conditions like latency, jitter, and packet loss to playtest connections.</td>
+    <td><Chip label="Studio" size="small" color="primaryBrand" variant="outlined" /></td>
+    <td><kbd>Alt</kbd><kbd>S</kbd>(<kbd>⌥</kbd><kbd>S</kbd>)</td>
+    <td><Chip label="Studio Testing" size="small" color="primaryBrand" variant="outlined" /></td>
   </tr>
   <tr>
     <td>[Performance Dashboard](../production/analytics/performance.md)</td>
-    <td>A dashboard with aggregate charts for client and server memory usage, client frame rate, server heartbeat, and crash rates in real time. It's helpful for analyzing performance patterns over time. See [Monitoring Performance](./monitor.md).</td>
-    <td>Creator Dashboard</td>
+    <td>A dashboard with aggregate charts for client and server memory usage, client frame rate, server heartbeat, and crash rates in real time. It's helpful for analyzing performance patterns over time. See [monitoring performance](./monitor.md).</td>
+    <td><Chip label="Creator Dashboard" size="small" color="secondary" variant="outlined" /></td>
     <td>N/A</td>
-    <td>Live sessions</td>
+    <td><Chip label="Live Sessions" size="small" color="success" variant="outlined" /></td>
   </tr>
+	</tbody>
 </table>
 
 ## Server compute
@@ -151,7 +162,7 @@ The two primary measurements of ping (latency) are **network ping** and **data p
 
 Network ping is the round-trip time measured from when the client sends a network data packet to when it receives the server's echo reply. It is similar to what would be reported as `time` by the general purpose ping network utility.
 
-Network ping is visible in the **Performance Stats** bar. It is mostly affected by the length of the network path between the client and server and is outside your control.
+Network ping is visible in the **Performance Stats** bar. It is mostly affected by the length of the network path between the client and server, and is outside your control. However, you can simulate ping and other network conditions using [network simulation](../studio/testing-modes.md#network-simulation) when playtesting in Studio.
 
 Data ping is the round-trip time measured from when the client sends data reliably through the replication system to when it receives an echo reply from the server's replication system. It includes time spent in both the client's and server's replication queues, along with TCP-like retransmissions of lost or corrupted packets.
 
@@ -159,4 +170,4 @@ Data ping is similar to sending a reliable remote event from the client, receivi
 
 Average data ping for all players connected to a server is visible in the **Server Stats** tab of the Developer Console. Data ping for an individual client is visible using <kbd>Shift</kbd><kbd>F3</kbd> to display network debug stats.
 
-Data ping is affected by both the network path and by replication queueing delays. When the server generates replication data faster than the network can send it (or faster than the client can process it), data must wait in replication queues. Some difference between data ping and network ping is normal due to both network retransmissions and the way network data is processed by the Roblox app. However, if data ping is significantly higher than network ping, use the [MicroProfiler](./microprofiler/network.md) to view network traffic. For optimization suggestions, see [Networking and replication](./improve.md#networking-and-replication).
+Data ping is affected by both the network path and by replication queueing delays. When the server generates replication data faster than the network can send it (or faster than the client can process it), data must wait in replication queues. Some difference between data ping and network ping is normal due to both network retransmissions and the way network data is processed by the Roblox app. However, if data ping is significantly higher than network ping, use the [MicroProfiler](./microprofiler/network.md) to view network traffic. For optimization suggestions, see [networking and replication](./improve.md#networking-and-replication).
