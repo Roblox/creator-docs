@@ -5,6 +5,11 @@ navigation:
   - title: Earn
     path: /production/monetization/
     section:
+      - title: Developer Exchange Program
+        path: /production/monetization/developer-exchange
+        section:
+          - title: U.S. 18+ exchange rate
+            path: /production/monetization/18-plus-devex-rate
       - title: Creator Rewards
         path: /creator-rewards
       - title: Roblox Plus

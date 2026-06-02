@@ -169,9 +169,11 @@ The fields you can edit depend on the payment method.
 
 Changing the payment method only affects new subscriptions. Existing subscribers remain on their original payment method and must cancel and resubscribe to switch.
 
-You can update the price of a subscription sold in Robux at most once every 60 days. For price increases, the new price only takes effect after users receive at least 30 days' notice from Roblox.
+<Alert severity="info">
+You can only change the price of a subscription sold in Robux **once every 60 days**. For price increases, the new price only takes effect after users receive at least 30 days' notice from Roblox.
 
-You **cannot** change the price of subscriptions sold in local currency. To update the price, you must delete and recreate the subscription.
+You **cannot** change the price of subscriptions sold in local currency. To use a different price, you must delete and recreate the subscription.
+</Alert>
 
 ## Delete subscriptions
 

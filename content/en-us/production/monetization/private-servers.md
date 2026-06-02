@@ -37,6 +37,10 @@ To create a private server:
 
 1. Click the **Save** button.
 
+<Alert severity="info">
+You can only change the price of a paid private server **once every 60 days**.
+</Alert>
+
 <Alert severity="warning">
 Note that changing the price of private servers **cancels all active subscriptions**. Users who had active subscriptions automatically receive a private message in their inbox about this change.
 </Alert>

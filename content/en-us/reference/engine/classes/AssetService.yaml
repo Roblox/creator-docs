@@ -405,7 +405,7 @@ methods:
     returns:
       - type: EditableMesh
         summary: |
-          The new `Class.EditableMesh` instance.
+          The new `Class.EditableMesh` object.
     tags:
       - Yields
     deprecation_message: ''

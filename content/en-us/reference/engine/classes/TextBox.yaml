@@ -37,9 +37,9 @@ description: |
     `Class.UserInputService:GetFocusedTextBox()` can be used to check if any
     `TextBox` is in focus.
   - When the player is done inputting text, the
-    `Class.TextBox.FocusLost|FocusLost` event fires, indicating if the user
+    `Class.TextBox.FocusLost|FocusLost` event fires, indicating if the player
     pressed <kbd>Enter</kbd> to submit text along with the `Class.InputObject`
-    that caused the loss of focus. When using on screen keyboards on mobile and
+    that caused the loss of focus. When using on-screen keyboards on mobile and
     console,
     `Class.TextBox.ReturnPressedFromOnScreenKeyboard|ReturnPressedFromOnScreenKeyboard`
     may also fire.
@@ -375,7 +375,7 @@ properties:
       colors, and more.
 
       Note that when the `TextBox` has this property enabled and the box gains
-      focus, the user will be able to edit and interact with the complete XML
+      focus, the player will be able to edit and interact with the complete XML
       string, including all of the formatting tags. When focus is lost, the text
       will automatically parse and render the tags as rich text.
     code_samples: []
@@ -562,9 +562,9 @@ properties:
       - UI
   - name: TextBox.TextEditable
     summary: |
-      Determines whether the user can change the `Class.TextBox.Text|Text`.
+      Determines whether the player can change the `Class.TextBox.Text|Text`.
     description: |
-      This property determines whether the user can change the
+      This property determines whether the player can change the
       `Class.TextBox.Text|Text` through input. It is recommended to disable
       `Class.TextBox.ClearTextOnFocus|ClearTextOnFocus` when this property is
       disabled, otherwise the text can be cleared on-focus.
@@ -951,8 +951,12 @@ events:
     capabilities:
       - UI
   - name: TextBox.ReturnPressedFromOnScreenKeyboard
-    summary: ''
-    description: ''
+    summary: |
+      Fires when the `TextBox` is focused and the player presses the on-screen
+      keyboard's return/enter button.
+    description: |
+      On mobile and console, this event fires when the `TextBox` is focused and
+      the player presses the on-screen keyboard's return/enter button.
     code_samples: []
     parameters: []
     tags: []

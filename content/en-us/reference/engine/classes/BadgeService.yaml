@@ -334,7 +334,7 @@ methods:
       - Deprecated
     deprecation_message: |
       This method has been superseded by
-      `Class.BadgeService:UserHasBadgeAsync()` which should be used for new
+      `Class.BadgeService:UserHasBadgeAsync()` which should be used for new work
       instead.
     security: None
     thread_safety: Unsafe

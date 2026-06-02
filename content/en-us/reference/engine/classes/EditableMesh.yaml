@@ -6,7 +6,7 @@ name: EditableMesh
 type: class
 memory_category: Instances
 summary: |
-  Instance which allows for the runtime creation and manipulation of meshes.
+  Object which allows for the runtime creation and manipulation of meshes.
 description: |
   `EditableMesh` changes the applied visual mesh when linked to a
   `Class.MeshPart`, allowing for querying and modification of the mesh both in

@@ -1317,6 +1317,17 @@ methods:
         summary: |
           The `Enum.RigType` that the outfit will be created for if the player
           confirms the prompt.
+      - name: outfitOptions
+        type: Dictionary
+        default:
+        summary: |
+          Reserved for future options. Must be empty or omitted.
+      - name: outfitType
+        type: Variant
+        default:
+        summary: |
+          Optional `Enum.OutfitType`. Only `Avatar` and `Makeup` values are
+          accepted. When omitted, the type is inferred from the description.
     returns:
       - type: ()
         summary: ''
