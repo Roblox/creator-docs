@@ -165,21 +165,74 @@ To change the start place:
 
 7. <Chip label="OPTIONAL" size="small" variant="outlined" /> If the experience is live, it's recommended that you [restart its servers](../../projects/update-experiences.md#restart-servers).
 
-### Make experience public
+## Make experience public
 
-By default, new experiences are set to **private**, meaning that they are only accessible to you as the creator, to users with **Edit** or **Playtest** access, and to group members with the appropriate [roles and permissions](../../projects/groups.md#roles-and-permissions).
+By default, new experiences are set to **private**, meaning they are only accessible to you and your [creator team](../../projects/groups.md) who have **Edit** permissions (see [manage collaborators](../../projects/collaboration.md#manage-collaborators)).
 
-To make your experience available on Roblox, you have to meet the [publishing requirements](#publishing-requirements) before updating the experience's privacy settings to **public**.
+To make your experience publicly available to anyone outside of the creator team, you have to meet the [publishing requirements](#publishing-requirements) below.
 
 <Alert severity="info">
 You can make up to **5 private experiences that have never been public before** public per day. This limit resets daily. Making an existing public experience private and then public again does **not** count toward this limit.
 </Alert>
 
-#### Publishing requirements
+### Audience
 
-Publishing requirements depend on your target audience. These requirements apply to both **publishing a new experience** and **updating an existing public experience**, including using **Publish to** or **Publish as** in Studio, publishing a new version of a place, and setting your audience to **Public** or **Community members**.
+An experience's target audience can be set through its **Audience** setting:
 
-You do **not** need to meet these requirements if you keep your experience private or if your audience is set to **Friends**.
+1. In the [Creator Dashboard][creatordashboard], select your experience.
+2. Navigate to **Configure** ⟩ **Settings**.
+3. Under **Audience**, choose from the options below:
+
+		<table>
+		<thead>
+			<tr>
+				<th>Audience</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>**Private**</td>
+				<td>Available only to users who have **Edit** permissions for the experience.</td>
+			</tr>
+			<tr>
+				<td>**Limited**</td>
+		<td>
+		Available only to those who are part of the selected category of users. Not discoverable to the general public on Roblox.
+		- **Playtesters** — Available to users who have **playtest** permissions for the experience.
+		- **Friends** — Available to the experience owner's friends. This option only appears for [user‑owned](../../projects/collaboration.md#user-owned-experiences) experiences.
+		- **Community Members** — Available only to group members. This option only appears for [group‑owned](../../projects/collaboration.md#group-owned-experiences) experiences.
+		</td>
+			</tr>
+			<tr>
+				<td>**Public**</td>
+				<td>Available and discoverable to the general public on Roblox.</td>
+			</tr>
+		</tbody>
+		</table>
+
+4. <Chip label="OPTIONAL" size="small" variant="outlined" /> For **Public** experiences, you can choose **Enable&nbsp;Beta&nbsp;Mode** to omit the experience from the **Recommended&nbsp;For&nbsp;You** category on Roblox. Beta experiences are still public, but they have more limited reach and exposure. To widen your audience while still remaining in beta, create an ad campaign as outlined in [Ads Manager](../../production/promotion/ads-manager.md). If you enable sponsored ads, the experience analytics charts might show some users from **Recommended&nbsp;For&nbsp;You**.
+
+5. Click **Save Changes**.
+
+### Publishing requirements
+
+Publishing requirements depend on the target [audience](#audience) and apply to **all** publish actions:
+
+- Publishing a new experience.
+- Updating an existing public experience (publishing a new version of a place).
+- Publishing to a different experience via **Publish to Roblox As**.
+- Setting your audience to **Limited** (any option under **Limited**) or changing it from **Public** to **Private**.
+
+#### Private experiences
+
+An experience published as **Private** is only available to the owner or users with **Edit** permissions.
+
+Those with **playtest** permissions can't play private experiences. To enable their access, make sure you meet the requirements for **Public** experiences and then set the [audience](#audience) to **Limited**&nbsp;⟩ **Playtesters**.
+
+#### Public/Limited experiences
+
+Publishing to a **Public** audience or **Limited** audience (playtesters, friends, or community members) has various requirements.
 
 To reach **16+** and **Trusted Friends**:
 
@@ -187,43 +240,16 @@ To reach **16+** and **Trusted Friends**:
 - Account is in good standing and at least 2 days old.
 - Complete the [content maturity & compliance](../promotion/content-maturity.md) questionnaire.
 
-To reach **all ages** (including **Roblox Kids** and **Roblox Select**):
+To reach **all ages** including [Roblox Kids and Select](./kids-and-select.md):
 
-- All of the above, plus:
+- All of the above **plus**:
 - [ID-verified account](./account-verification.md#verify-through-government-id) or parent-linked age verification.
 - Two-factor authentication (2FA) enabled.
-- One of the following:
-  - Pay a one-time, refundable publishing fee of 1,000 Robux per game.
-    - This fee will be refunded if your game maintains 100 highly engaged players for 60 days without moderation.
-    - If the experience is permanently moderated or taken down for not meeting [Roblox Community Standards](https://en.help.roblox.com/hc/articles/203313410) within the 60 days, the fee **will not be returned**.
-  - Active [Roblox Plus](https://www.roblox.com/plus) or [Roblox Premium](https://www.roblox.com/premium/membership) subscription for 2 consecutive months.
-- Game must pass the [evaluation process](../../production/publishing/kids-and-select.md#evaluation-process).
-
-For full details on Kids and Select audiences and the evaluation process, see [Roblox Kids and Select](./kids-and-select.md).
-
-#### Update privacy settings
-
-To update your experience's privacy settings:
-
-1. In the [Creator Dashboard][creatordashboard], select the experience you want to make public.
-1. Go to **Configure** ⟩ **Settings**.
-1. Under **Privacy**, select **Public**.
-1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Choose **Enable Beta mode** to omit the experience from **Recommended For You** in the Roblox client. Beta experiences are still public, but have more limited reach and exposure.
-
-   <Alert severity="success">
-   To widen your audience while still remaining in beta, click **Create campaign** to set up a sponsored ad. To learn more, see [Ads Manager](../../production/promotion/ads-manager.md). If you enable sponsored ads, the experience analytics charts might show some users from **Recommended For You**.
-   </Alert>
-
-1. Click **Save Changes**.
-
-After you make your experience public, you can choose the scope of your audience:
-
-1. In the [Creator Dashboard][creatordashboard], select the experience you want to specify the audience for.
-1. Go to **Audience** ⟩ **Access Settings**.
-1. Under **Join**, select one of the following options:
-   - **Public** — available to all users on Roblox.
-   - **Friends** — available only to the experience owner's friends. This option only appears for non–group-owned experiences.
-   - **Community members** — available only to group members. This option only appears for group-owned experiences.
-1. Click **Save Changes**.
+- **One** of the following:
+  - Pay a one-time, refundable publishing fee of 1,000 Robux per experience.
+    - This fee will be refunded if your experience maintains 100 highly engaged players for 60 days without moderation.
+    - If the experience is permanently moderated or taken down for not meeting [Roblox Community Standards](https://en.help.roblox.com/hc/articles/203313410) within the 60 days, the fee **will not be refunded**.
+  - Active [Roblox Plus](https://www.roblox.com/plus) subscription for 2 consecutive months.
+- Experience must pass the [evaluation process](../../production/publishing/kids-and-select.md#evaluation-process) for **Kids** and **Select**.
 
 [creatordashboard]: https://create.roblox.com/dashboard/creations

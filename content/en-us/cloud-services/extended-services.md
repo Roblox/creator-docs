@@ -186,10 +186,19 @@ See the following table for Extended Services pricing:
     <td>100 MB + (1MB * Lifetime Players) GB per month</td>
     <td>$0.12 / GB per month</td>
   </tr>
+
+  <tr>
+    <td><a href="https://create.roblox.com/docs/production/analytics/performance" style={{color: 'inherit', textDecoration: 'underline'}}>Compute </a></td>
+    <td>CPU cores</td>
+    <td>First 100K playtime hours per month at no charge (when enrolled in Extended Services for Compute)</td>
+    <td>$0.001 / playtime hour&sup2;</td>
+  </tr>
 </tbody>
 </table>
 
 <figcaption>&sup1; GB per hour = the storage consumption multiplied by the amount of time. For example, 100GB hours might equate to "100GB x 1 hour" or "200GB x 0.5 hours".</figcaption>
+
+<figcaption>&sup2; Extended Services for Compute is billed based on how long the feature remains enabled, measured in minutes of playtime. Because enabling the feature reserves additional compute capacity for your game, charges apply whenever the feature is active, even if the additional compute is not fully consumed. Playtime hours are calculated as the sum of all player session durations. For example, if 10,000 users each play for 1 hour, that equals 10,000 playtime hours, resulting in $10 in charges beyond the included monthly allowance of 100,000 playtime hours. These limits and pricing only apply to games enrolled in Extended Services for Compute. Games that do not enroll continue to receive unlimited playtime hours under the current default limits at no additional charge.</figcaption>
 
 ## Supported countries
 
