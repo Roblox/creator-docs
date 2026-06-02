@@ -3577,7 +3577,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -3651,7 +3651,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 50000
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -3765,7 +3765,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500000
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -3861,7 +3861,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000000
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -3938,7 +3938,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000000
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -4019,7 +4019,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000000
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -4119,7 +4119,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000000
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -4212,7 +4212,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500000
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -4332,7 +4332,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -4455,7 +4455,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -4560,7 +4560,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000000
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -4646,7 +4646,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000000
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -4736,7 +4736,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000000
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -4845,7 +4845,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000000
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -4947,7 +4947,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500000
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -5076,7 +5076,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -5160,7 +5160,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 10000
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -6294,7 +6294,7 @@
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500000
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -6399,7 +6399,7 @@
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500000
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -6485,7 +6485,7 @@
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500000
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -6575,7 +6575,7 @@
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500000
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -6684,7 +6684,7 @@
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500000
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -6786,7 +6786,7 @@
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500000
+            "maxInPeriod": 100000
           }
         },
         "x-roblox-scopes": [
@@ -12214,7 +12214,7 @@
           }
         ],
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "security": [
           {
@@ -12336,7 +12336,7 @@
           }
         ],
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "security": [
           {
@@ -12526,7 +12526,7 @@
           }
         ],
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "security": [
           {
@@ -12631,7 +12631,7 @@
           }
         ],
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "security": [
           {
@@ -12800,7 +12800,7 @@
           }
         ],
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "security": [
           {
@@ -12922,7 +12922,7 @@
           }
         ],
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "security": [
           {
@@ -13104,7 +13104,7 @@
           }
         ],
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "security": [
           {
@@ -13209,7 +13209,7 @@
           }
         ],
         "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
+          "apiKeyWithHttpService": true
         },
         "security": [
           {
@@ -22165,461 +22165,6 @@
         }
       }
     },
-    "/secrets/v1/universes/{universeId}/secrets": {
-      "get": {
-        "tags": ["Universes"],
-        "summary": "List Secrets",
-        "description": "Lists all secrets defined for a universe.\nSecret content is not returned for security reasons - only metadata such as ID, domain, creation and update timestamps are included.\n\nOnly the owner of the universe can list secrets. For group-owned universes, only the group owner or authorized\nmembers can list secrets.",
-        "parameters": [
-          {
-            "name": "universeId",
-            "in": "path",
-            "description": "The universe ID",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "Number of secrets to return per page (1-500, default 10)",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 10
-            }
-          },
-          {
-            "name": "cursor",
-            "in": "query",
-            "description": "Pagination cursor from previous response",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SecretPaginatedList"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "universe.secret:read",
-            "description": "Required"
-          }
-        ],
-        "x-roblox-stability": "BETA",
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#get_secrets_v1_universes__universeId__secrets"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://apis.roblox.com/cloud/v2/universes/{universeId}/secrets",
-            "httpMethod": "GET",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/universes#get_cloud_v2_universes__universeId__secrets"
-          }
-        ]
-      },
-      "post": {
-        "tags": ["Universes"],
-        "summary": "Create Secret",
-        "description": "Creates a new secret. A maximum of 500 secrets per universe is allowed.\n            \nOnly the owner of the universe can create secrets. For group-owned universes, only the group owner or authorized\nmembers can create secrets.\n            \nTo encrypt the secret:\n1. Get the public key using the Get Public Key endpoint\n2. Encrypt your secret using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
-        "parameters": [
-          {
-            "name": "universeId",
-            "in": "path",
-            "description": "The universe ID",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "The secret to create with encrypted content",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Secret"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Secret"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
-                }
-              }
-            }
-          },
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "universe.secret:write",
-            "description": "Required"
-          }
-        ],
-        "x-roblox-stability": "BETA",
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#post_secrets_v1_universes__universeId__secrets"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://apis.roblox.com/cloud/v2/universes/{universeId}/secrets",
-            "httpMethod": "POST",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/universes#post_cloud_v2_universes__universeId__secrets"
-          }
-        ]
-      }
-    },
-    "/secrets/v1/universes/{universeId}/secrets/public-key": {
-      "get": {
-        "tags": ["Universes"],
-        "summary": "Get Public Key",
-        "description": "Retrieves the public key for a universe. You need this key to encrypt secret content \nbefore sending it to Roblox.\n\nOnly the owner of the universe can retrieve the public key. For group-owned universes, only the group owner or\nauthorized members can retrieve the public key.\n\nThe secret id field is static and always returns \"public-key\".\n\nThe returned public key in the secret field is universe-specific and derived from a master key using the universe ID.\nUse this key with LibSodium sealed box encryption to encrypt your secret content before \ncreating or updating secrets.\n\nInclude the key_id from the public key response in the request to create or update a secret.",
-        "parameters": [
-          {
-            "name": "universeId",
-            "in": "path",
-            "description": "The universe ID",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Secret"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "universe.secret:read",
-            "description": "Required"
-          }
-        ],
-        "x-roblox-stability": "BETA",
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#get_secrets_v1_universes__universeId__secrets_public_key"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://apis.roblox.com/cloud/v2/universes/{universeId}/secrets/public-key",
-            "httpMethod": "GET",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/universes#get_cloud_v2_universes__universeId__secrets_public_key"
-          }
-        ]
-      }
-    },
-    "/secrets/v1/universes/{universeId}/secrets/{secretId}": {
-      "delete": {
-        "tags": ["Universes"],
-        "summary": "Delete Secret",
-        "description": "Permanently deletes a secret from a universe.\n\nOnly the owner of the universe can delete secrets. For group-owned universes, only the group owner or authorized\nmembers can delete secrets.\n\nThis operation is irreversible. Make sure you no longer need the secret before deleting it.",
-        "parameters": [
-          {
-            "name": "universeId",
-            "in": "path",
-            "description": "The universe ID",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "name": "secretId",
-            "in": "path",
-            "description": "The ID of the secret to delete",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "universe.secret:write",
-            "description": "Required"
-          }
-        ],
-        "x-roblox-stability": "BETA",
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#delete_secrets_v1_universes__universeId__secrets__secretId_"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://apis.roblox.com/cloud/v2/universes/{universeId}/secrets/{secretId}",
-            "httpMethod": "DELETE",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/universes#delete_cloud_v2_universes__universeId__secrets__secretId_"
-          }
-        ]
-      },
-      "patch": {
-        "tags": ["Universes"],
-        "summary": "Update Secret",
-        "description": "Updates an existing secret.\n\nOnly the owner of the universe can update secrets. For group-owned universes, only the group owner or authorized\nmembers can update secrets.\n\nOnly the secret content, key_id, and domain can be updated - the secret ID cannot be changed.\n\nTo encrypt the updated secret:\n1. Get the current public key using the GetPublicKey endpoint\n2. Encrypt your new secret content using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
-        "parameters": [
-          {
-            "name": "universeId",
-            "in": "path",
-            "description": "The universe ID",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "name": "secretId",
-            "in": "path",
-            "description": "The ID of the secret to update",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "The updated secret data with encrypted content",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Secret"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Secret"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SecretsStoreService.ProblemDetails"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "universe.secret:write",
-            "description": "Required"
-          }
-        ],
-        "x-roblox-stability": "BETA",
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#patch_secrets_v1_universes__universeId__secrets__secretId_"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://apis.roblox.com/cloud/v2/universes/{universeId}/secrets/{secretId}",
-            "httpMethod": "PATCH",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/universes#patch_cloud_v2_universes__universeId__secrets__secretId_"
-          }
-        ]
-      }
-    },
     "/server-management/v1/universes/{universeId}/places/{placeId}/game-servers:filter-options": {
       "get": {
         "tags": ["Places"],
@@ -23201,735 +22746,6 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/universes#Restarts_ForecastRestart"
-        }
-      }
-    },
-    "/thumbnail-personalization-api/v1/universe/{universeId}/personalization": {
-      "get": {
-        "tags": ["Thumbnails"],
-        "operationId": "HomepageThumbnail_FindThumbnailPersonalizations",
-        "parameters": [
-          {
-            "name": "universeId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "name": "status",
-            "in": "query",
-            "schema": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/PersonalizedConfigStatus"
-                }
-              ]
-            }
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "cursor",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Server Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-stability": "EXPERIMENTAL",
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnails#HomepageThumbnail_FindThumbnailPersonalizations"
-        }
-      }
-    },
-    "/thumbnail-personalization-api/v1/universe/{universeId}/personalization/create": {
-      "post": {
-        "tags": ["Thumbnails"],
-        "operationId": "HomepageThumbnail_CreateThumbnailPersonalization",
-        "parameters": [
-          {
-            "name": "universeId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/CreateThumbnailPersonalizationRequest"
-                  }
-                ]
-              }
-            },
-            "application/json": {
-              "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/CreateThumbnailPersonalizationRequest"
-                  }
-                ]
-              }
-            },
-            "text/json": {
-              "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/CreateThumbnailPersonalizationRequest"
-                  }
-                ]
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/CreateThumbnailPersonalizationRequest"
-                  }
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Server Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-stability": "EXPERIMENTAL",
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnails#HomepageThumbnail_CreateThumbnailPersonalization"
-        }
-      }
-    },
-    "/thumbnail-personalization-api/v1/universe/{universeId}/personalization/update": {
-      "post": {
-        "tags": ["Thumbnails"],
-        "operationId": "HomepageThumbnail_UpdateThumbnailPersonalization",
-        "parameters": [
-          {
-            "name": "universeId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/UpdateThumbnailPersonalizationRequest"
-                  }
-                ]
-              }
-            },
-            "application/json": {
-              "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/UpdateThumbnailPersonalizationRequest"
-                  }
-                ]
-              }
-            },
-            "text/json": {
-              "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/UpdateThumbnailPersonalizationRequest"
-                  }
-                ]
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/UpdateThumbnailPersonalizationRequest"
-                  }
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Server Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-stability": "EXPERIMENTAL",
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnails#HomepageThumbnail_UpdateThumbnailPersonalization"
-        }
-      }
-    },
-    "/thumbnail-personalization-api/v1/universe/{universeId}/thumbnails": {
-      "delete": {
-        "tags": ["Thumbnails"],
-        "operationId": "HomepageThumbnail_DeleteHomepageThumbnails",
-        "parameters": [
-          {
-            "name": "universeId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "name": "homepageThumbnailIds",
-            "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Server Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-stability": "EXPERIMENTAL",
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnails#HomepageThumbnail_DeleteHomepageThumbnails"
-        }
-      },
-      "get": {
-        "tags": ["Thumbnails"],
-        "operationId": "HomepageThumbnail_GetHomepageThumbnails",
-        "parameters": [
-          {
-            "name": "universeId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "nextCursor",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/FindThumbnailsResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Server Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-stability": "EXPERIMENTAL",
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnails#HomepageThumbnail_GetHomepageThumbnails"
-        }
-      }
-    },
-    "/thumbnail-personalization-api/v1/universe/{universeId}/thumbnails/uploads": {
-      "post": {
-        "tags": ["Thumbnails"],
-        "operationId": "HomepageThumbnail_UploadHomepageThumbnails",
-        "parameters": [
-          {
-            "name": "universeId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "files": {
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "format": "binary"
-                    }
-                  }
-                }
-              },
-              "encoding": {
-                "files": {
-                  "style": "form"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UploadThumbnailsResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Server Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-stability": "EXPERIMENTAL",
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnails#HomepageThumbnail_UploadHomepageThumbnails"
-        }
-      }
-    },
-    "/thumbnail-personalization-api/v1/universe/{universeId}/thumbnails/uploads/status": {
-      "get": {
-        "tags": ["Thumbnails"],
-        "operationId": "HomepageThumbnail_GetHomepageThumbnailsStatus",
-        "parameters": [
-          {
-            "name": "universeId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "name": "operationIds",
-            "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UploadThumbnailsStatusResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Server Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-stability": "EXPERIMENTAL",
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnails#HomepageThumbnail_GetHomepageThumbnailsStatus"
         }
       }
     },
@@ -25365,6 +24181,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_account_creation_metadata"
         }
@@ -25416,6 +24236,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_delete_v1_account_pin"
         }
@@ -25446,6 +24275,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -25499,6 +24337,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_patch_v1_account_pin"
         }
@@ -25550,6 +24397,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_account_pin"
         }
@@ -25585,6 +24441,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -25638,6 +24503,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -27362,6 +26236,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_auth_metadata"
         },
@@ -30391,7 +29269,8 @@
     "/v1/catalog/items/details": {
       "post": {
         "tags": ["Assets", "Avatars"],
-        "summary": "Returns list of item details.",
+        "summary": "Returns details for one or more catalog items.",
+        "description": "There is an item count limit per request. Exceeding this returns 400 Bad Request.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -30521,6 +29400,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -32485,6 +31373,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_external_access"
         }
@@ -32541,6 +31433,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_external_login"
         }
@@ -32585,6 +31486,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_external_loginAndLink"
         }
@@ -32622,6 +31532,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_external_signup"
         }
@@ -32657,6 +31576,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -32705,6 +31633,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_external__identityProviderId__sso_oauth_callback"
         }
@@ -32735,6 +31667,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_external__identityProviderId__sso_oauth_init"
         }
@@ -33518,7 +32454,6 @@
           "apiKeyWithHttpService": false
         },
         "security": [
-          {},
           {
             "roblox-legacy-cookie": []
           }
@@ -39225,7 +38160,6 @@
           "apiKeyWithHttpService": false
         },
         "security": [
-          {},
           {
             "roblox-legacy-cookie": []
           }
@@ -39931,7 +38865,6 @@
           "apiKeyWithHttpService": false
         },
         "security": [
-          {},
           {
             "roblox-legacy-cookie": []
           }
@@ -43338,6 +42271,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_identity_verification_login"
         }
@@ -43396,6 +42333,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_identity_initialize_login"
         }
@@ -44661,6 +43602,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_login"
         },
@@ -44727,6 +43677,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_login_linked"
         },
@@ -44769,6 +43723,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -44828,6 +43791,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -45455,6 +44427,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_metadata"
         },
@@ -45514,42 +44490,6 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/friends#friends_get_v1_metadata"
-        }
-      }
-    },
-    "/v1/metadata#ThumbnailsApi": {
-      "get": {
-        "tags": ["Thumbnails"],
-        "summary": "Return list of thumbnail meta data.",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Thumbnails.Api.Models.ThumbnailMetaDataResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Thumbnails.Api.Models.ThumbnailMetaDataResponse"
-                }
-              }
-            }
-          }
-        },
-        "servers": [
-          {
-            "url": "https://thumbnails.roblox.com"
-          }
-        ],
-        "x-roblox-stability": "STABLE",
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [{}],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnails#thumbnails_get_v1_metadata"
         }
       }
     },
@@ -46496,6 +45436,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_DeleteCredentialBatch"
         }
@@ -46555,6 +45504,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_FinishRegistration"
         }
@@ -46610,6 +45568,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_ListCredentials"
         }
@@ -46647,6 +45614,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_StartAuthentication"
         }
@@ -46711,6 +45682,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_StartRegistration"
         }
@@ -46773,6 +45753,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_finish_ar_preauth_registration"
         }
@@ -46833,6 +45817,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_finish_preauth_registration"
         }
@@ -46888,6 +45881,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_start_authentication_by_user"
         }
@@ -46940,6 +45937,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_start_preauth_registration"
         }
@@ -46975,6 +45976,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -47029,6 +46039,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_passwords_validate"
         },
@@ -47087,6 +46101,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passwords_validate"
         },
@@ -48307,6 +47325,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_recovery_metadata"
         },
@@ -48455,6 +47477,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_revert_account"
         },
@@ -48516,6 +47542,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_revert_account"
         },
@@ -48561,6 +47591,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -48756,6 +47795,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_session_refresh"
         },
@@ -48812,6 +47860,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_signup"
         },
@@ -48865,6 +47922,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_signup_linked"
         },
@@ -48904,6 +47965,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -48974,6 +48044,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -51708,6 +50787,9 @@
               }
             }
           },
+          "400": {
+            "description": "26: The pagination cursor is invalid or incompatible with the current request."
+          },
           "404": {
             "description": "3: The game is invalid or does not exist."
           }
@@ -53434,6 +52516,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_user_passwords_change"
         }
@@ -53780,6 +52871,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_username"
         }
@@ -53812,6 +52912,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -53854,6 +52963,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -53911,6 +53029,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_usernames_recover"
         }
@@ -54034,6 +53156,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_usernames_validate"
         }
@@ -54085,6 +53216,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_usernames_validate"
         }
@@ -55798,7 +54933,7 @@
                 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55,
                 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73,
                 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89,
-                90
+                90, 91, 92
               ]
             }
           },
@@ -60531,6 +59666,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_validators_email"
         }
@@ -60581,6 +59720,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_validators_recommendedUsernameFromDisplayName"
         }
@@ -60628,6 +59771,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_validators_recommendedUsernameFromDisplayName"
         }
@@ -60678,6 +59825,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_validators_username"
         }
@@ -60725,6 +59876,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_validators_username"
         }
@@ -61143,6 +60298,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_xbox_connection"
         }
@@ -61178,6 +60342,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -61218,6 +60391,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -61270,6 +60452,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -62328,6 +61519,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v2_auth_metadata"
         }
@@ -63583,6 +62778,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_identity_verification_login"
         }
@@ -63705,6 +62904,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_login"
         }
@@ -63764,6 +62972,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_login_linked"
         }
@@ -63799,6 +63011,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -63858,6 +63079,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -64045,6 +63275,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v2_metadata"
         }
@@ -64361,6 +63595,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v2_passwords_current_status"
         }
@@ -64424,6 +63667,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v2_passwords_reset"
         }
@@ -64480,6 +63727,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -64545,6 +63801,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_passwords_reset_send"
         }
@@ -64604,6 +63869,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_passwords_reset_verify"
         }
@@ -64656,6 +63925,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v2_passwords_validate"
         }
@@ -64707,6 +63980,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_passwords_validate"
         }
@@ -65378,6 +64655,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v2_recovery_metadata"
         }
@@ -65429,6 +64710,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v2_revert_account"
         }
@@ -65483,6 +64768,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_revert_account"
         }
@@ -65521,6 +64815,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -65870,6 +65173,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_session_refresh"
         }
@@ -65919,6 +65231,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_signup"
         }
@@ -65965,6 +65286,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_signup_linked"
         }
@@ -67458,6 +66783,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_user_passwords_change"
         }
@@ -67520,6 +66854,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_username"
         }
@@ -67552,6 +66895,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -67594,6 +66946,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -67651,6 +67012,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_usernames_recover"
         }
@@ -67714,6 +67079,15 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v2_usernames_validate"
         }
@@ -67765,6 +67139,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_usernames_validate"
         }
@@ -68170,14 +67548,14 @@
             "schema": {
               "type": "array",
               "items": {
-                "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90]",
+                "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92]",
                 "enum": [
                   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21,
                   22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38,
                   39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53,
                   54, 55, 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70,
                   71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85,
-                  86, 87, 88, 89, 90
+                  86, 87, 88, 89, 90, 91, 92
                 ]
               }
             }
@@ -68845,6 +68223,10 @@
             "url": "https://auth.roblox.com"
           }
         ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v3_logout"
         }
@@ -69158,6 +68540,15 @@
         "servers": [
           {
             "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
           }
         ],
         "externalDocs": {
@@ -70644,19 +70035,6 @@
         "description": "Request model for creating a save",
         "nullable": true
       },
-      "CreateThumbnailPersonalizationRequest": {
-        "required": ["homepageThumbnailIds"],
-        "type": "object",
-        "properties": {
-          "homepageThumbnailIds": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
       "CreationContext": {
         "type": "object",
         "properties": {
@@ -71538,23 +70916,6 @@
         "enum": ["String", "Number"],
         "type": "string",
         "description": "Enum describing the data type of a filter field's values."
-      },
-      "FindThumbnailsResponse": {
-        "required": ["homepageThumbnails"],
-        "type": "object",
-        "properties": {
-          "homepageThumbnails": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/HomepageThumbnail"
-            }
-          },
-          "nextCursor": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
       },
       "FlushMemoryStoreMetadata": {
         "type": "object",
@@ -72740,52 +72101,6 @@
           }
         },
         "description": "Represents the permissions on a role."
-      },
-      "HomepageThumbnail": {
-        "required": [
-          "assetId",
-          "homepageThumbnailId",
-          "homepageThumbnailStatus",
-          "moderationStatus",
-          "personalizedConfigStatus"
-        ],
-        "type": "object",
-        "properties": {
-          "homepageThumbnailId": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "assetId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "moderationStatus": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ThumbnailPersonalizationApi.ModerationStatus"
-              }
-            ]
-          },
-          "personalizedConfigStatus": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/PersonalizedConfigStatus"
-              }
-            ]
-          },
-          "homepageThumbnailStatus": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/HomepageThumbnailStatus"
-              }
-            ]
-          }
-        },
-        "additionalProperties": false
-      },
-      "HomepageThumbnailStatus": {
-        "enum": ["Active", "Spammy"],
-        "type": "string"
       },
       "HttpContent": {
         "type": "object",
@@ -75176,10 +74491,6 @@
         "x-oneOf": {
           "Value": ["value"]
         }
-      },
-      "PersonalizedConfigStatus": {
-        "enum": ["Active", "Inactive"],
-        "type": "string"
       },
       "Place": {
         "required": ["templatePlace"],
@@ -82551,6 +81862,7 @@
         "type": "object",
         "properties": {
           "items": {
+            "description": "The items to retrieve details for. Each endpoint has an item count limit per request.",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Roblox.Catalog.Api.MultigetItemDetailsRequestItem"
@@ -87090,6 +86402,13 @@
           "IdempotencyKey": {
             "description": "The idempotency key of the payout request.",
             "type": "string"
+          },
+          "WatermarkContributions": {
+            "description": "Optional watermark contributions for DevEx attribution tracking.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Groups.Api.WatermarkContributionRequest"
+            }
           }
         },
         "additionalProperties": false
@@ -87558,6 +86877,21 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Groups.Api.WatermarkContributionRequest": {
+        "type": "object",
+        "properties": {
+          "balanceKey": {
+            "description": " ['Standard' = 1, 'O18Boosted' = 2]",
+            "enum": ["Standard", "O18Boosted"],
+            "type": "string"
+          },
+          "amount": {
+            "format": "int64",
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Groups.Client.BlockedKeywordModel": {
         "type": "object",
         "properties": {
@@ -87821,8 +87155,8 @@
           },
           "type": {
             "format": "int32",
-            "description": " ['User' = 1, 'Group' = 2]",
-            "enum": [1, 2],
+            "description": " ['User' = 1, 'Group' = 2, 'Experience' = 3]",
+            "enum": [1, 2, 3],
             "type": "integer"
           }
         },
@@ -88016,13 +87350,14 @@
           },
           "assetType": {
             "format": "int32",
-            "description": "The asset type id of asset with id Roblox.Inventory.Api.V2.UserAssetItemModelV2.AssetId. ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90]",
+            "description": "The asset type id of asset with id Roblox.Inventory.Api.V2.UserAssetItemModelV2.AssetId. ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92]",
             "enum": [
               1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21, 22,
               24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40,
               41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
               59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
-              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90
+              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
+              91, 92
             ],
             "type": "integer"
           },
@@ -89778,22 +89113,6 @@
           "canAfford": {
             "description": "Boolean, true if the user can afford to purchase the publishing of the audio file.",
             "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Thumbnails.Api.Models.ThumbnailMetaDataResponse": {
-        "description": "A response model for thumbnails which belong to a specific universe ID",
-        "type": "object",
-        "properties": {
-          "isWebappUseCacheEnabled": {
-            "description": "webapp use cache",
-            "type": "boolean"
-          },
-          "webappCacheExpirationTimspan": {
-            "format": "date-span",
-            "description": "webapp caching expiration in ms",
-            "type": "string"
           }
         },
         "additionalProperties": false
@@ -94570,10 +93889,6 @@
         },
         "description": "Information about the expiration of a subscription."
       },
-      "ThumbnailPersonalizationApi.ModerationStatus": {
-        "enum": ["Reviewing", "Rejected", "Approved", "Unspecified"],
-        "type": "string"
-      },
       "ThumbnailsApi.Roblox.Web.Responses.Thumbnails.ThumbnailResponse": {
         "type": "object",
         "properties": {
@@ -95084,6 +94399,14 @@
             "format": "int64"
           },
           "licensingPaymentClawbackOutgoingTotal": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "incomingRobuxTransferTotal": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "outgoingRobuxTransferTotal": {
             "type": "integer",
             "format": "int64"
           },
@@ -95659,83 +94982,6 @@
         },
         "additionalProperties": false,
         "description": "The response for updating a matchmaking server attribute definition."
-      },
-      "UpdateThumbnailPersonalizationRequest": {
-        "required": ["homepageThumbnailIds", "id"],
-        "type": "object",
-        "properties": {
-          "homepageThumbnailIds": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "id": {
-            "minLength": 1,
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "UploadStatus": {
-        "enum": [1, 2],
-        "type": "integer",
-        "format": "int32"
-      },
-      "UploadThumbnailStatus": {
-        "type": "object",
-        "properties": {
-          "homepageThumbnailId": {
-            "type": "string",
-            "nullable": true
-          },
-          "assetId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "moderationStatus": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ThumbnailPersonalizationApi.ModerationStatus"
-              }
-            ]
-          }
-        },
-        "additionalProperties": false
-      },
-      "UploadThumbnailsResponse": {
-        "required": ["fileToOperationIdDict"],
-        "type": "object",
-        "properties": {
-          "fileToOperationIdDict": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "string",
-              "nullable": true
-            }
-          }
-        },
-        "additionalProperties": false
-      },
-      "UploadThumbnailsStatusResponse": {
-        "required": ["uploadStatus", "uploadThumbnailStatusDict"],
-        "type": "object",
-        "properties": {
-          "uploadStatus": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/UploadStatus"
-              }
-            ]
-          },
-          "uploadThumbnailStatusDict": {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/components/schemas/UploadThumbnailStatus"
-            }
-          }
-        },
-        "additionalProperties": false
       },
       "User": {
         "type": "object",
@@ -97675,13 +96921,6 @@
         "content": "HTTP APIs for working with user thumbnails on Roblox Cloud.",
         "ordering": [
           "Cloud_GenerateUserThumbnail",
-          "HomepageThumbnail_UploadHomepageThumbnails",
-          "HomepageThumbnail_GetHomepageThumbnailsStatus",
-          "HomepageThumbnail_GetHomepageThumbnails",
-          "HomepageThumbnail_DeleteHomepageThumbnails",
-          "HomepageThumbnail_CreateThumbnailPersonalization",
-          "HomepageThumbnail_UpdateThumbnailPersonalization",
-          "HomepageThumbnail_FindThumbnailPersonalizations",
           "post_legacy_game_internationalization_v1_game_thumbnails_games__gameId__language_codes__languageCode__alt_text",
           "gameinternationalization_post_v1_game_thumbnails_games__gameId__language_codes__languageCode__alt_text",
           "post_legacy_game_internationalization_v1_game_thumbnails_games__gameId__language_codes__languageCode__image",
@@ -97708,7 +96947,6 @@
           "thumbnails_get_v1_game_passes",
           "thumbnails_get_v1_games__universeId__thumbnails",
           "thumbnails_get_v1_games_icons",
-          "thumbnails_get_v1_metadata",
           "thumbnails_get_v1_games_multiget_thumbnails",
           "thumbnails_get_v1_groups_icons",
           "thumbnails_get_v1_places_gameicons",
@@ -97846,11 +97084,6 @@
           "post_cloud_v2_universes__universeId__secrets",
           "patch_cloud_v2_universes__universeId__secrets__secretId_",
           "delete_cloud_v2_universes__universeId__secrets__secretId_",
-          "get_secrets_v1_universes__universeId__secrets",
-          "post_secrets_v1_universes__universeId__secrets",
-          "patch_secrets_v1_universes__universeId__secrets__secretId_",
-          "delete_secrets_v1_universes__universeId__secrets__secretId_",
-          "get_secrets_v1_universes__universeId__secrets_public_key",
           "avatar_get_v1_game_start_info",
           "badges_get_v1_universes__universeId__badges",
           "badges_get_v1_universes__universeId__free_badges_quota",
