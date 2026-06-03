@@ -485,7 +485,7 @@ navigation:
         section:
           - title: Overview
             path: /chat/in-experience-text-chat
-          - title: Guidelines
+          - title: Chat system guidelines
             path: /chat/guidelines
           - title: Preset system guidelines
             path: /chat/preset-system-guidelines

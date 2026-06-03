@@ -127,11 +127,11 @@ properties:
     deprecation_message: ''
     security:
       read: None
-      write: None
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Data
     serialization:
-      can_load: false
+      can_load: true
       can_save: true
     capabilities:
       - Basic

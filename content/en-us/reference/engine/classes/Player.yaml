@@ -1161,6 +1161,32 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
+  - name: Player:ClearCachedAvatarAppearance
+    summary: |
+      Clears the cached avatar appearance for the player, forcing a fresh fetch
+      from the backend on the next respawn.
+    description: |
+      This method clears the cached avatar appearance for the player. The next
+      time `Class.Player:LoadCharacterAsync()|LoadCharacterAsync()` is called
+      with the player's default platform appearance, a fresh version will be
+      fetched from the backend instead of using the cached version.
+
+      This is useful when you want to allow a player to reset their character
+      after they have updated their appearance outside of the experience. For
+      example, you can use this to implement a custom reset button that mirrors
+      the cache-busting behavior of the default in-experience menu.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AvatarAppearance
+      - Players
   - name: Player:DistanceFromCharacter
     summary: |
       Returns the distance between the character's head and the given
@@ -2017,8 +2043,10 @@ methods:
       When reloading a `Class.Player` with their default platform appearance
       applied, a cached version of their appearance will be loaded. The cached
       version is cleared whenever the player's appearance is updated using
-      `Class.AvatarEditorService` or when the player manually resets via the in
-      game menu.
+      `Class.AvatarEditorService` or when the player manually resets via the
+      in-experience menu. To programmatically clear this cache, call
+      `Class.Player:ClearCachedAvatarAppearance()|ClearCachedAvatarAppearance()`
+      before calling `LoadCharacterAsync()`.
 
       After calling `LoadCharacterAsync()` for an individual player, it is not
       recommended to call it again for the same player until after that player's

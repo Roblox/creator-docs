@@ -39,7 +39,7 @@ Roblox has a number of tools for identifying performance issues, some of which a
     <td>Provides at-a-glance comparative information about the resources your client and server scenes are using and which instances are responsible for that resource usage.</td>
     <td>Studio</td>
     <td>N/A</td>
-    <td>Studio testing</td>
+    <td><Chip label="Studio Testing" size="small" color="primaryBrand" variant="outlined" /></td>
   </tr>
   <tr>
     <td>Performance Stats</td>

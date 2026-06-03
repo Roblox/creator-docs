@@ -135,6 +135,18 @@ methods:
       <td>Not required.</td>
       <td>This is a legacy field. It always returns an empty array.</td>
       </tr>
+      <tr>
+      <td><code>IsEndlessContentLoadAllowed</code></td>
+      <td>Boolean</td>
+      <td>Any experience that includes a feature where content loads automatically and endlessly as the user scrolls, such as a feed, providing an endless flow of media content without requiring the user to engage in any specific interaction such as manual "load more" actions or separate pagination.</td>
+      <td>When <code>true</code>, the player can use features with endless content loading within an experience.</td>
+      </tr>
+      <tr>
+      <td><code>IsEndlessContentAutoplayAllowed</code></td>
+      <td>Boolean</td>
+      <td>Any experience that contains media content (video or audio) that automatically and endlessly plays without requiring user interaction or initiation, for example clicking a play button.</td>
+      <td>When <code>true</code>, the player can use features within an experience that automatically and endlessly play media content.</td>
+      </tr>
       </tbody>
       </table>
 

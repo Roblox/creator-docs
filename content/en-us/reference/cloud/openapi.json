@@ -94410,6 +94410,10 @@
             "type": "integer",
             "format": "int64"
           },
+          "robloxSelectIncomingTotal": {
+            "type": "integer",
+            "format": "int64"
+          },
           "robloxSelectOutgoingTotal": {
             "type": "integer",
             "format": "int64"

@@ -2427,17 +2427,28 @@ methods:
     capabilities: []
     simulationAccess: true
   - name: BasePart:GetClosestPointOnSurface
-    summary: ''
-    description: ''
+    summary: |
+      Returns the closest point on the part's surface to the given point.
+    description: |
+      Returns the closest point on the part's surface to the given world-space
+      position. If the provided position is inside the part, it is returned
+      as-is.
+
+      For `Class.MeshPart` and `Class.PartOperation` instances, this method
+      respects the part's `Enum.CollisionFidelity` value. Return values can
+      differ based on whether the mesh is being treated as a box, a hull, or a
+      more complex shape.
     code_samples: []
     parameters:
       - name: position
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The world-space point to find the closest surface point to.
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          The closest point on the part's surface in world space.
     tags: []
     deprecation_message: ''
     security: None

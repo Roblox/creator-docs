@@ -351,15 +351,16 @@ methods:
     description: |
       The `Class.Players:BanAsync()` method allows you to easily ban users who
       violate your experience's guidelines. You can specify the ban duration,
-      enable the ban to propagate to suspected alternate accounts, and provide a
-      message to the banned user in accordance with the
-      [Usage Guidelines](../../../players/index.md#banning-users). You should
+      enable the ban to propagate to suspected alternate accounts, enable the
+      ban to temporarily block the banned user's device from rejoining the
+      experience, and provide a message to the banned user in accordance with
+      the [Usage Guidelines](../../../players/index.md#ban-users). You should
       also post your experience rules somewhere accessible to all users and
       provide a way for them to appeal. This method is enabled and disabled by
       the `Class.Players.BanningEnabled` property, which you can toggle in
       Studio.
 
-      ##### Banning and Messaging
+      #### Banning and Messaging
 
       Banned users will be immediately evicted and prevented from rejoining your
       experiences. They will be presented with an error modal displaying the
@@ -369,7 +370,7 @@ methods:
       to a text filter. For more information on acceptable modal text, see
       [ban messaging](../../../players/index.md#message-guidelines).
 
-      ##### Places and Universe
+      #### Places and Universe
 
       By default, bans extend to any place within that universe. To limit the
       ban to only the place from which this API is called, configure
@@ -378,16 +379,23 @@ methods:
       from the entirety of the universe, irrespective of whether a universal ban
       is in place or not.
 
-      ##### Alternative Accounts
+      #### Alternative Accounts
 
       Users often play under multiple different accounts, known as alternate
-      accounts or alt accounts, which are sometimes used to circumvent account
-      bans. To help you keep banned users out, the default behavior of this API
-      will propagate all bans from the source account you banned to any of their
-      suspected alt accounts. You can turn off ban propagations to alt accounts
-      by configuring `ExcludeAltAccounts` to `true`.
+      accounts, which are sometimes used to circumvent account bans. To help you
+      keep banned users out, the default behavior of this API will propagate all
+      bans from the source account you banned to any of their suspected
+      alternate accounts. You can turn off ban propagations to alternate
+      accounts by configuring `ExcludeAltAccounts` to `true`.
 
-      ##### Ban Duration
+      #### Device Blocks
+
+      To help address disruptive users who circumvent alternate account
+      detection, set `ApplyDeviceBlock` to `true`. This blocks the banned user's
+      device from rejoining the experience for 24 hours after the ban is
+      applied.
+
+      #### Ban Duration
 
       Not all transgressions are the same, so not all bans should be the same
       length. This API lets you configure the duration of the ban, in seconds,
@@ -400,7 +408,7 @@ methods:
       characters and are not text filtered. `PrivateReason` notes are never
       shared with the client and can be considered safe from attackers.
 
-      ##### Errors and Throttling
+      #### Errors and Throttling
 
       This method invokes an HTTP call to backend services which are subject to
       throttling and may fail. If you're calling this API with more than one
@@ -415,7 +423,7 @@ methods:
       The message will always include `failure for UserId {}` if it is an HTTP
       error.
 
-      ##### Client-Side Requirement
+      #### Client-Side Requirement
 
       Because of the risks associated with banning users, this method may only
       be called on the backend experience server (client-side calls will result
@@ -454,7 +462,11 @@ methods:
             is `1000`.
 
           - `ExcludeAltAccounts` (optional; boolean) — When `true`, Roblox does
-            not attempt to ban alt accounts. Default is `false`.
+            not attempt to ban alternate accounts. Default is `false`.
+
+          - `ApplyDeviceBlock` (optional; boolean) — When `true`, Roblox will
+            block banned users' devices from rejoining the experience for 24
+            hours after the ban is applied. Default is `false`.
     returns:
       - type: ()
         summary: ''
@@ -758,7 +770,7 @@ methods:
         </tr>
       </table>
 
-      ##### Assets Sub-Table
+      #### Assets Sub-Table
 
       The `assets` table is an array of tables containing the following keys
       that describe the assets currently equipped by the player:
@@ -788,13 +800,13 @@ methods:
         </tr>
       </table>
 
-      ##### Scales Sub-Table
+      #### Scales Sub-Table
 
       The `scales` table has the following keys, each a number corresponding to
       one `Class.Humanoid` scaling property: `bodyType`, `head`, `height`,
       `proportion`, `depth`, `width`.
 
-      ##### Body Colors Sub-Table
+      #### Body Colors Sub-Table
 
       The `bodyColors` table has the following keys, each a number corresponding
       to a `Datatype.BrickColor` ID number which can be used with
@@ -1365,6 +1377,10 @@ methods:
       invalidate a previous ban with `ApplyToUniverse` set to `false`. In other
       words, a universe level unban will not invalidate a place level ban. The
       opposite also holds true.
+
+      For the case where a user's device may be blocked by a ban where
+      `ApplyDeviceBlock` was set to `true`, an unban applied by this method will
+      override the device block for the unbanned player.
 
       This method invokes a HTTP call to backend services, which are throttled
       and may fail. If you are calling this API with multiple UserIds, this
