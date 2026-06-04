@@ -40,6 +40,28 @@ export const sections = [
     ]
   },
   {
+    title: "Success story",
+    description: "Creators across the platform are using Ads Manager to grow, sustain, and scale their audiences. Here's how one top-100 experience turned advertising into a core discovery channel.",
+    successStory: true,
+    storyTitle: "Precision control: How Hypershot sustains top-tier rankings",
+    paragraphs: [
+      "Creating a great game will naturally help drive organic plays, but organic reach is just one piece of the puzzle. Hypershot, a top 100 game on Roblox, is a clear example of how creators can use Ads Manager to help drive consistent growth and visibility, even at the highest levels of success.",
+      "Beyond mere volume, ads provide a way to quickly test and scale winning creatives to capture more plays. By scaling from 10 to 25 unique creatives, the Hypershot team identified and validated high-performing visual concepts that optimized their clickthrough rate for maximized impressions, while simultaneously pausing weaker-performing assets. This proactive strategy helped ensure a steady flow of players into the game, leveraging their strong monetization funnel.",
+      <>Today, Sponsored Ads are a key discovery channel for Hypershot, <strong>accounting for up to 10% of plays</strong>. By strategically deploying "Plays" campaigns targeting All Players and Recent Players, Hypershot demonstrates that Ads Manager is a vital tool for sustaining and protecting a game's position at the top of the charts.</>
+    ],
+    images: [
+      { src: "../../assets/promotion/ads-manager/Hypershot1.webp", alt: "Hypershot creative featuring a sniper character" },
+      { src: "../../assets/promotion/ads-manager/Kawaii.webp", alt: "Hypershot pink Kawaii-style weapon skin creative" },
+      { src: "../../assets/promotion/ads-manager/ShotAt.webp", alt: "Hypershot creative showing a first-person sniper exchange" },
+      { src: "../../assets/promotion/ads-manager/DragonNew.webp" , alt: "Hypershot creative featuring a flaming dragon weapon skin" }
+    ],
+    testimonial: {
+      quote: "I love that the Ads Manager's algorithm automatically targets relevant players, which drives meaningful engagement. On top of that, the ability to customize a specific audience gives me the precision I need to reach exactly who I want, making every ad dollar go further.",
+      author: "PhoenixSigns",
+      role: "CEO, Frosted Studio"
+    }
+  },
+  {
     title: "Start earning with ads",
     row: true,
     video: "https://www.youtube-nocookie.com/embed/-HYByqvW2uc",
@@ -139,6 +161,40 @@ export const sections = [
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen >
           </iframe>
+        </Grid>
+      </Grid>
+      )}
+      { section.successStory && (
+      <Grid container spacing={8}>
+        <Grid item xs={12} md={6}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+            {section.images.map((image, imgIndex) => (
+              <img
+                key={imgIndex}
+                src={image.src}
+                alt={image.alt}
+                style={{ width: '100%', aspectRatio: 16/9, minWidth: 0, objectFit: 'cover', display: 'block', borderRadius: 8 }}
+              />
+            ))}
+          </div>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <h3 style={{ marginTop: 0 }}>{section.storyTitle}</h3>
+          {section.paragraphs && section.paragraphs.map((paragraph, pIndex) => (
+            <p key={pIndex}>{paragraph}</p>
+          ))}
+          {section.testimonial && (
+            <Card variant="filled" style={{ marginTop: 24 }}>
+              <CardContent>
+                <Typography component="p" style={{ fontStyle: 'italic' }}>
+                  {section.testimonial.quote}
+                </Typography>
+                <Typography component="p" style={{ marginTop: 12, fontWeight: 'bold' }}>
+                  &mdash; {section.testimonial.author}, {section.testimonial.role}
+                </Typography>
+              </CardContent>
+            </Card>
+          )}
         </Grid>
       </Grid>
       )}
