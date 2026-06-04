@@ -1319,7 +1319,7 @@ methods:
           confirms the prompt.
       - name: outfitOptions
         type: Dictionary
-        default:
+        default: nil
         summary: |
           Reserved for future options. Must be empty or omitted.
       - name: outfitType

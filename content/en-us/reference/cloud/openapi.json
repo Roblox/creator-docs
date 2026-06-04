@@ -39310,7 +39310,7 @@
             "description": "0: Authorization has been denied for this request."
           },
           "403": {
-            "description": "0: Token Validation Failed\r\n23: Insufficient permissions to complete the request.\r\n28: Group has paid out too recently. Please wait and try again.\r\n35: 2-Step Verification is required to make further transactions. Go to Settings > Security to complete 2-Step Verification."
+            "description": "0: Token Validation Failed\r\n23: Insufficient permissions to complete the request.\r\n28: Group has paid out too recently. Please wait and try again.\r\n35: 2-Step Verification is required to make further transactions. Go to Settings > Security to complete 2-Step Verification.\r\n52: Group has paid out to this recipient too many times recently. Please try again later."
           },
           "503": {
             "description": "22: The feature is disabled."

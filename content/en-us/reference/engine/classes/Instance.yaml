@@ -815,6 +815,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - CreateInstances
+    simulationAccess: true
   - name: Instance:clone
     summary: ''
     description: ''
@@ -832,6 +833,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - CreateInstances
+    simulationAccess: true
   - name: Instance:Destroy
     summary: |
       Sets the `Class.Instance.Parent` property to `nil`, locks the

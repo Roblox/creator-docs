@@ -164,6 +164,26 @@ properties:
       can_save: true
     capabilities:
       - UI
+  - name: UIShadow.Enabled
+    summary: |
+      Determines whether the `UIShadow` is visible.
+    description: |
+      This property determines whether the `UIShadow` is visible. Default is
+      `true`.
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
 methods: []
 events: []
 callbacks: []
