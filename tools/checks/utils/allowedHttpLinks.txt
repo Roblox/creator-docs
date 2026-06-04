@@ -594,6 +594,8 @@ https://www.youtube-nocookie.com/embed/AzKZy2BqIh8
 https://github.com/Roblox/foreman
 https://github.com/nvm-sh/nvm
 https://github.com/Roblox/foreman?tab=readme-ov-file
+https://github.com/rojo-rbx/rokit
+https://github.com/rojo-rbx/rokit#-rokit
 https://rojo.space/docs/v7/getting-started/new-game/
 https://rojo.space/docs/v7/getting-started/existing-game/
 https://rojo.space/docs/v7/

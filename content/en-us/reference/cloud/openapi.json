@@ -68555,6 +68555,157 @@
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v3_users__userId__two_step_verification_login"
         }
       }
+    },
+    "/v4/avatar": {
+      "get": {
+        "summary": "Gets the currently wearing avatar definition for the authenticated user.",
+        "description": "Returns an Roblox.Api.Avatar.Models.V4.AvatarDefinition containing an Roblox.Api.Avatar.Models.V4.AvatarModelV4 and Roblox.Api.Avatar.Models.V4.AvatarConfigurations.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "selectionTypes",
+            "description": "Selection types for the avatar data to return.",
+            "required": true,
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int32",
+                "description": "Defines the data that can be requested or modified while retrieving or\r\nupdating the AvatarDefinition.",
+                "enum": [0, 1, 2, 3, 4, 5],
+                "type": "integer"
+              }
+            }
+          },
+          {
+            "in": "header",
+            "name": "Roblox-Place-Id",
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.AvatarDefinition"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.AvatarDefinition"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://avatar.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
+    "/v4/outfits/{outfitId}/details": {
+      "get": {
+        "summary": "Gets the definition for an outfit.",
+        "description": "Returns an Roblox.Api.Avatar.Models.V4.OutfitDefinition containing an Roblox.Api.Avatar.Models.V4.OutfitModelV4 and background Roblox.Api.Avatar.Models.V4.OutfitConfigurations.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "outfitId",
+            "description": "The outfit id.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "selectionTypes",
+            "description": "The selection types for the outfit data to return.",
+            "required": true,
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int32",
+                "description": "Defines the data that can be requested while retrieving an OutfitDefinition.",
+                "enum": [0, 1],
+                "type": "integer"
+              }
+            }
+          },
+          {
+            "in": "header",
+            "name": "Roblox-Place-Id",
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.OutfitDefinition"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.OutfitDefinition"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "2: The outfit for the specified userOutfit is invalid."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "3: The requester does not have access to the details for the given user outfit."
+          },
+          "404": {
+            "description": "1: The specified userOutfitId is invalid."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://avatar.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
     }
   },
   "components": {
@@ -77375,6 +77526,49 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Api.Avatar.Models.AvatarThumbnailCustomizationCameraModel": {
+        "description": "A model describing a the camera details for a single avatar thumbnail customization.",
+        "type": "object",
+        "properties": {
+          "fieldOfViewDeg": {
+            "format": "double",
+            "description": "Field of view for the camera, in degrees.",
+            "type": "number"
+          },
+          "yRotDeg": {
+            "format": "double",
+            "description": "Rotation around y axis, in degrees.",
+            "type": "number"
+          },
+          "distanceScale": {
+            "format": "double",
+            "description": "There's a natural camera distance we calculate based on avatar size. Apply this scale to that distance.",
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.AvatarThumbnailCustomizationModel": {
+        "description": "A model describing a single avatar thumbnail customization.",
+        "type": "object",
+        "properties": {
+          "thumbnailType": {
+            "format": "int32",
+            "description": "What type of 2D thumbnail are we customizing: |Closeup, FullBody.",
+            "enum": [0, 1, 2],
+            "type": "integer"
+          },
+          "emoteAssetId": {
+            "format": "int64",
+            "description": "What emote are we using to pose the avatar in the thumbnail.",
+            "type": "integer"
+          },
+          "camera": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AvatarThumbnailCustomizationCameraModel"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Api.Avatar.Models.BodyColorModel": {
         "description": "A model container BrickColor ids for each body part.",
         "type": "object",
@@ -77804,6 +77998,146 @@
           },
           "isPlayerChoice": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.AvatarBackgroundModel": {
+        "description": "A model containing avatar background data.",
+        "type": "object",
+        "properties": {
+          "backgroundAsset": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AssetModelV2"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.AvatarConfigurations": {
+        "description": "Avatar config details.",
+        "type": "object",
+        "properties": {
+          "emotes": {
+            "description": "The emotes on the character.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.EmoteResponseModel"
+            }
+          },
+          "background": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.AvatarBackgroundModel"
+          },
+          "thumbnailCustomizations": {
+            "description": "List of customizations set for this avatar. At most one per thumbnail type (Closeup, FullBody).",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AvatarThumbnailCustomizationModel"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.AvatarDefinition": {
+        "description": "Details about an avatar.",
+        "type": "object",
+        "properties": {
+          "avatarModel": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.AvatarModelV4"
+          },
+          "avatarConfigurations": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.AvatarConfigurations"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.AvatarModelV4": {
+        "description": "A model containing details about an avatar.",
+        "type": "object",
+        "properties": {
+          "scales": {
+            "$ref": "#/components/schemas/Roblox.Web.Responses.Avatar.ScaleModel"
+          },
+          "playerAvatarType": {
+            "format": "int32",
+            "description": "The avatar type.",
+            "enum": [1, 3],
+            "type": "integer"
+          },
+          "bodyColor3s": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.BodyColors3Model"
+          },
+          "assets": {
+            "description": "The assets worn on the character.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AssetModelV2"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.OutfitConfigurations": {
+        "description": "Background configuration for an outfit.",
+        "type": "object",
+        "properties": {
+          "background": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.AvatarBackgroundModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.OutfitDefinition": {
+        "description": "Details about an outfit.",
+        "type": "object",
+        "properties": {
+          "outfitModel": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.OutfitModelV4"
+          },
+          "outfitConfigurations": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.OutfitConfigurations"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.OutfitModelV4": {
+        "description": "A model containing core outfit details.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "The outfit id.",
+            "type": "string"
+          },
+          "name": {
+            "description": "The outfit name.",
+            "type": "string"
+          },
+          "isEditable": {
+            "description": "Whether the outfit can be modified by the user.",
+            "type": "boolean"
+          },
+          "outfitType": {
+            "format": "int32",
+            "description": "The type of the outfit.",
+            "enum": [0, 1, 2, 4, 5],
+            "type": "integer"
+          },
+          "assets": {
+            "description": "The assets on the outfit.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AssetModelV2"
+            }
+          },
+          "bodyColor3s": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.BodyColors3Model"
+          },
+          "scale": {
+            "$ref": "#/components/schemas/Roblox.Web.Responses.Avatar.ScaleModel"
+          },
+          "playerAvatarType": {
+            "format": "int32",
+            "description": "The player avatar type.",
+            "enum": [1, 3],
+            "type": "integer"
           }
         },
         "additionalProperties": false

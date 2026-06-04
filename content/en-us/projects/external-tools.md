@@ -24,27 +24,30 @@ At its core, using external tools with Roblox is a _syncing_ problem:
 
 For the whole solution to feel seamless and automatic, you need to a) listen for changes to files and b) incorporate these changes back into Studio.
 
-Rather than Roblox's cloud-first approach, Rojo allows for a "file system-first" approach. It extracts instances in your project into external files. Then it runs a server. The Rojo plugin connects to the server to synchronize those files with Studio.
+Rather than Roblox's cloud-first approach, [Rojo](https://rojo.space/) allows for a "file system-first" approach. It runs a server on your machine that communicates with a [Studio plugin](../studio/plugins.md) to synchronize your files and the Studio data model.
 
-## Install Rojo with Foreman
+## Install Rojo with Rokit
 
-You can manually download and run a Rojo binary, but that approach runs the risk of different developers on your team using different Rojo versions. A better solution is to use a tool manager like [Foreman](https://github.com/Roblox/foreman), which uses a configuration file—a list of repositories and versions—to make the installation and upgrade process consistent across machines.
+You can manually download and run a Rojo binary, but that approach runs the risk of different developers on your team using different Rojo versions. A better solution is to use a toolchain manager like [Rokit](https://github.com/rojo-rbx/rokit), which uses a configuration file—a list of repositories and versions—to make the installation and upgrade process consistent across machines.
 
-Because it manages your baseline development environment rather than the packages within your project, Foreman is more akin to [nvm](https://github.com/nvm-sh/nvm) than [npm](https://www.npmjs.com/), but the comparison isn't perfect. A simple `foreman.toml` file looks like this:
+Because it manages your baseline development environment rather than the packages within your project, Rokit is more akin to [nvm](https://github.com/nvm-sh/nvm) than [npm](https://www.npmjs.com/), but the comparison isn't perfect. A simple `rokit.toml` file looks like this:
 
 ```toml
 [tools]
-rojo = { github = "rojo-rbx/rojo", version = "7.4.1" }
-wally = { github = "UpliftGames/wally", version = "0.3.2" }
+rojo = "rojo-rbx/rojo@7.6.1"
+wally = "upliftgames/wally@0.3.2"
+lune = "lune-org/lune@0.10.4"
 ```
 
-Then you install these tools with `foreman install`. In addition to a global `foreman.toml` file, Foreman supports per-project files, so you can easily use different versions of Rojo, Wally, or any other tool for different projects and keep your entire team on those same versions.
+Then you install these tools with `rokit install`. In addition to a global `rokit.toml` file, Rokit supports per-project files, so you can easily use different versions of Rojo, Wally, or any other tool for different projects and keep your entire team on those same versions.
 
-When a tool releases a new version, you then explicitly bump the version number in your `.toml` file, use Foreman to perform the upgrade, test the new version, and downgrade if it causes any problems. For commands and installation instructions, see [Foreman](https://github.com/Roblox/foreman?tab=readme-ov-file#installation).
+When a tool releases a new version, you then explicitly bump the version number in your `.toml` file, use Rokit to perform the upgrade, test the new version, and downgrade if it causes any problems. For commands and installation instructions, see [Rokit](https://github.com/rojo-rbx/rokit#-rokit).
 
 ## Run Rojo
 
-After you install Rojo with Foreman, what you've really installed is the Rojo server. The next step is to install the Rojo plugin for Roblox Studio:
+After you install Rojo with Rokit, what you've really installed is the Rojo server. The next step is to install the Rojo plugin for Roblox Studio.
+
+You can install it from the [Creator Store](https://create.roblox.com/store/asset/13916111004/Rojo) or install it locally with this command:
 
 ```bash
 rojo plugin install
@@ -64,7 +67,7 @@ Alternatively, you can [port an existing experience](https://rojo.space/docs/v7/
 rojo serve
 ```
 
-In Roblox Studio, open the `.rbxl` file you just built, start the Rojo plugin, and connect to your now-running server, at which point you can start making changes in your preferred text editor and watch those changes automatically sync back to Studio.
+In Roblox Studio, open the `.rbxl` file you just built, open the Rojo plugin, and connect to your now-running server, at which point you can start making changes in your preferred text editor and watch those changes automatically sync back to Studio.
 
 ![Visual Studio Code with a Rojo project open.](../assets/scripting/external-tools/external-tools-vscode.png)
 
@@ -74,7 +77,7 @@ Rojo projects have certain naming requirements for files, numerous configuration
 
 ## Package managers
 
-Roblox has a robust set of included APIs, but if you want to make use of community software packages in a consistent, reproducible way, you need a package manager. [Wally](https://wally.run/) is a popular option. You can install it through Foreman, just like Rojo.
+Roblox has a robust set of included APIs, but if you want to make use of community software packages in a consistent, reproducible way, you need a package manager. [Wally](https://wally.run/) is a popular option. You can install it through Rokit, just like Rojo.
 
 Within your experience's Rojo directory, run `wally init`. Then add your desired packages to `wally.toml`. The file might look like this:
 
@@ -86,8 +89,8 @@ registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
-react = "jsdotlua/react@17.1.0"
-react-roblox = "jsdotlua/react-roblox@17.1.0"
+react = "jsdotlua/react@17.2.1"
+react-roblox = "jsdotlua/react-roblox@17.2.1"
 cryo = "phalanxia/cryo@1.0.3"
 ```
 
@@ -139,7 +142,7 @@ local helloFrame = React.createElement("TextLabel", {
 root:render(helloFrame)
 ```
 
-Like most other software projects, the goal is that contributors can clone a repository, install Foreman, run a few commands, and have the same development environment as the rest of the team.
+Like most other software projects, the goal is that contributors can clone a repository, install Rokit, run a few commands, and have the same development environment as the rest of the team.
 
 <Alert severity="success">
 For a detailed walkthrough of using React to create a Roblox UI, see [React + Roblox](https://devforum.roblox.com/t/how-to-react-roblox/2964543).
