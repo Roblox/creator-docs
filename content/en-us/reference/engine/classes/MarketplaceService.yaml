@@ -58,7 +58,7 @@ methods:
         not been processed yet. The receipt remains unresolved and will be
         delivered again on the next opportunity.
 
-      #### Receipt info dictionary
+      #### Receipt Info Dictionary
 
       The receipt info dictionary passed to the `handler` contains the following
       fields:
@@ -113,18 +113,21 @@ methods:
       </tbody>
       </table>
 
-      #### Receipt timing
+      #### Receipt Timing
 
-      For Robux transfer receipts, the timing of when `handler` is invoked
-      depends on whether the transfer required receiver approval:
+      For Robux transfer receipts, `handler` is invoked once the transfer
+      settles. A settled receipt is delivered to whichever server the user is
+      currently in (the user does not need to rejoin).
 
-      - **`Enum.ReceiptType.RobuxTransferReceiver`** &mdash; Always invoked on
-        the receiver's next server join, never while the receiver is still in
-        the originating server. Holds regardless of whether the transfer
-        required approval.
-      - **`Enum.ReceiptType.RobuxTransferSender`** &mdash; Invoked immediately
-        if the transfer settled without needing receiver approval, otherwise
-        deferred until the sender's next server join.
+      - `Enum.ReceiptType.RobuxTransferReceiver` &mdash; Delivered to the server
+        the receiver is currently in once the transfer settles. If the receiver
+        is offline at that time, delivery happens the next time they join a
+        server.
+      - `Enum.ReceiptType.RobuxTransferSender` &mdash; Delivered immediately if
+        the transfer settles synchronously. If the transfer is gated on receiver
+        approval (for example, parental consent), delivery happens once the
+        receiver accepts, to whichever server the sender is currently in or on
+        their next join if they are offline.
 
       The user must be on a server for `handler` to fire.
 
@@ -325,7 +328,7 @@ methods:
         </tbody>
       </table>
 
-      ##### Creator Information
+      #### Creator Information
 
       <table size="small">
         <thead>
@@ -364,7 +367,7 @@ methods:
         </tbody>
       </table>
 
-      ##### Asset Information
+      #### Asset Information
 
       <table size="small">
         <thead>
@@ -423,7 +426,7 @@ methods:
         </tbody>
       </table>
 
-      ##### Collectibles Information
+      #### Collectibles Information
 
       <table size="small">
         <thead>
@@ -476,7 +479,7 @@ methods:
         </tbody>
       </table>
 
-      ##### Sale Location Settings
+      #### Sale Location Settings
 
       <table size="small">
         <thead>
@@ -597,11 +600,9 @@ methods:
       Returns the product information of a subscription for the given
       `subscriptionId`.
     description: |
-      **Note**: Because it returns a localized price, you can only call this
-      method from a `Class.Script` with `Enum.RunContext.Client`.
-
       Returns the product information of a subscription for the given
-      `subscriptionId`.
+      `subscriptionId`. Because it returns a localized price, you can only call
+      this method from a `Class.Script` with `Enum.RunContext.Client`.
 
       <table size="small">
       	<thead>
@@ -683,13 +684,13 @@ methods:
       - AssetRead
   - name: MarketplaceService:GetUsersPriceLevelsAsync
     summary: |
-      Returns the regionalized price level of a user, representing the
-      recommended price for an item in their regional market.
+      Returns the regionalized price levels of users, representing the
+      recommended price for an item in each user's regional market.
     description: |
-      Returns the regionalized price level of a user, representing the
-      recommended price for an item in their regional market. For example, a
-      price level of 100 means that the suggested price for that user (based on
-      their region and purchasing power) is 100 Robux.
+      Returns the regionalized price levels of users, representing the
+      recommended price for an item in each user's regional market. For example,
+      a price level of 100 means that the suggested price for that user (based
+      on their region and purchasing power) is 100 Robux.
 
       See
       [Protect your trades and gifts](../../../production/monetization/regional-pricing.md#protect-your-trades-and-gifts)
@@ -801,12 +802,10 @@ methods:
       Returns an `Library.table|Array` that contains up to one year of the
       user's subscription payment history for the given `subscriptionId`.
     description: |
-      **Note**: You can only call this method from a `Class.Script` with
-      `Enum.RunContext.Server`.
-
       Returns an `Library.table|Array` that contains up to one year of the
       user's subscription payment history for the given `subscriptionId`, sorted
-      from the most recent status to the least recent.
+      from the most recent status to the least recent. You can only call this
+      method from a `Class.Script` with `Enum.RunContext.Server`.
 
       Each entry in the payment history `Library.table|Array` contains the
       following keys:
@@ -1282,7 +1281,7 @@ methods:
       experience, see
       [Engagement-based payouts](../../../production/monetization/engagement-based-payouts.md).
 
-      ##### See also
+      #### See Also
 
       - `Class.MarketplaceService.PromptPremiumPurchaseFinished` which fires
         when the Premium purchase UI closes.
@@ -1402,7 +1401,7 @@ methods:
       successfully subscribes, any experience-defined rewards for the upsell are
       granted automatically through the engine API.
 
-      ##### See also
+      #### See Also
 
       - `Class.MarketplaceService.PromptRobloxSubscriptionPurchaseFinished`
         which fires when the Roblox Plus purchase UI closes.
@@ -1446,17 +1445,21 @@ methods:
       `transferRequestId` returned by this method, which you can use for logging
       or to correlate sender and receiver receipts.
 
-      ##### Receipt timing
+      #### Receipt Timing
 
-      Receipt delivery depends on whether the transfer required receiver
-      approval (for example, parental consent for the receiver's account):
+      Both receipts are delivered to whichever server the corresponding user is
+      currently in once the transfer settles (neither side needs to rejoin). If
+      a transfer is gated on receiver approval, for example parental consent for
+      the receiver's account, it does not settle until approval lands; receipts
+      are delivered after that point.
 
-      - **Receiver receipt** is always deferred until the receiver's next
-        session join. It is **not** delivered while the receiver is in the
-        originating server, regardless of whether approval was required.
+      - **Receiver receipt** is delivered to the server the receiver is
+        currently in once the transfer settles, or on their next session join if
+        they are offline.
       - **Sender receipt** is delivered immediately if the transfer settles
-        without needing receiver approval. If approval is required, it is
-        deferred until the sender's next session join.
+        synchronously. If approval is required, it is delivered to the server
+        the sender is currently in once the receiver accepts, or on the sender's
+        next session join if they are offline.
 
       #### Errors
 
@@ -1756,7 +1759,7 @@ events:
       when a user receives the purchase prompt and clicks **Cancel**, or when
       they receive a success or error message and click **OK**.
 
-      ##### See also
+      #### See Also
 
       - For repeatable **developer product** purchase prompts, use
         `Class.MarketplaceService.PromptProductPurchaseFinished|PromptProductPurchaseFinished`.
@@ -1810,7 +1813,7 @@ events:
       example, when a user receives the purchase prompt and clicks **Cancel**,
       or when they receive a success or error message and click **OK**.
 
-      ##### See also
+      #### See Also
 
       - `Class.MarketplaceService.PromptPremiumPurchase|PromptPremiumPurchase`
         to prompt a user to purchase Premium.
@@ -1854,7 +1857,7 @@ events:
       The `PromptProductPurchaseFinished` event fires with a `Player.UserId`
       instead of a reference to the `Player` object.
 
-      ##### See also
+      #### See Also
 
       - `Class.MarketplaceService.PromptGamePassPurchaseFinished|PromptGamePassPurchaseFinished`
         to prompt a user to purchase a pass.
@@ -1904,7 +1907,7 @@ events:
       [developer product](../../../production/monetization/developer-products.md)
       or [pass](../../../production/monetization/passes.md) prompts.
 
-      ##### See also
+      #### See Also
 
       - `Class.MarketplaceService.PromptGamePassPurchaseFinished|PromptGamePassPurchaseFinished`
         to prompt a user to purchase a pass.
@@ -1953,7 +1956,7 @@ events:
       `Class.Instance:GetPropertyChangedSignal()` on the server to confirm a
       subscription change before granting rewards.
 
-      ##### See also
+      #### See Also
 
       - `Class.MarketplaceService.PromptRobloxSubscriptionPurchase|PromptRobloxSubscriptionPurchase`
         to prompt a user to purchase Roblox Plus.
@@ -1987,7 +1990,7 @@ events:
       and clicks **Cancel**, or when they receive a success or error message and
       click **OK**.
 
-      ##### See also
+      #### See Also
 
       - `Class.MarketplaceService.PromptSubscriptionPurchase|PromptSubscriptionPurchase`
         to prompt a user to purchase a subscription.
@@ -2031,14 +2034,14 @@ callbacks:
       server-side `Class.Script|Script`. This callback must handle the receipts
       for all developer products you have for sale.
 
-      **IMPORTANT:** We **highly recommend** that you properly implement the
+      **IMPORTANT:** It's **highly recommended** that you properly implement the
       `ProcessReceipt` callback in order to sell your developer products. You
       should use `ProcessReceipt` to grant users their purchased product over
       any other granting method. If your `ProcessReceipt` implementation isn't
       correct, you will **not** be able to grant users the products they have
       purchased on the Store tab of your experience details page.
 
-      ##### Guarantees
+      #### Guarantees
 
       The `ProcessReceipt` callback is called for all unresolved developer
       product purchases when:
@@ -2058,7 +2061,7 @@ callbacks:
         enum of `Enum.ProductPurchaseDecision.PurchaseGranted|PurchaseGranted`.
       - The purchase is successfully recorded on Roblox's backend.
 
-      ##### Unresolved developer product purchases
+      #### Unresolved Developer Product Purchases
 
       An **unresolved developer product purchase** takes place when a user's
       purchase of a developer product has not yet been acknowledged by the
@@ -2067,7 +2070,7 @@ callbacks:
       Unresolved developer product purchases are not removed or refunded after
       the escrow period expires.
 
-      ##### Retries and timeouts
+      #### Retries and Timeouts
 
       `ProcessReceipt` has no time-based retry mechanism. If a user makes a
       purchase that returns a `Enum.ProductPurchaseDecision` enum of
@@ -2081,7 +2084,7 @@ callbacks:
       `ProcessReceipt` callback can yield for as long as the server is running,
       and the callback result is still accepted when the result returns.
 
-      ##### Limitations
+      #### Limitations
 
       - If you don't implement a `ProcessReceipt` callback, your receipts will
         be auto-acknowledged. You can't get a receipt back after it has been

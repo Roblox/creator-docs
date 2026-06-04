@@ -19,8 +19,9 @@ items:
   - name: NotProcessedYet
     summary: |
       The receipt has not been processed yet. Returning this value keeps the
-      receipt unresolved so it will be delivered again on the next opportunity,
-      such as when the user rejoins a server.
+      receipt unresolved so it will be redelivered to the user's handler later,
+      either during their existing session or the next time they join a server
+      if they have disconnected.
     value: 0
     tags: []
     deprecation_message: ''

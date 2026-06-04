@@ -133,7 +133,7 @@ properties:
       read: PluginSecurity
       write: PluginSecurity
     thread_safety: ReadSafe
-    category: Data
+    category: Listening
     serialization:
       can_load: true
       can_save: true
