@@ -5,8 +5,6 @@ description: The Roblox Developer Exchange Program allows eligible creators to e
 
 The **Roblox Developer Exchange Program** (**DevEx**) is a program that allows eligible creators to exchange their Earned Robux for real-world local currency.
 
-<img src="../../assets/monetization/earning/DevEx-Overview.png" width="80%" alt="" />
-
 ## What is Earned Robux?
 
 **Earned Robux** is Robux that you can earn from creating value on the platform, including:
@@ -33,7 +31,7 @@ Roblox maintains the exclusive right to decide if any Robux qualifies as Earned 
 
 The standard exchange rate for the DevEx program is `0.0038` per 1 Earned Robux, which comes out to $114 USD for 30,000 Earned Robux.
 
-Starting June 8, 2026, Roblox will offer a higher exchange rate of `0.0054` for certain Earned Robux in eligible games from purchases of developer products, passes, subscriptions, and private servers from U.S. players who have verified their age as at least 18 years old through [facial age estimation](https://about.roblox.com/age-estimation) or [government ID](../publishing/account-verification.md#verify-through-government-id). For more information, see the [U.S. 18+ exchange rate](./18-plus-devex-rate.md).
+Roblox offers a higher exchange rate of `0.0054` for certain Earned Robux in eligible games from purchases of developer products, passes, subscriptions, and private servers from U.S. players who have verified their age as at least 18 years old through [facial age estimation](https://about.roblox.com/age-estimation) or [government ID](../publishing/account-verification.md#verify-through-government-id). For more information, see the [U.S. 18+ exchange rate](./18-plus-devex-rate.md).
 
 <BaseAccordion>
 <AccordionSummary>

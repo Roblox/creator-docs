@@ -84,7 +84,7 @@ methods:
           The `Class.Player` instance of the player potentially sending an
           invite.
       - name: recipientId
-        type: int64
+        type: User
         default: 0
         summary: |
           Optional `Class.Player.UserId` of the potential **recipient**, used to
@@ -187,7 +187,7 @@ methods:
           The string identifier of the event to retrieve. Must correspond to an
           event in the current experience.
     returns:
-      - type: Dictionary?
+      - type: ExperienceEvent?
         summary: |
           A dictionary describing the event, or `nil` if the event does not
           exist, belongs to another experience, or is otherwise unavailable.
@@ -329,7 +329,7 @@ methods:
       - SocialService-GetUpcomingExperienceEventsAsync
     parameters: []
     returns:
-      - type: Array
+      - type: List<ExperienceEvent>
         summary: |
           An array of dictionaries describing each active or upcoming event in
           the current experience, ordered by soonest start time first.

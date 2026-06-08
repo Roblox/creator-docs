@@ -73,7 +73,7 @@ methods:
         summary: |
           The connection type to check.
     returns:
-      - type: Array
+      - type: List<PluginConnection>
         summary: |
           An array of the currently connected `Class.PluginConnection` objects
           with that target type.

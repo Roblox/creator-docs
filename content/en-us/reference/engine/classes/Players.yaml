@@ -592,7 +592,7 @@ methods:
       - create-humanoid-model-from-userid
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The userId for a Roblox user. (The UserId is the number in the profile
@@ -623,7 +623,7 @@ methods:
       - create-humanoid-model-from-userid
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The userId for a Roblox user. (The UserId is the number in the profile
@@ -660,7 +660,7 @@ methods:
     code_samples: []
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: ''
     returns:
@@ -694,7 +694,7 @@ methods:
       - how-to-get-a-character-s-appearance
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The `Class.Player.UserId` of the specified player.
@@ -816,7 +816,7 @@ methods:
       - example-return-dictionary
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The \*_userId_ of the specified player.
@@ -873,7 +873,7 @@ methods:
       - print-roblox-friends
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The user ID of the player being specified.
@@ -956,7 +956,7 @@ methods:
       - get-humanoiddescription-from-userid
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The userId for a Roblox user. (The UserId is the number in the profile
@@ -989,7 +989,7 @@ methods:
       - get-humanoiddescription-from-userid
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The userId for a Roblox user. (The UserId is the number in the profile
@@ -1026,7 +1026,7 @@ methods:
       - Name-From-UserId-Cache
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The `Class.Player.UserId` of the player being specified.
@@ -1059,7 +1059,7 @@ methods:
       - Players-GetPlayerByUserId1
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The `Class.Player.UserId` of the player being specified.
@@ -1231,7 +1231,7 @@ methods:
       - display-player-thumbnail
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The `Class.Player.UserId` of the player being specified.

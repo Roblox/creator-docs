@@ -197,7 +197,7 @@ methods:
       - following-a-player-in-a-universe
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The `Class.Player.UserId` of the `Class.Player`.

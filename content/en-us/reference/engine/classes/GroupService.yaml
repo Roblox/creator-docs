@@ -294,7 +294,7 @@ methods:
       - GetGroupsAsync
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The `Class.Player.UserId` of the user.
@@ -371,7 +371,7 @@ methods:
     code_samples: []
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The user's ID.

@@ -1638,7 +1638,7 @@ methods:
           should also be included in the return array. False means only include
           layered clothing accessories from the AccessoryBlob.
     returns:
-      - type: Array
+      - type: List<AccessoriesInfo>
         summary: |
           Returns an array where each entry specifies for an individual
           accessory the AccessoryType, AssetId, IsLayered, Order and Puffiness.

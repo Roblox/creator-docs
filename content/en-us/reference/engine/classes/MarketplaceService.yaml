@@ -704,7 +704,7 @@ methods:
         summary: |
           An array of user IDs.
     returns:
-      - type: Array
+      - type: List<PriceLevelInfo>
         summary: |
           Returns an array of `PriceLevelInfo` objects with a dictionary where
           the keys are user IDs (strings) and their values are the corresponding
@@ -1563,7 +1563,7 @@ methods:
           }
           ```
     returns:
-      - type: Array
+      - type: List<RankedItem>
         summary: |
           The array of ranked items in a personalized order for the current
           user.
@@ -1611,7 +1611,7 @@ methods:
           }
           ```
     returns:
-      - type: Array
+      - type: List<RankedItem>
         summary: |
           A ranked list of up to 50 items the user is most likely to engage
           with, based on the provided `InfoTypes`. If no recommendations can be
@@ -1649,7 +1649,7 @@ methods:
     code_samples: []
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The `Class.Player.UserId|UserId` of the `Class.Player` whose inventory

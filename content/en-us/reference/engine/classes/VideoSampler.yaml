@@ -81,7 +81,7 @@ methods:
           image frames. Each timestamp should be a number between `0` and
           `Class.VideoSampler.TimeLength|TimeLength`.
     returns:
-      - type: Array
+      - type: List<VideoSample>
         summary: |
           An array of dictionary or nil values for each requested timestamp. If
           a requested timestamp is out of range or the `Class.VideoSampler` was

@@ -93,7 +93,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Dictionary
+      - type: AnimationMemoryResult
         summary: |
           A dictionary tree of loaded animation clip memory, deduplicated by
           clip.
@@ -187,7 +187,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Dictionary
+      - type: AudioMemoryResult
         summary: |
           A dictionary tree of loaded audio asset memory, deduplicated by asset
           ID.
@@ -274,7 +274,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Dictionary
+      - type: InstanceCompositionResult
         summary: |
           A dictionary tree of instance counts grouped by category and class
           name.
@@ -350,7 +350,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Dictionary
+      - type: ScriptMemoryResult
         summary: |
           A dictionary tree of per-script Luau VM heap memory grouped by service
           and script type.
@@ -420,7 +420,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Dictionary
+      - type: TriangleCompositionResult
         summary: |
           A dictionary tree of triangle and draw call counts broken down by
           render pass type.
@@ -486,7 +486,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Dictionary
+      - type: UnparentedInstancesResult
         summary: |
           A dictionary tree of unparented instances grouped by the host script
           holding the reference.

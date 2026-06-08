@@ -1693,7 +1693,7 @@ methods:
     code_samples: []
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: ''
     returns:
@@ -1717,7 +1717,7 @@ methods:
     code_samples: []
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The `Class.Player.UserId` of the specified player.
@@ -1743,7 +1743,7 @@ methods:
     code_samples: []
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: ''
     returns:
@@ -1771,7 +1771,7 @@ methods:
     code_samples: []
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The `Class.Player.UserId` of the specified player.

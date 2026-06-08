@@ -7,10 +7,6 @@ The U.S. 18+ Roblox Developer Exchange Program (DevEx) Rate offers a higher exch
 
 The program's eligibility criteria prioritizes the expectations of an older American demographic, specifically high-quality character articulation and strong creative direction. These requirements aim to incentivize novel content that includes unique and in-depth gameplay mechanics or distinctive visual styles.
 
-<Alert severity="info">
-The U.S. 18+ DevEx rate takes effect on June 8, 2026.
-</Alert>
-
 ## Key definitions
 
 To understand the U.S. 18+ DevEx rate's eligibility criteria, it's important to familiarize yourself with the following terms and definitions.
@@ -99,7 +95,7 @@ To set your project-level avatar settings so that players can only join with R15
 
 #### Custom avatar systems
 
-If you're using a custom avatar system, make sure your setup meets the requirements above and the intent behind them. If it does, your game automatically qualifies at launch. Roblox will review on an ongoing basis and may remove eligibility for games that don't qualify. Eventually, Roblox will ask you to formally declare that your custom avatar setup qualifies.
+If you're using a custom avatar system, make sure your setup meets the requirements above and the intent behind them. If it does, your game automatically qualifies for the U.S. 18+ DevEx rate. Roblox reviews games on an ongoing basis and removes eligibility for games that don't qualify.
 
 ## Compliance checks
 
@@ -107,13 +103,13 @@ Roblox runs a background **compliance check** on eligible games to verify that t
 
 ## Group payouts
 
-If your game is owned by a group and the game acquires Earned Robux from eligible purchases, one-time payouts and recurring revenue splits respect the U.S. 18+ DevEx rate. Your one-time payouts will prioritize the U.S. 18+ DevEx rate, as well as your DevEx requests. When you cash or pay out the Earned Robux, you can view how much of it is from the U.S. 18+ DevEx rate and the standard exchange rate.
+If your game is owned by a group and the game acquires Earned Robux from eligible purchases, one-time payouts and recurring revenue splits respect the U.S. 18+ DevEx rate. Both your one-time payouts and DevEx requests prioritize the U.S. 18+ DevEx rate. When you cash or pay out the Earned Robux, you can view how much of it is from the U.S. 18+ DevEx rate and the standard exchange rate.
 
 ## Frequently asked questions
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant='buttonLarge'>When does the U.S. 18+ DevEx rate take effect?</Typography>
+<Typography variant='buttonLarge'>When did the U.S. 18+ DevEx rate take effect?</Typography>
 </AccordionSummary>
 <AccordionDetails>
 June 8, 2026.
@@ -161,6 +157,6 @@ No, the eligibility criteria only applies to player characters. Roblox does not 
 <Typography variant='buttonLarge'>I use a custom nonhuman-form avatar system. Do I need to do anything?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-No. If you're using a custom nonhuman-form avatar system, make sure your setup meets the requirements above and the intent behind them. If it does, your game automatically qualifies at launch. Roblox will review on an ongoing basis and may remove eligibility for games that don't qualify. Eventually, Roblox will ask you to formally declare that your custom avatar setup qualifies.
+No. If you're using a custom nonhuman-form avatar system, make sure your setup meets the requirements above and the intent behind them. If it does, your game automatically qualifies for the U.S. 18+ DevEx rate. Roblox reviews games on an ongoing basis and removes eligibility for games that don't qualify.
 </AccordionDetails>
 </BaseAccordion>

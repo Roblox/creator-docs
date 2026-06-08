@@ -726,7 +726,7 @@ methods:
     code_samples: []
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The `Class.Player.UserId|UserId` of the player to inspect.
