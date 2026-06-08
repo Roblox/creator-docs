@@ -143,7 +143,11 @@ If an instance property or method is accessed without a required capability, an 
 
 Finally, capabilities do not cover every instance in the Roblox Engine today. Instances not listed in this section or the following one are not available for interaction from a sandboxed container and throw an error saying that an **Unassigned** capability is not available to the current script.
 
-An additional limitation is that `Global.LuaGlobals.getfenv` and `Global.LuaGlobals.setfenv` functions are not available for scripts in a sandboxed container.
+An additional limitation is that `Global.LuaGlobals.getfenv()` and `Global.LuaGlobals.setfenv()` functions are not available for scripts in a sandboxed container. Calling them from a sandboxed script reports:
+
+```text
+The current thread cannot call ['getfenv'/'setfenv'] - the target uses APIs not available in the current sandbox
+```
 
 Only script access to instances is limited. The instances themselves can still exist and operate by themselves inside a sandboxed container. Lights still shine, user interfaces are still visible, and audio setups that are already wired play sounds.
 
@@ -166,12 +170,32 @@ When an event is fired or a function is invoked, connections are executed in the
 
 It is important to note that even with the **AccessOutsideWrite** capability, scripts in sandboxed containers cannot invoke events or functions outside their containers if they have a larger capability set than the container itself.
 
+When a sandboxed script tries to fire or invoke an event or function (`Class.BindableEvent`, `Class.BindableFunction`, or `Class.RemoteEvent`) whose ancestor capabilities exceed its own, the error names the property to inspect.
+
+If the target is not inside any sandboxed container:
+
+```text
+The current thread cannot fire '<Target>' since '<Target>' has the Sandboxed property set to false but the calling thread is sandboxed
+```
+
+To resolve this, set `Class.Instance.Sandboxed|Sandboxed` to `true` for the target. Alternatively, you can modify the source of the calling thread to have `Class.Instance.Sandboxed|Sandboxed` set to `false`, but this is not recommended as it eliminates the security benefits sandboxing provides.
+
+If the target is sandboxed but has capabilities the caller lacks:
+
+```text
+The current thread cannot fire '<Target>' since '<Target>' has additional values for the Capabilities property: <First Missing Capability> (and N more)
+```
+
+To resolve this, narrow the target's `Class.Instance.Capabilities|Capabilities` to a subset of the caller's, or expand the caller's `Class.Instance.Capabilities|Capabilities` to match the target's.
+
 ### Module require
 
 Inner `Class.ModuleScript|ModuleScripts` can be required by the sandboxed container as usual.
 However, if the target instance is outside the container, the `Class.ModuleScript` can only be required if the capability set that is available to it is smaller or equal to the capabilities available to the container.
 
 This limitation does not apply to **RunClientScript** and **RunServerScript** capabilities. If the `Class.ModuleScript` is placed in a container with only **RunClientScript** but is required from a script that has the **RunServerScript** capability, it is allowed to succeed and run those functions on the server.
+
+When `Global.LuaGlobals.require()` fails on a capability mismatch, the error names the target module and the property to inspect in the same manner as Bindable functions and events described in the previous section.
 
 ### Directly called functions
 

@@ -64914,7 +64914,6 @@
           {
             "in": "query",
             "name": "Taxonomy",
-            "required": true,
             "schema": {
               "type": "string"
             }
@@ -64922,7 +64921,6 @@
           {
             "in": "query",
             "name": "AssetTypeIds",
-            "required": true,
             "explode": true,
             "schema": {
               "type": "array",
@@ -64935,7 +64933,6 @@
           {
             "in": "query",
             "name": "BundleTypeIds",
-            "required": true,
             "explode": true,
             "schema": {
               "type": "array",
@@ -64948,7 +64945,6 @@
           {
             "in": "query",
             "name": "CategoryFilter",
-            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32",
@@ -64958,7 +64954,6 @@
           {
             "in": "query",
             "name": "SortAggregation",
-            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32",
@@ -64968,7 +64963,6 @@
           {
             "in": "query",
             "name": "SortType",
-            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32",
@@ -64978,7 +64972,6 @@
           {
             "in": "query",
             "name": "CreatorType",
-            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32",
@@ -64988,7 +64981,6 @@
           {
             "in": "query",
             "name": "CreatorTargetId",
-            "required": true,
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -64997,7 +64989,6 @@
           {
             "in": "query",
             "name": "CreatorName",
-            "required": true,
             "schema": {
               "type": "string"
             }
@@ -65005,7 +64996,6 @@
           {
             "in": "query",
             "name": "MaxPrice",
-            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -65014,7 +65004,6 @@
           {
             "in": "query",
             "name": "MinPrice",
-            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -65023,7 +65012,6 @@
           {
             "in": "query",
             "name": "Keyword",
-            "required": true,
             "schema": {
               "type": "string"
             }
@@ -65031,7 +65019,6 @@
           {
             "in": "query",
             "name": "IncludeNotForSale",
-            "required": true,
             "schema": {
               "type": "boolean"
             }
@@ -65039,7 +65026,6 @@
           {
             "in": "query",
             "name": "TriggeredByTopicDiscovery",
-            "required": true,
             "schema": {
               "type": "boolean"
             }
@@ -65047,7 +65033,6 @@
           {
             "in": "query",
             "name": "SalesTypeFilter",
-            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32",
@@ -65058,7 +65043,6 @@
             "in": "query",
             "name": "Topics",
             "description": "The input topics format is split by \",\". E.g \"topics=cat,hat,red\".",
-            "required": true,
             "schema": {
               "type": "string"
             }
@@ -69422,8 +69406,8 @@
             ],
             "description": "The type of audio (Music or SoundEffect).",
             "deprecated": true,
-            "x-enumNames": ["Music", "SoundEffect"],
-            "x-enum-varnames": ["Music", "SoundEffect"]
+            "x-enumNames": ["Music", "SoundEffect", "Unknown"],
+            "x-enum-varnames": ["Music", "SoundEffect", "Unknown"]
           },
           "artist": {
             "type": "string",
@@ -93159,11 +93143,11 @@
         ]
       },
       "SearchAudioTypeModel": {
-        "enum": ["Music", "SoundEffect"],
+        "enum": ["Music", "SoundEffect", "Unknown"],
         "type": "string",
         "description": "Represents audio type values that will be properly displayed in Swagger UI.",
-        "x-enumNames": ["Music", "SoundEffect"],
-        "x-enum-varnames": ["Music", "SoundEffect"]
+        "x-enumNames": ["Music", "SoundEffect", "Unknown"],
+        "x-enum-varnames": ["Music", "SoundEffect", "Unknown"]
       },
       "SearchCategoryType": {
         "enum": [
