@@ -111,5 +111,44 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
+  - name: UserService:GetUserFromGlobalUserIdAsync
+    summary: |
+      Returns a `Datatype.User` for the given global user ID within the current
+      experience.
+    description: |
+      Resolves a global user ID to a `Datatype.User` for the current experience
+      domain. Use this when you have a legacy global user ID (for example, one
+      previously saved in a data store) and need the corresponding
+      `Datatype.User` value.
+
+      This is a server-only yielding call.
+
+      ```lua
+      local UserService = game:GetService("UserService")
+
+      local user = UserService:GetUserFromGlobalUserIdAsync(globalUserId)
+      print(user.Id)         -- Domain user ID for this experience
+      print(user.DomainType) -- Enum.DomainType.EXPERIENCE
+      print(user.DomainId)   -- Current universe ID
+      ```
+    code_samples: []
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: |
+          The global user ID to resolve.
+    returns:
+      - type: User
+        summary: |
+          User: The `Datatype.User` representing the resolved domain-scoped
+          identity.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Basic
 events: []
 callbacks: []

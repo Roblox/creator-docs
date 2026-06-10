@@ -25,6 +25,10 @@ Even if an experience may not use multiple input contexts initially, it's recomm
 
    <img src="../assets/studio/explorer/ReplicatedStorage-InputContext.png" width="320" alt="New InputContext instance inside ReplicatedStorage, renamed to PlayContext" />
 
+3. In the [Properties](../studio/properties.md) window, set `Class.InputContext.Priority|Priority` to 2000 and enable `Class.InputContext.Sink|Sink`. A context with `Sink` enabled consumes input events for its bound KeyCodes at its priority level, blocking those inputs from reaching lower-priority contexts. This can be practical for use cases like an inventory screen that should suppress specific gameplay inputs while open. In this example, `PlayContext` is given a high enough `Class.InputContext.Priority|Priority` to sink its bound inputs before the default PlayerScripts contexts process them.
+
+   <img src="../assets/studio/properties/InputContext-Sink-Enabled.png" width="320" alt="Sink property of an InputContext enabled" />
+
 ## Input actions
 
 An `Class.InputAction` defines a gameplay action mechanic such as "Jump," "Sprint," or "Shoot." These actions are then mapped to hardware inputs using [input bindings](#input-bindings).
@@ -66,17 +70,27 @@ To test an `Class.InputAction` for simple character sprinting:
 
 1. Create a new `Class.InputAction`  inside the `PlayContext` context within `Class.ReplicatedStorage`. Rename it to `CharacterSprint` to indicate its dedicated action.
 
-   <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-InputAction.png" width="320" alt="New InputAction instance inside an InputContext, renamed to CharacterSprint" />
+   <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-SprintAction.png" width="320" alt="New InputAction instance inside an InputContext, renamed to CharacterSprint" />
 
 2. In the [Properties](../studio/properties.md) window, notice that the action's `Class.InputAction.Type|Type` is `Enum.InputActionType|Bool` (default). This is a logical type for simple character sprinting as a boolean `true`/`false` action (character is either sprinting or not sprinting).
 
-   <img src="../assets/studio/properties/InputAction-Type-Bool.png" width="320" alt="Type property of an InputAction set to Bool" />
+   <img src="../assets/studio/properties/SprintAction-Type-Bool.png" width="320" alt="Type property of an InputAction set to Bool" />
+
+To test an `Class.InputAction` for camera rotation:
+
+1. Create a new `Class.InputAction` inside the `PlayContext` context and rename it to `CameraRotate`.
+
+   <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-CameraAction.png" width="320" alt="New InputAction instance inside an InputContext, renamed to CameraRotate" />
+
+2. In the [Properties](../studio/properties.md) window, set the action's `Class.InputAction.Type|Type` to `Enum.InputActionType|Direction2D`. This reflects that camera rotation is a continuous 2D analog input rather than a discrete press/release.
+
+   <img src="../assets/studio/properties/CameraAction-Type-Direction2D.png" width="320" alt="Type property of an InputAction set to Direction2D" />
 
 ## Input bindings
 
 An `Class.InputBinding` defines which hardware binding should trigger the parent `Class.InputAction`, for example a key press, gamepad button, or tap on a touch‑enabled device. For [cross‑platform](../projects/cross-platform.md) compatibility, each `Class.InputAction` should have an `Class.InputBinding` for **gamepad**, **keyboard/mouse**, and **touch** as illustrated here.
 
-<img src="../assets/studio/explorer/ReplicatedStorage-InputContext-InputAction-InputBinding-All.png" width="320" />
+<img src="../assets/studio/explorer/ReplicatedStorage-InputContext-SprintAction-InputBinding-All.png" width="320" />
 
 The `Class.InputAction.Type|Type` assigned to the parent `Class.InputAction` directly affects which general input types (key/button/tap, analog trigger, thumbstick, etc.) are valid for child `Class.InputBinding` instances. In turn, values sent to the parent action's connected events depend on a binding's chosen input type. See [input events](#input-events) for details on the correlation between action types, bindings, and return values.
 
@@ -86,7 +100,7 @@ To hook up bindings for simple character sprinting:
 
 	 <Grid container spacing={2} alignItems="top">
 	 <Grid item>
-     <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-InputAction-InputBinding-KeyboardBinding.png" width="320" />
+     <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-SprintAction-InputBinding-KeyboardBinding.png" width="320" />
 	 </Grid>
 	 <Grid item>
      <img src="../assets/studio/properties/InputBinding-KeyCode-LeftShift.png" width="320" />
@@ -108,7 +122,7 @@ To hook up bindings for simple character sprinting:
 
 	 <Grid container spacing={2} alignItems="top">
 	 <Grid item>
-     <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-InputAction-InputBinding-GamepadBinding.png" width="320" />
+     <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-SprintAction-InputBinding-GamepadBinding.png" width="320" />
 	 </Grid>
 	 <Grid item>
      <img src="../assets/studio/properties/InputBinding-KeyCode-ButtonY.png" width="320" />
@@ -125,10 +139,56 @@ To hook up bindings for simple character sprinting:
 
 	 <Grid container spacing={2} alignItems="top">
 	 <Grid item>
-     <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-InputAction-InputBinding-TouchBinding.png" width="320" />
+     <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-SprintAction-InputBinding-TouchBinding.png" width="320" />
 	 </Grid>
 	 <Grid item>
      <img src="../assets/studio/properties/InputBinding-UIButton-SprintButton.png" width="320" />
+	 </Grid>
+	 </Grid>
+
+To hook up bindings for camera rotation:
+
+1. Insert a new `Class.InputBinding` into the `CameraRotate` action and rename it to `KeyboardBinding`. Leave `Class.InputBinding.KeyCode|KeyCode` empty and instead set the four composite directional properties — `Class.InputBinding.Left|Left`, `Class.InputBinding.Right|Right`, `Class.InputBinding.Up|Up`, and `Class.InputBinding.Down|Down` — to `Enum.KeyCode.Left|Left`, `Enum.KeyCode.Right|Right`, `Enum.KeyCode.Up|Up`, and `Enum.KeyCode.Down|Down` respectively.
+
+	 <Grid container spacing={2} alignItems="top">
+	 <Grid item>
+     <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-CameraAction-InputBinding-KeyboardBinding.png" width="320" />
+	 </Grid>
+	 <Grid item>
+     <img src="../assets/studio/properties/InputBinding-Directions-ArrowKeys.png" width="320" />
+	 </Grid>
+	 </Grid>
+
+2. Insert another `Class.InputBinding` and rename it to `GamepadBinding`. Then set the binding's `Class.InputBinding.KeyCode|KeyCode` property to `Enum.KeyCode.Thumbstick2|Thumbstick2` (the right thumbstick).
+
+	 <Grid container spacing={2} alignItems="top">
+	 <Grid item>
+     <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-CameraAction-InputBinding-GamepadBinding.png" width="320" />
+	 </Grid>
+	 <Grid item>
+     <img src="../assets/studio/properties/InputBinding-KeyCode-Thumbstick2.png" width="320" />
+	 </Grid>
+	 </Grid>
+
+3. Insert another `Class.InputBinding` and rename it to `MouseBinding`. Set the binding's `Class.InputBinding.KeyCode|KeyCode` property to `Enum.KeyCode.MouseDelta|MouseDelta` and its `Class.InputBinding.Scale|Scale` to `0.01`. `MouseDelta` reports values in pixels, so the scale converts them to a reasonable rotation range.
+
+	 <Grid container spacing={2} alignItems="top">
+	 <Grid item>
+     <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-CameraAction-InputBinding-MouseBinding.png" width="320" />
+	 </Grid>
+	 <Grid item>
+     <img src="../assets/studio/properties/InputBinding-KeyCode-MouseDelta.png" width="320" />
+	 </Grid>
+	 </Grid>
+
+4. Insert another `Class.InputBinding` and rename it to `TouchBinding`. Set the binding's `Class.InputBinding.KeyCode|KeyCode` property to `Enum.KeyCode.TouchDelta|TouchDelta` and its `Class.InputBinding.Scale|Scale` to `0.01`. Like `MouseDelta`, `TouchDelta` reports values in pixels.
+
+	 <Grid container spacing={2} alignItems="top">
+	 <Grid item>
+     <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-CameraAction-InputBinding-TouchBinding.png" width="320" />
+	 </Grid>
+	 <Grid item>
+     <img src="../assets/studio/properties/InputBinding-KeyCode-TouchDelta.png" width="320" />
 	 </Grid>
 	 </Grid>
 
@@ -264,15 +324,11 @@ The `Enum.InputActionType|ViewportPosition` type is best for absolute 2D viewpor
 </TabItem>
 </Tabs>
 
-<Alert severity="info">
-Note that returned `Datatype.Vector2`/`Datatype.Vector3` values for 2D/3D inputs will be normalized such that the magnitude is never greater than `1` (unless scaling is applied). For example, a 45° up+right press on a gamepad thumbstick will return a normalized `Datatype.Vector2` of <Typography noWrap>`(0.7071, 0.7071)`</Typography> instead of <Typography noWrap>`(1, 1)`</Typography>. In practical terms of character movement, this ensures that diagonal presses do not allow players to move faster diagonally than they would in a cardinal direction.
-</Alert><br />
-
 To connect events for simple character sprinting:
 
 1. Insert a new `Class.Script` into the `CharacterSprint` tree, alongside the various input bindings. Then set its `Class.BaseScript.RunContext|RunContext` to `Enum.RunContext.Client|Client` and rename it to `OnActivate`.
 
-   <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-InputAction-Script.png" width="320" />
+   <img src="../assets/studio/explorer/ReplicatedStorage-InputContext-SprintAction-Script.png" width="320" />
 
 2. Paste the following code into the `OnActivate` script. Note the `Class.InputAction.Pressed|Pressed` event connection on lines `13`‑`15` which doubles the character's walk speed when a sprint input binding is pressed, and the corresponding `Class.InputAction.Released|Released` event connection on lines `16`‑`18` which resets the walk speed to default when a sprint input binding is released.
 
@@ -300,6 +356,28 @@ To connect events for simple character sprinting:
 3. Playtest your experience and test the character sprint action with the [bindings](#input-bindings) you chose previously: `Enum.KeyCode.LeftShift|LeftShift` for keyboard, `Enum.KeyCode.ButtonY|ButtonY` for gamepad, and the on‑screen `SprintButton` for touch‑enabled devices. Remember that you can use the [Controller Emulator](../studio/testing-modes.md#controller-emulation) to test gamepad inputs directly in Roblox Studio.
 
    <video controls src="../assets/ui/button-text-input/Sprint-Demo.mp4" width="720"></video>
+
+For **continuous analog inputs** like camera rotation, `Class.InputAction.StateChanged|StateChanged` fires once when the state changes and does not signal until the next change — so a thumbstick held at a fixed angle only fires the event once. In these cases, poll `Class.InputAction:GetState()|GetState()` each frame and multiply by `dt` for frame-rate-independent behavior.
+
+Use `Class.RunService:BindToRenderStep()|BindToRenderStep()` with `Enum.RenderPriority.Camera.Value` rather than `Class.RunService.RenderStepped|RenderStepped`. This guarantees the camera update runs after the engine's input processing step and stays synchronized with the default PlayerScripts camera pipeline, avoiding a one-frame lag on the first frame of input.
+
+```lua title="OnActivate (Client Script)"
+local RunService = game:GetService("RunService")
+
+local CAMERA_SENSITIVITY = 1.5  -- radians per second at action state 1
+
+local inputAction = script.Parent
+local camera = workspace.CurrentCamera
+
+RunService:BindToRenderStep("CameraRotation", Enum.RenderPriority.Camera.Value, function(dt)
+	local state = inputAction:GetState()
+	if state.Magnitude > 0 then
+		camera.CFrame = camera.CFrame
+			* CFrame.Angles(0, -state.X * CAMERA_SENSITIVITY * dt, 0)
+			* CFrame.Angles(-state.Y * CAMERA_SENSITIVITY * dt, 0, 0)
+	end
+end)
+```
 
 ## Context changes
 

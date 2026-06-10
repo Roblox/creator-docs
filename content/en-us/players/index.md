@@ -5,6 +5,8 @@ description: How users, players, and characters work together in a Roblox game.
 
 When a Roblox user joins a game, they are represented as a `Class.Player` in the `Class.DataModel`. This `Class.Player` object contains information about the user that's universal across games, such as their username, friend list, and saved [avatar character](../characters/index.md#avatar-characters), as well as properties, methods, and events that affect the user's [lifecycle](#lifecycle) between joining and leaving the game. Each `Class.Player` object also parents four important [containers](#containers) that you can use to customize a user's experience: `Class.Backpack`, `Class.StarterGear`, `Class.PlayerGui`, and `Class.PlayerScripts`.
 
+Each `Class.Player` also exposes a `Class.Player.User` property, which is a `Datatype.User` value representing the player's domain-scoped identity within the current experience. For more information on how user identification works, including domain-scoped user IDs and the `Datatype.User` type, see [Users and domain-scoped user IDs](./users.md).
+
 <img src="../assets/studio/explorer/Players-Player-Hierarchy.png" width="320" />
 
 ## Lifecycle

@@ -46,8 +46,20 @@ properties:
     capabilities:
       - Input
   - name: InputBinding.ClampMagnitudeToOne
-    summary: ''
-    description: ''
+    summary: |
+      Specifies how the binding normalizes composite directional input to a
+      maximum magnitude of `1`.
+    description: |
+      Determines whether the binding normalizes the combined composite
+      directional vector to a maximum magnitude of `1` only if it exceeds that
+      length. This prevents diagonal composite inputs (for example
+      `Class.InputBinding.Up|Up` and `Class.InputBinding.Right|Right` pressed
+      simultaneously) from producing a magnitude greater than `1`, ensuring
+      consistent movement speed regardless of the keys held. Default is `true`.
+
+      Only applies when the parent action's `Class.InputAction.Type|Type` is
+      `Enum.InputActionType|Direction1D`, `Enum.InputActionType|Direction2D`, or
+      `Enum.InputActionType|Direction3D`.
     code_samples: []
     type: boolean
     tags: []
@@ -363,12 +375,20 @@ properties:
       - Input
   - name: InputBinding.Scale
     summary: |
-      Amount by which to linearly scale the values of a directional
-      `Class.InputAction`.
+      Scalar multiplier applied uniformly to all components of a directional
+      `Class.InputAction`'s output.
     description: |
-      Amount by which to linearly scale the values of an `Class.InputAction`
-      with `Class.InputAction.Type|Type` of `Enum.InputActionType|Direction1D`,
-      `Enum.InputActionType|Direction2D`, or `Enum.InputActionType|Direction3D`.
+      A scalar multiplier applied uniformly to every component of the output
+      value. Applies to `Class.InputAction` types
+      `Enum.InputActionType|Direction1D`, `Enum.InputActionType|Direction2D`,
+      and `Enum.InputActionType|Direction3D`.
+
+      To scale individual components independently, use
+      `Class.InputBinding.Vector2Scale|Vector2Scale` (for
+      `Enum.InputActionType|Direction2D`) or
+      `Class.InputBinding.Vector3Scale|Vector3Scale` (for
+      `Enum.InputActionType|Direction3D`). When both `Scale` and a vector scale
+      are set, both are applied.
     code_samples: []
     type: float
     tags: []
@@ -434,6 +454,32 @@ properties:
       can_save: true
     capabilities:
       - Input
+  - name: InputBinding.UIModifier
+    summary: |
+      Specifies a `Class.GuiButton` that must be active for the binding to
+      activate.
+    description: |
+      Specifies a `Class.GuiButton` that must be pressed for the
+      `Class.InputBinding` to trigger the parent `Class.InputAction`. Behaves
+      similarly to `Class.InputBinding.PrimaryModifier|PrimaryModifier` and
+      `Class.InputBinding.SecondaryModifier|SecondaryModifier`, but accepts a UI
+      button reference rather than a `Enum.KeyCode`.
+
+      If `nil`, no modifier is required.
+    code_samples: []
+    type: GuiButton
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Input
   - name: InputBinding.Up
     summary: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally "up"
@@ -476,11 +522,12 @@ properties:
       - Input
   - name: InputBinding.Vector2Scale
     summary: |
-      Amount by which to linearly scale the values of a two-directional
-      `Class.InputAction`.
+      Per-component scale applied to the output of a
+      `Enum.InputActionType|Direction2D` action.
     description: |
-      Amount by which to linearly scale the values of an `Class.InputAction`
-      with `Class.InputAction.Type|Type` of `Enum.InputActionType|Direction2D`.
+      Amount by which each component of the output is independently linearly
+      scaled. Only applies when the parent action's
+      `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction2D`.
     code_samples: []
     type: Vector2
     tags: []
@@ -496,8 +543,13 @@ properties:
     capabilities:
       - Input
   - name: InputBinding.Vector3Scale
-    summary: ''
-    description: ''
+    summary: |
+      Per-component scale applied to the output of a
+      `Enum.InputActionType|Direction3D` action.
+    description: |
+      Amount by which each component of the output is independently linearly
+      scaled. Only applies when the parent action's
+      `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction3D`.
     code_samples: []
     type: Vector3
     tags: []

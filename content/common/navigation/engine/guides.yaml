@@ -308,6 +308,8 @@ navigation:
     section:
       - title: Overview
         path: /players/
+      - title: Users and domain-scoped user IDs
+        path: /players/users
       - title: Teleporting
         path: /projects/teleport
       - title: Teams

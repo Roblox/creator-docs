@@ -804,12 +804,14 @@ properties:
     capabilities: []
   - name: Workspace.PlayerScriptsUseInputActionSystem
     summary: |
-      Controls internal behavior of the built-in `Class.Player` scripts.
+      Controls whether the built-in player scripts are updated to use the
+      [Input Action System](../../../input/input-action-system.md).
     description: |
-      When `true`, updates the built-in `Class.Player` scripts to a new system
-      where they live under `Class.StarterPlayer`, use the
-      [Input Action System](../../../input/input-action-system.md), and allow
-      the server to process player inputs.
+      Controls whether the built-in player scripts are updated to use the
+      [Input Action System](../../../input/input-action-system.md). When
+      enabled, the player scripts live under `Class.StarterPlayer` (controlled
+      by `Class.StarterPlayer.CreateDefaultPlayerModule`) and the server is able
+      to process player inputs.
     code_samples: []
     type: RolloutState
     tags:

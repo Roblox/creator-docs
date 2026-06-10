@@ -3568,6 +3568,11 @@ navigation:
         type: engineapi
         source: /reference/engine/datatypes/UDim2.yaml
         ignoreTranslation: true
+      - title: User
+        path: /reference/engine/datatypes/User
+        type: engineapi
+        source: /reference/engine/datatypes/User.yaml
+        ignoreTranslation: true
       - title: ValueCurveKey
         path: /reference/engine/datatypes/ValueCurveKey
         type: engineapi
@@ -4421,6 +4426,11 @@ navigation:
         path: /reference/engine/enums/DisplaySize
         type: engineapi
         source: /reference/engine/enums/DisplaySize.yaml
+        ignoreTranslation: true
+      - title: DomainType
+        path: /reference/engine/enums/DomainType
+        type: engineapi
+        source: /reference/engine/enums/DomainType.yaml
         ignoreTranslation: true
       - title: DominantAxis
         path: /reference/engine/enums/DominantAxis
