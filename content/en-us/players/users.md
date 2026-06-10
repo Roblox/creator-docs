@@ -3,6 +3,10 @@ title: Users and domain-scoped user IDs
 description: Learn about domain-scoped user IDs and the User type for identifying players in your experiences.
 ---
 
+<Alert severity = 'warning'>
+Refer to the [DevForum announcement](https://devforum.roblox.com/t/update-on-safety-privacy-introducing-scoped-user-identifiers/4677155/1) for latest information on domain-scoped user ID rollout and timelines.
+</Alert>
+
 Roblox assigns each user a unique **domain-scoped user ID** per experience or app they interact with. This page explains how domain-scoped identification works and how to use the `Datatype.User` type in your experience code.
 
 The following concepts are central to user identification:
