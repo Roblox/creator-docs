@@ -390,7 +390,6 @@
           "NotReplicated",
           "Hidden",
           "Deprecated",
-          "Disabled",
           "CustomLuaState",
           "CanYield",
           "Service",

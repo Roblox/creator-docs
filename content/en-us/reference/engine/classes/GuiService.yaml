@@ -600,7 +600,7 @@ methods:
       - UI
   - name: GuiService:GetInsetArea
     summary: |
-      Takes an `Enum.ScreenInsets` value and returns a `Datatype.Rect2D`
+      Takes an `Enum.ScreenInsets` value and returns a `Datatype.Rect`
       describing the inset region, relative to the
       `Enum.ScreenInsets.CoreUISafeInsets|CoreUISafeInsets` area.
     description: |

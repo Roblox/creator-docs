@@ -1607,24 +1607,24 @@ items:
     deprecation_message: ''
   - name: MouseLeftButton
     summary: |
-      The left mouse button, also commonly referred to as Mouse Button 1.
-      Primarily used in the
+      The left mouse button, also commonly referred to as "button 1" on a
+      generic mouse. Primarily used in the
       [Input Action System](../../../input/input-action-system.md).
     value: 1026
     tags: []
     deprecation_message: ''
   - name: MouseRightButton
     summary: |
-      The right mouse button, also commonly referred to as Mouse Button 2.
-      Primarily used in the
+      The right mouse button, also commonly referred to as "button 2" on a
+      generic mouse. Primarily used in the
       [Input Action System](../../../input/input-action-system.md).
     value: 1027
     tags: []
     deprecation_message: ''
   - name: MouseMiddleButton
     summary: |
-      The middle mouse button, also commonly referred to as Mouse Button 3.
-      Primarily used in the
+      The middle mouse button, also commonly referred to as "button 3" on a
+      generic mouse. Primarily used in the
       [Input Action System](../../../input/input-action-system.md).
     value: 1028
     tags: []

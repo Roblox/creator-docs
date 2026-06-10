@@ -9,21 +9,48 @@ summary: |
   instance streaming enabled.
 description: |
   Controls the level of detail for `Class.Model|Models` in experiences with
-  instance [streaming](../../../workspace/streaming/index.md) enabled.
+  instance [streaming](../../../workspace/streaming/index.md) enabled. Composite
+  or imposter meshes do not support physics, collision detection, or raycasting.
+
+  <table>
+  <tbody>
+  <tr>
+  <td>
+  <figure>
+  <img src="/assets/modeling/model-objects/LevelOfDetail-Original.jpg" width="270" />
+  <figcaption>Original model</figcaption>
+  </figure>
+  </td>
+  <td>
+  <figure>
+  <img src="/assets/modeling/model-objects/LevelOfDetail-Slim.jpg" width="270" />
+  <figcaption>Lightweight SLIM mesh</figcaption>
+  </figure>
+  </td>
+  <td>
+  <figure>
+  <img src="/assets/modeling/model-objects/LevelOfDetail-Imposter.jpg" width="270" />
+  <figcaption>Low-res "imposter" mesh</figcaption>
+  </figure>
+  </td>
+  </tr>
+  </tbody>
+  </table>
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Automatic
     summary: |
-      Default behavior, currently equivalent to **Disabled**.
+      Default behavior, currently equivalent to `Disabled`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: StreamingMesh
     summary: |
       A lower resolution "imposter" mesh (colored, coarse mesh that wraps around
-      all child parts of the model) renders outside the streaming radius.
+      all child parts of the model) renders outside the streaming radius. Does
+      not support textures.
     value: 1
     tags: []
     deprecation_message: ''
@@ -35,10 +62,10 @@ items:
     deprecation_message: ''
   - name: SLIM
     summary: |
-      A Scalable Lightweight Interactive Model, or SLIM, model (a composite of
-      all child parts of the model) renders at progressively lower resolutions
-      at distances based on the streaming radius. Greatly improves visual
-      quality over `StreamingMesh`.
+      A **SLIM** model (Scalable Lightweight Interactive Model) renders a
+      composite of all child parts at progressively lower resolutions at
+      distances based on the streaming radius. Greatly improves visual quality
+      over `StreamingMesh`.
     value: 4
     tags: []
     deprecation_message: ''

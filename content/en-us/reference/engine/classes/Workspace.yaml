@@ -6,9 +6,8 @@ name: Workspace
 type: class
 memory_category: BaseParts
 summary: |
-  **Workspace** houses 3D objects which are rendered to the 3D world. Objects
-  not descending from it will not be rendered or physically interact with the
-  world.
+  `Workspace` houses 3D objects which are rendered to the 3D world. Objects not
+  descending from it will not be rendered or physically interact with the world.
 description: |
   The core job of `Class.Workspace` is to hold objects that exist in the 3D
   world, effectively `Class.BasePart|BaseParts` and
@@ -29,7 +28,7 @@ description: |
   number of useful functions related to parts, their positions, and joints
   between them.
 
-  ##### Accessing the Workspace
+  #### Accessing the Workspace
 
   `Class.Workspace` can be accessed several ways, all of which are valid.
 
@@ -37,7 +36,7 @@ description: |
   - `game:GetService("Workspace")`
   - `game.Workspace`
 
-  ##### Notes
+  #### Notes
 
   - Objects that require adornment, such as
     `Class.ParticleEmitter|ParticleEmitters` and
@@ -804,8 +803,8 @@ properties:
     capabilities: []
   - name: Workspace.PlayerScriptsUseInputActionSystem
     summary: |
-      Controls whether the built-in player scripts are updated to use the
-      [Input Action System](../../../input/input-action-system.md).
+      Controls whether the built-in player scripts are updated to use the Input
+      Action System.
     description: |
       Controls whether the built-in player scripts are updated to use the
       [Input Action System](../../../input/input-action-system.md). When
@@ -1373,6 +1372,24 @@ methods:
       - Deprecated
     deprecation_message: ''
     security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
+  - name: Workspace:ExperimentalSolverIsEnabled
+    summary: |
+      Returns `true` if the experimental physics solver is enabled.
+    description: |
+      Returns whether the experimental physics solver is currently enabled. This
+      method is primarily for internal testing purposes.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: boolean
+        summary: |
+          `true` if the experimental physics solver is enabled, `false`
+          otherwise.
+    tags: []
+    deprecation_message: ''
+    security: LocalUserSecurity
     thread_safety: Unsafe
     capabilities: []
   - name: Workspace:GetNumAwakeParts

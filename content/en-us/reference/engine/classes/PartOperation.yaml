@@ -121,9 +121,7 @@ properties:
       The number of polygons in this solid model.
     code_samples: []
     type: int
-    tags:
-      - ReadOnly
-      - NotReplicated
+    tags: []
     deprecation_message: ''
     security:
       read: None

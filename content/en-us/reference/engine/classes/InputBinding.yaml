@@ -57,9 +57,9 @@ properties:
       simultaneously) from producing a magnitude greater than `1`, ensuring
       consistent movement speed regardless of the keys held. Default is `true`.
 
-      Only applies when the parent action's `Class.InputAction.Type|Type` is
-      `Enum.InputActionType|Direction1D`, `Enum.InputActionType|Direction2D`, or
-      `Enum.InputActionType|Direction3D`.
+      This property only applies when the parent action's
+      `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction1D`,
+      `Enum.InputActionType|Direction2D`, or `Enum.InputActionType|Direction3D`.
     code_samples: []
     type: boolean
     tags: []
