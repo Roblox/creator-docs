@@ -100,6 +100,11 @@ methods:
       Enables generation of multi-mesh geometries according to provided `inputs`
       and a `schema`.
 
+      Provide creative direction through `inputs`: a `TextPrompt`, an `Image` to
+      condition on visually, or both. Control the output structure through
+      `schema`, supplying either a built-in `PredefinedSchema` or a custom
+      `SchemaDefinition` that names the parts to produce.
+
       This method throws an error during the generation process for issues like
       prompt rejection, generation timeouts, `schema` mismatches, or backend
       service errors. It's recommended to wrap it in a
@@ -110,6 +115,8 @@ methods:
       behaviors to generated models.
     code_samples:
       - GenerationService-Basic-Car5
+      - GenerationService-Custom-Schema
+      - GenerationService-Image-Conditioning
     parameters:
       - name: inputs
         type: Dictionary
@@ -118,6 +125,12 @@ methods:
           A table representing conditioning inputs with the following keys:
 
           - `TextPrompt` — String description of the object to generate.
+            Required unless an `Image` is provided; you must supply at least one
+            of `TextPrompt` or `Image`.
+          - `Image` — Optional `Datatype.Content` referencing an image asset
+            (for example, the result of `Datatype.Content.fromAssetId()`) used
+            to visually condition the generation. Supply it together with or
+            instead of `TextPrompt`.
           - `Size` — Optional `Datatype.Vector3` describing the object size to
             generate. This is only approximate; scale the model extents
             post‑generation if you need a specific size.
@@ -130,11 +143,18 @@ methods:
         type: Dictionary
         default:
         summary: |
-          Table representing the generation schema. Must contain a
-          `PredefinedSchema` key with a string value; current valid options are
-          `Car5` for a basic vehicle chassis consisting of five
-          `Class.Model|Models`, or `Body1` which results in a single mesh
-          output.
+          Table representing the generation schema. Provide exactly one of the
+          following keys:
+
+          - `PredefinedSchema` — String selecting a built-in schema. Current
+            valid options are `Car5` for a basic vehicle chassis consisting of
+            five `Class.Model|Models`, or `Body1` which results in a single mesh
+            output.
+          - `SchemaDefinition` — Table describing a custom multi-part structure.
+            It contains a `Groups` array of part-name strings (one entry per
+            desired part); the returned `Class.Model` is organized to match the
+            named groups. Use this instead of `PredefinedSchema` when you need a
+            structure the predefined schemas don't cover.
       - name: options
         type: Dictionary?
         default:

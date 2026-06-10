@@ -791,25 +791,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-  - name: Player.MaximumSimulationRadius
-    summary: ''
-    description: ''
-    code_samples: []
-    type: float
-    tags:
-      - Hidden
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: LocalUserSecurity
-      write: LocalUserSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities:
-      - Players
   - name: Player.MembershipType
     summary: |
       Describes the account's membership type.
@@ -985,24 +966,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities:
-      - Players
-  - name: Player.SimulationRadius
-    summary: ''
-    description: ''
-    code_samples: []
-    type: float
-    tags:
-      - Hidden
-    deprecation_message: ''
-    security:
-      read: LocalUserSecurity
-      write: LocalUserSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
     capabilities:
       - Players
   - name: Player.StepIdOffset
@@ -1645,6 +1608,7 @@ methods:
           The player's rank in the group.
     tags:
       - Yields
+      - Deprecated
     deprecation_message: |
       This method only returns a single role rank and may produce arbitrary
       results when a user holds multiple roles. Use
@@ -1720,6 +1684,7 @@ methods:
           not a member.
     tags:
       - Yields
+      - Deprecated
     deprecation_message: |
       This method only returns a single role name and may produce arbitrary
       results when a user holds multiple roles. Use
