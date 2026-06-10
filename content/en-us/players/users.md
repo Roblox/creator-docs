@@ -32,7 +32,7 @@ The following concepts are central to user identification:
 </tbody>
 </table>
 
-## Domain-scoped User IDs
+## Domain-scoped user IDs
 
 A **domain-scoped user ID** is a unique identifier assigned to a user within a specific **experience** or **app**. Unlike a global user ID, a domain-scoped user ID is only meaningful within the domain that issued it, so the same user has a different domain-scoped user ID in each experience or app they interact with. Players who joined your experience before the scoped ID rollout keep their original global user ID in that experience (see [Returning players](#returning-players)).
 
