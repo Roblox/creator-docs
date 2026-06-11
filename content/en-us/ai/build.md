@@ -121,4 +121,4 @@ Your project is now synced to Studio, your AI agent can talk to it directly, and
 From here, you can use the `WAVE_SURVIVAL.md` file from the starter project as context for your agent to build a wave survival game.
 Follow along with companion video to build the game one tested phase at a time.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4PY2IEG0LA8?si=ynCGtp3YSPax1fGB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XsY8xhluuZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

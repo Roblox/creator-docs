@@ -215,6 +215,13 @@ export const closeYouTubeModal = (id) => {
   if (m) m.style.display = 'none';
 };
 
+{/* A plain <img> in MDX is aliased to the site's MarkdownImage, which appends
+    ".webp" to the src in deployed builds (connectsRemoteServer). That works for
+    local /assets (the asset server has .webp variants) but 404s for external
+    YouTube thumbnails, which have no .jpg.webp. RawImg renders a real <img> that
+    skips that aliasing. Keep using plain <img> for local /assets elsewhere. */}
+export const RawImg = 'img';
+
 export const YouTubeEmbed = ({ id, title = 'YouTube video player', noHover = false }) => (
   <>
     <button
@@ -223,7 +230,7 @@ export const YouTubeEmbed = ({ id, title = 'YouTube video player', noHover = fal
       aria-label={title}
       onClick={() => openYouTubeModal(id)}
     >
-      <img
+      <RawImg
         className="yt-thumb"
         src={`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`}
         alt={title}
