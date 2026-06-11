@@ -3481,18 +3481,19 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "scope",
+            "in": "query",
+            "description": "The scope of the memory store to flush.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | LIVE |  Flush the live memory store scope. This is the default. |\n  | TEST | Flush the test memory store scope. |",
+            "schema": {
+              "example": "LIVE",
+              "enum": ["LIVE", "TEST"],
+              "type": "string",
+              "format": "enum"
+            }
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/FlushMemoryStoreRequest"
-              }
-            }
-          },
-          "required": true
-        },
         "responses": {
           "200": {
             "description": "OK",
@@ -6580,11 +6581,6 @@
         "type": "object",
         "properties": {},
         "description": "Represents metadata about the long-running operation corresponding to a\nFlushMemoryStore request.\n\nThis is the type of the `Operation.metadata` field in the response to\n`GetOperation` requests for FlushMemoryStore operations."
-      },
-      "FlushMemoryStoreRequest": {
-        "type": "object",
-        "properties": {},
-        "description": "Request body not required."
       },
       "FlushMemoryStoreResponse": {
         "type": "object",
