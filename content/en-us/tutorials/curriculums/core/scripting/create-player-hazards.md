@@ -13,88 +13,168 @@ allowFullScreen></iframe>
 
 <br/>
 
-Hazard objects decrease the health of players when they touch them. As a simple
-starting point, this section of the tutorial teaches you how to create one large
-invisible part at the same level as the water in your experience, so that falling
-into the hazard changes the player's health to zero and respawns them back to the
-start of the experience.
+Right now, players can fall off any platform with no consequence. This section walks you through creating a large invisible hazard at the same height as the water in your game. When a player falls into the hazard, their health is reduced to zero and they respawn at the start of the game.
 
 ## Create a basic water hazard
 
-To create the basic water hazard:
+<Tabs>
+<TabItem key = "1" label="Build with Assistant">
 
-1. In the **Explorer** window, add a new folder into the **World** folder, then rename it **Hazards**.
-   Ensure that the name is spelled correctly with the correct casing, otherwise the code won't work.
+```text title="Create a basic water hazard"
+In Workspace > World, create a new folder named Hazards.
+Inside the Hazards folder, create a block Part named Hazard with Size 825, 1, 576 and CFrame.Position 174, -6.5, 38 so the part covers the water around the island and platforms.
+Set Transparency to 1 so the part is invisible and the actual water appears to be the hazard, disable CanCollide so players fall through it into the water, and enable Anchored so physics doesn't move it.
+```
 
-1. In the **Hazards** folder, insert a **block** part and rename it **Hazard**.
+</TabItem>
+<TabItem key = "2" label="Build it Yourself">
 
-   <img src="../../../../assets/tutorials/create-player-hazards/New-Hazard-Part.png" alt="Studio's Explorer window with the Hazard block Part highlighted under the Hazards folder." width="320" />
-
-1. Move and scale the part to cover the water line around the island and platforms. For example, the
-   sample [Island Jump - Scripting](https://www.roblox.com/games/14239042199/Island-Jump-Scripting) experience
-   sets **Size** to `825, 1, 576` and **CFrame.Position** to `174, -6.5, 38`.
+1. In the **Explorer**, hover over the **World** model, click **&CirclePlus;**, and insert a new **Folder**. Rename it `Hazards`.
+2. Inside the `Hazards` folder, insert a **block** part and rename it `Hazard`. Use the **Move** and **Scale** tools to flatten and stretch the part so it covers the water around the island and platforms. The sample uses **Size** = `825, 1, 576` and **CFrame.Position** = `174, -6.5, 38`.
 
    <img src="../../../../assets/tutorials/create-player-hazards/Hazard-Part-On-Water.jpg" alt="A far out view of all of the cylinder sea stacks and the island. A large block part covers the water where a player could land if they fell from a sea stack." width="600" />
 
-1. Select the part, then in the **Properties** window, configure the following properties so
-   the hazard is invisible, and players can pass right through it:
+3. With the part still selected, in the **Properties** window:
 
-   - Set **Transparency** to `1`. This makes the hazard invisible, so that the
-     actual water appears to be the hazard.
-   - Disable **CanCollide**. This tells the engine that other parts can pass
-     through the hazard uninterrupted, meaning players can fall through the hazard.
-   - Enable **Anchored**. This tells the engine to never change the
-     position of the hazard due to any physics-related simulation, meaning that
-     players can touch the hazard without affecting its location.
+   1. Set **Transparency** to `1` so the part is invisible — the actual water below is what the player sees as the hazard.
+   2. Disable **CanCollide** so players fall through the part and into the water instead of standing on the part.
+   3. Enable **Anchored** so physics doesn't push the part around.
 
-1. Create a **Script** in **ServerScriptService**, then rename it to **HazardService**.
-1. Replace the default code with the following code:
+</TabItem>
+</Tabs>
 
-   ```lua
-   local Players = game:GetService("Players")
-   local Workspace = game:GetService("Workspace")
+## Detect when players touch the hazard
 
-   local hazardsFolder = Workspace.World.Hazards
-   local hazards = hazardsFolder:GetChildren()
+The hazard doesn't do anything until you write a script that listens `Touched` and lowers the player's health to zero.
 
-   local function onHazardTouched(otherPart)
-   	local character = otherPart.Parent
-   	local player = Players:GetPlayerFromCharacter(character)
-   	if player then
-   		local humanoid = character:FindFirstChildWhichIsA("Humanoid")
-   		if humanoid then
-   			humanoid.Health = 0
-   		end
-   	end
-   end
+<Tabs>
+<TabItem key = "1" label="Build with Assistant">
 
-   for _, hazard in hazards do
-   	hazard.Touched:Connect(onHazardTouched)
-   end
-   ```
+````text title="Create HazardService"
+In ServerScriptService, create a Script named HazardService with the following code:
 
-    <BaseAccordion>
-    <AccordionSummary>
-      <Typography variant="h4">Code explanation</Typography>
-    </AccordionSummary>
-    <AccordionDetails>
-      The **HazardService** has many similarities to **CoinService**. However,
-      instead of collecting a coin, the player has their **health set to 0**
-      when they touch a hazard.
+```lua
+local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
 
-   Feel free to modify, add, or remove hazard objects in your experience to
-   create unique obstacles. As long as they are contained in the **Hazards**
-   folder, the code loop connects the event handler to all of your hazards.
-   </AccordionDetails>
-   </BaseAccordion>
+local hazardsFolder = Workspace.World.Hazards
+local hazards = hazardsFolder:GetChildren()
+
+local function onHazardTouched(otherPart)
+	local character = otherPart.Parent
+	local player = Players:GetPlayerFromCharacter(character)
+	if player then
+		local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+		if humanoid then
+			humanoid.Health = 0
+		end
+	end
+end
+
+for _, hazard in hazards do
+	hazard.Touched:Connect(onHazardTouched)
+end
+```
+````
+
+</TabItem>
+<TabItem key = "2" label="Build it Yourself">
+
+1. In the **Explorer**, hover over **ServerScriptService**, click **&CirclePlus;**, and insert a new **Script**. Rename it `HazardService`. Put it in `ServerScriptService` to keep the code on the server, where players can't read or make changes to it.
+1. Replace the default code with the following code to loop through every part in the `Hazards` folder and set the player's health to zero when they touch the hazard:
+
+```lua
+local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
+
+local hazardsFolder = Workspace.World.Hazards
+local hazards = hazardsFolder:GetChildren()
+
+local function onHazardTouched(otherPart)
+	local character = otherPart.Parent
+	local player = Players:GetPlayerFromCharacter(character)
+	if player then
+		local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+		if humanoid then
+			humanoid.Health = 0
+		end
+	end
+end
+
+for _, hazard in hazards do
+	hazard.Touched:Connect(onHazardTouched)
+end
+```
+
+</TabItem>
+</Tabs>
+
+<BaseAccordion>
+<AccordionSummary>
+  <Typography variant="h4">Code explanation</Typography>
+</AccordionSummary>
+<AccordionDetails>
+  The **HazardService** has many similarities to **CoinService**. However,
+  instead of collecting a coin, the player has their **health set to 0**
+  when they touch a hazard.
+
+Feel free to modify, add, or remove hazard objects in your game to
+create unique obstacles. As long as they are contained in the **Hazards**
+folder, the code loop connects the event handler to all of your hazards.
+</AccordionDetails>
+</BaseAccordion>
 
 ## Connect to the player lifecycle
 
-The player lifecycle represents events that occur when players interact in your
-experience, such as joining, leaving, or respawning. You need to connect
-handlers to these events to appropriately execute logic for each major lifecycle
-event. In the **CoinService** script, copy and paste the following code at the
-bottom of the script:
+The player lifecycle represents events that occur when players interact in your game, such as joining, leaving, or respawning. You need to connect handlers to these events to execute logic for each major lifecycle event.
+
+<Tabs>
+<TabItem key = "1" label="Build with Assistant">
+
+````text title="Add lifecycle handlers to CoinService"
+In ServerScriptService, append the following code to the bottom of the existing CoinService Script (don't replace any of the existing code — add this after it):
+
+```lua
+local function onPlayerAdded(player)
+	-- Reset player coins to 0
+	updatePlayerCoins(player, function(_)
+		return 0
+	end)
+
+	player.CharacterAdded:Connect(function(character)
+		-- WaitForChild would stop the player loop, so below should be done in a separate thread
+		task.spawn(function()
+			-- When a player dies
+			character:WaitForChild("Humanoid").Died:Connect(function()
+				-- Reset player coins to 0
+				updatePlayerCoins(player, function(_)
+					return 0
+				end)
+			end)
+		end)
+	end)
+end
+
+-- Initialize any players added before connecting to PlayerAdded event
+for _, player in Players:GetPlayers() do
+	onPlayerAdded(player)
+end
+
+local function onPlayerRemoved(player)
+	updatePlayerCoins(player, function(_)
+		return nil
+	end)
+end
+
+Players.PlayerAdded:Connect(onPlayerAdded)
+Players.PlayerRemoving:Connect(onPlayerRemoved)
+```
+````
+
+</TabItem>
+<TabItem key = "2" label="Build it Yourself">
+1. In the **Explorer**, open the `CoinService` script inside **ServerScriptService**.
+1. Scroll to the bottom of the file (don't replace the existing coin-collection code) and add the following lifecycle handlers to reset a player's coin count when they join the game and when they die:
 
 ```lua
 local function onPlayerAdded(player)
@@ -132,6 +212,9 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 Players.PlayerRemoving:Connect(onPlayerRemoved)
 ```
 
+</TabItem>
+</Tabs>
+
 <BaseAccordion>
 <AccordionSummary>
   <Typography variant="h4">Code explanation</Typography>
@@ -141,7 +224,7 @@ Players.PlayerRemoving:Connect(onPlayerRemoved)
 The code defines functions to reset coin counts during the appropriate
 lifecycle events:
 
-- `Class.Players.PlayerAdded` fires when a player joins the experience, and sets
+- `Class.Players.PlayerAdded` fires when a player joins the game, and sets
   the coin count to `0`.
 - `Class.Player.CharacterAdded` fires when a player's character model is added
   to the world. It occurs after `Class.Players.PlayerAdded|PlayerAdded` and
@@ -150,7 +233,7 @@ lifecycle events:
   the coin count to `0`. `Library.task.spawn()` creates
   a separate thread for handling this, so other aspects of the player life cycle
   can execute.
-- `Class.Player.PlayerRemoved` fires when a player leaves the experience to
+- `Class.Player.PlayerRemoved` fires when a player leaves the game to
   clean up player state.
 - This code contains a potential issue where players could collect coins before the `Players.PlayerAdded` event executes and then have their coin counts reset to zero. To mitigate this issue, consider solutions such as code scheduling or freezing the player's character until initialization finishes. However, these solutions involve more complex scripting concepts that are beyond the scope of this tutorial.
 
@@ -159,18 +242,8 @@ lifecycle events:
 
 ## Playtest
 
-It's time to see if the player hazard works as intended. When you touch the
-water, your character should die and lose their coins. To test your game:
+Select **Test** from the dropdown and click **Play**. Collect a few coins, then jump into the water. You character should die and respawn at the start, with their coin count reset to `0`.
 
-1. Choose **Test** from the dropdown menu and click the **Play** button to its right to begin the playtest.
-
-   <img src="../../../../assets/studio/general/Mezzanine-Testing-Mode-Test.png" width="800" alt="Test option in the testing modes dropdown of Studio's mezzanine." />
-
-1. Move your character to collect some coins, then jump in the water. If your
-   scripts are working correctly, your character dies, and the coin count on
-   the leaderboard resets to `0`.
-
-   <video
-   controls loop muted>
-   <source src="../../../../assets/tutorials/create-player-hazards/player-hazards-example.mp4" />
-   </video>
+<video controls loop muted>
+<source src="../../../../assets/tutorials/create-player-hazards/player-hazards-example.mp4" />
+</video>

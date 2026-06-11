@@ -111,3 +111,38 @@ inspect the place files if you want to see the end result of each chapter.
 
    </AccordionDetails>
    </BaseAccordion>
+
+## Why build with Assistant?
+
+Unlike many game development workflows that rely on multiple third-party tools, Roblox provides the engine, networking, asset marketplace, publishing pipeline, and AI-powered Assistant in a single platform. This allows you to build, test, and publish a multiplayer game without integrating additional tools or services.
+
+Assistant runs inside Studio, so it can create instances, configure properties, and generate scripts in your project. This means you can complete common development tasks without switching between Studio and external tools. For creators who are new to Roblox, Assistant can help reduce the amount of Studio functionality you need to learn before you can start building games.
+
+Throughout this curriculum, you'll find **Build with Assistant** and **Build it Yourself** options. You can follow either workflow. Completing the manual steps can help you understand how Studio works, while using Assistant can help you complete routine tasks more quickly and efficiently.
+
+<table>
+  <thead>
+    <tr>
+      <th>Assistant can help with</th>
+      <th>You'll still want to do yourself</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Creating and organizing instances such as folders, models, and parts</td>
+      <td>Sculpting terrain and building environments</td>
+    </tr>
+    <tr>
+      <td>Configuring properties and positioning objects according to specific requirements</td>
+      <td>Choosing colors, lighting, and visual style</td>
+    </tr>
+    <tr>
+      <td>Generating boilerplate code, including event handlers, leaderboards, RemoteFunctions, and GUI logic</td>
+      <td>Designing gameplay and deciding where objects should be placed</td>
+    </tr>
+    <tr>
+      <td>Following detailed tutorial instructions without repetitive copy-pasting</td>
+      <td>Playtesting, balancing, and refining the player experience</td>
+    </tr>
+  </tbody>
+</table>

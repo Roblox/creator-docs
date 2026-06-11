@@ -9,157 +9,126 @@ prev: /tutorials/curriculums/core/building/create-an-environment-with-terrain
 
 <br/>
 
-**Greyboxing an environment**, also known as massing out or blocking your environment, is the process
-of adding simple shapes to the 3D space to figure out how users will experience gameplay before investing
-time into scripting the gameplay or creating complex assets. This process can save you a lot of time in
-finding any issues in your layout, and it's much easier to make adjustments to basic parts than it is to
-adjust any high-quality meshes that you import into Studio.
+**Greyboxing** is the process of building a level with simple shapes before investing time in scripting or creating final art assets. It helps you test gameplay, identify layout issues, and make changes quickly while the environment is still easy to modify.
 
-Using basic parts and solid modeling operations, this section of the tutorial teaches you how to greybox
-the sea stack platforms that make up the playable area of the experience. Once you complete the environment,
-you will learn how to create the gameplay for the experience using Luau scripts.
+In this section, you'll greybox the sea stack platforms that make up the playable area of the experience. Once the layout feels right, you can begin scripting.
 
 ## Plan the playable area
 
-In the final version of the experience, players need to collect coins on the island
-and sea stack platforms in order to upgrade their jumping power and reach higher platforms. You will configure
-scripts to add this behavior in the next section of the tutorial, but it's important while you're starting to
-greybox your environment to plan for the difference in height between platforms. For example, the difference
-in height between platforms should slowly increase for each height level in order to encourage players to collect
-coins to progress through the level.
+In the final experience, players collect coins to increase their jump power and reach higher platforms. You'll implement this progression system later in the tutorial, but it's important to plan for it while greyboxing your environment. As a general rule, the height difference between platforms should gradually increase to encourage players to collect coins and continue progressing.
 
-As a guide, the sample [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building)
-`.rbxl` file includes seven different levels of height, with the first level sunk into the island to expose only
-a few studs of height. This allows players to only need to collect a few coins at the beginning of the experience
-in order to progress to the next platform. The subsequent height differences between each level then increase to
-8, 20, 35, 55, 81, and 110 studs, providing players a sense of progress as they make their way through your experience.
+As a reference, the sample [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building) game uses seven height levels. The first platform sits low enough that players only need a few coins to reach it. The subsequent height differences increase to 8, 20, 35, 55, 81, and 110 studs, creating a steady sense of progression throughout the experience.
 
 <Alert severity="info">
-
-A stud is Studio's primary unit for length, and it's equivalent to 28cm.
-
+A stud is Studio's primary unit of length, equivalent to about 28 cm. If you create your own layout instead of using the Assistant prompt or recreating the sample, keep each new height level that requires a jump upgrade at least 30 studs above the previous one.
 </Alert>
 
-<img src="../../../../assets/tutorials/block-out-a-playable-area/Platform-Levels.jpg" alt="A distant view of the sample island jump experience's greybox geometry. Each level of height difference between sea stacks is highlighted." />
-
-<Alert severity="info">
-
-If you want to expand your world beyond the simple design of the
-sample, ensure that each new height level requiring a jumping upgrade is
-at least 30 studs higher from the previous level.
-
-</Alert>
+<img src="../../../../assets/tutorials/block-out-a-playable-area/Platform-Levels.jpg" alt="A distant view of the sample island jump game's greybox geometry. Each level of height difference between sea stacks is highlighted." />
 
 ## Add the platforms
 
-Now that you have a plan for the difference in height between platforms, it's time to add in placeholder `Class.Part`
-objects to represent the sea stack platforms. **Parts** are Roblox's basic building blocks with properties you can modify
-to customize their physical appearance, such as their shape, size, and color.
+Now that you have a plan for the difference in height between platforms, add placeholder `Class.Part` objects to represent the sea stacks. Parts are Roblox's basic building blocks, with properties that control their shape, size, color, and other physical characteristics.
 
-While you can use almost any part shape to represent your sea stack platforms, it's recommended to greybox your environment with **cylinder** parts because they offer a flat surface for you to land on when you playtest jumping from platform to platform, and because they are similar in shape to the sea stack meshes you will use in the final section of the tutorial.
+For this project, use **cylinder** parts to give players a flat top to land on when jumping.
 
-<div><b>A comparison between the sample Island Jump experience's greybox and final geometry</b></div>
+<div><b>A comparison between the sample Island Jump game's greybox and final geometry</b></div>
 <GridContainer numColumns="2">
   <figure>
-    <img width="100%" img src="../../../../assets/tutorials/block-out-a-playable-area/Add-Platforms-Greybox.jpg" alt="The sample Island Jump experience's greybox geometry." />
+    <img width="100%" img src="../../../../assets/tutorials/block-out-a-playable-area/Add-Platforms-Greybox.jpg" alt="The sample Island Jump game's greybox geometry." />
   </figure>
   <figure>
-    <img width="100%" img src="../../../../assets/tutorials/block-out-a-playable-area/Add-Platforms-Final.jpg" alt="The sample Island Jump experience's final geometry." />
+    <img width="100%" img src="../../../../assets/tutorials/block-out-a-playable-area/Add-Platforms-Final.jpg" alt="The sample Island Jump game's final geometry." />
   </figure>
 </GridContainer>
 
 ### Create an organization structure
 
-Before you insert placeholder parts into the 3D space, it's important to create an organization structure for your assets in `Class.Workspace`. This process ensures that your workspace remains organized and easy to scan, especially as you venture into creating experiences with a significant amount of assets that you need to manage.
+Before adding parts, create two containers to keep the project organized. Roblox provides `Class.Folder` objects for grouping related instances and `Class.Model` objects for grouping 3D objects. In this tutorial, you'll create a `World` folder to hold the environment and a `Blockout_Parts` model inside that folder to hold the greybox platforms.
 
-There are two types of containers you can use to group assets together: `Class.Folder` and `Class.Model` objects. **Folders** are useful for storing many objects of different types, and **models** are useful for storing geometric groupings of parts. The following instructions teach you how to use both container objects to store all assets for your 3D world.
+1. In the **Explorer**, create a folder named **World** inside **Workspace**.
+2. Create a model named **Blockout_Parts** inside the new folder.
 
-To create an organization structure:
-
-1. In the **Explorer** window, hover over the **Workspace** and click the **&CirclePlus;** icon. A contextual menu displays.
-1. From the contextual menu, insert a **Folder** object. A folder object displays that you will use to contain all assets for the 3D world.
-
-   <img src="../../../../assets/tutorials/block-out-a-playable-area/Explorer-Add-Folder.png" alt="Studio's Explorer window with both the Workspace's plus icon and Folder object highlighted." width="320" />
-
-1. Rename the new folder `World`.
-
-   1. Right-click the folder object. A contextual menu displays.
-   1. From the contextual menu, click **Rename**, and enter `World` for the
-      folder's name.
-
-      <Alert severity="info">Ensure that the name is spelled correctly with the
-      correct casing. The scripts that you write in Roblox are case-sensitive,
-      and you'll write one later in this course to access this folder.</Alert>
-
-1. Hover over the **World** folder and click the **&CirclePlus;** icon.
-1. From the contextual menu, insert a **Model**.
-
-   <img src="../../../../assets/tutorials/block-out-a-playable-area/Explorer-Add-Model.png" alt="Studio's Explorer window with both the World folder's plus icon and Model object highlighted." width="320" />
-
-1. **Rename** the model to `Blockout_Parts`.
-
-   <img src="../../../../assets/tutorials/block-out-a-playable-area/Explorer-Model-Renamed.png" alt="Studio's Explorer window with the new Blockout_Parts model highlighted under the World folder." width="320" />
+<Alert severity="warning">
+In Studio, names are case-sensitive. You must spell **World** and **Blockout_Parts** exactly as shown or the scripts you add later will break.
+</Alert>
 
 ### Insert parts
 
-<Alert severity="info">
-    The following instructions provide two different instructional paths: you can either insert parts into your own unique environment, or you can insert parts in a way that exactly recreates the greybox environment within the sample [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building).
-</Alert>
-
-Now that you have an organizational structure to contain your assets, you can now begin inserting parts into the 3D space to represent your sea stack platforms.
+Now that you have an organization structure, add the cylinders for your platforms. You can use an Assistant prompt, build your own layout manually, or recreate the layout of the sample game.
 
 <Tabs>
-  <TabItem key = "1" label="Create your own">
+<TabItem key = "1" label="Build with Assistant">
 
-To insert a cylinder part for your first platform:
+To get Assistant to generate the entire blockout in one step, copy the prompt that matches whether you want a unique layout or an exact copy of the sample game.
 
-1. In the **Home** or **Model** tab's toolbar, click the small arrow next to the **Part** inserter tool to reveal the dropdown.
+```text title="Create your own layout"
+Create multiple cylinder Parts inside Workspace > World > Blockout_Parts to form platforms. 
+Start with one large, flat cylinder centered on the island, then add at least seven more cylinders that all start at the same vertical base but vary in height (like tall buildings) to create an upward path. 
+Adjust Size, Position, and Orientation so the top surfaces are flat and walkable, and set all Parts to Anchored.
+```
+
+```text title="Recreate the sample"
+Create the following cylinder parts inside Workspace > World > Blockout_Parts:
+
+1. Level_1 (Size 12, 131, 131; CFrame.Position -23, -4, 9; CFrame.Orientation 0, 0, 90)
+2. Level_2 (Size 20, 81, 81; CFrame.Position -8, 0, 24; CFrame.Orientation 0, 0, 90)
+3. Level_3a (Size 40, 44, 44; CFrame.Position 42, 10, 9; CFrame.Orientation 0, 0, 90)
+4. Level_3b (Size 40, 34, 34; CFrame.Position 87, 10, 4; CFrame.Orientation 0, 0, 90)
+5. Level_3c (Size 40, 44, 44; CFrame.Position 97, 10, 49; CFrame.Orientation 0, 0, 90)
+6. Level_4a (Size 75, 39, 39; CFrame.Position 112, 27.5, 46.5; CFrame.Orientation 0, 0, 90)
+7. Level_4b (Size 75, 65, 65; CFrame.Position 137, 27.5, 69; CFrame.Orientation 0, 0, 90)
+8. Level_4c (Size 75, 60, 60; CFrame.Position 159.5, 27.5, 91.5; CFrame.Orientation 0, 0, 90)
+9. Level_4d (Size 75, 30, 30; CFrame.Position 207, 27.5, 106.5; CFrame.Orientation 0, 0, 90)
+10. Level_4e (Size 75, 61, 61; CFrame.Position 250, 27.5, 74; CFrame.Orientation 0, 0, 90)
+11. Level_5a (Size 130, 60, 60; CFrame.Position 268, 55, 50; CFrame.Orientation 0, 0, 90)
+12. Level_5b (Size 130, 25, 25; CFrame.Position 256, 55, 2.5; CFrame.Orientation 0, 0, 90)
+13. Level_5c (Size 130, 25, 25; CFrame.Position 276, 55, -17.5; CFrame.Orientation 0, 0, 90)
+14. Level_5d (Size 130, 54, 54; CFrame.Position 322, 55, -21; CFrame.Orientation 0, 0, 90)
+15. Level_6a (Size 211, 79, 79; CFrame.Position 367, 94.5, -41; CFrame.Orientation 0, 0, 90)
+16. Level_6b (Size 211, 24, 24; CFrame.Position 387, 94.5, 11.5; CFrame.Orientation 0, 0, 90)
+17. Level_6c (Size 211, 44, 44; CFrame.Position 397, 94.5, 51.5; CFrame.Orientation 0, 0, 90)
+18. Level_7 (Size 321, 61, 61; CFrame.Position 407, 149.5, 79; CFrame.Orientation 0, 0, 90)
+
+Make sure all Parts are anchored, correctly positioned, and oriented to form a continuous level layout.
+```
+
+</TabItem>
+
+<TabItem key = "2" label="Create your own">
+
+1. In the **Home** or **Model** toolbar tab, click the small arrow next to the **Part** tool and choose **Cylinder**.
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/Part-Picker.png" alt="A close-up view of the part picker." width="800" />
 
-1. From the dropdown menu, select **Cylinder**. A cylinder part displays in the viewport.
-1. In the **Explorer** window, click and drag the new **Part** to the **Blockout_Parts** model. The part becomes a child of the model.
-
-   <img src="../../../../assets/tutorials/block-out-a-playable-area/New-Part-As-Child-Of-Model.png" alt="Studio's Explorer window with the new Part highlighted under the Blockout_Parts model object." width="320" />
-
-1. Use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate your cylinder until it's a large, flat surface in the middle of your island. For more information on these tools, see [Transform parts](../../../../parts/index.md#transform-parts).
+1. In the **Explorer**, drag the new cylinder Part onto your `Blockout_Parts` model so that it becomes a child of the model.
+1. Use the **Move**, **Scale**, and **Rotate** tools (in the same toolbar) to size and position your cylinder as a large, flat platform in the middle of the island. See [Transform parts](../../../../parts/index.md#transform-parts) for more information on these tools.
 
    <Alert severity="success">
-   To manipulate individual parts, select them in the Explorer. If you select a part in the viewport, it selects the entire model.
+   To grab a single part, select it in the **Explorer** instead of the viewport. If you select a part in the viewport, it selects the entire model.
    </Alert>
-
-   <img src="../../../../assets/studio/general/Toolbar-Transform-Tools.png" alt="Transform tools indicated in Studio's toolbar." width="800" />
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/First-Platform.jpg" alt="A large cylinder object partially sticking out of an island surrounded by water." width="80%" />
 
-1. Using the same process, add and configure at least seven more sea stack platforms with increasing levels of height into the **Blockout_Parts** model.
+1. Repeat the previous steps for at least seven more cylinders, increasing the height of each one as you build outward from the island. Stop once you have a layout you can jump across.
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/Final-Platforms.jpg" alt="Many large cylinder objects partially sticking out of an island surrounded by water, and the water itself." width="80%" />
 
-1. In the **Explorer** window, select the **Blockout_Parts** model.
-1. In the **Home** or **Model** tab, toggle on **Anchor**. This ensures that the physics system doesn't move your parts when the experience starts.
+1. Select the `Blockout_Parts` model in the Explorer and click **Anchor** in the **Home** or **Model** toolbar to make sure the physics system doesn't move your parts when the game starts.
+</TabItem>
 
-  </TabItem>
-  <TabItem key = "2" label="Recreate the sample">
+<TabItem key = "3" label="Recreate the sample">
 
-To exactly recreate the sea stack platforms within the sample [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building) experience:
+1. In the **Home** toolbar, click the **Part** dropdown and choose **Cylinder**. Drag the new part onto `Blockout_Parts` in the Explorer.
+2. With the new cylinder selected, in the **Properties** window:
 
-1. Navigate to Studio's **Home** tab toolbar.
-1. Click the **Part** dropdown arrow, then select **Cylinder**. A cylinder part displays in the viewport.
-1. In the **Explorer** window, click and drag the new **Part** to the **Blockout_Parts** model. The part becomes a child of the model.
-
-   <img src="../../../../assets/tutorials/block-out-a-playable-area/New-Part-As-Child-Of-Model.png" alt="Studio's Explorer window with the new Part highlighted under the Blockout_Parts model object." width="320" />
-
-1. In the **Properties** window,
-
-   1. Set **Name** to **Level_1** for organization purposes.
-   1. Set **Size** to `12, 131, 131` to create a large platform.
-   1. Set **CFrame.Position** to `-23, -4, 9` so the top of the platform is only a short jump from the surface of the island.
-   1. Set **CFrame.Orientation** to `0, 0, 90` so the flat surface of the cylinder faces toward the sky.
+   1. Set **Name** to `Level_1`.
+   2. Set **Size** to `12, 131, 131`.
+   3. Set **CFrame.Position** to `-23, -4, 9`.
+   4. Set **CFrame.Orientation** to `0, 0, 90` so the flat top faces the sky.
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/First-Platform.jpg" alt="A large cylinder object partially sticking out of an island surrounded by water." width="80%" />
 
-1. Using this process, add and configure seven more sea stack levels with the following values for the rest of the sea stack platforms:
+3. Repeat for the remaining seventeen platforms using the values below:
 
    <table>
    <thead>
@@ -276,162 +245,112 @@ To exactly recreate the sea stack platforms within the sample [Island Jump - Bui
    </tbody>
    </table>
 
-   <img src="../../../../assets/tutorials/block-out-a-playable-area/Final-Platforms.jpg" alt="Many large cylinder objects partially sticking out of an island and its surrounding water." width="80%" />
+<img src="../../../../assets/tutorials/block-out-a-playable-area/Final-Platforms.jpg" alt="Many large cylinder objects partially sticking out of an island and its surrounding water." width="80%" />
 
-1. In the **Explorer** window, select the **Blockout_Parts** model.
-1. In Studio's **Home** tab toolbar, click the **Anchor** icon. This ensures that the physics system doesn't move your parts when the experience starts.
+1. Once all platforms are in, select the `Blockout_Parts` model and click **Anchor** in the **Home** toolbar to make sure the physics system doesn't move your parts when the game starts.
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 ### Align parts
 
 <Alert severity="info">
-   If you used the sample **Island Jump - Building** experience values when inserting your sea stack platforms, you can skip this step.
+If you used the sample **Island Jump - Building** game values when inserting your sea stack platforms, you can skip this step.
 </Alert>
 
-As you add more sea stack placeholder parts off the island, it's easier to manage the height differences between levels if you use varying sizes for these parts instead of different positions. You can achieve this by **aligning** the base of each platform so that all vertical size differences are reflected in differing heights, and parts of the same size are on the same level.
+If you're creating your own layout, it's often easier to manage platform heights when every platform shares the same base elevation and only varies in size. The [Align Tool](../../../../studio/align-tool.md) can do this in a single click by aligning the **bottom** edge on the **Y** axis.
 
-The [Align Tool](../../../../studio/align-tool.md) aligns parts on either the minimum, center, or maximum edge according to a specific axis. For the purposes of this experience, you need to align the **bottom** edge in the **Y** axis so that all of the parts are partially submerged in the water.
+1. In the **Explorer**, select all of your platforms.
+2. In the **Model** toolbar tab, click **Align**.
+3. In the Align Tool window:
 
-To align parts:
+      1. Set **Mode** to **Min**.
+      2. Set **Align In** to **World** and **Y**.
+      3. Set **Relative To** in **Selection Bounds**.
 
-1. In the **Explorer** window, select all of your platforms.
-1. In the toolbar's **Model** tab, click the **Align** button. The **Align Tool** window displays.
+4. Click **Align**.
 
-   1. Set **Mode** to **Min**.
-   2. Set **Align In** to **World**, **Y**.
-   3. Keep **Relative To** on **Selection Bounds**.
-
-1. Click the **Align** button. All parts align on the Y axis according to the part with the lowest Y `Class.Part.Position` value.
-   <figure>
-     <img src="../../../../assets/tutorials/block-out-a-playable-area/Platforms-Aligned-Underwater.jpg" alt="An underwater view of many cylinders that are aligned along their bottom edge." />
-     <figcaption>All platforms align their bottom edge</figcaption>
-   </figure>
+<figure>
+  <img src="../../../../assets/tutorials/block-out-a-playable-area/Platforms-Aligned-Underwater.jpg" alt="An underwater view of many cylinders that are aligned along their bottom edge." />
+  <figcaption>All platforms align their bottom edge</figcaption>
+</figure>
 
 ### Create a hollow tunnel
 
-Aside from using parts as-is to block out your playable areas, you can also apply solid modeling operations to join parts in unique ways to form more complex shapes, such as a hollow tunnel within one of the sea stacks. This technique provides more visual interest and variation in how players interact with your environments.
+To add more visual variety, carve a tunnel through one of the sea stacks using Studio's **solid modeling** tools. For this tutorial, you'll use **Negate** to create the hole and **Union** to combine the parts into a single shape. For more information on all solid modeling tools, see [solid modeling](../../../../parts/solid-modeling.md).
 
-There are four solid modeling tools:
+<Tabs>
+<TabItem key = "1" label="Build with Assistant">
 
-- **Union** – Joins two or more parts together to form a single solid union.
-- **Intersect** – Intersects overlapping parts into a single solid intersection.
-- **Negate** – Negates parts, which is useful for making holes and indentations.
-- **Separate** – Separates the union or intersection back into its individual parts.
+```text title="Create a hollow tunnel"
+Create a hollow tunnel structure using these steps:
 
-For the purposes of creating a hollow tunnel, you only need to use the **Union** and **Negate** tools. For a full breakdown of all of the tools, see [solid modeling](../../../../parts/solid-modeling.md).
+1. Create a cylinder Part named Tunnel with Size 24, 65, 69 and CFrame.Position 137, 77, 69 and CFrame.Orientation 0, 0, 90. Set Anchored to true.
+2. Create a block Part named Hollow_Part with Size 24.5, 72, 22 and CFrame.Position 134.5, 77, 71 and CFrame.Orientation 0, 135, 90. Set Anchored to true. This part should intersect the cylinder to define the hollow space.
+3. Negate the Hollow_Part so it becomes a subtraction shape.
+4. Select both the Tunnel part and the negated Hollow_Part, then perform a Union operation so the hollow shape is cut out of the cylinder.
+5. Rename the resulting union to Level_4b_Union.
+6. Find the existing Level_4b platform, duplicate it, and rename the duplicate to Level_4b_Top.
+7. Set Level_4b_Top to Size 74, 65, 69 and CFrame.Position 137, 126, 69 and CFrame.Orientation 0, 0, 90. Make sure it is Anchored and positioned above the tunnel.
 
-To create a hollow tunnel:
+Make sure all Parts are properly aligned and that the final result is a cylinder tunnel with an open passage and a platform placed on top.
+```
 
-1. Insert and position a **cylinder** part above one of your sea stack platforms. The sample [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building) experience positions this part above the **Level_4b** platform with the following values:
+</TabItem>
+<TabItem key = "2" label="Build it Yourself">
 
-   <table>
-   <thead>
-   <tr>
-   <th>Name</th>
-   <th>Size</th>
-   <th>CFrame.Position</th>
-   <th>CFrame.Orientation</th>
-   </tr>
-   </thead>
-   <tbody>
-   <tr>
-   <td>Tunnel</td>
-   <td>`24, 65, 69`</td>
-   <td>`137, 77, 69`</td>
-   <td>`0, 0, 90`</td>
-   </tr>
-   </tbody>
-   </table>
+1. Insert a **cylinder** part above one of your sea stacks to make the body of the tunnel. To recreate the sample, place this cylinder above `Level_4b` with and:
 
-1. Insert and position a **block** part to represent the hollow portion of your tunnel that's at least as tall as the cylinder part, and a suitable width for players to walk through. The sample **Island Jump - Building** experience positions this part within the previous cylinder with the following values:
+   1. Set **Name** to `Tunnel`.
+   2. Set **Size** to `24, 65, 69`.
+   3. Set **CFrame.Position** to `137, 77, 69`.
+   4. Set **CFrame.Orientation** to `0, 0, 90`.
 
-   <table>
-   <thead>
-   <tr>
-   <th>Name</th>
-   <th>Size</th>
-   <th>CFrame.Position</th>
-   <th>CFrame.Orientation</th>
-   </tr>
-   </thead>
-   <tbody>
-   <tr>
-   <td>Hollow_Part</td>
-   <td>`24.5, 72, 22`</td>
-   <td>`134.5, 77, 71`</td>
-   <td>`0, 135, 90`</td>
-   </tr>
-   </tbody>
-   </table>
+2. Insert a **block** part next, positioned so it pokes through the cylinder where you want the tunnel opening. The block needs to be at least as tall as the cylinder and wide enough for a player to walk through. To recreate the sample:
+
+   1. Set **Name** to `Hollow_Part`.
+   2. Set **Size** to `24.5, 72, 22`.
+   3. Set **CFrame.Position** to `134.5, 77, 71`.
+   4. Set **CFrame.Orientation** to `0, 135, 90`.
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/HollowTunnel-Start.jpg" alt="A close-up view of a gray block sticking out of a gray cylinder." width="740" />
 
-1. In the **Explorer** window, select the block part.
-1. In Studio's **Model** tab toolbar, click the **Negate** button. The part turns translucent.
+3. Select the block in the **Explorer** and click **Negate** in the **Model** toolbar. The block turns translucent pink to show it's now a hole punch.
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/HollowTunnel-Negate.jpg" alt="A close-up view of a partially translucent pink block sticking out of a gray cylinder." width="740" />
 
-1. In the **Explorer** window, select both the negated part and the cylinder tunnel part.
-1. In Studio's **Model** tab toolbar, click the **Union** button. The negated part is cut out from the overlapping tunnel cylinder.
+4. Select both the negated block and the cylinder, then click **Union** in the **Model** toolbar. The negated shape gets carved out of the cylinder, leaving a tunnel.
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/HollowTunnel-Union.jpg" alt="A close-up view of a gray cylinder with an open tunnel through itself. The tunnel does not have a roof." width="740" />
 
-1. Rename the new union to something that reflects its height level and position, such as **Level_4b_Union**.
-1. Duplicate the sea stack platform underneath your new union, and position it so that it's on top of the tunnel. The sample **Island Jump - Building** experience positions the duplicate **Level_4b** platform above the union with the following values:
+5. Rename the resulting union to something descriptive like `Level_4b_Union`.
+6. Duplicate the platform underneath the tunnel and place the duplicate on top of the tunnel as a roof. To recreate the sample:
 
-   <table>
-   <thead>
-   <tr>
-   <th>Name</th>
-   <th>Size</th>
-   <th>CFrame.Position</th>
-   <th>CFrame.Orientation</th>
-   </tr>
-   </thead>
-   <tbody>
-   <tr>
-   <td>Level_4b_Top</td>
-   <td>`74, 65, 69`</td>
-   <td>`137, 126, 69`</td>
-   <td>`0, 0, 90`</td>
-   </tr>
-   </tbody>
-   </table>
+   1. Set **Name** to `Level_4b_Top`.
+   2. Set **Size** to `74, 65, 69`.
+   3. Set **CFrame.Position** to `137, 126, 69`.
+   4. Set **CFrame.Orientation** to `0, 0, 90`.
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/HollowTunnel-Final.jpg" alt="A close-up view of a tunnel through a cylinder." width="740" />
 
+</TabItem>
+</Tabs>
+
 ## Playtest the layout
 
-After you finish greyboxing your playable areas, you must playtest the layout of your environment to ensure the experience is both fun and functional, and so that you can catch small issues before they turn into much larger projects the further you are in the development process. For example, your experience's gameplay needs players to steadily upgrade their jumping power according to the amount of coins they collect, so it's important to verify that players are able to jump between platforms in relation to the `Class.Humanoid.JumpPower` you expect players to have at varying platform height levels.
+Before you start scripting, playtest the layout to catch any issues while it's still easy to make changes.
 
-The following step-by-step instructions teach you how to playtest your experience with different `Class.Humanoid.JumpPower` values. As you playtest, ask yourself the following questions:
+Start a playtest from the **Test** tab and simulate the player's starting state.
 
-- Are players able to successfully jump to each platform?
-- Does the difference in height between platforms slowly increase for each height level in order to encourage players to progress?
-- What am I enjoying or getting frustrated about the layout or gameplay?
+1. Find your character in the **Explorer** and select **Humanoid**.
+2. Enable **UseJumpPower**.
+3. In the **Properties** window, set **JumpPower** to `0`.
+4. As you reach higher platforms, increase **JumpPower** in increments of `30` to simulate collecting jump upgrades and make sure that each level is reachable.
 
-To playtest your experience:
+<img src="../../../../assets/tutorials/block-out-a-playable-area/Humanoid-Jump-Settings.png" alt="Jump Settings with the JumpPower and UseJumpPower properties highlighted." width="320" />
 
-1. Choose **Test** from the dropdown menu and click the **Play** button to its right to begin the playtest.
+<video controls loop muted>
+<source src="../../../../assets/tutorials/block-out-a-playable-area/playable-area-walk.mp4" />
+</video>
 
-   <img src="../../../../assets/studio/general/Mezzanine-Testing-Mode-Test.png" width="800" alt="Test option in the testing modes dropdown of Studio's mezzanine." />
-
-1. In the **Explorer** window, select the arrow next to your character model that displays your Roblox username. All of your character model's children objects display.
-1. Select **Humanoid**.
-
-   <img src="../../../../assets/tutorials/block-out-a-playable-area/Explorer-Character-Humanoid.png" alt="Studio's Explorer window with the Humanoid object highlighted. The hierarchy of the Workspace to CharacterModel to Humanoid is also highlighted." width="320" />
-
-1. In the **Properties** window, navigate to the **Jump Settings** section, then enable **UseJumpPower**. The **JumpPower** property displays with a default value of `50`.
-1. Set **JumpPower** to `0`. This ensures your character is unable to jump, emulating the same starting state for players after you script the gameplay.
-
-   <img src="../../../../assets/tutorials/block-out-a-playable-area/Humanoid-Jump-Settings.png" alt="Jump Settings with the JumpPower and UseJumpPower properties highlighted." width="320" />
-
-1. As you reach new levels, set **JumpPower** to multiples of `30` to simulate jumping upgrades.
-
-   <video controls loop muted>
-   <source src="../../../../assets/tutorials/block-out-a-playable-area/playable-area-walk.mp4" />
-   </video>
-
-In the next section of the tutorial, you will learn how to script the overall gameplay of the experience.
+In the next section, you'll learn how to script the overall gameplay.
