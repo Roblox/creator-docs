@@ -252,7 +252,7 @@ When defining your own segmentation, use these part names as a starting point an
   </tbody>
 </table>
 
-For more examples of working with segmented models, see the [Behaviors Reference Experience](https://create.roblox.com/dashboard/creations/experiences/10293105946/overview) `.rbxl` file.
+For more examples of working with segmented models, see the [Behaviors Reference Experience](https://www.roblox.com/games/105116507559995/Behaviors-Reference-Experience) `.rbxl` file.
 
 ## Planning Mode
 
