@@ -3,6 +3,11 @@ navigation:
   - heading: Overview
   - title: Get started
     path: /experiences
+  - title: AI accelerated workflows
+    path: /ai/accelerated-workflows
+    section:
+      - title: Build with a coding harness
+        path: /ai/build
   - heading: Create
   - title: Overview
     path: /creation

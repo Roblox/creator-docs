@@ -20,6 +20,7 @@ https://aspire2be.co.uk/
 https://www.audacityteam.org/
 https://blackrocket.com/courses/
 https://brightoncollege.ac.th/
+https://brew.sh/
 https://btl3d.com/roblox
 https://campsonshineinternational.org/
 https://camptecnologico.com/campamentos-navidad-bilbao-manana/
@@ -187,6 +188,7 @@ https://krubots.com/
 https://learn.openapis.org/glossary.html
 https://llama.meta.com/llama3/license/
 https://learn.microsoft.com/en-us/style-guide/welcome/
+https://learn.microsoft.com/en-us/windows/package-manager/winget/
 https://learning.ccsso.org/common-core-state-standards-initiative
 https://learnwithcat.catblountstories.com/
 https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes
@@ -542,6 +544,7 @@ https://www.youtube.com/channel/UCp1R0TBvgM7gj0rwTYULmSA
 https://www.youtube.com/embed/FfvEezx9yZw
 https://www.youtube.com/embed/iub8w55181k
 https://www.youtube.com/embed/Kt5CeFGqdoM
+https://www.youtube-nocookie.com/embed/v8r1d80DxOY?si=3uMq4HVEh3Ur2uuV
 https://www.youtube-nocookie.com/embed/vMaOGgeuR4Y?si=fuX-80mMMzhQB6sn&amp;start=240
 https://www.youtube.com/watch?list=PLHqz-wcqDQIEMMuXadwy90YxN2Qb4SrXT&time_continue=5&v=TWj78n4ZuMY&feature=emb_logo
 https://www.youtube.com/playlist?list=PLMneGxZNs3ZYZ5cJ1IPeaO1Eyd4ejY1Lz
@@ -562,6 +565,7 @@ https://www.youtube.com/embed/PVlCHE9pc50?si=qDmIwC7ohgMdqFgY&start=2373
 https://www.youtube.com/live/PVlCHE9pc50?t=2373s
 https://www.youtube.com/embed/SPmbTSlSv28
 https://www.youtube.com/embed/2HotST5mF3A
+https://www.youtube-nocookie.com/embed/4PY2IEG0LA8?si=ynCGtp3YSPax1fGB
 https://www.youtube-nocookie.com/embed/eqW9SINYeWg
 https://www.youtube-nocookie.com/embed/llR_pNlJDQw
 https://www.youtube-nocookie.com/embed/6MPWLQmIKLk
@@ -603,6 +607,7 @@ https://wally.run/
 https://code.visualstudio.com/
 https://github.com/Kampfkarren/selene
 https://git-scm.com/
+https://git-scm.com/install
 https://www.mercurial-scm.org/
 https://gitlab.com/
 https://bitbucket.org/
@@ -748,11 +753,13 @@ https://www.youtube-nocookie.com/embed/j6OPA95-1O0
 https://www.youtube-nocookie.com/embed/-HYByqvW2uc
 https://de.wikipedia.org/wiki/Eulerwinkel
 https://json-schema.org/
+https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code
 https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.luau-lsp
 https://marketplace.visualstudio.com/items?itemName=Kampfkarren.selene-vscode
 https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.stylua
 https://cursor.com/
 https://www.youtube-nocookie.com/embed/XLCZfGEm9tU?si=d992GKSU7oveIrhd
+https://www.youtube-nocookie.com/embed/ZlXA6QwJrHM
 https://www.youtube-nocookie.com/embed/eWf-6Sh-9Os?si=GZYvQw6ZvQiZF1uv
 https://www.youtube-nocookie.com/embed/PVlCHE9pc50
 https://www.youtube-nocookie.com/embed/gkFKF9A-snY?si=mJVh2eOj3UyBUXY-

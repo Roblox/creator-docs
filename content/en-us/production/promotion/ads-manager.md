@@ -240,6 +240,8 @@ To view your reports, go to **Manage Ads** and select the date range and game yo
 
 Impressions and clicks are reported in real time. Reporting on plays and earnings, however, relies on **attribution** and can include events that occur up to 30 days after an ad is served.
 
+Data can also take up to 48 hours to appear in reports. This delay is most noticeable for post-click metrics such as plays and earnings, which require additional processing and verification before credit can be assigned to the correct events.
+
 The goal of attribution is to assign credits to Ads Manager based on the role advertising plays in acquiring users and driving conversions. This helps you understand how your ad spend contributes to your growth and earnings.
 
 ### Reporting views
