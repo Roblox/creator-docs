@@ -3,24 +3,44 @@ title: Assistant for Studio
 description: How to use Assistant to help build, grow, and monetize your creations in Studio.
 ---
 
-**Assistant** is an AI helper that accelerates content creation by helping you get started, supplementing your skills, and assisting with ongoing development. It can do the following and much more:
+**Assistant** is an AI helper that helps you build experiences faster by answering questions, generating content, and performing actions directly in Studio. It can do the following and much more:
 
-- Answer how to do things on Roblox
-- Add and edit objects and scripts directly in your place's data model
-- Insert objects from the Creator Store
-- "Explain this code" by selecting parts of a script in the Script Editor
-- Create materials to restyle your objects
-- Generate 3D objects to populate your scene
+- Answer questions about Roblox development
+- Create and modify objects and scripts in your place's data model
+- Insert assets from the Creator Store
+- Explain selected code in the Script Editor
+- Generate materials to restyle your objects
+- Generate 3D meshes and procedural models to populate your scene
 
-## Studio features
-
-In Studio, Assistant consists of a large language model (LLM) that generates code and a run-command module (similar to the existing [Command&nbsp;Bar](../studio/ui-overview.md#command-bar)) that runs code. As a result, Assistant can act directly on your data model, such as inserting and modifying objects, writing and inserting scripts, and automating repetitive tasks like modifying properties in bulk.
+In Studio, Assistant combines a large language model (LLM) with a run-command system that can act directly on your data model. It can insert and modify objects, create scripts, and automate repetitive tasks such as updating properties in bulk.
 
 For a more in-depth look at what Assistant can do and how to use it, see the [Prompt guide and examples](prompt-engineering.md) and the following Roblox Staff livestream for tips, tricks, and inspiration.
 
 <iframe width="640" height="360" style={{marginTop: '36px'}} src="https://www.youtube-nocookie.com/embed/vMaOGgeuR4Y?si=fuX-80mMMzhQB6sn&amp;start=240" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 
-### Insert and modify scripts
+## Access Assistant from Studio
+
+To access Assistant from Studio:
+
+1. Click **Assistant** on the right side of the mezzanine bar.
+
+   <img src="../assets/studio/general/Toolbar-Assistant.png" width="800" alt="Assistant button indicated on the right side of the mezzanine bar." />
+
+2. Enter a request in the Assistant window.
+    - To generate a new response, click the redo icon.
+    - To rate the response and improve future results, click thumbs up or thumbs down.
+
+     <img src="../assets/assistant/Studio-General-UI.png" width="360" alt="General user interface for Assistant in Studio." />
+
+## Ask questions and explain code
+
+If you need general knowledge or help while creating an experience, you can ask Assistant questions like how to make a team system, how to design a game loop, how to use specific Studio tools, and much more. It can even explain code that it generated or that you wrote yourself.
+
+<img src="../assets/assistant/Studio-Explain-Code.png" width="360" alt="Code explanation provided by Assistant in Studio." />
+
+## Edit your place
+
+### Scripts
 
 Assistant can insert new scripts, modify existing ones, and perform these actions across multiple objects as necessary. For example, if you ask it to create a remote event, it can create a local script, a server script, and the event all at once.
 
@@ -30,7 +50,7 @@ If you enter a script generation request like "Make the player's character jump 
 
 The generated script might not function flawlessly. In these cases, you can either make further edits in the [Script Editor](../studio/script-editor.md) or ask Assistant to edit the script it just created. It can even act on existing scripts that it didn't create if you need help with code that you've written yourself.
 
-### Insert and modify objects
+### Objects and Creator Store assets
 
 Assistant can create, edit, delete and iterate on instances in your data model, including inserting items from the Creator Store.
 
@@ -38,24 +58,21 @@ Assistant can create, edit, delete and iterate on instances in your data model, 
 
 If you examine the code, you can see that Assistant calls `Class.InsertService:GetFreeModels()` to query the Creator Store for a wheelbarrow model and uses `Class.Model:PivotTo()` to place it near a tree.
 
-### Provide answers and suggestions
+## Generate content
 
-If you need general knowledge or help while creating an experience, you can ask Assistant questions like how to make a team system, how to design a game loop, how to use specific Studio tools, and much more. It can even explain code that it generated or that you wrote yourself.
-
-<img src="../assets/assistant/Studio-Explain-Code.png" width="360" alt="Code explanation provided by Assistant in Studio." />
-
-### Generate materials
+### Materials
 
 When given a request to generate a material, Assistant in Studio can quickly style existing parts with a lightweight version of the [Material Generator](../studio/material-generator.md).
 
 <img src="../assets/assistant/Studio-Quick-Styling-Material.png" width="360" alt="Material variations shown in Assistant for quick styling." />
 
-### Generate meshes
+### Meshes
 
 To generate a textured 3D mesh:
 
 - Use the `/generate` command followed by your prompt. For example, `/generate_mesh a red buggy with knobby tires`.
 - Ask Assistant to create a mesh directly. For example, "Make a futuristic crate."
+- Prompt with a reference image instead of text. `/generate_mesh` accepts either a text prompt or an image, but not both in the same request.
 
 You can use a Part in your workspace as a **bounding box**. If you select a Part before entering a prompt, Assistant uses the Part's size and location as input and ensures the generated mesh fits within the defined space.
 
@@ -63,7 +80,7 @@ You can also define a **maximum triangle count** for the returned model. Lower v
 
 <img src="../assets/assistant/Studio-Generated-Green-Dragon.jpg" width="360" alt="A generated green dragon provided by Assistant in Studio." />
 
-### Generate procedural models
+### Procedural models
 
 <Alert severity="info">
 You can generate up to **50 procedural models within a 24-hour rolling window**. This limit doesn't reset at a fixed time; instead, it updates continuously based on the number of requests made in the past 24 hours.
@@ -78,35 +95,175 @@ Procedural models let you:
 - Maintain high performance, with models behaving like standard objects until their parameters change. This means these models add almost no overhead to your experience.
 - Keep generated content organized in a dedicated `GeneratedFolder`, separating source and output.
 
-To generate a procedural model, type a command such as `/generate_procedural_model a stack of books` in the Assistant chat window. Assistant then generates the procedural model and adds it directly to your workspace for further customization.
+To generate a procedural model, type a command such as `/generate_procedural_model a stack of books` or attach a reference image to your prompt. Assistant then generates the procedural model and adds it directly to your workspace for further customization.
 
 <img src="../assets/assistant/Studio-Procedural-Generation-Ferris-Wheel.png" width="360" alt="A generated ferris wheel with Assistant in Studio." />
 
-### Planning Mode
+### Segmentation
+
+<video controls width="90%" src="/assets/assistant/Segmentation-Examples.mp4" />
+
+Segmentation divides a generated asset into individual parts, giving you more control over customization. It lets you apply different materials, attach scripts, or replace individual components without regenerating the entire model.
+
+When you run `/generate_mesh` or `/generate_procedural_model`, Assistant suggests a segmentation plan that defines how the model will be divided. Before generation, you can edit the proposed part list under **Part Names** by adding or removing entries, or by regenerating the suggested segmentation. Each generated asset can have a maximum of eight parts.
+
+When the configuration is ready, click **Generate** to start generation or **Cancel** to discard the request.
+
+For example, if you generate a skateboard and define five parts (`body`, `left rear wheel`, `right rear wheel`, `left front wheel`, and `right front wheel`), Assistant segments the model into those components, allowing you to modify each one independently.
+
+  <Grid container spacing={3}>
+    <Grid item Small={12} Medium={4} Large={4} XLarge={4}>
+      <img src="../assets/assistant/Segmentation_Example.png" width="100%" alt="..." />
+    </Grid>
+    <Grid item Small={12} Medium={4} Large={4} XLarge={4}>
+      <img src="../assets/assistant/Segmentation_Generation.png" width="100%" alt="..." />
+    </Grid>
+    <Grid item Small={12} Medium={4} Large={4} XLarge={4}>
+      <img src="../assets/assistant/Segmentation_List.png" width="100%" alt="..." />
+    </Grid>
+  </Grid>
+
+<h4 style={{marginTop: '36px'}}>Recommended part names</h4>
+
+While any generated asset can be segmented, the recommended part names below currently produce the most reliable results for their corresponding object types.
+
+When defining your own segmentation, use these part names as a starting point and customize them as needed.
+
+<table>
+  <thead>
+    <tr>
+      <th>**Object type**</th>
+      <th>**Recommended part names**</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>car</td>
+      <td>body, left front wheel, right front wheel, left rear wheel, right rear wheel</td>
+    </tr>
+    <tr>
+      <td>ambulance / police car</td>
+      <td>body, left front wheel, right front wheel, left rear wheel, right rear wheel, siren light bar</td>
+    </tr>
+    <tr>
+      <td>combat car</td>
+      <td>body, left front wheel, right front wheel, left rear wheel, right rear wheel, gun</td>
+    </tr>
+    <tr>
+      <td>tow truck</td>
+      <td>body, left front wheel, right front wheel, left rear wheel, right rear wheel, tow hook</td>
+    </tr>
+    <tr>
+      <td>trailer</td>
+      <td>body, left wheel, right wheel, hitch</td>
+    </tr>
+    <tr>
+      <td>motorcycle</td>
+      <td>frame, handlebars, front fork, front wheel, rear wheel</td>
+    </tr>
+    <tr>
+      <td>skateboard</td>
+      <td>body, left front wheel, right front wheel, left rear wheel, right rear wheel</td>
+    </tr>
+    <tr>
+      <td>prop plane</td>
+      <td>body, propeller</td>
+    </tr>
+    <tr>
+      <td>combat prop plane</td>
+      <td>body, propeller, gun</td>
+    </tr>
+    <tr>
+      <td>jet plane</td>
+      <td>body, thruster</td>
+    </tr>
+    <tr>
+      <td>helicopter</td>
+      <td>body, main rotor blade</td>
+    </tr>
+    <tr>
+      <td>combat helicopter</td>
+      <td>body, main rotor blade, gun</td>
+    </tr>
+    <tr>
+      <td>drone</td>
+      <td>body, left front propeller, right front propeller, left rear propeller, right rear propeller</td>
+    </tr>
+    <tr>
+      <td>jetpack</td>
+      <td>pack, thruster</td>
+    </tr>
+    <tr>
+      <td>motor boat</td>
+      <td>body, motor</td>
+    </tr>
+    <tr>
+      <td>combat motor boat</td>
+      <td>body, motor, cannon</td>
+    </tr>
+    <tr>
+      <td>submarine</td>
+      <td>hull, propeller</td>
+    </tr>
+    <tr>
+      <td>flashlight</td>
+      <td>handle body, head, lens</td>
+    </tr>
+    <tr>
+      <td>treasure chest</td>
+      <td>body, lid</td>
+    </tr>
+    <tr>
+      <td>pickaxe</td>
+      <td>handle, head</td>
+    </tr>
+    <tr>
+      <td>gun</td>
+      <td>grip, frame, barrel</td>
+    </tr>
+    <tr>
+      <td>sniper rifle</td>
+      <td>grip, frame, barrel, scope</td>
+    </tr>
+    <tr>
+      <td>turret</td>
+      <td>tripod base, swivel mount, gun body, barrel, shield plate</td>
+    </tr>
+    <tr>
+      <td>cannon</td>
+      <td>carriage base, barrel, left wheel, right wheel</td>
+    </tr>
+    <tr>
+      <td>wand</td>
+      <td>handle, tip</td>
+    </tr>
+    <tr>
+      <td>sword</td>
+      <td>handle, hand guard, blade, pommel</td>
+    </tr>
+    <tr>
+      <td>baseball bat</td>
+      <td>handle, barrel</td>
+    </tr>
+    <tr>
+      <td>grenade</td>
+      <td>grenade body, safety lever, pull pin</td>
+    </tr>
+  </tbody>
+</table>
+
+For more examples of working with segmented models, see the [Behaviors Reference Experience](https://create.roblox.com/dashboard/creations/experiences/10293105946/overview) `.rbxl` file.
+
+## Planning Mode
 
 Planning Mode lets you preview Assistant's next steps before execution. When you submit a complex request, Assistant generates a plan that you can review and adjust.
 
 You can activate Planning Mode by either:
 
-- Clicking the dropdown in the Assistant input panel and selecting **Plan**
-- Entering the command `/plan` in Assistant
+- Clicking the dropdown in the Assistant input panel and selecting **Plan**.
+- Entering the command `/plan` in Assistant.
 
 <img src="../assets/assistant/PlanningMode.png" width="400" alt="Example of Planning Mode in Assistant." />
-
-## Access Assistant from Studio
-
-To access Assistant from Studio:
-
-1. Click **Assistant** on the right side of the mezzanine bar.
-
-   <img src="../assets/studio/general/Toolbar-Assistant.png" width="800" alt="Assistant button indicated on the right side of the mezzanine bar." />
-
-2. Type a request into the field near the bottom of the window, using guidance from the [prompt guide](prompt-engineering.md) to generate improved responses.
-
-   - Click thumbs up or thumbs down to rate the result and improve future results.
-   - Click the redo icon to process a new result.
-
-     <img src="../assets/assistant/Studio-General-UI.png" width="360" alt="General user interface for Assistant in Studio." />
 
 ## Skills
 
