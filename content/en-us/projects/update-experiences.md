@@ -36,3 +36,12 @@ After you restart servers, Roblox:
 <Alert severity="info">
    If you want to completely shut down your experience and not allow players to reconnect after you restart your servers, you must make the experience private.
 </Alert>
+
+## Receive restart notifications on servers
+
+When you launch a delayed server restart, the `Class.DataModel.ServerRestartScheduled` event will fire on affected servers with the following arguments:
+- `restartTime` — a `Datatype.DateTime` the earliest time the server is scheduled to shut down. 
+- `source` — this will always be `Enum.CloseReason.DeveloperUpdate` for your published updates.
+- `attributes` — an optional JSON object you can use to provide custom information about the restart, such as the update reason, urgency, etc.
+
+In your server scripts, you can subscribe to this event to provide players with information about the upcoming restart. You could provide a countdown timer in your UI, prompt players to save their progress, or teleport them to updated servers at the most convenient time for your game.
