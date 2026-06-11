@@ -215,11 +215,13 @@ export const closeYouTubeModal = (id) => {
   if (m) m.style.display = 'none';
 };
 
-{/* A plain <img> in MDX is aliased to the site's MarkdownImage, which appends
-    ".webp" to the src in deployed builds (connectsRemoteServer). That works for
-    local /assets (the asset server has .webp variants) but 404s for external
-    YouTube thumbnails, which have no .jpg.webp. RawImg renders a real <img> that
-    skips that aliasing. Keep using plain <img> for local /assets elsewhere. */}
+{/* YouTube thumbnails need two things to load in deployed builds:
+    1. Host must be img.youtube.com, not i.ytimg.com — the site's CSP img-src
+       allowlists img.youtube.com and blocks i.ytimg.com.
+    2. RawImg renders a real <img>. A plain <img> in MDX is aliased to the site's
+       MarkdownImage, which appends ".webp" to the src when connectsRemoteServer
+       is set; that 404s for YouTube (no .jpg.webp). Keep plain <img> for local
+       /assets elsewhere, which rely on MarkdownImage's path + .webp handling. */}
 export const RawImg = 'img';
 
 export const YouTubeEmbed = ({ id, title = 'YouTube video player', noHover = false }) => (
@@ -232,7 +234,7 @@ export const YouTubeEmbed = ({ id, title = 'YouTube video player', noHover = fal
     >
       <RawImg
         className="yt-thumb"
-        src={`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`}
+        src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
         alt={title}
         loading="lazy"
       />
