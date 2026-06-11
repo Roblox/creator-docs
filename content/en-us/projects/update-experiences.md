@@ -40,7 +40,8 @@ After you restart servers, Roblox:
 ## Receive restart notifications on servers
 
 When you launch a delayed server restart, the `Class.DataModel.ServerRestartScheduled` event will fire on affected servers with the following arguments:
-- `restartTime` — a `Datatype.DateTime` the earliest time the server is scheduled to shut down. 
+
+- `restartTime` — a `Datatype.DateTime` the earliest time the server is scheduled to shut down.
 - `source` — this will always be `Enum.CloseReason.DeveloperUpdate` for your published updates.
 - `attributes` — an optional JSON object you can use to provide custom information about the restart, such as the update reason, urgency, etc.
 
