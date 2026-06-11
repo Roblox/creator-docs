@@ -301,236 +301,262 @@ export const linkCardStyles = {
   },
 };
 
-{/* Edit landing page copy below (YAML only). Step detail: **bold** and [links](url). */}
+{/* Edit landing page copy below. Step detail: **bold** and [links](url). */}
 
-export const LANDING_PAGE_YAML = `
-pageSections:
-  hero:
-    overline: AI on Roblox
-    title: "From ideas to published games, faster than ever"
-    description: |
-      Move faster with tools that help you script, build, and generate assets, while having full
-      control over creative decisions.
-    ctas:
-      - label: Download Studio
-        href: "https://www.roblox.com/download/studio"
-        rel: noopener
-        variant: contained
-        color: primary
-        size: large
-      - label: See how to create
-        variant: outlined
-        size: large
-        href: "#watch-and-learn"
-    flows:
-      - id: harness
-        label: Bring your own client
-        steps:
-          - num: "1"
-            title: Enable AI features
-            subtitle: |
-              Enable MCP and AI features in Studio.
-            detail: |
-              Open **Assistant** → **…** → **Manage MCP Servers** and switch on the **Enable Studio as MCP server** toggle.
+export const LANDING_PAGE_DATA = {
+  pageSections: {
+    hero: {
+      overline: 'AI on Roblox',
+      title: 'From ideas to published games, faster than ever',
+      description: 'Move faster with tools that help you script, build, and generate assets, while having full control over creative decisions.',
+      ctas: [
+        {
+          label: 'Download Studio',
+          href: 'https://www.roblox.com/download/studio',
+          rel: 'noopener',
+          variant: 'contained',
+          color: 'primary',
+          size: 'large'
+        },
+        {
+          label: 'See how to create',
+          variant: 'outlined',
+          size: 'large',
+          href: '#watch-and-learn'
+        }
+      ],
+      flows: [
+        {
+          id: 'harness',
+          label: 'Bring your own client',
+          steps: [
+            {
+              num: '1',
+              title: 'Enable AI features',
+              subtitle: 'Enable MCP and AI features in Studio.',
+              detail: `Open **Assistant** → **…** → **Manage MCP Servers** and switch on the **Enable Studio as MCP server** toggle.
 
-              Open **File → Beta Features** and turn on
-              the features you want. Features that are generally available are always available by default.
-          - num: "2"
-            title: Connect your client
-            subtitle: |
-              Let your MCP-enabled tools interact with Studio.
-            detail: |
-              Point your MCP-aware client at the Studio [MCP server](../studio/mcp.md#connect-your-client). When connected, your client can
-              read the data model, create and run scripts, edit instances, playtest, and more.
-          - num: "3"
-            title: Build your first game
-            subtitle: |
-              Plan and build your first game using your favorite coding harness.
-            detail: |
-              Download the starter project that contains LLM-friendly markdown files for context and have your first game ready in minutes.
-          - num: "4"
-            title: Customize your setup
-            subtitle: |
-              Build with community and professional tools.
-            detail: |
-              With [Rojo and Git](../projects/external-tools.md), you can build and version control your Roblox projects via the file
-              system. Use [tools](../art/overview-dcc.md) like Blender and other DCC apps to round out your creation workflow.
-      - id: studio
-        label: Roblox Studio
-        steps:
-          - num: "1"
-            title: Enable AI features
-            subtitle: |
-              We're always adding new beta features, so make sure they're enabled.
-            detail: |
-              Open **File → Beta Features** and turn on
-              the features you want. Features that are generally available are always available by default.
-          - num: "2"
-            title: Prompt the Assistant
-            subtitle: |
-              Describe what you want in the Assistant panel.
-            detail: |
-              Tell Assistant to build 3D objects, write and run Luau, generate meshes and materials, and playtest alongside you.
-          - num: "3"
-            title: Build your first game
-            subtitle: |
-              Learn core concepts and build an obby with the Assistant.
-            detail: |
-               Our [core curriculum](../tutorials/curriculums/core/) teaches you the basics of building, scripting, and polishing an obby game using the Assistant as your trusted companion.
-          - num: "4"
-            title: Customize your setup
-            subtitle: |
-              Bring your own API keys to use the model you prefer.
-            detail: |
-              Open **Assistant** → **…** → **Manage API Keys**
-              to configure your preferred model from Anthropic, OpenAI, or Google.
-  creation3d:
-    overline: 3D and AVATAR CREATION
-    title: Generate 3D content from a phrase
-    description: |
-      Turn a text prompt into a wide array of 3D content that you can drop right into Studio.
-    grids:
-      - hero:
-          href: /parts/procedural-models
-          title: Procedural models
-          description: |
-            Generate 3D models that automatically adjust to customizable attributes you define.
-          media:
-            src: /assets/ai-landing/procedural_model_gen.gif
-            alt: Procedural models
-        tiles:
-          - title: Interactive 3D models
-            description: |
-              Through text prompts and preset schemas, let your players generate both interactive 3D models in your game, such as vehicles that drive, planes that fly, and weapons that shoot.
-            href: /parts/model-generation
-            media:
-              src: |
-                /assets/modeling/model-generation/Green-Dragon-Car.jpg
-          - title: Avatar Auto-Setup
-            description: |
-              Automatically rigs, cages, and segments 3D models into fully functional, animatable Roblox avatars.
-            href: /avatar-setup/auto-setup
-            media:
-              src: /assets/art/resources/Archer-Girl-Preview.png
-              objectPosition: top
-      - layout: threeUp
-        cards:
-          - href: /assistant/guide#generate-meshes
-            title: Mesh generation
-            description: |
-              Describe what you need in Assistant or with an MCP command and get a textured <code>MeshPart</code>.
-            media:
-              src: /assets/ai-landing/mesh-gen.jpg
-              alt: Mesh generation
-          - title: Material generator
-            description: |
-              Seamless, tiling 2D images that can be saved as <code>MaterialVariants</code>, ideal for large surfaces like terrain, floors, and walls.
-            href: /studio/material-generator
-            media:
-              src: /assets/ai-landing/material-generator.png
-          - title: Texture generator
-            description: |
-              Smart, context-aware textures that understand the geometry of your mesh to apply realistic patterns and wear.
-            href: /studio/texture-generator
-            media:
-              src: /assets/ai-landing/texture-gen.png
-  naturalLanguage:
-    overline: NATURAL LANGUAGE APIs
-    title: Process text and speech in real time
-    description: |
-      Bridge the gap between text and voice, enabling more immersive social interactions and dynamic storytelling.
-    cardColumns: 4
-    cards:
-      - title: Text-to-speech
-        description: |
-          Turn written text into spoken audio at runtime with <code>AudioTextToSpeech</code>, whether for
-          narration, UI prompts, or giving your characters a voice.
-        href: |
-          /tutorials/use-case-tutorials/audio/add-text-to-speech
-      - title: Speech-to-text
-        description: |
-          Capture what players say through their microphone and turn it into text for voice
-          commands, chat, or captions.
-        href: |
-          /tutorials/use-case-tutorials/audio/speech-to-text
-      - title: Text generation
-        description: |
-          Use large language models (LLMs) to power dynamic NPC dialogue.
-          All generated text must be processed through the <code>TextService:FilterStringAsync()</code> method.
-        href: /reference/engine/classes/TextGenerator
-  development:
-    overline: DEVELOPMENT ASSISTANCE
-    title: "Develop faster with coding and debugging tools"
-    description: |
-      Keep your momentum while you code. These tools meet you wherever you work, from quick help in
-      the script editor to an agent you can drive from your own editor.
-    cardColumns: 4
-    gridStyle:
-      marginBottom: 56
-    cards:
-      - title: Code Assist
-        description: |
-          Get real-time code completions with suggestions based on the context of your script and comments.
-        href: /studio/script-editor
-        media:
-          src: /assets/studio/script-editor/Code-Assist.mp4
-          objectFit: contain
-        isVideo: true
-      - title: Assistant
-        description: |
-          A conversational partner in Roblox Studio that can run and write code, generate materials, meshes, and models, simulate virtual inputs, and playtest your game.
-        href: /assistant/guide
-        media: /assets/ai-landing/assistant-planning-mode.png
-      - title: Studio MCP server
-        description: |
-          Connect any MCP client to your open Studio session,
-          then read, edit, and playtest your place from wherever you work.
-        href: /studio/mcp
-        media: /assets/ai-landing/mcp-server.png
-  watchAndLearn:
-    overline: Watch and Learn
-    title: See how to accelerate your creation workflows
-    description: |
-      Follow along with resources from the Roblox
-      team that show how to set up AI workflows and recently released features.
-    featureTile:
-      youtubeId: v8r1d80DxOY
-      youtubeTitle: AI-assisted Studio workflow
-    secondaryTiles:
-      - youtubeId: XsY8xhluuZM
-        youtubeTitle: Feature walkthrough
-      - youtubeId: ZlXA6QwJrHM
-        youtubeTitle: Creator workflow demo
-
-  policies:
-    overline: Policies and guidelines
-    title: We value your safety and privacy
-    description: |
-      Roblox's AI tools are built with creator trust in mind. You remain in control of how your work
-      and data are used, and every generation runs through the same moderation and [Community
-      Standards](https://about.roblox.com/community-standards) that apply to the rest of the platform. Review the guidelines below to understand
-      your responsibilities as a creator and to configure how your assets contribute to model
-      training.
-    cardColumns: 6
-    cardVariant: dark
-    cards:
-      - title: Safety best practices
-        description: |
-          Generative AI accelerates creation, but you are responsible for the content generated
-          within your experiences. Follow these guidelines to stay compliant with Roblox Community
-          Standards.
-        href: /generative-AI
-      - title: Data and privacy
-        description: |
-          Roblox is committed to transparency about how creator data is used for AI training. Manage
-          your data sharing preferences on Creator Hub.
-        href: /ai-data-sharing
-`;
+Open **File → Beta Features** and turn on the features you want. Features that are generally available are always available by default.`
+            },
+            {
+              num: '2',
+              title: 'Connect your client',
+              subtitle: 'Let your MCP-enabled tools interact with Studio.',
+              detail: 'Point your MCP-aware client at the Studio [MCP server](../studio/mcp.md#connect-your-client). When connected, your client can read the data model, create and run scripts, edit instances, playtest, and more.'
+            },
+            {
+              num: '3',
+              title: 'Build your first game',
+              subtitle: 'Plan and build your first game using your favorite coding harness.',
+              detail: 'Download the starter project that contains LLM-friendly markdown files for context and have your first game ready in minutes.'
+            },
+            {
+              num: '4',
+              title: 'Customize your setup',
+              subtitle: 'Build with community and professional tools.',
+              detail: 'With [Rojo and Git](../projects/external-tools.md), you can build and version control your Roblox projects via the file system. Use [tools](../art/overview-dcc.md) like Blender and other DCC apps to round out your creation workflow.'
+            }
+          ]
+        },
+        {
+          id: 'studio',
+          label: 'Roblox Studio',
+          steps: [
+            {
+              num: '1',
+              title: 'Enable AI features',
+              subtitle: 'We\'re always adding new beta features, so make sure they\'re enabled.',
+              detail: 'Open **File → Beta Features** and turn on the features you want. Features that are generally available are always available by default.'
+            },
+            {
+              num: '2',
+              title: 'Prompt the Assistant',
+              subtitle: 'Describe what you want in the Assistant panel.',
+              detail: 'Tell Assistant to build 3D objects, write and run Luau, generate meshes and materials, and playtest alongside you.'
+            },
+            {
+              num: '3',
+              title: 'Build your first game',
+              subtitle: 'Learn core concepts and build an obby with the Assistant.',
+              detail: 'Our [core curriculum](../tutorials/curriculums/core/) teaches you the basics of building, scripting, and polishing an obby game using the Assistant as your trusted companion.'
+            },
+            {
+              num: '4',
+              title: 'Customize your setup',
+              subtitle: 'Bring your own API keys to use the model you prefer.',
+              detail: 'Open **Assistant** → **…** → **Manage API Keys** to configure your preferred model from Anthropic, OpenAI, or Google.'
+            }
+          ]
+        }
+      ]
+    },
+    creation3d: {
+      overline: '3D and AVATAR CREATION',
+      title: 'Generate 3D content from a phrase',
+      description: 'Turn a text prompt into a wide array of 3D content that you can drop right into Studio.',
+      grids: [
+        {
+          hero: {
+            href: '/parts/procedural-models',
+            title: 'Procedural models',
+            description: 'Generate 3D models that automatically adjust to customizable attributes you define.',
+            media: {
+              src: '/assets/ai-landing/procedural_model_gen.gif',
+              alt: 'Procedural models'
+            }
+          },
+          tiles: [
+            {
+              title: 'Interactive 3D models',
+              description: 'Through text prompts and preset schemas, let your players generate both interactive 3D models in your game, such as vehicles that drive, planes that fly, and weapons that shoot.',
+              href: '/parts/model-generation',
+              media: {
+                src: '/assets/modeling/model-generation/Green-Dragon-Car.jpg'
+              }
+            },
+            {
+              title: 'Avatar Auto-Setup',
+              description: 'Automatically rigs, cages, and segments 3D models into fully functional, animatable Roblox avatars.',
+              href: '/avatar-setup/auto-setup',
+              media: {
+                src: '/assets/art/resources/Archer-Girl-Preview.png',
+                objectPosition: 'top'
+              }
+            }
+          ]
+        },
+        {
+          layout: 'threeUp',
+          cards: [
+            {
+              href: '/assistant/guide#generate-meshes',
+              title: 'Mesh generation',
+              description: 'Describe what you need in Assistant or with an MCP command and get a textured <code>MeshPart</code>.',
+              media: {
+                src: '/assets/ai-landing/mesh-gen.jpg',
+                alt: 'Mesh generation'
+              }
+            },
+            {
+              title: 'Material generator',
+              description: 'Seamless, tiling 2D images that can be saved as <code>MaterialVariants</code>, ideal for large surfaces like terrain, floors, and walls.',
+              href: '/studio/material-generator',
+              media: {
+                src: '/assets/ai-landing/material-generator.png'
+              }
+            },
+            {
+              title: 'Texture generator',
+              description: 'Smart, context-aware textures that understand the geometry of your mesh to apply realistic patterns and wear.',
+              href: '/studio/texture-generator',
+              media: {
+                src: '/assets/ai-landing/texture-gen.png'
+              }
+            }
+          ]
+        }
+      ]
+    },
+    naturalLanguage: {
+      overline: 'NATURAL LANGUAGE APIs',
+      title: 'Process text and speech in real time',
+      description: 'Bridge the gap between text and voice, enabling more immersive social interactions and dynamic storytelling.',
+      cardColumns: 4,
+      cards: [
+        {
+          title: 'Text-to-speech',
+          description: 'Turn written text into spoken audio at runtime with <code>AudioTextToSpeech</code>, whether for narration, UI prompts, or giving your characters a voice.',
+          href: '/tutorials/use-case-tutorials/audio/add-text-to-speech'
+        },
+        {
+          title: 'Speech-to-text',
+          description: 'Capture what players say through their microphone and turn it into text for voice commands, chat, or captions.',
+          href: '/tutorials/use-case-tutorials/audio/speech-to-text'
+        },
+        {
+          title: 'Text generation',
+          description: 'Use large language models (LLMs) to power dynamic NPC dialogue. All generated text must be processed through the <code>TextService:FilterStringAsync()</code> method.',
+          href: '/reference/engine/classes/TextGenerator'
+        }
+      ]
+    },
+    development: {
+      overline: 'DEVELOPMENT ASSISTANCE',
+      title: 'Develop faster with coding and debugging tools',
+      description: 'Keep your momentum while you code. These tools meet you wherever you work, from quick help in the script editor to an agent you can drive from your own editor.',
+      cardColumns: 4,
+      gridStyle: {
+        marginBottom: 56
+      },
+      cards: [
+        {
+          title: 'Code Assist',
+          description: 'Get real-time code completions with suggestions based on the context of your script and comments.',
+          href: '/studio/script-editor',
+          media: {
+            src: '/assets/studio/script-editor/Code-Assist.mp4',
+            objectFit: 'contain'
+          },
+          isVideo: true
+        },
+        {
+          title: 'Assistant',
+          description: 'A conversational partner in Roblox Studio that can run and write code, generate materials, meshes, and models, simulate virtual inputs, and playtest your game.',
+          href: '/assistant/guide',
+          media: '/assets/ai-landing/assistant-planning-mode.png'
+        },
+        {
+          title: 'Studio MCP server',
+          description: 'Connect any MCP client to your open Studio session, then read, edit, and playtest your place from wherever you work.',
+          href: '/studio/mcp',
+          media: '/assets/ai-landing/mcp-server.png'
+        }
+      ]
+    },
+    watchAndLearn: {
+      overline: 'Watch and Learn',
+      title: 'See how to accelerate your creation workflows',
+      description: 'Follow along with resources from the Roblox team that show how to set up AI workflows and recently released features.',
+      featureTile: {
+        youtubeId: 'v8r1d80DxOY',
+        youtubeTitle: 'AI-assisted Studio workflow'
+      },
+      secondaryTiles: [
+        {
+          youtubeId: 'XsY8xhluuZM',
+          youtubeTitle: 'Feature walkthrough'
+        },
+        {
+          youtubeId: 'ZlXA6QwJrHM',
+          youtubeTitle: 'Creator workflow demo'
+        }
+      ]
+    },
+    policies: {
+      overline: 'Policies and guidelines',
+      title: 'We value your safety and privacy',
+      description: 'Roblox\'s AI tools are built with creator trust in mind. You remain in control of how your work and data are used, and every generation runs through the same moderation and [Community Standards](https://about.roblox.com/community-standards) that apply to the rest of the platform. Review the guidelines below to understand your responsibilities as a creator and to configure how your assets contribute to model training.',
+      cardColumns: 6,
+      cardVariant: 'dark',
+      cards: [
+        {
+          title: 'Safety best practices',
+          description: 'Generative AI accelerates creation, but you are responsible for the content generated within your experiences. Follow these guidelines to stay compliant with Roblox Community Standards.',
+          href: '/generative-AI'
+        },
+        {
+          title: 'Data and privacy',
+          description: 'Roblox is committed to transparency about how creator data is used for AI training. Manage your data sharing preferences on Creator Hub.',
+          href: '/ai-data-sharing'
+        }
+      ]
+    }
+  }
+};
 
 {/* MDX-injected components (Grid, Typography, Link, …) are only in scope inside this IIFE. */}
 
 {(() => {
-const yaml = require('js-yaml');
 const flexCol = { display: 'flex', flexDirection: 'column' };
 const cardPad = { padding: '20px 22px 24px', flex: 1, ...flexCol };
 const mb96 = { marginBottom: 96 };
@@ -561,7 +587,7 @@ const coverImg = {
   display: 'block',
 };
 
-const pageSections = yaml.load(LANDING_PAGE_YAML).pageSections;
+const pageSections = LANDING_PAGE_DATA.pageSections;
 
 // Inline formatting for YAML copy: **bold**, inline code, and [text](href).
 // Inline code renders via the site's InlineCode component (the intrinsic <code>
