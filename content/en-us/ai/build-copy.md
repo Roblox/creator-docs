@@ -1,5 +1,5 @@
 ---
-title: Build with a coding harness 2
+title: Build with a coding harness 22
 description: Connect an AI-enabled text editor to Roblox Studio with Script Sync and MCP.
 ---
 
