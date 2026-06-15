@@ -3,10 +3,6 @@ title: Managed pricing
 description: Managed pricing brings regional pricing and price optimization into one unified system in Creator Hub.
 ---
 
-<Alert severity='info'>
-For timelines, latest updates, and roadmap details, see the [DevForum announcement](#).
-</Alert>
-
 **Managed pricing** is a unified system in Creator Hub that combines [price optimization](./price-optimization.md) and [regional pricing](./regional-pricing.md) under a single opt-in. Price optimization helps you find the right price points for your passes and developer products. Regional pricing helps you offer accessible prices to users across different economic regions.
 
 From the **Managed Pricing** tab, you can:

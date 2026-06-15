@@ -3,10 +3,6 @@ title: Regional pricing
 description: Regional pricing adjusts the price of your items based on a user's region.
 ---
 
-<Alert severity="info">
-Regional pricing is part of [Managed pricing](./managed-pricing.md), the unified system that keeps your prices optimized across products and regions.
-</Alert>
-
 With Managed Pricing, you can offer **region-specific prices** for your items and build a more inclusive and accessible global economy. After you determine a default global price for an item, Roblox uses a variety of signals like the region's purchasing power, currency exchange rates, and local spending behavior to set the most appropriate price for that item region by region.
 
 You can choose which of your items you want to price regionally. When you enable Managed Pricing for an item in your experience, Roblox automatically adjusts the price of that item for users based on their economic location.
