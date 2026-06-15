@@ -3954,7 +3954,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 750000
+            "maxInPeriod": 550000
           }
         },
         "x-roblox-scopes": [
@@ -4035,7 +4035,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 750000
+            "maxInPeriod": 550000
           }
         },
         "x-roblox-scopes": [
@@ -4135,7 +4135,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 750000
+            "maxInPeriod": 550000
           }
         },
         "x-roblox-scopes": [
@@ -4662,7 +4662,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 750000
+            "maxInPeriod": 550000
           }
         },
         "x-roblox-scopes": [
@@ -4752,7 +4752,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 750000
+            "maxInPeriod": 550000
           }
         },
         "x-roblox-scopes": [
@@ -4861,7 +4861,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 750000
+            "maxInPeriod": 550000
           }
         },
         "x-roblox-scopes": [
@@ -18554,7 +18554,9 @@
                 "UpdateGroupIcon",
                 "UpdateGroupCoverPhoto",
                 "AssignRole",
-                "UnassignRole"
+                "UnassignRole",
+                "PublishAnnouncement",
+                "DeleteAnnouncement"
               ]
             }
           },
@@ -29212,68 +29214,6 @@
         }
       }
     },
-    "/v1/contacts/{targetContactId}/request-friendship": {
-      "post": {
-        "tags": ["Connections"],
-        "summary": "Send a contact friend request to target user",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "targetContactId",
-            "description": "The target contact Id for friend request",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.CaptchaStatusResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.CaptchaStatusResponseModel"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The target user is invalid or does not exist.\r\n5: The target user is already a friend.\r\n6: Invalid parameters.\r\n7: The user cannot be friends with itself.\r\n31: User with max friends sent friend request."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n2: The user is banned from performing operation.\r\n3: The user is blocked from performing this action.\r\n14: The user has not passed the captcha."
-          },
-          "429": {
-            "description": "9: The flood limit has been exceeded."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/friends#friends_post_v1_contacts__targetContactId__request_friendship"
-        }
-      }
-    },
     "/v1/country-regions": {
       "get": {
         "tags": ["Localization"],
@@ -36370,7 +36310,9 @@
                 "UpdateGroupIcon",
                 "UpdateGroupCoverPhoto",
                 "AssignRole",
-                "UnassignRole"
+                "UnassignRole",
+                "PublishAnnouncement",
+                "DeleteAnnouncement"
               ]
             }
           },
@@ -37232,6 +37174,58 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_post_v1_groups__groupId__claim_ownership"
+        }
+      }
+    },
+    "/v1/groups/{groupId}/community-feature-freezes": {
+      "get": {
+        "tags": ["Groups"],
+        "summary": "Gets the freeze status of the community features for a group.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "groupId",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Groups.Api.GetCommunityFeatureFreezesResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "49: User is invalid or does not exist"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_get_v1_groups__groupId__community_feature_freezes"
         }
       }
     },
@@ -43678,50 +43672,6 @@
         }
       }
     },
-    "/v1/my/new-friend-requests": {
-      "delete": {
-        "tags": ["Connections"],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.Models.Response.ClearNewFriendRequestResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.Models.Response.ClearNewFriendRequestResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/friends#friends_delete_v1_my_new_friend_requests"
-        }
-      }
-    },
     "/v1/my/new-friend-requests/count": {
       "get": {
         "tags": ["Connections"],
@@ -49681,51 +49631,6 @@
         }
       }
     },
-    "/v1/user/friend-requests/decline-all": {
-      "post": {
-        "tags": ["Connections"],
-        "summary": "Decline all pending friend requests for the authenticated user.",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.Models.Response.DeclineAllFriendRequestsResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.Models.Response.DeclineAllFriendRequestsResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/friends#friends_post_v1_user_friend_requests_decline_all"
-        }
-      }
-    },
     "/v1/user/get-tags": {
       "post": {
         "tags": ["Users"],
@@ -51249,201 +51154,6 @@
         }
       }
     },
-    "/v1/users/{requesterUserId}/accept-friend-request": {
-      "post": {
-        "tags": ["Connections"],
-        "summary": "Accept a friend request.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "requesterUserId",
-            "description": "The user Id of the requester",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The target user is invalid or does not exist.\r\n10: The friend request does not exist.\r\n11: The current users friends limit has been exceeded.\r\n12: The target users friends limit has been exceeded."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n3: The user is blocked from performing this action."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/friends#friends_post_v1_users__requesterUserId__accept_friend_request"
-        }
-      }
-    },
-    "/v1/users/{requesterUserId}/decline-friend-request": {
-      "post": {
-        "tags": ["Connections"],
-        "summary": "Decline a friend request.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "requesterUserId",
-            "description": "The user Id of the requester",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The target user is invalid or does not exist.\r\n10: The friend request does not exist."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/friends#friends_post_v1_users__requesterUserId__decline_friend_request"
-        }
-      }
-    },
-    "/v1/users/{senderUserId}/accept-friend-request-with-token": {
-      "post": {
-        "tags": ["Connections"],
-        "summary": "Accept a friend request with an Off Network Friending token.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "senderUserId",
-            "description": "The user id of the sender of the off network friend request",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Friends.Api.Models.Request.FriendingTokenRequestModel"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Friends.Api.Models.Request.FriendingTokenRequestModel"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The target user is invalid or does not exist.\r\n3: The user is blocked from performing this action.\r\n5: The target user is already a friend.\r\n6: Invalid parameters.\r\n7: The user cannot be friends with itself.\r\n11: The current users friends limit has been exceeded.\r\n12: The target users friends limit has been exceeded."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/friends#friends_post_v1_users__senderUserId__accept_friend_request_with_token"
-        }
-      }
-    },
     "/v1/users/{targetUserId}/follow": {
       "post": {
         "tags": ["Interactions"],
@@ -51809,85 +51519,6 @@
         }
       }
     },
-    "/v1/users/{targetUserId}/request-friendship": {
-      "post": {
-        "tags": ["Connections"],
-        "summary": "Send a friend request to target user",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "targetUserId",
-            "description": "The target user Id for friend request",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Friends.Api.FriendshipRequestModel"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Friends.Api.FriendshipRequestModel"
-              }
-            }
-          },
-          "description": "The source which the friend request originated from",
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.CaptchaStatusResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.CaptchaStatusResponseModel"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The target user is invalid or does not exist.\r\n5: The target user is already a friend.\r\n6: Invalid parameters.\r\n7: The user cannot be friends with itself.\r\n10: The friend request does not exist.\r\n13: The users are not in the same game.\r\n31: User with max friends sent friend request.\r\n35: Invalid nickname."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n2: The user is banned from performing operation.\r\n3: The user is blocked from performing this action.\r\n14: The user has not passed the captcha."
-          },
-          "429": {
-            "description": "9: The flood limit has been exceeded."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/friends#friends_post_v1_users__targetUserId__request_friendship"
-        }
-      }
-    },
     "/v1/users/{targetUserId}/unfollow": {
       "post": {
         "tags": ["Interactions"],
@@ -51948,66 +51579,6 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#friends_post_v1_users__targetUserId__unfollow"
-        }
-      }
-    },
-    "/v1/users/{targetUserId}/unfriend": {
-      "post": {
-        "tags": ["Connections"],
-        "summary": "Unfriend a user",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "targetUserId",
-            "description": "The target user id to unfriend",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The target user is invalid or does not exist."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/friends#friends_post_v1_users__targetUserId__unfriend"
         }
       }
     },
@@ -75621,10 +75192,6 @@
             "enum": [0, 1, 2, 3, 4],
             "type": "integer"
           },
-          "eligibleForTextChatMigration": {
-            "description": "Whether the game is elegible for text chat service auto migration.",
-            "type": "boolean"
-          },
           "audiences": {
             "description": "The audiences this universe is visible to (e.g. Editors, PlayTesters, Friends, Public).\r\nAlways non-null; may be empty when audience visibility has not been configured.",
             "type": "array",
@@ -78817,55 +78384,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Friends.Api.FriendshipRequestModel": {
-        "type": "object",
-        "properties": {
-          "friendshipOriginSourceType": {
-            "format": "int32",
-            "description": "Which source the friend request originated from ['Unknown' = 0, 'PlayerSearch' = 1, 'QrCode' = 2, 'InGame' = 3, 'UserProfile' = 4, 'QqContactImporter' = 5, 'WeChatContactImporter' = 6, 'ProfileShare' = 7, 'PhoneContactImporter' = 8, 'FriendRecommendations' = 9, 'UserCommunities' = 10]",
-            "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-            "type": "integer"
-          },
-          "senderNickname": {
-            "description": "Optional nickname attached to friend request",
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Friends.Api.Models.Request.FriendingTokenRequestModel": {
-        "description": "Request model for AcceptFriendRequestWithToken endpoint",
-        "type": "object",
-        "properties": {
-          "friendingToken": {
-            "description": "FriendingToken to authorize the creation of an Off Network Friend request",
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Friends.Api.Models.Response.ClearNewFriendRequestResponse": {
-        "description": "The friendship status response model.",
-        "type": "object",
-        "properties": {
-          "status": {
-            "description": "Returns if the cache was successfully cleared.",
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Friends.Api.Models.Response.DeclineAllFriendRequestsResponse": {
-        "description": "response for DeclineAllFriendRequests",
-        "type": "object",
-        "properties": {
-          "backgrounded": {
-            "description": "Whether or not the decline all job has been backgrounded",
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Friends.Api.Models.Response.FollowingExistsResponse": {
         "description": "Response contained in list for FollowingExists endpoint. Corresponds to a single userId.",
         "type": "object",
@@ -81135,6 +80653,21 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Groups.Api.CommunityFeatureFreezeStatus": {
+        "description": "Response model representing the freeze status of a community feature.",
+        "type": "object",
+        "properties": {
+          "feature": {
+            "description": "The community feature.",
+            "type": "string"
+          },
+          "isDisabled": {
+            "description": "Whether the feature is currently disabled.",
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Groups.Api.CreateBlockedKeywordsRequest": {
         "type": "object",
         "properties": {
@@ -81166,6 +80699,20 @@
           },
           "challengeId": {
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Groups.Api.GetCommunityFeatureFreezesResponse": {
+        "description": "Response model for the community feature freezes endpoint.",
+        "type": "object",
+        "properties": {
+          "features": {
+            "description": "The freeze status of each community feature.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Groups.Api.CommunityFeatureFreezeStatus"
+            }
           }
         },
         "additionalProperties": false
@@ -81485,12 +81032,14 @@
         "type": "object",
         "properties": {
           "feature": {
-            "description": "The feature type. ['Payouts' = 0, 'ContentUpload' = 1, 'GroupOwnershipTransfer' = 2, 'GameOwnershipTransfer' = 3]",
+            "description": "The feature type. ['Payouts' = 0, 'ContentUpload' = 1, 'GroupOwnershipTransfer' = 2, 'GameOwnershipTransfer' = 3, 'ForumRead' = 4, 'ForumWrite' = 5]",
             "enum": [
               "Payouts",
               "ContentUpload",
               "GroupOwnershipTransfer",
-              "GameOwnershipTransfer"
+              "GameOwnershipTransfer",
+              "ForumRead",
+              "ForumWrite"
             ],
             "type": "string"
           },
@@ -81676,6 +81225,10 @@
           },
           "canViewMemberList": {
             "description": "Whether the user can view the group member list",
+            "type": "boolean"
+          },
+          "isOwner": {
+            "description": "Whether the authenticated user is the owner of the group",
             "type": "boolean"
           }
         },
@@ -82683,6 +82236,16 @@
                 "type": "string"
               },
               "GameOwnershipTransfer": {
+                "description": "The desired status of a group feature. ['On' = 0, 'Blocked' = 1]",
+                "enum": ["On", "Blocked"],
+                "type": "string"
+              },
+              "ForumRead": {
+                "description": "The desired status of a group feature. ['On' = 0, 'Blocked' = 1]",
+                "enum": ["On", "Blocked"],
+                "type": "string"
+              },
+              "ForumWrite": {
                 "description": "The desired status of a group feature. ['On' = 0, 'Blocked' = 1]",
                 "enum": ["On", "Blocked"],
                 "type": "string"
@@ -89017,7 +88580,6 @@
         ]
       },
       "SearchCreatorStoreAssetsRequest": {
-        "required": ["searchCategoryType"],
         "type": "object",
         "properties": {
           "searchCategoryType": {
@@ -89026,25 +88588,8 @@
                 "$ref": "#/components/schemas/SearchCategoryType"
               }
             ],
-            "description": "The asset type to search within.",
-            "x-enumNames": [
-              "Audio",
-              "Model",
-              "Decal",
-              "Plugin",
-              "MeshPart",
-              "Video",
-              "FontFamily"
-            ],
-            "x-enum-varnames": [
-              "Audio",
-              "Model",
-              "Decal",
-              "Plugin",
-              "MeshPart",
-              "Video",
-              "FontFamily"
-            ]
+            "description": "The asset type to search within. Optional when Toolbox.Service.SearchCreatorStoreAssetsRequest.CategoryPath\r\nresolves to an asset type; otherwise required.",
+            "nullable": true
           },
           "query": {
             "type": "string",
@@ -92239,21 +91784,13 @@
         "path": "friends",
         "content": "HTTP APIs for working with connections on Roblox Cloud.",
         "ordering": [
-          "friends_post_v1_contacts__targetContactId__request_friendship",
           "friends_get_v1_metadata",
           "friends_get_v1_my_friends_count",
           "friends_post_v1_my_friends_refresh_qr_session",
           "friends_get_v1_my_friends_requests",
-          "friends_delete_v1_my_new_friend_requests",
           "friends_get_v1_my_new_friend_requests_count",
           "friends_post_v1_user__userId__multiget_are_friends",
           "friends_get_v1_user_friend_requests_count",
-          "friends_post_v1_user_friend_requests_decline_all",
-          "friends_post_v1_users__requesterUserId__accept_friend_request",
-          "friends_post_v1_users__requesterUserId__decline_friend_request",
-          "friends_post_v1_users__senderUserId__accept_friend_request_with_token",
-          "friends_post_v1_users__targetUserId__request_friendship",
-          "friends_post_v1_users__targetUserId__unfriend",
           "friends_get_v1_users__userId__friends",
           "friends_get_v1_users__userId__friends_count",
           "friends_get_v1_users__userId__friends_find",
@@ -92458,6 +91995,7 @@
           "groups_get_v1_featured_content_event",
           "groups_post_v1_featured_content_event",
           "groups_get_v1_groups__groupId_",
+          "groups_get_v1_groups__groupId__community_feature_freezes",
           "groups_get_v1_groups__groupId__configuration",
           "groups_post_v1_groups__groupId__change_owner",
           "groups_post_v1_groups__groupId__claim_ownership",

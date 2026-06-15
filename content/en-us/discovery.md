@@ -61,23 +61,23 @@ As the recommendation system evolves, Roblox will continue to add and remove sig
 </thead>
 <tbody>
   <tr>
-    <td rowspan="4" valign="middle">**Most important**</td>
+    <td rowspan="4" style={{ verticalAlign: 'middle' }}>**Most important**</td>
     <td>**Play through rate**<br/>The rate at which users play your game after seeing it in the Recommended for You sort.</td>
-    <td valign="middle"><center>N/A</center></td>
+    <td style={{ verticalAlign: 'middle' }}><center>N/A</center></td>
   </tr>
   <tr>
-    <td valign="middle">**First play bounce rate**<br/>The rate at which users leave your game after a short play session. **<u>This is a negative signal</u>**, high bounce rates suggest players aren't finding enough to stay engaged early in their session. </td>
+    <td style={{ verticalAlign: 'middle' }}>**First play bounce rate**<br/>The rate at which users leave your game after a short play session. **<u>This is a negative signal</u>**, high bounce rates suggest players aren't finding enough to stay engaged early in their session. </td>
     <td><ul><li>< 60 seconds average rate</li><li>61-180 seconds average rate</li></ul></td>
   </tr>
   <tr>
     <td>**Play days per user**<br/>The average number of unique days users engage with your game.</td>
-    <td rowspan="6" valign="middle"><ul><li>Day 8-28 average</li><li>Day 2-7 average</li><li>Day 1 average</li></ul></td>
+    <td rowspan="6" style={{ verticalAlign: 'middle' }}><ul><li>Day 8-28 average</li><li>Day 2-7 average</li><li>Day 1 average</li></ul></td>
   </tr>
   <tr>
     <td>**Playtime per user**<br/>The average amount of time users spend in your game. There is a maximum of 60 minutes per user, per game, per day.</td>
   </tr>
   <tr>
-    <td rowspan="4" valign="middle">**Important**</td>
+    <td rowspan="4" style={{ verticalAlign: 'middle' }}>**Important**</td>
     <td>**Intentional co-play days per user**<br/>The average number of unique days that users come back to play your game with friends, including co-play days through join, invites, or private servers.</td>
   </tr>
   <tr>

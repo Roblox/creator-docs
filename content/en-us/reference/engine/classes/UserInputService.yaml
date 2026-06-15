@@ -1326,6 +1326,10 @@ methods:
         type: KeyCode
         default:
         summary: ''
+      - name: format
+        type: KeyCodeStringFormat
+        default:
+        summary: ''
     returns:
       - type: string
         summary: ''

@@ -4487,6 +4487,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/ElasticBehavior.yaml
         ignoreTranslation: true
+      - title: EmitterPositionType
+        path: /reference/engine/enums/EmitterPositionType
+        type: engineapi
+        source: /reference/engine/enums/EmitterPositionType.yaml
+        ignoreTranslation: true
       - title: EnviromentalPhysicsThrottle
         path: /reference/engine/enums/EnviromentalPhysicsThrottle
         type: engineapi
@@ -4862,6 +4867,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/KeyCode.yaml
         ignoreTranslation: true
+      - title: KeyCodeStringFormat
+        path: /reference/engine/enums/KeyCodeStringFormat
+        type: engineapi
+        source: /reference/engine/enums/KeyCodeStringFormat.yaml
+        ignoreTranslation: true
       - title: KeyInterpolationMode
         path: /reference/engine/enums/KeyInterpolationMode
         type: engineapi
@@ -4911,6 +4921,11 @@ navigation:
         path: /reference/engine/enums/ListenerLocation
         type: engineapi
         source: /reference/engine/enums/ListenerLocation.yaml
+        ignoreTranslation: true
+      - title: ListenerPositionType
+        path: /reference/engine/enums/ListenerPositionType
+        type: engineapi
+        source: /reference/engine/enums/ListenerPositionType.yaml
         ignoreTranslation: true
       - title: ListenerType
         path: /reference/engine/enums/ListenerType
