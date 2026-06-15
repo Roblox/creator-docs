@@ -33,9 +33,6 @@ methods:
       devices. If no information is available, for example the user is not on a
       mobile device or they don't have their camera turned on, this method
       returns a `Datatype.CFrame.identity`.
-
-      See [Roblox Connect](../../../resources/roblox-connect.md) for a sample
-      implementation of this method.
     code_samples:
       - PlayerViewService-GetDeviceCameraCFrame
     parameters:

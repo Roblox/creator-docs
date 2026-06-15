@@ -46,8 +46,6 @@ navigation:
   - heading: Projects and kits
   - title: Templates
     path: /resources/templates
-  - title: Roblox Connect project
-    path: /resources/roblox-connect
   - title: Plant reference project
     path: /resources/plant-reference-project
 
