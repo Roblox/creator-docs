@@ -3,7 +3,7 @@ title: Create a custom leaderboard with ordered data stores
 description: Use ordered data stores to track and rank players by the amount of gold they have collected.
 ---
 
-**Data stores** are a service you can use to save and load **persistent player data** across different player sessions. They store important information, like a player's progress or inventory, and allow you to retrieve it for the player next time they join your experience. Without data stores, a player would lose all of their progress every time they left the experience.
+**Data stores** are a service you can use to save and load **persistent player data** across different player sessions. They store important information, like a player's progress or inventory, and allow you to retrieve it for the player next time they join your game. Without data stores, a player would lose all of their progress every time they left the game.
 
 There are two types of data stores: standard and ordered. This tutorial uses **ordered data stores**, which store data that you can rank and sort numerically and retrieve in ascending or descending order based on the stored numerical values.
 
@@ -26,12 +26,12 @@ By the end of this tutorial, you should have the following:
 
 ## Enable Studio access to API services
 
-Data stores aren't stored locally on your device, so your experience relies on server-to-server communication with Roblox's backend in order to use them. By default, Studio restricts this communication to prevent abuse or accidental use. Access to API services in Studio is disabled until you explicitly enable it to make sure that only trusted experiences can read from and write to Roblox's backend servers.
+Data stores aren't stored locally on your device, so your game relies on server-to-server communication with Roblox's backend in order to use them. By default, Studio restricts this communication to prevent abuse or accidental use. Access to API services in Studio is disabled until you explicitly enable it to make sure that only trusted games can read from and write to Roblox's backend servers.
 
 To enable Studio access to API services so that you can use data stores:
 
 1. Open the [Gold Rush create leaderboard tutorial - Start](https://www.roblox.com/games/123363025813820/Gold-Rush-create-leaderboard-tutorial-Start) file in Studio. This starting place file already includes the code from the [Save player data](./save-player-data.md) tutorial and the UI skeleton for the player leaderboard.
-2. [Publish your experience](../../../production/publishing/publish-experiences-and-places.md#publish-experiences).
+2. [Publish your game](../../../production/publishing/publish-games-and-places.md#publish-games).
 3. Back in Studio, go to **File** ⟩ **Experience Settings** ⟩ **Security**.
 4. Turn on **Enable Studio Access to API Services**.
 5. Save your changes.
@@ -42,7 +42,7 @@ When creating a data store, you should always call the `DataStoreService` from a
 
 - Roblox blocks all data store access from the client so that only the server has permission to access and modify persistent player data.
 - Server-side scripts run in a centralized environment, making sure that the data being read and written to your data store is accurate and valid.
-- Since client-side scripts run on the player's device, any player could potentially exploit the experience and steal or overwrite other players' data if the client had access to your data stores.
+- Since client-side scripts run on the player's device, any player could potentially exploit the game and steal or overwrite other players' data if the client had access to your data stores.
 
 You should also give your data store a unique name to keep your data organized and to prevent it from overlapping or conflicting in different data stores. In this tutorial, the data store for the leaderboard is called **GlobalLeaderboard**.
 
@@ -64,7 +64,7 @@ After creating a data store, you're able to reference this same data store acros
 
 Data stores are made up of keys, which identify data, and values, which store data. Unlike standard data stores, ordered data stores let you sort data by **value**, which makes them ideal for creating things like leaderboards.
 
-Each entry in an ordered data store is stored under a unique key that you can rank and sort numerically, and then retrieve in ascending or descending order based on the stored numerical values. This means that you can use ordered data stores to, for example, show a top 3 list that updates in real time as players in your experience collect more gold.
+Each entry in an ordered data store is stored under a unique key that you can rank and sort numerically, and then retrieve in ascending or descending order based on the stored numerical values. This means that you can use ordered data stores to, for example, show a top 3 list that updates in real time as players in your game collect more gold.
 
 <table>
 <thead>
@@ -78,7 +78,7 @@ Each entry in an ordered data store is stored under a unique key that you can ra
   <tr>
 		<th>**Description**</th>
     <td>A key is a unique string identifier you can use to access a specific piece of data, like a player's user ID.<br /><br />Keys let you organize your data so you can easily manage and debug it.</td>
-    <td>A value is the actual numeric data you want to save or load, like a player's score.<br /><br />Values let you store progress between sessions, as well as retrieve player data next time they join your experience.</td>
+    <td>A value is the actual numeric data you want to save or load, like a player's score.<br /><br />Values let you store progress between sessions, as well as retrieve player data next time they join your game.</td>
   </tr>
   <tr>
 		<th>**Allowed formats**</th>
@@ -124,7 +124,7 @@ You custom leaderboard uses the following ordered data store methods to share da
 - `Class.OrderedDataStore.GetSortedAsync|GetSortedAsync` (in the module script) to fetch the top scores from all servers from the same data store. The `GetSortedAsync` method is exclusive to ordered data stores and can retrieve multiple sorted keys based on a specific sorting order, page size, and minimum and maximum values.
 
 <Alert severity="info">
-	As long as each server updates the **GlobalLeaderboard** ordered data store when a player collects gold, and each client retrieves this data from the server, everyone inside your experience will see the same leaderboard with the same top scores.
+	As long as each server updates the **GlobalLeaderboard** ordered data store when a player collects gold, and each client retrieves this data from the server, everyone inside your game will see the same leaderboard with the same top scores.
 </Alert>
 
 To fetch the leaderboard scores:
@@ -230,7 +230,7 @@ To request leaderboard data from the server:
 	Because of backend caching, the scores in your custom leaderboard can take a few extra seconds to update. To get instant, real-time updates across servers, you can use [memory stores](../../../cloud-services/memory-stores/index.md).
 </Alert>
 
-After setting up the server-side scripts, create a local script to fetch the top 3 players every 3 seconds and display the results in a global UI leaderboard inside the experience.
+After setting up the server-side scripts, create a local script to fetch the top 3 players every 3 seconds and display the results in a global UI leaderboard inside the game.
 
 To display data in your custom leaderboard:
 

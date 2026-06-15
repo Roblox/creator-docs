@@ -16,7 +16,7 @@ For temporary data that you need to update or access frequently, use [memory sto
 
 By default, experiences tested in Studio can't access data stores, so you must first enable them. Accessing data stores in Studio can be dangerous for live experiences because Studio accesses the same data stores as the client application. To avoid overwriting production data, do not enable this setting for live experiences. Instead, enable it for a separate test version of the experience.
 
-To enable Studio access in a [published](../../production/publishing/publish-experiences-and-places.md) experience:
+To enable Studio access in a [published](../../production/publishing/publish-games-and-places.md) experience:
 
 1. Open Studio's **File**&nbsp;⟩ **Experience Settings** window.
 2. Navigate to **Security**.

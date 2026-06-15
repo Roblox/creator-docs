@@ -20,7 +20,7 @@ Voice Chat is enabled by default for verified 13+ users on all new experiences w
 1. Navigate to the **Communication** tab on the left side of the window.
 1. Toggle **Enable Voice Chat** to your desired setting.
 1. <Chip label="OPTIONAL" size="small" variant="outlined" /> For greater communication among players within your experience, toggle on **Enable&nbsp;Camera** to allow eligible players to animate their avatar with their movement.
-1. [Publish](../production/publishing/publish-experiences-and-places.md) the place to save the changes.
+1. [Publish](../production/publishing/publish-games-and-places.md) the place to save the changes.
 
 By enabling this setting, eligible 13+ users can opt-in to Voice Chat within your experience. Enabling Voice Chat is required to use the speech-to-text API.
 
@@ -31,9 +31,9 @@ If you previously set the maximum number of players in a place to more than 100,
 1. In the left-hand navigation of the **Experience Settings** window, select **Places**. Every place within your experience displays.
 1. Click the **&ctdot;** button next to the place with more than 100 players, then select **Configure Place**.
 1. In the **Max Players** field, enter any number less than or equal to 100.
-1. Click the **Save** button and then [publish](../production/publishing/publish-experiences-and-places.md) to save the changes.
+1. Click the **Save** button and then [publish](../production/publishing/publish-games-and-places.md) to save the changes.
 
-When you update the maximum number of players in a place to fewer than 100, there may be servers already configured to a different, higher number. Since those servers won't support Voice Chat, it's recommended to [restart servers](../projects/update-experiences.md#restart-servers).
+When you update the maximum number of players in a place to fewer than 100, there may be servers already configured to a different, higher number. Since those servers won't support Voice Chat, it's recommended to [restart servers](../projects/update-games.md#restart-servers).
 
 ### Customize voice behavior
 
@@ -165,7 +165,7 @@ To disable Voice Chat for a specific place within an experience:
    <img src="../assets/studio/explorer/VoiceChatService.png" width="320" alt="VoiceChatService in Explorer hierarchy" />
 
 3. With `Class.VoiceChatService` selected, disable `Class.VoiceChatService.EnableDefaultVoice|EnableDefaultVoice` in the **Properties** window.
-4. Publish the place to save the changes and [restart servers](../projects/update-experiences.md#restart-servers) to ensure the change takes effect for all servers currently running your experience.
+4. Publish the place to save the changes and [restart servers](../projects/update-games.md#restart-servers) to ensure the change takes effect for all servers currently running your experience.
 
 ## Check status
 

@@ -14,7 +14,7 @@ A **developer product** is an item or ability that a user can purchase more than
 ## Create a developer product
 
 <Alert severity="warning">
-   Before creating a developer product, make sure your game has been [published](../../production/publishing/publish-experiences-and-places.md) and is accessible on Roblox.
+   Before creating a developer product, make sure your game has been [published](../../production/publishing/publish-games-and-places.md) and is accessible on Roblox.
 </Alert>
 
 To create a developer product:

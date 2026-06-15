@@ -54,7 +54,7 @@ For information on how content maturity labels determine which account types can
 
 ## Publishing requirements
 
-Publishing requirements depend on the target audience. For more information on publishing experiences, see [Publish experiences and places](../publishing/publish-experiences-and-places.md#publish-experiences).
+Publishing requirements depend on the target audience. For more information on publishing experiences, see [Publish games and places](../publishing/publish-games-and-places.md#publish-games).
 
 The following table summarizes what creators must satisfy to reach each audience:
 

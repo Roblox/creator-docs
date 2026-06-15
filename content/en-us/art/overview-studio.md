@@ -27,7 +27,7 @@ After [installing Studio](../studio/setup.md), familiarize yourself with Studio'
 
 - [Toolbox](../projects/assets/toolbox.md) — Contains a selection of [models](../parts/models.md), [images](../parts/textures-decals.md), [meshes](../parts/meshes.md), [audio](../audio/assets.md), [plugins](../studio/plugins.md), [videos](../ui/video-frames.md), and fonts made by Roblox or Roblox community members.
 
-- [Asset Manager](../projects/assets/manager.md) — Lets you manage [places](../production/publishing/publish-experiences-and-places.md) and bulk import assets into your experience.
+- [Asset Manager](../projects/assets/manager.md) — Lets you manage [places](../production/publishing/publish-games-and-places.md) and bulk import assets into your experience.
 
 - [Output](../studio/output.md) — Displays all error, warning, or manually returned messages from the Roblox engine. This window is useful for troubleshooting behavior in your experience.
 

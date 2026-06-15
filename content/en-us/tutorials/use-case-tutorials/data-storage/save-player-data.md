@@ -3,37 +3,37 @@ title: Save player data with standard data stores
 description: Create basic standard data stores to save, store, and load player data.
 ---
 
-**Data stores** are a service you can use to save and load **persistent player data** across different player sessions. They store important information, like a player's progress or inventory, and allow you to retrieve it for the player next time they join your experience. Without data stores, a player would lose all of their progress every time they left the experience.
+**Data stores** are a service you can use to save and load **persistent player data** across different player sessions. They store important information, like a player's progress or inventory, and allow you to retrieve it for the player next time they join your game. Without data stores, a player would lose all of their progress every time they left the game.
 
 There are two types of data stores: standard and ordered. This tutorial uses **standard data stores**, which store data like numbers, strings, and tables that don't need to be ranked or sorted.
 
-Using the [Gold Rush data store tutorial - Start](https://www.roblox.com/games/116344152904993/Gold-Rush-save-data-tutorial-Start) `.rbxl` file as a starting place and the [Gold Rush data store tutorial - Complete](https://www.roblox.com/games/114290473705422/Gold-Rush-save-data-tutorial-Complete) `.rbxl` file as a reference, this tutorial gives you the foundation you need to save player progress and create more consistent experiences, including guidance on:
+Using the [Gold Rush data store tutorial - Start](https://www.roblox.com/games/116344152904993/Gold-Rush-save-data-tutorial-Start) `.rbxl` file as a starting place and the [Gold Rush data store tutorial - Complete](https://www.roblox.com/games/114290473705422/Gold-Rush-save-data-tutorial-Complete) `.rbxl` file as a reference, this tutorial gives you the foundation you need to save player progress and create more consistent games, including guidance on:
 
 - Saving and loading the amount of gold a player has collected.
 - Updating the UI to display the player's gold inventory.
 - Automatically saving the player's gold inventory every 30 seconds.
-- Saving the player's position when they leave the experience.
-- Restoring the player's position when they join the experience again.
+- Saving the player's position when they leave the game.
+- Restoring the player's position when they join the game again.
 
 <Alert severity="info">
-	The [Gold Rush data store tutorial - Start](https://www.roblox.com/games/116344152904993/Gold-Rush-save-data-tutorial-Start) starting place file already includes code that allows the player to collect gold and updates the UI with their gold score, but this data doesn't persist across sessions because the file lacks data stores. Without data stores, the player's score and position reset when they leave the experience.
+	The [Gold Rush data store tutorial - Start](https://www.roblox.com/games/116344152904993/Gold-Rush-save-data-tutorial-Start) starting place file already includes code that allows the player to collect gold and updates the UI with their gold score, but this data doesn't persist across sessions because the file lacks data stores. Without data stores, the player's score and position reset when they leave the game.
 </Alert>
 
 By the end of this tutorial, you should have two scripts with data stores under `Class.ServerScriptService`:
 
 1. An updated [GoldManager](#goldmanager) script that tracks, loads, and automatically saves the player's gold.
-2. An updated [PositionManager](#positionmanager) script that saves the player's position when they leave the experience and restores their position when they come back to the experience.
+2. An updated [PositionManager](#positionmanager) script that saves the player's position when they leave the game and restores their position when they come back to the game.
 
 <img src="../../../assets/tutorials/data-storage/DataStoreTutorial.png" width="100%" />
 
 ## Enable Studio access to API services
 
-Data stores aren't stored locally on your device, so your experience relies on server-to-server communication with Roblox's backend in order to use them. By default, Studio restricts this communication to prevent abuse or accidental use. Access to API services in Studio is disabled until you explicitly enable it to make sure that only trusted experiences can read from and write to Roblox's backend servers.
+Data stores aren't stored locally on your device, so your game relies on server-to-server communication with Roblox's backend in order to use them. By default, Studio restricts this communication to prevent abuse or accidental use. Access to API services in Studio is disabled until you explicitly enable it to make sure that only trusted games can read from and write to Roblox's backend servers.
 
 To enable Studio access to API services so that you can use data stores:
 
 1. Open the [Gold Rush data store tutorial - Start](https://www.roblox.com/games/116344152904993/Gold-Rush-save-data-tutorial-Start) `.rbxl` file in Studio and create a local copy.
-2. [Publish your experience](../../../production/publishing/publish-experiences-and-places.md#publish-experiences).
+2. [Publish your game](../../../production/publishing/publish-games-and-places.md#publish-games).
 3. Back in Studio, go to **File** ⟩ **Experience Settings** ⟩ **Security**.
 4. Turn on **Enable Studio Access to API Services**.
 5. Save your changes.
@@ -44,7 +44,7 @@ When creating a data store, you should always call the `DataStoreService` from a
 
 - Roblox blocks all data store access from the client so that only the server has permission to access and modify persistent player data.
 - Server-side scripts run in a centralized environment, making sure that the data being read and written to your data store is accurate and valid.
-- Since client-side scripts run on the player's device, any player could potentially exploit the experience and steal or overwrite other players' data if the client had access to your data stores.
+- Since client-side scripts run on the player's device, any player could potentially exploit the game and steal or overwrite other players' data if the client had access to your data stores.
 
 You should also give your data store a unique name to keep your data organized and to prevent it from overlapping or conflicting in different data stores. In this tutorial, the data store that saves and stores the player's gold inventory is called **PlayerGold**.
 
@@ -77,7 +77,7 @@ Data stores are made up of keys, which identify data, and values, which store da
   <tr>
 		<th>**Description**</th>
     <td>A key is a unique identifier you can use to access a specific piece of data.<br /><br />Keys let you organize your data so you can easily manage and debug it.</td>
-    <td>A value is the actual data you want to save or load, like a player's inventory or their settings.<br /><br />Values let you store progress between sessions, as well as retrieve player data next time they join your experience.</td>
+    <td>A value is the actual data you want to save or load, like a player's inventory or their settings.<br /><br />Values let you store progress between sessions, as well as retrieve player data next time they join your game.</td>
   </tr>
   <tr>
 		<th>**Allowed formats**</th>
@@ -86,7 +86,7 @@ Data stores are made up of keys, which identify data, and values, which store da
   </tr>
   <tr>
     <th>**Examples**</th>
-    <td>`"Player_A"`, `"TopScore"`, `"ExperienceSetting"`</td>
+    <td>`"Player_A"`, `"TopScore"`, `"GameSetting"`</td>
 		<td>`100`, `"Level_5"`, `true`, `{gold = 100, level = 5}`</td>
   </tr>
 </tbody>
@@ -121,9 +121,9 @@ In this tutorial, the key is the player's `userId` and the value is the amount o
    end
    ```
 
-3. Modify the **onPlayerAdded** event to load the player's gold when they first join the experience. The updated **onPlayerAdded** function:
+3. Modify the **onPlayerAdded** event to load the player's gold when they first join the game. The updated **onPlayerAdded** function:
 
-	- Tries to load the content inside the PlayerGold data store. It returns either the player's saved gold or a value of 0 if the player doesn't have any gold or hasn't played the experience before.
+	- Tries to load the content inside the PlayerGold data store. It returns either the player's saved gold or a value of 0 if the player doesn't have any gold or hasn't played the game before.
 	- Provides you a debug log to help you debug your code more easily. This debug log includes the joining player's saved gold, or an error message if **onPlayerAdded** isn't able to access the data store.
 	- Updates the UI to display the player's saved gold on their screen.
 
@@ -151,7 +151,7 @@ In this tutorial, the key is the player's `userId` and the value is the amount o
    end
    ```
 
-4. Modify the **onPlayerRemoving** event to call the **saveGold** function you created earlier and save the player's gold when they leave the experience.
+4. Modify the **onPlayerRemoving** event to call the **saveGold** function you created earlier and save the player's gold when they leave the game.
 
    ```lua
    local function onPlayerRemoving(player)
@@ -165,22 +165,22 @@ In this tutorial, the key is the player's `userId` and the value is the amount o
 
 ## Automatically save player data
 
-Automatically saving a player's data is good practice because it protects the player from losing their data. If you only save the player's data when they leave the experience with `onPlayerRemoving`, you might lose their latest progress if they unexpectedly disconnect from the server.
+Automatically saving a player's data is good practice because it protects the player from losing their data. If you only save the player's data when they leave the game with `onPlayerRemoving`, you might lose their latest progress if they unexpectedly disconnect from the server.
 
 <Alert severity="info">
-	Make sure not to autosave too often to avoid throttling errors and request limits. A good autosave interval is anywhere between 30 to 120 seconds, depending on how often players gain valuable progress in your experience.
+	Make sure not to autosave too often to avoid throttling errors and request limits. A good autosave interval is anywhere between 30 to 120 seconds, depending on how often players gain valuable progress in your game.
 </Alert>
 
 To autosave the player's data:
 
-1. Create a new constant to determine how often you want your experience to automatically save the player's data. A constant is a variable whose value does not change while the experience is running. You can use this constant to refer to the autosave interval throughout your script and to easily adjust the autosaving frequency.
+1. Create a new constant to determine how often you want your game to automatically save the player's data. A constant is a variable whose value does not change while the game is running. You can use this constant to refer to the autosave interval throughout your script and to easily adjust the autosaving frequency.
 
    ```lua
 	-- This number is in seconds
    local AUTOSAVE_INTERVAL = 30
    ```
 
-2. Add an autosave coroutine to the existing **onPlayerAdded** function to create a background loop that runs while the player is inside the experience. A coroutine is a function that runs asynchronously; it can pause at certain points, resume where it left off, and run in parallel with other parts of your script without blocking them.
+2. Add an autosave coroutine to the existing **onPlayerAdded** function to create a background loop that runs while the player is inside the game. A coroutine is a function that runs asynchronously; it can pause at certain points, resume where it left off, and run in parallel with other parts of your script without blocking them.
 
 	In this script, the autosave coroutine background loop waits for the number of seconds in your **AUTOSAVE_INTERVAL** constant, then calls the **saveGold** function you created earlier.
 
@@ -261,10 +261,10 @@ To save and load the character's position:
    end
 	```
 
-6. Modify the **onPlayerAdded** event to set up the position logic for each player that joins your experience. Inside the updated **onPlayerAdded** function:
+6. Modify the **onPlayerAdded** event to set up the position logic for each player that joins your game. Inside the updated **onPlayerAdded** function:
 
 	- **CharacterAdded** calls **loadPosition** to restore the character's last known location when a player's character spawns.
-	- **CharacterRemoving** calls **savePosition** to save the current position of the player's character if they're removed from the experience.
+	- **CharacterRemoving** calls **savePosition** to save the current position of the player's character if they're removed from the game.
 	- **`Class.PVInstance.GetPivot|GetPivot`** gets the character's exact location in the world at the time they're removed.
 
    ```lua

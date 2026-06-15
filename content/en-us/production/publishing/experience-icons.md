@@ -20,7 +20,7 @@ A high-quality **icon**, in addition to a showcase [thumbnail](thumbnails.md), i
   </figure>
 </GridContainer>
 
-When you [publish an experience](../../production/publishing/publish-experiences-and-places.md) for the first time, an icon is automatically generated from a collection of default images. While you can only display one icon per [locale](../../production/localization/index.md), you can also include supplementary [image and video thumbnails](thumbnails.md) that further promote the experience.
+When you [publish an experience](../../production/publishing/publish-games-and-places.md) for the first time, an icon is automatically generated from a collection of default images. While you can only display one icon per [locale](../../production/localization/index.md), you can also include supplementary [image and video thumbnails](thumbnails.md) that further promote the experience.
 
 For more information on maximizing the impact of your experience's icon, see [best practices](#best-practices).
 

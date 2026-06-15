@@ -1,12 +1,12 @@
 ---
 title: Teleport between places
-description: Explains how to use TeleportService to teleport users between different places in your experience.
+description: Explains how to use TeleportService to teleport users between different places in your game.
 ---
 
-Many experiences are subdivided into multiple [places](../production/publishing/publish-experiences-and-places.md#create-additional-places), such as a fantasy world with towns, castles, dungeons, and a vast forest. Use `Class.TeleportService` to teleport users between places, to different servers, or even to other experiences.
+Many games are subdivided into multiple [places](../production/publishing/publish-games-and-places.md#create-additional-places), such as a fantasy world with towns, castles, dungeons, and a vast forest. Use `Class.TeleportService` to teleport users between places, to different servers, or even to other games.
 
 <Alert severity="warning">
-`Class.TeleportService` doesn't support playtesting in Roblox Studio. You must publish the experience and test in the Roblox client.
+`Class.TeleportService` doesn't support playtesting in Roblox Studio. You must publish the game and test in the Roblox client.
 </Alert>
 
 ## Teleport players
@@ -22,7 +22,7 @@ local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
 
 local TARGET_PLACE_ID = 12345678901234 -- replace with your own
-local playerToTeleport = Players:GetPlayers()[1] -- get the first user in the experience
+local playerToTeleport = Players:GetPlayers()[1] -- get the first user in the game
 
 TeleportService:TeleportAsync(TARGET_PLACE_ID, {playerToTeleport})
 ```
@@ -39,33 +39,33 @@ Three settings handle teleport security.
 
 Setting | Description
 :--- | :---
-(Creator Dashboard) **Audience** > **Access Settings** > **Access Control for Places** | Controls whether players can join any place in your experience or must first join the [start place](../production/publishing/publish-experiences-and-places.md#create-experiences).
-(Creator Dashboard) **Place** > **Access** > **Direct Access Control** | Overrides your experience-level **Access Control for Places** setting for a non-start place.
-(Studio) **File** > **Experience Settings** > **Security** > **Allow Third Party Teleports** | Controls teleports from your experience to **experiences that you don't own**. You can leave this setting disabled and still teleport players between published experiences you own.
+(Creator Dashboard) **Audience** > **Access Settings** > **Access Control for Places** | Controls whether players can join any place in your game or must first join the [start place](../production/publishing/publish-games-and-places.md#create-games).
+(Creator Dashboard) **Place** > **Access** > **Direct Access Control** | Overrides your game-level **Access Control for Places** setting for a non-start place.
+(Studio) **File** > **Experience Settings** > **Security** > **Allow Third Party Teleports** | Controls teleports from your game to **games that you don't own**. You can leave this setting disabled and still teleport players between published games you own.
 
-**Access Control for Places** controls players teleporting **into** your experience and is the most critical setting for preventing teleport-based exploits.
+**Access Control for Places** controls players teleporting **into** your game and is the most critical setting for preventing teleport-based exploits.
 
 ![Access control for places on the Creator Hub](../assets/players/teleport-access-control.png)
 
-- If you choose **Fully open**, players can join any place in your experience through teleports from any experience, including deep links, game invites, joining a friend, and more.
+- If you choose **Fully open**, players can join any place in your game through teleports from any game, including deep links, game invites, joining a friend, and more.
 
-  This is a good choice if your experience has several places and you want friends to be able to easily join each other no matter which place they're in. If you don't choose this option, players who try to join their friends in non-start places will instead join your experience's start place.
+  This is a good choice if your game has several places and you want friends to be able to easily join each other no matter which place they're in. If you don't choose this option, players who try to join their friends in non-start places will instead join your game's start place.
 
-- If you choose **Limited to same universe**, players can only join non-start places through teleports within your experiences. This setting allows both client- and server-initiated teleports.
+- If you choose **Limited to same universe**, players can only join non-start places through teleports within your games. This setting allows both client- and server-initiated teleports.
 
-  This is a good choice if you have a legacy experience that you don't want to [migrate to secure teleports](#migrate-to-secure-teleports).
+  This is a good choice if you have a legacy game that you don't want to [migrate to secure teleports](#migrate-to-secure-teleports).
 
-- If you choose **Secure within universe only**, players can only join non-start places through server-initiated teleports within this experience.
+- If you choose **Secure within universe only**, players can only join non-start places through server-initiated teleports within this game.
 
-  This is a good choice if your experience has a strict progression system before players can access certain areas. It's also a good choice if your experience has a test place that players shouldn't have access to or for places that exclusively use reserved servers.
+  This is a good choice if your game has a strict progression system before players can access certain areas. It's also a good choice if your game has a test place that players shouldn't have access to or for places that exclusively use reserved servers.
 
 <Alert severity="success">
-Ultimately, your **Access Control for Places** setting depends on the type of experience you want to build. Many experiences don't need secure teleports.
+Ultimately, your **Access Control for Places** setting depends on the type of game you want to build. Many games don't need secure teleports.
 </Alert>
 
 ### Migrate to secure teleports
 
-If you have an existing experience that uses client-side teleports and want to require server-initiated teleports, the goal is to move all teleport logic out of client scripts and into server scripts:
+If you have an existing game that uses client-side teleports and want to require server-initiated teleports, the goal is to move all teleport logic out of client scripts and into server scripts:
 
 1. Find all client scripts that call `Class.TeleportService:Teleport()|Teleport()`.
 1. Change these calls to instead fire [remote events](../scripting/events/remote.md). Alternatively, you can change the calls to instead use `Class.ProximityPrompt|ProximityPrompts`, `Class.ClickDetector|ClickDetectors`, or even just the `Class.BasePart.Touched` event.
@@ -120,7 +120,7 @@ teleportOptions.ShouldReserveServer = true
 
 Teleporting a user between places discards any local data associated with that user. You can use the following approaches to handle data persistence between places:
 
-- If your experience utilizes **secure** user data like in-experience currency or inventory, implement [data stores](../cloud-services/data-stores) or [memory stores](../cloud-services/memory-stores/index.md) to maintain data from place to place.
+- If your game utilizes **secure** user data like in-game currency or inventory, implement [data stores](../cloud-services/data-stores) or [memory stores](../cloud-services/memory-stores/index.md) to maintain data from place to place.
 
 - To send basic **non-secure** data from place to place, call `Class.TeleportOptions:SetTeleportData()` before passing it to `Class.TeleportService:TeleportAsync()|TeleportAsync()`. **Don't** pass secure data using this method; the data is visible to the client and unencrypted.
 
@@ -205,7 +205,7 @@ TeleportService.TeleportInitFailed:Connect(handleFailedTeleport)
 return SafeTeleport
 ```
 
-The `SafeTeleport` function receives the same arguments as the `Class.TeleportService:TeleportAsync()|TeleportAsync()` function. You can use the following script with the `SafeTeleport` function to perform teleports from anywhere in your experience:
+The `SafeTeleport` function receives the same arguments as the `Class.TeleportService:TeleportAsync()|TeleportAsync()` function. You can use the following script with the `SafeTeleport` function to perform teleports from anywhere in your game:
 
 ```lua
 local Players = game:GetService("Players")

@@ -193,7 +193,7 @@ Benchmarks and benchmark games do not impact the Recommended for You algorithm i
 
 Your content must always adhere to Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). To increase your reach and help your game get discovered, make sure to also follow the best practices for discovery:
 
-- **Be accurate** - Avoid using irrelevant keywords in your metadata and follow the [metadata best practices](./production/publishing/publish-experiences-and-places.md#publish-experiences).
+- **Be accurate** - Avoid using irrelevant keywords in your metadata and follow the [metadata best practices](./production/publishing/publish-games-and-places.md#publish-games).
 - **Build trust** - You should not rely on promotional monetary rewards to drive engagement. Instead, your metadata should reflect what your game is about.
 - **Use unique metadata** - Focus on using original imagery and naming that you or your teammates created to help your game stand out. Avoid publishing content with repetitive titles and images that have been previously published. When using [thumbnail personalization](./production/publishing/thumbnails.md#thumbnail-personalization-for-the-home-page), make sure all thumbnails accurately reflect your game.
 - **Add your own spin to existing trends in the title, images, description, and in-game content** - When you follow trends, unique updates add value and differentiate your game from other games following the same trend.

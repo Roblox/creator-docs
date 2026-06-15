@@ -46,7 +46,7 @@ Version notes are required when publishing so you can clearly track what changes
 You can restore to a previous place version through Studio or the Creator Dashboard. This action creates a new version of the place.
 
 <Alert severity="info">
-Restoring a place to a previous version does **not** automatically publish the changes. If the place is [public](../production/publishing/publish-experiences-and-places.md#make-experience-public) and you want the restored version to replace the live version, open the place in Studio, publish it, and [restart your servers](./update-experiences.md#restart-servers).
+Restoring a place to a previous version does **not** automatically publish the changes. If the place is [public](../production/publishing/publish-games-and-places.md#make-game-public) and you want the restored version to replace the live version, open the place in Studio, publish it, and [restart your servers](./update-games.md#restart-servers).
 </Alert>
 
 Through Studio:
@@ -55,12 +55,12 @@ Through Studio:
 2. Click **&vellip;** next to the version you want to restore to.
 3. Click **Open Local Copy** to open a copy of the place in a new Studio session.
 4. In the new Studio session, go to **File** &rang; **Save to Roblox As**.
-5. Select the experience and place you want to overwrite.
+5. Select the game and place you want to overwrite.
 6. Confirm the action to restore to that version.
 
 Through the Creator Dashboard:
 
-1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
+1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select a game.
 2. Go to **Configure** &rang; **Places**.
 3. Select the place you want to restore to a previous version.
 4. Go to **Version History**.

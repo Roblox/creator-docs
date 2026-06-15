@@ -4812,6 +4812,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/InputActionType.yaml
         ignoreTranslation: true
+      - title: InputBindingType
+        path: /reference/engine/enums/InputBindingType
+        type: engineapi
+        source: /reference/engine/enums/InputBindingType.yaml
+        ignoreTranslation: true
       - title: InputSink
         path: /reference/engine/enums/InputSink
         type: engineapi

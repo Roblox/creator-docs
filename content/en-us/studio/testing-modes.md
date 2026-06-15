@@ -1,6 +1,6 @@
 ---
 title: Studio testing modes
-description: Explore the built-in Studio testing modes for experiences.
+description: Explore the built-in Studio testing modes for games.
 ---
 
 import BetaAlert from '../includes/beta-features/beta-alert.md'
@@ -9,13 +9,13 @@ import TouchSimulation from '../includes/studio/touch-simulation.md'
 import ControllerEmulator from '../includes/studio/controller-emulator.md'
 import PlaytestModes from '../includes/studio/playtest-modes.md'
 
-Because of the underlying [client-server model](../projects/client-server.md) of the Roblox Engine, it's important that you test your experience in various modes before [releasing it to the public](../production/publishing/publish-experiences-and-places.md#make-experience-public). All of the testing options are accessible in the left portion of the mezzanine.
+Because of the underlying [client-server model](../projects/client-server.md) of the Roblox Engine, it's important that you test your game in various modes before [releasing it to the public](../production/publishing/publish-games-and-places.md#make-game-public). All of the testing options are accessible in the left portion of the mezzanine.
 
 <img src="../assets/studio/general/Mezzanine-Testing-Controls.png" width="800" alt="Testing controls indicated in Studio's mezzanine." />
 
 ## Playtesting
 
-There are three common options for playtesting an experience. Choose the desired option from the dropdown menu and click the **Play** button to its right to begin the playtest.
+There are three common options for playtesting a game. Choose the desired option from the dropdown menu and click the **Play** button to its right to begin the playtest.
 
 <img src="../assets/studio/general/Mezzanine-Testing-Mode-Test.png" width="800" alt="Test option in the testing modes dropdown of Studio's mezzanine." />
 
@@ -42,7 +42,7 @@ Once a playtest is running, additional options become available in the mezzanine
 	<tr>
 		<td>**Stop**</td>
 		<td><kbd>Shift</kbd><kbd>F5</kbd></td>
-		<td>Stops simulation of the experience and resets all objects and instances to how they were before the playtest.</td>
+		<td>Stops simulation of the game and resets all objects and instances to how they were before the playtest.</td>
 	</tr>
 	<tr>
 		<td>**Client** / **Server**</td>
@@ -54,7 +54,7 @@ Once a playtest is running, additional options become available in the mezzanine
 
 ### Toggle client/server
 
-When testing in either **Test** or **Test Here** mode, Studio runs two separate simulations&nbsp;— one [client](../projects/client-server.md#client) simulation and one [server](../projects/client-server.md#server) simulation&nbsp;— which can provide a more accurate impression of how the experience will execute in production.
+When testing in either **Test** or **Test Here** mode, Studio runs two separate simulations&nbsp;— one [client](../projects/client-server.md#client) simulation and one [server](../projects/client-server.md#server) simulation&nbsp;— which can provide a more accurate impression of how the game will execute in production.
 
 While solo playtesting, you can toggle between **Client** and **Server** modes by clicking the **Client/Server** toggle button. When you toggle, the button changes to reflect the current simulation mode.
 
@@ -79,7 +79,7 @@ Depending on the simulation mode, control of your character and the camera chang
 <TabItem label="Client Mode">
 	<figure>
     <img src="../assets/studio/debugging/Client-Server-Toggle-3D-Client.jpg" width="800" height="450" />
-    <figcaption>In **Client** mode, the 3D viewport is surrounded by a **blue** border and the simulation uses your character controls and camera setup. This testing mode is a close simulation of the experience running on the Roblox application, without multiple players.</figcaption>
+    <figcaption>In **Client** mode, the 3D viewport is surrounded by a **blue** border and the simulation uses your character controls and camera setup. This testing mode is a close simulation of the game running on the Roblox application, without multiple players.</figcaption>
   </figure>
 </TabItem>
 <TabItem label="Server Mode">
@@ -130,7 +130,7 @@ Note the following technical details in relation to pause/resume:
 
 ## Multi-client simulation
 
-The **Server & Clients** option from the dropdown menu lets you launch multiple sessions of Studio, one acting as the server and each other acting as a client. This testing mode is a valuable tool for comparing how a client "sees" other clients within the experience.
+The **Server & Clients** option from the dropdown menu lets you launch multiple sessions of Studio, one acting as the server and each other acting as a client. This testing mode is a valuable tool for comparing how a client "sees" other clients within the game.
 
 1. With the **Server & Clients** option selected in the dropdown menu, choose the number of client sessions to test. Usually 1–2 clients is sufficient, although you can simulate up to eight.
 
@@ -143,7 +143,7 @@ The **Server & Clients** option from the dropdown menu lets you launch multiple 
 
 ## Party simulation
 
-The **Party Simulator** allows you to test and debug experiences that use party-related APIs directly within Studio, without needing to publish and coordinate multiple devices. This tool lets you configure and emulate parties for test players in your [Server & Clients](#multi-client-simulation) play tests.
+The **Party Simulator** allows you to test and debug games that use party-related APIs directly within Studio, without needing to publish and coordinate multiple devices. This tool lets you configure and emulate parties for test players in your [Server & Clients](#multi-client-simulation) play tests.
 
 When play testing, Party Simulator automatically assigns all test players to the configured simulated parties.
 
@@ -159,7 +159,7 @@ You can adjust the number of local test players at any time using Studio's [Serv
 
 ## Collaborative testing
 
-If you're working on an experience with others in [collaboration](../projects/collaboration.md) mode, you can test with other collaborators as follows:
+If you're working on a game with others in [collaboration](../projects/collaboration.md) mode, you can test with other collaborators as follows:
 
 1. Select **Team Test** in the dropdown menu and press the **Play** button to open a new Studio session with your character inserted.
 
@@ -249,11 +249,11 @@ In each of the above settings, the following concepts apply:
 
 ## VR headsets
 
-If you'd like to support virtual reality (VR) headsets for your experience, make sure to test or [emulate](#vr-emulation) VR in Studio.
+If you'd like to support virtual reality (VR) headsets for your game, make sure to test or [emulate](#vr-emulation) VR in Studio.
 
 ### VR emulation
 
-**VR emulation** lets you test VR experiences in Studio without a physical headset. Just like emulating any other device, use the [device selector](#device-emulation) menu to choose either **Meta&nbsp;Quest&nbsp;2** or **Meta&nbsp;Quest&nbsp;3**. The [controller emulator](#controller-simulation) automatically selects the appropriate controller for the headset.
+**VR emulation** lets you test VR games in Studio without a physical headset. Just like emulating any other device, use the [device selector](#device-emulation) menu to choose either **Meta&nbsp;Quest&nbsp;2** or **Meta&nbsp;Quest&nbsp;3**. The [controller emulator](#controller-simulation) automatically selects the appropriate controller for the headset.
 
 <Grid container spacing={1}>
 <Grid item XSmall={12} Medium={6} Large={6} XLarge={6}><img src="../assets/studio/general/Controller-Emulator-VR.png" width="540" alt="The Controller Emulator with a Quest 3 controller." /></Grid>
@@ -317,13 +317,13 @@ When using Oculus VR, ensure the following:
 
 ### Roblox Quest app
 
-You can test your experience in the Roblox app on Quest without linking your headset to your computer. Use the following steps to access your experience on your headset in this mode:
+You can test your game in the Roblox app on Quest without linking your headset to your computer. Use the following steps to access your game on your headset in this mode:
 
-1. In Studio, publish the experience and set the experience to private.
-2. Using your [Creator Dashboard](https://create.roblox.com/dashboard/creations) or the link in Studio, open the experience page in your web browser.
-3. On the experience page, add the experience to your favorites by clicking the **Favorite** icon.
+1. In Studio, publish the game and set the game to private.
+2. Using your [Creator Dashboard](https://create.roblox.com/dashboard/creations) or the link in Studio, open the game page in your web browser.
+3. On the game page, add the game to your favorites by clicking the **Favorite** icon.
 4. Using your headset, open the standalone Roblox app.
-5. Scroll down to the **Favorites** section in the home page and run your experience.
+5. Scroll down to the **Favorites** section in the home page and run your game.
 
 ### Studio VR mode
 
@@ -333,11 +333,11 @@ After [configuring your headset](#headset-configuration), you can turn on the St
 2. Select **Rendering**.
 3. Under **General** settings, turn on **Enable VR Mode**.
 
-You can now test your experience using your VR headset using any of the available [playtest options](#playtesting). During a VR testing session, if your headset cable disconnects or you close the Roblox Studio Beta app on the headset, you'll need to restart Studio to re-run testing.
+You can now test your game using your VR headset using any of the available [playtest options](#playtesting). During a VR testing session, if your headset cable disconnects or you close the Roblox Studio Beta app on the headset, you'll need to restart Studio to re-run testing.
 
 ## Player emulation
 
-For detailed emulation of experience [localization](../production/localization/index.md) and content policies, you can test through the **Player&nbsp;Emulator**, accessible from Studio's **Test** menu.
+For detailed emulation of game [localization](../production/localization/index.md) and content policies, you can test through the **Player&nbsp;Emulator**, accessible from Studio's **Test** menu.
 
 With the emulator window open, toggle on **Enable Test Profile**. Emulation will remain as toggled (enabled or disabled) even if you close the window.
 

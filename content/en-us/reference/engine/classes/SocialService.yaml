@@ -82,7 +82,7 @@ methods:
           invite.
       - name: recipientId
         type: User
-        default: 0
+        default: U1.AQAAAAAAAAAAAAAAAAAAAAA
         summary: |
           Optional `Class.Player.UserId` of the potential **recipient**, used to
           check whether the sender can invite that specific recipient.

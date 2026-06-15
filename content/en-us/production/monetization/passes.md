@@ -12,7 +12,7 @@ description: Passes let you charge users a one-time Robux fee to access privileg
 ## Create a pass
 
 <Alert severity="warning">
-   Before creating a pass, make sure your game has been [published](../../production/publishing/publish-experiences-and-places.md) and is accessible on Roblox.
+   Before creating a pass, make sure your game has been [published](../../production/publishing/publish-games-and-places.md) and is accessible on Roblox.
 </Alert>
 
 To create a pass:
