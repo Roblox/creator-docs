@@ -88,6 +88,10 @@ A [developer product](../../production/monetization/developer-products.md) is an
 
 <img src="../../assets/monetization/developer-products/Buy-Product-Example.jpg" width="800" />
 
+### Managed pricing
+
+[Managed pricing](../../production/monetization/managed-pricing.md) is a unified system that brings [regional pricing](../../production/monetization/regional-pricing.md) and [price optimization](../../production/monetization/price-optimization.md) together in one place. You opt in once, choose which items to include, and Managed pricing keeps your prices optimized across products and regions over time.
+
 ### Price optimization
 
 [Price optimization](../../production/monetization/price-optimization.md) lets you find the best price points for your passes and developer products, which can help you earn more money over time while keeping your prices competitive.

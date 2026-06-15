@@ -9,6 +9,14 @@ users can understand and enjoy your experience as intended. Any experience can i
 
 <img src="../../assets/localization/Concept-Banner.jpg" width="80%" />
 
+## User-facing setting
+
+Every user has an **Automatic Translations** setting in their [Account Settings](https://www.roblox.com/my/account#!/info) page that allows them to turn on automatic translation for experience content. If a player has this setting turned on, all experience names, experience descriptions, and in-experience text will be translated for them, even if you have not explicitly enabled translation for your experience.
+
+If you add any [manual translations](#manual-translations) to your experience, **they will always be shown to players**. Roblox only automatically generates translations if they are missing. To preview and manage translations, follow the steps below to enable localization settings for your experience.
+
+There may be text in your experience that should never be translated (for example, NPC names or street signs). To ensure translations are not generated for them, you can disable the `Class.GuiBase2d.AutoLocalize|AutoLocalize` property for those objects in Studio.
+
 ## Localization settings
 
 Your experience's localization settings is the starting place for enabling
