@@ -21,7 +21,7 @@ or delete them before export.
 
 ## Blender
 
-Blender allows you to export in `.fbx` or `.gltf` as well as other formats. If you are using `.fbx` export, familiarize yourself with [Blender's FBX scaling](../blender.md#adjust-scale-fbx) to ensure that you successfully import the model into Studio at the correct scale.
+Blender allows you to export in `.fbx` or `.gltf` as well as other formats. If you are using `.fbx` export, familiarize yourself with [Blender's FBX scaling](../../art/blender.md#adjust-scale-fbx) to ensure that you successfully import the model into Studio at the correct scale.
 
 ### Export settings
 
@@ -31,7 +31,7 @@ To export the `.fbx` file in Blender:
 2. Select **Export**, then **FBX (.fbx)**. The **Blender File View** window displays.
 3. On the right-hand side, change the **Path Mode** property to **Copy**, then toggle the **Embed Textures** button.
    <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-1.png" width="320" />
-4. Set **Transform** > **Apply Scalings** to **Unit Scale**. For more information, see [scaling and scene units](../blender.md#adjust-scale-fbx).
+4. Set **Transform** > **Apply Scalings** to **Unit Scale**. For more information, see [scaling and scene units](../../art/blender.md#adjust-scale-fbx).
    <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-5.png" width="320" />
 5. Click the **Export FBX** button.
 6. After exporting, use Studio's [Importer](../../studio/importer.md) to import your model and the [Accessory Fitting Tool](../../avatar/accessory-fitting-tool.md) to convert the model into an accessory.

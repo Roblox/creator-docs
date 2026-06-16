@@ -10,7 +10,7 @@ This content is for creators who intend to create character heads designated for
 Character models designed to be sold on the Marketplace require a specific set of components and configuration standards to ensure all avatar features work as expected. The following guidance applies to character model heads to ensure universal support for head accessories and facial animations.
 
 <Alert severity = 'warning'>
-Validation for heads use a specialized process that may require adjustment of your existing head asset. For more information, see [validation process](./head-validation.md).
+Validation for heads use a specialized process that may require adjustment of your existing head asset. For more information, see [validation process](./validate.md).
 </Alert>
 
 <Alert severity = "info" variant="outlined" color="primary" >
@@ -28,7 +28,7 @@ To submit issues or feedback regarding the Avatar Setup tool, submit a [bug repo
 ## Head cage
 
 <Alert severity = 'warning'>
-The head cage is used to verify animations during validation. see [validation process](./head-validation.md).
+The head cage is used to verify animations during validation. see [validation process](./validate.md).
 </Alert>
 
 Similar to other avatar body parts, an outer cage is required for the head. [High-quality cages](#caging-quality) ensure accessories and clothing items fit properly over the head. Head cages also serves to establish [facial landmarks](#facial-landmarks) for the eyes and mouth of the face for animation validation.
@@ -39,7 +39,7 @@ For details on improving the quality of your head cage, see [Face cage optimizat
 
 ### Facial landmarks
 
-During validation, Roblox projects the cage eye/mouth regions to the base mesh to identify the eyes and mouth regions of your character head. Even for non-humanoid faces that don't include visual eyes or mouths, it's important to ensure that these landmarks still exist and can be projected over your base mesh. For more information on this process, see [validation process](./head-validation.md).
+During validation, Roblox projects the cage eye/mouth regions to the base mesh to identify the eyes and mouth regions of your character head. Even for non-humanoid faces that don't include visual eyes or mouths, it's important to ensure that these landmarks still exist and can be projected over your base mesh. For more information on this process, see [validation process](./validate.md).
 
 Roblox expects the following 3 distinct landmarks in your cages:
 
@@ -67,7 +67,7 @@ Roblox expects the following 3 distinct landmarks in your cages:
 </GridContainer>
 
 <Alert severity = 'error'>
-The mouth landmark vertices are on the **second loop** of vertices from the mouth opening. This precision may help prevent issues with [landmark validation](./head-validation.md#landmark-projection).
+The mouth landmark vertices are on the **second loop** of vertices from the mouth opening. This precision may help prevent issues with [landmark validation](./validate.md#landmark-projection).
 
 <center><img src="../../assets/art/avatar/Mouth-Vertices-Warning.png"/></center>
 </Alert>
@@ -96,7 +96,7 @@ Roblox supports facial animation on character heads and can support more than 50
 
 While the 17 poses are a minimum requirement, it's recommended to include as many facial poses as possible in your asset to improve expressiveness and facial animation fidelity for facial animation and avatar chat.
 
-To [pass validation](./head-validation.md), the character head must successfully perform the following 5 facial actions. If the head can't deform at the points of the [cage landmarks](#head-cage) for these facial actions, validation fails for the asset.
+To [pass validation](./validate.md), the character head must successfully perform the following 5 facial actions. If the head can't deform at the points of the [cage landmarks](#head-cage) for these facial actions, validation fails for the asset.
 
 <table>
 <thead>
@@ -140,5 +140,5 @@ Along with the other technical requirements listed, your items must meet the fol
 - Object `Class.MeshPart.Transparency|Transparency` is set to `0`.
 - Object `Class.MeshPart.VertexColor|VertexColor` is the default `1, 1, 1`.
 - If your head includes separate eyelash and eyebrow assets, you must add them to your character model as `Class.Accessory` objects.
-  - See [accessory specifications](../../avatar/rigid-accessories.md) for additional technical requirements.
+  - See [accessory specifications](../rigid-accessories/index.md) for additional technical requirements.
 - Your `Class.Model` instance doesn't contain extraneous objects, like `Class.Script` or additional `Class.Part` instances.

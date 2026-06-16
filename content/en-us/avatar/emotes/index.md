@@ -54,4 +54,4 @@ There are several ways to create an animation both in Studio or using a third-pa
 </tbody>
 </table>
 
-To convert your keyframe sequence into an animation and upload to the Marketplace, see [import and configure emotes](../emotes/import.md#configure).
+To convert your keyframe sequence into an animation and upload to the Marketplace, see [import and configure emotes](./import.md#configure).

@@ -50,7 +50,7 @@ Each shoe must include their own inner and outer cage.
 
 ## Blender
 
-Blender allows you to export in `.fbx` or `.gltf` as well as other formats. If you are using `.fbx` export, familiarize yourself with [Blender's FBX scaling](../blender.md#adjust-scale-fbx) to ensure that you successfully import the model into Studio at the correct scale.
+Blender allows you to export in `.fbx` or `.gltf` as well as other formats. If you are using `.fbx` export, familiarize yourself with [Blender's FBX scaling](../../art/blender.md#adjust-scale-fbx) to ensure that you successfully import the model into Studio at the correct scale.
 
 ### Export settings
 
@@ -62,7 +62,7 @@ To export the `.fbx` file in Blender:
 
    <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-1.png" width="320" />
 
-4. If your project doesn't already have `.01` scene unit scaling, set the **Transform** > **Apply Scalings** to `FBX Unit Scale`. For more details, see [Blender FBX scaling](../blender.md#adjust-scale-fbx).
+4. If your project doesn't already have `.01` scene unit scaling, set the **Transform** > **Apply Scalings** to `FBX Unit Scale`. For more details, see [Blender FBX scaling](../../art/blender.md#adjust-scale-fbx).
 
    <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-5.png" width="320" />
 

@@ -6,7 +6,7 @@ description: To import custom makeup, replace the existing textures on the head 
 To import custom makeup textures, use Blender or Maya to reassign the existing textures on the reference template head to your custom texture images. After replacing the textures, export the entire head model, then [import](./import.md) it into Roblox Studio.
 
 <Alert severity = 'warning'>
-The following information is **specific for applying makeup textures to the Roblox provided head reference**, which already has PBR texture nodes assigned. For more information on assigning textures from scratch, see [Assign textures in Blender and Maya](../art/modeling/assign-textures.md).
+The following information is **specific for applying makeup textures to the Roblox provided head reference**, which already has PBR texture nodes assigned. For more information on assigning textures from scratch, see [Assign textures in Blender and Maya](../../art/modeling/assign-textures.md).
 </Alert>
 
 ## Blender
@@ -40,7 +40,7 @@ To reassign textures in Blender:
     <img src="../../assets/makeup/resources/Blender-Expected-Nodes.png" width="90%" />
 
 <Alert severity ='info'>
-After replacing your PBR textures, export the entire template file as a `.fbx`or `.gltf`. All 3D modeling [export requirements](../art/modeling/export-requirements.md) apply, but there are a few makeup-specific settings you must configure:
+After replacing your PBR textures, export the entire template file as a `.fbx`or `.gltf`. All 3D modeling [export requirements](../../art/modeling/export-requirements.md) apply, but there are a few makeup-specific settings you must configure:
 
    1. In the export file brower window, navigate to the **Include** section, then enable the **Custom Properties** toggle for makeup UV data transfer data purposes.
    1. In the **Armature** section, enable **Only Deform Bones** to ensure your export file includes skinning data for eyebrows and eyelashes.
@@ -78,7 +78,7 @@ To reassign textures in Blender:
   <img src="../../assets/makeup/resources/Maya-Expected-Nodes.png" width="90%" />
   
 <Alert severity ='info'>
-After replacing your PBR textures, export the entire template file as a `.fbx`or `.gltf`. All 3D modeling [export requirements](../art/modeling/export-requirements.md) apply, but there are a few makeup-specific settings you must configure:
+After replacing your PBR textures, export the entire template file as a `.fbx`or `.gltf`. All 3D modeling [export requirements](../../art/modeling/export-requirements.md) apply, but there are a few makeup-specific settings you must configure:
 
    1. In the export file brower window, navigate to the **Deformed Models** section.
    1. Enable the **Skins** toggle to ensure your export file includes skinning data for eyebrows and eyelashes.

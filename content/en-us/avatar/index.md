@@ -24,7 +24,7 @@ title: "Create a 3D accessory",
 description: "Use a 3D modeling tool and Roblox Studio to make a 3D cosmetic.",
 video: "https://www.youtube-nocookie.com/embed/Eed29gV0hLA",
 links: [
-{ text: "Guides and tutorials", href: "../art/accessories.md" },
+{ text: "Guides and tutorials", href: "../art/accessories/creating-rigid/index.md" },
 { text: "Get Blender", href: "https://www.blender.org" },
 { text: "Get Studio", href: "./studio/setup/" }
 ]
@@ -144,7 +144,7 @@ video: "https://www.youtube-nocookie.com/embed/NHgYM78afqc",
 links: [
 { text: "Clothing guides", href: "../avatar/layered-accessories/" },
 { text: "Character bodies", href: "./avatar/character-bodies/"},
-{ text: "Animateable heads", href: "../art/characters/facial-animation.md" }
+{ text: "Animateable heads", href: "../avatar/dynamic-heads/index.md" }
 ]
 },
 ]

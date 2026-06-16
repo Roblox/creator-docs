@@ -227,7 +227,7 @@ description: |
   #### FACS Poses
 
   Animatable heads use the Facial Action Coding System (FACS). See the
-  [FACS poses reference](../../../art/characters/facial-animation/facs-poses-reference.md)
+  [FACS poses reference](../../../avatar/dynamic-heads/facs-poses-reference.md)
   for helpful information when using
   `Class.EditableMesh:GetFacsPoses()|GetFacsPoses()` and similar methods.
 

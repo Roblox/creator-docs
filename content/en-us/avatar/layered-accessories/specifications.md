@@ -198,7 +198,7 @@ The vertexes and UVs of the inner and outer cage meshes should not be deleted or
 Your items must meet the following requirements before you upload them to the Marketplace to sell:
 
 - Ensure that your items adhere to the [Marketplace Program Guidelines](../../marketplace/marketplace-policy.md).
-- Whenever applicable, ensure that your items adhere to Roblox's [custom mesh specifications](../../art/modeling/specifications.md) and [rigid accessory specifications](../../avatar/rigid-accessories.md).
+- Whenever applicable, ensure that your items adhere to Roblox's [custom mesh specifications](../../art/modeling/specifications.md) and [rigid accessory specifications](../rigid-accessories/index.md).
 - Object `Class.MeshPart.Material|Material` is set to `Plastic`.
 - Object `Class.MeshPart.Transparency|Transparency` is set to 0.
 - Object `Class.MeshPart.VertexColor|VertexColor` is the default `1, 1, 1`.

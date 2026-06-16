@@ -78,7 +78,7 @@ Now that the validation system knows where to check for the eyes and mouth, the 
 - Left and right eyes can close
 - Mouth can open
 - Basic happy and sad expressions
-  - For a full list of basic action units and poses, see [FACS animations](./head-specifications.md#facs-animation).
+  - For a full list of basic action units and poses, see [FACS animations](./specifications.md#facs-animation).
 
 The validation looks for the **relative change in the landmarks**. For example, when testing for right eye closing (FACS pose: `RightEyeClosed`), validation checks if the landmarks move from their original neutral state accordingly.
 
@@ -172,7 +172,7 @@ There may also be cases where the landmarks are correct, but the animation itsel
 
 ### Animation data missing
 
-Heads require [17 specific FACS poses](./head-specifications.md#facs-animation) that are used to test the 5 basic actions. Regardless of landmarks or other FACS animations, validation immediately fails if the minimum 17 poses were not detected.
+Heads require [17 specific FACS poses](./specifications.md#facs-animation) that are used to test the 5 basic actions. Regardless of landmarks or other FACS animations, validation immediately fails if the minimum 17 poses were not detected.
 
 For information on how to pose and map dynamic heads, see [Creating basic heads](../../art/characters/facial-animation/create-basic-heads.md).
 
@@ -195,7 +195,7 @@ In this case, the cage still applies the expected landscapes to the head surface
 
 <figure>
 <img src="../../assets/art/avatar/Blocky-Head.png"/>
-<figcaption>Validation checks the displacement of the landmarks to verify facial animation. <br /><br />Make sure that your [FACS animations](./head-specifications.md#facs-animation) properly affect the region where landmarks are applied.</figcaption>
+<figcaption>Validation checks the displacement of the landmarks to verify facial animation. <br /><br />Make sure that your [FACS animations](./specifications.md#facs-animation) properly affect the region where landmarks are applied.</figcaption>
 </figure>
 
 </GridContainer>
@@ -215,7 +215,7 @@ In cases where eyes and mouths might be missing, the validation still projects l
 
 <figure>
 <img src="../../assets/art/avatar/Horn-Head.png"/>
-<figcaption>Validation checks the displacement of the landmarks to verify facial animation. <br /><br />Make sure that your [FACS animations](./head-specifications.md#facs-animation) properly affect the regions where the landmarks are applied.</figcaption>
+<figcaption>Validation checks the displacement of the landmarks to verify facial animation. <br /><br />Make sure that your [FACS animations](./specifications.md#facs-animation) properly affect the regions where the landmarks are applied.</figcaption>
 </figure>
 
 </GridContainer>

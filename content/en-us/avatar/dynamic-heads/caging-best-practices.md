@@ -9,7 +9,7 @@ The following information applies to character creators who are looking to impro
 
 A character's head cage helps define the surface of the 3D model. The cage also plays an important role in Marketplace [head validation](./specifications.md#facial-landmarks), so it's important properly construct cages to ensure accurate fitting with head accessories and animations.
 
-The following information and examples are best practices that are applicable to face caging as well as other caging processes. For additional best practices for caging, see [layered clothing caging best practices](../avatar/layered-accessories/caging-best-practices.md).
+The following information and examples are best practices that are applicable to face caging as well as other caging processes. For additional best practices for caging, see [layered clothing caging best practices](../layered-accessories/caging-best-practices.md).
 
 ## General
 

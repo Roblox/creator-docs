@@ -15,7 +15,7 @@ Heads are a fundamental component of an avatar character body. Roblox avatar hea
 ## Create basic heads
 
 <Alert severity = 'warning'>
-When creating heads intended for the Marketplace, ensure that your head meets Roblox's [head specifications](../head-specifications.md).
+When creating heads intended for the Marketplace, ensure that your head meets Roblox's [head specifications](./specifications.md).
 </Alert>
 
 Using third-party modeling tools, you can either modify a rigged character model to meet head requirements, or create a head from scratch. For step-by-step instructions on how to add face bones, apply skinning, posing, and mapping poses on a head model in Blender, see [Create basic heads](../../../art/characters/facial-animation/create-basic-heads.md). This guide includes several reference files you can use to compare and track your progress.
@@ -37,7 +37,7 @@ See [Create face accessories](../../../art/characters/facial-animation/create-fa
 
 ## Test heads
 
-Testing is an important part of the iterative creation process. To test heads in Studio, see [Testing in Studio](../facial-animation/use-heads-in-studio.md).
+Testing is an important part of the iterative creation process. To test heads in Studio, see [Testing in Studio](./test.md).
 
 ## Animate heads
 

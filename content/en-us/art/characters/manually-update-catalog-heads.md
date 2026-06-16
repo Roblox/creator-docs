@@ -172,7 +172,7 @@ Use the following steps to provide Roblox the updated asset ID to replace your h
 
 Roblox has published a series of documentation and video tutorials on best practices for creating dynamic head assets.
 
-- [Dynamic head overview](./facial-animation/)
+- [Dynamic head overview](../../avatar/dynamic-heads/index.md)
 - [Head validation process](../../avatar/dynamic-heads/validate.md)
 - [Head validation video guide](https://www.youtube.com/watch?v=OwhkWzSBnf0)
 - [Avatar Setup](../../avatar-setup/index.md)

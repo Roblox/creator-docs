@@ -800,7 +800,7 @@ See the following requirements for skinning:
 
 ## Facial animation
 
-For information on required facial animation support, see [head specifications](./head-specifications.md#facs-animation).
+For information on required facial animation support, see [head specifications](../dynamic-heads/specifications.md#facs-animation).
 
 ## Textures
 
