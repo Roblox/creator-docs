@@ -100,7 +100,7 @@ After you submit the questionnaire, your experience receives a maturity label wi
 </Alert>
 
 <Alert severity="warning">
-   While parents can use parental controls to bypass most content restrictions according to what they believe is appropriate for their child, Roblox restricts [free-form user creation](#free-form-user-creation) and [social hangouts](#social-hangout) to players over 13.
+   While parents can use parental controls to bypass most content restrictions according to what they believe is appropriate for their child, Roblox restricts [free-form user creation](#free-form-user-creation) and [social hangouts](#social-hangout) to players over 16.
 </Alert>
 
 ### Violence
