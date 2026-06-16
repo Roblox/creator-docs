@@ -147,7 +147,7 @@ The start place of a game cannot be instantly swapped with another place, but yo
 To change the start place:
 
 1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Save your **current** start place to a `.rbxl` file or to a new place within the game.
-2. Go to the [Creator Dashboard][creatordashboard] and select the game with the start place that you want to change.
+2. Go to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and select the game with the start place that you want to change.
 3. Go to **Configure** ⟩ **Places**.
 4. Click **Edit in Studio** for the intended **new** start place. Studio opens and loads that specific place.
 
@@ -179,7 +179,7 @@ You can make up to **5 private games that have never been public before** public
 
 A game's target audience can be set through its **Audience** setting:
 
-1. In the [Creator Dashboard][creatordashboard], select your game.
+1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), select your game.
 2. Navigate to **Configure** ⟩ **Settings**.
 3. Under **Audience**, choose from the options below:
 
@@ -236,20 +236,59 @@ Publishing to a **Public** audience or **Limited** audience (playtesters, friend
 
 To reach **16+** and **Trusted Friends**:
 
-- Complete an age check.
-- Account is in good standing and at least 2 days old.
+- Have an account that is in good standing and at least 2 days old.
+- Complete an age check through [facial age estimation](https://about.roblox.com/age-estimation), [phone number](./account-verification.md#verify-through-phone-number), or [government ID](./account-verification.md#verify-through-government-id).
 - Complete the [content maturity & compliance](../promotion/content-maturity.md) questionnaire.
 
-To reach **all ages** including [Roblox Kids and Select](./kids-and-select.md):
+To reach **all ages** including [Roblox Kids and Select](./kids-and-select.md), you must meet all of the previous requirements **plus**:
 
-- All of the above **plus**:
-- [ID-verified account](./account-verification.md#verify-through-government-id) or parent-linked age verification.
-- Two-factor authentication (2FA) enabled.
-- **One** of the following:
-  - Pay a one-time, refundable publishing fee of 1,000 Robux per game.
-    - This fee will be refunded if your game maintains 100 highly engaged players for 60 days without moderation.
-    - If the game is permanently moderated or taken down for not meeting [Roblox Community Standards](https://en.help.roblox.com/hc/articles/203313410) within the 60 days, the fee **will not be refunded**.
-  - Active [Roblox Plus](https://www.roblox.com/plus) subscription for 2 consecutive months.
-- Game must pass the [evaluation process](../../production/publishing/kids-and-select.md#evaluation-process) for **Kids** and **Select**.
+- Verify your account through [government ID](./account-verification.md#verify-through-government-id) or linked [parental account](https://about.roblox.com/parental-controls).
+- Enable [2FA](https://en.help.roblox.com/hc/en-us/articles/212459863-Add-2-Step-Verification-to-Your-Account) on your Roblox account.
+- Meet **one** of the following:
+  - Maintain an active [Roblox Plus](../monetization/roblox-plus.md) or [Roblox Premium](https://www.roblox.com/premium/membership) subscription for 2 consecutive months.
+  - Pay a one-time, refundable [fee](#optional-fees).
+- Game must pass the [evaluation process](../../production/publishing/kids-and-select.md#for-ages-9-15-in-kids-and-select-accounts) for **Kids** and **Select** accounts.
 
-[creatordashboard]: https://create.roblox.com/dashboard/creations
+### Optional fees
+
+If you do not have a Roblox Plus or Roblox Premium subscription for 2 consecutive months and you want to publish a game to users of all ages, you have the option to pay either a publishing or expedited review fee.
+
+#### Publishing fee
+
+The **publishing fee** is a one-time, refundable fee of 1,000 Robux per game that allows you to publish and expand the reach of your game to users of all ages. This fee is intended to make it expensive and logistically difficult for bad actors to create large numbers of accounts and flood the platform with spam.
+
+If your game maintains 100 highly engaged players for 60 days without moderation, you will receive a refund of the publishing fee. However, if your game is permanently moderated or taken down for not meeting Roblox's [Community Standards](https://en.help.roblox.com/hc/articles/203313410) within the 60-day period, the fee **will not be refunded**.
+
+To pay the publishing fee:
+
+1. In the [Creator Hub](https://create.roblox.com/dashboard/creations), select the game you want to release to users of all ages.
+1. In the left-hand navigation, navigate to **Audience** > **Reach**.
+1. Under **Experience reach**, navigate to the **Refundable publishing fee** section, then click the blue **Pay** button. A pop-up dialog displays.
+
+   <img src="../../assets/publishing/Publishing-Fee.png" width="80%" />
+
+1. Click the **Pay 1,000** button to confirm your payment.
+
+#### Expedited review fee
+
+The **expedited review fee** is a one-time, refundable fee of 100,000 Robux per game that allows you to accelerate the safety and compliance reviews required to publish your game to users of all ages. This fee is intended to provide launch flexibility and financial accountability for qualified creators who are planning a timed launch or are running off-platform campaigns and need to know exactly when their game will be ready for all ages.
+
+<Alert severity="info">
+While the expedited review fee accelerates safety and compliance reviews, **all games must continue to meet the same standards as other Roblox Kids and Select games**.
+</Alert>
+
+After 90 days, you can request a refund or leave the fee in place. If your game meets the standard eligibility of 500 highly engaged players, you can request a refund; otherwise you can leave the fee in place to maintain your current eligibility for Kids and Select audiences. If your game is permanently moderated or taken down for not meeting Roblox's [Community Standards](https://en.help.roblox.com/hc/articles/203313410), the fee **will not be refunded**.
+
+To pay the expedited review fee:
+
+1. In the [Creator Hub](https://create.roblox.com/dashboard/creations), select the game you want to expedite for a safety review.
+1. In the left-hand navigation, navigate to **Audience** > **Reach**.
+1. Under **Experience reach**, navigate to the blue alert, then click the gray **Pay** button. A pop-up dialog displays.
+
+   <img src="../../assets/publishing/Expedited-Review-Fee.png" width="80%" />
+
+1. Click the **Pay 100,000** button to confirm your payment.
+
+<Alert severity="warning">
+If a minor violation is found during the 48-hour review, you must make the appropriate adjustments to your game, then resubmit. The 48-hour clock restarts from the point of resubmission.
+</Alert>
