@@ -540,6 +540,8 @@ navigation:
         path: /performance-optimization/
       - title: Design for performance
         path: /performance-optimization/design
+      - title: Test on hardware
+        path: /performance-optimization/test-on-hardware
       - title: Identify issues
         path: /performance-optimization/identify
       - title: MicroProfiler

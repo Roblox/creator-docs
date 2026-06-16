@@ -67,7 +67,7 @@ Each ad campaign has a single goal that determines who Roblox shows the campaign
 
 - **Engagement**
 
-  The Engagement objective reaches age-verified highly engaged players whose sessions count toward your highly engaged player threshold for [Roblox Kids and Select](../publishing/kids-and-select.md). Use it if you want a more direct path toward meeting the threshold.
+  The Engagement objective reaches age-checked highly engaged players whose sessions count toward your highly engaged player threshold for [Roblox Kids and Select](../publishing/kids-and-select.md). Use it if you want a more direct path toward meeting the threshold.
 
   Many games reach the threshold organically over time, so using the Engagement objective is optional.
 
@@ -76,7 +76,7 @@ Each ad campaign has a single goal that determines who Roblox shows the campaign
   - **Expect a higher cost per play (CPP).** The highly engaged player audience is smaller than the Plays audience, which typically results in a higher CPP.
   - **Use a dedicated budget.** Consider Engagement as a separate investment if your goal is to make progress toward the Roblox Kids and Select threshold, instead of shifting spend from Plays campaigns.
   - **Track your progress.** Engagement campaigns do not automatically pause when you reach your Highly Engaged Player threshold. Track your progress and pause the campaign when you reach your goal.
-  - **Allow time for results.** Most campaigns require several days to produce meaningful results. If you don't see progress after 3–5 days, consider improving your game's onboarding and first-time user game before continuing.
+  - **Allow time for results.** Most campaigns require several days to produce meaningful results. If you don't see progress after 3–5 days, consider improving your game's onboarding and first-time user experience before continuing.
 
 <h5 style={{marginTop: '36px'}}>Automated bidding</h5>
 
