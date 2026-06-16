@@ -148,9 +148,9 @@ To reach users who are at least 16 years old, creators of individual-owned games
 
 ## Expedited review
 
-If you're planning a timed launch or running off-platform campaigns and need to know exactly when your game will be ready for all ages, you can secure an expedited review for Roblox Kids and Select accounts by paying a one-time, refundable fee of 100,000 Robux per game.  
+If you're planning a timed launch or running an off-platform campaign and need to know exactly when your game will be ready for all ages, you can secure an expedited review for Roblox Kids and Select accounts by paying a one-time, refundable fee of 100,000 Robux per game.
 
-The expedited review fee is intended to provide launch flexibility and financial accountability for qualified creators. While it accelerates safety and compliance reviews, **all games must continue to meet the same standards as other Roblox Kids and Select games**.
+The expedited review fee is intended to provide launch flexibility and financial accountability for qualified creators who haven't yet met the highly engaged age-checked player requirement for Kids and Select accounts. While it accelerates safety and compliance reviews, all games must continue to meet the same standards as other Roblox Kids and Select games.
 
 For more information on the expedited review fee, such as how to pay it and when you can receive a refund, see [Publish games and places - Expedited review fee](./publish-games-and-places.md#expedited-review-fee).
 
@@ -170,16 +170,16 @@ Requiring either a one-time publishing fee or a recurring Roblox Plus or Premium
 <Typography variant='buttonLarge'>What if my subscription expires?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-Your experience remains published and available to all ages. You only need to satisfy the publishing fee or subscription requirement when publishing a new experience or updating an existing experience for all ages audiences.
+Your game remains published and available to all ages. You only need to satisfy the publishing fee or subscription requirement when publishing a new game or updating an existing game for all ages audiences.
 </AccordionDetails>
 </BaseAccordion>
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant='buttonLarge'>How do I track my experience's evaluation status?</Typography>
+<Typography variant='buttonLarge'>How do I track my game's evaluation status?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-Use the **Audience Reach** dashboard in the [Creator Hub](https://create.roblox.com) to monitor your experience's engagement benchmarks in real time.
+Use the **Audience Reach** dashboard in the [Creator Hub](https://create.roblox.com) to monitor your game's engagement benchmarks in real time.
 </AccordionDetails>
 </BaseAccordion>
 
