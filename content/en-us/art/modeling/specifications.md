@@ -10,30 +10,30 @@ Check that your model meets the following modeling specifications and guidelines
 <Alert severity = 'warning'>
 <AlertTitle>If creating other types of 3D models:</AlertTitle>
 <ul>
-<li>For rigid accessories, see [accessory specifications](../accessories/specifications.md) and [accessory export settings](../accessories/export-settings.md).</li> <br />
-<li>For layered accessories, see [layered accessory specifications](../accessories/clothing-specifications.md) and [layered export settings](../accessories/clothing-export-settings.md).</li> <br />
-<li>For avatar characters, see [avatar specifications](../characters/specifications.md) and [avatar export settings](../characters/export-settings.md).</li>
+<li>For rigid accessories, see [accessory specifications](../../avatar/rigid-accessories/specifications.md) and [accessory export settings](../../avatar/rigid-accessories/export.md).</li> <br />
+<li>For layered accessories, see [layered accessory specifications](../../avatar/layered-accessories/specifications.md) and [layered export settings](../../avatar/layered-accessories/export.md).</li> <br />
+<li>For avatar characters, see [avatar specifications](../../avatar/character-bodies/specifications.md) and [avatar export settings](../../avatar/character-bodies/export.md).</li>
 </ul>
 </Alert>
 
 When ready to export, see the [export settings](../../art/modeling/export-requirements.md) for mesh export settings for Blender and Maya.
 
 <Alert severity='info'>
-If you meet certain account requirements, you can sell your custom meshes as accessories on the Marketplace. See [Rigid accessories](../../art/accessories/index.md) for an overview on the creation process for these types of accessories.
+If you meet certain account requirements, you can sell your custom meshes as accessories on the Marketplace. See [Rigid accessories](../../avatar/rigid-accessories/index.md) for an overview on the creation process for these types of accessories.
 </Alert>
 
 ## Geometry
 
 See the following specifications for general geometry:
 
-- **Budgets** - Individual meshes can not exceed 20,000 triangles. Avatar items have their own individual budget requirements for [characters](../../art/characters/specifications.md) and [accessories](../../art/accessories/specifications.md).
+- **Budgets** - Individual meshes can not exceed 20,000 triangles. Avatar items have their own individual budget requirements for [character bodies](../../avatar/character-bodies/specifications.md), [rigid accessories](../../avatar/rigid-accessories/specifications.md), and [layered accessories](../../avatar/layered-accessories/specifications.md).
 - **Watertight** - All geometry must be watertight without exposed holes or backfaces.
 - **No N-gons** - Meshes must be in quads where possible.
 - **Volume** - Meshes cannot be 0 thickness and must have some volume.
 
 ## Rigging and skinning
 
-Roblox supports third-party meshes with an internal rig, or skeleton structure that can be used as additional articulation points in your model. See [Character rigs](../../art/characters/specifications.md#rig) for specific standards for an R15 character rig.
+Roblox supports third-party meshes with an internal rig, or skeleton structure that can be used as additional articulation points in your model. See [Character rigs](../../avatar/character-bodies/specifications.md#rigging) for specific standards for a standard or higher-fidelity character rig.
 
 <GridContainer numColumns="2">
   <figure>
@@ -73,7 +73,7 @@ See the following requirements for assets with animation:
 Inner and Outer cages are non-rendered meshes that Roblox uses to define the inner and outer surfaces of a mesh using a `Class.WrapLayer` or `Class.WrapTarget` instance. These cages are most often used with characters and accessories, though you can use cage meshes for any mesh object.
 
 <Alert severity="warning">
-Character models must include an outer cage in order to properly equip layered clothing and accessories. See [Character specifications](../../art/characters/specifications.md) for additional information.
+Character models must include an outer cage in order to properly equip layered clothing and accessories. See [Character body specifications](../../avatar/character-bodies/specifications.md) for additional information.
 </Alert>
 
 For general use, see the following requirements for adding inner and outer cage meshes to your model:

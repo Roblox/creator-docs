@@ -114,7 +114,7 @@ Fix your asset in Blender, or preferred 3D modeling software. In many cases, you
 7. If needed, remove vertex color shading nodes for fbx export. The blender fbx exporter is more picky then glTF and won't accept nodes in between the texture input and the shader.
    <img src="../../assets/art/avatar/Remove-Vertex-Node-A.png"/>
    <img src="../../assets/art/avatar/Remove-Vertex-Node-B.png"/>
-8. Modify your head asset to [pass validation](./head-validation.md):
+8. Modify your head asset to [pass validation](../../avatar/dynamic-heads/validate.md):
    1. Align cage eyes and mouth regions to the head.
    2. Ensure your head includes a rig, with poses keyframed and mapped to the FACs standard so that:
       1. Eyes must blink.
@@ -173,7 +173,7 @@ Use the following steps to provide Roblox the updated asset ID to replace your h
 Roblox has published a series of documentation and video tutorials on best practices for creating dynamic head assets.
 
 - [Dynamic head overview](./facial-animation/)
-- [Head validation process](./head-validation.md)
+- [Head validation process](../../avatar/dynamic-heads/validate.md)
 - [Head validation video guide](https://www.youtube.com/watch?v=OwhkWzSBnf0)
 - [Avatar Setup](../../avatar-setup/index.md)
-- [Caging Best Practices](../accessories/caging-best-practices.md)
+- [Caging Best Practices](../../avatar/dynamic-heads/caging-best-practices.md)

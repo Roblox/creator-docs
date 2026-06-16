@@ -13,7 +13,7 @@ description: |
   `Bone`), define a T-pose adjustment transform, rotation range limits, and
   carry a size for volumetric visualization and retargeting. For an example
   Blender and Maya rig hierarchy with all optional joints, see
-  [Character specifications - Higher-fidelity rigs](../../../art/characters/specifications.md#higher-fidelity-rigs).
+  [Character specifications - Higher-fidelity rigs](../../../avatar/character-bodies/specifications.md#higher-fidelity-rigs).
 
   Use `AutoRig` to automatically populate joint references from a character
   model, or assign joints individually. Supports both R6 (6-joint) and R15

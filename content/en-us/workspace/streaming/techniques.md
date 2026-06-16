@@ -182,7 +182,7 @@ For models with a non-default `Class.Model.LevelOfDetail|LevelOfDetail` property
 
 ## Set avatar level of detail
 
-Platform avatars outside of the currently streamed area are not visible by default. However, you can instruct the engine to render platform avatar models with [standard rigs](../../art/characters/specifications.md#standard-rigs) and any number of accessories or layers of clothing as optimized lightweight "SLIM" avatar representations with full support for animations.
+Platform avatars outside of the currently streamed area are not visible by default. However, you can instruct the engine to render platform avatar models with [standard rigs](../../avatar/character-bodies/specifications.md#standard-rigs) and any number of accessories or layers of clothing as optimized lightweight "SLIM" avatar representations with full support for animations.
 
 When you enable the `Class.Workspace.EnableSLIMAvatars` property alongside instance streaming, each composite SLIM model generates several LoDs in the cloud. This enables the engine to automatically:
 

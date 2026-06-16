@@ -67,7 +67,7 @@ Creature model from the <a href="https://www.roblox.com/games/7208091524/Beyond-
 
 ## Avatar and accessories
 
-The following include examples and templates utilizing Roblox's required [avatar components](../../art/characters/index.md#components-of-an-avatar). Many of these project files and references require additional configuration in your modeling software before importing into Studio as a complete avatar character. See [Avatars](../../art/characters/index.md) for additional resources and template usage instruction.
+The following include examples and templates utilizing Roblox's required [avatar components](../../avatar/character-bodies/index.md#components-of-an-avatar). Many of these project files and references require additional configuration in your modeling software before importing into Studio as a complete avatar character. See [Character bodies](../../avatar/character-bodies/index.md) for additional resources and template usage instruction.
 
 ### References
 
@@ -145,7 +145,7 @@ A Blocky character model with an animatable head and a full body cage.
 <center> <img src="../../assets/art/resources/Lola-Resource.png" width="100%" alt="A pink-haired character complete with brown jacket, goggles, leggings, and pants."/> </center>
 </figure>
 <figure>
-A skinned R15 character created from the <a href="../../art/modeling/skin-a-humanoid-model.md">Skin a humanoid model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../../art/characters/specifications.md#outer-cages), this model can't equip layered clothing or accessories.
+A skinned R15 character created from the <a href="../../art/modeling/skin-a-humanoid-model.md">Skin a humanoid model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../../avatar/character-bodies/specifications.md#outer-cages), this model can't equip layered clothing or accessories.
 </figure>
 <br />
 
@@ -229,7 +229,7 @@ Additional caged clothing items from How to cage Roblox's 3D [clothing video gui
 <center> <img src="../../assets/art/resources/Body-Scale-Classic.png" width="100%" alt="A white untextured mannequin in the blocky style."/> </center>
 </figure>
 <figure>
-A blank mannequin using Roblox's [Classic](../../art/characters/specifications.md#classic) avatar proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
+A blank mannequin using Roblox's [Classic](../../avatar/character-bodies/specifications.md#classic) avatar proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
 </figure>
 </CardContent>
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
@@ -250,7 +250,7 @@ A blank mannequin using Roblox's [Classic](../../art/characters/specifications.m
 <center> <img src="../../assets/art/resources/Body-Scale-Rthro-Normal.png" width="100%" alt="A white untextured mannequin in a larger build humanoid style."/> </center>
 </figure>
 <figure>
-A blank mannequin using Roblox's [Rthro Normal](../../art/characters/specifications.md#normal) avatar proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
+A blank mannequin using Roblox's [Rthro Normal](../../avatar/character-bodies/specifications.md#normal) avatar proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
 </figure>
 </CardContent>
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
@@ -271,7 +271,7 @@ A blank mannequin using Roblox's [Rthro Normal](../../art/characters/specificati
 <center> <img src="../../assets/art/resources/Body-Scale-Rthro-Slender.png" width="100%" alt="A white untextured mannequin in a slimmer build humanoid style."/> </center>
 </figure>
 <figure>
-A blank mannequin using Roblox's [Rthro Slender](../../art/characters/specifications.md#slender) proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
+A blank mannequin using Roblox's [Rthro Slender](../../avatar/character-bodies/specifications.md#slender) proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
 </figure>
 </CardContent>
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>

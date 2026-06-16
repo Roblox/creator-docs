@@ -119,11 +119,11 @@ If you are interested in specific avatar creation topics, use the following tabl
   <tr>
     <td>Technical specs</td>
     <td>[.FBX export settings](../../art/modeling/export-requirements.md)<br /><br />[General mesh specifications](../../art/modeling/specifications.md)<br /><br />
-    [Avatar specifications](../../art/characters/specifications.md)<br /><br />[Accessory specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace policy](../../marketplace/marketplace-policy.md)</td>
+    [Avatar specifications](../../avatar/character-bodies/specifications.md)<br /><br />[Accessory specifications](../../avatar/rigid-accessories/index.md)<br /><br />[Marketplace policy](../../marketplace/marketplace-policy.md)</td>
   </tr>
   <tr>
     <td>Bodies and clothing creation</td>
-    <td>[Accessories overview](../../art/accessories/index.md)<br /><br />[Bodies overview](../../art/characters/index.md)<br /><br />[Face accessory creation](../../art/characters/facial-animation/create-face-accessories.md)<br /><br />[Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md)<br /><br />[Accessory specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace requirements](../../marketplace/marketplace-policy.md)</td>
+    <td>[Accessories overview](../../avatar/rigid-accessories/index.md)<br /><br />[Bodies overview](../../avatar/character-bodies/index.md)<br /><br />[Face accessory creation](../../art/characters/facial-animation/create-face-accessories.md)<br /><br />[Accessory Fitting Tool](../../avatar/accessory-fitting-tool.md)<br /><br />[Accessory specifications](../../avatar/rigid-accessories/specifications.md)<br /><br />[Marketplace requirements](../../marketplace/marketplace-policy.md)</td>
   </tr>
   <tr>
     <td>Texturing</td>
@@ -131,12 +131,12 @@ If you are interested in specific avatar creation topics, use the following tabl
   </tr>
   <tr>
     <td>Rigging and skinning</td>
-    <td>[Rigging and skinning overview](../../art/modeling/rigging.md)<br /><br />[Basic mesh rigging](../../art/modeling/rig-a-simple-mesh.md) <br /><br />[Facial bone rigging](../../art/characters/facial-animation/create-basic-heads.md#rigging)<br /><br />[Facial bone skinning](../../art/characters/facial-animation/create-basic-heads.md#skin-face-bones)<br /><br />[Avatar rigging requirements](../../art/characters/specifications.md#rigging)<br /><br />[Automatic skinning transfer](../../art/accessories/automatic-skinning-transfer.md)</td>
+    <td>[Rigging and skinning overview](../../art/modeling/rigging.md)<br /><br />[Basic mesh rigging](../../art/modeling/rig-a-simple-mesh.md) <br /><br />[Facial bone rigging](../../art/characters/facial-animation/create-basic-heads.md#rigging)<br /><br />[Facial bone skinning](../../art/characters/facial-animation/create-basic-heads.md#skin-face-bones)<br /><br />[Avatar rigging requirements](../../avatar/character-bodies/specifications.md#rigging)<br /><br />[Automatic skinning transfer](../../avatar/automatic-skinning-transfer.md)</td>
   </tr>
 
   <tr>
     <td>Facial animation and live heads</td>
-    <td>[Basic head creation](../../art/characters/facial-animation/create-basic-heads.md)<br /><br />[Face accessory creation](../../art/characters/facial-animation/create-face-accessories.md)<br /><br />[FACS pose references](../../art/characters/facial-animation/facs-poses-reference.md)</td>
+    <td>[Basic head creation](../../art/characters/facial-animation/create-basic-heads.md)<br /><br />[Face accessory creation](../../art/characters/facial-animation/create-face-accessories.md)<br /><br />[FACS pose references](../../avatar/dynamic-heads/facs-poses-reference.md)</td>
   </tr>
   <tr>
     <td>Testing and validation</td>

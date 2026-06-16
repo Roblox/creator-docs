@@ -50,17 +50,17 @@ When your project has the appropriate `Class.Model` object in your workspace, yo
   <tr>
     <td>Avatar body</td>
     <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet Avatar Setup's supported [body inputs](./auto-setup-requirements.md#body).</td>
-    <td>`Class.Model` parenting associated 15 `Class.MeshPart` objects and other expected [avatar components](../art/characters/index.md#components-of-an-avatar).</td>
+    <td>`Class.Model` parenting associated 15 `Class.MeshPart` objects and other expected [avatar components](../avatar/character-bodies/index.md#components-of-an-avatar).</td>
   </tr>
   <tr>
     <td>Accessory</td>
     <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet Avatar Setup's supported [accessory inputs](./auto-setup-requirements.md#accessories). <br /> <br />Must [bundle](./auto-setup-requirements.md#bundle-multiple-assets) with an avatar body `Class.Model` for Avatar Setup.</td>
-    <td>`Class.Accessory` that includes all expected [rigid accessory components](../art/accessories/index.md#components-of-a-rigid-accessory).</td>
+    <td>`Class.Accessory` that includes all expected [rigid accessory components](../avatar/rigid-accessories/index.md#components-of-a-rigid-accessory).</td>
   </tr>
   <tr>
     <td>Layered clothing</td>
     <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet Avatar Setup's supported [accessory inputs](./auto-setup-requirements.md#accessories-and-clothing). <br /> <br />Can optionally [bundle](./auto-setup-requirements.md#bundle-multiple-assets) with an avatar body `Class.Model` for Avatar Setup.</td>
-    <td>`Class.Accessory` that includes all expected [layered accessory components](../art/accessories/layered-clothing.md#components-of-a-layered-clothing-accessory).</td>
+    <td>`Class.Accessory` that includes all expected [layered accessory components](../avatar/layered-accessories/index.md#components-of-a-layered-clothing-accessory).</td>
   </tr>
   <tr>
     <td>Multiple accessories and clothing with single body</td>
@@ -157,7 +157,7 @@ To run Avatar Setup:
       <img src="../assets/avatar/avatar-setup/Set-Type.png" width="50%" alt="" />
 
 1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Near the bottom-left corner, click on the gear icon to configure specialty settings for your character model.
-   1. If your character has a decal for its face and you want to enable the conversion of the texture into a [dynamic head](../art/characters/facial-animation/index.md), enable **Handle face as 2D decal**. This process allows you to preserve your creative intent while complying with Marketplace policy that requires all avatars to have dynamic heads.
+   1. If your character has a decal for its face and you want to enable the conversion of the texture into a [dynamic head](../avatar/dynamic-heads/index.md), enable **Handle face as 2D decal**. This process allows you to preserve your creative intent while complying with Marketplace policy that requires all avatars to have dynamic heads.
 
       <BaseAccordion>
       <AccordionSummary>
@@ -185,9 +185,9 @@ To run Avatar Setup:
       </AccordionDetails>
       </BaseAccordion>
 
-   1. If your character includes a [higher-fidelity rig](../art/characters/specifications.md#higher-fidelity-rigs) with additional joints, enable **Create R15 with optional joints**.
+   1. If your character includes a [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) with additional joints, enable **Create R15 with optional joints**.
    1. If you want to manually align the front direction of your character with the negative Z-axis in world space, enable **Manually Align Front**. While auto-setup does this automatically for you, it can sometimes fail to properly determine the front of your character.
-   1. If you want to add a post-processing step to significantly improve the alignment of your character's head cage with the head model and its facial features, enable **Improve facial caging**. This is particularly important if you plan on using [makeup](../makeup/index.md) with your character.
+   1. If you want to add a post-processing step to significantly improve the alignment of your character's head cage with the head model and its facial features, enable **Improve facial caging**. This is particularly important if you plan on using [makeup](../avatar/makeup/index.md) with your character.
    1. If you are importing a development avatar and want to skip the auto-decimation of input meshes with resolution above the triangle budgets required for the Marketplace, disable **Reduce triangle count**.
 
       <img src="../assets/avatar/avatar-setup/Gear-Icon.png" width="50%" alt="" />
@@ -232,7 +232,7 @@ If you notice any areas on your character's body that don't interact with clothi
 </TabItem>
 <TabItem key = "3" label="Accessories">
 
-The **Accessories** tab lets you try on various accessories on your character to see if your character's [attachment points](../art/accessories/specifications.md#attachment-points) work properly on different areas of the character's body, such as the front, back, or shoulder of the character.
+The **Accessories** tab lets you try on various accessories on your character to see if your character's [attachment points](../avatar/rigid-accessories/index.md#attachments) work properly on different areas of the character's body, such as the front, back, or shoulder of the character.
 
 If you notice any areas on your character's body that don't interact with accessories as expected, you can either use Avatar Setup's [Attachment Tool](#attachment-tool) to adjust your character's attachment points until accessories attach properly.
 
@@ -274,14 +274,14 @@ The **Body** tab lets you change your character's skin tone and swap heads to te
 </TabItem>
 <TabItem key = "3" label="Makeup">
 
-The **Makeup** tab lets you test [makeup](../makeup/index.md) on your character's face. You can either test entire makeup looks or individual makeup components in various combinations.
+The **Makeup** tab lets you test [makeup](../avatar/makeup/index.md) on your character's face. You can either test entire makeup looks or individual makeup components in various combinations.
 
 If you want to upload your makeup as an entire look, click on the [Save](#publish-to-the-marketplace) navigation, then select **Create Makeup Look**.
 
 </TabItem>
 <TabItem key = "4" label="Accessories">
 
-The **Accessories** tab lets you try on accessories on your character to see if your character's [attachment points](../art/accessories/specifications.md#attachment-points) work properly for hair, head, and face avatar accessories.
+The **Accessories** tab lets you try on accessories on your character to see if your character's [attachment points](../avatar/rigid-accessories/index.md#attachments) work properly for hair, head, and face avatar accessories.
 
 If you notice any areas on your character's body that don't interact with accessories as expected, you can either use Avatar Setup's [Attachment Tool](#attachment-tool) to adjust your character's attachment points until accessories attach properly.
 

@@ -42,7 +42,7 @@ Use the 3D Importer to import a character model, then use the Adaptive Animation
 
 ### Assign joints
 
-The Adaptive Animation system requires at least 15 of your character's joints to map to Roblox's [standardized 15 joints skeleton](../art/characters/specifications.md). While the automated import process attempts to make this assignment automatically, you can verify and reassign joints by using the joint assignment tool.
+The Adaptive Animation system requires at least 15 of your character's joints to map to Roblox's [standardized 15 joints skeleton](../avatar/character-bodies/specifications.md). While the automated import process attempts to make this assignment automatically, you can verify and reassign joints by using the joint assignment tool.
 
 When you select your model's `Class.HumanoidRigDescription` or `Class.DigitsRigDescription` objects, the joint assignment tool's **visual picker** displays in the top right of the 3D viewport with a view of the standard Roblox skeleton. To assign joints, you can either click the joints in the 3D viewport or visual picker, then click the corresponding joint in the other view. When a joint is assigned, the joint icon **turns orange** in both the 3D viewport and the visual picker.
 

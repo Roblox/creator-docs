@@ -99,9 +99,9 @@ Similar to the previous file setup section, it's important to consider Blender a
 Avatar items, or other assets using specialized components, require unique export settings. See the following links for additional information:
 
 <ul>
-<li>For rigid accessories, see [accessory specifications](../art/accessories/specifications.md) and [accessory export settings](../art/accessories/export-settings.md).</li> <br />
-<li>For layered accessories, see [layered accessory specifications](../art/accessories/clothing-specifications.md) and [layered export settings](../art/accessories/clothing-export-settings.md).</li> <br />
-<li>For avatar characters, see [avatar specifications](../art/characters/specifications.md) and [avatar export settings](../art/characters/export-settings.md).</li>
+<li>For rigid accessories, see [accessory specifications](../avatar/rigid-accessories/specifications.md) and [accessory export settings](../avatar/rigid-accessories/export.md).</li> <br />
+<li>For layered accessories, see [layered accessory specifications](../avatar/layered-accessories/index.md) and [layered export settings](../avatar/layered-accessories/export.md).</li> <br />
+<li>For avatar characters, see [avatar specifications](../avatar/character-bodies/specifications.md) and [avatar export settings](../avatar/character-bodies/export.md).</li>
 </ul>
 </Alert>
 

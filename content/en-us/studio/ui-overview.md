@@ -39,7 +39,7 @@ The **Home** tab contains the core [transform](../parts/index.md#transform-parts
 The **Model** tab contains the core [transform](../parts/index.md#transform-parts) tools, the [pivot](../studio/pivot-tools.md) and [align](../studio/align-tool.md) tools, insertion widgets for [effects](../effects/index.md) and [constraints](../physics/index.md#constraints), and [solid‑modeling](../parts/solid-modeling.md) tools.
 </TabItem>
 <TabItem label="Avatar">
-The **Avatar** tab contains the core [transform](../parts/index.md#transform-parts) tools, as well as specialized tools for building default rigs, configuring [avatars](../avatar-setup/index.md), working with [animations](../animation/index.md), and [creating/fitting accessories](../art/accessories/accessory-fitting-tool.md).
+The **Avatar** tab contains the core [transform](../parts/index.md#transform-parts) tools, as well as specialized tools for building default rigs, configuring [avatars](../avatar-setup/index.md), working with [animations](../animation/index.md), and [creating/fitting accessories](../avatar/accessory-fitting-tool.md).
 </TabItem>
 <TabItem label="UI">
 The **UI** tab contains insertion widgets for [UI objects](../ui/index.md#ui-objects) and lets you access the [Style&nbsp;Editor](../ui/styling/editor.md), a comprehensive tool that allows you to create, manage, and apply UI styles.

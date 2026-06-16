@@ -100,7 +100,7 @@ description: "A simple t-shirt is the easiest example of how to create an avatar
 video: "https://www.youtube-nocookie.com/embed/r_unfGZT5Ps",
 links: [
 { text: "Watch how to do it", href: "https://youtu.be/r_unfGZT5Ps" },
-{ text: "Guides", href: "../art/classic-clothing" }
+{ text: "Guides", href: "../avatar/classic-clothing" }
 ]
 },
 {

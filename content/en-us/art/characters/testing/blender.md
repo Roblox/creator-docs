@@ -30,7 +30,7 @@ Use the following steps to help verify the integrity of your facial animation da
       2. In templates and some reference models, this bone is commonly named `DynamicHead` and indicates the beginning of the facial animation rig.
 
    2. There should be about the same number of custom properties as unique animation frames, with each animation pose having its own mapped custom property.
-   3. The names for the mapped poses here should match the spelling and capitalization of the [FACS pose reference](../../../art/characters/facial-animation/facs-poses-reference.md).
+   3. The names for the mapped poses here should match the spelling and capitalization of the [FACS pose reference](../../../avatar/dynamic-heads/facs-poses-reference.md).
 
    <video controls src="../../../assets/art/avatar/basic-creation/Testing_01.mp4" width="100%"></video>
 
@@ -73,7 +73,7 @@ If you are using a template, it's possible the skinning data was affected by a d
 
 ## Technical specifications
 
-Your avatar components should match the requirements provided in the [avatar specifications](../../../art/characters/specifications.md). When using templates and following appropriate non-destructive modeling practices, most of these components should not be touched, but you should still double-check that each component is compliant with the technical requirements.
+Your avatar components should match the requirements provided in the [avatar specifications](../../../avatar/character-bodies/specifications.md). When using templates and following appropriate non-destructive modeling practices, most of these components should not be touched, but you should still double-check that each component is compliant with the technical requirements.
 
 <Alert severity = 'success'>
 If you are using Roblox character templates and are ready to export into Studio, see [Exporting instructions](../../../art/characters/creating/export-textures.md) for specific export instructions for template files.

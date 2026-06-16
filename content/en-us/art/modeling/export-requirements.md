@@ -10,9 +10,9 @@ Check that your model meets Roblox's [modeling specifications](../../art/modelin
 <Alert severity = 'warning'>
 <AlertTitle>If creating other types of 3D models:</AlertTitle>
 <ul>
-<li>For rigid accessories, see [accessory specifications](../../art/accessories/specifications.md) and [accessory export settings](../accessories/export-settings.md).</li> <br />
-<li>For layered accessories, see [layered accessory specifications](../accessories/clothing-specifications.md) and [layered export settings](../accessories/clothing-export-settings.md).</li> <br />
-<li>For avatar characters, see [avatar specifications](../../art/characters/specifications.md) and [avatar export settings](../characters/export-settings.md).</li>
+<li>For rigid accessories, see [accessory specifications](../../avatar/rigid-accessories/specifications.md) and [accessory export settings](../../avatar/rigid-accessories/export.md).</li> <br />
+<li>For layered accessories, see [layered accessory specifications](../../avatar/layered-accessories/specifications.md) and [layered export settings](../../avatar/layered-accessories/export.md).</li> <br />
+<li>For avatar characters, see [avatar specifications](../../avatar/character-bodies/specifications.md) and [avatar export settings](../../avatar/character-bodies/export.md).</li>
 </ul>
 </Alert>
 
@@ -36,7 +36,7 @@ To export the `.fbx` file in Blender:
 
    <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-3.png" width="320" alt="Blender export sidebar showing Transform Scale set to .01"/>
 
-6. Unless exporting content with animation keyframes, such as a walk cycle or a character with [facial animation data](../../art/characters/facial-animation/index.md), disable **Bake Animation**.
+6. Unless exporting content with animation keyframes, such as a walk cycle or a character with [facial animation data](../../avatar/dynamic-heads/index.md), disable **Bake Animation**.
 
    <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-4.png" width="320" alt="Blender export sidebar showing Add Leaf Bones as unchecked"/> <br />
 

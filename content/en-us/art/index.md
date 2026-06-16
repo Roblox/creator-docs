@@ -293,9 +293,9 @@ The following is a list of common 3D art resources ordered by subject, as well a
 
 <a href="./modeling/export-requirements.md"><Typography variant='body1' style={{marginBottom: 12}}>Blender and Maya .FBX export settings</Typography></a>
 <a href="./modeling/specifications.md"><Typography variant='body1' style={{marginBottom: 12}}>General mesh specifications</Typography></a>
-<a href="./accessories/specifications.md"><Typography variant='body1' style={{marginBottom: 12}}>Accessory specifications</Typography></a>
-<a href="./accessories/clothing-specifications.md"><Typography variant='body1' style={{marginBottom: 12}}>Clothing specifications</Typography></a>
-<a href="./characters/specifications.md"><Typography variant='body1' style={{marginBottom: 12}}>Avatar character specifications</Typography></a>
+<a href="../avatar/rigid-accessories/specifications.md"><Typography variant='body1' style={{marginBottom: 12}}>Accessory specifications</Typography></a>
+<a href="../avatar/layered-accessories/specifications.md"><Typography variant='body1' style={{marginBottom: 12}}>Clothing specifications</Typography></a>
+<a href="../avatar/character-bodies/specifications.md"><Typography variant='body1' style={{marginBottom: 12}}>Avatar character specifications</Typography></a>
 <a href="../marketplace/marketplace-policy.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace policy</Typography></a>
 
 </Grid>
@@ -333,7 +333,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 
 <a href="../studio/importer.md"><Typography variant='body1' style={{marginBottom: 12}}>Importer</Typography></a>
 
-<a href="./accessories/accessory-fitting-tool.md"><Typography variant='body1' style={{marginBottom: 12}}>Accessory Fitting Tool</Typography></a>
+<a href="../avatar/accessory-fitting-tool.md"><Typography variant='body1' style={{marginBottom: 12}}>Accessory Fitting Tool</Typography></a>
 
 <a href="../animation/editor.md"><Typography variant='body1' style={{marginBottom: 12}}>Animation Editor</Typography></a>
 
@@ -378,9 +378,9 @@ The following is a list of common 3D art resources ordered by subject, as well a
 <Typography variant='h5'>Avatar item creation</Typography>
 
 <a href="../avatar/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Avatar overview</Typography></a>
-<a href="./accessories/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Accessories overview</Typography></a>
-<a href="./accessories/layered-clothing.md"><Typography variant='body1' style={{marginBottom: 12}}>Clothing overview</Typography></a>
-<a href="./characters/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Character bodies overview</Typography></a>
+<a href="../avatar/rigid-accessories/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Accessories overview</Typography></a>
+<a href="../avatar/layered-accessories/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Clothing overview</Typography></a>
+<a href="../avatar/character-bodies/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Character bodies overview</Typography></a>
 <a href="../marketplace/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace overview</Typography></a>
 
 </Grid>
@@ -406,7 +406,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 
 <a href="./characters/facial-animation/create-basic-heads.md"><Typography variant='body1' style={{marginBottom: 12}}>Basic head creation</Typography></a>
 <a href="./characters/facial-animation/create-face-accessories.md"><Typography variant='body1' style={{marginBottom: 12}}>Create face accessories</Typography></a>
-<a href="./characters/facial-animation/facs-poses-reference.md"><Typography variant='body1' style={{marginBottom: 12}}>FACS pose references</Typography></a>
+<a href="../avatar/dynamic-heads/facs-poses-reference.md"><Typography variant='body1' style={{marginBottom: 12}}>FACS pose references</Typography></a>
 
 </Grid>
 </Grid>
@@ -417,11 +417,11 @@ The following is a list of common 3D art resources ordered by subject, as well a
 <Typography variant='h5'>Rigging and skinning</Typography>
 
 <a href="./modeling/rigging.md"><Typography variant='body1' style={{marginBottom: 12}}>Rigging and skinning overview</Typography></a>
-<a href="./characters/specifications.md#rigging"><Typography variant='body1' style={{marginBottom: 12}}>Avatar rig requirements</Typography></a>
+<a href="../avatar/character-bodies/specifications.md#rigging"><Typography variant='body1' style={{marginBottom: 12}}>Avatar rig requirements</Typography></a>
 <a href="./modeling/rig-a-simple-mesh.md"><Typography variant='body1' style={{marginBottom: 12}}>Rig basic meshes</Typography></a>
 <a href="./characters/facial-animation/create-basic-heads.md#rigging"><Typography variant='body1' style={{marginBottom: 12}}>Rig facial bones</Typography></a>
 <a href="./characters/facial-animation/create-basic-heads.md#skin-face-bones"><Typography variant='body1' style={{marginBottom: 12}}>Skin facial bones</Typography></a>
-<a href="./accessories/automatic-skinning-transfer.md"><Typography variant='body1' style={{marginBottom: 12}}>Auto skin transfer</Typography></a>
+<a href="../avatar/automatic-skinning-transfer.md"><Typography variant='body1' style={{marginBottom: 12}}>Auto skin transfer</Typography></a>
 
 </Grid>
 </Grid>

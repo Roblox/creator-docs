@@ -17,7 +17,7 @@ The following downloadable files are available for your use:
 
 ### Higher-fidelity rigs
 
-The following [higher-fidelity](../art/characters/specifications.md#higher-fidelity-rigs) humanoid rigs include additional bones or joints for a higher level of realism with articulated hands, shoulders, and spine movements.
+The following [higher-fidelity](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) humanoid rigs include additional bones or joints for a higher level of realism with articulated hands, shoulders, and spine movements.
 
 <Grid container alignItems='stretch' style={{margin: -6}}>
 
@@ -106,7 +106,7 @@ A comprehensive `.zip` folder of an avatar-ready character body, including a dyn
 
 ### Standard rigs
 
-The following [standard](../art/characters/specifications.md#standard-rigs) humanoid rigs include the standard amount of bones or joints. Finished assets like Nature Girl and Stylish Male include clothing and accessory items that may cause validation errors unless they are removed.
+The following [standard](../avatar/character-bodies/specifications.md#standard-rigs) humanoid rigs include the standard amount of bones or joints. Finished assets like Nature Girl and Stylish Male include clothing and accessory items that may cause validation errors unless they are removed.
 
 <Grid container alignItems='stretch' style={{margin: -6}}>
 
@@ -228,7 +228,7 @@ A Blocky character model with an animatable head and a full body cage.
 <center> <img src="../assets/art/resources/Lola-Resource.png" width="100%" /> </center>
 </figure>
 <figure>
-A skinned R15 character created from the <a href="../art/modeling/skin-a-humanoid-model.md">Skinning a Humanoid Model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../art/characters/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.
+A skinned R15 character created from the <a href="../art/modeling/skin-a-humanoid-model.md">Skinning a Humanoid Model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../avatar/character-bodies/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.
 </figure>
 <br />
 
@@ -455,7 +455,7 @@ These assets are not meant for direct upload into Studio and may fail import or 
 <center> <img src="../assets/art/resources/Body-Scale-Classic.png" width="100%" /> </center>
 </figure>
 <figure>
-A blank mannequin using Roblox's [Classic](../art/characters/specifications.md#classic) avatar proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
+A blank mannequin using Roblox's [Classic](../avatar/character-bodies/specifications.md#classic) avatar proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
 </figure>
 </CardContent>
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
@@ -476,7 +476,7 @@ A blank mannequin using Roblox's [Classic](../art/characters/specifications.md#c
 <center> <img src="../assets/art/resources/Body-Scale-Rthro-Normal.png" width="100%" /> </center>
 </figure>
 <figure>
-A blank mannequin using Roblox's [Rthro Normal](../art/characters/specifications.md#normal) avatar proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
+A blank mannequin using Roblox's [Rthro Normal](../avatar/character-bodies/specifications.md#normal) avatar proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
 </figure>
 </CardContent>
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
@@ -497,7 +497,7 @@ A blank mannequin using Roblox's [Rthro Normal](../art/characters/specifications
 <center> <img src="../assets/art/resources/Body-Scale-Rthro-Slender.png" width="100%" /> </center>
 </figure>
 <figure>
-A blank mannequin using Roblox's [Rthro Slender](../art/characters/specifications.md#slender) proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
+A blank mannequin using Roblox's [Rthro Slender](../avatar/character-bodies/specifications.md#slender) proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
 </figure>
 </CardContent>
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
@@ -521,7 +521,7 @@ If you are using Roblox's avatar template files, you must perform the [cleanup s
 </Alert>
 
 <Alert severity = 'warning'>
-Some of the template files include additional mesh assets for eyebrows and eyelashes. These eyebrows and eyelashes versions may not be fully compatible with the template body. For the latest information on eyebrows and eyelashes, see [Makeup](../makeup/index.md#components-of-makeup).
+Some of the template files include additional mesh assets for eyebrows and eyelashes. These eyebrows and eyelashes versions may not be fully compatible with the template body. For the latest information on eyebrows and eyelashes, see [Makeup](../avatar/makeup/index.md#components-of-makeup).
 </Alert>
 
 <Grid container style={{margin: -6}}>

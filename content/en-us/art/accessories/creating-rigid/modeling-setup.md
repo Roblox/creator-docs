@@ -12,7 +12,7 @@ prev: /art/accessories/creating-rigid/
 The following instructions are based off of the [Box Modeling 101 staff article](https://devforum.roblox.com/t/modeling-101-in-blender-box-modeling/2963814). The original article includes additional information, as well as Blender setup instructions, best practices, and advanced modeling examples that are not included in this accessory tutorial.
 
 <Alert severity = 'warning'>
-Whether you are using an existing shape or creating your own 3D object, it's important to consider [technical requirements](../../../art/accessories/specifications.md), such as keeping your geometry within a polycount budget, and [policy requirements](../../../marketplace/marketplace-policy.md), such as ensuring your design does not infringe on other creator's IP both within and outside of the Roblox ecosystem.
+Whether you are using an existing shape or creating your own 3D object, it's important to consider [technical requirements](../../../avatar/rigid-accessories/specifications.md), such as keeping your geometry within a polycount budget, and [policy requirements](../../../marketplace/marketplace-policy.md), such as ensuring your design does not infringe on other creator's IP both within and outside of the Roblox ecosystem.
 </Alert>
 
 ## General shape

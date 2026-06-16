@@ -4,7 +4,7 @@ comments:
 description: Verify the important aspects of your character model in a custom Studio test experience.
 ---
 
-Test your character model in Studio to understand how it looks and feels within a Roblox experience. To test your custom character in Studio, first [import the character model](../../characters/import.md) into your Studio project.
+Test your character model in Studio to understand how it looks and feels within a Roblox experience. To test your custom character in Studio, first [import the character model](../../../avatar/character-bodies/import.md) into your Studio project.
 
 You can test in Studio using the [Avatar Setup](../../../avatar-setup/) tool to preview and test various components of your avatar character.
 
@@ -46,7 +46,7 @@ After you open the test experience in Studio, import your custom character model
 
       <img src="../../../assets/art/avatar/basic-creation/Testing-Rig-Type.png" />
 
-   2. If using the template files, set **Rig Scale** to **Rthro**. Otherwise, use the appropriate rig scale for your [character body type](../../../art/characters/specifications.md#body-scale).
+   2. If using the template files, set **Rig Scale** to **Rthro**. Otherwise, use the appropriate rig scale for your [character body type](../../../avatar/character-bodies/specifications.md#body-scale).
    3. Check for any red errors that may block import into Studio.
    4. Verify any yellow warnings that may indicate a quality issue with your avatar components.
 
@@ -57,7 +57,7 @@ After you open the test experience in Studio, import your custom character model
 4. Click **Import**. The character's model populates into the workspace.
 
   <Alert severity = 'warning'>
-  If an error or warning message displays in the **Output** window, see [Troubleshooting](../../../art/characters/facial-animation/use-heads-in-studio.md#troubleshooting) for guidance on how to handle your specific error or warning message.
+  If an error or warning message displays in the **Output** window, see [Troubleshooting](../../../avatar/dynamic-heads/test.md#troubleshooting) for guidance on how to handle your specific error or warning message.
   </Alert>
 
 ### Add SurfaceAppearance

@@ -83,7 +83,7 @@ To import the mesh into Studio:
    - The character has all joint and bone hierarchy and all meshes.
    - Meshes are all under 10,000 triangles for each part of the mesh.
    - Mesh total size isn't over 2000 units in any axis.
-   - See [Mesh Requirements](../../art/characters/specifications.md) for a complete list of model specifications.
+   - See [Mesh Requirements](../../avatar/character-bodies/specifications.md) for a complete list of model specifications.
 
    <img
    alt="Creature in DCC Tool"

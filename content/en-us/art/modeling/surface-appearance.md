@@ -22,7 +22,7 @@ import BetaAlert from '../../includes/beta-features/beta-alert.md'
 </TabItem>
 </Tabs>
 
-Various applications and workflows are available for creating PBR textures. You can use these during the modeling and texturing phases of custom 3D object creation, provided that Roblox Studio [supports](../../art/characters/specifications.md#textures) the specific texture maps you're using.
+Various applications and workflows are available for creating PBR textures. You can use these during the modeling and texturing phases of custom 3D object creation, provided that Roblox Studio [supports](../../avatar/character-bodies/specifications.md#textures) the specific texture maps you're using.
 
 <Alert severity = 'info'>
 For information on how to properly connect PBR textures to your model in Blender and Maya for import into Studio, see [Blender / Maya texture settings](./assign-textures.md).
@@ -204,7 +204,7 @@ The following example uses the `Enum.AlphaMode.Overlay|Overlay` mode for custom 
 </figure>
 </GridContainer>
 
-See [custom skin tone](../../art/characters/specifications.md#custom-skin-tone) for additional details on optimizing an overlay for skin and similar applications.
+See [custom skin tone](../../avatar/character-bodies/specifications.md#custom-skin-tone) for additional details on optimizing an overlay for skin and similar applications.
 
 ##### Transparency
 

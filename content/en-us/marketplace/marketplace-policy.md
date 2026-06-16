@@ -114,7 +114,7 @@ Whether or not you are the original creator of the asset, you must ensure that y
 
 ## Accessory and clothing guidelines
 
-Submissions of accessory and clothing items to the Marketplace must follow additional guidelines, along with the [general guidelines](#general-creation-guidelines), [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and respective technical specifications for [Accessory](../art/accessories/specifications.md) or [Clothing](../art/accessories/clothing-specifications.md) items.
+Submissions of accessory and clothing items to the Marketplace must follow additional guidelines, along with the [general guidelines](#general-creation-guidelines), [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and respective technical specifications for [rigid accessories](../avatar/rigid-accessories/specifications.md) or [layered accessories](../avatar/layered-accessories/specifications.md) items.
 
 ### Miscategorization
 
@@ -137,7 +137,7 @@ Additional categorization information:
 
 ## Avatar body guidelines
 
-Submissions of avatar bodies to the Marketplace must follow additional guidelines, along with the [general guidelines](#general-creation-guidelines), [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and [Avatar technical specifications](../art/characters/specifications.md).
+Submissions of avatar bodies to the Marketplace must follow additional guidelines, along with the [general guidelines](#general-creation-guidelines), [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and [Avatar technical specifications](../avatar/character-bodies/specifications.md).
 
 ### Body part requirements
 
@@ -151,7 +151,7 @@ Each body can only include the following parts, and cannot have additional appen
   - 1 left leg, comprising of an upper leg, a lower leg, and a foot.
 - Heads
   - Head model
-    - All heads must be [caged](../art/characters/head-specifications.md#head-cage)
+    - All heads must be [caged](../avatar/dynamic-heads/specifications.md#head-cage)
       - The cage mesh must envelope the head model
     - All heads must have one mouth region
       - The mouth region on the head is determined by the projection of the cage mouth region onto the head model
@@ -162,13 +162,13 @@ Each body can only include the following parts, and cannot have additional appen
       - A one-eyed head has both the left and right eye regions on the cage projected onto the same region on the head model
       - The cage eye region is defined by the cage vertices forming the outline of the cage eyes
       - The head eye region does not need to have an eyeball or eyelid; it must deform in response to eye blink animations
-    - All heads must include the [17 minimum FACS controls](../art/characters/head-specifications.md#facs-animation)
+    - All heads must include the [17 minimum FACS controls](../avatar/dynamic-heads/specifications.md#facs-animation)
       - Specifically we require the head to deform in response to happiness and sadness expressions
       - It's recommended to include more poses to increase facial animation quality and fidelity
   - Eyebrows (optional)
   - Eyelashes (optional)
 
-Avatars must adhere to the [appropriate size requirements](../art/characters/specifications.md#body-scale) and cannot have any invisible or non-rendering body parts. See [Avatar character specifications](../art/characters/specifications.md) for more information.
+Avatars must adhere to the [appropriate size requirements](../avatar/character-bodies/specifications.md#body-scale) and cannot have any invisible or non-rendering body parts. See [Avatar character specifications](../avatar/character-bodies/specifications.md) for more information.
 
 Roblox moderates avatars that do not follow the body part requirements under the [Misusing Roblox Systems Community Standard](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Rules).
 
@@ -606,4 +606,4 @@ Your avatar head cannot include any additional color, shading, or outlining not 
 
 ### Customizable skin tones
 
-Roblox recommends including customizable skin tones, or skin tone mutability, for avatars that resemble humans. Skin tone mutability is optional. Similarly, for avatars created through formal brand partnerships, skin tone mutability is optional. For more information on creating customizable skin tone textures, see [Custom Skin Tone](../art/characters/specifications.md#custom-skin-tone).
+Roblox recommends including customizable skin tones, or skin tone mutability, for avatars that resemble humans. Skin tone mutability is optional. Similarly, for avatars created through formal brand partnerships, skin tone mutability is optional. For more information on creating customizable skin tone textures, see [Custom Skin Tone](../avatar/character-bodies/specifications.md#custom-skin-tone).

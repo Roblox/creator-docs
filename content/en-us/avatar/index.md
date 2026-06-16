@@ -16,7 +16,7 @@ title: "Design a 2D classic shirt",
 description: "Use an image editor of your choice and create your first basic 2D cosmetic.",
 video: "https://www.youtube-nocookie.com/embed/r_unfGZT5Ps",
 links: [
-{ text: "Learn more", href: "../art/classic-clothing.md" }
+{ text: "Learn more", href: "../avatar/classic-clothing.md" }
 ]
 },
 {
@@ -34,7 +34,7 @@ title: "Make 3D layered clothing",
 description: "Use your 3D modeling skills and Roblox Studio to create clothing that stretches, fits, and layers.",
 video:"https://www.youtube-nocookie.com/embed/C-DwGRBHvmE",
 links: [
-{ text: "Guides and tutorials", href: "../art/accessories/layered-clothing.md" },
+{ text: "Guides and tutorials", href: "../avatar/layered-accessories/" },
 { text: "Get Blender", href: "https://www.blender.org" },
 { text: "Get Studio", href: "./studio/setup/" }
 ]
@@ -87,7 +87,7 @@ title: "Roblox Studio",
 description: "Use native tools in Roblox Studio to quickly convert your custom models into Roblox-ready accessories. Studio is your portal to getting your 3D assets into the Roblox ecosystem.",
 links: [
 { text: "Get Studio", href: "./studio/setup/" },
-{ text: "Accessory Fitting Tool", href: "../art/accessories/accessory-fitting-tool.md" },
+{ text: "Accessory Fitting Tool", href: "../avatar/accessory-fitting-tool.md" },
 { text: "Avatar Setup", href: "./avatar-setup/" }
 ]
 },
@@ -142,8 +142,8 @@ title: "Create more complex items",
 description: "Create even more advanced avatar items, like advanced clothing, bodies, heads, and more.",
 video: "https://www.youtube-nocookie.com/embed/NHgYM78afqc",
 links: [
-{ text: "Clothing guides", href: "../art/accessories/layered-clothing.md" },
-{ text: "Character bodies", href: "./art/characters/"},
+{ text: "Clothing guides", href: "../avatar/layered-accessories/" },
+{ text: "Character bodies", href: "./avatar/character-bodies/"},
 { text: "Animateable heads", href: "../art/characters/facial-animation.md" }
 ]
 },

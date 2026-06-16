@@ -3,7 +3,7 @@ title: Merch Booth
 description: The Merch Booth module lets you sell avatar assets, passes, and products directly in an experience.
 ---
 
-The **MerchBooth** [developer module](../../resources/modules/index.md) lets you offer [avatar assets](../../art/accessories/index.md), [passes](../../production/monetization/passes.md), and [developer products](../../production/monetization/developer-products.md) for sale directly within your experience. Players can browse items, preview assets on their own avatar, purchase items, and instantly use or equip them&nbsp;— all without leaving your experience. This can help you [monetize](../../production/monetization/index.md) your experience and gain revenue through the 40% affiliate fee associated with selling other creators' items.
+The **MerchBooth** [developer module](../../resources/modules/index.md) lets you offer [avatar assets](../../avatar/rigid-accessories/index.md), [passes](../../production/monetization/passes.md), and [developer products](../../production/monetization/developer-products.md) for sale directly within your experience. Players can browse items, preview assets on their own avatar, purchase items, and instantly use or equip them&nbsp;— all without leaving your experience. This can help you [monetize](../../production/monetization/index.md) your experience and gain revenue through the 40% affiliate fee associated with selling other creators' items.
 
 <video src="../../assets/developer-modules/merch-booth/Showcase.mp4" controls width="100%"></video>
 
@@ -65,7 +65,7 @@ What's a merch booth without merch? The following sections outline how to add [a
 
 #### Avatar assets
 
-Items such as [clothing and accessories](../../art/accessories/index.md) must be added through their **asset&nbsp;ID** located on the item's detail page in the [Avatar Shop](https://www.roblox.com/catalog).
+Items such as [clothing and accessories](../../avatar/rigid-accessories/index.md) must be added through their **asset&nbsp;ID** located on the item's detail page in the [Avatar Shop](https://www.roblox.com/catalog).
 
 1. Create a `Class.Script` within **ServerScriptService** and paste in the following code.
 
