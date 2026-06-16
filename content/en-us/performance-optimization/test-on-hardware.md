@@ -68,6 +68,10 @@ Once your experience is live, use the [Performance Dashboard](./monitor.md) to t
 
 Performance numbers don't tell the full story. An experience can hit 60 FPS on a device and still feel broken if touch targets are too small or UI is unreadable. For comprehensive cross-platform UI guidance, see [Cross-platform development](../projects/cross-platform.md).
 
+<Alert severity="info">
+Windows handhelds like the ROG Xbox Ally offer a lot of utility in user experience testing. In addition to built-in controllers, these devices generally have touchscreens and support input from a mouse and keyboard (most useful when connected to an external display). Windows handhelds tend to have dramatically faster hardware than a midrange phone, though, so they're less valuable for performance testing.
+</Alert>
+
 #### Touch targets and gestures
 
 Test on actual phone screens, not just emulated resolutions. Buttons that seem comfortably sized on a desktop monitor can be frustratingly small on a 5-inch display. Confirm that:
