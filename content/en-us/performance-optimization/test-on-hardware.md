@@ -18,7 +18,7 @@ Studio runs the client and server together on your development machine, which is
 
 ## Popular devices in the player base
 
-The majority of Roblox players are on lower-spec mobile devices, with some exceptions for specific genres or competitive games. Understanding the device landscape helps you prioritize what to test, and you can use the [Performance Dashboard](Performance Dashboard) to get more accurate metrics of your player base.
+The majority of Roblox players are on lower-spec mobile devices, with some exceptions for specific genres or competitive games. Understanding the device landscape helps you prioritize what to test, and you can use the [Performance Dashboard](../production/analytics/performance.md) to get more accurate metrics of your player base.
 
 It's important to remember that Roblox is inherently cross-play and that device demographics change across different countries, age groups, genres, and more. To reach the widest audience, your experience needs to perform well across the full range of devices.
 

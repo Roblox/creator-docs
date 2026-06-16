@@ -137,7 +137,13 @@ In the server authority model, the client and the server must both run the core 
 
 <img src="../../assets/studio/explorer/ReplicatedStorage-Server-Authority.png" width="320" alt="Server authority setup" />
 
-```lua title="Simulation (ModuleScript)"
+During a resimulation, Roblox will re-run the functions bound to the simulation via `Class.RunService:BindToSimulation()|BindToSimulation()`. Processing player inputs, interacting with synchronized physics objects, and updating the core experience state should live inside those bound functions.
+
+<Tabs>
+<TabItem label="Simulation">
+`Class.ModuleScript` named `Simulation` in `Class.ReplicatedStorage`:
+
+```lua title="Simulation"
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
 
@@ -153,19 +159,30 @@ end
 return Simulation
 ```
 
-```lua title="ServerLoader (Server Script)"
+</TabItem>
+<TabItem label="ServerLoader">
+
+`Class.Script` named `ServerLoader` as child of the `Simulation` `Class.ModuleScript`:
+
+```lua title="ServerLoader"
 local Simulation = require(script.Parent)
 
 Simulation:Initialize()
 ```
 
-```lua title="ClientLoader (Client Script)"
+</TabItem>
+<TabItem label="ClientLoader">
+
+`Class.LocalScript` named `ClientLoader` as child of the `Simulation` `Class.ModuleScript`:
+
+```lua title="ClientLoader"
 local Simulation = require(script.Parent)
 
 Simulation:Initialize()
 ```
 
-During a resimulation, Roblox will re-run the functions bound to the simulation via `Class.RunService:BindToSimulation()|BindToSimulation()`. Processing player inputs, interacting with synchronized physics objects, and updating the core experience state should live inside those bound functions.
+</TabItem>
+</Tabs>
 
 ### State sync with attributes
 

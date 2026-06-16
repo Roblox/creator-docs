@@ -12144,7 +12144,12 @@
                   },
                   "isRegionalPricingEnabled": {
                     "type": "boolean",
-                    "description": "Whether regional pricing should be enabled for the developer product.",
+                    "description": "Whether regional pricing should be enabled for the developer product.\r\nShould not be used when setting isManagedPricingEnabled.",
+                    "nullable": true
+                  },
+                  "isManagedPricingEnabled": {
+                    "type": "boolean",
+                    "description": "Whether managed pricing should be enabled for the developer product.",
                     "nullable": true
                   }
                 }
@@ -12166,6 +12171,9 @@
                   "style": "form"
                 },
                 "isRegionalPricingEnabled": {
+                  "style": "form"
+                },
+                "isManagedPricingEnabled": {
                   "style": "form"
                 }
               }
@@ -12445,12 +12453,17 @@
                   },
                   "isRegionalPricingEnabled": {
                     "type": "boolean",
-                    "description": "Whether regional pricing should be enabled for the developer product.",
+                    "description": "Whether regional pricing should be enabled for the developer product.\r\nShould not be used when setting isManagedPricingEnabled.",
                     "nullable": true
                   },
                   "storePageEnabled": {
                     "type": "boolean",
                     "description": "Whether the developer product should be available for purchase on the external store page.",
+                    "nullable": true
+                  },
+                  "isManagedPricingEnabled": {
+                    "type": "boolean",
+                    "description": "Whether managed pricing should be enabled for the developer product.",
                     "nullable": true
                   }
                 }
@@ -12475,6 +12488,9 @@
                   "style": "form"
                 },
                 "storePageEnabled": {
+                  "style": "form"
+                },
+                "isManagedPricingEnabled": {
                   "style": "form"
                 }
               }
@@ -12732,6 +12748,11 @@
                     "type": "boolean",
                     "description": "Whether regional pricing should be enabled for the game pass.",
                     "nullable": true
+                  },
+                  "isManagedPricingEnabled": {
+                    "type": "boolean",
+                    "description": "Whether managed pricing should be enabled for the game pass.",
+                    "nullable": true
                   }
                 }
               },
@@ -12752,6 +12773,9 @@
                   "style": "form"
                 },
                 "isRegionalPricingEnabled": {
+                  "style": "form"
+                },
+                "isManagedPricingEnabled": {
                   "style": "form"
                 }
               }
@@ -13014,6 +13038,12 @@
                   },
                   "file": {
                     "type": "string",
+                    "description": "The thumbnail image file to be uploaded. Alias for imageFile - if both are provided, imageFile will be used.",
+                    "format": "binary",
+                    "nullable": true
+                  },
+                  "imageFile": {
+                    "type": "string",
                     "description": "The thumbnail image file to be uploaded.",
                     "format": "binary",
                     "nullable": true
@@ -13033,6 +13063,11 @@
                     "type": "boolean",
                     "description": "Whether regional pricing should be enabled for the game pass.",
                     "nullable": true
+                  },
+                  "isManagedPricingEnabled": {
+                    "type": "boolean",
+                    "description": "Whether managed pricing should be enabled for the game pass.",
+                    "nullable": true
                   }
                 }
               },
@@ -13046,6 +13081,9 @@
                 "file": {
                   "style": "form"
                 },
+                "imageFile": {
+                  "style": "form"
+                },
                 "isForSale": {
                   "style": "form"
                 },
@@ -13053,6 +13091,9 @@
                   "style": "form"
                 },
                 "isRegionalPricingEnabled": {
+                  "style": "form"
+                },
+                "isManagedPricingEnabled": {
                   "style": "form"
                 }
               }
@@ -23109,46 +23150,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/CreateSaveRequest"
-                  }
-                ],
-                "description": "Request model for creating a save",
-                "nullable": true
+                "$ref": "#/components/schemas/CreateSaveRequest"
               }
             },
             "application/json": {
               "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/CreateSaveRequest"
-                  }
-                ],
-                "description": "Request model for creating a save",
-                "nullable": true
+                "$ref": "#/components/schemas/CreateSaveRequest"
               }
             },
             "text/json": {
               "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/CreateSaveRequest"
-                  }
-                ],
-                "description": "Request model for creating a save",
-                "nullable": true
+                "$ref": "#/components/schemas/CreateSaveRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/CreateSaveRequest"
-                  }
-                ],
-                "description": "Request model for creating a save",
-                "nullable": true
+                "$ref": "#/components/schemas/CreateSaveRequest"
               }
             }
           }
@@ -23257,46 +23274,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/BulkDeleteSavesRequest"
-                  }
-                ],
-                "description": "Request model for bulk deleting saves",
-                "nullable": true
+                "$ref": "#/components/schemas/BulkDeleteSavesRequest"
               }
             },
             "application/json": {
               "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/BulkDeleteSavesRequest"
-                  }
-                ],
-                "description": "Request model for bulk deleting saves",
-                "nullable": true
+                "$ref": "#/components/schemas/BulkDeleteSavesRequest"
               }
             },
             "text/json": {
               "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/BulkDeleteSavesRequest"
-                  }
-                ],
-                "description": "Request model for bulk deleting saves",
-                "nullable": true
+                "$ref": "#/components/schemas/BulkDeleteSavesRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/BulkDeleteSavesRequest"
-                  }
-                ],
-                "description": "Request model for bulk deleting saves",
-                "nullable": true
+                "$ref": "#/components/schemas/BulkDeleteSavesRequest"
               }
             }
           }
@@ -23947,46 +23940,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/SearchCreatorStoreAssetsRequest"
-                  }
-                ],
-                "description": "Request model for searching Creator Store assets.",
-                "nullable": true
+                "$ref": "#/components/schemas/SearchCreatorStoreAssetsRequest"
               }
             },
             "application/json": {
               "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/SearchCreatorStoreAssetsRequest"
-                  }
-                ],
-                "description": "Request model for searching Creator Store assets.",
-                "nullable": true
+                "$ref": "#/components/schemas/SearchCreatorStoreAssetsRequest"
               }
             },
             "text/json": {
               "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/SearchCreatorStoreAssetsRequest"
-                  }
-                ],
-                "description": "Request model for searching Creator Store assets.",
-                "nullable": true
+                "$ref": "#/components/schemas/SearchCreatorStoreAssetsRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/SearchCreatorStoreAssetsRequest"
-                  }
-                ],
-                "description": "Request model for searching Creator Store assets.",
-                "nullable": true
+                "$ref": "#/components/schemas/SearchCreatorStoreAssetsRequest"
               }
             }
           }
@@ -24182,6 +24151,370 @@
         },
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/places#Places_CreatePlaceVersionApiKey"
+        }
+      }
+    },
+    "/v1/account-creation/metadata": {
+      "get": {
+        "tags": ["Accounts"],
+        "summary": "Get metadata for adding auth methods.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.AuthMethodsMetadataResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.AuthMethodsMetadataResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_account_creation_metadata"
+        }
+      }
+    },
+    "/v1/account/pin": {
+      "delete": {
+        "tags": ["Accounts"],
+        "summary": "Request for deletes the account pin from the account.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.AccountPinRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.AccountPinRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiSuccessResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiSuccessResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_delete_v1_account_pin"
+        }
+      },
+      "get": {
+        "tags": ["Accounts"],
+        "summary": "Gets the account pin status.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.AccountPinStatusResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.AccountPinStatusResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_account_pin"
+        }
+      },
+      "patch": {
+        "tags": ["Accounts"],
+        "summary": "Request made to update the account pin on the account.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.AccountPinRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.AccountPinRequest"
+              }
+            }
+          },
+          "description": "The request body.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiSuccessResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiSuccessResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_patch_v1_account_pin"
+        }
+      },
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Request to create the account pin.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.AccountPinRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.AccountPinRequest"
+              }
+            }
+          },
+          "description": "The Roblox.Authentication.Api.Models.AccountPinRequest.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiSuccessResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiSuccessResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_account_pin"
+        }
+      }
+    },
+    "/v1/account/pin/lock": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Request to locks the account which has an account pin enabled.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiSuccessResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiSuccessResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_account_pin_lock"
+        }
+      }
+    },
+    "/v1/account/pin/unlock": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Requests to unlock the account pin.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.AccountPinRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.AccountPinRequest"
+              }
+            }
+          },
+          "description": "The Roblox.Authentication.Api.Models.AccountPinRequest containing the entered pin.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.AccountPinResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.AccountPinResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_account_pin_unlock"
         }
       }
     },
@@ -25898,6 +26231,48 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/assets#publish_post_v1_audio_verify"
         }
+      }
+    },
+    "/v1/auth/metadata": {
+      "get": {
+        "tags": ["Accounts", "Metadata"],
+        "summary": "Gets Auth meta data",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.AuthMetaDataResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.AuthMetaDataResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_auth_metadata"
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://auth.roblox.com/v2/auth/metadata",
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v2_auth_metadata"
+          }
+        ]
       }
     },
     "/v1/auto-localization-table/games/{gameId}/assets-generation-request": {
@@ -29021,6 +29396,49 @@
         }
       }
     },
+    "/v1/client-assertion": {
+      "get": {
+        "tags": ["Accounts"],
+        "summary": "Creates a client assertion to be used when generating an auth ticket.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.GetClientAssertionResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.GetClientAssertionResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_client_assertion"
+        }
+      }
+    },
     "/v1/client-version/{binaryType}": {
       "get": {
         "tags": ["Metadata"],
@@ -30874,6 +31292,345 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#accountsettings_get_v1_emails"
+        }
+      }
+    },
+    "/v1/external/access": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Signs a user up for Roblox and links the account to the authenticated external provider ID.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.ExternalAccessRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.ExternalAccessRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.ExternalIdentityGateway.ExternalIdentityAccessResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_external_access"
+        }
+      }
+    },
+    "/v1/external/login": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Logs in a user to Roblox based on the user's authenticated external provider session",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.ExternalLoginRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.ExternalLoginRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.ExternalIdentityGateway.ExternalLoginResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "30: Platform is not supported for SSO login."
+          },
+          "401": {
+            "description": "31: No linked account found for SSO login."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          },
+          "500": {
+            "description": "0: An unexpected error occurred."
+          },
+          "501": {
+            "description": "0: An unexpected error occurred."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_external_login"
+        }
+      }
+    },
+    "/v1/external/loginAndLink": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Deprecated endpoint\r\nLogins in a user to Roblox, then links the Roblox account to the external provider ID",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.ExternalLoginAndLinkRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.ExternalLoginAndLinkRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.LoginResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_external_loginAndLink"
+        }
+      }
+    },
+    "/v1/external/signup": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Signs a user up for Roblox and links the account to the authenticated external provider ID",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.ExternalSignupRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.ExternalSignupRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_external_signup"
+        }
+      }
+    },
+    "/v1/external/unlink": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Unlink the logged in Roblox account from the current external provider ID",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.ExternalUnlinkRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.ExternalUnlinkRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_external_unlink"
+        }
+      }
+    },
+    "/v1/external/{identityProviderId}/sso/oauth/callback": {
+      "get": {
+        "tags": ["Accounts"],
+        "summary": "Callback function that external identity provider calls post user authentication.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "identityProviderId",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "query",
+            "name": "code",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "state",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "302": {
+            "description": "Redirect"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_external__identityProviderId__sso_oauth_callback"
+        }
+      }
+    },
+    "/v1/external/{identityProviderId}/sso/oauth/init": {
+      "get": {
+        "tags": ["Accounts"],
+        "summary": "Signs a user up for Roblox and links the account to the authenticated external provider ID.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "identityProviderId",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "302": {
+            "description": "Redirect"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_external__identityProviderId__sso_oauth_init"
         }
       }
     },
@@ -41482,6 +42239,121 @@
         }
       }
     },
+    "/v1/identity-verification/login": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Endpoint for login with identity verification",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.IdentityVerificationLoginRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.IdentityVerificationLoginRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n1: Invalid login ticket.\r\n2: Invalid result token.\r\n3: Invalid user.\r\n4: Authentication failure."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_identity_verification_login"
+        }
+      }
+    },
+    "/v1/identity/initialize-login": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Initiates identifier-first login flow by returning a list of login methods for user(s).",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.InitializeLoginRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.InitializeLoginRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.InitializeLoginResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.InitializeLoginResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "3: User identifier and type are required."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n2: Invalid user identifier.\r\n4: No login methods available. Please use account recovery."
+          },
+          "500": {
+            "description": "0: An unknown error occurred."
+          },
+          "503": {
+            "description": "1: This feature is disabled."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_identity_initialize_login"
+        }
+      }
+    },
     "/v1/installer-cdns": {
       "get": {
         "tags": ["Metadata"],
@@ -42688,6 +43560,272 @@
         }
       }
     },
+    "/v1/login": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Authenticates a user.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.LoginRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.LoginRequest"
+              }
+            }
+          },
+          "description": "Roblox.Authentication.Api.Models.LoginRequest.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.LoginResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.LoginResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "0: An unexpected error occurred.\r\n3: Username and Password are required. Please try again.\r\n8: Login with received credential type is not supported."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n1: Incorrect username or password. Please try again.\r\n2: You must pass the robot test before logging in.\r\n4: Account has been locked. Please request a password reset.\r\n5: Unable to login. Please use Social Network sign on.\r\n6: Account issue. Please contact Support.\r\n9: Unable to login with provided credentials. Default login is required.\r\n10: Received credentials are unverified.\r\n12: Existing login session found. Please log out first.\r\n14: The account is unable to log in. Please log in to the LuoBu app.\r\n15: Too many attempts. Please wait a bit.\r\n27: The account is unable to login. Please log in with the VNG app."
+          },
+          "429": {
+            "description": "7: Too many attempts. Please wait a bit."
+          },
+          "503": {
+            "description": "11: Service unavailable. Please try again."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_login"
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://auth.roblox.com/v2/login",
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_login"
+          }
+        ]
+      }
+    },
+    "/v1/login/linked": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Endpoint for logging in a user, specifically for linked\r\nauthentication on PCGDK",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.LoginRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.LoginRequest"
+              }
+            }
+          },
+          "description": "Roblox.Authentication.Api.Models.LoginRequest",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.LoginResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.LoginResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "0: An unexpected error occurred.\r\n3: Username and Password are required. Please try again.\r\n8: Login with received credential type is not supported."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n1: Incorrect username or password. Please try again.\r\n2: You must pass the robot test before logging in.\r\n4: Account has been locked. Please request a password reset.\r\n5: Unable to login. Please use Social Network sign on.\r\n6: Account issue. Please contact Support.\r\n9: Unable to login with provided credentials. Default login is required.\r\n10: Received credentials are unverified.\r\n12: Existing login session found. Please log out first.\r\n14: The account is unable to log in. Please log in to the LuoBu app.\r\n15: Too many attempts. Please wait a bit.\r\n27: The account is unable to login. Please log in with the VNG app."
+          },
+          "429": {
+            "description": "7: Too many attempts. Please wait a bit."
+          },
+          "503": {
+            "description": "11: Service unavailable. Please try again."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_login_linked"
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://auth.roblox.com/v2/login/linked",
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_login_linked"
+          }
+        ]
+      }
+    },
+    "/v1/logout": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Destroys the current authentication session.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_logout"
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://auth.roblox.com/v3/logout",
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v3_logout"
+          }
+        ]
+      }
+    },
+    "/v1/logoutfromallsessionsandreauthenticate": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Logs out user from all other sessions.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.LogoutFromAllSessionsAndReauthenticateRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.LogoutFromAllSessionsAndReauthenticateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_logoutfromallsessionsandreauthenticate"
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://auth.roblox.com/v2/logoutfromallsessionsandreauthenticate",
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_logoutfromallsessionsandreauthenticate"
+          }
+        ]
+      }
+    },
     "/v1/marAssetHash/{marAssetHash}/marCheckSum/{marCheckSum}": {
       "get": {
         "tags": ["Assets"],
@@ -43273,6 +44411,48 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#accountinformation_get_v1_metadata"
         }
+      }
+    },
+    "/v1/metadata#AuthenticationApi": {
+      "get": {
+        "tags": ["Accounts", "Metadata"],
+        "summary": "Get the metadata",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.MetadataResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.MetadataResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_metadata"
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://auth.roblox.com/v2/metadata",
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v2_metadata"
+          }
+        ]
       }
     },
     "/v1/metadata#FriendsApi": {
@@ -44169,6 +45349,738 @@
             "url": "https://catalog.roblox.com/v1/bundles/{bundleId}/details",
             "httpMethod": "GET",
             "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/assets#catalog_get_v1_bundles__bundleId__details"
+          }
+        ]
+      }
+    },
+    "/v1/passkey/DeleteCredentialBatch": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Disables a batch of credentials for the specified user.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.DeletePasskeysRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.DeletePasskeysRequest"
+              }
+            }
+          },
+          "description": "The request body!:DisableTwoStepVerificationRequest.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request.\r\n0: An unknown error occurred with the request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          },
+          "503": {
+            "description": "2: Feature disabled."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_DeleteCredentialBatch"
+        }
+      }
+    },
+    "/v1/passkey/FinishRegistration": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Complete Passkey registration by providing credential creation options.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.FinishPasskeyRegistrationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.FinishPasskeyRegistrationRequest"
+              }
+            }
+          },
+          "description": "The request body.Roblox.Authentication.Api.Models.Request.FinishPasskeyRegistrationRequest.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "0: An unknown error occurred with the request.\r\n3: Invalid security key nickname."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request.\r\n0: An unknown error occurred with the request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n3: Invalid security key nickname."
+          },
+          "503": {
+            "description": "2: Feature disabled."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_FinishRegistration"
+        }
+      }
+    },
+    "/v1/passkey/ListCredentials": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "List a user's registered passkeys.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.ListPasskeysRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.ListPasskeysRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.ListPasskeyCredentialResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.ListPasskeyCredentialResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request.\r\n0: An unknown error occurred with the request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          },
+          "503": {
+            "description": "2: Feature disabled."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_ListCredentials"
+        }
+      }
+    },
+    "/v1/passkey/StartAuthentication": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Provides a challenge for the Passkey to authenticate.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.StartAuthenticationResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.StartAuthenticationResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          },
+          "503": {
+            "description": "2: Feature disabled."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_StartAuthentication"
+        }
+      }
+    },
+    "/v1/passkey/StartRegistration": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Initiates Passkey registration by providing credential creation options.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "flow",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.StartPasskeyRegistrationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.StartPasskeyRegistrationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.StartPasskeyRegistrationResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.StartPasskeyRegistrationResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request.\r\n0: An unknown error occurred with the request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n1: Reached limit of pass keys registered."
+          },
+          "503": {
+            "description": "2: Feature disabled."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_StartRegistration"
+        }
+      }
+    },
+    "/v1/passkey/finish-ar-preauth-registration": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Finishes account recovery pre-auth passkey registration by validating the recovery session,\r\ndeactivating the user's password, and completing passkey registration.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.FinishARPreAuthPasskeyRegistrationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.FinishARPreAuthPasskeyRegistrationRequest"
+              }
+            }
+          },
+          "description": "The request body containing recovery session and passkey details.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "0: An unknown error occurred with the request."
+          },
+          "401": {
+            "description": "0: An unknown error occurred with the request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n1: Reached limit of pass keys registered."
+          },
+          "500": {
+            "description": "0: An unknown error occurred with the request."
+          },
+          "503": {
+            "description": "2: Feature disabled."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_finish_ar_preauth_registration"
+        }
+      }
+    },
+    "/v1/passkey/finish-preauth-registration": {
+      "post": {
+        "tags": ["Accounts"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.FinishPasskeyPreauthRegistrationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.FinishPasskeyPreauthRegistrationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "0: An unknown error occurred with the request."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request.\r\n0: An unknown error occurred with the request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n1: Reached limit of pass keys registered."
+          },
+          "500": {
+            "description": "0: An unknown error occurred with the request."
+          },
+          "503": {
+            "description": "2: Feature disabled."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_finish_preauth_registration"
+        }
+      }
+    },
+    "/v1/passkey/start-authentication-by-user": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Initializes passkey authentication for the user(s) corresponding to the identifier provided.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.StartAuthenticationByUserRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.StartAuthenticationByUserRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.StartAuthenticationByUserResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.StartAuthenticationByUserResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "5: User identifier and type are required.\r\n6: Multi-user passkey authentication is not supported for this credential type."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n4: No passkeys registered for any users found."
+          },
+          "503": {
+            "description": "2: Feature disabled."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_start_authentication_by_user"
+        }
+      }
+    },
+    "/v1/passkey/start-preauth-registration": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Initiates  Passkey preauthenticated registration by providing credential creation options.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.StartPasskeyPreauthRegistrationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.StartPasskeyPreauthRegistrationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.StartPasskeyPreauthRegistrationResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.StartPasskeyPreauthRegistrationResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          },
+          "503": {
+            "description": "2: Feature disabled."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_start_preauth_registration"
+        }
+      }
+    },
+    "/v1/passkey/su-eligibility": {
+      "get": {
+        "tags": ["Accounts"],
+        "summary": "Checks whether the authenticated user is eligible for silent passkey upgrade.\r\nRoute and response are intentionally obfuscated (\"su-eligibility\" = \"silent-upgrade-eligibility\").",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.SilentUpgradeEligibilityResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.SilentUpgradeEligibilityResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request.\r\n0: An unknown error occurred with the request."
+          },
+          "503": {
+            "description": "2: Feature disabled."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_passkey_su_eligibility"
+        }
+      }
+    },
+    "/v1/passwords/validate": {
+      "get": {
+        "tags": ["Accounts"],
+        "summary": "Endpoint for checking if a password is valid.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Username",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Password",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.PasswordValidationResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.PasswordValidationResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "1: Valid Username and Password are required. Please try again."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_passwords_validate"
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://auth.roblox.com/v2/passwords/validate",
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v2_passwords_validate"
+          }
+        ]
+      },
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Endpoint for checking if a password is valid.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.PasswordValidationModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.PasswordValidationModel"
+              }
+            }
+          },
+          "description": "The Roblox.Authentication.Api.Models.PasswordValidationModel.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.PasswordValidationResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.PasswordValidationResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "1: Valid Username and Password are required. Please try again."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passwords_validate"
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://auth.roblox.com/v2/passwords/validate",
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_passwords_validate"
           }
         ]
       }
@@ -45352,6 +47264,51 @@
         }
       }
     },
+    "/v1/recovery/metadata": {
+      "get": {
+        "tags": ["Accounts", "Metadata"],
+        "summary": "Get metadata for forgot endpoints",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RecoveryMetadataResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RecoveryMetadataResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "7: The Roblox WeChat API is currently unavailable."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_recovery_metadata"
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://auth.roblox.com/v2/recovery/metadata",
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v2_recovery_metadata"
+          }
+        ]
+      }
+    },
     "/v1/resize/{hash}/{width}/{height}/{type}/{format}/{filterType}": {
       "get": {
         "tags": ["Thumbnails"],
@@ -45440,6 +47397,189 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnails#thumbnailsresizer_get_v1_resize__hash___width___height___type___format___filterType_"
         }
+      }
+    },
+    "/v1/revert/account": {
+      "get": {
+        "tags": ["Accounts"],
+        "summary": "Get Revert Account ticket info",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ticket",
+            "description": "Ticket Guid to revert account.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RevertAccountInfoResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RevertAccountInfoResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "2: The account revert ticket is not valid"
+          },
+          "403": {
+            "description": "13: Revert links are disabled for users in the Enhanced Protection Program."
+          },
+          "503": {
+            "description": "1: This feature is disabled"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_revert_account"
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://auth.roblox.com/v2/revert/account",
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v2_revert_account"
+          }
+        ]
+      },
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Submit Revert Account Request",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RevertAccountSubmitRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RevertAccountSubmitRequest"
+              }
+            }
+          },
+          "description": "The Roblox.Authentication.Api.Models.RevertAccountSubmitRequest containing the necessary information to revert account.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.LoginResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.LoginResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "2: The account revert ticket is not valid\r\n3: Password is not valid\r\n4: Passwords do not match\r\n5: Password cannot be used\r\n8: The account security ticket is expired."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          },
+          "503": {
+            "description": "0: Unknown\r\n1: This feature is disabled"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_revert_account"
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://auth.roblox.com/v2/revert/account",
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_revert_account"
+          }
+        ]
+      }
+    },
+    "/v1/revert/invalidate-tickets": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Invalidates all account security tickets for the authenticated user.\r\nThis endpoint should be called before enrolling in EPP to ensure old revert links cannot be used.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          },
+          "503": {
+            "description": "1: This feature is disabled"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_revert_invalidate_tickets"
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://auth.roblox.com/v2/revert/invalidate-tickets",
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_revert_invalidate_tickets"
+          }
+        ]
       }
     },
     "/v1/roles": {
@@ -45588,6 +47728,303 @@
         "security": [{}],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnails#thumbnailsresizer_get_v1_secureresize__thumbPrint___hash___width___height___type___format___filterType_"
+        }
+      }
+    },
+    "/v1/session/refresh": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Logs out user from the current session and create a new one.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_session_refresh"
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://auth.roblox.com/v2/session/refresh",
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_session_refresh"
+          }
+        ]
+      }
+    },
+    "/v1/signup": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Endpoint for signing up a new user",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/Roblox.Authentication.Api.Models.SignupRequest"
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.SignupResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.SignupResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request\r\n16: User agreement ids are null.\r\n21: Empty account switch blob required"
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n2: Captcha Failed.\r\n4: Invalid Birthday.\r\n5: Invalid Username.\r\n6: Username already taken.\r\n7: Invalid Password.\r\n8: Password and Username are same.\r\n9: Password is too simple.\r\n10: Email is invalid.\r\n11: Asset is invalid.\r\n12: Too many attempts. Please wait a bit.\r\n17: One time Passcode session was not valid\r\n22: Maximum logged in accounts limit reached."
+          },
+          "429": {
+            "description": "3: Too many attempts. Please wait a bit."
+          },
+          "500": {
+            "description": "Internal server error\r\n15: Insert acceptances failed.\r\n27: Pre-auth passkey registration failed"
+          },
+          "503": {
+            "description": "Service unavailable"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_signup"
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://auth.roblox.com/v2/signup",
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_signup"
+          }
+        ]
+      }
+    },
+    "/v1/signup/linked": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Endpoint for signing up a new user, specifically for linked\r\nauthentication on PCGDK",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/Roblox.Authentication.Api.Models.SignupRequest"
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.SignupResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.SignupResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request\r\n16: User agreement ids are null.\r\n21: Empty account switch blob required"
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n2: Captcha Failed.\r\n4: Invalid Birthday.\r\n5: Invalid Username.\r\n6: Username already taken.\r\n7: Invalid Password.\r\n8: Password and Username are same.\r\n9: Password is too simple.\r\n10: Email is invalid.\r\n11: Asset is invalid.\r\n12: Too many attempts. Please wait a bit.\r\n17: One time Passcode session was not valid\r\n22: Maximum logged in accounts limit reached."
+          },
+          "429": {
+            "description": "3: Too many attempts. Please wait a bit."
+          },
+          "500": {
+            "description": "Internal server error\r\n15: Insert acceptances failed.\r\n27: Pre-auth passkey registration failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_signup_linked"
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://auth.roblox.com/v2/signup/linked",
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_signup_linked"
+          }
+        ]
+      }
+    },
+    "/v1/social/connected-providers": {
+      "get": {
+        "tags": ["Accounts"],
+        "summary": "Get social network user information if the given social auth method is connected to current user.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.SocialProvidersResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.SocialProvidersResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_social_connected_providers"
+        }
+      }
+    },
+    "/v1/social/{provider}/disconnect": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Removes the given social authentication method from current Roblox user if it is connected.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "provider",
+            "description": "The social authentication provider, e.g. Facebook",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.SocialAuthenticationDisconnectRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.SocialAuthenticationDisconnectRequest"
+              }
+            }
+          },
+          "description": "The request body for additional parameters that may be required for disconnect",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request\r\n2: Unsupported social provider type."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "Forbidden\r\n0: Token Validation Failed\r\n3: Cannot disconnect the only authentication method. Password on account is required.\r\n4: The password provided is invalid."
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_social__provider__disconnect"
         }
       }
     },
@@ -49947,6 +52384,75 @@
         }
       }
     },
+    "/v1/user/passwords/change": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Changes the password for the authenticated user.",
+        "description": "The current password is needed for verification that the password can be changed.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.PasswordChangeModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.PasswordChangeModel"
+              }
+            }
+          },
+          "description": "The request model including the current password, and the new password.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Roblox.Web.Authentication.Passwords.PasswordResponseCodes.InvalidCurrentPassword\r\n            OR\r\n            Roblox.Web.Authentication.Passwords.PasswordResponseCodes.InvalidPassword"
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "Roblox.Web.Authentication.Passwords.PasswordResponseCodes.PinLocked\r\n0: Token Validation Failed"
+          },
+          "429": {
+            "description": "Roblox.Web.Authentication.Passwords.PasswordResponseCodes.Flooded"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_user_passwords_change"
+        }
+      }
+    },
     "/v1/user/tag": {
       "post": {
         "tags": ["Users"],
@@ -50231,6 +52737,230 @@
         }
       }
     },
+    "/v1/username": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Change the user's username",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.UsernameChangeRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.UsernameChangeRequest"
+              }
+            }
+          },
+          "description": "The Roblox.Authentication.Api.Models.UsernameChangeRequest",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "5: You don't have enough Robux to change your username.\r\n10: This username is already in use\r\n11: Username not appropriate for Roblox\r\n12: Usernames can be 3 to 20 characters long\r\n13: Usernames can’t start or end with _ and can have at most one _\r\n14: Only a-z, A-Z, 0-9, and _ are allowed\r\n15: Username is null\r\n16: Username might contain private information\r\n17: This username is not available\r\n18: Username is same as current"
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n1: PIN is locked.\r\n2: A verified email is missing\r\n3: Your password is incorrect.\r\n100: Unknown birthday"
+          },
+          "500": {
+            "description": "0: An unknown error occured.\r\n5: You don't have enough Robux to change your username."
+          },
+          "503": {
+            "description": "4: The feature is currently not available. Please try again later."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_username"
+        }
+      }
+    },
+    "/v1/username/change/price": {
+      "get": {
+        "tags": ["Accounts"],
+        "summary": "Get the current price for a username change",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.UsernameChangePriceResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.UsernameChangePriceResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_username_change_price"
+        }
+      }
+    },
+    "/v1/usernames": {
+      "get": {
+        "tags": ["Accounts"],
+        "summary": "Gets a list of existing usernames on Roblox based on the query parameters",
+        "description": "This endpoint can be expanded in the future to include other query parameters such as \"startsWith\"",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "username",
+            "description": "The username",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.UsernamesResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.UsernamesResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_usernames"
+        }
+      }
+    },
+    "/v1/usernames/recover": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Sends an email of all accounts belonging to an email",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RecoverUsernameRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RecoverUsernameRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RecoverUsernameResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RecoverUsernameResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "20: Invalid Email\r\n21: Invalid Phone\r\n23: No Account Found"
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n11: Too many attempts. Please wait a bit."
+          },
+          "500": {
+            "description": "0: An unexpected error occurred."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_usernames_recover"
+        }
+      }
+    },
     "/v1/usernames/users": {
       "post": {
         "tags": ["Users"],
@@ -50288,6 +53018,133 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/users#users_post_v1_usernames_users"
+        }
+      }
+    },
+    "/v1/usernames/validate": {
+      "get": {
+        "tags": ["Accounts"],
+        "summary": "Checks if a username is valid.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Username",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Birthday",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Context",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "enum": [0, 1, 2]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.UsernameValidationResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.UsernameValidationResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "1: A valid username is required.\r\n2: A valid birthday or authenticated user is required."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_usernames_validate"
+        }
+      },
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Checks if a username is valid.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.UsernameValidationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.UsernameValidationRequest"
+              }
+            }
+          },
+          "description": "The Roblox.Authentication.Api.Models.UsernameValidationRequest.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.UsernameValidationResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.UsernameValidationResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "1: A valid username is required.\r\n2: A valid birthday or authenticated user is required."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_usernames_validate"
         }
       }
     },
@@ -56362,6 +59219,261 @@
         }
       }
     },
+    "/v1/validators/email": {
+      "get": {
+        "tags": ["Accounts"],
+        "summary": "Tries to check if an email is valid",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Email",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.EmailValidationResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.EmailValidationResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_validators_email"
+        }
+      }
+    },
+    "/v1/validators/recommendedUsernameFromDisplayName": {
+      "get": {
+        "tags": ["Accounts"],
+        "summary": "Validates the given display name, and if valid, will convert it to a valid username and return suggested username(s) if available.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "DisplayName",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "BirthDay",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RecommendedUsernameResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RecommendedUsernameResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_validators_recommendedUsernameFromDisplayName"
+        }
+      },
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Validates the given display name, and if valid, will convert it to a valid username and return suggested username(s) if available.\r\n            \r\nThis is a POST request and explicitly does not receive the parameter values from the query",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RecommendedUsernameFromDisplayNameRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RecommendedUsernameFromDisplayNameRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RecommendedUsernameResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RecommendedUsernameResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_validators_recommendedUsernameFromDisplayName"
+        }
+      }
+    },
+    "/v1/validators/username": {
+      "get": {
+        "tags": ["Accounts"],
+        "summary": "Tries to get a valid username if the current username is taken",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Username",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "BirthDay",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RecommendedUsernameResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RecommendedUsernameResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_validators_username"
+        }
+      },
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Tries to get a valid username if the current username is taken\r\nThis is a POST request and explicitly does not receive the parameter values from the query",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RecommendedUsernameRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RecommendedUsernameRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RecommendedUsernameResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.RecommendedUsernameResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_validators_username"
+        }
+      }
+    },
     "/v1/vip-server/can-invite/{userId}": {
       "get": {
         "tags": ["Private servers", "Users"],
@@ -56740,6 +59852,208 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#PrivateServers_UpdatePrivateServerSubscription"
+        }
+      }
+    },
+    "/v1/xbox/connection": {
+      "get": {
+        "tags": ["Accounts"],
+        "summary": "Check if the current user has an Xbox connected.\r\nAlso returns the gamertag of the Xbox account if connected.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.XboxConnectionModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.XboxConnectionModel"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": ""
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_xbox_connection"
+        }
+      }
+    },
+    "/v1/xbox/disconnect": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Unlink the current ROBLOX account from the Xbox live account.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiSuccessResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiSuccessResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "Forbidden\r\n0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_xbox_disconnect"
+        }
+      }
+    },
+    "/v1/xbox/get-login-consecutive-days": {
+      "get": {
+        "tags": ["Accounts"],
+        "summary": "Get the consecutive days the xbox user has been logged in.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.XboxLoginConsecutiveDaysResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.XboxLoginConsecutiveDaysResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "36: Invalid Xbox Live Account"
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": ""
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_xbox_get_login_consecutive_days"
+        }
+      }
+    },
+    "/v1/xbox/translate": {
+      "post": {
+        "tags": ["Accounts"],
+        "summary": "Translate the xbox user to roblox user.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.XboxTranslateRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.XboxTranslateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.XboxCollectionsOfUserResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.XboxCollectionsOfUserResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "\r\n0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_xbox_translate"
         }
       }
     },
@@ -66924,6 +70238,7 @@
           "iconImageAssetId",
           "isForSale",
           "isImmutable",
+          "isManagedPricingEnabled",
           "name",
           "priceInformation",
           "productId",
@@ -66987,6 +70302,10 @@
             "type": "string",
             "description": "The timestamp when the developer product was last updated.",
             "format": "date-time"
+          },
+          "isManagedPricingEnabled": {
+            "type": "boolean",
+            "description": "Whether managed pricing is enabled for the developer product."
           }
         },
         "additionalProperties": false,
@@ -67111,7 +70430,8 @@
           "Unavailable",
           "InvalidPrice",
           "Blocked",
-          "Conflict"
+          "Conflict",
+          "InvalidManagedPricing"
         ],
         "type": "string",
         "description": "Code representing various error conditions."
@@ -67258,6 +70578,7 @@
           "gamePassId",
           "iconAssetId",
           "isForSale",
+          "isManagedPricingEnabled",
           "name",
           "priceInformation",
           "updatedTimestamp"
@@ -67304,6 +70625,10 @@
             ],
             "description": "The pricing configuration associated with the game pass.",
             "nullable": true
+          },
+          "isManagedPricingEnabled": {
+            "type": "boolean",
+            "description": "Whether managed pricing is enabled for the game pass."
           }
         },
         "additionalProperties": false,
@@ -67333,7 +70658,9 @@
           "PricingConfigError",
           "InvalidCount",
           "Blocked",
-          "InvalidPageSize"
+          "InvalidPageSize",
+          "InvalidRegionalPricing",
+          "InvalidManagedPricing"
         ],
         "type": "string",
         "description": "Code representing various error conditions."
@@ -75684,12 +79011,65 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Authentication.Api.Models.AccountPinRequest": {
+        "type": "object",
+        "properties": {
+          "pin": {
+            "type": "string"
+          },
+          "reauthenticationToken": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.AccountPinResponse": {
+        "type": "object",
+        "properties": {
+          "unlockedUntil": {
+            "format": "double",
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.AccountPinStatusResponse": {
+        "type": "object",
+        "properties": {
+          "isEnabled": {
+            "type": "boolean"
+          },
+          "unlockedUntil": {
+            "format": "double",
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Authentication.Api.Models.AuthMetaDataResponse": {
         "type": "object",
         "properties": {
           "cookieLawNoticeTimeout": {
             "format": "int32",
             "type": "integer"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.AuthMethodsMetadataResponse": {
+        "type": "object",
+        "properties": {
+          "isEligibleForALSignup": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.EmailValidationResponse": {
+        "type": "object",
+        "properties": {
+          "isEmailValid": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -75702,6 +79082,22 @@
           },
           "ticket": {
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.LoginMethodModel": {
+        "type": "object",
+        "properties": {
+          "method": {
+            "format": "int32",
+            "description": " ['EmailOtp' = 0, 'Passkey' = 1, 'Password' = 2]",
+            "enum": [0, 1, 2],
+            "type": "integer"
+          },
+          "priority": {
+            "format": "int32",
+            "type": "integer"
           }
         },
         "additionalProperties": false
@@ -75972,6 +79368,59 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Authentication.Api.Models.ProviderInfoModel": {
+        "type": "object",
+        "properties": {
+          "provider": {
+            "type": "string"
+          },
+          "identifier": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.RecommendedUsernameFromDisplayNameRequest": {
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "type": "string"
+          },
+          "birthday": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.RecommendedUsernameRequest": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string"
+          },
+          "birthday": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.RecommendedUsernameResponse": {
+        "type": "object",
+        "properties": {
+          "didGenerateNewUsername": {
+            "type": "boolean"
+          },
+          "suggestedUsernames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Authentication.Api.Models.RecoverUsernameRequest": {
         "type": "object",
         "properties": {
@@ -76102,6 +79551,186 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Authentication.Api.Models.Request.DeletePasskeysRequest": {
+        "type": "object",
+        "properties": {
+          "credentialNicknames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Request.ExternalAccessRequest": {
+        "type": "object",
+        "properties": {
+          "authenticationProof": {
+            "type": "string"
+          },
+          "identityProviderPlatformType": {
+            "format": "int32",
+            "description": " ['Undefined' = 0, 'Xbox' = 1, 'Playstation' = 2, 'Web' = 3]",
+            "enum": [0, 1, 2, 3],
+            "type": "integer"
+          },
+          "additionalInfoPayload": {
+            "type": "object",
+            "additionalProperties": {}
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Request.ExternalLoginAndLinkRequest": {
+        "type": "object",
+        "properties": {
+          "ctype": {
+            "format": "int32",
+            "description": " ['Email' = 0, 'Username' = 1, 'PhoneNumber' = 2, 'EmailOtpSessionToken' = 3, 'AuthToken' = 4, 'Passkey' = 5, 'AsUser' = 6, 'TwoStepVerification' = 7, 'XboxLive' = 8, 'PlatformLive' = 9]",
+            "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+            "type": "integer"
+          },
+          "cvalue": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "authenticationProof": {
+            "type": "string"
+          },
+          "IdentityProviderPlatformType": {
+            "format": "int32",
+            "description": " ['Undefined' = 0, 'Xbox' = 1, 'Playstation' = 2, 'Web' = 3]",
+            "enum": [0, 1, 2, 3],
+            "type": "integer"
+          },
+          "additionalInfoPayload": {
+            "type": "object",
+            "additionalProperties": {}
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Request.ExternalLoginRequest": {
+        "type": "object",
+        "properties": {
+          "identityProvider": {
+            "format": "int32",
+            "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 999],
+            "type": "integer"
+          },
+          "additionalData": {
+            "type": "object",
+            "additionalProperties": {}
+          },
+          "authenticationProof": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Request.ExternalSignupRequest": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "birthday": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "locale": {
+            "type": "string"
+          },
+          "authenticationProof": {
+            "type": "string"
+          },
+          "IdentityProviderPlatformType": {
+            "format": "int32",
+            "description": " ['Undefined' = 0, 'Xbox' = 1, 'Playstation' = 2, 'Web' = 3]",
+            "enum": [0, 1, 2, 3],
+            "type": "integer"
+          },
+          "additionalInfoPayload": {
+            "type": "object",
+            "additionalProperties": {}
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Request.ExternalUnlinkRequest": {
+        "type": "object",
+        "properties": {
+          "IdentityProviderPlatformType": {
+            "format": "int32",
+            "description": " ['Undefined' = 0, 'Xbox' = 1, 'Playstation' = 2, 'Web' = 3]",
+            "enum": [0, 1, 2, 3],
+            "type": "integer"
+          },
+          "additionalInfoPayload": {
+            "type": "object",
+            "additionalProperties": {}
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Request.FinishARPreAuthPasskeyRegistrationRequest": {
+        "type": "object",
+        "properties": {
+          "recoverySession": {
+            "type": "string"
+          },
+          "passkeySessionId": {
+            "type": "string"
+          },
+          "passkeyRegistrationResponse": {
+            "type": "string"
+          },
+          "userId": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "isPostRecovery": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Request.FinishPasskeyPreauthRegistrationRequest": {
+        "type": "object",
+        "properties": {
+          "sessionId": {
+            "type": "string"
+          },
+          "registrationResponse": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Request.FinishPasskeyRegistrationRequest": {
+        "type": "object",
+        "properties": {
+          "sessionId": {
+            "type": "string"
+          },
+          "credentialNickname": {
+            "type": "string"
+          },
+          "attestationResponse": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Authentication.Api.Models.Request.IdentityVerificationLoginRequest": {
         "type": "object",
         "properties": {
@@ -76110,6 +79739,43 @@
           },
           "resultToken": {
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Request.InitializeLoginRequest": {
+        "required": ["ctype", "cvalue"],
+        "type": "object",
+        "properties": {
+          "ctype": {
+            "format": "int32",
+            "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+            "type": "integer"
+          },
+          "cvalue": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "captchaId": {
+            "type": "string"
+          },
+          "captchaToken": {
+            "type": "string"
+          },
+          "captchaProvider": {
+            "type": "string"
+          },
+          "challengeId": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Request.ListPasskeysRequest": {
+        "type": "object",
+        "properties": {
+          "all": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -76167,6 +79833,164 @@
             "type": "string"
           },
           "serverNonce": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Request.StartAuthenticationByUserRequest": {
+        "required": ["ctype", "cvalue"],
+        "type": "object",
+        "properties": {
+          "ctype": {
+            "format": "int32",
+            "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+            "type": "integer"
+          },
+          "cvalue": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Request.StartPasskeyPreauthRegistrationRequest": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Request.StartPasskeyRegistrationRequest": {
+        "type": "object",
+        "properties": {
+          "isSilentUpgrade": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Response.ExternalIdentityGateway.ExternalIdentityAccessResponse": {
+        "type": "object",
+        "properties": {
+          "placeId": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "isolationContext": {
+            "type": "string"
+          },
+          "launchData": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Response.ExternalIdentityGateway.ExternalLoginResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Response.GetClientAssertionResponse": {
+        "type": "object",
+        "properties": {
+          "clientAssertion": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Response.InitializeLoginResponse": {
+        "type": "object",
+        "properties": {
+          "loginMethods": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.LoginMethodModel"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Response.ListPasskeyCredentialResponse": {
+        "type": "object",
+        "properties": {
+          "credentials": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.PasskeyCredential"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Response.PasskeyCredential": {
+        "type": "object",
+        "properties": {
+          "nickname": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Response.SilentUpgradeEligibilityResponse": {
+        "type": "object",
+        "properties": {
+          "suEligibility": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Response.StartAuthenticationByUserResponse": {
+        "type": "object",
+        "properties": {
+          "authenticationOptions": {
+            "type": "string"
+          },
+          "sessionId": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Response.StartAuthenticationResponse": {
+        "type": "object",
+        "properties": {
+          "authenticationOptions": {
+            "type": "string"
+          },
+          "sessionId": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Response.StartPasskeyPreauthRegistrationResponse": {
+        "type": "object",
+        "properties": {
+          "creationOptions": {
+            "type": "string"
+          },
+          "sessionId": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Response.StartPasskeyRegistrationResponse": {
+        "type": "object",
+        "properties": {
+          "creationOptions": {
+            "type": "string"
+          },
+          "sessionId": {
             "type": "string"
           }
         },
@@ -76400,6 +80224,27 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Authentication.Api.Models.SocialAuthenticationDisconnectRequest": {
+        "type": "object",
+        "properties": {
+          "Password": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.SocialProvidersResponse": {
+        "type": "object",
+        "properties": {
+          "providers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.ProviderInfoModel"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Authentication.Api.Models.TwoStepVerificationSentResponse": {
         "type": "object",
         "properties": {
@@ -76494,6 +80339,68 @@
             "items": {
               "type": "string"
             }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.XboxCollectionsOfUserResponse": {
+        "type": "object",
+        "properties": {
+          "Users": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.XboxUserModel"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.XboxConnectionModel": {
+        "type": "object",
+        "properties": {
+          "hasConnectedXboxAccount": {
+            "type": "boolean"
+          },
+          "gamertag": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.XboxLoginConsecutiveDaysResponse": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "format": "int32",
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.XboxTranslateRequest": {
+        "type": "object",
+        "properties": {
+          "ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.XboxUserModel": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string"
+          },
+          "UserId": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "Username": {
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -88390,6 +92297,15 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Web.WebAPI.Models.ApiSuccessResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "RobuxRateBreakdown": {
         "type": "object",
         "properties": {
@@ -91468,7 +95384,67 @@
           "accountsettings_post_v1_trade_privacy",
           "accountsettings_get_v1_trade_value",
           "accountsettings_post_v1_trade_value",
+          "auth_delete_v1_account_pin",
+          "auth_get_v1_account_pin",
+          "auth_patch_v1_account_pin",
+          "auth_post_v1_account_pin",
+          "auth_post_v1_account_pin_lock",
+          "auth_post_v1_account_pin_unlock",
+          "auth_get_v1_auth_metadata",
+          "auth_get_v1_client_assertion",
+          "auth_get_v1_external__identityProviderId__sso_oauth_callback",
+          "auth_get_v1_external__identityProviderId__sso_oauth_init",
+          "auth_post_v1_external_access",
+          "auth_post_v1_external_login",
+          "auth_post_v1_external_loginAndLink",
+          "auth_post_v1_external_signup",
+          "auth_post_v1_external_unlink",
+          "auth_post_v1_identity_verification_login",
+          "auth_post_v1_identity_initialize_login",
+          "auth_post_v1_login",
+          "auth_post_v1_login_linked",
+          "auth_post_v1_logout",
+          "auth_post_v1_logoutfromallsessionsandreauthenticate",
+          "auth_get_v1_metadata",
+          "auth_post_v1_passkey_DeleteCredentialBatch",
+          "auth_post_v1_passkey_finish_preauth_registration",
+          "auth_post_v1_passkey_FinishRegistration",
+          "auth_post_v1_passkey_ListCredentials",
+          "auth_post_v1_passkey_start_authentication_by_user",
+          "auth_post_v1_passkey_start_preauth_registration",
+          "auth_post_v1_passkey_finish_ar_preauth_registration",
+          "auth_post_v1_passkey_StartAuthentication",
+          "auth_post_v1_passkey_StartRegistration",
+          "auth_get_v1_passwords_validate",
+          "auth_post_v1_passwords_validate",
+          "auth_get_v1_recovery_metadata",
+          "auth_get_v1_revert_account",
+          "auth_post_v1_revert_account",
           "auth_post_v2_revert_invalidate_tickets",
+          "auth_post_v1_revert_invalidate_tickets",
+          "auth_post_v1_session_refresh",
+          "auth_post_v1_signup",
+          "auth_post_v1_signup_linked",
+          "auth_post_v1_social__provider__disconnect",
+          "auth_get_v1_social_connected_providers",
+          "auth_post_v1_user_passwords_change",
+          "auth_post_v1_username",
+          "auth_get_v1_usernames",
+          "auth_post_v1_usernames_recover",
+          "auth_get_v1_usernames_validate",
+          "auth_post_v1_usernames_validate",
+          "auth_get_v1_validators_email",
+          "auth_get_v1_validators_recommendedUsernameFromDisplayName",
+          "auth_post_v1_validators_recommendedUsernameFromDisplayName",
+          "auth_get_v1_validators_username",
+          "auth_post_v1_validators_username",
+          "auth_get_v1_xbox_connection",
+          "auth_post_v1_xbox_disconnect",
+          "auth_get_v1_xbox_get_login_consecutive_days",
+          "auth_get_v1_username_change_price",
+          "auth_get_v1_account_creation_metadata",
+          "auth_get_v1_passkey_su_eligibility",
+          "auth_post_v1_xbox_translate",
           "auth_get_v2_auth_metadata",
           "auth_post_v2_identity_verification_login",
           "auth_post_v2_login",
@@ -92378,6 +96354,9 @@
           "get_legacy_localization_tables_v1_localization_table_limits",
           "localizationtables_get_v1_localization_table_limits",
           "accountinformation_get_v1_metadata",
+          "auth_get_v1_auth_metadata",
+          "auth_get_v1_metadata",
+          "auth_get_v1_recovery_metadata",
           "auth_get_v2_auth_metadata",
           "auth_get_v2_metadata",
           "auth_get_v2_passwords_reset",
