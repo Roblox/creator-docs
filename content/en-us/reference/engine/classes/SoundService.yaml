@@ -207,6 +207,94 @@ properties:
       can_save: true
     capabilities:
       - Audio
+  - name: SoundService.ListenerCFrame
+    summary: |
+      The `Datatype.CFrame` that is used as the listener's position if
+      `Class.SoundService.ListenerType|ListenerType` is set to
+      `Enum.ListenerType.CFrame`.
+    description: |
+      This property is only functional when
+      `Class.SoundService.ListenerType|ListenerType` is set to
+      `Enum.ListenerType.CFrame`. In that scenario, this property determines the
+      world space position from which 3D `Class.Sound|Sounds` are heard by the
+      player.
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Listening
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+  - name: SoundService.ListenerObject
+    summary: |
+      The `Class.Instance` whose translation or coordinate frame is used as the
+      listener's position if `Class.SoundService.ListenerType|ListenerType` is
+      set to `Enum.ListenerType.ObjectPosition` or
+      `Enum.ListenerType.ObjectCFrame`.
+    description: |
+      This property is only functional when
+      `Class.SoundService.ListenerType|ListenerType` is set to
+      `Enum.ListenerType.ObjectPosition` or `Enum.ListenerType.ObjectCFrame`. In
+      that scenario, this property determines which `Class.Instance` will be
+      used to determine the position from which 3D `Class.Sound|Sounds` are
+      heard by the player. This property can only be set to
+      `Class.Instance|Instances` with a position, such as a `Class.BasePart` or
+      an `Class.Attachment`. If it is set to `nil`, 3D `Class.Sound|Sounds` will
+      not be heard by the player.
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Listening
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+  - name: SoundService.ListenerType
+    summary: |
+      The current listener type used by 3D `Class.Sound|Sounds` to determine
+      where they will be heard from.
+    description: |
+      The listener type for any 3D `Class.Sound|Sounds` in the experience,
+      effectively the point from which 3D `Class.Sound` audio in the experience
+      is heard by the player. For `Class.Sound|Sounds` parented to a
+      `Class.BasePart` or `Class.Attachment`, the listener influences the volume
+      and left/right balance of a playing sound. By default, this listener is
+      set to `Class.Workspace.CurrentCamera`.
+
+      Note that this does not affect the listener location when using the
+      advanced audio system; see `Class.AudioListener` for a way to set the
+      listener location within that system.
+
+      This property may not yet be enabled for all creators; until full rollout,
+      use `Class.SoundService:GetListener()` and
+      `Class.SoundService:SetListener()` instead.
+    code_samples: []
+    type: ListenerType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Listening
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
   - name: SoundService.RespectFilteringEnabled
     summary: |
       Sets whether `Class.Sound` playback from a client will replicate to the

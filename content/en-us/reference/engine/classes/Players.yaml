@@ -466,7 +466,10 @@ methods:
 
           - `ApplyDeviceBlock` (optional; boolean) — When `true`, Roblox will
             block banned users' devices from rejoining the experience for 24
-            hours after the ban is applied. Default is `false`.
+            hours after the ban is applied. Default is `false`. The block can be
+            overridden by unbanning a user via a call to
+            `Class.Players:UnbanAsync()`. Note that unbanning a user through any
+            other method will not lift the device block.
     returns:
       - type: ()
         summary: ''
@@ -1380,7 +1383,9 @@ methods:
 
       For the case where a user's device may be blocked by a ban where
       `ApplyDeviceBlock` was set to `true`, an unban applied by this method will
-      override the device block for the unbanned player.
+      override the device block for the unbanned player. Please note that
+      unbanning a user through any other method, such as the Open Cloud API or
+      the Creator Hub, will not lift the device block.
 
       This method invokes a HTTP call to backend services, which are throttled
       and may fail. If you are calling this API with multiple UserIds, this
