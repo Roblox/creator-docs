@@ -247,7 +247,7 @@ For a full list of prohibited, regulated, and restricted advertising content, se
 ## Revenue share
 
 <Alert severity="info">
-Starting January 1, 2027, ad integration campaigns will be subject to a revenue share based on qualified visits. This revenue share applies to all campaign that begin on or after January 1, 2027.
+Starting January 1, 2027, ad integration campaigns will be subject to a revenue share based on qualified visits. This revenue share applies to all campaigns that begin on or after January 1, 2027.
 
 Revenue share costs do not apply to:
 
@@ -261,7 +261,7 @@ For active ad integration campaigns, revenue share costs are calculated based on
 
 A **qualified visit** is a session in which a user engages with one or more branded assets from your campaign. Qualified visits match what Roblox reports to brands as ad engagements, based on Interactive Advertising Bureau (IAB) standards for time-in-view, occlusion, and size.
 
-If a user engages with multiple branded assets during the same session, the session counts as a **single qualified visit**.
+If a user engages with multiple branded assets during the same session, that session counts as a **single qualified visit**.
 
 If the same user returns in a separate session and engages with a branded asset again, that session counts as a **new qualified visit**.
 
