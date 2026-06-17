@@ -46,8 +46,8 @@ description: |
   the FaceControls deforms the MeshPart's geometry. These properties are
   available to animate in the Animation Editor.
 
-  See [Facial Animation](../../../avatar/dynamic-heads/index.md) for
-  more information on usage and creation of an animatable head.
+  See [Facial animation](../../../avatar/dynamic-heads/index.md) for more
+  information on usage and creation of an animatable head.
 
   ## Animatable Heads in the Marketplace
 
@@ -74,7 +74,7 @@ description: |
   - RightUpperLipRaiser
 
   See
-  [FACS pose reference](../../../avatar/dynamic-heads/facs-poses-reference.md)
+  [FACS poses reference](../../../avatar/dynamic-heads/facs-poses-reference.md)
   for more information on usage and creation of an animatable head.
 code_samples: []
 inherits:
