@@ -60,7 +60,6 @@ properties:
     capabilities:
       - Physics
       - Animation
-    simulationAccess: true
   - name: AnimationConstraint.AngularStrength
     summary: |
       Controls how rigidly the constraint enforces the rotational part of its
@@ -98,7 +97,6 @@ properties:
     capabilities:
       - Physics
       - Animation
-    simulationAccess: true
   - name: AnimationConstraint.IsKinematic
     summary: |
       Toggles whether the constraint is kinematic or physically simulated.
@@ -159,7 +157,6 @@ properties:
     capabilities:
       - Physics
       - Animation
-    simulationAccess: true
   - name: AnimationConstraint.LinearStrength
     summary: |
       Controls how rigidly the constraint enforces the translational part of its
@@ -201,7 +198,6 @@ properties:
     capabilities:
       - Physics
       - Animation
-    simulationAccess: true
   - name: AnimationConstraint.MaxForce
     summary: |
       Maximum force magnitude the constraint can apply to achieve its goal.

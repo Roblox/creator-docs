@@ -2502,6 +2502,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/ScriptContext.yaml
                 ignoreTranslation: true
+              - title: ScriptDebuggerService
+                path: /reference/engine/classes/ScriptDebuggerService
+                type: engineapi
+                source: /reference/engine/classes/ScriptDebuggerService.yaml
+                ignoreTranslation: true
               - title: ScriptDocument
                 path: /reference/engine/classes/ScriptDocument
                 type: engineapi

@@ -468,7 +468,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    simulationAccess: true
   - name: AnimationTrack:GetParameterDefaults
     summary: ''
     description: ''
@@ -627,7 +626,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    simulationAccess: true
   - name: AnimationTrack:SetTargetInstance
     summary: ''
     description: ''

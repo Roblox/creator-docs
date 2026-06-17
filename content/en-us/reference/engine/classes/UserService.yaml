@@ -143,8 +143,7 @@ methods:
         summary: |
           User: The `Datatype.User` representing the resolved domain-scoped
           identity.
-    tags:
-      - Yields
+    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

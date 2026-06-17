@@ -45,6 +45,37 @@ properties:
       can_save: true
     capabilities:
       - Input
+  - name: InputBinding.BindingType
+    summary: |
+      Determines whether this binding is triggered by hardware input or
+      programmatically via `Class.InputBinding:Fire()|Fire()`.
+    description: |
+      Determines whether this `InputBinding` is triggered by hardware input
+      (`Enum.InputBindingType|Automatic`) or programmatically via
+      `Class.InputBinding:Fire()|Fire()` (`Enum.InputBindingType|Scriptable`).
+
+      When set to `Enum.InputBindingType|Automatic` (default), the binding
+      responds to physical input devices (keyboard, mouse, gamepad, touch) based
+      on its `Class.InputBinding.KeyCode|KeyCode` or composite direction or UI
+      button properties.
+
+      When set to `Enum.InputBindingType|Scriptable`, the binding ignores
+      hardware input and instead receives state updates exclusively through the
+      `Class.InputBinding:Fire()|Fire()` method.
+    code_samples: []
+    type: InputBindingType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Input
   - name: InputBinding.ClampMagnitudeToOne
     summary: |
       Specifies how the binding normalizes composite directional input to a
@@ -564,6 +595,55 @@ properties:
       can_save: true
     capabilities:
       - Input
-methods: []
+methods:
+  - name: InputBinding:Fire
+    summary: |
+      Programmatically updates the parent `Class.InputAction` state through this
+      binding.
+    description: |
+      Programmatically updates the parent `Class.InputAction` to the given state
+      and fires the appropriate signals (`Class.InputAction.Pressed|Pressed`,
+      `Class.InputAction.Released|Released`,
+      `Class.InputAction.StateChanged|StateChanged`).
+
+      This method can only be called on bindings with
+      `Class.InputBinding.BindingType|BindingType` set to
+      `Enum.InputBindingType|Scriptable`. Calling it on an
+      `Enum.InputBindingType|Automatic` binding will throw an error.
+
+      The `state` parameter must match the `Class.InputAction.Type|Type` of the
+      parent `Class.InputAction`:
+
+      - `Enum.InputActionType|Bool` expects a `boolean`
+      - `Enum.InputActionType|Direction1D` expects a `number`
+      - `Enum.InputActionType|Direction2D` expects a `Datatype.Vector2`
+      - `Enum.InputActionType|Direction3D` expects a `Datatype.Vector3`
+      - `Enum.InputActionType|ViewportPosition` expects a `Datatype.Vector2`
+
+      Passing a mismatched type will cause an error. This method respects the
+      same deduplication rules as hardware input, as in consecutive calls with
+      the same state value will not re‑fire events.
+
+      The parent `Class.InputAction` must be `Class.InputAction.Enabled|Enabled`
+      and its ancestor `Class.InputContext` must also be
+      `Class.InputContext.Enabled|Enabled`, otherwise the call is silently
+      ignored.
+    code_samples: []
+    parameters:
+      - name: state
+        type: Variant
+        default:
+        summary: |
+          The state value to apply; must match the parent action's
+          `Class.InputAction.Type|Type`.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Input
 events: []
 callbacks: []

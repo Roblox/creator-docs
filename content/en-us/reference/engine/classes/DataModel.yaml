@@ -1022,8 +1022,7 @@ events:
       Fires when the server has been scheduled to restart, for example when you
       restart servers from the Creator Hub or
       [Open Cloud](https://create.roblox.com/docs/cloud/reference/features/universes#Restarts_LaunchRestart)
-      to
-      [release an experience update](../../../projects/update-games.md).
+      to [release an experience update](../../../projects/update-games.md).
 
       You can use this event to inform players on the server of the impending
       restart. You could then let them save their progress or teleport them to

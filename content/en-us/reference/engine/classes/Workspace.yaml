@@ -1374,6 +1374,24 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
+  - name: Workspace:ExperimentalSolverIsEnabled
+    summary: |
+      Returns `true` if the experimental physics solver is enabled.
+    description: |
+      Returns whether the experimental physics solver is currently enabled. This
+      method is primarily for internal testing purposes.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: boolean
+        summary: |
+          `true` if the experimental physics solver is enabled, `false`
+          otherwise.
+    tags: []
+    deprecation_message: ''
+    security: LocalUserSecurity
+    thread_safety: Unsafe
+    capabilities: []
   - name: Workspace:GetNumAwakeParts
     summary: |
       Returns the number of `Class.BasePart|BaseParts` that are deemed

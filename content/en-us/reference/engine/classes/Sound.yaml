@@ -69,6 +69,27 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
+  - name: Sound.ChannelCount
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+      - NotBrowsable
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Asset
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - LegacySound
   - name: Sound.EmitterSize
     summary: |
       The minimum distance, in studs, at which a 3D `Class.Sound` (direct child
