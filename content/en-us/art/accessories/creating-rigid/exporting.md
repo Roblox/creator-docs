@@ -21,9 +21,9 @@ To export your model as a `.fbx`:
 
    <img src="../../../assets/modeling/skinned-meshes/Blender-Export-Settings-1.png" width="320" />
 
-4. Set the **Transform** > **Scale** to `.01`. This is required to maintain scale size for `.fbx` exports.
+4. Set the **Transform** > **Apply Scalings** to **FBX Unit Scale**. If you run into scaling issues on import, see [Blender FBX scaling](../../../art/blender.md#adjust-scale-fbx) for alternative approaches.
 
-   <img src="../../../assets/modeling/skinned-meshes/Blender-Export-Settings-2.png" width="320" />
+   <img src="../../../assets/modeling/skinned-meshes/Blender-Export-Settings-5.png" width="320" />
 
 5. Click the **Export FBX** button.
 

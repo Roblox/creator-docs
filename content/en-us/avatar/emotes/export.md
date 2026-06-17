@@ -22,7 +22,7 @@ Blender allows you to export in `.fbx` or `.gltf` as well as other formats. If y
 1. In the topbar, click **File** > **Export** > **FBX (.fbx)**. The Blender file browser window displays.
 2. Set **Path Mode** to **Copy** and enable the **Embed Textures** icon.
 3. In the Include section, enable **Custom Properties**.
-4. If your project doesn't already have `.01` scene unit scaling, set the **Transform** > **Apply Scalings** to `FBX Unit Scale`. For more details, see [Blender FBX scaling](../../art/blender.md#adjust-scale-fbx).
+4. Set the **Transform** > **Apply Scalings** to **FBX Unit Scale**. If you run into scaling issues on import, see [Blender FBX scaling](../../art/blender.md#adjust-scale-fbx) for alternative approaches.
 5. Expand the Armature section and uncheck **Add Leaf Bones**.
 6. Enable **Bake Animation**.
 7. Expand Bake Animation and **uncheck NLA Strips**, **All Actions**, and **Force Start/End Keyframes**.

@@ -18,8 +18,6 @@ Check that your model meets Roblox's [modeling specifications](../../art/modelin
 
 ## Blender
 
-Before exporting a mesh from Blender, make sure to set the Scene Unit Length to **Centimeters** and, if applicable, set the Unit Scale to **.01** to ensure similar `.fbx` scaling within Studio.
-
 To export the `.fbx` file in Blender:
 
 1. In the topbar, click **File**. A pop-up menu displays.
@@ -28,9 +26,9 @@ To export the `.fbx` file in Blender:
 
    <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-1.png" width="320" alt="Blender export sidebar showing Path Mode set to Copy and the Embed Textures button enabled."/>
 
-4. If your project doesn't already have .01 scene unit scaling, set the **Transform** > **Scale** to `.01`.
+4. Set the **Transform** > **Apply Scalings** to **FBX Unit Scale**. If you run into scaling issues on import, see [Blender FBX scaling](../../art/blender.md#adjust-scale-fbx) for alternative approaches.
 
-   <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-2.png" width="320" />
+   <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-5.png" width="320" alt="Blender export sidebar showing Apply Scalings set to FBX Unit Scale."/>
 
 5. Under the **Armature** section, disable **Add Leaf Bones**.
 

@@ -90,25 +90,16 @@ To set up your Blender project:
 
 1. Open a new **General** project in Blender.
 2. Select the default shape, camera, and lights, then press <kbd>Delete</kbd>.
-3. In the left-hand navigation of the **Properties Editor**, navigate to **Scene Properties**.
-
-   <img src="../../../assets/modeling/skinned-meshes/Blender-Scene-Units-Icon.png" width="40%" />
-
-4. In the Units section, change the **Unit Scale** to `0.01` and the **Length** to **Centimeters**.
-
-   <img src="../../../assets/modeling/skinned-meshes/Blender-Scene-Units-Settings.png" width="40%" />
-
-5. Import the character rig you intend to parent the accessory to, in this example: [Cubie-Complete.fbx](../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie-Complete.fbx).
+3. Import the character rig you intend to parent the accessory to, in this example: [Cubie-Complete.fbx](../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie-Complete.fbx).
 
    <img src="../../../assets/avatar/dynamic-heads/creating-face-accessories/Importing-Cubie.png" width="80%" />
 
-6. To simplify the workspace, you can delete the R15 inner and outer cage mesh objects since you will later import a full-body cage in the [Caging](#caging) step.
+4. To simplify the workspace, you can delete the R15 inner and outer cage mesh objects since you will later import a full-body cage in the [Caging](#caging) step.
 
    <video controls width="80%" src="../../../assets/avatar/dynamic-heads/creating-face-accessories/videos/Removing-Character-Cage.mp4">
    </video>
 
-7. Import your accessory model, in this example: [CubieEyebrow_Geo.fbx](../../../assets/avatar/dynamic-heads/creating-face-accessories/reference-files/CubieEyebrow_Geo.fbx).
-
+5. Import your accessory model, in this example: [CubieEyebrow_Geo.fbx](../../../assets/avatar/dynamic-heads/creating-face-accessories/reference-files/CubieEyebrow_Geo.fbx).
    1. If required, reposition the accessory model on the face.
    2. You can hide the armature temporarily to verify model placement.
 
@@ -164,7 +155,6 @@ Export your model when ready to test your accessory model in Studio or when sett
 To export:
 
 1. Ensure only the **accessory mesh**, **armature object** and **cages meshes** are exported. Delete all other objects in the workspace.
-
    1. You can quickly filter out **Geo** and **Att** named objects in your workspace to quickly delete them.
 
       <video controls width="70%" src="../../../assets/avatar/dynamic-heads/creating-face-accessories/videos/Removing-Extra-Objects.mp4">

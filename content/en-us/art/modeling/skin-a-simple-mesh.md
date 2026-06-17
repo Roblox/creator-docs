@@ -24,24 +24,8 @@ settings.
 
 To start the process of creating a skinned mesh, first set up the following in your Blender project:
 
-- Set [scene unit and unit scale properties](#adjust-scene-and-scale) to Studio's proportions.
-- [Import the model into Blender](#import-a-model) using Blender's file importer.
-
-### Adjust scene and scale
-
-When setting up Blender projects for Roblox Studio import, modify Blender's default **scene units** and **unit scale** properties to ensure they closely align with Studio's scale.
-
-To modify Blender's scene and scale units in a new project:
-
 1. Open a new **General** project in Blender.
 2. Select the default shape, camera, and lights, then press <kbd>Delete</kbd>.
-3. In the left-hand navigation of the **Properties Editor**, navigate to **Scene Properties**.
-
-   <img src="../../assets/modeling/skinned-meshes/Blender-Scene-Units-Icon.png" width="222" />
-
-4. In the **Units** section, change the **Unit Scale** to **0.01** and the **Length** to **Centimeters**.
-
-   <img src="../../assets/modeling/skinned-meshes/Blender-Scene-Units-Settings.png" width="222" />
 
 ### Import a model
 
