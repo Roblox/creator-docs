@@ -2145,34 +2145,6 @@ properties:
     capabilities:
       - Animation
 methods:
-  - name: HumanoidRigDescription:AutoRig
-    summary: ''
-    description: |
-      Automatically maps joints from the given character model to the
-      corresponding properties on this `HumanoidRigDescription`. Searches the
-      model's descendants for `Class.Motor6D`, `Class.AnimationConstraint`, or
-      `Class.Bone` instances whose names match the standard joint names and
-      assigns them.
-
-      This method is only available in Roblox Studio. Pass `nil` to use the
-      first ancestor `Model` of this instance as the character.
-    code_samples: []
-    parameters:
-      - name: character
-        type: Instance?
-        default:
-        summary: |
-          Instance?
-    returns:
-      - type: ()
-        summary: |
-          void
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Safe
-    capabilities:
-      - Animation
   - name: HumanoidRigDescription:GetJointFromName
     summary: ''
     description: |

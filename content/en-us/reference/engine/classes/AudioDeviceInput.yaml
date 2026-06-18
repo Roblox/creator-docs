@@ -128,26 +128,6 @@ properties:
     capabilities:
       - Audio
       - Input
-  - name: AudioDeviceInput.MutedByLocalUser
-    summary: ''
-    description: ''
-    code_samples: []
-    type: boolean
-    tags:
-      - Hidden
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Recording
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities:
-      - Audio
-      - Input
   - name: AudioDeviceInput.Player
     summary: |
       Determines whose device is producing sound.

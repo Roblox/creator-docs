@@ -387,7 +387,8 @@ methods:
           public role tables). Each role table contains `Id` (int64), `Name`
           (string), and `Rank` (int). The array is ordered as returned by the
           backend.
-    tags: []
+    tags:
+      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

@@ -235,7 +235,7 @@
       "get": {
         "tags": ["Cloud"],
         "summary": "List Group Forum Categories",
-        "description": "Lists forum categories in the group.",
+        "description": "Lists forum categories in the group. Supports filtering.",
         "operationId": "Cloud_ListGroupForumCategories",
         "parameters": [
           {
@@ -316,7 +316,7 @@
       "get": {
         "tags": ["Cloud"],
         "summary": "List Group Forum Posts",
-        "description": "Lists forum posts in the group's forum category.",
+        "description": "Lists forum posts in the group's forum category. Supports filtering.",
         "operationId": "Cloud_ListGroupForumPosts",
         "parameters": [
           {
@@ -417,7 +417,7 @@
       "get": {
         "tags": ["Cloud"],
         "summary": "List Group Forum Comments",
-        "description": "Lists forum comments on a group's forum post.",
+        "description": "Lists forum comments on a group's forum post. Supports filtering.",
         "operationId": "Cloud_ListGroupForumComments",
         "parameters": [
           {
@@ -516,7 +516,7 @@
       "get": {
         "tags": ["Cloud"],
         "summary": "List Group Join Requests",
-        "description": "List join requests under a group.",
+        "description": "List join requests under a group. Supports filtering.",
         "operationId": "Cloud_ListGroupJoinRequests",
         "parameters": [
           {
@@ -723,7 +723,7 @@
       "get": {
         "tags": ["Cloud"],
         "summary": "List Group Memberships",
-        "description": "List group members in a group.",
+        "description": "List group members in a group. Supports filtering.",
         "operationId": "Cloud_ListGroupMemberships",
         "parameters": [
           {

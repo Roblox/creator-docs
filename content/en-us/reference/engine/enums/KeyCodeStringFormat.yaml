@@ -4,19 +4,29 @@
 
 name: KeyCodeStringFormat
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines the string format returned by
+  `Class.UserInputService:GetStringForKeyCode()`.
+description: |
+  This enum is used with `Class.UserInputService:GetStringForKeyCode()` to
+  control how the returned key string is formatted. The `Abbreviated` option
+  provides shortened labels suitable for compact UI elements such as keybind
+  hints, tooltips, or on-screen button prompts where space is limited.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Default behavior which returns the full key string, for example
+      `"LeftControl"`, `"Backspace"`, or `"Escape"`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Abbreviated
-    summary: ''
+    summary: |
+      Returns a shortened key string when available, for example `"LCtrl"`,
+      `"Bksp"`, or `"Esc"`.
     value: 1
     tags: []
     deprecation_message: ''

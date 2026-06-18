@@ -50,7 +50,6 @@ descendants:
   - AudioEcho
   - AudioEmitter
   - AudioEqualizer
-  - AudioFDNReverb
   - AudioFader
   - AudioFilter
   - AudioFlanger
@@ -79,7 +78,6 @@ descendants:
   - BodyMover
   - BodyPartDescription
   - BrowserService
-  - BugReporterService
   - CacheableContentProvider
   - CaptureService
   - ChangeHistoryService
@@ -128,7 +126,6 @@ descendants:
   - Explosion
   - FaceControls
   - FaceInstance
-  - FacialAgeEstimationService
   - Feature
   - FeatureRestrictionManager
   - Fire
@@ -221,7 +218,6 @@ descendants:
   - PermissionsService
   - PhysicsService
   - PhysicsSettings
-  - PlaceAssetIdsService
   - Player
   - PlayerScripts
   - PlayerViewService
@@ -287,7 +283,6 @@ descendants:
   - StatsItem
   - StyleQuery
   - SurfaceAppearance
-  - SystemThemeService
   - TaskScheduler
   - Team
   - TeamCreateData
@@ -336,8 +331,6 @@ descendants:
   - VisualizationModeCategory
   - VisualizationModeService
   - VoiceChatService
-  - WebSocketClient
-  - WebSocketService
   - WeldConstraint
   - Wire
   - WrapTextureTransfer
@@ -345,12 +338,8 @@ descendants:
   - StartupMessageService
   - StopWatchReporter
   - VirtualInputManager
-  - FileSystemService
   - PatchBundlerFileWatch
-  - ProcessService
-  - PlatformService
   - CreatorStoreService
-  - LiveSyncService
   - InputAction
   - InputBinding
   - InputContext
@@ -389,7 +378,6 @@ descendants:
   - TeamCreateService
   - VRStatusService
   - StudioService
-  - LanguageService
   - StyleBase
   - StyleDerive
   - StyleLink
@@ -397,9 +385,6 @@ descendants:
   - RemoteCommandService
   - ServiceVisibilityService
   - UniqueIdLookupService
-  - NewContainerRoot
-  - RemoteEventClass
-  - StyleTestObjectBase
   - GetTextBoundsParams
 tags:
   - NotCreatable
@@ -831,6 +816,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - CreateInstances
+    simulationAccess: true
   - name: Instance:clone
     summary: ''
     description: ''
@@ -848,6 +834,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - CreateInstances
+    simulationAccess: true
   - name: Instance:Destroy
     summary: |
       Sets the `Class.Instance.Parent` property to `nil`, locks the

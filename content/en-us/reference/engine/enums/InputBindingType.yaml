@@ -5,10 +5,10 @@
 name: InputBindingType
 type: enum
 summary: |
-  This enum is used by `Class.InputBinding.BindingType` to determine whether the
+  This enum is used by `Class.InputBinding.Type` to determine whether the
   binding responds to hardware input or is driven programmatically.
 description: |
-  This enum is used by `Class.InputBinding.BindingType` to determine whether the
+  This enum is used by `Class.InputBinding.Type` to determine whether the
   `Class.InputBinding` responds to hardware input devices or is driven
   programmatically via `Class.InputBinding:Fire()`.
 code_samples: []

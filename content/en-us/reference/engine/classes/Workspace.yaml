@@ -729,28 +729,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-  - name: Workspace.PhysicsImprovedSleep
-    summary: |
-      Controls whether the improved partial physics sleep algorithm is enabled.
-    description: |
-      Controls whether the physics engine uses an improved algorithm for partial
-      sleep, the process by which the engine stops simulating parts that are no
-      longer actively moving. Enabling this property can reduce CPU overhead in
-      games with many near-stationary parts.
-    code_samples: []
-    type: RolloutState
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
   - name: Workspace.PhysicsSteppingMethod
     summary: |
       Sets how the solver will advance the physics simulation forward in time.
@@ -1372,24 +1350,6 @@ methods:
       - Deprecated
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
-  - name: Workspace:ExperimentalSolverIsEnabled
-    summary: |
-      Returns `true` if the experimental physics solver is enabled.
-    description: |
-      Returns whether the experimental physics solver is currently enabled. This
-      method is primarily for internal testing purposes.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: boolean
-        summary: |
-          `true` if the experimental physics solver is enabled, `false`
-          otherwise.
-    tags: []
-    deprecation_message: ''
-    security: LocalUserSecurity
     thread_safety: Unsafe
     capabilities: []
   - name: Workspace:GetNumAwakeParts
