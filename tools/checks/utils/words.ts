@@ -35,6 +35,17 @@ const expandWordVariations = (words: string[]): string[] => {
 /**
  * Please write each list in alphabetical order
  */
+/**
+ * Words that `retext-contractions` flags as missing an apostrophe but that we
+ * intentionally allow. For example, `Id` is reported as a missing apostrophe
+ * (suggesting `I'd`), but it's commonly used as shorthand for "identification"
+ * (e.g. asset `Id`, place `Id`), so we skip it.
+ *
+ * Note: only the exact casing flagged by `retext-contractions` needs to be
+ * listed (e.g. `Id`, not `id` or `ID`, which the plugin does not flag).
+ */
+export const RETEXT_CONTRACTIONS_ALLOW_LIST = ['Id'];
+
 export const RETEXT_EQUALITY_ALLOW_LIST = [
   'ADD',
   'actor',

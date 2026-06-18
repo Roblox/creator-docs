@@ -261,6 +261,24 @@ describe('getReTextAnalysis', () => {
     expect(result.messages.length).toBe(0);
   });
 
+  it('should not flag `Id` as a missing apostrophe (used as shorthand for identification)', async () => {
+    const text = 'Provide the asset Id to load the model.';
+    const result = await getReTextAnalysis(text);
+    expect(result.messages.length).toBe(0);
+  });
+
+  it('should still flag other missing contractions like `Im`', async () => {
+    const text = 'Im going to load the model.';
+    const result = await getReTextAnalysis(text);
+    expect(
+      result.messages.some(
+        (message) =>
+          message.source === 'retext-contractions' &&
+          message.reason.includes("`I'm`")
+      )
+    ).toBe(true);
+  });
+
   /** Indefinite articles */
   it('should detect incorrect uses of `a`', async () => {
     const text = 'This test is a awesome test.';
