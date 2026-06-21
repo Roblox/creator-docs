@@ -1,4 +1,27 @@
----
+local Workspace = game:GetService("Workspace")
+
+local screenPart = Instance.new("Part")
+screenPart.Size = Vector3.new(16, 9, 1)
+screenPart.Position = Vector3.new(0, 8, -20)
+screenPart.Orientation = Vector3.new(0, 180, 0)
+screenPart.Anchored = true
+screenPart.Parent = Workspace
+
+local surfaceGui = Instance.new("SurfaceGui")
+surfaceGui.Parent = screenPart
+
+local videoFrame = Instance.new("VideoFrame")
+videoFrame.Size = UDim2.new(1, 0, 1, 0)
+videoFrame.Parent = surfaceGui
+
+videoFrame.Looped = true
+videoFrame.Video = "rbxassetid://5608384572"  -- Reemplaza con la ID de activo de tu video
+
+while not videoFrame.IsLoaded do
+	videoFrame.Loaded:Wait()
+end
+
+videoFrame:Play()---
 title: Roblox Studio setup
 description: Explains how to install Roblox Studio on your system.
 ---
