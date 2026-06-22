@@ -3,12 +3,12 @@ title: Instance streaming
 description: Instance streaming allows the Roblox engine to dynamically load and unload 3D content in regions of the world.
 ---
 
-In-experience **instance streaming** allows the Roblox engine to dynamically load and unload 3D content and related instances in the `Class.Workspace`. This can improve the overall player experience in several ways, including:
+In-game **instance streaming** allows the Roblox engine to dynamically load and unload 3D content and related instances in the `Class.Workspace`. This can improve the overall player experience in several ways, including:
 
 - <Chip label="Faster Join Times" size="small" variant="outlined" color="success" /> — Players can start playing in one part of the world while more of the world loads in the background.
-- <Chip label="Memory Efficiency" size="small" variant="outlined" color="success" /> — Experiences can be played on devices with less memory since content is dynamically streamed in and out. More immersive and detailed worlds can be played on a wider range of devices.
+- <Chip label="Memory Efficiency" size="small" variant="outlined" color="success" /> — Games can be played on devices with less memory since content is dynamically streamed in and out. More immersive and detailed worlds can be played on a wider range of devices.
 - <Chip label="Improved Performance" size="small" variant="outlined" color="success" /> — Better frame rates and performance, as the server can spend less time and bandwidth synchronizing changes between the world and players in it. Clients spend less time updating instances that aren't currently relevant to the player.
-- <Chip label="Level of Detail" size="small" variant="outlined" color="success" /> — When configured, distant [models](./techniques.md#set-model-level-of-detail), [platform avatars](./techniques.md#set-avatar-level-of-detail), and terrain remain visible even when they're not streamed to clients, keeping the experience optimized without entirely sacrificing background visuals.
+- <Chip label="Level of Detail" size="small" variant="outlined" color="success" /> — When configured, distant models, platform avatars, and terrain remain visible even when they're not streamed to clients, keeping the game optimized without entirely sacrificing background visuals.
 
 Instance streaming is controlled through the `Class.Workspace.StreamingEnabled` property, enabled by default for new places created in Studio. This property cannot be set in a script.
 
@@ -20,16 +20,45 @@ Once you review this technical guide, it's recommended that you review the [stre
 
 ## Technical behavior
 
+### Scope
+
+Streaming logic and features apply exclusively to instances that are descendants of `Class.Workspace`, while instances stored in other containers such as `Class.ReplicatedStorage` and `Class.ReplicatedFirst` are ineligible for streaming. For example, placing an [atomic](#atomic) model under `Class.ReplicatedStorage` does not guarantee atomic replication.
+
 ### Stream in
 
-When a player joins an experience with instance streaming enabled, instances in the `Class.Workspace` are replicated to the client, <u>**excluding**</u> the following:
+When a player joins a game with instance streaming enabled:
 
-- `Class.BasePart|BaseParts` (`Class.Part|Parts` and `Class.MeshPart|MeshParts`)
-- `Class.Model|Models` set to [Atomic](#atomic), [Persistent](#persistent), or [PersistentPerPlayer](#persistentperplayer); see [per‑model streaming controls](#model-streaming-controls)
-- Models set to [Nonatomic](#nonatomic) (default) when `Class.Workspace.ModelStreamingBehavior` is set to `Enum.ModelStreamingBehavior.Improved|Improved`
-- Descendants of the above instances
+1. Instances in the `Class.Workspace` are replicated to the client **excluding** the following:
 
-Then, during gameplay, the server may stream the above instances to the client, as they are needed.
+   <Grid container spacing={1} alignItems="center">
+	 <Grid item><img src="../../assets/misc/Wait.png" width="32" style={{float:"right"}} /></Grid>
+	 <Grid item XSmall={11} Medium={11} Large={11} XLarge={11}>
+	 `Class.BasePart|BaseParts` (`Class.Part|Parts` and `Class.MeshPart|MeshParts`)
+	 </Grid>
+   </Grid>
+
+   <Grid container spacing={1} alignItems="center">
+	 <Grid item><img src="../../assets/misc/Wait.png" width="32" style={{float:"right"}} /></Grid>
+	 <Grid item XSmall={11} Medium={11} Large={11} XLarge={11}>
+	 `Class.Model|Models` set to [Atomic](#atomic), [Persistent](#persistent), or [PersistentPerPlayer](#persistentperplayer); see [per‑model streaming controls](#model-streaming-controls)
+	 </Grid>
+   </Grid>
+
+   <Grid container spacing={1} alignItems="center">
+	 <Grid item><img src="../../assets/misc/Wait.png" width="32" style={{float:"right"}} /></Grid>
+	 <Grid item XSmall={11} Medium={11} Large={11} XLarge={11}>
+	 `Class.Model|Models` set to [Nonatomic](#nonatomic) (default) when `Class.Workspace.ModelStreamingBehavior` is set to `Enum.ModelStreamingBehavior.Improved|Improved`
+	 </Grid>
+   </Grid>
+
+   <Grid container spacing={1} alignItems="center">
+	 <Grid item><img src="../../assets/misc/Wait.png" width="32" style={{float:"right"}} /></Grid>
+	 <Grid item XSmall={11} Medium={11} Large={11} XLarge={11}>
+	 Descendants of the above instances
+	 </Grid>
+   </Grid>
+
+2. During gameplay, the server may stream instances in the above deferred categories to the client based on the game's [streaming properties](#streaming-properties), player position, client device performance, and other conditions.
 
 ### Stream out
 
@@ -57,63 +86,67 @@ Avoid creating moving assemblies with unnecessarily large numbers of instances, 
 
 ## Streaming properties
 
-The following properties control how instance streaming applies to your experience. All of these properties are **non-scriptable** and must be set on the `Class.Workspace` object in Studio.
+The following properties control how instance streaming applies to your game. All of these properties are **non-scriptable** and must be set on the `Class.Workspace` object in Studio.
 
 <img src="../../assets/studio/properties/Workspace-Streaming.png" width="320" />
 
 <table>
 <thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-</tr>
+  <tr>
+    <th>Property</th>
+    <th>Description</th>
+  </tr>
 </thead>
 <tbody>
-<tr>
-<td>`Class.Workspace.StreamingMinRadius|StreamingMinRadius`</td>
-<td>This property indicates the radius around the [replication foci](#replication-focus) in which instances stream in at the highest priority. Care should be taken when increasing the default, as doing so will require more memory and more server bandwidth at the expense of other components.</td>
-</tr>
-<tr>
-<td>`Class.Workspace.StreamingTargetRadius|StreamingTargetRadius`</td>
-<td>This property controls the maximum distance away from the [replication foci](#replication-focus) in which instances stream in. Note that the engine is allowed to retain previously loaded instances beyond the target radius, memory permitting.<br /><br />A smaller `Class.Workspace.StreamingTargetRadius|StreamingTargetRadius` reduces server workload, as the server will not stream in additional instances beyond the set value. However, the target radius is also the maximum distance players will be able to see the full detail of your experience, so you should pick a value that creates a nice balance between these.</td>
-</tr>
-<tr>
-<td>`Class.Workspace.StreamOutBehavior|StreamOutBehavior`</td>
-<td>This property sets the [streaming out](#stream-out) behavior according to the value of `Enum.StreamOutBehavior`. If set to `Enum.StreamOutBehavior.LowMemory|LowMemory` (default), the client only streams out regions beyond the minimum radius in a low memory situation. If set to `Enum.StreamOutBehavior.Opportunistic|Opportunistic`, regions beyond `Class.Workspace.StreamingTargetRadius|StreamingTargetRadius` can be removed on the client even when there is no memory pressure (in this mode, the client never removes instances that are within the target radius, except in low memory situations).</td>
-</tr>
-<tr>
-<td>`Class.Workspace.StreamingIntegrityMode|StreamingIntegrityMode`</td>
-<td>The experience may behave in unintended ways if a player moves into a region of the world that hasn't been streamed to them. This property offers a way to avoid those potentially problematic situations.</td>
-</tr>
-<tr>
-<td>`Class.Workspace.ModelStreamingBehavior|ModelStreamingBehavior`</td>
-<td>Controls how [Nonatomic](#nonatomic) (default) models stream in and out.</td>
-</tr>
+  <tr>
+    <td>`Class.Workspace.EnableSLIMAvatars|EnableSLIMAvatars`</td>
+    <td>Controls whether a `Enum.ModelLevelOfDetail.SLIM|SLIM` model is generated for avatar characters in the game. When enabled, avatars render using SLIM in the same way that setting `Class.Model.LevelOfDetail` to `Enum.ModelLevelOfDetail.SLIM|SLIM` works for other models.</td>
+  </tr>
+  <tr>
+    <td>`Class.Workspace.ModelStreamingBehavior|ModelStreamingBehavior`</td>
+    <td>Controls how [Nonatomic](#nonatomic) (default) models stream in and out.<br /><br /><Chip label="RECOMMENDED" size="small" variant="outlined" color="success" /> Use `Enum.ModelStreamingBehavior.Improved|Improved` to enable the most efficient streaming for `Class.Model|Models` with `Class.BasePart` descendants.</td>
+  </tr>
+  <tr>
+    <td>`Class.Workspace.StreamingIntegrityMode|StreamingIntegrityMode`</td>
+    <td>The game may behave in unintended ways if a player moves into a region of the world that hasn't been streamed to them. This property offers a way to avoid those potentially problematic situations.<br /><br /><Chip label="RECOMMENDED" size="small" variant="outlined" color="success" /> Use `Enum.StreamingIntegrityMode.PauseOutsideLoadedArea|PauseOutsideLoadedArea` to balance gameplay integrity without pausing unnecessarily or too often. You can also [customize the pause screen](#pause-screen-customization).</td>
+  </tr>
+  <tr>
+    <td>`Class.Workspace.StreamingMinRadius|StreamingMinRadius`</td>
+    <td>This property indicates the radius around the [replication foci](#replication-focus) in which instances stream in at the highest priority. Care should be taken when increasing the default, as doing so will require more memory and more server bandwidth at the expense of other components.<br /><br /><Chip label="RECOMMENDED" size="small" variant="outlined" color="success" /> Use the default of `64` to maximize how much the engine can scale the game down for low‑end devices.</td>
+  </tr>
+  <tr>
+    <td>`Class.Workspace.StreamingTargetRadius|StreamingTargetRadius`</td>
+    <td>This property controls the maximum distance away from the [replication foci](#replication-focus) in which instances stream in. Note that the engine is allowed to retain previously loaded instances beyond the target radius, memory permitting.<br /><br />A smaller `Class.Workspace.StreamingTargetRadius|StreamingTargetRadius` reduces server workload, as the server will not stream in additional instances beyond the set value. However, the target radius is also the maximum distance players will be able to see the full detail of your game, so you should pick a value that creates a nice balance between these.<br /><br /><Chip label="RECOMMENDED" size="small" variant="outlined" color="success" /> Use the default of `1024` to strike a good balance between visibility for players on high‑end devices and a reasonable memory footprint.</td>
+  </tr>
+  <tr>
+    <td>`Class.Workspace.StreamOutBehavior|StreamOutBehavior`</td>
+    <td>This property sets the [streaming out](#stream-out) behavior according to the value of `Enum.StreamOutBehavior`. If set to `Enum.StreamOutBehavior.LowMemory|LowMemory` (default), the client only streams out regions beyond the minimum radius in a low memory situation. If set to `Enum.StreamOutBehavior.Opportunistic|Opportunistic`, regions beyond `Class.Workspace.StreamingTargetRadius|StreamingTargetRadius` can be removed on the client even when there is no memory pressure (in this mode, the client never removes instances that are within the target radius, except in low memory situations).<br /><br /><Chip label="RECOMMENDED" size="small" variant="outlined" color="success" /> Use `Enum.StreamOutBehavior.Opportunistic|Opportunistic` to allow the client to aggressively garbage collect content, significantly reducing memory usage and helping prevent out‑of‑memory crashes.</td>
+  </tr>
 </tbody>
 </table>
 
 <Alert severity="warning">
-`Class.Workspace.StreamingTargetRadius|StreamingTargetRadius` should be larger than `Class.Workspace.StreamingMinRadius|StreamingMinRadius`. 3D content between the target radius and the minimum radius acts as a buffer in case the client temporarily stops receiving new content from the server. If the minimum radius and the target radius are equal, there is no buffer, which can lead to an increase in network pauses or an otherwise suboptimal user experience.
+`Class.Workspace.StreamingTargetRadius|StreamingTargetRadius` should be larger than `Class.Workspace.StreamingMinRadius|StreamingMinRadius`. 3D content between the target radius and the minimum radius acts as a buffer in case the client temporarily stops receiving new content from the server. If the minimum radius and the target radius are equal, there is no buffer, which can lead to an increase in network pauses or an otherwise suboptimal player experience.
 </Alert>
 
 ## Replication focus
 
 By default, streaming occurs around the local player's character's `Class.Model.PrimaryPart|PrimaryPart`, although you can specify a different replication focus point through `Class.Player.ReplicationFocus`.
 
-You can also add and remove additional replication foci through `Class.Player:AddReplicationFocus()` and `Class.Player:RemoveReplicationFocus()` to dynamically enable streaming in multiple areas of the experience.
+You can also add and remove additional replication foci through `Class.Player:AddReplicationFocus()` and `Class.Player:RemoveReplicationFocus()` to dynamically enable streaming in multiple areas of the game.
 
 <Alert severity="warning">
-Use caution when adding additional replication foci as each additional focus increases the server's workload for streaming and updating regions. For example, a single player with nine dynamically moving foci could generate server networking and streaming processing comparable to ten players moving around the experience.
+Use caution when adding additional replication foci as each additional focus increases the server's workload for streaming and updating regions. For example, a single player with nine dynamically moving foci could generate server networking and streaming processing comparable to ten players moving around the game.
 
 On the client, too many foci for a player can limit the engine's ability to adjust to memory limitations and make it more likely for clients to be killed by the OS for using too much memory.
 </Alert>
 
 <Tabs>
 <TabItem label="Physics Simulation">
-Client-side physics simulation only occurs in streamed areas, even for locally created instances and for `Enum.ModelStreamingMode.Persistent|Persistent` instances. If you have instances that you'd like to keep simulating even when they're far away from the character, create an additional replication focus near those instances.
+Client-side physics simulation, including prediction and resimulations when [server authority](../../projects/server-authority/index.md) is implemented, only occurs in streamed areas, even for locally created instances and for `Enum.ModelStreamingMode.Persistent|Persistent` instances. If you have instances that you'd like to keep simulating even when they're far away from the character, create an additional replication focus near those instances.
 </TabItem>
 <TabItem label="Movement Between Zones">
-In many experiences, players frequently move back and forth between the same areas frequently, for example between their "home&nbsp;base" and a "trading&nbsp;hub." In such cases, you can create a replication focus point in each area to ensure those areas are readily present on client devices.
+In many games, players frequently move back and forth between the same areas, for example between their "home&nbsp;base" and a "trading&nbsp;hub." In such cases, you can create a replication focus point in each area to ensure those areas are readily present on client devices.
 </TabItem>
 <TabItem label="Distant Viewpoints">
 Multiple replication points are useful when players can view specific, important regions through a scope, such as enemy bases scattered across a barren landscape. In such cases, you can create a replication focus point in each base to ensure players see details and simulated physics from afar.
@@ -169,3 +202,73 @@ Persistent models are intended for very rare circumstances, such as when a small
 ### PersistentPerPlayer
 
 Models set to `Enum.ModelStreamingMode.PersistentPerPlayer|PersistentPerPlayer` behave the same as `Enum.ModelStreamingMode.Persistent|Persistent` for players that have been added using `Class.Model:AddPersistentPlayer()`. For other players, behavior is the same as `Enum.ModelStreamingMode.Atomic|Atomic`. You can revert a model from player persistence via `Class.Model:RemovePersistentPlayer()`.
+
+## Pause screen customization
+
+Assuming `Class.Workspace.StreamingIntegrityMode` is set to the recommended `Enum.StreamingIntegrityMode.PauseOutsideLoadedArea|PauseOutsideLoadedArea`, the game will pause if a player moves into a region of the world that hasn't been streamed to them. In these cases, the `Class.Player.GameplayPaused` property indicates the player's current pause state which can be used with a `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal()` connection to show or hide a custom GUI.
+
+```lua title="LocalScript"
+local Players = game:GetService("Players")
+local GuiService = game:GetService("GuiService")
+
+local player = Players.LocalPlayer
+
+-- Disable default pause modal
+GuiService:SetGameplayPausedNotificationEnabled(false)
+
+local function onPauseStateChanged()
+	if player.GameplayPaused then
+		-- Show custom GUI
+	else
+		-- Hide custom GUI
+	end
+end
+
+player:GetPropertyChangedSignal("GameplayPaused"):Connect(onPauseStateChanged)
+```
+
+## Runtime debugging
+
+The engine includes multiple on-screen debug panels that can be enabled on the client using keyboard shortcuts. To access streaming debug information:
+
+1. Open the **Network Summary** debug overlay via <kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F3</kbd> (Windows) or <kbd>Shift</kbd><kbd>⌘</kbd><kbd>F3</kbd> (Mac).
+2. Once the debug overlay is open, press <kbd>Shift</kbd><kbd>1</kbd> repeatedly to cycle through the available panels. The fourth panel is the **Streaming** debug view which displays useful runtime information:
+
+   - Active streaming settings
+   - Currently loaded (streamed in) regions
+   - Streaming behavior and state
+
+Once enabled, colored highlighted regions appear in the 3D viewport:
+
+<table>
+<thead>
+	<tr>
+		<th>Color</th>
+		<th>Description</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td><ColorSwatch value="rgb(255,0,0)" /></td>
+		<td>Less than `Class.Workspace.StreamingMinRadius|StreamingMinRadius`</td>
+	</tr>
+	<tr>
+		<td><ColorSwatch value="rgb(255,255,0)" /></td>
+		<td>Greater than or equal to `Class.Workspace.StreamingMinRadius|StreamingMinRadius` and less than `Class.Workspace.StreamingTargetRadius|StreamingTargetRadius`</td>
+	</tr>
+	<tr>
+		<td><ColorSwatch value="rgb(0,0,255)" /></td>
+		<td>Equal to `Class.Workspace.StreamingTargetRadius|StreamingTargetRadius`</td>
+	</tr>
+	<tr>
+		<td><ColorSwatch value="rgb(0,255,0)" /></td>
+		<td>Greater than `Class.Workspace.StreamingTargetRadius|StreamingTargetRadius`</td>
+	</tr>
+</tbody>
+</table>
+
+<video controls src="../../assets/optimization/streaming/Streaming-Debug.mp4" width="90%"></video>
+
+<Alert severity="info">
+To increase the ability to zoom the default camera considerably far out while debugging, temporarily increase `Class.StarterPlayer.CameraMaxZoomDistance` while in edit mode or `Class.Player.CameraMaxZoomDistance` during runtime. A value of `1000`, for example, allows you to pull the camera out to view most of the 3D world while still navigating the character around.
+</Alert>
