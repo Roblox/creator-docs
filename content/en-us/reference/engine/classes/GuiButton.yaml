@@ -358,4 +358,23 @@ events:
     security: None
     capabilities:
       - UI
+  - name: GuiButton.SecondaryActivated
+    summary: |
+      Fires when the button's "secondary" input is activated.
+    description: |
+      Fires when a right-click press-and-release is detected on desktop, long
+      press is detected on mobile, or **Y**/triangle is activated in UI
+      navigation mode on console. This event is not available yet.
+    code_samples: []
+    parameters:
+      - name: inputObject
+        type: InputObject
+        default:
+        summary: |
+          The input object representing the alternate activation action.
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - UI
 callbacks: []

@@ -5,7 +5,10 @@
 name: DigitsRigDescription
 type: class
 memory_category: Animation
-summary: ''
+summary: |
+  Maps the 15 phalanx joints of one hand (5 fingers, 3 joints each) and exposes
+  forward- and inverse-kinematics helpers for controlling finger poses at
+  runtime.
 description: |
   Enables interoperability of animations across hand rigs and drives the hand
   finger solver. Each `DigitsRigDescription` maps the 15 phalanx joints of one

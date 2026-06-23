@@ -47,7 +47,8 @@ properties:
       shadow's edges appear softer.
 
       Note that the scale factor of this `Datatype.UDim` property is relative to
-      the parent's width or height, whichever is shorter.
+      the parent's width or height, whichever is shorter. This property must
+      also be non-negative; a negative value will be treated as `0`.
     code_samples: []
     type: UDim
     tags: []
