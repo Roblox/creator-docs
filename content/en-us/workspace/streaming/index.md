@@ -272,9 +272,7 @@ Once enabled, colored highlighted regions appear in the 3D viewport:
 <Alert severity="info">
 To increase the ability to zoom the default camera considerably far out while debugging, temporarily increase `Class.StarterPlayer.CameraMaxZoomDistance` while in edit mode or `Class.Player.CameraMaxZoomDistance` during runtime. A value of `1000`, for example, allows you to pull the camera out to view most of the 3D world while still navigating the character around.
 </Alert>
-
-<br/>
-<br/>
+<br/><br/>
 
 Inside of the Streaming debug view, you can see colored highlighted spaces within the 2D Panel UI:
 
