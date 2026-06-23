@@ -3,11 +3,71 @@ title: Collaboration
 description: Studio's built-in collaboration tools let creators contribute independently, or work together with a team.
 ---
 
+<Alert severity="error">
+Starting **June 25, 2026**, you and your collaborators must meet [age-based collaboration requirements](#age-based-collaboration-requirements) to use Studio's built-in collaboration tools.
+</Alert>
+
 Creating a high-quality experience demands many skills such as modeling, scripting, user interface design, and audio production. It's unlikely that one person has all of these skills, which makes collaboration between different roles an essential part of the development workflow.
 
 With Studio's **built-in** **collaboration tools**, creators can contribute to experiences independently on their own time, or work together with their team all at the same time.
 
 <img src="../assets/studio/collaboration/Collaborative-Session.jpg" alt="Three creators working together in a collaborative session, each with different color markers to demonstrate what objects they're currently editing in the environment." />
+
+## Age-based collaboration requirements
+
+<Alert severity="warning">
+This requirement only applies if you're using Studio's collaboration tools with other creators. You can still use these tools by yourself without completing an age check.
+</Alert>
+
+To use Studio's collaboration tools with other creators, you must first complete an age check by either [verifying your ID](./../production/publishing/account-verification.md#verify-through-government-id) or [completing a facial age estimation](https://en.help.roblox.com/hc/en-us/articles/42295385001236-How-does-Roblox-estimate-my-age).
+
+By default, you can only collaborate with creators in compatible age groups. For example, a 16-year-old creator can be in a collaborative session with a creator who is 17 and another who is 21. A creator who is under 13, however, must have parental permission to collaborate with creators who are older than 18.
+
+<table>
+  <thead>
+    <tr>
+      <th>Your age group</th>
+      <th>Can collaborate with</th>
+      <th>Cannot collaborate with</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Under 9</td>
+      <td>Users under 13</td>
+      <td>Users 13 and older</td>
+    </tr>
+    <tr>
+      <td>9–12</td>
+      <td>Users under 16</td>
+      <td>Users 16 and older</td>
+    </tr>
+    <tr>
+      <td>13–15</td>
+      <td>Users aged 9–17</td>
+      <td>Users under 9 and 18+</td>
+    </tr>
+    <tr>
+      <td>16–17</td>
+      <td>Users 13 and older</td>
+      <td>Users under 13</td>
+    </tr>
+    <tr>
+      <td>18+</td>
+      <td>Users 16 and older</td>
+      <td>Users under 16</td>
+    </tr>
+  </tbody>
+</table>
+
+If you're **under 13** and your team includes creators outside of your age group, you have two options:
+
+- **Trusted friends.** Add specific collaborators as [trusted friends](https://en.help.roblox.com/hc/en-us/articles/37725513985812-Unlocking-trusted-friends), who can collaborate with each other regardless of age. Trusted friend requests from users under 13 require parental approval.
+- **Linked parent account.** Request permission to collaborate with all age groups through a [linked parent account](https://en.help.roblox.com/hc/en-us/articles/30428321333140-Parents-How-to-Link-Your-Child-s-Account).
+
+  Parental permission to collaborate with all age groups doesn't guarantee access to every collaboration session. If another collaborator has their own permissions restricted to similar age groups or trusted friends only, you won't be able to join their session unless they add you as a trusted friend.
+
+If you're **13 or older** and your team includes creators outside of your age group, you can add those collaborators as [trusted friends](https://en.help.roblox.com/hc/en-us/articles/37725513985812-Unlocking-trusted-friends). Trusted friends can collaborate with each other regardless of age. For larger teams, you can add multiple collaborators as trusted friends at once from Studio.
 
 ## Manage collaborators
 
@@ -301,7 +361,7 @@ During a collaborative session, Studio automatically saves the project to the cl
 
 ## Revert to previous versions
 
-The owner of an experience can revert changes made by other editors. See [here](../projects/configure-experiences.md#access-version-history) for instructions.
+The owner of an experience can revert changes made by other editors. See [here](../projects/configure-games.md#access-version-history) for instructions.
 
 <Alert severity="error">
 Be careful when reverting changes. If anyone is currently editing the experience in a collaborative session, their changes may still auto‑save and overwrite the revert action. To ensure that nobody else is editing the place when you revert, [disable collaboration](#disable-collaboration).

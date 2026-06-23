@@ -47,11 +47,36 @@ This minimum conversion requirement streamlines the conversion process, prevents
 
 ## Manage your ads
 
-Use the Ads Manager to create and manage ad campaigns for your experiences. With this tool, you can set budgets, select creatives, and control delivery settings while monitoring and adjusting your campaigns over time.
+Use the Ads Manager to create and manage ad campaigns for your games. With this tool, you can set budgets, select creatives, and control delivery settings while monitoring and adjusting your campaigns over time.
 
 ### Ad campaign components
 
 Ad campaigns are made up of a few core components that control how your ads are delivered, how much you spend, and what players see.
+
+<h5 style={{marginTop: '36px'}}>Goals</h5>
+
+Each ad campaign has a single goal that determines who Roblox shows the campaign to and how its performance is measured. Choose the goal that matches what you're trying to achieve with the campaign.
+
+- **Plays**
+
+  The **Plays** objective reaches players who are most likely to start a session in your game. Use it when you want broad distribution, are testing new ideas with a wide audience, or want initial traffic to help recommendation systems learn what's working and qualify your game for Recommended For You.
+
+- **Earnings** (Limited)
+
+  The Earnings objective reaches players who are most likely to spend Robux in your game. Use it to increase earnings by acquiring new high-value players, especially if your game has a well-developed in-game economy.
+
+- **Engagement**
+
+  The Engagement objective reaches age-checked highly engaged players whose sessions count toward your highly engaged player threshold for [Roblox Kids and Select](../publishing/kids-and-select.md). Use it if you want a more direct path toward meeting the threshold.
+
+  Many games reach the threshold organically over time, so using the Engagement objective is optional.
+
+  When using the Engagement objective, keep the following in mind:
+
+  - **Expect a higher cost per play (CPP).** The highly engaged player audience is smaller than the Plays audience, which typically results in a higher CPP.
+  - **Use a dedicated budget.** Consider Engagement as a separate investment if your goal is to make progress toward the Roblox Kids and Select threshold, instead of shifting spend from Plays campaigns.
+  - **Track your progress.** Engagement campaigns do not automatically pause when you reach your Highly Engaged Player threshold. Track your progress and pause the campaign when you reach your goal.
+  - **Allow time for results.** Most campaigns require several days to produce meaningful results. If you don't see progress after 3–5 days, consider improving your game's onboarding and first-time user experience before continuing.
 
 <h5 style={{marginTop: '36px'}}>Automated bidding</h5>
 
@@ -70,7 +95,7 @@ During campaign creation, you can enable **auto-reload** to automatically purcha
 
 <h5 style={{marginTop: '36px'}}>Creatives</h5>
 
-An ad creative is the thumbnail that shows up on a player's Home page when you sponsor an experience. You can select up to 10 thumbnails for your ad campaign, which are then evenly distributed across players' Home pages. After you create a campaign, you can edit the campaign to turn specific thumbnails on and off.
+An ad creative is the thumbnail that shows up on a player's Home page when you sponsor a game. You can select up to 10 thumbnails for your ad campaign, which are then evenly distributed across players' Home pages. After you create a campaign, you can edit the campaign to turn specific thumbnails on and off.
 
 You can use existing thumbnail images you have previously uploaded to the Creator Hub, or upload new ad-specific images with the Ads Manager. Any image you use as a thumbnail is resized to a ratio of 16:9 when displayed on the Home page.
 
@@ -81,29 +106,33 @@ Your ad campaign is automatically shown in both the Home page and search results
 </Alert>
 
 <Alert severity="warning">
-Ad campaigns for experiences that are not unique can result in **no ad spend** and **no conversions**.
+Ad campaigns for games that are not unique can result in **no ad spend** and **no conversions**.
 
-Experiences with metadata and place files that closely resemble existing experiences on Roblox are not prioritized for recommendations and might rank lower in search results. Campaigns for these experiences might not be effective.
+Games with metadata and place files that closely resemble existing games on Roblox are not prioritized for recommendations and might rank lower in search results. Campaigns for these games might not be effective.
 </Alert>
 
 To create an ad campaign:
 
 1. Go to **Manage Ads** and click **Create Campaign**.
 2. Under **Experience**:
-   1. Select the experience you want players to join when they click on your ad.
+   1. Select the game you want players to join when they click on your ad.
    2. Enter a name for the campaign.
-   3. <Chip label="OPTIONAL" size="small" variant="outlined" /> Select **Advanced options** to send players to a specific place in your experience when they click your ad. For more information, see [Advanced join options](#advanced-join-options).
-3. Under **Goal**, select a goal for the ad campaign:
+   3. <Chip label="OPTIONAL" size="small" variant="outlined" /> Select **Advanced options** to send players to a specific place in your game when they click your ad. For more information, see [Advanced join options](#advanced-join-options).
+3. Under **Goal**, select an objective for the ad campaign:
 
    <table>
    <tbody>
    <tr>
       <td>**Plays**</td>
-      <td>Reach the players most likely to stay engaged with your experience.</td>
+      <td>Find the most players for your game.</td>
    </tr>
    <tr>
-      <td>(Coming soon) **Earnings**</td>
-      <td>Reach the players most likely to spend money inside your experience.</td>
+      <td>(Limited) **Earnings**</td>
+      <td>Reach the players most likely to spend money inside your game.</td>
+   </tr>
+   <tr>
+      <td>**Engagement**</td>
+      <td>Grow the number of highly engaged players in your game.</td>
    </tr>
    </tbody>
    </table>
@@ -120,15 +149,15 @@ To create an ad campaign:
       </tr>
       <tr>
          <td>**New Players**</td>
-         <td>Show ad to players who have never played your experience, or who haven’t played it in 180+ days.</td>
+         <td>Show ad to players who have never played your game, or who haven’t played it in 180+ days.</td>
       </tr>
       <tr>
          <td>**Recent Players**</td>
-         <td>Show ad to players who have played your experience in the last 30 days. Only available for experiences with 10,000 recent players or more.</td>
+         <td>Show ad to players who have played your game in the last 30 days. Only available for games with 10,000 recent players or more.</td>
       </tr>
       <tr>
          <td>**Lapsed Players**</td>
-         <td>Show ad to players who played your experience 30 to 180 days ago but haven’t returned. Only available for experiences with 20,000 lapsed players or more.</td>
+         <td>Show ad to players who played your game 30 to 180 days ago but haven’t returned. Only available for games with 20,000 lapsed players or more.</td>
       </tr>
       </tbody>
       </table>
@@ -187,10 +216,10 @@ Cancelling a campaign automatically cancels any associated ads, returns any ad c
 
 ### Advanced join options
 
-Advanced join options let you control where users land in your experience when they click your ad. You can also include launch data to identify which players joined through a specific ad campaign, allowing you to personalize a player's experience or trigger custom effects when they join.
+Advanced join options let you control where users land in your game when they click your ad. You can also include launch data to identify which players joined through a specific ad campaign, allowing you to personalize a player's experience or trigger custom effects when they join.
 
 <Alert severity="info">
-  Launch data appears in the join URL and isn’t hidden. Users can share the URL and join your experience with the same launch data, so joins using your campaign’s launch data might not exactly match your experience’s sponsored tile play metrics.
+  Launch data appears in the join URL and isn’t hidden. Users can share the URL and join your game with the same launch data, so joins using your campaign’s launch data might not exactly match your game’s sponsored tile play metrics.
 </Alert>
 
 By identifying which players joined through a specific ad, you can:
@@ -202,7 +231,7 @@ By identifying which players joined through a specific ad, you can:
 To customize your campaign's join options:
 
 1. During campaign creation, click **Advanced options** to open the **Advanced join options** panel.
-2. Select the start place you want to send players to when they click your ad. If you don't select a start place, players are sent to your experience's default spawn location.
+2. Select the start place you want to send players to when they click your ad. If you don't select a start place, players are sent to your game's default spawn location.
 3. Set launch data parameters.
 4. Use the launch URL to test the join implementation before launching the campaign.
 
@@ -210,7 +239,7 @@ To customize your campaign's join options:
   Both selecting a start place and setting launch data parameters are optional and independent of each other. You can customize a player's start place without using launch data, or use launch data to run custom logic while sending players to the default start place.
 </Alert>
 
-If you set launch data parameters, you must open Roblox Studio and update `Class.Player.GetJoinData|GetJoinData` in your experience's `onPlayerAdded` function to retrieve the launch data. You can then check whether a player joined through the specific ad campaign associated with those parameters and run custom logic, such as granting rewards or triggering other in-game effects.
+If you set launch data parameters, you must open Roblox Studio and update `Class.Player.GetJoinData|GetJoinData` in your game's `onPlayerAdded` function to retrieve the launch data. You can then check whether a player joined through the specific ad campaign associated with those parameters and run custom logic, such as granting rewards or triggering other in-game effects.
 
 The following example updates the `onPlayerAdded` function to retrieve and check the launch data parameters you defined when creating the campaign.
 
@@ -239,6 +268,8 @@ Reports provide insights into the overall effectiveness of your ad campaigns. Yo
 To view your reports, go to **Manage Ads** and select the date range and game you want to analyze.
 
 Impressions and clicks are reported in real time. Reporting on plays and earnings, however, relies on **attribution** and can include events that occur up to 30 days after an ad is served.
+
+Data can also take up to 48 hours to appear in reports. This delay is most noticeable for post-click metrics such as plays and earnings, which require additional processing and verification before credit can be assigned to the correct events.
 
 The goal of attribution is to assign credits to Ads Manager based on the role advertising plays in acquiring users and driving conversions. This helps you understand how your ad spend contributes to your growth and earnings.
 
@@ -288,7 +319,7 @@ The reporting views include:
 The following examples show you how attribution works across different user types and reporting views:
 
 - If a user last played less than 7 days ago from another source, the ad is only credited for that play and any Robux generated during that session.
-- If a user joins your experience for the first time through an ad, their plays and Robux spend are credited to that ad for the next 30 days.
+- If a user joins your game for the first time through an ad, their plays and Robux spend are credited to that ad for the next 30 days.
 - If a user comes back through an ad after not playing for at least 7 days, they're considered resurrected by the ad. Their plays and Robux spend are then credited to that ad for the next 7 days.
 
 <Alert severity='warning'>
@@ -366,7 +397,7 @@ The reporting table includes:
   </tr>
   <tr>
     <td>**Plays**</td>
-    <td>The number of times players entered and started playing your experience as a result of your campaign.</td>
+    <td>The number of times players entered and started playing your game as a result of your campaign.</td>
   </tr>
   <tr>
     <td>**CPP (Cost-per-play)**</td>

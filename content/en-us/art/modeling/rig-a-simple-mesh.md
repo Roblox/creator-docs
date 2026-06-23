@@ -21,24 +21,8 @@ To rig a simple model in Blender:
 
 To start the process of creating a rigged mesh, first set up the following in your Blender project:
 
-- Set up Blender's [scene unit and unit scale properties](#set-scene-and-scale) to Studio's proportions.
-- [Import the model into Blender](#import-a-model) using Blender's file importer.
-
-### Set scene and scale
-
-When setting up Blender projects for Roblox Studio to import, you should modify Blender's default **scene units** and **unit scale** properties to ensure they closely align with Studio's scale.
-
-To start a new Blender project and set scene unit properties:
-
 1. Open a new **General** project in Blender.
 2. Select the default shape, camera, and lights, then press <kbd>Delete</kbd>.
-3. In the left-hand navigation of the **Properties Editor**, navigate to **Scene Properties**.
-
-   <img src="../../assets/modeling/skinned-meshes/Blender-Scene-Units-Icon.png" width="320" />
-
-4. In the **Units** section, change the **Unit Scale** to **0.01** and the **Length** to **Centimeters**.
-
-   <video controls src="../../assets/modeling/meshes/rigging-simple/1-setting-up-blender.mp4" width="80%"></video>
 
 ### Import a model
 

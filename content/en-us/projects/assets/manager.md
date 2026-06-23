@@ -1,11 +1,11 @@
 ---
 title: Asset Manager
-description: The Asset Manager lets you manage places and bulk import assets into your experience.
+description: The Asset Manager lets you manage places and bulk import assets into your game.
 ---
 
 import BetaAlert from '../../includes/beta-features/beta-alert.md'
 
-The **Asset Manager**, accessible from Studio's **Window** menu or **Home** tab, lets you manage [places](../../production/publishing/publish-experiences-and-places.md) and bulk import assets into your experience, including [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [packages](../../projects/assets/packages.md), [audio](../../audio/assets.md), and [models](../../parts/models.md).
+The **Asset Manager**, accessible from Studio's **Window** menu or **Home** tab, lets you manage [places](../../production/publishing/publish-games-and-places.md) and bulk import assets into your game, including [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [packages](../../projects/assets/packages.md), [audio](../../audio/assets.md), and [models](../../parts/models.md).
 
 ## Current
 
@@ -109,7 +109,7 @@ Quick actions are accessible by right-clicking an asset name/tile and selecting 
   </tr>
   <tr>
     <td>**Remove From Game**</td>
-    <td>Completely removes the place from the experience. Not applicable to the [starting place](../../production/publishing/publish-experiences-and-places.md#change-start-place).</td>
+    <td>Completely removes the place from the game. Not applicable to the [starting place](../../production/publishing/publish-games-and-places.md#change-start-place).</td>
   </tr>
 </tbody>
 </table>
@@ -141,7 +141,7 @@ Quick actions are accessible by right-clicking an asset name/tile and selecting 
   </tr>
   <tr>
     <td>**Remove From Game**</td>
-    <td>Removes the image from the **Asset Manager** but does not remove its instances from the experience.</td>
+    <td>Removes the image from the **Asset Manager** but does not remove its instances from the game.</td>
   </tr>
 </tbody>
 </table>
@@ -181,7 +181,7 @@ Quick actions are accessible by right-clicking an asset name/tile and selecting 
   </tr>
   <tr>
     <td>**Remove From Game**</td>
-    <td>Removes the mesh from the **Asset Manager** but does not remove its instances from the experience.</td>
+    <td>Removes the mesh from the **Asset Manager** but does not remove its instances from the game.</td>
   </tr>
 </tbody>
 </table>
@@ -241,7 +241,7 @@ Quick actions are accessible by right-clicking an asset name/tile and selecting 
   </tr>
   <tr>
     <td>**Remove From Game**</td>
-    <td>Removes the audio from the **Asset Manager** but does not remove its instances from the experience.</td>
+    <td>Removes the audio from the **Asset Manager** but does not remove its instances from the game.</td>
   </tr>
 </tbody>
 </table>
@@ -300,8 +300,8 @@ Assets are sorted by various **inventories** as selected through the collapsible
 
 <img src="../../assets/studio/asset-manager/Inventory-Sorts.png" width="800" alt="A preview of how inventories are sorted in the left navigation of the Asset Manager." />
 
-- **\<Experience Name>** — The open experience's inventory, displayed by its name, with assets [shared with the experience](../../projects/assets/privacy.md#to-experiences) listed under **Project**.
-- **Places In Experience** — The experience's current [places](../../production/publishing/publish-experiences-and-places.md).
+- **\<Experience Name>** — The open game's inventory, displayed by its name, with assets [shared with the game](../../projects/assets/privacy.md#to-experiences) listed under **Project**.
+- **Places In Experience** — The game's [places](../../production/publishing/publish-games-and-places.md).
 - **My Inventory** — Assets imported to your own user account, [shared with you](../../projects/assets/privacy.md#to-creators), or acquired from the [Creator Store](../../production/creator-store.md).
 - **Group Inventories** — Assets imported into [groups](../../projects/groups.md) you own or groups you belong to (assuming you have sufficient [permissions](../../projects/groups.md#roles-and-permissions) within the group), or assets [shared with the groups](../../projects/assets/privacy.md#to-groups). Right‑clicking over a group reveals a context menu with the following options:
 
@@ -324,7 +324,7 @@ Assets are sorted by various **inventories** as selected through the collapsible
 
 ### Folders
 
-Folders let you organize assets and other folders into a hierarchy within an inventory. You can create folders inside **My&nbsp;Inventory**, inside **Group&nbsp;Inventories** that support folder operations, and inside an open experience's inventory under **Project**.
+Folders let you organize assets and other folders into a hierarchy within an inventory. You can create folders inside **My&nbsp;Inventory**, inside **Group&nbsp;Inventories** that support folder operations, and inside an open game's inventory under **Project**.
 
 Folders have the following limits:
 
@@ -547,7 +547,7 @@ Quick actions are accessible by right‑clicking an asset name/tile and selectin
   </tr>
 	<tr>
     <td>**Remove&nbsp;From Experience**</td>
-    <td>Completely removes the place from the experience. Not applicable to the [starting place](../../production/publishing/publish-experiences-and-places.md#change-start-place).</td>
+    <td>Completely removes the place from the game. Not applicable to the [starting place](../../production/publishing/publish-games-and-places.md#change-start-place).</td>
   </tr>
 	<tr>
     <td>**Copy Asset ID**</td>

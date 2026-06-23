@@ -253,6 +253,7 @@ descendants:
   - ScreenshotHud
   - ScriptBuilder
   - ScriptContext
+  - ScriptDebuggerService
   - ScriptProfilerService
   - ScriptService
   - Selection
@@ -815,6 +816,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - CreateInstances
+    simulationAccess: true
   - name: Instance:clone
     summary: ''
     description: ''
@@ -832,6 +834,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - CreateInstances
+    simulationAccess: true
   - name: Instance:Destroy
     summary: |
       Sets the `Class.Instance.Parent` property to `nil`, locks the
@@ -1842,14 +1845,16 @@ methods:
     capabilities: []
     simulationAccess: true
   - name: Instance:QueryDescendants
-    summary: ''
+    summary: |
+      Returns an array containing all descendants of the instance that match the
+      `selector` string.
     description: |
-      This object method returns an array which contains the descendants of that
-      object matching the provided `selector` string. The `selector` string can
-      include multiple selectors and combinators to match characteristics such
-      as the class name, instance name, hierarchy relationships, as well as
+      This object method returns an array that contains all descendants of the
+      object that match the provided `selector` string. `selector` can include
+      multiple selectors and combinators to match characteristics such as the
+      class name, instance name, and hierarchy relationships, as well as
       specific values of instance properties and attributes. The `selector`
-      grammar is similar to the one used in `Class.StyleRule` with only a few
+      grammar is similar to the one used in `Class.StyleRule`, with only a few
       differences regarding which parts of the grammar are supported or not.
 
       #### Selectors

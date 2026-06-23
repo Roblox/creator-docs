@@ -252,7 +252,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 Caged accessories, like layered clothing, use `Class.WrapTarget` and `Class.WrapLayer` to stretch and wrap over a target `Class.Model`. Layered accessories can work with both standard [R15 Roblox characters](../characters/index.md#avatar-characters) and non-R15 models.
 
-Custom implementation of layered clothing, such as a model using a unique cage UV map, cannot be uploaded and published to the Marketplace. For more information, see [Layered clothing specifications](../art/accessories/clothing-specifications.md).
+Custom implementation of layered clothing, such as a model using a unique cage UV map, cannot be uploaded and published to the Marketplace. For more information, see [Layered clothing specifications](../avatar/layered-accessories/specifications.md).
 
 Whether you are implementing layered accessories on an avatar R15 rig, or using a custom rig, ensure that your accessories and bodies include the following:
 
@@ -267,9 +267,9 @@ Whether you are implementing layered accessories on an avatar R15 rig, or using 
 <Alert severity = 'info'>
 See the following resources for additional information on layered clothing and caging:
 
-- [Layered clothing caging overview](../art/accessories/layered-clothing.md#inner-and-outer-cages)
-- [Layered clothing caging best practices](../art/accessories/caging-best-practices.md)
-- [Layered clothing cage mesh specifications](../art/accessories/clothing-specifications.md#cage-meshes)
-- [Avatar body cage specifications](../art/characters/specifications.md#outer-cages)
+- [Layered clothing caging overview](../avatar/layered-accessories/index.md#inner-and-outer-cages)
+- [Layered clothing caging best practices](../avatar/layered-accessories/caging-best-practices.md)
+- [Layered clothing cage mesh specifications](../avatar/layered-accessories/specifications.md#cage-meshes)
+- [Avatar body cage specifications](../avatar/character-bodies/specifications.md#outer-cages)
 
 </Alert>

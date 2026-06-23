@@ -223,7 +223,9 @@ methods:
       - type: ()
         summary: ''
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      Use `Class.InputBinding:Fire()` with a `Enum.InputBindingType|Scriptable`
+      binding instead.
     security: None
     thread_safety: Unsafe
     capabilities:

@@ -54,13 +54,24 @@ jobs:
           rm -rf temp_content/
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 22.10.0
+          node-version-file: .nvmrc
+
+      - name: Cache node_modules
+        id: cache-node-modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
 
       - name: Install Node.js dependencies
         shell: bash
-        run: npm ci
+        run: |
+          if [ "${{ steps.cache-node-modules.outputs.cache-hit }}" != "true" ]; then
+            echo "Node modules cache not found, installing dependencies..."
+            npm ci --quiet
+          fi
 
       - name: Print workflow information
         env:

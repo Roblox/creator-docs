@@ -1,18 +1,18 @@
 ---
 title: Projects
-description: An overview of projects and experiences in Roblox.
+description: An overview of projects and games in Roblox.
 ---
 
-A Roblox project is a collection of [places](#places), [assets](#assets), [settings](#settings), and other resources that together represent an **experience**. Roblox stores your projects in the cloud for convenient collaboration, editing, and version control. You create and manage projects with [Roblox Studio](../studio/index.md), an all‑in‑one IDE that provides building, scripting, testing, and publishing tools.
+A Roblox project is a collection of [places](#places), [assets](#assets), [settings](#settings), and other resources that together represent a **game**. Roblox stores your projects in the cloud for convenient collaboration, editing, and version control. You create and manage projects with [Roblox Studio](../studio/index.md), an all‑in‑one IDE that provides building, scripting, testing, and publishing tools.
 
 ## Places
 
-Experiences on Roblox are made up of individual **places**, comparable to scenes in Unity or maps in Unreal Engine. Each place contains all components for that portion of the experience, including its specific environment, parts, meshes, scripts, and user interface.
+Games on Roblox are made up of individual **places**, comparable to scenes in Unity or maps in Unreal Engine. Each place contains all components for that portion of the game, including its specific environment, parts, meshes, scripts, and user interface.
 
-See the pages for [creating and publishing](../production/publishing/publish-experiences-and-places.md), [configuring](./configure-experiences.md), and [updating](./update-experiences.md) experiences and places for details.
+See the pages for [creating and publishing](../production/publishing/publish-games-and-places.md), [configuring](./configure-games.md), and [updating](./update-games.md) games and places for details.
 
 <figure>
-<img src="../assets/publishing/experiences-places-assets/Experience-Hierarchy.png" alt="An experience grouping of three individual places with unique environments." width="800" />
+<img src="../assets/publishing/experiences-places-assets/Experience-Hierarchy.png" alt="A game grouping of three individual places with unique environments." width="800" />
 </figure>
 
 Every place is represented by a **data model**, a hierarchy of objects that describe everything about the place. The Roblox Engine uses the data model as a source of truth for a place's state, so it can simulate and render it on client devices. For more information on how the engine interprets the data model, see [Client-server runtime](../projects/client-server.md).
@@ -24,7 +24,7 @@ objects are available and how to organize and use them, see
 
 ## Assets
 
-In Roblox, assets such as images, meshes, and audio are stored as **cloud-based assets**, so you don't need to bundle local copies into a saved Studio experience. Each asset in the cloud is assigned a unique **asset&nbsp;ID** from which multiple experiences can utilize them. You can create assets directly in Studio, such as models, or import assets like images, audio, and meshes from other tools.
+In Roblox, assets such as images, meshes, and audio are stored as **cloud-based assets**, so you don't need to bundle local copies into a saved Studio game. Each asset in the cloud is assigned a unique **asset&nbsp;ID** from which multiple games can utilize them. You can create assets directly in Studio, such as models, or import assets like images, audio, and meshes from other tools.
 
 <GridContainer numColumns="3">
   <figure>
@@ -41,13 +41,13 @@ In Roblox, assets such as images, meshes, and audio are stored as **cloud-based 
   </figure>
 </GridContainer>
 
-By default, assets are private to your experience and you can use an asset in any place by referencing its ID. You can also distribute them to the community in the [Creator Store](https://create.roblox.com/store/), so others can use them as well.
+By default, assets are private to your game and you can use an asset in any place by referencing its ID. You can also distribute them to the community in the [Creator Store](https://create.roblox.com/store/), so others can use them as well.
 
 For more information on how to import and publish assets, see [Assets](../projects/assets/index.md).
 
 ## Packages
 
-[Packages](../projects/assets/packages.md) are reusable object hierarchies that you can define and reuse in multiple places across multiple experiences. For any large project, packages offer the following benefits:
+[Packages](../projects/assets/packages.md) are reusable object hierarchies that you can define and reuse in multiple places across multiple games. For any large project, packages offer the following benefits:
 
 - Packages can be used as asset kits, allowing you to duplicate a set of objects as needed.
 - Packages make it easier to update assets. For instance, a package can include a tree that's duplicated many times in an environment. If you need to make a change, such as swap textures for the tree, it can be updated once in the package instead of for each individual instance.
@@ -55,12 +55,12 @@ For more information on how to import and publish assets, see [Assets](../projec
 
 ## Settings
 
-Experience settings are managed from the [Creator Dashboard](https://create.roblox.com/dashboard/creations) or within Studio, including:
+Game settings are managed from the [Creator Dashboard](https://create.roblox.com/dashboard/creations) or within Studio, including:
 
-- **Basic Info** &mdash; Basic information about the experience, such as its name, description, and genre. Much of the information here is used in your experience's listing.
-- **Communication** &mdash; Settings which enable eligible users to use [voice chat](../chat/voice-chat.md) or animate their avatar via their camera within your experience.
-- **Permissions** &mdash; Configures who can access your experience. New experiences begin as **private** and can only be edited and joined by you and members of your [group](../projects/groups.md) with the correct permissions. When appropriate, you can [release](../production/publishing/publish-experiences-and-places.md#make-experience-public) the experience to the public.
-- **Monetization** &mdash; Options for earning revenue from your experience, as outlined in [Monetization](../production/monetization/index.md).
+- **Basic Info** &mdash; Basic information about the game, such as its name, description, and genre. Much of the information here is used in your game's listing.
+- **Communication** &mdash; Settings which enable eligible users to use [voice chat](../chat/voice-chat.md) or animate their avatar via their camera within your game.
+- **Permissions** &mdash; Configures who can access your game. New games begin as **private** and can only be edited and joined by you and members of your [group](../projects/groups.md) with the correct permissions. When appropriate, you can [release](../production/publishing/publish-games-and-places.md#make-game-public) the game to the public.
+- **Monetization** &mdash; Options for earning revenue from your game, as outlined in [Monetization](../production/monetization/index.md).
 - **Localization** &mdash; Configuration for different [languages and regions](../production/localization/index.md).
 - **Avatar** &mdash; Settings related to avatars, such as avatar scaling and
   clothing overrides.
@@ -68,7 +68,7 @@ Experience settings are managed from the [Creator Dashboard](https://create.robl
 ## Collaboration
 
 With Studio's **built-in collaboration tools**, team members can contribute to
-experiences independently on their own time, or alongside others. Key features
+games independently on their own time, or alongside others. Key features
 include:
 
 - Group admins can manage which members have access to collaborate and which do
@@ -83,14 +83,14 @@ For more information, see [Collaboration](../projects/collaboration.md).
 
 ## Testing
 
-Your [team](../projects/groups.md) can instantly test an experience on PC, mobile, VR, and other devices you wish to support through the Roblox app; no need to compile builds, deploy to app stores, or await app store approval.
+Your [team](../projects/groups.md) can instantly test a game on PC, mobile, VR, and other devices you wish to support through the Roblox app; no need to compile builds, deploy to app stores, or await app store approval.
 
-Studio offers a suite of options for testing an experience before releasing it to the public:
+Studio offers a suite of options for testing a game before releasing it to the public:
 
-- **Rapid playtesting** that provides a close simulation of the experience
+- **Rapid playtesting** that provides a close simulation of the game
   running on the Roblox application.
 - **Multi-client simulation** for comparing how each client "sees" other clients
-  within the experience.
+  within the game.
 - **Device emulation** that provides insight on how controls operate on a mobile
   device or how on-screen UI displays on different screens and aspect ratios.
 - **Collaborative playtesting** with members of your team.

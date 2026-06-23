@@ -1037,7 +1037,7 @@ methods:
   - name: UserInputService:GetStringForKeyCode
     summary: |
       Returns a string representing a key the user should press in order to
-      input a given `Enum.KeyCode`.
+      input a given `Enum.KeyCode`, optionally in an abbreviated format.
     description: |
       This method returns a string representing a key the user should press in
       order to input a given `Enum.KeyCode`, keeping in mind their keyboard
@@ -1083,6 +1083,14 @@ methods:
           </tr>
         </tbody>
       </table>
+
+      #### Abbreviated Format
+
+      When `format` is set to `Enum.KeyCodeStringFormat.Abbreviated`, the method
+      returns shortened key names suitable for compact UI elements, for example
+      `"LCtrl"` instead of `"LeftControl"`, `"Bksp"` instead of `"Backspace"`,
+      or `"Esc"` instead of `"Escape"`. If no abbreviation exists for the given
+      key code, the default string is returned.
 
       #### Gamepad Usage
 
@@ -1325,10 +1333,21 @@ methods:
       - name: keyCode
         type: KeyCode
         default:
-        summary: ''
+        summary: |
+          The `Enum.KeyCode` to get the display string for.
+      - name: format
+        type: KeyCodeStringFormat
+        default:
+        summary: |
+          An `Enum.KeyCodeStringFormat` value that controls the format of the
+          returned string. Defaults to `Enum.KeyCodeStringFormat.Default`. Pass
+          `Enum.KeyCodeStringFormat.Abbreviated` to get shortened labels
+          suitable for compact UI such as `"Bksp"`, `"LCtrl"`, or `"Esc"`.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          A string representing the key the user should press for the given key
+          code, formatted according to the specified `Enum.KeyCodeStringFormat`.
     tags: []
     deprecation_message: ''
     security: None

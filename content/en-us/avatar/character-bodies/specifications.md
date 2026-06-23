@@ -1,0 +1,873 @@
+---
+title: Character specifications
+description: Character specification lists the specific technical requirements for custom characters created outside of Studio.
+---
+
+Character models require a specific set of components and configuration standards to ensure all avatar features work as expected. Check that your model meets the following modeling specifications and guidelines before exporting to ensure Studio compatibility.
+
+When ready to export, see the [export requirements](../../avatar/character-bodies/export.md) for mesh export settings for Blender and Maya.
+
+<Alert severity = 'warning'>
+<AlertTitle>If creating other types of 3D models:</AlertTitle>
+<ul>
+<li>For generic meshes, see [general mesh specifications](../../art/modeling/specifications.md) and [general export settings](../../art/modeling/export-requirements.md).</li> <br />
+<li>For rigid accessories, see [accessory specifications](../rigid-accessories/specifications.md) and [accessory export settings](../rigid-accessories/export.md).</li> <br />
+<li>For layered accessories, see [layered accessory specifications](../layered-accessories/specifications.md) and [layered export settings](../layered-accessories/export.md).</li> <br />
+</ul>
+</Alert>
+
+## Geometry
+
+Avatar character models are made up of 15 separate mesh objects and require additional geometry requirements to import into Studio and publish successfully. In addition to the body [scale types](#body-scale), [parts](#body-parts), and [triangle budget](#triangle-budgets) specifications, ensure that your models also fulfill the following general requirements when modeling:
+
+- **Watertight** - All geometry must be watertight without exposed holes or backfaces. Meshes used as outer cages do not need to be watertight.
+- **No N-gons** - Model your assets in quads where possible.
+- **Transformations** - All translation, rotation, and scale values must be frozen and pivots set to `0`, `0`, `0`.
+- **Orientation** - Characters must face positive Z and stand up in positive Y.
+- **Pose** - Before exporting, set your character to an I-Pose, A-Pose, or T-Pose when possible.
+
+### Body scale
+
+Roblox supports 3 standards of body scales: **Normal**, **Slender**, and **Classic**. These standards allow developers to create experiences and spaces with consistent body sizes for standardizing movement and interaction. You can select a body scale on import using [Rig Scale options](../../studio/importer.md), or modify the [body scale manually](../../art/accessories/body-scale.md). Body scale persists when the asset is [uploaded to the Marketplace](../../marketplace/publish-to-marketplace.md#upload-an-asset).
+
+<center>
+<figure>
+   <img src="../../assets/art/Body-Scale-Diagram.png" width = "60%"/>
+<figcaption>
+A visualization of how Roblox combines the 15 body parts into 6 distinct assets.
+</figcaption>
+</figure>
+</center>
+
+<Alert severity='warning'>
+Since body assets partially overlap with each other, the total body dimensions do not represent the sum of the avatar's asset dimensions. The total body dimension is the most important factor of each body scale to ensure a standard avatar size and scale.
+</Alert>
+
+#### Normal
+
+<center>
+<figure>
+   <img src="../../assets/art/resources/Body-Scale-Rthro-Normal.png" width = "60%"/>
+<figcaption>
+A Rthro Normal body scale [downloadable mannequin](../../avatar/resources.md#references).
+</figcaption>
+</figure>
+</center>
+
+In the [Importer](../../studio/importer.md#avatar-general), use **Rig Type** > **Rthro** to import your model as a Normal body scale.
+
+<br />
+
+<GridContainer numColumns="2">
+<figure>
+<figcaption><center>Minimum (in studs)</center></figcaption>
+<table>
+<thead>
+  <tr>
+    <th>Part</th>
+    <th>X (width)</th>
+    <th>Y (height)</th>
+    <th>Z (depth)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Head</td>
+    <td>.5</td>
+    <td>.5</td>
+    <td>.5</td>
+  </tr>
+  <tr>
+    <td>Arm</td>
+    <td>.25</td>
+    <td>1.5</td>
+    <td>.25</td>
+  </tr>
+  <tr>
+    <td>Torso</td>
+    <td>.85</td>
+    <td>1.7</td>
+    <td>.7</td>
+  </tr>
+  <tr>
+    <td>Leg</td>
+    <td>.25</td>
+    <td>1.4</td>
+    <td>.5</td>
+  </tr>
+  <tr>
+    <td>**Total**</td>
+    <td>**1.35**</td>
+    <td>**3.6**</td>
+    <td>**.7**</td>
+  </tr>
+</tbody>
+</table>
+</figure>
+<figure>
+<figcaption><center>Maximum (in studs)</center></figcaption>
+<table>
+<thead>
+  <tr>
+    <th>Part</th>
+    <th>X (width)</th>
+    <th>Y (height)</th>
+    <th>Z (depth)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Head</td>
+    <td>3</td>
+    <td>2</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Arm</td>
+    <td>2</td>
+    <td>4.5</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Torso</td>
+    <td>4.6</td>
+    <td>3.5</td>
+    <td>2.25</td>
+  </tr>
+  <tr>
+    <td>Leg</td>
+    <td>1.5</td>
+    <td>4</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>**Total**</td>
+    <td>**8.6**</td>
+    <td>**9.5**</td>
+    <td>**2.25**</td>
+  </tr>
+</tbody>
+</table>
+</figure>
+</GridContainer>
+
+#### Slender
+
+<center>
+<figure>
+   <img src="../../assets/art/resources/Body-Scale-Rthro-Slender.png" width = "60%"/>
+<figcaption>
+A Rthro Slender (Narrow) body scale [downloadable mannequin](../../avatar/resources.md#references).
+</figcaption>
+</figure>
+</center>
+
+In the [Importer](../../studio/importer.md#avatar-general), use **Rig Type** > **Rthro Narrow** to import your model as a Slender body scale.
+
+<br />
+
+<GridContainer numColumns="2">
+<figure>
+<figcaption><center>Minimum (in studs)</center></figcaption>
+<table>
+<thead>
+  <tr>
+    <th>Part</th>
+    <th>X (width)</th>
+    <th>Y (height)</th>
+    <th>Z (depth)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Head</td>
+    <td>.5</td>
+    <td>.5</td>
+    <td>.5</td>
+  </tr>
+  <tr>
+    <td>Arm</td>
+    <td>.25</td>
+    <td>1.5</td>
+    <td>.25</td>
+  </tr>
+  <tr>
+    <td>Torso</td>
+    <td>.85</td>
+    <td>1.7</td>
+    <td>.7</td>
+  </tr>
+  <tr>
+    <td>Leg</td>
+    <td>.25</td>
+    <td>1.4</td>
+    <td>.5</td>
+  </tr>
+  <tr>
+    <td>**Total**</td>
+    <td>**1.35**</td>
+    <td>**3.6**</td>
+    <td>**.7**</td>
+  </tr>
+</tbody>
+</table>
+</figure>
+<figure>
+<figcaption><center>Maximum (in studs)</center></figcaption>
+<table>
+<thead>
+  <tr>
+    <th>Part</th>
+    <th>X (width)</th>
+    <th>Y (height)</th>
+    <th>Z (depth)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Head</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Arm</td>
+    <td>1.5</td>
+    <td>4</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Torso</td>
+    <td>3</td>
+    <td>3.5</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Leg</td>
+    <td>1.5</td>
+    <td>4</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>**Total**</td>
+    <td>**6**</td>
+    <td>**9.5**</td>
+    <td>**2**</td>
+  </tr>
+</tbody>
+</table>
+</figure>
+</GridContainer>
+
+#### Classic
+
+<center>
+<figure>
+   <img src="../../assets/art/resources/Body-Scale-Classic.png" width = "60%"/>
+<figcaption>
+A Classic body scale [downloadable mannequin](../../avatar/resources.md#references).
+</figcaption>
+</figure>
+</center>
+
+In the [Importer](../../studio/importer.md#avatar-general), use **Rig Type** > **Default** to import your model as a Classic body scale.
+
+<br />
+
+<GridContainer numColumns="2">
+<figure>
+<figcaption><center>Minimum (in studs)</center></figcaption>
+<table>
+<thead>
+  <tr>
+    <th>Part</th>
+    <th>X (width)</th>
+    <th>Y (height)</th>
+    <th>Z (depth)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Head</td>
+    <td>.5</td>
+    <td>.5</td>
+    <td>.5</td>
+  </tr>
+  <tr>
+    <td>Arm</td>
+    <td>.25</td>
+    <td>1.5</td>
+    <td>.25</td>
+  </tr>
+  <tr>
+    <td>Torso</td>
+    <td>.85</td>
+    <td>1.7</td>
+    <td>.7</td>
+  </tr>
+  <tr>
+    <td>Leg</td>
+    <td>.25</td>
+    <td>1.4</td>
+    <td>.5</td>
+  </tr>
+  <tr>
+    <td>**Total**</td>
+    <td>**1.35**</td>
+    <td>**3.6**</td>
+    <td>**.7**</td>
+  </tr>
+</tbody>
+</table>
+</figure>
+<figure>
+<figcaption><center>Maximum (in studs)</center></figcaption>
+<table>
+<thead>
+  <tr>
+    <th>Part</th>
+    <th>X (width)</th>
+    <th>Y (height)</th>
+    <th>Z (depth)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Head</td>
+    <td>1.5</td>
+    <td>1.8</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Arm</td>
+    <td>2</td>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Torso</td>
+    <td>4</td>
+    <td>3.8</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Leg</td>
+    <td>1.5</td>
+    <td>3.5</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>**Total**</td>
+    <td>**8**</td>
+    <td>**9.1**</td>
+    <td>**2**</td>
+  </tr>
+</tbody>
+</table>
+</figure>
+</GridContainer>
+
+### Triangle budgets
+
+Although model geometries are typically created using quads, the Roblox Engine converts imported assets into tris. Each asset of your character model must not exceed our maximum tri budget. To quickly get the number of expected tris in your third-party modeling application, you can double the number of quads in your model.
+
+<Alert severity = 'info'>When character models are uploaded to Studio and created into assets for the Marketplace, the body is split into 6 individual assets: **DynamicHead**, **Torso**, **LeftArm**, **RightArm**, **LeftLeg**, **RightLeg**.</Alert>
+
+<table>
+<thead>
+  <tr>
+    <th>Asset type</th>
+    <th>Included mesh objects</th>
+    <th>Maximum triangles</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>DynamicHead</td>
+    <td>Head</td>
+    <td>4000</td>
+  </tr>
+  <tr>
+    <td>Torso</td>
+    <td>UpperTorso, LowerTorso</td>
+    <td>1750</td>
+  </tr>
+  <tr>
+    <td>LeftArm </td>
+    <td>LeftUpperArm, LeftLowerArm, LeftHand</td>
+    <td>1248</td>
+  </tr>
+  <tr>
+    <td>Right Arm</td>
+    <td>RightUpperArm, RightLowerArm, RightHand</td>
+    <td>1248</td>
+  </tr>
+  <tr>
+    <td>LeftLeg </td>
+    <td>LeftUpperLeg, LeftLowerLeg, LeftFoot</td>
+    <td>1248</td>
+  </tr>
+  <tr>
+    <td>Right Leg</td>
+    <td>RightUpperLeg, RightLowerLeg, RightFoot</td>
+    <td>1248</td>
+  </tr>
+  <tr>
+    <td>Total</td>
+    <td>Head, UpperTorso, LowerTorso, LeftUpperArm, LeftLowerArm, LeftHand, RightUpperArm, RightLowerArm, RightHand, LeftUpperLeg, LeftLowerLeg, LeftFoot, RightUpperLeg, RightLowerLeg, RightFoot</td>
+    <td>10,742</td>
+  </tr>
+</tbody>
+</table>
+
+### Body parts
+
+See the following specifications for the individual mesh objects that make up a character model:
+
+- **Naming Convention** - Limbs must all be specifically named:
+  - UpperTorso_Geo
+  - LowerTorso_Geo
+  - LeftUpperArm_Geo
+  - LeftLowerArm_Geo
+  - LeftHand_Geo
+  - RightUpperArm_Geo
+  - RightLowerArm_Geo
+  - RightHand_Geo
+  - LeftUpperLeg_Geo
+  - LeftLowerLeg_Geo
+  - LeftFoot_Geo
+  - RightUpperLeg_Geo
+  - RightLowerLeg_Geo
+  - RightFoot_Geo
+  - Head_Geo
+- **Caps** - Limbs must be capped, so that they form a full watertight mesh when separated from the body. Caps can be rounded or flat depending on design.
+
+   <img src="../../assets/modeling/meshes/Modeling-Requirements-Caps.png" width="600" />
+
+<Alert severity = 'info'>
+<AlertTitle>Interested in creating a higher-fidelity avatar?</AlertTitle>
+<br></br>
+Higher-fidelity character models require the same 15 mesh objects and naming structure. The only difference is that the mesh objects in higher-fidelity character models can have additional internal bones or joints. When these bones or joints are present in a character model, their corresponding mesh objects need to be [skinned](#skinning) for accurate deformation.
+</Alert>
+
+### Face accessories
+
+Face accessories, such as hair, eyebrows, and eyelashes are unique accessories that you can bundle with an avatar body upload. At this time, eyebrows and eyelashes can not be uploaded as standalone accessories and must be bundled with an avatar body. See [Accessory specifications](../rigid-accessories/specifications.md#face-accessories) for additional information on face accessories.
+
+### Visibility
+
+To ensure that avatar sizes are visually consistent, you must standardize body part visibility with the following requirements:
+
+- **Opacity** - Body parts must be fully opaque.
+- **Bounding Boxes** - Body part assets must take up a significant visible portion of their bounding box in a front, side, and back view.
+  - Body parts, such as Torso, Left Arm, Right Leg, must take up at least 50% of body part's bounding box.
+  - The head part must take up at least 50% of the mesh's bounding box.
+    <GridContainer numColumns="2">
+      <figure>
+        <img src="../../assets/art/avatar/Valid-Visibility.png" />
+        <figcaption>An acceptable head mesh example that takes up a majority of the bounding box in the front view</figcaption>
+      </figure>
+      <figure>
+        <img src="../../assets/art/avatar/Invalid-Visibility.png" />
+        <figcaption>A non-acceptable head mesh example that does not take up the appropriate amount of bounding box space in the front view</figcaption>
+      </figure>
+    </GridContainer>
+
+## Attachments
+
+Attachments are points on the humanoid model where rigid accessories attach. Like many [character components](./index.md#components-of-an-avatar), attachment points are set up in third-party modeling software and imported as `Class.Attachment` objects.
+
+The Importer automatically recognizes and converts mesh objects as attachment points if the objects include the affix `\_Att` and follow the naming conventions below. This only applies when importing meshes with caging data, such as bodies (accessory attachment points are created using the Accessory Fitting Tool). Check out examples of this implementation in any of the [downloadable reference models](../../avatar/resources.md#references).
+
+Generally, when placing attachment points, position them so they overlap halfway with the character model's mesh part.
+
+  <GridContainer numColumns="2">
+    <figure>
+      <img src="../../assets/modeling/meshes/Collar-Attachment-1.png" />
+      <figcaption>Incorrect placement of collar attachments</figcaption>
+    </figure>
+    <figure>
+      <img src="../../assets/modeling/meshes/Collar-Attachment-2.png" />
+      <figcaption>Correct placement of collar attachments</figcaption>
+    </figure>
+  </GridContainer>
+
+Attachments must follow a specific naming convention and positional consistency:
+
+<table>
+<thead>
+  <tr>
+    <th>Mesh part</th>
+    <th>Attachment name</th>
+    <th>Details</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="4">Head</td>
+    <td>FaceCenter_Att</td>
+    <td>Anywhere within mesh bounding box</td>
+  </tr>
+  <tr>
+    <td>FaceFront_Att</td>
+    <td>Front half of mesh bounding box</td>
+  </tr>
+  <tr>
+    <td>Hat_Att</td>
+    <td>Top half of mesh bounding box, can overlap with Hair_Att</td>
+  </tr>
+  <tr>
+    <td>Hair_Att</td>
+    <td>Top half of mesh bounding box, can overlap with Hat_Att</td>
+  </tr>
+  <tr>
+    <td rowspan="5">UpperTorso</td>
+    <td>LeftCollar_Att</td>
+    <td>Left top half of mesh bounding box</td>
+  </tr>
+  <tr>
+    <td>RightCollar_Att</td>
+    <td>Right top half of mesh bounding box</td>
+  </tr>
+  <tr>
+    <td>Neck_Att</td>
+    <td>Top half of mesh bounding box</td>
+  </tr>
+  <tr>
+    <td>BodyBack_Att</td>
+    <td>Back half of mesh bounding box</td>
+  </tr>
+  <tr>
+    <td>BodyFront_Att</td>
+    <td>Front half of mesh bounding box</td>
+  </tr>
+  <tr>
+    <td rowspan="4">LowerTorso</td>
+    <td>Root_Att</td>
+    <td>Must set to `0`, `0`, `0` position</td>
+  </tr>
+  <tr>
+    <td>WaistFront_Att</td>
+    <td>Front half of mesh bounding box, can overlap with WaistCenter_Att</td>
+  </tr>
+  <tr>
+    <td>WaistBack_Att</td>
+    <td>Back half of mesh bounding box</td>
+  </tr>
+  <tr>
+    <td>WaistCenter_Att</td>
+    <td>Anywhere in mesh bounding box, can overlap with WaistFront_Att</td>
+  </tr>
+  <tr>
+    <td>RightUpperArm</td>
+    <td>RightShoulder_Att</td>
+    <td>Top half of mesh bounding box</td>
+  </tr>
+  <tr>
+    <td>RightHand</td>
+    <td>RightGrip_Att</td>
+    <td>Anywhere in mesh bounding box. <br/><br/>Orient grip attachments **perpendicular** to the lower arm bone. For example, for I-Pose (arms pointing down), set the grip attachment to `90`, `0`, `0` (grip attachment pointing forward).<br/><br/><img src="../../assets/modeling/meshes/Grip_Attachments.png" width="250" /></td>
+  </tr>
+  <tr>
+    <td>LeftUpperArm</td>
+    <td>LeftShoulder_Att</td>
+    <td>Top half of mesh bounding box</td>
+  </tr>
+  <tr>
+    <td>LeftHand</td>
+    <td>LeftGrip_Att</td>
+    <td>Anywhere in mesh bounding box. <br/><br/>Orient grip attachments **perpendicular** to the lower arm bone. For example, for I-Pose (arms pointing down), set the grip attachment to `90`, `0`, `0` (grip attachment pointing forward).<br/><br/><img src="../../assets/modeling/meshes/Grip_Attachments.png" width="250" /></td>
+  </tr>
+  <tr>
+    <td>RightFoot</td>
+    <td>RightFoot_Att</td>
+    <td>Anywhere in mesh bounding box</td>
+  </tr>
+  <tr>
+    <td>LeftFoot</td>
+    <td>LeftFoot_Att</td>
+    <td>Anywhere in mesh bounding box</td>
+  </tr>
+</tbody>
+</table>
+
+## Rigging
+
+Unlike generic rigs, humanoid models require a specific hierarchy and naming conventions for the internal bone or joint structure.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../../assets/animation/importing-custom-3d-rigs/Birdcaller-Imported.jpeg" />
+    <figcaption>Humanoid rig model</figcaption>
+  </figure>
+  <figure>
+    <img src="../../assets/animation/importing-custom-3d-rigs/Rig-Hierarchy-Birdcaller-Blender-Bones.png" width="75%" />
+    <figcaption>Humanoid rig bone structure (Blender)</figcaption>
+  </figure>
+</GridContainer>
+
+### Standard rigs
+
+The following requirements are for standard humanoid rigging.
+
+- **Rig Hierarchy** - Humanoid rigs require a specific bone or joint hierarchy and naming convention:
+
+  - Root
+    - HumanoidRootNode
+      - LowerTorso
+        - UpperTorso
+          - Head (representing the base of the neck)
+          - LeftUpperArm
+            - LeftLowerArm
+              - LeftHand
+          - RightUpperArm
+            - RightLowerArm
+              - RightHand
+        - LeftUpperLeg
+          - LeftLowerLeg
+            - LeftFoot
+        - RightUpperLeg
+          - RightLowerLeg
+            - RightFoot
+
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant="subtitle2">Blender standard humanoid rig hierarchy with all bones</Typography>
+</AccordionSummary>
+<AccordionDetails>
+
+<img src="../../assets/modeling/skinned-meshes/Rig-Hierarchy-Blender.png" />
+
+</AccordionDetails>
+</BaseAccordion>
+
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant="subtitle2">Maya standard humanoid rig hierarchy with all joints</Typography>
+</AccordionSummary>
+<AccordionDetails>
+
+<img src="../../assets/modeling/skinned-meshes/Rig-Hierarchy-Maya.png" />
+
+</AccordionDetails>
+</BaseAccordion>
+
+- **LowerTorso and Root** - The LowerTorso and Root bone or joint position must be set to `0`, `0`, `0`.
+- **Pose** - Export your character model in an I-Pose, A-Pose, or T-Pose for the best Studio compatibility. The LeftUpperArm and RightUpperArm bones can be exported with rotation values to meet this requirement.
+
+### Higher-fidelity rigs
+
+Higher-fidelity humanoid rigs have the same requirements as standard rigs, but they support up to 37 additional optional bones or joints for a higher level of realism with articulated hands, shoulders, and spine movements.
+
+You do not need to include every optional bone or joint for a higher-fidelity humanoid rig, but each optional bone or joint you include must follow a specific hierarchy and naming convention for the respective body part.
+
+<Tabs>
+<TabItem key = "1" label="Torso">
+
+<table>
+<thead>
+  <tr>
+    <th>Hierarchy</th>
+    <th>Example Rig Setup</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><ul><li>UpperTorso<ul><li>Spine<ul><li>Chest<ul><li>Head<ul><li>HeadBase</li></ul></li><li>RightClavicle<ul><li>RightUpperArm</li></ul></li><li>LeftClavicle<ul><li>LeftUpperArm</li></ul></li></ul></li></ul></li></ul></li></ul></td>
+    <td><img src="../../assets/avatar/specifications/High-Fidelity-Torso.png" /></td>
+  </tr>
+</tbody>
+</table>
+
+</TabItem>
+<TabItem key = "2" label="LeftHand">
+
+<table>
+<thead>
+  <tr>
+    <th>Hierarchy</th>
+    <th>Example Rig Setup</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><ul><li>LeftHand<ul><li>LeftHandThumb1<ul><li>LeftHandThumb2<ul><li>LeftHandThumb3</li></ul></li></ul></li><li>LeftHandIndex1<ul><li>LeftHandIndex2<ul><li>LeftHandIndex3</li></ul></li></ul></li><li>LeftHandMiddle1<ul><li>LeftHandMiddle2<ul><li>LeftHandMiddle3</li></ul></li></ul></li><li>LeftHandRing1<ul><li>LeftHandRing2<ul><li>LeftHandRing3</li></ul></li></ul></li><li>LeftHandPinky1<ul><li>LeftHandPinky2<ul><li>LeftHandPinky3</li></ul></li></ul></li></ul></li></ul></td>
+    <td><img src="../../assets/avatar/specifications/High-Fidelity-LeftHand.png" /></td>
+  </tr>
+</tbody>
+</table>
+
+</TabItem>
+<TabItem key = "3" label="RightHand">
+
+<table>
+<thead>
+  <tr>
+    <th>Hierarchy</th>
+    <th>Example Rig Setup</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><ul><li>RightHand<ul><li>RightHandThumb1<ul><li>RightHandThumb2<ul><li>RightHandThumb3</li></ul></li></ul></li><li>RightHandIndex1<ul><li>RightHandIndex2<ul><li>RightHandIndex3</li></ul></li></ul></li><li>RightHandMiddle1<ul><li>RightHandMiddle2<ul><li>RightHandMiddle3</li></ul></li></ul></li><li>RightHandRing1<ul><li>RightHandRing2<ul><li>RightHandRing3</li></ul></li></ul></li><li>RightHandPinky1<ul><li>RightHandPinky2<ul><li>RightHandPinky3</li></ul></li></ul></li></ul></li></ul></td>
+    <td><img src="../../assets/avatar/specifications/High-Fidelity-RightHand.png" /></td>
+  </tr>
+</tbody>
+</table>
+
+</TabItem>
+<TabItem key = "4" label="LeftFoot">
+
+<table>
+<thead>
+  <tr>
+    <th>Hierarchy</th>
+    <th>Example Rig Setup</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><ul><li>LeftFoot<ul><li>LeftToeBase</li></ul></li></ul></td>
+    <td><img src="../../assets/avatar/specifications/High-Fidelity-LeftFoot.png" /></td>
+  </tr>
+</tbody>
+</table>
+
+</TabItem>
+<TabItem key = "5" label="RightFoot">
+
+<table>
+<thead>
+  <tr>
+    <th>Hierarchy</th>
+    <th>Example Rig Setup</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><ul><li>RightFoot<ul><li>RightToeBase</li></ul></li></ul></td>
+    <td><img src="../../assets/avatar/specifications/High-Fidelity-RightFoot.png" /></td>
+  </tr>
+</tbody>
+</table>
+
+</TabItem>
+</Tabs>
+
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant="subtitle2">Blender humanoid rig hierarchy with all optional bones</Typography>
+</AccordionSummary>
+<AccordionDetails>
+
+<img src="../../assets/modeling/skinned-meshes/R15Plus-Rig-Hierarchy-Blender.png" />
+
+</AccordionDetails>
+</BaseAccordion>
+
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant="subtitle2">Maya humanoid rig hierarchy with all optional joints</Typography>
+</AccordionSummary>
+<AccordionDetails>
+
+<img src="../../assets/modeling/skinned-meshes/R15Plus-Rig-Hierarchy-Maya.png" />
+
+</AccordionDetails>
+</BaseAccordion>
+<br />
+
+<Alert severity = 'info'>
+Make sure that you skin each additional bone or joint's corresponding mesh object for accurate deformation.
+</Alert>
+
+After you [import a higher-fidelity character rig](./import.md) into Studio, you **must** insert a `Class.HumanoidRigDescription` and/or `Class.DigitsRigDescription` objects into your rig to be able to sell your character on the Marketplace, and for your animations to work properly:
+
+- `Class.HumanoidRigDescription` objects are necessary for animating individual body parts and adjusting behavioral characteristics of the rig, such as each bone or joint's size and range of motion.
+- `Class.DigitsRigDescription` objects are necessary for hand articulation. Your character needs one for each hand with optional bone or joints.
+
+Both of these object types detect bones or joints by their naming conventions, so it is very important to ensure every optional bone or joint is named correctly following the table above **before** you import your character rig into Studio. For a set of higher-fidelity rigs that you can reference, see [Resources - Higher-fidelity rigs](../../avatar/resources.md#higher-fidelity-rigs).
+
+## Skinning
+
+Roblox supports skinning for rigged meshes. See [Rigging and Skinning](../../art/modeling/rigging.md) for more details on implementing skinned meshes in your experience.
+
+See the following requirements for skinning:
+
+- **Max Influences** - A vertex can not be influenced by more than 4 bones or joints.
+- **No Root Influences** - Do not apply influences to the Root bone or joint.
+- **Symmetry** - When possible, maintain symmetry when applying influences to a rig.
+
+## Facial animation
+
+For information on required facial animation support, see [head specifications](../dynamic-heads/specifications.md#facs-animation).
+
+## Textures
+
+- Textures for Marketplace assets can't exceed 2048x2048 resolution.
+- Textures created for accessories must meet Roblox's [texture specifications](../../art/modeling/texture-specifications.md). High resolution textures are automatically converted to lower-resolution textures to optimize performance.
+- Avatar characters must follow Roblox's [texture specifications](../../art/modeling/texture-specifications.md). Characters created for the Marketplace can take advantage of [custom skin tones](#custom-skin-tone) which use alpha layers allow users to select their own base color.
+
+### Custom skin tone
+
+When texturing an avatar character model where the user can set their own skin tone, set the exposed skin areas as transparent so a default color or texture is not baked into the texture. When rendering, the Studio engine applies the transparent layer on top without any layer effects. This step applies mostly to human-like characters with exposed skin that you intend users to customize.
+
+The following are examples of skin tone shading for the face, and you can apply this process with any part of an avatar with exposed skin:
+
+<GridContainer numColumns="2">
+<figure>
+  <img src="../../assets/modeling/meshes/mesh-requirements/Face-Tone-Transparent.png" />
+</figure>
+<figure>
+  - Use 100% opacity for areas not related to a customized skin tone, such as eyes and brows.
+  - When applying shading, use black at low opacity and adjust opacity when needed.
+  - For areas that are partially translucent, such as shading contours or certain cosmetic features, leave some transparency for partial visibility of the skin tone.
+  - You should consistently test out how various colors layers can interact with your shading.
+</figure>
+</GridContainer>
+
+<GridContainer numColumns="4">
+  <figure>
+  <img src="../../assets/modeling/meshes/mesh-requirements/Face-Tone-Beige.png" />
+  <figcaption>Beige</figcaption>
+  </figure>
+  <figure>
+  <img src="../../assets/modeling/meshes/mesh-requirements/Face-Tone-Blue.png" />
+  <figcaption>Blue</figcaption>
+  </figure>
+  <figure>
+  <img src="../../assets/modeling/meshes/mesh-requirements/Face-Tone-Brown.png" />
+  <figcaption>Brown</figcaption>
+  </figure>
+  <figure>
+  <img src="../../assets/modeling/meshes/mesh-requirements/Face-Tone-Pink.png" />
+  <figcaption>Pink</figcaption>
+  </figure>
+</GridContainer>
+
+## Outer cages
+
+Outer cages on your character model allow your character to wear layerable accessories, such as clothing. Models, such as an avatar character, that are the target of meshes that will stretch over it, only require an outer cage, but meshes that deform, like [layered clothing](../layered-accessories/specifications.md#cage-meshes), require an inner and outer cage.
+
+For general use, see the following requirements for adding outer cage meshes to your model:
+
+- Use Roblox's [Avatar Setup](../../avatar-setup/index.md) or Roblox's [body cage templates](../../avatar/resources.md#project-files) to ensure naming convention and other configurations are correct.
+- **Naming Conventions** - The outer cage of a body part must be named after the primary mesh object with **\_OuterCage** affixed, for example `LeftUpperArm_OuterCage`.
+- **Vertices and UV Map** - Don't delete vertices or alter the UVs on the Outer Cages as this can cause errors when importing in Studio or when equipping onto a character. Use the Roblox provided templates for the cage meshes to ensure compatibility with other layered assets.
+- **Symmetry and consistency** - Keep each face (the space between vertices) consistently sized and retain symmetry wherever possible. Use symmetry tools in your modeling software whenever possible.
+- For information on head cages and best practices, see [head specifications](../dynamic-heads/specifications.md#head-cage).
+
+## Marketplace requirements
+
+Along with the other technical requirements listed, your items must meet the following additional specifications before uploading them to the Marketplace to sell:
+
+- Ensure that your items adhere to the [Marketplace program guidelines](../../marketplace/marketplace-policy.md).
+- Whenever possible, ensure that your items adhere to the following modeling requirements:
+  - [Custom mesh specifications](../../art/modeling/specifications.md)
+  - Any applicable [avatar specifications](../../avatar/character-bodies/specifications.md)
+- Object `Class.MeshPart.Material|Material` is set to `Plastic`.
+- Object `Class.MeshPart.Transparency|Transparency` is set to `0`.
+- Object `Class.MeshPart.VertexColor|VertexColor` is the default `1, 1, 1`.
+- If your head includes separate eyelash and eyebrow assets, you must add them to your character model as `Class.Accessory` objects.
+  - See [accessory specifications](../../avatar/rigid-accessories/specifications.md) for additional technical requirements.
+- Your `Class.Model` instance doesn't contain extraneous objects, like `Class.Script` or additional `Class.Part` instances.

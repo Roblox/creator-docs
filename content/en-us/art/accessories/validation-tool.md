@@ -16,7 +16,7 @@ The **Layered Clothing Validation Tool** is a supplemental tool you can install 
   </figure>
 </GridContainer>
 
-While this tool can save you time in the typical iteration process between your 3D modeling program and Studio, the tool doesn't provide comprehensive verification of all aspects of layered clothing assets. You must ensure your layered clothing model meets both the [general mesh requirements](../../art/modeling/specifications.md) and Roblox-specific [layered clothing requirements](../../art/accessories/specifications.md#layered-requirements) prior to importing it into Studio.
+While this tool can save you time in the typical iteration process between your 3D modeling program and Studio, the tool doesn't provide comprehensive verification of all aspects of layered clothing assets. You must ensure your layered clothing model meets both the [general mesh requirements](../../art/modeling/specifications.md) and Roblox-specific [layered clothing requirements](../../avatar/layered-accessories/specifications.md) prior to importing it into Studio.
 
 ## Install the Clothing Validation Tool
 
@@ -126,7 +126,7 @@ To use the Validation Tool on your asset:
 3. Results with issues are highlighted with red or yellow. Some issues can be automatically corrected by clicking the highlighted button.
 
 <Alert severity="info">
-This Validation Tool only checks for common clothing creation issues. Ensure your layered clothing model meets both the [general mesh specifications](../../art/modeling/specifications.md) and Roblox-specific [layered clothing specifications](../../art/accessories/specifications.md#layered-requirements) before uploading to Studio.
+This Validation Tool only checks for common clothing creation issues. Ensure your layered clothing model meets both the [general mesh specifications](../../art/modeling/specifications.md) and Roblox-specific [layered clothing specifications](../../avatar/layered-accessories/specifications.md) before uploading to Studio.
 </Alert>
 
 ## Checks and troubleshooting steps

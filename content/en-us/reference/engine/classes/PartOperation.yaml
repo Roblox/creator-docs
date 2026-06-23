@@ -121,17 +121,15 @@ properties:
       The number of polygons in this solid model.
     code_samples: []
     type: int
-    tags:
-      - ReadOnly
-      - NotReplicated
+    tags: []
     deprecation_message: ''
     security:
       read: None
-      write: None
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Data
     serialization:
-      can_load: false
+      can_load: true
       can_save: true
     capabilities:
       - Basic

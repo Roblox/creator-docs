@@ -5,7 +5,7 @@ next: /art/characters/creating/head-objects
 prev: /art/characters/creating/
 ---
 
-Each template comes pre-baked with the [necessary components of an avatar character](../../../art/characters/index.md#components-of-an-avatar) to save you time and effort in creating a custom avatar character. When creating characters from scratch, these individual components typically take a lot of time and a deep technical background in your modeling application. Templates allow you to skip several steps and work from a variety of base character shapes.
+Each template comes pre-baked with the [necessary components of an avatar character](../../../avatar/character-bodies/index.md#components-of-an-avatar) to save you time and effort in creating a custom avatar character. When creating characters from scratch, these individual components typically take a lot of time and a deep technical background in your modeling application. Templates allow you to skip several steps and work from a variety of base character shapes.
 
 <table>
 <thead>
@@ -44,7 +44,7 @@ You can choose from a variety of templates that best match your final design and
 Each `.zip` contains a `.blend`, `.fbx`, and PBR texture `.png` files for that template model. If using Blender or following the [template creation guides](../../../art/characters/creating/index.md), use the `.blend` project.
 
 <Alert severity = 'warning'>
-Some of the template files include additional mesh assets for eyebrows and eyelashes. These eyebrows and eyelashes versions may not be fully compatible with the template body. For the latest information on eyebrows and eyelashes, see [Makeup](../../../makeup/index.md#components-of-makeup).
+Some of the template files include additional mesh assets for eyebrows and eyelashes. These eyebrows and eyelashes versions may not be fully compatible with the template body. For the latest information on eyebrows and eyelashes, see [Makeup](../../../avatar/makeup/index.md#components-of-makeup).
 </Alert>
 
 <Tabs>

@@ -39,8 +39,20 @@ tags:
 deprecation_message: ''
 properties:
   - name: Selection.SelectionThickness
-    summary: ''
-    description: ''
+    summary: |
+      The thickness of the selection highlight outline drawn around selected
+      `Class.Instance|Instances` in Roblox Studio's viewport.
+    description: |
+      The thickness of the selection highlight outline drawn around selected
+      `Class.Instance|Instances` in Roblox Studio's viewport.
+
+      This read-only property returns the current outline thickness as a float.
+      The default value is `0.02`. The value is controlled by Roblox Studio and
+      cannot be changed through the scripting API.
+
+      This property can be read in `Class.Plugin|Plugins` to query the current
+      selection visualization setting, such as when drawing custom overlays that
+      need to match the built-in selection appearance.
     code_samples: []
     type: float
     tags:
@@ -59,14 +71,29 @@ properties:
       - Basic
 methods:
   - name: Selection:Add
-    summary: ''
-    description: ''
+    summary: |
+      Adds the given `Class.Instance|Instances` to the current selection in
+      Roblox Studio.
+    description: |
+      Adds the `Class.Instance|Instances` in the given array to the current
+      selection. `Class.Instance|Instances` that are already selected remain
+      selected.
+
+      Calling this function fires the `Class.Selection.SelectionChanged` event
+      if any new `Class.Instance|Instances` are added to the selection.
+
+      Note this function can only be used in `Class.Plugin|Plugins` or the
+      command bar. For setting the selection to an entirely new set of
+      instances, see `Class.Selection:Set()`. For removing instances from the
+      current selection, see `Class.Selection:Remove()`.
     code_samples: []
     parameters:
       - name: instancesToAdd
         type: Instances
         default:
-        summary: ''
+        summary: |
+          An array of `Class.Instance|Instances` to add to the current
+          selection.
     returns:
       - type: ()
         summary: ''
@@ -108,14 +135,29 @@ methods:
     capabilities:
       - Basic
   - name: Selection:Remove
-    summary: ''
-    description: ''
+    summary: |
+      Removes the given `Class.Instance|Instances` from the current selection in
+      Roblox Studio.
+    description: |
+      Removes the `Class.Instance|Instances` in the given array from the current
+      selection. `Class.Instance|Instances` that are not currently selected are
+      ignored.
+
+      Calling this function fires the `Class.Selection.SelectionChanged` event
+      if any `Class.Instance|Instances` are removed from the selection.
+
+      Note this function can only be used in `Class.Plugin|Plugins` or the
+      command bar. For adding instances to the current selection, see
+      `Class.Selection:Add()`. For replacing the selection entirely, see
+      `Class.Selection:Set()`.
     code_samples: []
     parameters:
       - name: instancesToRemove
         type: Instances
         default:
-        summary: ''
+        summary: |
+          An array of `Class.Instance|Instances` to remove from the current
+          selection.
     returns:
       - type: ()
         summary: ''

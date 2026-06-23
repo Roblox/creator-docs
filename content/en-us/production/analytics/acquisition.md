@@ -24,7 +24,7 @@ On the acquisition dashboard, you'll see the following charts and tables:
 - New users with impressions per source
 - Returning users with plays per source
 - Returning users with impressions per source
-- Qualified play through rate
+- Play through rate
 - Cumulative new users funnel
 
 Here's a list of all the available acquisition sources:
@@ -98,8 +98,8 @@ You can view the acquisition dashboard by [acquisition source](#acquisition-sour
     <td>Unique new users with plays on the experience.</td>
   </tr>
   <tr>
-    <td>Qualified play through rate</td>
-    <td>Percent of new users who engaged with your experience after viewing an impression.</td>
+    <td>Conversion rate</td>
+    <td>Percent of new users who played your experience after viewing an impression.</td>
   </tr>
   <tr>
     <td>D7 retention</td>
@@ -145,14 +145,14 @@ You can adopt the following strategies to improve the number of users visiting y
 
 For more information on Roblox sources and best practices on improving the discovery of your experience, see [Discovery](../../discovery.md).
 
-### Improve qualified play through rate from Roblox sources
+### Improve play through rate from Roblox sources
 
 You can get more users to convert by making your experience metadata engaging and accurate:
 
 1. **Use a title, description, and icon** that's true and unique to your experience.
 2. **Add images and videos** to your experience detail page to engage users.
 
-<img src="../../assets/analytics/acquisition/Qualified-Play-Through-Rate.png" width= "90%" alt="An example shows the qualified play through rate." />
+<img src="../../assets/analytics/overview/step2.png" width="100%"/>
 
 ## Improve acquisition from external sources
 

@@ -57,7 +57,7 @@ methods:
         summary: |
           The format of the requested ad. For example, `RewardedVideo`.
     returns:
-      - type: Dictionary
+      - type: GetAdAvailabilityNowResult
         summary: |
           A dictionary with the `Enum.AdAvailabilityResult` for the requested ad
           format.
@@ -86,7 +86,7 @@ methods:
           The `Player` you want to check eligibility for. If omitted, it will
           default to `Players.LocalPlayer`.
     returns:
-      - type: Dictionary
+      - type: GetCampaignEligibilityResult
         summary: |
           A dictionary that looks like `{ IsEligible: boolean }`.
     tags:

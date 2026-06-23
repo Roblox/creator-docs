@@ -3,6 +3,11 @@ navigation:
   - heading: Overview
   - title: Get started
     path: /experiences
+  - title: AI accelerated workflows
+    path: /ai/accelerated-workflows
+    section:
+      - title: Build with a coding harness
+        path: /ai/build
   - heading: Create
   - title: Overview
     path: /creation
@@ -11,17 +16,17 @@ navigation:
     section:
       - title: Overview
         path: /projects/
-      - title: Experiences and places
-        path: /production/publishing/publish-experiences-and-places
+      - title: Games and places
+        path: /production/publishing/publish-games-and-places
         section:
           - title: Create and publish
-            path: /production/publishing/publish-experiences-and-places
+            path: /production/publishing/publish-games-and-places
           - title: Configure
-            path: /projects/configure-experiences
+            path: /projects/configure-games
           - title: Release updates
-            path: /projects/update-experiences
+            path: /projects/update-games
           - title: Ownership transfer
-            path: /projects/experience-ownership-transfer
+            path: /projects/game-ownership-transfer
           - title: Place files
             path: /projects/place-files
       - title: Cross-platform development
@@ -308,6 +313,8 @@ navigation:
     section:
       - title: Overview
         path: /players/
+      - title: Users and domain-scoped user IDs
+        path: /players/users
       - title: Teleporting
         path: /projects/teleport
       - title: Teams
@@ -485,7 +492,7 @@ navigation:
         section:
           - title: Overview
             path: /chat/in-experience-text-chat
-          - title: Guidelines
+          - title: Chat system guidelines
             path: /chat/guidelines
           - title: Preset system guidelines
             path: /chat/preset-system-guidelines
@@ -533,6 +540,8 @@ navigation:
         path: /performance-optimization/
       - title: Design for performance
         path: /performance-optimization/design
+      - title: Test on hardware
+        path: /performance-optimization/test-on-hardware
       - title: Identify issues
         path: /performance-optimization/identify
       - title: MicroProfiler

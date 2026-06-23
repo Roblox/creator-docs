@@ -235,7 +235,7 @@
       "get": {
         "tags": ["Cloud"],
         "summary": "List Group Forum Categories",
-        "description": "Lists forum categories in the group.",
+        "description": "Lists forum categories in the group. Supports filtering.",
         "operationId": "Cloud_ListGroupForumCategories",
         "parameters": [
           {
@@ -316,7 +316,7 @@
       "get": {
         "tags": ["Cloud"],
         "summary": "List Group Forum Posts",
-        "description": "Lists forum posts in the group's forum category.",
+        "description": "Lists forum posts in the group's forum category. Supports filtering.",
         "operationId": "Cloud_ListGroupForumPosts",
         "parameters": [
           {
@@ -417,7 +417,7 @@
       "get": {
         "tags": ["Cloud"],
         "summary": "List Group Forum Comments",
-        "description": "Lists forum comments on a group's forum post.",
+        "description": "Lists forum comments on a group's forum post. Supports filtering.",
         "operationId": "Cloud_ListGroupForumComments",
         "parameters": [
           {
@@ -516,7 +516,7 @@
       "get": {
         "tags": ["Cloud"],
         "summary": "List Group Join Requests",
-        "description": "List join requests under a group.",
+        "description": "List join requests under a group. Supports filtering.",
         "operationId": "Cloud_ListGroupJoinRequests",
         "parameters": [
           {
@@ -723,7 +723,7 @@
       "get": {
         "tags": ["Cloud"],
         "summary": "List Group Memberships",
-        "description": "List group members in a group.",
+        "description": "List group members in a group. Supports filtering.",
         "operationId": "Cloud_ListGroupMemberships",
         "parameters": [
           {
@@ -3481,18 +3481,19 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "scope",
+            "in": "query",
+            "description": "The scope of the memory store to flush.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | LIVE |  Flush the live memory store scope. This is the default. |\n  | TEST | Flush the test memory store scope. |",
+            "schema": {
+              "example": "LIVE",
+              "enum": ["LIVE", "TEST"],
+              "type": "string",
+              "format": "enum"
+            }
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/FlushMemoryStoreRequest"
-              }
-            }
-          },
-          "required": true
-        },
         "responses": {
           "200": {
             "description": "OK",
@@ -6580,11 +6581,6 @@
         "type": "object",
         "properties": {},
         "description": "Represents metadata about the long-running operation corresponding to a\nFlushMemoryStore request.\n\nThis is the type of the `Operation.metadata` field in the response to\n`GetOperation` requests for FlushMemoryStore operations."
-      },
-      "FlushMemoryStoreRequest": {
-        "type": "object",
-        "properties": {},
-        "description": "Request body not required."
       },
       "FlushMemoryStoreResponse": {
         "type": "object",

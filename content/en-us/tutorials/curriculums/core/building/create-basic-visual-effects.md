@@ -9,205 +9,185 @@ next: /tutorials/curriculums/core/building/customize-global-lighting
 
 <br/>
 
-**Creating basic special effects** for your experience adds dynamic movement to your environment,
-which results in your world feeling more alive and realistic. In addition, the visual interest
-and motion from special effects often catches players' attention, making them a useful device
-for leading players where you want them to go in your experience.
+A static world can feel lifeless. **Visual effects** add motion, make the environment feel more dynamic, and help draw players' attention to important areas.
 
-This section of the tutorial teaches you how to utilize **particle emitters**, a type of special
-effect that emits 2D images, or particles, in unique ways according to their parent object and
-how you configure their settings. Using examples from the sample [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) experience, you will learn how to customize particle emitters to create both
-powerful and subtle effects, such as the glowing flare that draws players closer, and floating dust
-particles that add texture to the atmosphere.
+In this section, you'll use **particle emitters** to create two effects. The first is a glowing flare on top of the tallest sea stack that draws players' eyes upward, and the second is a layer of drifting dust motes that adds atmosphere and depth to the environment.
+
+<Alert severity="info">
+Particle emitters are primarily configured through numeric properties, making them a good fit for Assistant. Use the **Build with Assistant** tabs to generate a set of working starting values, then adjust the colors and `NumberSequence` curves yourself until the effect looks the way you want.
+</Alert>
 
 ## Create a flare
 
-The first type of particle emitter the sample [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) uses to add dynamic movement to the
-experience is a giant flare at the top of the tallest sea stack platform. As the rest of the environment
-is static, this effect becomes a focal point in the 3D space, which incentivizes players to progress through the environment
-so that they can reach the final platform of the experience.
+The sample [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) game puts a giant flare on top of its tallest platform. Because the rest of the world is still, the flare becomes a focal point, making players naturally want to climb toward it.
 
-To create a flare:
+<Tabs>
+<TabItem key = "1" label="Build with Assistant">
 
-1. In the **Explorer** window, add a new folder into the **World** folder, then rename the new folder to **VFX**.
-1. Add a **block** part into the **VFX** folder, then position the part about 10 studs above your tallest sea stack platform. The sample **Island Jump - Final** experience positions this part above the **Level_7** platform with the following values:
-   <table>
-      <thead>
-      <tr>
-      <th>Size</th>
-      <th>CFrame.Position</th>
-      <th>CFrame.Orientation</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-      <td>`20, 20, 20`</td>
-      <td>`400, 331, 79`</td>
-      <td>`0, 0, 0`</td>
-      </tr>
-      </tbody>
-   </table>
-1. Select this block part, then in the **Properties** window,
-   1. Set **Name** to **VFX_Flare**.
-   1. Set **Transparency** to `1` so the part is invisible.
-   1. Enable **Anchored** so the physics system doesn't move the part when the experience starts.
-1. Add an attachment to this part.
-   1. In the **Explorer** window, hover over the block part and click the **⊕** button. A contextual menu displays.
-   1. From the contextual menu, insert an **Attachment**. An attachment displays in the center of the part in the direction of the positive Y axis.
-1. Add a particle emitter to this attachment, and rename the particle emitter to **Emitter_Flare**. The particle emitter immediately emits particles in the direction of the attachment.
+```text title="Create the flare"
+In Workspace > World, create a new folder named VFX if it doesn't exist.
+Inside the VFX folder, create a block Part named VFX_Flare with Size 20, 20, 20, CFrame.Position 400, 331, 79, and CFrame.Orientation 0, 0, 0. Set Transparency to 1 so the part is invisible, and enable Anchored.
 
-<video controls src="../../../../assets/tutorials/core-building-and-scripting/Flare-1.mp4" width="80%"></video>
+Inside VFX_Flare, create an Attachment.
+
+Inside that Attachment, create a ParticleEmitter named Emitter_Flare with these properties:
+- Texture: rbxassetid://8983307836
+- Color: Color3.fromRGB(127, 84, 59)
+- LightEmission: 1
+- ZOffset: 1
+- Lifetime: NumberRange.new(10, 10)
+- Rate: 0.45
+- RotSpeed: NumberRange.new(20, 20)
+- Speed: NumberRange.new(0, 0)
+- Size: a NumberSequence that starts at 0, grows slowly early in the lifetime, then quickly rises to 10 and stays at 10 for the rest of the lifetime.
+- Transparency: a NumberSequence that stays near 0 (visible) for most of the lifetime, then bounces between values toward the end and settles at 1.
+
+Also inside VFX_Flare (a sibling of the Attachment), create a PointLight with Brightness 2 and Range 36.
+```
+
+After running the prompt, open the **Size** and **Transparency** sequences in the Properties window and tweak the curves yourself until the pulsing feels right.
+</TabItem>
+
+<TabItem key = "2" label="Build it Yourself">
+
+1. In the **Explorer**, hover over **World**, click **&CirclePlus;**, and insert a new folder. Rename it **VFX**. This is where you'll keep all visual effect parts.
+2. Insert a **block** part into the **VFX** folder. The sample places it above `Level_7` with the following properties:
+
+   1. Set **Name** to `VFX_Flare`.
+   2. Set **Size** to `20, 20, 20`.
+   3. Set **CFrame.Position** to `400, 331, 79`.
+   4. Set **CFrame.Orientation** to `0, 0, 0`.
+   5. Set **Transparency** to `1` so the part itself is invisible and only the particles will show.
+   6. Enable **Anchored** so physics doesn't move it.
+
+3. Hover over **VFX_Flare**, click **&CirclePlus;**, and insert an attachment. It appears in the center of the part, and particles will emit from this point.
+4. Insert a **ParticleEmitter** into the attachment and rename it **Emitter_Flare**. Particles start emitting immediately.
+
+   <video controls src="../../../../assets/tutorials/core-building-and-scripting/Flare-1.mp4" width="80%"></video>
 
 ### Configure the flare
 
-Now that you have a particle emitter in your experience, you can customize its properties so that it emits a glowing flare that
-faces players when they start the experience. To learn more about how each property affects the resulting visual effect, see `Class.ParticleEmitter|ParticleEmitter` and [Customizing particles](../../../../effects/particle-emitters.md#customize-particles).
+Now shape the emitter to actually look like a flare. Each property below has a purpose. To learn more about how each property affects the resulting visual effect, see `Class.ParticleEmitter|ParticleEmitter` and [Customizing particles](../../../../effects/particle-emitters.md#customize-particles).
 
-#### Particle image
+1. Select `Emitter_Flare`. In the **Properties** window, set **Texture** to `rbxassetid://8983307836`. You can also upload your own [asset](../../../../projects/assets/index.md) if you want.
+2. Set the rest of the basic properties:
 
-Each particle displays an image set by the `Class.ParticleEmitter.Texture|Texture` property. To use your own image, you need to upload the image to Roblox and get an asset ID. See [Assets](../../../../projects/assets/index.md) for more on this process and how to do it yourself.
+   1. Set **Color** to `127, 84, 59` (or pick your own).
+   2. Set **LightEmission** to `1` so colors blend additively — overlapping particles brighten, which is what the flare texture is designed for.
+   3. Set **ZOffset** to `1`.
+   4. Set **Lifetime** to `10, 10` (`Lifetime` takes a min/max range so each particle picks a random duration; equal values mean no variation).
+   5. Set **Rate** to `0.45`. Rate is particles per second, so this is roughly one every two seconds.
+   6. Set **RotSpeed** to `20`.
+   7. Set **Speed** to `0`.
 
-You can use Roblox's pre-made flare image for the `Class.ParticleEmitter.Texture|Texture` of the particle emitter. To use Roblox's pre-made asset:
-
-1. In the **Explorer** window, select **Emitter_Flare**.
-1. In the **Properties** window, set **Texture** to `rbxassetid://8983307836`.
-
-#### Basic properties
-
-`Class.ParticleEmitter.Rate` determines the amount of particles emitted per second. A rate of `5` means that a particle will emit every `1/5 = 0.2` seconds. Higher values of `Class.ParticleEmitter.ZOffset` means the particles render in front of other objects, while negative values mean they render behind other objects.
-
-`Class.ParticleEmitter.LightEmission` determines the blending of the texture's colors with the colors behind them. At `0` the textures blend normally; at `1` they blend additively so that when particles overlap, their color multiplies to be brighter. The texture provided is designed to be used with this property set to 1.
-
-Properties such as `Class.ParticleEmitter.Lifetime` require a minimum and maximum value, where Roblox chooses a random duration in seconds between the minimum and maximum each time a particle. In this case, the particles should all last 10 seconds with no variation, so both values are `10`.
-
-To configure the basic properties of the particle emitter:
-
-1. In the **Explorer** window, select **Emitter_Flare**.
-1. In the **Properties** window,
-
-   1. Set **Color** to `127, 84, 59`, or to a color you prefer for the flare.
-   1. Set **LightEmission** to `1` to use additive blending.
-   1. Set **ZOffset** to `1` to ensure it appears as expected in relation to the camera.
-   1. Set **Lifetime** to `10, 10`.
-   1. Set **Rate** to `0.45`.
-   1. Set **RotSpeed** to `20` to rotate each particle 20 degrees per second.
-   1. Set **Speed** to `0` to prevent the particle from moving.
-
-#### Lifetime and NumberSequence values
-
-Some properties such as `Class.ParticleEmitter.Size` and `Class.ParticleEmitter.Transparency` use a `Datatype.NumberSequence` to automate changes in the value of the property for a particle throughout its `Class.ParticleEmitter.Lifetime|Lifetime`. For example, the sequences for the flare's `Class.ParticleEmitter.Size|Size` and `Class.ParticleEmitter.Transparency|Transparency` create a pulsing effect each time a particle emits.
-
-To configure the sequences for `Class.ParticleEmitter.Size` and `Class.ParticleEmitter.Transparency`:
-
-1. In the **Explorer** window, select **Emitter_Flare**.
-1. In the **Properties** window, click the **…** next to the value for **Size** to open its `Datatype.NumberSequence`.
-1. Add points to the sequence by clicking on it, and move them until the window resembles the following example:
+3. Some properties use a `Datatype.NumberSequence` so the value can change across a particle's lifetime, which is what gives the flare its pulse. Click the **…** next to **Size** and shape the curve so it starts at `0`, grows slowly, then jumps to `10` and holds for the rest of the lifetime.
 
    <figure>
    <img src="../../../../assets/tutorials/core-building-and-scripting/Flare-NumberSequence-Size.png" alt="A number sequence window where the size starts at 0 and grows slowly in the beginning of its lifetime, then quickly grows to a size of 10 and remains 10 for the duration of the lifetime." width="888" />
    <figcaption>The Y axis represents each particle's size and the X axis represents each particle's lifetime. The size starts at 0 and grows slowly in the beginning of its lifetime, then quickly grows to a size of 10 and remains 10 for the duration of the lifetime.</figcaption>
    </figure>
 
-1. Click the **…** next to the value for **Transparency** to open its sequence.
-1. Add points to the sequence by clicking on it, and move them until the window resembles the following example:
+4. Click the **…** next to **Transparency** to shape that curve. Stay near `0` (visible) for most of the lifetime, then bounce around as the particle fades out and settle at `1`.
 
    <figure>
    <img src="../../../../assets/tutorials/core-building-and-scripting/Flare-NumberSequence-Transparency.png" alt="A number sequence window where the particle is visible (equal or close to 0) for the majority of its lifetime. As the particle approaches the end of its lifetime, its transparency value bounces up and down at different values, settling at 1 at the very end." width="888" />
    <figcaption>The particle is visible (equal or close to 0) for the majority of its lifetime. As the particle approaches the end of its lifetime, its transparency value bounces up and down at different values, settling at 1 at the very end.</figcaption>
    </figure>
 
-<img src="../../../../assets/tutorials/core-building-and-scripting/Final-Flare.jpg" alt="The final version of the flare against a bright blue sky." width="80%" />
+   <img src="../../../../assets/tutorials/core-building-and-scripting/Final-Flare.jpg" alt="The final version of the flare against a bright blue sky." width="80%" />
 
 ### Add a PointLight
 
-To ensure the flare stands out more, you can put a light into it. There are three different light objects you can use:
+To make the flare cast actual light on its surroundings, use a **PointLight**. Roblox has three light types: `Class.PointLight` (light from a single point in all directions), `Class.SpotLight` (a cone in a chosen direction), and `Class.SurfaceLight` (light from one face of a part). For a flare, use `PointLight`.
 
-- `Class.PointLight` emits light spherically from a single point.
-- `Class.SpotLight` emits light in the shape of a cone in a given direction.
-- `Class.SurfaceLight` emits light from one face of a `Class.BasePart`.
+1. Hover over **VFX_Flare**, click **&CirclePlus;**, and insert a **PointLight**.
+2. With the **PointLight** selected, in the **Properties** window:
 
-A `Class.PointLight` is best for this to emit light spherically from the part at the position of the particle effect.
+   1. Set **Brightness** to `2`.
+   2. Set **Range** to `36`.
 
-To create a light source in the part:
+   <img src="../../../../assets/tutorials/core-building-and-scripting/Flare-With-PointLight.jpg" alt="The final version of the flare hovering over a gray cylinder sea stack. The flare emits a gentle glow over the sea stack." width="80%" />
 
-1. Add a **PointLight** to **VFX_Flare**.
-1. Select the **PointLight** object, then in the **Properties** window,
-   1. Set **Brightness** to `2` to make the light brighter.
-   1. Set **Range** to `36` to increase the light's range.
-
-<img src="../../../../assets/tutorials/core-building-and-scripting/Flare-With-PointLight.jpg" alt="The final version of the flare hovering over a gray cylinder sea stack. The flare emits a gentle glow over the sea stack." width="80%" />
+</TabItem>
+</Tabs>
 
 ## Create the dust particles
 
-The second type of particle emitter the sample [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) uses to add dynamic movement to the experience is one that dust particles throughout the atmosphere. These particles surround the player, adding a sense of texture and depth to the air itself.
+The second type of particle emitter the sample game uses to add dynamic movement to the experience is one that dust particles throughout the atmosphere. These particles surround the player, adding a sense of texture and depth to the air itself.
 
-To create dust particles:
+<Tabs>
+<TabItem key = "1" label="Build with Assistant">
 
-1. Insert a **block** part into the **VFX** folder, then scale it to encompass the entire playable area. The sample **Island Jump - Final** experience positions and scales this part with the following values:
+```text title="Create the dust motes"
+In Workspace > World > VFX, create a block Part named VFX_DustMotes with Size 645, 355, 275, CFrame.Position 198, 168, 26, and CFrame.Orientation 0, 0, 0. Set Transparency to 1 so the part is invisible. Disable CanCollide. Enable Anchored.
 
-   <table>
-   <thead>
-   <tr>
-   <th>Size</th>
-   <th>CFrame.Position</th>
-   <th>CFrame.Orientation</th>
-   </tr>
-   </thead>
-   <tbody>
-   <tr>
-   <td>`645, 355, 275`</td>
-   <td>`198, 168, 26`</td>
-   <td>`0, 0, 0`</td>
-   </tr>
-   </tbody>
-   </table>
+Inside VFX_DustMotes, create a ParticleEmitter named Emitter_DustMotes with these properties:
+- Texture: rbxassetid://14302399641
+- Color: Color3.fromRGB(192, 241, 255)
+- ZOffset: -5
+- Lifetime: NumberRange.new(1, 10)
+- Rate: 50000
+- Rotation: NumberRange.new(-45, 45)
+- RotSpeed: NumberRange.new(-60, -60)
+- Speed: NumberRange.new(1, 5)
+- Acceleration: Vector3.new(1, -1, 1)
+- Size: a NumberSequence that rises to about 0.25 shortly after creation, then fades gradually to 0.
+- Transparency: a NumberSequence that begins fully transparent, becomes more opaque (with an envelope of about 0.1) in the middle of the lifetime, then slowly fades out to 1.
+```
 
-1. Select this block part, then in the **Properties** window,
-   1. Set **Name** to **VFX_DustMotes**.
-   1. Set **Transparency** to `1` so the part is invisible.
-   1. Disable **CanCollide** so players don't collide with the part as they move through the playable area.
-   1. Enable **Anchored** so the physics system doesn't move the part when the experience starts.
+After running, open the Size and Transparency sequences and tune the curves by eye until the dust feels right.
+</TabItem>
 
-1. Add a particle emitter to this part, then rename the particle emitter to **Emitter_DustMotes**. The particle emitter immediately emits particles within the part's area.
+<TabItem key = "2" label="Build it Yourself">
 
-<video controls src="../../../../assets/tutorials/core-building-and-scripting/DustParticles-1.mp4" width="80%"></video>
+1. Insert a **block** part into the **VFX** folder and scale it to cover your entire playable area. The sample uses:
+
+   1. Set **Name** to `VFX_DustMotes`.
+   2. Set **Size** to `645, 355, 275`.
+   3. Set **CFrame.Position** to `198, 168, 26`.
+   4. Set **CFrame.Orientation** to `0, 0, 0`.
+   5. Set **Transparency** to `1` so the volume itself is invisible.
+   6. Disable **CanCollide** so players walk through it freely.
+   7. Enable **Anchored**.
+
+2. Insert a **ParticleEmitter** into the part and rename it **Emitter_DustMotes**. Particles fill the volume immediately.
+
+   <video controls src="../../../../assets/tutorials/core-building-and-scripting/DustParticles-1.mp4" width="80%"></video>
 
 ### Configure the dust particles
 
-The dust particle emitter requires some new properties to change. `Class.ParticleEmitter.Acceleration` determines how a particle's `Class.ParticleEmitter.Speed` changes throughout its lifetime. Acceleration is often used to apply a gravity effect to particles with a negative `Y` value.
+The dust particle emitter requires some new properties to change. `Class.ParticleEmitter.Acceleration` determines how a particle's `Class.ParticleEmitter.Speed` changes throughout its lifetime. Acceleration is often used to apply a gravity effect to particles with a negative Y value.
 
 `Class.ParticleEmitter.Rotation` defines the range of rotations in degrees for emitted particles, with positive values corresponding with the clockwise direction. To add some randomness to the rotation of each dust mote, you can create a range of angles to choose from.
 
-For each point in a `Datatype.NumberSequence`, you can set an _envelope_ using the number input at the bottom of the window. An envelope sets the range from which Studio picks a random value higher or lower than the point's value each time a particle emits. The size of the envelope determines the range of the random selection. The sequence for `Class.ParticleEmitter.Transparency` includes an envelope so that each particle's visibility is unpredictable.
+For each point in a `Class.NumberSequence`, you can set an envelope using the number input at the bottom of the window. An envelope sets the range from which Studio picks a random value higher or lower than the point's value each time a particle emits. The size of the envelope determines the range of the random selection. The sequence for `Class.ParticleEmitter.Transparency` includes an envelope so that each particle's visibility is unpredictable.
 
-Here are the values for all other previously explained properties. Refer back to [Configure the flare](#configure-the-flare) for these explanations.
-
-1. In the **Explorer** window, select **Emitter_DustMotes**.
-1. In the **Properties** window,
+1. Select **Emitter_DustMotes** and in the **Properties** window:
 
    1. Set **Color** to `192, 241, 255`.
-   1. Set **Size** to the following `Datatype.NumberSequence`:
+   2. Set **Texture** to `rbxassetid://14302399641`.
+   3. Set **ZOffset** to `-5` so dust renders behind players and objects.
+   4. Set **Lifetime** to `1, 10`.
+   5. Set **Rate** to `50000`. This sounds enormous, but the part is huge so the dust still appears sparse.
+   6. Set **Rotation** to `-45, 45`.
+   7. Set **RotSpeed** to `-60`.
+   8. Set **Speed** to `1, 5`.
+   9. Set **Acceleration** to `1, -1, 1`.
 
-      <figure>
-      <img src="../../../../assets/tutorials/core-building-and-scripting/DustMotes-NumberSequence-Size.png" alt="A number sequence window where the size rises to 0.25 shortly after creation, then fades down gradually to 0." width="888" />
-      <figcaption>The size rises to 0.25 shortly after creation, then fades down gradually to 0</figcaption>
-      </figure>
+2. Click the **…** next to **Size** and shape the `NumberSequence` so it rises to about `0.25` shortly after creation, then fades gradually to `0`.
 
-   1. Set **Texture** to **rbxassetid://14302399641**.
-   1. Set **Transparency** to the following `Datatype.NumberSequence`:
+   <figure>
+   <img src="../../../../assets/tutorials/core-building-and-scripting/DustMotes-NumberSequence-Size.png" alt="A number sequence window where the size rises to 0.25 shortly after creation, then fades down gradually to 0." width="888" />
+   </figure>
 
-      <figure>
-      <img src="../../../../assets/tutorials/core-building-and-scripting/DustMotes-NumberSequence-Transparency.png" alt="A number sequence window where the particle begins fully transparent, becomes randomly more opaque with an envelope of 0.1, then slowly fades out." width="888" />
-      <figcaption>Begins fully transparent, becomes randomly more opaque (envelope of 0.1), then slowly fades out</figcaption>
-      </figure>
+3. Click the **…** next to **Transparency** and shape that curve so it starts fully transparent, becomes more opaque in the middle (with an envelope of about `0.1`), then slowly fades out.
 
-   1. Set **ZOffset** to `-5` so that they appear behind players and other objects.
-   1. Set **Lifetime** `1, 10`.
-   1. Set **Rate** to `50000`. This is a fast rate, but because the volume of the particle emitter's parent part is so large, it appears sparse.
-   1. Set **Rotation** to `-45, 45`.
-   1. Set **RotSpeed** to `-60`.
-   1. Set **Speed** to `1, 5`.
-   1. Set **Acceleration** to `1, -1, 1` to make the particles gently float upwards.
+   <figure>
+   <img src="../../../../assets/tutorials/core-building-and-scripting/DustMotes-NumberSequence-Transparency.png" alt="A number sequence window where the particle begins fully transparent, becomes randomly more opaque with an envelope of 0.1, then slowly fades out." width="888" />
+   </figure>
+
+</TabItem>
+</Tabs>
 
 <figure>
 <img src="../../../../assets/tutorials/core-building-and-scripting/Dust-Motes-Sky.jpg" alt="The final version of the dust particles against a bright blue sky." />

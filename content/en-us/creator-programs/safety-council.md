@@ -14,8 +14,8 @@ As part of this group, you are:
 
 <figure>
 <Chip
-  color="success"
-  label="Status: Open"
+  color="error"
+  label="Status: Closed"
   size="medium"
   variant="filled"
 />
@@ -54,6 +54,8 @@ We want to ensure that we include a diverse group of creators and influencers wh
 Out of respect for the privacy of Council members, we do not intend to announce who is on the Council. If members of the Council are willing to share their participation, they are able to do so but it is not a requirement for the program.
 
 ## How to Apply
+
+<Alert severity="info">Applications are currently closed. The Community Safety Council operates in 6 month periods. Check back here again in the future.</Alert>
 
 Fill out the application below. Roblox staff reviews applications and will reach out if you have been selected.
 

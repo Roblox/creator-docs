@@ -122,7 +122,7 @@ When processing time is available, the engine regenerates dirty models by execut
     - If successful, migrates the results in the `targetContainer` to the `ProceduralModel`.
     - If generation fails, uses a failure placeholder instead.
 
-If parameters change again while a generation thread is yielded, the oustanding generation is cancelled and restarted with the updated parameters.
+If parameters change again while a generation thread is yielded, the outstanding generation is cancelled and restarted with the updated parameters.
 
 ### Generation results
 

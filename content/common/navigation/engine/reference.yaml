@@ -2502,6 +2502,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/ScriptContext.yaml
                 ignoreTranslation: true
+              - title: ScriptDebuggerService
+                path: /reference/engine/classes/ScriptDebuggerService
+                type: engineapi
+                source: /reference/engine/classes/ScriptDebuggerService.yaml
+                ignoreTranslation: true
               - title: ScriptDocument
                 path: /reference/engine/classes/ScriptDocument
                 type: engineapi
@@ -3568,6 +3573,11 @@ navigation:
         type: engineapi
         source: /reference/engine/datatypes/UDim2.yaml
         ignoreTranslation: true
+      - title: User
+        path: /reference/engine/datatypes/User
+        type: engineapi
+        source: /reference/engine/datatypes/User.yaml
+        ignoreTranslation: true
       - title: ValueCurveKey
         path: /reference/engine/datatypes/ValueCurveKey
         type: engineapi
@@ -4312,6 +4322,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/DataStoreRequestType.yaml
         ignoreTranslation: true
+      - title: DebugBreakModeType
+        path: /reference/engine/enums/DebugBreakModeType
+        type: engineapi
+        source: /reference/engine/enums/DebugBreakModeType.yaml
+        ignoreTranslation: true
       - title: DebuggerEndReason
         path: /reference/engine/enums/DebuggerEndReason
         type: engineapi
@@ -4331,6 +4346,11 @@ navigation:
         path: /reference/engine/enums/DebuggerPauseReason
         type: engineapi
         source: /reference/engine/enums/DebuggerPauseReason.yaml
+        ignoreTranslation: true
+      - title: DebuggerResumeType
+        path: /reference/engine/enums/DebuggerResumeType
+        type: engineapi
+        source: /reference/engine/enums/DebuggerResumeType.yaml
         ignoreTranslation: true
       - title: DebuggerStatus
         path: /reference/engine/enums/DebuggerStatus
@@ -4422,6 +4442,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/DisplaySize.yaml
         ignoreTranslation: true
+      - title: DomainType
+        path: /reference/engine/enums/DomainType
+        type: engineapi
+        source: /reference/engine/enums/DomainType.yaml
+        ignoreTranslation: true
       - title: DominantAxis
         path: /reference/engine/enums/DominantAxis
         type: engineapi
@@ -4476,6 +4501,11 @@ navigation:
         path: /reference/engine/enums/ElasticBehavior
         type: engineapi
         source: /reference/engine/enums/ElasticBehavior.yaml
+        ignoreTranslation: true
+      - title: EmitterPositionType
+        path: /reference/engine/enums/EmitterPositionType
+        type: engineapi
+        source: /reference/engine/enums/EmitterPositionType.yaml
         ignoreTranslation: true
       - title: EnviromentalPhysicsThrottle
         path: /reference/engine/enums/EnviromentalPhysicsThrottle
@@ -4797,6 +4827,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/InputActionType.yaml
         ignoreTranslation: true
+      - title: InputBindingType
+        path: /reference/engine/enums/InputBindingType
+        type: engineapi
+        source: /reference/engine/enums/InputBindingType.yaml
+        ignoreTranslation: true
       - title: InputSink
         path: /reference/engine/enums/InputSink
         type: engineapi
@@ -4852,6 +4887,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/KeyCode.yaml
         ignoreTranslation: true
+      - title: KeyCodeStringFormat
+        path: /reference/engine/enums/KeyCodeStringFormat
+        type: engineapi
+        source: /reference/engine/enums/KeyCodeStringFormat.yaml
+        ignoreTranslation: true
       - title: KeyInterpolationMode
         path: /reference/engine/enums/KeyInterpolationMode
         type: engineapi
@@ -4901,6 +4941,11 @@ navigation:
         path: /reference/engine/enums/ListenerLocation
         type: engineapi
         source: /reference/engine/enums/ListenerLocation.yaml
+        ignoreTranslation: true
+      - title: ListenerPositionType
+        path: /reference/engine/enums/ListenerPositionType
+        type: engineapi
+        source: /reference/engine/enums/ListenerPositionType.yaml
         ignoreTranslation: true
       - title: ListenerType
         path: /reference/engine/enums/ListenerType
@@ -5581,6 +5626,16 @@ navigation:
         path: /reference/engine/enums/ScreenOrientation
         type: engineapi
         source: /reference/engine/enums/ScreenOrientation.yaml
+        ignoreTranslation: true
+      - title: ScriptStoppedReason
+        path: /reference/engine/enums/ScriptStoppedReason
+        type: engineapi
+        source: /reference/engine/enums/ScriptStoppedReason.yaml
+        ignoreTranslation: true
+      - title: ScriptVariableScope
+        path: /reference/engine/enums/ScriptVariableScope
+        type: engineapi
+        source: /reference/engine/enums/ScriptVariableScope.yaml
         ignoreTranslation: true
       - title: ScrollBarInset
         path: /reference/engine/enums/ScrollBarInset

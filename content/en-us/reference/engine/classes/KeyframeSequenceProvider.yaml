@@ -43,7 +43,7 @@ methods:
       - KeyframeSequenceProvider-GetAnimations
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The user ID of the user.
@@ -73,7 +73,7 @@ methods:
       - KeyframeSequenceProvider-GetAnimations
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The user ID of the user.

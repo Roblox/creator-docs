@@ -95,27 +95,19 @@ For instructions on how to perform either export workflow, see [Export textures]
 ### Scene scale
 
 <Alert severity = 'warning'>
-You can skip this section if you are using the Blender downloadable templates. The `.blend` versions of the templates which already contain many of the project settings required when setting up a Blender project configuration.
+You can skip this section if you are using the Blender downloadable templates. The `.blend` versions of the templates already contain many of the project settings required when setting up a Blender project configuration.
 </Alert>
 
-When creating Roblox assets in a modeling application, it's important to ensure your `.fbx` exports scale correctly. The `.fbx` file type scales objects by `100`, meaning that you have to modify your working scale by `.01`. The template files already apply this scaling.
+When creating Roblox assets in a modeling application, it's important to ensure your `.fbx` exports scale correctly. During export, set **Transform** > **Apply Scalings** to **FBX Unit Scale**.
 
-There are two ways to perform this scaling. You can modify your scene scale properties in your project with the following steps:
+<img src="../../../assets/modeling/skinned-meshes/Blender-Export-Settings-5.png" width="320" />
 
-1. In the **Properties** window, navigate to the **Scene Properties** tab.
-   <img src="../../../assets/art/blender-ui/Scene-Options.png" width = "50%" />
-2. In the Units section, change the **Unit Scale** to `0.01` and the **Length** to **Centimeters**.
-
-Alternatively, you can modify your scaling when exporting your files:
-
-1. Navigate to **File** > **Export** > **FBX (.fbx)**.
-2. Set **Transform** > **Scale** to `.01`.
-   <img src="../../../assets/modeling/skinned-meshes/Blender-Export-Settings-2.png" width="320" />
+If you run into scaling issues on import, see [Blender FBX scaling](../../../art/blender.md#adjust-scale-fbx) for alternative approaches.
 
 ### Animation range
 
 <Alert severity = 'warning'>
-You can skip this section if you are using the Blender downloadable templates. The `.blend` versions of the templates which already contain many of the project settings required when setting up a Blender project configuration.
+You can skip this section if you are using the Blender downloadable templates. The `.blend` versions of the templates already contain many of the project settings required when setting up a Blender project configuration.
 </Alert>
 
 For custom characters with facial animation, ensure that the timeline range is set between 0 and 330:

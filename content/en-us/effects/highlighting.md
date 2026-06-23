@@ -144,7 +144,7 @@ The `Class.Highlight.DepthMode|DepthMode` property controls how the effect displ
 The `Class.Highlight.Enabled|Enabled` property allows you to quickly enable or disable the highlight **without any impact on performance**.
 
 <Alert severity="warning">
-While a disabled `Class.Highlight` doesn't display, it still takes one of the 31 available `Class.Highlight` slots. If you plan to permanently disable a `Class.Highlight` instance, it's best to delete the highlight rather than disable it.
+While a disabled `Class.Highlight` doesn't display, it still takes one of the 255 available `Class.Highlight` slots. If you plan to permanently disable a `Class.Highlight` instance, it's best to delete the highlight rather than disable it.
 </Alert>
 
 ## Performance tips

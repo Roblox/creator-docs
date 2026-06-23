@@ -240,7 +240,7 @@ Available KPIs for similar experience benchmarks include:
 - **Retention** - All KPIs
 - **Engagement**- Average Session Time
 - **Monetization** - Average Revenue per Paying Users (ARPPU), Average Revenue per DAU (ARPDAU), Conversion Rate (CVR)
-- **Acquisition** - Qualified Play Through Rate
+- **Acquisition** - Play Through Rate
 
 Each of these KPIs shows its similar experience benchmark in the 50th - 90th percentile range. For example, if you see your Day 1 Retention benchmark's 50th - 90th percentile is 12.11% - 18.73%, it means that:
 

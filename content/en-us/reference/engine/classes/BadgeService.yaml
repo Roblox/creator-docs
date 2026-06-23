@@ -30,7 +30,7 @@ methods:
     code_samples: []
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The `Class.Player.UserId` of the user the badge is to be awarded to.
@@ -77,7 +77,7 @@ methods:
       - badges---awarding-a-badge
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The `Class.Player.UserId` of the user the badge is to be awarded to.
@@ -126,7 +126,7 @@ methods:
       - badges---checking-earned-badges-batch
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The `Class.Player.UserId|UserId` of the player to check for ownership
@@ -316,7 +316,7 @@ methods:
     code_samples: []
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The user ID of the user.
@@ -368,7 +368,7 @@ methods:
       - badges---checking-earned-badges
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: |
           The `Class.Player.UserId` of the player to check for ownership of the

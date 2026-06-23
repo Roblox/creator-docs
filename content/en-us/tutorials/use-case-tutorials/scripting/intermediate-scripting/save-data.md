@@ -3,15 +3,15 @@ title: Save data
 description: The process for creating a basic data store to save, store, and read data back.
 ---
 
-Experiences often need to store **persistent data** between sessions, such as a player's level, experience points, money, inventory items, location, and more.
+Games often need to store **persistent data** between sessions, such as a player's level, game points, money, inventory items, location, and more.
 
 This tutorial shows how to create a basic **data store**, save player data, and read the data back into a player session.
 
 ## Enable Studio access
 
-By default, experiences tested in Studio cannot access data stores, so you must first enable them:
+By default, games tested in Studio cannot access data stores, so you must first enable them:
 
-1. [Publish](../../../../production/publishing/publish-experiences-and-places.md) the experience.
+1. [Publish](../../../../production/publishing/publish-games-and-places.md) the game.
 2. Open Studio's **File** ⟩ **Experience Settings** window.
 3. In the **Security** section, turn on **Enable Studio Access to API Services** and click **Save**.
 
@@ -140,7 +140,7 @@ The sample above checks status on line 13. If `Class.GlobalDataStore:SetAsync()|
 <Alert severity="warning">
 Be careful to not send requests to data stores too often. Requests on a data store key are placed in a queue and, if the queue fills up, additional requests are [dropped](../../../../cloud-services/data-stores/index.md#error-codes).
 
-A common mistake may be updating a player's gold data every time they collect a gold piece. Instead, store the player's gold in a variable and only update the data store occasionally, such as with a periodic auto-save and/or when the player leaves the experience.
+A common mistake may be updating a player's gold data every time they collect a gold piece. Instead, store the player's gold in a variable and only update the data store occasionally, such as with a periodic auto-save and/or when the player leaves the game.
 </Alert>
 
 ## Read data
@@ -177,7 +177,7 @@ To test the script, [initiate a playtest](../../../../studio/testing-modes.md#pl
 
 ## Read and save automatically
 
-The previous script works, but has a fundamental problem: it includes hard-coded values for `playerUserID` and `playerGold`, so it doesn't support multiple players with different amounts of gold. A more realistic solution reads the gold value when the player connects to the experience and then saves it when the player leaves. This approach means connecting the data store calls to [events](../../../../scripting/events/index.md) from the `Class.Players` service.
+The previous script works, but has a fundamental problem: it includes hard-coded values for `playerUserID` and `playerGold`, so it doesn't support multiple players with different amounts of gold. A more realistic solution reads the gold value when the player connects to the game and then saves it when the player leaves. This approach means connecting the data store calls to [events](../../../../scripting/events/index.md) from the `Class.Players` service.
 
 ```lua
 local DataStoreService = game:GetService("DataStoreService")
@@ -279,10 +279,10 @@ end
 Players.PlayerAdded:Connect(positionHandler)
 ```
 
-This script adds a new data store, `playerPositionStore`. Because data stores only store basic types rather than objects, you have to store X, Y, and Z coordinates as individual numbers rather than a single `Datatype.Vector3` or `Datatype.CFrame` value. As you test your experience, move your character around. Note how your character returns to the same position the next time you test your experience.
+This script adds a new data store, `playerPositionStore`. Because data stores only store basic types rather than objects, you have to store X, Y, and Z coordinates as individual numbers rather than a single `Datatype.Vector3` or `Datatype.CFrame` value. As you test your game, move your character around. Note how your character returns to the same position the next time you test your game.
 
 ## Sample project
 
-Now that you understand basic data store usage, test it out in the [Gold Rush](https://www.roblox.com/games/5268331031/Gold-Rush) sample experience. You can also edit the experience in Studio and explore the enhanced **GoldManager** script, which displays gold as part of the UI and includes auto-saving.
+Now that you understand basic data store usage, test it out in the [Gold Rush](https://www.roblox.com/games/5268331031/Gold-Rush) sample game. You can also edit the game in Studio and explore the enhanced **GoldManager** script, which displays gold as part of the UI and includes auto-saving.
 
 <UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="5268331031" universeId="1845192636" />

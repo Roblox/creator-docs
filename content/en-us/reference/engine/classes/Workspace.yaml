@@ -6,9 +6,8 @@ name: Workspace
 type: class
 memory_category: BaseParts
 summary: |
-  **Workspace** houses 3D objects which are rendered to the 3D world. Objects
-  not descending from it will not be rendered or physically interact with the
-  world.
+  `Workspace` houses 3D objects which are rendered to the 3D world. Objects not
+  descending from it will not be rendered or physically interact with the world.
 description: |
   The core job of `Class.Workspace` is to hold objects that exist in the 3D
   world, effectively `Class.BasePart|BaseParts` and
@@ -29,7 +28,7 @@ description: |
   number of useful functions related to parts, their positions, and joints
   between them.
 
-  ##### Accessing the Workspace
+  #### Accessing the Workspace
 
   `Class.Workspace` can be accessed several ways, all of which are valid.
 
@@ -37,7 +36,7 @@ description: |
   - `game:GetService("Workspace")`
   - `game.Workspace`
 
-  ##### Notes
+  #### Notes
 
   - Objects that require adornment, such as
     `Class.ParticleEmitter|ParticleEmitters` and
@@ -730,28 +729,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-  - name: Workspace.PhysicsImprovedSleep
-    summary: |
-      Controls whether the improved partial physics sleep algorithm is enabled.
-    description: |
-      Controls whether the physics engine uses an improved algorithm for partial
-      sleep, the process by which the engine stops simulating parts that are no
-      longer actively moving. Enabling this property can reduce CPU overhead in
-      games with many near-stationary parts.
-    code_samples: []
-    type: RolloutState
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
   - name: Workspace.PhysicsSteppingMethod
     summary: |
       Sets how the solver will advance the physics simulation forward in time.
@@ -804,12 +781,14 @@ properties:
     capabilities: []
   - name: Workspace.PlayerScriptsUseInputActionSystem
     summary: |
-      Controls internal behavior of the built-in `Class.Player` scripts.
+      Controls whether the built-in player scripts are updated to use the Input
+      Action System.
     description: |
-      When `true`, updates the built-in `Class.Player` scripts to a new system
-      where they live under `Class.StarterPlayer`, use the
-      [Input Action System](../../../input/input-action-system.md), and allow
-      the server to process player inputs.
+      Controls whether the built-in player scripts are updated to use the
+      [Input Action System](../../../input/input-action-system.md). When
+      enabled, the player scripts live under `Class.StarterPlayer` (controlled
+      by `Class.StarterPlayer.CreateDefaultPlayerModule`) and the server is able
+      to process player inputs.
     code_samples: []
     type: RolloutState
     tags:

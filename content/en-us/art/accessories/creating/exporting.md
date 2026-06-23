@@ -15,9 +15,9 @@ To export your file from Blender:
 
    <img src="../../../assets/modeling/skinned-meshes/Blender-Export-Settings-1.png" width="320" />
 
-4. If your project doesn't have .01 scene unit scaling, set the **Transform** > **Scale** to `.01`.
+4. Set the **Transform** > **Apply Scalings** to **FBX Unit Scale**. If you run into scaling issues on import, see [Blender FBX scaling](../../../art/blender.md#adjust-scale-fbx) for alternative approaches.
 
-   <img src="../../../assets/modeling/skinned-meshes/Blender-Export-Settings-2.png" width="320" />
+   <img src="../../../assets/modeling/skinned-meshes/Blender-Export-Settings-5.png" width="320" />
 
 5. Under the **Armature** section, disable **Add Leaf Bones**.
 

@@ -1014,15 +1014,42 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-  - name: DataModel.ServerLifecycleChanged
-    summary: ''
-    description: ''
-    code_samples: []
+  - name: DataModel.ServerRestartScheduled
+    summary: |
+      Fires on the server when the server has been scheduled to restart.
+      Provides the scheduled restart time, source, and custom attributes.
+    description: |
+      Fires when the server has been scheduled to restart, for example when you
+      restart servers from the Creator Hub or
+      [Open Cloud](https://create.roblox.com/docs/cloud/reference/features/universes#Restarts_LaunchRestart)
+      to [release an experience update](../../../projects/update-games.md).
+
+      You can use this event to inform players on the server of the impending
+      restart. You could then let them save their progress or teleport them to
+      updated servers at the most convenient time for your game.
+    code_samples:
+      - DataModel-ServerRestartScheduled1
     parameters:
-      - name: serverLifecycleChangedEvent
+      - name: restartTime
+        type: DateTime
+        default:
+        summary: |
+          A `Datatype.DateTime` indicating when the server is scheduled to shut
+          down. The actual restart may happen slightly after this projected
+          time, but not before.
+      - name: source
+        type: CloseReason
+        default:
+        summary: |
+          An `Enum.CloseReason` describing what triggered the restart. The value
+          will be `Enum.CloseReason.DeveloperUpdate` for place version updates.
+      - name: attributes
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          A dictionary of developer-supplied metadata associated with the
+          restart. If no attributes are provided, then this will be an empty
+          table.
     tags: []
     deprecation_message: ''
     security: None

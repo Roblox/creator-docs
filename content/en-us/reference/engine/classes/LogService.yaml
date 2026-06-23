@@ -10,6 +10,19 @@ summary: |
 description: |
   `LogService` allows you to log structured log entries and read outputted text.
 
+  #### Template Syntax
+
+  Methods that accept a `context` table support `{key}` template placeholders in
+  the message string. To include a literal brace character in the output, use
+  double braces: `{{` produces a literal `{` and `}}` produces a literal `}`.
+
+  ```lua
+  local LogService = game:GetService("LogService")
+
+  LogService:Info("Value = {{result}}: {val}", {val = 42})
+  -- Output: "Value = {result}: 42"
+  ```
+
   #### Warning
 
   This service might have unexpected or unreliable behavior and content might be

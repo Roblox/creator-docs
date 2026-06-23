@@ -80,14 +80,14 @@ content: [
 title: "Fully customizable characters",
 description: "Create full characters or individual body parts that users can equip.",
 image: "/assets/modeling/meshes/Modeling-Requirements-Caps.png",
-links: [{ text: "Avatar characters", href: "./art/characters" }]
+links: [{ text: "Avatar characters", href: "./avatar/character-bodies" }]
 },
 {
 title: "Expressive body and face animations",
 description: "Animations let avatars move with their body and face.",
 image: "/assets/avatar/dynamic-heads/animating-dynamic-heads/Overview.png",
 links: [
-{ text: "Facial animation", href: "./art/characters/facial-animation" },
+{ text: "Facial animation", href: "./avatar/dynamic-heads" },
 { text: "Character animation", href: "./tutorials/use-case-tutorials/animation/create-an-animation" }
 ]
 },
@@ -96,7 +96,7 @@ title: "Layered clothing",
 description: "Clothing can layer on top of each other on a multitude of different body shapes and types.",
 image: "/assets/art/accessories/creating/Exporting-Clothing-in-Studio-Highlight.png",
 links: [
-{ text: "Guides", href: "./art/accessories/layered-clothing" },
+{ text: "Guides", href: "./avatar/layered-accessories" },
 { text: "Tutorial", href: "./art/accessories/creating" }
 ]
 }

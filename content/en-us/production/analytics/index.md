@@ -22,7 +22,7 @@ Before driving too many new users to your experience, grow the following metrics
       3.  **Payer conversion rate** and **ARPPU (average revenue per paying user)** measure the effectiveness of your user monetization. It's important to be thoughtful about monetization from the start. For more information on improving this metric, see [Monetization](../../production/analytics/monetization.md).
 
 <figure>
-    <img src="../../assets/analytics/overview/step1.png" width="80%"/>
+    <img src="../../assets/analytics/overview/step1.png" width="100%"/>
     <figcaption>Comparing D1 retention to similar experiences.</figcaption>
   </figure>
 
@@ -33,12 +33,11 @@ After you have optimized your retention, engagement, and monetization, use your 
 1. Where new users are coming from by source.
 2. How well home recommendations are converting.
 
-You can use the following chart to track the percent of users who have a qualified play in your experience after viewing it in recommendations. A "qualified play" refers to a user's intentional engagement with your experience, as opposed to accidental clicks or joining an experience and then bouncing quickly. Test different experience icons, titles, and descriptions to see how they impact your qualified play through rate.
+You can use the following chart to track the percent of users who played your experience after viewing it in recommendation. Test different experience icons, titles, and descriptions to see how they impact your play through rate.
 
 <figure>
-    <img src="../../assets/analytics/overview/step2.png" width="80%"/>
-    <figcaption>Comparing conversion rates.</figcaption>
-  </figure>
+<img src="../../assets/analytics/overview/step2.png" width="100%"/>
+</figure>
 
 Roblox experiences are inherently social, and users love trying them out with their friends. Consider using features like [experience events](../../production/promotion/experience-events.md) and [player invite prompts](../../production/promotion/invite-prompts.md) to invite users to bring their friends to your experience.
 
@@ -49,13 +48,13 @@ After you update your experience, visit analytics to understand how the update i
 1. [Retention](../../production/analytics/retention.md): D1 and D7 retention.
 2. [Engagement](../../production/analytics/engagement.md): Average session time.
 3. [Monetization](../../production/analytics/monetization.md): Payer conversion, ARPPU, and revenue.
-4. [Acquisition](../../production/analytics/acquisition.md): New users and qualified play through rate.
+4. [Acquisition](../../production/analytics/acquisition.md): New users and play through rate.
 
 You can monitor major weekly changes and benchmark movement on your experience overview page. [Insights](./insights.md) highlights large movements in key metrics such as DAU, new users, and revenue.
 
 <figure>
-    <img src="../../assets/analytics/overview/step3.png" width="80%"/>
-  </figure>
+<img src="../../assets/analytics/overview/step3.png" width="100%"/>
+</figure>
 
 If you have 100+ DAU, you can compare how your experience is performing against similar experiences using the benchmark scorecards. Your benchmark scorecards help you focus on the right metrics to improve compared to similar experiences
 
@@ -64,7 +63,7 @@ For example, in the scorecard below, engagement (average session time and D1 ret
 Your similar experience benchmarks are updated daily. Roblox does not use these benchmarks as a direct signal in the discovery algorithm. Instead, these benchmarks give you a point of comparison as you work on improving your engagement, monetization, and acquisition. For more information on how users find new experiences, see [Discovery](../../discovery.md).
 
 <figure>
-    <img src="../../assets/analytics/overview/Benchmarks-Similar.png" width="80%"/>
+    <img src="../../assets/analytics/overview/Benchmarks-Similar.png" width="100%"/>
   </figure>
 
 ## Analytics Home
@@ -96,7 +95,7 @@ If you add an experience to your watchlist that you don't have analytics permiss
 Watchlists are applied on the account level, are private, and persist when toggling between groups. To add an experience to your watchlist, paste the **Experience URL** or add it from your **Experience Table**, which is a list view of all the experiences owned by your account or selected group.
 
 <figure>
-    <img src="../../assets/analytics/overview/watchlist.png" width="80%"/>
+    <img src="../../assets/analytics/overview/watchlist.png" width="100%"/>
     <figcaption>Experience watchlist on Analytics Home.</figcaption>
 </figure>
 
@@ -111,7 +110,7 @@ Avatar items you've sold automatically appear within the **Avatar Items** tab. H
 - **Monitor your catalog**: Examine a table with up to 200 items, filterable by item category and sales types, and sortable by sales and total revenue.
 
 <figure>
-    <img src="../../assets/analytics/overview/avatar-sales-and-revenue.png" width="90%"/>
+    <img src="../../assets/analytics/overview/avatar-sales-and-revenue.png" width="100%"/>
     <figcaption>Avatar Items on Analytics Home.</figcaption>
 </figure>
 

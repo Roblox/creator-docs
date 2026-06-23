@@ -22,6 +22,83 @@ descendants: []
 tags: []
 deprecation_message: ''
 properties:
+  - name: AnimationConstraint.AngularDamping
+    summary: |
+      Damping ratio for the rotational part of the constraint. Higher values
+      reduce oscillation around the target orientation.
+    description: |
+      The damping ratio (ζ) applied to the rotational part of the constraint.
+      Only used if `Class.AnimationConstraint.IsKinematic|IsKinematic` is
+      `false`.
+
+      A value of `1` corresponds to **critical damping**, where the constraint
+      reaches its target orientation as fast as possible without overshoot in
+      the absence of other forces or constraints. Values less than `1` are
+      under-damped and oscillate around the target before settling. Values
+      greater than `1` are over-damped and approach the target more slowly
+      without oscillation. A value of `0` applies no angular damping, causing
+      the constraint to oscillate.
+
+      Even with this property set to `1`, an `AnimationConstraint` at the root
+      of a multi-body mechanism may still exhibit low-frequency oscillation
+      because it does not "see" the full effective mass of the downstream chain.
+      You can compensate by increasing both
+      `Class.AnimationConstraint.AngularStrength|AngularStrength` and
+      `AngularDamping` beyond their defaults.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Compliance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Physics
+      - Animation
+    simulationAccess: true
+  - name: AnimationConstraint.AngularStrength
+    summary: |
+      Controls how rigidly the constraint enforces the rotational part of its
+      target `Class.AnimationConstraint.Transform|Transform`. Higher values
+      track the target orientation more stiffly.
+    description: |
+      Controls how rigidly the constraint enforces the rotational part of its
+      target `Class.AnimationConstraint.Transform|Transform`. Only used if
+      `Class.AnimationConstraint.IsKinematic|IsKinematic` is `false`. The
+      resulting torque is capped by
+      `Class.AnimationConstraint.MaxTorque|MaxTorque`.
+
+      `AngularStrength` is defined as a normalized natural frequency,
+      `AngularStrength = f / 60`, where `f` is the target natural frequency in
+      Hz. The default value of `1` corresponds to a target frequency of 60 Hz
+      and produces strong tracking of the target orientation. A value of `0`
+      applies no torque. Values less than `1` produce a softer, more compliant
+      rotational response, and values greater than `1` produce a stiffer
+      response.
+
+      Use values significantly greater than `1` with caution, as they may cause
+      the simulation to become unstable.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Compliance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Physics
+      - Animation
+    simulationAccess: true
   - name: AnimationConstraint.IsKinematic
     summary: |
       Toggles whether the constraint is kinematic or physically simulated.
@@ -41,6 +118,83 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Physics
+      - Animation
+    simulationAccess: true
+  - name: AnimationConstraint.LinearDamping
+    summary: |
+      Damping ratio for the translational part of the constraint. Higher values
+      reduce oscillation around the target position.
+    description: |
+      The damping ratio (ζ) applied to the translational part of the constraint.
+      Only used if `Class.AnimationConstraint.IsKinematic|IsKinematic` is
+      `false`.
+
+      A value of `1` corresponds to **critical damping**, where the constraint
+      reaches its target position as fast as possible without overshoot in the
+      absence of other forces or constraints. Values less than `1` are
+      under-damped and oscillate around the target before settling. Values
+      greater than `1` are over-damped and approach the target more slowly
+      without oscillation. A value of `0` applies no linear damping, causing the
+      constraint to oscillate.
+
+      `LinearDamping` has no effect when
+      `Class.AnimationConstraint.LinearStrength|LinearStrength` is `0`.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Compliance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Physics
+      - Animation
+    simulationAccess: true
+  - name: AnimationConstraint.LinearStrength
+    summary: |
+      Controls how rigidly the constraint enforces the translational part of its
+      target `Class.AnimationConstraint.Transform|Transform`. Higher values
+      track the target position more stiffly.
+    description: |
+      Controls how rigidly the constraint enforces the translational part of its
+      target `Class.AnimationConstraint.Transform|Transform`. Only used if
+      `Class.AnimationConstraint.IsKinematic|IsKinematic` is `false`. The
+      resulting force is capped by
+      `Class.AnimationConstraint.MaxForce|MaxForce`.
+
+      `LinearStrength` uses the same normalized natural frequency definition as
+      `Class.AnimationConstraint.AngularStrength|AngularStrength`,
+      `LinearStrength = f / 60`, where `f` is the target natural frequency in
+      Hz. The default value of `1` corresponds to a target frequency of 60 Hz
+      and produces strong tracking of the target position. A value of `0`
+      applies no force. Values less than `1` produce a softer, more compliant
+      positional response, and values greater than `1` produce a stiffer
+      response.
+
+      Splitting angular and linear parameters lets you make orientation tracking
+      stiff while keeping positional tracking soft, or vice-versa. As with
+      `Class.AnimationConstraint.AngularStrength|AngularStrength`, use values
+      significantly greater than `1` with caution, as they may cause the
+      simulation to become unstable.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Compliance
     serialization:
       can_load: true
       can_save: true

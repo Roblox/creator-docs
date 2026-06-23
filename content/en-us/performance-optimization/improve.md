@@ -409,8 +409,8 @@ same `Class.MeshPart.MeshContent|MeshContent` are handled in a single draw call 
   environments, you might be able to implement a room or portal system and
   manually cull objects to further reduce draw calls or overall computational
   load.
-- **Reducing level of detail for models** - Enable [instance streaming](../workspace/streaming/index.md) and set your world models' `Class.Model.LevelOfDetail|LevelOfDetail` property to `Enum.ModelLevelOfDetail.SLIM|SLIM` to render [optimized lightweight SLIM meshes](../workspace/streaming/techniques.md#set-model-level-of-detail) for models as distance from the camera increases.
-- **Reducing level of detail for avatars** - Enable instance streaming and set the `Class.Workspace.EnableSLIMAvatars` property to render platform avatar models with any number of accessories or layers of clothing as [optimized lightweight avatar representations](../workspace/streaming/techniques.md#set-avatar-level-of-detail) with full support for animations as distance from the camera increases.
+- **Reducing level of detail for models** - Enable [instance streaming](../workspace/streaming/index.md) and set your world models' `Class.Model.LevelOfDetail|LevelOfDetail` property to `Enum.ModelLevelOfDetail.SLIM|SLIM` to render [optimized lightweight SLIM meshes](../workspace/streaming/techniques.md#model-level-of-detail) for models as distance from the camera increases.
+- **Reducing level of detail for avatars** - Enable instance streaming and set the `Class.Workspace.EnableSLIMAvatars` property to render platform avatar models with any number of accessories or layers of clothing as [optimized lightweight avatar representations](../workspace/streaming/techniques.md#slim-avatars) with full support for animations as distance from the camera increases.
 - **Reducing render fidelity** - Set `Class.MeshPart.RenderFidelity` to `Enum.RenderFidelity.Automatic|Automatic` or `Enum.RenderFidelity.Performance|Performance`. This allows meshes to fall back to less complex
   alternatives, which can reduce the number of polygons that need to be drawn.
 - **Disabling shadow casting on appropriate parts and light objects** - The

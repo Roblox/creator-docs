@@ -5,26 +5,23 @@ prev: /tutorials/curriculums/core/
 next: /tutorials/curriculums/core/building/create-an-environment-with-terrain
 ---
 
-In order to start the process of recreating the **Island Jump** [3D platformer experience](https://www.roblox.com/games/14238807008), you must create a project within Roblox Studio. A project is a collection of places, assets, settings and other resources that together represent an experience. You can either start a project from scratch, or you can start with one of Studio's templates to provide a basis for your environment and gameplay mechanics, such as:
+<Alert severity="info">
+This curriculum uses Studio's built-in Assistant for routine tasks like creating instances, configuring properties, and generating scripts. This lets you spend more time on the creative aspects of building your game.
 
-- **Baseplate** template — Contains a baseplate and `Class.SpawnLocation` object.
-- **Modern City** template — Contains a sample high-quality city and modular asset kit.
-- **Laser Tag** template — Contains assets and scripts for a first-person shooter experience.
+Steps that include an Assistant workflow provide a **Build with Assistant** tab alongside a **Build it Yourself** tab. You can follow either approach, depending on how you'd like to work.
+</Alert>
 
-To create a project with the **Baseplate** template:
+To start recreating the **Island Jump** [3D platformer experience](https://www.roblox.com/games/14238807008), you need a project to build in. A project is a collection of places, assets, and settings that together make up a Roblox game.
 
-1. Open Roblox Studio.
-1. In the upper-left corner, click the **New Experience** button. Studio opens a new experience.
-1. In the **Explorer** window on the right side of the window, expand the **Workspace** branch and then select the **Baseplate** object.
+The fastest way to start is to use a Studio template. For this project, you'll use the default **Baseplate** template, which has a flat ground and a `Class.SpawnLocation` object.
 
-   <img src="../../../../assets/studio/explorer/Workspace-Baseplate.png" width="320" />
+1. In Roblox Studio, click **New Experience** in the upper-left corner.
+2. In the **Explorer** window, expand **Workspace** and delete the **Baseplate** object so that the viewport shows an empty world with just the spawn location in the middle.
 
-   <Alert severity="warning">
-   If you don't see the **Explorer** window, toggle it on from Studio's **Window** menu.
-   </Alert>
+<Alert severity="warning">
+If you don't see the **Explorer** window, toggle it on from Studio's **Window** menu.
+</Alert>
 
-1. Press <kbd>Delete</kbd>. The viewport displays an empty world with a spawn location in the middle.
+<img src="../../../../assets/tutorials/core-building-and-scripting/Baseplate-Deleted.jpg" alt="A viewport view of the baseplate template without the baseplate. The spawn location is highlighted in the middle of the view." width="81%" />
 
-   <img src="../../../../assets/tutorials/core-building-and-scripting/Baseplate-Deleted.jpg" alt="A viewport view of the baseplate template without the baseplate. The spawn location is highlighted in the middle of the view." width="81%" />
-
-In the next section of the tutorial, you will learn how to use the **Terrain Editor** to create an island environment around the spawn location.
+In the next section, you'll learn how to use the **Terrain Editor** to create an island environment around the spawn location.

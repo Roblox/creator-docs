@@ -6,7 +6,7 @@ description: Learn to assign basic or PBR textures in Blender or Maya to nativel
 This guide covers the process to assign texture images in Blender or Maya to your 3D model so that they import seamlessly into Studio. The import process supports both basic textures and realistic PBR textures, as long as they meet Roblox's [texture specifications](./texture-specifications.md).
 
 <Alert severity = 'warning'>
-The following information is **specific for applying makeup textures generic meshes**. For more information on reassigning textures for makeup assets, see [Reassign textures in Blender and Maya](../../makeup/reassign-textures.md).
+The following information is **specific for applying makeup textures generic meshes**. For more information on reassigning textures for makeup assets, see [Reassign textures in Blender and Maya](../../avatar/makeup/reassign-textures.md).
 </Alert>
 
 ## Blender

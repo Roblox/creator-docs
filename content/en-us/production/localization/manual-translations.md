@@ -13,6 +13,10 @@ Whether you have translation entries automatically captured or manually added, a
 
 Before making any changes to your table, it's important to understand each field in the [cloud localization table](#cloud-localization-table) to prevent issues or conflicts.
 
+<Alert severity = 'info'>
+Users with Automatic Translations enabled in their Roblox account settings will still see all manually added translations in your experience. See [User-facing setting](./index.md#user-facing-setting) for more information.
+</Alert>
+
 ## Cloud localization table
 
 The localization table is the reference for all translations within your experience. It's important to understand each field of the localization table to effectively add or modify entries.

@@ -27,7 +27,7 @@ Avatar Setup detects the following partial avatar body inputs:
   </tr>
   <tr>
     <td><img src="../assets/avatar/avatar-setup/Partial-Inputs-Body-Rigged.png"/></td>
-    <td><Alert severity = "success">A single or multiple mesh body with **only body rigging**.</Alert>If the provided meshes include a compatible R15 body rig, Avatar Setup uses the provided rig, and creates the facial rig and all other components. <br /><br /> The input body rig must follow Roblox's [rigging configuration](../art/characters/specifications.md#rigging), otherwise Avatar Setup creates a brand new rig for you.</td>
+    <td><Alert severity = "success">A single or multiple mesh body with **only body rigging**.</Alert>If the provided meshes include a compatible R15 body rig, Avatar Setup uses the provided rig, and creates the facial rig and all other components. <br /><br /> The input body rig must follow Roblox's [rigging configuration](../avatar/character-bodies/specifications.md#rigging), otherwise Avatar Setup creates a brand new rig for you.</td>
   </tr>
   <tr>
     <td><img src="../assets/avatar/avatar-setup/Partial-Inputs-Head-Rigged.png"/><br /></td>
@@ -118,7 +118,7 @@ The full requirements for the input body model are as follows:
     </tbody>
     </table>
 
-   1. The setup tool segments and adds [caps](../art/characters/specifications.md#body-parts) to the character limbs which may add to your total polycount. If your character model is close to the polycount limit, the additional geometry may cause validation failures.
+   1. The setup tool segments and adds [caps](../avatar/character-bodies/specifications.md#body-parts) to the character limbs which may add to your total polycount. If your character model is close to the polycount limit, the additional geometry may cause validation failures.
 
 5. **Humanoid shape** — The body must follow a general humanoid shape, with two arms, two legs, a torso, and a head.
 6. **A-pose or T-Pose** — The body should form an upright A-pose or T-Pose.
@@ -143,7 +143,7 @@ If you provide the standard 15 multiple meshes that adhere to the R15 character 
 
 To ensure that Avatar Setup uses your **own custom body rig**:
 
-- Ensure that your bones (Blender) or joints (Maya) meet [Roblox's avatar rigging requirements](../art/characters/specifications.md#rigging).
+- Ensure that your bones (Blender) or joints (Maya) meet [Roblox's avatar rigging requirements](../avatar/character-bodies/specifications.md#rigging).
   - Double-check naming conventions and hierarchy.
 - Body rigs should not include additional bones beyond the standard 15, and facial rigs (no bone limit) should be correctly parented to a RootFaceJoint.
 
@@ -153,7 +153,7 @@ To ensure that Avatar Setup uses your **own custom face rig and FACs data**:
   - Review [supported body inputs](#body) to ensure you are submitting a supported body input and facial rig combination.
 - Facial rig must include a `RootFaceJoint` bone (usually [mapped](../art/characters/facial-animation/create-basic-heads.md#map) as `DynamicHead`) whose parent is the `Head` joint of the R15 rig.
 - All the other facial animation joints are descendants of the `RootFaceJoint`, and not direct children of the `Head` joint.
-- Animations need to be provided for the [17 required poses](../art/characters/specifications.md#facial-animations), at minimum.
+- Animations need to be provided for the [17 required poses](../avatar/character-bodies/specifications.md#facial-animations), at minimum.
 - Neutral animation must map to frame `0`.
 - Since the head is part of the single mesh with the body, the facial animation mappings must be included with the single body mesh:
 
@@ -223,7 +223,7 @@ To convert a mesh model into an accessory using Avatar Setup:
 
 During this process, you will be able to designate individual meshes or models as rigid accessories, layered accessories, or body parts. After conversion, a prompt displays allowing you to select the specific **Asset Type**.
 
-For best results, ensure your models adhere to Roblox's [accessory geometry specifications](../art/accessories/specifications.md#geometry-and-budgets).
+For best results, ensure your models adhere to Roblox's [rigid accessory geometry specifications](../avatar/rigid-accessories/specifications.md#geometry-and-budgets).
 
 #### Supported inputs
 
@@ -262,7 +262,7 @@ To convert a mesh model into an accessory using Avatar Setup:
 
 During this process, you will be able to designate individual meshes or models as rigid accessories, layered accessories, or body parts. After conversion, a prompt displays allowing you to select the specific **Asset Type**.
 
-For best results, ensure your models adhere to Roblox's [layered clothing geometry specifications](../art/accessories/clothing-specifications.md#geometry-and-budgets).
+For best results, ensure your models adhere to Roblox's [layered clothing geometry specifications](../avatar/layered-accessories/specifications.md#geometry-and-budgets).
 
 #### Supported inputs
 

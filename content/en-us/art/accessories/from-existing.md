@@ -43,7 +43,7 @@ While this content covers the Blender workflow with a provided reference example
 
 ## Setup model
 
-Whether you are using an existing shape or creating your own 3D object, it's important to consider [technical requirements](../../art/accessories/specifications.md), such as keeping your geometry within a polycount budget, and [policy requirements](../../marketplace/marketplace-policy.md), such as ensuring your design does not infringe on other creator's IP both within and outside of the Roblox ecosystem.
+Whether you are using an existing shape or creating your own 3D object, it's important to consider [technical requirements](../../avatar/rigid-accessories/index.md), such as keeping your geometry within a polycount budget, and [policy requirements](../../marketplace/marketplace-policy.md), such as ensuring your design does not infringe on other creator's IP both within and outside of the Roblox ecosystem.
 
 Correctly setting up your asset in Blender helps reduce importing and rendering issues later in Studio. When importing Roblox-related `.fbx` files, such as the provided [mask asset](../../assets/art/accessories/creating-rigid/Rigid_Mask_Model-Only.fbx), you might discover that your asset imports at a 1/100 scale due to the `.fbx` conversion. In your Blender project, you can quickly reset the scale to make the asset easier to work with in the Blender environment.
 
@@ -163,7 +163,7 @@ To freeze your transforms:
 
 After modeling and texturing your asset, you can begin the process of **exporting** your Blender project as a `.fbx`. The start of this process includes cleaning up your project, which can involve deleting or removing any extra objects, such as lights, cameras, or mannequins, to ensure you only export the accessory mesh, and applying any modifiers to your mesh object.
 
-For the latest export settings for Blender, see [rigid accessory export settings](./export-settings.md).
+For the latest export settings for Blender, see [rigid accessory export settings](../../avatar/rigid-accessories/export.md).
 
 <Alert severity = 'success'>
 You've completed the exporting section of this tutorial. If desired, download a [reference sample](../../assets/art/accessories/creating-rigid/Rigid_Mask_Export.fbx) of this exported file for comparison. You can use this reference in the next importing step.
@@ -173,13 +173,13 @@ You've completed the exporting section of this tutorial. If desired, download a 
 
 Studio's Importer provides a quick and easy way to import third-party 3D assets into your projects. The importer provides object previews and error-checking to ensure that your asset meets Studio's general 3D requirements.
 
-To import your asset, check out the latest information on [importing rigid accessories](./importing.md).
+To import your asset, check out the latest information on [importing rigid accessories](../../avatar/rigid-accessories/import.md).
 
 ## Convert
 
-After importing your asset into Studio, you can begin **fitting** your imported object to a mannequin and **converting** the `Class.Model` object into a `Class.Accessory`. When fitting and converting your accessory it's important to use the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) (AFT) to correctly preview the placement and apply the correct configurations to your accessory.
+After importing your asset into Studio, you can begin **fitting** your imported object to a mannequin and **converting** the `Class.Model` object into a `Class.Accessory`. When fitting and converting your accessory it's important to use the [Accessory Fitting Tool](../../avatar/accessory-fitting-tool.md) (AFT) to correctly preview the placement and apply the correct configurations to your accessory.
 
-To convert your asset into a `Class.Accessory`, check out the latest information on [converting rigid accessories](./importing.md#convert-rigid-accessories).
+To convert your asset into a `Class.Accessory`, check out the latest information on [converting rigid accessories](../../avatar/rigid-accessories/import.md#convert-rigid-accessories).
 
 ## Upload and publish
 

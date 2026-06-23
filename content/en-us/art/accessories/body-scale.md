@@ -30,11 +30,11 @@ Slender body scale. <br /><br /> Roughly 5.25-6.25 studs tall, with narrower sho
 </figure>
 </GridContainer>
 
-See the [accessory apecifications](../../art/accessories/specifications.md#body-scale) and the [body specifications](../../art/characters/specifications.md#body-scale) for specific range values and other geometry requirements.
+See the [accessory specifications](../../avatar/rigid-accessories/specifications.md#body-scale) and the [body specifications](../../avatar/character-bodies/specifications.md#body-scale) for specific range values and other geometry requirements.
 
 ## AvatarPartScaleType
 
-Roblox represents body scale in the engine by an `AvatarPartScaleType` `Class.StringValue` object within each avatar character part and associated accessory. In most cases, asset creators do not need to directly access or modify this value object since tools, such as the [Accessory Fitting Tool](../accessories/accessory-fitting-tool.md), automatically generate the appropriate value object on accessory creation.
+Roblox represents body scale in the engine by an `AvatarPartScaleType` `Class.StringValue` object within each avatar character part and associated accessory. In most cases, asset creators do not need to directly access or modify this value object since tools, such as the [Accessory Fitting Tool](../../avatar/accessory-fitting-tool.md), automatically generate the appropriate value object on accessory creation.
 
 In cases where you may need to identify the current body scale of a body part or accessory, the following table defines the `AvatarPartScaleType` value for each type of body size. When importing your model, use the Importer's [Rig Scale](../../studio/importer.md) to automatically apply a scale to your custom asset.
 

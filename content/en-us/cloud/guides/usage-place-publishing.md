@@ -3,7 +3,7 @@ title: Usage guide for place publishing
 description: Explains how to use Open Cloud Place Publishing API to publish places programmatically with version control.
 ---
 
-The [place publishing API](../../reference/cloud/universes-api/v1.json) offers similar functionality to [publishing to Roblox](../../production/publishing/publish-experiences-and-places.md) in Studio, with extra permission control and automation in continuous release workflow. You can use this API to update existing places of an experience to a new version, making it useful for automating your publishing workflow. For example, you can call this API from a GitHub action and have it automatically push a binary place file to Roblox after successful integration testing.
+The [place publishing API](../../reference/cloud/universes-api/v1.json) offers similar functionality to [publishing to Roblox](../../production/publishing/publish-games-and-places.md) in Studio, with extra permission control and automation in continuous release workflow. You can use this API to update existing places of an experience to a new version, making it useful for automating your publishing workflow. For example, you can call this API from a GitHub action and have it automatically push a binary place file to Roblox after successful integration testing.
 
 ## Limitations
 

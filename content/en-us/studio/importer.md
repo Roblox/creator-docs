@@ -64,7 +64,7 @@ To directly import assets using HTTP requests, see the [Open Cloud usage guide f
 
 ## Supported file types
 
-Before importing a 3D object, ensure that the `.fbx`, `.gltf` or `.obj` meets Studio's [mesh requirements](../art/characters/specifications.md) to reduce errors or unexpected behavior.
+Before importing a 3D object, ensure that the `.fbx`, `.gltf` or `.obj` meets Studio's [mesh requirements](../avatar/character-bodies/specifications.md) to reduce errors or unexpected behavior.
 
 <table>
   <thead>
@@ -270,7 +270,7 @@ The Importer provides the following settings for meshes with rigging data, typic
   </tr>
   <tr>
     <td>Rig Scale</td>
-    <td>If Rig Type is set to R15, the importer provides additional options to specify [body type scaling](../art/characters/specifications.md#body-scale). The options are:<br />- **Default**<br />- **Rthro**<br />- **Rthro Narrow**</td>
+    <td>If Rig Type is set to R15, the importer provides additional options to specify [body type scaling](../avatar/character-bodies/specifications.md#body-scale). The options are:<br />- **Default**<br />- **Rthro**<br />- **Rthro Narrow**</td>
   </tr>
 </tbody>
 </table>

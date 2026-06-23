@@ -9,7 +9,7 @@ Designing for performance means following a handful of best practices **as you b
 
 Lower-end devices, particularly mobile devices, have severe memory limitations and are susceptible to crashes due to out of memory (OOM) errors:
 
-- If you want to support lower-end devices, choose at least one "baseline" device, test your game on it throughout the development process, and pay close attention to frame rate and memory usage. As you find problem areas in your game, use those areas to identify the limits of your device.
+- If you want to support lower-end devices, choose at least one "baseline" device, [test your game on it](./test-on-hardware.md) throughout the development process, and pay close attention to frame rate and memory usage. As you find problem areas in your game, use those areas to identify the limits of your device.
 
   For example, you might test a game with the **Render** (<kbd>Shift</kbd><kbd>F2</kbd>) and **Summary** (<kbd>Shift</kbd><kbd>F2</kbd>) debug stats enabled. If the frame rate starts to drop in a particularly cluttered area, you could examine the **Draw (scene)** numbers and determine that you need to stay below 1,000 draw calls and 1,000,000 triangles for the game to run well on your baseline device.
 
@@ -23,7 +23,7 @@ Lower-end devices, particularly mobile devices, have severe memory limitations a
 Roblox does not have access to all of a device's memory. Some amount is required for the operating system and other applications.
 </Alert>
 
-More generally, testing on a variety of devices can help you check that the game matches your visual and performance expectations at different graphics quality levels. For a much more detailed example of how you might think about optimizing your game for low-end mobile devices, see [Real World Building and Scripting Optimization](https://devforum.roblox.com/t/real-world-building-and-scripting-optimization-for-roblox/3127146).
+More generally, [testing on a variety of devices](./test-on-hardware.md) can help you check that the game matches your visual and performance expectations at different graphics quality levels. For a much more detailed example of how you might think about optimizing your game for low-end mobile devices, see [Real World Building and Scripting Optimization](https://devforum.roblox.com/t/real-world-building-and-scripting-optimization-for-roblox/3127146).
 
 ## Streaming and teleportation
 

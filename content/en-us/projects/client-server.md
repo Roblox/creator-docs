@@ -124,5 +124,5 @@ profanity or are too long.
 </Tabs>
 
 <Alert severity="success">
-Most players on Roblox experience between 100–300 milliseconds of network latency. [Roblox Studio](../studio/index.md) playtesting runs with a default of no latency, but you can change **Incoming&nbsp;Replication&nbsp;Lag** in the **Network** section of Studio's settings (<kbd>Alt</kbd><kbd>S</kbd> on Windows; <kbd>⌥</kbd><kbd>S</kbd> on Mac) to `0.1`–`0.3` to better simulate how replication latency will affect your experience.
+Most players on Roblox experience between 100–300 milliseconds of network latency. Roblox Studio playtesting runs with a default of no latency, but you can change **Network&nbsp;Simulation** settings in the **Network** section of [Studio Settings](../studio/setup.md#customization) (<kbd>Alt</kbd><kbd>S</kbd> on Windows; <kbd>⌥</kbd><kbd>S</kbd> on Mac). Use a minimum delay of 50–150 milliseconds in both the inbound and outbound directions to better simulate how network latency will affect your experience.
 </Alert>

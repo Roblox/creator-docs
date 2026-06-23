@@ -100,7 +100,7 @@ After you submit the questionnaire, your experience receives a maturity label wi
 </Alert>
 
 <Alert severity="warning">
-   While parents can use parental controls to bypass most content restrictions according to what they believe is appropriate for their child, Roblox restricts [free-form user creation](#free-form-user-creation) and [social hangouts](#social-hangout) to players over 13.
+   While parents can use parental controls to bypass most content restrictions according to what they believe is appropriate for their child, Roblox restricts [free-form user creation](#free-form-user-creation) and [social hangouts](#social-hangout) to players over 16.
 </Alert>
 
 ### Violence
@@ -370,7 +370,7 @@ Strong language is vulgar and obscene language that is not used to harass, discr
 If your experience includes strong language, you must disclose it within the Maturity & Compliance Questionnaire. Experiences that include strong language are only available to age-verified players that are at least 18 years old.
 
 <Alert severity="info">
-   If you want to enable strong language in player communication aside from content for your experiences with **Restricted** content maturity labels, see [here](../../projects/configure-experiences.md#allow-strong-language).
+   If you want to enable strong language in player communication aside from content for your experiences with **Restricted** content maturity labels, see [here](../../projects/configure-games.md#allow-strong-language).
 </Alert>
 
 ### Romantic themes

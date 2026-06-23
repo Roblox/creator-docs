@@ -10,7 +10,7 @@ Layered clothing lets you create 3D clothes and accessories that nearly any avat
 We recommend building a base body character upon which you can fit the layered clothing you're creating. We'll go over how to do this in an external DCC application and combine it all in Studio to create the final character from the space station.
 
 <Alert severity="info">
-For additional layered clothing resources, such as guides, example projects, and reference models, see [3D accessories](../../art/accessories/index.md).
+For additional layered clothing resources, such as guides, example projects, and reference models, see [Layered accessories](../../avatar/layered-accessories/index.md).
 </Alert>
 
 ## Build the custom character
@@ -400,7 +400,7 @@ When we had the helmet roughly fitted and placed in our DCC application, we coul
 
 ### Introduce the accessory tool
 
-<Alert severity="info"> See [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) for more information on converting a mesh or model to an `Class.Accessory`. </Alert>
+<Alert severity="info"> See [Accessory Fitting Tool](../../avatar/accessory-fitting-tool.md) for more information on converting a mesh or model to an `Class.Accessory`. </Alert>
 
 With so many components being built in parallel, it can be a little hard to know if your assets fit exactly and look the way you want. However, with the upcoming Accessory Tool, fitting and refining clothing is much easier. We used this tool to set up the character's top and bottom, as well as the hardpoint helmet and backpack accessories.
 

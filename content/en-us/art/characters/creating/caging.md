@@ -5,7 +5,7 @@ next: /art/characters/creating/combine-head-geometry
 prev: /art/characters/creating/texturing-pbr
 ---
 
-**Caging** is the process of updating the [cage mesh component](../../../art/characters/index.md#cage-meshes) of your avatar character. To allow your character to correctly wear layered clothing and accessories, you must update the default template cage mesh object to match the sculpting changes you made to your custom character.
+**Caging** is the process of updating the [cage mesh component](../../../avatar/character-bodies/index.md#cage-meshes) of your avatar character. To allow your character to correctly wear layered clothing and accessories, you must update the default template cage mesh object to match the sculpting changes you made to your custom character.
 
 Since this tutorial only applies modeling changes to the head, the caging instructions below only apply to the **Head_OuterCage** object. If you make geometry changes to other parts of the character, you must also adjust those specific **\_OuterCage** objects to match your sculpting changes.
 

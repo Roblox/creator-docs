@@ -114,9 +114,130 @@ end)
 
 The [Soccer](https://www.roblox.com/games/110687099504272/Soccer-Server-Authority-Template) example experience uses a variation of this technique to more intelligently turn on and off position smoothing for the soccer ball. Specifically, the soccer ball only smooths its position when the simulated ball has "jumped" far enough away from the rendered ball. This approach provides the best of both worlds: the soccer ball has no visual latency under normal conditions, and the experience smoothly interpolates its position only after the simulated ball has unexpectedly jumped to a new location, likely due to a network artifact or server‑side change.
 
-## Animations, sounds, and visual effects
+## Writing animation code
 
-In a predicted simulation, it's possible to trigger effects, sounds, or animations for events that the client predicted would happen but which never occurred on the server. The rendering system should be prepared to "undo" any mispredicted effects. For example, a client might predict that a grenade exploded and trigger a particle effect, but if another player diffused the grenade, the client should hide the particle effect.
+Under server authority, the client's simulation can be [rolled back and resimulated](./index.md#rollback-and-resimulation) when the server corrects a misprediction. During rollback, animation state is rewound, which means `Class.AnimationTrack` handles that you cached in earlier frames may no longer be valid.
+
+### Mirror animation logic
+
+As with any core gameplay logic, the logic for controlling animations must be in sync between server and client or there may be mispredictions and jittery behavior. See [simulation sync](./index.md#simulation-sync) for a pattern that binds functions through `Class.RunService:BindToSimulation()` in a `Class.ModuleScript` that's initialized on both the client and server.
+
+### Avoid track caching
+
+A common pattern in non-server-authority scripts is to cache `Class.AnimationTrack` objects at load time and reuse them indefinitely. This pattern fails in a server authoritative game when the server corrects a misprediction and the client rewinds/replays its simulation with corrected data. If your script still holds a reference to a stopped or replaced track, calls like `Class.AnimationTrack:AdjustWeight()|AdjustWeight()` or `Class.AnimationTrack:AdjustSpeed()|AdjustSpeed()` will operate on a track that's no longer visually represented.
+
+```lua title="Cache Tracks on Client (Unreliable)"
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local animator = humanoid:WaitForChild("Animator")
+
+-- Cache animation tracks
+local tracks = {}
+tracks["WalkForward"] = animator:LoadAnimation(walkForwardAnim)
+
+RunService:BindToSimulation(function(dt: number)
+	tracks["WalkForward"]:AdjustSpeed(1 + math.cos(time()))
+end)
+```
+
+Instead of holding onto track objects, store the **animation IDs** (or `Class.Animation` instances) and query the `Class.Animator` for the live track whenever you need to interact with it. Two APIs are available for this:
+
+- `Class.Animator:GetTrackByAnimationId()` — Returns the currently active track for a specific animation ID, or `nil` if there are no active animations with that ID. Use this when you know which specific animation you're looking for.
+- `Class.Animator:GetPlayingAnimationTracks()` — Returns all active tracks (playing, fading out, or paused). Use this when you need to iterate over everything that's active (for example, to stop all animations or find tracks by some criteria).
+
+<Tabs>
+<TabItem label="CustomAnimate">
+`Class.ModuleScript` named `CustomAnimate` in `Class.ReplicatedStorage`:
+
+```lua title="CustomAnimate"
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local RunService = game:GetService("RunService")
+
+local CustomAnimate = {}
+
+-- Store animation references (not loaded tracks)
+local animations = {
+	WalkForward = ReplicatedStorage.Animations.WalkForward,
+}
+
+local function getOrLoadTrack(animator: Animator, animation: Animation): AnimationTrack
+	local track = animator:GetTrackByAnimationId(animation.AnimationId)
+	if not track then
+		track = animator:LoadAnimation(animation)
+	end
+	return track
+end
+
+CustomAnimate.SyncAnimations = function(character)
+	local humanoid = character:WaitForChild("Humanoid")
+	local animator = humanoid:WaitForChild("Animator")
+
+	RunService:BindToSimulation(function(dt: number)
+		local walkTrack = getOrLoadTrack(animator, animations.WalkForward)
+		if not walkTrack.isPlaying then
+			walkTrack.Looped = true
+			walkTrack.Priority = Enum.AnimationPriority.Core
+			walkTrack:Play()
+		end
+		walkTrack:AdjustSpeed(1 + math.cos(time()))
+	end)
+end
+
+return CustomAnimate
+```
+
+</TabItem>
+<TabItem label="ServerSync">
+
+`Class.Script` named `ServerSync` in `Class.ServerScriptService`:
+
+```lua title="ServerSync"
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local CustomAnimate = require(ReplicatedStorage.CustomAnimate)
+
+local function onCharacterAdded(character)
+	CustomAnimate.SyncAnimations(character)
+end
+
+local function onPlayerAdded(player)
+	player.CharacterAdded:Connect(onCharacterAdded)
+end
+
+Players.PlayerAdded:Connect(onPlayerAdded)
+```
+
+</TabItem>
+<TabItem label="ClientSync">
+
+`Class.LocalScript` named `ClientSync` in `Class.StarterCharacterScripts`:
+
+```lua title="ClientSync"
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local CustomAnimate = require(ReplicatedStorage.CustomAnimate)
+
+local player = Players.LocalPlayer
+local character = player.Character
+if not character or character.Parent == nil then
+	character = player.CharacterAdded:Wait()
+end
+
+CustomAnimate.SyncAnimations(character)
+```
+
+</TabItem>
+</Tabs>
+
+## Playing sounds and visual effects
+
+In a predicted simulation, it's possible to trigger effects or sounds for events that the client predicted would happen but which never occurred on the server. The rendering system should be prepared to "undo" any mispredicted effects. For example, a client might predict that a grenade exploded and trigger a particle effect, but if another player defused the grenade, the client should hide the particle effect.
 
 A good strategy for rendering a predicted simulation is to synchronize a state machine pattern within the simulation loop and render changes to the state in a render step function. The following example simulates a grenade with a state machine pattern:
 

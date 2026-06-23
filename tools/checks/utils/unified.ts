@@ -26,6 +26,7 @@ import { VFileMessage } from 'vfile-message';
 import {
   RETEXT_SPELL_ALLOW_LIST,
   INAPPROPRIATE_WORDS_LIST,
+  RETEXT_CONTRACTIONS_ALLOW_LIST,
   RETEXT_EQUALITY_ALLOW_LIST,
   RETEXT_PASSIVE_ALLOW_LIST,
   ALLOWED_PROFANE_WORDS_LIST,
@@ -264,6 +265,23 @@ const filterRetextQuotes = (message: VFileMessage) => {
   return !isNestingQuotesIssue(message);
 };
 
+/**
+ * Filter function that filters out `retext-contractions` messages for words in
+ * the allow list. For example, `Id` is flagged as a missing apostrophe
+ * (suggesting `I'd`), but it's commonly used as shorthand for "identification"
+ * (e.g. asset `Id`), so we skip it. See `RETEXT_CONTRACTIONS_ALLOW_LIST`.
+ */
+export const filterRetextContractions = (message: VFileMessage) => {
+  if (
+    message.source === RETEXT_CONTRACTIONS &&
+    typeof message.actual === 'string' &&
+    RETEXT_CONTRACTIONS_ALLOW_LIST.includes(message.actual)
+  ) {
+    return false;
+  }
+  return true;
+};
+
 // Filter function that filters out skippable words
 export const filterRetextSpell = (message: VFileMessage) => {
   if (message.source === RETEXT_SPELL) {
@@ -471,6 +489,7 @@ export const getReTextAnalysis = async (text: string) => {
     .map(replaceRetextSpellMessageReason)
     .filter(filterRetextQuotes)
     .filter(filterRetextSpell)
-    .filter(filterRepeatedWords);
+    .filter(filterRepeatedWords)
+    .filter(filterRetextContractions);
   return file;
 };

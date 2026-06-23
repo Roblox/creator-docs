@@ -203,8 +203,11 @@ properties:
     capabilities:
       - Basic
   - name: Decal.Rotation
-    summary: ''
-    description: ''
+    summary: |
+      Rotates the decal texture.
+    description: |
+      This property controls the rotation angle of the decal texture in degrees.
+      Rotation is applied to the UV coordinates in the clockwise direction.
     code_samples: []
     type: float
     tags: []

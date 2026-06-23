@@ -7,11 +7,11 @@ description: The Avatar Validation Tool checks for common character model issues
 This tool is no longer in active development. You are free to use the tool for any purpose. The tool may be out of date or incompatible with modern Roblox assets.
 </Alert>
 
-The **Avatar Validation Tool** is a supplemental Blender add-on you can use to quickly identify common issues with your character model. This tool checks that your model meets most of Roblox's avatar [technical specifications](../../art/characters/specifications.md) and, when possible, attempts to automatically resolve them.
+The **Avatar Validation Tool** is a supplemental Blender add-on you can use to quickly identify common issues with your character model. This tool checks that your model meets most of Roblox's avatar [technical specifications](../../avatar/character-bodies/specifications.md) and, when possible, attempts to automatically resolve them.
 
 <img src="../../assets/art/avatar/Validation-Tool-Preview.png" width="100%" />
 
-This tool can save you time by checking for common validation specifications before you export your model, but it doesn't provide a comprehensive verification of all aspects of your character model. You should always continually test your character model, including testing your characters [in Studio](../../art/characters/testing/studio.md) and verifying on your own if your model meets Roblox's [character specifications](../../art/characters/specifications.md).
+This tool can save you time by checking for common validation specifications before you export your model, but it doesn't provide a comprehensive verification of all aspects of your character model. You should always continually test your character model, including testing your characters [in Studio](../../art/characters/testing/studio.md) and verifying on your own if your model meets Roblox's [character specifications](../../avatar/character-bodies/specifications.md).
 
 ## Install
 
@@ -60,12 +60,12 @@ To use the validation tool on your asset:
    <video controls src="../../assets/art/avatar/Validation-Tool-Test.mp4" width="100%"></video>
 
 <Alert severity = 'info'>
-This validation tool only checks for common validation issues. You should always continually test your character model, including testing your characters [in Studio](../../art/characters/testing/studio.md) and verifying on your own if your model meets Roblox's [character specifications](../../art/characters/specifications.md).
+This validation tool only checks for common validation issues. You should always continually test your character model, including testing your characters [in Studio](../../art/characters/testing/studio.md) and verifying on your own if your model meets Roblox's [character specifications](../../avatar/character-bodies/specifications.md).
 </Alert>
 
 ## Checks and troubleshooting
 
-Each button on the validation tool performs a different check against the expected [character specifications](../../art/characters/specifications.md). The following are the specific types of verification each check performs, as well as general troubleshooting steps to resolve discovered issues:
+Each button on the validation tool performs a different check against the expected [character specifications](../../avatar/character-bodies/specifications.md). The following are the specific types of verification each check performs, as well as general troubleshooting steps to resolve discovered issues:
 
 <dl>
 <dt>**Layers**</dt>

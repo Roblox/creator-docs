@@ -1606,17 +1606,26 @@ items:
     tags: []
     deprecation_message: ''
   - name: MouseLeftButton
-    summary: ''
+    summary: |
+      The left mouse button, also commonly referred to as "button 1" on a
+      generic mouse. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
     value: 1026
     tags: []
     deprecation_message: ''
   - name: MouseRightButton
-    summary: ''
+    summary: |
+      The right mouse button, also commonly referred to as "button 2" on a
+      generic mouse. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
     value: 1027
     tags: []
     deprecation_message: ''
   - name: MouseMiddleButton
-    summary: ''
+    summary: |
+      The middle mouse button, also commonly referred to as "button 3" on a
+      generic mouse. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
     value: 1028
     tags: []
     deprecation_message: ''
@@ -1663,32 +1672,45 @@ items:
     tags: []
     deprecation_message: ''
   - name: MouseWheel
-    summary: ''
+    summary: |
+      The scroll delta (change) of a mouse wheel. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
     value: 1035
     tags: []
     deprecation_message: ''
   - name: TrackpadPan
-    summary: ''
+    summary: |
+      The pan delta (change) from a trackpad two-finger pan gesture. Primarily
+      used in the [Input Action System](../../../input/input-action-system.md).
     value: 1040
     tags: []
     deprecation_message: ''
   - name: TrackpadPinch
-    summary: ''
+    summary: |
+      The scale delta (change) from a trackpad two-finger pinch gesture.
+      Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
     value: 1045
     tags: []
     deprecation_message: ''
   - name: MouseDelta
-    summary: ''
+    summary: |
+      The movement delta (change) of the mouse cursor. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
     value: 1048
     tags: []
     deprecation_message: ''
   - name: TouchDelta
-    summary: ''
+    summary: |
+      The movement delta (change) of a touch input. Primarily used in the
+      [Input Action System](../../../input/input-action-system.md).
     value: 1049
     tags: []
     deprecation_message: ''
   - name: TouchPinch
-    summary: ''
+    summary: |
+      The scale delta (change) of a two-finger touch pinch gesture. Primarily
+      used in the [Input Action System](../../../input/input-action-system.md).
     value: 1050
     tags: []
     deprecation_message: ''

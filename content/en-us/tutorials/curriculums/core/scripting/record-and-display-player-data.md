@@ -9,74 +9,107 @@ prev: /tutorials/curriculums/core/scripting/script-game-behavior
 
 <br/>
 
-Now that you can detect when a player has collected a coin, this section of the tutorial
-teaches you how to count how many coins players have collected, and make that amount visible
-on a leaderboard.
+Now that you can detect when a player has collected a coin, you need to count how many coins players have collected and make that amount visible on a leaderboard.
 
 ## Create a module script to record coin collection
 
-To handle the storage and management of each player's coin collection data,
-you need to create a `Class.ModuleScript` object to contain a data structure and
-functions that access coin collection data for every player. Module scripts are
-reusable code that other scripts can require. In this case, the
-`CoinService` requires this module script so that it can update coin collection data
-when players touch coins.
+To handle the storage and management of each player's coin collection data, you need to create a `Class.ModuleScript` object to contain a data structure and functions that access coin collection data for every player. Module scripts are reusable code that other scripts can require. In this case, the CoinService requires this module script so that it can update coin collection data when players touch coins.
 
-To create a module script:
+<Tabs>
+<TabItem key = "1" label="Build with Assistant">
 
-1. In the **Explorer** window, hover over **ServerStorage** and click the
-   **&CirclePlus;** button. A contextual menu displays.
-1. From the contextual menu, select **ModuleScript**. A new module script displays under **ServerStorage**.
-   You are placing a module script into **ServerStorage** because you want to manage the coin collection
-   logic on the server.
+````text title="Create PlayerData"
+In ServerStorage, create a ModuleScript named PlayerData with the following code:
 
-   <img src="../../../../assets/tutorials/record-and-display-player-data/Insert-ModuleScript.png" alt="Studio's Explorer window with both the ServerScriptService's plus icon and ModuleScript object highlighted." width="320" />
+```lua
+local PlayerData = {}
+PlayerData.COIN_KEY_NAME = "Coins"
 
-1. Rename the module script to **PlayerData**.
+local playerData = {
+  --[[
+    [userId: string] = {
+      ["Coins"] = coinAmount: number
+    }
+  ]]
+}
 
-   <img src="../../../../assets/tutorials/record-and-display-player-data/ModuleScript-Renamed-PlayerData.png" alt="Studio's Explorer window with the PlayerData script highlighted under ServerStorage." width="320" />
+local function defaultPlayerData()
+  return {
+    [PlayerData.COIN_KEY_NAME] = 0
+  }
+end
 
-1. Replace the default code with the following code:
+local function getData(player)
+  local data = playerData[tostring(player.UserId)] or defaultPlayerData()
+  playerData[tostring(player.UserId)] = data
+  return data
+end
 
-   ```lua
-   local PlayerData = {}
-   PlayerData.COIN_KEY_NAME = "Coins"
+function PlayerData.getValue(player, key)
+  return getData(player)[key]
+end
 
-   local playerData = {
-     --[[
-       [userId: string] = {
-         ["Coins"] = coinAmount: number
-       }
-     ]]
-   }
+function PlayerData.updateValue(player, key, updateFunction)
+  local data = getData(player)
+  local oldValue = data[key]
+  local newValue = updateFunction(oldValue)
 
-   local function defaultPlayerData()
-     return {
-       [PlayerData.COIN_KEY_NAME] = 0
-     }
-   end
+  data[key] = newValue
+  return newValue
+end
 
-   local function getData(player)
-     local data = playerData[tostring(player.UserId)] or defaultPlayerData()
-     playerData[tostring(player.UserId)] = data
-     return data
-   end
+return PlayerData
+```
+````
 
-   function PlayerData.getValue(player, key)
-     return getData(player)[key]
-   end
+</TabItem>
+<TabItem key = "2" label="Build it Yourself">
 
-   function PlayerData.updateValue(player, key, updateFunction)
-     local data = getData(player)
-     local oldValue = data[key]
-     local newValue = updateFunction(oldValue)
+1. In the **Explorer**, hover over **ServerStorage**, click **&CirclePlus;**, and insert a **ModuleScript**. Rename it **PlayerData**. You should place the module script into **ServerStorage** to manage the coin collection logic on the server.
+2. Replace the default code with the following code to define the table that maps each player's ID to their data:
 
-     data[key] = newValue
-     return newValue
-   end
+```lua
+local PlayerData = {}
+PlayerData.COIN_KEY_NAME = "Coins"
 
-   return PlayerData
-   ```
+local playerData = {
+  --[[
+    [userId: string] = {
+      ["Coins"] = coinAmount: number
+    }
+  ]]
+}
+
+local function defaultPlayerData()
+  return {
+    [PlayerData.COIN_KEY_NAME] = 0
+  }
+end
+
+local function getData(player)
+  local data = playerData[tostring(player.UserId)] or defaultPlayerData()
+  playerData[tostring(player.UserId)] = data
+  return data
+end
+
+function PlayerData.getValue(player, key)
+  return getData(player)[key]
+end
+
+function PlayerData.updateValue(player, key, updateFunction)
+  local data = getData(player)
+  local oldValue = data[key]
+  local newValue = updateFunction(oldValue)
+
+  data[key] = newValue
+  return newValue
+end
+
+return PlayerData
+```
+
+</TabItem>
+</Tabs>
 
    <BaseAccordion>
    <AccordionSummary>
@@ -169,57 +202,101 @@ To create a module script:
 
 ## Implement a leaderboard
 
-You can represent the coin collection data visually with an on-screen
-leaderboard. Roblox includes a built-in system that automatically generates a
-leaderboard using a default UI.
+You can represent the coin collection data visually with an on-screen leaderboard. Roblox includes a built-in system that automatically generates a leaderboard using a default UI.
 
-To create the leaderboard:
+<Tabs>
+<TabItem key = "1" label="Build with Assistant">
 
-1. In the **Explorer** window, create a **ModuleScript** in **ServerStorage**, then
-rename the module script to **Leaderboard**.
+````text title="Create Leaderboard"
+In ServerStorage, create a ModuleScript named Leaderboard with the following code:
 
-   <img src="../../../../assets/tutorials/record-and-display-player-data/ModuleScript-Renamed-Leaderboard.png" alt="Studio's Explorer window with the Leaderboard script highlighted under ServerStorage." width="320" />
+```lua
+local Leaderboard = {}
 
-1. Replace the default code with the following code:
+-- Creating a new leaderboard
+local function setupLeaderboard(player)
+  local leaderstats = Instance.new("Folder")
+  -- 'leaderstats' is a reserved name Roblox recognizes for creating a leaderboard
+  leaderstats.Name = "leaderstats"
+  leaderstats.Parent = player
+  return leaderstats
+end
 
-   ```lua
-   local Leaderboard = {}
+-- Creating a new leaderboard stat value
+local function setupStat(leaderstats, statName)
+  local stat = Instance.new("IntValue")
+  stat.Name = statName
+  stat.Value = 0
+  stat.Parent = leaderstats
+  return stat
+end
 
-   -- Creating a new leaderboard
-   local function setupLeaderboard(player)
-     local leaderstats = Instance.new("Folder")
-     -- 'leaderstats' is a reserved name Roblox recognizes for creating a leaderboard
-     leaderstats.Name = "leaderstats"
-     leaderstats.Parent = player
-     return leaderstats
-   end
+-- Updating a player's stat value
+function Leaderboard.setStat(player, statName, value)
+  local leaderstats = player:FindFirstChild("leaderstats")
+  if not leaderstats then
+    leaderstats = setupLeaderboard(player)
+  end
 
-   -- Creating a new leaderboard stat value
-   local function setupStat(leaderstats, statName)
-     local stat = Instance.new("IntValue")
-     stat.Name = statName
-     stat.Value = 0
-     stat.Parent = leaderstats
-     return stat
-   end
+  local stat = leaderstats:FindFirstChild(statName)
+  if not stat then
+    stat = setupStat(leaderstats, statName)
+  end
 
-   -- Updating a player's stat value
-   function Leaderboard.setStat(player, statName, value)
-     local leaderstats = player:FindFirstChild("leaderstats")
-     if not leaderstats then
-       leaderstats = setupLeaderboard(player)
-     end
+  stat.Value = value
+end
 
-     local stat = leaderstats:FindFirstChild(statName)
-     if not stat then
-       stat = setupStat(leaderstats, statName)
-     end
+return Leaderboard
+```
+````
 
-     stat.Value = value
-   end
+</TabItem>
+<TabItem key = "2" label="Build it Yourself">
 
-   return Leaderboard
-   ```
+1. In the **Explorer**, insert another **ModuleScript** into **ServerStorage** and rename it `Leaderboard`. This one sits next to `PlayerData` so `CoinService` can `require` both from the same place.
+2. Replace the default code with the following code to create the folder and the value object on the first call, and then update the value on every call after:
+
+```lua
+local Leaderboard = {}
+
+-- Creating a new leaderboard
+local function setupLeaderboard(player)
+  local leaderstats = Instance.new("Folder")
+  -- 'leaderstats' is a reserved name Roblox recognizes for creating a leaderboard
+  leaderstats.Name = "leaderstats"
+  leaderstats.Parent = player
+  return leaderstats
+end
+
+-- Creating a new leaderboard stat value
+local function setupStat(leaderstats, statName)
+  local stat = Instance.new("IntValue")
+  stat.Name = statName
+  stat.Value = 0
+  stat.Parent = leaderstats
+  return stat
+end
+
+-- Updating a player's stat value
+function Leaderboard.setStat(player, statName, value)
+  local leaderstats = player:FindFirstChild("leaderstats")
+  if not leaderstats then
+    leaderstats = setupLeaderboard(player)
+  end
+
+  local stat = leaderstats:FindFirstChild(statName)
+  if not stat then
+    stat = setupStat(leaderstats, statName)
+  end
+
+  stat.Value = value
+end
+
+return Leaderboard
+```
+
+</TabItem>
+</Tabs>
 
    <BaseAccordion>
    <AccordionSummary>
@@ -290,67 +367,132 @@ rename the module script to **Leaderboard**.
 
 ## Integrate the module scripts
 
-With both the **PlayerData** and **Leaderboard** module scripts complete,
-require them in the **CoinService** script to manage and display player coin
-data. To update **CoinService**:
+With both modules in place, require them in the `CoinService` script to manage and display player coin data.
 
-1.  In the **Explorer** window, open the **CoinService** script.
-2.  Replace the existing code with the following code:
+<Tabs>
+<TabItem key = "1" label="Build with Assistant">
 
-    ```lua
-    -- Initializing services and variables
-    local Workspace = game:GetService("Workspace")
-    local Players = game:GetService("Players")
-    local ServerStorage = game:GetService("ServerStorage")
+````text title="Update CoinService"
+In ServerScriptService, replace the existing CoinService Script's code with the following:
 
-    -- Modules
-    local Leaderboard = require(ServerStorage.Leaderboard)
-    local PlayerData = require(ServerStorage.PlayerData)
+```lua
+-- Initializing services and variables
+local Workspace = game:GetService("Workspace")
+local Players = game:GetService("Players")
+local ServerStorage = game:GetService("ServerStorage")
 
-    local coinsFolder = Workspace.World.Coins
-    local coins = coinsFolder:GetChildren()
+-- Modules
+local Leaderboard = require(ServerStorage.Leaderboard)
+local PlayerData = require(ServerStorage.PlayerData)
 
-    local COIN_KEY_NAME = PlayerData.COIN_KEY_NAME
-    local COOLDOWN = 10
-    local COIN_AMOUNT_TO_ADD = 1
+local coinsFolder = Workspace.World.Coins
+local coins = coinsFolder:GetChildren()
 
-    local function updatePlayerCoins(player, updateFunction)
-      -- Update the coin table
-      local newCoinAmount = PlayerData.updateValue(player, COIN_KEY_NAME, updateFunction)
+local COIN_KEY_NAME = PlayerData.COIN_KEY_NAME
+local COOLDOWN = 10
+local COIN_AMOUNT_TO_ADD = 1
 
-      -- Update the coin leaderboard
-      Leaderboard.setStat(player, COIN_KEY_NAME, newCoinAmount)
-    end
+local function updatePlayerCoins(player, updateFunction)
+  -- Update the coin table
+  local newCoinAmount = PlayerData.updateValue(player, COIN_KEY_NAME, updateFunction)
 
-    -- Defining the event handler
-    local function onCoinTouched(otherPart, coin)
-      if coin:GetAttribute("Enabled") then
-        local character = otherPart.Parent
-        local player = Players:GetPlayerFromCharacter(character)
-        if player then
-          -- Player touched a coin
-          coin.Transparency = 1
-          coin:SetAttribute("Enabled", false)
-          updatePlayerCoins(player, function(oldCoinAmount)
-            oldCoinAmount = oldCoinAmount or 0
-            return oldCoinAmount + COIN_AMOUNT_TO_ADD
-          end)
+  -- Update the coin leaderboard
+  Leaderboard.setStat(player, COIN_KEY_NAME, newCoinAmount)
+end
 
-          task.wait(COOLDOWN)
-          coin.Transparency = 0
-          coin:SetAttribute("Enabled", true)
-        end
-      end
-    end
-
-    -- Setting up event listeners
-    for _, coin in coins do
-      coin:SetAttribute("Enabled", true)
-      coin.Touched:Connect(function(otherPart)
-        onCoinTouched(otherPart, coin)
+-- Defining the event handler
+local function onCoinTouched(otherPart, coin)
+  if coin:GetAttribute("Enabled") then
+    local character = otherPart.Parent
+    local player = Players:GetPlayerFromCharacter(character)
+    if player then
+      -- Player touched a coin
+      coin.Transparency = 1
+      coin:SetAttribute("Enabled", false)
+      updatePlayerCoins(player, function(oldCoinAmount)
+        oldCoinAmount = oldCoinAmount or 0
+        return oldCoinAmount + COIN_AMOUNT_TO_ADD
       end)
+
+      task.wait(COOLDOWN)
+      coin.Transparency = 0
+      coin:SetAttribute("Enabled", true)
     end
-    ```
+  end
+end
+
+-- Setting up event listeners
+for _, coin in coins do
+  coin:SetAttribute("Enabled", true)
+  coin.Touched:Connect(function(otherPart)
+    onCoinTouched(otherPart, coin)
+  end)
+end
+```
+````
+
+</TabItem>
+<TabItem key = "2" label="Build it Yourself">
+1. In the **Explorer**, open the existing `CoinService` script inside **ServerScriptService**.
+2. Replace the code with the following code to update `PlayerData` and the leaderboard in a single step:
+
+```lua
+-- Initializing services and variables
+local Workspace = game:GetService("Workspace")
+local Players = game:GetService("Players")
+local ServerStorage = game:GetService("ServerStorage")
+
+-- Modules
+local Leaderboard = require(ServerStorage.Leaderboard)
+local PlayerData = require(ServerStorage.PlayerData)
+
+local coinsFolder = Workspace.World.Coins
+local coins = coinsFolder:GetChildren()
+
+local COIN_KEY_NAME = PlayerData.COIN_KEY_NAME
+local COOLDOWN = 10
+local COIN_AMOUNT_TO_ADD = 1
+
+local function updatePlayerCoins(player, updateFunction)
+  -- Update the coin table
+  local newCoinAmount = PlayerData.updateValue(player, COIN_KEY_NAME, updateFunction)
+
+  -- Update the coin leaderboard
+  Leaderboard.setStat(player, COIN_KEY_NAME, newCoinAmount)
+end
+
+-- Defining the event handler
+local function onCoinTouched(otherPart, coin)
+  if coin:GetAttribute("Enabled") then
+    local character = otherPart.Parent
+    local player = Players:GetPlayerFromCharacter(character)
+    if player then
+      -- Player touched a coin
+      coin.Transparency = 1
+      coin:SetAttribute("Enabled", false)
+      updatePlayerCoins(player, function(oldCoinAmount)
+        oldCoinAmount = oldCoinAmount or 0
+        return oldCoinAmount + COIN_AMOUNT_TO_ADD
+      end)
+
+      task.wait(COOLDOWN)
+      coin.Transparency = 0
+      coin:SetAttribute("Enabled", true)
+    end
+  end
+end
+
+-- Setting up event listeners
+for _, coin in coins do
+  coin:SetAttribute("Enabled", true)
+  coin.Touched:Connect(function(otherPart)
+    onCoinTouched(otherPart, coin)
+  end)
+end
+```
+
+</TabItem>
+</Tabs>
 
     <BaseAccordion>
     <AccordionSummary>
@@ -375,16 +517,8 @@ data. To update **CoinService**:
 
 ## Playtest
 
-It's time to see if the coin collection is working as intended. When you touch
-and collect a coin in the 3D world, you should be able to see the amount of coins
-you've collected on the leaderboard UI. To playtest your experience:
+Select **Test** from the dropdown and click **Play**. Walk into a coin and confirm that the leaderboard appears in the corner and that your coin count increases as you collect more coins.
 
-1. Choose **Test** from the dropdown menu and click the **Play** button to its right to begin the playtest.
-
-   <img src="../../../../assets/studio/general/Mezzanine-Testing-Mode-Test.png" width="800" alt="Test option in the testing modes dropdown of Studio's mezzanine." />
-
-1. Move your character to touch a coin. If your scripts are working correctly, the leaderboard UI displays and increase your coin count as you collect more coins.
-
-   <video controls loop muted>
-   <source src="../../../../assets/tutorials/record-and-display-player-data/record-and-display-player-data-example.mp4" />
-   </video>
+<video controls loop muted>
+<source src="../../../../assets/tutorials/record-and-display-player-data/record-and-display-player-data-example.mp4" />
+</video>

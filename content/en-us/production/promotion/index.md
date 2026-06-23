@@ -65,7 +65,7 @@ The following table details promotional methods for avatar items on the platform
 <tbody>
 	<tr>
 		<td>**Sponsored items**</td>
-		<td>Sponsoring items allows you to increase the discoverability of your 3D user-generated content to users within the [Marketplace](https://www.roblox.com/catalog). You can choose your audience, schedule the duration of your ad, and specify your budget per day.<br /><br />For more information, see [Sponsor items](../../production/promotion/sponsor-items.md).</td>
+		<td>Sponsoring items allows you to increase the discoverability of your 3D user-generated content to users within the [Marketplace](https://www.roblox.com/catalog). You can choose your audience, schedule the duration of your ad, and specify your budget per day.<br /><br />For more information, see [Sponsor items](../../marketplace/sponsor-items.md).</td>
 	</tr>
 </tbody>
 </table>

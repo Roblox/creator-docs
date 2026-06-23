@@ -69,16 +69,19 @@ properties:
       streaming enabled.
     description: |
       Sets the level of detail on the model for experiences with instance
-      [streaming](../../../workspace/streaming/index.md) enabled.
+      [streaming](../../../workspace/streaming/index.md) enabled. Composite or
+      imposter meshes do not support physics, collision detection, or
+      raycasting.
 
       When set to `Enum.ModelLevelOfDetail|StreamingMesh`, a lower resolution
       "imposter" mesh (colored, coarse mesh that wraps around all child parts of
-      the model) renders outside the streaming radius.
+      the model) renders outside the streaming radius. Does not support
+      textures.
 
-      When set to `Enum.ModelLevelOfDetail|SLIM`, a Scalable Lightweight
-      Interactive Model, or SLIM, model (a composite of all child parts of the
-      model) renders at progressively lower resolutions at distances based on
-      the streaming radius. This greatly improves visual quality over
+      When set to `Enum.ModelLevelOfDetail|SLIM`, a **SLIM** model (Scalable
+      Lightweight Interactive Model) renders a composite of all child parts at
+      progressively lower resolutions at distances based on the streaming
+      radius. This greatly improves visual quality over
       `Enum.ModelLevelOfDetail|StreamingMesh`.
 
       When set to `Enum.ModelLevelOfDetail|Disabled` or

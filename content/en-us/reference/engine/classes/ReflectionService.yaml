@@ -117,7 +117,7 @@ methods:
           An optional filter to restrict or expand the set of classes that this
           method can return and change the method's behavior.
     returns:
-      - type: Dictionary?
+      - type: ReflectedClass?
         summary: |
           A `ReflectedClass` dictionary with reflection information if the class
           exists; otherwise, `nil`.
@@ -160,7 +160,7 @@ methods:
           An optional filter to restrict or expand the set of classes that this
           method can return and change the method's behavior.
     returns:
-      - type: Array
+      - type: List<ReflectedClass>
         summary: |
           A list of `ReflectedClass` dictionaries with reflection information
           for each class that matches the filter criteria.
@@ -237,7 +237,7 @@ methods:
           An optional filter to restrict or expand the set of events that this
           method can return and change the method's behavior.
     returns:
-      - type: Array
+      - type: List<ReflectedEvent>
         summary: |
           A list of `ReflectedEvent` dictionaries with reflection information
           for each event of the class that matches the filter criteria.
@@ -322,7 +322,7 @@ methods:
           An optional filter to restrict or expand the set of methods that this
           method can return and change the method's behavior.
     returns:
-      - type: Array
+      - type: List<ReflectedMethod>
         summary: |
           A list of `ReflectedMethod` dictionaries with reflection information
           for each method of the class that matches the filter criteria.
@@ -405,7 +405,7 @@ methods:
           An optional filter to restrict or expand the set of properties that
           this method can return and change the method's behavior.
     returns:
-      - type: Array
+      - type: List<ReflectedProperty>
         summary: |
           A list of `ReflectedProperty` dictionaries with reflection information
           for each property of the class that matches the filter criteria.

@@ -220,7 +220,7 @@ let app = express();
 app.use(express.json());
 
 app.all('/*', function (req, res) {
-   console.log('New request recieved');
+   console.log('New request received');
 
    // Extract the timestamp and signature from header
    const signatureHeader = req.headers['roblox-signature'].split(',');

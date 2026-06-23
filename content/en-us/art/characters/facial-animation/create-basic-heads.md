@@ -11,7 +11,7 @@ You can create or modify an existing model to support animated heads in a third-
 
 - The model follows standard [modeling requirements](#modeling-requirements), and includes head geometry, such as eyes, a mouth, and teeth.
 - The model's head must include a [rig](#rigging), or internal bone structure. These bones drive the various deformation of vertices to create facial expressions. You can create a [control system](#add-controls) to simplify the posing process.
-- The model has facial poses [saved to the animation timeline](#pose) and [mapped to the head mesh](#map). Typical animatable heads include [50 standard base poses](../../../art/characters/facial-animation/facs-poses-reference.md) that allow for a diverse range of expressions.
+- The model has facial poses [saved to the animation timeline](#pose) and [mapped to the head mesh](#map). Typical animatable heads include [50 standard base poses](../../../avatar/dynamic-heads/facs-poses-reference.md) that allow for a diverse range of expressions.
 
 To meet these requirements, you can apply the steps in this guide when designing and posing your own head. This guide covers the basic processes of adding facial bones, posing, and mapping 5 basic FACS poses in Blender on a simplified reference character (Cubie), then exporting the model.
 
@@ -24,7 +24,7 @@ To meet these requirements, you can apply the steps in this guide when designing
 The following are head reference files, including all example files from this guide:
 
 <Alert severity = 'warning'>
-The reference character model provided is meant for educational purposes and does not meet the avatar character [technical specifications](../../../art/characters/specifications.md) for general use.
+The reference character model provided is meant for educational purposes and does not meet the avatar character [technical specifications](../../../avatar/character-bodies/specifications.md) for general use.
 </Alert>
 
 <table>
@@ -64,13 +64,13 @@ The reference character model provided is meant for educational purposes and doe
 
 ## Modeling requirements
 
-Many character models already include a head with distinct facial features, but they might require minor modeling adjustments for head compatibility. When modeling a character with a head, ensure the head mesh meets the [Avatar character specifications](../../../art/characters/specifications.md) for Studio import, as well as the following requirements:
+Many character models already include a head with distinct facial features, but they might require minor modeling adjustments for head compatibility. When modeling a character with a head, ensure the head mesh meets the [Avatar character specifications](../../../avatar/character-bodies/specifications.md) for Studio import, as well as the following requirements:
 
 - **Face parts** - Ensure that you include distinct face features, such as eyes, upper teeth, lower teeth, and a tongue.
 - **Lip vertices** - If you want your character to use its mouth, separate the lip vertices so that the mouth can open.
 - **Inner components** - If your character has inner mouth components, such as a tongue and teeth, model a mouth bag within the head mesh to contain these features. If your character uses eye sockets, model a similar eye bag to contain these features.
 - **No extra data** - Ensure that all children face parts of the Head_Geo don't contain history or frozen transformations.
-- **Outer cage** - Make sure the character model has an outer cage to support face accessories and layered clothing. For more information, see [Cage Mesh Requirements](../../../art/characters/specifications.md#inner-and-outer-cages).
+- **Outer cage** - Make sure the character model has an outer cage to support face accessories and layered clothing. For more information, see [Cage Mesh Requirements](../../../avatar/character-bodies/specifications.md#inner-and-outer-cages).
 
 You can follow along the rest of this head creation process using a [rigged Cubie character](../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie-Model-Only.blend) that meets these modeling requirements. This version doesn't include any facial rigging or pose data so you can use it as reference in this guide.
 
@@ -110,7 +110,7 @@ The following instructions describe a basic process of [adding face bones](#add-
 <Alert severity="info">
    You can download a [reference Cubie model](../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie-Complete.fbx) with a completed rig with 30+ facial bones added and skinned. You can use this for a reference for unique bone placements not covered in this guide, such as cheeks, lips, and jaws.
   
-   See [Use heads in Studio](../../../art/characters/facial-animation/use-heads-in-studio.md) for download links of more complex characters.
+   See [Test heads in Studio](../../../avatar/dynamic-heads/test.md) for download links of more complex characters.
 </Alert>
 
 #### Add face bones
@@ -306,17 +306,17 @@ To create custom bone shapes for easier control bone access:
 
 **Posing** is the process of manipulating the bones of your head mesh into a specific position per animation frame. After the model's head has been rigged, you can begin the process of saving poses to the timeline. This data enables Studio to access each facial movement and animate or blend facial poses to create dynamic expressions.
 
-When posing the bones of your character's head mesh to new positions, follow the [Facial Action Coding System](../../../art/characters/facial-animation/facs-poses-reference.md) (FACS) as a reference for your facial expression poses. FACS is a comprehensive, anatomically-based system for describing all visually discernible facial movement, and it allows for all facial animations to be shareable between characters. This means that once you create a facial animation, you can reuse it for any character with an [animatable head](../../../art/characters/facial-animation/use-heads-in-studio.md) with a `Class.FaceControls` instance.
+When posing the bones of your character's head mesh to new positions, follow the [Facial Action Coding System](../../../avatar/dynamic-heads/facs-poses-reference.md) (FACS) as a reference for your facial expression poses. FACS is a comprehensive, anatomically-based system for describing all visually discernible facial movement, and it allows for all facial animations to be shareable between characters. This means that once you create a facial animation, you can reuse it for any character with an [animatable head](../../../avatar/dynamic-heads/index.md) with a `Class.FaceControls` instance.
 
 Each frame within your modeling software's animation timeline can contain one unique FACS pose, so when you want to create multiple FACS poses, you must save each FACS pose to a different frame. You must also include a frame with your character having a neutral face with the face controllers and bones set to their default values. This ensures that Studio can calculate the bone position differences between your character's neutral expression and each FACS pose. For this reason, set Frame 0 as your character's neutral expression, and save FACS poses starting at Frame 1.
 
 The following image is an example of Blender's animation timeline with 5 frames. Frame 0 has the character's neutral expression, and frames 1-4 have FACS pose data.
 <img src="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/Animation-Timeline.png" width="70%" />
 
-There are [50 base poses](./facs-poses-reference.md) that you can use in Roblox to portray a wide range of face emotions for your characters. When you are deciding which poses you need, remember that FACS pose names are always based on the orientation of the character, not the camera. For example, `LeftEyeClosed` closes the character's left eye, which is to the right of the camera view.
+There are [50 base poses](../../../avatar/dynamic-heads/facs-poses-reference.md) that you can use in Roblox to portray a wide range of face emotions for your characters. When you are deciding which poses you need, remember that FACS pose names are always based on the orientation of the character, not the camera. For example, `LeftEyeClosed` closes the character's left eye, which is to the right of the camera view.
 
 <Alert severity = 'warning'>
-If you intend to sell your character head to the Marketplace, you must include the minimum 17 base [FACS poses](./facs-poses-reference.md).
+If you intend to sell your character head to the Marketplace, you must include the minimum 17 base [FACS poses](../../../avatar/dynamic-heads/facs-poses-reference.md).
 </Alert>
 
 You might not require all 50 base poses for your character. For example, a simple robot that opens its mouth and blinks can just have `JawDrop`, `LeftEyeClosed`, and `RightEyeClosed`. Therefore, the more expressive you want your character to be, the more FACS poses you need to include in your animation timeline. It's recommended to save the base poses that you intend to use with your head in alphabetical order, then use any frames afterwards for [combination poses](#combination-poses).
@@ -390,7 +390,7 @@ On import, Studio calculates and stores the corrective difference for combinatio
 After you finish posing each FACS pose that your character needs, you must map, or link, **each animation frame that you pose** to its corresponding FACS base or combination pose name. Mapping stores the bone positions and translations within the head `Class.MeshPart`, and when you begin to animate your head within the **Animation Editor**, the `Class.FaceControls` instance uses this stored data to transform your character's facial features to the applicable FACS pose.
 
 <Alert severity = 'warning'>
-If you intend to sell your character head to the Marketplace, you must include the minimum 17 base [FACS poses](./facs-poses-reference.md).
+If you intend to sell your character head to the Marketplace, you must include the minimum 17 base [FACS poses](../../../avatar/dynamic-heads/facs-poses-reference.md).
 </Alert>
 
 Aside from mapping each pose to its proper pose name, you also need to map the [RootFaceJoint](#rootfacejoint) so that Studio can properly locate that joint and hide all of the children joints and their bones within the `Class.FaceControls` instance on import.
@@ -402,7 +402,7 @@ Aside from mapping each pose to its proper pose name, you also need to map the [
 </Alert>
 
 <Alert severity="error">
-   If you leave any empty strings, or try to import the head into Studio with multiple frames per FACS pose name, the head will fail the [import process](../../../art/characters/facial-animation/use-heads-in-studio.md#import-heads).
+   If you leave any empty strings, or try to import the head into Studio with multiple frames per FACS pose name, the head will fail the [import process](../../../avatar/dynamic-heads/test.md).
 </Alert>
 
 To map your saved poses and the RootFaceJoint:
@@ -424,7 +424,7 @@ To map your saved poses and the RootFaceJoint:
 7. Leave the **Default Value** and **Description** fields empty.
 8. Click the **OK** button. The new custom property updates with your new property name.
 9. In the field to the right of the custom property name:
-   1. If you're mapping a base pose, input the corresponding [FACS base pose](./facs-poses-reference.md) or combination pose name exactly as it is spelled.
+   1. If you're mapping a base pose, input the corresponding [FACS base pose](../../../avatar/dynamic-heads/facs-poses-reference.md) or combination pose name exactly as it is spelled.
    2. If you're mapping a combination pose, input each base pose you are combining separated by an underscore, such as **Funneler_JawDrop_Pucker**.
    3. If you're mapping the RootFaceJoint, input the name of the face root bone, commonly **DynamicHead**.
 10. Press **Enter**.
@@ -456,7 +456,7 @@ The export settings for animatable heads differ slightly from [standard third-pa
 7. Expand **Bake Animation** and uncheck **NLA Strips**, **All Actions**, and **Force Start/End Keyframes**.
 8. Click the **Export FBX** button. Save the FBX to the directory of your choice.
 
-At this point, you can now import the `.fbx` into Studio as a character with a supported animatable head. For model import and usage instructions, see [Use heads in Studio](../../../art/characters/facial-animation/use-heads-in-studio.md).
+At this point, you can now import the `.fbx` into Studio as a character with a supported animatable head. For model import and usage instructions, see [Test heads in Studio](../../../avatar/dynamic-heads/test.md).
 
 <Alert severity="warning">
    When importing Cubie into Studio, make sure to also save the head texture <a href="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie_Head_ALB.png" download>Cubie-Texture_ALB.png</a> which you can apply to the head mesh of the imported character as a TextureID.

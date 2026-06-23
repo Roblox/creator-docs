@@ -97,7 +97,7 @@ To create an animation for your head using the **Face Animation Editor**:
 
 ## Export animations
 
-When you export a head that supports animation to Studio, it becomes available for use in all of your experiences. This means that you only need to create a head animation once, then you can reuse it as many times for as many characters as you want as long as the character has an [animatable head](../../../art/characters/facial-animation/use-heads-in-studio.md).
+When you export a head that supports animation to Studio, it becomes available for use in all of your experiences. This means that you only need to create a head animation once, then you can reuse it as many times for as many characters as you want as long as the character has an [animatable head](../../../avatar/dynamic-heads/index.md).
 
 You can export head animations using the same workflow outlined for [exporting animations](../../../animation/editor.md#export-an-animation).
 

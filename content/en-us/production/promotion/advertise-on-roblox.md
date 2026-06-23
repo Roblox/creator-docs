@@ -39,7 +39,7 @@ Which advertising product is right for your content depends on the type of conte
     <td>Within the **Sponsored** category on the [Home](https://www.roblox.com/home) page</td>
   </tr>
   <tr>
-    <td>[Sponsored items](../../production/promotion/sponsor-items.md)</td>
+    <td>[Sponsored items](../../marketplace/sponsor-items.md)</td>
     <td>3D user-generated content</td>
     <td>Within the **Sponsored** category on any item's main details page on the Roblox website, and the **Recommended Items for You** page of the Marketplace on the Roblox app</td>
   </tr>

@@ -23,7 +23,8 @@ items:
   - name: Collectibles
     summary: ''
     value: 3
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: CommunityCreations
     summary: ''

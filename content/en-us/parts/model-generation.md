@@ -18,7 +18,7 @@ Through text prompts and preset schemas, you (and players in‑experience) can g
 
 ## Schema-based generation
 
-To create articulated, functional objects, the generated geometry must be separated into multiple `Class.MeshPart|MeshParts`. For example, to create a drivable car with wheels that spin and steer, at least five `Class.MeshPart|MeshParts` are needed: one for the car body and four for each of the car's wheels. `Class.GenerationService:GenerateModelAsync()|GenerateModelAsync()` achieves this through a preset **schema** as shown in the following code snippet:
+To create articulated, functional objects, the generated geometry must be separated into multiple `Class.MeshPart|MeshParts`. For example, to create a drivable car with wheels that spin and steer, at least five `Class.MeshPart|MeshParts` are needed: one for the car body and four for each of the car's wheels. `Class.GenerationService:GenerateModelAsync()|GenerateModelAsync()` achieves this through a **schema** that lists the parts to generate, as shown in the following code snippet:
 
 ```lua title="Script in ServerScriptService"
 local GenerationService = game:GetService("GenerationService")
@@ -60,8 +60,8 @@ else
 end
 ```
 
-<Alert severity="success">
-`Class.GenerationService:GenerateModelAsync()|GenerateModelAsync()` currently supports two fixed schemas: `Car5` which produces a car with a body and four wheels, and `Body1` which yields a single `Class.MeshPart` object. Additional schemas will be supported in the future, as well as creator‑customized (open) schemas.
+<Alert severity="info">
+`Class.GenerationService:GenerateModelAsync()|GenerateModelAsync()` currently supports two fixed schemas: `Car5` which produces a car with a body and four wheels, and `Body1` which yields a single `Class.MeshPart` object.
 </Alert>
 
 The following image shows the expected output and its construction as it appears in the [Explorer](../studio/explorer.md) hierarchy:

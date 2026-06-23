@@ -12,7 +12,7 @@ In order to publish and sell assets on the Marketplace, your account or group mu
 2. [Publish the asset](#publish-an-asset) to the Marketplace after configuring metadata and Marketplace settings.
 
 <Alert severity = 'info'>
-  The following publishing instructions apply to 3D accessories and clothing assets. See [Classic clothing](../art/classic-clothing.md) for information on uploading and selling classic 2D clothing.
+  The following publishing instructions apply to 3D accessories and clothing assets. See [Classic clothing](../avatar/classic-clothing.md) for information on uploading and selling classic 2D clothing.
 </Alert>
 
 ## Upload and publish limits
@@ -61,15 +61,15 @@ To upload your asset:
 
 1. In Studio, add the Marketplace item to your workspace.
 
-   - For accessories and clothing, the item must be an `Class.Accessory` object. For information on the required specifications, see [Accessory specifications](../art/accessories/specifications.md)
+   - For accessories and clothing, the item must be an `Class.Accessory` object. For information on the required specifications, see [Rigid accessory specifications](../avatar/rigid-accessories/specifications.md) and [Layered clothing specifications](../avatar/layered-accessories/specifications.md).
 
-     - Upload clothing and accessories as an `Class.Accessory`. For information on converting your `Class.Model` into an `Class.Accessory`, see [Accessory Fitting Tool](../art/accessories/accessory-fitting-tool.md).
+     - Upload clothing and accessories as an `Class.Accessory`. For information on converting your `Class.Model` into an `Class.Accessory`, see [Accessory Fitting Tool](../avatar/accessory-fitting-tool.md).
      - If uploading shoes, each shoe must be their own accessory object:
 
        - Name the respective shoe accessories `LeftShoeAccessory` and `RightShoeAccessory`.
        - Select both left and right shoe accessories and right-click ⟩ **Group as a Model** before step 2.
 
-     - For bodies and heads, the item must be a `Class.Model`. For information on the required specifications, see [Avatar character specifications](../art/characters/specifications.md).
+     - For bodies and heads, the item must be a `Class.Model`. For information on the required specifications, see [Avatar character specifications](../avatar/character-bodies/specifications.md).
        - You can add a default skin color to your body by adding a `Class.BodyColors` object to your model.
 
 2. In the **Explorer** window, right-click the object and select **Save to Roblox**.
@@ -90,7 +90,7 @@ To upload your asset:
    </figure>
    </GridContainer>
 
-5. Once validation completes successfully, an item description dialog displays. Fill out the following fields and follow [metadata best practices](../production/publishing/publish-experiences-and-places.md#publish-experiences) when possible.
+5. Once validation completes successfully, an item description dialog displays. Fill out the following fields and follow [metadata best practices](../production/publishing/publish-games-and-places.md#publish-games) when possible.
 
    - **Title**: The name of your asset in the Marketplace.
    - **Creator**: You can set your user or any associated groups as the creator of this asset. The creator can access the Marketplace asset to set prices, benefits, and access sales information.
@@ -109,7 +109,7 @@ During the upload process, you might encounter issues that prevent an item from 
 <figure>
 For technical issues during the validation step, hover over the error to see the specific failure output. Most issues may require adjusting your model in your third-party modeling application and re-importing into Studio.
 
-See the modeling specifications for [accessories](../art/accessories/specifications.md) and [avatars](../art/characters/specifications.md) for technical requirements.
+See the modeling specifications for [rigid accessories](../avatar/rigid-accessories/specifications.md), [layered accessories](../avatar/layered-accessories/specifications.md), and [character bodies](../avatar/character-bodies/specifications.md) for technical requirements.
 
 </figure>
 
@@ -142,7 +142,7 @@ Before publishing your asset, it's important to consider if you want to sell you
 
 ### Metadata
 
-You can adjust the metadata for any of your creations at any time. Keep in mind that the metadata, such as the title and description, should follow [general best practices](../production/publishing/publish-experiences-and-places.md#publish-experiences) to avoid moderation and improve discoverability.
+You can adjust the metadata for any of your creations at any time. Keep in mind that the metadata, such as the title and description, should follow [general best practices](../production/publishing/publish-games-and-places.md#publish-games) to avoid moderation and improve discoverability.
 
 <img src="../assets/publishing/marketplace/Manage-Item-Page.png" alt="Manage Item page with example asset." width="80%" />
 

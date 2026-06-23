@@ -267,7 +267,7 @@ methods:
     code_samples: []
     parameters:
       - name: userId
-        type: int64
+        type: User
         default:
         summary: ''
     returns:
@@ -297,11 +297,11 @@ methods:
     code_samples: []
     parameters:
       - name: userIdFrom
-        type: int64
+        type: User
         default:
         summary: ''
       - name: userIdTo
-        type: int64
+        type: User
         default:
         summary: ''
     returns:
@@ -344,7 +344,7 @@ methods:
       - TextChatService-User-Chat
     parameters:
       - name: requesterUserId
-        type: int64
+        type: User
         default:
         summary: |
           The user who would have initiated the direct chat request. If the user
