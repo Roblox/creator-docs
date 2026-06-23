@@ -274,7 +274,9 @@ To increase the ability to zoom the default camera considerably far out while de
 </Alert>
 
 <br/>
-Inside of the Streaming debug view, you can see colored highlighted spaces within the 2D panel UI:
+<br/>
+
+Inside of the Streaming debug view, you can see colored highlighted spaces within the 2D Panel UI:
 
 - Regular streaming
   - Green: A streamed in space
