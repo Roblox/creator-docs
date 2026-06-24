@@ -8,6 +8,9 @@ summary: |
   Enum for determining how two images are combined together.
 description: |
   Enum for determining how two images are combined together.
+
+  In all combine operations, **source** refers to the new pixels being drawn and
+  **destination** refers to the existing pixels in the image being drawn onto.
 code_samples: []
 tags: []
 deprecation_message: ''

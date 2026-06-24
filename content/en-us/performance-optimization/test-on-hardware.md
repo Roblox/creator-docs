@@ -20,7 +20,7 @@ Studio runs the client and server together on your development machine, which is
 
 The majority of Roblox players are on lower-spec mobile devices, with some exceptions for specific genres or competitive games. Understanding the device landscape helps you prioritize what to test, and you can use the [Performance Dashboard](../production/analytics/performance.md) to get more accurate metrics of your player base.
 
-It's important to remember that Roblox is inherently cross-play and that device demographics change across different countries, age groups, genres, and more. To reach the widest audience, your experience needs to perform well across the full range of devices.
+Roblox is inherently cross-play, which means that it supports a vast range of devices, and device demographics differ between countries, age groups, genres, and more. To reach the widest audience, your experience needs to perform well across the full range of devices.
 
 The following are general device statistics across the user base:
 
@@ -31,6 +31,10 @@ The following are general device statistics across the user base:
 - Over 50% of the Roblox player base plays on devices scoring between **10,000–20,000** on [Passmark](https://www.passmark.com/) benchmarks.
 
 If you're only testing on your development machine, you're testing for the minority of your audience. Prioritize [cross-platform compatibility](../projects/cross-platform.md) and pick at least one low-end baseline device that represents your target player demographic.
+
+<Alert severity="success">
+For a broader set of Android test devices that covers more of the player base, choose devices at a variety of performance levels from several manufacturers. For example, you might test on an Infinix Smart 9, a Motorola Moto G05, an Oppo A18, an Amazon Fire HD 10 (2023), and a Samsung Galaxy S22 Ultra.
+</Alert>
 
 ## Testing strategies
 
