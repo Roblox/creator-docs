@@ -84,8 +84,7 @@ properties:
       deformation.
     code_samples: []
     type: float
-    tags:
-      - Deprecated
+    tags: []
     deprecation_message: ''
     security:
       read: None

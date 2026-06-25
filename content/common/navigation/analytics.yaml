@@ -13,6 +13,8 @@ navigation:
     path: /production/analytics/error-report
   - title: Crashes
     path: /production/analytics/crashes
+  - title: Alerts
+    path: /production/analytics/alerts
 
   - heading: Adjust and experiment
   - title: Configs

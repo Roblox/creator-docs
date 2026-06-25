@@ -24,7 +24,8 @@ description: |
   text with `Class.TextLabel.TextScaled|TextScaled` enabled. It is recommended
   that the size of text is no lower than `9`, otherwise it may not be visible to
   many users.
-code_samples: []
+code_samples:
+  - Game-State-Text
 inherits:
   - GuiLabel
 descendants: []
@@ -101,6 +102,7 @@ properties:
       property.
     code_samples:
       - Show-All-Fonts
+      - Cycle-Font
     type: Enum.Font
     tags:
       - Hidden
@@ -340,7 +342,6 @@ properties:
   - name: TextLabel.TextBounds
     summary: |
       Read-only property which reflects the absolute size of rendered text in
-      offsets.
     description: |
       This read-only property reflects the absolute size of rendered text in
       offsets, meaning that if you try to fit text into a rectangle, this
@@ -351,7 +352,8 @@ properties:
       `Class.TextLabel.TextBounds|TextBounds` will be given a string,
       `Class.TextLabel.Font|Font`, `Class.TextLabel.TextSize|TextSize`, and
       frame size.
-    code_samples: []
+    code_samples:
+      - Dynamic-TextBox-Size
     type: Vector2
     tags:
       - ReadOnly
@@ -512,7 +514,8 @@ properties:
       This property determines the height of one line of rendered text. The unit
       is in offsets, not points (which is used in most document editing
       programs). The `Enum.Font.Legacy` font does not hold this property.
-    code_samples: []
+    code_samples:
+      - Kaboom-Text
     type: float
     tags: []
     deprecation_message: ''
@@ -567,7 +570,8 @@ properties:
 
       As a powerful alternative which supports color gradients, see
       `Class.UIStroke`.
-    code_samples: []
+    code_samples:
+      - Text-Highlight-Oscillation
     type: float
     tags: []
     deprecation_message: ''
@@ -648,7 +652,6 @@ properties:
   - name: TextLabel.TextWrapped
     summary: |
       Determines if text wraps to multiple lines within the `Class.TextLabel`
-      element's space, truncating excess text.
     description: |
       When enabled, this property will render text on multiple lines within a
       `Class.TextLabel` element's space so that
@@ -664,7 +667,8 @@ properties:
       vertical height of the element (the **Y** component of
       `Class.GuiBase2d.AbsoluteSize`), then that line will not be rendered at
       all.
-    code_samples: []
+    code_samples:
+      - Long-Text-Wrapping
     type: boolean
     tags: []
     deprecation_message: ''
@@ -690,7 +694,8 @@ properties:
       Note that this property won't affect the read-only properties
       `Class.TextLabel.TextBounds|TextBounds` and
       `Class.TextLabel.TextFits|TextFits`.
-    code_samples: []
+    code_samples:
+      - Text-Alignment
     type: TextXAlignment
     tags: []
     deprecation_message: ''

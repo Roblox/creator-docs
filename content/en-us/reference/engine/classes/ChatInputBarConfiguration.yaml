@@ -10,7 +10,17 @@ summary: |
 description: |
   Configures properties of the default text chat input bar. It is parented to
   `Class.TextChatService`.
-code_samples: []
+
+  #### Chat UI composition
+
+  The default chat UI is composed of two separate elements: the **chat window**
+  (message list) configured by `Class.ChatWindowConfiguration`, and the **chat
+  input bar** configured by this object. Each element reports its own
+  `AbsoluteSize` and `AbsolutePosition` independently. To determine the total
+  screen bounds of the entire chat UI, combine values from both configurations
+  by computing the union of the two rectangles.
+code_samples:
+  - ChatWindowConfiguration-Get-Total-Chat-Bounds
 inherits:
   - TextChatConfigurations
 descendants: []
@@ -25,6 +35,11 @@ properties:
       Read-only property that provides the screen position of the default chat
       input bar in pixels. Behaves similarly to
       `Class.GuiBase2d.AbsolutePosition`.
+
+      This value represents only the input bar portion of the chat UI, not the
+      entire chat interface. To get the total bounds including the message list,
+      see `Class.ChatWindowConfiguration.AbsolutePosition` and combine both
+      regions.
     code_samples: []
     type: Vector2
     tags:
@@ -47,6 +62,10 @@ properties:
     description: |
       Read-only property that provides the screen size of the default chat input
       bar in pixels. Behaves similarly to `Class.GuiBase2d.AbsoluteSize`.
+
+      This value represents only the input bar portion of the chat UI, not the
+      entire chat interface. To get the total bounds including the message list,
+      see `Class.ChatWindowConfiguration.AbsoluteSize` and combine both regions.
     code_samples: []
     type: Vector2
     tags:

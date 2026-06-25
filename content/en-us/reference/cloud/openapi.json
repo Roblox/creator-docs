@@ -3593,7 +3593,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -3667,7 +3667,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -3781,7 +3781,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -3877,7 +3877,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -3954,7 +3954,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 550000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4035,7 +4035,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 550000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4135,7 +4135,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 550000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4228,7 +4228,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4348,7 +4348,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4471,7 +4471,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4576,7 +4576,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4662,7 +4662,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 550000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4752,7 +4752,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 550000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4861,7 +4861,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 550000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4963,7 +4963,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -5092,7 +5092,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -5176,7 +5176,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -6322,7 +6322,7 @@
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -6427,7 +6427,7 @@
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -6513,7 +6513,7 @@
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -6603,7 +6603,7 @@
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -6712,7 +6712,7 @@
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -6814,7 +6814,7 @@
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -34276,16 +34276,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/GameVoteResponseApiArrayResponse"
                 }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GameVoteResponseApiArrayResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GameVoteResponseApiArrayResponse"
-                }
               }
             }
           }
@@ -34439,114 +34429,6 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#PrivateServers_GetPrivateServerList"
-        }
-      }
-    },
-    "/v1/games/{placeId}/servers/{serverType}": {
-      "get": {
-        "tags": ["Places", "Universes"],
-        "summary": "Get the game server list",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "placeId",
-            "description": "The Id of the place we are geting the server list for.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "path",
-            "name": "serverType",
-            "description": "The type of the server we geting the server list for.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "enum": [0, 1]
-            }
-          },
-          {
-            "in": "query",
-            "name": "sortOrder",
-            "description": "The sort order of the servers.",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "enum": [1, 2],
-              "default": 2
-            }
-          },
-          {
-            "in": "query",
-            "name": "excludeFullGames",
-            "description": "Exclude full servers.",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            }
-          },
-          {
-            "in": "query",
-            "name": "limit",
-            "description": "The number of results per request.",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "enum": [10, 25, 50, 100],
-              "default": 10
-            }
-          },
-          {
-            "in": "query",
-            "name": "cursor",
-            "description": "The paging cursor for the previous or next page.",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Web.Responses.Games.GameServerResponse_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Web.Responses.Games.GameServerResponse_"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The place is invalid.\r\n6: The server type is invalid. For fetching private servers, please use https://games.roblox.com/v1/games/{placeId}/private-servers.\r\n7: Guest users are not allowed."
-          },
-          "404": {
-            "description": "1: The place is invalid."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://games.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {},
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/places#games_get_v1_games__placeId__servers__serverType_"
         }
       }
     },
@@ -34968,16 +34850,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/ApiEmptyResponseModel"
                 }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiEmptyResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiEmptyResponseModel"
-                }
               }
             }
           }
@@ -35020,16 +34892,6 @@
             "description": "Success",
             "content": {
               "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GameVoteResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GameVoteResponse"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GameVoteResponse"
                 }
@@ -35083,16 +34945,6 @@
             "description": "Success",
             "content": {
               "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserGameVoteResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserGameVoteResponse"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UserGameVoteResponse"
                 }
@@ -49981,6 +49833,15 @@
           },
           {
             "in": "query",
+            "name": "includeBackground",
+            "description": "Whether to include a background in the thumbnail (defaults to false)",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "in": "query",
             "name": "size",
             "description": "The thumbnail size, formatted widthxheight",
             "schema": {
@@ -50140,6 +50001,15 @@
           },
           {
             "in": "query",
+            "name": "includeBackground",
+            "description": "Whether to include a background in the thumbnail (defaults to false)",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "in": "query",
             "name": "size",
             "description": "The thumbnail size, formatted widthxheight",
             "schema": {
@@ -50225,6 +50095,15 @@
                 "format": "int64",
                 "type": "integer"
               }
+            }
+          },
+          {
+            "in": "query",
+            "name": "includeBackground",
+            "description": "Whether to include a background in the thumbnail (defaults to false)",
+            "schema": {
+              "type": "boolean",
+              "default": false
             }
           },
           {
@@ -50378,6 +50257,15 @@
                 "format": "int64",
                 "type": "integer"
               }
+            }
+          },
+          {
+            "in": "query",
+            "name": "includeBackground",
+            "description": "Whether to include a background in the thumbnail (defaults to false)",
+            "schema": {
+              "type": "boolean",
+              "default": false
             }
           },
           {
@@ -76593,27 +76481,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Games.Api.GameServerPlayerResponse": {
-        "description": "A response model representing a game server player.",
-        "type": "object",
-        "properties": {
-          "playerToken": {
-            "description": "The thumbnail token for the player.",
-            "type": "string"
-          },
-          "id": {
-            "format": "int64",
-            "type": "integer"
-          },
-          "name": {
-            "type": "string"
-          },
-          "displayName": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Games.Api.Models.Request.GameFavoritesRequest": {
         "description": "Game favorite request model.",
         "type": "object",
@@ -76818,6 +76685,10 @@
           "canonicalUrlPath": {
             "description": "Canonical URL path for the game page, e.g. /games/{placeId}/{canonical-slug}.\r\nIt must be the same as the canonical URL (rel-canonical meta tag) on the game's EDP.",
             "type": "string"
+          },
+          "isContentRestricted": {
+            "description": "Indicates whether this experience is content-restricted and has had its details wiped.\r\nWhen true, the content fields (name, description, creator, etc.) contain placeholder or\r\nempty values rather than the real data. Consumers should branch on this flag instead of\r\ninferring restriction from placeholder text.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -77147,6 +77018,10 @@
           },
           "upsellUxTreatment": {
             "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.UpsellUxTreatment"
+          },
+          "demoModeAvailable": {
+            "description": "Whether the game supports demo play for users who have not purchased it.\r\nOnly set when PlayabilityStatus is PurchaseRequired or FiatPurchaseRequired.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -77237,27 +77112,6 @@
         "properties": {
           "bodyText": {
             "description": "Localized body text for the upsell banner (e.g. \"You'll soon need an age check to\r\njoin this game.\").",
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Games.Api.Models.Response.VerifiedBadgeUserResponse": {
-        "description": "A response model specific to multi-get user.",
-        "type": "object",
-        "properties": {
-          "hasVerifiedBadge": {
-            "description": "The user's verified badge status.",
-            "type": "boolean"
-          },
-          "id": {
-            "format": "int64",
-            "type": "integer"
-          },
-          "name": {
-            "type": "string"
-          },
-          "displayName": {
             "type": "string"
           }
         },
@@ -81497,6 +81351,10 @@
           "headShape": {
             "description": "Head shape for dynamic head thumbnails (only relevant for Asset thumbnail types with dynamic head)",
             "type": "string"
+          },
+          "includeBackground": {
+            "description": "Whether to include a background in avatar thumbnails (defaults to false)",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -83482,69 +83340,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Web.Responses.Games.GameServerResponse": {
-        "description": "Game server list response model.",
-        "type": "object",
-        "properties": {
-          "id": {
-            "format": "uuid",
-            "description": "The game server ID.",
-            "type": "string"
-          },
-          "maxPlayers": {
-            "format": "int32",
-            "description": "The max number of players allowed to enter the server at the same time.",
-            "type": "integer"
-          },
-          "playing": {
-            "format": "int32",
-            "description": "The number of players actively in the server.",
-            "type": "integer"
-          },
-          "playerTokens": {
-            "description": "The thumbnail tokens for all the players in the server.",
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "players": {
-            "description": "The players in the server.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.Games.Api.GameServerPlayerResponse"
-            }
-          },
-          "fps": {
-            "format": "double",
-            "description": "The current frames per second the server is running at.",
-            "type": "number"
-          },
-          "ping": {
-            "format": "int32",
-            "description": "The game server ping time (measured in milliseconds).",
-            "type": "integer"
-          },
-          "name": {
-            "description": "The name of the private server.",
-            "type": "string"
-          },
-          "vipServerId": {
-            "format": "int64",
-            "description": "The private server ID.",
-            "type": "integer"
-          },
-          "accessCode": {
-            "format": "uuid",
-            "description": "The private server access code.",
-            "type": "string"
-          },
-          "owner": {
-            "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.VerifiedBadgeUserResponse"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Web.Responses.Groups.GroupBasicResponse": {
         "type": "object",
         "properties": {
@@ -84811,24 +84606,6 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Roblox.Web.Responses.Games.GameResponseV2"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Web.Responses.Games.GameServerResponse_": {
-        "type": "object",
-        "properties": {
-          "previousPageCursor": {
-            "type": "string"
-          },
-          "nextPageCursor": {
-            "type": "string"
-          },
-          "data": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.Web.Responses.Games.GameServerResponse"
             }
           }
         },
@@ -88852,7 +88629,6 @@
           "develop_get_v1_universes__universeId__places",
           "develop_get_v2_places__placeId_",
           "develop_patch_v2_places__placeId_",
-          "games_get_v1_games__placeId__servers__serverType_",
           "games_get_v1_games_multiget_place_details",
           "inventory_get_v1_users__userId__places_inventory"
         ]
@@ -89127,7 +88903,6 @@
           "gameinternationalization_get_v2_supported_languages_games__gameId_",
           "games_get_v1_games",
           "PrivateServers_GetPrivateServerList",
-          "games_get_v1_games__placeId__servers__serverType_",
           "games_get_v1_games__universeId__favorites",
           "games_post_v1_games__universeId__favorites",
           "games_get_v1_games__universeId__favorites_count",

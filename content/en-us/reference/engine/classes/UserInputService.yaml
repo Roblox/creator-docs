@@ -1337,7 +1337,7 @@ methods:
           The `Enum.KeyCode` to get the display string for.
       - name: format
         type: KeyCodeStringFormat
-        default: Default
+        default:
         summary: |
           An `Enum.KeyCodeStringFormat` value that controls the format of the
           returned string. Defaults to `Enum.KeyCodeStringFormat.Default`. Pass

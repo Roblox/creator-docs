@@ -234,8 +234,7 @@ methods:
       Badges that are associated with special events are a common reason for a
       badge to be disabled. Often, it is easier to simply disable a badge
       instead of hard-coding a time check for when some event ends.
-    code_samples:
-      - BadgeService-IsDisabled1
+    code_samples: []
     parameters:
       - name: badgeId
         type: int64

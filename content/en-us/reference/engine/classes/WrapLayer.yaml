@@ -172,8 +172,7 @@ properties:
       underlying clothing items.
     code_samples: []
     type: float
-    tags:
-      - Deprecated
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -297,8 +296,7 @@ properties:
       of 1 will maximally shrink. A value of 0 (default) has no effect.
     code_samples: []
     type: float
-    tags:
-      - Deprecated
+    tags: []
     deprecation_message: ''
     security:
       read: None

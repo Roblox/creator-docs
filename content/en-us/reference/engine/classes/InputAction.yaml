@@ -222,8 +222,7 @@ methods:
     returns:
       - type: ()
         summary: ''
-    tags:
-      - Deprecated
+    tags: []
     deprecation_message: |
       Use `Class.InputBinding:Fire()` with a `Enum.InputBindingType|Scriptable`
       binding instead.
