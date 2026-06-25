@@ -22502,6 +22502,164 @@
         }
       }
     },
+    "/server-management/v1/universes/{universeId}/places/{placeId}/versions/{versionNumber}/game-servers/{jobId}/logs": {
+      "get": {
+        "tags": ["Places"],
+        "summary": "Lists game server logs for a specific server job id",
+        "operationId": "GameServers_ListGameServerLogs",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "placeId",
+            "in": "path",
+            "description": "The place id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "versionNumber",
+            "in": "path",
+            "description": "The version number",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "jobId",
+            "in": "path",
+            "description": "The server job id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxPageSize",
+            "in": "query",
+            "description": "The maximum number of game servers to return. The service might return\r\nfewer than this value. If unspecified, at most 25 game servers are\r\nreturned. The maximum value is 100 and higher values are set to 100.",
+            "schema": {
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\r\nWhen paginating, all other parameters provided to the subsequent call must\r\nmatch the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrderBy",
+            "in": "query",
+            "description": "Sorting is supported only for a single field at a time.\r\nExample: \"orderBy\": \"uptime\"\r\nDefaults to ascending, but descending ordering is also supported by\r\nincluding the \" desc\" suffix. For example: \"orderBy\": \"uptime desc\".",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\r\n- CEL filtering is supported on all fields.\r\n- Supported operators &&, <, <=, >, >=, ==, and `in`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListGameServerLogsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerManagementService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerManagementService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerManagementService.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe:read",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/places#GameServers_ListGameServerLogs"
+        }
+      }
+    },
     "/server-management/v1/universes/{universeId}/restarts": {
       "get": {
         "tags": ["Universes"],
@@ -64807,6 +64965,76 @@
         },
         "additionalProperties": false
       },
+      "GameServerLog": {
+        "type": "object",
+        "properties": {
+          "messageTimestampMs": {
+            "type": "string",
+            "description": "The timestamp the log was received",
+            "format": "date-time"
+          },
+          "universeId": {
+            "type": "integer",
+            "description": "The universe where the log was created",
+            "format": "int64"
+          },
+          "placeId": {
+            "type": "string",
+            "description": "The place where the log was created",
+            "nullable": true
+          },
+          "placeVersion": {
+            "type": "string",
+            "description": "The place version on which the log was created",
+            "nullable": true
+          },
+          "jobId": {
+            "type": "string",
+            "description": "The Game Server id where the log was created",
+            "nullable": true
+          },
+          "severity": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/LogSeverity"
+              }
+            ],
+            "description": "The severity of the log"
+          },
+          "message": {
+            "type": "string",
+            "description": "The log message",
+            "nullable": true
+          },
+          "stackTrace": {
+            "type": "string",
+            "description": "The stack trace of the log",
+            "nullable": true
+          },
+          "messageTemplate": {
+            "type": "string",
+            "description": "Optional message template included with structured logging",
+            "nullable": true
+          },
+          "context": {
+            "type": "string",
+            "description": "Optional message context included with structured logging",
+            "nullable": true
+          },
+          "skippedCount": {
+            "type": "integer",
+            "description": "How many duplicate versions of this message were present in the same time window as this log",
+            "format": "int32"
+          },
+          "rateLimitedCount": {
+            "type": "integer",
+            "description": "How many more messages were present in the time window beyond our overall rate limits",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response model for listing a game server log"
+      },
       "GameServerResponse": {
         "type": "object",
         "properties": {
@@ -66607,6 +66835,26 @@
         "additionalProperties": false,
         "description": "Response for listing game pass configuration details by universe"
       },
+      "ListGameServerLogsResponse": {
+        "type": "object",
+        "properties": {
+          "gameServerLogs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GameServerLog"
+            },
+            "description": "The GameServers from the specified PlaceVersion.",
+            "nullable": true
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\r\npage. If this field is omitted, there are no subsequent pages.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response model for listing game servers."
+      },
       "ListGroupForumCategoriesResponse": {
         "type": "object",
         "properties": {
@@ -66945,6 +67193,12 @@
         },
         "additionalProperties": false,
         "description": "Literal constant for an RPN operand (proto `LiteralValue` oneof as independent fields for JSON)."
+      },
+      "LogSeverity": {
+        "enum": [0, 1, 2, 3],
+        "type": "integer",
+        "description": "Defines the various log severity types with values:\r\nOutput (0), Info (1), Warning (2), Error (3)",
+        "format": "int32"
       },
       "LuauExecutionSessionTask": {
         "type": "object",
@@ -88623,6 +88877,7 @@
           "develop_delete_v2_teamtest__placeId_",
           "GameServers_GetFilterOptions",
           "GameServers_ListGameServers",
+          "GameServers_ListGameServerLogs",
           "Places_CreatePlaceVersionApiKey",
           "develop_patch_v1_places__placeId_",
           "develop_post_v1_places__placeId_",
