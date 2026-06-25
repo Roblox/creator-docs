@@ -45,7 +45,7 @@ Luau uses `nil` to represent nonexistence or nothingness, which evaluates as `fa
 ```lua
 local messageToUser
 print(messageToUser) --> nil
-print(type(message)) --> nil
+print(type(messageToUser)) --> nil
 if messageToUser then
 	-- statement evaluates to false
 end
