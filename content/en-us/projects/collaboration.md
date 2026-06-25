@@ -3,10 +3,6 @@ title: Collaboration
 description: Studio's built-in collaboration tools let creators contribute independently, or work together with a team.
 ---
 
-<Alert severity="error">
-Starting **June 25, 2026**, you and your collaborators must meet [age-based collaboration requirements](#age-based-collaboration-requirements) to use Studio's built-in collaboration tools.
-</Alert>
-
 Creating a high-quality experience demands many skills such as modeling, scripting, user interface design, and audio production. It's unlikely that one person has all of these skills, which makes collaboration between different roles an essential part of the development workflow.
 
 With Studio's **built-in** **collaboration tools**, creators can contribute to experiences independently on their own time, or work together with their team all at the same time.
@@ -16,12 +12,12 @@ With Studio's **built-in** **collaboration tools**, creators can contribute to e
 ## Age-based collaboration requirements
 
 <Alert severity="warning">
-This requirement only applies if you're using Studio's collaboration tools with other creators. You can still use these tools by yourself without completing an age check.
+This requirement only applies if you add collaborators to your game using Studio's collaboration tools through Team Create. You can still use Team Create by yourself without completing an age check.
 </Alert>
 
-To use Studio's collaboration tools with other creators, you must first complete an age check by either [verifying your ID](./../production/publishing/account-verification.md#verify-through-government-id) or [completing a facial age estimation](https://en.help.roblox.com/hc/en-us/articles/42295385001236-How-does-Roblox-estimate-my-age).
+**To use Studio's collaboration tools with other creators, you must first complete an age check** by either [verifying your ID](./../production/publishing/account-verification.md#verify-through-government-id) or [completing a facial age estimation](https://en.help.roblox.com/hc/en-us/articles/42295385001236-How-does-Roblox-estimate-my-age). Group or game owners must complete an age check to enable the rest of their collaborators to join their games.
 
-By default, you can only collaborate with creators in compatible age groups. For example, a 16-year-old creator can be in a collaborative session with a creator who is 17 and another who is 21. A creator who is under 13, however, must have parental permission to collaborate with creators who are older than 18.
+After completing an age check, you can only collaborate with creators in compatible age groups by default. For example, a 16-year-old creator can collaborate with a creator who is 17 and another who is 21. A creator who is under 13, however, must be a trusted friend of older collaborators or have parental permission to collaborate with creators who are older than 18.
 
 <table>
   <thead>
@@ -60,14 +56,28 @@ By default, you can only collaborate with creators in compatible age groups. For
   </tbody>
 </table>
 
-If you're **under 13** and your team includes creators outside of your age group, you have two options:
+**To work with creators outside of your age group, you must meet at least one of the following requirements the first time you join a Team Create session:**
 
-- **Trusted friends.** Add specific collaborators as [trusted friends](https://en.help.roblox.com/hc/en-us/articles/37725513985812-Unlocking-trusted-friends), who can collaborate with each other regardless of age. Trusted friend requests from users under 13 require parental approval.
-- **Linked parent account.** Request permission to collaborate with all age groups through a [linked parent account](https://en.help.roblox.com/hc/en-us/articles/30428321333140-Parents-How-to-Link-Your-Child-s-Account).
+- Become a [trusted friend](https://en.help.roblox.com/hc/en-us/articles/46158344285204-How-do-I-add-trusted-friends) with every collaborator who has already accessed your game.
 
-  Parental permission to collaborate with all age groups doesn't guarantee access to every collaboration session. If another collaborator has their own permissions restricted to similar age groups or trusted friends only, you won't be able to join their session unless they add you as a trusted friend.
+  - You can send trusted friend requests to multiple people at once directly from Studio. Trusted friend requests from users under 13 require parental approval. In some regions, this requirement also applies to older teenagers.
+  - To see which collaborators you need to become trusted friends with to unblock yourself and which creators are currently blocked by you, go to your game in Creator Hub and then go to **Safety** > **Collaborators**.
 
-If you're **13 or older** and your team includes creators outside of your age group, you can add those collaborators as [trusted friends](https://en.help.roblox.com/hc/en-us/articles/37725513985812-Unlocking-trusted-friends). Trusted friends can collaborate with each other regardless of age. For larger teams, you can add multiple collaborators as trusted friends at once from Studio.
+- Receive permission from a [linked parent account](https://en.help.roblox.com/hc/en-us/articles/30428321333140-Parents-How-to-Link-Your-Child-s-Account) to collaborate with creators of all age groups through the [collaboration parental controls](https://www.roblox.com/my/account#!/parental-controls). Parents can use these controls to choose which age groups they are comfortable allowing their child to collaborate with.
+
+  - Creators under 16 can request that a parent update this setting. Linked parents can update this setting directly from their parental controls.
+  - This setting remains in effect until a parent changes it. Creators do **not** need to request permission every time they use Team Create.
+  - Permission to collaborate with all age groups does **not** guarantee access to every collaboration session. For example, if another collaborator under 16 who accessed the game before you has their own parental permissions restricted to similar age groups or trusted friends, you won't be able to collaborate with them unless they add you as a trusted friend.
+
+After a creator meets one of these requirements and successfully joins a Team Create session, they retain access unless they lose trusted friend status with a required collaborator or a parent revokes their Studio collaboration permission.
+
+Collaborators who can't join Team Create because of age-based collaboration requirements still have **Edit** permissions. They can:
+
+- Use **Save As** to publish a copy of the game to Roblox.
+- Use Open Cloud APIs.
+- Manage the game's metadata in Creator Hub.
+
+For more information, see the [Team Create age requirements FAQ](https://devforum.roblox.com/t/age-requirements-for-team-create-in-studio/4539725#p-14194111-faqs-8).
 
 ## Manage collaborators
 
