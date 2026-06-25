@@ -14,7 +14,7 @@ content: [
 {
 title: "Design a 2D classic shirt",
 description: "Use an image editor of your choice and create your first basic 2D cosmetic.",
-video: "https://www.youtube-nocookie.com/embed/r_unfGZT5Ps",
+video: "https://www.youtube.com/watch?v=negtrQu5mTA&list=OLAK5uy_kvsoDcbQDNwIFWIzS6fPqZu-OlBLiHi5A&index=2",
 links: [
 { text: "Learn more", href: "../avatar/classic-clothing.md" }
 ]
