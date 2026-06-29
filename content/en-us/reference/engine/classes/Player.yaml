@@ -1751,9 +1751,9 @@ methods:
   - name: Player:IsFriendsWith
     summary: |
       Checks whether a player is a friend of the user with the given
+      `Class.Player.UserId`.
     description: ''
-    code_samples:
-      - Player-IsFriendsWith1
+    code_samples: []
     parameters:
       - name: userId
         type: User

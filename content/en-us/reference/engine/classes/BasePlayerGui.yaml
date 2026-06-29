@@ -26,6 +26,7 @@ methods:
   - name: BasePlayerGui:GetGuiObjectsAtPosition
     summary: |
       Returns a list of all `Class.GuiObject` instances occupying the given
+      point on the screen.
     description: |
       Takes a screen position and returns a list of all the `Class.GuiObject`
       instances which are occupying that screen position, sorted in the order
@@ -36,8 +37,7 @@ methods:
       Since the child classes of `Class.BasePlayerGui` inherit this function, it
       can be fired by container classes such as `Class.PlayerGui` and
       `Class.StarterGui`.
-    code_samples:
-      - selecting-guis-at-a-position
+    code_samples: []
     parameters:
       - name: x
         type: int

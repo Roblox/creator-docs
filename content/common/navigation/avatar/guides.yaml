@@ -113,10 +113,10 @@ navigation:
         path: /marketplace/
       - title: Fees and commissions
         path: /marketplace/marketplace-fees-and-commissions
+      - title: Validation system
+        path: /marketplace/validation-system
       - title: Publish avatar items
         path: /marketplace/publish-to-marketplace
-      - title: Validation errors
-        path: /marketplace/validation-errors
       - title: Custom thumbnails
         path: /marketplace/custom-thumbnails
       - title: Sponsor items

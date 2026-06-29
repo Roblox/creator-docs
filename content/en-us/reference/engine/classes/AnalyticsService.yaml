@@ -52,8 +52,7 @@ methods:
       Fires a custom event with a custom event name and data.
     description: |
       This function triggers a custom event with a custom event name data.
-    code_samples:
-      - analytics-event---custom
+    code_samples: []
     parameters:
       - name: player
         type: Instance
@@ -122,12 +121,12 @@ methods:
   - name: AnalyticsService:FireInGameEconomyEvent
     summary: |
       Fire an event used to track player actions pertaining to the in-game
+      economy.
     description: |
       This function triggers an event used to track player actions pertaining to
       the in-game economy. For example, it should be called to track when
       players acquire or spend virtual items within the economy like currency.
-    code_samples:
-      - analytics-event---economy
+    code_samples: []
     parameters:
       - name: player
         type: Instance
@@ -205,8 +204,7 @@ methods:
       experienced by players. For example, it could be called to indicate when a
       function call fails, such as a datastore save or
       `Class.TeleportService:Teleport()`. See the example below.
-    code_samples:
-      - analytics-event---log
+    code_samples: []
     parameters:
       - name: player
         type: Instance
@@ -253,8 +251,7 @@ methods:
       This function triggers an event used to track player progression through
       the game. For example, it should be called when a player starts an in-game
       tutorial and again that player finishes the tutorial.
-    code_samples:
-      - analytics-event---progression
+    code_samples: []
     parameters:
       - name: player
         type: Instance

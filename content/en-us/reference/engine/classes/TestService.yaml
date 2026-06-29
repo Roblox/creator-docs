@@ -490,8 +490,7 @@ methods:
       If `condition` is `true`, prints `Check passed:` followed by `description`
       to the output in blue text. Otherwise, prints `Check failed:` followed by
       `description` in red text.
-    code_samples:
-      - TestService-Check1
+    code_samples: []
     parameters:
       - name: condition
         type: boolean
@@ -522,8 +521,7 @@ methods:
       Prints `Test checkpoint:` followed by a string to the output in blue text.
     description: |
       Prints `Test checkpoint:` followed by `text` to the output in blue text.
-    code_samples:
-      - TestService-Checkpoint1
+    code_samples: []
     parameters:
       - name: text
         type: string
@@ -550,8 +548,7 @@ methods:
       Prints `Testing Done` to the output in blue text.
     description: |
       Prints `Testing Done` to the output in blue text.
-    code_samples:
-      - TestService-Done1
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -567,8 +564,7 @@ methods:
     description: |
       Prints a red error message (`description`) to the output, prefixed by
       `TestService: `.
-    code_samples:
-      - TestService-Error1
+    code_samples: []
     parameters:
       - name: description
         type: string
@@ -641,8 +637,7 @@ methods:
       Prints `TestService:` followed by a string to the output in blue text.
     description: |
       Prints `TestService:` followed by `text` to the output in blue text.
-    code_samples:
-      - TestService-Message1
+    code_samples: []
     parameters:
       - name: text
         type: string
@@ -688,8 +683,7 @@ methods:
       If `condition` is `true`, prints `Require passed:` followed by
       `description` to the output in blue text. Otherwise prints
       `Require failed. Test ended:` followed by `description` in red text.
-    code_samples:
-      - TestService-Require1
+    code_samples: []
     parameters:
       - name: condition
         type: boolean
@@ -788,8 +782,7 @@ methods:
       If `condition` is `true`, prints `Warning passed:` followed by
       `description` to the output in blue text. Otherwise prints `Warning:`
       followed by `description` to the output in yellow text.
-    code_samples:
-      - TestService-Warn1
+    code_samples: []
     parameters:
       - name: condition
         type: boolean

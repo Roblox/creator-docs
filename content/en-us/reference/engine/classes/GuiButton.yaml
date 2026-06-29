@@ -362,9 +362,10 @@ events:
     summary: |
       Fires when the button's "secondary" input is activated.
     description: |
-      Fires when a right-click press-and-release is detected on desktop, long
-      press is detected on mobile, or **Y**/triangle is activated in UI
-      navigation mode on console. This event is not available yet.
+      Fires when a right-click press-and-release is detected from a mouse, long
+      press is detected on a touch input, `R3` is detected from a gamepad, or
+      <kbd>Alt</kbd><kbd>Enter</kbd> is detected in UI navigation mode using
+      keyboard.
     code_samples: []
     parameters:
       - name: inputObject

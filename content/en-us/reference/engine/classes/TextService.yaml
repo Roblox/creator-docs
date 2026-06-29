@@ -59,6 +59,8 @@ methods:
   - name: TextService:FilterStringAsync
     summary: |
       Filters a string being received from a user and returns a
+      `Class.TextFilterResult` which can be used to distribute the correctly
+      filtered text accordingly.
     description: |
       This method filters a string being received from a user and returns a
       `Class.TextFilterResult` which can be used to distribute the correctly
@@ -78,8 +80,7 @@ methods:
         implements its own retry logic internally.
       - This method currently throws if `fromUserId` is not online on the
         current server.
-    code_samples:
-      - pet-name-filter-example
+    code_samples: []
     parameters:
       - name: stringToFilter
         type: string
