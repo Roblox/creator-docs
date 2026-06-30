@@ -39,6 +39,7 @@ description: |
 
   - `Class.AvatarEditorService:GetItemDetailsAsync()`
   - `Class.AvatarEditorService:GetBatchItemDetailsAsync()`
+  - `Class.AvatarEditorService:GetBundlesByAssetIdAsync()`
   - `Class.AvatarEditorService:SearchCatalogAsync()`
 
   ```lua
@@ -637,6 +638,40 @@ methods:
       - type: Array
         summary: |
           Returns an array of item details.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AssetRead
+  - name: AvatarEditorService:GetBundlesByAssetIdAsync
+    summary: |
+      Returns a `Class.CatalogPages` object containing bundles that include the
+      given asset.
+    description: |
+      Returns a paginated list of bundles that contain the specified asset.
+      Results are returned in ascending order by date created.
+
+      Each page entry uses the **Item Details Response** format (see service
+      description above).
+    code_samples: []
+    parameters:
+      - name: assetId
+        type: int64
+        default:
+        summary: |
+          The ID of the asset to find bundles for.
+      - name: limit
+        type: int64
+        default: 10
+        summary: |
+          The number of results per page. Accepts `10`, `25`, `50`, and `100`.
+    returns:
+      - type: CatalogPages
+        summary: |
+          A `Class.CatalogPages` object containing bundles that include the
+          given asset.
     tags:
       - Yields
     deprecation_message: ''

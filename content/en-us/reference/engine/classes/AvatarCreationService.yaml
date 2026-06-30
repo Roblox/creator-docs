@@ -112,6 +112,13 @@ methods:
         summary: |
           A table of arguments for 2D preview generation. Type:
           `avatarGeneration2dPreviewParams: {SessionId: string, FileId: string, TextPrompt: string?}`
+      - name: progressCallback
+        type: Function?
+        default:
+        summary: |
+          Optional callback function that will be invoked periodically with a
+          progressInfo table with the overall progress (from 0 to 1). Type:
+          `(progressInfo: { Progress: number }) -> ()`
     returns:
       - type: string
         summary: |
@@ -159,6 +166,13 @@ methods:
         summary: |
           A table of arguments for generating an avatar. Type:
           `avatarGenerationParams: {SessionId: string, PreviewId: string}`
+      - name: progressCallback
+        type: Function?
+        default:
+        summary: |
+          Optional callback function that will be invoked periodically with a
+          progressInfo table with the overall progress (from 0 to 1). Type:
+          `(progressInfo: { Progress: number }) -> ()`
     returns:
       - type: string
         summary: |

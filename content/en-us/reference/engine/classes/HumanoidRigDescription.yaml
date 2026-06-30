@@ -5,7 +5,10 @@
 name: HumanoidRigDescription
 type: class
 memory_category: Animation
-summary: ''
+summary: |
+  Stores the joint mapping, T-pose, and per-joint properties for a 22-joint
+  bipedal character rig. Joints may be `Class.AnimationConstraint`,
+  `Class.Motor6D`, or `Class.Bone` instances.
 description: |
   Stores the joint mapping, reference T-pose and per-joint properties for a
   bipedal `Humanoid` character rig. Each of the 22 joints in the rig hierarchy

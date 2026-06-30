@@ -48,17 +48,23 @@ If you're setting up webhooks and handling personal data, ensure they comply wit
 
 To set up a webhook:
 
-1. On the [Creator Dashboard](https://create.roblox.com/dashboard/creations), access the [Webhooks](https://create.roblox.com/settings/webhooks) page.
-1. Click the **Add Webhook** button.
-1. Complete the configuration fields:
-   1. **Webhook URL** - Specify the URL where you want to receive notifications. For more information on the requirements, see [Set up webhook URLs](#set-up-webhook-urls).
-   2. **Name** - Use a custom name to differentiate your configuration from others. By default the value is the same as the Webhook URL.
-   3. **Secret** (optional) - Supply a secret if you want to verify that notifications you receive are coming from Roblox. For more information, see [Verify webhook security](#verify-webhook-security).
-   4. **Triggers** - Choose one or more options from the list of [supported triggers](#supported-triggers) of events for which you want to receive notifications.
-1. Click the **Save Changes** button.
+1. Select your experience on [Creator Hub](https://create.roblox.com/).
+2. Under **Configure**, select **Webhooks** and click **Add Webhook**.
+
+   The webhook URL comes from your provider. For example, a Slack URL probably looks like this:
+
+   ```text
+   https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
+   ```
+
+3. Enter your webhook URL and a name.
+4. (Optional) Include a secret, which helps ensure that the notifications you receive are coming from Roblox. For more information, see [Verify webhook security](#verify-webhook-security).
+5. Choose one or more options from the list of [supported triggers](#supported-triggers) of events for which you want to receive notifications.
+6. (Optional) Use the **Test Response** button to check if your service can receive a sample request.
+7. Click **Save Changes**.
 
 <Alert severity="info">
- Currently, you can configure up to 5 webhooks in total.
+Currently, you can configure up to 5 webhooks in total.
 </Alert>
 
 ## Set up webhook URLs

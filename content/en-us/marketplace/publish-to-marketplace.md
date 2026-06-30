@@ -37,7 +37,7 @@ There are limits on the number of assets you can upload to Roblox and enable for
   </tr>
   <tr>
     <td>Publishing - Enabling on sale<sup>&dagger;</sup></td>
-    <td>No limit for paid limiteds. 50 per day for free limiteds.</td>
+    <td>No limit for paid Limiteds. 50 per day for free Limiteds.</td>
     <td>No limit</td>
 
   </tr>
@@ -185,13 +185,14 @@ Before selecting either option, familiarize yourself with the various [fee and c
 
 The following item attributes only apply if you set your asset as a Limited item:
 
-- **Quantity**: set the number of assets that available on the Marketplace. The maximum quantity for paid Limiteds is 3000. Free limiteds do not have a quantity maximum.
+- **Quantity**: The number of assets that are available on the Marketplace. The maximum quantity for paid Limiteds is 3000, while free Limiteds do not have a quantity maximum. After publishing a free Limited, you can increase its quantity by [restocking](../marketplace/marketplace-fees-and-commissions.md#restocking) the item.
 - **Limit copies per user**: (Optional) Sets the number of times a user can purchase this asset.
   - Copy limits are based on ownership. If a user owns the maximum limit of copies in their inventory, they can no longer purchase the asset from the original listing. If the user no longer owns the maximum number of copies, they can purchase the copies from the original listing.
   - After publishing, you can only increase, but not decrease, this value.
 - **Free Item**: Sets the selling price of this item to zero. Free Limiteds utilize a [per-unit fee structure](../marketplace/marketplace-fees-and-commissions.md#per-unit-fee).
-- **Resellable**: If enabled, users can resell your limited item. If resold, you are eligible for [resell commissions](../marketplace/marketplace-fees-and-commissions.md#reselling). You can change the **Resellable status** on a published item. If enabled on an item, it can not be disabled in the future.
+- **Resellable**: If enabled, users can resell your Limited item. If resold, you are eligible for [resell commissions](../marketplace/marketplace-fees-and-commissions.md#reselling). You can change the **Resellable status** on a published item. If enabled on an item, it can not be disabled in the future.
   - The resellable attribute is not available for accounts based in Japan.
+  - Enabling reselling permanently disables [restocking](../marketplace/marketplace-fees-and-commissions.md#restocking) for the item.
 
 <h5 style={{marginTop: '36px'}}>Limit copies per user</h5>
 

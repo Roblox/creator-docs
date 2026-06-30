@@ -935,53 +935,65 @@ methods:
     deprecation_message: ''
   - name: CFrame:ToEulerAnglesXYZ
     summary: |
-      Returns approximate angles that could be used to generate the
-      `Datatype.CFrame` using `Enum.RotationOrder.XYZ`.
+      Returns the approximate angles (in radians) that could be used to generate
+      the `Datatype.CFrame` using `Enum.RotationOrder.XYZ`.
     description: |
-      Returns approximate angles that could be used to generate the
-      `Datatype.CFrame` using `Enum.RotationOrder.XYZ`.
+      Returns the approximate angles, in radians, that could be used to generate
+      the `Datatype.CFrame` using `Enum.RotationOrder.XYZ`.
     parameters: []
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The X-axis rotation angle in radians.
       - type: number
-        summary: ''
+        summary: |
+          The Y-axis rotation angle in radians.
       - type: number
-        summary: ''
+        summary: |
+          The Z-axis rotation angle in radians.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame:ToEulerAnglesYXZ
     summary: |
-      Returns approximate angles that could be used to generate the
-      `Datatype.CFrame` using `Enum.RotationOrder.YXZ`.
+      Returns the approximate angles (in radians) that could be used to generate
+      the `Datatype.CFrame` using `Enum.RotationOrder.YXZ`.
     description: |
-      Returns approximate angles that could be used to generate the
-      `Datatype.CFrame` using `Enum.RotationOrder.YXZ`.
+      Returns the approximate angles, in radians, that could be used to generate
+      the `Datatype.CFrame` using `Enum.RotationOrder.YXZ`.
     parameters: []
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The X-axis rotation angle in radians.
       - type: number
-        summary: ''
+        summary: |
+          The Y-axis rotation angle in radians.
       - type: number
-        summary: ''
+        summary: |
+          The Z-axis rotation angle in radians.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame:ToOrientation
     summary: |
-      Equivalent to `Datatype.CFrame:ToEulerAnglesYXZ()`.
+      Returns the approximate angles (in radians) that could be used to generate
+      the CFrame using the YXZ rotation order.
     description: |
-      Equivalent to `Datatype.CFrame:ToEulerAnglesYXZ()`.
+      Returns the approximate angles, in radians, that could be used to generate
+      the `Datatype.CFrame` using `Enum.RotationOrder.YXZ`. Equivalent to
+      `Datatype.CFrame:ToEulerAnglesYXZ()`.
     parameters: []
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The X-axis rotation angle in radians.
       - type: number
-        summary: ''
+        summary: |
+          The Y-axis rotation angle in radians.
       - type: number
-        summary: ''
+        summary: |
+          The Z-axis rotation angle in radians.
     code_samples: []
     tags: []
     deprecation_message: ''

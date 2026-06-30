@@ -1770,13 +1770,20 @@ methods:
     capabilities:
       - AvatarBehavior
   - name: Humanoid:GetMoveVelocity
-    summary: ''
-    description: ''
+    summary: |
+      Returns the current intended movement velocity of the Humanoid.
+    description: |
+      Returns the Humanoid's intended movement velocity as a `Datatype.Vector3`.
+      The result is the product of `Class.Humanoid.WalkSpeed|WalkSpeed`, the
+      intended movement direction, and the current percent walk speed. If the
+      Humanoid is not moving, this returns `(0, 0, 0)`.
     code_samples: []
     parameters: []
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          A `Datatype.Vector3` representing the Humanoid's intended movement
+          velocity in world space.
     tags: []
     deprecation_message: ''
     security: None

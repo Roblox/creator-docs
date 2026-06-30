@@ -158,8 +158,8 @@ methods:
         type: ImageCombineType
         default:
         summary: |
-          How the pixels of the source image are blended with the pixels of the
-          added image.
+          How the drawn pixels (source) are combined with the existing pixels of
+          this image (destination).
       - name: antiAliasing
         type: AntiAliasing
         default: Enabled
@@ -190,19 +190,19 @@ methods:
         type: Vector2
         default:
         summary: |
-          Position at which the top-left corner of the added image will be
+          Position at which the top-left corner of the source image will be
           drawn.
       - name: image
         type: EditableImage
         default:
         summary: |
-          The `EditableImage` to draw into this `EditableImage`.
+          The source `EditableImage` to draw into this `EditableImage`.
       - name: combineType
         type: ImageCombineType
         default:
         summary: |
-          How the pixels of the source image should be blended with the pixels
-          of the added image.
+          How the pixels of the source image are combined with the existing
+          pixels of this image (destination).
     returns:
       - type: ()
         summary: ''
@@ -362,8 +362,8 @@ methods:
         type: ImageCombineType
         default:
         summary: |
-          How the pixels of the source image are blended with the pixels of the
-          added image.
+          How the drawn pixels (source) are combined with the existing pixels of
+          this image (destination).
       - name: antiAliasing
         type: AntiAliasing
         default: Enabled
@@ -414,8 +414,8 @@ methods:
         type: ImageCombineType
         default:
         summary: |
-          How the pixels of the source image are blended with the pixels of the
-          added image.
+          How the drawn pixels (source) are combined with the existing pixels of
+          this image (destination).
     returns:
       - type: ()
         summary: ''

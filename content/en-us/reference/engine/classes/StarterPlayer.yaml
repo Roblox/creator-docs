@@ -381,8 +381,14 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.ClassicDeath
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the character uses the classic death behavior when the
+      Humanoid's health reaches zero.
+    description: |
+      When enabled, the character uses the classic death behavior (joints break
+      apart and parts scatter). When disabled, characters spawn with
+      `Class.Humanoid.BreakJointsOnDeath` = `false`, and will ragdoll when they
+      die.
     code_samples: []
     type: boolean
     tags: []
@@ -692,8 +698,12 @@ properties:
     capabilities:
       - Players
   - name: StarterPlayer.LuaCharacterController
-    summary: ''
-    description: ''
+    summary: |
+      Sets the character controller mode used by the player's character.
+    description: |
+      Determines which character controller implementation drives the player's
+      character movement. Accepts a value from `Enum.CharacterControlMode`:
+      `Default`, `Legacy`, `NoCharacterController`, or `LuaCharacterController`.
     code_samples: []
     type: CharacterControlMode
     tags: []

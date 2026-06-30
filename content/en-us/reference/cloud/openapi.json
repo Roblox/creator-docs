@@ -3593,7 +3593,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -3667,7 +3667,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -3781,7 +3781,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -3877,7 +3877,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -3954,7 +3954,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 550000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4035,7 +4035,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 550000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4135,7 +4135,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 550000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4228,7 +4228,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4348,7 +4348,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4471,7 +4471,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4576,7 +4576,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4662,7 +4662,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 550000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4752,7 +4752,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 550000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4861,7 +4861,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 550000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -4963,7 +4963,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -5092,7 +5092,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -5176,7 +5176,7 @@
           "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -6322,7 +6322,7 @@
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -6427,7 +6427,7 @@
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -6513,7 +6513,7 @@
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -6603,7 +6603,7 @@
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -6712,7 +6712,7 @@
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -6814,7 +6814,7 @@
           "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100000
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -12145,7 +12145,8 @@
                   "isRegionalPricingEnabled": {
                     "type": "boolean",
                     "description": "Whether regional pricing should be enabled for the developer product.\r\nShould not be used when setting isManagedPricingEnabled.",
-                    "nullable": true
+                    "nullable": true,
+                    "deprecated": true
                   },
                   "isManagedPricingEnabled": {
                     "type": "boolean",
@@ -12454,12 +12455,14 @@
                   "isRegionalPricingEnabled": {
                     "type": "boolean",
                     "description": "Whether regional pricing should be enabled for the developer product.\r\nShould not be used when setting isManagedPricingEnabled.",
-                    "nullable": true
+                    "nullable": true,
+                    "deprecated": true
                   },
                   "storePageEnabled": {
                     "type": "boolean",
                     "description": "Whether the developer product should be available for purchase on the external store page.",
-                    "nullable": true
+                    "nullable": true,
+                    "deprecated": true
                   },
                   "isManagedPricingEnabled": {
                     "type": "boolean",
@@ -12747,7 +12750,8 @@
                   "isRegionalPricingEnabled": {
                     "type": "boolean",
                     "description": "Whether regional pricing should be enabled for the game pass.",
-                    "nullable": true
+                    "nullable": true,
+                    "deprecated": true
                   },
                   "isManagedPricingEnabled": {
                     "type": "boolean",
@@ -13062,7 +13066,8 @@
                   "isRegionalPricingEnabled": {
                     "type": "boolean",
                     "description": "Whether regional pricing should be enabled for the game pass.",
-                    "nullable": true
+                    "nullable": true,
+                    "deprecated": true
                   },
                   "isManagedPricingEnabled": {
                     "type": "boolean",
@@ -22236,6 +22241,431 @@
         }
       }
     },
+    "/place-version-history-api/v1/{placeId}/contributors": {
+      "get": {
+        "tags": ["Places"],
+        "summary": "Endpoint used to fetch all previous contributors of a place.",
+        "operationId": "PlaceVersion_GetPlaceContributors",
+        "parameters": [
+          {
+            "name": "placeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "minimum": 1,
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetPlaceContributorsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.place:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/places#PlaceVersion_GetPlaceContributors"
+        }
+      }
+    },
+    "/place-version-history-api/v1/{placeId}/history": {
+      "get": {
+        "tags": ["Places"],
+        "summary": "Endpoint used to get place versions, using various filters",
+        "operationId": "PlaceVersion_GetPlaceVersionHistory",
+        "parameters": [
+          {
+            "name": "placeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "minimum": 1,
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "isPublished",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "hasNotes",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "saveType",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "searchTerm",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "contributor",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "startTime",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "endTime",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetPlaceVersionHistoryResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.place:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/places#PlaceVersion_GetPlaceVersionHistory"
+        }
+      }
+    },
+    "/place-version-history-api/v1/{placeId}/version/{version}/notes": {
+      "post": {
+        "tags": ["Places"],
+        "summary": "Endpoint used to modify the notes of a particular version for a place.",
+        "operationId": "PlaceVersion_UpdatePlaceVersionNotes",
+        "parameters": [
+          {
+            "name": "placeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "minimum": 1,
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdatePlaceVersionNotesRequest"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdatePlaceVersionNotesRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdatePlaceVersionNotesRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdatePlaceVersionNotesRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdatePlaceVersionNotesResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.place:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/places#PlaceVersion_UpdatePlaceVersionNotes"
+        }
+      }
+    },
     "/server-management/v1/universes/{universeId}/places/{placeId}/game-servers:filter-options": {
       "get": {
         "tags": ["Places"],
@@ -22499,6 +22929,164 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/places#GameServers_ListGameServers"
+        }
+      }
+    },
+    "/server-management/v1/universes/{universeId}/places/{placeId}/versions/{versionNumber}/game-servers/{jobId}/logs": {
+      "get": {
+        "tags": ["Places"],
+        "summary": "Lists game server logs for a specific server job id",
+        "operationId": "GameServers_ListGameServerLogs",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "placeId",
+            "in": "path",
+            "description": "The place id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "versionNumber",
+            "in": "path",
+            "description": "The version number",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "jobId",
+            "in": "path",
+            "description": "The server job id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxPageSize",
+            "in": "query",
+            "description": "The maximum number of game servers to return. The service might return\r\nfewer than this value. If unspecified, at most 25 game servers are\r\nreturned. The maximum value is 100 and higher values are set to 100.",
+            "schema": {
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\r\nWhen paginating, all other parameters provided to the subsequent call must\r\nmatch the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrderBy",
+            "in": "query",
+            "description": "Sorting is supported only for a single field at a time.\r\nExample: \"orderBy\": \"uptime\"\r\nDefaults to ascending, but descending ordering is also supported by\r\nincluding the \" desc\" suffix. For example: \"orderBy\": \"uptime desc\".",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\r\n- CEL filtering is supported on all fields.\r\n- Supported operators &&, <, <=, >, >=, ==, and `in`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListGameServerLogsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerManagementService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerManagementService.ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerManagementService.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe:read",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/places#GameServers_ListGameServerLogs"
         }
       }
     },
@@ -23508,33 +24096,14 @@
           {
             "name": "searchCategoryType",
             "in": "query",
-            "description": "The asset type to search within.",
-            "required": true,
+            "description": "The asset type to search within. Optional when categoryPath is present in the request; otherwise required.",
             "schema": {
               "allOf": [
                 {
                   "$ref": "#/components/schemas/SearchCategoryType"
                 }
               ],
-              "description": "This represents a \"subset\" of Toolbox.Service.CategoryType options and represent the full set\r\nof \"categories\" (or asset types) that can be searched upon from the toolbox search API.",
-              "x-enumNames": [
-                "Audio",
-                "Model",
-                "Decal",
-                "Plugin",
-                "MeshPart",
-                "Video",
-                "FontFamily"
-              ],
-              "x-enum-varnames": [
-                "Audio",
-                "Model",
-                "Decal",
-                "Plugin",
-                "MeshPart",
-                "Video",
-                "FontFamily"
-              ]
+              "nullable": true
             }
           },
           {
@@ -23721,15 +24290,6 @@
             }
           },
           {
-            "name": "includeTopCharts",
-            "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": false,
-              "nullable": true
-            }
-          },
-          {
             "name": "audioTypes",
             "in": "query",
             "description": "When searching for audio, the type of the audio assets.",
@@ -23799,6 +24359,18 @@
             }
           },
           {
+            "name": "tags",
+            "in": "query",
+            "description": "The tags used to filter the results.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "nullable": true
+            }
+          },
+          {
             "name": "categoryPath",
             "in": "query",
             "schema": {
@@ -23835,6 +24407,14 @@
               "default": "None",
               "x-enumNames": ["None", "Current", "Week", "Month", "Year"],
               "x-enum-varnames": ["None", "Current", "Week", "Month", "Year"]
+            }
+          },
+          {
+            "name": "swimlane",
+            "in": "query",
+            "description": "Indicates which swimlane to filter from.",
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -24741,19 +25321,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ThumbnailsApi.Roblox.Web.Responses.Thumbnails.ThumbnailResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ThumbnailsApi.Roblox.Web.Responses.Thumbnails.ThumbnailResponse"
-                }
-              }
-            }
+            "description": "OK"
           },
           "400": {
             "description": "4: The requested Ids are invalid, of an invalid type or missing."
@@ -25352,19 +25920,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              }
-            }
+            "description": "OK"
           },
           "400": {
             "description": "1: There are too many requested Ids.\r\n2: The requested image format is invalid. Please see documentation for valid thumbnail format parameter name and values.\r\n3: The requested size is invalid. Please see documentation for valid thumbnail size parameter name and format.\r\n4: The requested Ids are invalid, of an invalid type or missing.\r\n8: The requested return policy is invalid (must be PlaceHolder, AutoGenerated or ForceAutoGenerated).\r\n10: Circular thumbnail requests are not allowed"
@@ -25429,19 +25985,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ThumbnailsApi.Roblox.Web.Responses.Thumbnails.ThumbnailResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ThumbnailsApi.Roblox.Web.Responses.Thumbnails.ThumbnailResponse"
-                }
-              }
-            }
+            "description": "OK"
           },
           "400": {
             "description": "4: The requested Ids are invalid, of an invalid type or missing."
@@ -27301,19 +27845,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              }
-            }
+            "description": "OK"
           },
           "400": {
             "description": "1: There are too many requested Ids.\r\n2: The requested image format is invalid. Please see documentation for valid thumbnail format parameter name and values.\r\n3: The requested size is invalid. Please see documentation for valid thumbnail size parameter name and format.\r\n4: The requested Ids are invalid, of an invalid type or missing.\r\n10: Circular thumbnail requests are not allowed"
@@ -28402,19 +28934,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailBatchResponse_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailBatchResponse_"
-                }
-              }
-            }
+            "description": "OK"
           },
           "400": {
             "description": "1: There are too many requested Ids.\r\n2: The requested image format is invalid. Please see documentation for valid thumbnail format parameter name and values.\r\n3: The requested size is invalid. Please see documentation for valid thumbnail size parameter name and format.\r\n4: The requested Ids are invalid, of an invalid type or missing.\r\n7: The specified type is not supported by the batch endpoint"
@@ -28725,19 +29245,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              }
-            }
+            "description": "OK"
           },
           "400": {
             "description": "1: There are too many requested Ids.\r\n2: The requested image format is invalid. Please see documentation for valid thumbnail format parameter name and values.\r\n3: The requested size is invalid. Please see documentation for valid thumbnail size parameter name and format.\r\n4: The requested Ids are invalid, of an invalid type or missing.\r\n10: Circular thumbnail requests are not allowed"
@@ -29711,19 +30219,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              }
-            }
+            "description": "OK"
           },
           "400": {
             "description": "1: There are too many requested Ids.\r\n2: The requested image format is invalid. Please see documentation for valid thumbnail format parameter name and values.\r\n3: The requested size is invalid. Please see documentation for valid thumbnail size parameter name and format.\r\n4: The requested Ids are invalid, of an invalid type or missing.\r\n10: Circular thumbnail requests are not allowed"
@@ -32500,19 +32996,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              }
-            }
+            "description": "OK"
           },
           "400": {
             "description": "1: There are too many requested Ids.\r\n2: The requested image format is invalid. Please see documentation for valid thumbnail format parameter name and values.\r\n3: The requested size is invalid. Please see documentation for valid thumbnail size parameter name and format.\r\n4: The requested Ids are invalid, of an invalid type or missing.\r\n10: Circular thumbnail requests are not allowed"
@@ -33936,19 +34420,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              }
-            }
+            "description": "OK"
           },
           "400": {
             "description": "1: There are too many requested Ids.\r\n2: The requested image format is invalid. Please see documentation for valid thumbnail format parameter name and values.\r\n3: The requested size is invalid. Please see documentation for valid thumbnail size parameter name and format.\r\n4: The requested Ids are invalid, of an invalid type or missing.\r\n8: The requested return policy is invalid (must be PlaceHolder, AutoGenerated or ForceAutoGenerated).\r\n10: Circular thumbnail requests are not allowed"
@@ -34179,19 +34651,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Thumbnails.Api.Models.UniverseThumbnailsResponse_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Thumbnails.Api.Models.UniverseThumbnailsResponse_"
-                }
-              }
-            }
+            "description": "OK"
           },
           "400": {
             "description": "0: Unknown error\r\n1: There are too many requested Ids.\r\n4: The requested Ids are invalid, of an invalid type or missing.\r\n5: The requested universe does not exist.\r\n10: Circular thumbnail requests are not allowed"
@@ -34404,16 +34864,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/GameVoteResponseApiArrayResponse"
                 }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GameVoteResponseApiArrayResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GameVoteResponseApiArrayResponse"
-                }
               }
             }
           }
@@ -34567,114 +35017,6 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#PrivateServers_GetPrivateServerList"
-        }
-      }
-    },
-    "/v1/games/{placeId}/servers/{serverType}": {
-      "get": {
-        "tags": ["Places", "Universes"],
-        "summary": "Get the game server list",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "placeId",
-            "description": "The Id of the place we are geting the server list for.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "path",
-            "name": "serverType",
-            "description": "The type of the server we geting the server list for.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "enum": [0, 1]
-            }
-          },
-          {
-            "in": "query",
-            "name": "sortOrder",
-            "description": "The sort order of the servers.",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "enum": [1, 2],
-              "default": 2
-            }
-          },
-          {
-            "in": "query",
-            "name": "excludeFullGames",
-            "description": "Exclude full servers.",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            }
-          },
-          {
-            "in": "query",
-            "name": "limit",
-            "description": "The number of results per request.",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "enum": [10, 25, 50, 100],
-              "default": 10
-            }
-          },
-          {
-            "in": "query",
-            "name": "cursor",
-            "description": "The paging cursor for the previous or next page.",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Web.Responses.Games.GameServerResponse_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Web.Responses.Games.GameServerResponse_"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The place is invalid.\r\n6: The server type is invalid. For fetching private servers, please use https://games.roblox.com/v1/games/{placeId}/private-servers.\r\n7: Guest users are not allowed."
-          },
-          "404": {
-            "description": "1: The place is invalid."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://games.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {},
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/places#games_get_v1_games__placeId__servers__serverType_"
         }
       }
     },
@@ -35004,19 +35346,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              }
-            }
+            "description": "OK"
           },
           "400": {
             "description": "1: There are too many requested Ids.\r\n2: The requested image format is invalid. Please see documentation for valid thumbnail format parameter name and values.\r\n3: The requested size is invalid. Please see documentation for valid thumbnail size parameter name and format.\r\n4: The requested Ids are invalid, of an invalid type or missing.\r\n10: Circular thumbnail requests are not allowed"
@@ -35108,16 +35438,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/ApiEmptyResponseModel"
                 }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiEmptyResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiEmptyResponseModel"
-                }
               }
             }
           }
@@ -35160,16 +35480,6 @@
             "description": "Success",
             "content": {
               "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GameVoteResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GameVoteResponse"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GameVoteResponse"
                 }
@@ -35223,16 +35533,6 @@
             "description": "Success",
             "content": {
               "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserGameVoteResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserGameVoteResponse"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UserGameVoteResponse"
                 }
@@ -35794,19 +36094,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              }
-            }
+            "description": "OK"
           },
           "400": {
             "description": "1: There are too many requested Ids.\r\n2: The requested image format is invalid. Please see documentation for valid thumbnail format parameter name and values.\r\n3: The requested size is invalid. Please see documentation for valid thumbnail size parameter name and format.\r\n4: The requested Ids are invalid, of an invalid type or missing.\r\n10: Circular thumbnail requests are not allowed"
@@ -40446,89 +40734,6 @@
         }
       }
     },
-    "/v1/groups/{groupId}/status": {
-      "patch": {
-        "tags": ["Groups"],
-        "summary": "Sets group status",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "groupId",
-            "description": "The group Id.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Groups.Api.PostGroupStatusRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Groups.Api.PostGroupStatusRequest"
-              }
-            }
-          },
-          "description": "The Roblox.Groups.Api.PostGroupStatusRequest.",
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Groups.Api.ShoutResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Groups.Api.ShoutResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: Group is invalid or does not exist.\r\n7: Missing group status content.\r\n32: Description was filtered."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n6: You are not authorized to set the status of this group"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://groups.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_patch_v1_groups__groupId__status"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://apis.roblox.com/legacy-groups/v1/groups/{groupId}/status",
-            "httpMethod": "PATCH",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/groups#patch_legacy_groups_v1_groups__groupId__status"
-          }
-        ]
-      }
-    },
     "/v1/groups/{groupId}/universes": {
       "get": {
         "tags": ["Groups", "Universes"],
@@ -41164,285 +41369,9 @@
         "x-roblox-recommended-alternatives": [
           {
             "url": "https://groups.roblox.com/v2/groups/{groupId}/wall/posts",
-            "httpMethod": "GET",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_get_v2_groups__groupId__wall_posts"
+            "httpMethod": "GET"
           }
         ]
-      },
-      "post": {
-        "tags": ["Groups"],
-        "summary": "Creates a post on a group wall",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "groupId",
-            "description": "The group id.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Groups.Api.CreateWallPostRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Groups.Api.CreateWallPostRequest"
-              }
-            }
-          },
-          "description": "The Roblox.Groups.Api.CreateWallPostRequest.",
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Groups.Api.Models.Response.GroupWallPostModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Groups.Api.Models.Response.GroupWallPostModel"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The group is invalid or does not exist.\r\n5: Your post was empty, white space, or more than 500 characters.\r\n9: The provided content was moderated."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n2: You do not have permission to access this group wall."
-          },
-          "405": {
-            "description": "1: The group is invalid or does not exist."
-          },
-          "429": {
-            "description": "4: You are posting too fast, please try again in a few minutes."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://groups.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_post_v1_groups__groupId__wall_posts"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://groups.roblox.com/v2/groups/{groupId}/wall/posts",
-            "httpMethod": "POST",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_post_v2_groups__groupId__wall_posts"
-          }
-        ]
-      }
-    },
-    "/v1/groups/{groupId}/wall/posts/{postId}": {
-      "delete": {
-        "tags": ["Groups"],
-        "summary": "Deletes a group wall post.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "groupId",
-            "description": "The group id.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "path",
-            "name": "postId",
-            "description": "The group wall post id.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The group is invalid or does not exist.\r\n3: The group wall post id is invalid or does not exist."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n2: You do not have permission to access this group wall."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://groups.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_delete_v1_groups__groupId__wall_posts__postId_"
-        }
-      }
-    },
-    "/v1/groups/{groupId}/wall/subscribe": {
-      "post": {
-        "tags": ["Groups"],
-        "summary": "Subscribes the authenticated user to notifications of group wall events.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "groupId",
-            "description": "The group id.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "1: The group is invalid or does not exist."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n2: You do not have permission to access this group wall."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://groups.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_post_v1_groups__groupId__wall_subscribe"
-        }
-      }
-    },
-    "/v1/groups/{groupId}/wall/users/{userId}/posts": {
-      "delete": {
-        "tags": ["Groups"],
-        "summary": "Deletes all group wall posts made by a specific user.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "groupId",
-            "description": "The group id.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "path",
-            "name": "userId",
-            "description": "The user id.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The group is invalid or does not exist.\r\n6: The user specified is invalid or does not exist."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n2: You do not have permission to access this group wall."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://groups.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_delete_v1_groups__groupId__wall_users__userId__posts"
-        }
       }
     },
     "/v1/installer-cdns": {
@@ -44514,19 +44443,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              }
-            }
+            "description": "OK"
           },
           "400": {
             "description": "1: There are too many requested Ids.\r\n2: The requested image format is invalid. Please see documentation for valid thumbnail format parameter name and values.\r\n3: The requested size is invalid. Please see documentation for valid thumbnail size parameter name and format.\r\n4: The requested Ids are invalid, of an invalid type or missing.\r\n8: The requested return policy is invalid (must be PlaceHolder, AutoGenerated or ForceAutoGenerated).\r\n10: Circular thumbnail requests are not allowed"
@@ -50504,6 +50421,15 @@
           },
           {
             "in": "query",
+            "name": "includeBackground",
+            "description": "Whether to include a background in the thumbnail (defaults to false)",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "in": "query",
             "name": "size",
             "description": "The thumbnail size, formatted widthxheight",
             "schema": {
@@ -50550,19 +50476,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              }
-            }
+            "description": "OK"
           },
           "400": {
             "description": "1: There are too many requested Ids.\r\n2: The requested image format is invalid. Please see documentation for valid thumbnail format parameter name and values.\r\n3: The requested size is invalid. Please see documentation for valid thumbnail size parameter name and format.\r\n4: The requested Ids are invalid, of an invalid type or missing.\r\n10: Circular thumbnail requests are not allowed"
@@ -50606,19 +50520,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ThumbnailsApi.Roblox.Web.Responses.Thumbnails.ThumbnailResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ThumbnailsApi.Roblox.Web.Responses.Thumbnails.ThumbnailResponse"
-                }
-              }
-            }
+            "description": "OK"
           },
           "400": {
             "description": "4: The requested Ids are invalid, of an invalid type or missing."
@@ -50687,6 +50589,15 @@
           },
           {
             "in": "query",
+            "name": "includeBackground",
+            "description": "Whether to include a background in the thumbnail (defaults to false)",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "in": "query",
             "name": "size",
             "description": "The thumbnail size, formatted widthxheight",
             "schema": {
@@ -50728,19 +50639,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              }
-            }
+            "description": "OK"
           },
           "400": {
             "description": "1: There are too many requested Ids.\r\n2: The requested image format is invalid. Please see documentation for valid thumbnail format parameter name and values.\r\n3: The requested size is invalid. Please see documentation for valid thumbnail size parameter name and format.\r\n4: The requested Ids are invalid, of an invalid type or missing.\r\n10: Circular thumbnail requests are not allowed"
@@ -50788,6 +50687,15 @@
           },
           {
             "in": "query",
+            "name": "includeBackground",
+            "description": "Whether to include a background in the thumbnail (defaults to false)",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "in": "query",
             "name": "size",
             "description": "The thumbnail size, formatted widthxheight",
             "schema": {
@@ -50831,19 +50739,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              }
-            }
+            "description": "OK"
           },
           "400": {
             "description": "1: There are too many requested Ids.\r\n2: The requested image format is invalid. Please see documentation for valid thumbnail format parameter name and values.\r\n3: The requested size is invalid. Please see documentation for valid thumbnail size parameter name and format.\r\n4: The requested Ids are invalid, of an invalid type or missing.\r\n10: Circular thumbnail requests are not allowed"
@@ -50887,19 +50783,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ThumbnailsApi.Roblox.Web.Responses.Thumbnails.ThumbnailResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ThumbnailsApi.Roblox.Web.Responses.Thumbnails.ThumbnailResponse"
-                }
-              }
-            }
+            "description": "OK"
           }
         },
         "servers": [
@@ -50965,6 +50849,15 @@
           },
           {
             "in": "query",
+            "name": "includeBackground",
+            "description": "Whether to include a background in the thumbnail (defaults to false)",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "in": "query",
             "name": "size",
             "description": "The thumbnail size, formatted widthxheight",
             "schema": {
@@ -50996,19 +50889,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_"
-                }
-              }
-            }
+            "description": "OK"
           },
           "400": {
             "description": "1: There are too many requested Ids.\r\n2: The requested image format is invalid. Please see documentation for valid thumbnail format parameter name and values.\r\n3: The requested size is invalid. Please see documentation for valid thumbnail size parameter name and format.\r\n4: The requested Ids are invalid, of an invalid type or missing.\r\n10: Circular thumbnail requests are not allowed"
@@ -58797,170 +58678,6 @@
         }
       }
     },
-    "/v2/groups/{groupId}/wall/posts": {
-      "get": {
-        "tags": ["Groups"],
-        "summary": "Gets a list of group wall posts.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "groupId",
-            "description": "The group id.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "query",
-            "name": "limit",
-            "description": "The number of results per request.",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "enum": [10, 25, 50, 100],
-              "default": 10
-            }
-          },
-          {
-            "in": "query",
-            "name": "cursor",
-            "description": "The paging cursor for the previous or next page.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "in": "query",
-            "name": "sortOrder",
-            "description": "Sorted by group wall post Id",
-            "schema": {
-              "type": "string",
-              "enum": ["Asc", "Desc"],
-              "default": "Asc"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Groups.Api.GroupWallPostV2Model_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Groups.Api.GroupWallPostV2Model_"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The group is invalid or does not exist."
-          },
-          "403": {
-            "description": "2: You do not have permission to access this group wall."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://groups.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {},
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_get_v2_groups__groupId__wall_posts"
-        }
-      },
-      "post": {
-        "tags": ["Groups"],
-        "summary": "Creates a post on a group wall",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "groupId",
-            "description": "The group id.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Groups.Api.CreateWallPostRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Groups.Api.CreateWallPostRequest"
-              }
-            }
-          },
-          "description": "The Roblox.Groups.Api.CreateWallPostRequest.",
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Groups.Api.GroupWallPostV2Model"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Groups.Api.GroupWallPostV2Model"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The group is invalid or does not exist.\r\n5: Your post was empty, white space, or more than 500 characters.\r\n9: The provided content was moderated."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n2: You do not have permission to access this group wall."
-          },
-          "429": {
-            "description": "4: You are posting too fast, please try again in a few minutes."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://groups.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_post_v2_groups__groupId__wall_posts"
-        }
-      }
-    },
     "/v2/inventory/asset/{assetId}": {
       "delete": {
         "tags": ["Assets", "Inventories"],
@@ -63857,11 +63574,6 @@
             "description": "The name of the album to filter by.",
             "nullable": true
           },
-          "includeTopCharts": {
-            "type": "boolean",
-            "description": "Whether to include top charts in the results.",
-            "nullable": true
-          },
           "musicChartType": {
             "allOf": [
               {
@@ -65177,7 +64889,6 @@
           "name",
           "priceInformation",
           "productId",
-          "storePageEnabled",
           "universeId",
           "updatedTimestamp"
         ],
@@ -65213,7 +64924,9 @@
           },
           "storePageEnabled": {
             "type": "boolean",
-            "description": "Whether the developer product is currently available for purchase on the external store page."
+            "description": "Whether the developer product is currently available for purchase on the external store page.",
+            "nullable": true,
+            "deprecated": true
           },
           "priceInformation": {
             "allOf": [
@@ -65683,6 +65396,76 @@
         },
         "additionalProperties": false
       },
+      "GameServerLog": {
+        "type": "object",
+        "properties": {
+          "messageTimestampMs": {
+            "type": "string",
+            "description": "The timestamp the log was received",
+            "format": "date-time"
+          },
+          "universeId": {
+            "type": "integer",
+            "description": "The universe where the log was created",
+            "format": "int64"
+          },
+          "placeId": {
+            "type": "string",
+            "description": "The place where the log was created",
+            "nullable": true
+          },
+          "placeVersion": {
+            "type": "string",
+            "description": "The place version on which the log was created",
+            "nullable": true
+          },
+          "jobId": {
+            "type": "string",
+            "description": "The Game Server id where the log was created",
+            "nullable": true
+          },
+          "severity": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/LogSeverity"
+              }
+            ],
+            "description": "The severity of the log"
+          },
+          "message": {
+            "type": "string",
+            "description": "The log message",
+            "nullable": true
+          },
+          "stackTrace": {
+            "type": "string",
+            "description": "The stack trace of the log",
+            "nullable": true
+          },
+          "messageTemplate": {
+            "type": "string",
+            "description": "Optional message template included with structured logging",
+            "nullable": true
+          },
+          "context": {
+            "type": "string",
+            "description": "Optional message context included with structured logging",
+            "nullable": true
+          },
+          "skippedCount": {
+            "type": "integer",
+            "description": "How many duplicate versions of this message were present in the same time window as this log",
+            "format": "int32"
+          },
+          "rateLimitedCount": {
+            "type": "integer",
+            "description": "How many more messages were present in the time window beyond our overall rate limits",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response model for listing a game server log"
+      },
       "GameServerResponse": {
         "type": "object",
         "properties": {
@@ -65995,6 +65778,47 @@
         },
         "additionalProperties": false,
         "description": "Response containing the weights of the current default matchmaking scoring weights"
+      },
+      "GetPlaceContributorsResponse": {
+        "type": "object",
+        "properties": {
+          "nextCursor": {
+            "type": "string",
+            "nullable": true
+          },
+          "hasMore": {
+            "type": "boolean"
+          },
+          "contributors": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetPlaceVersionHistoryResponse": {
+        "type": "object",
+        "properties": {
+          "nextCursor": {
+            "type": "string",
+            "nullable": true
+          },
+          "hasMore": {
+            "type": "boolean"
+          },
+          "placeVersions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PlaceVersion"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "GetPrivateServerListResponse": {
         "type": "object",
@@ -67483,6 +67307,26 @@
         "additionalProperties": false,
         "description": "Response for listing game pass configuration details by universe"
       },
+      "ListGameServerLogsResponse": {
+        "type": "object",
+        "properties": {
+          "gameServerLogs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GameServerLog"
+            },
+            "description": "The GameServers from the specified PlaceVersion.",
+            "nullable": true
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\r\npage. If this field is omitted, there are no subsequent pages.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response model for listing game servers."
+      },
       "ListGroupForumCategoriesResponse": {
         "type": "object",
         "properties": {
@@ -67821,6 +67665,12 @@
         },
         "additionalProperties": false,
         "description": "Literal constant for an RPN operand (proto `LiteralValue` oneof as independent fields for JSON)."
+      },
+      "LogSeverity": {
+        "enum": [0, 1, 2, 3],
+        "type": "integer",
+        "description": "Defines the various log severity types with values:\r\nOutput (0), Info (1), Warning (2), Error (3)",
+        "format": "int32"
       },
       "LuauExecutionSessionTask": {
         "type": "object",
@@ -69004,6 +68854,26 @@
           "result": ["error", "response"]
         }
       },
+      "OperationErrorResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "OrderedDataStoreEntry": {
         "type": "object",
         "properties": {
@@ -69386,6 +69256,61 @@
         },
         "additionalProperties": false,
         "description": "Container for the status of a game update."
+      },
+      "PlaceVersion": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "contributors": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "nullable": true
+          },
+          "saveType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SaveType"
+              }
+            ]
+          },
+          "isPublished": {
+            "type": "boolean"
+          },
+          "publishStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PublishStatus"
+              }
+            ]
+          },
+          "hasNotes": {
+            "type": "boolean"
+          },
+          "createdTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "PlayerCategoricalSignalConfiguration": {
         "type": "object",
@@ -69892,6 +69817,11 @@
           }
         },
         "additionalProperties": false
+      },
+      "PublishStatus": {
+        "enum": [0, 1, 2],
+        "type": "integer",
+        "format": "int32"
       },
       "PublishUniverseMessageRequest": {
         "required": ["topic", "message"],
@@ -72999,6 +72929,10 @@
             "description": "Determines the change type of the Fiat Product Change request.\r\nCan either Activate the product, Update the price, or Deactivate the product.",
             "enum": [0, 1, 2, 3],
             "type": "integer"
+          },
+          "demoModeEnabled": {
+            "description": "Whether demo mode is enabled for this paid access game.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -73152,6 +73086,10 @@
               "enum": [0, 1, 2, 3, 4],
               "type": "integer"
             }
+          },
+          "demoModeEnabled": {
+            "description": "Whether demo mode is enabled for this paid access game.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -73286,6 +73224,15 @@
               "enum": [0, 1, 2, 3, 4],
               "type": "integer"
             }
+          },
+          "demoModeEnabled": {
+            "description": "Whether demo mode is enabled.",
+            "type": "boolean"
+          },
+          "demoModeLastChangedTime": {
+            "format": "date-time",
+            "description": "When demo mode was last toggled. For client-side throttle UX.",
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -73435,6 +73382,15 @@
               "enum": [0, 1, 2, 3, 4],
               "type": "integer"
             }
+          },
+          "demoModeEnabled": {
+            "description": "Whether demo mode is enabled.",
+            "type": "boolean"
+          },
+          "demoModeLastChangedTime": {
+            "format": "date-time",
+            "description": "When demo mode was last toggled. For client-side throttle UX.",
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -77331,27 +77287,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Games.Api.GameServerPlayerResponse": {
-        "description": "A response model representing a game server player.",
-        "type": "object",
-        "properties": {
-          "playerToken": {
-            "description": "The thumbnail token for the player.",
-            "type": "string"
-          },
-          "id": {
-            "format": "int64",
-            "type": "integer"
-          },
-          "name": {
-            "type": "string"
-          },
-          "displayName": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Games.Api.Models.Request.GameFavoritesRequest": {
         "description": "Game favorite request model.",
         "type": "object",
@@ -77556,6 +77491,10 @@
           "canonicalUrlPath": {
             "description": "Canonical URL path for the game page, e.g. /games/{placeId}/{canonical-slug}.\r\nIt must be the same as the canonical URL (rel-canonical meta tag) on the game's EDP.",
             "type": "string"
+          },
+          "isContentRestricted": {
+            "description": "Indicates whether this experience is content-restricted and has had its details wiped.\r\nWhen true, the content fields (name, description, creator, etc.) contain placeholder or\r\nempty values rather than the real data. Consumers should branch on this flag instead of\r\ninferring restriction from placeholder text.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -77885,6 +77824,10 @@
           },
           "upsellUxTreatment": {
             "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.UpsellUxTreatment"
+          },
+          "demoModeAvailable": {
+            "description": "Whether the game supports demo play for users who have not purchased it.\r\nOnly set when PlayabilityStatus is PurchaseRequired or FiatPurchaseRequired.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -77980,27 +77923,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Games.Api.Models.Response.VerifiedBadgeUserResponse": {
-        "description": "A response model specific to multi-get user.",
-        "type": "object",
-        "properties": {
-          "hasVerifiedBadge": {
-            "description": "The user's verified badge status.",
-            "type": "boolean"
-          },
-          "id": {
-            "format": "int64",
-            "type": "integer"
-          },
-          "name": {
-            "type": "string"
-          },
-          "displayName": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Groups.Api.BlockedKeywordPageResponse_Roblox.Groups.Client.BlockedKeywordModel_": {
         "description": "ApiPageResponse for blocked keywords",
         "type": "object",
@@ -78060,29 +77982,6 @@
           },
           "isPrivate": {
             "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Groups.Api.CreateWallPostRequest": {
-        "description": "A request model for creating a group wall post",
-        "type": "object",
-        "properties": {
-          "body": {
-            "description": "The wall post body",
-            "type": "string"
-          },
-          "captchaId": {
-            "type": "string"
-          },
-          "captchaToken": {
-            "type": "string"
-          },
-          "captchaProvider": {
-            "type": "string"
-          },
-          "challengeId": {
-            "type": "string"
           }
         },
         "additionalProperties": false
@@ -79121,35 +79020,6 @@
           "isAutoAssignRoleDisabled": {
             "description": "Whether automatic assignment of the lowest non-guest role is disabled for this group.\r\nFor non-legacy groups (created after the multi-role cutoff), this is always true.\r\nFor legacy groups, reflects the persisted GroupFeatureSettings value.\r\nNull when the value could not be determined.",
             "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Groups.Api.GroupWallPostV2Model": {
-        "description": "A response model for group wall post information",
-        "type": "object",
-        "properties": {
-          "id": {
-            "format": "int64",
-            "description": "The group wall post Id.",
-            "type": "integer"
-          },
-          "poster": {
-            "$ref": "#/components/schemas/Roblox.Groups.Api.UserGroupRoleResponse"
-          },
-          "body": {
-            "description": "The group wall post body.",
-            "type": "string"
-          },
-          "created": {
-            "format": "date-time",
-            "description": "When the group wall post was posted.",
-            "type": "string"
-          },
-          "updated": {
-            "format": "date-time",
-            "description": "When the group wall post was last updated.",
-            "type": "string"
           }
         },
         "additionalProperties": false
@@ -82223,28 +82093,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Thumbnails.Api.Models.UniverseThumbnailsResponse": {
-        "description": "A response model for thumbnails which belong to a specific universe ID",
-        "type": "object",
-        "properties": {
-          "universeId": {
-            "format": "int64",
-            "description": "Integer universe ID",
-            "type": "integer"
-          },
-          "error": {
-            "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiErrorModel"
-          },
-          "thumbnails": {
-            "description": "An array of ThumbnailResponse objects",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ThumbnailsApi.Roblox.Web.Responses.Thumbnails.ThumbnailResponse"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Thumbnails.Apis.Models.ThumbnailBatchRequest": {
         "type": "object",
         "properties": {
@@ -82309,6 +82157,10 @@
           "headShape": {
             "description": "Head shape for dynamic head thumbnails (only relevant for Asset thumbnail types with dynamic head)",
             "type": "string"
+          },
+          "includeBackground": {
+            "description": "Whether to include a background in avatar thumbnails (defaults to false)",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -84294,69 +84146,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Web.Responses.Games.GameServerResponse": {
-        "description": "Game server list response model.",
-        "type": "object",
-        "properties": {
-          "id": {
-            "format": "uuid",
-            "description": "The game server ID.",
-            "type": "string"
-          },
-          "maxPlayers": {
-            "format": "int32",
-            "description": "The max number of players allowed to enter the server at the same time.",
-            "type": "integer"
-          },
-          "playing": {
-            "format": "int32",
-            "description": "The number of players actively in the server.",
-            "type": "integer"
-          },
-          "playerTokens": {
-            "description": "The thumbnail tokens for all the players in the server.",
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "players": {
-            "description": "The players in the server.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.Games.Api.GameServerPlayerResponse"
-            }
-          },
-          "fps": {
-            "format": "double",
-            "description": "The current frames per second the server is running at.",
-            "type": "number"
-          },
-          "ping": {
-            "format": "int32",
-            "description": "The game server ping time (measured in milliseconds).",
-            "type": "integer"
-          },
-          "name": {
-            "description": "The name of the private server.",
-            "type": "string"
-          },
-          "vipServerId": {
-            "format": "int64",
-            "description": "The private server ID.",
-            "type": "integer"
-          },
-          "accessCode": {
-            "format": "uuid",
-            "description": "The private server access code.",
-            "type": "string"
-          },
-          "owner": {
-            "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.VerifiedBadgeUserResponse"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Web.Responses.Groups.GroupBasicResponse": {
         "type": "object",
         "properties": {
@@ -84560,47 +84349,6 @@
             "type": "integer"
           },
           "name": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Web.Responses.Thumbnails.ThumbnailBatchResponse": {
-        "type": "object",
-        "properties": {
-          "requestId": {
-            "type": "string"
-          },
-          "errorCode": {
-            "format": "int32",
-            "type": "integer"
-          },
-          "errorMessage": {
-            "type": "string"
-          },
-          "targetId": {
-            "format": "int64",
-            "type": "integer"
-          },
-          "state": {
-            "description": " ['Error' = 0, 'Completed' = 1, 'InReview' = 2, 'Pending' = 3, 'Blocked' = 4, 'TemporarilyUnavailable' = 5]",
-            "enum": [
-              "Error",
-              "Completed",
-              "InReview",
-              "Pending",
-              "Blocked",
-              "TemporarilyUnavailable"
-            ],
-            "type": "string"
-          },
-          "imageUrl": {
-            "type": "string"
-          },
-          "version": {
-            "type": "string"
-          },
-          "thumbnailSource": {
             "type": "string"
           }
         },
@@ -85022,18 +84770,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Thumbnails.Api.Models.UniverseThumbnailsResponse_": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.Thumbnails.Api.Models.UniverseThumbnailsResponse"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.TranslationRoles.Api.Assignee_": {
         "type": "object",
         "properties": {
@@ -85117,30 +84853,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailBatchResponse_": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.Web.Responses.Thumbnails.ThumbnailBatchResponse"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Thumbnails.ThumbnailResponse_": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ThumbnailsApi.Roblox.Web.Responses.Thumbnails.ThumbnailResponse"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Web.Responses.Users.SkinnyUserResponse_": {
         "type": "object",
         "properties": {
@@ -85162,26 +84874,6 @@
               "type": "string"
             }
           }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Web.WebAPI.Models.ApiErrorModel": {
-        "type": "object",
-        "properties": {
-          "code": {
-            "format": "int32",
-            "type": "integer"
-          },
-          "message": {
-            "type": "string"
-          },
-          "userFacingMessage": {
-            "type": "string"
-          },
-          "field": {
-            "type": "string"
-          },
-          "fieldData": {}
         },
         "additionalProperties": false
       },
@@ -85396,24 +85088,6 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Roblox.Groups.Api.GroupJoinRequestResponse"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Groups.Api.GroupWallPostV2Model_": {
-        "type": "object",
-        "properties": {
-          "previousPageCursor": {
-            "type": "string"
-          },
-          "nextPageCursor": {
-            "type": "string"
-          },
-          "data": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.Groups.Api.GroupWallPostV2Model"
             }
           }
         },
@@ -85743,24 +85417,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Web.Responses.Games.GameServerResponse_": {
-        "type": "object",
-        "properties": {
-          "previousPageCursor": {
-            "type": "string"
-          },
-          "nextPageCursor": {
-            "type": "string"
-          },
-          "data": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.Web.Responses.Games.GameServerResponse"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
       "RobuxRateBreakdown": {
         "type": "object",
         "properties": {
@@ -85880,6 +85536,11 @@
           }
         },
         "additionalProperties": false
+      },
+      "SaveType": {
+        "enum": [0, 1, 2],
+        "type": "integer",
+        "format": "int32"
       },
       "SavesSortCategory": {
         "enum": [
@@ -86086,7 +85747,7 @@
           },
           "swimlane": {
             "type": "string",
-            "description": "Optional swimlane identifier (e.g. \"trending\", \"essential\", \"priced\").\r\nResolves through Toolbox.Service.Interfaces.Swimlanes.ISwimlaneRegistry to a provider whose\r\ndefault sort intent and search-builder configuration are applied to the\r\nquery. Unknown, disabled, or category-ineligible values yield 400.",
+            "description": "Optional swimlane identifier (e.g. \"trending\", \"essential\", \"priced\").",
             "nullable": true
           },
           "searchView": {
@@ -86958,37 +86619,6 @@
           }
         },
         "description": "Information about the expiration of a subscription."
-      },
-      "ThumbnailsApi.Roblox.Web.Responses.Thumbnails.ThumbnailResponse": {
-        "type": "object",
-        "properties": {
-          "targetId": {
-            "format": "int64",
-            "type": "integer"
-          },
-          "state": {
-            "description": " ['Error' = 0, 'Completed' = 1, 'InReview' = 2, 'Pending' = 3, 'Blocked' = 4, 'TemporarilyUnavailable' = 5]",
-            "enum": [
-              "Error",
-              "Completed",
-              "InReview",
-              "Pending",
-              "Blocked",
-              "TemporarilyUnavailable"
-            ],
-            "type": "string"
-          },
-          "imageUrl": {
-            "type": "string"
-          },
-          "version": {
-            "type": "string"
-          },
-          "thumbnailSource": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
       },
       "ToolboxService.Asset": {
         "type": "object",
@@ -88059,6 +87689,34 @@
         },
         "additionalProperties": false,
         "description": "The response for updating a matchmaking server attribute definition."
+      },
+      "UpdatePlaceVersionNotesRequest": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdatePlaceVersionNotesResponse": {
+        "type": "object",
+        "properties": {
+          "placeVersion": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PlaceVersion"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "User": {
         "type": "object",
@@ -89330,7 +88988,6 @@
           "patch_legacy_groups_v1_groups__groupId__settings",
           "groups_patch_v1_groups__groupId__settings",
           "patch_legacy_groups_v1_groups__groupId__status",
-          "groups_patch_v1_groups__groupId__status",
           "post_legacy_groups_v1_groups_policies",
           "groups_post_v1_groups_policies",
           "get_legacy_groups_v1_user_groups_pending",
@@ -89383,10 +89040,6 @@
           "groups_patch_v1_groups__groupId__users__userId_",
           "groups_get_v1_groups__groupId__users__userId__permissions",
           "groups_get_v1_groups__groupId__wall_posts",
-          "groups_post_v1_groups__groupId__wall_posts",
-          "groups_delete_v1_groups__groupId__wall_posts__postId_",
-          "groups_post_v1_groups__groupId__wall_subscribe",
-          "groups_delete_v1_groups__groupId__wall_users__userId__posts",
           "groups_get_v1_groups_configuration_metadata",
           "groups_post_v1_groups_create",
           "groups_patch_v1_groups_icon",
@@ -89413,8 +89066,6 @@
           "groups_patch_v1_groups__groupId__features",
           "groups_get_v1_groups__groupId__features_status",
           "groups_get_v2_groups",
-          "groups_get_v2_groups__groupId__wall_posts",
-          "groups_post_v2_groups__groupId__wall_posts",
           "groups_get_v2_users__userId__groups_roles",
           "RevenueSummary_GetGroupRevenueSummary",
           "TransactionHistory_GetGroupTransactions",
@@ -89805,19 +89456,22 @@
           "Cloud_CreateLuauExecutionSessionTask__Using_Universes_Places",
           "Cloud_GetLuauExecutionSessionTask",
           "Cloud_ListLuauExecutionSessionTaskLogs",
+          "PlaceVersion_GetPlaceVersionHistory",
+          "PlaceVersion_UpdatePlaceVersionNotes",
+          "PlaceVersion_GetPlaceContributors",
           "get_legacy_develop_v1_places__placeId__teamcreate_active_session_members",
           "develop_get_v1_places__placeId__teamcreate_active_session_members",
           "delete_legacy_develop_v2_teamtest__placeId_",
           "develop_delete_v2_teamtest__placeId_",
           "GameServers_GetFilterOptions",
           "GameServers_ListGameServers",
+          "GameServers_ListGameServerLogs",
           "Places_CreatePlaceVersionApiKey",
           "develop_patch_v1_places__placeId_",
           "develop_post_v1_places__placeId_",
           "develop_get_v1_universes__universeId__places",
           "develop_get_v2_places__placeId_",
           "develop_patch_v2_places__placeId_",
-          "games_get_v1_games__placeId__servers__serverType_",
           "games_get_v1_games_multiget_place_details",
           "inventory_get_v1_users__userId__places_inventory"
         ]
@@ -90092,7 +89746,6 @@
           "gameinternationalization_get_v2_supported_languages_games__gameId_",
           "games_get_v1_games",
           "PrivateServers_GetPrivateServerList",
-          "games_get_v1_games__placeId__servers__serverType_",
           "games_get_v1_games__universeId__favorites",
           "games_post_v1_games__universeId__favorites",
           "games_get_v1_games__universeId__favorites_count",

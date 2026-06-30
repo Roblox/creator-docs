@@ -47,8 +47,8 @@ This publishing advance is dependent on the type of Marketplace item being sold:
 <thead>
   <tr>
     <th>3D avatar asset type</th>
-    <th>Non-limited publishing advance</th>
-    <th>Paid limited publishing advance</th>
+    <th>Non-Limited publishing advance</th>
+    <th>Paid Limited publishing advance</th>
   </tr>
 </thead>
 <tbody>
@@ -440,7 +440,15 @@ At this time, only Roblox-created Limiteds are tradeable.
 
 When publishing free Limiteds, you must provide a per-unit fee depending on the quantity being published and other factors like the type of asset being uploaded. This payment depends on a range of market-based factors and may change over time.
 
-As a hypothetical case where limited hat items are 100 Robux per-unit, if 200 limited hats are listed at a **0** Robux price, the creator pays **20,000** Robux to list this free limited item. For free Limiteds, **Roblox keeps the entire per-unit fee**.
+As a hypothetical case where Limited hat items are 100 Robux per-unit, if 200 Limited hats are listed at a **0** Robux price, the creator pays **20,000** Robux to list this free Limited item. For free Limiteds, **Roblox keeps the entire per-unit fee**.
+
+### Restocking
+
+After publishing a free Limited, you can **restock** the item to increase its available quantity. To restock, open the item's configure page and edit the quantity to a higher value. Before you confirm, Roblox shows the total fee for the additional quantity, then charges you when you complete the restock.
+
+Restocking uses the same [per-unit fee](#per-unit-fee) as the original publish. As a hypothetical case where Limited hat items are 100 Robux per-unit, restocking a free Limited hat by an additional 50 units costs **5,000** Robux. As with publishing, **Roblox keeps the entire per-unit fee**.
+
+Restocking is only available for free Limiteds that have never been made resellable. Once you enable reselling on an item, you can no longer restock it because the [resellable status](../marketplace/publish-to-marketplace.md#item-attributes) can't be disabled after it's enabled.
 
 ### Reselling
 

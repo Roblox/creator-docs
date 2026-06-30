@@ -2356,7 +2356,10 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method is deprecated. To break specific joints, iterate over the
+      part's connections using `Class.BasePart:GetJoints()` and call
+      `Class.Instance:Destroy()` on the joints you want to remove.
     security: None
     thread_safety: Unsafe
     capabilities: []

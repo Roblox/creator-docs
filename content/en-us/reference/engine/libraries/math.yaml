@@ -593,6 +593,10 @@ functions:
       fractional values of `x`, `y`, and `z`, the return value will gradually
       fluctuate between `-0.5` and `0.5`. For coordinates that are close to each
       other, the return values will also be close to each other.
+
+      The noise repeats with a period of `256` on each axis, so
+      `Library.math.noise(x, y, z)` and `Library.math.noise(x + 256, y, z)`
+      return identical values.
     parameters:
       - name: x
         type: number

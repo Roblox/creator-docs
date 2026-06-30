@@ -44,6 +44,10 @@ description: Marketplace FAQ providing answers and resources for common question
 
   <dd><p />Yes, creators can make free Limited items only and these will be charged for each unit created ([per-unit fee](./marketplace-fees-and-commissions.md#per-unit-fee)). As of today, the per-unit fee for free Limited items is 100 Robux. These per-unit fees will continue to be dynamic and can be changed in the future.<p /></dd><br />
 
+  <dt>**Can I increase the quantity of a free Limited item after publishing?**</dt>
+
+  <dd><p />Yes. You can [restock](./marketplace-fees-and-commissions.md#restocking) a free Limited item to increase its available quantity by editing the quantity on the item's configure page. Restocking charges the same [per-unit fee](./marketplace-fees-and-commissions.md#per-unit-fee) as publishing for each additional unit. Restocking is only available for free Limited items that have never been made resellable.<p /></dd><br />
+
   <dt>**How much can I earn from selling my items in Marketplace?**</dt>
 
   <dd><p />Creators will earn at least 30% of the gross of any item sales. The remainder is shared between the platform and, if your item is sold in an experience, the developer who created that experience (who could be you). You can learn about earnings from creating, selling, and reselling avatar items [here](./marketplace-fees-and-commissions.md).<p /></dd><br />

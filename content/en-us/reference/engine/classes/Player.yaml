@@ -1263,8 +1263,7 @@ methods:
       - Players
   - name: Player:GetFriendsOnline
     summary: |
-      Returns a dictionary of online friends. Returns the product information of
-      an asset using its asset ID.
+      Returns a dictionary of online friends.
     description: ''
     code_samples:
       - how-to-get-a-list-of-online-friends
@@ -1568,7 +1567,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.Player:GetRankInGroupAsync()|GetRankInGroupAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities:
