@@ -9,8 +9,6 @@ description: Sell passes and developer products inside your game's Shop.
 
 <Alert severity="warning">
 On July 7, 2026, Roblox will automatically publish your Shop to your in-game menu using suggested categories and listing settings. Review your Shop before then to customize those suggestions before players see them.
-
-If you don't want Shop to appear in your in-game menu, [hide it](#in-game-menu) before July 7, 2026.
 </Alert>
 
 **Shop** provides players with a personalized shopping experience for your game. Roblox combines platform-wide signals with signals from your game to surface the most relevant items for each player, and automatically handles ranking and optimization.
