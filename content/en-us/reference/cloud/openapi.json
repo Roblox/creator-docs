@@ -12145,7 +12145,8 @@
                   "isRegionalPricingEnabled": {
                     "type": "boolean",
                     "description": "Whether regional pricing should be enabled for the developer product.\r\nShould not be used when setting isManagedPricingEnabled.",
-                    "nullable": true
+                    "nullable": true,
+                    "deprecated": true
                   },
                   "isManagedPricingEnabled": {
                     "type": "boolean",
@@ -12454,12 +12455,14 @@
                   "isRegionalPricingEnabled": {
                     "type": "boolean",
                     "description": "Whether regional pricing should be enabled for the developer product.\r\nShould not be used when setting isManagedPricingEnabled.",
-                    "nullable": true
+                    "nullable": true,
+                    "deprecated": true
                   },
                   "storePageEnabled": {
                     "type": "boolean",
                     "description": "Whether the developer product should be available for purchase on the external store page.",
-                    "nullable": true
+                    "nullable": true,
+                    "deprecated": true
                   },
                   "isManagedPricingEnabled": {
                     "type": "boolean",
@@ -12747,7 +12750,8 @@
                   "isRegionalPricingEnabled": {
                     "type": "boolean",
                     "description": "Whether regional pricing should be enabled for the game pass.",
-                    "nullable": true
+                    "nullable": true,
+                    "deprecated": true
                   },
                   "isManagedPricingEnabled": {
                     "type": "boolean",
@@ -13062,7 +13066,8 @@
                   "isRegionalPricingEnabled": {
                     "type": "boolean",
                     "description": "Whether regional pricing should be enabled for the game pass.",
-                    "nullable": true
+                    "nullable": true,
+                    "deprecated": true
                   },
                   "isManagedPricingEnabled": {
                     "type": "boolean",
@@ -22233,6 +22238,431 @@
         },
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/storage#OrderedDataStores_IncrementEntry"
+        }
+      }
+    },
+    "/place-version-history-api/v1/{placeId}/contributors": {
+      "get": {
+        "tags": ["Places"],
+        "summary": "Endpoint used to fetch all previous contributors of a place.",
+        "operationId": "PlaceVersion_GetPlaceContributors",
+        "parameters": [
+          {
+            "name": "placeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "minimum": 1,
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetPlaceContributorsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.place:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/places#PlaceVersion_GetPlaceContributors"
+        }
+      }
+    },
+    "/place-version-history-api/v1/{placeId}/history": {
+      "get": {
+        "tags": ["Places"],
+        "summary": "Endpoint used to get place versions, using various filters",
+        "operationId": "PlaceVersion_GetPlaceVersionHistory",
+        "parameters": [
+          {
+            "name": "placeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "minimum": 1,
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "isPublished",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "hasNotes",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "saveType",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "searchTerm",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "contributor",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "startTime",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "endTime",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetPlaceVersionHistoryResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.place:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/places#PlaceVersion_GetPlaceVersionHistory"
+        }
+      }
+    },
+    "/place-version-history-api/v1/{placeId}/version/{version}/notes": {
+      "post": {
+        "tags": ["Places"],
+        "summary": "Endpoint used to modify the notes of a particular version for a place.",
+        "operationId": "PlaceVersion_UpdatePlaceVersionNotes",
+        "parameters": [
+          {
+            "name": "placeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "minimum": 1,
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdatePlaceVersionNotesRequest"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdatePlaceVersionNotesRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdatePlaceVersionNotesRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdatePlaceVersionNotesRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdatePlaceVersionNotesResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.place:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/places#PlaceVersion_UpdatePlaceVersionNotes"
         }
       }
     },
@@ -64459,7 +64889,6 @@
           "name",
           "priceInformation",
           "productId",
-          "storePageEnabled",
           "universeId",
           "updatedTimestamp"
         ],
@@ -64495,7 +64924,9 @@
           },
           "storePageEnabled": {
             "type": "boolean",
-            "description": "Whether the developer product is currently available for purchase on the external store page."
+            "description": "Whether the developer product is currently available for purchase on the external store page.",
+            "nullable": true,
+            "deprecated": true
           },
           "priceInformation": {
             "allOf": [
@@ -65347,6 +65778,47 @@
         },
         "additionalProperties": false,
         "description": "Response containing the weights of the current default matchmaking scoring weights"
+      },
+      "GetPlaceContributorsResponse": {
+        "type": "object",
+        "properties": {
+          "nextCursor": {
+            "type": "string",
+            "nullable": true
+          },
+          "hasMore": {
+            "type": "boolean"
+          },
+          "contributors": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetPlaceVersionHistoryResponse": {
+        "type": "object",
+        "properties": {
+          "nextCursor": {
+            "type": "string",
+            "nullable": true
+          },
+          "hasMore": {
+            "type": "boolean"
+          },
+          "placeVersions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PlaceVersion"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "GetPrivateServerListResponse": {
         "type": "object",
@@ -68382,6 +68854,26 @@
           "result": ["error", "response"]
         }
       },
+      "OperationErrorResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "OrderedDataStoreEntry": {
         "type": "object",
         "properties": {
@@ -68764,6 +69256,61 @@
         },
         "additionalProperties": false,
         "description": "Container for the status of a game update."
+      },
+      "PlaceVersion": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "contributors": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "nullable": true
+          },
+          "saveType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SaveType"
+              }
+            ]
+          },
+          "isPublished": {
+            "type": "boolean"
+          },
+          "publishStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PublishStatus"
+              }
+            ]
+          },
+          "hasNotes": {
+            "type": "boolean"
+          },
+          "createdTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "PlayerCategoricalSignalConfiguration": {
         "type": "object",
@@ -69270,6 +69817,11 @@
           }
         },
         "additionalProperties": false
+      },
+      "PublishStatus": {
+        "enum": [0, 1, 2],
+        "type": "integer",
+        "format": "int32"
       },
       "PublishUniverseMessageRequest": {
         "required": ["topic", "message"],
@@ -84985,6 +85537,11 @@
         },
         "additionalProperties": false
       },
+      "SaveType": {
+        "enum": [0, 1, 2],
+        "type": "integer",
+        "format": "int32"
+      },
       "SavesSortCategory": {
         "enum": [
           "Name",
@@ -87133,6 +87690,34 @@
         "additionalProperties": false,
         "description": "The response for updating a matchmaking server attribute definition."
       },
+      "UpdatePlaceVersionNotesRequest": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdatePlaceVersionNotesResponse": {
+        "type": "object",
+        "properties": {
+          "placeVersion": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PlaceVersion"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "User": {
         "type": "object",
         "properties": {
@@ -88871,6 +89456,9 @@
           "Cloud_CreateLuauExecutionSessionTask__Using_Universes_Places",
           "Cloud_GetLuauExecutionSessionTask",
           "Cloud_ListLuauExecutionSessionTaskLogs",
+          "PlaceVersion_GetPlaceVersionHistory",
+          "PlaceVersion_UpdatePlaceVersionNotes",
+          "PlaceVersion_GetPlaceContributors",
           "get_legacy_develop_v1_places__placeId__teamcreate_active_session_members",
           "develop_get_v1_places__placeId__teamcreate_active_session_members",
           "delete_legacy_develop_v2_teamtest__placeId_",
