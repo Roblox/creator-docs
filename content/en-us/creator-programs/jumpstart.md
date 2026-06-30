@@ -84,7 +84,7 @@ hideInPageNavigation: true
   }
   .js-acc-item.open .js-acc-caret { transform: rotate(90deg); color: var(--color-system-emphasis); }
   .js-acc-panel { max-height: 0; overflow: hidden; transition: max-height 280ms ease; }
-  .js-acc-item.open .js-acc-panel { max-height: 320px; }
+  .js-acc-item.open .js-acc-panel { max-height: 900px; }
   .js-acc-panel-inner { padding: 0 22px 20px; line-height: 1.6; }
   .js-acc-panel-inner a { color: var(--color-content-link); }
 `}</style>
@@ -172,10 +172,10 @@ export const DATA = {
     items: [
       { q: 'What kinds of games are you looking for?', a: "Genre, gameplay, and visual style are common factors in a player's decision to try a new experience, especially for 18+ players. Entrance into Jumpstart hinges on innovation in these areas.\n\n• Genres: RPG, strategy, and shooter games are heavily underrepresented despite strong demand from older age groups. We're seeking bold games in these core genres, plus unexpected genre mash-ups and projects that blend traditional mechanics with Roblox's avatars, social features, and cross-platform support.\n• Gameplay: Deep game mechanics, metagame systems, and skillful challenges keep players coming back. We're looking for creators who seamlessly blend depth with Roblox's intuitive nature, massive multiplayer scale, and emergent social dynamics to craft highly replayable, memorable experiences and moments players can't find anywhere else.\n• Visual style: We're looking for games that push aesthetic boundaries and make players think \"Wait, that's Roblox?\" We're looking for teams innovating with hyper-realistic 3D assets, stylized 2.5D sprites, high-fidelity avatars, or any other technique that brings their vision to life in ways that are entirely new to Roblox." },
       { q: 'Do I need prior Roblox experience?', a: "No. You don't need to have shipped on Roblox before; Jumpstart is specifically designed to help early-stage teams learn the platform and launch their first high-quality Roblox game." },
-      { q: 'Is this cash funding or a salary?', a: 'No. Jumpstart support is primarily in-kind: guidance, Robux-based operational support, and visibility tools—not a salary or traditional publishing deal.' },
+      { q: 'Is this cash funding or a salary?', a: 'No. Jumpstart support is primarily in-kind: guidance, Robux-based operational support, and visibility tools, not a salary or traditional publishing deal.' },
       { q: "Who's eligible to apply?", a: "Off-platform studios, new Roblox creators, and small teams from around the world can apply, as long as at least one team member is 18+. Full eligibility details will be listed on the application form. Participants should have English language skills sufficient to communicate and participate in program activities, including check-ins, milestone reviews, and cohort events. This ensures effective collaboration with Roblox staff and other participants." },
       { q: "What if I'm already part of an experienced or full-time team?", a: "If you've already shipped games or have a more mature Roblox project, you may be a better fit for the Roblox Incubator Program, which is a longer, milestone-driven track for teams ready to scale a promising title." },
-      { q: 'What happens after Jumpstart?', a: 'If your game shows strong potential, Roblox can connect you with follow-on programs and resources—including potential Incubator consideration—to keep building momentum after launch.' },
+      { q: 'What happens after Jumpstart?', a: 'If your game shows strong potential, Roblox can connect you with follow-on programs and resources, including potential Incubator consideration, to keep building momentum after launch.' },
     ],
   },
   closing: {
@@ -326,17 +326,60 @@ const HowItWorks = ({ title, steps }) => (
 );
 
 {/* FAQ accordion. Answers support inline [text](href) links. */}
-const renderAnswer = (s) => {
+// Inline parser: turns [text](href) into Link nodes.
+const renderInline = (s, kp) => {
   const re = /\[([^\]]+)\]\(([^)]+)\)/g;
   const out = [];
   let last = 0, m, i = 0;
   while ((m = re.exec(s)) !== null) {
     if (m.index > last) out.push(s.slice(last, m.index));
-    out.push(<Link key={`l${i++}`} href={m[2]}>{m[1]}</Link>);
+    out.push(<Link key={`${kp}-l${i++}`} href={m[2]}>{m[1]}</Link>);
     last = m.index + m[0].length;
   }
   if (last < s.length) out.push(s.slice(last));
   return out.length ? out : s;
+};
+
+// Bolds a short leading "Label:" in a list item, then renders inline content.
+const renderItem = (it, kp) => {
+  const ci = it.indexOf(': ');
+  if (ci > 0 && ci <= 18) {
+    return <><strong>{it.slice(0, ci + 1)}</strong> {renderInline(it.slice(ci + 2), kp)}</>;
+  }
+  return renderInline(it, kp);
+};
+
+// Block parser: lines beginning with "•" or "- " become a bulleted list; other lines are paragraphs.
+const renderAnswer = (s) => {
+  const blocks = [];
+  let list = null;
+  s.split('\n').forEach((line) => {
+    const t = line.trim();
+    const isBullet = t.charAt(0) === '•' || t.slice(0, 2) === '- ';
+    if (isBullet) {
+      if (!list) list = [];
+      list.push(t.replace(/^[•-]\s*/, ''));
+    } else {
+      if (list) { blocks.push({ type: 'ul', items: list }); list = null; }
+      if (t) blocks.push({ type: 'p', text: t });
+    }
+  });
+  if (list) blocks.push({ type: 'ul', items: list });
+  return blocks.map((b, bi) =>
+    b.type === 'ul' ? (
+      <ul key={bi} style={{ margin: '8px 0 0', paddingLeft: 22, display: 'flex', flexDirection: 'column', gap: 8, listStyleType: 'disc' }}>
+        {b.items.map((it, ii) => (
+          <li key={ii}>
+            <Typography component="span" variant="smallLabel1" color="secondary">{renderItem(it, `b${bi}i${ii}`)}</Typography>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <Typography key={bi} component="p" variant="smallLabel1" color="secondary" style={{ margin: bi ? '0.6em 0 0' : 0 }}>
+        {renderInline(b.text, `b${bi}`)}
+      </Typography>
+    ),
+  );
 };
 
 const FAQ = ({ title, items }) => (
@@ -350,9 +393,7 @@ const FAQ = ({ title, items }) => (
             <span className="js-acc-caret">▸</span>
           </button>
           <div className="js-acc-panel">
-            <div className="js-acc-panel-inner">
-              <Typography component="p" variant="smallLabel1" color="secondary">{renderAnswer(item.a)}</Typography>
-            </div>
+            <div className="js-acc-panel-inner">{renderAnswer(item.a)}</div>
           </div>
         </div>
       ))}
