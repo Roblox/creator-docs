@@ -8,7 +8,7 @@ description: Roblox Plus gives you additional ways to earn from your games by re
 Users who subscribe to Plus get a range of benefits to enhance their purchasing power, access, and overall game on the platform:
 
 - **Discounted purchases**: Subscribers get 10% off eligible purchases, including in-game items, avatar items, and more. The discount increases to 20% starting in the third month. Roblox covers this discount for you.
-- **Free paid private servers**: Subscribers get unlimited access to paid private servers at no cost. You're still compensated when they spend time in your paid private servers.
+- **Free paid private servers**: Subscribers get access to paid private servers at no cost. You're still compensated when they spend time in your paid private servers.
 - **Free Robux transfers**: Subscribers can transfer Robux at no cost to sender or recipient. Transfers are subject to age restrictions and parental consent. Robux received through transfers are not eligible for the DevEx program.
 - [**Marketplace access**](../../marketplace/marketplace-policy.md#creator-requirements): Subscribers can trade and resell limited items, and publish and sell avatar items. Premium subscribers have the same Marketplace access.
 
