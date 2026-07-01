@@ -5397,6 +5397,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/ProximityPromptStyle.yaml
         ignoreTranslation: true
+      - title: PurchaseOption
+        path: /reference/engine/enums/PurchaseOption
+        type: engineapi
+        source: /reference/engine/enums/PurchaseOption.yaml
+        ignoreTranslation: true
       - title: QualityLevel
         path: /reference/engine/enums/QualityLevel
         type: engineapi

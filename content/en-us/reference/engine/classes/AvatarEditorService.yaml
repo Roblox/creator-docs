@@ -90,7 +90,13 @@ description: |
     "CreatorName": "string",
     "CreatorHasVerifiedBadge": false,
 
-    "SupportsHeadShapes": false
+    "SupportsHeadShapes": false,
+
+    "TimedOptions": [
+      { "Duration": 259200, "Price": 30 },
+      { "Duration": 604800, "Price": 40 },
+      { "Duration": 1209600, "Price": 50 }
+    ]
   }
   ```
 
@@ -342,6 +348,33 @@ description: |
       <td><code>CreatorHasVerifiedBadge</code></td>
       <td>boolean</td>
       <td>Boolean of whether the creator has a verified badge.</td>
+    </tr>
+    </tbody>
+  </table>
+
+  ##### Timed Options Information
+
+  <table>
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><code>TimedOptions</code></td>
+      <td>array</td>
+      <td>Optional. An array of available timed options with durations and prices. Only present for assets that support timed ownership. Do not hardcode duration values; always retrieve them from the API as available options may change. Each entry contains:</td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td><code>Duration</code>: The duration in seconds (e.g. 259200 for 3 days, 604800 for 7 days).</td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td><code>Price</code>: The price in Robux for this duration.</td>
     </tr>
     </tbody>
   </table>
@@ -622,6 +655,8 @@ methods:
       item details for multiple items.
 
       Returns an array of items (see Item Details Response above in summary).
+      Each item includes the `TimedOptions` field when the asset supports timed
+      ownership.
     code_samples: []
     parameters:
       - name: itemIds
@@ -813,13 +848,58 @@ methods:
       [
           {
             "AssetId": 0,
-            "AssetType" : "string",
+            "AssetType": "string",
             "Created": "string",
             "Name": "string",
+            "CreatedTime": DateTime,
+            "ExpirationTime": DateTime,
           }
       ]
       ```
-    code_samples: []
+
+      <table>
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><code>AssetId</code></td>
+          <td>number</td>
+          <td>The asset ID.</td>
+        </tr>
+        <tr>
+          <td><code>AssetType</code></td>
+          <td>string</td>
+          <td>The asset type as a string.</td>
+        </tr>
+        <tr>
+          <td><code>Created</code></td>
+          <td>string</td>
+          <td>ISO 8601 timestamp of when the item was acquired.</td>
+        </tr>
+        <tr>
+          <td><code>Name</code></td>
+          <td>string</td>
+          <td>The display name of the item.</td>
+        </tr>
+        <tr>
+          <td><code>CreatedTime</code></td>
+          <td>DateTime</td>
+          <td>When the item was acquired, as a <code>Datatype.DateTime</code> value.</td>
+        </tr>
+        <tr>
+          <td><code>ExpirationTime</code></td>
+          <td>DateTime</td>
+          <td>Optional. The absolute time when the item's timed ownership expires. Only present for items acquired via a timed option. Absent for permanently owned items.</td>
+        </tr>
+        </tbody>
+      </table>
+    code_samples:
+      - AvatarEditorService-GetInventoryAsync-TimedOptions
     parameters:
       - name: assetTypes
         type: Array
@@ -909,9 +989,15 @@ methods:
           <td>number</td>
           <td>If this asset was created in an experience, this is the universe ID where it was created. <code>nil</code> if not an in-experience creation.</td>
         </tr>
+        <tr>
+          <td><code>ExpirationTime</code></td>
+          <td>DateTime</td>
+          <td>Optional. The absolute time when the item's timed ownership expires. Only present when the item is owned by the current user via a timed option. Absent for permanently owned items.</td>
+        </tr>
         </tbody>
       </table>
-    code_samples: []
+    code_samples:
+      - AvatarEditorService-GetItemDetailsAsync-TimedOptions
     parameters:
       - name: itemId
         type: int64
@@ -1552,8 +1638,13 @@ methods:
       of the given search.
 
       Each item in the returned pages uses the Item Details Response format (see
-      above in summary).
-    code_samples: []
+      above in summary), including the `TimedOptions` field for assets that
+      support timed ownership.
+
+      Use `Enum.SalesTypeFilter.TimedOptions` in `Datatype.CatalogSearchParams`
+      to filter results to only items with timed options available.
+    code_samples:
+      - AvatarEditorService-SearchCatalogAsync-TimedOptions
     parameters:
       - name: searchParameters
         type: CatalogSearchParams

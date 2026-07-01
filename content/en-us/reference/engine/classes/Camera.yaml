@@ -1389,6 +1389,17 @@ methods:
       indicating whether `worldPoint` is within the bounds of the screen will be
       `true` regardless of whether the point is obscured by
       `Class.BasePart|BaseParts` or `Class.Terrain`.
+
+      ##### ViewportFrame Cameras
+
+      Only `Class.Workspace.CurrentCamera` has its internal viewport dimensions
+      updated by the engine each frame. Cameras used inside a
+      `Class.ViewportFrame` do not receive viewport updates, so the X and Y
+      components returned by this method will be in the range [0, 1] rather than
+      in pixels. In practice, this means the returned values can be used as
+      scale coordinates (for example,
+      `Datatype.UDim2|UDim2.fromScale(vector.X, vector.Y)`) to position GUI
+      elements relative to the ViewportFrame.
     code_samples: []
     parameters:
       - name: worldPoint
@@ -1403,8 +1414,10 @@ methods:
 
           - A `Datatype.Vector3` whose **X** and **Y** components represent the
             offset of the `worldPoint` from the top left corner of the viewport,
-            in pixels. The `Datatype.Vector3` **Z** component represents the
-            depth of the `worldPoint` from the screen (in studs).
+            in pixels for `Class.Workspace.CurrentCamera`. For cameras inside a
+            `Class.ViewportFrame`, the values are normalized to [0, 1]. The
+            `Datatype.Vector3` **Z** component represents the depth of the
+            `worldPoint` from the screen (in studs).
 
           - A boolean indicating if the `worldPoint` is within the bounds of the
             screen.

@@ -93,7 +93,7 @@ You cannot explicitly set the root part, but the following factors affect probab
 <Grid container spacing={2}>
 	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Lower.png" alt="" width="50" style={{float:"right"}} /></Grid>
 	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
-	Precedence based on the part's size, with multipliers for parts with specific names.
+	Precedence based on the part's size (largest face area), with multipliers for specific part types. `Class.Seat|Seats` and `Class.VehicleSeat|VehicleSeats` receive the highest multiplier, followed by parts named **HumanoidRootPart**, then parts named **Torso**.
 	</Grid>
 </Grid>
 

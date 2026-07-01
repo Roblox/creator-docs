@@ -9,8 +9,9 @@ hideInPageNavigation: true
   .js-hero {
     position: relative;
     width: 100%;
-    aspect-ratio: 24/9;
-    min-height: 360px;
+    /* Scaling floor instead of a fixed aspect-ratio: keeps the banner shape but
+       lets it grow (never clip) when the copy wraps taller on smaller widths. */
+    min-height: clamp(320px, 42vw, 460px);
     border-radius: 16px;
     overflow: hidden;
     background: #000;
@@ -402,8 +403,9 @@ const FAQ = ({ title, items }) => (
 );
 
 {/* Closing CTA banner: mirrors the hero. Image fades to black on the left, copy on the left. */}
+// Closing banner uses minHeight 0 so it hugs its content: vertical space equals the symmetric padding.
 const Closing = ({ title, description, cta, image }) => (
-  <div className="js-hero" style={{ aspectRatio: '26/9', minHeight: 300, marginBottom: 16 }}>
+  <div className="js-hero" style={{ minHeight: 0, marginBottom: 16 }}>
     <img className="js-hero-img" src={image} alt="" style={{ objectPosition: 'center 20%', transform: 'translateX(14%)' }} />
     <div className="js-hero-fade" />
     <div className="js-hero-content">
