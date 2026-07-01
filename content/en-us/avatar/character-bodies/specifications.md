@@ -1,6 +1,12 @@
 ---
 title: Character specifications
 description: Character specification lists the specific technical requirements for custom characters created outside of Studio.
+keywords:
+  - R15
+  - R15+
+  - UGC
+  - Bodies
+  - Bundles
 ---
 
 Character models require a specific set of components and configuration standards to ensure all avatar features work as expected. Check that your model meets the following modeling specifications and guidelines before exporting to ensure Studio compatibility.
