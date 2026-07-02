@@ -912,7 +912,7 @@ properties:
       physics, streaming, etc.) replicate at different rates depending on how
       close objects are to the replication focus.
 
-      When this property is `nil`, it reverts to its default behavior which is
+      When this property is `nil` or the instance referenced is destroyed, it reverts to its default behavior which is
       to treat the local player's character's
       `Class.Model.PrimaryPart|PrimaryPart` as the replication focus.
 
