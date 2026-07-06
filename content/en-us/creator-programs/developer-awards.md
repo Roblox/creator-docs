@@ -13,6 +13,10 @@ Developer Awards is a data-driven program designed to reward developers for reac
     variant="filled" />
 </figure>
 
+<Alert severity="warning">
+  The Developer Awards program is currently experiencing significant processing and distribution delays. Delivery of milestones and responses from the contact email may take an extended period of time.
+</Alert>
+
 ## Award categories
 
 - Virtual Items
