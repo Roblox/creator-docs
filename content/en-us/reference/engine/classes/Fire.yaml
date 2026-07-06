@@ -38,6 +38,7 @@ description: |
   orange `Class.Light.Color|Color`.
 code_samples:
   - Lighting-Torches
+  - Toggle-Fire-Effect
 inherits:
   - Instance
 descendants: []

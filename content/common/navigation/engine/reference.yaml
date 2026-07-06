@@ -5637,6 +5637,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/ScreenOrientation.yaml
         ignoreTranslation: true
+      - title: ScreenshotCaptureResult
+        path: /reference/engine/enums/ScreenshotCaptureResult
+        type: engineapi
+        source: /reference/engine/enums/ScreenshotCaptureResult.yaml
+        ignoreTranslation: true
       - title: ScriptStoppedReason
         path: /reference/engine/enums/ScriptStoppedReason
         type: engineapi

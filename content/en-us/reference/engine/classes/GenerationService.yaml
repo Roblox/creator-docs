@@ -47,7 +47,12 @@ methods:
       | Character limit exceeded                   | The input prompt length for this generation request exceeded the limit.  | Reduce the number of characters in the `Prompt` string of the `input` dictionary.    |
       | Service overloaded                         | The service is overloaded.                                               | Retry the request later.                                                             |
       | Size dimensions must all be greater than 0 | Invalid size provided.                                                   | Change the size to above `0`.                                                        |
-    code_samples: []
+    code_samples:
+      - GenerationService-ClientSideMeshGeneration
+      - GenerationService-ServerSideMeshGeneration
+      - GenerationService-ClientSideMeshGeneration-WithSuggestedSize
+      - GenerationService-ServerSideMeshGeneration-WithSuggestedSize
+      - GenerationService-StarterPlayerScripts-WithSuggestedSize
     parameters:
       - name: inputs
         type: Dictionary
