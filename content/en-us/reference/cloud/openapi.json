@@ -9531,7 +9531,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -9546,7 +9546,8 @@
                 "DataStoresConfig",
                 "ExtendedServicesConfig",
                 "LeaderboardsConfig",
-                "ExperienceUserConfig"
+                "ExperienceUserConfig",
+                "JourneysConfig"
               ]
             },
             "x-enum-varnames": [
@@ -9555,7 +9556,8 @@
               "DataStoresConfig",
               "ExtendedServicesConfig",
               "LeaderboardsConfig",
-              "ExperienceUserConfig"
+              "ExperienceUserConfig",
+              "JourneysConfig"
             ]
           }
         ],
@@ -9656,7 +9658,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -9671,7 +9673,8 @@
                 "DataStoresConfig",
                 "ExtendedServicesConfig",
                 "LeaderboardsConfig",
-                "ExperienceUserConfig"
+                "ExperienceUserConfig",
+                "JourneysConfig"
               ]
             },
             "x-enum-varnames": [
@@ -9680,7 +9683,8 @@
               "DataStoresConfig",
               "ExtendedServicesConfig",
               "LeaderboardsConfig",
-              "ExperienceUserConfig"
+              "ExperienceUserConfig",
+              "JourneysConfig"
             ]
           }
         ],
@@ -9824,7 +9828,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -9839,7 +9843,8 @@
                 "DataStoresConfig",
                 "ExtendedServicesConfig",
                 "LeaderboardsConfig",
-                "ExperienceUserConfig"
+                "ExperienceUserConfig",
+                "JourneysConfig"
               ]
             },
             "x-enum-varnames": [
@@ -9848,7 +9853,8 @@
               "DataStoresConfig",
               "ExtendedServicesConfig",
               "LeaderboardsConfig",
-              "ExperienceUserConfig"
+              "ExperienceUserConfig",
+              "JourneysConfig"
             ]
           }
         ],
@@ -9947,7 +9953,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -9962,7 +9968,8 @@
                 "DataStoresConfig",
                 "ExtendedServicesConfig",
                 "LeaderboardsConfig",
-                "ExperienceUserConfig"
+                "ExperienceUserConfig",
+                "JourneysConfig"
               ]
             },
             "x-enum-varnames": [
@@ -9971,7 +9978,8 @@
               "DataStoresConfig",
               "ExtendedServicesConfig",
               "LeaderboardsConfig",
-              "ExperienceUserConfig"
+              "ExperienceUserConfig",
+              "JourneysConfig"
             ]
           }
         ],
@@ -10117,7 +10125,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10132,7 +10140,8 @@
                 "DataStoresConfig",
                 "ExtendedServicesConfig",
                 "LeaderboardsConfig",
-                "ExperienceUserConfig"
+                "ExperienceUserConfig",
+                "JourneysConfig"
               ]
             },
             "x-enum-varnames": [
@@ -10141,7 +10150,8 @@
               "DataStoresConfig",
               "ExtendedServicesConfig",
               "LeaderboardsConfig",
-              "ExperienceUserConfig"
+              "ExperienceUserConfig",
+              "JourneysConfig"
             ]
           }
         ],
@@ -10287,7 +10297,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10302,7 +10312,8 @@
                 "DataStoresConfig",
                 "ExtendedServicesConfig",
                 "LeaderboardsConfig",
-                "ExperienceUserConfig"
+                "ExperienceUserConfig",
+                "JourneysConfig"
               ]
             },
             "x-enum-varnames": [
@@ -10311,7 +10322,8 @@
               "DataStoresConfig",
               "ExtendedServicesConfig",
               "LeaderboardsConfig",
-              "ExperienceUserConfig"
+              "ExperienceUserConfig",
+              "JourneysConfig"
             ]
           }
         ],
@@ -10412,7 +10424,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10427,7 +10439,8 @@
                 "DataStoresConfig",
                 "ExtendedServicesConfig",
                 "LeaderboardsConfig",
-                "ExperienceUserConfig"
+                "ExperienceUserConfig",
+                "JourneysConfig"
               ]
             },
             "x-enum-varnames": [
@@ -10436,7 +10449,8 @@
               "DataStoresConfig",
               "ExtendedServicesConfig",
               "LeaderboardsConfig",
-              "ExperienceUserConfig"
+              "ExperienceUserConfig",
+              "JourneysConfig"
             ]
           }
         ],
@@ -10582,7 +10596,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10597,7 +10611,8 @@
                 "DataStoresConfig",
                 "ExtendedServicesConfig",
                 "LeaderboardsConfig",
-                "ExperienceUserConfig"
+                "ExperienceUserConfig",
+                "JourneysConfig"
               ]
             },
             "x-enum-varnames": [
@@ -10606,7 +10621,8 @@
               "DataStoresConfig",
               "ExtendedServicesConfig",
               "LeaderboardsConfig",
-              "ExperienceUserConfig"
+              "ExperienceUserConfig",
+              "JourneysConfig"
             ]
           },
           {
@@ -10763,7 +10779,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -10778,7 +10794,8 @@
                 "DataStoresConfig",
                 "ExtendedServicesConfig",
                 "LeaderboardsConfig",
-                "ExperienceUserConfig"
+                "ExperienceUserConfig",
+                "JourneysConfig"
               ]
             },
             "x-enum-varnames": [
@@ -10787,7 +10804,8 @@
               "DataStoresConfig",
               "ExtendedServicesConfig",
               "LeaderboardsConfig",
-              "ExperienceUserConfig"
+              "ExperienceUserConfig",
+              "JourneysConfig"
             ]
           },
           {
@@ -62432,7 +62450,7 @@
     "/v2/users/{userId}/transactions": {
       "get": {
         "tags": ["Users"],
-        "operationId": "TransactionRecords_GetUserTransactions",
+        "operationId": "TransactionRecordsApi.TransactionRecords_GetUserTransactions",
         "parameters": [
           {
             "name": "userId",
@@ -62503,7 +62521,7 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/users#TransactionRecords_GetUserTransactions"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/users#TransactionRecordsApi.TransactionRecords_GetUserTransactions"
         }
       }
     },
@@ -69906,17 +69924,19 @@
           "DataStoresConfig",
           "ExtendedServicesConfig",
           "LeaderboardsConfig",
-          "ExperienceUserConfig"
+          "ExperienceUserConfig",
+          "JourneysConfig"
         ],
         "type": "string",
-        "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig",
+        "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
         "x-enum-varnames": [
           "InExperienceConfig",
           "RecommendationServicesConfig",
           "DataStoresConfig",
           "ExtendedServicesConfig",
           "LeaderboardsConfig",
-          "ExperienceUserConfig"
+          "ExperienceUserConfig",
+          "JourneysConfig"
         ]
       },
       "RestartState": {
@@ -84027,6 +84047,9 @@
             "description": "The game paid access price in robux.\r\nGiven that there is no actual owner for this product surface,\r\nwe will keep existing behavior where we display offsale for games priced in fiat currency.",
             "type": "integer"
           },
+          "contentMetadata": {
+            "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.GameContentMetadataResponseModel"
+          },
           "id": {
             "format": "int64",
             "description": "The game (universe) Id.",
@@ -87120,6 +87143,10 @@
           "robloxSelectOutgoingTotal": {
             "type": "integer",
             "format": "int64"
+          },
+          "privateServerEngagementPayoutsTotal": {
+            "type": "integer",
+            "format": "int64"
           }
         },
         "additionalProperties": false
@@ -87154,7 +87181,9 @@
           "LicensingPayment",
           "LicensingPaymentClawback",
           "CurrencyTransfer",
-          "RobloxSelectTransfer"
+          "RobloxSelectTransfer",
+          "PrivateServerEngagementPayout",
+          "CurrencySubscriptionStipend"
         ],
         "type": "string"
       },
@@ -87228,6 +87257,9 @@
             "type": "boolean"
           },
           "HasRobloxSelectTransfer": {
+            "type": "boolean"
+          },
+          "HasPrivateServerEngagementPayout": {
             "type": "boolean"
           }
         },
@@ -89925,7 +89957,7 @@
           "Cloud_ListUserRestrictionLogs",
           "Cloud_CreateUserNotification",
           "Cloud_GetSubscription",
-          "TransactionRecords_GetUserTransactions",
+          "TransactionRecordsApi.TransactionRecords_GetUserTransactions",
           "TransactionRecords_GetUserRevenueSummary",
           "TransactionRecords_GetUsedTransactionTypes",
           "translationroles_get_v1_game_localization_roles_games__gameId__roles__role__assignees"

@@ -89,7 +89,8 @@ properties:
     description: ''
     code_samples: []
     type: VideoSampleSize
-    tags: []
+    tags:
+      - Hidden
     deprecation_message: ''
     security:
       read: None

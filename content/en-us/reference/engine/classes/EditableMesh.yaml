@@ -10,13 +10,13 @@ summary: |
 description: |
   `EditableMesh` changes the applied visual mesh when linked to a
   `Class.MeshPart`, allowing for querying and modification of the mesh both in
-  Studio and in experience.
+  Studio and in-game.
 
-  #### Enabling for Published Experiences
+  #### Enabling for published games
 
   For security purposes, using `EditableMesh` fails by default for published
-  experiences. To enable usage of `EditableMesh`, you must be 13+ age verified
-  and ID verified. After you are verified, open Studio's
+  games. To enable usage of `EditableMesh`, you must be 13+ age verified and ID
+  verified. After you are verified, open Studio's
   [Experience Settings](../../../studio/experience-settings.md), select
   **Security**, and enable the **Allow&nbsp;Mesh&nbsp;&&nbsp;Image&nbsp;APIs**
   toggle. Remember to review the
@@ -28,12 +28,12 @@ description: |
   To prevent misuse, `Class.AssetService:CreateEditableMeshAsync()` only allows
   you to load and edit mesh assets if any of the following is true:
 
-  - Owned by or explicitly shared with the experience owner.
+  - Owned by or explicitly shared with the game owner.
   - Owned by or explicitly shared with the logged in Studio user.
   - Owned by or explicitly shared with the logged in player if the
     `EditableMesh` is on the client side.
-  - Owned by a group where the experience owner, Studio user, or player has a
-    role with permission to edit the group's assets. See
+  - Owned by a group where the game owner, Studio user, or player has a role
+    with permission to edit the group's assets. See
     [Roles and permissions](../../../projects/groups.md#roles-and-permissions)
     for more information.
 
@@ -43,7 +43,7 @@ description: |
   The APIs throw an error if they are used to load an asset that does not meet
   the criteria above.
 
-  #### Memory Limits
+  #### Memory limits
 
   Editable assets are currently expensive for memory usage. To minimize its
   impact on client performance, `EditableMesh` has strict client-side memory
@@ -53,7 +53,7 @@ description: |
   multiple `Class.MeshPart|MeshParts` (multi-referencing) can help with memory
   optimization.
 
-  #### Creation and Display
+  #### Creation and display
 
   An `EditableMesh` can be created from an existing `Datatype.Content` of a
   `Class.MeshPart` or a mesh ID using
@@ -123,7 +123,7 @@ description: |
   reflected by the engine, without the need to call
   `Class.AssetService:CreateMeshPartAsync()`.
 
-  #### Fixed-Size Meshes
+  #### Fixed-size meshes
 
   When creating an `EditableMesh` from an existing mesh asset (via
   `Class.AssetService:CreateEditableMeshAsync()`), the resulting editable mesh
@@ -141,7 +141,7 @@ description: |
   end)
   ```
 
-  #### Stable Vertex/Face IDs
+  #### Stable vertex/face IDs
 
   Many `EditableMesh` methods take **vertex**, **normal**, **UV**, **color** and
   **face** IDs. These are represented as integers in Luau but they require some
@@ -155,7 +155,7 @@ description: |
   through the table returned by `Class.EditableMesh:GetVertices()|GetVertices()`
   or `Class.EditableMesh:GetFaces()|GetFaces()`.
 
-  #### Split Vertex Attributes
+  #### Split vertex attributes
 
   A **vertex** is a corner of a face, and topologically connects faces together.
   Vertices can have several attributes: position, normal, UV coordinate, color,
@@ -168,9 +168,13 @@ description: |
   the vertex will have 3 different normals (one for each adjacent face). You can
   also have seams in the UV coordinates or sharp changes in the vertex colors.
 
-  When creating faces, every vertex will by default have one of each attribute:
-  one normal, one UV coordinate, and one color/transparency. If you want to
-  create a seam, you should create new attributes and set them on the face. For
+  When creating faces with `Class.EditableMesh:AddTriangle()|AddTriangle()`,
+  each corner of the new face is automatically assigned a normal, UV, and color
+  attribute. If a vertex already belongs to an existing face, the new face
+  **reuses** that vertex's existing attributes (producing smooth shading and
+  continuous UVs). If the vertex is new, fresh attribute IDs are created with
+  default values (auto-computed normal, UV of `(0, 0)`, white color). To create
+  a seam, you should create new attributes and set them on the face. For
   example, this code will create a sharp cube:
 
   ```lua
@@ -224,7 +228,7 @@ description: |
 
   <img src="../../../assets/engine-api/classes/EditableMesh/Winding.png" alt="Order of the vertices around the face" width="550" />
 
-  #### FACS Poses
+  #### FACS poses
 
   Animatable heads use the Facial Action Coding System (FACS). See the
   [FACS poses reference](../../../avatar/dynamic-heads/facs-poses-reference.md)
@@ -372,6 +376,96 @@ methods:
       Adds a new triangle to the mesh and returns a stable face ID.
     description: |
       Adds a new triangle to the mesh and returns a stable face ID.
+
+      #### Automatic attribute assignment
+
+      `AddTriangle` only takes vertex (position) IDs as arguments. For each
+      vertex of the new triangle, it automatically assigns normal, UV, and color
+      attributes using the following logic:
+
+      - If the vertex **already belongs to another face**, the new triangle
+        corner **reuses** the same normal, UV, and color IDs from the existing
+        face. This produces smooth shading and continuous UVs across adjacent
+        faces by default.
+      - If the vertex **does not yet belong to any face**, new normal, UV, and
+        color IDs are created with default values (auto-computed normal, UV
+        coordinate of `(0, 0)`, and white color).
+
+      <img src="../../../assets/engine-api/classes/EditableMesh/Shared-Attributes.png" alt="Two adjacent faces sharing vertex attribute IDs at their common vertices" width="690" />
+
+      #### Overriding attributes after adding a face
+
+      The auto-assigned attributes can be customized after adding a face. The
+      approach depends on whether you want to change attribute **values** while
+      keeping the topology intact, or create entirely new attribute IDs to add
+      or remove **seams** between faces.
+
+      **To change values in-place**, retrieve the auto-created IDs with methods
+      like `Class.EditableMesh:GetVertexFaceUV()|GetVertexFaceUV()` and set
+      their values directly. This is more performant and avoids leaving unused
+      IDs in the mesh:
+
+      ```lua
+      -- Create a triangle
+      local faceId = editableMesh:AddTriangle(v0, v1, v2)
+
+      -- Get the UV IDs that were automatically created
+      local uvId0 = editableMesh:GetVertexFaceUV(v0, faceId)
+      local uvId1 = editableMesh:GetVertexFaceUV(v1, faceId)
+      local uvId2 = editableMesh:GetVertexFaceUV(v2, faceId)
+
+      -- Set UV values on those existing UV IDs
+      editableMesh:SetUV(uvId0, Vector2.new(0, 0))
+      editableMesh:SetUV(uvId1, Vector2.new(1, 0))
+      editableMesh:SetUV(uvId2, Vector2.new(0, 1))
+      ```
+
+      **To create a seam** — where the same vertex needs different attribute
+      values on different faces (for example, a UV seam or a sharp edge) —
+      create new attribute IDs with `Class.EditableMesh:AddUV()|AddUV()`,
+      `Class.EditableMesh:AddNormal()|AddNormal()`, or
+      `Class.EditableMesh:AddColor()|AddColor()`, then assign them to the face
+      with `Class.EditableMesh:SetFaceUVs()|SetFaceUVs()`,
+      `Class.EditableMesh:SetFaceNormals()|SetFaceNormals()`, or
+      `Class.EditableMesh:SetFaceColors()|SetFaceColors()`:
+
+      ```lua
+      -- Create a triangle
+      local faceId = editableMesh:AddTriangle(v0, v1, v2)
+
+      -- Create new UV IDs with custom coordinates
+      local uv0 = editableMesh:AddUV(Vector2.new(0, 0))
+      local uv1 = editableMesh:AddUV(Vector2.new(1, 0))
+      local uv2 = editableMesh:AddUV(Vector2.new(0, 1))
+
+      -- Replace the face's UV IDs (creates a seam if the vertex had different UVs on another face)
+      editableMesh:SetFaceUVs(faceId, {uv0, uv1, uv2})
+      ```
+
+      #### Normal sharing and smooth vs. sharp edges
+
+      Because `AddTriangle` reuses normal IDs from adjacent faces by default,
+      meshes appear smooth. To create a **sharp edge** (crease) between faces,
+      create a separate normal ID for each face and assign it with
+      `Class.EditableMesh:SetFaceNormals()|SetFaceNormals()`:
+
+      <img src="../../../assets/engine-api/classes/EditableMesh/Faceted-Normals.png" alt="Two adjacent faces with separate normal IDs producing flat shading" width="690" />
+
+      ```lua
+      -- Two triangles sharing vertices v0 and v1, but with a sharp edge between them
+      local fid1 = editableMesh:AddTriangle(v0, v1, v2)
+      local fid2 = editableMesh:AddTriangle(v0, v3, v1)
+
+      -- Create separate normals for each face to produce a hard edge
+      local n1 = editableMesh:AddNormal()  -- auto-computed for fid1
+      local n2 = editableMesh:AddNormal()  -- auto-computed for fid2
+      editableMesh:SetFaceNormals(fid1, {n1, n1, n1})
+      editableMesh:SetFaceNormals(fid2, {n2, n2, n2})
+      ```
+
+      See also `Class.EditableMesh:SetNormal()|SetNormal()` to manually specify
+      a normal vector, and `Class.EditableMesh:ResetNormal()|ResetNormal()` to
+      revert a normal back to automatic computation.
     code_samples: []
     parameters:
       - name: vertexId0

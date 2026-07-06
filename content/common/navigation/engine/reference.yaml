@@ -3373,6 +3373,11 @@ navigation:
     path: /reference/engine/datatypes
     source: /reference/engine/datatypes.md
     section:
+      - title: AdReward
+        path: /reference/engine/datatypes/AdReward
+        type: engineapi
+        source: /reference/engine/datatypes/AdReward.yaml
+        ignoreTranslation: true
       - title: Axes
         path: /reference/engine/datatypes/Axes
         type: engineapi
