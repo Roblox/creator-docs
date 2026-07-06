@@ -27,11 +27,11 @@ The server provides the following tools:
 <tbody>
   <tr>
     <td>`script_read`</td>
-    <td>Reads a scripts from the game using dot-notation paths (for example, `game.ServerScriptService.MyScript`). Supports reading entire scripts or specific line ranges.</td>
+    <td>Reads a script from the game using dot-notation paths (for example, `game.ServerScriptService.MyScript`). Supports reading entire scripts or specific line ranges.</td>
   </tr>
   <tr>
     <td>`multi_edit`</td>
-    <td>Applies multiple edits to a script. If the target path doesn't exist, it creates a new script.</td>
+    <td>Applies multiple edits to a script in one operation. If the target path doesn't exist, it creates a new script. Requires specifying a `datamodel_type` (Edit).</td>
   </tr>
   <tr>
     <td>`script_search`</td>
@@ -39,7 +39,7 @@ The server provides the following tools:
   </tr>
   <tr>
     <td>`script_grep`</td>
-    <td>Searches for a string pattern across all script in the game. Returns up to 50 matches.</td>
+    <td>Searches for a string pattern across all scripts in the game. Returns up to 50 matches.</td>
   </tr>
 </tbody>
 <thead>
@@ -51,19 +51,35 @@ The server provides the following tools:
 <tbody>
   <tr>
     <td>`generate_mesh`</td>
-    <td>Generates a textured 3D mesh.</td>
+    <td>Generates a textured 3D mesh from a text prompt using AI.</td>
   </tr>
   <tr>
     <td>`generate_material`</td>
-    <td>Generates custom material or texture.</td>
+    <td>Generates a custom material variant. Returns the base material and material variant name to apply to parts.</td>
   </tr>
   <tr>
     <td>`generate_procedural_model`</td>
-    <td>Generates custom procedural models that scale and adapt automatically.</td>
+    <td>Creates 3D objects built from primitive parts (blocks, spheres, cylinders, wedges) as a ProceduralModel with configurable attributes. Supports reference images and custom part schemas.</td>
   </tr>
   <tr>
-    <td>`insert_from_creator_store`</td>
-    <td>Inserts assets, plugins, and models from the Creator Store.</td>
+    <td>`wait_job_finished`</td>
+    <td>Waits for a procedural model generation job to finish and returns the final status.</td>
+  </tr>
+  <tr>
+    <td>`search_asset`</td>
+    <td>Searches for assets across the Creator Store (public marketplace) and Creator Inventory (user, group, or universe). Supports filtering by asset type, price, tags, and scope.</td>
+  </tr>
+  <tr>
+    <td>`insert_asset`</td>
+    <td>Inserts an asset into the game by its numeric Roblox asset ID. Supports models, meshes, images, audio, video, animations, and packages.</td>
+  </tr>
+  <tr>
+    <td>`upload_image`</td>
+    <td>Uploads a batch of images from HTTP URLs to the Roblox asset server, returning an image path to asset ID map.</td>
+  </tr>
+  <tr>
+    <td>`store_image`</td>
+    <td>Loads an image from a local file path and returns an image URI that can be passed to other tools (for example, as a reference image for `generate_procedural_model`).</td>
   </tr>
 </tbody>
 <thead>
@@ -74,16 +90,16 @@ The server provides the following tools:
 </thead>
 <tbody>
   <tr>
-    <td>`explore_subagent`</td>
-    <td>Investigates your place in parallel and return a compact summary without cluttering the main conversation.</td>
+    <td>`subagent`</td>
+    <td>Launches a specialized subagent to handle complex, multi-step tasks autonomously. Available types include `explore` (for codebase investigation and game state queries) and `playtest` (for running gameplay scenarios and verifying outcomes).</td>
   </tr>
   <tr>
     <td>`search_game_tree`</td>
-    <td>Explores the instance hierarchy as a flat JSON array. Supports filtering by path, instance type, and keywords.</td>
+    <td>Explores the instance hierarchy as a flat JSON array. Supports filtering by path, instance type, and keywords, with configurable depth limiting.</td>
   </tr>
   <tr>
     <td>`inspect_instance`</td>
-    <td>Returns detailed information about a specific instance, including readable properties, custom attributes, and a summary of its children and descendants.</td>
+    <td>Returns detailed information about a specific instance, including all readable properties, custom attributes, and a summary of its children and descendants.</td>
   </tr>
 </tbody>
 <thead>
@@ -95,7 +111,7 @@ The server provides the following tools:
 <tbody>
   <tr>
     <td>`execute_luau`</td>
-    <td>Runs Luau code in Studio. Returns either the result or an error.</td>
+    <td>Runs Luau code in Studio. Returns either the result or an error. Requires specifying a `datamodel_type` (Edit, Client, or Server).</td>
   </tr>
 </tbody>
 <thead>
@@ -106,20 +122,20 @@ The server provides the following tools:
 </thead>
 <tbody>
   <tr>
+    <td>`get_studio_state`</td>
+    <td>Gets the current state of Studio, including the play state and available datamodel types.</td>
+  </tr>
+  <tr>
     <td>`start_stop_play`</td>
     <td>Starts or stops playtesting.</td>
   </tr>
   <tr>
-    <td>`console_output`</td>
-    <td>Retrieves output logs while the game is running.</td>
+    <td>`get_console_output`</td>
+    <td>Retrieves output from the Studio output log.</td>
   </tr>
   <tr>
     <td>`screen_capture`</td>
-    <td>Captures the current Studio viewport in Play mode and returns the image data.</td>
-  </tr>
-  <tr>
-    <td>`playtest_subagent`</td>
-    <td>Spawns a test character that runs through gameplay scenarios.</td>
+    <td>Captures the current Studio viewport and returns the image data. Optionally accepts a custom camera position and look-at target.</td>
   </tr>
 </tbody>
 <thead>
@@ -131,15 +147,31 @@ The server provides the following tools:
 <tbody>
   <tr>
     <td>`character_navigation`</td>
-    <td>Moves the player character to a position or instance.</td>
+    <td>Moves the player character to a given position or instance path. Supports a configurable speed multiplier.</td>
   </tr>
   <tr>
-    <td>`keyboard_input`</td>
-    <td>Simulates key presses, key holds, and text input.</td>
+    <td>`user_keyboard_input`</td>
+    <td>Sends one or more keyboard actions in order: key down, key up, key press, text input, or wait. Supports targeting specific UI instances.</td>
   </tr>
   <tr>
-    <td>`mouse_input`</td>
-    <td>Simulates mouse clicks, movement, and scrolling.</td>
+    <td>`user_mouse_input`</td>
+    <td>Sends one or more mouse actions in order: move, click, button down/up, scroll, or wait. Supports targeting specific instances or screen coordinates.</td>
+  </tr>
+</tbody>
+<thead>
+  <tr>
+    <th>**Documentation and skills**</th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>`http_get`</td>
+    <td>Fetches content from allowed Roblox documentation URLs (Engine API reference, Creator docs, Cloud API, performance optimization guides). Supports keyword search within fetched content.</td>
+  </tr>
+  <tr>
+    <td>`skill`</td>
+    <td>Retrieves detailed knowledge, best practices, or reference material for specific skills such as debugging, device simulation, and documentation search.</td>
   </tr>
 </tbody>
 <thead>
