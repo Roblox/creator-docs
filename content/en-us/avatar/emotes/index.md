@@ -11,14 +11,14 @@ Creators sell their own emotes, such as gestures, reactions, dances, and more, b
 Developers can access and modify emotes within their own experiences. For more information, see [character emotes](../../characters/emotes.md).
 </Alert>
 
-## Components of an emote
+## Components
 
-Emotes are made up of an `Class.Animation` object with the unique `Class.Animation.AnimationId` property set to the asset ID of your animation sequence.
+Emotes are made up of an `Class.Animation` object with the unique `Class.Animation.AnimationId|AnimationId` property set to the asset ID of your animation sequence.
 
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/avatar/avatar-emotes/Animation-Explorer.png" />
-    <figcaption><center>`Animation` object in the Explorer.</center></figcaption>
+    <figcaption><center>`Animation` object in the Explorer window.</center></figcaption>
 
   </figure>
   <figure>
@@ -27,9 +27,9 @@ Emotes are made up of an `Class.Animation` object with the unique `Class.Animati
   </figure>
 </GridContainer>
 
-Emotes must meet [technical specifications](./specifications.md) as well as [Marketplace](../../marketplace/marketplace-policy.md) and [Community](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) policies.
+Emotes must meet [technical specifications](./specifications.md), [Marketplace policies](../../marketplace/marketplace-policy.md), and Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
 
-## Creation process
+## Create emotes
 
 There are several ways to create an animation both in Studio or using a third-party tool. See the following table for common workflows and various resources to create your own.
 

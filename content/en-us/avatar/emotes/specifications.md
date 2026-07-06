@@ -26,6 +26,11 @@ Emotes must also meet the following requirements or may fail validation:
 - Emotes must be less than 10 seconds.
 - The joint root of the character can not move too far from its starting position.
 - Movement speed can't exceed a certain threshold to prevent teleportation abuse (measured from a frame-by-frame basis).
-- Animation data must reference an R15 rig.
+- Animation data must reference a [standard](./specifications.md#standard-rigs) rig.
+
+   <Alert severity = 'info'>
+   Emotes for [higher-fidelity](./specifications.md#higher-fidelity-rigs) rigs are currently in a closed beta. For more information, see the [DevForum announcement](https://devforum.roblox.com/t/upload-and-publish-for-emotes-with-additional-joints-is-now-open/4710932).
+   </Alert>
+
 - Animation must be sourced from a `CurveAnimation`. For information on converting animation data, see [import and configure](./import.md#generate-asset-id).
-- Animations must meet [Marketplace](../../marketplace/marketplace-policy.md) and [Community](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) policies.
+- Animations must meet [Marketplace policies](../../marketplace/marketplace-policy.md) and Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
