@@ -23,7 +23,7 @@ If you anchor one assembly within a broader mechanism of assemblies, its ownersh
 
 ## Setting ownership
 
-In experiences with complex physics interactions or in cases where you need to assign direct control, you can set ownership through a server-side call to `Class.BasePart:SetNetworkOwner()`.
+In games with complex physics interactions or in cases where you need to assign direct control, you can set ownership through a server-side call to `Class.BasePart:SetNetworkOwner()`.
 
 <Alert severity="info">
 <p>While you can manually call `Class.BasePart:SetNetworkOwner()|SetNetworkOwner(nil)` for the server for gameplay-critical objects that the client should not be able to manipulate, you should do so conservatively since it may result in  jittery physics interactions for clients.</p>
@@ -115,4 +115,4 @@ Roblox cannot verify physics calculations when a client has ownership over a `Cl
 
 Additionally, `Class.BasePart.Touched` events are tied to network ownership, meaning that a client can fire `Class.BasePart.Touched|Touched` events on a `Class.BasePart` it owns and send it to the server, even if the server doesn't see it touch anything. For example, a client can make a sword deal damage to another player across the map by firing the event through script injections, so it's important to check the validity of such events fired by clients.
 
-See [Security Tactics and Cheat Mitigation](../scripting/security/security-tactics.md) for detailed security tactics and cheat mitigation tactics for Roblox experiences.
+See [Security Tactics and Cheat Mitigation](../scripting/security/security-tactics.md) for detailed security tactics and cheat mitigation tactics for Roblox games.

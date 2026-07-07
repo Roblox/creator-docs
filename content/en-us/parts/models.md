@@ -21,7 +21,7 @@ To demonstrate, avatar characters are a single `Class.Model` containing the appr
 ## Create models
 
 <Alert severity="warning">
-You can create models using any open use or restricted asset, but any restricted assets that you don't have [explicit permission](../projects/assets/privacy.md#view-permissions) to use are **not** visible or audible at runtime unless the experience itself has permission to use those assets.
+You can create models using any open use or restricted asset, but any restricted assets that you don't have [explicit permission](../projects/assets/privacy.md#view-permissions) to use are **not** visible or audible at runtime unless the game itself has permission to use those assets.
 </Alert>
 
 There are two ways to create models:
@@ -94,27 +94,27 @@ Additionally, within a `Class.Script` or `Class.LocalScript`, you can move or ro
 
 ## Model behaviors
 
-While models act similarly to `Class.Folder` objects for most purposes in your experience, they also exhibit some unique behaviors.
+While models act similarly to `Class.Folder` objects for most purposes in your game, they also exhibit some unique behaviors.
 
 ### Character models
 
 When a `Class.Humanoid` is present inside a model that contains a `Class.Part` named **Head**, Roblox displays a name and/or health bar above that part. For more information, see [Character Name/Health Display](../characters/name-health-display.md).
 
-<img src="../assets/avatar/name-health-display/Display-Indicated.jpg" width="800" alt="Character display information above an in-experience avatar." />
+<img src="../assets/avatar/name-health-display/Display-Indicated.jpg" width="800" alt="Character display information above an in-game avatar." />
 
 ### Destroy height
 
-To prevent parts that have fallen off of an experience's map from continuing to fall forever, Studio automatically destroys parts that fall below the `Class.Workspace.FallenPartsDestroyHeight` value. If a part destroyed due to this behavior is the last part in a model, then that model will also be destroyed.
+To prevent parts that have fallen off of a game's map from continuing to fall forever, Studio automatically destroys parts that fall below the `Class.Workspace.FallenPartsDestroyHeight` value. If a part destroyed due to this behavior is the last part in a model, then that model will also be destroyed.
 
 ## Model streaming
 
 Instance [streaming](../workspace/streaming/index.md) dynamically loads and unloads `Class.Model|Models` on a player's device as their character explores the 3D world. With streaming enabled, you can specify the way each model should be treated under streaming behavior. For example, a model set to [Persistent](../workspace/streaming/index.md#persistent) will never stream out, or a model set to [Atomic](../workspace/streaming/index.md#atomic) will stream in and out as a single unit with all of its descendants. For more information, see [per-model streaming controls](../workspace/streaming/index.md#per-model-streaming-controls).
 
-Because the 3D content that exists on the client changes dynamically in a streaming-enabled experience, models might suddenly disappear, which can be visually jarring for the player. To avoid this situation, you can set specific models to render as optimized "SLIM" meshes or as lower resolution "imposter" meshes when streamed out. See [model level of detail](../workspace/streaming/techniques.md#model-level-of-detail).
+Because the 3D content that exists on the client changes dynamically in a streaming-enabled game, models might suddenly disappear, which can be visually jarring for the player. To avoid this situation, you can set specific models to render as optimized "SLIM" meshes or as lower resolution "imposter" meshes when streamed out. See [model level of detail](../workspace/streaming/techniques.md#model-level-of-detail).
 
 ## Upload models
 
-When you upload or import a `.gltf`, `.fbx` and `.obj` model file to the cloud using the [Importer](../art/accessories/creating-rigid/importing.md), Roblox represents it as a cloud-based asset with a unique corresponding ID. This cloud-based asset system allows you to store models through Roblox and reuse them across the platform in various contexts without maintaining local copies as part of each saved Studio experience.
+When you upload or import a `.gltf`, `.fbx` and `.obj` model file to the cloud using the [Importer](../art/accessories/creating-rigid/importing.md), Roblox represents it as a cloud-based asset with a unique corresponding ID. This cloud-based asset system allows you to store models through Roblox and reuse them across the platform in various contexts without maintaining local copies as part of each saved Studio game.
 
 To upload a model you made in Studio:
 
@@ -131,7 +131,7 @@ To upload a model you made in Studio:
       - **Creator** - Use the dropdown to select if you'd like to publish this asset as an individual or as part of an associated group.
       - **Genre** - The genre of your model.
 
-   1. Click the **Save** button. After a moment, the **Asset Configuration** window displays your model's asset ID that you can use in your projects or share with other creators, groups, or experiences. For more information on granting permission to collaborators and experiences so that they can use your models, see [Asset privacy](../projects/assets/privacy.md)
+   1. Click the **Save** button. After a moment, the **Asset Configuration** window displays your model's asset ID that you can use in your projects or share with other creators, groups, or games. For more information on granting permission to collaborators and games so that they can use your models, see [Asset privacy](../projects/assets/privacy.md)
 
 ## Distribute and sell models
 

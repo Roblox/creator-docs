@@ -3,15 +3,15 @@ title: Secrets stores
 description: Covers usage for the Secrets store API.
 ---
 
-In addition to [managing your secrets within experiences](../../cloud-services/secrets.md), you can manage secrets using the Open Cloud secrets store API.
+In addition to [managing your secrets within games](../../cloud-services/secrets.md), you can manage secrets using the Open Cloud secrets store API.
 
 Before using the API, you must [generate an API key](../auth/api-keys.md) with the `secret-store` API system or [configure your OAuth 2.0 app](../auth/oauth2-overview.md) with the `universe.secret` scope type. The examples on this page use API keys.
 
 ## Secret encryption
 
-When creating or updating secrets on Roblox, you must encrypt secrets with a [LibSodium sealed box](https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes) and your experience's public key, and then base64-encode the result.
+When creating or updating secrets on Roblox, you must encrypt secrets with a [LibSodium sealed box](https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes) and your game's public key, and then base64-encode the result.
 
-First, get your experience's public key:
+First, get your game's public key:
 
 ```bash
 curl --location 'https://apis.roblox.com/cloud/v2/universes/{universeId}/secrets/public-key' \
@@ -47,7 +47,7 @@ curl --location 'https://apis.roblox.com/cloud/v2/universes/6930499524/secrets' 
 }'
 ```
 
-After you create one, see [Use secrets](../../cloud-services/secrets.md#use-secrets) to use your secret in experience.
+After you create one, see [Use secrets](../../cloud-services/secrets.md#use-secrets) to use your secret in game.
 
 ## Update secrets
 

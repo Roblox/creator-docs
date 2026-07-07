@@ -41,7 +41,7 @@ In Roblox Studio, the player starting locations are set using SpawnLocation obje
 Pick which half of the island you want to build and where you want the second SpawnLocation to go. The white gridlines are there to help you know where the middle of the island is.
 
 1. Select the **second** SpawnLocation in the palette on the **right** side of the map.
-2. Move the second SpawnLocation. To keep the experience balanced, try and keep both SpawnLocations an equal distance from the center.
+2. Move the second SpawnLocation. To keep the game balanced, try and keep both SpawnLocations an equal distance from the center.
    <img src="../../assets/education/build-it-play-it-create-and-destroy//spawnLocations_2placed.jpg" />
 
     <Alert severity="info">

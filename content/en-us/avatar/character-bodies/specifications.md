@@ -34,7 +34,7 @@ Avatar character models are made up of 15 separate mesh objects and require addi
 
 ### Body scale
 
-Roblox supports 3 standards of body scales: **Normal**, **Slender**, and **Classic**. These standards allow developers to create experiences and spaces with consistent body sizes for standardizing movement and interaction. You can select a body scale on import using [Rig Scale options](../../studio/importer.md), or modify the [body scale manually](../../art/accessories/body-scale.md). Body scale persists when the asset is [uploaded to the Marketplace](../../marketplace/publish-to-marketplace.md#upload-an-asset).
+Roblox supports 3 standards of body scales: **Normal**, **Slender**, and **Classic**. These standards allow developers to create games and spaces with consistent body sizes for standardizing movement and interaction. You can select a body scale on import using [Rig Scale options](../../studio/importer.md), or modify the [body scale manually](../../art/accessories/body-scale.md). Body scale persists when the asset is [uploaded to the Marketplace](../../marketplace/publish-to-marketplace.md#upload-an-asset).
 
 <center>
 <figure>
@@ -796,7 +796,7 @@ Both of these object types detect bones or joints by their naming conventions, s
 
 ## Skinning
 
-Roblox supports skinning for rigged meshes. See [Rigging and Skinning](../../art/modeling/rigging.md) for more details on implementing skinned meshes in your experience.
+Roblox supports skinning for rigged meshes. See [Rigging and Skinning](../../art/modeling/rigging.md) for more details on implementing skinned meshes in your game.
 
 See the following requirements for skinning:
 

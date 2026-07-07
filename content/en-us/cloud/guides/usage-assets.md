@@ -199,7 +199,7 @@ To create an API key for managing group assets, you must have the corresponding 
 When creating an API key, make sure to add the following permissions:
 
 1. Add **assets** to **Access Permissions**.
-1. Add **Read** and **Write** operation permissions to your selected experience, depending on the required scopes of the endpoints you plan to call.
+1. Add **Read** and **Write** operation permissions to your selected game, depending on the required scopes of the endpoints you plan to call.
 
 Once you have the API key, copy it to the `x-api-key` request header. All endpoints require the `x-api-key` request header.
 

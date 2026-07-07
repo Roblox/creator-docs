@@ -5,9 +5,9 @@ next: /education/build-it-play-it-create-and-destroy/snap-to-grid
 prev: /education/build-it-play-it-create-and-destroy/landing
 ---
 
-Most popular experiences are made by teams of people with different skills working together. One role on teams is the **level designer**, a common career in game development.
+Most popular games are made by teams of people with different skills working together. One role on teams is the **level designer**, a common career in game development.
 
-Level designers shape the game environment, painting terrain, placing props, and adding buildings. In competitive experiences, they make sure maps are balanced and fair for all players. For this challenge, you'll become a level designer and turn a blank starter map into a city ripe for destruction.
+Level designers shape the game environment, painting terrain, placing props, and adding buildings. In competitive games, they make sure maps are balanced and fair for all players. For this challenge, you'll become a level designer and turn a blank starter map into a city ripe for destruction.
 
 ## Symmetrical map design
 
@@ -19,7 +19,7 @@ Notice in the video below how one half of the city is copied to create full map.
 
 ## Open the template
 
-Time to open Roblox Studio! If you need to, <a href = "https://www.roblox.com/create">download Studio</a> and come back to this page when you're ready. This experience will be using the Create and Destroy template, which can be downloaded below.
+Time to open Roblox Studio! If you need to, <a href = "https://www.roblox.com/create">download Studio</a> and come back to this page when you're ready. This game will be using the Create and Destroy template, which can be downloaded below.
 
 1. Open Roblox Studio and log in.
 2. Download the template.

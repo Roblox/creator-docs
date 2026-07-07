@@ -23,7 +23,7 @@ A part needs to be set up that will destroy anything that touches it.
 
 ### Set up the script
 
-Use what you know about variables and the experience hierarchy to reference the trap part.
+Use what you know about variables and the game hierarchy to reference the trap part.
 
 1. Add a new script into the trap part. Rename the script _TrapScript_.
 2. Delete Hello World and add a descriptive comment.
@@ -79,7 +79,7 @@ The actual information that gets passed through the parameter is called an **arg
 
 ### Use an event to call the function
 
-We want the function to run whenever something touches the part. To make that happen, connect the function to the `Touched` event. **Events** are things that happen in the experience. Like a player touching a part or losing health. When a function is connected to an event, the function runs whenever the event happens.
+We want the function to run whenever something touches the part. To make that happen, connect the function to the `Touched` event. **Events** are things that happen in the game. Like a player touching a part or losing health. When a function is connected to an event, the function runs whenever the event happens.
 
 The `Touched` event fires whenever one part touches another part and can be used to create buttons, traps, and other objects that players interact with.
 
@@ -121,4 +121,4 @@ The `Touched` event fires whenever one part touches another part and can be used
 
 ## Summary
 
-Parameters are used to pass information that would be normally out of scope (where a function can't see it), into a function. Meanwhile, events are special signals that go off inside of the experience when something important happens. Different objects have different events. Functions can be connected to events so that they are called each time the event gets fired. This little script connected a function to the trap's `Class.BasePart.Touched|Touched` event, and passed in what was touching the trap through the parameter.
+Parameters are used to pass information that would be normally out of scope (where a function can't see it), into a function. Meanwhile, events are special signals that go off inside of the game when something important happens. Different objects have different events. Functions can be connected to events so that they are called each time the event gets fired. This little script connected a function to the trap's `Class.BasePart.Touched|Touched` event, and passed in what was touching the trap through the parameter.

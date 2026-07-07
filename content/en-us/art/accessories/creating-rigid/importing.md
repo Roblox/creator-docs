@@ -24,7 +24,7 @@ To import your asset ([downloadable reference](../../../assets/art/accessories/c
 <AccordionSummary>Add textures manually</AccordionSummary>
 <AccordionDetails>
 
-If textures didn't load correctly, add them manually. You may need to save and publish your experience in order to access the [Asset Manager](../../../projects/assets/manager.md).
+If textures didn't load correctly, add them manually. You may need to save and publish your game in order to access the [Asset Manager](../../../projects/assets/manager.md).
 
 1.  In the **Asset Manager**, click the **Import** button.
 2.  Upload your image file.

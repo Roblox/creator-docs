@@ -5,15 +5,15 @@ next: /education/build-it-play-it-create-and-destroy/challenge-3
 prev: /education/build-it-play-it-create-and-destroy/challenge-2
 ---
 
-With the map complete, you'll move onto polishing the experience. These next articles will cover these finishing touches:
+With the map complete, you'll move onto polishing the game. These next articles will cover these finishing touches:
 
 - Modify a script to award different points for buildings.
 - Upload a custom game image.
-- Share the experience with friends.
+- Share the game with friends.
 
 ## Open the script
 
-Besides just the map, other aspects of Create and Destroy can be customized through a **script**, a container for code used to run an experience. In this case, you'll change the points awarded by destroying buildings.
+Besides just the map, other aspects of Create and Destroy can be customized through a **script**, a container for code used to run a game. In this case, you'll change the points awarded by destroying buildings.
 
 1. At the top of the **Explorer**, a list of everything included in a project, on the right-hand side, type **GameSettings**.
    <img src="../../assets/education/build-it-play-it-create-and-destroy/GameSettingsSearch_640x300.png" width="75%" />
@@ -66,7 +66,7 @@ Giving players more points can make smashing buildings feel even more rewarding.
 
 ## Share with friends
 
-When you first publish an experience, it's automatically set to private. Making it public in the **Experience Settings** menu will allow friends to be able to join with a link.
+When you first publish a game, it's automatically set to private. Making it public in the **Experience Settings** menu will allow friends to be able to join with a link.
 
 1. In the **File** &rarr; **Experience Settings** window, select **Permissions**.
 

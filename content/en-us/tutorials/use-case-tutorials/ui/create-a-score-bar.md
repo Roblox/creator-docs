@@ -3,7 +3,7 @@ title: Create score bars
 description: The process for creating a score bar UI that displays current player information.
 ---
 
-A **score bar** is a UI element that displays player information that is important for your experience's gameplay, such as their leveling up statistics, currency count, or power-up items in their inventory. By displaying score bars directly on the player's screen, you can keep their attention on what they need in order to accomplish various goals within your experience.
+A **score bar** is a UI element that displays player information that is important for your game's gameplay, such as their leveling up statistics, currency count, or power-up items in their inventory. By displaying score bars directly on the player's screen, you can keep their attention on what they need in order to accomplish various goals within your game.
 
 Using the [Gold Rush](https://www.roblox.com/games/5268331031/Gold-Rush) `.rbxl` file as a reference, this tutorial shows you how to create a score bar that tracks the amount of gold players collect, including guidance on:
 
@@ -20,7 +20,7 @@ As with all 2D creation, there are many ways to achieve any particular goal. You
 
 ## Create the frame
 
-To display UI elements on every player's screen, you can create a `Class.ScreenGui` object in the `Class.StarterGui` service. `Class.ScreenGui` objects are the primary containers for on-screen UI, and the `Class.StarterGui` service copies its contents to each player's `Class.PlayerGui` container as they enter an experience.
+To display UI elements on every player's screen, you can create a `Class.ScreenGui` object in the `Class.StarterGui` service. `Class.ScreenGui` objects are the primary containers for on-screen UI, and the `Class.StarterGui` service copies its contents to each player's `Class.PlayerGui` container as they enter a game.
 
 After you create a `Class.ScreenGui` object, you can create and customize its child `Class.GuiObject|GuiObjects` according to each container's purpose. To demonstrate this concept, this section teaches you how to create a `Class.ScreenGui` object with a child `Class.Frame` object that will contain both the icon and text of the score bar.
 
@@ -68,9 +68,9 @@ To recreate the frame container within the sample [Gold Rush](https://www.roblox
 
 ## Add an icon
 
-An icon is a symbol that represents an action, object, or concept in an experience. Using icons that are simple and intuitive allows players to easily recognize what you're communicating with your UI without using text, which can clutter the screen and pull attention away from content that matters.
+An icon is a symbol that represents an action, object, or concept in a game. Using icons that are simple and intuitive allows players to easily recognize what you're communicating with your UI without using text, which can clutter the screen and pull attention away from content that matters.
 
-For example, the sample uses a simple gold crown icon to indicate how much gold a player has collected. This icon is easily recognizable as being the most important goal within the experience, and it includes minimal details so that it remains legible on mobile device screens.
+For example, the sample uses a simple gold crown icon to indicate how much gold a player has collected. This icon is easily recognizable as being the most important goal within the game, and it includes minimal details so that it remains legible on mobile device screens.
 
 To recreate the gold crown icon within the sample [Gold Rush](https://www.roblox.com/games/5268331031/Gold-Rush) place file:
 
@@ -91,7 +91,7 @@ To recreate the gold crown icon within the sample [Gold Rush](https://www.roblox
 
 ## Insert score text
 
-Score text records the player's score within an experience, such as how many points they earn within a match. It's important that all UI text is both clear and easy to read so players can quickly understand the information they need to be successful within your experience.
+Score text records the player's score within a game, such as how many points they earn within a match. It's important that all UI text is both clear and easy to read so players can quickly understand the information they need to be successful within your game.
 
 For example, the sample uses large text on top of a contrasting color so that it doesn't blend in with the noise of the background. This is particularly significant for accessibility because it ensures the text remains legible as the player moves through the 3D space, which may include objects that are the same color as the text.
 
@@ -117,7 +117,7 @@ To recreate the score text within the sample [Gold Rush](https://www.roblox.com/
 
 ## Test the design
 
-Studio's [Device Emulator](../../../studio/testing-modes.md#device-emulation) allows you to test how players will see and interact with your UI on various devices. This tool is a vital part of designing UI because the aspect ratio of your viewport in Studio doesn't necessarily reflect the aspect ratio of the screens players use to access your experience, and it's important that your UI is both legible and accessible on every device.
+Studio's [Device Emulator](../../../studio/testing-modes.md#device-emulation) allows you to test how players will see and interact with your UI on various devices. This tool is a vital part of designing UI because the aspect ratio of your viewport in Studio doesn't necessarily reflect the aspect ratio of the screens players use to access your game, and it's important that your UI is both legible and accessible on every device.
 
 For example, if you don't test your UI on a range of screen sizes, players with large screens may not be able to read your text or decipher your icons, and players with small screens may not be able to see the 3D space because your UI elements take up too much room on the display.
 

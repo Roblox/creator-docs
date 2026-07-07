@@ -83,7 +83,7 @@ Some resources have multiple path patterns, visible under the **Resource Paths**
 - `https://apis.roblox.com/cloud/cloud/v2/universes/{universe_id}/user-restrictions`
 - `https://apis.roblox.com/cloud/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions`
 
-You can probably infer the difference between the two: some user restrictions apply to an entire universe (experience), whereas others apply to specific places within a universe. Aside from the small addition to the path and extra path parameter, the calls are identical.
+You can probably infer the difference between the two: some user restrictions apply to an entire universe (game), whereas others apply to specific places within a universe. Aside from the small addition to the path and extra path parameter, the calls are identical.
 
 Many endpoints return a path as part of their response, which you can use to make further requests. If an API needs more than a few seconds to fulfill a request, it often returns an [operation](#long-running-operations) rather than the resource or response itself.
 

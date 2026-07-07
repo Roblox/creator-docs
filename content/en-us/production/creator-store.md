@@ -1,6 +1,6 @@
 ---
 title: Creator Store
-description: The Creator Store is where you can find all assets for public use in your experiences.
+description: The Creator Store is where you can find all assets for public use in your games.
 ---
 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/NAwQr9sTy74" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
@@ -156,7 +156,7 @@ When you find an asset of interest, hover over the asset's thumbnail and click t
 </TabItem>
 </Tabs>
 
-If you are looking at the asset's details page on the Creator Hub, you can click the **Try in Roblox** button to test the asset in a custom demo experience, if available, or click the main blue button at the top-right corner to acquire or purchase the asset and add it to your inventory.
+If you are looking at the asset's details page on the Creator Hub, you can click the **Try in Roblox** button to test the asset in a custom demo game, if available, or click the main blue button at the top-right corner to acquire or purchase the asset and add it to your inventory.
 
 <figure>
 <GridContainer numColumns = "2">
@@ -165,7 +165,7 @@ If you are looking at the asset's details page on the Creator Hub, you can click
 </GridContainer>
 </figure>
 
-If you are looking at the asset's details page while in Studio, you can also insert it directly to your experience:
+If you are looking at the asset's details page while in Studio, you can also insert it directly to your game:
 
 - If the asset is a model, mesh, decal, video, or audio asset, click it or drag‑and‑drop it into the 3D viewport. The asset displays in the Explorer window and any applicable 3D content displays in the 3D viewport.
 - If the asset is a plugin, click it and use the **Install** button to add it to the mezzanine's **Plugins** tab.
@@ -186,10 +186,10 @@ When you are ready, you can publicly distribute and sell your own assets on the 
 In order to set any USD prices and sell your assets, **you must have a seller account**. Roblox administers seller accounts through Stripe, a third-party payments provider.
 </Alert>
 
-Before you import an asset to distribute and sell on the Creator Store, it's highly recommended to opt-into the [Asset Privacy](../projects/assets/privacy.md) beta so that any image, mesh, or decal is created as Restricted by default. When an asset is Restricted, Roblox always checks its permissions when it loads into an experience or when a creator takes an action on the asset, such as inserting it into Studio, sharing it with another creator, or listing it on the Creator Store.
+Before you import an asset to distribute and sell on the Creator Store, it's highly recommended to opt-into the [Asset Privacy](../projects/assets/privacy.md) beta so that any image, mesh, or decal is created as Restricted by default. When an asset is Restricted, Roblox always checks its permissions when it loads into a game or when a creator takes an action on the asset, such as inserting it into Studio, sharing it with another creator, or listing it on the Creator Store.
 
 <Alert severity="info">
-If a creator or experience doesn't have your explicit permission to use an asset, it cannot load in Studio or at runtime.
+If a creator or game doesn't have your explicit permission to use an asset, it cannot load in Studio or at runtime.
 </Alert>
 
 For more information on how to distribute assets on the Creator Hub or inside Studio, click through the following tabs.
@@ -204,7 +204,7 @@ To distribute an asset through the Creator Hub:
 1. Configure settings for your asset's details page.
    1. Fill out the **Name** and **Description** fields.
    1. <Chip label="OPTIONAL" size="small" variant="outlined" /> If you are ID or phone verified, add up to one video and 5 thumbnail images that showcase your asset's appearance or functionality.
-   1. <Chip label="OPTIONAL" size="small" variant="outlined" /> In the **Try in Roblox** section, choose the default Roblox experience or provide a custom experience for customers to test your asset.
+   1. <Chip label="OPTIONAL" size="small" variant="outlined" /> In the **Try in Roblox** section, choose the default Roblox experigameence or provide a custom game for customers to test your asset.
 1. In the **Distribution** section, toggle on **Distribute on Creator Store**.
 1. If you have a seller account and want to sell a plugin or model, set a price in USD for the asset in the **USD Pricing** field. If you keep the default value of **Free**, the asset displays on the Creator Store as free to all creators.
 1. Click the **Save Changes** button. After a few moments, the asset becomes public and visible on the Creator Store.
@@ -287,7 +287,7 @@ In addition, the Creator Store restricts use of the following practices to ensur
 
 - **Obscuring engine features within scripts**, including LuaVMs, `Global.LuaGlobals.getfenv()`, and `Global.LuaGlobals.setfenv()`.
 - **Requiring remote assets,** including `Global.RobloxGlobals.require(assetId)`, `Global.LuaGlobals.loadstring()`, `Class.InsertService:LoadAsset()`, `Class.AssetService:LoadAssetAsync()`, and `Class.ModuleScript.LinkedSource`. Assets that may look useful on the surface could load another "virus" asset at runtime.
-- **Including obfuscated code**. For publicly-shared assets, it's important for creators to understand what they are putting into their experiences. If code is obfuscated, creators cannot trust that the script is only doing what it should be doing.
+- **Including obfuscated code**. For publicly-shared assets, it's important for creators to understand what they are putting into their games. If code is obfuscated, creators cannot trust that the script is only doing what it should be doing.
 - **Extremely large scripts**. Assets with unnecessarily large scripts, including multiple repeat lines or large strings that are unused, especially if they cause rendering issues in editors.
 
 <Alert severity="info">
@@ -497,10 +497,10 @@ No, the real-world pricing model does not support Robux. You can only purchase a
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant='buttonLarge'>Why do I have free models in my experience that aren't also in my Inventory?</Typography>
+<Typography variant='buttonLarge'>Why do I have free models in my game that aren't also in my Inventory?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-Free assets you inserted into your experience but did not acquire won't appear in your inventory unless you acquire it. If you are browsing the Creator Store in Studio, you can insert most assets into your games without needing to acquire the assets.
+Free assets you inserted into your game but did not acquire won't appear in your inventory unless you acquire it. If you are browsing the Creator Store in Studio, you can insert most assets into your games without needing to acquire the assets.
 
 This can be helpful for creators who want to test out models, but we strongly recommend acquiring assets you wish to use in all of your projects. Cross-publishing works with models you previously inserted, but copy-paste workflows do not work.
 </AccordionDetails>
@@ -508,41 +508,41 @@ This can be helpful for creators who want to test out models, but we strongly re
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant='buttonLarge'>Can I put a model I purchased into a group or collaborative experience?</Typography>
+<Typography variant='buttonLarge'>Can I put a model I purchased into a group or collaborative game?</Typography>
 </AccordionSummary>
 <AccordionDetails>
 Yes, but there are a few restrictions and workflows which may not work as expected.
 
 **Copy and paste workflows**
 
-If you insert a Model you purchased into a shared experience, your collaborators may be prevented from copying and pasting it into another experience unless they or the destination experience already have access to it. Note that inserting a model that you own will automatically grant that experience permission to use the model.
+If you insert a Model you purchased into a shared game, your collaborators may be prevented from copying and pasting it into another game unless they or the destination game already have access to it. Note that inserting a model that you own will automatically grant that game permission to use the model.
 
-Cross-publishing between experiences is supported with individual and group-owned experiences. However, because of current limitations with asset ownership, copy and paste flows will be broken for collaborators across group-owned experiences who do not own the model.
+Cross-publishing between games is supported with individual and group-owned games. However, because of current limitations with asset ownership, copy and paste flows will be broken for collaborators across group-owned games who do not own the model.
 
 **Local place workflows**
 
-You need to ensure that experiences have permissions to the model in Creator Hub. Attempting to load a paid model's Restricted child image and mesh assets without permission will result in errors in the output window.
+You need to ensure that games have permissions to the model in Creator Hub. Attempting to load a paid model's Restricted child image and mesh assets without permission will result in errors in the output window.
 </AccordionDetails>
 </BaseAccordion>
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant='buttonLarge'>Can I put a model I purchased into an un-copylocked experience?</Typography>
+<Typography variant='buttonLarge'>Can I put a model I purchased into an un-copylocked game?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-Yes, but for people forking the experience, none of the model's Restricted child image and mesh assets will load unless that person has also purchased the model.
+Yes, but for people forking the game, none of the model's Restricted child image and mesh assets will load unless that person has also purchased the model.
 </AccordionDetails>
 </BaseAccordion>
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant='buttonLarge'>Can I dynamically load a paid model in an experience?</Typography>
+<Typography variant='buttonLarge'>Can I dynamically load a paid model in a game?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-This will only work if the experience is owned by someone who bought the asset or if the experience itself has permission, which you can [grant](../projects/assets/privacy.md#grant-permissions) on the asset's permissions page. It will not work for:
+This will only work if the game is owned by someone who bought the asset or if the game itself has permission, which you can [grant](../projects/assets/privacy.md#grant-permissions) on the asset's permissions page. It will not work for:
 
-- Group experiences, unless the model was inserted into the experience before publish time.
-- Collaborative experiences where the experience owner does not also own it.
+- Group games, unless the model was inserted into the game before publish time.
+- Collaborative games where the game owner does not also own it.
 
 </AccordionDetails>
 </BaseAccordion>

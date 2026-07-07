@@ -13,39 +13,39 @@ import PlaytestModes from '../../../includes/studio/playtest-modes.md'
 
 **Greyboxing your environment**, also known as massing out or blocking your environment, is the process of adding simple shapes to the 3D space to figure out how users will experience gameplay before investing time into polishing assets. This process is crucial for finding issues in the layout of playable areas, such as difficult regions to traverse, unfair advantages from certain vantage points, or assets with disproportionate scale to the user's character.
 
-Using the [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) `.rbxl` file as a reference, this section of the environmental art curriculum shows you how to greybox a standard three lane map layout for a team-based first-person laser tag shooter experience, including step-by-step instructions on:
+Using the [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) `.rbxl` file as a reference, this section of the environmental art curriculum shows you how to greybox a standard three lane map layout for a team-based first-person laser tag shooter game, including step-by-step instructions on:
 
 - Creating playable areas that encourage strategic combat for multiple playstyles.
 - Applying placeholder materials that help inform users of their position and orientation.
 - Testing the layout to ensure it's fun and doesn't include playability issues.
 
-After you complete this section, you will learn how to develop high-quality assets to replace or convert the greybox environment, and meet your experience's game design requirements.
+After you complete this section, you will learn how to develop high-quality assets to replace or convert the greybox environment, and meet your game's design requirements.
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/PlaceholderMaterials.jpg" alt="An angled top-down view of the final greybox environment with placeholder materials to mark unique sections of the map." width="100%"/>
 
 ## Three lane map layout
 
-The **three lane map layout** is a first-person shooter map layout that includes a spawn zone for each team on opposite sides of the map, three primary lanes that each team can use to travel to either spawn zone, and cross lanes that allow for users to travel from one primary lane to another. This type of map layout is a common layout for first-person shooter experiences because it quickly places users into combat zones as soon as they join a match, and it allows for a variety of playstyles depending on which primary lane users choose to follow.
+The **three lane map layout** is a first-person shooter map layout that includes a spawn zone for each team on opposite sides of the map, three primary lanes that each team can use to travel to either spawn zone, and cross lanes that allow for users to travel from one primary lane to another. This type of map layout is a common layout for first-person shooter games because it quickly places users into combat zones as soon as they join a match, and it allows for a variety of playstyles depending on which primary lane users choose to follow.
 
-The following sections explain each component of the three lane map layout, including considerations of how each component works together to create intentional gameplay interactions within first-person shooter experiences.
+The following sections explain each component of the three lane map layout, including considerations of how each component works together to create intentional gameplay interactions within first-person shooter games.
 
 ### Spawn zones
 
-**Spawn zones** are areas of the map where users either join their team at the start of a match, or rejoin the gameplay after their health reaches zero. At minimum, each team needs to have a central spawn zone when users first join the experience. Many developers place these central spawn zones at opposite ends of their maps to allow users time to navigate the experience at the start of the match before seeing the enemy team.
+**Spawn zones** are areas of the map where users either join their team at the start of a match, or rejoin the gameplay after their health reaches zero. At minimum, each team needs to have a central spawn zone when users first join the game. Many developers place these central spawn zones at opposite ends of their maps to allow users time to navigate the game at the start of the match before seeing the enemy team.
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/ThreeLaneLayout-SpawnZones.jpg" alt="A top-down view of the baseplate with each team's spawn zone highlighted on opposite sides of the map." width="100%"/>
 
-In addition, many team-based first-person shooter experiences also include spawn zones throughout the map that users can randomly respawn at once their health reaches zero. The placement of these decentralized spawn zones can significantly increase the experience's difficulty, especially when you place spawn zones near areas with heavy combat. To keep the gameplay simple, the sample laser tag greybox environment only includes one central spawn zone for each team.
+In addition, many team-based first-person shooter games also include spawn zones throughout the map that users can randomly respawn at once their health reaches zero. The placement of these decentralized spawn zones can significantly increase the game's difficulty, especially when you place spawn zones near areas with heavy combat. To keep the gameplay simple, the sample laser tag greybox environment only includes one central spawn zone for each team.
 
 ### Primary lanes
 
-**Primary lanes** are paths that extend the length of the map from one spawn zone to another. The three lane map layout includes three primary lanes, and how developers conceptualize them is often dependent on the overall environmental context of the experience. For example, because the sample laser tag map has both an indoor and outdoor environment, the names of the primary lanes are as follows:
+**Primary lanes** are paths that extend the length of the map from one spawn zone to another. The three lane map layout includes three primary lanes, and how developers conceptualize them is often dependent on the overall environmental context of the game. For example, because the sample laser tag map has both an indoor and outdoor environment, the names of the primary lanes are as follows:
 
 - **Interior** - The innermost lane that's furthest from the entrance of the building.
 - **Middle** - The lane that's in-between the interior and exterior primary lanes.
 - **Exterior** - The lane closest to the entrance of the building that's partially indoors and outdoors.
 
-For most first-person shooter experiences using the three lane map layout, the middle primary lane intersects with areas of the map that contain the most combat because users traveling the middle primary lane can be attacked from both the interior or exterior primary lanes, while users traveling the interior or exterior primary lanes can only be attacked from the middle primary lane.
+For most first-person shooter games using the three lane map layout, the middle primary lane intersects with areas of the map that contain the most combat because users traveling the middle primary lane can be attacked from both the interior or exterior primary lanes, while users traveling the interior or exterior primary lanes can only be attacked from the middle primary lane.
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/ThreeLaneLayout-PrimaryLanes.jpg" alt="A top-down view of the baseplate with three primary lanes highlighted between each team's spawn zone on opposite sides of the map." width="100%"/>
 
@@ -71,7 +71,7 @@ Now that you are familiar with three lane map layouts, it's time to learn how to
     The following instructions provide two different instructional paths: you can either insert parts to represent your own unique laser tag environment, or you can insert parts in a way that exactly recreates the greybox environment within the sample [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) place file.
 </Alert>
 
-If you adjust the geometry to meet the specifications of your own experience, note that the sample file keeps every doorway and hallway at least 10 studs wide, and every wall at least 10 studs tall. These parameters ensure that two users are able to pass through hallways and doorways concurrently, no one is able to jump over walls with Roblox's default jump height of 5 studs, and that the camera can safely maneuver the map without interfering with geometry.
+If you adjust the geometry to meet the specifications of your own game, note that the sample file keeps every doorway and hallway at least 10 studs wide, and every wall at least 10 studs tall. These parameters ensure that two users are able to pass through hallways and doorways concurrently, no one is able to jump over walls with Roblox's default jump height of 5 studs, and that the camera can safely maneuver the map without interfering with geometry.
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/CreatingPlayableAreas-Intro2.png" alt="In a doorway, two lizard avatars are stacked on top of each other on the left, and two blocky avatars are stacked on top of each other on the right. This demonstrates that only two characters can pass each other in a doorway, and they cannot jump higher than the walls." width="60%"/>
 
@@ -83,11 +83,11 @@ The first step in creating the laser tag greybox environment is to create the ge
 - **Mezzanine Floor** – Spans half of the middle combat pocket, and provides a rise in elevation.
 - **Outdoor Floor** – Spans the outdoor space, and provides a drop in elevation.
 
-To help visualize the geometry of each floor you are creating for the experience, reference the following image that marks the main floor in yellow, the mezzanine floor in red, and the outdoor floor in blue.
+To help visualize the geometry of each floor you are creating for the game, reference the following image that marks the main floor in yellow, the mezzanine floor in red, and the outdoor floor in blue.
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/Floor-Intro.jpg" alt="A top-down view of the final greybox environment with placeholder materials to mark the main, mezzanine, and outdoor floors." width="100%"/>
 
-It's important to have spaces in the experience with peaks and valleys because it allows you to control sight lines and engagement distances throughout the experience outside of horizontal movement. For example, if the entire playable space was a single floor with no change in elevation, every user would be able to interact with each other as long as there wasn't a wall in the way, meaning there is little ability for the user to develop a strategy outside of not being seen from other users. However, with peaks and valleys, you can decide where users can see each other.
+It's important to have spaces in the game with peaks and valleys because it allows you to control sight lines and engagement distances throughout the game outside of horizontal movement. For example, if the entire playable space was a single floor with no change in elevation, every user would be able to interact with each other as long as there wasn't a wall in the way, meaning there is little ability for the user to develop a strategy outside of not being seen from other users. However, with peaks and valleys, you can decide where users can see each other.
 
 In addition, a rise in elevation creates both a physical and emotional sense of ascension, allowing users with a high ground to have a bird's eye view of the battlefield in order to get a better sense of where to travel next. When they're ready to move on, the drop in elevation creates both a physical and emotional sense of descension, pushing users to make quick decisions to maneuver around enemy lines of sight and achieve their goals.
 
@@ -97,7 +97,7 @@ In addition, a rise in elevation creates both a physical and emotional sense of 
 To create your own floor geometry:
 
 1. Open Roblox Studio with a **Baseplate** template.
-1. Navigate to Studio's **Home** or **Model** tab toolbar, then set [transform snapping](../../../parts/index.md#transform-parts) to **5&nbsp;studs** and **90&deg;**. This allows you to equally position all greybox geometry on or away from each other in 5 stud increments.
+1. Navigate to Studio's **Home** or **Model** tab toolbar, then set [transform snapping](../../../parts/index.md#transform-parts) to **5 studs** and **90&deg;**. This allows you to equally position all greybox geometry on or away from each other in 5 stud increments.
 1. Using **block** parts, create symmetrical left and right surfaces for the **main floor** of your building. This geometry represents the length of your playable interior, and its symmetry denotes the center of the map.
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/GeneralFloor-1.jpg" alt="An angled top-down view of the main floor greybox geometry highlighted in yellow." width="100%"/>
@@ -255,9 +255,9 @@ To exactly recreate the floor geometry within the sample [Environment Art - Grey
 
 ### Perimeter wall geometry
 
-The second step in creating the laser tag greybox environment is to create the geometry for perimeter walls of the building. This provides boundaries for the interior gameplay of the experience, as well as guidance to users on where they can go to engage with one another.
+The second step in creating the laser tag greybox environment is to create the geometry for perimeter walls of the building. This provides boundaries for the interior gameplay of the game, as well as guidance to users on where they can go to engage with one another.
 
-To help visualize the geometry of the perimeter walls of the building you are creating for the experience, reference the following image that marks them in yellow.
+To help visualize the geometry of the perimeter walls of the building you are creating for the game, reference the following image that marks them in yellow.
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/Perimeter-Intro.jpg" alt="A top-down view of the final greybox environment with the perimeter wall geometry highlighted in yellow." width="100%"/>
 
@@ -403,13 +403,13 @@ To exactly recreate the perimeter wall geometry within the sample [Environment A
 
 ### Spawn zone geometry
 
-The third step in creating the laser tag greybox environment is to create the geometry to contain each team's spawn zone. For experiences that only contain centralized spawn zones, sectioning them off into their own rooms lets users acclimate to the experience when they first join the match, and it provides them cover from enemy fire when they rejoin the match after their health reaches zero.
+The third step in creating the laser tag greybox environment is to create the geometry to contain each team's spawn zone. For games that only contain centralized spawn zones, sectioning them off into their own rooms lets users acclimate to the game when they first join the match, and it provides them cover from enemy fire when they rejoin the match after their health reaches zero.
 
 There are two spawn zones in the [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) `.rbxl` file, one for each team a user can join, and they're located at opposite ends of the map. Each spawn zone has two exit points users can choose to enter the main gameplay area, which allows for quick access to two primary lanes, and provides cover from enemy fire from users within the cross lane near the spawn zone. Having two exit points is important because a single exit point would result in a bottleneck of users trying to enter or exit the spawn zone, and three spawn zones wouldn't provide enough cover from enemy fire after the start of the match.
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/SpawnZone-ExitPoints.jpg" alt="An angled top-down view of a spawn zone with arrows pointing toward the two exit points and all paths users can take away from the spawn zone." width="60%"/>
 
-To help visualize the geometry of the spawn zone areas you are creating for the experience, reference the following image that marks them in yellow.
+To help visualize the geometry of the spawn zone areas you are creating for the game, reference the following image that marks them in yellow.
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/SpawnZone-Intro.jpg" alt="A top-down view of the final greybox environment with the spawn zone wall geometry highlighted in yellow." width="100%"/>
 
@@ -544,13 +544,13 @@ To exactly recreate the spawn zone geometry within the sample [Environment Art -
 
 ### Combat pockets geometry
 
-The fourth step in creating the laser tag greybox environment is to create the geometry for combat pockets in the interior of the building. This geometry makes up the majority of the playable areas in the experience because combat pockets arise from the intersections of primary lane and cross lanes, which span the entirety of the building.
+The fourth step in creating the laser tag greybox environment is to create the geometry for combat pockets in the interior of the building. This geometry makes up the majority of the playable areas in the game because combat pockets arise from the intersections of primary lane and cross lanes, which span the entirety of the building.
 
 The instructions in this section refer to this geometry as three separate combat pockets according to their location on a top-view of the map: the left combat pocket, the middle combat pocket, and the right combat pocket. Most combat pockets include a maximum of three entrance or exit points to refrain from giving users choice overload as they're navigating the space.
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/CombatPockets-Intro1.jpg" alt="A top-down view of the final greybox environment with the left, middle, and right combat pockets highlighted." width="100%"/>
 
-To help visualize geometry of the combat pockets you are creating for the experience, reference the following image that marks them in yellow.
+To help visualize geometry of the combat pockets you are creating for the game, reference the following image that marks them in yellow.
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/CombatPockets-Intro2.jpg" alt="A top-down view of the final greybox environment with the combat pocket geometry highlighted in yellow." width="100%"/>
 
@@ -848,9 +848,9 @@ To exactly recreate the combat pockets geometry within the sample [Environment A
 
 ### Exterior geometry
 
-The final step in creating the laser tag greybox environment is to create the placeholder exterior assets that create interesting composition for the outdoor space, as well as minimal cover for users traveling the exterior primary lane. This area of the experience is important because while it comes with risk due to the minimal cover from enemy fire, it also provides users a quick route to the enemy team's spawn zone.
+The final step in creating the laser tag greybox environment is to create the placeholder exterior assets that create interesting composition for the outdoor space, as well as minimal cover for users traveling the exterior primary lane. This area of the game is important because while it comes with risk due to the minimal cover from enemy fire, it also provides users a quick route to the enemy team's spawn zone.
 
-To help visualize the geometry of the exterior assets you are creating for the experience, reference the following image that marks them in yellow.
+To help visualize the geometry of the exterior assets you are creating for the game, reference the following image that marks them in yellow.
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/Exterior-Intro.jpg" alt="A top-down view of the final greybox environment with the exterior geometry highlighted in yellow." width="100%"/>
 
@@ -1032,14 +1032,14 @@ To exactly recreate the exterior geometry within the sample [Environment Art - G
 
 ## Apply placeholder materials
 
-Now that you have your placeholder geometry in place, it's time to apply placeholder materials to the map in key areas to help orient users to where they are in the experience. The sample [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) `.rbxl` file uses the following color map, but you can use can use any color to achieve the same purpose:
+Now that you have your placeholder geometry in place, it's time to apply placeholder materials to the map in key areas to help orient users to where they are in the game. The sample [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) `.rbxl` file uses the following color map, but you can use can use any color to achieve the same purpose:
 
 - **Deep Orange for top perimeter walls** – Informs users where they are in relation to the back of the building.
 - **Persimmon for all left-side floors** – Informs users where they are in relation to the right-side of the building.
 - **Lapis for all right-side floors** – Informs users where they are in relation to the left-side of the building.
 - **Bright Green for the exterior elevation** – Informs users where they are in relation to outside of the building.
 
-Applying materials to these specific key areas is important because no matter where a user is in the experience, as long as they can see at least one of these colors, they can quickly deduce their approximate location within the overall map, as well as where they are in relation to a spawn zone.
+Applying materials to these specific key areas is important because no matter where a user is in the game, as long as they can see at least one of these colors, they can quickly deduce their approximate location within the overall map, as well as where they are in relation to a spawn zone.
 
 For example, if the following user is on the "red" team, when they're walking on the red floor with the yellow wall to their right, they know that they're in the interior primary lane and moving toward their spawn zone. Conversely, if they're walking on the lapis floor with the yellow wall to their left, they know they're in the interior lane and moving toward the enemy team's spawn zone.
 
@@ -1063,7 +1063,7 @@ To apply placeholder materials:
 
 ## Playtest your layout
 
-It's important to continuously playtest the layout of your environment **at nearly every step of the development process** so you can ensure the experience is both fun and functional, and you can catch small issues before they turn into much larger problems the further you are in the process. As you playtest, ask yourself the following questions:
+It's important to continuously playtest the layout of your environment **at nearly every step of the development process** so you can ensure the game is both fun and functional, and you can catch small issues before they turn into much larger problems the further you are in the process. As you playtest, ask yourself the following questions:
 
 - Are there advantages or disadvantages to either team?
 - Are users able to successfully orient themselves and understand their location at any point on the map?
@@ -1078,4 +1078,4 @@ To playtest, select one of the following simulation modes from the mezzanine's d
 
 <PlaytestModes components={props.components} />
 
-While playtesting, you can use the same controls as a default Roblox experience. Once you are happy with the overall layout of your experience, you can move on to creating polishing assets that will replace the greybox geometry in accordance with your art style.
+While playtesting, you can use the same controls as a default Roblox game. Once you are happy with the overall layout of your game, you can move on to creating polishing assets that will replace the greybox geometry in accordance with your art style.

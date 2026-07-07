@@ -11,7 +11,7 @@ This article will cover how to start coding in Roblox, introducing common concep
 
 ## Code with scripts
 
-In Roblox Studio, lines of Luau code are held in **scripts**. These scripts give the experience sets of instructions on how to give players health points, create a rain of fireballs, or anything else imaginable.
+In Roblox Studio, lines of Luau code are held in **scripts**. These scripts give the game sets of instructions on how to give players health points, create a rain of fireballs, or anything else imaginable.
 
 ### Create a script
 
@@ -71,7 +71,7 @@ Strings like `"Hello World"` always sit inside quotation marks, `"like this"`. M
 When declaring new variables, some coding languages require that you also state what data type the variable can use. For example, a variable in Java would be `String name = "Pavel"`. Luau only requires a name.
 </Alert>
 
-In Luau, variables can be global or local. You'll usually use **local** variables. Local variables can only be used within the script or chunk of code where they were created. Global variables can potentially be used by other scripts, but too many global variables can make your experience slow and unresponsive. It's better to stay in the habit of making variables local unless necessary.
+In Luau, variables can be global or local. You'll usually use **local** variables. Local variables can only be used within the script or chunk of code where they were created. Global variables can potentially be used by other scripts, but too many global variables can make your game slow and unresponsive. It's better to stay in the habit of making variables local unless necessary.
 
 ### Use variables and strings together
 

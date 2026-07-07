@@ -1,6 +1,6 @@
 ---
 title: Remove content
-description: Learn how to manually add, edit, and remove entries to your experience's cloud localization table.
+description: Learn how to manually add, edit, and remove entries to your game's cloud localization table.
 ---
 
 If you find source content that is wrong or no longer needed in your localization, you can remove this content by either clearing all entries collected using Automatic Text Capture (ATC) or manually removing source content. When you remove source content, you also remove any associated translations.
@@ -11,7 +11,7 @@ You might want to remove some auto-captured entries if the ATC tool collects str
 
 To clear unmodified auto-captured entries:
 
-1. In your experience's localization page, click **Settings**.
+1. In your game's localization page, click **Settings**.
 2. Select which time period you would like to clear strings from in the dropdown list. This clears all entries that were auto-captured from the specified time period.
 3. Click the **Clear** button.
 
@@ -25,7 +25,7 @@ You can also remove entries manually. This is recommended if you have specific e
 
 To remove source content through the localization table on Creator Dashboard:
 
-1. In your experience's localization page, click the **Translate** button on the top right.
+1. In your game's localization page, click the **Translate** button on the top right.
 2. Select **Game Strings**.
 3. Click the entry you would like to remove in the **Strings** column.
 4. Click the trash can icon to the right of the 'Text to translate' section.

@@ -3,17 +3,17 @@ title: Memory store sorted map
 description: Explains how to implement the sorted map data structure for memory stores.
 ---
 
-The **sorted map** data structure of [memory stores](../../cloud-services/memory-stores/index.md) allows you to store frequent in-memory data as key-value pairs with an optional sort key and maintain a specific order based on the sort keys and keys. Unlike queues, the order of keys entering a map doesn't determine the order of processing, making sorted maps useful for sorting based data organization for implementing in-experience entities for engagement such as leaderboards and cross-server auctioning.
+The **sorted map** data structure of [memory stores](../../cloud-services/memory-stores/index.md) allows you to store frequent in-memory data as key-value pairs with an optional sort key and maintain a specific order based on the sort keys and keys. Unlike queues, the order of keys entering a map doesn't determine the order of processing, making sorted maps useful for sorting based data organization for implementing in-game entities for engagement such as leaderboards and cross-server auctioning.
 
 ## Limits
 
 In addition to the [data structure size limits](../../cloud-services/memory-stores/index.md#data-structure-size-limits), sorted maps have a key size limit of 128 characters, a value size limit of 32 KB, and a sort key size limit of 128 characters.
 
-If you need to store data that surpasses this limit for your experience, you can adopt the sharding technique to split and distribute them through **key prefix** into multiple data structures. Sharding memory stores can also help improve the scalability of your system.
+If you need to store data that surpasses this limit for your game, you can adopt the sharding technique to split and distribute them through **key prefix** into multiple data structures. Sharding memory stores can also help improve the scalability of your system.
 
 ## Get a sorted map
 
-To get a sorted map, call `Class.MemoryStoreService:GetSortedMap()` with a **name** you want to define for the map. The name is global within the experience, so you can access the same sorted map on any script using the name.
+To get a sorted map, call `Class.MemoryStoreService:GetSortedMap()` with a **name** you want to define for the map. The name is global within the game, so you can access the same sorted map on any script using the name.
 
 ```lua title="Getting a Sorted Map"
 local MemoryStoreService = game:GetService("MemoryStoreService")
@@ -164,9 +164,9 @@ end
 
 To retrieve the value and sort key of a key from a sorted map and update it, call `Class.MemoryStoreSortedMap:UpdateAsync()` with the key **name**, a **callback function** to update the value and sort key for this key, and an **expiration time** in seconds. The maximum expiration time is 3,888,000 seconds (45 days).
 
-For most experiences, multiple servers can update the same key concurrently and change the value. As `Class.MemoryStoreSortedMap:UpdateAsync()|UpdateAsync()` always modifies the latest value before updating, you should use it to read the latest value as the input for your callback function.
+For most games, multiple servers can update the same key concurrently and change the value. As `Class.MemoryStoreSortedMap:UpdateAsync()|UpdateAsync()` always modifies the latest value before updating, you should use it to read the latest value as the input for your callback function.
 
-For example, the following code sample updates the score in a leaderboard for a player. The score is calculated as kills / deaths. `Class.MemoryStoreSortedMap:UpdateAsync()|UpdateAsync()` ensures that the kills and deaths are updated for the most recent values even if multiple experience servers update the same item simultaneously. A player's kills and deaths are monotonically increasing values and can hence only increase in value in a session.
+For example, the following code sample updates the score in a leaderboard for a player. The score is calculated as kills / deaths. `Class.MemoryStoreSortedMap:UpdateAsync()|UpdateAsync()` ensures that the kills and deaths are updated for the most recent values even if multiple game servers update the same item simultaneously. A player's kills and deaths are monotonically increasing values and can hence only increase in value in a session.
 
 ```lua title="Updating the leaderboard score for a player in a Sorted Map"
 local MemoryStoreService = game:GetService("MemoryStoreService")

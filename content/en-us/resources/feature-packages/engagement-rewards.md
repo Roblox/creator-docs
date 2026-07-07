@@ -37,9 +37,9 @@ The **Engagement Rewards** feature package is a customizable framework for offer
 
 ## Initialize the package
 
-Moving the packages to `Class.ReplicatedStorage` and testing your experience runs the `EngagementRewardsExample` script in `ReplicatedStorage.EngagementRewards.Server.Examples`.
+Moving the packages to `Class.ReplicatedStorage` and testing your game runs the `EngagementRewardsExample` script in `ReplicatedStorage.EngagementRewards.Server.Examples`.
 
-This script shows how to initialize the package for use in your experience, which involves requiring several module scripts and defining a `rewardClaimedHandlerFunction()` function that ultimately gives the reward(s) to the player.
+This script shows how to initialize the package for use in your game, which involves requiring several module scripts and defining a `rewardClaimedHandlerFunction()` function that ultimately gives the reward(s) to the player.
 
 This function must return a boolean. In the example script, you can see that it doesn't give any rewards to the player; it just prints the player, reward, and quantity being claimed.
 
@@ -62,7 +62,7 @@ end
 
 You can either modify this script directly or move it to `Class.ServerScriptService` if that's your preferred location for server code. As-is, the script is only useful for testing purposes.
 
-Giving the reward to the player varies by experience. In some experiences, you might confer an experience boost or just increment the player's gold count. In other experiences, you might have a custom inventory system, whereas others might place an item into player backpacks. In all cases, however, you must replace `rewardClaimedHandlerFunction()` with your own function.
+Giving the reward to the player varies by game. In some games, you might confer a game boost or just increment the player's gold count. In other games, you might have a custom inventory system, whereas others might place an item into player backpacks. In all cases, however, you must replace `rewardClaimedHandlerFunction()` with your own function.
 
 ## Add rewards and criteria
 
@@ -108,10 +108,10 @@ effect | RewardEffect | The visual effect to use in the UI. See [Customize the U
 
 ### Time rewards
 
-`Time` rewards unlock after a certain number of seconds in-game. Customize these numbers to meet your needs. You might use small numbers for easy testing, and in the published experience, confer a reward after 10 minutes, another after 30 minutes, another after an hour, and so on.
+`Time` rewards unlock after a certain number of seconds in-game. Customize these numbers to meet your needs. You might use small numbers for easy testing, and in the published game, confer a reward after 10 minutes, another after 30 minutes, another after an hour, and so on.
 
 <Alert severity="info">
-Time tracking starts at 0 for each session, so players lose all progress towards `Time` rewards when they leave the experience.
+Time tracking starts at 0 for each session, so players lose all progress towards `Time` rewards when they leave the game.
 </Alert>
 
 Multiplication makes numbers in seconds easier for humans to work with, so for two hours, you might prefer to specify `2 * 60 * 60` rather than `7200`.
@@ -126,7 +126,7 @@ requiredSecondsInGame | Number | The number of seconds (a positive integer) the 
 
 Variable | Type | Description | Default | Required
 :--- | :--- | :--- | :--- | :---
-requiredDaysVisitedStreak | Number | The number of consecutive days the player must connect to the experience to earn the reward. | N/A | Yes
+requiredDaysVisitedStreak | Number | The number of consecutive days the player must connect to the game to earn the reward. | N/A | Yes
 
 Two additional daily reward configuration options are available in the `DailyRewardTabConfig`.
 
@@ -148,7 +148,7 @@ Two additional daily reward configuration options are available in the `DailyRew
 
 Variable | Type | Description | Default | Required
 :--- | :--- | :--- | :--- | :---
-isHiddenOnJoin | Boolean | When true, rewards don't pop up automatically when joining the experience. When false, rewards automatically pop up when joining the game if the player has a new daily reward to claim. | False | No
+isHiddenOnJoin | Boolean | When true, rewards don't pop up automatically when joining the game. When false, rewards automatically pop up when joining the game if the player has a new daily reward to claim. | False | No
 isAlignedToStreakResetTime | Boolean | When true, rewards for day 2 can be claimed 24 hours after the initial day 1 claimable time. When false, day 2 rewards can be claimed at the first midnight after the day 1 claimable time. For example, if a player logs in at 11:00 PM (23:00) and claims their day 1 reward, true means they can't claim the day 2 reward until 11:00 PM the next day. False means they can claim the day 2 reward at 12:00 AM (00:00), one hour later. Rewards for day 3 and beyond are always available 24 hours after the previous day's claimable time. | False | No
 
 ## Customize the UI

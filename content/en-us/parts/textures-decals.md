@@ -44,7 +44,7 @@ add a `Class.Texture` or `Class.Decal` object to a part or union, you can:
 
 ## Create textures or decals
 
-To create a texture or decal, you must add either a `Class.Texture` or `Class.Decal` object to a part or union. You can [import](../projects/assets/manager.md#asset-import) images for textures and decals to Studio for use between experiences, and [distribute](../production/creator-store.md) them to the [Creator Store](../production/creator-store.md). Once you import the image, Studio assigns it a unique asset ID.
+To create a texture or decal, you must add either a `Class.Texture` or `Class.Decal` object to a part or union. You can [import](../projects/assets/manager.md#asset-import) images for textures and decals to Studio for use between games, and [distribute](../production/creator-store.md) them to the [Creator Store](../production/creator-store.md). Once you import the image, Studio assigns it a unique asset ID.
 
 <Alert severity="info">
 Every texture or decal image that you create and import to Roblox must adhere to the <a href='https://en.help.roblox.com/hc/articles/203313410'>Community Rules</a> and <a href='https://en.help.roblox.com/hc/articles/115004647846'>Terms of Use</a>.
@@ -161,7 +161,7 @@ tween2:Play()
 **Texture streaming** dynamically loads textures based on distance and camera view, which lets you use textures more freely without worrying about scaling across devices. The engine loads baseline-quality textures first, in order of importance, and then progressively raises the quality of each texture up to the memory available on the device. Texture streaming is enabled automatically, so you don't have to take any action to benefit from it.
 
 <figure>
-  <img src="../assets/modeling/textures-decals/texture-streaming.webp" alt="A visualization showing an experience with and without texture streaming." width="700" />
+  <img src="../assets/modeling/textures-decals/texture-streaming.webp" alt="A visualization showing a game with and without texture streaming." width="700" />
   <figcaption>The same scene with and without texture streaming</figcaption>
 </figure>
 

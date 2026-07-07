@@ -11,7 +11,7 @@ This curriculum uses Studio's built-in Assistant for routine tasks like creating
 Steps that include an Assistant workflow provide a **Build with Assistant** tab alongside a **Build it Yourself** tab. You can follow either approach, depending on how you'd like to work.
 </Alert>
 
-To start recreating the **Island Jump** [3D platformer experience](https://www.roblox.com/games/14238807008), you need a project to build in. A project is a collection of places, assets, and settings that together make up a Roblox game.
+To start recreating the **Island Jump** [3D platformer game](https://www.roblox.com/games/14238807008), you need a project to build in. A project is a collection of places, assets, and settings that together make up a Roblox game.
 
 The fastest way to start is to use a Studio template. For this project, you'll use the default **Baseplate** template, which has a flat ground and a `Class.SpawnLocation` object.
 

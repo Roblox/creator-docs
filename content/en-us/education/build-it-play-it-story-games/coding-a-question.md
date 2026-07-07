@@ -5,7 +5,7 @@ next: /education/build-it-play-it-story-games/test-and-save
 prev: /education/build-it-play-it-story-games/start-coding
 ---
 
-Remember how you wrote a sentence for your story, then swapped a word out for a placeholder? It's time to give players a chance to add something to your experience.
+Remember how you wrote a sentence for your story, then swapped a word out for a placeholder? It's time to give players a chance to add something to your game.
 
 In the script, the placeholder you made will be a **variable**. In coding, variables are placeholders for information, in this case a word.
 

@@ -7,18 +7,18 @@ prev: /education/adventure-game-series/landing
 
 <img src="../../assets/education/adventure-game-series/heroBanner_titlePage.jpg" width="75%" />
 
-Adventure games can come in different forms but often focus on getting a player to explore a world. This experience will be all about exploring, harvesting items, selling them, upgrading bags, and then doing it all over again. This cycle of actions is called a **game loop**.
+Adventure games can come in different forms but often focus on getting a player to explore a world. This game will be all about exploring, harvesting items, selling them, upgrading bags, and then doing it all over again. This cycle of actions is called a **game loop**.
 
 Each part of the game loop is a different game mechanic, or action, players can do. This game loop has four mechanics:
 
-- **Explore** the experience to find items.
+- **Explore** the game to find items.
 - **Harvest** items. Players can only hold so many at a time.
 - **Sell** items for gold.
 - **Buy** bag upgrades to holds more items at a time.
 
 ## Plan the project
 
-Before professional developers start a new project, they plan out what things will look like in a process called **pre-production**. They'll often create a game design document that includes how the experience works.
+Before professional developers start a new project, they plan out what things will look like in a process called **pre-production**. They'll often create a game design document that includes how the game works.
 
 While **game design documents** (GDDs) can often be long, for this series, you'll start with a vision of what players will do and sketches of the world they'll explore. Having a clear vision helps speed up development and also make it easier to communicate your ideas to get feedback from others.
 
@@ -80,7 +80,7 @@ The last part of the game design document is to create the map layout. This give
 
 In the layout, annotate these key places:
 
-- Where players start the experience.
+- Where players start the game.
 - Placement of the harvestable items.
 - Where players will sell items.
 - Where players will buy upgrades.

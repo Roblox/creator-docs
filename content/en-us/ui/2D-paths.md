@@ -9,7 +9,7 @@ The `Class.Path2D` instance, along with its API methods and properties, lets you
 
 ## Create a 2D path
 
-To add a `Class.Path2D` to the screen or an in-experience object:
+To add a `Class.Path2D` to the screen or an in-game object:
 
 1. In the [Explorer](../studio/explorer.md) window, insert a `Class.Path2D` instance under a visible `Class.ScreenGui` or `Class.SurfaceGui` (it does not need to be a direct child).
 

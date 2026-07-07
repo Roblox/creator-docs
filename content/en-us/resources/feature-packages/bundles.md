@@ -3,9 +3,9 @@ title: Bundles package
 description: Learn about the bundles feature package.
 ---
 
-The **Bundles** feature package offers out-of-the-box functionality to sell collections of items to players at a discount. You can choose whether to allow players to purchase bundles using a custom in-experience currency or Robux, which bundle type you want to use, what set of items you want to sell, and how you want to prompt players during their gameplay.
+The **Bundles** feature package offers out-of-the-box functionality to sell collections of items to players at a discount. You can choose whether to allow players to purchase bundles using a custom in-game currency or Robux, which bundle type you want to use, what set of items you want to sell, and how you want to prompt players during their gameplay.
 
-Using the package's customization options, you can tailor your bundles to meet the design and monetization goals of your experiences, such as:
+Using the package's customization options, you can tailor your bundles to meet the design and monetization goals of your games, such as:
 
 - Targetting a low [conversion rate](../../production/game-design/analytics-essentials.md#monetization-metrics) metric by offering discounted starter packs that provide value to new players and encourage early spend.
 - Increasing [spend depth](../../production/game-design/analytics-essentials.md#monetization-metrics) by bundling items at various price points to appeal to a range of players.
@@ -15,11 +15,11 @@ Using the package's customization options, you can tailor your bundles to meet t
 
 ## Get package
 
-The **Creator Store** is a tab of the **Toolbox** that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add one or more assets directly into an open experience, including feature packages!
+The **Creator Store** is a tab of the **Toolbox** that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add one or more assets directly into an open game, including feature packages!
 
 Every feature package requires the **Core** feature package to function properly. Once the **Core** and **Bundles** feature package assets are within your inventory, you can reuse them in any project on the platform.
 
-To get the packages from your inventory into your experience:
+To get the packages from your inventory into your game:
 
 1. Add the **Core** and **Bundles** feature package to your inventory within Studio by clicking the **Add to Inventory** link in the following set of components.
 
@@ -53,10 +53,10 @@ To get the packages from your inventory into your experience:
 ## Define currencies
 
 <Alert severity="info">
-If you do not plan on charging in-experience currencies for any bundles, you can skip this section and configure bundles through `devProductId`.
+If you do not plan on charging in-game currencies for any bundles, you can skip this section and configure bundles through `devProductId`.
 </Alert>
 
-If your experience has its own currency system, you can register those with the **Core** feature package by defining them in `ReplicatedStorage.FeaturePackagesCore.Configs.Currencies`. There is a commented out example of a Gems currency already in this file; replace it with your own.
+If your game has its own currency system, you can register those with the **Core** feature package by defining them in `ReplicatedStorage.FeaturePackagesCore.Configs.Currencies`. There is a commented out example of a Gems currency already in this file; replace it with your own.
 
 ``` lua title="Currencies"
     Gems = {
@@ -86,8 +86,8 @@ Once your currency is set up, you need to manually specify the bundle's price, c
         devProductId = 1795621566,
     },
 
-    -- Otherwise, if you want to use in-experience currency instead of a dev product, you can use the following instead:
-    -- Price here is in the in-experience currency, not Robux
+    -- Otherwise, if you want to use in-game currency instead of a dev product, you can use the following instead:
+    -- Price here is in the in-game currency, not Robux
     pricing = {
         priceType = CurrencyTypes.PriceType.InExperience,
         price = 79,
@@ -125,7 +125,7 @@ local function initializePurchaseHandlers()
         receiptHandlers[bundle.pricing.devProductId] = receiptHandler
     end
 
-    -- If you have any in-experience currencies that you are using for bundles, set the handler here
+    -- If you have any in-game currencies that you are using for bundles, set the handler here
     for currencyId, _ in Currencies do
         Bundles.setInExperiencePurchaseHandler(currencyId, awardInExperiencePurchase)
     end
@@ -136,11 +136,11 @@ Specifically, you need to fill out `awardInExperiencePurchase`, which is called 
 
 ## Define bundles
 
-All bundles offerable in your experience can be defined within `ReplicatedStorage.Bundles.Configs.Bundles`, with types exported from the `Types` script in the same folder.
+All bundles offerable in your game can be defined within `ReplicatedStorage.Bundles.Configs.Bundles`, with types exported from the `Types` script in the same folder.
 
-If you're using a `devProductId`, you need to update the bundle's main `devProductId` to match the one in your experience. This is what will be prompted through `Class.MarketplaceService` to purchase the bundle itself. **It's strongly recommended to use a new developer product for the bundle to make it easier to track separate sales.**
+If you're using a `devProductId`, you need to update the bundle's main `devProductId` to match the one in your game. This is what will be prompted through `Class.MarketplaceService` to purchase the bundle itself. **It's strongly recommended to use a new developer product for the bundle to make it easier to track separate sales.**
 
-If you want a bundle with multiple items, and if these are already represented by developer products in your experience, you don't need to explicitly set item price/assetId/name, which will be fetched via product info:
+If you want a bundle with multiple items, and if these are already represented by developer products in your game, you don't need to explicitly set item price/assetId/name, which will be fetched via product info:
 
 ``` lua title="README"
     {
@@ -184,8 +184,8 @@ For example, your entire bundle will likely look like this:
             devProductId = <DEV_PRODUCT_ID>,
         },
 
-        -- Otherwise, if you want to use in-experience currency instead of a dev product, you can use the following instead:
-        -- Price here is in the in-experience currency, not Robux
+        -- Otherwise, if you want to use in-game currency instead of a dev product, you can use the following instead:
+        -- Price here is in the in-game currency, not Robux
         -- pricing = {
         --  priceType = CurrencyTypes.PriceType.InExperience,
         --  price = 79,
@@ -236,9 +236,9 @@ For example, your entire bundle will likely look like this:
                 },
             },
         },
-        singleUse = true, -- Once purchased or expired, no longer valid even if your experience tries to prompt (onPlayerAdded). You can make this false while testing in studio.
+        singleUse = true, -- Once purchased or expired, no longer valid even if your game tries to prompt (onPlayerAdded). You can make this false while testing in studio.
         durationInSeconds = 900, -- 15 minutes
-        includesOfflineTime = false, -- Only count time elapsed in the experience
+        includesOfflineTime = false, -- Only count time elapsed in the game
         metadata = {
             displayName = "STARTER BUNDLE",
             description = "Save 75% and get a head start!",
@@ -250,7 +250,7 @@ For example, your entire bundle will likely look like this:
 
 Take a look at `ReplicatedStorage.Bundles.Server.Examples.BundlesExample`, which shows how your server will interact with the **Bundles** feature package and the above methods on the `Class.ModuleScript`. The snippets below are from that script.
 
-You mainly need to hook up four things once dragging the **Bundles** feature package into your experience:
+You mainly need to hook up four things once dragging the **Bundles** feature package into your game:
 
 1. Connect purchase handlers through `Bundles.setPurchaseHandler` to specify the functions to call to award items when a purchase is being processed.
 
@@ -289,14 +289,14 @@ You mainly need to hook up four things once dragging the **Bundles** feature pac
             receiptHandlers[bundle.pricing.devProductId] = receiptHandler
         end
 
-        -- If you have any in-experience currencies that you are using for bundles, set the handler here
+        -- If you have any in-game currencies that you are using for bundles, set the handler here
         for currencyId, _ in Currencies do
             Bundles.setInExperiencePurchaseHandler(currencyId, awardInExperiencePurchase)
         end
     end
    ```
 
-1. Connect your logic for `Class.MarketplaceService.ProcessReceipt`, but this might be done elsewhere if your experience already has developer products for sale. Essentially, when a developer product receipt is being processed, they will now call `Bundles.getBundleByDevProduct` to check if the product belongs to a bundle. If it does, the script then calls `Bundles.processReceipt`.
+1. Connect your logic for `Class.MarketplaceService.ProcessReceipt`, but this might be done elsewhere if your game already has developer products for sale. Essentially, when a developer product receipt is being processed, they will now call `Bundles.getBundleByDevProduct` to check if the product belongs to a bundle. If it does, the script then calls `Bundles.processReceipt`.
 
    ``` lua title="BundlesExample"
    -- Process receipt from marketplace to determine if player needs to be charged or not
@@ -358,7 +358,7 @@ You mainly need to hook up four things once dragging the **Bundles** feature pac
 
    ``` lua title="README"
    local function onPromptBundleXYZEvent(player: Player)
-       -- Connect whatever experience event you want to use to determine when a player gets prompted the bundle
+       -- Connect whatever game event you want to use to determine when a player gets prompted the bundle
        -- ... This will be whenever you've met your elligibility criteria to prompt a player the bundle
        -- ... For example, if you want to prompt a bundle when a player joins, or when a player levels up
        task.spawn(Bundles.promptIfValidAsync, player, <Some_Bundle_Id>)
@@ -386,7 +386,7 @@ Constants for the **Core** feature package live in two spots:
 
 - Package-specific constants, in this case the **Bundles** feature package, live in `ReplicatedStorage.Bundles.Configs.Constants`.
 
-The main things you might want to adjust to meet the design requirements of your experience:
+The main things you might want to adjust to meet the design requirements of your game:
 
 - Sound asset IDs
 - Purchase effect duration and particle colors
@@ -432,7 +432,7 @@ A common example of this bundle type is a single-use starter pack offer that dis
    <tr>
    <td>`includeOfflineTime`</td>
    <td>`bool`</td>
-   <td>**(Optional)** If not set, only time spent in experience will count towards the remaining offer duration.</td>
+   <td>**(Optional)** If not set, only time spent in game will count towards the remaining offer duration.</td>
    </tr>
    <tr>
    <td>`singleUse`</td>
@@ -452,4 +452,4 @@ A common example of this bundle type is a holiday offer that's only available fo
 
 A `OneTime` bundle is only available in the moment that it's offered to a player. It does not display on the player's heads up display, and once a player closes the prompt, it cannot be reopened until it's prompted by the server again.
 
-A common example of this bundle type is an offer to purchase more in-experience currency the moment a player runs out.
+A common example of this bundle type is an offer to purchase more in-game currency the moment a player runs out.

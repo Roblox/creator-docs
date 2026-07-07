@@ -1,13 +1,13 @@
 ---
 title: Audio assets
-description: Explore how to find and import audio assets for use in your experiences.
+description: Explore how to find and import audio assets for use in your games.
 ---
 
 You can [find](#find-audio) a wide variety of free‑to‑use audio assets in the Creator Store, or you can [import](#import-audio) audio assets that you're certain you have permission to use, such as audio that you make yourself. The [asset privacy](../projects/assets/privacy.md) system automatically ensures that the IDs of your imported audio can't be accessed by users without proper permissions.
 
 ## Find audio
 
-The [Creator Store](../production/creator-store.md) tab of the [Toolbox](../projects/assets/toolbox.md) contains a wide variety of free-to-use audio assets made by Roblox and the Roblox community for creators to use within their experiences, including more than 100,000 professionally-produced sound effects and music tracks from top audio and music partners.
+The [Creator Store](../production/creator-store.md) tab of the [Toolbox](../projects/assets/toolbox.md) contains a wide variety of free-to-use audio assets made by Roblox and the Roblox community for creators to use within their games, including more than 100,000 professionally-produced sound effects and music tracks from top audio and music partners.
 
 To find audio assets on the Creator Store:
 
@@ -38,7 +38,7 @@ You can import custom audio through the [Asset Manager](../projects/assets/manag
 
 If you're [ID verified](../production/publishing/account-verification.md), you can import 2,000 free audio assets per 30 days; if you're unverified, you can import 100 free audio assets per 30 days. If a daily import limit exists, it's removed and replaced with a simplified monthly limit.
 
-Studio assigns each new audio asset a **unique asset ID** that you can use within your experiences to [play the audio](../audio/objects.md).
+Studio assigns each new audio asset a **unique asset ID** that you can use within your games to [play the audio](../audio/objects.md).
 
 <Tabs>
   <TabItem key = "1" label="Asset Manager">
@@ -105,4 +105,4 @@ To import audio through an HTTP request:
   </TabItem>
 </Tabs>
 
-After the audio assets pass moderation, you can reuse them in any project on the platform. Although you are initially the only one who can view and use private audio assets, the [asset privacy](../projects/assets/privacy.md) system lets you grant usage permissions to specific friends and experiences.
+After the audio assets pass moderation, you can reuse them in any project on the platform. Although you are initially the only one who can view and use private audio assets, the [asset privacy](../projects/assets/privacy.md) system lets you grant usage permissions to specific friends and games.

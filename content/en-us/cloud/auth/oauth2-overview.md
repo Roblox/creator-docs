@@ -8,11 +8,11 @@ resources. Open Cloud provides authentication for these apps using OAuth 2.0.
 
 <dl>
 
-<dt>**As an experience creator or group owner**</dt>
+<dt>**As a game creator or group owner**</dt>
 <dd>
 You can securely use tools created by others to improve your creation
 productivity. The OAuth 2.0 authorization layer allows you to grant permissions
-to third-party apps to access your or your group's experiences without giving
+to third-party apps to access your or your group's games without giving
 them your credentials and personal information. You select the access
 permissions of your specific Roblox resources, and Roblox handles the
 authorization process for you with the OAuth 2.0 framework.

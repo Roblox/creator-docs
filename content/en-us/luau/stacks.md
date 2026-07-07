@@ -11,7 +11,7 @@ Stacks have two main operations: **push** for adding an element to the top of th
 
 ## Implement stacks
 
-Though Luau doesn't have stacks as a built-in data structure, you can use [tables](../luau/tables.md) to implement stacks. The following code sample shows how to create a stack, `push` an object to a stack, and `pop` an object from the stack. To use this implementation for your experience, you should save it as a `Class.ModuleScript` and store it in `Class.ReplicatedStorage`, so your stack is accessible for both client and server.
+Though Luau doesn't have stacks as a built-in data structure, you can use [tables](../luau/tables.md) to implement stacks. The following code sample shows how to create a stack, `push` an object to a stack, and `pop` an object from the stack. To use this implementation for your game, you should save it as a `Class.ModuleScript` and store it in `Class.ReplicatedStorage`, so your stack is accessible for both client and server.
 
 ```lua Implement a Stack Using Table
 local Stack = {}

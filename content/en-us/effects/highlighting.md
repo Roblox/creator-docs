@@ -1,9 +1,9 @@
 ---
 title: Highlighting objects
-description: Highlighting objects lets you call attention to specific objects within your experience.
+description: Highlighting objects lets you call attention to specific objects within your game.
 ---
 
-The `Class.Highlight` instance is a visual effect which you can use to call attention to a specific object within an experience. Every highlight effect has a silhouette **outline** that surrounds the object and a solid overlay
+The `Class.Highlight` instance is a visual effect which you can use to call attention to a specific object within angame. Every highlight effect has a silhouette **outline** that surrounds the object and a solid overlay
 **interior** that displays over the object. You can customize both of these components independently to modify the highlight's visual appearance.
 
 <GridContainer numColumns="3">
@@ -48,7 +48,7 @@ Alternatively, you can place the `Class.Highlight` instance outside of a child/p
 
 ## Customize highlights
 
-You can change the properties of a `Class.Highlight` instance to create interesting visual effects that properly highlight objects in theme with your experience.
+You can change the properties of a `Class.Highlight` instance to create interesting visual effects that properly highlight objects in theme with your game.
 
 ### OutlineColor
 
@@ -149,7 +149,7 @@ While a disabled `Class.Highlight` doesn't display, it still takes one of the 25
 
 ## Performance tips
 
-While you have a lot of options to customize `Class.Highlight` instances, the following tips are recommended to increase your experience's performance on all devices:
+While you have a lot of options to customize `Class.Highlight` instances, the following tips are recommended to increase your game's performance on all devices:
 
 - Adding or removing a `Class.Highlight` can cause a geometry rebuilding step that might lead to performance spikes and extra draw calls. If you want to change a `Class.Highlight` instance's appearance or temporarily hide/display it on an object, it's best to customize the properties of the `Class.Highlight` instance directly, as changing any property of the `Class.Highlight` instance is lightweight and doesn't impact performance.
 

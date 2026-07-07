@@ -1,6 +1,6 @@
 ---
 title: Record and display player data
-description: Explains how to store and retrieve individual player data in an experience and display it visually through a leaderboard.
+description: Explains how to store and retrieve individual player data in a game and display it visually through a leaderboard.
 next: /tutorials/curriculums/core/scripting/create-player-hazards
 prev: /tutorials/curriculums/core/scripting/script-game-behavior
 ---

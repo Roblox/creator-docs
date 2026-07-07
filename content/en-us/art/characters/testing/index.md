@@ -5,7 +5,7 @@ description: Verify the important aspects of your character model in Blender and
 next: /art/characters/testing/blender
 ---
 
-It's important to constantly test your models during and after the creation process to ensure that your character can interact with various social and environmental elements in any experience.
+It's important to constantly test your models during and after the creation process to ensure that your character can interact with various social and environmental elements in any game.
 
 Whether you are using a template character, or your own custom assets, use the information provided in [Test in Blender](../../../art/characters/testing/blender.md) and [Test in Studio](../../../art/characters/testing/studio.md) throughout your workflow to comprehensively test your assets and quality check your models.
 

@@ -1,17 +1,17 @@
 ---
 title: Loading screens
-description: Explains the process of customizing the loading screen when users are connecting to your experience.
+description: Explains the process of customizing the loading screen when users are connecting to your game.
 ---
 
-Roblox displays a default loading screen when users are connecting to an experience, but you can personalize your experience with a custom loading screen that contains static or animated content.
+Roblox displays a default loading screen when users are connecting to a game, but you can personalize your game with a custom loading screen that contains static or animated content.
 
 <Alert severity="info">
-This article covers the loading screens that display when a user initially joins an experience. To customize loading screens that display when a user teleports between places, see [Teleport between places](../projects/teleport.md#create-custom-teleport-screens).
+This article covers the loading screens that display when a user initially joins a game. To customize loading screens that display when a user teleports between places, see [Teleport between places](../projects/teleport.md#create-custom-teleport-screens).
 </Alert>
 
 ## Implementation
 
-To display a custom loading screen, you can either design a `Class.ScreenGui` instance directly within a `Class.LocalScript`, or you can reference a `Class.ScreenGui` object in your place hierarchy. Both options utilize `Class.ReplicatedFirst`, as this service that replicates instances to clients before anything else is replicated. This ensures that your loading screen is the first thing users see when they enter your experience.
+To display a custom loading screen, you can either design a `Class.ScreenGui` instance directly within a `Class.LocalScript`, or you can reference a `Class.ScreenGui` object in your place hierarchy. Both options utilize `Class.ReplicatedFirst`, as this service that replicates instances to clients before anything else is replicated. This ensures that your loading screen is the first thing users see when they enter your game.
 
 ### From script
 
@@ -55,7 +55,7 @@ loadingScreen:Destroy()
 
 ### From existing GUI
 
-Instead of creating a loading screen `Class.ScreenGui` entirely through a `Class.LocalScript`, you can also reference an existing `Class.ScreenGui` in your place hierarchy. Ensure that your experience includes the referenced `Class.ScreenGui` within `Class.ReplicatedFirst` and that the `Class.ScreenGui` includes UI elements like `Class.TextLabel|TextLabels` and `Class.ImageLabel|ImageLabels`.
+Instead of creating a loading screen `Class.ScreenGui` entirely through a `Class.LocalScript`, you can also reference an existing `Class.ScreenGui` in your place hierarchy. Ensure that your game includes the referenced `Class.ScreenGui` within `Class.ReplicatedFirst` and that the `Class.ScreenGui` includes UI elements like `Class.TextLabel|TextLabels` and `Class.ImageLabel|ImageLabels`.
 
 To demonstrate this process, the following `Class.LocalScript` references a `Class.ScreenGui` named **LoadingScreen** within `Class.ReplicatedFirst`, then it removes the default loading screen so the only loading screen a player can see is your own custom loading screen.
 
@@ -90,7 +90,7 @@ end
 
 ## Add animations
 
-In addition to static custom loading screens, you can add animations to enhance the loading screen and indicate loading progress. The easiest way to do this is to create a UI element, such as a `Class.TextLabel` or `Class.ImageLabel`, then to animate it using `Class.TweenService`. For example, the following code sample creates a new `Class.ScreenGui` with a child `Class.ImageLabel`, removes the default loading screen, then `Class.TweenService` fades in and rotates the central elements until the experience loads.
+In addition to static custom loading screens, you can add animations to enhance the loading screen and indicate loading progress. The easiest way to do this is to create a UI element, such as a `Class.TextLabel` or `Class.ImageLabel`, then to animate it using `Class.TweenService`. For example, the following code sample creates a new `Class.ScreenGui` with a child `Class.ImageLabel`, removes the default loading screen, then `Class.TweenService` fades in and rotates the central elements until the game loads.
 
 <video controls width="90%" src="../assets/ui/misc/Loading-Animation.mp4">
 </video>

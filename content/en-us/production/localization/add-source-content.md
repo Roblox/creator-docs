@@ -1,19 +1,19 @@
 ---
 title: Add source content
-description: Learn how to manually add, edit, and remove entries to your experience's cloud localization table.
+description: Learn how to manually add, edit, and remove entries to your game's cloud localization table.
 ---
 
-You must add source text to translate to the experience's localization table before you or any collaborators add translations. You can use [Automatic Text Capture](#automatic-text-capture) to collect text strings automatically as your experience is played by users or [manually add text sources](#manually-add-source-content).
+You must add source text to translate to the game's localization table before you or any collaborators add translations. You can use [Automatic Text Capture](#automatic-text-capture) to collect text strings automatically as your game is played by users or [manually add text sources](#manually-add-source-content).
 
 See [Localizing images and sounds](./localize-with-scripting.md#localize-images-and-sounds) for instructions on localizing non-text content.
 
 ## Automatic Text Capture
 
-The **Automatic Text Capture (ATC)** tool collects text strings that users encounter in your experience through GUI objects, such as `Class.TextLabel|TextLabels` or `Class.BillboardGui` and is usually the fastest way to collect translatable text from your experience. In many cases, the Automatic Text Capture tool is already enabled for [automatic translations](../localization/automatic-translations.md#enable-automatic-text-capture).
+The **Automatic Text Capture (ATC)** tool collects text strings that users encounter in your game through GUI objects, such as `Class.TextLabel|TextLabels` or `Class.BillboardGui` and is usually the fastest way to collect translatable text from your game. In many cases, the Automatic Text Capture tool is already enabled for [automatic translations](../localization/automatic-translations.md#enable-automatic-text-capture).
 
 ## Manually add source content
 
-You can also add content manually. This is recommended if your experience contains text that doesn't appear during typical gameplay, like a complex conversation tree, which may take longer to collect via ATC. You can add entries to the table [in the localization page](#add-sources-with-localization-settings) or [with a `.csv` file upload](#add-sources-with-file-upload). It is recommended to use the `.csv` upload if you want to specify an entry's Key, Context, or Example fields.
+You can also add content manually. This is recommended if your game contains text that doesn't appear during typical gameplay, like a complex conversation tree, which may take longer to collect via ATC. You can add entries to the table [in the localization page](#add-sources-with-localization-settings) or [with a `.csv` file upload](#add-sources-with-file-upload). It is recommended to use the `.csv` upload if you want to specify an entry's Key, Context, or Example fields.
 
 <Alert severity ='warning'>
 Entries in the localization table are case-sensitive.
@@ -29,7 +29,7 @@ You can add source content in the [localization page](../localization/index.md#l
 
 To add source content through the localization page:
 
-1. In your experience's localization page, click the **Translate** button on the top right.
+1. In your game's localization page, click the **Translate** button on the top right.
 
    <img src="../../assets/localization/Portal-Translate.png"
    width="100%" />

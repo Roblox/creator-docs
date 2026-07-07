@@ -5,7 +5,7 @@ description: Queues are data structures that follow the First In First Out (FIFO
 
 A queue is a linear data structure with a collection of items. There are two types of queues on Roblox: [regular queues](#regular-queues), which follow the first-in-first-out (FIFO) principle, and [priority queues](#priority-queues), which have priorities for items in the queue that determine the data accessing order. Items in both types of queues can be any Luau [data type](../luau/index.md#types).
 
-Queue is a built-in data structure of the [non-persistent data storage](../cloud-services/memory-stores/queue.md) service named `Class.MemoryStoreService`, for which you can directly call the built-in functions to get a queue and add, read, or remove data from the queue. For any other usage, such as scheduling tasks and handling requests in your experience, you can use tables to implement queues on your own.
+Queue is a built-in data structure of the [non-persistent data storage](../cloud-services/memory-stores/queue.md) service named `Class.MemoryStoreService`, for which you can directly call the built-in functions to get a queue and add, read, or remove data from the queue. For any other usage, such as scheduling tasks and handling requests in your game, you can use tables to implement queues on your own.
 
 ## Regular queues
 
@@ -31,7 +31,7 @@ Priority queues are useful for situations where you want to read or access data 
 
 ## Implement queues
 
-You can use built-in queues of `Class.MemoryStoreService` or use [tables](../luau/tables.md) to implement queues for all other usage. The following code sample shows the implementation a **regular queue**. To use this implementation for your experience, you should save it as a `Class.ModuleScript` and store it in `Class.ReplicatedStorage`, so your queue is accessible for both client and server.
+You can use built-in queues of `Class.MemoryStoreService` or use [tables](../luau/tables.md) to implement queues for all other usage. The following code sample shows the implementation a **regular queue**. To use this implementation for your game, you should save it as a `Class.ModuleScript` and store it in `Class.ReplicatedStorage`, so your queue is accessible for both client and server.
 
 ```lua title="Implementing a Regular Queue Using Table"
 --!strict

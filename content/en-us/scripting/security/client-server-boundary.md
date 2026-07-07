@@ -1,10 +1,10 @@
 ---
 title: Securing the client-server boundary
-description: Best practices client-server actions to protect your experience from attack vectors.
+description: Best practices client-server actions to protect your game from attack vectors.
 ---
 
 <Alert severity = 'warning'>
-The following content covers various concepts and tactics to improve security and mitigate cheating in your Roblox experiences. It's highly recommended that all developers read through these to ensure that your experiences are secure and fair for all users. Check the sidebar for additional security topics.
+The following content covers various concepts and tactics to improve security and mitigate cheating in your Roblox games. It's highly recommended that all developers read through these to ensure that your games are secure and fair for all users. Check the sidebar for additional security topics.
 </Alert>
 
 Any time a client can trigger an action on the server, there is potential for abuse. While `Class.RemoteEvent|RemoteEvents` and `Class.RemoteFunction|RemoteFunctions` are the most common attack vector here, other instances like `Class.ProximityPrompt` are susceptible. This section covers how to secure this boundary.
@@ -15,12 +15,12 @@ Every piece of data sent from a client must be validated by the server before it
 
 ### Context/permission validation
 
-This is necessary for remotes that affect experience's state, progression, or other players. The server must verify if the player has the necessary permissions to make the request. For example, is the player close enough to a shop to buy something? Do they have a key required to open a door? Is their character alive?
+This is necessary for remotes that affect game's state, progression, or other players. The server must verify if the player has the necessary permissions to make the request. For example, is the player close enough to a shop to buy something? Do they have a key required to open a door? Is their character alive?
 
 Validation is necessary for remotes that:
 
 - Grant rewards or modify player progression
-- Affect other players or shared experience state
+- Affect other players or shared game state
 - Perform actions with distance, timing, or permission requirements (for example, shop distance)
 
 ### Type and structure validation
@@ -29,7 +29,7 @@ Another attack that exploiters might launch is to send technically valid types b
 
 Another common attack that exploiters may use involves sending `Library.table|tables` in place of an `Class.Instance`. Complex payloads can mimic what would be an otherwise ordinary object reference.
 
-For example, provided with an [in-experience shop system](#in-experience-shop) where item data like prices are stored in `Class.NumberValue` objects, an exploiter may circumvent all other checks by doing the following:
+For example, provided with an [in-game shop system](#in-game-shop) where item data like prices are stored in `Class.NumberValue` objects, an exploiter may circumvent all other checks by doing the following:
 
 ```lua title="LocalScript in StarterPlayerScripts"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -125,9 +125,9 @@ The exploiter successfully created a trade offer without having any gold, becaus
 
 Below are some high-level examples covering secure design of common in-game features.
 
-### In-experience shop
+### In-game shop
 
-Consider an in-experience shop system with a user interface, for instance a product selection menu with a "Buy" button. When the button is pressed, you can invoke a `Class.RemoteFunction` between the client and the server to request the purchase. However, it's important that the server, the most reliable manager of the experience, confirms that the user has enough money to buy the item.
+Consider an in-game shop system with a user interface, for instance a product selection menu with a "Buy" button. When the button is pressed, you can invoke a `Class.RemoteFunction` between the client and the server to request the purchase. However, it's important that the server, the most reliable manager of the game, confirms that the user has enough money to buy the item.
 
 <figure>
   <img src="../../assets/scripting/security/Remote-Purchase-Flow.png" width="830" alt="Example purchase flow from client to server through a RemoteEvent" />
@@ -138,7 +138,7 @@ Consider an in-experience shop system with a user interface, for instance a prod
 
 Combat scenarios warrant special attention on validating values, particularly through aiming and hit validation.
 
-Imagine an experience where a player can fire a laser beam at another player. Rather than the client telling the server who to damage, it should instead tell the server the origin position of the shot and the part/position it thinks it has hit. The server can then validate the following:
+Imagine a game where a player can fire a laser beam at another player. Rather than the client telling the server who to damage, it should instead tell the server the origin position of the shot and the part/position it thinks it has hit. The server can then validate the following:
 
 - The position the client reports shooting from is near the player's character on the server. Note that the server and client will differ slightly due to latency, so extra tolerance will need to be applied.
 - The position the client reports hitting is reasonably close to the position of the part the client reports hitting, on the server.
@@ -293,14 +293,14 @@ end)
 When one of these events fires, your server script should perform its own validation before taking any action:
 
 - Check if it's enabled: Ensure that the instance is intended to be enabled by checking its properties (such as Enabled, HoldDuration, RunLocally, etc.) on the server. This step isn't necessary if the object is always enabled.
-- Check player state: Ensure that the player can perform the action, given the player's current state. Is the player's character in the world? Is their character close enough to the object? Should the player need to be alive to interact with this object? Check any other player state maintained by your experience on the server as needed.
+- Check player state: Ensure that the player can perform the action, given the player's current state. Is the player's character in the world? Is their character close enough to the object? Should the player need to be alive to interact with this object? Check any other player state maintained by your game on the server as needed.
 - Apply rate limiting: As covered in [Rate Limiting](#rate-limiting), apply cooldowns on the client and enforce rate limits on the server to prevent these events from being spammed and abused. For interactions that are expected to take a minimum amount of time, ensure that clients are not completing them too quickly.
 
 **Note on network ownership**: By default, if any of these objects are children of unanchored parts or an unanchored assembly, an exploiter can take network ownership of the parent parts and move them directly to their character, bypassing distance checks. For critical actions, use anchored parts or the network ownership API along with the necessary server-sided validation.
 
 ### RemoteEvents and RemoteFunctions
 
-Limit the scope and impact of `Class.RemoteFunction|RemoteFunctions` and `Class.RemoteEvent|RemoteEvents`. Take extreme care in dynamically loading any assets (even textures or sounds) or running experience code (especially via require) based on the arguments of remote functions/events. Avoid implementing remotes that allow a client to specify an arbitrary path or instance reference for the server to delete or modify, even if such modifications seem trivial. Remotes that can change arbitrary instance state or make widespread changes to the DataModel tree can often be chained with other bugs to severely impact overall state or logic. Check not only the type of instance arguments, but also the class and expected location or structure within the DataModel.
+Limit the scope and impact of `Class.RemoteFunction|RemoteFunctions` and `Class.RemoteEvent|RemoteEvents`. Take extreme care in dynamically loading any assets (even textures or sounds) or running game code (especially via require) based on the arguments of remote functions/events. Avoid implementing remotes that allow a client to specify an arbitrary path or instance reference for the server to delete or modify, even if such modifications seem trivial. Remotes that can change arbitrary instance state or make widespread changes to the DataModel tree can often be chained with other bugs to severely impact overall state or logic. Check not only the type of instance arguments, but also the class and expected location or structure within the DataModel.
 
 ## Client to client communication
 
@@ -336,7 +336,7 @@ castLightningEvent.OnClientEvent:Connect(createLightningEffect)
 
 An exploiter can abuse this vulnerable system by:
 
-- **Spamming**: Calling the remote hundreds of times per second, causing continuous effects that make the experience unplayable
+- **Spamming**: Calling the remote hundreds of times per second, causing continuous effects that make the game unplayable
 - **Invalid data**: Sending nil, NaN, or wrong types that cause script errors on all clients
 - **Unauthorized use**: Casting spells they haven't unlocked or don't have resources for
 
@@ -387,7 +387,7 @@ castLightningEvent.OnServerEvent:Connect(function(player, strikePosition)
 end)
 ```
 
-By implementing these checks, it becomes harder for an exploiter to ruin the experience for other players. The server acts as a protective barrier, ensuring only valid, authorized actions are broadcast to other clients.
+By implementing these checks, it becomes harder for an exploiter to ruin the game for other players. The server acts as a protective barrier, ensuring only valid, authorized actions are broadcast to other clients.
 
 ## Special considerations
 
@@ -395,7 +395,7 @@ The following are some additional cases you should consider that may require spe
 
 ### Data store manipulation
 
-In experiences using DataStoreService to save player data, exploiters may take advantage of invalid data, race conditions to corrupt saves or duplicate items in a DataStore. This is especially problematic in experiences with item trading, marketplaces, and currency systems.
+In games using DataStoreService to save player data, exploiters may take advantage of invalid data, race conditions to corrupt saves or duplicate items in a DataStore. This is especially problematic in games with item trading, marketplaces, and currency systems.
 
 Ensure that any actions performed through a `Class.RemoteEvent` or `Class.RemoteFunction` that affect player data with client input is sanitized based on the following:
 

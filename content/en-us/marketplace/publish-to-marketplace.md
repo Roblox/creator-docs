@@ -229,11 +229,11 @@ Regional Pricing is opted-in by default. You can opt-out any time. For more info
 
 ### Sale location
 
-The **Sale Location** option sets where you can sell your asset beyond the Marketplace. In some cases, you may want to limit the availability of your asset to certain experiences, or only the Marketplace.
+The **Sale Location** option sets where you can sell your asset beyond the Marketplace. In some cases, you may want to limit the availability of your asset to certain games, or only the Marketplace.
 
 <img src="../assets/publishing/marketplace/Sale-Location.png" alt="Sale location fields." width="80%" />
 
-Experiences that sell Marketplace items receive an additional [commission](../marketplace/marketplace-fees-and-commissions.md) including transactions made through the [Inspect Menu](../players/avatar-inspect-menu.md) or [through the API](../players/avatar-editor.md) within an experience.
+Games that sell Marketplace items receive an additional [commission](../marketplace/marketplace-fees-and-commissions.md) including transactions made through the [Inspect Menu](../players/avatar-inspect-menu.md) or [through the API](../players/avatar-editor.md) within a game.
 
 The following location options are available for all items:
 
@@ -247,11 +247,11 @@ The following location options are available for all items:
 <tbody>
   <tr>
     <td>Marketplace and All Experiences</td>
-    <td>Users can purchase this item in the Marketplace or any experiences that offer Marketplace purchases. This is the default setting.</td>
+    <td>Users can purchase this item in the Marketplace or any games that offer Marketplace purchases. This is the default setting.</td>
   </tr>
   <tr>
     <td>Experience By Place ID (API Only)</td>
-    <td>Users can only purchase the original stock of this item in the experiences associated with the provided Place ID. Only one Place ID per experience is required and creators can update and change Place IDs at any time. <br /> <br />After saving a new Place ID, the experience owner must manually [enable the avatar item](../production/monetization/avatar-items.md) for their experience.</td>
+    <td>Users can only purchase the original stock of this item in the games associated with the provided Place ID. Only one Place ID per game is required and creators can update and change Place IDs at any time. <br /> <br />After saving a new Place ID, the game owner must manually [enable the avatar item](../production/monetization/avatar-items.md) for their game.</td>
   </tr>
 </tbody>
 </table>

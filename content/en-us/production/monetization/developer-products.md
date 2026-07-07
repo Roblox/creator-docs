@@ -44,7 +44,7 @@ To use scripting, you need a developer product ID. To get the product ID:
 ## Sell a developer product
 
 <Alert severity="warning">
-Starting May 30, 2026, cross-experience developer product sales will be disabled. If your game relies on cross-experience sales mechanics, we recommend integrating [Robux transfers](./robux-transfers.md) before this date to avoid service interruptions.
+Starting May 30, 2026, cross-game developer product sales will be disabled. If your game relies on cross-game sales mechanics, we recommend integrating [Robux transfers](./robux-transfers.md) before this date to avoid service interruptions.
 </Alert>
 
 <Alert severity="info">
@@ -60,10 +60,10 @@ Before selling developer products, make sure you are properly processing sales r
 
 You can sell developer products in two ways:
 
-- [Inside your game](#inside-your-experience)
-- [Outside your game](#outside-your-experience)
+- [Inside your game](#inside-your-game)
+- [Outside your game](#outside-your-game)
 
-### Inside your experience
+### Inside your game
 
 To implement and sell a developer product inside a game, call `Class.MarketplaceService|MarketplaceService` functions.
 
@@ -161,7 +161,7 @@ button.MouseButton1Click:Connect(function()
 end)
 ```
 
-### Outside your experience
+### Outside your game
 
 To enable developer product purchases outside your game, you must work with the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` API. After a user makes a purchase in the **Store** tab of your game details page, you must use `ProcessReceipt` to confirm their purchase and grant them their items once they enter your game.
 
@@ -297,7 +297,7 @@ The functions for handling each product ID must return `true` for the transactio
 Although Roblox itself does **not** record the purchase history of developer products by specific users, you can request to [download sales data](../../production/analytics/analytics-dashboard.md#sales-data). If you want to track user-specific purchase history, it's your responsibility to [store the data](../../cloud-services/data-stores/index.md).
 </Alert>
 
-## Personalize your in-experience store
+## Personalize your in-game store
 
 You can use product intelligence APIs to sort and recommend developer products to users. Personalizing your in-game store helps surface the most relevant items to each user, boosting engagement and revenue. By tailoring developer products to user preferences, you can improve their discovery, increase conversion rates, and unlock new monetization opportunities.
 

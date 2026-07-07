@@ -22,7 +22,7 @@ Start by changing basic properties of the explosion, such as the color and textu
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/making-an-explosion/explode-color.png" width="40%" />
 
    <Alert severity="warning">
-   Keep in mind, you can only see what your explosion looks like by testing your experience.
+   Keep in mind, you can only see what your explosion looks like by testing your game.
    </Alert>
 
 3. Find a texture for your explosion from the options below and then **copy** the **number** below it. The explosion texture can be the same or different than the magic blast.

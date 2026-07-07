@@ -1,14 +1,14 @@
 ---
 title: Player invite prompts
-description: Invite prompts are prompts sent to the player of an experience to invite their friends to join them.
+description: Invite prompts are prompts sent to the player of a game to invite their friends to join them.
 ---
 
-In addition to common [promotion](../../production/promotion/index.md) methods for increasing your player base, you can implement **invite prompts** directly inside your experience, encouraging players to invite their friends and increase co-experience gameplay.
+In addition to common [promotion](../../production/promotion/index.md) methods for increasing your player base, you can implement **invite prompts** directly inside your game, encouraging players to invite their friends and increase co-experience gameplay.
 
 The invite prompt system features the following:
 
 - **Dynamic Invitees** &mdash; Prompt players to invite multiple friends from a selection list, or invite one specific friend.
-- **Launch Data** &mdash; Include optional [launch data](#include-launch-data) that can be read through `Class.Player:GetJoinData()` when the invited friend joins. Example use cases include routing invited friends to a coordinate location or personalizing the joining experience for the invitee.
+- **Launch Data** &mdash; Include optional [launch data](#include-launch-data) that can be read through `Class.Player:GetJoinData()` when the invited friend joins. Example use cases include routing invited friends to a coordinate location or personalizing the joining game for the invitee.
 - **Customizable Text** &mdash; Customize the [invite prompt](#prompt-an-invite) message and the [notification](#set-notification-options) message. For example, an invite prompt for the player may read "Ask your friends to join the adventure!" and the notification message for the invited friend(s) may read "\{displayName\} wants you to join their adventure in \{experienceName\}!".
 
 You can also track and reward inviters and invitees using the [Friend Invite Reward System](./referral-system.md).
@@ -104,13 +104,13 @@ inviteOptions.PromptMessage = "Invite this friend to join the adventure!"
 
 ## Set notification options
 
-By default, the invite notification that friends receive contains the sender's `Class.Player.DisplayName|DisplayName`, username, and the experience name. To customize the message, you can create a **Notification** asset on the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and include its asset ID as a parameter of `Class.ExperienceInviteOptions`.
+By default, the invite notification that friends receive contains the sender's `Class.Player.DisplayName|DisplayName`, username, and the game name. To customize the message, you can create a **Notification** asset on the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and include its asset ID as a parameter of `Class.ExperienceInviteOptions`.
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-1. Similar to [badges](../../production/publishing/badges.md), notification strings are tied to a **specific experience**. Locate that experience's thumbnail and click on it.
+1. Similar to [badges](../../production/publishing/badges.md), notification strings are tied to a **specific game**. Locate that game's thumbnail and click on it.
 1. In the left column, under **Engagement**, click **Notifications**.
 1. In the center region, click the **Create a Notification String** button.
-1. Fill in an identifier name (only visible to you) and the custom notification text. Note that you must include **\{experienceName\}** as a placeholder to identify the experience's name for invited friends, and you can optionally include the sender's `Class.Player.DisplayName|DisplayName` through the **\{displayName\}** placeholder.
+1. Fill in an identifier name (only visible to you) and the custom notification text. Note that you must include **\{experienceName\}** as a placeholder to identify the game's name for invited friends, and you can optionally include the sender's `Class.Player.DisplayName|DisplayName` through the **\{displayName\}** placeholder.
 
    Example notification strings:
 
@@ -197,9 +197,9 @@ end
 
 ## Include launch data
 
-To further improve in-experience cooperation or to incentivize player invites, you can include **launch data** in an invite prompt, useful for scenarios such as routing invited friends to a coordinate location or personalizing the joining experience for the invitee.
+To further improve in-experience cooperation or to incentivize player invites, you can include **launch data** in an invite prompt, useful for scenarios such as routing invited friends to a coordinate location or personalizing the joining game for the invitee.
 
-1. When [prompting an invite](#prompt-an-invite), include an `Class.ExperienceInviteOptions` object with relevant data that will be used when the friend joins the experience, for example the sender's `Class.Player.UserId`, the ID of a [badge](../../production/publishing/badges.md) to award to the friend upon joining, or a coordinate location to spawn the friend at. If you need to compile multiple pieces of data, encode the data using `Class.HttpService:JSONEncode()|JSONEncode()`.
+1. When [prompting an invite](#prompt-an-invite), include an `Class.ExperienceInviteOptions` object with relevant data that will be used when the friend joins the game, for example the sender's `Class.Player.UserId`, the ID of a [badge](../../production/publishing/badges.md) to award to the friend upon joining, or a coordinate location to spawn the friend at. If you need to compile multiple pieces of data, encode the data using `Class.HttpService:JSONEncode()|JSONEncode()`.
 
    <Tabs>
    <TabItem label="Multiple Friends">

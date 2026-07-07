@@ -5,7 +5,7 @@ description: Buttons allow users to prompt an action.
 
 **Buttons** are `Class.GuiObject|GuiObjects` that allow users to perform an action. You can customize buttons to provide context and feedback, such as changing the visual appearance or [scripting](#script-buttons) audible feedback when a user clicks a button.
 
-There are two types of buttons which you can place [on‑screen](../ui/on-screen-containers.md) or [in‑experience](../ui/in-experience-containers.md):
+There are two types of buttons which you can place [on‑screen](../ui/on-screen-containers.md) or [in‑game](../ui/in-experience-containers.md):
 
 - A `Class.TextButton` is a rectangle with text that triggers the `Class.GuiButton.Activated|Activated` event on click/tap.
 

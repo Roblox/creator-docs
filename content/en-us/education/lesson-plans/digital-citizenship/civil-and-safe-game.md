@@ -11,7 +11,7 @@ tags:
 
 This ten-module course, with more than 400 minutes of content and hands-on activities, concentrates on transferable game design and engineering skills using Roblox Studio and the coding language "Lua".
 
-- The first six modules introduce students to the basics of Roblox Studio and introductory coding principles as well safety and civility principles necessary for creating games and experiences that respect the Roblox community.
+- The first six modules introduce students to the basics of Roblox Studio and introductory coding principles as well safety and civility principles necessary for creating games that respect the Roblox community.
 - The last four modules are designed as group projects that mimic real-world working environments. Throughout the course, there will be tie-ins to various careers and how the demonstrated skills are used in real life.
 - Two additional stand-alone extension lessons are included for students who progress through content faster than others.
 

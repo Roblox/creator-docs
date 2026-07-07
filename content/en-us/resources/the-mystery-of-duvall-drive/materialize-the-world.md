@@ -20,9 +20,9 @@ You can break down the process of building all our textures and materials into t
 
 ## Plan, reuse, and budgets
 
-When starting any project, give some thought about material art direction for consistency and reuse. Every platform and device has a limit on the amount of memory you can use for textures so some upfront planning goes a long way to help keep a handle on the number of textures in your experience.
+When starting any project, give some thought about material art direction for consistency and reuse. Every platform and device has a limit on the amount of memory you can use for textures so some upfront planning goes a long way to help keep a handle on the number of textures in your game.
 
-When considering the look and feel of the experience, we deliberately chose to go with a craftsman style house to ensure we could reuse a handful of materials over a wide array of assets, from small picture frames and furniture to large architectural elements.
+When considering the look and feel of the game, we deliberately chose to go with a craftsman style house to ensure we could reuse a handful of materials over a wide array of assets, from small picture frames and furniture to large architectural elements.
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/materializing-the-world/craftsman-reference-images.png" width="60%" />
@@ -38,7 +38,7 @@ Distilled down to its basics, [American Craftsman](https://en.wikipedia.org/wiki
 
 ## Surface appearance and trim maps
 
-Trim maps are simple repeatable textures that can be applied to a wide variety of assets. Trim maps do a lot of heavy lifting in experiences and fill the gap between completely tiling textures and creating a 1:1 texture set that you would get from painting an object in a program like [Substance Painter](https://www.adobe.com/products/substance3d-painter) or using [photogrammetry](../../resources/the-mystery-of-duvall-drive/construct-the-house.md#photogrammetry). The wood material shown previously was set up as a trim map which means that it could be reused on many different meshes, each mesh taking advantage of the same trim textures just by laying out its UVs creatively.
+Trim maps are simple repeatable textures that can be applied to a wide variety of assets. Trim maps do a lot of heavy lifting in games and fill the gap between completely tiling textures and creating a 1:1 texture set that you would get from painting an object in a program like [Substance Painter](https://www.adobe.com/products/substance3d-painter) or using [photogrammetry](../../resources/the-mystery-of-duvall-drive/construct-the-house.md#photogrammetry). The wood material shown previously was set up as a trim map which means that it could be reused on many different meshes, each mesh taking advantage of the same trim textures just by laying out its UVs creatively.
 
 <GridContainer numColumns="3">
   <figure>
@@ -162,7 +162,7 @@ In [Substance Designer](https://www.adobe.com/products/substance3d-designer), th
   </figure>
 </GridContainer>
 
-It generally takes several iterations of resizing the various maps in your texture set and visually inspecting the asset in Studio to get them to a spot where they hold up well enough across the variously sized assets. Using this process, you can settle on the smallest texture sizes you feel you can get away with without losing the visual quality needed for the art direction of your experience.
+It generally takes several iterations of resizing the various maps in your texture set and visually inspecting the asset in Studio to get them to a spot where they hold up well enough across the variously sized assets. Using this process, you can settle on the smallest texture sizes you feel you can get away with without losing the visual quality needed for the art direction of your game.
 
 With these few techniques you can keep your texture budget under control and still have a beautiful experience.
 
@@ -185,7 +185,7 @@ Base materials are available for use as-is or to modify as a new variant. In man
 
 ## Material variants
 
-Since the experience includes an outdoor environment during a downpour, we knew we wanted our ground to feel wet and muddy to match our stormy pacific northwest art direction. We accomplished this by creating a handful of new [Custom Materials](../../parts/materials.md#custom-materials) using [Material Variants](../../parts/materials.md#create-a-custom-material-in-the-explorer) that we could override the base materials with. We use them to paint down things like mulch, large and small gravel, mud, as well as a shallow puddled version of each.
+Since the game includes an outdoor environment during a downpour, we knew we wanted our ground to feel wet and muddy to match our stormy pacific northwest art direction. We accomplished this by creating a handful of new [Custom Materials](../../parts/materials.md#custom-materials) using [Material Variants](../../parts/materials.md#create-a-custom-material-in-the-explorer) that we could override the base materials with. We use them to paint down things like mulch, large and small gravel, mud, as well as a shallow puddled version of each.
 
 Material Variants allow the user to redefine textures that are used for any given default material, adding a lot of opportunities to customize materials used in terrain and parts.
 
@@ -242,7 +242,7 @@ To allow our terrain to have a variety of surfaces, including both wet and with 
   </figure>
 </GridContainer>
 
-Using all the material options and tools at hand, the possibilities of what you can create are limitless. With a little forethought and planning upfront, you can create awe inspiring materials all while keeping your experience textures under budget.
+Using all the material options and tools at hand, the possibilities of what you can create are limitless. With a little forethought and planning upfront, you can create awe inspiring materials all while keeping your game textures under budget.
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/materializing-the-world/backyard-terrain-materials.png" width="80%" />

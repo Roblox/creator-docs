@@ -21,7 +21,7 @@ description: Digital Civility is a set of skills and behaviors that create posit
 </tbody>
 </table>
 
-Digital civility (or also known as digital citizenship) is a set of skills and behaviors that helps create positive online experiences. This field includes many topics, such as data, privacy and media literacy To start, this overview discusses online identities and communities. Practical tips are included to help educators foster positive online experiences.
+Digital civility (or also known as digital citizenship) is a set of skills and behaviors that helps create positive online games. This field includes many topics, such as data, privacy and media literacy To start, this overview discusses online identities and communities. Practical tips are included to help educators foster positive online games.
 
 ## Digital identities
 
@@ -88,7 +88,7 @@ Some ways that you can practice being an upstander are below.
 - **Support Those Affected** - If you noticed someone bullied, offer them support. Make some small talk, like talking about their favorite game. Don't talk about the person harassing them. It's better to redirect the conversation to something positive and move on, than focusing on a hurtful incident.
 - **Take Action and Report** - Take time to learn how to report bad behavior on the platform you're on. Reporting is quick, simple, and anonymous. For instance, you can learn how to report or block users in Roblox.
 
-Additionally, one unique type of cyberbullying you might encounter is griefing. **Griefing** is where one player actively tries to disrupt another's game or creative experiences. For instance, if you are collaboratively building in Roblox Studio, griefing can be when someone destroys another's work. It may also happen in a Roblox experience, where one player purposes stands in front of another to annoy or harass them. To counter this, set strict expectations upfront to students and continue to reinforce good citizenship.
+Additionally, one unique type of cyberbullying you might encounter is griefing. **Griefing** is where one player actively tries to disrupt another's game or creative experiences. For instance, if you are collaboratively building in Roblox Studio, griefing can be when someone destroys another's work. It may also happen in a Roblox game, where one player purposes stands in front of another to annoy or harass them. To counter this, set strict expectations upfront to students and continue to reinforce good citizenship.
 
 ## Activity - Upstander roleplay
 

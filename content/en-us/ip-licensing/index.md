@@ -9,7 +9,7 @@ export const sections = [
 verticalLayout: true,
 content: [
 {
-description: "One of the most significant ways for creators to expand their reach is to tap into the established fanbases of beloved global IP. We've seen major success when creators and rights holders partner, and we are building an ecosystem that supports licensing for rights holders at scale across Roblox. Our vision is to empower all creators to easily partner with the franchises they love and bring the franchises' licensed IP into their experiences.",
+description: "One of the most significant ways for creators to expand their reach is to tap into the established fanbases of beloved global IP. We've seen major success when creators and rights holders partner, and we are building an ecosystem that supports licensing for rights holders at scale across Roblox. Our vision is to empower all creators to easily partner with the franchises they love and bring the franchises' licensed IP into their games.",
 video: "https://www.youtube-nocookie.com/embed/4zoH0Qqq3BE?rel=0&loop=1",
 }
 ]
@@ -20,7 +20,7 @@ content: [
 {
 title: "Request to partner with a rights holder today",
 verticalLayout: true,
-description: "Requesting for licensable IP is simple – find your desired IP in the Licenses catalog, click Request for License, select an experience for your license request, review terms and content standards, include your pitch, and submit. You'll be notified on Creator Hub once the rights holder reviews your license request.",
+description: "Requesting for licensable IP is simple – find your desired IP in the Licenses catalog, click Request for License, select a game for your license request, review terms and content standards, include your pitch, and submit. You'll be notified on Creator Hub once the rights holder reviews your license request.",
 buttons: [
 { text: "Request to partner", href: "./ip-licensing/creators" }
 ]
@@ -44,7 +44,7 @@ image: "/assets/ip-licensing/logo-dark.png",
 content: [
 {
 title: "For creators: unleash your creations",
-description: "Creating experiences using popular IP can make your content more recognizable and exciting for users! It's a fantastic opportunity to reach new audiences who already know and love certain characters, settings, and storylines.",
+description: "Creating games using popular IP can make your content more recognizable and exciting for users! It's a fantastic opportunity to reach new audiences who already know and love certain characters, settings, and storylines.",
 image: "/assets/ip-licensing/BlueLock.png",
 links: [
 { text: "Explore catalog", href: "https://create.roblox.com/explore/licenses" }
@@ -81,7 +81,7 @@ links: [
 },
 {
 title: "Roblox Launches New Licensing Platform",
-description: "With our new licensing platform, including the Roblox License Manager and Licenses catalog, rights holders of creative works can partner with creators to reach a large and engaged audience. With this launch, creators can build experiences with popular IP.",
+description: "With our new licensing platform, including the Roblox License Manager and Licenses catalog, rights holders of creative works can partner with creators to reach a large and engaged audience. With this launch, creators can build games with popular IP.",
 image: "/assets/ip-licensing/LicensesPage.png",
 links: [
 { text: "Read", href: "https://corp.roblox.com/newsroom/2025/07/roblox-launches-new-licensing-platform-for-experiences" }

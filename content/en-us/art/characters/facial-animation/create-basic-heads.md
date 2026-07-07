@@ -117,7 +117,7 @@ The following instructions describe a basic process of [adding face bones](#add-
 
 The specific head bones your character requires depend on the poses you intend for it to use. The following examples cover the process for adding 1 bone for each eye and 4 bones for the eyelids to allow for blinking, winking, and gaze direction.
 
-When creating a face rig, use less than 50 face bones where possible and keep the bones organized and specific for their associated facial features. In general, high numbers of vertices and joints can impact your experience's performance.
+When creating a face rig, use less than 50 face bones where possible and keep the bones organized and specific for their associated facial features. In general, high numbers of vertices and joints can impact your game's performance.
 
 ##### Eyes
 

@@ -17,7 +17,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Keep it simple</h4>
-        <Typography variant='body1'>We cover all hosting, storage, customer support, localization, payment processing, and platform fees, allowing you to focus on developing your experience.</Typography>
+        <Typography variant='body1'>We cover all hosting, storage, customer support, localization, payment processing, and platform fees, allowing you to focus on developing your game.</Typography>
       </CardContent>
     </Card>
   </Grid>
@@ -36,19 +36,19 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Out of the box multiplayer</h4>
-        <Typography variant='body1'>All experiences support multiplayer out of the gate. No need to write complicated backend code, no need to set up or pay for your own servers.</Typography>
+        <Typography variant='body1'>All games support multiplayer out of the gate. No need to write complicated backend code, no need to set up or pay for your own servers.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Servers support up to 100 players</h4>
-        <Typography variant='body1'>You donʼt need a big team to create a big game. Creating large multiplayer experiences has never been easier.</Typography>
+        <Typography variant='body1'>You donʼt need a big team to create a big game. Creating large multiplayer games has never been easier.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Scale as you grow</h4>
-        <Typography variant='body1'>Weʼve significantly increased the limits on free data storage and now offer creators the option to <a href="https://create.roblox.com/docs/en-us/cloud-services/extended-services.md" target="_blank">purchase additional service usage</a> to support even larger experiences.</Typography>
+        <Typography variant='body1'>Weʼve significantly increased the limits on free data storage and now offer creators the option to <a href="https://create.roblox.com/docs/en-us/cloud-services/extended-services.md" target="_blank">purchase additional service usage</a> to support even larger games.</Typography>
       </CardContent>
     </Card>
   </Grid>
@@ -67,7 +67,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>No publishing approvals</h4>
-        <Typography variant='body1'>Assets are automatically moderated, so you can modify and publish your experience immediately across console, desktop, and mobile devices.</Typography>
+        <Typography variant='body1'>Assets are automatically moderated, so you can modify and publish your game immediately across console, desktop, and mobile devices.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>

@@ -18,11 +18,11 @@ hideInPageNavigation: true
 
 <Grid item Large={5} XSmall={12} direction="column">
 
-**Gameplay scripting** is the discipline of programming the behavior that makes experiences
+**Gameplay scripting** is the discipline of programming the behavior that makes games
 engaging and fun to play, such as their logic, movement, events, and interactions between
 objects in the 3D space.
 
-You'll learn the gameplay scripting for a first-person shooter laser tag experience by
+You'll learn the gameplay scripting for a first-person shooter laser tag game by
 following the general organization and key implementation details of a large, complex
 project, including several opportunities to create new behavior with custom values.
 

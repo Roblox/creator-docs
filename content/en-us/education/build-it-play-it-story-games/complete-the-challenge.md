@@ -1,6 +1,6 @@
 ---
 title: Complete the challenge
-description: Part of the Story Games series that teaches you to code in Roblox. Learn how to share an experience in Roblox.
+description: Part of the Story Games series that teaches you to code in Roblox. Learn how to share a game in Roblox.
 prev: /education/build-it-play-it-story-games/third-challenge
 ---
 
@@ -8,11 +8,11 @@ prev: /education/build-it-play-it-story-games/third-challenge
 
 **Congratulations**, you just finished the latest Roblox Creator Challenge!
 
-Now that you've completed the experience, here are a few ideas to take your experience further and keep learning.
+Now that you've completed the game, here are a few ideas to take your game further and keep learning.
 
-## Share your experience
+## Share your game
 
-One of the most exciting features of Roblox is that it's really easy to share your experience with friends. Currently your experience is probably private, meaning only you can play it. For your friends to see the experience, you need to make it public.
+One of the most exciting features of Roblox is that it's really easy to share your game with friends. Currently your game is probably private, meaning only you can play it. For your friends to see the game, you need to make it public.
 
 1. Select **File** (top left of Studio) and click **Experience Settings**.
 

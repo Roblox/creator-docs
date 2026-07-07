@@ -32,16 +32,16 @@ This guide provides instructions on [setting up](#enable-surface-appearance) you
 
 ## Enable surface appearance
 
-You can add PBR textures to any `Class.MeshPart` by adding a `Class.SurfaceAppearance` object which overwrites the original assigned texture. In general, you can't modify `Class.SurfaceAppearance` properties by scripts during an experience because the engine requires some pre-processing to display these graphics. Similar to adding a basic texture, each texture image map must point to the appropriate uploaded image asset ID.
+You can add PBR textures to any `Class.MeshPart` by adding a `Class.SurfaceAppearance` object which overwrites the original assigned texture. In general, you can't modify `Class.SurfaceAppearance` properties by scripts during a game because the engine requires some pre-processing to display these graphics. Similar to adding a basic texture, each texture image map must point to the appropriate uploaded image asset ID.
 
 To enable surface appearance for a `Class.MeshPart`:
 
-1. In the [Explorer](../../studio/explorer.md) window, hover over the `Class.MeshPart` and click the &CirclePlus; button.
+1. In the **Explorer** window, hover over the `Class.MeshPart` and click the &CirclePlus; button.
 2. Insert a `Class.SurfaceAppearance` from the contextual menu.
 
    <img src="../../assets/studio/explorer/MeshPart-SurfaceAppearance.png" width="320" alt="A SurfaceAppearance object parented within a MeshPart in Studio's Explorer window." />
 
-   When you're ready to add texture maps to the `Class.SurfaceAppearance` object, you can click each map property in the [Properties](../../studio/properties.md) window and enter an asset ID.
+   When you're ready to add texture maps to the `Class.SurfaceAppearance` object, you can click each map property in the **Properties** window and enter an asset ID.
 
 ## Texture maps
 

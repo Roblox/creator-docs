@@ -10,7 +10,7 @@ Share animations with friends and fellow developers by exporting and importing t
 
 <Alert severity="info">
 <AlertTitle>Animation Permission Changes</AlertTitle>
-You can now share animations with friends, groups, and experiences without re-uploading them. For more information, see [Asset privacy](../../projects/assets/privacy.md).
+You can now share animations with friends, groups, and games without re-uploading them. For more information, see [Asset privacy](../../projects/assets/privacy.md).
 </Alert>
 
 ## Export animations

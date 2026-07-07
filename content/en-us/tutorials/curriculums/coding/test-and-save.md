@@ -1,15 +1,15 @@
 ---
 title: Test and save
-description: Explains how to playtest and save your story experience.
+description: Explains how to playtest and save your story game.
 next: /tutorials/curriculums/coding/customize-strings
 prev: /tutorials/curriculums/coding/work-with-variables
 ---
 
-Now that the first sentence of your main story is complete and ready for players to write their own answer for the playerholder word, it's time to playtest your experience to verify that the code runs properly, then publish your work to Roblox so that you can save your progress.
+Now that the first sentence of your main story is complete and ready for players to write their own answer for the playerholder word, it's time to playtest your game to verify that the code runs properly, then publish your work to Roblox so that you can save your progress.
 
 ## Playtest your code
 
-It's important to playtest your experience often to ensure that your code works as expected. Studio offers several playtest options:
+It's important to playtest your game often to ensure that your code works as expected. Studio offers several playtest options:
 
 - **Test** – Starts the playtest by inserting your avatar at a spawn location.
 - **Test Here** – Starts the playtest by inserting your avatar in front of the camera's current position.
@@ -23,7 +23,7 @@ To playtest your code:
 
    <img src="../../../assets/education/general/play-button.png" width="360" />
 
-1. In the experience, use the following player controls to walk up to the pedestal, then press <kbd>E</kbd> to open the book and start your story. Your first question should display if the code is working properly.
+1. In the game, use the following player controls to walk up to the pedestal, then press <kbd>E</kbd> to open the book and start your story. Your first question should display if the code is working properly.
 
      <table>
      <thead>
@@ -79,7 +79,7 @@ Check the `storyMaker:Write()` function to make sure the **story** variable is i
 
 ## Publish to Roblox
 
-If you were to close Studio now, you would lose every edit you made to your experience. For this reason, it's important to publish your work to Roblox often to save your work and connect the experience to your account.
+If you were to close Studio now, you would lose every edit you made to your game. For this reason, it's important to publish your work to Roblox often to save your work and connect the game to your account.
 
 <Alert severity="info">
 It's recommended to publish to Roblox every ten minutes or after making a big change.
@@ -89,12 +89,12 @@ It's recommended to publish to Roblox every ten minutes or after making a big ch
 
 1. In the **Publish Experience** window,
 
-   1. In the **Name** field, provide a name for your experience.
-   1. <Chip label="OPTIONAL" size="small" variant="outlined" /> In the **Description** field, provide a summary of what a player can expect from the experience.
-   1. In the **Devices** section, enable every device you want players to use to access your experience.
+   1. In the **Name** field, provide a name for your game.
+   1. <Chip label="OPTIONAL" size="small" variant="outlined" /> In the **Description** field, provide a summary of what a player can expect from the game.
+   1. In the **Devices** section, enable every device you want players to use to access your game.
    1. At the bottom-right of the window, click the **Create** button.
 
-Now that your experience is published and connected to your account, you can edit it from any computer!
+Now that your game is published and connected to your account, you can edit it from any computer!
 
 <Alert severity="info">
 <AlertTitle>Saving after publishing</AlertTitle>

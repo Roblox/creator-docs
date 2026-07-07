@@ -3,16 +3,16 @@ title: Automatic Skinning Transfer
 description: Automatic Skinning Transfer can create deformation data for character accessories without manual skinning.
 ---
 
-**Automatic Skinning Transfer** allows layered clothing and facial accessories to deform accurately along with the character model it's attached to without having to skin the accessory itself. Instead of the complex task of manually [rigging and skinning](../../art/modeling/rigging.md) models in 3D modeling software, you can use this feature to transfer or generate skinning data to the accessory. When using Automatic Skinning Transfer, the Roblox Engine creates and applies skinning at runtime.
+**Automatic Skinning Transfer** allows layered clothing and facial accessories to deform accurately along with the character model it's attached to without having to skin the accessory itself. Instead of the complex task of manually [rigging and skinning](../art/modeling/rigging.md) models in 3D modeling software, you can use this feature to transfer or generate skinning data to the accessory. When using Automatic Skinning Transfer, the Roblox Engine creates and applies skinning at runtime.
 
 **No skinning of accessory geometry is required to use Automatic Skinning Transfer**. In fact, auto-skinned accessories work well with most characters they're attached to, even if those characters have a different number of joints, bones, or use a different kind of skinning, and the accessories move accurately with characters as they animate.
 
-<img src="../../assets/avatar/dynamic-heads/creating-face-accessories/Automatic-Skinning-Transfer-Intro.jpg" width="70%" />
+<img src="../assets/avatar/dynamic-heads/creating-face-accessories/Automatic-Skinning-Transfer-Intro.jpg" width="70%" />
 
-Skinning is still an important concept for character creation, and if you're creating custom characters, you may want to apply skinning data to the model to create a character with more natural looking poses and animations. For information on how to skin a mesh, see [Skin a humanoid model](../../art/modeling/skin-a-humanoid-model.md).
+Skinning is still an important concept for character creation, and if you're creating custom characters, you may want to apply skinning data to the model to create a character with more natural looking poses and animations. For information on how to skin a mesh, see [Skin a humanoid model](../art/modeling/skin-a-humanoid-model.md).
 
 <Alert severity="info">
-Because the skinning transfer process uses a character's outer cage to help calculate skinning data to apply onto the accessory, it's important that all [layered clothing requirements](../../avatar/layered-accessories/specifications.md) are still met when creating accessories.
+Because the skinning transfer process uses a character's outer cage to help calculate skinning data to apply onto the accessory, it's important that all [layered clothing requirements](../avatar/layered-accessories/specifications.md) are still met when creating accessories.
 </Alert>
 
 ## Enable Automatic Skinning Transfer
@@ -43,11 +43,11 @@ For eyelashes, good candidates for RBX_Leader are the ones that are intended to 
 
 <GridContainer numColumns="2">
 <figure>
-  <img alt="Screenshot of vertices assigned as leader." src="../../assets/avatar/dynamic-heads/creating-face-accessories/Vertices-Group-Leader.png" />
+  <img alt="Screenshot of vertices assigned as leader." src="../assets/avatar/dynamic-heads/creating-face-accessories/Vertices-Group-Leader.png" />
   <figcaption>Vertices of an eyelash assigned to a RBX_Leader bone vertex group.</figcaption>
 </figure>
 <figure>
-  <img alt="Screenshot of vertices assigned as follower." src="../../assets/avatar/dynamic-heads/creating-face-accessories/Vertices-Group-Follower.png" />
+  <img alt="Screenshot of vertices assigned as follower." src="../assets/avatar/dynamic-heads/creating-face-accessories/Vertices-Group-Follower.png" />
   <figcaption>Vertices of an eyelash assigned to a RBX_Follower bone vertex group.</figcaption>
 </figure>
 </GridContainer>
@@ -56,18 +56,18 @@ For eyebrows, good candidates for RBX_Leader are vertices along the edges that s
 
 <GridContainer numColumns="2">
 <figure>
-  <img alt="Screenshot of vertices assigned as leader." src="../../assets/avatar/dynamic-heads/creating-face-accessories/Eyebrows-Follower-Vertices.png" />
+  <img alt="Screenshot of vertices assigned as leader." src="../assets/avatar/dynamic-heads/creating-face-accessories/Eyebrows-Follower-Vertices.png" />
   <figcaption>Vertices of an eyebrow assigned to a RBX_Leader bone vertex group.</figcaption>
 </figure>
 <figure>
-  <img alt="Screenshot of vertices assigned as follower." src="../../assets/avatar/dynamic-heads/creating-face-accessories/Eyebrows-Leader-Vertices.png" />
+  <img alt="Screenshot of vertices assigned as follower." src="../assets/avatar/dynamic-heads/creating-face-accessories/Eyebrows-Leader-Vertices.png" />
   <figcaption>Vertices of an eyebrow assigned to a RBX_Follower bone vertex group.</figcaption>
 </figure>
 </GridContainer>
 
 In Blender, user the **Object Data Properties** > **Vertex Groups** to manage and view your vertex group assignments.
 
-  <img alt="Screenshot of properties panel with vertex group assignments" src="../../assets/avatar/dynamic-heads/creating-face-accessories/Vertices-Group-Assign.png" />
+  <img alt="Screenshot of properties panel with vertex group assignments" src="../assets/avatar/dynamic-heads/creating-face-accessories/Vertices-Group-Assign.png" />
 
 <Alert severity = 'info'>
 In Blender, vertex groups automatically created after you make a bone object. This allows you to quickly set vertices to a specific bone vertex group.
@@ -75,11 +75,11 @@ In Blender, vertex groups automatically created after you make a bone object. Th
 
 <GridContainer numColumns="2">
 <figure>
-  <video src="../../assets/avatar/dynamic-heads/creating-face-accessories/Vertices-Transfer-Off.mov" controls width="100%"></video>
+  <video src="../assets/avatar/dynamic-heads/creating-face-accessories/Vertices-Transfer-Off.mov" controls width="100%"></video>
   <figcaption>Eyelashes without transfer joints. Notice how the upper eyelashes near the bridge of the nose doesn't follow the eyelids as expected.</figcaption>
 </figure>
 <figure>
-  <video src="../../assets/avatar/dynamic-heads/creating-face-accessories/Vertices-Transfer-On.mov" controls width="100%"></video>
+  <video src="../assets/avatar/dynamic-heads/creating-face-accessories/Vertices-Transfer-On.mov" controls width="100%"></video>
   <figcaption>Eyelashes with transfer joints. All eyelashes follow the leading vertices closest to the eyes.</figcaption>
 </figure>
 </GridContainer>
@@ -96,35 +96,35 @@ If you wish to upload an accessory using these joints as a UGC item, there are a
 ### Modify character cages
 
 <Alert severity = 'error'>
-You can't upload assets with a partial cage to the Marketplace. You may use partial cages for assets intended for in-experience use, but the Marketplace validation process will reject assets with partial cages.
+You can't upload assets with a partial cage to the Marketplace. You may use partial cages for assets intended for in-game use, but the Marketplace validation process will reject assets with partial cages.
 </Alert>
 
 You can modify character cages for the accessories to deform accurately to the expected character surfaces using the Automatic Skinning Transfer. For example, auto-skinning may cause layered clothing to deform based on an incorrect body part because the transfer process is based on the closest distance between the accessory and its inner cage. In the following instance, a beard accessory was modeled using a blocky-type full-body cage. This causes the beard to deform incorrectly because parts of the beard are closer to the character cage's upper chest instead of the chin:
 
-<img src="../../assets/avatar/dynamic-heads/creating-face-accessories/Full-Body-Cage.png" width="60%" />
+<img src="../assets/avatar/dynamic-heads/creating-face-accessories/Full-Body-Cage.png" width="60%" />
 
-<video controls width="60%" src="../../assets/avatar/dynamic-heads/creating-face-accessories/videos/AutoSkin-With-Full-Cage.mp4">
+<video controls width="60%" src="../assets/avatar/dynamic-heads/creating-face-accessories/videos/AutoSkin-With-Full-Cage.mp4">
 </video>
 
 To prevent a layered accessory from using skinning data from an undesired area of the character's geometry, you can model your asset on a different character mannequin cage. For example, a blocky-type character will struggle with a beard skinning to the torso, but a character with an actual neck, like a humanoid, won't have this problem.
 
-Alternatively, you can remove parts of the outer cage that the layered accessory shouldn't be skinned to. **This is not a valid workflow for assets intended for the Marketplace**, but you can use this for in-experience assets or assets for other use. For example, the following image shows how the outer cage was modified so that it only includes the head geometry. With this improvement to the outer cage, when you automatically transfer skinning data, the beard and partial cage now correctly transfer skinning only from the head geometry.
+Alternatively, you can remove parts of the outer cage that the layered accessory shouldn't be skinned to. **This is not a valid workflow for assets intended for the Marketplace**, but you can use this for in-game assets or assets for other use. For example, the following image shows how the outer cage was modified so that it only includes the head geometry. With this improvement to the outer cage, when you automatically transfer skinning data, the beard and partial cage now correctly transfer skinning only from the head geometry.
 
-<img src="../../assets/avatar/dynamic-heads/creating-face-accessories/Head-Cage-Only.png" width="60%" />
+<img src="../assets/avatar/dynamic-heads/creating-face-accessories/Head-Cage-Only.png" width="60%" />
 
-<video controls width="60%" src="../../assets/avatar/dynamic-heads/creating-face-accessories/videos/AutoSkin-With-Specific-Cage.mp4">
+<video controls width="60%" src="../assets/avatar/dynamic-heads/creating-face-accessories/videos/AutoSkin-With-Specific-Cage.mp4">
 </video>
 
 It's important to note that you could also solve the previous example's deformation issue by using a different cage altogether. For example, if you use a more humanoid cage with more space between the chest and the chin, the beard is closest to the head instead of being near the chest or neck area, so the Automatic Skinning Transfer wouldn't transfer skinning data from those regions.
 
-<img src="../../assets/avatar/dynamic-heads/creating-face-accessories/Beard-Humanoid-Cage.jpg" width="60%" />
+<img src="../assets/avatar/dynamic-heads/creating-face-accessories/Beard-Humanoid-Cage.jpg" width="60%" />
 
 By modifying different regions of the character's cage, you can ensure that your layered clothing and facial accessories deform in relation to the correct region of the body or head, such as modifying the character model's arms so dresses don't incorrectly attach to them while a character is running, or modifying pants that incorrectly map to feet. The following video demonstrates how a jacket's collar incorrectly moves with the head, as the layered clothing is deforming in the collar region, which is closest to the head portion of the cage. To resolve this, you can remove the head portion of the cage so that the jacket won't incorrectly deform in relation to the head at all. Instead, it will deform in relation to the shoulder region, which is much more appropriate for this article of clothing.
 
-<video controls width="60%" src="../../assets/avatar/dynamic-heads/creating-face-accessories/videos/Jacket-Collar-Issue.mp4">
+<video controls width="60%" src="../assets/avatar/dynamic-heads/creating-face-accessories/videos/Jacket-Collar-Issue.mp4">
 </video>
 
-<img src="../../assets/avatar/dynamic-heads/creating-face-accessories/Jacket-Cage-Comparison.jpg" width="60%" />
+<img src="../assets/avatar/dynamic-heads/creating-face-accessories/Jacket-Cage-Comparison.jpg" width="60%" />
 
 <Alert severity="info">
 During the asset creation process, it's important to verify what skinning solution works best for your design by testing your individual assets on multiple models and animations. You can always skin your assets manually and choose to use the Automatic Skinning Transfer later.

@@ -7,7 +7,7 @@ prev: /tutorials/curriculums/gameplay-scripting/spawn-respawn
 
 **Adding rounds** lets you structure gameplay into phases with a clear start and finish point so that players can measure their progress and have a periodic opportunity for an equal playing field. This is particularly important for team-based gameplay because it offers players the chance to switch up their play style depending on who is on their team during that round.
 
-Using the [sample laser tag experience](https://www.roblox.com/games/14817965191/Laser-Tag-1A) as a reference, this section of the tutorial teaches you how to use and customize Roblox's built-in features to structure each round, including scripting guidance on:
+Using the [sample laser tag game](https://www.roblox.com/games/14817965191/Laser-Tag-1A) as a reference, this section of the tutorial teaches you how to use and customize Roblox's built-in features to structure each round, including scripting guidance on:
 
 - Beginning a round by resetting individual and team points, then spawning players to their team spawn zones.
 - Customizing variables that set the objective for the round at the top of each player's screen.
@@ -37,9 +37,9 @@ end
 
 Now that everyone is starting at zero points, `startRoundLoopAsync()` then sets the **Neutral** spawn location's `Class.SpawnLocation.Neutral|Neutral` property to **false** so that only players with the same `Class.Team.Color` property as the spawn location's `Class.SpawnLocation.TeamColor|TeamColor` property can spawn there. Because the spawn location's `Class.SpawnLocation.TeamColor|TeamColor` property is set to **white** instead of the sample's mint or carnation pink teams, this configuration prevents all players from spawning or respawning there while a round is active.
 
-For players who are currently in the lobby, `startRoundLoopAsync()` passes all players currently within the experience to the `spawnPlayersInMap` function in **ServerScriptService** ⟩ **Gameplay** ⟩ **Rounds** ⟩ **spawnPlayersInMap** to sort and balance everyone into a team with approximately the same number of players.
+For players who are currently in the lobby, `startRoundLoopAsync()` passes all players currently within the game to the `spawnPlayersInMap` function in **ServerScriptService** ⟩ **Gameplay** ⟩ **Rounds** ⟩ **spawnPlayersInMap** to sort and balance everyone into a team with approximately the same number of players.
 
-For any new players that join the experience after the lobby group was sorts into a team, `startRoundLoopAsync()` listens for the `Players.PlayerAdded:Connect` event, then calls the `spawnPlayersInMap` function again to add them to the team with the least amount of players. For more information on this process, see [Configure Spawn Locations](spawn-respawn.md#configure-spawn-locations) from the previous **Spawning and Respawning** section of the tutorial.
+For any new players that join the game after the lobby group was sorts into a team, `startRoundLoopAsync()` listens for the `Players.PlayerAdded:Connect` event, then calls the `spawnPlayersInMap` function again to add them to the team with the least amount of players. For more information on this process, see [Configure Spawn Locations](spawn-respawn.md#configure-spawn-locations) from the previous **Spawning and Respawning** section of the tutorial.
 
 ```lua title="Rounds"
 		-- Spawn all players in the map
@@ -54,7 +54,7 @@ For any new players that join the experience after the lobby group was sorts int
 
 ## Set objective
 
-Now that each player is in the arena with their teammates, the experience needs to provide instructions for what to do to be successful within the round. The sample laser tag experience tackles this requirement by providing an objective prompt at the top of each player's screen with clear guidance on what the team needs to do to win.
+Now that each player is in the arena with their teammates, the game needs to provide instructions for what to do to be successful within the round. The sample laser tag game tackles this requirement by providing an objective prompt at the top of each player's screen with clear guidance on what the team needs to do to win.
 
 <img src="../../../assets/tutorials/gameplay-scripting/Creating-Teams/Objective-UI.jpg" width="100%" alt="" />
 
@@ -87,7 +87,7 @@ end
 
 ## Track points
 
-Now that players have a goal for the round, the experience needs to keep track of each team's points until they meet their objective. While the `Class.Teams` service's default behavior automatically groups each player underneath their team and adds up each player's contributions to their team score, it's important to store and monitor points in a separate location for round-based gameplay because if a player scores then leaves before the round is over, their contribution is deducted from the leaderboard as soon as they disconnect from the experience.
+Now that players have a goal for the round, the game needs to keep track of each team's points until they meet their objective. While the `Class.Teams` service's default behavior automatically groups each player underneath their team and adds up each player's contributions to their team score, it's important to store and monitor points in a separate location for round-based gameplay because if a player scores then leaves before the round is over, their contribution is deducted from the leaderboard as soon as they disconnect from the game.
 
 To ensure this doesn't happen and every contribution toward the team goal is preserved, **ReplicatedStorage** ⟩ **HUDGuiSetup** ⟩ **StartSyncingTeamPoints** stores all points separately under the `teamPoints` attribute in `Class.Teams` service. As `teamPoints` increments, this module script calls function `startSyncingTeamPoints` to find the team counter `Class.GuiObjects` within the Objective UI component.
 

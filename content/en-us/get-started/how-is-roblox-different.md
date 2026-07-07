@@ -11,7 +11,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>No complicated downloads</h4>
-        <Typography variant='body1'>Roblox is built on the cloud, allowing users to join new experiences in seconds, without having to download massive files.</Typography>
+        <Typography variant='body1'>Roblox is built on the cloud, allowing users to join new games in seconds, without having to download massive files.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
@@ -23,7 +23,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Cross-platform support</h4>
-        <Typography variant='body1'>Experiences can be published across all major devices, allowing players to play how they want, where they want, with whomever they want.</Typography>
+        <Typography variant='body1'>Games can be published across all major devices, allowing players to play how they want, where they want, with whomever they want.</Typography>
       </CardContent>
     </Card>
   </Grid>

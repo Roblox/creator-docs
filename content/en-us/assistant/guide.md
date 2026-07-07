@@ -3,7 +3,7 @@ title: Assistant for Studio
 description: How to use Assistant to help build, grow, and monetize your creations in Studio.
 ---
 
-**Assistant** is an AI helper that helps you build experiences faster by answering questions, generating content, and performing actions directly in Studio. It can do the following and much more:
+**Assistant** is an AI helper that helps you build games faster by answering questions, generating content, and performing actions directly in Studio. It can do the following and much more:
 
 - Answer questions about Roblox development
 - Create and modify objects and scripts in your place's data model
@@ -27,14 +27,31 @@ To access Assistant from Studio:
    <img src="../assets/studio/general/Toolbar-Assistant.png" width="800" alt="Assistant button indicated on the right side of the mezzanine bar." />
 
 2. Enter a request in the Assistant window.
-    - To generate a new response, click the redo icon.
-    - To rate the response and improve future results, click thumbs up or thumbs down.
+   - To generate a new response, click the redo icon.
+   - To rate the response and improve future results, click thumbs up or thumbs down.
 
-     <img src="../assets/assistant/Studio-General-UI.png" width="360" alt="General user interface for Assistant in Studio." />
+    <img src="../assets/assistant/Studio-General-UI.png" width="360" alt="General user interface for Assistant in Studio." />
+
+## Chats and chat history
+
+Assistant supports multiple chat threads per place, and your chat history is saved in the cloud so conversations persist across Studio sessions, machine restarts, and devices.
+
+- Click the chat list button and select **New Chat** at the top of the list to start a separate conversation. Each chat has its own context window, so a long conversation in one chat won't consume space available in another. Drafts in the input box are preserved per-chat.
+- Click the branch icon under any Assistant response to spin off a new chat from that message. The original chat remains as-is so that you can explore a different direction without losing your current place.
+- Chats are scoped to the place you're working in, not the experience. Each place has its own set of conversations, and there is no hard limit on the number of chats per place.
+- Deleted chats are removed permanently and cannot be recovered.
+
+If you have Studio open on multiple devices, we recommend working in one chat at a time to avoid conflicts, since chat history syncs through the cloud.
+
+## Screen capture subagent
+
+Assistant includes a screen capture subagent that can capture what's currently visible in your 3D viewport (both Edit and Play modes) and describe it back to Assistant. This functionality lets Assistant reason about your scene without you having to describe it. You can ask questions like "Does this look right?" or "Is the lighting set up for nighttime?" and Assistant will capture a screenshot of the viewport and answer based on what it sees.
+
+If you're using a third-party client via MCP or your own API key, you continue to have direct access to the underlying screenshot tool.
 
 ## Ask questions and explain code
 
-If you need general knowledge or help while creating an experience, you can ask Assistant questions like how to make a team system, how to design a game loop, how to use specific Studio tools, and much more. It can even explain code that it generated or that you wrote yourself.
+If you need general knowledge or help while creating a game, you can ask Assistant questions like how to make a team system, how to design a game loop, how to use specific Studio tools, and much more. It can even explain code that it generated or that you wrote yourself.
 
 <img src="../assets/assistant/Studio-Explain-Code.png" width="360" alt="Code explanation provided by Assistant in Studio." />
 
@@ -92,7 +109,7 @@ Procedural models let you:
 
 - Create flexible 3D models with minimal input and adjust parameters without having to rebuild your models.
 - Automatically integrate with engine features like undo/redo, Team Create, network replication, scaling, and dragger tools.
-- Maintain high performance, with models behaving like standard objects until their parameters change. This means these models add almost no overhead to your experience.
+- Maintain high performance, with models behaving like standard objects until their parameters change. This means these models add almost no overhead to your game.
 - Keep generated content organized in a dedicated `GeneratedFolder`, separating source and output.
 
 To generate a procedural model, type a command such as `/generate_procedural_model a stack of books` or attach a reference image to your prompt. Assistant then generates the procedural model and adds it directly to your workspace for further customization.
@@ -252,7 +269,7 @@ When defining your own segmentation, use these part names as a starting point an
   </tbody>
 </table>
 
-For more examples of working with segmented models, see the [Behaviors Reference Experience](https://www.roblox.com/games/105116507559995/Behaviors-Reference-Experience) `.rbxl` file.
+For more examples of working with segmented models, see the [Behaviors Reference game](https://www.roblox.com/games/105116507559995/Behaviors-Reference-Experience) `.rbxl` file.
 
 ## Planning Mode
 

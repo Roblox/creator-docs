@@ -11,10 +11,10 @@ Processes and features may have changed since the writing of this documentation.
 The content of this project and documentation can be used under Roblox's [Limited Use License](../../resources/limited-use-license.md).
 </Alert>
 
-**Roblox Battle Royale** is a game kit built by internal Roblox developers consisting of multiplayer battles on a large island with destructible buildings, a variety of vehicles and weapons, and interesting areas to explore. The default game loop is simple: join a match, skydive onto the island, stay out of the storm, and survive until you are the last person standing. Players can also build their own structures by laying down building tiles. This project is [available to join](https://www.roblox.com/games/5158731546/Roblox-Battle-Royale) as a public experience.
+**Roblox Battle Royale** is a game kit built by internal Roblox developers consisting of multiplayer battles on a large island with destructible buildings, a variety of vehicles and weapons, and interesting areas to explore. The default game loop is simple: join a match, skydive onto the island, stay out of the storm, and survive until you are the last person standing. Players can also build their own structures by laying down building tiles. This project is [available to join](https://www.roblox.com/games/5158731546/Roblox-Battle-Royale) as a public game.
 
 <img
-  alt="Drop onto a region in a classic battle royale experience."
+  alt="Drop onto a region in a classic battle royale game."
   src="../../assets/resources/battle-royale/introduction/Battle-Royale-Slide-B.jpeg"
   width="80%" />
 

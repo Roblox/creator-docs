@@ -44,15 +44,15 @@ In this example:
 
 ## Behavior
 
-Rate limit behavior differs by authentication method and request origin, including whether you make requests from within a Roblox experience.
+Rate limit behavior differs by authentication method and request origin, including whether you make requests from within a Roblox game.
 
 ### API key
 
 Rate limits for API keys are applied across all API keys per owner, which can be either a user or a group. These limits are enforced consistently regardless of where the requests originate—whether from `Class.HttpService`, web applications, or other sources.
 
-#### In-experience with HttpService
+#### In-game with HttpService
 
-When calling endpoints in-experience using `Class.HttpService`, requests also contribute to the fixed limit of 500 HTTP requests per minute per Roblox game server. See [In-experience HTTP requests](/cloud-services/http-service) for more details.
+When calling endpoints in-game using `Class.HttpService`, requests also contribute to the fixed limit of 500 HTTP requests per minute per Roblox game server. See [In-game HTTP requests](/cloud-services/http-service) for more details.
 
 ### OAuth 2.0
 

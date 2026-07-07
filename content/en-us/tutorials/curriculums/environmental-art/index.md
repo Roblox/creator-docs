@@ -1,6 +1,6 @@
 ---
 title: Environmental art curriculum
-description: Learn how to build 3D environments that enhance your experience's gameplay.
+description: Learn how to build 3D environments that enhance your game's gameplay.
 next: /tutorials/curriculums/environmental-art/greybox-your-environment
 hideInPageNavigation: true
 ---
@@ -23,13 +23,13 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 <Grid item Large={5} XSmall={12} direction="column">
 
 **Environmental art** is the discipline of creating and configuring 3D environments
-that embody and facilitate gameplay requirements, immerse users within your experience,
+that embody and facilitate gameplay requirements, immerse users within your game,
 and provide contextual information about the world itself.
 
 You'll learn how to recreate a [high-quality environment](https://www.roblox.com/games/14447845297/Environment-Art-Optimizing)
-for a first-person shooter laser tag experience by following step-by-step processes and
+for a first-person shooter laser tag game by following step-by-step processes and
 best practices for level design, developing assets, and optimization efforts for memory
-and performance that you can then implement in your own experiences.
+and performance that you can then implement in your own games.
 
 This course is intended for readers who are familiar
 with general building concepts and tools in Roblox Studio. If you need help
@@ -88,7 +88,7 @@ experience gameplay before investing time into polishing assets.
    </AccordionSummary>
    <AccordionDetails>
 
-    Learn how to [import and configure your assets](assemble-an-asset-library.md) in a central location within your experience for easy access and reuse.
+    Learn how to [import and configure your assets](assemble-an-asset-library.md) in a central location within your game for easy access and reuse.
 
         <a href="https://www.roblox.com/games/14447787049/Environment-Art-Assembling">
         <Button
@@ -124,7 +124,7 @@ experience gameplay before investing time into polishing assets.
 
    <BaseAccordion>
    <AccordionSummary>
-      <Typography variant="h4">Chapter 5 - Optimize your experience</Typography>
+      <Typography variant="h4">Chapter 5 - Optimize your game</Typography>
    </AccordionSummary>
    <AccordionDetails>
 

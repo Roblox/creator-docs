@@ -4,31 +4,31 @@ description: Explains how to use the Voice Chat feature.
 ---
 
 <Alert severity="success">
-Voice Chat is currently available to all 13+ phone number verified users in a specific set of countries. Review the [Voice Chat FAQ](https://en.help.roblox.com/hc/en-us/articles/4405807645972-Voice-Chat-FAQs) to learn more. Users **not** in these countries should use [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644) to enable chat with voice. Once verified, eligible 13+ phone verified users can opt‑in to use this feature by visiting their account **Settings** page or from within a voice enabled experience, allowing them to chat with voice in any Roblox experience that supports it. Experiences with voice often see an uplift in engagement, DAU, and spending.
+Voice Chat is currently available to all 13+ phone number verified users in a specific set of countries. Review the [Voice Chat FAQ](https://en.help.roblox.com/hc/en-us/articles/4405807645972-Voice-Chat-FAQs) to learn more. Users **not** in these countries should use [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644) to enable chat with voice. Once verified, eligible 13+ phone verified users can opt‑in to use this feature by visiting their account **Settings** page or from within a voice enabled game, allowing them to chat with voice in any Roblox game that supports it. Games with voice often see an uplift in engagement, DAU, and spending.
 </Alert>
 
 **Voice Chat** is a feature enabling real-time, spoken communication between yourself and other players. It is only available for places that support a maximum of 100 players.
 
-<img src="../assets/players/voice-chat/In-Experience-Example.jpg" width="800" alt="Two users chatting with voice inside an experience" />
+<img src="../assets/players/voice-chat/In-Experience-Example.jpg" width="800" alt="Two users chatting with voice inside a game." />
 
 ## Enable Voice Chat
 
-Voice Chat is enabled by default for verified 13+ users on all new experiences with a maximum of 100 players. To activate voice for existing experiences or disable it for new ones:
+Voice Chat is enabled by default for verified 13+ users on all new games with a maximum of 100 players. To activate voice for existing games or disable it for new ones:
 
-1. Open your experience in Studio.
+1. Open your game in Studio.
 1. Open **File**&nbsp;⟩ **Experience Settings**.
 1. Navigate to the **Communication** tab on the left side of the window.
 1. Toggle **Enable Voice Chat** to your desired setting.
-1. <Chip label="OPTIONAL" size="small" variant="outlined" /> For greater communication among players within your experience, toggle on **Enable&nbsp;Camera** to allow eligible players to animate their avatar with their movement.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> For greater communication among players within your game, toggle on **Enable&nbsp;Camera** to allow eligible players to animate their avatar with their movement.
 1. [Publish](../production/publishing/publish-games-and-places.md) the place to save the changes.
 
-By enabling this setting, eligible 13+ users can opt-in to Voice Chat within your experience. Enabling Voice Chat is required to use the speech-to-text API.
+By enabling this setting, eligible 13+ users can opt-in to Voice Chat within your v. Enabling Voice Chat is required to use the speech-to-text API.
 
 ### Set maximum players
 
 If you previously set the maximum number of players in a place to more than 100, you'll need to reduce it to support Voice Chat.
 
-1. In the left-hand navigation of the **Experience Settings** window, select **Places**. Every place within your experience displays.
+1. In the left-hand navigation of the **Experience Settings** window, select **Places**. Every place within your game displays.
 1. Click the **&ctdot;** button next to the place with more than 100 players, then select **Configure Place**.
 1. In the **Max Players** field, enter any number less than or equal to 100.
 1. Click the **Save** button and then [publish](../production/publishing/publish-games-and-places.md) to save the changes.
@@ -37,7 +37,7 @@ When you update the maximum number of players in a place to fewer than 100, ther
 
 ### Customize voice behavior
 
-Voice Chat is **proximity-based** by default, adjusting the volume of participants based on how close they are to each other. However, you can set `Class.VoiceChatService.UseAudioApi|UseAudioApi` to `Enum.AudioApiRollout|Enabled` to take control over how voices are set up and used in your experience.
+Voice Chat is **proximity-based** by default, adjusting the volume of participants based on how close they are to each other. However, you can set `Class.VoiceChatService.UseAudioApi|UseAudioApi` to `Enum.AudioApiRollout|Enabled` to take control over how voices are set up and used in your game.
 
 If `Class.VoiceChatService` does not appear already:
 
@@ -97,7 +97,7 @@ end)
 
 #### Non-spatial
 
-Depending on your experience's needs, it might make more sense to hear others with equal volume, regardless of their geographic location. If you [disable default Voice Chat](#disable-per-place), you can then implement non‑spatial Voice Chat through the following `Class.Script` within `Class.ServerScriptService`:
+Depending on your game's needs, it might make more sense to hear others with equal volume, regardless of their geographic location. If you [disable default Voice Chat](#disable-per-place), you can then implement non‑spatial Voice Chat through the following `Class.Script` within `Class.ServerScriptService`:
 
 ```lua title="Non-Proximity Chat"
 local Players = game:GetService("Players")
@@ -151,13 +151,13 @@ player.DescendantAdded:Connect(onDescendantAdded)
 
 ### Disable per place
 
-If you don't want to enable Voice Chat for every place within your experience, you can disable it within specific places that would otherwise be voice‑eligible.
+If you don't want to enable Voice Chat for every place within your game, you can disable it within specific places that would otherwise be voice‑eligible.
 
 <Alert severity="info">
 If you're currently setting a place's **Max Players** to a value over 100 in order to disable Voice Chat, it's recommended to use this workflow instead.
 </Alert>
 
-To disable Voice Chat for a specific place within an experience:
+To disable Voice Chat for a specific place within a game:
 
 1. Right‑click in the **Explorer** window and select **Show&nbsp;Services…** from the context menu.
 2. Select `Class.VoiceChatService` in the popup window and click **Insert**. The service appears in the **Explorer** hierarchy.
@@ -165,7 +165,7 @@ To disable Voice Chat for a specific place within an experience:
    <img src="../assets/studio/explorer/VoiceChatService.png" width="320" alt="VoiceChatService in Explorer hierarchy" />
 
 3. With `Class.VoiceChatService` selected, disable `Class.VoiceChatService.EnableDefaultVoice|EnableDefaultVoice` in the **Properties** window.
-4. Publish the place to save the changes and [restart servers](../projects/update-games.md#restart-servers) to ensure the change takes effect for all servers currently running your experience.
+4. Publish the place to save the changes and [restart servers](../projects/update-games.md#restart-servers) to ensure the change takes effect for all servers currently running your game.
 
 ## Check status
 

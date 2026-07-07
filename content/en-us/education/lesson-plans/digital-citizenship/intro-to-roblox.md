@@ -108,13 +108,13 @@ prev: /education/lesson-plans/digital-citizenship/landing
 
 ### Digital safety scavenger hunt
 
-1. Have students open the <a href="https://www.roblox.com/games/5450795073/Digital-Safety-Scavenger-Hunt" target="_blank" rel="noopener">Beat the Scammers</a> Roblox experience. Make sure to send students to a private server created for that game.
+1. Have students open the <a href="https://www.roblox.com/games/5450795073/Digital-Safety-Scavenger-Hunt" target="_blank" rel="noopener">Beat the Scammers</a> Roblox game. Make sure to send students to a private server created for that game.
 
    - Provide students Handout: Digital Safety Scavenger Hunt.
    - Give students about five minutes to explore and collect information on their handouts.
    - (Optional) To help students, you can leave the Presentation: Digital Safety - Slide 5 up so students can see the four clues.
 
-2. Give students a one minute warning, then transition them off the computers so they can discuss the experience.
+2. Give students a one minute warning, then transition them off the computers so they can discuss the game.
 3. As a class, discuss unreliable information found in that game.
 
    - Make connections to other relevant content students may see online (news websites, social media apps, other games, etc).
@@ -122,7 +122,7 @@ prev: /education/lesson-plans/digital-citizenship/landing
 
 ### Intro to Roblox Studio
 
-1. Inform student they'll be learning how to create their own experiences using Roblox Studio.
+1. Inform student they'll be learning how to create their own games using Roblox Studio.
 
 2. Lead students through the following tutorial: <a href="../../../tutorials/curriculums/building/index.md" target="_blank" rel="noopener">Building lesson</a>.
 

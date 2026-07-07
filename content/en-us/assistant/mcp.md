@@ -5,7 +5,7 @@ description: Use both the built-in Studio MCP server and third-party MCP servers
 
 Model Context Protocol (MCP) servers connect AI models to your local data, tools, and systems. They allow large language models (LLMs) to securely access files, databases, and APIs, providing additional context that helps generate more accurate and useful results.
 
-With [Roblox's open source Studio MCP server](https://github.com/Roblox/studio-rust-mcp-server), you can access and edit your experience directly from external AI coding tools. These AI agents can plan, write, test, and modify your code and data with little intervention and effort on your part.
+With [Roblox's open source Studio MCP server](https://github.com/Roblox/studio-rust-mcp-server), you can access and edit your game directly from external AI coding tools. These AI agents can plan, write, test, and modify your code and data with little intervention and effort on your part.
 
 You can integrate and leverage models from the following LLMs into your workflow:
 

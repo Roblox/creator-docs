@@ -1,11 +1,11 @@
 ---
 title: Add text-to-speech
-description: Explains how to add text-to-speech audio to your experiences.
+description: Explains how to add text-to-speech audio to your games.
 ---
 
-**Text-to-speech** is a form of assistive technology that converts text strings into speech sounds using an artificial voice. In addition to improving the accessibility of your experiences for players with vision, mobility, or cognitive disabilities, TTS allows you to generate speech dynamically so that you don't have to pre-record audio for all possible narrative scenarios.
+**Text-to-speech** is a form of assistive technology that converts text strings into speech sounds using an artificial voice. In addition to improving the accessibility of your games for players with vision, mobility, or cognitive disabilities, TTS allows you to generate speech dynamically so that you don't have to pre-record audio for all possible narrative scenarios.
 
-Using the [Gingerbread House - Start](https://www.roblox.com/games/134812596370919/Gingerbread-House-Start) `.rbxl` file as a starting place and [Gingerbread House - Text-to-Speech](https://www.roblox.com/games/129041658365712/Gingerbread-House-Text-to-Speech) as a reference, this tutorial shows you how to add both basic and context-aware TTS audio to your experiences, including guidance on:
+Using the [Gingerbread House - Start](https://www.roblox.com/games/134812596370919/Gingerbread-House-Start) `.rbxl` file as a starting place and [Gingerbread House - Text-to-Speech](https://www.roblox.com/games/129041658365712/Gingerbread-House-Text-to-Speech) as a reference, this tutorial shows you how to add both basic and context-aware TTS audio to your games, including guidance on:
 
 - Triggering TTS for common gameplay scenarios that will never change, such as UI interactions and tutorials.
 - Configuring TTS so that it adapts to player actions, environmental status, or flexible objectives.
@@ -22,7 +22,7 @@ To create TTS audio, it's important to understand the audio objects that you wil
 - The `Class.AudioDeviceOutput` object is a **physical hardware device** within the real world, such as a speaker or headphones.
 - `Class.Wire|Wires` carry audio streams from one object to another.
 
-All of these audio objects work together to emit TTS sound in response to player actions. Let's take a look at how this works in practice for 3D audio using an example of a player wearing a headset while playing an experience with their laptop:
+All of these audio objects work together to emit TTS sound in response to player actions. Let's take a look at how this works in practice for 3D audio using an example of a player wearing a headset while playing a game with their laptop:
 
 - The `Class.AudioTextToSpeech` loads and converts text into audio whenever a player touches a part near a non-playable character (NPC).
 - The `Class.AudioEmitter` emits a stream of the TTS audio from the NPC into the 3D environment
@@ -30,7 +30,7 @@ All of these audio objects work together to emit TTS sound in response to player
 - The character's child `Class.AudioListener` object listens to that sound within the 3D environment and feeds it back to their headset.
 - The `Class.AudioDeviceOutput` object carries the sound from the `Class.AudioListener` to the player's physical speaker, or in this case, their headphones.
 
-The following sections dive deeper and reference these objects as you learn how to play both basic and context-aware audio. As you review these objects with the upcoming techniques, you can more accurately predict how to capture and feed sound from the experience to the player.
+The following sections dive deeper and reference these objects as you learn how to play both basic and context-aware audio. As you review these objects with the upcoming techniques, you can more accurately predict how to capture and feed sound from the game to the player.
 
 ## Basic TTS
 
@@ -149,8 +149,8 @@ To recreate the basic 3D TTS audio in the sample [Gingerbread House - Text-to-Sp
 
 1. Enable a default listener that's attached to your player character.
    1. In the **Explorer** window, select the **SoundService**.
-   1. In the **Properties** window, set **DefaultListenerLocation** to **Character**. When you run the experience, the engine automatically:
-      - Creates a `Class.AudioListener` under each player character's `Class.Humanoid.RootPart` so that you can hear sounds shift in your real-world speakers according to the position and scale of sound sources within the experience.
+   1. In the **Properties** window, set **DefaultListenerLocation** to **Character**. When you run the game, the engine automatically:
+      - Creates a `Class.AudioListener` under each player character's `Class.Humanoid.RootPart` so that you can hear sounds shift in your real-world speakers according to the position and scale of sound sources within the game.
       - Creates an `Class.AudioDeviceOutput` under **SoundService**.
 1. In the **Explorer** window, navigate to **Workspace** ⟩ **DialogueVolume**, then:
    1. Insert an **AudioTextToSpeech** object to create an audio speech generator for the volume around the snowman.
@@ -159,7 +159,7 @@ To recreate the basic 3D TTS audio in the sample [Gingerbread House - Text-to-Sp
 1. Select the **AudioTextToSpeech** object, then in the **Properties** window:
    1. Set **Text** to "Collect every single last gumpdrop to open my home!"
    1. Set **VoiceId** to `2` to set the artificial voice to emulate a British female.
-   1. Set the **Volume** to `3` to play the audio at a high volume so you hear the TTS sound over other audio sources within the experience.
+   1. Set the **Volume** to `3` to play the audio at a high volume so you hear the TTS sound over other audio sources within the game.
 1. Select the **Wire**, then in the **Properties** window:
    1. Set **SourceInstance** to your new **AudioTextToSpeech** to specify that you want the wire to carry audio from this specific audio speech generator.
    1. Set **TargetInstance** to your new **AudioEmitter** to specify that you want the wire to carry audio to this specific audio emitter within the volume.
@@ -202,7 +202,7 @@ To recreate the basic 3D TTS audio in the sample [Gingerbread House - Text-to-Sp
     <Typography variant="h4">Code explanation</Typography>
   </AccordionSummary>
   <AccordionDetails>
-    This script starts by getting the `Class.Workspace` and `Class.Players` services so it can reference their children and functionality. For each player character that loads or respawns back into the experience, the script waits for:
+    This script starts by getting the `Class.Workspace` and `Class.Players` services so it can reference their children and functionality. For each player character that loads or respawns back into the game, the script waits for:
 
     - The character's `Class.Humanoid` and `Class.Animator` objects.
     - The volume object in the workspace named **DialogueVolume**.
@@ -218,7 +218,7 @@ To recreate the basic 3D TTS audio in the sample [Gingerbread House - Text-to-Sp
   </AccordionDetails>
   </BaseAccordion>
 
-1. Playtest the experience to hear the instructional character dialogue when your player character touches the volume around the snowman.
+1. Playtest the game to hear the instructional character dialogue when your player character touches the volume around the snowman.
 
    <video controls src="../../../assets/tutorials/add-text-to-speech/basicTTS-final.mp4" width="80%"></video>
 
@@ -455,7 +455,7 @@ To recreate the context-aware 3D TTS audio in the sample [Gingerbread House - Te
     <Typography variant="h4">Code explanation</Typography>
   </AccordionSummary>
   <AccordionDetails>
-    This script starts by getting the `Class.Workspace` and `Class.Players` services so it can reference their children and functionality. For each player character that loads or respawns back into the experience, the script waits for:
+    This script starts by getting the `Class.Workspace` and `Class.Players` services so it can reference their children and functionality. For each player character that loads or respawns back into the game, the script waits for:
 
     - The character's `Class.Humanoid` and `Class.Animator` objects.
     - The volume object in the workspace named **HintVolume**.
@@ -476,6 +476,6 @@ To recreate the context-aware 3D TTS audio in the sample [Gingerbread House - Te
   </AccordionDetails>
   </BaseAccordion>
 
-1. Playtest the experiences to hear contextual hints when your player character touches the volume around the reindeer. The TTS audio changes according to the number and color of gumdrops the player character has already found in the environment.
+1. Playtest the game to hear contextual hints when your player character touches the volume around the reindeer. The TTS audio changes according to the number and color of gumdrops the player character has already found in the environment.
 
    <video controls src="../../../assets/tutorials/add-text-to-speech/ContextTTS-final.mp4" width="80%"></video>

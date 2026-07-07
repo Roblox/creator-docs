@@ -22,7 +22,7 @@ The **Animation Editor** is Studio's primary animation tool. While it comes with
 
 ## Prepare rig
 
-The **Animation Editor** requires a **rig**, or poseable figure, to create character animations because rigs include the internal structure you need to move and rotate body parts into different poses. While you can create your own rigs or access several pre-built rigs through the **Rig Generator** tool, this lesson provides a rig on top of the pedestal in the experience.
+The **Animation Editor** requires a **rig**, or poseable figure, to create character animations because rigs include the internal structure you need to move and rotate body parts into different poses. While you can create your own rigs or access several pre-built rigs through the **Rig Generator** tool, this lesson provides a rig on top of the pedestal in the game.
 
 <img src="../../../assets/education/build-it-play-it-island-of-move/creating-animations/highlight-figure.jpg" width="100%" />
 
@@ -187,4 +187,4 @@ To create your second pose for a swimming animation:
 
 1. In the **Animation Editor**, click the **Play** button to test your animation. Feel free to make adjustments to either of your poses until it looks like the character is smoothly swimming in water.
 
-Congratulations on posing your character for your first animation! The next lesson details how to save and export your animation so that you can use it within experiences.
+Congratulations on posing your character for your first animation! The next lesson details how to save and export your animation so that you can use it within games.

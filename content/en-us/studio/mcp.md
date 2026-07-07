@@ -3,7 +3,7 @@ title: Connect to the Roblox Studio MCP server
 description: Learn how to connect your AI coding tools to Roblox Studio, enabling them to read your game structure, edit scripts, insert models, execute code, and control play mode.
 ---
 
-The Roblox Studio MCP server is built into Roblox Studio. It implements the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), an open standard that lets AI tools securely communicate with external applications. Once connected, your AI client can interact directly with your open Studio session, exploring the data model, writing scripts, running Luau code, and testing your experience in play mode.
+The Roblox Studio MCP server is built into Roblox Studio. It implements the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), an open standard that lets AI tools securely communicate with external applications. Once connected, your AI client can interact directly with your open Studio session, exploring the data model, writing scripts, running Luau code, and testing your game in play mode.
 
 This guide shows you how to connect the Studio MCP server to popular AI clients. While the setup varies by client, the core idea is the same: you configure your client to connect to the MCP server and then send commands from the client to your active Studio session.
 
@@ -286,7 +286,7 @@ cmd.exe /c %LOCALAPPDATA%\Roblox\mcp.bat
 
 ## Use multiple Studio instances
 
-You can connect a single MCP client to multiple running instances of Studio at the same time. The server automatically determines which instance to use based on context (for example, if you reference a specific experience or an object that exists only in that instance).
+You can connect a single MCP client to multiple running instances of Studio at the same time. The server automatically determines which instance to use based on context (for example, if you reference a specific game or an object that exists only in that instance).
 
 You can manually switch instances using `list_roblox_studios` and `set_active_studio`.
 

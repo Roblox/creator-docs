@@ -3,7 +3,7 @@ title: Data store right to be forgotten (RTBF)
 description: Configure automated deletion of data store keys and stores when you receive a right-to-be-forgotten request, using the Data Stores Manager or the Open Cloud Configs API with config templates.
 ---
 
-**Right to be forgotten (RTBF)** for data stores lets you declare which keys and data stores hold a user's data. When Roblox processes an RTBF request for your experience, the system uses those templates to remove the matching data automatically. You can configure templates visually through the [Data Stores Manager](./data-stores-manager.md) in the Creator Hub, or programmatically through the Open Cloud [Configs API](/cloud/reference/features/configs).
+**Right to be forgotten (RTBF)** for data stores lets you declare which keys and data stores hold a user's data. When Roblox processes an RTBF request for your game, the system uses those templates to remove the matching data automatically. You can configure templates visually through the [Data Stores Manager](./data-stores-manager.md) in the Creator Hub, or programmatically through the Open Cloud [Configs API](/cloud/reference/features/configs).
 
 ## Automated RTBF
 
@@ -26,11 +26,11 @@ For an entry to be eligible for automated deletion, it must meet the following c
 The Creator Hub provides a visual interface to manage your RTBF templates without using the command line.
 
 <Alert severity="info">
-For group experiences, you must add the **View Analytics** permission to view configs, and the **Edit and publish experience** permission to view, edit, and publish configs. Additionally, the user themself must be [eligible to publish experiences](https://en.help.roblox.com/hc/en-us/articles/203313890-How-to-Publish-Public-Experiences-on-Roblox).
+For group games, you must add the **View Analytics** permission to view configs, and the **Edit and publish experience** permission to view, edit, and publish configs. Additionally, the user themself must be [eligible to publish games](https://en.help.roblox.com/hc/en-us/articles/203313890-How-to-Publish-Public-Experiences-on-Roblox).
 </Alert>
 
 1. Navigate to the [Creator Hub](https://create.roblox.com/dashboard/creations).
-1. Select the experience you want to configure.
+1. Select the game you want to configure.
 1. In the left-hand navigation menu, go to **Configure** ⟩ **Data Stores Manager**.
 1. Select the **RTBF Deletion** tab.
 1. Click **Create Template**.
@@ -134,7 +134,7 @@ You can also manage RTBF templates programmatically using the Open Cloud Configs
 				--header 'x-api-key: <API_KEY>'
 			```
 
-	 3. After verification, send this `POST` request to publish. The only way to undo this action is to restore a previous version. This action also requires that the account associated with the API key is [eligible to publish experiences](https://en.help.roblox.com/hc/en-us/articles/203313890-How-to-Publish-Public-Experiences-on-Roblox).
+	 3. After verification, send this `POST` request to publish. The only way to undo this action is to restore a previous version. This action also requires that the account associated with the API key is [eligible to publish games](https://en.help.roblox.com/hc/en-us/articles/203313890-How-to-Publish-Public-Experiences-on-Roblox).
 
 			```bash
 			curl --location --request POST 'https://apis.roblox.com/creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/DataStoresConfig/publish' \
@@ -157,5 +157,5 @@ You can also manage RTBF templates programmatically using the Open Cloud Configs
 - **Case sensitivity** — Use the exact `{UserId}` token in your patterns. Variants such as `{userId}` are not accepted.
 - **Manual verification** — Compare your patterns to your live Luau usage using [Data Stores Manager](./data-stores-manager.md) in the Creator Hub before you publish configuration.
 - **Default scopes** — If a data store uses the default scope, set `scope_pattern` to `"global"` in the key template.
-- **Test end-to-end flow on a test experience** — For full validation of your templates, consider creating a test experience and dummy account, populating it with dummy data for that account's User ID, requesting RTBF on the dummy account, and ensuring the data is deleted once the account is processed.
-- **Confirm deletions** — After onboarding on your live experience, when an RTBF request appears in your Roblox messages, verify that the corresponding data is removed within 30 days.
+- **Test end-to-end flow on a test game** — For full validation of your templates, consider creating a test game and dummy account, populating it with dummy data for that account's User ID, requesting RTBF on the dummy account, and ensuring the data is deleted once the account is processed.
+- **Confirm deletions** — After onboarding on your live game, when an RTBF request appears in your Roblox messages, verify that the corresponding data is removed within 30 days.

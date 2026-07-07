@@ -1,6 +1,6 @@
 ---
 title: Scene Analysis
-description: Use the Scene Analysis tool to identify and resolve performance issues in your experience. Check script memory, unparented instances, audio memory, animation memory, the instance composition view, and the extended scene triangle breakdown.
+description: Use the Scene Analysis tool to identify and resolve performance issues in your game. Check script memory, unparented instances, audio memory, animation memory, the instance composition view, and the extended scene triangle breakdown.
 ---
 
 The Scene Analysis tool provides a suite of views in Roblox Studio that give you at-a-glance comparative information about how your client and server scenes are put together, what resources they're using, and which instances are responsible for that resource usage. Scene Analysis is designed for use during play and test sessions, and can inspect both the client and server data models.

@@ -6,16 +6,16 @@ prev: /tutorials/curriculums/user-interface-design/wireframe-your-layouts
 
 **Implementing your designs** is the process of creating your wireframes in Studio using both built-in and custom UI elements with scripts that trigger your UI contextually. This exciting step of the tutorial is where you get to see all of your designs and hard work come together into a cohesive set of workflows that are complete and ready for player interaction.
 
-Using the [sample laser tag experience](https://www.roblox.com/games/14817965191/Laser-Tag-1A) `.rbxl` file as a reference, this section of the user interface design curriculum shows you how to bring your UI planning to life, including guidance on:
+Using the [sample laser tag game](https://www.roblox.com/games/14817965191/Laser-Tag-1A) `.rbxl` file as a reference, this section of the user interface design curriculum shows you how to bring your UI planning to life, including guidance on:
 
-- Retrieving asset IDs from the UI asset library so that you can recreate the sample laser tag experience's UI components.
+- Retrieving asset IDs from the UI asset library so that you can recreate the sample laser tag game's UI components.
 - Emulating various devices directly in Studio to see how your UI displays on different screens and aspect ratios.
 - Creating `Class.ScreenGui`, `Class.SurfaceGui`, and `Class.BillboardGui` objects to display your UI on players' screens, part surfaces, and within the 3D space, respectively.
 
-After you review the techniques in this section, you can apply them to your own projects to make exciting UI components that help players navigate what they can do within your experiences.
+After you review the techniques in this section, you can apply them to your own projects to make exciting UI components that help players navigate what they can do within your games.
 
 <Alert severity="info">
-   The instructions in this section of the tutorial show you how to exactly recreate the UI components using the UI Design Asset Library. This process takes about 90 minutes or less from start to finish. If you don't want to use the provided values, you can adjust each UI element to meet the specifications of your own experience, or use the sample itself for the rest of the tutorial.
+   The instructions in this section of the tutorial show you how to exactly recreate the UI components using the UI Design Asset Library. This process takes about 90 minutes or less from start to finish. If you don't want to use the provided values, you can adjust each UI element to meet the specifications of your own game, or use the sample itself for the rest of the tutorial.
 </Alert>
 
 ## Get asset library
@@ -95,7 +95,7 @@ Asset libraries are collections of assets you can add into your inventory for ea
   </TabItem>
 </Tabs>
 
-To get the asset library from your inventory into your experience:
+To get the asset library from your inventory into your game:
 
 1. Add the asset library to your inventory.
 
@@ -115,7 +115,7 @@ To get the asset library from your inventory into your experience:
 
 ## Emulate devices
 
-Studio's [Device Emulator](../../../studio/testing-modes.md#device-emulation) allows you to test how players will see and interact with your UI on various devices. This tool is a vital part of the implementation process because the aspect ratio of your viewport in Studio doesn't necessarily reflect the aspect ratio of the screens players use to access your experience, and it's important that your UI is both legible and accessible on every device.
+Studio's [Device Emulator](../../../studio/testing-modes.md#device-emulation) allows you to test how players will see and interact with your UI on various devices. This tool is a vital part of the implementation process because the aspect ratio of your viewport in Studio doesn't necessarily reflect the aspect ratio of the screens players use to access your game, and it's important that your UI is both legible and accessible on every device.
 
 For example, if you don't test your UI on a range of screen sizes, players with large screens may not be able to read your text or decipher your icons, and players with small screens may not be able to see the 3D space because your UI elements take up too much room on the display.
 
@@ -132,17 +132,17 @@ To emulate your UI on various screen sizes:
 
 ## Create ScreenGui objects
 
-To display UI elements on every player's screen, you can create a `Class.ScreenGui` object in the `Class.StarterGui` service. `Class.ScreenGui` objects are the primary containers for on-screen UI, and the `Class.StarterGui` service copies its contents to each player's `Class.PlayerGui` container as they enter an experience.
+To display UI elements on every player's screen, you can create a `Class.ScreenGui` object in the `Class.StarterGui` service. `Class.ScreenGui` objects are the primary containers for on-screen UI, and the `Class.StarterGui` service copies its contents to each player's `Class.PlayerGui` container as they enter a game.
 
-You can create multiple `Class.ScreenGui` objects to organize and display groupings of UI elements contextually throughout gameplay. For example, the sample laser tag experience includes five separate `Class.ScreenGui` objects that are initially disabled until players meet different conditions during the main [user flow](wireframe-your-layouts.md#develop-user-flows) of the experience:
+You can create multiple `Class.ScreenGui` objects to organize and display groupings of UI elements contextually throughout gameplay. For example, the sample laser tag game includes five separate `Class.ScreenGui` objects that are initially disabled until players meet different conditions during the main [user flow](wireframe-your-layouts.md#develop-user-flows) of the game:
 
-- **HUDGui** - Displays key information about the experience's gameplay when players are active in a round, such as the objective and each team's total points.
+- **HUDGui** - Displays key information about the gameplay when players are active in a round, such as the objective and each team's total points.
 - **PickABlasterGui** - Displays all blaster choices when players start or rejoin a round.
 - **ForceFieldGui** - Displays a hexagonal grid when players are selecting a blaster and while they are temporarily invincible.
 - **OutStateGui** - Displays a dark border around the screen when players are tagged out.
 - **RoundResultsGui** - Displays a dark overlay on top of the screen with information on which team won the round.
 
-After you create a `Class.ScreenGui` object, you can create and customize its child `Class.GuiObject|GuiObjects` according to each container's purpose. To demonstrate, in the immediate sections that follow, you will learn how to implement UI elements for the [three categories of information](choose-an-art-style.md#identify-your-ui-elements) players need to know to be successful in the sample laser tag experience. **You can adjust any part of the process to meet the specifications of your own experience**.
+After you create a `Class.ScreenGui` object, you can create and customize its child `Class.GuiObject|GuiObjects` according to each container's purpose. To demonstrate, in the immediate sections that follow, you will learn how to implement UI elements for the [three categories of information](choose-an-art-style.md#identify-your-ui-elements) players need to know to be successful in the sample laser tag game. **You can adjust any part of the process to meet the specifications of your own game**.
 
 To create a `Class.ScreenGui` object:
 
@@ -159,7 +159,7 @@ To create a `Class.ScreenGui` object:
 
 ### Objective UI
 
-Following the visual hierarchy best practices from [Wireframe Your Layouts](wireframe-your-layouts.md), this section teaches you how to implement all on-screen UI elements relating to the experience's objective. This grouping of UI elements is near the top of the screen because the objective and each team's points have the most significance on how to win the game.
+Following the visual hierarchy best practices from [Wireframe Your Layouts](wireframe-your-layouts.md), this section teaches you how to implement all on-screen UI elements relating to the game's objective. This grouping of UI elements is near the top of the screen because the objective and each team's points have the most significance on how to win the game.
 
 <figure>
     <img width="90%" img src="../../../assets/tutorials/user-interface-design/Section3/ObjectiveUI-Intro.png" />
@@ -171,7 +171,7 @@ For example, the sample provides an objective UI component that players referenc
     <img width="90%" img src="../../../assets/tutorials/user-interface-design/Section3/Objective-Intro.jpg" />
 </figure>
 
-To exactly recreate the objective UI within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
+To exactly recreate the objective UI within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) game:
 
 1. Create a container for the entire component.
 
@@ -469,15 +469,15 @@ Following the visual hierarchy best practices from [Wireframe Your Layouts](wire
 
 #### Crosshair
 
-A crosshair is a UI element that informs players where they're going to make impact when they blast their weapon. This UI element is a vital gameplay requirement for first-person shooter experiences because players need to be able to accurately aim their blaster and tag out enemy team members.
+A crosshair is a UI element that informs players where they're going to make impact when they blast their weapon. This UI element is a vital gameplay requirement for first-person shooter games because players need to be able to accurately aim their blaster and tag out enemy team members.
 
-Like most other experiences in the first-person shooter genre, the sample laser tag experience positions the crosshair in the center of the screen so players have something static to focus on while their avatar moves through the 3D space. In addition to reducing motion sickness, this placement allows the crosshair to be perceptible while also blending into the overall environment.
+Like most other games in the first-person shooter genre, the sample laser tag game positions the crosshair in the center of the screen so players have something static to focus on while their avatar moves through the 3D space. In addition to reducing motion sickness, this placement allows the crosshair to be perceptible while also blending into the overall environment.
 
 <figure>
     <img width="90%" img src="../../../assets/tutorials/user-interface-design/Section3/Crosshair-2F.png" />
 </figure>
 
-To exactly recreate the crosshair within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
+To exactly recreate the crosshair within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) game:
 
 1. Insert an **ImageLabel** into the **HUDGui** `Class.ScreenGui` object.
 
@@ -500,13 +500,13 @@ To exactly recreate the crosshair within the sample [Laser Tag](https://www.robl
 
 #### Hit marker
 
-A hit marker is a UI element that only displays when a blast makes impact with another player on the enemy team. Like the crosshair, this UI element is a vital gameplay requirement for first-person shooter experiences because it provides visual feedback of when players are successful in tagging out their opponents.
+A hit marker is a UI element that only displays when a blast makes impact with another player on the enemy team. Like the crosshair, this UI element is a vital gameplay requirement for first-person shooter games because it provides visual feedback of when players are successful in tagging out their opponents.
 
 <figure>
     <img width="90%" img src="../../../assets/tutorials/user-interface-design/Section3/Hitmarker-2F.png" />
 </figure>
 
-To exactly recreate the hit marker within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
+To exactly recreate the hit marker within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) game:
 
 1. Insert an **ImageLabel** into the **Crosshair** `Class.ImageLabel` object.
 
@@ -601,7 +601,7 @@ Now, whenever a player blasts their blaster and the blast makes impact with anot
 
 #### Blaster selector
 
-A blaster selector is a UI component that players use to select their blaster type before joining or rejoining a round. The sample laser tag experience provides two types of blasters: one that produces several beams with a wide, horizontal spread, and another that produces a single beam. The type of blaster that players select influences their strategy during the round, making this UI component an essential workflow for the overall experience.
+A blaster selector is a UI component that players use to select their blaster type before joining or rejoining a round. The sample laser tag game provides two types of blasters: one that produces several beams with a wide, horizontal spread, and another that produces a single beam. The type of blaster that players select influences their strategy during the round, making this UI component an essential workflow for the overall game.
 
 The following steps detail how to create several containers for the different UI element groupings, a header with a prompt, the navigation and select buttons, and a blaster button prefab. The scripting logic for the overall component populates different visual characteristics into the blaster button prefab according to `Class.Configuration` instances that represent each blaster type.
 
@@ -611,7 +611,7 @@ This setup allows you to create additional `Class.Configuration` instances for m
     <img width="90%" img src="../../../assets/tutorials/user-interface-design/Section3/BS-Intro.png" />
 </figure>
 
-To exactly recreate the blaster selector within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
+To exactly recreate the blaster selector within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) game:
 
 1. Create a container for the entire component.
 
@@ -688,7 +688,7 @@ To exactly recreate the blaster selector within the sample [Laser Tag](https://w
       1. Remove the default **Image** value.
       1. Set **AnchorPoint** to `0.5, 1` to set the label's origin point in the bottom-middle of itself (50% from the left to the right of the label, and 100% from the top to the bottom of the label).
       1. Set **BackgroundColor** to `0, 0, 0` to make the label black.
-      1. Set **BackgroundTransparency** to `0.3` to reduce the opacity of the label by 30%, and match all black UI elements in the experience.
+      1. Set **BackgroundTransparency** to `0.3` to reduce the opacity of the label by 30%, and match all black UI elements in the game.
       1. Set **Position** to `{0.5, 0},{1, 0}` to set the label to the bottom-middle of the frame (50% from the left to the right of the parent frame, and 100% from the top to the bottom of the parent frame).
       1. Set **Size** to `{1, 0},{0.77, 0}` to widen the label area to the space below the prompt (100% horizontally and 77% vertically of the parent frame).
 
@@ -835,7 +835,7 @@ To exactly recreate the blaster selector within the sample [Laser Tag](https://w
 <Tabs>
   <TabItem key = "1" label="PickABlasterGuiController">
 
-The following script requires a set of scripts that work together to create the blaster selector. When a player joins the experience or respawns back into a round after their health reaches zero, this script activates all of the blaster selector's UI elements until the player makes their selection.
+The following script requires a set of scripts that work together to create the blaster selector. When a player joins the game or respawns back into a round after their health reaches zero, this script activates all of the blaster selector's UI elements until the player makes their selection.
 
 ```lua
 local Players = game:GetService("Players")
@@ -1038,18 +1038,18 @@ return setupNavButtons
 </Tabs>
 
 <Alert severity = 'success'>
-Now, whenever a player joins the experience or respawns back into a round after their health reaches zero, the blaster selector UI displays, they can make a selection, and each button functions as expected.
+Now, whenever a player joins the game or respawns back into a round after their health reaches zero, the blaster selector UI displays, they can make a selection, and each button functions as expected.
 </Alert>
 
 #### Blast button
 
-A blast button is a UI component that players use to blast their blaster if they are accessing the experience through a mobile or tablet device. The sample laser tag experience uses a blaster button with an icon that depicts both a crosshair and a blast to communicate the button's function without text.
+A blast button is a UI component that players use to blast their blaster if they are accessing the game through a mobile or tablet device. The sample laser tag game uses a blaster button with an icon that depicts both a crosshair and a blast to communicate the button's function without text.
 
 <figure>
     <img width="90%" img src="../../../assets/tutorials/user-interface-design/Section3/BlasterButton-Intro.jpg" />
 </figure>
 
-To exactly recreate the blast button within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
+To exactly recreate the blast button within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) game:
 
 1. Insert an **ImageButton** into the **HUDGui** `Class.ScreenGui` object.
 
@@ -1065,7 +1065,7 @@ To exactly recreate the blast button within the sample [Laser Tag](https://www.r
    1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
    1. Set **Name** to **BlastButton**.
    1. Set **ScaleType** to **Fit** so the image fits within its container and doesn't stretch on various screen sizes.
-   1. Set **ImageTransparency** to `0.3` to reduce the opacity of the label so that it matches all black UI elements in the experience.
+   1. Set **ImageTransparency** to `0.3` to reduce the opacity of the label so that it matches all black UI elements in the game.
 1. Insert a **UIAspectRatioConstraint** into **BlastButton** to ensure the button's aspect ratio remains the same no matter the player's screen size.
 1. Reference the following `Class.ReplicatedStorage` scripts within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) place file that programmatically display the blaster button when a player is using touch input on a device that accepts touch controls.
 
@@ -1102,7 +1102,7 @@ setupTouchButtonAsync(gui)
   </TabItem>
   <TabItem key = "2" label="setupTouchButtonAsync">
 
-The following `HUDGuiSetup.setupTouchButtonAsync` module script positions and scales the blaster button near the jump button if the player is accessing the experience with a device that supports touch controls, **and** they are using touch input.
+The following `HUDGuiSetup.setupTouchButtonAsync` module script positions and scales the blaster button near the jump button if the player is accessing the game with a device that supports touch controls, **and** they are using touch input.
 
 It starts by using `Class.UserInputService.TouchEnabled` to check if the player is on a device that supports touch controls. If they are, the script waits for Roblox's core scripts to add the `TouchGui` jump button, then scales and positions `StarterGui.HUDGui.BlastButton` relative to the jump button. Specifically, it scales the blaster button to half of the jump button's size, and offsets the blaster button to the upper right of the jump button's position.
 
@@ -1192,7 +1192,7 @@ blastButton.MouseButton1Down:Connect(attemptBlastClient)
 </Tabs>
 
 <Alert severity = 'success'>
-Now, when a player joins the experience and uses touch input on a device that accepts touch controls, the blaster button displays to the top-right of the jump button.
+Now, when a player joins the game and uses touch input on a device that accepts touch controls, the blaster button displays to the top-right of the jump button.
 </Alert>
 
 ### Player UI
@@ -1205,7 +1205,7 @@ Following the visual hierarchy best practices from [Wireframe Your Layouts](wire
 
 #### Player indicator
 
-A player indicator is a UI component that players reference to quickly decipher what team they belong to as soon as they spawn into their team's spawn zone. The sample laser tag experience provides two versions of the player indicator depending on if the player is on the **green** or **pink** team.
+A player indicator is a UI component that players reference to quickly decipher what team they belong to as soon as they spawn into their team's spawn zone. The sample laser tag game provides two versions of the player indicator depending on if the player is on the **green** or **pink** team.
 
 <GridContainer numColumns="2">
   <figure>
@@ -1224,7 +1224,7 @@ Following the guidance from [Select a Color Theme](choose-an-art-style.md#select
     <img width="90%" img src="../../../assets/tutorials/user-interface-design/Section3/PI-Intro.jpg" />
 </figure>
 
-To exactly recreate the player indicator component within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
+To exactly recreate the player indicator component within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) game:
 
 1. Insert a **Frame** into the **HUDGui** `Class.ScreenGui` object.
    1. In the **Explorer** window, navigate to the **StarterGui** service.
@@ -1268,7 +1268,7 @@ To exactly recreate the player indicator component within the sample [Laser Tag]
       1. Remove the placeholder asset ID within the **Image** property. The scripts in step 7 programmatically insert the player's portrait into the image label.
       1. Set **AnchorPoint** to `0, 1` to set the label's origin point in the bottom-left of itself (0% from the left to the right of the label, and 100% from the top to the bottom of the label).
       1. Set **BackgroundColor3** to `0, 0, 0` to set the label's background color to black.
-      1. Set **BackgroundTransparency** to `0.3` to reduce the opacity of the label by 30%, and match all black UI elements in the experience.
+      1. Set **BackgroundTransparency** to `0.3` to reduce the opacity of the label by 30%, and match all black UI elements in the game.
       1. Set **Name** to **PlayerPortrait**.
       1. Set **Position** to `{0.11, 0},{1, 0}` to set the label to the left side of the polygonal shape.
       1. Set **Size** to `{0.23, 0},{1, 0}` to shrink the label.
@@ -1460,13 +1460,13 @@ Now, whenever a player joins or rejoins the round after respawning, the player i
 
 #### Force field screen
 
-A force field screen is a UI element that overlays the viewport to inform players they're safe from enemy team fire while joining or rejoining a round. Following the aesthetic guidelines for icons from [Choose an Art Style](./choose-an-art-style.md), the sample laser tag experience utilizes a semi-transparent hexagonal pattern to symbolize a force field. This design decision not only reinforces the overall futuristic art style for all UI in the experience, but it also communicates the player's state without any text or additional guidance.
+A force field screen is a UI element that overlays the viewport to inform players they're safe from enemy team fire while joining or rejoining a round. Following the aesthetic guidelines for icons from [Choose an Art Style](./choose-an-art-style.md), the sample laser tag game utilizes a semi-transparent hexagonal pattern to symbolize a force field. This design decision not only reinforces the overall futuristic art style for all UI in the game, but it also communicates the player's state without any text or additional guidance.
 
 <figure>
     <img width="90%" img src="../../../assets/tutorials/user-interface-design/Section3/Join-Complete.png" />
 </figure>
 
-To exactly recreate the force field screen within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
+To exactly recreate the force field screen within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) game:
 
 1. Insert an **ImageLabel** into the **ForceFieldGui** `Class.ScreenGui` object.
 
@@ -1544,9 +1544,9 @@ To exactly recreate the force field screen within the sample [Laser Tag](https:/
 <Tabs>
   <TabItem key = "1" label="ForceFieldClientVisuals">
 
-The following `ReplicatedStorage.ForceFieldClientVisuals` client script substitutes the default `Class.ForceField` visual with `StarterGui.ForceFieldGui`. When players load into an experience and spawn on a `Class.SpawnLocation` with a `Duration` property that is greater than 0, the default behavior in every experience is to provide their avatar with a protective blue orb that momentarily prevents them from losing health.
+The following `ReplicatedStorage.ForceFieldClientVisuals` client script substitutes the default `Class.ForceField` visual with `StarterGui.ForceFieldGui`. When players load into a game and spawn on a `Class.SpawnLocation` with a `Duration` property that is greater than 0, the default behavior in every game is to provide their avatar with a protective blue orb that momentarily prevents them from losing health.
 
-This script starts by listening to when the `Class.ForceField` is added to a character, disables the default first-person force field visuals, then enables the **ForceFieldGui** `Class.ScreenGui` object. Note that this does **not** impact third-person visuals when players look at other players respawning back into the experience.
+This script starts by listening to when the `Class.ForceField` is added to a character, disables the default first-person force field visuals, then enables the **ForceFieldGui** `Class.ScreenGui` object. Note that this does **not** impact third-person visuals when players look at other players respawning back into the game.
 
 <GridContainer numColumns="2">
   <figure>
@@ -1554,7 +1554,7 @@ This script starts by listening to when the `Class.ForceField` is added to a cha
     <figcaption>First-person force field visuals</figcaption>
   </figure>
   <figure>
-    <img src="../../../assets/tutorials/gameplay-scripting/Spawn-Respawn/Third-Person-Visuals.png" alt="Third-person force field visuals include a blue sparkling orb around the player spawning into the experience." width="100%"/>
+    <img src="../../../assets/tutorials/gameplay-scripting/Spawn-Respawn/Third-Person-Visuals.png" alt="Third-person force field visuals include a blue sparkling orb around the player spawning into the game." width="100%"/>
     <figcaption>Third-person force field visuals</figcaption>
   </figure>
 </GridContainer>
@@ -1667,13 +1667,13 @@ Now, whenever a player joins or rejoins the round after respawning, the new forc
 
 A respawn screen is a UI element that dims the viewport to inform players that they have been tagged out, and that the server is in the process of respawning them back to their spawn zone. This UI element is important because it gives players time to process that they've been tagged out, and strategize their next move before they rejoin the active round.
 
-For more information on custom respawning behavior in the sample laser tag experience, see [Respawn Characters](../gameplay-scripting/spawn-respawn.md#respawn-characters) from the Gameplay Scripting curriculum.
+For more information on custom respawning behavior in the sample laser tag game, see [Respawn Characters](../gameplay-scripting/spawn-respawn.md#respawn-characters) from the Gameplay Scripting curriculum.
 
 <figure>
     <img width="90%" img src="../../../assets/tutorials/user-interface-design/Section3/Respawn-Complete.png" />
 </figure>
 
-To exactly recreate the respawn screen within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
+To exactly recreate the respawn screen within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) game:
 
 1. Create the center information banner.
 
@@ -1694,7 +1694,7 @@ To exactly recreate the respawn screen within the sample [Laser Tag](https://www
       1. Set **Name** to **Block**.
       1. Set **Image** to `rbxassetid://14304827265` to make the image a trapezoid.
       1. Set **ImageColor** to `0,0,0` to make the trapezoid black.
-      1. Set **ImageTransparency** to `0.3` to reduce the opacity of the label by 30%, and match all black UI elements in the experience.
+      1. Set **ImageTransparency** to `0.3` to reduce the opacity of the label by 30%, and match all black UI elements in the game.
 
          <img src="../../../assets/tutorials/user-interface-design/Section3/Respawn-1B.png" width="80%" />
 
@@ -1893,14 +1893,14 @@ Now, whenever a player's health reaches zero, the respawn screen displays until 
 </Alert>
 
 <Alert severity = 'info'>
-Now that you are familiar with common `Class.GuiObject|GuiObjects` for on-screen UI, try to recreate the **RoundResultsGui** `Class.ScreenGui` object and all of its children for the on-screen display when players win or lose a match. You can use the [sample laser tag experience](https://www.roblox.com/games/14817965191/Laser-Tag-1A) `.rbxl` file as a reference, or adjust the values to meet the gameplay requirements of your own experience.
+Now that you are familiar with common `Class.GuiObject|GuiObjects` for on-screen UI, try to recreate the **RoundResultsGui** `Class.ScreenGui` object and all of its children for the on-screen display when players win or lose a match. You can use the [sample laser tag game](https://www.roblox.com/games/14817965191/Laser-Tag-1A) `.rbxl` file as a reference, or adjust the values to meet the gameplay requirements of your own game.
 </Alert>
 
 ## Create SurfaceGui objects
 
 To display UI on a part's surface in the 3D space that responds to scripting logic for **each individual player**, you can parent a `Class.SurfaceGui` object to the part that you want to display your UI within the `Class.ReplicatedStorage` service. This technique ensures your UI and its scripting logic are available to both the server and each player's client.
 
-`Class.SurfaceGui` objects contain all `Class.GuiObject|GuiObjects` that display on a part's surface in the 3D space. The sample laser tag experience only includes one instance of a `Class.SurfaceGui` object: the cooldown meter that displays over each player's blaster. This object needs scripting logic for every player because it actively responds to each individual player's input, and provides visual feedback of when they can blast their blaster again.
+`Class.SurfaceGui` objects contain all `Class.GuiObject|GuiObjects` that display on a part's surface in the 3D space. The sample laser tag game only includes one instance of a `Class.SurfaceGui` object: the cooldown meter that displays over each player's blaster. This object needs scripting logic for every player because it actively responds to each individual player's input, and provides visual feedback of when they can blast their blaster again.
 
 To create a `Class.SurfaceGui` object:
 
@@ -1918,7 +1918,7 @@ A cooldown meter is a UI component that informs players how long they have to wa
 
 <video controls src="../../../assets/tutorials/user-interface-design/Section3/CooldownMeter-Intro.mp4" width="70%"></video>
 
-To exactly recreate the cooldown meter within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
+To exactly recreate the cooldown meter within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) game:
 
 1. Create a part to hold your `Class.SurfaceGui` object.
 
@@ -2159,12 +2159,12 @@ Now, whenever a player blasts their blaster, the cooldown bar animates to commun
 
 In order to display UI elements within the 3D space that respond to scripting logic and always face each player's camera regardless of their viewing angle, such as player names or map markers, you can create a `Class.BillboardGui` object as a child of a `Class.BasePart` or `Class.Attachment` that exists in the 3D space.
 
-The sample laser tag experience includes two separate `Class.BillboardGui` objects within the `Class.ReplicatedStorage` service:
+The sample laser tag game includes two separate `Class.BillboardGui` objects within the `Class.ReplicatedStorage` service:
 
 - **OtherPlayerIndicatorGuiPrefab** - Displays a pink or green circle above each player's head when they are active in a round.
 - **TaggedOutIndicatorGuiPrefab** - Displays above a player's head when they are tagged out of the round.
 
-After you create a `Class.BillboardGui` object, you can create and customize its child `Class.GuiObject|GuiObjects` according to each container's purpose. To demonstrate, in the immediate sections that follow, you will learn how to implement UI elements for both indicator types within the sample laser tag experience. **You can adjust any part of the process to meet the specifications of your own experience**.
+After you create a `Class.BillboardGui` object, you can create and customize its child `Class.GuiObject|GuiObjects` according to each container's purpose. To demonstrate, in the immediate sections that follow, you will learn how to implement UI elements for both indicator types within the sample laser tag game. **You can adjust any part of the process to meet the specifications of your own game**.
 
 To create a `Class.BillboardGui` object:
 
@@ -2175,13 +2175,13 @@ To create a `Class.BillboardGui` object:
 
 ### Team indicator
 
-A team indicator is a UI element that informs players which team other players in the round belong to so that they can easily differentiate between their allies and enemy team members. This information is important because the gameplay of a first-person shooter experience requires players to make quick strategic decisions while they're in combat zones so that they don't get tagged out and lose the match.
+A team indicator is a UI element that informs players which team other players in the round belong to so that they can easily differentiate between their allies and enemy team members. This information is important because the gameplay of a first-person shooter game requires players to make quick strategic decisions while they're in combat zones so that they don't get tagged out and lose the match.
 
 <figure>
     <img width="90%" img src="../../../assets/tutorials/user-interface-design/Section3/Team-Indicator-Intro.jpg" />
 </figure>
 
-To exactly recreate the team indicator within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
+To exactly recreate the team indicator within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) game:
 
 1. Insert a **BillboardGui** object into a temporary rig.
 
@@ -2355,13 +2355,13 @@ Now, whenever a player's is in an active round, team indicators display over oth
 
 ### Tagged out indicator
 
-A tagged out indicator is a UI element that informs players when other players are no longer active in the round and are in the process of respawning back to their spawn zone. This information is important because the gameplay of a first-person shooter experience requires players to move onto their next target as soon as they tag out a player so that they don't become vulnerable in the arena by playing in the same location for too long.
+A tagged out indicator is a UI element that informs players when other players are no longer active in the round and are in the process of respawning back to their spawn zone. This information is important because the gameplay of a first-person shooter game requires players to move onto their next target as soon as they tag out a player so that they don't become vulnerable in the arena by playing in the same location for too long.
 
 <figure>
     <img width="90%" img src="../../../assets/tutorials/user-interface-design/Section3/TOI-Intro.png" />
 </figure>
 
-To exactly recreate the tagged out indicator within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
+To exactly recreate the tagged out indicator within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) game:
 
 1. Insert a **BillboardGui** object into a temporary rig so that you can visualize the changes in each step of the process.
 
@@ -2420,7 +2420,7 @@ To exactly recreate the tagged out indicator within the sample [Laser Tag](https
 <Tabs>
   <TabItem key = "1" label="SetupHumanoid">
 
-The following `ServerScriptService.SetupHumanoid` server script runs as soon as a player loads the experience. It ensures that whenever a player's character is added to the data model, `setupHumanoidAsync` is called with their `Class.Humanoid`.
+The following `ServerScriptService.SetupHumanoid` server script runs as soon as a player loads the game. It ensures that whenever a player's character is added to the data model, `setupHumanoidAsync` is called with their `Class.Humanoid`.
 
 ```lua
 local Players = game:GetService("Players")
@@ -2530,4 +2530,4 @@ return onHumanoidDied
 Now, whenever a player's health reaches zero, the tagged out indicator displays above their head until they respawn.
 </Alert>
 
-Congratulations on completing the User Interface Design Curriculum! Now that you have experience creating an art style, wireframing your layouts, and implementing your designs in Studio from start to finish, you can extend your project with new UI and functionality, or follow additional tutorial curricula, such as the [Gameplay Scripting Curriculum](../gameplay-scripting/index.md) that teaches you about the general organization and key implementation details of the sample laser tag experience. Happy creating!
+Congratulations on completing the User Interface Design Curriculum! Now that you have experience creating an art style, wireframing your layouts, and implementing your designs in Studio from start to finish, you can extend your project with new UI and functionality, or follow additional tutorial curricula, such as the [Gameplay Scripting Curriculum](../gameplay-scripting/index.md) that teaches you about the general organization and key implementation details of the sample laser tag game. Happy creating!

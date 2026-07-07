@@ -3,7 +3,7 @@ title: Rig Generator
 description: The Rig Generator tool lets you insert pre-built character models.
 ---
 
-The **Rig Generator** tool lets you quickly insert basic pre-built character rigs into your experience. You can also insert a rig of your account's avatar character, including character customizations and accessories. The tool inserts character `Class.Model|Models` with the appropriate joints and humanoid structure to support [animation](../animation/index.md), [accessories](../avatar/rigid-accessories/index.md), and [character customizations](../characters/appearance.md).
+The **Rig Generator** tool lets you quickly insert basic pre-built character rigs into your games. You can also insert a rig of your account's avatar character, including character customizations and accessories. The tool inserts character `Class.Model|Models` with the appropriate joints and humanoid structure to support [animation](../animation/index.md), [accessories](../avatar/rigid-accessories/index.md), and [character customizations](../characters/appearance.md).
 
 1. From the toolbar's **Avatar** or **Home** tab, click **Character**.
 

@@ -7,7 +7,7 @@ prev: /tutorials/fundamentals/coding-2/multiple-parameters-and-arguments
 
 ### Series description
 
-Many experiences have actions that only take place if a list of requirements are met. You may have seen rooms only specific teams could enter or inventory items only some players could purchase. This series will cover how to set up code that says, "If this happens, then do that."
+Many games have actions that only take place if a list of requirements are met. You may have seen rooms only specific teams could enter or inventory items only some players could purchase. This series will cover how to set up code that says, "If this happens, then do that."
 
 ### Objectives and prerequisites
 

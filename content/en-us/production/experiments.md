@@ -3,7 +3,7 @@ title: Experiments
 description: Experiments let you run A/B tests within your experiences.
 ---
 
-**Experiments** let you run in-game and matchmaking A/B tests to measure the causal impact of changes to your experience. For example, you can show different onboarding experiences to different players and measure the difference in playtime, retention, and other key performance indicators.
+**Experiments** let you run in-game and matchmaking A/B tests to measure the causal impact of changes to your game. For example, you can show different onboarding experiences to different players and measure the difference in playtime, retention, and other key performance indicators.
 
 Experiments are excellent for measuring the following:
 
@@ -16,15 +16,15 @@ Experiments are excellent for measuring the following:
 
 Experiments come in two types:
 
-- **In-experience** experiments let you measure the impact of different [config values](configs.md).
-- **Matchmaking experiments** let you measure the impact of different [custom matchmaking configurations](../matchmaking/customize-matchmaking.md). Unlike in-experience experiments, you can only run one matchmaking experiment at a time.
+- **In-game** experiments let you measure the impact of different [config values](configs.md).
+- **Matchmaking experiments** let you measure the impact of different [custom matchmaking configurations](../matchmaking/customize-matchmaking.md). Unlike in-game experiments, you can only run one matchmaking experiment at a time.
 
 <Tabs>
 
-  <TabItem key = "1" label="In-experience">
+  <TabItem key = "1" label="In-game">
 
-1. If you don't already have a [config](configs.md), create one for your experience.
-1. On the [Creator Hub](https://create.roblox.com/dashboard/creations) **Experiments** page for your experience, click **Create experiment**.
+1. If you don't already have a [config](configs.md), create one for your game.
+1. On the [Creator Hub](https://create.roblox.com/dashboard/creations) **Experiments** page for your game, click **Create experiment**.
 1. For **Type**, choose **In-experience**.
 1. Specify a name, goal metric, and planned duration for the experiment. Experiments run for between 14-60 days.
 
@@ -32,7 +32,7 @@ Experiments come in two types:
 
 1. Choose a percent rollout. This number is the percentage of players that you want to include in the experiment.
 
-   In general, the more people you include in an experiment, the better the data, but use your judgment on what's best for your experience.
+   In general, the more people you include in an experiment, the better the data, but use your judgment on what's best for your game.
 
    <Alert severity="success">
    Pay attention to the [minimum detectable effect](#best-practices-for-experiments), which is the smallest change in the selected metric that the experiment can reliably detect.
@@ -60,8 +60,8 @@ Experiments come in two types:
   </TabItem>
   <TabItem key = "2" label="Matchmaking">
 
-1. If you don't already have a [custom matchmaking configuration](../matchmaking/customize-matchmaking.md), create one for your experience.
-1. On the [Creator Hub](https://create.roblox.com/dashboard/creations) **Experiments** page for your experience, click **Create experiment**.
+1. If you don't already have a [custom matchmaking configuration](../matchmaking/customize-matchmaking.md), create one for your game.
+1. On the [Creator Hub](https://create.roblox.com/dashboard/creations) **Experiments** page for your game, click **Create experiment**.
 1. For **Type**, choose **Matchmaking**.
 1. Specify a name, goal metric, and planned duration for the experiment. Experiments run for between 14-60 days.
 
@@ -97,12 +97,12 @@ Experiments track all of the following metrics over the experiment duration.
 
 Metric | Description
 :--- | :---
-D1 retention | Percentage of players who returned to your experience after one day.
-D7 retention | Percentage of players who returned to your experience after one week.
-Playtime | Average amount of time players spent within your experience. Cumulative for the duration of the experiment.
+D1 retention | Percentage of players who returned to your game after one day.
+D7 retention | Percentage of players who returned to your game after one week.
+Playtime | Average amount of time players spent within your game. Cumulative for the duration of the experiment.
 ARPU | Average revenue per user. Revenue divided by the number of players. Cumulative for the duration of the experiment.
-ARPPU | Average revenue per paying user. Revenue divided by the number of players who purchased an experience-related item. Cumulative for the duration of the experiment.
-Payer conversion rate | Percentage of players who purchased an experience-related item.
+ARPPU | Average revenue per paying user. Revenue divided by the number of players who purchased a game-related item. Cumulative for the duration of the experiment.
+Payer conversion rate | Percentage of players who purchased a game-related item.
 Session time | Playtime divided by number of sessions. Cumulative for the duration of the experiment.
 
 ### Experiment status
@@ -111,7 +111,7 @@ The **Experiments** page shows the following statuses for experiments.
 
 Status | Description
 :--- | :---
-Completed | The experiment is over, which happens when you stop it manually, when you reach a decision, or automatically shortly after the decision date (14 days after for in-experience, immediately for matchmaking). You can still review the details and results.
+Completed | The experiment is over, which happens when you stop it manually, when you reach a decision, or automatically shortly after the decision date (14 days after for in-game, immediately for matchmaking). You can still review the details and results.
 Decision needed | The experiment has reached its decision date. Now is a good time to review the results.
 Running | The experiment is running but has yet to reach its decision date.
 Scheduled | The experiment is schedule to start at a future date.
@@ -120,10 +120,10 @@ Draft | The experiment hasn't been started or scheduled. You can finish setting 
 ## Add experiments to your code
 
 <Alert severity="info">
-This section only applies to in-experience experiments. Matchmaking experiments do not require code changes.
+This section only applies to in-game experiments. Matchmaking experiments do not require code changes.
 </Alert>
 
-Applying in-experience experiments is similar to [applying configs](configs.md#add-configs-to-your-code). The main difference is the use of `Class.ConfigService:GetConfigForPlayerAsync()` rather than `Class.ConfigService:GetConfigAsync()`.
+Applying in-game experiments is similar to [applying configs](configs.md#add-configs-to-your-code). The main difference is the use of `Class.ConfigService:GetConfigForPlayerAsync()` rather than `Class.ConfigService:GetConfigAsync()`.
 
 `Class.ConfigService:GetConfigForPlayerAsync()|GetConfigForPlayerAsync()` retrieves a player-specific snapshot. When you call `Class.ConfigSnapshot:GetValue()|GetValue()`, the snapshot checks for an active experiment and enrolls (or doesn't enroll) the user based on the rollout percentage.
 
@@ -143,7 +143,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 - After you call `Class.ConfigSnapshot:GetValue()|GetValue()` on a player-specific snapshot, the player associated with the snapshot is enrolled in the experiment for that key and that key only. All subsequent calls to the method return the same control or variant for the duration of the experiment. Only the first call is random.
 
   <Alert severity="success">
-  Wait to call `Class.ConfigSnapshot:GetValue()|GetValue()` until you need it. Calling `Class.ConfigSnapshot:GetValue()|GetValue()` too early can cause you to enroll players who never interact with the part of the experience you're experimenting on.
+  Wait to call `Class.ConfigSnapshot:GetValue()|GetValue()` until you need it. Calling `Class.ConfigSnapshot:GetValue()|GetValue()` too early can cause you to enroll players who never interact with the part of the game you're experimenting on.
   </Alert>
 
 - Enrollment in experiments isn't limited to new users. Even if a user previously received a value from `Class.ConfigService:GetConfigAsync()|GetConfigAsync()`, you can still enroll them in an experiement using a player-specific snapshot from `Class.ConfigService:GetConfigForPlayerAsync()|GetConfigForPlayerAsync()`.
@@ -153,7 +153,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 If you want to target some portion of your players that meet specific criteria, you have to write additional code to check for those criteria and only then call `Class.ConfigSnapshot:GetValue()|GetValue()` to enroll them in the experiment. Consider the following example:
 
-- You want to test a new control scheme in your experience.
+- You want to test a new control scheme in your game.
 - You don't want to include existing players (who are presumably used to the existing scheme), only new players.
 
 Your code might look something like this:
@@ -202,7 +202,7 @@ For convenience, the results page lets you replace the default config value with
 
 - **Use the minimum detectable effect (MDE)** to decide if your experiment is worth running.
 
-  Roblox calculates MDE using your goal metric and number of players per variant, which is based on daily active users, rollout percentage, experiment duration, and variant splits. If the MDE is too high for your goal metric (for example, more than 100%), it's unlikely you can reach statistical significance. Experiences with fewer than 1,000 daily active users might struggle to get useful data from experiments.
+  Roblox calculates MDE using your goal metric and number of players per variant, which is based on daily active users, rollout percentage, experiment duration, and variant splits. If the MDE is too high for your goal metric (for example, more than 100%), it's unlikely you can reach statistical significance. Games with fewer than 1,000 daily active users might struggle to get useful data from experiments.
 
   ![Insufficient MDE screen during creation.](../assets/analytics/configs/experiment-mde.png)
 
@@ -212,12 +212,12 @@ For convenience, the results page lets you replace the default config value with
 
 - **Don't act without statistical significance.** Even seemingly large changes in player behavior might not be statistically significant, generally due to small sample size. If a change isn't statistically significant, ignore it.
 
-- **Avoid changes during experiments**. Major bugs of course need fixes, but changes to experience content can impact player behavior and invalidate your results, even if the changes **seem** unrelated to your experiment. Similarly, only run experiments simultaneously if you're confident they won't interact with each other.
+- **Avoid changes during experiments**. Major bugs of course need fixes, but changes to experiegamence content can impact player behavior and invalidate your results, even if the changes **seem** unrelated to your experiment. Similarly, only run experiments simultaneously if you're confident they won't interact with each other.
 
 - **Use confidence intervals for deep dives** into metrics and to check for borderline cases of statistical significance. If the confidence interval is too wide, the metric might never reach statistical significance.
 
 - If one metric is significantly up and another significantly down, you have to **decide whether the trade-off is worth it**, possibly in conjunction with other statistically significant movements.
 
-- Experiments provide strong signal, but **statistical significance deals in probabilities, not certainties**—hence the confidence interval. Data variability, sample size, and magnitude of the change all impact the probability of detecting whether a variant affected player behavior. Any action you take based on the results of an experiment should be balanced against qualitative data like player feedback and your overall vision for the experience.
+- Experiments provide strong signal, but **statistical significance deals in probabilities, not certainties**—hence the confidence interval. Data variability, sample size, and magnitude of the change all impact the probability of detecting whether a variant affected player behavior. Any action you take based on the results of an experiment should be balanced against qualitative data like player feedback and your overall vision for the game.
 
-- **Document your findings and decisions.** Even if you don't use them to run additional experiments, having a body of knowledge and evidence can inform how you design your experiences.
+- **Document your findings and decisions.** Even if you don't use them to run additional experiments, having a body of knowledge and evidence can inform how you design your games.

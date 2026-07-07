@@ -111,7 +111,7 @@ A prepopulated design sheet named **StyleSheet** is created via the **Create&nbs
 
 <img src="../../assets/ui/ui-styling/SE-Initial-Config.png" width="640" alt="Initial configuration of design sheet in Style Editor." />
 
-Once you have a design sheet, you can set up a test [on‑screen container](../on-screen-containers.md) to use with the Style Editor, or an [in‑experience container](../in-experience-containers.md) if desired.
+Once you have a design sheet, you can set up a test [on‑screen container](../on-screen-containers.md) to use with the Style Editor, or an [in‑game container](../in-experience-containers.md) if desired.
 
 1. Hover over `Class.StarterGui` in the [Explorer](../../studio/explorer.md) and insert a `Class.ScreenGui`.
 2. Confirm that a new `Class.StyleLink` instance appears under the `Class.ScreenGui` with its `Class.StyleLink.StyleSheet|StyleSheet` property set to the **StyleSheet** design sheet.

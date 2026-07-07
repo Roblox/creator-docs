@@ -107,7 +107,7 @@ prev: /education/lesson-plans/digital-citizenship/coding-fundamentals
 
 1. Lead students through the following tutorial: <a href="../../../tutorials/curriculums/animator/index.md" target="_blank" rel="noopener">Animation lesson</a>.
 
-   - Note that this lesson uses a template which is not needed. Students will build this in their obstacle course experience.
+   - Note that this lesson uses a template which is not needed. Students will build this in their obstacle course game.
    - Skip any pages referring to Challenge Checkpoints.
    - Slides are provided to help you throughout the tutorial.
 

@@ -22,7 +22,7 @@ Covered in this course are functions, parameters, arguments, and returning value
 
     Understand what it means for code to be "in scope".
 
-    Set up events within an experience and use them to tell the functions when to run.
+    Set up events within a game and use them to tell the functions when to run.
 
     Practice using functions and events to create traps and buttons.
     </td>

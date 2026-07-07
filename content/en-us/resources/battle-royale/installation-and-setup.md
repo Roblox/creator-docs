@@ -5,7 +5,7 @@ prev: /resources/battle-royale
 next: /resources/battle-royale/run-the-game
 ---
 
-To setup the Battle Royale experience, you must download [Studio](../../studio/setup.md) and the project [reference files](#reference-files).
+To setup the Battle Royale game, you must download [Studio](../../studio/setup.md) and the project [reference files](#reference-files).
 
 Additional configuration of the [place IDs](#copy-and-paste-place-ids), [server](#adjust-server-fill), and [publishing](#publish-additional-places) settings are also required before continuing on to [running the game](../../resources/battle-royale/run-the-game.md).
 

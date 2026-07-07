@@ -300,7 +300,7 @@ Assets are sorted by various **inventories** as selected through the collapsible
 
 <img src="../../assets/studio/asset-manager/Inventory-Sorts.png" width="800" alt="A preview of how inventories are sorted in the left navigation of the Asset Manager." />
 
-- **\<Experience Name>** — The open game's inventory, displayed by its name, with assets [shared with the game](../../projects/assets/privacy.md#to-experiences) listed under **Project**.
+- **\<Experience Name>** — The open game's inventory, displayed by its name, with assets [shared with the game](../../projects/assets/privacy.md#to-games) listed under **Project**.
 - **Places In Experience** — The game's [places](../../production/publishing/publish-games-and-places.md).
 - **My Inventory** — Assets imported to your own user account, [shared with you](../../projects/assets/privacy.md#to-creators), or acquired from the [Creator Store](../../production/creator-store.md).
 - **Group Inventories** — Assets imported into [groups](../../projects/groups.md) you own or groups you belong to (assuming you have sufficient [permissions](../../projects/groups.md#roles-and-permissions) within the group), or assets [shared with the groups](../../projects/assets/privacy.md#to-groups). Right‑clicking over a group reveals a context menu with the following options:
@@ -474,7 +474,7 @@ The **filter items** button lets you control which assets are displayed.
 
 ### Asset import
 
-The **asset import** button lets you import one or more assets of any asset type. Imported assets enter the moderation queue and, upon approval, are added to the inventory of the user/group that owns the experience.
+The **asset import** button lets you import one or more assets of any asset type. Imported assets enter the moderation queue and, upon approval, are added to the inventory of the user/group that owns the game.
 
 <img src="../../assets/studio/asset-manager/Import-Button.png" width="600" alt="Location of the import button in the Asset Manager." />
 

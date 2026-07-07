@@ -1,14 +1,14 @@
 ---
 title: Cross-server messaging
-description: Cross-server messaging enables you to communicate with other servers or client instances of your experience.
+description: Cross-server messaging enables you to communicate with other servers or client instances of your game.
 ---
 
-Normally, the code within an experience can only affect the server or clients that it's running on, but there may be situations where you want different servers to communicate with each other, including:
+Normally, the code within a game can only affect the server or clients that it's running on, but there may be situations where you want different servers to communicate with each other, including:
 
-- **Global Announcements** &mdash; Send announcements such as "A user found a special item!" to all the experience's servers.
-- **Real-Time Server Browser** &mdash; Compile a list of all the experience's servers and who is in them (updated every minute) and display the list on a maximum of 20 servers.
+- **Global Announcements** &mdash; Send announcements such as "A user found a special item!" to all the game's servers.
+- **Real-Time Server Browser** &mdash; Compile a list of all the game's servers and who is in them (updated every minute) and display the list on a maximum of 20 servers.
 
-You can support cross-server messaging in your experience using `Class.MessagingService`. You can also use the [Teleportation Playground](https://www.roblox.com/games/3112653247/Teleportation-Playground) sample experience to see how cross‑server messaging works before you implement it. Lastly, see [here](../cloud/guides/usage-messaging.md) to explore cross‑server communication using external tools.
+You can support cross-server messaging in your game using `Class.MessagingService`. You can also use the [Teleportation Playground](https://www.roblox.com/games/3112653247/Teleportation-Playground) sample game to see how cross‑server messaging works before you implement it. Lastly, see [here](../cloud/guides/usage-messaging.md) to explore cross‑server communication using external tools.
 
 ## Cross-server messaging setup
 
@@ -42,7 +42,7 @@ end)
 
 ### Publish messages
 
-Use `Class.MessagingService:PublishAsync()` to match a specific topic and publish a message to it. For example, the following code sample uses `Class.MessagingService:PublishAsync()|PublishAsync()` to notify all users when a user joins a new server, including the `Class.Player.Name` representing the user's display name and the `Class.DataModel.JobId|JobId`, a unique identifier for the running experience server instance.
+Use `Class.MessagingService:PublishAsync()` to match a specific topic and publish a message to it. For example, the following code sample uses `Class.MessagingService:PublishAsync()|PublishAsync()` to notify all users when a user joins a new server, including the `Class.Player.Name` representing the user's display name and the `Class.DataModel.JobId|JobId`, a unique identifier for the running game server instance.
 
 ```lua
 local MessagingService = game:GetService("MessagingService")

@@ -439,9 +439,9 @@ To create a `Class.PathfindingLink` using this example:
 
 ## Streaming compatibility
 
-In-experience [instance streaming](../workspace/streaming/index.md) is a powerful feature that dynamically loads and unloads 3D content as a player's character moves around the world. As they explore the 3D space, new subsets of the space stream to their device and some of the existing subsets might stream out.
+In-game [instance streaming](../workspace/streaming/index.md) is a powerful feature that dynamically loads and unloads 3D content as a player's character moves around the world. As they explore the 3D space, new subsets of the space stream to their device and some of the existing subsets might stream out.
 
-Consider the following best practices for using `Class.PathfindingService` in streaming-enabled experiences:
+Consider the following best practices for using `Class.PathfindingService` in streaming-enabled games:
 
 - Streaming can block or unblock a given path as a character moves along it. For example, while a character runs through a forest, a tree might stream in somewhere ahead of them and obstruct the path. To make pathfinding work seamlessly with streaming, it's highly recommended that you use the [handling blocked paths](#blocked-paths) technique and re-compute the path when necessary.
 

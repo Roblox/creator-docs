@@ -13,7 +13,7 @@ description: Glossary of matchmaking terms.
 <tbody>
   <tr>
     <td>**Joining player**</td>
-    <td>The player being matched to a server in your experience.</td>
+    <td>The player being matched to a server in your game.</td>
   </tr>
   <tr>
     <td>**Common device**</td>

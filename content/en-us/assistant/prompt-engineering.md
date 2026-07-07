@@ -4,7 +4,7 @@ description: Get tips and tricks on how best to prompt Roblox's AI Assistant to 
 ---
 
 <Alert severity="success">
-[Share your prompts and experiences](https://devforum.roblox.com/t/check-out-the-generative-ai-stream-and-let-us-know-your-best-prompts/3215844) in the Roblox forum so that we can make Assistant better!
+[Share your prompts and games](https://devforum.roblox.com/t/check-out-the-generative-ai-stream-and-let-us-know-your-best-prompts/3215844) in the Roblox forum so that we can make Assistant better!
 </Alert>
 
 This document gives guidance on prompting Assistant and provides examples and inspiration on what Assistant can do.

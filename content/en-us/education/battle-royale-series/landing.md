@@ -1,12 +1,12 @@
 ---
 title: Create a Battle Royale
-description: How to make a game in Roblox Studio. Learn to design and code a battle royale experience for Roblox as a beginner.
+description: How to make a game in Roblox Studio. Learn to design and code a battle royale game for Roblox as a beginner.
 next: /education/battle-royale-series/project-setup
 ---
 
 ### Series description
 
-Create a round-based multiplayer experience where users compete to be the last player left! A great next lesson after the adventure game, this series expands on core concepts in game design and computer science. Once finished, the experience can be easily customized with unique gameplay elements and monetized.
+Create a round-based multiplayer game where users compete to be the last player left! A great next lesson after the adventure game, this series expands on core concepts in game design and computer science. Once finished, the game can be easily customized with unique gameplay elements and monetized.
 
 <video controls src="../../assets/education/battle-royale-series/battleRoyal_webFinal.mp4" width="100%"></video>
 
@@ -52,11 +52,11 @@ Create a round-based multiplayer experience where users compete to be the last p
 <tbody>
    <tr>
     <td><a href="../../education/battle-royale-series/project-setup.md">Project Setup</a></td>
-    <td>Plan out a vision for the experience and build out a map to test gameplay and movement with.</td>
+    <td>Plan out a vision for the game and build out a map to test gameplay and movement with.</td>
    </tr>
    <tr>
     <td><a href="../../education/battle-royale-series/coding-the-game-loop.md">Coding the Game Loop</a></td>
-    <td>Use module scripts to code a game loop that will run in the background of the experience.</td>
+    <td>Use module scripts to code a game loop that will run in the background of the game.</td>
    </tr>
    <tr>
    <td><a href="../../education/battle-royale-series/managing-players.md">Managing Players</a></td>
@@ -80,7 +80,7 @@ Create a round-based multiplayer experience where users compete to be the last p
     </tr>
      <tr>
     <td><a href="../../education/battle-royale-series/finishing-the-project.md">Finishing the Project</a></td>
-    <td>Find assets to decorate the map and see optional challenges to take the experience further.</td>
+    <td>Find assets to decorate the map and see optional challenges to take the game further.</td>
    </tr>
 </tbody>
 </table>

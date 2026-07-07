@@ -5,7 +5,7 @@ description: ViewportFrames use a camera to render 3D objects into a 2D viewport
 
 A `Class.ViewportFrame` uses a camera to render 3D objects into a 2D viewport. Ideal use cases include:
 
-- A minimap of your experience directly in the corner of a user's screen.
+- A minimap of your game directly in the corner of a user's screen.
 - 3D models of items in an inventory menu.
 - Rotating objects that a character has equipped.
 
@@ -18,14 +18,14 @@ A `Class.ViewportFrame` uses a camera to render 3D objects into a 2D viewport. I
 
 If you want a 3D object to move with the camera:
 
-1. Position your camera view within the experience so that the object you want to see within the frame is visible.
+1. Position your camera view within the game so that the object you want to see within the frame is visible.
 2. Add a new `Class.ViewportFrame` to the [screen](../ui/on-screen-containers.md) and then make sure it's selected in the **Explorer**.
 3. In the **Properties** window, assign the `Class.ViewportFrame.CurrentCamera|CurrentCamera` property to the camera:
 
 	 1. Select the `Class.ViewportFrame.CurrentCamera|CurrentCamera` property. Your cursor changes.
 	 2. In the **Explorer** window, click on the top-level `Class.Camera` object.
 
-4. Parent the desired 3D object to the new `Class.ViewportFrame`. Note that if you still want to see the object within your experience, you must duplicate it in the `Class.Workspace` and then parent the **duplicate** object to the `Class.ViewportFrame`.
+4. Parent the desired 3D object to the new `Class.ViewportFrame`. Note that if you still want to see the object within your game, you must duplicate it in the `Class.Workspace` and then parent the **duplicate** object to the `Class.ViewportFrame`.
 
 When you move your camera, the object will also move within the `Class.ViewportFrame`.
 
@@ -38,7 +38,7 @@ When you want to update the view of your `Class.ViewportFrame`, be sure to updat
 
 If you want the 3D object to remain static:
 
-1. Position your camera view within the experience so that the object you want to see is in the exact position you want to see it within the frame.
+1. Position your camera view within the game so that the object you want to see is in the exact position you want to see it within the frame.
 2. In the **Explorer** window, duplicate the top-level `Class.Camera` object, then rename it to an identifiable name like `ViewportCam`.
 3. Add a new `Class.ViewportFrame` to the [screen](../ui/on-screen-containers.md) and then make sure it's selected in the **Explorer**.
 4. In the **Properties** window, assign the frame's `Class.ViewportFrame.CurrentCamera|CurrentCamera` property to the **duplicated** camera:
@@ -46,7 +46,7 @@ If you want the 3D object to remain static:
 	 1. Select the `Class.ViewportFrame.CurrentCamera|CurrentCamera` property. Your cursor changes.
 	 2. In the **Explorer** window, click on the duplicated camera object.
 
-5. Parent the desired 3D object to the new `Class.ViewportFrame`. Note that if you still want to see the object within your experience, you must duplicate it in the `Class.Workspace` and then parent the **duplicate** object to the `Class.ViewportFrame`.
+5. Parent the desired 3D object to the new `Class.ViewportFrame`. Note that if you still want to see the object within your game, you must duplicate it in the `Class.Workspace` and then parent the **duplicate** object to the `Class.ViewportFrame`.
 
 </TabItem>
 <TabItem label="Rotation">

@@ -1,12 +1,12 @@
 ---
 title: Post-processing effects
-description: Post-processing effects are customizable filters that quickly enrich the visuals of an experience.
+description: Post-processing effects are customizable filters that quickly enrich the visuals of a game.
 ---
 
-**Post-processing effects** are customizable filters that allow you to quickly enrich the visuals of your experience. Using the post-processing effect objects in the `Class.Lighting` service or `Class.Camera`, you can:
+**Post-processing effects** are customizable filters that allow you to quickly enrich the visuals of your game. Using the post-processing effect objects in the `Class.Lighting` service or `Class.Camera`, you can:
 
 - Simulate a camera viewing a bright light and exaggerate its glow ([bloom](#bloom)).
-- Apply a Gaussian [blur](#blur) to the entirety of your experience, or add a blur to parts of your experience that aren't in focus ([depth‑of‑field](#depth-of-field)).
+- Apply a Gaussian [blur](#blur) to the entirety of your game, or add a blur to parts of your game that aren't in focus ([depth‑of‑field](#depth-of-field)).
 - Enhance an environment's appearance to create a specific mood through hue ([color correction](#color-correction)).
 - Render a halo of light that moves with the sun ([sun rays](#sun-rays)).
 
@@ -17,7 +17,7 @@ description: Post-processing effects are customizable filters that quickly enric
 
 ## Add post-processing effects
 
-When you add post-processing effects to the `Class.Lighting` service, they display to **all players** who enter the experience. This is useful for effects
+When you add post-processing effects to the `Class.Lighting` service, they display to **all players** who enter the game. This is useful for effects
 that affect the global environment, such as [sun rays](#sun-rays).
 
 When you add post-processing effects to the `Class.Camera` object, they only display to a **specific player**. This is useful for effects that should only pertain to that player based on their actions, such as blurring the 3D world view when they have a UI menu open.
@@ -44,14 +44,14 @@ To add post-processing effects to either the `Class.Lighting` service or `Class.
 
 ## Bloom
 
-The `Class.BloomEffect` effect exaggerates lights within your experience by simulating a camera viewing a bright light. When this effect has a high value, parts with light colors glow.
+The `Class.BloomEffect` effect exaggerates lights within your game by simulating a camera viewing a bright light. When this effect has a high value, parts with light colors glow.
 
 <Tabs>
 <TabItem label="Default">
-<img src="../assets/lighting-and-effects/post-processing/BloomEffect-Without.jpg" width="800" height="450" alt="Experience without any effects applied" />
+<img src="../assets/lighting-and-effects/post-processing/BloomEffect-Without.jpg" width="800" height="450" alt="Game without any effects applied" />
 </TabItem>
 <TabItem label="Bloom Effect">
-<img src="../assets/lighting-and-effects/post-processing/BloomEffect-With.jpg" width="800" height="450" alt="Experience with BloomEffect applied" />
+<img src="../assets/lighting-and-effects/post-processing/BloomEffect-With.jpg" width="800" height="450" alt="Game with BloomEffect applied" />
 </TabItem>
 </Tabs>
 
@@ -61,10 +61,10 @@ The `Class.BlurEffect` effect applies a Gaussian blur to the entirety of the 3D 
 
 <Tabs>
 <TabItem label="Default">
-<img src="../assets/lighting-and-effects/post-processing/BlurEffect-Without.jpg" width="800" height="450" alt="Experience without any effects applied" />
+<img src="../assets/lighting-and-effects/post-processing/BlurEffect-Without.jpg" width="800" height="450" alt="Game without any effects applied" />
 </TabItem>
 <TabItem label="Blur Effect">
-<img src="../assets/lighting-and-effects/post-processing/BlurEffect-With.jpg" width="800" height="450" alt="Experience with BlurEffect applied" />
+<img src="../assets/lighting-and-effects/post-processing/BlurEffect-With.jpg" width="800" height="450" alt="Game with BlurEffect applied" />
 </TabItem>
 </Tabs>
 
@@ -81,23 +81,23 @@ The following list describes the primary `Class.ColorCorrectionEffect` propertie
 
 <Tabs>
 <TabItem label="Default">
-<img src="../assets/lighting-and-effects/post-processing/ColorCorrectionEffect-Without.jpg" width="800" height="450" alt="Experience without any effects applied" />
+<img src="../assets/lighting-and-effects/post-processing/ColorCorrectionEffect-Without.jpg" width="800" height="450" alt="Game without any effects applied" />
 </TabItem>
 <TabItem label="Color Correction Effect">
-<img src="../assets/lighting-and-effects/post-processing/ColorCorrectionEffect-With.jpg" width="800" height="450" alt="Experience with ColorCorrectionEffect applied" />
+<img src="../assets/lighting-and-effects/post-processing/ColorCorrectionEffect-With.jpg" width="800" height="450" alt="Game with ColorCorrectionEffect applied" />
 </TabItem>
 </Tabs>
 
 ## Depth-of-field
 
-The `Class.DepthOfFieldEffect` effect blurs parts of your experience that aren't in focus. You can use this effect to blur distant objects or to focus a player on specific parts of your experience, such as an item in a shop.
+The `Class.DepthOfFieldEffect` effect blurs parts of your game that aren't in focus. You can use this effect to blur distant objects or to focus a player on specific parts of your game, such as an item in a shop.
 
 <Tabs>
 <TabItem label="Default">
-<img src="../assets/lighting-and-effects/post-processing/DepthOfFieldEffect-Without.jpg" width="800" height="450" alt="Experience without any effects applied" />
+<img src="../assets/lighting-and-effects/post-processing/DepthOfFieldEffect-Without.jpg" width="800" height="450" alt="Game without any effects applied" />
 </TabItem>
 <TabItem label="Depth-of-Field Effect">
-<img src="../assets/lighting-and-effects/post-processing/DepthOfFieldEffect-With.jpg" width="800" height="450" alt="Experience with DepthOfFieldEffect applied" />
+<img src="../assets/lighting-and-effects/post-processing/DepthOfFieldEffect-With.jpg" width="800" height="450" alt="Game with DepthOfFieldEffect applied" />
 </TabItem>
 </Tabs>
 
@@ -119,13 +119,13 @@ This effect's primary property is `Class.ColorGradingEffect.TonemapperPreset|Ton
 - `Enum.TonemapperPreset.Default` &mdash; Sets the tone mapper to use the post‑2019 Roblox appearance which provides vivid colors and high contrasts.
 - `Enum.TonemapperPreset.Retro` &mdash; Sets the tone mapper to imitate the pre‑2019 Roblox appearance. Colors look less saturated and there's less contrast between them.
 
-If you wish to recreate a full pre‑2019 Roblox look for your experience, experiment with `Enum.TonemapperPreset.Retro` and set the brightness of all lights to a maximum of `1.0`.
+If you wish to recreate a full pre‑2019 Roblox look for your game, experiment with `Enum.TonemapperPreset.Retro` and set the brightness of all lights to a maximum of `1.0`.
 
 <Tabs>
 <TabItem label="Default">
-<img src="../assets/lighting-and-effects/post-processing/ColorGrading-Default.jpg" width="800" height="450" alt="Experience without any effects applied" />
+<img src="../assets/lighting-and-effects/post-processing/ColorGrading-Default.jpg" width="800" height="450" alt="Game without any effects applied" />
 </TabItem>
 <TabItem label="Retro">
-<img src="../assets/lighting-and-effects/post-processing/ColorGrading-Retro.jpg" width="800" height="450" alt="Experience with retro ColorGrading applied" />
+<img src="../assets/lighting-and-effects/post-processing/ColorGrading-Retro.jpg" width="800" height="450" alt="Game with retro ColorGrading applied" />
 </TabItem>
 </Tabs>

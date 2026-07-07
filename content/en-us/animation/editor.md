@@ -284,8 +284,7 @@ A looping animation doesn't interpolate between the final keyframes and first ke
 
 ## Set a priority
 
-An animation's **priority** (`Enum.AnimationPriority`) dictates when it will play in an
-experience. For example, if you play an animation with a higher priority
+An animation's **priority** (`Enum.AnimationPriority`) dictates when it will play in a game. For example, if you play an animation with a higher priority
 than another animation that's already playing, the new animation will
 override the old. For example, a "jump" animation should take priority over an "idle" animation so that a character doesn't perform both at the same time.
 
@@ -346,7 +345,7 @@ To set an animation to a different priority:
 ## Save an animation
 
 When you save an animation, Studio saves it as a
-`Class.KeyframeSequence` object in `Class.ServerStorage` and adds a reference to your rig object. Saving your animation is meant to preserve your animation progress and work. If you intend to use an animation, [export it](#export-an-animation) before referencing the published animation in your experience.
+`Class.KeyframeSequence` object in `Class.ServerStorage` and adds a reference to your rig object. Saving your animation is meant to preserve your animation progress and work. If you intend to use an animation, [export it](#export-an-animation) before referencing the published animation in your game.
 
 To save an animation:
 
@@ -362,9 +361,9 @@ To save an animation:
 <AccordionSummary><Typography variant="subtitle2">Accessing Local Animation Data</Typography></AccordionSummary>
 <AccordionDetails>
 
-Roblox saves animation data locally to `Class.ServerStorage` to preserve your animation work. In most cases, your experience shouldn't directly access this local data and instead should reference a published animation.
+Roblox saves animation data locally to `Class.ServerStorage` to preserve your animation work. In most cases, your game shouldn't directly access this local data and instead should reference a published animation.
 
-In the rare cases that your experience requires accessing local data, reference the value of the `Class.ObjectValue` in your rig's `AnimSaves` folder rather than directly accessing the `Class.ServerStorage`.
+In the rare cases that your game requires accessing local data, reference the value of the `Class.ObjectValue` in your rig's `AnimSaves` folder rather than directly accessing the `Class.ServerStorage`.
 
 ```lua title="Correctly Access Local Animation Data"
 local rig = workspace.Rig
@@ -383,7 +382,7 @@ Since local data is stored in `Class.ServerStorage`, it doesn't replicate and is
 ## Export an animation
 
 When you export an animation to Studio, it becomes available for use in
-all experiences. This means that you only need to create an animation
+all games. This means that you only need to create an animation
 once, then you can reuse it as many times as you want.
 
 <Alert severity="warning">
@@ -408,7 +407,7 @@ To export an animation:
 
 3. Select **Publish to Roblox** from the contextual menu.
 4. In the **Asset Configuration** window, enter an animation title and optional description.
-5. <Chip label="IMPORTANT" size="small" variant="outlined" color="warning" /> If the animation will be used in any [group-owned](../projects/groups.md) experience, select the group from the **Creator** field.
+5. <Chip label="IMPORTANT" size="small" variant="outlined" color="warning" /> If the animation will be used in any [group-owned](../projects/groups.md) game, select the group from the **Creator** field.
 6. Click the **Submit** button.
 
 Once the upload is complete, you can copy the animation's asset ID

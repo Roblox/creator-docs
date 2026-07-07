@@ -5,11 +5,11 @@ description: Explore how labels display customizable text and images in user int
 
 import TextFiltering from '../includes/text-filtering/text-filtering.md'
 
-**Labels** are `Class.GuiObject|GuiObjects` that let you display customizable text and images [on‑screen](../ui/on-screen-containers.md) or [in‑experience](../ui/in-experience-containers.md). There are two types of labels:
+**Labels** are `Class.GuiObject|GuiObjects` that let you display customizable text and images [on‑screen](../ui/on-screen-containers.md) or [in-game](../ui/in-experience-containers.md). There are two types of labels:
 
-- A `Class.TextLabel` is a rectangle with text that you can style through customizable properties. This is the primary way to display text in an experience.
+- A `Class.TextLabel` is a rectangle with text that you can style through customizable properties. This is the primary way to display text in a game.
 
-- An `Class.ImageLabel` is a rectangle with an image [asset](../projects/assets/index.md) that you can style through customizable properties. Alongside [textures and decals](../parts/textures-decals.md), this lets you display images in an experience.
+- An `Class.ImageLabel` is a rectangle with an image [asset](../projects/assets/index.md) that you can style through customizable properties. Alongside [textures and decals](../parts/textures-decals.md), this lets you display images in a game.
 
 ## Create labels on the screen
 

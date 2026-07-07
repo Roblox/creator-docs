@@ -7,7 +7,7 @@ prev: /tutorials/curriculums/studio/install-studio
 
 import StudioCameraControls from '../../../includes/studio/camera-controls.md'
 
-Welcome to your first session in Roblox Studio! Before you jump in and begin building experiences, let's take a moment to walk through Studio's essential UI. While this overview provides a solid foundation to get started, there are many additional windows and tools that you can discover and customize in the [Studio interface](../../../studio/ui-overview.md).
+Welcome to your first session in Roblox Studio! Before you jump in and begin building games, let's take a moment to walk through Studio's essential UI. While this overview provides a solid foundation to get started, there are many additional windows and tools that you can discover and customize in the [Studio interface](../../../studio/ui-overview.md).
 
 <Alert severity="info">
 <AlertTitle style={{marginBottom: 8}}>Coming to Studio from another game engine?</AlertTitle>
@@ -22,7 +22,7 @@ The **mezzanine** is the top-most section of Studio and it includes:
 
 - [Playtest options](../../../studio/testing-modes.md) that allow you to simulate what players see on their devices.
 - Tabs like **Model**, **Avatar**, and **Script** that filter the [toolbar](#toolbar) tools for their respective tasks.
-- [Collaborator](../../../projects/collaboration.md) information for experiences that you work on with others.
+- [Collaborator](../../../projects/collaboration.md) information for games that you work on with others.
 - The [Assistant](../../../assistant/guide.md) tool that you can use as an aid to supplement your skills and assist with development tasks.
 
 ## Toolbar
@@ -41,7 +41,7 @@ The **toolbar** is the section right below the mezzanine that displays all tools
 
 - **Script** contains tools for writing and testing scripts, including [debugging](../../../studio/debugging.md) tools.
 
-- **Plugins** contains [plugins](../../../studio/plugins.md) created by the community or plugins you've created yourself to use across your experiences.
+- **Plugins** contains [plugins](../../../studio/plugins.md) created by the community or plugins you've created yourself to use across your games.
 
 When you are more comfortable with Studio, you can also create [custom tabs](../../../studio/ui-overview.md#custom-tabs) for your own development needs.
 
@@ -49,7 +49,7 @@ When you are more comfortable with Studio, you can also create [custom tabs](../
 
 <img src="../../../assets/tutorials/studio-lesson/3D-Viewport.jpg" width="960" alt="3D viewport indicated in center of Studio's window." />
 
-The **3D viewport** is the largest window in Studio that provides you a view into the 3D space. After you click in the 3D viewport, you can move the camera, edit objects with your mouse, and playtest the experience from your players' point-of-view.
+The **3D viewport** is the largest window in Studio that provides you a view into the 3D space. After you click in the 3D viewport, you can move the camera, edit objects with your mouse, and playtest the game from your players' point-of-view.
 
 For common camera controls, see the following table.
 
@@ -65,7 +65,7 @@ It's **strongly** recommended to use a 2-button mouse with a scroll wheel to mak
 
 The [Toolbox](../../../projects/assets/toolbox.md) contains a selection of models, images, meshes, audio, plugins, videos, and fonts from either Roblox or fellow creators on the platform. It offers four tabs:
 
-- **Creator Store** is a marketplace of both free and for sale assets to use within your experiences.
+- **Creator Store** is a marketplace of both free and for sale assets to use within your games.
 - **Inventory** contains assets that you or your groups have uploaded, or those that you found on the Creator Store.
 - **Recent** contains your most recently used assets.
 - **Creations** is similar to **Inventory**, but it excludes assets from the Creator Store.
@@ -74,13 +74,13 @@ The [Toolbox](../../../projects/assets/toolbox.md) contains a selection of model
 
 <img src="../../../assets/tutorials/studio-lesson/Explorer.jpg" width="960" alt="Explorer window shown on the right side of Studio's window." />
 
-The [Explorer](../../../studio/explorer.md) window displays a hierarchical list of every object and service that runs out-of-the-box gameplay logic for the active **place** of your experience. You can think of places like levels inside of a game.
+The [Explorer](../../../studio/explorer.md) window displays a hierarchical list of every object and service that runs out-of-the-box gameplay logic for the active **place** of your game. You can think of places like levels inside of a game.
 
 <Alert severity="info">
 Places are comparable to scenes in Unity or maps in Unreal Engine.
 </Alert>
 
-Experiences can have one or multiple places that each contain all components for that portion of the experience, including its specific environment, 3D objects, and scripts; these components collectively are called the **data model**. When you switch to a different place, the **Explorer** window updates accordingly to show that place's data model.
+Games can have one or multiple places that each contain all components for that portion of the game, including its specific environment, 3D objects, and scripts; these components collectively are called the **data model**. When you switch to a different place, the **Explorer** window updates accordingly to show that place's data model.
 
 For more information on how the **Explorer** window organizes objects in the data model, see [Data model](../../../projects/data-model.md).
 

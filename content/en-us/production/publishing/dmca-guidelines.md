@@ -18,12 +18,12 @@ Copyright is a legal protection granted for original works of authorship. Copyri
 
 It is important to note that you can still infringe a copyright even if you:
 
-- Didn't monetize your experience.
+- Didn't monetize your game.
 - Credited the original creator.
 - Downloaded the content from the internet.
 - Thought that your use was a [fair use](https://copyright.gov/fair-use/).
 - Purchased a physical copy of the content (DVD, game, etc.).
-- Saw other people include the same content in their experiences.
+- Saw other people include the same content in their games.
 - Explained that you didn't intend to infringe anyone's copyright.
 
 </AccordionDetails>
@@ -86,11 +86,11 @@ If you believe that your content on Roblox has been taken down because of mistak
 
   If you don't have an email linked to your Roblox account, you will only receive a Roblox message. We highly encourage you to link an email to your Roblox account as a [security precaution](https://en.help.roblox.com/hc/en-us/articles/203313380-Account-Security-Keeping-your-Account-Safe-) and to receive such important emails from us.
 
-- **What if a DMCA claim is made against my experience?**
+- **What if a DMCA claim is made against my game?**
 
-  Should a valid claim be made against your experience, your experience will be taken down or access to it will be disabled.
+  Should a valid claim be made against your game, your game will be taken down or access to it will be disabled.
 
-  If your experience was taken down due to a DMCA notice, we generally are not in a position to reopen the experience without the copyright owner's permission, unless you have filed a counter‑notice under the DMCA. Roblox is not in a position to obtain such permission on your behalf.
+  If your game was taken down due to a DMCA notice, we generally are not in a position to reopen the game without the copyright owner's permission, unless you have filed a counter‑notice under the DMCA. Roblox is not in a position to obtain such permission on your behalf.
 
 </AccordionDetails>
 </BaseAccordion>

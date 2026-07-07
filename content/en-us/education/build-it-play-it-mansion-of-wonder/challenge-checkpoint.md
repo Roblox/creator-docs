@@ -11,7 +11,7 @@ You got your animation ready! Celebrate your new skills by getting the **Artist 
 
 1. **Copy** the following code: `FXArtist`
 
-2. Click the **Enter World** button below to open the **Mansion of Wonder** experience.
+2. Click the **Enter World** button below to open the **Mansion of Wonder** game.
 
    <a href="https://www.roblox.com/games/6901029464/">
    <Button variant="contained">Enter World</Button>

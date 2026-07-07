@@ -6,7 +6,7 @@ description: Solid modeling is the process of joining parts together to form com
 import BetaAlert from '../includes/beta-features/beta-alert.md'
 
 **Solid modeling** is the process of joining [parts](../parts/index.md)
-together in unique ways to form more complex shapes. This includes the boolean operations **union**, **subtraction**, and **intersection**, which are commonly known as Constructive Solid Geometry (CSG). You can perform solid modeling everywhere: in Studio, plugins, even [in-experience](#in-experience-solid-modeling) on both the server and client.
+together in unique ways to form more complex shapes. This includes the boolean operations **union**, **subtraction**, and **intersection**, which are commonly known as Constructive Solid Geometry (CSG). You can perform solid modeling everywhere: in Studio, plugins, even [in-game](#in-game-solid-modeling) on both the server and client.
 
 In addition to boolean CSG, solid modeling also supports meshes, as long as they are [watertight](#watertight-geometry), and operations like **sweep** and **fragment** that let you and your players slice, cut, and shatter geometry for unique gameplay interactions.
 
@@ -198,13 +198,13 @@ To separate a union or intersection back into individual parts:
 1. Select the union or intersection.
 1. Click **Separate**. The parts separate back into their original form.
 
-## In-experience solid modeling
+## In-game solid modeling
 
-You can also perform solid modeling operations while an experience is running by using `Class.GeometryService` functions.
+You can also perform solid modeling operations while a game is running by using `Class.GeometryService` functions.
 
 ### UnionAsync(), IntersectAsync(), and SubtractAsync()
 
-Similar to Studio's built-in basic boolean operation tools, you can use `Class.GeometryService` functions like `Class.GeometryService:UnionAsync()|UnionAsync()`, `Class.GeometryService:IntersectAsync()|IntersectAsync()`, and `Class.GeometryService:SubtractAsync()|SubtractAsync()`to perform basic boolean operations while an experience is running. For example, the following script uses `Class.GeometryService:SubtractAsync()|SubtractAsync()`to subtract the volume of one part from another.
+Similar to Studio's built-in basic boolean operation tools, you can use `Class.GeometryService` functions like `Class.GeometryService:UnionAsync()|UnionAsync()`, `Class.GeometryService:IntersectAsync()|IntersectAsync()`, and `Class.GeometryService:SubtractAsync()|SubtractAsync()`to perform basic boolean operations while a game is running. For example, the following script uses `Class.GeometryService:SubtractAsync()|SubtractAsync()`to subtract the volume of one part from another.
 
 ```lua highlight="6"
 local GeometryService = game:GetService("GeometryService")
@@ -226,7 +226,7 @@ end
 <img src="../assets/modeling/solid-modeling/Subtract-Simple-Block.png" alt="A block subtracted from another block."  width="300" />
 
 <Alert severity="warning">
-In-experience solid modeling operations are asynchronous, meaning they can impact performance. For best results, you should not perform a large series of `Async` calls such as `Class.GeometryService:UnionAsync()|UnionAsync()` in quick succession.
+In-game solid modeling operations are asynchronous, meaning they can impact performance. For best results, you should not perform a large series of `Async` calls such as `Class.GeometryService:UnionAsync()|UnionAsync()` in quick succession.
 </Alert>
 
 To further demonstrate, the next code sample combines the geometry of `mainPart` and the parts in the `otherParts` array, then it destroys the original parts involved in the operation. You can replace the call to `Class.GeometryService:UnionAsync()|UnionAsync()` with `Class.GeometryService:IntersectAsync()|IntersectAsync()` or `Class.GeometryService:SubtractAsync()|SubtractAsync()` to perform the other boolean operations.
@@ -608,7 +608,7 @@ The following script is a much more niche use case, but it demonstrates the powe
 
 For example, many places contain buildings formed from multiple non-unioned block parts. If a grenade, cannonball, or sledgehammer were to damage it, you would want all of the wall parts to be fragmented. This script fragments all of the nearby parts, then unions the fragments of different parts together to completely hide the seams.
 
-This involves multiple `Async` operations, so it may not be suitable for use in-experience as an instant response to user input, such as a sledgehammer tool.
+This involves multiple `Async` operations, so it may not be suitable for use in-game as an instant response to user input, such as a sledgehammer tool.
 
 <GridContainer numColumns="2">
   <figure>
@@ -891,7 +891,7 @@ end
 ### Behavior details
 
 <Alert severity="info">
-In this section, the term "main part" refers to either the first part you select while solid modeling in Studio, or the first argument while solid modeling in-experience.
+In this section, the term "main part" refers to either the first part you select while solid modeling in Studio, or the first argument while solid modeling in-game.
 </Alert>
 
 - The original parts remain intact following a successful operation, and the returned parts have no set `Class.Instance.Parent|Parent`. In most cases, it's recommended to parent the returned part(s) to the same place as the main part, then `Class.Instance.Destroy|Destroy()` the original parts.

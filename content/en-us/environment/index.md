@@ -3,11 +3,11 @@ title: Lighting and effects
 description: Create more immersive environments through lighting, atmospheres, and special effects.
 ---
 
-The `Class.Lighting` container services let you control and customize an experience's environment such as [lighting](#global-lighting), [atmosphere](#atmospheric-effects), and [clouds](#clouds-and-skies). You can also apply [post-processing effects](#post-processing-effects) to adjust how the experience appears on the screen.
+The `Class.Lighting` container services let you control and customize a game's environment such as [lighting](#global-lighting), [atmosphere](#atmospheric-effects), and [clouds](#clouds-and-skies). You can also apply [post-processing effects](#post-processing-effects) to adjust how the game appears on the screen.
 
 ## Global lighting
 
-The `Class.Lighting` service contains properties that you can adjust to update the global lighting in an experience, such as the `Class.Lighting.ClockTime|ClockTime` and `Class.Lighting.Brightness|Brightness`.
+The `Class.Lighting` service contains properties that you can adjust to update the global lighting in a game, such as the `Class.Lighting.ClockTime|ClockTime` and `Class.Lighting.Brightness|Brightness`.
 
 <Tabs>
 <TabItem label="ClockTime = 0">
@@ -49,11 +49,11 @@ By default, the `Class.Sky` object forms a [skybox](../environment/skybox.md) wi
 ## Post-processing effects
 
 **Post-processing effects** are customizable filters that allow you to quickly
-enrich the visuals of your experience. Using the post-processing effect objects
+enrich the visuals of your game. Using the post-processing effect objects
 in the `Class.Lighting` service or `Class.Camera`, you can:
 
 - Simulate a camera viewing a bright light and exaggerate its glow.
-- Apply a Gaussian blur to the entirety of your experience or add a blur to parts of your experience that aren't in focus.
+- Apply a Gaussian blur to the entirety of your game or add a blur to parts of your game that aren't in focus.
 - Enhance an environment's appearance to create a specific mood through hue.
 - Render a halo of light that moves with the sun.
 

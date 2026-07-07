@@ -1,15 +1,15 @@
 ---
 title: Thumbnails
-description: Thumbnail images and videos appear on the Roblox home page and at the top of an experience's detail page to showcase features and share information.
+description: Thumbnail images and videos appear on the Roblox home page and at the top of a game's detail page to showcase features and share information.
 ---
 
-Thumbnails appear on Roblox's [Home](https://www.roblox.com/home) page and at the top of your experience's detail page, allowing you to showcase your experience's features and announce updates or events.
+Thumbnails appear on Roblox's [Home](https://www.roblox.com/home) page and at the top of your game's detail page, allowing you to showcase your game's features and announce updates or events.
 
 <figure>
 <img src="../../assets/publishing/experiences-places-assets/Experience-Page-Example.jpg" width="1120" />
 </figure>
 
-You can feature up to 10 images or videos for each of your experiences' detail pages. All uploaded images and videos are moderated to make sure they adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846).
+You can feature up to 10 images or videos for each of your games' detail pages. All uploaded images and videos are moderated to make sure they adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846).
 
 <table>
 <thead>
@@ -22,12 +22,12 @@ You can feature up to 10 images or videos for each of your experiences' detail p
 <tbody>
   <tr>
     <td>**Image**</td>
-    <td>An [uploaded image](#images) which supplements the experience [icon](../publishing/experience-icons.md) and helps players know what the experience offers.</td>
+    <td>An [uploaded image](#images) which supplements the game [icon](../publishing/experience-icons.md) and helps players know what the game offers.</td>
 		<td>Free</td>
   </tr>
 	<tr>
     <td>**Uploaded Video**</td>
-    <td>An [uploaded authentic video](#videos), useful for displaying gameplay previews and other in-experience features.</td>
+    <td>An [uploaded authentic video](#videos), useful for displaying gameplay previews and other in-game features.</td>
 		<td>Free, with monthly quota of 3 uploads</td>
   </tr>
 	<tr>
@@ -48,11 +48,11 @@ Uploaded thumbnails appear in the **Experience Detail Page** tab where they can 
 
 A thumbnail image should be **16:9 aspect ratio** and ideally **1920×1080 pixels** so that it always displays in high resolution across the Roblox site and app. Supported formats include `.jpg`, `.gif`, `.png`, `.tga`, or `.bmp`. See [best practices](#best-practices) for additional design recommendations.
 
-To upload an image thumbnail for your experience:
+To upload an image thumbnail for your game:
 
-1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), select the experience you want to upload an image thumbnail for.
+1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), select the game you want to upload an image thumbnail for.
 2. Go to **Configure** &rang; **Places** and select a place.
-3. Click **Thumbnails** in the left nav, then use the **Home Page** tab and the **Experience Detail Page** tab to customize your experience's thumbnails for these two spaces.
+3. Click **Thumbnails** in the left nav, then use the **Home Page** tab and the **Experience Detail Page** tab to customize your game's thumbnails for these two spaces.
 
 ### Videos
 
@@ -60,17 +60,17 @@ To upload an image thumbnail for your experience:
 Xbox , PlayStation, and VR headsets do not currently support video thumbnails.
 </Alert>
 
-To help users understand your experience before they join, you can upload an authentic gameplay video. Once approved, the video will appear first on your experience's detail page, and it can also be shown on the [Home](https://www.roblox.com/home) page.
+To help users understand your game before they join, you can upload an authentic gameplay video. Once approved, the video will appear first on your game's detail page, and it can also be shown on the [Home](https://www.roblox.com/home) page.
 
-To upload a video thumbnail for your experience:
+To upload a video thumbnail for your game:
 
-1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), select the experience you want to upload a video for.
+1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), select the game you want to upload a video for.
 2. Go to **Configure** &rang; **Places** and select a place.
 3. Click **Videos** in the left nav.
 
-Video thumbnails should be **authentic** and [accurately portray in‑experience content](#video-accuracy) without misleading alterations. **All videos will be reviewed** to ensure they accurately reflect the experience and do not violate the [Community Rules](https://en.help.roblox.com/hc/articles/203313410) or [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846).
+Video thumbnails should be **authentic** and [accurately portray in-game content](#video-accuracy) without misleading alterations. **All videos will be reviewed** to ensure they accurately reflect the game and do not violate the [Community Rules](https://en.help.roblox.com/hc/articles/203313410) or [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846).
 
-Certain modifications are acceptable, as long as they don't misrepresent the core experience:
+Certain modifications are acceptable, as long as they don't misrepresent the core game:
 
 <Card>
 <CardContent style={{paddingBottom: '0px'}}>
@@ -78,13 +78,13 @@ Certain modifications are acceptable, as long as they don't misrepresent the cor
 **Camera Work** — Using varied camera angles for aesthetic or cinematic purposes is fine, as long as they showcase real gameplay. Studio's [free camera mode](#free-camera-mode) is especially helpful for capturing different vantage points.
 </Alert>
 <Alert severity="success" variant="outlined">
-**Minor Post-Processing** — Small adjustments like brightness, contrast, or minor visual effects are acceptable if they don't fundamentally alter the visual fidelity of the actual experience. It's also acceptable to overlay your experience's logo or branding in a video.
+**Minor Post-Processing** — Small adjustments like brightness, contrast, or minor visual effects are acceptable if they don't fundamentally alter the visual fidelity of the actual game. It's also acceptable to overlay your game's logo or branding in a video.
 </Alert>
 <Alert severity="success" variant="outlined">
 **Curated Sequences** — You can showcase optimized or highlight-reel playthroughs. These sequences don't need to be strictly linear but they must display actual gameplay mechanics and interactions.
 </Alert>
 <Alert severity="success" variant="outlined">
-**In-Experience UI Text** — Text that is part of your experience's UI (character names, menus, notifications that appear to the player, etc.) is acceptable because it's part of the authentic in‑experience view.
+**In-game UI Text** — Text that is part of your game's UI (character names, menus, notifications that appear to the player, etc.) is acceptable because it's part of the authentic game view.
 </Alert>
 <Alert severity="success" variant="outlined">
 **Music Tracks** — Videos can contain music from Roblox's [catalog](https://create.roblox.com/store/audio) as governed by Roblox's internal licensing arrangements.
@@ -97,13 +97,13 @@ To prevent misleading players, please adhere to the following policies. Videos w
 <Card>
 <CardContent style={{paddingBottom: '0px'}}>
 <Alert severity="error" variant="outlined">
-**Misrepresented Gameplay** — Do not display gameplay mechanics, UI elements, or interactions that are not actually available in your experience. For instance, a roleplay experience should not be marketed as a racing game. Also ensure the video accurately reflects the core themes, for example a horror experience should depict horror elements and not misrepresent its theme.
+**Misrepresented Gameplay** — Do not display gameplay mechanics, UI elements, or interactions that are not actually available in your game. For instance, a roleplay game should not be marketed as a racing game. Also ensure the video accurately reflects the core themes, for example a horror game should depict horror elements and not misrepresent its theme.
 </Alert>
 <Alert severity="error" variant="outlined">
-**Artificial Visuals** — Graphics shown must be representative of the actual in-experience visuals. Avoid artificially enhancing graphics beyond what a player will experience.
+**Artificial Visuals** — Graphics shown must be representative of the actual in-game visuals. Avoid artificially enhancing graphics beyond what a player will experience.
 </Alert>
 <Alert severity="error" variant="outlined">
-**External Content & Overlays** — Don't include real-life footage of people, places, or any other content external to your experience.
+**External Content & Overlays** — Don't include real-life footage of people, places, or any other content external to your game.
 </Alert>
 <Alert severity="error" variant="outlined">
 **Spoken Audio** — Added voice-overs, narration, voice chat conversations, and music with lyrics is **not** permitted.
@@ -116,9 +116,9 @@ To prevent misleading players, please adhere to the following policies. Videos w
 
 ## Free camera mode
 
-Studio's **free camera mode** is a useful tool to capture in-experience screenshots and videos because it allows you to move the camera to vantage points which may not be possible through the default view camera. To enable free camera mode:
+Studio's **free camera mode** is a useful tool to capture in-game screenshots and videos because it allows you to move the camera to vantage points which may not be possible through the default view camera. To enable free camera mode:
 
-1. Go to an experience where you have server-side [Developer Console](../../studio/developer-console.md) access.
+1. Go to a game where you have server-side [Developer Console](../../studio/developer-console.md) access.
 2. Initiate a solo [playtesting](../../studio/testing-modes.md#playtesting) session.
 
    <img src="../../assets/studio/general/Mezzanine-Testing-Mode-Test.png" width="800" alt="Test option in the testing modes dropdown of Studio's mezzanine." />
@@ -176,13 +176,13 @@ Once in free camera mode, you can use the following controls:
 
 ## Home page personalization
 
-**Thumbnail personalization** helps you attract more users to your experience by showing the most relevant thumbnail to each user on their [Home](https://www.roblox.com/home) page. The goal of thumbnail personalization is to improve your qualified play through rate, which is the percentage of users that actively engage with your experience for a significant amount of time.
+**Thumbnail personalization** helps you attract more users to your game by showing the most relevant thumbnail to each user on their [Home](https://www.roblox.com/home) page. The goal of thumbnail personalization is to improve your qualified play through rate, which is the percentage of users that actively engage with your game for a significant amount of time.
 
 <Alert severity="success">
-During testing, experiences using thumbnail personalization had an average increase of +8.5% in their qualified play through rate. Some experiences had an increase of +50%.
+During testing, games using thumbnail personalization had an average increase of +8.5% in their qualified play through rate. Some games had an increase of +50%.
 </Alert>
 
-Thumbnail personalization only starts when you activate 2 or more thumbnails. If only one of your thumbnails is active, all users see that thumbnail for your experience on their home page.
+Thumbnail personalization only starts when you activate 2 or more thumbnails. If only one of your thumbnails is active, all users see that thumbnail for your game on their home page.
 
 After you set up and activate thumbnail personalization, its algorithm shows each thumbnail to a random set of users to get data on the qualified play through rate for each user group. It then gives more impressions to the winning thumbnail for each group, but still gives the other thumbnails minimal traffic to continue exploration.
 
@@ -213,7 +213,7 @@ For example, if you had removed the thumbnail associated with the green line in 
 
 <img src="../../assets/publishing/experience-metadata/Thumbnail-Impressions-Graph.png" width="75%" alt="Example of the Impression by Thumbnail graph" />
 
-It's recommended to test multiple new thumbnails with any major experience or content update, and then not make changes to your thumbnails until your experience's next update.
+It's recommended to test multiple new thumbnails with any major game or content update, and then not make changes to your thumbnails until your game's next update.
 
 ### Analyze thumbnail personalization performance
 
@@ -258,7 +258,7 @@ You can also use the **Impressions by thumbnail** and the **Qualified play throu
 
 ## Best practices
 
-To create the most positive impact for players looking to play your experience, consider the following best practices.
+To create the most positive impact for players looking to play your game, consider the following best practices.
 
 <Alert severity="warning">
 In addition to the practices shown below, avoid placing any essential text or elements at the **bottom** of the thumbnail, as it may potentially be covered by metadata like the player count.
@@ -285,13 +285,13 @@ A thumbnail image should be **16:9** aspect ratio and ideally **1920×1080 pixel
 
 ### Relevant content
 
-A thumbnail will have a higher impact if it's unique and provides relevant imagery on what players should expect when they join the experience. Thumbnails with ambiguous imagery or graphics may lead to unnecessary confusion.
+A thumbnail will have a higher impact if it's unique and provides relevant imagery on what players should expect when they join the game. Thumbnails with ambiguous imagery or graphics may lead to unnecessary confusion.
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../assets/publishing/experience-metadata/Thumbnail-Urban-Rush.jpg" alt="Thumbnail portraying a high-action urban racing experience" />
+    <img src="../../assets/publishing/experience-metadata/Thumbnail-Urban-Rush.jpg" alt="Thumbnail portraying a high-action urban racing game" />
     <figcaption>
-      <Alert severity="success">Thumbnail portrays a high‑action urban racing experience</Alert>
+      <Alert severity="success">Thumbnail portrays a high‑action urban racing game</Alert>
     </figcaption>
   </figure>
 	<figure>
@@ -304,7 +304,7 @@ A thumbnail will have a higher impact if it's unique and provides relevant image
 
 ### Video accuracy
 
-Video thumbnails should be authentic and portray actual in‑experience content without misleading alterations.
+Video thumbnails should be authentic and portray actual in-game content without misleading alterations.
 
 <GridContainer numColumns="2">
   <figure>
@@ -316,14 +316,14 @@ Video thumbnails should be authentic and portray actual in‑experience content 
 	<figure>
     <video src="../../assets/publishing/experience-metadata/Thumbnail-Video-Inaccurate.mp4" controls width="800" alt="Video showing how separate volume controls for sounds and music can help players focus on what they need to" style={{marginTop: 0}}></video>
     <figcaption>
-      <Alert severity="error">Video presents an exaggerated version of the experience and gameplay which is misleading to players</Alert>
+      <Alert severity="error">Video presents an exaggerated version of the game and gameplay which is misleading to players</Alert>
     </figcaption>
   </figure>
 </GridContainer>
 
 ### Theme and color
 
-You can express your experience's theme through overall theme and colors to help players decide if it's suitable and appealing to them.
+You can express your game's theme through overall theme and colors to help players decide if it's suitable and appealing to them.
 
 <GridContainer numColumns="2">
   <figure>
@@ -331,7 +331,7 @@ You can express your experience's theme through overall theme and colors to help
     <figcaption>Comical theme/character with bright colors</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/publishing/experience-metadata/Thumbnail-Theme-Horror.jpg" alt="Thumbnail with a dark and stormy theme for a horror experience" />
-    <figcaption>Dark and stormy theme for a horror experience</figcaption>
+    <img src="../../assets/publishing/experience-metadata/Thumbnail-Theme-Horror.jpg" alt="Thumbnail with a dark and stormy theme for a horror game" />
+    <figcaption>Dark and stormy theme for a horror game</figcaption>
   </figure>
 </GridContainer>

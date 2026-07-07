@@ -5,7 +5,7 @@ next:
 prev: /education/lesson-plans/digital-citizenship/animating-characters
 ---
 
-**Lesson Description**: Take time to catch up on previous lessons and prepare the Roblox experience for others to play. Students should evaluate if their project meets the goals of being fun, challenging, and bug-free; redesigning or improving their work as needed.
+**Lesson Description**: Take time to catch up on previous lessons and prepare the Roblox game for others to play. Students should evaluate if their project meets the goals of being fun, challenging, and bug-free; redesigning or improving their work as needed.
 
 <table>
 <tbody>
@@ -13,7 +13,7 @@ prev: /education/lesson-plans/digital-citizenship/animating-characters
     <td><b>Lesson Objectives</b></td>
     <td>
       <ul>
-        <li>Test the experience according to specific goals, reflect on changes needed to be made, and implement improvements. </li>
+        <li>Test the game according to specific goals, reflect on changes needed to be made, and implement improvements. </li>
         <li>Test, evaluate, and redesign an animation to meet a planned vision.</li>
         </ul>
       </td>
@@ -80,7 +80,7 @@ prev: /education/lesson-plans/digital-citizenship/animating-characters
 1. Wrap up by leading a class discussion. Ask one of more of the below prompts.
 
    - One thing that was challenging but how they overcame it.
-   - Something they're proud of in their experience and why.
+   - Something they're proud of in their game and why.
    - An example of how another student helped them improve their project.
 
 2. Recap learning about digital citizenship and civility this week.

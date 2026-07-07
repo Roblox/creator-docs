@@ -112,7 +112,7 @@ For a more custom look, you can replace default terrain textures with custom tex
 
 ## Playtest
 
-Once you are happy with your island's appearance, playtest your experience to check the scale of the island.
+Once you are happy with your island's appearance, playtest your game to check the scale of the island.
 
 Click **Test** from the dropdown menu in the toolbar and then click **Play**. Run around the island and see how it feels. When you're done, click **Stop**.
 

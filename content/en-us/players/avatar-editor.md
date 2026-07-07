@@ -3,7 +3,7 @@ title: Avatar Editor Service
 description: The Avatar Editor Service allows access to a user's avatar and inventory and Marketplace.
 ---
 
-The Avatar Editor Service lets you access and make changes to a user's avatar within an experience. The Avatar Editor Service can also access a user's inventory and the [Marketplace](https://www.roblox.com/catalog) to save outfits and purchase avatar items to the user's account.
+The Avatar Editor Service lets you access and make changes to a user's avatar within a game. The Avatar Editor Service can also access a user's inventory and the [Marketplace](https://www.roblox.com/catalog) to save outfits and purchase avatar items to the user's account.
 
 We recommend implementing the Avatar Editor Service with an in-game avatar editor for a complete character customization experience. See the [Simple Avatar Editor Demo](https://www.roblox.com/games/9376329300/Simple-Avatar-Editor-Demo) reference place for an example of this feature.
 
@@ -206,5 +206,5 @@ When saving either an avatar or an outfit that uses catalog items, the user does
 If you don't wish to implement item purchases, you can instead allow users to favorite non-owned items with `Class.AvatarEditorService:PromptSetFavorite()`.
 
 <Alert severity="info">
- Be aware that you can't earn Robux <a href="../marketplace/marketplace-fees-and-commissions.md#commissions">commissions</a> if the user decides to purchase those items outside of your experience.
+ Be aware that you can't earn Robux <a href="../marketplace/marketplace-fees-and-commissions.md#commissions">commissions</a> if the user decides to purchase those items outside of your game.
 </Alert>

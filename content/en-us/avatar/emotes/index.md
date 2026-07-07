@@ -1,14 +1,14 @@
 ---
 title: Emotes
-description: All Roblox users are represented by an avatar character which can be customized with body parts, accessories, and clothes from the Marketplace or within experiences.
+description: All Roblox users are represented by an avatar character which can be customized with body parts, accessories, and clothes from the Marketplace or within games.
 ---
 
-**Emotes** are short animations that an avatar performs, making it easier to communicate and celebrate with others, enhancing the experience to feel more social and more lively.
+**Emotes** are short animations that an avatar performs, making it easier to communicate and celebrate with others, enhancing the game to feel more social and more lively.
 
-Creators sell their own emotes, such as gestures, reactions, dances, and more, by publishing their animation to sell on the Marketplace or within experiences.
+Creators sell their own emotes, such as gestures, reactions, dances, and more, by publishing their animation to sell on the Marketplace or within games.
 
 <Alert severity = 'info'>
-Developers can access and modify emotes within their own experiences. For more information, see [character emotes](../../characters/emotes.md).
+Developers can access and modify emotes within their own games. For more information, see [character emotes](../../characters/emotes.md).
 </Alert>
 
 ## Components

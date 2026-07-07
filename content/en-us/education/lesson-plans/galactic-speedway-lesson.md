@@ -5,7 +5,7 @@ description: Create a spaceship and race it on an alien planet.
 
 <img src="../../assets/education/lesson-plans/galactic-speedway-hero.jpg" width="100%" />
 
-**Lesson description**: Create your very own spaceship and race it on an alien planet. Practice skills like 3D modeling and coding as you publish an experience on Roblox.
+**Lesson description**: Create your very own spaceship and race it on an alien planet. Practice skills like 3D modeling and coding as you publish a game on Roblox.
 
 **ISTE standards**: Innovative Designer 4a, 4c, 4d, Creative Communicator 6b, 6d
 
@@ -17,7 +17,7 @@ description: Create a spaceship and race it on an alien planet.
       <ul>
         <li>Develop <b>3D modeling skills</b> by moving parts to create a cohesive driftspeeder.</li>
         <li>Practice <b>coding</b> by changing a variable to make ships fly faster.</li>
-        <li><b>Test, evaluate, and redesig</b>n to create a bug-free and visually appealing experience.</li>
+        <li><b>Test, evaluate, and redesig</b>n to create a bug-free and visually appealing game.</li>
         </ul>
       </td>
    </tr>
@@ -83,7 +83,7 @@ description: Create a spaceship and race it on an alien planet.
     <tr>
       <td>10 min</td>
       <td>Independent Work: Polish and Publish</td>
-      <td>Add final touches, modify a script to change speed, and publish the experience online. </td>
+      <td>Add final touches, modify a script to change speed, and publish the game online. </td>
     </tr>
     <tr>
       <td>10 min</td>
@@ -108,7 +108,7 @@ description: Create a spaceship and race it on an alien planet.
 
 2. Lead students through <a href="../../education/build-it-play-it-galactic-speedway/save-and-publish.md" target="_blank" rel="noopener">Save and Publish</a>.
 
-   - When publishing the game, save time by having students use placeholder titles and descriptions (My experience, my description). Can always change later when finished.
+   - When publishing the game, save time by having students use placeholder titles and descriptions (My game, my description). Can always change later when finished.
 
 ### Guided work - Design, evaluate, and redesign
 
@@ -153,7 +153,7 @@ description: Create a spaceship and race it on an alien planet.
 
 **Facilitation tips**
 
-- One way of protecting students online is setting up VIP servers. This feature allows you to create servers where only specific users can enter. For example, when students publish their experience, they can allow for private servers where only members of the class can join. See <a href="../../education/support/private-servers-for-classroom-use.md" target="_blank" rel="noopener">Private Servers</a> for more information.
+- One way of protecting students online is setting up VIP servers. This feature allows you to create servers where only specific users can enter. For example, when students publish their game, they can allow for private servers where only members of the class can join. See <a href="../../education/support/private-servers-for-classroom-use.md" target="_blank" rel="noopener">Private Servers</a> for more information.
 - While students playtest, set guidelines for good sportsmanship. For example:
   - Respect and encourage others.
   - If you lose, don't make excuses. If you win, don't rub it in.
@@ -181,14 +181,14 @@ Pair Building Activity
 **Check for understanding**
 Students can go online to take a quiz or alternatively, you can quiz students.
 
-- Online: Students can take a quiz through this <a href="https://www.roblox.com/games/4201429814/" target="_blank" rel="noopener">online experience</a> and earn virtual Roblox prizes.
+- Online: Students can take a quiz through this <a href="https://www.roblox.com/games/4201429814/" target="_blank" rel="noopener">online game</a> and earn virtual Roblox prizes.
 - Quiz: Use this [handout](../../assets/education/lesson-plans/galacticSpeedway-quizQuestions.pdf) to quiz students verbally.
 
 **Course description:**
-Enter the space race of the millenia! No ship, no problem. Discover how your own racing spaceship using Roblox's free coding and design tools. In this course, students will explore the basics of 3D modeling and programming, then share their completed experience to play with friends online. Created specifically for students new to game design, this curriculum is a great way for students to get started creating before moving onto more advanced projects and programming.
+Enter the space race of the millenia! No ship, no problem. Discover how your own racing spaceship using Roblox's free coding and design tools. In this course, students will explore the basics of 3D modeling and programming, then share their completed game to play with friends online. Created specifically for students new to game design, this curriculum is a great way for students to get started creating before moving onto more advanced projects and programming.
 
 In this course, your student will:
 
-- Design a spaceship for a multiplayer racing experience.
+- Design a spaceship for a multiplayer racing game.
 - Test, evaluate, and redesign to create a fun, polished game.
-- Take home a complete experience that can be played and shared online.
+- Take home a complete game that can be played and shared online.

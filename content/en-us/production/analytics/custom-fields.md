@@ -1,9 +1,9 @@
 ---
 title: Custom fields
-description: Use custom fields as an additional analytics tool to track unique milestones in your experience.
+description: Use custom fields as an additional analytics tool to track unique milestones in your game.
 ---
 
-You can use up to three **custom fields** to filter your [economy](./economy-events.md), [funnel](./funnel-events.md), and [custom](./custom-events.md) events by unique dimensions specific to your experience. Some examples include:
+You can use up to three **custom fields** to filter your [economy](./economy-events.md), [funnel](./funnel-events.md), and [custom](./custom-events.md) events by unique dimensions specific to your game. Some examples include:
 
 - Levels — 1, 2, 3, . . .
 - Player class — Warrior, Mage, Archer
@@ -15,7 +15,7 @@ The `customFields` parameter is a dictionary that lets you send up to three cust
 The **values** assigned to custom fields must be **strings**. If you need to log another data type like a boolean or number, pass it in string format.
 </Alert>
 
-Using a fantasy-related experience as an example, you can track an economy event regarding equipment type, player class, and level with the following:
+Using a fantasy-related game as an example, you can track an economy event regarding equipment type, player class, and level with the following:
 
 ```lua title="Tracking Custom Fields"
 local AnalyticsService = game:GetService("AnalyticsService")

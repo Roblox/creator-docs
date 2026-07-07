@@ -61,7 +61,7 @@ To start, give the game its own unique name.
 
 ### Change numbers
 
-By modifying different numbers in _GameSettings_, you can create a unique experience for your players. For instance, players can start out moving extra fast or gain levels slowly.
+By modifying different numbers in _GameSettings_, you can create a unique game for your players. For instance, players can start out moving extra fast or gain levels slowly.
 
 1. In the _GameSetting_ script, find line **28**. This line has the number for the player's starting move speed. Replace the number `7` with a higher number, like `30`.
 

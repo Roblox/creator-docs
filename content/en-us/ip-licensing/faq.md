@@ -17,25 +17,25 @@ description: Frequently asked questions and guidelines about IP licensing tools.
 
   <dt>**What information is shared with rights holders if I request for a license?**</dt>
   <dd><p />
-    Only publicly available information about the experience you're requesting with is visible to the rights holder before they accept your request.
+    Only publicly available information about the game you're requesting with is visible to the rights holder before they accept your request.
 
-    If you enter an agreement with a rights holder, they receive metrics on the licensed experience including the number of visits, average of active users over a 7-day period (7DAU), and an anonymized list of transactions if a revenue share rate is set in the license's terms.
+    If you enter an agreement with a rights holder, they receive metrics on the licensed game including the number of visits, average of active users over a 7-day period (7DAU), and an anonymized list of transactions if a revenue share rate is set in the license's terms.
 
   <p /></dd><br />
 
   <dt>**What do I do if I'm currently using a popular IP that isn't available in the Licenses catalog?**</dt>
   <dd><p />
-    If you want to use an IP in your experience, you must have explicit permission from the rights holder. We recommend removing any content that might use IP and isn't covered by a license. There might be some creators and experiences that have reached agreements with rights holders on their own; if you already have a licensing agreement with the rights holder, then that is still valid.
+    If you want to use an IP in your game, you must have explicit permission from the rights holder. We recommend removing any content that might use IP and isn't covered by a license. There might be some creators and games that have reached agreements with rights holders on their own; if you already have a licensing agreement with the rights holder, then that is still valid.
   <p /></dd><br />
 
-  <dt>**Can I request a license with an experience that doesn't currently meet the eligibility requirements?**</dt>
+  <dt>**Can I request a license with a game that doesn't currently meet the eligibility requirements?**</dt>
   <dd><p />
-    Yes. When you request a license, the experience you pick is meant to showcase to rights holders your abilities as a creator. This experience can be partially or fully finished, or it can be a fork of an existing experience. After you request to use a license, the rights holder can review your license request to build your experience around their IP and then choose to grant you a license.
+    Yes. When you request a license, the game you pick is meant to showcase to rights holders your abilities as a creator. This game can be partially or fully finished, or it can be a fork of an existing game. After you request to use a license, the rights holder can review your license request to build your game around their IP and then choose to grant you a license.
   <p /></dd><br />
 
   <dt>**How much creative freedom do I have with the IP?**</dt>
   <dd><p />
-    Each license comes with a set of content standards for how an IP can and can't be used, and each license's standards are different depending on the needs of the rights holder. As long as you operate within the bounds of the Roblox Terms of Use, and the license and its standards, you have creative control on how to use IP in your experience.
+    Each license comes with a set of content standards for how an IP can and can't be used, and each license's standards are different depending on the needs of the rights holder. As long as you operate within the bounds of the Roblox Terms of Use, and the license and its standards, you have creative control on how to use IP in your game.
 
     A rights holder can request changes through Roblox if you're deviating from those standards, and can request to terminate a license if you consistently do not follow those standards.
 
@@ -46,9 +46,9 @@ description: Frequently asked questions and guidelines about IP licensing tools.
     No. As long as you're following the terms and content standards of the license, you can make or use your own assets.
   <p /></dd><br />
 
-  <dt>**Can I create one level or a portion of my experience based on an IP and request a license?**</dt>
+  <dt>**Can I create one level or a portion of my game based on an IP and request a license?**</dt>
   <dd><p />
-    No. You can only request or be offered a license for a full experience, where the IP is central to and present throughout the experience.
+    No. You can only request or be offered a license for a full game, where the IP is central to and present throughout the game.
   <p /></dd><br />
 
   <dt>**As a creator, can I also be verified and offer a license for an IP that I own?**</dt>
@@ -63,7 +63,7 @@ description: Frequently asked questions and guidelines about IP licensing tools.
 
   <dt>**How do I communicate with rights holders I have an agreement with?**</dt>
   <dd><p />
-    Rights holders can request changes to a licensed experience if they believe it is deviating from the content standards or scope defined for the license. You'll receive a notification from Roblox to ensure that you can make any necessary changes to your experience.
+    Rights holders can request changes to a licensed game if they believe it is deviating from the content standards or scope defined for the license. You'll receive a notification from Roblox to ensure that you can make any necessary changes to your game.
   <p /></dd><br />
 
   <dt>**How will I be notified about updates or changes to my license request or license agreements?**</dt>
@@ -73,7 +73,7 @@ description: Frequently asked questions and guidelines about IP licensing tools.
 
   <dt>**How are disputes resolved?**</dt>
   <dd><p />
-    Rights holders can attempt to license an experience twice, and creators can dispute an offer for a license twice. If an agreement can't be reached and the rights holder still believes that the experience contains their IP, they can pursue other options, such as filing a DMCA claim.
+    Rights holders can attempt to license a game twice, and creators can dispute an offer for a license twice. If an agreement can't be reached and the rights holder still believes that the game contains their IP, they can pursue other options, such as filing a DMCA claim.
   <p /></dd><br />
 
   <dt>**How does IP licensing interact with the DMCA process?**</dt>
@@ -81,16 +81,16 @@ description: Frequently asked questions and guidelines about IP licensing tools.
     IP licensing provides rights holders and creators with an alternative to DMCA takedowns. The current DMCA process will continue as required by law, but we want to make it easier for rights holders and creators to form partnerships and create more opportunities.
   <p /></dd><br />
 
-  <dt>**What protections do I have as a creator from a rights holder who is trying to inaccurately claim IP in my experience?**</dt>
+  <dt>**What protections do I have as a creator from a rights holder who is trying to inaccurately claim IP in my game?**</dt>
   <dd><p />
-    If you believe a rights holder has inaccurately offered a license for your experience, you have 14 days to dispute the offer. When you dispute an offer, you can select from a set of reasons that tell the rights holder why the license isn't needed.
+    If you believe a rights holder has inaccurately offered a license for your game, you have 14 days to dispute the offer. When you dispute an offer, you can select from a set of reasons that tell the rights holder why the license isn't needed.
   <p /></dd><br />
 
   <dt>**Can an active license agreement ever be terminated?**</dt>
   <dd><p />
     A rights holder can choose to cancel an active license agreement for a small set of reasons, like if a creator consistently doesn't follow the license's content standards or if the rights holder somehow loses the rights to the IP. In this case, you'll receive at least 30 days advance notice before the termination of the license agreement.
 
-    During that time, you should work to remove the IP from your experience. Following the notice period, the terms and any revenue share will immediately be removed from the experience.
+    During that time, you should work to remove the IP from your game. Following the notice period, the terms and any revenue share will immediately be removed from the game.
 
   <p /></dd><br />
 </dl>

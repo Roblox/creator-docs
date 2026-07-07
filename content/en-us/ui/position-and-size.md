@@ -7,7 +7,7 @@ Unless UI objects are under control of a [layout structure](#layout-structures) 
 
 ## Core properties
 
-All `Class.GuiObject|GuiObjects` share a core set of properties to [position](#position), [size](#size), [anchor](#anchorpoint), and [layer](#zindex) them within an on‑screen or in‑experience container.
+All `Class.GuiObject|GuiObjects` share a core set of properties to [position](#position), [size](#size), [anchor](#anchorpoint), and [layer](#zindex) them within an on‑screen or in-game container.
 
 ### Position
 
@@ -121,11 +121,11 @@ Layout structures let you quickly organize and display `Class.GuiObject|GuiObjec
 
 ## Cross-platform factors
 
-Roblox is inherently [cross‑platform](../projects/cross-platform.md), as players can discover and join experiences on their phone or tablet, then later continue where they left off on their PC or console. You should design your Roblox experiences to be accessible and enjoyable on **all** platforms that you choose to support, instead of optimizing for one platform and neglecting others.
+Roblox is inherently [cross‑platform](../projects/cross-platform.md), as players can discover and join games on their phone or tablet, then later continue where they left off on their PC or console. You should design your Roblox games to be accessible and enjoyable on **all** platforms that you choose to support, instead of optimizing for one platform and neglecting others.
 
 ### Reserved zones
 
-On mobile devices, the default controls occupy a portion of the bottom-left and bottom-right corners of the screen. When you design an experience's UI, avoid placing important info or virtual buttons in these zones.
+On mobile devices, the default controls occupy a portion of the bottom-left and bottom-right corners of the screen. When you design a game's UI, avoid placing important info or virtual buttons in these zones.
 
 <img src="../assets/ui/misc/Touch-Reserved-Zones.png" width="840" />
 
@@ -199,7 +199,7 @@ end
 
 ### Context-based UI
 
-Screen space is limited on mobile devices, so you should show only the most vital information during active gameplay. For example, if your experience includes a special input action to open doors and treasure chests, it doesn't make sense to constantly show an "open" button on the screen. Instead, use a [proximity prompt](../ui/proximity-prompts.md) or similar method to accept input only when the character approaches a door or chest.
+Screen space is limited on mobile devices, so you should show only the most vital information during active gameplay. For example, if your game includes a special input action to open doors and treasure chests, it doesn't make sense to constantly show an "open" button on the screen. Instead, use a [proximity prompt](../ui/proximity-prompts.md) or similar method to accept input only when the character approaches a door or chest.
 
 <figure>
   <img src="../assets/ui/misc/Contextual-Button.png" width="840" />

@@ -53,7 +53,7 @@ The "try it out" feature uses four risk levels, which control the warnings and r
   </tbody>
 </table>
 
-- **Low risk** endpoints primarily retrieve publicly available information and have minimal impact on your data or experiences. These endpoints show a simple informational banner when using "try it out."
+- **Low risk** endpoints primarily retrieve publicly available information and have minimal impact on your data or games. These endpoints show a simple informational banner when using "try it out."
 
 - **Medium risk** endpoints can create, update, or access private information. Most changes you make from these endpoints can be reversed using other available endpoints. These endpoints have the following "try it out" safety measures:
 

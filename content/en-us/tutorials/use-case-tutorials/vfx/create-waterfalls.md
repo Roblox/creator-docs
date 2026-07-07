@@ -3,7 +3,7 @@ title: Create waterfalls with VFX
 description: The process of creating waterfalls to elevate your visual and gameplay requirements.
 ---
 
-A **waterfall** is a point in a river or stream where water flows over one or more vertical drops into a body of water. Experiences often include waterfalls for visual aesthetics, such as to enhance the environment or create a visual point of interest, or for functional gameplay purposes, such as to hide resources or transition players between different areas in the place itself.
+A **waterfall** is a point in a river or stream where water flows over one or more vertical drops into a body of water. Games often include waterfalls for visual aesthetics, such as to enhance the environment or create a visual point of interest, or for functional gameplay purposes, such as to hide resources or transition players between different areas in the place itself.
 
 Using the [Waterfall Island](https://www.roblox.com/games/16454663889/Use-Case-Tutorials-Volcano-Island) `.rbxl` file as a reference, this tutorial shows you how to create a waterfall with VFX objects that represent real-world physical behavior, including guidance on:
 
@@ -22,7 +22,7 @@ You can create your own textures in third-party texture creation tools and follo
 
 ## Break down reference
 
-To create credible waterfalls, it's important to reference real-world natural features in the design process because it allows you to break down the subject matter into individual components with distinct visual and behavioral characteristics. For example, the sample [Waterfall Island](https://www.roblox.com/games/16454663889/Use-Case-Tutorials-Volcano-Island) experience references Snoqualmie Falls in Washington state to inform all texture and VFX design decisions relating to the waterfall and its surrounding terrain.
+To create credible waterfalls, it's important to reference real-world natural features in the design process because it allows you to break down the subject matter into individual components with distinct visual and behavioral characteristics. For example, the sample [Waterfall Island](https://www.roblox.com/games/16454663889/Use-Case-Tutorials-Volcano-Island) game references Snoqualmie Falls in Washington state to inform all texture and VFX design decisions relating to the waterfall and its surrounding terrain.
 
 <img src="../../../assets/tutorials/creating-waterfalls/Falls-NoComponents.png" alt="A far out view of Snoqualmie Falls."  width="80%" />
 
@@ -43,7 +43,7 @@ While a waterfall is a continuous and connected stream of water that involves mu
   </figure>
 </GridContainer>
 
-The following sections provide an in-depth analysis of the different design decisions and techniques you can use to recreate each of these waterfall components that make up the main drop in the sample's 3D space. As you review these decisions and experiment with various `Class.Beam` and `Class.ParticleEmitter` properties, you will learn how to utilize VFX to solve the unique environmental requirements for your own experiences.
+The following sections provide an in-depth analysis of the different design decisions and techniques you can use to recreate each of these waterfall components that make up the main drop in the sample's 3D space. As you review these decisions and experiment with various `Class.Beam` and `Class.ParticleEmitter` properties, you will learn how to utilize VFX to solve the unique environmental requirements for your own games.
 
 ## Configure cascades
 

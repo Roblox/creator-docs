@@ -1,16 +1,16 @@
 ---
 title: Avatar Settings
-description: The Avatar Settings window contains all Studio-level settings and customization options for an experience.
+description: The Avatar Settings window contains all Studio-level settings and customization options for a game.
 ---
 
-The **Avatar Settings** window, accessible from Studio's **File** menu or the **Avatar** tab, allows you to control the look and behavior of user avatars across your entire experience.
+The **Avatar Settings** window, accessible from Studio's **File** menu or the **Avatar** tab, allows you to control the look and behavior of user avatars across your entire game.
 
 <img src="../assets/studio/general/Toolbar-Avatar-Settings.png" width="800" alt="Avatar Settings indicated in Studio's toolbar" />
 
 <img src="../assets/studio/general/Avatar-Settings-Window.png" width="600" alt="Avatar Settings window layout" />
 
 <Alert severity="warning">
-**Avatar Settings** modifies underlying experience defaults that are not visible outside of the settings interface or accessible with scripts. This can lead to difficult-to-debug behaviors, especially when working across teams or on a universe with multiple place files. Test your changes by using the window's preview and by playtesting in Studio so that you fully understand the impact on player avatars before publishing changes to your live experience.
+**Avatar Settings** modifies underlying game defaults that are not visible outside of the settings interface or accessible with scripts. This can lead to difficult-to-debug behaviors, especially when working across teams or on a universe with multiple place files. Test your changes by using the window's preview and by playtesting in Studio so that you fully understand the impact on player avatars before publishing changes to your live game.
 </Alert>
 
 The top bar of the **Avatar Settings** window provides easy access to quickly set the avatar type, assign a preset, and enable preview.
@@ -40,7 +40,7 @@ The top bar of the **Avatar Settings** window provides easy access to quickly se
 
 ## General
 
-The **General** tab offers simple presets tailored to the needs of most experiences. In many cases, one of these presets will fit your experience's avatar use-cases and additional configuration is not necessary. However, advanced developers can further customize avatar behavior using the more detailed settings available in the other tabs.
+The **General** tab offers simple presets tailored to the needs of most games. In many cases, one of these presets will fit your game's avatar use-cases and additional configuration is not necessary. However, advanced developers can further customize avatar behavior using the more detailed settings available in the other tabs.
 
 <table>
 <thead>
@@ -142,7 +142,7 @@ The **Clothing** tab contains controls for layered and classic clothing.
 
 ## Accessories
 
-The **Accessories** tab contains settings related to accessories in your experience.
+The **Accessories** tab contains settings related to accessories in your game.
 
 <table>
 <thead>

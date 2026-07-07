@@ -1,6 +1,6 @@
 ---
 title: Assemble an asset library
-description: Explains how to import and configure your assets within a central location in your experience.
+description: Explains how to import and configure your assets within a central location in your game.
 next: /tutorials/curriculums/environmental-art/construct-your-world
 prev: /tutorials/curriculums/environmental-art/develop-polished-assets
 ---
@@ -9,7 +9,7 @@ prev: /tutorials/curriculums/environmental-art/develop-polished-assets
 
 <br/>
 
-**Assembling an asset library** is the process of importing and configuring a collection of assets in a central location within your experience for easy access and reuse. This process can save you significant time as you prepare to construct your environment, especially if you configure each asset's values to enhance performance and optimize memory usage on mid to low-end devices.
+**Assembling an asset library** is the process of importing and configuring a collection of assets in a central location within your game for easy access and reuse. This process can save you significant time as you prepare to construct your environment, especially if you configure each asset's values to enhance performance and optimize memory usage on mid to low-end devices.
 
 Using the [Environment Art - Assembling](https://www.roblox.com/games/14447787049/Environment-Art-Assembling) `.rbxl` file as a reference, this section of the environmental art curriculum shows you how to assemble an asset library from your polished assets, including step-by-step instructions on:
 
@@ -20,7 +20,7 @@ Using the [Environment Art - Assembling](https://www.roblox.com/games/1444778704
 
 After you complete this section, you will learn how to utilize your asset library in creative ways to replace or convert the greybox environment, and add final touches that enhance the overall 3D space.
 
-<img src="../../../assets/tutorials/environmental-art-curriculum/Section3/Overview.png" alt="The sample laser tag experience's modular and prop kit." width="100%"/>
+<img src="../../../assets/tutorials/environmental-art-curriculum/Section3/Overview.png" alt="The sample laser tag game's modular and prop kit." width="100%"/>
 
 <Alert severity="info">
     Before you begin to compile your asset library by importing your tileable textures, trim sheets, modular assets, and props into Studio, it's best practice to arrange and organize all of your content in a folder structure according to their data type, such as trim sheets, decals, modular assets, and props. This can provide you an ease of reference as you create custom materials and visual treatments.
@@ -76,7 +76,7 @@ To create `Class.MaterialVariant` objects for your tileable textures:
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section3/CustomMaterials-9.jpg" alt="The Tiling section of the Inspector view with its settings." width="40%"/>
 
-10. Repeat this process for each tileable texture you want to include in your experience.
+10. Repeat this process for each tileable texture you want to include in your game.
 
 ## Create SurfaceAppearance packages
 
@@ -118,7 +118,7 @@ Studio represents the modular assets and props that you import as `Class.Model` 
 
 Using the Importer, you can import the sample modular kit and props into Studio for use in your asset library, or you can import any assets you designed in the previous section of the tutorial. For more information on this tool's functionality, see [Importer](../../../studio/importer.md).
 
-To import your modular assets and props into the experience:
+To import your modular assets and props into the game:
 
 1. From the **File** menu, select **Import**. A file browser displays.
 2. Select a `.fbx` file for either a modular asset or prop.
@@ -129,7 +129,7 @@ To import your modular assets and props into the experience:
 4. Verify any [warning or error messages](../../../studio/importer.md#warnings-and-errors).
 5. Click **Import**. The asset displays in the **Explorer** window and in the viewport.
 6. Repeat this process for each modular asset and prop.
-7. Move all of your assets into one area of your experience near your greybox geometry. This zone is your asset library.
+7. Move all of your assets into one area of your game near your greybox geometry. This zone is your asset library.
 
 ## Apply SurfaceAppearance data
 
@@ -143,17 +143,17 @@ To apply `Class.SurfaceAppearance` texture map data to unwrapped meshes in your 
 
 ## Set physics and rendering parameters
 
-Now that you have your assets within Studio, it's important to set physics and rendering parameters that allow the assets to retain the highest possible visual quality across devices with memory and GPU limitations. In general, the more closely you adhere to the guidance in this section, the more performant you make your experience. However, it's important to carefully consider the context of where you plan to place each asset within the overall environment to ensure you maintain your aesthetic goals and gameplay requirements.
+Now that you have your assets within Studio, it's important to set physics and rendering parameters that allow the assets to retain the highest possible visual quality across devices with memory and GPU limitations. In general, the more closely you adhere to the guidance in this section, the more performant you make your game. However, it's important to carefully consider the context of where you plan to place each asset within the overall environment to ensure you maintain your aesthetic goals and gameplay requirements.
 
 ### Anchored
 
-The `Class.BasePart.Anchored` property determines whether the Roblox Engine's physics system affects the position of the object. When you enable this property for a `Class.Part` or `Class.MeshPart`, it removes the object from the physical calculations of the dynamic simulation that's always running in experience, meaning the object will never change position due to gravity or collision from other objects.
+The `Class.BasePart.Anchored` property determines whether the Roblox Engine's physics system affects the position of the object. When you enable this property for a `Class.Part` or `Class.MeshPart`, it removes the object from the physical calculations of the dynamic simulation that's always running in game, meaning the object will never change position due to gravity or collision from other objects.
 
-Objects that don't simulate a physics response are cheaper to render because they don't take up the GPU that's necessary for those physics calculations. When you free up GPU, you improve performance for your experience, especially on low-end devices that need to save GPU for fast-paced gameplay. It's for this reason that **every** asset aside from doors in the final sample laser tag environment are anchored.
+Objects that don't simulate a physics response are cheaper to render because they don't take up the GPU that's necessary for those physics calculations. When you free up GPU, you improve performance for your game, especially on low-end devices that need to save GPU for fast-paced gameplay. It's for this reason that **every** asset aside from doors in the final sample laser tag environment are anchored.
 
 ### CanCollide
 
-The `Class.BasePart.CanCollide` property determines whether the object can physically interact with other objects. When you enable this property for a `Class.Part` or `Class.MeshPart`, the object is impenetrable, and the Roblox Engine accounts for it in physics calculations. These calculations can impact your experience's performance when there are many objects the engine must consider in its physics calculations.
+The `Class.BasePart.CanCollide` property determines whether the object can physically interact with other objects. When you enable this property for a `Class.Part` or `Class.MeshPart`, the object is impenetrable, and the Roblox Engine accounts for it in physics calculations. These calculations can impact your game's performance when there are many objects the engine must consider in its physics calculations.
 
 To alleviate some of this impact on performance, disable this property for objects that the user will never interact with. For example, the final sample laser tag environment disables this property for all foliage.
 
@@ -285,11 +285,11 @@ To view collision fidelity in Studio, toggle on **Collision&nbsp;fidelity** from
 
 The `Class.MeshPart.RenderFidelity` property determines the mesh's level of detail that displays to the user. When you set this property to `Enum.RenderFidelity.Automatic`, the Roblox Engine reduces the mesh's fidelity the further the user is from the mesh, and when you set this property to `Enum.RenderFidelity.Precise`, every vertex of your mesh renders exactly as you intend no matter the distance between them.
 
-The more objects the engine must render precisely to the user from any distance, especially if they have a high vertex count, the higher the performance cost. To alleviate some of this impact on performance, set this property to `Enum.RenderFidelity.Performance` for objects with geometric complexity, such as foliage in the sample asset library, because they don't need to display in their entirety from a distance for any gameplay requirement. This reduces your experience's polygon count without yielding overall visual quality.
+The more objects the engine must render precisely to the user from any distance, especially if they have a high vertex count, the higher the performance cost. To alleviate some of this impact on performance, set this property to `Enum.RenderFidelity.Performance` for objects with geometric complexity, such as foliage in the sample asset library, because they don't need to display in their entirety from a distance for any gameplay requirement. This reduces your game's polygon count without yielding overall visual quality.
 
 ## Convert assets into packages
 
-Now that all of your modular assets are in Studio with rendering parameters that are set up to retain their high visual quality for all users, it's time to convert them into packages. It's important to convert your assets into packages because it allows you to reuse them repeatedly throughout your current experience and other projects. In addition, you can easily make edits to a package that instantly populate to all of its instances, saving you a lot of time in the iteration process.
+Now that all of your modular assets are in Studio with rendering parameters that are set up to retain their high visual quality for all users, it's time to convert them into packages. It's important to convert your assets into packages because it allows you to reuse them repeatedly throughout your current game and other projects. In addition, you can easily make edits to a package that instantly populate to all of its instances, saving you a lot of time in the iteration process.
 
 Because your `Class.SurfaceAppearance` objects are already packages, when you convert your `Class.Model` objects into packages, they become nested packages. Nested packages allow you to maintain complex hierarchies of child objects that you can modify independent of the `Class.Model` object package. This allows you greater control over the individual components of your assets.
 

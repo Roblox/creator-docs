@@ -1,6 +1,6 @@
 ---
 title: Island of Move
-description: Learn how to use Roblox Studio to make games and experiences. This lesson shows you how to animate to make your own simulator.
+description: Learn how to use Roblox Studio to make games. This lesson shows you how to animate to make your own simulator.
 next: /education/build-it-play-it-island-of-move/opening-the-template
 ---
 

@@ -3,7 +3,7 @@ title: Import rigid accessories
 description: Use the Importer to add third-party models to Studio before using the Accessory Fitting Tool to convert the model to an Accessory.
 ---
 
-Use the following instructions to [import](#import-3d-assets) your `.fbx` or `.gltf` third-party model into Studio and [convert](#convert-rigid-accessories) the asset to an `Accessory` object that you can save to use in your experience, share with others, or upload to the Marketplace.
+Use the following instructions to [import](#import-3d-assets) your `.fbx` or `.gltf` third-party model into Studio and [convert](#convert-rigid-accessories) the asset to an `Accessory` object that you can save to use in your game, share with others, or upload to the Marketplace.
 
 <Alert severity ='info'>
 The following asset example and instructions are part of the [Rigid accessory tutorial](../../art/accessories/creating-rigid/index.md) which covers the process of converting a model from Blender to publishing the asset to the Marketplace.
@@ -31,7 +31,7 @@ To import your asset:
 <AccordionSummary>Manually add textures</AccordionSummary>
 <AccordionDetails>
 
-If textures didn't load correctly, add them manually. You may need to save and publish your experience in order to access the [Asset Manager](../../projects/assets/manager.md).
+If textures didn't load correctly, add them manually. You may need to save and publish your game in order to access the [Asset Manager](../../projects/assets/manager.md).
 
 1. In the **Asset Manager**, click the **Import** button.
 2. Upload your image files.
@@ -95,6 +95,6 @@ After successful fitting and converting, your 3D model should populate in your p
 
 - Begin the process of [uploading and publishing](../../marketplace/publish-to-marketplace.md#upload-an-asset) the accessory to the Marketplace.
 
-- Use the accessory in your current experience by equipping it to character models with [HumanoidDescription](../../characters/appearance.md#manually-modify-appearance), or by dragging and dropping the accessory under the appropriate character `Class.Model` object.
+- Use the accessory in your current game by equipping it to character models with [HumanoidDescription](../../characters/appearance.md#manually-modify-appearance), or by dragging and dropping the accessory under the appropriate character `Class.Model` object.
 
-- Save the accessory to your [Toolbox](../../projects/assets/toolbox.md) or make it public on the [Creator Store](../../production/creator-store.md) to share or use within any of your experiences.
+- Save the accessory to your [Toolbox](../../projects/assets/toolbox.md) or make it public on the [Creator Store](../../production/creator-store.md) to share or use within any of your games.

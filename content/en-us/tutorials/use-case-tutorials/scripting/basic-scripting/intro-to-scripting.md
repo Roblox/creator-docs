@@ -4,7 +4,7 @@ description: The process for creating a basic script that makes a platform disap
 next: /tutorials/use-case-tutorials/scripting/basic-scripting/deadly-lava
 ---
 
-In [Introduction to Roblox Studio](../../../first-experience/index.md), you learned how to create and manipulate parts in Roblox Studio. In this tutorial, you'll learn how to apply a **script** to parts to make a platform appear and disappear. You can use this in a platforming experience to span a gap, challenging users to time their jumps carefully to get to the other side.
+In [Introduction to Roblox Studio](../../../first-experience/index.md), you learned how to create and manipulate parts in Roblox Studio. In this tutorial, you'll learn how to apply a **script** to parts to make a platform appear and disappear. You can use this in a platforming game to span a gap, challenging users to time their jumps carefully to get to the other side.
 
 <video controls loop muted>
     <source src="../../../../assets/tutorials/intro-to-scripting/finishedSinglePlatformShort.mp4" />
@@ -16,7 +16,7 @@ First off, you need a **Part** to act as the platform. Making and moving parts s
 
 1. Insert a **Part** and rename it to `DisappearingPlatform`.
 2. Resize it to large enough for a user to jump on.
-3. Move it to a proper location so that you can reach it and jump on it when testing your experience.
+3. Move it to a proper location so that you can reach it and jump on it when playtesting your game.
 
    ![alt](../../../../assets/tutorials/intro-to-scripting/partInPlace.jpg)
 
@@ -30,7 +30,7 @@ Remember that setting a part's Anchored property to **true** makes it stay in pl
 
 ## Insert a script
 
-Code in Roblox is written in a language called [Luau](../../../../luau/index.md) which you can put in scripts within various containers in the **Explorer**. If you put a script under a **Part**, Roblox will run the script's code when the part is loaded into the experience.
+Code in Roblox is written in a language called [Luau](../../../../luau/index.md) which you can put in scripts within various containers in the **Explorer**. If you put a script under a **Part**, Roblox will run the script's code when the part is loaded into the game.
 
 1. Hover over the `DisappearingPlatform` part in the **Explorer** window and click the **+** button to insert a new script into the platform. Rename your new script as **Disappear**.
 
@@ -195,7 +195,7 @@ The built-in function `Library.task.wait()` can be used for this. In the parenth
 
 <Alert severity="error">
 
-Whatever you do, never make a `while true` loop without including a `task.wait()` — and don't test your code before you've put one in! If you don't wait, your experience will **freeze** because Studio will never have a chance to leave the loop and do anything else.
+Whatever you do, never make a `while true` loop without including a `task.wait()` — and don't test your code before you've put one in! If you don't wait, your game will **freeze** because Studio will never have a chance to leave the loop and do anything else.
 
 </Alert>
 

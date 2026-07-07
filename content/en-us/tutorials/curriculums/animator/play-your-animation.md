@@ -5,7 +5,7 @@ next: /tutorials/curriculums/animator/test-and-save
 prev: /tutorials/curriculums/animator/work-with-the-animation-editor
 ---
 
-In order to play your animation in your open experience, as well as store it for reuse in other projects, you must publish the animation to the cloud. This process creates a unique animationID for your animation that you can reference in scripts, which is especially important if you want to replace any of Roblox's default character animations.
+In order to play your animation in your open game, as well as store it for reuse in other projects, you must publish the animation to the cloud. This process creates a unique animationID for your animation that you can reference in scripts, which is especially important if you want to replace any of Roblox's default character animations.
 
 In this chapter, let's go over how to export your animation by publishing it to Roblox, then swap out the template's default walk animation with your own creation.
 
@@ -29,7 +29,7 @@ To export your new animation:
 
 ## Replace default animation
 
-Every player character includes a set of **default animations** that play whenever the character performs specific in-experience actions, such as running, climbing, or jumping. Roblox provides these animations out-of-the-box for every experience without any additional coding effort.
+Every player character includes a set of **default animations** that play whenever the character performs specific in-game actions, such as running, climbing, or jumping. Roblox provides these animations out-of-the-box for every game without any additional coding effort.
 
 <GridContainer numColumns="3">
   <figure>
@@ -46,7 +46,7 @@ Every player character includes a set of **default animations** that play whenev
   </figure>
 </GridContainer>
 
-You can swap out default animations with your own custom animations so that they play for every player that joins your experience. For this lesson, let's swap out the default walking animation with your swim animation so that you can see how it looks with your avatar as soon as you start playing.
+You can swap out default animations with your own custom animations so that they play for every player that joins your game. For this lesson, let's swap out the default walking animation with your swim animation so that you can see how it looks with your avatar as soon as you start playing.
 
 To replace the default walking animation with your custom swimming animation:
 

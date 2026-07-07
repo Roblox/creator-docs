@@ -63,7 +63,7 @@ For a comprehensive list of all the features of the Roblox Engine, see the
 </tbody>
 </table>
 
-While you can theoretically create a fully functional Roblox experience using
+While you can theoretically create a fully functional Roblox game using
 just simple parts, you'll most likely import [meshes](../parts/meshes.md) and combine primitive parts into more complex objects and structures through [solid
 modeling](/parts/solid-modeling).
 
@@ -160,7 +160,7 @@ For more information, see [environmental terrain](../parts/terrain.md).
 
 Custom lighting can make your 3D world much more immersive and realistic. The `Class.Lighting` service contains objects that control global lighting settings of your place, such as `Class.Atmosphere` for simulating atmospheric effects or `Class.Sky` to alter the sun, moon, and stars in your environments. In addition, you can use [light sources](../effects/light-sources.md) to emit light from specific objects.
 
-Adding [audio](../audio/index.md) to your experiences is also crucial for elevating your experiences to new heights. By strategically using positional and non-positional audio, you can immerse players into your worlds, provide them useful feedback for their actions, and direct their attention to what they need to do to be successful in their objectives.
+Adding [audio](../audio/index.md) to your games is also crucial for elevating your games to new heights. By strategically using positional and non-positional audio, you can immerse players into your worlds, provide them useful feedback for their actions, and direct their attention to what they need to do to be successful in their objectives.
 
 ### Replication
 
@@ -297,7 +297,7 @@ service explicitly.
 <h4>TextChatService</h4>
 
 `Class.TextChatService` represents the service that handles various,
-in-experience text chat tasks, such as managing channels, decorating messages,
+in-game text chat tasks, such as managing channels, decorating messages,
 filtering text, creating commands, and developing custom chats interfaces.
 
 For more information, see [text chat overview](../chat/in-experience-text-chat.md).

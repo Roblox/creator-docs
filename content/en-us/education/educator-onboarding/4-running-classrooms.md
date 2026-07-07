@@ -15,13 +15,13 @@ By the end of this article, you will:
 
 ## Assessments and evaluation
 
-As an educator, there are different ways to gauge student progress and understanding. Options are included for those playing experiences and designing them.
+As an educator, there are different ways to gauge student progress and understanding. Options are included for those playing games and designing them.
 
-### Assess virtual learning experiences
+### Assess virtual learning games
 
 Roblox has built-in tools that allow anyone to screenshots or record video. These media artifacts can then be integrated into existing assignments. For example, a student may make recordings of a historical shrine as evidence in an Asian history assignment. To learn about these options, see <a href="https://en.help.roblox.com/hc/en-us/articles/203314160-How-Do-I-Take-a-Screenshot-" target="_blank" rel="noopener">Taking a Screenshot</a> or <a href="https://en.help.roblox.com/hc/en-us/articles/203314190" target="_blank" rel="noopener">Recording Videos</a>.
 
-Additionally, some virtual learning experiences may have built-in assessments, such as quizzes. Some lesson plans on Roblox Education also have reflection questions, handouts, or quizzes.
+Additionally, some virtual learning games may have built-in assessments, such as quizzes. Some lesson plans on Roblox Education also have reflection questions, handouts, or quizzes.
 
 <figure>
 <img src="../../assets/education/legacy/module4-luaLearningQuiz.png" width="80%" />
@@ -87,7 +87,7 @@ A quick summary of each tool and use cases are below.
 <b><a href = "#roblox-chat">Roblox chat</a></b>
 </td>
 <td>
-Roblox offers multiple means of communicating on the platform, like experience-messaging and private messages.
+Roblox offers multiple means of communicating on the platform, like game-messaging and private messages.
 </td>
 </tr>
 <tr>
@@ -103,7 +103,7 @@ A tool in Roblox Studio that allows people to invite friends to collaborate on a
 <b><a href = "#private-servers">Private servers</a></b>
 </td>
 <td>
-A closed server for experiences that allows you to control who can join.
+A closed server for games that allows you to control who can join.
 </td>
 </tr>
 <tr>
@@ -119,9 +119,9 @@ Social networks with member lists and post boards. Also allows for collaboration
 
 ### Roblox chat
 
-Most Roblox experiences offer basic chat features. These include:
+Most Roblox games offer basic chat features. These include:
 
-- Being able to chat among all players in an experience server.
+- Being able to chat among all players in a game server.
 - Send private messages to a specific player.
 - Mute/unmute specific players.
 - Create groups for chat between specific players.
@@ -145,7 +145,7 @@ variant="contained">Learn More</Button></a>
 
 ### Private servers
 
-Normally, whenever a player enters a Roblox experience, they're in a public server. If desired, educators can create private servers which allow for control over who may join. Invites to play can be sent with hyperlinks which can be shared through email or a learning management system (like Google Classroom).
+Normally, whenever a player enters a Roblox game, they're in a public server. If desired, educators can create private servers which allow for control over who may join. Invites to play can be sent with hyperlinks which can be shared through email or a learning management system (like Google Classroom).
 
 <p>
 <a href="../../education/support/private-servers-for-classroom-use.md" target="_blank" rel="noopener"><Button
@@ -154,7 +154,7 @@ variant="contained">Learn More</Button></a>
 
 ### Groups
 
-Groups are mini-communities that can be formed on the Roblox platform. Each group includes features like a member list with ranks and a "wall" to post announcements. For educators, groups can be used in classroom management posting links to experiences. Additionally, students can form their own groups as a way of collaboratively working on projects in Roblox Studio.
+Groups are mini-communities that can be formed on the Roblox platform. Each group includes features like a member list with ranks and a "wall" to post announcements. For educators, groups can be used in classroom management posting links to games. Additionally, students can form their own groups as a way of collaboratively working on projects in Roblox Studio.
 
 <p>
 <a href="../../projects/groups.md"
@@ -173,7 +173,7 @@ Digital civility is useful for all Roblox students. Our materials teach skills s
 <Grid item XSmall={6}>
 <h4>Intro to digital safety</h4>
 
-Learn real-life skills playing a Roblox experience.
+Learn real-life skills playing a Roblox game.
 
 <a href="../../education/resources/intro-to-digital-safety.md" target="_blank" rel="noopener"><Button variant="contained">View</Button></a>
 </Grid>

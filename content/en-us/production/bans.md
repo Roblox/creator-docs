@@ -9,9 +9,9 @@ The **Bans** dashboard lets you view current bans, ban users, and unban users. Y
 
 ## Access the dashboard
 
-To access the Bans page, you must either be the experience owner or have [Configure bans for all group experiences permissions](../projects/groups.md#roles-and-permissions).
+To access the Bans page, you must either be the game owner or have [Configure bans for all group games permissions](../projects/groups.md#roles-and-permissions).
 
-1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
+1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your game.
 1. In the **Moderation** menu on the left, select **Bans**.
 
 ## Ban users
@@ -20,7 +20,7 @@ To ban a user, select the **Add users** button, fill out the details, and click 
 
 - You must have the numeric user ID for each user you want to ban. To ban multiple users, include a comma-separated list of IDs.
 - **Apply ban to all known alt accounts** lets you also include alt (alternate) accounts.
-- Include a public and private reason for the ban. These fields can be identical. Roblox displays the public reason for the ban to the user if they attempt to join your experience.
+- Include a public and private reason for the ban. These fields can be identical. Roblox displays the public reason for the ban to the user if they attempt to join your game.
 - For guidelines on banning users, see [Users and players](../players/index.md#ban-guidelines).
 
 ## View bans
@@ -31,4 +31,4 @@ Under the **More** column, choose **See ban history** to view history for the us
 
 ## Unban users
 
-To unban users, choose one or more and click **Unban users**. Unbanned users can immediately access your experience again. Manually unbanning a user does **not** remove their ban history.
+To unban users, choose one or more and click **Unban users**. Unbanned users can immediately access your game again. Manually unbanning a user does **not** remove their ban history.

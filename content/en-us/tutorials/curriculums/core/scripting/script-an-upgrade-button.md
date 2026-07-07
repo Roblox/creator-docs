@@ -9,7 +9,7 @@ next: /tutorials/curriculums/core/building/create-basic-visual-effects
 
 <br/>
 
-Players can now collect coins and lose them when they die, but the coins don't do anything, and most of the 3D world is inaccessible without the ability to jump very high. This section of the tutorial teaches you how to finish the logic for your experience by adding an on-screen button that spends coins to increase jumping power.
+Players can now collect coins and lose them when they die, but the coins don't do anything, and most of the 3D world is inaccessible without the ability to jump very high. This section of the tutorial teaches you how to finish the logic for your game by adding an on-screen button that spends coins to increase jumping power.
 
 ## Create the upgrade button
 

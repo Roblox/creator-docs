@@ -3,11 +3,11 @@ title: Control the user's camera
 description: Explains how to customize the default camera view for a user.
 ---
 
-The user's view of the world is represented by a `Class.Camera` object. You can change the camera behavior to suit your experience in a variety of ways. For example, the camera can react to events in the world, such as shaking when a monster walks by, or locked to the side of the user character, as in a side-scroller.
+The user's view of the world is represented by a `Class.Camera` object. You can change the camera behavior to suit your game in a variety of ways. For example, the camera can react to events in the world, such as shaking when a monster walks by, or locked to the side of the user character, as in a side-scroller.
 
 ## Create a first-person camera
 
-A first-person camera is a view where the camera stays locked with the character's head, which is more accurate to real life. It's common in shooter and story experiences where the goal is to make the user feel immersed in the world.
+A first-person camera is a view where the camera stays locked with the character's head, which is more accurate to real life. It's common in shooter and story games where the goal is to make the user feel immersed in the world.
 
 <GridContainer numColumns="2">
   <figure>
@@ -268,4 +268,4 @@ The basic structure of getting the user's position and updating the camera's pos
    local function updateCamera()
    ```
 
-By changing the way the camera behaves, you can achieve a whole new look for your experience. See if you can change the `cameraPosition` to achieve a top-down camera with the same script. Try tweaking settings to get a result you like!
+By changing the way the camera behaves, you can achieve a whole new look for your game. See if you can change the `cameraPosition` to achieve a top-down camera with the same script. Try tweaking settings to get a result you like!

@@ -1,11 +1,11 @@
 ---
 title: Build It, Play It challenges
-description: Get started learning Roblox Studio with these quick lessons. Build games and experiences.
+description: Get started learning Roblox Studio with these quick lessons. Build games.
 ---
 
 These challenges are a series of workshops that serve as **first introductions** to beginners interested in Roblox Studio. Some challenges may focus on coding, while others include animation or building.
 
-Going through one challenge will often take less than an hour, includes full step-by-step tutorials and a high quality game experience to fully customize.
+Going through one challenge will often take less than an hour, includes full step-by-step tutorials and a high quality game to fully customize.
 
 Each series can be completed self-directed, while lesson plans are provided for classrooms for students ages 10 and up.
 
@@ -16,7 +16,7 @@ Each series can be completed self-directed, while lesson plans are provided for 
 <Grid container spacing={6}>
 
 <Grid item XSmall={8} XLarge={8}>
-Using Roblox Studio, you'll learn to create **special effects**, whether it's a magical blast in an arcade experience, or a beam of arrows that guides new players around a world.
+Using Roblox Studio, you'll learn to create **special effects**, whether it's a magical blast in an arcade game, or a beam of arrows that guides new players around a world.
 </Grid>
 
 <Grid item XSmall={4} XLarge={4}>
@@ -55,7 +55,7 @@ Using Roblox Studio, learn how <b>animation</b> and create your own simulator ga
 <Grid container spacing={6}>
 
 <Grid item XSmall={8} XLarge={8}>
-Learn <b>3D modeling</b> while building a spaceship to race in a multiplayer experience with friends.
+Learn <b>3D modeling</b> while building a spaceship to race in a multiplayer game with friends.
 </Grid>
 
 <Grid item XSmall={4} XLarge={4}>

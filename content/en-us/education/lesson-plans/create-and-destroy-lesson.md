@@ -177,5 +177,5 @@ Created specifically for students new to game design, this curriculum is a great
 In this course, your student will:
 
 - Design the city and environment for a multiplayer game
-- Test, evaluate, and redesign to create a fun, polished game experience.
+- Test, evaluate, and redesign to create a fun, polished game.
 - Take home a complete game that can be played and shared online.

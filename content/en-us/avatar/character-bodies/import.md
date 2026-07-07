@@ -3,7 +3,7 @@ title: Import character bodies
 description: Use the Importer to add third-party models to Studio before testing, using, or uploading the character model.
 ---
 
-Studio's Importer lets you import 3D assets into your projects, such as avatar clothing, accessories, and character bodies. The following instructions provide guidance on how to import a full character model into Studio as a `Model` object that you can save to use in your experience, share with others, or upload to the Marketplace.
+Studio's Importer lets you import 3D assets into your projects, such as avatar clothing, accessories, and character bodies. The following instructions provide guidance on how to import a full character model into Studio as a `Model` object that you can save to use in your game, share with others, or upload to the Marketplace.
 
 <Alert severity ='info'>
 If you are using a single-mesh character body for the Roblox Auto-Setup tool, see [Avatar auto-setup](../../avatar-setup/).
@@ -34,7 +34,7 @@ To import your asset as a character model:
 <BaseAccordion>
 <AccordionSummary>Manually add textures</AccordionSummary>
 <AccordionDetails>
- If textures didn't load correctly, add them manually. You may need to save and publish your experience in order to access the [Asset Manager](../../projects/assets/manager.md).
+ If textures didn't load correctly, add them manually. You may need to save and publish your game in order to access the [Asset Manager](../../projects/assets/manager.md).
 
 1.  In the **Asset Manager**, click the **Import** button.
 2.  Upload your image files.
@@ -83,8 +83,8 @@ With this new character `Class.Model`, you can perform any of the following:
 
 - If your character includes a [higher-fidelity rig](./specifications.md#higher-fidelity-rigs), add a `Class.HumanoidRigDescription` and/or `Class.DigitsRigDescription` objects for Marketplace and animation requirements. You may need to use the [Adaptive Animation](../../characters/adaptive-animation.md) plugin to remap your joints and set a baseline t-pose reference to better support your animations.
 - Begin the process of [uploading and publishing](../../marketplace/publish-to-marketplace.md#upload-an-asset) the character model to the Marketplace. This involves some additional validation and moderation steps.
-- Use the model in your current experience and modify the model's appearance with [HumanoidDescription](../../characters/appearance.md#manually-modify-appearance).
+- Use the model in your current game and modify the model's appearance with [HumanoidDescription](../../characters/appearance.md#manually-modify-appearance).
 
   - Playtest as the character by renaming the `Class.Model` to `StarterCharacter` and moving the `Class.Model` to the `Class.StarterPlayer` folder in the **Explorer** before play testing.
 
-- Save the model to your [Toolbox](../../projects/assets/toolbox.md) or make it public on the [Creator Store](../../production/creator-store.md) to share or use within any of your experiences.
+- Save the model to your [Toolbox](../../projects/assets/toolbox.md) or make it public on the [Creator Store](../../production/creator-store.md) to share or use within any of your games.

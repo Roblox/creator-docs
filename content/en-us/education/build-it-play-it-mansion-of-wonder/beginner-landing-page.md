@@ -2,10 +2,10 @@
 title: Welcome to Build It, Play It!
 prev: /education/build-it-play-it-mansion-of-wonder/landing-page
 next: /education/build-it-play-it-mansion-of-wonder/become-an-artist
-description: Start learning how to add particle effects to your Roblox experiences by taking the Build It Play It Mansion of Wonder challenge.
+description: Start learning how to add particle effects to your Roblox games by taking the Build It Play It Mansion of Wonder challenge.
 ---
 
-Create your own Roblox experience by customizing elements of the **Mansion of Wonder** template in Roblox Studio! Design and personalize the magic blasts that you and your friends will use to defeat sinister slimes and ghastly ghosts as you ride through a spooky carnival experience.
+Create your own Roblox game by customizing elements of the **Mansion of Wonder** template in Roblox Studio! Design and personalize the magic blasts that you and your friends will use to defeat sinister slimes and ghastly ghosts as you ride through a spooky carnival game.
 
 Will you conquer these creatures with bolts of lightning or piles of angry cats? Only you get to decide: you build it, then play it!
 
@@ -13,7 +13,7 @@ Will you conquer these creatures with bolts of lightning or piles of angry cats?
 
 ## Download Roblox Studio
 
-Before starting, you'll need **Roblox Studio**. This program is used to create every experience on Roblox and is available for free on a **PC** or **Mac**. If you've played Roblox on your computer, you already have Studio installed. When using Studio, we recommend using a **mouse** if you have one.
+Before starting, you'll need **Roblox Studio**. This program is used to create every game on Roblox and is available for free on a **PC** or **Mac**. If you've played Roblox on your computer, you already have Studio installed. When using Studio, we recommend using a **mouse** if you have one.
 
 If you already have a Roblox account, skip to the next <a href="../../education/build-it-play-it-mansion-of-wonder/beginner-landing-page.md#series-overview">section</a>.
 
@@ -51,7 +51,7 @@ To design your personalized **magic blast**, follow along with these three step-
   </figure>
 </GridContainer>
 
-After each lesson, there's a special code that can be redeemed for a **free** virtual Roblox **avatar item**. Once you've completed all the lessons, you'll have a Roblox experience to play with friends and some cool swag to show off.
+After each lesson, there's a special code that can be redeemed for a **free** virtual Roblox **avatar item**. Once you've completed all the lessons, you'll have a Roblox game to play with friends and some cool swag to show off.
 
 <img
 src="../../assets/education/build-it-play-it-mansion-of-wonder/beginner-landing-page/beginner-avatar-items.jpeg"

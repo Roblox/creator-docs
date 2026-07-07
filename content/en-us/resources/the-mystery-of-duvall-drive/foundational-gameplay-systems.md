@@ -10,7 +10,7 @@ The following systems were the foundation in establishing the gameplay we wanted
 
 ## GameStateManager
 
-The **GameStateManager**/**GameStateClient** is probably the most complicated system in the experience, as it deals with:
+The **GameStateManager**/**GameStateClient** is probably the most complicated system in the game, as it deals with:
 
 - Starting players within the lobby, starting the countdown to teleporting the group to the main gameplay area, and teleporting players to reserved servers.
 - Cloning corrupt rooms, async streaming them, and teleporting players to and from a specific assigned `Datatype.CFrame` coordinate.
@@ -24,7 +24,7 @@ GameStates is mostly server-side, but when the client needs to do something, suc
 
 ### Teleportation states
 
-There is a group of 3 states that run three unique cutscenes that hide the teleportation to the corrupt room: Warmup, InFlight, and Cooldown. **Warmup** runs for the whole duration and ends with an almost black screen in which the 3D world is no longer visible. During this time, we clone the room, get desired player positions in the corrupt room for each player, call `Class.Player.RequestStreamAroundAsync`, and transport players to a specific assigned `Datatype.CFrame` coordinate within the corrupt room. This type of teleportation might trigger a streaming pause. When a streaming pause occurs, the client displays a warning message. We disabled this default UI to keep the experience immersive.
+There is a group of 3 states that run three unique cutscenes that hide the teleportation to the corrupt room: Warmup, InFlight, and Cooldown. **Warmup** runs for the whole duration and ends with an almost black screen in which the 3D world is no longer visible. During this time, we clone the room, get desired player positions in the corrupt room for each player, call `Class.Player.RequestStreamAroundAsync`, and transport players to a specific assigned `Datatype.CFrame` coordinate within the corrupt room. This type of teleportation might trigger a streaming pause. When a streaming pause occurs, the client displays a warning message. We disabled this default UI to keep the game immersive.
 
 <Alert severity="info">
 Players cannot transport to a specific assigned `Datatype.CFrame` while they are sitting, so the server sends a message to the client to "unseat" players before the teleport, as well as disable the seating state while the teleportation is in progress.
@@ -32,7 +32,7 @@ Players cannot transport to a specific assigned `Datatype.CFrame` while they are
 
 While streaming is being handled, **InFlight** runs, keeping a slightly pulsing dark screen. When both `Class.Player.RequestStreamAroundAsync` returns and clients inform the server that streaming pause is off and each player is close enough to the desired location, we cancel the InFlight cutscene, and start the Cooldown cutscene. The goal of **Cooldown** is to make the 3D world visible again by smoothly removing the dark screen. If `Class.Player.RequestStreamAroundAsync` takes too long to return, or the client doesn't report that the streaming pause is off, we still proceed to the Cooldown cutscene after a timeout of several seconds.
 
-A similar set of Warmup, InFlight, and Cooldown cutscenes occur when we teleport the player back to the normal state of the room, **TeleportWarmupBack**, **TeleportInFlightBack**, and **TeleportCooldownBack**, and at the end of the experience, we also run **TeleportWarmupFinal**, **TeleportInFlightFinal**, and **TeleportCooldownFinal** to teleport players into the foyer for the finishing cutscene.
+A similar set of Warmup, InFlight, and Cooldown cutscenes occur when we teleport the player back to the normal state of the room, **TeleportWarmupBack**, **TeleportInFlightBack**, and **TeleportCooldownBack**, and at the end of the game, we also run **TeleportWarmupFinal**, **TeleportInFlightFinal**, and **TeleportCooldownFinal** to teleport players into the foyer for the finishing cutscene.
 
 ### Lighting and atmosphere states
 
@@ -118,7 +118,7 @@ interpolants = {
 }
 ```
 
-Parameters allowed us to refer to objects that do not even exist in the beginning of the experience. For example, in the following code sample a function running on event start will create an object, and set BlackScreenObject entry in the params to point to the created object.
+Parameters allowed us to refer to objects that do not even exist in the beginning of the game. For example, in the following code sample a function running on event start will create an object, and set BlackScreenObject entry in the params to point to the created object.
 
 ```lua
 {objectParam = "BlackScreenObject",

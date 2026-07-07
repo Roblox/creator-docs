@@ -3,7 +3,7 @@ title: Server crashes chart
 description: Explains how to identify the root cause of server crashes using the Crashes chart and server memory snapshots.
 ---
 
-The **server crashes chart** and **server out-of-memory snapshots** can help you identify the root cause of server crashes and improve your experience's stability.
+The **server crashes chart** and **server out-of-memory snapshots** can help you identify the root cause of server crashes and improve your game's stability.
 
 When a server detects it is running out of memory, the engine automatically captures a compact `JSON` summary of the data model before the server shuts down. If you see a spike in your server out-of-memory crashes, you can use the chart and memory snapshots to diagnose the issue:
 
@@ -15,11 +15,11 @@ When a server detects it is running out of memory, the engine automatically capt
 
 ## Access the chart
 
-To access the server crashes chart, you must either be the experience owner or have [analytics group permissions](../../production/analytics/analytics-dashboard.md#grant-group-permission).
+To access the server crashes chart, you must either be the game owner or have [analytics group permissions](../../production/analytics/analytics-dashboard.md#grant-group-permission).
 
 1. Navigate to the [Creations](https://create.roblox.com/dashboard/creations) page on the **Creator Hub**.
-2. Under the **Creator Hub** dropdown, select your account or the group that owns the experience.
-3. Select the experience.
+2. Under the **Creator Hub** dropdown, select your account or the group that owns the game.
+3. Select the game.
 4. In the **Monitoring** dropdown, select **Crashes**.
 
 ## Use the chart
@@ -33,7 +33,7 @@ The server crashes chart provides a deep-dive visibility into potential causes f
 If you see a significant uptick in platform crashes, [file a bug report](https://devforum.roblox.com/t/how-to-post-a-bug-report/24388).
 </Alert>
 
-You can use the chart's menus to adjust date range, time interval, and annotations, and the **Place** menu to examine individual places rather than the entire experience.
+You can use the chart's menus to adjust date range, time interval, and annotations, and the **Place** menu to examine individual places rather than the entire game.
 
 <img src="../../assets/analytics/crashes/crashes-chart-filters.png" alt="A close-up view of the server crashes chart's filters." width="100%" />
 

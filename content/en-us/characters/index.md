@@ -43,7 +43,7 @@ For information on implementing layered clothing on a non-R15 character model, s
 
 Avatar characters use a standardized set of character components that allow you to use body and facial animations, and equip clothing and accessories. By standardizing the components, all avatar character models can access these features, whether they are controlled by a player or an NPC.
 
-By default, all players join experiences as their saved Roblox avatar, which already includes all the components for an avatar character. A complete avatar character has the following components in their `Class.Model`:
+By default, all players join games as their saved Roblox avatar, which already includes all the components for an avatar character. A complete avatar character has the following components in their `Class.Model`:
 
 - An [assembly](../physics/assemblies.md) of `Class.MeshPart` objects, that includes the following:
   - A part with the name `HumanoidRootPart` to indicate the root part of the assembly.

@@ -1,6 +1,6 @@
 ---
 title: Create a coin collection mechanic
-description: Explains how to implement event-driven logic in an experience.
+description: Explains how to implement event-driven logic in a game.
 next: /tutorials/curriculums/core/scripting/record-and-display-player-data
 prev: /tutorials/curriculums/core/building/greybox-a-playable-area
 ---

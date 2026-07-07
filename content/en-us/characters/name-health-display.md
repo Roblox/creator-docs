@@ -5,7 +5,7 @@ description: You can customize character UI, like name and health displays, usin
 
 The `Class.Humanoid` instance is used to create character models, both for user avatars and NPCs. When a `Class.Humanoid` is present inside a `Class.Model` that contains a part named **Head**, Roblox displays a name and/or health bar above that part.
 
-<img src="../assets/avatar/name-health-display/Display-Indicated.jpg" width="800" alt="Character display information above an in-experience avatar" />
+<img src="../assets/avatar/name-health-display/Display-Indicated.jpg" width="800" alt="Character display information above an in-game avatar" />
 
 Through various `Class.Humanoid` properties, you can modify the following:
 
@@ -104,7 +104,7 @@ In the following scenario, both **Watchman** and **Octavia** are sufficiently hi
 
 ### User avatars
 
-To modify the name or health display for every incoming avatar in an experience, connect the `Class.Players.PlayerAdded` and `Class.Player.CharacterAdded` events in a `Class.Script` and set [display properties](#display-properties) on the character's `Class.Humanoid`.
+To modify the name or health display for every incoming avatar in a game, connect the `Class.Players.PlayerAdded` and `Class.Player.CharacterAdded` events in a `Class.Script` and set [display properties](#display-properties) on the character's `Class.Humanoid`.
 
 ```lua title="Script - Global Customization" highlight="3,4,8,10,12,14,19"
 local Players = game:GetService("Players")

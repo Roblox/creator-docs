@@ -20,27 +20,27 @@ Almost everything in Roblox is represented as a cloud-based asset with a unique 
 	</figure>
 </GridContainer>
 
-This cloud-based asset system allows you to store assets through Roblox and reuse them across the platform in various contexts, such as in different objects and places, without maintaining local copies as part of each saved Studio experience. You can find millions of project assets in the [Creator Store][CreatorMarketplaceURL], equip avatar assets in the [Marketplace][MarketplaceURL], or you can create your own assets and [import](#asset-management) them directly into Studio through the asset management tools.
+This cloud-based asset system allows you to store assets through Roblox and reuse them across the platform in various contexts, such as in different objects and places, without maintaining local copies as part of each saved Studio game. You can find millions of project assets in the [Creator Store][CreatorMarketplaceURL], equip avatar assets in the [Marketplace][MarketplaceURL], or you can create your own assets and [import](#asset-management) them directly into Studio through the asset management tools.
 
-When you import assets, they must pass a [moderation](#asset-moderation) check before users can see and interact with them in published experiences. After Roblox approves imported assets, you can choose to retain ownership of their usage on the platform or make them publicly available as detailed in [Asset permissions](#asset-permissions).
+When you import assets, they must pass a [moderation](#asset-moderation) check before users can see and interact with them in published games. After Roblox approves imported assets, you can choose to retain ownership of their usage on the platform or make them publicly available as detailed in [Asset permissions](#asset-permissions).
 
 ## Asset types
 
 All [asset types](/reference/engine/enums/AssetType) available on the platform generally fall into one of three categories:
 
-- Assets that map to project-level items. You can find and configure these assets for specific experiences on the [Creator Dashboard][CreatorDashboardURL].
+- Assets that map to project-level items. You can find and configure these assets for specific games on the [Creator Dashboard][CreatorDashboardURL].
 - Assets that are objects, or that change the appearance or behavior of objects within places. You can [import](#asset-management) these assets or find them in the [Creator Store][CreatorMarketplaceURL].
 - Assets that change the body, clothing, or animation of avatars and non-playable characters. You can find these assets in the [Marketplace][MarketplaceURL].
 
-Every asset type works differently depending on where it lives on the platform. See the following sections for information on how to use each asset type for [experiences](#for-experiences), [places](#for-places), and [avatars](#for-avatars).
+Every asset type works differently depending on where it lives on the platform. See the following sections for information on how to use each asset type for [games](#for-games), [places](#for-places), and [avatars](#for-avatars).
 
-### For experiences
+### For games
 
-There are three asset types that map to project-level items. These asset types are unique to the experience that they map to, meaning they are non-transferable to other projects.
+There are three asset types that map to project-level items. These asset types are unique to the game that they map to, meaning they are non-transferable to other projects.
 
-- **Places** — Every experience has one or more [places](../../projects/index.md#places), or individual 3D worlds. Each place is represented by a [data model](../../projects/data-model.md) that describes the place's 3D world and logic.
-- **Badges** — A [badges](../../production/publishing/badges.md) is a special award you can gift users when they meet a goal within an experience, such as completing a difficult objective or playing for a certain amount of time.
-- **Passes** — A [pass](../../production/monetization/passes.md) is a monetization product that allows you to charge a one-time Robux fee in order for users to access special privileges within an experience, such as entry to a restricted area, an in-experience avatar item, or a permanent power-up.
+- **Places** — Every game has one or more [places](../../projects/index.md#places), or individual 3D worlds. Each place is represented by a [data model](../../projects/data-model.md) that describes the place's 3D world and logic.
+- **Badges** — A [badges](../../production/publishing/badges.md) is a special award you can gift users when they meet a goal within a game, such as completing a difficult objective or playing for a certain amount of time.
+- **Passes** — A [pass](../../production/monetization/passes.md) is a monetization product that allows you to charge a one-time Robux fee in order for users to access special privileges within a game, such as entry to a restricted area, an in-game avatar item, or a permanent power-up.
 
 ### For places
 
@@ -98,7 +98,7 @@ Every [character](../../characters/index.md) model contains a `Class.HumanoidDes
 
 ## Packages
 
-Within Studio, you can convert single assets or asset hierarchies into **packages** and reuse them in multiple experiences, letting you optimize asset management across your entire team or across multiple projects. When a package is updated, you or your team members can update specific copies to the most current version, update all copies across an experience, or set specific copies to auto update.
+Within Studio, you can convert single assets or asset hierarchies into **packages** and reuse them in multiple games, letting you optimize asset management across your entire team or across multiple projects. When a package is updated, you or your team members can update specific copies to the most current version, update all copies across a game, or set specific copies to auto update.
 
 For more information, see [packages](../../projects/assets/packages.md).
 
@@ -205,7 +205,7 @@ The content folder's location depends on the user's operating system:
 		</tr>
 		<tr>
 			<td>`GameIcon`</td>
-			<td>ID for an experience (`Class.DataModel.GameId`); shows the experience's [icon](../../production/publishing/experience-icons.md)</td>
+			<td>ID for a game (`Class.DataModel.GameId`); shows the game's [icon](../../production/publishing/experience-icons.md)</td>
 			<td scope="row">50&times;50, 150&times;150</td>
 		</tr>
 		<tr>
@@ -215,7 +215,7 @@ The content folder's location depends on the user's operating system:
 		</tr>
 		<tr>
 			<td>`GameThumbnail`</td>
-			<td>ID for an experience (`Class.DataModel.PlaceId`); shows the experience's primary [thumbnail](../../production/publishing/thumbnails.md)</td>
+			<td>ID for a game (`Class.DataModel.PlaceId`); shows the game's primary [thumbnail](../../production/publishing/thumbnails.md)</td>
 			<td scope="row">256&times;144, 384&times;216, 480&times;270, 576&times;324, 768&times;432</td>
 		</tr>
 		<tr>
@@ -270,7 +270,7 @@ end
 In the above example, `Images` is the category/folder that appears in the [Asset Manager](../../projects/assets/manager.md) and `Potion` is the asset name, minus its extension.
 
 <Alert severity="warning">
-`rbxgameasset` only works for the current experience. If you paste a parent object that utilizes the asset into another experience, the asset will not load (or will load a different asset if you've uploaded one with the same name to that other game). If you need an asset to work across multiple experiences, use `rbxassetid` instead of `rbxgameasset`.
+`rbxgameasset` only works for the current game. If you paste a parent object that utilizes the asset into another game, the asset will not load (or will load a different asset if you've uploaded one with the same name to that other game). If you need an asset to work across multiple games, use `rbxassetid` instead of `rbxgameasset`.
 </Alert>
 
 ### rbxhttp
@@ -293,20 +293,20 @@ In the above example, `Images` is the category/folder that appears in the [Asset
 
 ## Asset permissions
 
-An asset's privacy status determines who has permission to use the asset within their experiences. By default, all assets are **private** when you or your [group](../../projects/groups.md) members import them into Studio. If you want to grant everyone access to the asset ID, you must distribute the asset to the [Creator Store][CreatorMarketplaceURL].
+An asset's privacy status determines who has permission to use the asset within their games. By default, all assets are **private** when you or your [group](../../projects/groups.md) members import them into Studio. If you want to grant everyone access to the asset ID, you must distribute the asset to the [Creator Store][CreatorMarketplaceURL].
 
 <Alert severity="warning">
-Special privacy rules and workflows apply to **audio** and **video** assets. See [asset privacy](../../projects/assets/privacy.md) for details on sharing these asset types among friends and experiences.
+Special privacy rules and workflows apply to **audio** and **video** assets. See [asset privacy](../../projects/assets/privacy.md) for details on sharing these asset types among friends and games.
 </Alert>
 
 ## Asset moderation
 
 Roblox performs both human and automated asset moderation on a proactive and reactive basis to ensure assets adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and [Digital Millennium Copyright Act](../../production/publishing/dmca-guidelines.md) (DMCA). If any asset violates these moderation policies, such as including discriminatory or adult content, the Moderation team flags and removes the asset to protect users from harmful or non-compliant content. This process generally happens within a few hours after you import the asset.
 
-If an asset is still in the moderation queue when you publish your experience, users cannot see or interact with the asset until Roblox approves it. If the asset doesn't pass moderation, you will receive a [notification](https://en.help.roblox.com/hc/en-us/articles/360020870412-Understanding-Moderation-Messages) explaining why the asset cannot be on the platform in its current state. For more information, see Working with Assets - Asset Moderation.
+If an asset is still in the moderation queue when you publish your game, users cannot see or interact with the asset until Roblox approves it. If the asset doesn't pass moderation, you will receive a [notification](https://en.help.roblox.com/hc/en-us/articles/360020870412-Understanding-Moderation-Messages) explaining why the asset cannot be on the platform in its current state. For more information, see Working with Assets - Asset Moderation.
 
 <Alert severity="warning">
-  To maintain community safety and civility, Roblox may take down experiences and/or terminate accounts that maliciously import or publish non-compliant assets.
+  To maintain community safety and civility, Roblox may take down games and/or terminate accounts that maliciously import or publish non-compliant assets.
 </Alert>
 
 ## Asset management
@@ -323,11 +323,11 @@ Roblox offers several tools to import, store, and publish your assets:
     <tbody>
         <tr>
             <td>[Asset Manager](../../projects/assets/manager.md)</td>
-            <td>Imports and stores [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [audio](../../audio/assets.md), and more. Only displays assets that you've imported into the currently opened experience.</td>
+            <td>Imports and stores [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [audio](../../audio/assets.md), and more. Only displays assets that you've imported into the currently opened game.</td>
         </tr>
 				<tr>
             <td>[Toolbox](../../projects/assets/toolbox.md)</td>
-            <td>Stores every asset that you or your [groups](../../projects/groups.md) have ever imported into Studio, regardless of what experience you currently have open. Also includes assets from the [Creator Store][CreatorMarketplaceURL], allowing you to quickly drop user-generated assets directly into your experiences.</td>
+            <td>Stores every asset that you or your [groups](../../projects/groups.md) have ever imported into Studio, regardless of what game you currently have open. Also includes assets from the [Creator Store][CreatorMarketplaceURL], allowing you to quickly drop user-generated assets directly into your games.</td>
         </tr>
         <tr>
             <td>[Importer](../../studio/importer.md)</td>
@@ -342,7 +342,7 @@ To further help with organization, you can archive most asset types in the **Cre
 
 <img src="../../assets/creator-dashboard/Options-Button-Asset.png" width="200" alt="Options button indicated for an asset." />
 
-After you archive an asset, it disappears from the website and is no longer usable or visible in Roblox experiences, including your own.
+After you archive an asset, it disappears from the website and is no longer usable or visible in Roblox games, including your own.
 
 <Alert severity = 'warning'>
 For more information on how archiving works with Marketplace items, see [moderation](../../marketplace/moderation.md#archive-assets).

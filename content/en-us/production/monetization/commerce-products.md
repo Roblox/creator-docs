@@ -1,25 +1,25 @@
 ---
 title: Commerce products
-description: Commerce products let you enable real-world purchases through your experience.
+description: Commerce products let you enable real-world purchases through your game.
 ---
 
-You can catalog and sell real-world products, or **commerce products**, in your Roblox experience. Users can purchase these products in your experience and, if eligible, you can provide digital incentives as a bundled benefit.
+You can catalog and sell real-world products, or **commerce products**, in your Roblox game. Users can purchase these products in your game and, if eligible, you can provide digital incentives as a bundled benefit.
 
-To create and manage catalog items and commerce products, you must meet [commerce eligibility](#eligibility). To add commerce products to your experience:
+To create and manage catalog items and commerce products, you must meet [commerce eligibility](#eligibility). To add commerce products to your game:
 
 1. [Import a real-world catalog item](#import-catalog-items) from Shopify.
 2. [Create a commerce product](#manage-commerce-products) in Creator Hub.
-3. [Implement a purchase prompt](#implement-purchases) within your experience.
+3. [Implement a purchase prompt](#implement-purchases) within your game.
 
 ## Eligibility
 
-The following eligibility requirements apply for **creators** interested in implementing commerce products, **experiences** that host commerce features, and **users** who can purchase commerce products. **Bundled digital items** also require additional eligibility requirements.
+The following eligibility requirements apply for **creators** interested in implementing commerce products, **games** that host commerce features, and **users** who can purchase commerce products. **Bundled digital items** also require additional eligibility requirements.
 
 These requirements are subject to change.
 
 ### Creator
 
-Eligible creators can add commerce products to their experience. To be eligible, creators must meet and maintain the following:
+Eligible creators can add commerce products to their game. To be eligible, creators must meet and maintain the following:
 
 - Be 18+ years of age.
 - Have an ID-verified and email-verified account.
@@ -33,13 +33,13 @@ Eligible creators can add commerce products to their experience. To be eligible,
 - If accessing commerce settings on behalf of a group, your role must have **Create and edit community experiences** enabled.
 - Be in good standing with respect to Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) on an on-going basis.
 
-### Experience
+### Game
 
-Creators must ensure that experiences that host commerce features meet the following requirements:
+Creators must ensure that games that host commerce features meet the following requirements:
 
-- Experience must be public.
-- Experience has received [content maturity labels](../promotion/content-maturity.md) after completing the Experience Guidelines questionnaire.
-- Experience complies with Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards#advertising), and [Commerce Standards](https://en.help.roblox.com/hc/articles/36495190721172) on an on-going basis.
+- Game must be public.
+- Game has received [content maturity labels](../promotion/content-maturity.md) after completing the Content Maturity questionnaire.
+- Game complies with Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards#advertising), and [Commerce Standards](https://en.help.roblox.com/hc/articles/36495190721172) on an on-going basis.
 
 ### User
 
@@ -54,7 +54,7 @@ You can verify user eligibility by using `Class.PolicyService` to return policy 
 
 Certain creators may qualify to be able to bundle a digital benefit, such as an avatar item or developer item, with their commerce product if they meet **at least one** of the following two requirements:
 
-- The experience that hosts the shop meets the following:
+- The game that hosts the shop meets the following:
   - Maintains more than 100,000 daily active users on average for the last 90 days.
   - Maintains more than 1,000,000 Robux average monthly earnings in the last 90 days.
   - Sell at least one bundle within three months of receiving approval to bundle.
@@ -73,7 +73,7 @@ If you qualify to bundle a digital benefit with your commerce product, each digi
 
 ## Import catalog items
 
-In the [Creator Dashboard](https://create.roblox.com/), you can connect your Roblox account to your Shopify store and link catalog items to your experience. You must add individual products you intend to import into Roblox.
+In the [Creator Dashboard](https://create.roblox.com/), you can connect your Roblox account to your Shopify store and link catalog items to your game. You must add individual products you intend to import into Roblox.
 
 ### Import catalog items from Shopify
 
@@ -81,7 +81,7 @@ In the [Creator Dashboard](https://create.roblox.com/), you can connect your Rob
 At this time, due to the link between the Shopify store and a Roblox account, Roblox group ownership transfer is not allowed for a group that owns any commerce items.
 </Alert>
 
-1. Navigate to your experience in the [Creator Dashboard](https://create.roblox.com/) and select **Monetization Products** ⟩ **Commerce**.
+1. Navigate to your game in the [Creator Dashboard](https://create.roblox.com/) and select **Monetization Products** ⟩ **Commerce**.
 2. Click **Go to Imported Catalog** ⟩ **Start Importing**.
 3. Click **Connect**.
 4. Install the Roblox sales channel onto your store.
@@ -104,13 +104,13 @@ When you update the content of your Shopify item, such as the name, description,
 
 ## Manage commerce products
 
-After importing a catalog item to your experience's Commerce page, you can begin creating commerce products.
+After importing a catalog item to your game's Commerce page, you can begin creating commerce products.
 
 ### Create
 
 Once you have imported catalog items, you can create commerce products. A commerce product can be either a catalog item on its own, or a catalog item bundled with a digital benefit.
 
-You can create a maximum of 500 products per experience.
+You can create a maximum of 500 products per game.
 
 <Alert severity = 'warning'>
 You cannot create an avatar item type digital benefit while creating the commerce product. Create the avatar item first before adding it to a commerce product bundle.
@@ -118,10 +118,10 @@ You cannot create an avatar item type digital benefit while creating the commerc
 
 To create a commerce product:
 
-1.  Navigate to your experience in the Creator Dashboard and select **Monetization Products** ⟩ **Commerce**.
+1.  Navigate to your game in the Creator Dashboard and select **Monetization Products** ⟩ **Commerce**.
 2.  Click **Start Creating** or **Create Products**.
 3.  Select which imported catalog items you want to include in your commerce products and click **Next**.
-    1. If you do not see a **Next** button, your experience is not eligible to create bundles with digital benefits. Skip to step 4.
+    1. If you do not see a **Next** button, your game is not eligible to create bundles with digital benefits. Skip to step 4.
     2. At this point, your commerce products are saved as drafts. If you leave this page and want to return to them, you can find draft commerce products under **Drafts** in the **Creations** tab.
 
   <BaseAccordion>
@@ -133,9 +133,9 @@ To create a commerce product:
     2. Choose a **Virtual Benefit Type**:
     3. **Avatar Item**: To be part of a bundle, the avatar item must not have been on sale before. You must own the item or belong to the group that owns the item.
     4. Select an avatar item by choosing an **Avatar Item Type** and using the dropdowns. Click **Save**.
-    5. **Developer Product**: To be part of a bundle, the developer product must be owned by the experience, cannot have been on sale before, and must not have a price.
+    5. **Developer Product**: To be part of a bundle, the developer product must be owned by the game, cannot have been on sale before, and must not have a price.
     6. Select an existing **Developer Product** or create a new one to use in a bundle by clicking **Create New**, filling out the developer product information, and clicking **Create**. Click **Save**.
-        1. Developer product names within the same experience must be unique.
+        1. Developer product names within the same game must be unique.
         2. Developer products are created when you submit the product for review. In order to reuse a developer product in multiple bundles, submit one product (which creates the developer product), then select that benefit on subsequent bundles.
     <img src="../../assets/monetization/commerce-products/Commerce-Product-Virtual-Benefits.png" width="60%" />
     7. Enter the **Inventory Type** of the catalog item.
@@ -153,11 +153,11 @@ To create a commerce product:
    2. **Bundling Fee** (if applicable)
        1. Once a bundling fee is available for a bundled commerce product, navigate to the commerce product to view it under **Bundling Fee**.
        2. To accept, select the product and click **Accept Bundling Fee**, or click the three dots by the bundling fee and click **Accept**.
-6. Once these tasks are approved for your commerce product, the commerce product **Status** becomes **Approved** and it is ready to be integrated into your experience using `Class.CommerceService`.
+6. Once these tasks are approved for your commerce product, the commerce product **Status** becomes **Approved** and it is ready to be integrated into your game using `Class.CommerceService`.
 
 ### Get IDs
 
-You will need the product ID of a commerce product to sell it in your experience.
+You will need the product ID of a commerce product to sell it in your game.
 
 To get the Product ID:
 
@@ -168,9 +168,9 @@ To get the Product ID:
 
 ### Put on sale
 
-Commerce products must be available for sale to be purchased in-experience.
+Commerce products must be available for sale to be purchased in-game.
 
-Two identical catalog items cannot be on sale at once. You must take a bundle containing a catalog item off sale to put another one with that same item on sale. A maximum of 100 products can be for sale at a time per experience.
+Two identical catalog items cannot be on sale at once. You must take a bundle containing a catalog item off sale to put another one with that same item on sale. A maximum of 100 products can be for sale at a time per game.
 
 To change a product's sale state:
 
@@ -188,10 +188,10 @@ To delete a commerce product:
 
 ## Implement purchases
 
-In your experience, implement commerce product purchases using the following `Class.CommerceService` functions:
+In your game, implement commerce product purchases using the following `Class.CommerceService` functions:
 
 - `Class.CommerceService:PromptCommerceProductPurchase()`: Prompts a specific user to purchase a commerce product using the provided commerceProductId. It will open a webview that guides the user through the purchasing flow.
-- `Class.CommerceService:PromptCommerceProductPurchaseFinished()`: Use this signal to detect when a user has completed the purchasing flow and the webview has closed to resume gameplay within the experience.
+- `Class.CommerceService:PromptCommerceProductPurchaseFinished()`: Use this signal to detect when a user has completed the purchasing flow and the webview has closed to resume gameplay within the game.
   - This signal does not indicate a successful purchase and only signifies when the prompt is closed.
   - While optional, it is recommended to use this signal to reorient your users on Android, as the commerce purchasing flow will have forced them into portrait mode.
 
@@ -311,10 +311,10 @@ Use `CommerceProductOrderPaid` and `CommerceProductOrderRefunded` events to trac
 
 ## Product detail page
 
-The **Product detail page (PDP)** showcases your commerce product to users within the Roblox experience, for example, when prompted via [`Class.CommerceService:PromptCommerceProductPurchase()`](#implement-purchases). You can customize several elements of this page to provide a unique and informative shopping experience.
+The **Product detail page (PDP)** showcases your commerce product to users within the Roblox game, for example, when prompted via [`Class.CommerceService:PromptCommerceProductPurchase()`](#implement-purchases). You can customize several elements of this page to provide a unique and informative shopping experience.
 
 <Alert severity = 'info'>
-When viewing the product detail page for a product that is not yet on sale, a "Preview Mode" banner is displayed at the top (as seen in the example PDP image). Only creators with sufficient permissions in the experience can see this preview.
+When viewing the product detail page for a product that is not yet on sale, a "Preview Mode" banner is displayed at the top (as seen in the example PDP image). Only creators with sufficient permissions in the game can see this preview.
 </Alert>
 
    <img src="../../assets/monetization/commerce-products/Commerce-Product-PDP-Diagram.png" width="100%" />
@@ -358,7 +358,7 @@ When viewing the product detail page for a product that is not yet on sale, a "P
 <Grid container spacing={2}>
   <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-G.png" width="40" style={{float:"right"}} /></Grid>
   <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
-  [More from this experience](#more-from-this-experience) suggests other commerce products offered within the same experience.
+  [More from this game](#more-from-this-game) suggests other commerce products offered within the same game.
   </Grid>
 </Grid>
 
@@ -366,7 +366,7 @@ When viewing the product detail page for a product that is not yet on sale, a "P
 
 The product images section displays all product images from your Shopify store. The order of the images directly mirrors the order set in Shopify.
 
-The first image, known as the **featured** image in Shopify, serves as the primary thumbnail for your product. This thumbnail is used in various places, such as within the shopping cart and in the [More from](#more-from-this-experience) section.
+The first image, known as the **featured** image in Shopify, serves as the primary thumbnail for your product. This thumbnail is used in various places, such as within the shopping cart and in the [More from](#more-from-this-game) section.
 
 When you update product images in Shopify, these changes are subject to the [moderation process for catalog items](#modify-catalog-items). The product listing on Roblox will continue to show the previously approved images until the new images are approved.
 
@@ -435,8 +435,8 @@ The content in this section depends on the type of virtual item offered:
 
 The specific avatar item or developer product, including its name, description, and image, is configured when you [create the commerce product bundle](#create). As these benefits are part of the overall product offering, they are subject to Roblox's content policies and moderation.
 
-### More from this experience
+### More from this game
 
-This section displays other commerce products you offer that are currently on-sale within the same Roblox experience. This feed encourages further exploration of your product catalog and can help increase visibility for your experience's full range of product offerings.
+This section displays other commerce products you offer that are currently on-sale within the same Roblox game. This feed encourages further exploration of your product catalog and can help increase visibility for your game's full range of product offerings.
 
 In this section, users can view the product's feature image, name, and price.

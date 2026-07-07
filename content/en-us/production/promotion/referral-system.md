@@ -1,6 +1,6 @@
 ---
 title: Friend referral system
-description: Use referral links to track and reward players that have successfully invited other players into your experience, and players that have joined your experience using a referral link invitation from another player.
+description: Use referral links to track and reward players that have successfully invited other players into your game, and players that have joined your game using a referral link invitation from another player.
 ---
 
 <Alert severity="info">
@@ -16,12 +16,12 @@ If you previously used this feature while it was still in beta, make sure to imp
 </tbody>
 </table>
 
-The friend referral system encourages existing players to bring new players into your experience, increasing player retention and overall engagement. Players can access and share referral links from [player invite prompts](./invite-prompts.md) or directly from the default in-experience invite menu.
+The friend referral system encourages existing players to bring new players into your game, increasing player retention and overall engagement. Players can access and share referral links from [player invite prompts](./invite-prompts.md) or directly from the default in-game invite menu.
 
 As a developer, you can create customized banners to advertise your reward system and use shareable referral links to:
 
-- Track which players have successfully invited other players into your experience.
-- Track which players have joined your experience using a referral link invitation from another player.
+- Track which players have successfully invited other players into your game.
+- Track which players have joined your game using a referral link invitation from another player.
 - Create and distribute rewards to both inviters and invitees.
 
 <figure>
@@ -30,7 +30,7 @@ As a developer, you can create customized banners to advertise your reward syste
 </figure>
 
 <figure>
-    <figcaption>Invitees join the experience</figcaption>
+    <figcaption>Invitees join the game</figcaption>
     <video controls src="../../assets/promotion/referral-system/Invitee-Flow-Referral-System.mp4" />
 </figure>
 
@@ -86,7 +86,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 ## Grant referral rewards
 
-To encourage participation, grant rewards to both inviters and invitees. For example, you can give inviters a badge or in-experience currency when their friend joins the experience, and give invitees a welcome reward for joining the experience through a referral link.
+To encourage participation, grant rewards to both inviters and invitees. For example, you can give inviters a badge or in-game currency when their friend joins the game, and give invitees a welcome reward for joining the game through a referral link.
 
 ```lua
 local Players = game:GetService("Players")
@@ -128,15 +128,15 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 ## Create a reward banner
 
-Reward banners encourage users to invite friends to join your experience by showing them details about the referral rewards they can earn. These banners are displayed at the top of your friend invite modal.
+Reward banners encourage users to invite friends to join your game by showing them details about the referral rewards they can earn. These banners are displayed at the top of your friend invite modal.
 
 To create a customized reward banner:
 
-1. In the Creator Hub, go to **Creations** and select the experience that you have set up a referral event for.
+1. In the Creator Hub, go to **Creations** and select the game that you have set up a referral event for.
 2. Go to **Engagement** ⟩ **Referral Rewards**.
 3. Click **Add Reward Details**.
 4. In the **Referral Rewards** page:
-    1. Replace the default icon with an image that represents your experience.
+    1. Replace the default icon with an image that represents your game.
     2. Enter a reward name to display on the banner.
     3. Select a start and end date for when you want to show the banner to players.
     4. (Optional) Enter a description with details about the reward.
@@ -202,9 +202,9 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 ## Frequently asked questions
 
-**Which experiences are eligible to use this feature?**
+**Which games are eligible to use this feature?**
 
-This feature is open to any experience that has been live for at least one day and that doesn't violate the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
+This feature is open to any game that has been live for at least one day and that doesn't violate the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
 
 **Which players can take advantage of referrals?**
 
@@ -220,4 +220,4 @@ The link never expires.
 
 **How can I get the most out of this feature?**
 
-You can add an in-experience button to advertise the referral system to encourage players to take advantage of referrals. You can then give the button a descriptive title and connect the button click event to the friend invite modal where players can see the reward banner.
+You can add an in-game button to advertise the referral system to encourage players to take advantage of referrals. You can then give the button a descriptive title and connect the button click event to the friend invite modal where players can see the reward banner.

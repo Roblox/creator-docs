@@ -8,7 +8,7 @@ description: An overview of creator assets and the Creator Store.
 
 You can create and sell Studio [plugins](../../studio/plugins.md) to the creator community through the [Creator Store](../../production/creator-store.md). A plugin is an extension that adds additional features or functionality to [Roblox Studio](../../studio/index.md) and helps improve creator workflows. You can either offer plugins for free or sell them for a minimum of $4.99 USD. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information, see [Creator Store - Distribute and sell assets](../../production/creator-store.md#distribute-and-sell-assets).
 
-Creator assets promote collaboration and resource sharing, and help developers create better and more dynamic experiences.
+Creator assets promote collaboration and resource sharing, and help developers create better and more dynamic games.
 
 <table>
 <thead>

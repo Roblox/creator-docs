@@ -3,7 +3,7 @@ title: Cross-server chat
 description: Cross-server chat allows players to interact with others across different servers.
 ---
 
-**Cross-server chat** is a native extension of `Class.TextChatService` that allows players to safely communicate with others across different servers in the same universe. This increases social engagement, especially in experiences with low server occupancy or during live events with a global community.
+**Cross-server chat** is a native extension of `Class.TextChatService` that allows players to safely communicate with others across different servers in the same universe. This increases social engagement, especially in games with low server occupancy or during live events with a global community.
 
 Roblox automatically groups servers based on age, language, and occupancy to ensure meaningful and safe interactions. Like default Roblox chat, cross-server chat includes full support for abuse reporting, text filtering, chat rules, muting, and blocking.
 
@@ -20,14 +20,14 @@ When you enable cross-server chat, the [chat window](./chat-window.md) includes 
 
 <img src="../assets/players/cross-server-chat/overview-example.png" width="60%" alt="Core components of the text chat window with cross-server chat enabled." />
 
-Cross-server chat is **enabled by default** for all experiences, but you have full control to enable or disable it according to your experience's design requirements. To access the cross-server chat setting:
+Cross-server chat is **enabled by default** for all games, but you have full control to enable or disable it according to your game's design requirements. To access the cross-server chat setting:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-1. Select an experience, then in the left-hand navigation, navigate to **Audience** > **Communication Settings**.
+1. Select a game, then in the left-hand navigation, navigate to **Audience** > **Communication Settings**.
 1. Under the **Cross-server chat** section, toggle **Allow cross-server chat** on or off to enable or disable cross-server chat.
 
 <Alert severity="warning">
-Even if cross-server chat is enabled, the **Global** tab is disabled in [private servers](../production/monetization/private-servers.md) to respect the privacy of users who only want to access your experience with specific friends.
+Even if cross-server chat is enabled, the **Global** tab is disabled in [private servers](../production/monetization/private-servers.md) to respect the privacy of users who only want to access your game with specific friends.
 </Alert>
 
 ## Global chat commands

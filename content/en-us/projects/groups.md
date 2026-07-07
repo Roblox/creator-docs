@@ -1,12 +1,12 @@
 ---
 title: Groups (teams)
-description: Explains Roblox groups and how to collaborate with multiple creators on the same experience.
+description: Explains Roblox groups and how to collaborate with multiple creators on the same game.
 ---
 
-A Roblox **group** allows multiple creators to work on the same experience, use the same assets, share profits, and give credit to all contributors.
+A Roblox **group** allows multiple creators to work on the same game, use the same assets, share profits, and give credit to all contributors.
 
 <Alert severity="error">
-Group ownership of experiences helps creators collaborate and operate as independent studios. If a conflict arises within a group, Roblox cannot help arbitrate or resolve disagreements.
+Group ownership of games helps creators collaborate and operate as independent studios. If a conflict arises within a group, Roblox cannot help arbitrate or resolve disagreements.
 </Alert>
 
 ## Group creation
@@ -85,19 +85,19 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
    <tbody>
      <tr>
       <td width="40%">**Playtest all group experiences**</td>
-      <td>Members with this role can play all experiences owned by the group, whether they're private or public. Optionally available as a [per‑experience permission](./configure-games.md).</td>
+      <td>Members with this role can play all games owned by the group, whether they're private or public. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
        <td>**Edit all group experiences**</td>
-       <td>Members with this role can edit all experiences and [assets](../projects/assets/index.md) owned by the group and use all features in the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Does not include editing an experience outside of a [collaborative](../projects/collaboration.md) session or saving a place from one experience into another experience. Optionally available as a [per‑experience permission](./configure-games.md).</td>
+       <td>Members with this role can edit all games and [assets](../projects/assets/index.md) owned by the group and use all features in the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Does not include editing a game outside of a [collaborative](../projects/collaboration.md) session or saving a place from one game into another game. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
        <td>**Edit and publish all group experiences**</td>
-       <td>Members with this role can both edit experiences, as above, and also publish experiences to Roblox. Optionally available as a [per‑experience permission](./configure-games.md).</td>
+       <td>Members with this role can both edit games, as above, and also publish games to Roblox. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
        <td>**View all analytics for group experiences**</td>
-       <td>Members with this role can access the [analytics](../production/analytics/index.md) of all experiences owned by the group, even if they don't have edit access. Optionally available as a [per‑experience permission](./configure-games.md).</td>
+       <td>Members with this role can access the [analytics](../production/analytics/index.md) of all games owned by the group, even if they don't have edit access. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
        <td>**Create and configure share links**</td>
@@ -109,19 +109,19 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
      </tr>
      <tr>
        <td>**Configure bans for all group experiences**</td>
-       <td>Members with this role can ban and manage banned users for all experiences owned by the group.</td>
+       <td>Members with this role can ban and manage banned users for all games owned by the group.</td>
      </tr>
      <tr>
        <td>**Access read-only chat and configure bans for all group experiences**</td>
-       <td>Members with this role can view all in-experience chat messages and ban or manage banned users across all experiences owned by the group.<br/><br/>To view in-experience chat messages, enable **Read-only view** in the in-experience settings.</td>
+       <td>Members with this role can view all in-game chat messages and ban or manage banned users across all games owned by the group.<br/><br/>To view in-game chat messages, enable **Read-only view** in the in-game settings.</td>
      </tr>
      <tr>
        <td>**Configure monetization for all group experiences**</td>
-       <td>Members with this role can manage monetization products such as [passes](../production/monetization/passes.md), [developer products](../production/monetization/developer-products.md), [subscriptions](../production/monetization/subscriptions.md), and more. Optionally available as a [per‑experience permission](./configure-games.md).</td>
+       <td>Members with this role can manage monetization products such as [passes](../production/monetization/passes.md), [developer products](../production/monetization/developer-products.md), [subscriptions](../production/monetization/subscriptions.md), and more. Optionally available as a [per-game permission](./configure-games.md).</td>
      </tr>
      <tr>
        <td>**List, create, update, and delete secrets for all group experiences**</td>
-       <td>Members with this role can see the list of [secrets](../cloud-services/secrets.md) and can create, update, and delete secrets for all experiences owned by the group. Optionally available as a [per‑experience permission](./configure-games.md).</td>
+       <td>Members with this role can see the list of [secrets](../cloud-services/secrets.md) and can create, update, and delete secrets for all games owned by the group. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
    </tbody>
    </table>
@@ -215,15 +215,15 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
    <tbody>
      <tr>
       <td width="40%">**View data stores for all group experiences**</td>
-      <td>Members with this role can view data stores for all group experiences through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md), but they cannot delete data. Optionally available as a [per‑experience permission](./configure-games.md).</td>
+      <td>Members with this role can view data stores for all group games through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md), but they cannot delete data. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
       <td>**Edit data stores for all group experiences**</td>
-      <td>Members with this role can delete specific keys within data stores for all group experiences through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Optionally available as a [per‑experience permission](./configure-games.md).</td>
+      <td>Members with this role can delete specific keys within data stores for all group games through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
       <td>**Delete data stores for all group experiences**</td>
-      <td>Members with this role can delete entire data stores for all group experiences through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Optionally available as a [per‑experience permission](./configure-games.md).</td>
+      <td>Members with this role can delete entire data stores for all group games through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
    </tbody>
    </table>
@@ -291,7 +291,7 @@ Some groups may not have this page unlocked initially for various reasons, such 
 </Alert>
 
 <Alert severity="warning">
-Payouts cannot be shared across group members for experiences that charge for [paid access in local currency](../production/monetization/paid-access-local-currency.md).
+Payouts cannot be shared across group members for games that charge for [paid access in local currency](../production/monetization/paid-access-local-currency.md).
 </Alert>
 
 ### One-time payouts
@@ -329,23 +329,23 @@ Once you click the **Send Robux** button, you can choose payout recipients from 
 
 ### Recurring payouts
 
-Recurring payouts can also be made across the entire group **and** per‑experience, assigning a percentage payout to each member before the remainder enters the group's overall balance.
+Recurring payouts can also be made across the entire group **and** per‑game, assigning a percentage payout to each member before the remainder enters the group's overall balance.
 
 <img src="../assets/creator-dashboard/Group-Payouts-Split-Options.png" width="880" alt="Split payout buttons indicated in the Payouts section on the Creator Dashboard." />
 
-Consider the following scenario where a group experience **Laser Maze** is split 40%&ndash;30%&ndash;10% among three members, with a remainder of 20%.
+Consider the following scenario where a group game **Laser Maze** is split 40%&ndash;30%&ndash;10% among three members, with a remainder of 20%.
 
 <br />
 <Grid container spacing={2}>
 	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-A.png" width="40" style={{float:"right"}} /></Grid>
 	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
-	Assuming the experience earns 1000 Robux, the three members receive 400, 300, and 100 Robux respectively (40%&ndash;30%&ndash;10%).
+	Assuming the game earns 1000 Robux, the three members receive 400, 300, and 100 Robux respectively (40%&ndash;30%&ndash;10%).
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
 	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
 	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
-	The remaining 200 Robux (20% of the experience split) passes onward to the **group split** percentages, defined at 20%&ndash;20%&ndash;10% among the same three members; they receive an additional 40, 40, and 20 Robux respectively.
+	The remaining 200 Robux (20% of the game split) passes onward to the **group split** percentages, defined at 20%&ndash;20%&ndash;10% among the same three members; they receive an additional 40, 40, and 20 Robux respectively.
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
@@ -355,7 +355,7 @@ Consider the following scenario where a group experience **Laser Maze** is split
 	</Grid>
 </Grid>
 
-<img src="../assets/creator-dashboard/Group-Payouts-Splits-Example.png" width="840" alt="Example flowchart of how experience splits are distributed to group members first, with remainder going factored into group splits for final distribution among the group." />
+<img src="../assets/creator-dashboard/Group-Payouts-Splits-Example.png" width="840" alt="Example flowchart of how game splits are distributed to group members first, with remainder going factored into group splits for final distribution among the group." />
 
 <Alert severity="warning">
 Note that revenue from [private server](../production/monetization/private-servers.md) subscriptions does not change if you adjust split percentages at a later time, meaning that if a player buys a private server subscription, the split percentages at time of purchase will apply to that particular subscription forever (until it is canceled). This policy may be changed in the future.
@@ -367,7 +367,7 @@ Group members with the **View group activity history** permission can view detai
 
 ## Intellectual property protection
 
-Group members with permission to edit all group experiences can enable the [Place Copying](./configure-games.md#allow-copying) setting for a creation, potentially allowing the entire Roblox community to copy it and use assets within it. To help protect intellectual property in a group, the owner or members with sufficient permissions should:
+Group members with permission to edit all group games can enable the [Place Copying](./configure-games.md#allow-copying) setting for a creation, potentially allowing the entire Roblox community to copy it and use assets within it. To help protect intellectual property in a group, the owner or members with sufficient permissions should:
 
 - Confirm that each member is [assigned the appropriate role](#manage-roles).
 - Check that each group role has the correct [permissions](#roles-and-permissions).

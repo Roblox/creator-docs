@@ -10,13 +10,13 @@ In-game, player will have important stats they need to see like the items they'v
 <img src="../../assets/education/adventure-game-series/adventure-leaderboard-finished.jpg" width="70%" />
 
 <Alert severity="info">
-Note that the leaderboard in this experience doesn't save player information in-between sessions. For information on saving player data, you'll need to use an advanced coding concept called [data stores](../../cloud-services/data-stores/index.md).
+Note that the leaderboard in this game doesn't save player information in-between sessions. For information on saving player data, you'll need to use an advanced coding concept called [data stores](../../cloud-services/data-stores/index.md).
 
 </Alert>
 
 ## Set up the leaderboard
 
-Whenever a player is added to the experience, they'll need to be added to the leaderboard along with code for tracking the individual stats.
+Whenever a player is added to the game, they'll need to be added to the leaderboard along with code for tracking the individual stats.
 
 1. In the Explorer, under **ServerScriptService**, create a new script named PlayerSetup. In that script, delete the hello world line and write a descriptive comment.
 
@@ -54,7 +54,7 @@ Whenever a player is added to the experience, they'll need to be added to the le
     Because leaderboards are a built-in feature, they must be named exactly as seen. For example, a folder named "leaderboard" wouldn't work.
     </Alert>
 
-5. After the end of the function, connect `OnPlayerJoin` to the `PlayerAdded` event. Whenever a player joins the experience, each player will be provided the leaderboard.
+5. After the end of the function, connect `OnPlayerJoin` to the `PlayerAdded` event. Whenever a player joins the game, each player will be provided the leaderboard.
 
    ```lua
    local Players = game:GetService("Players")
@@ -165,7 +165,7 @@ Remember that the stat names can be anything based off the game design document.
     end
    ```
 
-2. Create a new stat for the player's bag spaces. Set `spaces.Value` to `2` so players start the experience only being able to hold two items at once, encouraging them buy a new bag as soon as they can.
+2. Create a new stat for the player's bag spaces. Set `spaces.Value` to `2` so players start the game only being able to hold two items at once, encouraging them buy a new bag as soon as they can.
 
    ```lua
     local function onPlayerJoin(player)

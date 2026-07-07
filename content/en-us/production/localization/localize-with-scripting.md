@@ -9,13 +9,13 @@ You can use localization APIs for specialized translation tasks that are not aut
 - [Translating part of individual strings](#translate-individual-strings)
 - [Applying translations from multiple languages](#switch-languages)
 
-If you use any localization APIs when translating your experience, listen for any changes to the user's LocaleID to [react to users switching their language](#react-to-users-switching-languages) while in an experience.
+If you use any localization APIs when translating your game, listen for any changes to the user's LocaleID to [react to users switching their language](#react-to-users-switching-languages) while in a game.
 
 When reusing translation code, you should use a [TranslationHelper ModuleScript](#create-a-translationhelper-module) to handle errors and missing translations.
 
 ## Localize images and sounds
 
-Add localization beyond text in your experience by providing unique images and sounds based off of a user's locale. To localize assets, first add the **source** and **target** asset IDs to your experience's [localization table](../../production/localization/manual-translations.md#cloud-localization-table) then use the localization API to fetch the different assets.
+Add localization beyond text in your game by providing unique images and sounds based off of a user's locale. To localize assets, first add the **source** and **target** asset IDs to your game's [localization table](../../production/localization/manual-translations.md#cloud-localization-table) then use the localization API to fetch the different assets.
 
 <GridContainer numColumns="3">
   <figure>
@@ -182,7 +182,7 @@ end
 
 In the case of multiple contexts, the localization service compares object relationships in the Context field from **right to left**, using the closest match.
 
-For example, a localization table in your experience may have the following shared Source strings entries:
+For example, a localization table in your game may have the following shared Source strings entries:
 
 <table>
 <thead>
@@ -206,13 +206,13 @@ For example, a localization table in your experience may have the following shar
 </tbody>
 </table>
 
-If the string "Screen" is added to a `playerGui.ScreenGui.TextLabel` object in your experience, the localization service displays "Mosquitero" as the Spanish translation as the closest context match.
+If the string "Screen" is added to a `playerGui.ScreenGui.TextLabel` object in your game, the localization service displays "Mosquitero" as the Spanish translation as the closest context match.
 
 ### Substitute parameters
 
 When using parameters to translate [dynamic content](./translate-dynamic-content.md), set the values to a [table](../../luau/tables.md) and pass the table as an argument through the API.
 
-In this example, the experience has a localization table with the following entries:
+In this example, the game has a localization table with the following entries:
 
 <table>
 <thead>
@@ -262,7 +262,7 @@ end
 
 ## Switch languages
 
-In some cases, you may want to display translations of other languages in your experience. You can set a new translator with a different country code using `Class.LocalizationService:GetTranslatorForLocaleAsync()`.
+In some cases, you may want to display translations of other languages in your game. You can set a new translator with a different country code using `Class.LocalizationService:GetTranslatorForLocaleAsync()`.
 
 The following code sample sets one translator with a manual country code and an additional translator based off of the user's global locale settings:
 
@@ -303,16 +303,16 @@ end
 
 ## React to users switching languages
 
-Users can change their language settings at any time using their in-experience Settings menu. This user setting change automatically updates non-scripting localization assets, such as strings handled by [automatic translation](../../production/localization/automatic-translations.md), but may not update scripted localization changes that have already rendered, such as GUI images or sounds.
+Users can change their language settings at any time using their in-game Settings menu. This user setting change automatically updates non-scripting localization assets, such as strings handled by [automatic translation](../../production/localization/automatic-translations.md), but may not update scripted localization changes that have already rendered, such as GUI images or sounds.
 
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/localization/In-Experience-Language-Switcher.png" />
-    <figcaption>In-Experience Language Setting</figcaption>
+    <figcaption>In-game Language Setting</figcaption>
   </figure>
   <figure>
     <img src="../../assets/localization/In-Experience-Language-Switcher-Modal.png" />
-    <figcaption>Users can choose available languages set in the experience</figcaption>
+    <figcaption>Users can choose available languages set in the game</figcaption>
   </figure>
 </GridContainer>
 
@@ -378,7 +378,7 @@ function TranslationHelper.setLanguage(newLanguageCode)
 			return LocalizationService:GetTranslatorForLocaleAsync(newLanguageCode)
 		end)
 
-		--Only override current playerTranslator if the new one is valid (fallbackTranslator remains as experience's source language)
+		--Only override current playerTranslator if the new one is valid (fallbackTranslator remains as game's source language)
 		if success and newPlayerTranslator then
 			playerTranslator = newPlayerTranslator
 			return true
@@ -430,7 +430,7 @@ return TranslationHelper
 ```
 
 <Alert severity="info">
-If your experience's source language is not English, change the value of the  `sourceLanguageCode` variable to the country code of the experience's source language.
+If your game's source language is not English, change the value of the  `sourceLanguageCode` variable to the country code of the game's source language.
 </Alert>
 
 Once the module is in `Class.ReplicatedStorage`, require it from a `Class.LocalScript` to call the module's functions. The following code uses this module's helper function to translate an individual string:

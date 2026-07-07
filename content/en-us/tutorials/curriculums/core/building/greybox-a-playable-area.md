@@ -11,13 +11,13 @@ prev: /tutorials/curriculums/core/building/create-an-environment-with-terrain
 
 **Greyboxing** is the process of building a level with simple shapes before investing time in scripting or creating final art assets. It helps you test gameplay, identify layout issues, and make changes quickly while the environment is still easy to modify.
 
-In this section, you'll greybox the sea stack platforms that make up the playable area of the experience. Once the layout feels right, you can begin scripting.
+In this section, you'll greybox the sea stack platforms that make up the playable area of the game. Once the layout feels right, you can begin scripting.
 
 ## Plan the playable area
 
-In the final experience, players collect coins to increase their jump power and reach higher platforms. You'll implement this progression system later in the tutorial, but it's important to plan for it while greyboxing your environment. As a general rule, the height difference between platforms should gradually increase to encourage players to collect coins and continue progressing.
+In the final game, players collect coins to increase their jump power and reach higher platforms. You'll implement this progression system later in the tutorial, but it's important to plan for it while greyboxing your environment. As a general rule, the height difference between platforms should gradually increase to encourage players to collect coins and continue progressing.
 
-As a reference, the sample [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building) game uses seven height levels. The first platform sits low enough that players only need a few coins to reach it. The subsequent height differences increase to 8, 20, 35, 55, 81, and 110 studs, creating a steady sense of progression throughout the experience.
+As a reference, the sample [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building) game uses seven height levels. The first platform sits low enough that players only need a few coins to reach it. The subsequent height differences increase to 8, 20, 35, 55, 81, and 110 studs, creating a steady sense of progression throughout the game.
 
 <Alert severity="info">
 A stud is Studio's primary unit of length, equivalent to about 28 cm. If you create your own layout instead of using the Assistant prompt or recreating the sample, keep each new height level that requires a jump upgrade at least 30 studs above the previous one.

@@ -75,7 +75,7 @@ When creating a particle, it needs to be inserted into a part or attachment. In 
     Custom textures can be any image that you have. Learn to upload them in the [Asset Manager](../../projects/assets/manager.md) article.
     </Alert>
 
-3. In the **Explorer** window, select **TestPlayer**, then in the **Properties** window, find and change the **Color** and **Size** properties to something appropriate for your experience. For example, the following image includes particles with the following settings:
+3. In the **Explorer** window, select **TestPlayer**, then in the **Properties** window, find and change the **Color** and **Size** properties to something appropriate for your game. For example, the following image includes particles with the following settings:
 
    - **Color** = `255, 178, 44`
    - **Size** = `0.6`

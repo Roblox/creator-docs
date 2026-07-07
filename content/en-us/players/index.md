@@ -5,7 +5,7 @@ description: How users, players, and characters work together in a Roblox game.
 
 When a Roblox user joins a game, they are represented as a `Class.Player` in the `Class.DataModel`. This `Class.Player` object contains information about the user that's universal across games, such as their username, friend list, and saved [avatar character](../characters/index.md#avatar-characters), as well as properties, methods, and events that affect the user's [lifecycle](#lifecycle) between joining and leaving the game. Each `Class.Player` object also parents four important [containers](#containers) that you can use to customize a user's experience: `Class.Backpack`, `Class.StarterGear`, `Class.PlayerGui`, and `Class.PlayerScripts`.
 
-Each `Class.Player` also exposes a `Class.Player.User` property, which is a `Datatype.User` value representing the player's domain-scoped identity within the current experience. For more information on how user identification works, including domain-scoped user IDs and the `Datatype.User` type, see [Users and domain-scoped user IDs](./users.md).
+Each `Class.Player` also exposes a `Class.Player.User` property, which is a `Datatype.User` value representing the player's domain-scoped identity within the current game. For more information on how user identification works, including domain-scoped user IDs and the `Datatype.User` type, see [Users and domain-scoped user IDs](./users.md).
 
 <img src="../assets/studio/explorer/Players-Player-Hierarchy.png" width="320" />
 
@@ -103,7 +103,7 @@ When a player's character spawns, the contents of that player's `Class.StarterGe
 Unlike `Class.StarterPack`, `Class.StarterGear` isn't a service but rather a child of each `Class.Player` object, so its contents are player‑specific. To use `Class.StarterGear`, navigate to your start place's **Permissions** page and then enable gear by its genre or choose specific types to allow.
 
 <Alert severity="warning">
-Always test experiences after adding gear to them to check that users can't easily abuse them there. Gear may include `Class.Script` objects which allow the player to perform actions that you might not consider; for example, navigational gear might allow the player to access a part of the map that you don't want them to, and weapon gear may allow the holder to damage other players, possibly without retribution or retaliation.
+Always test games after adding gear to them to check that users can't easily abuse them there. Gear may include `Class.Script` objects which allow the player to perform actions that you might not consider; for example, navigational gear might allow the player to access a part of the map that you don't want them to, and weapon gear may allow the holder to damage other players, possibly without retribution or retaliation.
 </Alert>
 </TabItem>
 <TabItem label="PlayerGui">
@@ -128,23 +128,31 @@ Unlike the `Class.Backpack` and `Class.PlayerGui` containers, the
 
 ## Ban users
 
-To ensure civility and fair play in your experiences, you can ban users who violate rules or community guidelines. You can modify ban durations, ban messages, and even extend bans to potential alternate accounts. When using this feature, you must follow banning [guidelines](#ban-guidelines) and [messaging](#message-guidelines).
+To ensure civility and fair play in your games, you can ban users who violate rules or community guidelines. You can modify ban durations, ban messages, and even extend bans to potential alternate accounts. When using this feature, you must follow banning [guidelines](#ban-guidelines) and [messaging](#message-guidelines).
 
 You have several options for working with bans:
 
-- Each experience page on the [Creator Hub](https://create.roblox.com/) has a [Bans](../production/bans.md) dashboard.
+- Each game page on the [Creator Hub](https://create.roblox.com/) has a [Bans](../production/bans.md) dashboard.
 - For programmatic usage with the engine API, see `Class.Players:BanAsync()`.
 - For Open Cloud, see [bans and blocks](/cloud/features/bans-and-blocks).
 
+### Device blocking
+
+In addition to banning an account, `Class.Players:BanAsync()` supports **device blocking** through the `ApplyDeviceBlock` field in its config table. When you ban a user who is currently connected to your game with `ApplyDeviceBlock` set to `true`, the device associated with that user is also blocked from rejoining for 24 hours. This option adds friction against ban evasion; banned players can't immediately rejoin the game from a new account on the same device.
+
+- Device blocking currently only applies to players on desktop (Windows and macOS). It does not apply to mobile devices or consoles.
+- The device block does not propagate as a ban to any other accounts that have used the device.
+- Calling the unban API on the affected user immediately removes any active device block associated with that user's device, allowing them to rejoin the game.
+
 ### Ban guidelines
 
-When implementing bans in your experience, adhere to the following guidelines:
+When implementing bans in your game, adhere to the following guidelines:
 
-- Experience rules must not contradict Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) and [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use). For example, you cannot create an experience rule that excludes someone because of their gender, as this violates [Roblox's Discrimination, Slurs, and Hate Speech policy](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards#discrimination-slurs-and-hate-speech).
-- Creators must clearly state their experience rules somewhere accessible to all users.
-- Creators must apply their experience rules fairly and not arbitrarily target certain users.
-- Users can appeal to creators directly if they believe their ban was incorrect. Roblox will not mediate these appeals, unless the user believes the creator's experience rules or enforcement of their rules violate the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
-- Roblox can moderate an experience if there is reason to believe that a creator's experience rules or enforcement of their rules violate the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
+- Game rules must not contradict Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) and [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use). For example, you cannot create a game rule that excludes someone because of their gender, as this violates [Roblox's Discrimination, Slurs, and Hate Speech policy](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards#discrimination-slurs-and-hate-speech).
+- Creators must clearly state their game rules somewhere accessible to all users.
+- Creators must apply their game rules fairly and not arbitrarily target certain users.
+- Users can appeal to creators directly if they believe their ban was incorrect. Roblox will not mediate these appeals, unless the user believes the creator's game rules or enforcement of their rules violate the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
+- Roblox can moderate a game if there is reason to believe that a creator's game rules or enforcement of their rules violate the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
 
 ### Message guidelines
 
@@ -152,7 +160,7 @@ When a user is banned, they receive an error modal displaying information such a
 
 For example, in your ban messages, you are allowed to reference brand names and platforms:
 
-- "Visit the Discord in my group/experience page"
+- "Visit the Discord in my group/game page"
 - "Message me on Twitter or X"
 
 Mentions of personal information or direct links are not allowed in this message field. This includes posting a specific username or handle, or providing a direct link to a Discord server or X account.

@@ -180,7 +180,7 @@ To create a mechanical constraint, you can either insert one from the **Constrai
 
 ## Legacy mover conversion
 
-If your experience relies on legacy `Class.BodyMover`‑based constraints, review the following notes when converting to modern mover constraints.
+If your game relies on legacy `Class.BodyMover`‑based constraints, review the following notes when converting to modern mover constraints.
 
 <BaseAccordion>
 <AccordionSummary>`BodyPosition` &nbsp;⟩&nbsp; `AlignPosition`</AccordionSummary>

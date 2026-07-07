@@ -5,11 +5,11 @@ description: Explains how to implement the queue data structure for memory store
 
 A **queue** is a linear data structure with a collection of items that either follows the first-in-first-out (FIFO) principle or prioritizes elements based on predefined criteria. [Memory stores](../../cloud-services/memory-stores/index.md) support two types of queue, the FIFO [regular queues](../../luau/queues.md#regular-queues) and [priority queues](../../luau/queues.md#priority-queues). Both types share the same set of functions for initializing an empty queue, adding data to the queue, reading data from the queue, and removing data from the queue.
 
-Memory store queues are useful for order-based processing and storing user information, such as skill levels, to facilitate matchmaking based on your desired criteria. For example, you can add a lobby place as the start place of your experience, use memory store queues as a centralized user information storage system accessible by multiple servers, manage the placement order of users using the queues, and teleport user who have completed the matchmaking to the main place of your experience.
+Memory store queues are useful for order-based processing and storing user information, such as skill levels, to facilitate matchmaking based on your desired criteria. For example, you can add a lobby place as the start place of your game, use memory store queues as a centralized user information storage system accessible by multiple servers, manage the placement order of users using the queues, and teleport user who have completed the matchmaking to the main place of your game.
 
 ## Get a queue
 
-To get a queue, call `Class.MemoryStoreService:GetQueue()` with a **name**, which is global within the experience for any script to access, and an optional **invisibility timeout** in seconds, which prevents duplicated processing of the same queue item. Invisibility timeout is 30 seconds by default if you leave it empty like the following code sample.
+To get a queue, call `Class.MemoryStoreService:GetQueue()` with a **name**, which is global within the game for any script to access, and an optional **invisibility timeout** in seconds, which prevents duplicated processing of the same queue item. Invisibility timeout is 30 seconds by default if you leave it empty like the following code sample.
 
 ```lua title="Getting an Empty Queue"
 local MemoryStoreService = game:GetService("MemoryStoreService")

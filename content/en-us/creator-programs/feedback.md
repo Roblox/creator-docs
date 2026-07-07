@@ -24,7 +24,7 @@ As part of this program, you are:
 
 Eligibility can include, but is not limited to:
 
-- Has contributed to the development of an experience that has shown some success on the platform
+- Has contributed to the development of a game that has shown some success on the platform
 - Manages a large group with an active community
 - Created a community resource that has helped many
 - Designed avatar assets that have grown into a popular Roblox clothing line

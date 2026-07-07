@@ -1,15 +1,15 @@
 ---
 title: Test and save
-description: Explains how to playtest and save your fitness experience.
+description: Explains how to playtest and save your fitness game.
 next: /tutorials/curriculums/animator/next-steps
 prev: /tutorials/curriculums/animator/play-your-animation
 ---
 
-Now that your poses are complete and set up to play as your character's run animation, it's time to playtest your experience to verify that the animation plays properly, then publish your work to Roblox so that you can save your progress.
+Now that your poses are complete and set up to play as your character's run animation, it's time to playtest your game to verify that the animation plays properly, then publish your work to Roblox so that you can save your progress.
 
 ## Playtest your animation
 
-It's important to playtest your experience often to ensure that your animation plays exactly the way you want it to play for your players. Studio offers several playtest options:
+It's important to playtest your game often to ensure that your animation plays exactly the way you want it to play for your players. Studio offers several playtest options:
 
 - **Test** – Starts the playtest by inserting your avatar at a spawn location.
 - **Test Here** – Starts the playtest by inserting your avatar in front of the camera's current position.
@@ -49,7 +49,7 @@ If you're running into any issues with your animation, check out the following t
 
 ## Publish to Roblox
 
-You have access to your animation ID for other projects, but if you were to close Studio now, you would lose every edit you made to your experience. For this reason, it's important to publish your work to Roblox often to save your work and connect the experience to your account.
+You have access to your animation ID for other projects, but if you were to close Studio now, you would lose every edit you made to your game. For this reason, it's important to publish your work to Roblox often to save your work and connect the game to your account.
 
 <Alert severity="info">
 It's recommended to publish to Roblox every ten minutes or after making a big change.
@@ -59,12 +59,12 @@ It's recommended to publish to Roblox every ten minutes or after making a big ch
 
 1. In the **Publish Experience** window,
 
-   1. In the **Name** field, provide a name for your experience.
-   1. <Chip label="OPTIONAL" size="small" variant="outlined" /> In the **Description** field, provide a summary of what a player can expect from the experience.
-   1. In the **Devices** section, enable every device you want players to use to access your experience. Because this experience allows players to use mobile devices with accelerometers as a way to move characters, it's recommended to at least enable phones.
+   1. In the **Name** field, provide a name for your game.
+   1. <Chip label="OPTIONAL" size="small" variant="outlined" /> In the **Description** field, provide a summary of what a player can expect from the game.
+   1. In the **Devices** section, enable every device you want players to use to access your game. Because this game allows players to use mobile devices with accelerometers as a way to move characters, it's recommended to at least enable phones.
    1. At the bottom-right of the window, click the **Create** button.
 
-Now that your experience is published and connected to your account, you can edit it from any computer!
+Now that your game is published and connected to your account, you can edit it from any computer!
 
 <Alert severity="info">
 <AlertTitle>Saving after publishing</AlertTitle>

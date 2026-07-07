@@ -43,7 +43,7 @@ No amount of experience guarantees your first ideas are the best ones. This is w
   <figcaption>Earliest version using simple parts and the Creator Store.</figcaption>
 </figure>
 
-While we wanted to eventually replace the temporary assets with our own, the only thing we cared about early on was laying out the basics and playing the experience to make sure the environment was fun to move around and wasn't too large or too much of a "straight shot" so that players were encouraged to explore.
+While we wanted to eventually replace the temporary assets with our own, the only thing we cared about early on was laying out the basics and playing the game to make sure the environment was fun to move around and wasn't too large or too much of a "straight shot" so that players were encouraged to explore.
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/constructing-the-house/early-shot-driveway-approach.png" width="60%" />
@@ -74,7 +74,7 @@ Each room had to work together, and we wanted to tell the story slowly and progr
 
 ## Build a 3D layout
 
-All the early planning and ideas in the world don't make a fun experience, so it was time to start making the idea 3D! The exterior layout was blocked out and we made space for the house to be expanded or contracted. Earliest iterations were done in another 3D application where we could make simple boxes and shapes to start turning that 2D image into a playable space. You may find that building the early versions in Studio and using simple parts is your favorite method. There's no wrong way, so long as you get your ideas into 3D and playable quickly!
+All the early planning and ideas in the world don't make a fun game, so it was time to start making the idea 3D! The exterior layout was blocked out and we made space for the house to be expanded or contracted. Earliest iterations were done in another 3D application where we could make simple boxes and shapes to start turning that 2D image into a playable space. You may find that building the early versions in Studio and using simple parts is your favorite method. There's no wrong way, so long as you get your ideas into 3D and playable quickly!
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/constructing-the-house/gray-mesh-top-down.png" />
@@ -115,7 +115,7 @@ We needed a lot of furniture and props to fill a house of this size, so before w
 
 <img src="../../assets/resources/mystery-of-duvall-drive/constructing-the-house/furniture-spreadsheet.jpeg" width="80%" />
 
-This list gave us a good understanding of what needed to take priority when gray boxing out the content and populating it throughout the house. By adding high-priority content early, we could easily see when assets were repetitious, had incorrect proportions, or when they would need a second variation or a texture swap when they were in certain rooms. Some content we blocked out early on ended up not being important to the experience and removed, but we didn't lose a lot of work in the process since they were only quick blockouts. For all the furniture and props we kept, we made them into [packages](#utilize-packages) in their blockout phase, and this made it easier for us to replace everything throughout the house with their final versions.
+This list gave us a good understanding of what needed to take priority when gray boxing out the content and populating it throughout the house. By adding high-priority content early, we could easily see when assets were repetitious, had incorrect proportions, or when they would need a second variation or a texture swap when they were in certain rooms. Some content we blocked out early on ended up not being important to the game and removed, but we didn't lose a lot of work in the process since they were only quick blockouts. For all the furniture and props we kept, we made them into [packages](#utilize-packages) in their blockout phase, and this made it easier for us to replace everything throughout the house with their final versions.
 
 <GridContainer numColumns="2">
   <figure>
@@ -158,7 +158,7 @@ Content from museums and other similar avenues are great free-to-use artist reso
   <figcaption>Original scan data meshes with a Diffuse texture.</figcaption>
 </figure>
 
-**[UV mapping](https://en.wikipedia.org/wiki/UV_mapping)** is the 3D modeling process of unwrapping a 3D model's mesh and projecting a 2D image onto it. "U" and "V" represent the axes of the 2D texture because "X", "Y", and "Z" represent the axes of the 3D model. UVs tend to be automated at the time of the scan, and they tend to be poorly done for the purposes of game development. For example, the UVs for certain photogrammetry models can look like a bunch of individual planes, but this isn't the most performant for a mobile experience when creators are limited to 10,000 vertices. Sometimes we would get lucky with the scan data, but most of the time we needed to either update or completely redo these two-dimensional texture coordinates for the purposes of the experience.
+**[UV mapping](https://en.wikipedia.org/wiki/UV_mapping)** is the 3D modeling process of unwrapping a 3D model's mesh and projecting a 2D image onto it. "U" and "V" represent the axes of the 2D texture because "X", "Y", and "Z" represent the axes of the 3D model. UVs tend to be automated at the time of the scan, and they tend to be poorly done for the purposes of game development. For example, the UVs for certain photogrammetry models can look like a bunch of individual planes, but this isn't the most performant for a mobile experience when creators are limited to 10,000 vertices. Sometimes we would get lucky with the scan data, but most of the time we needed to either update or completely redo these two-dimensional texture coordinates for the purposes of the game.
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/constructing-the-house/original-scan-automated-uvs.jpeg" width="80%" />
@@ -175,7 +175,7 @@ In addition, most meshes from the models would only include the Diffuse texture 
   <figcaption>Original scan data textures with baked in lighting in the diffuse.</figcaption>
 </figure>
 
-**[Physically-based rendering](../../art/modeling/surface-appearance.md) (PBR)** is the notion of using realistic shading and lighting by more accurately simulating and representing materials and lighting in the real world. It was important to us when creating PBR textures to either not have any or very little lighting information baked into the [Albedo](../../art/modeling/surface-appearance.md#colormap) texture because Studio's engine calculates this from the Image-based Lighting (IBL), in addition to using the texture's [Normal](../../art/modeling/surface-appearance.md#normalmap), [Roughness](../../art/modeling/surface-appearance.md#roughnessmap), and [Metalness](../../art/modeling/surface-appearance.md#metalnessmap) surface values to correctly represent real world materials. In comparison, a Diffuse texture may have either some or all of the detail from these individual maps baked into one texture, which is helpful when you may need the Diffuse texture to carry that detail on its own without the help of IBL or other individual PBR textures. When you're deciding whether to keep a Diffuse texture or create your own PBR textures, consider your own design or memory budget limits to what makes sense for your own experience.
+**[Physically-based rendering](../../art/modeling/surface-appearance.md) (PBR)** is the notion of using realistic shading and lighting by more accurately simulating and representing materials and lighting in the real world. It was important to us when creating PBR textures to either not have any or very little lighting information baked into the [Albedo](../../art/modeling/surface-appearance.md#colormap) texture because Studio's engine calculates this from the Image-based Lighting (IBL), in addition to using the texture's [Normal](../../art/modeling/surface-appearance.md#normalmap), [Roughness](../../art/modeling/surface-appearance.md#roughnessmap), and [Metalness](../../art/modeling/surface-appearance.md#metalnessmap) surface values to correctly represent real world materials. In comparison, a Diffuse texture may have either some or all of the detail from these individual maps baked into one texture, which is helpful when you may need the Diffuse texture to carry that detail on its own without the help of IBL or other individual PBR textures. When you're deciding whether to keep a Diffuse texture or create your own PBR textures, consider your own design or memory budget limits to what makes sense for your own game.
 
 The meshes of the scan data that we used were usually fairly good, but some meshes needed to be cleaned up. For example, some meshes had problematic holes that needed to be filled, jagged edges that needed to be smoothed out, or thin edges that needed to be thickened up. For this process, we used **[Zbrush](https://www.maxon.net/en/zbrush)** to edit the scan data.
 
@@ -247,7 +247,7 @@ After we completed the process of retopologizing the mesh with new UVs, we neede
   <figcaption>Retopologizing automatically in a 3D application. Doing this automatically saved the time of creating the low-resolution mesh by hand, but the trade off was a mesh with higher vertex count to maintain the silhouette and a more challenging model to work with when creating UVs</figcaption>
 </figure>
 
-After we finalized our Albedo, Normal, Metalness, and Roughness PBR textures in **[Substance Painter](https://www.substance3d.com/)**, our new assets were ready to be imported into Studio! There were some quality differences between the scan data assets vs. the retopologized assets, but it was ultimately a worthy trade-off when the asset was only 1,000 vertices instead of 1,000,00. It also kept our memory budget intact and allowed the experience to run more smoothly.
+After we finalized our Albedo, Normal, Metalness, and Roughness PBR textures in **[Substance Painter](https://www.substance3d.com/)**, our new assets were ready to be imported into Studio! There were some quality differences between the scan data assets vs. the retopologized assets, but it was ultimately a worthy trade-off when the asset was only 1,000 vertices instead of 1,000,00. It also kept our memory budget intact and allowed the game to run more smoothly.
 
 <GridContainer numColumns="2">
   <figure>
@@ -273,14 +273,14 @@ After we finalized our Albedo, Normal, Metalness, and Roughness PBR textures in 
 
 ## Utilize packages
 
-**[Packages](../../projects/assets/packages.md)** are a system that allows you to store and use a version of either a single object or a group of objects, and when you update that version, it updates all instances of that object or group at once. For example, if you make a tree object and place hundreds of that object within your experience, you only need to update the package in order for the hundreds of trees to update to your new version at once. We knew early on we would have **two states** of most rooms in the house, their normal state and their corrupted state, and we needed to maintain both copies of the house and their contents throughout the entire iteration process. For this reason, we decided on what objects needed to be shared in each house state and converted them into packages.
+**[Packages](../../projects/assets/packages.md)** are a system that allows you to store and use a version of either a single object or a group of objects, and when you update that version, it updates all instances of that object or group at once. For example, if you make a tree object and place hundreds of that object within your game, you only need to update the package in order for the hundreds of trees to update to your new version at once. We knew early on we would have **two states** of most rooms in the house, their normal state and their corrupted state, and we needed to maintain both copies of the house and their contents throughout the entire iteration process. For this reason, we decided on what objects needed to be shared in each house state and converted them into packages.
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/constructing-the-house/package-entire-bedroom.png" width="80%" />
   <figcaption>Example of a package for an entire bedroom. Anything that was unique to its normal or corrupt state lived outside of this package.</figcaption>
 </figure>
 
-Packages allowed us to modify everything from the wood trim on wall panels to entire rooms, then both states of the room would update to our changes. We were also able to convert `Class.SurfaceAppearance` objects to packages so we could update a material's appearance everywhere throughout the experience at once. Reusing materials was instrumental to make the demo as performant as possible for devices despite its clear complexity.
+Packages allowed us to modify everything from the wood trim on wall panels to entire rooms, then both states of the room would update to our changes. We were also able to convert `Class.SurfaceAppearance` objects to packages so we could update a material's appearance everywhere throughout the game at once. Reusing materials was instrumental to make the demo as performant as possible for devices despite its clear complexity.
 
 For example, the following images display an armillary model package with a complex group of child assets, including a metal [surface appearance](../../art/modeling/surface-appearance.md) package that we use in several places within the demo. Wherever we updated the metal surface appearance package, we could also perform a [mass update](../../projects/assets/packages.md#mass-updates) that would force the armillary model package to update the child surface appearance package too.
 
@@ -299,7 +299,7 @@ For example, the following images display an armillary model package with a comp
   </figure>
 </GridContainer>
 
-For more information on how to turn an individual object or a group of objects like `Class.Model|Models` or `Class.Folder|Folders` into a package, or for how to choose a creator of the package for edit access, see [Packages](../../projects/assets/packages.md). We chose to designate the Vistech Demo Group as the creator of all of our packages because it let everyone in our group access and edit the packages whenever they needed to. It also allowed us to share these packages between every experience the group owned!
+For more information on how to turn an individual object or a group of objects like `Class.Model|Models` or `Class.Folder|Folders` into a package, or for how to choose a creator of the package for edit access, see [Packages](../../projects/assets/packages.md). We chose to designate the Vistech Demo Group as the creator of all of our packages because it let everyone in our group access and edit the packages whenever they needed to. It also allowed us to share these packages between every game the group owned!
 
 <img src="../../assets/resources/mystery-of-duvall-drive/constructing-the-house/convert-to-package-dialog.png" width="60%" />
 
@@ -313,13 +313,13 @@ We set parent packages, such as the armillary above or an entire room, to [autom
   <figcaption>Using packages allowed us to make two versions of a room, while only dealing with the content of one.</figcaption>
 </figure>
 
-Instead of working entirely in the same place file as the experience, we built an asset storage place with all our components with package links. Whenever we made a change to a package in this storage place, it would update automatically and immediately across **every place** that uses that package. We could modify objects, add functions, and work on details without having to navigate the main experience's mood and lighting that could make it hard to see what we were doing.
+Instead of working entirely in the same place file as the game, we built an asset storage place with all our components with package links. Whenever we made a change to a package in this storage place, it would update automatically and immediately across **every place** that uses that package. We could modify objects, add functions, and work on details without having to navigate the main game's mood and lighting that could make it hard to see what we were doing.
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/constructing-the-house/asset-storage-place.png" width="80%" />
   <figcaption>The asset storage place with every component within the demo.</figcaption>
 </figure>
 
-Packages allowed us more freedom to explore different ideas in 3D without having to do a lot of extra work. We could plan, test, or even [revert to any previous version](../../projects/assets/packages.md#revert-changes) of an asset if an experiment didn't pan out in practice or broke the experience. There were many times where hours worth of work were restored by going back a version in the packages. In the end, we couldn't have achieved the final level of polish in this demo without packages.
+Packages allowed us more freedom to explore different ideas in 3D without having to do a lot of extra work. We could plan, test, or even [revert to any previous version](../../projects/assets/packages.md#revert-changes) of an asset if an experiment didn't pan out in practice or broke the game. There were many times where hours worth of work were restored by going back a version in the packages. In the end, we couldn't have achieved the final level of polish in this demo without packages.
 
 <img src="../../assets/resources/mystery-of-duvall-drive/constructing-the-house/final-foyer.png" width="60%" />

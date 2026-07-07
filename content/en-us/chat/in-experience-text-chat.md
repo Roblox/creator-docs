@@ -7,7 +7,7 @@ Roblox offers text-based messaging between players in live sessions through `Cla
 
 ## UI configuration
 
-`Class.TextChatService` provides a default UI that can be customized to fit your experience's needs. Disable any of these configurations to hide its associated UI element. If desired, you can also replace these UI elements with custom interfaces:
+`Class.TextChatService` provides a default UI that can be customized to fit your game's needs. Disable any of these configurations to hide its associated UI element. If desired, you can also replace these UI elements with custom interfaces:
 
 - `Class.ChatWindowConfiguration`
 - `Class.ChatInputBarConfiguration`
@@ -39,7 +39,7 @@ For more information, see [Chat window](./chat-window.md) and [Bubble chat](./bu
 Text chat uses the [client‑server](../projects/client-server.md) model, with a **sending client**, the **server**, and **receiving clients**.
 
 <img
-  alt="A flowchart for in-experience text chat."
+  alt="A flowchart for in-game text chat."
   src="../assets/players/in-experience-text-chat/Chat-Workflow.png"
   width="100%" />
 

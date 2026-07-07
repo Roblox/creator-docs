@@ -9,11 +9,11 @@ The data stores observability dashboard provides real-time charts on your reques
 
 ## Access the dashboard
 
-The data stores dashboard is available for any experience that uses `Class.DataStoreService`, but you must either be the experience owner or have [analytics group permissions](../../production/analytics/analytics-dashboard.md#grant-group-permission) to access the dashboard.
+The data stores dashboard is available for any game that uses `Class.DataStoreService`, but you must either be the game owner or have [analytics group permissions](../../production/analytics/analytics-dashboard.md#grant-group-permission) to access the dashboard.
 
 1. Navigate to the [Creations](https://create.roblox.com/dashboard/creations) page on the **Creator Hub**.
-2. Under the **Creator Hub** dropdown, select your account or the group owning the target experience.
-3. Select the experience.
+2. Under the **Creator Hub** dropdown, select your account or the group owning the target game.
+3. Select the game.
 4. In the **Monitoring** dropdown, select **Data Stores**.
 
 ## Available charts

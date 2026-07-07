@@ -1,9 +1,9 @@
 ---
 title: Explorer window
-description: The Explorer window shows a hierarchical list of every instance inside an experience.
+description: The Explorer window shows a hierarchical list of every instance inside a game.
 ---
 
-The **Explorer** window, accessible from Studio's **Window** menu or **Home** tab toolbar, shows a hierarchical list of every instance inside an experience. At the highest level of the hierarchy are the services; `Class.Workspace`, for example, is where visible 3D content such as [parts](../parts/index.md) are stored.
+The **Explorer** window, accessible from Studio's **Window** menu or **Home** tab toolbar, shows a hierarchical list of every instance inside a game. At the highest level of the hierarchy are the services; `Class.Workspace`, for example, is where visible 3D content such as [parts](../parts/index.md) are stored.
 
 <img src="../assets/studio/general/Toolbar-Explorer.png" width="800" alt="Explorer highlighted in Studio's toolbar." />
 

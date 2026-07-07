@@ -1,15 +1,15 @@
 ---
 title: Error Report
-description: Explains how error reports can help you improve your experience.
+description: Explains how error reports can help you improve your game.
 ---
 
-**Error Report** lets you view up-to-the-minute Luau system errors and warnings for both server and client. Monitor your error report before and after updating your experience to identify potential issues early.
+**Error Report** lets you view up-to-the-minute Luau system errors and warnings for both server and client. Monitor your error report before and after updating your game to identify potential issues early.
 
 ## View your error report
 
-To view your experience's error report:
+To view your game's error report:
 
-- Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page in the **Creator Dashboard** and select your experience.
+- Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page in the **Creator Dashboard** and select your game.
 - Under **Monitoring**, select **Error Report**.
 
 You can view analytics for individual or group-owned experiences. To view the latter, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md).
@@ -53,7 +53,7 @@ The **Errors and warnings** table has the following columns:
 
 ### View the stack trace for an error or warning
 
-If you see a dropdown on an error or warning, click to expand it and see its corresponding **stack trace**. A stack trace is a list of the calls that your experience was performing when the exception was thrown. This can help you figure out what's going wrong.
+If you see a dropdown on an error or warning, click to expand it and see its corresponding **stack trace**. A stack trace is a list of the calls that your game was performing when the exception was thrown. This can help you figure out what's going wrong.
 
 ## Custom rules
 
@@ -164,7 +164,7 @@ When investigating errors from the Error Reports page, use the following approac
 1. **Review stack traces** — Expand error rows to see the call path and identify the exact script and line number where the error occurred.
 2. **Check for recent updates** — Monitor new errors since your most recent update.
 3. **Use built-in tools**:
-   - [Developer Console](../../studio/developer-console.md) (<kbd>F9</kbd> in-experience): View live errors in real time and test fixes.
+   - [Developer Console](../../studio/developer-console.md) (<kbd>F9</kbd> in-game): View live errors in real time and test fixes.
    - [Script Profiler](../../studio/optimization/scriptprofiler.md): Identify performance-related errors caused by expensive operations.
    - **Output Window in Studio** — Catch errors during development before publishing.
 4. **Use breakdowns** — Check if the error is specific to a platform (Desktop, Mobile, Console) or OS (Windows, macOS, iOS, Android).

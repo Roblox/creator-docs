@@ -1,14 +1,14 @@
 ---
 title: Add speech-to-text
-description: Explains how to add speech-to-text audio to your experiences.
+description: Explains how to add speech-to-text audio to your games.
 ---
 
 **Speech-to-text** (STT) is a form of technology that automatically generates text from speech sounds. With STT, you can create more immersive worlds by allowing players to talk to NPCs, generate text without the need to pre-record specific audio, improve accessibility for players with motor or vision limitations, and provide players with hands-free controls through voice shortcuts for actions like opening their inventory or casting a spell.
 
-Using the [Gingerbread House - Start](https://www.roblox.com/games/134812596370919/Gingerbread-House-Start) `.rbxl` file as a starting place, this tutorial shows you how to add text generated dynamically from speech to your experience, including guidance on how to implement STT so that the player can interact with objects in your 3D world.
+Using the [Gingerbread House - Start](https://www.roblox.com/games/134812596370919/Gingerbread-House-Start) `.rbxl` file as a starting place, this tutorial shows you how to add text generated dynamically from speech to your game, including guidance on how to implement STT so that the player can interact with objects in your 3D world.
 
 <Alert severity="info">
-For more general guidance on adding audio to your experience, see the [Add 2D audio](./add-2D-audio.md) and [Add 3D audio](./add-3D-audio.md) tutorials.
+For more general guidance on adding audio to your game, see the [Add 2D audio](./add-2D-audio.md) and [Add 3D audio](./add-3D-audio.md) tutorials.
 </Alert>
 
 <Alert severity="info">
@@ -23,20 +23,20 @@ To create STT audio, it's important to understand the audio objects that you wil
 - The `Class.AudioSpeechToText` object converts speech sounds into text strings.
 - `Class.Wire|Wires` carry audio streams from one object to another.
 
-All of these audio objects work together to generate STT text in response to player actions. For example, if the player is wearing a headset while playing an experience with their laptop:
+All of these audio objects work together to generate STT text in response to player actions. For example, if the player is wearing a headset while playing a game with their laptop:
 
 - The `AudioDeviceInput` captures the player's speech, as spoken into their microphone and as a stream of audio.
 - A `Wire` carries the audio stream from the `AudioDeviceInput` to the `AudioSpeechToText`.
 - The `AudioSpeechToText` converts the player's speech into text.
-- The experience reads this text and performs an action, such as displaying the spoken text on the screen or opening a door at the player's command.
+- The game reads this text and performs an action, such as displaying the spoken text on the screen or opening a door at the player's command.
 
 ## Enable microphone usage
 
-Before adding STT to an experience, you must first enable microphone usage and publish the experience.
+Before adding STT to a game, you must first enable microphone usage and publish the game.
 
 1. Open the [Gingerbread House - Start](https://www.roblox.com/games/134812596370919/Gingerbread-House-Start) file in Studio.
 2. Create a local copy.
-3. Publish your local copy of the experience.
+3. Publish your local copy of the game.
 4. Back in Studio, go to **File** &rang; **Experience Settings** &rang; **Communication**.
 5. Turn on **Enable Microphone**.
 6. Save your changes.
@@ -73,7 +73,7 @@ To add simple speech capture to your local copy of the [Gingerbread House - Star
 
 ### Test your speech capture
 
-After you add simple speech capture, you can playtest the experience to make sure your STT implementation works properly. Speaking into your microphone should populate the **AudioSpeechToText** property with the text version of your speech.
+After you add simple speech capture, you can playtest the game to make sure your STT implementation works properly. Speaking into your microphone should populate the **AudioSpeechToText** property with the text version of your speech.
 
 To test your speech capture:
 

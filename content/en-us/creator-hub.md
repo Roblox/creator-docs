@@ -14,7 +14,7 @@ export const sections = [
     ],
     content: [
       {
-        title: "Manage experiences, avatar items, and assets",
+        title: "Manage games, avatar items, and assets",
         description: "The Creator Dashboard lets you manage and access all of your creations in one place.",
         image: "/assets/landing/hub-home.jpg",
         links: [
@@ -23,7 +23,7 @@ export const sections = [
       },
       {
         title: "Analyze and scale your creations",
-        description: "Access a variety of analytics features to help you chart your creations' growth, track user behavior and retention, and find opportunities for optimization. You can use analytics to understand what actions you can take to grow your experience.",
+        description: "Access a variety of analytics features to help you chart your creations' growth, track user behavior and retention, and find opportunities for optimization. You can use analytics to understand what actions you can take to grow your game.",
         image: "./assets/analytics/overview/step3.png",
         links: [
           { text: "Guides", href: "./production/analytics" },

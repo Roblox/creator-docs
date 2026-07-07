@@ -1,15 +1,15 @@
 ---
 title: Add translations
-description: Learn how to manually add, edit, and remove entries to your experience's cloud localization table.
+description: Learn how to manually add, edit, and remove entries to your game's cloud localization table.
 ---
 
-You can add translations to source entries on your experience's localization table using the [translator portal](#in-translator-portal) or [with a `.csv` file upload](#with-file-upload).
+You can add translations to source entries on your game's localization table using the [translator portal](#in-translator-portal) or [with a `.csv` file upload](#with-file-upload).
 
 In some cases, strings may require real-time translation during gameplay, such as a timer, using units of measurement, or when displaying player names. You can add translation parameters to the localization table as placeholders for this type of content. See [Translate dynamic content](./translate-dynamic-content.md) for implementation details.
 
 ### In Translator Portal
 
-Your experience's [Translator Portal](../localization/index.md#localization-settings) provides a direct way to provide translations for the collected strings. Users added as translators for your experience can access the Translator Portal.
+Your game's [Translator Portal](../localization/index.md#localization-settings) provides a direct way to provide translations for the collected strings. Users added as translators for your game can access the Translator Portal.
 
 #### Add string translations
 
@@ -53,22 +53,22 @@ Add translations that are universal for that language (not specific to a locale)
    <img src="../../assets/localization/Locale-Translation.png" width="100%"
    />
 
-You can also add locale-specific translations for your experience source language if they are supported.
+You can also add locale-specific translations for your game source language if they are supported.
 
    <img src="../../assets/localization/Locale-Source.png" width="100%"
    />
 
 <Alert severity = 'warning'>
-If the source language of your experience is English, French, Portuguese, or Spanish, locale-specific translation overrides for experiences names and descriptions are not currently available for these locales:
+If the source language of your game is English, French, Portuguese, or Spanish, locale-specific translation overrides for game names and descriptions are not currently available for these locales:
 - English (United States)
 - French (France)
 - Portuguese (Brazil)
 - Spanish (Spain)
 </Alert>
 
-#### Add experience information translations
+#### Add game information translations
 
-You can modify experience information, such as the name, description, icon, and thumbnails, by updating the localization table:
+You can modify game information, such as the name, description, icon, and thumbnails, by updating the localization table:
 
 1. In the localization settings page, click the **Translate** button on the top right.
 2. In the **Target Languages** menu on the left, select the target language you want to add a translation to.
@@ -79,19 +79,19 @@ You can modify experience information, such as the name, description, icon, and 
       <img src="../../assets/localization/Portal-Adding-Information.png" width="100%"
       />
 
-   2. For Icon and Thumbnails, use the Upload or Remove buttons to modify your localized images. You can upload up to 10 thumbnails per experience. When complete, click **Save**.
+   2. For Icon and Thumbnails, use the Upload or Remove buttons to modify your localized images. You can upload up to 10 thumbnails per game. When complete, click **Save**.
 
       <img src="../../assets/localization/Portal-Adding-Information-Thumbnail.png" width="100%"
       />
 
-#### Add experience product translations
+#### Add game product translations
 
-You can modify experience product details, such as developer [products](../../production/monetization/developer-products.md), [passes](../../production/monetization/passes.md), and [badges](../../production/publishing/badges.md):
+You can modify game product details, such as developer [products](../../production/monetization/developer-products.md), [passes](../../production/monetization/passes.md), and [badges](../../production/publishing/badges.md):
 
 1. In the localization settings page, click the **Translate** button on the top right.
 2. In the **Target Languages** menu on the left, select the target language you want to add a translation to.
 3. Select the **Products** tab at the top of the page.
-4. Input the desired translations for your experience product and click **Save**.
+4. Input the desired translations for your game product and click **Save**.
 
    <img src="../../assets/localization/Portal-Adding-Product.png" width="100%"
    />
@@ -100,7 +100,7 @@ You can modify experience product details, such as developer [products](../../pr
 
 Using Studio or Creator Hub, you can download, modify, and re-upload your localization table as a `.csv` spreadsheet. This is helpful when editing several translations at a time or when collaborating with translators outside of Roblox.
 
-Using the file upload process, you can only modify in-experience string entries and translations. Unlike editing translations through your [Translator Portal](#in-translator-portal), modifying the `.csv` allows you to edit the additional **Key**, **Context**, and **Example** fields.
+Using the file upload process, you can only modify in-game string entries and translations. Unlike editing translations through your [Translator Portal](#in-translator-portal), modifying the `.csv` allows you to edit the additional **Key**, **Context**, and **Example** fields.
 
 When modifying or adding translations with file upload, the following behavior applies to brand new or existing entries:
 
@@ -163,7 +163,7 @@ To begin adding a new supported language, you need to manually add the country c
 
 To translate text using the `.csv` in Creator Hub:
 
-1. In the Creator Hub, navigate to your experience settings page.
+1. In the Creator Hub, navigate to your game settings page.
 2. Navigate to **Localization** and switch to the **Table Management** tab.
 3. Select **Download CSV** to save the `.csv` file locally.
 4. Open the `.csv` in your preferred spreadsheet editor.

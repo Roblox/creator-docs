@@ -5,11 +5,11 @@ next: /tutorials/curriculums/artist/work-with-particle-emitters
 prev: /tutorials/curriculums/artist/
 ---
 
-Welcome to your first beginner VFX art lesson in Studio! To get started, let's walk through how to open the sample template, customize Studio's layout for your tasks, and playtest the core gameplay of the experience where players join a carnival ride and defend their cart from enemies.
+Welcome to your first beginner VFX art lesson in Studio! To get started, let's walk through how to open the sample template, customize Studio's layout for your tasks, and playtest the core gameplay of the game where players join a carnival ride and defend their cart from enemies.
 
 ## Open template
 
-Templates are pre-made 3D worlds that you can use as the base for your own experiences. To introduce you to animation in Studio, Roblox has created the **Mansion of Wonder** template with everything necessary for the experience to work properly, such as the code to run the gameplay and an environment that you can customize at a later time.
+Templates are pre-made 3D worlds that you can use as the base for your own games. To introduce you to animation in Studio, Roblox has created the **Mansion of Wonder** template with everything necessary for the game to work properly, such as the code to run the gameplay and an environment that you can customize at a later time.
 
 <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/become-an-artist/template-overview.png" width="70%" />
 
@@ -37,11 +37,11 @@ To customize the workspace for your VFX art task:
    If you don't see the **Explorer** and **Properties** windows, toggle them on from Studio's **Window** menu.
    </Alert>
 
-## Playtest the experience
+## Playtest the game
 
-Before you start creating VFX art, it's important to take a moment to playtest the template so you can see how the gameplay works. When players join the experience and jump into the carnival ride, slimes and ghosts begin to slowly advance toward the player's moving cart. If these enemies touch the cart too many times, the cart explodes.
+Before you start creating VFX art, it's important to take a moment to playtest the template so you can see how the gameplay works. When players join the game and jump into the carnival ride, slimes and ghosts begin to slowly advance toward the player's moving cart. If these enemies touch the cart too many times, the cart explodes.
 
-To playtest the experience's gameplay:
+To playtest the game:
 
 1. In the top-left corner of Studio, keep the default **Test** playtest option, then click the **Play** button. Studio enters playtest mode.
 
@@ -51,7 +51,7 @@ To playtest the experience's gameplay:
    There are a variety of additional playtest options that you will explore in a later chapter of the tutorial.
    </Alert>
 
-1. In the experience, use the following player controls to walk up to the golem character on the stage, then press <kbd>E</kbd> to open up a menu. From that menu, click **Play Game**.
+1. In the game, use the following player controls to walk up to the golem character on the stage, then press <kbd>E</kbd> to open up a menu. From that menu, click **Play Game**.
 
      <table>
      <thead>

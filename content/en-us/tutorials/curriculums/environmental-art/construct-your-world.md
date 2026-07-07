@@ -11,19 +11,19 @@ prev: /tutorials/curriculums/environmental-art/assemble-an-asset-library
 
 **Constructing your world**, also known as worldbuilding, is the process of decorating the environment with polished assets from your asset library, then adding and configuring additional elements of the 3D space to bring your world to life. This exciting step of the workflow is where you get to see all of your vision and hard work come together into a cohesive environment that is complete and ready for publication.
 
-Using the [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) `.rbxl` file as a reference, this section of the environmental art curriculum shows you how to use and apply your high quality assets and custom materials to your greybox geometry in a way that differentiates each distinct area of the team-based first-person laser tag shooter experience, including step-by-step instructions on:
+Using the [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) `.rbxl` file as a reference, this section of the environmental art curriculum shows you how to use and apply your high quality assets and custom materials to your greybox geometry in a way that differentiates each distinct area of the team-based first-person laser tag shooter game, including step-by-step instructions on:
 
 - Applying your asset library to the building's architecture and outdoor space to provide users information about the overall world.
 - Sculpting terrain with your custom tileable textures to create the overall island that the building rests on.
 - Containing the playable areas to ensure users remain in combat without falling off the island.
 - Configuring special effects and lighting sources to enrich the 3D space with movement, warmth, and realism.
 
-After you complete this section, you will learn how to review and configure your content to ensure your experience has optimal performance across devices.
+After you complete this section, you will learn how to review and configure your content to ensure your game has optimal performance across devices.
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/Overview.png" width="100%"/>
 
 <Alert severity="info">
-    The instructions in this section of the tutorial show you how to **exactly** recreate the sample final environment using the [Environment Art Asset Library](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library), which takes about 90 minutes or less from start to finish. If you don't want to use the provided coordinates, you can adjust the geometry however you need to meet the specifications of your own experience, or use the sample itself for the rest of the tutorial.
+    The instructions in this section of the tutorial show you how to **exactly** recreate the sample final environment using the [Environment Art Asset Library](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library), which takes about 90 minutes or less from start to finish. If you don't want to use the provided coordinates, you can adjust the geometry however you need to meet the specifications of your own game, or use the sample itself for the rest of the tutorial.
 </Alert>
 
 ## Apply your asset library
@@ -38,7 +38,7 @@ The process between greyboxing and constructing your environment with your asset
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/ApplyingLibraryDiagram.png" width="100%"/>
 
-As you follow these instructions that exactly recreate the final environment within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) `.rbxl` file, observe how each step works together to add character to the environment, and provide users information about the overall world. **You can adjust any part of the process to meet the specifications of your own experience**, as your environment may have different needs according to the world that you're creating.
+As you follow these instructions that exactly recreate the final environment within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) `.rbxl` file, observe how each step works together to add character to the environment, and provide users information about the overall world. **You can adjust any part of the process to meet the specifications of your own game**, as your environment may have different needs according to the world that you're creating.
 
 ### Floors
 
@@ -48,7 +48,7 @@ For example, the final sample laser tag environment uses new floor pieces with u
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/Floors-Intro.jpg" width="60%"/>
 
-While this technique replaces and converts the original greybox geometry, it still respects the intention behind the original design to create peaks and valleys that control sight lines and engagement distances throughout the experience outside of horizontal movement. This means that users retain all physical and emotional senses of ascension and descension while also having the benefit of knowing where they are in the 3D space.
+While this technique replaces and converts the original greybox geometry, it still respects the intention behind the original design to create peaks and valleys that control sight lines and engagement distances throughout the game outside of horizontal movement. This means that users retain all physical and emotional senses of ascension and descension while also having the benefit of knowing where they are in the 3D space.
 
 <Tabs>
   <TabItem key = "1" label="Create your own">
@@ -1455,7 +1455,7 @@ To apply your own asset library to the perimeter hallways:
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/Perimeter-4.jpg" width="100%"/>
 
-1. Select your wall components, then in the **Properties** window, set **Color** to a **unique** hue. This allows players to orient themselves relative to where they are in relation to the interior primary lane. The sample experience keeps these assets their default color.
+1. Select your wall components, then in the **Properties** window, set **Color** to a **unique** hue. This allows players to orient themselves relative to where they are in relation to the interior primary lane. The sample game keeps these assets their default color.
 1. Add and configure any applicable prop or **wall**, **corner**, and **door frame** modular assets to the perimeter hallways on the right-side of the building.
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/Perimeter-5.jpg" width="100%"/>
@@ -1820,7 +1820,7 @@ To exactly recreate the perimeter hallways within the sample [Environment Art - 
 
 ### Doors
 
-The final sample laser tag environment applies doors directly onto the greybox geometry to exactly match the original design, however, not all entrance or exit points have door assets. You may find that the requirements of your own experience require more or less doors, depending on how you want to control combat within your combat pockets. More doors often leads to longer wait times before users enter or exit a combat pocket, but less doors may open up unwanted lines of sight.
+The final sample laser tag environment applies doors directly onto the greybox geometry to exactly match the original design, however, not all entrance or exit points have door assets. You may find that the requirements of your own game require more or less doors, depending on how you want to control combat within your combat pockets. More doors often leads to longer wait times before users enter or exit a combat pocket, but less doors may open up unwanted lines of sight.
 
 For this reason, it's recommended to playtest with multiple variations to experiment different play styles. In fact, you may experiment with placing door assets into your combat pockets that only open to users from one side of the door, or not at all.
 
@@ -1893,7 +1893,7 @@ To exactly recreate the doors within the sample [Environment Art - Constructing]
 
 The original greybox design for exterior assets was to set placeholder positions for objects that provide cover from enemy fire while users navigate the exterior primary lane. This was useful to help visualize what would help users as they ascend or descend stairs, cross the middle combat pocket, or otherwise exist in the outdoor space, but as you construct your environment, you can improve this design by providing different uses for these cover objects.
 
-The following sections provide guidance on how to convert these initial placeholder assets into aesthetically pleasing objects that follow your experience's art style, and keep the intent behind the original design.
+The following sections provide guidance on how to convert these initial placeholder assets into aesthetically pleasing objects that follow your game's art style, and keep the intent behind the original design.
 
 #### Towers
 
@@ -1908,7 +1908,7 @@ To apply your own asset library to the towers:
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/GeneralTowers-1.jpg" width="100%"/>
 
-1. Apply unique colors and materials to different block parts according to the art style of your experience.
+1. Apply unique colors and materials to different block parts according to the art style of your game.
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/Towers-1.jpg" width="100%"/>
 
@@ -2003,7 +2003,7 @@ The second exterior assets you can convert for the outdoor space are the two col
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/GeneralColumns-1.jpg" width="100%"/>
 
-1. Apply unique colors and materials to different parts according to the art style of your experience.
+1. Apply unique colors and materials to different parts according to the art style of your game.
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/Columns-2.jpg" width="100%"/>
 
@@ -2828,7 +2828,7 @@ To apply your own asset library to the top of the roof:
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/TopRoof-3.jpg" width="100%"/>
 
-1. Select these parts, then in the **Properties** window, set **Color**, **Material**, and/or **MaterialVariant** to values that apply a visual treatment according to the art style of your experience.
+1. Select these parts, then in the **Properties** window, set **Color**, **Material**, and/or **MaterialVariant** to values that apply a visual treatment according to the art style of your game.
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/TopRoof-4.jpg" width="100%"/>
 
@@ -3069,7 +3069,7 @@ To apply your own asset library to the overhang of the roof:
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/Overhang-4.jpg" width="100%"/>
 
-1. Select these parts, then in the **Properties** window, set **Color**, **Material**, and/or **MaterialVariant** to values that apply a visual treatment according to the art style of your experience.
+1. Select these parts, then in the **Properties** window, set **Color**, **Material**, and/or **MaterialVariant** to values that apply a visual treatment according to the art style of your game.
 1. Anchor all of these overhang parts.
 
   </TabItem>
@@ -3273,7 +3273,7 @@ To apply your own asset library to the trim of the roof:
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/Trim-5.jpg" width="100%"/>
 
-1. Select these parts, then in the **Properties** window, set **Color**, **Material**, and/or **MaterialVariant** to values that apply a visual treatment according to the art style of your experience.
+1. Select these parts, then in the **Properties** window, set **Color**, **Material**, and/or **MaterialVariant** to values that apply a visual treatment according to the art style of your game.
 1. Anchor all of these overhang parts.
 
   </TabItem>
@@ -3603,7 +3603,7 @@ Right now your environment is mostly architectural aside from foliage in your pl
 Using the [Terrain Editor](../../../parts/terrain.md), you can quickly generate and sculpt detailed and realistic terrain to bring organic life to the outdoor space. Because you set material overrides as you created your custom materials in [Assemble an Asset Library](./assemble-an-asset-library.md), you can also utilize your tileable textures through **Terrain Editor** brushes to add moss, flowers, and stone paths that are cohesive with the rest of your environment.
 
 <Alert severity="info">
-    Sculpting terrain is an art form, and it's difficult to exactly recreate brush strokes and subtle material edits. As long as your terrain meets the needs of your own experience, it's normal and expected for your environment to look and feel different from the sample laser tag environment.
+    Sculpting terrain is an art form, and it's difficult to exactly recreate brush strokes and subtle material edits. As long as your terrain meets the needs of your own game, it's normal and expected for your environment to look and feel different from the sample laser tag environment.
 </Alert>
 
 <Tabs>
@@ -3698,14 +3698,14 @@ To recreate the terrain within the sample [Environment Art - Constructing](https
 
 ## Contain the playable area
 
-If you playtest your experience and navigate off the island, your character will fall until they reach the project's `Class.Workspace.FallenPartsDestroyHeight` and respawn back in your team's spawn zone. To ensure that users cannot fall off the island, or join the match too early from the floating area spawn zone before they separate into teams, you must contain the playable area with an invisible barrier.
+If you playtest your game and navigate off the island, your character will fall until they reach the project's `Class.Workspace.FallenPartsDestroyHeight` and respawn back in your team's spawn zone. To ensure that users cannot fall off the island, or join the match too early from the floating area spawn zone before they separate into teams, you must contain the playable area with an invisible barrier.
 
-The values in this section are highly dependent on the terrain within the final sample laser tag environment. It's recommended to playtest and verify that there are no gaps in the barrier according to the custom terrain within your own experience.
+The values in this section are highly dependent on the terrain within the final sample laser tag environment. It's recommended to playtest and verify that there are no gaps in the barrier according to the custom terrain within your own game.
 
 <Tabs>
   <TabItem key = "1" label="Create your own">
 
-To contain the playable area in your experience:
+To contain the playable area in your game:
 
 1. Using **block** parts, surround the playable area in your outdoor area. It's important to ensure these parts are tall enough to block players from jumping over your barrier, and that there are no cracks they can slip through and fall off the edge of your map.
 
@@ -3824,7 +3824,7 @@ To exactly recreate the containment of the playable area within the sample [Envi
 
 Your building's architecture and outdoor space are nearly complete with assets from your asset library, but you may have noticed either consciously or unconsciously that the overall environment feels static. This is because realistic environments include movement from many different sources, whether that's from clouds crawling through the sky, wind brushing through greenery, or life forms navigating the space.
 
-You can mimic realistic environments by configuring special effects that add dynamic movement to your environment, and provoke emotion from users. This process often makes worlds feel more alive, supporting a deep sense of immersion while people access your experience.
+You can mimic realistic environments by configuring special effects that add dynamic movement to your environment, and provoke emotion from users. This process often makes worlds feel more alive, supporting a deep sense of immersion while people access your game.
 
 <video controls src="../../../assets/tutorials/environmental-art-curriculum/Section4/SpecialEffects-Intro.mp4" width="100%"></video>
 
@@ -3859,7 +3859,7 @@ To add and configure your own dynamic clouds in the background:
 
    1. Set **Cover** to a value between `0` (no clouds) and `1` (full cloud cover).
    1. Set **Density** to a value between `0` (light, translucent clouds) and `1` (heavy, dark clouds).
-   1. Set **Color** to a material color of cloud particles according to the art style of your experience.
+   1. Set **Color** to a material color of cloud particles according to the art style of your game.
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/BackgroundClouds-2.jpg" width="100%"/>
 
@@ -3890,7 +3890,7 @@ To add and configure dynamic clouds in the background:
 
 The second type of special effect the final sample laser tag environment uses to add movement to the 3D space is an effect called particle emitters. [Particle emitters](../../../effects/particle-emitters.md) emit 2D images, or particles, that look and behave for the duration of their lifetime according to the particle emitter's set properties, and they are useful for creating movement that feels and often is close to the user.
 
-Particle emitters have many properties you can adjust to achieve both subtle and bold effects. The following instructions show you how to exactly recreate the foreground clouds within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file, but you can modify any property for the needs of your own experience. It's recommended to keep these clouds large and with a gentle motion between the gameplay space and the static background.
+Particle emitters have many properties you can adjust to achieve both subtle and bold effects. The following instructions show you how to exactly recreate the foreground clouds within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file, but you can modify any property for the needs of your own game. It's recommended to keep these clouds large and with a gentle motion between the gameplay space and the static background.
 
 To add and configure foreground clouds:
 
@@ -3938,7 +3938,7 @@ In addition, you can layer multiple particle emitters together to give clouds mo
 
 Particle emitters are such a versatile type of special effect because they offer so many properties you can customize to create interesting visual effects, such as glowing portals, green billowing smoke, or vibrant explosions. The final sample laser tag environment uses particle emitters again in this section to create floating dust particles that surround the user as they navigate the outdoor space.
 
-Similar to the foreground clouds steps, the following instructions show you how to exactly recreate the dust particles within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file, but you can modify any property for the needs of your own experience. It's recommended to keep particle speed slow to only provide micro motion within the environment.
+Similar to the foreground clouds steps, the following instructions show you how to exactly recreate the dust particles within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file, but you can modify any property for the needs of your own game. It's recommended to keep particle speed slow to only provide micro motion within the environment.
 
 To add and configure dust particles for the outdoor space:
 
@@ -3977,28 +3977,28 @@ To add and configure dust particles for the outdoor space:
 Now that your environment has movement, the final step in constructing your environment is to configure lighting sources. Studio offers two high-level types of lighting sources:
 
 - **Global lighting** - Produces lighting for the entire outdoor environment.
-- **Local lighting** - Produces lighting around where you place them within your experience.
+- **Local lighting** - Produces lighting around where you place them within your game.
 
-Both lighting sources are important to consider because your experience has both an indoor and outdoor environment that impact the user's ability to see what is happening around them while they're in combat.
+Both lighting sources are important to consider because your game has both an indoor and outdoor environment that impact the user's ability to see what is happening around them while they're in combat.
 
 ### Global lighting
 
-Global lighting is the luminescence from either the sun or moon in an experience. By adjusting a couple of key default properties in the `Class.Lighting` service, you can dramatically change how that light appears to users, as well as how it interacts with any other object you place in the experience.
+Global lighting is the luminescence from either the sun or moon in a game. By adjusting a couple of key default properties in the `Class.Lighting` service, you can dramatically change how that light appears to users, as well as how it interacts with any other object you place in the game.
 
-Studio begins every experience with `Enum.LightingStyle|Soft` lighting which renders a flatter look with softer lights and shadows. However, to enhance the environment and equip your local light sources to produce precise shadows and illumination, such as the lighting in the hallways and above the signage, you must enable `Enum.LightingStyle|Realistic` lighting. This allows both your global and local lighting to work together and provide more realistic and immersive visuals.
+Studio begins every game with `Enum.LightingStyle|Soft` lighting which renders a flatter look with softer lights and shadows. However, to enhance the environment and equip your local light sources to produce precise shadows and illumination, such as the lighting in the hallways and above the signage, you must enable `Enum.LightingStyle|Realistic` lighting. This allows both your global and local lighting to work together and provide more realistic and immersive visuals.
 
-For example, the `Enum.LightingStyle|Realistic` lighting style automatically detects when a user is either in an interior or exterior space, then it responds by enabling the appropriate lighting model. This means that reflections are able to reflect off the floor and ceiling within the building, providing a richer visual experience as users navigate through combat pockets.
+For example, the `Enum.LightingStyle|Realistic` lighting style automatically detects when a user is either in an interior or exterior space, then it responds by enabling the appropriate lighting model. This means that reflections are able to reflect off the floor and ceiling within the building, providing a richer visual game as users navigate through combat pockets.
 
 <Tabs>
   <TabItem key = "1" label="Create your own">
 
 To configure your own global lighting:
 
-1. In the **Explorer** window, select the **Lighting** service, then in the **Properties** window, set its properties to values that reflect the art style of your experience. For more information on these properties, see [Global lighting](../../../environment/lighting.md).
+1. In the **Explorer** window, select the **Lighting** service, then in the **Properties** window, set its properties to values that reflect the art style of your game. For more information on these properties, see [Global lighting](../../../environment/lighting.md).
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-1.jpg" width="100%"/>
 
-1. In the **Explorer** window, select the **Lighting** service's child **Atmosphere** object, then in the **Properties** window, set its properties to values that reflect the art style of your experience. For more information on these properties, see [Atmospheric effects](../../../environment/atmosphere.md).
+1. In the **Explorer** window, select the **Lighting** service's child **Atmosphere** object, then in the **Properties** window, set its properties to values that reflect the art style of your game. For more information on these properties, see [Atmospheric effects](../../../environment/atmosphere.md).
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-2.jpg" width="100%"/>
 
@@ -4048,14 +4048,14 @@ To exactly recreate the global lighting configuration within the sample [Environ
 
 ### Local lighting
 
-Local lighting is the luminescence from local [light sources](../../../effects/light-sources.md) in your experience, such as `Class.SpotLight`, `Class.SurfaceLight`, and `Class.PointLight` objects. It's important to analyze the needs of your experience to know which type of local light source to use. For example, the final sample laser tag environment needs lighting to help users see the different areas inside of the building while they're in combat, as well as lighting to differentiate the different spawn zone areas.
+Local lighting is the luminescence from local [light sources](../../../effects/light-sources.md) in your game, such as `Class.SpotLight`, `Class.SurfaceLight`, and `Class.PointLight` objects. It's important to analyze the needs of your game to know which type of local light source to use. For example, the final sample laser tag environment needs lighting to help users see the different areas inside of the building while they're in combat, as well as lighting to differentiate the different spawn zone areas.
 
 Local light sources create points of reference and directionality for users. For example, the sample uses surface lights to inform users if they are navigating the perimeter or are near the blue-green or pink spawn zone, and spotlights to highlight doorways.
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-Intro.jpg" width="100%"/>
 
 <Alert severity="info">
-    Applying light sources is an art form, and it takes time to figure out what lighting configurations work to meet the needs of your experience. It's normal and expected for your lighting to look and feel different from the final sample laser tag environment.
+Applying light sources is an art form, and it takes time to figure out what lighting configurations work to meet the needs of your game. It's normal and expected for your lighting to look and feel different from the final sample laser tag environment.
 </Alert>
 
 <Tabs>

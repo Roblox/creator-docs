@@ -1,19 +1,19 @@
 ---
 title: Plan for educational settings
-description: Covers how to design educational games and experiences for classes and teachers. Includes information on user needs, common devices found in schools, and unique considerations like safety.
+description: Covers how to design educational games for classes and teachers. Includes information on user needs, common devices found in schools, and unique considerations like safety.
 ---
 
-Designing a Roblox experience for a classroom is similar to designing for traditional audiences - with a few additional considerations. When creating a game design document for education, there are differing user needs and classroom logistics to account for. This article covers both the processes and considerations for designing educational experiences on the Roblox platform for use within K-12 American classrooms.
+Designing a Roblox game for a classroom is similar to designing for traditional audiences - with a few additional considerations. When creating a game design document for education, there are differing user needs and classroom logistics to account for. This article covers both the processes and considerations for designing educational games on the Roblox platform for use within K-12 American classrooms.
 
 <Alert severity='info'>
-Note that this document will focus on design considerations for usage within a traditional school classroom, and may not apply to experiences meant for supplemental education, edutainment, or adult education markets.
+Note that this document will focus on design considerations for usage within a traditional school classroom, and may not apply to games meant for supplemental education, edutainment, or adult education markets.
 </Alert>
 
-## Plan an education experience
+## Plan an education game
 
-During the planning stages of the experience, designers need to identify what learning standards will be utilized within the experience, and then how the usage of those learning standards will be communicated to teachers.
+During the planning stages of the game, designers need to identify what learning standards will be utilized within the game, and then how the usage of those learning standards will be communicated to teachers.
 
-These steps, though not in the traditional game design process, ensure that learning is built into a core game loop and that educators understand how to utilize an experience in the classroom.
+These steps, though not in the traditional game design process, ensure that learning is built into a core game loop and that educators understand how to utilize a game in the classroom.
 
 ### Start with learning standards
 
@@ -48,13 +48,13 @@ Learning standards vary state-by-state, and even by country. For example, differ
 
 ### Define learning standards
 
-Within the design process for an educational experience, standards will serve as inspiration for game mechanics, and be crucial parts of a core game loop. For a designer, to define the standards which will be used, we recommend the following:
+Within the design process for an educational game, standards will serve as inspiration for game mechanics, and be crucial parts of a core game loop. For a designer, to define the standards which will be used, we recommend the following:
 
-1. Determine the **topic** to cover, such as gravity, geometry, or climate change and the **target age range** of your experience, such as middle school or 10th grade. This will inform where to research learning standards.
+1. Determine the **topic** to cover, such as gravity, geometry, or climate change and the **target age range** of your game, such as middle school or 10th grade. This will inform where to research learning standards.
 
    Example: _High school physics_
 
-2. Identify learning standards(s) for the experience. For more on this topic, see [Further Reading](#further-reading).
+2. Identify learning standards(s) for the game. For more on this topic, see [Further Reading](#further-reading).
 
    _Example: [HS-PS2-1](https://www.nextgenscience.org/pe/hs-ps2-1-motion-and-stability-forces-and-interactions): Analyze data to support the claim that Newton's second law of motion describes the mathematical relationship among the net force on a macroscopic object, its mass, and its acceleration._
 
@@ -64,15 +64,15 @@ Within the design process for an educational experience, standards will serve as
 
 ### Connect learning with gameplay
 
-Once you identify a learning standard, you may proceed by establishing learning objectives. A **learning objective** defines what users should know or be able to do after finishing that experience.
+Once you identify a learning standard, you may proceed by establishing learning objectives. A **learning objective** defines what users should know or be able to do after finishing that game.
 
 Objectives are **specific** and **measurable**. When written, the objective breaks down a broad topic, like genetics in biology, into discrete components such as Punnett squares and recessive genes. Additionally, each objective should show how a student demonstrates that knowledge, often by how they are able to describe specific concepts or analyze situations.
 
 To continue the design process, we recommend the following:
 
-1. Write **learning objective(s)** for the experience that align with the learning standard.
+1. Write **learning objective(s)** for the game that align with the learning standard.
 
-   _Example: After completing the experience, users will be able to determine the probability of offspring with specific and desired traits._
+   _Example: After completing the game, users will be able to determine the probability of offspring with specific and desired traits._
 
 2. Create **situations and core game loops** that require players to **demonstrate their understanding** in order to progress. Use inspiration from the standards and objectives to elicit joy, such as playful situations and narrative.
 
@@ -82,23 +82,23 @@ To continue the design process, we recommend the following:
 
 ### Release to educators
 
-After a design document is completed, there are additional considerations for releasing the experience in classrooms. Educators must understand how an experience helps their students learn, and how best to launch it in their classroom.
+After a design document is completed, there are additional considerations for releasing the game in classrooms. Educators must understand how a game helps their students learn, and how best to launch it in their classroom.
 
-1. Determine how the experience's learning standards and objectives will be to communicated to educators. This can be accomplished by listing the standards and objectives on an external website, on a game page, or any educator marketing materials.
+1. Determine how the game's learning standards and objectives will be to communicated to educators. This can be accomplished by listing the standards and objectives on an external website, on a game page, or any educator marketing materials.
 
-2. Plan to provide **supplemental resources** to educators. For example, partner with an educator to write a lesson plan or video to help educators understand how to implement the experience in a classroom. Teachers need to understand how much time an activity will take. It can also be helpful to provide example discussion questions to frame the experience for students. Guides can be found in [Further Reading](#further-reading).
+2. Plan to provide **supplemental resources** to educators. For example, partner with an educator to write a lesson plan or video to help educators understand how to implement the game in a classroom. Teachers need to understand how much time an activity will take. It can also be helpful to provide example discussion questions to frame the game for students. Guides can be found in [Further Reading](#further-reading).
 
 ## Identify user needs
 
-It is important to balance the requirements of educators with the students' desire for fun and engaging experiences. Use the needs for educators and students listed below as best practices to guide the development of your design document. Note that the needs are universal across all ages, unless stated otherwise.
+It is important to balance the requirements of educators with the students' desire for fun and engaging games. Use the needs for educators and students listed below as best practices to guide the development of your design document. Note that the needs are universal across all ages, unless stated otherwise.
 
 ### Educator needs
 
-Educators favor games and experiences that in addition to aligning to educational standards and grade levels, also present few barriers to entry. Teachers need to be able to jump into an experience quickly, with little tutorials..
+Educators favor games that in addition to aligning to educational standards and grade levels, also present few barriers to entry. Teachers need to be able to jump into a game quickly with few tutorials.
 
 #### Make design easy to pick up
 
-Educators have precious little time to plan, so new classroom tools must be easy to adopt. As such, we recommend the following practices within the experience itself:
+Educators have precious little time to plan, so new classroom tools must be easy to adopt. As such, we recommend the following practices within the game itself:
 
 - **Use Familiar User Interface (UI) Patterns** - If possible, research similar learning games or educational products used by educators.
 - **Reduce Text, Add Visuals** - Keep explanations simple and visual. When possible, use icons and commonly understood symbols to replace text.
@@ -113,7 +113,7 @@ Educators appreciate activities that engage their students and meet their studen
 
 ### Student needs
 
-Besides meeting educator needs, an experience should be engaging and rewarding to students.
+Besides meeting educator needs, a game should be engaging and rewarding to students.
 
 #### Design for exploration, not memorization
 
@@ -136,7 +136,7 @@ For example, imagine a game where students are playing a golf-inspired game on d
 
 #### Align to learning differences
 
-A user's age will impact game design and user experience choices. When designing your experience, identify your target age range and research best practices for that group. Some concepts to research include cognitive differences, such as the complexity of subject matter, and motor skills.
+A user's age will impact game design and user experience choices. When designing your game, identify your target age range and research best practices for that group. Some concepts to research include cognitive differences, such as the complexity of subject matter, and motor skills.
 
 To help conceptualize these differences, we provide some examples below. Please note that these differences are not exhaustive.
 
@@ -185,11 +185,11 @@ When designing for students, traditional design principles still hold true as we
 
 ## Understand the classroom
 
-Although each educator's classroom is different, there are common themes that can inform your experience design.
+Although each educator's classroom is different, there are common themes that can inform your game design.
 
 ### Educational contexts
 
-Before designing an experience, identify the **educational context** where an experience might be used. Some common examples are below.
+Before designing a game, identify the **educational context** where a game might be used. Some common examples are below.
 
 <table>
 <thead>
@@ -219,7 +219,7 @@ Before designing an experience, identify the **educational context** where an ex
     <td><b>Independent projects or homework</b></td>
     <td>
       <ul>
-      <li>Individual students are assigned to an experience.</li>
+      <li>Individual students are assigned to a game.</li>
       <li>Game play can be any length and not restricted to a single session.</li>
       <li><b>Example</b>: A student plays a physics simulation over the span of a week where they join for different lengths of time. </li>
       </ul></td>
@@ -229,7 +229,7 @@ Before designing an experience, identify the **educational context** where an ex
 
 ### Common devices
 
-Student and educator devices vary, but in general it's best to test experiences on low-end devices for playability. A typical classroom may have Chromebooks, PC laptops, or iPads.
+Student and educator devices vary, but in general it's best to test games on low-end devices for playability. A typical classroom may have Chromebooks, PC laptops, or iPads.
 
 For testing purposes, we recommend a device with the following minimum specifications:
 
@@ -239,7 +239,7 @@ For testing purposes, we recommend a device with the following minimum specifica
 
 ### Safety and well-being
 
-Safety is built into every aspect of Roblox developers must prioritize safety in their experiences. Below are recommendations that may influence a project's design.
+Safety is built into every aspect of Roblox developers must prioritize safety in their games. Below are recommendations that may influence a project's design.
 
 - **Be Cautious with Violence** - Some educators will not accept any form of violence. If needed, aim for cartoonish violence and avoid direct confrontations. For instance, instead of using a sword, have magical wands that cast spells.
 - **Disable Voice Chat and Limit Text Chat** - Voice chat can be difficult for educators to supervise, or could be a source of distraction. The same follows for text chat.
@@ -247,11 +247,11 @@ Safety is built into every aspect of Roblox developers must prioritize safety in
 
 ## Demonstrate educational value
 
-Educational experiences need some way of measuring a student's ability to meet learning objectives and displaying that progress to educators. Measuring performance can happen automatically through tracked metrics, or through designed assessments.
+Educational games need some way of measuring a student's ability to meet learning objectives and displaying that progress to educators. Measuring performance can happen automatically through tracked metrics, or through designed assessments.
 
-### Capture data in experience
+### Capture data in game
 
-Developers can use experiences to collect data that offers insight on how users are meeting learning objectives. Below is a high level overview of the types of information that can be captured within an experience.
+Developers can use games to collect data that offers insight on how users are meeting learning objectives. Below is a high level overview of the types of information that can be captured within a game.
 
 Please note this is not exhaustive. More detail can be found in the book [Stealth Assessment](https://mitpress.mit.edu/9780262518819/stealth-assessment/) by Valerie Shute and Matthew Ventura.
 
@@ -269,15 +269,15 @@ Please note this is not exhaustive. More detail can be found in the book [Stealt
    </tr>
    <tr>
     <td>Time stamps</td>
-    <td>Provide time indications when a user completes a specific task or how much time they've been in experience on task.</td>
+    <td>Provide time indications when a user completes a specific task or how much time they've been in game on task.</td>
    </tr>
    <tr>
     <td>Performance</td>
-    <td>Any in-game metrics related to a student's performance in-game. This varies by experience but may be in the form of points or medals that signify student progress.</td>
+    <td>Any in-game metrics related to a student's performance in-game. This varies by game but may be in the form of points or medals that signify student progress.</td>
    </tr>
   <tr>
     <td>Trajectory data</td>
-    <td>For non-linear learning tasks, these data indicate the order a user takes among a set of specific tasks. For instance, this can be the order of quests completed in a non-linear role playing experience. </td>
+    <td>For non-linear learning tasks, these data indicate the order a user takes among a set of specific tasks. For instance, this can be the order of quests completed in a non-linear role playing game. </td>
    </tr>
    <tr>
     <td>GUI and keystroke interactions</td>
@@ -292,7 +292,7 @@ For any developers capturing data, ensure that your tools comply with Roblox [pr
 
 ### Assess student progress
 
-Assessments can be constructed to measure a user's progress towards learning objectives. These can be built into the experience, or be external to the experience, such as a physical handout completed by the student.
+Assessments can be constructed to measure a user's progress towards learning objectives. These can be built into the game, or be external to the game, such as a physical handout completed by the student.
 
 Note that this list is not exhaustive and more detail along with pros and cons can be found on this external resource on [Exam Questions: Types, Characteristics, and Suggestions](https://uwaterloo.ca/centre-for-teaching-excellence/teaching-resources/teaching-tips/developing-assignments/exams/questions-types-characteristics-suggestions) by University of Waterloo.
 
@@ -306,11 +306,11 @@ Note that this list is not exhaustive and more detail along with pros and cons c
 <tbody>
 <tr>
    <td><b>Multiple choice</b></td>
-   <td>Users complete a quiz or test designed to capture mastery of knowledge learned in the experience. Guidance on writing strong questions can be found in <a href="https://cft.vanderbilt.edu/guides-sub-pages/writing-good-multiple-choice-test-questions/" target="_blank" rel="noopener">Writing Good Multiple Choice Test Questions</a> by Vanderbilt. Note: Multiple choice quizzes are cautioned against for demonstrating understanding of content due to their simplicity. </td>
+   <td>Users complete a quiz or test designed to capture mastery of knowledge learned in the game. Guidance on writing strong questions can be found in <a href="https://cft.vanderbilt.edu/guides-sub-pages/writing-good-multiple-choice-test-questions/" target="_blank" rel="noopener">Writing Good Multiple Choice Test Questions</a> by Vanderbilt. Note: Multiple choice quizzes are cautioned against for demonstrating understanding of content due to their simplicity. </td>
 </tr>
 <tr>
    <td><b>Short response</b></td>
-   <td>Have students write in response to a prompt. That written work is then graded by an educator. For instance, a user builds a robot in an experience. A prompt then has the student writing about their process in designing the robot to demonstrate their engineering process.</td>
+   <td>Have students write in response to a prompt. That written work is then graded by an educator. For instance, a user builds a robot in a game. A prompt then has the student writing about their process in designing the robot to demonstrate their engineering process.</td>
 </tr>
 <tr>
    <td><b>Fill in the blank </b></td>
@@ -338,32 +338,32 @@ While working on the game design document, reference this checklist. This serves
 <tr>
    <td>Determine learning and gameplay foundation</td>
    <td><ul>
-   <li>What topic is this teaching? What are learning standards used for that topic? What are learning objectives for the experience?</li>
+   <li>What topic is this teaching? What are learning standards used for that topic? What are learning objectives for the game?</li>
    <li>What is interesting, exciting, or fun within the topic and learning objectives?</li>
    <li>How does the gameplay loop contribute to the learning objectives?</li>
    </ul></td>
 </tr>
 <tr>
-   <td>Understand the needs of educators and students using the experience</td>
+   <td>Understand the needs of educators and students using the game</td>
    <td><ul>
    <li>What are user experience recommendations for the target age? Is the gameplay and learning age-appropriate to the target demographic?</li>
-   <li>Is there anything in the experience that would cause issues for teachers, such as challenging gameplay or violence?</li>
-   <li>What supplemental resources will be provided to educators so they understand how the experience can be used in a classroom? </li>
+   <li>Is there anything in the game that would cause issues for teachers, such as challenging gameplay or violence?</li>
+   <li>What supplemental resources will be provided to educators so they understand how the game can be used in a classroom? </li>
    </ul></td>
 </tr>
 <tr>
-   <td>Determine the context where the experience will be played.</td>
+   <td>Determine the context where the game will be played.</td>
    <td><ul>
    <li>What will be the average session time of users, and cadence in which they're expected to play?</li>
-   <li>Does the experience include mild violence, drug use, or anything potentially objectionable in schools?</li>
+   <li>Does the game include mild violence, drug use, or anything potentially objectionable in schools?</li>
    <li>Are there gameplay features that might be seen as objectionable in schools, such as violence? </li>
    </ul></td>
 </tr>
 <tr>
-   <td>Identify how the experience is measuring learning. </td>
+   <td>Identify how the game is measuring learning. </td>
    <td><ul>
-   <li>How will educators see that their students learn after playing the experience?</li>
-   <li>What forms of assessment and evaluation make sense in the experience?</li>
+   <li>How will educators see that their students learn after playing the game?</li>
+   <li>What forms of assessment and evaluation make sense in the game?</li>
    </ul></td>
 </tr>
 </tbody>
@@ -375,7 +375,7 @@ Below are resources for learning more about learning standards, creating lesson 
 
 #### Find learning standards
 
-Designers can reference these educational institutions to find standards that align to their experience's target age and topic.
+Designers can reference these educational institutions to find standards that align to their game's target age and topic.
 
 - [Next Generation Science Standards](https://www.nextgenscience.org/) - Respected standards for science education that are commonly adopted within United States classrooms.
 - [Common Core](https://learning.ccsso.org/common-core-state-standards-initiative) - English and Math standards, often adjusted on a state-by-state (United States) basis.

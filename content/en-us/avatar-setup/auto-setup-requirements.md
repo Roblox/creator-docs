@@ -3,7 +3,7 @@ title: Avatar Setup model requirements
 description: The Avatar Setup tool previews animations, clothing, accessories, and body constructs on avatar rigs, directly in Studio.
 ---
 
-[Avatar Setup](./index.md) supports the automatic conversion of basic custom models to Roblox-ready bodies, rigid accessories, and layered clothing. By [bundling](#bundle-multiple-assets) your models together, you can automatically setup multiple custom models into avatar items for use in-experience or for upload to the Marketplace.
+[Avatar Setup](./index.md) supports the automatic conversion of basic custom models to Roblox-ready bodies, rigid accessories, and layered clothing. By [bundling](#bundle-multiple-assets) your models together, you can automatically setup multiple custom models into avatar items for use in-game or for upload to the Marketplace.
 
 ### Body
 

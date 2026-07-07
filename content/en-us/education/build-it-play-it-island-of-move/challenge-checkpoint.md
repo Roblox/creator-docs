@@ -9,7 +9,7 @@ You got your animation ready! Celebrate your new skills by getting the **Build I
 
 1. **Copy** the following code: `SettingTheStage`
 
-2. Click the **Enter World** button below to open the **Island of Move** experience. This game includes a finished example of what you're working on.
+2. Click the **Enter World** button below to open the **Island of Move** game. This game includes a finished example of what you're working on.
 
    <a href="https://www.roblox.com/games/5306359293/Island-of-Move">
    <Button variant="contained">Enter World</Button>

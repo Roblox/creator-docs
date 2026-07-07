@@ -11,7 +11,7 @@ To see how the carnival ride works, test it out. When playing, you'll ride on a 
 
    <img src="../../assets/education/general/play-button.png" width="360" />
 
-2. In the experience, walk up to the character under the **Play It** sign and press <kbd>E</kbd> to open up a menu. On that screen, click **Join Game**.
+2. In the game, walk up to the character under the **Play It** sign and press <kbd>E</kbd> to open up a menu. On that screen, click **Join Game**.
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/test-and-play/start-game.png" />
 
    <Alert severity="warning">

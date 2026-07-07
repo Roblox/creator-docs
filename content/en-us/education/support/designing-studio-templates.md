@@ -3,7 +3,7 @@ title: Design Studio templates
 description: Educators can create templates to use in a classroom or for a lesson. Templates make it easy for students to make their own projects.
 ---
 
-Educators can create templates to kickstart a student's project in Roblox Studio. These templates can be fully realized experiences, or pre-existing Roblox templates customized with your organization's branding.
+Educators can create templates to kickstart a student's project in Roblox Studio. These templates can be fully realized games, or pre-existing Roblox templates customized with your organization's branding.
 
 This guide outlines the process of creating a template and making it accessible to students.
 
@@ -125,7 +125,7 @@ Even though the template is now published on Roblox, students need to be able to
 
    <Alert severity="info">
    <AlertTitle>Adding Screenshots and Icons</AlertTitle>
-   On your experience's webpage, [screenshots](../../production/publishing/thumbnails.md) and an [icon](../../production/publishing/experience-icons.md) will be shown to students. While optional, adding these can boost the look of your template and serve as an additional opportunity for branding.
+   On your game's webpage, [screenshots](../../production/publishing/thumbnails.md) and an [icon](../../production/publishing/experience-icons.md) will be shown to students. While optional, adding these can boost the look of your template and serve as an additional opportunity for branding.
    </Alert>
 
 2. Click on the **Permissions** tab, set **Playability** to **Public**.

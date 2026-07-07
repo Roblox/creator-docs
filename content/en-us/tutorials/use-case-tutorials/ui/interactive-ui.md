@@ -3,7 +3,7 @@ title: Create interactive UI
 description: Learn how to build interactive UI and connect stateful scripts to power it.
 ---
 
-A **HUD** (**Heads-Up Display**) in your experience commonly displays non‑interactive UI elements such as the health meter demonstrated in [Create HUD meters](../ui/create-hud-meters.md). Atop this, almost every experience requires **interactive** UI such as buttons that respond to player activation, animate when activated, tween in/out menus with other interactive controls, etc.
+A **HUD** (**Heads-Up Display**) in your game commonly displays non‑interactive UI elements such as the health meter demonstrated in [Create HUD meters](../ui/create-hud-meters.md). Atop this, almost every game requires **interactive** UI such as buttons that respond to player activation, animate when activated, tween in/out menus with other interactive controls, etc.
 
 <img src="../../../assets/tutorials/interactive-ui/Intro.png" width="840" alt="In-game view showing a settings button and settings menu with volume sliders." />
 
@@ -168,7 +168,7 @@ A simple icon including an audio note and "burst" symbol helps players identify 
 
 <img src="../../../assets/tutorials/interactive-ui/Settings-Menu-Design-Slider-Icon.png" width="840" alt="Icon indicating purpose of slider in settings menu." />
 
-1. Insert an `Class.ImageLabel` into the **EffectsVolumeSlider** frame and rename it to **Icon**. This icon will help players understand what in‑experience aspect the slider controls.
+1. Insert an `Class.ImageLabel` into the **EffectsVolumeSlider** frame and rename it to **Icon**. This icon will help players understand what game aspect the slider controls.
 
    <img src="../../../assets/tutorials/interactive-ui/StarterGui-HUDContainer-SettingsMenu-EffectsVolumeSlider-Icon.png" width="320" alt="Explorer window showing an ImageLabel inserted into the EffectsVolumeSlider frame." />
 
@@ -265,7 +265,7 @@ With the [slider container](#range-frame) constructed, you can now create a **dr
 
 	 <img src="../../../assets/tutorials/interactive-ui/StarterGui-HUDContainer-SettingsMenu-EffectsVolumeSlider-SliderFrame-Handle-UIDragDetector-Values.png" width="320" alt="Properties window showing the detector's BoundingUI property linked to the SliderFrame container." />
 
-If you playtest the experience now, you'll be able to drag the handle left and right within its parent container:
+If you playtest the game now, you'll be able to drag the handle left and right within its parent container:
 
 <video src="../../../assets/tutorials/interactive-ui/Handle-Demo.mp4" controls width="90%" alt="Video showing the slider handle being dragged back and forth, bounded in range by the SliderFrame container."></video>
 
@@ -484,7 +484,7 @@ The following stateful object controller module lets you attach behavior to UI o
 
 ### Slider controller
 
-An additional module initializes and controls the two volume sliders. It also allows you to connect a callback function to each slider in order to detect player interaction with the slider and apply desired changes in the experience.
+An additional module initializes and controls the two volume sliders. It also allows you to connect a callback function to each slider in order to detect player interaction with the slider and apply desired changes in the game.
 
 1. Insert a `Class.ModuleScript` into the `Class.ReplicatedStorage` container and rename it to **SliderController**.
 
@@ -823,7 +823,7 @@ With the [settings button](#create-the-settings-button) and [settings menu](#cre
    </AccordionDetails>
    </BaseAccordion>
 
-With **SettingsScript** in place, the experience now offers a fully operational interactive UI example that links a related set of UI objects to player interaction.
+With **SettingsScript** in place, the game now offers a fully operational interactive UI example that links a related set of UI objects to player interaction.
 
 <video src="../../../assets/tutorials/interactive-ui/Interactive-UI-Final.mp4" controls width="90%" alt="Video showing the settings/close buttons opening or closing the settings menu, and the interactive sliders being dragged back and forth."></video>
 

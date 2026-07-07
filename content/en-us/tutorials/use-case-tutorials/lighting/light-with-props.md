@@ -3,7 +3,7 @@ title: Light with props
 description: The process for creating light sources out of props.
 ---
 
-While overall world lighting is globally controlled through the `Class.Lighting` service, experiences can also include in-game **light sources** like lamps, torches, spotlights, TV screens, etc.
+While overall world lighting is globally controlled through the `Class.Lighting` service, games can also include in-game **light sources** like lamps, torches, spotlights, TV screens, etc.
 
 ![alt](../../../assets/tutorials/lighting-with-props/Misty-Harbor-Banner.jpg)
 
@@ -11,7 +11,7 @@ While overall world lighting is globally controlled through the `Class.Lighting`
 
 The remainder of this tutorial uses the [Misty Harbor](https://www.roblox.com/games/6445909934/Misty-Harbor) project as a showcase. To follow along, open it in Studio before proceeding.
 
-<img src="../../../assets/tutorials/lighting-with-props/Misty-Harbor-Edit-Place.png" width="780" alt="Edit in Studio option from the experience's main page" />
+<img src="../../../assets/tutorials/lighting-with-props/Misty-Harbor-Edit-Place.png" width="780" alt="Edit in Studio option from the game's main page" />
 
 ## Point lights
 

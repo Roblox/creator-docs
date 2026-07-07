@@ -12,14 +12,14 @@ Price optimization is part of [Managed pricing](./managed-pricing.md), the unifi
 <br />
 
 <Alert severity="warning">
-To run a successful price optimization test, your experience has to have enough transactions to produce significant data. In most cases, this means your experience should have had at least 60,000 transactions over the previous 30 days.
+To run a successful price optimization test, your game has to have enough transactions to produce significant data. In most cases, this means your game should have had at least 60,000 transactions over the previous 30 days.
 
-To find how many transactions your experience has had, add the total number of product sales over a 30-day period. For more information, see [Pass analytics](./passes.md#pass-analytics) and [Developer Product analytics](./developer-products.md#developer-product-analytics).
+To find how many transactions your game has had, add the total number of product sales over a 30-day period. For more information, see [Pass analytics](./passes.md#pass-analytics) and [Developer Product analytics](./developer-products.md#developer-product-analytics).
 </Alert>
 
 **Price optimization**, included in Managed Pricing, lets you find the best price points for your passes and developer products, which can help you earn more money over time while keeping your prices competitive. When you run a price test, subsets of your users see different prices for the same product. At the end of the test, you receive recommendations for the prices that performed best with your audience.
 
-Before using price optimization, you should use the [dynamic price check tool](#check-for-dynamic-pricing) to make sure product prices are dynamically scripted inside your experience. After using price optimization, you can run a price review period to track the long-term revenue impact of your price changes.
+Before using price optimization, you should use the [dynamic price check tool](#check-for-dynamic-pricing) to make sure product prices are dynamically scripted inside your game. After using price optimization, you can run a price review period to track the long-term revenue impact of your price changes.
 
 <img src="../../assets/monetization/price-optimization/Price-Optimization-Example.png" />
 
@@ -33,11 +33,11 @@ Before using price optimization, you should use the [dynamic price check tool](#
 
 ## Check for dynamic pricing
 
-Price optimization can't collect data from and make changes to prices you have hard-coded into your experience. To run a price optimization test on products with hard-coded prices, you must first update them to be dynamically scripted.
+Price optimization can't collect data from and make changes to prices you have hard-coded into your game. To run a price optimization test on products with hard-coded prices, you must first update them to be dynamically scripted.
 
 Dynamically scripted prices update through `Class.MarketplaceService|MarketplaceService` and use functions like `Class.MarketplaceService:GetProductInfo()|GetProductInfo()` and `Class.MarketplaceService:GetDeveloperProductsAsync()|GetDeveloperProductsAsync()` to retrieve and display product prices you have set through the Creator Hub. For information on how to dynamically script product prices, see [Sell a pass](./passes.md#sell-a-pass) and [Sell a developer product](./developer-products.md#sell-a-developer-product).
 
-The dynamic price check tool updates all products for sale with a fake Robux price or a fake economic location to identify which of your product prices are hard-coded and which are scripted with `Class.MarketplaceService|MarketplaceService` inside your experience. If a product price updates to a new price, the price is scripted. If it remains the same, the price is hard-coded.
+The dynamic price check tool updates all products for sale with a fake Robux price or a fake economic location to identify which of your product prices are hard-coded and which are scripted with `Class.MarketplaceService|MarketplaceService` inside your game. If a product price updates to a new price, the price is scripted. If it remains the same, the price is hard-coded.
 
 <Alert severity="info">
   The `InfoType` parameter in `GetProductInfo()` fetches an asset by default. To fetch a developer product, use `Enum.InfoType.Product`. To fetch a pass, use `Enum.InfoType.GamePasses`.
@@ -54,14 +54,14 @@ local priceInRobux = 500
 
 To use the dynamic price check tool:
 
-1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
+1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select a game.
 2. Go to **Monetization** ⟩ **Managed Pricing**.
 3. Click **Dynamic Price Check**.
 4. Under **Add test accounts**, enter up to five Roblox users to check for hard-coded prices.
 5. Select a testing type.
    - **Price pinned** updates all dynamically-scripted prices with a set fake Robux amount.
    - **Location pinned** updates all dynamically-scripted prices with a region-specific price for a fake economic location.
-6. Click **Enable**. After a few minutes, you can enter your experience to identify the hard-coded prices.
+6. Click **Enable**. After a few minutes, you can enter your game to identify the hard-coded prices.
 
 To disable the dynamic price check tool, go to the **Dynamic Price Check** page and click **Disable**.
 
@@ -69,10 +69,10 @@ To disable the dynamic price check tool, go to the **Dynamic Price Check** page 
 
 To use the Managed Pricing price optimization feature:
 
-1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
+1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select a game.
 2. Go to **Monetization** ⟩ **Managed Pricing**.
 3. Select the developer products and passes you want to include in the price test. For best results, include all products.
-4. Click **Start Test**. Users will see the test prices when they re-join your experience. After approximately 3 weeks, you will receive an email notification that the test is complete. The **Managed Pricing** page will update with the optimized product prices, the recommended price percentage change, and the approximate long-term revenue impact of applying the new product prices.
+4. Click **Start Test**. Users will see the test prices when they re-join your game. After approximately 3 weeks, you will receive an email notification that the test is complete. The **Managed Pricing** page will update with the optimized product prices, the recommended price percentage change, and the approximate long-term revenue impact of applying the new product prices.
 5. Click **Review & Apply prices** to apply the results of the price optimization test.
 
 You can stop the price optimization test any time by clicking **Stop test** in the **Managed Pricing** page. If you stop the test, your product prices revert to their original prices.
@@ -110,7 +110,7 @@ You can stop the price optimization test any time by clicking **Stop test** in t
   </tr>
   <tr>
     <td>**Total playtime**</td>
-    <td>The total time users spent inside the experience during the test period.</td>
+    <td>The total time users spent inside the game during the test period.</td>
   </tr>
   <tr>
     <td>**Daily active users**</td>

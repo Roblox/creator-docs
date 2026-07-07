@@ -42,7 +42,7 @@ If you've added models from friends, or just want to reuse your own, find them i
 
    <img src="../../assets/education/general/Toolbox-Inventory.png" width="360" />
 
-1. Make sure the left dropdown is set to **My Models**, then find and click on your friend's speeder. This will add the speeder into your experience.
+1. Make sure the left dropdown is set to **My Models**, then find and click on your friend's speeder. This will add the speeder into your game.
 
 <Alert severity="warning">
 <AlertTitle>Thumbnail Blank?</AlertTitle>

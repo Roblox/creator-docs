@@ -4,7 +4,7 @@ description: Use the Accessory Fitting Tool to convert a Model object to an Acce
 prev: /art/accessories/creating/importing
 ---
 
-With the `Class.Model` in your project, the last step in the process of clothing creation requires you to convert this object to a standard `Class.Accessory` that avatars can equip. Using the [Accessory Fitting Tool](../../../avatar/accessory-fitting-tool.md) (AFT), convert the model object to a `Class.Accessory` that you can then use in your experience or publish to the Marketplace.
+With the `Class.Model` in your project, the last step in the process of clothing creation requires you to convert this object to a standard `Class.Accessory` that avatars can equip. Using the [Accessory Fitting Tool](../../../avatar/accessory-fitting-tool.md) (AFT), convert the model object to a `Class.Accessory` that you can then use in your game or publish to the Marketplace.
 
 To generate the accessory object:
 
@@ -29,7 +29,7 @@ To generate the accessory object:
 Congratulations, you've completed your clothing tutorial. With this accessory, you can:
 
 - Equip the accessory on an avatar-ready character by drag and dropping the accessory on an existing model, or using [HumanoidDescription](../../../characters/appearance.md#manually-modify-appearance).
-- Save the accessory as an [avatar asset](../../../projects/assets/index.md#for-avatars) for use in an experience later.
+- Save the accessory as an [avatar asset](../../../projects/assets/index.md#for-avatars) for use in a game later.
 - If you meet certain account requirements, you can [upload your asset](../../../marketplace/publish-to-marketplace.md) for moderation and start selling it on the Marketplace.
 
 </Alert>

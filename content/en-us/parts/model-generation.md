@@ -3,18 +3,18 @@ title: Model generation
 description: How text prompts and preset schemas can generate both static 3D assets and fully functional models such as vehicles that drive, planes that fly, and weapons that shoot.
 ---
 
-Through text prompts and preset schemas, you (and players in‑experience) can generate both static 3D assets and **fully functional** models such as vehicles that drive, planes that fly, and weapons that shoot. This guide demonstrates how to use `Class.GenerationService:GenerateModelAsync()|GenerateModelAsync()` as part of a dynamic, player‑driven creative experience.
+Through text prompts and preset schemas, you (and players in-game) can generate both static 3D assets and **fully functional** models such as vehicles that drive, planes that fly, and weapons that shoot. This guide demonstrates how to use `Class.GenerationService:GenerateModelAsync()|GenerateModelAsync()` as part of a dynamic, player‑driven creative experience.
 
 ## Overview
 
 `Class.GenerationService:GenerateModelAsync()|GenerateModelAsync()` enables generation of multi‑mesh geometries with the following advantages:
 
 - The provided [schema](#schema-based-generation) defines how the generated geometry will be broken into parts.
-- Any object generated in-experience will be replicated and visible to all players, allowing them to build together in real‑time.
+- Any object generated in-game will be replicated and visible to all players, allowing them to build together in real‑time.
 - Generated meshes are higher fidelity with better overall forms, silhouettes, more detail, and fewer artifacts. Generated textures are more coherent and detailed, with less graininess and less pronounced baked‑in lighting.
-- Generation times have lower latency, enabling quicker and more responsive creation in experiences.
+- Generation times have lower latency, enabling quicker and more responsive creation in games.
 - You and even players during gametime can specify bounding boxes to suggest size and proportions of the generated model.
-- An optional max triangle count keeps generated objects performant for your experience.
+- An optional max triangle count keeps generated objects performant for your game.
 
 ## Schema-based generation
 
@@ -79,7 +79,7 @@ The following image shows the expected output and its construction as it appears
 
 In Roblox, **behaviors** typically encompass the scripts, attachments, [constraints](../physics/index.md#constraints), and other instance types attached to static textured geometries to make them functional. Since `Class.GenerationService:GenerateModelAsync()|GenerateModelAsync()` generates a wide range of geometries on‑the‑fly, **retargetable scripts** must be attached to automatically adapt behaviors to expected functionality.
 
-For example, consider an experience where players get to make their own drivable cars. `Class.GenerationService:GenerateModelAsync()|GenerateModelAsync()` takes the player prompt and generates five distinct meshes (body and four wheels) via the `Car5` [schema](#schema-based-generation). Then, a preset retargetable script adapts its driving behavior to the size and shape of the model to ensure the car is drivable and its wheels spin realistically.
+For example, consider a game where players get to make their own drivable cars. `Class.GenerationService:GenerateModelAsync()|GenerateModelAsync()` takes the player prompt and generates five distinct meshes (body and four wheels) via the `Car5` [schema](#schema-based-generation). Then, a preset retargetable script adapts its driving behavior to the size and shape of the model to ensure the car is drivable and its wheels spin realistically.
 
 ```mermaid
 block-beta

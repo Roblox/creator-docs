@@ -1,33 +1,33 @@
 ---
 title: Event types
-description: Overview of using event types to track user sources, sinks and milestones in your experience.
+description: Overview of using event types to track user sources, sinks and milestones in your game.
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/NFLP-FVv834" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe> <br />
 
-Event types help you identify opportunities to grow and monetize your experience. They allow you to integrate event tracking into your experience and visualize your in-experience economy and player usage patterns on the Analytics dashboard
+Event types help you identify opportunities to grow and monetize your game. They allow you to integrate event tracking into your game and visualize your in-game economy and player usage patterns on the Analytics dashboard
 
-After you begin tracking these events from your experience using `Class.AnalyticsService`, you unlock new [economy](./economy-events.md), [funnel](./funnel-events.md), and [custom](./custom-events.md) dashboards under Analytics on the Creator Dashboard. You can use these dashboards to identify growth opportunities and segment users by age, gender, platform, OS and custom fields. All of these features are **free to use**.
+After you begin tracking these events from your game using `Class.AnalyticsService`, you unlock new [economy](./economy-events.md), [funnel](./funnel-events.md), and [custom](./custom-events.md) dashboards under Analytics on the Creator Dashboard. You can use these dashboards to identify growth opportunities and segment users by age, gender, platform, OS and custom fields. All of these features are **free to use**.
 
 <img src="../../assets/analytics/event-types/Overview-Economy-Funnels.png" alt="Economy and Funnels dashboard pages populated with data."/>
 
 ## Event types
 
-Roblox provides three sets of analytic dashboards you can use to track different aspects of your experience:
+Roblox provides three sets of analytic dashboards you can use to track different aspects of your game:
 
-1. **Economy events** let you track your in-experience economy, such as:
+1. **Economy events** let you track your in-game economy, such as:
 
-   - **Top sinks** — What do users spend in-experience resources on?
+   - **Top sinks** — What do users spend in-game resources on?
    - **Top sources** — Where do users earn resources?
    - **Average wallet balance** — How many resources are users holding?
 
-2. **Funnel events** let you track your user's progress through key stages of your experience, such as:
+2. **Funnel events** let you track your user's progress through key stages of your game, such as:
 
-   - **Onboarding** — Where do users drop off when getting started with your experience?
-   - **Progression** — Where do users stop advancing through your experience?
+   - **Onboarding** — Where do users drop off when getting started with your game?
+   - **Progression** — Where do users stop advancing through your game?
    - **Shop** — Where do users abandon purchases?
 
-3. **Custom events**  let you track metrics specific to your experience, such as:
+3. **Custom events**  let you track metrics specific to your game, such as:
 
    - **Adoption** — How many users click on a specific UI component?
    - **User behavior** — What is the most frequently used ability on each map?
@@ -37,9 +37,9 @@ For more information on setting up these dashboards, see [Economy events](./econ
 
 ## Validate your event tracking
 
-Once you add [economy](./economy-events.md), [funnel](./funnel-events.md), or [custom](./custom-events.md) events to your experience, charts on the respective pages typically take 24 hours to appear. In the meantime, you can check if events are set up correctly using the **View Events** tool:
+Once you add [economy](./economy-events.md), [funnel](./funnel-events.md), or [custom](./custom-events.md) events to your game, charts on the respective pages typically take 24 hours to appear. In the meantime, you can check if events are set up correctly using the **View Events** tool:
 
-1. Navigate to the **Economy**, **Funnel**, or **Custom** pages of your Analytics dashboard for your experience.
+1. Navigate to the **Economy**, **Funnel**, or **Custom** pages of your Analytics dashboard for your game.
 2. Click the **View Events** button at the top of each page. A near real-time list of the most recent events displays.
 3. Refresh the page to update the list.
 
@@ -47,7 +47,7 @@ Once you add [economy](./economy-events.md), [funnel](./funnel-events.md), or [c
 
 If you see more events than you were expecting, verify that your calls to the `Class.AnalyticsService` methods occur **after** a successful operation. For example, you should call `Class.AnalyticsService:LogEconomyEvent()|LogEconomyEvent()` after a successful purchase, not when the user attempts a purchase (which could fail due to lack of funds).
 
-You can also visit your experience's [error report](./error-report.md) to see if there are any errors with your event tracking.
+You can also visit your game's [error report](./error-report.md) to see if there are any errors with your event tracking.
 
 ## Event tracking limitations
 

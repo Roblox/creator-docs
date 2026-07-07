@@ -7,20 +7,20 @@ The memory stores observability dashboard provides real-time charts on your memo
 
 ## Access the dashboard
 
-The memory stores observability dashboard is available for any experience using `Class.MemoryStoreService`, but you must either be the experience owner or have [analytics group permissions](../../production/analytics/analytics-dashboard.md#grant-group-permission) to access the dashboard.
+The memory stores observability dashboard is available for any game using `Class.MemoryStoreService`, but you must either be the game owner or have [analytics group permissions](../../production/analytics/analytics-dashboard.md#grant-group-permission) to access the dashboard.
 
 To access the dashboard:
 
 1. Navigate to the [Creations](https://create.roblox.com/dashboard/creations) page on the **Creator Dashboard**.
-2. Expand the account switcher in the upper-left and select your account or the group owning the target experience.
-3. Select the experience.
+2. Expand the account switcher in the upper-left and select your account or the group owning the target game.
+3. Select the game.
 4. In the **Monitoring** dropdown, select **Memory Stores**.
 
 ## Available charts
 
 The dashboard includes two categories of line graphs:
 
-- **Quota Usage** charts for tracking your usage compared to the [dynamically allocated quotas](../../cloud-services/memory-stores/index.md#limits-and-quotas), which are calculated based on the number of users in your experience.
+- **Quota Usage** charts for tracking your usage compared to the [dynamically allocated quotas](../../cloud-services/memory-stores/index.md#limits-and-quotas), which are calculated based on the number of users in your game.
   - **Memory Usage** on your memory usage per minute in bytes compared to how much your allocated quota left.
   - **API Request Unit** on your total request units per minute compared to how much your allocated quota left. This chart can be broken down by each API method.
 - **API Usage and Performance** charts for monitoring the API usage pattern and performance based on API method and response status.
@@ -36,23 +36,23 @@ The Observability Dashboard's **Request Count by Status** and **Requests by API 
 
 ## Notification alerts
 
-The email alert system automatically detects and sends you alerts of memory store usage issues that can harm the performance of your experience. There are two types of alerts:
+The email alert system automatically detects and sends you alerts of memory store usage issues that can harm the performance of your game. There are two types of alerts:
 
-- **Warnings** are alerts with lower priority about issues that can potentially impact your experience. You should resolve them before they become critical issues. The dashboard flags these alerts by highlighting the chart in yellow with a warning message.
-- **Criticals** are alerts with higher priority on issues directly impacting your experience. You should resolve these issues as soon as possible to prevent degraded performance. The dashboard flags these alerts by highlighting the chart in red with an error message.
+- **Warnings** are alerts with lower priority about issues that can potentially impact your game. You should resolve them before they become critical issues. The dashboard flags these alerts by highlighting the chart in yellow with a warning message.
+- **Criticals** are alerts with higher priority on issues directly impacting your game. You should resolve these issues as soon as possible to prevent degraded performance. The dashboard flags these alerts by highlighting the chart in red with an error message.
 
-When your experience triggers two types of alerts at the same time, the dashboard displays the alert header message and highlights the chart region for your attention as **Critical**.
+When your game triggers two types of alerts at the same time, the dashboard displays the alert header message and highlights the chart region for your attention as **Critical**.
 
-Currently, the system has four built-in alerts for memory usage and API requests.  If your experience exceeds an alerting threshold, the system notifies you at most once a day for each alert. When receiving an email alert, you should view the dashboard and take actions to prevent degraded performance.
+Currently, the system has four built-in alerts for memory usage and API requests.  If your game exceeds an alerting threshold, the system notifies you at most once a day for each alert. When receiving an email alert, you should view the dashboard and take actions to prevent degraded performance.
 
 ### Memory usage alerts
 
 The system sends the following memory usage alerts:
 
-- A **Warning** alert when your experience's memory usage has exceeded 70% of the total quota within the past hour.
+- A **Warning** alert when your game's memory usage has exceeded 70% of the total quota within the past hour.
 
    <img src="../../assets/data/memory-store/Memory-Usage-Warning.png" width="100%" />
-- A **Critical** alert when your experience exceeded the memory size quota for the past hour.
+- A **Critical** alert when your game exceeded the memory size quota for the past hour.
 
    <img src="../../assets/data/memory-store/Memory-Usage-Critical.png" width="100%" />
 
@@ -68,7 +68,7 @@ The system sends the following API request alerts:
 
    <img src="../../assets/data/memory-store/Request-Failure-Critical.png" width="100%" />
 - A **Critical** alert when more than 10% of your memory store requests are being throttled for the past hour.
-  - This alert is based on the number of **DataStructureRequestsOverLimit** + **TotalRequestsOverLimit**, which are error responses indicating that your experience is throttled because it sends too many requests.
+  - This alert is based on the number of **DataStructureRequestsOverLimit** + **TotalRequestsOverLimit**, which are error responses indicating that your game is throttled because it sends too many requests.
   - This alert isn't related to the request size, only quantity.
 
    <img src="../../assets/data/memory-store/Request-Throttled-Critical.png" width="100%" />

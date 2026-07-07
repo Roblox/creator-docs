@@ -1,6 +1,6 @@
 ---
 title: Invite friends to play
-description: Part of the Roblox Build It, Play It Challenge - Island of Move. Share the final experience with others.
+description: Part of the Roblox Build It, Play It Challenge - Island of Move. Share the final game with others.
 next: /education/build-it-play-it-island-of-move/challenge-checkpoint-3
 prev: /education/build-it-play-it-island-of-move/change-the-animation
 ---

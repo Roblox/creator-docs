@@ -1,6 +1,6 @@
 ---
 title: Studio interface
-description: User interface overview for Roblox Studio, the essential building tool for Roblox experiences.
+description: User interface overview for Roblox Studio, the essential building tool for Roblox games.
 ---
 
 import BetaAlert from '../includes/beta-features/beta-alert.md'
@@ -48,7 +48,7 @@ The **UI** tab contains insertion widgets for [UI objects](../ui/index.md#ui-obj
 The **Script** tab contains tools for writing and testing scripts, including [debugging](../studio/debugging.md) tools.
 </TabItem>
 <TabItem label="Plugins">
-The **Plugins** tab contains [plugins](./plugins.md) created by the community or plugins you've created yourself to use across your experiences.
+The **Plugins** tab contains [plugins](./plugins.md) created by the community or plugins you've created yourself to use across your games.
 </TabItem>
 </Tabs>
 </figure>
@@ -307,7 +307,7 @@ Custom tab configurations are saved **locally** on each machine in `.json` forma
 
 ## 3D viewport
 
-The 3D viewport represents the `Class.Workspace` of a place. From here, you can move the camera around the virtual world, manipulate objects with the mouse, and playtest an experience without leaving Studio.
+The 3D viewport represents the `Class.Workspace` of a place. From here, you can move the camera around the virtual world, manipulate objects with the mouse, and playtest a game without leaving Studio.
 
 <figure>
 	<img

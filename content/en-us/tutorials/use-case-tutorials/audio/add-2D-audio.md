@@ -1,11 +1,11 @@
 ---
 title: Add 2D audio
-description: Explains how to add non-directional audio to your experiences.
+description: Explains how to add non-directional audio to your games.
 ---
 
 **2D audio** is non-directional sound that doesn't emit from any particular location, remaining the same regardless of a listener's position or orientation in the 3D space. This means that as players move their listeners around the environment, they can consistently hear 2D audio from anywhere they turn.
 
-Using the [Gingerbread House - Start](https://www.roblox.com/games/134812596370919/Gingerbread-House-Start) `.rbxl` file as a starting place and [Gingerbread House - Complete Audio](https://www.roblox.com/games/94670255584609/Gingerbread-House-Complete-Audio) as a reference, this tutorial shows you how to add both looping and one shot 2D audio to your experiences, including guidance on:
+Using the [Gingerbread House - Start](https://www.roblox.com/games/134812596370919/Gingerbread-House-Start) `.rbxl` file as a starting place and [Gingerbread House - Complete Audio](https://www.roblox.com/games/94670255584609/Gingerbread-House-Complete-Audio) as a reference, this tutorial shows you how to add both looping and one shot 2D audio to your games, including guidance on:
 
 - Looping background music that plays as soon as players connect to the server.
 - Triggering audio to provide players instantaneous feedback according to their gameplay objectives.
@@ -14,7 +14,7 @@ Using the [Gingerbread House - Start](https://www.roblox.com/games/1348125963709
 If at any point you become stuck in the process, you can use **Gingerbread House - Complete Audio** as a reference to compare your progress.
 
 <Alert severity="info">
-If you want to add positional audio to your experience, such as ambient noise within the environment, object interaction sounds, or non-playable character dialogue, see [Add 3D audio](add-3D-audio.md).
+If you want to add positional audio to your game, such as ambient noise within the environment, object interaction sounds, or non-playable character dialogue, see [Add 3D audio](add-3D-audio.md).
 </Alert>
 
 ## 2D audio objects
@@ -25,17 +25,17 @@ To create non-directional audio, it's important to understand the audio objects 
 - The `Class.AudioDeviceOutput` object is a **physical hardware device** within the real world, such as a speaker or headphones.
 - `Class.Wire|Wires` carry audio streams from one object to another.
 
-All of these audio objects work together to carry sound from file playback to each player's hardware. Let's take a look at how this works in practice using an example of a player wearing a headset while playing an experience with their laptop:
+All of these audio objects work together to carry sound from file playback to each player's hardware. Let's take a look at how this works in practice using an example of a player wearing a headset while playing a game with their laptop:
 
-- The `Class.AudioPlayer` loads the `127645268874265` audio asset ID into the experience for a currency purchase sound.
+- The `Class.AudioPlayer` loads the `127645268874265` audio asset ID into the game for a currency purchase sound.
 - A `Class.Wire` carries the stream from the `Class.AudioPlayer` to the `Class.AudioDeviceOutput` so that the stream comes out of the player's headset.
 - The `Class.AudioDeviceOutput` object carries the sound to the player's physical speaker, or in this case, their headphones.
 
-The following sections dive deeper and reference these objects as you learn how to play both looping and one shot 2D audio. As you review these objects with the upcoming techniques, you can more accurately predict how to capture and feed sound from the experience to the player.
+The following sections dive deeper and reference these objects as you learn how to play both looping and one shot 2D audio. As you review these objects with the upcoming techniques, you can more accurately predict how to capture and feed sound from the game to the player.
 
 ## Looping audio
 
-**Looping 2D audio**, or non-directional audio that repeats seamlessly as soon as players connect to the server, is a common sound design technique to provide a cohesive auditory backdrop regardless of what players are doing or where they're located within the 3D space. In addition, looping 2D audio ensures that your experience is never completely silent, which can disorient and distract players from their objectives.
+**Looping 2D audio**, or non-directional audio that repeats seamlessly as soon as players connect to the server, is a common sound design technique to provide a cohesive auditory backdrop regardless of what players are doing or where they're located within the 3D space. In addition, looping 2D audio ensures that your game is never completely silent, which can disorient and distract players from their objectives.
 
 To demonstrate this concept, review how the following 2D audio significantly enhances the quality of the [Hazardous Space Station](https://www.roblox.com/games/99416825187098/Hazardous-Space-Station) sample. Without background music, the space station feels hollow and lifeless. However, when the space station includes background music, the space station feels both ominous and dangerous, adding to the overall spooky atmosphere.
 
@@ -54,7 +54,7 @@ To demonstrate this concept, review how the following 2D audio significantly enh
 To create a seamless loop, you must match the end and start points of your audio track precisely so that players cannot detect its repetition. This process requires third-party audio editing software like [Reaper](https://www.reaper.fm/) or [Audacity](https://www.audacityteam.org/) so that you can find a zero crossing and make a carefully timed cut. For step-by-step instruction on these methods, see [Creating Perfect Audio Loops](https://devforum.roblox.com/t/creating-perfect-audio-loops/2849057).
 </Alert>
 
-Looping audio is particularly useful for establishing how you want players to feel as soon as they join your experience. For example, the sample aims to provide players a cheerful adventure in a winter wonderland, so it uses an upbeat audio track to positively influence their mood the moment they enter the environment. To see how influential this technique can be, consider how the player's experience would change if you were to swap the looping audio out for a metal track.
+Looping audio is particularly useful for establishing how you want players to feel as soon as they join your game. For example, the sample aims to provide players a cheerful adventure in a winter wonderland, so it uses an upbeat audio track to positively influence their mood the moment they enter the environment. To see how influential this technique can be, consider how the player's experience would change if you were to swap the looping audio out for a metal track.
 
 <video controls src="../../../assets/tutorials/add-2D-audio/Metal-Track.mp4" width="80%"></video>
 
@@ -62,10 +62,10 @@ To recreate the looping 2D audio in the sample [Gingerbread House - Complete Aud
 
 1. Enable a default listener that's attached to your player character.
    1. In the **Explorer** window, select the **SoundService**.
-   1. In the **Properties** window, set **DefaultListenerLocation** to **Character**. When you run the experience, the engine automatically creates an `Class.AudioDeviceOutput` under **SoundService**.
+   1. In the **Properties** window, set **DefaultListenerLocation** to **Character**. When you run the game, the engine automatically creates an `Class.AudioDeviceOutput` under **SoundService**.
 1. In the **Explorer** window, navigate to **SoundService**, then:
    1. Insert an **AudioPlayer** object to create an audio source.
-   1. Insert an **AudioDeviceOutput** object to create a speaker that plays throughout the experience.
+   1. Insert an **AudioDeviceOutput** object to create a speaker that plays throughout the game.
    1. Insert a **Wire** object to carry the stream from the audio player to the speaker.
 
    <img src="../../../assets/tutorials/add-2D-audio/Looping-DataModel.png" width="30%" />
@@ -73,7 +73,7 @@ To recreate the looping 2D audio in the sample [Gingerbread House - Complete Aud
 1. Select the **AudioPlayer**, then in the **Properties** window,
    1. Set **AssetID** to `rbxassetid://1841461968` to play an upbeat audio track.
    1. Enable **Looping** so that the audio repeats seemlessly.
-   1. Set **Volume** to `0.2` to play the audio at a low volume so you can still hear the other audio sources within the experience.
+   1. Set **Volume** to `0.2` to play the audio at a low volume so you can still hear the other audio sources within the game.
 1. Select the **Wire**, then in the **Properties** window,
    1. Set **SourceInstance** to your new **AudioPlayer** to specify that you want the wire to carry audio from this specific audio player.
    1. Set **TargetInstance** to your new **AudioDeviceOutput** to specify that you want the wire to carry audio to this specific speaker.
@@ -89,23 +89,23 @@ To recreate the looping 2D audio in the sample [Gingerbread House - Complete Aud
      <Typography variant="h4">Code explanation</Typography>
    </AccordionSummary>
    <AccordionDetails>
-      The script starts by declaring a variable to represent the script's parent `Class.AudioPlayer`. The script then sets the audio source to play from the moment the player joins the experience to the moment they exit the experience.
+      The script starts by declaring a variable to represent the script's parent `Class.AudioPlayer`. The script then sets the audio source to play from the moment the player joins the game to the moment they exit the game.
    </AccordionDetails>
    </BaseAccordion>
 
-1. Playtest the experience to hear the looping background music.
+1. Playtest the game to hear the looping background music.
 
    <video controls src="../../../assets/tutorials/add-2D-audio/Looping-Final.mp4" width="80%"></video>
 
 ## One shot audio
 
-**One shot 2D audio**, or non-directional audio that plays once at a specific time and position unless a player triggers it again, provides players important context about anything you don't want them to miss. Using this type of auditory feedback in your experiences is essential because it provides an instant, clear response to crucial gameplay functions and player actions, such as starting a boss fight or losing a significant amount of health.
+**One shot 2D audio**, or non-directional audio that plays once at a specific time and position unless a player triggers it again, provides players important context about anything you don't want them to miss. Using this type of auditory feedback in your games is essential because it provides an instant, clear response to crucial gameplay functions and player actions, such as starting a boss fight or losing a significant amount of health.
 
 The following sections provide implementation details for common gameplay scenarios in which players need timely, non-directional feedback, including gameplay feedback, UI element interactions, and voiceover narration for tutorials.
 
 ### Gameplay feedback
 
-As players progress through your experience, it's important that they receive immediate auditory feedback about the status of anything that impacts their gameplay, such as their score, health, or level progress. Because this type of audio directly connects to player objectives, it's important that these sounds are clear, audible, and convey useful and accurate information.
+As players progress through your game, it's important that they receive immediate auditory feedback about the status of anything that impacts their gameplay, such as their score, health, or level progress. Because this type of audio directly connects to player objectives, it's important that these sounds are clear, audible, and convey useful and accurate information.
 
 To demonstrate this concept, let's review the following one shot 2D audio from the [Platformer](../../../resources/templates.md#platformer) template that plays as players jump and collect coins:
 
@@ -116,15 +116,15 @@ Both of these sounds are instantly recognizable within the context of the 3D spa
 
 <video controls src="../../../assets/tutorials/add-2D-audio/game-state-example.mp4" width="80%"></video>
 
-When you play multiple sounds at once, certain sounds may be more important for players to hear than others. In this instance, the coin collection sound is conveying more valuable gameplay information than the jump sound, so the experience plays it at a slightly higher volume. There are no standards or rules to achieve a great mix however, so tune the sounds in your experience to reflect what you feel is most important.
+When you play multiple sounds at once, certain sounds may be more important for players to hear than others. In this instance, the coin collection sound is conveying more valuable gameplay information than the jump sound, so the game plays it at a slightly higher volume. There are no standards or rules to achieve a great mix however, so tune the sounds in your game to reflect what you feel is most important.
 
-For example, the sample includes various audio triggers throughout the experience, but they aren't all at the same level of importance for understanding the experience's main objective: collect gumdrops to open the gingerbread house. To ensure that players are aware of what they need to do, the sample triples the amplitude of the auditory feedback whenever the player collects a gumdrop.
+For example, the sample includes various audio triggers throughout the game, but they aren't all at the same level of importance for understanding the game's main objective: collect gumdrops to open the gingerbread house. To ensure that players are aware of what they need to do, the sample triples the amplitude of the auditory feedback whenever the player collects a gumdrop.
 
 To recreate the one shot state feedback audio in the sample [Gingerbread House - Complete Audio](https://www.roblox.com/games/94670255584609/Gingerbread-House-Complete-Audio) place file:
 
 1. In the **Explorer** window, navigate to **Workspace** ⟩ **Gumdrops** ⟩ **Gumdrop**, then:
    1. Insert an **AudioPlayer** object to create an audio source.
-   1. Insert an **AudioDeviceOutput** object to create a speaker that plays throughout the experience.
+   1. Insert an **AudioDeviceOutput** object to create a speaker that plays throughout the game.
    1. Insert a **Wire** object to carry the stream from the audio player to the speaker.
 
    <img src="../../../assets/tutorials/add-2D-audio/Feedback-DataModel.jpg" width="30%" />
@@ -132,7 +132,7 @@ To recreate the one shot state feedback audio in the sample [Gingerbread House -
 1. Select the **AudioPlayer**, then in the **Properties** window,
    1. Set **AssetID** to `rbxassetid://9113723699` to play a gentle chomping audio track.
    1. Set **TimePosition** to `0.15` to start the audio track closer to the actual chomping sound.
-   1. Set **Volume** to `3` to play the audio at a high volume so you hear the gumdrop sound over other audio sources within the experience.
+   1. Set **Volume** to `3` to play the audio at a high volume so you hear the gumdrop sound over other audio sources within the game.
 1. Select the **Wire**, then in the **Properties** window,
    1. Set **SourceInstance** to your new **AudioPlayer** to specify that you want the wire to carry audio from this specific audio player.
    1. Set **TargetInstance** to your new **AudioDeviceOutput** to specify that you want the wire to carry audio to this specific speaker.
@@ -236,7 +236,7 @@ To recreate the one shot state feedback audio in the sample [Gingerbread House -
    </AccordionDetails>
    </BaseAccordion>
 
-1. Playtest the experience to hear the chomping sound after you collect a gumdrop.
+1. Playtest the game to hear the chomping sound after you collect a gumdrop.
 
    <video controls src="../../../assets/tutorials/add-2D-audio/Feedback-Final.mp4" width="80%"></video>
 
@@ -295,7 +295,7 @@ To recreate the one shot UI interaction audio in the sample [Gingerbread House -
 
 1. In the **Explorer** window, navigate to **StarterGui** ⟩ **2DAudioButton**, then:
    1. Insert an **AudioPlayer** object to create an audio source.
-   1. Insert an **AudioDeviceOutput** object to create a speaker that plays throughout the experience.
+   1. Insert an **AudioDeviceOutput** object to create a speaker that plays throughout the game.
    1. Insert a **Wire** object to carry the stream from the audio player to the speaker.
 
    <img src="../../../assets/tutorials/add-2D-audio/UI-DataModel.png" width="30%" />
@@ -379,6 +379,6 @@ To recreate the one shot UI interaction audio in the sample [Gingerbread House -
    </AccordionDetails>
    </BaseAccordion>
 
-1. Playtest the experience to hear the jingle every time you press the on-screen button.
+1. Playtest the game to hear the jingle every time you press the on-screen button.
 
    <video controls src="../../../assets/tutorials/add-2D-audio/UI-Final.mp4" width="80%"></video>

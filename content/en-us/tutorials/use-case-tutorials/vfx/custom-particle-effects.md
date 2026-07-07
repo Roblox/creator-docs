@@ -13,7 +13,7 @@ Time to look at a more complex example of particle effects. You'll make a multic
 
 First up, you'll need something like a volcano you can use for the effect. The [Treasure Island example world](https://www.roblox.com/games/6307505882/Treasure-Island) pictured in this tutorial includes a volcano.
 
-<img src="../../../assets/tutorials/custom-particle-effects/Treasure-Island-Edit-Place.png" width="780" alt="Edit in Studio option from the experience's main page" />
+<img src="../../../assets/tutorials/custom-particle-effects/Treasure-Island-Edit-Place.png" width="780" alt="Edit in Studio option from the game's main page" />
 
 A volcano with an orange neon part will be used to emit particles. This part is called **CenterLava** and is parented to the workspace.
 

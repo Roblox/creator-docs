@@ -1,6 +1,6 @@
 ---
 title: Packages
-description: Packages allow you to reuse single assets or asset hierarchies across experiences.
+description: Packages allow you to reuse single assets or asset hierarchies across games.
 id: packages
 ---
 
@@ -18,7 +18,7 @@ The most efficient workflow is to [create a package](#create-packages), [share i
 ## Create packages
 
 <Alert severity="warning">
-If you want to create a package with restricted assets that you don't have [explicit permission](../../projects/assets/privacy.md#view-permissions) to use, you can still create the package but those specific restricted assets will **not** be visible or audible at runtime unless the experience itself has permission to use those assets.
+If you want to create a package with restricted assets that you don't have [explicit permission](../../projects/assets/privacy.md#view-permissions) to use, you can still create the package but those specific restricted assets will **not** be visible or audible at runtime unless the game itself has permission to use those assets.
 </Alert>
 
 You can create a package from any single object or any single parent and children branch of objects. If you want to create a package for a single object, add it to a `Class.Model` grouping first so that you can add, remove, or scale child objects within the package later without breaking the package.
@@ -26,7 +26,7 @@ You can create a package from any single object or any single parent and childre
 To create a package:
 
 1. In the [Explorer](../../studio/explorer.md) window or 3D viewport, right-click the object(s) you want to turn into a package and, in contextual menu, select **Convert&nbsp;to&nbsp;Package**.
-1. In the new window, fill in the package details. In particular, if you're working in a [group](../../projects/groups.md), set **Ownership** to the appropriate group in which you have permission to create/edit group experiences.
+1. In the new window, fill in the package details. In particular, if you're working in a [group](../../projects/groups.md), set **Ownership** to the appropriate group in which you have permission to create/edit group games.
 
    <Alert severity="warning">
    Ownership transfers are **not** supported by the asset system, so carefully consider the owner when creating a package.
@@ -64,7 +64,7 @@ To insert a package that doesn't already exist in the current place, you must **
 Once you've inserted a package into a published place's data model, it appears in the [Asset Manager](../../projects/assets/manager.md) and remains there even if you later delete all copies of it.
 
 <Alert severity="warning">
-Be careful when inserting assets that you didn't create into your experiences, as they can contain malicious scripts. Save your experience first and then investigate any scripts within unfamiliar assets so that you can easily revert back to the place version.
+Be careful when inserting assets that you didn't create into your games, as they can contain malicious scripts. Save your game first and then investigate any scripts within unfamiliar assets so that you can easily revert back to the place version.
 </Alert>
 
 ## Modify packages
@@ -117,7 +117,7 @@ Once the package is published and moved to an **unmodified** state, the scripts 
 
 ## Publish package changes
 
-You can publish any change to a package as a new version, making your updates available to other package copies throughout the place and across all experiences. It's **not** required to publish a modified package before publishing a place because the modified version is saved along with the place for future iteration.
+You can publish any change to a package as a new version, making your updates available to other package copies throughout the place and across all games. It's **not** required to publish a modified package before publishing a place because the modified version is saved along with the place for future iteration.
 
 To publish changes to a package:
 
@@ -145,11 +145,11 @@ You can update outdated package copies to the most recent version, or you can co
 
 ### Mass updates
 
-Extensive use of packages may result in many package copies across multiple places in an experience. In addition to [individual syncing](#update-outdated-copies) and [automatic updates](#automatic-updates), you can update all copies of a package through **mass updating**.
+Extensive use of packages may result in many package copies across multiple places in a game. In addition to [individual syncing](#update-outdated-copies) and [automatic updates](#automatic-updates), you can update all copies of a package through **mass updating**.
 
-1. <Chip label="RECOMMENDED" size="small" variant="outlined" color="success" /> Close other Studio instances with any of the experience's places open; this prevents another unsaved instance of a place from potentially overwriting your updates.
+1. <Chip label="RECOMMENDED" size="small" variant="outlined" color="success" /> Close other Studio instances with any of the game's places open; this prevents another unsaved instance of a place from potentially overwriting your updates.
 1. In the [Explorer](../../studio/explorer.md) window or 3D viewport, right-click the desired package and select **Update All**.
-1. Choose all places in the experience or some subset of places and click **Update**.
+1. Choose all places in the game or some subset of places and click **Update**.
 
 <Alert severity="info">
 Mass updating packages automatically **saves** the selected places but does not **publish** them. Additionally, to prevent unintended overwrites, mass updating does not affect [modified](#modify-packages) versions of a package; after the mass update completes, Studio displays a warning with the number of packages that it did **not** update, if any.
@@ -171,10 +171,10 @@ Automatic updating does not apply to [modified](#modify-packages) package copies
 
 ## Share and access levels
 
-You can grant permission to friends, experiences, groups, or specific group user roles so that they can freely use your packages in their creations. For more information on asset access, see [Asset privacy](privacy.md).
+You can grant permission to friends, games, groups, or specific group user roles so that they can freely use your packages in their creations. For more information on asset access, see [Asset privacy](privacy.md).
 
 <Alert severity="warning">
-If you share a package with restricted assets that you don't have [explicit permission](../../projects/assets/privacy.md#view-permissions) to use, you can still share the package but those specific restricted assets will **not** be visible or audible at runtime unless the friend, experience, or group has permission to use those assets.
+If you share a package with restricted assets that you don't have [explicit permission](../../projects/assets/privacy.md#view-permissions) to use, you can still share the package but those specific restricted assets will **not** be visible or audible at runtime unless the friend, game, or group has permission to use those assets.
 </Alert>
 
 <Tabs>
@@ -196,7 +196,7 @@ To change package permissions for a collaborator, such as a friend or group:
    <tbody>
    <tr>
    <td>**Use & View**</td>
-   <td>The collaborator can use and view (but not edit) the current and previous package versions. Once you provide a collaborator with this ability, you cannot revoke access to a copy they already inserted into their experience; revoking access prevents reinsertion or package updates, but package copies in their data model remain intact.</td>
+   <td>The collaborator can use and view (but not edit) the current and previous package versions. Once you provide a collaborator with this ability, you cannot revoke access to a copy they already inserted into their game; revoking access prevents reinsertion or package updates, but package copies in their data model remain intact.</td>
    </tr>
    <tr>
    <td>**Edit**</td>
@@ -206,21 +206,21 @@ To change package permissions for a collaborator, such as a friend or group:
    </table>
 
   </TabItem>
-  <TabItem key = "2" label="To experiences">
+  <TabItem key = "2" label="To games">
 
-To grant package access to an experience, the experience must be editable to either you or a group that you belong to in which you have the **Create and edit group experiences** role permission.
+To grant package access to a game, the game must be editable to either you or a group that you belong to in which you have the **Create and edit group experiences** role permission.
 
-To change package permissions for an experience:
+To change package permissions for a game:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. In the upper tab bar, select **Development Items**, then click **Models & Packages**.
-1. Select the package you want your experience to have permission to use. The package's **Configure** page displays.
+1. Select the package you want your game to have permission to use. The package's **Configure** page displays.
 1. In the package's left-hand navigation, select **Permissions**. The package's **Permissions** page displays.
 1. From the **Experiences** tab, click the **Add experiences** button.
-1. Type the experience's universeID into the **Enter Universe IDs** input, then click the **Add** button. The experience displays beneath the input with its access visible.
+1. Type the game's universeID into the **Enter Universe IDs** input, then click the **Add** button. The game displays beneath the input with its access visible.
 
    <Alert severity="info">
-   If you want to give multiple experiences permission to use your restricted access at the same time, you can enter multiple universeIDs as long as you separate them with a comma.
+   If you want to give multiple games permission to use your restricted access at the same time, you can enter multiple universeIDs as long as you separate them with a comma.
    </Alert>
 
 1. Click the **Done** button to finalize your package asset access permissions.

@@ -550,7 +550,7 @@ Open **File → Beta Features** and turn on the features you want. Features that
       cards: [
         {
           title: 'Safety best practices',
-          description: 'Generative AI accelerates creation, but you are responsible for the content generated within your experiences. Follow these guidelines to stay compliant with Roblox Community Standards.',
+          description: 'Generative AI accelerates creation, but you are responsible for the content generated within your games. Follow these guidelines to stay compliant with Roblox Community Standards.',
           href: '/generative-AI'
         },
         {

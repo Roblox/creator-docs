@@ -1,9 +1,9 @@
 ---
 title: Deep links
-description: Deep links let you launch experiences and send users directly to a specific place with custom launch data.
+description: Deep links let you launch games and send users directly to a specific place with custom launch data.
 ---
 
-Deep links let you send users to a specific place in an experience, which can
+Deep links let you send users to a specific place in a game, which can
 make the process of joining more seamless, help users find their friends, and provide traffic attribution. The optional launch data in these links lets you customize the user experience when someone joins.
 
 <Alert severity="success">
@@ -22,16 +22,16 @@ Deep links support the following URL parameters. All are optional unless otherwi
 Parameter | Description
 :--- | :---
 `placeId` | The place ID to join. Required unless `userId` is specified.
-`userId` | The user ID to join. Results in a "Followed user has left the experience" error if the user left the experience or is offline.
+`userId` | The user ID to join. Results in a "Followed user has left the game" error if the user left the game or is offline.
 `accessCode` | The private server access code.
 `linkCode` | The private server link code.
-`gameInstanceId` | The unique identifier of the experience instance to join, also called the `Class.DataModel.JobId`.
+`gameInstanceId` | The unique identifier of the game instance to join, also called the `Class.DataModel.JobId`.
 `launchData` | Additional information that you want to include within the deep link, such as promotional codes or coordinates. Process using the `Class.Player:GetJoinData()` method. See [Include launch data](./invite-prompts.md#include-launch-data).
 
 ### Requirements and guidelines
 
 - You must URL encode special characters, such as spaces. These characters are
-  automatically decoded when the user joins your experience.
+  automatically decoded when the user joins your game.
 - The decoded launch data can't exceed 200 bytes.
 - You can store more complex data as a JSON string and decode it with
   `Class.HttpService:JSONDecode()` on the server.
@@ -41,7 +41,7 @@ Parameter | Description
 
 ### Web list to app
 
-This format sends users to the Roblox experience page on the web and then
+This format sends users to the Roblox game page on the web and then
 launches the Roblox app. The provided example provides a place ID and a URL
 encoded launch data string.
 
@@ -94,7 +94,7 @@ the `af_dp` parameter and the "web listing to app" deep link with the
 
 ## Process a deep link
 
-In your experience, obtain the launch data with the `Class.Player:GetJoinData()`
+In your game, obtain the launch data with the `Class.Player:GetJoinData()`
 method, which returns a [dictionary](../../luau/tables.md). In that dictionary,
 the `LaunchData` key contains the string that you specified in the `launchData`
 parameter of your deep link.

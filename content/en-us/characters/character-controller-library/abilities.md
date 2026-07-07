@@ -17,7 +17,7 @@ At this time, custom abilities are not supported, although the CCL fully support
 
 ## Configuration
 
-While your experience is running (or through a script that runs from `Class.ServerScriptService`), you can experiment with the built‑in ability configurations. You can also modify specific [controllers](./controllers.md) to adjust the physical simulation of the character and its interaction with the environment, such as the character's base movement speed.
+While your game is running (or through a script that runs from `Class.ServerScriptService`), you can experiment with the built‑in ability configurations. You can also modify specific [controllers](./controllers.md) to adjust the physical simulation of the character and its interaction with the environment, such as the character's base movement speed.
 
 ### Runtime
 

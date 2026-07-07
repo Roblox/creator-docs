@@ -1,9 +1,9 @@
 ---
 title: Create neon signs
-description: Explains how to create neon signage to draw attention to something in an experience.
+description: Explains how to create neon signage to draw attention to something in a game.
 ---
 
-**Neon signs** are bright and colorful electric signage that draws attention to something within an experience, such as where users can enter a building or purchase an item. By combining modeling and lighting techniques, you can create and use neon signs to elevate the immersion within your environments.
+**Neon signs** are bright and colorful electric signage that draws attention to something within a game, such as where users can enter a building or purchase an item. By combining modeling and lighting techniques, you can create and use neon signs to elevate the immersion within your environments.
 
 <img width="80%" img src="../../../assets/tutorials/creating-neon-signs/Overview.jpg" />
 
@@ -112,4 +112,4 @@ To incorporate neon 3D text from the [open-text](../../../assets/tutorials/creat
 1. In the **Explorer** window, right-click **NeonSign**. A contextual menu displays.
 1. Select **Save to Roblox**.
 
-After you save the asset in your [Toolbox](../../../projects/assets/toolbox.md), you can use it within any of your experiences. In addition, you can [distribute your asset to the Creator Store](../../../production/creator-store.md) to make it publicly available to all creators to use within their experiences too.
+After you save the asset in your [Toolbox](../../../projects/assets/toolbox.md), you can use it within any of your games. In addition, you can [distribute your asset to the Creator Store](../../../production/creator-store.md) to make it publicly available to all creators to use within their games too.

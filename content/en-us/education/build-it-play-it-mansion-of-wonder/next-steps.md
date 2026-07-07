@@ -6,11 +6,11 @@ description: For newer developers, choose what to learn next in the Roblox Build
 
 <img src="../../assets/education/build-it-play-it-mansion-of-wonder/next-steps/hero-final.jpeg" width="100%" />
 
-**Congratulations** on taking the first steps to creating experiences. So far, you've learned how to create special effects in your very own Roblox action experience.
+**Congratulations** on taking the first steps to creating games. So far, you've learned how to create special effects in your very own Roblox action game.
 
 Now, **keep going!**
 
-## Supercharge your experience
+## Supercharge your game
 
 Learn techniques to customize your particles even further or take a chance to show off your work.
 

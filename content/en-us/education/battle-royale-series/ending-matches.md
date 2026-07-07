@@ -1,6 +1,6 @@
 ---
 title: End matches
-description: Create a battle royale experience in Roblox Studio. Write scripts that handle victory conditions or time running out.
+description: Create a battle royale game in Roblox Studio. Write scripts that handle victory conditions or time running out.
 next: /education/battle-royale-series/cleanup-and-reset
 prev: /education/battle-royale-series/creating-a-gui
 ---

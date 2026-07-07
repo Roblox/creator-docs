@@ -3,7 +3,7 @@ title: User interface
 description: Explore the wide variety of user interface elements that players can interact with.
 ---
 
-You can quickly create high-quality graphical user interfaces with minimal scripting requirements using built-in [UI objects](#ui-objects). Depending on where you create it, UI renders either [on-screen](#on-screen-ui) or [within an experience's 3D world](#in-experience-ui).
+You can quickly create high-quality graphical user interfaces with minimal scripting requirements using built-in [UI objects](#ui-objects). Depending on where you create it, UI renders either [on-screen](#on-screen-ui) or [within a game's 3D world](#in-game-ui).
 
 ## On-screen UI
 
@@ -13,9 +13,9 @@ You can quickly create high-quality graphical user interfaces with minimal scrip
 <img src="../assets/ui/ui-objects/ScreenGui-Example.jpg" width="840" alt="Example ScreenGui with various GuiObject children, including a Frame, TextLabel, TextBox, and ImageButton." />
 </figure>
 
-## In-experience UI
+## In-game UI
 
-[In-experience containers](../ui/in-experience-containers.md) such as `Class.SurfaceGui|SurfaceGuis` and `Class.BillboardGui|BillboardGuis` hold UI objects that you want to display within your experience's 3D world.
+[In-game containers](../ui/in-experience-containers.md) such as `Class.SurfaceGui|SurfaceGuis` and `Class.BillboardGui|BillboardGuis` hold UI objects that you want to display within your game's 3D world.
 
 <video src="../assets/ui/in-experience/Showcase.mp4" controls width="100%"></video>
 
@@ -80,11 +80,11 @@ Beyond basic properties for adjusting position and size, Roblox also provides la
 
 ## Interactive frameworks
 
-In addition to the core [user interface objects](#ui-objects), the following frameworks provide built‑in and customizable interactivity for your experiences.
+In addition to the core [user interface objects](#ui-objects), the following frameworks provide built‑in and customizable interactivity for your games.
 
 ### Proximity prompts
 
-[Proximity prompts](../ui/proximity-prompts.md) are unique built-in UI objects which prompt user interaction to trigger an action when they approach in-experience objects such as doors, light switches, and buttons.
+[Proximity prompts](../ui/proximity-prompts.md) are unique built-in UI objects which prompt user interaction to trigger an action when they approach in-game objects such as doors, light switches, and buttons.
 
 <video src="../assets/ui/proximity-prompt/Showcase.mp4" controls width="80%" alt="Proximity prompts used in a variety of implementations in the 3D world"></video>
 
@@ -96,6 +96,6 @@ In addition to the core [user interface objects](#ui-objects), the following fra
 
 ### 3D drag detectors
 
-[3D drag detectors](../ui/3D-drag-detectors.md) encourage physical interaction with 3D objects in an experience, such as opening doors and drawers, sliding a part around, grabbing and tossing a bowling ball, pulling back and firing a slingshot, and much more.
+[3D drag detectors](../ui/3D-drag-detectors.md) encourage physical interaction with 3D objects in a game, such as opening doors and drawers, sliding a part around, grabbing and tossing a bowling ball, pulling back and firing a slingshot, and much more.
 
 <video src="../assets/ui/3D-drag-detectors/Showcase.mp4" controls width="80%" alt="Drag detectors used in a variety of implementations in the 3D world"></video>

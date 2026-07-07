@@ -3,7 +3,7 @@ title: Friends Locator
 description: The Friends Locator module lets players easily find and teleport to their friends inside a place.
 ---
 
-It can be challenging to locate friends in-experience. The **FriendsLocator** [developer module](../../resources/modules/index.md) lets players easily find and teleport to their friends inside a place.
+It can be challenging to locate friends in-game. The **FriendsLocator** [developer module](../../resources/modules/index.md) lets players easily find and teleport to their friends inside a place.
 
 <video src="../../assets/developer-modules/friends-locator/Showcase.mp4" controls width="100%"></video>
 
@@ -11,7 +11,7 @@ It can be challenging to locate friends in-experience. The **FriendsLocator** [d
 
 ### Installation
 
-To use the **FriendsLocator** module in an experience:
+To use the **FriendsLocator** module in a game:
 
 1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
@@ -27,7 +27,7 @@ To use the **FriendsLocator** module in an experience:
 
    <img src="../../assets/developer-modules/friends-locator/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **FriendsLocator** model into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **FriendsLocator** model into `Class.ReplicatedStorage`. Upon running the game the module will begin running.
 
 ### Test in Studio
 
@@ -93,7 +93,7 @@ The **FriendsLocator** module exposes [events](#events) so that you can introduc
 
 ### Custom locator UI
 
-If the default style does not fit your experience, you can replace the default avatar portrait UI with your own UI.
+If the default style does not fit your game, you can replace the default avatar portrait UI with your own UI.
 
 <img src="../../assets/developer-modules/friends-locator/Custom-UI-Example.jpg" width="80%" />
 

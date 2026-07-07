@@ -1,11 +1,11 @@
 ---
 title: Avatar Context Menu
-description: The Avatar Context Menu (ACM) allows users to interact and customize actions with others in their experience.
+description: The Avatar Context Menu (ACM) allows users to interact and customize actions with others in their game.
 ---
 
-The **Avatar Context Menu** (ACM) makes it easier for users to interact with each other. When the ACM is enabled in your experience, a user can walk up to another user's character and click on them to open a small menu with several default options. The player can send a friend request, begin a private chat, view the user's profile, or wave.
+The **Avatar Context Menu** (ACM) makes it easier for users to interact with each other. When the ACM is enabled in your game, a user can walk up to another user's character and click on them to open a small menu with several default options. The player can send a friend request, begin a private chat, view the user's profile, or wave.
 
-After [enabling](#enable-the-avatar-context-menu) the ACM in your experience, you can customize the ACM in the following ways:
+After [enabling](#enable-the-avatar-context-menu) the ACM in your game, you can customize the ACM in the following ways:
 
 - Programmatically [open and close](#open-and-close-the-acm) the ACM for specific users.
 - [Add](#add-menu-options) custom options and [remove](#remove-menu-options) existing options to the ACM.
@@ -13,7 +13,7 @@ After [enabling](#enable-the-avatar-context-menu) the ACM in your experience, yo
 
 ## Enable the Avatar Context Menu
 
-The Avatar Context Menu must be enabled using the `Class.StarterGui:SetCore()` option "AvatarContextMenuEnabled" in a `Class.LocalScript`. The ACM is best used in experiences where there is no predefined behavior for clicking on other users.
+The Avatar Context Menu must be enabled using the `Class.StarterGui:SetCore()` option "AvatarContextMenuEnabled" in a `Class.LocalScript`. The ACM is best used in games where there is no predefined behavior for clicking on other users.
 
 Use the following code sample to enable the ACM in a `Class.LocalScript`:
 
@@ -65,7 +65,7 @@ You can [add](#add-menu-options) and [remove](#remove-menu-options) actions thro
   </tr>
   <tr>
     <td>Chat</td>
-    <td>Opens a private conversation with the selected user in the in-experience chat.</td>
+    <td>Opens a private conversation with the selected user in the in-game chat.</td>
   </tr>
   <tr>
     <td>View</td>
@@ -84,7 +84,7 @@ Once the ACM is open, the user can scroll and select other users on the characte
 
 ### Add menu options
 
-Once enabled, experience-specific actions can be added to the ACM. For example, an experience might allow for trade requests, add-to-party options, or other special interactions.
+Once enabled, game-specific actions can be added to the ACM. For example, a game might allow for trade requests, add-to-party options, or other special interactions.
 
 The following example shows how to add a custom action to the Avatar Context Menu:
 

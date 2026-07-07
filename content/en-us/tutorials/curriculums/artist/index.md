@@ -1,6 +1,6 @@
 ---
 title: Intro to VFX art
-description: Learn the basics of creating special effects for experiences.
+description: Learn the basics of creating special effects for games.
 next: /tutorials/curriculums/artist/get-started
 hideInPageNavigation: true
 ---
@@ -18,9 +18,9 @@ hideInPageNavigation: true
 </Grid>
 
 <Grid item Large={5} XSmall={12} direction="column">
-Using the [Mansion of Wonder](https://www.roblox.com/games/6901029464/Mansion-of-Wonder) sample as a guide, this tutorial acts as an introduction to creating special effects (VFX) in Roblox Studio using particle emitters. As you follow each chapter, you will learn how to create a laser blast and explosion that players can use as they defeat sinister slimes and ghastly ghosts in a spooky carnival experience.
+Using the [Mansion of Wonder](https://www.roblox.com/games/6901029464/Mansion-of-Wonder) sample as a guide, this tutorial acts as an introduction to creating special effects (VFX) in Roblox Studio using particle emitters. As you follow each chapter, you will learn how to create a laser blast and explosion that players can use as they defeat sinister slimes and ghastly ghosts in a spooky carnival game.
 
-This lesson is intended for readers who are **brand new** to creating VFX art and working in Studio. If you are familiar with both, try another beginner lesson plan or jump straight to [building your first experience](../core/index.md).
+This lesson is intended for readers who are **brand new** to creating VFX art and working in Studio. If you are familiar with both, try another beginner lesson plan or jump straight to [building your first game](../core/index.md).
 </Grid>
 
 </Grid>
@@ -71,7 +71,7 @@ If you don't have a Roblox account, Studio active on your device, or familiarity
    </AccordionSummary>
    <AccordionDetails>
 
-    Learn where you can [find more tutorials](next-steps.md) about VFX for experiences.
+    Learn where you can [find more tutorials](next-steps.md) about VFX for games.
 
    </AccordionDetails>
    </BaseAccordion>

@@ -1,21 +1,21 @@
 ---
 title: Create and destroy
-description: Get started creating games and experiences in Roblox. Create a multiplayer game where you destroy buildings for points.
+description: Get started creating games in Roblox. Create a multiplayer game where you destroy buildings for points.
 next: /education/build-it-play-it-create-and-destroy/designing-a-map
 prev:
 ---
 
-Learn how to design a multiplayer map for an experience in which players destroy cities with laser beams for points. Creating this map is great practice if you want to learn how to build battle royales or other combat games down the road.
+Learn how to design a multiplayer map for a game in which players destroy cities with laser beams for points. Creating this map is great practice if you want to learn how to build battle royales or other combat games down the road.
 
 <video controls src="../../assets/education/build-it-play-it-create-and-destroy/cc2019_introVideo_final_webOptimize.mp4" width="100%"></video>
 
 <Alert severity="info">
-A finished version of the experience is available at the <a href='https://www.roblox.com/games/7290548674/Create-and-Destroy-Test-Map?'>Create and Destroy Test Map</a>. If you don't have Roblox installed, you can do so by playing the test map.
+A finished version of the game is available at the <a href='https://www.roblox.com/games/7290548674/Create-and-Destroy-Test-Map?'>Create and Destroy Test Map</a>. If you don't have Roblox installed, you can do so by playing the test map.
 </Alert>
 
 ## Download Roblox Studio
 
-You'll need Roblox Studio, which is used to create every experience on the Roblox platform and is available free for **PC** and **Mac**. We strongly recommend using a 3-button mouse with a scroll-wheel for navigating in 3D space.
+You'll need Roblox Studio, which is used to create every game on the Roblox platform and is available free for **PC** and **Mac**. We strongly recommend using a 3-button mouse with a scroll-wheel for navigating in 3D space.
 
 1. Go to the Create page and click the Start Creating button to download Studio.
 2. After installing, double-click the desktop icon (Windows) or click the dock icon (Mac).

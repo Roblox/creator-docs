@@ -5,11 +5,11 @@ description: Get started with IP tools as a rights holder.
 
 **License Manager** and **Rights Manager** are tools that let you manage your intellectual property (IP) on Roblox.
 
-With [License Manager](./license-manager.md), you can collaborate with creators to bring your IP to new audiences. By creating a license, you set the terms and conditions that determine how a creator can use your IP to build an experience. You can specify content standards, revenue share requirements, and set eligibility criteria for the experience, like maturity level and minimum number of daily active users.
+With [License Manager](./license-manager.md), you can collaborate with creators to bring your IP to new audiences. By creating a license, you set the terms and conditions that determine how a creator can use your IP to build a game. You can specify content standards, revenue share requirements, and set eligibility criteria for the game, like maturity level and minimum number of daily active users.
 
-Work with creators by finding existing experiences that already use your IP and offering those experiences a license, or by publishing your license to the Licenses catalog, where creators can directly request to use your IP.
+Work with creators by finding existing games that already use your IP and offering those games a license, or by publishing your license to the Licenses catalog, where creators can directly request to use your IP.
 
-[Rights Manager](../production/publishing/rights-manager.md) helps you protect your IP by allowing you to report unauthorized use of your IP on Roblox and request the removal of experiences, avatar items, and assets hosted on the platform.
+[Rights Manager](../production/publishing/rights-manager.md) helps you protect your IP by allowing you to report unauthorized use of your IP on Roblox and request the removal of games, avatar items, and assets hosted on the platform.
 
 To start using these tools, [register as a rights holder](#register-as-a-rights-holder) and [create an IP family](#create-an-ip-family).
 
@@ -73,9 +73,9 @@ To use IP tools, make sure you meet the eligibility requirements for each tool.
 ## Register as a rights holder
 
 <Alert severity="error">
-  If you plan on licensing your IP with the License Manager, you must register as a rights holder using a Roblox account that does **not** have published experiences that earn money.
+  If you plan on licensing your IP with the License Manager, you must register as a rights holder using a Roblox account that does **not** have published games that earn money.
   
-  Earnings from licenses are taxed as royalties, while earnings from experiences are taxed as services. If you use the same Roblox account to earn money from both licenses and experiences, all of your earnings will be taxed as royalties.
+  Earnings from licenses are taxed as royalties, while earnings from games are taxed as services. If you use the same Roblox account to earn money from both licenses and games, all of your earnings will be taxed as royalties.
 </Alert>
 
 Before managing your intellectual property on Roblox, you must first register either as a rights holder or as their authorized representative. This allows Roblox to confirm your legal identity with the creations that you own or represent. You only need to register once.
@@ -103,7 +103,7 @@ To register your account as a rights holder or as their authorized representativ
 
 ## Create an IP family
 
-An **IP family** is a folder inside your IP library that contains keywords and images that represent a particular IP. The keywords and images you add to your IP family are used by Roblox's scanning and search features to detect experiences across the platform that might match your IP.
+An **IP family** is a folder inside your IP library that contains keywords and images that represent a particular IP. The keywords and images you add to your IP family are used by Roblox's scanning and search features to detect games across the platform that might match your IP.
 
 To create an IP family, you must first verify ownership of your IP. After your ownership is verified, you can add official IP to that family.
 
@@ -144,7 +144,7 @@ After you submit your verification of ownership, Roblox will review your submiss
 </Alert>
 
 <Alert severity="info">
-  To receive experience matches, you must have at least 10 approved images in your IP family. If you have fewer than 10 approved images, you can still receive license requests from creators, but Roblox will not generate experience matches for your IP.
+  To receive game matches, you must have at least 10 approved images in your IP family. If you have fewer than 10 approved images, you can still receive license requests from creators, but Roblox will not generate game matches for your IP.
 </Alert>
 
 To add IP to your IP family:
@@ -159,7 +159,7 @@ To add IP to your IP family:
 
 5. Under **Primary keyword**:
 
-   1. Enter the word or phrase that is the official registered mark of your IP. This is usually the primary name of your copyrighted work and is used to find potential experience matches across Roblox. You can only have one primary keyword per language.
+   1. Enter the word or phrase that is the official registered mark of your IP. This is usually the primary name of your copyrighted work and is used to find potential game matches across Roblox. You can only have one primary keyword per language.
    2. (Optional) Click **Add translation** to include translations of your IP name by country. This is important if your IP is registered under different names in different countries.
    3. Enter a citation for your primary keyword. Include the name of the document and the specific location where the keyword appears in your supporting documentation. See [Citation guidelines](#citation-guidelines) for details.
 

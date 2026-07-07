@@ -1,15 +1,15 @@
 ---
 title: Rights Manager
-description: How to request the removal of IP infringing experiences, avatar items, and assets hosted on Roblox.
+description: How to request the removal of IP infringing games, avatar items, and assets hosted on Roblox.
 ---
 
-**Rights Manager** is an intellectual property (IP) management tool that lets rights holders or their authorized representatives report unauthorized use of their content on Roblox. All rights holders, including those that don't have a presence on Roblox, can use this tool to request the removal of unauthorized experiences, avatar items, and assets hosted on the platform.
+**Rights Manager** is an intellectual property (IP) management tool that lets rights holders or their authorized representatives report unauthorized use of their content on Roblox. All rights holders, including those that don't have a presence on Roblox, can use this tool to request the removal of unauthorized games, avatar items, and assets hosted on the platform.
 
 Before using the Rights Manager, you must [register as a rights holder](../../ip-licensing/get-started.md#register-as-an-ip-holder) and [verify ownership of your IP](../../ip-licensing/get-started.md#verify-ip-ownership).
 
 ## File an IP removal request
 
-Once Roblox accepts your registration as a rights holder, you can create IP removal requests for assets, experiences, and avatar items to protect your intellectual property.
+Once Roblox accepts your registration as a rights holder, you can create IP removal requests for assets, games, and avatar items to protect your intellectual property.
 
 To file a removal request:
 
@@ -19,7 +19,7 @@ To file a removal request:
    1. Under **Select creations for removal**:
       1. Provide a link to your creation on the Roblox platform.
       2. Provide up to 250 links to the creations you are reporting.
-      3. (Optional) Enter any additional details that might be relevant and that might help Roblox understand your report. For example, if you are reporting an asset in an experience, provide a screenshot and details of where to find the asset you are reporting.
+      3. (Optional) Enter any additional details that might be relevant and that might help Roblox understand your report. For example, if you are reporting an asset in a game, provide a screenshot and details of where to find the asset you are reporting.
       4. Click **Add Creation**.
    2. Under **Review creations**, review the details of your removal request and click **Next**.
    3. Under **Add details**:

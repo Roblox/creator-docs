@@ -1,6 +1,6 @@
 ---
 title: Cleanup and reset
-description: Create a battle royale experience in Roblox Studio. Finish coding the scripts.
+description: Create a battle royale game in Roblox Studio. Finish coding the scripts.
 next: /education/battle-royale-series/finishing-the-project
 prev: /education/battle-royale-series/ending-matches
 ---

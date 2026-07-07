@@ -5,7 +5,7 @@ next: /education/lesson-plans/digital-citizenship/animating-characters
 prev: /education/lesson-plans/digital-citizenship/lights-and-polish
 ---
 
-**Lesson Description**: Explore the coding concepts of functions, loops, and if/then statements with mini-projects that can be added to Roblox experiences like color changing platforms and traps.
+**Lesson Description**: Explore the coding concepts of functions, loops, and if/then statements with mini-projects that can be added to Roblox games like color changing platforms and traps.
 
 <table>
 <tbody>

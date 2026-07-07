@@ -465,6 +465,7 @@ methods:
         the player is notified within the dialog.
     code_samples:
       - PromptFeedbackSubmissionAsync
+      - PromptFeedbackSubmissionAsync-PlayerSupport
     parameters:
       - name: options
         type: Dictionary?

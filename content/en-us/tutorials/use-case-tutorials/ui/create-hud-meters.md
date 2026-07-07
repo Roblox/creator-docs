@@ -3,7 +3,7 @@ title: Create HUD meters
 description: Learn how to build a custom HUD meter to replace the default character health meter.
 ---
 
-A **HUD** or **Heads-Up Display** is a set of UI elements that are always visible or accessible during gameplay, such as score displays, health meters, and menu buttons. Including a HUD is essential for most experiences because it displays information that helps players to be successful in their gameplay objectives.
+A **HUD** or **Heads-Up Display** is a set of UI elements that are always visible or accessible during gameplay, such as score displays, health meters, and menu buttons. Including a HUD is essential for most games because it displays information that helps players to be successful in their gameplay objectives.
 
 A common HUD element is a health meter with an icon on the left which can be adapted into a timer bar, progress bar, or similar.
 
@@ -19,7 +19,7 @@ Using [Hazardous Space Station](https://www.roblox.com/games/99416825187098/Haza
 
 ## Enable the Device Emulator
 
-Roblox is inherently [cross‑platform](../../../projects/cross-platform.md), as players can discover and join experiences on their phone or tablet, then later continue where they left off on their PC or console. Mobile devices (phones and tablets) have the least amount of screen space, so it's important that your UI elements fit on smaller screens and that they're clearly visible to players.
+Roblox is inherently [cross‑platform](../../../projects/cross-platform.md), as players can discover and join games on their phone or tablet, then later continue where they left off on their PC or console. Mobile devices (phones and tablets) have the least amount of screen space, so it's important that your UI elements fit on smaller screens and that they're clearly visible to players.
 
 The best way to test UI designs across platforms is Studio's [Device Emulator](../../../studio/testing-modes.md#device-emulation). This tool provides a preset selection of devices and allows you to add your own custom presets.
 
@@ -34,7 +34,7 @@ The best way to test UI designs across platforms is Studio's [Device Emulator](.
 
 ## Create a screen container
 
-A `Class.ScreenGui` container holds UI objects (`Class.GuiObject|GuiObjects`) to display on a player's screen (in this tutorial, the entirety of the health meter). To display a `Class.ScreenGui` and its child objects to every player who joins the experience, place it inside the `Class.StarterGui` container. When a player joins and their character first spawns, the `Class.ScreenGui` and its contents clone into the `Class.PlayerGui` container for that player, located within the `Class.Players` container.
+A `Class.ScreenGui` container holds UI objects (`Class.GuiObject|GuiObjects`) to display on a player's screen (in this tutorial, the entirety of the health meter). To display a `Class.ScreenGui` and its child objects to every player who joins the game, place it inside the `Class.StarterGui` container. When a player joins and their character first spawns, the `Class.ScreenGui` and its contents clone into the `Class.PlayerGui` container for that player, located within the `Class.Players` container.
 
 <img src="../../../assets/ui/ui-objects/StarterGui-To-PlayerGui.png" width="840" alt="Diagram of how a ScreenGui clones from StarterGui to a player's PlayerGui" />
 
@@ -54,7 +54,7 @@ To insert an empty `Class.ScreenGui`:
 
 ### Utilize safe areas
 
-Modern phones take advantage of the entire screen but typically include notches, cutouts, and other elements that occupy screen space. Every Roblox experience also includes the **top bar controls** for quick access to the main menu, [chat](../../../chat/in-experience-text-chat.md), [leaderboard](../../../players/leaderboards.md), and more.
+Modern phones take advantage of the entire screen but typically include notches, cutouts, and other elements that occupy screen space. Every Roblox game also includes the **top bar controls** for quick access to the main menu, [chat](../../../chat/in-experience-text-chat.md), [leaderboard](../../../players/leaderboards.md), and more.
 
 <img src="../../../assets/engine-api/enums/ScreenInsets/Top-Bar-Cutout.png" width="840" alt="Mobile device showing Roblox top bar buttons and device cutout." />
 
@@ -299,7 +299,7 @@ Now, the meter bar maintains a more consistent height between wider and taller s
 
 ## Replace the default health meter
 
-Roblox experiences include a default health meter which becomes visible when characters take damage. If you keep the default meter visible, it will duplicate and potentially overlap the custom meter.
+Roblox games include a default health meter which becomes visible when characters take damage. If you keep the default meter visible, it will duplicate and potentially overlap the custom meter.
 
 <img src="../../../assets/tutorials/creating-hud-meters/Default-Health-Meter.png" width="840" alt="Default health meter overlapping and duplicating the custom health meter." />
 
@@ -311,7 +311,7 @@ To disable the default health meter, you'll use a **client script** (`Class.Loca
 
    <img src="../../../assets/tutorials/creating-hud-meters/StarterPlayer-StarterPlayerScripts.png" width="320" alt="Explorer window showing the StarterPlayerScripts container inside the StarterPlayer container." />
 
-2. Insert a new `Class.LocalScript` into the container and rename it to **HideDefaultHealthMeter** to describe its purpose. Scripts within `Class.StarterPlayerScripts` automatically run when the local player joins an experience, making it an ideal container to run a script that permanently hides the default meter.
+2. Insert a new `Class.LocalScript` into the container and rename it to **HideDefaultHealthMeter** to describe its purpose. Scripts within `Class.StarterPlayerScripts` automatically run when the local player joins a game, making it an ideal container to run a script that permanently hides the default meter.
 
    <img src="../../../assets/tutorials/creating-hud-meters/StarterPlayer-StarterPlayerScripts-HideDefaultHealthMeter.png" width="320" alt="Explorer window showing the new HideDefaultHealthMeter client script inside the StarterPlayerScripts container." />
 
@@ -339,7 +339,7 @@ To disable the default health meter, you'll use a **client script** (`Class.Loca
      <tbody>
      <tr>
        <td>`1`</td>
-       <td>Gets a reference to a core [service](../../../scripting/services.md), `Class.StarterGui`, which represents the same container where you created the custom health meter and whose contents clone into the `Class.PlayerGui` container for each player that joins the experience.</td>
+       <td>Gets a reference to a core [service](../../../scripting/services.md), `Class.StarterGui`, which represents the same container where you created the custom health meter and whose contents clone into the `Class.PlayerGui` container for each player that joins the game.</td>
      </tr>
      <tr>
        <td>`4`</td>
@@ -350,7 +350,7 @@ To disable the default health meter, you'll use a **client script** (`Class.Loca
    </AccordionDetails>
    </BaseAccordion>
 
-If you playtest the experience now and take damage, you'll notice that the default meter is disabled and hidden (you'll script the custom meter to [reflect health changes](#listen-for-health-changes) in the next section).
+If you playtest the game now and take damage, you'll notice that the default meter is disabled and hidden (you'll script the custom meter to [reflect health changes](#listen-for-health-changes) in the next section).
 
 <img src="../../../assets/tutorials/creating-hud-meters/Default-Health-Meter-Disabled.png" width="840" alt="Default health meter disabled." />
 
@@ -471,7 +471,7 @@ All default Roblox character models contain a `Class.Humanoid` class which provi
    </AccordionDetails>
    </BaseAccordion>
 
-If you playtest the experience now, you'll notice that the custom meter correctly updates both size and color as the character takes damage:
+If you playtest the game now, you'll notice that the custom meter correctly updates both size and color as the character takes damage:
 
 <video src="../../../assets/tutorials/creating-hud-meters/Meter-Change-Static.mp4" controls width="90%" alt="Video showing the meter bar updating with incremental damage from a heat vent."></video>
 
@@ -582,7 +582,7 @@ To add an extra level of polish to the custom meter, you can animate health chan
    </AccordionDetails>
    </BaseAccordion>
 
-If you playtest the experience now, you'll notice that the custom meter tweens between each change in health:
+If you playtest the game now, you'll notice that the custom meter tweens between each change in health:
 
 <video src="../../../assets/tutorials/creating-hud-meters/Meter-Change-Tweened.mp4" controls width="90%" alt="Video showing the meter bar tweening between incremental damage from a heat vent."></video>
 
@@ -715,7 +715,7 @@ The default health meter system includes a brief, subtle red tint on the screen 
    </AccordionDetails>
    </BaseAccordion>
 
-If you playtest the experience now, you'll notice that the screen briefly flashes red whenever the character takes damage:
+If you playtest the game now, you'll notice that the screen briefly flashes red whenever the character takes damage:
 
 <video src="../../../assets/tutorials/creating-hud-meters/Meter-Change-Damage-Effect.mp4" controls width="90%" alt="Video showing a red flash over the screen on incremental damage from a heat vent."></video>
 

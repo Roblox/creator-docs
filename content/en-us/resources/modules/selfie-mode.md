@@ -3,7 +3,7 @@ title: Selfie Mode
 description: The Selfie Mode module lets players capture screenshots to commemorate fun moments.
 ---
 
-Players already take screenshots to commemorate fun moments in experiences. The **SelfieMode** [developer module](../../resources/modules/index.md) lets players capture a cleaner memory of that moment without the chat window or player list, while also supporting filter effects, hiding of other characters, and posing.
+Players already take screenshots to commemorate fun moments in games. The **SelfieMode** [developer module](../../resources/modules/index.md) lets players capture a cleaner memory of that moment without the chat window or player list, while also supporting filter effects, hiding of other characters, and posing.
 
 <video src="../../assets/developer-modules/selfie-mode/Showcase.mp4" controls width="100%"></video>
 
@@ -11,7 +11,7 @@ Players already take screenshots to commemorate fun moments in experiences. The 
 
 ### Installation
 
-To use the **SelfieMode** module in an experience:
+To use the **SelfieMode** module in a game:
 
 1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
@@ -27,7 +27,7 @@ To use the **SelfieMode** module in an experience:
 
    <img src="../../assets/developer-modules/selfie-mode/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **SelfieMode** package into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **SelfieMode** package into `Class.ReplicatedStorage`. Upon running the game the module will begin running.
 
 ### Configuration
 

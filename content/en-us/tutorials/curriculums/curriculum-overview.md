@@ -21,7 +21,7 @@ If you've never used Roblox Studio or coded before, start here before following 
 
 - [Studio lesson](building/index.md) - Install
   and configure Roblox Studio.
-- [Create your first experience](core/index.md) - Build a simple experience.
+- [Create your first game](core/index.md) - Build a simple game.
 - [Luau basics](../../tutorials/fundamentals/coding-1/coding-fundamentals.md) - Learn the fundamentals of programming with Luau.
 
 </AccordionDetails>

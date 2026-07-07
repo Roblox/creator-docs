@@ -11,7 +11,7 @@ Before designing your own driftspeeder, try flying a test speeder that's already
 
    <img src="../../assets/education/general/play-button.png" width="360" />
 
-1. In the experience, walk up to the robot character under the spaceship sign and press <kbd>E</kbd> to open up a menu. On that screen, click **Race**. In a race, you'll fly through rings to make the fastest time.
+1. In the game, walk up to the robot character under the spaceship sign and press <kbd>E</kbd> to open up a menu. On that screen, click **Race**. In a race, you'll fly through rings to make the fastest time.
 
    <img src="../../assets/education/build-it-play-it-galactic-speedway/take-flight/interact-robot.png" width="50%" />
 

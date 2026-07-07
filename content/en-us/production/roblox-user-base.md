@@ -3,17 +3,17 @@ title: The Roblox user base
 description: Explains the distinct qualities of Roblox's user base and culture.
 ---
 
-Roblox's user base is distinct from other platforms in both its demographics and its expectations. Understanding the composition and culture of the Roblox community is essential to reaching a wider audience and achieving any measure of success with your experience.
+Roblox's user base is distinct from other platforms in both its demographics and its expectations. Understanding the composition and culture of the Roblox community is essential to reaching a wider audience and achieving any measure of success with your game.
 
 Roblox users value three fundamental strengths of the platform:
 
-- **Content variety** &ndash; the collective depth of the millions of unique user-generated experiences attracts and maintains a massive user base for all experiences.
+- **Content variety** &ndash; the collective depth of the millions of unique user-generated games attracts and maintains a massive user base for all games.
 
-- **Low friction** &ndash; users can launch a new experience and start playing in seconds on almost any device. This ease of entry contributes to strong organic traffic and low UA costs.
+- **Low friction** &ndash; users can launch a new game and start playing in seconds on almost any device. This ease of entry contributes to strong organic traffic and low UA costs.
 
-- **Social connection** &ndash; Roblox is in part a social network where users often play with their friends. A strong social component can massively accelerate growth and engagement for many experiences.
+- **Social connection** &ndash; Roblox is in part a social network where users often play with their friends. A strong social component can massively accelerate growth and engagement for many games.
 
-Always bear in mind how your experience plays to these strengths when designing for the Roblox audience.
+Always bear in mind how your game plays to these strengths when designing for the Roblox audience.
 
 ## Demographics
 
@@ -39,15 +39,15 @@ Roblox is also expanding **geographically**. While the US, UK and Canada are sti
 
 ## User behavior on the platform
 
-A Roblox session typically means **playing a handful of different experiences**. Roblox is closer in many ways to YouTube than the App Store. It's important to realize that individual experiences fit into a larger, overarching experience. While some users do focus their attention in a session on one experience, it's very common for users to join an experience for a short time, switch to another, and repeat. User behavior in your experience may reflect this in more ways than just session length.
+A Roblox session typically means **playing a handful of different games**. Roblox is closer in many ways to YouTube than the App Store. It's important to realize that individual games fit into a larger, overarching game. While some users do focus their attention in a session on one game, it's very common for users to join a game for a short time, switch to another, and repeat. User behavior in your game may reflect this in more ways than just session length.
 
-Understanding your audience means understanding the other experiences your users engage with regularly. Since experiences are so interconnected, there tends to be a lot of **common conventions** and **mechanics** across the platform. Studying and emulating these conventions helps your users familiarize themselves with your experience quickly and may reduce the risk of them bouncing off in frustration. For more about designing for behavior on the platform, see [Design for Roblox](../production/game-design/index.md).
+Understanding your audience means understanding the other games your users engage with regularly. Since games are so interconnected, there tends to be a lot of **common conventions** and **mechanics** across the platform. Studying and emulating these conventions helps your users familiarize themselves with your game quickly and may reduce the risk of them bouncing off in frustration. For more about designing for behavior on the platform, see [Design for Roblox](../production/game-design/index.md).
 
 ### Social factors
 
-Roblox allows users to add **Friends**, join them in their experience, and invite them to yours. Chat is built directly into every experience, so news spreads fast from user to user. In addition to socializing in various user made Groups on-platform, users are often active on platforms like Discord and X (Twitter).
+Roblox allows users to add **Friends**, join them in their game, and invite them to yours. Chat is built directly into every game, so news spreads fast from user to user. In addition to socializing in various user made Groups on-platform, users are often active on platforms like Discord and X (Twitter).
 
-Engaging experiences will generate a lot of **organic traffic** through word of mouth. Users find an experience they like, invite their friends, and then those friends invite more friends. YouTube can also attract a lot of attention, as users want to try out whatever their favorite YouTuber is playing. For more on generating traffic and building a community, see [Promote on Roblox](../production/promotion/index.md).
+Engaging games will generate a lot of **organic traffic** through word of mouth. Users find a game they like, invite their friends, and then those friends invite more friends. YouTube can also attract a lot of attention, as users want to try out whatever their favorite YouTuber is playing. For more on generating traffic and building a community, see [Promote on Roblox](../production/promotion/index.md).
 
 ## Roblox culture
 
@@ -99,7 +99,7 @@ The sharing of **community-generated content** is the foundation of Roblox cultu
   </tr>
   <tr>
     <td><b>Pass</b></td>
-    <td>A premium item sold in an experience that provides a permanent boost to gameplay.</td>
+    <td>A premium item sold in a game that provides a permanent boost to gameplay.</td>
   </tr>
   <tr>
     <td><b>Group</b></td>
@@ -111,7 +111,7 @@ The sharing of **community-generated content** is the foundation of Roblox cultu
   </tr>
   <tr>
     <td><b>Moderation</b></td>
-    <td>All content in a Roblox experience goes through a moderation process to ensure that it's appropriate according to Trust and Safety standards. Although this process occurs anytime content is uploaded prior to being published, content may also be moderated after publication.</td>
+    <td>All content in a Roblox game goes through a moderation process to ensure that it's appropriate according to Trust and Safety standards. Although this process occurs anytime content is uploaded prior to being published, content may also be moderated after publication.</td>
   </tr>
   <tr>
     <td><b>Obby</b></td>
@@ -119,15 +119,15 @@ The sharing of **community-generated content** is the foundation of Roblox cultu
   </tr>
   <tr>
     <td><b>Paid access</b></td>
-    <td>While most experiences on Roblox are free, some developers choose to charge a fee for access. Paid access can be especially useful for developers who want to test their experience with a smaller audience prior to a full, free release.</td>
+    <td>While most games on Roblox are free, some developers choose to charge a fee for access. Paid access can be especially useful for developers who want to test their game with a smaller audience prior to a full, free release.</td>
   </tr>
   <tr>
     <td><b>Place</b></td>
-    <td>Roblox experiences consist of one or more places, similar to how games comprise scenes in Unity or maps in the Unreal Engine.</td>
+    <td>Roblox games consist of one or more places, similar to how games comprise scenes in Unity or maps in the Unreal Engine.</td>
   </tr>
   <tr>
     <td><b>Private server</b></td>
-    <td>Some Roblox experiences offer users the ability to create private servers in which only they and their invited friends can play. Developers may offer private servers for free, or charge users a subscription fee to create them.</td>
+    <td>Some Roblox games offer users the ability to create private servers in which only they and their invited friends can play. Developers may offer private servers for free, or charge users a subscription fee to create them.</td>
   </tr>
   <tr>
     <td><b>Showcase</b></td>

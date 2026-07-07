@@ -5,11 +5,11 @@ next: /tutorials/curriculums/building/work-with-parts
 prev: /tutorials/curriculums/building/
 ---
 
-Welcome to your first beginner building lesson in Studio! To get started, let's walk through how to open the sample template, customize Studio's layout for your tasks, and playtest the core gameplay of the experience in which players race through an obstacle course (obby) until they reach the final platform.
+Welcome to your first beginner building lesson in Studio! To get started, let's walk through how to open the sample template, customize Studio's layout for your tasks, and playtest the core gameplay in which players race through an obstacle course (obby) until they reach the final platform.
 
 ## Open template
 
-Templates are pre-made 3D worlds that you can use as the base for your own experiences. To introduce you to building in Studio, Roblox has created the **Classic Obby** template with everything necessary for the experience to work properly, such as the code to run the gameplay and a simple skybox that you can customize at a later time.
+Templates are pre-made 3D worlds that you can use as the base for your own games. To introduce you to building in Studio, Roblox has created the **Classic Obby** template with everything necessary for the game to work properly, such as the code to run the gameplay and a simple skybox that you can customize at a later time.
 
 <img src="../../../assets/tutorials/building-lesson/ObbyThumbnail.png" width="70%" />
 
@@ -37,11 +37,11 @@ To customize the workspace for your coding task:
    If you don't see the **Explorer** and **Properties** windows, open them from Studio's **Window** menu.
    </Alert>
 
-## Playtest the experience
+## Playtest the game
 
-Before you start building your obby, it's important to take a moment to playtest the template so you can see how the gameplay works. When players join the experience, they begin in an obstacle course that starts easy and becomes more difficult, including platforms that move, push players high in the air, or set their character's health to zero.
+Before you start building your obby, it's important to take a moment to playtest the template so you can see how the gameplay works. When players join the game, they begin in an obstacle course that starts easy and becomes more difficult, including platforms that move, push players high in the air, or set their character's health to zero.
 
-To playtest the experience's gameplay:
+To playtest the game:
 
 1. In the top-left corner of Studio, keep the default **Test** playtest option, then click the **Play** button. Studio enters playtest mode.
 
@@ -51,7 +51,7 @@ To playtest the experience's gameplay:
    There are a variety of additional playtest options that you will explore in a later chapter of the tutorial.
    </Alert>
 
-1. In the experience, use the following player controls to try to avoid the obstacles and reach the final platform at the end of the course.
+1. In the game, use the following player controls to try to avoid the obstacles and reach the final platform at the end of the course.
 
      <table>
      <thead>

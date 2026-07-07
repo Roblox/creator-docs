@@ -48,7 +48,7 @@ Create and sell your first basic accessory.
 
 Rigid accessories are the most basic 3D cosmetic items that users can equip and wear on their avatar character, such props, weapons, hats, and more. Unlike [clothing accessories](../layered-accessories/index.md) that stretch and fit over a character body, rigid accessories attach to a specific point on an avatar character and don't deform or wrap over a target.
 
-To create a custom Roblox accessory for your own experience or to sell on the Marketplace, it's important to start with the following:
+To create a custom Roblox accessory for your own game or to sell on the Marketplace, it's important to start with the following:
 
 - A basic background with 3D modeling tools such as [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview).
 - An understanding of the [components that make up a rigid accessory](#components-of-a-rigid-accessory).

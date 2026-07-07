@@ -13,9 +13,9 @@ The cross-platform **Input Action System** lets you connect [actions](#input-act
 
 ## Input contexts
 
-An `Class.InputContext` is a collection of actions which holds related [input actions](#input-actions), for example `PlayContext` for in‑experience character controls and `NavContext` for controls to navigate around UI menus. You can [enable/disable contexts](#context-changes) (and their corresponding actions) through their `Class.InputContext.Enabled|Enabled` property, such as to enable the `NavContext` when an inventory menu is open and then change to the `PlayContext` when the player closes the menu and returns to primary gameplay.
+An `Class.InputContext` is a collection of actions which holds related [input actions](#input-actions), for example `PlayContext` for in-game character controls and `NavContext` for controls to navigate around UI menus. You can [enable/disable contexts](#context-changes) (and their corresponding actions) through their `Class.InputContext.Enabled|Enabled` property, such as to enable the `NavContext` when an inventory menu is open and then change to the `PlayContext` when the player closes the menu and returns to primary gameplay.
 
-Even if an experience may not use multiple input contexts initially, it's recommended to create a primary context at the top level of any input system, for example the `PlayContext` instance for input that occurs during gameplay.
+Even if a game may not use multiple input contexts initially, it's recommended to create a primary context at the top level of any input system, for example the `PlayContext` instance for input that occurs during gameplay.
 
 1. <Chip label="RECOMMENDED" size="small" variant="outlined" color="success" /> Create a `Class.Folder` named `Inputs` inside `Class.ReplicatedStorage` to hold various input contexts.
 
@@ -367,7 +367,7 @@ To connect events for simple character sprinting:
 		end)
 		```
 
-3. Playtest your experience and test the character sprint action with the [bindings](#input-bindings) you chose previously: `Enum.KeyCode.LeftShift|LeftShift` for keyboard, `Enum.KeyCode.ButtonY|ButtonY` for gamepad, and the on‑screen `SprintButton` for touch‑enabled devices. Remember that you can use the [Controller Emulator](../studio/testing-modes.md#controller-emulation) to test gamepad inputs directly in Roblox Studio.
+3. Playtest your game and test the character sprint action with the [bindings](#input-bindings) you chose previously: `Enum.KeyCode.LeftShift|LeftShift` for keyboard, `Enum.KeyCode.ButtonY|ButtonY` for gamepad, and the on‑screen `SprintButton` for touch‑enabled devices. Remember that you can use the [Controller Emulator](../studio/testing-modes.md#controller-emulation) to test gamepad inputs directly in Roblox Studio.
 
    <video controls src="../assets/ui/button-text-input/Sprint-Demo.mp4" width="720"></video>
 

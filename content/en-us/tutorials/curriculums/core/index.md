@@ -1,6 +1,6 @@
 ---
 title: Core curriculum
-description: Learn the technical and creative essentials to building Roblox experiences.
+description: Learn the technical and creative essentials to building Roblox games.
 next: /tutorials/curriculums/core/building/create-a-project
 hideInPageNavigation: true
 ---
@@ -26,7 +26,7 @@ The core curriculum helps you learn many essential Studio features across
 technical and creative disciplines.
 
 You'll learn how to recreate a simple [3D platformer
-experience](https://www.roblox.com/games/14238807008) where players collect
+game](https://www.roblox.com/games/14238807008) where players collect
 coins to trade for jump power. Players jump to navigate progressively taller
 platforms until they reach a flare on top of the highest platform.
 
@@ -51,7 +51,7 @@ inspect the place files if you want to see the end result of each chapter.
    </AccordionSummary>
    <AccordionDetails>
 
-    - [Create a project](./building/create-a-project.md) - Learn how to create a `.rbxl` file that represents your experience on the Roblox platform.
+    - [Create a project](./building/create-a-project.md) - Learn how to create a `.rbxl` file that represents your game on the Roblox platform.
     - [Create an environment with terrain](./building/create-an-environment-with-terrain.md) - Learn how to create the island where players spawn using Studio's terrain tools.
     - [Greybox a playable area](./building/greybox-a-playable-area.md) - Learn how to use solid modeling tools to plan out the basic shape of your platforms.
 
@@ -92,12 +92,12 @@ inspect the place files if you want to see the end result of each chapter.
 
    <BaseAccordion>
    <AccordionSummary>
-      <Typography variant="h4">Chapter 3 - Polish the experience</Typography>
+      <Typography variant="h4">Chapter 3 - Polish the game</Typography>
    </AccordionSummary>
    <AccordionDetails>
 
     - [Create basic visual effects](./building/create-basic-visual-effects.md) - Learn how to create two different kinds of visual effect using particle emitters.
-    - [Customize global lighting](./building/customize-global-lighting.md) - Learn how to use global lighting settings to refine the look and feel of your experience.
+    - [Customize global lighting](./building/customize-global-lighting.md) - Learn how to use global lighting settings to refine the look and feel of your game.
     - [Apply polished assets](./building/apply-polished-assets.md) - Learn how to finish your scene by replacing simple parts with complex, imported models.
 
         <a href="https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample">

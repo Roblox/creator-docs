@@ -14,7 +14,7 @@ Studio offers many debugging tools and workflows commonly found in Integrated De
 
 ## Breakpoint debugging
 
-Breakpoints are checkpoints that pause or "break" the execution of your scripts at specific lines. You can use the pauses to inspect and debug your experience, [watch](#watch) variables, and inspect the [call stack](#call-stack). Breakpoints are one of the most effective ways to debug functions, so they're one of the most important debugging tools.
+Breakpoints are checkpoints that pause or "break" the execution of your scripts at specific lines. You can use the pauses to inspect and debug your game, [watch](#watch) variables, and inspect the [call stack](#call-stack). Breakpoints are one of the most effective ways to debug functions, so they're one of the most important debugging tools.
 
 ### Management
 
@@ -235,21 +235,21 @@ The **My Watches** tab shows the value of variables or expressions that you defi
 
 #### Script Editor
 
-The debugger is integrated with the [Script Editor](../studio/script-editor.md). When your experience pauses at a breakpoint in a script, you can hover your mouse over the name of a variable to see its value. For example, you can see the composition of a table and its contained keys/values.
+The debugger is integrated with the [Script Editor](../studio/script-editor.md). When your game pauses at a breakpoint in a script, you can hover your mouse over the name of a variable to see its value. For example, you can see the composition of a table and its contained keys/values.
 
 <img alt="Mouseover a variable in Script Editor to show value" src="../assets/studio/debugging/Script-Editor-Mouseover-Table.png" width="640" />
 
 ## Additional debugging tools
 
-In addition to the debugger, Studio offers additional debugging tools for you to fix problems and bugs in your experience.
+In addition to the debugger, Studio offers additional debugging tools for you to fix problems and bugs in your game.
 
 ### Command Bar
 
-The [Command Bar](../studio/ui-overview.md#command-bar) allows you to run Luau commands while the experience is running. It is available in Studio from the **Window**&nbsp;⟩ **Script** menu and in the [Developer Console](../studio/developer-console.md).
+The [Command Bar](../studio/ui-overview.md#command-bar) allows you to run Luau commands while the game is running. It is available in Studio from the **Window**&nbsp;⟩ **Script** menu and in the [Developer Console](../studio/developer-console.md).
 
 ### Developer Console
 
-The [Developer Console](../studio/developer-console.md) provides a wide array of details including client and server output, memory usage, network performance, and more. To open console while testing or playing an experience, type `/console` into the chat or press <kbd>F9</kbd>.
+The [Developer Console](../studio/developer-console.md) provides a wide array of details including client and server output, memory usage, network performance, and more. To open console while testing or playing a game, type `/console` into the chat or press <kbd>F9</kbd>.
 
 ### Log files
 

@@ -3,7 +3,7 @@ title: Social Interactions
 description: The Social Interactions module lets avatars better express themselves and their natural movements.
 ---
 
-Your avatar is your identity in any space you enter. The **SocialInteractions** [developer module](../../resources/modules/index.md) lets each user better express themselves and their natural movements, adding a touch of realism to the experience.
+Your avatar is your identity in any space you enter. The **SocialInteractions** [developer module](../../resources/modules/index.md) lets each user better express themselves and their natural movements, adding a touch of realism to the game.
 
 This module includes the following features:
 
@@ -15,7 +15,7 @@ This module includes the following features:
 	</tr>
 	<tr>
 		<td>**Chat&nbsp;Animations**</td>
-		<td>Adds some liveliness to the in-experience chat by making avatars occasionally play animations, depending on the content of the messages they send. The list of "trigger&nbsp;words" that activate each animation is configurable.</td>
+		<td>Adds some liveliness to the in-game chat by making avatars occasionally play animations, depending on the content of the messages they send. The list of "trigger&nbsp;words" that activate each animation is configurable.</td>
 	</tr>
 </tbody>
 </table>
@@ -30,7 +30,7 @@ The body orientation feature uses `Datatype.CFrame` adjustment of the **Neck** a
 
 ### Installation
 
-To use the **SocialInteractions** module in an experience:
+To use the **SocialInteractions** module in a game:
 
 1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
@@ -46,7 +46,7 @@ To use the **SocialInteractions** module in an experience:
 
    <img src="../../assets/developer-modules/social-interactions/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **SocialInteractions** model into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **SocialInteractions** model into `Class.ReplicatedStorage`. Upon running the game the module will begin running.
 
 ### Configuration
 

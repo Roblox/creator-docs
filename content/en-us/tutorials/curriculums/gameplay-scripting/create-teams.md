@@ -1,16 +1,16 @@
 ---
 title: Create teams
-description: Explains how separate players into teams as they join an experience.
+description: Explains how separate players into teams as they join a game.
 prev: /tutorials/curriculums/gameplay-scripting/
 next: /tutorials/curriculums/gameplay-scripting/spawn-respawn
 ---
 
 **Creating teams** lets you sort players into groups that compete to complete a common objective, such as scoring the most points or crossing a finish line before other enemy team members. For a first-person shooter, creating teams is particularly important because it establishes complex, coordinated gameplay strategies beyond the skill set of any individual player.
 
-Using the [sample laser tag experience](https://www.roblox.com/games/14817965191/Laser-Tag-1A) as a reference, this section of the tutorial teaches you how to sort players into teams, including scripting guidance on:
+Using the [sample laser tag game](https://www.roblox.com/games/14817965191/Laser-Tag-1A) as a reference, this section of the tutorial teaches you how to sort players into teams, including scripting guidance on:
 
 - Using the `Class.Teams` service's default functionality to assign players into either the green or pink team.
-- Helping players differentiate between their allies and enemy team members through on-screen and in-experience team indicators.
+- Helping players differentiate between their allies and enemy team members through on-screen and in-game team indicators.
 - Enabling forgiving gameplay that doesn't penalize players for blasting their teammates.
 
 After you complete this section, you will learn about the scripts that allow players to spawn or respawn to a neutral lobby or team spawn zone, customize first-person force field visuals, and handle client state both from the server and the client.
@@ -19,7 +19,7 @@ After you complete this section, you will learn about the scripts that allow pla
 
 ## Assign team colors
 
-The sample laser tag experience uses the `Class.Teams` service as a basis for creating two teams because the service offers built-in team sorting behavior that broadly works out-of-the-box. For example, without any additional scripting effort, the service handles actions like:
+The sample laser tag game uses the `Class.Teams` service as a basis for creating two teams because the service offers built-in team sorting behavior that broadly works out-of-the-box. For example, without any additional scripting effort, the service handles actions like:
 
 - Sorting and balancing players evenly into each team.
 - Grouping players under their team on the leaderboard.
@@ -50,7 +50,7 @@ Because of this default functionality, the sample enables the `Class.Teams` serv
 To learn more about this color theme, see [Select a Color Theme](../user-interface-design/choose-an-art-style.md#select-a-color-theme) from the UI Curriculum.
 </Alert>
 
-It's important to note the exact `Datatype.BrickColor` name for the `Class.Team.Color` property because the experience uses this name throughout many scripts in the experience to keep track of players as they sort into teams, increment points as players tag out enemy players during a round, and update custom UI elements. For example, when a round begins, **ReplicatedStorage** ⟩ **HUDGuiSetup** requires `startSyncingTeamColor`,and `startSyncingTeamPoints` which both reference `Class.Team.Color` to perform unique actions for each team.
+It's important to note the exact `Datatype.BrickColor` name for the `Class.Team.Color` property because the game uses this name throughout many scripts in the game to keep track of players as they sort into teams, increment points as players tag out enemy players during a round, and update custom UI elements. For example, when a round begins, **ReplicatedStorage** ⟩ **HUDGuiSetup** requires `startSyncingTeamColor`,and `startSyncingTeamPoints` which both reference `Class.Team.Color` to perform unique actions for each team.
 
 <Tabs>
   <TabItem key = "1" label="startSyncingTeamColor">
@@ -132,14 +132,14 @@ end
 
 ## Display team indicators
 
-Once a player is sorted into a team, they need to be able to quickly decipher what team they belong to, and differentiate between their allies and enemy team members. This ability is important because the gameplay of a first-person shooter experience requires players to make quick strategic decisions while they're in combat zones so that they don't get tagged out and lose the round.
+Once a player is sorted into a team, they need to be able to quickly decipher what team they belong to, and differentiate between their allies and enemy team members. This ability is important because the gameplay of a first-person shooter game requires players to make quick strategic decisions while they're in combat zones so that they don't get tagged out and lose the round.
 
-To set players up for success, the sample laser tag experience provides multiple team indicators both on-screen and in the 3D space:
+To set players up for success, the sample laser tag game provides multiple team indicators both on-screen and in the 3D space:
 
 - **Player Indicator** – Custom on-screen UI that displays the player's team color and icon.
-- **Team Indicator** – Custom in-experience UI that displays the player's team color.
+- **Team Indicator** – Custom in-game UI that displays the player's team color.
 - **Leaderboard Indicator** – Default Teams service on-screen UI that groups players underneath their team color.
-- **Name Tint** – Default Teams service in-experience UI that tints the player's name above their head to their team color.
+- **Name Tint** – Default Teams service in-game UI that tints the player's name above their head to their team color.
 
 <div><b>On-screen Indicators</b></div>
 <GridContainer numColumns="2">
@@ -153,7 +153,7 @@ To set players up for success, the sample laser tag experience provides multiple
   </figure>
 </GridContainer>
 
-<div><b>In-Experience Indicators</b></div>
+<div><b>In-game Indicators</b></div>
 <GridContainer numColumns="2">
   <figure>
     <img width="100%" img src="../../../assets/tutorials/gameplay-scripting/Creating-Teams/Team-Indicator.jpg" alt="" />
@@ -169,7 +169,7 @@ You don't need to do any additional work for the Leaderboard Indicator or Name T
 
 ## Disable friendly fire
 
-While some first-person shooter experiences penalize players who blast their own teammates, the sample laser tag experience allows for more forgiving gameplay by disabling friendly fire. This design decision allows everyone to only increase their team score, not subtract from it due to gameplay accidents.
+While some first-person shooter games penalize players who blast their own teammates, the sample laser tag game allows for more forgiving gameplay by disabling friendly fire. This design decision allows everyone to only increase their team score, not subtract from it due to gameplay accidents.
 
 To understand how the sample implements this functionality, examine how **ServerScriptService** ⟩ **LaserBlastHandler** ⟩ **processTaggedPlayers** ⟩ **onPlayerTagged** handles dealing damage to tagged players. When the server detects a collision between a player's blast and another player, it calls the `onPlayerTagged` function to understand which player fired the blast, which player was hit by the blast, and how much damage it should remove from the player's health according to the blaster type.
 
@@ -209,6 +209,6 @@ return onPlayerTagged
 For more information on what happens when a player fires their blaster, see [Implement blaster behavior](./implement-blasters.md) and [Detect hits](./detect-hits.md) later on in the tutorial.
 </Alert>
 
-If you were to test the experience right now, all players would randomly spawn at either spawn zone at opposite ends of the arena regardless of what team they belong to, meaning that each team would spawn right next to each other.
+If you were to test the game right now, all players would randomly spawn at either spawn zone at opposite ends of the arena regardless of what team they belong to, meaning that each team would spawn right next to each other.
 
 To address this issue, the following section of the tutorial teaches you about the custom logic behind restricting team spawning to certain spawn locations, handling client state as players leave the spawn area after selecting their blaster, and respawning players back to their spawn zone or lobby area when their health reaches zero.

@@ -9,7 +9,7 @@ comments: The links to the Materials and PBR Modeling guides must be replaced by
 
 <br/>
 
-**Applying polished assets** is the last step in building your final environment, in which you swap out your greybox placeholder assets for high-quality polished assets in order to meet your experience's aesthetic goals and design requirements. This exciting section of the curriculum is where you see your world come to life into a cohesive environment that is complete and ready for publication.
+**Applying polished assets** is the last step in building your final environment, in which you swap out your greybox placeholder assets for high-quality polished assets in order to meet your game's aesthetic goals and design requirements. This exciting section of the curriculum is where you see your world come to life into a cohesive environment that is complete and ready for publication.
 
 Using the [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) file as a reference, this section of the tutorial teaches you how to use the Creator Store to find and add a sample asset library into your project, continue your organization structure to sort your new assets into meaningful categories, and apply the asset library to the 3D space.
 
@@ -21,9 +21,9 @@ Assistant is particularly effective at this kind of repetitive, deterministic se
 
 ## Get asset library
 
-The **Creator Store** is a tab of the **Toolbox** that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add an individual asset or asset library directly into an open experience.
+The **Creator Store** is a tab of the **Toolbox** that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add an individual asset or asset library directly into an open game.
 
-Asset libraries are collections of assets you can place into a central location of your experience for easy access and reuse. The asset library you will use for your project from the Creator Store includes six 3D assets, two custom `Class.MaterialVariant` materials, and the final particle effects from [Create basic visual effects](./create-basic-visual-effects.md). The six meshes are as follows:
+Asset libraries are collections of assets you can place into a central location of your game for easy access and reuse. The asset library you will use for your project from the Creator Store includes six 3D assets, two custom `Class.MaterialVariant` materials, and the final particle effects from [Create basic visual effects](./create-basic-visual-effects.md). The six meshes are as follows:
 
 <GridContainer numColumns="3">
   <figure>
@@ -54,7 +54,7 @@ Asset libraries are collections of assets you can place into a central location 
 
 These assets are either single `Class.MeshPart` objects or `Class.Model` objects containing multiple meshes. They use custom materials and physically-based rendering (PBR) textures for realistic shading. For more information, see [Materials - Custom Materials](../../../../parts/materials.md#custom-materials) and [PBR Textures](../../../../art/modeling/surface-appearance.md).
 
-To get the asset library from your inventory into your experience:
+To get the asset library from your inventory into your game:
 
 1. Open the asset library's [details page](https://create.roblox.com/store/asset/14238769242) on the Creator Store and click **Get Model** in the top-right corner. The library is now in your inventory, and you can reuse these assets in any project on the platform.
 2. Back in Studio, click **Toolbox** in the **Home** toolbar tab, switch to the **Inventory** tab, and click the **Core Building and Scripting** tile. The library appears in the viewport.
@@ -70,7 +70,7 @@ To get the asset library from your inventory into your experience:
 Before placing assets, extend the folder structure you started in [Greybox a playable area](../../core/building/greybox-a-playable-area.md):
 
 1. In the **Explorer**, add two new folders inside **World** and name them **Platforms** and **Mountains**.
-2. Inside **Platforms**, add a `Class.Model` for each sea stack level and name them to match your greybox levels. For example, the sample experience has 18 individual model containers for every platform in the environment.
+2. Inside **Platforms**, add a `Class.Model` for each sea stack level and name them to match your greybox levels. For example, the sample game has 18 individual model containers for every platform in the environment.
 
 <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/Organization-Structure.jpg" alt="Studio's Explorer window with all of the level model objects underneat the Platforms folder." width="25%" />
 

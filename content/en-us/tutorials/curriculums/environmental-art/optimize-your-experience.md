@@ -1,5 +1,5 @@
 ---
-title: Optimize your experience
+title: Optimize your game
 description: Explains how to configure your assets and Studio settings to improve frame rate and performance levels.
 prev: /tutorials/curriculums/environmental-art/construct-your-world
 ---
@@ -8,7 +8,7 @@ prev: /tutorials/curriculums/environmental-art/construct-your-world
 
 <br/>
 
-**Optimizing your experience** is the process of configuring your assets and Studio settings to keep your frame rate and performance levels high for devices with memory and graphics processing unit (GPU) limitations. This process ensures that nearly every user has the same gameplay and visual experience while they're viewing your environment.
+**Optimizing your game** is the process of configuring your assets and Studio settings to keep your frame rate and performance levels high for devices with memory and graphics processing unit (GPU) limitations. This process ensures that nearly every user has the same gameplay and visual experience while they're viewing your environment.
 
 Using the [Environment Art - Optimizing](https://www.roblox.com/games/14447845297/Environment-Art-Optimizing) `.rbxl` file as a reference, this section of the environmental art curriculum shows you how to review and configure your place file for optimal graphics, including guidance on:
 
@@ -21,24 +21,24 @@ While the Roblox Engine handles most optimization work for you, you can assist i
 
 ## Review physics and render parameters
 
-In [Assemble an asset library](./assemble-an-asset-library.md), you learned how important it is to set physics and rendering parameters that allow your assets to retain their high visual quality across devices with memory and GPU limitations. However, it's common as you construct your environment to adjust these parameters according to an asset's contextual position and purpose within your experience. For example, much of the foliage in the final sample laser tag environment casts shadows despite a performance cost because it adds to the realism of the environment.
+In [Assemble an asset library](./assemble-an-asset-library.md), you learned how important it is to set physics and rendering parameters that allow your assets to retain their high visual quality across devices with memory and GPU limitations. However, it's common as you construct your environment to adjust these parameters according to an asset's contextual position and purpose within your game. For example, much of the foliage in the final sample laser tag environment casts shadows despite a performance cost because it adds to the realism of the environment.
 
 When you modify physics and rendering parameters, it's useful near the end of the development process to review all parameters to see where you can optimize a parameter while maintaining aesthetic goals and gameplay requirements. To illustrate, you can disable `Class.BasePart.CastShadow` property for the foliage near the edges of the gameplay area to save on performance without interfering with a user's gameplay or visual experience.
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../../assets/tutorials/environmental-art-curriculum/Section5/ReviewingParameters-Disabled.jpg" alt="An outdoor view of the sample laser tag experience that casts shadows." width="100%"/>
+    <img src="../../../assets/tutorials/environmental-art-curriculum/Section5/ReviewingParameters-Disabled.jpg" alt="An outdoor view of the sample laser tag game that casts shadows." width="100%"/>
     <figcaption>`Class.BasePart.CastShadow` = Disabled</figcaption>
   </figure>
   <figure>
-    <img src="../../../assets/tutorials/environmental-art-curriculum/Section5/ReviewingParameters-Enabled.jpg" alt="An outdoor view of the sample laser tag experience that doesn't cast shadows. There is almost no difference in this view, but it improves performance." width="100%"/>
+    <img src="../../../assets/tutorials/environmental-art-curriculum/Section5/ReviewingParameters-Enabled.jpg" alt="An outdoor view of the sample laser tag game that doesn't cast shadows. There is almost no difference in this view, but it improves performance." width="100%"/>
     <figcaption>`Class.BasePart.CastShadow` = Enabled</figcaption>
   </figure>
 </GridContainer>
 
 ## Cull nonessential content
 
-After you review your physics and rendering parameters, you can review the assets themselves to see where you can cull any nonessential content from the experience that doesn't affect your gameplay, such as identical textures with different asset IDs, complex geometry with many vertices, or transparencies that layer on top of each other depending on the camera view. The following sections detail what you can do to review this content, and why it helps optimization efforts.
+After you review your physics and rendering parameters, you can review the assets themselves to see where you can cull any nonessential content from the game that doesn't affect your gameplay, such as identical textures with different asset IDs, complex geometry with many vertices, or transparencies that layer on top of each other depending on the camera view. The following sections detail what you can do to review this content, and why it helps optimization efforts.
 
 ### Remove duplicate textures
 
@@ -55,7 +55,7 @@ If you find that you need to make more adjustments to increase frame rate across
 - Combining groups of meshes into a single asset.
 - Decreasing the polygon count of assets with geometric complexity.
 
-Expanding on this first technique, every unique asset in your experience represents a draw call on the GPU in which it sends a signal to the GPU to call information in order for the Roblox Engine to render the asset correctly. The more unique assets you have, the more draw calls the system needs to make. For this reason, if you have a group of meshes that make up a larger component in your experience, you can group them together in third-party modeling tools to reduce the need for multiple draw calls.
+Expanding on this first technique, every unique asset in your game represents a draw call on the GPU in which it sends a signal to the GPU to call information in order for the Roblox Engine to render the asset correctly. The more unique assets you have, the more draw calls the system needs to make. For this reason, if you have a group of meshes that make up a larger component in your game, you can group them together in third-party modeling tools to reduce the need for multiple draw calls.
 
 To illustrate this point, the final sample laser tag environment parents multiple parts and meshes together to create the large towers outside of the building. If you were to combine all of these individual components together, you could make it a single asset with only one asset ID, and reduce the number of draw calls from 8 to 1. However, it's important to note that this technique removes your ability to freely change the visual and physical characteristics of each component, such as its position or material.
 
@@ -85,7 +85,7 @@ For example, consider the following view of a planter in the sample environment.
   </figure>
 </GridContainer>
 
-When you finish reviewing all of your content to ensure it's optimal across devices, your experience is now ready for publication!
+When you finish reviewing all of your content to ensure it's optimal across devices, your game is now ready for publication!
 
 <Alert severity="info">
 We're interested in hearing from you about your experience following the Environmental Art Curriculum. If you have any questions, concerns, or additional feedback on the process, please comment on our [Environmental Art Curriculum Q&A](https://devforum.roblox.com/t/feedback-on-environmental-art-curriculum/2592218).

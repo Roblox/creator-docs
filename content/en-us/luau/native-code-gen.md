@@ -3,7 +3,7 @@ title: Native code generation
 description: Luau Native Code Generation allows Luau code to be translated directly to CPU machine code.
 ---
 
-With Luau support for native code generation, server-side scripts in your experience can be compiled directly into the machine code instructions that CPUs execute, rather than regular bytecode that the Luau VM operates on. This feature can be used to improve execution speed for some scripts on the server, in particular those that have a lot of numerical computation without using too many heavy Luau library or Roblox API calls.
+With Luau support for native code generation, server-side scripts in your game can be compiled directly into the machine code instructions that CPUs execute, rather than regular bytecode that the Luau VM operates on. This feature can be used to improve execution speed for some scripts on the server, in particular those that have a lot of numerical computation without using too many heavy Luau library or Roblox API calls.
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/llR_pNlJDQw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
@@ -44,7 +44,7 @@ The following tips will help you benefit most from native code generation:
 
   - Code compilation time is required which can increase the startup time of servers.
   - Extra memory is occupied to store natively compiled code.
-  - There's a limit on the total allowed amount of natively compiled code in an experience.
+  - There's a limit on the total allowed amount of natively compiled code in a game.
 
 These problems can be addressed by a judicious use of the `@native` attribute.
 

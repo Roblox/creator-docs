@@ -23,7 +23,7 @@ To enable adaptive timestepping in Studio:
 
    <img src="../assets/physics/adaptive-timestepping/PhysicsSteppingMethod-Adaptive.png" alt="" width="320" />
 
-To observe the timestepping process in action, you can open the Studio **Microprofiler** (<kbd>Ctrl</kbd><kbd>F6</kbd>; <kbd>⌘</kbd><kbd>F6</kbd>). Once the experience is running, press <kbd>Ctrl</kbd><kbd>P</kbd> (<kbd>⌘</kbd><kbd>P</kbd>) to pause at the current frame.
+To observe the timestepping process in action, you can open the Studio **Microprofiler** (<kbd>Ctrl</kbd><kbd>F6</kbd>; <kbd>⌘</kbd><kbd>F6</kbd>). Once the game is running, press <kbd>Ctrl</kbd><kbd>P</kbd> (<kbd>⌘</kbd><kbd>P</kbd>) to pause at the current frame.
 
 Under the scope named **physicsStepped**, observe that the scope name of **worldStep** now reads **worldStep&nbsp;-&nbsp;Adaptive**.
 
@@ -51,8 +51,8 @@ Once enabled, simulated parts will be outlined by their current simulation rate.
 
 ## Fixed-rate scenarios
 
-Adaptive timestepping can improve physics performance by up to 2.5 times and it is recommended in most cases. However, some experiences should use **Fixed** mode (240&nbsp;Hz), including:
+Adaptive timestepping can improve physics performance by up to 2.5 times and it is recommended in most cases. However, some games should use **Fixed** mode (240&nbsp;Hz), including:
 
-Experiences that require highly accurate simulations and stability, such as racing games, "destruction" simulations, or experiences featuring complex mechanisms like tanks.
+Games that require highly accurate simulations and stability, such as racing games, "destruction" simulations, or games featuring complex mechanisms like tanks.
 
 Simulations where most parts default to the 240&nbsp;Hz solver island (red outlines during [debugging](#debug-visualization)). When 240&nbsp;Hz islands interact with islands of different frequencies (60&ndash;120&nbsp;Hz), those islands are converted to 240&nbsp;Hz with an overhead that may negate any performance gains resulting from adaptive timestepping.

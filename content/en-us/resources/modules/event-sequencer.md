@@ -7,9 +7,9 @@ description: Event Sequencer is a powerful framework for building live, cross-se
 
 - Build an event or cutscene on a structured framework through scheduled configurations of audio, animations, and tweens.
 - Transition between multiple scenes across multiple servers, synchronizing complex animations and visuals to a timeline.
-- Seek through an event and preview the experience for testing and development purposes.
+- Seek through an event and preview the game for testing and development purposes.
 
-This framework has been battle tested in Roblox events like the [Twenty One Pilots](https://www.youtube.com/watch?v=0fAhhoXK12o) and [24kGoldn](https://www.youtube.com/watch?v=UfzqGkfRKr4) concerts, as well as many highly visited experiences.
+This framework has been battle tested in Roblox events like the [Twenty One Pilots](https://www.youtube.com/watch?v=0fAhhoXK12o) and [24kGoldn](https://www.youtube.com/watch?v=UfzqGkfRKr4) concerts, as well as many highly visited games.
 
 <figure>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0fAhhoXK12o" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
@@ -23,7 +23,7 @@ To see **EventSequencer** in action within an editable place, check out the [Con
 
 ### Installation
 
-To use the **EventSequencer** framework in an experience:
+To use the **EventSequencer** framework in a game:
 
 1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
@@ -39,7 +39,7 @@ To use the **EventSequencer** framework in an experience:
 
    <img src="../../assets/developer-modules/event-sequencer/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **EventSequencer** model into `Class.ServerScriptService`. Upon running the experience the module will begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **EventSequencer** model into `Class.ServerScriptService`. Upon running the game the module will begin running.
 
 ### Framework modes
 
@@ -48,7 +48,7 @@ To use the **EventSequencer** framework in an experience:
 The default framework mode is **replace mode** in which you design unique [scenes](#create-scenes) by placing [3D objects](../../parts/index.md), [terrain](../../parts/terrain.md), [lighting properties](../../environment/lighting.md), [environmental effects](../../environment/index.md#environment), and user interface objects into that scene's **Environment** folder. When a scene loads, those objects and properties get distributed into `Class.Workspace`, `Class.Terrain`, and `Class.Lighting`, **replacing** existing objects/properties to form a cloned space.
 
 <Alert severity="success">
-This mode is best for **new** event experiences consisting of multiple sequential scenes, such as a pre-show venue to the main concert to a post-show party.
+This mode is best for **new** event games consisting of multiple sequential scenes, such as a pre-show venue to the main concert to a post-show party.
 </Alert>
 
 #### Inline mode
@@ -56,7 +56,7 @@ This mode is best for **new** event experiences consisting of multiple sequentia
 An alternate framework mode is **inline mode** in which you similarly design unique [scenes](#create-scenes) with scripting logic for their flow/events, but the framework will **not** destroy existing [3D objects](../../parts/index.md), [terrain](../../parts/terrain.md), [lighting properties](../../environment/lighting.md), [environmental effects](../../environment/index.md#environment), and user interface objects in order to clone assets/properties from a scene's **Environment** folder upon loading.
 
 <Alert severity="success">
-This mode is best for existing experiences, as it preserves the design and layout of your place while letting you orchestrate events such as cutscenes.
+This mode is best for existing games, as it preserves the design and layout of your place while letting you orchestrate events such as cutscenes.
 </Alert>
 
 To enable inline mode:
@@ -176,7 +176,7 @@ All three hooks can also repeat if the scene is replayed:
 Schema [configurations](#schema-configurations) define the core operations of a scene, for example [playing audio](#audio) at 00:32, queuing an [animation](#animate) to sync with that audio, [scheduling a scene event](#schedule) like a fireworks show, and more. Every configuration supports certain callback functions where the first parameter (`self`) is the configuration instance.
 
 <Alert severity="info">
-You can use configurations in both the [Client](#client) and [Server](#server) module schemas, but it's recommended that you perform operations like [audio](#audio) and [animations](#animate) on the client side, just like in a typical experience.
+You can use configurations in both the [Client](#client) and [Server](#server) module schemas, but it's recommended that you perform operations like [audio](#audio) and [animations](#animate) on the client side, just like in a typical game.
 </Alert>
 
 ### Seek scenes

@@ -124,7 +124,7 @@ Changing a key's value is the same as any other variable; use the equal `=` oper
 
 ## Pre-existing variables as keys
 
-Dictionaries can interact with pre-existing variables declared in other parts of a script. The following coding example uses a variable to add a player's name as a key when they join the experience and then sets their points value to 0.
+Dictionaries can interact with pre-existing variables declared in other parts of a script. The following coding example uses a variable to add a player's name as a key when they join the game and then sets their points value to 0.
 
 1. In **ServerScriptService**, create a new script named PlayerPoints. In the script, get the Players Service and create an empty dictionary named `playerPoints`.
 

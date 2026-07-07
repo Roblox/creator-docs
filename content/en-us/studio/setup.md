@@ -5,7 +5,7 @@ description: Explains how to install Roblox Studio on your system.
 
 import StudioSystemReqs from '../includes/studio/system-reqs.md'
 
-Create immersive 3D experiences on Roblox with **Roblox Studio**, a free application available on Windows and Mac.
+Create immersive 3D games on Roblox with **Roblox Studio**, a free application available on Windows and Mac.
 
 <UseStudioButton variant='blueLogoIconButton' />
 
@@ -37,7 +37,7 @@ You can customize Studio to suit your workflow across various levels:
 
 ## Updates
 
-In contrast to certain other engines, every experience runs on the latest version of the Roblox engine. You should keep Studio up‑to‑date to utilize the latest APIs and features.
+In contrast to certain other engines, every game runs on the latest version of the Roblox engine. You should keep Studio up‑to‑date to utilize the latest APIs and features.
 
 If your current version of Studio is outdated, you'll see an **Update** button in the upper‑right corner. Clicking the button will prompt you to save/close the currently open place so that Studio can automatically update and restart.
 

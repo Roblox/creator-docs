@@ -6,7 +6,7 @@ hideInPageNavigation: true
 
 export const sections = [
   {
-    description: "Our efficient discovery capabilities offer a massive opportunity to find the right audience and acquire new users. We also provide a robust analytics suite of tools to measure and gain insights on your experience's performance. This allows you to adjust content strategies and rapidly iterate to get your desired outcome.",
+    description: "Our efficient discovery capabilities offer a massive opportunity to find the right audience and acquire new users. We also provide a robust analytics suite of tools to measure and gain insights on your game's performance. This allows you to adjust content strategies and rapidly iterate to get your desired outcome.",
     content: [
       {
         title: "Discovery for millions of users on a variety of devices and form factors",
@@ -33,7 +33,7 @@ export const sections = [
     content: [
       {
         title: "View metrics and performance",
-        description: "Measure and gain insight into your experience's performance to adjust content strategies. View dashboards on retention, engagement, acquisition, and monetization.",
+        description: "Measure and gain insight into your game's performance to adjust content strategies. View dashboards on retention, engagement, acquisition, and monetization.",
         image: "/assets/analytics/analytics-dashboard/Explore-Page.png",
         links: [
           { text: "Core metrics", href: "./production/analytics/analytics-dashboard" },
@@ -42,15 +42,15 @@ export const sections = [
       },
       {
         title: "Create and track events",
-        description: "Add event tracking to your experiences and visualize monetization and usage patterns.",
+        description: "Add event tracking to your games and visualize monetization and usage patterns.",
         image: "/assets/analytics/event-types/Overview-Economy-Funnels.png",
         links: [
           { text: "Events", href: "./production/analytics/event-types" }
         ]
       },
       {
-        title: "Grow your experiences with great design",
-        description: "Learn how successful experiences design their core game loops, UI and UX, monetization, and more.",
+        title: "Grow your games with great design",
+        description: "Learn how successful games design their core game loops, UI and UX, monetization, and more.",
         image: "./assets/game-design/introduction-to-quest-design/quest-design-7.png",
         links: [
           { text: "Design", href: "./production/game-design" }

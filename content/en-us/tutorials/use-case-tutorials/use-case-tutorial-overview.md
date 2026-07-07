@@ -9,7 +9,7 @@ hideInPageNavigation: true
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Modeling</Typography>
 
 <div style={{marginBottom: 24}}>
-**Modeling** is the process of crafting 3D objects for props, environments, and characters within your experiences. This process is important because it allows you to create both the visual and interactive content that encourages players to explore and engage with the 3D space.
+**Modeling** is the process of crafting 3D objects for props, environments, and characters within your games. This process is important because it allows you to create both the visual and interactive content that encourages players to explore and engage with the 3D space.
 </div>
 
 <Typography variant='h2'>Studio modeling</Typography>
@@ -131,7 +131,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>User interfaces</Typography>
 
 <div style={{marginBottom: 24}}>
-**User interfaces** (UI) are visual or interactive elements that either provide essential gameplay information or teach players how to complete unique user flows within your experiences. Strategically implementing UI in key locations on-screen and in the 3D space is important because UI communicates what players need to know to be successful and to have a positive user experience, such as information about their main objective or their location in the overall map.
+**User interfaces** (UI) are visual or interactive elements that either provide essential gameplay information or teach players how to complete unique user flows within your games. Strategically implementing UI in key locations on-screen and in the 3D space is important because UI communicates what players need to know to be successful and to have a positive user experience, such as information about their main objective or their location in the overall map.
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
@@ -212,7 +212,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 <AccordionDetails>
 
 - [On-screen UI](../../ui/on-screen-containers.md)
-- [In-experience UI](../../ui/in-experience-containers.md)
+- [In-game UI](../../ui/in-experience-containers.md)
 - [Labels](../../ui/labels.md)
 - [Buttons](../../ui/buttons.md)
 - [Frames](../../ui/frames.md)
@@ -226,7 +226,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Audio</Typography>
 
 <div style={{marginBottom: 24}}>
-**Audio** is sound that either increases a player's enjoyment of an experience, or delivers feedback for their actions, gameplay status, or events. While often overlooked, audio is important because it immerses players within your environments, makes 3D worlds feel realistic, and provides information that helps players meet their goals.
+**Audio** is sound that either increases a player's enjoyment of a game, or delivers feedback for their actions, gameplay status, or events. While often overlooked, audio is important because it immerses players within your environments, makes 3D worlds feel realistic, and provides information that helps players meet their goals.
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
@@ -334,7 +334,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Lighting</Typography>
 
 <div style={{marginBottom: 24}}>
-**Lighting** is luminescence within the 3D space that allows players to see and interact with objects in your experiences. Adding and customizing light sources to meet the needs of your experience is important because lighting establishes mood, highlights important objects, and immerses players in either realistic or stylized environments.
+**Lighting** is luminescence within the 3D space that allows players to see and interact with objects in your games. Adding and customizing light sources to meet the needs of your game is important because lighting establishes mood, highlights important objects, and immerses players in either realistic or stylized environments.
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
@@ -467,7 +467,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Physics</Typography>
 
 <div style={{marginBottom: 24}}>
-**Physics** in Studio is the simulation of real-world physical systems like gravity, aerodynamics, and friction. Understanding how Roblox emulates physics in real time is important because it allows you to create realistic and intuitive behavior in your experiences that's familiar and intuitive to players.
+**Physics** in Studio is the simulation of real-world physical systems like gravity, aerodynamics, and friction. Understanding how Roblox emulates physics in real time is important because it allows you to create realistic and intuitive behavior in your games that's familiar and intuitive to players.
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
@@ -651,7 +651,7 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Scripting</Typography>
 
 <div style={{marginBottom: 24}}>
-**Scripting** in Studio is the use of the [Luau](https://luau.org/) programming language to add custom, dynamic behavior to your experiences so that they are engaging and fun to play. Understanding how programming works on Roblox is important because it allows you to write and organize your scripts that control things like logic, movement, events, and interactions between objects in the 3D space in a way that improves performance and optimization.
+**Scripting** in Studio is the use of the [Luau](https://luau.org/) programming language to add custom, dynamic behavior to your games so that they are engaging and fun to play. Understanding how programming works on Roblox is important because it allows you to write and organize your scripts that control things like logic, movement, events, and interactions between objects in the 3D space in a way that improves performance and optimization.
 
 </div>
 
@@ -742,7 +742,7 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Camera and input</Typography>
 
 <div style={{marginBottom: 24}}>
-**Camera** is the object that determines what the player is able to see in the 3D space, and **input** is the method or device in which players access and interact with your experience, such as a mobile device or gamepad. Designing gameplay around your camera configuration and which input types players can use to access your experience is important because your design decisions directly impact accessibility, user experience, and how players can engage with objects.
+**Camera** is the object that determines what the player is able to see in the 3D space, and **input** is the method or device in which players access and interact with your game, such as a mobile device or gamepad. Designing gameplay around your camera configuration and which input types players can use to access your game is important because your design decisions directly impact accessibility, user experience, and how players can engage with objects.
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
@@ -832,7 +832,7 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Data storage</Typography>
 
 <div style={{marginBottom: 24}}>
-**Data stores** are a service you can use to save and load persistent player data across different player sessions. They store important information, like a player's progress or inventory, and allow you to retrieve it for the player next time they join your experience. Without data stores, your players would lose all of their progress every time they left the experience.
+**Data stores** are a service you can use to save and load persistent player data across different player sessions. They store important information, like a player's progress or inventory, and allow you to retrieve it for the player next time they join your game. Without data stores, your players would lose all of their progress every time they left the game.
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>

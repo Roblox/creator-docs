@@ -1,9 +1,9 @@
 ---
 title: Templates
-description: Templates provide a set of default objects you can use as the foundation for your experiences.
+description: Templates provide a set of default objects you can use as the foundation for your games.
 ---
 
-**Templates** are uncopylocked experiences that provide a set of default objects in the starting place's data model that you can use to start your projects. You can find most templates on Studio's landing page, or click any of the buttons below to start editing a template.
+**Templates** are uncopylocked games that provide a set of default objects in the starting place's data model that you can use to start your projects. You can find most templates on Studio's landing page, or click any of the buttons below to start editing a template.
 
 ## Platformer
 
@@ -19,12 +19,12 @@ The **Platformer** template includes:
 
 ## UGC Homestore
 
-The **UGC Homestore** template includes everything you need to sell your user-generated content (UCG) directly within an experience, including:
+The **UGC Homestore** template includes everything you need to sell your user-generated content (UCG) directly within a game, including:
 
 - Modular building objects that you can customize to fit the aesthetics of your personal UCG store.
 - Mannequins objects that you can customize with unique accessories and bundles that visitors can try on and purchase either individually or as a set.
 
-When you publish the template as your own experience, all of your items that you've previously published to the Marketplace automatically populate in the template's store. For more information on how to use this template, see [Touring the UGC Homestore Template](https://www.youtube.com/watch?v=6MPWLQmIKLk).
+When you publish the template as your own game, all of your items that you've previously published to the Marketplace automatically populate in the template's store. For more information on how to use this template, see [Touring the UGC Homestore Template](https://www.youtube.com/watch?v=6MPWLQmIKLk).
 
 <img src="../assets/resources/templates/Homestore-Template.png" width="50%" alt="" />
 
@@ -34,7 +34,7 @@ When you publish the template as your own experience, all of your items that you
 
 The **Laser Tag** template includes:
 
-- A blaster system with attributes you can customize for your own first-person shooter (FPS) experiences, such as damage, ammo capacity, recoil, and spread.
+- A blaster system with attributes you can customize for your own first-person shooter (FPS) games, such as damage, ammo capacity, recoil, and spread.
 - A simple round system you can extend with custom modes and/or scoring systems.
 - A high-quality first-person shooter arena with custom physically-based rendering (PBR) materials.
 
@@ -62,7 +62,7 @@ The **Racing** template includes a working race car and modular winding track ob
 
 The **Baseplate** template includes only two default objects:
 
-- **Spawn location** – A `Class.SpawnLocation` object is where player characters appear in the 3D space when they join an experience, as well as where they respawn when their health reaches zero.
+- **Spawn location** – A `Class.SpawnLocation` object is where player characters appear in the 3D space when they join a game, as well as where they respawn when their health reaches zero.
 - **Baseplate** – A baseplate is a floor with a 4x4 grid texture that aligns with stud measurements.
 
 <img src="../assets/resources/templates/Baseplate-Template.png" width="50%" alt="" />
@@ -151,7 +151,7 @@ The **Team / FFA Arena** template includes simple 3D objects and scripts that al
 
 ## Combat
 
-The **Combat** template includes three different objects that players can equip and store to their inventory during gameplay: a sword, pistol, and health pack. You can use these objects to create action and adventure experiences.
+The **Combat** template includes three different objects that players can equip and store to their inventory during gameplay: a sword, pistol, and health pack. You can use these objects to create action and adventure games.
 
 <img src="../assets/resources/templates/Combat-Template.png" width="50%" alt="" />
 
@@ -193,7 +193,7 @@ The **Flat Terrain** template includes an empty data model with flat, grassy ter
 
 ## Classic Racing
 
-The **Classic Racing** template includes simple working race cars and track checkpoints objects that you can use to create racing experiences through terrain.
+The **Classic Racing** template includes simple working race cars and track checkpoints objects that you can use to create racing games through terrain.
 
 <img src="../assets/resources/templates/Classic-Racing-Template.png" width="50%" alt="" />
 

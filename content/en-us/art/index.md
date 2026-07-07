@@ -4,9 +4,9 @@ description: An overview of 3D art tools, resources, and workflows for creators 
 hideInPageNavigation: true
 ---
 
-3D art in Roblox refers to the creation and integration of models, environments, effects, sounds, and more to create an engaging and immersive experience. 3D artists bring the world, objects, and characters to life with a variety of tools and techniques using Roblox Studio and external applications.
+3D art in Roblox refers to the creation and integration of models, environments, effects, sounds, and more to create an engaging and immersive game. 3D artists bring the world, objects, and characters to life with a variety of tools and techniques using Roblox Studio and external applications.
 
-No matter your creative background, Roblox provides a variety of tools, guides, tutorials, and reference files to help inspire and level up your 3D art creation in your experiences and beyond.
+No matter your creative background, Roblox provides a variety of tools, guides, tutorials, and reference files to help inspire and level up your 3D art creation in your games and beyond.
 
 <br />
 
@@ -65,7 +65,7 @@ Whether you're just getting started with Roblox or need a quick refresher, use t
 <h2 style={{marginBottom: 24}}>Tutorials</h2>
 
 To dive deeper, follow along with guided curriculum
-that teaches you the skills you need to create and monetize your experiences.
+that teaches you the skills you need to create and monetize your games.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 
@@ -77,7 +77,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 <iframe src="https://www.youtube-nocookie.com/embed/nwShvDmFHWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
 </div>
   <Typography variant='h4'>Environmental art</Typography>
-  <Typography variant='body1' >Environmental art teaches you how to recreate a high-quality environment for a first-person laser tag experience.</Typography>
+  <Typography variant='body1' >Environmental art teaches you how to recreate a high-quality environment for a first-person laser tag game.</Typography>
     <div style={{marginTop:16}}>
       <a underline="none" href="../tutorials/curriculums/environmental-art/index.md">
       <Button variant="contained" color="secondary" size='large'
@@ -119,7 +119,7 @@ Check out the following showcases made by Roblox and the community. Each of thes
   <img src="../assets/resources/mystery-of-duvall-drive/overview/overview.png" />
   </div>
     <Typography variant='h4'>Roblox creations</Typography>
-    <Typography variant='body1' >Check out various experiences created by Roblox. Click to see documentation, downloadable resources, and links to try out the experiences yourself!</Typography>
+    <Typography variant='body1' >Check out various games created by Roblox. Click to see documentation, downloadable resources, and links to try out the games yourself!</Typography>
     <a href="../resources/the-mystery-of-duvall-drive/index.md"><Typography variant='h6' style={{marginBottom: 12}}>Mystery of Duvall Drive</Typography></a>
     <a href="../resources/beyond-the-dark/index.md"><Typography variant='h6' style={{marginBottom: 12}}>Beyond the Dark</Typography></a>
     <a href="../tutorials/use-case-tutorials/modeling/assemble-modular-environments.md"><Typography variant='h6' style={{marginBottom: 12}}>Modern City template</Typography></a>
@@ -134,7 +134,7 @@ Check out the following showcases made by Roblox and the community. Each of thes
   <img src="../assets/art/Shrine-Detailed.jpg" />
   </div>
     <Typography variant='h4'>Community creations</Typography>
-        <Typography variant='body1' >Check out these amazing showcase experiences created members of the community!</Typography>
+        <Typography variant='body1' >Check out these amazing showcase games created members of the community!</Typography>
     <a href="https://www.roblox.com/games/3158922185/Toyokawa-Inari-Shrine-Showcase"><Typography variant='h6' style={{marginBottom: 12}}>Toyokawa Inaru Shrine by @nezko</Typography></a>
     <a href="https://www.roblox.com/games/6519709626/Hotel-Resort"><Typography variant='h6' style={{marginBottom: 12}}>Hotel Resort by @ChooShu_Cho</Typography></a>
     <a href="https://www.roblox.com/games/5415692770/Lab"><Typography variant='h6' style={{marginBottom: 12}}>Lab by @thisfall</Typography></a>
@@ -170,7 +170,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 </div>
 <Typography variant='h4'>Custom skyboxes 101</Typography>
 
-Apply your own custom skyboxes to your experience to add some flair and elevate your world.
+Apply your own custom skyboxes to your game to add some flair and elevate your world.
 <a underline="none" href="https://devforum.roblox.com/t/custom-skyboxes-101/2849003">
 <Button variant="contained" color="secondary" size='large'
 style={{marginRight:8, alignSelf: 'flex-start'}}>Learn more</Button>
@@ -245,7 +245,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 <a href="./overview-studio.md"><Typography variant='body1' style={{marginBottom: 12}}>Get started in Studio</Typography></a>
 <a href="./overview-dcc.md"><Typography variant='body1' style={{marginBottom: 12}}>Get started with third-party software</Typography></a>
 <a href="../avatar/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Get started with avatar items</Typography></a>
-<a href="../tutorials/first-experience/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Create your first experience</Typography></a>
+<a href="../tutorials/first-experience/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Create your first game</Typography></a>
 <a href="../production/creator-store.md"><Typography variant='body1' style={{marginBottom: 12}}>Creator Store overview</Typography></a>
 <a href="../marketplace/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace overview</Typography></a>
 </Grid>

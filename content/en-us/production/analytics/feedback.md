@@ -1,28 +1,28 @@
 ---
 title: Feedback
-description: How to monitor and disseminate player feedback for your experience.
+description: How to monitor and disseminate player feedback for your game.
 ---
 
-Listening to feedback from players and the community is a great opportunity to improve your experience&nbsp;— what they love, what they wish could be improved, etc. The **Feedback** dashboard is one tool that can help you disseminate player feedback.
+Listening to feedback from players and the community is a great opportunity to improve your game&nbsp;— what they love, what they wish could be improved, etc. The **Feedback** dashboard is one tool that can help you disseminate player feedback.
 
 <Alert severity="warning">
-This dashboard is new and only includes data from a limited time period. Experience upvotes/downvotes are factored from February&nbsp;1,&nbsp;2025 and onward, while comments are logged from March&nbsp;17,&nbsp;2025 and onward.
+This dashboard is new and only includes data from a limited time period. Game upvotes/downvotes are factored from February&nbsp;1,&nbsp;2025 and onward, while comments are logged from March&nbsp;17,&nbsp;2025 and onward.
 </Alert>
 
-To view your experience's feedback analytics:
+To view your game's feedback analytics:
 
-1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page and select your experience.
+1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page and select your game.
 2. In the **Audience** menu on the left, select **Feedback**.
 
 <Alert severity="info">
-You can view feedback for both individual and [group](../../projects/groups.md) owned experiences. To view the latter, you need to have the **View all analytics for group experiences** permission within the group.
+You can view feedback for both individual and [group](../../projects/groups.md)-owned games. To view the latter, you need to have the **View all analytics for group experiences** permission within the group.
 </Alert>
 
 To dive deeper into player feedback, see the [feedback insight reports](./insights.md#player-feedback-reports).
 
 ## Chart view
 
-The **chart view** shows a detailed breakdown of ratings on your experience, showing trends in sentiment over time. This view:
+The **chart view** shows a detailed breakdown of ratings on your game, showing trends in sentiment over time. This view:
 
 - Shows trends in player sentiment over time.
 - Helps you identify issues like a new update causing a sudden spike in downvotes.
@@ -52,7 +52,7 @@ Above the chart is a summary of the feedback across the selected date range:
 </Grid>
 
 <Alert severity="info">
-Note that players can change their rating at any time. Also note that ratings update at the end of each day and may not reflect the current core rating on your experience.
+Note that players can change their rating at any time. Also note that ratings update at the end of each day and may not reflect the current core rating on your game.
 </Alert>
 
 To the right of each core value is a **relative** percentage of improvement or regression based on the previous range. For example, a relative percentage for the last 30 days shows improvement/regression for those 30 days as compared to the 30 days before that. Hovering over a relative percentage reveals the exact date range used for calculation:
@@ -61,9 +61,9 @@ To the right of each core value is a **relative** percentage of improvement or r
 
 ## Detailed view
 
-The detailed feedback table shows specific feedback submitted by players who have played and rated it from the experience's detail screen.
+The detailed feedback table shows specific feedback submitted by players who have played and rated it from the game's detail screen.
 
-<img src="../../assets/analytics/feedback/Feedback-Widget.png" width="390" alt="Image showing feedback widget on an experience's detail screen." />
+<img src="../../assets/analytics/feedback/Feedback-Widget.png" width="390" alt="Image showing feedback widget on a game's detail screen." />
 
 Each row in the feedback table includes:
 

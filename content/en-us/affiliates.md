@@ -1,6 +1,6 @@
 ---
 title: Creator Affiliate Program
-description: Learn how to earn Robux by driving users to experiences.
+description: Learn how to earn Robux by driving users to games.
 ---
 
 <Alert severity="info">
@@ -9,7 +9,7 @@ Effective July 24, 2025, the Creator Affiliate program is deprecated and has bee
 
 The [Creator Affiliate Program](https://create.roblox.com/affiliate) is a pilot program that lets you earn Robux using affiliate links. With it, you can:
 
-- Generate affiliate share links for any Roblox experience, including other developers' experiences, through the Creator Hub.
+- Generate affiliate share links for any Roblox game, including other developers' games, through the Creator Hub.
 - Promote your affiliate links off-platform on social media channels.
 - Earn revenue in Robux whenever new users create a Roblox account and purchase Robux using your affiliate link. A new user is someone who doesn't already have an alternative Roblox account.
 - Exchange your Robux earnings for real-world money using the Developer Exchange program.

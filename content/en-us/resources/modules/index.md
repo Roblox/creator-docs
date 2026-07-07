@@ -1,9 +1,9 @@
 ---
 title: Developer modules
-description: Developer modules let you easily add powerful social features to your experiences.
+description: Developer modules let you easily add powerful social features to your games.
 ---
 
-**Developer modules** let you easily add powerful social features to your experiences. Each module is **designed to work out of the box**, so the moment you press play it will simply work. If this isn't your style, you can configure each module to work in different ways.
+**Developer modules** let you easily add powerful social features to your games. Each module is **designed to work out of the box**, so the moment you press play it will simply work. If this isn't your style, you can configure each module to work in different ways.
 
 <GridContainer numColumns="2">
   <figure>
@@ -14,7 +14,7 @@ description: Developer modules let you easily add powerful social features to yo
   <figure>
     <Button href="../../resources/modules/merch-booth.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Merch Booth</Button>
 	  <video controls src="../../assets/developer-modules/merch-booth/Showcase-SM.mp4" width="100%"></video>
-    <figcaption>Sell avatar assets and more in an experience</figcaption>
+    <figcaption>Sell avatar assets and more in a game</figcaption>
   </figure>
   <figure>
     <Button href="../../resources/modules/friends-locator.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Friends Locator</Button>
@@ -24,7 +24,7 @@ description: Developer modules let you easily add powerful social features to yo
   <figure>
     <Button href="../../resources/modules/spawn-with-friends.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Spawn With Friends</Button>
 	  <video controls src="../../assets/developer-modules/spawn-with-friends/Showcase-SM.mp4" width="100%"></video>
-    <figcaption>Join an experience right next to your friends</figcaption>
+    <figcaption>Join a game right next to your friends</figcaption>
   </figure>
   <figure>
     <Button href="../../resources/modules/emote-bar.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Emote Bar</Button>
@@ -34,7 +34,7 @@ description: Developer modules let you easily add powerful social features to yo
   <figure>
     <Button href="../../resources/modules/profile-card.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Profile Card</Button>
 	  <video controls src="../../assets/developer-modules/profile-card/Showcase-SM.mp4" width="100%"></video>
-    <figcaption>Craft your identity within an experience</figcaption>
+    <figcaption>Craft your identity within a game</figcaption>
   </figure>
   <figure>
     <Button href="../../resources/modules/photo-booth.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Photo Booth</Button>
@@ -44,7 +44,7 @@ description: Developer modules let you easily add powerful social features to yo
   <figure>
     <Button href="../../resources/modules/surface-art.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Surface Art</Button>
 	  <video controls src="../../assets/developer-modules/surface-art/Showcase-SM.mp4" width="100%"></video>
-    <figcaption>Literally leave your mark in an experience</figcaption>
+    <figcaption>Literally leave your mark in a game</figcaption>
   </figure>
   <figure>
     <Button href="../../resources/modules/scavenger-hunt.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Scavenger Hunt</Button>

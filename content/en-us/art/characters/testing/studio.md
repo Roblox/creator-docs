@@ -1,39 +1,39 @@
 ---
 title: Test in Studio
 comments:
-description: Verify the important aspects of your character model in a custom Studio test experience.
+description: Verify the important aspects of your character model in a custom Studio test game.
 ---
 
-Test your character model in Studio to understand how it looks and feels within a Roblox experience. To test your custom character in Studio, first [import the character model](../../../avatar/character-bodies/import.md) into your Studio project.
+Test your character model in Studio to understand how it looks and feels within a Roblox game. To test your custom character in Studio, first [import the character model](../../../avatar/character-bodies/import.md) into your Studio project.
 
 You can test in Studio using the [Avatar Setup](../../../avatar-setup/) tool to preview and test various components of your avatar character.
 
-You can also playtest your character in the [Avatar Test experience](https://www.roblox.com/games/13176231501/Avatar-Test-Place). This experience provides a wide variety of environmental and clothing tests to ensure that your character model and related components work as expected.
+You can also playtest your character in the [Avatar Test Place](https://www.roblox.com/games/13176231501/Avatar-Test-Place). This game provides a wide variety of environmental and clothing tests to ensure that your character model and related components work as expected.
 
-## Set up test experience
+## Set up test place
 
-The following is the general testing process setting up the Avatar Test experience:
+The following is the general testing process setting up the Avatar Test place:
 
-1. Download and open the [Avatar Test experience](https://www.roblox.com/games/13176231501/Avatar-Test-Place) in Studio.
+1. Download and open the [Avatar Test place](https://www.roblox.com/games/13176231501/Avatar-Test-Place) in Studio.
 2. Import your avatar model into Studio.
 3. Set your model as the starter character.
-4. Launch a playtest of the experience.
+4. Launch a playtest of the game.
 
 ### Open in Studio
 
-In order to use the [Avatar Test experience](https://www.roblox.com/games/13176231501/Avatar-Test-Place), you must first download it from Roblox. You can save the experience locally and make any changes that may help your testing workflow. Roblox may update this experience periodically to add or improve features.
+In order to use the [Avatar Test place](https://www.roblox.com/games/13176231501/Avatar-Test-Place), you must first download it from Roblox. You can save the game locally and make any changes that may help your testing workflow. Roblox may update this game periodically to add or improve features.
 
-To download the Avatar Test experience:
+To download the Avatar Test place:
 
-1. Navigate to the [Avatar Test experience](https://www.roblox.com/games/13176231501/Avatar-Test-Place).
-2. In the button next to the experience title, select **…** > **Edit**. The page navigates to the Studio launcher.
+1. Navigate to the [Avatar Test place](https://www.roblox.com/games/13176231501/Avatar-Test-Place).
+2. In the button next to the game's title, select **…** > **Edit**. The page navigates to the Studio launcher.
 
    <img src="../../../assets/art/avatar/basic-creation/Testing-Avatar-Test-Place.png" />
    <img src="../../../assets/art/avatar/basic-creation/Testing-Studio.png" />
 
 ### Import
 
-After you open the test experience in Studio, import your custom character model.
+After you open the test place in Studio, import your custom character model.
 
 1. From Studio's **File** menu, select **Import**. A file browser displays.
 
@@ -66,7 +66,7 @@ If you exported your textures separately, or if the Importer fails to pick up yo
 
 To add individual image texture files:
 
-1. Open the **Asset Manager**. You may need to publish your experience first.
+1. Open the **Asset Manager**. You may need to publish your game first.
 2. **Bulk Upload** the image map assets.
 
    <img src="../../../assets/art/avatar/basic-creation/Testing-Asset-Upload.png" />
@@ -88,19 +88,19 @@ To add individual image texture files:
 
 In order to play as the character during a playtest, rename and move the model instance:
 
-1. In the **Explorer**, rename the character **model** as `StarterCharacter`.
-2. In the **Explorer**, navigate to the `Class.StarterPlayer` directory. If a `StarterCharacter` model already exists, remove it.
+1. In the **Explorer** window, rename the character **model** as `StarterCharacter`.
+2. In the **Explorer** window, navigate to the `Class.StarterPlayer` directory. If a `StarterCharacter` model already exists, remove it.
 3. Click and drag the model under the directory.
 
    <img src="../../../assets/art/avatar/basic-creation/Testing-StarterPlayer.png" />
 
-After you rename and add your model, [playtest](../../../studio/testing-modes.md#playtesting) the experience as the custom model.
+After you rename and add your model, [playtest](../../../studio/testing-modes.md#playtesting) the test place as the custom model.
 
-## Use test experience
+## Use test place
 
-The Avatar Test experience includes several features in the interface and environment to quickly perform comprehensive tests of your avatar characters. You can use the [test checklist](#checklist) to ensure you are reviewing all the important aspects of your avatar character.
+The Avatar Test place includes several features in the interface and environment to quickly perform comprehensive tests of your avatar characters. You can use the [test checklist](#checklist) to ensure you are reviewing all the important aspects of your avatar character.
 
-When playtesting the experience, use the following UI buttons on the right side to open various testing tools and options:
+When playtesting, use the following UI buttons on the right side to open various testing tools and options:
 
 <table>
 <thead>

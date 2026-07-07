@@ -7,20 +7,20 @@ description: Learn how to design and optimize the First-Time User Experience (FT
 
 <br />
 
-**Onboarding**, also known as the First-Time User Experience (FTUE), comprises the first few minutes of gameplay that new players experience. The FTUE introduces the experience, interface, and mechanics, and may include tutorials that teach players how to play. The success of a FTUE is determined by how well it achieves two metrics:
+**Onboarding**, also known as the First-Time User Experience (FTUE), comprises the first few minutes of gameplay that new players experience. The FTUE introduces the game, interface, and mechanics, and may include tutorials that teach players how to play. The success of a FTUE is determined by how well it achieves two metrics:
 
 - Day 1 retention
 - Onboarding goals
 
 ## Day 1 retention
 
-**Day 1 Retention** is gauged by the amount of players who make it through the FTUE, known as the **Player Funnel**. The funnel is widest at the top and narrowest at the bottom as fewer players complete each step. All experiences lose some amount of players along this path.
+**Day 1 Retention** is gauged by the amount of players who make it through the FTUE, known as the **Player Funnel**. The funnel is widest at the top and narrowest at the bottom as fewer players complete each step. All games lose some amount of players along this path.
 
 <img src="../../assets/game-design/onboarding/onboarding_1.png" alt="A diagram of an upside down pyramid that's broken into four sections that decrease in size from top-to-bottom to signify the tunnel of fewer and fewer players completing each step." width="70%" />
 
 The onboarding experience aims to limit drop-off between steps and retain as many new players as possible. To identify and "plug" leaks in your funnel, you can use [Experiments](../../production/experiments.md). By running A/B tests on specific tutorial steps, you can measure the causal impact of different designs, such as a shorter dialogue sequence versus a guided arrow, to see which version leads to higher completion rates.
 
-Experiences with high D1 retention metrics often owe that success to effectively accomplishing their onboarding goals through constant iteration and data-driven testing.
+Games with high D1 retention metrics often owe that success to effectively accomplishing their onboarding goals through constant iteration and data-driven testing.
 
 ## Onboarding goals
 
@@ -35,15 +35,15 @@ Many of the most successful onboarding experiences follow these high-level pract
 For successful onboarding, players need to grasp controls for navigation and interaction. Displaying complex, unfamiliar controls on-screen or incorporating them in a tutorial can be beneficial.
 
 <figure>
-    <img src="../../assets/game-design/onboarding/onboarding_2.png" alt="A close up view of UI in the Super Striker League experience that displays which buttons to press on your mouse or keyboard to complete various actions." width="70%" />
+    <img src="../../assets/game-design/onboarding/onboarding_2.png" alt="A close up view of UI in the Super Striker League game that displays which buttons to press on your mouse or keyboard to complete various actions." width="70%" />
     <figcaption>[*Super Striker League*](https://www.roblox.com/games/3360853050/) controls.</figcaption>
   </figure>
 
-Besides controls, onboarding should also impart knowledge of the experience's **Core Loop**, the repetitive actions for progress that define the experience. It is critical that players understand both _what_ they are expected to do and _why_ they should do it.
+Besides controls, onboarding should also impart knowledge of the game's **Core Loop**, the repetitive actions for progress that define the game. It is critical that players understand both _what_ they are expected to do and _why_ they should do it.
 
 ### Get to the fun quickly
 
-New players typically decide their interest in an experience within minutes. To retain them, you must quickly demonstrate value through:
+New players typically decide their interest in a game within minutes. To retain them, you must quickly demonstrate value through:
 
 - Game progression
 - Social motivators
@@ -54,7 +54,7 @@ New players typically decide their interest in an experience within minutes. To 
 **Progression** is felt when a player gets better, gains access to new systems, and achieves goals. A great way to facilitate this is through _Player XP-Based leveling systems_.
 
 <figure>
-   <img src="../../assets/game-design/onboarding/onboarding_3.png" alt="A chart of the experience a player needs to level up in an experience. The curve increase exponentially from left-to-right." width="70%" />
+   <img src="../../assets/game-design/onboarding/onboarding_3.png" alt="A chart of the experience a player needs to level up in a game. The curve increase exponentially from left-to-right." width="70%" />
     <figcaption>Player XP Level Up curve.</figcaption>
   </figure>
 
@@ -62,7 +62,7 @@ Keeping thresholds low for a player's early levels allows them to level up quick
 
 #### Social motivators
 
-Social players often prefer onboarding experiences that provide opportunities for collaboration and competition. If your experience relies heavily on social interaction, consider using **Experiments** to test different matchmaking parameters during the FTUE to see which social groupings lead to better long-term engagement.
+Social players often prefer onboarding experiences that provide opportunities for collaboration and competition. If your game relies heavily on social interaction, consider using **Experiments** to test different matchmaking parameters during the FTUE to see which social groupings lead to better long-term engagement.
 
 #### Starter items and currency
 
@@ -84,7 +84,7 @@ By the end of onboarding, players should be aware of the full range of content a
 Providing short, mid, and long-term goals help players conceptualize future play sessions and envision their future success. These goals can take a number of different forms: skill trees, season passes, quests, collections, and more. Surfacing these goals in highly visible places, either in the game-world or the UI, provides a frequent reminder to players of what they're working towards.
 
 <figure>
-    <img src="../../assets/game-design/onboarding/onboarding_4.png" alt="A pop-up UI in the Jailbreak experience that displays various items a player can earn if they play through a season. The season pass exclusive items are marked with a bright color to attract attention." width="70%"/>
+    <img src="../../assets/game-design/onboarding/onboarding_4.png" alt="A pop-up UI in the Jailbreak game that displays various items a player can earn if they play through a season. The season pass exclusive items are marked with a bright color to attract attention." width="70%"/>
     <figcaption>Season Pass in _Jailbreak_.</figcaption>
   </figure>
 

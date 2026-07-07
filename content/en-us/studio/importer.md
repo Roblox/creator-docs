@@ -223,7 +223,7 @@ The Importer provides the following settings for all meshes:
   </tr>
   <tr>
     <td>Add to Workspace</td>
-    <td>If enabled, the Importer inserts the model into the `Class.Workspace`. If importing from a saved or published experience, this setting also grants permission to the experience to use the restricted asset. By default, this is **enabled**. <br /><br />If disabled, this setting only adds the model to your inventory and does **not** grant the experience permission to use the asset.</td>
+    <td>If enabled, the Importer inserts the model into the `Class.Workspace`. If importing from a saved or published game, this setting also grants permission to the game to use the restricted asset. By default, this is **enabled**. <br /><br />If disabled, this setting only adds the model to your inventory and does **not** grant the game permission to use the asset.</td>
   </tr>
   <tr>
     <td>Insert Using Scene Position</td>

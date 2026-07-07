@@ -25,12 +25,12 @@ For more information on monetizing meshes, see [Monetize avatar items](../../mon
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../../assets/modeling/meshes/Mystery-of-Duvall-Example.png" alt="A cluttered interior room with a candle in the forefront and spooky interior lighting from the Mystery of Duvall Drive experience"/>
+    <img src="../../assets/modeling/meshes/Mystery-of-Duvall-Example.png" alt="A cluttered interior room with a candle in the forefront and spooky interior lighting from the Mystery of Duvall Drive game"/>
     <figcaption>Use custom meshes and models to give your environments ambiance and depth</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/modeling/meshes/Beyond-The-Dark-Example.png" alt="A floating alien creature in space, from the Beyond The Dark experience"/>
-    <figcaption>Design a custom character unique to your experience</figcaption>
+    <img src="../../assets/modeling/meshes/Beyond-The-Dark-Example.png" alt="A floating alien creature in space, from the Beyond The Dark game"/>
+    <figcaption>Design a custom character unique to your game</figcaption>
   </figure>
   <figure>
     <img src="../../assets/modeling/surface-appearance/Layered-Clothing-Example.png" alt="A Roblox avatar wearing a glossy puffy jacket and jeans"/>
@@ -89,7 +89,7 @@ For more information on PBR textures, see [PBR textures](../../art/modeling/surf
 
 ### Studio-related objects
 
-Studio automatically converts certain types of objects found in 3D modeling files as specific workspace objects in the experience. These are typically used when creating a character or accessory, and configuring these in your modeling software can sometimes be the primary way of correctly setting up these Studio objects.
+Studio automatically converts certain types of objects found in 3D modeling files as specific workspace objects in the game. These are typically used when creating a character or accessory, and configuring these in your modeling software can sometimes be the primary way of correctly setting up these Studio objects.
 
 The following objects are automatically created in Studio if they are detected by the 3D Importer:
 

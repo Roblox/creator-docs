@@ -22,7 +22,7 @@ The DSR-14 spaceship contains the following audio that were sent through a custo
 
 ## Design sound assets and effects
 
-The space station's fish tank emits some of our favorite sounds in the experience. It's a perfect encapsulation of the design philosophy that we employed, using spot ambiences to make the space feel dynamic and fresh every time you enter or exit a distinct area. Other places we did this included neon light buzzes, fans, and the black hole rumble.
+The space station's fish tank emits some of our favorite sounds in the game. It's a perfect encapsulation of the design philosophy that we employed, using spot ambiences to make the space feel dynamic and fresh every time you enter or exit a distinct area. Other places we did this included neon light buzzes, fans, and the black hole rumble.
 
 As seen in the following screenshot, the looping fish tank sound is a child of a part inside the tank to give it a location in the scene to play from.
 

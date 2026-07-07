@@ -9,7 +9,7 @@ Welcome to your first beginner coding lesson in Studio! To get started, let's wa
 
 ## Open template
 
-Templates are pre-made 3D worlds that you can use as the base for your own experiences. To introduce you to coding in Studio, Roblox has created the **Story Game** template with everything necessary for the experience to work properly, except for the code for your story.
+Templates are pre-made 3D worlds that you can use as the base for your own games. To introduce you to coding in Studio, Roblox has created the **Story Game** template with everything necessary for the game to work properly, except for the code for your story.
 
 <img src="../../../assets/tutorials/coding-lesson/StoryGameThumb.png" width="70%" />
 

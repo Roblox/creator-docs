@@ -3,7 +3,7 @@ title: Mouse and keyboard input
 description: Explains Roblox support for computer mice and keyboards.
 ---
 
-A large percentage of Roblox sessions are played on devices with a mouse and keyboard, so it's important to support these inputs when designing an experience for a wide audience.
+A large percentage of Roblox sessions are played on devices with a mouse and keyboard, so it's important to support these inputs when designing a game for a wide audience.
 
 To simplify [cross‑platform](../projects/cross-platform.md) inputs, including mouse/keyboard, Roblox provides the [Input Action System](../input/input-action-system.md) to define **actions** such as "jump," "sprint," or "shoot" and set up **bindings** for multiple hardware inputs to drive those actions.
 
@@ -44,7 +44,7 @@ UserInputService.InputEnded:Connect(onInputEnded)
 
 ## Mouse icon
 
-You can customize the appearance and behavior of a player's mouse icon within your experience to create a cohesive style across all of your UI elements. This includes temporarily changing the player's mouse icon in specific circumstances, such as hovering over a button.
+You can customize the appearance and behavior of a player's mouse icon within your game to create a cohesive style across all of your UI elements. This includes temporarily changing the player's mouse icon in specific circumstances, such as hovering over a button.
 
 <Tabs>
 <TabItem label="Change Icon">

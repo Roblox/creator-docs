@@ -14,7 +14,7 @@ The animation capture tools allow you to:
 
 ## Face
 
-**Animation Capture - Face** allows you to use your webcam to puppeteer rigs with [animation compatible heads](../avatar/dynamic-heads/index.md) and generate corresponding keyframes to your movement. With the ability to record up to 60‑second animations, you can quickly provide both your playable and nonplayable characters the means to realistically grin, raise their eyebrows, drop their jaw, or any other expression necessary for your experience.
+**Animation Capture - Face** allows you to use your webcam to puppeteer rigs with [animation compatible heads](../avatar/dynamic-heads/index.md) and generate corresponding keyframes to your movement. With the ability to record up to 60‑second animations, you can quickly provide both your playable and nonplayable characters the means to realistically grin, raise their eyebrows, drop their jaw, or any other expression necessary for your game.
 
 <BetaAlert betaName="Face Capture" leadIn="To ensure that you're able to utilize your camera to record and create facial animations, you must first enable the beta feature through " leadOut="." components={props.components} />
 
@@ -39,7 +39,7 @@ Before you begin to record your face, ensure that you're in a well lit room clos
 
 7. <Chip label="OPTIONAL" size="small" variant="outlined" /> If you'd like to delete the recording and try again, click **Re‑Record**.
 
-After you finish your recording, you can [fine-tune](../animation/editor.md#keyframes) the keyframes, [save](../animation/editor.md#save-an-animation) your animation, then [export](../animation/editor.md#export-an-animation) it to use across all of your experiences.
+After you finish your recording, you can [fine-tune](../animation/editor.md#keyframes) the keyframes, [save](../animation/editor.md#save-an-animation) your animation, then [export](../animation/editor.md#export-an-animation) it to use across all of your games.
 
 ## Body
 
@@ -64,4 +64,4 @@ To import a video to create an animation:
 4. In the popup dialog, click the **Choose Video** button.
 5. Select the video you want to import from your local machine, then click the **Open** button. After about a minute, keyframes that correspond to movement in your video display within the timeline.
 
-After your import is successful, you can [save](../animation/editor.md#save-an-animation) and [export](../animation/editor.md#export-an-animation) your animation to use across all of your experiences.
+After your import is successful, you can [save](../animation/editor.md#save-an-animation) and [export](../animation/editor.md#export-an-animation) your animation to use across all of your games.

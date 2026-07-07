@@ -21,7 +21,7 @@ Start off by setting up the bridge.
    - Check **Anchor**.
    - Uncheck **CanCollide**.
 
-4. When you test the experience, the bridge should be misty looking and people shouldn't be able to walk on it yet.
+4. When you playtest the game, the bridge should be misty looking and people shouldn't be able to walk on it yet.
 
    <img src="../../../assets/education/coding-2/transparent-bridge.jpg" width="80%" />
 
@@ -75,7 +75,7 @@ button.Touched:Connect(buttonPressed)
 
 ### Troubleshoot your code
 
-**Issue: The bridge is already solid when the experience starts.**
+**Issue: The bridge is already solid when the game starts.**
 Make sure that the parts are Anchored and not touching anything. The parts might touch something, like terrain or another part, and cause the buttonPressed() function to fire accidentally.
 
 **Issue: You get an error in the Output window saying: "Bridge is not a valid member of Workspace"**

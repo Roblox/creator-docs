@@ -11,7 +11,7 @@ To test your map as it will look in-game, playtest the map in Studio. **Playtest
 
    <img src="../../assets/education/general/play-button.png" width="360" />
 
-2. Wait until the 5 second intermission finishes to be teleported to the map you built. Run around and make sure that you didn't miss any floating buildings that need to be fixed. Test the experience by holding <kbd>E</kbd> to destroy buildings.
+2. Wait until the 5 second intermission finishes to be teleported to the map you built. Run around and make sure that you didn't miss any floating buildings that need to be fixed. Test the game by holding <kbd>E</kbd> to destroy buildings.
    <img src="../../assets/education/build-it-play-it-create-and-destroy/playtestRunCenter.jpg" width="100%" />
 
    Below are controls for while in-game.

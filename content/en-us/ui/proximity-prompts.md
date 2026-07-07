@@ -4,14 +4,14 @@ description: Proximity Prompts allow users to trigger actions when they approach
 ---
 
 `Class.ProximityPrompt` objects
-encourage user interaction to trigger an action when they approach in-experience
+encourage user interaction to trigger an action when they approach in-game
 objects such as doors, light switches, and buttons. Using this object, you can:
 
-- Indicate what objects a user can interact with in the experience.
+- Indicate what objects a user can interact with in the game.
 - Display the action a user can take on the object, then trigger the action through user input such as pressing or holding a key.
 - Display the correct input for all input types, such a keyboard, gamepad, and touchscreen keys.
 
-<video src="../assets/ui/proximity-prompt/Showcase.mp4" controls width="100%" alt="User interacting with proximity prompts to perform actions in the experience"></video>
+<video src="../assets/ui/proximity-prompt/Showcase.mp4" controls width="100%" alt="User interacting with proximity prompts to perform actions in the game."></video>
 
 <Alert severity="info">
 See the [Dungeon Delve](https://www.roblox.com/games/6074153281/Dungeon-Delve) sample place for the fully working proximity prompt examples shown in the video above.
@@ -115,7 +115,7 @@ The `Class.ProximityPrompt.ClickablePrompt|ClickablePrompt` property specifies i
 
 ## Script proximity prompts
 
-You can connect to proximity prompt events either on the `Class.ProximityPrompt` object itself or globally through `Class.ProximityPromptService`. The `Class.ProximityPromptService` allows you to manage all proximity prompt behavior from one location, preventing any need for duplicate code in your experience.
+You can connect to proximity prompt events either on the `Class.ProximityPrompt` object itself or globally through `Class.ProximityPromptService`. The `Class.ProximityPromptService` allows you to manage all proximity prompt behavior from one location, preventing any need for duplicate code in your game.
 
 <table>
 <thead>

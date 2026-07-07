@@ -5,7 +5,7 @@ description: Explains the process of creating dynamic motion by moving objects.
 
 **Moving objects** are objects that move on one or more axes within the 3D space. Using the built-in power of Roblox's simulation engine, you can make objects move and interact with their environment in a way that emulates real-world physical behavior that's familiar and intuitive to players, such as gravity, aerodynamics, and friction.
 
-Using the [Moving Objects](https://www.roblox.com/games/17560154079/UCT-Linear-Movement) `.rbxl` file as a reference, this tutorial explains how physical forces impact linear motion in Studio, and shows you various techniques to move objects from point A to point B in your experiences with different movement behavior, including guidance on:
+Using the [Moving Objects](https://www.roblox.com/games/17560154079/UCT-Linear-Movement) `.rbxl` file as a reference, this tutorial explains how physical forces impact linear motion in Studio, and shows you various techniques to move objects from point A to point B in your games with different movement behavior, including guidance on:
 
 - Using a `Class.LinearVelocity` mover constraint to move an entire assembly at a constant linear velocity.
 - Using a `Class.PrismaticConstraint` to constrain an assembly to a single axis and move it at a constant linear velocity relative to a point in the 3D space.
@@ -15,11 +15,11 @@ Using the [Moving Objects](https://www.roblox.com/games/17560154079/UCT-Linear-M
    You can create your own assemblies using basic parts or meshes from third-party modeling tools, then follow along with your own assets. For information on exporting meshes for use in Studio, see [Exporting Requirements](../../../art/modeling/export-requirements.md).
 </Alert>
 
-<video controls src="../../../assets/tutorials/creating-moving-objects/Intro.mp4" alt="An angled side view of the main gameplay area in the sample experience, including logs and lily pads floating on river lanes, and a bright blue jumping pad." width="90%"></video>
+<video controls src="../../../assets/tutorials/creating-moving-objects/Intro.mp4" alt="An angled side view of the main gameplay area in the sample game, including logs and lily pads floating on river lanes, and a bright blue jumping pad." width="90%"></video>
 
 ## Linear motion and physical forces
 
-Roblox Studio is a real-world simulation engine that emulates physical behavior in real time, so in order to predict how objects moving linearly can behave in experiences, it's important to have a high-level understanding of how objects move in real life with linear motion.
+Roblox Studio is a real-world simulation engine that emulates physical behavior in real time, so in order to predict how objects moving linearly can behave in games, it's important to have a high-level understanding of how objects move in real life with linear motion.
 
 **Linear motion** is movement along an axis. For example, when a block has linear motion, it moves along a set axis.
 
@@ -65,7 +65,7 @@ This is because the force needs to be greater than any physical forces pushing b
   </figure>
 </GridContainer>
 
-Understanding linear velocity is important for designing gameplay in your experiences because it helps you determine how much force you need in order to achieve a particular speed for your moving objects. For instance, when you want to propel objects upward, it's important to consider how you must adjust your force to overcome gravity within the environment so that the objects move accurately.
+Understanding linear velocity is important for designing gameplay because it helps you determine how much force you need in order to achieve a particular speed for your moving objects. For instance, when you want to propel objects upward, it's important to consider how you must adjust your force to overcome gravity within the environment so that the objects move accurately.
 
 The following sections dive deeper into these concepts as you learn how to move objects at either a constant or initial linear velocity with the necessary force to overcome any oppositional physical forces within the environment. As you review these physics concepts with the upcoming techniques, you can more accurately predict how to adjust property values to achieve any ideal linear movement behavior in Studio.
 
@@ -86,7 +86,7 @@ The amount of force necessary not only depends on oppositional physical forces w
   </figure>
 </GridContainer>
 
-The following subsections use assemblies of different shapes and sizes to teach you how to move either an entire object or only a portion of the object at a constant linear velocity. As you experiment with different property values, you will learn how to estimate the maximum amount of force you need for assemblies in your own experiences.
+The following subsections use assemblies of different shapes and sizes to teach you how to move either an entire object or only a portion of the object at a constant linear velocity. As you experiment with different property values, you will learn how to estimate the maximum amount of force you need for assemblies in your own games.
 
 ### Use LinearVelocity constraints
 
@@ -110,7 +110,7 @@ To demonstrate this process, you will configure a lily pad with an attachment th
 
 #### Add attachment
 
-You can specify the point to apply force by adding an `Class.Attachment` object to the assembly, then configuring the attachment's position in the 3D space. The sample [Moving Objects](https://www.roblox.com/games/17560154079/UCT-Linear-Movement) experience places an attachment in the center of the lily pad so that the constraint can move the mesh from the attachment along a particular axis.
+You can specify the point to apply force by adding an `Class.Attachment` object to the assembly, then configuring the attachment's position in the 3D space. The sample [Moving Objects](https://www.roblox.com/games/17560154079/UCT-Linear-Movement) game places an attachment in the center of the lily pad so that the constraint can move the mesh from the attachment along a particular axis.
 
 Attachments include visual aids to help you visualize their axes of motion. The yellow arrow denotes the attachment's primary axis, and the orange arrow denotes the attachment's secondary axis. While neither axis of motion influences the lily pad's movement in the steps of this technique, it's important to understand these visual aids for future reference because they can assist you in determining ideal behavior for different types of constraints, such as the `Class.PrismaticConstraint` in the next technique.
 
@@ -131,7 +131,7 @@ To add an attachment:
 
 Now that your mesh has a fixed point to move the lily pad, you can configure the properties of a `Class.LinearVelocity` constraint to specify the direction and magnitude for the constant linear velocity, the amount of studs you want the mesh to move per second, and the maximum amount of force the engine can apply for the mesh to reach a constant linear velocity.
 
-The sample [Moving Objects](https://www.roblox.com/games/17560154079/UCT-Linear-Movement) experience applies up to 5000 Rowtons of constant force to move the lily pad 15 studs per second along the world's negative X axis at a constant linear velocity. Rowtons are Roblox's primary physical units for measuring force. To reference Roblox physical units and how they convert to metric units, see [Roblox Units](../../../physics/units.md).
+The sample [Moving Objects](https://www.roblox.com/games/17560154079/UCT-Linear-Movement) game applies up to 5000 Rowtons of constant force to move the lily pad 15 studs per second along the world's negative X axis at a constant linear velocity. Rowtons are Roblox's primary physical units for measuring force. To reference Roblox physical units and how they convert to metric units, see [Roblox Units](../../../physics/units.md).
 
 To configure a `Class.LinearVelocity` constraint:
 
@@ -158,7 +158,7 @@ To configure a `Class.LinearVelocity` constraint:
 
 1. Verify the amount of force you set moves the mesh 15 studs per second along the world's negative X axis.
 
-   - Select the **Run** simulation mode from the mezzanine's dropdown menu and click the **Play** button to begin. Studio simulates the experience at the current camera position without your avatar in the 3D space.
+   - Select the **Run** simulation mode from the mezzanine's dropdown menu and click the **Play** button to begin. Studio simulates the game at the current camera position without your avatar in the 3D space.
 
      <img src="../../../assets/studio/general/Mezzanine-Testing-Mode-Run.png" width="800" alt="Run option in the testing modes dropdown of Studio's mezzanine." />
 
@@ -170,7 +170,7 @@ To configure a `Class.LinearVelocity` constraint:
 
 <video controls src="../../../assets/physics/constraints/Prismatic-Demo.mp4" width="90%" alt="Demo video of PrismaticConstraint"></video>
 
-This type of movement leads to stable gameplay scenarios that are easier for players to predict. For example, the sample [Moving Objects](https://www.roblox.com/games/17560154079/UCT-Linear-Movement) experience uses `Class.PrismaticConstraint` objects to move log platforms that players can use to carefully cross a giant river.
+This type of movement leads to stable gameplay scenarios that are easier for players to predict. For example, the sample [Moving Objects](https://www.roblox.com/games/17560154079/UCT-Linear-Movement) game uses `Class.PrismaticConstraint` objects to move log platforms that players can use to carefully cross a giant river.
 
 <video controls src="../../../assets/tutorials/creating-moving-objects/PC-Intro.mp4" width="90%" alt="An angled side view of logs floating in lanes across a river. Some rows float from the top to the bottom of the screen, and one row floats from the bottom to the top of the screen." ></video>
 
@@ -188,7 +188,7 @@ To demonstrate this process, you will configure a log assembly with two objects 
 
 #### Configure attachments
 
-You can specify the direction to move a particular object within an assembly by adding two `Class.Attachment` objects to the assembly, then configuring their alignment and orientation in the 3D space. The sample [Moving Objects](https://www.roblox.com/games/17560154079/UCT-Linear-Movement) experience aligns two attachments along the world's X axis near the position of where the unanchored log overlaps with the anchored part, and orients each attachment's primary axis to face the world's negative X axis.
+You can specify the direction to move a particular object within an assembly by adding two `Class.Attachment` objects to the assembly, then configuring their alignment and orientation in the 3D space. The sample [Moving Objects](https://www.roblox.com/games/17560154079/UCT-Linear-Movement) game aligns two attachments along the world's X axis near the position of where the unanchored log overlaps with the anchored part, and orients each attachment's primary axis to face the world's negative X axis.
 
 When you configure your PrismaticConstraint constraint in the next section, it will move the log **in relation** to the anchor part. In other words, the log will move away from the stationary part that cannot move because it's anchored in the 3D space.
 
@@ -219,7 +219,7 @@ To configure attachments for the prismatic constraint:
 
 Now that your attachments are aligned on the same axis and face the same direction you want the log to move, you can configure the properties of a `Class.PrismaticConstraint` constraint to specify whether to apply the target constant linear velocity in the positive or negative direction of each attachment's' primary axis, the amount of studs you want the attachments to move per second, and the maximum amount of force the engine can apply for the log to reach a constant linear velocity.
 
-While you can choose different values for your own use cases, the sample [Moving Objects](https://www.roblox.com/games/17560154079/UCT-Linear-Movement) experience applies up to 50000 Rowtons of constant force to move the attachments 40 radians per second along the world's negative X axis at a constant linear velocity. However, because the anchor attachment is in an anchored object, only the log's attachment can move.
+While you can choose different values for your own use cases, the sample [Moving Objects](https://www.roblox.com/games/17560154079/UCT-Linear-Movement) game applies up to 50000 Rowtons of constant force to move the attachments 40 radians per second along the world's negative X axis at a constant linear velocity. However, because the anchor attachment is in an anchored object, only the log's attachment can move.
 
 To configure a prismatic constraint:
 
@@ -245,7 +245,7 @@ To configure a prismatic constraint:
 
 1. Verify the amount of force you set moves the log 40 studs per second along the world's negative X axis.
 
-   - Select the **Run** simulation mode from the mezzanine's dropdown menu and click the **Play** button to begin. Studio simulates the experience at the current camera position without your avatar in the 3D space.
+   - Select the **Run** simulation mode from the mezzanine's dropdown menu and click the **Play** button to begin. Studio simulates the game at the current camera position without your avatar in the 3D space.
 
      <img src="../../../assets/studio/general/Mezzanine-Testing-Mode-Run.png" width="800" alt="Run option in the testing modes dropdown of Studio's mezzanine." />
 

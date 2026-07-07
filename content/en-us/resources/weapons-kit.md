@@ -1,9 +1,9 @@
 ---
 title: Weapons kit
-description: The Weapons Kit assists in creating competitive combat-based experiences.
+description: The Weapons Kit assists in creating competitive combat-based games.
 ---
 
-To assist in creating competitive combat-based experiences, several endorsed weapons are available for use in any experience. The core system features projectile-based weapons with an over-the-shoulder camera, and setting the projectile speed high enough can simulate raycasting weapons like laser guns.
+To assist in creating competitive combat-based games, several endorsed weapons are available for use in any game. The core system features projectile-based weapons with an over-the-shoulder camera, and setting the projectile speed high enough can simulate raycasting weapons like laser guns.
 
 <img src="../assets/resources/weapons-kit/Endorsed-Weapons-Banner.jpeg" width="100%" />
 
@@ -11,7 +11,7 @@ To assist in creating competitive combat-based experiences, several endorsed wea
 The content of this project and documentation can be used under Roblox's [Limited Use License](../resources/limited-use-license.md).
 </Alert>
 
-To use an endorsed weapon in your experience:
+To use an endorsed weapon in your game:
 
 1. Select a weapon from below, navigating to the asset library link.
 
@@ -58,13 +58,13 @@ To use an endorsed weapon in your experience:
 1. In Studio, open the [Toolbox](../projects/assets/toolbox.md).
 1. Select your toolbox **Inventory** section.
 1. Locate the weapon and click it to add it into the place. When prompted whether to put the tool into the starter pack, click **Yes** if you want players to start with the weapon in their backpack, or click **No** to simply place the weapon in the 3D world as a pickup.
-1. If this is the **first time** bringing in an endorsed weapon, move its **WeaponsSystem** folder into **ServerScriptService** to serve as the unified [system folder](#system-folder-structure) for all endorsed weapons in the experience.
+1. If this is the **first time** bringing in an endorsed weapon, move its **WeaponsSystem** folder into **ServerScriptService** to serve as the unified [system folder](#system-folder-structure) for all endorsed weapons in the game.
 
    <img src="../assets/resources/weapons-kit/Move-WeaponsSystem-Folder.png" width="320" />
 
 ## System folder structure
 
-The **WeaponsSystem** folder is a unified folder that contains assets, configurations, and scripts that power all endorsed weapons in the experience. If located in **ServerScriptService**, it overrides any equivalent **WeaponsSystem** folders that may reside within individual weapons.
+The **WeaponsSystem** folder is a unified folder that contains assets, configurations, and scripts that power all endorsed weapons in the game. If located in **ServerScriptService**, it overrides any equivalent **WeaponsSystem** folders that may reside within individual weapons.
 
 <img src="../assets/resources/weapons-kit/WeaponsSystem-Structure.png" width="320" />
 
@@ -669,7 +669,7 @@ Model descendants:
 
 The core weapons system interfaces with this system to update the GUI based on things like spread of the gun, indicators for when you get hit or hit others, etc.
 
-The **WeaponsSystemGui** is a `Class.ScreenGui` object in `WeaponsSystem/Assets` that is parented to `Class.PlayerGui` when the experience starts. WeaponSystemGui has 4 descendants:
+The **WeaponsSystemGui** is a `Class.ScreenGui` object in `WeaponsSystem/Assets` that is parented to `Class.PlayerGui` when the game starts. WeaponSystemGui has 4 descendants:
 
 - [ScalingElements](#scaling-elements) - A `Class.Folder` of on-screen elements.
 - [LargeTouchscreen](#largetouchscreen) - A `Class.Frame` for buttons on large touchscreens.

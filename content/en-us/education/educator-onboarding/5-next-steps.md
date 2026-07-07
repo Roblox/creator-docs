@@ -1,6 +1,6 @@
 ---
 title: Next steps
-description: A page of resources to get started with Roblox in the classroom for teachers. Includes Roblox handouts, presentations, and where to find educational experiences.
+description: A page of resources to get started with Roblox in the classroom for teachers. Includes Roblox handouts, presentations, and where to find educational games.
 prev: /education/educator-onboarding/4-running-classrooms
 ---
 
@@ -83,23 +83,23 @@ The following resources are handouts specifically intended to be distributed to 
 <p><a href="../../assets/education/legacy/RobloxStudio-Cheatsheet.pdf">Roblox Studio cheatsheet</a></p>
 </td>
 <td>
-<p>Student friendly reference for using Roblox Studio, the software used to make Roblox experiences.</p>
+<p>Student friendly reference for using Roblox Studio, the software used to make Roblox games.</p>
 </td>
 </tr>
 </tbody>
 </table>
 </div>
 
-## Explore experiences
+## Explore games
 
-We've compiled some of our favorite experiences to showcase the best that Roblox has to offer. To see more, browse the <a href="https://www.roblox.com/discover#/sortName/Curated_67">Learn and Explore</a> Sort.
+We've compiled some of our favorite games to showcase the best that Roblox has to offer. To see more, browse the <a href="https://www.roblox.com/discover#/sortName/Curated_67">Learn and Explore</a> Sort.
 
 <Grid container spacing={2}>
 <Grid item XSmall={6}>
 
   <div>
   <img src="../../assets/education/legacy/module5-gameImages-450x250-ocean.jpg" />
-  <h4>Ocean Conservation Experience</h4>
+  <h4>Ocean Conservation Game</h4>
   <p>
   A museum built in Roblox that educators people about ocean conservations.
   </p>
@@ -115,7 +115,7 @@ We've compiled some of our favorite experiences to showcase the best that Roblox
   <img src="../../assets/education/legacy/module5-gameImages-450x250-lua.jpg" />
   <h4>Lua Learning</h4>
   <p>
-  Learn how to code in Luau, the language used in all Roblox projects. The experience is named Lua for historical reasons, as Roblox used Lua before developing it into Luau.
+  Learn how to code in Luau, the language used in all Roblox projects. The game is named Lua for historical reasons, as Roblox used Lua before developing it into Luau.
   </p>
   <a href="https://www.roblox.com/games/1334669864/">
   <Button variant="contained">Play</Button>
@@ -190,7 +190,7 @@ Lessons below focus on project-based learning with Constructionist principles. S
   <img src="../../assets/education/build-it-play-it-create-and-destroy/cc2019_thumbnail_312x200.jpg" />
   <h4>Design a city</h4>
   <p>
-  Learn building to make a city for a multiplayer experience.
+  Learn building to make a city for a multiplayer game.
   </p>
   <a href="../../education/lesson-plans/create-and-destroy-lesson.md">
   <Button variant="contained">View</Button>

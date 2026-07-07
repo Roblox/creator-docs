@@ -3,7 +3,7 @@ title: Cloud API reference
 description: Get comprehensive API reference documentation for Open Cloud.
 ---
 
-With Open Cloud, you can access Roblox resources through standard [REST](https://en.wikipedia.org/wiki/REST) APIs, which lets you build everything from command line automation tools to complex web apps. You can update experiences, restart servers, work with your data stores and memory stores, manage user restrictions, list inventory items, and much, much more.
+With Open Cloud, you can access Roblox resources through standard [REST](https://en.wikipedia.org/wiki/REST) APIs, which lets you build everything from command line automation tools to complex web apps. You can update games, restart servers, work with your data stores and memory stores, manage user restrictions, list inventory items, and much, much more.
 
 This reference is broken into two sections:
 
@@ -30,6 +30,6 @@ Roblox also offers [webhooks](./webhooks/webhook-notifications.md), which can no
 1. Review the [resource guides](./guides/index.md) for end-to-end walkthroughs of using certain APIs.
 1. Explore the left navigation for the full list of features, [common API patterns](./reference/patterns.md), [types](./reference/types.md), and [error codes](./reference/errors.md).
 
-## Make requests within experiences
+## Make requests within games
 
-`Class.HttpService` lets you make HTTP requests to a subset of the Open Cloud endpoints. For more information, see [In-experience HTTP requests](../cloud-services/http-service.md).
+`Class.HttpService` lets you make HTTP requests to a subset of the Open Cloud endpoints. For more information, see [In-game HTTP requests](../cloud-services/http-service.md).

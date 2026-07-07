@@ -1,6 +1,6 @@
 ---
 title: Intro to coding
-description: Learn the basics of coding for experiences.
+description: Learn the basics of coding for games.
 next: /tutorials/curriculums/coding/get-started
 hideInPageNavigation: true
 ---
@@ -20,7 +20,7 @@ hideInPageNavigation: true
 <Grid item Large={5} XSmall={12} direction="column">
 Using the [Story Games](https://www.roblox.com/games/2546610365/Roblox-Creator-Challenge) sample as a guide, this tutorial acts as an introduction to coding in Roblox Studio using the Luau programming language. As you follow each chapter, you will learn how to create a story game where players can replace placeholder words with their own answers.
 
-This lesson is intended for readers who are **brand new** to coding concepts and working in Studio. If you are familiar with both, try another beginner lesson plan or jump straight to [building your first experience](../core/index.md).
+This lesson is intended for readers who are **brand new** to coding concepts and working in Studio. If you are familiar with both, try another beginner lesson plan or jump straight to [building your first game](../core/index.md).
 </Grid>
 
 </Grid>
@@ -82,7 +82,7 @@ If you don't have a Roblox account, Studio active on your device, or familiarity
    </AccordionSummary>
    <AccordionDetails>
 
-    Learn where you can [find more tutorials](next-steps.md) about coding for experiences.
+    Learn where you can [find more tutorials](next-steps.md) about coding for games.
 
    </AccordionDetails>
    </BaseAccordion>

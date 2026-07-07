@@ -88,14 +88,14 @@ Get students familiar with Roblox and Roblox Studio by having them create a clas
 
 1. Ask students: "Who can tell me what the Roblox Platform is?"
  Possible answers:
-   - Roblox is the ultimate virtual universe that lets you create, share experiences with friends, and be anything you can imagine.
-   - Roblox is an online gaming platform and creation system where users can create, share, and play games and virtual experiences created by other users.
+   - Roblox is the ultimate virtual universe that lets you create, share games with friends, and be anything you can imagine.
+   - Roblox is an online gaming platform and creation system where users can create, share, and play games and virtual games created by other users.
 2. Ask students: "Who can describe an obby to me?"
  Possible answer:
    - "Obby" is short for "obstacle course." Obbies are jumping puzzles where you must figure out how to jump from Bridge to Bridge without falling. They're one of the most popular types of games on Roblox
 3. Ask students: "Has anyone heard of Roblox Studio? What is it?"
  Possible Answer:
-   - Roblox Studio is the creation tool used by all experiences on the Bridge. It is available for free so everyone can create and share new Roblox experiences.
+   - Roblox Studio is the creation tool used by all games on the Bridge. It is available for free so everyone can create and share new Roblox games.
 4. Introduce Lesson:
    - Explain students will be coding and designing their own obby (obstacle course) that others can play using Roblox Studio.
    - This lesson will show you an example of an obby. For students who have never used Roblox before, this is also a chance to learn how the player controls work.
@@ -126,7 +126,7 @@ Lead students through the following tutorial: <a href="../../tutorials/curriculu
 - **Chapter 2:** Work with Parts 5 minutes
   - Remind students to rotate their camera view to get an accurate view of their project
   - Some students will be faster than others. Challenge faster students to create more parts for their obby using the greatest variety in size, shape, and rotation they can.
-  - Emphasize that students are creating an experience that others can play, not just for themselves.
+  - Emphasize that students are creating angame that others can play, not just for themselves.
   - For those needing a greater challenge, encourage the students to experiment with the Properties window. What can they change about the parts?
 
 - **Chapter 3:** Coding with AI 10 Minutes
@@ -135,7 +135,7 @@ Lead students through the following tutorial: <a href="../../tutorials/curriculu
 
 - **Chapter 4:** Test and Save 10 - 15 minutes
   - After students have saved and tested their games, allow students to switch seats and provide peer feedback
-  - If time allows students five minutes to improve their obby based on the feedback provided. Have students switch places and play-test each other's experience.
+  - If time allows students five minutes to improve their obby based on the feedback provided. Have students switch places and play-test each other's game.
   - Start by having students offer feedback in the form of two Stars (What they liked) and a Wish (What they would want to see).
   - After receiving feedback, each student should implement a change based on feedback they received.
 

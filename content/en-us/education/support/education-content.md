@@ -18,7 +18,7 @@ Each lesson plan includes a set of tutorials complete with teaching notes and su
 <Grid item XSmall={4} XLarge={4}>
 ![alt](../../assets/education/edu-landingPages/introToGameDesign_thumbnail.jpg)
 <h4>Code and Design</h4>
-Have students create their first experience. Great for beginners.
+Have students create their first game. Great for beginners.
 <a href="../../education/lesson-plans/intro-to-game-and-coding.md">
 <Button variant="text">View</Button>
 </a>
@@ -71,7 +71,7 @@ Students learn the basics while designing an obstacle course.
 <Grid item XSmall={4} XLarge={4}>
 ![alt](../../assets/education/edu-landingPages/thumbnail_adventureRthroAlt_312x200.jpg)
 <h4>Design An Adventure Game</h4>
-From start to finish, students plan, design, and code a complete experience.
+From start to finish, students plan, design, and code a complete game.
 <a href="../../education/adventure-game-series/landing.md">
 <Button variant="text">View</Button>
 </a>

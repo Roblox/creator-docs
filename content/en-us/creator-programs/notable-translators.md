@@ -3,7 +3,7 @@ title: Notable Translators Program
 description: The Notable Translators Program aims to give more visibility to dedicated and skilled community translators who want to offer their services to other Roblox creators.
 ---
 
-The Notable Translators Program (Pilot) aims to give more visibility to dedicated and skilled community translators who want to offer their services to other Roblox creators. We also want to make it easier for creators to find and hire qualified community translators to help make their experiences appealing to users all over the world.
+The Notable Translators Program (Pilot) aims to give more visibility to dedicated and skilled community translators who want to offer their services to other Roblox creators. We also want to make it easier for creators to find and hire qualified community translators to help make their games appealing to users all over the world.
 
 <figure>
 <Chip

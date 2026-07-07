@@ -113,7 +113,7 @@ To make the flare cast actual light on its surroundings, use a **PointLight**. R
 
 ## Create the dust particles
 
-The second type of particle emitter the sample game uses to add dynamic movement to the experience is one that dust particles throughout the atmosphere. These particles surround the player, adding a sense of texture and depth to the air itself.
+The second type of particle emitter the sample game uses to add dynamic movement to the game is one that dust particles throughout the atmosphere. These particles surround the player, adding a sense of texture and depth to the air itself.
 
 <Tabs>
 <TabItem key = "1" label="Build with Assistant">

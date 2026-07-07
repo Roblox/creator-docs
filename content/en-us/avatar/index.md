@@ -101,11 +101,11 @@ links: [
 },
 {
 title: "Marketplace and beyond",
-description: "Create your own home store and a higher share of your commission! Or build experiences that allow others to customize and create avatar items in-game.",
+description: "Create your own home store and a higher share of your commission! Or build games that allow others to customize and create avatar items in-game.",
 links: [
 { text: "Marketplace policy", href: "../marketplace/marketplace-policy.md" },
 { text: "Create your own home store", href: "../marketplace/homestore.md" },
-{ text: "In-experience creation", href: "./in-experience-creation.md" }
+{ text: "In-game creation", href: "./in-experience-creation.md" }
 ]
 }
 ]
@@ -158,8 +158,8 @@ video: "https://www.youtube-nocookie.com/embed/6MPWLQmIKLk",
 links: [{ text: "Learn more", href: "../marketplace/homestore.md" }]
 },
 {
-title: "In-experience creation",
-description: "Create an experience where players can build their own avatar items. Recommended for advanced developers.",
+title: "In-game creation",
+description: "Create a game where players can build their own avatar items. Recommended for advanced developers.",
 image: "../assets/landing/scripting.png",
 links: [
 { text: "Learn more", href: "./in-experience-creation.md" }
@@ -175,7 +175,7 @@ links: [
 <Grid container direction="row" spacing={4} style={{ marginBottom: 48 }}>
 <Grid item xs={12} md={5}>
 
-<p>Every Roblox user is represented by an **avatar** — a fully customizable character with cosmetics and accessories that persist across experiences.</p>
+<p>Every Roblox user is represented by an **avatar** — a fully customizable character with cosmetics and accessories that persist across games.</p>
 <p>Create avatar bodies, items, and clothing using our robust tools and upload them to the [Marketplace](https://www.roblox.com/catalog) where millions of users browse and shop every day.</p>
 <Button
 style={{ marginTop: 8, marginRight: 24 }}

@@ -1,6 +1,6 @@
 ---
 title: Manage players
-description: Create a battle royale experience in Roblox Studio. Write scripts that handle player spawning and equipment.
+description: Create a battle royale game in Roblox Studio. Write scripts that handle player spawning and equipment.
 next: /education/battle-royale-series/timers-and-events
 prev: /education/battle-royale-series/coding-the-game-loop
 ---
