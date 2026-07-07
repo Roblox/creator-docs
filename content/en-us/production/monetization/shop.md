@@ -3,14 +3,6 @@ title: Shop
 description: Sell passes and developer products inside your game's Shop.
 ---
 
-<Alert severity="info">
-**Shop will become available to players on July 7, 2026.** Until then, you can set up and preview your Shop, but players won't see it in their in-game menus.
-</Alert>
-
-<Alert severity="warning">
-On July 7, 2026, Roblox will automatically publish your Shop to your in-game menu using suggested categories and listing settings. Review your Shop before then to customize those suggestions before players see them.
-</Alert>
-
 **Shop** provides players with a personalized shopping experience for your game. Roblox combines platform-wide signals with signals from your game to surface the most relevant items for each player, and automatically handles ranking and optimization.
 
 Shop displays all passes and eligible developer products available in your game, making it easier for players to discover items they want to purchase. Players can also browse **Top Picks**, personalized categories, and search results.
@@ -73,8 +65,8 @@ To rename an existing category:
 
 To move items between categories, do one of the following:
 
-    - To move a single item, click the **Category** dropdown next to the item and choose a new category.
-    - To move multiple items, select the items, click **Edit category**, choose a new category, and then click **Save**.
+- To move a single item, click the **Category** dropdown next to the item and choose a new category.
+- To move multiple items, select the items, click the **Edit category**, choose a new category, and then click **Save**.
 
 ## Shop access
 

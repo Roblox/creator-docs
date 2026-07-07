@@ -21,11 +21,12 @@ To create a developer product:
 
 1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select a game.
 2. Go to **Monetization** ⟩ **Developer Products**.
-3. Click **Create a Developer Product**.
+3. Click **Create developer product**.
 4. Upload an image to display as the product icon. Make sure the image doesn't exceed 512x512 pixels, doesn't include important details outside of its circular boundaries, and is in `.jpg`, `.png`, or `.bmp` format.
 5. Enter a name and a description for the product.
-6. Set the product price in Robux. The minimum price is 1 Robux, and the maximum price is 1 billion Robux.
-7. Click **Create Developer Product**.
+6. Select a category for the product. The category is used to organize items in your in-game Shop.
+7. Set the product price in Robux. The minimum price is 1 Robux, and the maximum price is 1 billion Robux.
+8. Click **Save Changes**.
 
 <Alert severity="info">
    If you want to use the developer product as a randomized reward, review the [randomized virtual item policy](./paid-random-items.md).

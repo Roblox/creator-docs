@@ -19,10 +19,11 @@ To create a pass:
 
 1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select a game.
 2. Go to **Monetization** &rang; **Passes**.
-3. Click **Create a Pass**.
+3. Click **Create pass**.
 4. Upload an image to display as the pass icon. Make sure the image doesn't exceed 512x512 pixels, doesn't include important details outside of its circular boundaries, and is in `.jpg`, `.png`, or `.bmp` format.
 5. Enter a name and a description for the pass.
-6. Click **Create Pass**.
+6. Select a category for the pass. The category is used to organize items in your in-game Shop.
+7. Click **Create pass**.
 
 <GridContainer numColumns="2">
   <figure>
