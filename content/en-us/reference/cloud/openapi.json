@@ -12,6 +12,566 @@
     }
   ],
   "paths": {
+    "/analytics-query-api/v1/universes/{universeId}/dimension-values": {
+      "post": {
+        "tags": ["Analytics"],
+        "summary": "Queries dimension values for a universe.",
+        "description": "See the <a href=\"https://create.roblox.com/docs/cloud/guides/analytics\">Analytics guide</a> for more information.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID to query dimension values for.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The dimension values request.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DimensionValuesRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DimensionValuesRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DimensionValuesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DimensionValuesOperationResult"
+                }
+              }
+            }
+          },
+          "202": {
+            "description": "Accepted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationPending"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.analytics:read",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#post_analytics_query_api_v1_universes__universe_id__dimension_values"
+        }
+      }
+    },
+    "/analytics-query-api/v1/universes/{universeId}/metrics": {
+      "post": {
+        "tags": ["Analytics"],
+        "summary": "Queries time series metric data for a universe.",
+        "description": "See the <a href=\"https://create.roblox.com/docs/cloud/guides/analytics\">Analytics guide</a> for more information.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID to query metrics for.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The query request.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryOperationResult"
+                }
+              }
+            }
+          },
+          "202": {
+            "description": "Accepted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationPending"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.analytics:read",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#post_analytics_query_api_v1_universes__universe_id__metrics"
+        }
+      }
+    },
+    "/analytics-query-api/v1/universes/{universeId}/operations/dimension-values/{operationId}": {
+      "get": {
+        "tags": ["Analytics"],
+        "summary": "Retrieves the result of a long-running dimension values operation.",
+        "description": "See the <a href=\"https://create.roblox.com/docs/cloud/guides/analytics\">Analytics guide</a> for more information.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID the operation belongs to.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "operationId",
+            "in": "path",
+            "description": "The operation id returned from a prior dimension values request.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DimensionValuesOperationResult"
+                }
+              }
+            }
+          },
+          "202": {
+            "description": "Accepted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationPending"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 3000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.analytics:read",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#get_analytics_query_api_v1_universes__universe_id__operations_dimension_values__operation_id_"
+        }
+      }
+    },
+    "/analytics-query-api/v1/universes/{universeId}/operations/metrics/{operationId}": {
+      "get": {
+        "tags": ["Analytics"],
+        "summary": "Retrieves the result of a long-running metrics query operation.",
+        "description": "See the <a href=\"https://create.roblox.com/docs/cloud/guides/analytics\">Analytics guide</a> for more information.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID the operation belongs to.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "operationId",
+            "in": "path",
+            "description": "The operation id returned from a prior query request.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryOperationResult"
+                }
+              }
+            }
+          },
+          "202": {
+            "description": "Accepted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationPending"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationError"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 3000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.analytics:read",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#get_analytics_query_api_v1_universes__universe_id__operations_metrics__operation_id_"
+        }
+      }
+    },
     "/asset-delivery-api/v1/assetId/{assetId}": {
       "get": {
         "tags": ["Assets"],
@@ -5357,7 +5917,7 @@
     "/cloud/v2/universes/{universe_id}/memory-store/operations/{operation_id}": {
       "get": {
         "summary": "Get Memory Store Flush Operation",
-        "description": "Retrieves the status of the operation to [flush the memory stores of a universe](https://create.roblox.com/docs/cloud/reference/features/memory-stores#Cloud_FlushMemoryStore).",
+        "description": "Retrieves the status of the operation to [flush the memory stores of a universe](https://create.roblox.com/docs/cloud/reference/features/storage#Cloud_FlushMemoryStore).",
         "operationId": "Cloud_GetMemoryStoreFlushOperation",
         "parameters": [
           {
@@ -7215,7 +7775,7 @@
     "/cloud/v2/universes/{universe_id}/places/{place_id}/instances/{instance_id}/operations/{operation_id}": {
       "get": {
         "summary": "Get Update Instance Operation",
-        "description": "Retrieves the status of the operation to [update an instance](https://create.roblox.com/docs/cloud/reference/features/instances#Cloud_UpdateInstance).",
+        "description": "Retrieves the status of the operation to [update an instance](https://create.roblox.com/docs/cloud/reference/features/universes#Cloud_UpdateInstance).",
         "operationId": "Cloud_GetUpdateInstanceOperation",
         "parameters": [
           {
@@ -63671,6 +64231,27 @@
         "additionalProperties": false,
         "description": "Response object to grant one permission to multiple assets."
       },
+      "BreakdownValue": {
+        "required": ["dimension", "value"],
+        "type": "object",
+        "properties": {
+          "dimension": {
+            "type": "string",
+            "description": "The dimension name."
+          },
+          "value": {
+            "type": "string",
+            "description": "The dimension value."
+          },
+          "displayValue": {
+            "type": "string",
+            "description": "A human-readable display value when the dimension is a unique ID.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A breakdown dimension value in a query result."
+      },
       "BulkDeleteSavesRequest": {
         "required": ["targets"],
         "type": "object",
@@ -64626,6 +65207,40 @@
         "type": "string",
         "description": "The custom signal type."
       },
+      "DataPoint": {
+        "required": ["time", "value"],
+        "type": "object",
+        "properties": {
+          "time": {
+            "type": "string",
+            "description": "The timestamp of the data point in UTC.",
+            "format": "date-time"
+          },
+          "value": {
+            "type": "number",
+            "description": "The numeric value of the data point.",
+            "format": "double"
+          },
+          "stringValues": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "String values associated with the data point, when applicable.",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/DataStatus"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A single data point in a metric query result."
+      },
+      "DataStatus": {
+        "enum": ["Valid", "Projected", "NotStatisticallySignificant"],
+        "type": "string",
+        "description": "The status of a data point in a query result."
+      },
       "DataStore": {
         "type": "object",
         "properties": {
@@ -64977,6 +65592,122 @@
         "additionalProperties": false,
         "description": "Creator-facing representation of a developer product configuration."
       },
+      "DimensionValue": {
+        "required": ["value"],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "description": "The dimension value."
+          },
+          "displayValue": {
+            "type": "string",
+            "description": "A human-readable display value when the dimension is a unique ID.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A single dimension value returned by a dimension values query."
+      },
+      "DimensionValues": {
+        "required": ["dimension"],
+        "type": "object",
+        "properties": {
+          "dimension": {
+            "type": "string",
+            "description": "The dimension name."
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DimensionValue"
+            },
+            "description": "The values for the dimension."
+          }
+        },
+        "additionalProperties": false,
+        "description": "The values for a single dimension returned by a dimension values query."
+      },
+      "DimensionValuesOperationResult": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The server-assigned resource path.",
+            "nullable": true
+          },
+          "done": {
+            "type": "boolean",
+            "description": "If false, the operation is still in progress. If true, the operation is completed."
+          },
+          "response": {
+            "$ref": "#/components/schemas/DimensionValuesResponse"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/OperationMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A completed long-running dimension values operation with results."
+      },
+      "DimensionValuesRequest": {
+        "required": ["endTime", "metric", "startTime"],
+        "type": "object",
+        "properties": {
+          "metric": {
+            "type": "string",
+            "description": "The metric that provides context for resolving dimension namespaces."
+          },
+          "dimensions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The dimensions to retrieve values for. Each entry is a single dimension name."
+          },
+          "startTime": {
+            "type": "string",
+            "description": "The inclusive start of the query time range. Any UTC offset is accepted; results are always bucketed in UTC.",
+            "format": "date-time"
+          },
+          "endTime": {
+            "type": "string",
+            "description": "The exclusive end of the query time range. Any UTC offset is accepted; results are always bucketed in UTC.",
+            "format": "date-time"
+          },
+          "filter": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/QueryFilter"
+            },
+            "description": "Filters to apply to the query."
+          },
+          "granularity": {
+            "$ref": "#/components/schemas/MetricGranularity"
+          },
+          "limit": {
+            "type": "integer",
+            "description": "The maximum number of values to return per dimension.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A request to query dimension values."
+      },
+      "DimensionValuesResponse": {
+        "type": "object",
+        "properties": {
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DimensionValues"
+            },
+            "description": "The dimension values returned by the query."
+          }
+        },
+        "additionalProperties": false,
+        "description": "The response for a dimension values query."
+      },
       "DiscardMemoryStoreQueueItemsRequest": {
         "type": "object",
         "properties": {
@@ -65165,6 +65896,19 @@
         },
         "additionalProperties": false,
         "description": "Describes the metadata and available values for a single filter field."
+      },
+      "FilterOperation": {
+        "enum": [
+          "In",
+          "NotIn",
+          "GreaterThan",
+          "GreaterThanOrEqual",
+          "LessThan",
+          "LessThanOrEqual",
+          "Match"
+        ],
+        "type": "string",
+        "description": "The operation to apply to a query filter."
       },
       "FilterOptionsResponse": {
         "type": "object",
@@ -68409,6 +69153,40 @@
         },
         "description": "Represents the reaction to a message."
       },
+      "MetricGranularity": {
+        "enum": [
+          "OneMinute",
+          "HalfHour",
+          "OneHour",
+          "OneDay",
+          "OneWeek",
+          "OneMonth",
+          "None"
+        ],
+        "type": "string",
+        "description": "The time granularity of metric data points in a query."
+      },
+      "MetricValue": {
+        "type": "object",
+        "properties": {
+          "breakdowns": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BreakdownValue"
+            },
+            "description": "The breakdown values for this series."
+          },
+          "dataPoints": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DataPoint"
+            },
+            "description": "The data points for this series."
+          }
+        },
+        "additionalProperties": false,
+        "description": "A metric value for a single breakdown series."
+      },
       "MockServerSignalValues": {
         "type": "object",
         "properties": {
@@ -68872,6 +69650,28 @@
           "result": ["error", "response"]
         }
       },
+      "OperationError": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The server-assigned resource path.",
+            "nullable": true
+          },
+          "done": {
+            "type": "boolean",
+            "description": "If false, the operation is still in progress. If true, the operation is completed."
+          },
+          "error": {
+            "$ref": "#/components/schemas/QueryError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/OperationMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A completed long-running operation that failed with an error."
+      },
       "OperationErrorResponse": {
         "type": "object",
         "properties": {
@@ -68891,6 +69691,38 @@
           }
         },
         "additionalProperties": false
+      },
+      "OperationMetadata": {
+        "type": "object",
+        "properties": {
+          "createdTime": {
+            "type": "string",
+            "description": "The time the operation was created.",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The metadata associated with a long-running operation."
+      },
+      "OperationPending": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The server-assigned resource path.",
+            "nullable": true
+          },
+          "done": {
+            "type": "boolean",
+            "description": "If false, the operation is still in progress. If true, the operation is completed."
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/OperationMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A long-running operation that is still in progress."
       },
       "OrderedDataStoreEntry": {
         "type": "object",
@@ -69871,6 +70703,23 @@
         "description": "Contains query correction information for a search query.",
         "nullable": true
       },
+      "QueryError": {
+        "required": ["message"],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "The error code.",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "The message associated with the query error."
+          }
+        },
+        "additionalProperties": false,
+        "description": "The error returned from a query request."
+      },
       "QueryFacets": {
         "type": "object",
         "properties": {
@@ -69894,6 +70743,108 @@
         "additionalProperties": false,
         "description": "The facets of a query.",
         "nullable": true
+      },
+      "QueryFilter": {
+        "required": ["dimension", "operation"],
+        "type": "object",
+        "properties": {
+          "dimension": {
+            "type": "string",
+            "description": "The dimension name to filter on."
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The values to filter by."
+          },
+          "operation": {
+            "$ref": "#/components/schemas/FilterOperation"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A filter applied to a query dimension."
+      },
+      "QueryOperationResult": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The server-assigned resource path.",
+            "nullable": true
+          },
+          "done": {
+            "type": "boolean",
+            "description": "If false, the operation is still in progress. If true, the operation is completed."
+          },
+          "response": {
+            "$ref": "#/components/schemas/QueryResponse"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/OperationMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A completed long-running query operation with results."
+      },
+      "QueryRequest": {
+        "required": ["endTime", "granularity", "metric", "startTime"],
+        "type": "object",
+        "properties": {
+          "metric": {
+            "type": "string",
+            "description": "The metric to query."
+          },
+          "granularity": {
+            "$ref": "#/components/schemas/MetricGranularity"
+          },
+          "startTime": {
+            "type": "string",
+            "description": "The inclusive start of the query time range. Any UTC offset is accepted; results are always bucketed in UTC.",
+            "format": "date-time"
+          },
+          "endTime": {
+            "type": "string",
+            "description": "The exclusive end of the query time range. Any UTC offset is accepted; results are always bucketed in UTC.",
+            "format": "date-time"
+          },
+          "breakdown": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The dimensions to group results by. Each entry is a single dimension name."
+          },
+          "filter": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/QueryFilter"
+            },
+            "description": "Filters to apply to the query."
+          },
+          "limit": {
+            "type": "integer",
+            "description": "The maximum number of breakdown series to return.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A request to query time series metric data."
+      },
+      "QueryResponse": {
+        "type": "object",
+        "properties": {
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MetricValue"
+            },
+            "description": "The metric values returned by the query."
+          }
+        },
+        "additionalProperties": false,
+        "description": "The response for a metric query."
       },
       "ReadMemoryStoreQueueItemsResponse": {
         "type": "object",
@@ -88574,6 +89525,20 @@
           "twostepverification_get_v1_users__userId__recovery_codes",
           "twostepverification_post_v1_users__userId__recovery_codes_clear",
           "twostepverification_post_v1_users__userId__recovery_codes_regenerate"
+        ]
+      }
+    },
+    {
+      "name": "Analytics",
+      "description": "Query analytics data for your experiences programmatically. See the [Analytics guide](https://create.roblox.com/docs/cloud/guides/analytics) for Open Cloud setup and usage.\n",
+      "x-roblox-tag-info": {
+        "path": "analytics",
+        "content": "HTTP APIs for querying experience analytics on Roblox Cloud",
+        "ordering": [
+          "post_analytics_query_api_v1_universes__universe_id__metrics",
+          "post_analytics_query_api_v1_universes__universe_id__dimension_values",
+          "get_analytics_query_api_v1_universes__universe_id__operations_metrics__operation_id_",
+          "get_analytics_query_api_v1_universes__universe_id__operations_dimension_values__operation_id_"
         ]
       }
     },
