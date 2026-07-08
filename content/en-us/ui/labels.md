@@ -71,7 +71,3 @@ properties:
 - `Class.GuiObject.BackgroundTransparency|BackgroundTransparency`
 
 For example, to display only the image and hide the rectangle, set the `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` property to `1`.
-
-## Text filtering
-
-<TextFiltering components={props.components} context="characters/strings that are displayed on text labels" />

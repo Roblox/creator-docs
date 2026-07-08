@@ -80,7 +80,7 @@ The earliest `startTime` you can use depends on the metric type:
 
 Querying beyond the retention period returns a `400` error with code `2001`.
 
-## Long-running operations
+### Long-running operations
 
 Most queries complete immediately and return `200 OK` with `"done": true`. For queries with large date ranges or many breakdown series, the API returns `202 Accepted` with `"done": false` and a `path` to poll.
 

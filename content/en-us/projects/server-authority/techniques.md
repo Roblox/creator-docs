@@ -7,27 +7,37 @@ This guide outlines various techniques for creating high-quality, smooth, multip
 
 ## Predictive instance creation (instance stitching)
 
-Instance **stitching** lets client scripts predict `Datatype.Instance.new()` calls made inside `Class.RunService:BindToSimulation()` callbacks. The client creates the `Class.Instance` immediately without waiting for a server round‑trip; when the server's authoritative copy arrives, the client‑created instance and the server's authoritative copy are merged into one. From your script's perspective, the `Class.Instance` exists immediately and is consistent with the server.
+Instance **stitching** lets client scripts predictively create `Class.Instance|Instances` inside `Class.RunService:BindToSimulation()` callbacks. The client creates the `Class.Instance` immediately without waiting for a server round‑trip; when the server's authoritative copy arrives, the client‑created instance and the server's authoritative copy are merged into one. From your script's perspective, the `Class.Instance` exists immediately and is consistent with the server.
 
 Instance stitching is useful in cases where an instance must be visible and active on the client as soon as possible. While the server will eventually replicate any instance the client needs (along with any effects they had on the world), this process incurs at least one round‑trip of latency due to server communication. Examples include firing a rocket launcher and creating physics constraints&nbsp;— without stitching, the client will see the rocket pop in far away from them, or some jitter when the new constraints replicate to them.
 
 ### Technical behavior
 
-Instance stitching works by generating the same deterministic GUID on both the client and the server for the same `Datatype.Instance.new()` call. The GUID is derived from four inputs: the type of the `Class.Instance` being created, the calling script's identity (two scripts with the same text are considered different), the current simulation frame, and a per‑script call counter that resets each frame. If client and server agree on all four inputs, they produce matching GUIDs and the stitch succeeds.
+Instance stitching works by generating the same deterministic GUID on both the client and the server. The GUID is derived from four inputs: the type of the `Class.Instance` being created, the source's identity (see below), the current simulation frame, and a per‑script call counter that resets each frame.
+
+- For `Datatype.Instance.new()` — The source is the script itself (two scripts with the same text are considered different).
+- For `Datatype.Instance.fromExisting()` — The source is the `Class.Instance` that you're calling `Datatype.Instance.fromExisting()` on.
+- For `Class.Instance:Clone()` — Each cloned instance uses the source instance's GUID as the context seed.
+
+If client and server agree on the inputs, they produce matching GUIDs and the stitch succeeds.
 
 ### Implementation
 
-To utilize instance stitching, simply call `Datatype.Instance.new()` inside a `Class.RunService:BindToSimulation()|BindToSimulation()` callback from a `Class.ModuleScript` that gets required on both the client **and** the server. Nothing else is required on your end; the system handles GUID assignment and reconciliation automatically.
+To utilize instance stitching, call `Datatype.Instance.new()`, `Class.Instance:Clone()`, or `Datatype.Instance.fromExisting()` inside a `Class.RunService:BindToSimulation()|BindToSimulation()` callback from a `Class.ModuleScript` that gets required on both the client **and** the server. Nothing else is required on your end; the system handles GUID assignment and reconciliation automatically.
+
+You can freely set non-[simulation access](./index.md#simulation-access) properties such as `Class.Instance.Name|Name`, `Class.BasePart.Size|Size`, or `Class.Instance.Parent|Parent` on an instance before it is parented into the `Class.DataModel`.
 
 ```lua title="Simulation (ModuleScript) - Create Instance in a BindToSimulation() Callback"
 local RunService = game:GetService("RunService")
-local Players = game:GetService("Players")
 
 local Simulation = {}
 
 Simulation.Initialize = function()
 	RunService:BindToSimulation(function(deltaTime)
-		local part = Instance.new("Part", workspace)
+		local part = Instance.new("Part")
+		part.Name = "PredictedPart"
+		part.Size = Vector3.new(2, 2, 2)
+		part.Parent = workspace -- Part is now in the DataModel; any non-simulation access changes will error after this
 		-- Part exists immediately on the client and will be reconciled with the server
 	end)
 end
@@ -35,39 +45,28 @@ end
 return Simulation
 ```
 
-### Limitations
+`Class.Instance:Clone()` and `Datatype.Instance.fromExisting()` stitch correctly when the source instance was replicated to both client and server; both sides clone from matching source GUIDs and produce matching predicted GUIDs.
 
-Currently, instance stitching has the following limitations (to be resolved in the future):
+```lua title="Simulation (ModuleScript) - Clone Instance in a BindToSimulation() Callback"
+local RunService = game:GetService("RunService")
 
-<Alert severity="warning" variant="outlined">
-Setting `Class.Instance.Parent|Parent` separately from `Datatype.Instance.new()` is not supported inside a simulation callback. Instead, pass the parent as the second argument to `Datatype.Instance.new()`:
+local Simulation = {}
 
-```lua
--- Correct
-local part = Instance.new("Part", workspace)
+local sourceTemplate -- a replicated Instance
 
--- Not supported (will fail)
-local part = Instance.new("Part")
-part.Parent = workspace
+Simulation.Initialize = function()
+	RunService:BindToSimulation(function(deltaTime)
+		local cloned = sourceTemplate:Clone()
+		cloned.Parent = workspace
+		-- Cloned hierarchy is stitched with the server's authoritative copy
+	end)
+end
+
+return Simulation
 ```
 
-</Alert>
-
-<Alert severity="warning" variant="outlined">
-Setting other properties such as `Class.Instance.Name|Name`, `Class.BasePart.Size|Size`, or `Class.BasePart.CFrame|CFrame` must be deferred to the next frame using `Library.task.defer()`:
-
-```lua title="Setting Other Simulation-Inaccessible Properties"
-local part = Instance.new("Part", workspace)
-task.defer(function()
-	part.Name = "PredictedPart"
-	part.Size = Vector3.new(2, 2, 2)
-end)
-```
-
-</Alert>
-
-<Alert severity="warning" variant="outlined">
-Stitching only applies to `Datatype.Instance.new()`. Instances created via `Class.Instance:Clone()` or `Datatype.Instance.fromExisting()` inside a simulation callback will not be reconciled with the server and will remain client‑local.
+<Alert severity="warning">
+Instances created inside a simulation callback must be parented into the `Class.DataModel` hierarchy before the end of that frame. Do not store a reference to a speculative instance and parent it in a subsequent frame.
 </Alert>
 
 ## Position smoothing
