@@ -25,14 +25,14 @@ Mispredictions are a **normal and expected** part of the server authority archit
 
 ## Setup
 
-As the server authority model requires certain other engine technologies to function correctly, you must first set the following properties on the `Class.Workspace` object in the [Explorer](../../studio/explorer.md):
+The server authority model requires certain other engine technologies to function correctly. Confirm the following property settings on the `Class.Workspace` object in the [Explorer](../../studio/explorer.md):
 
-1. `Class.Workspace.NextGenerationReplication` must be enabled
-2. `Class.Workspace.PlayerScriptsUseInputActionSystem` must be enabled
-3. `Class.Workspace.SignalBehavior` must be `Enum.SignalBehavior.Deferred|Deferred`
-4. `Class.Workspace.UseFixedSimulation` must be enabled
-5. `Class.Workspace.StreamingEnabled` must be enabled
-6. `Class.Workspace.AuthorityMode` must be `Enum.AuthorityMode.Server|Server` (all of the above must be set first)
+1. `Class.Workspace.AuthorityMode` must be `Enum.AuthorityMode.Server|Server` (setting this automatically sets the following five).
+2. `Class.Workspace.NextGenerationReplication` must be enabled.
+3. `Class.Workspace.PlayerScriptsUseInputActionSystem` must be enabled.
+4. `Class.Workspace.SignalBehavior` must be `Enum.SignalBehavior.Deferred|Deferred`.
+5. `Class.Workspace.UseFixedSimulation` must be enabled.
+6. `Class.Workspace.StreamingEnabled` must be enabled.
 
 ## Concepts
 
@@ -239,21 +239,6 @@ end
 ```
 
 Using this pattern, you can read `Class.InputAction|InputActions` for all players in `Class.RunService:BindToSimulation()` on both client and server to receive the same data for a given frame and record the previous frame's input in an [attribute](../../studio/properties.md#instance-attributes), for example to trigger a character run when a `RunAction` input action is triggered.
-
-Note that if you need to write custom data into the [Input Action System](../../input/input-action-system.md), you should use a function connected to `Class.RunService.RenderStepped` or `Class.RunService:BindToRenderStep()`, not `Class.RunService:BindToSimulation()`. Firing an `Class.InputAction` in `Class.RunService:BindToSimulation()|BindToSimulation()` can cause clients to produce incorrect results during a resimulation.
-
-```lua
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
-local Workspace = game:GetService("Workspace")
-
-RunService:BindToRenderStep("CameraInput", Enum.RenderPriority.Last.Value, function()
-	-- Send the client camera's forward vector to the server through an InputAction
-	local cameraForwardInputAction = Players.LocalPlayer.PlayContext.CameraForward
-	local cameraForwardVector = Workspace.CurrentCamera.CFrame.LookVector
-	cameraForwardInputAction:Fire(cameraForwardVector)
-end)
-```
 
 ### Remote events
 

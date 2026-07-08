@@ -37,7 +37,7 @@ Simulation.Initialize = function()
 		local part = Instance.new("Part")
 		part.Name = "PredictedPart"
 		part.Size = Vector3.new(2, 2, 2)
-		part.Parent = workspace -- Part is now in the DataModel; any non-simulation access changes will error after this
+		part.Parent = workspace -- Part is now in the data model; any non-simulation access changes will error after this
 		-- Part exists immediately on the client and will be reconciled with the server
 	end)
 end
@@ -82,10 +82,9 @@ In the following sample `Class.Script`, the rendered object (parent) smoothly tr
 ```lua title="Smoothly Track BasePart Position with Renderer Part"
 local RunService = game:GetService("RunService")
 local TweenService = game:GetService("TweenService")
-local Workspace = game:GetService("Workspace")
 
 -- Object to smoothly track
-local smoothTarget:BasePart = Workspace.SimulatedPart
+local smoothTarget:BasePart = workspace.SimulatedPart
 -- Visual object that will be smoothed
 local renderer:BasePart = script.Parent
 -- Time to smooth over; smaller means faster
@@ -241,8 +240,6 @@ In a predicted simulation, it's possible to trigger effects or sounds for events
 A good strategy for rendering a predicted simulation is to synchronize a state machine pattern within the simulation loop and render changes to the state in a render step function. The following example simulates a grenade with a state machine pattern:
 
 ```lua title="Simple State Machine for Tracking a Grenade (ModuleScript)"
-local Workspace = game:GetService("Workspace")
-
 local module = {}
 
 module.GrenadeStates = {

@@ -60395,7 +60395,7 @@
     "/v2/sales/sales-report-download": {
       "post": {
         "tags": ["Universes"],
-        "operationId": "SalesReportDownload_PublishSalesReportDownloadMessage",
+        "operationId": "TransactionRecordsApi.SalesReportDownload_PublishSalesReportDownloadMessage",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -60462,7 +60462,7 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#SalesReportDownload_PublishSalesReportDownloadMessage"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#TransactionRecordsApi.SalesReportDownload_PublishSalesReportDownloadMessage"
         }
       }
     },
@@ -90724,7 +90724,7 @@
           "develop_get_v1_universes_user_public_publish_eligibility",
           "develop_get_v1_user_universes",
           "develop_patch_v2_universes__universeId__configuration",
-          "SalesReportDownload_PublishSalesReportDownloadMessage",
+          "TransactionRecordsApi.SalesReportDownload_PublishSalesReportDownloadMessage",
           "economycreatorstats_get_v1_universes__universeId__stats",
           "engagementpayouts_get_v1_universe_payout_history",
           "gameinternationalization_get_v1_automatic_translation_games__gameId__feature_status",
