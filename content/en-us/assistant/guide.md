@@ -75,6 +75,17 @@ Assistant can create, edit, delete and iterate on instances in your data model, 
 
 If you examine the code, you can see that Assistant calls `Class.InsertService:GetFreeModels()` to query the Creator Store for a wheelbarrow model and uses `Class.Model:PivotTo()` to place it near a tree.
 
+#### Search and insert assets
+
+Assistant infers when to look for assets on the Creator Store or in your inventories based on your prompt, then presents relevant options for you to choose from before anything is placed in your workspace. Search and insert supports:
+
+- Both **free and paid** assets on the Creator Store.
+- Your **personal and group inventories**.
+- Filtering by asset type, including `Model`, `Audio`, `Mesh`, `MeshPart`, `Image`, `Decal`, `Video`, and `Package`.
+- Creator Store filters for price, audio duration, and verified creators.
+
+To insert a specific asset directly by its ID, use the `/insert_asset` slash command in Assistant.
+
 ## Generate content
 
 ### Materials
@@ -281,6 +292,15 @@ You can activate Planning Mode by either:
 - Entering the command `/plan` in Assistant.
 
 <img src="../assets/assistant/PlanningMode.png" width="400" alt="Example of Planning Mode in Assistant." />
+
+### Editable Markdown plans
+
+Generated plans are saved as editable Markdown documents that persist across chat sessions, so you can fine-tune workflows before they execute.
+
+- **Cross-session cloud storage**: Plans are stored in the cloud and tied to both your experience and creator profile rather than to a single chat session. Like Assistant chat history, plans are private and are not visible to collaborators.
+- **Integrated Markdown editor**: After Assistant creates a plan, click **Open Plan** in the chat interface to launch the dedicated Markdown editor, where you can review the formatted document or modify its contents directly.
+- **Save and update plans**: Click **Save** to push a diff of your manual edits back to Assistant, which updates its underlying task list. Conversely, prompting Assistant in chat automatically updates the plan Markdown file.
+- **Explicit approval gate**: Plans never auto-execute or time out into acceptance. The workflow only executes when you click **Build** in the Assistant chat.
 
 ## Skills
 
