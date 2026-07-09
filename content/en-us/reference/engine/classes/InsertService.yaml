@@ -218,7 +218,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      Use `Class.InsertService:GetFreeDecalsAsync()|GetFreeDecalsAsync()`
+      instead.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -305,7 +307,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      Use `Class.InsertService:GetFreeModelsAsync()|GetFreeModelsAsync()`
+      instead.
     security: None
     thread_safety: Unsafe
     capabilities:

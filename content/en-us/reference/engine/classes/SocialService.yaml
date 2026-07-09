@@ -561,7 +561,10 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      Use
+      `Class.SocialService:PromptLinkSharingAsync()|PromptLinkSharingAsync()`
+      instead.
     security: None
     thread_safety: Unsafe
     capabilities:

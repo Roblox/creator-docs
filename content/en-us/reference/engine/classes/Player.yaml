@@ -791,25 +791,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-  - name: Player.MaximumSimulationRadius
-    summary: ''
-    description: ''
-    code_samples: []
-    type: float
-    tags:
-      - Hidden
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: LocalUserSecurity
-      write: LocalUserSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities:
-      - Players
   - name: Player.MembershipType
     summary: |
       Describes the account's membership type.
@@ -931,10 +912,9 @@ properties:
       physics, streaming, etc.) replicate at different rates depending on how
       close objects are to the replication focus.
 
-      When this property is `nil` or the instance referenced is destroyed, it
-      reverts to its default behavior which is to treat the local player's
-      character's `Class.Model.PrimaryPart|PrimaryPart` as the replication
-      focus.
+      When this property is `nil`, it reverts to its default behavior which is
+      to treat the local player's character's
+      `Class.Model.PrimaryPart|PrimaryPart` as the replication focus.
 
       This property should only be set on the server with a `Class.Script`, not
       a `Class.LocalScript`. Note that this property does not change or update
@@ -986,24 +966,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities:
-      - Players
-  - name: Player.SimulationRadius
-    summary: ''
-    description: ''
-    code_samples: []
-    type: float
-    tags:
-      - Hidden
-    deprecation_message: ''
-    security:
-      read: LocalUserSecurity
-      write: LocalUserSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
     capabilities:
       - Players
   - name: Player.StepIdOffset
@@ -2171,7 +2133,8 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method is deprecated. Do not use it for new work.
     security: None
     thread_safety: Unsafe
     capabilities:

@@ -46,7 +46,8 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      Use `Class.BadgeService:AwardBadgeAsync()|AwardBadgeAsync()` instead.
     security: None
     thread_safety: Unsafe
     capabilities:

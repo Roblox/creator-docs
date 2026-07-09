@@ -366,7 +366,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      Use `Class.TeleportService:ReserveServerAsync()|ReserveServerAsync()`
+      instead.
     security: None
     thread_safety: Unsafe
     capabilities:

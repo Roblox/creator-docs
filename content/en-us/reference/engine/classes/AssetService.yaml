@@ -610,7 +610,10 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      Use
+      `Class.AssetService:GetAssetIdsForPackageAsync()|GetAssetIdsForPackageAsync()`
+      instead.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -965,7 +968,8 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      Use `Class.AssetService:SearchAudioAsync()|SearchAudioAsync()` instead.
     security: None
     thread_safety: Unsafe
     capabilities:

@@ -247,6 +247,35 @@ In each of the above settings, the following concepts apply:
 - **Precision** — Per-packet delay sampled from delay and jitter is rounded to 1 millisecond.
 - **Packet Loss** — Each packet can be dropped randomly based on the configured probability.
 
+## Scripted testing
+
+In addition to the interactive testing tools above, Studio exposes services that let you drive testing programmatically from a plugin or build pipeline. All three services are Studio-only and do nothing when run in a published experience.
+
+<table>
+	<thead>
+		<tr>
+			<th>Service</th>
+			<th>Purpose</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>`Class.StudioDeviceSimulatorService`</td>
+			<td>Scriptable [device emulation](#device-emulation). Browse device presets, switch the active device, override resolution and DPI, control orientation and scaling, and create custom device profiles that persist to disk.</td>
+		</tr>
+		<tr>
+			<td>`Class.StudioTestService`</td>
+			<td>Programmatic [multi-client simulation](#multi-client-simulation). Start a server with up to 8 simulated clients, add players mid-session, pass arguments into the test, trigger client disconnects, and end tests from the server.</td>
+		</tr>
+		<tr>
+			<td>`Class.VirtualInput`</td>
+			<td>Simulated mouse, keyboard, and pointer events that are processed exactly like real hardware input. Obtain an instance from `Class.UserInputService:CreateVirtualInput()`.</td>
+		</tr>
+	</tbody>
+</table>
+
+These services enable include cross-device multiplayer testing (cycle through device profiles and launch a multiplayer test at each), player join/leave stress testing, orientation regression testing, and end-to-end UI flow automation.
+
 ## VR headsets
 
 If you'd like to support virtual reality (VR) headsets for your game, make sure to test or [emulate](#vr-emulation) VR in Studio.

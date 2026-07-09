@@ -35,7 +35,8 @@ properties:
     type: string
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This property is deprecated. Do not use it for new work.
     security:
       read: LocalUserSecurity
       write: LocalUserSecurity
@@ -241,7 +242,8 @@ methods:
           No return.
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method is deprecated. Do not use it for new work.
     security: None
     thread_safety: Unsafe
     capabilities:

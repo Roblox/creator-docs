@@ -41859,99 +41859,6 @@
         ]
       }
     },
-    "/v1/groups/{groupId}/wall/posts": {
-      "get": {
-        "tags": ["Groups"],
-        "summary": "Gets a list of group wall posts.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "groupId",
-            "description": "The group id.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "query",
-            "name": "limit",
-            "description": "The number of results per request.",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "enum": [10, 25, 50, 100],
-              "default": 10
-            }
-          },
-          {
-            "in": "query",
-            "name": "cursor",
-            "description": "The paging cursor for the previous or next page.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "in": "query",
-            "name": "sortOrder",
-            "description": "Sorted by group wall post Id",
-            "schema": {
-              "type": "string",
-              "enum": ["Asc", "Desc"],
-              "default": "Asc"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Groups.Api.Models.Response.GroupWallPostModel_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Groups.Api.Models.Response.GroupWallPostModel_"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The group is invalid or does not exist."
-          },
-          "403": {
-            "description": "2: You do not have permission to access this group wall."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://groups.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {},
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_get_v1_groups__groupId__wall_posts"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://groups.roblox.com/v2/groups/{groupId}/wall/posts",
-            "httpMethod": "GET"
-          }
-        ]
-      }
-    },
     "/v1/installer-cdns": {
       "get": {
         "tags": ["Metadata"],
@@ -55555,7 +55462,7 @@
             "schema": {
               "type": "integer",
               "format": "int32",
-              "enum": [0, 1]
+              "enum": [0, 1, 2]
             }
           }
         ],
@@ -57918,112 +57825,6 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/assets#assetdelivery_post_v2_assets_batch"
-        }
-      }
-    },
-    "/v2/assets/{assetId}/bundles": {
-      "get": {
-        "tags": ["Assets"],
-        "summary": "Lists bundles that contain the given asset (hydrated search-detail shape for marketplace).",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "assetId",
-            "description": "Asset id.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "header",
-            "name": "Roblox-Place-Id",
-            "description": "Roblox-Place-Id header.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "header",
-            "name": "Roblox-Game-Id",
-            "description": "Roblox-Game-Id header.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "in": "query",
-            "name": "limit",
-            "description": "The number of results per request.",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "enum": [10, 25, 50, 100],
-              "default": 10
-            }
-          },
-          {
-            "in": "query",
-            "name": "cursor",
-            "description": "The paging cursor for the previous or next page.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "in": "query",
-            "name": "sortOrder",
-            "description": "The order the results are sorted in.",
-            "schema": {
-              "type": "string",
-              "enum": ["Asc", "Desc"],
-              "default": "Asc"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Catalog.Api.CatalogSearchDetailedResponseItem_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Catalog.Api.CatalogSearchDetailedResponseItem_"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: Invalid assetId\r\n4: Invalid Cursor."
-          },
-          "403": {
-            "description": "7: User is unauthorized."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://catalog.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {},
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#catalog_get_v2_assets__assetId__bundles"
         }
       }
     },
@@ -62436,7 +62237,7 @@
             "schema": {
               "type": "integer",
               "format": "int32",
-              "enum": [0, 1]
+              "enum": [0, 1, 2]
             }
           }
         ],
@@ -75280,7 +75081,7 @@
               41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
               59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
               75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
-              91, 92
+              91, 92, 93
             ],
             "type": "integer"
           },
@@ -75475,7 +75276,7 @@
               41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
               59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
               75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
-              91, 92
+              91, 92, 93
             ],
             "type": "integer"
           },
@@ -79493,11 +79294,11 @@
         "type": "object",
         "properties": {
           "changeRank": {
-            "description": "View wall permission",
+            "description": "Update a member's role",
             "type": "boolean"
           },
           "inviteMembers": {
-            "description": "Post to wall permission",
+            "description": "Invite members to the group",
             "type": "boolean"
           },
           "removeMembers": {
@@ -79708,18 +79509,6 @@
         "description": "A model representing group posts permissions",
         "type": "object",
         "properties": {
-          "viewWall": {
-            "description": "View wall permission",
-            "type": "boolean"
-          },
-          "postToWall": {
-            "description": "Post to wall permission",
-            "type": "boolean"
-          },
-          "deleteFromWall": {
-            "description": "Delete from wall permission",
-            "type": "boolean"
-          },
           "viewStatus": {
             "description": "View status permission",
             "type": "boolean"
@@ -80014,20 +79803,6 @@
             "description": "The maximum length of a group status",
             "type": "integer"
           },
-          "groupPostMaxLength": {
-            "format": "int32",
-            "description": "The maximum length of a group wall post",
-            "type": "integer"
-          },
-          "isGroupWallNotificationsEnabled": {
-            "description": "If set to true, group details will subscribe and respond to wall notifications.",
-            "type": "boolean"
-          },
-          "groupWallNotificationsSubscribeIntervalInMilliseconds": {
-            "format": "int32",
-            "description": "Time in milliseconds between calls to subscribe to group wall notifications.",
-            "type": "integer"
-          },
           "areProfileGroupsHidden": {
             "description": "If set to true, groups showcase will not show on users profiles.\r\n            \r\nIf set to false, group showcase will display on users profiles.",
             "type": "boolean"
@@ -80222,35 +79997,6 @@
           "created": {
             "format": "date-time",
             "description": "Date the name change was applied",
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Groups.Api.Models.Response.GroupWallPostModel": {
-        "description": "A response model for group wall post information",
-        "type": "object",
-        "properties": {
-          "id": {
-            "format": "int64",
-            "description": "The group wall post Id.",
-            "type": "integer"
-          },
-          "poster": {
-            "$ref": "#/components/schemas/Roblox.Groups.Api.Models.Response.UserModel"
-          },
-          "body": {
-            "description": "The group wall post body.",
-            "type": "string"
-          },
-          "created": {
-            "format": "date-time",
-            "description": "When the group wall post was posted.",
-            "type": "string"
-          },
-          "updated": {
-            "format": "date-time",
-            "description": "When the group wall post was last updated.",
             "type": "string"
           }
         },
@@ -80677,12 +80423,6 @@
             "description": "The permission-value pairs to be updated.",
             "type": "object",
             "properties": {
-              "DeleteFromWall": {
-                "type": "boolean"
-              },
-              "PostToWall": {
-                "type": "boolean"
-              },
               "InviteMembers": {
                 "type": "boolean"
               },
@@ -80696,9 +80436,6 @@
                 "type": "boolean"
               },
               "ViewStatus": {
-                "type": "boolean"
-              },
-              "ViewWall": {
                 "type": "boolean"
               },
               "ChangeRank": {
@@ -86103,24 +85840,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Groups.Api.Models.Response.GroupWallPostModel_": {
-        "type": "object",
-        "properties": {
-          "previousPageCursor": {
-            "type": "string"
-          },
-          "nextPageCursor": {
-            "type": "string"
-          },
-          "data": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.Groups.Api.Models.Response.GroupWallPostModel"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Groups.Api.Models.Response.UserModel_": {
         "type": "object",
         "properties": {
@@ -89603,7 +89322,6 @@
           "catalog_post_v1_topic_get_topics",
           "catalog_get_v1_users__userId__bundles",
           "catalog_get_v1_users__userId__bundles__bundleType_",
-          "catalog_get_v2_assets__assetId__bundles",
           "catalog_get_v2_search_items_details",
           "develop_get_v1_assets_voting",
           "develop_get_v1_plugins",
@@ -90036,7 +89754,6 @@
           "groups_delete_v1_groups__groupId__users__userId_",
           "groups_patch_v1_groups__groupId__users__userId_",
           "groups_get_v1_groups__groupId__users__userId__permissions",
-          "groups_get_v1_groups__groupId__wall_posts",
           "groups_get_v1_groups_configuration_metadata",
           "groups_post_v1_groups_create",
           "groups_patch_v1_groups_icon",
