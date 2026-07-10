@@ -4,14 +4,14 @@ description: Learn how to earn Robux for creating engaging experiences and growi
 ---
 
 Creator Rewards let creators earn Robux by driving Daily Engagement and Audience Expansion.
-This document describes how Payout Awards are calculated under the Creator Rewards Program. Roblox
+This document describes how Creator Awards are calculated under the Creator Rewards Program. Roblox
 may modify this framework from time to time, so visit often to learn about any changes.
 
-## Payout Awards Framework - Terms and Definitions
+## Creator Awards Framework - Terms and Definitions
 
 Together with the Roblox [Terms of
 Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), the following
-Payout Awards Framework terms and definitions apply to the Creator Rewards program:
+Creator Awards Framework terms and definitions apply to the Creator Rewards program:
 
 - "User" means any person or entity who uses or accesses the Services (per the
   [Roblox Dictionary](https://en.help.roblox.com/hc/en-us/articles/4415545981332-Roblox-Dictionary)).
@@ -44,7 +44,7 @@ Payout Awards Framework terms and definitions apply to the Creator Rewards progr
   grow your off-platform user acquisition.
 - "Qualifying Purchases" means the purchase of Robux, Roblox Premium, or UGC subscriptions.
 
-## Payout Awards for Creators
+## Creator Awards for Creators
 
 The following sections describe the different rewards available.
 
@@ -63,7 +63,7 @@ Creators earn 5 Robux each day if their experience is one of the first three an 
     <tr>
     <th><b>Qualifying Action</b></th>
     <th><b>Timeframe</b></th>
-    <th><b>Payout</b></th>
+    <th><b>Reward</b></th>
     </tr>
   </thead>
   <tbody>
@@ -121,7 +121,7 @@ Qualifying Purchases anywhere on the platform during their first 60 days﹡.
     <tr>
     <th><b>Qualifying Action</b></th>
     <th><b>Timeframe</b></th>
-    <th><b>Payout</b></th>
+    <th><b>Reward</b></th>
     </tr>
   </thead>
   <tbody>
@@ -155,12 +155,12 @@ Qualifying Purchases anywhere on the platform during their first 60 days﹡.
 </table>
 
 _﹡Less Qualifying Purchases they have made in the 60 days after each time (if any) they have
-previously reactivated)_
+previously reactivated_
 
-## Access payout data
+## Access reward data
 
-Payout Awards, if any, are made in "Earned Robux" with a 60 day holding period. If
-you want to exchange Payout Awards for fiat currency (i.e. real money) or if you would like to earn
+Creator Awards, if any, are made in "Earned Robux" with a 60-day holding period. If
+you want to exchange Creator Awards for fiat currency (i.e., real money) or if you would like to earn
 Audience Expansion rewards, the [DevEx
 Terms](https://help.roblox.com/hc/en-us/articles/115005718246-Developer-Exchange-Terms-of-Use) also
 apply to you. Read the [DevEx
@@ -170,7 +170,7 @@ but are not limited to, information regarding taxes and withholding requirements
 
 ### For experiences
 
-To access payout data for one of your experiences:
+To access reward data for one of your experiences:
 
 1. On Creator Dashboard, go to your [Creations](https://create.roblox.com/dashboard/creations) page
    and select the desired experience.
@@ -191,7 +191,7 @@ The dashboard displays the following metrics:
 
 ### For share links
 
-To access payout data for your Share Links:
+To access reward data for your Share Links:
 
 1. On Creator Dashboard, go to the [Analytics](https://create.roblox.com/dashboard/analytics) page.
 1. Click the [Share Links](https://create.roblox.com/dashboard/analytics?tab=ShareLinks) tab.
