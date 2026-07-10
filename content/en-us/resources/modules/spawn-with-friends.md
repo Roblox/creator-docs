@@ -3,19 +3,19 @@ title: Spawn With Friends
 description: The Spawn With Friends module automatically moves spawning players near one of their friends.
 ---
 
-It can be challenging to locate friends in-experience. The **SpawnWithFriends** [developer module](../../resources/modules/index.md) automatically moves spawning players near one of their friends present in the experience. This module can also be configured to teleport a player on command instead of automatically.
+It can be challenging to locate friends in-game. The **SpawnWithFriends** [developer module](../../resources/modules/index.md) automatically moves spawning players near one of their friends present in the game. This module can also be configured to teleport a player on command instead of automatically.
 
 <video src="../../assets/developer-modules/spawn-with-friends/Showcase.mp4" controls width="100%"></video>
 
 <Alert severity="warning">
-	Before spawning occurs, in order to avoid spawning a character inside the map's geometry, the system confirms that there is enough space. Thus, this module might work better in experiences with large, open spaces.
+	Before spawning occurs, in order to avoid spawning a character inside the map's geometry, the system confirms that there is enough space. Thus, this module might work better in games with large, open spaces.
 </Alert>
 
 ## Module Usage
 
 ### Installation
 
-To use the **SpawnWithFriends** module in an experience:
+To use the **SpawnWithFriends** module in a game:
 
 1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
@@ -31,7 +31,7 @@ To use the **SpawnWithFriends** module in an experience:
 
    <img src="../../assets/developer-modules/spawn-with-friends/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **SpawnWithFriends** model into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **SpawnWithFriends** model into `Class.ReplicatedStorage`. Upon running the game the module will begin running.
 
 ### Restricted Spawn Areas
 
@@ -140,7 +140,7 @@ SpawnWithFriends.configure({
 teleportToRandomFriend(playerToTeleport: `Class.Player`): `boolean`
 </figcaption>
 
-Manually triggers teleportation of a player to one of their friends in the experience. Returns a boolean indicating whether or not teleportation succeeded; failure to teleport can be caused by the absence of friends in the server or the inability to find an unobstructed teleportation point. This function can only be called from a `Class.Script`.
+Manually triggers teleportation of a player to one of their friends in the game. Returns a boolean indicating whether or not teleportation succeeded; failure to teleport can be caused by the absence of friends in the server or the inability to find an unobstructed teleportation point. This function can only be called from a `Class.Script`.
 
 #### setTeleportationValidator
 

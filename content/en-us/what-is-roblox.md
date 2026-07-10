@@ -16,12 +16,12 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 <Grid item container Medium={12} Large={6} XLarge={6} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <p>Roblox is a 3D creation platform that provides everything you need to build, test, distribute, and monetize your creations.</p>
-<p>Creations can be items that users equip for their avatars, the 3D experiences that users join, or assets and plugins that you provide to other creators to build with.</p>
+<p>Creations can be items that users equip for their avatars, the 3D games that users join, or assets and plugins that you provide to other creators to build with.</p>
 </Grid>
 </Grid>
 </Grid>
 
-<h2 style={{marginBottom: 24, marginTop: 96}}>Experiences</h2>
+<h2 style={{marginBottom: 24, marginTop: 96}}>Games</h2>
 Learn, share, and interact with the Roblox community in the following places.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
@@ -31,7 +31,7 @@ Learn, share, and interact with the Roblox community in the following places.
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 <img src="/assets/landing/get-started/first-experience.png" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
 </div>
-<Typography variant='h4'>Create your first experience</Typography>
+<Typography variant='h4'>Create your first game</Typography>
 <Typography variant='body1'>Create a catapult that launches spheres into blocks to learn important Roblox concepts.</Typography>
 <div style={{marginTop:16}}>
 <a underline="none" href="./tutorials/first-experience/">
@@ -64,7 +64,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 </Grid>
 
 <h2 style={{marginBottom: 24, marginTop: 96}}>Avatars</h2>
-Avatars are the 3D representations of users on Roblox. They persist across all Roblox experiences and are fully customizable.
+Avatars are the 3D representations of users on Roblox. They persist across all Roblox games and are fully customizable.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
@@ -147,11 +147,11 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 <img src="/assets/landing/home/discover.jpg" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
 </div>
 <Typography variant='h4'>Discover</Typography>
-<Typography variant='body1'>Users find experiences on their Discover page, where they can immediately join and enjoy your experiences. </Typography>
+<Typography variant='body1'>Users find games on their Discover page, where they can immediately join and enjoy your games. </Typography>
 <div style={{marginTop:16}}>
 <a underline="none" href="https://www.roblox.com/discover">
 <Button variant="contained" color="secondary" size='large'
-style={{marginRight:16, alignSelf: 'flex-start'}}>Browse Experiences</Button>
+style={{marginRight:16, alignSelf: 'flex-start'}}>Browse Games</Button>
 </a>
 </div>
 </Grid>

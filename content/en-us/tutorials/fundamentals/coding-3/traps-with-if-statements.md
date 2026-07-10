@@ -11,7 +11,7 @@ Traps that decrease players' health are a fun game-play element that can be code
 
 ## Set up the trap
 
-Traps work exceptionally well in experiences with movement-based challenges, like obbies. These steps will start by setting up the necessary variables and functions. Do as much as you can without looking at the code boxes first.
+Traps work exceptionally well in games with movement-based challenges, like obbies. These steps will start by setting up the necessary variables and functions. Do as much as you can without looking at the code boxes first.
 
 1. Create and name a trap part. Insert a script into the part.
 2. In the script, add a descriptive comment and then use a variable to reference the script's parent.

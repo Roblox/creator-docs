@@ -1,6 +1,6 @@
 ---
 title: Buy upgrades
-description: Part of the Adventure Game Series in Roblox. Code a script to sell items in a Roblox experience.
+description: Part of the Adventure Game Series in Roblox. Code a script to sell items in a Roblox game.
 next: /education/adventure-game-series/finishing-the-project
 prev: /education/adventure-game-series/selling-items
 ---

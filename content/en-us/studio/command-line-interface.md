@@ -215,7 +215,7 @@ RobloxStudio.exe --task EditPlace --placeId 74265016723074 --universeId 71275837
 
 ## Run a script
 
-Use `--task RunScript` to execute a Luau script after a place finishes loading. Scripts run at the same permission level as the Studio command bar. You can combine this with `--placeId` and `--universeId` to run the script in a specific experience, or `--localPlaceFile` to run the script in a local place file. If those arguments are omitted, Studio opens the default empty baseplate template and runs the script there.
+Use `--task RunScript` to execute a Luau script after a place finishes loading. Scripts run at the same permission level as the Studio command bar. You can combine this with `--placeId` and `--universeId` to run the script in a specific game, or `--localPlaceFile` to run the script in a local place file. If those arguments are omitted, Studio opens the default empty baseplate template and runs the script there.
 
 ### Required arguments
 
@@ -258,7 +258,7 @@ Use `--task RunScript` to execute a Luau script after a place finishes loading. 
 ### Examples
 
 ```shell
-# Run a script in a specific experience and exit when done
+# Run a script in a specific game and exit when done
 RobloxStudio.exe --task RunScript --placeId 74265016723074 --universeId 7127583708 --runScriptFile smokeTest.luau --outputFile out.log --quitAfterExecution
 
 # Run a script in the default Baseplate

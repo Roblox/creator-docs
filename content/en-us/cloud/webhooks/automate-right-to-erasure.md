@@ -12,7 +12,7 @@ Instead of handling requests manually, you can [set up a webhook](../../cloud/we
 Upon completing this tutorial, you should be able to create a locally-running custom program that automates the handling of right to erasure requests from users. The workflow for this process is as follows:
 
 1. Roblox Support receives a right to erasure request from a user.
-1. Roblox webhook is triggered, containing the User ID and a list of Start Place IDs for the experiences they have joined in the payload.
+1. Roblox webhook is triggered, containing the User ID and a list of Start Place IDs for the games they have joined in the payload.
 1. Your bot listens for these webhook notifications, verifies their authenticity, and utilizes the [Open Cloud API for data stores](../../cloud/guides/data-stores/index.md) to delete the PII data stored in data stores.
    <Alert severity="warning">
    To use this solution, make sure your data store keys are identifiable by User IDs, such as containing User IDs as substrings, or you need to modify the scripts to match your own data schema.
@@ -45,7 +45,7 @@ The following steps show how to set up the server using Discord.
 After obtaining the third-party server URL, use it to [configure a webhook](../../cloud/webhooks/webhook-notifications.md#configure-webhooks-on-creator-dashboard) on Creator Dashboard. make sure you perform the following settings:
 
 <Alert severity="info">
-Currently, only group owners can receive Right to Erasure requests for group-owned experiences. To implement the automation solution for a group-owned experience, make sure that the group owner configures the webhook.
+Currently, only group owners can receive Right to Erasure requests for group-owned games. To implement the automation solution for a group-owned game, make sure that the group owner configures the webhook.
 </Alert>
 
 - Add the Discord server URL as the **Webhook URL**.
@@ -74,19 +74,19 @@ After you add the webhook, use it to configure the bot with the following steps.
 
 ## Create an Open Cloud API key
 
-To allow your third-party bot to access your data stores for storing PII data of users, [create an Open Cloud API key](../auth/api-keys.md) that can access your experiences and add the **Delete Entry** permission of data stores for data deletion. If you use ordered data stores for storing PII, you also need to add the **Write** permission of ordered data stores. After completion, copy and save the API key in a secure location to use it in later steps.
+To allow your third-party bot to access your data stores for storing PII data of users, [create an Open Cloud API key](../auth/api-keys.md) that can access your games and add the **Delete Entry** permission of data stores for data deletion. If you use ordered data stores for storing PII, you also need to add the **Write** permission of ordered data stores. After completion, copy and save the API key in a secure location to use it in later steps.
 
-## Obtain identifiers of experiences and places
+## Obtain identifiers of games and places
 
-For the bot to locate the PII data requested by users for deletion, obtain the following identifiers of all experiences that you intend to use the bot for:
+For the bot to locate the PII data requested by users for deletion, obtain the following identifiers of all games that you intend to use the bot for:
 
-- The **Universe ID**, the unique identifier of your experience.
-- The **Start Place ID**, the unique identifier of the start place of an experience.
+- The **Universe ID**, the unique identifier of your game.
+- The **Start Place ID**, the unique identifier of the start place of a game.
 
 To obtain these identifiers:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-2. Hover over an experience's thumbnail, click the **&ctdot;** button, and select **Copy Universe ID** and **Copy Start Place ID**, respectively.
+2. Hover over a game's thumbnail, click the **&ctdot;** button, and select **Copy Universe ID** and **Copy Start Place ID**, respectively.
 
    <img src="../../assets/creator-dashboard/Options-Button-Experience-Public.png" width="200" />
 

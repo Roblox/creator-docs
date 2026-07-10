@@ -9,7 +9,7 @@ Best practices are guidelines that help you manage your data more efficiently.
 
 ### Create fewer data stores
 
-Data stores have similar behavior to tables in databases. When you minimize the number of data stores in an experience and put related data in the same data store, you're able to configure each data store individually and improve the service's efficiency to operate the data.
+Data stores have similar behavior to tables in databases. When you minimize the number of data stores in a game and put related data in the same data store, you're able to configure each data store individually and improve the service's efficiency to operate the data.
 
 ### Use a single object for related data
 
@@ -19,25 +19,25 @@ The versioning system versions individual objects instead of the entire data sto
 
 ### Use key prefixes to organize your data
 
-Filter keys with a specific [prefix](./versioning-listing-and-caching.md#listing-and-prefixes) when calling `Class.DataStore:ListKeysAsync()|ListKeysAsync()`. For example, you can save keys with a prefix like `/User_1234/profiles/warrior` and `/User_1234/profiles/mage` in experiences that support users with multiple character profiles. You can then use a prefix search with `/User_1234/profiles` to get a list of all profiles belonging to that user.
+Filter keys with a specific [prefix](./versioning-listing-and-caching.md#listing-and-prefixes) when calling `Class.DataStore:ListKeysAsync()|ListKeysAsync()`. For example, you can save keys with a prefix like `/User_1234/profiles/warrior` and `/User_1234/profiles/mage` in games that support users with multiple character profiles. You can then use a prefix search with `/User_1234/profiles` to get a list of all profiles belonging to that user.
 
 ## Optimization best practices
 
-Data stores have storage limits that apply per experience. When your experience approaches or exceeds its quota, you should take action to reduce usage and avoid potential additional costs.
+Data stores have storage limits that apply per game. When your game approaches or exceeds its quota, you should take action to reduce usage and avoid potential additional costs.
 
 ### Monitor storage usage
 
 Use these tools for data store observability:
 
 - **Data Stores Dashboard**, which provides you with a visual overview of your storage usage over time. Use this dashboard to monitor how your storage scales and to identify periods of unexpected growth in usage.
-- **Data Stores Manager**, which gives you a direct view into your experience's stored data. The Manager includes key metrics like your current storage usage and the total keys you have stored across all of your data stores. If your experience exceeds its quota, the Manager displays an alert and your new estimated monthly cost.
+- **Data Stores Manager**, which gives you a direct view into your game's stored data. The Manager includes key metrics like your current storage usage and the total keys you have stored across all of your data stores. If your game exceeds its quota, the Manager displays an alert and your new estimated monthly cost.
 
-  If your experience has more than 100 data stores, the Manager might not display their detailed metrics. In this case, consider using programmatic analysis through Open Cloud or batch operations.
-- **Notifications**, which notify you when your experience approaches or exceeds storage limits. Notifications include guidance and links to dashboards where you can then review and reduce your usage.
+  If your game has more than 100 data stores, the Manager might not display their detailed metrics. In this case, consider using programmatic analysis through Open Cloud or batch operations.
+- **Notifications**, which notify you when your game approaches or exceeds storage limits. Notifications include guidance and links to dashboards where you can then review and reduce your usage.
 
 ### Resolve over-quota usage
 
-If your experience exceeds your storage limits, you can:
+If your game exceeds your storage limits, you can:
 
 - **Delete unused data stores.** If you're testing or have temporary stores, deleting them regularly helps maintain healthy storage usage. When you delete a data store, it can take Roblox up to 30 days to process your request.
 - **Delete individual keys.** This is useful when you need to remove temporary items or a certain player's data.

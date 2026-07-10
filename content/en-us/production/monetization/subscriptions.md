@@ -1,28 +1,28 @@
 ---
 title: Subscriptions
-description: Subscriptions within experiences let you offer users recurring benefits for a monthly fee.
+description: Subscriptions within games let you offer users recurring benefits for a monthly fee.
 ---
 
-**Subscriptions** within experiences let you offer users recurring benefits for a monthly fee. Subscriptions are similar to [passes](./passes.md), but while the benefits of a pass are granted indefinitely, the benefits of a subscription are contingent on the user paying a monthly fee.
+**Subscriptions** within games let you offer users recurring benefits for a monthly fee. Subscriptions are similar to [passes](./passes.md), but while the benefits of a pass are granted indefinitely, the benefits of a subscription are contingent on the user paying a monthly fee.
 
 Subscriptions on Roblox have the following characteristics:
 
 - **Auto-renewal:** Subscriptions are auto-renewing, not one-time purchases, and can be priced in local currency or Robux.
 - **Robux payout:** Whether a subscription is purchased in local currency or Robux, you receive the subscription revenue in Robux. For more details, see [Earn with subscriptions](#earn-with-subscriptions).
-- **Single-tiered:** All subscriptions within an experience can be owned by users simultaneously. Mutually exclusive subscriptions are not supported.
+- **Single-tiered:** All subscriptions within a game can be owned by users simultaneously. Mutually exclusive subscriptions are not supported.
 - **Regional Pricing:** [Regional Pricing](./regional-pricing.md) is enabled by default for subscriptions sold in Robux and cannot be turned off. Regional Pricing is not available for subscriptions sold in local currency.
 
 ## Subscription guidelines
 
-Before creating your subscriptions, make sure they align with [Roblox's Terms of Use](https://en.help.roblox.com/hc/articles/19694609252884/) and comply with local laws. Any experience that engages in scams, attempts to mislead users with false offerings, or otherwise violate our [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) will be taken down.
+Before creating your subscriptions, make sure they align with [Roblox's Terms of Use](https://en.help.roblox.com/hc/articles/19694609252884/) and comply with local laws. Any game that engages in scams, attempts to mislead users with false offerings, or otherwise violate our [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) will be taken down.
 
 You must also make sure your subscriptions follow these guidelines:
 
-- **Provide clear, distinguishable subscription options:** Use short, succinct, and self-explanatory names that differentiate subscription options from one another. Specify the price and duration for each option when merchandising in-experience.
+- **Provide clear, distinguishable subscription options:** Use short, succinct, and self-explanatory names that differentiate subscription options from one another. Specify the price and duration for each option when merchandising in-game.
 - **Offer the same benefits across platforms and devices:** Regardless of where the subscription was purchased, ensure the user receives the same benefits for any given subscription plan.
-- **Design subscriptions to fit with each other and overall experience offerings:** Tiering of the same suite of benefits, like offering "Bronze," "Silver," and "Gold" tiers that are mutually exclusive, is not currently available. Ensure subscriptions represent distinct sets of benefits.
+- **Design subscriptions to fit with each other and overall game offerings:** Tiering of the same suite of benefits, like offering "Bronze," "Silver," and "Gold" tiers that are mutually exclusive, is not currently available. Ensure subscriptions represent distinct sets of benefits.
 - **Offer the benefits for the full term of the subscription:** Once a subscription offering is live, honor the benefits described and do not revoke benefits behind the scenes.
-- **Do not direct users to purchase on another platform (like mobile, web, etc.) in-experience:** While you are free to communicate with users off-platform, using the Roblox app to direct users to purchase elsewhere is prohibited.
+- **Do not direct users to purchase on another platform (like mobile, web, etc.) in-game:** While you are free to communicate with users off-platform, using the Roblox app to direct users to purchase elsewhere is prohibited.
 - **Do not gate subscription benefits by additional requirements once a user has paid:** Requiring a user to perform additional tasks, such as posting to social media, to get access to benefits they have paid for is prohibited. This guideline does not impact battle passes, which you are allowed to both create and market as a subscription purchase.
 
 ## Robux vs local currency
@@ -75,10 +75,10 @@ Subscriptions can be priced in Robux or local currency. The following table comp
 
 To create a subscription:
 
-1. Go to your experience in the [Creator Dashboard](https://create.roblox.com/) and select **Monetization** ⟩ **Subscriptions**.
+1. Go to your game in the [Creator Dashboard](https://create.roblox.com/) and select **Monetization** ⟩ **Subscriptions**.
 2. Click **Create Subscription**.
 3. Upload a cover image.
-4. Enter a name that is unique. You cannot have two subscriptions with the same name in the same experience.
+4. Enter a name that is unique. You cannot have two subscriptions with the same name in the same game.
 5. Enter a description that clearly describes the benefits you're offering.
 6. Select one of the following payment options:
 	- **Subscribers pay Robux:** Charge users the recurring subscription fee in Robux. If you select this option, you must enter a custom price greater than or equal to 49 Robux. [Regional Pricing](./regional-pricing.md) is enabled by default for the subscription and cannot be turned off.
@@ -86,7 +86,7 @@ To create a subscription:
 7. Select one of the following product types:
 	- **Durable:** Permanent items that persist after use or acquisition, such as physical items like weapons. If a subscription includes a bundle of different types of goods, with one or more of them durable, such as a value pack with a sword and a potion, choose **Durable** as the product type.
 	- **Consumable:** Temporary re-purchasable items that expire after use or acquisition, such as consumable potions that grant temporary boosts that expire over time.
-	- **Currency:** Any medium of exchange that users can use to purchase items within your experience.
+	- **Currency:** Any medium of exchange that users can use to purchase items within your game.
 8. Click **Create Subscription**.
 
 <Alert severity="info">
@@ -95,14 +95,14 @@ After creating a subscription, you can switch the payment type between Robux and
 
 ## Activate subscriptions
 
-You can have up to **50 subscriptions** per experience between active and inactive subscriptions.
+You can have up to **50 subscriptions** per game between active and inactive subscriptions.
 
-To put a subscription up for sale, click **&vellip;** next to the subscription you want to activate and select **Activate**. Active subscriptions are automatically available for sale in the **Store** tab of the experience details page, and can be added to your experience through `Class.MarketplaceService` functions.
+To put a subscription up for sale, click **&vellip;** next to the subscription you want to activate and select **Activate**. Active subscriptions are automatically available for sale in the **Store** tab of the game details page, and can be added to your game through `Class.MarketplaceService` functions.
 
-Before activating your subscription for the first time, you must confirm a shortened version of your experience name. This shortened experience name is displayed to the user when they subscribe, and appears alongside the subscription name you created in [Create subscriptions](#create-subscriptions).
+Before activating your subscription for the first time, you must confirm a shortened version of your game name. This shortened game name is displayed to the user when they subscribe, and appears alongside the subscription name you created in [Create subscriptions](#create-subscriptions).
 
 <Alert severity="warning">
-Shortened experience names are permanent and cannot be changed when set. They do not change the name of your experience on Roblox.
+Shortened game names are permanent and cannot be changed when set. They do not change the name of your game on Roblox.
 </Alert>
 
 ### Subscription states
@@ -114,7 +114,7 @@ Subscriptions have two possible states:
 
 To change a subscription's state, click **&ctdot;** at the top right corner of the subscription tile and select **Activate** (if the subscription is currently inactive) or **Take Off Sale** (if the subscription is currently active).
 
-If you select **Take Off Sale**, you'll be given the option to either let existing subscribers renew their subscription, or to cancel future renewals for current subscribers. If you're not planning to permanently remove the associated subscription benefits from your experience, we recommend that you let existing subscribers renew their subscription.
+If you select **Take Off Sale**, you'll be given the option to either let existing subscribers renew their subscription, or to cancel future renewals for current subscribers. If you're not planning to permanently remove the associated subscription benefits from your game, we recommend that you let existing subscribers renew their subscription.
 
 ## Edit subscriptions
 
@@ -187,11 +187,11 @@ Deleting an active subscription results in full refunds for active subscribers a
 
 Deleting a subscription requires the last four digits of the subscription ID for confirmation.
 
-## Integrate subscriptions into an experience
+## Integrate subscriptions into a game
 
 ### Check a user's subscription status
 
-The following code sample implements subscription detection in your experience:
+The following code sample implements subscription detection in your game:
 
 ```lua
 -- Run this code on the server
@@ -239,7 +239,7 @@ Players.UserSubscriptionStatusChanged:Connect(onUserSubscriptionStatusChanged)
 
 ### Replace a pass with a subscription
 
-One option for rolling out subscriptions in your experience is to replace an existing pass with a subscription. This is a great option if you want to quickly implement subscriptions without adding new features or awards.
+One option for rolling out subscriptions in your game is to replace an existing pass with a subscription. This is a great option if you want to quickly implement subscriptions without adding new features or awards.
 
 When replacing a pass with a subscription, keep the following in mind:
 
@@ -325,14 +325,14 @@ MarketplaceService.PromptGamePassPurchaseFinished:Connect(onPromptGamePassPurcha
 
 ### Prompt subscription purchases
 
-Users can purchase subscriptions directly from the **Store** tab of your experience details page, but you should also add a way for them to purchase subscriptions in-game.
+Users can purchase subscriptions directly from the **Store** tab of your game details page, but you should also add a way for them to purchase subscriptions in-game.
 
-When you prompt a subscription purchase, `Class.Players.UserSubscriptionStatusChanged|UserSubscriptionStatusChanged` fires if the player already owns the subscription, which helps catch scenarios where a player purchases a subscription from the **Store** tab of your experience details page while they are already in-game.
+When you prompt a subscription purchase, `Class.Players.UserSubscriptionStatusChanged|UserSubscriptionStatusChanged` fires if the player already owns the subscription, which helps catch scenarios where a player purchases a subscription from the **Store** tab of your game details page while they are already in-game.
 
 Although you can prompt a subscription purchase from the client, checking if a user already has a subscription with `Class.MarketplaceService.GetUserSubscriptionStatusAsync|GetUserSubscriptionStatusAsync` must be done from the server.
 
 <Alert severity="warning">
-When adding subscriptions to your experience, make sure to only offer them in supported regions and platforms. If not, users in unsupported regions and platforms will be able to see the offering but will be unable to complete the purchase.
+When adding subscriptions to your game, make sure to only offer them in supported regions and platforms. If not, users in unsupported regions and platforms will be able to see the offering but will be unable to complete the purchase.
 </Alert>
 
 The following code sample creates a `RemoteFunction` that the client can use to request the status of a subscription:
@@ -436,7 +436,7 @@ Earnings from subscriptions in local currency are subject to a 30-day hold perio
 Earnings from subscriptions in Robux follow the same hold period as passes and developer products, which is approximately 5 days.
 
 <Alert severity="warning">
-Subscriptions are currently ineligible to be cross-sold by other experiences and are ineligible for affiliate fees.
+Subscriptions are currently ineligible to be cross-sold by other games and are ineligible for affiliate fees.
 </Alert>
 
 ### Refunds
@@ -447,7 +447,7 @@ Subscriptions purchased with Robux are not eligible for refunds.
 
 For subscriptions in local currency, if a user requests a refund through their bank or app store within the 30-day hold period, the hold will be canceled and you will not receive the payout for that transaction.
 
-Refunds received outside the hold window will result in the payout amount for the refunded transaction being deducted from your Robux balance. If your experience is owned by a Group and the Group's balance is less than the amount to be deducted, the remainder will be deducted from the Group Owner's Robux balance.
+Refunds received outside the hold window will result in the payout amount for the refunded transaction being deducted from your Robux balance. If your game is owned by a Group and the Group's balance is less than the amount to be deducted, the remainder will be deducted from the Group Owner's Robux balance.
 
 When users cancel or fail to renew their active subscriptions, they do not automatically receive refunds. They must manually request refunds, which are handled on a case-by-case basis. For more information on the user subscription refund process, check out the [help center](https://en.help.roblox.com/hc/en-us/articles/20292312961556-Getting-Started-How-To-Subscribe).
 
@@ -469,14 +469,14 @@ To view refunding information for individual users, use `Class.MarketplaceServic
 
 To access subscription analytics on the Creator Dashboard:
 
-1. Go to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
+1. Go to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your game.
 2. Go to **Monetization** ⟩ **Subscriptions**.
 3. Select the **Analytics** tab.
 
 Subscription analytics track the following metrics:
 
-- **Subscriptions:** The total amount of active subscriptions in your experience.
-- **Estimated revenue:** The net revenue earned by experiences after fees. Does not include refund information.
+- **Subscriptions:** The total amount of active subscriptions in your game.
+- **Estimated revenue:** The net revenue earned by games after fees. Does not include refund information.
 - **Subscriber breakdown:** The different types of subscribers.
   - **New**: The number of subscription purchases by first-time subscribers.
   - **Renewed**: The number of renewing subscriptions purchased in a prior period.

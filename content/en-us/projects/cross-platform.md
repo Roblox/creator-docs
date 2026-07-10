@@ -1,19 +1,19 @@
 ---
 title: Cross-platform development
-description: Consolidated overview of cross-platform recommendations to help you design a Roblox experience that's accessible and enjoyable on all platforms.
+description: Consolidated overview of cross-platform recommendations to help you design a Roblox game that's accessible and enjoyable on all platforms.
 ---
 
 import BetaAlert from '../includes/beta-features/beta-alert.md'
 
-Roblox is inherently **cross‑platform**, as players can discover and join experiences on their phone or tablet, then later continue where they left off on their PC or console. To support an expanding suite of platforms, you should build user interfaces that seamlessly adapt to the input type (touch, gamepad, mouse/keyboard), screen size, and device orientation. This guide, the [adaptive design](../production/publishing/adaptive-design.md) guide, and the linked resources can help you design a true cross‑platform experience that's compatible, accessible, and enjoyable on **all** platforms.
+Roblox is inherently **cross‑platform**, as players can discover and join games on their phone or tablet, then later continue where they left off on their PC or console. To support an expanding suite of platforms, you should build user interfaces that seamlessly adapt to the input type (touch, gamepad, mouse/keyboard), screen size, and device orientation. This guide, the [adaptive design](../production/publishing/adaptive-design.md) guide, and the linked resources can help you design a true cross‑platform game that's compatible, accessible, and enjoyable on **all** platforms.
 
 <Alert severity="info">
-To explore a pre-made experience that showcases the following cross‑platform design concepts, check out the [Interactivity Showcase](https://www.roblox.com/games/132115384567250/).
+To explore a pre-made game that showcases the following cross‑platform design concepts, check out the [Interactivity Showcase](https://www.roblox.com/games/132115384567250/).
 </Alert>
 
 ## Input
 
-A carefully designed experience should support all primary input types, including mouse and keyboard, touch, and gamepads.
+A carefully designed game should support all primary input types, including mouse and keyboard, touch, and gamepads.
 
 ### Cross-platform actions
 
@@ -89,7 +89,7 @@ The `Class.UserInputService:GetImageForKeyCode()|GetImageForKeyCode()` and `Clas
 
 ## User interface
 
-A well-designed user interface is essential for players on all platforms to interact with your experience.
+A well-designed user interface is essential for players on all platforms to interact with your game.
 
 ### Position and size
 
@@ -158,14 +158,14 @@ You should also consider the distribution and relative positioning of elements w
 Ensure that all text is legible on all screens. Also make sure all UI has [sufficient contrast](../production/publishing/accessibility.md#color-contrast) and that [nothing relies solely on color](../production/publishing/accessibility.md#color-non-reliance) to distinguish an action or outcome.
 </Alert>
 
-Even with UI elements [properly sized](#position-and-size) across all device screen sizes, the overall experience should meet [accessibility standards](../production/publishing/accessibility.md) for players with impaired vision or color blindness. Text size can factor heavily into the legibility of text‑based UI, so you should include a [text size constraint](../ui/size-modifiers.md#text-size) to ensure text doesn't become illegible (too&nbsp;small) or visually too large on larger screens like 4K&nbsp;TVs.
+Even with UI elements [properly sized](#position-and-size) across all device screen sizes, the overall game should meet [accessibility standards](../production/publishing/accessibility.md) for players with impaired vision or color blindness. Text size can factor heavily into the legibility of text‑based UI, so you should include a [text size constraint](../ui/size-modifiers.md#text-size) to ensure text doesn't become illegible (too&nbsp;small) or visually too large on larger screens like 4K&nbsp;TVs.
 
 For more tips on accessibility, see [here](../production/publishing/accessibility.md).
 
 ## Final tips & tricks
 
-As you work toward a full cross‑platform experience, consider the following tips and tricks:
+As you work toward a full cross‑platform game, consider the following tips and tricks:
 
-- Device emulation is essential to designing an optimal experience on Roblox. Utilize the built‑in [Device Emulator](../studio/testing-modes.md#device-emulation) and [Controller Emulator](../studio/testing-modes.md#controller-emulation) to emulate various devices and gamepads directly in Studio.
+- Device emulation is essential to designing an optimal game on Roblox. Utilize the built‑in [Device Emulator](../studio/testing-modes.md#device-emulation) and [Controller Emulator](../studio/testing-modes.md#controller-emulation) to emulate various devices and gamepads directly in Studio.
 - Roblox's [UI styling](../ui/styling/index.md) pipeline, similar to CSS, lets you declare and globally apply overrides to UI instance properties. Along with the integrated [Style Editor](../ui/styling/editor.md), you can set up a complete and easy‑to‑modify user interface.
-- Once your experience is effectively cross-platform, explore native features like haptic feedback on [mobile](../input/mobile.md#haptic-feedback) and [gamepads](../input/gamepad.md#haptic-feedback), touch gestures such as `Class.UserInputService.TouchSwipe|TouchSwipe` and `Class.UserInputService.TouchPinch|TouchPinch`, or accelerometer and gyroscope functionality on `Class.UserInputService.AccelerometerEnabled|AccelerometerEnabled` and `Class.UserInputService.GyroscopeEnabled|GyroscopeEnabled` devices.
+- Once your game is effectively cross-platform, explore native features like haptic feedback on [mobile](../input/mobile.md#haptic-feedback) and [gamepads](../input/gamepad.md#haptic-feedback), touch gestures such as `Class.UserInputService.TouchSwipe|TouchSwipe` and `Class.UserInputService.TouchPinch|TouchPinch`, or accelerometer and gyroscope functionality on `Class.UserInputService.AccelerometerEnabled|AccelerometerEnabled` and `Class.UserInputService.GyroscopeEnabled|GyroscopeEnabled` devices.

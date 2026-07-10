@@ -31,20 +31,20 @@ fullWidth: true
   <Grid item xs={12} md={5}>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
-        <h4>Play similar experiences</h4>
-        <Typography variant='body1'>Itʼs important to have a good knowledge of popular Roblox experiences, especially those that are similar to yours. Why are users drawn to this experience? What keeps them interested?</Typography>
+        <h4>Play similar games</h4>
+        <Typography variant='body1'>Itʼs important to have a good knowledge of popular Roblox games, especially those that are similar to yours. Why are users drawn to this game? What keeps them interested?</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Talk to players</h4>
-        <Typography variant='body1'>Watch the chat or join an experienceʼs Discord server to see what players talk about. Feel free to join in and ask questions yourself.</Typography>
+        <Typography variant='body1'>Watch the chat or join a gameʼs Discord server to see what players talk about. Feel free to join in and ask questions yourself.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Watch YouTube videos</h4>
-        <Typography variant='body1'>If you donʼt have the time to get deep into an experience, watch videos on YouTube. These are often made by the community and can give you a good idea of what theyʼre interested in.</Typography>
+        <Typography variant='body1'>If you donʼt have the time to get deep into a game, watch videos on YouTube. These are often made by the community and can give you a good idea of what theyʼre interested in.</Typography>
       </CardContent>
     </Card>
   </Grid>
@@ -59,7 +59,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Identify goals</h4>
-        <Typography variant='body1'>To measure the success of your Roblox experience, define your Key Performance Indicators (KPIs) before development begins. These metrics (such as engagement, retention, and monetization) should guide your design from the start to ensure your game supports its target goals.</Typography>
+        <Typography variant='body1'>To measure the success of your Roblox game, define your Key Performance Indicators (KPIs) before development begins. These metrics (such as engagement, retention, and monetization) should guide your design from the start to ensure your game supports its target goals.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
@@ -71,7 +71,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Sustained growth KPIs</h4>
-        <Typography variant='body1'>D7 &amp; D30 Retention: Users who return 7 and 30 days after their first session. Conversion: The percentage of users who spend Robux in your experience. ARPPU: Average Revenue Per Paying User.</Typography>
+        <Typography variant='body1'>D7 &amp; D30 Retention: Users who return 7 and 30 days after their first session. Conversion: The percentage of users who spend Robux in your game. ARPPU: Average Revenue Per Paying User.</Typography>
       </CardContent>
     </Card>
   </Grid>
@@ -114,19 +114,19 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Design a killer core loop</h4>
-        <Typography variant='body1'>The [core loop](../production/game-design/core-loops.md) is the fundamental gameplay cycle that keeps players engaged and returning to your experience. It should consist of a series of actions and rewards that are satisfying, repeatable, and progressively challenging in order to motivate players to continue interacting with your experience.</Typography>
+        <Typography variant='body1'>The [core loop](../production/game-design/core-loops.md) is the fundamental gameplay cycle that keeps players engaged and returning to your game. It should consist of a series of actions and rewards that are satisfying, repeatable, and progressively challenging in order to motivate players to continue interacting with your game.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Create a world they'll love</h4>
-        <Typography variant='body1'>Create a visually appealing and engaging environment that immerses players in your experience. The environment should be easy to navigate, fun to explore, and encourage positive interactions. Provide opportunities for players to connect with each other, fostering a sense of community.</Typography>
+        <Typography variant='body1'>Create a visually appealing and engaging environment that immerses players in your game. The environment should be easy to navigate, fun to explore, and encourage positive interactions. Provide opportunities for players to connect with each other, fostering a sense of community.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Think ahead</h4>
-        <Typography variant='body1'>Plan long-term by designing with updates in mind. Implement reusable systems, such as quest, collection, or event frameworks that can be easily expanded. This approach will reduce development time and costs for future updates and ensure that your experience remains fresh and engaging.</Typography>
+        <Typography variant='body1'>Plan long-term by designing with updates in mind. Implement reusable systems, such as quest, collection, or event frameworks that can be easily expanded. This approach will reduce development time and costs for future updates and ensure that your game remains fresh and engaging.</Typography>
       </CardContent>
     </Card>
   </Grid>
@@ -135,7 +135,7 @@ fullWidth: true
   </Grid>
 </Grid>
 
-<h2 style={{ marginTop: 48, marginBottom: 24 }}>Create a social, multiplayer experience</h2>
+<h2 style={{ marginTop: 48, marginBottom: 24 }}>Create a social, multiplayer game</h2>
 <Grid container spacing={8}>
   <Grid item xs={12} md={5}>
     <Card style={{ marginBottom: 24 }}>
@@ -168,7 +168,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Get to the fun quickly</h4>
-        <Typography variant='body1'>What makes your experience fun? What makes it different? Is it worth playing again? Users should be able to answer these questions within the first few minutes of playing your experience.</Typography>
+        <Typography variant='body1'>What makes your game fun? What makes it different? Is it worth playing again? Users should be able to answer these questions within the first few minutes of playing your game.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
@@ -250,13 +250,13 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Define your MVP</h4>
-        <Typography variant='body1'>What are your core features? If youʼre making a game, what is your core loop? Whatʼs the minimal version of your experience that can demonstrate these features?</Typography>
+        <Typography variant='body1'>What are your core features? If youʼre making a game, what is your core loop? Whatʼs the minimal version of your game that can demonstrate these features?</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Get feedback early</h4>
-        <Typography variant='body1'>While it may be tempting to build your fully realized experience, starting with MVP will allow you to get feedback and iterate early, resulting in a better final product.</Typography>
+        <Typography variant='body1'>While it may be tempting to build your fully realized game, starting with MVP will allow you to get feedback and iterate early, resulting in a better final product.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
@@ -277,13 +277,13 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Small group playtests</h4>
-        <Typography variant='body1'>Give access to specific users only, which allows you to run small playtests. This option is good for testing whether players understand how to play and find the experience fun.</Typography>
+        <Typography variant='body1'>Give access to specific users only, which allows you to run small playtests. This option is good for testing whether players understand how to play and find the game fun.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Limited-time public test</h4>
-        <Typography variant='body1'>Release a test experience to the public, acquire a small amount of users, then remove the game after a set amount of time (a weekend, week, etc.) This option is great for getting organic growth metrics like D1 Retention and session length.</Typography>
+        <Typography variant='body1'>Release a test game to the public, acquire a small amount of users, then remove the game after a set amount of time (a weekend, week, etc.) This option is great for getting organic growth metrics like D1 Retention and session length.</Typography>
       </CardContent>
     </Card>
   </Grid>
@@ -291,13 +291,13 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Closed group beta</h4>
-        <Typography variant='body1'>The experience is playable by any user that joins your Group. This option is great for gathering community feedback, long-term retention, and monetization. However, it requires some existing community, and may be more friendly than an open test.</Typography>
+        <Typography variant='body1'>The game is playable by any user that joins your Group. This option is great for gathering community feedback, long-term retention, and monetization. However, it requires some existing community, and may be more friendly than an open test.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Open beta</h4>
-        <Typography variant='body1'>The experience is open to everyone, but has a "Beta" tag in the title. This is very common on Roblox; however, there is no practical difference between open beta and a full release beyond setting player expectations.</Typography>
+        <Typography variant='body1'>The game is open to everyone, but has a "Beta" tag in the title. This is very common on Roblox; however, there is no practical difference between open beta and a full release beyond setting player expectations.</Typography>
       </CardContent>
     </Card>
   </Grid>
@@ -337,7 +337,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Start a community chat server</h4>
-        <Typography variant='body1'>Be sure to set up your own social chat server, link it to your experience, and have moderation measures in place. This is where your dedicated community members will congregate.</Typography>
+        <Typography variant='body1'>Be sure to set up your own social chat server, link it to your game, and have moderation measures in place. This is where your dedicated community members will congregate.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
@@ -349,7 +349,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Watch how users interact</h4>
-        <Typography variant='body1'>Join your experience to observe what users do and what they talk about in the chat. Are they behaving how you would expect? Do they get confused at certain points? Are they interacting with other players?</Typography>
+        <Typography variant='body1'>Join your game to observe what users do and what they talk about in the chat. Are they behaving how you would expect? Do they get confused at certain points? Are they interacting with other players?</Typography>
       </CardContent>
     </Card>
   </Grid>
@@ -374,19 +374,19 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Consider streamer needs</h4>
-        <Typography variant='body1'>Design your game to be streamer-friendly. Ensure players can easily record videos without UI elements getting in the way, and create an experience that's engaging for viewers to watch on platforms like YouTube and Twitch.</Typography>
+        <Typography variant='body1'>Design your game to be streamer-friendly. Ensure players can easily record videos without UI elements getting in the way, and create a game that's engaging for viewers to watch on platforms like YouTube and Twitch.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Fuel excitement &amp; speculation</h4>
-        <Typography variant='body1'>Many experiences have built-in hidden secrets, backstories, and "surprise and delight" moments that encourage players to share and discuss the content, leading to more social media engagement.</Typography>
+        <Typography variant='body1'>Many games have built-in hidden secrets, backstories, and "surprise and delight" moments that encourage players to share and discuss the content, leading to more social media engagement.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Create shareable moments</h4>
-        <Typography variant='body1'>In your experience, is there anything that users would want to share on TikTok or YouTube? Have they created something of their own? Are there achievements or "wow moments" worthy of posting on social media?</Typography>
+        <Typography variant='body1'>In your game, is there anything that users would want to share on TikTok or YouTube? Have they created something of their own? Are there achievements or "wow moments" worthy of posting on social media?</Typography>
       </CardContent>
     </Card>
   </Grid>
@@ -401,13 +401,13 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Connect with creators</h4>
-        <Typography variant='body1'>Many Roblox users learn about new experiences from their favorite YouTubers. Getting one or a few of these influencers to play your experience can help get some initial traction.</Typography>
+        <Typography variant='body1'>Many Roblox users learn about new games from their favorite YouTubers. Getting one or a few of these influencers to play your game can help get some initial traction.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Find the right influencer</h4>
-        <Typography variant='body1'>Influencers are more likely to cover your experience if it fits their audience – so do your research. If engaging with an influencer, be sure to follow the FTC's [Endorsement and Testimonial Guides](https://www.ftc.gov/sites/default/files/attachments/press-releases/ftc-publishes-final-guides-governing-endorsements-testimonials/091005revisedendorsementguides.pdf) and consult with your own legal counsel for specific advice.</Typography>
+        <Typography variant='body1'>Influencers are more likely to cover your game if it fits their audience – so do your research. If engaging with an influencer, be sure to follow the FTC's [Endorsement and Testimonial Guides](https://www.ftc.gov/sites/default/files/attachments/press-releases/ftc-publishes-final-guides-governing-endorsements-testimonials/091005revisedendorsementguides.pdf) and consult with your own legal counsel for specific advice.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
@@ -434,13 +434,13 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Data-defined placement</h4>
-        <Typography variant='body1'>We take many factors and signals into account when generating recommendations for someone. Beyond user-focused personalization (age, device, location, etc.) we also look at how well an experience retains players, how much Robux and time players spend, and how often users return to play again.</Typography>
+        <Typography variant='body1'>We take many factors and signals into account when generating recommendations for someone. Beyond user-focused personalization (age, device, location, etc.) we also look at how well a game retains players, how much Robux and time players spend, and how often users return to play again.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Spread the word</h4>
-        <Typography variant='body1'>The best way to maximize how much youʼre surfaced in recommendations is to create a strong experience with solid KPIs. Packaging (icon, thumbnail, media, description) can also help improve D1 retention and play through rate.</Typography>
+        <Typography variant='body1'>The best way to maximize how much youʼre surfaced in recommendations is to create a strong game with solid KPIs. Packaging (icon, thumbnail, media, description) can also help improve D1 retention and play through rate.</Typography>
       </CardContent>
     </Card>
   </Grid>
@@ -455,7 +455,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Use sponsored ads</h4>
-        <Typography variant='body1'>Sponsored Ads appear in the "Sponsored" sort on the home page and within search results. Theyʼre great at getting users into experiences but arenʼt as good at targeting specific users.</Typography><br /><br />
+        <Typography variant='body1'>Sponsored Ads appear in the "Sponsored" sort on the home page and within search results. Theyʼre great at getting users into games but arenʼt as good at targeting specific users.</Typography><br /><br />
         <a href="../production/promotion/ads-manager.md"><Typography variant='buttonLarge'>Learn more about Roblox Ads Manager</Typography></a>
       </CardContent>
     </Card>
@@ -477,7 +477,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Update to stay relevant</h4>
-        <Typography variant='body1'>New content updates keep experiences from becoming stale and give players another reason to come back. They also give content creators new material to cover.</Typography>
+        <Typography variant='body1'>New content updates keep games from becoming stale and give players another reason to come back. They also give content creators new material to cover.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
@@ -504,7 +504,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Limited-time events add variety</h4>
-        <Typography variant='body1'>Running seasonal events keeps your experience feeling fresh. Events can include thematic map updates, battle/season passes, holiday content and limited-time rewards.</Typography>
+        <Typography variant='body1'>Running seasonal events keeps your game feeling fresh. Events can include thematic map updates, battle/season passes, holiday content and limited-time rewards.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
@@ -537,13 +537,13 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Spread the word</h4>
-        <Typography variant='body1'>Promote your updates across your social media channels and within the experience itself. Build anticipation by teasing new features, showcasing behind-the-scenes development, and engaging with your community.</Typography>
+        <Typography variant='body1'>Promote your updates across your social media channels and within the game itself. Build anticipation by teasing new features, showcasing behind-the-scenes development, and engaging with your community.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Use update announcements</h4>
-        <Typography variant='body1'>The integrated events system lets you create time-based events for your experience. Players can discover your events on the experience's detail page and through an event details page, and they can opt into notifications that they'll receive when your event begins.</Typography>
+        <Typography variant='body1'>The integrated events system lets you create time-based events for your game. Players can discover your events on the game's detail page and through an event details page, and they can opt into notifications that they'll receive when your event begins.</Typography>
       </CardContent>
     </Card>
   </Grid>

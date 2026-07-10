@@ -2,7 +2,7 @@
 title: include
 ---
 
-Roblox experiences support three different types of Luau scripts:
+Roblox games support three different types of Luau scripts:
 
 - **Client scripts**
 

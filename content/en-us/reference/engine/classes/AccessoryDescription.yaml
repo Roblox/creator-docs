@@ -156,7 +156,8 @@ properties:
       if it is layered.
     code_samples: []
     type: float
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security:
       read: None

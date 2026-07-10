@@ -11,7 +11,7 @@ With the leaderboard created, players need something to collect. For that, you n
 
 ## Build an item
 
-Items in the experience are 3D models that players use a tool to harvest. Each item, once harvested, disappears and then reappears after a limited amount of time.
+Items in the game are 3D models that players use a tool to harvest. Each item, once harvested, disappears and then reappears after a limited amount of time.
 
 For the item, refer back to your game design document. This series uses crystals as the example.
 
@@ -263,7 +263,7 @@ The item will then go back to normal after a short time. This way, players only 
    end
    ```
 
-3. Type `task.wait(5)` to give time for the item to reset. 5 is a suggested number, and maybe differ for how long you'd like for your experience.
+3. Type `task.wait(5)` to give time for the item to reset. 5 is a suggested number, and maybe differ for how long you'd like for your game.
 
    ```lua
    if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then

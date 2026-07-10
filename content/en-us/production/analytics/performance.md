@@ -1,24 +1,24 @@
 ---
 title: Performance
-description: Explains how to improve performance analytics metrics for your experience.
+description: Explains how to improve performance analytics metrics for your game.
 ---
 
-The **Performance** dashboard provides up-to-the-minute client and server metrics for your experience. Monitor this page before and after updating your experience to identify performance issues early.
+The **Performance** dashboard provides up-to-the-minute client and server metrics for your game. Monitor this page before and after updating your game to identify performance issues early.
 
 ![An overview of the performance dashboard.](../../assets/analytics/performance/perf-dash-overview.png)
 
 ## View performance metrics
 
-To access the performance dashboard, you must either be the experience owner or have [analytics group permissions](../../production/analytics/analytics-dashboard.md#grant-group-permission).
+To access the performance dashboard, you must either be the game owner or have [analytics group permissions](../../production/analytics/analytics-dashboard.md#grant-group-permission).
 
 1. Navigate to the [Creations](https://create.roblox.com/dashboard/creations) page on the **Creator Hub**.
-2. In the upper-left corner, select your account or the group that owns the experience.
-3. Select the experience.
+2. In the upper-left corner, select your account or the group that owns the game.
+3. Select the game.
 4. In the **Monitoring** dropdown, select **Performance**.
 
-The dashboard begins with the current number of users, the number of servers they are spread across, and a device breakdown. For the dashboard to show client and server **charts** like the ones below, your experience must have at least 100 daily active users (DAU).
+The dashboard begins with the current number of users, the number of servers they are spread across, and a device breakdown. For the dashboard to show client and server **charts** like the ones below, your game must have at least 100 daily active users (DAU).
 
-The dashboard contains two tabs, **Client** and **Server**, along with menus to adjust date range and time interval. You can also use the **Place** menu to examine individual places rather than the entire experience.
+The dashboard contains two tabs, **Client** and **Server**, along with menus to adjust date range and time interval. You can also use the **Place** menu to examine individual places rather than the entire game.
 
 ![A marked up view of the performance dashboard UI.](../../assets/analytics/performance/perf-dash-ui.png)
 
@@ -54,11 +54,11 @@ The **Client** tab includes the following charts, all of which are broken down b
 	<tbody>
 		<tr>
 			<td>Concurrent users</td>
-			<td>Line graph showing the number of users in your experience.</td>
+			<td>Line graph showing the number of users in your game.</td>
 		</tr>
 		<tr>
 			<td>Session time</td>
-				<td>Duration that users spend in your experience.</td>
+				<td>Duration that users spend in your game.</td>
 		</tr>
 		<tr>
 			<td>Client frame rate</td>
@@ -66,7 +66,7 @@ The **Client** tab includes the following charts, all of which are broken down b
 		</tr>
 		<tr>
 			<td>Client crash rate</td>
-			<td>Line graph showing client crashes, divided by ended sessions by device type. Spikes in crash rate, particularly following an update to the experience, often indicate an issue.</td>
+			<td>Line graph showing client crashes, divided by ended sessions by device type. Spikes in crash rate, particularly following an update to the game, often indicate an issue.</td>
 		</tr>
 		<tr>
 			<td>Unexpected out-of-memory exits</td>
@@ -82,7 +82,7 @@ The **Client** tab includes the following charts, all of which are broken down b
 		</tr>
 		<tr>
 			<td>Client memory usage percentage</td>
-			<td>Line graph showing percentage of available device memory the client is using. For example, if the Android line approaches 100%, the majority of Android devices running your experience are at risk of running out of memory and crashing.</td>
+			<td>Line graph showing percentage of available device memory the client is using. For example, if the Android line approaches 100%, the majority of Android devices running your game are at risk of running out of memory and crashing.</td>
 		</tr>
 	</tbody>
 </table>
@@ -129,7 +129,7 @@ The **Server** tab includes the following charts:
 		</tr>
 		<tr>
 			<td>Compute efficiency</td>
-			<td>Line graph showing the efficiency of your experience compared to the Roblox average. Values above 100% indicate higher efficiency than the baseline. Contributing factors include maximum number of players per server (higher is more efficient) and server CPU time per frame (lower is more efficient). Higher compute efficiency means lower environmental impact, but this metric is not indicative of a good or bad player experience.</td>
+			<td>Line graph showing the efficiency of your game compared to the Roblox average. Values above 100% indicate higher efficiency than the baseline. Contributing factors include maximum number of players per server (higher is more efficient) and server CPU time per frame (lower is more efficient). Higher compute efficiency means lower environmental impact, but this metric is not indicative of a good or bad player experience.</td>
 		</tr>
 	</tbody>
 </table>
@@ -160,7 +160,7 @@ To exclude a group or process from a chart, click its label in the legend.
 
 ## Roblox updates
 
- Each Roblox update contains many changes including features and bug fixes. **Roblox update** annotations allow you to cross‑reference your experience's performance with recent Roblox platform updates.
+ Each Roblox update contains many changes including features and bug fixes. **Roblox update** annotations allow you to cross‑reference your game's performance with recent Roblox platform updates.
 
 <img src="../../assets/analytics/performance/perf-dash-roblox-updates.png" alt="A view of the Roblox updates annotations on the Performance dashboard." width="641" />
 
@@ -214,23 +214,23 @@ If you spot a potential problem, use the following steps to remediate and fix it
 
    - [Developer Console](../../studio/developer-console.md) for viewing error and log messages and detailed information on memory and networking.
    - [Script Profiler](../../studio/optimization/scriptprofiler.md) for identifying scripts that take up the most resources.
-   - The [MicroProfiler](../../performance-optimization/microprofiler/index.md) for viewing unoptimized portions of your experience visually.
+   - The [MicroProfiler](../../performance-optimization/microprofiler/index.md) for viewing unoptimized portions of your game visually.
 
 4. Gather user feedback from your community.
 
 ## Client API calls after join
 
 <Alert severity="info">
-This metric is only available for a small number of top experiences.
+This metric is only available for a small number of top games.
 </Alert>
 
-The **Client API Calls in First 60s After Join** metric measures the total number of requests (API calls) your experience makes to Roblox services during the critical first minute after a user successfully joins.
+The **Client API Calls in First 60s After Join** metric measures the total number of requests (API calls) your game makes to Roblox services during the critical first minute after a user successfully joins.
 
 These calls happen automatically for every user who joins, so monitoring this metric can help you understand load-time efficiency and backend performance.
 
 ### Access the metric
 
-1. Navigate to your experience overview on the Creator Hub.
+1. Navigate to your game overview on the Creator Hub.
 2. On the **Snapshot** graph, click **Explore**.
 3. In the **Select a metric** dropdown, choose **Client API Calls in First 60s After Join**.
 
@@ -238,9 +238,9 @@ These calls happen automatically for every user who joins, so monitoring this me
 
 ### Monitor the metric
 
-The primary goal during the first 60 seconds of a player joining is to stream and load your experience's assets (meshes, images, sounds, etc.). Ideally, the asset delivery service is the most-called API during this key time span.
+The primary goal during the first 60 seconds of a player joining is to stream and load your game's assets (meshes, images, sounds, etc.). Ideally, the asset delivery service is the most-called API during this key time span.
 
-The metric is updated hourly so that you can quickly check it after publishing a new version of your experience.
+The metric is updated hourly so that you can quickly check it after publishing a new version of your game.
 
 <table>
 	<thead>
@@ -253,12 +253,12 @@ The metric is updated hourly so that you can quickly check it after publishing a
 	<tbody>
 		<tr>
 			<td>Asset delivery is the most-hit API.</td>
-			<td><strong>Efficient.</strong> Your experience is correctly prioritizing the loading of necessary assets.</td>
+			<td><strong>Efficient.</strong> Your game is correctly prioritizing the loading of necessary assets.</td>
 			<td>Continue monitoring.</td>
 		</tr>
 		<tr>
 			<td>A different service (e.g. inventory, friends, or users) is the most-hit API.</td>
-			<td><strong>Potential inefficiency or bug.</strong> Your experience is executing heavy, non-critical API calls too early in the join sequence, potentially delaying the load process.</td>
+			<td><strong>Potential inefficiency or bug.</strong> Your game is executing heavy, non-critical API calls too early in the join sequence, potentially delaying the load process.</td>
 			<td>Investigate and refactor the scripts that execute during the initial join to prioritize asset loading.</td>
 		</tr>
 	</tbody>

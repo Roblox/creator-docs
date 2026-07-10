@@ -1,6 +1,6 @@
 ---
 title: Test the game
-description: Part of the Roblox Build It, Play It Challenge - Island of Move. Test the game experience you'll create.
+description: Part of the Roblox Build It, Play It Challenge - Island of Move. Test the game you'll create.
 next: /education/build-it-play-it-island-of-move/creating-animations
 prev: /education/build-it-play-it-island-of-move/opening-the-template
 ---
@@ -11,7 +11,7 @@ Before animating, test out the template to see how the game works. In-game, play
 
    <img src="../../assets/education/general/play-button.png" width="360" />
 
-2. In the experience, walk up to the golem character on the stage and press <kbd>E</kbd> to open up a menu. On that screen, click **Play Game**.
+2. In the game, walk up to the golem character on the stage and press <kbd>E</kbd> to open up a menu. On that screen, click **Play Game**.
 
    <img src="../../assets/education/build-it-play-it-island-of-move/test-the-game/click-npc.png" width="50%" />
 

@@ -4,20 +4,20 @@ description: Explains how to customize the global lighting with the Lighting ser
 ---
 
 The `Class.Lighting` service contains properties that you can adjust to update
-and customize the global lighting in an experience. There are five categories of
+and customize the global lighting in a game. There are five categories of
 lighting properties:
 
-- [Color](#color) &mdash; Configures hue within the experience.
+- [Color](#color) &mdash; Configures hue within the game.
 - [Intensity](#intensity) &mdash; Configures the intensity or amount of light hitting the camera.
-- [Shadows](#shadows) &mdash; Configures how a user experiences shadows within the experience.
+- [Shadows](#shadows) &mdash; Configures how a user experiences shadows within the game.
 - [Appearance](#appearance) &mdash; Properties that determine the lighting style and lighting/shading quality or view distance prioritization.
-- [Environment](#environment) &mdash; Configures the conditions of the experience's world, such as the time of day and geographic latitude.
+- [Environment](#environment) &mdash; Configures the conditions of the game's world, such as the time of day and geographic latitude.
 
 ## Color
 
 ### Ambient
 
-The `Class.Lighting.Ambient|Ambient` property sets a hue for the **entirety** of an experience. This property affects the lighting for both outdoor and indoor environments.
+The `Class.Lighting.Ambient|Ambient` property sets a hue for the **entirety** of a game. This property affects the lighting for both outdoor and indoor environments.
 
 <Tabs>
 <TabItem label="[0, 0, 0]">
@@ -34,7 +34,7 @@ The `Class.Lighting.Ambient|Ambient` property sets a hue for the **entirety** of
 ### OutdoorAmbient
 
 The `Class.Lighting.OutdoorAmbient|OutdoorAmbient`
-property sets a hue for **outdoor areas** of an experience. This can
+property sets a hue for **outdoor areas** of a game. This can
 help simulate how the ambient color of real-life lighting changes
 throughout the day. For example, sunlight in the early morning or late
 afternoon is usually warmer and more pink and orange in tone, while late
@@ -102,7 +102,7 @@ The `Class.Lighting.Brightness|Brightness` property sets the intensity of illumi
 
 ### ExposureCompensation
 
-The `Class.Lighting.ExposureCompensation|ExposureCompensation` property applies exposure to an experience. Exposure is the amount of light that reaches the camera.
+The `Class.Lighting.ExposureCompensation|ExposureCompensation` property applies exposure to a game. Exposure is the amount of light that reaches the camera.
 
 A lower value is similar to under-exposure in photography, while a higher value is similar to over-exposure.
 
@@ -150,7 +150,7 @@ The `Class.Lighting.ShadowSoftness|ShadowSoftness` property adjusts how blurry s
 
 ### LightingStyle
 
-`Class.Lighting.LightingStyle|LightingStyle` indicates the artistic intent behind lighting in the experience, as an `Enum.LightingStyle` option. `Enum.LightingStyle|Realistic` provides the most advanced and realistic lighting and shadows Roblox can deliver, while `Enum.LightingStyle|Soft` produces a flat, retro‑Roblox look with softer lights and shadows.
+`Class.Lighting.LightingStyle|LightingStyle` indicates the artistic intent behind lighting in the game, as an `Enum.LightingStyle` option. `Enum.LightingStyle|Realistic` provides the most advanced and realistic lighting and shadows Roblox can deliver, while `Enum.LightingStyle|Soft` produces a flat, retro‑Roblox look with softer lights and shadows.
 
 <Tabs>
 <TabItem label="Realistic">
@@ -163,7 +163,7 @@ The `Class.Lighting.ShadowSoftness|ShadowSoftness` property adjusts how blurry s
 
 ### PrioritizeLightingQuality
 
-The `Class.Lighting.PrioritizeLightingQuality|PrioritizeLightingQuality` property indicates whether you prefer lighting/shading quality or view distance to scale down first. As the rendering quality level reduces, a setting of `true` prioritizes features such as advanced shadows and high‑quality shaders at closer distances, while a setting of `false` prioritizes view distance. If lighting and shadows are very important to the artistic feel of your experience, set this to `true`.
+The `Class.Lighting.PrioritizeLightingQuality|PrioritizeLightingQuality` property indicates whether you prefer lighting/shading quality or view distance to scale down first. As the rendering quality level reduces, a setting of `true` prioritizes features such as advanced shadows and high‑quality shaders at closer distances, while a setting of `false` prioritizes view distance. If lighting and shadows are very important to the artistic feel of your game, set this to `true`.
 
 ## Environment
 
@@ -187,7 +187,7 @@ The only difference between these properties is their numeric value; `Class.Ligh
 </Tabs>
 
 <Alert severity="info">
-Note that each property doesn't follow the actual time of day, and they will not change during an experience unless changed through a script.
+Note that each property doesn't follow the actual time of day, and they will not change during a game unless changed through a script.
 </Alert>
 
 ### GeographicLatitude

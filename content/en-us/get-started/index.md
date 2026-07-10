@@ -66,7 +66,7 @@ hideInPageNavigation: true
           <a href="./monetization.md">
             <Typography variant='buttonLarge'>How do I make money?</Typography><br />
           </a>
-          <Typography variant='body1'>Creator Rewards, in-experience purchases, subscriptions, UGC, and more.</Typography>
+          <Typography variant='body1'>Creator Rewards, in-game purchases, subscriptions, UGC, and more.</Typography>
         </CardContent>
       </Card>
     </Grid>
@@ -86,7 +86,7 @@ hideInPageNavigation: true
           <a href="./creating.md">
             <Typography variant='buttonLarge'>Start creating</Typography><br />
           </a>
-          <Typography variant='body1'>Get started creating experiences and avatar items.</Typography>
+          <Typography variant='body1'>Get started creating games and avatar items.</Typography>
         </CardContent>
       </Card>
     </Grid>

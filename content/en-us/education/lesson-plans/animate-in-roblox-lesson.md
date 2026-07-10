@@ -5,7 +5,7 @@ description: Learn about animation and study how the human body moves.
 
 <img src="../../assets/education/lesson-plans/animateInRoblox-hero.jpg" />
 
-**Lesson Description**: Learn about animation and study how the human body moves. Pose a Roblox character to create an animation, such as swimming or skipping, for use in a multiplayer experience.
+**Lesson Description**: Learn about animation and study how the human body moves. Pose a Roblox character to create an animation, such as swimming or skipping, for use in a multiplayer game.
 
 **ISTE Standards**: Innovative Designer 4a, 4c, 4d, Creative Communicator 6b, 6d
 
@@ -105,13 +105,13 @@ description: Learn about animation and study how the human body moves.
 
 1. Grab attention by showing Presentation: Slide 2.
    - Going to pose figures to create an animation of their choice.
-   - Once finished, that animation will be added into a Roblox experience where it'll be the default way users walk around.
+   - Once finished, that animation will be added into a Roblox game where it'll be the default way users walk around.
 2. Introduce and define animations in Presentation: Slide 3.
 
 ### Guided tutorial - Plan an animation
 
 1. Lead students through Presentation: Slide 4 - 5.
-   - As a class, have students brainstorm actions (ex: real life actions/sports like swimming or dancing, or fantastical like flying.
+   - As a class, have students brainstorm actions (ex: real life actions/sports like swimming or dancing, or fantastical like flying).
    - Give students 2-4 minutes to decide on an animation and collect reference material (either images or have them act out motions in real life).
 2. Recap by letting 2-3 students share their planned animation.
    - Optional - Let students physically perform their planned animation.
@@ -133,7 +133,7 @@ description: Learn about animation and study how the human body moves.
 
    - At **Playtest your animation**, give students at most 2 minutes to play-test.
 
-2. Have students playtest their experience to ensure they see their animation.
+2. Have students playtest their game to ensure they see their animation.
 
 ### Wrap-up
 
@@ -156,7 +156,7 @@ description: Learn about animation and study how the human body moves.
 ### Classroom management
 
 **Using motion in the classroom**
-This lesson uses motion in two ways: students can play their experiences using mobile devices with accelerometers. Additionally, poses can be physically done in real life as reference. If you plan to include either feature in the classroom, set strict guidelines with students. For instance, ensure they are in a safe place where they can make motion where they're not at risk to themselves or others.
+This lesson uses motion in two ways: students can play their games using mobile devices with accelerometers. Additionally, poses can be physically done in real life as reference. If you plan to include either feature in the classroom, set strict guidelines with students. For instance, ensure they are in a safe place where they can make motion where they're not at risk to themselves or others.
 
 **Timing notes**
 To ensure students finish their project, give them time limits for each pose, such as 2-4 minutes per pose. They can always improve poses.
@@ -184,10 +184,10 @@ Students can provide each other feedback with the optional <a href="../../assets
 ### Miscellaneous resources
 
 **Course description:**
-Create your very own Roblox experience and learn how to animate! This challenge is all about movement, both in-game and in real life. We'll show you how to make a game where users race their avatars around a track and gain levels by moving in real life with their mobile device. How do their avatars move? That's up to you: you'll get to build the animations from scratch. Will they fly? Run backward? Turn cartwheels? The possibilities are as limitless as your imagination.
+Create your very own Roblox game and learn how to animate! This challenge is all about movement, both in-game and in real life. We'll show you how to make a game where users race their avatars around a track and gain levels by moving in real life with their mobile device. How do their avatars move? That's up to you: you'll get to build the animations from scratch. Will they fly? Run backward? Turn cartwheels? The possibilities are as limitless as your imagination.
 
 In this course, your student will:
 
 - Create their own animation by posing a Roblox figure.
-- Test, evaluate, and redesign to create a fun, polished game experience.
-- Take home a complete experience that can be played and shared online
+- Test, evaluate, and redesign to create a fun, polished game.
+- Take home a complete game that can be played and shared online

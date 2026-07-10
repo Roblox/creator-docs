@@ -5,7 +5,7 @@ description: Showcase and sell your published avatar items in a easily customiza
 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/6MPWLQmIKLk" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> <br />
 
-The **UGC Homestore** is a user-friendly template that avatar item creators can use to showcase and sell their marketplace items. This template is ideal for creators with an existing UGC catalog who want a dedicated space to promote their assets. Creators who sell their own avatar items from their own experience also benefit from a [larger commission split](../marketplace/marketplace-fees-and-commissions.md#commissions).
+The **UGC Homestore** is a user-friendly template that avatar item creators can use to showcase and sell their marketplace items. This template is ideal for creators with an existing UGC catalog who want a dedicated space to promote their assets. Creators who sell their own avatar items from their own game also benefit from a [larger commission split](../marketplace/marketplace-fees-and-commissions.md#commissions).
 
 The homestore template provides the following features that you can quickly customize with minimal scripting:
 
@@ -55,8 +55,8 @@ The template includes a shop button at the bottom of the screen visible for all 
 By default, the catalog applies the following behavior:
 
 - If the place is unpublished, such as during initial playtesting, the catalog displays Roblox's marketplace items as reference.
-- If the place is published, the catalog automatically displays the current experience owner's available marketplace items.
-  - If the current experience owner doesn't have any available marketplace items, the catalog doesn't display any items.
+- If the place is published, the catalog automatically displays the current game owner's available marketplace items.
+  - If the current game owner doesn't have any available marketplace items, the catalog doesn't display any items.
   - You can [set a different creator's catalog](#specify-another-creators-catalog) as the default by modifying `ReplicatedStorage.Settings`.
 
 #### Specify another creator's catalog
@@ -67,9 +67,9 @@ To set the catalog to use another creator's marketplace items:
 
     <img src="../assets/publishing/marketplace/Enable-Third-Party-Sales.png" alt="Section of the Explorer window highlighting the Settings file in Replicated Storage." width = "70%"/>
 
-2.  Ensure that the marketplace items have their sale location set to `Marketplace and All Experiences` or have specified this specific experience as a valid [sale location](../marketplace/publish-to-marketplace.md#sale-location).
+2.  Ensure that the marketplace items have their sale location set to `Marketplace and All Experiences` or have specified this specific game as a valid [sale location](../marketplace/publish-to-marketplace.md#sale-location).
 
-    1.  If the experience is added as a unique sale location, the experience owner [must enable the specific asset for sale using the Creator Dashboard](../production/monetization/avatar-items.md#adding-items-to-experience).
+    1.  If the game is added as a unique sale location, the game owner [must enable the specific asset for sale using the Creator Dashboard](../production/monetization/avatar-items.md#adding-items-to-experience).
 
         <Alert severity = 'warning'>
         Failure to properly link and enable a third-party asset means that users can only see the added items, but can't purchase them.
@@ -81,7 +81,7 @@ To set the catalog to use another creator's marketplace items:
 
 4.  Modify **DEFAULT_CREATOR_NAME** to the name of the creator.
     1.  If empty, the shop displays the entire Marketplace catalog from all creators.
-5.  Set **FETCH_CREATOR_NAME** to `false`. This sets the catalog to always reference the **DEFAULT_CREATOR_NAME** instead of the experience owner.
+5.  Set **FETCH_CREATOR_NAME** to `false`. This sets the catalog to always reference the **DEFAULT_CREATOR_NAME** instead of the game owner.
 
 ### Building
 

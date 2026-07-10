@@ -10,7 +10,7 @@ Time to bring all this work together! Now that you've created the beam and parti
 <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/adding-scripts/final-example.mp4" width="100%"></video>
 
 <Alert severity="info">
-While you can follow all these steps even if you haven't coded before, having that knowledge can help you adapt these scripts for your own experience. To learn more, see the [Coding Fundamentals](../../tutorials/fundamentals/coding-1/coding-fundamentals.md) tutorial.
+While you can follow all these steps even if you haven't coded before, having that knowledge can help you adapt these scripts for your own game. To learn more, see the [Coding Fundamentals](../../tutorials/fundamentals/coding-1/coding-fundamentals.md) tutorial.
 
 </Alert>
 
@@ -274,7 +274,7 @@ The three scripts below will look for the particle emitter and beam objects crea
 
 ### Script benefits and limitations
 
-If you're using this tutorial system in your experience, keep in mind the following:
+If you're using this tutorial system in your game, keep in mind the following:
 
 **Benefits**
 

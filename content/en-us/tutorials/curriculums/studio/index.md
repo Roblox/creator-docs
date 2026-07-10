@@ -18,9 +18,9 @@ hideInPageNavigation: true
 </Grid>
 
 <Grid item Large={5} XSmall={12} direction="column">
-This tutorial acts as an introduction to Roblox Studio, a free application on Windows or Mac that has everything you need to start creating experiences on the Roblox platform! As you follow each chapter, you will learn how to login into Studio, then navigate its core user interface windows.
+This tutorial acts as an introduction to Roblox Studio, a free application on Windows or Mac that has everything you need to start creating games on the Roblox platform! As you follow each chapter, you will learn how to login into Studio, then navigate its core user interface windows.
 
-This lesson is intended for readers who are **brand new** to working in Studio. If you are already familiar with Studio, try another beginner lesson plan or jump straight to [building your first experience](../core/index.md).
+This lesson is intended for readers who are **brand new** to working in Studio. If you are already familiar with Studio, try another beginner lesson plan or jump straight to [building your first game](../core/index.md).
 </Grid>
 
 </Grid>
@@ -67,7 +67,7 @@ This lesson is intended for readers who are **brand new** to working in Studio. 
    </AccordionSummary>
    <AccordionDetails>
 
-    Learn where you can [find more tutorials](next-steps.md) about creating experiences.
+    Learn where you can [find more tutorials](next-steps.md) about creating games.
 
    </AccordionDetails>
    </BaseAccordion>

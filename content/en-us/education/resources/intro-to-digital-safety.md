@@ -29,7 +29,7 @@ To protect yourself, always learn about a platform's privacy practices and setti
 
 When a negative situation happens, like seeing an abusive player or being the victim of a scam, you can take action with a report. Creating a report lets a platform, like Roblox, know that something needs to be investigated. By providing specific and clear information, you can solve personal account problems and help others in the community.
 
-To file a Roblox report within an experience:
+To file a Roblox report within a game:
 
 1. In the top-left corner, click the Roblox button. A contextual menu displays.
 
@@ -76,7 +76,7 @@ For example, below are screenshots of real scam videos found on Youtube. Notice 
 <img src="../../assets/education/intro-to-digital-safety/digitalSafety_youtube.png" />
 
 **Discussion: Scams in Real Life**
-If you're using this lesson in the classroom, take time for this discussion on spotting scams in real-life experiences.
+If you're using this lesson in the classroom, take time for this discussion on spotting scams in real-life games.
 
 1. Help your students make connections to real life by sparking a discussion with the following questions:
    - What types of scams have you seen online or in Roblox? What did it say and how did you feel it was a scam?
@@ -142,10 +142,10 @@ One way of protecting your account is to use 2 Factor Authentication (or sometim
 
 <img src="../../assets/education/intro-to-digital-safety/digitalSafety_gameHero.png" />
 
-To help you identify reliable information, go through a scavenger hunt in a Roblox experience. As you go through the experience, use the four clues in Spotting Unreliable Information to identify potential risks and explain why.
+To help you identify reliable information, go through a scavenger hunt in a Roblox game. As you go through the game, use the four clues in Spotting Unreliable Information to identify potential risks and explain why.
 
 <a href="https://www.roblox.com/games/5450795073/">
-<Button variant="contained">Play Experience</Button>
+<Button variant="contained">Play Game</Button>
 </a>
 
 ### Supplemental materials

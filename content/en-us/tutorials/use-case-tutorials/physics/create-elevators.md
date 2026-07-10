@@ -3,7 +3,7 @@ title: Create elevators
 description: The process for creating moving platforms to move users from one area to another.
 ---
 
-**Elevators** are platforms users can operate to travel from one part of an experience to another. This device is useful when you want to allow users to reach new areas within the worlds you create. In this guide, you can quickly create your own elevator that elevates users upwards and downwards when they interact with a proximity prompt.
+**Elevators** are platforms users can operate to travel from one part of a game to another. This device is useful when you want to allow users to reach new areas within the worlds you create. In this guide, you can quickly create your own elevator that elevates users upwards and downwards when they interact with a proximity prompt.
 
 <video controls src="../../../assets/tutorials/creating-elevators/Overview.mp4" width="50%"></video>
 
@@ -135,7 +135,7 @@ To set values for your constraint to enable elevator movement within a set range
 
 ## Create the proximity prompt
 
-A `Class.ProximityPrompt` is an object that encourages user interaction to trigger an action when they approach in-experience objects such as doors, light switches, and buttons. This process uses a [proximity prompt](../../../ui/proximity-prompts.md) to allow users to press a key when they are near the platform in order to activate the elevator's movement.
+A `Class.ProximityPrompt` is an object that encourages user interaction to trigger an action when they approach in-game objects such as doors, light switches, and buttons. This process uses a [proximity prompt](../../../ui/proximity-prompts.md) to allow users to press a key when they are near the platform in order to activate the elevator's movement.
 
 To create a proximity prompt:
 
@@ -168,4 +168,4 @@ platform.ProximityPrompt.Triggered:Connect(function(player)
 end)
 ```
 
-When you [playtest your experience](../../../studio/testing-modes.md#playtesting) and input the key for the elevator's proximity prompt, the script runs to check if the platform is below or above 9 studs from the constraint. If it's below 9 studs and a user interacts with the proximity prompt, the platform moves upwards until it reaches the constraint's upper limit; conversely, if it's above 9 studs and a user interacts with the proximity prompt, the platform moves downwards until it reaches the constraint's lower limit.
+When you [playtest your game](../../../studio/testing-modes.md#playtesting) and input the key for the elevator's proximity prompt, the script runs to check if the platform is below or above 9 studs from the constraint. If it's below 9 studs and a user interacts with the proximity prompt, the platform moves upwards until it reaches the constraint's upper limit; conversely, if it's above 9 studs and a user interacts with the proximity prompt, the platform moves downwards until it reaches the constraint's lower limit.

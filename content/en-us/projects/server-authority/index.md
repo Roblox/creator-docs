@@ -1,15 +1,15 @@
 ---
 title: Server authority model
-description: The server authority model lets you build responsive cheat-free competitive experiences such as FPS, racing, sports, and combat.
+description: The server authority model lets you build responsive cheat-free competitive games such as FPS, racing, sports, and combat.
 ---
 
-In a **server authority model**, the server is the single **source of truth** for the entire experience state, and clients are only trusted to report their own inputs. This architecture is the core netcode foundation of a fair, competitive experience because it prevents entire classes of cheating like flyhacks or speedhacks by never trusting a client to report its own position or state.
+In a **server authority model**, the server is the single **source of truth** for the entire game state, and clients are only trusted to report their own inputs. This architecture is the core netcode foundation of a fair, competitive game because it prevents entire classes of cheating like flyhacks or speedhacks by never trusting a client to report its own position or state.
 
 ## Advantages
 
-In a naive server-owned system, clients would simply send their inputs to the server and display the results of the experience sent back by the server. While technically correct, such a system would face significant **input latency** because every player action would have to travel to the server, be processed, and have the result sent back to the client before it could be displayed. For most experiences, especially those fast‑paced, that round‑trip delay would cause gameplay to feel laggy, unresponsive, and unplayable.
+In a naive server-owned system, clients would simply send their inputs to the server and display the results of the game sent back by the server. While technically correct, such a system would face significant **input latency** because every player action would have to travel to the server, be processed, and have the result sent back to the client before it could be displayed. For most games, especially those fast‑paced, that round‑trip delay would cause gameplay to feel laggy, unresponsive, and unplayable.
 
-In Roblox's **server authority** model, latency is compensated for by having clients instantly [predict](#client-prediction) the effects of their inputs in addition to sending them to the server. For example, when a player presses a key, the client doesn't wait for the server to respond; instead it **predicts** a few frames ahead of the last known server state. This allows the client to show the result of the input action instantly, effectively hiding network latency and making the experience feel responsive.
+In Roblox's **server authority** model, latency is compensated for by having clients instantly [predict](#client-prediction) the effects of their inputs in addition to sending them to the server. For example, when a player presses a key, the client doesn't wait for the server to respond; instead it **predicts** a few frames ahead of the last known server state. This allows the client to show the result of the input action instantly, effectively hiding network latency and making the game feel responsive.
 
 Sometimes the client will get its prediction wrong ([misprediction](#client-misprediction)) and, because of network latency, the client will not know that it has made a mistake for a few frames. For example:
 
@@ -17,7 +17,7 @@ Sometimes the client will get its prediction wrong ([misprediction](#client-misp
 Your client predicts that you've moved forward, but on the server another player used a stun ability that stopped you from moving. The client and server now have different states.
 </Alert>
 
-When a misprediction is detected, the client must correct its prediction based on the server's **authoritative state**. If the authoritative state is different from the client's predicted state, the client must [roll back and resimulate](#rollback-and-resimulation) its predicted frames. This system of client‑side prediction, rollback, and resimulation is known as "latency&nbsp;compensation" and helps make server‑authoritative multiplayer experiences feel smooth and responsive.
+When a misprediction is detected, the client must correct its prediction based on the server's **authoritative state**. If the authoritative state is different from the client's predicted state, the client must [roll back and resimulate](#rollback-and-resimulation) its predicted frames. This system of client‑side prediction, rollback, and resimulation is known as "latency compensation" and helps make server‑authoritative multiplayer games feel smooth and responsive.
 
 <Alert severity="info">
 Mispredictions are a **normal and expected** part of the server authority architecture because clients inherently cannot predict other players' inputs, so actions by other players will always trigger some amount of misprediction. When tuned correctly, the resulting corrections are small and should be imperceptible to players. Read further on [advanced techniques](./techniques.md) to smooth out and mask network artifacts.
@@ -25,14 +25,14 @@ Mispredictions are a **normal and expected** part of the server authority archit
 
 ## Setup
 
-As the server authority model requires certain other engine technologies to function correctly, you must first set the following properties on the `Class.Workspace` object in the [Explorer](../../studio/explorer.md):
+The server authority model requires certain other engine technologies to function correctly. Confirm the following property settings on the `Class.Workspace` object in the [Explorer](../../studio/explorer.md):
 
-1. `Class.Workspace.NextGenerationReplication` must be enabled
-2. `Class.Workspace.PlayerScriptsUseInputActionSystem` must be enabled
-3. `Class.Workspace.SignalBehavior` must be `Enum.SignalBehavior.Deferred|Deferred`
-4. `Class.Workspace.UseFixedSimulation` must be enabled
-5. `Class.Workspace.StreamingEnabled` must be enabled
-6. `Class.Workspace.AuthorityMode` must be `Enum.AuthorityMode.Server|Server` (all of the above must be set first)
+1. `Class.Workspace.AuthorityMode` must be `Enum.AuthorityMode.Server|Server` (setting this automatically sets the following five).
+2. `Class.Workspace.NextGenerationReplication` must be enabled.
+3. `Class.Workspace.PlayerScriptsUseInputActionSystem` must be enabled.
+4. `Class.Workspace.SignalBehavior` must be `Enum.SignalBehavior.Deferred|Deferred`.
+5. `Class.Workspace.UseFixedSimulation` must be enabled.
+6. `Class.Workspace.StreamingEnabled` must be enabled.
 
 ## Concepts
 
@@ -44,7 +44,7 @@ Through **client prediction**, the client simulates a few frames ahead of the la
 
 ### Client misprediction
 
-When the client receives the authoritative state from the server, it checks that state against a historical record of what it predicted locally for that frame. When there is a difference between what the client [predicted](#client-prediction) and what the server actually did, this is a **misprediction**. Mispredictions can occur for several reasons, including shifts in network latency, other players acting in ways the client didn't anticipate, the experience running certain logic exclusively on the server, etc.
+When the client receives the authoritative state from the server, it checks that state against a historical record of what it predicted locally for that frame. When there is a difference between what the client [predicted](#client-prediction) and what the server actually did, this is a **misprediction**. Mispredictions can occur for several reasons, including shifts in network latency, other players acting in ways the client didn't anticipate, the game running certain logic exclusively on the server, etc.
 
 If the authoritative state is different from the client's predicted state, the client must [roll back and resimulate](#rollback-and-resimulation).
 
@@ -137,7 +137,7 @@ In the server authority model, the client and the server must both run the core 
 
 <img src="../../assets/studio/explorer/ReplicatedStorage-Server-Authority.png" width="320" alt="Server authority setup" />
 
-During a resimulation, Roblox will re-run the functions bound to the simulation via `Class.RunService:BindToSimulation()|BindToSimulation()`. Processing player inputs, interacting with synchronized physics objects, and updating the core experience state should live inside those bound functions.
+During a resimulation, Roblox will re-run the functions bound to the simulation via `Class.RunService:BindToSimulation()|BindToSimulation()`. Processing player inputs, interacting with synchronized physics objects, and updating the core game state should live inside those bound functions.
 
 <Tabs>
 <TabItem label="Simulation">
@@ -152,7 +152,7 @@ local Simulation = {}
 Simulation.Initialize = function()
 	RunService:BindToSimulation(function(deltaTime)
 		-- Read player inputs
-		-- Update experience state
+		-- Update game state
 	end)
 end
 
@@ -189,11 +189,11 @@ Simulation:Initialize()
 Roblox automatically synchronizes all properties with [simulation access](#simulation-access) on predicted instances. For custom data, [attributes](../../studio/properties.md#instance-attributes) are the primary way to synchronize instances marked as predicted; on such instances, any mismatch in attribute values between the server's source of truth and the client's prediction will trigger a full [rollback and resimulation](#rollback-and-resimulation).
 
 <Alert severity="success">
-Use attributes to store experience data that affects your core simulation, including player health, ammunition, inventory, or custom rules (see [limitations](#attribute-limits)).
+Use attributes to store game data that affects your core simulation, including player health, ammunition, inventory, or custom rules (see [limitations](#attribute-limits)).
 </Alert>
 
 <Alert severity="warning">
-Only write to attributes on **predicted** instances from within functions bound through `Class.RunService:BindToSimulation()|BindToSimulation()` to ensure that Roblox can fully track relevant experience states and resimulate properly.
+Only write to attributes on **predicted** instances from within functions bound through `Class.RunService:BindToSimulation()|BindToSimulation()` to ensure that Roblox can fully track relevant game states and resimulate properly.
 </Alert>
 
 #### Attribute limits
@@ -210,10 +210,10 @@ Many properties and methods in the engine API reference include the **Simulation
 
 ### Input actions
 
-In a server-authoritative experience, the primary way for a client to affect the experience's state is through the [Input Action System](../../input/input-action-system.md). These inputs are sent to the server and are replayed during resimulation on the client. As a result, `Class.InputAction|InputActions` should be used for **all inputs that affect the core  simulation** and they should be checked for sanity before they're processed.
+In a server-authoritative game, the primary way for a client to affect the game's state is through the [Input Action System](../../input/input-action-system.md). These inputs are sent to the server and are replayed during resimulation on the client. As a result, `Class.InputAction|InputActions` should be used for **all inputs that affect the core  simulation** and they should be checked for sanity before they're processed.
 
 <Alert severity="warning">
-To reiterate, do not use traditional events like `Class.UserInputService.InputBegan` in the core simulation of a server-authoritative experience.
+To reiterate, do not use traditional events like `Class.UserInputService.InputBegan` in the core simulation of a server-authoritative game.
 </Alert>
 
 Note that `Class.InputContext|InputContexts` must be a descendent of a `Class.Player` so that the engine knows who has ownership over the `Class.InputContext`. One approach is to add your `Class.InputContext|InputContexts` to a folder under `Class.ReplicatedStorage` and use a `Class.Script` under `Class.ServerScriptService` to clone the `Class.InputContext|InputContexts` per player:
@@ -239,21 +239,6 @@ end
 ```
 
 Using this pattern, you can read `Class.InputAction|InputActions` for all players in `Class.RunService:BindToSimulation()` on both client and server to receive the same data for a given frame and record the previous frame's input in an [attribute](../../studio/properties.md#instance-attributes), for example to trigger a character run when a `RunAction` input action is triggered.
-
-Note that if you need to write custom data into the [Input Action System](../../input/input-action-system.md), you should use a function connected to `Class.RunService.RenderStepped` or `Class.RunService:BindToRenderStep()`, not `Class.RunService:BindToSimulation()`. Firing an `Class.InputAction` in `Class.RunService:BindToSimulation()|BindToSimulation()` can cause clients to produce incorrect results during a resimulation.
-
-```lua
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
-local Workspace = game:GetService("Workspace")
-
-RunService:BindToRenderStep("CameraInput", Enum.RenderPriority.Last.Value, function()
-	-- Send the client camera's forward vector to the server through an InputAction
-	local cameraForwardInputAction = Players.LocalPlayer.PlayContext.CameraForward
-	local cameraForwardVector = Workspace.CurrentCamera.CFrame.LookVector
-	cameraForwardInputAction:Fire(cameraForwardVector)
-end)
-```
 
 ### Remote events
 

@@ -9,7 +9,7 @@ With the first sentence of your story done and working in Studio, it's time to c
 
 ## Add punctuation
 
-When you playtest your experience, your first sentence doesn't include any punctuation to let players know the sentence is complete. To fix this, you can add another string using the same process of concatenation to connect your words with your punctuation.
+When you playtest your game, your first sentence doesn't include any punctuation to let players know the sentence is complete. To fix this, you can add another string using the same process of concatenation to connect your words with your punctuation.
 
 To add punctuation:
 
@@ -110,4 +110,4 @@ To add more sentences:
    storyMaker:Write(story)
    ```
 
-1. Repeat this process for your entire story, then playtest your experience using the steps from the previous chapter to make sure your code works properly.
+1. Repeat this process for your entire story, then playtest your game using the steps from the previous chapter to make sure your code works properly.

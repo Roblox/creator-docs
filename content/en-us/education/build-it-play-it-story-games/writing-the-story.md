@@ -23,7 +23,7 @@ _In a tree on a hill lives the great wizard Nia. Every morning, the wizard loves
 
 With an idea for a story, you can start the process of turning it into a game.
 
-Remember, in your experience, players will type in words that **replace** key parts of your story. For this step, you'll find parts of the story that can be **placeholders**, where a player can add in their own input.
+Remember, in your game, players will type in words that **replace** key parts of your story. For this step, you'll find parts of the story that can be **placeholders**, where a player can add in their own input.
 
 1. In the first sentence, pick a single word to be replaced by the player such as a name, action, or a noun. In this example, we'll select the wizard's name.
 

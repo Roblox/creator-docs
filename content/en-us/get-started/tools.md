@@ -38,7 +38,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Creator Dashboard</h4>
-        <Typography variant='body1'>Access your experienceʼs engagement, retention, and monetization KPIs, free of charge.</Typography>
+        <Typography variant='body1'>Access your game's engagement, retention, and monetization KPIs, free of charge.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
@@ -92,7 +92,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Automate the mundane</h4>
-        <Typography variant='body1'>AI Assistant empowers you to automate common actions such as bulk property modifications. By handling these time-consuming chores, Assistant frees you to concentrate on the higher-level design and innovative gameplay elements that make your experiences truly unique.</Typography>
+        <Typography variant='body1'>AI Assistant empowers you to automate common actions such as bulk property modifications. By handling these time-consuming chores, Assistant frees you to concentrate on the higher-level design and innovative gameplay elements that make your games truly unique.</Typography>
       </CardContent>
     </Card>
   </Grid>
@@ -113,7 +113,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Unlock player creativity</h4>
-        <Typography variant='body1'>Cube empowers your players to personalize their gameplay in exciting new ways. By enabling the generation of unique 3D content within experiences, Cube opens the door for deeper player engagement and self-expression.</Typography>
+        <Typography variant='body1'>Cube empowers your players to personalize their gameplay in exciting new ways. By enabling the generation of unique 3D content within games, Cube opens the door for deeper player engagement and self-expression.</Typography>
       </CardContent>
     </Card>
   </Grid>
@@ -156,19 +156,19 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Targeted discovery</h4>
-        <Typography variant='body1'>Roblox's "Recommended for You" algorithm intelligently connects each user with their ideal experiences, fostering deep engagement, social interaction, and repeat plays.</Typography>
+        <Typography variant='body1'>Roblox's "Recommended for You" algorithm intelligently connects each user with their ideal games, fostering deep engagement, social interaction, and repeat plays.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Objective ranking</h4>
-        <Typography variant='body1'>Experiences are ranked by key performance indicators like playtime and Robux spent. The Home Recommendations dashboard displays the relevant analytics for informed decision-making.</Typography>
+        <Typography variant='body1'>Games are ranked by key performance indicators like playtime and Robux spent. The Home Recommendations dashboard displays the relevant analytics for informed decision-making.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Quality content</h4>
-        <Typography variant='body1'>Roblox is committed to continuously improving search functionality to better understand user intent and showcase the highest-quality content, ensuring that exceptional experiences get the attention they deserve.</Typography>
+        <Typography variant='body1'>Roblox is committed to continuously improving search functionality to better understand user intent and showcase the highest-quality content, ensuring that exceptional games get the attention they deserve.</Typography>
       </CardContent>
     </Card>
   </Grid>
@@ -183,7 +183,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Targeted user acquisition</h4>
-        <Typography variant='body1'>Roblox <a href="../production/promotion/ads-manager.md" target="_blank">Sponsored Ads</a> empower you to reach the players most likely to engage with your experience. With comprehensive audience selection options, you can tailor your campaigns to specific demographics and interests, delivering maximum impact and driving high-quality traffic to your game.</Typography>
+        <Typography variant='body1'>Roblox <a href="../production/promotion/ads-manager.md" target="_blank">Sponsored Ads</a> empower you to reach the players most likely to engage with your game. With comprehensive audience selection options, you can tailor your campaigns to specific demographics and interests, delivering maximum impact and driving high-quality traffic to your game.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
@@ -202,6 +202,6 @@ fullWidth: true
 <Grid item xs={12}>
 <Button variant="contained" color="primary" href="https://create.roblox.com" style={{ marginRight: 16 }}>Go to Creator Hub</Button>
 <a href="../studio"><Typography variant='buttonLarge'>Studio documentation</Typography></a><br />
-<a href="../tutorials/first-experience"><Typography variant='buttonLarge'>First experience tutorial</Typography></a>
+<a href="../tutorials/first-experience"><Typography variant='buttonLarge'>First game tutorial</Typography></a>
 </Grid>
 </Grid>

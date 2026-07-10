@@ -11,23 +11,23 @@ The `Class.ScreenGui` container holds `Class.GuiObject|GuiObjects` to display on
 <figure>
 <img src="../assets/ui/ui-objects/ScreenGui-Example.jpg" width="840" alt="Example ScreenGui with various GuiObject children, including a Frame, TextLabel, TextBox, and ImageButton." />
 <Alert severity="info">
-For UI containers that hold `Class.GuiObject|GuiObjects` that you want to display **within** the 3D world, such as on the face of a part, see [In-Experience UI Containers](../ui/in-experience-containers.md).
+For UI containers that hold `Class.GuiObject|GuiObjects` that you want to display **within** the 3D world, such as on the face of a part, see [In-game UI Containers](../ui/in-experience-containers.md).
 </Alert>
 </figure>
 
-To display a `Class.ScreenGui` and its child `Class.GuiObject|GuiObjects` to every player who joins the experience, place it inside the `Class.StarterGui` container. When a player joins an experience and their character first spawns, the `Class.ScreenGui` and its contents clone into the `Class.PlayerGui` container for that player, located within the `Class.Players` container.
+To display a `Class.ScreenGui` and its child `Class.GuiObject|GuiObjects` to every player who joins the game, place it inside the `Class.StarterGui` container. When a player joins a game and their character first spawns, the `Class.ScreenGui` and its contents clone into the `Class.PlayerGui` container for that player, located within the `Class.Players` container.
 
 <img src="../assets/ui/ui-objects/StarterGui-To-PlayerGui.png" width="840" alt="Diagram of how a ScreenGui clones from StarterGui to a player's PlayerGui" />
 
 <Alert severity="success">
-By default, `Class.GuiObject|GuiObjects` inside a `Class.ScreenGui` within `Class.StarterGui` appear as an overlay of the [3D&nbsp;viewport](../studio/ui-overview.md#3d-viewport), simulating their appearance and position in a running experience. To hide all such screen overlays, toggle off **GUI&nbsp;overlay** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
+By default, `Class.GuiObject|GuiObjects` inside a `Class.ScreenGui` within `Class.StarterGui` appear as an overlay of the [3D&nbsp;viewport](../studio/ui-overview.md#3d-viewport), simulating their appearance and position in a running game. To hide all such screen overlays, toggle off **GUI&nbsp;overlay** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 </Alert>
 
 <Alert severity="info">
 If `Class.Players.CharacterAutoLoads` is disabled, the contents of `Class.StarterGui` will not be cloned until `Class.Player:LoadCharacterAsync()` is called.
 </Alert>
 
-As an experience grows in scope, you may require multiple screen interfaces such as a title screen, settings menu, shop interface, and more. In such cases, you can place multiple unique `Class.ScreenGui` containers inside `Class.StarterGui` and toggle each container's `Class.ScreenGui.Enabled|Enabled` property depending on whether it should be visible and active (while `false`, contents will not render, process user input, or update in response to changes).
+As a game grows in scope, you may require multiple screen interfaces such as a title screen, settings menu, shop interface, and more. In such cases, you can place multiple unique `Class.ScreenGui` containers inside `Class.StarterGui` and toggle each container's `Class.ScreenGui.Enabled|Enabled` property depending on whether it should be visible and active (while `false`, contents will not render, process user input, or update in response to changes).
 
 <img src="../assets/ui/ui-objects/ScreenGuis-Enabled.png" width="760" alt="Explorer hierarchy showing multiple ScreenGui containers, one enabled and the others disabled, in order to control which are visible at a given time." />
 
@@ -47,7 +47,7 @@ The following properties let you customize the [screen insets](#screen-insets) a
 
 ### Display order
 
-When using multiple `Class.ScreenGui` interfaces, you can layer them by Z‑index through their `Class.ScreenGui.DisplayOrder|DisplayOrder` property. For example, to display a modal settings menu on one `Class.ScreenGui` in front of the experience's main user interface on another `Class.ScreenGui`, assign a higher `Class.ScreenGui.DisplayOrder|DisplayOrder` to the modal's than the underlying interface's.
+When using multiple `Class.ScreenGui` interfaces, you can layer them by Z‑index through their `Class.ScreenGui.DisplayOrder|DisplayOrder` property. For example, to display a modal settings menu on one `Class.ScreenGui` in front of the game's main user interface on another `Class.ScreenGui`, assign a higher `Class.ScreenGui.DisplayOrder|DisplayOrder` to the modal's than the underlying interface's.
 
 ### Reset on spawn
 
@@ -78,7 +78,7 @@ The `Class.ScreenGui.ResetOnSpawn|ResetOnSpawn` boolean property determines if t
 
 ## Access player UI
 
-As noted, parenting a `Class.ScreenGui` to `Class.StarterGui` clones it and its child `Class.GuiObject|GuiObjects` into a player's `Class.PlayerGui` container when they join the experience and their character first spawns.
+As noted, parenting a `Class.ScreenGui` to `Class.StarterGui` clones it and its child `Class.GuiObject|GuiObjects` into a player's `Class.PlayerGui` container when they join the game and their character first spawns.
 
 If you need to control a player's UI container during playtime, for example to show/hide a specific `Class.ScreenGui` or any of its children, access it as follows from a `Class.LocalScript`:
 

@@ -12,7 +12,7 @@ traditional light festivals, and moody detective scenes.
 <img src="../assets/lighting-and-effects/light-sources/Showcase.jpg" alt="A far out view of a diner bulding in the middle of a nighttime city. The diner is utilizing several local light sources." width="800" />
 
 <Alert severity="info">
-The `Class.Lighting.LightingStyle|LightingStyle` property, modifiable only in the [Properties](../studio/properties.md) window for the global `Class.Lighting` object, sets your experience's lighting style. For more information, see [Appearance](../environment/lighting.md#appearance).
+The `Class.Lighting.LightingStyle|LightingStyle` property, modifiable only in the [Properties](../studio/properties.md) window for the global `Class.Lighting` object, sets your game's lighting style. For more information, see [Appearance](../environment/lighting.md#appearance).
 </Alert>
 
 <Alert severity="success">

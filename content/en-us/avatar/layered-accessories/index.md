@@ -48,7 +48,7 @@ Create and sell your first basic layered clothing.
 
 Layered clothing accessories are 3D cosmetic items that users can equip and wear on their avatar body, such as pants, t-shirt, jackets, dresses, and more. Unlike [rigid accessories](../rigid-accessories/index.md) that only attach to a specific point on a character, layered clothing stretches and fits over any body type and existing clothing.
 
-To create a custom Roblox accessory for your own experience or to sell on the Marketplace, it's important to start with the following:
+To create a custom Roblox accessory for your own game or to sell on the Marketplace, it's important to start with the following:
 
 - A general background with 3D modeling tools such as [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview).
 - An understanding of the [components that make up a layered accessory](#components-of-a-layered-clothing-accessory).
@@ -59,7 +59,7 @@ To create a custom Roblox accessory for your own experience or to sell on the Ma
 - [Additional tools, resources, and guides](#resources) provided by Roblox to standardize and expedite the creation process.
 
 <Alert severity = 'warning'>
-If you are a developer and are looking for information on manually equipping or configuring layered clothing accessories within an experience, including [implementing layered clothing on a non-standard character model](../../characters/appearance.md#layered-clothing-on-non-r15), see [Character appearance](../../characters/appearance.md).
+If you are a developer and are looking for information on manually equipping or configuring layered clothing accessories within a game, including [implementing layered clothing on a non-standard character model](../../characters/appearance.md#layered-clothing-on-non-r15), see [Character appearance](../../characters/appearance.md).
 </Alert>
 
 Roblox also supports [classic clothing](#classic-clothing), 2D images that can be applied to your character's surface.

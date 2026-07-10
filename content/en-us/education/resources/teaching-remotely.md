@@ -9,7 +9,7 @@ tags:
 
 <img src="../../assets/education/legacy/impactPage_hero.jpg" width="100%" />
 
-As educators, we understand the importance of having meaningful and collaborative learning experiences. With schools and teachers responding to COVID-19, Roblox is proud to offer resources that allow students and educators to collaborate and learn in real time.
+As educators, we understand the importance of having meaningful and collaborative learning games. With schools and teachers responding to COVID-19, Roblox is proud to offer resources that allow students and educators to collaborate and learn in real time.
 
 ## Tools for teaching remotely
 
@@ -80,9 +80,9 @@ Roblox Education has a variety of lesson plans for different ages and subjects.
   </a>
 </p>
 
-## Learn and explore with experiences
+## Learn and explore with games
 
-Many Roblox experiences offer educational value, such as allowing students to roleplay jobs like being a veterinarian, explore historical sites, or experiment with rocket physics. Check out these hand-picked experiences to play with students, or use them to kick-start a lesson of your own.
+Many Roblox games offer educational value, such as allowing students to roleplay jobs like being a veterinarian, explore historical sites, or experiment with rocket physics. Check out these hand-picked games to play with students, or use them to kick-start a lesson of your own.
 
   <a href="https://www.roblox.com/games/?SortFilter=23&TargetId=67">
     <Button variant="text">Explore Games</Button>

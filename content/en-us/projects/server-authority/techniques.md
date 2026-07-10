@@ -1,33 +1,43 @@
 ---
 title: Server authority techniques
-description: Techniques for creating high-quality, smooth, multiplayer experiences using the server authority model.
+description: Techniques for creating high-quality, smooth, multiplayer games using the server authority model.
 ---
 
-This guide outlines various techniques for creating high-quality, smooth, multiplayer experiences using the [server authority model](./index.md).
+This guide outlines various techniques for creating high-quality, smooth, multiplayer games using the [server authority model](./index.md).
 
 ## Predictive instance creation (instance stitching)
 
-Instance **stitching** lets client scripts predict `Datatype.Instance.new()` calls made inside `Class.RunService:BindToSimulation()` callbacks. The client creates the `Class.Instance` immediately without waiting for a server round‑trip; when the server's authoritative copy arrives, the client‑created instance and the server's authoritative copy are merged into one. From your script's perspective, the `Class.Instance` exists immediately and is consistent with the server.
+Instance **stitching** lets client scripts predictively create `Class.Instance|Instances` inside `Class.RunService:BindToSimulation()` callbacks. The client creates the `Class.Instance` immediately without waiting for a server round‑trip; when the server's authoritative copy arrives, the client‑created instance and the server's authoritative copy are merged into one. From your script's perspective, the `Class.Instance` exists immediately and is consistent with the server.
 
 Instance stitching is useful in cases where an instance must be visible and active on the client as soon as possible. While the server will eventually replicate any instance the client needs (along with any effects they had on the world), this process incurs at least one round‑trip of latency due to server communication. Examples include firing a rocket launcher and creating physics constraints&nbsp;— without stitching, the client will see the rocket pop in far away from them, or some jitter when the new constraints replicate to them.
 
 ### Technical behavior
 
-Instance stitching works by generating the same deterministic GUID on both the client and the server for the same `Datatype.Instance.new()` call. The GUID is derived from four inputs: the type of the `Class.Instance` being created, the calling script's identity (two scripts with the same text are considered different), the current simulation frame, and a per‑script call counter that resets each frame. If client and server agree on all four inputs, they produce matching GUIDs and the stitch succeeds.
+Instance stitching works by generating the same deterministic GUID on both the client and the server. The GUID is derived from four inputs: the type of the `Class.Instance` being created, the source's identity (see below), the current simulation frame, and a per‑script call counter that resets each frame.
+
+- For `Datatype.Instance.new()` — The source is the script itself (two scripts with the same text are considered different).
+- For `Datatype.Instance.fromExisting()` — The source is the `Class.Instance` that you're calling `Datatype.Instance.fromExisting()` on.
+- For `Class.Instance:Clone()` — Each cloned instance uses the source instance's GUID as the context seed.
+
+If client and server agree on the inputs, they produce matching GUIDs and the stitch succeeds.
 
 ### Implementation
 
-To utilize instance stitching, simply call `Datatype.Instance.new()` inside a `Class.RunService:BindToSimulation()|BindToSimulation()` callback from a `Class.ModuleScript` that gets required on both the client **and** the server. Nothing else is required on your end; the system handles GUID assignment and reconciliation automatically.
+To utilize instance stitching, call `Datatype.Instance.new()`, `Class.Instance:Clone()`, or `Datatype.Instance.fromExisting()` inside a `Class.RunService:BindToSimulation()|BindToSimulation()` callback from a `Class.ModuleScript` that gets required on both the client **and** the server. Nothing else is required on your end; the system handles GUID assignment and reconciliation automatically.
+
+You can freely set non-[simulation access](./index.md#simulation-access) properties such as `Class.Instance.Name|Name`, `Class.BasePart.Size|Size`, or `Class.Instance.Parent|Parent` on an instance before it is parented into the `Class.DataModel`.
 
 ```lua title="Simulation (ModuleScript) - Create Instance in a BindToSimulation() Callback"
 local RunService = game:GetService("RunService")
-local Players = game:GetService("Players")
 
 local Simulation = {}
 
 Simulation.Initialize = function()
 	RunService:BindToSimulation(function(deltaTime)
-		local part = Instance.new("Part", workspace)
+		local part = Instance.new("Part")
+		part.Name = "PredictedPart"
+		part.Size = Vector3.new(2, 2, 2)
+		part.Parent = workspace -- Part is now in the data model; any non-simulation access changes will error after this
 		-- Part exists immediately on the client and will be reconciled with the server
 	end)
 end
@@ -35,39 +45,28 @@ end
 return Simulation
 ```
 
-### Limitations
+`Class.Instance:Clone()` and `Datatype.Instance.fromExisting()` stitch correctly when the source instance was replicated to both client and server; both sides clone from matching source GUIDs and produce matching predicted GUIDs.
 
-Currently, instance stitching has the following limitations (to be resolved in the future):
+```lua title="Simulation (ModuleScript) - Clone Instance in a BindToSimulation() Callback"
+local RunService = game:GetService("RunService")
 
-<Alert severity="warning" variant="outlined">
-Setting `Class.Instance.Parent|Parent` separately from `Datatype.Instance.new()` is not supported inside a simulation callback. Instead, pass the parent as the second argument to `Datatype.Instance.new()`:
+local Simulation = {}
 
-```lua
--- Correct
-local part = Instance.new("Part", workspace)
+local sourceTemplate -- a replicated Instance
 
--- Not supported (will fail)
-local part = Instance.new("Part")
-part.Parent = workspace
+Simulation.Initialize = function()
+	RunService:BindToSimulation(function(deltaTime)
+		local cloned = sourceTemplate:Clone()
+		cloned.Parent = workspace
+		-- Cloned hierarchy is stitched with the server's authoritative copy
+	end)
+end
+
+return Simulation
 ```
 
-</Alert>
-
-<Alert severity="warning" variant="outlined">
-Setting other properties such as `Class.Instance.Name|Name`, `Class.BasePart.Size|Size`, or `Class.BasePart.CFrame|CFrame` must be deferred to the next frame using `Library.task.defer()`:
-
-```lua title="Setting Other Simulation-Inaccessible Properties"
-local part = Instance.new("Part", workspace)
-task.defer(function()
-	part.Name = "PredictedPart"
-	part.Size = Vector3.new(2, 2, 2)
-end)
-```
-
-</Alert>
-
-<Alert severity="warning" variant="outlined">
-Stitching only applies to `Datatype.Instance.new()`. Instances created via `Class.Instance:Clone()` or `Datatype.Instance.fromExisting()` inside a simulation callback will not be reconciled with the server and will remain client‑local.
+<Alert severity="warning">
+Instances created inside a simulation callback must be parented into the `Class.DataModel` hierarchy before the end of that frame. Do not store a reference to a speculative instance and parent it in a subsequent frame.
 </Alert>
 
 ## Position smoothing
@@ -83,10 +82,9 @@ In the following sample `Class.Script`, the rendered object (parent) smoothly tr
 ```lua title="Smoothly Track BasePart Position with Renderer Part"
 local RunService = game:GetService("RunService")
 local TweenService = game:GetService("TweenService")
-local Workspace = game:GetService("Workspace")
 
 -- Object to smoothly track
-local smoothTarget:BasePart = Workspace.SimulatedPart
+local smoothTarget:BasePart = workspace.SimulatedPart
 -- Visual object that will be smoothed
 local renderer:BasePart = script.Parent
 -- Time to smooth over; smaller means faster
@@ -112,7 +110,7 @@ RunService.RenderStepped:Connect(function(deltaTime: number)
 end)
 ```
 
-The [Soccer](https://www.roblox.com/games/110687099504272/Soccer-Server-Authority-Template) example experience uses a variation of this technique to more intelligently turn on and off position smoothing for the soccer ball. Specifically, the soccer ball only smooths its position when the simulated ball has "jumped" far enough away from the rendered ball. This approach provides the best of both worlds: the soccer ball has no visual latency under normal conditions, and the experience smoothly interpolates its position only after the simulated ball has unexpectedly jumped to a new location, likely due to a network artifact or server‑side change.
+The [Soccer](https://www.roblox.com/games/110687099504272/Soccer-Server-Authority-Template) example game uses a variation of this technique to more intelligently turn on and off position smoothing for the soccer ball. Specifically, the soccer ball only smooths its position when the simulated ball has "jumped" far enough away from the rendered ball. This approach provides the best of both worlds: the soccer ball has no visual latency under normal conditions, and the game smoothly interpolates its position only after the simulated ball has unexpectedly jumped to a new location, likely due to a network artifact or server‑side change.
 
 ## Writing animation code
 
@@ -242,8 +240,6 @@ In a predicted simulation, it's possible to trigger effects or sounds for events
 A good strategy for rendering a predicted simulation is to synchronize a state machine pattern within the simulation loop and render changes to the state in a render step function. The following example simulates a grenade with a state machine pattern:
 
 ```lua title="Simple State Machine for Tracking a Grenade (ModuleScript)"
-local Workspace = game:GetService("Workspace")
-
 local module = {}
 
 module.GrenadeStates = {
@@ -333,15 +329,15 @@ end)
 
 ## Designing around network latency
 
-Certain gameplay mechanics lend themselves better to networked multiplayer than other mechanics. Players will always have some delay between when another player performs an action and when they receive that player's input. The best way to create a super smooth multiplayer experience is to design your experience with these limitations in mind.
+Certain gameplay mechanics lend themselves better to networked multiplayer than other mechanics. Players will always have some delay between when another player performs an action and when they receive that player's input. The best way to create a super smooth multiplayer game is to design your game with these limitations in mind.
 
-For example, an experience with slower acceleration on player movement will appear smoother than one with higher acceleration because the difference in position caused by the network latency of player input will be less than in an experience with higher acceleration.
+For example, a game with slower acceleration on player movement will appear smoother than one with higher acceleration because the difference in position caused by the network latency of player input will be less than in a game with higher acceleration.
 
 As another example, a gameplay mechanic where players can **instantly** trigger a large explosion by pressing an input will have more network artifacts than if the explosion is delayed after the input, as if by lighting a fuse. This puts the resimulation on the fuse effect instead of on the explosion effect which is a less noticeable network artifact.
 
 ## Predicting other player inputs
 
-By default, Roblox does not forward the inputs from each client to every other client. Whether this is right for your experience depends on its design:
+By default, Roblox does not forward the inputs from each client to every other client. Whether this is right for your game depends on its design:
 
 - For basic humanoid movement, the default behavior means that other player characters' movements are not extrapolated from the authoritative server state and, as a result, other player characters will not mispredict but will render slightly in the past.
 - In a racing game, by contrast, the default behavior means that clients will not know whether other players are applying the throttle or other inputs, so other cars may appear behind the local player even if they're actually ahead. To alleviate this, you can store player inputs in [attributes](../../studio/properties.md#instance-attributes) on the server and operate on those synchronized attributes client‑side using `Class.RunService:BindToSimulation()` as demonstrated in the following code sample and the [Racing](https://www.roblox.com/games/134686834388911/Racing-Server-Authority-Template) template. This approach lets you use attributes as inputs to your simulation to have fully replicated player inputs.
@@ -393,7 +389,7 @@ return module
 
 ## Debugging
 
-There are some new tools and techniques you can use to debug a server‑authoritative experience.
+There are some new tools and techniques you can use to debug a server‑authoritative game.
 
 ### Server authority visualizer
 
@@ -421,7 +417,7 @@ Pressing <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F6</kbd> (Windows) or <kbd>⌘</kbd
 </tr>
 <tr>
   <td>**RCC heartbeat FPS**</td>
-	<td>The frame rate of the simulation on the server. If this number drops below 59, the server cannot keep up with the simulation and the experience will degrade in quality.</td>
+	<td>The frame rate of the simulation on the server. If this number drops below 59, the server cannot keep up with the simulation and the game will degrade in quality.</td>
 </tr>
 <tr>
   <td>**Predicted instance count**</td>

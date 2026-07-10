@@ -41,7 +41,7 @@ To practice, you'll create a script that stores player items in a table, then ad
 
 ## Remove values from arrays
 
-To remove a value, like if a player used an item or someone in a list of active players leaves an experience, use `Library.table.remove()`. Depending on the parameters provided, the function can either remove the last value of a table, or at a specific index.
+To remove a value, like if a player used an item or someone in a list of active players leaves a game, use `Library.table.remove()`. Depending on the parameters provided, the function can either remove the last value of a table, or at a specific index.
 
 ### Remove the last value
 

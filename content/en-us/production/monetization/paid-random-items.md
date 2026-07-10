@@ -3,7 +3,7 @@ title: Paid random items policy guidelines
 description: Summarizes Roblox's policy for offering paid random items in a game.
 ---
 
-Due to regulations in various countries, certain requirements may apply to random items purchased directly or indirectly with Robux. This includes random items purchased with paid in-experience currency. For example, both of the following are paid random items:
+Due to regulations in various countries, certain requirements may apply to random items purchased directly or indirectly with Robux. This includes random items purchased with paid in-game currency. For example, both of the following are paid random items:
 
 - Paying Robux to spin a prize wheel
 - Paying Robux to buy gems or spin tickets that are spent at a prize wheel
@@ -39,7 +39,7 @@ There are a variety of item types that are paid random items, including but not 
 
 ## Item odds disclosures
 
-Under Roblox's [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use) and [Community Standards](https://about.roblox.com/community-standards#roblox-economy-paid-random-items), if you offer paid random items that users can purchase with Robux or other in-experience currency purchasable with Robux, you must indicate all possible outcomes and the actual numerical odds of what they may receive.
+Under Roblox's [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use) and [Community Standards](https://about.roblox.com/community-standards#roblox-economy-paid-random-items), if you offer paid random items that users can purchase with Robux or other in-game currency purchasable with Robux, you must indicate all possible outcomes and the actual numerical odds of what they may receive.
 
 <img src="../../assets/policy/paid-random-items/Prize-wheel.png" width="70%" alt="An example prize wheel with numerical odds of what users may receive." />
 
@@ -70,16 +70,16 @@ This policy also applies to indirect purchases. For example, if a user uses thei
 Paid items that augment the odds of other random outcomes must also be explained before purchase. For example, if a user can purchase a "lucky potion" or "magic fishing rod" that improves the odds of more unlikely outcomes, these impacts must be numerically explained. The new odds of the enhanced random items must also be dynamically updated when these items are active to show the user's true odds.
 
 <Alert severity="info">
-If your experience offers randomized virtual rewards in exchange for completing an action that does not involve the payment of Robux or other in-experience currency, you aren't required to disclose the odds. For example, if a user locates a key that opens a treasure chest, you don't need to state the odds of what items they might receive from the treasure chest.
+If your game offers randomized virtual rewards in exchange for completing an action that does not involve the payment of Robux or other in-game currency, you aren't required to disclose the odds. For example, if a user locates a key that opens a treasure chest, you don't need to state the odds of what items they might receive from the treasure chest.
 </Alert>
 
 ## Per-user regulations
 
-To help you determine how to handle virtual items in your experience per user, use the `Class.PolicyService.GetPolicyInfoForPlayerAsync|PolicyService:GetPolicyInfoForPlayerAsync()` method. Specifically, the structure of the returned dictionary includes `ArePaidRandomItemsRestricted` and `IsPaidItemTradingAllowed`.
+To help you determine how to handle virtual items in your game per user, use the `Class.PolicyService.GetPolicyInfoForPlayerAsync|PolicyService:GetPolicyInfoForPlayerAsync()` method. Specifically, the structure of the returned dictionary includes `ArePaidRandomItemsRestricted` and `IsPaidItemTradingAllowed`.
 
 ### ArePaidRandomItemsRestricted
 
-When `ArePaidRandomItemsRestricted` is **true**, the user cannot interact with paid random item generators, either through Robux directly or in‑experience currency bought with Robux.
+When `ArePaidRandomItemsRestricted` is **true**, the user cannot interact with paid random item generators, either through Robux directly or game currency bought with Robux.
 
 For ineligible users defined by the API, creators must apply one of these treatments:
 
@@ -104,7 +104,7 @@ For ineligible users defined by the API, creators must apply one of these treatm
 		<td>If a lootbox for a rare sword is 10 Robux with 5% odds, offer the sword to ineligible users for direct purchase priced at 200 Robux</td>
 	</tr>
 	<tr>
-		<td><b>Removing or hiding the paid random item from the experience</b></td>
+		<td><b>Removing or hiding the paid random item from the game</b></td>
 		<td>Replace a giant spin prize wheel with a shop offering direct purchases</td>
 	</tr>
 	<tr>
@@ -112,7 +112,7 @@ For ineligible users defined by the API, creators must apply one of these treatm
 		<td>Replacing the purchase button with "Sorry, this item is unavailable for users in your region"</td>
 	</tr>
 	<tr>
-		<td><b>Removing the user from the parts of the experience with paid random items</b></td>
+		<td><b>Removing the user from the parts of the game with paid random items</b></td>
 		<td>Teleporting them away</td>
 	</tr>
 </tbody>
@@ -120,6 +120,6 @@ For ineligible users defined by the API, creators must apply one of these treatm
 
 ### IsPaidItemTradingAllowed
 
-When `IsPaidItemTradingAllowed` is **true**, the user can trade virtual items that they purchased with in‑experience currency or Robux.
+When `IsPaidItemTradingAllowed` is **true**, the user can trade virtual items that they purchased with game currency or Robux.
 
 For ineligible users defined by the API, creators must not allow them to access the ability to trade the resulting outcome of a paid random item or other paid items.

@@ -5,7 +5,7 @@ description: Explains the process of creating dynamic motion by spinning objects
 
 **Spinning objects** are objects that rotate on one or more axes within the 3D space. Using the built-in power of Roblox's simulation engine, you can make objects spin and interact with their environment in a way that emulates real-world physical behavior that's familiar and intuitive to players, such as gravity, aerodynamics, and friction.
 
-Using the [Spinning Objects](https://www.roblox.com/games/16550477904/Spinning-Objects) `.rbxl` file as a reference, this tutorial explains how physical forces impact angular motion in Studio, and shows you various techniques to spin objects in your experiences with different spinning behavior, including guidance on:
+Using the [Spinning Objects](https://www.roblox.com/games/16550477904/Spinning-Objects) `.rbxl` file as a reference, this tutorial explains how physical forces impact angular motion in Studio, and shows you various techniques to spin objects in your games with different spinning behavior, including guidance on:
 
 - Using an `Class.AngularVelocity` mover constraint to spin an entire assembly at a constant angular velocity.
 - Using a `Class.HingeConstraint` mechanical constraint to spin a part within an assembly at a constant angular velocity as the rest of the assembly remains stationary.
@@ -19,7 +19,7 @@ Using the [Spinning Objects](https://www.roblox.com/games/16550477904/Spinning-O
 
 ## Angular motion and physical forces
 
-Roblox Studio is a real-world simulation engine that emulates physical behavior in real time, so in order to predict the behavior of spinning objects in experiences, it's important to have a high-level understanding of how objects spin in real life with angular motion.
+Roblox Studio is a real-world simulation engine that emulates physical behavior in real time, so in order to predict the behavior of spinning objects in games, it's important to have a high-level understanding of how objects spin in real life with angular motion.
 
 **Angular motion**, or rotational motion, is movement around a fixed point or axis. For example, when a propeller has angular motion, it spins around its rotational axis in the middle of the propeller.
 
@@ -55,7 +55,7 @@ This is because torque needs to be _greater_ than any directional physical force
   </figure>
 </GridContainer>
 
-**Angular velocity** is the measure of an object's rotation rate, or how fast the object rotates around a fixed point or axis over a period of time. Studio measures angular velocity according to how many [radians](https://en.wikipedia.org/wiki/Radian) an object spins per second. There are 2π radians (6.283) in one rotation, so in order for an object to make a full rotation per second, it must have enough torque to spin about 6 radians. Understanding angular velocity is important for designing gameplay in your experiences because it helps you determine how much torque you need in order to achieve a particular acceleration for your spinning objects.
+**Angular velocity** is the measure of an object's rotation rate, or how fast the object rotates around a fixed point or axis over a period of time. Studio measures angular velocity according to how many [radians](https://en.wikipedia.org/wiki/Radian) an object spins per second. There are 2π radians (6.283) in one rotation, so in order for an object to make a full rotation per second, it must have enough torque to spin about 6 radians. Understanding angular velocity is important for designing gameplay in your games because it helps you determine how much torque you need in order to achieve a particular acceleration for your spinning objects.
 
 The following sections dive deeper into these concepts as you learn how to spin objects at either a constant or initial angular velocity with the necessary torque to overcome any oppositional physical forces within the environment. As you review these physics concepts with the upcoming techniques, you can more accurately predict how to adjust property values to achieve any ideal spinning behavior in Studio.
 
@@ -76,7 +76,7 @@ The amount of torque you apply to your objects not only depends on oppositional 
   </figure>
 </GridContainer>
 
-The following subsections use assemblies of different shapes and sizes to teach you how to spin either an entire object or only a portion of the object. As you experiment with different property values, you will learn how to estimate the maximum amount of torque you need for assemblies in your own experiences.
+The following subsections use assemblies of different shapes and sizes to teach you how to spin either an entire object or only a portion of the object. As you experiment with different property values, you will learn how to estimate the maximum amount of torque you need for assemblies in your own games.
 
 ### Use AngularVelocity constraints
 
@@ -92,7 +92,7 @@ To demonstrate this process, you will add a block to your workspace with an atta
 
 #### Add attachment
 
-You can specify the fixed point to spin an assembly by adding an `Class.Attachment` object to the assembly, then configuring the attachment's position in the 3D space. The sample [Spinning Objects](https://www.roblox.com/games/16550477904/Spinning-Objects) experience places an attachment in the center of a block part so that the constraint can spin the part counterclockwise around the center of itself.
+You can specify the fixed point to spin an assembly by adding an `Class.Attachment` object to the assembly, then configuring the attachment's position in the 3D space. The sample [Spinning Objects](https://www.roblox.com/games/16550477904/Spinning-Objects) game places an attachment in the center of a block part so that the constraint can spin the part counterclockwise around the center of itself.
 
 Attachments include visual aids to help you visualize their axes of rotation. The yellow arrow denotes the attachment's primary axis, and the orange arrow denotes the attachment's secondary axis. While neither axis of rotation influences the block's rotation in the steps of this technique, it's important to understand these visual aids for future reference because they can assist you in determining ideal behavior for different types of constraints, such as the `Class.HingeConstraint` in the next technique.
 
@@ -115,7 +115,7 @@ To add an attachment:
 
 Now that your block has a fixed point to spin the block, you can configure the properties of an `Class.AngularVelocity` constraint to specify the rotational direction, axis or axes to apply a target constant angular velocity, the amount of radians you want the block to spin per second, and the maximum amount of torque the engine can apply for the block to reach a constant angular velocity.
 
-The sample [Spinning Objects](https://www.roblox.com/games/16550477904/Spinning-Objects) experience applies up to 1000 Rowton-studs of constant angular force to spin the block 6 radians per second along the world's Y axis at a constant angular velocity. Rowton-studs are Roblox's primary physical units for measuring torque. To reference Roblox physical units and how they convert to metric units, see [Roblox Units](../../../physics/units.md).
+The sample [Spinning Objects](https://www.roblox.com/games/16550477904/Spinning-Objects) game applies up to 1000 Rowton-studs of constant angular force to spin the block 6 radians per second along the world's Y axis at a constant angular velocity. Rowton-studs are Roblox's primary physical units for measuring torque. To reference Roblox physical units and how they convert to metric units, see [Roblox Units](../../../physics/units.md).
 
 To configure an `Class.AngularVelocity` constraint:
 
@@ -135,13 +135,13 @@ To configure an `Class.AngularVelocity` constraint:
 
 1. Verify the amount of torque you set spins the block 6 radians per second along the world's Y axis.
 
-   - Select the **Run** simulation mode from the mezzanine's dropdown menu and click the **Play** button to begin. Studio simulates the experience at the current camera position without your avatar in the 3D space.
+   - Select the **Run** simulation mode from the mezzanine's dropdown menu and click the **Play** button to begin. Studio simulates the game at the current camera position without your avatar in the 3D space.
 
      <img src="../../../assets/studio/general/Mezzanine-Testing-Mode-Run.png" width="800" alt="Run option in the testing modes dropdown of Studio's mezzanine." />
 
      <video controls src="../../../assets/tutorials/creating-spinning-objects/AV-Constraint-2.mp4" width="80%"></video>
 
-You may need to adjust your torque depending on your block's scale and any oppositional physical forces in your environment. For example, the properties of the `Class.AngularVelocity` constraint in the sample experience work for a block part with a default size of `4, 1, 2` on a flat platform with a plastic material, and an environment with the classic preset gravity.
+You may need to adjust your torque depending on your block's scale and any oppositional physical forces in your environment. For example, the properties of the `Class.AngularVelocity` constraint in the sample game work for a block part with a default size of `4, 1, 2` on a flat platform with a plastic material, and an environment with the classic preset gravity.
 
 However, if your block is a larger size and on grass terrain, you need to increase your `Class.AngularVelocity.MaxTorque` property because the angular force needs to overcome both the block's mass and friction from the environment. For example, the large block part that's quadruple the size of the sample's part needs at least `300000` Rowton-studs of constant angular force to achieve the set angular velocity!
 
@@ -168,9 +168,9 @@ To demonstrate this process, you will add a propeller assembly with two objects 
 
 #### Get propeller asset
 
-The **Creator Store** is a tab of the **Toolbox** that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add an individual asset or asset library directly into an open experience.
+The **Creator Store** is a tab of the **Toolbox** that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add an individual asset or asset library directly into an open game.
 
-This tutorial references a propeller model that you can use as you replicate each step of the `Class.HingeConstraint` technique of spinning objects. To get this propeller asset from your inventory into your experience:
+This tutorial references a propeller model that you can use as you replicate each step of the `Class.HingeConstraint` technique of spinning objects. To get this propeller asset from your inventory into your game:
 
 1. Add the propeller to your inventory.
 
@@ -193,7 +193,7 @@ This tutorial references a propeller model that you can use as you replicate eac
 
 You can specify both the position of where you want the attachments to overlap and the direction of rotational movement to spin a particular object within an assembly by adding two `Class.Attachment` objects to the assembly, then configuring their alignment and orientation in the 3D space.
 
-The sample [Spinning Objects](https://www.roblox.com/games/16550477904/Spinning-Objects) experience aligns two attachments near the position of where the unanchored propeller overlaps with the anchored base, and orients their primary axis of rotation upwards so that they spin counterclockwise. The base attachment cannot spin in this example because the base is anchored.
+The sample [Spinning Objects](https://www.roblox.com/games/16550477904/Spinning-Objects) game aligns two attachments near the position of where the unanchored propeller overlaps with the anchored base, and orients their primary axis of rotation upwards so that they spin counterclockwise. The base attachment cannot spin in this example because the base is anchored.
 
 To configure attachments for the hinge constraint:
 
@@ -217,7 +217,7 @@ To configure attachments for the hinge constraint:
 
 Now that your attachments have position to overlap and a direction of rotational movement, you can configure the properties of a `Class.HingeConstraint` constraint to specify the amount of radians you want the attachment to spin per second, and the maximum amount of torque the engine can apply for the attachment to reach a constant angular velocity.
 
-Similar to the previous technique, the sample [Spinning Objects](https://www.roblox.com/games/16550477904/Spinning-Objects) experience applies up to 1000 Rowton-studs of constant angular force to spin the attachment 3 radians per second along the Y axis at a constant angular velocity. However, because the base attachment is in an anchored object, only the propeller's attachment can spin.
+Similar to the previous technique, the sample [Spinning Objects](https://www.roblox.com/games/16550477904/Spinning-Objects) game applies up to 1000 Rowton-studs of constant angular force to spin the attachment 3 radians per second along the Y axis at a constant angular velocity. However, because the base attachment is in an anchored object, only the propeller's attachment can spin.
 
 To configure a hinge constraint:
 
@@ -241,7 +241,7 @@ To configure a hinge constraint:
 
 1. Verify the amount of torque you set spins the propeller 3 radians per second along the Y axis.
 
-   - Select the **Run** simulation mode from the mezzanine's dropdown menu and click the **Play** button to begin. Studio simulates the experience at the current camera position without your avatar in the 3D space.
+   - Select the **Run** simulation mode from the mezzanine's dropdown menu and click the **Play** button to begin. Studio simulates the game at the current camera position without your avatar in the 3D space.
 
      <img src="../../../assets/studio/general/Mezzanine-Testing-Mode-Run.png" width="800" alt="Run option in the testing modes dropdown of Studio's mezzanine." />
 

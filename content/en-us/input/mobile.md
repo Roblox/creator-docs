@@ -3,7 +3,7 @@ title: Mobile input
 description: Explains Roblox support for mobile devices.
 ---
 
-The majority of Roblox sessions are played on mobile devices, so it's important to consider the mobile [device orientation](#device-orientation) and other [cross‑platform](../projects/cross-platform.md) factors when designing an experience for a wide audience.
+The majority of Roblox sessions are played on mobile devices, so it's important to consider the mobile [device orientation](#device-orientation) and other [cross‑platform](../projects/cross-platform.md) factors when designing a game for a wide audience.
 
 To simplify cross‑platform inputs, including player interaction with virtual buttons, Roblox provides the [Input Action System](../input/input-action-system.md) to define **actions** such as "jump," "sprint," or "shoot" and set up **bindings** for multiple hardware inputs to drive those actions.
 
@@ -19,7 +19,7 @@ See [input type detection](./index.md#input-type-detection) for more information
 
 ## Device orientation
 
-By default, Roblox experiences run in **landscape** mode, allowing the experience to switch between landscape "left" and landscape "right" as the player's device rotates. However, experiences can be locked to a particular orientation if desired.
+By default, Roblox games run in **landscape** mode, allowing the game to switch between landscape "left" and landscape "right" as the player's device rotates. However, games can be locked to a particular orientation if desired.
 
 There are five different orientation modes, including two sensor-based modes and three locked modes.&sup1; Each of these can be set as the **default** orientation through `Class.StarterGui.ScreenOrientation`, accessible through Studio's [Properties](../studio/properties.md) window.
 
@@ -32,11 +32,11 @@ There are five different orientation modes, including two sensor-based modes and
 <tbody>
   <tr>
     <td>`Enum.ScreenOrientation|LandscapeSensor`</td>
-    <td>The default Roblox setting in which the experience always appears in landscape mode (no portrait mode) and the device detects its physical orientation to ensure the experience view is always oriented upward.</td>
+    <td>The default Roblox setting in which the game always appears in landscape mode (no portrait mode) and the device detects its physical orientation to ensure the game view is always oriented upward.</td>
   </tr>
   <tr>
     <td>`Enum.ScreenOrientation|Sensor`</td>
-    <td>The device detects its physical orientation to ensure the experience view is always oriented upward, switching between landscape and portrait mode as needed.</td>
+    <td>The device detects its physical orientation to ensure the game view is always oriented upward, switching between landscape and portrait mode as needed.</td>
   </tr>
 </tbody>
 <thead>
@@ -62,7 +62,7 @@ There are five different orientation modes, including two sensor-based modes and
 
 <figcaption>&sup1; Roblox does not include a "portrait upside-down" mode since many devices do not natively support that orientation</figcaption><br /><br />
 
-Beyond the default `Class.StarterGui.ScreenOrientation` property, you can change orientation during gameplay through `Class.PlayerGui.ScreenOrientation`. This can be useful when an experience needs to enforce an orientation, such as locking the view to `Enum.ScreenOrientation|Portrait` for a minigame.
+Beyond the default `Class.StarterGui.ScreenOrientation` property, you can change orientation during gameplay through `Class.PlayerGui.ScreenOrientation`. This can be useful when a game needs to enforce an orientation, such as locking the view to `Enum.ScreenOrientation|Portrait` for a minigame.
 
 The following code in a `Class.LocalScript` sets the screen orientation to portrait after a short delay:
 

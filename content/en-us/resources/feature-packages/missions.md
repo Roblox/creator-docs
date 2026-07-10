@@ -7,11 +7,11 @@ description: Learn about the missions feature package.
 This feature package is in beta.
 </Alert>
 
-The **Missions** feature package offers out-of-the-box functionality to create missions that players can complete to achieve rewards and progress in your experience. All missions must have an ID, category, and a list of tasks that players must complete to finish the mission. However, the tasks list can be empty, allowing the mission's rewards to be claimed immediately.
+The **Missions** feature package offers out-of-the-box functionality to create missions that players can complete to achieve rewards and progress in your game. All missions must have an ID, category, and a list of tasks that players must complete to finish the mission. However, the tasks list can be empty, allowing the mission's rewards to be claimed immediately.
 
 Using the package's customization options, you can personalize all missions to meet your unique gameplay requirements, such as:
 
-- Creating missions that [onboard](../../production/game-design/onboarding.md) new players into your experience and improve [D1 retention](../../production/game-design/analytics-essentials.md#retention-metrics).
+- Creating missions that [onboard](../../production/game-design/onboarding.md) new players into your game and improve [D1 retention](../../production/game-design/analytics-essentials.md#retention-metrics).
 - Targetting [D7 and D30 retention](../../production/game-design/analytics-essentials.md#retention-metrics) by adding mid- to long-term goals and a sense of progression.
 - Increasing [engagement](../../production/game-design/analytics-essentials.md#engagement-metrics) by surfacing the various systems in your game and rewarding players for interacting with them.
 
@@ -23,11 +23,11 @@ For information on how to provide players with fresh goals and incentives so tha
 
 ## Get package
 
-The **Creator Store** is a tab of the **Toolbox** that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add one or more assets directly into an open experience, including feature packages!
+The **Creator Store** is a tab of the **Toolbox** that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add one or more assets directly into an open game, including feature packages!
 
 Every feature package requires the **Core** feature package to function properly. Once the **Core** and **Missions** feature package assets are within your inventory, you can reuse them in any project on the platform.
 
-To get the packages from your inventory into your experience:
+To get the packages from your inventory into your game:
 
 1. Add the **Core** and **Missions** to your inventory within Studio by clicking the **Add to Inventory** link in the following set of components.
 
@@ -41,7 +41,7 @@ To get the packages from your inventory into your experience:
 
 	<Grid item container xs={12} sm={6} direction='row'>
 	<Grid item container direction='column'>
-	<BrowseSampleCard href='https://create.roblox.com/store/asset/89760436366160' description='The Missions Feature Package offers functionality to create missions that players can complete to achieve rewards and progress in your experience.' title='Missions Feature Package' assetId={89760436366160}  />
+	<BrowseSampleCard href='https://create.roblox.com/store/asset/89760436366160' description='The Missions Feature Package offers functionality to create missions that players can complete to achieve rewards and progress in your game.' title='Missions Feature Package' assetId={89760436366160}  />
 	</Grid>
 	</Grid>
 
@@ -146,7 +146,7 @@ By default, missions are unlocked for players automatically and can be completed
    <tr>
    <td>`expireCountOffline`</td>
    <td>`bool`</td>
-   <td>If the mission has `expireSeconds` and `expireCountOffline` is set to true, time while the player is not actually in the experience will count toward mission expiration.</td>
+   <td>If the mission has `expireSeconds` and `expireCountOffline` is set to true, time while the player is not actually in the game will count toward mission expiration.</td>
    </tr>
    </tbody>
    </table>
@@ -292,7 +292,7 @@ Time tasks have a target amount of time spent, and are started and stopped. When
    <tr>
    <td>`includesOfflineTime`</td>
    <td>`bool`</td>
-   <td>If the task should include time spent while the player is not actively in the experience.</td>
+   <td>If the task should include time spent while the player is not actively in the game.</td>
    </tr>
    </tbody>
    </table>
@@ -322,11 +322,11 @@ Categories do not have to be explicitly defined to be used, as the category for 
 
 Take a look at `ReplicatedStorage.Missions.Server.Examples.MissionsExample`, which shows how your server will interact with the **Missions** feature package.
 
-You mainly need to hook up four things once dragging the **Missions** feature package into your experience:
+You mainly need to hook up four things once dragging the **Missions** feature package into your game:
 
 1. Define missions in your missions config.
 
-2. Add logic to your experience to update task progress or the counters the progress is tied to.
+2. Add logic to your game to update task progress or the counters the progress is tied to.
 
    ``` lua title="README"
    -- Increases progress on a mission Jumping with a Jumps task
@@ -349,7 +349,7 @@ You mainly need to hook up four things once dragging the **Missions** feature pa
 
    ```
 
-3. Set mission completion handlers, and optionally unlock or fail handlers. Use the completion handler to award the rewards from the mission in your experience.
+3. Set mission completion handlers, and optionally unlock or fail handlers. Use the completion handler to award the rewards from the mission in your game.
 
    ``` lua title="README"
    local function completeHandler(player: Player, missionId: Types.MissionId)
@@ -384,4 +384,4 @@ By modifying the package objects, such as colors, font, and transparency, you ca
 If you move any of the objects around hierarchically, the code will not be able to find them, and you'll need to make adjustments in **MissionsUI**.
 </Alert>
 
-In addition, if your experience already has an existing UI that you would like to integrate with the **Missions** feature package, the client `Class.ModuleScript` `MissionsClient` contains all the functions necessary to get the information about a player's missions sent from the server.
+In addition, if your game already has an existing UI that you would like to integrate with the **Missions** feature package, the client `Class.ModuleScript` `MissionsClient` contains all the functions necessary to get the information about a player's missions sent from the server.

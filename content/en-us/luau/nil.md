@@ -26,7 +26,7 @@ dictionaryTable.Tuesday = nil
 print(dictionaryTable.Tuesday) -- nil
 ```
 
-You can use `nil` to clear some properties of objects. For example, you can set the `Parent` of an object to `nil` to effectively remove the object from the experience. To return the object to the experience after you remove it, reassign the `Parent`. The following example demonstrates how to use `nil` to remove a `Class.Part`:
+You can use `nil` to clear some properties of objects. For example, you can set the `Parent` of an object to `nil` to effectively remove the object from the game. To return the object to the game after you remove it, reassign the `Parent`. The following example demonstrates how to use `nil` to remove a `Class.Part`:
 
 ```lua
 local Workspace = game:GetService("Workspace")

@@ -1,9 +1,9 @@
 ---
 title: 3D drag detectors
-description: 3D drag detectors facilitate and encourage interaction with 3D objects in an experience, such as opening doors and drawers, sliding a part around, and much more.
+description: 3D drag detectors facilitate and encourage interaction with 3D objects in a game, such as opening doors and drawers, sliding a part around, and much more.
 ---
 
-The `Class.DragDetector` instance facilitates and encourages interaction with 3D objects in an experience, such as opening doors and drawers, sliding a part around, grabbing and tossing a bowling ball, pulling back and firing a slingshot, and much more. Key features include:
+The `Class.DragDetector` instance facilitates and encourages interaction with 3D objects in a game, such as opening doors and drawers, sliding a part around, grabbing and tossing a bowling ball, pulling back and firing a slingshot, and much more. Key features include:
 
 - Place a `Class.DragDetector` under any `Class.BasePart` or `Class.Model` to [make it draggable](#make-objects-draggable) via all inputs (mouse, touch, gamepad, and VR), all without a single line of code.
 
@@ -131,8 +131,8 @@ The `Class.DragDetector.ResponseStyle|ResponseStyle` property specifies how an o
 <tbody>
   <tr>
     <td>`Enum.DragDetectorResponseStyle.Geometric|Geometric`</td>
-    <td>Both inside the running experience and in Studio edit mode, the position/orientation of an anchored object will be updated to exactly reflect the proposed motion.</td>
-		<td>For an unanchored object, behavior is the same as for an anchored object. However, in a running experience, the object will be anchored at the start of the drag and restored to unanchored upon drag release.</td>
+    <td>Both inside the running game and in Studio edit mode, the position/orientation of an anchored object will be updated to exactly reflect the proposed motion.</td>
+		<td>For an unanchored object, behavior is the same as for an anchored object. However, in a running game, the object will be anchored at the start of the drag and restored to unanchored upon drag release.</td>
   </tr>
   <tr>
     <td>`Enum.DragDetectorResponseStyle.Physical|Physical`</td>

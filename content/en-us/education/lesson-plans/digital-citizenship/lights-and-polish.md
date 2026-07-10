@@ -21,7 +21,7 @@ prev: /education/lesson-plans/digital-citizenship/being-a-digital-citizen
     <td><b>Skills and Concepts</b></td>
     <td>
     <ul>
-    <li>**Post Processing Effect** - A special effect that changes an experience's look and feel.</li>
+    <li>**Post Processing Effect** - A special effect that changes a game's look and feel.</li>
     </ul>
     </td>
    </tr>
@@ -53,7 +53,7 @@ prev: /education/lesson-plans/digital-citizenship/being-a-digital-citizen
     <tr>
       <td>5 min</td>
       <td>Lesson: Post Processing Effects</td>
-      <td>Show how special effects can dramatically change an experience's look. </td>
+      <td>Show how special effects can dramatically change a game's look. </td>
     </tr>
     <tr>
       <td>30 min</td>
@@ -79,7 +79,7 @@ prev: /education/lesson-plans/digital-citizenship/being-a-digital-citizen
 ### Implement feedback
 
 1. Remind students about giving each other feedback using the handout. They will now take time to make a change in their project based off the goal they wrote down in the previous session.
-2. Help students 1 on 1 if they're reluctant to make changes on feedback. Remind them making changes can help their experience.
+2. Help students 1 on 1 if they're reluctant to make changes on feedback. Remind them making changes can help their game.
 
 ### Post processing effects
 

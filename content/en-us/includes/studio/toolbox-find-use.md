@@ -21,7 +21,7 @@ title: include
 
    <img src="../../assets/studio/toolbox/Asset-Inspect-Icon.png" width="400" alt="A preview view of an asset with the inspect icon highlighted." />
 
-4. To add an asset to an experience:
+4. To add an asset to a game:
 
    - If the asset is a [model](../../parts/models.md), [mesh](../../parts/meshes.md), [decal](../../parts/textures-decals.md), [video](../../ui/video-frames.md), or [audio](../../audio/assets.md) asset, click it or drag‑and‑drop it into the 3D viewport. It then inserts into the [Explorer](../../studio/explorer.md) hierarchy, and assets with 3D content display in the viewport.
    - If the asset is a [plugin](../../studio/plugins.md), click it and use the **Install** button to add it to the mezzanine's **Plugins** tab.

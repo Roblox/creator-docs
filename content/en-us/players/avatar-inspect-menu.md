@@ -3,18 +3,18 @@ title: Avatar Inspect Menu
 description: The Avatar Inspect Menu allows users to view other users' avatars, try on items, make purchases.
 ---
 
-The **Avatar Inspect Menu** allows users to view another user's Roblox avatar character, try on items, and even make purchases within an experience. Roblox enables this menu by default and users in your experience can access this menu in three ways:
+The **Avatar Inspect Menu** allows users to view another user's Roblox avatar character, try on items, and even make purchases within a game. Roblox enables this menu by default and users in your game can access this menu in three ways:
 
-- Opening the experience's main menu and clicking the **View** button next to a user in the **Players** tab.
+- Opening the game's main menu and clicking the **View** button next to a user in the **Players** tab.
 - Clicking on a user's name in the player list.
 - Selecting the Inspect option in the [Avatar Context Menu](../players/avatar-context-menu.md), an opt-in feature which provides additional user-to-user social interaction.
 
 You can customize a user's **Avatar Inspect Menu** in the following ways:
 
-- Change the inspect target from the user's Roblox avatar to their [current in-experience appearance](#inspect-currently-equipped-items).
-- Change the inspect target to a [specific User ID](#inspect-specific-users), even if they are not in the experience.
+- Change the inspect target from the user's Roblox avatar to their [current in-game appearance](#inspect-currently-equipped-items).
+- Change the inspect target to a [specific User ID](#inspect-specific-users), even if they are not in the game.
 
-For more specific catalog access, you can also use the [Avatar Editor Service](../players/avatar-editor.md) to access and make changes to a user's platform-wide avatar within an experience.
+For more specific catalog access, you can also use the [Avatar Editor Service](../players/avatar-editor.md) to access and make changes to a user's platform-wide avatar within a game.
 
 ## Inspect currently equipped items
 
@@ -48,7 +48,7 @@ end
 
 ## Inspect specific users
 
-The Avatar Inspect Menu can inspect players who aren't in the current experience. You can use `Class.GuiService:InspectPlayerFromUserId()` to inspect a player from any `Class.Player.UserId`.
+The Avatar Inspect Menu can inspect players who aren't in the current game. You can use `Class.GuiService:InspectPlayerFromUserId()` to inspect a player from any `Class.Player.UserId`.
 
 Use the following code sample to open the Avatar Inspect Menu based on a `Class.Player.UserId|UserId`:
 

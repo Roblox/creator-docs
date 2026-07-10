@@ -6,15 +6,15 @@ description: Learn how to attach a particle emitter to a player-carried tool in 
 
 You've learned the basics of particles, now apply those skills to design a sparkler that can be carried around by people. Just like blasts, the particles can be customized for different effects, like magical stars or raging flames.
 
-In addition to the properties covered in the Build It, Play It challenge, this tutorial will use color gradients which allows particles to change colors over time, like from blue to yellow as seen in the video. The sparklers can be used with the Mansion of Wonder template or any other experience you've created.
+In addition to the properties covered in the Build It, Play It challenge, this tutorial will use color gradients which allows particles to change colors over time, like from blue to yellow as seen in the video. The sparklers can be used with the Mansion of Wonder template or any other game you've created.
 
 <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/final-example.mp4"></video>
 
 ## Find a tool
 
-For this tutorial, sparklers are **tools** with attached particle effects. In Roblox, tools are items players equip; if you've played an experience with a sword or gun, it's likely you've used tools before.
+For this tutorial, sparklers are **tools** with attached particle effects. In Roblox, tools are items players equip; if you've played a game with a sword or gun, it's likely you've used tools before.
 
-To start, add the pre-made sparkler set into your existing experience. You'll then choose one and customize its particle emitter.
+To start, add the pre-made sparkler set into your existing game. You'll then choose one and customize its particle emitter.
 
 1. Start by pressing the **Add to Inventory** button in the following component. This adds the set into your Inventory, which is accessed in the Toolbox.
 
@@ -28,7 +28,7 @@ To start, add the pre-made sparkler set into your existing experience. You'll th
 
    <img src="../../assets/education/general/Toolbox-Inventory.png" width="360" />
 
-1. Make sure the left dropdown is set to **My Models**, then find and click on **Sparkler Set**. This will add the parts into your experience.
+1. Make sure the left dropdown is set to **My Models**, then find and click on **Sparkler Set**. This will add the parts into your game.
 
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/show-sparklers.jpeg" />
 
@@ -131,7 +131,7 @@ After creating a color gradient, use your knowledge from the previous lessons to
 
 ## Finish the sparkler
 
-So players can have the sparkler when the experience starts, you'll need to move it to the StarterPack. This folder holds all items a player receives when they join.
+So players can have the sparkler when the game starts, you'll need to move it to the StarterPack. This folder holds all items a player receives when they join.
 
 1. In the **Explorer** window, find the **tool** of your choice, such as the **Staff Sparkler** or **Torch Sparkler**. Right-click on that tool and select **Cut**. This copies the staff to your clipboard, but also deletes it from the folder.
 
@@ -146,7 +146,7 @@ So players can have the sparkler when the experience starts, you'll need to move
    <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/final-staff.mp4"></video>
 
    <Alert severity="info">
-   Each sparkler has a name that's shown to players in the experience. To rename a sparkler, in the **Explorer** window, right click on the tool and select **Rename**.
+   Each sparkler has a name that's shown to players in the game. To rename a sparkler, in the **Explorer** window, right click on the tool and select **Rename**.
     </Alert>
 
 ## Challenge checkpoint
@@ -157,7 +157,7 @@ You got your animation ready! Celebrate your new skills by getting the **Head Sl
 
 1. **Copy** the following code: `Glimmer`
 
-2. Click the **Enter World** button below to open the **Mansion of Wonder** experience.
+2. Click the **Enter World** button below to open the **Mansion of Wonder** game.
 
    <a href="https://www.roblox.com/games/6901029464/">
    <Button variant="contained">Enter World</Button>

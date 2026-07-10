@@ -1,6 +1,6 @@
 ---
 title: How do I make money?
-description: Creator Rewards, in-experience purchases, subscriptions, UGC, immersive ads, and more.
+description: Creator Rewards, in-game purchases, subscriptions, UGC, immersive ads, and more.
 hideInPageNavigation: true
 fullWidth: true
 ---
@@ -11,7 +11,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Diverse earning opportunities</h4>
-        <Typography variant='body1'>We're excited to provide creators with a wide variety of ways to earn from their experiences, including subscriptions, in-app purchases, engagement rewards, and more. We're always evolving and adding new features to help you earn and succeed.</Typography>
+        <Typography variant='body1'>We're excited to provide creators with a wide variety of ways to earn from their games, including subscriptions, in-app purchases, engagement rewards, and more. We're always evolving and adding new features to help you earn and succeed.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
@@ -88,13 +88,13 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Daily engagement</h4>
-        <Typography variant='body1'>Earn a fixed payout of 5 Robux when a user who has spent at least $9.99 on the platform in the last 60 days (an "Active Spender") plays your game for 10 minutes or more. This reward applies to the first three experiences they play per day.</Typography>
+        <Typography variant='body1'>Earn a fixed payout of 5 Robux when a user who has spent at least $9.99 on the platform in the last 60 days (an "Active Spender") plays your game for 10 minutes or more. This reward applies to the first three games they play per day.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Audience expansion</h4>
-        <Typography variant='body1'>Earn a 35% revenue share on the first $100 in Robux purchases made by a new or returning user who finds your experience through a direct link or search, and plays for at least 10 minutes.<sup>1</sup><br></br><br></br><sup>1</sup><em> Less qualifying purchases they have made in the 60 days after each time (if any) they have previously reactivated. Additional restrictions apply.</em></Typography>
+        <Typography variant='body1'>Earn a 35% revenue share on the first $100 in Robux purchases made by a new or returning user who finds your game through a direct link or search, and plays for at least 10 minutes.<sup>1</sup><br></br><br></br><sup>1</sup><em> Less qualifying purchases they have made in the 60 days after each time (if any) they have previously reactivated. Additional restrictions apply.</em></Typography>
       </CardContent>
     </Card>
   </Grid>
@@ -136,13 +136,13 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Creators receive 30%, sellers 40%</h4>
-        <Typography variant='body1'>For items sold in the Avatar Marketplace, Roblox collects the 40% seller portion + a 30% market fee. If your item is sold from within another experience, the owner of that experience will collect the 40% seller portion instead.</Typography>
+        <Typography variant='body1'>For items sold in the Avatar Marketplace, Roblox collects the 40% seller portion + a 30% market fee. If your item is sold from within another game, the owner of that game will collect the 40% seller portion instead.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
-        <h4>Sell in your own experience</h4>
-        <Typography variant='body1'>If you sell your UGC item within an experience you own, you will earn 30% for being the creator and 40% for being the seller, bringing your return to 70% of Robux spent.</Typography>
+        <h4>Sell in your own game</h4>
+        <Typography variant='body1'>If you sell your UGC item within a game you own, you will earn 30% for being the creator and 40% for being the seller, bringing your return to 70% of Robux spent.</Typography>
       </CardContent>
     </Card>
   </Grid>
@@ -157,19 +157,19 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Advertise</h4>
-        <Typography variant='body1'>Programmatically-served ad content from brands appear directly within your experiences. These native ads blend into the 3D environment, offering a seamless way to monetize your experience.</Typography>
+        <Typography variant='body1'>Programmatically-served ad content from brands appear directly within your games. These native ads blend into the 3D environment, offering a seamless way to monetize your game.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Ad formats</h4>
-        <Typography variant='body1'>Integrate a [variety of formats](../production/promotion/advertise.md), including video ads that can autoplay or be click-to-play, image ads that are static billboards, and portal ads that can teleport users to an advertiser's experience.</Typography>
+        <Typography variant='body1'>Integrate a [variety of formats](../production/promotion/advertise.md), including video ads that can autoplay or be click-to-play, image ads that are static billboards, and portal ads that can teleport users to an advertiser's game.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>How to earn</h4>
-        <Typography variant='body1'>Creators are paid through a revenue share based on engagement. You can earn from video views, ad impressions, and successful teleports that are generated by the ads in your experience.</Typography>
+        <Typography variant='body1'>Creators are paid through a revenue share based on engagement. You can earn from video views, ad impressions, and successful teleports that are generated by the ads in your game.</Typography>
       </CardContent>
     </Card>
   </Grid>
@@ -184,7 +184,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Limited-time activations</h4>
-        <Typography variant='body1'>Limited-time activations bring brands into an experience for a brief time – usually 2–4 weeks – through content like quests and avatar items. For a more authentic integration that players will respond to, be sure to choose brand partners that fit your experienceʼs vibe, aesthetics, and goals.</Typography>
+        <Typography variant='body1'>Limited-time activations bring brands into a game for a brief time – usually 2–4 weeks – through content like quests and avatar items. For a more authentic integration that players will respond to, be sure to choose brand partners that fit your game's vibe, aesthetics, and goals.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
@@ -205,13 +205,13 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Sell physical goods</h4>
-        <Typography variant='body1'>The new <a href="https://corp.roblox.com/newsroom/2025/05/roblox-launches-shopify-integration-amp-licensing-program" target="_blank">Roblox Commerce APIs</a> enable creators and brands to sell physical products directly within their Roblox experiences, creating a virtual mall-like experience. Shopify is the first integrated partner.</Typography>
+        <Typography variant='body1'>The new <a href="https://corp.roblox.com/newsroom/2025/05/roblox-launches-shopify-integration-amp-licensing-program" target="_blank">Roblox Commerce APIs</a> enable creators and brands to sell physical products directly within their Roblox games, creating a virtual mall-like game. Shopify is the first integrated partner.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Bridge digital &amp; physical</h4>
-        <Typography variant='body1'>The Approved Merchandiser Program (AMP) links physical product purchases with digital items on Roblox. Physical products with the AMP badge will include a code unlocking a unique digital item in the experience.</Typography>
+        <Typography variant='body1'>The Approved Merchandiser Program (AMP) links physical product purchases with digital items on Roblox. Physical products with the AMP badge will include a code unlocking a unique digital item in the game.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>
@@ -259,7 +259,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Unlock international reach</h4>
-        <Typography variant='body1'>Roblox's [Regional Pricing](https://corp.roblox.com/newsroom/2025/04/roblox-launches-regional-pricing-for-in-experience-items) automatically determines and sets optimal local prices for your in-experience items, making your content more accessible and appealing to players around the world.</Typography>
+        <Typography variant='body1'>Roblox's [Regional Pricing](https://corp.roblox.com/newsroom/2025/04/roblox-launches-regional-pricing-for-in-experience-items) automatically determines and sets optimal local prices for your in-game items, making your content more accessible and appealing to players around the world.</Typography>
       </CardContent>
     </Card>
     <Card style={{ marginBottom: 24 }}>

@@ -21,7 +21,7 @@ end
 
 ## Create a powerup
 
-Powerups are in-experience items that give players special abilities like flying, invisibility, or speed. This powerup will boost the player's walking speed every time the powerup is touched. Continuously applying boosts can make the player go way too fast, so `and` will be used to control the upper walking speed limit.
+Powerups are in-game items that give players special abilities like flying, invisibility, or speed. This powerup will boost the player's walking speed every time the powerup is touched. Continuously applying boosts can make the player go way too fast, so `and` will be used to control the upper walking speed limit.
 
 ### Set up the powerup
 

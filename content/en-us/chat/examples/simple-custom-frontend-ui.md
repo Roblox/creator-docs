@@ -81,4 +81,4 @@ This example shows how to use the `Class.TextChatService` class to design your o
 		<Alert severity="warning">
 		When using the `Class.TextChatService.MessageReceived` event, it's important to check if the message already exists in the chat window. This event is called once when sending and once when the message is received from the server.
 		</Alert>
-4. Test your experience by sending messages in the chat input bar. You should see the messages appear in the chat window. You can then expand on this example by adding features such as focusing the `Class.TextBox` when a key is pressed or adding [chat tags](./group-chat-tags.md).
+4. Test your game by sending messages in the chat input bar. You should see the messages appear in the chat window. You can then expand on this example by adding features such as focusing the `Class.TextBox` when a key is pressed or adding [chat tags](./group-chat-tags.md).

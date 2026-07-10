@@ -1,6 +1,6 @@
 ---
 title: Sell items
-description: Part of the Adventure Game Series in Roblox. Code how to sell items in a Roblox experience.
+description: Part of the Adventure Game Series in Roblox. Code how to sell items in a Roblox game.
 next: /education/adventure-game-series/buying-upgrades
 prev: /education/adventure-game-series/collect-items
 ---
@@ -17,7 +17,7 @@ Players will sell their items by stepping onto a platform that gives them gold f
 
 The platform can be any part and will include a script that handles selling.
 
-1. Create a new part named SellPlatform. Customize it to fit the theme of your experience.
+1. Create a new part named SellPlatform. Customize it to fit the theme of your game.
 
    <img src="../../assets/education/adventure-game-series/adventure-sellPlatform.jpg" />
 
@@ -125,7 +125,7 @@ To use the platform, the script needs a function to check if any players touch i
 
 ## Sell items
 
-In this experience, a player will get 100 Gold for each item. After getting money, their items will be set back to 0, letting players explore the world for more items.
+In this game, a player will get 100 Gold for each item. After getting money, their items will be set back to 0, letting players explore the world for more items.
 
 ### Code a new sell function
 

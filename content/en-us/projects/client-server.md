@@ -5,8 +5,8 @@ description: An overview of the client-server model in Roblox.
 
 ## Server
 
-Roblox experiences are multiplayer by default and run in a client-server model.
-The Roblox **server** is the ultimate authority for maintaining the experience's
+Roblox games are multiplayer by default and run in a client-server model.
+The Roblox **server** is the ultimate authority for maintaining the game's
 state, and is responsible for keeping all connected clients in sync with the
 server.
 
@@ -20,13 +20,13 @@ server.
 
 ## Client
 
-When an experience runs, Roblox copies a version of the "edit" data model that
+When a game runs, Roblox copies a version of the "edit" data model that
 you built and published from Studio and runs it on Roblox servers as the
 "runtime" data model.
 
 Connected clients also receive a copy of the runtime data model and any
 initialization of the player occurs, such as initializing a player's backpack
-(inventory) or local user interface. When an experience has
+(inventory) or local user interface. When a game has
 `Class.Workspace.StreamingEnabled` set to true, the server initially only sends
 a subset of content under `Class.Workspace` that is closest to the client. The
 client then renders the 3D world and begins running any
@@ -66,7 +66,7 @@ style={{fontSize:"110%", width:"100%"}}/><br /><br />
 <Chip label="Server &rarr; Client" size="large" color="success" variant="outlined"
 style={{fontSize:"110%", width:"100%"}}/><br /><br />
 <img src="../assets/scripting/client-server/Remote-Flow-Server-Client.png" width="100%" alt="A diagram of the server communicating with one client." />
-<figcaption>Communication from the server to one specific client. For example, a player joins the experience and the server populates that player's inventory with a set of items.</figcaption>
+<figcaption>Communication from the server to one specific client. For example, a player joins the game and the server populates that player's inventory with a set of items.</figcaption>
 </figure>
 <figure>
 <Chip label="Server &rarr; All Clients" size="large" color="secondary" variant="outlined"
@@ -124,5 +124,5 @@ profanity or are too long.
 </Tabs>
 
 <Alert severity="success">
-Most players on Roblox experience between 100–300 milliseconds of network latency. Roblox Studio playtesting runs with a default of no latency, but you can change **Network&nbsp;Simulation** settings in the **Network** section of [Studio Settings](../studio/setup.md#customization) (<kbd>Alt</kbd><kbd>S</kbd> on Windows; <kbd>⌥</kbd><kbd>S</kbd> on Mac). Use a minimum delay of 50–150 milliseconds in both the inbound and outbound directions to better simulate how network latency will affect your experience.
+Most players on Roblox game between 100–300 milliseconds of network latency. Roblox Studio playtesting runs with a default of no latency, but you can change **Network&nbsp;Simulation** settings in the **Network** section of [Studio Settings](../studio/setup.md#customization) (<kbd>Alt</kbd><kbd>S</kbd> on Windows; <kbd>⌥</kbd><kbd>S</kbd> on Mac). Use a minimum delay of 50–150 milliseconds in both the inbound and outbound directions to better simulate how network latency will affect your game.
 </Alert>

@@ -4,29 +4,38 @@
 
 name: SalesTypeFilter
 type: enum
-summary: ''
-description: ''
+summary: |
+  Filters catalog search results by sales type.
+description: |
+  The `Enum.SalesTypeFilter` enum is used with
+  `Datatype.CatalogSearchParams.SalesTypeFilter` to filter catalog search
+  results by their sales type when calling
+  `Class.AvatarEditorService:SearchCatalogAsync()`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: All
-    summary: ''
+    summary: |
+      Returns all items regardless of sales type.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Collectibles
-    summary: ''
+    summary: |
+      Returns only collectible items (Limited and Limited Unique).
     value: 2
     tags: []
     deprecation_message: ''
   - name: Premium
-    summary: ''
+    summary: |
+      Returns only items with Premium pricing.
     value: 3
     tags: []
     deprecation_message: ''
   - name: TimedOptions
-    summary: ''
+    summary: |
+      Returns only items that have timed options available.
     value: 4
     tags: []
     deprecation_message: ''

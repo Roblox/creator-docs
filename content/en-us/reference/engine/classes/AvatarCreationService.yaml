@@ -902,10 +902,7 @@ methods:
         type: AccessoryType
         default:
         summary: |
-          `Enum.AccessoryType` the instance is expected to be. Expects
-          `Enum.AccessoryType.Eyebrow|Eyebrow`,
-          `Enum.AccessoryType.Eyelash|Eyelash`, or
-          `Enum.AccessoryType.Hair|Hair`.
+          The `Enum.AccessoryType` the instance is expected to be.
     returns:
       - type: Tuple
         summary: |
@@ -978,10 +975,10 @@ methods:
       instances in the `Class.HumanoidDescription` will be validated.
 
       The `Class.HumanoidDescription` is expected to include instances set on
-      `Class.BodyPartDescription` children for each of the 6 required
+      `Class.BodyPartDescription` children for each of the six required
       `Enum.BodyPart` values. Optionally, it can include instances set on
-      `Class.AccessoryDescription` children for `Eyebrow`, `Eyelash`, and `Hair`
-      `Enum.AccessoryType|AccessoryTypes`.
+      `Class.AccessoryDescription` children for any supported
+      `Enum.AccessoryType`.
     code_samples: []
     parameters:
       - name: player

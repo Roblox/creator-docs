@@ -73,7 +73,7 @@ We found the following guidelines produced the best outcomes for skinning:
 
 ## Import the mesh to Studio
 
-Importing your custom characters into Studio is one of the more exciting parts of the process, because you get to see your creations in the experience you're building!
+Importing your custom characters into Studio is one of the more exciting parts of the process, because you get to see your creations in the game you're building!
 
 To import the mesh into Studio:
 

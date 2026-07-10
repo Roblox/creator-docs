@@ -3,7 +3,7 @@ title: Engine instances
 description: Explains how to use Open Cloud APIs to access the Roblox Engine Instances.
 ---
 
-The Engine Open Cloud APIs let you manage `Class.Instance` objects in your Roblox experiences from the web.
+The Engine Open Cloud APIs let you manage `Class.Instance` objects in your Roblox games from the web.
 
 ## Beta restrictions
 
@@ -19,11 +19,11 @@ These APIs are currently in beta and have the following restrictions:
 - You can only use API key authentication. Create an
   [API key](../auth/api-keys.md) with **universe-place-instances** added as an API system.
 
-  You must specify the experiences you want the key to have access to as well as the desired read and write permission scopes.
+  You must specify the games you want the key to have access to as well as the desired read and write permission scopes.
 
   ![The Creator Hub API key screen](../../assets/open-cloud/instance-api.png)
 
-- You must have a [collaborative](../../projects/collaboration.md) session enabled for the experience that you want to access.
+- You must have a [collaborative](../../projects/collaboration.md) session enabled for the game that you want to access.
 
 - Request bodies, such as to [Update Instance](/cloud/reference/Instance#Cloud_UpdateInstance), are limited to 200 KB.
 
@@ -48,9 +48,9 @@ import requests
 
 # Generate at https://create.roblox.com/dashboard/credentials
 apiKey = "<API_KEY>"
-# Find at https://create.roblox.com/dashboard/creations in the overflow menu of an experience tile
+# Find at https://create.roblox.com/dashboard/creations in the overflow menu of a game tile
 universeId = "<UNIVERSE_ID>"
-# Find Start Place ID at https://create.roblox.com/dashboard/creations in the overflow menu of an experience tile
+# Find Start Place ID at https://create.roblox.com/dashboard/creations in the overflow menu of a game tile
 placeId = "<PLACE_ID>"
 # The default ID for the root of any place's data model
 instanceId = "root"
@@ -193,9 +193,9 @@ import requests
 
 # Generate at https://create.roblox.com/dashboard/credentials
 apiKey = "<API_KEY>"
-# Find at https://create.roblox.com/dashboard/creations in the overflow menu of an experience tile
+# Find at https://create.roblox.com/dashboard/creations in the overflow menu of a game tile
 universeId = "<UNIVERSE_ID>"
-# Find Start Place ID at https://create.roblox.com/dashboard/creations in the overflow menu of an experience tile
+# Find Start Place ID at https://create.roblox.com/dashboard/creations in the overflow menu of a game tile
 placeId = "<PLACE_ID>"
 # The default ID for the root of any place's data model
 instanceId = "<INSTANCE_ID>"
@@ -246,9 +246,9 @@ import requests
 
 # Generate at https://create.roblox.com/dashboard/credentials
 apiKey = "<API_KEY>"
-# Find at https://create.roblox.com/dashboard/creations in the overflow menu of an experience tile
+# Find at https://create.roblox.com/dashboard/creations in the overflow menu of a game tile
 universeId = "<UNIVERSE_ID>"
-# Find Start Place ID at https://create.roblox.com/dashboard/creations in the overflow menu of an experience tile
+# Find Start Place ID at https://create.roblox.com/dashboard/creations in the overflow menu of a game tile
 placeId = "<PLACE_ID>"
 instanceId = "<INSTANCE_ID>"
 instanceType = ""
@@ -368,16 +368,16 @@ curl --include --location --request GET "https://apis.roblox.com/cloud/v2/univer
 
 ## Potion Shop demo
 
-The Potion Shop Google Sheets demo shows you to update an experience's script
+The Potion Shop Google Sheets demo shows you to update a game's script
 from the web. The demo consists of the following:
 
 - An uncopylocked place with a mock UI that displays various potions and their
   prices.
 - A `.ods` file that you import into Google Sheets. This spreadsheet lets you
-  specify and update values for properties within the experience.
+  specify and update values for properties within the game.
 - Code for a Google Apps Script that reads data from the Google Sheet and
   updates the **ReplicatedStorage > ItemList** script in the Potion Shop
-  experience.
+  game.
 
 ### Set up the demo
 
@@ -386,8 +386,8 @@ from the web. The demo consists of the following:
    Studio opens with a copy of the place.
 
 1. Click **File** &rarr; **Save to Roblox** and fill out the necessary information to
-   save the Potion Shop Demo as the default place for your experience. Test the
-   experience. You should see the UI for the Potion Shop Demo. Make a note of
+   save the Potion Shop Demo as the default place for your game. Test the
+   game. You should see the UI for the Potion Shop Demo. Make a note of
    the name, cost, and colors of the potions. You'll change them later using
    Open Cloud!
 
@@ -414,7 +414,7 @@ from the web. The demo consists of the following:
 1.  Fill out the form with the following information.
 
     - **Name**: PotionShop
-    - **API System**: Add the **universe-place-instances** API system. Add your Potion Shop experience to the system. For **Experience Operations**, add read and write access.
+    - **API System**: Add the **universe-place-instances** API system. Add your Potion Shop game to the system. For **Experience Operations**, add read and write access.
     - **Accepted IP Addresses**: Add 0.0.0.0/0 as an IP Address
     - **Expiration**: No Expiration
     - Click **Save & Generate Key** and then **Copy Key to Clipboard**.
@@ -424,8 +424,7 @@ from the web. The demo consists of the following:
 
 ### Obtain the universe and place ID
 
-1. Go to the [Creator Hub Creations](https://create.roblox.com/dashboard/creations) page, hover over
-   the Potion Shop's experience tile, and click the overflow menu.
+1. Go to the [Creator Hub Creations](https://create.roblox.com/dashboard/creations) page, hover over the Potion Shop's game tile, and click the overflow menu.
 1. Select **Copy Universe ID** and paste it into the **Universe ID** cell
    (E2) on the Intro tab of your Google Sheet.
 1. Select **Copy Start Place ID** and paste it into the **Place ID** cell

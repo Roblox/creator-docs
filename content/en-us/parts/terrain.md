@@ -136,7 +136,7 @@ To customize the color and motion of water:
    <tbody>
      <tr>
        <td>`Class.Terrain.WaterColor|WaterColor`</td>
-       <td>Adjusts the overall hue of all terrain water in the experience.</td>
+       <td>Adjusts the overall hue of all terrain water in the game.</td>
      </tr>
      <tr>
        <td>`Class.Terrain.WaterReflectance|WaterReflectance`</td>
@@ -168,7 +168,7 @@ While most materials are static, you can add animated blades of grass to the `En
 <video src="../assets/lighting-and-effects/aero-fluid-dynamics/Global-Wind-Showcase.mp4" controls width="800" alt="Video of wind blowing clouds and grass across rolling hills in the 3D world"></video>
 
 <Alert severity="info">
-Note that the speed of animated grass — but not its vector direction&nbsp;— will be reduced if the player has toggled on the **Reduce&nbsp;Motion** [accessibility](../production/publishing/accessibility.md#reduced-motion) setting from the Roblox or in‑experience **Settings** menu.
+Note that the speed of animated grass — but not its vector direction&nbsp;— will be reduced if the player has toggled on the **Reduce&nbsp;Motion** [accessibility](../production/publishing/accessibility.md#reduced-motion) setting from the Roblox or in-game **Settings** menu.
 </Alert>
 
 To add animated grass to the `Enum.Material.Grass|Grass` material:
@@ -191,7 +191,7 @@ To add animated grass to the `Enum.Material.Grass|Grass` material:
 
 ### Custom terrain colors
 
-Each terrain material is assigned a default color, but you can customize any material's color to better fit your experience.
+Each terrain material is assigned a default color, but you can customize any material's color to better fit your game.
 
 <Tabs>
   <TabItem label="Default">

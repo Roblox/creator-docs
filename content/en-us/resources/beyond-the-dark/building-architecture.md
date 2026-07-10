@@ -55,7 +55,7 @@ Here are some tips that helped us create our modular design:
 
 - **Keep pieces simple** — Don't try to build out every piece that you think you'll ever need. The idea is to have a few very versatile pieces and not a lot of one-offs. The more pieces you have, the more time it takes to create each piece, and the more it affects your overall memory and performance budget. You can always add another piece to your kit if it's absolutely needed.
 
-- **Use packages** — Convert every modular piece to a package and also put materials in packages before you start populating them in your experience. This lets you easily push updates to all instances. We'll dive into packages a bit later on.
+- **Use packages** — Convert every modular piece to a package and also put materials in packages before you start populating them in your game. This lets you easily push updates to all instances. We'll dive into packages a bit later on.
 
 The following screenshots show you various ways we used modular design to construct portions of the station.
 
@@ -167,7 +167,7 @@ For more information on Physically Based Rendering (PBR), see Adobe's Substance 
 
 ## Increase efficiency with packages
 
-Packages let you create object instances throughout your Roblox experiences, so that updates you make to the package are published to all instances of that package. We used packages for almost every object we put into the station, so we didn't have to hunt down each placement if we needed to make tweaks. For example, we used over 1,000 wall panel instances of a package and were able to publish updates to them instantly by modifying the package.
+Packages let you create object instances throughout your Roblox games, so that updates you make to the package are published to all instances of that package. We used packages for almost every object we put into the station, so we didn't have to hunt down each placement if we needed to make tweaks. For example, we used over 1,000 wall panel instances of a package and were able to publish updates to them instantly by modifying the package.
 
 Follow these tips when using packages:
 

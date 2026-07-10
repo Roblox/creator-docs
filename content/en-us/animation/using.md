@@ -3,7 +3,7 @@ title: Use animations
 description: Explains the process of playing animations through scripts, and replacing default animations.
 ---
 
-Once you have [created an animation](../animation/editor.md), you need to use scripts to include them in your experience. You can either [play animations manually](#play-animations-from-scripts) from scripts or [replace default animations](#replace-default-animations) for player characters.
+Once you have [created an animation](../animation/editor.md), you need to use scripts to include them in your game. You can either [play animations manually](#play-animations-from-scripts) from scripts or [replace default animations](#replace-default-animations) for player characters.
 
 ## Play animations from scripts
 

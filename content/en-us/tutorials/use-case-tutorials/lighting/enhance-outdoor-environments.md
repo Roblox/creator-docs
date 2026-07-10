@@ -3,7 +3,7 @@ title: Enhance outdoor environments with realistic lighting
 description: Explains how to leverage realistic lighting to enhance outdoor environments.
 ---
 
-`Enum.LightingStyle|Realistic` lighting is the most advanced and powerful `Class.Lighting.LightingStyle|LightingStyle` you can use for rendering the 3D environment within your experiences. It offers pixel perfect light emission, detailed shadows, and specular highlights that mimic real-world lighting for both indoor and outdoor spaces.
+`Enum.LightingStyle|Realistic` lighting is the most advanced and powerful `Class.Lighting.LightingStyle|LightingStyle` you can use for rendering the 3D environment within your games. It offers pixel perfect light emission, detailed shadows, and specular highlights that mimic real-world lighting for both indoor and outdoor spaces.
 
 Using the [Lighting Outdoors - Start](https://www.roblox.com/games/17835285085/Lighting-Outdoors-Start) `.rbxl` file as a starting place and [Lighting Outdoors - Complete](https://www.roblox.com/games/17835194683/Lighting-Outdoors-Complete) as a reference, this tutorial shows you how to utilize realistic lighting with strategic global and local light source configurations to produce realistic, immersive outdoor lighting behavior for an evening campfire scene, including guidance on:
 
@@ -27,11 +27,11 @@ If at any point you become stuck in the process, you can use **Lighting Outdoors
 
 ## Configure global lighting
 
-Global lighting is the luminescence from either the sun or moon in an experience. By adjusting a couple of key default properties in the `Class.Lighting` service, you can dramatically change how that light appears to players, as well as how it interacts with any other object you place in the experience.
+Global lighting is the luminescence from either the sun or moon in a game. By adjusting a couple of key default properties in the `Class.Lighting` service, you can dramatically change how that light appears to players, as well as how it interacts with any other object you place in the game.
 
 ### Enable realistic lighting
 
-The `Class.Lighting.LightingStyle|LightingStyle` property determines the behavior of both global and local lighting in your experience. Studio begins every experience with `Enum.LightingStyle|Soft` lighting which renders a flatter look with softer lights and shadows. However, to enhance the environment and equip your local light sources to also produce precise shadows and illumination, such as the light from the campfire, you must enable `Enum.LightingStyle|Realistic` lighting.
+The `Class.Lighting.LightingStyle|LightingStyle` property determines the behavior of both global and local lighting in your game. Studio begins every game with `Enum.LightingStyle|Soft` lighting which renders a flatter look with softer lights and shadows. However, to enhance the environment and equip your local light sources to also produce precise shadows and illumination, such as the light from the campfire, you must enable `Enum.LightingStyle|Realistic` lighting.
 
 To demonstrate this concept, see the following two images of the same campfire with different lighting styles. The local lighting from the campfire with `Enum.LightingStyle|Soft` lighting doesn't produce shadows in the same way that the global lighting from the sun does, making this area of the environment unevenly lit with unrealistic shadows. By contrast, the local lighting from the campfire with `Enum.LightingStyle|Realistic` lighting interacts with the kindling, rocks, and brush around the environment, producing crisp and realistic shadows for evening time.
 
@@ -55,7 +55,7 @@ To enable realistic lighting:
 
 By default, all materials use physically-based rendering (PBR) textures that allow you to display realistic surfaces in various lighting scenarios by using multiple image files on a single object. This means that when you use Studio's built-in materials, the metalness and roughness of a particular surface is already defined for you, and the objects with those materials naturally react more accurately to the lighting in your environment with realistic reflections. You can enhance this effect by setting the `Class.Lighting.EnvironmentDiffuseScale` and `Class.Lighting.EnvironmentSpecularScale` properties to `1` to truly take advantage of metal reflections from `Enum.LightingStyle.Realistic` lighting.
 
-This step is important because it ensures that any PBR textures in your experience, including those from `Class.MaterialVariant|MaterialVariants` or `Class.SurfaceAppearance` objects, look their best and reflect their surroundings better. For example, examine the following two images of the same pan and utensils near the campfire with different `Class.Lighting.EnvironmentDiffuseScale` and `Class.Lighting.EnvironmentSpecularScale` property values. When you adjust these values, the metal becomes more apparent and reflects the lighting from both the global and local light sources significantly more than before.
+This step is important because it ensures that any PBR textures in your game, including those from `Class.MaterialVariant|MaterialVariants` or `Class.SurfaceAppearance` objects, look their best and reflect their surroundings better. For example, examine the following two images of the same pan and utensils near the campfire with different `Class.Lighting.EnvironmentDiffuseScale` and `Class.Lighting.EnvironmentSpecularScale` property values. When you adjust these values, the metal becomes more apparent and reflects the lighting from both the global and local light sources significantly more than before.
 
 <GridContainer numColumns="2">
   <figure>
@@ -71,11 +71,11 @@ This step is important because it ensures that any PBR textures in your experien
 To elevate metal reflections:
 
 1. In the **Explorer** window, select **Lighting**.
-1. In the **Properties** window, set **EnvironmentalDiffuseScale** and **EnvironmentSpecularScale** to `1`. The metal in the experience becomes more reflective.
+1. In the **Properties** window, set **EnvironmentalDiffuseScale** and **EnvironmentSpecularScale** to `1`. The metal in the game becomes more reflective.
 
 ### Change the time of day
 
-Now that your experience is using the `Enum.LightingStyle.Realistic` lighting style and materials are reacting realistically to the light sources in your experience, it's time to move the sun to a different position according to where it would be in the real world for the time of day. The sun's default position is high in the sky, emulating around midday in the real world, so it's best to move it nearer to the skyline, right above the mountains. This step also allows the light to move down the path onto the campfire and achieve a nice golden sun.
+Now that your game is using the `Enum.LightingStyle.Realistic` lighting style and materials are reacting realistically to the light sources in your game, it's time to move the sun to a different position according to where it would be in the real world for the time of day. The sun's default position is high in the sky, emulating around midday in the real world, so it's best to move it nearer to the skyline, right above the mountains. This step also allows the light to move down the path onto the campfire and achieve a nice golden sun.
 
 <GridContainer numColumns="2">
   <figure>
@@ -100,7 +100,7 @@ There are two `Class.Lighting` properties that control the color of ambient ligh
 - `Class.Lighting.OutdoorAmbient` controls ambient lighting where the sky is visible.
 - `Class.Lighting.Ambient` controls ambient lighting within spaces where anything blocks the sky, such as indoor spaces or under tree cover.
 
-By default, these properties are set to produce gray ambient lighting, but to compliment the evening sky, you must adjust these values to add a realistic hue and brightness in darker spaces of the experience for evening time. For example, an evening sky has a lot more purple than gray, so picking a purple hue for ambient lighting creates a realistic environment.
+By default, these properties are set to produce gray ambient lighting, but to compliment the evening sky, you must adjust these values to add a realistic hue and brightness in darker spaces of the game for evening time. For example, an evening sky has a lot more purple than gray, so picking a purple hue for ambient lighting creates a realistic environment.
 
 <GridContainer numColumns="2">
   <figure>
@@ -120,7 +120,7 @@ To adjust the color of ambient lighting:
 
 ### Choose a skybox
 
-A skybox is a cube made up of six individual images that create an experience's sky, including what's above and below the horizon. Skyboxes can have a major impact on the look and feel of what's in your environment, so it's important to carefully consider how you can choose a skybox that enhances your experience's visual quality. For example:
+A skybox is a cube made up of six individual images that create a game's sky, including what's above and below the horizon. Skyboxes can have a major impact on the look and feel of what's in your environment, so it's important to carefully consider how you can choose a skybox that enhances your game's visual quality. For example:
 
 - A skybox's lower hemisphere should be similar to the color of your general terrain. This ensures the lower hemisphere closely relates to the ground surface, and that the colors that reflect off of objects will roughly match the skybox.
 - A skybox's lower hemisphere should be darker than the upper hemisphere because a darker lower hemisphere replicates the natural occlusion of light from below the ground, making your lighting more immersive.
@@ -139,11 +139,11 @@ To illustrate these concepts, examine the following two images to see how the sa
 
 ### Atmospheric effects
 
-The `Class.Lighting` service has a child `Class.Atmosphere` object with properties that allow you to simulate realistic environments by scattering sunlight in unique ways. These properties can be very useful in creating a thickness in the experience's air, giving the environment a tangible sense of depth. The `Class.Atmosphere` object pulls most of its colors from the skybox directly, which is why the previous decisions about your skybox were so important.
+The `Class.Lighting` service has a child `Class.Atmosphere` object with properties that allow you to simulate realistic environments by scattering sunlight in unique ways. These properties can be very useful in creating a thickness in the game's air, giving the environment a tangible sense of depth. The `Class.Atmosphere` object pulls most of its colors from the skybox directly, which is why the previous decisions about your skybox were so important.
 
 #### Increase air particle density
 
-The `Class.Atmosphere.Density` property controls how many particles exist in the air of your experience. When you increase this property, the additional amount of particles obstruct the player's view of objects in the background. For example, when `Class.Atmosphere.Density` is `0`, the background trees, sun, and skybox are clearly visible, but when you increase this property to `0.391`, the particles start to scatter the light and conceal the trees.
+The `Class.Atmosphere.Density` property controls how many particles exist in the air of your game. When you increase this property, the additional amount of particles obstruct the player's view of objects in the background. For example, when `Class.Atmosphere.Density` is `0`, the background trees, sun, and skybox are clearly visible, but when you increase this property to `0.391`, the particles start to scatter the light and conceal the trees.
 
 <GridContainer numColumns="2">
   <figure>
@@ -176,7 +176,7 @@ To add haze to the atmosphere:
 
 #### Adjust the color of the atmosphere
 
-The `Class.Atmosphere.Color` property sets the hue of the atmosphere for subtle environmental moods and themes, and it can really enhance the haze within your experience. You can set this to any color you want to suit your experience, but it's recommended to set it to a color value that is close to the average of the objects in the environment.
+The `Class.Atmosphere.Color` property sets the hue of the atmosphere for subtle environmental moods and themes, and it can really enhance the haze within your game. You can set this to any color you want to suit your game, but it's recommended to set it to a color value that is close to the average of the objects in the environment.
 
 To adjust the color of the atmosphere:
 
@@ -187,7 +187,7 @@ To adjust the color of the atmosphere:
 
 ## Configure local lighting
 
-Local lighting is the luminescence from local [light sources](../../../effects/light-sources.md) in your experience, such as `Class.SpotLight`, `Class.SurfaceLight`, and `Class.PointLight` objects. The key local light source you can create for this experience is the campfire's glow, and by adjusting a couple of its default properties, you can significantly alter how this local lighting interacts with the overall environment and complement your global lighting configuration.
+Local lighting is the luminescence from local [light sources](../../../effects/light-sources.md) in your game, such as `Class.SpotLight`, `Class.SurfaceLight`, and `Class.PointLight` objects. The key local light source you can create for this game is the campfire's glow, and by adjusting a couple of its default properties, you can significantly alter how this local lighting interacts with the overall environment and complement your global lighting configuration.
 
 ### Add a PointLight
 
@@ -224,7 +224,7 @@ To increase the range of the `Class.PointLight`:
 
 ### Enable shadows
 
-While the lighting's range is realistic to its size, it's unrealistic that the surrounding trees and rocks don't cast shadows from the campfire's light. Sometimes this is useful if you need to add in a couple of point lights to brighten dark spaces within your experience, but when you're aiming to emulate the real world, you can enable local lighting's ability to cast shadows. It's important to note that additional shadows can impact your experience's performance on low-end devices, so only enable shadows when they significantly add to the scene.
+While the lighting's range is realistic to its size, it's unrealistic that the surrounding trees and rocks don't cast shadows from the campfire's light. Sometimes this is useful if you need to add in a couple of point lights to brighten dark spaces within your game, but when you're aiming to emulate the real world, you can enable local lighting's ability to cast shadows. It's important to note that additional shadows can impact your game's performance on low-end devices, so only enable shadows when they significantly add to the scene.
 
 To enable shadows from the campfire's local lighting:
 
@@ -246,4 +246,4 @@ To enable shadows from the campfire's local lighting:
 
    <img width="60%" img src="../../../assets/tutorials/enhancing-outdoor-environments/Adjusting-Brightness-Color.png" />
 
-You now have a campfire scene that is complete and welcoming for players to relax. Using the skills in this tutorial, you can combine the realistic lighting style with the PBR materials available to create rich and immersive experiences. It only takes setting up the correct properties and making decisions about these features that suit your environment.
+You now have a campfire scene that is complete and welcoming for players to relax. Using the skills in this tutorial, you can combine the realistic lighting style with the PBR materials available to create rich and immersive games. It only takes setting up the correct properties and making decisions about these features that suit your environment.

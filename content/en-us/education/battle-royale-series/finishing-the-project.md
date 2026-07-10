@@ -1,6 +1,6 @@
 ---
 title: Finish the project
-description: Create a battle royale experience in Roblox Studio. Wrap up the project with map improvements.
+description: Create a battle royale game in Roblox Studio. Wrap up the project with map improvements.
 prev: /education/battle-royale-series/ending-matches
 ---
 
@@ -14,7 +14,7 @@ But, your game is almost ready for others to play. Attract players to your game 
 
 ## Optional improvements
 
-Below are a few ways of improving your experience.
+Below are a few ways of improving your game.
 
 <img src="../../assets/education/battle-royale-series/roundBased_hero_lesson8.jpg" />
 
@@ -68,7 +68,7 @@ Popular games in Roblox often add mini-games to encourage players to have fun an
 
 ## Optional challenges
 
-Many Roblox experiences continue to get updates even after they release. Below are some optional challenges that can add new features for your project.
+Many Roblox games continue to get updates even after they release. Below are some optional challenges that can add new features for your project.
 
 ### Traps
 

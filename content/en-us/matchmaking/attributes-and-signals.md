@@ -197,7 +197,7 @@ Custom attributes give custom signals access to player and server data. For more
 <tbody>
   <tr>
     <td>**Player**</td>
-    <td>Persistent <br /><br /> Custom player data that persists in data stores, like a player's level or score inside the experience <br /><br /> Managed using the `Class.DataStore|DataStore` APIs</td>
+    <td>Persistent <br /><br /> Custom player data that persists in data stores, like a player's level or score inside the game <br /><br /> Managed using the `Class.DataStore|DataStore` APIs</td>
   </tr>
   <tr>
     <td>**Server**</td>

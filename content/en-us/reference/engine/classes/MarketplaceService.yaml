@@ -510,9 +510,37 @@ methods:
         </tr>
         </tbody>
       </table>
+
+      #### Timed Options
+
+      <table size="small">
+        <thead>
+      	  <tr>
+      	    <th>Key</th>
+      	    <th>Type</th>
+      	    <th>Description</th>
+      	  </tr>
+      	</thead>
+        <tbody>
+        <tr>
+      	  <td><code>TimedOptions</code></td>
+      	  <td>array</td>
+      	  <td>Optional. An array of available timed options with durations and prices. Only present for assets that support timed ownership. Do not hardcode duration values; always retrieve them from this API as they may change. Each entry contains:</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+      	  <td><code>Duration</code>: number — The duration in seconds (e.g. 259200 for 3 days, 604800 for 7 days).</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+      	  <td><code>Price</code>: number — The price in Robux for this duration.</td>
+        </tr>
+        </tbody>
+      </table>
     code_samples:
       - MarketplaceService-GetProductInfo1
       - MarketplaceService-GetProductInfo2
+      - MarketplaceService-GetProductInfo-TimedOptions
     parameters:
       - name: assetId
         type: int64
@@ -1153,9 +1181,53 @@ methods:
       prompted.
 
       A maximum of 20 items can be added to a single bulk purchase prompt.
+
+      #### PurchaseOptions
+
+      Each line item can optionally include a `PurchaseOptions` array to control
+      which purchase option appears in the prompt. If omitted, the user is
+      prompted for a permanent purchase only (default behavior).
+
+      `PurchaseOptions` currently supports only one entry. If more than one
+      option is provided, the API throws an error.
+
+      Each entry in `PurchaseOptions` contains:
+
+      <table size="small">
+        <thead>
+          <tr>
+            <th>Key</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><code>Type</code></td>
+          <td>Enum</td>
+          <td><code>Enum.PurchaseOption.TimedOption</code> for a timed option, or <code>Enum.PurchaseOption.Permanent</code> for standard purchase.</td>
+        </tr>
+        <tr>
+          <td><code>Value</code></td>
+          <td>number</td>
+          <td>Required for <code>TimedOption</code>. The duration in seconds.</td>
+        </tr>
+        </tbody>
+      </table>
+
+      **Do not hardcode duration values.** Available durations and prices are
+      determined by the backend and may change at any time. Always retrieve them
+      from one of the following APIs and pass the values through to
+      `PurchaseOptions`:
+
+      - `Class.MarketplaceService:GetProductInfoAsync()`
+      - `Class.AvatarEditorService:GetItemDetailsAsync()`
+      - `Class.AvatarEditorService:GetBatchItemDetailsAsync()`
+      - `Class.AvatarEditorService:SearchCatalogAsync()`
     code_samples:
       - Prompt-Bulk-Purchase-Local
       - Prompt-Bulk-Purchase-Server
+      - MarketplaceService-PromptBulkPurchase-TimedOptions
     parameters:
       - name: player
         type: Player
@@ -1173,7 +1245,8 @@ methods:
           ```lua
           {
             Type: MarketplaceProductType,
-            Id: string
+            Id: string,
+            PurchaseOptions: { {Type: PurchaseOption, Value: number?} }?
           }
           ```
 
@@ -1181,6 +1254,9 @@ methods:
 
           - `Type`: The corresponding `Enum.MarketplaceProductType` (Enum).
           - `Id`: The ID of the asset or bundle.
+          - `PurchaseOptions`: Optional. An array containing a single purchase
+            option to display in the prompt. If omitted, the permanent purchase
+            is prompted. See the PurchaseOptions section below for details.
       - name: options
         type: Dictionary
         default:

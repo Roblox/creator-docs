@@ -3,15 +3,15 @@ title: Parallel Luau
 description: Parallel Luau runs code on multiple threads simultaneously.
 ---
 
-With the **Parallel Luau** programming model, you can run code on multiple threads simultaneously, which can improve the performance of your experience. As you expand your experience with more content, you can adopt this model to help maintain the performance and safety of your Luau scripts.
+With the **Parallel Luau** programming model, you can run code on multiple threads simultaneously, which can improve the performance of your game. As you expand your game with more content, you can adopt this model to help maintain the performance and safety of your Luau scripts.
 
 <video controls width="100%" src="../assets/scripting/scripts/Parallel-Luau.mp4"></video>
 
 ## Parallel programming model
 
-By default, scripts execute sequentially. If your experience has complex logic or content, such as non-player characters (NPCs), raycasting validation, and procedural generation, then sequential execution might cause lag for your users. With the parallel programming model, you can [split tasks into multiple scripts](#split-code-into-multiple-threads) and run them in parallel. This makes your experience code run faster, which improves the user experience.
+By default, scripts execute sequentially. If your game has complex logic or content, such as non-player characters (NPCs), raycasting validation, and procedural generation, then sequential execution might cause lag for your users. With the parallel programming model, you can [split tasks into multiple scripts](#split-code-into-multiple-threads) and run them in parallel. This makes your game code run faster, which improves the user experience.
 
-The parallel programming model also adds safety benefits to your code. By splitting code into multiple threads, when you edit code in one thread, it doesn't affect other code running in parallel. This reduces the risk of having one bug in your code corrupting the entire experience, and minimizes the delay for users in live servers when you push an update.
+The parallel programming model also adds safety benefits to your code. By splitting code into multiple threads, when you edit code in one thread, it doesn't affect other code running in parallel. This reduces the risk of having one bug in your code corrupting the entire game, and minimizes the delay for users in live servers when you push an update.
 
 Adopting the parallel programming model doesn't mean to put everything in multiple threads. For example, the [server-side raycasting validation](#server-side-raycasting-validation) sets each individual user a remote event in parallel but still requires the initial code to run serially to change global properties, which is a common pattern for parallel execution.
 
@@ -19,7 +19,7 @@ Most times you need to combine serial and parallel phases to achieve your desire
 
 ## Split code into multiple threads
 
-To run your experience's scripts in multiple threads concurrently, you need to split them into logical chunks under different **actors** in the [data model](../projects/data-model.md). Actors are represented by `Class.Actor` instances inheriting from `Class.DataModel`. They work as units of execution isolation that distribute the load across multiple cores running simultaneously.
+To run your game's scripts in multiple threads concurrently, you need to split them into logical chunks under different **actors** in the [data model](../projects/data-model.md). Actors are represented by `Class.Actor` instances inheriting from `Class.DataModel`. They work as units of execution isolation that distribute the load across multiple cores running simultaneously.
 
 ### Place actor instances
 
@@ -173,7 +173,7 @@ You can also facilitate communication between multiple threads directly using th
 
 ### Server-side raycasting validation
 
-For a fighting and battle experience, you need to enable [raycasting](../workspace/raycasting.md) for your users' weapons. With the client simulating the weapons to achieve good latency, the server has to confirm the hit, which involves doing raycasts and some amount of heuristics that compute expected character velocity, and look at past behavior.
+For a fighting and battle game, you need to enable [raycasting](../workspace/raycasting.md) for your users' weapons. With the client simulating the weapons to achieve good latency, the server has to confirm the hit, which involves doing raycasts and some amount of heuristics that compute expected character velocity, and look at past behavior.
 
 Instead of using a single centralized script that connects to a remote event that clients use to communicate hit information, you can run each hit validation process on the server side in parallel with every user character having a separate remote event.
 
@@ -231,7 +231,7 @@ remoteEventConnection = remoteEvent.OnServerEvent:Connect(onRemoteMouseEvent)
 
 ### Server-side procedural terrain generation
 
-To create a vast world for your experience, you can populate the world dynamically. Procedural generation typically creates independent terrain chunks, with the generator performing relatively intricate calculations for object placement, material usage, and voxel filling. Running generation code in parallel can enhance efficiency of the process. The following code sample serves as an example.
+To create a vast world for your game, you can populate the world dynamically. Procedural generation typically creates independent terrain chunks, with the generator performing relatively intricate calculations for object placement, material usage, and voxel filling. Running generation code in parallel can enhance efficiency of the process. The following code sample serves as an example.
 
 ```lua
 -- Parallel execution requires the use of actors

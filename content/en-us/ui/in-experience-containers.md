@@ -1,9 +1,9 @@
 ---
-title: In-experience UI containers
-description: In-experience UI containers hold SurfaceGuis, BillboardGuis, and GuiObjects that you want to display in the 3D space.
+title: In-game UI containers
+description: In-game UI containers hold SurfaceGuis, BillboardGuis, and GuiObjects that you want to display in the 3D space.
 ---
 
-In-experience UI containers hold `Class.GuiObject|GuiObjects` that you want to display within your experience's 3D world.
+In-game UI containers hold `Class.GuiObject|GuiObjects` that you want to display within your game's 3D world.
 
 - A `Class.SurfaceGui` allows for the rendering of UI objects onto a part's surface in the 3D world while also allowing for basic user interaction to occur.
 - A `Class.BillboardGui` is a container for UI objects to appear in the 3D space but always face the camera.
@@ -16,7 +16,7 @@ Similar to `Class.Decal|Decals` and `Class.Texture|Textures`, UI objects such as
 
 <img src="../assets/ui/in-experience/SurfaceGui-Diagram.jpg" width="800" alt="SurfaceGui on a 3D part in the place with an ImageLabel child to depict a screen console." />
 
-To apply a `Class.SurfaceGui` to an in-experience `Class.BasePart`, simply parent it to that part and set the `Class.SurfaceGui.Face` property. Child UI objects then appear on that face of the parent part.
+To apply a `Class.SurfaceGui` to an in-game `Class.BasePart`, simply parent it to that part and set the `Class.SurfaceGui.Face` property. Child UI objects then appear on that face of the parent part.
 
 <Grid container spacing={2} alignItems="top">
 	<Grid item>
@@ -89,11 +89,11 @@ If multiple `Class.SurfaceGui` containers exist on the same face, you can layer 
 
 ## Billboard UI
 
-The `Class.BillboardGui` container displays UI objects in the 3D space but, unlike `Class.SurfaceGui`, children of a `Class.BillboardGui` always face the camera. This container is useful for displaying front‑facing info above in‑experience objects such as health meters or names above player characters, markers to guide players to an object in the 3D world, and more.
+The `Class.BillboardGui` container displays UI objects in the 3D space but, unlike `Class.SurfaceGui`, children of a `Class.BillboardGui` always face the camera. This container is useful for displaying front‑facing info above in-game objects such as health meters or names above player characters, markers to guide players to an object in the 3D world, and more.
 
 <img src="../assets/ui/in-experience/BillboardGui-Diagram.jpg" width="800" alt="BillboardGui with a TextLabel describing the screen console it floats above." />
 
-To link a `Class.BillboardGui` to an in-experience `Class.BasePart` or `Class.Attachment`, simply parent it to that part or attachment and, if desired, adjust its [size/position](#size-and-position-1).
+To link a `Class.BillboardGui` to an in-game `Class.BasePart` or `Class.Attachment`, simply parent it to that part or attachment and, if desired, adjust its [size/position](#size-and-position-1).
 
 <Grid container spacing={2} alignItems="top">
 	<Grid item>

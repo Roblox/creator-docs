@@ -2,7 +2,7 @@
 title: include
 ---
 
-All Roblox experiences include several UI elements that are enabled by default. If you don't need any of these elements or if you want to replace them with your own creations, you can use the `Class.StarterGui:SetCoreGuiEnabled()|SetCoreGuiEnabled()` method in a client‑side script with the associated `Enum.CoreGuiType` option.
+All Roblox games include several UI elements that are enabled by default. If you don't need any of these elements or if you want to replace them with your own creations, you can use the `Class.StarterGui:SetCoreGuiEnabled()|SetCoreGuiEnabled()` method in a client‑side script with the associated `Enum.CoreGuiType` option.
 
 <table>
 <thead>
@@ -21,7 +21,7 @@ All Roblox experiences include several UI elements that are enabled by default. 
     <td>`Enum.CoreGuiType.Health`</td>
   </tr>
 	<tr>
-    <td>The character's `Class.Backpack` which contains [in‑experience tools](../../players/tools.md). Does not appear if there are no `Class.Tool|Tools` in the backpack.</td>
+    <td>The character's `Class.Backpack` which contains [in-game tools](../../players/tools.md). Does not appear if there are no `Class.Tool|Tools` in the backpack.</td>
     <td>`Enum.CoreGuiType.Backpack`</td>
   </tr>
 	<tr>
@@ -47,7 +47,7 @@ All Roblox experiences include several UI elements that are enabled by default. 
 </tbody>
 </table>
 
-<img src="../../assets/ui/misc/CoreGui-Elements.jpg" width="840" alt="Core UI elements in every Roblox experience." />
+<img src="../../assets/ui/misc/CoreGui-Elements.jpg" width="840" alt="Core UI elements in every Roblox game." />
 
 ```lua title="Client Script - Disable Default UI Elements"
 local StarterGui = game:GetService("StarterGui")
@@ -59,7 +59,7 @@ StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
 
 Additionally, devices with touch capabilities include a virtual thumbstick and a jump button by default. If desired, you can hide these elements by setting `Class.GuiService.TouchControlsEnabled` to `false` in a client‑side script.
 
-<img src="../../assets/ui/misc/TouchGui-Elements.png" width="840" alt="UI elements for touch-capable devices in every Roblox experience" />
+<img src="../../assets/ui/misc/TouchGui-Elements.png" width="840" alt="UI elements for touch-capable devices in every Roblox game." />
 
 ```lua title="Client Script - Disable Touch Controls"
 local GuiService = game:GetService("GuiService")

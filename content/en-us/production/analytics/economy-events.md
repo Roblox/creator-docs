@@ -1,22 +1,22 @@
 ---
 title: Economy events
-description: Use economy events to visualize your experience's economy and track user sources, sinks and wallets.
+description: Use economy events to visualize your game's economy and track user sources, sinks and wallets.
 ---
 
-**Economy events** let you track your in-experience economy, such as:
+**Economy events** let you track your in-game economy, such as:
 
-- **Top sinks** — What do users spend in-experience resources on?
+- **Top sinks** — What do users spend in-game resources on?
 - **Top sources** — Where do users earn resources?
 - **Average wallet balance** — How much resources are users holding?
 
-Once your experience begins tracking Economy events, you'll unlock the Economy page of the Analytics dashboard on the Creator Hub.
+Once your game begins tracking Economy events, you'll unlock the Economy page of the Analytics dashboard on the Creator Hub.
 
 ## Track economy events
 
-To unlock the Economy dashboard, you need to track some economy events in your experience. Start by identifying where users **source** (i.e. gain) and **sink** (i.e. spend) resources in your experience. These are represented in code by `Enum.AnalyticsEconomyFlowType`, which can be either `Source` or `Sink`.
+To unlock the Economy dashboard, you need to track some economy events in your game. Start by identifying where users **source** (i.e. gain) and **sink** (i.e. spend) resources in your game. These are represented in code by `Enum.AnalyticsEconomyFlowType`, which can be either `Source` or `Sink`.
 
 <Alert severity ='warning'>
-Events can only be sent from the server and in published experiences. Events can't be sent from the client or Studio.
+Events can only be sent from the server and in published games. Events can't be sent from the client or Studio.
 </Alert>
 
 ### Transaction types
@@ -34,7 +34,7 @@ These types appear on the dashboard. It's a good idea to start with the default 
 
 ### Track sources
 
-The following sample uses `Class.AnalyticsService.LogEconomyEvent` to log two different economy events when users complete the first and second levels in the experience and earn some coins.
+The following sample uses `Class.AnalyticsService.LogEconomyEvent` to log two different economy events when users complete the first and second levels in the game and earn some coins.
 
 ```lua title="Tracking a source Gameplay event"
 local AnalyticsService = game:GetService("AnalyticsService")
@@ -111,11 +111,11 @@ You can breakdown by custom fields by using the breakdown selector.
 
 For more information, see [Custom fields](./custom-fields.md).
 
-## Use economy to grow your experience
+## Use economy to grow your game
 
-The Economy dashboard includes five charts to help you take action to grow your revenue. You can add up to five currencies of resources, and all charts can be filtered by various user categories (gender, age, platform, etc.) and up to three custom fields specific to your experience.
+The Economy dashboard includes five charts to help you take action to grow your revenue. You can add up to five currencies of resources, and all charts can be filtered by various user categories (gender, age, platform, etc.) and up to three custom fields specific to your game.
 
-- **Total sources and sinks by category** - Use this chart to balance your in-experience economy. Total sources subtract total sinks should be close to zero. You can also see your top sources and sinks by category. If your net total is growing, consider adding more sinks.
+- **Total sources and sinks by category** - Use this chart to balance your in-game economy. Total sources subtract total sinks should be close to zero. You can also see your top sources and sinks by category. If your net total is growing, consider adding more sinks.
 
   <img src="../../assets/analytics/event-types/Total-Sources-Sinks.png" alt="Total Sources and Sinks by Category chart populated with data."/>
 

@@ -8,7 +8,7 @@ With the Data Stores Manager, you can browse and monitor your data stores, their
 ## Access the Data Stores Manager
 
 <Alert severity="info">
-If you're the owner of an experience or the group owner of a group-owned experience, you already have full access to the Data Stores Manager by default.
+If you're the owner of a game or the group owner of a group-owned game, you already have full access to the Data Stores Manager by default.
 
 To give members of your group access to the Data Stores Manager, you can [grant them one of the following permissions](../../projects/groups.md#roles-and-permissions):
 
@@ -20,7 +20,7 @@ To give members of your group access to the Data Stores Manager, you can [grant 
 
 To access the Data Stores Manager:
 
-1. Go to Creations and select an experience.
+1. Go to **Creations** and select a game.
 2. Go to **Configure** ⟩ **Data Stores Manager**.
 
 <img src="./../../assets/data/data-store/Data-Stores-Manager-Page.png" alt="Overview of Data Stores Manager page displaying the Summary section, the Data Stores list, and the Keys list." />
@@ -28,17 +28,17 @@ To access the Data Stores Manager:
 <br/>
 <br/>
 
-The **Summary** section of the Data Stores Manager page includes the **Total Size** and the **Storage Limit** of your data stores. Total Size is calculated by adding the number of bytes consumed by all existing keys in your experience, and Storage Limit is calculated based on your experience's lifetime user count. For more information about storage limits, see [Limits](./error-codes-and-limits.md#limits).
+The **Summary** section of the Data Stores Manager page includes the **Total Size** and the **Storage Limit** of your data stores. Total Size is calculated by adding the number of bytes consumed by all existing keys in your game, and Storage Limit is calculated based on your game's lifetime user count. For more information about storage limits, see [Limits](./error-codes-and-limits.md#limits).
 
 If your Total Size exceeds your Storage Limit, your **Est. Monthly Costs** will populate in your Summary and show an estimation of the impact of the usage that has gone over your quota. For tips on how to reduce your storage consumption, see [Best practices](./best-practices.md).
 
 ## View data stores and keys
 
 <Alert severity="warning">
-  If your experience has more than 100 data stores, the data store size and number of keys won't be available in the Data Stores list.
+  If your game has more than 100 data stores, the data store size and number of keys won't be available in the Data Stores list.
 </Alert>
 
-The **Data Stores** list displays the name, size, and number of keys for all data stores in your experience. You can filter this list by entering a prefix in the search bar.
+The **Data Stores** list displays the name, size, and number of keys for all data stores in your game. You can filter this list by entering a prefix in the search bar.
 
 To further drill down into each specific data store, you can:
 
@@ -58,7 +58,7 @@ When you schedule a data store for permanent deletion, that data store immediate
 
 To schedule a data store or key for permanent deletion:
 
-1. Go to Creations and select an experience.
+1. Go to Creations and select a game.
 2. Go to **Configure** ⟩ **Data Stores Manager**.
 3. Click the **Action** menu next to the item you want to delete.
 4. Click **Mark for Deletion**.

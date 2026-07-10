@@ -7,7 +7,7 @@ prev: /platform
 
 **Learn everything you need to know about creating on Roblox.**
 
-If you're new to developing Roblox experiences, read these guides for a tour of
+If you're new to developing Roblox games, read these guides for a tour of
 Roblox creation before diving into the product documentation and tutorials.
 
 ## The Roblox platform
@@ -41,17 +41,17 @@ the Roblox audience, and what social and cultural factors you should consider wh
 </Grid>
 <Grid item container direction="column" XSmall={12} XLarge={6} style={{flex: 1, padding: '20px', minWidth: '200px'}}>
 <h4 style={{marginBottom: 12}}>Designing for Roblox</h4>
-<Typography color='textSecondary' variant='body2' style={{marginBottom: 20}}>Discover some common practices from successful experiences and find out how to tailor your designs to the unique characteristics of Roblox. </Typography>
+<Typography color='textSecondary' variant='body2' style={{marginBottom: 20}}>Discover some common practices from successful games and find out how to tailor your designs to the unique characteristics of Roblox. </Typography>
 <a href="./production/game-design/index.md">
   <Button variant="text">Learn more</Button>
 </a>
 </Grid>
 </Grid>
 
-## Experiences
+## Games
 
-Experiences are the 3D worlds that you create and publish in Roblox. Learn how
-they technically work, so you understand how to build the best experiences
+Games, also referred to as experiences, are the 3D worlds that you create and publish in Roblox. Learn how
+they technically work, so you understand how to build the best games
 possible for your users.
 
 <Grid item container direction='row' style={{gap: '16px'}}>
@@ -59,7 +59,7 @@ possible for your users.
 
 <h4 style={{marginBottom: 12}}>Roblox projects</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Understand how to
-build projects in Roblox Studio and publish them as experiences on Roblox. </Typography>
+build projects in Roblox Studio and publish them as games on Roblox. </Typography>
 <a href="./projects/index.md">
   <Button variant="text">Learn more</Button>
 </a>
@@ -79,14 +79,14 @@ Roblox cloud and how to use them in your projects.</Typography>
 
 <h4 style={{marginBottom: 12}}>The data model</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Understand the data model, the underlying definition
-of how places in your 3D experiences look and function.</Typography>
+of how places in your 3D games look and function.</Typography>
 <a href="./projects/data-model.md">
   <Button variant="text">Learn more</Button>
 </a>
 </Grid>
 <Grid item container direction="column" XSmall={12} XLarge={6} style={{flex: 1, padding: '20px', minWidth: '200px'}}>
 <h4 style={{marginBottom: 12}}>Client-server runtime</h4>
-<Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Understand how your experiences run in the Roblox Cloud.</Typography>
+<Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Understand how your games run in the Roblox Cloud.</Typography>
 <a href="./projects/client-server.md">
   <Button variant="text">Learn more</Button>
 </a>
@@ -104,7 +104,7 @@ of how places in your 3D experiences look and function.</Typography>
 </Grid>
 <Grid item container direction="column" XSmall={12} XLarge={6} style={{flex: 1, padding: '20px', minWidth: '200px'}}>
 <h4 style={{marginBottom: 12}}>Scripting</h4>
-<Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Learn how to script logic for your Roblox experiences.</Typography>
+<Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Learn how to script logic for your Roblox games.</Typography>
 <a href="./scripting/index.md">
   <Button variant="text">Learn more</Button>
 </a>
@@ -133,7 +133,7 @@ of how places in your 3D experiences look and function.</Typography>
 ## Roblox Studio
 
 Studio is an all-in-one IDE that lets you create on Roblox. You build projects
-that you can later publish as experiences to Roblox and also use Studio to
+that you can later publish as games to Roblox and also use Studio to
 create characters and accessories.
 
 <Grid item container direction='row' style={{gap: '16px'}}>
@@ -165,7 +165,7 @@ and grow your creations.
 <Grid item container direction="column" XSmall={12} XLarge={6} style={{flex: 1, padding: '20px', minWidth: '200px'}}>
 
 <h4 style={{marginBottom: 12}}>Promoting on Roblox</h4>
-<Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Discover how experiences are commonly promoted on Roblox and how you can spend your budget most appropriately.</Typography>
+<Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Discover how games are commonly promoted on Roblox and how you can spend your budget most appropriately.</Typography>
 <a href="./production/promotion/index.md">
   <Button variant="text">Learn more</Button>
 </a>
@@ -174,7 +174,7 @@ and grow your creations.
 
 <h4 style={{marginBottom: 12}}>Earning on Roblox</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Learn about monetization options and strategies on the platform along with associated considerations for developers.</Typography>
-<a href="./production/earn-on-roblox.md">
+<a href="./monetize-experiences.md">
   <Button variant="text">Learn more</Button>
 </a>
 </Grid>

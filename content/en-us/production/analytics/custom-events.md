@@ -1,22 +1,22 @@
 ---
 title: Custom events
-description: Custom Events let you track and aggregate unique metrics to your experience.
+description: Custom Events let you track and aggregate unique metrics to your game.
 ---
 
-**Custom events** let you track metrics specific to your experience that other events do not fully capture. This includes:
+**Custom events** let you track metrics specific to your game that other events do not fully capture. This includes:
 
 - **Adoption** — How many users click on a specific UI component?
 - **User behavior** — What is the most frequently used ability on each map?
 - **Core loop** — How do kill/death ratios compare across different weapons?
 
-Once your experience begins tracking custom events, you'll unlock the **Explore** page of the Analytics dashboard on the Creator Hub. You can add up to 100 custom events to your experience.
+Once your game begins tracking custom events, you'll unlock the **Explore** page of the Analytics dashboard on the Creator Hub. You can add up to 100 custom events to your game.
 
 ## Track custom events
 
-To unlock the **Explore** page, you must first track custom events in your experience. Start by identifying which metrics are the most important for monitoring and improving your experience. Events are aggregated daily so it may take up to 24 hours for charts to populate on the page.
+To unlock the **Explore** page, you must first track custom events in your game. Start by identifying which metrics are the most important for monitoring and improving your game. Events are aggregated daily so it may take up to 24 hours for charts to populate on the page.
 
 <Alert severity ='warning'>
-Events can only be sent from the server and in published experiences. Events can't be sent from the client or Studio.
+Events can only be sent from the server and in published games. Events can't be sent from the client or Studio.
 </Alert>
 
 ### Counters
@@ -36,7 +36,7 @@ AnalyticsService:LogCustomEvent(
 
 ### Events with values
 
-You can also track events with values for metrics that require more quantitative data into your experience, such as kill/death ratios or the amount of time a user spends on a mission. It can also be used as a way to send events in batches in order to stay under the rate limits, i.e. sending 10 zombies killed instead of 1 zombie killed ten times.
+You can also track events with values for metrics that require more quantitative data into your game, such as kill/death ratios or the amount of time a user spends on a mission. It can also be used as a way to send events in batches in order to stay under the rate limits, i.e. sending 10 zombies killed instead of 1 zombie killed ten times.
 
 ```lua
 local AnalyticsService = game:GetService("AnalyticsService")
@@ -78,14 +78,14 @@ For example, instead of `PlantCabbage`, `PlantTurnip`, `PlantPepper` as three se
 
 For more information, see [Custom fields](./custom-fields.md).
 
-## Use custom events to grow your experience
+## Use custom events to grow your game
 
 Custom events enable you to track metrics that matter most, providing insights into how players interact with specific features and content. Use these events to uncover patterns in player behavior and optimize your core game loop.
 
 In the reference game [Plant](../../resources/plant-reference-project.md), the core loop with a `HarvestPlant` event fires whenever a player harvests a ripe plant. Using custom events, you can track the average number of plants harvested per player each day broken down by the plant type as a custom field:
 
-<img src="../../assets/analytics/event-types/Custom-Event-Graph.png" width = "100%" alt="Custom Event graph for the reference Plant experience."/>
+<img src="../../assets/analytics/event-types/Custom-Event-Graph.png" width = "100%" alt="Custom Event graph for the reference Plant game."/>
 
-- Try to improve the diversity of content within your experience and encourage players to explore other options as part of the [core loop](../game-design/core-loops.md) to prevent repetitiveness.
+- Try to improve the diversity of content within your game and encourage players to explore other options as part of the [core loop](../game-design/core-loops.md) to prevent repetitiveness.
 - Explore why users significantly prefer turnips over other plants, and if there are any imbalances that turnips are causing (such as with [economy events](./economy-events.md)).
 - Add more event tracking within your loop, such as planting seeds, watering plants, and going to the shop, to better track player behavior and other areas of improvement.

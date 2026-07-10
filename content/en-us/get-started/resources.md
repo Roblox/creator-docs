@@ -31,9 +31,9 @@ fullWidth: true
     <Card style={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
       <CardContent style={{ flex: 1 }}>
         <a href="https://brands.roblox.com/resources/how-to-build-engaging-brand-experiences-on-roblox">
-          <Typography variant='buttonLarge'>More on building engaging experiences</Typography><br />
+          <Typography variant='buttonLarge'>More on building engaging games</Typography><br />
         </a>
-        <Typography variant='body1'>Best practices for creating compelling brand experiences on Roblox.</Typography>
+        <Typography variant='body1'>Best practices for creating compelling brand games on Roblox.</Typography>
       </CardContent>
     </Card>
   </Grid>
@@ -41,9 +41,9 @@ fullWidth: true
     <Card style={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
       <CardContent style={{ flex: 1 }}>
         <a href="../production/monetization/index.md">
-          <Typography variant='buttonLarge'>Learn techniques for monetizing your experience</Typography><br />
+          <Typography variant='buttonLarge'>Learn techniques for monetizing your game</Typography><br />
         </a>
-        <Typography variant='body1'>Learn how to monetize your experience in the creator economy.</Typography>
+        <Typography variant='body1'>Learn how to monetize your game in the creator economy.</Typography>
       </CardContent>
     </Card>
   </Grid>
@@ -63,7 +63,7 @@ fullWidth: true
         <a href="https://corp.roblox.com/newsroom/2025/07/roblox-launches-new-licensing-platform-for-experiences">
           <Typography variant='buttonLarge'>Learn about Roblox's License Manager and Catalog</Typography><br />
         </a>
-        <Typography variant='body1'>Licensing and catalog tools for experiences and content.</Typography>
+        <Typography variant='body1'>Licensing and catalog tools for games and content.</Typography>
       </CardContent>
     </Card>
   </Grid>
@@ -87,7 +87,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Roblox Innovation Awards</h4>
-        <Typography variant='body1'>This is where we also hold the <a href="https://www.youtube-nocookie.com/watch?v=7DXTQcA9G_A" target="_blank">Roblox Innovation Awards</a>, an annual award show recognizing the yearʼs most innovative experiences and creators.</Typography>
+        <Typography variant='body1'>This is where we also hold the <a href="https://www.youtube-nocookie.com/watch?v=7DXTQcA9G_A" target="_blank">Roblox Innovation Awards</a>, an annual award show recognizing the yearʼs most innovative games and creators.</Typography>
       </CardContent>
     </Card>
   </Grid>

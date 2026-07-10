@@ -1,9 +1,9 @@
 ---
 title: Profile Card
-description: The Profile Card module lets players see more information about other players in an experience.
+description: The Profile Card module lets players see more information about other players in a game.
 ---
 
-It can be interesting to learn about other players. The **ProfileCard** [developer module](../../resources/modules/index.md) is a great way to see more information about others within an experience, from badges achieved to the player's favorite experiences.
+It can be interesting to learn about other players. The **ProfileCard** [developer module](../../resources/modules/index.md) is a great way to see more information about others within a game, from badges achieved to the player's favorite games.
 
 <video src="../../assets/developer-modules/profile-card/Showcase.mp4" controls width="100%"></video>
 
@@ -11,7 +11,7 @@ It can be interesting to learn about other players. The **ProfileCard** [develop
 
 ### Installation
 
-To use the **ProfileCard** module in an experience:
+To use the **ProfileCard** module in a game:
 
 1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
@@ -27,7 +27,7 @@ To use the **ProfileCard** module in an experience:
 
    <img src="../../assets/developer-modules/profile-card/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **ProfileCard** model into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **ProfileCard** model into `Class.ReplicatedStorage`. Upon running the game the module will begin running.
 
 ### Views
 
@@ -35,7 +35,7 @@ Profile cards have different views depending on whether you're viewing your own 
 
 <Tabs>
 <TabItem label="Your Card">
-When you first spawn into the experience, an icon appears over your character. Clicking the icon opens the profile card view. Once the card is closed, the icon disappears, but you can reopen the card at any time by clicking your character.
+When you first spawn into the game, an icon appears over your character. Clicking the icon opens the profile card view. Once the card is closed, the icon disappears, but you can reopen the card at any time by clicking your character.
 
 <img src="../../assets/developer-modules/profile-card/Player-Icon.jpg" width="800" />
 
@@ -110,7 +110,7 @@ Overrides default configuration options through the following keys/values in the
 	</tr>
 	<tr>
 		<td>`showPersonalIndicator`</td>
-		<td>If `true`, shows the personal indicator when a player first joins the experience.</td>
+		<td>If `true`, shows the personal indicator when a player first joins the game.</td>
 		<td>true</td>
 	</tr>
 	<tr>

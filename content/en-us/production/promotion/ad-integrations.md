@@ -1,6 +1,6 @@
 ---
 title: Ad integrations
-description: Ad integrations are advertisements that aren't part of Roblox's built-in ad products and that promote products or services outside of an game or off Roblox.
+description: Ad integrations are advertisements that aren't part of Roblox's built-in ad products and that promote products or services outside of a game or off Roblox.
 ---
 
 **Ad integrations** are ads that you incorporate into your game, whether through custom content or branded assets. These can include:
@@ -103,7 +103,7 @@ If you update your game with ad assets before the campaign start date, `Class.Ad
 
 All ad assets have to include clear and accessible disclosure for users. To support this, Roblox provides standardized ad labels that are automatically rendered in games for assets associated with the ad integration campaign.
 
-Ad labels indicate which parts of your experience are advertisements, and allow users to identify the advertiser or report the ad.
+Ad labels indicate which parts of your game are advertisements, and allow users to identify the advertiser or report the ad.
 
 `Class.AdService.RegisterDisclosureButton|RegisterDisclosureButton` enables interactive disclosure when a user clicks or taps the ad label, providing additional information about the ad. You can find the placement ID from Ads Manager in the **Manage Assets** section. For example:
 
@@ -111,7 +111,7 @@ Ad labels indicate which parts of your experience are advertisements, and allow 
 AdService:RegisterDisclosureButton(yourDisclosureButton, "your-placement-id")
 ```
 
-Choose the right label type based on how your ad content appears in your experience and how users interact with it. Different label types work better for different contexts.
+Choose the right label type based on how your ad content appears in your game and how users interact with it. Different label types work better for different contexts.
 
 <table>
 <thead>
@@ -124,7 +124,7 @@ Choose the right label type based on how your ad content appears in your experie
 <tbody>
   <tr>
     <td>**Floating ad label**</td>
-    <td>Appears above, beside, or near an interactive 3D object in your experience. <br/><br/> Use it for freestanding, movable, or standalone sponsored objects, like branded vehicles, product displays, or charaacters within the environment.</td>
+    <td>Appears above, beside, or near an interactive 3D object in your game. <br/><br/> Use it for freestanding, movable, or standalone sponsored objects, like branded vehicles, product displays, or charaacters within the environment.</td>
     <td><img src="../../assets/promotion/ad-integrations/AdIntegrations-FloatingLabel.png" /></td>
   </tr>
   <tr>
@@ -140,7 +140,7 @@ Choose the right label type based on how your ad content appears in your experie
 </tbody>
 </table>
 
-When placing ad labels in your experience, make sure to:
+When placing ad labels in your game, make sure to:
 
 - Keep the ad label distinct and readable. The label should not be covered, distorted, or blended into surrounding visuals.
 - Avoid letting nearby branding or decorative elements visually overpower the ad label. The disclosure should be the primary focus in its immediate area.

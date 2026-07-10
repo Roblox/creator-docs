@@ -1,13 +1,13 @@
 ---
 title: Security and cheat mitigation tactics
-description: Explore security tactics and cheat mitigation tactics for Roblox experiences.
+description: Explore security tactics and cheat mitigation tactics for Roblox games.
 ---
 
 <Alert severity = 'warning'>
-The following content covers various concepts and tactics to improve security and mitigate cheating in your Roblox experiences. It's highly recommended that all developers read through these to ensure that your experiences are secure and fair for all users. Check the sidebar for additional security topics.
+The following content covers various concepts and tactics to improve security and mitigate cheating in your Roblox games. It's highly recommended that all developers read through these to ensure that your games are secure and fair for all users. Check the sidebar for additional security topics.
 </Alert>
 
-Before diving into specific tactics to developing securely and prevent cheating, it's essential to understand the foundational principles of Roblox security. A secure experience is built on a mindset that anticipates adversarial actions. Before writing a single line of code, you must internalize these foundational principles. They should inform every architectural and design decision you make.
+Before diving into specific tactics to developing securely and prevent cheating, it's essential to understand the foundational principles of Roblox security. A secure game is built on a mindset that anticipates adversarial actions. Before writing a single line of code, you must internalize these foundational principles. They should inform every architectural and design decision you make.
 
 ## Never trust the client
 
@@ -38,7 +38,7 @@ For example, if a player says "I want to buy a Bloxy Cola" the server must know 
 
 ## Security by design
 
-Integrate security considerations into your experience's design from the very beginning, rather than attempting to bolt them on later as an afterthought.
+Integrate security considerations into your game's design from the very beginning, rather than attempting to bolt them on later as an afterthought.
 
 - Threat model every new feature. For every new feature, ask
   - How could an attacker exploit this if they have full control of their client?

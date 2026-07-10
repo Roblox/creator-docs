@@ -5,7 +5,7 @@ next: /education/build-it-play-it-island-of-move/designing-poses
 prev: /education/build-it-play-it-island-of-move/landing
 ---
 
-Established developer? Just getting started? Create and code a victory animation to celebrate player achievements in this Build It, Play It Challenge! When finished, add this animation into any experience, making your work more engaging and attractive to players. These types of animations are perfect for giving feedback when a player wins a match, reaches a checkpoint, or levels up.
+Established developer? Just getting started? Create and code a victory animation to celebrate player achievements in this Build It, Play It Challenge! When finished, add this animation into any game, making your work more engaging and attractive to players. These types of animations are perfect for giving feedback when a player wins a match, reaches a checkpoint, or levels up.
 
 Below is an example of the animation you can expect to produce by the end of this series.
 
@@ -17,7 +17,7 @@ Before learning to create an animation, take a moment to think about how animati
 
 <video controls src="../../assets/education/build-it-play-it-island-of-move-intermediate/showNPCAnimationsFeedback_noFeedback.mp4" width="100%"></video>
 
-This scenario is frustrating since the monster fails to give the user any **feedback**. Like real life, whenever players take **action** in-game, they expect a **reaction**. Designing informative and visually appealing feedback is critical for designing successful experiences that engage players.
+This scenario is frustrating since the monster fails to give the user any **feedback**. Like real life, whenever players take **action** in-game, they expect a **reaction**. Designing informative and visually appealing feedback is critical for designing successful games that engage players.
 
 One way of giving feedback is with animations. Whenever a player performs an action, like hitting an enemy, animations can show a reaction, like the opponent being struck. The reaction tells the player their action did something, making them feel a part of the world and reducing the chance of confusion.
 
@@ -25,7 +25,7 @@ One way of giving feedback is with animations. Whenever a player performs an act
 
 ## Project setup
 
-The first step in making a victory animation is to create an animation using the Animation Editor. Later, you'll hook it up with code to celebrate a player's in-game accomplishment. That code will work in any experience you've created.
+The first step in making a victory animation is to create an animation using the Animation Editor. Later, you'll hook it up with code to celebrate a player's in-game accomplishment. That code will work in any game you've created.
 
 <video controls src="../../assets/education/build-it-play-it-island-of-move-intermediate/showFinalAnimation_singleAlt.mp4" width="100%"></video>
 

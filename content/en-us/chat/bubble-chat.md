@@ -3,13 +3,13 @@ title: Customize bubble chat
 description: The text chat system allows users to communicate and socialize with each other.
 ---
 
-With [TextChatService](../chat/in-experience-text-chat.md), you can use bubble chat to display customizable speech chat bubbles above user avatars and NPCs. Bubble chat can make your experience more visually immersive and help users easily identify messages and their speakers in a contextually relevant manner. This feature is especially useful for experiences where users need to focus on the content in the meantime communicating with others in a less obtrusive way.
+With [TextChatService](../chat/in-experience-text-chat.md), you can use bubble chat to display customizable speech chat bubbles above user avatars and NPCs. Bubble chat can make your game more visually immersive and help users easily identify messages and their speakers in a contextually relevant manner. This feature is especially useful for games where users need to focus on the content in the meantime communicating with others in a less obtrusive way.
 
 <video src="../assets/players/in-experience-text-chat/Player-Conversation-Bubbles.mp4" controls width="100%"></video>
 
 ## Enable bubble chat
 
-To enable bubble chat in your experience:
+To enable bubble chat in your game:
 
 1. In the **Explorer** window, select `Class.BubbleChatConfiguration` under `Class.TextChatService`.
 
@@ -21,7 +21,7 @@ To enable bubble chat in your experience:
 
 ## Bubble customization
 
-After enabling bubble chat, you can customize the appearance and behavior of your chat bubbles to match your experience theme. Use the **Properties** window of `Class.BubbleChatConfiguration` for [basic](#basic-customization) changes like text color and spacing, or implement [advanced](#advanced-customization) customization for bubble background images and other visual adjustments.
+After enabling bubble chat, you can customize the appearance and behavior of your chat bubbles to match your game's theme. Use the **Properties** window of `Class.BubbleChatConfiguration` for [basic](#basic-customization) changes like text color and spacing, or implement [advanced](#advanced-customization) customization for bubble background images and other visual adjustments.
 
 <img src="../assets/players/in-experience-text-chat/TextChatService-BubbleChatConfiguration.png" width="320" />
 
@@ -77,7 +77,7 @@ The following table shows common bubble chat customization properties. For a ful
 <tbody>
 	<tr>
 		<td>`Class.BubbleChatConfiguration.Enabled|Enabled`</td>
-		<td>Indicating whether bubble chat is enabled in the experience.</td>
+		<td>Indicating whether bubble chat is enabled in the game.</td>
 		<td>`true` (checked)</td>
 	</tr>
 	<tr>
@@ -372,7 +372,7 @@ The following example adds special appearance to VIP users' chat bubbles by chec
 local TextChatService = game:GetService("TextChatService")
 local Players = game:GetService("Players")
 
--- Event handler for when a new chat bubble is added to the experience
+-- Event handler for when a new chat bubble is added to the game
 TextChatService.OnBubbleAdded = function(message: TextChatMessage, adornee: Instance)
 	-- Check if the chat message has a TextSource (sender) associated with it
 	if message.TextSource then
@@ -401,7 +401,7 @@ All advanced customization options are available for per-bubble customization. S
 local TextChatService = game:GetService("TextChatService")
 local Players = game:GetService("Players")
 
--- Event handler for when a new chat bubble is added to the experience
+-- Event handler for when a new chat bubble is added to the game
 TextChatService.OnBubbleAdded = function(message: TextChatMessage, adornee: Instance)
 	-- Check if the chat message has a TextSource (sender) associated with it
 	if message.TextSource then

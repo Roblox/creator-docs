@@ -1,13 +1,13 @@
 ---
 title: Implement blaster behavior
-description: Explains end-to-end how a blast mechanic works in a laser tag experience.
+description: Explains end-to-end how a blast mechanic works in a laser tag game.
 next: /tutorials/curriculums/gameplay-scripting/detect-hits
 prev: /tutorials/curriculums/gameplay-scripting/add-rounds
 ---
 
-**Implementing blaster behavior** is the process of programming a blast mechanic in first-person shooter experiences. While players can blast with a single click or press of a button, creating a satisfying and accurate blast behavior is important because it enhances players' enjoyment of the overall gameplay.
+**Implementing blaster behavior** is the process of programming a blast mechanic in first-person shooter games. While players can blast with a single click or press of a button, creating a satisfying and accurate blast behavior is important because it enhances players' enjoyment of the overall gameplay.
 
-Using the [sample laser tag experience](https://www.roblox.com/games/14817965191/Laser-Tag-1A) as a reference, this section of the tutorial teaches you about the scripts behind implementing blaster behavior for two different types of blasters, including guidance on:
+Using the [sample laser tag game](https://www.roblox.com/games/14817965191/Laser-Tag-1A) as a reference, this section of the tutorial teaches you about the scripts behind implementing blaster behavior for two different types of blasters, including guidance on:
 
 - Detecting when players press the blast button.
 - Checking whether the player can use their blaster if they recently pressed the blast button.
@@ -19,7 +19,7 @@ After you complete this section, you will learn about the scripts that allow the
 
 ## Detect player input
 
-The first step to implementing blaster behavior is to listen for when a player presses the blast button. The input type that players use to press the blast button depends on which device they're using to access the experience. For example, the sample laser tag experience supports mouse and keyboard controls, gamepads, and touch controls. You can see each of these input types in **ReplicatedStorage** ⟩ **UserInputHandler**.
+The first step to implementing blaster behavior is to listen for when a player presses the blast button. The input type that players use to press the blast button depends on which device they're using to access the game. For example, the sample laser tag game supports mouse and keyboard controls, gamepads, and touch controls. You can see each of these input types in **ReplicatedStorage** ⟩ **UserInputHandler**.
 
 This client script uses `Class.ContextActionService` to bind `MouseButton1` and `ButtonR2` to the blasting action. This means that every time a player either presses a left mouse button or a gamepad's R2 button, it triggers a laser beam to blast out of the blaster. Note that the **HUDGui** contains a button for blasting on mobile devices, which it connects to later in the script.
 
@@ -32,7 +32,7 @@ ContextActionService:BindAction("_", onBlasterActivated, false,
 
 Another important note is the use of `Enum.UserInputState.Begin` in the `onBlasterActivated()` definition. Many user interface interactions, such as choosing a blaster in this example, don't occur until after the mouse button comes up (`Enum.UserInputState.End`), which gives users a last-second chance to avoid the interaction. However, a blasting mechanic doesn't feel responsive unless it occurs the instant the button goes down.
 
-To demonstrate, you can change `Enum.UserInputState.Begin` to `Enum.UserInputState.End`, then playtest to see how the responsiveness of the blast impacts the gameplay of the experience. For example, if players can hold down the button without triggering the blast, how might that change the their experience while tagging other players?
+To demonstrate, you can change `Enum.UserInputState.Begin` to `Enum.UserInputState.End`, then playtest to see how the responsiveness of the blast impacts the gameplay of the game. For example, if players can hold down the button without triggering the blast, how might that change the their experience while tagging other players?
 
 ```lua title="UserInputHandler"
 local function onBlasterActivated(_actionName: string,
@@ -45,7 +45,7 @@ end
 
 ## Check whether the player can blast
 
-After `UserInputHandler` detects a button press or screen tap, it calls **ReplicatedStorage** ⟩ **Blaster** ⟩ **attemptBlastClient** to check whether the player can blast or not. Like most checks in the sample laser tag experience, it occurs twice: first on the client, then later on the server. `attemptBlastClient` then calls **ReplicatedStorage** ⟩ **Blaster** ⟩ **canLocalPlayerBlast** to perform a simple check of the `blasterStateClient` player attribute:
+After `UserInputHandler` detects a button press or screen tap, it calls **ReplicatedStorage** ⟩ **Blaster** ⟩ **attemptBlastClient** to check whether the player can blast or not. Like most checks in the sample laser tag game, it occurs twice: first on the client, then later on the server. `attemptBlastClient` then calls **ReplicatedStorage** ⟩ **Blaster** ⟩ **canLocalPlayerBlast** to perform a simple check of the `blasterStateClient` player attribute:
 
 ```lua title="canLocalPlayerBlast"
 local function canLocalPlayerBlast(): boolean
@@ -53,7 +53,7 @@ local function canLocalPlayerBlast(): boolean
 end
 ```
 
-If you examine **ReplicatedStorage** ⟩ **Blaster** ⟩ **BlasterState**, you can see that the experience has three blaster states: `Ready`, `Blasting`, and `Disabled`. To see the effect of each of these states, you can playtest the experience, select your player under the **Players** service, then observe the **blasterStateClient** attribute in the **Properties** window. Notice how it displays `Disabled` while you choose your blaster, `Ready` most of the time, and `Blasting` for less than a second after you press the button.
+If you examine **ReplicatedStorage** ⟩ **Blaster** ⟩ **BlasterState**, you can see that the game has three blaster states: `Ready`, `Blasting`, and `Disabled`. To see the effect of each of these states, you can playtest the game, select your player under the **Players** service, then observe the **blasterStateClient** attribute in the **Properties** window. Notice how it displays `Disabled` while you choose your blaster, `Ready` most of the time, and `Blasting` for less than a second after you press the button.
 
 <video controls src="../../../assets/tutorials/gameplay-scripting/Blaster-Behavior/Normal-BlastState.mp4" width="100%"></video>
 
@@ -150,7 +150,7 @@ To help prevent cheating, the server must verify all data that each client sends
 1. Does the player have a character and a location within the world?
 1. After sending the blast data, has the player moved an excessive distance away from where they blasted the laser beam?
 
-This last check involves a judgment call, and according to server latency and player movement speed, you might decide that different values are excessive for your own experience. To demonstrate how to make this judgment call, you can get a sense of the typical magnitude of positional change by adding a print statement in `getValidatedBlastData` and playtesting the experience.
+This last check involves a judgment call, and according to server latency and player movement speed, you might decide that different values are excessive for your own game. To demonstrate how to make this judgment call, you can get a sense of the typical magnitude of positional change by adding a print statement in `getValidatedBlastData` and playtesting the game.
 
 ```lua title="getValidatedBlastData"
 local distanceFromCharacterToOrigin = blastData.originCFrame.Position - rootPartCFrame.Position
@@ -193,7 +193,7 @@ For more information on these server operations, see the [detect hits](./detect-
 
 ## Reset the blaster
 
-In the sample laser tag experience, blasters use a heat mechanic. Rather than reloading after a set number of blasts, they need time to "cool down" between each blast. This same cooldown delay occurs on both the client (`blastClient`) and the server (`blastServer`), with the server acting as the source of truth.
+In the sample laser tag game, blasters use a heat mechanic. Rather than reloading after a set number of blasts, they need time to "cool down" between each blast. This same cooldown delay occurs on both the client (`blastClient`) and the server (`blastServer`), with the server acting as the source of truth.
 
 ```lua title="blastServer"
 local blasterConfig = getBlasterConfig(player)
@@ -207,6 +207,6 @@ task.delay(secondsBetweenBlasts, function()
 end)
 ```
 
-The `secondsBetweenBlasts` attribute is part of the blaster configuration in **ReplicatedStorage** ⟩ **Instances** ⟩ **LaserBlastersFolder**. After the `secondsBetweenBlasts` delay passes, the player can blast again, and the entire process repeats. To help the player understand when they can blast again, the experience includes a cooldown bar.
+The `secondsBetweenBlasts` attribute is part of the blaster configuration in **ReplicatedStorage** ⟩ **Instances** ⟩ **LaserBlastersFolder**. After the `secondsBetweenBlasts` delay passes, the player can blast again, and the entire process repeats. To help the player understand when they can blast again, the game includes a cooldown bar.
 
-At this point, players can spawn and respawn, aim and blast, but the experience still has to determine the results of each blast. In the next section of the tutorial, you will learn how to program the ability for the blaster to detect when the blast hits another player, then reduce the appropriate amount of player health according to blaster settings.
+At this point, players can spawn and respawn, aim and blast, but the game still has to determine the results of each blast. In the next section of the tutorial, you will learn how to program the ability for the blaster to detect when the blast hits another player, then reduce the appropriate amount of player health according to blaster settings.

@@ -1,6 +1,6 @@
 ---
 title: Test and save
-description: Part of the Story Games series that teaches you to code in Roblox. Save and publish the experience in Roblox Studio.
+description: Part of the Story Games series that teaches you to code in Roblox. Save and publish the game in Roblox Studio.
 next: /education/build-it-play-it-story-games/second-challenge
 prev: /education/build-it-play-it-story-games/coding-a-question
 ---

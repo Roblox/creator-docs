@@ -24,8 +24,8 @@ Account registration is through a form that asks for basic information like a bi
 
 Each account grants that user full access to:
 
-- Play experiences with the **Roblox client**.
-- Code and create experiences with **Roblox Studio**.
+- Play games with the **Roblox client**.
+- Code and create games with **Roblox Studio**.
 
 <Alert severity="info">
 <AlertTitle>Accounts for students under 13</AlertTitle>
@@ -60,26 +60,26 @@ For more information, see <a href="https://en.help.roblox.com/hc/en-us/articles/
 <Alert severity="info">
 <AlertTitle>File storage</AlertTitle>
 
-Storing files is only relevant for students using Roblox Studio to develop experiences. In Roblox Studio, files can be saved locally (using the .RBXL format), or stored online on an account. Projects saved to a student's account can be accessed from any computer. There are no limitations in the number of projects or file size that can be stored online.
+Storing files is only relevant for students using Roblox Studio to develop games. In Roblox Studio, files can be saved locally (using the .RBXL format), or stored online on an account. Projects saved to a student's account can be accessed from any computer. There are no limitations in the number of projects or file size that can be stored online.
 
 </Alert>
 
 ## Find educational content
 
-With accounts and software ready, the next step is to find relevant content. Whether it's playing experiences or designing projects, there are many options that align to educator needs.
+With accounts and software ready, the next step is to find relevant content. Whether it's playing games or designing projects, there are many options that align to educator needs.
 
-### Virtual learning experiences
+### Virtual learning games
 
 <img src="../../assets/education/legacy/knnoss-palace-example.jpg" width="80%" />
 
-The Roblox platform hosts millions of pre-made experiences created by the
+The Roblox platform hosts millions of pre-made games created by the
 community. In the Learn and Explore sort, curated by educators at Roblox,
 students can find historical roleplays, physics simulations, or creative
 building games.
 
 <p>
 <a href="https://www.roblox.com/discover#/sortName/Curated_67"
-target="_blank" rel="noopener"><Button variant="contained">Browse experiences</Button></a>
+target="_blank" rel="noopener"><Button variant="contained">Browse games</Button></a>
 </p>
 
 ### Code and creation
@@ -94,14 +94,14 @@ For educators interested in creation, students can build and code using Roblox S
 
 ## Share content with students
 
-### Virtual learning experiences
+### Virtual learning games
 
-Once you have an experience, students can access it using a unique **hyperlink**. Links are sharable through email or a learning management system (e.g. Google Classroom).
+Once you have a game, students can access it using a unique **hyperlink**. Links are sharable through email or a learning management system (e.g. Google Classroom).
 
-Additionally, when playing an experience, we recommend using a **private server**. Normally, playing Roblox means interacting with players across the world. Private servers are spaces that only include those you've permitted to join, like students. Each private server has its own shareable hyperlink that can be provided to students.
+Additionally, when playing a game, we recommend using a **private server**. Normally, playing Roblox means interacting with players across the world. Private servers are spaces that only include those you've permitted to join, like students. Each private server has its own shareable hyperlink that can be provided to students.
 
 <Alert severity="info">
-Some private servers may have a **monthly** fee paid in Robux. That price is set by the developer of that experience and not Roblox. That fee often averages about 100 Robux ($1 USD) per month. Most educational experiences, though, include one free private server per
+Some private servers may have a **monthly** fee paid in Robux. That price is set by the developer of that game and not Roblox. That fee often averages about 100 Robux ($1 USD) per month. Most educational games, though, include one free private server per
 user.
 </Alert>
 

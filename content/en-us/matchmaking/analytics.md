@@ -9,7 +9,7 @@ Use the matchmaking analytics dashboard metrics to analyze the impact of individ
 
 To access the matchmaking analytics dashboard:
 
-1. In the **Creator Dashboard**, navigate to **Creations**, then select an experience.
+1. In the **Creator Dashboard**, navigate to **Creations**, then select a game.
 2. In the lefthand navigation, navigate to the **Configure** section, then select **Custom Matchmaking**.
 3. In the horizontal navigation, select the **Analytics** tab.
 
@@ -17,7 +17,7 @@ To access the matchmaking analytics dashboard:
 
 The analytics dashboard includes charts for Roblox signals and custom signals. If a matchmaking configuration has one numerical custom signal and one categorical custom signal, data is populated in both the numerical and categorical signal charts. If a configuration has two of the same type of custom signal (as in, two numerical or two categorical), only one of the charts is populated with two lines representing data for both. Categorical charts represent a similarity ratio, while numerical charts represent the difference.
 
-To see matchmaking metrics for a specific place in your experience:
+To see matchmaking metrics for a specific place in your game:
 
 1. In the **Analytics** tab, click the **Date Range** dropdown and select a date range between the previous day and the last 90 days.
 2. Click the **Place** dropdown and select the place you want to see metrics for. The **Current Configuration** updates with the name of the matchmaking configuration applied to the place you selected.

@@ -27,7 +27,7 @@ Parameters consist of a **parameter value** and an optional **format specifier**
 
 <img src="../../assets/localization/Parameter-Diagram.png" width="80%" />
 
-In the following example, an experience has the following entries in its localization table:
+In the following example, a game has the following entries in its localization table:
 
 <table>
 <thead>
@@ -156,7 +156,7 @@ The available format specifiers are as follows:
 
 Use the **translate** specifier when requiring a direct translation from your localization table. The localization will search for an exact match of the parameter in the Source column of your localization table.
 
-In the following example, an experience has the following rows in its localization table:
+In the following example, a game has the following rows in its localization table:
 
 <table>
 <thead>
@@ -212,9 +212,9 @@ If a user has their locale set to 'es', the translation output displays as follo
 
 ## Translate with numbers
 
-You can use a specifier to format your numerical values to match the context within your experience.
+You can use a specifier to format your numerical values to match the context within your game.
 
-In the following example, an experience has the following number related entries in their localization table:
+In the following example, a game has the following number related entries in their localization table:
 
 <table>
 <thead>

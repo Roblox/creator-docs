@@ -1,13 +1,13 @@
 ---
 title: Get started for developers
-description: Learn how to develop educational experiences and games on Roblox.
+description: Learn how to develop educational games on Roblox.
 duration:
 thumbnail: None
 group: null
 tags:
 ---
 
-Roblox is a global platform where millions of people gather together every day to imagine, create, and share experiences with each other in immersive, user-generated, 3D worlds. The Roblox platform and its community offer a compelling, unique destination for engaging students through learning and play.
+Roblox is a global platform where millions of people gather together every day to imagine, create, and share games with each other in immersive, user-generated, 3D worlds. The Roblox platform and its community offer a compelling, unique destination for engaging students through learning and play.
 
 This article outlines resources catered specifically for developers interested in education. Learn about Roblox as a development platform, find what works, and view resources to jumpstart development.
 
@@ -19,24 +19,24 @@ If you are a school, educator, or partner interested in working with Roblox Educ
 
 <img src="../../assets/education/stock-graphics/hero-spaceStudents.jpg" />
 
-Roblox experiences transport students through space and time into virtual worlds designed for exploration, investigation, and experimentation. Students can witness and dissect scientific phenomena, see what it was like to live in ancient Rome, or even build virtual robots.
+Roblox games transport students through space and time into virtual worlds designed for exploration, investigation, and experimentation. Students can witness and dissect scientific phenomena, see what it was like to live in ancient Rome, or even build virtual robots.
 
 This section helps developers understand what they can design on Roblox. See the <a href="https://education.roblox.com/partners/" target="_blank" rel="noopener">Education Partners</a> page to learn more about leveraging the Roblox platform for educational purposes.
 
 ### Inspiration for developers
 
-Designers looking for ideas for educational experience can find a variety of topics and example mechanics in live experiences to explore on Roblox within the Inspiration Guide.
+Designers looking for ideas for educational gamescan find a variety of topics and example mechanics in live games to explore on Roblox within the Inspiration Guide.
 
-#### Example educational experiences
+#### Example educational games
 
-Below are some examples of educational experiences highlighting the wide range of educational content developed on and available on Roblox.
+Below are some examples of educational games highlighting the wide range of educational content developed on and available on Roblox.
 
 <Grid container spacing={4}>
 
 <Grid item XSmall={4} XLarge={4}>
 ![Person with Mars Rover](../../assets/education/developer/thumbnail-missionMars.png)
 <a href="https://www.roblox.com/games/10840095864"><h4>Mission: Mars</h4></a>
-Engineer a rover to withstand challenges on the harsh martian landscape. Designed by the renowned Boston Museum of Science, this experience fosters STEM and design thinking.
+Engineer a rover to withstand challenges on the harsh martian landscape. Designed by the renowned Boston Museum of Science, this game fosters STEM and design thinking.
 </Grid>
 
 <Grid item XSmall={4} XLarge={4}>
@@ -48,20 +48,20 @@ Learn computational thinking, and Luau coding within Roblox. Users can complete 
 <Grid item XSmall={4} XLarge={4}>
 ![alt](../../assets/education/developer/thumbnail-untamedAnimals.png)
 <a href="https://www.roblox.com/games/5716123942"><h4>Untamed Animals</h4></a>
-Become a park ranger, or roleplay as an animal as you explore nature and engage in an active ecosystem. This experience has users building empathy for wildlife through gameplay.
+Become a park ranger, or roleplay as an animal as you explore nature and engage in an active ecosystem. This game has users building empathy for wildlife through gameplay.
 </Grid>
 
 </Grid>
 
 ## Develop on Roblox
 
-All Roblox experiences are developed in Roblox Studio, a professional development engine similar to Unity or Unreal.
+All Roblox games are developed in Roblox Studio, a professional development engine similar to Unity or Unreal.
 
 <table>
 <tbody>
    <tr>
     <td><a href="../../platform.md" target="_blank" rel="noopener">Learn About Roblox Studio</a></td>
-    <td>Learn how Roblox offers an all-in-one tool to develop global, multiplayer experiences for free.</td>
+    <td>Learn how Roblox offers an all-in-one tool to develop global, multiplayer games for free.</td>
    </tr>
    <tr>
     <td><a href="../../tutorials/first-experience/index.md" target="_blank" rel="noopener">Start Using Roblox Studio</a></td>
@@ -81,12 +81,12 @@ To assist developers interested in learning, Roblox provides resources specific 
 <table>
 <tbody>
    <tr>
-    <td><a href="../../education/developer/designing-educational-experiences.md" target="_blank" rel="noopener">Designing Educational Experiences</a></td>
-    <td>Introduces designing for educational games. Focuses on define educational experiences and integrate gameplay with learning. </td>
+    <td><a href="../../education/developer/designing-educational-experiences.md" target="_blank" rel="noopener">Designing Educational Games</a></td>
+    <td>Introduces designing for educational games. Focuses on define educational games and integrate gameplay with learning. </td>
    </tr>
    <tr>
     <td><a href="../../education/developer/planning-for-educational-settings.md" target="_blank" rel="noopener">Planning for Educational Settings</a></td>
-    <td>Provides a primer for anyone interested in building an experience to be used in the classroom. This article includes explanations of classroom structures, user needs, and resources for assessing student progress. </td>
+    <td>Provides a primer for anyone interested in building a game to be used in the classroom. This article includes explanations of classroom structures, user needs, and resources for assessing student progress. </td>
    </tr>
    <tr>
     <td><a href="../../education/support/designing-studio-templates.md" target="_blank" rel="noopener">Designing Studio Templates</a></td>
@@ -103,7 +103,7 @@ In addition to documentation, Roblox Education has different programs that kicks
 <tbody>
    <tr>
     <td>Roblox Community Fund</td>
-    <td>The fund provides investments, grants, and advances for education partners who develop curriculum and educational experiences that leverage the platform in immersive and compelling ways. For more information, <a href="https://corp.roblox.com/partners/" target="_blank" rel="noopener">Contact Us</a>.</td>
+    <td>The fund provides investments, grants, and advances for education partners who develop curriculum and educational games that leverage the platform in immersive and compelling ways. For more information, <a href="https://corp.roblox.com/partners/" target="_blank" rel="noopener">Contact Us</a>.</td>
    </tr>
    <tr>
     <td>Education Open Office Hours</td>
@@ -111,7 +111,7 @@ In addition to documentation, Roblox Education has different programs that kicks
    </tr>
    <tr>
     <td>Learn and Explore Sort</td>
-    <td>Many Roblox users interested in education find new experiences in the curated **Learn and Explore** sort. Experiences here can expect more significant traffic and visibility. <a href="https://roblox.qualtrics.com/jfe/form/SV_8313iVKrwkQUiGy" target="_blank" rel="noopener">Apply</a> for consideration.</td>
+    <td>Many Roblox users interested in education find new games in the curated **Learn and Explore** sort. Games here can expect more significant traffic and visibility. <a href="https://roblox.qualtrics.com/jfe/form/SV_8313iVKrwkQUiGy" target="_blank" rel="noopener">Apply</a> for consideration.</td>
    </tr>
 </tbody>
 </table>
@@ -120,10 +120,10 @@ In addition to documentation, Roblox Education has different programs that kicks
 
 **Can I contract Roblox to develop a project?**
 
-Roblox doesn't actually develop experiences. Every experience on the platform is created by the Roblox community. If development assistance is needed, explore the <a href="https://talent.roblox.com/" target="_blank" rel="noopener">Talent Hub</a> as a means of finding potential developers, coders, and creators.
+Roblox doesn't actually develop games. Every game on the platform is created by the Roblox community. If development assistance is needed, explore the <a href="https://talent.roblox.com/" target="_blank" rel="noopener">Talent Hub</a> as a means of finding potential developers, coders, and creators.
 
-**How do educational experiences monetize?**
+**How do educational games monetize?**
 
-Developers have a variety of options for monetizing an educational experience. Traditional monetization still applies for developers interested in pursuing informal learning, such as "edutainment" experiences.
+Developers have a variety of options for monetizing an educational game. Traditional monetization still applies for developers interested in pursuing informal learning, such as "edutainment" games.
 
 For developers interested in creating for schools, note that monetization is prohibited during school hours. Such developers can pursue alternatives to traditional monetization, such as offering teacher training and lesson resources outside of the Roblox platform.

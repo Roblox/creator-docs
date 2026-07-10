@@ -13,7 +13,7 @@ Because these objects are `Class.GuiObject|GuiObjects`, you can customize
 properties such as `Class.GuiObject.BackgroundColor3|BackgroundColor3`,
 `Class.GuiObject.BorderMode|BorderMode`,
 `Class.GuiObject.Transparency|Transparency`, and
-`Class.GuiObject.Rotation|Rotation` to fit the aesthetics of your experience.
+`Class.GuiObject.Rotation|Rotation` to fit the aesthetics of your game.
 
 ## Create text inputs on the screen
 

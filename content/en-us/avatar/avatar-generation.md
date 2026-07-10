@@ -1,6 +1,6 @@
 ---
 title: Photo-to-Avatar generation 
-description: Explains how to use AvatarCreationService AvatarGeneration APIs to prompt users to generate Avatars from photos in experience. 
+description: Explains how to use AvatarCreationService AvatarGeneration APIs to prompt users to generate Avatars from photos in a game. 
 ---
 
 <Alert severity = 'success'>
@@ -8,10 +8,10 @@ The Photo-to-Avatar feature is currently in alpha. Please refer to the [DevForum
 </Alert>
 
 <Alert severity = 'warning'>
-The following guide applies to creators who are familiar with scripting and Roblox Studio and intend to develop experiences that allow user-generated avatar items.
+The following guide applies to creators who are familiar with scripting and Roblox Studio and intend to develop games that allow user-generated avatar items.
 </Alert>
 
-You can create an experience that allows players to generate a fully functional avatar character using a photo and a text prompt.
+You can create a game that allows players to generate a fully functional avatar character using a photo and a text prompt.
 
 This process involves the following steps:
 
@@ -55,13 +55,13 @@ To generate an avatar character:
 
 1. Call `Class.AvatarCreationService:GenerateAvatarAsync` on the Server with a `Dictionary` containing the SessionId and PreviewId.
    1. This method call returns a `string` generationId.
-2. Retrieve the generated avatar data as a `Class.HumanoidDescription` using the `Class.AvatarCreationService:LoadGeneratedAvatarAsync` method on both the experience server and the client.
+2. Retrieve the generated avatar data as a `Class.HumanoidDescription` using the `Class.AvatarCreationService:LoadGeneratedAvatarAsync` method on both the game server and the client.
 3. You can use the `Players.CreateHumanoidModelFromDescription` method to create an avatar model from the `Class.HumanoidDescription` to display to the `Class.Player`.
 
-Mesh and texture assets will be provided as `Class.EditableMesh` and `Class.EditableImage` objects, respectively, to allow continued editing of the generated avatar. Edits should be made on both the experience server and the client copy to keep them in sync for publish.
+Mesh and texture assets will be provided as `Class.EditableMesh` and `Class.EditableImage` objects, respectively, to allow continued editing of the generated avatar. Edits should be made on both the game server and the client copy to keep them in sync for publish.
 
 ### Publish
 
 If the user is satisfied with the resulting avatar it can be published using the `Class.AvatarCreationService:PromptCreateAvatarAsync` method.
 
-For more details on see [in-experience creation](./in-experience-creation.md).
+For more details on see [in-game creation](./in-experience-creation.md).

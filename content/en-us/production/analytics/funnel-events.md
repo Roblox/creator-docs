@@ -1,33 +1,33 @@
 ---
 title: Funnel events
-description: Use funnel events to visualize user progression through key milestones in your experience.
+description: Use funnel events to visualize user progression through key milestones in your game.
 ---
 
-**Funnel events** let you track your user's progress through key stages of your experience. This includes:
+**Funnel events** let you track your user's progress through key stages of your game. This includes:
 
-- **Onboarding** — Where do users drop off when getting started with your experience?
-- **Progression** — Where do users stop advancing through your experience?
+- **Onboarding** — Where do users drop off when getting started with your game?
+- **Progression** — Where do users stop advancing through your game?
 - **Shop** — Where do users abandon purchases?
 
-Once your experience begins tracking funnel events, you unlock the Funnel page of the Analytics dashboard on the Creator Hub. You can add tabs to the dashboard for up to ten funnels.
+Once your game begins tracking funnel events, you unlock the Funnel page of the Analytics dashboard on the Creator Hub. You can add tabs to the dashboard for up to ten funnels.
 
 ## Track funnel events
 
-To track funnel events, first identify the most important funnels in your experience and segment them into steps. Because the goal is to understand player behavior, these steps usually correspond to some action or achievement.
+To track funnel events, first identify the most important funnels in your game and segment them into steps. Because the goal is to understand player behavior, these steps usually correspond to some action or achievement.
 
-In an RPG, you might have a step for joining the experience, one for choosing a class, another for exiting the starting room, and so on. You typically call `Class.AnalyticsService:LogFunnelStepEvent()|LogFunnelStepEvent()` or `Class.AnalyticsService:LogOnboardingFunnelStepEvent()|LogOnboardingFunnelStepEvent()` **after** a player completes a step, but the most important thing is to be consistent about when you call these methods and use easy-to-interpret names.
+In an RPG, you might have a step for joining the game, one for choosing a class, another for exiting the starting room, and so on. You typically call `Class.AnalyticsService:LogFunnelStepEvent()|LogFunnelStepEvent()` or `Class.AnalyticsService:LogOnboardingFunnelStepEvent()|LogOnboardingFunnelStepEvent()` **after** a player completes a step, but the most important thing is to be consistent about when you call these methods and use easy-to-interpret names.
 
 Your onboarding flow is a great place to start tracking funnel events, as this is likely where you lose the majority of your users.
 
 <Alert severity ='warning'>
-Events can only be sent from the server and in published experiences. Events can't be sent from the client or Studio.
+Events can only be sent from the server and in published games. Events can't be sent from the client or Studio.
 </Alert>
 
 ### Track one-time funnels
 
 A one-time funnel monitors conversion events that only occur once per user.
 
-A common example is an **onboarding funnel**, which is critical to understand how to improve your experience's new user retention and session time. The following example is an onboarding funnel for [Plant](https://create.roblox.com/docs/resources/plant-reference-project), a tycoon experience where new users enter a farm, plant seed, water plant, and more in sequential order:
+A common example is an **onboarding funnel**, which is critical to understand how to improve your game's new user retention and session time. The following example is an onboarding funnel for [Plant](https://create.roblox.com/docs/resources/plant-reference-project), a tycoon game where new users enter a farm, plant seed, water plant, and more in sequential order:
 
 ```lua title="Tracking Onboarding Steps in Plant"
 local AnalyticsService = game:GetService("AnalyticsService")
@@ -51,7 +51,7 @@ AnalyticsService:LogOnboardingFunnelStepEvent(
 
 A recurring funnel monitors conversion events that occur multiple times per user.
 
-A common example is a **shop funnel**, which can help you understand how to improve your experience's payer conversion, ARPPU, and revenue. The following example is a shop funnel where users open store, view item, add item to cart, and more.
+A common example is a **shop funnel**, which can help you understand how to improve your game's payer conversion, ARPPU, and revenue. The following example is a shop funnel where users open store, view item, add item to cart, and more.
 
 Use `funnelSessionId` to distinguish between different sessions of the same user in a recurring funnel, such as opening the shop multiple times in a single session.
 
@@ -188,17 +188,17 @@ Funnel events also allow breaking down on custom fields to support easier compar
 
 For more information, see [custom fields](./custom-fields.md).
 
-## Use funnels to grow your experience
+## Use funnels to grow your game
 
-One of the most important funnels to track is onboarding because many experiences struggle with new user retention and engagement.
+One of the most important funnels to track is onboarding because many games struggle with new user retention and engagement.
 
 In the onboarding funnel for [Plant](https://create.roblox.com/docs/resources/plant-reference-project) below, the largest drop-off is step 2 ("Plant Seed").
 
-<img src="../../assets/analytics/event-types/Plant-Game-Funnel.png" alt="Funnels chart for Plant experience showing a 70% drop-off between In Farm, step 1, and Plant Seed, step 2."/>
+<img src="../../assets/analytics/event-types/Plant-Game-Funnel.png" alt="Funnels chart for Plant game showing a 70% drop-off between In Farm, step 1, and Plant Seed, step 2."/>
 
 Based on this data, you could:
 
 - Add contextual indicators to better direct users to plant seeds when they're getting started.
-- Design a new user experience that requires users to plant seed and grow a successful plant before exploring the rest of the experience. You can improve this event by creating [positive feedback elements](../../production/game-design/onboarding-techniques.md#facilitate-feedback) or using other game design techniques.
+- Design a new user experience that requires users to plant seed and grow a successful plant before exploring the rest of the game. You can improve this event by creating [positive feedback elements](../../production/game-design/onboarding-techniques.md#facilitate-feedback) or using other game design techniques.
 
-<img src="../../assets/analytics/event-types/Plant-Game-Prompts.png" alt="In-experience view of Plant experience showing prompts to plant seeds above the flowerpots."/>
+<img src="../../assets/analytics/event-types/Plant-Game-Prompts.png" alt="In-game view of Plant game showing prompts to plant seeds above the flowerpots."/>

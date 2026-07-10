@@ -39,7 +39,7 @@ This guide provides several [makeup templates](#resources) that you can use with
 
 - Template textures that you can use in 2D editing software to author makeup.
 - Template heads that you can use to view and test your makeup before export.
-- Reference experience you can use to import and test your makeup assets on characters with different skin tones and body types.
+- Reference game you can use to import and test your makeup assets on characters with different skin tones and body types.
 
 You can either use these templates as a pure reference to see how everything works, or you can use all of them at each step of the suggested creation process.
 
@@ -65,7 +65,7 @@ In addition, you can include eyebrows and eyelashes with your makeup creations. 
   <figure><img src="../../assets/makeup/Makeup-Eye-Accessory-Datamodel.png" /><figcaption>Eyebrow and eyelash data model</figcaption></figure>
 </GridContainer>
 
-When you import your makeup creation from your favorite third-party modeling software into the [reference experience](#reference-experience), Studio automatically detects mesh names, then generates the necessary `Class.Decal` objects under the imported model. You can then quickly apply your makeup `Class.Decal` objects and accessories by dragging them from the imported reference head into a character's **Makeup** or **Accessories** folder.
+When you import your makeup creation from your favorite third-party modeling software into the [reference game](#reference-game), Studio automatically detects mesh names, then generates the necessary `Class.Decal` objects under the imported model. You can then quickly apply your makeup `Class.Decal` objects and accessories by dragging them from the imported reference head into a character's **Makeup** or **Accessories** folder.
 
 <GridContainer numColumns="2">
   <figure><img src="../../assets/makeup/Imported-DataModel.png" width="76%" /><figcaption>The imported model contains your makeup decals and face accessories</figcaption></figure>
@@ -82,7 +82,7 @@ The following are downloadable resources you can use within the creation process
 
 - See [Template textures](#template-textures) for image and project files you can use in 2D editing software like GIMP or Photoshop.
 - See [Template heads](#template-heads) for required 3D models you can use to view and test your makeup assets.
-- See [Reference experience](#reference-experience) to import and test your makeup assets into Studio
+- See [Reference game](#reference-game) to import and test your makeup assets into Studio
 
 <Alert severity = 'info'>
 For resources that include two templates, in almost every case **it's recommended to use the mesh template** to create makeup because:
@@ -461,7 +461,7 @@ A comprehensive `.zip` folder of `.fbx` and `.gltf` assets, including blocky hea
 
 </Grid>
 
-### Reference experience
+### Reference game
 
 <Grid container alignItems="stretch" style={{}}>
   <Grid item xs={12} md={6} lg={4} style={{ padding: 6, display: 'flex' }}>

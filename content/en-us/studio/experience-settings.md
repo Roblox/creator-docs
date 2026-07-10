@@ -1,9 +1,9 @@
 ---
 title: Experience Settings
-description: The Experience Settings window contains Studio-level settings and customization options for an experience.
+description: The Experience Settings window contains Studio-level settings and customization options for a game.
 ---
 
-The **Experience Settings** window, accessible from Studio's **File** menu, contains a wide array of Studio-level settings and customization options for Roblox experiences, including settings for [permissions](#permissions), [monetization](#monetization), [security](#security), and [localization](#localization).
+The **Experience Settings** window, accessible from Studio's **File** menu, contains a wide array of Studio-level settings and customization options for Roblox games, including settings for [permissions](#permissions), [monetization](#monetization), [security](#security), and [localization](#localization).
 
 <Alert severity="warning">
 Many settings in this window modify underlying properties in your place file that aren’t visible in Studio or accessible with scripts. This can lead to unexpected or difficult-to-debug behavior, especially when working across teams or reverting changes. Make sure you fully understand the impact of each setting before applying changes.
@@ -11,7 +11,7 @@ Many settings in this window modify underlying properties in your place file tha
 
 ## Basic Info
 
-The **Basic Info** tab contains general settings for an experience, such as its name, description, and promotional images.
+The **Basic Info** tab contains general settings for a game, such as its name, description, and promotional images.
 
 <table>
 <thead>
@@ -23,19 +23,19 @@ The **Basic Info** tab contains general settings for an experience, such as its 
 <tbody>
   <tr>
     <td>**Name**</td>
-    <td>The experience's title.</td>
+    <td>The game's title.</td>
   </tr>
   <tr>
     <td>**Description**</td>
-    <td>A description of the experience that describes what a potential player should expect.</td>
+    <td>A description of the game that describes what a potential player should expect.</td>
   </tr>
 	<tr>
     <td>**Content Maturity Label**</td>
-    <td>[Content Maturity Labels](../production/promotion/content-maturity.md) provide information on the experience's main page about what kind of content the experience contains.</td>
+    <td>[Content Maturity Labels](../production/promotion/content-maturity.md) provide information on the game's main page about what kind of content the game contains.</td>
   </tr>
   <tr>
     <td>**Game Icon**</td>
-    <td>Lets you upload an [icon](../production/publishing/experience-icons.md) to represent your experience.</td>
+    <td>Lets you upload an [icon](../production/publishing/experience-icons.md) to represent your game.</td>
   </tr>
   <tr>
     <td>**Screenshots & Videos**</td>
@@ -43,7 +43,7 @@ The **Basic Info** tab contains general settings for an experience, such as its 
   </tr>
   <tr>
     <td>**Playable Devices**</td>
-    <td>Lets you enable each applicable device that supports your experience.</td>
+    <td>Lets you enable each applicable device that supports your game.</td>
   </tr>
 </tbody>
 </table>
@@ -60,18 +60,18 @@ The **Basic Info** tab contains general settings for an experience, such as its 
 <tbody>
   <tr>
     <td>**Enable Microphone**</td>
-    <td>Enables voice-eligible users to use voice chat within your experience. See [Voice Chat](../chat/voice-chat.md) for more information.</td>
+    <td>Enables voice-eligible users to use voice chat within your game. See [Voice Chat](../chat/voice-chat.md) for more information.</td>
   </tr>
   <tr>
     <td>**Enable Camera**</td>
-    <td>Enables eligible users to animate their avatar with their camera in your experience. See [Animate Your Avatar](https://en.help.roblox.com/hc/en-us/articles/17877687557396) for more information.</td>
+    <td>Enables eligible users to animate their avatar with their camera in your game. See [Animate Your Avatar](https://en.help.roblox.com/hc/en-us/articles/17877687557396) for more information.</td>
   </tr>
 </tbody>
 </table>
 
 ## Permissions
 
-The **Permissions** tab lets you control the audience for your experience.
+The **Permissions** tab lets you control the audience for your game.
 
 <table>
 <thead>
@@ -83,14 +83,14 @@ The **Permissions** tab lets you control the audience for your experience.
 <tbody>
   <tr>
     <td>**Playability**</td>
-    <td>Sets which users can access the experience.</td>
+    <td>Sets which users can access the game.</td>
   </tr>
 </tbody>
 </table>
 
 ## Monetization
 
-The **Monetization** tab contains settings that let you [monetize](../production/monetization/index.md) your experience.
+The **Monetization** tab contains settings that let you [monetize](../production/monetization/index.md) your game.
 
 <table>
 <thead>
@@ -102,7 +102,7 @@ The **Monetization** tab contains settings that let you [monetize](../production
 <tbody>
   <tr>
     <td>**Badges**</td>
-    <td>Lets you create and manage all [badges](../production/publishing/badges.md) for your experience.</td>
+    <td>Lets you create and manage all [badges](../production/publishing/badges.md) for your game.</td>
   </tr>
   <tr>
     <td>**Paid Access**</td>
@@ -114,7 +114,7 @@ The **Monetization** tab contains settings that let you [monetize](../production
   </tr>
   <tr>
     <td>**Developer&nbsp;Products**</td>
-    <td>Lets you create and manage all [developer products](../production/monetization/developer-products.md) for your experience.</td>
+    <td>Lets you create and manage all [developer products](../production/monetization/developer-products.md) for your game.</td>
   </tr>
 </tbody>
 </table>
@@ -124,7 +124,7 @@ The **Monetization** tab contains settings that let you [monetize](../production
 The **Security** tab contains settings related to network communication, sales, and teleports.
 
 <Alert severity="warning">
-You should only enable the following settings if you trust all assets from other users or groups within your experience, otherwise your experience is vulnerable to security risks.
+You should only enable the following settings if you trust all assets from other users or groups within your game, otherwise your game is vulnerable to security risks.
 </Alert>
 
 <table>
@@ -137,14 +137,14 @@ You should only enable the following settings if you trust all assets from other
 <tbody>
   <tr>
     <td>**Allow HTTP Requests**</td>
-    <td>Allows experiences' servers to issue requests to remote servers via `Class.HttpService`.</td>
+    <td>Allows game servers to issue requests to remote servers via `Class.HttpService`.</td>
   </tr>
   <tr>
     <td>**Secrets**</td>
     <td>Allows for the creation and configuration of `Datatype.Secret|Secrets` for local Studio sessions using `Class.HttpService`. For more information, see [Work with secrets](../cloud-services/secrets.md#local-secrets).</td>
   </tr>
   <tr>
-    <td>**Enable&nbsp;Studio&nbsp;Access to API Services**</td>
+    <td>**Enable Studio Access to API Services**</td>
     <td>Lets Studio access API services. This setting is useful for testing the implementation of services like [data stores](../cloud-services/data-stores).</td>
   </tr>
   <tr>
@@ -153,11 +153,11 @@ You should only enable the following settings if you trust all assets from other
   </tr>
   <tr>
     <td>**Allow Third Party Teleports**</td>
-    <td>Lets players [teleport](../projects/teleport.md) to other experiences.</td>
+    <td>Lets players [teleport](../projects/teleport.md) to other games.</td>
   </tr>
   <tr>
     <td>**Allow Mesh / Image APIs**</td>
-    <td>Lets you use `Class.EditableImage` and `Class.EditableMesh` in published experiences. To enable usage, you must be 13+ age verified and ID verified.</td>
+    <td>Lets you use `Class.EditableImage` and `Class.EditableMesh` in published games. To enable usage, you must be 13+ age verified and ID verified.</td>
   </tr>
 </tbody>
 </table>
@@ -176,18 +176,18 @@ The **Places** tab contains place-specific settings.
 <tbody>
   <tr>
     <td>**Create**</td>
-    <td>Lets you create a new place within your experience.</td>
+    <td>Lets you create a new place within your game.</td>
   </tr>
   <tr>
     <td>**&ctdot;**</td>
-    <td>Opens a pop-up menu with options to **Configure&nbsp;Place** (edit place-specific settings such as the maximum number of players), or **Version&nbsp;History** to view, download, and open any previous version of the experience.</td>
+    <td>Opens a pop-up menu with options to **Configure&nbsp;Place** (edit place-specific settings such as the maximum number of players), or **Version&nbsp;History** to view, download, and open any previous version of the game.</td>
   </tr>
 </tbody>
 </table>
 
 ## Localization
 
-The **Localization** tab contains language settings related to [localization](../production/localization/index.md) both within the experience and in the cloud.
+The **Localization** tab contains language settings related to [localization](../production/localization/index.md) both within the game and in the cloud.
 
 <table>
 <thead>
@@ -199,15 +199,15 @@ The **Localization** tab contains language settings related to [localization](..
 <tbody>
   <tr>
     <td>**Source Language**</td>
-    <td>Lets you choose the language that you used to create the experience.</td>
+    <td>Lets you choose the language that you used to create the game.</td>
   </tr>
   <tr>
     <td>**Automatic Text Capture**</td>
-    <td>Automatically captures text from the experience's UI while users are accessing the experience.</td>
+    <td>Automatically captures text from the game's UI while users are accessing the game.</td>
   </tr>
   <tr>
     <td>**Use Translated Content**</td>
-    <td>Enables translated content within the experience.</td>
+    <td>Enables translated content within the game.</td>
   </tr>
   <tr>
     <td>**Automatic Translation**</td>
@@ -218,7 +218,7 @@ The **Localization** tab contains language settings related to [localization](..
 
 ## World
 
-The **World** tab includes global settings for the experience, such as
+The **World** tab includes global settings for the game, such as
 gravity, character jump behavior, and walk speed.
 
 <table>
@@ -270,7 +270,7 @@ The **Other** tab includes settings that are typically reserved for special situ
   </tr>
   <tr>
     <td>**Shutdown All Servers**</td>
-    <td>Shuts down all servers currently running the experience.</td>
+    <td>Shuts down all servers currently running the game.</td>
   </tr>
 </tbody>
 </table>

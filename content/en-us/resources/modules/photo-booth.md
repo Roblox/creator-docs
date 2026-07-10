@@ -3,7 +3,7 @@ title: Photo Booth
 description: The Photo Booth module lets players strike a unique pose with a background.
 ---
 
-Taking a photo is a perfect way to commemorate a great experience. The **PhotoBooth** [developer module](../../resources/modules/index.md) is an easy-to-use photo staging tool which lets the players strike a unique pose with a background that represents their experience.
+Taking a photo is a perfect way to commemorate a great game. The **PhotoBooth** [developer module](../../resources/modules/index.md) is an easy-to-use photo staging tool which lets the players strike a unique pose with a background that represents their experience.
 
 <video src="../../assets/developer-modules/photo-booth/Showcase.mp4" controls width="100%"></video>
 
@@ -11,7 +11,7 @@ Taking a photo is a perfect way to commemorate a great experience. The **PhotoBo
 
 ### Installation
 
-To use the **PhotoBooth** module in an experience:
+To use the **PhotoBooth** module in a game:
 
 1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
@@ -27,7 +27,7 @@ To use the **PhotoBooth** module in an experience:
 
    <img src="../../assets/developer-modules/photo-booth/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **PhotoBooth** model into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **PhotoBooth** model into `Class.ReplicatedStorage`. Upon running the game the module will begin running.
 
 ### Position the booth
 

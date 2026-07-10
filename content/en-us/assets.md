@@ -12,13 +12,13 @@ export const sections = [
     ],
     content: [
       {
-        title: "Create in Studio, other third-party tools, or in experiences",
-        description: "Roblox Studio provides drag-and-drop tools and programmatic access to building and modeling with engine primitives such as parts and constraints. You can also import industry standard asset types for 3D modeling, audio, and more directly into Studio. Lastly, you can allow users to create assets directly in your experiences and save them to their own accounts.",
+        title: "Create in Studio, other third-party tools, or in games",
+        description: "Roblox Studio provides drag-and-drop tools and programmatic access to building and modeling with engine primitives such as parts and constraints. You can also import industry standard asset types for 3D modeling, audio, and more directly into Studio. Lastly, you can allow users to create assets directly in your games and save them to their own accounts.",
         image: "/assets/getting-started/platform-overview/Everything-You-Need.jpg",
         links: [
           { text: "Roblox Studio", href: "./art/overview-studio" },
           { text: "Third-party", href: "./art/overview-dcc" },
-          { text: "In-experience", href: "./projects/assets/in-experience-asset-creation" }
+          { text: "In-game", href: "./projects/assets/in-experience-asset-creation" }
         ]
       },
       {
@@ -41,7 +41,7 @@ export const sections = [
       },
       {
         title: "Sell on the Creator Store",
-        description: "The Creator Store is full of assets made by the community for people to use within their experiences. You can become a seller on the Creator Store to monetize any models or plugins that you create for United States Dollars (USD). Creator Store's real-world pricing model allows us to give 100% of net proceeds on transactions to creators, bypassing platform fees and DevEx rates.",
+        description: "The Creator Store is full of assets made by the community for people to use within their games. You can become a seller on the Creator Store to monetize any models or plugins that you create for United States Dollars (USD). Creator Store's real-world pricing model allows us to give 100% of net proceeds on transactions to creators, bypassing platform fees and DevEx rates.",
         image: "./assets/landing/creator-store.png",
         links: [
           { text: "Creator Store", href: "./production/creator-store" },

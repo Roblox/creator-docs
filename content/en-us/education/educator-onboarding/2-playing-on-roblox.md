@@ -5,12 +5,12 @@ next: /education/educator-onboarding/3-setting-up-a-roblox-classroom
 prev: /education/educator-onboarding/1-intro-to-roblox
 ---
 
-Included in this training is creating an account and learning how to navigate within Roblox experiences. For the second part, there is the option of joining a training game specially created to familiarize you with Roblox mechanics.
+Included in this training is creating an account and learning how to navigate within Roblox games. For the second part, there is the option of joining a training game specially created to familiarize you with Roblox mechanics.
 
 By the end of this article, you will:
 
 - Create and login into a Roblox account.
-- Understand the layout of the Roblox platform and how to launch experiences.
+- Understand the layout of the Roblox platform and how to launch games.
 - Learn basic skills in the Roblox client, such as avatar controls and camera manipulation.
 
 ## Create your account
@@ -40,7 +40,7 @@ href="https://en.help.roblox.com/hc/en-us/articles/203313300-The-Avatar-Shop"
 target="_blank" rel="noopener">Marketplace</a>.
 </Alert>
 
-Before moving onto the training experience, it's recommended you add an email to your account. This adds extra security to your account and ensures you don't get locked out if a password is forgotten.
+Before moving onto the training game, it's recommended you add an email to your account. This adds extra security to your account and ensures you don't get locked out if a password is forgotten.
 
 1. On the Roblox home page, in the top right, click the gear icon and select **Settings**.
 
@@ -59,32 +59,32 @@ Before moving onto the training experience, it's recommended you add an email to
 
 ## Learn Roblox client
 
-With an account created, you'll now launch your first Roblox experience. The **What is Roblox? - Training Experience** is designed by the Roblox team to introduce educators how to play Roblox and feel comfortable on the platform.
+With an account created, you'll now launch your first Roblox game. The **What is Roblox? - Training Game** is designed by the Roblox team to introduce educators how to play Roblox and feel comfortable on the platform.
 
-Alternatively, you can view the <a href="../../assets/education/legacy/Handout_-_Roblox_Client_Quick_Start_Guide.pdf">Roblox Platform Quick Start Guide</a>, a handout summarizing the interface and controls instead of joining the experience.
+Alternatively, you can view the <a href="../../assets/education/legacy/Handout_-_Roblox_Client_Quick_Start_Guide.pdf">Roblox Platform Quick Start Guide</a>, a handout summarizing the interface and controls instead of joining the game.
 
-### Experience Pages
+### Game Pages
 
-All Roblox experiences have their own page. This page includes a description and button used to open that specific experience in the Roblox client.
+All Roblox games have their own page. This page includes a description and button used to open that specific game in the Roblox client.
 
 A sample page is below.
 
 <img src="../../assets/education/legacy/module2-gamePage.png" width="80%" />
 
-### Launch the experience
+### Launch the game
 
-1. To start, go to the [Learn to Play Roblox](https://www.roblox.com/games/16279707695/Learn-to-Play-Roblox-Tutorial) experience.
+1. To start, go to the [Learn to Play Roblox](https://www.roblox.com/games/16279707695/Learn-to-Play-Roblox-Tutorial) game.
 
-2. On that page, click the **Play** button. If you already have Roblox installed, it'll open the experience. If not, permit Roblox to be installed onto your device.
+2. On that page, click the **Play** button. If you already have Roblox installed, it'll open the game. If not, permit Roblox to be installed onto your device.
 
    <img src="../../assets/education/legacy/module2-clickPlay.jpg" width="80%" />
 
-3. With the Roblox client open, go through the experience as instructed. This should take about 5–10 minutes. Come back to your web browser when you see a sign reading "Find new games!"
+3. With the Roblox client open, go through the game as instructed. This should take about 5–10 minutes. Come back to your web browser when you see a sign reading "Find new games!"
 
    <GridContainer numColumns="2">
      <figure>
        <img width="100%" img src="../../assets/education/legacy/module2-trainingExample.jpg" alt="" />
-       <figcaption>Example in-experience</figcaption>
+       <figcaption>Example in-game</figcaption>
      </figure>
      <figure>
        <img width="71%" img src="../../assets/education/legacy/module2-finishedTraining.jpg" alt="" />
@@ -94,7 +94,7 @@ A sample page is below.
 
 ### Desktop controls
 
-While all controls are introduced in the experience, here's a quick reference.
+While all controls are introduced in the game, here's a quick reference.
 
 <table>
 <tbody>

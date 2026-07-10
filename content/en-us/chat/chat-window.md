@@ -1,9 +1,9 @@
 ---
 title: Customize the chat window
-description: Customize the chat window and message UI of your in-experience text chat.
+description: Customize the chat window and message UI of your in-game text chat.
 ---
 
-The [in-experience text chat](../chat/in-experience-text-chat.md) system, powered by `Class.TextChatService`, allows players to easily communicate and socialize with each other in live experiences. In addition to supporting the default text chat, you can [customize](#chat-window-configuration) the front‑end user interface.
+The [in-game text chat](../chat/in-experience-text-chat.md) system, powered by `Class.TextChatService`, allows players to easily communicate and socialize with each other in live games. In addition to supporting the default text chat, you can [customize](#chat-window-configuration) the front‑end user interface.
 
 ## Chat window configuration
 
@@ -290,7 +290,7 @@ Appearance of the **channel tabs** is customizable through `Class.ChannelTabsCon
 
 ## Customize messages
 
-You can customize the appearance of chat message bodies and prefixes using `Class.ChatWindowMessageProperties` and `Class.TextChatService.OnChatWindowAdded` callbacks without overriding the existing UI. The customization options let you modify the appearance of chat messages to match your experience's theme, and you can also sort or highlight messages from different user groups by coloring prefixes or adding [chat tags](./examples/group-chat-tags.md).
+You can customize the appearance of chat message bodies and prefixes using `Class.ChatWindowMessageProperties` and `Class.TextChatService.OnChatWindowAdded` callbacks without overriding the existing UI. The customization options let you modify the appearance of chat messages to match your game's theme, and you can also sort or highlight messages from different user groups by coloring prefixes or adding [chat tags](./examples/group-chat-tags.md).
 
 <Alert severity="info">
 `Class.ChatWindowMessageProperties` and `Class.TextChatService.OnChatWindowAdded|OnChatWindowAdded` only affect the appearance of messages in the chat window. To customize chat bubbles, see [Bubble Chat](../chat/bubble-chat.md).
@@ -397,7 +397,7 @@ end
 
 When `Class.TextChatService.CreateDefaultTextChannels` is `true`, one of the default text channels is the `RBXSystem` channel. The default chat scripts automatically display system messages in this channel. You can customize the appearance of these messages using the `Class.TextChannel.OnIncomingMessage` callback.
 
-You might want to customize or alter the system messages that are automatically emitted by the chat system. Since the default system messages are localized for users, you should reference them by `Class.TextChatMessage.Metadata` in your [text chat callbacks](../chat/in-experience-text-chat.md#text-chat-hooks-and-callbacks) if you wish to customize their appearance. For example, you could use `Class.TextChatMessage.Metadata|Metadata` to identify system messages, error messages, or messages from specific systems in your experience.
+You might want to customize or alter the system messages that are automatically emitted by the chat system. Since the default system messages are localized for users, you should reference them by `Class.TextChatMessage.Metadata` in your [text chat callbacks](../chat/in-experience-text-chat.md#text-chat-hooks-and-callbacks) if you wish to customize their appearance. For example, you could use `Class.TextChatMessage.Metadata|Metadata` to identify system messages, error messages, or messages from specific systems in your game.
 
 ### System
 

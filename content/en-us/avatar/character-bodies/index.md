@@ -1,6 +1,6 @@
 ---
 title: Character bodies
-description: All Roblox users are represented by an avatar character which can be customized with body parts, accessories, and clothes from the Marketplace or within experiences.
+description: All Roblox users are represented by an avatar character which can be customized with body parts, accessories, and clothes from the Marketplace or within games.
 ---
 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/2My8jE47clI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
@@ -9,7 +9,7 @@ description: All Roblox users are represented by an avatar character which can b
 
 Every Roblox user is represented by a customizable character called an **avatar**. Avatars are character models with many specialized features that allow users to interact with the world and customize themselves with a wide range of clothing and accessories from the Marketplace.
 
-Custom avatars are first created in 3D modeling programs, such as [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview), before importing into Studio. To create a custom Roblox avatar character for your own experience, it's important to start with the following:
+Custom avatars are first created in 3D modeling programs, such as [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview), before importing into Studio. To create a custom Roblox avatar character for your own game, it's important to start with the following:
 
 - An advanced background with 3D modeling tools such as [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview).
 - An understanding of the [components that make up an avatar character](#components-of-an-avatar).

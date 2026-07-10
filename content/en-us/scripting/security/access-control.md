@@ -4,14 +4,14 @@ description: Learn what information and assets are visible to the client and sec
 ---
 
 <Alert severity = 'warning'>
-The following content covers various concepts and tactics to improve security and mitigate cheating in your Roblox experiences. It's highly recommended that all developers read through these to ensure that your experiences are secure and fair for all users. Check the sidebar for additional security topics.
+The following content covers various concepts and tactics to improve security and mitigate cheating in your Roblox games. It's highly recommended that all developers read through these to ensure that your games are secure and fair for all users. Check the sidebar for additional security topics.
 </Alert>
 
-Understanding what information and assets are visible to clients is critical for maintaining both the security and confidentiality of your experience. Developers often underestimate how much is visible to exploiters and replicated to clients. Exploiters have the ability to access "restricted" places within your universe if they can join a single place. They can view any content replicated to their client, regardless of whether or not it's visible or currently in use. Additionally, exploiters can decompile any replicated local scripts and ModuleScripts, even if they are never executed on the client.
+Understanding what information and assets are visible to clients is critical for maintaining both the security and confidentiality of your game. Developers often underestimate how much is visible to exploiters and replicated to clients. Exploiters have the ability to access "restricted" places within your universe if they can join a single place. They can view any content replicated to their client, regardless of whether or not it's visible or currently in use. Additionally, exploiters can decompile any replicated local scripts and ModuleScripts, even if they are never executed on the client.
 
 ## Client-side teleportation within universes
 
-Once inside a universe, clients can teleport to any place within that universe, potentially bypassing any intended access restrictions or progression gates. This can also lead to the unintended leak of unreleased content, for example from a development or staging experience. It is important to understand that:
+Once inside a universe, clients can teleport to any place within that universe, potentially bypassing any intended access restrictions or progression gates. This can also lead to the unintended leak of unreleased content, for example from a development or staging game. It is important to understand that:
 
 - Disabling "Direct Access" only removes the Join button from subplaces on the website — it does not prevent client-initiated teleports
 - Assume exploiters will discover the existence of all subplaces within your universe
@@ -24,10 +24,10 @@ Many developers attempt to prevent access by kicking unauthorized users from a s
 The most effective way to prevent unauthorized access via teleportation is to set **Access Control for Places** to **Secure within universe only** in the Creator Dashboard. This restricts all non-start places to server-initiated teleports only, blocking client-initiated teleports at the platform level before the player ever joins the subplace. Because the player never joins, no content replicates to them.
 
 <Alert severity='success'>
-Enabling **Secure within universe only** is the recommended setting for any experience with restricted subplaces, progression-gated areas, or test places that players should not have access to.
+Enabling **Secure within universe only** is the recommended setting for any game with restricted subplaces, progression-gated areas, or test places that players should not have access to.
 </Alert>
 
-For configuration steps and migration guidance for existing experiences that use client-initiated teleports, see [Teleport between places](../../projects/teleport.md#configure-secure-teleportation).
+For configuration steps and migration guidance for existing games that use client-initiated teleports, see [Teleport between places](../../projects/teleport.md#configure-secure-teleportation).
 
 ### Defense-in-depth for restricted places
 
@@ -51,7 +51,7 @@ Replication containers are top-level instances (parented under the DataModel) th
 
 ### Security implications of replication
 
-Any content that replicates to a client can be extracted and data-mined by an exploiter. As a general rule, avoid publishing or shipping any confidential content to the live production environment unless you are immediately prepared for it to be seen by users. Even if there is logic that gates the release or access of the content in-experience until a later date (or some other condition), assume that exploiters will find a way to discover and leak your content as soon as it is published.
+Any content that replicates to a client can be extracted and data-mined by an exploiter. As a general rule, avoid publishing or shipping any confidential content to the live production environment unless you are immediately prepared for it to be seen by users. Even if there is logic that gates the release or access of the content in-game until a later date (or some other condition), assume that exploiters will find a way to discover and leak your content as soon as it is published.
 
 Avoid overly descriptive or predictable names for sensitive instances, including but not limited to: scripts, remotes, and models. Having a predictable DataModel hierarchy makes it easier to develop exploits.
 

@@ -7,14 +7,14 @@ description: Explain how to generate translations in real time for dynamic conte
 The following feature is currently in early development and is subject to change. For the latest updates and changes, see the [announcement](https://devforum.roblox.com/t/introducing-the-real-time-translation-api/3550206).
 </Alert>
 
-The standard translation workflow detects strings in your experience based on how frequently they're viewed by players and adds them to your localization table for translation. It might miss uncommon strings and/or strings generated during gameplay, such as dynamically generated text or text created by players. You can use the translate text API to generate translations for these strings in real time, ensuring that your experience is fully localized.
+The standard translation workflow detects strings in your game based on how frequently they're viewed by players and adds them to your localization table for translation. It might miss uncommon strings and/or strings generated during gameplay, such as dynamically generated text or text created by players. You can use the translate text API to generate translations for these strings in real time, ensuring that your game is fully localized.
 
 ## Translate text into a player's language
 
 To translate text into a player's language, pass their `Class.Player.LocaleId` as the target language code. Below is an example of how you can get the player's locale ID in a client script and then pass it to a `Class.Script` in `Class.ServerScriptService` to make the translation request.
 
-- The translation API is an [Open Cloud API](../../cloud/index.md), meaning you need a [path](../../cloud/reference/patterns.md) to make a request. In this case, you need the universe ID, which can be found in the overflow menu of the experience tile on the [Creator Hub](https://create.roblox.com/dashboard/creations).
-- You must also include the [Open Cloud client package](../../production/promotion/experience-notifications.md#include-the-package) in your experience; the server script requires it.
+- The translation API is an [Open Cloud API](../../cloud/index.md), meaning you need a [path](../../cloud/reference/patterns.md) to make a request. In this case, you need the universe ID, which can be found in the overflow menu of the game tile on the [Creator Hub](https://create.roblox.com/dashboard/creations).
+- You must also include the [Open Cloud client package](../../production/promotion/experience-notifications.md#include-the-package) in your game; the server script requires it.
 
 ```lua title="Client script"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -40,7 +40,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ServerScriptService = game:GetService("ServerScriptService")
 local oc = require(ServerScriptService.OpenCloud.V2)
 
--- Find at https://create.roblox.com/dashboard/creations in the overflow menu of an experience tile
+-- Find at https://create.roblox.com/dashboard/creations in the overflow menu of a game tile
 local universeID = <your_universe_id>
 
 -- Create RemoteFunction
@@ -139,11 +139,11 @@ The real-time translation API currently only supports RCC authentication. As a r
 
 ## Limits
 
-Roblox uses the following formula to throttle requests for this API based on the number of players in your experience:
+Roblox uses the following formula to throttle requests for this API based on the number of players in your game:
 
-`max requests per minute per experience = 600 + (1.5 * number_of_concurrent_users)`
+`max requests per minute per game = 600 + (1.5 * number_of_concurrent_users)`
 
-There is also a combined limit of 150 requests per minute, per experience server for all Open Cloud APIs.
+There is also a combined limit of 150 requests per minute, per game server for all Open Cloud APIs.
 
 ## Supported languages
 

@@ -11,7 +11,7 @@ Before moving on, take time to check that your speeder works correctly.
 
    <img src="../../assets/education/general/play-button.png" width="360" />
 
-2. In the experience, walk up to the robot character under the spaceship sign and press <kbd>E</kbd> to open up a menu. On that screen, select **Race** and pick your speeder in the selection menu.
+2. In the game, walk up to the robot character under the spaceship sign and press <kbd>E</kbd> to open up a menu. On that screen, select **Race** and pick your speeder in the selection menu.
 
    <img src="../../assets/education/build-it-play-it-galactic-speedway/test-the-speeder/select-speeder.png" width="80%" />
 

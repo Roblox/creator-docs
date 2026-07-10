@@ -1,6 +1,6 @@
 ---
-title: In-experience leaderboards
-description: In-experience Leaderboards let you display user information to all users in the experience, such as top scores.
+title: In-game leaderboards
+description: In-game Leaderboards let you display user information to all users in the game, such as top scores.
 ---
 
 Roblox has a built-in **leaderboard system** that lets you display user information like scores, currency, or the fastest time in a race.
@@ -9,7 +9,7 @@ Roblox has a built-in **leaderboard system** that lets you display user informat
 
 ## Set up the leaderboard
 
-To set up the leaderboard and add players when they enter the experience:
+To set up the leaderboard and add players when they enter the game:
 
 1. Create a new `Class.Script` within `Class.ServerScriptService` and name it `Leaderboard`.
 
@@ -82,7 +82,7 @@ These lines accomplish the following:
    Note that the value of objects such as `Class.IntValue`, `Class.NumberValue`, and `Class.StringValue` must be set through their `Value` property, as in `gold.Value` on line 10.
    </Alert>
 
-4. The instance is parented to the `leaderstats` folder which adds it to the leaderboard. When a player enters the experience, their name appears on the board.
+4. The instance is parented to the `leaderstats` folder which adds it to the leaderboard. When a player enters the game, their name appears on the board.
 
    <img alt="Multiple players shown on leaderboard" src="../assets/players/leaderboard/Leaderboards-Multiple-Players.png" width="540" />
 

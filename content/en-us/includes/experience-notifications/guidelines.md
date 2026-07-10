@@ -7,7 +7,7 @@ title: include
 <Typography variant="subtitle2">Best practices</Typography>
 </AccordionSummary>
 <AccordionDetails>
-Notifications should be **personalized** to the receiver and should be based on in‑experience activity that's specifically relevant to the user. Inversely, notifications should not be of a generic, advertising nature.
+Notifications should be **personalized** to the receiver and should be based on in-game activity that's specifically relevant to the user. Inversely, notifications should not be of a generic, advertising nature.
 
 <Alert severity="success">
 <Typography variant="subtitle2">You're 2 races away from completing the weekly challenge!</Typography>
@@ -34,7 +34,7 @@ Ideally, notifications should also alert users of something they can take **imme
 <Typography variant="subtitle2">Respect community standards</Typography>
 </AccordionSummary>
 <AccordionDetails>
-All notification content and behaviors are subject to Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) and platform‑wide [text filtering](../../ui/text-filtering.md), regardless of your experience's [age guidelines](../../production/promotion/experience-guidelines.md). This means that if your experience is a 17+ experience, your notifications are still subject to the platform‑wide standards, **not** the [17+&nbsp;Policy Standards](https://en.help.roblox.com/hc/en-us/articles/15869919570708).
+All notification content and behaviors are subject to Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) and platform‑wide [text filtering](../../ui/text-filtering.md), regardless of your game's [age guidelines](../../production/promotion/experience-guidelines.md). This means that if your game is a 17+ game, your notifications are still subject to the platform‑wide standards, **not** the [17+&nbsp;Policy Standards](https://en.help.roblox.com/hc/en-us/articles/15869919570708).
 </AccordionDetails>
 </BaseAccordion>
 
@@ -77,6 +77,6 @@ Notification content is **not** permitted to incorporate dark patterns or other 
 <Typography variant="subtitle2">Do not gate gameplay</Typography>
 </AccordionSummary>
 <AccordionDetails>
-Experiences should **not** require users to turn on notifications in order to participate or advance in gameplay.
+Games should **not** require users to turn on notifications in order to participate or advance in gameplay.
 </AccordionDetails>
 </BaseAccordion>

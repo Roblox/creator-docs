@@ -9,11 +9,11 @@ prev: /tutorials/curriculums/building/work-with-parts
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/PqB6DC_kxHM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 </figure><br />
 
-**Assistant** is Roblox's AI helper that can help you create and code your experiences. In this chapter, let's walk through how to open Assistant in Studio, write requests that change part behavior, and playtest your results to see if you need to make any changes to the Assistant's code sample.
+**Assistant** is Roblox's AI helper that can help you create and code your games. In this chapter, let's walk through how to open Assistant in Studio, write requests that change part behavior, and playtest your results to see if you need to make any changes to the Assistant's code sample.
 
 ## Open Assistant
 
-Assistant is available in the top-right corner of this webpage, as well as directly in Studio. This second placement allows Assistant to directly reference everything that makes up your experience, then make suggestions on how you can add or edit 3D objects and scripts for your specific gameplay goals.
+Assistant is available in the top-right corner of this webpage, as well as directly in Studio. This second placement allows Assistant to directly reference everything that makes up your game, then make suggestions on how you can add or edit 3D objects and scripts for your specific gameplay goals.
 
 <img src="../../../assets/tutorials/building-lesson/Mezzanine-Assistant.png" alt="Assistant button indicated on the right side of Studio's mezzanine bar." width="800" />
 
@@ -133,7 +133,7 @@ To playtest Assistant's results:
 
    <img src="../../../assets/education/general/play-button.png" width="360" />
 
-1. In the experience, jump onto the first platform. If the code sample works correctly, yellow sparkles appear when your character touches the part.
+1. In the game, jump onto the first platform. If the code sample works correctly, yellow sparkles appear when your character touches the part.
 1. When you're done verifying the results, return to the top-left corner of Studio, then click the **Stop** button. Studio exits playtest mode.
 
    <img src="../../../assets/education/general/stop-button.png" width="360" />

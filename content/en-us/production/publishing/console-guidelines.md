@@ -3,10 +3,10 @@ title: Console development guidelines
 description: Explains design requirements to follow for publishing an experience to consoles.
 ---
 
-With 200M+ Xbox and PlayStation players, consoles present a major opportunity for you to attract more players. Compared to regular devices, designing for controllers and the 10-foot UI experience of consoles has some special guidelines that you can follow to help your experience succeed on consoles.
+With 200M+ Xbox and PlayStation players, consoles present a major opportunity for you to attract more players. Compared to regular devices, designing for controllers and the 10-foot UI experience of consoles has some special guidelines that you can follow to help your game succeed on consoles.
 
 <Alert severity="info">
-Experiences designed for consoles always need to provide [content maturity information](../../production/promotion/content-maturity.md) to ensure smooth releases and minimize the risk of being removed from consoles.
+Games designed for consoles always need to provide [content maturity information](../../production/promotion/content-maturity.md) to ensure smooth releases and minimize the risk of being removed from consoles.
 </Alert>
 
 ## Build for the 10ft experience
@@ -24,7 +24,7 @@ Implement your UI using relative sizes and relative positions to measure everyth
 - Creating designs that take into consideration large screen sizes, based on `Class.GuiService.ViewportDisplaySize`, where `Enum.DisplaySize.Large|Large` represents most TVs or larger.
 - Implementing `Class.ScrollingFrame` to reduce clutter on screen as the UI scales up.
 
-Note that some TVs will not show content fully to the edges of the screen due to historical and technical limitations, so you should put UI elements in TV‑safe areas to ensure important experience elements are always visible.
+Note that some TVs will not show content fully to the edges of the screen due to historical and technical limitations, so you should put UI elements in TV‑safe areas to ensure important game elements are always visible.
 
 <figure>
 <img src="../../assets/publishing/console/TV-Safe-Area.png" width="60%" alt="An example illustration showing the dimensions of the TV-safe and unsafe zone."/>
@@ -33,7 +33,7 @@ Note that some TVs will not show content fully to the edges of the screen due to
 
 ## Design for controllers
 
-Console experiences receive commands from players through input controllers, which require special designs for smooth interactions.
+Console games receive commands from players through input controllers, which require special designs for smooth interactions.
 
 <figure>
 <img src="../../assets/publishing/console/UI-Navigation.png" width="70%" />
@@ -41,13 +41,13 @@ Console experiences receive commands from players through input controllers, whi
 
 Apply the following concepts to simplify the UI design for consoles:
 
-- **Accessible navigation control** — Baseline navigation, including the four directions, select, and back, controls how players get around and interact with your content on consoles. Make sure players can reach all UI elements using these basic navigation controls, so they can easily access every interactive part of your experience.
+- **Accessible navigation control** — Baseline navigation, including the four directions, select, and back, controls how players get around and interact with your content on consoles. Make sure players can reach all UI elements using these basic navigation controls, so they can easily access every interactive part of your game.
 
 - **Default controller navigation** — Roblox provides both directional selection and virtual cursor as out‑of‑the‑box solutions, but if you have specific UI layouts, it's recommended that you think about bespoke controller navigation.
 
-- **Minimal controller input complexity** — Unlike tappable or clickable input methods, console players navigate by pressing one button at a time, so an action that takes one move on other devices might take extra moves with a controller. Make sure that key actions in your experience only take a few moves to access.
+- **Minimal controller input complexity** — Unlike tappable or clickable input methods, console players navigate by pressing one button at a time, so an action that takes one move on other devices might take extra moves with a controller. Make sure that key actions in your game only take a few moves to access.
 
-- **No chat window** — Regardless of how you customize the chat system, [disable the chat window](../../chat/chat-window.md#chat-window-configuration) for console experiences.
+- **No chat window** — Regardless of how you customize the chat system, [disable the chat window](../../chat/chat-window.md#chat-window-configuration) for console games.
 
 <Alert severity="info">
 As controllers aren't just for consoles and VR but also are available on devices such as desktop and mobile, minimizing the number of moves needed can enhance the UI for all devices and input types in addition to PlayStation and Xbox.
@@ -55,13 +55,13 @@ As controllers aren't just for consoles and VR but also are available on devices
 
 ### Add supplemental control
 
-Unlike mobiles and desktops, navigation is always sequential on consoles, so players can't jump between far away elements as quickly as on other devices. To enhance the speed of navigation, consider adding additional buttons and shortcuts for essential in-experience actions.
+Unlike mobiles and desktops, navigation is always sequential on consoles, so players can't jump between far away elements as quickly as on other devices. To enhance the speed of navigation, consider adding additional buttons and shortcuts for essential in-game actions.
 
 ### Accommodate dynamic button icons
 
-As your experience expands to more platforms, be sure to show button icons that match different devices. `Class.UserInputService` has two methods available that can achieve this:
+As your game expands to more platforms, be sure to show button icons that match different devices. `Class.UserInputService` has two methods available that can achieve this:
 
-- `Class.UserInputService:GetStringForKeyCode()` can convert the US query key codes to console keyboard layouts. It's helpful for showing your custom assets as button icons to match the look and feel of your experience.
+- `Class.UserInputService:GetStringForKeyCode()` can convert the US query key codes to console keyboard layouts. It's helpful for showing your custom assets as button icons to match the look and feel of your game.
 
 - `Class.UserInputService:GetImageForKeyCode()` returns Roblox default icons for the requested `Enum.KeyCode` as easy drop-in replacements.
 
@@ -124,4 +124,4 @@ Progressive disclosure defers advanced or rarely used features to a secondary sc
 
 ## Provide audio feedback
 
-Unlike desktop or mobile interfaces, on which interactions are typically silent or rely on subtle haptic feedback, you can add sound effects to improve console interactions. When players navigate through the UI using a controller, consider incorporating sound effects to confirm selections or signal menu traversal, which can elevate the overall experience.
+Unlike desktop or mobile interfaces, on which interactions are typically silent or rely on subtle haptic feedback, you can add sound effects to improve console interactions. When players navigate through the UI using a controller, consider incorporating sound effects to confirm selections or signal menu traversal, which can elevate the overall game.

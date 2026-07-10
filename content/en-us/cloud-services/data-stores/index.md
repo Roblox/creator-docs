@@ -4,19 +4,19 @@ description: How to implement data stores (DataStores) to store persistent data.
 comments: The Creator Hub links to some of the anchors on this page, so if you move any of the headers, the team might need to update the links.
 ---
 
-The `Class.DataStoreService` lets you store data that needs to persist between sessions, like items in a player's inventory or skill points. Data stores are consistent per experience, so any place in an experience can access and change the same data, including places on different servers.
+The `Class.DataStoreService` lets you store data that needs to persist between sessions, like items in a player's inventory or skill points. Data stores are consistent per game, so any place in a game can access and change the same data, including places on different servers.
 
 If you want to add granular permission control to your data stores and access them outside of Studio or Roblox servers, you can use [Open Cloud APIs for data stores](/cloud/reference/DataStore).
 
-To view and monitor all the data stores in an experience through the Creator Hub, use the [Data Stores Manager](./data-stores-manager.md).
+To view and monitor all the data stores in a game through the Creator Hub, use the [Data Stores Manager](./data-stores-manager.md).
 
 For temporary data that you need to update or access frequently, use [memory stores](./../memory-stores/index.md).
 
 ## Enable Studio access
 
-By default, experiences tested in Studio can't access data stores, so you must first enable them. Accessing data stores in Studio can be dangerous for live experiences because Studio accesses the same data stores as the client application. To avoid overwriting production data, do not enable this setting for live experiences. Instead, enable it for a separate test version of the experience.
+By default, games tested in Studio can't access data stores, so you must first enable them. Accessing data stores in Studio can be dangerous for live games because Studio accesses the same data stores as the client application. To avoid overwriting production data, do not enable this setting for live games. Instead, enable it for a separate test version of the game.
 
-To enable Studio access in a [published](../../production/publishing/publish-games-and-places.md) experience:
+To enable Studio access in a [published](../../production/publishing/publish-games-and-places.md) game:
 
 1. Open Studio's **File**&nbsp;⟩ **Experience Settings** window.
 2. Navigate to **Security**.
@@ -25,15 +25,15 @@ To enable Studio access in a [published](../../production/publishing/publish-gam
 
 ## Access data stores
 
-To access a data store inside an experience:
+To access a data store inside a game:
 
 1. Add `Class.DataStoreService` to a server-side `Class.Script|Script`.
-2. Use the `Class.DataStoreService:GetDataStore()|GetDataStore()` function and specify the name of the data store you want to use. If the data store doesn't exist, Studio creates one when you save your experience data for the first time.
+2. Use the `Class.DataStoreService:GetDataStore()|GetDataStore()` function and specify the name of the data store you want to use. If the data store doesn't exist, Studio creates one when you save your game data for the first time.
 
 ```lua
 local DataStoreService = game:GetService("DataStoreService")
 
-local experienceStore = DataStoreService:GetDataStore("PlayerExperience")
+local gameStore = DataStoreService:GetDataStore("PlayerGame")
 ```
 
 <Alert severity="warning">
@@ -42,7 +42,7 @@ local experienceStore = DataStoreService:GetDataStore("PlayerExperience")
 
 ## Create data
 
-A data store is essentially a dictionary, similar to a Luau table. A unique **key** indexes each value in the data store, like a user's unique `Class.Player.UserId` or a named string for an experience promo.
+A data store is essentially a dictionary, similar to a Luau table. A unique **key** indexes each value in the data store, like a user's unique `Class.Player.UserId` or a named string for a game promo.
 
 <table>
 <thead>
@@ -92,10 +92,10 @@ To create a new entry, call `Class.GlobalDataStore:SetAsync()|SetAsync()` with t
 ```lua
 local DataStoreService = game:GetService("DataStoreService")
 
-local experienceStore = DataStoreService:GetDataStore("PlayerExperience")
+local gameStore = DataStoreService:GetDataStore("PlayerGame")
 
 local success, errorMessage = pcall(function()
-	experienceStore:SetAsync("User_1234", 50)
+	gameStore:SetAsync("User_1234", 50)
 end)
 if not success then
 	print(errorMessage)
@@ -152,13 +152,13 @@ To read the value of a data store entry, call `Class.GlobalDataStore:GetAsync()|
 ```lua
 local DataStoreService = game:GetService("DataStoreService")
 
-local experienceStore = DataStoreService:GetDataStore("PlayerExperience")
+local gameStore = DataStoreService:GetDataStore("PlayerGame")
 
-local success, currentExperience = pcall(function()
-	return experienceStore:GetAsync("User_1234")
+local success, currentGame = pcall(function()
+	return gameStore:GetAsync("User_1234")
 end)
 if success then
-	print(currentExperience)
+	print(currentGame)
 end
 ```
 
@@ -173,13 +173,13 @@ To increment an integer in a data store, call `Class.GlobalDataStore:IncrementAs
 ```lua
 local DataStoreService = game:GetService("DataStoreService")
 
-local experienceStore = DataStoreService:GetDataStore("PlayerExperience")
+local gameStore = DataStoreService:GetDataStore("PlayerGame")
 
-local success, newExperience = pcall(function()
-	return experienceStore:IncrementAsync("Player_1234", 1)
+local success, newGame = pcall(function()
+	return gameStore:IncrementAsync("Player_1234", 1)
 end)
 if success then
-	print(newExperience)
+	print(newGame)
 end
 ```
 
@@ -221,13 +221,13 @@ To manage metadata, expand the `Class.GlobalDataStore:SetAsync()|SetAsync()`, `C
     ```lua
     local DataStoreService = game:GetService("DataStoreService")
 
-    local experienceStore = DataStoreService:GetDataStore("PlayerExperience")
+    local gameStore = DataStoreService:GetDataStore("PlayerGame")
 
     local setOptions = Instance.new("DataStoreSetOptions")
-    setOptions:SetMetadata({["ExperienceElement"] = "Fire"})
+    setOptions:SetMetadata({["GameElement"] = "Fire"})
 
     local success, errorMessage = pcall(function()
-        experienceStore:SetAsync("User_1234", 50, {1234}, setOptions)
+        gameStore:SetAsync("User_1234", 50, {1234}, setOptions)
     end)
     if not success then
         print(errorMessage)
@@ -245,13 +245,13 @@ To manage metadata, expand the `Class.GlobalDataStore:SetAsync()|SetAsync()`, `C
   ```lua
   local DataStoreService = game:GetService("DataStoreService")
 
-  local experienceStore = DataStoreService:GetDataStore("PlayerExperience")
+  local gameStore = DataStoreService:GetDataStore("PlayerGame")
 
-  local success, currentExperience, keyInfo = pcall(function()
-      return experienceStore:GetAsync("User_1234")
+  local success, currentGame, keyInfo = pcall(function()
+      return gameStore:GetAsync("User_1234")
   end)
   if success then
-      print(currentExperience)
+      print(currentGame)
       print(keyInfo.Version)
       print(keyInfo.CreatedTime)
       print(keyInfo.UpdatedTime)

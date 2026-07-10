@@ -1,9 +1,9 @@
 ---
 title: Add voice chat
-description: Explains how to add different forms of voice chat to your experiences.
+description: Explains how to add different forms of voice chat to your games.
 ---
 
-**Voice chat** is a proximity-based chat feature that simulates realistic communication by adjusting the volume of players speaking as they move closer or further from one another in the 3D space. By letting players talk to each other with their microphones, they are able to socialize and strategize together in real time across the globe to complete your experience's objectives.
+**Voice chat** is a proximity-based chat feature that simulates realistic communication by adjusting the volume of players speaking as they move closer or further from one another in the 3D space. By letting players talk to each other with their microphones, they are able to socialize and strategize together in real time across the globe to complete your game's objectives.
 
 Using the [Gingerbread Island - Voice Chat](https://www.roblox.com/games/91891961746476/Gingerbread-Island-Voice-Chat) `.rbxl` file as a reference, this tutorial shows you how to incorporate different forms of voice chat into your gameplay, including guidance on:
 
@@ -21,7 +21,7 @@ Voice chat is only available to players who are at least 13 years of age and hav
 
 In order for team chat, push to chat, or time-based chat to work appropriately, you must [configure your voice chat setup](../../../chat/voice-chat.md#enable-voice-chat) to enable voice chat and create the appropriate audio objects necessary for picking up and emitting audio within the 3D environment.
 
-When players join your experience, your voice chat setup now:
+When players join your game, your voice chat setup now:
 
 - Allows voice-eligible players to use their microphones.
 - Creates and parents an `Class.AudioDeviceInput` object under each voice-eligible `Class.Player` object.
@@ -34,7 +34,7 @@ The following sections detail three unique voice chat configurations using these
 
 ## Add team chat
 
-**Team chat** is a voice chat configuration in which only players on the same team can speak or hear one another in an experience. Integrating team chat into your gameplay is useful when you want players to collaborate and strategize together to solve problems in the experiences, such as coordinating information for enemy team positions, resources, and assignments.
+**Team chat** is a voice chat configuration in which only players on the same team can speak or hear one another in a game. Integrating team chat into your gameplay is useful when you want players to collaborate and strategize together to solve problems in the game, such as coordinating information for enemy team positions, resources, and assignments.
 
 To recreate the team voice chat in the sample [Gingerbread Island - Voice Chat](https://www.roblox.com/games/91891961746476/Gingerbread-Island-Voice-Chat) place file:
 
@@ -121,7 +121,7 @@ To recreate the team voice chat in the sample [Gingerbread Island - Voice Chat](
      <Typography variant="h4">Code explanation</Typography>
    </AccordionSummary>
    <AccordionDetails>
-      The script starts by getting the `Class.Teams` and `Class.Players` services so that it can use their out-of-the-box functionality to sort players into teams as soon as they join the experience. For example, without any additional scripting effort, the `Class.Teams` service handles actions like:
+      The script starts by getting the `Class.Teams` and `Class.Players` services so that it can use their out-of-the-box functionality to sort players into teams as soon as they join the game. For example, without any additional scripting effort, the `Class.Teams` service handles actions like:
 
       - Sorting and balancing players evenly into each team.
       - Grouping players under their team on the leaderboard.
@@ -137,17 +137,17 @@ To recreate the team voice chat in the sample [Gingerbread Island - Voice Chat](
 
       The remainder of the script controls how these functions and event listeners work together:
 
-      - When a new player joins the experience, the script verifies if the player has a microphone and updates their team.
+      - When a new player joins the game, the script verifies if the player has a microphone and updates their team.
       - When the script detects a new `Class.AudioDeviceInput` object, it calls `updateTeam` for their respective red or blue team.
-      - As players join or leave the experience, the script connects to the `PlayerAdded` and `PlayerRemoved` events to update each team's settings.
+      - As players join or leave the game, the script connects to the `PlayerAdded` and `PlayerRemoved` events to update each team's settings.
    </AccordionDetails>
    </BaseAccordion>
 
-1. Playtest the experience with a couple friends to verify that teammates from each team can only hear each other through voice chat.
+1. Playtest the game with a couple friends to verify that teammates from each team can only hear each other through voice chat.
 
 ## Add push to chat
 
-**Push to chat** is a voice chat configuration in which players are only able to activate their microphone within an experience while they press and hold a specific button on their device. Integrating push to chat into your gameplay is useful when you want players to have more privacy and control when they want to be heard over other players and ambient noise.
+**Push to chat** is a voice chat configuration in which players are only able to activate their microphone within a game while they press and hold a specific button on their device. Integrating push to chat into your gameplay is useful when you want players to have more privacy and control when they want to be heard over other players and ambient noise.
 
 To recreate the push to voice chat in the sample [Gingerbread Island - Voice Chat](https://www.roblox.com/games/91891961746476/Gingerbread-Island-Voice-Chat) place file:
 
@@ -184,7 +184,7 @@ To recreate the push to voice chat in the sample [Gingerbread Island - Voice Cha
    <AccordionDetails>
       The script starts by getting:
 
-      - The `Class.Players` service so that it can reference all players within the experience.
+      - The `Class.Players` service so that it can reference all players within the game.
       - The `Class.UserInputService` service so that it can check when a player presses buttons on their device.
       - The local player's `Class.AudioDeviceInput` object, or physical microphone on their device.
 
@@ -197,7 +197,7 @@ To recreate the push to voice chat in the sample [Gingerbread Island - Voice Cha
    </AccordionDetails>
    </BaseAccordion>
 
-1. Playtest the experience to verify that players can only hear each other through voice chat when they are pressing the `V` key.
+1. Playtest the game to verify that players can only hear each other through voice chat when they are pressing the `V` key.
 
 ## Add time-based chat
 
@@ -234,11 +234,11 @@ To recreate the time-based voice chat in the sample [Gingerbread Island - Voice 
      <Typography variant="h4">Code explanation</Typography>
    </AccordionSummary>
    <AccordionDetails>
-      This script starts by getting the `Class.Players` service so it can reference its functionality to manage all players in the experience. It then sets a flag `muteAll` to **false**, which the following `toggleMuteAll` function uses to toggle voice chat on and off.
+      This script starts by getting the `Class.Players` service so it can reference its functionality to manage all players in the game. It then sets a flag `muteAll` to **false**, which the following `toggleMuteAll` function uses to toggle voice chat on and off.
 
       Let's review the `toggleMuteAll` function:
 
-      - It starts by looping through all players in the experience using `Class.Players.GetPlayers`.
+      - It starts by looping through all players in the game using `Class.Players.GetPlayers`.
       - For each player, it checks to see if it has a child `Class.AudioDeviceInput` object, or physical microphone on their device.
       - If they do, the function sets the `Class.AudioDeviceInput` object's `Class.AudioDeviceInput.Muted|Muted` property to the value of `muteAll`. For example, if `muteAll` is **true**, the player's microphone is disabled, and if `muteAll` is **false**, the player's microphone is enabled.
 
@@ -246,4 +246,4 @@ To recreate the time-based voice chat in the sample [Gingerbread Island - Voice 
    </AccordionDetails>
    </BaseAccordion>
 
-1. Playtest the experience to verify that players can only hear each other through voice chat in 15 second increments.
+1. Playtest the game to verify that players can only hear each other through voice chat in 15 second increments.

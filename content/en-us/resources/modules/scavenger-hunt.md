@@ -1,9 +1,9 @@
 ---
 title: Scavenger Hunt
-description: The Scavenger Hunt module gives players an inherently gamified way to explore an experience.
+description: The Scavenger Hunt module gives players an inherently gamified way to explore a game.
 ---
 
-The **ScavengerHunt** [developer module](../../resources/modules/index.md) gives players an inherently gamified way to explore your experience, organically introducing them to the entire place. Player progress is persistent, so scavenger hunts can continue across sessions.
+The **ScavengerHunt** [developer module](../../resources/modules/index.md) gives players an inherently gamified way to explore your game, organically introducing them to the entire place. Player progress is persistent, so scavenger hunts can continue across sessions.
 
 <video src="../../assets/developer-modules/scavenger-hunt/Showcase.mp4" controls width="100%"></video>
 
@@ -15,7 +15,7 @@ This module utilizes [data stores](../../cloud-services/data-stores/index.md). T
 
 ### Installation
 
-To use the **ScavengerHunt** module in an experience:
+To use the **ScavengerHunt** module in a game:
 
 1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
@@ -31,7 +31,7 @@ To use the **ScavengerHunt** module in an experience:
 
    <img src="../../assets/developer-modules/scavenger-hunt/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **ScavengerHunt** model into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **ScavengerHunt** model into `Class.ReplicatedStorage`. Upon running the game the module will begin running.
 
 ### Use tokens
 
@@ -111,7 +111,7 @@ The module is preconfigured to work for most use cases, but it can be easily cus
 
 Every time a player collects a token or enters a region, the [collected](#collected) event fires. You can listen to this event from a server-side `Class.Script` and respond accordingly. The connected function receives the `Class.Player` that collided with the token or entered the region and that token or region's name.
 
-Similarly, when a player collects **all** tokens or enters **all** tagged regions, the [allCollected](#allcollected) event fires and the connected function receives the associated `Class.Player`. This function is only fired once per player and it can be used to reward that player with a [badge](../../production/publishing/badges.md), access to a new area, [in-experience currency](../../production/monetization/developer-products.md), etc.
+Similarly, when a player collects **all** tokens or enters **all** tagged regions, the [allCollected](#allcollected) event fires and the connected function receives the associated `Class.Player`. This function is only fired once per player and it can be used to reward that player with a [badge](../../production/publishing/badges.md), access to a new area, [in-game currency](../../production/monetization/developer-products.md), etc.
 
 ```lua title="Script" highlight="5-7, 9-11"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -500,7 +500,7 @@ Overrides default server-side configuration options through the following keys/v
 	</tr>
 	<tr>
 		<td>`resetOnPlayerRemoving`</td>
-		<td>If true, resets the user's progress when they leave the experience; convenient for not saving progress while testing the scavenger hunt.</td>
+		<td>If true, resets the user's progress when they leave the game; convenient for not saving progress while testing the scavenger hunt.</td>
 		<td>false</td>
 	</tr>
 </tbody>

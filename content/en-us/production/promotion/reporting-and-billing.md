@@ -69,7 +69,7 @@ Ads Manager provides accurate and transparent reporting through the use of click
   </tr>
   <tr>
     <td>Plays</td>
-    <td>The number of times users entered your experience.</td>
+    <td>The number of times users entered your game.</td>
   </tr>
   <tr>
     <td>Play rate</td>
@@ -160,7 +160,7 @@ Ads Manager provides accurate and transparent reporting through the use of click
   </tr>
   <tr>
     <td>Plays</td>
-    <td>The number of times users entered your experience.</td>
+    <td>The number of times users entered your game.</td>
   </tr>
   <tr>
     <td>Play rate</td>
@@ -223,7 +223,7 @@ Ads Manager provides accurate and transparent reporting through the use of click
   </tr>
   <tr>
     <td>Plays</td>
-    <td>The number of times users entered your experience.</td>
+    <td>The number of times users entered your game.</td>
   </tr>
   <tr>
     <td>Play rate</td>

@@ -9,7 +9,7 @@ Roblox's **dynamic clouds** are realistic clouds that drift slowly across the sk
 
 ## Enable clouds
 
-You can manage dynamic clouds in an experience through the `Class.Clouds` object. While you can place this object anywhere for organization or replication purposes, clouds only render if you parent the object under the `Class.Terrain` class.
+You can manage dynamic clouds in a game through the `Class.Clouds` object. While you can place this object anywhere for organization or replication purposes, clouds only render if you parent the object under the `Class.Terrain` class.
 
 To enable dynamic clouds:
 

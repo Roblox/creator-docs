@@ -1,6 +1,6 @@
 ---
 title: Matchmaking
-description: Match players to servers inside your experience.
+description: Match players to servers inside your game.
 ---
 
 Matchmaking is the process of matching players to servers based on player characteristics like age, language, skill level, and other gameplay preferences.
@@ -9,7 +9,7 @@ Matchmaking is the process of matching players to servers based on player charac
 
 ## How matchmaking works
 
-When a player tries to join your experience, the matchmaking service finds all eligible servers that the player can join, scores these servers using signals, and matches the player to the server with the highest score.
+When a player tries to join your game, the matchmaking service finds all eligible servers that the player can join, scores these servers using signals, and matches the player to the server with the highest score.
 
 The matchmaking flow works like this:
 
@@ -52,7 +52,7 @@ For a list of all existing Roblox signals, see [Existing signals](./attributes-a
 
 ## Custom matchmaking
 
-When a player joins your experience, matchmaking assigns a score to each running server based on the weighted sum of the server's signal values. You can customize this process by adjusting the weight of each of your signals to change how much each signal matters in the scoring of servers. Increasing the weight of the latency signal, for example, means the matchmaking algorithm prioritizes servers with lower ping for smoother gameplay.
+When a player joins your game, matchmaking assigns a score to each running server based on the weighted sum of the server's signal values. You can customize this process by adjusting the weight of each of your signals to change how much each signal matters in the scoring of servers. Increasing the weight of the latency signal, for example, means the matchmaking algorithm prioritizes servers with lower ping for smoother gameplay.
 
 After adjusting signal weights, you can preview the impact of these new weights on matchmaking server selection by evaluating them on mock servers.
 

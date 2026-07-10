@@ -1,6 +1,6 @@
 ---
 title: Create a GUI
-description: Create a battle royale experience in Roblox Studio. Create and code a GUI that displays a game status during a match.
+description: Create a battle royale game in Roblox Studio. Create and code a GUI that displays a game status during a match.
 next: /education/battle-royale-series/ending-matches
 prev: /education/battle-royale-series/timers-and-events
 ---

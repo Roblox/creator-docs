@@ -1,6 +1,6 @@
 ---
 title: In-game sounds
-description: The process for creating positional and feedback sounds to enhance an experience.
+description: The process for creating positional and feedback sounds to enhance a game.
 ---
 
 In addition to background music, in-game audio can enhance a player's experience. This tutorial will cover two forms of in-game sounds: **positional** and **feedback** sounds.
@@ -32,11 +32,11 @@ When a **Sound** object is parented to a part or attachment, it becomes position
    Custom sounds can be imported using the [Asset Manager](../../../projects/assets/manager.md). Additionally, free sounds uploaded by Roblox and the community can be found using the [Toolbox](../../../projects/assets/toolbox.md).
    </Alert>
 
-3. For continuous playback when the experience starts, toggle **Playing** and **Looped** to be **on**.
+3. For continuous playback when the game starts, toggle **Playing** and **Looped** to be **on**.
 
    ![alt](../../../assets/tutorials/in-game-sounds/ingameSounds-looping.png)
 
-4. Test the experience to confirm you hear the waterfall ambience.
+4. Playtest the game to confirm you hear the waterfall ambience.
 
 ### Adjust sound distance
 
@@ -81,7 +81,7 @@ The remainder of this tutorial uses a pre-made model. This model includes parts 
 
 - From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../../projects/assets/toolbox.md) and select the **Inventory** tab.
 - Make sure the dropdown is on **My Models**.
-- Select the **Collectable Gems** model to add it into the experience.
+- Select the **Collectable Gems** model to add it into the game.
 
 1. In **SoundService**, create a new **Sound** named **FeedbackSound**.
 
@@ -147,7 +147,7 @@ The remainder of this tutorial uses a pre-made model. This model includes parts 
    end
    ```
 
-3. Test the experience to confirm that when the player touches a collectable, it both disappears and plays a sound.
+3. Playtest the experigameence to confirm that when the player touches a collectable, it both disappears and plays a sound.
 
    <video controls muted>
    <source src="../../../assets/tutorials/in-game-sounds/ingameSounds-collectables.mp4" />

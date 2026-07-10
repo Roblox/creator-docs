@@ -1,30 +1,30 @@
 ---
-title: Create your first experience
-description: Explains the process of creating your first experience in Roblox Studio.
+title: Create your first game
+description: Explains the process of creating your first game in Roblox Studio.
 ---
 
-After you complete the onboarding tour and are familiar with Roblox Studio's user interface, you're ready to start creating experiences on the platform.
+After you complete the onboarding tour and are familiar with Roblox Studio's user interface, you're ready to start creating games on the platform.
 
-Using a sample [high-quality catapult](https://create.roblox.com/store/asset/17266332444/IntroToStudioCatapult) asset pack, this tutorial walks you through the creation process for an experience in which players can launch five projectiles toward targets on floating platforms, including guidance on:
+Using a sample [high-quality catapult](https://create.roblox.com/store/asset/17266332444/IntroToStudioCatapult) asset pack, this tutorial walks you through the creation process for a game in which players can launch five projectiles toward targets on floating platforms, including guidance on:
 
 - Building and organizing a data model for a single place using one of Studio's project templates.
 - Customizing both primitive and complex 3D objects from the Creator Store with unique properties for your own gameplay requirements.
 - Organizing and placing scripts in their proper locations so the Roblox Engine can properly simulate and render gameplay.
 - Playtesting and publishing your creation to a global audience that accesses the platform using a variety of devices.
 
-After you complete this process, you can learn how to recreate a simple 3D platformer experience with the [Core curriculum](../curriculums/core/index.md), experiment with different use case tutorials, or start making your own projects.
+After you complete this process, you can learn how to recreate a simple 3D platformer game with the [Core curriculum](../curriculums/core/index.md), experiment with different use case tutorials, or start making your own projects.
 
 <img src="../../assets/getting-started/Overview.jpg" alt="" width="90%" />
 
 ## Create a project
 
-A **project** is a collection of assets, settings, and other resources that together represent an experience. All projects start with a single **place** that players load into when they join an experience, but you can create additional places within that same experience to organize assets for different gameplay areas. For example, if you want players to join a dungeon before teleporting to either a vast desert or spooky island, you can organize the assets for each area into their own place.
+A **project** is a collection of assets, settings, and other resources that together represent a game. All projects start with a single **place** that players load into when they join a game, but you can create additional places within that same game to organize assets for different gameplay areas. For example, if you want players to join a dungeon before teleporting to either a vast desert or spooky island, you can organize the assets for each area into their own place.
 
 <figure>
-<img src="../../assets/publishing/experiences-places-assets/Experience-Hierarchy.png" alt="An experience grouping of three individual places with unique environments." width="800" />
+<img src="../../assets/publishing/experiences-places-assets/Experience-Hierarchy.png" alt="A game grouping of three individual places with unique environments." width="800" />
 </figure>
 
-A place's object hierarchy is its **data model**, and it describes everything that compiles that gameplay area, such as the objects that make up the 3D world to objects that control runtime behavior. When you first open a project, the starting place's data model is relatively simple, but it can quickly become more complex depending on the amount of objects, interactivity, or behavior you want to implement in your experience.
+A place's object hierarchy is its **data model**, and it describes everything that compiles that gameplay area, such as the objects that make up the 3D world to objects that control runtime behavior. When you first open a project, the starting place's data model is relatively simple, but it can quickly become more complex depending on the amount of objects, interactivity, or behavior you want to implement in your game.
 
 <GridContainer numColumns="2">
   <figure>
@@ -37,9 +37,9 @@ A place's object hierarchy is its **data model**, and it describes everything th
   </figure>
 </GridContainer>
 
-For your first experience, this tutorial teaches you how to build and organize a data model for a single place using one of Studio's project templates. **Project templates** are useful because they provide a set of default objects in the starting place's data model that you can use to build experiences for different genres.
+For your first game, this tutorial teaches you how to build and organize a data model for a single place using one of Studio's project templates. **Project templates** are useful because they provide a set of default objects in the starting place's data model that you can use to build games for different genres.
 
-For example, if you want to build a roleplay experience with a sprawling city, you can open the [Modern City](https://www.roblox.com/games/13165709401/Modern-City) template that includes reusable wall, window, and door objects you can snap together to create unique building variations. Similarly, if you want to build a racing experience, you can open the [Racing](https://www.roblox.com/games/16078915506/Racing) template that includes a working race car and winding track object you can restructure in countless configurations.
+For example, if you want to build a roleplay game with a sprawling city, you can open the [Modern City](https://www.roblox.com/games/13165709401/Modern-City) template that includes reusable wall, window, and door objects you can snap together to create unique building variations. Similarly, if you want to build a racing game, you can open the [Racing](https://www.roblox.com/games/16078915506/Racing) template that includes a working race car and winding track object you can restructure in countless configurations.
 
 <GridContainer numColumns="2">
   <figure>
@@ -52,12 +52,12 @@ For example, if you want to build a roleplay experience with a sprawling city, y
   </figure>
 </GridContainer>
 
-To keep things simple, this tutorial instructs you to create a project with the [Baseplate](https://www.roblox.com/games/95206881/Baseplate) template because it includes two default objects that are important for almost every experience on the platform:
+To keep things simple, this tutorial instructs you to create a project with the [Baseplate](https://www.roblox.com/games/95206881/Baseplate) template because it includes two default objects that are important for almost every game on the platform:
 
-- **Spawn location** – A `Class.SpawnLocation` object is where player characters appear in the 3D space when they join an experience, as well as where they respawn when their health reaches zero.
+- **Spawn location** – A `Class.SpawnLocation` object is where player characters appear in the 3D space when they join a game, as well as where they respawn when their health reaches zero.
 - **Baseplate** – A baseplate is a floor with a 4x4 grid texture.
 
-This template is a great starting point to create your first experience because it provides a neutral world and a floor that aligns with stud measurements that you can use to position and orient 3D objects along a grid. Studs are Studio's base unit of length, and each stud equates to about 28 cm. For more information on Studio's primary units, see [Roblox Units](../../physics/units.md).
+This template is a great starting point to create your first game because it provides a neutral world and a floor that aligns with stud measurements that you can use to position and orient 3D objects along a grid. Studs are Studio's base unit of length, and each stud equates to about 28 cm. For more information on Studio's primary units, see [Roblox Units](../../physics/units.md).
 
 <GridContainer numColumns="2">
   <figure>
@@ -71,7 +71,7 @@ This template is a great starting point to create your first experience because 
 To open a project with the Baseplate template:
 
 1. Open **Roblox Studio**. The landing page displays all available project templates.
-1. Select the **Baseplate** template tile. Studio opens a new experience with a spawn location and a baseplate.
+1. Select the **Baseplate** template tile. Studio opens a new game with a spawn location and a baseplate.
 
    <img src="../../assets/getting-started/New-Template-With-Spawn-Location.jpg" width="80%" alt="New Baseplate template open in Studio with the default spawn location highlighted." />
 
@@ -84,7 +84,7 @@ There are several types of `Class.BasePart` objects, but the most common are:
 - **Parts** – A `Class.Part` object is Studio's primitive 3D object that comes in five different shapes: ball, block, cylinder, wedge, and corner wedge.
 - **Meshes** – A `Class.MeshPart` object is a collection of vertices, edges, and faces that make up an object from a third-party modeling application.
 
-To help you become familiar with both types of 3D objects, this tutorial provides you an asset pack that includes the following parts and meshes that create the core gameplay for your first experience:
+To help you become familiar with both types of 3D objects, this tutorial provides you an asset pack that includes the following parts and meshes that create the core gameplay for your first game:
 
 <GridContainer numColumns="3">
   <figure>
@@ -105,11 +105,11 @@ You can find this asset pack on the **Creator Store**, a marketplace that featur
 
 To insert this tutorial's asset pack from the Creator Store to your Studio inventory, click the **Add to Inventory** link in the following component. Once assets are within your inventory, you can reuse them in any project on the platform.
 
-<BrowseSampleCard href='https://create.roblox.com/store/asset/17266332444/Intro-to-Studio-Catapult-Platforms' description='Create your first experience using this high-quality catapult model.' title='Intro to Studio - Catapult & Platforms' assetId={17266332444}  />
+<BrowseSampleCard href='https://create.roblox.com/store/asset/17266332444/Intro-to-Studio-Catapult-Platforms' description='Create your first game using this high-quality catapult model.' title='Intro to Studio - Catapult & Platforms' assetId={17266332444}  />
 
 <br> </br>
 
-To get this asset pack from your inventory into your experience:
+To get this asset pack from your inventory into your game:
 
 1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md).
 1. In the **Toolbox** window, click the **Inventory** tab. The **My Models** sort displays.
@@ -122,7 +122,7 @@ To get this asset pack from your inventory into your experience:
 
 ## Customize targets
 
-When you add a 3D object into your experience, Studio updates the **Explorer** window to display the name of the object and a nest of its children within the `Class.Workspace` service. For example, after you add the catapult model into your viewport, the **Explorer** window displays the **IntrotoStudioCatapult** folder and its child assets alongside the spawn location and baseplate.
+When you add a 3D object into your game, Studio updates the **Explorer** window to display the name of the object and a nest of its children within the `Class.Workspace` service. For example, after you add the catapult model into your viewport, the **Explorer** window displays the **IntrotoStudioCatapult** folder and its child assets alongside the spawn location and baseplate.
 
 <GridContainer numColumns="2">
   <figure>
@@ -132,7 +132,7 @@ When you add a 3D object into your experience, Studio updates the **Explorer** w
   </figure>
 </GridContainer>
 
-The **Explorer** window is a fundamental Studio window that represents the data model for the place in your experience that you have open. This means that if you have an experience with multiple places, this window displays different objects depending on the place you're currently working on.
+The **Explorer** window is a fundamental Studio window that represents the data model for the place in your game that you have open. This means that if you have a game with multiple places, this window displays different objects depending on the place you're currently working on.
 
 When you select an object in the **Explorer** window, Studio updates the **Properties** window to display a selection of properties you can customize for that object without using a script, such as the object's size, color, position, or orientation. To demonstrate this process, this section of the tutorial provides guidance on customizing the visual and behavioral characteristics of the gray targets on the floating platforms.
 
@@ -162,7 +162,7 @@ To customize your targets:
 
 ## Organize scripts
 
-While you have a lot of flexibility in how you organize data models within your projects, the Roblox Engine expects certain objects to be in specific **container services** for simulation and rendering functionality to work properly between the server and the client. The **server** refers to a Roblox computer that acts as the ultimate authority for maintaining the experience's state, and it keeps all connected **clients**, or player devices like mobile phones and laptops, in sync with its source of truth.
+While you have a lot of flexibility in how you organize data models within your projects, the Roblox Engine expects certain objects to be in specific **container services** for simulation and rendering functionality to work properly between the server and the client. The **server** refers to a Roblox computer that acts as the ultimate authority for maintaining the game's state, and it keeps all connected **clients**, or player devices like mobile phones and laptops, in sync with its source of truth.
 
 <figure>
   <img src="../../assets/scripting/client-server/Client-Server-Model.png" width="100%" alt="A server grouping with connections to three client devices."/>
@@ -178,7 +178,7 @@ The main categories of container services include:
 - **Client** - Contains client-side content and logic.
 - **Chat** - Contains objects that enable chat features.
 
-Up to this point in the tutorial, you have only interacted with objects in the `Class.Workspace` service of your data model. However, in order for the catapult to operate properly, you must move some of its child script objects to different container services. Roblox offers two types of script objects to contain Luau code that modify object behavior and implement the overall logic of your experience:
+Up to this point in the tutorial, you have only interacted with objects in the `Class.Workspace` service of your data model. However, in order for the catapult to operate properly, you must move some of its child script objects to different container services. Roblox offers two types of script objects to contain Luau code that modify object behavior and implement the overall logic of your game:
 
 - `Class.Script|Scripts` - A script that can run on the server or client depending on its set `Class.Script.RunContext|RunContext` property.
 - `Class.ModuleScript|ModuleScripts` - A reusable script that you can require from both server and client scripts.
@@ -189,9 +189,9 @@ A `Class.Script` object's `Class.Script.RunContext|RunContext` property determin
 - **Server** - The script runs only on the server, regardless of its parent container.
 - **Client** - The script runs only on the client, regardless of its parent container.
 
-It's important to be mindful of where scripts run, otherwise your objects might not behave the way you want them to. For example, if you playtest the experience right now, players cannot equip projectiles to the catapult or launch them at the targets. To ensure that the gameplay works properly, you must move the children within the **ReplicatedStorage** and **ServerScriptService** folders into their respective container services.
+It's important to be mindful of where scripts run, otherwise your objects might not behave the way you want them to. For example, if you playtest the game right now, players cannot equip projectiles to the catapult or launch them at the targets. To ensure that the gameplay works properly, you must move the children within the **ReplicatedStorage** and **ServerScriptService** folders into their respective container services.
 
-`Class.ReplicatedStorage` contains objects that are available to both the server and connected clients, making it the best location for the experience's gameplay logic that needs to keep track of how many projectiles a player launches before it displays UI. `Class.ServerScriptService` contains scripting-related assets that are only meant for server use, making it the best location for the experience's gameplay logic that connects projectiles to the catapult, launches projectiles in a particular direction, and resets the catapult to its starting position.
+`Class.ReplicatedStorage` contains objects that are available to both the server and connected clients, making it the best location for the game's gameplay logic that needs to keep track of how many projectiles a player launches before it displays UI. `Class.ServerScriptService` contains scripting-related assets that are only meant for server use, making it the best location for the game's gameplay logic that connects projectiles to the catapult, launches projectiles in a particular direction, and resets the catapult to its starting position.
 
 To organize folders into their correct container services for the catapult to work properly:
 
@@ -270,56 +270,56 @@ To customize the third projectile:
 
    <img width="80%" img src="../../assets/getting-started/Projectiles-2.jpg" />
 
-1. Playtest the experience to verify that the projectile makes impact with the targets on the third floating platform.
+1. Playtest the game to verify that the projectile makes impact with the targets on the third floating platform.
 
    <video src="../../assets/getting-started/Projectiles-3.mp4" controls width="80%" alt=""></video>
 
-## Publish experience
+## Publish game
 
-Roblox not only provides the tooling and engine for you to create and run experiences, it also gives you access to a large social network of players that access the platform on a wide array of devices, including phones, computers, tablets, consoles, and VR hardware. When you're ready to release your experience to this global audience, you must publish and configure the experience's settings so that it's available to all players on any device you want to support.
+Roblox not only provides the tooling and engine for you to create and run games, it also gives you access to a large social network of players that access the platform on a wide array of devices, including phones, computers, tablets, consoles, and VR hardware. When you're ready to release your game to this global audience, you must publish and configure the game's settings so that it's available to all players on any device you want to support.
 
 <img src="../../assets/getting-started/platform-overview/Rapid-Iteration.jpg" alt="" width="90%" />
 
-Almost everything in Roblox is represented as a cloud-based asset with a unique corresponding ID. This ID is typically in the form of `rbxassetid://[ID]`, which gets applied to various objects as a property that's appropriate for that particular asset type. When you publish an experience, the experience itself receives a `Class.DataModel.GameID|UniverseID`, and each of its individual places receives a `Class.DataModel.PlaceId|PlaceID`.
+Almost everything in Roblox is represented as a cloud-based asset with a unique corresponding ID. This ID is typically in the form of `rbxassetid://[ID]`, which gets applied to various objects as a property that's appropriate for that particular asset type. When you publish a game, the game itself receives a `Class.DataModel.GameID|UniverseID`, and each of its individual places receives a `Class.DataModel.PlaceId|PlaceID`.
 
 <Alert severity="info">
 
-`Class.DataModel.GameID|UniverseIDs` and `Class.DataModel.PlaceId|PlaceIDs` are useful for managing Roblox resources through Open Cloud APIs, such as automating internal workflows, improving efficiency with content creation and management, and supporting experience operations from the web. For more information, see the [Open Cloud](../../cloud/guides/index.md) overview.
+`Class.DataModel.GameID|UniverseIDs` and `Class.DataModel.PlaceId|PlaceIDs` are useful for managing Roblox resources through Open Cloud APIs, such as automating internal workflows, improving efficiency with content creation and management, and supporting game operations from the web. For more information, see the [Open Cloud](../../cloud/guides/index.md) overview.
 
 </Alert>
 
-Once this occurs, the **Creator Dashboard** provides you tools and resources to monitor, manage, and perform tasks for your experience and its places, such as:
+Once this occurs, the **Creator Dashboard** provides you tools and resources to monitor, manage, and perform tasks for your game and its places, such as:
 
 - Monitoring player activity, retention, and growth with [analytics features](../../production/analytics/index.md).
-- Automatically translating in-experience content for a global audience that speaks a variety of languages with [localization features](../../production/localization/index.md).
-- Configuring in-experience purchases and immersive advertising with [monetization features](../../production/monetization/index.md).
+- Automatically translating in-game content for a global audience that speaks a variety of languages with [localization features](../../production/localization/index.md).
+- Configuring in-game purchases and immersive advertising with [monetization features](../../production/monetization/index.md).
 
-What you learn on the Creator Dashboard can give you important insights into how to further iterate on your project and engage your audience. For example, if you learn that your audience values multiplayer competition, you could create multiple catapults that keep track of how many targets each player knocks over, then republish the experience to make your update instantaneously available on the platform with only one click.
+What you learn on the Creator Dashboard can give you important insights into how to further iterate on your project and engage your audience. For example, if you learn that your audience values multiplayer competition, you could create multiple catapults that keep track of how many targets each player knocks over, then republish the game to make your update instantaneously available on the platform with only one click.
 
-To publish your experience for the first time:
+To publish your game for the first time:
 
-1. Upload your experience to the cloud.
+1. Upload your game to the cloud.
    1. In the menu bar, click **File**, then select **Publish to Roblox**.
    1. In the **Publish Experience** window, fill out all applicable fields.
-      1. In the **Name** field, provide a name for your experience.
-      1. In the **Description** field, provide a summary of what a player can expect from the experience.
-      1. From the **Genre** dropdown menu, select the genre that you want to represent your experience.
-      1. In the **Devices** section, enable every device you want players to use to access your experience.
-   1. At the bottom-right of the window, click the **Create** button. Your experience is now in the cloud with a `Class.DataModel.GameID|UniverseID` and a `Class.DataModel.PlaceID|PlaceID` for the starting place.
+      1. In the **Name** field, provide a name for your game.
+      1. In the **Description** field, provide a summary of what a player can expect from the game.
+      1. From the **Genre** dropdown menu, select the genre that you want to represent your game.
+      1. In the **Devices** section, enable every device you want players to use to access your game.
+   1. At the bottom-right of the window, click the **Create** button. Your game is now in the cloud with a `Class.DataModel.GameID|UniverseID` and a `Class.DataModel.PlaceID|PlaceID` for the starting place.
 
-1. Make the experience public to all players.
-   1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations). The **Creations** landing page displays your first experience.
+1. Make the game public to all players.
+   1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations). The **Creations** landing page displays your first game.
 
       <img width="200" img src="../../assets/getting-started/Publish-2A.png" />
 
-   1. Hover over the experience's tile, click the **&ctdot;** button, and select **Make Public** from the contextual menu.
+   1. Hover over the game's tile, click the **&ctdot;** button, and select **Make Public** from the contextual menu.
 
       <img width="200" img src="../../assets/getting-started/Publish-2B.png" />
 
-1. **(Optional)** Share your experience with others.
-   1. Hover over the experience's tile, click the **&ctdot;** button, and select **Copy URL** from the contextual menu.
-   1. Share the URL with others as a direct link to your experience's landing page.
+1. **(Optional)** Share your game with others.
+   1. Hover over the game's tile, click the **&ctdot;** button, and select **Copy URL** from the contextual menu.
+   1. Share the URL with others as a direct link to your game's landing page.
 
 <Alert severity="success">
-Congratulations on creating your first Roblox experience! To learn more about building immersive experiences on Roblox, check out [tutorials](../../tutorials/index.md).
+Congratulations on creating your first Roblox game! To learn more about building immersive games on Roblox, check out [tutorials](../../tutorials/index.md).
 </Alert>

@@ -141,13 +141,13 @@ If your most important signals are stable, then focus on the next set of signals
 
 In the example above, there is a drop across D2-7, and D8-28 metrics, while D1 continues to be stable. This shows potential issues for impression change.
 
-**3. Understand signals compared to other experiences your users also play.**
+**3. Understand signals compared to other games your users also play.**
 
 It's also important to identify recommendation signals that are below benchmark as areas of opportunity.
 
-Benchmark metrics are based on a set of similar experiences shown at the bottom of your analytics page.  If you believe these experiences might not be the right benchmark for your experience, use the information only as a rough guideline and focus on improving your game's Home recommendation signals.  
+Benchmark metrics are based on a set of similar games shown at the bottom of your analytics page. If you believe these games might not be the right benchmark for your game, use the information only as a rough guideline and focus on improving your game's Home recommendation signals.  
 
-Keep in mind that benchmarks and benchmark experiences do not impact the Recommended for You algorithm in any way. They are meant to only provide you with a point of comparison and help you identify signals that are low as areas of opportunity on the Home Recommendations dashboard.
+Keep in mind that benchmarks and benchmark games do not impact the Recommended for You algorithm in any way. They are meant to only provide you with a point of comparison and help you identify signals that are low as areas of opportunity on the Home Recommendations dashboard.
 
 <img src="./assets/analytics/discovery/Similar-Experiences.png" alt="List of similar games on the Home Recommendations page." />
 
@@ -164,10 +164,10 @@ It's important to note that you may notice a temporary drop in play through rate
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant='buttonLarge'>Do these recommendation signals favor larger experiences with more players?</Typography>
+<Typography variant='buttonLarge'>Do these recommendation signals favor larger games with more players?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-No. These recommendation signals are calculated as averages per user, not total values. This ensures that smaller experiences with highly engaged users are not disadvantaged. Roblox is focused on per user engagement, not total engagement. The Recommended for You algorithm is designed to match users with experiences they are most likely to enjoy. By prioritizing user satisfaction, you'll create experiences that resonate with your audience and foster long-term engagement.
+No. These recommendation signals are calculated as averages per user, not total values. This ensures that smaller games with highly engaged users are not disadvantaged. Roblox is focused on per user engagement, not total engagement. The Recommended for You algorithm is designed to match users with games they are most likely to enjoy. By prioritizing user satisfaction, you'll create games that resonate with your audience and foster long-term engagement.
 </AccordionDetails>
 </BaseAccordion>
 
@@ -264,4 +264,4 @@ Roblox is [committed](https://devforum.roblox.com/t/discovery-on-roblox-past-pre
 
 **Notifications** elevate timely and actionable information to users. Historically, Roblox has focused on building and scaling social notifications, such as friend requests and invitations. This system allows for creators to engage with users directly while they are away. Milestones, high scores, [friend activity](https://devforum.roblox.com/t/user-mentions-in-experience-notifications/2980675), and other key moments can be delivered to users as personalized notifications to the notification stream. For additional information and implementation instructions, see [experience notifications](./cloud/guides/experience-notifications.md).
 
-You can also use [in-experience notification permission prompts](https://devforum.roblox.com/t/introducing-in-experience-notification-permission-prompts/2909125) to upsell notification opt-in within games. Notifications can help resurrect lapsed users or remind users when they need to take an action.
+You can also use [in-game notification permission prompts](https://devforum.roblox.com/t/introducing-in-experience-notification-permission-prompts/2909125) to upsell notification opt-in within games. Notifications can help resurrect lapsed users or remind users when they need to take an action.

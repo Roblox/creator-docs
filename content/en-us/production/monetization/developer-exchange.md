@@ -9,8 +9,8 @@ The **Roblox Developer Exchange Program** (**DevEx**) is a program that allows e
 
 **Earned Robux** is Robux that you can earn from creating value on the platform, including:
 
-- Earnings from selling in-experience items to players, such as [developer products](./developer-products.md), [passes](./passes.md), [subscriptions](./subscriptions.md) within experiences, fees from in-experience purchases of Marketplace items, and fees from [Robux Transfers](./robux-transfers.md) through the Transfer API
-- Earnings from selling things related to your experience, such as paid [private servers](./private-servers.md), [paid access](./paid-access-robux.md) purchased in Robux, [Roblox Plus](./roblox-plus.md) incentives, and [publishing ads](../promotion/advertise.md) within an experience
+- Earnings from selling in-game items to players, such as [developer products](./developer-products.md), [passes](./passes.md), [subscriptions](./subscriptions.md) within games, fees from in-game purchases of Marketplace items, and fees from [Robux Transfers](./robux-transfers.md) through the Transfer API
+- Earnings from selling things related to your game, such as paid [private servers](./private-servers.md), [paid access](./paid-access-robux.md) purchased in Robux, [Roblox Plus](./roblox-plus.md) incentives, and [publishing ads](../promotion/advertise.md) within a game
 - Earnings from selling to other creators, such as paid models and plugins on the [Creator Store](../creator-store.md)
 - Earnings from selling avatar items in the [Marketplace](../../marketplace/publish-to-marketplace.md)
 - Earnings from driving daily engagement and audience expansion ([Creator Rewards](../../creator-rewards.md))
@@ -19,10 +19,10 @@ All Earned Robux must be in complete compliance with Roblox's [Terms of Use](htt
 
 - Direct Robux purchase
 - Monthly Robux grants as part of a Roblox subscription
-- Trading or resale of in-experience items or avatar items
+- Trading or resale of in-game items or avatar items
 - Robux received from Robux transfers
 - Robux gift card redemption
-- Passes sold for template experiences with no legitimate user visits
+- Passes sold for template games with no legitimate user visits
 - Violative content that was moderated
 
 Roblox maintains the exclusive right to decide if any Robux qualifies as Earned Robux at its own discretion.

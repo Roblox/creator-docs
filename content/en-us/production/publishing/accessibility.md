@@ -4,11 +4,11 @@ title: Accessibility guidelines
 description: Explains the practice of designing products and services to be usable by people with disabilities.
 ---
 
-**Accessibility** is the practice of designing products and services to be usable by people with disabilities. Recent stats cite that over 26% of people have some type of disability, so making your Roblox experience accessible can help you reach a wider audience.
+**Accessibility** is the practice of designing products and services to be usable by people with disabilities. Recent stats cite that over 26% of people have some type of disability, so making your Roblox game accessible can help you reach a wider audience.
 
 ## Text size
 
-Players may find it difficult to read small text. Compare the following in-experience shop menu with a blur applied, simulating what it might look like to somebody with impaired vision.
+Players may find it difficult to read small text. Compare the following in-game shop menu with a blur applied, simulating what it might look like to somebody with impaired vision.
 
 <Tabs>
   <TabItem label="Sighted">
@@ -59,7 +59,7 @@ Players might find it difficult to read light text on a light background, or dar
 
 ## Color non-reliance
 
-Over 5% of people in the world have some form of color blindness. Although it's rare for someone to see **only** in black and white, imagine viewing an experience in grayscale:
+Over 5% of people in the world have some form of color blindness. Although it's rare for someone to see **only** in black and white, imagine viewing a game in grayscale:
 
 <Tabs>
   <TabItem label="No Color Blindness">
@@ -84,7 +84,7 @@ By modifying the image to use different **symbols** alongside colors, more playe
 
 ## Sound non-reliance
 
-Sound is an excellent addition for immersive experiences, but hearing-impaired players or anyone who turns their volume off will be confused by in-experience events that are **only** conveyed with sound.
+Sound is an excellent addition for immersive games, but hearing-impaired players or anyone who turns their volume off will be confused by in-game events that are **only** conveyed with sound.
 
 Consider the following scene where a ringing phone is signalled only by sound, and then signalled with both sound **and** visual aids.
 
@@ -92,7 +92,7 @@ Consider the following scene where a ringing phone is signalled only by sound, a
 
 ## Player preferences
 
-Various visual settings are available to players from the Roblox and in‑experience **Settings** menus, including [preferred transparency](#preferred-transparency), [preferred text size](#preferred-text-size), and [reduced motion](#reduced-motion). For optimal accessibility, your [user interface](../../ui/index.md) should accommodate each.
+Various visual settings are available to players from the Roblox and in-game **Settings** menus, including [preferred transparency](#preferred-transparency), [preferred text size](#preferred-text-size), and [reduced motion](#reduced-motion). For optimal accessibility, your [user interface](../../ui/index.md) should accommodate each.
 
 ### Preferred transparency
 
@@ -138,7 +138,7 @@ Multiplying a UI element's `Class.GuiObject.BackgroundTransparency|BackgroundTra
 		CollectionService:GetInstanceAddedSignal(TAG):Connect(onInstanceAdded)
 		CollectionService:GetInstanceRemovedSignal(TAG):Connect(onInstanceRemoved)
 
-		-- When in-experience setting is changed, adjust tagged instances
+		-- When in-game setting is changed, adjust tagged instances
 		GuiService:GetPropertyChangedSignal("PreferredTransparency"):Connect(function()
 			for object, defaultTransparency in transparentBackObjects do
 				object.BackgroundTransparency = defaultTransparency * GuiService.PreferredTransparency
@@ -146,7 +146,7 @@ Multiplying a UI element's `Class.GuiObject.BackgroundTransparency|BackgroundTra
 		end)
 		```
 
-3. Playtest the experience, open the **Settings** menu, and adjust **Background Transparency**. The tagged UI elements should update between their default `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` and fully opaque.
+3. Playtest the game, open the **Settings** menu, and adjust **Background Transparency**. The tagged UI elements should update between their default `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` and fully opaque.
 
    <Tabs>
    <TabItem label="Default">
@@ -241,8 +241,8 @@ tween:Play()
 
 ## Volume controls
 
-Different sounds playing at the same time can be overwhelming, distracting, or difficult to distinguish. Providing users with volume controls for different "groups" of audio such as sound effects, music, and speech lets them customize their experience and focus on what they need to.
+Different sounds playing at the same time can be overwhelming, distracting, or difficult to distinguish. Providing users with volume controls for different "groups" of audio such as sound effects, music, and speech lets them customize their game and focus on what they need to.
 
-Consider the following example of a very noisy experience where the user is able to modify music and sound effect volumes separately.
+Consider the following example of a very noisy game where the user is able to modify music and sound effect volumes separately.
 
 <video src="../../assets/publishing/accessibility/Audio-Volume.mp4" controls width="800" alt="Video showing how separate volume controls for sounds and music can help players focus on what they need to"></video>

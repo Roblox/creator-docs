@@ -68,7 +68,7 @@ These steps use an array to store different phrases for the NPC to say when play
    ```
 
    <Alert severity="warning">
-   This lesson uses the legacy chat API and is strictly for demonstrating how to use arrays. In real experiences, use `Class.TextChatService`.
+   This lesson uses the legacy chat API and is strictly for demonstrating how to use arrays. In real games, use `Class.TextChatService`.
    </Alert>
 
 3. Within the brackets `{}` of the array just created, type at least three strings of dialogue, separated by commas.

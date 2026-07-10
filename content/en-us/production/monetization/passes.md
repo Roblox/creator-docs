@@ -19,10 +19,11 @@ To create a pass:
 
 1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select a game.
 2. Go to **Monetization** &rang; **Passes**.
-3. Click **Create a Pass**.
+3. Click **Create pass**.
 4. Upload an image to display as the pass icon. Make sure the image doesn't exceed 512x512 pixels, doesn't include important details outside of its circular boundaries, and is in `.jpg`, `.png`, or `.bmp` format.
 5. Enter a name and a description for the pass.
-6. Click **Create Pass**.
+6. Select a category for the pass. The category is used to organize items in your in-game Shop.
+7. Click **Create pass**.
 
 <GridContainer numColumns="2">
   <figure>
@@ -55,7 +56,7 @@ To use scripting, you need a pass ID. To get the pass ID:
 ## Sell a pass
 
 <Alert severity="warning">
-Starting May 30, 2026, cross-experience game pass sales will be disabled. If your game relies on cross-experience sales mechanics, we recommend integrating [Robux transfers](./robux-transfers.md) before this date to avoid service interruptions.
+Starting May 30, 2026, cross-game pass sales will be disabled. If your game relies on cross-game sales mechanics, we recommend integrating [Robux transfers](./robux-transfers.md) before this date to avoid service interruptions.
 </Alert>
 
 <Alert severity="info">
@@ -64,12 +65,12 @@ If you're using [price optimization](./price-optimization.md), make sure to plac
 
 You can sell passes in two ways:
 
-- [Inside your game](#inside-your-experience)
-- [Outside your game](#outside-your-experience)
+- [Inside your game](#inside-your-game)
+- [Outside your game](#outside-your-game)
 
-### Inside your experience
+### Inside your game
 
-To implement and sell a pass inside an experience, call `Class.MarketplaceService|MarketplaceService` functions.
+To implement and sell a pass inside a game, call `Class.MarketplaceService|MarketplaceService` functions.
 
 Use `Class.MarketplaceService:GetProductInfo()|GetProductInfo()` to retrieve information about a pass, like name and price, and then to display that pass to users. You can sell the pass inside your game's marketplace, for example. For passes, the second parameter must be `Enum.InfoType.GamePass`.
 
@@ -156,7 +157,7 @@ MarketplaceService.PromptGamePassPurchaseFinished:Connect(onPromptPurchaseFinish
 Although Roblox itself does **not** record the purchase history of passes by specific users, you can request to [download sales data](../../production/analytics/analytics-dashboard.md#sales-data). If you want to track user-specific purchase history, it's your responsibility to [store the data](../../cloud-services/data-stores/index.md).
 </Alert>
 
-### Outside your experience
+### Outside your game
 
 To sell a pass on the **Store** tab of the game details page:
 
@@ -205,7 +206,7 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-## Personalize your in-experience store
+## Personalize your in-game store
 
 You can use product intelligence APIs to sort and recommend passes to users. Personalizing your in-game store helps surface the most relevant items to each user, boosting engagement and revenue. By tailoring passes to user preferences, you can improve their discovery, increase conversion rates, and unlock new monetization opportunities.
 

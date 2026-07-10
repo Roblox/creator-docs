@@ -1,6 +1,6 @@
 ---
 title: Start coding
-description: Part of the Story Games series that teaches you to code in Roblox. Open the script used to manage the experience.
+description: Part of the Story Games series that teaches you to code in Roblox. Open the script used to manage the game.
 next: /education/build-it-play-it-story-games/coding-a-question
 prev: /education/build-it-play-it-story-games/first-challenge
 ---

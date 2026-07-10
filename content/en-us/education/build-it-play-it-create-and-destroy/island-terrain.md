@@ -22,7 +22,7 @@ A square map isn't very natural or interesting to players. To finish the map, yo
 
 All terrain, whether it's mountains or painting grass, is created using the Terrain Editor.
 
-1. Before starting, **publish** your experience so far. That way if you don't like how your changes turn out, you can easily go back to the saved version.
+1. Before starting, **publish** your game so far. That way if you don't like how your changes turn out, you can easily go back to the saved version.
 2. Go back to the **top-down** view (click on Top in the corner widget). This will help you edit terrain better in the next page.
 
    <img src="../../assets/education/build-it-play-it-create-and-destroy/clickViewSelectorToTop.jpg" width="100%" />

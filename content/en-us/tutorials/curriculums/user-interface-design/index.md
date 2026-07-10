@@ -22,9 +22,9 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 
 <Grid item Large={5} XSmall={12} direction="column">
 
-**User Interface Design** is the discipline of planning and implementing UI elements that either provide essential information for gameplay, or teach players how to complete unique user flows within your experiences.
+**User Interface Design** is the discipline of planning and implementing UI elements that either provide essential information for gameplay, or teach players how to complete unique user flows within your games.
 
-You'll learn how to recreate high-quality UI elements for a first-person shooter laser tag experience by following step-by-step processes and best practices for following an art style, wireframing the structure and flow of UI information, and implementing UI designs within Studio.
+You'll learn how to recreate high-quality UI elements for a first-person shooter laser tag game by following step-by-step processes and best practices for following an art style, wireframing the structure and flow of UI information, and implementing UI designs within Studio.
 
 This course is intended for readers who are familiar
 with general building concepts and tools in Roblox Studio. If you need help

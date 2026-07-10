@@ -29,7 +29,7 @@ Before a laser can be shot, you must first know where the player is aiming. This
 
    <Alert severity="info">
 
-   Models can be added into your Inventory to be used between any experience.
+   Models can be added into your Inventory to be used between any game.
 
    1. In a browser, open the [model](https://www.roblox.com/library/6571559694/Blaster) page, click the **Get** button. This adds the model into your inventory.
    2. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../../../projects/assets/toolbox.md) and select the **Inventory** tab.
@@ -334,7 +334,7 @@ First, you'll need to find the **character model**. If a part of the character w
 You can use `Class.Instance:FindFirstAncestorOfClass()|FindFirstAncestorOfClass` to find a character model ancestor of the object hit by the laser, if one exists. If you find a model and it contains a humanoid, in most cases you can assume it's a character.
 
 <Alert severity="warning">
-If you have other models in the experience that contain humanoids, further checks will be needed.
+If you have other models in the game that contain humanoids, further checks will be needed.
 </Alert>
 
 1. Add the highlighted code below to the `weaponRaycastResult` **if** statement to check if a character was hit.

@@ -200,8 +200,8 @@ A game's target audience can be set through its **Audience** setting:
 		<td>
 		Available only to those who are part of the selected category of users. Not discoverable to the general public on Roblox.
 		- **Playtesters** — Available to users who have **playtest** permissions for the game.
-		- **Friends** — Available to the game owner's friends. This option only appears for [user‑owned](../../projects/collaboration.md#user-owned-experiences) games.
-		- **Community Members** — Available only to group members. This option only appears for [group‑owned](../../projects/collaboration.md#group-owned-experiences) games.
+		- **Friends** — Available to the game owner's friends. This option only appears for [user‑owned](../../projects/collaboration.md#user-owned-games) games.
+		- **Community Members** — Available only to group members. This option only appears for [group‑owned](../../projects/collaboration.md#group-owned-games) games.
 		</td>
 			</tr>
 			<tr>

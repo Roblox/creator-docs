@@ -1,6 +1,6 @@
 ---
 title: Build one half
-description: Part of the Create and Destroy series. Work on finishing a map for the multiplayer experience.
+description: Part of the Create and Destroy series. Work on finishing a map for the multiplayer game.
 next: /education/build-it-play-it-create-and-destroy/playtest-the-map
 prev: /education/build-it-play-it-create-and-destroy/challenge-1
 ---
@@ -36,7 +36,7 @@ To build the city, you'll duplicate buildings from the of objects on the right s
 
 1. Select a large building from the palette and **duplicate** it (<kbd>Ctrl</kbd><kbd>D</kbd> or <kbd>⌘</kbd><kbd>D</kbd>). Nothing obvious will happen. With collisions off, the new building will overlap the original.
    <Alert severity="warning">
-   To avoid errors in your experience, **always duplicate** buildings and props, not copy and paste. Duplicate puts the new object into the same folder, copy and paste moves the new object outside of the folder.
+   To avoid errors in your game, **always duplicate** buildings and props, not copy and paste. Duplicate puts the new object into the same folder, copy and paste moves the new object outside of the folder.
    </Alert>
 
     <img src="../../assets/education/build-it-play-it-create-and-destroy/PlacedHalfMap.jpg" width="100%" />

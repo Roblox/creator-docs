@@ -79,7 +79,7 @@ prev: /education/lesson-plans/digital-citizenship/intro-to-roblox
     <tr>
       <td>10 min</td>
       <td>Guided Activity: Project Feedback</td>
-      <td>Play a peer's experience and offer feedback. Then set a goal to make a change based off feedback. </td>
+      <td>Play a peer's game and offer feedback. Then set a goal to make a change based off feedback. </td>
     </tr>
     <tr>
       <td>5 min</td>
@@ -94,7 +94,7 @@ prev: /education/lesson-plans/digital-citizenship/intro-to-roblox
 1. Outline the session.
 
    - Will first learn about digital citizenship and how to intervene in cyberbullying.
-   - Rest of the time will be devoted to improving their projects, ending with a feedback opportunity where they'll get to player each other's experiences.
+   - Rest of the time will be devoted to improving their projects, ending with a feedback opportunity where they'll get to player each other's games.
 
 ### Digital citizenship
 
@@ -102,7 +102,7 @@ prev: /education/lesson-plans/digital-citizenship/intro-to-roblox
 2. Guide students in an activity to practice upstanding.
 
    - Depending on your class, either do everything as a class or form small student groups (2-3 students).
-   - Explain that students will hear different situations that they might see in an experience online. They'll listen and will practice a response.
+   - Explain that students will hear different situations that they might see in a game online. They'll listen and will practice a response.
    - Go through prompts in the Resource: Upstander Roleplay Situations and have students verbally roleplay their response.
 
 ### Work on projects
@@ -110,7 +110,7 @@ prev: /education/lesson-plans/digital-citizenship/intro-to-roblox
 1. If needed, continue teaching any other lessons from the previous day.
 2. Inform students they'll have this time to improve their projects.
 
-   - While students work, encourage them to play-test (for at most one minute). Experiences should be challenging, but fun.
+   - While students work, encourage them to play-test (for at most one minute). Games should be challenging, but fun.
 
 3. In the last five minutes, make sure students can play each other's projects.
 
@@ -122,11 +122,11 @@ prev: /education/lesson-plans/digital-citizenship/intro-to-roblox
 1. Open Presentation: Project Feedback and pass out Handout: Project Feedback to each student. This
 
    - Explain the process of playtesting and getting feedback in slides 2-3.
-   - Connect to digital citizenship - ask students what are some ways they can practice being a good citizen while sharing and getting feedback (ex: Be open-minded with different experiences, don't pressure others to change their projects, etc).
+   - Connect to digital citizenship - ask students what are some ways they can practice being a good citizen while sharing and getting feedback (ex: Be open-minded with different games, don't pressure others to change their projects, etc).
 
 2. Have students play each other's project for about five minutes, then write down feedback for their peer.
 3. Reconvene as a class and have 2-3 students share a piece of feedback they received.
-4. Have students reflect on making one change in their experience and write it down on the handout.
+4. Have students reflect on making one change in their game and write it down on the handout.
 
    - Will make that change tomorrow.
    - Have students pair up and share the change they'll make.

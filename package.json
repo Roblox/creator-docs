@@ -12,6 +12,7 @@
     "ai-review": "npx tsx tools/ai-editorial-review/main.ts",
     "check": "npx tsx tools/checks/main.ts",
     "docs-slack-bot": "npx tsx tools/docs-slack-bot/main.ts",
+    "forum-doc-watch": "npx tsx tools/forum-doc-watch/main.ts",
     "checks": "npx tsx tools/checks/main.ts",
     "redirects": "npx tsx tools/redirects/main.ts",
     "format": "prettier --write .",

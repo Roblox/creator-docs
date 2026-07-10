@@ -11,7 +11,7 @@ In the **Mansion of Wonder** carnival ride, players hop on a ride and defend the
 
 ## Template overview
 
-To start your development journey, a template has been created that includes the starter world and code. You'll be able to customize your experience as much as you'd like once you've finished these basic lessons.
+To start your development journey, a template has been created that includes the starter world and code. You'll be able to customize your game as much as you'd like once you've finished these basic lessons.
 
 <img
 src="../../assets/education/build-it-play-it-mansion-of-wonder/become-an-artist/template-overview.jpeg"

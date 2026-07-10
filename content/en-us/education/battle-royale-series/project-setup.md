@@ -1,6 +1,6 @@
 ---
 title: Battle Royale
-description: Create a Battle Royale experience in Roblox Studio. Learn coding in Roblox and how to make a game.
+description: Create a Battle Royale game in Roblox Studio. Learn coding in Roblox and how to make a game.
 next: /education/battle-royale-series/coding-the-game-loop
 prev: /education/battle-royale-series/landing
 ---
@@ -9,7 +9,7 @@ prev: /education/battle-royale-series/landing
 
 The genre is popular because rounds are quick, easy to pick-up, and challenging to master. Battle royales can be customized with different game mechanics to appeal to a wide audience, like unique weapons, platforming obstacles, or visual themes.
 
-Some popular battle royale experiences in Roblox include Island Royale and Strucid.
+Some popular battle royale games in Roblox include Island Royale and Strucid.
 
 <GridContainer numColumns="2">
   <figure>
@@ -45,7 +45,7 @@ During each phase, a different set of tasks happened that you'll code during thi
 - **Match** - Timer starts and players are teleported to an arena where they compete. If a player loses, they're teleported back to the lobby.
 - **Cleanup and Reset** - Happens when one player is left or the timer finishes. Players are then teleported back to the lobby where the loop restarts.
 
-## Develop the experience
+## Develop the game
 
 Battle royales are made of many elements, like code and art assets. To manage larger projects, developers plan a **workflow**, or a series of steps, to get to completion.
 
@@ -84,7 +84,7 @@ For the sketch, the objective here is to create a design you can then replicate 
 2. Identify the shape of the map and then draw it out using a combination of 1-3 **basic shapes** (square, rectangle, octagon). Even if you envision a more complex map, such as an island, try and break it down into basic shapes.
 
    <Alert severity="info">
-   We recommend making a symmetrical map to easily balance the experience. As you gain more experience, you can start working with non-symmetrical map shapes, which can be more complicated to balance fairly for everyone.
+   We recommend making a symmetrical map to easily balance the game. As you gain more experience, you can start working with non-symmetrical map shapes, which can be more complicated to balance fairly for everyone.
    </Alert>
 
 3. Add player spawns. For now, use eight spawns, but you can always add more later. The example here uses a square for the map shape.
@@ -122,7 +122,7 @@ Recreate the layout map quickly in Roblox Studio using basic parts in a process 
 
 ### Build a lobby
 
-Before creating the arena, build the lobby, where players enter the experience and socialize between matches.
+Before creating the arena, build the lobby, where players enter the game and socialize between matches.
 
 1. Create a new Baseplate project and delete the baseplate.
 2. Construct a walled room with a spawn location.

@@ -3,7 +3,7 @@ title: Rate limits and throttling
 description: Covers rate limits for the Open Cloud v2 Data Stores API.
 ---
 
-The [Data Stores API](/cloud/reference/DataStore) enforces two types of throttling: **requests per minute** and **throughput**. Each experience allows a certain number of requests per minute and a certain amount of data per minute. These limits are enforced for the universe regardless of the number of API keys used.
+The [Data Stores API](/cloud/reference/DataStore) enforces two types of throttling: **requests per minute** and **throughput**. Each game allows a certain number of requests per minute and a certain amount of data per minute. These limits are enforced for the universe regardless of the number of API keys used.
 
 Unlike the Engine API, these limits do **not** scale based on user count. Exceeding either one causes the endpoint to return `429 Too Many Requests`.
 

@@ -1,24 +1,24 @@
 ---
 title: Emotes
-description: All Roblox users are represented by an avatar character which can be customized with body parts, accessories, and clothes from the Marketplace or within experiences.
+description: All Roblox users are represented by an avatar character which can be customized with body parts, accessories, and clothes from the Marketplace or within games.
 ---
 
-**Emotes** are short animations that an avatar performs, making it easier to communicate and celebrate with others, enhancing the experience to feel more social and more lively.
+**Emotes** are short animations that an avatar performs, making it easier to communicate and celebrate with others, enhancing the game to feel more social and more lively.
 
-Creators sell their own emotes, such as gestures, reactions, dances, and more, by publishing their animation to sell on the Marketplace or within experiences.
+Creators sell their own emotes, such as gestures, reactions, dances, and more, by publishing their animation to sell on the Marketplace or within games.
 
 <Alert severity = 'info'>
-Developers can access and modify emotes within their own experiences. For more information, see [character emotes](../../characters/emotes.md).
+Developers can access and modify emotes within their own games. For more information, see [character emotes](../../characters/emotes.md).
 </Alert>
 
-## Components of an emote
+## Components
 
-Emotes are made up of an `Class.Animation` object with the unique `Class.Animation.AnimationId` property set to the asset ID of your animation sequence.
+Emotes are made up of an `Class.Animation` object with the unique `Class.Animation.AnimationId|AnimationId` property set to the asset ID of your animation sequence.
 
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/avatar/avatar-emotes/Animation-Explorer.png" />
-    <figcaption><center>`Animation` object in the Explorer.</center></figcaption>
+    <figcaption><center>`Animation` object in the Explorer window.</center></figcaption>
 
   </figure>
   <figure>
@@ -27,9 +27,9 @@ Emotes are made up of an `Class.Animation` object with the unique `Class.Animati
   </figure>
 </GridContainer>
 
-Emotes must meet [technical specifications](./specifications.md) as well as [Marketplace](../../marketplace/marketplace-policy.md) and [Community](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) policies.
+Emotes must meet [technical specifications](./specifications.md), [Marketplace policies](../../marketplace/marketplace-policy.md), and Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
 
-## Creation process
+## Create emotes
 
 There are several ways to create an animation both in Studio or using a third-party tool. See the following table for common workflows and various resources to create your own.
 

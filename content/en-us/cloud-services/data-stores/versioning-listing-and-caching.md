@@ -56,7 +56,7 @@ You can use versioning to handle user requests. If a user reports that a problem
 ```lua
 local DataStoreService = game:GetService("DataStoreService")
 
-local experienceStore = DataStoreService:GetDataStore("PlayerExperience")
+local gameStore = DataStoreService:GetDataStore("PlayerGame")
 
 local DATA_STORE_KEY = "User_1234"
 
@@ -64,7 +64,7 @@ local maxDate = DateTime.fromUniversalTime(2020, 10, 09, 01, 42)
 
 -- Gets the version closest to the given time
 local listSuccess, pages = pcall(function()
-    return experienceStore:ListVersionsAsync(DATA_STORE_KEY, Enum.SortDirection.Descending, nil, maxDate.UnixTimestampMillis)
+    return gameStore:ListVersionsAsync(DATA_STORE_KEY, Enum.SortDirection.Descending, nil, maxDate.UnixTimestampMillis)
 end)
 if listSuccess then
     local items = pages:GetCurrentPage()
@@ -72,13 +72,13 @@ if listSuccess then
         -- Reads the closest version
         local closestEntry = items[1]
         local success, value, info = pcall(function()
-            return experienceStore:GetVersionAsync(DATA_STORE_KEY, closestEntry.Version)
+            return gameStore:GetVersionAsync(DATA_STORE_KEY, closestEntry.Version)
         end)
         -- Restores current value by overwriting it with the closest version
         if success then
             local setOptions = Instance.new("DataStoreSetOptions")
             setOptions:SetMetadata(info:GetMetadata())
-            experienceStore:SetAsync(DATA_STORE_KEY, value, nil, setOptions)
+            gameStore:SetAsync(DATA_STORE_KEY, value, nil, setOptions)
         end
     else
         -- No entries found
@@ -88,7 +88,7 @@ end
 
 ### Snapshots
 
-The [Snapshot Data Stores Open Cloud API](/cloud/reference/DataStore#Cloud_SnapshotDataStores) lets you take a snapshot of all data stores in an experience once a day. Before you publish any experience update that changes your data storage logic, make sure to take a snapshot. Taking a snapshot guarantees that you have the most recent data available from the previous version of the experience.
+The [Snapshot Data Stores Open Cloud API](/cloud/reference/DataStore#Cloud_SnapshotDataStores) lets you take a snapshot of all data stores in a game once a day. Before you publish any game update that changes your data storage logic, make sure to take a snapshot. Taking a snapshot guarantees that you have the most recent data available from the previous version of the game.
 
 For example, without a snapshot, if you publish an update at 3:30 UTC that causes data corruption, the corrupted data overwrites any data written between 3:00-3:30 UTC. If you take a snapshot at 3:29 UTC, though, the corrupted data doesn't overwrite anything written before 3:29 UTC, and the latest data for all keys written between 3:00-3:29 UTC is preserved.
 
@@ -120,7 +120,7 @@ You can specify a prefix when listing all data stores or keys, and get back only
 ### Scopes
 
 <Alert severity="warning">
-  For new experiences, use [listing and prefixes](#listing-and-prefixes) to organize keys in your data store instead of the legacy scopes feature. For existing experiences that use scopes, continue using them.
+  For new games, use [listing and prefixes](#listing-and-prefixes) to organize keys in your data store instead of the legacy scopes feature. For existing games that use scopes, continue using them.
 </Alert>
 
 You can organize keys in a data store further by setting a unique string as a scope for the second parameter of `Class.DataStoreService:GetDataStore()|GetDataStore()`. The default scope (if no scope is given) is `global`. The scope is automatically prepended to the beginning of all keys in all operations done on the data store.
@@ -208,7 +208,7 @@ If you enable the `Class.DataStoreOptions.AllScopes|AllScopes` property and crea
 
 ## Caching
 
-Use caching to temporarily store data from data stores to improve performance and reduce the number of requests made to the server. For example, an experience can cache a copy of its data so that it can access that data quickly without having to make another call to the data store.
+Use caching to temporarily store data from data stores to improve performance and reduce the number of requests made to the server. For example, a game can cache a copy of its data so that it can access that data quickly without having to make another call to the data store.
 
 Caching applies to modifications you make to data store keys using:
 

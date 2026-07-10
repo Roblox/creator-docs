@@ -3373,6 +3373,11 @@ navigation:
     path: /reference/engine/datatypes
     source: /reference/engine/datatypes.md
     section:
+      - title: AdReward
+        path: /reference/engine/datatypes/AdReward
+        type: engineapi
+        source: /reference/engine/datatypes/AdReward.yaml
+        ignoreTranslation: true
       - title: Axes
         path: /reference/engine/datatypes/Axes
         type: engineapi
@@ -5397,6 +5402,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/ProximityPromptStyle.yaml
         ignoreTranslation: true
+      - title: PurchaseOption
+        path: /reference/engine/enums/PurchaseOption
+        type: engineapi
+        source: /reference/engine/enums/PurchaseOption.yaml
+        ignoreTranslation: true
       - title: QualityLevel
         path: /reference/engine/enums/QualityLevel
         type: engineapi
@@ -5627,6 +5637,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/ScreenOrientation.yaml
         ignoreTranslation: true
+      - title: ScreenshotCaptureResult
+        path: /reference/engine/enums/ScreenshotCaptureResult
+        type: engineapi
+        source: /reference/engine/enums/ScreenshotCaptureResult.yaml
+        ignoreTranslation: true
       - title: ScriptStoppedReason
         path: /reference/engine/enums/ScriptStoppedReason
         type: engineapi
@@ -5706,6 +5721,11 @@ navigation:
         path: /reference/engine/enums/SizeConstraint
         type: engineapi
         source: /reference/engine/enums/SizeConstraint.yaml
+        ignoreTranslation: true
+      - title: SlimTintMode
+        path: /reference/engine/enums/SlimTintMode
+        type: engineapi
+        source: /reference/engine/enums/SlimTintMode.yaml
         ignoreTranslation: true
       - title: SolverConvergenceMetricType
         path: /reference/engine/enums/SolverConvergenceMetricType

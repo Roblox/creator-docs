@@ -3,7 +3,7 @@ title: Webhook notifications
 description: Explains how to set up webhooks to automate your notification management workflow.
 ---
 
-Instead of manually monitoring all events in your experience and requests from users, you can set up webhooks to receive real-time notifications on a third-party messaging tool or your custom endpoint that can receive HTTP requests. This helps you automate your notification management workflow to reduce manual effort handling notifications.
+Instead of manually monitoring all events in your game and requests from users, you can set up webhooks to receive real-time notifications on a third-party messaging tool or your custom endpoint that can receive HTTP requests. This helps you automate your notification management workflow to reduce manual effort handling notifications.
 
 <Alert severity="info">
 Currently, Roblox fully supports webhook notifications for Discord and Slack. Using webhooks with other third-party tools carries the risk of not receiving all notifications.
@@ -40,7 +40,7 @@ For more information on subscription events and their fields, see the [Subscript
 
 ## Configure webhooks on Creator Dashboard
 
-To receive notifications through webhooks, you need to configure a webhook that subscribes to certain events for triggering notifications. For group-owned experiences, only group owners can configure and receive webhook notifications.
+To receive notifications through webhooks, you need to configure a webhook that subscribes to certain events for triggering notifications. For group-owned games, only group owners can configure and receive webhook notifications.
 
 <Alert severity="info">
 If you're setting up webhooks and handling personal data, ensure they comply with the [General Data Protection Regulation (GDPR)](https://gdpr-info.eu/).

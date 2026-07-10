@@ -45,7 +45,8 @@ description: |
   - If parented to a `Class.Tool` and given the name **Handle**, a
     `Class.BasePart` can be held by characters. See
     [In-Experience Tools](../../../players/tools.md).
-code_samples: []
+code_samples:
+  - SmoothDamp-CFrame
 inherits:
   - PVInstance
 descendants:
@@ -1833,15 +1834,16 @@ properties:
     simulationAccess: true
   - name: BasePart.Size
     summary: |
-      Determines the dimensions of a part (length, width, height).
+      Determines the dimensions of a part (length, height, width).
     description: |
       A part's `Size` property determines its **visual** dimensions, while
       `Class.BasePart.ExtentsSize|ExtentsSize` represents the actual size used
       by the physics engine, such as in
       [collision detection](../../../workspace/collisions.md). The individual
-      dimensions (length, width, height) can be as low as `0.001` and as high as
-      `2048`. Size dimensions below `0.05` will be **visually** represented as
-      if the part's dimensions are `0.05`.
+      dimensions (length, height, width) can be as low as `0.001` and as high as
+      `2048`. Size dimensions below `0.05` will be **physically** simulated as
+      if the part's dimensions are `0.05`, while visual rendering preserves the
+      actual size.
 
       A part's `Size` is used in a variety of additional ways:
 

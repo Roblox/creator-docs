@@ -3,7 +3,7 @@ title: Create volcanic eruptions with VFX
 description: The process of creating volcanoes to elevate your visual and gameplay requirements.
 ---
 
-A **volcano** is a crater within the earth's crust that spews lava and smoke due to internal pressure from magma and dissolved gasses. Experiences often include volcanoes within challenging gameplay areas, such as locations where players must balance the danger of lava and molten rock hazards with the reward of valuable resources, boss battle arenas, or environments that dynamically change as the volcano cyclically erupts.
+A **volcano** is a crater within the earth's crust that spews lava and smoke due to internal pressure from magma and dissolved gasses. Games often include volcanoes within challenging gameplay areas, such as locations where players must balance the danger of lava and molten rock hazards with the reward of valuable resources, boss battle arenas, or environments that dynamically change as the volcano cyclically erupts.
 
 Using the [Volcano Island - Start](https://create.roblox.com/dashboard/creations/experiences/5825677169/overview) `.rbxl` file as a starting place and [Volcano Island - Complete](https://www.roblox.com/games/17374256579/Volcano-Island-Complete) as a reference, this tutorial shows you how to transform the environment into a volcanic eruption with custom lighting and VFX objects that represent real-world physical behavior, including guidance on:
 
@@ -30,7 +30,7 @@ You can create your own textures in third-party texture creation tools and follo
 
 ## Break down reference
 
-To create credible volcanoes, it's important to reference real-world volcanic eruptions in the design process because it allows you to break down the subject matter into individual components with distinct visual and behavioral characteristics. For example, the sample [Volcano Island - Complete](https://www.roblox.com/games/17374256579/Volcano-Island-Complete) experience references the volcanic eruption in Iceland to inform all texture and VFX design decisions relating to the caldera and its surrounding terrain.
+To create credible volcanoes, it's important to reference real-world volcanic eruptions in the design process because it allows you to break down the subject matter into individual components with distinct visual and behavioral characteristics. For example, the sample [Volcano Island - Complete](https://www.roblox.com/games/17374256579/Volcano-Island-Complete) game references the volcanic eruption in Iceland to inform all texture and VFX design decisions relating to the caldera and its surrounding terrain.
 
 <img src="../../../assets/tutorials/creating-volcanoes/Volcano-NoComponents.jpg" alt="A far out view of an Iceland volcanic eruption."  width="80%" />
 
@@ -51,16 +51,16 @@ It's useful to break down a volcano that's erupting into individual components s
   </figure>
 </GridContainer>
 
-The following sections provide an in-depth analysis of the different design decisions and techniques you can use to recreate each of these components. As you review these decisions and experiment with various lighting, `Class.ParticleEmitter`, and `Class.Beam` properties, you will learn how to utilize lighting and VFX to solve the unique environmental requirements for your own experiences.
+The following sections provide an in-depth analysis of the different design decisions and techniques you can use to recreate each of these components. As you review these decisions and experiment with various lighting, `Class.ParticleEmitter`, and `Class.Beam` properties, you will learn how to utilize lighting and VFX to solve the unique environmental requirements for your own games.
 
 ## Configure lighting
 
-To make an environmental element a point of interest within your experience, it's important to increase its contrast against the overall environment so that it stands out as something that players should explore. For example, to draw players into the caldera, you can configure your lighting sources so that the volcano's lava appears to glow as the only light source within an otherwise dark environment.
+To make an environmental element a point of interest within your game, it's important to increase its contrast against the overall environment so that it stands out as something that players should explore. For example, to draw players into the caldera, you can configure your lighting sources so that the volcano's lava appears to glow as the only light source within an otherwise dark environment.
 
 Studio provides two high-level types of lighting sources you can use for this technique:
 
 - **Global lighting** - Produces lighting for the entire outdoor environment.
-- **Local lighting** - Produces lighting around where you place them within your experience.
+- **Local lighting** - Produces lighting around where you place them within your game.
 
 This section of the tutorial teaches you how to utilize both types of lighting sources to make your volcanic eruption the most significant point of interest within your scene, as well as create a dramatic effect for your environmental storytelling. To illustrate, review how the same final volcano without custom lighting feels like an unobtrusive hazard in an otherwise cheerful environment while the volcano with custom lighting feels like a dangerous presence in a dark, melancholic environment.
 
@@ -77,7 +77,7 @@ This section of the tutorial teaches you how to utilize both types of lighting s
 
 ### Local lighting
 
-Local lighting is the luminescence from local [light sources](../../../effects/light-sources.md) in your experience, such as `Class.SpotLight`, `Class.SurfaceLight`, and `Class.PointLight` objects. Local lighting is important to add to your volcano because while you can apply brightness to your `Class.ParticleEmitter` and `Class.Beam` textures, they cannot fill the canyon with enough light alone to realistically  simulate how the caldera and its flowing lava would illuminate the environment in the real world.
+Local lighting is the luminescence from local [light sources](../../../effects/light-sources.md) in your game, such as `Class.SpotLight`, `Class.SurfaceLight`, and `Class.PointLight` objects. Local lighting is important to add to your volcano because while you can apply brightness to your `Class.ParticleEmitter` and `Class.Beam` textures, they cannot fill the canyon with enough light alone to realistically  simulate how the caldera and its flowing lava would illuminate the environment in the real world.
 
 <GridContainer numColumns="2">
   <figure>
@@ -90,7 +90,7 @@ Local lighting is the luminescence from local [light sources](../../../effects/l
   </figure>
 </GridContainer>
 
-It's helpful to configure your local lighting before your global lighting for this tutorial because without the local light sources, you cannot see the 3D space to configure your VFX objects. However, common workflows require you to iterate on both local and global lighting concurrently to see the effects of your changes on VFX objects, so it's important to be flexible to design requirements of your own experiences.
+It's helpful to configure your local lighting before your global lighting for this tutorial because without the local light sources, you cannot see the 3D space to configure your VFX objects. However, common workflows require you to iterate on both local and global lighting concurrently to see the effects of your changes on VFX objects, so it's important to be flexible to design requirements of your own games.
 
 To recreate the local lighting for the volcano in the sample [Volcano Island - Complete](https://www.roblox.com/games/17374256579/Volcano-Island-Complete) place file:
 
@@ -127,7 +127,7 @@ To recreate the local lighting for the volcano in the sample [Volcano Island - C
 
 ### Global lighting
 
-Global lighting is the luminescence from either the sun or moon in an experience. By adjusting a couple of key default properties in the `Class.Lighting` service and its child post-processing effects objects, you can dramatically change how global light appears to players, as well as how it interacts with any other object you place in the experience, including `Class.ParticleEmitter` and `Class.Beam` textures.
+Global lighting is the luminescence from either the sun or moon in a game. By adjusting a couple of key default properties in the `Class.Lighting` service and its child post-processing effects objects, you can dramatically change how global light appears to players, as well as how it interacts with any other object you place in the game, including `Class.ParticleEmitter` and `Class.Beam` textures.
 
 For example, to ensure that the `Class.Beam` textures that produce a flowing lava effect later in the tutorial are able to glow, you must configure `Class.BloomEffect` properties to exaggerate the lighting like a camera viewing a bright light. Similarly, to simulate more realistic colors at night, you must also adjust the effect's properties to desaturate the overall environment.
 
@@ -372,7 +372,7 @@ The sample represents this process with two `Class.ParticleEmitter` objects that
 
 Each particle emitter animates their texture over 64 frames to emulate smooth, lifelike physical behavior. While you could use only one particle emitter, the repetition of the animation would become apparent and break the immersion for your players because they would see the exact same animation every time. However, when two particles animate flipbooks with slightly different custom properties, it is much more difficult to spot the repetition.
 
-The sample also provides a `Class.ParticleEmitter` object that emits particles that look like aerated splashes to represent even lighter webby splashes. This technique fills the space with dynamic movement and further hides the repetition of the flipbook animations. As an extra bonus, if your experience also includes the waterfall from [Creating Waterfalls](create-waterfalls.md), you're able to reuse the same texture twice for different gameplay areas, saving you memory and improving performance on low-end devices.
+The sample also provides a `Class.ParticleEmitter` object that emits particles that look like aerated splashes to represent even lighter webby splashes. This technique fills the space with dynamic movement and further hides the repetition of the flipbook animations. As an extra bonus, if your game also includes the waterfall from [Creating Waterfalls](create-waterfalls.md), you're able to reuse the same texture twice for different gameplay areas, saving you memory and improving performance on low-end devices.
 
 <GridContainer numColumns="2">
   <figure>

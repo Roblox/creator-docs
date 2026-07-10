@@ -3,9 +3,9 @@ title: Roblox Brand Link
 description: The Roblox Brand Link program is for creators interested in brand integrations.
 ---
 
-The **Roblox Brand Link** program is for creators interested in brand integrations. This program targets brands that invest in Roblox and want to integrate into popular experiences.
+The **Roblox Brand Link** program is for creators interested in brand integrations. This program targets brands that invest in Roblox and want to integrate into popular games.
 
-Roblox manages the entire process for brands, including coordinating with creators to bring these integrations to life. This is an excellent opportunity for creators to work with Roblox and prominent brands on innovative integrations. Creators will have access to paid opportunities to integrate brands into their experiences and the chance to collaborate with high-profile brands.
+Roblox manages the entire process for brands, including coordinating with creators to bring these integrations to life. This is an excellent opportunity for creators to work with Roblox and prominent brands on innovative integrations. Creators will have access to paid opportunities to integrate brands into their games and the chance to collaborate with high-profile brands.
 
 <figure>
 <Chip
@@ -19,7 +19,7 @@ Roblox manages the entire process for brands, including coordinating with creato
 
 This is currently an invite-only program. However, to increase the likelihood of being invited, creators should ideally:
 
-- Own an experience with over 500k Monthly Active Users (MAUs)
+- Own a game with over 500k Monthly Active Users (MAUs)
 - Communicate in a timely manner
 - Have good organizational skills
 - Be willing to closely partner with brands

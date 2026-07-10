@@ -65,10 +65,10 @@ Preset systems must not gain meaning when combined, repeated, or sequenced. They
 All content and related features may be reviewed by Roblox to ensure compliance with our guidelines
 and to protect users on the platform. This may include:
 
-- Reviewing preset system content during experience review
+- Reviewing preset system content during game review
 - Requiring changes or removal if a system enables circumvention or otherwise violates Roblox's Community Standards
 - Disabling preset system features that undermine platform safety goals
-- Taking additional enforcement actions taken on your experience, account, or group
+- Taking additional enforcement actions taken on your game, account, or group
 
 Creators are responsible for ensuring that all content and future updates continue to comply with these guidelines.
 

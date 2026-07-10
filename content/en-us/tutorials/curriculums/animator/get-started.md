@@ -5,11 +5,11 @@ next: /tutorials/curriculums/animator/work-with-the-animation-editor
 prev: /tutorials/curriculums/animator/
 ---
 
-Welcome to your first beginner animation lesson in Studio! To get started, let's walk through how to open the sample template, customize Studio's layout for your tasks, and playtest the core gameplay of the experience where players move around a track to earn stars.
+Welcome to your first beginner animation lesson in Studio! To get started, let's walk through how to open the sample template, customize Studio's layout for your tasks, and playtest the core gameplay of the game where players move around a track to earn stars.
 
 ## Open template
 
-Templates are pre-made 3D worlds that you can use as the base for your own experiences. To introduce you to animation in Studio, Roblox has created the **Island of Move** template with everything necessary for the experience to work properly, such as the code to run the gameplay and an environment that you can customize at a later time.
+Templates are pre-made 3D worlds that you can use as the base for your own games. To introduce you to animation in Studio, Roblox has created the **Island of Move** template with everything necessary for the game to work properly, such as the code to run the gameplay and an environment that you can customize at a later time.
 
 <img src="../../../assets/education/build-it-play-it-island-of-move/opening-the-template/template-example.png" width="70%" />
 
@@ -37,11 +37,11 @@ To customize the workspace for your animating task:
    If you don't see the **Explorer** and **Properties** windows, open them from Studio's **Window** menu.
    </Alert>
 
-## Playtest the experience
+## Playtest the game
 
-Before you start animating, it's important to take a moment to playtest the template so you can see how the gameplay works. When players join the experience, they make progress around the track by clicking the move button, or using a mobile device and moving around in real-life.
+Before you start animating, it's important to take a moment to playtest the template so you can see how the gameplay works. When players join the game, they make progress around the track by clicking the move button, or using a mobile device and moving around in real-life.
 
-To playtest the experience's gameplay:
+To playtest the game's gameplay:
 
 1. In the top-left corner of Studio, keep the default **Test** playtest option, then click the **Play** button. Studio enters playtest mode.
 
@@ -51,7 +51,7 @@ To playtest the experience's gameplay:
    There are a variety of additional playtest options that you will explore in a later chapter of the tutorial.
    </Alert>
 
-1. In the experience, use the following player controls to walk up to the golem character on the stage, then press <kbd>E</kbd> to open up a menu. From that menu, click **Play Game**.
+1. In the game, use the following player controls to walk up to the golem character on the stage, then press <kbd>E</kbd> to open up a menu. From that menu, click **Play Game**.
 
      <table>
      <thead>
@@ -78,7 +78,7 @@ To playtest the experience's gameplay:
 
    <img src="../../../assets/education/build-it-play-it-island-of-move/test-the-game/click-npc.png" width="50%" />
 
-1. When the experience starts, go forward by repeatedly clicking the **Move** button. Your character automatically follows the track as you click.
+1. When the game starts, go forward by repeatedly clicking the **Move** button. Your character automatically follows the track as you click.
 
    <video controls src="../../../assets/education/build-it-play-it-island-of-move/test-the-game/click-game-button.mp4" width="80%"></video>
 

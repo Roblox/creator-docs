@@ -1,16 +1,16 @@
 ---
 title: Feature packages
-description: Feature Packages let you drag and drop fully functional, customizable features directly into your experiences.
+description: Feature Packages let you drag and drop fully functional, customizable features directly into your games.
 ---
 
-Feature packages are fully functional, customizable features that you can drag and drop directly into your experience. Each feature package comes with:
+Feature packages are fully functional, customizable features that you can drag and drop directly into your game. Each feature package comes with:
 
 - Functional back-end code for minimal engineering work
 - Default UI components that you can customize to fit your unique aesthetics
 - Built-in game design and UI/UX best practices
 - Funnel analytics and insights
 
-You can use feature packages to add new functionality and gameplay features to your experiences, improve your experience's key metrics, and contribute to sustainable [live operations](../../production/game-design/liveops-essentials.md) (LiveOps).
+You can use feature packages to add new functionality and gameplay features to your games, improve your game's key metrics, and contribute to sustainable [live operations](../../production/game-design/liveops-essentials.md) (LiveOps).
 
 <br /> <br />
 
@@ -45,7 +45,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 <Stepper activeStep={3} orientation="vertical">
 
 <Step style={{marginTop: -36}}>
-<StepLabel optional="Register your own in-experience currency for players to purchase items.">
+<StepLabel optional="Register your own in-game currency for players to purchase items.">
 
 <h5 style={{marginTop: 36}}>Define currencies</h5>
 </StepLabel>
@@ -60,7 +60,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 </StepLabel>
 </Step>
 <Step style={{marginTop: -36}}>
-<StepLabel optional="Create bundle prompts that anticipate player needs at key points of your experience." >
+<StepLabel optional="Create bundle prompts that anticipate player needs at key points of your game." >
 <h5 style={{marginTop: 36}}>Customize prompts</h5>
 </StepLabel>
 </Step>
@@ -92,7 +92,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 <h2 style={{marginBottom: 12}}>Missions</h2>
 
 <Typography variant="body2" color="textSecondary" component="p">
-The **Missions** feature package offers out-of-the-box functionality to create missions that players can complete to achieve rewards and progress in your experience.
+The **Missions** feature package offers out-of-the-box functionality to create missions that players can complete to achieve rewards and progress in your game.
 </Typography>
 
 <>
@@ -131,7 +131,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 </StepLabel>
 </Step>
 <Step style={{marginTop: -36}}>
-<StepLabel optional="Create unique UI that matches the aesthetics of your experiences." >
+<StepLabel optional="Create unique UI that matches the aesthetics of your games." >
 <h5 style={{marginTop: 36}}>Customize menus</h5>
 </StepLabel>
 </Step>
@@ -202,7 +202,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 </StepLabel>
 </Step>
 <Step style={{marginTop: -36}}>
-<StepLabel optional="Create experience-specific rewards to encourage players to progress through a season." >
+<StepLabel optional="Create game-specific rewards to encourage players to progress through a season." >
 <h5 style={{marginTop: 36}}>Customize rewards</h5>
 </StepLabel>
 </Step>
@@ -273,7 +273,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 </StepLabel>
 </Step>
 <Step style={{marginTop: -36}}>
-<StepLabel optional="Match the user interface to your experience." >
+<StepLabel optional="Match the user interface to your game." >
 <h5 style={{marginTop: 36}}>Customize the UI</h5>
 </StepLabel>
 </Step>

@@ -13,7 +13,7 @@ Instead of directly accessing raw data, memory stores have three primitive data 
 - **Cross-server trading and auctioning** - Enable universal trading between different servers, where users can bid on items with real-time changing prices, with a **sorted map** of key-value pairs.
 - **Global leaderboards** - Store and update user rankings on a shared leaderboard inside a **sorted map**.
 - **Shared inventories** - Save inventory items and statistics in a shared **hash map**, where users can utilize inventory items concurrently with one another.
-- **Cache for Persistent Data** - Sync and copy your persistent data in a data store to a memory store **hash map** that can act as a cache and improve your experience's performance.
+- **Cache for Persistent Data** - Sync and copy your persistent data in a data store to a memory store **hash map** that can act as a cache and improve your game's performance.
 
 ```mermaid
 graph TD
@@ -43,13 +43,13 @@ Memory stores have an eviction policy based on expiration time, also known as ti
 
 ### Memory size quota
 
-The memory quota limits the total amount of memory that an experience can consume. It's not a fixed value; instead, it changes over time depending on the number of users in the experience according to the formula **64KB + 1.2KB \* [number of users]**. The quota applies on the experience level instead of the server level.
+The memory quota limits the total amount of memory that a game can consume. It's not a fixed value; instead, it changes over time depending on the number of users in the game according to the formula **64KB + 1.2KB \* [number of users]**. The quota applies on the game level instead of the server level.
 
-When users join the experience, the additional memory quota is available immediately. When users leave the experience, the quota doesn't reduce immediately. There's a traceback period of eight days before the quota reevaluates to a lower value.
+When users join the game, the additional memory quota is available immediately. When users leave the game, the quota doesn't reduce immediately. There's a traceback period of eight days before the quota reevaluates to a lower value.
 
-After your experience hits the memory size quota, any API requests that increase the memory size always fail. Requests that decrease or don't change the memory size still succeed.
+After your game hits the memory size quota, any API requests that increase the memory size always fail. Requests that decrease or don't change the memory size still succeed.
 
-With the [observability](../../cloud-services/memory-stores/observability.md) dashboard, you can view the memory size quota of your experience in real time using the **Memory Usage** chart.
+With the [observability](../../cloud-services/memory-stores/observability.md) dashboard, you can view the memory size quota of your game in real time using the **Memory Usage** chart.
 
 ### API request limits
 
@@ -73,9 +73,9 @@ Most API calls only consume one request unit, with a few exceptions:
 
   Consumes **[number of partitions scanned] + [items returned]** units.
 
-The requests quota is also applied on the experience level instead of the server level. This provides flexibility to allocate the requests among servers as long as the total request rate does not exceed the quota. If you exceed the quota, you receive an error response when the service throttles your requests.
+The requests quota is also applied on the game level instead of the server level. This provides flexibility to allocate the requests among servers as long as the total request rate does not exceed the quota. If you exceed the quota, you receive an error response when the service throttles your requests.
 
-With the [observability](../../cloud-services/memory-stores/observability.md) feature available, you can view the request unit quota of your experience in real time.
+With the [observability](../../cloud-services/memory-stores/observability.md) feature available, you can view the request unit quota of your game in real time.
 
 ### Data structure size limits
 
@@ -96,13 +96,13 @@ To keep your memory usage pattern optimal and avoid hitting the [limits](#limits
 
 - **Set the expiration time to the smallest time frame possible when adding data.** Though the default expiration time is 45 days for both `Class.MemoryStoreQueue:AddAsync()` and `Class.MemoryStoreSortedMap:SetAsync()`, setting the shortest possible time can automatically clean up old data to prevent them from filling up your memory usage quota.
 
-  - Don't store a large amount of data with a long expiration, as it risks exceeding your memory quota and potentially causing issues that can break your entire experience.
+  - Don't store a large amount of data with a long expiration, as it risks exceeding your memory quota and potentially causing issues that can break your entire game.
   - Always either explicitly delete unneeded items or set a short item expiration.
   - Generally, you should use explicit deletion for releasing memory and item expiration as a safety mechanism to prevent unused items from occupying memory for an extended period of time.
 
 - Only keep necessary values in memory.
 
-  For example, for an auction house experience, you only need to maintain the highest bid. You can use `Class.MemoryStoreSortedMap:UpdateAsync()` on one key to keep the highest bid rather than keeping all bids in your data structure.
+  For example, for an auction house game, you only need to maintain the highest bid. You can use `Class.MemoryStoreSortedMap:UpdateAsync()` on one key to keep the highest bid rather than keeping all bids in your data structure.
 
 - Use [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff) to help stay below API request limits.
 
@@ -110,7 +110,7 @@ To keep your memory usage pattern optimal and avoid hitting the [limits](#limits
 
 - Split giant data structures into multiple smaller ones by [sharding](<https://en.wikipedia.org/wiki/Shard_(database_architecture)>).
 
-  It's often easier to manage data in smaller structures rather than storing everything in one large data structure. This approach can also help avoid usage and rate limits. For example, if you have a sorted map that uses prefixes for its keys, consider separating each prefix into its own sorted map. For an especially popular experience, you might even separate users into multiple maps based on the last digits of their user IDs.
+  It's often easier to manage data in smaller structures rather than storing everything in one large data structure. This approach can also help avoid usage and rate limits. For example, if you have a sorted map that uses prefixes for its keys, consider separating each prefix into its own sorted map. For an especially popular game, you might even separate users into multiple maps based on the last digits of their user IDs.
 
 - [Shard](../../cloud-services/memory-stores/best-practices.md) frequently accessed keys in hash maps with multiple copies of the key to distribute load.
 
@@ -124,7 +124,7 @@ To keep your memory usage pattern optimal and avoid hitting the [limits](#limits
 
 ## Observability
 
-The [Observability Dashboard](../../cloud-services/memory-stores/observability.md) provides insights and analytics for monitoring and troubleshooting your memory store usage. With real-time updating charts on different aspects of your memory usage and API requests, you can track the memory usage pattern of your experience, view the current allocated quotas, monitor the API status, and identify potential issues for performance optimization.
+The [Observability Dashboard](../../cloud-services/memory-stores/observability.md) provides insights and analytics for monitoring and troubleshooting your memory store usage. With real-time updating charts on different aspects of your memory usage and API requests, you can track the memory usage pattern of your game, view the current allocated quotas, monitor the API status, and identify potential issues for performance optimization.
 
 The following table lists and describes all status codes of API responses available on the Observability Dashboard's **Request Count by Status** and **Requests by API x Status** charts. For more information on how to resolve these errors, see [Troubleshooting](#troubleshooting). For the specific quota or limit that an error relates to, see [Limits and Quotas](#limits-and-quotas).
 
@@ -150,7 +150,7 @@ The following table lists and describes all status codes of API responses availa
     </tr>
     <tr>
       <td>AccessDenied</td>
-      <td>Unauthorized to access experience data. This request doesn't consume request units or use quota.</td>
+      <td>Unauthorized to access game data. This request doesn't consume request units or use quota.</td>
     </tr>
     <tr>
       <td>InternalError</td>
@@ -322,7 +322,7 @@ The following table lists and describes the recommended solution for each respon
       <td>
         <ul>
           <li>Check the <a href="https://status.roblox.com/pages/59db90dbcdeb2f04dadcf16d">Roblox status page</a>.</li>
-          <li>File a <a href="https://devforum.roblox.com/t/how-to-post-a-bug-report/24388">bug report</a> describing the issue with your experience's Universe ID.</li>
+          <li>File a <a href="https://devforum.roblox.com/t/how-to-post-a-bug-report/24388">bug report</a> describing the issue with your game's Universe ID.</li>
         </ul>
       </td>
     </tr>
@@ -360,4 +360,4 @@ The data in `Class.MemoryStoreService` is isolated between Studio and production
 
 Studio testing has the same [limits and quotas](#limits-and-quotas) as production. For quotas calculated based on the number of users, the resulting quota can be very small since you are the only user for Studio testing. When testing from Studio, you might also notice slightly higher latency and elevated error rates compared to usage in production due to some additional checks that are performed to verify access and permissions.
 
-For information on how to debug a memory store on live experiences or when testing in studio, use [Developer Console](../../studio/developer-console.md).
+For information on how to debug a memory store on live games or when testing in studio, use [Developer Console](../../studio/developer-console.md).

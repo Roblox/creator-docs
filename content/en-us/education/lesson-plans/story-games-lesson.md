@@ -100,8 +100,8 @@ description: Learn to code a story game as part of the Hour of Code™ initiativ
 ### Introduction
 
 1. Play this [video](https://www.youtube.com/watch?v=KsOIlDT145A) about Hour of Code™, a nationwide initiative that introduces millions of students to one hour of computer programming.
-2. Tell students they will be building a game using Roblox Studio, the tool used to create all Roblox experiences. Students will write a story and then use user's answers to replace words and names. For example: One day [name] woke up and ate a giant [user's favorite food].
-3. Play the project overview video to show students the experience they will create and build excitement.
+2. Tell students they will be building a game using Roblox Studio, the tool used to create all Roblox games. Students will write a story and then use user's answers to replace words and names. For example: One day [name] woke up and ate a giant [user's favorite food].
+3. Play the project overview video to show students the game they will create and build excitement.
 
 ### Guided work - Create stories
 
@@ -157,7 +157,7 @@ description: Learn to code a story game as part of the Hour of Code™ initiativ
 **Expand the lesson**
 
 - Have students include at least one technique from <a href="../../education/build-it-play-it-story-games/finish-and-add.md" target="_blank" rel="noopener">Tips and Tricks</a>.
-- Allow students to trade places to play each other experiences when finished.
+- Allow students to trade places to play each other games when finished.
 
 ### Miscellaneous resources
 
@@ -230,10 +230,10 @@ Below are questions to check for understanding in the content.
 
 **Course description**
 
-Discover how to build the ultimate interactive word game using Roblox's free coding and design tools. In this unique one-hour course, students will be able to explore the basics of computer programming and game design, then share their completed experience online with friends to craft their own fun stories! Created specifically for students new to programming, this curriculum was developed in partnership between Roblox, the largest entertainment platform for user-generated 3D experiences, and Hour of Code™, a global movement that aims to broaden participation in computer science.
+Discover how to build the ultimate interactive word game using Roblox's free coding and design tools. In this unique one-hour course, students will be able to explore the basics of computer programming and game design, then share their completed game online with friends to craft their own fun stories! Created specifically for students new to programming, this curriculum was developed in partnership between Roblox, the largest entertainment platform for user-generated 3D games, and Hour of Code™, a global movement that aims to broaden participation in computer science.
 
 In this course, your student will:
 
 - Learn and develop programming fundamentals with Luau.
 - Use programming to create a story game in a 3D world.
-- Take home a complete experience that can be played and shared online.
+- Take home a complete game that can be played and shared online.

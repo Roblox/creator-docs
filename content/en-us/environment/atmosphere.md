@@ -15,13 +15,13 @@ in unique ways based on properties that control air particles. Using the `Class.
 
 ## Atmosphere properties
 
-Every property of the `Class.Atmosphere` object inside the `Class.Lighting` service works together to support the overall vision, themes, and mood of your experience.
+Every property of the `Class.Atmosphere` object inside the `Class.Lighting` service works together to support the overall vision, themes, and mood of your game.
 
 <img src="../assets/studio/explorer/Lighting-Atmosphere.png" width="320" alt="Atmosphere object shown in Explorer window of Studio" />
 
 ### Density
 
-The `Class.Atmosphere.Density|Density` property controls how many particles exist in the air of your experience; the higher the density, the more particles, which obstruct a player's view of objects and terrain.
+The `Class.Atmosphere.Density|Density` property controls how many particles exist in the air of your game; the higher the density, the more particles, which obstruct a player's view of objects and terrain.
 
 <Tabs>
   <TabItem label="0">
@@ -55,7 +55,7 @@ Carefully balance the `Class.Atmosphere.Offset|Offset` property with the `Class.
 
 ### Haze
 
-The `Class.Atmosphere.Haze|Haze` property controls the haziness of the atmosphere to create a visible effect both above the horizon and far into the distance from the camera. To create environmental moods, like a smoky tint for a polluted alien planet or a foggy blue tint for a somber experience, combine this property with the [Color](#color) property.
+The `Class.Atmosphere.Haze|Haze` property controls the haziness of the atmosphere to create a visible effect both above the horizon and far into the distance from the camera. To create environmental moods, like a smoky tint for a polluted alien planet or a foggy blue tint for a somber game, combine this property with the [Color](#color) property.
 
 <Tabs>
   <TabItem label="1">
@@ -86,7 +86,7 @@ and themes. To expand this property's visible effect, combine it with a high
 
 The `Class.Atmosphere.Glare|Glare`
 property sets an atmospheric glare around the sun. A high value results in an
-increased effect of sunlight cast onto the sky and experience. To see this property's visible effect, you **must** combine a glare with a
+increased effect of sunlight cast onto the sky and game. To see this property's visible effect, you **must** combine a glare with a
 [Haze](#haze) value higher than 0.
 
 <Tabs>

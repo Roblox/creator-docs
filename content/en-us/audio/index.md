@@ -3,7 +3,7 @@ title: Audio
 description: An overview of audio features on Roblox.
 ---
 
-Adding audio to your experiences is crucial for elevating your experiences to new heights. By strategically using positional and non-positional audio, you can immerse players into your worlds, provide them useful feedback for their actions, and direct their attention to what they need to do to be successful in their objectives.
+Adding audio to your games is crucial for elevating your games to new heights. By strategically using positional and non-positional audio, you can immerse players into your worlds, provide them useful feedback for their actions, and direct their attention to what they need to do to be successful in their objectives.
 
 ## Audio assets
 
@@ -11,7 +11,7 @@ You can import [audio assets](../audio/assets.md) that you're certain you have p
 
 ## Audio objects
 
-Roblox offers many different types of [audio objects](../audio/objects.md) that you can use to play and modify your audio until it meets your experience's design requirements:
+Roblox offers many different types of [audio objects](../audio/objects.md) that you can use to play and modify your audio until it meets your game's design requirements:
 
 - The `Class.AudioPlayer` object loads and plays the **audio file** using a set [audio asset ID](../audio/assets.md).
 - The `Class.AudioEmitter` object is a **virtual speaker** that emits audio into the 3D environment.

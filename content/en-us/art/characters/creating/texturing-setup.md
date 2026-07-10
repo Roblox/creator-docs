@@ -13,7 +13,7 @@ prev: /art/characters/creating/sculpting
   <figure><img src="../../../assets/art/avatar/basic-creation/Post-Texturing.png" /><figcaption>Model after texturing</figcaption></figure>
 </GridContainer>
 
-Each template comes with a color texture map, which you can alter and modify using Blender's texture editing tools. Since most Roblox avatars can take advantage of custom skin tones, it's important to understand how to [preview custom skin tones](../../../art/characters/creating/index.md#preview-skin-tones) in Blender to verify how your final asset will look in a Roblox experience.
+Each template comes with a color texture map, which you can alter and modify using Blender's texture editing tools. Since most Roblox avatars can take advantage of custom skin tones, it's important to understand how to [preview custom skin tones](../../../art/characters/creating/index.md#preview-skin-tones) in Blender to verify how your final asset will look in a Roblox game.
 
 For the purpose of demonstrating the basic texturing process, this tutorial goes over basic texture painting setup, applies a completely opaque texture over parts of the character eyes, and partially opaque details over the face. You can apply these same techniques to other parts of your character geometry.
 

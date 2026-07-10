@@ -5,11 +5,11 @@ description: Regional pricing adjusts the price of your items based on a user's 
 
 With Managed Pricing, you can offer **region-specific prices** for your items and build a more inclusive and accessible global economy. After you determine a default global price for an item, Roblox uses a variety of signals like the region's purchasing power, currency exchange rates, and local spending behavior to set the most appropriate price for that item region by region.
 
-You can choose which of your items you want to price regionally. When you enable Managed Pricing for an item in your experience, Roblox automatically adjusts the price of that item for users based on their economic location.
+You can choose which of your items you want to price regionally. When you enable Managed Pricing for an item in your game, Roblox automatically adjusts the price of that item for users based on their economic location.
 
 Economic location is not always the same as account location. To determine a user's economic location, Roblox looks at signals, including VPN usage, billing history, and account history. If their economic location can't be determined, users see the default global price for the item instead.
 
-To prevent price arbitrage when users gift or trade items with different managed prices, you can [manage in-experience transfers with the `GetUsersPriceLevelsAsync` API](#protect-your-trades-and-gifts).
+To prevent price arbitrage when users gift or trade items with different managed prices, you can [manage in-game transfers with the `GetUsersPriceLevelsAsync` API](#protect-your-trades-and-gifts).
 
 <Alert severity="warning">
   Regional prices will never be discounted by more than 70% of your default price, and they will never exceed the default price you set for your item.
@@ -29,7 +29,7 @@ Regional pricing is enabled by default for all new and existing passes through [
 
 To disable managed pricing for a pass:
 
-1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
+1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select a game.
 2. Go to **Monetization** ⟩ **Passes**.
 3. Select one or more existing passes.
 4. Click **Disable Managed Pricing**.
@@ -41,7 +41,7 @@ To enable managed pricing for a developer product:
 
 1. Check that your developer products have [dynamically-scripted prices](#check-for-dynamic-pricing).
 2. [Implement the `GetUsersPriceLevelsAsync` method](#protect-your-trades-and-gifts) to regulate item transfers based on users' price levels.
-3. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
+3. Go to [Creations](https://create.roblox.com/dashboard/creations) and select a game.
 4. Go to **Monetization** ⟩ **Developer Products**.
 5. Select one or more existing products, or create a new product.
 6. Click **Enable Managed Pricing**.
@@ -60,12 +60,12 @@ To enable Managed Pricing for an Avatar item, see [Pricing](../../marketplace/pu
 ## Check for dynamic pricing
 
 <Alert severity="info">
-  If you're only applying Managed Pricing to passes for sale on your experience details page, you don't need to check for hard-coded prices.
+  If you're only applying Managed Pricing to passes for sale on your game details page, you don't need to check for hard-coded prices.
 </Alert>
 
-When you enable Managed Pricing, the price of the item adjusts for users in different regions whether it's for sale inside or outside of your experience. However, if you have hard-coded the price into your experience's UI, that number does not update as it's not dynamic or accessible by Roblox. As a result, users are charged the correct region-specific price but the UI still shows them the hard-coded value.
+When you enable Managed Pricing, the price of the item adjusts for users in different regions whether it's for sale inside or outside of your game. However, if you have hard-coded the price into your game's UI, that number does not update as it's not dynamic or accessible by Roblox. As a result, users are charged the correct region-specific price but the UI still shows them the hard-coded value.
 
-The **dynamic price check tool** updates all items for sale inside your experience with a fake Robux price or a fake economic location to help you identify which prices are hard-coded in your experience's UI and which are dynamically-scripted with `Class.MarketplaceService|MarketplaceService` and called from a client script. After you have identified the hard-coded passes, you can update them to use `MarketplaceService` functions.
+The **dynamic price check tool** updates all items for sale inside your game with a fake Robux price or a fake economic location to help you identify which prices are hard-coded in your game's UI and which are dynamically-scripted with `Class.MarketplaceService|MarketplaceService` and called from a client script. After you have identified the hard-coded passes, you can update them to use `MarketplaceService` functions.
 
 To use the dynamic price check tool:
 
@@ -77,15 +77,15 @@ To use the dynamic price check tool:
 4. Select a testing type.
    - **Price pinned** updates all dynamically-scripted prices with a set fake Robux amount.
    - **Location pinned** updates all dynamically-scripted prices with a region-specific price for a fake economic location.
-5. Click **Enable**. After a few minutes, enter your experience to identify the hard-coded prices.
+5. Click **Enable**. After a few minutes, enter your game to identify the hard-coded prices.
 
 To disable the dynamic price check tool, go to the **Dynamic Price Check** page and click **Disable**.
 
-For more information about hard-coded versus dynamically-scripted product prices, see [Check for dynamic pricing](./price-optimization.md#check-for-dynamic-pricing) in the Price optimization page. For more information about selling passes and developer products with `MarketplaceService` functions, see [Sell a pass inside your experience](./passes.md#inside-your-experience) and [Sell a developer product inside your experience](./developer-products.md#inside-your-experience).
+For more information about hard-coded versus dynamically-scripted product prices, see [Check for dynamic pricing](./price-optimization.md#check-for-dynamic-pricing) in the Price optimization page. For more information about selling passes and developer products with `MarketplaceService` functions, see [Sell a pass inside your game](./passes.md#inside-your-game) and [Sell a developer product inside your game](./developer-products.md#inside-your-game).
 
-## Display regional prices in your experience
+## Display regional prices in your game
 
-With Managed Pricing, the price a user sees can vary based on their location. If you display prices in a custom in-experience UI, like a `Class.TextLabel`, you can retrieve product information at runtime to make sure the displayed price matches the price shown in the purchase prompt.
+With Managed Pricing, the price a user sees can vary based on their location. If you display prices in a custom in-game UI, like a `Class.TextLabel`, you can retrieve product information at runtime to make sure the displayed price matches the price shown in the purchase prompt.
 
 To display the regional price for a single developer product or pass, use `Class.MarketplaceService.GetProductInfoAsync|GetProductInfoAsync`.
 
@@ -93,7 +93,7 @@ To display the regional price for all developer products, use `Class.Marketplace
 
 ## Protect your trades and gifts
 
-Managed pricing can affect in-experience transfers like trading and gifting. Because of price differences across regions, price arbitrage (exploiting price discrepancies between the same products to generate a profit) can take place. To manage the potential for price arbitrage, you can use the `Class.MarketplaceService.GetUsersPriceLevelsAsync|GetUsersPriceLevelsAsync` API, which lets you determine the relative price levels of users so that you can implement logic to regulate item transfers based on these levels.
+Managed pricing can affect in-game transfers like trading and gifting. Because of price differences across regions, price arbitrage (exploiting price discrepancies between the same products to generate a profit) can take place. To manage the potential for price arbitrage, you can use the `Class.MarketplaceService.GetUsersPriceLevelsAsync|GetUsersPriceLevelsAsync` API, which lets you determine the relative price levels of users so that you can implement logic to regulate item transfers based on these levels.
 
 `GetUsersPriceLevelsAsync` provides a numerical value between 1 and 1000 that indicates a user's pricing level. This value is designed to represent the percentage of the full price a user is expected to pay. The price level 1000 represents the full global price, while lower price levels indicate that the user typically pays a lower price because of their economic location.
 

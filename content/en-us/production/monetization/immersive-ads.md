@@ -1,19 +1,19 @@
 ---
 title: Immersive ads
-description: Immersive ads allow you insert ad units into your experience that programmatically serve ad content.
+description: Immersive ads allow you insert ad units into your game that programmatically serve ad content.
 ---
 
-With the **immersive ads** system, you can insert ad units into your experience that allow Roblox to programmatically serve ad content from advertisers to your active users.
+With the **immersive ads** system, you can insert ad units into your game that allow Roblox to programmatically serve ad content from advertisers to your active users.
 
-The following ad formats can be served in your experience:
+The following ad formats can be served in your game:
 
 - **Billboards**, which include:
-  - **Video ads**: A video up to 30 seconds long that users can watch in-experience, which can either be click-to-play or autoplaying.
+  - **Video ads**: A video up to 30 seconds long that users can watch in-game, which can either be click-to-play or autoplaying.
   - **Image ads**: A static, non-clickable image within the 3D space.
-- **Portal ads**: A static, non-clickable image with a door that teleports users into an advertiser's experience.
+- **Portal ads**: A static, non-clickable image with a door that teleports users into an advertiser's game.
 
 <Alert severity="info">
-   With portal ads, the advertiser's experience must include a button that allows users to return to your experience.
+   With portal ads, the advertiser's game must include a button that allows users to return to your game.
 </Alert>
 
 <GridContainer numColumns="2">
@@ -35,9 +35,9 @@ The following ad formats can be served in your experience:
   </figure>
 </GridContainer>
 
-Ad content is specific to the user, meaning two users might simultaneously see different display ads or teleport to different advertiser experiences from the exact same ad unit. If a user is ineligible to see ads, ad units display either a customizable fallback image or the Roblox logo.
+Ad content is specific to the user, meaning two users might simultaneously see different display ads or teleport to different advertiser games from the exact same ad unit. If a user is ineligible to see ads, ad units display either a customizable fallback image or the Roblox logo.
 
-To illustrate this concept, see the following three images of the same ad unit showing different content depending on the user. User A sees an ad promoting [The Mystery of Duvall Drive](../../resources/the-mystery-of-duvall-drive/index.md) experience while User B sees an ad promoting [Beyond the Dark](../../resources/beyond-the-dark/index.md). User C doesn't see an ad at all from this ad unit because they are ineligible to see ads.
+To illustrate this concept, see the following three images of the same ad unit showing different content depending on the user. User A sees an ad promoting [The Mystery of Duvall Drive](../../resources/the-mystery-of-duvall-drive/index.md) game while User B sees an ad promoting [Beyond the Dark](../../resources/beyond-the-dark/index.md). User C doesn't see an ad at all from this ad unit because they are ineligible to see ads.
 
 <GridContainer numColumns="3">
   <figure>
@@ -66,36 +66,36 @@ How publishers earn:
 
 - **Image ads** are static, non-clickable images within the 3D space. Advertisers bid on an image impression, so publishers earn for each image impression. An image impression is when a user looks at the ad for at least 1 second, the ad occupies 1.5% of the viewport, the ad is viewed at an angle of up to 55 degrees, and at least 50% of the image ad pixels are visible.
 
-- **Portal ads** are static, non-clickable images with a door that teleports users into an advertiser's experience. Advertisers bid on a teleport, so publishers earn for each successful teleport. A teleport is when a user enters the portal and arrives at the advertiser's experience.
+- **Portal ads** are static, non-clickable images with a door that teleports users into an advertiser's game. Advertisers bid on a teleport, so publishers earn for each successful teleport. A teleport is when a user enters the portal and arrives at the advertiser's game.
 
 To learn more about how advertisers are billed, see [Billing](../promotion/ads-manager.md#billing).
 
-Roblox pays out earnings on the 25th of the following month from when you inserted ad units into your experience. For example, if you insert ad units during the month of March, your payout date for the viewable impressions and successful teleports from those ad units is April 25. You can track your collective earnings from ads either through the **My Transactions** or the **Group Transactions** page. You can also analyze their overall performance through metrics graphs on the Creator Dashboard.
+Roblox pays out earnings on the 25th of the following month from when you inserted ad units into your game. For example, if you insert ad units during the month of March, your payout date for the viewable impressions and successful teleports from those ad units is April 25. You can track your collective earnings from ads either through the **My Transactions** or the **Group Transactions** page. You can also analyze their overall performance through metrics graphs on the Creator Dashboard.
 
 <Alert severity="warning">
-   Roblox has ad fraud systems in place to create a positive advertiser, publisher, and user experience. Per Roblox's [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards), if you engage in malicious practices to inflate impressions or teleports, Roblox might deduct Robux from your expected payout or reclaim the Robux you earned in a fraudulent way. Roblox might also suspend your experience or your account.
+   Roblox has ad fraud systems in place to create a positive advertiser, publisher, and user experience. Per Roblox's [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards), if you engage in malicious practices to inflate impressions or teleports, Roblox might deduct Robux from your expected payout or reclaim the Robux you earned in a fraudulent way. Roblox might also suspend your game or your account.
 </Alert>
 
 ## Publisher eligibility
 
-While anyone can insert ad units into their experiences, Roblox only serves ads into ad units if the experience is eligible to serve ads. Eligibility does not guarantee Roblox will serve ads in your experience, and nothing obligates Roblox to serve ads into your experience.
+While anyone can insert ad units into their games, Roblox only serves ads into ad units if the game is eligible to serve ads. Eligibility does not guarantee Roblox will serve ads in your game, and nothing obligates Roblox to serve ads into your game.
 
-For your experience to be eligible to serve ads, your account and experience must meet the following criteria:
+For your game to be eligible to serve ads, your account and game must meet the following criteria:
 
-- Your experience must be **public**.
+- Your game must be **public**.
 - You must be **13+ years of age**.
-  - For group-owned experiences, this requirement applies to the owner of the group.
+  - For group-owned games, this requirement applies to the owner of the group.
 - Your account must be [ID-verified](../publishing/account-verification.md) and have **2-factor authentication (2FA)** enabled.
-  - For group-owned experiences, this requirement applies to the owner of the group.
-  - This requirement is persistent. If you disable identity verification or 2FA, your experience loses eligibility.
-- You must complete the **Maturity and Compliance Questionnaire** for your experience.
-  - The questionnaire must be reviewed and approved by Roblox before the experience is eligible to serve ads. If the review status is **Pending**, you can request a re-review from the experience's advertising eligibility page under **Monetization** ⟩ **Ads** ⟩ **Eligiblity**. You'll receive a response within 24 hours.
-- Your experience must maintain **2,000 unique visitors per month**.
+  - For group-owned games, this requirement applies to the owner of the group.
+  - This requirement is persistent. If you disable identity verification or 2FA, your game loses eligibility.
+- You must complete the **Maturity and Compliance Questionnaire** for your game.
+  - The questionnaire must be reviewed and approved by Roblox before the game is eligible to serve ads. If the review status is **Pending**, you can request a re-review from the game's advertising eligibility page under **Monetization** ⟩ **Ads** ⟩ **Eligiblity**. You'll receive a response within 24 hours.
+- Your game must maintain **2,000 unique visitors per month**.
   - This is calculated and updated monthly, based on visitor data. Bots are not included in visitor counts.
 - You must comply with the [Roblox terms of use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), [community standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and [publisher integrity requirements](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards#publisher-integrity).
 
 <Alert severity="info">
-  Resubmitting your **Maturity and Compliance Questionnaire** will temporarily remove your ads eligibility while the questionnaire is under review. To avoid repeated interruptions, only resubmit the questionnaire when you publish an experience update that changes your previous responses.
+  Resubmitting your **Maturity and Compliance Questionnaire** will temporarily remove your ads eligibility while the questionnaire is under review. To avoid repeated interruptions, only resubmit the questionnaire when you publish a game update that changes your previous responses.
 </Alert>
 
 <Alert severity="warning">
@@ -104,7 +104,7 @@ For your experience to be eligible to serve ads, your account and experience mus
 
 ## User eligibility
 
-Even if your experience is eligible to serve ads, not all users are eligible to see ads, such as those outside of a campaign's audience selection. If a user is ineligible to see ads, ad units display a fallback image of the Roblox logo to those ineligible users. To remove these ad units, you can [remove ad units for ineligible users](#remove-ad-units-for-ineligible-users).
+Even if your game is eligible to serve ads, not all users are eligible to see ads, such as those outside of a campaign's audience selection. If a user is ineligible to see ads, ad units display a fallback image of the Roblox logo to those ineligible users. To remove these ad units, you can [remove ad units for ineligible users](#remove-ad-units-for-ineligible-users).
 
 ## Insert ad units
 
@@ -112,7 +112,7 @@ Even if your experience is eligible to serve ads, not all users are eligible to 
 
 <br /> <br />
 
-When you insert an ad unit into an eligible experience, make sure to check each image ad surface to confirm whether or not it's valid and able to serve ads. For example, you can scale ad units to different sizes to match your experience's aesthetics, but you can't make them too small or large, otherwise they become invalid and can't serve ads.
+When you insert an ad unit into an eligible game, make sure to check each image ad surface to confirm whether or not it's valid and able to serve ads. For example, you can scale ad units to different sizes to match your game's aesthetics, but you can't make them too small or large, otherwise they become invalid and can't serve ads.
 
 <GridContainer numColumns="2">
   <figure>
@@ -131,26 +131,26 @@ Billboards include video and image ads.
 
 <h5 style={{marginTop: '36px'}}>Video ads</h5>
 
-Eligible users can see two types of video ads within Roblox experiences, depending on how the advertiser bids:
+Eligible users can see two types of video ads within Roblox games, depending on how the advertiser bids:
 
 - A **click-to-play** video ad is served when an advertiser bids on users viewing at least 15 seconds of the ad. Users initiate a video ad by clicking on the ad unit, which prompts the video to play in full-screen with sound on. Publishers are paid each time a video ad is watched for at least 15 seconds.
 - An **autoplaying** video ad is served when an advertiser bids on users seeing their ad, and starts playing with the sound off when a user looks at it. If they look away, the video pauses. The video ad includes controls to unmute and expand to full screen. Publishers are paid based on the number of impressions the ad receives.
 
 To insert a video ad:
 
-1. From the **Home** or **Model** tab toolbar, insert a **Block** part into your experience.
+1. From the **Home** or **Model** tab toolbar, insert a **Block** part into your game.
 2. Scale the part to at least 8 studs wide and 4.5 studs tall, but no more than 32 studs wide and 18 studs tall.
 3. In the **Explorer** window, add an **AdGui** object to the part. To do so, hover over the part and click the **Add** button, then insert an AdGui.
 4. In the **Properties** window, with the new AdGui selected, go to the **Face** property and choose a face. You can also keep the default face.
 5. Make sure to enable the **EnableVideoAds** checkbox to show video ads. If you leave this checkbox disabled, the part will only show image ads.
 
-You can also implement a reward mechanism inside your experience to incentivize users to watch click-to-play video ads with [rewarded video ads](../promotion/rewarded-video-ads.md).
+You can also implement a reward mechanism inside your game to incentivize users to watch click-to-play video ads with [rewarded video ads](../promotion/rewarded-video-ads.md).
 
 <h5 style={{marginTop: '36px'}}>Image ads</h5>
 
-An image ad is a non-clickable static image that serves ads through an `Class.AdGui` instance that you can place on block `Class.Part` instances anywhere within the 3D space of an experience as long as nothing obstructs the view of the ad from users. The aspect ratio of the image scales with the face of the block you choose to display the ad content.
+An image ad is a non-clickable static image that serves ads through an `Class.AdGui` instance that you can place on block `Class.Part` instances anywhere within the 3D space of a game as long as nothing obstructs the view of the ad from users. The aspect ratio of the image scales with the face of the block you choose to display the ad content.
 
-In order for the ad unit to be valid and serve ads once you publish the experience, you must ensure it meets the following criteria:
+In order for the ad unit to be valid and serve ads once you publish the game, you must ensure it meets the following criteria:
 
 - The block is within the `Class.Workspace`.
 - The block is no smaller than 8 by 4.5 studs, and no larger than 32 by 18 studs.
@@ -162,16 +162,16 @@ In order for the ad unit to be valid and serve ads once you publish the experien
 
 To insert an image ad:
 
-1. From the **Home** or **Model** tab toolbar, insert a **Block** part into your experience.
+1. From the **Home** or **Model** tab toolbar, insert a **Block** part into your game.
 2. Scale the part to at least 8 studs wide and 4.5 studs tall, but no more than 32 studs wide and 18 studs tall.
 3. In the **Explorer** window, add an **AdGui** object to the part. To do so, hover over the part and click the **Add** button, then insert an AdGui.
 4. In the **Properties** window, go to the **Face** property and choose a face. You can also keep the default face.
 
 <Alert severity="info">
-   You can also insert an image ad package from the Creator Store, then customize it to fit your experience as long as the ad unit continues to meet the validation criteria. For more information about how to insert ad units from the Creator Store, see [Portal ads](#portal-ads).
+   You can also insert an image ad package from the Creator Store, then customize it to fit your game as long as the ad unit continues to meet the validation criteria. For more information about how to insert ad units from the Creator Store, see [Portal ads](#portal-ads).
 </Alert>
 
-After you publish the experience, users can see the ad unit in one of the following states:
+After you publish the game, users can see the ad unit in one of the following states:
 
 <table>
 <thead>
@@ -205,7 +205,7 @@ After you publish the experience, users can see the ad unit in one of the follow
 A portal ad is made up of two core components:
 
 - A static, non-clickable image.
-- A door that teleports users to an advertiser's experience.
+- A door that teleports users to an advertiser's game.
 
 The Creator Store includes portal ads that represent these core components through a **BasePortal** package. The only changes you can make to this package are to modify its scale, position, and rotation. Any other change you make invalidates the package and makes it unable to serve ads.
 
@@ -220,7 +220,7 @@ Portal ads also include a **Decorative** folder of both static and dynamic visua
   </figure>
 </GridContainer>
 
-For example, the following two portal ad packages have the exact same core components, but they include different visual elements you can customize to change how these ad units look and feel within your experiences.
+For example, the following two portal ad packages have the exact same core components, but they include different visual elements you can customize to change how these ad units look and feel within your games.
 
 <GridContainer numColumns="2">
   <figure>
@@ -249,7 +249,7 @@ To insert a portal ad:
 1. Click any of the **Portal** template packages.
 1. (Optional) Customize the visual elements that surround the ad unit by modifying elements within the package's **Decorative** folder.
 
-Once you publish the experience, users can see the ad unit in one of the following states:
+Once you publish the game, users can see the ad unit in one of the following states:
 
 <table>
 <thead>
@@ -282,9 +282,9 @@ Once you publish the experience, users can see the ad unit in one of the followi
 
 Per Roblox's [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards), you must either hide, replace, or block ad content from users who are ineligible to see ads. By default, immersive ad units handle this by replacing ads with a fallback image of the Roblox logo for users ineligible to see ads.
 
-To hide or remove the ad units entirely, use `Class.PolicyService:GetPolicyInfoForPlayerAsync()|GetPolicyInfoForPlayerAsync()` to return an `AreAdsAllowed` boolean that determines the eligibility of each user who accesses your experience to see ads, then include logic to modify ad visibility to ineligible users.
+To hide or remove the ad units entirely, use `Class.PolicyService:GetPolicyInfoForPlayerAsync()|GetPolicyInfoForPlayerAsync()` to return an `AreAdsAllowed` boolean that determines the eligibility of each user who accesses your game to see ads, then include logic to modify ad visibility to ineligible users.
 
-For example, the following code sample uses `Class.PolicyService:GetPolicyInfoForPlayerAsync()|GetPolicyInfoForPlayerAsync()` to check the eligibility of each user to see ads as they enter the experience. If `AreAdsAllowed` is true for a user, portal ads remain visible, but if it's false, the script destroys all of them. While this is a great strategy to remove ad content from users who are ineligible to see ads, it's important to note that destroying ad units might change your experience's gameplay if some users can see ad units while others can't.
+For example, the following code sample uses `Class.PolicyService:GetPolicyInfoForPlayerAsync()|GetPolicyInfoForPlayerAsync()` to check the eligibility of each user to see ads as they enter the game. If `AreAdsAllowed` is true for a user, portal ads remain visible, but if it's false, the script destroys all of them. While this is a great strategy to remove ad content from users who are ineligible to see ads, it's important to note that destroying ad units might change your game's gameplay if some users can see ad units while others can't.
 
 ```lua
 local Players = game:GetService("Players")
@@ -309,15 +309,15 @@ local mainPortal = Workspace:WaitForChild("Main Portal Template")
 
 ## View immersive ad metrics
 
-After you insert ad units into your experience, the [Creator Dashboard](https://create.roblox.com/dashboard/creations) generates different types of metrics graphs to help you analyze the overall performance of your ads.
+After you insert ad units into your game, the [Creator Dashboard](https://create.roblox.com/dashboard/creations) generates different types of metrics graphs to help you analyze the overall performance of your ads.
 
-After 48 hours of having ads running in your experience, you can see how many video views, impressions, and teleports you're generating through your user base, how each ad unit format is performing, and how many Robux you're earning from individual ad units.
+After 48 hours of having ads running in your game, you can see how many video views, impressions, and teleports you're generating through your user base, how each ad unit format is performing, and how many Robux you're earning from individual ad units.
 
 By tracking these trends over time, you can make strategic decisions on the number of ad units you include per place, which format of ad unit you want to prioritize, and where you can place individual ad units to generate video views, impressions, and teleports.
 
 To view immersive ad metrics:
 
-1. Go to Creations and select an experience.
+1. Go to Creations and select a game.
 2. Go to **Monetization** ⟩ **Ads**.
 
 <Alert severity="info">

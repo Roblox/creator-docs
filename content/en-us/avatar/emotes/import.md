@@ -14,7 +14,7 @@ Use the following steps to import and configure the animation for publishing emo
 ## Import into Animation Editor
 
 If your animation data is saved to a `.fbx` file and your animation meets the emote [technical specifications](./specifications.md), use the **Animation Editor** to import your animation. If your animation is already in Studio, skip this step.
-<br />
+
 To import your animation in Studio:
 
 1. If you don't already have a rigged R15 character in your workspace, add one by selecting **Avatar** ⟩ **Character**.
@@ -76,7 +76,7 @@ To submit an emote to the Marketplace, you must submit an `Class.Animation` obje
 
 To create an `Class.Animation` object you can publish as an emote:
 
-1. In the **Explorer**, add a new `Animation` object.
+1. In the **Explorer** window, add a new `Animation` object.
 2. In the **Properties** window, add the asset ID of the emote animation.
 
 ## Upload and publish an emote
@@ -88,6 +88,6 @@ When you have an `Class.Animation` with your emote animation asset ID set, you c
    1. Add a title and description.
    2. Set the **Content Type** to **Avatar Item**.
    3. Set the **Asset Category** to **Emotes**.
-3. Press Submit to upload your asset for moderation.
+3. Click the **Submit** button to upload your asset for moderation.
 
 For more information on the upload and publishing process, see [publishing Marketplace items](../../marketplace/publish-to-marketplace.md#upload-an-asset).

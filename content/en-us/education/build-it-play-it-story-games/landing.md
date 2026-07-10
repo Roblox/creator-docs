@@ -1,6 +1,6 @@
 ---
 title: Story Games project
-description: Learn to code in Roblox with this word game. Script your first experience and learn about variables and computer science.
+description: Learn to code in Roblox with this word game. Script your first game and learn about variables and computer science.
 next: /education/build-it-play-it-story-games/writing-the-story
 prev:
 ---

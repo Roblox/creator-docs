@@ -1,19 +1,19 @@
 ---
 title: Asset privacy
-description: Reference for the Roblox asset privacy system. Explains which asset types Asset Privacy affects (Images, Decals, Meshes only), how to enable Asset Privacy, how to grant and revoke permissions for collaborators and experiences, and which operations Asset Privacy does not affect.
+description: Reference for the Roblox asset privacy system. Explains which asset types Asset Privacy affects (Images, Decals, Meshes only), how to enable Asset Privacy, how to grant and revoke permissions for collaborators and games, and which operations Asset Privacy does not affect.
 ---
 
-The **asset privacy system** lets you control which creators and experiences can use your assets on Roblox. Assets can have one of two access privacy types:
+The **asset privacy system** lets you control which creators and games can use your assets on Roblox. Assets can have one of two access privacy types:
 
-- **Restricted** — Creators or experiences can only use the asset after the asset owner grants permission.
-- **Open Use** — Any creator or experience can use the asset.
+- **Restricted** — Creators or games can only use the asset after the asset owner grants permission.
+- **Open Use** — Any creator or game can use the asset.
 
-If a creator or experience doesn't have permission to use an asset, it cannot load in Studio, and a clickable error message displays in the [Output](../../studio/output.md) window. If a creator has permission to use an asset but the experience they're working on does not, clicking the error message displays a pop-up window to allow the creator to grant permission to the experience for any restricted assets.
+If a creator or game doesn't have permission to use an asset, it cannot load in Studio, and a clickable error message displays in the [Output](../../studio/output.md) window. If a creator has permission to use an asset but the game they're working on does not, clicking the error message displays a pop-up window to allow the creator to grant permission to the game for any restricted assets.
 
-When an asset is Open Use, Roblox doesn't need to check its permissions when it loads into an experience because every creator and experience can freely use it. However, when an asset is Restricted, Roblox **always** checks its permissions when it loads into an experience or when a creator takes an action on the asset, such as inserting it into Studio, sharing it with another creator, or listing it on the [Creator Store](../../production/creator-store.md).
+When an asset is Open Use, Roblox doesn't need to check its permissions when it loads into a game because every creator and game can freely use it. However, when an asset is Restricted, Roblox **always** checks its permissions when it loads into a game or when a creator takes an action on the asset, such as inserting it into Studio, sharing it with another creator, or listing it on the [Creator Store](../../production/creator-store.md).
 
 <Alert severity="info">
-The asset privacy system controls which creators and experiences can use the asset, but others can still see its metadata, such as its name and description.
+The asset privacy system controls which creators and games can use the asset, but others can still see its metadata, such as its name and description.
 </Alert>
 
 ## What Asset Privacy controls
@@ -24,15 +24,15 @@ Asset Privacy controls only the default privacy state assigned to **Images**, **
 
 - **Audio, Video, Models, MeshParts, Animations, and Packages** — these types have their own creation defaults and are not changed by the Asset Privacy setting. If audio or other asset types are not loading or distributing as expected, Asset Privacy is not the cause.
 - **Distributing assets on the Creator Store or Marketplace** — enabling or disabling Asset Privacy does not change your distribution eligibility or workflow.
-- **Using your own assets in your own published experiences** — your assets are always accessible to you in your own experiences regardless of their privacy setting.
+- **Using your own assets in your own published games** — your assets are always accessible to you in your own games regardless of their privacy setting.
 - **Assets created before Asset Privacy was enabled** — the setting only applies to newly created assets.
-- **Sharing restricted assets** — Restricted does not mean permanently inaccessible. You can grant access to specific friends, groups, and experiences at any time through [Creator Dashboard](#grant-permissions), or use the [Revamped Asset Manager](https://devforum.roblox.com/t/beta-updates-to-revamped-asset-manager/4548832/1) to bulk-grant access across many assets at once.
+- **Sharing restricted assets** — Restricted does not mean permanently inaccessible. You can grant access to specific friends, groups, and games at any time through [Creator Dashboard](#grant-permissions), or use the [Revamped Asset Manager](https://devforum.roblox.com/t/beta-updates-to-revamped-asset-manager/4548832/1) to bulk-grant access across many assets at once.
 
 **Key constraints:**
 
 - **Open Use is irreversible.** Once an asset is set to Open Use, it cannot be changed back to Restricted.
-- **Experience grants are permanent.** Once you grant an experience permission to use a restricted asset, that permission cannot be revoked.
-- **Revoking a collaborator's access does not affect experiences.** If a collaborator has already used a restricted asset in an experience, that experience retains access even after the collaborator is removed.
+- **Game grants are permanent.** Once you grant a game permission to use a restricted asset, that permission cannot be revoked.
+- **Revoking a collaborator's access does not affect games.** If a collaborator has already used a restricted asset in a game, that game retains access even after the collaborator is removed.
 - **The setting is not retroactive.** Only assets created after enabling Asset Privacy are Restricted by default.
 
 ## Restrict permissions
@@ -48,7 +48,7 @@ By default, Images, Decals, and Meshes are created as **Open Use**. Enable **Ass
 Individual creators and groups can enable Asset Privacy via Creator Dashboard. When enabled, newly created Images, Decals, and Meshes are set to **Restricted** by default. All other asset types are unaffected by this setting.
 
 <Alert severity="info">
-Enabling Asset Privacy does not change your ability to distribute assets on the Creator Store or Marketplace, use your assets in published experiences, or share your assets with collaborators.
+Enabling Asset Privacy does not change your ability to distribute assets on the Creator Store or Marketplace, use your assets in published games, or share your assets with collaborators.
 </Alert>
 
 <Tabs>
@@ -129,12 +129,12 @@ To grant a collaborator permission to use one of your restricted assets, the fol
 
 When you grant an individual creator permission:
 
-- They can use the asset in any of their individual or group-owned experiences.
-- They can grant permission for experiences they own or have edit access to.
+- They can use the asset in any of their individual or group-owned games.
+- They can grant permission for games they own or have edit access to.
 
 When you grant a group permission:
 
-- All group members with Edit access can use the asset in experiences owned by that group.
+- All group members with Edit access can use the asset in games owned by that group.
 
 Once a collaborator has permission to use one of your restricted assets, they can insert the asset from the **Inventory** and/or **Creation** tab of the [Toolbox](../../projects/assets/toolbox.md), or by using the restricted asset ID in the [Properties](../../studio/properties.md) window.
 
@@ -150,7 +150,7 @@ Once a collaborator has permission to use one of your restricted assets, they ca
   </figure>
 </GridContainer>
 
-If a collaborator wants to use the restricted asset in a script, or wants to save or publish a template place that includes the restricted asset, the experience itself must also have permission to use the asset. If this step is skipped, the asset is not visible or audible during runtime, and a clickable error message displays in the **Output** window.
+If a collaborator wants to use the restricted asset in a script, or wants to save or publish a template place that includes the restricted asset, the game itself must also have permission to use the asset. If this step is skipped, the asset is not visible or audible during runtime, and a clickable error message displays in the **Output** window.
 
 To grant a collaborator permission to use a restricted asset:
 
@@ -165,7 +165,7 @@ To grant a collaborator permission to use a restricted asset:
    - **MeshParts**
    - **Animations**
 
-1. Select the asset you want your collaborator to have permission to use in their experiences. The asset's **Configure** page displays.
+1. Select the asset you want your collaborator to have permission to use in their games. The asset's **Configure** page displays.
 1. In the asset's left-hand navigation, select **Permissions**. The asset's **Permissions** page displays.
 1. From the **Collaborators** tab, click the **Add collaborators** button.
 
@@ -176,7 +176,7 @@ To grant a collaborator permission to use a restricted asset:
    <img src="../../assets/creator-dashboard/Add-Collaborators.png" alt="The Add Collaborators pop-up menu." width="60%" />
 
 1. **(Optional)** If your selected asset type is a model or package, you can choose one of the following access types:
-   - **Use** - The collaborator receives permission to use the asset in their experiences.
+   - **Use** - The collaborator receives permission to use the asset in their games.
    - **Edit** - The collaborator receives permission to edit the asset's metadata, such as its name and description.
 
 1. Click the **Done** button to finalize your asset access permissions.
@@ -185,29 +185,29 @@ To grant a collaborator permission to use a restricted asset:
 To grant permissions across multiple assets at once, or to bulk-share assets with specific groups and users, use the latest Asset Manager beta. See [Revamped Asset Manager](https://devforum.roblox.com/t/beta-updates-to-revamped-asset-manager/4548832/1) for details.
 </Alert>
 
-### To experiences
+### To games
 
 <Alert severity="error">
-Once an experience has permission to use a restricted asset, you cannot revoke access to the asset.
+Once a game has permission to use a restricted asset, you cannot revoke access to the asset.
 </Alert>
 
-To grant an experience permission to use one of your restricted assets, the experience must be editable to either you or a group that you belong to in which you have the [Edit all group experiences](../../projects/groups.md#roles-and-permissions) permission.
+To grant a game permission to use one of your restricted assets, the game must be editable to either you or a group that you belong to in which you have the [Edit all group experiences](../../projects/groups.md#roles-and-permissions) permission.
 
-Once an experience has permission to use a restricted asset, anyone with **Edit** access to that experience can:
+Once a game has permission to use a restricted asset, anyone with **Edit** access to that game can:
 
-- Copy and paste the asset into another place file within that experience.
-- Use its asset ID in the **Properties** window or in scripts within any place file within the experience.
+- Copy and paste the asset into another place file within that game.
+- Use its asset ID in the **Properties** window or in scripts within any place file within the game.
 
 <Alert severity="info">
-When you grant permission to an experience by inserting a restricted asset into a collaborator's experience, the asset is also automatically granted to the experience's owner.
+When you grant permission to a game by inserting a restricted asset into a collaborator's game, the asset is also automatically granted to the game's owner.
 </Alert>
 
-The following tabs walk you through the process of either granting one or more experiences access to a single restricted asset, or granting an experience access to one or more restricted assets.
+The following tabs walk you through the process of either granting one or more games access to a single restricted asset, or granting a game access to one or more restricted assets.
 
 <Tabs>
   <TabItem key = "1" label="On an asset level">
 
-To grant an experience permission to use a restricted asset:
+To grant a game permission to use a restricted asset:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. In the upper tab bar, select **Development Items**, then click one of the following tabs:
@@ -220,16 +220,16 @@ To grant an experience permission to use a restricted asset:
    - **MeshParts**
    - **Animations**
 
-1. Select the asset you want the experience to have permission to use. The asset's **Configure** page displays.
+1. Select the asset you want the game to have permission to use. The asset's **Configure** page displays.
 1. In the asset's left-hand navigation, select **Permissions**. The asset's **Permissions** page displays.
 1. From the **Experiences** tab, click the **Add experiences** button.
 
    <img src="../../assets/creator-dashboard/Permissions-Experiences.png" alt="The landing page for asset permissions with the Experiences tab selected." width="80%" />
 
-1. Type the experience's universeID into the **Enter Universe IDs** input, then click the **Add** button. The experience displays beneath the input with its access visible.
+1. Type the game's universeID into the **Enter Universe IDs** input, then click the **Add** button. The game displays beneath the input with its access visible.
 
    <Alert severity="info">
-   To give multiple experiences permission at the same time, enter multiple universeIDs separated by commas.
+   To give multiple games permission at the same time, enter multiple universeIDs separated by commas.
    </Alert>
 
    <img src="../../assets/creator-dashboard/Add-Experiences.png" alt="The Add Experiences pop-up menu." width="60%" />
@@ -237,14 +237,14 @@ To grant an experience permission to use a restricted asset:
 1. Click the **Done** button to finalize your asset access permissions.
 
   </TabItem>
-  <TabItem key = "2" label="On an experience level">
+  <TabItem key = "2" label="On a game level">
 
-To grant an experience permission to use many restricted assets:
+To grant a game permission to use many restricted assets:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-1. Select one of your or your group's experiences. The experience's overview page displays.
-1. In the experience's left-hand navigation, navigate to the **Configure** section, then select **Permissions**. The experience's **Permissions** page displays.
-1. In the **Enter asset IDs** input, type every asset ID you want the experience to have access to separated by commas, then click the **Add** button. All restricted assets the experience has access to display beneath the input with the asset's name, asset ID, owner, and asset type.
+1. Select one of your or your group's games. The game's overview page displays.
+1. In the game's left-hand navigation, navigate to the **Configure** section, then select **Permissions**. The game's **Permissions** page displays.
+1. In the **Enter asset IDs** input, type every asset ID you want the game to have access to separated by commas, then click the **Add** button. All restricted assets the game has access to display beneath the input with the asset's name, asset ID, owner, and asset type.
 1. At the bottom of the page, click the **Save Changes** button.
 
   </TabItem>
@@ -252,11 +252,11 @@ To grant an experience permission to use many restricted assets:
 
 ## View permissions
 
-To view every restricted asset that your or your group's experiences have permission to use, review the experience's **Permissions** page on the Creator Dashboard.
+To view every restricted asset that your or your group's games have permission to use, review the game's **Permissions** page on the Creator Dashboard.
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-1. Select one of your or your group's experiences. The experience's overview page displays.
-1. In the experience's left-hand navigation, navigate to the **Configure** section, then select **Permissions**. The experience's **Permissions** page displays.
+1. Select one of your or your group's games. The game's overview page displays.
+1. In the game's left-hand navigation, navigate to the **Configure** section, then select **Permissions**. The game's **Permissions** page displays.
 1. **(Optional)** Click the download arrow button to export the data for offline processing.
 
 ## Revoke permissions
@@ -265,9 +265,9 @@ To view every restricted asset that your or your group's experiences have permis
 Removing a creator as a friend does not automatically revoke their permission to use a restricted asset.
 </Alert>
 
-Revoking a collaborator's permission prevents them from granting new experiences access to the asset. It does not affect experiences that already use the asset — those experiences retain access permanently.
+Revoking a collaborator's permission prevents them from granting new games access to the asset. It does not affect games that already use the asset — those games retain access permanently.
 
-To revoke permission for a creator to use a restricted asset in any additional experience:
+To revoke permission for a creator to use a restricted asset in any additional game:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. In the upper tab bar, select **Development Items**, then click one of the following tabs:
@@ -280,7 +280,7 @@ To revoke permission for a creator to use a restricted asset in any additional e
    - **MeshParts**
    - **Animations**
 
-1. Select the asset you want to revoke permission for one or more creators to use in their own experiences. The asset's **Configure** page displays.
+1. Select the asset you want to revoke permission for one or more creators to use in their own games. The asset's **Configure** page displays.
 1. In the asset's left-hand navigation, select **Permissions**. The asset's **Permissions** page displays.
 1. From the **Collaborators** tab, locate the creator you want to revoke permission from, then click the Access dropdown next to their username. Additional options display.
 1. Click the **Remove** button. A pop-up displays to confirm that you want to revoke permission from the collaborator.
@@ -296,7 +296,7 @@ Opening an asset's permissions is irreversible. Once you set an asset to Open Us
 To set multiple assets to **Open Use** in bulk, use the Revamped Asset Manager. See [Revamped Asset Manager](https://devforum.roblox.com/t/beta-updates-to-revamped-asset-manager/4548832/1) for details.
 </Alert>
 
-With **Asset Privacy** enabled, you can still open the permissions of any Image, Decal, or Mesh so that any creator or experience can freely use it.
+With **Asset Privacy** enabled, you can still open the permissions of any Image, Decal, or Mesh so that any creator or game can freely use it.
 
 To open permissions for your or your group's Image, Decal, or Mesh:
 
@@ -307,6 +307,6 @@ To open permissions for your or your group's Image, Decal, or Mesh:
    To set a Decal to Open Use, set its Image dependency to Open Use **first**. The Asset Privacy system blocks the change if the Image is still Restricted.
    </Alert>
 
-1. Select the asset you want every creator and experience to freely use. The asset's **Configure** page displays.
+1. Select the asset you want every creator and game to freely use. The asset's **Configure** page displays.
 1. In the **Asset Access** section, enable **Open Use**. A pop-up displays asking you to confirm this permanent change.
 1. In the pop-up, click the **Make Open Use** button. Anyone on Roblox can now use your asset.

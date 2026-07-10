@@ -356,28 +356,116 @@ methods:
       - Social
   - name: SocialService:PromptFeedbackSubmissionAsync
     summary: |
-      Prompts the player to submit feedback about the current experience.
+      Prompts the player to submit feedback or a player support ticket about the
+      current experience.
     description: |
-      Displays a feedback submission dialog to the player, allowing them to
-      provide feedback about their experience. The submitted feedback becomes
-      available to developers in the Creator Dashboard under the **Audience** >
-      **Feedback** section.
+      Displays a dialog to the player, allowing them to provide feedback about
+      their experience or submit a player support ticket.
 
-      Players can submit feedback once per day per experience. Experience owners
-      cannot submit feedback for their own experiences. If the player has
-      already submitted feedback for the day, owns the experience, or is
-      otherwise ineligible, the prompt will display a message indicating that
-      feedback is unavailable.
+      - The submitted feedback becomes available to developers in the Creator
+        Dashboard under the **Audience** > **Feedback** section.
+      - The submitted player support requests become available to developers in
+        the Creator Dashboard under the **Audience** > **Player Support**
+        section. The Player Support flow is currently in **alpha** and is only
+        available to select experiences.
 
-      This method yields until the player either submits feedback or dismisses
-      the dialog. As an asynchronous operation, it should be called using
-      `task.spawn()` or within a coroutine.
+      This method yields until the player either submits feedback, dismisses the
+      dialog, or a timeout is reached. As an asynchronous operation, it should
+      be called using `task.spawn()` or within a coroutine.
 
-      Note that this service does not work during playtesting in Roblox Studio.
-      To test the feedback prompt, you must publish the experience and play it
-      in the Roblox application.
+      #### Feedback Types
+
+      The `FeedbackType` key in the options dictionary determines which flow is
+      displayed:
+
+      - `Enum.FeedbackType.Feedback` (default) — Displays a general feedback
+        prompt where the player can rate and comment on the experience.
+      - `Enum.FeedbackType.PlayerSupport` — (**Alpha; select experiences only**)
+        Displays a player support flow where the player can submit a categorized
+        support ticket directly to the experience developer. This enables
+        in-experience customer support without requiring players to leave the
+        game.
+
+      #### Feedback Flow
+
+      When `FeedbackType` is `Enum.FeedbackType.Feedback` (or omitted), the
+      player is shown a general feedback prompt where they can rate and
+      optionally comment on the experience. Submitted feedback appears in the
+      Creator Dashboard under **Audience** > **Feedback**. Players can submit
+      feedback once per day per experience.
+
+      #### Player Support Flow (Alpha)
+
+      When `FeedbackType` is set to `Enum.FeedbackType.PlayerSupport`, the
+      player is guided through a support ticket submission flow. This flow is
+      currently in **alpha** and is only available to select experiences. The
+      prompt presents a form where the player selects a category, writes a
+      description of their issue, and chooses whether to share their user ID
+      with the developer. The available categories are:
+
+      <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bug Report</td>
+          <td>The player is reporting a bug or technical issue.</td>
+        </tr>
+        <tr>
+          <td>Data Restore Request</td>
+          <td>The player is requesting that lost or corrupted data be restored.</td>
+        </tr>
+        <tr>
+          <td>Purchasing Issue</td>
+          <td>The player has an issue with an in-experience purchase.</td>
+        </tr>
+        <tr>
+          <td>Other</td>
+          <td>A general issue that does not fit the other categories.</td>
+        </tr>
+      </tbody>
+      </table>
+
+      The player also chooses whether to share their `Class.Player.UserId` with
+      the developer as part of the ticket.
+
+      #### Eligibility
+
+      Before showing the prompt, this method performs an eligibility check. The
+      eligibility rules differ depending on the feedback type.
+
+      A player is ineligible for the **Feedback** flow if:
+
+      - The player is the experience owner (developers cannot submit feedback
+        for their own experiences).
+      - The player has been rate limited (submitted too many reviews recently).
+      - The player does not meet age requirements.
+
+      A player is ineligible for the **Player Support** flow if:
+
+      - The player does not meet age requirements.
+      - The player already has 5 in-progress tickets.
+      - The player is banned from the experience.
+
+      If the player is ineligible, the prompt displays a message indicating that
+      feedback or support is unavailable and the method returns without error.
+
+      #### Notes
+
+      - This service does not work during playtesting in Roblox Studio. To test
+        the feedback prompt, you must publish the experience and play it in the
+        Roblox application.
+      - The method will time out and resume if the player does not interact with
+        the prompt within a reasonable period.
+      - If the submission fails due to a text filter violation or network error,
+        the player is notified within the dialog.
     code_samples:
       - PromptFeedbackSubmissionAsync
+      - PromptFeedbackSubmissionAsync-PlayerSupport
     parameters:
       - name: options
         type: Dictionary?
@@ -473,7 +561,10 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      Use
+      `Class.SocialService:PromptLinkSharingAsync()|PromptLinkSharingAsync()`
+      instead.
     security: None
     thread_safety: Unsafe
     capabilities:

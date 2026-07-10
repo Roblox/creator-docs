@@ -10,9 +10,9 @@ While every classroom is unique, we've included the following practices designed
 
 ## Prepare for class
 
-**Go Through Projects and Learning Experiences**
+**Go Through Projects and Learning Games**
 
-Before classes, we always recommend playing a learning experience or going through the steps of a project.
+Before classes, we always recommend playing a learning game or going through the steps of a project.
 
 **Develop Classroom Guidelines with Students**
 
@@ -74,7 +74,7 @@ For instance, the practices below have been successful for teachers:
 
 **Handling Questions about Roblox**
 
-It's likely that students will ask questions unrelated to learning objectives, such as your "favorite Roblox game," or "Can you give me free Robux?". To preempt these questions, point out at the start of class that you'll be addressing questions related to the project or experience at hand.
+It's likely that students will ask questions unrelated to learning objectives, such as your "favorite Roblox game," or "Can you give me free Robux?". To preempt these questions, point out at the start of class that you'll be addressing questions related to the project or game at hand.
 
 ## Code and creation tips
 

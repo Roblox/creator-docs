@@ -11,7 +11,7 @@ Roblox groups and **all content uploaded to them** must follow Roblox's [Communi
 
 - Assets
 - Avatars
-- Experiences
+- Games
 
 ## Owner accountability
 

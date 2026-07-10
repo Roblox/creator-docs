@@ -36,7 +36,8 @@ methods:
     tags:
       - Deprecated
       - CustomLuaState
-    deprecation_message: ''
+    deprecation_message: |
+      This method is deprecated. Do not use it for new work.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -60,7 +61,8 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method is deprecated. Do not use it for new work.
     security: None
     thread_safety: Unsafe
     capabilities:

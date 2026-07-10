@@ -7,7 +7,7 @@ In many cases, you may want to convert a premade model from your modeling
 software into an accessory on Roblox. If you are looking to create your
 accessory from scratch, see [Create accessories](./creating-rigid/index.md).
 
-Using a provided 3D reference file, this tutorial covers each step in the workflow to properly configure and export a 3D model with PBR textures from Blender and generate your own **rigid accessory** in Studio. After you create the accessory, you can upload it to the Marketplace, save it to your toolbox, and use it in your own experiences.
+Using a provided 3D reference file, this tutorial covers each step in the workflow to properly configure and export a 3D model with PBR textures from Blender and generate your own **rigid accessory** in Studio. After you create the accessory, you can upload it to the Marketplace, save it to your toolbox, and use it in your own games.
 
 <Alert severity = 'info'>
 This tutorial only covers rigid accessories, and does not cover the process of converting more advanced clothing or character body models.

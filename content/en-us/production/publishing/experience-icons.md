@@ -3,7 +3,7 @@ title: Icons
 description: Icons are an important factor in helping users recognize your experience and grow its brand.
 ---
 
-A high-quality **icon**, in addition to a showcase [thumbnail](thumbnails.md), is an important factor in helping users recognize your experience and grow its brand. With prominent placement in various sections of the [Home](https://www.roblox.com/home) page, it's recommended that the icon expresses the theme, tone, and/or genre of the experience.
+A high-quality **icon**, in addition to a showcase [thumbnail](thumbnails.md), is an important factor in helping users recognize your game and grow its brand. With prominent placement in various sections of the [Home](https://www.roblox.com/home) page, it's recommended that the icon expresses the theme, tone, and/or genre of the game.
 
 <GridContainer numColumns="3">
 	<figure>
@@ -20,20 +20,20 @@ A high-quality **icon**, in addition to a showcase [thumbnail](thumbnails.md), i
   </figure>
 </GridContainer>
 
-When you [publish an experience](../../production/publishing/publish-games-and-places.md) for the first time, an icon is automatically generated from a collection of default images. While you can only display one icon per [locale](../../production/localization/index.md), you can also include supplementary [image and video thumbnails](thumbnails.md) that further promote the experience.
+When you [publish a game](../../production/publishing/publish-games-and-places.md) for the first time, an icon is automatically generated from a collection of default images. While you can only display one icon per [locale](../../production/localization/index.md), you can also include supplementary [image and video thumbnails](thumbnails.md) that further promote the game.
 
-For more information on maximizing the impact of your experience's icon, see [best practices](#best-practices).
+For more information on maximizing the impact of your game's icon, see [best practices](#best-practices).
 
 ## Upload icons
 
-To ensure your experience's icon always displays in high resolution and with an ideal aspect ratio, use a template of **512×512 pixels**. In some places on the Roblox site and app, icons scale down to smaller sizes like 150×150 pixels, so it's recommended that you preview an icon at smaller sizes to confirm its details remain clear. In addition, see [best practices](#best-practices) for tips on icon format and design.
+To ensure your game's icon always displays in high resolution and with an ideal aspect ratio, use a template of **512×512 pixels**. In some places on the Roblox site and app, icons scale down to smaller sizes like 150×150 pixels, so it's recommended that you preview an icon at smaller sizes to confirm its details remain clear. In addition, see [best practices](#best-practices) for tips on icon format and design.
 
-To upload an experience icon:
+To upload a game icon:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-1. Click on the experience you want to upload an icon for. The experience's **Overview** page displays.
+1. Click on the game you want to upload an icon for. The game's **Overview** page displays.
 1. In the left-hand navigation, under **Configure**, select **Places**.
-1. Click the **start place** marked with a star icon (if the experience contains only one place, it will be the only option). The place's **Basic Settings** page displays.
+1. Click the **start place** marked with a star icon (if the game contains only one place, it will be the only option). The place's **Basic Settings** page displays.
 
    <img src="../../assets/creator-dashboard/Places-Start-Place-No-Icon.png" width="200" alt="Start place tile indicated in Places display on the Creator Dashboard" />
 
@@ -43,7 +43,7 @@ To upload an experience icon:
 
 ## Best practices
 
-To create the most positive impact for users looking to play your experience, consider the following best practices.
+To create the most positive impact for users looking to play your game, consider the following best practices.
 
 ### Quality and aspect ratio
 
@@ -72,7 +72,7 @@ When you upload an icon image, it should be **square** and at least **512×512 p
 
 ### Relevant content
 
-An icon will have a higher impact if it's unique and provides relevant imagery on what users should expect when they join the experience. Icons with ambiguous graphics may lead to unnecessary confusion.
+An icon will have a higher impact if it's unique and provides relevant imagery on what users should expect when they join the game. Icons with ambiguous graphics may lead to unnecessary confusion.
 
 <GridContainer numColumns="3">
   <figure>
@@ -97,7 +97,7 @@ An icon will have a higher impact if it's unique and provides relevant imagery o
 
 ### Color and contrast
 
-You can express your experience's theme through color and contrast to help users decide if it's suitable and appealing to them.
+You can express your game's theme through color and contrast to help users decide if it's suitable and appealing to them.
 
 <GridContainer numColumns="3">
   <figure>
@@ -109,7 +109,7 @@ You can express your experience's theme through color and contrast to help users
     <figcaption>Muted low-saturation colors for a somber, moody setting</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/publishing/experience-metadata/Icon-Colorization-C.jpg" alt="Icon with heavy color balance and contrast for a horror experience" />
-    <figcaption>Heavy color balance and contrast for a horror experience</figcaption>
+    <img src="../../assets/publishing/experience-metadata/Icon-Colorization-C.jpg" alt="Icon with heavy color balance and contrast for a horror game" />
+    <figcaption>Heavy color balance and contrast for a horror game</figcaption>
   </figure>
 </GridContainer>

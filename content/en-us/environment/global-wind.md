@@ -1,9 +1,9 @@
 ---
 title: Global wind
-description: The global wind vector sets the direction and strength that wind blows through an experience, affecting terrain grass, dynamic clouds, and particles.
+description: The global wind vector sets the direction and strength that wind blows through a game, affecting terrain grass, dynamic clouds, and particles.
 ---
 
-The `Class.Workspace.GlobalWind|GlobalWind` vector sets the direction and strength that wind blows through an experience, affecting [terrain grass](../parts/terrain.md#grass-animation) and [dynamic clouds](../environment/clouds.md). You can set it as a [constant vector](#global-wind-vector), or adjust it through [scripting](#scripted-effects) to create cyclical gusts of wind. Additionally, you can influence [particles](#particle-influence) to follow the global wind vector.
+The `Class.Workspace.GlobalWind|GlobalWind` vector sets the direction and strength that wind blows through a game, affecting [terrain grass](../parts/terrain.md#grass-animation) and [dynamic clouds](../environment/clouds.md). You can set it as a [constant vector](#global-wind-vector), or adjust it through [scripting](#scripted-effects) to create cyclical gusts of wind. Additionally, you can influence [particles](#particle-influence) to follow the global wind vector.
 
 <video src="../assets/lighting-and-effects/aero-fluid-dynamics/Global-Wind-Showcase.mp4" controls width="100%" alt="Video of wind blowing clouds and grass across rolling hills in the 3D world"></video>
 
@@ -22,7 +22,7 @@ To set the global wind vector in Studio:
    <img src="../assets/studio/properties/Workspace-GlobalWind.png" width="320" alt="GlobalWind property shown in Properties window of Studio" />
 
 <Alert severity="info">
-Note that the speed of [animated grass](../parts/terrain.md#grass-animation) — but not its vector direction&nbsp;— will be reduced if the player has toggled on the **Reduce&nbsp;Motion** [accessibility](../production/publishing/accessibility.md#reduced-motion) setting from the Roblox or in‑experience **Settings** menu.
+Note that the speed of [animated grass](../parts/terrain.md#grass-animation) — but not its vector direction&nbsp;— will be reduced if the player has toggled on the **Reduce&nbsp;Motion** [accessibility](../production/publishing/accessibility.md#reduced-motion) setting from the Roblox or in-game **Settings** menu.
 </Alert>
 
 ## Particle Influence

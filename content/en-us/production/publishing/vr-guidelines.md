@@ -1,21 +1,21 @@
 ---
 title: VR guidelines
-description: Guidelines on publishing an experience for VR devices.
+description: Guidelines on publishing a game for VR devices.
 ---
 
-Roblox VR uses [OpenXR](https://www.khronos.org/openxr/) as a backend for all VR devices. That means the implementation is platform agnostic, allowing experiences to work interchangeably on Quest and PC VR headsets. Testing on a PC VR headset should be valid for the Quest&nbsp;2. At minimum, Oculus drivers require an NVidia GTX1060 graphics card or equivalent.
+Roblox VR uses [OpenXR](https://www.khronos.org/openxr/) as a backend for all VR devices. That means the implementation is platform agnostic, allowing games to work interchangeably on Quest and PC VR headsets. Testing on a PC VR headset should be valid for the Quest 2. At minimum, Oculus drivers require an NVidia GTX1060 graphics card or equivalent.
 
 ## Graphics quality mode
 
-When running Roblox on standalone VR headsets such as Quest&nbsp;2 or Quest&nbsp;Pro, maintaining a comfortable performance level is crucial, as frame rate drops can cause discomfort for the user. To achieve this, an **Auto&nbsp;Quality&nbsp;Mode** setting is available on Quest which aims to maintain a minimum of 72 frames per second by automatically scaling the rendering detail based on performance data.
+When running Roblox on standalone VR headsets such as Quest 2 or Quest Pro, maintaining a comfortable performance level is crucial, as frame rate drops can cause discomfort for the user. To achieve this, an **Auto&nbsp;Quality&nbsp;Mode** setting is available on Quest which aims to maintain a minimum of 72 frames per second by automatically scaling the rendering detail based on performance data.
 
 <img src="../../assets/publishing/vr/Auto-Quality-Mode.png" width="360" alt="Auto Quality Mode toggled on" />
 
-If you test an experience on the Quest&nbsp;2 and are not pleased with the visuals when **Auto&nbsp;Quality&nbsp;Mode** is turned on, it's recommended that you attempt to optimize your experience further.
+If you test a game on the Quest 2 and are not pleased with the visuals when **Auto&nbsp;Quality&nbsp;Mode** is turned on, it's recommended that you attempt to optimize your game further.
 
 ## Comfort settings
 
-When users experience VR, movement of their camera/position can cause some discomfort due to the disconnect between what they see and the lack of motion detected by their body and inner ear. Roblox provides multiple settings to help users of all sensitivity levels, so everyone can enjoy an immersive and comfortable VR experience while playing. In addition to **Comfort**, **Default**, and **Expert** modes, the user may choose **Custom** to individually turn the following settings on and off:
+When users experience VR, movement of their camera/position can cause some discomfort due to the disconnect between what they see and the lack of motion detected by their body and inner ear. Roblox provides multiple settings to help users of all sensitivity levels, so everyone can enjoy an immersive and comfortable VR game while playing. In addition to **Comfort**, **Default**, and **Expert** modes, the user may choose **Custom** to individually turn the following settings on and off:
 
 - **Vignette** — An overlay is displayed during motion which restricts the user's peripheral vision during motion and conceals camera teleports.
 - **Stepped Rotation** — The camera uses stepped rotation (teleporting to the next rotated position) for 1st-person and 3rd-person camera modes, versus the smooth rotation mode when rotating the camera with the controller.
@@ -25,7 +25,7 @@ Additional information can be found at [VR Menus and Settings](https://en.help.r
 
 ## Camera modes
 
-When developing a VR-first experience, you can take advantage of the default camera scripts or implement your own custom scripts.
+When developing a VR-first game, you can take advantage of the default camera scripts or implement your own custom scripts.
 
 <Tabs>
 <TabItem label="Default cameras">
@@ -34,9 +34,9 @@ Roblox provides an array of default camera options, including a third-person com
 By utilizing the default scripts provided by Roblox, you benefit from ongoing updates and improvements that ensure compatibility with all new features and devices. This will likely provide an easier and more sustainable development process going forward.
 </TabItem>
 <TabItem label="Custom camera">
-As a developer, you have the flexibility to customize the default camera scripts by replacing them with your own VR camera implementation. This lets you achieve your own vision with an immersive VR-first view, but doing so opts your experience out of future script updates and you'll need to manually merge changes and improvements to the default scripts as they become available.
+As a developer, you have the flexibility to customize the default camera scripts by replacing them with your own VR camera implementation. This lets you achieve your own vision with an immersive VR-first view, but doing so opts your game out of future script updates and you'll need to manually merge changes and improvements to the default scripts as they become available.
 
-If you have existing experiences that use a custom camera or other custom `Class.PlayerScripts`, it's likely that you do **not** have the most recent camera scripts that support VR. If you test your experience in VR and the camera is not working properly, it's recommended that you either merge the most current VR camera scripts or switch to the default scripts.
+If you have existing games that use a custom camera or other custom `Class.PlayerScripts`, it's likely that you do **not** have the most recent camera scripts that support VR. If you test your game in VR and the camera is not working properly, it's recommended that you either merge the most current VR camera scripts or switch to the default scripts.
 </TabItem>
 </Tabs>
 

@@ -187,6 +187,23 @@ RunService.PreSimulation:Connect(onPreSimulation)
 
 From its duration on the timeline, you can tell that the function is using a lot of processing time compared to other tasks.
 
+## Analyze captures with Assistant
+
+In Studio, you can ask [Assistant](../../assistant/guide.md) to automatically analyze a paused MicroProfiler capture, identify performance bottlenecks, and propose fixes.
+
+1. In Studio, open the MicroProfiler with <kbd>Ctrl</kbd><kbd>F6</kbd> (<kbd>⌘</kbd><kbd>F6</kbd>).
+1. When you spot a frame time spike, pause the capture by pressing **Pause** in the top menu or using <kbd>Ctrl</kbd><kbd>P</kbd> (<kbd>⌘</kbd><kbd>P</kbd>).
+1. Open Assistant and ask it to analyze the capture. Example prompts include:
+   - "I've captured a frame time spike in the MicroProfiler—analyze it."
+   - "What caused the spike?"
+   - "Is it physics-bound or script-bound?"
+   - "Which category has the highest exclusive time?"
+   - "When I'm in the hangar, the FPS drops. Reproduce the issue, use MicroProfiler to find the cause, fix it, and retest."
+
+Assistant reads the paused capture through the MicroProfiler API and returns a report on likely bottlenecks, along with proposed script or scene changes you can apply.
+
+This functionality also works via the [Studio MCP](../../studio/mcp.md) server, so you can integrate MicroProfiler analyses into your own AI agent or agentic loop to get automated feedback on how new changes impact your game's performance.
+
 ## Save frame data
 
 If you want to save a set of frame data for later review (or to share with someone else), use the **Save to file** button. The MicroProfiler saves frame data to a standalone HTML file named `microprofile-<date>-<time>.html`.

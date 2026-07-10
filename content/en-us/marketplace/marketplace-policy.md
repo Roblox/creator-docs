@@ -103,10 +103,10 @@ Whether or not you are the original creator of the asset, you must ensure that y
   - Creators who copy another creator's item or Roblox's item.
 - Only sell items that you have permission to sell. If you are not the original creator or owner of the IP, you must have permission from the IP owner to sell their content or inspired content.
 - Be especially careful when submitting items in or near the mouth or waist of the avatar. Make sure to frequently test your assets on multiple types of characters to avoid design issues.
-- Do not create items that intentionally disrupt a user's experience, such as:
+- Do not create items that intentionally disrupt a user's game, such as:
   - Obscuring the majority of the user's avatar.
-  - Obscuring the user's in-experience UI.
-  - Obscuring other users' avatars or in-experience view.
+  - Obscuring the user's in-game UI.
+  - Obscuring other users' avatars or in-game view.
   - Making a user's avatar disappear (completely or partially).
 - Do not create items that depend on issues or glitches on the Roblox platform.
 - Do not include excessive text on items.

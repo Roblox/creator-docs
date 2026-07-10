@@ -5,7 +5,7 @@ next: /tutorials/use-case-tutorials/scripting/basic-scripting/fading-trap
 prev: /tutorials/use-case-tutorials/scripting/basic-scripting/intro-to-scripting
 ---
 
-In [Introduction to scripting](./intro-to-scripting.md), you learned how to make changes in an experience in a loop over time. What if you want to make changes based on user behavior? In this tutorial, you'll learn how to make a deadly lava floor which kills users when they step on it.
+In [Introduction to scripting](./intro-to-scripting.md), you learned how to make changes in a game in a loop over time. What if you want to make changes based on user behavior? In this tutorial, you'll learn how to make a deadly lava floor which kills users when they step on it.
 
 <video controls loop muted>
   <source src="../../../../assets/tutorials/deadly-lava/lavaFloorGameplay.mp4" />
@@ -77,7 +77,7 @@ When the `kill` function is called, the `otherPart` parameter will represent the
 
 ## Character and humanoid
 
-When a user touches the lava, Roblox can detect the specific body part of the user that touched it, such as the left leg or right foot. This part is in the user's **Character** model, which contains all of the objects that make up the user's avatar in the experience, including:
+When a user touches the lava, Roblox can detect the specific body part of the user that touched it, such as the left leg or right foot. This part is in the user's **Character** model, which contains all of the objects that make up the user's avatar in the game, including:
 
 - The individual body parts of the user such as the head, limbs, and torso.
 - Any clothing and accessories worn by the user.
@@ -149,7 +149,7 @@ end
 lava.Touched:Connect(kill)
 ```
 
-With that, your lava floor is complete! Test your experience and you should find that your deadly lava successfully kills users on contact. Try using your lava as an extra challenge in an obby, or as a boundary for a world.
+With that, your lava floor is complete! Playtest your game and you should find that your deadly lava successfully kills users on contact. Try using your lava as an extra challenge in an obby, or as a boundary for a world.
 
 ## Final code
 

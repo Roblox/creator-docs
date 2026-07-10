@@ -1,6 +1,6 @@
 ---
 title: Get started creating on Roblox
-description: Learn how to create experiences and avatar items quickly on Roblox
+description: Learn how to create games and avatar items quickly on Roblox.
 hideInPageNavigation: true
 ---
 
@@ -28,11 +28,11 @@ links: [
 },
 {
 title: "3. Customize your avatar and play something",
-description: "The best way to understand Roblox is to use it! Customize your avatar with free or paid items and play a few of the millions of experiences.",
+description: "The best way to understand Roblox is to use it! Customize your avatar with free or paid items and play a few of the millions of games.",
 image: "../assets/landing/avatar-play.jpg",
 links: [
 {text: "Browse avatar items", href: "https://www.roblox.com/catalog" },
-{text: "Browse experiences", href: "https://www.roblox.com/charts" },
+{text: "Browse games", href: "https://www.roblox.com/charts" },
 ]
 },
 {
@@ -46,14 +46,14 @@ links: [
 ]
 },
 {
-title: "Experiences",
-description: "Making an experience can seem intimidating, but we promise it's not too bad! Walk through the tutorial or watch the following videos to understand a bit more about how experiences work.",
+title: "Games",
+description: "Making a game can seem intimidating, but we promise it's not too bad! Walk through the tutorial or watch the following videos to understand a bit more about how games work.",
 buttons: [
 { text: "See all docs", href: "../experiences" }
 ],
 content: [
 {
-title: "Create your first experience",
+title: "Create your first game",
 description: "Create a simple 3D platformer while learning important Roblox building and scripting concepts.",
 image: ".../assets/landing/core-experience.png",
 links: [
@@ -83,7 +83,7 @@ links: [
 },
 {
 title: "Avatar items",
-description: "Making avatar items can sometimes be easier than making an experience. You can make a simple 2D t-shirt with an image editor without having to open Studio at all. If you're interested in 3D modeling, use Blender and Studio together to make a basic 3D accessory.",
+description: "Making avatar items can sometimes be easier than making a game. You can make a simple 2D t-shirt with an image editor without having to open Studio at all. If you're interested in 3D modeling, use Blender and Studio together to make a basic 3D accessory.",
 buttons: [
 { text: "See all docs", href: "../avatar" }
 ],

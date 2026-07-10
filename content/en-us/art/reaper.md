@@ -3,7 +3,7 @@ title: Reaper
 description: Learn about Reaper tools.
 ---
 
-Reaper is a Digital Audio Workstation (DAW) with a broad range of audio editing tools that allow you to create, manipulate, and export audio streams. Running on Linux, macOS, and Windows systems, this cross-platform application is a popular choice for creators who want to make custom music and sound effects for Roblox experiences.
+Reaper is a Digital Audio Workstation (DAW) with a broad range of audio editing tools that allow you to create, manipulate, and export audio streams. Running on Linux, macOS, and Windows systems, this cross-platform application is a popular choice for creators who want to make custom music and sound effects for Roblox games.
 
 While this is by no means an exhaustive list, the following guide offers high-level information on essential Reaper tools and features for audio editing, as well as best practice guidance on designing audio files for Studio.
 
@@ -75,7 +75,7 @@ Similar to plugins in Studio, the **Plugins Window** lets you add additional fea
 
 ## Common workflows
 
-Now that you know how to navigate the user interface, let's take a closer look at the most common audio editing workflows that allow you to create, manipulate, and export audio streams for Roblox experiences.
+Now that you know how to navigate the user interface, let's take a closer look at the most common audio editing workflows that allow you to create, manipulate, and export audio streams for Roblox games.
 
 <Alert severity="info">
 For more information on any of these workflows, see Reaper's official [Up and Running: A Reaper User Guide](https://www.reaper.fm/userguide.php) documentation.
@@ -85,7 +85,7 @@ For more information on any of these workflows, see Reaper's official [Up and Ru
 
 In audio design, it's common to trim a small section off of an audio file, then fade it in and out to help smooth the sound's transition from start to finish. This process is important because ambient sounds in the real world don't often start and stop suddenly; if they did, it would feel extremely jarring.
 
-For example, let's review the following two audio clips of a wind gust; the first audio clip includes fade ins and outs to help the sound feel more natural while the second keeps the initial cut. As you listen to both, notice how the first clip feels realistic while the other feels abrupt. Without these transitions, the sound would break a player's sense of immersion in an experience.
+For example, let's review the following two audio clips of a wind gust; the first audio clip includes fade ins and outs to help the sound feel more natural while the second keeps the initial cut. As you listen to both, notice how the first clip feels realistic while the other feels abrupt. Without these transitions, the sound would break a player's sense of immersion in a game.
 
 <table>
 <tbody>
@@ -109,7 +109,7 @@ To create fades ins and outs:
 1. Import your audio file.
    1. Select a `.mp3`, `.ogg`, or `.wav` file on your computer.
    1. Drag-and-drop the audio file into the **Arrange Area**.
-1. Crop the sample until you have a portion of the sound you want to play in your experience.
+1. Crop the sample until you have a portion of the sound you want to play in your game.
    1. Hover over the left-side of your audio file until your cursor changes to a double-sided arrow icon.
    1. Click-and-drag the audio sample to where you want to start your fade in.
    1. In a similar process, click-and-drag the right-side of your audio file to where you want to finish your fade out.
@@ -155,7 +155,7 @@ While both of these examples have their time and place in projects, compressing 
 </tbody>
 </table>
 
-This is important because without compression, some sounds can be significantly louder than others and drown out important audio cues throughout your experiences, especially when they play through speakers that struggle with wide dynamic ranges, like mobile devices.
+This is important because without compression, some sounds can be significantly louder than others and drown out important audio cues throughout your games, especially when they play through speakers that struggle with wide dynamic ranges, like mobile devices.
 
 To compress audio:
 
@@ -206,7 +206,7 @@ Let's look at this in practice with two audio clips of a rain sound; the first a
 </table>
 
 <Alert severity="info">
-Equalizing frequencies is an art form, and it takes time to figure out what configurations work to meet the needs of your experiences. It's recommended to experiment often until you find what sounds best to you.
+Equalizing frequencies is an art form, and it takes time to figure out what configurations work to meet the needs of your games. It's recommended to experiment often until you find what sounds best to you.
 </Alert>
 
 To equalize frequencies in a sound:
@@ -271,7 +271,7 @@ To reduce noise:
 
 ### Create audio variations
 
-For audio design in experiences, it's important to create variations of sounds that players will hear often during their gameplay, such as footsteps, sword swings, or collection feedback. In the same way that real world sounds almost never repeat exactly the same,  variations in sound improves player immersion and leads to a dynamic player experience.
+For audio design in games, it's important to create variations of sounds that players will hear often during their gameplay, such as footsteps, sword swings, or collection feedback. In the same way that real world sounds almost never repeat exactly the same,  variations in sound improves player immersion and leads to a dynamic player experience.
 
 <table>
 <tbody>
@@ -311,7 +311,7 @@ To create variations in your audio:
 ### Loop audio
 
 <Alert severity="info">
-For a step-by-step tutorial from an official Roblox Sound Designer on looping sounds for experiences, see [Creating Perfect Audio Loops](https://devforum.roblox.com/t/creating-perfect-audio-loops/2849057).
+For a step-by-step tutorial from an official Roblox Sound Designer on looping sounds for games, see [Creating Perfect Audio Loops](https://devforum.roblox.com/t/creating-perfect-audio-loops/2849057).
 </Alert>
 
 When you record an ambient sound in the real world, it almost never loops perfectly. Even monotonous, non-dynamic sounds like the hum of an air conditioner will click and pop as they loop, breaking player immersion and pulling them out of their gameplay.
@@ -333,9 +333,9 @@ When you record an ambient sound in the real world, it almost never loops perfec
 </tbody>
 </table>
 
-This becomes more obvious when there are multiple looping ambient tracks that layer on top of one another. For example, let's say you have an exploration experience with frog croaking, insects chirping, wind gently breezing by, and an upbeat background track. As these sounds loops, there may be harsh volume and/or frequency jumps.
+This becomes more obvious when there are multiple looping ambient tracks that layer on top of one another. For example, let's say you have an exploration game with frog croaking, insects chirping, wind gently breezing by, and an upbeat background track. As these sounds loops, there may be harsh volume and/or frequency jumps.
 
-In the best case scenario, this just annoys players, but in the worst case scenario, it can cause them to leave the experience altogether. With a little extra effort, you can create seamless loops that keep your intended mood without disruption.
+In the best case scenario, this just annoys players, but in the worst case scenario, it can cause them to leave the game altogether. With a little extra effort, you can create seamless loops that keep your intended mood without disruption.
 
 To create a loop:
 
@@ -379,7 +379,7 @@ To export audio:
       </Alert>
 
    1. Set **Channels** to **Stereo** for 2 channels or **Mono** for 1 channel.
-   1. Set **Primary output format** to **OGG vorbis**. This is the preferred file type for experiences as it doesn't add any additional silence to the start or end of your audio.
+   1. Set **Primary output format** to **OGG vorbis**. This is the preferred file type for games as it doesn't add any additional silence to the start or end of your audio.
 
       <Alert severity="warning">
       Do not use the `.mp3` output format as it will add a few milliseconds of silence to the beginning of your audio.
@@ -391,5 +391,5 @@ To export audio:
    <img src="../assets/art/3p-software/reaper//RenderToFileSettings.png" width = "70%" alt=""/>
 
 <Alert severity="success">
-For information on how to use your new custom audio files in experiences, see the [Audio](../audio/index.md) guides.
+For information on how to use your new custom audio files in games, see the [Audio](../audio/index.md) guides.
 </Alert>

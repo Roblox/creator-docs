@@ -21,10 +21,10 @@ Your standout creations are what makes Roblox special, and we are thrilled to fe
 
 ## What qualifies as a standout game?
 
-Genre, gameplay, and visual style are common factors in a player's decision to try a new experience. Entrance into Roblox Accelerator and Jumpstart hinge on innovation in these areas.
+Genre, gameplay, and visual style are common factors in a player's decision to try a new game. Entrance into Roblox Accelerator and Jumpstart hinge on innovation in these areas.
 
 - **Genres**: RPG, strategy, and shooter games are heavily underrepresented despite strong demand from older age groups. We're seeking bold games in these core genres, plus unexpected genre mash-ups and projects that blend traditional mechanics with Roblox's avatars, social features, and cross-platform support.
-- **Gameplay**: Deep gameplay mechanics, metagame systems, and skillful challenges keep players coming back to play again. We're looking for creators who seamlessly blend depth with Roblox's intuitive nature, massive multiplayer scale, and emergent social dynamics, specifically creators who can craft highly replayable, memorable experiences and moments players can't find anywhere else, even Roblox! Games that seem like a copy or reskin of a popular Roblox game are a hard sell.
+- **Gameplay**: Deep gameplay mechanics, metagame systems, and skillful challenges keep players coming back to play again. We're looking for creators who seamlessly blend depth with Roblox's intuitive nature, massive multiplayer scale, and emergent social dynamics, specifically creators who can craft highly replayable, memorable games and moments players can't find anywhere else, even Roblox! Games that seem like a copy or reskin of a popular Roblox game are a hard sell.
 - **Visual style**: We're looking for games that push aesthetic boundaries and make players think "Wait, that's Roblox?" We're looking for teams innovating with hyper-realistic 3D assets, stylized 2.5D sprites, high-fidelity avatars, or any other technique that brings their vision to life in ways that are entirely new to Roblox.
 
 <Alert severity="info">
@@ -42,7 +42,7 @@ We highly encourage you to prepare the following **before** applying for the Sta
 
 - Record video footage that highlights your core gameplay mechanics and other novel aspects to upload in your nomination survey.
 - [Localize](../production/localization/index.md) your game to reach a global audience and improve accessibility for international players.
-- Upload a gameplay [trailer](../production/publishing/thumbnails.md#videos) to give users a clear visual preview of the experience before they join.
+- Upload a gameplay [trailer](../production/publishing/thumbnails.md#videos) to give users a clear visual preview of the game before they join.
 - Review your existing thumbnails to make sure they comply with our [best practices](../production/publishing/thumbnails.md#best-practices).
 
 If you wish to nominate your novel game for Roblox to promote in the Standout Games sort, please complete the survey below. Our curation team reviews nominations on an ongoing basis. Once your nomination is reviewed, you will receive an email to inform you of whether or not your game has been selected.

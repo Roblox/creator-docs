@@ -24,7 +24,7 @@ This animation technique can provide solutions to the following examples:
 
 ## IKControl
 
-You can use an `Class.IKControl` to procedurally add IK to your character rigs outside of the **Animation Editor**. Studio allows you to programmatically apply IK to all characters, such as R15, Rthro, and custom imported skinned characters, to create realistic movement and interactions in your experience.
+You can use an `Class.IKControl` to procedurally add IK to your character rigs outside of the **Animation Editor**. Studio allows you to programmatically apply IK to all characters, such as R15, Rthro, and custom imported skinned characters, to create realistic movement and interactions in your game.
 
 When adding an `Class.IKControl`, set the [required properties](#required-properties) correctly to avoid unexpected and unnatural animation results. As with all animation, [test your IKControls](#test-ikcontrols) to ensure that you achieve the desired behavior.
 

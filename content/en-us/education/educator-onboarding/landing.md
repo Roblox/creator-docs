@@ -14,7 +14,7 @@ This course introduces you to Roblox, preparing you to feel confident in using R
 
 - Understand how to implement Roblox software and accounts in a classroom.
 - Identify where to find resources, such as standards-aligned learning materials and handouts.
-- Practice playing a Roblox experience to learn basic controls and common Roblox concepts.
+- Practice playing a Roblox game to learn basic controls and common Roblox concepts.
 
 <Alert severity="info">
 
@@ -40,7 +40,7 @@ In a hurry? This document covers all the steps needed to start a classroom, such
 </tr>
 <tr>
 <td scope="row"><b><a href="../../education/educator-onboarding/2-playing-on-roblox.md">Play on Roblox</a></b></td>
-<td scope="row">Create your account and play an experience.</td>
+<td scope="row">Create your account and play a game.</td>
 </tr>
 <tr>
 <td scope="row"><b><a href="../../education/educator-onboarding/3-setting-up-a-roblox-classroom.md">Set up classrooms</a></b></td>

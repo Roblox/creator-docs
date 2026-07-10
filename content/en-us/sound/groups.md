@@ -13,7 +13,7 @@ A `Class.SoundGroup` is an **audio mixer** that groups multiple audio objects, s
 - [Nesting sound groups](#nest-sound-groups) into meaningful categories under a mix tree.
 - Grouping all sounds that need a specific [dynamic effect](../sound/dynamic-effects.md). For example, you can group all sounds inside a cave to a **Cave** sound group, then apply a `Class.ReverbSoundEffect` to simulate the sounds reflecting off of the cave's environment.
 
-When creating `Class.SoundGroup|SoundGroups`, it's best to keep them all in a single location for organizational purposes as you continue to add and edit audio within your experience. The following example stores the new `Class.SoundGroup` under `Class.SoundService`, as this service determines how `Class.Sound` objects play in experiences.
+When creating `Class.SoundGroup|SoundGroups`, it's best to keep them all in a single location for organizational purposes as you continue to add and edit audio within your game. The following example stores the new `Class.SoundGroup` under `Class.SoundService`, as this service determines how `Class.Sound` objects play in games.
 
 ## Create sound groups
 
@@ -40,7 +40,7 @@ To assign a `Class.Sound` object to a `Class.SoundGroup`:
 
 ## Nest sound groups
 
-You can nest `Class.SoundGroup|SoundGroups` together into meaningful categories under a mix tree for organization and scripting purposes. When you're planning the parent-child relationships in your mix, consider the different sound categories in your experience, and how important they should be for the listener. For example, player ability sounds are likely much more important to gameplay than environmental sounds. If you group them into separate parent `Class.SoundGroup|SoundGroups`, you can easily access and [adjust their volume levels](#adjust-volume) as you add more `Class.Sound` objects to your experience.
+You can nest `Class.SoundGroup|SoundGroups` together into meaningful categories under a mix tree for organization and scripting purposes. When you're planning the parent-child relationships in your mix, consider the different sound categories in your game, and how important they should be for the listener. For example, player ability sounds are likely much more important to gameplay than environmental sounds. If you group them into separate parent `Class.SoundGroup|SoundGroups`, you can easily access and [adjust their volume levels](#adjust-volume) as you add more `Class.Sound` objects to your game.
 
 To nest `Class.SoundGroup|SoundGroups`:
 
@@ -50,19 +50,19 @@ To nest `Class.SoundGroup|SoundGroups`:
 
 ## Adjust volume
 
-There are two main ways to think about a sound's volume: how loud the sound is by itself, and how loud it is in relation to other sounds. For example, a waterfall sounds loud when you play it by itself, but when you compare it to other sound effects like tires screeching, it likely sounds much quieter. To ensure that each sound plays at the correct volume for your experience, you can either [add multipliers](#add-multipliers) to `Class.SoundGroup|SoundGroups`, or prioritize audio from one `Class.SoundGroup` over another through the process of [ducking](#ducking).
+There are two main ways to think about a sound's volume: how loud the sound is by itself, and how loud it is in relation to other sounds. For example, a waterfall sounds loud when you play it by itself, but when you compare it to other sound effects like tires screeching, it likely sounds much quieter. To ensure that each sound plays at the correct volume for your game, you can either [add multipliers](#add-multipliers) to `Class.SoundGroup|SoundGroups`, or prioritize audio from one `Class.SoundGroup` over another through the process of [ducking](#ducking).
 
 ### Add multipliers
 
 The `Class.SoundGroup.Volume|Volume` property of a `Class.SoundGroup` lets you apply a **volume multiplier** between `0` and `10` to each of its child audio objects while they retain their relative volumes. This means that if a `Class.Sound` object has a volume of `0.5` and you child it to a `Class.SoundGroup` that has a volume multiplier of `0.5`, the effective volume of the `Class.Sound` object is `0.25`.
 
-This property is useful when you want to test volume changes to different `Class.SoundGroup|SoundGroups` without having to manually change the volume of each `Class.Sound` object. For example, if you want to check what it'd sound like to increase the volume of all of your experience's music, you can create a **Music** `Class.SoundGroup` for every musical `Class.Sound` object or `Class.SoundGroup`, then apply a volume multiplier of `2`.
+This property is useful when you want to test volume changes to different `Class.SoundGroup|SoundGroups` without having to manually change the volume of each `Class.Sound` object. For example, if you want to check what it'd sound like to increase the volume of all of your game's music, you can create a **Music** `Class.SoundGroup` for every musical `Class.Sound` object or `Class.SoundGroup`, then apply a volume multiplier of `2`.
 
 ### Ducking
 
-You can prioritize audio from one `Class.SoundGroup` over another through the `Class.CompressorSoundEffect`. This dynamic effect allows you to **duck**, or reduce in volume, `Class.Sound` objects in low-priority `Class.SoundGroup|SoundGroups` whenever `Class.Sound` objects in high-priority `Class.SoundGroup|SoundGroups` start to play. This allows the listener to concentrate on the specific audio that you want them to pay attention to while not suddenly cutting the audio from low-priority sounds completely. When the high-priority audio finishes playing, low-priority audio returns to its original volume, keeping the listener immersed in your experience.
+You can prioritize audio from one `Class.SoundGroup` over another through the `Class.CompressorSoundEffect`. This dynamic effect allows you to **duck**, or reduce in volume, `Class.Sound` objects in low-priority `Class.SoundGroup|SoundGroups` whenever `Class.Sound` objects in high-priority `Class.SoundGroup|SoundGroups` start to play. This allows the listener to concentrate on the specific audio that you want them to pay attention to while not suddenly cutting the audio from low-priority sounds completely. When the high-priority audio finishes playing, low-priority audio returns to its original volume, keeping the listener immersed in your game.
 
-The sounds that you choose to duck depend on the needs of your specific experience. For example, one experience might benefit from reducing the volume of background music whenever a GUI notification plays, while others might benefit from reducing the volume of GUI notifications whenever dialogue plays. The following reference mix tree prioritizes `Class.Sound` objects in the high-priority **GUI Notifications** and **Weapons** `Class.SoundGroup|SoundGroups` while de-prioritizing `Class.Sound` objects in low-priority **3D** and **2D Ambience** `Class.SoundGroup|SoundGroups`.
+The sounds that you choose to duck depend on the needs of your specific game. For example, one game might benefit from reducing the volume of background music whenever a GUI notification plays, while others might benefit from reducing the volume of GUI notifications whenever dialogue plays. The following reference mix tree prioritizes `Class.Sound` objects in the high-priority **GUI Notifications** and **Weapons** `Class.SoundGroup|SoundGroups` while de-prioritizing `Class.Sound` objects in low-priority **3D** and **2D Ambience** `Class.SoundGroup|SoundGroups`.
 
 <img src="../assets/audio/sound-groups/Mix-Tree.png" width="182" />
 
@@ -95,7 +95,7 @@ The `Class.CompressorSoundEffect` has four main properties you must set in order
 </tbody>
 </table>
 
-The values of each of these properties are highly dependent on your specific audio. Each source audio has a different volume, and you might only need to duck by a minimal amount in order for your high priority audio to have emphasis in your experience.
+The values of each of these properties are highly dependent on your specific audio. Each source audio has a different volume, and you might only need to duck by a minimal amount in order for your high priority audio to have emphasis in your game.
 
 To prioritize `Class.SoundGroup|SoundGroups` through the `Class.CompressorSoundEffect`:
 
@@ -109,4 +109,4 @@ To prioritize `Class.SoundGroup|SoundGroups` through the `Class.CompressorSoundE
 6. In the **Attack** property field, input how quickly you want audio to duck.
 7. In the **Release** property field, input how quickly you want the audio to stop ducking.
 8. In the **Ratio** property field, input the ratio of how much compression you want to occur between the audio object that ducks and the audio object that Studio prioritizes.
-9. **(Optional)** Play test your experience to see if the audio sounds correct. If not, adjust the **CompressorSoundEffect** properties accordingly.
+9. **(Optional)** Playtest your game to see if the audio sounds correct. If not, adjust the **CompressorSoundEffect** properties accordingly.

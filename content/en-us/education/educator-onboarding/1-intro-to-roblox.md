@@ -11,7 +11,7 @@ This module serves as an introduction to how Roblox supports education. You'll l
 
 By the end of this article, you will:
 
-- Understand how Roblox is a platform that hosts games and virtual learning experiences.
+- Understand how Roblox is a platform that hosts games and virtual learning games.
 - Know what it means to run Roblox, such as costs and hardware.
 - Be able to articulate the unique advantages compared to other digital learning tools.
 
@@ -21,9 +21,9 @@ You're probably here because you've heard about Roblox, and you have some questi
 
 ### Overview
 
-To start, Roblox is not a single game. It's a platform that hosts millions of user-generated **experiences**. Some examples include historical roleplaying games, or virtual labs to simulate physics experiments. Experiences are designed by Roblox users, who may be individual students or professional studios.
+To start, Roblox is not a single game. It's a platform that hosts millions of user-generated **games**. Some examples include historical roleplaying games, or virtual labs to simulate physics experiments. Games are designed by Roblox users, who may be individual students or professional studios.
 
-Three examples of experiences are included below.
+Three examples of games are included below.
 
 <Grid container>
   <Grid item XSmall={4} spacing={3}>
@@ -35,7 +35,7 @@ Three examples of experiences are included below.
   <Grid item XSmall={4}>
   <figure>
     <img src="../../assets/education/legacy/module1-gameExamples-ocean.jpg" width="100%" />
-    <figcaption><a href="https://www.roblox.com/games/6708164649/">Ocean Conservation Experience</a></figcaption>
+    <figcaption><a href="https://www.roblox.com/games/6708164649/">Ocean Conservation Game</a></figcaption>
   </figure>
   </Grid>
   <Grid item XSmall={4}>
@@ -46,19 +46,19 @@ Three examples of experiences are included below.
   </Grid>
 </Grid>
 
-In addition to playing experiences, students can create their own using **Roblox Studio**. Using project-based learning, students can collaborate with peers to design a historically accurate city, or learn computer science principles as they create their own 3D world.
+In addition to playing games, students can create their own using **Roblox Studio**. Using project-based learning, students can collaborate with peers to design a historically accurate city, or learn computer science principles as they create their own 3D world.
 
 <img
 src="../../assets/education/legacy/module1-exampleStudio.jpg"
 width="100%" />
 
-Whether a class is playing or designing experiences, we have free lesson plans to support you. Our lesson plans are flexible, with many options for different ages, subjects, or time periods, such as a 45 minute workshop or a semester. Additionally, teaching with Roblox is accessible to all educators. You don't need prior experience in coding or game development to design or play experiences on Roblox.
+Whether a class is playing or designing games, we have free lesson plans to support you. Our lesson plans are flexible, with many options for different ages, subjects, or time periods, such as a 45 minute workshop or a semester. Additionally, teaching with Roblox is accessible to all educators. You don't need prior experience in coding or game development to design or play games on Roblox.
 
 ### Costs
 
-On Roblox, it's **free** to play, create, and publish experiences. You don't need to pay licensing fees to use Roblox or to publish a student's project.
+On Roblox, it's **free** to play, create, and publish games. You don't need to pay licensing fees to use Roblox or to publish a student's project.
 
-There are a few optional features which are available for small fees paid in **Robux**, the currency used in all Roblox experiences. The most common expense for educators is a private server for playing online, which often averages about $1 (USD) per month. More information on private servers is covered later in the training.
+There are a few optional features which are available for small fees paid in **Robux**, the currency used in all Roblox games. The most common expense for educators is a private server for playing online, which often averages about $1 (USD) per month. More information on private servers is covered later in the training.
 
 <Alert severity="info">
   <AlertTitle>Purchasing Robux</AlertTitle>
@@ -81,13 +81,13 @@ Roblox is actually two software packages with different hardware requirements.
 
 <tr>
 <td scope="row" width="18%"><b>Roblox Client</b></td>
-<td scope="row">Visit experiences as a classroom</td>
+<td scope="row">Visit games as a classroom</td>
 <td scope="row">PC, Mac, Chromebook, mobile, and tablet devices.</td>
 </tr>
 
 <tr>
 <td scope="row"><b>Roblox Studio</b></td>
-<td scope="row">Create or code your own experiences</td>
+<td scope="row">Create or code your own games</td>
 <td scope="row">PC or Mac, with recommended 2-button mouse with a scroll-wheel</td>
 </tr>
 
@@ -96,8 +96,8 @@ Roblox is actually two software packages with different hardware requirements.
 
 #### Common questions about software
 
-**Roblox client plays all experiences**
-Installing the Roblox client allows you to play any experience on Roblox. Experiences do not have their own installations.
+**Roblox client plays all games**
+Installing the Roblox client allows you to play any game on Roblox. Game do not have their own installations.
 
 **More detail on hardware specifications**
 For more details such as supported graphics cards or unique mobile device questions, see the <a href="https://en.help.roblox.com/hc/en-us/articles/203312800-Computer-Hardware-Operating-System-Requirements">Hardware Requirements</a> page.
@@ -109,8 +109,8 @@ Both the Roblox client and Studio require consistent internet access. Regular up
 
 Roblox offers educational opportunities and challenges **for all ages**.
 
-- For **students under 10**, there are virtual learning experiences, such as games to improve math skills or roleplay as dinosaurs.
-- **Older students** can find learning experiences for content such as physics or history. Additionally, they can work in Roblox Studio for project-based learning.
+- For **students under 10**, there are virtual learning games, such as games to improve math skills or roleplay as dinosaurs.
+- **Older students** can find learning games for content such as physics or history. Additionally, they can work in Roblox Studio for project-based learning.
 
 ## Use Roblox to learn
 
@@ -118,7 +118,7 @@ Roblox offers educational opportunities and challenges **for all ages**.
 src="../../assets/education/legacy/Twitterheader1500x500.jpg"
 width="100%" />
 
-Students can primarily use Roblox to play or create. One method is using **virtual learning experiences** where students play on Roblox. They can go on virtual field trips, explore natural settings, and interact with simulations of real-world phenomena.
+Students can primarily use Roblox to play or create. One method is using **virtual learning games** where students play on Roblox. They can go on virtual field trips, explore natural settings, and interact with simulations of real-world phenomena.
 
 Additionally, Roblox can be used for **code and creation** with Roblox Studio. In Studio, students can design virtual environments or learn computer science with Luau, a text-based coding language similar to Python and Lua.
 
@@ -142,4 +142,4 @@ Roblox works with parents, educators, and digital safety experts to promote a we
 
 ---
 
-Now that you've learned a bit about what Roblox is, in the next section, you'll visit an online Roblox experience. It'll be an interactive opportunity to learn more about Roblox, and become comfortable navigating a virtual world.
+Now that you've learned a bit about what Roblox is, in the next section, you'll visit an online Roblox game. It'll be an interactive opportunity to learn more about Roblox, and become comfortable navigating a virtual world.

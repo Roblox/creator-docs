@@ -1,6 +1,6 @@
 ---
 title: Add animations
-description: Learn how to make animations in Roblox Studio with step by step tutorials in this one hour challenge. Use scripts to add animations into an experience.
+description: Learn how to make animations in Roblox Studio with step by step tutorials in this one hour challenge. Use scripts to add animations into a game.
 prev: /education/build-it-play-it-island-of-move/designing-poses
 ---
 
@@ -134,7 +134,7 @@ Below are a few ways to continue learning
 
 ### Learn about animation
 
-So far, you've learned how to create animations and add them into experiences. To continue learning, we recommend visiting the [Animation](../../animation/index.md) overview.
+So far, you've learned how to create animations and add them into games. To continue learning, we recommend visiting the [Animation](../../animation/index.md) overview.
 
 On that page, you'll find useful links to improving animations, such as using the curve editor for smooth movement, or tips in refining animations.
 

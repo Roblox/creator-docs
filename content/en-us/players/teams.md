@@ -1,9 +1,9 @@
 ---
 title: Implement teams
-description: The Teams service allows you assign players to different teams within your experience.
+description: The Teams service allows you assign players to different teams within your game.
 ---
 
-You can divide players in your experience into multiple teams using the `Class.Teams` service. By [configuring](#add-teams) the `Class.Teams` service and [assigning teams](#assign-players-to-teams), players are automatically differentiated by their [display name](../characters/name-health-display.md) color, as well as their name in the default player list.
+You can divide players in your game into multiple teams using the `Class.Teams` service. By [configuring](#add-teams) the `Class.Teams` service and [assigning teams](#assign-players-to-teams), players are automatically differentiated by their [display name](../characters/name-health-display.md) color, as well as their name in the default player list.
 
 ## Add teams
 
@@ -14,7 +14,7 @@ By default, no teams are configured. To add teams:
 
    <img src="../assets/studio/explorer/Teams-Team.png" width="320" />
 
-3. Select the new `Class.Team` object and, in the [Properties](../studio/properties.md) window, change the team `Class.Team.Name|Name` and assign a unique matching `Class.Team.TeamColor|TeamColor`. A team's name and color both appear in the experience's player list.
+3. Select the new `Class.Team` object and, in the [Properties](../studio/properties.md) window, change the team `Class.Team.Name|Name` and assign a unique matching `Class.Team.TeamColor|TeamColor`. A team's name and color both appear in the game's player list.
 
    <img src="../assets/studio/properties/Team-Name-TeamColor.png" width="320" />
 
@@ -22,7 +22,7 @@ By default, no teams are configured. To add teams:
 
 ## Assign players to teams
 
-By default, Roblox **auto-assigns** new players joining the experience to the team with the fewest members, and you can still use the following steps to assign players to a specific team.
+By default, Roblox **auto-assigns** new players joining the game to the team with the fewest members, and you can still use the following steps to assign players to a specific team.
 
 1. Select each `Class.Team` object in the `Class.Teams` service to display its properties.
 

@@ -8,7 +8,7 @@ description: Roblox Plus gives you additional ways to earn from your games by re
 Users who subscribe to Plus get a range of benefits to enhance their purchasing power, access, and overall game on the platform:
 
 - **Discounted purchases**: Subscribers get 10% off eligible purchases, including in-game items, avatar items, and more. The discount increases to 20% starting in the third month. Roblox covers this discount for you.
-- **Free paid private servers**: Subscribers get unlimited access to paid private servers at no cost. You're still compensated when they spend time in your paid private servers.
+- **Free paid private servers**: Subscribers get access to paid private servers at no cost. You're still compensated when they spend time in your paid private servers.
 - **Free Robux transfers**: Subscribers can transfer Robux at no cost to sender or recipient. Transfers are subject to age restrictions and parental consent. Robux received through transfers are not eligible for the DevEx program.
 - [**Marketplace access**](../../marketplace/marketplace-policy.md#creator-requirements): Subscribers can trade and resell limited items, and publish and sell avatar items. Premium subscribers have the same Marketplace access.
 
@@ -16,12 +16,12 @@ For more information about the benefits of Roblox Plus to end-users, see the [he
 
 As a creator, you can earn from Roblox Plus subscribers through:
 
-- [**In-game Robux purchases**](#earn-from-in-experience-purchases): Subscribers receive a 10–20% discount on purchases, which is covered by Roblox so that your earnings per purchase are not reduced. Lower prices can encourage more frequent purchases, helping increase your overall revenue.
-- [**Driving Plus sign-ups**](#earn-from-in-experience-plus-subscriptions): Encourage engaged users to subscribe to Roblox Plus directly from your game using `Class.MarketplaceService.PromptRobloxSubscriptionPurchase|PromptRobloxSubscriptionPurchase`. You can earn up to 750 Robux for each new subscriber you bring in, with earnings starting once the subscription becomes paid (free trial periods are not included).
+- [**In-game Robux purchases**](#earn-from-in-game-purchases): Subscribers receive a 10–20% discount on purchases, which is covered by Roblox so that your earnings per purchase are not reduced. Lower prices can encourage more frequent purchases, helping increase your overall revenue.
+- [**Driving Plus sign-ups**](#earn-from-in-game-plus-subscriptions): Encourage engaged users to subscribe to Roblox Plus directly from your game using `Class.MarketplaceService.PromptRobloxSubscriptionPurchase|PromptRobloxSubscriptionPurchase`. You can earn up to 750 Robux for each new subscriber you bring in, with earnings starting once the subscription becomes paid (free trial periods are not included).
 - [**Time spent in paid private servers**](#earn-from-paid-private-server-time): Earn up to 100 Robux per subscriber when they spend at least 60 minutes in your paid private servers each month.
 - [**In-game Robux transfers**](#earn-from-robux-transfers): Earn 10% every time a Plus subscriber sends Robux to another user within your game using `Class.MarketplaceService.PromptRobuxTransferAsync|PromptRobuxTransferAsync`. This amount is eligible for the DevEx program.
 
-## Earn from in-experience purchases
+## Earn from in-game purchases
 
 With Roblox Plus, users receive a 10–20% discount on eligible Robux purchases. Because Roblox subsidizes these discounts, you earn the same amount per purchase as you would from non-subscribers. At the same time, lower prices for Plus subscribers can encourage more frequent purchases and increase your overall revenue.
 
@@ -91,7 +91,7 @@ To display accurate, real-time pricing (including Plus discounts), you should us
 For implementation details, see [Sell a pass](./passes.md#sell-a-pass) and [Sell a developer product](./developer-products.md#sell-a-developer-product).
 </Alert>
 
-## Earn from in-experience Plus subscriptions
+## Earn from in-game Plus subscriptions
 
 You can encourage users to subscribe to Roblox Plus directly from your game with `Class.MarketplaceService.PromptRobloxSubscriptionPurchase|PromptRobloxSubscriptionPurchase`. For each user who becomes a subscriber through your game, you earn **250 Robux per month for their first three consecutive months**, with up to **750 Robux for every newly acquired subscriber**.
 
@@ -327,7 +327,7 @@ When a Plus subscriber initiates a transfer prompted by `Class.MarketplaceServic
 Robux your game earns from transfers is **eligible for the DevEx program**. Roblox does not take a fee from these transfers.
 
 <Alert severity="info">
-When setting up transfers in your experience, the amount must be between 10 and 500 Robux per transaction.
+When setting up transfers in your game, the amount must be between 10 and 500 Robux per transaction.
 </Alert>
 
 <img src="../../assets/monetization/roblox-plus/TransferRobuxPrompt.png" width="60%" />

@@ -91,7 +91,7 @@ If the bridge doesn't disappear, check the possible issues below:
 
 **Issue:** Parts disappear too fast or are all gone at the start.
 
-- Depending on how fast your character loads into the experience, the first parts may already be invisible. To address this, add a small wait, such as `task.wait(2)`, at the start of the script.
+- Depending on how fast your character loads into the game, the first parts may already be invisible. To address this, add a small wait, such as `task.wait(2)`, at the start of the script.
 
 ### Code the second loop
 

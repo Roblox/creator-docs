@@ -53,7 +53,7 @@ You can install it from the [Creator Store](https://create.roblox.com/store/asse
 rojo plugin install
 ```
 
-Then generate the project structure for your new experience and build it:
+Then generate the project structure for your new game and build it:
 
 ```bash
 rojo init my-new-experience
@@ -61,7 +61,7 @@ cd my-new-experience
 rojo build -o my-new-experience.rbxl
 ```
 
-Alternatively, you can [port an existing experience](https://rojo.space/docs/v7/getting-started/existing-game/). Either way, after you have a project, start the Rojo server:
+Alternatively, you can [port an existing game](https://rojo.space/docs/v7/getting-started/existing-game/). Either way, after you have a project, start the Rojo server:
 
 ```bash
 rojo serve
@@ -79,7 +79,7 @@ Rojo projects have certain naming requirements for files, numerous configuration
 
 Roblox has a robust set of included APIs, but if you want to make use of community software packages in a consistent, reproducible way, you need a package manager. [Wally](https://wally.run/) is a popular option. You can install it through Rokit, just like Rojo.
 
-Within your experience's Rojo directory, run `wally init`. Then add your desired packages to `wally.toml`. The file might look like this:
+Within your game's Rojo directory, run `wally init`. Then add your desired packages to `wally.toml`. The file might look like this:
 
 ```toml
 [package]
@@ -159,8 +159,8 @@ You might also consider adding:
 - A linter like [selene](https://github.com/Kampfkarren/selene) to catch common issues and enforce coding standards
 - A code formatter like [StyLua](https://github.com/JohnnyMorganz/StyLua)
 - A language server like [Luau Language Server](https://github.com/JohnnyMorganz/luau-lsp) for autocompletion, type checking, and more
-- [Open Cloud](../cloud/guides/index.md) scripts (not synced to Studio) to [update a published experience](/cloud/reference/Universe#Cloud_UpdateUniverse) or [restart servers](/cloud/reference/Universe#Cloud_RestartUniverseServers)
+- [Open Cloud](../cloud/guides/index.md) scripts (not synced to Studio) to [update a published game](/cloud/reference/Universe#Cloud_UpdateUniverse) or [restart servers](/cloud/reference/Universe#Cloud_RestartUniverseServers)
 
 ## Undo everything
 
-Because third-party tools sync changes back to Roblox Studio rather than replacing it, no part of this workflow involves any lock-in. At any time, you can stop using one or all of these tools and go back to editing your experience exclusively in Studio. The lack of risk makes experimenting with third-party tools particularly appealing.
+Because third-party tools sync changes back to Roblox Studio rather than replacing it, no part of this workflow involves any lock-in. At any time, you can stop using one or all of these tools and go back to editing your game exclusively in Studio. The lack of risk makes experimenting with third-party tools particularly appealing.

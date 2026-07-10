@@ -15,7 +15,7 @@ For additional layered clothing resources, such as guides, example projects, and
 
 ## Build the custom character
 
-We wanted the users in our experience to embody someone sent to the station to investigate some disturbing events. We weren't sure early on what our actual character would be or if there would be multiple types of characters, but we wanted them to wear space suits. Because of this, we decided to make the clothing a separate component which would allow flexibility in our design.
+We wanted the users in our game to embody someone sent to the station to investigate some disturbing events. We weren't sure early on what our actual character would be or if there would be multiple types of characters, but we wanted them to wear space suits. Because of this, we decided to make the clothing a separate component which would allow flexibility in our design.
 
 We ultimately settled on a single character design that we named "The Visitor," but layered clothing allowed us to create a main character while also releasing the clothing to the Marketplace as a modular component. As a creator, you'll be able to do the same soon, so follow along to see how we did this.
 
@@ -42,14 +42,14 @@ Layered Clothing Checklist:
 
 Layered Clothing lets clothes fit on almost any kind of body, whether it be a fishman, a rock golem, or a human space explorer. The only requirements are that they be bipedal humanoids.
 
-You should model the character in a neutral and natural pose. This allows a more full range of motion when animating, and also gives you implied directionality to movement. Implied directionality means that when you're building your character's skeleton, the joints have a small bend in them to know which way they should naturally bend. The following examples show a very small bend in the arms and legs to allow for this. We also posed the hands in a natural posture that could still hold onto something if we wanted items or gear in our experience.
+You should model the character in a neutral and natural pose. This allows a more full range of motion when animating, and also gives you implied directionality to movement. Implied directionality means that when you're building your character's skeleton, the joints have a small bend in them to know which way they should naturally bend. The following examples show a very small bend in the arms and legs to allow for this. We also posed the hands in a natural posture that could still hold onto something if we wanted items or gear in our game.
 
 <img
   alt="Unique Character Examples"
   src="../../assets/resources/beyond-the-dark/layered-clothing/Unique-Characters.png"
   width="80%" />
 
-The silhouette, or the shape of your character, should also be distinct and discernable to another player at a distance, which is important for multiplayer experiences. This cuts down confusion and helps users know what is safe or dangerous when a lot of things are going on.
+The silhouette, or the shape of your character, should also be distinct and discernable to another player at a distance, which is important for multiplayer games. This cuts down confusion and helps users know what is safe or dangerous when a lot of things are going on.
 
 <GridContainer numColumns="2">
   <img src="../../assets/resources/beyond-the-dark/layered-clothing/Silhouette-1.png" />
@@ -84,7 +84,7 @@ Texturing your characters lets you bring them to life based on how you want them
   src="../../assets/resources/beyond-the-dark/layered-clothing/Texturing-Showcase.png"
   width="80%" />
 
-Now we'll go over how to get textures into Studio and make sure the character looks great and fits into the experience.
+Now we'll go over how to get textures into Studio and make sure the character looks great and fits into the game.
 
 1. Before texturing, we did a range of motion tests by moving the character joints and posing it to make sure the model deforms well. It's not always necessary to do a range of motion tests before texturing, but it'll help you catch surprises in your model before you put hours into the textures. After that, we separated the rig from the mesh (unbound it) to focus on texturing. It's not advisable to do texture work, or anything beyond animating, once a character is bound to its rig.
 

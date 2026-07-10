@@ -1,9 +1,9 @@
 ---
 title: UI drag detectors
-description: UI drag detectors facilitate and encourage interaction with 2D user interface elements in an experience, such as sliders and spinners.
+description: UI drag detectors facilitate and encourage interaction with 2D user interface elements in a game, such as sliders and spinners.
 ---
 
-The `Class.UIDragDetector` instance facilitates and encourages interaction with 2D user interface elements in an experience, such as sliders, spinners, and more. Key features include:
+The `Class.UIDragDetector` instance facilitates and encourages interaction with 2D user interface elements in a game, such as sliders, spinners, and more. Key features include:
 
 - Place a `Class.UIDragDetector` under any `Class.GuiObject` instance to make it draggable via all user inputs without a single line of code.
 
@@ -16,7 +16,7 @@ The `Class.UIDragDetector` instance facilitates and encourages interaction with 
 <video src="../assets/ui/ui-drag-detectors/Showcase.mp4" controls width="100%" alt="How to add UI Drag Detectors and Drag in Edit Mode"></video>
 
 <Alert severity="info">
-For drag detectors that manipulate 3D objects in an experience, such as opening doors and drawers or sliding a part around, see [3D Drag Detectors](../ui/3D-drag-detectors.md).
+For drag detectors that manipulate 3D objects in a game, such as opening doors and drawers or sliding a part around, see [3D Drag Detectors](../ui/3D-drag-detectors.md).
 </Alert>
 
 ## Make UI elements draggable

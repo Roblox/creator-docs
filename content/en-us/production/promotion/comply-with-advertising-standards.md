@@ -17,7 +17,7 @@ This guide outlines the content, disclosure, data privacy, user safety, and over
 - Not using third-party advertising services.
 
 <Alert severity="warning">
-   If you fail to comply with any of these advertising standards, Roblox may suspend your experience and/or account.
+   If you fail to comply with any of these advertising standards, Roblox may suspend your game and/or account.
 </Alert>
 
 ## Content requirements
@@ -68,13 +68,13 @@ For example, the following disclosure is sufficiently different from Roblox's di
 
 ## Data privacy requirements
 
-To protect user privacy and their experience on the platform, it's of the utmost importance that you retain complete control of independent ad content within your experiences. This means that you cannot serve ad content that you didn't directly upload within your own Roblox experiences, and you cannot insert any code within your experiences that makes programmatic calls to third-party ad servers, even for analytics.
+To protect user privacy and their experience on the platform, it's of the utmost importance that you retain complete control of independent ad content within your games. This means that you cannot serve ad content that you didn't directly upload within your own Roblox games, and you cannot insert any code within your games that makes programmatic calls to third-party ad servers, even for analytics.
 
 ## User safety requirements
 
-By maintaining complete control over your independent ad content, you can also take the mandatory precautions to protect users from ad content that they shouldn't have access to. To determine when these precautions are necessary, you must use `Class.PolicyService.GetPolicyInfoForPlayerAsync`, which returns a dictionary of values that determine whether certain aspects of the experience need to change for that unique user. One entry within the policy information is `AreAdsAllowed`, a boolean that represents whether a user is eligible to see ads. Ads can remain visible if `AreAdsAllowed` returns true, but if `AreAdsAllowed` returns false, you must include additional logic to hide, replace, or block the ads so those users cannot interact with the ad content.
+By maintaining complete control over your independent ad content, you can also take the mandatory precautions to protect users from ad content that they shouldn't have access to. To determine when these precautions are necessary, you must use `Class.PolicyService.GetPolicyInfoForPlayerAsync`, which returns a dictionary of values that determine whether certain aspects of the game need to change for that unique user. One entry within the policy information is `AreAdsAllowed`, a boolean that represents whether a user is eligible to see ads. Ads can remain visible if `AreAdsAllowed` returns true, but if `AreAdsAllowed` returns false, you must include additional logic to hide, replace, or block the ads so those users cannot interact with the ad content.
 
-To demonstrate what this can look like, the following images take place in an experience where the non-playable character's dialog text is an ad. The first image displays the ad text that displays to users who are eligible to see ads, and the second displays replacement text that displays to users who aren't eligible to see ads. By using the `AreAdsAllowed` boolean, the creator of the experience can programmatically verify user eligibility to see ads, then change the ad content context accordingly to align with each user's requirements.
+To demonstrate what this can look like, the following images take place in a game where the non-playable character's dialog text is an ad. The first image displays the ad text that displays to users who are eligible to see ads, and the second displays replacement text that displays to users who aren't eligible to see ads. By using the `AreAdsAllowed` boolean, the creator of the game can programmatically verify user eligibility to see ads, then change the ad content context accordingly to align with each user's requirements.
 
 <GridContainer numColumns="2">
   <figure>
@@ -87,7 +87,7 @@ To demonstrate what this can look like, the following images take place in an ex
   </figure>
 </GridContainer>
 
-If you believe all the content in your experience collectively constitutes an ad, you must prevent users ineligible to receive ads from viewing the content. For example, the following `Class.Script` checks every user's eligibility to see ads as they enter the experience using `Class.PolicyService.GetPolicyInfoForPlayerAsync`. If `AreAdsAllowed` returns false, the experience disconnects the user from the experience and provides a message informing the user that they are ineligible to access the experience.
+If you believe all the content in your game collectively constitutes an ad, you must prevent users ineligible to receive ads from viewing the content. For example, the following `Class.Script` checks every user's eligibility to see ads as they enter the game using `Class.PolicyService.GetPolicyInfoForPlayerAsync`. If `AreAdsAllowed` returns false, the game disconnects the user from the game and provides a message informing the user that they are ineligible to access the game.
 
 ```lua
 local Players = game:GetService("Players")
@@ -102,8 +102,8 @@ local player = Players.LocalPlayer
 	if success and result then
 		if not result.AreAdsAllowed then
 
-			-- Remove ineligible user from accessing the experience
-			player:Kick("You are ineligible to access the experience.")
+			-- Remove ineligible user from accessing the game
+			player:Kick("You are ineligible to access the game.")
 		end
 	else
 		print("Failed to get policy for player", player.Name, "Exception:", result)
@@ -112,10 +112,10 @@ local player = Players.LocalPlayer
 
 ## Ad system integrity requirements
 
-If you have advertising content in your experience, whether it's Roblox-served or independent ad content, you are an ad publisher, and as an ad publisher, you must engage the ad system with integrity. This means that you cannot abuse the ad system, such as:
+If you have advertising content in your game, whether it's Roblox-served or independent ad content, you are an ad publisher, and as an ad publisher, you must engage the ad system with integrity. This means that you cannot abuse the ad system, such as:
 
 - Leveraging bots or large scale ad engagement campaigns in order to create fraudulent impressions for ads.
-- Misclassifying experience metadata in order to deceptively increase ad delivery to users.
+- Misclassifying game metadata in order to deceptively increase ad delivery to users.
 - Obscuring disclosures in a way that makes users believe they are engaging with non-advertising content.
 
-Any of the previous actions may result in Roblox suspending your experience and/or account, as well as revoking any ad payout related to fraudulent impressions or traffic to your experience. For more information, see Advertising Standards' [Publisher Integrity](https://en.help.roblox.com/hc/articles/13722260778260#publisher-integrity) section.
+Any of the previous actions may result in Roblox suspending your game and/or account, as well as revoking any ad payout related to fraudulent impressions or traffic to your game. For more information, see Advertising Standards' [Publisher Integrity](https://en.help.roblox.com/hc/articles/13722260778260#publisher-integrity) section.

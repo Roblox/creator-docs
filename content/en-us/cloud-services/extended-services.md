@@ -237,39 +237,54 @@ Extended Services is available in the following countries:
       <td>Slovakia</td>
     </tr>
     <tr>
-      <td>Croatia</td>
-      <td>Latvia</td>
+      <td>Canada</td>
+      <td>Kazakhstan</td>
       <td>Slovenia</td>
     </tr>
     <tr>
-      <td>Cyprus</td>
-      <td>Lithuania</td>
+      <td>Chile</td>
+      <td>Latvia</td>
       <td>South Africa</td>
+    </tr>
+    <tr>
+      <td>Croatia</td>
+      <td>Lithuania</td>
+      <td>South Korea</td>
+    </tr>
+    <tr>
+      <td>Cyprus</td>
+      <td>Malaysia</td>
+      <td>Spain</td>
     </tr>
     <tr>
       <td>Czechia</td>
       <td>Malta</td>
-      <td>Spain</td>
+      <td>Sweden</td>
     </tr>
     <tr>
       <td>Denmark</td>
       <td>Mexico</td>
-      <td>Sweden</td>
+      <td>Switzerland</td>
     </tr>
     <tr>
       <td>Estonia</td>
       <td>Netherlands</td>
-      <td>Switzerland</td>
+      <td>Thailand</td>
     </tr>
     <tr>
       <td>Finland</td>
       <td>New Zealand</td>
-      <td>Thailand</td>
+      <td>United Kingdom</td>
     </tr>
     <tr>
       <td>France</td>
       <td>Norway</td>
       <td>United States</td>
+    </tr>
+    <tr>
+      <td>Georgia</td>
+      <td>Peru</td>
+      <td></td>
     </tr>
   </tbody>
 </table>

@@ -20,6 +20,13 @@ navigation:
     path: /cloud/guides/configs
   - title: Secrets stores
     path: /cloud/guides/secrets-store
+  - title: Analytics
+    path: /cloud/guides/analytics
+    section:
+      - title: Overview
+        path: /cloud/guides/analytics/
+      - title: Supported metrics and dimensions
+        path: /cloud/guides/analytics/metrics
   - title: User inventories
     path: /cloud/guides/inventory
   - title: Engine instances

@@ -1,14 +1,14 @@
 ---
-title: Experience descriptions
-description: Experimental guidelines for writing experience descriptions to improve discovery and search engine performance.
+title: Game descriptions
+description: Experimental guidelines for writing game descriptions to improve discovery and search engine performance.
 noindex: true
 ---
 
 <Alert severity="warning">
-These guidelines are experimental and only meant for select creators. We do not recommend following these guidelines for all experiences.
+These guidelines are experimental and only meant for select creators. We do not recommend following these guidelines for all games.
 </Alert>
 
-This document outlines guidelines for creating and managing Roblox experience descriptions. The primary goal is to improve SEO for better discovery through external search engines like Google, Bing, and DuckDuckGo.
+This document outlines guidelines for creating and managing Roblox game descriptions. The primary goal is to improve SEO for better discovery through external search engines like Google, Bing, and DuckDuckGo.
 
 ## Context
 
@@ -83,7 +83,7 @@ Detail your game's core gameplay and key features in an easily digestible format
 
 **Or, in paragraph format:**
 
-Dive into the ultimate fishing experience with the most realistic fishing! Discover over 500 different fish species to catch using licensed fishing gear from top brands like X, Y, and Z. Explore unlimited customization options for your avatar and equipment. Compete with friends on the global leaderboards and show off your best catches at exciting community events.
+Dive into the ultimate fishing game with the most realistic fishing! Discover over 500 different fish species to catch using licensed fishing gear from top brands like X, Y, and Z. Explore unlimited customization options for your avatar and equipment. Compete with friends on the global leaderboards and show off your best catches at exciting community events.
 
 ### Additional information
 

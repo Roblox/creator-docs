@@ -6,10 +6,11 @@ name: AdService
 type: class
 memory_category: Instances
 summary: |
-  A class that allows the display of mobile video ads.
+  The service responsible for in-experience advertising.
 description: |
-  A service for displaying mobile video ads as a form of monetization. Use it to
-  implement rewarded video ads in your experience.
+  `Class.AdService` is responsible for in-experience advertising. This includes
+  [rewarded video](../../../production/promotion/rewarded-video-ads.md) and
+  [ad integrations](../../../production/promotion/ad-integrations.md).
 code_samples: []
 inherits:
   - Instance
@@ -22,7 +23,7 @@ properties: []
 methods:
   - name: AdService:CreateAdRewardFromDevProductId
     summary: |
-      Creates a reward to give users who watch an entire video ad.
+      Creates an `Datatype.AdReward` to give users who watch a video ad.
     description: |
       Creates a reward to give users who watch an entire video ad.
     code_samples: []
@@ -43,24 +44,24 @@ methods:
       - Monetization
   - name: AdService:GetAdAvailabilityNowAsync
     summary: |
-      Checks if a video ad is available to be played to the current user inside
-      the experience.
+      Checks if an ad with the specified format is available to be shown to the
+      `Class.Players.LocalPlayer|LocalPlayer`.
     description: |
-      Checks if a video ad is available to be played to the current user inside
-      the experience.
-    code_samples:
-      - AdService-GetAdAvailabilityNowAsync
+      This method may only be called from a `Class.Script` with
+      `Enum.RunContext.Client`.
+    code_samples: []
     parameters:
       - name: adFormat
         type: AdFormat
         default:
         summary: |
-          The format of the requested ad. For example, `RewardedVideo`.
+          The format of the requested ad. For example,
+          `Enum.AdFormat.RewardedVideo`.
     returns:
       - type: GetAdAvailabilityNowResult
         summary: |
-          A dictionary with the `Enum.AdAvailabilityResult` for the requested ad
-          format.
+          A dictionary that looks like
+          `{ AdAvailabilityResult: Enum.AdAvailabilityResult }`.
     tags:
       - Yields
     deprecation_message: ''
@@ -69,22 +70,27 @@ methods:
     capabilities:
       - Monetization
   - name: AdService:GetCampaignEligibilityAsync
-    summary: ''
+    summary: |
+      Checks a `Class.Player`'s eligibility to be shown an
+      [ad integration](../../../production/promotion/ad-integrations.md)
+      campaign.
     description: ''
-    code_samples: []
+    code_samples:
+      - AdService-AdIntegrations
     parameters:
       - name: campaignId
         type: string
         default:
         summary: |
-          The id of the campaign that you want to check a `Player`'s eligibility
-          for.
+          The ID of the campaign that you want to check a `Class.Player`'s
+          eligibility for.
       - name: player
         type: Player?
         default: nil
         summary: |
-          The `Player` you want to check eligibility for. If omitted, it will
-          default to `Players.LocalPlayer`.
+          The `Class.Player` you want to check eligibility for. If omitted, it
+          will default to the `Class.Players.LocalPlayer|LocalPlayer`. On the
+          server, `player` argument is required.
     returns:
       - type: GetCampaignEligibilityResult
         summary: |
@@ -100,7 +106,9 @@ methods:
     summary: |
       Tracks how many times a user had the chance to watch a video ad and the
       rate at which they actually watched the ad.
-    description: ''
+    description: |
+      This method may only be called from a `Class.Script` with
+      `Enum.RunContext.Client`.
     code_samples:
       - AdService-RegisterAdOpportunityAsync
     parameters:
@@ -126,20 +134,45 @@ methods:
     capabilities:
       - Monetization
   - name: AdService:RegisterDisclosureButton
-    summary: ''
-    description: ''
+    summary: |
+      Registers an ad disclosure button for an
+      [ad integration](../../../production/promotion/ad-integrations.md).
+    description: |
+      This method may only be called from a `Class.Script` with
+      `Enum.RunContext.Client`.
+
+      `Class.AdService:RegisterDisclosureButton()|RegisterDisclosureButton`
+      marks a button in your experience as an ad disclosure for an ad
+      integration. When a user clicks it, they can see who is paying for the ad.
+      See
+      [ad integrations](../../../production/promotion/ad-integrations.md#labeling-and-disclosure)
+      for guidance on what the disclosures should look like and when they should
+      be visible.
+
+      Note: you must verify that the `Class.Players.LocalPlayer|LocalPlayer` is
+      eligible to see the associated ad integration campaign by calling
+      `Class.AdService:GetCampaignEligibilityAsync()|GetCampaignEligibilityAsync`
+      and verifying that `result.IsEligible` is `true` before attempting to
+      register a disclosure button for it. If you do not wait, or the
+      `Class.Players.LocalPlayer|LocalPlayer` is not eligible to see the
+      associated campaign, then
+      `Class.AdService:RegisterDisclosureButton()|RegisterDisclosureButton` will
+      raise an error.
     code_samples: []
     parameters:
       - name: disclosureButton
         type: GuiButton
         default:
         summary: |
-          The `GuiButton` you want to mark as an ad disclosure.
+          The `Class.GuiButton` you want to mark as an ad integration
+          disclosure. The `Class.GuiButton` must follow labeling guidelines
+          outlined
+          [here](../../../production/promotion/ad-integrations.md#labeling-and-disclosure).
       - name: adIntegrationPlacementId
         type: string
         default:
         summary: |
-          The id of the placement that this disclosure is attached to.
+          The ID of the placement that this disclosure is attached to.
     returns:
       - type: ()
         summary: ''
@@ -153,21 +186,28 @@ methods:
     summary: |
       Plays the video ad to the current user inside the experience.
     description: |
-      Plays the video ad to the current user inside the experience.
+      This method may only be called from a `Class.Script` with
+      `Enum.RunContext.Server`.
+
+      Note: before calling this method, you must first verify that the specified
+      user has a rewarded video ad available to show by calling
+      `Class.AdService:GetAdAvailabilityNowAsync()|GetAdAvailabilityNowAsync`.
+      If the client does not have an available ad, then
+      `Class.AdService:ShowRewardedVideoAdAsync()|ShowRewardedVideoAdAsync` will
+      return `Enum.ShowAdResult.AdNotReady`.
     code_samples:
-      - AdService-ShowRewardedVideoAdAsync
+      - AdService-RewardedVideo
     parameters:
       - name: player
         type: Player
         default:
         summary: |
-          The `Player` object for whom you are fetching the ad for.
+          The `Class.Player` to trigger a rewarded video ad play for.
       - name: reward
         type: AdReward
         default:
         summary: |
-          The reward object for the reward you want to grant the user who
-          watches an ad to completion.
+          The `Datatype.AdReward` to grant the user after they view the ad.
       - name: placementId
         type: int64?
         default:
@@ -177,7 +217,16 @@ methods:
           placements.
     returns:
       - type: ShowAdResult
-        summary: ''
+        summary: |
+          The `Enum.ShowAdResult` of the client's ad presentation. You should
+          not use this result to grant the reward. Instead, you should grant the
+          reward from your
+          `Class.MarketplaceService.ProcessReceipt|ProcessReceipt`
+          implementation. For
+          [developer products](../../../production/monetization/developer-products.md)
+          earned through rewarded video ads, the
+          `receipt.ProductPurchaseChannel` will be
+          `Enum.ProductPurchaseChannel.AdReward`.
     tags:
       - Yields
     deprecation_message: ''

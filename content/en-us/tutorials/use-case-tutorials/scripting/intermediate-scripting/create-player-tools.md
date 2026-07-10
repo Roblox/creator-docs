@@ -72,7 +72,7 @@ Storing a tool in `Class.StarterPack` will place it in a player's `Class.Backpac
 
    ![](../../../../assets/tutorials/creating-player-tools/explorer-starterpack.png)
 
-2. Play the experience to test the tool. Click on the hotbar at the bottom of the screen or press **1** on the keyboard to equip the tool.
+2. Play the game to test the tool. Click on the hotbar at the bottom of the screen or press **1** on the keyboard to equip the tool.
 
 ## Tool properties
 

@@ -6,7 +6,7 @@ comments: Updates to this page require careful internal review. We generally don
 
 You can create and sell bodies, heads, accessories, and clothes on the [Marketplace](https://www.roblox.com/catalog). After you pay any applicable upload fees, you can upload your new asset for marketplace approval. Once the moderation team reviews and approves your asset, you can set your item for sell on the Marketplace.
 
-You receive a commission every time users purchase your item. If users purchase your item within an experience using the [Avatar Inspect Menu](../players/avatar-inspect-menu.md), [Avatar Editor Service](../players/avatar-editor.md), or `Class.MarketplaceService`, the experience owner also receives a commission. For information on viewing your sales data, see [Sales Data analytics](../production/analytics/analytics-dashboard.md#sales-data).
+You receive a commission every time users purchase your item. If users purchase your item within a game using the [Avatar Inspect Menu](../players/avatar-inspect-menu.md), [Avatar Editor Service](../players/avatar-editor.md), or `Class.MarketplaceService`, the game owner also receives a commission. For information on viewing your sales data, see [Sales Data analytics](../production/analytics/analytics-dashboard.md#sales-data).
 
 ## Upload fees
 
@@ -47,8 +47,8 @@ This publishing advance is dependent on the type of Marketplace item being sold:
 <thead>
   <tr>
     <th>3D avatar asset type</th>
-    <th>Non-Limited publishing advance</th>
-    <th>Paid Limited publishing advance</th>
+    <th>Non-limited publishing advance</th>
+    <th>Paid limited publishing advance</th>
   </tr>
 </thead>
 <tbody>
@@ -153,7 +153,7 @@ This publishing advance is dependent on the type of Marketplace item being sold:
 <BaseAccordion>
 <AccordionSummary>Publishing advance example scenario</AccordionSummary>
 <AccordionDetails>
-For an example of how the publishing advance is recouped, the following table represents a hypothetical situation where the **publishing advance is 1000 Robux**, and the **item is sold in an experience at 400 Robux**:
+For an example of how the publishing advance is recouped, the following table represents a hypothetical situation where the **publishing advance is 1000 Robux**, and the **item is sold in a game at 400 Robux**:
 
 <table>
 <thead>
@@ -170,7 +170,7 @@ For an example of how the publishing advance is recouped, the following table re
     <td>30% Creator Commission</td>
     <td>Publishing Advance Rebate (from Platform Commission)</td>
     <td>30% Platform Commission</td>
-    <td>40% Affiliate (experience owner) Commission</td>
+    <td>40% Affiliate (game owner) Commission</td>
   </tr>
   <tr>
     <td>Unit 1 sold</td>
@@ -268,7 +268,7 @@ See the following guidelines:
 
 ## Commissions
 
-When community items are sold on Roblox, a portion of the sales is split between the item creator and Roblox. If the item is sold within an experience, the revenue share will additionally be split with the owner of the experience.
+When community items are sold on Roblox, a portion of the sales is split between the item creator and Roblox. If the item is sold within a game, the revenue share will additionally be split with the owner of the game.
 
 <Alert severity = 'warning'>
 Your account must follow [Marketplace Creator Requirements](./marketplace-policy.md#creator-requirements) to keep items listed on the Marketplace and eligible for commissions.
@@ -276,10 +276,10 @@ Your account must follow [Marketplace Creator Requirements](./marketplace-policy
 
 There is a 30 day escrow hold for each purchase. Roblox holds the commission from the sale of your items for 30 days starting from the date of sale and your Robux share of the sale.
 
-| Item Type                                        | Marketplace Purchase |                 In-Experience Purchase                  |
+| Item Type                                        | Marketplace Purchase |                 In-game Purchase                  |
 | :----------------------------------------------- | :------------------: | :-----------------------------------------------------: |
-| 3D assets (bodies, heads, clothing, accessories) | Creator receives 30% | Creator receives 30%<br />Experience owner receives 40% |
-| Classic clothing                                 | Creator receives 70% | Creator receives 60%<br />Experience owner receives 10% |
+| 3D assets (bodies, heads, clothing, accessories) | Creator receives 30% | Creator receives 30%<br />Game owner receives 40% |
+| Classic clothing                                 | Creator receives 70% | Creator receives 60%<br />Game owner receives 10% |
 
 <Alert severity = 'info'>
 Limited items that are sold for free follow a different per-unit payout structure. See [Per-Unit Fee](#per-unit-fee) for more information.
@@ -291,7 +291,7 @@ Avatar items sold in the Marketplace use a progressive revenue share system: the
 
 Additional guidelines:
 
-- Progressive revenue share **only applies to purchases in the Marketplace**. In-experience purchases receive the base 30% commission.
+- Progressive revenue share **only applies to purchases in the Marketplace**. In-game purchases receive the base 30% commission.
 - The revenue share % is progressive. For example, an item priced at 1.15x the price floor will receive ~33% of the creator revenue share.
 - [Regional pricing](../production/monetization/regional-pricing.md) adjustments do not affect revenue share percentage. Revenue share is based solely on the listed price relative to current floor.
 
@@ -440,15 +440,7 @@ At this time, only Roblox-created Limiteds are tradeable.
 
 When publishing free Limiteds, you must provide a per-unit fee depending on the quantity being published and other factors like the type of asset being uploaded. This payment depends on a range of market-based factors and may change over time.
 
-As a hypothetical case where Limited hat items are 100 Robux per-unit, if 200 Limited hats are listed at a **0** Robux price, the creator pays **20,000** Robux to list this free Limited item. For free Limiteds, **Roblox keeps the entire per-unit fee**.
-
-### Restocking
-
-After publishing a free Limited, you can **restock** the item to increase its available quantity. To restock, open the item's configure page and edit the quantity to a higher value. Before you confirm, Roblox shows the total fee for the additional quantity, then charges you when you complete the restock.
-
-Restocking uses the same [per-unit fee](#per-unit-fee) as the original publish. As a hypothetical case where Limited hat items are 100 Robux per-unit, restocking a free Limited hat by an additional 50 units costs **5,000** Robux. As with publishing, **Roblox keeps the entire per-unit fee**.
-
-Restocking is only available for free Limiteds that have never been made resellable. Once you enable reselling on an item, you can no longer restock it because the [resellable status](../marketplace/publish-to-marketplace.md#item-attributes) can't be disabled after it's enabled.
+As a hypothetical case where limited hat items are 100 Robux per-unit, if 200 limited hats are listed at a **0** Robux price, the creator pays **20,000** Robux to list this free limited item. For free Limiteds, **Roblox keeps the entire per-unit fee**.
 
 ### Reselling
 
@@ -479,13 +471,13 @@ Robux acquired from trading or selling items that you didn't create are not cons
 
 ### Rate limits
 
-To protect against automated purchases, Roblox sets purchase limits for Limiteds sold in-experience or in the Marketplace. For Limiteds, the following applies:
+To protect against automated purchases, Roblox sets purchase limits for Limiteds sold in-game or in the Marketplace. For Limiteds, the following applies:
 
 - Users are subject to the following purchase rate limits:
   - 9 successful purchases per minute per user.
   - 1 purchase request every 2 seconds per item per user.
   - A maximum of 3 successful purchases per user per item.
-- For in-experience purchases, users must be in the experience for 60 seconds to successfully complete a purchase.
+- For in-game purchases, users must be in the game for 60 seconds to successfully complete a purchase.
 
 ## Timed options
 

@@ -1,6 +1,6 @@
 ---
 title: Rewarded video ads
-description: Immersive ads allow you insert ad units into your experience that programmatically serve ad content.
+description: Immersive ads allow you insert ad units into your game that programmatically serve ad content.
 ---
 
 <GridContainer numColumns="2">
@@ -10,19 +10,19 @@ description: Immersive ads allow you insert ad units into your experience that p
 
 <br /><br />
 
-With rewarded video ads, you can implement a reward mechanism inside your experience to incentivize users to watch click-to-play video ads. A rewarded video is a full-screen ad that lasts anywhere from 6 to 30 seconds and that rewards the user with an item after they have finished watching it.
+With rewarded video ads, you can implement a reward mechanism inside your game to incentivize users to watch click-to-play video ads. A rewarded video is a full-screen ad that lasts anywhere from 6 to 30 seconds and that rewards the user with an item after they have finished watching it.
 
 Rewarded video ads let you:
 
 - Monetize a greater number of your users.
 - Increase your ad revenue per user and bring in demand from hundreds of brands.
-- Improve user playtime and deliver greater engagement from your experience.
+- Improve user playtime and deliver greater engagement from your game.
 
-Before implementing rewarded video ads, consider where inside your experience you want to place the ads, and which items you want to reward users with. Keep the following in mind:
+Before implementing rewarded video ads, consider where inside your game you want to place the ads, and which items you want to reward users with. Keep the following in mind:
 
-- **Take advantage of high-traffic areas**: Your earnings from rewarded videos depend on the number of users in your experience who engage with ads. Place rewarded videos in lobbies or menus as a way to drive high traffic, as these are areas where users are most likely to engage when starting their gameplay.
+- **Take advantage of high-traffic areas**: Your earnings from rewarded videos depend on the number of users in your game who engage with ads. Place rewarded videos in lobbies or menus as a way to drive high traffic, as these are areas where users are most likely to engage when starting their gameplay.
 - **Use natural gameplay breaks**: To avoid gameplay disruption, implement rewarded videos at natural gameplay breaks, like when users completes a level, before they start a challenge, or when they run out of lives or resources.
-- **Boost discovery with prompts**: To make sure that users can find the rewarded video ad in your experience, use easy access reward prompts that are easily discoverable and that only require 1-2 clicks. Have a clear call-to-action (for example, "Watch this ad for 2x the coins!") to make the action obvious to users.
+- **Boost discovery with prompts**: To make sure that users can find the rewarded video ad in your game, use easy access reward prompts that are easily discoverable and that only require 1-2 clicks. Have a clear call-to-action (for example, "Watch this ad for 2x the coins!") to make the action obvious to users.
 - **Offer meaningful rewards**: We recommend rewards that are equivalent to 3 to 10 Robux. Use items like boosters, in-game currency, extra lives, and temporary privileges.
 - **Ensure compliance**: Clearly disclose to users that they are engaging with an ad, and explain what users have to do to receive the reward and what the reward is. Rewards for video ads **cannot** be randomized items.
 
@@ -33,12 +33,12 @@ Before implementing rewarded video ads, consider where inside your experience yo
 </Alert>
 
 <Alert severity="warning">
-  Video ads shouldn't negatively impact the user's character during gameplay. To make sure their character isn't harmed, you can pause damage while an ad plays or only show ads in safe zones like the experience lobby.
+  Video ads shouldn't negatively impact the user's character during gameplay. To make sure their character isn't harmed, you can pause damage while an ad plays or only show ads in safe zones like the game lobby.
 </Alert>
 
 To implement rewarded video ads:
 
-1. Make sure you meet the [eligibility requirements](#eligibility-requirements), including being 13+ years of age, having an ID-verified Roblox account, and have a public experience with at least 2 thousand unique visitors per month.
+1. Make sure you meet the [eligibility requirements](#eligibility-requirements), including being 13+ years of age, having an ID-verified Roblox account, and have a public game with at least 2 thousand unique visitors per month.
 2. [Enable rewarded video ads in Creator Hub](#video-ad-setup).
 3. Choose the item you want to reward users with for watching the ad. You can select an existing developer product or create a brand new one.
 4. Create [client-side](#client-side-implementation) and [server-side](#server-side-implementation) scripts. The client-side script checks if a video ad is available to be played to the user, while the server-side script turns a developer product into a reward, shows the user the video ad, and grants the user their reward.
@@ -51,9 +51,9 @@ After implementation, you can use [analytics](#analytics) to understand key metr
 
 ### Video ad setup
 
-To set up a rewarded video ad inside your experience:
+To set up a rewarded video ad inside your game:
 
-1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
+1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select a game.
 2. Go to **Monetization** ⟩ **Ads** ⟩ **Settings**.
 3. Under **Rewarded Video** ⟩ **Serving**, turn on the **Serving enabled** toggle.
    <img src="../../assets/promotion/ads-manager/EnableRewardedVideoAdsCreatorHub.png" width="750" />
@@ -64,7 +64,7 @@ To set up a rewarded video ad inside your experience:
 
 To implement the rewarded video ad on the client-side:
 
-1. Add a new `Class.LocalScript` to the button you just inserted into your experience.
+1. Add a new `Class.LocalScript` to the button you just inserted into your game.
 2. Use the `Class.AdService.GetAdAvailabilityNowAsync|GetAdAvailabilityNowAsync` method to make sure the button is only visible to the user if an ad is available.
 
 ```lua title="Code example for rewarded video ad (Client)"
@@ -147,7 +147,7 @@ To implement the rewarded video ad on the server-side:
 1. Create a new `Class.Script` under **ServerScriptService**.
 2. Use the `Class.AdService.CreateAdRewardFromDevProductId|CreateAdRewardFromDevProductId` method to pass the developer product ID of the reward and create an `AdReward` object.
 3. Use the `Class.AdService.ShowRewardedVideoAdAsync|ShowRewardedVideoAdAsync` method to play the video ad to the user.
-   - (Optional) Add a `placementId` to track individual [video ad placements](#placements) inside your experience.
+   - (Optional) Add a `placementId` to track individual [video ad placements](#placements) inside your game.
 4. Use the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` method to grant the user their reward if they have watched the entire video ad.
 
 ```lua title="Code example for rewarded video ad (Server)"
@@ -191,22 +191,22 @@ end
 
 ## Placements
 
-Use placements to track the performance of individual rewarded video ads inside your experience.
+Use placements to track the performance of individual rewarded video ads inside your game.
 
 To create a rewarded video ad placement:
 
-1. In the Creator Dashboard, go to **Creations** and select an experience.
+1. In the Creator Dashboard, go to **Creations** and select a game.
 2. Go to **Monetization** ⟩ **Ads** ⟩ **Placements**.
 3. Click **Create placement**.
 4. Enter a name for the placement and click **Create**.
 
-The new placement populates on the Placement table with a unique **Placement ID**. You can use this Placement ID in the `Class.AdService.ShowRewardedVideoAsync|ShowRewardedVideoAsync` method to differentiate between and track metrics for the individual video ads inside your experience.
+The new placement populates on the Placement table with a unique **Placement ID**. You can use this Placement ID in the `Class.AdService.ShowRewardedVideoAsync|ShowRewardedVideoAsync` method to differentiate between and track metrics for the individual video ads inside your game.
 
 ## Ad opportunities
 
 Use `Class.AdService.RegisterAdOpportunityAsync|RegisterAdOpportunityAsync` to track how many times a user has the opportunity to watch a rewarded video ad, and the rate at which they actually watch the video ad.
 
-You can provide a Placement ID as an optional parameter to track metrics for individual ad opportunities in your experience.
+You can provide a Placement ID as an optional parameter to track metrics for individual ad opportunities in your game.
 
 ```lua title="Code example for tracking ad opportunities"
 local AdService = game:GetService("AdService")
@@ -230,13 +230,13 @@ end
 
 ## Exclude likely spenders
 
-Based on past behavior and purchasing habits, certain users are more likely to make purchases in your experience. To reduce your risk of losing revenue, you can exclude users who are likely to spend in your experience from seeing rewarded video ads.
+Based on past behavior and purchasing habits, certain users are more likely to make purchases in your game. To reduce your risk of losing revenue, you can exclude users who are likely to spend in your game from seeing rewarded video ads.
 
 We recommend that you only enable this setting if you plan to let users choose between watching a video ad and purchasing the reward from that ad. If the reward you're offering through the video ad is unique and isn't available for purchase, we recommend that you do not enable this setting.
 
 To prevent likely spenders from seeing rewarded video ads:
 
-1. In the Creator Dashboard, go to **Creations** and select an experience.
+1. In the Creator Dashboard, go to **Creations** and select a game.
 2. Go to **Monetization** ⟩ **Ads** ⟩ **Settings**.
 3. Turn on the **Exclude your most likely purchasers from Rewarded Video Ads** toggle.
 
@@ -244,15 +244,15 @@ To prevent likely spenders from seeing rewarded video ads:
 
 ## Estimate potential earnings
 
-Use the calculator to estimate your earnings before you implement rewarded videos ad in your experience.
+Use the calculator to estimate your earnings before you implement rewarded videos ad in your game.
 
-Potential earnings are calculated by multiplying the number of ads-eligible users who have visited your experience in the last 7 days, the number of ads you might show per user, and your projected EPM (earnings per 1000 impressions).
+Potential earnings are calculated by multiplying the number of ads-eligible users who have visited your game in the last 7 days, the number of ads you might show per user, and your projected EPM (earnings per 1000 impressions).
 
-Because the number of daily ad views per user is the main variable you can control when you implement rewarded video ads in your experience, you should design a user experience that naturally encourages users to watch ads. For example, if you want most users to watch at least one ad a day, make your ad placements accessible and easy to find. You can also boost daily views by offering rewards that feel valuable and connect to your core gameplay loop, keeping users engaged and boosting your total ad impressions.
+Because the number of daily ad views per user is the main variable you can control when you implement rewarded video ads in your game, you should design a user experience that naturally encourages users to watch ads. For example, if you want most users to watch at least one ad a day, make your ad placements accessible and easy to find. You can also boost daily views by offering rewards that feel valuable and connect to your core gameplay loop, keeping users engaged and boosting your total ad impressions.
 
 To use the calculator:
 
-1. In the Creator Dashboard, go to **Creations** and select an experience.
+1. In the Creator Dashboard, go to **Creations** and select a game.
 2. Go to **Monetization** ⟩ **Ads** ⟩ **Eligibility**.
 3. Under **Ad format**, select **Rewarded video**.
 4. Adjust the **daily ad views per user** slider. to update the **Weekly potential rewarded video ads earning** number and see potential earnings.
@@ -265,7 +265,7 @@ Use analytics metrics to evaluate the effectiveness of your rewarded video ads, 
 
 To access your rewarded video ad metrics:
 
-1. In the Creator Dashboard, go to **Creations** and select an experience.
+1. In the Creator Dashboard, go to **Creations** and select a game.
 2. Go to **Monetization** ⟩ **Ads** ⟩ **Analytics**.
 3. Filter by **Rewarded Video** to see all of the available metrics.
 
@@ -279,11 +279,11 @@ To access your rewarded video ad metrics:
 <tbody>
   <tr>
     <td>**Earnings (Robux)**</td>
-    <td>Total revenue amount in Robux earned from rewarded video ads in your experience. <br /><br /> Different lines show you this metric for different ad placements inside the experience.</td>
+    <td>Total revenue amount in Robux earned from rewarded video ads in your game. <br /><br /> Different lines show you this metric for different ad placements inside the game.</td>
   </tr>
   <tr>
     <td>**Monetization Funnel at Experience level**</td>
-    <td>This metric shows you: <br /><br /> <ul><li>**Requested**: The number of ads requested by ads-eligible users in your experience.</li><li>**Filled**: The number of ads received by ads-eligible users in your experience.</li><li>**Ad Opportunities**: The number of opportunities users had to watch a video ad.</li><li>**Impressions**: The number of impressions from the video ads in your experience. The first frame of a video ad shown to a user counts as an impression.</li><li>**Rewarded**: The number of video ad rewards granted to users.</li></ul> </td>
+    <td>This metric shows you: <br /><br /> <ul><li>**Requested**: The number of ads requested by ads-eligible users in your game.</li><li>**Filled**: The number of ads received by ads-eligible users in your game.</li><li>**Ad Opportunities**: The number of opportunities users had to watch a video ad.</li><li>**Impressions**: The number of impressions from the video ads in your game. The first frame of a video ad shown to a user counts as an impression.</li><li>**Rewarded**: The number of video ad rewards granted to users.</li></ul> </td>
   </tr>
   <tr>
     <td>**Fill Rate**</td>
@@ -291,23 +291,23 @@ To access your rewarded video ad metrics:
   </tr>
   <tr>
     <td>**EPM (Earnings per Mille)**</td>
-    <td>Your effective Robux earnings per thousand impressions. Calculated by total earnings / the number of impressions (in thousands) in your experience. <br /><br /> Different lines show you this metric for different ad placements inside the experience.</td>
+    <td>Your effective Robux earnings per thousand impressions. Calculated by total earnings / the number of impressions (in thousands) in your game. <br /><br /> Different lines show you this metric for different ad placements inside the game.</td>
   </tr>
   <tr>
     <td>**Ad Opportunities**</td>
-    <td>The number of opportunities users had to watch a video ad. Use this metric to track how many times a user had the chance to watch a video ad and the rate at which they actually took that chance and watched the ad. <br /><br /> Different lines show you this metric for different ad placements inside the experience.</td>
+    <td>The number of opportunities users had to watch a video ad. Use this metric to track how many times a user had the chance to watch a video ad and the rate at which they actually took that chance and watched the ad. <br /><br /> Different lines show you this metric for different ad placements inside the game.</td>
   </tr>
   <tr>
     <td>**Impressions**</td>
-    <td>The number of rewarded video ads shown in your experience. <br /><br /> Different lines show you this metric for different ad placements inside the experience.</td>
+    <td>The number of rewarded video ads shown in your game. <br /><br /> Different lines show you this metric for different ad placements inside the game.</td>
   </tr>
   <tr>
     <td>**Rewarded**</td>
-    <td>The number of rewards granted for video ad views in your experience. <br /><br /> Different lines show you this metric for different ad placements inside the experience.</td>
+    <td>The number of rewards granted for video ad views in your game. <br /><br /> Different lines show you this metric for different ad placements inside the game.</td>
   </tr>
   <tr>
     <td>**DUV (Daily Unique Viewers)**</td>
-    <td>The number of unique users who have viewed one or more video ads in your experience in a day. A view is defined by an impression. <br /><br /> This data is updated with 1 day delay.</td>
+    <td>The number of unique users who have viewed one or more video ads in your game in a day. A view is defined by an impression. <br /><br /> This data is updated with 1 day delay.</td>
   </tr>
   <tr>
     <td>**AEPDUV (Average Earning Per Daily Unique Viewer)**</td>
@@ -315,11 +315,11 @@ To access your rewarded video ad metrics:
   </tr>
   <tr>
     <td>**Eligible Daily Active User**</td>
-    <td>The number of unique daily users to your experience who were eligible to view rewarded video ads. <br /><br /> This data is updated with 1 day delay.</td>
+    <td>The number of unique daily users to your game who were eligible to view rewarded video ads. <br /><br /> This data is updated with 1 day delay.</td>
   </tr>
   <tr>
     <td>**DUV/eDAU**</td>
-    <td>The percentage of ads-eligible users who visited your experience and viewed one or more video ads in a day.</td>
+    <td>The percentage of ads-eligible users who visited your game and viewed one or more video ads in a day.</td>
   </tr>
   <tr>
     <td>**Opt-In Rate**</td>
@@ -343,22 +343,22 @@ To prevent abuse of the rewarded ad system and to provide the best user experien
 <table>
 <tbody>
   <tr>
-    <th>**Experiences**</th>
-    <td>Experiences must:<br/><br/><ul><li>Be public and unrestricted.</li><li>Offer no free-form user creation.</li><li>Have a complete **Maturity and Compliance Questionnaire** that has been reviewed and approved by Roblox. If the review status is **Pending**, you can request a re-review from the experience's advertising eligibility page under **Monetization** ⟩ **Ads** ⟩ **Eligiblity**. You'll receive a response within 24 hours.</li><li>Have an average of at least **2,000 unique visitors per month**.</li><li>Comply with the [Roblox terms of use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), [community standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and [publisher integrity requirements](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards#publisher-integrity).</li></ul></td>
+    <th>**Games**</th>
+    <td>Games must:<br/><br/><ul><li>Be public and unrestricted.</li><li>Offer no free-form user creation.</li><li>Have a complete **Maturity and Compliance Questionnaire** that has been reviewed and approved by Roblox. If the review status is **Pending**, you can request a re-review from the game's advertising eligibility page under **Monetization** ⟩ **Ads** ⟩ **Eligiblity**. You'll receive a response within 24 hours.</li><li>Have an average of at least **2,000 unique visitors per month**.</li><li>Comply with the [Roblox terms of use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), [community standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and [publisher integrity requirements](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards#publisher-integrity).</li></ul></td>
   </tr>
   <tr>
     <th>**Publishers**</th>
-    <td>As a publisher, you must:<br/><br/><ul><li>Be 13+ years of age.</li><li>Have an account that is in good standing with Roblox.</li><li>Have enabled two-step verification (2FA) and [verified your ID](../publishing/account-verification.md#verify-through-government-id) on your account.</li><li>Implement a clear action that the user has to take before the video ad is played for them. For example, a button that the user has to click.</li><li>Provide clear and accurate disclosures prior to each trigger of the video, including what the reward is and what the user is required to do to earn it. These disclosures must be unambiguous to the user. For example, you can add text that says “Watch the ad to earn 10 diamonds!” to the video ad play button.</li><li>Issue the reward to the user immediately after the rewarded video ad has finished playing.</li><li>Not force the user to initiate the video ad as a progress gate in the experience.</li><li>Not take over the user's screen visibility or obscure their avatar motion.</li><li>Not promote or implement fraudulent rewards, including free Robux or money, to deceptively incentivize the user to watch the video ad to completion. This also includes using inaccurate reward descriptions or implementing mechanisms that don't fulfill the reward promised to the user.</li></ul></td>
+    <td>As a publisher, you must:<br/><br/><ul><li>Be 13+ years of age.</li><li>Have an account that is in good standing with Roblox.</li><li>Have enabled two-step verification (2FA) and [verified your ID](../publishing/account-verification.md#verify-through-government-id) on your account.</li><li>Implement a clear action that the user has to take before the video ad is played for them. For example, a button that the user has to click.</li><li>Provide clear and accurate disclosures prior to each trigger of the video, including what the reward is and what the user is required to do to earn it. These disclosures must be unambiguous to the user. For example, you can add text that says “Watch the ad to earn 10 diamonds!” to the video ad play button.</li><li>Issue the reward to the user immediately after the rewarded video ad has finished playing.</li><li>Not force the user to initiate the video ad as a progress gate in the game.</li><li>Not take over the user's screen visibility or obscure their avatar motion.</li><li>Not promote or implement fraudulent rewards, including free Robux or money, to deceptively incentivize the user to watch the video ad to completion. This also includes using inaccurate reward descriptions or implementing mechanisms that don't fulfill the reward promised to the user.</li></ul></td>
   </tr>
   <tr>
     <th>**Rewards**</th>
-    <td>The reward for watching a video ad should:<br/><br/><ul><li>Be granted upon completion of a video ad view.</li><li>Be a developer product which would normally be available to purchase with Robux inside an in-experience shop.</li><li>Not inflate currency or unbalance the experience's economy.</li></ul>The right reward strategy is critical. See [Best practices](#best-practices) for more guidance on choosing the right reward for your video ad.</td>
+    <td>The reward for watching a video ad should:<br/><br/><ul><li>Be granted upon completion of a video ad view.</li><li>Be a developer product which would normally be available to purchase with Robux inside an in-game shop.</li><li>Not inflate currency or unbalance the game's economy.</li></ul>The right reward strategy is critical. See [Best practices](#best-practices) for more guidance on choosing the right reward for your video ad.</td>
   </tr>
 </tbody>
 </table>
 
 <Alert severity="info">
-  Resubmitting your **Maturity and Compliance Questionnaire** will temporarily remove your ads eligibility while the questionnaire is under review. To avoid repeated interruptions, only resubmit the questionnaire when you publish an experience update that changes your previous responses.
+  Resubmitting your **Maturity and Compliance Questionnaire** will temporarily remove your ads eligibility while the questionnaire is under review. To avoid repeated interruptions, only resubmit the questionnaire when you publish a game update that changes your previous responses.
 </Alert>
 
 <Alert severity="warning">
@@ -377,9 +377,9 @@ To get the most out of your rewarded video ad, make sure to:
 For the best reward strategy, we recommend that your rewards:
 
 - Have prominent reward prompts to ensure all eligible users engage with the video.
-- Be relevant to the gameplay and align with core experience mechanics. For example, extra lives in a battle experience or new customization options in a roleplaying game.
-- Be scaled so that they remain valuable to users as they advance through the experience.
-- Motivate the user by offering in-experience progression, collection, customization, or competition.
+- Be relevant to the gameplay and align with core game mechanics. For example, extra lives in a battle game or new customization options in a roleplaying game.
+- Be scaled so that they remain valuable to users as they advance through the game.
+- Motivate the user by offering in-game progression, collection, customization, or competition.
 - Be offered at strategic moments, like after the user loses a life or after they complete a difficult level.
-- Be offered at appropriate intervals to avoid making the reward so powerful that it trivializes in-experience progression.
+- Be offered at appropriate intervals to avoid making the reward so powerful that it trivializes in-game progression.
 - Be a limited-time or rare reward to increase engagement.

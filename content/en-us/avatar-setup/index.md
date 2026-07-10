@@ -144,7 +144,7 @@ To run Avatar Setup:
 1. In the **Configure Models** section,
    1. Set **Preset** to the appropriate category.
       1. If you want to publish your assets to the Marketplace for users to purchase and use across Roblox, select **Platform Avatar**. This option generates a more restrictive setup that's necessary to pass validation and moderation.
-      1. If you want to upload your assets to your inventory for non-player characters (NPCs) or starter player characters for your experiences, select **Development Avatar**. This option generates a less restrictive setup.
+      1. If you want to upload your assets to your inventory for non-player characters (NPCs) or starter player characters for your games, select **Development Avatar**. This option generates a less restrictive setup.
 
       <img src="../assets/avatar/avatar-setup/Configure-Models.png" width="50%" alt="" />
 
@@ -290,7 +290,7 @@ If you notice any areas on your character's body that don't interact with access
 
 ### Test in Experience
 
-The **Test in Experience** tab starts playtesting the experience with your character model. This button references your active [playtesting mode](../studio/testing-modes.md) and retains the changes you make in the Avatar Setup window.
+The **Test in Experience** tab starts playtesting the game with your character model. This button references your active [playtesting mode](../studio/testing-modes.md) and retains the changes you make in the Avatar Setup window.
 
 ### Add test items
 

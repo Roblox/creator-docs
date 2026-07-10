@@ -7,7 +7,7 @@ description: Explains the design concepts for gloomy soundscapes in The Mystery 
 
 In order for The Mystery of Duvall Drive to feel authentic and plausible, we made sure that ambience was king at every stage in development. We included scripted audio events, music, character sounds, and point-source audio to support our "grass is always greener" approach, meaning that we always wanted there to be a more intriguing sound in the distance no matter where the player is located in the house so that they would want to further investigate each room. These sounds ranged anywhere from a radio playing music in a bedroom, the kitchen sink dripping, rain hitting the attic roof, or the oscillating ritual orb in the center of the house.
 
-Sound design for an experience with horror themes is a balancing act between embedding both realistic and abstract audio. While realistic audio provides a sense of immersion and authenticity to the world, abstract audio drives the player's attention to the otherworldly elements that pull the story forward. Both audio types have their strengths separately, but together they can create a dark soundscape that feels authentic, plausible, and horrifying. In this section, we'll show you how and why we used volumetric audio and nested `Class.SoundGroup` mixing to balance our dark soundscape and bring life to our 3D space.
+Sound design for a game with horror themes is a balancing act between embedding both realistic and abstract audio. While realistic audio provides a sense of immersion and authenticity to the world, abstract audio drives the player's attention to the otherworldly elements that pull the story forward. Both audio types have their strengths separately, but together they can create a dark soundscape that feels authentic, plausible, and horrifying. In this section, we'll show you how and why we used volumetric audio and nested `Class.SoundGroup` mixing to balance our dark soundscape and bring life to our 3D space.
 
 <img src="../../assets/resources/mystery-of-duvall-drive/designing-dark-soundscapes/overview.png" width="100%" />
 
@@ -27,7 +27,7 @@ A player's experience with audio is not only dependent on what sounds they can h
   <figcaption>In this section of the house, volumetric audio allows you to immerse yourself in the sounds of rain hitting nearby windows, the crackling of a fireplace, and a soft tune being played through an old radio nearby.</figcaption>
 </figure>
 
-Before volumetric audio, you were limited to having your audio emit from a [single point in space](../../sound/objects.md#point-source), or having it [play back in both headphones like music](../../sound/objects.md#background-audio). Because we wanted our audio to be as realistic as possible while representing a wide range of sound types, neither of these previous implementations would have been sufficient for creating the immersive world that we wanted to capture in this experience. As a result, we used volumetric audio emitters for the vast majority of our sound effects, including the outdoor rain, interior room tones, corrupted zone ambiences, television static, and rain hitting various surfaces. If we were to disable volumetric audio on the project, all of these sounds would collapse down to a single point of emission at their center of mass, and the entire soundscape would shift between the player's ears whenever they rotate their camera. This would make the entire space feel unrealistic and digital, and the sound's movement would be quite jarring and undesirable for the player.
+Before volumetric audio, you were limited to having your audio emit from a [single point in space](../../sound/objects.md#point-source), or having it [play back in both headphones like music](../../sound/objects.md#background-audio). Because we wanted our audio to be as realistic as possible while representing a wide range of sound types, neither of these previous implementations would have been sufficient for creating the immersive world that we wanted to capture in this game. As a result, we used volumetric audio emitters for the vast majority of our sound effects, including the outdoor rain, interior room tones, corrupted zone ambiences, television static, and rain hitting various surfaces. If we were to disable volumetric audio on the project, all of these sounds would collapse down to a single point of emission at their center of mass, and the entire soundscape would shift between the player's ears whenever they rotate their camera. This would make the entire space feel unrealistic and digital, and the sound's movement would be quite jarring and undesirable for the player.
 
 <figure>
   <GridContainer numColumns="2">
@@ -37,7 +37,7 @@ Before volumetric audio, you were limited to having your audio emit from a [sing
   <figcaption>Just a few examples of how we used volumetric audio to create our exterior ambience, as well as rain colliding with various materials in the backyard.</figcaption>
 </figure>
 
-Volumetric audio emitters allowed us to control the directionality of our soundscape to give a real sense of movement through the space. Because their influence is spread over a larger area and the audio spreads naturally to both ears, they give the experience's overall sound bed, or constant hum of audio activity, a far more predictable and stable volume level. This prevents the experience from being silent when the player's character isn't doing anything, and it makes the experience feel realistic as there are very few spaces in real life completely void of noise!
+Volumetric audio emitters allowed us to control the directionality of our soundscape to give a real sense of movement through the space. Because their influence is spread over a larger area and the audio spreads naturally to both ears, they give the game's overall sound bed, or constant hum of audio activity, a far more predictable and stable volume level. This prevents the game from being silent when the player's character isn't doing anything, and it makes the game feel realistic as there are very few spaces in real life completely void of noise!
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/designing-dark-soundscapes/volumetric-audio-emitter-greenhouse.png" width="50%" />
@@ -53,7 +53,7 @@ When adding detail to our outdoor soundscape, it was important to make the rain 
    - `Class.Part.Anchored` = **Enabled**
    - `Class.Part.CanCollide` = **Disabled**
    - `Class.Part.Transparency` = **`1`**
-1. We then added a `Class.Sound` object to the invisible part and set the following properties for the `Class.Sound` object so the raindrop sound started playing when players would load into the experience, looped continuously, and became audible when a player was 60 studs away/reached its maximum volume at 15 studs away:
+1. We then added a `Class.Sound` object to the invisible part and set the following properties for the `Class.Sound` object so the raindrop sound started playing when players would load into the game, looped continuously, and became audible when a player was 60 studs away/reached its maximum volume at 15 studs away:
    - `Class.Sound.SoundId` = **`9178663282`**
    - `Class.Sound.Playing` = **Enabled**
    - `Class.Sound.Looped` = **Enabled**
@@ -64,7 +64,7 @@ When adding detail to our outdoor soundscape, it was important to make the rain 
         <figcaption>The edges of our part can be seen in white outlining the car.</figcaption>
       </figure>
 
-This process allowed the sound to emit from the entire surface of the invisible part. If the player was inside of the part, the raindrop audio would play all around the player's head. The larger you make your own volumetric audio emitters, the more spread and area the volumetric sound will cover, so experiment with different sizes and shapes for your emitter to get the soundscape you want for your own experiences!
+This process allowed the sound to emit from the entire surface of the invisible part. If the player was inside of the part, the raindrop audio would play all around the player's head. The larger you make your own volumetric audio emitters, the more spread and area the volumetric sound will cover, so experiment with different sizes and shapes for your emitter to get the soundscape you want for your own games!
 
 ## Nested SoundGroup mixing
 
@@ -75,7 +75,7 @@ As human beings, we like to think we are great multitaskers, but in reality it's
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/resources/mystery-of-duvall-drive/designing-dark-soundscapes/main-audio-mixer.png" width="80%" />
-    <figcaption>A collapsed view of our main audio mixer for this experience. </figcaption>
+    <figcaption>A collapsed view of our main audio mixer for this game. </figcaption>
   </figure>
   <figure>
     <img src="../../assets/resources/mystery-of-duvall-drive/designing-dark-soundscapes/compressorsoundeffect-properties.png" width="80%" />

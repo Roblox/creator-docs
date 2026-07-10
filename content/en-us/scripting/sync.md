@@ -24,7 +24,7 @@ It is currently not possible to control Roblox Studio's debugger from an externa
 ## Set up Script Sync
 
 1. In the **Explorer**, select one or more folders that you want to sync.
-1. Right-click and select **Script Sync** ⟩ **Sync with Directory**.
+1. Right-click and select **Sync to…**.
 
    <img src="../assets/studio/explorer/Script-Sync.png" alt="The Explorer window with the Script Sync menu expanded." width="400" />
 
@@ -42,14 +42,32 @@ After you set up Script Sync, you almost certainly want to [add an LSP extension
 You only have to set up syncing once. When you restart Studio and open your place, Script Sync remembers what you were syncing and resumes automatically.
 </Alert>
 
+## Limits
+
+Script Sync supports up to 10,000 scripts per top-level synced instance and up to 128 top-level synced instances, so it scales to large code bases.
+
+## Conflict resolution
+
+When starting or resuming sync, if there are differences between Studio and your files on disk, Script Sync shows a detailed resolution dialog. The dialog lists which scripts will be added, modified, or deleted on each side so you can understand the impact of choosing **Keep Studio** vs. **Keep Disk**.
+
+## Selective deletion
+
+When you delete a synced script or folder in Studio or on disk, Script Sync removes only Luau scripts and supported files. It does not delete non-Luau files or folders that it doesn't manage; non-script assets like models and parts are preserved even when you remove or reorganize synced items around them.
+
+## Team Create
+
+Script Sync works with [Team Create](../projects/collaboration.md). The **Explorer** displays an icon on instances that a collaborator is currently syncing. To prevent duplicate names, Script Sync automatically appends a numeric suffix to the name of any new instance added under a tree that you or a collaborator is syncing.
+
+Avoid workflows where multiple people sync the same script and edit the files at the same time. Script Sync will continue to function, but collaborators can overwrite each other's changes.
+
 ## Key tips
 
 - Script Sync only syncs `Class.Script`, `Class.LocalScript`, `Class.ModuleScript` and `Class.Folder` instances. All other instances in a synced folder are ignored. Avoid syncing folders that contain scripts alongside other instances.
+- You can sync packages, though the `Class.PackageLink` itself is not written to disk.
 - Don't sync scripts that have attributes or tags. Script Sync ignores these, which can lead to data loss if you create or delete scripts or start syncing with an older version of your files on disk.
 - Script Sync requires the names of scripts be compatible with your file system—no duplicate names or unsupported characters. If Studio encounters any of these issues, it throws an error and asks you to resolve the situation before resuming sync.
 - If any synced files or folders change while Studio is closed, Studio asks you how you want to resolve the situation when you reopen the place.
 - Deleting a top-level (or "root") instance—the instance you initially synced—on your local disk can cause Studio to throw an error. To delete a top-level instance:
-
   1. In Studio, right-click the script or folder and select **Script Sync** ⟩ **Stop Sync**.
   1. Choose the **Delete file(s)** or **Delete folder(s)** option to delete the instance from your local disk.
   1. Delete the script or folder in Studio.
@@ -99,5 +117,5 @@ Script Sync has several settings in the [Studio Settings](../studio/setup.md#cus
 | :---- | :---- |
 | Auto resume sync on place open | Whether Studio should resume syncing when you open a place. Disabling this setting dramatically reduces the utility of Script Sync. |
 | Resume conflicted sync on place open | How Studio should handle conflicts when you open a place. The default option, **Do not resume**, forces you to resolve conflicts manually to avoid data loss. You can also choose to prefer the version on disk or the version in Studio. |
-| Keep local files/directories after sync | How to handle files on disk after you select **Script Sync** > **Stop Sync** in Studio.
-| File extension | The file extension to use for scripts on disk.
+| Keep local files/directories after sync | How to handle files on disk after you select **Script Sync** > **Stop Sync** in Studio. |
+| File extension | The file extension to use for scripts on disk. |

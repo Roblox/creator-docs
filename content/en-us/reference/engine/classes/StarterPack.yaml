@@ -19,7 +19,8 @@ description: |
   instead of **all** players (`StarterPack`), use player‑specific
   `Class.StarterGear` containers or parent those `Class.Tool|Tools` directly to
   player `Class.Backpack|Backpacks`.
-code_samples: []
+code_samples:
+  - Empty-StarterPack
 inherits:
   - Instance
 descendants: []

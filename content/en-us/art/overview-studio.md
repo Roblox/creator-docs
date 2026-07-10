@@ -19,7 +19,7 @@ After [installing Studio](../studio/setup.md), familiarize yourself with Studio'
 
 <img src="../assets/studio/general/Studio-Layout.png" />
 
-- [Viewport](../studio/ui-overview.md#3d-viewport) — Represents the workspace of a place. The items here are rendered similarly to how a user may view the environment they were to play your experience.
+- [Viewport](../studio/ui-overview.md#3d-viewport) — Represents the workspace of a place. The items here are rendered similarly to how a user may view the environment they were to play your game.
 
 - [Explorer](../studio/explorer.md) — Shows a hierarchical list of all objects and services in a place. This includes visible objects, like parts and lights, and non-rendered objects like scripts, sounds, and folders.
 
@@ -27,9 +27,9 @@ After [installing Studio](../studio/setup.md), familiarize yourself with Studio'
 
 - [Toolbox](../projects/assets/toolbox.md) — Contains a selection of [models](../parts/models.md), [images](../parts/textures-decals.md), [meshes](../parts/meshes.md), [audio](../audio/assets.md), [plugins](../studio/plugins.md), [videos](../ui/video-frames.md), and fonts made by Roblox or Roblox community members.
 
-- [Asset Manager](../projects/assets/manager.md) — Lets you manage [places](../production/publishing/publish-games-and-places.md) and bulk import assets into your experience.
+- [Asset Manager](../projects/assets/manager.md) — Lets you manage [places](../production/publishing/publish-games-and-places.md) and bulk import assets into your game.
 
-- [Output](../studio/output.md) — Displays all error, warning, or manually returned messages from the Roblox engine. This window is useful for troubleshooting behavior in your experience.
+- [Output](../studio/output.md) — Displays all error, warning, or manually returned messages from the Roblox engine. This window is useful for troubleshooting behavior in your game.
 
 For more information on the Studio interface and individual tools, see the [Studio overview](../studio/index.md).
 
@@ -39,7 +39,7 @@ Before you begin creating, it's important to understand how Roblox handles **ass
 
 - [Assets](../projects/assets/index.md) are a cloud-based version of an object that you can access any time to use, share, and modify. You can make nearly any object into an asset, such as a prop, building, character, sound, image, script, and more.
 
-- [Packages](../projects/assets/packages.md) are the Roblox equivalent of Unity **Prefabs** or Unreal **Blueprints**, or a group of assets bundled together to reuse in one or more experiences. Packages can update and propagate their changes to any of their copies across one or more experiences, letting you take advantage of powerful versioning and asset management controls. Roblox recommends that most developers work with packages whenever possible.
+- [Packages](../projects/assets/packages.md) are the Roblox equivalent of Unity **Prefabs** or Unreal **Blueprints**, or a group of assets bundled together to reuse in one or more games. Packages can update and propagate their changes to any of their copies across one or more games, letting you take advantage of powerful versioning and asset management controls. Roblox recommends that most developers work with packages whenever possible.
 
 All assets and packages save to your account's [Toolbox](../projects/assets/toolbox.md) for you or any associated [groups](../projects/groups.md) to access. You can also manage your saved assets and packages in the **Creations** section of your [Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Model).
 
@@ -47,7 +47,7 @@ You can also upload your assets to share on the [Creator Store](#creator-store),
 
 ### Creator Store
 
-The [Creator Store](../production/creator-store.md), accessible through the [web](https://create.roblox.com/store/) and directly inside Studio's [Toolbox](../projects/assets/toolbox.md), contains millions of assets by Roblox and the Roblox community for use in Studio and your experiences. Anyone can contribute their assets to the store, including models, images, meshes, audio, plugins, and more.
+The [Creator Store](../production/creator-store.md), accessible through the [web](https://create.roblox.com/store/) and directly inside Studio's [Toolbox](../projects/assets/toolbox.md), contains millions of assets by Roblox and the Roblox community for use in Studio and your games. Anyone can contribute their assets to the store, including models, images, meshes, audio, plugins, and more.
 
 Roblox also provides [free high quality assets](https://create.roblox.com/store/models?creatorName=Roblox), many of which are used in the following showcases:
 
@@ -99,7 +99,7 @@ Roblox also supports [custom 3D models](#mesh-parts) created from 3D modeling so
 
 ### Basic parts
 
-Studio natively supports basic parts that allow you to quickly add simple geometry to your experience. This is ideal for creating simple environments or even greyboxing or prototyping a more complex 3D space.
+Studio natively supports basic parts that allow you to quickly add simple geometry to your game. This is ideal for creating simple environments or even greyboxing or prototyping a more complex 3D space.
 
 Basic parts include the following benefits:
 
@@ -121,11 +121,11 @@ Meshes are collections of vertices, edges, and faces that make up a 3D object. U
     <figcaption>Create custom accessories, clothing, and characters that anyone can wear and use.</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/meshes/Beyond-The-Dark-Example.png" alt="A floating alien creature in space, from the Beyond The Dark experience"/>
-    <figcaption>Design a custom character unique to your experience.</figcaption>
+    <img src="../assets/modeling/meshes/Beyond-The-Dark-Example.png" alt="A floating alien creature in space, from the Beyond The Dark game"/>
+    <figcaption>Design a custom character unique to your game.</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/meshes/Mystery-of-Duvall-Example.png" alt="A cluttered interior room with a candle in the forefront and spooky interior lighting from the Mystery of Duvall Drive experience"/>
+    <img src="../assets/modeling/meshes/Mystery-of-Duvall-Example.png" alt="A cluttered interior room with a candle in the forefront and spooky interior lighting from the Mystery of Duvall Drive game"/>
     <figcaption>Use custom meshes and models to give your environments ambiance and depth.</figcaption>
   </figure>
 </GridContainer>
@@ -175,10 +175,10 @@ Textures are 2D images that you can apply to the surface of an object to change 
 Textures are different from user interface objects which can apply customizable text or an image to the [surface](../ui/in-experience-containers.md) of a part, like a billboard or computer screen.
 </Alert>
 
-There are two types of textures in Roblox, single image **basic textures** and **advanced PBR textures** that dynamically react to different lighting and environment scenarios. Whether creating assets directly for the [Creator Store](#creator-store) or [Marketplace](#marketplace) or designing content for an experience, you should incorporate PBR textures whenever you need realistic and impressive surface textures.
+There are two types of textures in Roblox, single image **basic textures** and **advanced PBR textures** that dynamically react to different lighting and environment scenarios. Whether creating assets directly for the [Creator Store](#creator-store) or [Marketplace](#marketplace) or designing content for a game, you should incorporate PBR textures whenever you need realistic and impressive surface textures.
 
 <Alert severity = 'warning'>
-Loading many unique PBR textures at once can affect performance in your experience. When working with many similar meshes, you can save processing power and memory by using a single set of PBR textures and [modifying alpha channels in combination with your mesh object base colors](https://devforum.roblox.com/t/using-alpha-masks-in-color-maps-to-customizetint-base-colors).
+Loading many unique PBR textures at once can affect performance in your game. When working with many similar meshes, you can save processing power and memory by using a single set of PBR textures and [modifying alpha channels in combination with your mesh object base colors](https://devforum.roblox.com/t/using-alpha-masks-in-color-maps-to-customizetint-base-colors).
 
 For additional tips on improving performance with your assets, see [Improve performance](../performance-optimization/improve.md#rendering).
 </Alert>
@@ -196,15 +196,15 @@ For more information see [Textures and decals](../parts/textures-decals.md) and 
 
 ## Environments
 
-Environments refer to the visual and spatial world within your experience. Environments are a combination of elements, such as [terrain](#terrain), [lighting](#lighting), architecture, effects, and more. Roblox provides many tools and services to quickly create high definition environments to elevate your experiences.
+Environments refer to the visual and spatial world within your game. Environments are a combination of elements, such as [terrain](#terrain), [lighting](#lighting), architecture, effects, and more. Roblox provides many tools and services to quickly create high definition environments to elevate your games.
 
 ### Terrain
 
 <video src="../assets/lighting-and-effects/aero-fluid-dynamics/Global-Wind-Showcase.mp4" controls width="800" alt="Video of wind blowing clouds and grass across rolling hills in the 3D world"></video>
 
-**Terrain** refers to the landscape or outdoor environment of a Roblox experience. Features such as mountains, valleys, hills, bodies of water, and vegetation all make up terrain. To quickly generate terrain, Studio provides a [Terrain Editor](../studio/terrain-editor.md) that allows you to quickly create various types of environments, such as mountains, grass-colored hills, deserts and more.
+**Terrain** refers to the landscape or outdoor environment of a Roblox game. Features such as mountains, valleys, hills, bodies of water, and vegetation all make up terrain. To quickly generate terrain, Studio provides a [Terrain Editor](../studio/terrain-editor.md) that allows you to quickly create various types of environments, such as mountains, grass-colored hills, deserts and more.
 
-While many experiences are include interior spaces, such as a city building or spaceship, it's important to use terrain for outdoor environments whenever possible to ensure performance and expected lighting and environmental behavior.
+While many games include interior spaces, such as a city building or spaceship, it's important to use terrain for outdoor environments whenever possible to ensure performance and expected lighting and environmental behavior.
 
 For more information, see [Environmental terrain](../parts/terrain.md).
 
@@ -212,11 +212,11 @@ For more information, see [Environmental terrain](../parts/terrain.md).
 
 <img src="../assets/tutorials/enhancing-outdoor-environments/Intro-After.png" alt="A campfire in a glade with a setting sun in the background illuminating the campsite."/>
 
-**Lighting** refers to the illumination and visual effect applied to the environment and objects in your experience. It plays a crucial role in setting the mood, atmosphere, and general visual quality of your creations.
+**Lighting** refers to the illumination and visual effect applied to the environment and objects in your game. It plays a crucial role in setting the mood, atmosphere, and general visual quality of your creations.
 
 Lighting can be categorized into the following:
 
 - **Global lighting** — Refers to the luminescence from either the sun or moon in an outdoor environment. You can set the properties of your global lighting by adjusting the `Class.Lighting` service. For additional hands-on instructions on adjusting global lighting, see the [Customize global lighting](../tutorials/curriculums/core/building/customize-global-lighting.md) lesson of our Core Curriculum.
-- **Local lighting** — Refers to light sources placed within your experiences, such as pointlights, spotlights, and surface lights. You can modify lighting scenarios based on different interior rooms or sections of your experience by using one or more light sources.
+- **Local lighting** — Refers to light sources placed within your games, such as pointlights, spotlights, and surface lights. You can modify lighting scenarios based on different interior rooms or sections of your game by using one or more light sources.
 
 For additional information on modifying your environment's lighting, see [Global lighting](../environment/lighting.md).

@@ -5,7 +5,7 @@ description: Explains how to best design data structures to reduce the chance of
 
 Depending on the data structure type, MemoryStoreService enforces [limits](../../cloud-services/memory-stores/index.md#data-structure-size-limits) on the memory and number of items in a data structure. All data structures are also constrained by a global per-partition request limit.
 
-Each Roblox experience has the [Memory Store Observability Dashboard](../../cloud-services/memory-stores/observability.md), which includes a set of charts that you can use to monitor memory store usage.
+Each Roblox game has the [Memory Store Observability Dashboard](../../cloud-services/memory-stores/observability.md), which includes a set of charts that you can use to monitor memory store usage.
 
 ## Sorted maps and queues
 
@@ -165,8 +165,8 @@ removeFromQueue(ids)
 
 Hash maps do not have individual memory or item count limits and are automatically sharded, but you can still encounter throttling if you use them poorly.
 
-For example, consider an experience with a hash map of data, stored as the value of a single key named `metadata`. If this metadata contains a nested object with information such as place ID, player count, and more, every time the metadata is needed, you have no choice but to call `GetAsync("metadata")` and retrieve the entire object. In this case, all requests go to a single key and therefore a single partition.
+For example, consider a game with a hash map of data, stored as the value of a single key named `metadata`. If this metadata contains a nested object with information such as place ID, player count, and more, every time the metadata is needed, you have no choice but to call `GetAsync("metadata")` and retrieve the entire object. In this case, all requests go to a single key and therefore a single partition.
 
 Rather than storing all metadata as a single, nested object, the better approach is to store each field as its own key so that the hash map can take advantage of automatic sharding. If you need separation between metadata and the rest of the hash map, add a naming prefix (e.g. `metadata_user_count` rather than just `user_count`).
 
-Additionally, if one or few keys is being accessed frequently, it's important to shard these calls among a lot of keys. For example, if all experience servers must retrieve a value from one hash map key you may run into partition throttling. To prevent this you can spread those calls among several keys with the same value until partition throttling no longer occurs.
+Additionally, if one or few keys is being accessed frequently, it's important to shard these calls among a lot of keys. For example, if all game servers must retrieve a value from one hash map key you may run into partition throttling. To prevent this you can spread those calls among several keys with the same value until partition throttling no longer occurs.

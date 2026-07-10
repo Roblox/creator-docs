@@ -109,7 +109,7 @@ testButton.Parent = testWidget
 ```
 
 <Alert severity="info">
-   Note that **you must parent the button to the widget** in the same way that you must parent any in-experience screen `Class.GuiObject` to a `Class.ScreenGui`.
+   Note that **you must parent the button to the widget** in the same way that you must parent any in-game screen `Class.GuiObject` to a `Class.ScreenGui`.
 </Alert>
 
 <Alert severity="warning">
@@ -261,7 +261,7 @@ Reference the following table for a list of mouse cursors and their potential us
 
 ## Gather user input
 
-UI elements such as `Class.TextBox` and `Class.TextButton` work normally in Studio widgets, and you can build interfaces just like you normally would on Roblox. However, `Class.UserInputService` doesn't work since these services expect the main experience window to be in focus.
+UI elements such as `Class.TextBox` and `Class.TextButton` work normally in Studio widgets, and you can build interfaces just like you normally would on Roblox. However, `Class.UserInputService` doesn't work since these services expect the main game window to be in focus.
 
 One workaround for generic input events is to create a transparent `Class.Frame` and overlay it over the entire screen. The following code sample creates a frame, and when the user clicks on the frame, the `Class.GuiObject.InputBegan` event captures keyboard input on the frame until the user clicks away:
 

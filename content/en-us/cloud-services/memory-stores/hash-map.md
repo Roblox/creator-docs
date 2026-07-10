@@ -13,7 +13,7 @@ Otherwise, hash maps use the same [API request](../../cloud-services/memory-stor
 
 ## Get a hash map
 
-To get a hash map, call `Class.MemoryStoreService:GetHashMap()` with a name for the hash map. The name is global within the experience, so you can access the same hash map on any script using this name.
+To get a hash map, call `Class.MemoryStoreService:GetHashMap()` with a name for the hash map. The name is global within the game, so you can access the same hash map on any script using this name.
 
 ```lua title="Getting a Hash Map"
 local MemoryStoreService = game:GetService("MemoryStoreService")
@@ -149,7 +149,7 @@ end
 
 To retrieve the value of a key from a hash map and update it, call `Class.MemoryStoreHashMap:UpdateAsync()` with the key **name**, a **callback function** to update the key, and an **expiration time** in seconds.
 
-For most experiences, multiple servers can update the same key concurrently and change the value. As `Class.MemoryStoreHashMap:UpdateAsync()|UpdateAsync()` always modifies the latest value before updating, you should use it to read the latest value as the input for your callback function.
+For most games, multiple servers can update the same key concurrently and change the value. As `Class.MemoryStoreHashMap:UpdateAsync()|UpdateAsync()` always modifies the latest value before updating, you should use it to read the latest value as the input for your callback function.
 
 For example, the following code sample updates the resource count of a resource in a shared inventory. `Class.MemoryStoreHashMap:UpdateAsync()|UpdateAsync()` ensures that all player contributions will make their way into this shared inventory, even if these contributions are made simultaneously. In this function, it also enforces a max resource count of 500.
 

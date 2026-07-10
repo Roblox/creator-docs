@@ -7,7 +7,7 @@ import BetaAlert from '../includes/beta-features/beta-alert.md'
 
 Roblox's materials are unlike materials on other platforms, in that their visual appearance **and** their [physical properties](#physical-properties) reflect those of materials in the real world. For example, concrete is heavier than plastic and sinks faster in water. When you set the material of a part or terrain, Roblox simulates its physical material properties to make this behavior just work.
 
-The Roblox Engine offers a range of [base materials](#base-materials) suitable to build many experiences, including various categories of metal, rock, and organic materials.
+The Roblox Engine offers a range of [base materials](#base-materials) suitable to build many games, including various categories of metal, rock, and organic materials.
 
 You can also create your own [custom materials](#custom-materials) and apply them to parts or [terrain](../parts/terrain.md). Custom materials have an additional [adaptive materials](#adaptive-materials) behavior that lets you adapt any model to use your art style and custom materials, even if someone else created the model.
 

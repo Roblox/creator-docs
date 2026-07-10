@@ -1,6 +1,6 @@
 ---
 title: Timers and events
-description: Create a battle royale experience in Roblox Studio. Code a timer and use bindable events for a match based game.
+description: Create a battle royale game in Roblox Studio. Code a timer and use bindable events for a match based game.
 next: /education/battle-royale-series/creating-a-gui
 prev: /education/battle-royale-series/managing-players
 ---

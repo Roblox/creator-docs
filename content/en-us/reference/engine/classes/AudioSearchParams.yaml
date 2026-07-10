@@ -90,7 +90,8 @@ properties:
     tags:
       - NotReplicated
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      Use `Class.AudioSearchParams.AudioSubType|AudioSubType` instead.
     security:
       read: None
       write: None

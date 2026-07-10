@@ -6,7 +6,7 @@ next: /tutorials/fundamentals/coding-1/landing
 
 ### Series description
 
-Start coding on Roblox with this easy-to-follow series covering the fundamentals of how to use the programming language Luau. These courses are perfect for those new to coding or just starting with Luau. Each course centers around a foundational computer science principle, and features individual lessons with step-by-step tutorials you can use to create your own experiences on Roblox.
+Start coding on Roblox with this easy-to-follow series covering the fundamentals of how to use the programming language Luau. These courses are perfect for those new to coding or just starting with Luau. Each course centers around a foundational computer science principle, and features individual lessons with step-by-step tutorials you can use to create your own games on Roblox.
 
 Before beginning this course, the reader should have basic knowledge of Roblox Studio, as demonstrated in the [Studio](../../curriculums/studio/index.md) and [Building](../../curriculums/building/index.md) lesson.
 

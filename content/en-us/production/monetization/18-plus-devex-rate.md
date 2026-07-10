@@ -1,6 +1,6 @@
 ---
 title: U.S. 18+ exchange rate
-description: 
+description: The U.S. 18+ DevEx rate offers a higher exchange rate for certain Earned Robux in eligible games from eligible purchases from U.S. players who have verified their age as at least 18 years old.
 ---
 
 The U.S. 18+ Roblox Developer Exchange Program (DevEx) Rate offers a higher exchange rate of `0.0054` for certain Earned Robux in eligible games from eligible purchases from U.S. players who have verified their age as at least 18 years old through [facial age estimation](https://about.roblox.com/age-estimation) or [government ID](../publishing/account-verification.md#verify-through-government-id).

@@ -3,7 +3,7 @@ title: Script Editor
 description: Roblox's built-in, fully-featured script editor includes modern conveniences like autocomplete, code highlighting, and multi-cursor editing.
 ---
 
-The **Script Editor** in Studio is the primary tool for scripting on Roblox. It's a self-improving environment that can help you write high-impact code, shorten your development time, and iterate on your experiences. It can improve your scripting experience by:
+The **Script Editor** in Studio is the primary tool for scripting on Roblox. It's a self-improving environment that can help you write high-impact code, shorten your development time, and iterate on your games. It can improve your scripting experience by:
 
 - Formatting and highlighting syntax in your code.
 - Offering ways to [autocomplete](#autocomplete-features) phrases in your code as you type.
@@ -21,9 +21,9 @@ You can [customize](#editor-settings) the Script Editor to suit your preferences
 
 The Script Editor's autocomplete features generate code-related information that can improve your programming efficiency, such as:
 
-- **Informed suggestions** on how to complete phrases as you type them that are contextual to the experience's [data model](../projects/data-model.md). For example, if you have a `Class.Model` in `Class.Workspace` called **RocketShip**, autocomplete suggests `RocketShip` when you type `workspace.roc` and indicates that it's a `Class.Model`.
+- **Informed suggestions** on how to complete phrases as you type them that are contextual to the game's [data model](../projects/data-model.md). For example, if you have a `Class.Model` in `Class.Workspace` called **RocketShip**, autocomplete suggests `RocketShip` when you type `workspace.roc` and indicates that it's a `Class.Model`.
 
-   <img src="../assets/studio/script-editor/Autocomplete-Data-Model.png" width="780" alt="Autocomplete showing suggestions based on the experience's data model" />
+   <img src="../assets/studio/script-editor/Autocomplete-Data-Model.png" width="780" alt="Autocomplete showing suggestions based on the game's data model" />
 
    <Alert severity="info">
    Use the <kbd>↑</kbd> and <kbd>↓</kbd> keys to browse the suggestions, then press <kbd>Tab</kbd> or <kbd>Enter</kbd> to accept a suggestion and insert the complete phrase.
@@ -70,7 +70,7 @@ The **Find/Replace** widget lets you find and replace code in an open script. Th
 <img src="../assets/studio/script-editor/Find-Replace-Widget-Labeled.png" width="760" alt="Find/Replace widget labeled"/>
 
 <Alert severity="info">
-For broader searches, the **Find All / Replace All** window lets you find/replace code across multiple scripts in the experience. To open it, press <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd> on Windows or <kbd>⌘</kbd><kbd>Shift</kbd><kbd>F</kbd> on Mac.
+For broader searches, the **Find All / Replace All** window lets you find/replace code across multiple scripts in the game. To open it, press <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd> on Windows or <kbd>⌘</kbd><kbd>Shift</kbd><kbd>F</kbd> on Mac.
 </Alert>
 
 ## Real-time feedback

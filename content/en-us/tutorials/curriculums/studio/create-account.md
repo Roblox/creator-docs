@@ -7,7 +7,7 @@ prev: /tutorials/curriculums/studio/
 
 Welcome to creating on Roblox! Whether you came to this tutorial as a player, a developer from another engine, or as someone who is brand new to development, the platform has a spot for you to create anything that you can imagine.
 
-Before you start learning about the Roblox engine, it's important to first create a Roblox account. This process is free and it allows you to access the Roblox app to play experiences, as well as Roblox Studio to build experiences.
+Before you start learning about the Roblox engine, it's important to first create a Roblox account. This process is free and it allows you to access the Roblox app to play games, as well as Roblox Studio to build games.
 
 To create a Roblox account:
 

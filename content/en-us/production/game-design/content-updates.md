@@ -7,9 +7,9 @@ description: Content updates
 
 <br />
 
-A **content cadence** is the regular release of new content updates that can include items, quests, playable maps, and other content in an experience. It's a part of **live operations** (LiveOps), the ongoing support of a live experience, which also includes experience expansions, bug fixes, and quality of life updates.
+A **content cadence** is the regular release of new content updates that can include items, quests, playable maps, and other content in a game. It's a part of **live operations** (LiveOps), the ongoing support of a live game, which also includes game expansions, bug fixes, and quality of life updates.
 
-Content releases keep players engaged between larger updates and can be an essential element of a live experience's monetization strategy. Maintaining a content cadence requires developers to:
+Content releases keep players engaged between larger updates and can be an essential element of a live game's monetization strategy. Maintaining a content cadence requires developers to:
 
 - Choose correct content
 - Manage scope
@@ -41,13 +41,13 @@ Many of these examples are predominantly art-based, requiring little to no progr
   </figure>
 </GridContainer>
 
-These examples only work in experiences with systems in place to support simple variations. Adding new systems to an experience to support new deliverables turns the content into an expansion, which would be unsustainable for the creation of a content cadence.
+These examples only work in games with systems in place to support simple variations. Adding new systems to a game to support new deliverables turns the content into an expansion, which would be unsustainable for the creation of a content cadence.
 
 Cadenced content should consist of items and experiences that players regularly want. Tracking player behavior through analytics and gathering player feedback can provide valuable insight into the highest-value content to target.
 
 <h4>Themed Content</h4>
 
-Ideally, there are multiple systems in an experience from which cadenced content can be produced. Building releases around a theme can help to unlock creativity and generate ideas for assets that fit together conceptually and aesthetically, like with _Adopt Me!_ themed updates.
+Ideally, there are multiple systems in a game from which cadenced content can be produced. Building releases around a theme can help to unlock creativity and generate ideas for assets that fit together conceptually and aesthetically, like with _Adopt Me!_ themed updates.
 
 <figure>
     <img src="../../assets/game-design/content-update/content-update1.jpg" width="50%"/>
@@ -81,7 +81,7 @@ Establishing a routine release cadence encourages players to check back often so
 
 A regular release cadence also creates a beneficial routine for developers. Releasing on a schedule requires planning, coordination and communication between team members. With practice, developers can become more efficient at designing and releasing updates while maintaining a healthy work-life balance.
 
-Determining the appropriate frequency of releases for an experience must take into account factors such as the capabilities and availability of the developers, the scope of the planned releases, and player sentiment. In order to maintain player engagement between expansions, many experiences release content cadence updates every two weeks to one month.
+Determining the appropriate frequency of releases for a game must take into account factors such as the capabilities and availability of the developers, the scope of the planned releases, and player sentiment. In order to maintain player engagement between expansions, many games release content cadence updates every two weeks to one month.
 
 ## Prioritize sustainability
 
@@ -95,7 +95,7 @@ Because content requires time and effort to produce, it's imperative to produce 
 
 ### Progression
 
-Experiences with progression, such as player levels or gated map zones, can use their content cadence to add more permanent content at the end of the progression, where seasoned players are starting to run out of objectives. Those high-level players will appreciate the fresh content that they can play immediately, while newer players will have more content to look forward to reaching in the future.
+Games with progression, such as player levels or gated map zones, can use their content cadence to add more permanent content at the end of the progression, where seasoned players are starting to run out of objectives. Those high-level players will appreciate the fresh content that they can play immediately, while newer players will have more content to look forward to reaching in the future.
 
 ### Limited time content
 
@@ -103,7 +103,7 @@ Limited-time content is content which is available to all players but only for t
 
 ### Season passes
 
-A **season pass** system, also known as a battle pass, is a combination of limited-time event and progression system in which players must complete a series of quest objectives to earn item rewards. Season passes can be adapted to most experiences, offering developers a straightforward framework for designing cadence releases.
+A **season pass** system, also known as a battle pass, is a combination of limited-time event and progression system in which players must complete a series of quest objectives to earn item rewards. Season passes can be adapted to most games, offering developers a straightforward framework for designing cadence releases.
 
 <figure>
     <img src="../../assets/game-design/content-update/content-update6.png" width="50%"/>

@@ -10,7 +10,7 @@ To support transfers in your game, call `Class.MarketplaceService.PromptRobuxTra
 Robux your game earns from transfers is **eligible for the DevEx program**. Roblox does not take a fee from these transfers.
 
 <Alert severity="info">
-When setting up transfers in your experience, the amount must be between 10 and 500 Robux per transaction.
+When setting up transfers in your game, the amount must be between 10 and 500 Robux per transaction.
 </Alert>
 
 <img src="../../assets/monetization/roblox-plus/TransferRobuxPrompt.png" width="60%" />

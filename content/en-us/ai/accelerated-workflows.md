@@ -387,7 +387,7 @@ Open **File → Beta Features** and turn on the features you want. Features that
               num: '3',
               title: 'Build your first game',
               subtitle: 'Learn core concepts and build an obby with the Assistant.',
-              detail: 'Our [core curriculum](../tutorials/curriculums/core/) teaches you the basics of building, scripting, and polishing an obby game using the Assistant as your trusted companion.'
+              detail: 'Our [core curriculum](../tutorials/curriculums/core/index.md) teaches you the basics of building, scripting, and polishing an obby game using the Assistant as your trusted companion.'
             },
             {
               num: '4',
@@ -550,7 +550,7 @@ Open **File → Beta Features** and turn on the features you want. Features that
       cards: [
         {
           title: 'Safety best practices',
-          description: 'Generative AI accelerates creation, but you are responsible for the content generated within your experiences. Follow these guidelines to stay compliant with Roblox Community Standards.',
+          description: 'Generative AI accelerates creation, but you are responsible for the content generated within your games. Follow these guidelines to stay compliant with Roblox Community Standards.',
           href: '/generative-AI'
         },
         {

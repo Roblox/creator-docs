@@ -6,7 +6,7 @@ prev: /resources/the-mystery-of-duvall-drive/stream-in-immersion
 description: Explains the environmental design concepts used in The Mystery of Duvall Drive.
 ---
 
-Creating movement in any environment within an experience helps it to instantly feel more immersive and realistic to our world, whether that's from ambient tree movement, reactive doors from player interaction, or even boxes that move when they bump into them. Studio has many unique methods to create motion in order to help worlds feel more alive, including a physics system, `Class.TweenService`, and animations, and analyzing your experience's specific needs can help you determine which one to use. In this section, we'll demonstrate how we determined what type of movement we wanted to create in Studio, and what tools we used to accomplish these distinct goals.
+Creating movement in any environment within a game helps it to instantly feel more immersive and realistic to our world, whether that's from ambient tree movement, reactive doors from player interaction, or even boxes that move when they bump into them. Studio has many unique methods to create motion in order to help worlds feel more alive, including a physics system, `Class.TweenService`, and animations, and analyzing your game's specific needs can help you determine which one to use. In this section, we'll demonstrate how we determined what type of movement we wanted to create in Studio, and what tools we used to accomplish these distinct goals.
 
 <img src="../../assets/resources/mystery-of-duvall-drive/streaming-in-immersion/perspective-house.png" width="100%" />
 
@@ -52,7 +52,7 @@ Since each cloud mesh needed to be massive to fully surround the house and conve
 
 <img src="../../assets/resources/mystery-of-duvall-drive/developing-a-moving-world/cloud-texture-on-parts.png" width="60%" />
 
-Unlike particle emitters or beams, meshes allowed us to be able to bounce light off of each mesh, which was important when we wanted to implement cloud-to-cloud lightning. We also modeled in the twisting so that lighting bouncing off of it would look like it had depth! This was important especially in situations where the performance demands of the experience dropped the quality levels of our surface appearance objects.
+Unlike particle emitters or beams, meshes allowed us to be able to bounce light off of each mesh, which was important when we wanted to implement cloud-to-cloud lightning. We also modeled in the twisting so that lighting bouncing off of it would look like it had depth! This was important especially in situations where the performance demands of the game dropped the quality levels of our surface appearance objects.
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/developing-a-moving-world/cloud-shading.png" width="60%" />
@@ -219,17 +219,17 @@ The hero lightning strikes are supported by a particle system that suggests dist
 
 After we had the clouds and the lightning working the way we wanted it to, we then needed to add two other major components of a storm: the wind and the rain! These elements presented a few challenges, including needing to work within Studio's current limitations of our physics and special effects systems. For example, making trees move with actual wind isn't possible in today's engine, so we utilized [particle emitter](../../effects/particle-emitters.md) effects and [custom character animations](../../animation/editor.md#create-an-animation) for the trees.
 
-We knew to really sell the effect of the wind and rain, we needed the trees themselves to move. There are a few ways you can do this within the engine, including moving parts using [plugins](../../studio/plugins.md) that are publicly available, using `Class.TweenService`, or animating models directly. For our purposes, animations gave us the ability to control the motion we wanted out of our trees, and it allowed us to use a single animation we could share among all trees within the experience.
+We knew to really sell the effect of the wind and rain, we needed the trees themselves to move. There are a few ways you can do this within the engine, including moving parts using [plugins](../../studio/plugins.md) that are publicly available, using `Class.TweenService`, or animating models directly. For our purposes, animations gave us the ability to control the motion we wanted out of our trees, and it allowed us to use a single animation we could share among all trees within the game.
 
 <Alert severity="warning">
-There are pros and cons with any of these systems, and one of the cons for animations specifically skinned meshes are not currently instanced. This means that the more skinned meshes you use in your experience, the greater the impact on performance because of the memory cost, so we used them sparingly for the effect we wanted. At some point this will be resolved, so be sure to check the [rigging and skinning documentation](../../art/modeling/rigging.md) for the most up-to-date information.
+There are pros and cons with any of these systems, and one of the cons for animations specifically skinned meshes are not currently instanced. This means that the more skinned meshes you use in your game, the greater the impact on performance because of the memory cost, so we used them sparingly for the effect we wanted. At some point this will be resolved, so be sure to check the [rigging and skinning documentation](../../art/modeling/rigging.md) for the most up-to-date information.
 </Alert>
 
-We started by skinning several trees from the [Endorse Model Pack - Forest Assets](https://www.roblox.com/library/6432306802/Forest-Pack). Since these trees already existed, and our experience took place in the Pacific Northwest, it saved us some time early on from having to create each tree model.
+We started by skinning several trees from the [Endorse Model Pack - Forest Assets](https://www.roblox.com/library/6432306802/Forest-Pack). Since these trees already existed, and our game took place in the Pacific Northwest, it saved us some time early on from having to create each tree model.
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/developing-a-moving-world/forest-pack.png" width="60%" />
-  <figcaption>The Forest pack contains several tree types, which can save you time in your own experiences.</figcaption>
+  <figcaption>The Forest pack contains several tree types, which can save you time in your own games.</figcaption>
 </figure>
 
 After we picked our trees, we knew we needed to skin them. [Skinning a mesh](../../art/modeling/rigging.md) is the act of adding joints (or bones) to a mesh in another 3D modeling application, such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview), then applying influence to those joints/bones to move the mesh. This is most commonly used in [humanoid characters](../../art/modeling/skin-a-humanoid-model.md), but with [custom characters](../../art/modeling/skin-a-simple-mesh.md), you can skin pretty much anything.
@@ -262,14 +262,14 @@ To do this, we took the Beechwood tree from that Forest Pack and built a similar
   <figcaption>The Beechwood tree has the same exact naming for its joints, just not the same amount. This is fine since the animation system will only apply animation to those specific joints that match the name in it! For this reason, we could apply the same animations to anything that matched the joint names!</figcaption>
 </figure>
 
-After we [rig and skin](../../art/modeling/rigging.md) the Beechwood tree, we could then import it and apply the exact same animation. This meant iterating and editing only needed to be done on one file, and it also saved on performance with fewer animations when running the experience.
+After we [rig and skin](../../art/modeling/rigging.md) the Beechwood tree, we could then import it and apply the exact same animation. This meant iterating and editing only needed to be done on one file, and it also saved on performance with fewer animations when running the game.
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/developing-a-moving-world/redwood-tree-animation.png" width="80%" />
   <figcaption>Using the **Animation Editor**, we could apply the same Redwood tree animation to the Beechwood tree!</figcaption>
 </figure>
 
-Once we had all the tree types we wanted animated, we made each into [packages](../../projects/assets/packages.md) so we could continue to edit and update while playing several of the animations around the main area of the experience. Since we knew they had a performance cost, we used them sparingly around the house where the effect was most valuable! In the future as this becomes more performant, you'll be able to add more and more skinned mesh instances!
+Once we had all the tree types we wanted animated, we made each into [packages](../../projects/assets/packages.md) so we could continue to edit and update while playing several of the animations around the main area of the game. Since we knew they had a performance cost, we used them sparingly around the house where the effect was most valuable! In the future as this becomes more performant, you'll be able to add more and more skinned mesh instances!
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/developing-a-moving-world/animated-trees.png" width="80%" />
@@ -285,7 +285,7 @@ We wanted the rain to appear heavy, and for the fog and debris to blow through t
   <figcaption>We used several volumes to both get the amount of rain, and the specific coverage of rain that we wanted.</figcaption>
 </figure>
 
-The rain particles leveraged a new particle emitter property `Class.ParticleEmitter.Squash` that allows you to make a particle longer, or squatter. It is particularly useful for rain because it meant we didn't need a large rain texture, just stretch the one that was there. Just know that if you increase the value of `Class.ParticleEmitter.Squash`, you may need to increase the overall `Class.ParticleEmitter.Size` property too so that it's not too skinny! Overall, it was just a matter of playing around with the values until we got the rain heavy enough, but not so much that it blocked the visibility of the experience!
+The rain particles leveraged a new particle emitter property `Class.ParticleEmitter.Squash` that allows you to make a particle longer, or squatter. It is particularly useful for rain because it meant we didn't need a large rain texture, just stretch the one that was there. Just know that if you increase the value of `Class.ParticleEmitter.Squash`, you may need to increase the overall `Class.ParticleEmitter.Size` property too so that it's not too skinny! Overall, it was just a matter of playing around with the values until we got the rain heavy enough, but not so much that it blocked the visibility of the game!
 
 <GridContainer numColumns="2">
   <figure>
@@ -504,7 +504,7 @@ Once we had the false wall moving to the back of the room, we needed the rest of
 
 ## Make the corrupted treehouse
 
-Studio is a fantastic physically-based engine that you can use to create everything from a swinging gate to a spinning platform. With our demo, we wanted to use physics to create a sense of realism in an otherwise unrealistic set of environments. Using just a few **constraints**, you can create some fun and challenging obstacle courses within your own experiences!
+Studio is a fantastic physically-based engine that you can use to create everything from a swinging gate to a spinning platform. With our demo, we wanted to use physics to create a sense of realism in an otherwise unrealistic set of environments. Using just a few **constraints**, you can create some fun and challenging obstacle courses within your own games!
 
 <img src="../../assets/resources/mystery-of-duvall-drive/developing-a-moving-world/obstacle-course.png" width="80%" />
 

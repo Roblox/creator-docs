@@ -7,7 +7,7 @@ description: Learn Roblox Studio camera controls and the basics of editing parti
 
 While testing, you may have noticed that the magic blasts are a bit bland. The white sparks you see right now are just a starting point; you'll make them much cooler by customizing a `Class.ParticleEmitter` object.
 
-Particle emitters make special effects in Roblox Studio. If you've seen effects like smoke, fire, or even magic portals in other Roblox experiences, you've definitely seen `Class.ParticleEmitter|ParticleEmitters`.
+Particle emitters make special effects in Roblox Studio. If you've seen effects like smoke, fire, or even magic portals in other Roblox games, you've definitely seen `Class.ParticleEmitter|ParticleEmitters`.
 
 <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/particle-example.mp4" width="100%"></video>
 

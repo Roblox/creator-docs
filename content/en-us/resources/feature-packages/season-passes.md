@@ -4,7 +4,7 @@ description: Learn about the season passes feature package.
 ---
 
 <Alert severity="warning">
-This feature package is in beta and requires custom configuration for the unique needs of your experiences. Because of this, make sure to test the balance and functionality of your season pass before publishing to your audience.
+This feature package is in beta and requires custom configuration for the unique needs of your games. Because of this, make sure to test the balance and functionality of your season pass before publishing to your audience.
 </Alert>
 
 The **Season Passes** feature package offers out-of-the-box functionality to create limited-time, quest-based progression systems in which players can complete quest objectives to earn rewards that are only available during a pre-defined period of time. Using the package's customization options, you can personalize all season passes to deliver new content to your audience, promote player retention, and generate revenue.
@@ -13,11 +13,11 @@ The **Season Passes** feature package offers out-of-the-box functionality to cre
 
 ## Get package
 
-The **Creator Store** is a tab of the **Toolbox** that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add one or more assets directly into an open experience, including feature packages!
+The **Creator Store** is a tab of the **Toolbox** that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add one or more assets directly into an open game, including feature packages!
 
 Every feature package requires the **Core** feature package to function properly, and the **Season Passes** package requires the **Missions** feature package to define a season's missions. Once all three package assets are within your inventory, you can reuse them in any project on the platform.
 
-To get the packages from your inventory into your experience:
+To get the packages from your inventory into your game:
 
 1. Add the **Core**, **Missions**, and **Season Passes** packages to your inventory within Studio by clicking the **Add to Inventory** link in the following set of components.
 
@@ -29,7 +29,7 @@ To get the packages from your inventory into your experience:
     </Grid>
     <Grid item container xs={12} sm={4} direction='row'>
     <Grid item container direction='column'>
-	<BrowseSampleCard href='https://create.roblox.com/store/asset/89760436366160' description='The Missions Feature Package offers functionality to create missions that players can complete to achieve rewards and progress in your experience.' title='Missions Feature Package' assetId={89760436366160}  />
+	<BrowseSampleCard href='https://create.roblox.com/store/asset/89760436366160' description='The Missions Feature Package offers functionality to create missions that players can complete to achieve rewards and progress in your game.' title='Missions Feature Package' assetId={89760436366160}  />
     </Grid>
     </Grid>
     <Grid item container xs={12} sm={4} direction='row'>
@@ -52,7 +52,7 @@ To get the packages from your inventory into your experience:
 
 ## Configure mission dependencies
 
-For seasons to function properly, you must add logic so that the **Season Passes** feature package can track player progress and update its UI components. For simplicity, the example below uses the **Missions** feature package and calls `SeasonPasses.addProgressToSeason()` after players complete missions, but you can track player progress however you'd like. Whether you define missions or not, though, you must still add the **Missions** feature package to your experience for the **Season Passes** code to function.
+For seasons to function properly, you must add logic so that the **Season Passes** feature package can track player progress and update its UI components. For simplicity, the example below uses the **Missions** feature package and calls `SeasonPasses.addProgressToSeason()` after players complete missions, but you can track player progress however you'd like. Whether you define missions or not, though, you must still add the **Missions** feature package to your game for the **Season Passes** code to function.
 
 Missions each have a set of tasks that must be finished to complete the mission, configuration options, and optional display metadata. For an in-depth guide on how to configure missions and their tasks, see [Define missions](missions.md#define-missions).
 
@@ -133,7 +133,7 @@ For example, the following code sample defines a pass with an example asset ID o
 ```
 
 <Alert severity="info">
-To test the purchasing of the premium pass, as well as how the purchasing effects the season, you need to publish the experience to Roblox and test in the client. Studio does not mock pass purchasing.
+To test the purchasing of the premium pass, as well as how the purchasing effects the season, you need to publish the game to Roblox and test in the client. Studio does not mock pass purchasing.
 </Alert>
 
 ### Configure tiers and rewards
@@ -220,7 +220,7 @@ Constants for the **Core** feature package live in two spots:
 
 - Shared constants live in `ReplicatedStorage.FeaturePackagesCore.Configs.SharedConstants`.
 - Package-specific constants, in this case the **Season Passes** feature package, live in `ReplicatedStorage.SeasonPasses.Configs.Constants`.
-The main things you might want to adjust to meet the design requirements of your experience:
+The main things you might want to adjust to meet the design requirements of your game:
 - Sound asset IDs
 - Purchase effect duration and particle colors
 Additionally, you can find strings for translation broken out into one location: `ReplicatedStorage.FeaturePackagesCore.Configs.TranslationStrings`.

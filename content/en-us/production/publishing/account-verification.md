@@ -69,9 +69,9 @@ To verify your account with your phone number:
 
 ## Check verification status by script
 
-Within a `Class.Script`, the `Class.Player:IsVerified()` method lets you check the verification status of users accessing your experiences, allowing you to limit access to specific content, ranked queues, or even the experience itself. Because users that verify their accounts connect their Roblox identity to their real-world identity, it's much less likely they will cheat, spam, or otherwise risk being blocked from your experience, making this method especially useful for competitive and ranked experiences.
+Within a `Class.Script`, the `Class.Player:IsVerified()` method lets you check the verification status of users accessing your games, allowing you to limit access to specific content, ranked queues, or even the game itself. Because users that verify their accounts connect their Roblox identity to their real-world identity, it's much less likely they will cheat, spam, or otherwise risk being blocked from your game, making this method especially useful for competitive and ranked games.
 
-The following script checks the verification status of each player as they join the experience. If they have verified their account, the console prints `true`.
+The following script checks the verification status of each player as they join the game. If they have verified their account, the console prints `true`.
 
 ```lua
 local Players = game:GetService("Players")

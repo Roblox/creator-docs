@@ -16,7 +16,7 @@ In this tutorial, a different pattern will be used to create a number of health 
 
 First up, you'll need a part or a model to use as a pickup. The [Showdown Town example world](https://www.roblox.com/games/6407123421/Showdown-Town-Health-Pickups) includes plenty of health pickups spread all over the map.
 
-<img src="../../../../assets/tutorials/creating-a-health-pickup/Showdown-Town-Edit-Place.png" width="780" alt="Edit in Studio option from the experience's main page" />
+<img src="../../../../assets/tutorials/creating-a-health-pickup/Showdown-Town-Edit-Place.png" width="780" alt="Edit in Studio option from the game's main page" />
 
 Each health pickup is a Union of two rectangular parts with a green PointLight inside. They're all stored in one folder in the Workspace called **HealthPickups**, which is where the script will look for them. If you add any more to the map, it's essential you ensure that they are also stored in this folder.
 
@@ -64,7 +64,7 @@ The code here calls `Class.Instance:FindFirstChildWhichIsA()|FindFirstChildWhich
 
 ## Get the pickups folder
 
-The folder holding the health pickups may not have loaded into the experience by the time the script runs. `WaitForChild` can be used to pause the script and get the HealthPickups folder when it loads.
+The folder holding the health pickups may not have loaded into the game by the time the script runs. `WaitForChild` can be used to pause the script and get the HealthPickups folder when it loads.
 
 When called on a folder, the `GetChildren` function will return an array of the folder's contents.
 

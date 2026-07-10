@@ -1,13 +1,13 @@
 ---
 title: Start learning with tutorials
-description: Learn how to create Roblox experiences, avatars, and avatar items with use case tutorials, curriculum paths, and videos.
+description: Learn how to create Roblox games, avatars, and avatar items with use case tutorials, curriculum paths, and videos.
 hideInPageNavigation: true
 ---
 
 Roblox offers both short and long-form tutorials to help you learn various creation processes and techniques for the platform. There are three common areas of creation:
 
-- **Experiences** - 3D worlds that you can create and publish using Roblox Studio.
-- **Avatars** - Character models with many specialized features that allow players to interact with experiences and express themselves.
+- **Games** - 3D worlds that you can create and publish using Roblox Studio.
+- **Avatars** - Character models with many specialized features that allow players to interact with games and express themselves.
 - **Avatar items** - Clothing and accessories that players can use to customize their avatars.
 
 While many creators focus on a single area, the following tutorials walk you through the fundamentals of each process.
@@ -21,8 +21,8 @@ While many creators focus on a single area, the following tutorials walk you thr
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
    <img src="../assets/landing/core-experience.png" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
    </div>
-   <Typography variant='h4'>Create your first experience</Typography>
-   <Typography variant='body1'>Learn about important concepts for developing on Roblox by recreating a simple 3D platformer experience where players collect coins to trade for jump power.</Typography>
+   <Typography variant='h4'>Create your first game</Typography>
+   <Typography variant='body1'>Learn about important concepts for developing on Roblox by recreating a simple 3D platformer game where players collect coins to trade for jump power.</Typography>
    <div style={{marginTop:16}}>
      <a underline="none" href="./first-experience/index.md">
      <Button variant="contained" color="secondary" size='large'
@@ -75,7 +75,7 @@ While many creators focus on a single area, the following tutorials walk you thr
 
 <h2 style={{marginBottom: 24, marginTop: 96}}>Use case tutorials</h2>
 
-**Use case tutorials** focus on a specific task that you can complete in order to learn about various aspects of developing in Studio. In addition to teaching you how to use collections of related features to recreate common components for experiences, this short-form type of structured learning highlights techniques you can use to achieve effects for a variety of design requirements.
+**Use case tutorials** focus on a specific task that you can complete in order to learn about various aspects of developing in Studio. In addition to teaching you how to use collections of related features to recreate common components for games, this short-form type of structured learning highlights techniques you can use to achieve effects for a variety of design requirements.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
@@ -148,7 +148,7 @@ While many creators focus on a single area, the following tutorials walk you thr
    <Typography variant='body1' >
      <ul>
 		 <li>Learn how to combine UI objects with scripts to create a [custom health meter](./use-case-tutorials/ui/create-hud-meters.md)</li>
-		 <li>Learn how to make [interactive UI objects](./use-case-tutorials/ui/interactive-ui.md) hooked to in‑experience behavior and state transitions</li>
+		 <li>Learn how to make [interactive UI objects](./use-case-tutorials/ui/interactive-ui.md) hooked to in‑game behavior and state transitions</li>
      <li>Learn how to create [interactive prompts](./use-case-tutorials/ui/proximity-prompts.md) that only appear as players approach 3D objects</li>
      </ul></Typography>
      <div style={{marginTop:16}}>
@@ -223,7 +223,7 @@ While many creators focus on a single area, the following tutorials walk you thr
    <Typography variant='body1' >
      <ul>
      <li>Learn how to create a <a href="./use-case-tutorials/input-and-camera/control-the-users-camera.md#create-a-first-person-camera">first-person camera</a>, <a href="./use-case-tutorials/input-and-camera/control-the-users-camera.md#create-a-side-scrolling-camera">side-scrolling camera</a>, or <a href="./use-case-tutorials/input-and-camera/control-the-users-camera.md#create-an-isometric-camera">isometric camera</a> to suit your specific gameplay</li>
-     <li>Learn how to <a href="./use-case-tutorials/input-and-camera/detect-user-input.md">detect user input</a> to trigger unique actions in your experiences</li>
+     <li>Learn how to <a href="./use-case-tutorials/input-and-camera/detect-user-input.md">detect user input</a> to trigger unique actions in your games</li>
      </ul></Typography>
      <div style={{marginTop:16}}>
      </div>
@@ -233,7 +233,7 @@ While many creators focus on a single area, the following tutorials walk you thr
 
 <h2 style={{marginBottom: 24}}>Curriculum paths</h2>
 
-**Curriculum paths** provide a comprehensive overview of the various skills you need for different development areas after you familiarize yourself with Studio's core functionality. In addition to demonstrating how to use Studio features for each creative discipline, this long-form type of structured learning shows you how to examine and solve common design problems within your own experiences.
+**Curriculum paths** provide a comprehensive overview of the various skills you need for different development areas after you familiarize yourself with Studio's core functionality. In addition to demonstrating how to use Studio features for each creative discipline, this long-form type of structured learning shows you how to examine and solve common design problems within your own games.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
@@ -244,7 +244,7 @@ While many creators focus on a single area, the following tutorials walk you thr
  <iframe src="https://www.youtube-nocookie.com/embed/nwShvDmFHWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
  </div>
    <Typography variant='h4'>Environmental art</Typography>
-   <Typography variant='body1' >Learn how to recreate a high-quality environment for a first-person laser tag experience.</Typography>
+   <Typography variant='body1' >Learn how to recreate a high-quality environment for a first-person laser tag game.</Typography>
      <div style={{marginTop:16}}>
        <a underline="none" href="./curriculums/environmental-art/index.md">
        <Button variant="contained" color="secondary" size='large'

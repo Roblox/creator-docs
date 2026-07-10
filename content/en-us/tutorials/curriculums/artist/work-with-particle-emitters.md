@@ -1,11 +1,11 @@
 ---
 title: Work with particle emitters
-description: Explains how to work with particle emitters to create special effects for a carnival experience.
+description: Explains how to work with particle emitters to create special effects for a carnival game.
 next: /tutorials/curriculums/artist/test-and-save
 prev: /tutorials/curriculums/artist/get-started
 ---
 
-**Particle emitters** create special effects by emitting 2D images, also referred to as particles, into the 3D world. By customizing how particles look and behave as they emit into the environment, you can create visual art that makes your experiences feel unique and captivating to potential players.
+**Particle emitters** create special effects by emitting 2D images, also referred to as particles, into the 3D world. By customizing how particles look and behave as they emit into the environment, you can create visual art that makes your games feel unique and captivating to potential players.
 
 To demonstrate, check out the **Mansion of Wonder** template uses the following three images to create VFX art in different areas of the carnival ride:
 
@@ -213,7 +213,7 @@ To set the explosion particles to a new speed:
 
    <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/make-final-touches/change-speed.png" width="40%" />
 
-1. Using your learnings from the previous chapter, playtest the experience to see your particles in action. If anything doesn't look right, you can go back and make changes to your design.
+1. Using your learnings from the previous chapter, playtest the game to see your particles in action. If anything doesn't look right, you can go back and make changes to your design.
 
    <video controls src="../../../assets/education/build-it-play-it-mansion-of-wonder/make-final-touches/explosion-final.mp4" width="80%"></video>
 

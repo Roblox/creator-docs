@@ -1,11 +1,11 @@
 ---
 title: Memory usage
-description: Use Memory and Luau Heap tools within the Developer Console to monitor the memory usage of your experience.
+description: Use Memory and Luau Heap tools within the Developer Console to monitor the memory usage of your game.
 ---
 
 import OpeningSteps from '../../includes/developer-console/opening-developer-console.md'
 
-Every building and scripting component that you add to your experience consumes memory. When memory usage reaches engine limits, the user's device or server may crash, so you need to actively monitor usage.
+Every building and scripting component that you add to your game consumes memory. When memory usage reaches engine limits, the user's device or server may crash, so you need to actively monitor usage.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/x1JgsC8c8VQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe><br />
 
@@ -32,7 +32,7 @@ To view memory allocation:
 1. Browse the memory usage categories and items. If you want to see usage over time, expand the category to display a chart.
 
    - **CoreMemory** — Memory usage by the core building processes of the engine, including networking, avatars, and GUI elements that you don't have direct control over.
-   - **PlaceMemory** — Memory usage based on how you build your experience, including models, terrain, parts, scripts, and all other custom elements that you add to your experience.
+   - **PlaceMemory** — Memory usage based on how you build your game, including models, terrain, parts, scripts, and all other custom elements that you add to your game.
 
      <BaseAccordion>
      <AccordionSummary>

@@ -1,21 +1,21 @@
 ---
 title: Surface Art
-description: The Surface Art module lets players literally leave their mark in an experience.
+description: The Surface Art module lets players literally leave their mark in a game.
 ---
 
-Players often enjoy feeling like they're a part of constructing the space they're in. The **SurfaceArt** [developer module](../../resources/modules/index.md) lets players literally leave their mark in an experience.
+Players often enjoy feeling like they're a part of constructing the space they're in. The **SurfaceArt** [developer module](../../resources/modules/index.md) lets players literally leave their mark in a game.
 
 <video src="../../assets/developer-modules/surface-art/Showcase.mp4" controls width="100%"></video>
 
 <Alert severity="warning">
-By default, a player can place 2 pieces of art across all of the tagged surfaces in the workspace. All of a player's art will be removed when they leave the experience.
+By default, a player can place 2 pieces of art across all of the tagged surfaces in the workspace. All of a player's art will be removed when they leave the game.
 </Alert>
 
 ## Module Usage
 
 ### Installation
 
-To use the **SurfaceArt** module in an experience:
+To use the **SurfaceArt** module in a game:
 
 1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
@@ -31,7 +31,7 @@ To use the **SurfaceArt** module in an experience:
 
    <img src="../../assets/developer-modules/surface-art/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **SurfaceArt** model into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **SurfaceArt** model into `Class.ReplicatedStorage`. Upon running the game the module will begin running.
 
 ### Positioning the Canvas
 
@@ -105,7 +105,7 @@ Under the hood, the module uses a `Class.SurfaceGui` to display art items. To co
 Currently, the surface art module only supports using the same set of assets for all tagged canvases.
 </Alert>
 
-To better fit the theme of your experience, you may use your own set of custom assets instead of the defaults. This can be done via the [configure](#configure) function, called from a `Class.Script` in **ServerScriptService**.
+To better fit the theme of your game, you may use your own set of custom assets instead of the defaults. This can be done via the [configure](#configure) function, called from a `Class.Script` in **ServerScriptService**.
 
 ```lua title="Script" highlight="5-14, 16-18"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")

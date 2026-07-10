@@ -10,6 +10,8 @@ navigation:
         section:
           - title: U.S. 18+ exchange rate
             path: /production/monetization/18-plus-devex-rate
+          - title: DevEx Portal
+            path: /production/monetization/devex-portal
       - title: Creator Rewards
         path: /creator-rewards
       - title: Roblox Plus

@@ -108,7 +108,9 @@ properties:
     summary: |
       The sales type filter the search by.
     description: |
-      The sales type the search by, represented by a `Enum.SalesTypeFilter`.
+      The sales type to filter the search by, represented by a
+      `Enum.SalesTypeFilter`. Use `Enum.SalesTypeFilter.TimedOptions` to return
+      only items that have timed options available.
     default: Enum.SalesTypeFilter.All
     code_samples: []
     tags: []

@@ -1,11 +1,11 @@
 ---
 title: Video frames
-description: Video assets used on VideoFrame instances allow for video playback in experiences.
+description: Video assets used on VideoFrame instances allow for video playback in games.
 ---
 
 import BetaAlert from '../includes/beta-features/beta-alert.md'
 
-Video assets used in `Class.VideoFrame` instances allow for video playback in experiences. You can [upload](#upload-videos) videos that you're certain you have permission to use, such as videos you make yourself, and the [asset privacy](../projects/assets/privacy.md) system automatically ensures that the IDs of your uploaded videos can't be accessed by users without the proper permissions.
+Video assets used in `Class.VideoFrame` instances allow for video playback in games. You can [upload](#upload-videos) videos that you're certain you have permission to use, such as videos you make yourself, and the [asset privacy](../projects/assets/privacy.md) system automatically ensures that the IDs of your uploaded videos can't be accessed by users without the proper permissions.
 
 ## Upload videos
 
@@ -28,9 +28,9 @@ Videos that don't meet these requirements are rejected. Alpha channels are not s
 
 A `Class.VideoFrame` must be parented to a `Class.ScreenGui`, `Class.SurfaceGui`, or `Class.BillboardGui` in order to be playable. Currently, a maximum of two videos can play simultaneously.
 
-To play a video in your experience without code:
+To play a video in your game without code:
 
-1. Create a `Class.ScreenGui` as outlined in [On-Screen UI Containers](../ui/on-screen-containers.md), or a `Class.SurfaceGui` or `Class.BillboardGui` as outlined in [In-Experience UI Containers](../ui/in-experience-containers.md).
+1. Create a `Class.ScreenGui` as outlined in [On-Screen UI Containers](../ui/on-screen-containers.md), or a `Class.SurfaceGui` or `Class.BillboardGui` as outlined in [In-game UI containers](../ui/in-experience-containers.md).
 2. Insert a video from the [Toolbox](../projects/assets/toolbox.md) or [Asset Manager](../projects/assets/manager.md). A new `Class.VideoFrame` object is inserted for the video.
 3. Parent the `Class.VideoFrame` to the container.
 
@@ -40,7 +40,7 @@ To play a video in your experience without code:
 
    <img src="../assets/studio/properties/VideoFrame-Looped-Playing.png" width="320" />
 
-If you want to play a video in your experience with code, paste the following code into a `Class.Script` within `Class.ServerScriptService` to create a `Class.Part` and play the video on its front surface.
+If you want to play a video in your game with code, paste the following code into a `Class.Script` within `Class.ServerScriptService` to create a `Class.Part` and play the video on its front surface.
 
 ```lua
 local Workspace = game:GetService("Workspace")

@@ -1,6 +1,6 @@
 ---
 title: Customize the camera
-description: Explains how to configure an experience's camera settings.
+description: Explains how to configure a game's camera settings.
 ---
 
 Roblox's built-in camera powers a default **third person** mode and an optional **first person** mode, so you don't need to build your own following camera. For more customized scenarios, you can adjust the default properties in `Class.Camera` or replace it entirely like for over-the-shoulder, isometric, and weapon scoping views.
@@ -95,7 +95,7 @@ The `Class.StarterPlayer.DevComputerCameraMovementMode|DevComputerCameraMovement
 <tbody>
   <tr>
     <td>**UserChoice**</td>
-    <td>The camera will move based on the player's in-experience camera settings.</td>
+    <td>The camera will move based on the player's in-game camera settings.</td>
   </tr>
   <tr>
     <td>**Classic**</td>
@@ -130,7 +130,7 @@ Each player [client](../projects/client-server.md) has its own `Class.Camera` ob
 <tbody>
   <tr>
     <td>`Class.Camera.CFrame`</td>
-    <td>The `Datatype.CFrame` of the camera. This is the most frequently used property for positioning and orienting a `Enum.CameraType|Scriptable` camera in an experience.</td>
+    <td>The `Datatype.CFrame` of the camera. This is the most frequently used property for positioning and orienting a `Enum.CameraType|Scriptable` camera in a game.</td>
   </tr>
   <tr>
     <td>`Class.Camera.FieldOfView`</td>

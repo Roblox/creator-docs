@@ -31,7 +31,7 @@ export const sections = [
       },
       {
         title: "Device emulation and playtesting",
-        description: "Emulate a wide range of screen sizes and form factors to make sure everything looks and feels great before sharing your experience with the world.",
+        description: "Emulate a wide range of screen sizes and form factors to make sure everything looks and feels great before sharing your game with the world.",
         image: "/assets/getting-started/platform-overview/Rapid-Iteration.png",
         links: [
           { text: "Studio testing modes", href: "./studio/testing-modes" }
@@ -49,7 +49,7 @@ export const sections = [
     content: [
       {
         title: "A standard and flexible data model",
-        description: "Data models tell the engine how to render and simulate your experience. Studio can manipulate data models at both edit and runtime, allowing you to create and iterate freely.",
+        description: "Data models tell the engine how to render and simulate your games. Studio can manipulate data models at both edit and runtime, allowing you to create and iterate freely.",
         image: "./assets/landing/datamodel.png",
         links: [
           { text: "Data model", href: "./projects/data-model" }
@@ -77,7 +77,7 @@ export const sections = [
       },
       {
         title: "Generate materials and textures",
-        description: "Bring your experiences to life with custom materials and textures for your 3D objects.",
+        description: "Bring your games to life with custom materials and textures for your 3D objects.",
         image: "./assets/studio/texture-generator/Texture-Applied.jpg",
         links: [
           { text: "Material generator", href: "./studio/material-generator" },
@@ -108,7 +108,7 @@ export const sections = [
       },
       {
         title: "Group-based access",
-        description: "Control access to your creations and control how multiple team members work on the same experiences, use the same assets, and share profits.",
+        description: "Control access to your creations and control how multiple team members work on the same games, use the same assets, and share profits.",
         image: "/assets/landing/groups.jpg",
         links: [{ text: "Groups", href: "./projects/groups" }]
       },

@@ -9,7 +9,7 @@ prev: /tutorials/curriculums/environmental-art/greybox-your-environment
 
 <br/>
 
-**Developing polished assets** is the process of planning and creating high-quality assets to replace or convert the greybox environment and meet your experience's aesthetic goals and design requirements. After you have the basis for how you want to lay out your assets in the 3D space from the greybox process, it's much easier to visualize what assets are necessary to bring your environment to life.
+**Developing polished assets** is the process of planning and creating high-quality assets to replace or convert the greybox environment and meet your game's aesthetic goals and design requirements. After you have the basis for how you want to lay out your assets in the 3D space from the greybox process, it's much easier to visualize what assets are necessary to bring your environment to life.
 
 Using the [Environment Art Asset Library](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library) as a reference, this section of the environmental art curriculum shows you how to prepare what you need to turn your basic greybox layout into a futuristic laser tag environment, including guidance on:
 
@@ -30,11 +30,11 @@ Choosing an art style at the start of your design process allows you to have a m
 
 Many developers choose to create a mood or theme board, then add as many pictures as you need until you feel that you have a visual representation of what you want your world to look like. For example, the final sample laser tag environment's art style references the following images to pull references for the focal elements of the 3D space, such as lush foliage, rounded frames, rectangular concrete forms, and stylistically uniform metal adornments. Although users may never see your reference images, they will feel the impact of their influence in the cohesiveness of your world's identity.
 
-<img src="../../../assets/tutorials/environmental-art-curriculum/Section2/Art-Style.png" alt="A collage of reference images for the sample laser tag experience." width="80%"/>
+<img src="../../../assets/tutorials/environmental-art-curriculum/Section2/Art-Style.png" alt="A collage of reference images for the sample laser tag game." width="80%"/>
 
 ## Design textures
 
-Now that you have an art style for your experience, it's time to review your layout and figure out what textures you need to create materials for the 3D space. Environments often require textures that can cover large surfaces, as well as textures that can provide a level of detail to your assets without adding additional geometry. For example, your greybox environment needs textures that can cover the outdoor space, such as moss, flowers and stones, as well as textures to provide details to the combat pockets, such as panels and bolts to frame doorways.
+Now that you have an art style for your game, it's time to review your layout and figure out what textures you need to create materials for the 3D space. Environments often require textures that can cover large surfaces, as well as textures that can provide a level of detail to your assets without adding additional geometry. For example, your greybox environment needs textures that can cover the outdoor space, such as moss, flowers and stones, as well as textures to provide details to the combat pockets, such as panels and bolts to frame doorways.
 
 There are two high-level texturing methods that you can use to meet these requirements: tileable textures and trim sheets. The following sections provide information and guidance on both texture methods, including what to consider as you find textures on the [Creator Store](../../../production/creator-store.md), or design them in third-party tools.
 
@@ -44,7 +44,7 @@ There are two high-level texturing methods that you can use to meet these requir
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section2/TileableTextures-Part.png" alt="A top-down view of a block part with a tileable moss with flowers material applied." width="100%"/>
 
-The most fundamental rule for tileable textures is that they **cannot have a seam**, otherwise where the texture begins and ends on a surface is noticeable to users, which can break their sense of immersion in the experience. It's for this reason that tileable textures work well for natural materials, such as grass and stone, which are seamless by nature in the real world. In fact, the laser tag sample experience uses the following four organic tileable textures to represent natural materials for the outdoor space, which you can use in the [world building](./construct-your-world.md) section of this tutorial.
+The most fundamental rule for tileable textures is that they **cannot have a seam**, otherwise where the texture begins and ends on a surface is noticeable to users, which can break their sense of immersion in the game. It's for this reason that tileable textures work well for natural materials, such as grass and stone, which are seamless by nature in the real world. In fact, the laser tag sample game uses the following four organic tileable textures to represent natural materials for the outdoor space, which you can use in the [world building](./construct-your-world.md) section of this tutorial.
 
 <GridContainer numColumns="2">
   <figure>
@@ -89,7 +89,7 @@ The previous point is near impossible to remove entirely, but you can set Studio
 
 ### Trim sheets
 
-**Trim sheets** are textures that tile on either the X **or** Y axis, and they allow you to add significantly more visual complexity to your experiences without having to import additional textures, saving you a negative impact on memory. Each row or column of a trim sheet has a unique visual appearance, giving you many different surface treatments to choose from when you're mapping UV data to a mesh. For example, the door frame and ceiling assets in the following two images use different layers of the same trim sheet to add detail work to the space.
+**Trim sheets** are textures that tile on either the X **or** Y axis, and they allow you to add significantly more visual complexity to your game without having to import additional textures, saving you a negative impact on memory. Each row or column of a trim sheet has a unique visual appearance, giving you many different surface treatments to choose from when you're mapping UV data to a mesh. For example, the door frame and ceiling assets in the following two images use different layers of the same trim sheet to add detail work to the space.
 
 <GridContainer numColumns="2">
   <figure>
@@ -110,26 +110,26 @@ Following this fundamental rule, the final sample laser tag environment uses the
     This trim sheet file is only useful for UV unwrapping processes in third-party modeling tools. If you try to upload its texture maps to a `Class.SurfaceAppearance` object without completing a UV unwrapping process, there isn't any data for Studio to map to the texture itself.
 </Alert>
 
-<img src="../../../assets/tutorials/environmental-art-curriculum/Section2/Trimsheet.png" alt="The sample laser tag experience's trim sheet." width="50%"/>
+<img src="../../../assets/tutorials/environmental-art-curriculum/Section2/Trimsheet.png" alt="The sample laser tag game's trim sheet." width="50%"/>
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../../assets/tutorials/environmental-art-curriculum/Section2/TrimSheets-Albedo.png" alt="The sample laser tag experience's trim sheet's albedo texture map." width="100%"/>
+    <img src="../../../assets/tutorials/environmental-art-curriculum/Section2/TrimSheets-Albedo.png" alt="The sample laser tag game's trim sheet's albedo texture map." width="100%"/>
     <figcaption>Albedo</figcaption>
   </figure>
   <figure>
-    <img src="../../../assets/tutorials/environmental-art-curriculum/Section2/TrimSheets-Normal.png" alt="The sample laser tag experience's trim sheet's normal texture map." width="100%"/>
+    <img src="../../../assets/tutorials/environmental-art-curriculum/Section2/TrimSheets-Normal.png" alt="The sample laser tag game's trim sheet's normal texture map." width="100%"/>
     <figcaption>Normal</figcaption>
   </figure>
 </GridContainer>
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../../assets/tutorials/environmental-art-curriculum/Section2/TrimSheets-Roughness.png" alt="The sample laser tag experience's trim sheet's roughness texture map." width="100%"/>
+    <img src="../../../assets/tutorials/environmental-art-curriculum/Section2/TrimSheets-Roughness.png" alt="The sample laser tag game's trim sheet's roughness texture map." width="100%"/>
     <figcaption>Roughness</figcaption>
   </figure>
   <figure>
-    <img src="../../../assets/tutorials/environmental-art-curriculum/Section2/TrimSheets-Metalness.png" alt="The sample laser tag experience's trim sheet's metalness texture map." width="100%"/>
+    <img src="../../../assets/tutorials/environmental-art-curriculum/Section2/TrimSheets-Metalness.png" alt="The sample laser tag game's trim sheet's metalness texture map." width="100%"/>
     <figcaption>Metalness</figcaption>
   </figure>
 </GridContainer>
@@ -145,11 +145,11 @@ For more information on this technique, see [Building architecture - Creating tr
 
 ## Design modular kits
 
-Modular kits are sets of assets that seamlessly snap together to create variations of a larger complex object. Designing and using modular kits as a part of your development process is useful because it means you don't need to manually create each individual asset in your experience. Instead, you only need to create a few assets that you can reuse and customize to create variety throughout the scene.
+Modular kits are sets of assets that seamlessly snap together to create variations of a larger complex object. Designing and using modular kits as a part of your development process is useful because it means you don't need to manually create each individual asset in your game. Instead, you only need to create a few assets that you can reuse and customize to create variety throughout the scene.
 
-Not only does this process significantly speed up how quickly you can replace or convert the greybox environment, but when you UV wrap a trim sheet onto the meshes in your modular kit for detail work, it can also help each distinct object throughout the experience feel cohesive. For example, the final sample laser tag environment utilizes a single **SA_EC_Trim_Metal_A** trimsheet to UV wrap onto all of its modular assets that create the overall building where most of the gameplay takes place, including assets that accommodate a rise in elevation between the first and second floor.
+Not only does this process significantly speed up how quickly you can replace or convert the greybox environment, but when you UV wrap a trim sheet onto the meshes in your modular kit for detail work, it can also help each distinct object throughout the game feel cohesive. For example, the final sample laser tag environment utilizes a single **SA_EC_Trim_Metal_A** trimsheet to UV wrap onto all of its modular assets that create the overall building where most of the gameplay takes place, including assets that accommodate a rise in elevation between the first and second floor.
 
-<img src="../../../assets/tutorials/environmental-art-curriculum/Section2/DesigningModularKits-ModularKit.jpg" alt="The sample laser tag experience's modular kit." width="100%"/>
+<img src="../../../assets/tutorials/environmental-art-curriculum/Section2/DesigningModularKits-ModularKit.jpg" alt="The sample laser tag game's modular kit." width="100%"/>
 
 Each asset in this modular kit has a consistent pivot point location either at the forward-most, lower corner, or in a location that allows them to snap to a logical position on the building in 5 stud increments when you enable grid snapping, such as trim pieces onto walls, or doors into their doorway position. In addition, each asset is at least 5 studs tall and wide, so there is never any clashing geometry, even when you rotate and move the assets. For more information on this concept, see [Assemble modular environments - The importance of consistent pivot point locations](../../use-case-tutorials/modeling/assemble-modular-environments.md#the-importance-of-consistent-pivot-point-locations).
 
@@ -159,7 +159,7 @@ You can use or modify the [sample modular kit](https://www.roblox.com/library/14
 
 - It's of vital importance that modular assets have a consistent pivot location so they can connect together at predetermined, incremental distances relative to one another when you enable grid snapping.
 - Each asset must have a maximum height and width that is divisible by the smallest height and width in the kit so they can move and rotate in incremental distances. For example, the sample kit's tallest and widest asset is 15 by 5 studs, which is divisible by the smallest asset of 5 by 5 studs.
-- It's useful to separate larger assets like hallways into separate meshes under a model with careful naming conventions, such as a hallway `Class.Model` with child **UpperTrim**, **LowerTrim**, and **Wall** `Class.MeshPart` objects. This allows you to customize each mesh of the overall model, such as modifying their individual material, collision, and rendering parameters, or removing unnecessary geometry according to where the model is within the experience.
+- It's useful to separate larger assets like hallways into separate meshes under a model with careful naming conventions, such as a hallway `Class.Model` with child **UpperTrim**, **LowerTrim**, and **Wall** `Class.MeshPart` objects. This allows you to customize each mesh of the overall model, such as modifying their individual material, collision, and rendering parameters, or removing unnecessary geometry according to where the model is within the game.
 
 No matter what modular kit you use, it's important to test often and look at your assets from multiple perspectives to see if there is any clashing geometry. If there is, it often means that one of the asset's pivot point locations isn't relatively consistent with the other.
 
@@ -167,9 +167,9 @@ No matter what modular kit you use, it's important to test often and look at you
 
 Props are non-modular assets that enhance an environment's level of visual storytelling while providing users important context about the world they're in. For example, if users are exploring a cave and see props like glowing orbs and skeletons, they can infer that their environment is both magical and dangerous, so it might be wise to proceed with caution.
 
-Props are most effective when they connect to larger themes in your experience's art style. For example, the final sample laser tag environment utilizes props to provide users context regarding the environment's relationship to technology and nature. In particular, the props kit includes clean, high-tech panels, crates, fire extinguishers, and security cameras alongside large rocks and a variety of plants, informing users that the world values technological advances, but not at the expense of the earth.
+Props are most effective when they connect to larger themes in your game's art style. For example, the final sample laser tag environment utilizes props to provide users context regarding the environment's relationship to technology and nature. In particular, the props kit includes clean, high-tech panels, crates, fire extinguishers, and security cameras alongside large rocks and a variety of plants, informing users that the world values technological advances, but not at the expense of the earth.
 
-<img src="../../../assets/tutorials/environmental-art-curriculum/Section2/DesigningProps-PropsKit.png" alt="The sample laser tag experience's prop kit." width="100%"/>
+<img src="../../../assets/tutorials/environmental-art-curriculum/Section2/DesigningProps-PropsKit.png" alt="The sample laser tag game's prop kit." width="100%"/>
 
 Unlike modular assets, props don't need to have consistent pivot point locations because they don't need to snap together to create a larger complex object. However, they do need to have logical pivot point locations according to where you need to place them in the 3D space. For example, in the following image, the fire extinguisher prop has a pivot point location on the back of the object so it can snap onto walls, and the crate has a pivot point location on the bottom of the object so it can snap onto floors. This allows for universal contextual placement, no matter the respective wall or floor.
 

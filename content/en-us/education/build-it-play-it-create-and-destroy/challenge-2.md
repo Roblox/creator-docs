@@ -7,7 +7,7 @@ prev: /education/build-it-play-it-create-and-destroy/terrain-tools
 
 <img src="../../assets/education/build-it-play-it-create-and-destroy/avatarItemHeroBanners_backpack.png" width="100%" />
 
-Test your knowledge and earn the Godzilla Backpack avatar item and World Builder Badge by clicking the button below to open a Roblox quiz experience.
+Test your knowledge and earn the Godzilla Backpack avatar item and World Builder Badge by clicking the button below to open a Roblox quiz game.
 
 <a href="https://www.roblox.com/games/3204381131/Creator-Challenge-Quiz">
 <Button variant="contained">Play Quiz</Button>

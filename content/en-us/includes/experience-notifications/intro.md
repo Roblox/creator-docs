@@ -2,7 +2,7 @@
 title: include
 ---
 
-**Experience notifications** are a way for [opted-in](https://en.help.roblox.com/hc/en-us/articles/24769602332692-Out-of-Experience-Notifications) users age 13+ to keep up with their favorite experiences through timely, personalized notifications. As the developer, you can determine what kinds of in‑experience activities are most important to notify your users about, as well as define the notification content.
+**Experience notifications** are a way for [opted-in](https://en.help.roblox.com/hc/en-us/articles/24769602332692-Out-of-Experience-Notifications) users age 13+ to keep up with their favorite games through timely, personalized notifications. As the developer, you can determine what kinds of in-game activities are most important to notify your users about, as well as define the notification content.
 
 <Tabs>
 <TabItem label="Async Activity">

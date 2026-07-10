@@ -3,7 +3,7 @@ title: Enhance indoor environments with realistic lighting
 description: Explains how to leverage realistic lighting to enhance indoor environments.
 ---
 
-`Enum.LightingStyle|Realistic` lighting is the most advanced and powerful `Class.Lighting.LightingStyle|LightingStyle` you can use for rendering the 3D environment within your experiences. It offers pixel perfect light emission, detailed shadows, and specular highlights that mimic real-world lighting for both indoor and outdoor spaces.
+`Enum.LightingStyle|Realistic` lighting is the most advanced and powerful `Class.Lighting.LightingStyle|LightingStyle` you can use for rendering the 3D environment within your games. It offers pixel perfect light emission, detailed shadows, and specular highlights that mimic real-world lighting for both indoor and outdoor spaces.
 
 Using the [Lighting Indoors - Start](https://www.roblox.com/games/17561948176/UCT-Lighting-Indoors) `.rbxl` file as a starting place and [Lighting Indoors - Complete](https://www.roblox.com/games/17562253150/UCT-Lighting-Indoors-After) as a reference, this tutorial shows you how to utilize realistic lighting with strategic global and local light source configurations to produce realistic, immersive indoor lighting behavior that navigates players toward the exit of the cabin, including guidance on:
 
@@ -28,13 +28,13 @@ If at any point you become stuck in the process, you can use **Lighting Indoors 
 
 ## Configure global lighting
 
-Global lighting is the luminescence from either the sun or moon in an experience. While this tutorial focuses on enhancing the lighting inside of the cabin that's covered from the sun, it's important to configure global lighting because it impacts the air particles within the general atmosphere of the experience, regardless of whether they are indoors or outdoors.
+Global lighting is the luminescence from either the sun or moon in a game. While this tutorial focuses on enhancing the lighting inside of the cabin that's covered from the sun, it's important to configure global lighting because it impacts the air particles within the general atmosphere of the game, regardless of whether they are indoors or outdoors.
 
-By adjusting a couple of key default properties in the `Class.Lighting` service and its child `Class.Atmosphere` object, you can dramatically change how both the atmosphere and sunlight coming through the window appears to players, as well as how this lighting interacts with any other object you place in the experience.
+By adjusting a couple of key default properties in the `Class.Lighting` service and its child `Class.Atmosphere` object, you can dramatically change how both the atmosphere and sunlight coming through the window appears to players, as well as how this lighting interacts with any other object you place in the game.
 
 ### Enable realistic lighting
 
-The `Class.Lighting.LightingStyle|LightingStyle` property determines the behavior of both global and local lighting in your experience. Studio begins every experience with `Enum.LightingStyle|Soft` lighting which renders a flatter look with softer lights and shadows. However, to enhance the environment and enable your local light sources to also produce precise shadows, illumination, and specular highlights, you must enable `Enum.LightingStyle|Realistic` lighting.
+The `Class.Lighting.LightingStyle|LightingStyle` property determines the behavior of both global and local lighting in your game. Studio begins every game with `Enum.LightingStyle|Soft` lighting which renders a flatter look with softer lights and shadows. However, to enhance the environment and enable your local light sources to also produce precise shadows, illumination, and specular highlights, you must enable `Enum.LightingStyle|Realistic` lighting.
 
 This lighting configuration allows both your global and local lighting to work together and provide more realistic and immersive visuals. To demonstrate, review how the lighting behavior for the radio changes when **Lighting Indoors - Complete** uses different lighting styles. The local lighting from the candlelight and radio with the `Enum.LightingStyle|Soft` lighting style doesn't produce shadows like the global lighting from the sun, and the details from the radio's leather and wood materials vanish.
 
@@ -78,7 +78,7 @@ By default, all materials use [physically-based rendering](../../../art/modeling
 - The metalness and roughness of a particular surface is already defined for you without any additional steps.
 - Objects with Studio's built-in materials naturally react more accurately to the lighting in your environment with realistic reflections.
 
-You can enhance this effect with the realistic lighting style by increasing the global lighting's `Class.Lighting.EnvironmentDiffuseScale` and `Class.Lighting.EnvironmentSpecularScale` properties, especially when you set each property to `1`. This step is particularly important in this tutorial because it ensures that any PBR textures in the experience, including those from `Class.MaterialVariant|MaterialVariants` or `Class.SurfaceAppearance` objects, look their best and reflect their surroundings accurately.
+You can enhance this effect with the realistic lighting style by increasing the global lighting's `Class.Lighting.EnvironmentDiffuseScale` and `Class.Lighting.EnvironmentSpecularScale` properties, especially when you set each property to `1`. This step is particularly important in this tutorial because it ensures that any PBR textures in the game, including those from `Class.MaterialVariant|MaterialVariants` or `Class.SurfaceAppearance` objects, look their best and reflect their surroundings accurately.
 
 To demonstrate this concept, examine the candle's metal bases with different `Class.Lighting.EnvironmentDiffuseScale` and `Class.Lighting.EnvironmentSpecularScale` property values. When you increase these values, the metal becomes more accurately reflects the lighting from both the global and local light sources, which allows the material to be more tangible to players as they explore the environment.
 
@@ -96,7 +96,7 @@ To demonstrate this concept, examine the candle's metal bases with different `Cl
 To recreate the metal reflections in the sample [Lighting Indoors - Complete](https://www.roblox.com/games/17562253150/UCT-Lighting-Indoors-After) place file:
 
 1. In the **Explorer** window, select **Lighting**.
-1. In the **Properties** window, ensure that **EnvironmentalDiffuseScale** and **EnvironmentSpecularScale** are set to `1`. If so, the metal in the experience is accurately reflective.
+1. In the **Properties** window, ensure that **EnvironmentalDiffuseScale** and **EnvironmentSpecularScale** are set to `1`. If so, the metal in the game is accurately reflective.
 
 ### Change the time of day
 
@@ -168,7 +168,7 @@ To recreate the color of ambient lighting in the sample [Lighting Indoors - Comp
 
 ### Choose a complementary skybox
 
-The `Class.Lighting` service has a child `Class.Sky` object with six individual properties that together create the skybox that makes up an experience's sky. Skyboxes can have a major impact on the look and feel of what's in your environment, so it's important to carefully consider how you can choose a skybox that enhances your experience's visual quality, especially as it influences the overall atmosphere that seeps into indoor spaces.
+The `Class.Lighting` service has a child `Class.Sky` object with six individual properties that together create the skybox that makes up a game's sky. Skyboxes can have a major impact on the look and feel of what's in your environment, so it's important to carefully consider how you can choose a skybox that enhances your game's visual quality, especially as it influences the overall atmosphere that seeps into indoor spaces.
 
 Because the **Lighting Indoors - Complete** sample requires a warm atmosphere, it uses a skybox that mostly prioritizes warm hues near the skyline, such as bright yellows, vibrant oranges, and some light greens. For information on how to create and customize skyboxes, see [Skyboxes](../../../environment/skybox.md).
 
@@ -219,7 +219,7 @@ To recreate the skybox in the sample [Lighting Indoors - Complete](https://www.r
 
 The `Class.Lighting` service has a child `Class.Atmosphere` object with properties that allow you to simulate realistic environments by scattering sunlight in unique ways. While some of these properties are more evident in outdoor environments, such as those that impact the silhouette and blending of distant objects near the skyline, others influence the density and color of the air particles present throughout the 3D space, regardless of whether they are indoors or outdoors.
 
-For example, the `Class.Atmosphere.Density` property controls how many particles exist in the air of your experience. When you increase this property, the additional amount of particles create a sense of thickness and weight in the 3D space that's  tangible to players exploring your world. This is helpful for adding texture and indirect lighting to an environment without distinct local lighting objects.
+For example, the `Class.Atmosphere.Density` property controls how many particles exist in the air of your game. When you increase this property, the additional amount of particles create a sense of thickness and weight in the 3D space that's  tangible to players exploring your world. This is helpful for adding texture and indirect lighting to an environment without distinct local lighting objects.
 
 To illustrate this technique, review the following two images of the **Lighting Indoors - Complete** cabin with different air particle densities. When `Class.Atmosphere.Density` is set to `0`, the cabin is cold and dark despite having local light sources, but when `Class.Atmosphere.Density` is set to `0.5`, the cabin is warm and hazy. This effect is particularly impactful because the `Class.Atmosphere` object adds a warm orange hue to air particles based on the colors of its skybox.
 
@@ -243,7 +243,7 @@ To recreate the density of the atmosphere's air particles in the sample [Lightin
 
 ## Configure local lighting
 
-Local lighting is the luminescence from local [light sources](../../../effects/light-sources.md) in your experience, such as `Class.PointLight`, `Class.SpotLight`, and `Class.SurfaceLight` objects. After you configure your global lighting to meet the general lighting and atmosphere requirements of the experience, it's important to utilize these local light sources to meet the specific lighting needs of anything in the scene that you want to illuminate within the 3D space.
+Local lighting is the luminescence from local [light sources](../../../effects/light-sources.md) in your game, such as `Class.PointLight`, `Class.SpotLight`, and `Class.SurfaceLight` objects. After you configure your global lighting to meet the general lighting and atmosphere requirements of the game, it's important to utilize these local light sources to meet the specific lighting needs of anything in the scene that you want to illuminate within the 3D space.
 
 The following sections demonstrate how to create each type of local light source and adjust a couple of its default properties to significantly alter how the local lighting compliments your global lighting and interacts with the overall environment.
 
@@ -270,7 +270,7 @@ While this is an excellent start, the candles still don't produce realistic ligh
   </figure>
 </GridContainer>
 
-Point lights can be more performance intensive on low-end devices than other local light sources because point lights project in every direction. To optimize your experience, consider how many point lights are necessary without compromising your ideal lighting behavior. For example, the sample places only a single point light within the middle of the candle because each candle flame is small enough that individual point lights don't notably enhance the visuals within the gameplay area.
+Point lights can be more performance intensive on low-end devices than other local light sources because point lights project in every direction. To optimize your game, consider how many point lights are necessary without compromising your ideal lighting behavior. For example, the sample places only a single point light within the middle of the candle because each candle flame is small enough that individual point lights don't notably enhance the visuals within the gameplay area.
 
 To recreate candle local lighting in the sample [Lighting Indoors - Complete](https://www.roblox.com/games/17562253150/UCT-Lighting-Indoors-After) place file:
 

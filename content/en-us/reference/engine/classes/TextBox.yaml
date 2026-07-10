@@ -61,7 +61,8 @@ description: |
   using `Class.TextService:FilterStringAsync()` or
   `Class.Chat:FilterStringAsync()`. If this is not properly done, your game may
   receive moderation action.
-code_samples: []
+code_samples:
+  - TextBox-Secret-Word
 inherits:
   - GuiObject
 descendants: []
@@ -932,6 +933,8 @@ events:
       track when a `TextBox` both gains and loses focus.
     code_samples:
       - TextBox-Focus
+      - TextBox-FocusLost
+      - TextBox-FocusLost1
     parameters:
       - name: enterPressed
         type: boolean

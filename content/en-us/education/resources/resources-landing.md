@@ -87,7 +87,7 @@ Make private communities on Roblox for students.
 <tbody>
    <tr>
     <td><a href = "https://en.help.roblox.com/hc/en-us/articles/203312880" target="_blank" rel="noopener">General Connection Problems</a></td>
-    <td>Troubleshoot common issues like firewalls, connection loss, or issues in loading or connecting to experiences.</td>
+    <td>Troubleshoot common issues like firewalls, connection loss, or issues in loading or connecting to games.</td>
    </tr>
    <tr>
     <td><a href = "https://en.help.roblox.com/hc/en-us/articles/115005744663" target="_blank" rel="noopener">Troubleshooting Education Networks</a></td>

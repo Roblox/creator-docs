@@ -3,7 +3,7 @@ title: Open Cloud data stores
 description: Explains how to use Open Cloud APIs to access and modify data stores.
 ---
 
-In addition to accessing data stores from the Engine API in Studio or live experiences (`Class.DataStoreService`), you can use the Open Cloud APIs to access [standard](/cloud/reference/DataStoreEntry) and [ordered data stores](/cloud/reference/OrderedDataStoreEntry) from external scripts and other tools.
+In addition to accessing data stores from the Engine API in Studio or live games (`Class.DataStoreService`), you can use the Open Cloud APIs to access [standard](/cloud/reference/DataStoreEntry) and [ordered data stores](/cloud/reference/OrderedDataStoreEntry) from external scripts and other tools.
 
 Open Cloud access to your data stores unlocks many potential use cases, including:
 
@@ -11,13 +11,13 @@ Open Cloud access to your data stores unlocks many potential use cases, includin
 - Global leaderboards that you can display on an external website
 - Schema updates with scripts that read entries from the current data store, map it to the new schema, and write entries back to a new data store
 
-The examples on this page demonstrate how to build a [user inventory support portal](#user-inventory-support-portal) and an [external leaderboard](#external-persistent-leaderboard)) with Node.js and Python, but use whichever language you prefer; the Open Cloud APIs support any programming language that can send an HTTP request.
+The examples on this page demonstrate how to build a [user inventory support portal](#user-inventory-support-portal) and an [external leaderboard](#external-persistent-leaderboard) with Node.js and Python, but use whichever language you prefer; the Open Cloud APIs support any programming language that can send an HTTP request.
 
 ## Differences from the Engine API
 
 Although the Open Cloud APIs access the same underlying data stores and are similar to working with `Class.DataStoreService`, there are a few key differences:
 
-- **Universe ID**: Unlike the Engine API, Open Cloud APIs are stateless and can come from anywhere, so you must always provide the **universe ID**, the unique identifier of your experience.
+- **Universe ID**: Unlike the Engine API, Open Cloud APIs are stateless and can come from anywhere, so you must always provide the **universe ID**, the unique identifier of your game.
 
 - **Separate permissions for creating and updating**: The Engine API creates new entries if they don't exist when you call `Class.DataStore:SetAsync()`, but Open Cloud methods for creating and updating entries are separate. Separate permissions can be safer and more flexible in certain situations. For example, you might want your customer support tool to only be able to edit an existing user's profile, not create a new one.
 
@@ -182,7 +182,7 @@ python3 increment_currency.py
 
 ## External persistent leaderboard
 
-This example creates a predefined list of users for demo purposes, but for it to be useful in a real experience, you would need an actual data store of users.
+This example creates a predefined list of users for demo purposes, but for it to be useful in a real game, you would need an actual data store of users.
 
 ### Required scopes
 

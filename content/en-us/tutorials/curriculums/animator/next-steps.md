@@ -8,11 +8,11 @@ Congratulations on completing your first animation with Roblox Studio! Now that 
 
 ## Share with others
 
-When you first publish an experience, it's automatically set to **private** so that you are the only one who can play it. However, creating on Roblox is always more fun when you can share what you make with others, so let's set up your experience so that they can play too.
+When you first publish a game, it's automatically set to **private** so that you are the only one who can play it. However, creating on Roblox is always more fun when you can share what you make with others, so let's set up your game so that they can play too.
 
-To make your experience public:
+To make your game public:
 
-1. Using the steps from the last chapter, publish your experience so others can see your latest changes.
+1. Using the steps from the last chapter, publish your game so others can see your latest changes.
 
 1. In the top-left corner of your computer, click **File** ⟩ **Experience Settings**.
 
@@ -20,7 +20,7 @@ To make your experience public:
    1. Go to the left bar and select the **Permissions** tab. New settings display.
    1. Set **Playability** to **Public**.
 
-1. Click the **Save** button. Now everyone on Roblox can play your experience!
+1. Click the **Save** button. Now everyone on Roblox can play your game!
 
 ## Continue learning
 

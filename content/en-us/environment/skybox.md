@@ -3,7 +3,7 @@ title: Skyboxes
 description: Skyboxes are cubes made up of six individual images that create an immersive background.
 ---
 
-A **skybox** is a cube made up of six individual images that create an immersive sky background in an experience. When the images are designed to be perfectly aligned with each other, the skybox appears to be panoramic without the impression of being inside a cube. This makes experiences feel larger than they really are, and it adds depth to your atmosphere, such as simulating deep space or underwater environments.
+A **skybox** is a cube made up of six individual images that create an immersive sky background in a game. When the images are designed to be perfectly aligned with each other, the skybox appears to be panoramic without the impression of being inside a cube. This makes games feel larger than they really are, and it adds depth to your atmosphere, such as simulating deep space or underwater environments.
 
 Additionally, the `Class.Sky` object includes celestial bodies such as a sun, moon, and stars which dynamically appear, rise, and set based on the
 `Class.Lighting.TimeOfDay|TimeOfDay` or `Class.Lighting.ClockTime|ClockTime`.

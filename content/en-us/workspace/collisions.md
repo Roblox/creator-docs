@@ -229,7 +229,7 @@ Workspace.Door1.CollisionGroup = doors
 
 Tools in Studio use the collision filtering system to determine which objects are candidates for selection when clicking in the 3D viewport. Objects whose assigned collision group does **not** collide with **StudioSelectable** will be ignored.
 
-For example, if you have checkpoints in a racing experience whose effective areas are defined by large transparent parts, you can assign them to a **Checkpoints** collision group and then make that group non‑collidable with **StudioSelectable** so that they don't get in the way when you're editing the underlying map geometry.
+For example, if you have checkpoints in a racing game whose effective areas are defined by large transparent parts, you can assign them to a **Checkpoints** collision group and then make that group non‑collidable with **StudioSelectable** so that they don't get in the way when you're editing the underlying map geometry.
 
 <img src="../assets/studio/collision-groups-editor/StudioSelectable-Off.png" width="500" alt="Checkpoints group configured to be non-collidable with StudioSelectable group" />
 

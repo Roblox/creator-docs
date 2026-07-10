@@ -1,13 +1,13 @@
 ---
 title: Create flickering lights
-description: Explains the process of creating flickering local light sources in your experience.
+description: Explains the process of creating flickering local light sources in your game.
 ---
 
-**Flickering lights** is a powerful force in influencing an environment's tone. For example, a home with lighting of a consistent brightness can feel warm and inviting, but if you add flickering lights to that same home's hallway, it becomes haunting and might hint at possible danger ahead. By strategically modeling and scripting different light sources within your experience, you can add a whole new level to your environmental storytelling.
+**Flickering lights** is a powerful force in influencing an environment's tone. For example, a home with lighting of a consistent brightness can feel warm and inviting, but if you add flickering lights to that same home's hallway, it becomes haunting and might hint at possible danger ahead. By strategically modeling and scripting different light sources within your game, you can add a whole new level to your environmental storytelling.
 
 <video controls src="../../../assets/tutorials/creating-flickering-lights/Overview.mp4" width="50%"></video>
 
-As with all 3D creation, there are many ways to achieve any particular goal. In this guide, you can quickly create a flickering light animation using tools and methods available only within Studio with only a few basic assets, including a `.rbxm` file for the banker's lamp model that contains child `Class.MeshParts` you can customize to fit the aesthetic of your own experiences.
+As with all 3D creation, there are many ways to achieve any particular goal. In this guide, you can quickly create a flickering light animation using tools and methods available only within Studio with only a few basic assets, including a `.rbxm` file for the banker's lamp model that contains child `Class.MeshParts` you can customize to fit the aesthetic of your own games.
 
 In the following method to create flickering lights, follow each section to learn how to create:
 
@@ -163,7 +163,7 @@ RunService.Heartbeat:Connect(function()
 end)
 ```
 
-When you [playtest your experience](../../../studio/testing-modes.md#playtesting), the `Class.RunService.Heartbeat|Heartbeat` event connection executes the following every frame:
+When you [playtest your game](../../../studio/testing-modes.md#playtesting), the `Class.RunService.Heartbeat|Heartbeat` event connection executes the following every frame:
 
 1. Solves for a time (`numberSequenceTime`) within the `brightnessCurve` `Datatype.NumberSequence` based on the current time.
    - The time is between 0 and 1 as these represent the beginning and end of the NumberSequence, respectively.

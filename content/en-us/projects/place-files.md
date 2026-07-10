@@ -5,7 +5,7 @@ description: Learn how to manage and optimize your place files in Roblox.
 
 import PlaceSizeLimit from '../includes/place-size-limit.md'
 
-Each Roblox experience consists of one or more [places](index.md#places), and Studio uploads your place data to Roblox's servers whenever you save or publish to Roblox in the **File** menu.
+Each Roblox game consists of one or more [places](index.md#places), and Studio uploads your place data to Roblox's servers whenever you save or publish to Roblox in the **File** menu.
 
 You might also want to export local copies of places for use with a version control system or other [external tools](external-tools.md). To export your place in Studio, select **Save&nbsp;to&nbsp;File** or **Download&nbsp;a&nbsp;Copy** from the **File** menu. Studio offers two file formats:
 
@@ -16,7 +16,7 @@ You might also want to export local copies of places for use with a version cont
 
 ## Auto-recovery files
 
-If saving to Roblox fails due to the file size limit, Studio automatically generates a backup of your place called a **recovery file**. The frequency of auto-recovery backups depends on whether your experience has [collaboration](collaboration.md) enabled:
+If saving to Roblox fails due to the file size limit, Studio automatically generates a backup of your place called a **recovery file**. The frequency of auto-recovery backups depends on whether your game has [collaboration](collaboration.md) enabled:
 
 - If you have collaboration enabled and saving to Roblox fails, Studio backs up the last three save attempts as recovery files on your system.
 - If collaboration is disabled, Studio uses **Auto-Recovery** settings from [Studio Settings](../studio/setup.md#customization).
@@ -48,7 +48,7 @@ Unreferenced or hidden assets can accumulate over time and unnecessarily increas
 
 ### Simplify terrain
 
-Reducing or simplifying terrain can significantly reduce place size and improve performance. Avoiding excessive terrain features like dense forests or complex hills helps make experiences run faster and more efficiently. Of course, the experience should match your artistic vision, but consider the following optimizations:
+Reducing or simplifying terrain can significantly reduce place size and improve performance. Avoiding excessive terrain features like dense forests or complex hills helps make games run faster and more efficiently. Of course, the game should match your artistic vision, but consider the following optimizations:
 
 1. Horizontal layers of the same material/occupancy compress much better than sloped layers. If possible, try to limit subsurface detail to horizontal layers.
 1. Turn on **Show Wireframe Rendering** from Studio's **View** menu and check for messy holes or misplaced water under the terrain surface. These mistakes can increase compressed size.

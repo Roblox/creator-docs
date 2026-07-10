@@ -1,17 +1,17 @@
 ---
 title: Work with variables
-description: Explains how to work with variables to create a story experience.
+description: Explains how to work with variables to create a story game.
 next: /tutorials/curriculums/coding/test-and-save
 prev: /tutorials/curriculums/coding/get-started
 ---
 
-In coding, **variables** are placeholder words for different types of information in your experience, such as player names, a team's score, or words for a story game. In this chapter, let's explore how to open the main script for the core gameplay of the experience and add code to ask players questions and use their answers for your story.
+In coding, **variables** are placeholder words for different types of information in your game, such as player names, a team's score, or words for a story game. In this chapter, let's explore how to open the main script for the core gameplay and add code to ask players questions and use their answers for your story.
 
 ## Open script
 
-Roblox creators write their code inside of **scripts** that tell Studio how and when to add custom behavior to experiences, such as triggering different types of events, saving player information, or spawning enemies. Roblox scripts use the [Luau](https://luau.org) programming language, which you can learn more about later in the [Coding fundamentals](../../fundamentals/coding-1/) series.
+Roblox creators write their code inside of **scripts** that tell Studio how and when to add custom behavior to games, such as triggering different types of events, saving player information, or spawning enemies. Roblox scripts use the [Luau](https://luau.org) programming language, which you can learn more about later in the [Coding fundamentals](../../fundamentals/coding-1/) series.
 
-The Story Game template uses a single script named **StoryManager** to control the core gameplay of the experience. This script already contains some code that's necessary for showing the full story to the player, but you will add more to display your interactive story.
+The Story Game template uses a single script named **StoryManager** to control the core gameplay of the game. This script already contains some code that's necessary for showing the full story to the player, but you will add more to display your interactive story.
 
 To open the **StoryManager** script:
 
@@ -137,4 +137,4 @@ To create variables for your story and to use player answers:
    storyMaker:Write(story)
    ```
 
-Now's a good point to stop momentarily, playtest the experience in the next chapter, and make sure the story is working!
+Now's a good point to stop momentarily, playtest the game in the next chapter, and make sure the story is working!

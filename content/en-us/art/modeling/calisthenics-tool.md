@@ -12,7 +12,7 @@ The **Calisthenics Tool** is a supplemental [Blender](https://www.blender.org/) 
 Skinning your clothing and characters is a critical and often time-intensive process to create high quality assets that move and fit with different character bodies. Similar to the [Layered Clothing Validation Tool](../../art/accessories/validation-tool.md), the Calisthenics Tool can save you time when testing your character models after rigging and skinning.
 
 <Alert severity = 'info'>
-The Calisthenics Tool doesn't provide complete verification of all potential skinning issues. You must also ensure that your custom models meet Studio's [avatar character specifications](../../avatar/character-bodies/specifications.md) and any applicable [layered clothing specifications](../../avatar/layered-accessories/specifications.md) for the best results in your experience.
+The Calisthenics Tool doesn't provide complete verification of all potential skinning issues. You must also ensure that your custom models meet Studio's [avatar character specifications](../../avatar/character-bodies/specifications.md) and any applicable [layered clothing specifications](../../avatar/layered-accessories/specifications.md) for the best results in your game.
 </Alert>
 
 <GridContainer numColumns="3">

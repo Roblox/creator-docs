@@ -3,7 +3,7 @@ title: Frames
 description: Frames are basic containers for UI objects.
 ---
 
-Basic `Class.Frame|Frames` act as containers for other `Class.GuiObject|GuiObjects` such as [labels](../ui/labels.md) and [buttons](../ui/buttons.md). You can apply frames to display on a user's [screen](../ui/on-screen-containers.md) or on a [surface](../ui/in-experience-containers.md) within the experience.
+Basic `Class.Frame|Frames` act as containers for other `Class.GuiObject|GuiObjects` such as [labels](../ui/labels.md) and [buttons](../ui/buttons.md). You can apply frames to display on a user's [screen](../ui/on-screen-containers.md) or on a [surface](../ui/in-experience-containers.md) within the game.
 
 <img src="../assets/ui/ui-objects/Frame-Example.jpg" width="840" alt="Example Frame on the screen containing a TextLabel, TextBox, and ImageButton." />
 

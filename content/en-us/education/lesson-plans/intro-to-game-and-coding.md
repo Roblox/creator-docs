@@ -5,7 +5,7 @@ description: Learn how to build an obstacle course and code color changing block
 
 <img src="../../assets/education/lesson-plans/introToGames-hero.jpg" width="100%" />
 
-**Lesson description**: Get students creating and coding their first experience in Roblox. Learn how to build an obstacle course and code color changing blocks.
+**Lesson description**: Get students creating and coding their first game in Roblox. Learn how to build an obstacle course and code color changing blocks.
 
 **ISTE standards**: Innovative Designer 4a, 4c, 4d, Creative Communicator 6b, 6d
 
@@ -16,7 +16,7 @@ description: Learn how to build an obstacle course and code color changing block
     <td>
       <ul>
         <li>Manipulate 3D parts to create an obstacle course.</li>
-        <li>Design and playtest an experience, focusing on a fun user experience.</li>
+        <li>Design and playtest a game, focusing on a fun user experience.</li>
         <li>Create scripts using variables and loops for in-game visual effects.</li>
         </ul>
       </td>
@@ -116,7 +116,7 @@ description: Learn how to build an obstacle course and code color changing block
 
 ### Guided tutorial - Intro to coding
 
-1. Inform students that they'll now start coding to add to their experience.
+1. Inform students that they'll now start coding to add to their game.
 
    - During this time, students should focus on coding and not continuing to work on their obby. They'll have time later to continue adding more parts or playtesting.
 
@@ -135,12 +135,12 @@ description: Learn how to build an obstacle course and code color changing block
    - Be free of any unintended visual or code issues.
 
 2. Have students catch up with their coding projects. If finished, give them time to work on adding more to or improving their obstacle course.
-3. If there's time, two students can play-test each other's experiences and offer feedback.
+3. If there's time, two students can play-test each other's games and offer feedback.
 
 ### Wrap up
 
 1. Recap what students have created and vocabulary: **variable**, **string**, **loop**.
-2. Ask two or three students what they would add to their experience to improve it. For example, a more visually interesting endpoint or more challenging jumps
+2. Ask two or three students what they would add to their game to improve it. For example, a more visually interesting endpoint or more challenging jumps
 
 ## Appendix
 
@@ -154,7 +154,7 @@ description: Learn how to build an obstacle course and code color changing block
 
 **Intro to Studio**
 
-- Emphasize that students are creating an experience that others can play, not just for themselves.
+- Emphasize that students are creating a game that others can play, not just for themselves.
 - If you're running low on time, the lesson Colors and Materials can be optional.
 
 **Intro to coding**
@@ -166,7 +166,7 @@ description: Learn how to build an obstacle course and code color changing block
 
 **Expand the Lesson**
 
-Have students switch places and play-test each other's experience.
+Have students switch places and play-test each other's game.
 
 - Start by having students offer feedback in the form of 2 Stars (What they liked) and a Wish (What they would want to see).
 - After receiving feedback, each student should implement a change based on feedback they received.
@@ -176,10 +176,10 @@ Have students switch places and play-test each other's experience.
 If you're using this lesson as part of a workshop, we've included a description for public use.
 
 **Example course description:**
-With over 60 millions users a month, Roblox is the world's largest social technology platform. But did you know that all Roblox experiences created by the users? Learn to create and code your own games using the free tools made available by Roblox. This is a perfect course for first time, aspiring game developers.
+With over 60 millions users a month, Roblox is the world's largest social technology platform. But did you know that all Roblox games created by the users? Learn to create and code your own games using the free tools made available by Roblox. This is a perfect course for first time, aspiring game developers.
 
 In this course, your student will:
 
 - Learn programming fundamentals with Luau.
 - Explore design thinking and 3D modeling by creating an obstacle course.
-- Take home a complete experience that can be played and shared online.
+- Take home a complete game that can be played and shared online.

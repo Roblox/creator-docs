@@ -1,9 +1,9 @@
 ---
 title: Audio effects
-description: Audio effects modify or enhance audio streams in your experiences.
+description: Audio effects modify or enhance audio streams in your games.
 ---
 
-Audio effects non-destructively modify or enhance audio streams. You can apply these effects to make your audio more immersive within your experience, such as using an `Class.AudioEqualizer` object to make rain sound muffled, `Class.AudioCompressor` object to control a sound's maximum volume, or `Class.AudioReverb` to add more realistic reflections of sound in interior spaces.
+Audio effects non-destructively modify or enhance audio streams. You can apply these effects to make your audio more immersive within your game, such as using an `Class.AudioEqualizer` object to make rain sound muffled, `Class.AudioCompressor` object to control a sound's maximum volume, or `Class.AudioReverb` to add more realistic reflections of sound in interior spaces.
 
 ## Apply audio effects
 
@@ -29,7 +29,7 @@ Each audio effect you apply has additional properties you can adjust until you a
 
 ### Equalizer
 
-`Class.AudioEqualizer` allows for control of the volume of various frequency ranges. This audio effect is useful to highlight or minimize particular elements of audio, such as muffling all audio in your experience when a player goes underwater.
+`Class.AudioEqualizer` allows for control of the volume of various frequency ranges. This audio effect is useful to highlight or minimize particular elements of audio, such as muffling all audio in your game when a player goes underwater.
 
 <GridContainer numColumns="2">
 <figure>

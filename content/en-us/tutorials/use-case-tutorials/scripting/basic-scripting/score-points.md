@@ -4,7 +4,7 @@ description: The process for creating a scoring system to award and track points
 prev: /tutorials/use-case-tutorials/scripting/basic-scripting/fading-trap
 ---
 
-In previous tutorials, you made a variety of experience features including [fading platforms](./fading-trap.md) and [deadly lava](./deadly-lava.md). This tutorial ties these together into a playable experience where users see who can stay alive the longest. Every second they stay alive, a point will be added to their score.
+In previous tutorials, you made a variety of game features including [fading platforms](./fading-trap.md) and [deadly lava](./deadly-lava.md). This tutorial ties these together into a playable game where users see who can stay alive the longest. Every second they stay alive, a point will be added to their score.
 
 <video controls loop muted>
 	<source src="../../../../assets/tutorials/scoring-points/finishedScoringPointsSolo.mp4" />
@@ -12,7 +12,7 @@ In previous tutorials, you made a variety of experience features including [fadi
 
 ## Set up
 
-First up, you'll need to set the scene for your experience. Duplicate the [fading platforms](./fading-trap.md) you made in the previous tutorial and let users compete to stay on the board of platforms for as long as possible.
+First up, you'll need to set the scene for your game. Duplicate the [fading platforms](./fading-trap.md) you made in the previous tutorial and let users compete to stay on the board of platforms for as long as possible.
 
 You can also use [deadly lava](./deadly-lava.md) to kill users when they fall off the platforms, or just let them fall to their doom. Make sure you place a **SpawnLocation** somewhere where users can jump onto the platforms to start playing.
 
@@ -20,21 +20,21 @@ You can also use [deadly lava](./deadly-lava.md) to kill users when they fall of
 
 ## Player points
 
-Roblox has a built-in **Leaderboard** for showing user stats. When you set player points through the leaderboard, they show up on the right side of the screen in the experience.
+Roblox has a built-in **Leaderboard** for showing user stats. When you set player points through the leaderboard, they show up on the right side of the screen in the game.
 
 <img alt="Leaderboard with username and points shown" src="../../../../assets/tutorials/scoring-points/leaderboard.jpg" width="60%" />
 
 You'll learn more customizable ways to display information in later tutorials, but the leaderboard is the simplest way of making a visible scoring system in Roblox.
 
-It's best to put scripts which set up experience state into **ServerScriptService** because they will automatically run when the experience starts. In **ServerScriptService**, create a script called **SetupPoints**.
+It's best to put scripts which set up game state into **ServerScriptService** because they will automatically run when the game starts. In **ServerScriptService**, create a script called **SetupPoints**.
 
 <img alt="SetupPoints script in place in ServerScriptService in the Explorer window" src="../../../../assets/tutorials/scoring-points/setupPointsScript.jpg" width="60%" />
 
 ## Listen for players
 
-In Roblox, a **service** is an object which performs a range of useful functions. The `Class.Players` service has an event called `Class.Players.PlayerAdded|PlayerAdded` that you can use to set up points for each user who joins the experience.
+In Roblox, a **service** is an object which performs a range of useful functions. The `Class.Players` service has an event called `Class.Players.PlayerAdded|PlayerAdded` that you can use to set up points for each user who joins the game.
 
-You can access services with the `Class.ServiceProvider:GetService()|GetService` function in the `Class.DataModel|game` object. `Class.DataModel|game` is a variable accessible from anywhere which contains everything in your experience.
+You can access services with the `Class.ServiceProvider:GetService()|GetService` function in the `Class.DataModel|game` object. `Class.DataModel|game` is a variable accessible from anywhere which contains everything in your game.
 
 1. Create a variable for the Players service using `game:GetService("Players")`.
 2. Create a function called `onPlayerAdded` with a parameter for the incoming player.
@@ -117,7 +117,7 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-Test your experience and you should see the leaderboard appear in the top right with the names of your users and a points score next to them.
+Test your game and you should see the leaderboard appear in the top right with the names of your users and a points score next to them.
 
 ## Count time
 
@@ -136,7 +136,7 @@ end
 
 ## Player list
 
-To run code for every user in the experience, you need to iterate through the **array** of users returned by the `Class.Players:GetPlayers()|GetPlayers` function.
+To run code for every user in the game, you need to iterate through the **array** of users returned by the `Class.Players:GetPlayers()|GetPlayers` function.
 
 An array is a list of items stored in order. Each item can be accessed by its **index** position, starting from `1`. You can get the length of an array by prefixing it with `#`.
 
@@ -175,7 +175,7 @@ while true do
 end
 ```
 
-Test your experience and you should find that the leaderboard shows your player's score counting up by 1 every second.
+Test your game and you should find that the leaderboard shows your player's score counting up by 1 every second.
 
 <video controls loop muted>
 	<source src="../../../../assets/tutorials/scoring-points/leaderboardCounting.mp4" />
@@ -183,9 +183,9 @@ Test your experience and you should find that the leaderboard shows your player'
 
 ## Listen for characters
 
-The goal of the experience is to see who can stay alive the longest, so users who die will need to have their points reset to 0.
+The goal of the game is to see who can stay alive the longest, so users who die will need to have their points reset to 0.
 
-You'll need to get the **Character** model for the user in order to detect when they have died. This model is only added to the experience _after_ the `Class.Player` object has been loaded and you can use the `Class.Player.CharacterAdded|CharacterAdded` event to listen for when the character is ready to use. Create a function called `onCharacterAdded` with two parameters: one for the character, one for the player.
+You'll need to get the **Character** model for the user in order to detect when they have died. This model is only added to the game _after_ the `Class.Player` object has been loaded and you can use the `Class.Player.CharacterAdded|CharacterAdded` event to listen for when the character is ready to use. Create a function called `onCharacterAdded` with two parameters: one for the character, one for the player.
 
 ```lua
 local Players = game:GetService("Players")
@@ -254,7 +254,7 @@ Test this out and you'll see the user's score resets when they die.
 
 ## Check the player
 
-If users keep earning points even when dead, it's hardly in the spirit of the experience, so the code needs to check if users are alive before awarding a point.
+If users keep earning points even when dead, it's hardly in the spirit of the game, so the code needs to check if users are alive before awarding a point.
 
 You need to start by defining an **attribute** in the `onPlayerAdded` function which can be used to check whether the user is alive. At this point, the user is not yet alive and spawned, as their character model still needs to be added.
 
@@ -318,12 +318,12 @@ while true do
 end
 ```
 
-Test your experience out now and you should find the user earns points every second they are alive, and stays at 0 when not alive. Have your friends play with you and see who can get the highest score.
+Test your game out now and you should find the user earns points every second they are alive, and stays at 0 when not alive. Have your friends play with you and see who can get the highest score.
 
-This is just the start: you can continue improving your experience for your users. Here are some tips:
+This is just the start: you can continue improving your game for your users. Here are some tips:
 
 - Place the code for all of the platforms into a single script, making it much easier to update.
-- Create a lobby area where users wait to be teleported to the experience area, allowing users to start simultaneously.
+- Create a lobby area where users wait to be teleported to the game area, allowing users to start simultaneously.
 - Announce the winners of each round.
 
 ## Final code

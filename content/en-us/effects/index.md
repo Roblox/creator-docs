@@ -1,6 +1,6 @@
 ---
 title: Effects
-description: Learn how to add visual effects to your experiences.
+description: Learn how to add visual effects to your games.
 ---
 
 You can create special effects by parenting special effect objects to other
@@ -71,7 +71,7 @@ width="100%"></video>
 
 ## Highlighting
 
-`Class.Highlight` is a visual effect which you can use to call attention to a specific object within an experience, such as to provide visual feedback that the object is important and/or interactable. See [Highlighting Objects](../effects/highlighting.md) for details.
+`Class.Highlight` is a visual effect which you can use to call attention to a specific object within a game, such as to provide visual feedback that the object is important and/or interactable. See [Highlighting Objects](../effects/highlighting.md) for details.
 
 <GridContainer numColumns="3">
   <figure>

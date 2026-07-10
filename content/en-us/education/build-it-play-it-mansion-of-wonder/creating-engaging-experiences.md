@@ -5,9 +5,9 @@ next: /education/build-it-play-it-mansion-of-wonder/connect-the-beam
 description: Start learning how to add a tutorial using beam effects in Roblox Studio as part of the Build It Play It Mansion of Wonder. You can add these to your own game, or use a provided template.
 ---
 
-Before starting, think about your past experiences opening a new game or smartphone app. In bad experiences, like trying to use a confusing app, you might have given up and closed it. Or maybe a game had too much information up front that was hard to remember.
+Before starting, think about your past experiences opening a new game or smartphone app. In bad games, like trying to use a confusing app, you might have given up and closed it. Or maybe a game had too much information up front that was hard to remember.
 
-In order to build good experiences, creators must engage and inform new users at the same time. There's an entire career devoted to studying this. **User experience (UX)** designers are people who take time to make sure that users can figure out where to go and how to accomplish goals without feeling frustrated.
+In order to build good games, creators must engage and inform new users at the same time. There's an entire career devoted to studying this. **User experience (UX)** designers are people who take time to make sure that users can figure out where to go and how to accomplish goals without feeling frustrated.
 
 For instance, these two pictures compare the impact user experience can have to someone's first impression of a game.
 
@@ -24,7 +24,7 @@ For instance, these two pictures compare the impact user experience can have to 
 
 ## Project setup
 
-This course will walk through designing a guided tutorial using a starter template. Alternatively, you can use your own project since the finished tutorial system can be applied to any experience.
+This course will walk through designing a guided tutorial using a starter template. Alternatively, you can use your own project since the finished tutorial system can be applied to any game.
 
 <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-engaging-experiences/template-overview.jpeg" width="100%" />
 
@@ -42,7 +42,7 @@ A new instance of Studio will open with the map. The first thing you'll see is a
 
 ### Use your own project
 
-If using your own project, use the main actions your players will do during the experience. For instance, in a farming game, have players collect wheat to sell at a shop booth.
+If using your own project, use the main actions your players will do during the game. For instance, in a farming game, have players collect wheat to sell at a shop booth.
 
 Additionally, we recommend the following:
 

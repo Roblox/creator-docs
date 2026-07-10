@@ -1,6 +1,6 @@
 ---
 title: Code the game loop
-description: Create a battle royale experience in Roblox Studio. Code a round manager for a game.
+description: Create a battle royale game in Roblox Studio. Code a round manager for a game.
 next: /education/battle-royale-series/managing-players
 prev: /education/battle-royale-series/project-setup
 ---

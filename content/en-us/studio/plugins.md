@@ -3,7 +3,7 @@ title: Studio plugins
 description: Explains how to create, publish, and monetize extensions to Studio that add custom functionality.
 ---
 
-A **plugin** is an extension that adds additional features or functionality to Studio. You can [install](../production/creator-store.md#find-assets) community-made plugins from the Creator Store, or you can [create](#create-new-plugins) and [publish](#upload-plugins) your own to the [Toolbox](../projects/assets/toolbox.md) to use across your experiences.
+A **plugin** is an extension that adds additional features or functionality to Studio. You can [install](../production/creator-store.md#find-assets) community-made plugins from the Creator Store, or you can [create](#create-new-plugins) and [publish](#upload-plugins) your own to the [Toolbox](../projects/assets/toolbox.md) to use across your games.
 
 If you choose to also distribute your plugins to the Creator Store, you can either offer them for free or sell them for **United States Dollars**. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information on selling plugins, see [Creator Store - Distribute and sell assets](../production/creator-store.md#distribute-and-sell-assets).
 
@@ -77,7 +77,7 @@ To modify a plugin's behavior based on what the user has selected, use the `Clas
 
 ### Support undo and redo
 
-Use `Class.ChangeHistoryService` to allow users to undo and redo changes made by a plugin within an experience. In your script, set the plugin to call `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()` and store the identifier assigned to the API call before making changes. Then set the plugin to call `Class.ChangeHistoryService:FinishRecording()|FinishRecording()` after making changes, so it captures any changes made during the recording session for undo and redo.
+Use `Class.ChangeHistoryService` to allow users to undo and redo changes made by a plugin within a game. In your script, set the plugin to call `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()` and store the identifier assigned to the API call before making changes. Then set the plugin to call `Class.ChangeHistoryService:FinishRecording()|FinishRecording()` after making changes, so it captures any changes made during the recording session for undo and redo.
 
 The following code sample creates an example plugin that can apply the neon material to selected parts. It uses `Class.ChangeHistoryService` to record and manage the changes made by the plugin:
 

@@ -3,7 +3,7 @@ title: Detect user input
 description: Explains how to customize and connect user input to actions.
 ---
 
-Connecting user input to actions gives users much better and more intuitive control over your experience's features. In this tutorial, you will bind a reloading action to a specific key.
+Connecting user input to actions gives users much better and more intuitive control over your game's features. In this tutorial, you will bind a reloading action to a specific key.
 
 <video controls loop muted>
 	<source src="../../../assets/tutorials/detecting-user-input/ReloadingSymbol.mp4" />
@@ -13,12 +13,12 @@ Connecting user input to actions gives users much better and more intuitive cont
 
 This tutorial uses the **Blaster** tool created in [Create Player Tools](../../../tutorials/use-case-tutorials/scripting/intermediate-scripting/create-player-tools.md). You can follow those instructions to create the tool or you can download the [Blaster](https://www.roblox.com/library/6571559694/Blaster) model and insert it into **StarterPack**.
 
-Models can be added into your Inventory to be used between any experience. To add a model to your experience:
+Models can be added into your Inventory to be used between any game. To add a model to your game:
 
 1. In a browser, open the [model](https://www.roblox.com/library/6571559694/Blaster) page, click the **Get** button. This adds the model into your inventory.
 2. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../../projects/assets/toolbox.md) and select the **Inventory** tab.
 3. Make sure the dropdown is on **My Models**.
-4. Select the **Blaster** model to add it into the experience.
+4. Select the **Blaster** model to add it into the game.
 
 ## Create an action handler
 

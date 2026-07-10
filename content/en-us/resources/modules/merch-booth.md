@@ -1,9 +1,9 @@
 ---
 title: Merch Booth
-description: The Merch Booth module lets you sell avatar assets, passes, and products directly in an experience.
+description: The Merch Booth module lets you sell avatar assets, passes, and products directly in a game.
 ---
 
-The **MerchBooth** [developer module](../../resources/modules/index.md) lets you offer [avatar assets](../../avatar/rigid-accessories/index.md), [passes](../../production/monetization/passes.md), and [developer products](../../production/monetization/developer-products.md) for sale directly within your experience. Players can browse items, preview assets on their own avatar, purchase items, and instantly use or equip them&nbsp;— all without leaving your experience. This can help you [monetize](../../production/monetization/index.md) your experience and gain revenue through the 40% affiliate fee associated with selling other creators' items.
+The **MerchBooth** [developer module](../../resources/modules/index.md) lets you offer [avatar assets](../../avatar/rigid-accessories/index.md), [passes](../../production/monetization/passes.md), and [developer products](../../production/monetization/developer-products.md) for sale directly within your game. Players can browse items, preview assets on their own avatar, purchase items, and instantly use or equip them&nbsp;— all without leaving your game. This can help you [monetize](../../production/monetization/index.md) your game and gain revenue through the 40% affiliate fee associated with selling other creators' items.
 
 <video src="../../assets/developer-modules/merch-booth/Showcase.mp4" controls width="100%"></video>
 
@@ -15,7 +15,7 @@ To offer assets created by third parties in the merch booth, make sure **Allow T
 
 ### Installation
 
-To use the **MerchBooth** module in an experience:
+To use the **MerchBooth** module in a game:
 
 1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
@@ -31,7 +31,7 @@ To use the **MerchBooth** module in an experience:
 
    <img src="../../assets/developer-modules/merch-booth/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **MerchBooth** model into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **MerchBooth** model into `Class.ReplicatedStorage`. Upon running the game the module will begin running.
 
 ### Configuration
 
@@ -146,7 +146,7 @@ Adding [passes](../../production/monetization/passes.md) requires pass IDs which
    end
    ```
 
-1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and select the experience.
+1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and select the game.
 1. In the left column, under **Monetization**, select **Passes**.
 1. Hover over a pass' thumbnail, click the **&ctdot;** button, and select **Copy Asset ID** from the context menu.
 
@@ -199,7 +199,7 @@ Adding [developer products](../../production/monetization/developer-products.md)
    end
    ```
 
-1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and select the experience.
+1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and select the game.
 1. In the left column, under **Monetization**, select **Developer Products**.
 1. Hover over a product's thumbnail, click the **&ctdot;** button, and select **Copy Asset ID** from the context menu.
 
@@ -258,7 +258,7 @@ In some cases, it may be useful to [remove](#togglecatalogbutton) this button an
 
 ### Shoppable regions
 
-A helpful way to drive purchases in your experience is to automatically show the merch booth when a player enters an area.
+A helpful way to drive purchases in your game is to automatically show the merch booth when a player enters an area.
 
 <video src="../../assets/developer-modules/merch-booth/Shoppable-Regions.mp4" controls width="800"></video>
 
@@ -271,7 +271,7 @@ To create a shoppable region:
 
 1. Using the [Tags](../../studio/properties.md#instance-tags) section of the block's properties, apply the tag `ShopRegion` to the block so that `Class.CollectionService` detects it.
 
-1. Set the part's `Class.BasePart.Transparency|Transparency` to the maximum to hide it from players in the experience. Also disable its `Class.BasePart.CanCollide|CanCollide` and `Class.BasePart.CanQuery|CanQuery` properties so that objects do not physically collide with it and raycasts do not detect it.
+1. Set the part's `Class.BasePart.Transparency|Transparency` to the maximum to hide it from players in the game. Also disable its `Class.BasePart.CanCollide|CanCollide` and `Class.BasePart.CanQuery|CanQuery` properties so that objects do not physically collide with it and raycasts do not detect it.
 
    <Grid container spacing={3}>
    <Grid item>
@@ -324,7 +324,7 @@ To create a shoppable region:
 
 ### Proximity prompts
 
-As an alternative to the 2D catalog view, you can add **proximity prompts** over in-experience objects. This encourages players to discover items in the 3D environment, preview them on their own avatar, purchase them, and instantly equip them. See [addProximityButton](#addproximitybutton) for details.
+As an alternative to the 2D catalog view, you can add **proximity prompts** over in-game objects. This encourages players to discover items in the 3D environment, preview them on their own avatar, purchase them, and instantly equip them. See [addProximityButton](#addproximitybutton) for details.
 
 <video src="../../assets/developer-modules/merch-booth/Proximity-Prompts.mp4" controls width="800"></video>
 
@@ -697,7 +697,7 @@ MerchBooth.configure({
 addItemAsync(assetId: `number`, productType: `Enum.InfoType`, hideFromCatalog: `boolean`)
 </figcaption>
 
-Asynchronously adds an item to the merch booth so that it's eligible for purchase in the experience. `assetId` is the item's asset ID, `productType` is the item's `Enum.InfoType` enum, and `hideFromCatalog` can be used to hide the item in the catalog view.
+Asynchronously adds an item to the merch booth so that it's eligible for purchase in the game. `assetId` is the item's asset ID, `productType` is the item's `Enum.InfoType` enum, and `hideFromCatalog` can be used to hide the item in the catalog view.
 
 See [Adding Items](#add-items) for details, as usage varies slightly for **assets** versus **game passes** or **developer products**.
 

@@ -5,7 +5,7 @@ description: Explore the physical units used in Roblox and how they convert to m
 
 This article outlines Roblox physical units and how they convert to metric units. Understanding units is useful whenever you work with physics, as in the following examples:
 
-- Customizing your experience's gravity, jump height/power, and walk speed in the **World** tab of Studio's **File**&nbsp;⟩ **Experience Settings** window.
+- Customizing your game's gravity, jump height/power, and walk speed in the **World** tab of Studio's **File**&nbsp;⟩ **Experience Settings** window.
 - Tuning linear/angular velocities, forces, torques, stiffness, and damping of [mechanical constraints](../physics/mechanical-constraints.md) and [mover constraints](../physics/mover-constraints.md).
 - Adjusting the density of [custom materials](../parts/materials.md#custom-materials).
 
@@ -175,10 +175,10 @@ Roblox places limits on certain physical properties, as outlined in the followin
 
 ## Importance of unit consistency
 
-Internally, the Roblox physics engine does not use unit conversions. You're free to define your own unit interpretations for studs (length) and RMUs (mass), but these should be used in a consistent manner throughout the experience. For example, if you decide that one stud equals one foot (30.483&nbsp;cm), the unit density of water implies an RMU is equal to 62.4&nbsp;lbs (28.3&nbsp;kg):
+Internally, the Roblox physics engine does not use unit conversions. You're free to define your own unit interpretations for studs (length) and RMUs (mass), but these should be used in a consistent manner throughout the game. For example, if you decide that one stud equals one foot (30.483&nbsp;cm), the unit density of water implies an RMU is equal to 62.4&nbsp;lbs (28.3&nbsp;kg):
 
 <blockquote>
 1 (g/cm&sup3;)&nbsp;×&nbsp;(30.48&sup3;&nbsp;cm&sup3;/ft&sup3;)&nbsp;= 28,317&nbsp;(g/ft&sup3;)&nbsp;×&nbsp;(0.00220462&nbsp;lbs/g)&nbsp;= 62.4&nbsp;(lbs/ft&sup3;)&nbsp;= 1&nbsp;(RMU/stud&sup3;)
 </blockquote>
 
-Overall, it's recommended that you use standard Roblox units because it makes an experience work as expected in all scenarios, such as compatibility with VR controls.
+Overall, it's recommended that you use standard Roblox units because it makes a game work as expected in all scenarios, such as compatibility with VR controls.

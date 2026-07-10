@@ -3,7 +3,7 @@ title: Create laser beams with VFX
 description: A tutorial on creating a laser beam that sets an avatar's health to 0 on impact.
 ---
 
-A **laser beam** is a ray of light. While rarely dangerous in real life, sci-fi experiences often use laser beams as a mechanism to damage players on impact. However, because of their versatility and prominence in futuristic media, laser beams are useful for all sorts of gameplay mechanics, such as blaster weapons, puzzles, obstacles, and environment aesthetics.
+A **laser beam** is a ray of light. While rarely dangerous in real life, sci-fi games often use laser beams as a mechanism to damage players on impact. However, because of their versatility and prominence in futuristic media, laser beams are useful for all sorts of gameplay mechanics, such as blaster weapons, puzzles, obstacles, and environment aesthetics.
 
 Using a sample [Laser Beam Blaster](https://create.roblox.com/store/asset/16382650186) model, this tutorial shows you how to create a laser beam special effect with an optional script to set the player's health to zero on collision, including guidance on:
 
@@ -20,13 +20,13 @@ You can create your own assets in third-party modeling tools and follow along wi
 
 ## Get blaster asset
 
-The **Creator Store** is a tab of the **Toolbox** that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add an individual asset or asset library directly into an open experience.
+The **Creator Store** is a tab of the **Toolbox** that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add an individual asset or asset library directly into an open game.
 
 This tutorial references a high-quality laser beam blaster model that you can use as you replicate each step within the following sections.
 
 <img src="../../../assets/tutorials/laser-traps-with-beams/LaserBlasterAsset.png" mg width="90%" />
 
-To get this blaster asset from your inventory into your experience:
+To get this blaster asset from your inventory into your game:
 
 1. Add the blaster to your inventory.
 
@@ -57,7 +57,7 @@ To set up the collision box:
 
 1. Select the part, then in the **Properties** window,
    1. Set **Name** to **CollisionBox**. The part's name and its case style are important for the script later in the tutorial.
-   1. Enable **Anchored** to ensure that the physics system doesn't move the part when the experience starts.
+   1. Enable **Anchored** to ensure that the physics system doesn't move the part when the game starts.
 
 1. Scale **CollisionBox** to the length you want your laser beam to blast from the blaster. For example, this tutorial scales the it to be the same length as the blaster.
 

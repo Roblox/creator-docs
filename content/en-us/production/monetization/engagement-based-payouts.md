@@ -1,32 +1,32 @@
 ---
 title: Engagement-based payouts
-description: Engagement-based payouts allow you to earn Robux based on the share of time Roblox Premium members engage in your experience.
+description: Engagement-based payouts allow you to earn Robux based on the share of time Roblox Premium members engage in your game.
 ---
 
 <Alert severity="info">
 Effective July 24, 2025, the Engagement-Based Payouts program is deprecated and has been replaced by the [Creator Rewards](../../creator-rewards.md) program.
 </Alert>
 
-Automatic **engagement-based payouts** let you earn Robux based on the share of time that [Premium](https://www.roblox.com/premium/membership) members engage in an experience, regardless of the experience's size. These payouts are in addition to earnings from other [monetization](../../production/monetization/index.md) methods such as [Passes](../../production/monetization/passes.md).
+Automatic **engagement-based payouts** let you earn Robux based on the share of time that [Premium](https://www.roblox.com/premium/membership) members engage in a game, regardless of the game's size. These payouts are in addition to earnings from other [monetization](../../production/monetization/index.md) methods such as [Passes](../../production/monetization/passes.md).
 
-To encourage Premium subscriber growth and increase your potential to earn engagement-based payouts, you can add the [Premium Purchase Modal](#premium-purchase-modal) directly into an experience. Keep in mind, users from some countries may not have access to Premium subscriptions.
+To encourage Premium subscriber growth and increase your potential to earn engagement-based payouts, you can add the [Premium Purchase Modal](#premium-purchase-modal) directly into a game. Keep in mind, users from some countries may not have access to Premium subscriptions.
 
 ## Access payout data
 
-Payout data can provide vital feedback to help you understand what factors drive Premium subscribers to your experiences.
+Payout data can provide vital feedback to help you understand what factors drive Premium subscribers to your games.
 
 To access payout data:
 
-1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
+1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your game.
 2. Navigate to the **Monetization** tab and select **Engagement Payouts**.
 
 ### Engagement payouts
 
 The **Engagement-Based Payouts** charts track payout data based on the following metrics:
 
-- **Premium Playtime Robux Earned:** The amount you can expect to earn for Premium subscriber engagement. This is not based on the daily time Premium subscribers spend engaging with the experience; instead, this metric aggregates each user's behavior over the past 28 days. As such, even though they have similar trends, this metric has no direct mathematical relationship with the Premium Playtime Score.
+- **Premium Playtime Robux Earned:** The amount you can expect to earn for Premium subscriber engagement. This is not based on the daily time Premium subscribers spend engaging with the game; instead, this metric aggregates each user's behavior over the past 28 days. As such, even though they have similar trends, this metric has no direct mathematical relationship with the Premium Playtime Score.
 
-- **Premium Playtime Score:** The amount of time Premium subscribers engage with the experience per day. This metric can provide immediate feedback on the impact of new features you release.
+- **Premium Playtime Score:** The amount of time Premium subscribers engage with the game per day. This metric can provide immediate feedback on the impact of new features you release.
 
 - **Premium Visits:** How many visits are from Premium members.
 
@@ -38,18 +38,18 @@ Note that the dotted "projected earnings" line becomes solid after the payout am
 
 ## Premium purchase modal
 
-One strategy to increase engagement-based payouts is to encourage [Premium](https://www.roblox.com/premium/membership) upgrade through the **purchase modal**. Players can complete the purchase entirely within the experience and immediately receive both Premium status and their initial stipend of Robux.
+One strategy to increase engagement-based payouts is to encourage [Premium](https://www.roblox.com/premium/membership) upgrade through the **purchase modal**. Players can complete the purchase entirely within the game and immediately receive both Premium status and their initial stipend of Robux.
 
 <figure>
-<img src="../../assets/monetization/engagement-based-payouts/Modal-Example.jpg" alt="Premium purchase modal within an experience" />
-<figcaption>Premium purchase modal within an experience</figcaption>
+<img src="../../assets/monetization/engagement-based-payouts/Modal-Example.jpg" alt="Premium purchase modal within a game" />
+<figcaption>Premium purchase modal within a game</figcaption>
 </figure>
 
-Remember that Premium membership should not be a "requirement" to enjoy an experience. When implementing incentives for Premium members, it's highly recommended that you follow these best practices:
+Remember that Premium membership should not be a "requirement" to enjoy a game. When implementing incentives for Premium members, it's highly recommended that you follow these best practices:
 
-- Honestly and accurately describe the benefits of upgrading within the experience's [description](../../production/publishing/publish-games-and-places.md#publish-games).
-- Do not promise Robux or other out-of-experience rewards that you don't control.
-- Do not show the modal as a "paywall" when non-Premium members enter the experience.
+- Honestly and accurately describe the benefits of upgrading within the game's [description](../../production/publishing/publish-games-and-places.md#publish-games).
+- Do not promise Robux or other out-of-game rewards that you don't control.
+- Do not show the modal as a "paywall" when non-Premium members enter the game.
 - Consider offering exclusive merch to Premium members, but do not give them a tactical gameplay advantage over others, such as an array of ultra-powerful weapons that non-Premium members can't compete against.
 
 ### Check membership
@@ -103,7 +103,7 @@ teleporter.Touched:Connect(function(otherPart)
 	player:SetAttribute("CharacterPartsTouching", player:GetAttribute("CharacterPartsTouching") + 1)
 
 	if player.MembershipType == Enum.MembershipType.Premium then
-		-- User has Premium; teleport character to exclusive area within experience
+		-- User has Premium; teleport character to exclusive area within game
 		teleportPlayer(player)
 	else
 		-- Show purchase modal, using debounce to show once every few seconds at most

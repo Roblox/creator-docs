@@ -3,17 +3,17 @@ title: Customize your matchmaking configuration
 description: Use custom matchmaking to match players based on attributes like their skill level, their age and language, and their gameplay preferences.
 ---
 
-With a custom matchmaking configuration, you can build competitive, cooperative, and unique experiences by matching players to servers based on characteristics like skill level, latency, and gameplay preferences.
+With a custom matchmaking configuration, you can build competitive, cooperative, and unique games by matching players to servers based on characteristics like skill level, latency, and gameplay preferences.
 
 By default, Roblox provides you with a matchmaking configuration that uses predefined Roblox signals. To customize matchmaking, you can create new matchmaking configurations by [adjusting the weights of existing Roblox signals](#custom-configuration-with-roblox-signals), [creating new custom signals](#custom-configuration-with-custom-signals), or both. You can then preview your configuration by [previewing server scores with mock servers](#preview-and-test-server-scores).
 
 ## Custom configuration with Roblox signals
 
-You can adjust the weights of existing Roblox signals to customize your experience's matchmaking. For more information about Roblox signals and how their formulas are calculated, see [Existing signals](./attributes-and-signals.md#existing-signals).
+You can adjust the weights of existing Roblox signals to customize your game's matchmaking. For more information about Roblox signals and how their formulas are calculated, see [Existing signals](./attributes-and-signals.md#existing-signals).
 
 To create a custom matchmaking configuration using only Roblox signals:
 
-1. In the **Creator Dashboard**, navigate to **Creations**, then select an experience.
+1. In the **Creator Dashboard**, navigate to **Creations**, then select a game.
 2. In the lefthand navigation, navigate to the **Configure** section, then select **Custom Matchmaking**.
 3. Select the **Configuration** tab and click **Create Configuration**.
 4. In the **Create a Custom Matchmaking Configuration** page, enter a name for your configuration.
@@ -30,7 +30,7 @@ The new matchmaking configuration shows up in the **Configurations** list of the
 
 To create a custom matchmaking configuration using custom signals:
 
-1. In the **Creator Dashboard**, navigate to **Creations**, then select an experience.
+1. In the **Creator Dashboard**, navigate to **Creations**, then select a game.
 2. In the lefthand navigation, navigate to the **Configure** section, then select **Custom Matchmaking**.
 3. Select the **Configuration** tab and click **Create Configuration**.
 4. In the **Create a Custom Matchmaking Configuration** page, enter a name for your configuration.
@@ -45,7 +45,7 @@ The new matchmaking configuration shows up in the **Configurations** list of the
 ### Create a custom signal
 
 <Alert severity="info">
-  You can create a total of 2 custom signals per experience.
+  You can create a total of 2 custom signals per game.
 </Alert>
 
 <Alert severity="info">
@@ -93,7 +93,7 @@ The new custom signal shows up in the **Configuration** list of the **Create a C
 ### Create a custom attribute
 
 <Alert severity="info">
-  You can create a total of 5 server attributes and 5 player attributes per experience.
+  You can create a total of 5 server attributes and 5 player attributes per game.
 </Alert>
 
 Attributes are properties associated with players and servers, like skill level and game mode preferences. If you want to create and use custom signals, you must first create custom attributes. You can create player or server attributes.
@@ -133,7 +133,7 @@ The new attribute shows up in the **Server Attributes** list of the **Attributes
 ## Preview and test server scores
 
 <Alert severity="warning">
-  Preview server scores are just examples and don't reflect actual experience servers.
+  Preview server scores are just examples and don't reflect actual game servers.
 </Alert>
 
 Preview and test server scoring to see how your configured signal weights impact server selection. You can experiment with different weight combinations to optimize your matchmaking configuration.
@@ -148,7 +148,7 @@ For more information about scoring and weights, see [Scoring](./scoring.md).
 
 ## Apply a configuration to places
 
-You can apply a matchmaking configuration to as many places as you want inside your experience.
+You can apply a matchmaking configuration to as many places as you want inside your game.
 
 To apply a configuration to places:
 

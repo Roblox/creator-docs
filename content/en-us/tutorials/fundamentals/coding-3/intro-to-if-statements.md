@@ -5,7 +5,7 @@ next: /tutorials/fundamentals/coding-3/traps-with-if-statements
 prev: /tutorials/fundamentals/coding-3/landing
 ---
 
-In experiences, there are often many cause-and-effect relationships. For example:
+In games, there are often many cause-and-effect relationships. For example:
 
 - If a player scores 10 points, then they win the game.
 - If a player has a power-up, then they can run super fast.

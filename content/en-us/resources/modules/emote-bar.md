@@ -3,7 +3,7 @@ title: Emote Bar
 description: The Emote Bar module aims to provide players an accessible, customizable way to socially interact.
 ---
 
-Emotes are a core component of any social experience. The **EmoteBar** [developer module](../../resources/modules/index.md) aims to provide players an accessible, customizable way to facilitate meaningful social interaction.
+Emotes are a core component of any social game. The **EmoteBar** [developer module](../../resources/modules/index.md) aims to provide players an accessible, customizable way to facilitate meaningful social interaction.
 
 <video src="../../assets/developer-modules/emote-bar/Showcase.mp4" controls width="100%"></video>
 
@@ -11,7 +11,7 @@ Emotes are a core component of any social experience. The **EmoteBar** [develope
 
 ### Installation
 
-To use the **EmoteBar** module in an experience:
+To use the **EmoteBar** module in a game:
 
 1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
@@ -27,7 +27,7 @@ To use the **EmoteBar** module in an experience:
 
    <img src="../../assets/developer-modules/emote-bar/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **EmoteBar** model into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **EmoteBar** model into `Class.ReplicatedStorage`. Upon running the game the module will begin running.
 
 ### Configuration
 

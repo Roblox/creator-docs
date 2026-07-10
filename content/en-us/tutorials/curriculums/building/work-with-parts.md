@@ -9,7 +9,7 @@ prev: /tutorials/curriculums/building/get-started
 
 ## Insert parts
 
-There are five different part shapes that you can insert from the toolbar to build environments in your experiences: **block**, **sphere**, **cylinder**, **wedge**, and **corner wedge**. While you can join these part shapes together in unique ways to form more complex shapes, this lesson focuses on keeping the shapes as-is for your obby's platforms.
+There are five different part shapes that you can insert from the toolbar to build environments in your games: **block**, **sphere**, **cylinder**, **wedge**, and **corner wedge**. While you can join these part shapes together in unique ways to form more complex shapes, this lesson focuses on keeping the shapes as-is for your obby's platforms.
 
 <Grid container spacing={1}>
 <Grid item XSmall={4} XLarge={2}>
@@ -98,7 +98,7 @@ To customize your course for your obby's starting jumping puzzle:
 
       <img src="../../../assets/education/general/Move-Tool.png" width="328" alt="Move tool highlighted." />
 
-   1. Click and drag one of the handles until your part is at a good jump distance away from where players join the experience.
+   1. Click and drag one of the handles until your part is at a good jump distance away from where players join the game.
 
       <img src="../../../assets/tutorials/building-lesson/customize-1.png" alt="" width="60%" />
 
@@ -166,11 +166,11 @@ To customize your course for your obby's starting jumping puzzle:
 
 ## Anchor platforms
 
-If you were to playtest your experience now, all of your new platforms would immediately fall and disappear. This is because the Roblox engine simulates gravity as soon as the experience runs, allowing the physical force to push objects down.
+If you were to playtest your game now, all of your new platforms would immediately fall and disappear. This is because the Roblox engine simulates gravity as soon as the game runs, allowing the physical force to push objects down.
 
 <video controls src="../../../assets/tutorials/building-lesson/anchor-demo.mp4" width="70%"></video>
 
-To make sure your platforms stay at their set position and orientation when the experience runs, you must anchor them within the 3D space using the **Anchor** tool. In addition to preventing gravity from pushing the platforms down, anchoring your platforms ensures they will stay in place when players and other objects bump into them.
+To make sure your platforms stay at their set position and orientation when the game runs, you must anchor them within the 3D space using the **Anchor** tool. In addition to preventing gravity from pushing the platforms down, anchoring your platforms ensures they will stay in place when players and other objects bump into them.
 
 To anchor your platforms:
 

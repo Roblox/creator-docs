@@ -56,7 +56,7 @@ Developer Awards is a data-driven program designed to reward developers for reac
 ## Eligibility
 
 - Must be at least 13 years old
-- Must be the owner of your experience
+- Must be the owner of your game
 
 ## Receiving an award
 

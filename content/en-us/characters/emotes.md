@@ -3,11 +3,11 @@ title: Emotes
 description: Emotes are character animations used through chat commands, or accessing the emotes menu.
 ---
 
-Emotes are expressive character [animations](../animation/index.md) that are accessible by using chat commands ("/e cheer") or by accessing the **emotes menu** on the top right of any experience. All users have access to default emotes, such as **dance**, **point**, and **cheer**. Additional avatar emotes can be purchased and equipped from the [Marketplace](https://www.roblox.com/catalog).
+Emotes are expressive character [animations](../animation/index.md) that are accessible by using chat commands ("/e cheer") or by accessing the **emotes menu** on the top right of any game. All users have access to default emotes, such as **dance**, **point**, and **cheer**. Additional avatar emotes can be purchased and equipped from the [Marketplace](https://www.roblox.com/catalog).
 
 <video src="../assets/avatar/avatar-emotes/Avatar-Emotes.mp4" controls width="100%"></video>
 
-In your experience, you can perform the following emote customizations:
+In your game, you can perform the following emote customizations:
 
 - [Open and close](#open-and-close) a user's emotes menu programmatically.
 - [Add or remove](#add-and-remove-emotes) emotes options from a user's menu.
@@ -36,7 +36,7 @@ If you need to detect whether the emotes menu is open, call `Class.GuiService:Ge
 
 Customize the emote menu by setting emotes from the catalog and then equipping emotes to a `Class.Humanoid`. Set emotes with the `Class.HumanoidDescription:SetEmotes()` method and equip up to 8 emotes to the emotes menu using `Class.HumanoidDescription:SetEquippedEmotes()`.
 
-Use the following code sample in a `Class.LocalScript` within the `Class.StarterCharacterScripts` folder to set and equip emotes in your experience:
+Use the following code sample in a `Class.LocalScript` within the `Class.StarterCharacterScripts` folder to set and equip emotes in your game:
 
 ```lua
 local Players = game:GetService("Players")

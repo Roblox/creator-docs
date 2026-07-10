@@ -5,7 +5,7 @@ description: Learn how to use special effects in Roblox Studio to give players f
 
 <img src="../../assets/education/build-it-play-it-mansion-of-wonder/landing-page/header.jpeg" width="100%" />
 
-Using Roblox Studio, you'll learn to create special effects, whether it's a magical blast in an arcade experience, or a beam of arrows that guides new players around a world. These two tutorials take you step-by-step as you learn and earn exclusive prizes.
+Using Roblox Studio, you'll learn to create special effects, whether it's a magical blast in an arcade game, or a beam of arrows that guides new players around a world. These two tutorials take you step-by-step as you learn and earn exclusive prizes.
 
 ## What's your skill level?
 

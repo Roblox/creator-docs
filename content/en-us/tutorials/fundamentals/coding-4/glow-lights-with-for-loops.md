@@ -85,7 +85,7 @@ Remember, a for loop starts with keyword `for` followed by a control variable. T
    end
    ```
 
-4. Run the experience to see the light increase in brightness each second.
+4. Run the game to see the light increase in brightness each second.
 
    <video controls src="../../../assets/education/coding-4/glowing-light-increase.mp4" width="100%"></video>
 
@@ -117,7 +117,7 @@ To dim the light, use a second for loop. The values of this loop will be reverse
    end
    ```
 
-2. Run your experience; you should see the light brighten and then dim.
+2. Run your game; you should see the light brighten and then dim.
 
    <video controls src="../../../assets/education/coding-4/glowing-light-singleLoop.mp4" width="100%"></video>
 
@@ -149,7 +149,7 @@ Right now, the light only turns on and off once. To make the lamp continuously g
    end
    ```
 
-3. Run the experience to see the light turn bright and dim continuously.
+3. Run the game to see the light turn bright and dim continuously.
 
    <video controls src="../../../assets/education/coding-4/glowing-light-finished.mp4" width="100%"></video>
 

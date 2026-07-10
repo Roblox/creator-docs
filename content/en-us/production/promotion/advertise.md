@@ -6,27 +6,27 @@ hideInPageNavigation: true
 
 export const sections = [
   {
-    description: "Advertising on Roblox gives you powerful ways to grow your audience, boost engagement, and increase your earning potential. Built with creator growth and earnings in mind, Roblox's ad system helps you reach players at the right moments, turn discovery into real gameplay, and support long-term monetization as your experience grows. Whether you're launching something new or expanding an established experience, ads are designed to help you connect with the players who are more likely to engage, return, and invest in what you build.",
+    description: "Advertising on Roblox gives you powerful ways to grow your audience, boost engagement, and increase your earning potential. Built with creator growth and earnings in mind, Roblox's ad system helps you reach players at the right moments, turn discovery into real gameplay, and support long-term monetization as your game grows. Whether you're launching something new or expanding an established game, ads are designed to help you connect with the players who are more likely to engage, return, and invest in what you build.",
     column: true
   },
   {
     title: "Grow with ads",
     stats: [
-      { header: "150%", description: "lift in impressions for experiences that run ads" },
+      { header: "150%", description: "lift in impressions for games that run ads" },
       { header: "24%", description: "increase in plays" },
       { header: "16%", description: "increase in playtime" }
     ],
-    description: "Ads Manager is Roblox's self-service advertising platform, designed to support creators of all sizes as they grow on the platform. By advertising on the Home page and in Search results, you can reach and retain players who are interested in playing your experience.",
+    description: "Ads Manager is Roblox's self-service advertising platform, designed to support creators of all sizes as they grow on the platform. By advertising on the Home page and in Search results, you can reach and retain players who are interested in playing your game.",
     row: true,
     video: "https://www.youtube-nocookie.com/embed/5HcH-9E7USc?si=IDla-YBxiO_E-O0q",
     content: [
       {
         title: "Get your game discovered",
-        description: "Whether you've just published an experience or you're ready to take an existing one to the next level, Ads Manager helps you drive awareness, highlight new content, and find new audiences."
+        description: "Whether you've just published a game or you're ready to take an existing one to the next level, Ads Manager helps you drive awareness, highlight new content, and find new audiences."
       },
       {
         title: "Improved your retention efforts",
-        description: "Ads Manager audiences make it easier to reach specific groups of players, including new, recent, and lapsed players. Re-engage players who have already shown interest in your experience and give them a reason to come back and play again."
+        description: "Ads Manager audiences make it easier to reach specific groups of players, including new, recent, and lapsed players. Re-engage players who have already shown interest in your game and give them a reason to come back and play again."
       },
       {
         title: "Control your growth",
@@ -41,7 +41,7 @@ export const sections = [
   },
   {
     title: "Success story",
-    description: "Creators across the platform are using Ads Manager to grow, sustain, and scale their audiences. Here's how one top-100 experience turned advertising into a core discovery channel.",
+    description: "Creators across the platform are using Ads Manager to grow, sustain, and scale their audiences. Here's how one top-100 game turned advertising into a core discovery channel.",
     successStory: true,
     storyTitle: "Precision control: How Hypershot sustains top-tier rankings",
     paragraphs: [
@@ -68,10 +68,10 @@ export const sections = [
     content: [
       {
         title: "Deploy in-game ads",
-        description: "Placing ads inside your experience can help increase earnings and diversify monetization by letting you earn from both paying and non-paying players. Simply deploy ads in your experience and let Roblox handle delivery and earnings.",
+        description: "Placing ads inside your game can help increase earnings and diversify monetization by letting you earn from both paying and non-paying players. Simply deploy ads in your game and let Roblox handle delivery and earnings.",
       },
       {
-        description: "Choose between ad formats like Rewarded Videos, which let you offer in-experience rewards to incentivize players to watch click-to-play video ads, Billboards, which display image or video ads, and Portals, which combine an image and an interactive door that teleports players to an advertised experience."
+        description: "Choose between ad formats like Rewarded Videos, which let you offer in-game rewards to incentivize players to watch click-to-play video ads, Billboards, which display image or video ads, and Portals, which combine an image and an interactive door that teleports players to an advertised game."
       },
       {
         links: [
