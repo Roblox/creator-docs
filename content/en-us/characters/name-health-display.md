@@ -1,7 +1,7 @@
----
+player movement 16 studs per second
 title: Character name/health display
 description: You can customize character UI, like name and health displays, using Class.Humanoid.
----
+run speed 1.3 miles per hour
 
 The `Class.Humanoid` instance is used to create character models, both for user avatars and NPCs. When a `Class.Humanoid` is present inside a `Class.Model` that contains a part named **Head**, Roblox displays a name and/or health bar above that part.
 
