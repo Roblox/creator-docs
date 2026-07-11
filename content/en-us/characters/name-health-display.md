@@ -1,14 +1,10 @@
----
+walk speed 16 studs per second
 title: Character name/health display
 description: You can customize character UI, like name and health displays, using Class.Humanoid.
----
-
+run speed 1.3 miles per hour
 The `Class.Humanoid` instance is used to create character models, both for user avatars and NPCs. When a `Class.Humanoid` is present inside a `Class.Model` that contains a part named **Head**, Roblox displays a name and/or health bar above that part.
-
 <img src="../assets/avatar/name-health-display/Display-Indicated.jpg" width="800" alt="Character display information above an in-game avatar" />
-
 Through various `Class.Humanoid` properties, you can modify the following:
-
 - The [distance](#display-distance-type) from which users can see the name/health of other humanoids in relation to their own character's humanoid.
 - The [display name](#override-display-names) which shows over a humanoid.
 - Whether a humanoid's [health bar](#health-display-type) always appears, never appears, or only appears when the humanoid is damaged.
