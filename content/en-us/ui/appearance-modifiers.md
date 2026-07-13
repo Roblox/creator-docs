@@ -52,7 +52,6 @@ To set a gradient's color sequence:
    <img src="../assets/studio/general/ColorSequence-Red-White.png" width="628" alt="Color sequence popup from red to white" />
 
 1. If needed, you can:
-
    - Add another keypoint by clicking anywhere on the graph.
    - Drag an existing keypoint to a new position, or select a keypoint and enter a specific time value through the **Time** input.
    - Delete a keypoint by selecting it and clicking the **Delete** button.
@@ -75,10 +74,9 @@ To adjust a gradient's transparency across its range:
 
 1. Click and drag any keypoint around, or select a keypoint and enter a specific time/value combination through the **Time** and **Value** inputs.
 
-	 <img src="../assets/studio/general/NumberSequence-0-1.png" width="828" alt="Number sequence popup from 0 to 1" />
+   <img src="../assets/studio/general/NumberSequence-0-1.png" width="828" alt="Number sequence popup from 0 to 1" />
 
 1. If needed, you can:
-
    - Add another keypoint by clicking anywhere on the graph.
    - Delete a keypoint by selecting it and clicking the **Delete** button.
    - Reset the sequence by clicking the **Reset** button.
@@ -312,8 +310,6 @@ The `Class.UICorner` instance applies deformation to the corners of its parent `
 
 You can also control **individual corners** through the `Class.UICorner.TopLeftRadius|TopLeftRadius`, `Class.UICorner.TopRightRadius|TopRightRadius`, `Class.UICorner.BottomRightRadius|BottomRightRadius`, and `Class.UICorner.BottomLeftRadius|BottomLeftRadius` properties.
 
-<BetaAlert betaName="New UI Capabilities" leadIn="The ability to set individual corners is currently in beta. Enable the capability through " leadOut=". During this Studio beta period, you cannot publish live games that use individually rounded UI corners." components={props.components} />
-
 <figure>
 	<img src="../assets/ui/ui-objects/UICorner-Mixed-1.png" width="392" />
 	<figcaption>`Class.UICorner.TopLeftRadius|TopLeftRadius` = `(0, 0)`<br />`Class.UICorner.TopRightRadius|TopRightRadius` = `(0, 48)`<br />`Class.UICorner.BottomRightRadius|BottomRightRadius` = `(0, 48)`<br />`Class.UICorner.BottomLeftRadius|BottomLeftRadius` = `(0, 0)`</figcaption>
@@ -339,8 +335,6 @@ A `Class.UIPadding` object applies top, bottom, left, and/or right padding to th
 </GridContainer>
 
 ## Shadow
-
-<BetaAlert betaName="New UI Capabilities" leadIn="This feature is currently in beta. Enable it through " leadOut=". During this Studio beta period, you cannot publish live games that use UI shadows." components={props.components} />
 
 A `Class.UIShadow` object renders a drop shadow behind its parent UI instance. Key features include:
 

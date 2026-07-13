@@ -9,8 +9,7 @@ The Scene Analysis tool provides a suite of views in Roblox Studio that give you
 
 ## Enable Scene Analysis
 
-1. Enable **Scene Analysis** in **File** > **Beta Features**.
-1. In the menu bar, select **Window** > **Performance Summary** > **Scene Analysis**.
+In the menu bar, select **Window** > **Performance Summary** > **Scene Analysis**.
 
 ## Use Scene Analysis
 
