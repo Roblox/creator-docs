@@ -1261,78 +1261,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-  - name: Player:GetCameraState
-    summary: |
-      Returns a dictionary containing the player's current camera state.
-    description: |
-      Returns a dictionary containing information about the player's current
-      camera state. This method requires
-      [Server Authority](../../../projects/server-authority/) to be enabled in
-      the game. The dictionary contains the following fields:
-
-      <table>
-        <thead>
-          <tr>
-            <th>Key</th>
-            <th>Value Type</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>CFrame</code></td>
-            <td><code>Datatype.CFrame</code></td>
-            <td>The current <code>Class.Camera.CFrame|CFrame</code> of the player's camera.</td>
-          </tr>
-          <tr>
-            <td><code>FieldOfView</code></td>
-            <td>number</td>
-            <td>The current <code>Class.Camera.FieldOfView|FieldOfView</code> of the player's camera in degrees.</td>
-          </tr>
-          <tr>
-            <td><code>ViewportSize</code></td>
-            <td><code>Datatype.Vector2</code></td>
-            <td>The current <code>Class.Camera.ViewportSize|ViewportSize</code> of the player's camera in pixels.</td>
-          </tr>
-        </tbody>
-      </table>
-
-      On the client, this method can only be called on the
-      `Class.Players.LocalPlayer`. On the server, it can be called on any
-      `Class.Player` object to retrieve their replicated camera state.
-
-      The `CFrame` field is replicated as part of the player's input stream,
-      meaning it is synchronized with other inputs such as movement and actions.
-      The `FieldOfView` and `ViewportSize` fields use standard client-to-server
-      property replication which is not synchronized with input and may update
-      at a different cadence.
-
-      ```lua
-      local Players = game:GetService("Players")
-
-      local player = Players.LocalPlayer
-      local cameraState = player:GetCameraState()
-
-      print(cameraState.CFrame)
-      print(cameraState.FieldOfView)
-      print(cameraState.ViewportSize)
-      ```
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Dictionary
-        summary: |
-          A dictionary containing `Class.Camera.CFrame|CFrame`,
-          `Class.Camera.FieldOfView|FieldOfView`, and
-          `Class.Camera.ViewportSize|ViewportSize` values.
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Safe
-    capabilities:
-      - Players
-    simulationAccess: true
   - name: Player:GetFriendsOnline
     summary: |
       Returns a dictionary of online friends.
@@ -1823,9 +1751,9 @@ methods:
   - name: Player:IsFriendsWith
     summary: |
       Checks whether a player is a friend of the user with the given
+      `Class.Player.UserId`.
     description: ''
-    code_samples:
-      - Player-IsFriendsWith1
+    code_samples: []
     parameters:
       - name: userId
         type: User
@@ -2133,8 +2061,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
-      This method is deprecated. Do not use it for new work.
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities:

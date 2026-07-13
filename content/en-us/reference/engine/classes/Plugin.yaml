@@ -674,24 +674,15 @@ methods:
     capabilities: []
   - name: Plugin:PromptForExistingAssetId
     summary: |
-      Opens a window in Roblox Studio that prompts the user to select an
-      existing `Enum.AssetType.Animation` asset. The `assetType` parameter must
-      be `Animation`; other values are not supported and cause an error.
-    description: |
-      Opens a window in Roblox Studio that prompts the user to select an
-      existing animation asset from the user's inventory. Pass `Animation` as
-      the `assetType` argument.
-
-      Returns the selected animation asset ID as an `int64`, or `-1` if the user
-      closes the dialog without selecting an asset. If `assetType` is not
-      `Animation`, this method errors.
+      Opens a window in Roblox Studio which prompts the user to select an asset
+      based on the `assetType` specified.
+    description: ''
     code_samples: []
     parameters:
       - name: assetType
         type: string
         default:
-        summary: |
-          The asset type to browse. Only `Animation` is supported.
+        summary: ''
     returns:
       - type: int64
         summary: ''
@@ -703,24 +694,18 @@ methods:
     capabilities: []
   - name: Plugin:PromptForExistingAssetIdAsync
     summary: |
-      Opens a window in Roblox Studio that prompts the user to select an
-      existing `Enum.AssetType.Animation` asset. The `assetType` parameter must
-      be `Animation`; other values are not supported and cause an error.
+      Opens a window in Roblox Studio which prompts the user to select an asset
+      based on the `assetType` specified.
     description: |
-      Opens a window in Roblox Studio that prompts the user to select an
-      existing animation asset from the user's inventory. Pass `Animation` as
-      the `assetType` argument.
-
-      Returns the selected animation asset ID as an `int64`, or `-1` if the user
-      closes the dialog without selecting an asset. If `assetType` is not
-      `Animation`, this method errors.
+      Opens a window in Roblox Studio which prompts the user to select an asset
+      based on the `assetType` specified. Returns what asset ID was selected, or
+      `-1` if the window was closed.
     code_samples: []
     parameters:
       - name: assetType
         type: string
         default:
-        summary: |
-          The asset type to browse. Only `Animation` is supported.
+        summary: ''
     returns:
       - type: int64
         summary: ''

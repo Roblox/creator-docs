@@ -26,9 +26,7 @@ description: |
     `Class.MeshPart`.
   - `Class.SurfaceGui` to apply an `Class.ImageLabel` or `Class.ImageButton` to
     an in-experience 3D object.
-code_samples:
-  - Changing-Decal-Texture
-  - Fading-Decal
+code_samples: []
 inherits:
   - FaceInstance
 descendants:

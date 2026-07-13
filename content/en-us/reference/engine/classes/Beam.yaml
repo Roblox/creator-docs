@@ -329,20 +329,8 @@ properties:
     capabilities:
       - Basic
   - name: Beam.LocalTransparencyModifier
-    summary: |
-      Determines a multiplier for `Class.Beam.Transparency` that is only visible
-      to the local client.
-    description: |
-      The `LocalTransparencyModifier` property is a multiplier applied to the
-      beam's `Class.Beam.Transparency|Transparency` that is only visible to the
-      local client. It does not replicate from client to server and is useful
-      for when a beam should not render for a specific client.
-
-      Uses the same formula as `Class.BasePart.LocalTransparencyModifier`.
-
-      A value of `0` (default) has no effect on the beam's transparency. A value
-      of `1` makes the beam completely invisible to the local client regardless
-      of its `Class.Beam.Transparency|Transparency` value.
+    summary: ''
+    description: ''
     code_samples: []
     type: float
     tags:

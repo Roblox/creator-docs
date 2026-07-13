@@ -5722,11 +5722,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/SizeConstraint.yaml
         ignoreTranslation: true
-      - title: SlimTintMode
-        path: /reference/engine/enums/SlimTintMode
-        type: engineapi
-        source: /reference/engine/enums/SlimTintMode.yaml
-        ignoreTranslation: true
       - title: SolverConvergenceMetricType
         path: /reference/engine/enums/SolverConvergenceMetricType
         type: engineapi

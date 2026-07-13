@@ -110,8 +110,7 @@ properties:
       described in the **X** and **Y** components. The inset applied to GUI
       elements (such as from the top bar) is accounted for in the position. For
       the mouse wheel input, the **Z** component describes whether the wheel was
-      moved forward (positive number), backwards (negative number), or not at
-      all (`0`).
+      moved forward (`1`), backwards (`-1`), or not at all (`0`).
 
       Note that an `Class.InputObject` corresponding to
       `Enum.UserInputType.MouseButton1` (left click) and

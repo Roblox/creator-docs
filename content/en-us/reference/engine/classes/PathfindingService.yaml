@@ -16,8 +16,7 @@ description: |
 
   See [Pathfinding](../../../characters/pathfinding.md) for details on
   implementing character pathfinding.
-code_samples:
-  - using-the-pathfinding-service
+code_samples: []
 inherits:
   - Instance
 descendants: []
@@ -198,8 +197,7 @@ methods:
               </tr>
           </tbody>
       </table>
-    code_samples:
-      - pathfinding---creating-path-with-params
+    code_samples: []
     parameters:
       - name: agentParameters
         type: Dictionary
