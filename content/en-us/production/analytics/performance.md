@@ -11,7 +11,7 @@ The **Performance** dashboard provides up-to-the-minute client and server metric
 
 To access the performance dashboard, you must either be the game owner or have [analytics group permissions](../../production/analytics/analytics-dashboard.md#grant-group-permission).
 
-1. Navigate to the [Creations](https://create.roblox.com/dashboard/creations) page on the **Creator Hub**.
+1. In the **Creator Hub**, navigate to the [Creations](https://create.roblox.com/dashboard/creations) page.
 2. In the upper-left corner, select your account or the group that owns the game.
 3. Select the game.
 4. In the **Monitoring** dropdown, select **Performance**.
@@ -84,6 +84,10 @@ The **Client** tab includes the following charts, all of which are broken down b
 			<td>Client memory usage percentage</td>
 			<td>Line graph showing percentage of available device memory the client is using. For example, if the Android line approaches 100%, the majority of Android devices running your game are at risk of running out of memory and crashing.</td>
 		</tr>
+		<tr>
+			<td>Client CPU time</td>
+			<td>Stacked area chart showing milliseconds (ms) of processing time per frame. You want your client CPU time as low as possible, as it directly impacts your frame rates. To hit a client frame rate of 60, your CPU time must be below 16 ms.</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -109,7 +113,7 @@ The **Server** tab includes the following charts:
 	<tbody>
 		<tr>
 			<td>Server CPU time</td>
-			<td>Stacked area chart showing milliseconds (ms) of processing time per frame. Values over 16.67 ms are highly undesirable; they can cause server frame rates to drop below 60. See [Server Compute](../../performance-optimization/identify.md#server-compute).</td>
+			<td>Stacked area chart showing milliseconds (ms) of processing time per frame. To hit a server frame rate of 60, your CPU time must be below 16 ms. See [Server Compute](../../performance-optimization/identify.md#server-compute).</td>
 		</tr>
 		<tr>
 			<td>Server frame rate</td>

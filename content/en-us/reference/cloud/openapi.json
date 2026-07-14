@@ -81106,14 +81106,6 @@
             "description": "The creator target Id.",
             "type": "integer"
           },
-          "price": {
-            "format": "int64",
-            "description": "The Price for onSale asset\r\nNote: This is now considered deprecated in favor of PriceConfiguration.",
-            "type": "integer"
-          },
-          "priceConfiguration": {
-            "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.PriceConfigurationModel"
-          },
           "isArchived": {
             "description": "Is the asset archived.",
             "type": "boolean"
@@ -81121,9 +81113,6 @@
           "assetType": {
             "description": "Type of the asset.",
             "type": "string"
-          },
-          "releaseConfiguration": {
-            "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.ReleaseConfigurationResponseModel"
           },
           "created": {
             "format": "date-time",
@@ -81158,49 +81147,6 @@
           "name": {
             "description": "The asset name.",
             "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.ItemConfiguration.Api.PriceConfigurationModel": {
-        "description": "Defines the configuration options for an items price.",
-        "type": "object",
-        "properties": {
-          "priceInRobux": {
-            "format": "int64",
-            "description": "Gets or sets the standard price of the item in Robux.",
-            "type": "integer"
-          },
-          "premiumDiscountPercentage": {
-            "format": "int32",
-            "description": "Gets or sets the discount rate on the price of the item that is given to premium users\r\nShould not be used while applying a PremiumPriceInRobux.",
-            "type": "integer"
-          },
-          "premiumPriceInRobux": {
-            "format": "int64",
-            "description": "Gets or sets the price of the item in Robux that applies only to premium users\r\nShould not be used while applying a PremiumDiscountPercentage.",
-            "type": "integer"
-          },
-          "priceOffset": {
-            "format": "int64",
-            "description": "Gets or sets the price offset of the item in Robux above the price floor.",
-            "type": "integer"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.ItemConfiguration.Api.ReleaseConfigurationResponseModel": {
-        "description": "Defines the configuration options associated with releasing an item.",
-        "type": "object",
-        "properties": {
-          "saleAvailabilityLocations": {
-            "description": "Get or sets the sale availability locations list.",
-            "type": "array",
-            "items": {
-              "description": " ['Undefined' = 0, 'Catalog' = 1, 'AllUniverses' = 2, 'MyUniverses' = 3]",
-              "enum": ["Undefined", "Catalog", "AllUniverses", "MyUniverses"],
-              "type": "string"
-            }
           }
         },
         "additionalProperties": false
