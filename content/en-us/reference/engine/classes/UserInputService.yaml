@@ -1432,7 +1432,8 @@ methods:
           specified VR device.
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      Use `Class.VRService:GetUserCFrame()` instead.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -2468,7 +2469,8 @@ events:
           part that moved.
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      Use `Class.VRService.UserCFrameChanged` instead.
     security: None
     capabilities:
       - Input

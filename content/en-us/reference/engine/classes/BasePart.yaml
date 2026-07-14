@@ -45,7 +45,8 @@ description: |
   - If parented to a `Class.Tool` and given the name **Handle**, a
     `Class.BasePart` can be held by characters. See
     [In-Experience Tools](../../../players/tools.md).
-code_samples: []
+code_samples:
+  - SmoothDamp-CFrame
 inherits:
   - PVInstance
 descendants:

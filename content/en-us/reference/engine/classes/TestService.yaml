@@ -490,7 +490,8 @@ methods:
       If `condition` is `true`, prints `Check passed:` followed by `description`
       to the output in blue text. Otherwise, prints `Check failed:` followed by
       `description` in red text.
-    code_samples: []
+    code_samples:
+      - TestService-Check1
     parameters:
       - name: condition
         type: boolean
@@ -521,7 +522,8 @@ methods:
       Prints `Test checkpoint:` followed by a string to the output in blue text.
     description: |
       Prints `Test checkpoint:` followed by `text` to the output in blue text.
-    code_samples: []
+    code_samples:
+      - TestService-Checkpoint1
     parameters:
       - name: text
         type: string
@@ -548,7 +550,8 @@ methods:
       Prints `Testing Done` to the output in blue text.
     description: |
       Prints `Testing Done` to the output in blue text.
-    code_samples: []
+    code_samples:
+      - TestService-Done1
     parameters: []
     returns:
       - type: ()
@@ -564,7 +567,8 @@ methods:
     description: |
       Prints a red error message (`description`) to the output, prefixed by
       `TestService: `.
-    code_samples: []
+    code_samples:
+      - TestService-Error1
     parameters:
       - name: description
         type: string
@@ -637,7 +641,8 @@ methods:
       Prints `TestService:` followed by a string to the output in blue text.
     description: |
       Prints `TestService:` followed by `text` to the output in blue text.
-    code_samples: []
+    code_samples:
+      - TestService-Message1
     parameters:
       - name: text
         type: string
@@ -675,7 +680,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - InternalTest
   - name: TestService:Require
     summary: |
       Prints whether a condition is true along with a description string.
@@ -683,7 +689,8 @@ methods:
       If `condition` is `true`, prints `Require passed:` followed by
       `description` to the output in blue text. Otherwise prints
       `Require failed. Test ended:` followed by `description` in red text.
-    code_samples: []
+    code_samples:
+      - TestService-Require1
     parameters:
       - name: condition
         type: boolean
@@ -721,7 +728,8 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      Use `Class.TestService:RunAsync()|RunAsync()` instead.
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
@@ -774,7 +782,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - InternalTest
   - name: TestService:Warn
     summary: |
       Prints if a condition is `true`, otherwise prints a warning.
@@ -782,7 +791,8 @@ methods:
       If `condition` is `true`, prints `Warning passed:` followed by
       `description` to the output in blue text. Otherwise prints `Warning:`
       followed by `description` to the output in yellow text.
-    code_samples: []
+    code_samples:
+      - TestService-Warn1
     parameters:
       - name: condition
         type: boolean

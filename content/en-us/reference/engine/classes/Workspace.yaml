@@ -402,7 +402,8 @@ properties:
       - Hidden
       - NotReplicated
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This property is discontinued.
     security:
       read: None
       write: PluginSecurity
@@ -1348,7 +1349,8 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method is deprecated. Do not use it for new work.
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
@@ -1633,7 +1635,8 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method is deprecated. Do not use it for new work.
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []

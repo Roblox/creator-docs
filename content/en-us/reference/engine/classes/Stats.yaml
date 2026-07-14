@@ -161,7 +161,8 @@ properties:
       - ReadOnly
       - NotReplicated
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      Use `Class.Stats.HeartbeatTime` instead.
     security:
       read: None
       write: None
@@ -333,7 +334,8 @@ properties:
       - ReadOnly
       - NotReplicated
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      Use `Class.Stats.PhysicsStepTime` instead.
     security:
       read: None
       write: None

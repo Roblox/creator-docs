@@ -161,7 +161,8 @@ methods:
       is arranged in the order of waypoints from the path start to path end.
 
       If a path could not be computed, this function will return an empty array.
-    code_samples: []
+    code_samples:
+      - Path-GetWaypoints1
     parameters: []
     returns:
       - type: Array

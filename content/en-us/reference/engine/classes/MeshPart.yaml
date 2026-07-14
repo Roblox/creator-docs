@@ -28,8 +28,8 @@ properties:
       Determines whether to render both faces of polygons in the mesh.
     description: |
       This property determines whether to render both faces of polygons in the
-      mesh. It is only changeable in Studio. This is useful for meshes that are
-      typically modeled as "cards" such as a leaf, hair, or cloth.
+      mesh. It defaults to `false`. This is useful for meshes that are typically
+      modeled as "cards" such as a leaf, hair, or cloth.
     code_samples: []
     type: boolean
     tags: []

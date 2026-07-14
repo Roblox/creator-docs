@@ -142,6 +142,28 @@ properties:
     capabilities:
       - Input
     simulationAccess: true
+  - name: InputAction.PreferredBinding
+    summary: |
+      The `Class.InputBinding` best matching the player's current input device.
+    description: |
+      A read-only reference to the `Class.InputBinding` child that matches the
+      player's current input device using `PreferredInput`.
+    code_samples: []
+    type: InputBinding
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities:
+      - Input
   - name: InputAction.Type
     summary: |
       Specifies what type of input value the action is expecting.

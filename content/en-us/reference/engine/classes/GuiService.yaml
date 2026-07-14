@@ -299,7 +299,8 @@ properties:
       `Class.GuiObject.SelectionLost|SelectionLost` events. If you would like to
       determine when this property changes without tracking these events for all
       GUI elements, you can use the `Class.Object.Changed|Changed` event.
-    code_samples: []
+    code_samples:
+      - printing-when-gamepad-selection-changes
     type: GuiObject
     tags: []
     deprecation_message: ''
@@ -685,7 +686,8 @@ methods:
       `Class.GuiService:InspectPlayerFromUserId()|InspectPlayerFromUserId()`
       which allows the avatar inspection menu to appear showing the user that
       has the given `Class.Player.UserId|UserId`.
-    code_samples: []
+    code_samples:
+      - opening-an-inspect-menu-with-a-humanoiddescription
     parameters:
       - name: humanoidDescription
         type: Instance
@@ -723,7 +725,8 @@ methods:
       `Class.GuiService:InspectPlayerFromHumanoidDescription()|InspectPlayerFromHumanoidDescription()`
       which allows you to bring up the avatar inspection menu showing the assets
       listed in a `Class.HumanoidDescription` object.
-    code_samples: []
+    code_samples:
+      - opening-the-inspect-menu-for-a-userid
     parameters:
       - name: userId
         type: User

@@ -120,7 +120,8 @@ properties:
     tags:
       - Hidden
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This property is deprecated. Do not use it for new work.
     security:
       read: None
       write: None
@@ -175,7 +176,8 @@ properties:
     tags:
       - Hidden
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This property is deprecated. Do not use it for new work.
     security:
       read: None
       write: None
@@ -196,7 +198,8 @@ properties:
     tags:
       - Hidden
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This property is deprecated. Do not use it for new work.
     security:
       read: None
       write: None

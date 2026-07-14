@@ -27,7 +27,8 @@ properties:
     type: boolean
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This property is deprecated. Do not use it for new work.
     security:
       read: PluginSecurity
       write: PluginSecurity
