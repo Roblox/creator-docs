@@ -3,15 +3,17 @@ title: Rate limits and throttling
 description: Covers rate limits for the Open Cloud v2 Data Stores API.
 ---
 
-The [Data Stores API](/cloud/reference/DataStore) enforces two types of throttling: **requests per minute** and **throughput**. Each game allows a certain number of requests per minute and a certain amount of data per minute. These limits are enforced for the universe regardless of the number of API keys used.
+<Alert severity="info">
+Starting **July 29, 2026**, the below limits apply only to [Open Cloud v1](/cloud/reference/features/storage#Datastores_ListDatastoresAsync) endpoints. For [Open Cloud v2](/cloud/reference/features/storage#Cloud_ListDataStores) rate limits, see [Data store error codes and limits](../../../cloud-services/data-stores/error-codes-and-limits.md#access-limits).
+</Alert>
+
+The [Data Stores API](/cloud/reference/features/storage) enforces two types of throttling: **requests per minute** and **throughput**. Each game allows a certain number of requests per minute and a certain amount of data per minute. These limits are enforced for the universe (experience / game) regardless of the number of API keys used.
 
 Unlike the Engine API, these limits do **not** scale based on user count. Exceeding either one causes the endpoint to return `429 Too Many Requests`.
 
-<Alert severity="info">
-Data store rate limits for the [Open Cloud v1](/reference/cloud/datastores-api/v1) and [Open Cloud v2](/cloud/reference/DataStore) APIs are identical.
-</Alert>
+## Legacy standard data stores throttling limits
 
-## Standard data stores throttling limits
+These limits apply to the legacy `/datastores/v1/` endpoints.
 
 <table>
   <thead>
@@ -73,7 +75,9 @@ Data store rate limits for the [Open Cloud v1](/reference/cloud/datastores-api/v
   </tbody>
 </table>
 
-## Ordered data stores throttling limits
+## Legacy ordered data stores throttling limits
+
+These limits apply to the legacy `/ordered-data-stores/v1/` endpoints.
 
 <table>
   <thead>

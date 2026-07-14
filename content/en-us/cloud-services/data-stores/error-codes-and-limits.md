@@ -478,7 +478,8 @@ Data stores are subject to both <b>experience and server-level limits</b>. Exper
 
 Each experience is allowed a certain number of data store requests based on the data store type, request type, and number of concurrent users. For each data store type and request type, the limit is shared among all listed functions.
 
-Note that `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` consumes from both the read and write request budgets. A single call will decrement both limits.
+- `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` consumes from both the read and write request budgets. A single call will decrement both limits.
+- Game server and Open Cloud **share** a budget; Open Cloud traffic can be throttled by in-experience usage (and vice versa). See [Control rate limits](#control-rate-limits) for further guidance.
 
 <h5>Standard data stores</h5>
 
@@ -486,30 +487,35 @@ Note that `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` consumes from both
   <thead>
     <tr>
       <th>Request type</th>
-      <th>Functions</th>
-      <th>Requests per minute</th>
+      <th>Game server API</th>
+      <th>Open Cloud API</th>
+      <th>Shared limits (requests per minute)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><b>Read</b></td>
       <td>`Class.DataStore:GetAsync()|GetAsync()`<br></br>`Class.DataStore:GetVersionAsync()|GetVersionAsync()`<br></br>`Class.DataStore:GetVersionAtTimeAsync()|GetVersionAtTimeAsync()`<br></br>`Class.DataStore:UpdateAsync()|UpdateAsync()`</td>
-      <td>250 + concurrentUsers × 40</td>
+      <td>Get Data Store Entry</td>
+      <td>300 + concurrentUsers × 40</td>
     </tr>
     <tr>
       <td><b>Write</b></td>
       <td>`Class.DataStore:SetAsync()|SetAsync()`<br></br>`Class.DataStore:IncrementAsync()|IncrementAsync()`<br></br>`Class.DataStore:UpdateAsync()|UpdateAsync()`</td>
-      <td>250 + concurrentUsers × 20</td>
+      <td>Create, Update, Increment Data Store Entry</td>
+      <td>300 + concurrentUsers × 20</td>
     </tr>
     <tr>
       <td><b>List</b></td>
       <td>`Class.DataStoreService:ListDataStoresAsync()|ListDataStoresAsync()`<br></br>`Class.DataStore:ListKeysAsync()|ListKeysAsync()`<br></br>`Class.DataStore:ListVersionsAsync()|ListVersionsAsync()`</td>
-      <td>10 + concurrentUsers × 2</td>
+      <td>List Data Stores, List Data Store Entries, List Data Store Entry Revisions</td>
+      <td>300 + concurrentUsers × 2</td>
     </tr>
     <tr>
       <td><b>Remove</b></td>
       <td>`Class.DataStore:RemoveAsync()|RemoveAsync()`</td>
-      <td>100 + concurrentUsers × 40</td>
+      <td>Delete Data Store Entry, Delete Data Store, Undelete Data Store</td>
+      <td>300 + concurrentUsers × 40</td>
     </tr>
   </tbody>
   </table>
@@ -520,33 +526,271 @@ Note that `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` consumes from both
   <thead>
     <tr>
       <th>Request type</th>
-      <th>Functions</th>
-      <th>Requests per minute</th>
+      <th>Game server API</th>
+      <th>Open Cloud API</th>
+      <th>Shared limits (requests per minute)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><b>Read</b></td>
       <td>`Class.OrderedDataStore:GetAsync()|GetAsync()`<br></br>`Class.OrderedDataStore:UpdateAsync()|UpdateAsync()`</td>
-      <td>250 + concurrentUsers × 40</td>
+      <td>Get Ordered Data Store Entry</td>
+      <td>300 + concurrentUsers × 40</td>
     </tr>
     <tr>
       <td><b>Write</b></td>
       <td>`Class.OrderedDataStore:SetAsync()|SetAsync()`<br></br>`Class.OrderedDataStore:IncrementAsync()|IncrementAsync()`<br></br>`Class.OrderedDataStore:UpdateAsync()|UpdateAsync()`</td>
-      <td>250 + concurrentUsers × 20</td>
+      <td>Create, Update, Increment Ordered Data Store Entry</td>
+      <td>300 + concurrentUsers × 20</td>
     </tr>
     <tr>
       <td><b>List</b></td>
       <td>`Class.OrderedDataStore:GetSortedAsync()|GetSortedAsync()`</td>
-      <td>100 + concurrentUsers × 2</td>
+      <td>List Ordered Data Store Entries</td>
+      <td>300 + concurrentUsers × 2</td>
     </tr>
     <tr>
       <td><b>Remove</b></td>
       <td>`Class.OrderedDataStore:RemoveAsync()|RemoveAsync()`</td>
-      <td>100 + concurrentUsers × 40</td>
+      <td>Delete Ordered Data Store Entry</td>
+      <td>300 + concurrentUsers × 40</td>
     </tr>
   </tbody>
   </table>
+
+<h5 id="control-rate-limits">Control rate limits</h5>
+
+Because Open Cloud and game server requests are shared, it is important to independently control how much each can consume from the budget.
+
+<h6>Game server</h6>
+
+Individual servers have built-in limits, as described above. Use a combination of `Class.DataStoreService:SetRateLimitForRequestType()|SetRateLimitForRequestType()` and `Class.DataStoreService:GetRequestBudgetForRequestType()|GetRequestBudgetForRequestType()` to maintain fine-grained control over individual servers' contribution to the total budget.
+
+<h6>Open Cloud</h6>
+
+Open Cloud requests require an external rate limiting solution. We recommend one of the following approaches:
+
+- (Simple) Add a short timeout after each request, especially if calling the same API in a continuous loop. Set this timeout equal to `60 / (desired budget consumption per minute)` seconds, as an upper bound. Note that this approach does not allow requests to be sent in bursts.
+- (Robust) Implement a local rate limiter using the leaky bucket strategy.
+
+The following Node.js code samples include reference implementations.
+
+<Tabs>
+  <TabItem key = "1" label="Timeout rate limiting">
+
+```js
+const apiKey = process.env.API_KEY;
+if (!apiKey) {
+    throw new Error('The API_KEY environment variable is not set.');
+}
+
+const apiHeaderKey = 'x-api-key';
+
+const universeId = '';
+const dataStoreId = 'Inventory';
+
+const baseUrl = 'https://apis.roblox.com/cloud/v2/';
+
+// --- Per-operation rate limiting config (requests per minute) ---
+const LIST_RATE_PER_MIN = 60;
+const GET_RATE_PER_MIN = 120;
+const UPDATE_RATE_PER_MIN = 60;
+
+// Upper-bound spacing per operation: 60 / (requests per min) seconds.
+const LIST_INTERVAL_MS = (60 / LIST_RATE_PER_MIN) * 1000;
+const GET_INTERVAL_MS = (60 / GET_RATE_PER_MIN) * 1000;
+const UPDATE_INTERVAL_MS = (60 / UPDATE_RATE_PER_MIN) * 1000;
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+// Performs the request, then waits this operation's own interval before returning.
+async function throttledFetch(url, options, intervalMs) {
+    const response = await fetch(url, options);
+    await sleep(intervalMs);
+    return response;
+}
+
+async function listEntries(universe, dataStore) {
+    const listPath = `universes/${universe}/data-stores/${dataStore}/entries`;
+    const url = baseUrl + listPath;
+    const response = await throttledFetch(url, {
+        headers: { [apiHeaderKey]: apiKey }
+    }, LIST_INTERVAL_MS);
+    return response.json();
+}
+
+async function getEntry(path) {
+    const url = baseUrl + path;
+    const response = await throttledFetch(url, {
+        headers: { [apiHeaderKey]: apiKey }
+    }, GET_INTERVAL_MS);
+    return response.json();
+}
+
+async function updateEntry(path, payload) {
+    const url = baseUrl + path;
+    const response = await throttledFetch(url, {
+        method: 'PATCH',
+        headers: {
+            [apiHeaderKey]: apiKey,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload) // The body must be a string
+    }, UPDATE_INTERVAL_MS);
+    return response;
+}
+
+(async () => {
+    try {
+        const entries = await listEntries(universeId, dataStoreId);
+
+        for (const entry of entries.dataStoreEntries) {
+            const path = entry.path;
+            console.log(`\nProcessing entry: ${path}`);
+
+            const currentData = await getEntry(path);
+
+            currentData.value.currency += 10;
+
+            const payload = { value: currentData.value };
+
+            const updateResponse = await updateEntry(path, payload);
+
+            console.log(`Status: ${updateResponse.status}`);
+            console.log(`Response: ${await updateResponse.text()}`);
+        }
+    } catch (error) {
+        console.error('An error occurred during execution:', error);
+    }
+})();
+```
+
+  </TabItem>
+  <TabItem key = "2" label="Leaky bucket rate limiting">
+
+```js
+const apiKey = process.env.API_KEY;
+if (!apiKey) {
+    throw new Error('The API_KEY environment variable is not set.');
+}
+
+const apiHeaderKey = 'x-api-key';
+
+const universeId = '';
+const dataStoreId = 'Inventory';
+
+const baseUrl = 'https://apis.roblox.com/cloud/v2/';
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+// --- Leaky bucket rate limiter ---
+// `capacity`      : max burst size (how full the bucket can get).
+// `leakRatePerSec`: steady drain rate == sustained requests/sec allowed.
+class LeakyBucket {
+    constructor({ capacity, leakRatePerSec }) {
+        this.capacity = capacity;
+        this.leakRatePerSec = leakRatePerSec;
+        this.level = 0;
+        this.lastLeak = Date.now();
+        // Serialize acquisitions so concurrent callers queue fairly.
+        this.tail = Promise.resolve();
+    }
+
+    _leak() {
+        const now = Date.now();
+        const elapsedSec = (now - this.lastLeak) / 1000;
+        this.level = Math.max(0, this.level - elapsedSec * this.leakRatePerSec);
+        this.lastLeak = now;
+    }
+
+    // Resolves once there is room in the bucket for one more request.
+    acquire() {
+        const attempt = this.tail.then(async () => {
+            this._leak();
+            while (this.level + 1 > this.capacity) {
+                const overflow = this.level + 1 - this.capacity;
+                const waitMs = (overflow / this.leakRatePerSec) * 1000;
+                await sleep(waitMs);
+                this._leak();
+            }
+            this.level += 1;
+        });
+        // Keep the chain alive even if a caller rejects.
+        this.tail = attempt.catch(() => {});
+        return attempt;
+    }
+}
+
+// --- One bucket per operation ---
+// Example: list bursts of 5 @ 1/sec, get bursts of 10 @ 2/sec, update bursts of 5 @ 1/sec.
+const listBucket = new LeakyBucket({ capacity: 5, leakRatePerSec: 1 });
+const getBucket = new LeakyBucket({ capacity: 10, leakRatePerSec: 2 });
+const updateBucket = new LeakyBucket({ capacity: 5, leakRatePerSec: 1 });
+
+// Waits for the given bucket's capacity before each request.
+async function rateLimitedFetch(bucket, url, options) {
+    await bucket.acquire();
+    return fetch(url, options);
+}
+
+async function listEntries(universe, dataStore) {
+    const listPath = `universes/${universe}/data-stores/${dataStore}/entries`;
+    const url = baseUrl + listPath;
+    const response = await rateLimitedFetch(listBucket, url, {
+        headers: { [apiHeaderKey]: apiKey }
+    });
+    return response.json();
+}
+
+async function getEntry(path) {
+    const url = baseUrl + path;
+    const response = await rateLimitedFetch(getBucket, url, {
+        headers: { [apiHeaderKey]: apiKey }
+    });
+    return response.json();
+}
+
+async function updateEntry(path, payload) {
+    const url = baseUrl + path;
+    const response = await rateLimitedFetch(updateBucket, url, {
+        method: 'PATCH',
+        headers: {
+            [apiHeaderKey]: apiKey,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload) // The body must be a string
+    });
+    return response;
+}
+
+(async () => {
+    try {
+        const entries = await listEntries(universeId, dataStoreId);
+
+        for (const entry of entries.dataStoreEntries) {
+            const path = entry.path;
+            console.log(`\nProcessing entry: ${path}`);
+
+            const currentData = await getEntry(path);
+
+            currentData.value.currency += 10;
+
+            const payload = { value: currentData.value };
+
+            const updateResponse = await updateEntry(path, payload);
+
+            console.log(`Status: ${updateResponse.status}`);
+            console.log(`Response: ${await updateResponse.text()}`);
+        }
+    } catch (error) {
+        console.error('An error occurred during execution:', error);
+    }
+})();
+```
+
+  </TabItem>
+</Tabs>
 
 <h4>Server limits</h4>
 
@@ -564,7 +808,7 @@ The following **default rate limits** apply if the API is not called:
     <tr>
       <th>Request type</th>
       <th>`DataStoreRequestType` Enum</th>
-      <th>Functions</th>
+      <th>Game server API</th>
       <th>Requests per minute</th>
     </tr>
   </thead>
@@ -609,7 +853,7 @@ The following **default rate limits** apply if the API is not called:
     <tr>
       <th>Request type</th>
       <th>`DataStoreRequestType` Enum</th>
-      <th>Functions</th>
+      <th>Game server API</th>
       <th>Requests per minute</th>
     </tr>
   </thead>
@@ -721,16 +965,22 @@ Roblox examines the usage of quota associated with the key over the last 60 seco
 <thead>
   <tr>
     <th>Request type</th>
+    <th>Game server API</th>
+    <th>Open Cloud API</th>
     <th>Limit</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td>Read</td>
+    <td>`Class.DataStore:GetAsync()|GetAsync()`<br></br>`Class.DataStore:GetVersionAsync()|GetVersionAsync()`<br></br>`Class.DataStore:GetVersionAtTimeAsync()|GetVersionAtTimeAsync()`<br></br>`Class.DataStore:ListVersionsAsync()|ListVersionsAsync()`<br></br>`Class.DataStore:UpdateAsync()|UpdateAsync()`</td>
+    <td>Get Data Store Entry</td>
     <td>25 MB per minute</td>
   </tr>
   <tr>
     <td>Write</td>
+    <td>`Class.DataStore:SetAsync()|SetAsync()`<br></br>`Class.DataStore:IncrementAsync()|IncrementAsync()`<br></br>`Class.DataStore:UpdateAsync()|UpdateAsync()`<br></br>`Class.DataStore:RemoveAsync()|RemoveAsync()`</td>
+    <td>Create, Update, Increment, Remove Data Store Entry</td>
     <td>4 MB per minute</td>
   </tr>
 </tbody>
@@ -739,15 +989,15 @@ Roblox examines the usage of quota associated with the key over the last 60 seco
 In addition to the above throughput limits, Roblox organizes data into partitions based on an internal schema. As a result, when the backend server receives a high volume of requests to the same data store, it can result in further throttling. Regardless of the cause, throttling manifests as either `DatastoreThrottled` or `KeyThrottled` errors, depending on whether the throughput limit was exceeded for a single data store or a key. These error messages apply to both ordered and standard data stores.
 
 <Alert severity="info">
-  For every request, Roblox rounds throughput up to the next kilobyte. For example, if you write 800 bytes and 1.2 KB in two requests, Roblox counts that as 3 KB total throughput (1 KB and 2 KB, respectively).
+For every request, Roblox rounds throughput up to the next kilobyte. For example, if you write 800 bytes and 1.2 KB in two requests, Roblox counts that as 3 KB total throughput (1 KB and 2 KB, respectively).
 </Alert>
 
 ### Storage limits
 
-In the future, to provide a scalable and stable storage experience, data stores will implement an experience-level storage limit on your storage usage.
+To keep storage stable and scalable, data stores use a game-level limit on your storage usage.
 
-This limit will be the sum of a base limit for each of your experiences and a per-user limit based on the number of lifetime users in your experience. A lifetime user is any user who has joined your experience at least once.
+This limit is the sum of a base limit for each game and a per-user limit based on the number of lifetime users in your game. A lifetime user is any user who has joined your game at least once.
 
-The storage limit will be calculated using the formula `Total latest version storage limit = 100 MB + 1 MB * lifetime user count`.
+The storage limit is calculated using the formula `Total latest version storage limit = 500 MB + 1 MB * lifetime user count`.
 
-Any keys that you delete or replace, even if still accessible through version APIs, do not count towards your experience's storage usage. However, entire data stores deleted via the Open Cloud [`DeleteDataStore`](/cloud/reference/DataStore#Cloud_DeleteDataStore) method continue to count towards your storage usage for the duration of their 30-day processing period, until they are permanently deleted.
+Any keys that you delete or replace, even they still accessible through version APIs, do not count towards your experience's storage usage. However, entire data stores deleted via the Open Cloud [`DeleteDataStore`](/cloud/reference/features/storage#Cloud_DeleteDataStore) method continue to count towards your storage usage for the duration of their 30-day processing period, until they are permanently deleted.
