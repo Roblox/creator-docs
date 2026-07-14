@@ -3,6 +3,8 @@ title: Scrolling frames
 description: ScrollingFrames feature built-in scrolling interactivity and are ideal for displaying a lot of information in a confined space.
 ---
 
+import Clipping from '../includes/ui/clipping.md'
+
 A `Class.ScrollingFrame` consists of a customizable **canvas** and **scroll bars** with built‑in scrolling interactivity and different ways to customize how the scrolling works. `Class.ScrollingFrame` is ideal for displaying a lot of information in a confined space and it works well with [list](../ui/list-flex-layouts.md) and [grid](../ui/grid-table-layouts.md) layouts.
 
 <img src="../assets/ui/ui-objects/ScrollingFrame-Example.jpg" width="840" alt="Example ScrollingFrame on the screen containing a tabbed category bar and a list of magical items for the player to consider purchasing." />
@@ -68,6 +70,10 @@ Scroll bar construction consists of three asset properties:
 Each image scales based on the `Class.ScrollingFrame.ScrollBarThickness|ScrollBarThickness` property which changes the width of a vertical scroll bar or the height of a horizontal scroll bar.
 
 Additional visual modifications can be made through the `Class.ScrollingFrame.ScrollBarImageColor3|ScrollBarImageColor3` and `Class.ScrollingFrame.ScrollBarImageTransparency|ScrollBarImageTransparency` properties which tint the bar's image assets and modify its opacity, respectively.
+
+## Clipping
+
+<Clipping components={props.components} />
 
 ## Elasticity
 

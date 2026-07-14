@@ -34,17 +34,17 @@ This publishing advance is dependent on the type of Marketplace item being sold:
 <tbody>
   <tr>
     <td>Classic t-shirt</td>
-    <td>20</td>
+    <td>10</td>
     <td>N/A</td>
   </tr>
   <tr>
     <td>Classic shirt</td>
-    <td>20</td>
+    <td>10</td>
     <td>N/A</td>
   </tr>
   <tr>
     <td>Classic pants</td>
-    <td>20</td>
+    <td>10</td>
     <td>N/A</td>
   </tr>
   <tr>
