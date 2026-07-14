@@ -9,84 +9,31 @@ If you are ready to sell an item and the item meets the requirements below, see 
 
 ## Creator requirements
 
-To upload, publish, and maintain existing content on-sale, Roblox requires users and groups to have [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644), and/or a [Roblox Plus](../production/monetization/roblox-plus.md) or [Premium membership](https://www.roblox.com/premium/membership), depending on if the asset is a 2D or 3D item. If you're a Premium user, you must have an active Premium 1000/2200 membership to keep your 3D Marketplace items on sale after uploading and publishing.
+To upload, publish, and keep existing content on-sale, Roblox requires users and groups to have [government ID verification](../production/publishing/account-verification.md#verify-through-government-id) or a linked [parental account](https://about.roblox.com/parental-controls). In addition, to publish and keep existing content on-sale, Roblox requires a [Roblox Plus](../production/monetization/roblox-plus.md) or [Premium 1000/2200](https://en.help.roblox.com/hc/en-us/articles/360024256251-Roblox-Premium-Membership) membership.
 
-See the following breakdown of the user and group requirements:
+See the following requirements for an individual creator or group:
 
 <table>
 <thead>
   <tr>
-    <th>For 2D items:</th>
-    <th>Creator is able to</th>
-    <th width="40%">Requirements</th>
+    <th>**Creator or group is able to:**</th>
+    <th>**Requirements**</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td rowspan="3">Individually</td>
-    <td>Upload content from Creator Dashboard</td>
-    <td>10 Robux upload fee</td>
+    <td>Upload content from Studio or Creator Dashboard</td>
+    <td><ul><li>ID verification or linked parental account</li><li>80 Robux upload fee</li></ul></td>
   </tr>
   <tr>
     <td>Publish content to the Marketplace</td>
-    <td><ul><li>Roblox Plus or Premium 1000/2200</li><li>10 Robux publishing advance</li></ul></td>
+    <td><ul><li>ID verification or linked parental account</li><li>2-step verification</li><li>10-2500 Robux publishing advance</li><li>Individual creator or group owner needs Roblox Plus or Premium 1000/2200</li></ul></td>
   </tr>
   <tr>
     <td>Keep existing content on-sale</td>
-    <td>Roblox Plus or Premium 1000/2200</td>
-  </tr>
-  <tr>
-    <td rowspan="3">As a Group</td>
-    <td>Upload content from Creator Dashboard</td>
-    <td>10 Robux upload fee</td>
-  </tr>
-  <tr>
-    <td>Publish content to the Marketplace</td>
-    <td>Publishing user needs:<br /><br /><ul><li>Roblox Plus or Premium 1000/2200</li><li>10 Robux publishing advance</li></ul><br /><br />Group owner needs Roblox Plus or Premium 1000/2200</td>
-  </tr>
-  <tr>
-    <td>Keep existing content on-sale</td>
-    <td>Group owner needs Roblox Plus or Premium 1000/2200</td>
+    <td>Individual creator or group owner needs Roblox Plus or Premium 1000/2200</td>
   </tr>
   </tbody>
-</table>
-
-<table>
-<thead>
-  <tr>
-    <th>For 3D items:</th>
-    <th>Creator is able to</th>
-    <th width="40%">Requirements</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td rowspan="3">Individually</td>
-    <td>Upload content from Studio</td>
-    <td><ul><li>ID verification</li><li>300 Robux upload fee</li></ul></td>
-  </tr>
-  <tr>
-    <td>Publish content to the Marketplace</td>
-    <td><ul><li>ID verification</li><li>Roblox Plus or Premium 1000/2200</li><li>600-2500 Robux publishing advance</li></ul></td>
-  </tr>
-  <tr>
-    <td>Keep existing content on-sale</td>
-    <td><ul><li>ID verification</li><li>Roblox Plus or Premium 1000/2200</li></ul></td>
-  </tr>
-  <tr>
-    <td rowspan="3">As a Group</td>
-    <td>Upload content from Studio</td>
-    <td>Uploading user needs:<br /><br /><ul><li>ID verification</li><li>Roblox Plus or Premium 1000/2200</li><li>300 Robux upload fee</li></ul></td>
-  </tr>
-  <tr>
-    <td>Publish content to the Marketplace</td>
-    <td>Publishing user needs:<br /><br /><ul><li>ID verification</li><li>Roblox Plus or Premium 1000/2200</li><li>600-2500 Robux publishing advance</li></ul><br /><br />Group owner needs Roblox Plus or Premium 1000/2200</td>
-  </tr>
-  <tr>
-    <td>Keep existing content on-sale</td>
-    <td>Group owner needs Roblox Plus or Premium 1000/2200</td>
-  </tr>
-</tbody>
 </table>
 
 ## General creation guidelines
@@ -192,8 +139,8 @@ Modesty layers are **required** if your avatar character:
 <table>
 <thead>
   <tr>
-    <th><center>Requires modesty layer</center></th>
-    <th><center>Does not require modesty layer</center></th>
+    <th><center>**Requires modesty layer**</center></th>
+    <th><center>**Does not require modesty layer**</center></th>
   </tr>
 </thead>
 <tbody>
@@ -222,8 +169,8 @@ Modesty layers are **required** if your avatar character:
 <table>
 <thead>
   <tr>
-    <th><center>Requires modesty layer</center></th>
-    <th><center>Does not require modesty layer</center></th>
+    <th><center>**Requires modesty layer**</center></th>
+    <th><center>**Does not require modesty layer**</center></th>
   </tr>
 </thead>
 <tbody>
@@ -563,8 +510,8 @@ Your avatar head cannot include any additional color, shading, or outlining not 
 <table>
 <thead>
   <tr>
-    <th><center>Facial shadowing and detail are permitted</center></th>
-    <th><center>Face painting and multi-color features are not permitted</center></th>
+    <th><center>**Facial shadowing and detail are permitted**</center></th>
+    <th><center>**Face painting and multi-color features are not permitted**</center></th>
   </tr>
 </thead>
 <tbody>

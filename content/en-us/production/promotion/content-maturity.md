@@ -353,7 +353,7 @@ If your experience contains crude humor, you must specify the intensity of the e
 </tbody>
 </table>
 
-### Gambling
+### Unplayable gambling content
 
 **Question 1: Does this experience contain unplayable gambling content?**
 

@@ -4,15 +4,18 @@ description: Explains upload fees and commission from selling accessories and cl
 comments: Updates to this page require careful internal review. We generally don't accept pull requests on it.
 ---
 
-You can create and sell bodies, heads, accessories, and clothes on the [Marketplace](https://www.roblox.com/catalog). After you pay any applicable upload fees, you can upload your new asset for marketplace approval. Once the moderation team reviews and approves your asset, you can set your item for sell on the Marketplace.
+You can create and sell bodies, heads, clothing, accessories, emotes, and makeup on the [Marketplace](https://www.roblox.com/catalog). After you pay any applicable upload fees, you can upload your new asset for marketplace approval. Once the moderation team reviews and approves your asset, you can set your item for sell on the Marketplace.
 
 You receive a commission every time users purchase your item. If users purchase your item within a game using the [Avatar Inspect Menu](../players/avatar-inspect-menu.md), [Avatar Editor Service](../players/avatar-editor.md), or `Class.MarketplaceService`, the game owner also receives a commission. For information on viewing your sales data, see [Sales Data analytics](../production/analytics/analytics-dashboard.md#sales-data).
 
 ## Upload fees
 
-Uploading a 2D avatar item, such as t-shirts, shirts, and pants, requires an upload fee of **10 Robux** per submission. Uploading a 3D avatar item, such as accessories, bodies, and animations, requires an upload fee of **300 Robux** per submission.
+To upload either a 2D or 3D item to the Marketplace, you must:
 
-In general, fees are not refunded if an item is rejected through moderation. If your asset clears the uploading process, your asset is ready to publish to the Marketplace.
+1. Verify your account through [government ID](../production/publishing/account-verification.md#verify-through-government-id) or linked [parental account](https://about.roblox.com/parental-controls).
+2. Pay an upload fee of **80 Robux** per submission.
+
+In general, upload fees are not refunded if an item is rejected through moderation. If your asset clears the uploading process, your asset is ready to publish to the Marketplace.
 
 ## Publishing advance
 
@@ -23,35 +26,27 @@ This publishing advance is dependent on the type of Marketplace item being sold:
 <table>
 <thead>
   <tr>
-    <th>2D avatar asset type</th>
-    <th>Publishing advance</th>
+    <th>**Avatar asset type**</th>
+    <th>**Non-limited publishing advance**</th>
+    <th>**Paid limited publishing advance**</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>T-shirt</td>
-    <td>10</td>
+    <td>Classic t-shirt</td>
+    <td>20</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>Shirt</td>
-    <td>10</td>
+    <td>Classic shirt</td>
+    <td>20</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>Pants</td>
-    <td>10</td>
+    <td>Classic pants</td>
+    <td>20</td>
+    <td>N/A</td>
   </tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-  <tr>
-    <th>3D avatar asset type</th>
-    <th>Non-limited publishing advance</th>
-    <th>Paid limited publishing advance</th>
-  </tr>
-</thead>
-<tbody>
   <tr>
     <td>Hat</td>
     <td>1500</td>
@@ -268,18 +263,24 @@ See the following guidelines:
 
 ## Commissions
 
-When community items are sold on Roblox, a portion of the sales is split between the item creator and Roblox. If the item is sold within a game, the revenue share will additionally be split with the owner of the game.
+When you or your group sell avatar items on the platform, a portion of the sales is split between you or your group and Roblox. If the item is sold within an experience, the revenue share will additionally be split with the owner of the experience. Both individual accounts and groups **must** follow [Marketplace Creator Requirements](./marketplace-policy.md#creator-requirements) to keep items listed on the Marketplace and eligible for commissions.
 
-<Alert severity = 'warning'>
-Your account must follow [Marketplace Creator Requirements](./marketplace-policy.md#creator-requirements) to keep items listed on the Marketplace and eligible for commissions.
-</Alert>
+<table>
+<thead>
+  <tr>
+    <th>**Marketplace Purchase**</th>
+    <th>**In-experience Purchase**</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Creator receives 30%</td>
+    <td><ul><li>Creator receives 30%</li><li>Experience owner receives 40%</li></ul></td>
+  </tr>
+</tbody>
+</table>
 
 There is a 30 day escrow hold for each purchase. Roblox holds the commission from the sale of your items for 30 days starting from the date of sale and your Robux share of the sale.
-
-| Item Type                                        | Marketplace Purchase |                 In-game Purchase                  |
-| :----------------------------------------------- | :------------------: | :-----------------------------------------------------: |
-| 3D assets (bodies, heads, clothing, accessories) | Creator receives 30% | Creator receives 30%<br />Game owner receives 40% |
-| Classic clothing                                 | Creator receives 70% | Creator receives 60%<br />Game owner receives 10% |
 
 <Alert severity = 'info'>
 Limited items that are sold for free follow a different per-unit payout structure. See [Per-Unit Fee](#per-unit-fee) for more information.
@@ -297,8 +298,8 @@ Additional guidelines:
 
 <table><thead>
   <tr>
-    <th>Price floor multiple</th>
-    <th>Total creator revenue share</th>
+    <th>**Price floor multiple**</th>
+    <th>**Total creator revenue share**</th>
   </tr></thead>
 <tbody>
   <tr>
@@ -522,6 +523,6 @@ Depending on the 3D asset type, you must set the price of the item within the ma
 
 ## Classic clothing
 
-You can upload and sell [classic clothing](../avatar/classic-clothing.md) through the Roblox website. It costs **10 Robux** to upload these assets.
+You can upload and sell [classic clothing](../avatar/classic-clothing.md) through the Roblox website. It costs **80 Robux** to upload these assets.
 
 If the seller takes the item off sale, it does not require an additional fee when they place it on sale again.
