@@ -68,6 +68,10 @@ To select a payment method and view related transaction fees:
 
 ## Submit a tax form
 
+<Alert severity="error">
+**Review and update your tax information before November 1, 2026.** DevEx payments will be classified as royalties beginning November 1, which may affect the U.S. tax withholding applied to your payments. See [DevEx tax information](./tax-information.md) for details.
+</Alert>
+
 Tax reporting requirements vary according to whether you are a U.S. person or non-U.S. person. According to the Internal Revenue Service (IRS), for U.S. federal tax purposes, a U.S. person includes, but is not limited to:
 
 - An individual who is a U.S. citizen or U.S. resident alien.

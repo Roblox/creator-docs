@@ -1294,24 +1294,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-  - name: Workspace.ValidateEnabledProximityPrompt
-    summary: ''
-    description: ''
-    code_samples: []
-    type: RolloutState
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Basic
 methods:
   - name: Workspace:BreakJoints
     summary: |
