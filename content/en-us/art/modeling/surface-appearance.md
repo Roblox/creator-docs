@@ -45,7 +45,7 @@ To enable surface appearance for a `Class.MeshPart`:
 
 ## Texture maps
 
-Studio currently supports 4 types of PBR texture maps: [color](#color-albedo), [normal](#normal), [roughness](#roughness), and [metalness](#metalness). Each of these maps correspond to an important aspect of the object's surface appearance. Texture maps only change visual appearance and don't affect the geometry of the `Class.MeshPart` object.
+Studio currently supports 5 types of PBR texture maps: [color](#color-albedo), [normal](#normal), [roughness](#roughness), [metalness](#metalness), and [emissive](#emissive). Each of these maps corresponds to an important aspect of the object's surface appearance. Texture maps only change visual appearance and don't affect the geometry of the `Class.MeshPart` object.
 
 <Alert severity = 'warning'>
 Avoid adjusting material values to look better in one specific lighting situation. You should base your material values on the physical characteristics and test and iterate to achieve a result that remains visually accurate in various lighting environments.
@@ -122,6 +122,23 @@ The grayscale `Class.SurfaceAppearance.MetalnessMap|MetalnessMap` texture proper
 	</figure>
   </GridContainer>
 </TabItem>
+<TabItem label="Emissive">
+The grayscale `Class.SurfaceAppearance.EmissiveMaskContent|EmissiveMaskContent` content property determines emissivity across the surface, alongside `Class.SurfaceAppearance.EmissiveStrength|EmissiveStrength` and `Class.SurfaceAppearance.EmissiveTint|EmissiveTint`. See [emissive](#emissive) for additional information.
+<GridContainer numColumns="3">
+	<figure>
+    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-EmissiveMask.png" alt="A jack-o-lantern face."/>
+    	<figcaption>Example mask</figcaption>
+	</figure>
+	<figure>
+    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-EmissiveMask-Before.jpg" alt="A rough orange sphere with a dark background."/>
+    	<figcaption>Example mesh</figcaption>
+	</figure>
+	<figure>
+    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-EmissiveMask-After.jpg" alt="A rough orange sphere with a glowing mask of the jack-o-lantern face."/>
+    	<figcaption>Mesh and emissive mask</figcaption>
+	</figure>
+  </GridContainer>
+</TabItem>
 </Tabs>
 
 <Alert severity = 'info'>
@@ -153,20 +170,20 @@ You can apply transparency in two different behaviors by setting the following `
 
 You can use `Enum.AlphaMode.Opaque` mode to ignore the alpha channel of the `Class.SurfaceAppearance.ColorMap|ColorMap` altogether. In this case the alpha value is assumed to be 1 (fully opaque).
 
-The following example demonstrates how the `Enum.AlphaMode.Opaque|Opaque` mode works using a white object as reference:
+The following example demonstrates how the `Enum.AlphaMode.Opaque|Opaque` mode works using a blue object as reference:
 
 <GridContainer numColumns="3">
 <figure>
-  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Opaque-ColorMap.jpg" alt="A polkadot texture with transparency. The background is completely transparent."/>
-  <figcaption>Example color/albedo map with transparency</figcaption>
+  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Opaque-ColorMap.png" alt="A polkadot texture with transparency. The background is completely transparent."/>
+  <figcaption>Color/albedo map with transparency</figcaption>
 </figure>
 <figure>
-  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Opaque-Before.jpg" alt="A white torus on a plane."/>
-  <figcaption>Example mesh object (white)</figcaption>
+  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Opaque-Before.jpg" alt="A blue sphere on a plane."/>
+  <figcaption>Example mesh object</figcaption>
 </figure>
 <figure>
-  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Opaque-After.jpg" alt="The torus has the polkadot patterns scattered over its surface. Transparency value is ignored."/>
-  <figcaption>`Class.SurfaceAppearance.AlphaMode|AlphaMode` set to `Enum.AlphaMode.Opaque|Opaque` using reference map and material</figcaption>
+  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Opaque-After.jpg" alt="The sphere has the polkadot patterns scattered over its surface. Transparency value is ignored."/>
+  <figcaption>`Class.SurfaceAppearance.AlphaMode|AlphaMode` set to `Enum.AlphaMode.Opaque|Opaque`</figcaption>
 </figure>
 </GridContainer>
 
@@ -174,20 +191,20 @@ The following example demonstrates how the `Enum.AlphaMode.Opaque|Opaque` mode w
 
 You can use `Enum.AlphaMode.Overlay` to reveal sections of the mesh's original color. Since the transparent areas of the color map expose the underlying color, you can design a unique texture map that partially or fully reveals the mesh's `Class.MeshPart.Color|Color` property for custom skin tones or other situations with unique colors.
 
-The following example demonstrates how the `Enum.AlphaMode.Overlay|Overlay` mode works using a white sphere reference:
+The following example demonstrates how the `Enum.AlphaMode.Overlay|Overlay` mode works using a light blue sphere reference:
 
 <GridContainer numColumns="3">
 <figure>
-  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-AlphaMode-ColorMap.png" alt="A completely filled image of a semi-repeating pattern with 8 by 8 small light blue squares. The background is checkered to indicate transparency."/>
-  <figcaption>Example color/albedo map with transparency</figcaption>
+  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-AlphaMode-ColorMap.png" alt="A completely filled image of a semi-repeating pattern with small light blue squares. The background is checkered to indicate transparency."/>
+  <figcaption>Color/albedo map with transparency</figcaption>
 </figure>
 <figure>
-  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-ColorMap-Before.jpg" alt="A blank white sphere over a dark background."/>
-  <figcaption>Example mesh object (white)</figcaption>
+  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-ColorMap-Before.jpg" alt="A blank cyan sphere over a dark background."/>
+  <figcaption>Example mesh object</figcaption>
 </figure>
 <figure>
   <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-AlphaMode-Overlay.jpg" alt="A white sphere with small blue squares scattered over the surface."/>
-  <figcaption>`Class.SurfaceAppearance.AlphaMode|AlphaMode` set to `Enum.AlphaMode.Overlay|Overlay` using reference map and material</figcaption>
+  <figcaption>`Class.SurfaceAppearance.AlphaMode|AlphaMode` set to `Enum.AlphaMode.Overlay|Overlay`</figcaption>
 </figure>
 </GridContainer>
 
@@ -343,7 +360,7 @@ When `Class.SurfaceAppearance.AlphaMode` is set to `Enum.AlphaMode|TintMask` and
 
 ### Normal
 
-The **normal**, or **surface**, map adds texture depth to your surface and behaves similarly to a [height map](../../parts/terrain.md#heightmaps). As a result, the effect may fade or intensify depending on the viewing angle and lighting environment. When a normal map is not present, the value is set to `0.0`.
+The **normal**, or **surface**, map adds texture depth to your surface and behaves similarly to a [height map](../../parts/terrain.md#heightmaps). As a result, the effect may fade or intensify depending on the viewing angle and lighting environment.
 
 In the following figure, you can switch between the mesh reference and the map reference for comparisons of normal map values:
 
@@ -352,15 +369,12 @@ In the following figure, you can switch between the mesh reference and the map r
 <GridContainer numColumns="3">
 <figure>
 <img src="../../assets/modeling/surface-appearance/Normal-0.png" alt="A clay colored smooth sphere."/>
-<figcaption><center>0.0</center></figcaption>
 </figure>
 <figure>
 <img src="../../assets/modeling/surface-appearance/Normal-Half.png" alt="A clay colored sphere with a moderately rocky surface."/>
-<figcaption><center>0.5</center></figcaption>
 </figure>
 <figure>
 <img src="../../assets/modeling/surface-appearance/Normal-1.png" alt="A clay colored sphere with an extremely rocky surface"/>
-<figcaption><center>1.0</center></figcaption>
 </figure>
 </GridContainer>
 </TabItem>
@@ -368,15 +382,12 @@ In the following figure, you can switch between the mesh reference and the map r
 <GridContainer numColumns="3">
 <figure>
 <img src="../../assets/modeling/surface-appearance/Normal-Map-0.png" alt="A completely filled teal image."/>
-<figcaption><center>0.0</center></figcaption>
 </figure>
 <figure>
 <img src="../../assets/modeling/surface-appearance/Normal-Map-Half.png" alt="A completely filled teal image with a moderate amount of surface aberrations in slightly lighter and darker shades"/>
-<figcaption><center>0.5</center></figcaption>
 </figure>
 <figure>
 <img src="../../assets/modeling/surface-appearance/Normal-Map-1.png" alt="A completely filled teal image with a heavy amount of surface aberrations in slightly lighter and darker shades"/>
-<figcaption><center>1.0</center></figcaption>
 </figure>
 </GridContainer>
 </TabItem>
@@ -388,63 +399,77 @@ Normal maps prominently affect the visual surface of a mesh and can accentuate a
 
 ### Roughness
 
-**Roughness**, or **microsurface**, maps determine how light is spread across your model's surface. When roughness is at `0.0`, the surface doesn't scatter light at all, resulting in a much sharper and brighter reflection and glossiness on your material. At `1.0`, light and reflections evenly scatter over the model resulting in a less reflective matte-like surface.
-
-Roughness may impact how reflective an object is at different angles, referred to as the **Fresnel** effect. See [fresnel](#fresnel) for more details and best-practices to maintain consistent reflective behavior.
+**Roughness**, or **microsurface**, maps determine how light is spread across your model's surface. When roughness is at 0%, the surface doesn't scatter light at all, resulting in a much sharper and brighter reflection and glossiness on your material. At 100%, light and reflections evenly scatter over the model resulting in a less reflective matte-like surface.
 
 The following figure shows comparisons of various roughness map values:
 
 <GridContainer numColumns="3">
 <figure>
-<img src="../../assets/modeling/surface-appearance/Roughness-0.png" alt="A blue glossy sphere with a legend indicating the roughness map is completely black." />
-<figcaption><center>0.0</center></figcaption>
+<img src="../../assets/modeling/surface-appearance/Roughness-0.png" alt="A blue glossy sphere." />
+<figcaption><center>0%</center></figcaption>
 </figure>
 <figure>
-<img src="../../assets/modeling/surface-appearance/Roughness-Half.png" alt="A blue semi-glossy sphere with a legend indicating the roughness map is exactly grey."/>
-<figcaption><center>0.5</center></figcaption>
+<img src="../../assets/modeling/surface-appearance/Roughness-Half.png" alt="A blue semi-glossy sphere."/>
+<figcaption><center>50%</center></figcaption>
 </figure>
 <figure>
-<img src="../../assets/modeling/surface-appearance/Roughness-1.png" alt="A blue matte sphere with a legend indicating the roughness map is completely white."/>
-<figcaption><center>1.0</center></figcaption>
+<img src="../../assets/modeling/surface-appearance/Roughness-1.png" alt="A blue matte sphere."/>
+<figcaption><center>100%</center></figcaption>
 </figure>
 </GridContainer>
+
+Roughness may impact how reflective an object is at different angles, referred to as the **Fresnel** effect. Studio's fresnel processing aims for physical real-world accuracy, although you may get unexpected specular contribution at certain angles even with rough surfaces. In some cases, you can compensate by increasing your roughness map value by around `0.1` more rough to achieve a consistent lighting response with your materials.
+
+Even though Roblox renders this lighting effect accurately, the brightness and reflectivity of a surface may not respond consistently between your texture content creating software, such as Substance Painter, and Studio. See [clothing examples](../../art/modeling/material-reference.md#clothing-examples) for differences in rendering between applications.
 
 <Alert severity = 'info'>
 Various combinations of the roughness and metalness can represent almost every possible real-world material surface. See [material references](../../art/modeling/material-reference.md) for examples and references of how combinations of material values can create various surface appearances.
 </Alert>
 
-#### Fresnel
-
-**Fresnel** refers to the amount of reflection of a surface in reference to the current viewing angle. Studio's Fresnel processing aims for physical real-world accuracy, although you may get unexpected specular contribution at certain angles even with rough surfaces. In some cases, you can compensate by making your roughness map around `0.1` more rough to achieve a consistent lighting response with your materials.
-
-Even though Roblox renders this lighting effect accurately, the brightness and reflectivity of a surface may not respond consistently between your texture content creating software, such as Substance Painter, and Studio. See [clothing examples](../../art/modeling/material-reference.md#clothing-examples) for differences in rendering between applications.
-
 ### Metalness
 
-**Metalness** determines the reflectivity of a surface. Metalness values range between `0.0` and `1.0`. Roblox sets the default value to `0.0` if a metalness map is not present.
+**Metalness** determines the reflectivity of a surface. In most cases, you should set this value to either 0% (non-metal) or 100% (metal), although you can use partial metalness values when creating surfaces with moderate reflective properties like satin or silk. This practice can subtly fake the reflections in the material to highlight the color from the [color/albedo map](#color-albedo) over colors reflected in the environment.
 
 See the following figure for comparisons of various metalness map values:
 
 <GridContainer numColumns="3">
-
 <figure>
-<img src="../../assets/modeling/surface-appearance/Metalness-0.png" alt="A brown sphere with light splotches. A legend indicates the metalness map is completely black."/>
-<figcaption><center>0.0</center></figcaption>
+<img src="../../assets/modeling/surface-appearance/Metalness-0.png" alt="A brown sphere with light splotches."/>
+<figcaption><center>0%</center></figcaption>
 </figure>
 <figure>
-<img src="../../assets/modeling/surface-appearance/Metalness-Half.png" alt="A brown sphere with light splotches and some reflectiveness. A legend indicates the metalness map is exactly grey."/>
-<figcaption><center>0.5</center></figcaption>
+<img src="../../assets/modeling/surface-appearance/Metalness-Half.png" alt="A brown sphere with light splotches and some reflectiveness."/>
+<figcaption><center>50%</center></figcaption>
 </figure>
 <figure>
-<img src="../../assets/modeling/surface-appearance/Metalness-1.png" alt="A brown sphere with moderate splotches and lots of reflectiveness. A legend indicates the metalness map is completely white."/>
-<figcaption><center>1.0</center></figcaption>
+<img src="../../assets/modeling/surface-appearance/Metalness-1.png" alt="A brown sphere with moderate splotches and lots of reflectiveness."/>
+<figcaption><center>100%</center></figcaption>
 </figure>
 </GridContainer>
 
 Different PBR renderers use various workflows for processing reflectiveness. Studio only uses the **metalness workflow** which determines whether a material is a **nonmetal** or a **metal**, sometimes referred to as an **insulator** or **conductor**.
 
-In most cases, you should set this value to either `0.0` (non-metal) or `1.0` (metal). You can use partial metalness values when creating more uncommon surfaces with moderate reflective properties, like satin or silk. This practice can subtly fake the reflections in the material to highlight the color from the [color/albedo map](#color-albedo) over colors reflected in the environment.
-
 <Alert severity = 'info'>
 Various combinations of the roughness and metalness can represent almost every possible real-world material surface. See [material references](../../art/modeling/material-reference.md) for examples and references of how combinations of material values can create various surface appearances.
 </Alert>
+
+### Emissive
+
+A grayscale `Class.SurfaceAppearance.EmissiveMaskContent|EmissiveMaskContent` content texture applies an **emissive mask** across the surface. This lets you use a texture to control emissiveness for more artistic control than the all‑or‑nothing `Enum.Material.Neon|Neon` material and allows you to create detailed glowing effects like illuminated text, futuristic armor, or bioluminescent creatures.
+
+The associated `Class.SurfaceAppearance.EmissiveTint|EmissiveTint` property determines the tinting color for emissive contribution, and `Class.SurfaceAppearance.EmissiveStrength|EmissiveStrength` determines the strength of emissive contribution.
+
+<GridContainer numColumns="3">
+<figure>
+<img src="../../assets/modeling/surface-appearance/EmissiveStrength-Half.png" alt="An orange sphere with a jack-o-lantern emissive mask at 50% strength."/>
+<figcaption><center>`Class.SurfaceAppearance.EmissiveStrength|EmissiveStrength` at 50%</center></figcaption>
+</figure>
+<figure>
+<img src="../../assets/modeling/surface-appearance/EmissiveStrength-Full.png" alt="An orange sphere with a jack-o-lantern emissive mask at 100% strength."/>
+<figcaption><center>`Class.SurfaceAppearance.EmissiveStrength|EmissiveStrength` at 100%</center></figcaption>
+</figure>
+<figure>
+<img src="../../assets/modeling/surface-appearance/EmissiveTint-Magenta.png" alt="An orange sphere with a jack-o-lantern emissive mask tinted to magenta."/>
+<figcaption><center>`Class.SurfaceAppearance.EmissiveTint|EmissiveTint` = [255, 0, 255]</center></figcaption>
+</figure>
+</GridContainer>

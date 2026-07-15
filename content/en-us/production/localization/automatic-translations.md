@@ -139,6 +139,9 @@ Roblox supports automatic translation between the languages listed below. Curren
     <td>German</td>
   </tr>
   <tr>
+    <td>Hindi</td>
+  </tr>
+  <tr>
     <td>Indonesian</td>
   </tr>
   <tr>

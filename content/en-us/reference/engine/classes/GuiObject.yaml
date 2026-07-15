@@ -325,11 +325,18 @@ properties:
       invisible) any portion of descendant GUI elements that would otherwise
       render outside the bounds of the rectangle.
 
-      Note that `Class.GuiObject.Rotation|Rotation` isn't supported by this
-      property. If this or any ancestor GUI has a **non‑zero**
-      `Class.GuiObject.Rotation|Rotation`, this property is **ignored** and
-      descendant GUI elements will be rendered regardless of this property's
-      value.
+      #### Rotation Behavior
+
+      When `Class.StarterGui.ClipsDescendantsSupportsRotation` is enabled,
+      clipping works correctly for rotated shapes. However, clipping **by**
+      rotated shapes (when the clipping parent itself is rotated) or by rounded
+      corners (`Class.UICorner`) is not supported.
+
+      When `Class.StarterGui.ClipsDescendantsSupportsRotation` is **not**
+      enabled and this `Class.GuiObject` or any ancestor `Class.GuiObject` has a
+      **non‑zero** `Class.GuiObject.Rotation|Rotation`, this property is
+      **ignored** and descendant GUI elements will render regardless of this
+      property's value.
     code_samples: []
     type: boolean
     tags: []
