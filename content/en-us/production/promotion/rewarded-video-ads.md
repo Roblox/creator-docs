@@ -374,7 +374,7 @@ To prevent abuse of the rewarded ad system and to provide the best user experien
 To get the most out of your rewarded video ad, make sure to:
 
 - Call `Class.AdService.GetAdAvailabilityNowAsync|GetAdAvailabilityNowAsync` as close as possible to the moment you plan to show the ad. For example, if you have a "Watch video ad to get a reward" button in a shop menu, you should only call `GetAdAvailabilityNowAsync` when the user opens the shop menu. This approach improves performance by preventing ads from unnecessarily being held in memory, and benefits CPM (cost-per-thousand impressions) and earnings by optimizing the ad fill rate.
-- After an ad finishes, only call `Class.AdService.GetAdAvailabilityNowAsync|GetAdAvailabilityNowAsync` if you offer the user another ad to watch.
+- After an ad finishes, only call `Class.AdService.GetAdAvailabilityNowAsync|GetAdAvailabilityNowAsync` if you offer the user another opportunity to watch an ad. This helps avoid filled requests that do not lead to impressions.
 - Use analytics to identify the best placement for video ads to encourage user engagement without disrupting gameplay.
 - Use ad opportunities to track when you offer a user a chance to watch a video ad for a reward. Keep an eye on the ratio between filled requests, ad opportunities, and ad impressions to figure out if you should make your ads easier to find or if your rewards need to be more compelling.
 
