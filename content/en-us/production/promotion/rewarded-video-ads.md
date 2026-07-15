@@ -67,10 +67,6 @@ To implement the rewarded video ad on the client-side:
 1. Add a new `Class.LocalScript` to the button you just inserted into your game.
 2. Use the `Class.AdService.GetAdAvailabilityNowAsync|GetAdAvailabilityNowAsync` method to make sure the button is only visible to the user if an ad is available.
 
-<Alert severity="warning">
-  When possible, call `GetAdAvailabilityNowAsync` only after the user takes a clear action to watch the ad, such as clicking the video ad play button. Maximizing the ratio of impressions to filled requests can benefit fill rate, EPM, and earnings.
-</Alert>
-
 ```lua title="Code example for rewarded video ad (Client)"
 -- Services
 local AdService = game:GetService("AdService")
@@ -373,7 +369,7 @@ To prevent abuse of the rewarded ad system and to provide the best user experien
 
 To get the most out of your rewarded video ad, make sure to:
 
-- When possible, call `Class.AdService.GetAdAvailabilityNowAsync|GetAdAvailabilityNowAsync` only after the user takes a clear action to watch the ad, such as clicking the video ad play button.
+- Call `Class.AdService.GetAdAvailabilityNowAsync|GetAdAvailabilityNowAsync` as close as possible to the moment you plan to show the ad. For example, if you have a "Watch video ad to get a reward" button in a shop menu, you should only call `GetAdAvailabilityNowAsync` when the user opens the shop menu. This approach improves performance by preventing ads from unnecessarily being held in memory, and benefits CPM (cost-per-thousand impressions) and earnings by optimizing the ad fill rate.
 - After an ad finishes, only call `Class.AdService.GetAdAvailabilityNowAsync|GetAdAvailabilityNowAsync` if you offer the user another ad to watch.
 - Use analytics to identify the best placement for video ads to encourage user engagement without disrupting gameplay.
 - Use ad opportunities to track when you offer a user a chance to watch a video ad for a reward. Keep an eye on the ratio between filled requests, ad opportunities, and ad impressions to figure out if you should make your ads easier to find or if your rewards need to be more compelling.
