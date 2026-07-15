@@ -67,6 +67,10 @@ To implement the rewarded video ad on the client-side:
 1. Add a new `Class.LocalScript` to the button you just inserted into your game.
 2. Use the `Class.AdService.GetAdAvailabilityNowAsync|GetAdAvailabilityNowAsync` method to make sure the button is only visible to the user if an ad is available.
 
+<Alert severity="warning">
+  Call `GetAdAvailabilityNowAsync` as close as possible to the moment you plan to show the ad. For example, if you have a "Watch video ad to get a reward" button in a shop menu, only call it when the user opens the shop menu.
+</Alert>
+
 ```lua title="Code example for rewarded video ad (Client)"
 -- Services
 local AdService = game:GetService("AdService")
