@@ -64,9 +64,15 @@ After you create a config, it moves to a **staged** state so that you can test i
 
 ## Create and edit configs in Studio
 
-If you prefer, you can create, edit, stage, and publish configs in Roblox Studio. Click **File** > **Open Configs**. The Studio interface is particularly convenient for staging and testing new values.
+If you prefer, you can create, edit, stage, and publish configs in Roblox Studio. Click **File** > **Open Configs** to open the widget. The Studio interface is particularly convenient for staging and testing new values.
 
-<img src="../assets/analytics/configs/configs-studio.png" width="600" alt="Studio window for working with configs" />
+<img src="../assets/analytics/configs/configs-widget-staged.png" width="600" alt="Studio window for working with configs" />
+
+### Publish configs to another experience
+
+In Studio only, you can publish your configs to another experience, which completely overwrites the configs for that experience. This can be especially useful for syncing configs from a staging or development experience to the live experience. Navigate to the **Published** tab in the Studio widget and click **Publish As** in the **&vellip;** menu.
+
+<img src="../assets/analytics/configs/configs-widget-publish-as.png" width="600" alt="Studio window for working with configs" />
 
 ## View history and restore configs
 

@@ -19,8 +19,8 @@ You can use the following components within your `Class.Model` object to enable 
   - A collection with the name `HumanoidRootPart` to indicate the root part of the assembly.
   - A part with the name `Head` to display the character's name over their head geometry.
   - Additional mesh parts that make up the individual body parts, which commonly include the 6 (R6) or 15 (R15) body parts used for human-like models.
-  - Joints, such as `Class.Bone` or `Class.Motor6D`, that connects each body part as an assembly.
-- A `Class.Humanoid` instance to implement and access common character properties.
+  - Joints, such as `Class.AnimationConstraint` or `Class.Bone` objects, that connect each body part as an assembly.
+- A `Class.Humanoid` object to implement and access common character properties.
 
 <GridContainer numColumns="2">
   <figure>
@@ -49,11 +49,11 @@ By default, all players join games as their saved Roblox avatar, which already i
   - A part with the name `HumanoidRootPart` to indicate the root part of the assembly.
   - A part with the name `Head` to display the character's [name and health](./name-health-display.md) over their head geometry.
   - 15 meshes that make up the individual body parts, such as the character's arm or leg.
-  - Joints, such as `Class.Bone` or `Class.Motor6D` objects, that connect each part and follow a [standardized](../avatar/character-bodies/specifications.md#rigging) joint hierarchy.
-- A `Class.Humanoid` instance to implement and access common character properties.
-- `Class.WrapLayer` objects for each of the model's body parts, enabling it to wear clothing and other layerable cosmetics.
-- `Class.FaceControls` to enable facial expressions and poses for the character's head.
-- `Class.Attachment` objects for each of the standard attachment points on the character body.
+  - Joints that connect each body part and follow a [standardized](../avatar/character-bodies/specifications.md#rigging) joint hierarchy. When `Class.StarterPlayer.AvatarJointUpgrade` is enabled, the upgrade automatically introduces force- and torque-limited `Class.AnimationConstraint` objects to standard character joints, allowing you to create realistic, physics-driven movements and interactions, such as fully simulated limbs and powered ragdolls.
+- A `Class.Humanoid` object to implement and access common character properties.
+- 15 `Class.WrapTarget` objects for each of the model's body parts, enabling it to wear clothing and other layerable cosmetics.
+- A `Class.FaceControls` object to enable facial expressions and poses for the character's head.
+- 19 `Class.Attachment` objects for each of the standard attachment points on the character body.
 
 <GridContainer numColumns="2">
   <figure>

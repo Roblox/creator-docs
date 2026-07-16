@@ -9,9 +9,9 @@ Studio's Importer lets you import 3D assets into your projects, such as avatar c
 If you are using a single-mesh character body for the Roblox Auto-Setup tool, see [Avatar auto-setup](../../avatar-setup/).
 </Alert>
 
-While the 3D Importer provides object previews and error-checking to ensure that your asset meets Roblox's [general 3D requirements](../../art/modeling/specifications.md), it's important to ensure that your character model meets Roblox's [avatar character specifications](./specifications.md) to use or sell this asset as an avatar-ready character model, otherwise you can encounter errors at different points in the workflow.
+While the Importer provides object previews and error-checking to ensure that your asset meets Roblox's [general 3D requirements](../../art/modeling/specifications.md), it's important to ensure that your character model meets Roblox's [avatar character specifications](./specifications.md) to use or sell this asset as an avatar-ready character model, otherwise you can encounter errors at different points in the workflow.
 
-To import your asset as a character model:
+To import your asset as a character body model:
 
 1. In the **Home** tab, click the **Import** button to open the 3D Importer. A file browser opens.
 1. Select your rigged character's `.fbx` or `.gltf` file. The 3D Importer loads a preview of the character model.
@@ -22,13 +22,12 @@ To import your asset as a character model:
    - For additional information on import settings and troubleshooting, see [3D importer](../../studio/importer.md).
 
 1. In the **Rig General** section,
-
+   1. <Chip label="OPTIONAL" size="small" variant="outlined" /> If you are importing a [higher-fidelity rig](./specifications.md#higher-fidelity-rigs), set **Rig Type** to **Custom Humanoid**.
    1. Set **Rig Scale** to the appropriate [Body Scale](./specifications.md#body-scale) of your character.
    1. Set **Constraint Type** to **Joint Upgrade**.
 
    <img src="../../assets/art/avatar/Rig-General.png" width = "60%"/>
 
-1. <Chip label="OPTIONAL" size="small" variant="outlined" /> If you are importing a [higher-fidelity rig](./specifications.md#higher-fidelity-rigs), set **Rig Type** to **Custom Humanoid**.
 1. Select **Import**. The asset populates in your workspace as a `Class.Model` with the appropriate textures applied as a `Class.SurfaceAppearance` or `Class.MeshPart.TextureID`.
 
 <BaseAccordion>
