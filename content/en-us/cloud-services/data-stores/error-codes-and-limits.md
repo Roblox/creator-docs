@@ -996,8 +996,10 @@ For every request, Roblox rounds throughput up to the next kilobyte. For example
 
 To keep storage stable and scalable, data stores use a game-level limit on your storage usage.
 
-This limit is the sum of a base limit for each game and a per-user limit based on the number of lifetime users in your game. A lifetime user is any user who has joined your game at least once.
+This limit consists of a base allocation for each game plus an additional allocation based on the number of lifetime users. A lifetime user is any user who has joined your game at least once.
 
-The storage limit is calculated using the formula `Total latest version storage limit = 500 MB + 1 MB * lifetime user count`.
+The storage limit is calculated using the following formula `Total latest version storage limit = 500 MB + 1 MB × lifetime user count`.
 
-Any keys that you delete or replace, even they still accessible through version APIs, do not count towards your experience's storage usage. However, entire data stores deleted via the Open Cloud [`DeleteDataStore`](/cloud/reference/features/storage#Cloud_DeleteDataStore) method continue to count towards your storage usage for the duration of their 30-day processing period, until they are permanently deleted.
+Storage usage is measured using the **compressed size** of the latest version of each key. Data stores automatically compress your data before storage, so avoid pre-compressing it yourself. Pre-compression adds unnecessary CPU overhead and may reduce the effectiveness of data stores' built-in compression. By storing uncompressed data, you automatically benefit from improvements to Roblox's compression algorithms and future schema-based optimizations.
+
+Only the latest version of each key counts toward your storage usage. Deleted keys and superseded versions, while still accessible through version APIs during their retention period, do not count toward your storage usage. However, data stores deleted through the Open Cloud [`DeleteDataStore`](/cloud/reference/features/storage#Cloud_DeleteDataStore) method continue to count toward storage usage during their 30-day deletion processing period, until they are permanently removed.
