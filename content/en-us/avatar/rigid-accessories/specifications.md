@@ -340,10 +340,6 @@ If setting or configuring attachments manually in Studio, use the following name
   - Items using `RightShoulderAttachment` or `LeftShoulderAttachment` move with the character's arm.
   - Items using `RightCollarAttachment` or `LeftCollarAttachment` do not move with the character's arm.
 
-## Layered properties
-
-Layered accessories which stretch and fit around any character body type must include additional configurations to achieve the layering effect. See [Clothing specifications](../../avatar/layered-accessories/specifications.md) for specifications required to create layerable accessories.
-
 ## Marketplace requirements
 
 Your items must meet the following requirements before you upload them to the Marketplace to sell:

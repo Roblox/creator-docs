@@ -5,7 +5,7 @@ description: Makeup is a cosmetic look made up of multiple facial textures and o
 
 Makeup is a unique avatar asset that converts a combination of textures into a single `Decal` object that is applied over a character's face. Makeup can also include optional eyebrows and eyelashes, which are MeshPart accessories that include their own textures.
 
-<Alert severity = 'warning'>
+<Alert severity = 'info'>
 <AlertTitle>If creating other types of 3D models:</AlertTitle>
 <ul>
 <li>For generic meshes, see [general mesh specifications](../../art/modeling/specifications.md) and [general export settings](../../art/modeling/export-requirements.md).</li> <br />

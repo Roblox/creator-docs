@@ -23,8 +23,27 @@ tags: []
 deprecation_message: ''
 properties:
   - name: Animator.EvaluationThrottled
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether animation evaluation was throttled (skipped) this frame
+      for this `Class.Animator`.
+    description: |
+      A read-only property that indicates whether animation evaluation was
+      throttled (skipped) on this frame. When `true`, the `Class.Animator`
+      reused the pose from the previous frame instead of evaluating fresh
+      animation data.
+
+      This property is useful when layering procedural animation on top of
+      `Class.AnimationConstraint.Transform|Transform` — if evaluation was
+      throttled, applying procedural offsets would fight the stale pose and
+      should be skipped:
+
+      ```lua
+      RunService.PreSimulation:Connect(function()
+          if not animator.EvaluationThrottled then
+              neck.Transform = computeNeckRotation() * neck.Transform
+          end
+      end)
+      ```
     code_samples: []
     type: boolean
     tags:
@@ -42,8 +61,23 @@ properties:
     capabilities:
       - Animation
   - name: Animator.PreferLodEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether animation LOD throttling is allowed for this
+      `Class.Animator`. When set to `false`, animations always evaluate at full
+      fidelity.
+    description: |
+      When `true` (the default), the engine may reduce animation evaluation
+      frequency for remotely-simulated characters based on distance, screen
+      coverage, and frame budget. When set to `false`, LOD-based throttling is
+      disabled and this `Class.Animator` always evaluates at full fidelity.
+
+      Setting this to `false` is useful for important NPCs or characters that
+      must always animate smoothly regardless of distance. However, disabling
+      LOD for many animators simultaneously can impact performance.
+
+      Note that this property only controls per-animator LOD throttling. The
+      workspace-level `Class.Workspace.ClientAnimatorThrottlingMode` setting can
+      independently disable or enable throttling for all animators.
     code_samples: []
     type: boolean
     tags: []
@@ -56,46 +90,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities:
-      - Animation
-  - name: Animator.RootMotion
-    summary: ''
-    description: ''
-    code_samples: []
-    type: CFrame
-    tags:
-      - ReadOnly
-      - NotReplicated
-      - NotBrowsable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: Safe
-    category: Behavior
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities:
-      - Animation
-  - name: Animator.RootMotionWeight
-    summary: ''
-    description: ''
-    code_samples: []
-    type: float
-    tags:
-      - ReadOnly
-      - NotReplicated
-      - NotBrowsable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: Safe
-    category: Behavior
-    serialization:
-      can_load: false
-      can_save: false
     capabilities:
       - Animation
 methods:
@@ -126,7 +120,9 @@ methods:
       - name: motors
         type: Variant
         default:
-        summary: ''
+        summary: |
+          An array of `Class.Motor6D` instances to compute and apply velocities
+          for.
     returns:
       - type: ()
         summary: ''
@@ -254,24 +250,6 @@ methods:
     capabilities:
       - Animation
     simulationAccess: true
-  - name: Animator:RegisterEvaluationParallelCallback
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: callback
-        type: Function
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Animation
   - name: Animator:StepAnimations
     summary: |
       Increments the `Class.AnimationTrack.TimePosition` of all playing
@@ -290,6 +268,12 @@ methods:
 
       Note that once animations have stopped playing, the model's joints will
       need to be manually reset to their original positions (see example).
+
+      #### Access
+
+      This method requires Plugin-level security. It can only be called from the
+      Studio command bar or from a `Class.Plugin`. Regular `Class.Script` and
+      `Class.LocalScript` instances cannot call this method.
     code_samples:
       - Animator-StepAnimations
     parameters:

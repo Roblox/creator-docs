@@ -5,7 +5,7 @@ next: /art/characters/creating/head-objects
 prev: /art/characters/creating/
 ---
 
-Each template comes pre-baked with the [necessary components of an avatar character](../../../avatar/character-bodies/index.md#components-of-an-avatar) to save you time and effort in creating a custom avatar character. When creating characters from scratch, these individual components typically take a lot of time and a deep technical background in your modeling application. Templates allow you to skip several steps and work from a variety of base character shapes.
+Each template comes pre-baked with the [necessary components of an avatar character](../../../avatar/character-bodies/index.md#character-body-components) to save you time and effort in creating a custom avatar character. When creating characters from scratch, these individual components typically take a lot of time and a deep technical background in your modeling application. Templates allow you to skip several steps and work from a variety of base character shapes.
 
 <table>
 <thead>

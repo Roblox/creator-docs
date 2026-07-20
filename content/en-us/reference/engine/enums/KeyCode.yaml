@@ -23,12 +23,6 @@ code_samples: []
 tags: []
 deprecation_message: ''
 items:
-  - name: Unknown
-    summary: |
-      Blank value that represents no key being pressed.
-    value: 0
-    tags: []
-    deprecation_message: ''
   - name: Backspace
     summary: |
       The `Backspace` key.

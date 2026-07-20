@@ -62,7 +62,7 @@ To create a custom Roblox accessory for your own game or to sell on the Marketpl
 If you are a developer and are looking for information on manually equipping or configuring layered clothing accessories within a game, including [implementing layered clothing on a non-standard character model](../../characters/appearance.md#layered-clothing-on-non-r15), see [Character appearance](../../characters/appearance.md).
 </Alert>
 
-Roblox also supports [classic clothing](#classic-clothing), 2D images that can be applied to your character's surface.
+Roblox also supports [classic clothing](../classic-clothing.md), 2D images that can be applied to your character's surface.
 
 ## Components of a layered clothing accessory
 
@@ -193,9 +193,3 @@ If you are interested in specific avatar creation topics, use the following tabl
   </tr>
 </tbody>
 </table>
-
-## Classic clothing
-
-Classic clothing assets are 2D images that you can apply to the surface of an avatar body as t-shirts, shirts, or pants. You can design these assets in any image processing software, test the textures in Studio, and then upload the designs to the Marketplace to sell. See [Classic clothing](../../avatar/classic-clothing.md) for more information on creating, uploading, and selling these assets.
-
-<img src="../../assets/accessories/classic-clothing/Block-Avatar-Dressed.jpg" width="800" />

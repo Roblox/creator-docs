@@ -1,15 +1,13 @@
 ---
-title: Avatar project files and references
-description: Download various character-related project files and reference files.
+title: Character body reference files
+description: Download various project files and reference files for character bodies.
 ---
 
-<Alert severity = 'info'>
-See [Resources](../../avatar/resources.md) for a complete list of avatar-related downloadable content.
-</Alert>
+The following project files and templates are specifically helpful when creating a character body for an avatar. For a comprehensive list of Roblox's official downloadable content for avatars, such as rigid and layered accessory templates, see [Resources](../../avatar/resources.md).
 
 ## Project files
 
-The following `.fbx`, `.blend`, and `.ma` project files are available to use as examples, boilerplate, or reference:
+The following `.fbx`, `.blend`, and `.ma` project files are available to use as examples, boilerplate, or as a reference for your own custom character bodies for avatars:
 
 <Tabs>
   <TabItem label="Models">
@@ -21,8 +19,8 @@ The following [higher-fidelity](../../avatar/character-bodies/specifications.md#
 <table>
 <thead>
   <tr>
-    <th><b>File name</b></th>
-    <th><b>Description</b></th>
+    <th width="50%"><b>File name</b></th>
+    <th width="50%"><b>Description</b></th>
   </tr>
 </thead>
 <tbody>
@@ -52,14 +50,14 @@ The following [standard](../../avatar/character-bodies/specifications.md#standar
 <table>
 <thead>
   <tr>
-    <th><b>File name</b></th>
-    <th><b>Description</b></th>
+    <th width="50%"><b>File name</b></th>
+    <th width="50%"><b>Description</b></th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td><a href="../../assets/modeling/skinned-meshes/Lola.fbx" download>Lola.fbx</a></td>
-    <td>A skinned R15 character created from the <a href="../../art/modeling/skin-a-humanoid-model.md">Skin a humanoid model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../../avatar/character-bodies/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.</td>
+    <td>A skinned character with a [standard humanoid rig](specifications.md#standard-rigs) created from the <a href="../../art/modeling/skin-a-humanoid-model.md">Skin a humanoid model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../../avatar/character-bodies/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.</td>
   </tr>
   <tr>
     <td><a href="../../assets/avatar/dynamic-heads/reference-files/Fish-Person.zip" download>Fish-Person.zip</a></td>
@@ -105,22 +103,22 @@ The following [standard](../../avatar/character-bodies/specifications.md#standar
   <table>
   <thead>
   <tr>
-    <th><b>File</b></th>
-    <th><b>Description</b></th>
+    <th width="50%"><b>File</b></th>
+    <th width="50%"><b>Description</b></th>
   </tr>
   </thead>
   <tbody>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip" download>Rig_and_Attachments_Template.blend</a></td>
-    <td>Starting armature rig template for Blender. Contains an armature with correct R15 naming conventions and attachment points. Use this template for rigging bodies and clothing items.</td>
+    <td>Starting rigging armature template for Blender. Contains a rigging armature with correct [standard humanoid rig](specifications.md#standard-rigs) naming conventions and attachment points. Use this template for rigging character bodies and clothing items.</td>
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Body_Cage_Templates.zip" download>Body_Cage_Template.blend</a></td>
-    <td>Starting template for Blender, includes individual body part cages for each 15 humanoid parts. Use this template for caging your avatar bodies. <br /> <br /> <Alert severity='info'>To save time, edit the full-body `std_cage_deformable` mesh to automatically apply vertex changes to the individual body-part meshes. When importing the `.fbx` into Studio, you can remove this helper mesh.</Alert></td>
+    <td>Starting template for Blender, includes individual cages for each of the character's 15 humanoid body parts. Use this template for caging your character bodies.<br /> <br /> <Alert severity='info'>To save time, edit the full-body `std_cage_deformable` mesh to automatically apply vertex changes to the individual body part meshes. When importing the `.fbx` into Studio, you can remove this helper mesh.</Alert></td>
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Combined_Templates.zip" download>Combined-Template.blend</a></td>
-    <td>Template file containing all content from previous templates, includes rig skeleton, body cages, attachment points. Use this template to rig and cage bodies and accessories.</td>
+    <td>Template file containing all content from previous templates, includes a rigging armature, body cages, and attachment points. Use this template to rig and cage character bodies and accessories.</td>
   </tr>
 </tbody>
 </table>
@@ -130,22 +128,22 @@ The following [standard](../../avatar/character-bodies/specifications.md#standar
   <table>
 <thead>
   <tr>
-    <th><b>File</b></th>
-    <th><b>Description</b></th>
+    <th width="50%"><b>File</b></th>
+    <th width="50%"><b>Description</b></th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip" download>Rig_and_Attachments_Template.ma</a></td>
-    <td>Starting armature rig template for Maya. Contains an armature with correct R15 naming conventions and attachment points. Use this template for creating bodies and clothing items.</td>
+    <td>Starting rigging armature template for Maya. Contains a rigging armature with correct [standard humanoid rig](specifications.md#standard-rigs) naming conventions and attachment points. Use this template for creating character bodies and clothing items.</td>
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Body_Cage_Templates.zip" download>Body_Cage_Template.ma</a></td>
-    <td>Starting template for Maya, includes individual body part cages for each 15 humanoid parts. Use this template for caging your avatar bodies. <br /> <br /> <Alert severity='info'>To save time, edit the full-body `std_cage_deformable` mesh to automatically apply vertex changes to the individual body-part meshes. When importing the `.fbx` into Studio, you can remove this helper mesh.</Alert></td>
+    <td>Starting template for Maya, includes individual cages for each of the character's 15 humanoid body parts. Use this template for caging your character bodies.<br /> <br /> <Alert severity='info'>To save time, edit the full-body `std_cage_deformable` mesh to automatically apply vertex changes to the individual body part meshes. When importing the `.fbx` into Studio, you can remove this helper mesh.</Alert></td>
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Combined_Templates.zip" download>Combined-Template.ma</a></td>
-    <td>Template file containing all content from previous templates, includes rig skeleton, body cages, attachment points. Use this template to rig and cage bodies and accessories.</td>
+    <td>Template file containing all content from previous templates, includes a rigging armature, body cages, and attachment points. Use this template to rig and cage character bodies and accessories.</td>
   </tr>
 
 </tbody>
@@ -159,18 +157,18 @@ The following [standard](../../avatar/character-bodies/specifications.md#standar
     <table>
 <thead>
   <tr>
-    <th><b>File</b></th>
-    <th><b>Description</b></th>
+    <th width="50%"><b>File</b></th>
+    <th width="50%"><b>Description</b></th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip" download>Rig_and_Attachments_Template.fbx</a></td>
-    <td>Starting armature rig template for general modeling software. Contains an armature with correct R15 naming conventions and attachment points. Use this template for creating bodies and clothing items.</td>
+    <td>Starting rigging armature template for general modeling software. Contains a rigging armature with correct [standard humanoid rig](specifications.md#standard-rigs) naming conventions and attachment points. Use this template for creating character bodies and clothing items.</td>
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Body_Cage_Templates.zip" download>Body_Cage_Template.fbx</a></td>
-    <td>Starting template for general modeling software, includes individual body part cages for each 15 humanoid parts. Use this template for caging your avatar bodies. <br /> <br /> <Alert severity='info'>To save time, edit the full-body `std_cage_deformable` mesh to automatically apply vertex changes to the individual body-part meshes. When importing the `.fbx` into Studio, you can remove this helper mesh.</Alert></td>
+    <td>Starting template for general modeling software, includes individual cages for each of the character's 15 humanoid body parts. Use this template for caging your character bodies.<br /> <br /> <Alert severity='info'>To save time, edit the full-body `std_cage_deformable` mesh to automatically apply vertex changes to the individual body part meshes. When importing the `.fbx` into Studio, you can remove this helper mesh.</Alert></td>
   </tr>
 
 </tbody>
@@ -180,7 +178,7 @@ The following [standard](../../avatar/character-bodies/specifications.md#standar
 
 ## Templates
 
-If you are creating character models, you can choose from a variety of starting templates that best match your final design and save time on creating the [avatar components](./index.md#components-of-an-avatar). See [Create with templates](../../art/characters/creating/index.md#template-files) for important information on using these template files.
+If you are creating custom character body models, you can choose from a variety of starting templates that best match your final design to save time on creating the [avatar components](./index.md#character-body-components). For important information on using these template files, see [Create with templates](../../art/characters/creating/index.md#template-files).
 
 Each `.zip` contains a `.blend`, `.fbx`, and PBR texture `.png` files for that template model. If using Blender or following the [template creation guides](../../art/characters/creating/index.md), use the `.blend` project.
 

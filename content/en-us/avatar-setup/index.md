@@ -5,11 +5,11 @@ description: The Avatar Setup tool helps accelerate the avatar character, clothi
 
 **Avatar Setup** helps accelerate the avatar character, clothing, and accessory creation process by automatically processing custom models into avatar assets. If your characters, accessories, and clothing don't have all essential components for publishing to the [Marketplace](https://www.roblox.com/catalog), Avatar Setup can perform the following for your 3D models:
 
-- **Rigging** — Adds an R15 armature to your body model to enable movement and animation.
+- **Rigging** — Adds a [standard](../avatar/character-bodies/specifications.md#standard-rigs) or [higher-fidelity](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) rigging armature to your body model to enable movement and animation.
 - **Skinning** — Adds weights and influences to various surfaces of your mesh, ensuring an organic and natural flexibility during movement.
 - **Facial animation** — Generates the FACS poses, facial rigging, skinning, and animation data required for facial animation and avatar chat.
 - **Caging** — Adds the required cages to your asset, enabling it to support layered clothing.
-- **Partitioning** — Separates the body mesh into the appropriate R15 parts.
+- **Partitioning** — Separates the body mesh into the appropriate 15 body parts necessary for an avatar character body.
 - **Creating attachments** — Adds the appropriate attachment points enabling the character to wear rigid accessories.
 
 <img src="../assets/studio/general/Toolbar-Avatar-Setup.png" width="800" alt="Avatar Preview button indicated in Avatar tab" />
@@ -50,7 +50,7 @@ When your project has the appropriate `Class.Model` object in your workspace, yo
   <tr>
     <td>Avatar body</td>
     <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet Avatar Setup's supported [body inputs](./auto-setup-requirements.md#body).</td>
-    <td>`Class.Model` parenting associated 15 `Class.MeshPart` objects and other expected [avatar components](../avatar/character-bodies/index.md#components-of-an-avatar).</td>
+    <td>`Class.Model` parenting associated 15 `Class.MeshPart` objects and other expected [avatar components](../avatar/character-bodies/index.md#character-body-components).</td>
   </tr>
   <tr>
     <td>Accessory</td>
