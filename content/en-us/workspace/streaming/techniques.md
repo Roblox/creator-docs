@@ -66,12 +66,12 @@ Once `Class.Workspace.StreamingEnabled|StreamingEnabled` is toggled on for the `
 
 ## Model level-of-detail
 
-`Class.Model.LevelOfDetail` helps fill in non‑streamed `Class.Model` content with lightweight composite or imposter meshes, making the world look visually complete. **SLIM** (Scalable Lightweight Interactive Model) composite meshes are particularly effective, as players often cannot distinguish a SLIM mesh from the fully streamed‑in original.
+`Class.Model.LevelOfDetail` helps fill in non‑streamed `Class.Model` content with lightweight composite or imposter meshes, making the world look visually complete. [SLIM](./slim.md) (Scalable Lightweight Interactive Models) are particularly effective, as players often cannot distinguish a SLIM mesh from the fully streamed‑in original.
 
 For best results:
 
 - Group parts that are spatially and logically related, for example all the parts of a car.
-- Set `Class.Model.LevelOfDetail|LevelOfDetail` to `Enum.ModelLevelOfDetail.SLIM|SLIM` on models that contain **static** meshes and parts. Models that contain skinned meshes, are modified at runtime, or play animations are not supported.
+- Set `Class.Model.LevelOfDetail|LevelOfDetail` to `Enum.ModelLevelOfDetail.SLIM|SLIM` on models that contain **static** meshes and parts. Models that are modified at runtime or play animations are not supported.
 - Keep the spatial extent of each model under ~64 cubic studs to increase the likelihood that the entire actual model streams in together. If a model has very large extents, break it up into smaller modular models and apply an appropriate `Class.Model.LevelOfDetail|LevelOfDetail` to each one.
 
 <GridContainer numColumns="2">
@@ -106,32 +106,10 @@ Beyond setting [model level‑of‑detail](#model-level-of-detail), the structur
 Platform avatars outside of the currently streamed area are not visible by default, but enabling `Class.Workspace.EnableSLIMAvatars` renders [standard rig](../../avatar/character-bodies/specifications.md#standard-rigs) avatars as lightweight, animated stand‑ins when appropriate. Effectively, the engine:
 
 - Renders a SLIM version when an actual avatar model streams out.
-- Swaps SLIM/actual by available resources inside the streaming radius, as SLIM models can be significantly less costly to render than the full resolution model.
-- Throttles SLIM animations by scene importance and bandwidth.
+- Swaps between SLIM and full-resolution representations based on available resources, even inside the streaming radius.
+- Throttles SLIM animations based on scene importance and available bandwidth.
 
-The avatar level-of-detail system has specific optimizations for avatars. The following describes what will or won't be processed by SLIM:
-
-<Grid container spacing={2}>
-	<Grid item Small={12} Medium={12} Large={6} XLarge={6}>
-	<Alert severity="success" variant="outlined" style={{height: '100%', marginBottom: '0', paddingBottom: '0'}}>
-	<AlertTitle>SLIM Supported</AlertTitle>
-	<ul style={{paddingBottom: '0'}}>
-	<li style={{marginBottom: '10px'}}>Roblox-added standard-rig avatars on player join, including the character's body, head, layered clothing, and accessories.</li>
-	<li>Avatar changes made between the `Class.Player.CharacterAdded()|CharacterAdded()` event and `Class.Player.CharacterAppearanceLoaded()|CharacterAppearanceLoaded()` event.</li>
-	</ul>
-	</Alert>
-	</Grid>
-	<Grid item Small={12} Medium={12} Large={6} XLarge={6}>
-	<Alert severity="error" variant="outlined" style={{height: '100%', marginBottom: '0', paddingBottom: '0'}}>
-	<AlertTitle>Excluded</AlertTitle>
-	<ul style={{marginBottom: '0', paddingBottom: '0'}}>
-	<li style={{marginBottom: '10px'}}>R6 and NPC avatars (even standard-rig).</li>
-	<li style={{marginBottom: '10px'}}>Custom proportions/clothing/body parts (falls back to "Player Choice").</li>
-	<li>Avatar changes made after the `Class.Player.CharacterAppearanceLoaded|CharacterAppearanceLoaded()` event (equipping tools, accessory/clothing changes, etc.).</li>
-	</ul>
-	</Alert>
-	</Grid>
-</Grid>
+SLIM avatars support R15 standard-rig player characters with body, head, layered clothing, and accessories. R6 avatars, NPCs, and avatars with custom proportions are excluded. For the full list of supported and excluded avatar configurations, performance data, and troubleshooting tips, see [SLIM avatars](./slim.md#enabling-slim-for-avatars).
 
 ## Script patterns
 

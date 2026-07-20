@@ -45,6 +45,8 @@ navigation:
                 path: /workspace/streaming/
               - title: Techniques
                 path: /workspace/streaming/techniques
+              - title: SLIM
+                path: /workspace/streaming/slim
           - title: Server authority
             path: /projects/server-authority/
             section:
