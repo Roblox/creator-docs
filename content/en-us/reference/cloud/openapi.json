@@ -727,19 +727,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
-                }
-              }
-            }
+            "description": "OK"
           },
           "401": {
             "description": "0: Authorization has been denied for this request."
@@ -927,19 +915,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
-                }
-              }
-            }
+            "description": "OK"
           },
           "401": {
             "description": "0: Authorization has been denied for this request."
@@ -14008,7 +13984,7 @@
                     "enum": [1, 2]
                   },
                   "files": {
-                    "description": "The badge icon.",
+                    "description": "The badge icon. Optional: when omitted and a curated default badge icon is configured on\r\nthe service, the badge is created with that default icon. When provided, exactly one file\r\nmust be supplied.",
                     "type": "string",
                     "format": "binary"
                   },
@@ -22908,6 +22884,10 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
           }
         },
         "x-roblox-scopes": [
@@ -22925,6 +22905,9 @@
           },
           {
             "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.place:read"]
           }
         ],
         "externalDocs": {
@@ -23074,6 +23057,10 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
           }
         },
         "x-roblox-scopes": [
@@ -23091,6 +23078,9 @@
           },
           {
             "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.place:read"]
           }
         ],
         "externalDocs": {
@@ -23220,6 +23210,10 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
@@ -23237,6 +23231,9 @@
           },
           {
             "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.place:write"]
           }
         ],
         "externalDocs": {
@@ -26152,19 +26149,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
-                }
-              }
-            }
+            "description": "OK"
           }
         },
         "servers": [
@@ -26349,19 +26334,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
-                }
-              }
-            }
+            "description": "OK"
           }
         },
         "servers": [
@@ -26390,7 +26363,7 @@
         ]
       }
     },
-    "/v1/assets#ThumbnailsApi": {
+    "/v1/assets#thumbnails.roblox.com": {
       "get": {
         "tags": ["Assets", "Thumbnails"],
         "summary": "Thumbnails assets.",
@@ -26663,25 +26636,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
-                  }
-                }
-              }
-            }
+            "description": "OK"
           }
         },
         "servers": [
@@ -27339,7 +27294,7 @@
         ]
       }
     },
-    "/v1/autolocalization/games/{gameId}/autolocalizationtable#LocalizationTablesApi": {
+    "/v1/autolocalization/games/{gameId}/autolocalizationtable#localizationtables.roblox.com": {
       "patch": {
         "tags": ["Localization"],
         "parameters": [
@@ -27557,7 +27512,7 @@
         ]
       }
     },
-    "/v1/autolocalization/games/{gameId}/settings#LocalizationTablesApi": {
+    "/v1/autolocalization/games/{gameId}/settings#localizationtables.roblox.com": {
       "patch": {
         "tags": ["Localization", "Universes"],
         "summary": "Sets a game's auto-localization related settings",
@@ -27694,7 +27649,7 @@
         ]
       }
     },
-    "/v1/autolocalization/metadata#LocalizationTablesApi": {
+    "/v1/autolocalization/metadata#localizationtables.roblox.com": {
       "get": {
         "tags": ["Localization", "Metadata"],
         "summary": "Metadata for AutoLocalization Configuration",
@@ -28797,7 +28752,7 @@
         }
       }
     },
-    "/v1/badges/{badgeId}/icon#PublishApi": {
+    "/v1/badges/{badgeId}/icon#publish.roblox.com": {
       "post": {
         "tags": ["Assets", "Badges", "Thumbnails"],
         "summary": "Overwrites a badge icon with a new one.",
@@ -29660,7 +29615,7 @@
         }
       }
     },
-    "/v1/birthdate#UsersApi": {
+    "/v1/birthdate#users.roblox.com": {
       "get": {
         "tags": ["Accounts"],
         "summary": "Get the user's birthdate",
@@ -30631,7 +30586,7 @@
         ]
       }
     },
-    "/v1/description#UsersApi": {
+    "/v1/description#users.roblox.com": {
       "get": {
         "tags": ["Accounts", "User profiles"],
         "summary": "Get the user's description",
@@ -31806,7 +31761,7 @@
         }
       }
     },
-    "/v1/email/verify#AccountSettingsApi": {
+    "/v1/email/verify#accountsettings.roblox.com": {
       "post": {
         "tags": ["Accounts"],
         "summary": "Send verify email to the authenticated user's email address",
@@ -35393,7 +35348,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameServerResponse"
+                  "$ref": "#/components/schemas/PrivateServersApi.GameServerResponse"
                 }
               }
             }
@@ -36300,7 +36255,7 @@
         ]
       }
     },
-    "/v1/gender#UsersApi": {
+    "/v1/gender#users.roblox.com": {
       "get": {
         "tags": ["Accounts"],
         "summary": "Get the user's gender",
@@ -39572,7 +39527,7 @@
     "/v1/groups/{groupId}/relationships/{groupRelationshipType}/requests": {
       "delete": {
         "tags": ["Groups"],
-        "summary": "Batch declines group affiliate requests",
+        "summary": "Deletes a group relationship.",
         "parameters": [
           {
             "in": "path",
@@ -39587,16 +39542,23 @@
           {
             "in": "path",
             "name": "groupRelationshipType",
-            "description": "The type of group relationship being made",
+            "description": "The group relationship type, enemies or allies.",
             "required": true,
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "in": "path",
+            "name": "relatedGroupId",
+            "description": "The id of the group you want to delete the relationship with.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
           }
         ],
-        "requestBody": {
-          "$ref": "#/components/requestBodies/Roblox.Groups.Api.RelationshipsRequest"
-        },
         "responses": {
           "200": {
             "description": "OK",
@@ -39613,11 +39575,14 @@
               }
             }
           },
+          "400": {
+            "description": "2: Invalid group.\r\n3: Target group is invalid or does not exist.\r\n11: Relationship does not exist."
+          },
           "401": {
             "description": "0: Authorization has been denied for this request."
           },
           "403": {
-            "description": "0: Token Validation Failed"
+            "description": "0: Token Validation Failed\r\n8: You are blocked from communicating with this user."
           }
         },
         "servers": [
@@ -39726,7 +39691,7 @@
       },
       "post": {
         "tags": ["Groups"],
-        "summary": "Batch accepts group affiliate requests",
+        "summary": "Create a group relationship.",
         "parameters": [
           {
             "in": "path",
@@ -39741,16 +39706,23 @@
           {
             "in": "path",
             "name": "groupRelationshipType",
-            "description": "The type of group relationship being made",
+            "description": "The group relationship type, enemies or allies.",
             "required": true,
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "in": "path",
+            "name": "relatedGroupId",
+            "description": "The id of the group you want to create a relationship with.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
           }
         ],
-        "requestBody": {
-          "$ref": "#/components/requestBodies/Roblox.Groups.Api.RelationshipsRequest"
-        },
         "responses": {
           "200": {
             "description": "OK",
@@ -39767,11 +39739,14 @@
               }
             }
           },
+          "400": {
+            "description": "1: Group relationship type or request type is invalid.\r\n2: Invalid group.\r\n3: Target group is invalid or does not exist.\r\n4: Your group cannot establish a relationship with itself."
+          },
           "401": {
             "description": "0: Authorization has been denied for this request."
           },
           "403": {
-            "description": "0: Token Validation Failed"
+            "description": "0: Token Validation Failed\r\n5: Your group does not allow enemy declarations.\r\n6: Other group does not allow enemy declarations.\r\n7: Your group already has a relationship with the target group.\r\n8: You are blocked from communicating with this user.\r\n9: Insufficient permissions."
           }
         },
         "servers": [
@@ -43188,19 +43163,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
-                }
-              }
-            }
+            "description": "OK"
           },
           "400": {
             "description": "2: invalid server request\r\n3: Encoding cannot be empty"
@@ -43652,7 +43615,7 @@
         }
       }
     },
-    "/v1/metadata#FriendsApi": {
+    "/v1/metadata#friends.roblox.com": {
       "get": {
         "tags": ["Connections", "Metadata"],
         "parameters": [
@@ -43702,7 +43665,7 @@
         }
       }
     },
-    "/v1/metadata#TwoStepVerificationApi": {
+    "/v1/metadata#twostepverification.roblox.com": {
       "get": {
         "tags": ["Accounts", "Metadata"],
         "summary": "Gets two step verification system metadata.",
@@ -44087,6 +44050,88 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/friends#friends_get_v1_my_new_friend_requests_count"
+        }
+      }
+    },
+    "/v1/my/trusted-friends/requests": {
+      "get": {
+        "tags": ["Connections"],
+        "summary": "Get all incoming trusted friend requests using exclusive start paging.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "The number of results per request.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "in": "query",
+            "name": "cursor",
+            "description": "The paging cursor for the previous or next page.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sortOrder",
+            "description": "Specifies how to sort the returned trusted friend requests.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "enum": [0, 1],
+              "default": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Friends.Api.Models.Response.TrustedFriendRequestResponse_"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Friends.Api.Models.Response.TrustedFriendRequestResponse_"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "1: The target user is invalid or does not exist.\r\n6: Invalid parameters."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "2: The user is banned from performing operation.\r\n3: The user is blocked from performing this action."
+          },
+          "429": {
+            "description": "9: The flood limit has been exceeded."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://friends.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/friends#friends_get_v1_my_trusted_friends_requests"
         }
       }
     },
@@ -45519,7 +45564,7 @@
     "/v1/private-servers/my-private-servers": {
       "get": {
         "tags": ["Private servers", "Universes"],
-        "operationId": "PrivateServersApi.PrivateServers_GetMyPrivateServers",
+        "operationId": "PrivateServers_GetMyPrivateServers",
         "parameters": [
           {
             "name": "privateServersTab",
@@ -45577,7 +45622,7 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#PrivateServersApi.PrivateServers_GetMyPrivateServers"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#PrivateServers_GetMyPrivateServers"
         }
       }
     },
@@ -48744,7 +48789,7 @@
                     "enum": [1, 2]
                   },
                   "files": {
-                    "description": "The badge icon.",
+                    "description": "The badge icon. Optional: when omitted and a curated default badge icon is configured on\r\nthe service, the badge is created with that default icon. When provided, exactly one file\r\nmust be supplied.",
                     "type": "string",
                     "format": "binary"
                   },
@@ -50434,6 +50479,48 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/users#contacts_get_v1_user_tag_validate"
+        }
+      }
+    },
+    "/v1/user/trusted-friend-requests/count": {
+      "get": {
+        "tags": ["Connections"],
+        "summary": "Return the number of pending trusted friend requests.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Friends.Api.PendingFriendRequestCountModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Friends.Api.PendingFriendRequestCountModel"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://friends.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/friends#friends_get_v1_user_trusted_friend_requests_count"
         }
       }
     },
@@ -56739,7 +56826,7 @@
     "/v1/vip-servers/my-private-servers": {
       "get": {
         "tags": ["Private servers"],
-        "operationId": "PrivateServers_GetMyPrivateServers",
+        "operationId": "PrivateServersApi.PrivateServers_GetMyPrivateServers",
         "parameters": [
           {
             "name": "privateServersTab",
@@ -56797,7 +56884,7 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#PrivateServers_GetMyPrivateServers"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/private-servers#PrivateServersApi.PrivateServers_GetMyPrivateServers"
         }
       }
     },
@@ -63248,22 +63335,6 @@
         "description": "The Roblox.Groups.Api.PayoutRequest.",
         "required": true
       },
-      "Roblox.Groups.Api.RelationshipsRequest": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/Roblox.Groups.Api.RelationshipsRequest"
-            }
-          },
-          "text/json": {
-            "schema": {
-              "$ref": "#/components/schemas/Roblox.Groups.Api.RelationshipsRequest"
-            }
-          }
-        },
-        "description": "The Roblox.Groups.Api.RelationshipsRequest.",
-        "required": true
-      },
       "Roblox.LocalizationTables.Api.IngestAutoScrapedContentForGameRequest": {
         "content": {
           "application/json": {
@@ -65963,69 +66034,6 @@
         "additionalProperties": false,
         "description": "Response model for listing a game server log"
       },
-      "GameServerResponse": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "maxPlayers": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "playing": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "playerTokens": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
-          },
-          "players": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PrivateServerPlayerResponse"
-            },
-            "nullable": true
-          },
-          "fps": {
-            "type": "number",
-            "format": "double"
-          },
-          "ping": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "vipServerId": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
-          },
-          "accessCode": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "owner": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/VerifiedBadgeUserResponse"
-              }
-            ],
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "GameUpdateStatus": {
         "type": "object",
         "properties": {
@@ -66323,7 +66331,7 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GameServerResponse"
+              "$ref": "#/components/schemas/PrivateServersApi.GameServerResponse"
             },
             "nullable": true
           },
@@ -70332,6 +70340,69 @@
         },
         "additionalProperties": false
       },
+      "PrivateServersApi.GameServerResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "maxPlayers": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "playing": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "playerTokens": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "players": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PrivateServerPlayerResponse"
+            },
+            "nullable": true
+          },
+          "fps": {
+            "type": "number",
+            "format": "double"
+          },
+          "ping": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "vipServerId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "accessCode": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "owner": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/VerifiedBadgeUserResponse"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "PrivateServersApi.SortOrder": {
         "enum": ["Asc", "Desc"],
         "type": "string"
@@ -73961,9 +74032,9 @@
             "description": "Whether demo mode is enabled.",
             "type": "boolean"
           },
-          "demoModeLastChangedTime": {
+          "demoModeChangeableAfter": {
             "format": "date-time",
-            "description": "When demo mode was last toggled. For client-side throttle UX.",
+            "description": "The earliest time at which demo mode can be toggled again (ISO 8601).\r\nNull when no cooldown is active (i.e. demo mode can be changed immediately).",
             "type": "string"
           }
         },
@@ -74119,9 +74190,9 @@
             "description": "Whether demo mode is enabled.",
             "type": "boolean"
           },
-          "demoModeLastChangedTime": {
+          "demoModeChangeableAfter": {
             "format": "date-time",
-            "description": "When demo mode was last toggled. For client-side throttle UX.",
+            "description": "The earliest time at which demo mode can be toggled again (ISO 8601).\r\nNull when no cooldown is active (i.e. demo mode can be changed immediately).",
             "type": "string"
           }
         },
@@ -74578,22 +74649,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.AssetDelivery.Api.AssetMetadata": {
-        "description": "An asset piece of metadata.",
-        "type": "object",
-        "properties": {
-          "metadataType": {
-            "format": "int32",
-            "description": "Asset metadata type. ['UncompressedSize' = 1]",
-            "enum": [1],
-            "type": "integer"
-          },
-          "value": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Badges.Api.BadgeAwardResponse": {
         "description": "The result of being awarded a badge.",
         "type": "object",
@@ -74648,6 +74703,11 @@
           "maxBadgeDescriptionLength": {
             "format": "int32",
             "description": "The max length for a badge description.",
+            "type": "integer"
+          },
+          "defaultBadgeIconImageId": {
+            "format": "int64",
+            "description": "The asset ID of the curated default badge icon used when a badge is created without an\r\nuploaded icon file, or `0` when the default badge icon feature is disabled.",
             "type": "integer"
           }
         },
@@ -76552,6 +76612,23 @@
         "properties": {
           "Success": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Friends.Api.Models.Response.TrustedFriendRequestResponse": {
+        "description": "A response model representing a friend request.",
+        "type": "object",
+        "properties": {
+          "sentAt": {
+            "format": "date-time",
+            "description": "When the TF request was sent.",
+            "type": "string"
+          },
+          "senderId": {
+            "format": "int64",
+            "description": "The sender user Id.",
+            "type": "integer"
           }
         },
         "additionalProperties": false
@@ -78999,6 +79076,9 @@
           "hasSocialModules": {
             "description": "Whether the group has social modules enabled (e.g. Forums)\r\n(determines if \"Followers\" vs \"Members\" should be shown).",
             "type": "boolean"
+          },
+          "communityTier": {
+            "$ref": "#/components/schemas/Roblox.Groups.Client.CommunityTierInfoResponse"
           }
         },
         "additionalProperties": false
@@ -79104,6 +79184,10 @@
           },
           "removeComments": {
             "description": "Remove comments permission",
+            "type": "boolean"
+          },
+          "createBugReports": {
+            "description": "Create bug reports (support ticket) permission. Only emitted when the permission is exposed\r\n(Roblox.Groups.Api.Properties.IGroupsApiSettings.ExposeCreateBugReportsPermission).",
             "type": "boolean"
           }
         },
@@ -79740,6 +79824,9 @@
           "isAutoAssignRoleDisabled": {
             "description": "Whether automatic assignment of the lowest non-guest role is disabled for this group.\r\nFor non-legacy groups (created after the multi-role cutoff), this is always true.\r\nFor legacy groups, reflects the persisted GroupFeatureSettings value.\r\nNull when the value could not be determined.",
             "type": "boolean"
+          },
+          "communityTier": {
+            "$ref": "#/components/schemas/Roblox.Groups.Client.CommunityTierInfoResponse"
           }
         },
         "additionalProperties": false
@@ -80087,20 +80174,6 @@
             "format": "int32",
             "description": "The maximum number of recurring payout partners",
             "type": "integer"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Groups.Api.RelationshipsRequest": {
-        "type": "object",
-        "properties": {
-          "GroupIds": {
-            "description": "The group ids being either accepted or declined",
-            "type": "array",
-            "items": {
-              "format": "int64",
-              "type": "integer"
-            }
           }
         },
         "additionalProperties": false
@@ -80472,6 +80545,9 @@
               },
               "ViewCommunityAnalytics": {
                 "type": "boolean"
+              },
+              "CreateBugReports": {
+                "type": "boolean"
               }
             },
             "additionalProperties": false
@@ -80557,6 +80633,32 @@
             "type": "string"
           },
           "updatedAt": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Groups.Client.CommunityTierInfoResponse": {
+        "type": "object",
+        "properties": {
+          "groupId": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "currentTier": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "previousTier": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "tierUpdatedTime": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "lastEvaluatedTime": {
             "format": "date-time",
             "type": "string"
           }
@@ -80950,7 +81052,7 @@
             "type": "integer"
           },
           "owner": {
-            "$ref": "#/components/schemas/Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Agents.AgentType_"
+            "$ref": "#/components/schemas/Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Users.Client.AssociatedEntityType_"
           },
           "created": {
             "format": "date-time",
@@ -80974,7 +81076,7 @@
             "type": "integer"
           },
           "owner": {
-            "$ref": "#/components/schemas/Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Agents.AgentType_"
+            "$ref": "#/components/schemas/Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Users.Client.AssociatedEntityType_"
           }
         },
         "additionalProperties": false
@@ -81083,14 +81185,6 @@
             "format": "date-time",
             "description": "Date asset was created.",
             "type": "string"
-          },
-          "isDelisted": {
-            "description": "If the asset is delisted.",
-            "type": "boolean"
-          },
-          "isCreatedForBundle": {
-            "description": "If the asset is part of a bundle.",
-            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -84290,64 +84384,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Web.Assets.AssetContentRepresentationSpecifier": {
-        "type": "object",
-        "properties": {
-          "format": {
-            "type": "string"
-          },
-          "majorVersion": {
-            "type": "string"
-          },
-          "fidelity": {
-            "type": "string"
-          },
-          "skipGenerationIfNotExist": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Web.Assets.AssetResponseItemV1": {
-        "type": "object",
-        "properties": {
-          "location": {
-            "type": "string"
-          },
-          "errors": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.Web.Assets.IAssetItemError"
-            }
-          },
-          "requestId": {
-            "type": "string"
-          },
-          "isArchived": {
-            "description": "Whether the asset has been archived.",
-            "type": "boolean"
-          },
-          "assetTypeId": {
-            "format": "int32",
-            "description": "Asset Type.",
-            "type": "integer"
-          },
-          "contentRepresentationSpecifier": {
-            "$ref": "#/components/schemas/Roblox.Web.Assets.AssetContentRepresentationSpecifier"
-          },
-          "assetMetadatas": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.AssetDelivery.Api.AssetMetadata"
-            }
-          },
-          "isRecordable": {
-            "description": "Whether the asset is recordable in screen recordings.",
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Web.Assets.BatchAssetRequestItem": {
         "type": "object",
         "properties": {
@@ -84428,28 +84464,6 @@
           },
           "doNotFallbackToBaselineRepresentation": {
             "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Web.Assets.IAssetItemError": {
-        "type": "object",
-        "properties": {
-          "Code": {
-            "format": "int32",
-            "type": "integer"
-          },
-          "Message": {
-            "type": "string"
-          },
-          "CustomErrorCode": {
-            "format": "int32",
-            "description": "Custom error code for Roblox.Web.Assets.IAssetItemError ['UnknownError' = 0, 'NoPermissionToAsset' = 1, 'AssetPermissionCheckFailed' = 2, 'NotAuthorizedForAgeRecommendation' = 3, 'AgeRecommendationCheckFailed' = 4, 'InvalidPlaceRequestFromGameServer' = 5, 'BlockedAssetTypeRequestedFromInsertService' = 6, 'BlockedAssetTypeRequestedFromGameServer' = 7, 'AssetTypeMismatch' = 8, 'MissingAssetTypeInRequestHeader' = 9, 'AssetNotTrustedForPlace' = 10, 'NoAuthentication' = 11, 'AssetContentRepresentationBlockedDueToModeration' = 12, 'AssetNotFound' = 13, 'AssetVersionNotFound' = 14, 'AssetContentRepresentationNotFound' = 15, 'BlockedByAgeGeoRestriction' = 16, 'BlockedAssetTypeRequestedFromNonGameServer' = 17, 'AssetPendingReview' = 18, 'NotApprovedForRequestor' = 19, 'NotApprovedByContentCompliance' = 20, 'AssetContentRepresentationGenerating' = 21, 'AssetArchived' = 22, 'AssetUsageNotAllowed' = 23]",
-            "enum": [
-              0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
-              19, 20, 21, 22, 23
-            ],
-            "type": "integer"
           }
         },
         "additionalProperties": false
@@ -84814,25 +84828,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Agents.AgentType_": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "format": "int64",
-            "type": "integer"
-          },
-          "type": {
-            "format": "int32",
-            "description": " ['User' = 1, 'Group' = 2]",
-            "enum": [1, 2],
-            "type": "integer"
-          },
-          "name": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Assets.AssetType_": {
         "type": "object",
         "properties": {
@@ -84889,6 +84884,25 @@
             "format": "int32",
             "description": " ['User' = 0, 'Group' = 1]",
             "enum": [0, 1],
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Users.Client.AssociatedEntityType_": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "type": {
+            "format": "int32",
+            "description": " ['User' = 1, 'Group' = 2]",
+            "enum": [1, 2],
             "type": "integer"
           },
           "name": {
@@ -85596,6 +85610,24 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Roblox.Friends.Api.FriendRequestResponse"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Friends.Api.Models.Response.TrustedFriendRequestResponse_": {
+        "type": "object",
+        "properties": {
+          "previousPageCursor": {
+            "type": "string"
+          },
+          "nextPageCursor": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Friends.Api.Models.Response.TrustedFriendRequestResponse"
             }
           }
         },
@@ -86564,13 +86596,19 @@
             "type": "boolean",
             "description": "Whether the server has been shutdown."
           },
-          "reasonForShutdown": {
+          "status": {
             "allOf": [
               {
-                "$ref": "#/components/schemas/ShutdownReason"
+                "$ref": "#/components/schemas/ServerStatus"
               }
             ],
-            "description": "Why the server has been shutdown.\r\nUnspecified if ServerManagementService.V2.Models.GameServer.ShutDown is false."
+            "description": "Creator-visible server status."
+          },
+          "terminationTime": {
+            "type": "string",
+            "description": "The time the server terminated. Null while ServerManagementService.V2.Models.GameServer.ShutDown is false.",
+            "format": "date-time",
+            "nullable": true
           },
           "playerIds": {
             "type": "array",
@@ -86608,8 +86646,18 @@
           },
           "totalCount": {
             "type": "integer",
-            "description": "Total number of game servers that match the filter (across all pages).\r\nOmitted if the backend does not provide a total count.",
+            "description": "Total matching rows across all pages. Combined active+shutdown queries return the sum of\r\neach source total when both are known; omitted when a source failed or omitted its total.",
             "format": "int32",
+            "nullable": true
+          },
+          "shutdownServersFetchError": {
+            "type": "boolean",
+            "description": "True when this page includes active rows but shutdown rows could not be fetched.\r\nResults may be a partial slice of the globally ordered combined stream.",
+            "nullable": true
+          },
+          "activeServersFetchError": {
+            "type": "boolean",
+            "description": "True when this page includes shutdown rows but active rows could not be fetched.\r\nResults may be a partial slice of the globally ordered combined stream.",
             "nullable": true
           }
         },
@@ -86670,6 +86718,19 @@
         },
         "additionalProperties": false,
         "description": "The server numerical signal configuration."
+      },
+      "ServerStatus": {
+        "enum": [
+          "active",
+          "shut_down",
+          "restarted",
+          "roblox_restarted",
+          "crashed",
+          "out_of_memory",
+          "moderated"
+        ],
+        "type": "string",
+        "description": "Server status that is visible to creators.\r\nThis is derived from the shutdown reason for shutdown rows; it is always \"Active\" for currently live servers."
       },
       "ServerType": {
         "enum": [0, 1, 2, 3, 4, 5],
@@ -86767,12 +86828,6 @@
         },
         "additionalProperties": false,
         "description": "Shutdown Game Instance response."
-      },
-      "ShutdownReason": {
-        "enum": [0, 1, 2, 3, 4, 5],
-        "type": "integer",
-        "description": "Defines the reason a server was shut down",
-        "format": "int32"
       },
       "SkinnyUserResponse": {
         "type": "object",
@@ -89347,7 +89402,7 @@
     },
     {
       "name": "Connections",
-      "description": "Manage user connections, such as [declining all connection requests](#friends_post_v1_users__requesterUserId__decline_friend_request) or [retrieving a connection list](#friends_get_v1_users__userId__friends).\n",
+      "description": "Manage user connections, such as [viewing pending trusted friend requests](#friends_get_v1_my_trusted_friends_requests), [retrieving the pending trusted friend request count](#friends_get_v1_user_trusted_friend_requests_count), [declining all connection requests](#friends_post_v1_users__requesterUserId__decline_friend_request), or [retrieving a connection list](#friends_get_v1_users__userId__friends).\n",
       "x-roblox-tag-info": {
         "path": "friends",
         "content": "HTTP APIs for working with connections on Roblox Cloud.",
@@ -89357,7 +89412,9 @@
           "friends_post_v1_my_friends_refresh_qr_session",
           "friends_get_v1_my_friends_requests",
           "friends_get_v1_my_new_friend_requests_count",
+          "friends_get_v1_my_trusted_friends_requests",
           "friends_post_v1_user__userId__multiget_are_friends",
+          "friends_get_v1_user_trusted_friend_requests_count",
           "friends_get_v1_user_friend_requests_count",
           "friends_get_v1_users__userId__friends",
           "friends_get_v1_users__userId__friends_count",
@@ -90053,13 +90110,13 @@
           "PrivateServers_GetPrivateServerList",
           "PrivateServers_CreatePrivateServer",
           "PrivateServers_PrivateServersEnabledInUniverse",
-          "PrivateServersApi.PrivateServers_GetMyPrivateServers",
+          "PrivateServers_GetMyPrivateServers",
           "PrivateServers_CanInviteUser",
           "PrivateServers_GetPrivateServer",
           "PrivateServers_UpdatePrivateServer",
           "PrivateServers_UpdatePrivateServerPermissions",
           "PrivateServers_UpdatePrivateServerSubscription",
-          "PrivateServers_GetMyPrivateServers"
+          "PrivateServersApi.PrivateServers_GetMyPrivateServers"
         ]
       }
     },
@@ -90325,7 +90382,7 @@
           "PrivateServers_CreatePrivateServer",
           "Voting_MultiGetGameVoteStatus",
           "PrivateServers_PrivateServersEnabledInUniverse",
-          "PrivateServersApi.PrivateServers_GetMyPrivateServers",
+          "PrivateServers_GetMyPrivateServers",
           "PrivateServers_GetPrivateServer",
           "PrivateServers_UpdatePrivateServer",
           "PrivateServers_UpdatePrivateServerPermissions",

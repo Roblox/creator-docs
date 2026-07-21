@@ -119,6 +119,50 @@ To view your transaction history for local currency paid access purchases:
 1. In the Creator Hub, go to **Finances** ⟩ **Transactions**.
 2. Select **Paid access in local currency**. The transaction table displays the date of the transaction, the user who made the purchase, the game name, how much the user paid, and the user's refund status.
 
+## Demo mode
+
+**Demo mode** lets users try your paid access experience before purchasing it. When demo mode is enabled, any user can join your experience even if they haven't paid for access. You can then use scripting to detect whether a user owns the experience and tailor their gameplay accordingly, for example by limiting access to certain areas or features until they purchase.
+
+### Enable demo mode
+
+On the **Access Settings** page for your experience, toggle **Enable Demo Mode** on under the local currency payment section.
+
+<Alert severity="warning">
+After toggling demo mode on or off, there is a cooldown period before you can change the setting again. Plan accordingly before enabling or disabling the feature.
+</Alert>
+
+### Control the demo experience in scripts
+
+Use `Class.MarketplaceService:PlayerOwnsAssetAsync()` to check whether a user has purchased access to your experience. Users who haven't purchased access are in demo mode, and you can limit what content they can see or interact with.
+
+The following code sample shows how to gate content behind a purchase check:
+
+```lua
+local MarketplaceService = game:GetService("MarketplaceService")
+local Players = game:GetService("Players")
+
+local PLACE_ID = game.PlaceId
+
+local function onPlayerAdded(player: Player)
+  local success, ownsAccess = pcall(function()
+    return MarketplaceService:PlayerOwnsAssetAsync(player, PLACE_ID)
+  end)
+
+  if success then
+    if ownsAccess then
+      -- Grant full access to the experience
+    else
+      -- Player is in demo mode: show limited content or
+      -- prompt them to purchase
+    end
+  else
+    warn("Failed to check ownership for", player.Name)
+  end
+end
+
+Players.PlayerAdded:Connect(onPlayerAdded)
+```
+
 ## Policies
 
 Paid access games in local currency must:
