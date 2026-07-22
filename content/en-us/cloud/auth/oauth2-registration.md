@@ -44,6 +44,9 @@ Once you've [registered](#register-your-app) your app, you should configure its 
   You can skip this section during app development and testing, but you must
   complete it during the review process to publish your app to users.
 </Alert>
+<Alert severity="info">
+  Ensure the URL's are easily identifiable as the page you are indicating they are (Ie. "termsofservice.html", "privacypolicy.html", "homepage.html") to prevent false rejections
+</Alert>
 
 ## Add permissions
 
