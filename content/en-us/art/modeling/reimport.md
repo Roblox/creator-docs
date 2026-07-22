@@ -23,7 +23,7 @@ Reimport memory is local to your device. A Reimport ID is stored on the `Class.M
 
 - Filepaths are never saved in the place file.
 - Reimport supports different reimport paths on different devices for the same instance.
-- Reimport supports copy-pasting, saving and loading from rbxm/rbxl, and Asset Manager workflows.
+- Reimport supports copy-pasting, saving and loading from `.rbxm`/`.rbxl`, and [Asset Manager](../../projects/assets/manager.md) workflows.
 
 </Alert>
 
@@ -37,29 +37,25 @@ Reimport relies on matching mesh names between the Studio and the 3D source file
 - If a mesh's `path/name` in the 3D source file **doesn't exist** as `Class.MeshPart` `path/name` in Studio, reimport creates a new `Class.MeshPart` within the `Class.Model`.
 - If a `Class.MeshPart` `path/name` in Studio **doesn't exist** in the 3D source file, reimport does not modify the `Class.MeshPart` in Studio.
 
-#### Known Asset Cache
+#### Known asset cache
 
-Studio uses a **Known Asset Cache**, which helps detect duplicate imports in the same Studio session. If an imported or reimported asset is detected, Roblox reuses the existing asset ID instead of creating and uploading a new asset.
+Studio uses a **known asset cache** which helps detect duplicate imports in the same Studio session. If an imported or reimported asset is detected, Roblox reuses the existing asset ID instead of creating and uploading a new asset.
 
 If you attempt to reimport a single mesh object, but the 3D file contains a larger number of meshes or textures, Roblox only applies a single asset upload for that object.
 
 #### Duplicates
 
-Reimport detects duplicate meshes, and doesn't reupload matching meshes that are the same in both Studio and the 3D source file.
-
-In the scenario where a mesh in Blender is renamed from "Mesh1" to "Mesh2", reimport creates a new `Class.MeshPart` named "Mesh2" and doesn't apply changes to the original "Mesh1".
+Reimport detects duplicate meshes, and doesn't reupload matching meshes that are the same in both Studio and the 3D source file. In the scenario where a mesh in Blender is renamed from `Mesh1` to `Mesh2`, reimport creates a new `Class.MeshPart` named `Mesh2` and doesn't apply changes to the original `Mesh1`.
 
 #### Pivot points
 
-In cases where you may want to use the pivot point of the `Class.MeshPart` and not the `Class.Model`, right-click any `Class.MeshPart` with reimport information and select **Reimport** > **Reimport relative to this**.
-
-**Reimport relative to this** triggers a reimport for the entire model using the pivot point of right-clicked `Class.MeshPart` as an anchor instead of the `Class.Model` pivot point. You can use this for models that have custom pivots by reimporting relative to a mesh that has not changed position in the 3D file.
+In cases where you may want to use the pivot point of the `Class.MeshPart` and not the `Class.Model`, right-click any `Class.MeshPart` with reimport information and select **Reimport**&nbsp;⟩ **Reimport relative to this**. Doing so triggers a reimport for the entire model using the pivot point of right-clicked `Class.MeshPart` as an anchor instead of the `Class.Model` pivot point. You can use this for models that have custom pivots by reimporting relative to a mesh that has not changed position in the 3D file.
 
 ### SurfaceAppearance detection
 
 Reimport can quickly batch update the textures of a model with [PBR textures](./surface-appearance.md) based off of the naming convention of the image files.
 
-Reimport detects a set of known suffixes for color, metalness, normal, and roughness maps. You can find the full list of supported suffixes in the following table:
+Reimport detects a set of known suffixes for color, metalness, normal, roughness, and emissive maps. You can find the full list of supported suffixes in the following table:
 
 <table><thead>
   <tr>
@@ -69,24 +65,29 @@ Reimport detects a set of known suffixes for color, metalness, normal, and rough
   </tr></thead>
 <tbody>
   <tr>
-    <td>Color</td>
-    <td>diffuse, diff, albedo, base, col, color, alb</td>
-    <td>Tree_**Color**.png</td>
+    <td>[Color](./surface-appearance.md#color-albedo)</td>
+    <td>`color`, `col`, `diffuse`, `diff`, `albedo`, `alb`, `base`</td>
+    <td>`Tree_Color.png`</td>
   </tr>
   <tr>
-    <td>Metalness</td>
-    <td>metallic, metalness, metal, mtl, met</td>
-    <td>Tree_**Metal**.png</td>
+    <td>[Metalness](./surface-appearance.md#metalness)</td>
+    <td>`metal`, `metallic`, `metalness`, `mtl`, `met`</td>
+    <td>`Tree_Metal.png`</td>
   </tr>
   <tr>
-    <td>Roughness</td>
-    <td>roughness, rough, rgh</td>
-    <td>Tree_**Rough**.png</td>
+    <td>[Roughness](./surface-appearance.md#roughness)</td>
+    <td>`rough`, `roughness`, `rgh`</td>
+    <td>`Tree_Rough.png`</td>
   </tr>
   <tr>
-    <td>Normal</td>
-    <td>normal, nor, nrm, nrml, norm</td>
-    <td>Tree_**Normal**.png</td>
+    <td>[Normal](./surface-appearance.md#normal)</td>
+    <td>`normal`, `nor`, `nrm`, `nrml`, `norm`</td>
+    <td>`Tree_Normal.png`</td>
+  </tr>
+  <tr>
+    <td>[Emissive Mask](./surface-appearance.md#emissive-mask)</td>
+    <td>`emissive`, `emission`, `emiss`, `emit`, `glow`, `illum`, `selfillum`, `light`, `luminance`, `emissivemask`</td>
+    <td>`Tree_Emissive.png`</td>
   </tr>
 </tbody>
 </table>
@@ -101,15 +102,13 @@ When you bring an asset into Studio through the [importer](../../studio/importer
 
 To reimport a configured `Class.Model`:
 
-1. Right-click the `Class.Model` and select **Reimport** > **Reimport**.
-   <img src="../../assets/modeling/meshes/Reimport-menu.png" width="50%" alt="Right-click menu of an imported model, displaying reimport options"/>
-   1. Alternatively, when selecting the object, use the reimport hotkey <kbd>Alt</kbd><kbd>Shift</kbd><kbd>R</kbd>.
-   2. A loading indicator appears after selecting reimport. If there are any issues, an error dialog displays with a **Configure Reimport Settings** button that opens the Configure dialog.
+1. Right-click the `Class.Model` and select **Reimport** ⟩ **Reimport** from the context menu.
 
-If a `Class.Model` has no saved reimport configuration (for example, a model imported on a different device or before reimport was available), triggering **Reimport** opens the Configure dialog instead of starting the reimport. You can also open it directly at any time through **Reimport** > **Configure**. In this Configure dialog, you can set the file path, upload target, and import presets.
+   - Alternatively, when selecting the object, use the reimport hotkey <kbd>Alt</kbd><kbd>Shift</kbd><kbd>R</kbd>.
+   - A loading indicator appears after selecting reimport. If there are any issues, an error dialog displays with a **Configure Reimport Settings** button that opens the **Configure** dialog.
+
+If a `Class.Model` has no saved reimport configuration (for example, a model imported on a different device or before reimport was available), triggering **Reimport** opens the **Configure** dialog instead of starting the reimport. You can also open it directly at any time through **Reimport**&nbsp;⟩ **Configure**. In this dialog, you can set the file path, upload target, and import presets.
 
 <Alert severity = 'warning'>
-Since reimport relies on matching mesh paths/names to update a `Class.Model` from a 3D file, it’s important to maintain unique naming of meshes and their paths in your external 3D tools.
-
-In Studio, you should also maintain the naming/tree structure of the `Class.MeshPart` objects within your model in order for reimport to update correctly.
+Since reimport relies on matching mesh paths/names to update a `Class.Model` from a 3D file, it’s important to maintain unique naming of meshes and their paths in your external 3D tools. In Studio, you should also maintain the naming/tree structure of the `Class.MeshPart` objects within your model in order for reimport to update correctly.
 </Alert>

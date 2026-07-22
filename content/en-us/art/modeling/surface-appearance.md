@@ -45,7 +45,7 @@ To enable surface appearance for a `Class.MeshPart`:
 
 ## Texture maps
 
-Studio currently supports 5 types of PBR texture maps: [color](#color-albedo), [normal](#normal), [roughness](#roughness), [metalness](#metalness), and [emissive](#emissive). Each of these maps corresponds to an important aspect of the object's surface appearance. Texture maps only change visual appearance and don't affect the geometry of the `Class.MeshPart` object.
+Studio currently supports 5 types of PBR texture maps: [color](#color-albedo), [normal](#normal), [roughness](#roughness), [metalness](#metalness), and [emissive](#emissive-mask). Each of these maps corresponds to an important aspect of the object's surface appearance. Texture maps only change visual appearance and don't affect the geometry of the `Class.MeshPart` object.
 
 <Alert severity = 'warning'>
 Avoid adjusting material values to look better in one specific lighting situation. You should base your material values on the physical characteristics and test and iterate to achieve a result that remains visually accurate in various lighting environments.
@@ -122,8 +122,8 @@ The grayscale `Class.SurfaceAppearance.MetalnessMap|MetalnessMap` texture proper
 	</figure>
   </GridContainer>
 </TabItem>
-<TabItem label="Emissive">
-The grayscale `Class.SurfaceAppearance.EmissiveMaskContent|EmissiveMaskContent` content property determines emissivity across the surface, alongside `Class.SurfaceAppearance.EmissiveStrength|EmissiveStrength` and `Class.SurfaceAppearance.EmissiveTint|EmissiveTint`. See [emissive](#emissive) for additional information.
+<TabItem label="Emissive Mask">
+The grayscale `Class.SurfaceAppearance.EmissiveMaskContent|EmissiveMaskContent` content property determines emissivity across the surface, alongside `Class.SurfaceAppearance.EmissiveStrength|EmissiveStrength` and `Class.SurfaceAppearance.EmissiveTint|EmissiveTint`. See [emissive](#emissive-mask) for additional information.
 <GridContainer numColumns="3">
 	<figure>
     	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-EmissiveMask.png" alt="A jack-o-lantern face."/>
@@ -162,7 +162,7 @@ You can apply transparency in two different behaviors by setting the following `
 - [Opaque](#opaque) — Ignores the alpha channel of the `Class.SurfaceAppearance.ColorMap|ColorMap` and uses the color value directly from the color map.
 - [Overlay](#overlay) — Overlays the `Class.SurfaceAppearance.ColorMap|ColorMap` over the underlying mesh's `Class.MeshPart.Color`. Color maps using overlay mode reveal the base color of the mesh anywhere transparency is present. This is the default setting.
 - [Transparency](#alpha-modes) — Removes the visible mesh based on transparency in the `ColorMap`. This renders the mesh see-through and does not reveal the original mesh color whenever transparency is present.
-- [TintMask](#tintmask) — Blends the tinted `Class.SurfaceAppearance.ColorMap|ColorMap` over the un-tinted `Class.SurfaceAppearance.ColorMap|ColorMap`.
+- [Tint mask](#tint-mask) — Blends the tinted `Class.SurfaceAppearance.ColorMap|ColorMap` over the un-tinted `Class.SurfaceAppearance.ColorMap|ColorMap`.
 
 ##### Opaque
 
@@ -269,7 +269,7 @@ There are two outcomes of `Enum.AlphaMode.Transparency|Transparency` mode, depen
 - When alpha is used to cut out the shape of mostly opaque objects with hard edges such as foliage, lace fabric, and netting, set the `Class.MeshPart.Transparency` to `0`. When parts of the surface are fully opaque, the Roblox engine can render them with proper depth‑based occlusion. Opaque surfaces also generally work better with depth‑based effects like `Class.DepthOfFieldEffect`, glass and water refraction, and water reflection.
 - When alpha is used to add detail to semi‑transparent objects or objects with smooth gradients of transparency, set the `Class.MeshPart.Transparency` to **at&nbsp;least** `0.02`. This improves the quality of blending for objects such as dirty windows and soft‑edged feathers, but it will not work with all effects.
 
-##### TintMask
+##### Tint mask
 
 You can use the `Enum.AlphaMode.TintMask` mode to apply `Class.SurfaceAppearance.Color` tinting to selective areas of a surface. The tinting is strongest where the alpha channel is fully visible and not applied where the alpha channel is transparent.
 
@@ -453,7 +453,7 @@ Different PBR renderers use various workflows for processing reflectiveness. Stu
 Various combinations of the roughness and metalness can represent almost every possible real-world material surface. See [material references](../../art/modeling/material-reference.md) for examples and references of how combinations of material values can create various surface appearances.
 </Alert>
 
-### Emissive
+### Emissive mask
 
 A grayscale `Class.SurfaceAppearance.EmissiveMaskContent|EmissiveMaskContent` content texture applies an **emissive mask** across the surface. This lets you use a texture to control emissiveness for more artistic control than the all‑or‑nothing `Enum.Material.Neon|Neon` material and allows you to create detailed glowing effects like illuminated text, futuristic armor, or bioluminescent creatures.
 

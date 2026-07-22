@@ -22884,10 +22884,6 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000
           }
         },
         "x-roblox-scopes": [
@@ -22905,9 +22901,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.place:read"]
           }
         ],
         "externalDocs": {
@@ -23057,10 +23050,6 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000
           }
         },
         "x-roblox-scopes": [
@@ -23078,9 +23067,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.place:read"]
           }
         ],
         "externalDocs": {
@@ -23210,10 +23196,6 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
@@ -23231,9 +23213,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.place:write"]
           }
         ],
         "externalDocs": {
@@ -23980,6 +23959,889 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/universes#Restarts_ForecastRestart"
+        }
+      }
+    },
+    "/thumbnail-personalization-api/v1/universes/{universeId}/personalization": {
+      "get": {
+        "tags": ["Thumbnail Personalization"],
+        "operationId": "ThumbnailPersonalizationApi.HomepageThumbnail_FindThumbnailPersonalizations",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/PersonalizedConfigStatus"
+                }
+              ]
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.thumbnail:read",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.thumbnail:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnail-personalization#ThumbnailPersonalizationApi.HomepageThumbnail_FindThumbnailPersonalizations"
+        }
+      }
+    },
+    "/thumbnail-personalization-api/v1/universes/{universeId}/personalization/create": {
+      "post": {
+        "tags": ["Thumbnail Personalization"],
+        "operationId": "ThumbnailPersonalizationApi.HomepageThumbnail_CreateThumbnailPersonalization",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateThumbnailPersonalizationRequest"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateThumbnailPersonalizationRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateThumbnailPersonalizationRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateThumbnailPersonalizationRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 50
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 50
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.thumbnail:write",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.thumbnail:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnail-personalization#ThumbnailPersonalizationApi.HomepageThumbnail_CreateThumbnailPersonalization"
+        }
+      }
+    },
+    "/thumbnail-personalization-api/v1/universes/{universeId}/personalization/update": {
+      "post": {
+        "tags": ["Thumbnail Personalization"],
+        "operationId": "ThumbnailPersonalizationApi.HomepageThumbnail_UpdateThumbnailPersonalization",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateThumbnailPersonalizationRequest"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateThumbnailPersonalizationRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateThumbnailPersonalizationRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateThumbnailPersonalizationRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 50
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 50
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.thumbnail:write",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.thumbnail:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnail-personalization#ThumbnailPersonalizationApi.HomepageThumbnail_UpdateThumbnailPersonalization"
+        }
+      }
+    },
+    "/thumbnail-personalization-api/v1/universes/{universeId}/thumbnails": {
+      "delete": {
+        "tags": ["Thumbnail Personalization"],
+        "operationId": "ThumbnailPersonalizationApi.HomepageThumbnail_DeleteHomepageThumbnails",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "homepageThumbnailIds",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 50
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 50
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.thumbnail:write",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.thumbnail:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnail-personalization#ThumbnailPersonalizationApi.HomepageThumbnail_DeleteHomepageThumbnails"
+        }
+      },
+      "get": {
+        "tags": ["Thumbnail Personalization"],
+        "operationId": "ThumbnailPersonalizationApi.HomepageThumbnail_GetHomepageThumbnails",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "nextCursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FindThumbnailsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.thumbnail:read",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.thumbnail:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnail-personalization#ThumbnailPersonalizationApi.HomepageThumbnail_GetHomepageThumbnails"
+        }
+      }
+    },
+    "/thumbnail-personalization-api/v1/universes/{universeId}/thumbnails/uploads": {
+      "post": {
+        "tags": ["Thumbnail Personalization"],
+        "operationId": "ThumbnailPersonalizationApi.HomepageThumbnail_UploadHomepageThumbnails",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UploadThumbnailsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 50
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 50
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.thumbnail:write",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.thumbnail:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnail-personalization#ThumbnailPersonalizationApi.HomepageThumbnail_UploadHomepageThumbnails"
+        }
+      }
+    },
+    "/thumbnail-personalization-api/v1/universes/{universeId}/thumbnails/uploads/status": {
+      "get": {
+        "tags": ["Thumbnail Personalization"],
+        "operationId": "ThumbnailPersonalizationApi.HomepageThumbnail_GetHomepageThumbnailsStatus",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "operationIds",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UploadThumbnailsStatusResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.thumbnail:read",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.thumbnail:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnail-personalization#ThumbnailPersonalizationApi.HomepageThumbnail_GetHomepageThumbnailsStatus"
         }
       }
     },
@@ -64684,6 +65546,19 @@
         "description": "Request model for creating a save",
         "nullable": true
       },
+      "CreateThumbnailPersonalizationRequest": {
+        "required": ["homepageThumbnailIds"],
+        "type": "object",
+        "properties": {
+          "homepageThumbnailIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
       "CreationContext": {
         "type": "object",
         "properties": {
@@ -65735,6 +66610,23 @@
         "enum": ["String", "Number"],
         "type": "string",
         "description": "Enum describing the data type of a filter field's values."
+      },
+      "FindThumbnailsResponse": {
+        "required": ["homepageThumbnails"],
+        "type": "object",
+        "properties": {
+          "homepageThumbnails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HomepageThumbnail"
+            }
+          },
+          "nextCursor": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "FlushMemoryStoreMetadata": {
         "type": "object",
@@ -66971,31 +67863,51 @@
         },
         "description": "Represents the permissions on a role."
       },
-      "GroupsApi.Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Assets.AssetType_": {
+      "HomepageThumbnail": {
+        "required": [
+          "assetId",
+          "homepageThumbnailId",
+          "homepageThumbnailStatus",
+          "moderationStatus",
+          "personalizedConfigStatus"
+        ],
         "type": "object",
         "properties": {
-          "id": {
-            "format": "int64",
-            "type": "integer"
-          },
-          "type": {
-            "format": "int32",
-            "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94]",
-            "enum": [
-              1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21, 22,
-              24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40,
-              41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
-              59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
-              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
-              91, 92, 93, 94
-            ],
-            "type": "integer"
-          },
-          "name": {
+          "homepageThumbnailId": {
+            "minLength": 1,
             "type": "string"
+          },
+          "assetId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "moderationStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ThumbnailPersonalizationApi.ModerationStatus"
+              }
+            ]
+          },
+          "personalizedConfigStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PersonalizedConfigStatus"
+              }
+            ]
+          },
+          "homepageThumbnailStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/HomepageThumbnailStatus"
+              }
+            ]
           }
         },
         "additionalProperties": false
+      },
+      "HomepageThumbnailStatus": {
+        "enum": ["Active", "Spammy"],
+        "type": "string"
       },
       "HttpContent": {
         "type": "object",
@@ -69524,6 +70436,10 @@
         "x-oneOf": {
           "Value": ["value"]
         }
+      },
+      "PersonalizedConfigStatus": {
+        "enum": ["Active", "Inactive"],
+        "type": "string"
       },
       "Place": {
         "required": ["templatePlace"],
@@ -80013,7 +80929,7 @@
             "$ref": "#/components/schemas/Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Core.CreatorType_"
           },
           "rootPlace": {
-            "$ref": "#/components/schemas/GroupsApi.Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Assets.AssetType_"
+            "$ref": "#/components/schemas/Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Assets.AssetType_"
           },
           "created": {
             "format": "date-time",
@@ -84837,14 +85753,14 @@
           },
           "type": {
             "format": "int32",
-            "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93]",
+            "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94]",
             "enum": [
               1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21, 22,
               24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40,
               41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
               59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
               75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
-              91, 92, 93
+              91, 92, 93, 94
             ],
             "type": "integer"
           },
@@ -87219,6 +88135,10 @@
         },
         "description": "Information about the expiration of a subscription."
       },
+      "ThumbnailPersonalizationApi.ModerationStatus": {
+        "enum": ["Reviewing", "Rejected", "Approved", "Unspecified"],
+        "type": "string"
+      },
       "ToolboxService.Asset": {
         "type": "object",
         "properties": {
@@ -88322,6 +89242,83 @@
               }
             ],
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateThumbnailPersonalizationRequest": {
+        "required": ["homepageThumbnailIds", "id"],
+        "type": "object",
+        "properties": {
+          "homepageThumbnailIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UploadStatus": {
+        "enum": [1, 2],
+        "type": "integer",
+        "format": "int32"
+      },
+      "UploadThumbnailStatus": {
+        "type": "object",
+        "properties": {
+          "homepageThumbnailId": {
+            "type": "string",
+            "nullable": true
+          },
+          "assetId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "moderationStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ThumbnailPersonalizationApi.ModerationStatus"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      "UploadThumbnailsResponse": {
+        "required": ["fileToOperationIdDict"],
+        "type": "object",
+        "properties": {
+          "fileToOperationIdDict": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "UploadThumbnailsStatusResponse": {
+        "required": ["uploadStatus", "uploadThumbnailStatusDict"],
+        "type": "object",
+        "properties": {
+          "uploadStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/UploadStatus"
+              }
+            ]
+          },
+          "uploadThumbnailStatusDict": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/UploadThumbnailStatus"
+            }
           }
         },
         "additionalProperties": false
@@ -90159,6 +91156,23 @@
           "develop_get_v1_universes_multiget_teamcreate",
           "delete_legacy_develop_v2_teamtest__placeId_",
           "develop_delete_v2_teamtest__placeId_"
+        ]
+      }
+    },
+    {
+      "name": "Thumbnail Personalization",
+      "description": "Upload and manage creator-provided homepage thumbnail variants for an experience, then choose which player groups see each variant. Unlike the Thumbnails feature, these APIs manage homepage images and targeting rules instead of generating or retrieving standard Roblox thumbnails.\n",
+      "x-roblox-tag-info": {
+        "path": "thumbnail-personalization",
+        "content": "HTTP APIs for working with homepage thumbnail personalization on Roblox Cloud.",
+        "ordering": [
+          "ThumbnailPersonalizationApi.HomepageThumbnail_UploadHomepageThumbnails",
+          "ThumbnailPersonalizationApi.HomepageThumbnail_GetHomepageThumbnailsStatus",
+          "ThumbnailPersonalizationApi.HomepageThumbnail_GetHomepageThumbnails",
+          "ThumbnailPersonalizationApi.HomepageThumbnail_DeleteHomepageThumbnails",
+          "ThumbnailPersonalizationApi.HomepageThumbnail_CreateThumbnailPersonalization",
+          "ThumbnailPersonalizationApi.HomepageThumbnail_FindThumbnailPersonalizations",
+          "ThumbnailPersonalizationApi.HomepageThumbnail_UpdateThumbnailPersonalization"
         ]
       }
     },

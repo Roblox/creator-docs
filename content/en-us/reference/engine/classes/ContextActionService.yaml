@@ -792,7 +792,7 @@ methods:
           The same UserInputType originally sent to BindActivate.
       - name: keyCodeForActivation
         type: KeyCode
-        default: Unknown
+        default: None
         summary: |
           The same KeyCode originally sent to BindActivate.
     returns:
