@@ -9,16 +9,16 @@ keywords:
   - Bundles
 ---
 
-Character body models require a specific set of components and configuration standards to ensure all avatar features work as expected across the platform. Check that your model meets the following modeling specifications and guidelines before exporting to ensure Studio compatibility.
+Character body models require a specific set of components and configuration standards to ensure all avatar features work as expected across the platform. Before you start the export process, verify that your model meets the following modeling specifications and guidelines for proper Studio compatibility.
 
-When ready to export, see the [export requirements](../../avatar/character-bodies/export.md) for mesh export settings for Blender and Maya.
+When you're ready to export your character body, reference all [export setting requirements](./export.md) for Blender and Maya.
 
 <Alert severity = 'info'>
-<AlertTitle>If creating other types of 3D models:</AlertTitle>
+<AlertTitle>For other types of 3D models:</AlertTitle>
 <ul>
-<li>For generic meshes, see [general mesh specifications](../../art/modeling/specifications.md) and [general export settings](../../art/modeling/export-requirements.md).</li> <br />
-<li>For rigid accessories, see [rigid accessory specifications](../rigid-accessories/specifications.md) and [rigid accessory export settings](../rigid-accessories/export.md).</li> <br />
-<li>For layered accessories, see [layered accessory specifications](../layered-accessories/specifications.md) and [layered export settings](../layered-accessories/export.md).</li> <br />
+<li>[General mesh](../../art/modeling/specifications.md) specifications.</li>
+<li>[Rigid accessory](../rigid-accessories/specifications.md) specifications.</li>
+<li>[Layered accessory](../layered-accessories/specifications.md) specifications.</li>
 </ul>
 </Alert>
 
@@ -34,7 +34,7 @@ Character body models for avatars are made up of 15 separate mesh objects and re
 
 ### Body scale
 
-Roblox supports 3 standards of character body scales: **Normal**, **Slender**, and **Classic**. These standards allow developers to create games and spaces with consistent body sizes for standardizing movement and interactions. You can select a body scale on import using [Rig Scale options](../../studio/importer.md#rig-general), or modify the [body scale manually](../../art/accessories/body-scale.md). Body scale persists when the asset is [uploaded to the Marketplace](../../marketplace/publish-to-marketplace.md#upload-an-asset).
+Roblox supports 3 standards of character body scales: **Normal**, **Slender**, and **Classic**. These standards allow developers to create games and spaces with consistent body sizes for standardizing movement and interactions. You can select a body scale on import using [Rig Scale options](../../studio/importer.md#rig-general), or modify the [body scale manually](../rigid-accessories/specifications.md#avatarpartscaletype). Body scale persists when the asset is [uploaded to the Marketplace](../../marketplace/publish-to-marketplace.md#upload-an-asset).
 
 <center>
 <figure>
@@ -481,7 +481,7 @@ To ensure that avatar sizes are visually consistent, you must standardize body p
 
 ## Attachments
 
-Attachments are points that determine the specific location where accessories and in-game equipable objects attach to the character's body. Like many [character components](./index.md#character-body-components), attachment points are set up in third-party modeling software and imported as `Class.Attachment` objects.
+Attachments are points that determine the specific location where accessories and in-game equippable objects attach to the character's body. Like many [character components](./index.md#character-body-components), attachment points are set up in third-party modeling software and imported as `Class.Attachment` objects.
 
 The Importer automatically recognizes and converts mesh objects as attachment points if the objects include the affix `\_Att` and follow the naming conventions below. This only applies when importing meshes with caging data, such as bodies (accessory attachment points are created using the Accessory Fitting Tool). Check out examples of this implementation in any of Roblox's [downloadable reference models](../../avatar/resources.md#references).
 

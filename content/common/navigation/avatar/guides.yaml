@@ -35,8 +35,6 @@ navigation:
             path: /avatar/rigid-accessories/
           - title: Specifications
             path: /avatar/rigid-accessories/specifications
-          - title: Body scale
-            path: /art/accessories/body-scale
           - title: Export settings
             path: /avatar/rigid-accessories/export
           - title: Import into Studio

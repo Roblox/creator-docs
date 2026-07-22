@@ -30,51 +30,42 @@ To import your asset as a character body model:
 
 1. Select **Import**. The asset populates in your workspace as a `Class.Model` with the appropriate textures applied as a `Class.SurfaceAppearance` or `Class.MeshPart.TextureID`.
 
+   <GridContainer numColumns="2">
+   <figure>
+   <img src="../../assets/art/avatar/Avatar-Studio-Example.png" />
+   </figure>
+   <figure>
+   <img src="../../assets/art/avatar/Avatar-Data-Model.png" />
+   </figure>
+   </GridContainer>
+
 <BaseAccordion>
-<AccordionSummary>Manually add textures</AccordionSummary>
+<AccordionSummary>Textures didn't load correctly?</AccordionSummary>
 <AccordionDetails>
- If textures didn't load correctly, add them manually. You may need to save and publish your game in order to access the [Asset Manager](../../projects/assets/manager.md).
+If your textures didn't load correctly, you can import them manually using the [Asset Manager](../../projects/assets/manager.md):
 
-1.  In the **Asset Manager**, click the **Import** button.
-2.  Upload your image files.
-3.  After moderation clears for your image, select the `Class.MeshPart` parented within your imported `Class.Model`.
-4.  If you are using a single basic texture, set the `Class.MeshPart.TextureID` property to your uploaded texture image.
-5.  If you are using PBR textures:
+1. In the **Asset Manager**, click the **Import** button. If you are unable to access the Asset Manager, save and publish your game first.
+1. Upload your image files.
+1. After moderation clears your images, select the `Class.MeshPart` parented within your imported `Class.Model`.
+1. If you are using a single basic texture, set the `Class.MeshPart.TextureID` property to your uploaded texture image.
+1. If you are using PBR textures:
 
-    1. Add a `Class.SurfaceAppearance` child to your `Class.MeshPart`.
+   1. Add a `Class.SurfaceAppearance` child to your `Class.MeshPart`.
 
-       <img src="../../assets/art/avatar/Avatar-Surface-Appearance.png" width = "40%"/>
+      <img src="../../assets/art/avatar/Avatar-Surface-Appearance.png" width = "40%"/>
 
-    2. In the `Class.SurfaceAppearance` properties, click each property value and assign the appropriate texture image from the asset dropdown:
+   1. In the `Class.SurfaceAppearance` properties, click each property value and assign the appropriate texture image from the asset dropdown:
 
-       1. Set the **ColorMap** to the **\_ALB** texture image.
-       2. Set the **MetalnessMap** to the **\_MTL** texture image.
-       3. Set the **NormalMap** to the **\_NOR** texture image.
-       4. Set the **RoughnessMap** to the **\_RGH** texture image.
+      1. Set the **ColorMap** to the **\_ALB** texture image.
+      1. Set the **MetalnessMap** to the **\_MTL** texture image.
+      1. Set the **NormalMap** to the **\_NOR** texture image.
+      1. Set the **RoughnessMap** to the **\_RGH** texture image.
 
-       <img src="../../assets/art/avatar/Avatar-Roughness-Map.png" width = "50%"/>
+      <img src="../../assets/art/avatar/Avatar-Roughness-Map.png" width = "50%"/>
 
 </AccordionDetails>
 </BaseAccordion>
-
-<Alert severity = 'success'>
-After successful import, your model object should populate in your project as a `Class.Model` with the appropriate textures applied.
-</Alert>
-
-After successful fitting and converting, your 3D model should populate in your project as an avatar-ready `Class.Model` in the **Explorer** window.
-
-      <GridContainer numColumns="2">
-      <figure>
-         <img src="../../assets/art/avatar/Avatar-Studio-Example.png" />
-      </figure>
-      <figure>
-         <img src="../../assets/art/avatar/Avatar-Data-Model.png" />
-      </figure>
-      </GridContainer>
-
-<Alert severity = 'warning'>
-Character creation is a complex process that requires lots of testing and iteration. See [Test characters](../../art/characters/testing/index.md) for steps on importing your character model into a test place and verifying your avatar and related components.
-</Alert>
+<br />
 
 With this new character `Class.Model`, you can perform any of the following:
 
@@ -84,4 +75,8 @@ With this new character `Class.Model`, you can perform any of the following:
 
   - Playtest as the character by renaming the `Class.Model` to `StarterCharacter` and moving the `Class.Model` to the `Class.StarterPlayer` folder in the **Explorer** before play testing.
 
-- Save the model to your [Toolbox](../../projects/assets/toolbox.md) or make it public on the [Creator Store](../../production/creator-store.md) to share or use within any of your games.
+- Save the model to your [Toolbox](../../projects/assets/toolbox.md) or make it public on the [Creator Store](../../production/creator-store.md) to use within any of your games or share with other creators.
+
+<Alert severity = 'warning'>
+Character creation is a complex process that requires lots of testing and iteration. For information on importing your character model into a test place and verifying your avatar and related components, see [Test characters](../../art/characters/testing/index.md).
+</Alert>

@@ -46,83 +46,75 @@ Create and sell your first basic accessory.
 </Grid>
 </Grid>
 
-Rigid accessories are the most basic 3D cosmetic items that users can equip and wear on their avatar character, such props, weapons, hats, and more. Unlike [clothing accessories](../layered-accessories/index.md) that stretch and fit over a character body, rigid accessories attach to a specific point on an avatar character and don't deform or wrap over a target.
+**Rigid accessories** are 3D assets that attach to an avatar according to the attachment points around the character's body, such as props, weapons, and hats. When users purchase rigid accessories on the Marketplace, they can adjust the position and rotation of the item away from the attachment point according to their avatar's body type.
 
-To create a custom Roblox accessory for your own game or to sell on the Marketplace, it's important to start with the following:
+There are two main layers of a rigid accessory that structure how the accessory looks and works on the platform:
 
-- A basic background with 3D modeling tools such as [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview).
-- An understanding of the [components that make up a rigid accessory](#components-of-a-rigid-accessory).
-- An understanding of the general [accessory creation process](#creation-process).
-- Review Roblox's official tutorials to create your own accessories:
-  - [Rigid accessory creation tutorial](../../art/accessories/creating-rigid/index.md) - covers each process required for converting a 3D model to a rigid accessory and publishing it to the Marketplace.
-  - [Clothing creation tutorial](../../art/accessories/creating/index.md) - a step-by-step process of creating your own avatar-ready clothing from scratch in Blender.
-- [Additional tools, resources, and guides](#resources) provided by Roblox to standardize and expedite the creation process.
+- **Mesh & textures** that make up the rigid accessory's visual appearance.
+- **Attachments** that determine how the accessory attaches to the character's body.
 
-## Components of a rigid accessory
+While you can create the first of these layers manually in third-party modeling tools like [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview), attachments have strict configuration requirements to meet Roblox's technical [rigid accessory specifications](specifications.md) that guarantee your rigid accessories behave consistently from game to game. Before you create your first custom rigid accessory, it's recommended to:
 
-All accessory models are made up of the same base components of a [mesh object](#mesh-part), [textures](#textures), and [attachment](#attachments).
+1. Understand the [essential components](#rigid-accessory-components) of a rigid accessory and how they work together.
+1. Review all [resources](#resources) that Roblox provides to standardize and expedite the [creation process](#creation-process), such as Blender and Maya project files, Studio tooling, and step-by-step guides.
+1. Follow the [basic rigid accessory creation tutorial](../../art/accessories/creating-rigid/index.md) that covers how to convert a simple 3D model into a rigid accessory.
 
-When [creating accessories](#creation-process), most of these components are created first in your modeling software, then converted to their appropriate Roblox Studio instance on import.
+Once you have a custom rigid accessory, you can import it into Studio and use the Avatar Setup tool to process your creation into an avatar asset that's ready to be sold on the [Marketplace](../../marketplace/index.md).
+
+<Alert severity = 'info'>
+Unlike rigid accessories that don't deform when they attach to a specific point on the avatar, layered accessories stretch and wrap over a target until it fits over the character's body. For more information, see [Layered accessories](../layered-accessories/index.md).
+</Alert>
+
+## Rigid accessory components
+
+All rigid accessories are made up of the same three fundamental components that allow users equip 3D items with consistent behavior according to the character's [body type](specifications.md#body-scale).
 
 ### Mesh part
 
 <GridContainer numColumns="2">
-<figure><img src="../../assets/art/accessories/Mesh-Bow-Example.png" /><figcaption>Bow rigid accessory mesh object</figcaption></figure>
-
-<figure><img src="../../assets/art/accessories/Mesh-Example.png"/>  <figcaption>T-shirt layered clothing mesh object</figcaption></figure>
+<figure><img src="../../assets/art/accessories/Mesh-Bow-Example.png" /><figcaption>Bow rigid accessory mesh object.</figcaption></figure>
+<figure><img src="../../assets/art/accessories/Mesh-Hair-Example.png" /><figcaption>Hair rigid accessory mesh object.</figcaption></figure>
 </GridContainer>
 
 <Alert severity = 'warning'>
 Clothing, such as the t-shirt, require [additional clothing components](../layered-accessories/index.md) to apply the layerable effect to the 3D object.
 </Alert>
 
-All accessories require a single mesh object that represents the geometry of the accessory object. In Studio, this mesh object is represented as a `Class.MeshPart` nested under a single `Class.Model`.
+All accessories require a single mesh object that represents the rigid accessory's geometry. In Studio, this mesh object is represented as a `Class.MeshPart` nested under a single `Class.Model`.
 
 ### Textures
 
 <GridContainer numColumns="2">
-  <figure><img src="../../assets/art/accessories/Texture-Example.png" />  <figcaption>2D texture map for the t-shirt model</figcaption></figure>
-
-  <figure><img src="../../assets/art/accessories/Texture-Applied-Example.png" /><figcaption>T-shirt model with texture applied</figcaption></figure>
+  <figure><img src="../../assets/art/accessories/Texture-Bow-Example.png" />  <figcaption>2D texture map for the bow rigid accessory.</figcaption></figure>
+  <figure><img src="../../assets/art/accessories/Texture-Hair-Example.png" />  <figcaption>2D texture map for the hair rigid accessory.</figcaption></figure>
 </GridContainer>
 
-Textures are 2D image files that define the surface appearance of your 3D object. You can create textures within a texture painting program or a 3D modeling software.
+Textures are image files that define the surface appearance of your rigid accessory. You can create textures within a texture painting program or a 3D modeling software.
 
-In Studio, textures images are imported as image assets and are set to `Class.MeshPart` objects by a child `Class.SurfaceAppearance` object or a `Class.MeshPart.TextureID` property.
+In Studio, you must import textures as image files and set them to `Class.MeshPart` objects by a child `Class.SurfaceAppearance` object or a `Class.MeshPart.TextureID` property.
 
 ### Attachments
 
 <GridContainer numColumns="2">
-  <figure><img src="../../assets/art/accessories/Attachment-Example.png" />  <figcaption>Attachment geometry defines where the attachment connects with the character</figcaption></figure>
-
-  <figure><img src="../../assets/art/accessories/Attachment-Data-Model-Example.png" width="80%"/><figcaption>Geometry with the "_Att" suffix automatically convert to `Class.Attachment` objects in Studio</figcaption></figure>
+  <figure><img src="../../assets/art/accessories/Attachment-Bow-Example.png" />  <figcaption>The bow's attachment point enables the bow to connect to a character's back.</figcaption></figure>
+  <figure><img src="../../assets/art/accessories/Attachment-Hair-Example.png" />  <figcaption>The hair's attachment point enables the hair to connect to a character's head.</figcaption></figure>
 </GridContainer>
 
-Attachment points define where accessories attach to a character's body. In Studio, attachments are represented by `Class.Attachment` objects.
+Attachment points define where accessories attach to a character's body. These are not rendered on the platform, but they are represented visually as spheres in 3D modeling software when you use Roblox's **R15 Rig and Attachments** [project file](../../avatar/resources.md#project-files).
+
+When you import a rig with these visual representations, the spheres are created as `Class.Attachment` objects using standardized names.
 
 ## Creation process
 
-Custom accessories are first created in 3D modeling programs, such as [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview), before importing the `.fbx` or `.gltf` model into Studio.
-To get started creating your first avatar asset, see the [avatar tutorials](../../avatar/tutorials.md).
+When designing a rigid accessory in [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview), you must export all of the avatar components in a single `.fbx` or `.gltf` for import into Studio. Since 3D creation isn't a linear process and always requires reiteration and testing, the process of creating a rigid accessory can differ between individuals and various creation workflows.
 
-Depending on the type of asset you are creating, the creation process follows these high-level workflows:
+In general, the creation process follows the following workflow:
 
-<GridContainer numColumns="2">
-
-  <figure>  <figcaption><center>Rigid Accessory Workflow</center></figcaption><img src="../../assets/art/accessories/Workflow-Rigid.png" /></figure>
-
-  <figure><figcaption><center>Layered Accessory Workflow</center></figcaption><img src="../../assets/art/accessories/Workflow-Layered.png" /></figure>
-</GridContainer>
-
-<Alert severity = 'info'>
-Since 3D creation isn't a linear process and always requires reiteration and testing, the process of creating an accessory can differ between individuals and various creation workflows.
-</Alert>
+<figure><figcaption><center>Rigid Accessory Workflow</center></figcaption><center><img src="../../assets/art/accessories/Workflow-Rigid.png" width="50%"/></center></figure>
 
 ## Resources
 
-There are a variety of resources available for creators of all backgrounds to get started with accessory creation.
-
-If you are interested in specific avatar creation topics, use the following table to find guides and resources that best match your needs:
+There are a variety of resources available for creators of all backgrounds to get started with rigid accessory creation. Review the following table for specific topics and resources:
 
 <table>
 <thead>

@@ -19,7 +19,7 @@ While you can create each of these layers manually in third-party modeling tools
 1. Review all [resources](#resources) that Roblox provides to standardize and expedite the [creation process](#creation-process), such as Blender and Maya project files, Studio tooling, and step-by-step guides.
 1. Follow the [basic character creation tutorial](../../art/characters/creating/index.md) that uses Roblox templates in collaboration with common Blender modeling and texturing tools.
 
-Once you have a character body model, you can import it into Studio and use the Avatar Setup tool to process your creation into an avatar asset that's ready to be sold on the [Marketplace](../../marketplace/index.md).
+Once you have a custom character body model, you can import it into Studio and use the Avatar Setup tool to process your creation into an avatar asset that's ready to be sold on the [Marketplace](../../marketplace/index.md).
 
 ## Character body components
 
@@ -107,6 +107,7 @@ In Studio, each joint of the rigging armature is represented by `Class.Bone` obj
 </GridContainer>
 
 <figure><img src="../../assets/art/avatar/Facial-Animation-Timeline.png" /><figcaption>Each required face pose is saved as a keyframe in the animation timeline.</figcaption></figure>
+
 Facial animation data from either the character's rigging armature or facial joints allow avatars to express emotions with their eyes, mouth, and teeth. Each character includes facial joints, skinning data, animation timeline data, and mapped pose data that allows it. In Studio, these facial animation elements are represented by a `Class.FaceControls` instance.
 
 ### Cage meshes
@@ -131,7 +132,7 @@ If you are caging your own non-template character model, it's important to use o
 
 Attachment points set the specific points where rigid accessories and in-game equipable objects attach to the character's body. These are not rendered on the platform, but they are represented visually as spheres in 3D modeling software when you use Roblox's **R15 Rig and Attachments** [project file](../../avatar/resources.md#project-files).
 
-When you import a rig with these visual representations, the spheres are created as `Class.Attachment` instances using the standardized names.
+When you import a rig with these visual representations, the spheres are created as `Class.Attachment` objects using standardized names.
 
 <Alert severity = 'info'>
 When users wear layered clothing, the clothing isn't attached directly to the attachment, but it does reference the associated attachment point during ragdoll and dismemberment animations.
@@ -139,12 +140,12 @@ When users wear layered clothing, the clothing isn't attached directly to the at
 
 ## Creation process
 
-When designing an avatar model, you must export all of the avatar components in a single `.fbx` or `.gltf` for import into Studio. Since 3D creation isn't a linear process and always requires reiteration and testing, the process of creating an avatar character model can differ between individuals and various creation workflows.
+When designing a character body in [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview), you must export all of the avatar components in a single `.fbx` or `.gltf` for import into Studio. Since 3D creation isn't a linear process and always requires reiteration and testing, the process of creating an avatar character model can differ between individuals and various creation workflows.
 
 In general, the creation process follows these typical workflows:
 
 <GridContainer numColumns="2">
-  <figure><center>**Basic Creation with Templates**</center><br />Customize a [character body template ](../../art/characters/creating/index.md) that already includes all the necessary components.<img src="../../assets/art/avatar/Workflow-Bodies-Templates.png"/></figure>
+  <figure><center>**Basic Creation with Templates**</center><br />Customize a [character body template](../../art/characters/creating/index.md) that already includes all the necessary components.<img src="../../assets/art/avatar/Workflow-Bodies-Templates.png"/></figure>
 
   <figure><center>**Advanced Creation from Scratch**</center><br />Create characters from scratch, allowing full customization of the avatar character's components.<img src="../../assets/art/avatar/Workflow-Bodies-Traditional.png"/></figure>
 </GridContainer>

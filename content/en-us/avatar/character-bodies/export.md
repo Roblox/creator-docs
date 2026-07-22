@@ -3,25 +3,21 @@ title: Export character bodies
 description: Use the appropriate export settings in Maya and Blender to generate Studio-ready .fbx files.
 ---
 
+When you are ready to export a character body model that meets Roblox's [character body specifications](./specifications.md), it's important to review the following prerequisite information and step-by-step instructions for the `.fbx` or `.gltf` export files so that your creation takes advantage of all of Studio's [Importer](../../studio/importer.md) features.
+
+This is particularly important for character body models because they contain all the mesh and texture data, including the rig and influence data that's essential for characters to move and animate properly across the platform.
+
 <Alert severity = 'warning'>
-It's important to test your assets multiple times at every point of the asset creation process, whether it is within your modeling application or after importing into Studio. See [Test characters](../../art/characters/testing/index.md) for more information.
+If you are using Roblox's avatar template files, you must perform the [cleanup steps](../../art/characters/creating/combine-head-geometry.md) in order for the assets to properly validate.
 </Alert>
-
-When you are ready to export a character body model that meets Roblox's [avatar character specifications](../../avatar/character-bodies/specifications.md), it's important to review the following prerequisite information and step-by-step instructions for the `.fbx` or `.gltf` export files so that your creation takes advantage of all of Studio's [Importer](../../studio/importer.md) features.
-
-This is particularly important for character body models because they contain all the mesh and texture data, including the rig and influence data, that's essential for characters to move and animate properly across the platform.
 
 <Alert severity = 'info'>
-<AlertTitle>If creating other types of 3D models:</AlertTitle>
+<AlertTitle>For other types of 3D models:</AlertTitle>
 <ul>
-<li>For generic meshes, see [general mesh specifications](../../art/modeling/specifications.md) and [general export settings](../../art/modeling/export-requirements.md).</li> <br />
-<li>For rigid accessories, see [accessory specifications](../rigid-accessories/specifications.md) and [accessory export settings](../rigid-accessories/export.md).</li> <br />
-<li>For layered accessories, see [layered accessory specifications](../layered-accessories/specifications.md) and [layered export settings](../layered-accessories/export.md).</li> <br />
+<li>[General mesh](../../art/modeling/export-requirements.md) export settings.</li>
+<li>[Rigid accessory](../rigid-accessories/export.md) export settings.</li>
+<li>[Layered accessory](../layered-accessories/export.md) export settings.</li>
 </ul>
-</Alert>
-
-<Alert severity = 'error'>
-If you are using Roblox's avatar template files, you must perform the [cleanup steps](../../art/characters/creating/combine-head-geometry.md) in order for the assets to properly validate.
 </Alert>
 
 ## Prerequisites
@@ -56,8 +52,8 @@ Blender allows you to export your character body as either a `.fbx` or `.gltf` f
 
 To export a mesh in Blender as a `.fbx` file:
 
-1. In the topbar, click **File** > **Export** > **FBX (.fbx)**. The Blender file browser window displays.
-1. Set **Path Mode** to **Copy** and enable the **Embed Textures** icon.
+1. In the topbar, click **File** > **Export** > **FBX (.fbx)**. The **Blender File View** window displays.
+1. On the right-hand side, set **Path Mode** to **Copy**, then toggle the **Embed Textures** button.
 1. In the **Include** section, enable **Custom Properties**.
 1. In the **Transform** section, set **Apply Scalings** to **FBX Unit Scale**. If you run into scaling issues on import, see [Blender FBX scaling](../../art/blender.md#adjust-scale-fbx) for alternative approaches.
 1. In the **Armature** section, uncheck **Add Leaf Bones**.
