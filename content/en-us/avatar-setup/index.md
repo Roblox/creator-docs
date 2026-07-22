@@ -55,7 +55,7 @@ When your project has the appropriate `Class.Model` object in your workspace, yo
   <tr>
     <td>Accessory</td>
     <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet Avatar Setup's supported [accessory inputs](./auto-setup-requirements.md#accessories). <br /> <br />Must [bundle](./auto-setup-requirements.md#bundle-multiple-assets) with an avatar body `Class.Model` for Avatar Setup.</td>
-    <td>`Class.Accessory` that includes all expected [rigid accessory components](../avatar/rigid-accessories/index.md#components-of-a-rigid-accessory).</td>
+    <td>`Class.Accessory` that includes all expected [rigid accessory components](../avatar/rigid-accessories/index.md#rigid-accessory-components).</td>
   </tr>
   <tr>
     <td>Layered clothing</td>

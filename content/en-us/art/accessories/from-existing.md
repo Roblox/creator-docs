@@ -48,7 +48,7 @@ Whether you are using an existing shape or creating your own 3D object, it's imp
 Correctly setting up your asset in Blender helps reduce importing and rendering issues later in Studio. When importing Roblox-related `.fbx` files, such as the provided [mask asset](../../assets/art/accessories/creating-rigid/Rigid_Mask_Model-Only.fbx), you might discover that your asset imports at a 1/100 scale due to the `.fbx` conversion. In your Blender project, you can quickly reset the scale to make the asset easier to work with in the Blender environment.
 
 <Alert severity = 'info'>
-If you are creating your own rigid accessory from scratch, it's important to understand Roblox's [standard avatar sizes](../../art/accessories/body-scale.md), especially for rigid accessories that contour around a body part, such as a hat or bangle.
+If you are creating your own rigid accessory from scratch, it's important to understand Roblox's [standard avatar sizes](../../avatar/rigid-accessories/specifications.md#body-scale), especially for rigid accessories that contour around a body part, such as a hat or bangle.
 </Alert>
 
 Using the [Sci Fi Mask](../../assets/art/accessories/creating-rigid/Rigid_Mask_Model-Only.fbx) reference as an example, use the following instructions to import and set up your rigid accessory model in Blender:

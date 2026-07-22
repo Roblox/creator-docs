@@ -29,9 +29,9 @@ Roblox supports 3 types of character body scales: `Normal`, `Slender`, and `Clas
 
 When modeling rigid accessories, it's important to use a [mannequin](../resources.md#mannequin-models) to help ensure your proportions fit. When using the [Importer](../../studio/importer.md#avatar-general) to import a mannequin:
 
-- Use **Rig Type** > **Rthro** to import your model as a Normal body scale.
-- Use **Rig Type** > **Rthro Narrow** to import your model as a Slender body scale.
-- Use **Rig Type** > **Default** to import your model as a Classic body scale.
+- Use **Rig Scale** > **Rthro** to import your model as a Normal body scale.
+- Use **Rig Scale** > **Rthro Narrow** to import your model as a Slender body scale.
+- Use **Rig Scale** > **Default** to import your model as a Classic body scale.
 
 <Alert severity = 'info'>
 You can use tools like the [Accessory Fitting Tool](../../avatar/accessory-fitting-tool.md) to help visualize and adjust the scale of your mesh on a mannequin within a visualized boundary before uploading and publishing the asset to the Marketplace.
