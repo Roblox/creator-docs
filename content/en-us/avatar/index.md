@@ -152,7 +152,7 @@ variant="contained"
 color="primary"
 size="large"
 href="../tutorials/use-case-tutorials/animation/create-an-animation.md" >
-Create your first emote
+Create your first character animation
 </Button>
 
 <Button
