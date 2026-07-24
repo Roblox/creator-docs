@@ -46,3 +46,5 @@ When you launch a delayed server restart, the `Class.DataModel.ServerRestartSche
 - `attributes` — An optional JSON object you can use to provide custom information about the restart, such as the update reason, urgency, etc.
 
 In your server scripts, you can subscribe to this event to provide players with information about the upcoming restart. You might choose to provide a countdown timer in your UI, prompt players to save their progress, or teleport them to updated servers at the most convenient time.
+
+Servers will also be notified when Roblox needs to restart servers for infrastructure maintenance reasons. The same `Class.DataModel.ServerRestartScheduled` event fires, with `source` as `Enum.CloseReason.RobloxMaintenance` and `attributes` as an empty dictionary.

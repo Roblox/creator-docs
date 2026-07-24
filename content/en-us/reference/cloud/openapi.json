@@ -12,6 +12,1251 @@
     }
   ],
   "paths": {
+    "/ads-management/v1/advertisable-universes": {
+      "get": {
+        "description": "Returns the universe IDs of every experience the billing account is eligible to advertise. The complete list is returned in a single response; this endpoint is not paginated. Use these IDs to set targetUniverseId when creating a campaign, and resolve experience names with the Open Cloud Universe API.",
+        "summary": "List advertisable universes",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ListAdvertisableUniversesResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 600
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 600
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:read"]
+          }
+        ]
+      }
+    },
+    "/ads-management/v1/billing-accounts": {
+      "get": {
+        "description": "Lists the billing accounts owned by the authenticated user. Each account includes its type, status, time zone, and create/update timestamps. Results are paginated with a cursor (pageToken).",
+        "summary": "List billing accounts",
+        "parameters": [
+          {
+            "description": "Maximum results per page (1-100, default 50)",
+            "name": "maxPageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Opaque cursor from a prior nextPageToken",
+            "name": "pageToken",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ListBillingAccountsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid maxPageSize or pageToken",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 600
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 600
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.billing:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.billing:read"]
+          }
+        ]
+      }
+    },
+    "/ads-management/v1/billing-accounts/{id}": {
+      "get": {
+        "description": "Returns a single billing account owned by the authenticated user. Returns 404 if the account does not exist or is not owned by the caller.",
+        "summary": "Get a billing account",
+        "parameters": [
+          {
+            "description": "Billing account ID",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.BillingAccount"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Billing account not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 600
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 600
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.billing:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.billing:read"]
+          }
+        ]
+      }
+    },
+    "/ads-management/v1/campaign-options": {
+      "get": {
+        "description": "Returns the values accepted when creating a campaign: supported objectives, payment types, ad formats, and targeting dimensions. When universeId is supplied, the response also includes an eligibility block indicating whether that experience can currently be advertised, along with the reasons when it cannot.",
+        "summary": "Get campaign options",
+        "parameters": [
+          {
+            "description": "Universe ID to check eligibility for",
+            "name": "universeId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Objective filter (ENGAGEMENT in v1)",
+            "name": "objective",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.CampaignOptionsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid objective or universeId",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 600
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 600
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:read"]
+          }
+        ]
+      }
+    },
+    "/ads-management/v1/campaigns": {
+      "get": {
+        "description": "Lists the campaigns in the caller's billing account. Campaigns are grouped by status (ACTIVE first, then PAUSED, then CANCELLED) and returned newest first within each group. Results are paginated with a cursor (pageToken); each page returns up to maxPageSize campaigns (default 50, max 100).",
+        "summary": "List campaigns",
+        "parameters": [
+          {
+            "description": "Maximum results per page (1-100, default 50)",
+            "name": "maxPageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Opaque cursor from a prior nextPageToken",
+            "name": "pageToken",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ListCampaignsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid maxPageSize or pageToken",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 600
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 600
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:read"]
+          }
+        ]
+      },
+      "post": {
+        "description": "Creates an ad campaign in the billing account. The creatives you reference must already exist as Open Cloud image assets that you have permission to use; they are validated and saved to your account's reusable creatives when the campaign is created. On success the campaign is returned with deliveryStatus IN_REVIEW, meaning it is queued for ad-policy review and not yet serving — poll the campaign (or campaigns:batchGetStatus) until this changes. budget.amountMicros is the budget in micro-USD as a decimal string (e.g. \"5000000\" = $5.00). It must be at least the minimum campaign budget; an amount below the minimum returns 400 with the required minimum stated in the error message. schedule.durationInDays must not exceed 3650 (~10 years). The x-idempotency-key header is required and must be a UUID: retrying the same key with an identical body within 24 hours returns the original campaign (200), while reusing a key with a different body returns 409.",
+        "summary": "Create a campaign",
+        "parameters": [
+          {
+            "description": "Idempotency key (UUID); 24h dedupe window. Identical replay returns the original campaign (200); mismatched replay may conflict (409).",
+            "name": "x-idempotency-key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/internal_public_v1.CreateCampaignRequest"
+              }
+            }
+          },
+          "description": "Campaign creation request",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Campaign created, or idempotent replay of a prior create with the same key and body",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.Campaign"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation error, invalid asset, or endTime sent",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Cannot manage account, universe not advertisable, or USE-permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency key reused with a different request body, or concurrent write conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:write"]
+          }
+        ]
+      }
+    },
+    "/ads-management/v1/campaigns/{id}": {
+      "get": {
+        "description": "Returns a single campaign, including its status (the lifecycle state you control: ACTIVE, PAUSED, or CANCELLED) and its deliveryStatus (whether it is currently serving: SERVING, IN_REVIEW, NOT_SERVING, or REJECTED). deliveryStatusReasons lists any reasons that affect delivery — for example why a campaign is not serving or was rejected, or that a serving campaign is still in its initial learning period. Returns 404 if the campaign does not exist or is not owned by the caller.",
+        "summary": "Get a campaign",
+        "parameters": [
+          {
+            "description": "Campaign ID",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.Campaign"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid campaign ID",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Campaign not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 600
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 600
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:read"]
+          }
+        ]
+      },
+      "patch": {
+        "description": "Updates the mutable fields of a campaign. You can change: name, budget.amountMicros, schedule.startTime and schedule.durationInDays (schedule changes are only allowed before the campaign starts), and status. Set status to ACTIVE to run or resume the campaign, PAUSED to pause it, or CANCELLED to cancel it permanently. budget.type cannot be changed — only the amount. A budget increase takes effect immediately, but a budget decrease on a running campaign is scheduled for the next midnight in the account's time zone; while a decrease is pending, the response reports it in budget.scheduledAmountMicros and budget.scheduledEffectiveTime. The fields objective, paymentType, targeting, creativeAssetIds, and bid are fixed after creation and return 400 if included. The updated campaign is returned with its recomputed deliveryStatus.",
+        "summary": "Update a campaign",
+        "parameters": [
+          {
+            "description": "Campaign ID",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/internal_public_v1.UpdateCampaignRequest"
+              }
+            }
+          },
+          "description": "Fields to update",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.Campaign"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation error or immutable field supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Campaign not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:write"]
+          }
+        ]
+      }
+    },
+    "/ads-management/v1/campaigns/{id}/performance": {
+      "get": {
+        "description": "Returns aggregate performance for a single campaign over the requested period: impressions, clicks, plays, spend, CPM (cost per 1,000 impressions), CPP (cost per play), playRate, and CTR (click-through rate). Metrics are calculated in the billing account's time zone. Money fields (spendMicros, cpmMicros, cppMicros) are micro-USD returned as decimal strings (e.g. \"5000000\" = $5.00). Set the period query parameter to choose the window (defaults to LAST_7_DAYS).",
+        "summary": "Get campaign performance",
+        "parameters": [
+          {
+            "description": "Campaign ID",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Reporting period (TODAY, YESTERDAY, LAST_7_DAYS, LAST_30_DAYS, THIS_MONTH, LAST_MONTH, YEAR_TO_DATE, PREVIOUS_YEAR; default LAST_7_DAYS)",
+            "name": "period",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.PerformanceResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid period value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Campaign not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 300
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 300
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:read"]
+          }
+        ]
+      }
+    },
+    "/ads-management/v1/campaigns:batchGetPerformance": {
+      "post": {
+        "description": "Returns aggregate performance for up to 100 campaigns over a single shared period (default LAST_7_DAYS), calculated in the billing account's time zone. Each result carries the same metrics as the single-campaign performance endpoint: impressions, clicks, plays, spend, CPM (cost per 1,000 impressions), CPP (cost per play), playRate, and CTR (click-through rate). Provide the campaign IDs in campaignIds; any ID that is not found or is not owned by the caller is returned in the failures array with reason NOT_FOUND. Prefer this over calling the single-campaign endpoint in a loop when building account-wide dashboards.",
+        "summary": "Batch get campaign performance",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/internal_public_v1.BatchGetPerformanceRequest"
+              }
+            }
+          },
+          "description": "Campaign IDs (max 100) and optional period",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.BatchGetPerformanceResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request, exceeds 100 IDs, or invalid period",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 300
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 300
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:read"]
+          }
+        ]
+      }
+    },
+    "/ads-management/v1/campaigns:batchGetStatus": {
+      "post": {
+        "description": "Returns the status (lifecycle state) and deliveryStatus (whether the campaign is currently serving), along with deliveryStatusReasons, for up to 100 campaigns in a single call. This is the recommended way to poll the review and serving state of many campaigns at once. Provide the campaign IDs in campaignIds; any ID that is not found or is not owned by the caller is returned in the failures array with reason NOT_FOUND.",
+        "summary": "Batch get campaign status",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/internal_public_v1.BatchGetStatusRequest"
+              }
+            }
+          },
+          "description": "List of campaign IDs (max 100)",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.BatchGetStatusResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request or exceeds 100 IDs",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:read"]
+          }
+        ]
+      }
+    },
+    "/ads-management/v1/creatives": {
+      "get": {
+        "description": "Lists the reusable creatives saved to the caller's billing account. Each creative includes its assetId, name, moderation status, dimensions, and source. Use isArchived to filter by archive state. Results are paginated with a cursor (pageToken).",
+        "summary": "List creatives",
+        "parameters": [
+          {
+            "description": "Filter by archived status",
+            "name": "isArchived",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "description": "Maximum results per page (1-100, default 50)",
+            "name": "maxPageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Opaque cursor from a prior nextPageToken",
+            "name": "pageToken",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ListCreativesResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid maxPageSize or pageToken",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 600
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 600
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:read"]
+          }
+        ]
+      }
+    },
     "/analytics-query-api/v1/universes/{universeId}/dimension-values": {
       "post": {
         "tags": ["Analytics"],
@@ -49870,6 +51115,214 @@
         ]
       }
     },
+    "/v1/universes/{universeId}/configuration/playtesters": {
+      "delete": {
+        "tags": ["Universes"],
+        "summary": "Remove playtesters from an owned universe.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "universeId",
+            "description": "The universe Id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Api.Develop.Models.PlaytestersRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Api.Develop.Models.PlaytestersRequest"
+              }
+            }
+          },
+          "description": "The playtesters to remove.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Develop.Models.PlaytestersResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Develop.Models.PlaytestersResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "1: The universe does not exist.\r\n48: The playtesters list is missing or empty.\r\n49: Too many playtesters were specified in a single request."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n2: You are not authorized to configure this universe."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://develop.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#develop_delete_v1_universes__universeId__configuration_playtesters"
+        }
+      },
+      "get": {
+        "tags": ["Universes"],
+        "summary": "Get the list of playtesters for an owned universe.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "universeId",
+            "description": "The universe Id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Develop.Models.PlaytestersResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Develop.Models.PlaytestersResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "1: The universe does not exist."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "2: You are not authorized to configure this universe."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://develop.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#develop_get_v1_universes__universeId__configuration_playtesters"
+        }
+      },
+      "post": {
+        "tags": ["Universes"],
+        "summary": "Add playtesters to an owned universe. Existing ids are ignored (additive union).",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "universeId",
+            "description": "The universe Id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Api.Develop.Models.PlaytestersRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Api.Develop.Models.PlaytestersRequest"
+              }
+            }
+          },
+          "description": "The playtesters to add.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Develop.Models.PlaytestersResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Develop.Models.PlaytestersResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "1: The universe does not exist.\r\n48: The playtesters list is missing or empty.\r\n49: Too many playtesters were specified in a single request."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n2: You are not authorized to configure this universe."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://develop.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#develop_post_v1_universes__universeId__configuration_playtesters"
+        }
+      }
+    },
     "/v1/universes/{universeId}/configuration/vip-servers": {
       "get": {
         "tags": ["Private servers", "Universes"],
@@ -66545,7 +67998,7 @@
         "description": "This is the base class for all custom Exceptions that are thrown in this API."
       },
       "FilterField": {
-        "enum": ["EngineVersion", "ALL"],
+        "enum": ["EngineVersion", "PlaceVersion", "ALL"],
         "type": "string",
         "description": "Enum describing the different available filter fields."
       },
@@ -74095,6 +75548,7 @@
         "type": "object",
         "properties": {
           "isEligible": {
+            "description": "The overall result of activation eligibility. This requires the user publish gate\r\nand either a maturity rating or an intact Build seal.",
             "type": "boolean"
           },
           "maturityRated": {
@@ -74137,6 +75591,210 @@
               "enum": [0, 1, 2, 3, 4],
               "type": "integer"
             }
+          },
+          "provisionalRatingAllowed": {
+            "description": "Whether the universe has a provisional rating via a Build seal in Content Catalog.\r\nWhen true, the universe is eligible for activation even without a full maturity questionnaire.",
+            "type": "boolean"
+          },
+          "provisionalRating": {
+            "$ref": "#/components/schemas/Roblox.Api.Develop.Models.BuildGeneratedRatingPreviewResponse"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Develop.Models.BuildGeneratedRatingPreviewResponse": {
+        "description": "The complete build-generated rating preview returned by Experience Guidelines.",
+        "type": "object",
+        "properties": {
+          "ageRecommendationDetails": {
+            "$ref": "#/components/schemas/Roblox.Api.Develop.Models.BuildGeneratedRatingPreviewResponse.AgeRecommendationDetailsModel"
+          },
+          "restrictedCountries": {
+            "description": "Country-specific restrictions produced by the preview.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Develop.Models.BuildGeneratedRatingPreviewResponse.RestrictedCountryModel"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Develop.Models.BuildGeneratedRatingPreviewResponse.AgeRangeModel": {
+        "description": "Age range for a descriptor usage.",
+        "type": "object",
+        "properties": {
+          "minAgeInclusive": {
+            "format": "int32",
+            "description": "Inclusive minimum age.",
+            "type": "integer"
+          },
+          "maxAgeInclusive": {
+            "format": "int32",
+            "description": "Inclusive maximum age.",
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Develop.Models.BuildGeneratedRatingPreviewResponse.AgeRecommendationDetailsModel": {
+        "description": "Age recommendation details.",
+        "type": "object",
+        "properties": {
+          "ageRecommendationSummary": {
+            "$ref": "#/components/schemas/Roblox.Api.Develop.Models.BuildGeneratedRatingPreviewResponse.AgeRecommendationSummaryModel"
+          },
+          "experienceDescriptorUsages": {
+            "description": "Descriptor usages that contributed to the recommendation.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Develop.Models.BuildGeneratedRatingPreviewResponse.ExperienceDescriptorUsageModel"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Develop.Models.BuildGeneratedRatingPreviewResponse.AgeRecommendationModel": {
+        "description": "Age recommendation.",
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "description": "Localized display name.",
+            "type": "string"
+          },
+          "minimumAge": {
+            "format": "int32",
+            "description": "Minimum recommended age.",
+            "type": "integer"
+          },
+          "displayNameWithHeaderShort": {
+            "description": "Localized short display name including the maturity header.",
+            "type": "string"
+          },
+          "minimumAgeDisplay": {
+            "description": "Localized minimum-age display value.",
+            "type": "string"
+          },
+          "contentMaturity": {
+            "description": "Explicit content maturity value.",
+            "type": "string"
+          },
+          "igrsRating": {
+            "description": "IGRS rating enum name, when present.",
+            "type": "string"
+          },
+          "igrsRatingDisplayMessage": {
+            "description": "Localized IGRS rating display message, when present.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Develop.Models.BuildGeneratedRatingPreviewResponse.AgeRecommendationSummaryModel": {
+        "description": "Age recommendation summary.",
+        "type": "object",
+        "properties": {
+          "ageRecommendation": {
+            "$ref": "#/components/schemas/Roblox.Api.Develop.Models.BuildGeneratedRatingPreviewResponse.AgeRecommendationModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Develop.Models.BuildGeneratedRatingPreviewResponse.ExperienceDescriptorDimensionUsageModel": {
+        "description": "Descriptor dimension usage.",
+        "type": "object",
+        "properties": {
+          "dimensionName": {
+            "description": "Dimension name.",
+            "type": "string"
+          },
+          "dimensionValue": {
+            "description": "Dimension value.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Develop.Models.BuildGeneratedRatingPreviewResponse.ExperienceDescriptorModel": {
+        "description": "Experience descriptor definition.",
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "Descriptor name.",
+            "type": "string"
+          },
+          "displayName": {
+            "description": "Localized descriptor display name.",
+            "type": "string"
+          },
+          "complianceApiSupported": {
+            "description": "Whether the descriptor is supported by the Compliance API.",
+            "type": "boolean"
+          },
+          "iconUrl": {
+            "description": "Descriptor icon URL.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Develop.Models.BuildGeneratedRatingPreviewResponse.ExperienceDescriptorUsageModel": {
+        "description": "A descriptor usage that contributed to a recommendation.",
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "Descriptor usage name.",
+            "type": "string"
+          },
+          "followsComplianceApi": {
+            "description": "Whether this usage follows the Compliance API, when specified.",
+            "type": "boolean"
+          },
+          "experienceDescriptor": {
+            "$ref": "#/components/schemas/Roblox.Api.Develop.Models.BuildGeneratedRatingPreviewResponse.ExperienceDescriptorModel"
+          },
+          "experienceDescriptorDimensionUsages": {
+            "description": "Dimensions associated with this usage.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Develop.Models.BuildGeneratedRatingPreviewResponse.ExperienceDescriptorDimensionUsageModel"
+            }
+          },
+          "contains": {
+            "description": "Whether the experience contains this descriptor.",
+            "type": "boolean"
+          },
+          "ageRange": {
+            "$ref": "#/components/schemas/Roblox.Api.Develop.Models.BuildGeneratedRatingPreviewResponse.AgeRangeModel"
+          },
+          "descriptorDisplayName": {
+            "description": "Localized descriptor display name.",
+            "type": "string"
+          },
+          "ageRangeDisplayName": {
+            "description": "Localized age-range display name.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Develop.Models.BuildGeneratedRatingPreviewResponse.RestrictedCountryModel": {
+        "description": "Country-specific restrictions.",
+        "type": "object",
+        "properties": {
+          "countryCode": {
+            "description": "ISO country code.",
+            "type": "string"
+          },
+          "experienceDescriptorUsages": {
+            "description": "Descriptor usages responsible for the restriction.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Develop.Models.BuildGeneratedRatingPreviewResponse.ExperienceDescriptorUsageModel"
+            }
+          },
+          "countryDisplayName": {
+            "description": "Localized country display name.",
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -74341,6 +75999,36 @@
           "isRootPlace": {
             "description": "Returns whether this place is the root place.",
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Develop.Models.PlaytestersRequest": {
+        "description": "Request model for adding or removing playtesters.",
+        "type": "object",
+        "properties": {
+          "playtesters": {
+            "description": "The user ids to add or remove as playtesters for this universe.",
+            "type": "array",
+            "items": {
+              "format": "int64",
+              "type": "integer"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Develop.Models.PlaytestersResponse": {
+        "description": "Response model for playtester list endpoints.",
+        "type": "object",
+        "properties": {
+          "playtesters": {
+            "description": "The user ids that are playtesters for this universe.",
+            "type": "array",
+            "items": {
+              "format": "int64",
+              "type": "integer"
+            }
           }
         },
         "additionalProperties": false
@@ -89905,6 +91593,836 @@
         "description": "model for voting.",
         "nullable": true
       },
+      "internal_public_v1.AdFormat": {
+        "type": "object",
+        "properties": {
+          "format": {
+            "description": "The ad format name.",
+            "type": "string"
+          },
+          "height": {
+            "description": "The format height in pixels.",
+            "type": "integer"
+          },
+          "width": {
+            "description": "The format width in pixels.",
+            "type": "integer"
+          }
+        }
+      },
+      "internal_public_v1.AdvertisableUniverse": {
+        "type": "object",
+        "properties": {
+          "universeId": {
+            "description": "The identifier of an experience the caller can advertise, as a decimal string.\nResolve its name via the Open Cloud Universe API.",
+            "type": "string"
+          }
+        }
+      },
+      "internal_public_v1.BatchGetPerformanceRequest": {
+        "type": "object",
+        "properties": {
+          "campaignIds": {
+            "description": "The campaign IDs to report on. Required. At most 100 per request.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "period": {
+            "description": "The reporting window applied to every campaign in the batch. Optional; defaults\nto `LAST_7_DAYS`. Can be `TODAY`, `YESTERDAY`, `LAST_7_DAYS`, `LAST_30_DAYS`,\n`THIS_MONTH`, `LAST_MONTH`, `YEAR_TO_DATE`, or `PREVIOUS_YEAR`.",
+            "type": "string",
+            "enum": [
+              "TODAY",
+              "YESTERDAY",
+              "LAST_7_DAYS",
+              "LAST_30_DAYS",
+              "THIS_MONTH",
+              "LAST_MONTH",
+              "YEAR_TO_DATE",
+              "PREVIOUS_YEAR"
+            ]
+          }
+        }
+      },
+      "internal_public_v1.BatchGetPerformanceResponse": {
+        "type": "object",
+        "properties": {
+          "dataAsOf": {
+            "description": "The time the metrics were current, as an RFC 3339 UTC timestamp.",
+            "type": "string"
+          },
+          "endDate": {
+            "description": "The last day of the window (inclusive), as YYYY-MM-DD in the account's time zone.",
+            "type": "string"
+          },
+          "failures": {
+            "description": "The IDs that could not be resolved. Omitted when every ID resolved.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/internal_public_v1.CampaignIDFailure"
+            }
+          },
+          "period": {
+            "description": "The reporting window applied to every campaign. Can be `TODAY`, `YESTERDAY`,\n`LAST_7_DAYS`, `LAST_30_DAYS`, `THIS_MONTH`, `LAST_MONTH`, `YEAR_TO_DATE`, or `PREVIOUS_YEAR`.",
+            "type": "string",
+            "enum": [
+              "TODAY",
+              "YESTERDAY",
+              "LAST_7_DAYS",
+              "LAST_30_DAYS",
+              "THIS_MONTH",
+              "LAST_MONTH",
+              "YEAR_TO_DATE",
+              "PREVIOUS_YEAR"
+            ]
+          },
+          "results": {
+            "description": "One entry per successfully resolved campaign.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/internal_public_v1.CampaignPerformance"
+            }
+          },
+          "startDate": {
+            "description": "The first day of the window (inclusive), as YYYY-MM-DD in the account's time zone.",
+            "type": "string"
+          },
+          "timeZone": {
+            "description": "The IANA time zone the window and metrics are computed in.",
+            "type": "string"
+          }
+        }
+      },
+      "internal_public_v1.BatchGetStatusRequest": {
+        "type": "object",
+        "properties": {
+          "campaignIds": {
+            "description": "The campaign IDs to look up. Required. At most 100 per request.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "internal_public_v1.BatchGetStatusResponse": {
+        "type": "object",
+        "properties": {
+          "failures": {
+            "description": "The IDs that could not be resolved. Omitted when every ID resolved.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/internal_public_v1.CampaignIDFailure"
+            }
+          },
+          "statuses": {
+            "description": "One entry per successfully resolved campaign.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/internal_public_v1.CampaignStatus"
+            }
+          }
+        }
+      },
+      "internal_public_v1.Bid": {
+        "type": "object",
+        "properties": {
+          "strategy": {
+            "description": "The bidding strategy. v1 campaigns are always `AUTOMATED`.",
+            "type": "string",
+            "enum": ["AUTOMATED"]
+          }
+        }
+      },
+      "internal_public_v1.BillingAccount": {
+        "type": "object",
+        "properties": {
+          "createTime": {
+            "description": "The time the account was created, as an RFC 3339 UTC timestamp.",
+            "type": "string"
+          },
+          "displayName": {
+            "description": "The human-readable name of the account.",
+            "type": "string"
+          },
+          "id": {
+            "description": "The unique identifier of the billing account. Use it as the {id} path parameter.",
+            "type": "string"
+          },
+          "organizationId": {
+            "description": "The identifier of the organization that owns the account.",
+            "type": "string"
+          },
+          "status": {
+            "description": "The current state of the account. Can be `ACTIVE`, `DISABLED`, or `ARCHIVED`.",
+            "type": "string",
+            "enum": ["ACTIVE", "DISABLED", "ARCHIVED"]
+          },
+          "timeZone": {
+            "description": "The IANA time zone the account's reporting dates and budget schedules are\ninterpreted in. Example: `America/Los_Angeles`.",
+            "type": "string"
+          },
+          "type": {
+            "description": "The account category. External advertisers are always SELF_SERVICE; MANAGED and\nINTERNAL are Roblox-operated accounts. Can be `SELF_SERVICE`, `MANAGED`, or `INTERNAL`.",
+            "type": "string",
+            "enum": ["SELF_SERVICE", "MANAGED", "INTERNAL"]
+          },
+          "updateTime": {
+            "description": "The time the account was last updated, as an RFC 3339 UTC timestamp.",
+            "type": "string"
+          }
+        }
+      },
+      "internal_public_v1.Budget": {
+        "type": "object",
+        "properties": {
+          "amountMicros": {
+            "description": "The budget amount in micro-USD, as a decimal string (for example, `5000000` =\n$5.00). Money is sent and returned as a string so large values keep full\nprecision in every client. On a request it must be a numeric string of micro-USD.",
+            "type": "string"
+          },
+          "scheduledAmountMicros": {
+            "description": "The queued lower budget for a pending decrease, in micro-USD as a decimal string\n(same format as amountMicros). A budget increase takes effect immediately, but a\ndecrease on a running campaign is applied at the next midnight in the account's\ntime zone; until then the campaign keeps serving on amountMicros (the current,\nhigher budget). Omitted when no decrease is pending.",
+            "type": "string"
+          },
+          "scheduledEffectiveTime": {
+            "description": "The time a pending budget decrease takes effect, as an RFC 3339 UTC timestamp.\nOmitted when no decrease is pending.",
+            "type": "string"
+          },
+          "type": {
+            "description": "The budget cadence. Fixed when the campaign is created. Can be `DAILY` or `LIFETIME`.",
+            "type": "string",
+            "enum": ["DAILY", "LIFETIME"]
+          }
+        }
+      },
+      "internal_public_v1.Campaign": {
+        "type": "object",
+        "properties": {
+          "bid": {
+            "$ref": "#/components/schemas/internal_public_v1.Bid"
+          },
+          "billingAccountId": {
+            "description": "The billing account that owns and funds the campaign.",
+            "type": "string"
+          },
+          "budget": {
+            "$ref": "#/components/schemas/internal_public_v1.Budget"
+          },
+          "createTime": {
+            "description": "The time the campaign was created, as an RFC 3339 UTC timestamp.",
+            "type": "string"
+          },
+          "creativeAssetIds": {
+            "description": "The Open Cloud image asset IDs the campaign advertises, as decimal strings.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "deliveryStatus": {
+            "description": "The current serving state, derived by the system (read-only). Can be `SERVING`,\n`IN_REVIEW`, `NOT_SERVING`, or `REJECTED`.",
+            "type": "string",
+            "enum": ["SERVING", "IN_REVIEW", "NOT_SERVING", "REJECTED"]
+          },
+          "deliveryStatusReasons": {
+            "description": "The reasons behind the current deliveryStatus, such as why a campaign is not\nserving or was rejected, or `LEARNING` while a serving campaign ramps up. Omitted\nwhen there are none.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "SCHEDULED",
+                "AUTO_PAUSED",
+                "PAUSED",
+                "INACTIVE",
+                "COMPLETED",
+                "EXPIRED",
+                "CANCELLED",
+                "MODERATED",
+                "CLICK_BAIT",
+                "GAME_FILTERED",
+                "PRIVATE",
+                "PLACE_JOIN_RESTRICTED",
+                "LEARNING"
+              ]
+            }
+          },
+          "id": {
+            "description": "The server-assigned unique identifier of the campaign.",
+            "type": "string"
+          },
+          "name": {
+            "description": "The display name of the campaign.",
+            "type": "string"
+          },
+          "objective": {
+            "description": "The advertising goal of the campaign. Only `ENGAGEMENT` is supported in v1.",
+            "type": "string",
+            "enum": ["ENGAGEMENT"]
+          },
+          "paymentType": {
+            "description": "How the campaign is paid for. Fixed when the campaign is created. Can be\n`CREDIT_CARD`, `ADS_CREDIT`, or `INVOICE`.",
+            "type": "string",
+            "enum": ["CREDIT_CARD", "ADS_CREDIT", "INVOICE"]
+          },
+          "schedule": {
+            "$ref": "#/components/schemas/internal_public_v1.Schedule"
+          },
+          "status": {
+            "description": "The lifecycle state you control through update requests. Can be `ACTIVE`,\n`PAUSED`, or `CANCELLED`. `CANCELLED` is permanent.",
+            "type": "string",
+            "enum": ["ACTIVE", "PAUSED", "CANCELLED"]
+          },
+          "targetUniverseId": {
+            "description": "The identifier of the experience the campaign advertises.",
+            "type": "string"
+          },
+          "targeting": {
+            "$ref": "#/components/schemas/internal_public_v1.Targeting"
+          },
+          "updateTime": {
+            "description": "The time the campaign was last updated, as an RFC 3339 UTC timestamp.",
+            "type": "string"
+          }
+        }
+      },
+      "internal_public_v1.CampaignIDFailure": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "The campaign ID that could not be resolved.",
+            "type": "string"
+          },
+          "reason": {
+            "description": "Why the ID could not be resolved. `NOT_FOUND` means the campaign does not exist\nor is not owned by the caller.",
+            "type": "string",
+            "enum": ["NOT_FOUND"]
+          }
+        }
+      },
+      "internal_public_v1.CampaignOptionsResponse": {
+        "type": "object",
+        "properties": {
+          "adFormats": {
+            "description": "The supported creative formats and their pixel dimensions.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/internal_public_v1.AdFormat"
+            }
+          },
+          "eligibility": {
+            "description": "The eligibility result for the requested experience. Present only when\nuniverseId was supplied in the request.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/internal_public_v1.UniverseEligibility"
+              }
+            ]
+          },
+          "objectives": {
+            "description": "The campaign objectives you can create. Only `ENGAGEMENT` is supported in v1.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["ENGAGEMENT"]
+            }
+          },
+          "paymentTypes": {
+            "description": "The payment types available for the caller's account. Values can be\n`CREDIT_CARD`, `ADS_CREDIT`, or `INVOICE`.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["CREDIT_CARD", "ADS_CREDIT", "INVOICE"]
+            }
+          },
+          "targetingDimensions": {
+            "$ref": "#/components/schemas/internal_public_v1.TargetingDimensions"
+          }
+        }
+      },
+      "internal_public_v1.CampaignPerformance": {
+        "type": "object",
+        "properties": {
+          "campaignId": {
+            "description": "The campaign these metrics belong to.",
+            "type": "string"
+          },
+          "totals": {
+            "$ref": "#/components/schemas/internal_public_v1.PerformanceTotals"
+          }
+        }
+      },
+      "internal_public_v1.CampaignStatus": {
+        "type": "object",
+        "properties": {
+          "deliveryStatus": {
+            "description": "The current serving state. Can be `SERVING`, `IN_REVIEW`, `NOT_SERVING`, or `REJECTED`.",
+            "type": "string",
+            "enum": ["SERVING", "IN_REVIEW", "NOT_SERVING", "REJECTED"]
+          },
+          "deliveryStatusReasons": {
+            "description": "The reasons behind the current deliveryStatus. Omitted when there are none.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "SCHEDULED",
+                "AUTO_PAUSED",
+                "PAUSED",
+                "INACTIVE",
+                "COMPLETED",
+                "EXPIRED",
+                "CANCELLED",
+                "MODERATED",
+                "CLICK_BAIT",
+                "GAME_FILTERED",
+                "PRIVATE",
+                "PLACE_JOIN_RESTRICTED",
+                "LEARNING"
+              ]
+            }
+          },
+          "id": {
+            "description": "The campaign identifier.",
+            "type": "string"
+          },
+          "status": {
+            "description": "The lifecycle state. Can be `ACTIVE`, `PAUSED`, or `CANCELLED`.",
+            "type": "string",
+            "enum": ["ACTIVE", "PAUSED", "CANCELLED"]
+          }
+        }
+      },
+      "internal_public_v1.CreateCampaignRequest": {
+        "type": "object",
+        "properties": {
+          "bid": {
+            "description": "Optional bidding strategy. Only `AUTOMATED` is accepted in v1; may be omitted.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/internal_public_v1.Bid"
+              }
+            ]
+          },
+          "budget": {
+            "$ref": "#/components/schemas/internal_public_v1.Budget"
+          },
+          "creativeAssetIds": {
+            "description": "The Open Cloud image asset IDs to advertise, as decimal strings. Required. The\nassets must already exist and be usable by the caller.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "name": {
+            "description": "The display name of the campaign. Required.",
+            "type": "string"
+          },
+          "objective": {
+            "description": "The advertising goal. Required. Only `ENGAGEMENT` is supported in v1.",
+            "type": "string",
+            "enum": ["ENGAGEMENT"]
+          },
+          "paymentType": {
+            "description": "How the campaign is paid for. Required. Can be `CREDIT_CARD`, `ADS_CREDIT`, or\n`INVOICE`, subject to what the billing account supports.",
+            "type": "string",
+            "enum": ["CREDIT_CARD", "ADS_CREDIT", "INVOICE"]
+          },
+          "schedule": {
+            "$ref": "#/components/schemas/internal_public_v1.Schedule"
+          },
+          "targetUniverseId": {
+            "description": "The identifier of the experience to advertise. Required.",
+            "type": "string"
+          },
+          "targeting": {
+            "description": "Optional audience targeting. Omit it, or send an empty object, to reach all audiences.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/internal_public_v1.Targeting"
+              }
+            ]
+          }
+        }
+      },
+      "internal_public_v1.Creative": {
+        "type": "object",
+        "properties": {
+          "assetId": {
+            "description": "The Open Cloud image asset ID backing this creative, as a decimal string.",
+            "type": "string"
+          },
+          "assetName": {
+            "description": "The display name of the underlying asset.",
+            "type": "string"
+          },
+          "assetType": {
+            "description": "The media type of the asset. Only `IMAGE` is supported in v1.",
+            "type": "string",
+            "enum": ["IMAGE"]
+          },
+          "createTime": {
+            "description": "The time the creative was added to the library, as an RFC 3339 UTC timestamp.",
+            "type": "string"
+          },
+          "height": {
+            "description": "The height of the asset in pixels. Omitted when unknown.",
+            "type": "integer"
+          },
+          "id": {
+            "description": "The identifier of the creative library entry. This is distinct from assetId.",
+            "type": "string"
+          },
+          "isArchived": {
+            "description": "Whether the creative has been archived (soft-deleted).",
+            "type": "boolean"
+          },
+          "moderationStatus": {
+            "description": "The content-review outcome for the asset. Can be `PENDING_REVIEW`, `APPROVED`, or `REJECTED`.",
+            "type": "string",
+            "enum": ["PENDING_REVIEW", "APPROVED", "REJECTED"]
+          },
+          "source": {
+            "description": "How the asset was produced. Can be `UPLOAD` or `IN_HOUSE_GEN_AI`.",
+            "type": "string",
+            "enum": ["UPLOAD", "IN_HOUSE_GEN_AI"]
+          },
+          "universeId": {
+            "description": "The identifier of the experience the creative is associated with, if any, as a\ndecimal string. Omitted when not associated with an experience.",
+            "type": "string"
+          },
+          "updateTime": {
+            "description": "The time the creative was last updated, as an RFC 3339 UTC timestamp.",
+            "type": "string"
+          },
+          "width": {
+            "description": "The width of the asset in pixels. Omitted when unknown.",
+            "type": "integer"
+          }
+        }
+      },
+      "internal_public_v1.ErrorEnvelope": {
+        "type": "object",
+        "properties": {
+          "detail": {
+            "description": "A human-readable explanation of this specific failure.",
+            "type": "string"
+          },
+          "errors": {
+            "description": "The individual errors. There is at least one entry; each has a code and message.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/internal_public_v1.PublicError"
+            }
+          },
+          "status": {
+            "description": "The HTTP status code, repeated here for convenience.",
+            "type": "integer"
+          },
+          "title": {
+            "description": "A short summary of the error class.",
+            "type": "string"
+          }
+        }
+      },
+      "internal_public_v1.ListAdvertisableUniversesResponse": {
+        "type": "object",
+        "properties": {
+          "advertisableUniverses": {
+            "description": "The complete set of experiences the caller can advertise. This endpoint is not\npaginated; the full list is returned in one response.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/internal_public_v1.AdvertisableUniverse"
+            }
+          }
+        }
+      },
+      "internal_public_v1.ListBillingAccountsResponse": {
+        "type": "object",
+        "properties": {
+          "billingAccounts": {
+            "description": "The page of billing accounts.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/internal_public_v1.BillingAccount"
+            }
+          },
+          "nextPageToken": {
+            "description": "The cursor for the next page. Pass it as pageToken to fetch the next page.\nAbsent on the last page.",
+            "type": "string"
+          }
+        }
+      },
+      "internal_public_v1.ListCampaignsResponse": {
+        "type": "object",
+        "properties": {
+          "campaigns": {
+            "description": "The page of campaigns.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/internal_public_v1.Campaign"
+            }
+          },
+          "nextPageToken": {
+            "description": "The cursor for the next page. Pass it as pageToken to fetch the next page.\nAbsent on the last page.",
+            "type": "string"
+          }
+        }
+      },
+      "internal_public_v1.ListCreativesResponse": {
+        "type": "object",
+        "properties": {
+          "creatives": {
+            "description": "The page of creatives.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/internal_public_v1.Creative"
+            }
+          },
+          "nextPageToken": {
+            "description": "The cursor for the next page. Pass it as pageToken to fetch the next page.\nAbsent on the last page.",
+            "type": "string"
+          }
+        }
+      },
+      "internal_public_v1.PerformanceResponse": {
+        "type": "object",
+        "properties": {
+          "campaignId": {
+            "description": "The campaign these metrics belong to.",
+            "type": "string"
+          },
+          "dataAsOf": {
+            "description": "The time the metrics were current, as an RFC 3339 UTC timestamp.",
+            "type": "string"
+          },
+          "endDate": {
+            "description": "The last day of the window (inclusive), as YYYY-MM-DD in the account's time zone.",
+            "type": "string"
+          },
+          "period": {
+            "description": "The reporting window applied. Can be `TODAY`, `YESTERDAY`, `LAST_7_DAYS`,\n`LAST_30_DAYS`, `THIS_MONTH`, `LAST_MONTH`, `YEAR_TO_DATE`, or `PREVIOUS_YEAR`.",
+            "type": "string",
+            "enum": [
+              "TODAY",
+              "YESTERDAY",
+              "LAST_7_DAYS",
+              "LAST_30_DAYS",
+              "THIS_MONTH",
+              "LAST_MONTH",
+              "YEAR_TO_DATE",
+              "PREVIOUS_YEAR"
+            ]
+          },
+          "startDate": {
+            "description": "The first day of the window (inclusive), as YYYY-MM-DD in the account's time zone.",
+            "type": "string"
+          },
+          "timeZone": {
+            "description": "The IANA time zone the window and metrics are computed in.",
+            "type": "string"
+          },
+          "totals": {
+            "$ref": "#/components/schemas/internal_public_v1.PerformanceTotals"
+          }
+        }
+      },
+      "internal_public_v1.PerformanceTotals": {
+        "type": "object",
+        "properties": {
+          "clicks": {
+            "description": "The number of clicks on an ad.",
+            "type": "integer"
+          },
+          "cpmMicros": {
+            "description": "Cost per 1,000 impressions in micro-USD, as a decimal string.",
+            "type": "string"
+          },
+          "cppMicros": {
+            "description": "Cost per play in micro-USD, as a decimal string.",
+            "type": "string"
+          },
+          "ctr": {
+            "description": "The click-through rate: clicks divided by impressions, from 0 to 1.",
+            "type": "number"
+          },
+          "impressions": {
+            "description": "The number of times an ad was shown.",
+            "type": "integer"
+          },
+          "playRate": {
+            "description": "The play rate: plays divided by impressions, from 0 to 1.",
+            "type": "number"
+          },
+          "plays": {
+            "description": "The number of resulting experience plays.",
+            "type": "integer"
+          },
+          "spendMicros": {
+            "description": "Total spend in micro-USD, as a decimal string (for example, `5000000` = $5.00).",
+            "type": "string"
+          }
+        }
+      },
+      "internal_public_v1.PublicError": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "description": "A stable, machine-readable error code (for example, `INVALID_ARGUMENT`,\n`NOT_FOUND`, `PERMISSION_DENIED`, or `RATE_LIMITED`).",
+            "type": "string"
+          },
+          "message": {
+            "description": "A human-readable description of the error.",
+            "type": "string"
+          }
+        }
+      },
+      "internal_public_v1.Schedule": {
+        "type": "object",
+        "properties": {
+          "durationInDays": {
+            "description": "How long the campaign runs from startTime, in days. Must not exceed 3650 (about\n10 years).",
+            "type": "integer"
+          },
+          "endTime": {
+            "description": "Not accepted in v1 and never returned; supplying it returns 400. Use\ndurationInDays to set when the campaign ends. Reserved for a future objective.",
+            "type": "string"
+          },
+          "startTime": {
+            "description": "The time the campaign starts serving, as an RFC 3339 UTC timestamp. On a create\nrequest it must not be in the past.",
+            "type": "string"
+          }
+        }
+      },
+      "internal_public_v1.Targeting": {
+        "type": "object",
+        "properties": {
+          "ageGroups": {
+            "description": "The age brackets to deliver to. Empty means all ages. Values can be `AGE_13_17`,\n`AGE_18_24`, or `AGE_25_PLUS`.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["AGE_13_17", "AGE_18_24", "AGE_25_PLUS"]
+            }
+          },
+          "countries": {
+            "description": "The ISO 3166-1 alpha-2 country codes to deliver to (for example, `US`). Empty\nmeans all countries.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "devices": {
+            "description": "The device types to deliver to. Empty means all devices. Values can be `PHONE`,\n`TABLET`, `DESKTOP`, or `CONSOLE`.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["PHONE", "TABLET", "DESKTOP", "CONSOLE"]
+            }
+          }
+        }
+      },
+      "internal_public_v1.TargetingDimensions": {
+        "type": "object",
+        "properties": {
+          "ageGroups": {
+            "description": "The selectable age brackets. Values can be `AGE_13_17`, `AGE_18_24`, or `AGE_25_PLUS`.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["AGE_13_17", "AGE_18_24", "AGE_25_PLUS"]
+            }
+          },
+          "countries": {
+            "description": "The selectable ISO 3166-1 alpha-2 country codes (for example, `US`).",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "devices": {
+            "description": "The selectable device types. Values can be `PHONE`, `TABLET`, `DESKTOP`, or `CONSOLE`.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["PHONE", "TABLET", "DESKTOP", "CONSOLE"]
+            }
+          }
+        }
+      },
+      "internal_public_v1.UniverseEligibility": {
+        "type": "object",
+        "properties": {
+          "eligible": {
+            "description": "Whether the experience can currently be advertised.",
+            "type": "boolean"
+          },
+          "reasons": {
+            "description": "The reasons the experience is not eligible. Omitted when eligible. Values can be\n`NO_PERMISSION` or `BLOCKED`.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["NO_PERMISSION", "BLOCKED"]
+            }
+          },
+          "universeId": {
+            "description": "The identifier of the experience that was checked.",
+            "type": "string"
+          }
+        }
+      },
+      "internal_public_v1.UpdateCampaignRequest": {
+        "type": "object",
+        "properties": {
+          "bid": {
+            "description": "Immutable in v1; including it returns 400.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/internal_public_v1.Bid"
+              }
+            ]
+          },
+          "budget": {
+            "description": "A budget change. Only the amount may change; the budget type is immutable.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/internal_public_v1.Budget"
+              }
+            ]
+          },
+          "creativeAssetIds": {
+            "description": "Immutable in v1; including it returns 400.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "name": {
+            "description": "A new display name for the campaign.",
+            "type": "string"
+          },
+          "schedule": {
+            "description": "A schedule change. Allowed only before the campaign starts.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/internal_public_v1.Schedule"
+              }
+            ]
+          },
+          "status": {
+            "description": "A lifecycle transition: `ACTIVE` to run or resume, `PAUSED` to pause, or\n`CANCELLED` to cancel permanently.",
+            "type": "string",
+            "enum": ["ACTIVE", "PAUSED", "CANCELLED"]
+          },
+          "targeting": {
+            "description": "Immutable in v1; including it returns 400.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/internal_public_v1.Targeting"
+              }
+            ]
+          }
+        }
+      },
       "roblox.engine.Folder": {
         "type": "object",
         "properties": {},
@@ -91252,7 +93770,7 @@
     },
     {
       "name": "Universes",
-      "description": "Manage experiences (universes), publish updates, and communicate with live servers. See the [Messaging Usage Guide](/cloud/guides/usage-messaging) and [Place Publishing Guide](/cloud/guides/usage-place-publishing).\n\nCommon use cases include:\n\n- **Cross-Server Messaging**: [Send announcements](#Cloud_PublishUniverseMessage), trigger events, or update all players across servers using the Messaging Service\n- Server management: [Restart servers](#Cloud_RestartUniverseServers) after deploying updates or to clear cached state\n- User restrictions: [Ban or restrict users](#Cloud_UpdateUserRestriction__Using_Universes) from your experience at the universe or place level\n",
+      "description": "Manage experiences (universes), publish updates, and communicate with live servers. See the [Messaging Usage Guide](/cloud/guides/usage-messaging) and [Place Publishing Guide](/cloud/guides/usage-place-publishing).\n\nCommon use cases include:\n\n- **Cross-Server Messaging**: [Send announcements](#Cloud_PublishUniverseMessage), trigger events, or update all players across servers using the Messaging Service\n- Server management: [Restart servers](#Cloud_RestartUniverseServers) after deploying updates or to clear cached state\n- User restrictions: [Ban or restrict users](#Cloud_UpdateUserRestriction__Using_Universes) from your experience at the universe or place level\n- Playtester access: [List](#develop_get_v1_universes__universeId__configuration_playtesters), [add](#develop_post_v1_universes__universeId__configuration_playtesters), or [remove](#develop_delete_v1_universes__universeId__configuration_playtesters) playtesters for a universe\n",
       "x-roblox-tag-info": {
         "path": "universes",
         "content": "HTTP APIs for working with universes on Roblox Cloud, including subscriptions, place and instance updates, user restrictions, and more.",
@@ -91283,6 +93801,9 @@
           "develop_post_v1_universes__universeId__deactivate",
           "get_legacy_develop_v1_universes__universeId__permissions",
           "develop_get_v1_universes__universeId__permissions",
+          "develop_get_v1_universes__universeId__configuration_playtesters",
+          "develop_post_v1_universes__universeId__configuration_playtesters",
+          "develop_delete_v1_universes__universeId__configuration_playtesters",
           "get_legacy_develop_v1_universes__universeId__teamcreate",
           "develop_get_v1_universes__universeId__teamcreate",
           "patch_legacy_develop_v1_universes__universeId__teamcreate",
