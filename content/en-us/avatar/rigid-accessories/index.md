@@ -1,6 +1,6 @@
 ---
 title: Rigid accessories
-description: Rigid accessories are basic 3D cosmetics users can equip and wear on their avatar character.
+description: Rigid accessories are 3D assets that attach to an avatar according to the attachment points around the character's body.
 ---
 
 <Grid container spacing={2} style={{ marginBottom: 24, width: '100%' }}>
@@ -19,7 +19,7 @@ allowFullScreen
 style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} ></iframe>
 </div>
 <Typography variant="body1">
-A high-level overview of accessories on Roblox.
+A high-level overview of rigid accessories on Roblox.
 </Typography>
 
 </Grid>
@@ -40,13 +40,13 @@ allowFullScreen
 style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} ></iframe>
 </div>
 <Typography variant="body1">
-Create and sell your first basic accessory.
+Create and sell your first basic rigid accessory.
 </Typography>
 </Grid>
 </Grid>
 </Grid>
 
-**Rigid accessories** are 3D assets that attach to an avatar according to the attachment points around the character's body, such as props, weapons, and hats. When users purchase rigid accessories on the Marketplace, they can adjust the position and rotation of the item away from the attachment point according to their avatar's body type.
+**Rigid accessories** are 3D assets that attach to an avatar according to the attachment points around the character's body. When users purchase rigid accessories on the Marketplace, such as props, weapons, and hats, they can adjust the position and rotation of the item away from the attachment point according to their avatar's body type.
 
 There are two main layers of a rigid accessory that structure how the accessory looks and works on the platform:
 
@@ -67,7 +67,11 @@ Unlike rigid accessories that don't deform when they attach to a specific point 
 
 ## Rigid accessory components
 
-All rigid accessories are made up of the same three fundamental components that allow users equip 3D items with consistent behavior according to the character's [body type](specifications.md#body-scale).
+All rigid accessories are made up of the same fundamental components that allow users to equip 3D items with consistent behavior **according** to the character's [body type](specifications.md#body-scale).
+
+<Alert severity = 'warning'>
+Layered accessories require [additional components](../layered-accessories/index.md) to apply the layerable effect to the 3D item.
+</Alert>
 
 ### Mesh part
 
@@ -76,11 +80,7 @@ All rigid accessories are made up of the same three fundamental components that 
 <figure><img src="../../assets/art/accessories/Mesh-Hair-Example.png" /><figcaption>Hair rigid accessory mesh object.</figcaption></figure>
 </GridContainer>
 
-<Alert severity = 'warning'>
-Clothing, such as the t-shirt, require [additional clothing components](../layered-accessories/index.md) to apply the layerable effect to the 3D object.
-</Alert>
-
-All accessories require a single mesh object that represents the rigid accessory's geometry. In Studio, this mesh object is represented as a `Class.MeshPart` nested under a single `Class.Model`.
+All rigid accessories require a single mesh object that represents the accessory's geometry. In Studio, this mesh object is represented as a `Class.MeshPart` nested under a single `Class.Model`.
 
 ### Textures
 
@@ -89,9 +89,9 @@ All accessories require a single mesh object that represents the rigid accessory
   <figure><img src="../../assets/art/accessories/Texture-Hair-Example.png" />  <figcaption>2D texture map for the hair rigid accessory.</figcaption></figure>
 </GridContainer>
 
-Textures are image files that define the surface appearance of your rigid accessory. You can create textures within a texture painting program or a 3D modeling software.
+Textures are image files that define the surface appearance of your rigid accessory. You can create textures within a texture painting program or 3D modeling software.
 
-In Studio, you must import textures as image files and set them to `Class.MeshPart` objects by a child `Class.SurfaceAppearance` object or a `Class.MeshPart.TextureID` property.
+In Studio, you must import textures as image files and set them to `Class.MeshPart` objects by a child `Class.SurfaceAppearance` object or the mesh's `Class.MeshPart.TextureID|TextureID` property.
 
 ### Attachments
 
@@ -100,9 +100,11 @@ In Studio, you must import textures as image files and set them to `Class.MeshPa
   <figure><img src="../../assets/art/accessories/Attachment-Hair-Example.png" />  <figcaption>The hair's attachment point enables the hair to connect to a character's head.</figcaption></figure>
 </GridContainer>
 
-Attachment points define where accessories attach to a character's body. These are not rendered on the platform, but they are represented visually as spheres in 3D modeling software when you use Roblox's **R15 Rig and Attachments** [project file](../../avatar/resources.md#project-files).
+Attachment points define where accessories attach to a character's body. In Studio, attachment points are represented by `Class.Attachment` objects.
 
-When you import a rig with these visual representations, the spheres are created as `Class.Attachment` objects using standardized names.
+<Alert severity = 'info'>
+You can automatically generate attachment points for your rigid accessories using the [Accessory Fitting Tool](../../avatar/accessory-fitting-tool.md).
+</Alert>
 
 ## Creation process
 
@@ -126,7 +128,7 @@ There are a variety of resources available for creators of all backgrounds to ge
 <tbody>
   <tr>
     <td>Tutorials</td>
-    <td>[Rigid accessory creation](../../art/accessories/creating-rigid/index.md) <br /><br />[Basic clothing creation](../../art/accessories/creating/index.md)</td>
+    <td>[Rigid accessory creation](../../art/accessories/creating-rigid/index.md) <br /><br />[Layered accessory creation](../../art/accessories/creating/index.md)</td>
   </tr>
   <tr>
     <td>Reference files</td>

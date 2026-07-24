@@ -1,92 +1,85 @@
 ---
-title: Import clothing accessories
+title: Import layered accessories
 description: Use the Importer to add third-party models to Studio before using the Accessory Fitting Tool to convert the model to an Accessory.
 ---
 
-Use the following instructions to [import](#import-3d-assets) your `.fbx` or `.gltf` third-party model into Studio and [convert](#convert-layered-accessories) the asset to a clothing `Accessory` object that you can save to use in your game, share with others, or upload to the Marketplace.
+Studio's Importer lets you import 3D assets into your projects, such as character bodies, makeup, and layered accessories. The following instructions detail how to import a layered accessory `.fbx` or `.gltf` file into Studio as a `Model` object and convert it into an `Accessory` object that you can use in your games, upload to the Marketplace, or share with other creators.
 
-<Alert severity ='info'>
-The following asset example and instructions are part of the [Clothing accessory tutorial](../../art/accessories/creating/index.md) which covers the process of converting a model from Blender to publishing the asset to the Marketplace.
-</Alert>
+While the Importer provides object previews and error-checking to ensure that your creation meets Roblox's [general 3D requirements](../../art/modeling/specifications.md), it's important to ensure that your character model also meets Roblox's [layered accessory specifications](./specifications.md) to use or sell this asset as an avatar-ready layered accessory, otherwise you can encounter errors at different points in the workflow.
 
-## Import 3D assets
+## Import accessories
 
-Studio's Importer provides a quick and easy way to import third-party 3D assets into your projects. The importer provides object previews and error-checking to ensure that your asset meets Roblox's [general 3D requirements](../../art/modeling/specifications.md).
+To import your asset as a layered accessory:
 
-Keep in mind, your 3D layered accessory must also follow Roblox's [clothing specifications](./specifications.md) to eventually use this asset as a layered `Class.Accessory`, or you may experience errors later in the workflow.
+1. In the **Home** tab, click the **Import** button to open the 3D Importer. A file browser opens.
+1. Select your layered accessory's `.fbx` or `.gltf` file. The 3D Importer loads a preview of the layered accessory.
 
-To import your asset:
+      <img src="../../assets/art/accessories/creating/Import-Layered-Accessory.png" width = "80%"/>
 
-1. From Studio's **File** menu, select **Importer**.
-2. In the file browser, select the `.fbx` or `.gltf` file saved locally. The Importer loads a preview of the object.
-
-   - If textures don't load for your asset, you can manually import your textures later.
-   - See [Importer](../../studio/importer.md) for additional information on import settings and troubleshooting.
-
-3. Select **Import**. The asset populates in your workspace as a `Class.Model` with the appropriate textures applied as a `Class.SurfaceAppearance` or `Class.MeshPart.TextureID`.
+1. Select **Import**. The asset populates in your workspace as a `Class.Model` with the appropriate textures applied as a `Class.SurfaceAppearance` or `Class.MeshPart.TextureID`.
 
 <BaseAccordion>
-<AccordionSummary>Manually add textures</AccordionSummary>
+<AccordionSummary>Textures didn't load correctly?</AccordionSummary>
 <AccordionDetails>
- If textures didn't load correctly, add them manually. You may need to save and publish your game in order to access the [Asset Manager](../../projects/assets/manager.md).
+If your textures didn't load correctly, you can import them manually using the [Asset Manager](../../projects/assets/manager.md):
 
-1.  In the **Asset Manager**, click the **Import** button.
-2.  Upload your image files.
-3.  After moderation clears for your image, select the `Class.MeshPart` parented within your imported `Class.Model`.
-4.  If you are using a single basic texture, set the `Class.MeshPart.TextureID` property to your uploaded texture image.
-5.  If you are using PBR textures:
+1. In the **Asset Manager**, click the **Import** button. If you are unable to access the Asset Manager, save and publish your game first.
+1. Upload your image files.
+1. After moderation clears your images, select the `Class.MeshPart` parented within your imported `Class.Model`.
+1. If you are using a single basic texture, set the `Class.MeshPart.TextureID` property to your uploaded texture image.
+1. If you are using PBR textures:
 
-    1. Add a `Class.SurfaceAppearance` child to your `Class.MeshPart`.
+   1. Add a `Class.SurfaceAppearance` child to your `Class.MeshPart`.
 
-       <img src="../../assets/art/accessories/creating-rigid/Adding-Surface-Appearance.png" />
+      <img src="../../assets/art/avatar/Avatar-Surface-Appearance.png" width = "40%"/>
 
-    2. In the `Class.SurfaceAppearance` properties, click each property value and assign the appropriate texture image from the asset dropdown:
+   1. In the `Class.SurfaceAppearance` properties, click each property value and assign the appropriate texture image from the asset dropdown:
 
-       1. Set the **ColorMap** to the **\_ALB** texture image.
-       2. Set the **MetalnessMap** to the **\_MTL** texture image.
-       3. Set the **NormalMap** to the **\_NOR** texture image.
-       4. Set the **RoughnessMap** to the **\_RGH** texture image.
+      1. Set the **ColorMap** to the **\_ALB** texture image.
+      1. Set the **MetalnessMap** to the **\_MTL** texture image.
+      1. Set the **NormalMap** to the **\_NOR** texture image.
+      1. Set the **RoughnessMap** to the **\_RGH** texture image.
 
-       <img src="../../assets/art/accessories/creating-rigid/Surface-Appearance-Asset-Dropdown.png" />
+      <img src="../../assets/art/avatar/Avatar-Roughness-Map.png" width = "50%"/>
 
 </AccordionDetails>
 </BaseAccordion>
 
-<Alert severity = 'success'>
-After successful import, your model object should populate in your project as a `Class.Model` with the appropriate textures applied. See [Importer](../../studio/importer.md) for additional information on import settings and troubleshooting.
-</Alert>
-
 ## Convert layered accessories
 
-With the `Class.Model` in your project, the last step in the process of clothing creation requires you to use the [Accessory Fitting Tool](../../avatar/accessory-fitting-tool.md) (AFT) to convert this object to a standard `Class.Accessory` that avatar characters can equip.
+After importing your asset into Studio, you can begin **converting** the `Class.Model` object into a `Class.Accessory` using the [Accessory Fitting Tool](../accessory-fitting-tool.md) (AFT) so that avatar character bodies can equip your layered accessory.
 
 <Alert severity = 'warning'>
-For shoes, you must convert the left shoe and the right shoe as separate accessories. Use the following instructions for each shoe before grouping both shoe accessories as a `Class.Model` when [saving to Roblox](../../marketplace/publish-to-marketplace.md#upload-an-asset).
+For shoes, you must convert the left shoe and the right shoe as separate layered accessories. Use the following instructions for each shoe before grouping both shoe accessories as a `Class.Model` when [saving to Roblox](../../marketplace/publish-to-marketplace.md#upload-an-asset).
 </Alert>
 
-To generate the accessory object:
+To generate your layered accessory:
 
-1. In the toolbar's **Avatar** tab, click **Accessory** to open the AFT.
-2. Select the `Class.Model` of the clothing item in the viewport. The tool's text field populates with the name of the object selected. Alternatively, you can select the object within the **Explorer** window.
-3. Test out various sample characters, clothing, and animations. See [Test accessories](../../avatar/accessory-fitting-tool.md#test-accessories) for additional information.
-   - If required, make minor cage adjustments using the editing features. Larger cage changes may require returning to your third-party modeling software and re-exporting the asset.
-4. When ready to generate your accessory, click **Generate MeshPart Accessory**. The accessory object with your model populates in your workspace.
+1. In the toolbar's **Avatar** tab, click **Accessory** to open the AFT. The **Accessory Fitting Tool** panel displays.
+1. In the panel,
 
-  <GridContainer numColumns="2">
-  <figure>
-     <img src="../../assets/art/accessories/creating/Exporting-Clothing-in-Studio-Highlight.png" />
-     <figcaption>Clothing accessory in viewport</figcaption>
-  </figure>
-  <figure>
-     <img src="../../assets/art/accessories/creating/Exporting-Accessory-Explorer.png" />
-     <figcaption>Clothing accessory in Explorer</figcaption>
-  </figure>
-  </GridContainer>
+   1. Select the **Part** field, then in the **Explorer** window, select the layered accessory `Class.MeshPart` object.
+   1. Back in the panel, click the **Next** button. The **Asset Type** page displays.
 
-After successful fitting and converting, your 3D model should populate in your project as an `Class.Accessory`. With this `Class.Accessory` you can perform any of the following:
+   <img src="../../assets/art/accessories/creating/AFT-Select-Mesh-Pants.png" />
 
-- Begin the process of [uploading and publishing](../../marketplace/publish-to-marketplace.md#upload-an-asset) the clothing accessory to the Marketplace.
+1. In the **Asset Type** page:
 
-- Use the accessory in your current game by equipping it to character models with [HumanoidDescription](../../characters/appearance.md#manually-modify-appearance), or by dragging and dropping the accessory under the appropriate character `Class.Model` object.
+   1. Set asset type to **Clothing**, then use the dropdown menu to choose the clothing type of your layered accessory.
+   1. Click the **Next** button. A preview panel displays with a default character wearing your layered accessory.
 
-- Save the accessory to your [Toolbox](../../projects/assets/toolbox.md) or make it public on the [Creator Store](../../production/creator-store.md) to share or use within any of your games.
+   <img src="../../assets/art/accessories/creating/AFT-Select-Type-Pants.png" />
+
+1. [Test](../../avatar/accessory-fitting-tool.md#test-accessories) out various sample characters and animations to make sure your layered clothing is deforming and moving correctly.
+
+   - If necessary, make minor cage adjustments using the editing features. Larger cage changes may require returning to your third-party modeling software and re-exporting the asset.
+
+1. After previewing your asset, click the **Generate MeshPart Accessory** button. Your 3D model populates in your project as an `Class.Accessory` object.
+
+With this `Class.Accessory` object, you can perform any of the following:
+
+- Begin the process of [uploading and publishing](../../marketplace/publish-to-marketplace.md#upload-an-asset) the layered accessory to the Marketplace.
+
+- Use the layered accessory in your current game by equipping it to character models with [HumanoidDescription](../../characters/appearance.md#manually-modify-appearance), or by dragging and dropping the layered accessory under the appropriate character `Class.Model` object.
+
+- Save the layered accessory to your [Toolbox](../../projects/assets/toolbox.md) or make it public on the [Creator Store](../../production/creator-store.md) to use within any of your games or share with other creators.

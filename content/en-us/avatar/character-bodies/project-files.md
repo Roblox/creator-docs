@@ -26,19 +26,19 @@ The following [higher-fidelity](../../avatar/character-bodies/specifications.md#
 <tbody>
   <tr>
     <td><a href="../../assets/art/reference-files/Mannequin-HigherFidelity.zip" download>Mannequin-HigherFidelity.zip</a></td>
-    <td>A comprehensive `.zip` folder of a AA avatar-ready character body, including a dynamic head, fingers, layered clothing, and 2K PBR textures.</td>
+    <td>A comprehensive `.zip` folder of a AA avatar-ready character body, including a dynamic head, fingers, layered accessories, and 2K PBR textures.</td>
   </tr>
   <tr>
     <td><a href="../../assets/art/reference-files/Robuta-HigherFidelity.zip" download>Robuta-HigherFidelity.zip</a></td>
-    <td>A comprehensive `.zip` folder of an anime-style, avatar-ready character body, including a dynamic head, fingers, layered clothing and rigid accessory assets, and 2K PBR textures.</td>
+    <td>A comprehensive `.zip` folder of an anime-style, avatar-ready character body, including a dynamic head, fingers, rigid and layered accessories, and 2K PBR textures.</td>
   </tr>
   <tr>
     <td><a href="../../assets/art/reference-files/HipToBeSquare-HigherFidelity.zip" download>HipToBeSquare-HigherFidelity.zip</a></td>
-    <td>A comprehensive `.zip` folder of a blocky-style, avatar-ready character body, including a dynamic head, fingers, layered clothing and rigid accessory assets, and color, roughness, and metal PBR textures.</td>
+    <td>A comprehensive `.zip` folder of a blocky-style, avatar-ready character body, including a dynamic head, fingers, rigid and layered accessories, and color, roughness, and metal PBR textures.</td>
   </tr>
   <tr>
     <td><a href="../../assets/art/reference-files/Roxie-HigherFidelity.zip" download>Roxie-HigherFidelity.zip</a></td>
-    <td>A comprehensive `.zip` folder of an avatar-ready character with an [Rthro Normal](../../avatar/character-bodies/specifications.md#normal) body, including a dynamic head, fingers, layered clothing and rigid accessory assets, and PBR textures. When you import this model, set **Rig Scale** to **Rthro Narrow**.</td>
+    <td>A comprehensive `.zip` folder of an avatar-ready character with an [Rthro Normal](../../avatar/character-bodies/specifications.md#normal) body, including a dynamic head, fingers, rigid and layered accessories, and PBR textures. When you import this model, set **Rig Scale** to **Rthro Narrow**.</td>
   </tr>
 </tbody>
 </table>
@@ -57,7 +57,7 @@ The following [standard](../../avatar/character-bodies/specifications.md#standar
 <tbody>
   <tr>
     <td><a href="../../assets/modeling/skinned-meshes/Lola.fbx" download>Lola.fbx</a></td>
-    <td>A skinned character with a [standard humanoid rig](specifications.md#standard-rigs) created from the <a href="../../art/modeling/skin-a-humanoid-model.md">Skin a humanoid model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../../avatar/character-bodies/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.</td>
+    <td>A skinned character with a [standard humanoid rig](specifications.md#standard-rigs) created from the <a href="../../art/modeling/skin-a-humanoid-model.md">Skin a humanoid model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../../avatar/character-bodies/specifications.md#inner-and-outer-cages), this model can't equip layered accessories.</td>
   </tr>
   <tr>
     <td><a href="../../assets/avatar/dynamic-heads/reference-files/Fish-Person.zip" download>Fish-Person.zip</a></td>
@@ -110,7 +110,7 @@ The following [standard](../../avatar/character-bodies/specifications.md#standar
   <tbody>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip" download>Rig_and_Attachments_Template.blend</a></td>
-    <td>Starting rigging armature template for Blender. Contains a rigging armature with correct [standard humanoid rig](specifications.md#standard-rigs) naming conventions and attachment points. Use this template for rigging character bodies and clothing items.</td>
+    <td>Starting rigging armature template for Blender. Contains a rigging armature with correct [standard humanoid rig](specifications.md#standard-rigs) naming conventions and attachment points. Use this template for rigging character bodies and layered accessories.</td>
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Body_Cage_Templates.zip" download>Body_Cage_Template.blend</a></td>
@@ -135,7 +135,7 @@ The following [standard](../../avatar/character-bodies/specifications.md#standar
 <tbody>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip" download>Rig_and_Attachments_Template.ma</a></td>
-    <td>Starting rigging armature template for Maya. Contains a rigging armature with correct [standard humanoid rig](specifications.md#standard-rigs) naming conventions and attachment points. Use this template for creating character bodies and clothing items.</td>
+    <td>Starting rigging armature template for Maya. Contains a rigging armature with correct [standard humanoid rig](specifications.md#standard-rigs) naming conventions and attachment points. Use this template for creating character bodies and layered accessories.</td>
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Body_Cage_Templates.zip" download>Body_Cage_Template.ma</a></td>
@@ -164,7 +164,7 @@ The following [standard](../../avatar/character-bodies/specifications.md#standar
 <tbody>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip" download>Rig_and_Attachments_Template.fbx</a></td>
-    <td>Starting rigging armature template for general modeling software. Contains a rigging armature with correct [standard humanoid rig](specifications.md#standard-rigs) naming conventions and attachment points. Use this template for creating character bodies and clothing items.</td>
+    <td>Starting rigging armature template for general modeling software. Contains a rigging armature with correct [standard humanoid rig](specifications.md#standard-rigs) naming conventions and attachment points. Use this template for creating character bodies and layered accessories.</td>
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Body_Cage_Templates.zip" download>Body_Cage_Template.fbx</a></td>

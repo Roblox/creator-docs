@@ -39,7 +39,7 @@ navigation:
             path: /avatar/rigid-accessories/export
           - title: Import into Studio
             path: /avatar/rigid-accessories/import
-      - title: Layered clothing
+      - title: Layered accessories
         section:
           - title: Overview
             path: /avatar/layered-accessories/
@@ -47,7 +47,7 @@ navigation:
             path: /avatar/layered-accessories/specifications
           - title: Reference files
             path: /avatar/layered-accessories/project-files
-          - title: Caging
+          - title: Caging best practices
             path: /avatar/layered-accessories/caging-best-practices
           - title: Export settings
             path: /avatar/layered-accessories/export

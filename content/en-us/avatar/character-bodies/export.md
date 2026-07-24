@@ -50,7 +50,7 @@ For more information on supported modeling objects and proper configuration, see
 
 Blender allows you to export your character body as either a `.fbx` or `.gltf` file. If you are exporting it as a `.fbx` file, familiarize yourself with [Blender's FBX scaling](../../art/blender.md#adjust-scale-fbx) to ensure that you successfully import the model into Studio at the correct scale.
 
-To export a mesh in Blender as a `.fbx` file:
+To export your character body in Blender as a `.fbx` file:
 
 1. In the topbar, click **File** > **Export** > **FBX (.fbx)**. The **Blender File View** window displays.
 1. On the right-hand side, set **Path Mode** to **Copy**, then toggle the **Embed Textures** button.
@@ -82,7 +82,7 @@ You now have a `.fbx` file that you can [import into Studio](import.md) as a `Cl
 
 ## Maya export settings
 
-To export a mesh in Maya as a `.fbx` file:
+To export your character body in Maya as a `.fbx` file:
 
 1. In the topbar, click **File** > **Export All**. The **Export All** window displays.
 1. Near the bottom of the window, click the **Files of type** dropdown, then select **FBX export**.

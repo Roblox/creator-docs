@@ -60,7 +60,7 @@ When your project has the appropriate `Class.Model` object in your workspace, yo
   <tr>
     <td>Layered clothing</td>
     <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet Avatar Setup's supported [accessory inputs](./auto-setup-requirements.md#accessories-and-clothing). <br /> <br />Can optionally [bundle](./auto-setup-requirements.md#bundle-multiple-assets) with an avatar body `Class.Model` for Avatar Setup.</td>
-    <td>`Class.Accessory` that includes all expected [layered accessory components](../avatar/layered-accessories/index.md#components-of-a-layered-clothing-accessory).</td>
+    <td>`Class.Accessory` that includes all expected [layered accessory components](../avatar/layered-accessories/index.md#layered-accessory-components).</td>
   </tr>
   <tr>
     <td>Multiple accessories and clothing with single body</td>
