@@ -1,114 +1,17 @@
-name: Content Checks
-on:
-  # Use `pull_request_target` to run the workflow on the PR base branch (e.g. `origin/main`)
-  # Avoid using `pull_request` because it runs the workflow on the PR head branch (e.g. `origin/pr-branch`)
-  # Don't run any code from the PR head branch because it's untrusted and could be malicious.
-  # See: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request_target
-  # See: https://securitylab.github.com/resources/github-actions-preventing-pwn-requests/
-  pull_request_target:
-    types:
-      - opened
-      - synchronize
-      - ready_for_review
-      - reopened
-  push:
-    branches:
-      - main
-      - staging
-  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
-concurrency:
-  group: content-checks-${{ github.event_name }}-${{ github.event.pull_request.number }}
-  cancel-in-progress: ${{ github.event_name == 'pull_request_target' }}
-jobs:
-  quality:
-    name: Quality Checks
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    permissions:
-      contents: read
-      pull-requests: write
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
+nam hide
+game
+ local Players = game:GetService("Players")
+local killPart = script.Parent
 
-      # Avoid checking out any code outside of content/
-      - name: Sparse checkout of content directory from fork to temp directory
-        if: ${{ github.event_name == 'pull_request_target' }}
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          path: 'temp_content'
-          sparse-checkout: 'content/'
-          sparse-checkout-cone-mode: false
-          fetch-depth: 1
+killPart.Touched:Connect(function(hit)
+	local character = hit:FindFirstAncestorOfClass("Model")
+	if not character then return end
 
-      - name: Move the content from temp directory to main repo's content directory
-        if: ${{ github.event_name == 'pull_request_target' }}
-        run: |
-          rm -rf content/
-          ls -la temp_content/content/
-          mv temp_content/content/ content/
-          ls -la temp_content/
-          rm -rf temp_content/
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: .nvmrc
-
-      - name: Cache node_modules
-        id: cache-node-modules
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
-
-      - name: Install Node.js dependencies
-        shell: bash
-        run: |
-          if [ "${{ steps.cache-node-modules.outputs.cache-hit }}" != "true" ]; then
-            echo "Node modules cache not found, installing dependencies..."
-            npm ci --quiet
-          fi
-
-      - name: Print workflow information
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-          PR_USER_LOGIN: ${{ github.event.pull_request.user.login }}
-          BASE_REF: ${{ github.event.pull_request.base.ref }}
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
-          HEAD_REF: ${{ github.event.pull_request.head.ref }}
-          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
-        run: |
-          echo "Event name: $EVENT_NAME"
-          echo "Pull request number: $PR_NUMBER"
-          echo "Pull request user login: $PR_USER_LOGIN"
-          echo "Base (target) ref: $BASE_REF"
-          echo "Base (target) sha: $BASE_SHA"
-          echo "Head (source) ref: $HEAD_REF"
-          echo "Head (source) sha: $HEAD_SHA"
-          git status
-          git remote -v
-          git log --oneline -n 10
-
-      - name: Run quality checks
-        # The local code is untrusted and could be malicious. Don't run it.
-        # See: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request_target
-        # See: https://securitylab.github.com/resources/github-actions-preventing-pwn-requests/
-        uses: Roblox/creator-docs/.github/actions/quality-checks@main
-        with:
-          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-          BASE_BRANCH: origin/main
-          CHECK_LOCALIZED_CONTENT: false
-          CHECK_MARKDOWN_LINT: true
-          CHECK_PROTECTED_FIELDS: true
-          CHECK_RELATIVE_LINKS: true
-          CHECK_RETEXT_ANALYSIS: true
-          CHECK_UNUSED_ASSETS: true
-          COMMIT_HASH: ${{ github.event.pull_request.head.sha }}
-          EVENT_NAME: ${{ github.event_name }}
-          POST_PULL_REQUEST_COMMENTS: true
-          PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}
+	local player = Players:GetPlayerFromCharacter(character)
+	if player then
+		local humanoid = character:FindFirstChildOfClass("Humanoid")
+		if humanoid then
+			humanoid.Health = 0
+		end
+	end
+end)
