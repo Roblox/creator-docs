@@ -11,8 +11,8 @@ While the Importer provides object previews and error-checking to ensure that yo
 
 To import your asset as a layered accessory:
 
-1. In the **Home** tab, click the **Import** button to open the 3D Importer. A file browser opens.
-1. Select your layered accessory's `.fbx` or `.gltf` file. The 3D Importer loads a preview of the layered accessory.
+1. In the **Home** tab, click the **Import** button to open the Importer. A file browser opens.
+1. Select your layered accessory's `.fbx` or `.gltf` file. The Importer loads a preview of the layered accessory.
 
       <img src="../../assets/art/accessories/creating/Import-Layered-Accessory.png" width = "80%"/>
 

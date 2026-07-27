@@ -1,6 +1,9 @@
 ---
 title: Memory store sorted map
 description: Explains how to implement the sorted map data structure for memory stores.
+keywords:
+  - right to be forgotten
+  - PII
 ---
 
 The **sorted map** data structure of [memory stores](../../cloud-services/memory-stores/index.md) allows you to store frequent in-memory data as key-value pairs with an optional sort key and maintain a specific order based on the sort keys and keys. Unlike queues, the order of keys entering a map doesn't determine the order of processing, making sorted maps useful for sorting based data organization for implementing in-game entities for engagement such as leaderboards and cross-server auctioning.
@@ -82,10 +85,6 @@ Example of some data sorted in ascending order -
 ```
 
 Note how `player0` sorts after all keys with a sort key. `player6` sorts after all keys with a numeric sort key. `player4` and `player5` have the same sort key, so they are sorted in ascending order by key.
-
-<Alert severity="warning">
-Under the EU General Data Protection Regulation (GDPR), if your memory stores have user data subject to [Right to be Forgotten](https://gdpr.eu/right-to-be-forgotten/) you **must** remove the data in 30 days, even if you set your memory store key's expiration up to 45 days.
-</Alert>
 
 ```lua title="Adding Data to a Sorted Map"
 local MemoryStoreService = game:GetService("MemoryStoreService")

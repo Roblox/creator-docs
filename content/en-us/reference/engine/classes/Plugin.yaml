@@ -85,8 +85,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Plugin.IsDebuggable
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether the plugin's scripts can be debugged in Studio.
+    description: |
+      Indicates whether the plugin's scripts can be debugged in Studio. This
+      property is not accessible through scripts.
     code_samples: []
     type: boolean
     tags: []

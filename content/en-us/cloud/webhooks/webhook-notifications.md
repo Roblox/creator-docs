@@ -1,6 +1,17 @@
 ---
 title: Webhook notifications
 description: Explains how to set up webhooks to automate your notification management workflow.
+keywords:
+  - GDPR
+  - CCPA
+  - LGPD
+  - PIPA
+  - right to erasure
+  - right to be forgotten
+  - data protection
+  - privacy
+  - PII
+  - personal data
 ---
 
 Instead of manually monitoring all events in your game and requests from users, you can set up webhooks to receive real-time notifications on a third-party messaging tool or your custom endpoint that can receive HTTP requests. This helps you automate your notification management workflow to reduce manual effort handling notifications.
@@ -13,7 +24,7 @@ Currently, Roblox fully supports webhook notifications for Discord and Slack. Us
 
 Webhooks send real-time notifications or data between two different applications or services, such as Roblox and a third-party messaging tool. Unlike traditional APIs, which require you to set up a client application to send requests to a server to receive data, webhooks send data to your client endpoint as soon as an event occurs. They're useful for automating workflows between Roblox and third-party applications that you use for collaborating with your team, as they allow for real-time data sharing and processing.
 
-Once you set up a webhook, whenever a target event occurs, Roblox sends a request to the webhook URL you provide. The webhook URL then redirects the request to your receiving application or custom endpoint, which can take action based on the data included in the webhook payload. This could include erasing data for GDPR, sending a confirmation to the user, or triggering another event.
+Once you set up a webhook, whenever a target event occurs, Roblox sends a request to the webhook URL you provide. The webhook URL then redirects the request to your receiving application or custom endpoint, which can take action based on the data included in the webhook payload. This could include erasing data for [RTBF](../../production/publishing/RTBF-and-creators.md) compliance, sending a confirmation to the user, or triggering another event.
 
 ## Supported triggers
 
@@ -31,7 +42,7 @@ For more information on subscription events and their fields, see the [Subscript
 
 ### Compliance
 
-- **Right to Erasure Request** - When a user submits a data deletion request under the [General Data Protection Regulation](https://gdpr.eu/right-to-be-forgotten/) (GDPR).
+- **Right to Erasure / Deletion Request** - When a user exercises their right to have their personal information permanently deleted under applicable global data protection and privacy regulations. More information can be found in [RTBF and Creators](../../production/publishing/RTBF-and-creators.md).
 
 ### Commerce
 
@@ -43,7 +54,7 @@ For more information on subscription events and their fields, see the [Subscript
 To receive notifications through webhooks, you need to configure a webhook that subscribes to certain events for triggering notifications. For group-owned games, only group owners can configure and receive webhook notifications.
 
 <Alert severity="info">
-If you're setting up webhooks and handling personal data, ensure they comply with the [General Data Protection Regulation (GDPR)](https://gdpr-info.eu/).
+If you're setting up webhooks and handling personal data, ensure they comply with applicable data protection and privacy regulations. See [RTBF and Creators](../../production/publishing/RTBF-and-creators.md) for more information.
 </Alert>
 
 To set up a webhook:
@@ -212,7 +223,7 @@ The following example shows the payload schema of the **Right To Erasure request
 
 ## Handle notifications
 
-If you store any **Personally Identifiable Information (PII)** of your users, such as their User IDs, you must delete this information when a user submits such a request to comply with the GDPR [right to erasure](https://gdpr-info.eu/art-17-gdpr/) compliance requirements. You can create a bot to handle webhook notifications and help automate data deletion, provided you're storing PII in a data store. See [Automating Right to Erasure Requests Deletion](../../cloud/webhooks/automate-right-to-erasure.md) for an example on how to create a bot within Discord that uses the [Open Cloud API for data stores](../../cloud/guides/data-stores/index.md) to delete PII data as an automation solution. This example can be adapted for handling other notifications, such as subscription events.
+If you store any **Personally Identifiable Information (PII)** of your users, such as their User IDs, you should evaluate the request in light of your legal obligations. More information can be found in [RTBF and Creators](../../production/publishing/RTBF-and-creators.md). You can create a bot to handle webhook notifications and help automate data deletion, provided you're storing PII in a data store. See [Automating Right to Erasure Requests Deletion](../../cloud/webhooks/automate-right-to-erasure.md) for an example on how to create a bot within Discord that uses the [Open Cloud API for data stores](../../cloud/guides/data-stores/index.md) to delete PII data as an automation solution. This example can be adapted for handling other notifications, such as subscription events.
 
 If you use a custom endpoint as your webhook server instead of a third-party tool, you can extract the data subject to deletion from the webhook payload and build your own automation solution. The following code sample is an example of a server that has prevention against replay attacks by verifying the timestamp and that the request is coming from Roblox:
 

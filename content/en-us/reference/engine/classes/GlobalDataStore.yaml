@@ -279,7 +279,7 @@ methods:
         default: '{}'
         summary: |
           Table of `Class.Player.UserId|UserIds`, highly recommended to assist
-          with GDPR tracking/removal.
+          with RTBF tracking/removal.
       - name: options
         type: DataStoreSetOptions
         default: nil
@@ -392,6 +392,67 @@ methods:
           and a `Class.DataStoreKeyInfo` instance that includes the version
           number, date and time the version was created, and functions to
           retrieve `Class.Player.UserId|UserIds` and metadata.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - DataStore
+  - name: GlobalDataStore:BatchGetAsync
+    summary: |
+      Returns the values of multiple keys from the data store in a single
+      request.
+    description: |
+      This function retrieves the values of multiple keys in a single request.
+
+      This method is currently only supported on `Class.OrderedDataStore`.
+      Calling it on a standard `Class.GlobalDataStore` or `Class.DataStore` will
+      throw an error.
+
+      Unlike `Class.GlobalDataStore:GetAsync()`, this method does not return
+      `Class.DataStoreKeyInfo` since ordered data stores do not support
+      versioning or metadata.
+
+      The returned dictionary maps each key to a table with a `value` field. For
+      example, if you request keys `{"coins", "gems"}`, the result might look
+      like:
+
+      ```lua
+      {
+          coins = { value = 100 },
+          gems = { value = 50 }
+      }
+      ```
+
+      Keys that do not exist in the data store or have empty values are omitted
+      from the result rather than returning nil values.
+
+      #### Limits
+
+      The `keys` array must contain at least one key and no more than the
+      server-configured maximum (default 100). Exceeding the limit will throw an
+      error. Each call counts against the ordered data store read budget based
+      on the number of keys requested.
+    code_samples:
+      - GlobalDataStore-BatchGetAsync1
+    parameters:
+      - name: keys
+        type: Array
+        default:
+        summary: |
+          An array of key name strings to retrieve. The maximum number of keys
+          per request is determined by a server-side limit (default 100).
+      - name: options
+        type: Dictionary
+        default: nil
+        summary: ''
+    returns:
+      - type: Dictionary
+        summary: |
+          A dictionary mapping each requested key (string) to a table containing
+          a `value` field with the key's current value. Keys that don't exist or
+          have no value are omitted from the result.
     tags:
       - Yields
     deprecation_message: ''

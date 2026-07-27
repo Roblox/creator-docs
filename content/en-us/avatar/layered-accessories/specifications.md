@@ -113,13 +113,9 @@ If setting or configuring attachments manually in Studio, use the following name
   The Importer automatically recognizes mesh objects as attachment points if the objects include the affix `\_Att`. This only applies when importing meshes with caging data, such as layered accessories or character bodies.
   </Alert>
 
-- **Shoulders and Collars** - Even though they are in similar locations, Shoulder and Collar attachment points interact with character rigs differently for rigid accessories.
-  - Items using `RightShoulderAttachment` or `LeftShoulderAttachment` move with the character's arm.
-  - Items using `RightCollarAttachment` or `LeftCollarAttachment` do not move with the character's arm.
-
 ## Face accessories
 
-Face accessories, such as hair, eyebrows, and eyelashes, are unique layered accessories that you can bundle with an avatar body upload. At this time, eyebrows and eyelashes can not be uploaded as standalone accessories and must be bundled with [character bodies](../character-bodies/index.md). For more information on bundling your face accessories with avatar models, see [Publish bodies with eyelashes and eyebrows](../../art/accessories/publish-eyebrows-eyelashes.md).
+Face accessories, such as eyebrows and eyelashes, are unique layered accessories that you can bundle with an avatar body upload. At this time, eyebrows and eyelashes can not be uploaded as standalone accessories and must be bundled with [character bodies](../character-bodies/index.md). For more information on bundling your face accessories with avatar models, see [Publish bodies with eyelashes and eyebrows](../../art/accessories/publish-eyebrows-eyelashes.md).
 
 - **Naming Convention when bundled** - When including these assets with an avatar body upload, the layered accessory objects must use the following name conventions:
   - `EyebrowAccessory`
@@ -132,7 +128,7 @@ Layered accessories require additional configuration in a 3D modeling software, 
 
 - Layered accessories must be [weighted and bound](#rigging-and-skinning) to a [standard](../character-bodies/specifications.md#standard-rigs) or [higher-fidelity](../character-bodies/specifications.md#higher-fidelity-rigs) rigging armature.
 - Layered accessories must contain an [inner mesh cage](#inner-cage) and an [outer mesh cage](#outer-cage).
-- Layered accessories must continue to follow any applicable [custom mesh requirements](../../avatar/character-bodies/specifications.md), such as best practices on watertightness, textures, and polycount budgets.
+- Layered accessories must continue to follow any applicable [custom mesh requirements](../../art/modeling/specifications.md), such as best practices on watertightness, textures, and polycount budgets.
 
 See [Create your first layered accessory](../../art/accessories/creating/index.md) for a step-by-step tutorial on applying these requirements to a reference asset in Blender. Once the `.fbx` file is [exported](./export.md), see [Accessory Fitting Tool](../../avatar/accessory-fitting-tool.md) for instructions on converting your model into an `Class.Accessory` object.
 

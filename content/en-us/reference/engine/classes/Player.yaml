@@ -746,8 +746,11 @@ properties:
     capabilities:
       - Players
   - name: Player.InputLatency
-    summary: ''
-    description: ''
+    summary: |
+      An internal property used by the Server Authority netcode system.
+    description: |
+      An internal property used by the Server Authority netcode system. This
+      property is not accessible through scripts.
     code_samples: []
     type: int
     tags: []
@@ -969,8 +972,12 @@ properties:
     capabilities:
       - Players
   - name: Player.StepIdOffset
-    summary: ''
-    description: ''
+    summary: |
+      An internal offset between client and server used by the Server Authority
+      system.
+    description: |
+      An internal offset between client and server used by the Server Authority
+      system. This property is not accessible through scripts.
     code_samples: []
     type: int
     tags: []
@@ -1320,7 +1327,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Dictionary
+      - type: CameraState
         summary: |
           A dictionary containing `Class.Camera.CFrame|CFrame`,
           `Class.Camera.FieldOfView|FieldOfView`, and

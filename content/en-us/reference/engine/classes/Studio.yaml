@@ -20,8 +20,11 @@ tags:
 deprecation_message: ''
 properties:
   - name: Studio."function" Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of the `function` keyword in the script editor.
+    description: |
+      Sets the color of the `function` keyword in the script editor. This must
+      be set in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -37,8 +40,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio."local" Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of the `local` keyword in the script editor.
+    description: |
+      Sets the color of the `local` keyword in the script editor. This must be
+      set in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -54,8 +60,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio."nil" Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of the `nil` keyword in the script editor.
+    description: |
+      Sets the color of the `nil` keyword in the script editor. This must be set
+      in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -71,8 +80,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio."self" Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of the `self` keyword in the script editor.
+    description: |
+      Sets the color of the `self` keyword in the script editor. This must be
+      set in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -88,8 +100,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio."TODO" Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of TODO comments in the script editor.
+    description: |
+      Sets the color of TODO comments in the script editor. This must be set in
+      Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -105,8 +120,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.ActionOnAutoResumeSync
-    summary: ''
-    description: ''
+    summary: |
+      Sets the action Studio takes when auto-resuming file sync.
+    description: |
+      Sets the action Studio takes when auto-resuming file sync. This must be
+      set in Studio Settings > Studio tab.
     code_samples: []
     type: ActionOnAutoResumeSync
     tags: []
@@ -121,8 +139,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.ActionOnStopSync
-    summary: ''
-    description: ''
+    summary: |
+      Sets the action Studio takes when stopping file sync.
+    description: |
+      Sets the action Studio takes when stopping file sync. This must be set in
+      Studio Settings > Studio tab.
     code_samples: []
     type: ActionOnStopSync
     tags: []
@@ -137,8 +158,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Active Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of active UI elements in Studio.
+    description: |
+      Sets the color of active UI elements in Studio. This must be set in Studio
+      Settings > Studio tab.
     code_samples: []
     type: Color3
     tags: []
@@ -153,8 +177,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Active Hover Over Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of active UI elements when hovered in Studio.
+    description: |
+      Sets the color of active UI elements when hovered in Studio. This must be
+      set in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags: []
@@ -211,8 +238,13 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Auto Clean Empty Line
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether trailing whitespace is automatically removed from empty
+      lines in the script editor.
+    description: |
+      Controls whether trailing whitespace is automatically removed from empty
+      lines in the script editor. This must be set in Studio Settings > Studio
+      tab.
     code_samples: []
     type: boolean
     tags: []
@@ -227,8 +259,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Auto Closing Brackets
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the script editor automatically inserts a matching
+      closing bracket.
+    description: |
+      Controls whether the script editor automatically inserts a matching
+      closing bracket. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -243,8 +279,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Auto Closing Quotes
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the script editor automatically inserts a matching
+      closing quote.
+    description: |
+      Controls whether the script editor automatically inserts a matching
+      closing quote. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -259,8 +299,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Auto Delete Closing Brackets and Quotes
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether deleting an opening bracket or quote also removes its
+      closing counterpart.
+    description: |
+      Controls whether deleting an opening bracket or quote also removes its
+      closing counterpart. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -275,8 +319,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Auto Indent Rule
-    summary: ''
-    description: ''
+    summary: |
+      Sets the rule used to determine automatic indentation in the script
+      editor.
+    description: |
+      Sets the rule used to determine automatic indentation in the script
+      editor. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: AutoIndentRule
     tags: []
@@ -291,8 +339,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Auto-Recovery Enabled
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether Studio automatically saves recovery files at a set
+      interval.
+    description: |
+      Controls whether Studio automatically saves recovery files at a set
+      interval. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -307,8 +359,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Auto-Recovery Interval (Minutes)
-    summary: ''
-    description: ''
+    summary: |
+      Sets the interval in minutes at which Studio saves auto-recovery files.
+    description: |
+      Sets the interval in minutes at which Studio saves auto-recovery files.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: int
     tags: []
@@ -323,8 +378,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.AutocompleteAcceptanceBehavior
-    summary: ''
-    description: ''
+    summary: |
+      Sets the key used to accept autocomplete suggestions in the script editor.
+    description: |
+      Sets the key used to accept autocomplete suggestions in the script editor.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: CompletionAcceptanceBehavior
     tags: []
@@ -339,8 +397,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Automatically trigger AI Code Completion
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether AI code completion suggestions trigger automatically
+      while typing.
+    description: |
+      Controls whether AI code completion suggestions trigger automatically
+      while typing. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -355,8 +417,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.AutoResumeSyncOnPlaceOpen
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether file sync resumes automatically when a place is opened.
+    description: |
+      Controls whether file sync resumes automatically when a place is opened.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -371,8 +436,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.AutoUpdateEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether Studio updates itself automatically when a new version is
+      available.
+    description: |
+      Controls whether Studio updates itself automatically when a new version is
+      available. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -424,8 +493,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Bool Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of boolean literals in the script editor.
+    description: |
+      Sets the color of boolean literals in the script editor. This must be set
+      in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -441,8 +513,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.Bracket Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of brackets in the script editor.
+    description: |
+      Sets the color of brackets in the script editor. This must be set in
+      Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -497,8 +572,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Camera Pan Speed
-    summary: ''
-    description: ''
+    summary: |
+      Sets the speed of camera panning in Studio.
+    description: |
+      Sets the speed of camera panning in Studio. This must be set in Studio
+      Settings > Studio tab.
     code_samples: []
     type: float
     tags: []
@@ -553,8 +631,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Camera Speed Adjust Binding
-    summary: ''
-    description: ''
+    summary: |
+      Sets the mouse button used to adjust the camera speed in Studio.
+    description: |
+      Sets the mouse button used to adjust the camera speed in Studio. This must
+      be set in Studio Settings > Studio tab.
     code_samples: []
     type: CameraSpeedAdjustBinding
     tags: []
@@ -569,8 +650,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Camera Zoom to Mouse Position
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the camera zooms toward the mouse cursor position.
+    description: |
+      Controls whether the camera zooms toward the mouse cursor position. This
+      must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -585,8 +669,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.CameraAdaptiveSpeed
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether camera movement speed adapts based on distance to nearby
+      objects.
+    description: |
+      Controls whether camera movement speed adapts based on distance to nearby
+      objects. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -601,8 +689,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.CameraNavigationModel
-    summary: ''
-    description: ''
+    summary: |
+      Sets the navigation model used for camera movement in Studio.
+    description: |
+      Sets the navigation model used for camera movement in Studio. This must be
+      set in Studio Settings > Studio tab.
     code_samples: []
     type: CameraNavigationModel
     tags: []
@@ -617,8 +708,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.CameraOrbitSensitivity
-    summary: ''
-    description: ''
+    summary: |
+      Sets the mouse sensitivity for camera orbit in Studio.
+    description: |
+      Sets the mouse sensitivity for camera orbit in Studio. This must be set in
+      Studio Settings > Studio tab.
     code_samples: []
     type: float
     tags: []
@@ -633,8 +727,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.CameraPanSensitivity
-    summary: ''
-    description: ''
+    summary: |
+      Sets the mouse sensitivity for camera panning in Studio.
+    description: |
+      Sets the mouse sensitivity for camera panning in Studio. This must be set
+      in Studio Settings > Studio tab.
     code_samples: []
     type: float
     tags: []
@@ -649,8 +746,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.CameraShiftFactor
-    summary: ''
-    description: ''
+    summary: |
+      Sets the speed multiplier applied to camera movement when Shift is held.
+    description: |
+      Sets the speed multiplier applied to camera movement when Shift is held.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: float
     tags: []
@@ -665,8 +765,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.CameraTweenFocus
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the camera smoothly tweens when refocusing on a selected
+      object.
+    description: |
+      Controls whether the camera smoothly tweens when refocusing on a selected
+      object. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -681,8 +785,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.CameraZoomSpeed
-    summary: ''
-    description: ''
+    summary: |
+      Sets the speed of camera zooming in Studio.
+    description: |
+      Sets the speed of camera zooming in Studio. This must be set in Studio
+      Settings > Studio tab.
     code_samples: []
     type: float
     tags: []
@@ -717,8 +824,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.CommandBarEnterExec
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether pressing Enter immediately executes the command bar
+      input.
+    description: |
+      Controls whether pressing Enter immediately executes the command bar
+      input. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -733,8 +844,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.CommandBarFont
-    summary: ''
-    description: ''
+    summary: |
+      Sets the font used in the Studio command bar.
+    description: |
+      Sets the font used in the Studio command bar. This must be set in Studio
+      Settings > Studio tab.
     code_samples: []
     type: QFont
     tags: []
@@ -749,8 +863,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.CommandBarLocalState
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the command bar retains its input state between sessions.
+    description: |
+      Controls whether the command bar retains its input state between sessions.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -784,8 +901,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.Current Line Highlight Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of the current line highlight in the script editor.
+    description: |
+      Sets the color of the current line highlight in the script editor. This
+      must be set in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -801,8 +921,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.Debugger Current Line Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of the current debugger line in the script editor.
+    description: |
+      Sets the color of the current debugger line in the script editor. This
+      must be set in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -818,8 +941,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.Debugger Error Line Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of debugger error lines in the script editor.
+    description: |
+      Sets the color of debugger error lines in the script editor. This must be
+      set in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -835,8 +961,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.DefaultInstancesDir
-    summary: ''
-    description: ''
+    summary: |
+      Sets the default directory where Studio saves instance files.
+    description: |
+      Sets the default directory where Studio saves instance files. This must be
+      set in Studio Settings > Studio tab.
     code_samples: []
     type: QDir
     tags: []
@@ -851,8 +980,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.DefaultScriptSyncFileType
-    summary: ''
-    description: ''
+    summary: |
+      Sets the default file type used when syncing scripts to the file system.
+    description: |
+      Sets the default file type used when syncing scripts to the file system.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: DefaultScriptSyncFileType
     tags: []
@@ -887,8 +1019,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.DisplayLanguage
-    summary: ''
-    description: ''
+    summary: |
+      Sets the display language used by the Studio interface.
+    description: |
+      Sets the display language used by the Studio interface. This must be set
+      in Studio Settings > Studio tab.
     code_samples: []
     type: string
     tags: []
@@ -903,8 +1038,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.DraggerActiveColor
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of the active dragger handle in Studio.
+    description: |
+      Sets the color of the active dragger handle in Studio. This must be set in
+      Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags: []
@@ -919,8 +1057,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.DraggerLengthFactor
-    summary: ''
-    description: ''
+    summary: |
+      Sets the length scale factor of dragger handles in Studio.
+    description: |
+      Sets the length scale factor of dragger handles in Studio. This must be
+      set in Studio Settings > Studio tab.
     code_samples: []
     type: float
     tags: []
@@ -935,8 +1076,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.DraggerMajorGridIncrement
-    summary: ''
-    description: ''
+    summary: |
+      Sets the major grid increment used when snapping with the dragger.
+    description: |
+      Sets the major grid increment used when snapping with the dragger. This
+      must be set in Studio Settings > Studio tab.
     code_samples: []
     type: int
     tags: []
@@ -951,8 +1095,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.DraggerMaxSoftSnaps
-    summary: ''
-    description: ''
+    summary: |
+      Sets the maximum number of soft snap points shown by the dragger.
+    description: |
+      Sets the maximum number of soft snap points shown by the dragger. This
+      must be set in Studio Settings > Studio tab.
     code_samples: []
     type: int
     tags: []
@@ -967,8 +1114,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.DraggerPassiveColor
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of inactive dragger handles in Studio.
+    description: |
+      Sets the color of inactive dragger handles in Studio. This must be set in
+      Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags: []
@@ -983,8 +1133,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.DraggerScaleFactor
-    summary: ''
-    description: ''
+    summary: |
+      Sets the scale factor controlling the overall size of dragger handles.
+    description: |
+      Sets the scale factor controlling the overall size of dragger handles.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: float
     tags: []
@@ -999,8 +1152,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.DraggerShowAxisTicks
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether tick marks are shown on dragger axis lines.
+    description: |
+      Controls whether tick marks are shown on dragger axis lines. This must be
+      set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1015,8 +1171,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.DraggerShowHoverRuler
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether a ruler is shown when hovering near the dragger.
+    description: |
+      Controls whether a ruler is shown when hovering near the dragger. This
+      must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1031,8 +1190,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.DraggerShowMeasurement
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether distance measurements are shown while dragging.
+    description: |
+      Controls whether distance measurements are shown while dragging. This must
+      be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1047,8 +1209,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.DraggerShowNegativeAxes
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether negative axis handles are shown on the dragger.
+    description: |
+      Controls whether negative axis handles are shown on the dragger. This must
+      be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1063,8 +1228,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.DraggerShowPlanes
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether planar translation handles are shown on the dragger.
+    description: |
+      Controls whether planar translation handles are shown on the dragger. This
+      must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1079,8 +1247,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.DraggerShowTargetSnap
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the target snap indicator is shown on the dragger.
+    description: |
+      Controls whether the target snap indicator is shown on the dragger. This
+      must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1095,8 +1266,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.DraggerShowTrackball
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the trackball handle is shown on the rotation dragger.
+    description: |
+      Controls whether the trackball handle is shown on the rotation dragger.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1111,8 +1285,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.DraggerShowWhileDragging
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether dragger handles remain visible while actively dragging.
+    description: |
+      Controls whether dragger handles remain visible while actively dragging.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1127,8 +1304,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.DraggerSoftSnapMarginFactor
-    summary: ''
-    description: ''
+    summary: |
+      Sets the margin factor used to determine proximity for soft snapping.
+    description: |
+      Sets the margin factor used to determine proximity for soft snapping. This
+      must be set in Studio Settings > Studio tab.
     code_samples: []
     type: float
     tags: []
@@ -1143,8 +1323,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.DraggerSummonMarginFactor
-    summary: ''
-    description: ''
+    summary: |
+      Sets the margin factor used to summon the dragger near a surface.
+    description: |
+      Sets the margin factor used to summon the dragger near a surface. This
+      must be set in Studio Settings > Studio tab.
     code_samples: []
     type: float
     tags: []
@@ -1159,8 +1342,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.DraggerTiltRotateDuration
-    summary: ''
-    description: ''
+    summary: |
+      Sets the duration in seconds of the tilt rotation animation in the
+      dragger.
+    description: |
+      Sets the duration in seconds of the tilt rotation animation in the
+      dragger. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: float
     tags: []
@@ -1195,8 +1382,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Enable Autocomplete Doc View
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether documentation is shown alongside autocomplete
+      suggestions.
+    description: |
+      Controls whether documentation is shown alongside autocomplete
+      suggestions. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1211,8 +1402,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Enable CoreScript Debugger
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the CoreScript debugger is available in Studio.
+    description: |
+      Controls whether the CoreScript debugger is available in Studio. This must
+      be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1227,8 +1421,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Enable Http Sandboxing
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether HTTP requests from plugins are sandboxed.
+    description: |
+      Controls whether HTTP requests from plugins are sandboxed. This must be
+      set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1243,8 +1440,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Enable Internal Beta Features
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether internal beta features are accessible in Studio.
+    description: |
+      Controls whether internal beta features are accessible in Studio. This
+      must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1259,8 +1459,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Enable Internal Features
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether internal developer features are accessible in Studio.
+    description: |
+      Controls whether internal developer features are accessible in Studio.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1275,8 +1478,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Enable Script Analysis
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the script editor performs real-time Luau script
+      analysis.
+    description: |
+      Controls whether the script editor performs real-time Luau script
+      analysis. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1291,8 +1498,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Enable Scrollbar Markers
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether error and warning markers are shown on the script editor
+      scrollbar.
+    description: |
+      Controls whether error and warning markers are shown on the script editor
+      scrollbar. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1307,8 +1518,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Enable Signature Help
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether function signature help popups are shown while typing.
+    description: |
+      Controls whether function signature help popups are shown while typing.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1323,8 +1537,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Enable Signature Help Doc View
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether documentation is shown alongside signature help popups.
+    description: |
+      Controls whether documentation is shown alongside signature help popups.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1339,8 +1556,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Enable Temporary Tabs
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether opening a script creates a temporary tab that is replaced
+      on the next open.
+    description: |
+      Controls whether opening a script creates a temporary tab that is replaced
+      on the next open. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1355,8 +1576,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Enable Temporary Tabs In Explorer
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether clicking a script in the Explorer opens it in a temporary
+      tab.
+    description: |
+      Controls whether clicking a script in the Explorer opens it in a temporary
+      tab. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1371,8 +1596,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Enable Type Hover
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether hovering over an identifier shows its inferred type.
+    description: |
+      Controls whether hovering over an identifier shows its inferred type. This
+      must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1387,8 +1615,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.EnableCodeAssist
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether AI-powered code assist features are enabled in the script
+      editor.
+    description: |
+      Controls whether AI-powered code assist features are enabled in the script
+      editor. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1403,8 +1635,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.EnableFindOnType
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the Find bar activates when typing in the script editor.
+    description: |
+      Controls whether the Find bar activates when typing in the script editor.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1419,8 +1654,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.EnableIndentationRulers
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether indentation ruler lines are shown in the script editor.
+    description: |
+      Controls whether indentation ruler lines are shown in the script editor.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1435,8 +1673,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.EnableSelectionTooltips
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether tooltips are shown when hovering over selected objects.
+    description: |
+      Controls whether tooltips are shown when hovering over selected objects.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1451,8 +1692,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.EnableStudioStreaming
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether Studio streaming mode is enabled.
+    description: |
+      Controls whether Studio streaming mode is enabled. This must be set in
+      Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1488,8 +1732,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.ExternalEditorMode
-    summary: ''
-    description: ''
+    summary: |
+      Sets the mode used when opening scripts in an external editor.
+    description: |
+      Sets the mode used when opening scripts in an external editor. This must
+      be set in Studio Settings > Studio tab.
     code_samples: []
     type: ExternalEditorMode
     tags: []
@@ -1504,8 +1751,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.ExternalEditorSelection
-    summary: ''
-    description: ''
+    summary: |
+      Sets which external editor Studio opens scripts with.
+    description: |
+      Sets which external editor Studio opens scripts with. This must be set in
+      Studio Settings > Studio tab.
     code_samples: []
     type: QDir
     tags: []
@@ -1559,8 +1809,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Format On Paste
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether pasted code is automatically formatted in the script
+      editor.
+    description: |
+      Controls whether pasted code is automatically formatted in the script
+      editor. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1575,8 +1829,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Format On Type
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether code is automatically formatted as you type in the script
+      editor.
+    description: |
+      Controls whether code is automatically formatted as you type in the script
+      editor. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1591,8 +1849,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Function Name Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of function names in the script editor.
+    description: |
+      Sets the color of function names in the script editor. This must be set in
+      Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -1608,8 +1869,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.Highlight Current Line
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the current line is highlighted in the script editor.
+    description: |
+      Controls whether the current line is highlighted in the script editor.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1624,8 +1888,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Highlight Occurances
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether other occurrences of the word under the cursor are
+      highlighted.
+    description: |
+      Controls whether other occurrences of the word under the cursor are
+      highlighted. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1640,8 +1908,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.HintColor
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of hint diagnostics in the script editor.
+    description: |
+      Sets the color of hint diagnostics in the script editor. This must be set
+      in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -1677,8 +1948,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Hover Box Thickness
-    summary: ''
-    description: ''
+    summary: |
+      Sets the thickness of the selection box shown when hovering over objects.
+    description: |
+      Sets the thickness of the selection box shown when hovering over objects.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: float
     tags: []
@@ -1693,8 +1967,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Hover Line Thickness
-    summary: ''
-    description: ''
+    summary: |
+      Sets the line thickness of the hover selection box.
+    description: |
+      Sets the line thickness of the hover selection box. This must be set in
+      Studio Settings > Studio tab.
     code_samples: []
     type: int
     tags: []
@@ -1727,8 +2004,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.IconOverrideDir
-    summary: ''
-    description: ''
+    summary: |
+      Sets the directory Studio uses to load icon overrides.
+    description: |
+      Sets the directory Studio uses to load icon overrides. This must be set in
+      Studio Settings > Studio tab.
     code_samples: []
     type: QDir
     tags: []
@@ -1743,8 +2023,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Indent Using Spaces
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the script editor uses spaces instead of tabs for
+      indentation.
+    description: |
+      Controls whether the script editor uses spaces instead of tabs for
+      indentation. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1759,8 +2043,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.IndentationRulerColor
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of indentation rulers in the script editor.
+    description: |
+      Sets the color of indentation rulers in the script editor. This must be
+      set in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -1776,8 +2063,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.InformationColor
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of information diagnostics in the script editor.
+    description: |
+      Sets the color of information diagnostics in the script editor. This must
+      be set in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -1812,8 +2102,12 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.LargeFileLineCountThreshold
-    summary: ''
-    description: ''
+    summary: |
+      Sets the line count at which a script is treated as a large file by the
+      script editor.
+    description: |
+      Sets the line count at which a script is treated as a large file by the
+      script editor. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: int
     tags: []
@@ -1828,8 +2122,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.LargeFileThreshold
-    summary: ''
-    description: ''
+    summary: |
+      Sets the byte size at which a script is treated as a large file by the
+      script editor.
+    description: |
+      Sets the byte size at which a script is treated as a large file by the
+      script editor. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: int
     tags: []
@@ -1864,8 +2162,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.LoadAllBuiltinPluginsInRunModes
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether all built-in plugins are loaded when using run modes.
+    description: |
+      Controls whether all built-in plugins are loaded when using run modes.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1880,8 +2181,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.LoadInternalPlugins
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether internal Roblox plugins are loaded in Studio.
+    description: |
+      Controls whether internal Roblox plugins are loaded in Studio. This must
+      be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1896,8 +2200,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.LoadUserPluginsInRunModes
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether user-installed plugins are loaded when using run modes.
+    description: |
+      Controls whether user-installed plugins are loaded when using run modes.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -1912,8 +2219,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.LocalAssetsFolder
-    summary: ''
-    description: ''
+    summary: |
+      Sets the local folder Studio uses for local asset storage.
+    description: |
+      Sets the local folder Studio uses for local asset storage. This must be
+      set in Studio Settings > Studio tab.
     code_samples: []
     type: QDir
     tags: []
@@ -1946,8 +2256,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.LuaDebuggerEnabledAtStartup
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the Lua debugger is enabled when Studio starts.
+    description: |
+      Controls whether the Lua debugger is enabled when Studio starts. This must
+      be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags:
@@ -1965,8 +2278,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.Luau Keyword Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of Luau-specific keywords in the script editor.
+    description: |
+      Sets the color of Luau-specific keywords in the script editor. This must
+      be set in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -1982,8 +2298,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.Main Volume
-    summary: ''
-    description: ''
+    summary: |
+      Sets the main audio playback volume in Studio.
+    description: |
+      Sets the main audio playback volume in Studio. This must be set in Studio
+      Settings > Studio tab.
     code_samples: []
     type: float
     tags: []
@@ -2017,8 +2336,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.MaxFindReplaceAllResults
-    summary: ''
-    description: ''
+    summary: |
+      Sets the maximum number of results returned by the Find All operation.
+    description: |
+      Sets the maximum number of results returned by the Find All operation.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: int
     tags: []
@@ -2051,8 +2373,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Menu Item Background Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the background color of menu items in Studio.
+    description: |
+      Sets the background color of menu items in Studio. This must be set in
+      Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -2068,8 +2393,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.Method Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of method names in the script editor.
+    description: |
+      Sets the color of method names in the script editor. This must be set in
+      Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -2201,8 +2529,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Physical Draggers Select Scope By Default
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether physical draggers default to selecting within the current
+      scope.
+    description: |
+      Controls whether physical draggers default to selecting within the current
+      scope. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -2217,8 +2549,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Pivot Snap To Geometry Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of the pivot snap-to-geometry indicator in Studio.
+    description: |
+      Sets the color of the pivot snap-to-geometry indicator in Studio. This
+      must be set in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags: []
@@ -2233,8 +2568,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.PluginDebuggingEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether plugin script debugging is enabled in Studio.
+    description: |
+      Controls whether plugin script debugging is enabled in Studio. This must
+      be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -2267,8 +2605,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.PreferredTextSize
-    summary: ''
-    description: ''
+    summary: |
+      Sets the preferred font size in the script editor.
+    description: |
+      Sets the preferred font size in the script editor. This must be set in
+      Studio Settings > Studio tab.
     code_samples: []
     type: PreferredTextSize
     tags: []
@@ -2283,8 +2624,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Primary Text Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the primary text color in Studio.
+    description: |
+      Sets the primary text color in Studio. This must be set in Studio
+      Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -2300,8 +2644,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.Property Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of property names in the script editor.
+    description: |
+      Sets the color of property names in the script editor. This must be set in
+      Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -2317,8 +2664,12 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.ReloadBuiltinPluginsOnChange
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether built-in plugins are automatically reloaded when their
+      files change.
+    description: |
+      Controls whether built-in plugins are automatically reloaded when their
+      files change. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -2333,8 +2684,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.ReloadLocalPluginsOnChange
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether local plugins are automatically reloaded when their files
+      change.
+    description: |
+      Controls whether local plugins are automatically reloaded when their files
+      change. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -2369,8 +2724,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Ruler Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of the column ruler in the script editor.
+    description: |
+      Sets the color of the column ruler in the script editor. This must be set
+      in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -2386,8 +2744,12 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.Rulers
-    summary: ''
-    description: ''
+    summary: |
+      Sets the column positions at which vertical ruler lines are drawn in the
+      script editor.
+    description: |
+      Sets the column positions at which vertical ruler lines are drawn in the
+      script editor. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: string
     tags: []
@@ -2402,8 +2764,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.RuntimeUndoBehavior
-    summary: ''
-    description: ''
+    summary: |
+      Sets how Studio handles undo operations during runtime playback.
+    description: |
+      Sets how Studio handles undo operations during runtime playback. This must
+      be set in Studio Settings > Studio tab.
     code_samples: []
     type: RuntimeUndoBehavior
     tags: []
@@ -2418,8 +2783,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Script Editor Color Preset
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color preset applied to the script editor.
+    description: |
+      Sets the color preset applied to the script editor. This must be set in
+      Studio Settings > Studio tab.
     code_samples: []
     type: StudioScriptEditorColorPresets
     tags: []
@@ -2434,8 +2802,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Script Editor Scrollbar Background Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the background color of the script editor scrollbar in Studio.
+    description: |
+      Sets the background color of the script editor scrollbar in Studio. This
+      must be set in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -2451,8 +2822,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.Script Editor Scrollbar Handle Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the handle color of the script editor scrollbar in Studio.
+    description: |
+      Sets the handle color of the script editor scrollbar in Studio. This must
+      be set in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -2486,8 +2860,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Scroll Past Last Line
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the script editor allows scrolling below the last line.
+    description: |
+      Controls whether the script editor allows scrolling below the last line.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -2502,8 +2879,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Secondary Text Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the secondary text color in Studio.
+    description: |
+      Sets the secondary text color in Studio. This must be set in Studio
+      Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -2557,8 +2937,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Selected Menu Item Background Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the background color of selected menu items in Studio.
+    description: |
+      Sets the background color of selected menu items in Studio. This must be
+      set in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -2574,8 +2957,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.Selected Text Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of selected text in Studio.
+    description: |
+      Sets the color of selected text in Studio. This must be set in Studio
+      Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -2610,8 +2996,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.Selection Box Thickness
-    summary: ''
-    description: ''
+    summary: |
+      Sets the thickness of the selection box around selected objects.
+    description: |
+      Sets the thickness of the selection box around selected objects. This must
+      be set in Studio Settings > Studio tab.
     code_samples: []
     type: float
     tags: []
@@ -2645,8 +3034,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.Selection Line Thickness
-    summary: ''
-    description: ''
+    summary: |
+      Sets the line thickness of the selection box around selected objects.
+    description: |
+      Sets the line thickness of the selection box around selected objects. This
+      must be set in Studio Settings > Studio tab.
     code_samples: []
     type: int
     tags: []
@@ -2661,8 +3053,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Set Pivot of Imported Parts
-    summary: ''
-    description: ''
+    summary: |
+      Sets whether the pivot point is repositioned when parts are imported.
+    description: |
+      Sets whether the pivot point is repositioned when parts are imported. This
+      must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -2715,8 +3110,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Show FileSyncService
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether FileSyncService is shown in the Explorer panel.
+    description: |
+      Controls whether FileSyncService is shown in the Explorer panel. This must
+      be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -2731,8 +3129,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Show Hidden Objects in Explorer
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether hidden objects are visible in the Explorer panel.
+    description: |
+      Controls whether hidden objects are visible in the Explorer panel. This
+      must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -2767,8 +3168,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Show Light Guides
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether light guide visualizations are shown in the viewport.
+    description: |
+      Controls whether light guide visualizations are shown in the viewport.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -2783,8 +3187,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Show Navigation Labels
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether navigation mesh region labels are shown in the viewport.
+    description: |
+      Controls whether navigation mesh region labels are shown in the viewport.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -2819,8 +3226,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Show Pathfinding Links
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether PathfindingLink visualizations are shown in the viewport.
+    description: |
+      Controls whether PathfindingLink visualizations are shown in the viewport.
+      This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -2855,8 +3265,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Show plus button on hover in Explorer
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether a plus button appears when hovering over items in the
+      Explorer.
+    description: |
+      Controls whether a plus button appears when hovering over items in the
+      Explorer. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -2871,8 +3285,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Show Singly Selected Attachment Parent Frame
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the parent part frame is shown when a single attachment
+      is selected.
+    description: |
+      Controls whether the parent part frame is shown when a single attachment
+      is selected. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -2887,8 +3305,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Show Whitespace
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether whitespace characters are shown as visible glyphs in the
+      script editor.
+    description: |
+      Controls whether whitespace characters are shown as visible glyphs in the
+      script editor. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -2903,8 +3325,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.ShowCorePackagesInExplorer
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether core packages are shown in the Explorer panel.
+    description: |
+      Controls whether core packages are shown in the Explorer panel. This must
+      be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -2919,8 +3344,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Skip Closing Brackets and Quotes
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the cursor skips over a typed closing bracket or quote if
+      one already exists.
+    description: |
+      Controls whether the cursor skips over a typed closing bracket or quote if
+      one already exists. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -3043,8 +3472,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.TypeColor
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of type annotations in the script editor.
+    description: |
+      Sets the color of type annotations in the script editor. This must be set
+      in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -3082,8 +3514,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.Use Bounding Box Move Handles
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether move handles are placed at the bounding box edges instead
+      of the pivot.
+    description: |
+      Controls whether move handles are placed at the bounding box edges instead
+      of the pivot. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -3098,8 +3534,12 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.UseDefaultExternalEditor
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether Studio uses the system's default application to open
+      scripts externally.
+    description: |
+      Controls whether Studio uses the system's default application to open
+      scripts externally. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
     tags: []
@@ -3114,8 +3554,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.VAxisColor
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of the V axis handle in Studio's draggers.
+    description: |
+      Sets the color of the V axis handle in Studio's draggers. This must be set
+      in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags: []
@@ -3151,8 +3594,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.Whitespace Color
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of visible whitespace characters in the script editor.
+    description: |
+      Sets the color of visible whitespace characters in the script editor. This
+      must be set in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags:
@@ -3168,8 +3614,11 @@ properties:
       can_save: false
     capabilities: []
   - name: Studio.XAxisColor
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of the X axis handle in Studio's draggers.
+    description: |
+      Sets the color of the X axis handle in Studio's draggers. This must be set
+      in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags: []
@@ -3184,8 +3633,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.YAxisColor
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of the Y axis handle in Studio's draggers.
+    description: |
+      Sets the color of the Y axis handle in Studio's draggers. This must be set
+      in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags: []
@@ -3200,8 +3652,11 @@ properties:
       can_save: true
     capabilities: []
   - name: Studio.ZAxisColor
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color of the Z axis handle in Studio's draggers.
+    description: |
+      Sets the color of the Z axis handle in Studio's draggers. This must be set
+      in Studio Settings > Studio tab.
     code_samples: []
     type: Color3
     tags: []

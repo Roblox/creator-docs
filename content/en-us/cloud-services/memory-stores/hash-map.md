@@ -1,6 +1,9 @@
 ---
 title: Memory store hash map
 description: Explains how to implement the hash map data structure for memory stores.
+keywords:
+  - right to be forgotten
+  - PII
 ---
 
 **Hash maps**, similar to sorted maps, let you store in-memory data as key-value pairs. Unlike sorted maps, they maintain no ordering guarantees. This data structure is useful for cases that require simple data caching and rapid access, such as shared inventories, physical auction houses, and more. Hash maps automatically handle partitioning your data and are very useful if you have more than 1,000 keys. For smaller key spaces, we recommend [sorted maps](../../cloud-services/memory-stores/sorted-map.md).
@@ -63,10 +66,6 @@ All functions accessing data structures in memory stores are asynchronous networ
 ## Add or overwrite data
 
 To add a new key or overwrite the value of a key in the hash map, call `Class.MemoryStoreHashMap:SetAsync()` with the key **name**, its **value**, and an **expiration time** in seconds. The memory automatically cleans up once the key expires. The maximum expiration time is 3,888,000 seconds (45 days).
-
-<Alert severity="warning">
-Under the EU General Data Protection Regulation (GDPR), if your memory stores have user data subject to the [right to be forgotten](https://gdpr.eu/right-to-be-forgotten/) you must remove the data within 30 days, even if you set your memory store key's expiration up to 45 days.
-</Alert>
 
 ```lua title="Adding Data to a Hash Map"
 local MemoryStoreService = game:GetService("MemoryStoreService")

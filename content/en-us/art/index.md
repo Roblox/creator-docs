@@ -51,7 +51,7 @@ Whether you're just getting started with Roblox or need a quick refresher, use t
     <iframe src="https://www.youtube-nocookie.com/embed/EUDSIUmLjxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
   </div>
     <Typography variant='h4'>Create avatar items</Typography>
-    <Typography variant='body1' >Create accessories, clothing, and bodies that you can sell on the Marketplace.</Typography>
+    <Typography variant='body1' >Create accessories, clothing, cosmetics, and bodies that you can sell on the Marketplace.</Typography>
     <a href="../avatar/index.md"><Typography variant='h6' style={{marginBottom: 12}}>Overview</Typography></a>
     <a href="../marketplace/index.md"><Typography variant='h6' style={{marginBottom: 12}}>Marketplace overview</Typography></a>
     <a href="../marketplace/marketplace-fees-and-commissions.md"><Typography variant='h6' style={{marginBottom: 12}}>Fees and commissions</Typography></a>
@@ -270,8 +270,8 @@ The following is a list of common 3D art resources ordered by subject, as well a
 
 <Typography variant='h5'>Avatar tutorials</Typography>
 
-<a href="../art/accessories/creating-rigid/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Creating accessories</Typography></a>
-<a href="../art/accessories/creating/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Create clothing</Typography></a>
+<a href="../art/accessories/creating-rigid/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Create rigid accessories</Typography></a>
+<a href="../art/accessories/creating/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Create layered accessories</Typography></a>
 <a href="../art/characters/creating/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Create avatar characters from templates</Typography></a>
 <br />
 
@@ -293,8 +293,8 @@ The following is a list of common 3D art resources ordered by subject, as well a
 
 <a href="./modeling/export-requirements.md"><Typography variant='body1' style={{marginBottom: 12}}>Blender and Maya .FBX export settings</Typography></a>
 <a href="./modeling/specifications.md"><Typography variant='body1' style={{marginBottom: 12}}>General mesh specifications</Typography></a>
-<a href="../avatar/rigid-accessories/specifications.md"><Typography variant='body1' style={{marginBottom: 12}}>Accessory specifications</Typography></a>
-<a href="../avatar/layered-accessories/specifications.md"><Typography variant='body1' style={{marginBottom: 12}}>Clothing specifications</Typography></a>
+<a href="../avatar/rigid-accessories/specifications.md"><Typography variant='body1' style={{marginBottom: 12}}>Rigid accessory specifications</Typography></a>
+<a href="../avatar/layered-accessories/specifications.md"><Typography variant='body1' style={{marginBottom: 12}}>Layered accessory specifications</Typography></a>
 <a href="../avatar/character-bodies/specifications.md"><Typography variant='body1' style={{marginBottom: 12}}>Avatar character specifications</Typography></a>
 <a href="../marketplace/marketplace-policy.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace policy</Typography></a>
 
@@ -378,8 +378,8 @@ The following is a list of common 3D art resources ordered by subject, as well a
 <Typography variant='h5'>Avatar item creation</Typography>
 
 <a href="../avatar/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Avatar overview</Typography></a>
-<a href="../avatar/rigid-accessories/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Accessories overview</Typography></a>
-<a href="../avatar/layered-accessories/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Clothing overview</Typography></a>
+<a href="../avatar/rigid-accessories/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Rigid accessories overview</Typography></a>
+<a href="../avatar/layered-accessories/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Layered accessories overview</Typography></a>
 <a href="../avatar/character-bodies/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Character bodies overview</Typography></a>
 <a href="../marketplace/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace overview</Typography></a>
 
