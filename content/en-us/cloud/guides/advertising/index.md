@@ -35,7 +35,7 @@ The response confirms whether the experience is eligible and returns the values 
 
 ## Prepare a creative
 
-Campaigns advertise Open Cloud **image assets**. Upload your image with the [Assets API](../../features/assets.md), then reference the returned asset ID in `creativeAssetIds`. To list creatives already in the account's library:
+Campaigns advertise Open Cloud **image assets**. Upload your image with the [Assets API](../usage-assets.md), then reference the returned asset ID in `creativeAssetIds`. To list creatives already in the account's library:
 
 ```bash title="List creatives"
 curl --location 'https://apis.roblox.com/ads-management/v1/creatives' \
