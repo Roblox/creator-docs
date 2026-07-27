@@ -24,7 +24,7 @@ Only the `ENGAGEMENT` objective (drive visits to your experience) is available i
 
 ## Creatives
 
-Creatives are Open Cloud **image assets**. Upload an image with the [Assets API](../../features/assets.md), then reference its asset ID in `creativeAssetIds` when creating a campaign. The assets must already exist and be usable by the caller; they are validated and saved to the account's reusable creatives when the campaign is created.
+Creatives are Open Cloud **image assets**. Upload an image with the [Assets API](../usage-assets.md), then reference its asset ID in `creativeAssetIds` when creating a campaign. The assets must already exist and be usable by the caller; they are validated and saved to the account's reusable creatives when the campaign is created.
 
 ## Budget changes
 
